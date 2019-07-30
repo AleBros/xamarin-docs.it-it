@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 0fff9b7ce4b78e29409d1cc7a55e7f447baf722c
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f9c7ada224cefc9bb80e0bcba370d0dee4a664c9
+ms.sourcegitcommit: 25be5acf979f6b18b6d0e64392c9ab307259c032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831105"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68603847"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Viste di interfaccia utente di xamarin. Forms
 
@@ -22,7 +22,7 @@ _Come usare le visualizzazioni fornite da xamarin. Forms_
 
 ## <a name="activityindicatoractivityindicatormd"></a>[ActivityIndicator](activityindicator.md)
 
-Il `ActivityIndicator` è un controllo animato che indica agli utenti che l'applicazione è impegnata in un'attività di lunga durata, senza fornire alcuna indicazione dello stato di avanzamento.
+`ActivityIndicator` È un controllo animato che indica agli utenti che l'applicazione è impegnata in un'attività di lunga durata, senza fornire indicazioni sullo stato di avanzamento.
 
 ## <a name="animationanimationindexmd"></a>[Animazione](animation/index.md)
 
@@ -38,11 +38,11 @@ Il `Button` risponde a un tocco o clic che indirizza un'applicazione per eseguir
 
 ## <a name="checkboxcheckboxmd"></a>[CheckBox](checkbox.md)
 
-Il `CheckBox` è un tipo di pulsante che può essere selezionato o vuoto. Se una casella di controllo è selezionata, è considerato in. Quando una casella di controllo è vuoto, questo ha considerato per essere disattivato.
+`CheckBox` È un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
 
 ## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 
-Il [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) è una visualizzazione flessibile ed efficiente per presentare elenchi di dati usando le specifiche di un layout diverso.
+È [`CollectionView`](xref:Xamarin.Forms.CollectionView) una visualizzazione flessibile ed efficiente per la presentazione di elenchi di dati usando specifiche di layout diverse.
 
 ## <a name="colorscolorsmd"></a>[Colori](colors.md)
 
@@ -62,7 +62,7 @@ Il `DatePicker` consente agli utenti di selezionare una data in un intervallo sp
 
 ## <a name="display-pop-upspop-upsmd"></a>[Visualizzare popup](pop-ups.md)
 
-Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questi elementi dell'interfaccia sono utilizzabile per visualizzare le finestre di dialogo porre semplici domande degli utenti e agli utenti di Guida per le attività.
+Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questi elementi di interfaccia possono essere utilizzati per visualizzare le finestre di dialogo che richiedono agli utenti semplici domande e guidano gli utenti attraverso le attività.
 
 ## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[Grafica con SkiaSharp](graphics/skiasharp/index.md)
 
@@ -94,7 +94,11 @@ Il [ `Picker` ](xref:Xamarin.Forms.Picker) Vista è un controllo per la selezion
 
 ## <a name="progressbarprogressbarmd"></a>[ProgressBar](progressbar.md)
 
-Il [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar) è un controllo che rappresenta graficamente lo stato di avanzamento come una barra orizzontale che viene riempita basata su una proprietà di float.
+È [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) un controllo che rappresenta visivamente lo stato di avanzamento come barra orizzontale compilata in base a una proprietà float.
+
+## <a name="searchbarsearchbarmd"></a>[SearchBar](searchbar.md)
+
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) È un controllo di input utente usato per avviare una ricerca. Il controllo SearchBar supporta testo segnaposto, input query, esecuzione ricerca e annullamento.
 
 ## <a name="sliderslidermd"></a>[Dispositivo di scorrimento](slider.md)
 
@@ -110,7 +114,7 @@ Tipo di carattere, colori e altri attributi possono essere raggruppati in stili 
 
 ## <a name="switchswitchmd"></a>[Switch](switch.md)
 
-Il `Switch` è un tipo di pulsante che può essere attivata/disattivato tra e disattivare gli stati.
+`Switch` È un tipo di pulsante che può essere attivato o disattivato.
 
 ## <a name="tableviewtableviewmd"></a>[TableView](tableview.md)
 
@@ -130,7 +134,7 @@ Il `TimePicker` consente agli utenti di selezionare un'ora. Viene implementato u
 
 ## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-Oggetto visivo materiali di xamarin. Forms è utilizzabile per creare applicazioni xamarin. Forms identica, o in gran parte identici, in iOS e Android.
+Il materiale visivo Novell. Forms può essere usato per creare applicazioni Novell. Forms che hanno un aspetto identico o in gran parte identico in iOS e Android.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Gestione dello stato di visualizzazione](visual-state-manager.md)
 
