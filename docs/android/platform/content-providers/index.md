@@ -1,57 +1,57 @@
 ---
 title: Introduzione a ContentProviders
-description: Il sistema operativo Android Usa i provider di contenuti per facilitare l'accesso ai dati condivisi, ad esempio i file multimediali, i contatti e le informazioni del calendario. Questo articolo viene presentata la classe ContentProvider e vengono forniti due esempi di come usarla.
+description: Il sistema operativo Android usa i provider di contenuti per facilitare l'accesso ai dati condivisi, ad esempio i file multimediali, i contatti e le informazioni sul calendario. In questo articolo viene presentata la classe ContentProvider e vengono forniti due esempi di utilizzo.
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 60f9420fc630bcfc44a6b19356b2315ac8bcd523
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.openlocfilehash: 1e62dc32e9764667cb8737167a49bcc9a4516f0f
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60951790"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510631"
 ---
 # <a name="intro-to-contentproviders"></a>Introduzione a ContentProviders
 
-_Il sistema operativo Android Usa i provider di contenuti per facilitare l'accesso ai dati condivisi, ad esempio i file multimediali, i contatti e le informazioni del calendario. Questo articolo viene presentata la classe ContentProvider e vengono forniti due esempi di come usarla._
+_Il sistema operativo Android usa i provider di contenuti per facilitare l'accesso ai dati condivisi, ad esempio i file multimediali, i contatti e le informazioni sul calendario. In questo articolo viene presentata la classe ContentProvider e vengono forniti due esempi di utilizzo._
 
 
-## <a name="content-providers-overview"></a>Panoramica di provider di contenuti
+## <a name="content-providers-overview"></a>Panoramica sui provider di contenuti
 
-Oggetto *ContentProvider* incapsula un archivio dati e fornisce un'API per accedere alla finestra. Il provider esista nell'ambito di un'applicazione Android che in genere fornisce anche un'interfaccia utente per la visualizzazione o gestione dei dati. Il vantaggio principale dell'uso di un provider di contenuti è l'abilitazione di altre applicazioni di accedere più facilmente i dati incapsulati con un oggetto client del provider (chiamato un' *ContentResolver*). Un provider di contenuti e un resolver di contenuto insieme, offrono un'API coerente tra le applicazioni per l'accesso ai dati che è semplice da creare e utilizzare. Tutte le applicazioni possono scegliere di usare `ContentProviders` per gestire i dati internamente e anche da esporre ad altre applicazioni.
+Un *ContentProvider* incapsula un repository di dati e fornisce un'API per accedervi. Il provider è incluso in un'applicazione Android che in genere fornisce anche un'interfaccia utente per la visualizzazione e la gestione dei dati. Il vantaggio principale dell'utilizzo di un provider di contenuti è consentire ad altre applicazioni di accedere facilmente ai dati incapsulati utilizzando un oggetto client del provider (denominato *ContentResolver*). Insieme, un provider di contenuti e un resolver del contenuto offrono un'API tra applicazioni coerente per l'accesso ai dati semplice da compilare e utilizzare. Qualsiasi applicazione può scegliere di utilizzare `ContentProviders` per gestire i dati internamente, nonché esporli ad altre applicazioni.
 
-Oggetto `ContentProvider` è necessaria anche per l'applicazione fornire suggerimenti di ricerca personalizzato o se si desidera offrire la possibilità di copiare dati complesse dall'applicazione per incollare in altre applicazioni. Questo documento viene illustrato come accedere e compilare `ContentProviders` con xamarin. Android.
+`ContentProvider` È anche necessario che l'applicazione fornisca suggerimenti per la ricerca personalizzati o se si vuole fornire la possibilità di copiare dati complessi dall'applicazione per incollarli in altre applicazioni. Questo documento illustra come accedere e compilare `ContentProviders` con Novell. Android.
 
-La struttura di questa sezione è come segue:
+La struttura di questa sezione è la seguente:
 
-- **Come funziona** &ndash; una panoramica di ciò che il `ContentProvider` è progettato per e come funziona.
+- Funzionamento &ndash; Panoramica della`ContentProvider` progettazione e del funzionamento di.
 
-- **Utilizzo di un Provider di contenuti** &ndash; riportato un esempio di accedere all'elenco di contatti.
+- **Utilizzo di un provider di contenuti** &ndash; Esempio di accesso all'elenco contatti.
 
-- **Uso ContentProvider per condividere i dati** &ndash; scrivendo e dispendiosa in termini di un `ContentProvider` nella stessa applicazione.
+- **Uso di ContentProvider per la condivisione di dati** Scrittura e utilizzo di un `ContentProvider` oggetto nella stessa applicazione. &ndash;
 
-`ContentProviders` e i cursori che operano sui dati vengono spesso usati per popolare i controlli ListView. Vedere le [questa Guida](~/android/user-interface/layouts/list-view/index.md) per altre informazioni su come usare queste classi.
+`ContentProviders`e i cursori che operano sui dati vengono spesso utilizzati per popolare ListView. Per ulteriori informazioni sull'utilizzo di tali classi, fare riferimento alla [Guida di ListView e adapter](~/android/user-interface/layouts/list-view/index.md) .
 
-`ContentProviders` esposti da Android o altre applicazioni sono un modo semplice per includere dati da altre origini nell'applicazione. Consentono di accedere e presentare i dati, ad esempio l'elenco dei contatti, foto o gli eventi del calendario all'interno dell'applicazione e consentire all'utente di interagire con tali dati.
+`ContentProviders`esposto da Android (o altre applicazioni) è un modo semplice per includere dati da altre origini nell'applicazione. Consentono di accedere ai dati e di presentarli, ad esempio l'elenco contatti, le foto o gli eventi del calendario dall'interno dell'applicazione, e di consentire all'utente di interagire con tali dati.
 
-Personalizzato `ContentProviders` sono un modo pratico per creare il pacchetto dei dati per l'uso all'interno di un'app o per l'uso da altre applicazioni (tra cui usi specifici, ad esempio ricerca personalizzata e copiare/incollare).
+Custom `ContentProviders` è un modo pratico per comprimere i dati da usare all'interno dell'app o per l'uso da parte di altre applicazioni (inclusi gli usi speciali come la ricerca personalizzata e la copia e incolla).
 
-Gli argomenti di questa sezione forniscono alcuni semplici esempi di utilizzo e la scrittura `ContentProvider` codice.
+Negli argomenti di questa sezione vengono forniti alcuni semplici esempi di utilizzo e scrittura `ContentProvider` del codice.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ContactsAdapter Demo (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
+- [Demo di ContactsAdapter (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
 - [SimpleContentProvider (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
-- [Guida per sviluppatori di provider di contenuti](https://developer.android.com/guide/topics/providers/content-providers.html)
-- [Riferimento alla classe ContentProvider](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)
-- [Riferimento alla classe ContentResolver](https://developer.xamarin.com/api/type/Android.Content.ContentResolver/)
-- [Riferimento alla classe di ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-- [Riferimento alla classe di CursorAdapter](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/)
-- [Riferimento alla classe UriMatcher](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/)
-- [Android.Provider](https://developer.xamarin.com/api/namespace/Android.Provider/)
-- [Riferimento alla classe ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)
+- [Guida per gli sviluppatori di provider di contenuti](https://developer.android.com/guide/topics/providers/content-providers.html)
+- [Riferimento alla classe ContentProvider](xref:Android.Content.ContentProvider)
+- [Riferimento alla classe ContentResolver](xref:Android.Content.ContentResolver)
+- [Riferimento alla classe ListView](xref:Android.Widget.ListView)
+- [Riferimento alla classe CursorAdapter](xref:Android.Widget.CursorAdapter)
+- [Riferimento alla classe UriMatcher](xref:Android.Content.UriMatcher)
+- [Android.Provider](xref:Android.Provider)
+- [Riferimento alla classe ContactsContract](xref:Android.Provider.ContactsContract)

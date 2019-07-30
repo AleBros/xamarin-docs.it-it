@@ -1,31 +1,27 @@
 ---
-title: Popolamento di un controllo ListView con dati
+title: Popolamento di un controllo ListView Novell. Android con dati
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: f3162c4da092048cd409f7b32438bc85dcedff19
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
-ms.translationtype: MT
+ms.openlocfilehash: dff2efe687fde16903df19fefad2e2589c888086
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740795"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510112"
 ---
-# <a name="populating-a-listview-with-data"></a>Popolamento di un controllo ListView con dati
+# <a name="populating-a-xamarinandroid-listview-with-data"></a>Popolamento di un controllo ListView Novell. Android con dati
 
+Per aggiungere righe a un `ListView` oggetto, è necessario aggiungerlo al layout e implementare un `IListAdapter` oggetto con i metodi `ListView` che il chiama per popolare. Android include le classi `ListActivity` e `ArrayAdapter` predefinite che è possibile usare senza definire codice o XML di layout personalizzato. La `ListActivity` classe crea automaticamente un `ListView` oggetto ed espone `ListAdapter` una proprietà per fornire le visualizzazioni di riga da visualizzare tramite un adapter.
 
-## <a name="overview"></a>Panoramica
+Gli adapter incorporati accettano un ID risorsa di visualizzazione come parametro che viene usato per ogni riga. È possibile usare risorse predefinite, ad esempio quelle in `Android.Resource.Layout` , per cui non è necessario scrivere.
 
-Per aggiungere righe a un `ListView` è necessario aggiungerlo al layout e implementare un' `IListAdapter` con i metodi che il `ListView` chiamate a popolarsi. Android include incorporato `ListActivity` e `ArrayAdapter` classi che è possibile usare senza definire qualsiasi codice o il layout personalizzato XML. Il `ListActivity` classe crea automaticamente un `ListView` ed espone un `ListAdapter` proprietà per fornire le visualizzazioni di righe da visualizzare tramite un adapter.
+## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Uso della stringa ListActivity&lt;e classe ArrayAdapter&gt;
 
-L'adapter predefiniti hanno un ID di risorsa vista come un parametro che viene usato per ogni riga. È possibile usare le risorse predefinite, ad esempio quelli in `Android.Resource.Layout` in modo che non è necessario scrivere il proprio.
-
-
-## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Utilizzo ListActivity e ArrayAdapter&lt;stringa&gt;
-
-L'esempio **BasicTable/HomeScreen.cs** illustra come usare queste classi per visualizzare un `ListView` in solo poche righe di codice:
+Nell'esempio **BasicTable/homescreen. cs** viene illustrato come utilizzare queste classi per visualizzare un `ListView` solo in poche righe di codice:
 
 ```csharp
 [Activity(Label = "BasicTable", MainLauncher = true, Icon = "@drawable/icon")]
@@ -42,9 +38,9 @@ public class HomeScreen : ListActivity {
 ```
 
 
-### <a name="handling-row-clicks"></a>Gestione delle righe fa clic su
+### <a name="handling-row-clicks"></a>Gestione dei clic di riga
 
-In genere un `ListView` anche consentirà all'utente di toccare una riga per eseguire un'azione (ad esempio la riproduzione di un brano, la chiamata a un contatto o visualizzazione di un'altra schermata). Per rispondere a tocchi utente deve essere uno più metodo implementato nel `ListActivity` &ndash; `OnListItemClick` &ndash; simile al seguente:
+In genere `ListView` un oggetto consente inoltre all'utente di toccare una riga per eseguire un'azione, ad esempio la riproduzione di un brano o la chiamata di un contatto o la visualizzazione di un'altra schermata. Per rispondere ai tocchi degli utenti, è necessario disporre di un altro metodo implementato `ListActivity` in &ndash; `OnListItemClick` &ndash; questo esempio:
 
 [![Screenshot di un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
@@ -56,26 +52,26 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 }
 ```
 
-A questo punto l'utente può toccare una riga e un `Toast` verrà visualizzato l'avviso:
+Ora l'utente può toccare una riga e verrà `Toast` visualizzato un avviso:
 
-[![Schermata di tipo avviso popup che viene visualizzato quando una riga selezionata](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
+[![Screenshot del popup visualizzato quando viene toccata una riga](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
 
 ## <a name="implementing-a-listadapter"></a>Implementazione di un ListAdapter
 
-`ArrayAdapter<string>` è molto utile a causa la sua semplicità, ma è molto limitato. Tuttavia, spesso si ha una raccolta di entità di business, anziché semplicemente di stringhe che si desidera associare.
-Ad esempio, se i dati è costituito da una raccolta di classi di Employee, quindi è possibile l'elenco per visualizzare solo i nomi di ogni dipendente. Per personalizzare il comportamento di un `ListView` per controllare quali dati vengono visualizzati è necessario implementare una sottoclasse di `BaseAdapter` viene sottoposto a override i quattro elementi seguenti:
+`ArrayAdapter<string>`è molto grande grazie alla sua semplicità, ma è estremamente limitato. Tuttavia, spesso si ha una raccolta di entità di business, anziché solo le stringhe che si desidera associare.
+Se, ad esempio, i dati sono costituiti da una raccolta di classi Employee, è possibile che l'elenco visualizzi semplicemente i nomi di ogni dipendente. Per personalizzare il comportamento di un `ListView` oggetto per controllare quali dati vengono visualizzati, è necessario implementare una `BaseAdapter` sottoclasse dell'override dei quattro elementi seguenti:
 
--   **Conteggio** &ndash; per indicare il controllo è il numero di righe nei dati.
+-   **Numero** di &ndash; Per indicare al controllo il numero di righe presenti nei dati.
 
--   **GetView** &ndash; per restituire una visualizzazione per ogni riga, popolato con i dati.
-    Questo metodo contiene un parametro per il `ListView` da passare in una riga esistente e non usata per essere riusata.
+-   **GetView** &ndash; Per restituire una visualizzazione per ogni riga, popolata con i dati.
+    Questo metodo dispone di un parametro affinché `ListView` l'oggetto passi una riga esistente non utilizzata per riutilizzarla.
 
--   **GetItemId** &ndash; restituire un identificatore di riga (in genere la riga numero, anche se può essere qualsiasi valore long che si desidera).
+-   **GetItemID** &ndash; Restituisce un identificatore di riga, in genere il numero di riga, anche se può essere qualsiasi valore lungo desiderato.
 
--   **Questa [int]** indicizzatore &ndash; per restituire i dati associati a un numero di riga specifico.
+-   Questo indicizzatore &ndash; **[int]** per restituire i dati associati a un numero di riga specifico.
 
-Il codice di esempio nella **BasicTableAdapter/HomeScreenAdapter.cs** di seguito viene illustrato come sottoclasse `BaseAdapter`:
+Il codice di esempio in **BasicTableAdapter/HomeScreenAdapter. cs** Mostra come sottoclasse `BaseAdapter`:
 
 ```csharp
 public class HomeScreenAdapter : BaseAdapter<string> {
@@ -107,22 +103,22 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 ```
 
 
-### <a name="using-a-custom-adapter"></a>Utilizza un Adapter personalizzato
+### <a name="using-a-custom-adapter"></a>Utilizzo di un adapter personalizzato
 
-Utilizzo dell'adapter personalizzato è simile all'elemento predefinito `ArrayAdapter`, passando un `context` e il `string[]` di valori da visualizzare:
+L'utilizzo dell'adapter personalizzato è simile a quello incorporato `ArrayAdapter`, passando un oggetto `context` e l'oggetto `string[]` di valori da visualizzare:
 
 ```csharp
 ListAdapter = new HomeScreenAdapter(this, items);
 ```
 
-Poiché questo esempio viene usato lo stesso layout di riga (`SimpleListItem1`) l'applicazione risultante sarà identico all'esempio precedente.
+Poiché in questo esempio viene utilizzato lo stesso layout`SimpleListItem1`di riga (), l'applicazione risultante sarà identica all'esempio precedente.
 
 
-### <a name="row-view-re-use"></a>Riutilizzo delle visualizzazioni riga
+### <a name="row-view-re-use"></a>Riutilizzo della visualizzazione righe
 
-In questo esempio esistono solo sei elementi. Poiché la schermata è possibile adattare otto alcuna riga usare di nuovo non necessari. Quando si visualizzano centinaia o migliaia di righe, tuttavia, sarebbe uno spreco di memoria creare centinaia o migliaia di `View` oggetti quando solo otto adattano alla schermata alla volta. Per evitare questa situazione, quando una riga viene rimossa dallo schermo che la visualizzazione viene inserita in una coda per essere riusata. Mentre l'utente scorre, il `ListView` chiamate `GetView` per richiedere nuove visualizzazioni da visualizzare &ndash; se disponibile passa una visualizzazione inutilizzata nel `convertView` parametro. Se questo valore è null, quindi il codice deve creare una nuova istanza di visualizzazione, in caso contrario, è possibile impostare nuovamente le proprietà di quell'oggetto e riutilizzare.
+In questo esempio sono presenti solo sei elementi. Poiché la schermata può adattarsi a otto, non è necessario riutilizzare la riga. Quando si visualizzano centinaia o migliaia di righe, tuttavia, sarebbe uno spreco di memoria per creare centinaia o migliaia di `View` oggetti quando solo otto si adattano allo schermo alla volta. Per evitare questa situazione, quando una riga scompare dallo schermo, la relativa visualizzazione viene inserita in una coda per riutilizzarla. Quando l'utente scorre, `ListView` le chiamate `GetView` per richiedere nuove visualizzazioni per visualizzare &ndash; se disponibile passano una visualizzazione inutilizzata nel `convertView` parametro. Se questo valore è null, il codice deve creare una nuova istanza di visualizzazione. in caso contrario, è possibile reimpostare le proprietà dell'oggetto e riutilizzarlo.
 
-Il `GetView` metodo consigliabile seguire questo modello per riutilizzare le visualizzazioni delle righe:
+Il `GetView` metodo deve seguire questo modello per riutilizzare le visualizzazioni di riga:
 
 ```csharp
 public override View GetView(int position, View convertView, ViewGroup parent)
@@ -137,18 +133,18 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 }
 ```
 
-Implementazioni dell'adattatore personalizzato dovrebbero *sempre* riutilizzare il `convertView` oggetto prima di creare nuove visualizzazioni per assicurarsi che questi non eseguono memoria insufficiente durante la visualizzazione di lunghi elenchi.
+Le implementazioni degli adapter personalizzati devono *sempre* riutilizzare `convertView` l'oggetto prima di creare nuove visualizzazioni per assicurarsi che non esaurisca la memoria durante la visualizzazione di elenchi lunghi.
 
-Alcune implementazioni dell'adattatore (come il `CursorAdapter`) non ha un `GetView` metodo, piuttosto richiedono due metodi diversi `NewView` e `BindView` cui applicare la riga usare di nuovo separando le responsabilità di `GetView` in due metodi. È presente un `CursorAdapter` riportato più avanti nel documento.
+Alcune implementazioni di adapter (ad esempio `CursorAdapter`) non dispongono di `GetView` un metodo, ma richiedono due metodi `NewView` diversi e `BindView` che applicano il riutilizzo delle righe separando le `GetView` responsabilità di in due Metodi. Di seguito è `CursorAdapter` riportato un esempio del documento.
 
 
-## <a name="enabling-fast-scrolling"></a>Abilitare lo scorrimento veloce
+## <a name="enabling-fast-scrolling"></a>Abilitazione dello scorrimento rapido
 
-Scorrimento rapido consente all'utente di scorrere lunghi elenchi, fornendo un 'handle' aggiuntivo che agisce come una barra di scorrimento per accedere direttamente a una parte dell'elenco. In questo screenshot appare il quadratino di scorrimento rapido:
+Lo scorrimento rapido consente all'utente di scorrere gli elenchi lunghi fornendo un'handle ' aggiuntivo che funge da barra di scorrimento per accedere direttamente a una parte dell'elenco. Questa schermata mostra il quadratino di scorrimento rapido:
 
 [![Screenshot dello scorrimento rapido con un handle di scorrimento](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
-Causa il quadratino di scorrimento rapido venga visualizzato è semplice come l'impostazione di `FastScrollEnabled` proprietà `true`:
+La visualizzazione dell'handle di scorrimento rapido è semplice come impostare la `FastScrollEnabled` proprietà su: `true`
 
 ```csharp
 ListView.FastScrollEnabled = true;
@@ -157,20 +153,20 @@ ListView.FastScrollEnabled = true;
 
 ### <a name="adding-a-section-index"></a>Aggiunta di un indice di sezione
 
-Un indice di sezione offre ulteriori commenti e suggerimenti per gli utenti quando sono lo scorrimento veloce di un lungo elenco &ndash; mostra che sono state fatte scorrere 'section'. Per fare in modo l'indice della sezione venga visualizzato nella sottoclasse Adapter deve implementare il `ISectionIndexer` interfaccia per fornire il testo di indice in base a righe visualizzato:
+Un indice di sezione fornisce commenti e suggerimenti aggiuntivi per gli utenti quando eseguono lo scorrimento rapido in un &ndash; lungo elenco che mostra a quale "sezione" è stato eseguito lo scorrimento. Per far sì che l'indice della sezione venga visualizzato, la sottoclasse dell'adattatore deve implementare l' `ISectionIndexer` interfaccia per fornire il testo dell'indice a seconda delle righe visualizzate:
 
-[![Schermata di ore visualizzato sopra la sezione che inizia con H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
+[![Screenshot di H visualizzato sopra la sezione che inizia con H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
-Per implementare `ISectionIndexer` è necessario aggiungere tre metodi per un adattatore:
+Per implementare `ISectionIndexer` è necessario aggiungere tre metodi a un adapter:
 
--   **GetSections** &ndash; fornisce l'elenco completo delle sezione titoli di indice che potrebbe essere visualizzati. Questo metodo richiede una matrice di oggetti Java in modo che il codice deve creare un `Java.Lang.Object[]` da una raccolta di .NET. In questo esempio viene restituito un elenco dei caratteri iniziali nell'elenco come `Java.Lang.String` .
+-   GetSections &ndash; Fornisce l'elenco completo dei titoli degli indici di sezione che possono essere visualizzati. Questo metodo richiede una matrice di oggetti Java in modo che il codice debba creare `Java.Lang.Object[]` un oggetto da una raccolta .NET. Nell'esempio viene restituito un elenco dei caratteri iniziali nell'elenco come `Java.Lang.String` .
 
--   **GetPositionForSection** &ndash; restituisce la prima posizione di riga per un indice di sezione specificato.
+-   **GetPositionForSection** &ndash; Restituisce la prima posizione di riga per un indice di sezione specificato.
 
--   **GetSectionForPosition** &ndash; restituisce l'indice della sezione da visualizzare per una determinata riga.
+-   **GetSectionForPosition** &ndash; Restituisce l'indice della sezione da visualizzare per una determinata riga.
 
 
-L'esempio `SectionIndex/HomeScreenAdapter.cs` file implementa i metodi e altro codice nel costruttore. Il costruttore si basa l'indice della sezione e scorrimento in ciclo tra ogni riga e l'estrazione il primo carattere del titolo (gli elementi devono essere già ordinati per il corretto funzionamento).
+Il file `SectionIndex/HomeScreenAdapter.cs` di esempio implementa tali metodi e il codice aggiuntivo nel costruttore. Il costruttore compila l'indice della sezione eseguendo il ciclo di ogni riga ed estraendo il primo carattere del titolo (gli elementi devono essere già ordinati affinché questo funzioni).
 
 ```csharp
 alphaIndex = new Dictionary<string, int>();
@@ -189,7 +185,7 @@ for (int i = 0; i < sections.Length; i++) {
 }
 ```
 
-Con le strutture di dati create, il `ISectionIndexer` metodi sono molto semplici:
+Con le strutture di dati create, `ISectionIndexer` i metodi sono molto semplici:
 
 ```csharp
 public Java.Lang.Object[] GetSections()
@@ -215,13 +211,13 @@ public int GetSectionForPosition(int position)
 }
 ```
 
-I titoli di indice della sezione non devono eseguire il mapping 1:1 a sezioni delle effettive. È per questo motivo il `GetPositionForSection` esiste alcun metodo.
-`GetPositionForSection` offre la possibilità di eseguire il mapping di qualsiasi gli indici sono nell'elenco di indice per tutte le sezioni sono nella visualizzazione elenco. Ad esempio, potrebbe essere una "z" nell'indice, ma non si dispone di una sezione di tabella per ogni lettera, in modo invece di mapping di "z" alla 26, potrebbe eseguire il mapping a 25 o 24, indice o di qualsiasi sezione "z" deve essere mappato a.
+I titoli degli indici di sezione non devono eseguire il mapping di 1:1 alle sezioni effettive. Questo è il motivo `GetPositionForSection` per cui esiste il metodo.
+`GetPositionForSection`offre la possibilità di eseguire il mapping di tutti gli indici presenti nell'elenco di indici a tutte le sezioni presenti nella visualizzazione elenco. Ad esempio, è possibile che nell'indice sia presente una "z", ma è possibile che non si disponga di una sezione di tabella per ogni lettera, quindi invece di "z" mapping a 26, è possibile eseguire il mapping a 25 o 24 o a qualsiasi indice di sezione "z" a cui eseguire il mapping.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
+- [BasicTableAndroid (esempio)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
 - [BasicTableAdapter (esempio)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
 - [FastScroll (esempio)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
