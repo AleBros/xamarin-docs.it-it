@@ -1,234 +1,234 @@
 ---
-title: Avviare le schermate per le app xamarin. IOS
-description: Questo articolo illustra come creare un'app schermata di avvio veloce per tutti i dispositivi iOS, con qualsiasi risoluzione e l'orientamento, utilizzare uno Storyboard unificati singolo.
+title: Schermate di avvio per le app Novell. iOS
+description: Questo articolo illustra come creare una schermata di avvio dell'app per tutti i dispositivi iOS, con qualsiasi risoluzione e orientamento, usando un singolo storyboard unificato.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 0ec1defa29a4fe85c4ae3e809d8733e68cc268ac
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 76e9d91b735f2ae5041330d8e290347ae9314487
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087537"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654810"
 ---
-# <a name="launch-screens-for-xamarinios-apps"></a>Avviare le schermate per le app xamarin. IOS
+# <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Novell. iOS
 
-_Questo articolo illustra come creare un'app schermata di avvio veloce per tutti i dispositivi iOS, con qualsiasi risoluzione e l'orientamento, utilizzare uno Storyboard unificati singolo._
+_Questo articolo illustra come creare una schermata di avvio dell'app per tutti i dispositivi iOS, con qualsiasi risoluzione e orientamento, usando un singolo storyboard unificato._
 
-Prima di iOS 8, creazione di una schermata di avvio per un'app iOS richiedeva allo sviluppatore di specificare un asset di immagine per ognuna delle diverse tipologie di dispositivi e le soluzioni in cui è stato possibile eseguire l'app. Dopo il rilascio di iOS 8, tuttavia, è stato possibile usare un unico Storyboard unificati per creare una schermata di avvio che siano corrette in tutti i casi.
+Prima di iOS 8, per creare una schermata di avvio per un'app per iOS, è necessario che lo sviluppatore fornisca un asset di immagine per ognuno dei diversi fattori di forma e risoluzione del dispositivo in cui l'app può essere eseguita. Dal rilascio di iOS 8, tuttavia, è possibile usare un singolo storyboard unificato per creare una schermata di avvio che sembra corretta in tutti i casi.
 
-Questa breve procedura dettagliata viene descritto come creare una schermata di avvio con uno Storyboard forniti per impostazione predefinita in un nuovo progetto o con uno Storyboard aggiunti manualmente a un progetto esistente. Viene quindi illustrato come usare iOS Designer per aggiungere una visualizzazione immagine e un'etichetta allo Storyboard, impostare vincoli su tali viste e per verificare che lo Storyboard sembra corretto per diversi dispositivi e gli orientamenti.
+In questa breve procedura dettagliata viene descritto come creare una schermata di avvio con uno storyboard fornito per impostazione predefinita in un nuovo progetto o con uno storyboard aggiunto manualmente a un progetto esistente. Viene quindi illustrato come usare la finestra di progettazione iOS per aggiungere una visualizzazione immagine e un'etichetta allo storyboard, per impostare vincoli su tali viste e per verificare che lo storyboard appaia corretto per diversi dispositivi e orientamenti.
 
 <a name="storyboard" />
 
-## <a name="managing-launch-screens-with-storyboards"></a>La gestione delle schermate di avvio con gli storyboard
+## <a name="managing-launch-screens-with-storyboards"></a>Gestione delle schermate di avvio con gli storyboard
 
-In iOS 8 (e versioni successive), lo sviluppatore può creare uno Storyboard unificati speciali per fornire la schermata avvio anziché utilizzare uno o più immagini di avvio statico. Quando si crea un avvio di uno Storyboard in iOS Designer, usare le classi di dimensioni e il Layout automatico per definire il layout diversi per gli ambienti di visualizzazione diverse. Usando le classi di dimensioni e il Layout automatico, lo sviluppatore può creare una schermata di avvio singolo che sembra valida in tutti i dispositivi e visualizzare gli ambienti.
+In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyboard unificato per fornire la schermata di avvio anziché usare una o più immagini di avvio statiche. Quando si crea uno storyboard di avvio in iOS designer, usare le classi di dimensioni e il layout automatico per definire layout diversi per diversi ambienti di visualizzazione. Con le classi di dimensioni e il layout automatico, lo sviluppatore può creare una singola schermata di avvio con un aspetto corretto su tutti i dispositivi e gli ambienti di visualizzazione.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. In Visual Studio per Mac, creare un nuovo progetto selezionando **File > nuova soluzione** e quindi scegliendo **App visualizzazione singola**: 
+1. In Visual Studio per Mac creare un nuovo progetto selezionando **File > nuova soluzione** e scegliendo **app visualizzazione singola**: 
 
-    ![La finestra Nuovo progetto con App visualizzazione singola selezionato](launch-screens-images/launch01.png)
+    ![Finestra nuovo progetto con app visualizzazione singola selezionata](launch-screens-images/launch01.png)
 
-    - Per impostazione predefinita, un nuovo progetto include un **LaunchScreen.storyboard** file che definisce l'interfaccia della schermata di avvio. 
-    - Per aggiungere invece uno Storyboard di schermo avviare a un progetto esistente, fare clic sul nome del progetto nel **riquadro della soluzione** e scegliere **Aggiungi > Nuovo File...**  e quindi selezionare **schermata avvio**:
+    - Per impostazione predefinita, un nuovo progetto include un file **LaunchScreen. Storyboard** che definisce l'interfaccia della schermata di avvio. 
+    - Per aggiungere invece uno storyboard della schermata di avvio a un progetto esistente, fare clic con il pulsante destro del mouse sul nome del progetto nella **riquadro della soluzione** e scegliere **Aggiungi > nuovo file** e quindi selezionare **schermata di avvio**:
 
-    ![Finestra del nuovo File con iOS schermata avvio selezionata](launch-screens-images/launch01b.png)
+    ![La finestra nuovo file con la schermata di avvio di iOS selezionata](launch-screens-images/launch01b.png)
 
-    - Denominare il file **LaunchScreen** o un altro nome di propria scelta.
+    - Denominare il file **LaunchScreen** o un altro nome a scelta.
 
-2. Configurare il progetto per utilizzare lo Storyboard appropriato per la schermata di avvio:
+2. Configurare il progetto in modo da usare lo storyboard appropriato per la schermata di avvio:
 
-    - Fare doppio clic il **Info. plist** del file nei **riquadro della soluzione** per aprirlo e modificarlo.
-    - Nel **immagini di avvio** sezione, assicurarsi che **schermata avvio** è impostato sul nome dello Storyboard appropriato:
+    - Fare doppio clic sul file **info. plist** nel **riquadro della soluzione** per aprirlo per la modifica.
+    - Nella sezione **Launch images (immagini di avvio** ) assicurarsi che la **schermata di avvio** sia impostata sul nome dello storyboard appropriato:
 
-    ![Il selettore di schermata di avvio nel file Info. plist](launch-screens-images/launch02.png)
+    ![Selettore di schermata di avvio in info. plist](launch-screens-images/launch02.png)
 
-    - Per impostazione predefinita, un nuovo progetto è configurato per utilizzare **LaunchScreen.storyboard** come la schermata di avvio.
+    - Per impostazione predefinita, un nuovo progetto è configurato per l'uso di **LaunchScreen. Storyboard** come schermata di avvio.
 
-3. Aggiungere un'immagine per il **assets. xcassets** catalogo di Asset in modo che sia disponibile per l'uso nella schermata di avvio. Per altre informazioni, vedere il [aggiunta di immagini da un catalogo Asset immagine impostata](~/ios/app-fundamentals/images-icons/displaying-an-image.md) sezione il [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) Guida.
+3. Aggiungere un'immagine al catalogo delle **risorse assets. xcassets** in modo che sia disponibile per l'uso nella schermata di avvio. Per ulteriori informazioni, vedere la sezione [aggiunta di immagini a un set di immagini del catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md) di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
 
-4. Aprire **LaunchScreen.storyboard** per la modifica facendo doppio clic su esso nel **riquadro della soluzione**.
+4. Aprire **LaunchScreen. Storyboard** per la modifica facendo doppio clic su di esso nel **riquadro della soluzione**.
 
-5. Scegliere un dispositivo e l'orientamento su cui si desidera visualizzare in anteprima lo Storyboard di schermata avvio veloce in iOS Designer. Aprire il pannello di selezione dispositivo sulla barra degli strumenti in basso e selezionare **iPhone 4S** e **verticale**.
+5. Scegliere un dispositivo e un orientamento per visualizzare l'anteprima dello storyboard della schermata di avvio in iOS designer. Aprire il pannello di selezione del dispositivo sulla barra degli strumenti in basso e selezionare **iPhone 4S** e **verticale**.
 
-    ![Barra degli strumenti di selezione il dispositivo](launch-screens-images/launch05.png)
+    ![Barra degli strumenti selezione dispositivo](launch-screens-images/launch05.png)
 
-    - Si noti che se si seleziona un dispositivo e l'orientamento viene modificato solo come iOS Designer Visualizza l'anteprima di progettazione. Indipendentemente dalla selezione effettuata qui, aggiunti di recente i vincoli vengono applicati in tutti i dispositivi e gli orientamenti, a meno che il **modifica tratti** pulsante è stato usato per specificare in caso contrario. 
+    - Si noti che la selezione di un dispositivo e l'orientamento cambiano solo il modo in cui iOS designer Visualizza l'anteprima della progettazione. Indipendentemente dalla selezione effettuata, i vincoli appena aggiunti vengono applicati a tutti i dispositivi e gli orientamenti, a meno che non sia stato usato il pulsante **modifica tratti** per specificare diversamente. 
 
-6. Impostare il **sfondo** colori della visualizzazione principale del Controller di visualizzazione. Selezionare la vista facendo clic al centro il Controller di visualizzazione e modificare il colore di sfondo usando il **riquadro delle proprietà**:
+6. Imposta il colore di **sfondo** della visualizzazione principale del controller di visualizzazione. Selezionare la visualizzazione facendo clic al centro del controller di visualizzazione e modificare il colore di sfondo usando il **riquadro delle proprietà**:
 
-    ![Una singola visualizzazione con un colore di sfondo di colore viola](launch-screens-images/launch06.png)
+    ![Una singola visualizzazione con un colore di sfondo viola](launch-screens-images/launch06.png)
 
-7. Aggiungere un **Visualizza immagine** alla schermata di avvio e impostare la relativa origine **immagine**:
+7. Aggiungere una **visualizzazione immagine** alla schermata di avvio e impostare l' **immagine**di origine:
 
-    - Trascinare un' **Visualizza immagine** dalle **riquadro casella degli strumenti** al centro della visualizzazione.
-    - Con il **visualizzazione immagine** selezionato, nella **Widget** sezione del **riquadro delle proprietà** impostare il **immagine** proprietà immagine già impostato aggiungere il **assets. xcassets** catalogo di Asset. Riposizionare e ridimensionare le **visualizzazione immagine** in base alle necessità:
+    - Trascinare una **visualizzazione immagine** dal **riquadro Casella degli strumenti** al centro della visualizzazione.
+    - Con la **visualizzazione immagine** selezionata, nella sezione **widget** del **riquadro delle proprietà** impostare la proprietà **immagine** sul set di immagini già aggiunto al catalogo asset **. xcassets** asset. Riposizionare e ridimensionare la **visualizzazione immagine** come richiesto:
     
-    ![Visualizzazione di un'immagine con il relativo set di proprietà immagine](launch-screens-images/launch07.png)
+    ![Visualizzazione immagine con la relativa proprietà Image impostata](launch-screens-images/launch07.png)
 
-8. Aggiungere un **Label** sotto il **visualizzazione immagine** e usare il **riquadro delle proprietà** per impostare i relativi attributi: 
+8. Aggiungere un' **etichetta** sotto la **visualizzazione immagine** e usare la **riquadro delle proprietà** per impostarne gli attributi: 
 
-    ![Un'etichetta con il relativo set di colori e testo](launch-screens-images/launch08.png)
+    ![Etichetta con il testo e il set di colori](launch-screens-images/launch08.png)
 
-9. Passare alla modalità di modifica del vincolo con il pulsante destro nel **sulla barra degli strumenti vincoli**:
+9. Passare alla modalità di modifica dei vincoli usando il pulsante destro della **barra degli strumenti vincoli**:
     
-    ![Il pulsante modalità di modifica vincoli](launch-screens-images/launch09.png)
+    ![Pulsante modalità di modifica vincoli](launch-screens-images/launch09.png)
 
-10. Aggiungere vincoli per il **visualizzazione immagine**, impostando l'altezza e larghezza e centro orizzontalmente e verticalmente:
+10. Aggiungere vincoli alla **visualizzazione immagine**, impostarne l'altezza e la larghezza e centrarla orizzontalmente e verticalmente:
 
-    ![Visualizzazione di un'immagine con vincoli di layout](launch-screens-images/launch10.png)
+    ![Visualizzazione immagini con vincoli di layout](launch-screens-images/launch10.png)
 
-    - Per altre informazioni su come aggiungere i vincoli, vedere [Layout automatico con la finestra di progettazione di Xamarin per iOS](~/ios/user-interface/designer/designer-auto-layout.md).
+    - Per altri dettagli su come aggiungere vincoli, vedere [layout automatico con il Xamarin designer per iOS](~/ios/user-interface/designer/designer-auto-layout.md).
 
-11. Aggiungere vincoli per il **etichetta**, centrato orizzontalmente, assegnargli un'altezza e larghezza e il posizionamento è fissa distanza verticale dalle **visualizzazione immagine**:
+11. Aggiungere vincoli all' **etichetta**, centrarla orizzontalmente, assegnarle un'altezza e una larghezza e posizionarla a una distanza fissa verticalmente dalla visualizzazione dell' **immagine**:
 
-    ![Un'etichetta con vincoli di layout](launch-screens-images/launch11.png)
+    ![Etichetta con vincoli di layout](launch-screens-images/launch11.png)
 
-12. Altri dispositivi e gli orientamenti per verificare che la progettazione sia come previsto in tutti gli scenari di test. In casi in cui è necessario apportare per un dispositivo specifico o un orientamento regolazioni, usare il **modifica tratti** pulsante per aggiungere vincoli per le classi di dimensioni specifiche:
+12. Testare altri dispositivi e orientamenti per verificare che la progettazione appaia come previsto in tutti gli scenari. Nei casi in cui è necessario apportare modifiche per un dispositivo o un orientamento specifico, usare il pulsante **modifica tratti** per aggiungere i vincoli per classi di dimensioni specifiche:
 
-    ![Schermata di avvio viene eseguito il rendering come un iPhone X con orientamento orizzontale](launch-screens-images/launch12.png)
+    ![Schermata di avvio sottoposta a rendering come iPhone X con orientamento orizzontale](launch-screens-images/launch12.png)
 
-13. Salvare le modifiche allo Storyboard. Eseguire l'app in un dispositivo o simulatore e schermata di avvio sarà visibile come sta avviando l'app.
+13. Salvare le modifiche apportate allo storyboard. Eseguire l'app in un simulatore o un dispositivo e la schermata di avvio sarà visibile durante l'avvio dell'app.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Creare un nuovo progetto. In Visual Studio, selezionare **File > Nuovo > progetto > Visual c# > iPhone & iPad > App iOS (Xamarin)**:
+1. Creare un nuovo progetto. In Visual Studio selezionare **File > nuovo > progetto > Visual C# > iPhone & iPad > app iOS (Novell)** :
 
-    ![Finestra Nuovo progetto, con App iOS (Xamarin) selezionata](launch-screens-images/launch01.w157.png)
+    ![La finestra nuovo progetto con app iOS (Novell) selezionata](launch-screens-images/launch01.w157.png)
 
-    Selezionare il **App visualizzazione singola** modello e quindi fare clic su **OK**:
+    Selezionare il modello **app visualizzazione singola** , quindi fare clic su **OK**:
 
-    ![Modello di App visualizzazione singola](launch-screens-images/launch01-2.w157.png)
+    ![Modello app visualizzazione singola](launch-screens-images/launch01-2.w157.png)
 
-2. Se **risorse > LaunchScreen.xib** presente nella **Esplora soluzioni**, eliminarlo facendo clic sul file e scegliendo **Elimina**. Questo file verrà sostituito con uno Storyboard nel passaggio successivo.
+2. Se nel **Esplora soluzioni**esiste una **risorsa > LaunchScreen. xib** , eliminarla facendo clic con il pulsante destro del mouse sul file e scegliendo **Elimina**. Il file verrà sostituito con uno storyboard nel passaggio successivo.
 
-3. Creare uno Storyboard da utilizzare come schermata di avvio. Nel **Esplora soluzioni**, fare clic sul progetto e scegliere **Aggiungi > Nuovo elemento...**  seguita da **Storyboard vuoto**. Nome di questo Storyboard **LaunchScreen.storyboard** e fare clic su **Add**:
+3. Creare uno storyboard da usare come schermata di avvio. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi > nuovo elemento...** seguito da **storyboard vuoto**. Assegnare a questo storyboard il nome **LaunchScreen. Storyboard** e fare clic su **Aggiungi**:
 
-    ![Finestra Aggiungi nuovo elemento, con uno Storyboard vuoto selezionato](launch-screens-images/launch03.w157.png)
+    ![Finestra Aggiungi nuovo elemento con storyboard vuoto selezionato](launch-screens-images/launch03.w157.png)
 
-4. Configurare il progetto deve utilizzare **LaunchScreen.storyboard** come dello Storyboard, schermata di avvio:
+4. Configurare il progetto per l'uso di **LaunchScreen. Storyboard** come storyboard della schermata di avvio:
 
     - Fare doppio clic sul file **Info.plist** in **Esplora soluzioni** per aprirlo e modificarlo. 
-    - Nel **asset visivi** scheda, impostare **schermata avvio veloce** al **LaunchScreen**.
+    - Nella scheda **Asset visivi** impostare **schermata di avvio** su **LaunchScreen**.
 
-    ![Il selettore di schermata di avvio nel file Info. plist](launch-screens-images/launch04-vs.png)
+    ![Selettore di schermata di avvio in info. plist](launch-screens-images/launch04-vs.png)
 
-5. Aggiungere un'immagine a un catalogo di Asset nel progetto in modo che sia disponibile per l'uso nella schermata di avvio:
+5. Aggiungere un'immagine a un catalogo asset nel progetto in modo che sia disponibile per l'uso nella schermata di avvio:
 
-    - Nel **Esplora soluzioni**, fare clic su **cataloghi Asset** e selezionare **Aggiungi catalogo Asset**. Assegnare un nome per il nuovo catalogo Asset **asset**:
+    - Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse su **cataloghi asset** e scegliere **Aggiungi catalogo asset**. Assegnare un nome al nuovo asset **del catalogo asset**:
 
-    ![Finestra Aggiungi nuovo elemento, con il catalogo di Asset selezionata](launch-screens-images/launch05.w157.png)
+    ![Finestra Aggiungi nuovo elemento con catalogo asset selezionato](launch-screens-images/launch05.w157.png)
 
-    - Aggiungere un nuovo Set di immagini per il **asset** catalogo di Asset, come descritto nel [aggiunta di immagini da un catalogo Asset immagine Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md) sezione del [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) Guida.
+    - Aggiungere un nuovo set di immagini al **Catalogo asset asset** , come descritto nella sezione [aggiunta di immagini a un set di immagini del catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md) di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
 
-6. Aprire **LaunchScreen.storyboard** per la modifica facendo doppio clic su esso nel **Esplora soluzioni**.
+6. Aprire **LaunchScreen. Storyboard** per la modifica facendo doppio clic su di esso nel **Esplora soluzioni**.
 
-    - Per modificare un file Storyboard, Visual Studio richiede una connessione attiva a un host di compilazione Mac. Vedere le [connessione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) Guida per i dettagli.
+    - Per modificare un file storyboard, Visual Studio richiede una connessione attiva a un host di compilazione Mac. Per informazioni dettagliate, vedere la Guida [connessione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) .
 
-7. Scegliere un dispositivo e l'orientamento su cui si desidera visualizzare in anteprima lo Storyboard di schermata avvio veloce in iOS Designer. Aprire il pannello di selezione dispositivo sulla barra degli strumenti in basso e selezionare **iPhone 4S** e **verticale**: 
+7. Scegliere un dispositivo e un orientamento per visualizzare l'anteprima dello storyboard della schermata di avvio in iOS designer. Aprire il pannello di selezione del dispositivo sulla barra degli strumenti in basso e selezionare **iPhone 4S** e **verticale**: 
  
-    ![Barra degli strumenti di selezione il dispositivo](launch-screens-images/launch07-vs.png)
+    ![Barra degli strumenti selezione dispositivo](launch-screens-images/launch07-vs.png)
 
-    - Si noti che se si seleziona un dispositivo e l'orientamento viene modificato solo come iOS Designer Visualizza l'anteprima di progettazione. Indipendentemente dalla selezione effettuata qui, aggiunti di recente i vincoli vengono applicati in tutti i dispositivi e gli orientamenti, a meno che il **modifica tratti** pulsante è stato usato per specificare in caso contrario. 
+    - Si noti che la selezione di un dispositivo e l'orientamento cambiano solo il modo in cui iOS designer Visualizza l'anteprima della progettazione. Indipendentemente dalla selezione effettuata, i vincoli appena aggiunti vengono applicati a tutti i dispositivi e gli orientamenti, a meno che non sia stato usato il pulsante **modifica tratti** per specificare diversamente. 
 
-8. Aggiungere un **Controller di visualizzazione** allo Storyboard trascinando uno dalle **della casella degli strumenti** nell'area di progettazione: 
+8. Per aggiungere un **controller di visualizzazione** allo storyboard, trascinarne uno dalla **casella degli strumenti** nell'area di progettazione: 
 
-    ![Un oggetto vuoto Controller di visualizzazione aggiunto all'area di progettazione](launch-screens-images/launch08-vs.png)
+    ![Un controller di visualizzazione vuoto è stato aggiunto all'area di progettazione](launch-screens-images/launch08-vs.png)
 
-9. Impostare il **sfondo** colori della visualizzazione principale del Controller di visualizzazione. Selezionare la vista facendo clic al centro il Controller di visualizzazione e modificare il colore di sfondo usando il **finestra proprietà**:
+9. Imposta il colore di **sfondo** della visualizzazione principale del controller di visualizzazione. Selezionare la visualizzazione facendo clic al centro del controller di visualizzazione e modificare il colore di sfondo utilizzando la **finestra Proprietà**:
     
-    ![Una singola visualizzazione con un colore di sfondo di colore viola](launch-screens-images/launch09-vs.png)
+    ![Una singola visualizzazione con un colore di sfondo viola](launch-screens-images/launch09-vs.png)
 
-10. Aggiungere un **Visualizza immagine** alla schermata di avvio e impostare la relativa origine **immagine**:
+10. Aggiungere una **visualizzazione immagine** alla schermata di avvio e impostare l' **immagine**di origine:
 
-    - Trascinare un' **Visualizza immagine** dalle **della casella degli strumenti** al centro della visualizzazione.
-    - Con il **Visualizza immagine** ancora selezionato, nel **Widget** sezione del **finestra proprietà** impostare il **immagine** proprietà per impostare l'immagine già aggiunto per il **asset** catalogo di Asset. Riposizionare e ridimensionare le **visualizzazione immagine** in base alle necessità:
+    - Trascinare una **visualizzazione immagine** dalla **casella degli strumenti** al centro della visualizzazione.
+    - Con la **visualizzazione immagini** ancora selezionata, nella sezione **widget** della **finestra Proprietà** impostare la proprietà **immagine** sul set di immagini già aggiunto al **Catalogo asset asset** . Riposizionare e ridimensionare la **visualizzazione immagine** come richiesto:
     
-    ![Visualizzazione di un'immagine con il relativo set di proprietà immagine](launch-screens-images/launch10-vs.png)
+    ![Visualizzazione immagine con la relativa proprietà Image impostata](launch-screens-images/launch10-vs.png)
 
-11. Aggiungere un **Label** sotto il **immagine Visualizza**:
+11. Aggiungere un' **etichetta** sotto la **visualizzazione immagine**:
 
-    - Trascinare un **Label** dal **della casella degli strumenti** nell'area di progettazione, posizionandolo sotto il **visualizzazione immagine**.
-    - Impostare gli attributi per il **etichetta** usando la **finestra proprietà**:
+    - Trascinare un' **etichetta** dalla **casella degli strumenti** nell'area di progettazione, inserendola sotto la **visualizzazione immagine**.
+    - Impostare gli attributi per l' **etichetta** utilizzando la **finestra Proprietà**:
 
-    ![Un'etichetta con il relativo set di colori e testo](launch-screens-images/launch11-vs.png) 
+    ![Etichetta con il testo e il set di colori](launch-screens-images/launch11-vs.png) 
 
-12. Passare alla modalità di modifica del vincolo con il pulsante destro nel **sulla barra degli strumenti vincoli**:
+12. Passare alla modalità di modifica dei vincoli usando il pulsante destro della **barra degli strumenti vincoli**:
     
-    ![Il pulsante modalità di modifica vincoli](launch-screens-images/launch12-vs.png) 
+    ![Pulsante modalità di modifica vincoli](launch-screens-images/launch12-vs.png) 
 
-13. Aggiungere vincoli per il **visualizzazione immagine**, impostando l'altezza e larghezza e centro orizzontalmente e verticalmente:
+13. Aggiungere vincoli alla **visualizzazione immagine**, impostarne l'altezza e la larghezza e centrarla orizzontalmente e verticalmente:
 
-    ![Visualizzazione di un'immagine con vincoli di layout](launch-screens-images/launch13-vs.png) 
+    ![Visualizzazione immagini con vincoli di layout](launch-screens-images/launch13-vs.png) 
 
-    - Per informazioni sull'aggiunta di vincoli, vedere [Layout automatico con la finestra di progettazione di Xamarin per iOS](~/ios/user-interface/designer/designer-auto-layout.md).
+    - Per informazioni sull'aggiunta di vincoli, vedere [layout automatico con il Xamarin designer per iOS](~/ios/user-interface/designer/designer-auto-layout.md).
 
-14. Aggiungere vincoli per il **etichetta**, centrato orizzontalmente, assegnargli un'altezza e larghezza e il posizionamento è fissa distanza verticale dalle **visualizzazione immagine**:
+14. Aggiungere vincoli all' **etichetta**, centrarla orizzontalmente, assegnarle un'altezza e una larghezza e posizionarla a una distanza fissa verticalmente dalla visualizzazione dell' **immagine**:
     
-    ![Un'etichetta con vincoli di layout](launch-screens-images/launch14-vs.png) 
+    ![Etichetta con vincoli di layout](launch-screens-images/launch14-vs.png) 
 
-15. Altri dispositivi e gli orientamenti per verificare che la progettazione sia come previsto in tutti gli scenari di test. In casi in cui è necessario apportare per un dispositivo specifico o un orientamento regolazioni, usare il **modifica tratti** pulsante per aggiungere vincoli per le classi di dimensioni specifiche:
+15. Testare altri dispositivi e orientamenti per verificare che la progettazione appaia come previsto in tutti gli scenari. Nei casi in cui è necessario apportare modifiche per un dispositivo o un orientamento specifico, usare il pulsante **modifica tratti** per aggiungere i vincoli per classi di dimensioni specifiche:
 
-    ![Schermata di avvio viene eseguito il rendering come un iPhone X con orientamento orizzontale](launch-screens-images/launch15-vs.png) 
+    ![Schermata di avvio sottoposta a rendering come iPhone X con orientamento orizzontale](launch-screens-images/launch15-vs.png) 
 
-16. Salvare le modifiche allo Storyboard. Eseguire l'app in un dispositivo o simulatore e schermata di avvio sarà visibile come sta avviando l'app.
+16. Salvare le modifiche apportate allo storyboard. Eseguire l'app in un simulatore o un dispositivo e la schermata di avvio sarà visibile durante l'avvio dell'app.
 
 -----
 
 > [!NOTE]
-> Uno Storyboard usato come una schermata di avvio veloce _devono_ includono solo semplici incorporati, gli elementi dell'interfaccia utente e **non è possibile** non tutti i calcoli o derivare da una classe personalizzata.
+> Uno storyboard usato come schermata di avvio _deve_ includere solo elementi dell'interfaccia utente incorporati semplici e **non può** eseguire calcoli o derivare da una classe personalizzata.
 
-Per altre informazioni sulla creazione di una schermata di avvio con uno Storyboard unificati, vedere la [schermate di avvio dinamico](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) sezione il [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) Guida.
+Per ulteriori informazioni sulla creazione di una schermata di avvio con uno storyboard unificato, vedere la sezione schermate di [avvio dinamico](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) della Guida per gli [storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
-## <a name="migrating-to-launch-screen-storyboards"></a>Migrazione da avviare storyboard di schermata
+## <a name="migrating-to-launch-screen-storyboards"></a>Migrazione agli storyboard della schermata di avvio
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Quando si aggiorna un'app esistente per usare gli storyboard per le schermate di avvio, fare clic il **nome progetto** nel **Esplora soluzioni** e selezionare **Add**  >  **Nuovo File...** . Selezionare **iOS** > **schermata avvio veloce** e fare clic sui **New** pulsante:
+Quando si aggiorna un'app esistente per usare gli storyboard per le schermate di avvio, fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file**. Selezionare**schermata di avvio** **iOS** > e fare clic sul pulsante **nuovo** :
 
-![](launch-screens-images/storyboard02.png "Selezionare una schermata di avvio di iOS")
+![](launch-screens-images/storyboard02.png "Selezionare una schermata di avvio iOS")
 
-Successivamente, fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo. Sotto **schermata avvio**, selezionare il nuovo file Storyboard creato in precedenza.
+Fare quindi doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica. In **schermata di avvio**selezionare il nuovo file storyboard creato in precedenza.
 
-![](launch-screens-images/storyboard09.png "Selezionare il nuovo file Storyboard creato in precedenza")
+![](launch-screens-images/storyboard09.png "Selezionare il nuovo file storyboard creato in precedenza")
 
 
-Per usare il nuovo Storyboard come una schermata di avvio, eseguire le operazioni seguenti:
+Per usare il nuovo storyboard come schermata di avvio, seguire questa procedura:
 
-1. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-2. Scorrere fino al **universale immagini di avvio** sezione dell'editor, aprire il **schermata avvio** elenco a discesa e selezionare il nome dello storyboard creato in precedenza: 
+1. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
+2. Scorrere fino alla sezione **Immagini di avvio universale** dell'editor, aprire l'elenco a discesa **Avvia schermata** e selezionare il nome dello storyboard creato in precedenza: 
 
-    ![](launch-screens-images/storyboard08.png "Impostazione della schermata di avvio allo storyboard")
+    ![](launch-screens-images/storyboard08.png "Impostazione della schermata di avvio sullo storyboard")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare clic sul nome del progetto nel **Esplora soluzioni** e selezionare **Add** > **nuovo File...** : 
+1. Fare clic con il pulsante destro del mouse sul nome del progetto nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file...** : 
 
-    ![](launch-screens-images/image012.png "Aggiungere nuovo file")
-2. Immettere un nome per la schermata di avvio, quindi scegliere il **Add** pulsante: 
+    ![](launch-screens-images/image012.png "Aggiungi nuovo file")
+2. Immettere un nome per la schermata di avvio e fare clic sul pulsante **Aggiungi** : 
 
     ![](launch-screens-images/image013.png "Immettere un nome per la schermata di avvio")
-3. Nel **Esplora soluzioni**, doppio clic sul file storyboard appena creata per aprirlo e modificarlo.
-4. Verificare che il **classe di dimensioni** è impostata su **qualsiasi: qualsiasi** e il **Visualizza come** è **generico**: 
+3. Nella **Esplora soluzioni**fare doppio clic sul file dello storyboard appena creato per aprirlo per la modifica.
+4. Verificare che la **classe Size** sia impostata su **any: any** e la **vista come** **generica**: 
 
-    ![](launch-screens-images/image016.png "Assicurarsi che la classe di dimensioni è impostata su qualsiasi: qualsiasi e la visualizzazione è generico")
-5. Schermata di avvio da classi di dimensioni, gli elementi dell'interfaccia utente semplici assembly (ad esempio `UIImageView`) e le immagini che sono stati inclusi nel bundle dell'applicazione: 
+    ![](launch-screens-images/image016.png "Verificare che la classe Size sia impostata su Any: any e la vista come generica")
+5. Assemblare la schermata di avvio dalle classi di dimensioni, elementi dell'interfaccia `UIImageView`utente semplici (ad esempio) e immagini incluse nel bundle dell'applicazione: 
 
-    ![](launch-screens-images/image017.png "Assembly la schermata di avvio in iOS Designer")
-6. Salvare le modifiche allo Storyboard.
+    ![](launch-screens-images/image017.png "Assemblare la schermata di avvio in iOS designer")
+6. Salvare le modifiche apportate allo storyboard.
 
 -----
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Schermate di avvio dinamico (esempio)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
+- [Schermate di avvio dinamico (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [Nozioni di base su iOS Designer](~/ios/user-interface/designer/index.md)
-- [Aggiunta di immagini di un'immagine di catalogo di Asset impostata](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
-- [Layout automatico con la finestra di progettazione di Xamarin per iOS](~/ios/user-interface/designer/designer-auto-layout.md)
-- [Linee guida dell'interfaccia umana: Schermata di avvio](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)
+- [Aggiunta di immagini a un set di immagini del catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
+- [Layout automatico con il Xamarin Designer per iOS](~/ios/user-interface/designer/designer-auto-layout.md)
+- [Linee guida per l'interfaccia umana: Schermata di avvio](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)

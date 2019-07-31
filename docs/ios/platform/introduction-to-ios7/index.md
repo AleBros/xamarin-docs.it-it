@@ -1,38 +1,38 @@
 ---
 title: Introduzione a iOS 7
-description: Questo articolo illustra le principali nuove API introdotte in iOS 7, tra cui le transizioni di Controller di visualizzazione, miglioramenti alle animazioni UIView, UIKit Dynamics e i Kit di testo. Vengono anche presentate alcune delle modifiche per l'interfaccia utente e le nuove funzionalità di multitasking migliorata.
+description: Questo articolo illustra le nuove API principali introdotte in iOS 7, incluse le transizioni del controller di visualizzazione, i miglioramenti apportati alle animazioni UIView, UIKit Dynamics e Text Kit. Vengono inoltre illustrate alcune delle modifiche apportate all'interfaccia utente e le nuove funzionalità di multitasking.
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: db2ce779962947e2121ff03280544a080e193e2e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 067d97e6a36dae6c11f056241c08c21899e96c08
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037414"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649336"
 ---
 # <a name="introduction-to-ios-7"></a>Introduzione a iOS 7
 
-_Questo articolo illustra le principali nuove API introdotte in iOS 7, tra cui le transizioni di Controller di visualizzazione, miglioramenti alle animazioni UIView, UIKit Dynamics e i Kit di testo. Vengono anche presentate alcune delle modifiche per l'interfaccia utente e le nuove funzionalità di multitasking migliorata._
+_Questo articolo illustra le nuove API principali introdotte in iOS 7, incluse le transizioni del controller di visualizzazione, i miglioramenti apportati alle animazioni UIView, UIKit Dynamics e Text Kit. Vengono inoltre illustrate alcune delle modifiche apportate all'interfaccia utente e le nuove funzionalità di multitasking._
 
-iOS 7 è un aggiornamento principale per iOS. Introduce una progettazione dell'interfaccia utente completamente nuova che assegna lo stato attivo su chrome contenuti piuttosto che dell'applicazione. Insieme l'oggetto visivo cambia, iOS 7 aggiunge una vasta gamma di nuove API per creare esperienze e le interazioni più complete. Questo documento i sondaggi le nuove tecnologie introdotte con iOS 7 e funge da punto di partenza per esplorare ulteriormente.
+iOS 7 è un aggiornamento principale di iOS. Introduce una progettazione dell'interfaccia utente completamente nuova che mette lo stato attivo sul contenuto anziché sull'applicazione Chrome. Insieme alle modifiche visive, iOS 7 aggiunge una pletora di nuove API per creare interazioni ed esperienze più avanzate. Questo documento illustra le nuove tecnologie introdotte con iOS 7 e funge da punto di partenza per l'esplorazione.
 
-## <a name="uiview-animation-enhancements"></a>Miglioramenti delle animazioni UIView
+## <a name="uiview-animation-enhancements"></a>Miglioramenti dell'animazione UIView
 
-iOS 7 aggiunge il supporto di animazione in UIKit, consentendo alle applicazioni di eseguire operazioni che richiedevano in precedenza eliminazione direttamente nel framework di Core Animation. Ad esempio, `UIView` ora è possibile eseguire le animazioni di spring, nonché le animazioni di fotogrammi chiave, che in precedenza una `CAKeyframeAnimation` applicati a un `CALayer`.
+iOS 7 aumenta il supporto dell'animazione in UIKit, consentendo alle applicazioni di eseguire operazioni che in precedenza richiedevano l'eliminazione diretta nel Framework di animazione principale. Ad esempio, `UIView` può ora eseguire animazioni spring, nonché animazioni di fotogramma chiave, che `CAKeyframeAnimation` in precedenza venivano applicate a un oggetto `CALayer`.
 
-### <a name="spring-animations"></a>Animazioni di Spring
+### <a name="spring-animations"></a>Animazioni spring
 
- `UIView` supporta ora le modifiche alle proprietà di animazione con effetto molla. Per aggiungere questo elemento, chiamare il `AnimateNotify` o `AnimateNotifyAsync` , passando i valori per il rapporto di smorzamento spring e la velocità di spring iniziale, come descritto di seguito:
+ `UIView`supporta ora l'animazione delle modifiche delle proprietà con effetto primaverile. Per aggiungere questo oggetto, chiamare il `AnimateNotify` metodo `AnimateNotifyAsync` o, passando i valori per il rapporto di smorzamento della molla e la velocità iniziale della molla, come descritto di seguito:
 
--  `springWithDampingRatio` : Un valore compreso tra 0 e 1, dove l'oscillazione aumenta per il valore più piccolo.
--  `initialSpringVelocity` – La velocità di spring iniziale come percentuale della distanza totale dell'animazione al secondo.
+-  `springWithDampingRatio`: Valore compreso tra 0 e 1, in cui l'oscillazione aumenta per un valore inferiore.
+-  `initialSpringVelocity`: La velocità iniziale della molla come percentuale della distanza di animazione totale al secondo.
 
 
-Il codice seguente genera un effetto molla quando cambia il centro della visualizzazione immagine:
+Il codice seguente produce un effetto primaverile quando il centro della visualizzazione immagine cambia:
 
 ```csharp
 void AnimateWithSpring ()
@@ -48,15 +48,15 @@ void AnimateWithSpring ()
 }
 ```
 
-Questo effetto molla provoca la visualizzazione di immagini da visualizzare a oscillare man mano che completerà la relativa animazione a una nuova posizione centrale, come illustrato di seguito:
+Questo effetto elastico fa sì che la visualizzazione dell'immagine venga visualizzata quando viene completata l'animazione in una nuova posizione centrale, come illustrato di seguito:
 
- ![](images/spring-animation.png "Questo effetto molla provoca la visualizzazione di immagini da visualizzare a oscillare man mano che completerà l'animazione in un nuovo percorso di center")
+ ![](images/spring-animation.png "Questo effetto elastico fa sì che la visualizzazione immagine sembri rimbalzi mentre viene completata l'animazione in una nuova posizione centrale")
 
-### <a name="keyframe-animations"></a>Animazioni di fotogrammi chiave
+### <a name="keyframe-animations"></a>Animazioni di fotogramma chiave
 
-Il `UIView` classe include ora le `AnimateWithKeyframes` metodo per la creazione di animazioni di fotogrammi chiave in un `UIView`. Questo metodo è simile ad altri `UIView` metodi di animazione, a meno che un altro `NSAction` viene passato come parametro per includere i fotogrammi chiave. All'interno di `NSAction`, i fotogrammi chiave vengono aggiunti tramite la chiamata `UIView.AddKeyframeWithRelativeStartTime`.
+La `UIView` classe include ora il `AnimateWithKeyframes` metodo per la creazione di animazioni di `UIView`fotogrammi chiave in un oggetto. Questo metodo è simile ad altri `UIView` metodi di animazione, ad eccezione del `NSAction` fatto che un oggetto aggiuntivo viene passato come parametro per includere i fotogrammi chiave. All'interno `NSAction` `UIView.AddKeyframeWithRelativeStartTime`di, i fotogrammi chiave vengono aggiunti chiamando.
 
-Ad esempio, il frammento di codice seguente crea un'animazione con fotogrammi chiave per aggiungere un'animazione centro della visualizzazione anche per quanto riguarda la vista ruota:
+Ad esempio, il frammento di codice seguente crea un'animazione del fotogramma chiave per animare il centro di una visualizzazione e per ruotare la visualizzazione:
 
 ```csharp
 void AnimateViewWithKeyframes ()
@@ -83,44 +83,44 @@ void AnimateViewWithKeyframes ()
 }
 ```
 
-I primi due parametri per il `AddKeyframeWithRelativeStartTime` metodo specificare l'ora di inizio e la durata del fotogramma chiave, rispettivamente, come percentuale della lunghezza totale di animazione. Nell'esempio sopra produce l'immagine Visualizza l'animazione per il nuovo centro tramite il secondo prima, seguita dalla rotazione di 90 gradi tramite il secondo successivo. Poiché l'animazione specifica `UIViewKeyframeAnimationOptions.Autoreverse` come opzione, animare in ordine inverso anche entrambi i fotogrammi chiave. Infine, i valori finali vengono impostati per lo stato iniziale nel gestore di completamento.
+I primi due parametri `AddKeyframeWithRelativeStartTime` del metodo specificano rispettivamente l'ora di inizio e la durata del fotogramma chiave, come percentuale della lunghezza complessiva dell'animazione. Nell'esempio precedente la visualizzazione immagine viene animata al nuovo centro sul primo secondo, seguita dalla rotazione di 90 gradi nel secondo successivo. Poiché l'animazione specifica `UIViewKeyframeAnimationOptions.Autoreverse` come opzione, entrambi i fotogrammi chiave vengono animati anche in ordine inverso. Infine, i valori finali vengono impostati sullo stato iniziale nel gestore di completamento.
 
-Le schermate riportate di seguito viene illustrata l'animazione combinato tramite i fotogrammi chiave:
+Gli screenshot seguenti illustrano l'animazione combinata tramite i fotogrammi chiave:
 
- ![](images/keyframes.png "In questo screenshot viene illustrata l'animazione combinato tramite i fotogrammi chiave")
+ ![](images/keyframes.png "Questo screenshot illustra l'animazione combinata tramite i fotogrammi chiave")
 
 ## <a name="uikit-dynamics"></a>UIKit Dynamics
 
-UIKit Dynamics è un nuovo set di API in UIKit, che consentono alle applicazioni di creare interazioni animate base fisica. UIKit Dynamics incapsula un motore di fisica 2D a tale scopo.
+UIKit Dynamics è un nuovo set di API in UIKit che consentono alle applicazioni di creare interazioni animate in base alla fisica. UIKit Dynamics incapsula un motore di fisica 2D per renderlo possibile.
 
-L'API è dichiarativa in natura. Si dichiara il comportano di interazioni fisica tramite la creazione di oggetti - denominati *comportamenti* : per i concetti di express fisica, ad esempio la gravità, conflitti, springs e così via. Quindi si collega i propri comportamenti a un altro oggetto, chiamato un' *animatore dinamica*, che incapsula una vista. L'animatore dinamica accetta sommo di applicare i comportamenti di fisica dichiarato da *elementi dinamici* -gli elementi che implementano `IUIDynamicItem`, ad esempio un `UIView`.
+L'API è di natura dichiarativa. Si dichiara il comportamento delle interazioni di fisica mediante la creazione di oggetti, chiamati *comportamenti* , per esprimere concetti di fisica, ad esempio gravità, collisioni, molle e così via. Quindi si alleghino i comportamenti a un altro oggetto, denominato *animatore dinamico*, che incapsula una visualizzazione. Il Dynamic Animator esegue l'applicazione dei comportamenti di fisica dichiarati agli `UIView` *elementi dinamici* , ovvero gli elementi che `IUIDynamicItem`implementano, ad esempio.
 
-Esistono diversi primitivi comportamenti disponibili per l'attivazione di interazioni complesse, tra cui:
+Sono disponibili diversi comportamenti primitivi per attivare interazioni complesse, tra cui:
 
--  `UIAttachmentBehavior` – Collega due elementi dinamici in modo che vengano spostati insieme o associa un elemento dinamico a un punto di attacco.
--  `UICollisionBehavior` – Consente dinamica degli elementi fanno parte di conflitti.
--  `UIDynamicItemBehavior` : Specifica un set generale di proprietà da applicare agli elementi dinamici, ad esempio l'elasticità, densità e problemi.
--  `UIGravityBehavior` -Applica la gravità di un elemento dinamico, consentendo agli elementi ad accelerare la direzione gravitazionale.
--  `UIPushBehavior` – Force si applica a un elemento dinamico.
--  `UISnapBehavior` – Consente a un elemento dinamico bloccare in una posizione con un effetto molla.
-
-
-Anche se ci sono molte le primitive, il processo generale per l'aggiunta di interazioni basate su fisica a una visualizzazione usando UIKit Dynamics è coerente tra i comportamenti:
-
-1.  Creare un animatore dinamica.
-1.  Creare i propri comportamenti.
-1.  Aggiungere i comportamenti per l'animatore dinamica.
+-  `UIAttachmentBehavior`: Collega due elementi dinamici in modo che vengano spostati insieme o allegano un elemento dinamico a un punto di collegamento.
+-  `UICollisionBehavior`: Consente agli elementi dinamici di partecipare ai conflitti.
+-  `UIDynamicItemBehavior`: Specifica un set generale di proprietà da applicare agli elementi dinamici, ad esempio elasticità, densità e attrito.
+-  `UIGravityBehavior`-Applica la gravità a un elemento dinamico, causando l'accelerazione degli elementi nella direzione gravitazionale.
+-  `UIPushBehavior`: Applica Force a un elemento dinamico.
+-  `UISnapBehavior`: Consente a un elemento dinamico di bloccarsi in una posizione con effetto elastico.
 
 
-### <a name="dynamics-example"></a>Dynamics Example
+Sebbene esistano molte primitive, il processo generale per l'aggiunta di interazioni basate su fisica a una vista con UIKit Dynamics è coerente nei comportamenti:
 
-Verrà ora esaminato un esempio che aggiunge la gravità e un limite di conflitto per un `UIView`.
+1.  Creare un animatore dinamico.
+1.  Crea comportamenti.
+1.  Consente di aggiungere comportamenti a Dynamic Animator.
+
+
+### <a name="dynamics-example"></a>Esempio di Dynamics
+
+Viene ora esaminato un esempio che aggiunge gravità e un limite di collisione a `UIView`un.
 
 #### <a name="uigravitybehavior"></a>UIGravityBehavior
 
-Aggiunta di gravità a una visualizzazione immagine segue i 3 passaggi descritti in precedenza.
+L'aggiunta di gravità a una visualizzazione immagine segue i tre passaggi descritti in precedenza.
 
-È necessario lavorare `ViewDidLoad` metodo per questo esempio. In primo luogo, aggiungere un `UIImageView` istanza come indicato di seguito:
+Per questo esempio verrà usato `ViewDidLoad` il metodo. Prima di tutto, `UIImageView` aggiungere un'istanza come indicato di seguito:
 
 ```csharp
 image = UIImage.FromFile ("monkeys.jpg");
@@ -132,40 +132,40 @@ imageView = new UIImageView (new CGRect (new CGPoint (View.Center.X - image.Size
 View.AddSubview (imageView);
 ```
 
-Verrà creata una visualizzazione immagine centrata sul bordo superiore dello schermo. Per configurare l'immagine "autunno" con la gravità, creare un'istanza di un `UIDynamicAnimator`:
+In questo modo viene creata una visualizzazione immagine centrata sul bordo superiore dello schermo. Per fare in modo che l'immagine "cada" con gravità, creare un' `UIDynamicAnimator`istanza di un oggetto:
 
 ```csharp
 dynAnimator = new UIDynamicAnimator (this.View);
 ```
 
-Il `UIDynamicAnimator` accetta un'istanza di un riferimento `UIView` o un `UICollectionViewLayout`, che contiene gli elementi che verranno animati per il propri comportamenti collegati.
+Accetta un'istanza di un riferimento `UIView` o un oggetto `UICollectionViewLayout`che contiene gli elementi che verranno animati in base ai comportamenti collegati. `UIDynamicAnimator`
 
-Creare quindi un `UIGravityBehavior` istanza. È possibile passare uno o più oggetti che implementa il `IUIDynamicItem`, ad esempio un `UIView`:
+Successivamente, creare un' `UIGravityBehavior` istanza. È possibile passare uno o più oggetti che implementano `IUIDynamicItem`, ad `UIView`esempio:
 
 ```csharp
 var gravity = new UIGravityBehavior (dynItems);
 ```
 
-Il comportamento viene passato una matrice di `IUIDynamicItem`, che in questo caso contiene il singolo `UIImageView` istanza si sta l'animazione.
+Al comportamento viene passata una matrice di `IUIDynamicItem`che, in questo caso, contiene la `UIImageView` singola istanza di cui si sta aggiungendo un'animazione.
 
-Infine, aggiungere il comportamento di animatore dinamico:
+Infine, aggiungere il comportamento all'animazione dinamica:
 
 ```csharp
 dynAnimator.AddBehavior (gravity);
 ```
 
-Ciò comporta l'immagine animata verso il basso con la gravità, come illustrato di seguito:
+Questo comporta l'animazione dell'immagine verso il basso con gravità, come illustrato di seguito:
 
-![](images/gravity2.png "Il percorso dell'immagine partenza") 
-![](images/gravity3.png "il percorso dell'immagine finale")
+![](images/gravity2.png "") 
+Posizione dell'immagine![]iniziale(images/gravity3.png "nella posizione dell'immagine finale")
 
-Poiché nulla vincolare i limiti dello schermo, la visualizzazione immagine semplicemente si verifichi una riduzione inferiore. Per limitare la visualizzazione in modo che l'immagine è in conflitto con i bordi dello schermo, è possibile aggiungere un `UICollisionBehavior`. Questo aspetto verrà illustrato nella sezione successiva.
+Poiché non c'è niente vincolante ai limiti dello schermo, la visualizzazione dell'immagine si trova semplicemente in basso. Per vincolare la visualizzazione in modo che l'immagine entri in conflitto con i bordi dello schermo, è possibile `UICollisionBehavior`aggiungere un. Questa operazione verrà illustrata nella sezione successiva.
 
 #### <a name="uicollisionbehavior"></a>UICollisionBehavior
 
-Iniziamo creando un `UICollisionBehavior` e aggiungerlo alla animatore dinamico, come abbiamo fatto il `UIGravityBehavior`.
+Si inizierà creando un oggetto `UICollisionBehavior` e aggiungendolo all'animatore dinamico, esattamente come per il. `UIGravityBehavior`
 
-Modificare il codice per includere il `UICollisionBehavior`:
+Modificare il codice in modo da `UICollisionBehavior`includere:
 
 ```csharp
 using (image = UIImage.FromFile ("monkeys.jpg")) {
@@ -190,9 +190,9 @@ using (image = UIImage.FromFile ("monkeys.jpg")) {
 }
 ```
 
-Il `UICollisionBehavior` ha una proprietà denominata `TranslatesReferenceBoundsIntoBoundry`. Se questa impostazione `true` fa sì che il riferimento ai limiti della visualizzazione da utilizzare come limite di collisione.
+Dispone di una proprietà denominata `TranslatesReferenceBoundsIntoBoundry`. `UICollisionBehavior` Impostando questa `true` opzione su, i limiti della visualizzazione di riferimento verranno utilizzati come limite di collisione.
 
-A questo punto, quando l'immagine animata verso il basso con la gravità, rimbalza leggermente la parte inferiore della schermata prima di stabilire per rest non esiste.
+A questo punto, quando l'immagine viene animata verso il basso con gravità, rimbalza leggermente dalla parte inferiore dello schermo prima di stabilirla.
 
 <!--, as shown below:
 
@@ -200,9 +200,9 @@ A questo punto, quando l'immagine animata verso il basso con la gravità, rimbal
 
 #### <a name="uidynamicitembehavior"></a>UIDynamicItemBehavior
 
-Possiamo ulteriormente controllare il comportamento della visualizzazione immagine in diminuzione con comportamenti aggiuntivi. Ad esempio, è possibile aggiungere un `UIDynamicItemBehavior` per aumentare l'elasticità, causando la visualizzazione di immagini a oscillare informazioni quando si scontra con la parte inferiore della schermata.
+È possibile controllare ulteriormente il comportamento della visualizzazione immagine in calo con comportamenti aggiuntivi. Ad esempio, è possibile aggiungere un `UIDynamicItemBehavior` per aumentare l'elasticità, facendo in modo che la visualizzazione immagini rimbalzi più quando si scontra con la parte inferiore dello schermo.
 
-Aggiunta di un `UIDynamicItemBehavior` segue gli stessi passaggi come con altri comportamenti. Creare prima il comportamento:
+L'aggiunta `UIDynamicItemBehavior` di un oggetto segue gli stessi passaggi degli altri comportamenti. Per prima cosa, creare il comportamento:
 
 ```csharp
 var dynBehavior = new UIDynamicItemBehavior (dynItems) {
@@ -210,39 +210,39 @@ var dynBehavior = new UIDynamicItemBehavior (dynItems) {
 };
 ```
 
-Aggiungere quindi il comportamento per l'animatore dinamico:
+Aggiungere quindi il comportamento all'animatore dinamico:
 
  `dynAnimator.AddBehavior (dynBehavior);`
 
-Con questo comportamento posto, la visualizzazione immagine bounces informazioni quando si scontra con il limite.
+Con questo comportamento, la visualizzazione immagini rimbalza più quando si scontra con il limite.
 
 ## <a name="general-user-interface-changes"></a>Modifiche generali dell'interfaccia utente
 
-Oltre a nuove APIs UIKit, ad esempio UIKit Dynamics, transizioni dei Controller e avanzata UIView animazioni, descritte in precedenza, iOS 7 introduce un'ampia gamma di modifiche visive per l'interfaccia utente e le modifiche API correlate per varie viste e i controlli. Per altre informazioni vedere la [iOS 7 panoramica dell'interfaccia utente](~/ios/platform/introduction-to-ios7/ios7-ui.md).
+Oltre alle nuove API UIKit, ad esempio UIKit Dynamics, le transizioni del controller e le animazioni UIView avanzate descritte in precedenza, iOS 7 introduce un'ampia gamma di modifiche visive all'interfaccia utente e le modifiche alle API correlate per varie visualizzazioni e controlli. Per altre informazioni, vedere [Panoramica dell'interfaccia utente di iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md).
 
 ## <a name="text-kit"></a>Kit di testo
 
-Testo Kit è una nuova API che offre funzionalità di layout e rendering del testo completa. Si basa su un livello basso Text Core framework, ma è molto più facile da usare rispetto al testo di base.
+Il kit di testo è una nuova API che offre funzionalità avanzate per il layout e il rendering del testo. Si basa sul Framework di testo principale di basso livello, ma è molto più semplice da usare rispetto al testo principale.
 
-Per altre informazioni, vedere il [TextKit](~/ios/platform/textkit.md)
+Per ulteriori informazioni, vedere la [TextKit](~/ios/platform/textkit.md)
 
 ## <a name="multitasking"></a>Multitasking
 
-iOS 7 cambia quando e modalità di esecuzione attività in background. Completamento dell'attività in iOS 7 non sono più mantiene applicazioni attivi quando si eseguono attività in background e le applicazioni vengono riattivate per l'elaborazione in modo non contigui in background. iOS 7 aggiunge anche tre nuove API per l'aggiornamento di applicazioni con nuovo contenuto in background:
+iOS 7 cambia quando e come viene eseguito il lavoro in background. Il completamento delle attività in iOS 7 non mantiene più le applicazioni sveglie quando le attività vengono eseguite in background e le applicazioni vengono riattivate per l'elaborazione in background in modo non contiguo. iOS 7 aggiunge anche tre nuove API per l'aggiornamento delle applicazioni con nuovo contenuto in background:
 
 -  Recupero in background: consente alle applicazioni di aggiornare il contenuto in background a intervalli regolari.
--  Notifiche remote - consente alle applicazioni di aggiornare il contenuto quando si riceve una notifica push. Le notifiche possono essere invisibile all'utente o visualizzare un banner nella schermata di blocco.
--  Servizio di trasferimento in background: consente di caricare e scaricare dati, ad esempio file di grandi dimensioni, senza un limite di tempo fisso.
+-  Notifiche remote: consente alle applicazioni di aggiornare il contenuto quando riceve una notifica push. Le notifiche possono essere in modalità invisibile all'utente o visualizzare un banner nella schermata di blocco.
+-  Servizio trasferimento in background: consente il caricamento e il download di dati, ad esempio file di grandi dimensioni, senza un limite di tempo fisso.
 
 
-Per altre informazioni sulle nuove funzionalità multitasking, vedere le sezioni di iOS di xamarin [Guida all'elaborazione in background in](~/ios/app-fundamentals/backgrounding/index.md).
+Per ulteriori informazioni sulle nuove funzionalità multitasking, vedere le sezioni iOS della [Guida in background](~/ios/app-fundamentals/backgrounding/index.md)Novell.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo illustra diverse nuove funzionalità principali per iOS. In primo luogo, viene illustrato come aggiungere le transizioni personalizzate ai controller di visualizzazione. Quindi, viene illustrato come utilizzare le transizioni nelle visualizzazioni di raccolta, entrambi gli elementi da all'interno di un controller di spostamento, nonché in modo interattivo tra le visualizzazioni di raccolta. Successivamente, introduce numerosi miglioramenti apportati alle animazioni UIView, che illustra come le applicazioni usano UIKit per situazioni che richiedevano in precedenza programmando direttamente in Core Animation. Infine, nuove API di Dynamics UIKit, che offre un motore di fisica UIKit, è stato introdotto con il supporto di testi con formattazione ora disponibile in framework Kit di testo.
+In questo articolo vengono illustrate alcune novità principali di iOS. Viene innanzitutto illustrato come aggiungere transizioni personalizzate ai controller di visualizzazione. Viene quindi illustrato come utilizzare le transizioni nelle visualizzazioni di raccolta, sia all'interno di un controller di spostamento che in modo interattivo tra le visualizzazioni di raccolta. Successivamente, introduce diversi miglioramenti apportati alle animazioni UIView, mostrando in che modo le applicazioni usano UIKit per gli elementi che in precedenza richiedevano la programmazione direttamente nell'animazione di base. Infine, viene introdotta la nuova API UIKit Dynamics, che porta un motore di fisica a UIKit, insieme al supporto di testo RTF ora disponibile nel Framework del kit di testo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Introduzione a iOS 7 (esempio)](https://developer.xamarin.com/samples/monotouch/IntroToiOS7)
+- [Introduzione ad iOS 7 (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
 - [Panoramica dell'interfaccia utente di iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Elaborazione in background](~/ios/app-fundamentals/backgrounding/index.md)

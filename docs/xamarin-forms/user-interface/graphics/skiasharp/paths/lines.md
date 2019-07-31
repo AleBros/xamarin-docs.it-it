@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290785"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647310"
 ---
 # <a name="lines-and-stroke-caps"></a>Linee ed estremità dei tratti
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Informazioni su come usare SkiaSharp per disegnare linee con estremità dei tratti diversi_
 
@@ -30,7 +30,7 @@ Per disegnare singole righe, `SKCanvas` definisce una semplice [ `DrawLine` ](xr
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Ma una volta iniziato disegno di linee di spessore ridimensionabile, che genera un altro problema: Modalità di avvio e finali di queste righe spesse di rendering?
+Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Tuttavia, una volta che si inizia a disegnare righe di uno spessore considerevole, viene generato un altro problema: Come devono essere visualizzati i punti di inizio e di fine di queste linee spesse?
 
 L'aspetto dell'avvio e fine delle righe viene chiamato un *estremità della linea* o, in Skia, un *estremità della traccia*. La parola "limite" in questo contesto si riferisce a un tipo di hat &mdash; qualcosa che si trova all'estremità della linea. È impostato il [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) proprietà della `SKPaint` oggetto in uno dei seguenti membri del [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumerazione:
 
@@ -38,7 +38,7 @@ L'aspetto dell'avvio e fine delle righe viene chiamato un *estremità della line
 - `Square`
 - `Round`
 
-Questi vengono illustrate più chiaramente con un programma di esempio. Il **SkiaSharp linee e i percorsi** sezione del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma inizia con una pagina intitolata **estremità dei tratti** base il [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Questa pagina definisce una `PaintSurface` gestore eventi che consente di scorrere i tre membri del `SKStrokeCap` enumerazione, la visualizzazione sia il nome del membro dell'enumerazione e tracciare una linea con tale limite di traccia:
+Questi vengono illustrate più chiaramente con un programma di esempio. Il **SkiaSharp linee e i percorsi** sezione del [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma inizia con una pagina intitolata **estremità dei tratti** base il [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Questa pagina definisce una `PaintSurface` gestore eventi che consente di scorrere i tre membri del `SKStrokeCap` enumerazione, la visualizzazione sia il nome del membro dell'enumerazione e tracciare una linea con tale limite di traccia:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -242,4 +242,4 @@ Se le righe sono connesso o non connesso è un aspetto fondamentale di utilizzo 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

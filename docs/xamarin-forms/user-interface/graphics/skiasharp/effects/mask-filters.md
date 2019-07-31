@@ -7,16 +7,16 @@ ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1d85c705fb993e9b6b558b0c051de93e449b9d05
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61289113"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648730"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtri di maschera di SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Maschera i filtri sono gli effetti che consentono di modificare la geometria e il canale alfa di oggetti grafici. Per usare un filtro, impostare il [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) proprietà della `SKPaint` a un oggetto di tipo [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) che è stato creato chiamando uno del `SKMaskFilter` metodi statici.
 
@@ -43,7 +43,7 @@ Gli overload consentono che specifica i flag per l'algoritmo utilizzato per crea
 
 Negli esempi seguenti vengono visualizzati gli effetti di questi stili. Il `sigma` parametro specifica l'extent della sfocatura. Nelle versioni precedenti di Skia, l'extent della sfocatura indicato con il valore del raggio. Se il valore del raggio è preferibile per l'applicazione, è un valore statico [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) metodo che può convertire da uno a altro. Il metodo Moltiplica il raggio 0.57735 e aggiunge 0,5.
 
-Il **maschera Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio consente di sperimentare con i valori di sigma e gli stili di sfocatura. Il file XAML crea un'istanza di un `Picker` con i quattro `SKBlurStyle` membri dell'enumerazione e un `Slider` per specificare il valore di sigma:
+Il **maschera Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio consente di sperimentare con i valori di sigma e gli stili di sfocatura. Il file XAML crea un'istanza di un `Picker` con i quattro `SKBlurStyle` membri dell'enumerazione e un `Slider` per specificare il valore di sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,9 +180,9 @@ Tutte le schermate hanno illustrato finora sfocatura creato con il `SKBlurStyle.
 
 [![Mascherare esperimento sfocatura](mask-filters-images/MaskBlurExperiment.png "mascherare sfocatura esperimento")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-Nella schermata iOS viene mostrato il `Solid` stile: I caratteri di testo sono ancora presenti come tratti neri a tinta unita e la sfocatura viene aggiunto all'esterno di questi caratteri di testo. 
+Lo screenshot iOS Mostra lo `Solid` stile: I caratteri di testo sono ancora presenti come tratti neri solidi e la sfocatura viene aggiunta all'esterno di questi caratteri di testo. 
 
-Lo screenshot di Android nei centrale visualizza i `Outer` stile: Vengono eliminati i tratti di carattere se stessi (come avviene la bitmap) e la sfocatura racchiude lo spazio vuoto in cui i caratteri di testo è presente una sola volta. 
+Lo screenshot Android nel mezzo Mostra lo `Outer` stile: I tratti di carattere stessi vengono eliminati (così come la bitmap) e la sfocatura racchiude lo spazio vuoto dove i caratteri di testo vengono visualizzati una volta. 
 
 Nella schermata UWP destra il `Inner` stile. La sfocatura è limitata all'area normalmente occupata dai caratteri di testo.
 
@@ -274,4 +274,4 @@ Questo filtro sfocatura fa in modo che la reflection per sembrano molto più rea
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

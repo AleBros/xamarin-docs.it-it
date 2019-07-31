@@ -1,55 +1,55 @@
 ---
 title: ToolBar
-description: Barra degli strumenti è un componente barra di azione che offre maggiore flessibilità rispetto a barra delle azioni predefinita:, può essere inserito in un punto qualsiasi nell'app, la dimensione può essere modificata e può usare una combinazione di colori che è diversa dal tema dell'app. Inoltre, ogni schermata dell'app può avere più barre degli strumenti.
+description: "La barra degli strumenti è un componente della barra delle azioni che offre una maggiore flessibilità rispetto alla barra delle azioni predefinita: può essere inserita in un punto qualsiasi dell'app, la relativa dimensione può essere modificata e può usare una combinazione di colori diversa da quella del tema dell'app. Ogni schermata dell'app può inoltre avere più barre degli strumenti."
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 2c9de4058fdaee53671e65f49ad95c3af5e127d6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 25287e5aa52eeac712f93c3973e02c7e14c89a78
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61082832"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645093"
 ---
 # <a name="toolbar"></a>ToolBar
 
-_Barra degli strumenti è un componente barra di azione che offre maggiore flessibilità rispetto a barra delle azioni predefinita:, può essere inserito in un punto qualsiasi nell'app, la dimensione può essere modificata e può usare una combinazione di colori che è diversa dal tema dell'app. Inoltre, ogni schermata dell'app può avere più barre degli strumenti._
+_La barra degli strumenti è un componente della barra delle azioni che offre una maggiore flessibilità rispetto alla barra delle azioni predefinita: può essere inserita in un punto qualsiasi dell'app, la relativa dimensione può essere modificata e può usare una combinazione di colori diversa da quella del tema dell'app. Ogni schermata dell'app può inoltre avere più barre degli strumenti._
 
  
 ## <a name="overview"></a>Panoramica
 
-Un elemento chiave nella progettazione di qualsiasi attività Android è un *sulla barra delle azioni*. Barra delle azioni è il componente dell'interfaccia utente che è utilizzato per la navigazione, ricerca, i menu e personalizzazione in un'app per Android. Nelle versioni di Android precedenti alla Android 5.0 Lollipop, barra delle azioni (noto anche come il *barra dell'app*) è il componente consigliato per fornire questa funzionalità. 
+Un elemento di progettazione chiave di qualsiasi attività Android è una *barra delle azioni*. La barra delle azioni è il componente dell'interfaccia utente usato per la navigazione, la ricerca, i menu e la personalizzazione in un'app per Android. Nelle versioni di Android prima di Android 5,0 Lollipop la barra delle azioni (nota anche come *barra dell'app*) era il componente consigliato per fornire questa funzionalità. 
 
-Il `Toolbar` widget (introdotta in Android 5.0 Lollipop) può essere considerato una generalizzazione dell'interfaccia barra azione &ndash; destinato a sostituire la barra delle azioni. Il `Toolbar` possono essere utilizzati ovunque in un layout dell'app ed è molto più personalizzabile rispetto a una barra delle azioni. Lo screenshot seguente illustra la versione personalizzata `Toolbar` esempio creata in questa guida: 
+Il `Toolbar` widget (introdotto in Android 5,0 Lollipop) può essere considerato come una generalizzazione dell'interfaccia &ndash; della barra delle azioni di cui è destinato a sostituire la barra delle azioni. Il `Toolbar` può essere usato ovunque in un layout di app ed è molto più personalizzabile rispetto a una barra delle azioni. Lo screenshot seguente illustra l'esempio personalizzato `Toolbar` creato in questa guida: 
 
-[![Screenshot di esempio di una barra degli strumenti modifica, salvare e voci di menu di overflow](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
+[![Schermata di esempio di una barra degli strumenti con voci di menu modifica, Salva e overflow](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
-Esistono alcune importanti differenze tra la `Toolbar` e barra delle azioni: 
+Esistono alcune differenze importanti tra `Toolbar` e la barra delle azioni: 
 
--   Oggetto `Toolbar` può essere inserito in un punto qualsiasi nell'interfaccia utente.
+-   Un `Toolbar` oggetto può essere inserito in un punto qualsiasi dell'interfaccia utente.
 
--   Più barre degli strumenti possono essere visualizzati nella stessa schermata.
+-   Nella stessa schermata è possibile visualizzare più barre degli strumenti.
 
--   Se si usano frammenti, ogni frammento può avere un proprio `Toolbar`. 
+-   Se vengono usati i frammenti, ogni frammento può avere un `Toolbar`proprio. 
 
--   Oggetto `Toolbar` può essere configurato per estendersi solo una parziale larghezza dello schermo. 
+-   Un `Toolbar` oggetto può essere configurato in modo da estendere solo una larghezza parziale dello schermo. 
 
--   Poiché il `Toolbar` non è associata alla combinazione di colori di decor finestra dell'attività, può avere una combinazione di colori visivamente distinte. 
+-   Poiché non `Toolbar` è associato alla combinazione di colori della decorazione della finestra dell'attività, può disporre di una combinazione di colori visivamente distinta. 
 
--   A differenza di barra delle azioni di `Toolbar` non include un'icona visualizzata a sinistra. Menu a destra utilizzare meno spazio. 
+-   Diversamente dalla barra delle azioni, `Toolbar` non include un'icona a sinistra. I menu a destra utilizzano meno spazio. 
 
--   Il `Toolbar` altezza è regolabile. 
+-   L' `Toolbar` altezza è regolabile. 
 
--   Possono essere incluse altre visualizzazioni all'interno di `Toolbar`. 
+-   È possibile includere altre viste all'interno `Toolbar`di. 
 
-Oggetto `Toolbar` può contenere uno o più dei seguenti elementi: 
+Un `Toolbar` oggetto può contenere uno o più degli elementi seguenti: 
 
 -   Pulsante di spostamento
 
--   Un'immagine del logo personalizzato
+-   Immagine logo personalizzata
 
 -   Titolo e sottotitolo
 
@@ -59,27 +59,27 @@ Oggetto `Toolbar` può contenere uno o più dei seguenti elementi:
 
 -   Menu di overflow
 
-Google [Material Design guidelines](https://material.google.com/) consiglia sfruttando i vantaggi di questi elementi per assegnare le app un aspetto distinto (anziché fare affidamento esclusivamente su un'icona dell'applicazione e il titolo). 
+Le [linee guida](https://material.google.com/) per la progettazione di materiali di Google consigliano di sfruttare questi elementi per offrire alle app un aspetto distinto, invece di basarsi esclusivamente sull'icona e sul titolo di un'applicazione. 
 
-Questa guida illustra l'uso più comune `Toolbar` scenari:
+In questa guida vengono illustrati gli scenari `Toolbar` utilizzati più di frequente:
 
--   La sostituzione sulla barra delle azioni predefinita dell'attività con un `Toolbar`. 
+-   Sostituzione della barra delle azioni predefinita di un'attività `Toolbar`con un oggetto. 
 
--   Aggiunta di un secondo `Toolbar` a un'attività.
+-   Aggiunta di un `Toolbar` secondo a un'attività.
 
--   Usando il **libreria di supporto Android v7 AppCompat** library (detto *AppCompat* nella parte restante di questa Guida) per distribuire `Toolbar` nelle versioni precedenti di Android. 
+-   Usando la libreria di **supporto di Android V7 AppCompat** Library (denominata *AppCompat* nella parte restante di questa guida) per `Toolbar` la distribuzione in versioni precedenti di Android. 
 
  
  
 ## <a name="requirements"></a>Requisiti
 
-`Toolbar` è disponibile in Android 5.0 Lollipop (API 21) e versioni successive. Quando si rilascia come destinazione di Android precedente alla versione 5.0 di Android, usare il [libreria di supporto Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/), che offre compatibilità `Toolbar` supportare in un pacchetto NuGet. 
-[Compatibilità di ToolBar](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md) spiega come usare questa libreria. 
+`Toolbar`è disponibile su Android 5,0 Lollipop (API 21) e versioni successive. Quando si fa riferimento a versioni di Android precedenti a Android 5,0, usare la [libreria di supporto di Android V7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/), che fornisce `Toolbar` il supporto compatibile con le versioni precedenti in un pacchetto NuGet. 
+La [compatibilità della barra degli strumenti](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md) spiega come usare questa libreria. 
 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Barra degli strumenti lollipop (esempio)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [Barra degli strumenti AppCompat (esempio)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Barra degli strumenti Lollipop (Sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
+- [Barra degli strumenti AppCompat (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

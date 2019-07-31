@@ -1,75 +1,75 @@
 ---
 title: Configurare l'app tvOS in iTunes Connect
-description: Questo articolo fornisce una Guida aggiuntiva per configurare l'App in iTunes Connect per configurazioni specifiche tvOS iOS.
+description: Questo articolo fornisce una Guida aggiuntiva a iOS configurare l'app in iTunes Connect per le configurazioni specifiche di tvOS.
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3f4ef00cfe990de2d5afd461d7a110d32bc4a236
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 528eee6ade7236d83d5a5bdec6b27ba76f540ad0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61413236"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649159"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurare l'app tvOS in iTunes Connect
 
-_Questo articolo fornisce una Guida aggiuntiva per configurare l'App in iTunes Connect per configurazioni specifiche tvOS iOS._
+_Questo articolo fornisce una Guida aggiuntiva a iOS configurare l'app in iTunes Connect per le configurazioni specifiche di tvOS._
 
 
-Oltre all'impostazione che sarà necessario apportare seguendo iOS e le configurazioni [configurare l'App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , questo documento vengono trattate le configurazioni specifiche che saranno necessario per rilasciare un xamarin. tvos app di Store di App Apple TV.
+Oltre alle configurazioni e alle impostazioni che è necessario eseguire seguendo la Guida [configurare l'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) per iOS, questo documento illustra le configurazioni specifiche che saranno necessarie per rilasciare un'app Novell. TvOS nell'app Apple TV Negozio.
 
 <a name="Adding-a-tvOS-Release-Version" />
 
-## <a name="adding-a-tvos-release-version"></a>Aggiunta di una versione finale di tvOS
+## <a name="adding-a-tvos-release-version"></a>Aggiunta di una versione di rilascio di tvOS
 
-Se si sta creando una nuova App per essere rilasciata il Store di App Apple TV o aggiunta del supporto Apple TV a un'app iOS esistente, è necessario avere creato un iTunes Connect Record e averlo configurato specifico usando iOS seguenti guide:
+Se si crea una nuova app da rilasciare nell'App Store di Apple TV o si aggiunge il supporto Apple TV a un'app iOS esistente, è necessario avere creato un record iTunes Connect e configurarlo usando le seguenti guide specifiche per iOS:
 
 - [Creazione di un record iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#creating)
 - [Gestione di video e screenshot dell'app](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#managing)
 - [Gestione di nome, descrizione, novità, parole chiave e URL](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#metadata)
 - [Gestione delle informazioni generali](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#general)
 
-Facoltativamente, potrebbe richiedere anche:
+Facoltativamente, potrebbe essere necessario anche:
 
 - [Gestione delle informazioni in Game Center](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#game-center)
 - [Gestione delle informazioni sull'acquisto in-app](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
 
-Con tutti i passaggi precedenti completato, aprire Record iTunes Connect e scegliere di aggiungere supporto per tvOS mediante l'intestazione laterale a sinistra dell'app:
+Con tutti i passaggi precedenti completati, aprire il record iTunes Connect dell'app e selezionare per aggiungere il supporto tvOS usando la barra laterale a sinistra:
 
-[![](itunes-connect-images/connect01.png "Aggiungere supporto per tvOS mediante l'intestazione laterale a sinistra")](itunes-connect-images/connect01.png#lightbox)
+[![](itunes-connect-images/connect01.png "Aggiungere il supporto tvOS usando la barra laterale a sinistra")](itunes-connect-images/connect01.png#lightbox)
 
-Le schermate di informazioni specifiche di tvOS saranno quindi disponibili per il determinato Record iTunes Connect:
+Le schermate di informazioni specifiche di tvOS saranno quindi disponibili per il record iTunes Connect specificato:
 
-[![](itunes-connect-images/connect02.png "La schermata di informazioni specifiche di tvOS")](itunes-connect-images/connect02.png#lightbox)
+[![](itunes-connect-images/connect02.png "Schermata delle informazioni specifiche di tvOS")](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
-## <a name="tvos-version-information"></a>informazioni sulla versione di tvOS
+## <a name="tvos-version-information"></a>Informazioni sulla versione di tvOS
 
-Dalla barra laterale a sinistra, selezionare **1.0 Prepare per l'invio** sotto la sezione APP tvOS:
+Dalla barra laterale a sinistra selezionare **1,0 preparare l'invio** nella sezione app tvOS:
 
-[![](itunes-connect-images/connect03.png "informazioni sulla versione di tvOS")](itunes-connect-images/connect03.png#lightbox)
+[![](itunes-connect-images/connect03.png "Informazioni sulla versione di tvOS")](itunes-connect-images/connect03.png#lightbox)
 
-In questa schermata specificare le informazioni seguenti:
+In questa schermata sono disponibili le seguenti informazioni:
 
-- Le necessarie schermate, descrizione, parole chiave e URL.
-- Informazioni generali sull'App, ad esempio numero di versione, Copyright e classificazione di età.
-- Acquisti In-App facoltativi.
-- Supporto facoltativo Game Center con tabelloni punteggi e i risultati ottenuti.
-- Informazioni di revisione dell'App, ad esempio contatti, account dimostrativi e note di richieste.
+- Schermate, descrizione, parole chiave e URL richiesti.
+- Informazioni generali sull'app, ad esempio il numero di versione, il copyright e la classificazione dell'età.
+- Acquisti in-app facoltativi.
+- Supporto Game Center facoltativo con classifiche e obiettivi.
+- Informazioni di revisione dell'app necessarie, ad esempio contatto, account demo e note.
 
-Dopo aver immesso le informazioni necessarie, scegliere il **salvare** pulsante nell'angolo superiore destro dello schermo per salvare le modifiche:
+Dopo aver immesso le informazioni necessarie, fare clic sul pulsante **Salva** nell'angolo superiore destro della schermata per salvare le modifiche:
 
-[![](itunes-connect-images/connect04.png "tvOS pronte per l'invio di informazioni sulla versione")](itunes-connect-images/connect04.png#lightbox)
+[![](itunes-connect-images/connect04.png "Informazioni sulla versione di tvOS pronte per l'invio")](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
-## <a name="preparing-to-submit-for-review"></a>Preparazione per l'invio per la revisione
+## <a name="preparing-to-submit-for-review"></a>Preparazione dell'invio per la revisione
 
-Quando si è finalmente pronta per inviare l'app xamarin. tvos alla Store di App TV Apple per la revisione, tornare alla finestra Record iTunes dell'app Connect e fare clic sui **Invia per la revisione** pulsante nell'angolo superiore destro dello schermo:
+Quando si è pronti per inviare l'app Novell. tvOS all'App Store di Apple TV per la revisione, tornare al record iTunes Connect dell'app e fare clic sul pulsante **Invia per la revisione** nell'angolo superiore destro della schermata:
 
 [![](itunes-connect-images/connect05.png "Invia per la revisione")](itunes-connect-images/connect05.png#lightbox)
 
@@ -77,13 +77,13 @@ Quando si è finalmente pronta per inviare l'app xamarin. tvos alla Store di App
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha offerto panoramica dell'impostazione specifici tvOS necessaria in iTunes Connect per rilasciare un'app tvOS la Store di App Apple TV.
+Questo articolo ha fornito una panoramica dell'impostazione specifica tvOS necessaria in iTunes Connect per rilasciare un'app tvOS all'App Store di Apple TV.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

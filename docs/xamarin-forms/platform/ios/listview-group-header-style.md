@@ -1,24 +1,24 @@
 ---
-title: Stile dell'intestazione di gruppo ListView in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare iOS specifiche della piattaforma che controlla se le celle di intestazione ListView float durante lo scorrimento.
+title: Stile intestazione gruppo ListView in iOS
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che controlla se le celle delle intestazioni ListView sono fluttuanti durante lo scorrimento.
 ms.prod: xamarin
 ms.assetid: 099B2C7F-727F-4BCF-903B-87E728108C24
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: e2f6a402d1df8b842e147ab145474688c203aaa6
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f40737799f63c6e0c61fcc6f4f59584222a49d6d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925873"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648315"
 ---
-# <a name="listview-group-header-style-on-ios"></a>Stile dell'intestazione di gruppo ListView in iOS
+# <a name="listview-group-header-style-on-ios"></a>Stile intestazione gruppo ListView in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo controlli specifici della piattaforma iOS se [ `ListView` ](xref:Xamarin.Forms.ListView) le celle di intestazione float durante lo scorrimento. Vengono utilizzati in XAML, impostando il `ListView.GroupHeaderStyle` proprietà associabili su un valore del `GroupHeaderStyle` enumerazione:
+Questa specifica della piattaforma iOS controlla se [`ListView`](xref:Xamarin.Forms.ListView) le celle di intestazione fluttuano durante lo scorrimento. Viene utilizzato in XAML impostando la `ListView.GroupHeaderStyle` proprietà associabile su un valore `GroupHeaderStyle` dell'enumerazione:
 
 ```xaml
 <ContentPage ...
@@ -41,19 +41,19 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 listView.On<iOS>().SetGroupHeaderStyle(GroupHeaderStyle.Grouped);
 ```
 
-Il `ListView.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `ListView.SetGroupHeaderStyle` metodo, nelle [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene utilizzato per controllare se [ `ListView` ](xref:Xamarin.Forms.ListView) le celle di intestazione float durante lo scorrimento. Il `GroupHeaderStyle` enumerazione fornisce due valori possibili:
+Il `ListView.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `ListView.SetGroupHeaderStyle` metodo, nello spazio [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dei nomi, viene utilizzato per controllare [`ListView`](xref:Xamarin.Forms.ListView) se le celle dell'intestazione fluttuano durante lo scorrimento. L' `GroupHeaderStyle` enumerazione fornisce due valori possibili:
 
-- `Plain` : indica che le celle di intestazione float quando la [ `ListView` ](xref:Xamarin.Forms.ListView) viene eseguito lo scorrimento (impostazione predefinita).
-- `Grouped` : indica che le celle di intestazione float non quando le [ `ListView` ](xref:Xamarin.Forms.ListView) di scorrimento.
+- `Plain`: indica che le celle di intestazione sono [`ListView`](xref:Xamarin.Forms.ListView) fluttuate quando è stato eseguito lo scorrimento (impostazione predefinita).
+- `Grouped`: indica che le celle di intestazione non sono float [`ListView`](xref:Xamarin.Forms.ListView) quando viene eseguito lo scorrimento di.
 
-Inoltre, il `ListView.GetGroupHeaderStyle` metodo può essere utilizzato per restituire il `GroupHeaderStyle` che viene applicato al [ `ListView` ](xref:Xamarin.Forms.ListView).
+Inoltre, il `ListView.GetGroupHeaderStyle` metodo può essere utilizzato per restituire l'oggetto `GroupHeaderStyle` applicato a. [`ListView`](xref:Xamarin.Forms.ListView)
 
-Il risultato è che un oggetto specificato `GroupHeaderStyle` valore viene applicato per il [ `ListView` ](xref:Xamarin.Forms.ListView), che controlla se le celle di intestazione float durante lo scorrimento:
+Il risultato è che un valore `GroupHeaderStyle` specificato viene applicato [`ListView`](xref:Xamarin.Forms.ListView)a, che controlla se le celle di intestazione fluttuano durante lo scorrimento:
 
-[![Screenshot della fissa e a virgola mobile ListView le celle di intestazione, in iOS](listview-group-header-style-images/group-header-styles.png "ListView con le celle di intestazione fissa e a virgola mobile")](listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView con le celle di intestazione fissa e a virgola mobile")
+[ ![Screenshot delle celle di intestazione ListView mobili e non mobili, nel](listview-group-header-style-images/group-header-styles.png "controllo ListView iOS con celle di intestazione mobili e non") ] mobili (listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView con celle di intestazione mobili e non mobili")
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

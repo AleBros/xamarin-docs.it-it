@@ -1,58 +1,58 @@
 ---
-title: Nozioni fondamentali dell'applicazione tvOS
-description: Questa sezione vengono presentate le attività più comuni e dei concetti che gli sviluppatori devono tenere presenti durante la scrittura di App xamarin. tvos.
+title: Nozioni fondamentali sull'applicazione tvOS
+description: Questa sezione presenta le attività e i concetti più comuni che gli sviluppatori devono tenere presente durante la scrittura di app Novell. tvOS.
 ms.prod: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 8fe5b508bb92d11bc1a76c96ece0b89fd06dd402
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cc1a4ae46eb07c789e5f451fec1db201826ffb21
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61415741"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652167"
 ---
-# <a name="tvos-application-fundamentals"></a>Nozioni fondamentali dell'applicazione tvOS
+# <a name="tvos-application-fundamentals"></a>Nozioni fondamentali sull'applicazione tvOS
 
-_Questa sezione vengono presentate le attività più comuni e dei concetti che gli sviluppatori devono tenere presenti durante la scrittura di App xamarin. tvos._
+_Questa sezione presenta le attività e i concetti più comuni che gli sviluppatori devono tenere presente durante la scrittura di app Novell. tvOS._
 
 <a name="Xamarin.tvOS-Application-Fundamentals" />
 
-## <a name="xamarintvos-application-fundamentals"></a>Xamarin.tvOS Application Fundamentals
+## <a name="xamarintvos-application-fundamentals"></a>Nozioni fondamentali sull'applicazione Novell. tvOS
 
-I documenti in questa sezione forniscono una conoscenza pratica dei concetti fondamentali e le funzionalità di tvOS che utilizzeranno durante la creazione di un'app xamarin. tvos.
+I documenti in questa sezione forniscono una conoscenza approfondita dei concetti fondamentali e delle funzionalità di tvOS che si lavorerà quando si crea un'app Novell. tvOS.
 
-È altamente consigliabile usare la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md) prima di tutto quanto descrive i concetti chiave e le tecniche che verrà usato in tutti gli articoli.
+Si consiglia di usare prima di tutto il [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md) , in quanto copre i concetti chiave e le tecniche che verranno usati in ogni articolo.
 
 <a name="Working-with-Icons-and-Images" />
 
 ### <a name="working-with-icons-and-imagesiostvosapp-fundamentalsicons-imagesmd"></a>[Utilizzo di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md)
 
-Questo articolo illustra la progettazione e l'utilizzo di icone e immagini all'interno di un'app xamarin. tvos.
+Questo articolo illustra la progettazione e l'uso di icone e immagini all'interno di un'app Novell. tvOS.
 
 <a name="Working-with-Navigation-and-Focus" />
 
 ### <a name="working-with-navigation-and-focusiostvosapp-fundamentalsnavigation-focusmd"></a>[Utilizzo di navigazione e stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md)
 
-Questo articolo illustra il concetto di messa a fuoco e come viene usato per presentare e gestire la navigazione all'interno di un'app xamarin. tvos.
+Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Novell. tvOS.
 
 <a name="Resources-and-Data-Storage" />
 
 ### <a name="resources-and-data-storageiostvosapp-fundamentalsresources-data-storagemd"></a>[Risorse e archiviazione dei dati](~/ios/tvos/app-fundamentals/resources-data-storage.md)
 
-A differenza dei dispositivi iOS, il nuovo televisore Apple non fornisce un'archiviazione persistente e locale per le app tvOS. Questo articolo descrive l'uso delle risorse e archiviazione persistente dei dati in un'app xamarin. tvos.
+A differenza dei dispositivi iOS, il nuovo Apple TV non fornisce archiviazione locale persistente per le app tvOS. Questo articolo illustra l'uso delle risorse e dell'archiviazione dei dati permanenti in un'app Novell. tvOS.
 
 <a name="Playing-Sound-with-AVAudioPlayer" />
 
 ### <a name="playing-sound-with-avaudioplayeriostvosapp-fundamentalssoundsmd"></a>[Riproduzione di suoni con AVAudioPlayer](~/ios/tvos/app-fundamentals/sounds.md)
 
-Questo articolo illustra come usare una classe helper per controllare la riproduzione del suono mediante un AVAudioPlayer nell'app xamarin. tvos.
+Questo articolo illustra come usare una classe helper per controllare la riproduzione di suoni usando un AVAudioPlayer nell'app Novell. tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

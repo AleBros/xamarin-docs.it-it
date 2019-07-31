@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 37b14b60f3cd9aa6a3fb182583bde902cc677b89
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 4a0a7a4db4b0ca982a162ec3a0b67dc729af0ed2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925081"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655944"
 ---
 # <a name="listview-performance"></a>Prestazioni di ListView
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 
 Quando si scrivono applicazioni per dispositivi mobili, è importante delle prestazioni. Gli utenti sono ormai si aspettano uno scorrimento fluido e tempi di caricamento rapido. Non soddisfa le aspettative degli utenti verranno costo di valutazioni nell'archivio di applicazione o nel caso di un'applicazione line-of-business, costo del tempo e denaro.
 
@@ -133,7 +133,7 @@ Ciò ha lo stesso effetto dell'impostazione dell'argomento di strategia di memor
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Definizione della strategia di memorizzazione nella cache in un ListView sottoclassati
 
-Impostando il `CachingStrategy` attributo da XAML in una sottoclasse [ `ListView` ](xref:Xamarin.Forms.ListView) non produrrà il comportamento desiderato, poiché non esiste alcun `CachingStrategy` proprietà `ListView`. Inoltre, se [XAMLC](~/xamarin-forms/xaml/xamlc.md) è abilitata, verrà prodotto il seguente messaggio di errore: **Nessuna proprietà, la proprietà associabile o evento trovata per 'CachingStrategy'**
+Impostando il `CachingStrategy` attributo da XAML in una sottoclasse [ `ListView` ](xref:Xamarin.Forms.ListView) non produrrà il comportamento desiderato, poiché non esiste alcun `CachingStrategy` proprietà `ListView`. Inoltre, se [XAMLC](~/xamarin-forms/xaml/xamlc.md) è abilitato, verrà generato il seguente messaggio di errore: **Non sono state trovate proprietà, proprietà associabili o eventi per ' CachingStrategy '**
 
 Per risolvere questo problema consiste nello specificare un costruttore nel sottoclassato [ `ListView` ](xref:Xamarin.Forms.ListView) che accetta un [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) parametro e lo passa alla classe di base:
 
@@ -185,6 +185,6 @@ Creazione di un renderer personalizzato per un [ `ListView` ](xref:Xamarin.Forms
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Visualizzazione di Renderer personalizzato (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Elemento ViewCell Renderer personalizzati (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+- [Visualizzazione di Renderer personalizzato (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Elemento ViewCell Renderer personalizzati (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

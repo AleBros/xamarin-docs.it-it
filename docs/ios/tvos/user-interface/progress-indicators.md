@@ -1,141 +1,141 @@
 ---
-title: Utilizzo di tvOS indicatori di stato di avanzamento in Xamarin
-description: Questo documento descrive come lavorare con gli indicatori di stato di avanzamento in un'app tvOS compilate con Xamarin. Illustra sia gli indicatori di stato e gli indicatori di attività.
+title: Uso degli indicatori di stato tvOS in Novell
+description: Questo documento descrive come usare gli indicatori di stato in un'app tvOS compilata con Novell. Vengono illustrati gli indicatori di avanzamento e di attività.
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/25/2018
-ms.openlocfilehash: cbd2b2de237a5bb22d1dc0242569b96b12bca070
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6ab1b4ad5493075e8806190e77f6d234354af9ff
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61180741"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648966"
 ---
-# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Utilizzo di tvOS indicatori di stato di avanzamento in Xamarin
+# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Uso degli indicatori di stato tvOS in Novell
 
-_Questo articolo illustra la progettazione e utilizzo di indicatori di stato di avanzamento all'interno di un'app xamarin. tvos._
+_Questo articolo illustra la progettazione e l'uso degli indicatori di stato all'interno di un'app Novell. tvOS._
 
-Potrebbero esserci volte quando l'app xamarin. tvos deve caricare nuovo contenuto o eseguire un'operazione lunga elaborazione. Durante tali periodi, è necessario presentare un indicatore dell'attività o un indicatore di stato per informare l'utente che l'app è ancora in esecuzione e agli utenti alcune indicazione in merito alla durata dell'attività in esecuzione.
+In alcuni casi l'app Novell. tvOS deve caricare nuovo contenuto o eseguire un'operazione di elaborazione lunga. In questi casi, è necessario presentare un indicatore di attività o un indicatore di stato per informare l'utente che l'app è ancora in esecuzione e per dare loro un'indicazione relativa alla lunghezza dell'attività in esecuzione.
 
-![Gli indicatori di stato di esempio](progress-indicators-images/intro01.png "gli indicatori di stato di esempio")
+![Indicatori di stato di esempio](progress-indicators-images/intro01.png "Indicatori di stato di esempio")
 
 ## <a name="about-activity-indicators"></a>Informazioni sugli indicatori di attività
 
-Un indicatore dell'attività viene presentata come un'icona di rotazione e viene usato per rappresentare un'attività di lunghezza non determinato. L'indicatore viene visualizzata quando l'attività viene avviata e scomparirà quando l'attività è stata completata.
+Un indicatore di attività presenta un ingranaggio rotante e viene utilizzato per rappresentare un'attività di lunghezza indeterminata. L'indicatore viene presentato quando l'attività viene avviata e scompare al termine dell'attività.
 
-Apple ha i seguenti suggerimenti per lavorare con gli indicatori di attività:
+Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di attività:
 
-- **Se possibile, usare le barre di avanzamento** - perché offre l'indicatore un'attività richiederà all'utente alcun feedback sulla come non long il processo in esecuzione, usare sempre un indicatore di stato se la lunghezza è nota (ad esempio, il numero di byte per il download in un file).
-- **Mantenere l'indicatore animato** -utenti correlati un indicatore dell'attività fermo a un'app bloccata, in modo che si deve sempre animare l'indicatore mentre vengano visualizzati.
-- **Descrivere l'attività in fase di elaborazione** -solo visualizzazione l'indicatore dell'attività di per sé non è sufficiente; l'utente deve essere informato il processo in cui sono in attesa. Includere un'etichetta significativa (in genere una frase unica e completa) che definisca chiaramente l'attività.
+- **Quando possibile, usare invece le barre di stato** , perché un indicatore di attività fornisce all'utente nessun feedback per quanto tempo verrà eseguito dal processo, usare sempre un indicatore di stato se la lunghezza è nota (ad esempio, il numero di byte da scaricare in un file).
+- **Tenere l'indicatore animato** : gli utenti mettono in relazione un indicatore di attività stazionaria a un'app bloccata, quindi è sempre necessario animare l'indicatore mentre viene visualizzato.
+- **Descrivere l'attività in fase di elaborazione** . la semplice visualizzazione dell'indicatore di attività non è sufficiente. l'utente deve essere informato del processo su cui è in attesa. Includere un'etichetta significativa (in genere una singola frase completa) che definisce chiaramente l'attività.
 
-## <a name="about-progress-bars"></a>Informazioni sulle barre di stato di avanzamento
+## <a name="about-progress-bars"></a>Informazioni sulle barre di stato
 
-Un indicatore di stato viene presentato come una riga che viene riempito con il colore per indicare lo stato e lunghezza di un'attività che richiedono molto tempo. Le barre di avanzamento devono sempre essere utilizzate quando la lunghezza delle attività è noto o può essere calcolata.
+Un indicatore di stato presenta una linea che riempie il colore per indicare lo stato e la lunghezza di un'attività che richiede molto tempo. Gli indicatori di stato devono essere sempre utilizzati quando la lunghezza delle attività è nota o può essere calcolata.
 
-Apple ha i seguenti suggerimenti per l'uso di indicatori di stato:
+Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di stato:
 
-- **Segnalare con precisione lo stato di avanzamento** -indicatori di stato devono sempre presentare una rappresentazione accurata del tempo necessario per completare un'attività. Non falsificare mai il tempo necessario per rendere l'app disponibile.
-- **Uso di durate ben definite** -collocare lo stato di avanzamento barre devono non solo mostrano che è in corso un'attività di lunga durata, ma offrono all'utente e indicazione della quantità di attività viene completata e una stima del tempo rimanente.
+- **Segnala** in modo accurato lo stato di avanzamento: le barre di avanzamento devono sempre presentare una rappresentazione accurata del tempo necessario per completare un'attività. Non falsificare mai il tempo necessario per far sembrare l'app occupata.
+- **Usare per le durate ben definite** : gli indicatori di stato non solo indicano che è in corso un'attività lunga, ma forniscono all'utente e l'indicazione della quantità di attività completata e una stima del tempo rimanente.
 
-## <a name="progress-indicators-and-storyboards"></a>Storyboard e gli indicatori di stato
+## <a name="progress-indicators-and-storyboards"></a>Indicatori di stato e storyboard
 
-Il modo più semplice per lavorare con un indicatore di stato in un'app xamarin. tvos consiste nell'aggiungerlo all'interfaccia utente dell'app usando iOS Designer.
+Il modo più semplice per usare un indicatore di stato in un'app Novell. tvOS consiste nell'aggiungerlo all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
     
-1. Nel **riquadro della soluzione**, fare doppio clic il **Main. Storyboard** file e aprirlo e modificarlo.
+1. Nella **riquadro della soluzione**fare doppio clic sul file **Main. Storyboard** e aprirlo per la modifica.
 
-2. Trascinare un' **indicatore dell'attività** dal **della casella degli strumenti** e rilasciarla sulla vista: 
+2. Trascinare un **indicatore di attività** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    ![Un indicatore dell'attività](progress-indicators-images/activity01.png "un indicatore dell'attività")
+    ![Indicatore di attività](progress-indicators-images/activity01.png "Indicatore di attività")
 
-3. Nel **Widget** scheda della finestra di **riquadro delle proprietà**, è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio relativi **stile**, **comportamento**, e **nome**: 
+3. Nella scheda **widget** del **riquadro delle proprietà**è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio **lo stile**, il **comportamento**e il **nome**: 
 
-    ![La scheda di Widget per un indicatore dell'attività](progress-indicators-images/activity02.png "scheda il Widget per un indicatore dell'attività")
+    ![Scheda widget per un indicatore di attività](progress-indicators-images/activity02.png "Scheda widget per un indicatore di attività")
     
-    Il **Name** determina il nome della proprietà che rappresenta l'indicatore di attività in C# codice.
+    Il **nome** determina il nome della proprietà che rappresenta l'indicatore di attività nel C# codice.
 
-4. Trascinare un **Visualizza lo stato di avanzamento** dalle **della casella degli strumenti** e rilasciarla sulla vista: 
+4. Trascinare una **visualizzazione stato** dalla **casella degli strumenti** e rilasciarla nella visualizzazione: 
 
-    ![Una vista stato di avanzamento](progress-indicators-images/activity03.png "una vista stato")
+    ![Visualizzazione stato](progress-indicators-images/activity03.png "Visualizzazione stato")
 
-5. Nel **Widget** scheda della finestra di **Esplora proprietà**, è possibile modificare diverse proprietà della vista lo stato di avanzamento, ad esempio relativi **stile**, **lo stato di avanzamento**(percentuale di completamento), e **nome**: 
+5. Nella scheda **widget** di **Esplora proprietà**è possibile modificare diverse proprietà della visualizzazione stato, ad esempio **lo stile, lo**stato di **avanzamento** (percentuale di completamento) e il **nome**: 
 
-    ![La scheda di Widget per una visualizzazione stato di avanzamento](progress-indicators-images/activity04.png "scheda il Widget per una visualizzazione stato di avanzamento")
+    ![Scheda widget per una visualizzazione dello stato di avanzamento](progress-indicators-images/activity04.png "Scheda widget per una visualizzazione dello stato di avanzamento")
     
-    Il **Name** determina il nome della proprietà che rappresenta la visualizzazione di stato di avanzamento in C# codice.
+    Il **nome** determina il nome della proprietà che rappresenta la visualizzazione dello stato di C# avanzamento nel codice.
 
 6. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. Nel **Esplora soluzioni**, fare doppio clic il **Main. Storyboard** file e aprirlo e modificarlo.
+1. Nella **Esplora soluzioni**fare doppio clic sul file **Main. Storyboard** e aprirlo per la modifica.
 
-2. Trascinare un' **indicatore dell'attività** dal **della casella degli strumenti** e rilasciarla sulla vista: 
+2. Trascinare un **indicatore di attività** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    ![Un indicatore dell'attività](progress-indicators-images/activity01-vs.png
-    "un indicatore dell'attività")
+    ![Indicatore di attività]unindicatoredi(progress-indicators-images/activity01-vs.png
+    "attività")
 
-3. Nel **Widget** scheda della finestra di **riquadro delle proprietà**, è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio relativi **stile**, **comportamento**, e **nome**: 
+3. Nella scheda **widget** di **Esplora proprietà**è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio **lo stile**, il **comportamento**e il **nome**: 
 
-    ![La scheda di Widget per un indicatore dell'attività](progress-indicators-images/activity02-vs.png "scheda il Widget per un indicatore dell'attività")
+    ![Scheda widget per un indicatore di attività](progress-indicators-images/activity02-vs.png "Scheda widget per un indicatore di attività")
 
-    Il **Name** determina il nome della proprietà che rappresenta l'indicatore di attività in C# codice.
+    Il **nome** determina il nome della proprietà che rappresenta l'indicatore di attività nel C# codice.
 
-4. Trascinare un **Visualizza lo stato di avanzamento** dalle **della casella degli strumenti** e rilasciarla sulla vista: 
+4. Trascinare una **visualizzazione stato** dalla **casella degli strumenti** e rilasciarla nella visualizzazione: 
 
-   ![Una vista stato di avanzamento](progress-indicators-images/activity03-vs.png "una vista stato")
+   ![Visualizzazione stato](progress-indicators-images/activity03-vs.png "Visualizzazione stato")
 
-5. Nel **Widget** scheda della finestra di **Esplora proprietà**, è possibile modificare diverse proprietà della vista lo stato di avanzamento, ad esempio relativi **stile**, **lo stato di avanzamento**(percentuale di completamento), e **nome**: 
+5. Nella scheda **widget** di **Esplora proprietà**è possibile modificare diverse proprietà della visualizzazione stato, ad esempio **lo stile, lo**stato di **avanzamento** (percentuale di completamento) e il **nome**: 
 
-    ![La scheda di Widget per una visualizzazione stato di avanzamento](progress-indicators-images/activity04-vs.png "scheda il Widget per una visualizzazione stato di avanzamento")
+    ![Scheda widget per una visualizzazione dello stato di avanzamento](progress-indicators-images/activity04-vs.png "Scheda widget per una visualizzazione dello stato di avanzamento")
     
-    Il **Name** determina il nome della proprietà che rappresenta la visualizzazione di stato di avanzamento in C# codice.
+    Il **nome** determina il nome della proprietà che rappresenta la visualizzazione dello stato di C# avanzamento nel codice.
 
 6. Salvare le modifiche.
 
 -----
 
-Per altre informazioni sull'utilizzo degli storyboard, vedere la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
-## <a name="working-with-activity-indicators"></a>Utilizzo di indicatori di attività
+## <a name="working-with-activity-indicators"></a>Utilizzo degli indicatori di attività
 
-Come indicato in precedenza, gli indicatori di attività devono essere visualizzati quando l'app è in esecuzione un processo lungo della lunghezza indeterminato.
+Come indicato in precedenza, gli indicatori di attività devono essere visualizzati quando l'app esegue un lungo processo di lunghezza indeterminata.
 
-In qualsiasi momento, si può vedere se un indicatore dell'attività viene aggiunta un'animazione controllando il `IsAnimating` proprietà. Se il `HidesWhenStopped` è di proprietà `true`, l'indicatore di attività verrà automaticamente nascosto quando viene arrestata la relativa animazione.
+In qualsiasi momento, è possibile verificare se un indicatore di attività sta aggiungendo un'animazione controllando la relativa `IsAnimating` proprietà. Se la `HidesWhenStopped` proprietà è `true`, l'indicatore di attività verrà nascosto automaticamente quando viene arrestata l'animazione.
 
-Per avviare l'animazione, è possibile utilizzare il codice seguente: 
+Per avviare l'animazione, è possibile usare il codice seguente: 
 
 ```csharp
 ActivityIndicator.StartAnimating();
 ```
 
-E l'animazione verrà interrotta la seguente:
+L'animazione viene arrestata da quanto segue:
 
 ```csharp
 ActivityIndicator.StopAnimating();
 ```
 
 > [!NOTE]
-> Questi frammenti di codice presuppongono che l'indicatore di attività **Name** è stata impostata su **ActivityIndicator** nel **Widget** scheda della finestra di iOS Designer.
+> Questi frammenti di codice presuppongono che il **nome** dell'indicatore di attività sia stato impostato su **ActivityIndicator** nella scheda **widget** di iOS designer.
 
-## <a name="working-with-progress-bars"></a>Utilizzo di indicatori di stato
+## <a name="working-with-progress-bars"></a>Utilizzo degli indicatori di stato
 
-Anche in questo caso, un indicatore di stato deve essere usato ogni volta che l'app è in esecuzione un'attività a esecuzione prolungata di una durata nota. 
+Anche in questo caso, è consigliabile usare un indicatore di stato ogni volta che l'applicazione esegue un'attività a esecuzione prolungata di una durata nota. 
 
-Il `Progress` proprietà viene utilizzata per impostare la quantità di attività che è stata completata da 0% al 100% (da 0,0 a 1,0). Usare il `ProgressTintColor` proprietà per impostare il colore della barra di quantità completato e `TrackTintColor` proprietà da impostare il colore di sfondo (incompiute quantità).
+La `Progress` proprietà viene utilizzata per impostare la quantità di attività completata da 0% a 100% (da 0,0 a 1,0). Utilizzare la `ProgressTintColor` proprietà per impostare il colore della barra di completamento della quantità e `TrackTintColor` la proprietà per impostare il colore di sfondo (quantità non completata).
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la progettazione e utilizzo di indicatori di stato di avanzamento all'interno di un'app xamarin. tvos.
+In questo articolo è stata illustrata la progettazione e l'utilizzo degli indicatori di stato all'interno di un'app Novell. tvOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

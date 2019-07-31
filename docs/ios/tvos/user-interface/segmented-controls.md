@@ -1,108 +1,108 @@
 ---
-title: Uso di controlli segmentati tvOS in Xamarin
-description: Questo documento descrive come usare tvOS controlli segmentati in un'app compilata con Xamarin. Vengono illustrati le icone di segmento e il testo, eventi, modificare l'aspetto del controllo e altro ancora.
+title: Uso di controlli segmentati tvOS in Novell
+description: Questo documento descrive come usare i controlli segmentati tvOS in un'app compilata con Novell. Illustra le icone del segmento e il testo, gli eventi, la modifica dell'aspetto del controllo e altro ancora.
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 98a770d05014e0498b805ed9ffa0c84314efc765
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f4f063cf7004d35aa93f688e71a917caa7a3e5a8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61374997"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648950"
 ---
-# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Xamarin
+# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Novell
 
-Un controllo Segmented fornisce un set di elementi lineari, ognuno dei quali può contenere un'icona o testo e viene usato per fornire un set di opzioni correlate all'utente.
+Un controllo segmentato fornisce un set di elementi lineari, ognuno dei quali può contenere un'icona o un testo, e viene usato per fornire un set di scelte correlate all'utente.
 
-[![](segmented-controls-images/segment01.png "Controlli di segmento di esempio")](segmented-controls-images/segment01.png#lightbox)
+[![](segmented-controls-images/segment01.png "Controlli del segmento di esempio")](segmented-controls-images/segment01.png#lightbox)
 
-Apple ha i seguenti suggerimenti per l'uso di controlli segmentati:
+Apple presenta i suggerimenti seguenti per l'utilizzo dei controlli segmentati:
 
-- **Forniscono un ampio spazio** -attenzione deve essere take per fornire uno spazio maggiore tra loro [gli elementi con stato attivabile](~/ios/tvos/app-fundamentals/navigation-focus.md) e un controllo Segmented. Un singolo segmento risulterà selezionato quando è messa a fuoco (ma non quando viene fatto clic) e l'utente può modificare accidentalmente segmenti quando vogliono effettivamente selezionare un altro elemento attivabile nel segmento corrente.
-- **Usare le visualizzazioni di divisione per il filtro contenuto** -controlli segmentati non fare la scelta per il contenuto filtrando come doppie visualizzazioni sono state progettate per semplificare la navigazione tra il contenuto e i filtri.
-- **Limite al numero massimo di segmenti di sette** -è consigliabile provare a mantenere il numero massimo di segmenti di sotto di otto (8) come questo è più semplice analizzare da attraversare la stanza da usare sul divano e semplice per spostarsi.
-- **Usare dimensioni del contenuto segmento coerente** : tutti i segmenti hanno la stessa larghezza e, se possibile, è consigliabile mantenere il contenuto in ciascun segmento le stesse dimensioni. Ciò non solo rende più accattivante i controlli di segmento, ma rende più facile da leggere in modo immediato.
-- **Evitare di combinare le icone e testo** -ogni singolo segmento può contenere un'icona o testo, ma non entrambi. Sebbene sia possibile combinare le icone e testo nel controllo segmentato stesso, questo deve essere evitato.
+- **Fornire un'ampia** quantità di spazio: prestare spazio tra [gli altri elementi attivabili](~/ios/tvos/app-fundamentals/navigation-focus.md) e un controllo segmentato. Un singolo segmento viene selezionato quando è attivo (non quando viene fatto clic) e l'utente può modificare accidentalmente i segmenti quando vogliono selezionare un altro elemento attivabile nel segmento corrente.
+- **Usare le visualizzazioni divise per il filtro del contenuto** . i controlli segmentati non consentono di scegliere tra le opzioni di filtro dei contenuti perché le visualizzazioni suddivise sono state progettate per semplificare la navigazione tra il contenuto e i filtri.
+- **Limite massimo di sette segmenti** : è consigliabile provare a tenere il numero massimo di segmenti inferiori a otto (8), in quanto questa operazione è più semplice da analizzare da tutta la stanza sul divano e più facile da esplorare.
+- **Usa dimensioni del contenuto del segmento coerenti** : tutti i segmenti hanno la stessa larghezza e, se possibile, è consigliabile provare a tenere il contenuto di ogni segmento con le stesse dimensioni. In questo modo non solo i controlli del segmento sono più gradevoli da visualizzare, ma semplificano la lettura a colpo d'occhio.
+- **Evitare di combinare icone e testo** . ogni singolo segmento può contenere un'icona o un testo, ma non entrambi. Sebbene sia possibile combinare icone e testo nello stesso controllo segmentato, questa operazione deve essere evitata.
 
 <a name="About-Segment-Icons" />
 
-## <a name="about-segment-icons"></a>Sulle icone nel segmento
+## <a name="about-segment-icons"></a>Informazioni sulle icone del segmento
 
-Uso delle immagini di semplice, riconoscibile per le icone di segmento, ad esempio una lente di ingrandimento per la ricerca suggerite da Apple. Icone eccessivamente complesse sono difficili da riconoscere in uno schermo TV tutta la stanza, pertanto è consigliabile limitare le icone alle rappresentazioni semplice.
+Apple suggerisce di usare immagini semplici e riconoscibili per le icone del segmento, ad esempio una lente di ingrandimento per la ricerca. Le icone eccessivamente complesse sono difficili da riconoscere in uno schermo della TV, quindi è consigliabile limitare le icone alle rappresentazioni semplici.
 
-È possibile combinare testo e icone in un dato segmento ed è consigliabile evitare di combinare le icone e testo in un singolo controllo segmentato. Deve essere tutte le icone o tutto il testo.
+Non è possibile combinare testo e icone in un determinato segmento ed evitare di combinare icone e testo in un singolo controllo segmentato. Deve essere costituito da tutte le icone o tutto il testo.
 
 <a name="Summary" />
 
-## <a name="segment-text"></a>Testo di segmento
+## <a name="segment-text"></a>Testo segmento
 
-Apple rende i suggerimenti seguenti per l'utilizzo del segmento di testo:
+Apple apporta i suggerimenti seguenti per l'uso del testo del segmento:
 
-- **Usare breve, i sostantivi significativo** -titolo il segmento indicherà chiaramente il tipo di contenuto che l'utente dovrebbe aspettarsi quando si seleziona il segmento specificato. Ad esempio: Musica o video.
-- **Uso di maiuscole/minuscole di tutte le iniziali maiuscole** -tutte le parole del titolo segmenti devono essere in maiuscolo, ad eccezione degli articoli, congiunzioni e preposizioni di meno di quattro (4) caratteri.
-- **Usare breve, con stato attivo titoli** -mantenere i titoli brevi e con lo stato attivo del tipo di contenuto previsto quando è selezionato il segmento.
+- **Utilizzare sostantivi brevi e significativi** : il titolo del segmento deve indicare chiaramente il tipo di contenuto che l'utente deve aspettarsi durante la selezione del segmento specificato. Ad esempio: Musica o video.
+- **Usare** le maiuscole/minuscole per maiuscole e minuscole: ogni parola del titolo del segmento deve essere in maiuscolo, ad eccezione di articoli, conjunction e preposizioni di meno di quattro (4) caratteri.
+- **Usa titoli brevi** e mirati: Mantieni i titoli, brevi e incentrati sul tipo di contenuto da prevedere quando viene selezionato il segmento.
 
-Anche in questo caso, non è possibile combinare testo e icone in un dato segmento ed è consigliabile evitare di combinare le icone e testo in un singolo controllo segmentato.
+Anche in questo caso non è possibile combinare testo e icone in un determinato segmento ed evitare di combinare icone e testo in un singolo controllo segmentato.
 
 <a name="Segment-Controls-and-Storyboards" />
 
-## <a name="segment-controls-and-storyboards"></a>I controlli di segmento e storyboard
+## <a name="segment-controls-and-storyboards"></a>Controlli e storyboard del segmento
 
-Il modo più semplice per usare i controlli di segmento in un'app xamarin. tvos è per aggiungerli all'interfaccia utente dell'app usando iOS Designer.
+Il modo più semplice per usare i controlli dei segmenti in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nel **riquadro della soluzione**, fare doppio clic il `Main.storyboard` file e aprirlo e modificarlo.
-1. Trascinare un **controllo di segmento** dal **della casella degli strumenti** e rilasciarlo nella vista: 
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Trascinare un **controllo Segment** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    [![](segmented-controls-images/segment02.png "Un segmento di controllo")](segmented-controls-images/segment02.png#lightbox)
-1. Nel **scheda Widget** del **riquadro della proprietà**, è possibile modificare diverse proprietà del segmento di controllo, ad esempio relativi **stile** e **stato**: 
+    [![](segmented-controls-images/segment02.png "Controllo segmento")](segmented-controls-images/segment02.png#lightbox)
+1. Nella **scheda Widget** del **riquadro Proprietà**è possibile modificare diverse proprietà del controllo Segment, ad esempio **lo stile** e **lo stato**: 
 
-    [![](segmented-controls-images/segment03.png "La scheda di Widget")](segmented-controls-images/segment03.png#lightbox)
-1. Usare la **segmenti** campo per controllare il numero di segmenti nel controller.
-1. Selezionare un segmento specificato dal **elenco a discesa segmento** per modificare le relative proprietà singole, ad esempio **titolo** o **immagine** e controllare se è un dato segmento  **Abilitata** oppure **selezionati** quando il controllo viene visualizzato.
-1. Infine, assegnare **nomi** ai controlli in modo da poter rispondere ad essi in C# codice. Ad esempio: 
+    [![](segmented-controls-images/segment03.png "Scheda widget")](segmented-controls-images/segment03.png#lightbox)
+1. Usare il campo **segmenti** per controllare il numero di segmenti nel controller.
+1. Selezionare un segmento specifico dall' **elenco a discesa segmento** per modificare le singole proprietà, ad esempio **titolo** o **immagine** , e controllare se un determinato segmento è **abilitato** o **selezionato** quando viene visualizzato il controllo.
+1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Ad esempio: 
 
     [![](segmented-controls-images/segment04.png "Assegnare un nome")](segmented-controls-images/segment04.png#lightbox)
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. Nel **Esplora soluzioni**, fare doppio clic il `Main.storyboard` file e aprirlo e modificarlo.
-1. Trascinare un **controllo di segmento** dal **della casella degli strumenti** e rilasciarlo nella vista: 
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Trascinare un **controllo Segment** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    [![](segmented-controls-images/segment02-vs.png "Un segmento di controllo")](segmented-controls-images/segment02-vs.png#lightbox)
-1. Nel **scheda Widget** del **Esplora proprietà**, è possibile modificare diverse proprietà del segmento di controllo, ad esempio relativi **Style** e **stato**: 
+    [![](segmented-controls-images/segment02-vs.png "Controllo segmento")](segmented-controls-images/segment02-vs.png#lightbox)
+1. Nella **scheda Widget** di **Esplora proprietà**è possibile modificare diverse proprietà del controllo segmento, ad esempio **lo stile** e **lo stato**: 
 
-    [![](segmented-controls-images/segment03-vs.png "La scheda di Widget")](segmented-controls-images/segment03-vs.png#lightbox)
-1. Usare la **segmenti** campo per controllare il numero di segmenti nel controller.
-1. Selezionare un segmento specificato dal **elenco a discesa segmento** per modificare le relative proprietà singole, ad esempio **titolo** o **immagine** e controllare se è un dato segmento  **Abilitata** oppure **selezionati** quando il controllo viene visualizzato.
-1. Infine, assegnare **nomi** ai controlli in modo da poter rispondere ad essi in C# codice. Ad esempio: 
+    [![](segmented-controls-images/segment03-vs.png "Scheda widget")](segmented-controls-images/segment03-vs.png#lightbox)
+1. Usare il campo **segmenti** per controllare il numero di segmenti nel controller.
+1. Selezionare un segmento specifico dall' **elenco a discesa segmento** per modificare le singole proprietà, ad esempio **titolo** o **immagine** , e controllare se un determinato segmento è **abilitato** o **selezionato** quando viene visualizzato il controllo.
+1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Ad esempio: 
 
     [![](segmented-controls-images/segment04-vs.png "Assegnare un nome")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Salvare le modifiche.
     
 -----
 
-Per altre informazioni sull'utilizzo degli storyboard, vedere la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
 <a name="Working-with-Segmented-Controls" />
 
 ## <a name="working-with-segmented-controls"></a>Utilizzo di controlli segmentati
 
-Come indicato in precedenza, s che controllo Segmented fornisce un set di elementi lineari, ognuno dei quali può contenere un'icona o testo e viene usato per fornire un set di opzioni correlate all'utente.
+Come indicato in precedenza, il controllo segmentato fornisce un set di elementi lineari, ognuno dei quali può contenere un'icona o un testo, e viene usato per fornire un set di scelte correlate all'utente.
 
-Esistono diversi modi disponibili per lavorare con i controlli segmentati nell'app xamarin. tvos.
+Esistono diversi modi in cui è possibile usare i controlli segmentati nell'app Novell. tvOS.
 
 <a name="Exposed-as-Outlets-and-Actions" />
 
-## <a name="exposed-as-names-and-events"></a>Esposti come nomi e gli eventi
+## <a name="exposed-as-names-and-events"></a>Esposto come nomi ed eventi
 
-Se è stato creato il segmento di controllo nella finestra di progettazione dell'interfaccia viene esposta come un evento e un controllo denominato è possibile usare il codice riportato di seguito per rispondere alla modifica del segmento:
+Se il controllo segmento è stato creato in progettazione interfacce ed esposto come controllo denominato e un evento, è possibile usare il codice seguente per rispondere alla modifica del segmento:
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
@@ -125,15 +125,15 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-Nel caso dell'esempio precedente, il segmento di controllo è stata esposta come un `PlayerCount` nome e un `PlayerCountChanged` azione dell'evento. Per altre informazioni sull'uso dei Outlet e azioni, vedere la [scrittura del codice con Outlet e azioni](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) sezione del nostro [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
+Nel caso dell'esempio precedente, il controllo segmento è stato esposto come `PlayerCount` nome `PlayerCountChanged` e azione dell'evento. Per altre informazioni sull'uso di azioni e Outlet, vedere la sezione [scrittura del codice con Outlet e azioni](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) di Hello [, tvOS Guida introduttiva](~/ios/tvos/get-started/hello-tvos.md).
 
-Il `SelectedSegment` proprietà ottiene o imposta l'indice del segmento attualmente selezionata come uno zero (0) in base. Quindi se si dispone di segmenti di cinque (5), il primo segmento sarà necessario un indice di zero (0) e l'ultimo un indice di quattro (4).
+La `SelectedSegment` proprietà Ottiene o imposta il segmento attualmente selezionato come indice in base zero (0). Quindi, se si dispone di cinque (5) segmenti, il primo segmento avrà un indice pari a zero (0) e l'ultimo indice di quattro (4).
 
 <a name="Modifying-Segments" />
 
 ## <a name="modifying-segments"></a>Modifica di segmenti
 
-In qualsiasi momento è possibile modificare il numero e il contenuto dei controlli segmentati. Usare il codice seguente per inserire una nuova icona segmento:
+È possibile modificare il numero e il contenuto dei controlli segmentati in qualsiasi momento. Usare il codice seguente per inserire un nuovo segmento di icona:
 
 ```csharp
 // Icon Segment
@@ -143,23 +143,23 @@ SegmentedControl.InsertSegment(UIImage.FromFile("icon.png"), 0, true);
 SegmentedControl.InsertSegment("New Segment", 0, true);
 ```
 
-Il secondo parametro definisce il segmento in cui è inserito usando un indice a base zero (0). Se l'ultimo parametro è `true` verrà animato dell'inserimento.
+Il secondo parametro definisce la posizione in cui verrà inserito il segmento utilizzando un indice in base zero (0). Se l'ultimo parametro è `true` l'inserimento verrà animato.
 
-Per rimuovere un determinato segmento, usare il comando seguente:
+Per rimuovere un determinato segmento, utilizzare quanto segue:
 
 ```csharp
 SegmentedControl.RemoveSegmentAtIndex(0, true);
 ```
 
-O per rimuovere tutti i segmenti seguenti:
+Oppure il codice seguente per rimuovere tutti i segmenti:
 
 ```csharp
 SegmentedControl.RemoveAllSegments();
 ```
 
-Anche in questo caso, se l'ultimo parametro è `true`, verrà animata la rimozione. Usare il `NumberOfSegments` proprietà per restituire il numero corrente di segmenti.
+Anche in questo caso, se l' `true`ultimo parametro è, la rimozione verrà animata. Utilizzare la `NumberOfSegments` proprietà per restituire il numero corrente di segmenti.
 
-Per ottenere il **Title** oppure **icona** per un dato segmento, usare il comando seguente:
+Per ottenere il **titolo** o l' **icona** per un determinato segmento, utilizzare quanto segue:
 
 ```csharp
 // Get title
@@ -169,7 +169,7 @@ var title = SegmentedControl.TitleAt(0);
 var icon = SegmentedControl.ImageAt(0);
 ```
 
-E per modificare la **Title** oppure **icona**, usare il comando seguente:
+Per modificare il **titolo** o l' **icona**, utilizzare quanto segue:
 
 ```csharp
 // Set title
@@ -179,7 +179,7 @@ SegmentedControl.SetTitle("New Title", 0);
 SegmentedControl.SetImage(UIImage.FromFile("icon.png"), 0);
 ```
 
-Per verificare se un dato segmento **abilitato**, usare il comando seguente:
+Per verificare se un determinato segmento è **abilitato**, usare quanto segue:
 
 ```csharp
 if (SegmentedControl.IsEnabled(0)) {
@@ -188,7 +188,7 @@ if (SegmentedControl.IsEnabled(0)) {
 }
 ```
 
-E di ottenere **Abilita/Disabilita** un dato segmento, usare il comando seguente:
+Per **abilitare o disabilitare** un determinato segmento, utilizzare quanto segue:
 
 ```csharp
 SegmentedControl.SetEnabled(false, 0);
@@ -196,25 +196,25 @@ SegmentedControl.SetEnabled(false, 0);
 
 <a name="Modifying-the-Segmented-Controls-Appearance" />
 
-## <a name="modifying-the-segmented-controls-appearance"></a>Modifica l'aspetto del controllo segmentato
+## <a name="modifying-the-segmented-controls-appearance"></a>Modifica dell'aspetto del controllo segmentato
 
-È possibile usare il codice seguente per cambiare lo sfondo di un segmento specificato di un'immagine:
+Per modificare lo sfondo di un determinato segmento in un'immagine, è possibile usare il codice seguente:
 
 ```csharp
 SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-In cui `UIControlState` specifica lo stato del controllo che si sta impostando l'immagine per come:
+Dove `UIControlState` specifica lo stato del controllo per il quale si sta impostando l'immagine:
 
 - Normale
-- evidenziato
-- Disabilitato
+- Evidenziato
+- Disabled
 - Selezionato
 - Con stato attivo
 
 E `UIBarMetrics` specifica le metriche da usare come:
 
-- Impostazione predefinita
+- Predefinito
 - Compact
 - DefaultPrompt
 - CompactPrompt
@@ -231,13 +231,13 @@ Dove il primo `UIControlState` specifica lo stato del segmento a sinistra del di
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la progettazione e l'utilizzo di controllo Segmented all'interno di un'app xamarin. tvos.
+Questo articolo ha trattato la progettazione e l'uso del controllo segmentato all'interno di un'app Novell. tvOS.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

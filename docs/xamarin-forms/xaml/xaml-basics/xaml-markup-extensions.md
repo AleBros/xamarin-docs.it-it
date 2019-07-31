@@ -7,16 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 17ca8ec481b8af5ad0515e6544613864f0a66271
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342200"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655479"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Le estensioni di markup XAML costituiscano un'importante funzionalità in XAML che consentono di proprietà da impostare per gli oggetti o valori di cui vengono fatto riferimento indirettamente da altre origini. Le estensioni di markup XAML sono particolarmente importanti per la condivisione di oggetti e le costanti usate in tutta l'applicazione di riferimento, ma la relativa utilità maggiore trovano i data binding._
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Si noti che la parola chiave `clr-namespace` è seguita da due punti e quindi il nome dello spazio dei nomi .NET, seguito da un punto e virgola, la parola chiave `assembly`, un segno di uguale e il nome dell'assembly.
 
-Sì, seguono i due punti `clr-namespace` ma segno di uguale seguito `assembly`. La sintassi è stata definita in questo modo deliberatamente: La maggior parte delle dichiarazioni di spazi dei nomi XML di fare riferimento a un URI che inizia come un nome di schema URI `http`, che è sempre seguito da due punti. Il `clr-namespace` parte di questa stringa consente di simulare tale convenzione.
+Sì, seguono i due punti `clr-namespace` ma segno di uguale seguito `assembly`. La sintassi è stata definita in questo modo intenzionalmente: La maggior parte delle dichiarazioni dello spazio dei nomi XML fa riferimento a un URI che `http`inizia un nome di schema URI, ad esempio, che è sempre seguito da due punti. Il `clr-namespace` parte di questa stringa consente di simulare tale convenzione.
 
 Entrambe queste dichiarazioni dello spazio dei nomi inclusi nel **StaticConstantsPage** esempio. Si noti che il `BoxView` dimensioni sono impostate su `Math.PI` e `Math.E`, ma in scala di un fattore pari a 100:
 
@@ -547,7 +547,7 @@ Di seguito è riportato un esempio:
 </ContentPage>
 ```
 
-Probabilmente la lezione più importante da eseguire da questo esempio è la sintassi dell'estensione di markup: Virgolette non deve essere racchiuso tra parentesi graffe in un'estensione di markup. Quando si digita l'estensione di markup in un file XAML, è naturale a racchiuderlo tra virgolette i valori delle proprietà. Resistere alla tentazione!
+Probabilmente la lezione più importante da considerare in questo esempio è la sintassi dell'estensione di markup: Non devono essere visualizzate virgolette tra parentesi graffe di un'estensione di markup. Quando si digita l'estensione di markup in un file XAML, è naturale a racchiuderlo tra virgolette i valori delle proprietà. Resistere alla tentazione!
 
 Ecco il programma in esecuzione:
 
@@ -561,7 +561,7 @@ Le estensioni di markup XAML illustrate di seguito forniscono supporto important
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introduzione a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintassi XAML essenziale](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 4. Nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -1,6 +1,6 @@
 ---
-title: Viste dello stack in xamarin. IOS
-description: Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app xamarin. IOS per gestire un set di visualizzazioni secondarie in uno uno stack disposto orizzontalmente o verticalmente.
+title: Visualizzazioni dello stack in Novell. iOS
+description: Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app Novell. iOS per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente.
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
@@ -8,79 +8,79 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 88496452595f308c97d26d0f27fae305baef894f
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5519f6e5b1bb0b63ab3169dd8f48f2f87a025ba5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830831"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642808"
 ---
-# <a name="stack-views-in-xamarinios"></a>Viste dello stack in xamarin. IOS
+# <a name="stack-views-in-xamarinios"></a>Visualizzazioni dello stack in Novell. iOS
 
-_Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app xamarin. IOS per gestire un set di visualizzazioni secondarie in uno uno stack disposto orizzontalmente o verticalmente._
+_Questo articolo illustra l'uso del nuovo controllo UIStackView in un'app Novell. iOS per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente._
 
 > [!IMPORTANT]
-> Si noti che mentre StackView è supportata in iOS Designer, possono insorgere usabilità bug quando si usa il canale stabile. I canali Beta o alfa di commutazione allevierà il problema. Si è deciso di presentare questa procedura dettagliata usando Xcode fino a quando non le correzioni necessarie vengono implementate nel canale stabile.
+> Si noti che, mentre StackView è supportato in iOS designer, è possibile che si verifichino bug di usabilità quando si usa il canale stabile. Il cambio dei canali Beta o alfa dovrebbe risolvere questo problema. Si è deciso di presentare questa procedura dettagliata con Xcode fino a quando non sono state implementate le correzioni necessarie nel canale stabile.
 
-Il controllo di visualizzazione dello Stack (`UIStackView`) sfrutta la potenza del Layout automatico e le classi di dimensioni per gestire una pila di visualizzazioni secondarie, orizzontalmente o verticalmente, che risponde dinamicamente alle dimensioni dello schermo e l'orientamento del dispositivo iOS.
+Il controllo di visualizzazione Stack`UIStackView`() sfrutta la potenza del layout automatico e delle classi di dimensioni per gestire uno stack di visualizzazioni, orizzontalmente o verticalmente, che risponde dinamicamente all'orientamento e alle dimensioni dello schermo del dispositivo iOS.
 
-In base alle proprietà definite per gli sviluppatori, ad esempio asse, distribuzione, allineamento e spaziatura gestire il layout di tutte le visualizzazioni secondarie associata a una visualizzazione dello Stack:
+Il layout di tutte le sottoviste associate a una visualizzazione dello stack viene gestito da esso in base alle proprietà definite dallo sviluppatore, ad esempio asse, distribuzione, allineamento e spaziatura:
 
-[![](uistackview-images/stacked01.png "Diagramma del layout visualizzazione stack")](uistackview-images/stacked01.png#lightbox)
+[![](uistackview-images/stacked01.png "Diagramma layout visualizzazione stack")](uistackview-images/stacked01.png#lightbox)
 
-Quando si usa un `UIStackView` in un'app xamarin. IOS, lo sviluppatore può definire le visualizzazioni secondarie sia all'interno di uno Storyboard in iOS Designer, o aggiungendo e rimuovendo le visualizzazioni secondarie nel codice c#.
+Quando si usa `UIStackView` un in un'app Novell. iOS, lo sviluppatore può definire le sottovisualizzazioni in uno storyboard in iOS designer oppure aggiungendo e rimuovendo le visualizzazioni in C# codice.
 
-Questo documento è costituito da due parti: una Guida introduttiva che consentono di visualizzare lo stack prima di implementare e quindi alcune informazioni tecniche più dettagliate sul funzionamento.
+Questo documento è costituito da due parti: una guida introduttiva che consente di implementare la prima visualizzazione dello stack e altri dettagli tecnici sul funzionamento.
 
 > [!VIDEO https://youtube.com/embed/p3po6507Ip8]
 
-**UIStackView video**
+**Video di UIStackView**
 
-## <a name="uistackview-quickstart"></a>Guida introduttiva UIStackView
+## <a name="uistackview-quickstart"></a>Guida introduttiva a UIStackView
 
-Come una rapida introduzione al `UIStackView` (controllo), si intende creare un'interfaccia semplice che consente all'utente di immettere una classificazione da 1 a 5. Verrà usato due visualizzazioni dello Stack: uno per disporre l'interfaccia verticalmente sullo schermo del dispositivo parti e uno per disporre le icone di classificazione da 1 a 5 in senso orizzontale sullo schermo.
+Come breve introduzione al `UIStackView` controllo, verrà creata un'interfaccia semplice che consente all'utente di immettere una classificazione da 1 a 5. Verranno usate due visualizzazioni dello stack, una per disporre verticalmente l'interfaccia sullo schermo del dispositivo e l'altra per disporre orizzontalmente le icone di valutazione di 1-5 sullo schermo.
 
 ### <a name="define-the-ui"></a>Definire l'interfaccia utente
 
-Avviare un nuovo progetto xamarin. IOS e modificare il **Main. Storyboard** file in Interface Builder di Xcode. In primo luogo, trascinare un singolo **visualizzazione Stack verticale** nel **View Controller**:
+Avviare un nuovo progetto Novell. iOS e modificare il file **Main. Storyboard** nel Interface Builder di Xcode. Per prima cosa, trascinare una singola **visualizzazione dello stack verticale** sul **controller di visualizzazione**:
 
-[![](uistackview-images/quick01.png "Trascinare una singola visualizzazione verticale dello Stack nel Controller di visualizzazione")](uistackview-images/quick01.png#lightbox)
+[![](uistackview-images/quick01.png "Trascinare una singola visualizzazione dello stack verticale sul controller di visualizzazione")](uistackview-images/quick01.png#lightbox)
 
-Nel **Inspector attributo**, impostare le opzioni seguenti:
+In **attribute Inspector**impostare le opzioni seguenti:
 
-[![](uistackview-images/quick02.png "Impostare le opzioni di visualizzazione Stack")](uistackview-images/quick02.png#lightbox)
+[![](uistackview-images/quick02.png "Impostare le opzioni di visualizzazione stack")](uistackview-images/quick02.png#lightbox)
 
 Dove:
 
-- **Asse** : determina se la visualizzazione dello Stack vengono disposti sia le visualizzazioni secondarie **orizzontalmente** oppure **verticalmente**.
-- **Allineamento** : controlla la modalità di allineamento le visualizzazioni secondarie all'interno della visualizzazione dello Stack.
-- **Distribuzione** – controlla come vengono ridimensionate le visualizzazioni secondarie all'interno della visualizzazione dello Stack.
-- **Spaziatura** – controlla lo spazio minimo tra ogni visualizzazione secondaria nella visualizzazione dello Stack.
-- **Linea di base relativo** – se selezionata, la spaziatura verticale di ogni visualizzazione secondaria verrà derivata dal relativo della linea di base.
-- **Layout dei margini relativo** – inserisce le visualizzazioni secondarie relativo ai margini layout standard.
+- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste orizzontalmente o verticalmente.
+- **Alignment** : controlla il modo in cui le visualizzazioni sono allineate nella visualizzazione stack.
+- **Distribution** : controlla il modo in cui le visualizzazioni vengono ridimensionate all'interno della visualizzazione stack.
+- **Spaziatura** : controlla lo spazio minimo tra le singole visualizzazioni nella visualizzazione stack.
+- **Relativa Baseline** : se questa opzione è selezionata, la spaziatura verticale di ogni sottovista sarà derivata dalla relativa Baseline.
+- **Layout margini relativi** : inserisce le visualizzazioni subordinate rispetto ai margini di layout standard.
 
-Quando si lavora con una visualizzazione dello Stack, è possibile considerare il **allineamento** come il **X** e **Y** posizione della visualizzazione secondaria e il **distribuzione** come il **Altezza** e **larghezza**.
+Quando si utilizza una visualizzazione stack, è possibile considerare l' **allineamento** come la posizione **X** e **Y** della Sottovisualizzazione e la **distribuzione** come **altezza** e **larghezza**.
 
 > [!IMPORTANT]
-> `UIStackView` è progettata come una visualizzazione del contenitore non relative al rendering e di conseguenza, non viene disegnato all'area di disegno, ad esempio altre sottoclassi di `UIView`. Quindi, impostare proprietà quali `BackgroundColor` o si esegue l'override `DrawRect` non avranno alcun effetto visivo.
+> `UIStackView`è progettato come una visualizzazione del contenitore non di rendering e, di conseguenza, non viene disegnato nell'area di disegno come le altre sottoclassi di `UIView`. Di conseguenza, l'impostazione `BackgroundColor` di proprietà come `DrawRect` o l'override non avrà alcun effetto visivo.
 
-Continuare al layout dell'interfaccia dell'app mediante l'aggiunta di un'etichetta, ImageView, due pulsanti e una visualizzazione Stack orizzontale in modo che risulti simile al seguente:
+Continuare a eseguire il layout dell'interfaccia dell'app aggiungendo un'etichetta, ImageView, due pulsanti e una visualizzazione dello stack orizzontale in modo che sia simile a quanto segue:
 
-[![](uistackview-images/quick03.png "Definizione del layout dell'interfaccia utente visualizzazione Stack")](uistackview-images/quick03.png#lightbox)
+[![](uistackview-images/quick03.png "Layout dell'interfaccia utente della visualizzazione stack")](uistackview-images/quick03.png#lightbox)
 
-Configurare la visualizzazione dello Stack orizzontale con le opzioni seguenti:
+Configurare la visualizzazione dello stack orizzontale con le opzioni seguenti:
 
-[![](uistackview-images/quick04.png "Configurare le opzioni di visualizzazione dello Stack orizzontale")](uistackview-images/quick04.png#lightbox)
+[![](uistackview-images/quick04.png "Configurare le opzioni di visualizzazione dello stack orizzontale")](uistackview-images/quick04.png#lightbox)
 
-Poiché non vogliamo l'icona che rappresenta ogni punto di"" la classificazione per estenderla quando viene aggiunto alla visualizzazione Stack orizzontale, è stato impostato il **allineamento** al **Center** e il  **Distribuzione** al **riempire ugualmente**.
+Poiché non si vuole che l'icona che rappresenta ogni "punto" della classificazione venga allungata quando viene aggiunta alla visualizzazione dello stack orizzontale, l' **allineamento** è stato impostato su **Center** e la **distribuzione** in modo che venga **riempita allo stesso**modo.
 
-Infine, collegare i seguenti **Outlet** e **azioni**:
+Infine, collegare gli **Outlet** e le **azioni**seguenti:
 
-[![](uistackview-images/quick05.png "Le Stack visualizzazione Outlet e azioni")](uistackview-images/quick05.png#lightbox)
+[![](uistackview-images/quick05.png "Outlet e azioni della visualizzazione stack")](uistackview-images/quick05.png#lightbox)
 
-### <a name="populate-a-uistackview-from-code"></a>Popolare un UIStackView dal codice
+### <a name="populate-a-uistackview-from-code"></a>Popola un UIStackView dal codice
 
-Tornare a Visual Studio per Mac e modificare il **ViewController.cs** file e aggiungere il codice seguente:
+Tornare a Visual Studio per Mac e modificare il file **ViewController.cs** e aggiungere il codice seguente:
 
 ```csharp
 public int Rating { get; set;} = 0;
@@ -132,32 +132,32 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 }
 ```
 
-Diamo un'occhiata alcune parti di questo codice in modo dettagliato. Innanzitutto, utilizziamo un `if` istruzioni per verificare che non vi è più di cinque "stelle" o è minore di zero.
+Verranno ora esaminati in dettaglio alcune parti di questo codice. In primo luogo, vengono `if` usate istruzioni per verificare che non siano presenti più di cinque "stelle" o minori di zero.
 
-Per aggiungere un nuovo "star" è caricare la propria immagine e impostare relativi **modalità a contenuti** al **aspetto adatta**:
+Per aggiungere una nuova "stella", caricare la relativa immagine e impostarne la **modalità di contenuto** per la scalabilità dell' **aspetto**:
 
 ```csharp
 var icon = new UIImageView (new UIImage("icon.png"));
 icon.ContentMode = UIViewContentMode.ScaleAspectFit;
 ```
 
-In tal modo l'icona "a stella" possono essere distorto quando viene aggiunto alla visualizzazione dello Stack.
+In questo modo l'icona "stella" viene distorta quando viene aggiunta alla visualizzazione stack.
 
-Successivamente, aggiungiamo la nuova icona "a stella" alla raccolta della visualizzazione dello Stack delle visualizzazioni secondarie:
+Si aggiunge quindi la nuova icona "Star" alla raccolta di visualizzazioni di visualizzazione dello stack:
 
 ```csharp
 RatingView.AddArrangedSubview(icon);
 ```
 
-Si noterà che è stato aggiunto il `UIImageView` per il `UIStackView`del `ArrangedSubviews` proprietà e non sul `SubView`. Qualsiasi visualizzazione che si desidera che la visualizzazione dello Stack per controllare il layout deve essere aggiunto al `ArrangedSubviews` proprietà.
+Si noterà `UIImageView` che è stato aggiunto `UIStackView` `ArrangedSubviews` all'oggetto della proprietà e non a `SubView`. Qualsiasi visualizzazione che si desidera venga controllata dalla visualizzazione dello stack per il layout deve essere aggiunta `ArrangedSubviews` alla proprietà.
 
-Per rimuovere una visualizzazione secondaria da una visualizzazione dello Stack, si ottiene prima di tutto la visualizzazione secondaria da rimuovere:
+Per rimuovere una Sottovisualizzazione da una visualizzazione stack, è prima di tutto necessario rimuovere la visualizzazione:
 
 ```csharp
 var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 ```
 
-È necessario rimuoverlo da entrambi i `ArrangedSubviews` raccolta e la visualizzazione con privilegi elevati:
+Quindi è necessario rimuoverlo dalla `ArrangedSubviews` raccolta e dalla visualizzazione Super:
 
 ```csharp
 // Remove from stack and screen
@@ -165,96 +165,96 @@ RatingView.RemoveArrangedSubview(icon);
 icon.RemoveFromSuperview();
 ```
 
-Rimozione di una visualizzazione secondaria da solo la `ArrangedSubviews` raccolta lo accetta dal controllo della visualizzazione dello Stack, ma non rimuoverla dalla schermata.
+La rimozione di una Sottovisualizzazione solo `ArrangedSubviews` dalla raccolta lo estrae dal controllo della visualizzazione stack, ma non dalla schermata.
 
 ### <a name="testing-the-ui"></a>Test dell'interfaccia utente
 
-Con tutti i necessari elementi dell'interfaccia utente e codice nella posizione, è ora possibile eseguire e testare l'interfaccia. Quando viene visualizzata l'interfaccia utente, tutti gli elementi nella visualizzazione Stack verticale sarà essere equidistanti dall'alto verso il basso.
+Con tutti gli elementi dell'interfaccia utente e il codice necessari, è ora possibile eseguire e testare l'interfaccia. Quando viene visualizzata l'interfaccia utente, tutti gli elementi nella visualizzazione dello stack verticale saranno equidistanti dall'alto verso il basso.
 
-Quando l'utente tocca il **aumenta classificazione** pulsante, un altro "star" viene aggiunto alla schermata (fino a un massimo di 5):
+Quando l'utente tocca il pulsante **Aumenta classificazione** , alla schermata viene aggiunto un altro asterisco (fino a un massimo di 5):
 
 [![](uistackview-images/intro01.png "Eseguire l'app di esempio")](uistackview-images/intro01.png#lightbox)
 
-Le stelle"" verranno automaticamente centrate e distribuite uniformemente in visualizzazione Stack orizzontale. Quando l'utente tocca il **Riduci classificazione** pulsante, una "stella" viene rimosso (fino a quando non sono a sinistra).
+Le "stelle" verranno automaticamente centrate ed equamente distribuite nella visualizzazione dello stack orizzontale. Quando l'utente tocca il pulsante **Diminuisci valutazione** , viene rimossa una "stella" (finché non ne viene lasciato nessuno).
 
-## <a name="stack-view-details"></a>Dettagli visualizzazione dello stack
+## <a name="stack-view-details"></a>Dettagli visualizzazione stack
 
-Ora che abbiamo un'idea generale di ciò che il `UIStackView` il controllo è e come funziona, diamo un'occhiata ad alcune delle relative funzionalità e i dettagli più approfondita.
+Ora che abbiamo un'idea generale del tipo di `UIStackView` controllo e del relativo funzionamento, esaminiamo alcune delle funzionalità e dei dettagli.
 
-### <a name="auto-layout-and-size-classes"></a>Layout automatico e le classi di dimensioni
+### <a name="auto-layout-and-size-classes"></a>Classi layout e dimensioni automatiche
 
-Come descritto in precedenza, quando una visualizzazione secondaria viene aggiunto a una visualizzazione dello Stack del layout è completamente controllato dalla visualizzazione Stack con Layout automatico e le classi di dimensioni per posizionare e ridimensionare le visualizzazioni disposte.
+Come illustrato in precedenza, quando una sottovista viene aggiunta a una visualizzazione stack, il layout è completamente controllato da tale visualizzazione dello stack usando il layout automatico e le classi di dimensioni per posizionare e ridimensionare le visualizzazioni disposte.
 
-La visualizzazione dello Stack verranno _pin_ la visualizzazione e il cognome secondaria nella propria raccolta per il **Top** e **inferiore** bordi per le visualizzazioni dello Stack verticale o **asinistra**e **destra** bordi per le visualizzazioni dello Stack orizzontale. Se si impostano i `LayoutMarginsRelativeArrangement` proprietà `true`, quindi la vista blocca le visualizzazioni secondarie margini rilevanti anziché il bordo.
+La visualizzazione dello stack consente di _aggiungere_ la prima e l'ultima visualizzazione della raccolta ai bordi **superiore** e **inferiore** per le visualizzazioni dello stack verticali o i bordi **sinistro** e **destro** per le visualizzazioni dello stack orizzontale. Se si imposta la `LayoutMarginsRelativeArrangement` proprietà su `true`, la visualizzazione aggiunge le sottoviste ai margini rilevanti anziché al bordo.
 
-La visualizzazione dello Stack Usa la visualizzazione secondaria `IntrinsicContentSize` proprietà quando si calcolano le dimensioni di visualizzazioni secondarie lungo definiti `Axis` (tranne che per il `FillEqually Distribution`). Il `FillEqually Distribution` ridimensiona tutte le visualizzazioni secondarie in modo che siano le stesse dimensioni, pertanto la compilazione di visualizzazione dello Stack lungo il `Axis`.
+La visualizzazione dello stack usa la proprietà della `IntrinsicContentSize` Sottovisualizzazione quando si calcolano le dimensioni delle visualizzazioni di `Axis` visualizzazione lungo l'oggetto `FillEqually Distribution`definito (ad eccezione di). Ridimensiona tutte le sottoviste in modo che abbiano le stesse dimensioni, riempiendo così la visualizzazione dello stack `Axis`lungo. `FillEqually Distribution`
 
-Ad eccezione dei `Fill Alignment`, la visualizzazione dello Stack Usa la visualizzazione secondaria `IntrinsicContentSize` proprietà per il calcolo delle dimensioni della visualizzazione perpendicolare al determinato `Axis`. Per il `Fill Alignment`, tutte le visualizzazioni secondarie vengono ridimensionate in modo da occupare la visualizzazione dello Stack perpendicolare al determinato `Axis`.
+Ad eccezione di `Fill Alignment`, la visualizzazione dello stack utilizza la `IntrinsicContentSize` proprietà della Sottovisualizzazione per calcolare la dimensione della visualizzazione perpendicolare all'oggetto specificato `Axis`. Per, tutte le sottoviste vengono ridimensionate in modo da riempire la visualizzazione dello stack perpendicolare all' `Axis`oggetto specificato. `Fill Alignment`
 
-### <a name="positioning-and-sizing-the-stack-view"></a>Posizionamento e ridimensionamento la visualizzazione dello Stack
+### <a name="positioning-and-sizing-the-stack-view"></a>Posizionamento e ridimensionamento della visualizzazione dello stack
 
-Durante la visualizzazione dello Stack ha il controllo completo sul layout dei qualsiasi visualizzazione secondaria (in base alle proprietà, ad esempio `Axis` e `Distribution`), è comunque necessario posizionare la visualizzazione dello Stack (`UIStackView`) all'interno della visualizzazione padre con Layout automatico e le classi di dimensioni.
+Mentre la visualizzazione dello stack dispone del controllo totale sul layout di qualsiasi vista (in base alle proprietà, `Axis` ad `Distribution`esempio e), è comunque necessario posizionare la visualizzazione dello`UIStackView`stack () all'interno della visualizzazione padre usando le classi di layout e dimensioni automatiche.
 
-In genere, ciò comporta l'aggiunta di almeno due bordi della vista dello Stack per espandere e comprimere, definendo pertanto la posizione. Senza i vincoli aggiuntivi, la visualizzazione dello Stack verrà ridimensionata automaticamente per adattare l'intero le visualizzazioni secondarie come indicato di seguito:
+In genere, ciò significa bloccare almeno due bordi della visualizzazione dello stack per espanderli e configurarli, definendone la posizione. Senza vincoli aggiuntivi, la visualizzazione dello stack verrà ridimensionata automaticamente per adattarsi a tutte le relative visualizzazioni, come indicato di seguito:
 
-- Le dimensioni lungo relativo `Axis` sarà costituito dalla somma di tutte le dimensioni di visualizzazione secondaria e quindi qualsiasi spazio che è stata definita tra ogni visualizzazione secondaria.
-- Se il `LayoutMarginsRelativeArrangement` è di proprietà `true`, la dimensione dello Stack viste includerà anche spazio per i margini.
-- Le dimensioni perpendicolare al `Axis` verrà impostato per la visualizzazione più grande secondaria nella raccolta.
+- La dimensione lungo il `Axis` suo sarà la somma di tutte le dimensioni della vista, oltre a qualsiasi spazio definito tra le singole sottoviste.
+- Se la `LayoutMarginsRelativeArrangement` proprietà è `true`, nella dimensione delle visualizzazioni dello stack sarà inclusa anche la stanza per i margini.
+- La dimensione perpendicolare all' `Axis` oggetto verrà impostata sulla Sottovisualizzazione più grande nella raccolta.
 
-Inoltre, è possibile specificare vincoli per la visualizzazione di Stack **altezza** e **larghezza**. In questo caso, le visualizzazioni secondarie verranno disposte (dimensioni) per riempire lo spazio specificato dalla visualizzazione Stack come determinato dal `Distribution` e `Alignment` proprietà.
+Inoltre, è possibile specificare vincoli per l' **altezza** e la **larghezza**della visualizzazione stack. In questo caso, le sottoviste verranno disposte (ridimensionate) in modo da riempire lo spazio specificato dalla visualizzazione dello stack in base `Distribution` a `Alignment` quanto determinato dalle proprietà e.
 
-Se il `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni secondarie verranno disposte in base della linea di base, della prima o nell'ultima visualizzazione secondaria invece di usare i **Top**, **inferiore** o **Center** -  **Y** posizione. Questi vengono calcolati come indicato di seguito sul contenuto della visualizzazione dello Stack:
+Se la `BaselineRelativeArrangement` proprietà è `true`, le sottoviste verranno disposte in base alla linea di base della prima o dell'ultima Sottovisualizzazione, anziché utilizzare la posizione **superiore**, **inferiore** o **centrale**- **Y** . Tali informazioni vengono calcolate nel contenuto della visualizzazione stack come indicato di seguito:
 
-- Una visualizzazione Stack verticale restituirà la prima visualizzazione secondaria per la prima linea di base e l'ultimo per l'ultimo. Se una di queste visualizzazioni secondarie fanno visualizzazioni dello Stack, quindi verrà utilizzato il primo o ultimo della linea di base.
-- Una visualizzazione Stack orizzontale userà la più alta secondaria per la previsione e il cognome. Se la vista più alta è anche una visualizzazione dello Stack, è più alta secondaria userà come linea di base.
+- Una visualizzazione dello stack verticale restituirà la prima Sottovisualizzazione per la prima linea di base e l'ultima per l'ultima. Se una di queste visualizzazioni è a loro volta viste dello stack, verrà usata la prima o l'ultima Baseline.
+- Una visualizzazione Stack orizzontale utilizzerà la relativa Sottovisualizzazione più alta per la prima e l'ultima Baseline. Se anche la visualizzazione più alta è una visualizzazione dello stack, verrà usata come linea di base la visualizzazione più alta.
 
 > [!IMPORTANT]
-> Allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungata o compressa come verrà calcolato la linea di base alla posizione corretta. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponda alla visualizzazione del contenuto intrinseco **altezza**.
+> L'allineamento della linea di base non funziona sulle dimensioni delle sottoviste estese o compresse perché la linea di base verrà calcolata in una posizione errata. Per l'allineamento della linea di base, assicurarsi che l' **altezza** della Sottovisualizzazione corrisponda all' **Altezza**della visualizzazione contenuto intrinseca.
 
-### <a name="common-stack-view-uses"></a>Utilizzi comuni di vista dello Stack
+### <a name="common-stack-view-uses"></a>Usi comuni della visualizzazione stack
 
-Esistono diversi tipi di layout che funzionano bene con controlli di visualizzazione dello Stack. In base a Apple, ecco alcuni degli usi più comuni:
+Sono disponibili diversi tipi di layout che funzionano bene con i controlli di visualizzazione stack. In base a Apple, di seguito sono riportati alcuni degli usi più comuni:
 
-- **Definire dimensioni lungo l'asse** : per l'aggiunta di entrambi i bordi lungo della visualizzazione Stack `Axis` e uno dei lati adiacenti per impostare la posizione, lo Stack di dimensioni aumentano visualizzazione lungo l'asse per adattarsi allo spazio definito dalle visualizzazioni secondarie.
-- **Definire la posizione della visualizzazione secondaria** – aggiungendo ai bordi adiacenti della visualizzazione Stack alla relativa visualizzazione padre, la visualizzazione dello Stack aumenteranno in entrambe le dimensioni in base alle relative visualizzazioni secondarie che lo contiene.
-- **Definire le dimensioni e la posizione dello Stack** – aggiungendo le quattro contorni della visualizzazione dello Stack per la visualizzazione padre, la visualizzazione dello Stack organizza le visualizzazioni secondarie basate allo spazio definito all'interno della visualizzazione dello Stack.
-- **Definire le dimensioni perpendicolari all'asse** : per l'aggiunta di entrambi perpendicolarmente bordi della visualizzazione Stack `Axis` e uno dei bordi lungo l'asse di impostare la posizione, lo Stack di visualizzazione aumenterà perpendicolare all'asse per adattarsi allo spazio definito da relativo visualizzazioni secondarie.
+- **Definisci le dimensioni lungo l'asse** , bloccando entrambi i bordi lungo la visualizzazione `Axis` stack e uno dei bordi adiacenti per impostare la posizione, la visualizzazione dello stack aumenterà lungo l'asse per adattarla allo spazio definito dalle relative viste sottostanti.
+- **Definire la posizione della Sottovisualizzazione** : l'aggiunta ai bordi adiacenti della visualizzazione dello stack alla visualizzazione padre, la visualizzazione dello stack aumenterà in entrambe le dimensioni per adattarla alle sottoviste che la contengono.
+- **Definire le dimensioni e la posizione dello stack** : aggiungendo tutti i quattro bordi della visualizzazione stack alla visualizzazione padre, la visualizzazione dello stack dispone le visualizzazioni in base allo spazio definito nella visualizzazione dello stack.
+- **Definire la dimensione perpendicolare all'asse** , bloccando entrambi i bordi perpendicolari alla visualizzazione `Axis` dello stack e uno dei bordi lungo l'asse per impostare la posizione, la visualizzazione dello stack aumenterà perpendicolarmente all'asse per adattarla allo spazio definito dalle relative visualizzazioni.
 
-### <a name="managing-the-appearance"></a>La gestione dell'aspetto
+### <a name="managing-the-appearance"></a>Gestione dell'aspetto
 
-Il `UIStackView` è progettata come una visualizzazione del contenitore non relative al rendering e di conseguenza, non viene disegnato all'area di disegno, ad esempio altre sottoclassi di `UIView`. Impostazione delle proprietà, ad esempio `BackgroundColor` o si esegue l'override `DrawRect` non avranno alcun effetto visivo.
+È progettato come una visualizzazione del contenitore non di rendering e, di conseguenza, non viene disegnato nell'area di disegno come le altre sottoclassi `UIView`di. `UIStackView` L'impostazione di `BackgroundColor` proprietà come o l' `DrawRect` override non avrà alcun effetto visivo.
 
-Esistono diverse proprietà che controllano il modo in cui una visualizzazione dello Stack verranno organizzati relativa raccolta di visualizzazioni secondarie:
+Sono disponibili diverse proprietà che consentono di controllare il modo in cui una visualizzazione stack organizzerà la raccolta di visualizzazioni.
 
-- **Asse** : determina se la visualizzazione dello Stack vengono disposti sia le visualizzazioni secondarie **orizzontalmente** oppure **verticalmente**.
-- **Allineamento** : controlla la modalità di allineamento le visualizzazioni secondarie all'interno della visualizzazione dello Stack.
-- **Distribuzione** – controlla come vengono ridimensionate le visualizzazioni secondarie all'interno della visualizzazione dello Stack.
-- **Spaziatura** – controlla lo spazio minimo tra ogni visualizzazione secondaria nella visualizzazione dello Stack.
-- **Linea di base relativi** : se `true`, la spaziatura verticale di ogni visualizzazione secondaria verrà derivata dal relativo della linea di base.
-- **Layout dei margini relativo** – inserisce le visualizzazioni secondarie relativo ai margini layout standard.
+- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste orizzontalmente o verticalmente.
+- **Alignment** : controlla il modo in cui le visualizzazioni sono allineate nella visualizzazione stack.
+- **Distribution** : controlla il modo in cui le visualizzazioni vengono ridimensionate all'interno della visualizzazione stack.
+- **Spaziatura** : controlla lo spazio minimo tra le singole visualizzazioni nella visualizzazione stack.
+- **Relativa** alla baseline: `true`se, la spaziatura verticale di ogni sottovista sarà derivata dalla relativa Baseline.
+- **Layout margini relativi** : inserisce le visualizzazioni subordinate rispetto ai margini di layout standard.
 
-In genere si utilizzerà una visualizzazione dello Stack per disporre di un numero ridotto di visualizzazioni secondarie. Interfacce utente più complesse possono essere create da una o più visualizzazioni dello Stack all'interno di altre di annidamento (come abbiamo fatto [UIStackView Quickstart](#uistackview-quickstart) sopra).
+In genere si utilizzerà una visualizzazione stack per disporre un numero ridotto di visualizzazioni. È possibile creare interfacce utente più complesse annidando una o più visualizzazioni dello stack l'una all'altra (come è stato fatto nella [Guida introduttiva di UIStackView](#uistackview-quickstart) precedente).
 
-È possibile ottimizzare ulteriormente l'aspetto delle interfacce utente mediante l'aggiunta di vincoli aggiuntivi per le visualizzazioni secondarie (ad esempio al controllo larghezza o all'altezza). Tuttavia, necessario fare attenzione a non includere i vincoli in conflitto a quelle introdotte dalla visualizzazione Stack se stesso.
+È possibile ottimizzare ulteriormente l'aspetto dell'utente aggiungendo vincoli aggiuntivi alle visualizzazioni (ad esempio per controllare l'altezza o la larghezza). Tuttavia, prestare attenzione a non includere vincoli in conflitto con quelli introdotti dalla visualizzazione stack.
 
-### <a name="maintaining-arranged-views-and-sub-views-consistency"></a>Gestione disposte le visualizzazioni e coerenza visualizzazioni secondarie
+### <a name="maintaining-arranged-views-and-sub-views-consistency"></a>Mantenimento della coerenza delle viste e delle visualizzazioni disposte
 
-Fa sì che la visualizzazione dello Stack relativi `ArrangedSubviews` proprietà è sempre un sottoinsieme di relativo `Subviews` proprietà usando le regole seguenti:
+La visualizzazione dello stack garantisce che la `ArrangedSubviews` relativa proprietà sia sempre un subset della `Subviews` relativa proprietà usando le regole seguenti:
 
-- Se una visualizzazione secondaria viene aggiunto al `ArrangedSubviews` raccolta, verrà automaticamente aggiunto per il `Subviews` raccolta (a meno che non fa già parte di tale raccolta).
-- Se una visualizzazione secondaria viene rimosso dal `Subviews` collection (rimosso dalla visualizzazione), viene rimossa anche dal `ArrangedSubviews` raccolta.
-- Rimozione di una visualizzazione secondaria dal `ArrangedSubviews` non comporta la rimozione dall'insieme la `Subviews` raccolta. Quindi non è più essere disposto da parte della vista dello Stack, ma sarà comunque visibile sullo schermo.
+- Se una sottovista viene aggiunta alla `ArrangedSubviews` raccolta, verrà aggiunta automaticamente `Subviews` alla raccolta, a meno che non sia già inclusa in tale raccolta.
+- Se una sottovista viene rimossa dalla `Subviews` raccolta (rimossa dalla visualizzazione), viene anche rimossa `ArrangedSubviews` dalla raccolta.
+- La rimozione di una Sottovisualizzazione `ArrangedSubviews` dalla raccolta non ne comporta la `Subviews` rimozione dalla raccolta. Quindi, non sarà più disposto dalla visualizzazione stack, ma sarà comunque visibile sullo schermo.
 
-Il `ArrangedSubviews` raccolta è sempre un sottoinsieme del `Subview` raccolta, tuttavia l'ordine delle singole visualizzazioni secondarie all'interno di ogni raccolta è separata e controllato dagli elementi seguenti:
+La `ArrangedSubviews` raccolta è sempre un subset `Subview` della raccolta, tuttavia l'ordine delle singole visualizzazioni all'interno di ogni raccolta è separato e controllato da quanto segue:
 
-- L'ordine delle visualizzazioni secondarie all'interno di `ArrangedSubviews` raccolta determinarne l'ordine di visualizzazione all'interno dello stack.
-- L'ordine delle visualizzazioni secondarie all'interno di `Subview` raccolta determina loro ordine Z (o dei livelli) all'interno della visualizzazione torna in primo piano.
+- L'ordine delle visualizzazioni visualizzate all'interno della `ArrangedSubviews` raccolta determina l'ordine di visualizzazione nello stack.
+- L'ordine delle visualizzazioni subordinate all'interno `Subview` della raccolta determina l'ordine Z (o la sovrapposizione) nella visualizzazione di nuovo in primo piano.
 
 ### <a name="dynamically-changing-content"></a>Modifica dinamica del contenuto
 
-Una visualizzazione Stack regolerà automaticamente il layout delle visualizzazioni secondarie ogni volta che una visualizzazione secondaria viene aggiunto, rimosso o nascosta. Il layout verrà regolato anche se le proprietà della visualizzazione Stack viene regolata (ad esempio relativi `Axis`).
+Una visualizzazione stack regola automaticamente il layout delle visualizzazioni subordinate ogni volta che una vista viene aggiunta, rimossa o nascosta. Il layout verrà regolato anche se una proprietà della visualizzazione dello stack viene regolata, ad esempio `Axis`.
 
-Le modifiche del layout possono essere animate, posizionandoli all'interno di un blocco di animazione, ad esempio:
+Le modifiche al layout possono essere animate inserendole in un blocco di animazione, ad esempio:
 
 ```csharp
 // Animate stack
@@ -264,19 +264,19 @@ UIView.Animate(0.25, ()=>{
 });
 ```
 
-Molte delle proprietà della visualizzazione Stack può essere specificati usando le classi di dimensioni all'interno di uno Storyboard. Queste proprietà verrà automaticamente aggiunta un'animazione è risposta alle modifiche di dimensione o orientamento.
+Molte delle proprietà della visualizzazione stack possono essere specificate utilizzando le classi di dimensioni all'interno di uno storyboard. Queste proprietà verranno automaticamente animate in risposta alle modifiche alle dimensioni o all'orientamento.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato il nuovo `UIStackView` controllare (per iOS 9) per gestire un set di visualizzazioni secondarie in uno stack disposta orizzontalmente o verticalmente in un'app xamarin. IOS.
-Si è iniziato con un semplice esempio dell'uso delle visualizzazioni dello Stack per creare un'interfaccia utente e terminato con un'analisi più approfondita in visualizzazioni dello Stack e le relative proprietà e le funzionalità.
+Questo articolo ha trattato il nuovo `UIStackView` controllo (per iOS 9) per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente in un'app Novell. iOS.
+Inizia con un semplice esempio di utilizzo delle visualizzazioni dello stack per creare un'interfaccia utente e completata con un aspetto più dettagliato delle visualizzazioni dello stack e delle relative proprietà e funzionalità.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
-- [per gli sviluppatori iOS 9](https://developer.apple.com/ios/pre-release/)
-- [What ' s New in iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Riferimento UIStackView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)
+- [Esempi di iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
+- [Novità di iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [Riferimento a UIStackView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIStackView_Class_Reference/)
 - [Introduzione a UIStackView (video)](https://university.xamarin.com/lightninglectures/introducing-uistackview-on-ios9)

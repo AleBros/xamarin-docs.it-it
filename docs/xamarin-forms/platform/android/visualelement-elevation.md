@@ -1,24 +1,24 @@
 ---
-title: Elevazione dei privilegi VisualElement in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare Android specifico della piattaforma che controlla l'elevazione di VisualElements nelle applicazioni che usano API 21 o versione successiva.
+title: Elevazione degli oggetti visivi in Android
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la piattaforma Android specifica che controlla l'elevazione di VisualElements nelle applicazioni destinate all'API 21 o versione successiva.
 ms.prod: xamarin
 ms.assetid: 5BFD6175-2BBD-41CD-B8F9-521B4750B708
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: c7cc6b560ea91dca89c468271b89d1dcedfcda53
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 243e351f29b056a6d4a567b8e39240a87f37aec2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65927033"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651878"
 ---
-# <a name="visualelement-elevation-on-android"></a>Elevazione dei privilegi VisualElement in Android
+# <a name="visualelement-elevation-on-android"></a>Elevazione degli oggetti visivi in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma Android viene usato per controllare l'elevazione dei privilegi o ordine Z degli elementi visivi nelle applicazioni che hanno come destinazione API 21 o versione successiva. L'elevazione di un elemento visivo determina l'ordine di disegno, con elementi visivi con i valori più alti di Z occluding elementi visivi con i valori Z più bassi. Vengono utilizzati in XAML, impostando il `VisualElement.Elevation` proprietà associata una `boolean` valore:
+Questo specifico della piattaforma Android viene usato per controllare l'elevazione o l'ordine Z degli elementi visivi nelle applicazioni destinate all'API 21 o versione successiva. L'elevazione di un elemento visivo determina l'ordine di disegno, con elementi visivi con i valori più alti di Z occluding elementi visivi con i valori Z più bassi. Vengono utilizzati in XAML, impostando il `VisualElement.Elevation` proprietà associata una `boolean` valore:
 
 ```xaml
 <ContentPage ...
@@ -79,15 +79,15 @@ public class AndroidElevationPageCS : ContentPage
 }
 ```
 
-Il `Button.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il `VisualElement.SetElevation` metodo, nelle [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene utilizzato per impostare l'elevazione dei privilegi dell'elemento visivo per un valore nullable `float`. Inoltre, il `VisualElement.GetElevation` metodo può essere utilizzato per recuperare il valore di elevazione dei privilegi di un elemento visivo.
+Il `Button.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il `VisualElement.SetElevation` metodo, nelle [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene utilizzato per impostare l'elevazione dei privilegi dell'elemento visivo per un valore nullable `float`. Inoltre, il `VisualElement.GetElevation` metodo può essere utilizzato per recuperare il valore di elevazione dei privilegi di un elemento visivo.
 
-Il risultato è che l'elevazione di elementi visivi può essere controllato in modo che gli elementi visivi con i valori più alti Z nasconde gli elementi visivi con i valori più bassi Z i colori. Pertanto, in questo esempio il secondo [ `Button` ](xref:Xamarin.Forms.Button) viene eseguito il rendering sopra il [ `BoxView` ](xref:Xamarin.Forms.BoxView) perché contiene un valore di elevazione dei privilegi più elevato:
+Il risultato è che l'elevazione di elementi visivi può essere controllato in modo che gli elementi visivi con i valori più alti Z nasconde gli elementi visivi con i valori più bassi Z i colori. Pertanto, in questo esempio il secondo [`Button`](xref:Xamarin.Forms.Button) viene eseguito il rendering sopra il [`BoxView`](xref:Xamarin.Forms.BoxView) perché contiene un valore di elevazione dei privilegi più elevato:
 
 ![](visualelement-elevation-images/elevation.png)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

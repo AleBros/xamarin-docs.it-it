@@ -1,151 +1,151 @@
 ---
-title: Visualizzazione di un'immagine in xamarin. IOS
-description: Questo articolo illustra tra cui un asset di immagine in un'app xamarin. IOS e visualizzazione di tale immagine usando codice c# o tramite l'assegnazione a un controllo in iOS Designer.
+title: Visualizzazione di un'immagine in Novell. iOS
+description: Questo articolo illustra l'inclusione di un asset immagine in un'app Novell. iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer.
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 6d584c45288d7e7341a4423c32a6966c6c7f21f3
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 2c69c995317d5121f203946cf1a4196bce9b4177
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827907"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643082"
 ---
-# <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in xamarin. IOS
+# <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in Novell. iOS
 
-_Questo articolo illustra tra cui un asset di immagine in un'app xamarin. IOS e visualizzazione di tale immagine usando codice c# o tramite l'assegnazione a un controllo in iOS Designer._
+_Questo articolo illustra l'inclusione di un asset immagine in un'app Novell. iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer._
 
-## <a name="adding-and-organizing-images-in-a-xamarinios-app"></a>Aggiunta e l'organizzazione immagini in un'app xamarin. IOS
+## <a name="adding-and-organizing-images-in-a-xamarinios-app"></a>Aggiunta e organizzazione di immagini in un'app Novell. iOS
 
-Quando si aggiunge un'immagine per l'uso in un'app xamarin. IOS, lo sviluppatore userà un' _catalogo di Asset_ per supportare tutti i dispositivi iOS e richiesti da un'app per la risoluzione.
+Quando si aggiunge un'immagine da usare in un'app Novell. iOS, lo sviluppatore userà un _Catalogo asset_ per supportare ogni dispositivo iOS e la risoluzione richiesta da un'app.
 
-Aggiunto in iOS 7 **set di immagini di cataloghi Asset** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessari per supportare vari tipi di dispositivi e fattori per un'app di scala. Anziché basarsi sul nome di file, gli asset immagine **set di immagini** usare un file Json per specificare quale immagine appartiene a quali dispositivi e/o la risoluzione. Questo è il modo migliore per gestire e supportare le immagini in iOS (da iOS 9 o versione successiva).
+Aggiunto in iOS 7, i **set di immagini dei cataloghi asset** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessarie per supportare i vari dispositivi e i fattori di scalabilità per un'app. Invece di basarsi sul nome file delle risorse immagine, i **set di immagini** usano un file JSON per specificare quale immagine appartiene a quale dispositivo e/o risoluzione. Questo è il modo migliore per gestire e supportare le immagini in iOS (da iOS 9 o versione successiva).
 
-## <a name="adding-images-to-an-asset-catalog-image-set"></a>Aggiunta di immagini di un'immagine di catalogo di asset set
+## <a name="adding-images-to-an-asset-catalog-image-set"></a>Aggiunta di immagini a un set di immagini del catalogo asset
 
-Come indicato in precedenza, un' **set di immagini di cataloghi Asset** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessari per supportare vari tipi di dispositivi e fattori per un'app di scala. Anziché basarsi sul nome di file, gli asset immagine **set di immagini** usare un file Json per specificare quale immagine appartiene a quali dispositivi e/o la risoluzione.
+Come indicato in precedenza, i **set di immagini di cataloghi asset** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessarie per supportare i vari dispositivi e i fattori di scalabilità per un'app. Invece di basarsi sul nome file delle risorse immagine, i **set di immagini** usano un file JSON per specificare quale immagine appartiene a quale dispositivo e/o risoluzione.
 
 Per creare un nuovo set di immagini e aggiungervi immagini, eseguire le operazioni seguenti:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nel **Esplora soluzioni**, fare doppio clic il `Assets.xcassets` file per aprirlo e modificarlo:
+1. Nella **Esplora soluzioni**fare doppio clic sul `Assets.xcassets` file per aprirlo per la modifica:
 
-    ![](displaying-an-image-images/imageset01.png "L'assets. xcassets in Esplora soluzioni")
-2. Fare clic sui **elenco Assets** e selezionare **nuova immagine Set**:
+    ![](displaying-an-image-images/imageset01.png "Assets. xcassets nel Esplora soluzioni")
+2. Fare clic con il pulsante destro del mouse sull' **elenco asset** e scegliere **nuovo set di immagini**:
 
-    ![](displaying-an-image-images/imageset02.png "Aggiunta di un nuovo Set di immagini")
-3. Selezionare il nuovo set di immagini e verrà visualizzato l'editor:
+    ![](displaying-an-image-images/imageset02.png "Aggiunta di un nuovo set di immagini")
+3. Selezionare il nuovo set di immagini e l'editor verrà visualizzato:
 
-    ![](displaying-an-image-images/imageset03.png "L'editor Set di immagini")
-4. A questo punto, trascinare nelle immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
-5. Fare doppio clic sul nuovo set di immagini **Name** nel **elenco Assets** modificarla: ![](displaying-an-image-images/imageset04.png "Nome del nuovo set di immagini di modifica")
+    ![](displaying-an-image-images/imageset03.png "Editor del set di immagini")
+4. Da qui, trascinare le immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
+5. Fare doppio clic sul **nome** del nuovo set di immagini nell' **elenco asset** per modificarlo: ![](displaying-an-image-images/imageset04.png "Modifica del nome del nuovo set di immagini")
 
-Quando si usa un' **Set di immagini** in iOS Designer, è sufficiente selezionare il nome del set di nell'Editor di proprietà nell'elenco a discesa:
+Quando si usa un **set di immagini** in iOS designer, è sufficiente selezionare il nome del set dall'elenco a discesa nell'editor delle proprietà:
 
-![](displaying-an-image-images/imageset06.png "Selezionare nome del set di un'immagine dall'elenco a discesa")
+![](displaying-an-image-images/imageset06.png "Selezionare il nome di un set di immagini dall'elenco a discesa")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Aprire il catalogo di Asset dal **Esplora soluzioni**e in alto a sinistra, fare clic sui **Plus** pulsante:
+1. Aprire il catalogo asset dal **Esplora soluzioni**e nell'angolo superiore sinistro fare clic sul pulsante con il **segno più** :
 
-    ![](displaying-an-image-images/asset5.png "Fare clic sul segno più pulsante")
+    ![](displaying-an-image-images/asset5.png "Fare clic sul pulsante con il segno più")
 
-2. Selezionare **Aggiungi immagine insieme** e verrà visualizzato l'editor Set di immagini per il nuovo set di immagini. A questo punto, trascinare nelle immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
+2. Selezionare **Aggiungi set di immagini** e l'editor del set di immagini verrà visualizzato per il nuovo set di immagini. Da qui, trascinare le immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
 
-    ![](displaying-an-image-images/asset7.png "L'editor set di immagini")
+    ![](displaying-an-image-images/asset7.png "Editor del set di immagini")
 
 ### <a name="renaming-an-image-set"></a>Ridenominazione di un set di immagini
 
-Per rinominare un Set di immagini, eseguire le operazioni seguenti:
+Per rinominare un set di immagini, eseguire le operazioni seguenti:
 
-1. Nel **Esplora soluzioni**, fare doppio clic il **catalogo Asset** file per aprirlo e modificarlo:
+1. Nella **Esplora soluzioni**fare doppio clic sul file del **Catalogo asset** per aprirlo per la modifica:
 
-    ![](displaying-an-image-images/rename01.png "Il catalogo di Asset in Esplora soluzioni")
-2. Selezionare il **Set di immagini** da rinominare:
+    ![](displaying-an-image-images/rename01.png "Il catalogo asset nel Esplora soluzioni")
+2. Selezionare il **set di immagini** da rinominare:
 
-    ![](displaying-an-image-images/rename02.png "Selezionare il Set di immagini per rinominare")
-3. Nel **riquadro delle proprietà**, scorrere verso il basso e selezionare **Name**(sotto il **varie** sezione):
+    ![](displaying-an-image-images/rename02.png "Selezionare il set di immagini da rinominare")
+3. In **Esplora proprietà**scorrere fino alla fine e selezionare **nome**(nella sezione **varie** ):
 
-    ![](displaying-an-image-images/rename03.png "Seleziona nome nella sezione varie")
-4. Immettere un nuovo **Name** per il **immagine Set** e salvare le modifiche.
+    ![](displaying-an-image-images/rename03.png "Selezionare il nome nella sezione varie")
+4. Immettere un nuovo **nome** per il **set di immagini** e salvare le modifiche.
 
 -----
 
-Quando si usa un' **immagine impostata** nel codice, farvi riferimento in base al nome tramite la chiamata il `FromBundle` metodo il `UIImage` classe. Di seguito è riportato un esempio:
+Quando si usa un' **immagine impostata** nel codice, farvi riferimento tramite il nome chiamando `FromBundle` il metodo della `UIImage` classe. Di seguito è riportato un esempio:
 
 ```csharp
 MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> Se le immagini assegnate a un Set di immagini non appaiono in modo corretto, verificare che il nome corretto del file è in uso con il `FromBundle` (metodo) (la **immagine Set** e non il padre **catalogo Asset** nome). Per le immagini PNG, il `.png` estensione può essere omesso. Per altri formati di immagine, è necessaria l'estensione (ad es. `PurpleMonkey.jpg`).
+> Se le immagini assegnate a un set di immagini non vengono visualizzate correttamente, assicurarsi che venga usato il nome file corretto con il `FromBundle` metodo (il **set di immagini** e non il nome del **Catalogo asset** padre). Per le immagini PNG, `.png` l'estensione può essere omessa. Per altri formati di immagine, è necessaria l'estensione, ad esempio `PurpleMonkey.jpg`).
 
 ### <a name="using-vector-images-in-asset-catalogs"></a>Uso di immagini vettoriali in cataloghi asset
 
-A partire da iOS 8, speciale **vettore** aggiunte alla classe **set di immagini** che consente agli sviluppatori di includere un **PDF** formattato immagine vettoriale nel cassetto invece inclusi file bitmap singoli con risoluzioni diverse. Usa questo metodo, fornire un file singolo vettore per la `@1x` risoluzione (formattata come un file PDF di vettore) e il `@2x` e `@3x` versioni del file verranno generate in fase di compilazione e inclusi nel bundle dell'applicazione.
+A partire da iOS 8, è stata aggiunta una speciale classe di **vettori** a **set di immagini** che consente allo sviluppatore di includere un'immagine vettoriale formattata in **formato PDF** nella cassetta, che include invece singoli file bitmap con le diverse risoluzioni. Utilizzando questo metodo, specificare un singolo file Vector per la `@1x` risoluzione (formattato come file PDF vettoriale) e le `@2x` versioni `@3x` e del file verranno generate in fase di compilazione e incluse nel bundle dell'applicazione.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![](displaying-an-image-images/imageset05.png "Immagini vettoriali nell'editor di cataloghi Asset")
+![](displaying-an-image-images/imageset05.png "Immagini vettoriali nell'Editor cataloghi asset")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](displaying-an-image-images/asset8.png "Immagini vettoriali nell'editor di cataloghi Asset")
+![](displaying-an-image-images/asset8.png "Immagini vettoriali nell'Editor cataloghi asset")
 
 -----
 
-Ad esempio, se lo sviluppatore include un `MonkeyIcon.pdf` file come vettore di un catalogo Asset con una risoluzione di x 150px 150 px, la bitmap seguente asset sarà incluso nel bundle dell'app finale durante la compilazione:
+Se, ad esempio, lo sviluppatore include `MonkeyIcon.pdf` un file come vettore di un catalogo asset con una risoluzione di 150px x 150px, le risorse bitmap seguenti verranno incluse nel bundle dell'app finale al momento della compilazione:
 
-- `MonkeyIcon@1x.png` -150 px x 150px risoluzione.
-- `MonkeyIcon@2x.png` -resolution x 300px 300 px.
-- `MonkeyIcon@3x.png` -450px x 450px risoluzione.
+- `MonkeyIcon@1x.png`-150px x 150px risoluzione.
+- `MonkeyIcon@2x.png`-300px x 300px risoluzione.
+- `MonkeyIcon@3x.png`-450px x 450px risoluzione.
 
-Di seguito deve prendere in considerazione quando si usano immagini vettoriali PDF nei cataloghi Asset:
+Quando si usano le immagini vettoriali PDF nei cataloghi di asset, è necessario tenere in considerazione quanto segue:
 
-- Questo non è supporto vettore completo come il formato PDF sarà rasterizzato a una bitmap in fase di compilazione e le bitmap fornite con l'applicazione finale.
-- Le dimensioni dell'immagine non possono essere modificata dopo che è stata impostata nel catalogo di Asset. Se lo sviluppatore tenta di ridimensionamento dell'immagine (nel codice oppure utilizzando Layout automatico e le classi di dimensioni) l'immagine verrà distorta esattamente come qualsiasi altra immagine bitmap.
-- Cataloghi asset sono solo compatibile con iOS 7 e versioni successive, se un'app necessario supportare iOS 6 o più basso, non può usare cataloghi Asset.
+- Non si tratta di un supporto vettoriale completo poiché il formato PDF verrà rasterizzato in una bitmap in fase di compilazione e le bitmap fornite nell'applicazione finale.
+- Non è possibile modificare le dimensioni dell'immagine dopo che è stata impostata nel catalogo asset. Se lo sviluppatore tenta di ridimensionare l'immagine (nel codice o usando il layout automatico e le classi di dimensioni), l'immagine verrà distorta esattamente come qualsiasi altra bitmap.
+- I cataloghi asset sono compatibili solo con iOS 7 e versioni successive, se un'app deve supportare iOS 6 o versioni precedenti, non può usare cataloghi asset.
 
-## <a name="working-with-template-images"></a>Utilizzo delle immagini modello
+## <a name="working-with-template-images"></a>Uso delle immagini modello
 
-Basato sulla progettazione di un'app per iOS, potrebbero esserci volte quando lo sviluppatore deve per personalizzare un'icona o un'immagine dentro l'interfaccia utente per la corrispondenza di una modifica nella combinazione di colori (ad esempio, in base alle preferenze dell'utente).
+In base alla progettazione di un'app iOS, in alcuni casi lo sviluppatore deve personalizzare un'icona o un'immagine all'interno dell'interfaccia utente in modo che corrisponda a una modifica nella combinazione di colori, ad esempio in base alle preferenze dell'utente.
 
-Per ottenere facilmente questo effetto, passare il _modalità di rendering_ dell'Asset di immagine al **immagine modello**:
+Per ottenere facilmente questo effetto, impostare la _modalità di rendering_ dell'asset immagine sull' **immagine modello**:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](displaying-an-image-images/templateimage01.png "Impostare la modalità di rendering all'immagine modello")](displaying-an-image-images/templateimage01.png#lightbox)
+[![](displaying-an-image-images/templateimage01.png "Modalità di rendering impostata sull'immagine modello")](displaying-an-image-images/templateimage01.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](displaying-an-image-images/templateimage01vs.png "Impostare la modalità di rendering al modello")](displaying-an-image-images/templateimage01vs.png#lightbox)
+[![](displaying-an-image-images/templateimage01vs.png "Modalità di rendering impostata su template")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
 -----
 
-Da iOS Designer, assegnare l'Asset di immagine a un controllo dell'interfaccia utente, quindi impostare il **Tint** per colorare l'immagine:
+Dalla finestra di progettazione di iOS assegnare l'asset immagine a un controllo dell'interfaccia utente, quindi impostare la tinta per colorare l'immagine:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](displaying-an-image-images/templateimage03.png "Impostare la tonalità per colorare l'immagine")](displaying-an-image-images/templateimage03.png#lightbox)
+[![](displaying-an-image-images/templateimage03.png "Impostare la tinta per colorare l'immagine")](displaying-an-image-images/templateimage03.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](displaying-an-image-images/templateimage03vs.png "Impostare la tonalità per colorare l'immagine")](displaying-an-image-images/templateimage03vs.png#lightbox)
+[![](displaying-an-image-images/templateimage03vs.png "Impostare la tinta per colorare l'immagine")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
 -----
 
-Facoltativamente, è possibile impostare l'Asset di immagine e tinta direttamente nel codice:
+Facoltativamente, l'asset di immagine e la tinta possono essere impostati direttamente nel codice:
 
 ```csharp
 MyIcon.Image = UIImage.FromBundle ("MessageIcon");
 MyIcon.TintColor = UIColor.Red;
 ```
 
-Per usare un'immagine modello completamente dal codice, eseguire le operazioni seguenti:
+Per usare completamente un'immagine modello dal codice, eseguire le operazioni seguenti:
 
 ```csharp
 if (MyIcon.Image != null) {
@@ -155,53 +155,53 @@ if (MyIcon.Image != null) {
 }
 ```
 
-Poiché il `RenderMode` proprietà di un `UIImage` è di sola lettura, usare il `ImageWithRenderingMode` metodo per creare una nuova istanza dell'immagine con l'impostazione della modalità di rendering desiderato.
+Poiché la `RenderMode` proprietà di un `UIImage` oggetto è di sola lettura, `ImageWithRenderingMode` utilizzare il metodo per creare una nuova istanza dell'immagine con l'impostazione della modalità di rendering desiderata.
 
-Sono disponibili tre probabilmente le impostazioni per `UIImage.RenderMode` tramite il `UIImageRenderingMode` enum:
+Esistono tre possibili impostazioni per `UIImage.RenderMode` tramite l' `UIImageRenderingMode` enumerazione:
 
-* `AlwaysOriginal` -Impone l'immagine da sottoporre a rendering come file di immagine di origine originale senza alcuna modifica.
-* `AlwaysTemplate` -Impone l'immagine da sottoporre a rendering come un'immagine modello da colorare i pixel con la proprietà specificata `Tint` colore.
-* `Automatic` -Uno viene eseguito il rendering dell'immagine come un modello o originale in base all'ambiente che viene usato in. Ad esempio, se viene usata l'immagine un `UIToolBar`, `UINavigationBar`, `UITabBar` o `UISegmentControl` verrà considerato come un modello.
+* `AlwaysOriginal`: Impone il rendering dell'immagine come file di immagine di origine originale senza alcuna modifica.
+* `AlwaysTemplate`-Impone il rendering dell'immagine come immagine modello colorando i pixel con il colore specificato `Tint` .
+* `Automatic`-Esegue il rendering dell'immagine come modello o originale in base all'ambiente in cui viene usato. Se, ad esempio, l'immagine viene usata in `UIToolBar`un `UINavigationBar`oggetto `UITabBar` , `UISegmentControl` o verrà considerata come un modello.
 
-## <a name="adding-new-assets-collections"></a>Aggiunta di nuove raccolte di risorse
+## <a name="adding-new-assets-collections"></a>Aggiunta di nuove raccolte di asset
 
-Quando si lavora con le immagini nei cataloghi asset a volte può essere una nuova raccolta verrà quando richiesta, invece di aggiungere tutte le immagini dell'app per la `Assets.xcassets` raccolta. Ad esempio, quando si progettano le risorse On Demand.
+Quando si lavora con le `Assets.xcassets` immagini nei cataloghi di asset, a volte è possibile che venga richiesta una nuova raccolta, anziché aggiungere tutte le immagini dell'app alla raccolta. Ad esempio, quando si progettano risorse su richiesta.
 
-Per aggiungere un nuovo catalogo asset per il progetto:
+Per aggiungere un nuovo catalogo asset al progetto:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare clic sui **nome progetto** nel **Esplora soluzioni** e selezionare **Add** > **nuovo File...**
-2. Selezionare **iOS** > **catalogo Asset**, immettere un **nome** per la raccolta e fare clic sul **nuovo** pulsante:
+1. Fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file...**
+2. Selezionare **iOS** > **Asset Catalog**, immettere un **nome** per la raccolta e fare clic sul pulsante **nuovo** :
 
-    ![](displaying-an-image-images/asset01.png "Creazione di un nuovo catalogo Asset")
+    ![](displaying-an-image-images/asset01.png "Creazione di un nuovo catalogo asset")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. In Esplora soluzioni, fare clic su **cataloghi Asset** cartella e selezionare **Aggiungi > nuovo catalogo Asset**.
-2. Assegnare un nome e fare clic su **Add**:
+1. Nella Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella **cataloghi asset** e scegliere **Aggiungi > nuovo catalogo asset**.
+2. Assegnare un nome e fare clic su **Aggiungi**:
 
-    ![](displaying-an-image-images/asset1.png "Creazione di un nuovo catalogo Asset")
+    ![](displaying-an-image-images/asset1.png "Creazione di un nuovo catalogo asset")
 
 -----
 
-A questo punto, può essere gestito insieme nello stesso modo come predefinito `Assets.xcassets` raccolta automaticamente incluso nel progetto.
+Da qui, è possibile usare la raccolta in modo analogo alla raccolta predefinita `Assets.xcassets` inclusa automaticamente nel progetto.
 
-## <a name="using-images-with-controls"></a>Uso di immagini con controlli
+## <a name="using-images-with-controls"></a>Utilizzo di immagini con controlli
 
-Oltre a usare le immagini per supportare un'app, iOS Usa anche le immagini con tipi di controllo delle app, ad esempio barre schede, le barre degli strumenti, barre di navigazione, tabelle e i pulsanti. Un modo semplice per visualizzare un'immagine in un controllo consiste nell'assegnare un `UIImage` istanza del controllo `Image` proprietà.
+Oltre a usare le immagini per supportare un'app, iOS usa anche immagini con tipi di controllo delle app, ad esempio barre di tabulazione, barre degli strumenti, barre di navigazione, tabelle e pulsanti. Un modo semplice per visualizzare un'immagine in un controllo consiste nell'assegnare un' `UIImage` istanza alla `Image` proprietà del controllo.
 
 ### <a name="frombundle"></a>FromBundle
 
-Il `FromBundle` chiamata al metodo è una chiamata sincrona (bloccante) che ha un numero di immagine durante il caricamento e la gestione le funzionalità integrate, ad esempio gestione automatica dei file di immagine per varie risoluzioni e supporto di memorizzazione nella cache.  
+La `FromBundle` chiamata al metodo è una chiamata sincrona (blocco) che dispone di una serie di funzionalità di gestione e caricamento di immagini predefinite, ad esempio il supporto per la memorizzazione nella cache e la gestione automatica dei file di immagine per diverse soluzioni.  
 
-Nell'esempio seguente viene illustrato come impostare l'immagine di una `UITabBarItem` su un `UITabBar`:
+Nell'esempio seguente viene illustrato come impostare l'immagine di un `UITabBarItem` oggetto in `UITabBar`un oggetto:
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-Supponendo che `MyImage` è il nome di un Asset immagine aggiunti a un catalogo di Asset precedente. Quando si usano le immagini di catalogo di Asset, è sufficiente specificare il nome del Set di immagini nel `FromBundle` metodo per **PNG** formattato immagini:
+Supponendo `MyImage` che sia il nome di un asset immagine aggiunto a un catalogo asset sopra riportato. Quando si utilizzano immagini del catalogo asset, è sufficiente specificare il nome dell'immagine impostata `FromBundle` nel metodo per le immagini formattate **png** :
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
@@ -213,63 +213,63 @@ Per qualsiasi altro formato di immagine, includere l'estensione con il nome. Ad 
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-Per altre informazioni sulle icone e immagini, vedere la documentazione di Apple sul [icona personalizzata e linee guida per la creazione di immagini](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
+Per altre informazioni sulle icone e le immagini, vedere la documentazione di Apple sulle [linee guida personalizzate](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)per la creazione di icone e immagini.
 
-## <a name="displaying-an-image-in-a-storyboards"></a>Visualizzazione di un'immagine in un storyboard
+## <a name="displaying-an-image-in-a-storyboards"></a>Visualizzazione di un'immagine in uno storyboard
 
-Dopo aver aggiunto un'immagine a un progetto xamarin. IOS tramite un cataloghi Asset, può essere facilmente visualizzati su un oggetto utilizzando uno Storyboard un `UIImageView` in iOS Designer. Ad esempio, se è stata aggiunta la risorsa di immagine seguenti:
+Dopo che un'immagine è stata aggiunta a un progetto Novell. iOS usando un catalogo asset, può essere visualizzata facilmente in uno storyboard usando un `UIImageView` in iOS designer. Ad esempio, se è stato aggiunto il seguente asset immagine:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![](displaying-an-image-images/display01.png "Un esempio di Asset immagine è stata aggiunta")
+![](displaying-an-image-images/display01.png "È stato aggiunto un asset immagine di esempio")
 
-Eseguire il comando seguente per visualizzarlo in uno Storyboard:
+Per visualizzarlo in uno storyboard, eseguire le operazioni seguenti:
 
-1. Fare doppio clic il `Main.storyboard` del file nei **Esplora soluzioni** per aprirlo e modificarlo in iOS Designer.
-2. Selezionare un **Image View** dalle **della casella degli strumenti**:
+1. Fare doppio clic sul `Main.storyboard` file nella **Esplora soluzioni** per aprirlo per la modifica in iOS designer.
+2. Selezionare una **visualizzazione immagine** dalla **casella degli strumenti**:
 
-     ![](displaying-an-image-images/display02.png "Selezionare visualizzazione di un'immagine dalla casella degli strumenti")
-3. Trascinare la visualizzazione di immagini l'area di progettazione e la posizione e le dimensioni in base alle esigenze:
+     ![](displaying-an-image-images/display02.png "Selezionare una visualizzazione immagine dalla casella degli strumenti")
+3. Trascinare la visualizzazione immagine nell'area di progettazione e posizionarla e ridimensionarla come richiesto:
 
-    ![](displaying-an-image-images/display03.png "Una nuova visualizzazione immagine nell'area di progettazione")
-4. Nel **Widget** sezione il **Esplora proprietà** selezionare il valore desiderato **immagine** asset deve essere visualizzato:
+    ![](displaying-an-image-images/display03.png "Una nuova visualizzazione immagine nella Area di progettazione")
+4. Nella sezione **widget** di **Esplora proprietà** selezionare l'asset **immagine** desiderato da visualizzare:
 
-    ![](displaying-an-image-images/display04.png "Selezionare l'asset desiderato di immagine da visualizzare")
-5. Nel **vista** sezione, utilizzare il **modalità** per controllare come l'immagine sarà ridimensionato quando la **visualizzazione immagine** viene ridimensionato.
-6. Con il **Visualizza immagine** selezionato, fare clic su Nuovo per aggiungere **vincoli**:
+    ![](displaying-an-image-images/display04.png "Selezionare l'asset immagine desiderato da visualizzare")
+5. Nella sezione **View** usare la **modalità** per controllare come verrà ridimensionata l'immagine quando la **visualizzazione immagine** viene ridimensionata.
+6. Con la **visualizzazione immagine** selezionata, fare di nuovo clic su di essa per aggiungere i **vincoli**:
 
     ![](displaying-an-image-images/display05.png "Aggiunta di vincoli")
-7. Trascinare il quadratino a forma di "T" su ciascun bordo del **visualizzazione immagine** corrispondente sul lato dello schermo per "aggiungere" l'immagine ai lati. In questo modo, il **visualizzazione immagine** verrà riduzione e aumento delle dimensioni viene ridimensionata la schermata.
-8. Salvare le modifiche allo Storyboard.
+7. Trascinare il quadratino a forma di "T" su ogni bordo della **visualizzazione immagine** sul lato corrispondente dello schermo per "aggiungere" l'immagine ai lati. In questo modo, la **visualizzazione dell'immagine** verrà compattata e aumentata Man mano che lo schermo viene ridimensionato.
+8. Salvare le modifiche apportate allo storyboard.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](displaying-an-image-images/display01vs.png "Un esempio di Asset immagine è stata aggiunta")
+![](displaying-an-image-images/display01vs.png "È stato aggiunto un asset immagine di esempio")
 
-Eseguire il comando seguente per visualizzarlo in uno Storyboard:
+Per visualizzarlo in uno storyboard, eseguire le operazioni seguenti:
 
-1. Fare doppio clic il `Main.storyboard` del file nei **Esplora soluzioni** per aprirlo e modificarlo in iOS Designer.
-2. Selezionare un **Image View** dalle **della casella degli strumenti**:
+1. Fare doppio clic sul `Main.storyboard` file nella **Esplora soluzioni** per aprirlo per la modifica in iOS designer.
+2. Selezionare una **visualizzazione immagine** dalla **casella degli strumenti**:
 
-     ![](displaying-an-image-images/display02vs.png "Selezionare visualizzazione di un'immagine dalla casella degli strumenti")
-3. Trascinare la visualizzazione di immagini l'area di progettazione e la posizione e le dimensioni in base alle esigenze:
+     ![](displaying-an-image-images/display02vs.png "Selezionare una visualizzazione immagine dalla casella degli strumenti")
+3. Trascinare la visualizzazione immagine nell'area di progettazione e posizionarla e ridimensionarla come richiesto:
 
-    ![](displaying-an-image-images/display03vs.png "Una nuova visualizzazione immagine nell'area di progettazione")
-4. Nel **Widget** sezione il **Esplora proprietà** selezionare il valore desiderato **immagine** asset deve essere visualizzato:
+    ![](displaying-an-image-images/display03vs.png "Una nuova visualizzazione immagine nella Area di progettazione")
+4. Nella sezione **widget** di **Esplora proprietà** selezionare l'asset **immagine** desiderato da visualizzare:
 
-    ![](displaying-an-image-images/display04vs.png "Selezionare l'asset desiderato di immagine da visualizzare")
-5. Nel **vista** sezione, utilizzare il **modalità** per controllare come l'immagine sarà ridimensionato quando la **visualizzazione immagine** viene ridimensionato.
-6. Con il **Visualizza immagine** selezionato, fare clic su Nuovo per aggiungere **vincoli**:
+    ![](displaying-an-image-images/display04vs.png "Selezionare l'asset immagine desiderato da visualizzare")
+5. Nella sezione **View** usare la **modalità** per controllare come verrà ridimensionata l'immagine quando la **visualizzazione immagine** viene ridimensionata.
+6. Con la **visualizzazione immagine** selezionata, fare di nuovo clic su di essa per aggiungere i **vincoli**:
 
     ![](displaying-an-image-images/display05vs.png "Aggiunta di vincoli")
-7. Trascinare il quadratino a forma di "T" su ciascun bordo del **visualizzazione immagine** corrispondente sul lato dello schermo per "aggiungere" l'immagine ai lati. In questo modo, il **visualizzazione immagine** verrà riduzione e aumento delle dimensioni viene ridimensionata la schermata.
-8. Salvare le modifiche allo Storyboard.
+7. Trascinare il quadratino a forma di "T" su ogni bordo della **visualizzazione immagine** sul lato corrispondente dello schermo per "aggiungere" l'immagine ai lati. In questo modo, la **visualizzazione dell'immagine** verrà compattata e aumentata Man mano che lo schermo viene ridimensionato.
+8. Salvare le modifiche apportate allo storyboard.
 
 -----
 
 ## <a name="displaying-an-image-in-code"></a>Visualizzazione di un'immagine nel codice
 
-Come visualizzare un'immagine in uno Storyboard, dopo aver aggiunto un'immagine a un progetto xamarin. IOS tramite un cataloghi Asset, può essere facilmente visualizzato usando codice c#.
+Proprio come la visualizzazione di un'immagine in uno storyboard, dopo che un'immagine è stata aggiunta a un progetto Novell. iOS usando un catalogo asset, può essere visualizzata facilmente C# usando il codice.
 
 Vedere l'esempio seguente:
 
@@ -285,10 +285,10 @@ imageView.Image = UIImage.FromBundle ("Kemah");
 View.AddSubview (imageView);
 ```
 
-Questo codice crea un nuovo `UIImageView` e gli assegna una dimensione iniziale e la posizione. Viene quindi carica l'immagine da un Asset immagine aggiunto al progetto e aggiunge il `UIImageView` all'elemento padre `UIView` per visualizzarlo.
+Questo codice crea un nuovo `UIImageView` oggetto e ne assegna una dimensione e una posizione iniziali. Viene quindi caricata l'immagine da un asset immagine aggiunto al progetto e viene `UIImageView` aggiunto all'elemento padre `UIView` per visualizzarlo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Utilizzo di immagini (esempio)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
+- [Uso delle immagini (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Le dimensioni dell'immagine e la risoluzione (Apple)](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
+- [Dimensioni e risoluzione delle immagini (Apple)](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)

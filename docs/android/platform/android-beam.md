@@ -6,41 +6,41 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 9fcabc90875dda28ecdd5d94f1ca2f263ffe4886
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60954192"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643770"
 ---
 # <a name="android-beam"></a>Android Beam
 
-Trasmetti Android sono una tecnologia di quasi Field Communication (NFC) introdotta in Android 4.0 che consente alle applicazioni di condividere informazioni tramite NFC quando in stretta vicinanza.
+Android Beam è una tecnologia NFC (Near Field Communication) introdotta in Android 4,0 che consente alle applicazioni di condividere informazioni su NFC quando si trovano in prossimità.
 
-[![Diagramma che illustra due dispositivi in prossimità di condivisione delle informazioni](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[![Diagramma che illustra due dispositivi in prossimità delle informazioni di condivisione](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
-Trasmetti Android funziona effettuando il push dei messaggi tramite NFC quando due dispositivi sono nell'intervallo. I dispositivi di circa 4cm uno da altro possono condividere dati con raggio di Android. Un'attività in un dispositivo crea un messaggio e specifica un'attività (o attività) in grado di gestire il push. Quando l'attività specificata è in primo piano e i dispositivi si trovano nell'intervallo, Trasmetti Android effettuerà il push del messaggio al secondo dispositivo. Sul dispositivo di ricezione, viene richiamato un Intent che contiene i dati del messaggio.
+Android Beam funziona eseguendo il push dei messaggi su NFC quando due dispositivi sono in intervallo. I dispositivi circa 4 centimetri gli uni dagli altri possono condividere dati usando Android Beam. Un'attività in un dispositivo crea un messaggio e specifica un'attività (o attività) che può gestire il push. Quando l'attività specificata è in primo piano e i dispositivi sono compresi nell'intervallo, Android Beam eseguirà il push del messaggio al secondo dispositivo. Sul dispositivo ricevente viene richiamato uno scopo contenente i dati del messaggio.
 
-Android supporta due tipi di messaggi di impostazione con raggio di Android:
+Android supporta due modalità di impostazione dei messaggi con il raggio Android:
 
--   `SetNdefPushMessage` -Prima dell'avvio Trasmetti Android, un'applicazione può chiamare SetNdefPushMessage per specificare un NdefMessage al push tramite NFC e l'attività che è eseguirne il push. Questo meccanismo è più adatta quando un messaggio non viene modificata mentre un'applicazione è in uso.
+-   `SetNdefPushMessage`-Prima dell'avvio di Android Beam, un'applicazione può chiamare SetNdefPushMessage per specificare un NdefMessage per eseguire il push su NFC e l'attività che lo sta eseguendo il push. Questo meccanismo è particolarmente utile quando un messaggio non viene modificato mentre un'applicazione è in uso.
 
--   `SetNdefPushMessageCallback` -Quando viene avviato il raggio di Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente la creazione di messaggio deve essere ritardata fino a quando i dispositivi sono nell'intervallo. Supporta scenari in cui il messaggio può variare a seconda di ciò che avviene nell'applicazione.
+-   `SetNdefPushMessageCallback`-Quando viene avviato un fascio Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente il ritardo della creazione dei messaggi fino a quando i dispositivi non rientrano nell'intervallo. Supporta scenari in cui il messaggio può variare in base a ciò che avviene nell'applicazione.
 
 
-In entrambi i casi, per l'invio di dati con raggio di Android, un'applicazione di Invia un' `NdefMessage`, creazione di pacchetti di dati in diverse `NdefRecords`. Esaminiamo ora i punti chiave che deve essere risolto prima che può essere attivato Trasmetti Android. In primo luogo, si collaborerà con lo stile di callback di creazione di un `NdefMessage`.
+In entrambi i casi, per inviare dati con Android Beam, un'applicazione invia `NdefMessage`un oggetto, assemblando i `NdefRecords`dati in diversi. Diamo uno sguardo ai punti chiave che devono essere risolti prima di poter attivare il fascio Android. In primo luogo, si userà lo stile di callback per la `NdefMessage`creazione di un oggetto.
 
 
 ## <a name="creating-a-message"></a>Creazione di un messaggio
 
-È possibile registrare i callback con un `NfcAdapter` dell'attività `OnCreate` (metodo). Ad esempio, supponendo un `NfcAdapter` denominato `mNfcAdapter` è dichiarato come una variabile di classe nell'attività, è possibile scrivere il codice seguente per creare il callback che costruisce il messaggio:
+È possibile registrare i callback con un `NfcAdapter` oggetto nel `OnCreate` metodo dell'attività. Ad esempio, supponendo `NfcAdapter` che `mNfcAdapter` un oggetto denominato venga dichiarato come variabile di classe nell'attività, è possibile scrivere il codice seguente per creare il callback che costruirà il messaggio:
 
 ```csharp
 mNfcAdapter = NfcAdapter.GetDefaultAdapter (this);
 mNfcAdapter.SetNdefPushMessageCallback (this, this);
 ```
 
-L'attività, che implementa `NfcAdapter.ICreateNdefMessageCallback`, viene passato per il `SetNdefPushMessageCallback` metodo precedente. Quando viene avviato il raggio di Android, il sistema chiamerà `CreateNdefMessage`, da cui può essere costruita l'attività di un `NdefMessage` come illustrato di seguito:
+L'attività, che implementa `NfcAdapter.ICreateNdefMessageCallback`, viene passata `SetNdefPushMessageCallback` al metodo precedente. Quando viene avviato Android Beam, il sistema chiama `CreateNdefMessage`, da cui l'attività può costruire un oggetto `NdefMessage` come illustrato di seguito:
 
 ```csharp
 public NdefMessage CreateNdefMessage (NfcEvent evt)
@@ -68,21 +68,21 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 
 ## <a name="receiving-a-message"></a>Ricezione di un messaggio
 
-Sul lato ricevente, il sistema richiama un Intent con il `ActionNdefDiscovered` azione, da cui è possibile estrarre il NdefMessage come indicato di seguito:
+Sul lato ricevente, il sistema richiama una finalità con l' `ActionNdefDiscovered` azione, da cui è possibile estrarre il NdefMessage come segue:
 
 ```csharp
 IParcelable [] rawMsgs = intent.GetParcelableArrayExtra (NfcAdapter.ExtraNdefMessages);
 NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
-Per un esempio di codice completo che usa Android Trasmetti, illustrato in esecuzione nella schermata riportata di seguito, vedere la [demo Trasmetti Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) nella raccolta di esempio.
+Per un esempio di codice completo in cui viene usato Android Beam, illustrato nella schermata seguente, vedere la [demo di Android Beam](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) nella raccolta di esempi.
 
-[![Screenshot di esempio dalla demo Trasmetti Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
+[![Schermate di esempio dalla demo per Android Beam](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo per Android Trasmetti (esempio)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
+- [Demo di Android Beam (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
 - [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Piattaforma Android 4.0](https://developer.android.com/sdk/android-4.0.html)
+- [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

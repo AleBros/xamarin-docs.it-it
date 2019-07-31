@@ -1,28 +1,28 @@
 ---
-title: Risoluzione dei problemi relativi a tvOS 10 le app compilate con Xamarin
-description: Questo articolo fornisce alcuni suggerimenti sulla risoluzione dei problemi per l'uso di tvOS 10 nelle App Xamarin. Descrive problemi riferiti alla Store l'App, la compatibilità binaria, CFNetwork HttpProtocol, CloudKit, immagine di base, NSUserActivity e UIKit.
+title: Risoluzione dei problemi relativi alle app tvOS 10 compilate con Novell
+description: Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di tvOS 10 in app Novell. Vengono descritti i problemi correlati all'App Store, alla compatibilità binaria, a CFNetwork HttpProtocol, CloudKit, Core Image, NSUserActivity e UIKit.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 97cfe7220f8b351ec30a9f2c7a7347d318378fbc
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 54a4bf2a6f575a55ce9dde8ec87c93e0d56acf9c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830494"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657406"
 ---
-# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi a tvOS 10 le app compilate con Xamarin
+# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS 10 compilate con Novell
 
-Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 10 con Xamarin e la soluzione per risolvere tali problemi:
+Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 10 con Novell e la soluzione a questi problemi:
 
 - [App Store](#App-Store)
 - [Compatibilità binaria](#Binary-Compatibility)
 - [Protocollo HTTP CFNetwork](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [Immagine di base](#CoreImage)
+- [Immagine principale](#CoreImage)
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
@@ -32,8 +32,8 @@ Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando
 
 Problemi noti:
 
-- Quando acquisti In-App di test nell'ambiente sandbox, la finestra di dialogo di autenticazione vengano visualizzati due volte.
-- Durante il test di acquisti In-App con il contenuto ospitato nell'ambiente sandbox, verrà visualizzata la finestra di dialogo password ogni volta che l'app viene portato in primo piano fino a quando non viene completato il download del contenuto.
+- Quando si verificano gli acquisti in-app nell'ambiente sandbox, è possibile che la finestra di dialogo di autenticazione venga visualizzata due volte.
+- Quando si verificano gli acquisti in-app con contenuto ospitato nell'ambiente sandbox, la finestra di dialogo password viene visualizzata ogni volta che l'app viene portata in primo piano fino al completamento del download del contenuto.
 
 <a name="Binary-Compatibility" />
 
@@ -41,35 +41,35 @@ Problemi noti:
 
 Problemi noti:
 
-- La chiamata `NSObject.ValueForKey` sarà un `null` chiave verrà generata un'eccezione.
-- Riferimento a un tipo di carattere in base al nome quando si chiama `UIFont.WithName` causerà un arresto anomalo del sistema.
-- Entrambe `NSURLSession` e `NSURLConnection` non è più i pacchetti di crittografia RC4 durante l'handshake TLS per `http://` URL.
-- Le app possono bloccarsi se modificano la geometria della superview una in entrambi i `ViewWillLayoutSubviews` o `LayoutSubviews` metodi.
-- Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è disabilitata per impostazione predefinita. Inoltre, l'API di trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app interrompere l'uso della crittografia SHA-1 e 3DES appena possibile.
+- Se `NSObject.ValueForKey` si chiama `null` , una chiave genererà un'eccezione.
+- Se si fa riferimento a un tipo `UIFont.WithName` di carattere per nome quando si chiama, verrà generato un arresto
+- Sia `NSURLSession` `http://` che `NSURLConnection` non sono più pacchetti di crittografia RC4 durante l'handshake TLS per gli URL.
+- Le app possono bloccarsi se modificano la `ViewWillLayoutSubviews` geometria di una supervisione nei metodi o. `LayoutSubviews`
+- Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app smetta di usare la crittografia SHA-1 e 3DES il prima possibile.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
 ## <a name="cfnetwork-http-protocol"></a>Protocollo HTTP CFNetwork
 
-Il `HTTPBodyStream` proprietà del `NSMutableURLRequest` classe deve essere impostata su un flusso aperto dopo `NSURLConnection` e `NSURLSession` ora applicherà in modo rigoroso questo requisito.
+La `HTTPBodyStream` proprietà `NSURLConnection` `NSURLSession` della classe deve essere impostata su un flusso non aperto a partire da e ora impone rigorosamente questo requisito. `NSMutableURLRequest`
 
 <a name="CloudKit" />
 
 ## <a name="cloudkit"></a>CloudKit
 
-Operazioni a esecuzione prolungata restituirà un _"Non si è autorizzati a salvare il file."_ Errore.
+Le operazioni con esecuzione prolungata restituiranno _"non si è autorizzati a salvare il file"._ errore.
 
 <a name="CoreImage" />
 
-## <a name="core-image"></a>Immagine di base
+## <a name="core-image"></a>Immagine principale
 
-Il `CIImageProcessor` API supporta ora un numero di immagini input arbitrario. `CIImageProcessor` API che è stato incluso nella versione beta di tvOS 10 1 verrà rimossa.
+L' `CIImageProcessor` API supporta ora un numero di immagini di input arbitrario. `CIImageProcessor`L'API inclusa in tvOS 10 Beta 1 verrà rimossa.
 
 <a name="NSUserActivity" />
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Dopo un'operazione di consegna, il `UserInfo` proprietà di un `NSUserActivity` oggetto potrebbe essere vuoto. Chiamare in modo esplicito `BecomeCurrent` NSUserActivity' oggetto come soluzione alternativa corrente.
+Dopo un'operazione di continuità, `UserInfo` la proprietà di `NSUserActivity` un oggetto potrebbe essere vuota. Chiamare `BecomeCurrent` in modo esplicito l'oggetto NSUserActivity come soluzione alternativa corrente.
 
 <a name="UIKit" />
 
@@ -77,14 +77,14 @@ Dopo un'operazione di consegna, il `UserInfo` proprietà di un `NSUserActivity` 
 
 Problemi noti:
 
-- Diventa l'aspetto dello sfondo `UINavigationBar`, `UITabBar` o `UIToolBar` può comportare un passaggio di layout per risolvere il nuovo aspetto. Non è possibile modificare questi aspetti visivi all'interno di un `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` o `DidUpdateSubviews` eventi possono causare un ciclo infinito di layout.
-- In tvOS 10, la chiamata di `RemoveGestureRecognizer` metodo di un `UIView` oggetto Annulla in modo esplicito qualsiasi riconoscitore di movimento in corso.
-- Presentato i controller di visualizzazione possono ora modificare l'aspetto della barra di stato.
-- tvOS 10 richiede allo sviluppatore di chiamare `base.AwakeFromNib` quando si crea una sottoclasse `UIViewController` ed eseguire l'override di `AwakeFromNib` (metodo).
-- Le app con personalizzato `UIView` sottoclassi che eseguono l'override `LayoutSubviews` e il layout prima di chiamare dirty `base.LayoutSubviews` può attivare un ciclo infinito di layout in tvOS 10.
-- Gli asset immagini specifiche direzione o flippable non sono alcun capovolgimento quando assegnato a `UIButton` oggetti.
+- Le modifiche apportate all' `UINavigationBar`aspetto `UITabBar` dello `UIToolBar` sfondo di o possono causare un passaggio di layout per risolvere il nuovo aspetto. Il tentativo di modificare questi aspetti all'interno di un `LayoutSubviews`evento `UpdateConstraints` `WillLayoutSubviews` , o `DidUpdateSubviews` può causare un ciclo di layout infinito.
+- In tvOS 10, la chiamata `RemoveGestureRecognizer` al metodo di `UIView` un oggetto annulla in modo esplicito qualsiasi riconoscimento di movimento in corso.
+- I controller di visualizzazione presentati possono ora influenzare l'aspetto della barra di stato.
+- tvOS 10 richiede che lo sviluppatore chiami `base.AwakeFromNib` quando viene `UIViewController` sottoclassato ed eseguendo l' `AwakeFromNib` override del metodo.
+- Le app con `UIView` sottoclassi personalizzate che eseguono `LayoutSubviews` l'override e lo sporco del `base.LayoutSubviews` layout prima di chiamare possono attivare un ciclo di layout infinito in tvOS 10.
+- Gli asset di immagini specifiche della direzione o di cui è possibile eseguire il capovolgimento `UIButton` non vengono invertiti quando assegnati a oggetti.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
-- [Che cos'è una novità a tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Novità di tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

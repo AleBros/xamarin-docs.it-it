@@ -1,45 +1,45 @@
 ---
 title: App Xamarin Live Player
-description: Questo documento descrive Xamarin Live Player app, che può essere utilizzato per visualizzare in anteprima le modifiche al codice in tempo reale nel dispositivo. Viene illustrato il programma di installazione, esempi, i log, impostazioni, gestione dei dispositivi e altro ancora.
+description: Questo documento descrive l'app Xamarin Live Player, che è possibile usare per visualizzare in anteprima le modifiche del codice in tempo reale nel dispositivo. Vengono illustrati l'installazione, gli esempi, i log, le impostazioni, la gestione dei dispositivi e altro ancora.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2019
-ms.openlocfilehash: fce0eeae4ef5776842ea1b45c36163118042dc49
-ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
+ms.openlocfilehash: b09ea4e8ec09db5e9bf443476cd3a67e16f02d19
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67157733"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651220"
 ---
 # <a name="xamarin-live-player-app"></a>App Xamarin Live Player
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
 > [!WARNING]
-> Xamarin Live Player Preview è stata terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite per i clienti di continuare a usare l'anteprima con Visual Studio 2017.
+> L'anteprima del Xamarin Live Player è terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite ai clienti che continuano a usare l'anteprima con Visual Studio 2017.
 
 > [!TIP]
-> È possibile usare la [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare la progettazione dello schermo durante la modifica.
+> È possibile usare il visualizzatore [Anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare le progettazioni dello schermo durante la modifica.
 
-All'avvio, l'app Xamarin Live Player aspetto simile al seguente:
+All'avvio, l'app Xamarin Live Player ha un aspetto simile al seguente:
 
-![Schermata di app Android Player in tempo reale](player-images/app-android-sml.png)
+![Schermata dell'app Android Live Player](player-images/app-android-sml.png)
 
-Quando si preme **coppia da Visual Studio**, usare la fotocamera per analizzare il codice a barre che mostra nel computer in uso:
+Quando si preme **associa a Visual Studio**, usare la fotocamera per analizzare il codice a barre visualizzato nel computer:
 
-![Screenshot dello scanner di codici a barre Android](player-images/scan-android-sml.png)
+![Screenshot dello scanner di codice a barre Android](player-images/scan-android-sml.png)
 
-Se la connessione ha esito positivo, il codice deve eseguire quasi immediatamente nel dispositivo (ad esempio la [esempio della Calcolatrice](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
+Se la connessione ha esito positivo, il codice deve essere eseguito quasi immediatamente nel dispositivo (ad esempio, l' [esempio](https://github.com/xamarin/mobile-samples/tree/master/LivePlayer/BasicCalculator)di calcolatrice:
 
-![Applicazione Calcolatrice di esempio in esecuzione sul dispositivo](player-images/basic-calculator-sml.png)
+![App di calcolo di esempio in esecuzione nel dispositivo](player-images/basic-calculator-sml.png)
 
 ## <a name="options"></a>Opzioni
 
-Premere il pulsante informazioni **(i)** nella parte inferiore dell'app per visualizzare i **opzioni** menu:
+Premere il pulsante informazioni **(i)** nella parte inferiore dell'app per visualizzare il menu **Opzioni** :
 
-[![Screenshot del menu di opzioni](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Screenshot del menu opzioni](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Log
 
@@ -47,51 +47,51 @@ Visualizzare i log per diagnosticare i problemi.
 
 ### <a name="settings"></a>Impostazioni
 
-- Attiva/disattiva visualizzazione degli errori di compilazione e runtime.
+- Consente di visualizzare o disabilitare gli errori di compilazione e di Runtime.
 - Informazioni sulla versione.
-- Inviare commenti e suggerimenti.
+- Invia commenti e suggerimenti.
 
 [![Screenshot delle impostazioni](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
-## <a name="managing-devices"></a>La gestione dei dispositivi
+## <a name="managing-devices"></a>Gestione dei dispositivi
 
-Per connettere un dispositivo per la prima volta, seguire le istruzioni riportate in [Setup & requisiti](~/tools/live-player/install.md). È possibile associare più dispositivi e gestirli tramite l'IDE.
+Per connettere un dispositivo per la prima volta, seguire le istruzioni riportate in [requisiti & installazione](~/tools/live-player/install.md). È possibile associare più dispositivi e gestirli tramite l'IDE.
 
 # <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
-In Visual Studio, scegliere **strumenti > Xamarin Live Player > Gestione dei dispositivi...**
+In Visual Studio scegliere **strumenti > Xamarin Live Player > Gestisci dispositivi...**
 
-![Gestire i dispositivi finestra](player-images/manage-tools-menu-vs.png)
+![Finestra Gestisci dispositivi](player-images/manage-tools-menu-vs.png)
 
-In questa finestra consente di eseguire le operazioni seguenti:
+Questa finestra consente di eseguire le operazioni seguenti:
 
-- Associare un nuovo dispositivo analizzando il codice
-- In alternativa associare un dispositivo digitando il codice visualizzato nella relativa schermata
-- Rimuovere i dispositivi esistenti dall'elenco
+- Associare un nuovo dispositivo eseguendo la scansione del codice
+- In alternativa, abbinare un dispositivo digitando il codice visualizzato sullo schermo
+- Rimuovi i dispositivi esistenti dall'elenco
 
 È anche possibile accedere a questa finestra dall'elenco dei dispositivi.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-In Visual Studio per Mac, scegliere **strumenti > (Xamarin Live Player) gestire i dispositivi...**
+In Visual Studio per Mac scegliere **strumenti > (Xamarin Live Player) Gestisci dispositivi...**
 
-![Gestire i dispositivi finestra](player-images/manage-tools-menu.png)
+![Finestra Gestisci dispositivi](player-images/manage-tools-menu.png)
 
-In questa finestra consente di eseguire le operazioni seguenti:
+Questa finestra consente di eseguire le operazioni seguenti:
 
-- Associare un nuovo dispositivo analizzando il codice
-- In alternativa associare un dispositivo digitando il codice visualizzato nella relativa schermata
-- Rimuovere i dispositivi esistenti dall'elenco
+- Associare un nuovo dispositivo eseguendo la scansione del codice
+- In alternativa, abbinare un dispositivo digitando il codice visualizzato sullo schermo
+- Rimuovi i dispositivi esistenti dall'elenco
 
-![Gestire i dispositivi finestra](player-images/manage.png)
+![Finestra Gestisci dispositivi](player-images/manage.png)
 
 È anche possibile accedere a questa finestra dall'elenco dei dispositivi:
 
-![Scegliere i dispositivi di Xamarin Live Player dall'elenco dei dispositivi](player-images/manage-device-menu.png)
+![Scegliere Xamarin Live Player dispositivi dall'elenco dei dispositivi](player-images/manage-device-menu.png)
 
 -----
 
-Se si verifica eventuali vedere problemi [limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
+Se si verificano problemi [, vedere limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

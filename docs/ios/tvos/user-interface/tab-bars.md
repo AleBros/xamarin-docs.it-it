@@ -1,156 +1,156 @@
 ---
-title: Utilizzo di controller di barra della scheda in Xamarin tvOS
-description: Questo documento descrive come usare i controller di barra della scheda in un'app tvOS compilate con Xamarin. Fornisce un alto livello sulla visualizzazione di barre schede e illustra gli elementi delle barra della scheda, l'integrazione di storyboard ed elementi della barra della scheda.
+title: Uso dei controller della barra schede tvOS in Novell
+description: Questo documento descrive come usare i controller della barra schede in un'app tvOS compilata con Novell. Offre una visualizzazione di alto livello delle barre delle schede e illustra gli elementi della barra delle schede, l'integrazione dello storyboard e gli elementi della barra delle schede.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7ac4d0effc1067b065bad114160dc8648e998dad
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830789"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649656"
 ---
-# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Utilizzo di controller di barra della scheda in Xamarin tvOS
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Uso dei controller della barra schede tvOS in Novell
 
-Per molti tipi di App tvOS, esplorazione principale viene presentato come una barra di schede in esecuzione nella parte superiore della schermata. L'utente passa a sinistra e destra attraverso l'elenco di categorie possibili e l'area del contenuto di sotto le modifiche in modo da riflettere la selezione dell'utente.
+Per molti tipi di app tvOS, la navigazione principale viene visualizzata come barra scheda in esecuzione nella parte superiore della schermata. L'utente scorre verso sinistra e verso destra nell'elenco delle categorie possibili e l'area di contenuto sotto le modifiche per riflettere la selezione dell'utente.
 
-[![](tab-bars-images/tab01.png "Barra di schede di esempio")](tab-bars-images/tab01.png#lightbox)
+[![](tab-bars-images/tab01.png "Barra scheda di esempio")](tab-bars-images/tab01.png#lightbox)
 
-La barra delle schede è semitrasparente per impostazione predefinita e viene sempre visualizzata nella parte superiore della schermata. Quando è in stato attivo, una barra di schede di 140 pixel superiore della schermata si occuperà ma rapidamente diapositiva immediatamente quando lo stato attivo passa all'area di contenuto riportato di seguito.
+Per impostazione predefinita, la barra delle schede è traslucida e viene sempre visualizzata nella parte superiore della schermata. Quando si è in stato attivo, una barra delle schede coprirà i primi 140 pixel della schermata, ma viene rapidamente spostata quando lo stato attivo passa all'area di contenuto seguente.
 
 <a name="Tab-Bars-in-tvOS" />
 
-## <a name="tab-bars-in-tvos"></a>Barre schede in tvOS
+## <a name="tab-bars-in-tvos"></a>Barre delle schede in tvOS
 
-Il `UITabViewController` funziona in modo simile e ha uno scopo simile su tvOS, come accade in iOS, con le differenze principali seguenti:
+Il `UITabViewController` funziona in modo simile e ha uno scopo analogo in tvOS come in iOS, con le seguenti differenze principali:
 
-- A differenza di barra schede in iOS che viene visualizzata nella parte inferiore della schermata, barre schede in tvOS occupare di 140 pixel superiore dello schermo e sono semitrasparente per impostazione predefinita.
-- Quando perde lo stato attivo barra della scheda per l'area del contenuto riportato di seguito, la barra di schede verranno scorrere rapidamente dalla parte superiore della schermata e nascosta. L'utente può toccare il pulsante di Menu una volta o scorrere verso il backup sul [remoti per Siri](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) per visualizzare più la barra di schede.
-- Scorrendo rapidamente verso il basso nel sistema remoto Siri Sposta stato attivo per l'area del contenuto sotto la barra della scheda per il primo [elemento attivabile](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) del contenuto da visualizzare. Anche in questo caso, questo nasconde la barra di schede dopo che lo stato attivo passa.
-- Fare clic per selezionare una categoria visualizzata nella barra della scheda passerà a quello della categoria contenuto e lo stato attivo passa al primo elemento attivabile in tale visualizzazione.
-- Il numero di categorie visualizzato nella barra della scheda dovrebbe essere risolto e tutte le categorie devono essere accessibili in qualsiasi momento, una categoria specificata non deve mai essere disabilitata.
-- Barre schede non supporta la personalizzazione su tvOS. Inoltre, non espongono il **altre** categoria (ad esempio, iOS) se sono presenti più categorie rispetto a può adattarsi alla barra delle schede.
+- A differenza della barra scheda in iOS visualizzata nella parte inferiore della schermata, le barre delle schede in tvOS occupano i primi 140 pixel dello schermo e sono trasparenti per impostazione predefinita.
+- Quando lo stato attivo esce dalla barra delle schede per l'area del contenuto, la barra della scheda si sposta rapidamente dalla parte superiore dello schermo e viene nascosta. L'utente può toccare il pulsante di menu una volta o scorrere verso l'alto nella finestra di [Siri Remote](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) per visualizzare di nuovo la barra delle schede.
+- Se si scorre verso il basso sul Siri remoto, lo stato attivo viene spostato nell'area del contenuto sotto la barra della scheda fino alla prima [voce attivabile](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) nel contenuto visualizzato. Anche in questo caso, la barra delle schede viene nascosta dopo lo spostamento dello stato attivo.
+- Facendo clic per selezionare una categoria visualizzata nella barra delle schede, si passerà al contenuto di tale categoria e lo stato attivo verrà impostato sul primo elemento attivabile in tale visualizzazione.
+- Il numero di categorie visualizzate nella barra delle schede dovrebbe essere fisso e tutte le categorie devono essere accessibili in qualsiasi momento, una determinata categoria non deve mai essere disabilitata.
+- Le barre delle schede non supportano la personalizzazione in tvOS. Inoltre, non visualizzano la categoria **più** (ad esempio iOS) se sono presenti più categorie di quelle che è possibile inserire nella barra delle schede.
 
-Apple ha i seguenti suggerimenti per l'utilizzo di barre schede:
+Apple presenta i suggerimenti seguenti per l'utilizzo delle barre delle schede:
 
-- **Barre schede utilizzare per organizzare logicamente il contenuto** -usare la barra di schede per organizzare logicamente il contenuto che interrelati con l'app tvOS. Ad esempio, in primo piano, i grafici di inizio, acquistato e ricerca.
-- **Aggiungere le notifiche per informare gli utenti del nuovo contenuto** -facoltativamente, è possibile visualizzare una notifica (un oval con un numero bianco o il punto esclamativo rosso) per informare l'utente del nuovo contenuto in una categoria.
-- **Utilizzare le notifiche in modo sporadico** : non creare confusione barra della scheda con badge e solo visualizzarli in cui forniscono informazioni critiche all'utente.
-- **Limitare il numero di categorie** : per ridurre la complessità e mantenere si app gestibili, non eseguire l'overload di barra schede con le categorie e assicurarsi che tutte le categorie sono visibili e non affollato. Titoli brevi e semplici offrono risultati ottimali.
-- **Non disabilitare una categoria** -tutte le schede (categorie) deve essere sempre visibili e abilitati in qualsiasi momento. Se una scheda specificata non presenta alcun contenuto, fornire una spiegazione perché all'utente. Ad esempio, nella scheda acquista sarà vuota se l'utente non ha effettuato alcun acquisti.
+- **Usare le barre delle schede per organizzare logicamente il contenuto** : usare la barra delle schede per organizzare logicamente il contenuto con cui funziona l'app tvOS. Ad esempio, in primo piano, in primo piano, acquistato e ricerca.
+- **Aggiungere notifiche per informare gli utenti del nuovo contenuto** . Facoltativamente, è possibile visualizzare una notifica (un ovale rosso con un numero bianco o un punto esclamativo) per informare l'utente del nuovo contenuto in una categoria.
+- **Usare le notifiche** in modo sporadico. non ingombrare la barra delle schede con le notifiche e visualizzarle solo quando forniscono informazioni critiche all'utente.
+- **Limitare il numero di categorie** : per ridurre la complessità e mantenere gestibili le app, non sovraccaricare la barra delle schede con le categorie e assicurarsi che tutte le categorie siano visibili e non affollate. I titoli semplici e brevi funzionano meglio.
+- **Non disabilitare una categoria** : tutte le schede (categorie) devono essere sempre visibili e abilitate in qualsiasi momento. Se una scheda specificata non contiene contenuto, fornire una spiegazione per l'utente. La scheda acquisti, ad esempio, sarà vuota se l'utente non ha effettuato acquisti.
 
 <a name="Tab-Bar-Items" />
 
-## <a name="tab-bar-items"></a>Elementi di barra schede
+## <a name="tab-bar-items"></a>Elementi della barra scheda
 
-Ogni categoria (scheda) nella barra della scheda è rappresentato da un elemento della barra schede (`UITabBarItem`). Apple ha i seguenti suggerimenti per l'uso di elemento della barra schede:
+Ogni categoria (scheda) nella barra delle schede è rappresentata da un elemento della barra`UITabBarItem`scheda (). Apple presenta i suggerimenti seguenti per l'utilizzo degli elementi della barra schede:
 
-- **Utilizzare schede basato su testo** -anche se la barra TabItem è in grado di essere rappresentata come un'icona, suggerite da Apple con testo solo perché un titolo breve è più facile da interpretare rispetto a un'icona.
-- **Utilizzare a breve, significativo sostantivi o verbi** -elemento della barra di schede A chiaramente deve inoltrare il contenuto che contiene e funziona meglio quando si tratta di un sostantivo semplice (ad esempio foto, film o musica) o verbi (ad esempio ricerca o Play).
+- **Usare schede basate su testo** : mentre l'elemento della barra schede può essere rappresentato come un'icona, Apple suggerisce di usare solo testo perché un titolo conciso è più semplice da interpretare rispetto a un'icona.
+- **Usare sostantivi o verbi brevi e significativi** : un elemento della barra schede deve inoltrare chiaramente il contenuto che contiene e funziona meglio quando è un sostantivo semplice (ad esempio foto, filmati o musica) o verbi (ad esempio, ricerca o riproduzione).
 
 <a name="Tab-Bars-and-Storyboards" />
 
-## <a name="tab-bars-and-storyboards"></a>Barre schede e gli storyboard
+## <a name="tab-bars-and-storyboards"></a>Barre di tabulazione e storyboard
 
-Il modo più semplice per lavorare con barre schede in un'app xamarin. tvos è per aggiungerli all'interfaccia utente dell'app usando iOS Designer.
+Il modo più semplice per usare le barre delle schede in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
     
-1. Avviare una nuova app xamarin. tvos e selezionare **tvOS** > **App** > **App a schede**: 
+1. Avviare una nuova app Novell. tvOS e selezionare**app a schede** **tvOS** > **app** > : 
 
-    [![](tab-bars-images/tab02.png "Selezionare l'App a schede")](tab-bars-images/tab02.png#lightbox)
-1. Seguire tutte le istruzioni per creare una nuova soluzione xamarin. tvos.
-1. Nel **riquadro della soluzione**, fare doppio clic il `Main.storyboard` file e aprirlo e modificarlo.
-1. Per modificare la **sull'icona** o **titolo** per una determinata categoria, selezionare il **elemento della barra schede** per il **View Controller** nel  **Struttura documento**:
+    [![](tab-bars-images/tab02.png "Seleziona app a schede")](tab-bars-images/tab02.png#lightbox)
+1. Seguire tutte le istruzioni per creare una nuova soluzione Novell. tvOS.
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Per modificare l' **icona** o il **titolo** di una determinata categoria, selezionare l' **elemento della barra schede** per il **controller di visualizzazione** nella struttura del **documento**:
 
-    [![](tab-bars-images/tab03a.png "La barra di schede di elemento per il Controller di visualizzazione nella struttura documento")](tab-bars-images/tab03a.png#lightbox)
-1. Quindi impostare le proprietà obbligatorie **scheda Widget** delle **Esplora proprietà**: 
+    [![](tab-bars-images/tab03a.png "Elemento della barra schede per il controller di visualizzazione nella struttura del documento")](tab-bars-images/tab03a.png#lightbox)
+1. Impostare quindi le proprietà necessarie nella **scheda Widget** di **Esplora proprietà**: 
 
-    [![](tab-bars-images/tab03.png "La scheda di Widget")](tab-bars-images/tab03.png#lightbox)
-1. Per aggiungere una nuova categoria (scheda), rilasciare un **Controller visualizzazione** l'area di progettazione: 
+    [![](tab-bars-images/tab03.png "Scheda widget")](tab-bars-images/tab03.png#lightbox)
+1. Per aggiungere una nuova categoria (scheda), trascinare un **controller di visualizzazione** nell'area di progettazione: 
 
-    [![](tab-bars-images/tab04.png "Un Controller di visualizzazione")](tab-bars-images/tab04.png#lightbox)
-1. CTRL + clic e trascinare dal **Controller di visualizzazione della scheda** al nuovo **View Controller**.
-1. Finestra popup, selezionare **consente di visualizzare controller** per aggiungere la nuova vista come una scheda (categoria): 
+    [![](tab-bars-images/tab04.png "Controller di visualizzazione")](tab-bars-images/tab04.png#lightbox)
+1. Controllare: fare clic e trascinare dal **controller di visualizzazione a schede** al nuovo **controller di visualizzazione**.
+1. Nella finestra popup selezionare **Visualizza controller** per aggiungere la nuova visualizzazione come scheda (categoria): 
 
-    [![](tab-bars-images/tab05.png "Selezionare scheda")](tab-bars-images/tab05.png#lightbox)
-1. Progettare il layout dell'interfaccia utente per ogni area di contenuto Caterogies come di consueto, mediante l'aggiunta di elementi dell'interfaccia utente in iOS Designer.
-1. Esporre tutti gli eventi necessari per lavorare con i controlli dell'interfaccia utente in C# codice.
-1. Assegnare un nome tutti i controlli dell'interfaccia utente che si desidera esporre C# codice.
+    [![](tab-bars-images/tab05.png "Seleziona scheda")](tab-bars-images/tab05.png#lightbox)
+1. Progettare il layout dell'interfaccia utente per ogni area di contenuto di Caterogies come di consueto, aggiungendo elementi dell'interfaccia utente in iOS designer.
+1. Esporre tutti gli eventi necessari per lavorare con i controlli dell' C# interfaccia utente nel codice.
+1. Assegnare un nome a tutti i controlli dell'interfaccia utente C# che si desidera esporre nel codice.
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. Avviare una nuova app xamarin. tvos e selezionare **tvOS** > **App** > **App a schede**: 
+1. Avviare una nuova app Novell. tvOS e selezionare**app a schede** **tvOS** > **app** > : 
 
-    [![](tab-bars-images/tab02vs.png "Selezionare l'App a schede")](tab-bars-images/tab02vs.png#lightbox)
-1. Seguire tutte le istruzioni per creare una nuova soluzione xamarin. tvos.
-1. Nel **Esplora soluzioni**, fare doppio clic il `Main.storyboard` file e aprirlo e modificarlo.
-1. Per modificare la **sull'icona** o **titolo** per una determinata categoria, selezionare il **elemento della barra schede** per il **View Controller** nel  **Struttura documento**:
+    [![](tab-bars-images/tab02vs.png "Seleziona app a schede")](tab-bars-images/tab02vs.png#lightbox)
+1. Seguire tutte le istruzioni per creare una nuova soluzione Novell. tvOS.
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Per modificare l' **icona** o il **titolo** di una determinata categoria, selezionare l' **elemento della barra schede** per il **controller di visualizzazione** nella struttura del **documento**:
 
-    [![](tab-bars-images/tab03avs.png "Il Controller di visualizzazione nella struttura documento")](tab-bars-images/tab03avs.png#lightbox)
-1. Quindi impostare le proprietà obbligatorie **scheda Widget** delle **Esplora proprietà**: 
+    [![](tab-bars-images/tab03avs.png "Il controller di visualizzazione nella struttura del documento")](tab-bars-images/tab03avs.png#lightbox)
+1. Impostare quindi le proprietà necessarie nella **scheda Widget** di **Esplora proprietà**: 
 
-    [![](tab-bars-images/tab03vs.png "La scheda di Widget")](tab-bars-images/tab03vs.png#lightbox)
-1. Per aggiungere una nuova categoria (scheda), trascinare un **Controller di visualizzazione** dalle **della casella degli strumenti** e rilasciarlo nell'area di progettazione: 
+    [![](tab-bars-images/tab03vs.png "Scheda widget")](tab-bars-images/tab03vs.png#lightbox)
+1. Per aggiungere una nuova categoria (scheda), trascinare un **controller di visualizzazione** dalla **casella degli strumenti** e rilasciarlo nell'area di progettazione: 
 
-    [![](tab-bars-images/tab04vs.png "Un Controller di visualizzazione")](tab-bars-images/tab04vs.png#lightbox)
-1. CTRL + clic e trascinare dal **Controller di visualizzazione della scheda** al nuovo **View Controller**.
-1. Finestra popup, selezionare **consente di visualizzare controller** per aggiungere la nuova vista come una scheda (categoria): 
+    [![](tab-bars-images/tab04vs.png "Controller di visualizzazione")](tab-bars-images/tab04vs.png#lightbox)
+1. Controllare: fare clic e trascinare dal **controller di visualizzazione a schede** al nuovo **controller di visualizzazione**.
+1. Nella finestra popup selezionare **Visualizza controller** per aggiungere la nuova visualizzazione come scheda (categoria): 
 
-    [![](tab-bars-images/tab05vs.png "Selezionare scheda")](tab-bars-images/tab05vs.png#lightbox)
-1. Progettare il layout dell'interfaccia utente per ogni area di contenuto Caterogies come di consueto, mediante l'aggiunta di elementi dell'interfaccia utente in iOS Designer.
-1. Esporre tutti gli eventi necessari per lavorare con i controlli dell'interfaccia utente in C# codice.
-1. Assegnare un nome tutti i controlli dell'interfaccia utente che si desidera esporre C# codice.
+    [![](tab-bars-images/tab05vs.png "Seleziona scheda")](tab-bars-images/tab05vs.png#lightbox)
+1. Progettare il layout dell'interfaccia utente per ogni area di contenuto di Caterogies come di consueto, aggiungendo elementi dell'interfaccia utente in iOS designer.
+1. Esporre tutti gli eventi necessari per lavorare con i controlli dell' C# interfaccia utente nel codice.
+1. Assegnare un nome a tutti i controlli dell'interfaccia utente C# che si desidera esporre nel codice.
 1. Salvare le modifiche.
     
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare gli eventi, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un `UIButton`) in iOS Designer, non verrà mai chiamato perché non dispone di un tocco Apple TV a schermo intero o supportare gli eventi di tocco. È consigliabile usare sempre la `Primary Action` eventi durante la creazione di gestori eventi per tvOS elementi dell'interfaccia utente.
+> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio `UIButton`,) in iOS designer, non verrà mai chiamato perché Apple TV non ha un touch screen o supporta gli eventi di tocco. È consigliabile usare sempre l' `Primary Action` evento quando si creano gestori eventi per gli elementi dell'interfaccia utente tvOS.
 
-Per altre informazioni sull'utilizzo degli storyboard, vedere la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
 <a name="Working-with-Tab-Bars" />
 
-## <a name="working-with-tab-bars"></a>Utilizzo di barre schede
+## <a name="working-with-tab-bars"></a>Utilizzo delle barre delle schede
 
-Usare la `Items` proprietà del `UITabBar` per accedere alla raccolta di `UITabBarItems` contiene come matrice indicizzata zero (0). Il `SelectedItem` proprietà restituirà la scheda attualmente selezionata (categoria) come un `UITabBarItem`.
+Utilizzare la `Items` proprietà `UITabBar` di per accedere alla raccolta di `UITabBarItems` che contiene come matrice indicizzata zero (0). La `SelectedItem` proprietà restituirà la scheda attualmente selezionata (categoria) `UITabBarItem`come.
 
 
 <a name="Working-with-Tab-Bar-Items" />
 
-## <a name="working-with-tab-bar-items"></a>Uso degli elementi di barra schede
+## <a name="working-with-tab-bar-items"></a>Utilizzo degli elementi della barra schede
 
-Per visualizzare una notifica di una scheda specificata (una forma ovale rossa con testo bianco), usare il codice seguente:
+Per visualizzare una notifica in una scheda specificata (un ovale rosso con testo bianco), usare il codice seguente:
 
 ```csharp
 // Display a badge
 TabBar.Items [2].BadgeValue = "10";
 ```
 
-Che produrrebbe i risultati seguenti quando si esegue:
+Che produrrebbe i risultati seguenti quando vengono eseguiti:
 
-[![](tab-bars-images/tab06.png "Un elemento della barra di schede con badge")](tab-bars-images/tab06.png#lightbox)
+[![](tab-bars-images/tab06.png "Elemento della barra scheda con badge")](tab-bars-images/tab06.png#lightbox)
 
-Usare la `Title` proprietà del `UITabBarItem` per modificare il titolo e il `Image` proprietà per cambiare l'icona.
+Utilizzare la `Title` proprietà dell'oggetto `UITabBarItem` per modificare il titolo e la `Image` proprietà per modificare l'icona.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la progettazione e l'utilizzo di Controller di barra schede all'interno di un'app xamarin. tvos.
+Questo articolo ha trattato la progettazione e l'uso del controller della barra schede all'interno di un'app Novell. tvOS.
 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -7,36 +7,36 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
-ms.openlocfilehash: c79dd6430d387d75acfa010e7f5ad01829f8a6f0
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: d170e37b8bf4ce880f9d8f48d30defb42ee6bba2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658938"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648014"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Utilizzare un servizio Web di Windows Communication Foundation (WCF)
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _WCF è un framework unificato di Microsoft per la compilazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare applicazioni distribuite sicure, affidabili, transazionali e interoperabile. Questo articolo illustra come usare un servizio WCF SOAP Simple Object Access Protocol () da un'applicazione xamarin. Forms._
 
-WCF descrive un servizio con un'ampia gamma di contratti diversi tra cui:
+WCF descrive un servizio con un'ampia gamma di contratti diversi, tra cui:
 
 - **I contratti dati** : definire le strutture di dati che costituiscono la base per il contenuto all'interno di un messaggio.
 - **Contratti di messaggio** : comporre i messaggi da contratti dati esistenti.
 - **I contratti di errore** -Consenti errori SOAP personalizzati essere specificato.
 - **I contratti di servizio** : specificare le operazioni che supportano servizi e i messaggi necessari per l'interazione con ogni operazione. Specificano anche eventuali comportamenti di errore personalizzato che possono essere associato a operazioni su ogni servizio.
 
-Esistono differenze tra servizi Web ASP.NET (ASMX) e WCF, tuttavia WCF supporta le stesse funzionalità offerte da ASMX: messaggi SOAP su HTTP. Per altre informazioni sull'utilizzo di un servizio ASMX, vedere [utilizzano i servizi Web ASP.NET (ASMX)](~/xamarin-forms/data-cloud/web-services/asmx.md).
+Esistono differenze tra i servizi Web ASP.NET (ASMX) e WCF, ma WCF supporta le stesse funzionalità fornite da ASMX, ovvero messaggi SOAP su HTTP. Per ulteriori informazioni sull'utilizzo di un servizio ASMX, vedere la pagina relativa all'utilizzo di [ASP.NET Web Services (asmx)](~/xamarin-forms/data-cloud/web-services/asmx.md).
 
 > [!IMPORTANT]
-> Il supporto della piattaforma Xamarin per WCF è limitato ai messaggi SOAP con codifica del testo rispetto all'uso di HTTP/HTTPS di `BasicHttpBinding` classe.
+> Il supporto della piattaforma Novell per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS mediante la `BasicHttpBinding` classe.
 >
-> Supporto WCF richiede l'uso di strumenti disponibili solo in un ambiente di Windows per generare il proxy e ospitare il TodoWCFService. Compilazione e test dell'app iOS richiederanno distribuzione TodoWCFService in un computer Windows o come servizio web di Azure.
+> Il supporto WCF richiede l'uso di strumenti disponibili solo in un ambiente Windows per generare il proxy e ospitare il TodoWCFService. La compilazione e il test dell'app iOS richiederanno la distribuzione di TodoWCFService in un computer Windows o come servizio Web di Azure.
 >
-> App native di Xamarin. Forms, in genere, condividere codice con una libreria di classi .NET Standard. Tuttavia, .NET Core non supporta attualmente WCF in modo che il progetto condiviso deve essere una libreria di classi portabile legacy. Per informazioni sul supporto WCF in .NET Core, vedere [scelta tra .NET Core e .NET Framework per le app server](/dotnet/standard/choosing-core-framework-server).
+> Le app Novell Forms native condividono in genere il codice con una libreria di classi .NET Standard. Tuttavia, .NET Core non supporta attualmente WCF, pertanto il progetto condiviso deve essere una libreria di classi portabile legacy. Per informazioni sul supporto di WCF in .NET Core, vedere [scelta tra .NET Core e .NET Framework per le app Server](/dotnet/standard/choosing-core-framework-server).
 
-La soluzione dell'applicazione di esempio include un servizio WCF che può essere eseguito in locale e viene illustrato nello screenshot seguente:
+La soluzione dell'applicazione di esempio include un servizio WCF che può essere eseguito localmente ed è illustrato nello screenshot seguente:
 
 ![](wcf-images/portal.png "Applicazione di esempio")
 
@@ -45,7 +45,7 @@ La soluzione dell'applicazione di esempio include un servizio WCF che può esser
 >
 > Può essere scelto ATS fuori se non è possibile usare il `HTTPS` protocol e proteggere le comunicazioni per le risorse internet. Questo scopo, l'aggiornamento dell'app **Info. plist** file. Per altre informazioni, vedere [App Transport Security](~/ios/app-fundamentals/ats.md).
 
-## <a name="consume-the-web-service"></a>Utilizzare il servizio web
+## <a name="consume-the-web-service"></a>Utilizzare il servizio Web
 
 Il servizio WCF fornisce le operazioni seguenti:
 
@@ -96,7 +96,7 @@ Il `TodoServiceClient` istanza viene configurata con un indirizzo endpoint e inf
 
 Per altre informazioni sulla configurazione di riferimento al servizio, vedere [configurare il riferimento al servizio](~/cross-platform/data-cloud/web-services/index.md#wcf).
 
-### <a name="create-data-transfer-objects"></a>Creare gli oggetti di trasferimento dei dati
+### <a name="create-data-transfer-objects"></a>Creare oggetti di trasferimento dati
 
 L'applicazione di esempio Usa il `TodoItem` classe ai dati del modello. Per archiviare una `TodoItem` elemento nel servizio web è necessario prima convertirlo in proxy generato `TodoItem` tipo. Questa operazione viene eseguita la `ToWCFServiceTodoItem` metodo, come illustrato nell'esempio di codice seguente:
 
@@ -133,7 +133,7 @@ static TodoItem FromWCFServiceTodoItem (TodoWCFService.TodoItem item)
 
 Questo metodo recupera semplicemente i dati dal proxy generato `TodoItem` tipo e lo imposta appena creato `TodoItem` istanza.
 
-### <a name="retrieve-data"></a>Recupero dei dati
+### <a name="retrieve-data"></a>Recuperare i dati
 
 Il `TodoServiceClient.BeginGetTodoItems` e `TodoServiceClient.EndGetTodoItems` vengono utilizzati metodi per chiamare il `GetTodoItems` operazione fornita dal servizio web. Questi metodi asincroni sono incapsulati in un `Task` dell'oggetto, come illustrato nell'esempio di codice seguente:
 
@@ -159,7 +159,7 @@ Il `Task.Factory.FromAsync` metodo crea un `Task` che esegue il `TodoServiceClie
 
 Il `TodoServiceClient.EndGetTodoItems` metodo restituisce un `ObservableCollection` dei `TodoWCFService.TodoItem` istanze, che viene quindi convertito in un `List` di `TodoItem` istanze per la visualizzazione.
 
-### <a name="create-data"></a>Creare i dati
+### <a name="create-data"></a>Creazione di dati
 
 Il `TodoServiceClient.BeginCreateTodoItem` e `TodoServiceClient.EndCreateTodoItem` vengono utilizzati metodi per chiamare il `CreateTodoItem` operazione fornita dal servizio web. Questi metodi asincroni sono incapsulati in un `Task` dell'oggetto, come illustrato nell'esempio di codice seguente:
 
@@ -182,7 +182,7 @@ Il `Task.Factory.FromAsync` metodo crea un' `Task` che esegue il `TodoServiceCli
 
 Il servizio web genera un'eccezione una `FaultException` se non riesce a creare il `TodoItem`, che viene gestita dall'applicazione.
 
-### <a name="update-data"></a>aggiornare i dati
+### <a name="update-data"></a>Aggiornare i dati
 
 Il `TodoServiceClient.BeginEditTodoItem` e `TodoServiceClient.EndEditTodoItem` vengono utilizzati metodi per chiamare il `EditTodoItem` operazione fornita dal servizio web. Questi metodi asincroni sono incapsulati in un `Task` dell'oggetto, come illustrato nell'esempio di codice seguente:
 
@@ -205,7 +205,7 @@ Il `Task.Factory.FromAsync` metodo crea un' `Task` che esegue il `TodoServiceCli
 
 Il servizio web genera un'eccezione una `FaultException` se non riesce a individuare o aggiornare il `TodoItem`, che viene gestita dall'applicazione.
 
-### <a name="delete-data"></a>Eliminare i dati
+### <a name="delete-data"></a>Elimina dati
 
 Il `TodoServiceClient.BeginDeleteTodoItem` e `TodoServiceClient.EndDeleteTodoItem` vengono utilizzati metodi per chiamare il `DeleteTodoItem` operazione fornita dal servizio web. Questi metodi asincroni sono incapsulati in un `Task` dell'oggetto, come illustrato nell'esempio di codice seguente:
 
@@ -226,17 +226,17 @@ Il `Task.Factory.FromAsync` metodo crea un' `Task` che esegue il `TodoServiceCli
 
 Il servizio web genera un'eccezione una `FaultException` se non riesce a trovare o eliminare il `TodoItem`, che viene gestita dall'applicazione.
 
-## <a name="configure-remote-access-to-iis-express"></a>Configurare l'accesso remoto a IIS Express
-In Visual Studio 2017 o Visual Studio 2019, dovrebbe essere possibile testare l'applicazione UWP in un computer senza alcuna configurazione aggiuntiva. Testare i client Android e iOS possono richiedere i passaggi aggiuntivi in questa sezione. Visualizzare [connettersi a servizi Web locali da iOS, Android emulatori e simulatori](~/cross-platform/deploy-test/connect-to-local-web-services.md) per altre informazioni.
+## <a name="configure-remote-access-to-iis-express"></a>Configurare l'accesso remoto per IIS Express
+In Visual Studio 2017 o Visual Studio 2019 dovrebbe essere possibile testare l'applicazione UWP in un PC senza alcuna configurazione aggiuntiva. Il test dei client Android e iOS può richiedere i passaggi aggiuntivi in questa sezione. Per altre informazioni, vedere [connettersi ai servizi Web locali da simulatori iOS e emulatori Android](~/cross-platform/deploy-test/connect-to-local-web-services.md) .
 
-Per impostazione predefinita, IIS Express risponderà solo alle richieste di `localhost`. Dispositivi remoti (ad esempio un dispositivo Android, un iPhone o persino un simulatore) non saranno possibile accedere al servizio WCF locale. È necessario conoscere l'indirizzo IP di workstation di Windows 10 nella rete locale. Ai fini di questo esempio, si supponga che la workstation abbia l'indirizzo IP `192.168.1.143`. I passaggi seguenti illustrano come configurare Windows 10 e IIS Express per accettare le connessioni remote e connettersi al servizio da un dispositivo fisico o virtuale:
+Per impostazione predefinita, IIS Express risponderà solo alle richieste `localhost`a. I dispositivi remoti (ad esempio un dispositivo Android, un iPhone o anche un simulatore) non avranno accesso al servizio WCF locale. È necessario che l'indirizzo IP della workstation Windows 10 sia presente nella rete locale. Ai fini di questo esempio, si supponga che la workstation disponga dell'indirizzo `192.168.1.143`IP. Nei passaggi seguenti viene illustrato come configurare Windows 10 e IIS Express per accettare le connessioni remote e connettersi al servizio da un dispositivo fisico o virtuale:
 
-1. **Aggiungere un'eccezione al Firewall Windows**. È necessario aprire una porta attraverso Windows Firewall che applicazioni sulla subnet possono usare per comunicare con il servizio WCF. Creare una regola in ingresso, aprire la porta 49393 nel firewall. Da un prompt dei comandi amministrativo, eseguire questo comando:
+1. **Aggiungere un'eccezione a Windows Firewall**. Per comunicare con il servizio WCF, è necessario aprire una porta tramite Windows Firewall che le applicazioni nella subnet possano utilizzare. Creare una regola in ingresso che apre la porta 49393 nel firewall. Da un prompt dei comandi amministrativo eseguire questo comando:
     ```
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```
 
-1. **Configurare IIS Express per le connessioni Remote accettare**. È possibile configurare IIS Express modificando il file di configurazione per IIS Express **[directory soluzione]\.vs\config\applicationhost.config**. Trovare il `site` elemento con il nome `TodoWCFService`. Dovrebbe essere simile al codice XML seguente:
+1. **Configurare IIS Express per accettare le connessioni remote**. È possibile configurare IIS Express modificando il file di configurazione per IIS Express in **[directory soluzione\.] vs\config\applicationhost.config**. Trovare l' `site` elemento con il nome `TodoWCFService`. Dovrebbe essere simile al codice XML seguente:
 
     ```xml
     <site name="TodoWCFService" id="2">
@@ -249,14 +249,14 @@ Per impostazione predefinita, IIS Express risponderà solo alle richieste di `lo
     </site>
     ```
 
-    È necessario aggiungere due `binding` elementi per aprire la porta 49393 al traffico esterno e l'emulatore di Android. L'associazione utilizza una `[IP address]:[port]:[hostname]` formato che specifica come IIS Express risponderà alle richieste. Le richieste esterne avranno nomi host che deve essere specificato come un `binding`. Aggiungere il seguente codice XML per il `bindings` elemento, sostituendo l'indirizzo IP con il proprio indirizzo IP:
+    Sarà necessario aggiungere due `binding` elementi per aprire la porta 49393 al traffico esterno e l'emulatore Android. Il binding utilizza un `[IP address]:[port]:[hostname]` formato che specifica il modo in cui IIS Express risponderà alle richieste. Le richieste esterne avranno nomi host che devono essere specificati come `binding`. Aggiungere il codice XML seguente all' `bindings` elemento, sostituendo l'indirizzo IP con il proprio indirizzo IP:
 
     ```xml
     <binding protocol="http" bindingInformation="*:49393:192.168.1.143" />
     <binding protocol="http" bindingInformation="*:49393:127.0.0.1" />
     ```
 
-    Dopo le modifiche di `bindings` elemento dovrebbe essere simile al seguente:
+    Una volta apportate le modifiche, l' `bindings` elemento dovrebbe essere simile al seguente:
 
     ```xml
     <site name="TodoWCFService" id="2">
@@ -272,19 +272,19 @@ Per impostazione predefinita, IIS Express risponderà solo alle richieste di `lo
     ```
 
     >[!IMPORTANT]
-    >Per impostazione predefinita, IIS Express non accetterà le connessioni provenienti da origini esterne per motivi di sicurezza. Per abilitare le connessioni da dispositivi remoti è necessario eseguire IIS Express con autorizzazioni amministrative. Il modo più semplice per eseguire questa operazione consiste nell'eseguire Visual Studio 2017 con autorizzazioni amministrative. Si avvierà IIS Express con autorizzazioni amministrative durante l'esecuzione di TodoWCFService.
+    >Per impostazione predefinita, IIS Express non accetterà connessioni da origini esterne per motivi di sicurezza. Per abilitare le connessioni da dispositivi remoti, è necessario eseguire IIS Express con autorizzazioni amministrative. Il modo più semplice per eseguire questa operazione consiste nell'eseguire Visual Studio 2017 con autorizzazioni amministrative. Verrà avviata IIS Express con autorizzazioni amministrative quando si esegue TodoWCFService.
 
-    Con la procedura completa, dovrebbe essere possibile eseguire il TodoWCFService e connettersi da altri dispositivi sulla subnet. È possibile verificarlo eseguendo l'applicazione e che visitano `http://localhost:49393/TodoService.svc`. Se si verifica una **Bad Request** errore durante la visita dell'URL, il `bindings` potrebbe non essere corretto nella configurazione di IIS Express (la richiesta sta per raggiungere IIS Express ma è stata rifiutata). Se si verifica un errore diverso, che è possibile che l'applicazione non è in esecuzione o il firewall sia configurato in modo non corretto.
+    Una volta completati questi passaggi, dovrebbe essere possibile eseguire TodoWCFService e connettersi da altri dispositivi nella subnet. Per eseguire questa verifica, è possibile eseguire l'applicazione `http://localhost:49393/TodoService.svc`e visitare. Se si verifica un errore di **richiesta non valida** quando si visita tale `bindings` URL, è possibile che non sia corretto nella configurazione IIS Express (la richiesta sta raggiungendo IIS Express ma verrà rifiutata). Se si riceve un errore diverso, è possibile che l'applicazione non sia in esecuzione o che il firewall non sia configurato correttamente.
 
-    Per consentire a IIS Express mantenere in esecuzione e la gestione del servizio, disattivare la **modifica e continuazione** opzione **proprietà progetto > Web > debugger**.
+    Per consentire a IIS Express di continuare a eseguire e servire il servizio, disattivare l'opzione **modifica e continuazione** nelle **proprietà del progetto > debugger > Web**.
 
-1. **Personalizzare l'endpoint di dispositivi usano per accedere al servizio**. Questo passaggio prevede la configurazione dell'applicazione client in esecuzione in un dispositivo fisico o emulato, per accedere al servizio WCF.
+1. **Personalizzare i dispositivi endpoint da usare per accedere al servizio**. Questo passaggio prevede la configurazione dell'applicazione client, in esecuzione su un dispositivo fisico o emulato, per accedere al servizio WCF.
 
-    L'emulatore di Android Usa un proxy interno che impedisce l'accesso diretto del computer host dell'emulatore `localhost` indirizzo. Al contrario, l'indirizzo `10.0.2.2` nell'emulatore viene indirizzato a `localhost` nel computer host tramite un proxy interno. Queste richieste trasmesse tramite proxy avrà `127.0.0.1` come il nome host nell'intestazione della richiesta, che è il motivo per cui è stato creato il binding IIS Express per il nome host nei passaggi precedenti.
+    L'emulatore Android usa un proxy interno che impedisce all'emulatore di accedere direttamente all' `localhost` indirizzo del computer host. Al contrario, l' `10.0.2.2` indirizzo nell'emulatore viene instradato a `localhost` nel computer host tramite un proxy interno. Queste richieste con proxy avranno `127.0.0.1` come nome host nell'intestazione della richiesta, motivo per cui è stato creato il binding IIS Express per questo nome host nei passaggi precedenti.
 
-    IOS simulatore viene eseguito su un Mac build host, anche se si usa la [iOS remoto simulatore per Windows](~/tools/ios-simulator/index.md). Le richieste di rete dal simulatore saranno necessario l'indirizzo IP workstation sulla rete come il nome host locale (in questo esempio ha `192.168.1.143`, ma l'indirizzo IP effettivo sarà probabilmente diverso). Ecco perché il binding IIS Express per il nome host è stato creato nei passaggi precedenti.
+    Il simulatore iOS viene eseguito in un host di compilazione Mac, anche se si usa il [simulatore iOS remoto per Windows](~/tools/ios-simulator/index.md). Le richieste di rete del simulatore avranno l'IP della workstation nella rete locale come nome host (in questo esempio è `192.168.1.143`, ma l'indirizzo IP effettivo sarà probabilmente diverso). Questo è il motivo per cui è stata creata la IIS Express binding per questo nome host nei passaggi precedenti.
 
-    Verificare che il `SoapUrl` proprietà nel **Constants.cs** file nel progetto TodoWCF (portabile) hanno valori corretti per la rete:
+    Verificare che `SoapUrl` la proprietà nel file **Constants.cs** nel progetto TodoWCF (Portable) includa valori corretti per la rete:
 
     ```csharp
     public static string SoapUrl
@@ -307,10 +307,10 @@ Per impostazione predefinita, IIS Express risponderà solo alle richieste di `lo
     }
     ```
 
-    Dopo aver configurato il **Constants.cs** con gli endpoint appropriati, deve essere in grado di connettersi al TodoWCFService in esecuzione sulla workstation di Windows 10 da dispositivi fisici o virtuali.
+    Dopo aver configurato il **Constants.cs** con gli endpoint appropriati, dovrebbe essere possibile connettersi al TodoWCFService in esecuzione nella workstation Windows 10 da dispositivi fisici o virtuali.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [TodoWCF (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
-- [Procedura: Creare un Client Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [Strumento ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [TodoWCF (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [Procedura: Creare un client di Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [ServiceModel Metadata Utility Tool (Svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

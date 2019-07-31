@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
-ms.openlocfilehash: a2af40d7af5cac39cc92c8e2bc88b5fbcf81291e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ce2f62869057fc83b04b58af37d6ffffd5ad7fb8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510050"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646481"
 ---
 # <a name="using-cursoradapters-with-xamarinandroid"></a>Uso di CursorAdapter con Novell. Android
 
@@ -56,7 +56,7 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 Verrà `VegetableDatabase` creata un'istanza della classe `OnCreate` nel metodo dell' `HomeScreen` attività. La `SQLiteOpenHelper` classe base gestisce la configurazione del file di database e garantisce che SQL nel relativo `OnCreate` metodo venga eseguito una sola volta. Questa classe viene utilizzata nei due esempi seguenti per `SimpleCursorAdapter` e. `CursorAdapter`
 
-Per  `_id` ilfunzionamentodellaquerydelcursoreènecessariochesiapresenteunacolonnaditipo`CursorAdapter` Integer. Se la tabella sottostante non dispone di una colonna integer denominata `_id` , utilizzare un alias di colonna per un altro Integer univoco `RawQuery` nell'oggetto che costituisce il cursore. Per ulteriori informazioni, vedere la [documentazione di Android](xref:Android.Widget.CursorAdapter) .
+Per `_id` ilfunzionamentodellaquerydelcursoreènecessariochesiapresenteunacolonnaditipo`CursorAdapter` Integer. Se la tabella sottostante non dispone di una colonna integer denominata `_id` , utilizzare un alias di colonna per un altro Integer univoco `RawQuery` nell'oggetto che costituisce il cursore. Per ulteriori informazioni, vedere la [documentazione di Android](xref:Android.Widget.CursorAdapter) .
 
 
 ### <a name="creating-the-cursor"></a>Creazione del cursore
@@ -173,5 +173,5 @@ Il `OnDestroy` metodo contiene la `StopManagingCursor` chiamata al metodo descri
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SimpleCursorTableAdapter (esempio)](https://developer.xamarin.com/samples/monodroid/SimpleCursorTableAdapter/)
-- [CursorTableAdapter (esempio)](https://developer.xamarin.com/samples/monodroid/CursorTableAdapter/)
+- [SimpleCursorTableAdapter (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/simplecursortableadapter)
+- [CursorTableAdapter (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/cursortableadapter)

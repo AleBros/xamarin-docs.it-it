@@ -1,68 +1,68 @@
 ---
-title: Acquisto di prodotti Non di consumo in xamarin. IOS
-description: Questo documento descrive i prodotti non di consumo in xamarin. IOS, ovvero funzionalità acquistate da un utente che rimangono disponibili per un periodo illimitato, indipendentemente dal dispositivo.
+title: Acquisto di prodotti non utilizzabili in Novell. iOS
+description: Questo documento descrive i prodotti non utilizzabili in Novell. iOS, che sono funzionalità acquistate da un utente che rimane disponibile per un periodo illimitato, indipendentemente dal dispositivo.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 060403baf8ac28b9b160632a01471b9828735069
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 99723c390b217600e6aaea570195cf21b177abf0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61403206"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648160"
 ---
-# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti Non di consumo in xamarin. IOS
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti non utilizzabili in Novell. iOS
 
-I prodotti non riproducibile 'proprietà' da parte del cliente. L'aspettativa è che sono sempre avranno accesso a essi, anche se il dispositivo viene smarrito o rubato o si acquista uno nuovo. Sono utili per la documentazione, problemi rivista, livelli di gioco, i filtri di foto, '-le funzionalità pro' e così via. Una volta che un utente ha acquistato un prodotto non di consumo, hanno mai pagarlo nuovamente. Se il codice accidentalmente permetta di prova, StoreKit mostrerà un messaggio in cui si è già stato acquistato.
+I prodotti non consumabili sono di proprietà del cliente. Si prevede che l'utente potrà sempre accedervi, anche se il dispositivo viene smarrito o rubato o se ne acquista uno nuovo. Sono utili per libri, problemi di riviste, livelli di gioco, filtri foto, funzionalità Pro e così via. Una volta che un utente ha acquistato un prodotto non utilizzabile, non è mai necessario pagarlo di nuovo. Se il codice consente di provare accidentalmente, StoreKit visualizzerà un messaggio che indica che è già stato acquistato.
 
-## <a name="non-consumable-products-sample"></a>Esempio prodotti non di consumo
+## <a name="non-consumable-products-sample"></a>Esempio di prodotti non utilizzabili
 
-Il [codice InAppPurchaseSample](https://developer.xamarin.com/samples/monotouch/StoreKit/) contiene un progetto chiamato *NonConsumables*. Nell'esempio di codice viene illustrato come implementare non di consumo prodotti con foto viene applicato il filtro come esempio. Dopo aver acquistato un filtro è possibile applicarlo alla foto ripetutamente. È mai necessario acquistarla nuovamente.   
+Il [codice InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un progetto denominatonon consumabile. Nell'esempio di codice viene illustrato come implementare prodotti non utilizzabili utilizzando come esempio i filtri foto. Una volta acquistato un filtro, è possibile applicarlo alla foto più volte. Non è mai necessario riacquistarlo.   
    
    
    
- Il processo di acquisto viene visualizzato in questa serie di schermate: il **acquistare** pulsante diventa l'attivazione delle funzionalità:   
+ Il processo di acquisto è illustrato in questa serie di schermate: il pulsante **Acquista** diventa il pulsante di attivazione della funzionalità:   
    
    
    
- [![](purchasing-non-consumable-products-images/image34.png "Il processo di acquisto viene visualizzato in questa serie di schermate")](purchasing-non-consumable-products-images/image34.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image34.png "Il processo di acquisto è illustrato in questa serie di schermate")](purchasing-non-consumable-products-images/image34.png#lightbox)   
    
    
    
- Il processo di acquisto è lo stesso come prodotto utilizzabile; la differenza principale è in modalità di rilevamento l'acquisto nel codice dell'applicazione. In questo esempio che il pulsante di acquisto è solo disponibile se non è già stato acquistato il prodotto, in caso contrario, il pulsante Attiva la funzionalità stessa.   
+ Il processo di acquisto è identico a quello di un prodotto utilizzabile; la differenza principale consiste nel modo in cui viene tenuta traccia dell'acquisto nel codice dell'applicazione. In questo esempio il pulsante Acquista è disponibile solo se il prodotto non è già stato acquistato. in caso contrario, il pulsante attiva la funzionalità stessa.   
    
    
    
 
-Il diagramma seguente mostra le interazioni tra classi e il server di App Store per eseguire un acquisto di prodotti non di consumo:   
+Il diagramma seguente illustra le interazioni tra le classi e il server dell'app Store per eseguire un acquisto di prodotto non utilizzabile:   
    
    
    
- [![](purchasing-non-consumable-products-images/image35.png "Acquistare le interazioni tra classi e il server di App Store per eseguire un prodotto non di consumo")](purchasing-non-consumable-products-images/image35.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image35.png "Interazioni tra le classi e il server dell'app Store per eseguire un acquisto di prodotto non utilizzabile")](purchasing-non-consumable-products-images/image35.png#lightbox)   
    
    
    
- La differenza principale dell'esempio può essere utilizzato è che, dopo aver completato l'acquisto l'interfaccia utente viene aggiornato per evitare l'acquisto di nuovo. In questo esempio, la notifica di una transazione ha esito positivo Aggiorna l'interfaccia utente in modo che il **acquistare** pulsante viene convertito in un pulsante che consente di attivare la funzionalità stessa.
+ La differenza principale rispetto all'esempio utilizzabile è che, una volta completato l'acquisto, l'interfaccia utente viene aggiornata per impedire il nuovo acquisto. In questo esempio, la notifica di una transazione riuscita aggiorna l'interfaccia utente in modo che il pulsante **Acquista** venga convertito in un pulsante che attiva la funzionalità stessa.
 
-## <a name="re-purchasing-non-consumable-products"></a>Nuovo acquisto di prodotti Non di consumo
+## <a name="re-purchasing-non-consumable-products"></a>Riacquisto di prodotti non utilizzabili
 
-Il codice deve essere in genere nascosto o reimpiegare un pulsante di acquisto dopo che il prodotto è stato acquistato, per impedire che l'utente tenta di ripetere l'acquisto del prodotto. L'applicazione di esempio fa modificando il **acquistare** pulsante nel pulsante che consente di attivare il filtro di foto di esempio.   
+Il codice dovrebbe in genere nascondere o riutilizzare un pulsante di acquisto dopo che il prodotto è stato acquistato correttamente, per evitare che l'utente tenti di acquistare di nuovo il prodotto. L'applicazione di esempio esegue questa operazione modificando il pulsante **Acquista** nel pulsante che consente di usare il filtro foto di esempio.   
    
    
    
- Esistono situazioni in cui un'applicazione non è possibile stabilire se è già stato acquistato un prodotto non di consumo:
+ Esistono situazioni in cui un'applicazione non è in grado di stabilire se un prodotto non utilizzabile è già stato acquistato:
 
--  Se un'applicazione viene eliminata e reinstallata in un dispositivo, tutti i record di acquisto non saranno più presenti (a meno che non / fino a quando l'utente esegue un ripristino di backup). 
--  Se l'utente ha l'applicazione installata nei dispositivi due (o più) ed effettui un acquisto in uno dei dispositivi. Gli altri dispositivi continueranno a visualizzare i prodotti disponibili per l'acquisto. 
--  Se un cliente tenta di eseguire nuovamente acquisteranno un prodotto non può essere utilizzato in questi casi, l'App Store verrà usata per soddisfare il prodotto nuovamente senza alcun costo aggiuntivo. L'interfaccia utente verrà inizialmente visualizzato per eseguire un acquisto (ad esempio, viene visualizzato un avviso di conferma e verrà richiesto l'ID Apple), tuttavia l'utente visualizzerà quindi un messaggio che li informa che il prodotto è già stato acquistato.  
+-  Se un'applicazione viene eliminata e reinstallata di nuovo in un dispositivo, tutti i record di acquisto saranno finiti, a meno che l'utente non effettui un ripristino del backup. 
+-  Se l'utente ha installato l'applicazione in due o più dispositivi ed effettua un acquisto in uno dei dispositivi. Gli altri dispositivi continueranno a visualizzare il prodotto disponibile per l'acquisto. 
+-  Se un cliente tenta di riacquistare un prodotto non utilizzabile in queste situazioni, l'App Store soddisferà di nuovo il prodotto senza alcun addebito. L'interfaccia utente apparirà inizialmente per eseguire un acquisto. ad esempio, viene visualizzato un avviso di conferma e l'ID Apple sarà obbligatorio. Tuttavia, l'utente visualizzerà un messaggio che informa che il prodotto è già stato acquistato.  
    
    
    
- Il percorso del codice in questo scenario è esattamente lo stesso come un acquisto regolare, le uniche differenze sono:
+ Il percorso del codice in questo scenario è esattamente identico a quello di un acquisto regolare, ma le uniche differenze sono:
 
--  L'utente non ricevono un addebito anche in questo caso per il prodotto.
--  Il `SKPaymentTransaction` oggetto passato all'applicazione avrà un `OriginalTransaction` proprietà che fa riferimento alla transazione che è stata generata quando è stato inizialmente acquistato il prodotto. 
--  Le applicazioni che vendono prodotti di consumo Non devono implementare anche di StoreKit **ripristinare** funzionalità per consentire agli utenti di recuperare gli acquisti di esistenti. 
+-  L'utente non viene addebitato nuovamente per il prodotto.
+-  L' `SKPaymentTransaction` oggetto passato all'applicazione avrà una `OriginalTransaction` proprietà che fa riferimento alla transazione generata quando il prodotto è stato inizialmente acquistato. 
+-  Le applicazioni che vendono prodotti non utilizzabili devono implementare anche la funzionalità di **ripristino** di StoreKit per consentire agli utenti di recuperare gli acquisti esistenti. 

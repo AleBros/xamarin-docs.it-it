@@ -1,24 +1,24 @@
 ---
-title: Visualizzare i popup
-description: "Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questo articolo viene illustrato come utilizzare il foglio di avviso e l'azione API per visualizzare le finestre di dialogo che chiede all'utente semplici domande e guidano gli utenti tramite le attività."
+title: Visualizza popup
+description: "Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questo articolo illustra l'uso delle API di avviso e foglio di azione per visualizzare le finestre di dialogo che consentono agli utenti di semplificare le domande e guidare gli utenti attraverso le attività."
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 58c98aefdf87bcd1ca819de96f67c66646c1723d
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 3b6b2ea2d497c9fdce2c323c7f7a793a4186aa4f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182303"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656102"
 ---
-# <a name="display-pop-ups"></a>Visualizzare i popup
+# <a name="display-pop-ups"></a>Visualizza popup
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-_Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questo articolo viene illustrato come utilizzare il foglio di avviso e l'azione API per visualizzare le finestre di dialogo che chiede all'utente semplici domande e guidano gli utenti tramite le attività._
+_Xamarin.Forms offre due elementi dell'interfaccia utente di tipo popup: un avviso e una finestra delle azioni. Questo articolo illustra l'uso delle API di avviso e foglio di azione per visualizzare le finestre di dialogo che consentono agli utenti di semplificare le domande e guidare gli utenti attraverso le attività._
 
 Visualizzare un avviso o rivolgere una domanda a un utente perché prenda una decisione è un'attività comune dell'interfaccia utente. In Xamarin.Forms sono disponibili due metodi nella classe [`Page`](xref:Xamarin.Forms.Page) che consentono di interagire con l'utente usando un popup: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) e [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). Il rendering di questi metodi viene eseguito con i controlli nativi di ogni piattaforma.
 
@@ -46,7 +46,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [![DisplayAlert](pop-ups-images/alert2-sml.png "Finestra di avviso con due pulsanti")](pop-ups-images/alert2.png#lightbox "Finestra di avviso con due pulsanti")
 
-## <a name="guide-users-through-tasks"></a>Guida agli utenti tramite le attività
+## <a name="guide-users-through-tasks"></a>Guida per gli utenti attraverso le attività
 
 [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) è un elemento comune dell'interfaccia utente in iOS. Il metodo [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) di Xamarin.Forms consente di includere questo controllo nelle app multipiattaforma, eseguendo il rendering delle alternative native in Android e nella piattaforma UWP.
 
@@ -76,4 +76,4 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di popup](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+- [Esempi di popup](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

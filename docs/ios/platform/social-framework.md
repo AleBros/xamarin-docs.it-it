@@ -1,51 +1,51 @@
 ---
-title: Framework basati su social network in xamarin. IOS
-description: Il Framework basati su social network fornisce un'API unificata per l'interazione con i social network, tra cui Facebook e Twitter, nonché SinaWeibo per gli utenti in Cina.
+title: Framework di social networking in Novell. iOS
+description: Il Framework di social networking fornisce un'API unificata per interagire con i social network, inclusi Twitter e Facebook, oltre a SinaWeibo per gli utenti in Cina.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 4548f74495ff7ed8ef07d31cdb3f1370c5275dd4
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 715fd408cc05671beba0277a690585fdbb558c7e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827889"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654023"
 ---
-# <a name="social-framework-in-xamarinios"></a>Framework basati su social network in xamarin. IOS
+# <a name="social-framework-in-xamarinios"></a>Framework di social networking in Novell. iOS
 
-_Il Framework basati su social network fornisce un'API unificata per l'interazione con i social network, tra cui Facebook e Twitter, nonché SinaWeibo per gli utenti in Cina._
+_Il Framework di social networking fornisce un'API unificata per interagire con i social network, inclusi Twitter e Facebook, oltre a SinaWeibo per gli utenti in Cina._
 
-Usando il Framework basati su social network consente alle applicazioni di interagire con i social network da una singola API senza dover gestire l'autenticazione. Include un sistema fornito controller di visualizzazione per la composizione di post, nonché un'astrazione che consente l'utilizzo di API di ogni rete basati su social network su HTTP.
+L'uso del Framework di social networking consente alle applicazioni di interagire con i social network da un'unica API senza dover gestire l'autenticazione. Include un controller di visualizzazione fornito dal sistema per comporre post, oltre a un'astrazione che consente l'utilizzo dell'API di ogni social network tramite HTTP.
 
 > [!IMPORTANT]
-> Per un'API multipiattaforma per connettersi a diversi social network, vedere la [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) componente in Store il componente Xamarin.
+> Per la connessione di un'API multipiattaforma a diversi social network, vedere il componente [Novell. Social](http://components.xamarin.com/view/xamarin.social/) nell'archivio componenti di Novell.
 
-## <a name="connecting-to-twitter"></a>La connessione a Twitter
+## <a name="connecting-to-twitter"></a>Connessione a Twitter
 
-### <a name="twitter-account-settings"></a>Impostazioni dell'Account Twitter
+### <a name="twitter-account-settings"></a>Impostazioni dell'account Twitter
 
-Per connettersi a Twitter usando il Framework basati su social network, un account può essere configurato nelle impostazioni del dispositivo come illustrato di seguito:
+Per connettersi a Twitter usando il Framework di social networking, è necessario configurare un account nelle impostazioni del dispositivo, come illustrato di seguito:
 
- [![](social-framework-images/twitter01.png "Impostazioni dell'Account Twitter")](social-framework-images/twitter01.png#lightbox)
+ [![](social-framework-images/twitter01.png "Impostazioni dell'account Twitter")](social-framework-images/twitter01.png#lightbox)
 
-Dopo aver immesso un account ed verificato con Twitter, qualsiasi applicazione nel dispositivo che usa le classi di Framework basati su social network per accedere a Twitter utilizzerà questo account.
+Una volta che un account è stato immesso e verificato con Twitter, qualsiasi applicazione nel dispositivo che usa le classi del Framework di social networking per accedere a Twitter utilizzerà questo account.
 
-### <a name="sending-tweets"></a>L'invio di tweet
+### <a name="sending-tweets"></a>Invio di Tweet
 
-Il Framework basati su social network include un controller denominato `SLComposeViewController` che presenta una vista di sistema fornita per la modifica e inviare un tweet. Lo screenshot seguente mostra un esempio di questa vista:
+Il Framework di social networking include un `SLComposeViewController` controller denominato che presenta una visualizzazione fornita dal sistema per la modifica e l'invio di un tweet. La schermata seguente mostra un esempio di questa visualizzazione:
 
- [![](social-framework-images/twitter02.png "Questo screenshot Mostra un esempio del SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
+ [![](social-framework-images/twitter02.png "Questa schermata mostra un esempio di SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
 
-Usare un `SLComposeViewController` con Twitter, è necessario creare un'istanza del controller tramite la chiamata di `FromService` metodo con `SLServiceType.Twitter` come illustrato di seguito:
+Per usare un `SLComposeViewController` con Twitter, è necessario creare un'istanza del controller chiamando il `FromService` metodo con `SLServiceType.Twitter` come illustrato di seguito:
 
 ```csharp
 var slComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
 ```
 
-Dopo il `SLComposeViewController` istanza viene restituita, può essere utilizzato per presentare un'interfaccia utente di post su Twitter. Tuttavia, la prima cosa da fare è controllare la disponibilità della rete basati su social network, Twitter in questo caso, tramite la chiamata `IsAvailable`:
+Una volta `SLComposeViewController` restituita, l'istanza può essere usata per presentare un'interfaccia utente per pubblicare post su Twitter. Tuttavia, la prima cosa da fare è controllare la disponibilità del social network, in questo caso Twitter, chiamando `IsAvailable`:
 
 ```csharp
 if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
@@ -53,14 +53,14 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController` mai invia un tweet direttamente senza interazione dell'utente. Tuttavia, possono essere inizializzato con i metodi seguenti:
+ `SLComposeViewController`non invia mai direttamente un tweet senza l'intervento dell'utente. Tuttavia, può essere inizializzato con i metodi seguenti:
 
--   `SetInitialText` : Aggiunge il testo iniziale da visualizzare nel tweet. 
--  `AddUrl` : Aggiunge un Url per il tweet.
--  `AddImage` : Aggiunge un'immagine per il tweet.
+-   `SetInitialText`: Aggiunge il testo iniziale da visualizzare nel Tweet. 
+-  `AddUrl`: Aggiunge un URL al tweet.
+-  `AddImage`: Aggiunge un'immagine al tweet.
 
 
-Una volta inizializzato, la chiamata `PresentVIewController` consente di visualizzare la vista creata dal `SLComposeViewController`. L'utente può quindi, facoltativamente, modificare e inviare tweet o annullare l'invio. In entrambi i casi, il controller deve essere chiusa nel `CompletionHandler`, in cui il risultato può anche essere controllato per verificare se il tweet è stato inviato o annullato, come illustrato di seguito:
+Una volta inizializzato `PresentVIewController` , chiamando viene visualizzata la vista `SLComposeViewController`creata da. L'utente può quindi modificare e inviare il tweet, oppure annullarne l'invio. In entrambi i casi, il controller deve essere chiuso nella `CompletionHandler`, dove il risultato può essere controllato anche per verificare se il tweet è stato inviato o annullato, come illustrato di seguito:
 
 ```csharp
 slComposer.CompletionHandler += (result) => {
@@ -71,9 +71,9 @@ slComposer.CompletionHandler += (result) => {
 };
 ```
 
-#### <a name="tweet-example"></a>Esempio di tweet
+#### <a name="tweet-example"></a>Esempio di Tweet
 
-Il codice seguente illustra l'uso di `SLComposeViewController` per offrire una visualizzazione consente di inviare un tweet:
+Il codice seguente illustra l'uso `SLComposeViewController` di per presentare una visualizzazione usata per inviare un tweet:
 
 ```csharp
 using System;
@@ -136,11 +136,11 @@ namespace SocialFrameworkDemo
 }
 ```
 
-### <a name="calling-twitter-api"></a>Chiamata API di Twitter
+### <a name="calling-twitter-api"></a>Chiamata all'API Twitter
 
-Il Framework basati su social network include anche il supporto per la creazione di richieste HTTP ai social network. Incapsula la richiesta in un `SLRequest` classe utilizzato per API della particolare social network di destinazione.
+Il Framework sociale include anche il supporto per l'esecuzione di richieste HTTP ai social network. Incapsula la richiesta in una `SLRequest` classe usata per la destinazione dell'API del social network specifico.
 
-Ad esempio, il codice seguente esegue una richiesta a Twitter per ottenere la sequenza temporale pubblica (espandendo il codice sopra riportato):
+Il codice seguente, ad esempio, effettua una richiesta a Twitter per ottenere la sequenza temporale pubblica (espandendo il codice riportato sopra):
 
 ```csharp
 using Accounts;
@@ -220,14 +220,14 @@ partial void RequestTwitterTimeline_TouchUpInside (UIButton sender)
 #endregion
 ```
 
-Esaminiamo questo codice in modo dettagliato. In primo luogo, ottiene l'accesso a Store l'Account e ottiene il tipo di un account Twitter:
+Esaminiamo il codice in dettaglio. In primo luogo, accede all'archivio account e ottiene il tipo di un account Twitter:
 
 ```csharp
 var accountStore = new ACAccountStore ();
 var accountType = accountStore.FindAccountType (ACAccountType.Twitter);
 ```
 
-Successivamente, chiede all'utente se l'app può avere accesso all'account Twitter e, se l'accesso viene concesso l'account viene caricato in memoria e l'interfaccia utente aggiornata:
+Quindi chiede all'utente se l'app può accedere al proprio account Twitter e, se l'accesso viene concesso, l'account viene caricato in memoria e l'interfaccia utente viene aggiornata:
 
 ```csharp
 // Request access to Twitter account
@@ -244,7 +244,7 @@ accountStore.RequestAccess (accountType, (granted, error) => {
 });
 ```
 
-Quando l'utente richiede i dati della sequenza temporale (toccando un pulsante nell'interfaccia utente), l'app forms prima di tutto una richiesta per accedere ai dati da Twitter:
+Quando l'utente richiede i dati della sequenza temporale (toccando un pulsante nell'interfaccia utente), l'app crea prima di tutto una richiesta di accesso ai dati da Twitter:
 
 ```csharp
 // Initialize request
@@ -252,7 +252,7 @@ var parameters = new NSDictionary ();
 var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10");
 var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 ```
-In questo esempio limita i risultati restituiti per le ultime dieci voci includendo `?count=10` nell'URL. Infine, associa la richiesta per l'account Twitter (che è stato caricato in precedenza) ed esegue la chiamata a Twitter per recuperare i dati:
+Questo esempio limita i risultati restituiti alle ultime dieci voci includendo `?count=10` nell'URL. Infine, collega la richiesta all'account Twitter (caricato in precedenza) ed esegue la chiamata a Twitter per recuperare i dati:
 
 ```csharp
 // Request data
@@ -281,27 +281,27 @@ request.PerformRequest ((data, response, error) => {
 });
 ```
 
-Se i dati sono stati caricati correttamente, verranno visualizzati i dati JSON non elaborati (ad esempio l'output di esempio riportato di seguito):
+Se i dati sono stati caricati correttamente, verranno visualizzati i dati JSON non elaborati, come nell'esempio di output seguente:
 
-[![](social-framework-images/twitter03.png "Un esempio di visualizzazione dei dati JSON non elaborato")](social-framework-images/twitter03.png#lightbox)
+[![](social-framework-images/twitter03.png "Esempio di visualizzazione dei dati JSON non elaborati")](social-framework-images/twitter03.png#lightbox)
 
-In un'app reale, i risultati JSON è stato possibile analizzare quindi come normale e i risultati presentati all'utente. Visualizzare [servizi Web di introduzione](~/cross-platform/data-cloud/web-services/index.md) per informazioni su come analizzare JSON.
+In un'app reale, i risultati JSON possono essere analizzati normalmente e i risultati presentati all'utente. Per informazioni su come analizzare JSON, vedere [Introduzione ai servizi Web](~/cross-platform/data-cloud/web-services/index.md) .
 
-## <a name="connecting-to-facebook"></a>La connessione a Facebook
+## <a name="connecting-to-facebook"></a>Connessione a Facebook
 
-### <a name="facebook-account-settings"></a>Impostazioni dell'Account di Facebook
+### <a name="facebook-account-settings"></a>Impostazioni account Facebook
 
-La connessione a Facebook con il Framework basati su social network è quasi identica al processo usato per Twitter illustrato in precedenza. Un account utente Facebook deve essere configurato nelle impostazioni del dispositivo come illustrato di seguito:
+La connessione a Facebook con il Framework di social networking è quasi identica al processo usato per Twitter illustrato in precedenza. È necessario configurare un account utente di Facebook nelle impostazioni del dispositivo, come illustrato di seguito:
 
-[![](social-framework-images/facebook01.png "Impostazioni dell'Account di Facebook")](social-framework-images/facebook01.png#lightbox)
+[![](social-framework-images/facebook01.png "Impostazioni account Facebook")](social-framework-images/facebook01.png#lightbox)
 
-Una volta configurato, qualsiasi applicazione nel dispositivo che usa il Framework basati su social network utilizzerà questo account per connettersi a Facebook.
+Una volta configurata, tutte le applicazioni nel dispositivo che usano il Framework di social networking useranno questo account per connettersi a Facebook.
 
-### <a name="posting-to-facebook"></a>La registrazione a Facebook
+### <a name="posting-to-facebook"></a>Pubblicazione su Facebook
 
-Poiché il Framework basati su social network è un'API unificata progettata per accedere a più reti basati su social network, il codice rimane pressoché identico, indipendentemente dal social network in uso.
+Poiché il Framework social è un'API unificata progettata per accedere a più social network, il codice rimane quasi identico, indipendentemente dal social network usato.
 
-Ad esempio, il `SLComposeViewController` può essere utilizzato esattamente come nell'esempio di Twitter illustrato in precedenza, l'unica differenza sta passando alle opzioni e impostazioni specifiche di Facebook. Ad esempio:
+Ad esempio, `SLComposeViewController` può essere usato esattamente come nell'esempio di Twitter illustrato in precedenza, l'unico diverso è passare alle impostazioni e alle opzioni specifiche di Facebook. Ad esempio:
 
 ```csharp
 using System;
@@ -365,13 +365,13 @@ namespace SocialFrameworkDemo
 }
 ```
 
-Se usato con Facebook, il `SLComposeViewController` apre una visualizzazione che è quasi identica a quello di Twitter, che illustra **Facebook** come il titolo in questo caso:
+Se usato con Facebook, `SLComposeViewController` Visualizza una visualizzazione che sembra quasi identica all'esempio di Twitter, mostrando **Facebook** come titolo in questo caso:
 
-[![](social-framework-images/facebook02.png "La visualizzazione SLComposeViewController")](social-framework-images/facebook02.png#lightbox)
+[![](social-framework-images/facebook02.png "Visualizzazione SLComposeViewController")](social-framework-images/facebook02.png#lightbox)
 
-### <a name="calling-facebook-graph-api"></a>Chiamata API Graph di Facebook
+### <a name="calling-facebook-graph-api"></a>Chiamata di Facebook API Graph
 
-Simile a Twitter, il Framework basati su social network di esempio `SLRequest` oggetto può essere utilizzato con l'API graph di Facebook. Ad esempio, il codice seguente restituisce informazioni dall'API graph relative all'account Xamarin (espandendo il codice sopra riportato):
+Analogamente all'esempio di Twitter, l' `SLRequest` oggetto del Framework di social networking può essere usato con l'API Graph di Facebook. Il codice seguente, ad esempio, restituisce informazioni dall'API Graph sull'account Novell (espandendo il codice riportato sopra):
 
 ```csharp
 using Accounts;
@@ -454,7 +454,7 @@ partial void RequestFacebookTimeline_TouchUpInside (UIButton sender)
 #endregion
 ```
 
-L'unica vera differenza tra questo codice e la versione di Twitter presentata nell'esempio precedente, è il requisito di Facebook per ottenere un sviluppatore/App ID specifico (che è possibile generare dal portale per sviluppatori di Facebook) che deve essere impostato come opzione quando si effettua la richiesta:
+L'unica differenza reale tra questo codice e la versione di Twitter illustrata in precedenza è la necessità di Facebook di ottenere un ID specifico per sviluppatori/app (che è possibile generare dal portale per sviluppatori di Facebook) che deve essere impostato come opzione quando si effettua la richiesta:
 
 ```csharp
 var options = new AccountStoreOptions ();
@@ -467,14 +467,14 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 });
 ```
 
-Impossibile impostare questa opzione (o utilizzando una chiave non valida) comporterà un errore o senza dati restituiti.
+Se non si imposta questa opzione (o si utilizza una chiave non valida), verrà generato un errore o non verrà restituito alcun dato.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come usare il Framework basati su social network per interagire con Twitter e Facebook. È stato illustrato come configurare gli account per ogni rete basati su social network nelle impostazioni del dispositivo. È stato inoltre illustrato come usare il `SLComposeViewController` per offrire una visualizzazione unificata per la registrazione ai social network. Inoltre, ha esaminato il `SLRequest` classe usato per chiamare l'API di ogni rete basati su social network.
+Questo articolo ha illustrato come usare il Framework di social networking per interagire con Twitter e Facebook. Mostra dove configurare gli account per ogni social network nelle impostazioni del dispositivo. È stato inoltre illustrato come utilizzare `SLComposeViewController` per presentare una visualizzazione unificata per la pubblicazione nei social network. È stata inoltre esaminata `SLRequest` la classe utilizzata per chiamare l'API di ogni social network.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [SocialFrameworkDemo (esempio)](https://developer.xamarin.com/samples/monotouch/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/socialframeworkdemo)
 - [Introduzione ai servizi Web](~/cross-platform/data-cloud/web-services/index.md)

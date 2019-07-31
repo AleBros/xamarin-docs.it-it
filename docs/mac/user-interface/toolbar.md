@@ -1,267 +1,267 @@
 ---
-title: Barre degli strumenti di xamarin. Mac
-description: Questo articolo descrive l'utilizzo con le barre degli strumenti in un'applicazione xamarin. Mac. Viene descritto come creare e mantenere le barre degli strumenti in Xcode e Interface Builder, esporre al codice e l'utilizzo a livello di codice.
+title: Barre degli strumenti in Novell. Mac
+description: Questo articolo descrive l'uso delle barre degli strumenti in un'applicazione Novell. Mac. Viene illustrata la creazione e la gestione delle barre degli strumenti in Xcode e Interface Builder, l'esposizione al codice e l'utilizzo a livello di codice.
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6cb17ae0f60390564a8aa6bdb64ea612aae51b55
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b2008b93f208d73af06c12fa493232fd56ddd64f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61295322"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644741"
 ---
-# <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti di xamarin. Mac
+# <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti in Novell. Mac
 
-_Questo articolo descrive l'utilizzo con le barre degli strumenti in un'applicazione xamarin. Mac. Viene descritto come creare e mantenere le barre degli strumenti in Xcode e Interface Builder, esporre al codice e l'utilizzo a livello di codice._
+_Questo articolo descrive l'uso delle barre degli strumenti in un'applicazione Novell. Mac. Viene illustrata la creazione e la gestione delle barre degli strumenti in Xcode e Interface Builder, l'esposizione al codice e l'utilizzo a livello di codice._
 
-Gli sviluppatori di xamarin. Mac che collabora con Visual Studio per Mac hanno accesso per gli stessi controlli dell'interfaccia utente disponibili per gli sviluppatori macOS che lavorano con Xcode, tra cui il controllo della barra degli strumenti. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Interface Builder di Xcode per creare e gestire gli elementi della barra degli strumenti. Questi elementi della barra degli strumenti possono anche essere creati in c#.
+Gli sviluppatori Novell. Mac che lavorano con Visual Studio per Mac hanno accesso agli stessi controlli dell'interfaccia utente disponibili per gli sviluppatori macOS che lavorano con Xcode, incluso il controllo Toolbar. Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare Interface Builder di Xcode per creare e gestire gli elementi della barra degli strumenti. È anche possibile creare questi elementi della barra C#degli strumenti in.
 
-Barre degli strumenti in macOS vengono aggiunti alla sezione superiore di una finestra e consentono di accedere facilmente ai comandi correlati alle relative funzionalità. Le barre degli strumenti può essere nascosti, visualizzati o personalizzate dagli utenti di un'applicazione e può presentare gli elementi della barra degli strumenti in vari modi.
+Le barre degli strumenti in macOS vengono aggiunte alla sezione superiore di una finestra e consentono di accedere facilmente ai comandi correlati alle relative funzionalità. Le barre degli strumenti possono essere nascoste, visualizzate o personalizzate dagli utenti di un'applicazione e possono presentare elementi della barra degli strumenti in vari modi.
 
-Questo articolo illustra le nozioni di base dell'utilizzo di barre degli strumenti e gli elementi della barra degli strumenti in un'applicazione xamarin. Mac. 
+Questo articolo illustra le nozioni di base sull'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Novell. Mac. 
 
-Prima di continuare, leggere il [Hello, Mac](~/mac/get-started/hello-mac.md) articolo, in particolare il [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) sezioni, ovvero come illustra i concetti chiave e le tecniche che verranno usate in questa Guida.
+Prima di continuare, leggere l'articolo relativo ad [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) le sezioni relative a Interface Builder, [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti e le tecniche principali che verranno usati in questa guida.
 
-Anche esaminare la [c# esposizione di classi / metodi di Objective-c](~/mac/internals/how-it-works.md) sezione del [meccanismi interni di xamarin. Mac](~/mac/internals/how-it-works.md) documento. Viene spiegato il `Register` e `Export` attributi usati per la connessione di classi c# alle classi di Objective-C.
+Vedere anche la sezione [esporre C# classi/metodi a Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) . Vengono illustrati `Register` gli `Export` attributi e usati per C# connettere le classi alle classi Objective-C.
 
 ## <a name="introduction-to-toolbars"></a>Introduzione alle barre degli strumenti
 
 Qualsiasi finestra in un'applicazione macOS può includere una barra degli strumenti:
 
-![Una finestra di esempio con una barra degli strumenti](toolbar-images/info01.png "una finestra di esempio con una barra degli strumenti")
+![Finestra di esempio con una barra degli strumenti](toolbar-images/info01.png "Finestra di esempio con una barra degli strumenti")
 
-Le barre degli strumenti forniscono un modo semplice per gli utenti dell'applicazione per accedere rapidamente alle importanti o funzionalità comunemente usate. Ad esempio, un'applicazione di modifica del documento potrebbe fornire elementi della barra degli strumenti per impostare il colore del testo, la modifica il tipo di carattere o la stampa del documento corrente.
+Le barre degli strumenti offrono agli utenti dell'applicazione un modo semplice per accedere rapidamente alle funzionalità importanti o usate di frequente. Ad esempio, un'applicazione per la modifica di documenti può fornire elementi della barra degli strumenti per impostare il colore del testo, modificare il tipo di carattere o stampare il documento corrente.
 
 Le barre degli strumenti possono visualizzare gli elementi in tre modi:
 
 1. **Icona e testo** 
 
-     ![Una barra degli strumenti con le icone e testo](toolbar-images/info02.png "una barra degli strumenti con le icone e testo")
+     ![Barra degli strumenti con icone e testo](toolbar-images/info02.png "Barra degli strumenti con icone e testo")
 
-2. **Icona solo** 
+2. **Solo icona** 
 
-     ![Una barra degli strumenti icona sola](toolbar-images/info03.png "un solo sull'icona della barra degli strumenti")
+     ![Barra degli strumenti solo icona](toolbar-images/info03.png "Barra degli strumenti solo icona")
 
 3. **Solo testo** 
 
-     ![Una barra degli strumenti di solo testo](toolbar-images/info04.png "una barra degli strumenti di solo testo")
+     ![Barra degli strumenti solo testo](toolbar-images/info04.png "Barra degli strumenti solo testo")
 
-Passare dalla modalità a altra facendo clic sulla barra degli strumenti e selezionando una modalità di visualizzazione dal menu di scelta rapida:
+Passare da una modalità all'altra facendo clic con il pulsante destro del mouse sulla barra degli strumenti e selezionando una modalità di visualizzazione dal menu contestuale:
 
-![Il menu di scelta rapida per una barra degli strumenti](toolbar-images/info05.png "il menu di scelta rapida per una barra degli strumenti")
+![Menu contestuale per una barra degli strumenti](toolbar-images/info05.png "Menu contestuale per una barra degli strumenti")
 
-Usare lo stesso menu da visualizzare la barra degli strumenti in una dimensione minore:
+Utilizzare lo stesso menu per visualizzare la barra degli strumenti a una dimensione più piccola:
 
-![Una barra degli strumenti con le icone piccole](toolbar-images/info06.png "una barra degli strumenti con le icone piccole")
+![Barra degli strumenti con icone piccole](toolbar-images/info06.png "Barra degli strumenti con icone piccole")
 
-Il menu di scelta consente inoltre di personalizzare la barra degli strumenti:
+Il menu consente inoltre di personalizzare la barra degli strumenti:
 
-![La finestra di dialogo utilizzato per personalizzare una barra degli strumenti](toolbar-images/info07.png "la finestra di dialogo utilizzato per personalizzare una barra degli strumenti")
+![Finestra di dialogo utilizzata per personalizzare una barra degli strumenti](toolbar-images/info07.png "Finestra di dialogo utilizzata per personalizzare una barra degli strumenti")
 
-Quando si configura una barra degli strumenti in Interface Builder di Xcode, uno sviluppatore può fornire elementi della barra degli strumenti aggiuntivi che non fanno parte della configurazione predefinita. Gli utenti dell'applicazione possono quindi personalizzare la barra degli strumenti, aggiunta e rimozione di questi elementi predefiniti in base alle esigenze. Naturalmente, è possibile reimpostare la barra degli strumenti per la configurazione predefinita.
+Quando si configura una barra degli strumenti nel Interface Builder di Xcode, uno sviluppatore può fornire elementi aggiuntivi della barra degli strumenti che non fanno parte della configurazione predefinita. Gli utenti dell'applicazione possono quindi personalizzare la barra degli strumenti, aggiungendo e rimuovendo tali elementi predefiniti, se necessario. Naturalmente, è possibile ripristinare la configurazione predefinita della barra degli strumenti.
 
-Barra degli strumenti si connette automaticamente al **vista** menu che consente agli utenti di nasconderlo, viene visualizzato e personalizzarlo:
+La barra degli strumenti si connette automaticamente al menu **Visualizza** , che consente agli utenti di nasconderlo, visualizzarlo e personalizzarlo:
 
-![Elementi correlati sulla barra degli strumenti nel menu Visualizza](toolbar-images/info08.png "elementi correlati sulla barra degli strumenti nel menu Visualizza")
+![Elementi correlati alla barra degli strumenti nel menu Visualizza](toolbar-images/info08.png "Elementi correlati alla barra degli strumenti nel menu Visualizza")
 
-Vedere le [funzionalità incorporata di Menu](~/mac/user-interface/menu.md) informazioni più dettagliate.
+Per ulteriori informazioni, vedere la documentazione della [funzionalità di menu incorporata](~/mac/user-interface/menu.md) .
 
-Inoltre, se la barra degli strumenti è configurato correttamente in Interface Builder, l'applicazione verrà mantenuto automaticamente le personalizzazioni della barra degli strumenti tra più lanci dell'applicazione.
+Inoltre, se la barra degli strumenti è configurata correttamente in Interface Builder, l'applicazione mantiene automaticamente le personalizzazioni della barra degli strumenti tra più avvii dell'applicazione.
 
-Le sezioni successive di questa guida viene descritto come creare e gestire le barre degli strumenti con Interface Builder di Xcode e come utilizzarle nel codice.
+Nelle sezioni successive di questa guida viene descritto come creare e gestire le barre degli strumenti con Interface Builder di Xcode e come utilizzarle nel codice.
 
-## <a name="setting-a-custom-main-window-controller"></a>L'impostazione di un controller di finestra personalizzati principale
+## <a name="setting-a-custom-main-window-controller"></a>Impostazione di un controller della finestra principale personalizzato
 
-Per esporre gli elementi dell'interfaccia utente al codice c# tramite Outlet e azioni, l'app xamarin. Mac devono utilizzare un controller di finestra personalizzati:
+Per esporre gli elementi dell' C# interfaccia utente al codice tramite Outlet e azioni, l'app Novell. Mac deve usare un controller di finestra personalizzato:
 
-1. Aprire storyboard dell'app in Interface Builder di Xcode.
-2. Selezionare il controller di finestra nella finestra di progettazione.
-3. Passare al **Identity Inspector** e immettere "WindowController" come il **Class Name**: 
+1. Aprire lo storyboard dell'app nella Interface Builder di Xcode.
+2. Selezionare il controller della finestra nell'area di progettazione.
+3. Passare a **Identity Inspector** e immettere "WindowController" come nome della **classe**: 
 
-    [![Impostazione di un nome di classe personalizzata per il controller di finestra](toolbar-images/windowcontroller01.png "impostando un nome di classe personalizzata per il controller di finestra")](toolbar-images/windowcontroller01-large.png#lightbox) 
+    [![Impostazione di un nome di classe personalizzato per il controller della finestra](toolbar-images/windowcontroller01.png "Impostazione di un nome di classe personalizzato per il controller della finestra")](toolbar-images/windowcontroller01-large.png#lightbox) 
 
 4. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
-5. Oggetto **WindowController.cs** file verrà aggiunto al progetto nel **riquadro della soluzione** in Visual Studio per Mac: 
+5. Un file **WindowController.cs** verrà aggiunto al progetto nella **riquadro della soluzione** Visual Studio per Mac: 
 
-    ![Selezione WindowController.cs nel riquadro della soluzione](toolbar-images/windowcontroller02.png "selezionando WindowController.cs nel riquadro della soluzione")
+    ![Selezione di WindowController.cs nel riquadro della soluzione](toolbar-images/windowcontroller02.png "Selezione di WindowController.cs nel riquadro della soluzione")
 
-6. Riaprire lo storyboard di Interface Builder di Xcode.
-7. Il **WindowController.h** file sarà disponibile per l'uso: 
+6. Riaprire lo storyboard nella Interface Builder di Xcode.
+7. Il file **WindowController. h** sarà disponibile per l'uso: 
 
-    [![Il file WindowController.h](toolbar-images/windowcontroller03.png "WindowController.h The file")](toolbar-images/windowcontroller03-large.png#lightbox)
+    [![Il file WindowController. h](toolbar-images/windowcontroller03.png "Il file WindowController. h")](toolbar-images/windowcontroller03-large.png#lightbox)
 
-## <a name="creating-and-maintaining-toolbars-in-xcode"></a>Creare e gestire le barre degli strumenti in Xcode
+## <a name="creating-and-maintaining-toolbars-in-xcode"></a>Creazione e gestione delle barre degli strumenti in Xcode
 
-Le barre degli strumenti vengono create e gestite con Interface Builder di Xcode. Per aggiungere una barra degli strumenti a un'applicazione, modificare uno storyboard principale dell'app (in questo caso **Main. Storyboard**) facendo doppio clic su esso nel **riquadro della soluzione**:
+Le barre degli strumenti vengono create e gestite con la Interface Builder di Xcode. Per aggiungere una barra degli strumenti a un'applicazione, modificare lo storyboard principale dell'app (in questo caso **Main. Storyboard**) facendo doppio clic su di essa nella **riquadro della soluzione**:
 
-![Aprire Main. Storyboard nel riquadro della soluzione](toolbar-images/edit01.png "aprire Main. Storyboard nel riquadro della soluzione")
+![Apertura di Main. Storyboard nel riquadro della soluzione](toolbar-images/edit01.png "Apertura di Main. Storyboard nel riquadro della soluzione")
 
-Nel **Library Inspector**, immettere "strumento" nel **casella di ricerca** per renderne più semplice visualizzare tutti gli elementi disponibile sulla barra degli strumenti:
+In **Library Inspector**immettere "Tool" nella **casella di ricerca** per semplificare la visualizzazione di tutti gli elementi disponibili della barra degli strumenti:
 
-![Il controllo della libreria, filtrati per mostrare gli elementi della barra degli strumenti](toolbar-images/edit02.png "The Library Inspector, filtrati per mostrare gli elementi della barra degli strumenti")
+![Controllo libreria, filtrato per mostrare gli elementi della barra degli strumenti](toolbar-images/edit02.png "Controllo libreria, filtrato per mostrare gli elementi della barra degli strumenti")
 
-Trascinare una barra degli strumenti nella finestra di **Interface Editor**. Con la barra degli strumenti selezionata, configurare il comportamento impostando le proprietà nel **Attributes Inspector**:
+Trascinare una barra degli strumenti sulla finestra dell' **editor di interfaccia**. Con la barra degli strumenti selezionata, configurare il comportamento impostando le proprietà nel **controllo attributi**:
 
-![Attributes Inspector per una barra degli strumenti](toolbar-images/edit04.png "finestra di ispezione degli attributi per una barra degli strumenti")
+![Controllo attributi per una barra degli strumenti](toolbar-images/edit04.png "Controllo attributi per una barra degli strumenti")
 
 Sono disponibili le proprietà seguenti:
 
-1. **Visualizzazione** -controlla se la barra degli strumenti vengono visualizzate le icone, testo o entrambi
-2. **Visibile al momento del lancio** -se selezionato, la barra degli strumenti è visibile per impostazione predefinita.
-3. **Personalizzabile** -se selezionato, gli utenti possono modificare e personalizzare la barra degli strumenti.
-4. **Separatore** -se selezionato, una linea orizzontale sottile separa la barra degli strumenti dal contenuto della finestra.
-5. **Dimensioni** -imposta la dimensione della barra degli strumenti
-6. **Salvataggio automatico** -se selezionato, l'applicazione verrà mantenute le modifiche alla configurazione di un utente della barra degli strumenti tra avvii delle applicazioni.
+1. **Display** : controlla se la barra degli strumenti Visualizza icone, testo o entrambi
+2. **Visibile all'avvio** : se selezionato, la barra degli strumenti è visibile per impostazione predefinita.
+3. **Personalizzabile** : se questa opzione è selezionata, gli utenti possono modificare e personalizzare la barra degli strumenti.
+4. **Separatore** : se questa opzione è selezionata, una linea orizzontale sottile separa la barra degli strumenti dal contenuto della finestra.
+5. **Size** : imposta la dimensione della barra degli strumenti
+6. **Salvataggio automatico** : se questa opzione è selezionata, l'applicazione renderà permanente le modifiche di configurazione della barra degli strumenti dell'utente tra l'avvio dell'applicazione.
 
-Selezionare il **salvataggio automatico** opzione e lasciare tutte le altre proprietà delle impostazioni predefinite. 
+Selezionare l'opzione **salvataggio automatico** e lasciare le impostazioni predefinite per tutte le altre proprietà. 
 
-Dopo aver aperto la barra degli strumenti di **gerarchia delle interfacce**, visualizzare la finestra di dialogo di personalizzazione selezionando un elemento della barra degli strumenti:
+Dopo aver aperto la barra degli strumenti nella **gerarchia dell'interfaccia**, visualizzare la finestra di dialogo di personalizzazione selezionando un elemento della barra degli strumenti:
 
-![Personalizzando la barra degli strumenti](toolbar-images/edit05.png "personalizzando la barra degli strumenti")
+![Personalizzazione della barra degli strumenti](toolbar-images/edit05.png "Personalizzazione della barra degli strumenti")
 
-Utilizzare questa finestra di dialogo per impostare le proprietà per gli elementi che fanno già parte della barra degli strumenti alla barra degli strumenti predefinita per l'applicazione, progettazione e per fornire elementi della barra degli strumenti aggiuntivi per un utente di selezionare quando si personalizza la barra degli strumenti. Per aggiungere elementi alla barra degli strumenti, trascinarli dal **Library Inspector**:
+Utilizzare questa finestra di dialogo per impostare le proprietà per gli elementi che fanno già parte della barra degli strumenti, per progettare la barra degli strumenti predefinita per l'applicazione e per fornire ulteriori elementi della barra degli strumenti che un utente deve selezionare durante la personalizzazione della barra degli strumenti. Per aggiungere elementi alla barra degli strumenti, trascinarli da **controllo libreria**:
 
-![Library Inspector](toolbar-images/edit06.png "Library Inspector")
+![Controllo libreria](toolbar-images/edit06.png "Controllo libreria")
 
-Possono essere aggiunti gli elementi della barra degli strumenti seguenti:
+È possibile aggiungere i seguenti elementi della barra degli strumenti:
 
-- **Immagine della barra degli strumenti** -un elemento della barra degli strumenti con un'immagine personalizzata come icona.
-- **Barra degli strumenti flessibili spazio** -flessibile dello spazio utilizzato per giustificare gli elementi della barra degli strumenti successiva. Ad esempio, uno o più elementi della barra degli strumenti seguita da un elemento della barra degli strumenti flessibili spazio e l'ultimo elemento sul lato destro della barra degli strumenti di aggiunta di un altro elemento della barra degli strumenti.
-- **Lo spazio della barra degli strumenti** -fissa di spazio tra gli elementi nella barra degli strumenti
-- **Separatore della barra degli strumenti** -visibile separatore tra due o più elementi della barra degli strumenti, per il raggruppamento
-- **Personalizzazione della barra degli strumenti** -consente agli utenti di personalizzare la barra degli strumenti
-- **Stampa della barra degli strumenti** -consente agli utenti di stampare il documento aperto
-- **Mostra i colori della barra degli strumenti** -Visualizza la selezione di colori di sistema standard: 
+- **Elemento barra degli strumenti immagine** : una voce della barra degli strumenti con un'immagine personalizzata come icona.
+- **Elemento barra degli strumenti spazio flessibile** : spazio flessibile usato per giustificare gli elementi successivi della barra degli strumenti. Ad esempio, uno o più elementi della barra degli strumenti seguiti da un elemento barra degli strumenti spazio flessibile e un altro elemento della barra degli strumenti aggiungeranno l'ultimo elemento sul lato destro della barra degli strumenti.
+- **Elemento barra degli strumenti spazio** -spazio fisso tra gli elementi sulla barra degli strumenti
+- **Elemento barra degli strumenti separatore** : un separatore visibile tra due o più elementi della barra degli strumenti per il raggruppamento
+- **Personalizza elemento barra degli strumenti** : consente agli utenti di personalizzare la barra degli strumenti
+- **Elemento della barra degli strumenti di stampa** : consente agli utenti di stampare il documento aperto
+- **Mostra elemento della barra degli strumenti colori** -Visualizza la selezione colori del sistema standard: 
 
-     ![La selezione di colori di sistema](toolbar-images/edit07.png "la selezione di colori di sistema")
+     ![Selezione colori di sistema](toolbar-images/edit07.png "Selezione colori di sistema")
 
-- **Mostra barra degli strumenti del tipo di carattere** -consente di visualizzare la finestra di dialogo tipo di carattere di sistema standard: 
+- **Mostra elemento della barra degli strumenti carattere** -Visualizza la finestra di dialogo standard del tipo di carattere: 
 
-     ![Il selettore del tipo di carattere](toolbar-images/edit08.png "il selettore del tipo di carattere")
+     ![Selettore del tipo di carattere](toolbar-images/edit08.png "Selettore del tipo di carattere")
 
 > [!IMPORTANT]
-> Verranno visualizzate in un secondo momento, molti controlli dell'interfaccia utente Cocoa standard, ad esempio i campi di ricerca, controlli segmentati e i dispositivi di scorrimento orizzontale possono anche essere aggiunte a una barra degli strumenti.
+> Come si verificherà in un secondo momento, molti controlli dell'interfaccia utente di Cocoa standard, ad esempio campi di ricerca, controlli segmentati e cursori orizzontali, possono essere aggiunti anche a una barra degli strumenti.
 
 ### <a name="adding-an-item-to-a-toolbar"></a>Aggiunta di un elemento a una barra degli strumenti
 
-Per aggiungere un elemento a una barra degli strumenti, selezionare la barra degli strumenti di **gerarchia delle interfacce** e fare clic su uno dei relativi elementi, causando la finestra di dialogo di personalizzazione da visualizzare. Trascinare quindi un nuovo elemento dal **Library Inspector** per il **consentiti gli elementi della barra degli strumenti** area:
+Per aggiungere un elemento a una barra degli strumenti, selezionare la barra degli strumenti nella **gerarchia dell'interfaccia** e fare clic su uno degli elementi, facendo in modo che venga visualizzata la finestra di dialogo di personalizzazione. Trascinare quindi un nuovo elemento da **controllo libreria** all'area elementi della **barra degli strumenti** consentiti:
 
-![Gli elementi della barra degli strumenti è consentita nella finestra di dialogo di personalizzazione della barra degli strumenti](toolbar-images/add01.png "The consentiti gli elementi della barra della finestra di dialogo di personalizzazione della barra degli strumenti")
+Gli elementi consentiti della ![barra degli strumenti nella finestra di dialogo di personalizzazione] Gli elementi consentiti della (toolbar-images/add01.png "barra degli strumenti nella finestra di dialogo di personalizzazione")
 
-Per assicurarsi che un nuovo elemento fa parte della barra degli strumenti predefinita, trascinarlo in modo che il **elementi della barra degli strumenti predefiniti** area: 
+Per assicurarsi che un nuovo elemento faccia parte della barra degli strumenti predefinita, trascinarlo nell'area **elementi della barra degli strumenti predefiniti** : 
 
-![Riordinare un elemento della barra degli strumenti, trascinare](toolbar-images/add02.png "riordinare un elemento della barra degli strumenti mediante il trascinamento")
+![Riordinamento di un elemento della barra degli strumenti mediante] trascinamento (toolbar-images/add02.png "Riordinamento di un elemento della barra degli strumenti mediante") trascinamento
 
-Per riordinare gli elementi della barra degli strumenti predefinita, è possibile trascinarli a sinistra o destra.
+Per riordinare gli elementi predefiniti della barra degli strumenti, trascinarli a sinistra o a destra.
 
-Successivamente, usare il **Attributes Inspector** per impostare le proprietà predefinite per l'elemento:
+Usare quindi il **controllo attributi** per impostare le proprietà predefinite per l'elemento:
 
-![Personalizzazione di un elemento della barra degli strumenti utilizzando Attributes Inspector](toolbar-images/add03.png "personalizzazione di un elemento della barra degli strumenti utilizzando Attributes Inspector")
+![Personalizzazione di un elemento della barra degli strumenti tramite il controllo attributi](toolbar-images/add03.png "Personalizzazione di un elemento della barra degli strumenti tramite il controllo attributi")
 
 Sono disponibili le proprietà seguenti:
 
-- **Nome immagine** -immagine da usare come icona per l'elemento
-- **Etichetta** -il testo da visualizzare per l'elemento nella barra degli strumenti
-- **Etichetta tavolozza** -il testo da visualizzare per l'elemento nel **consentiti gli elementi della barra degli strumenti** area
-- **Tag** -un identificatore univoco facoltativo che consente di identificare l'elemento nel codice.
-- **Identificatore** -definisce il tipo di elemento della barra degli strumenti. Un valore personalizzato utilizzabile per selezionare un elemento della barra degli strumenti nel codice.
-- **Selezionabile** -se l'opzione è selezionata, l'elemento si comporta come un pulsante di attivazione/disattivazione.
+- **Nome immagine** : immagine da usare come icona per l'elemento
+- **Etichetta** -testo da visualizzare per l'elemento nella barra degli strumenti
+- **Etichetta tavolozza** -testo da visualizzare per l'elemento nell'area **elementi della barra degli strumenti** consentiti
+- **Tag** : identificatore univoco facoltativo che consente di identificare l'elemento nel codice.
+- **Identificatore** : definisce il tipo di elemento della barra degli strumenti. Per selezionare un elemento della barra degli strumenti nel codice, è possibile utilizzare un valore personalizzato.
+- **Selezionabile** : se questa opzione è selezionata, l'elemento fungerà da pulsante di abilitazione/disattivazione.
 
 > [!IMPORTANT]
-> Aggiungere un elemento per il **consentiti gli elementi della barra degli strumenti** area, ma non la barra degli strumenti predefinita per fornire le opzioni di personalizzazione per gli utenti. 
+> Aggiungere un elemento all'area **elementi della barra degli strumenti** consentiti, ma non alla barra degli strumenti predefinita, per fornire opzioni di personalizzazione per gli utenti. 
 
 ### <a name="adding-other-ui-controls-to-a-toolbar"></a>Aggiunta di altri controlli dell'interfaccia utente a una barra degli strumenti
 
-Diversi elementi dell'interfaccia utente di Cocoa, ad esempio cercare i campi e controlli segmentati possono anche essere aggiunti a una barra degli strumenti.
+È anche possibile aggiungere diversi elementi dell'interfaccia utente di Cocoa, ad esempio campi di ricerca e controlli segmentati, a una barra degli strumenti.
 
-A questo scopo, aprire la barra degli strumenti di **gerarchia delle interfacce** e selezionare un elemento della barra degli strumenti per aprire la finestra di dialogo di personalizzazione. Trascinare un **campo di ricerca** dalle **Library Inspector** per il **consentiti gli elementi della barra degli strumenti** area:
+Per provare questa operazione, aprire la barra degli strumenti nella **gerarchia dell'interfaccia** e selezionare una voce della barra degli strumenti per aprire la finestra di dialogo di personalizzazione. Trascinare un **campo di ricerca** dal **controllo libreria** all'area **elementi della barra degli strumenti** consentiti:
 
-![Usando la finestra di dialogo di personalizzazione della barra degli strumenti](toolbar-images/add05.png "usando la finestra di dialogo di personalizzazione della barra degli strumenti")
+![Uso della finestra di dialogo di personalizzazione della barra degli strumenti](toolbar-images/add05.png "Uso della finestra di dialogo di personalizzazione della barra degli strumenti")
 
-A questo punto, usare Interface Builder per configurare il campo di ricerca e lo si espone al codice tramite un'azione o di un outlet.
+Da qui, usare Interface Builder per configurare il campo di ricerca ed esporlo al codice tramite un'azione o un'uscita.
 
-## <a name="built-in-toolbar-item-support"></a>Supporto dell'elemento della barra degli strumenti
+## <a name="built-in-toolbar-item-support"></a>Supporto elementi della barra degli strumenti incorporati
 
-Diversi elementi dell'interfaccia utente Cocoa interagiscono con gli elementi della barra degli strumenti standard per impostazione predefinita. Ad esempio, trascinare un **TextView** sulla finestra dell'applicazione e posizionarla a riempire l'area del contenuto:
+Per impostazione predefinita, diversi elementi dell'interfaccia utente Cocoa interagiscono con gli elementi della barra degli strumenti Ad esempio, trascinare una **visualizzazione di testo** nella finestra dell'applicazione e posizionarla in modo da riempire l'area di contenuto:
 
-[![Aggiunta di una visualizzazione di testo per l'applicazione](toolbar-images/edit09.png "aggiunta di una visualizzazione di testo per l'applicazione")](toolbar-images/edit09-large.png#lightbox)
+[![Aggiunta di una visualizzazione di testo all'applicazione](toolbar-images/edit09.png "Aggiunta di una visualizzazione di testo all'applicazione")](toolbar-images/edit09-large.png#lightbox)
 
-Salvare il documento, torna a Visual Studio per Mac per la sincronizzazione con Xcode, eseguire l'applicazione, immettere il testo, selezionarlo e fare clic sui **colori** della barra degli strumenti. Si noti che la visualizzazione di testo funziona automaticamente con la selezione colori:
+Salvare il documento, tornare a Visual Studio per Mac per sincronizzarlo con Xcode, eseguire l'applicazione, immettere testo, selezionarlo e fare clic sull'elemento della barra degli strumenti **colori** . Si noti che la visualizzazione di testo funziona automaticamente con la selezione colori:
 
-![Funzionalità della barra degli strumenti con una selezione di colori e visualizzazione di testo](toolbar-images/edit10.png "funzionalità della barra degli strumenti con una selezione di colori e visualizzazione di testo")
+![Funzionalità della barra degli strumenti incorporata con una visualizzazione di testo e una selezione colori](toolbar-images/edit10.png "Funzionalità della barra degli strumenti incorporata con una visualizzazione di testo e una selezione colori")
 
-## <a name="using-images-with-toolbar-items"></a>Uso di immagini con gli elementi della barra degli strumenti
+## <a name="using-images-with-toolbar-items"></a>Utilizzo di immagini con elementi della barra degli strumenti
 
-Usando un **immagine della barra degli strumenti**, aggiungere qualsiasi immagine bitmap le **risorse** cartella (e ha un'azione di compilazione **Bundle di risorse**) possono essere visualizzati sulla barra degli strumenti ridotta a icona:
+Utilizzando un **elemento della barra degli strumenti immagine**, qualsiasi immagine bitmap aggiunta alla cartella **risorse** (e in base a un'azione di compilazione della **risorsa bundle**) può essere visualizzata sulla barra degli strumenti come icona:
 
-1. In Visual Studio per Mac, nel **riquadro della soluzione**, fare doppio clic sui **risorse** cartella e selezionare **Add** > **Aggiungi file** .
-2. Dal **Add Files** finestra di dialogo casella passare alle immagini desiderate, selezionarli e fare clic sui **Open** pulsante: 
+1. In Visual Studio per Mac, nella **riquadro della soluzione**, fare clic con il pulsante destro del mouse sulla cartella **risorse** e scegliere **Aggiungi** > **Aggiungi file**.
+2. Nella finestra di dialogo **Aggiungi file** individuare le immagini desiderate, selezionarle e fare clic sul pulsante **Apri** : 
 
-    [![Selezione di immagini da aggiungere](toolbar-images/edit11.png "scelta delle immagini da aggiungere")](toolbar-images/edit11-large.png#lightbox)
+    [![Selezione di immagini da aggiungere](toolbar-images/edit11.png "Selezione di immagini da aggiungere")](toolbar-images/edit11-large.png#lightbox)
 
-3. Selezionare **copia**, controllare **Usa la stessa azione per tutti i file selezionati**, fare clic su **OK**:
+3. Selezionare **copia**, selezionare **Usa la stessa azione per tutti i file selezionati**e fare clic su **OK**:
 
-    ![Selezionando l'azione di copia per le immagini aggiuntive](toolbar-images/edit12.png "selezionando l'azione di copia per le immagini di aggiunta")
+    ![Selezione dell'azione di copia per le immagini aggiunte](toolbar-images/edit12.png "Selezione dell'azione di copia per le immagini aggiunte")
 
-4. Nel **riquadro della soluzione**, fare doppio clic su **MainWindow.xib** per aprirlo in Xcode.
+4. Nella **riquadro della soluzione**fare doppio clic su **MainWindow. xib** per aprirlo in Xcode.
 
-5. Selezionare la barra degli strumenti di **gerarchia delle interfacce** e fare clic su uno dei relativi elementi per aprire la finestra di dialogo di personalizzazione.
+5. Selezionare la barra degli strumenti nella **gerarchia dell'interfaccia** e fare clic su uno degli elementi per aprire la finestra di dialogo di personalizzazione.
 
-6. Trascinare un' **immagine della barra degli strumenti** dalle **Library Inspector** alla barra degli strumenti **consentiti gli elementi della barra degli strumenti** area: 
+6. Trascinare un **elemento della barra degli strumenti immagine** dal **controllo libreria** all'area **elementi della barra** degli strumenti consentiti della barra degli strumenti: 
 
-    ![Un elemento della barra degli strumenti immagine aggiunti all'area di consentito degli elementi della barra degli strumenti](toolbar-images/edit14.png "un'immagine della barra degli strumenti elemento aggiunto all'area di consentito degli elementi della barra degli strumenti")
+    ![Elemento della barra degli strumenti immagine aggiunto all'area elementi della barra degli strumenti] consentiti (toolbar-images/edit14.png "Elemento della barra degli strumenti immagine aggiunto all'area elementi della barra degli strumenti") consentiti
 
-7. Nel **Attributes Inspector**, selezionare l'immagine che è stato appena aggiunto in Visual Studio per Mac: 
+7. Nel **controllo attributi**selezionare l'immagine appena aggiunta in Visual Studio per Mac: 
 
-    ![Impostazione di un'immagine personalizzata per un elemento della barra degli strumenti](toolbar-images/edit15.png "impostazione di un'immagine personalizzata per un elemento della barra degli strumenti")
+    ![Impostazione di un'immagine personalizzata per un elemento della barra degli strumenti](toolbar-images/edit15.png "Impostazione di un'immagine personalizzata per un elemento della barra degli strumenti")
 
-8. Impostare il **etichetta** "Nel Cestino" e il **tavolozza etichetta** "Cancellare documento": 
+8. Impostare l' **etichetta** su "Cestino" e l' **etichetta** della tavolozza su "Cancella documento": 
 
-    ![Impostare la barra degli strumenti elemento etichetta ed etichetta tavolozza](toolbar-images/edit16.png "impostando la barra degli strumenti elemento tavolozza ed etichetta")
+    ![Impostazione dell'etichetta dell'elemento della barra degli strumenti e dell'etichetta tavolozza](toolbar-images/edit16.png "Impostazione dell'etichetta dell'elemento della barra degli strumenti e dell'etichetta tavolozza")
 
-9. Trascinare un **separatore della barra degli strumenti** dalle **Library Inspector** alla barra degli strumenti **consentiti gli elementi della barra degli strumenti** area: 
+9. Trascinare un **elemento della barra degli strumenti separatore** dal **controllo libreria** all'area **elementi della barra** degli strumenti consentiti della barra degli strumenti: 
 
-    [![Un elemento della barra degli strumenti separatore aggiunti all'area di consentito degli elementi della barra degli strumenti](toolbar-images/edit17.png "un separatore della barra degli strumenti aggiunti all'area di consentito degli elementi della barra degli strumenti")](toolbar-images/edit17-large.png#lightbox)
+    [![Elemento barra degli strumenti separatore aggiunto all'area elementi della barra degli strumenti] consentiti (toolbar-images/edit17.png "Elemento barra degli strumenti separatore aggiunto all'area elementi della barra degli strumenti") consentiti](toolbar-images/edit17-large.png#lightbox)
 
-10. Trascinare l'elemento separatore e l'elemento "Cestino" per il **elementi della barra degli strumenti predefiniti** area e impostare l'ordine della barra degli strumenti elementi da sinistra a destra nel modo seguente (i colori, tipi di carattere, separatore, nel Cestino, spazio flessibile, stampa): 
+10. Trascinare l'elemento separatore e l'elemento "Cestino" sull'area **elementi della barra degli strumenti predefinita** e impostare l'ordine degli elementi della barra degli strumenti da sinistra a destra, come indicato di seguito (colori, tipi di carattere, separatore, cestino, spazio flessibile, stampa): 
 
-    ![Gli elementi della barra degli strumenti predefiniti](toolbar-images/edit18.png "gli elementi della barra degli strumenti predefinita")
+    ![Elementi predefiniti della barra degli strumenti](toolbar-images/edit18.png "Elementi predefiniti della barra degli strumenti")
 
 11. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Eseguire l'applicazione per verificare che la nuova barra degli strumenti viene visualizzata per impostazione predefinita:
+Eseguire l'applicazione per verificare che la nuova barra degli strumenti sia visualizzata per impostazione predefinita:
 
-![Un oggetto toolbar con elementi predefiniti personalizzati](toolbar-images/edit19.png "un oggetto toolbar con elementi predefiniti personalizzati")
+![Barra degli strumenti con elementi predefiniti personalizzati](toolbar-images/edit19.png "Barra degli strumenti con elementi predefiniti personalizzati")
 
-## <a name="exposing-toolbar-items-with-outlets-and-actions"></a>Esporre gli elementi della barra degli strumenti con Outlet e azioni
+## <a name="exposing-toolbar-items-with-outlets-and-actions"></a>Esposizione degli elementi della barra degli strumenti con Outlet e azioni
 
-Per accedere a una barra degli strumenti o un elemento della barra degli strumenti nel codice, deve essere collegato a una presa di corrente o un'azione:
+Per accedere a una barra degli strumenti o a un elemento della barra degli strumenti nel codice, è necessario collegarlo a un'uscita o a un'azione:
 
-1. Nel **riquadro della soluzione**, fare doppio clic su **Main. Storyboard** per aprirlo in Xcode.
-2. Assicurarsi che la classe personalizzata "WindowController" è stato assegnato per il controller di finestra principale di **Identity Inspector**:
+1. Nella **riquadro della soluzione**fare doppio clic su **Main. Storyboard** per aprirlo in Xcode.
+2. Verificare che la classe personalizzata "WindowController" sia stata assegnata al controller della finestra principale nel controllo di **identità**:
 
-    [![Usando il controllo di identità per impostare una classe personalizzata per il controller di finestra](toolbar-images/edit20a.png "usando il controllo di identità per impostare una classe personalizzata per il controller di finestra")](toolbar-images/edit20a-large.png#lightbox)
+    [![Uso di Identity Inspector per impostare una classe personalizzata per il controller della finestra](toolbar-images/edit20a.png "Uso di Identity Inspector per impostare una classe personalizzata per il controller della finestra")](toolbar-images/edit20a-large.png#lightbox)
 
-3. Successivamente, selezionare l'elemento della barra degli strumenti nel **gerarchia delle interfacce**: 
+3. Selezionare quindi l'elemento della barra degli strumenti nella **gerarchia dell'interfaccia**: 
 
-    ![Selezionando l'elemento della barra degli strumenti nella gerarchia dell'interfaccia](toolbar-images/edit20.png "selezionando l'elemento della barra degli strumenti nella gerarchia dell'interfaccia")  
+    ![Selezione dell'elemento della barra degli strumenti nella gerarchia dell'interfaccia](toolbar-images/edit20.png "Selezione dell'elemento della barra degli strumenti nella gerarchia dell'interfaccia")  
 
-4. Aprire il **visualizzazione Assistant**, selezionare il **WindowController.h** file e trascinarlo dall'elemento della barra degli strumenti per il **WindowController.h** file.
-5. Impostare il **connessione** digitare per **azione**, immettere "trashDocument" per il **nome**, fare clic sul **Connect** pulsante: 
+4. Aprire la **visualizzazione assistente**, selezionare il file **WindowController. h** e trascinare il controllo dalla voce della barra degli strumenti al file **WindowController. h** .
+5. Impostare tipo di **connessione** su **azione**, immettere "trashDocument" come **nome**e fare clic sul pulsante **Connetti** : 
 
-    [![Configurazione di un'azione per un elemento della barra degli strumenti](toolbar-images/edit23.png "configurazione di un'azione per un elemento della barra degli strumenti")](toolbar-images/edit23-large.png#lightbox)
+    [![Configurazione di un'azione per un elemento della barra degli strumenti](toolbar-images/edit23.png "Configurazione di un'azione per un elemento della barra degli strumenti")](toolbar-images/edit23-large.png#lightbox)
 
-6. Esporre il **TextView** come un outlet chiamato "documentEditor" nel **viewcontroller. H** file: 
+6. Esporre la **visualizzazione di testo** come un Outlet denominato "documentEditor" nel file **ViewController. h** : 
 
-    [![Configurazione di un outlet per la visualizzazione di testo](toolbar-images/edit24.png "la configurazione di un outlet per la visualizzazione di testo")](toolbar-images/edit24-large.png#lightbox)
+    [![Configurazione di un outlet per la visualizzazione di testo](toolbar-images/edit24.png "Configurazione di un outlet per la visualizzazione di testo")](toolbar-images/edit24-large.png#lightbox)
 
 7. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-In Visual Studio per Mac, modificare il **ViewController.cs** file e aggiungere il codice seguente:
+In Visual Studio per Mac modificare il file **ViewController.cs** e aggiungere il codice seguente:
 
 ```csharp
 public void EraseDocument() {
@@ -269,7 +269,7 @@ public void EraseDocument() {
 }
 ```
 
-Successivamente, modificare il **WindowController.cs** file e aggiungere il codice seguente alla fine del `WindowController` classe:
+Modificare quindi il file **WindowController.cs** e aggiungere il codice seguente alla fine della `WindowController` classe:
 
 ```csharp
 [Export ("trashDocument:")]
@@ -280,21 +280,21 @@ void TrashDocument (NSObject sender) {
 }
 ```
 
-Quando si esegue l'applicazione, il **Cestino** della barra degli strumenti sarà attivo:
+Quando si esegue l'applicazione, l'elemento della barra degli strumenti del **Cestino** sarà attivo:
 
-![Una barra degli strumenti con un elemento nel Cestino di active](toolbar-images/edit25.png "una barra degli strumenti con un elemento nel Cestino di active")
+![Barra degli strumenti con un elemento del cestino attivo](toolbar-images/edit25.png "Barra degli strumenti con un elemento del cestino attivo")
 
-Si noti che il **Cestino** della barra degli strumenti può ora essere usato per eliminare il testo.
+Si noti che è ora possibile usare l'elemento della barra degli strumenti del **Cestino** per eliminare il testo.
 
-## <a name="disabling-toolbar-items"></a>La disattivazione degli elementi della barra degli strumenti
+## <a name="disabling-toolbar-items"></a>Disabilitazione degli elementi della barra degli strumenti
 
-Per disabilitare un elemento in una barra degli strumenti, creare una classe personalizzata `NSToolbarItem` classe ed eseguire l'override di `Validate` (metodo). Quindi, in Interface Builder, assegnare al tipo personalizzato per l'elemento che si desidera abilitare o disabilitare.
+Per disabilitare un elemento su una barra degli strumenti, creare `NSToolbarItem` una classe personalizzata ed `Validate` eseguire l'override del metodo. Quindi, in Interface Builder assegnare il tipo personalizzato all'elemento che si desidera abilitare o disabilitare.
 
-Per creare una classe personalizzata `NSToolbarItem` classe, pulsante destro del mouse sul progetto e selezionare **Add** > **nuovo File...** . Selezionare **generali** > **classe vuota**, immettere "ActivatableItem" per il **nome**, fare clic sul **nuovo** pulsante: 
+Per creare una classe `NSToolbarItem` personalizzata, fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file.** Selezionare**classe vuota** **generale** > , immettere "ActivatableItem" come **nome**e fare clic sul pulsante **nuovo** : 
 
-![Aggiunta di una classe vuota in Visual Studio per Mac](toolbar-images/custom01.png "aggiunta di una classe vuota in Visual Studio per Mac")
+![Aggiunta di una classe vuota in Visual Studio per Mac](toolbar-images/custom01.png "Aggiunta di una classe vuota in Visual Studio per Mac")
 
-Successivamente, modificare il **ActivatableItem.cs** file come segue:
+Modificare quindi il file **ActivatableItem.cs** per leggere come segue:
 
 ```csharp
 using System;
@@ -334,11 +334,11 @@ namespace MacToolbar
 }
 ```
 
-Fare doppio clic su **Main. Storyboard** per aprirlo in Xcode. Selezionare il **Cestino** della barra degli strumenti creata in precedenza e modificarne la classe in "ActivatableItem" nel **Identity Inspector**:
+Fare doppio clic su **Main. Storyboard** per aprirlo in Xcode. Selezionare l'elemento della barra degli strumenti del **Cestino** creato in precedenza e impostare la relativa classe su "ActivatableItem" in **Identity Inspector**:
 
-![L'impostazione di una classe personalizzata per un elemento della barra degli strumenti](toolbar-images/custom02.png "l'impostazione di una classe personalizzata per un elemento della barra degli strumenti")
+![Impostazione di una classe personalizzata per un elemento della barra degli strumenti](toolbar-images/custom02.png "Impostazione di una classe personalizzata per un elemento della barra degli strumenti")
 
-Creazione di un outlet chiamato `trashItem` per il **Cestino** della barra degli strumenti. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode. Aprire infine **MainWindow.cs** e aggiornare il `AwakeFromNib` metodo come segue:
+Creare un Outlet denominato `trashItem` per l'elemento della barra degli strumenti del **Cestino** . Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode. Infine, aprire **MainWindow.cs** e aggiornare il `AwakeFromNib` metodo per la lettura come indicato di seguito:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -350,18 +350,18 @@ public override void AwakeFromNib ()
 }
 ```
 
-Eseguire l'applicazione e si noti che il **Cestino** elemento è disabilitato sulla barra degli strumenti:
+Eseguire l'applicazione e notare che l'elemento del **Cestino** è ora disabilitato nella barra degli strumenti:
 
-![Una barra degli strumenti con un elemento inattivo nel Cestino](toolbar-images/custom03.png "una barra degli strumenti con un elemento inattivo nel Cestino")
+![Barra degli strumenti con un elemento cestino inattivo](toolbar-images/custom03.png "Barra degli strumenti con un elemento cestino inattivo")
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha fatto un quadro dettagliato di utilizzo di barre degli strumenti e gli elementi della barra degli strumenti in un'applicazione xamarin. Mac. Descritto come creare e gestire le barre degli strumenti in Interface Builder di Xcode, alcuni controlli dell'interfaccia utente automaticamente funzionano con gli elementi della barra degli strumenti, come lavorare con le barre degli strumenti nel codice c# e come abilitare e disabilitare gli elementi della barra degli strumenti.
+Questo articolo ha esaminato in dettaglio l'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Novell. Mac. Viene descritto come creare e gestire le barre degli strumenti in Interface Builder di Xcode, come alcuni controlli dell'interfaccia utente funzionano automaticamente con gli elementi della barra degli strumenti, C# come usare le barre degli strumenti nel codice e come abilitare e disabilitare gli elementi della barra degli strumenti.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MacToolbar (esempio)](https://developer.xamarin.com/samples/mac/MacToolbar/)
+- [MacToolbar (esempio)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactoolbar)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Linee guida dell'interfaccia umana per le barre degli strumenti](https://developer.apple.com/macos/human-interface-guidelines/windows-and-views/toolbars/)
+- [Linee guida per l'interfaccia umana per le barre degli strumenti](https://developer.apple.com/macos/human-interface-guidelines/windows-and-views/toolbars/)
 - [Introduzione alle barre degli strumenti](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Toolbars/Toolbars.html)

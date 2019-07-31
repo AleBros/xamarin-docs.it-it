@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 29f7725e41e5163b8f990c827983fbd79bdd1b1e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 08339ba3017983cf79d75adc1c6c21a2fb9ad98b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510487"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643438"
 ---
 # <a name="oreo-features"></a>Funzionalità di Oreo
 
@@ -205,7 +205,7 @@ Android Oreo introduce un'ampia gamma di nuove caratteristiche e funzionalità, 
 I *canali di notifica* sono categorie definite dall'app per le notifiche.
 È possibile creare un canale di notifica per ogni tipo di notifica che è necessario inviare ed è possibile creare canali di notifica per riflettere le scelte effettuate dagli utenti dell'app. La nuova funzionalità canali di notifica consente di fornire agli utenti un controllo con granularità fine su diversi tipi di notifiche. Se, ad esempio, si implementa un'app di messaggistica, è possibile creare canali di notifica distinti per ogni gruppo di conversazioni creato da un utente.
 
-I [canali di notifica](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) spiegano come creare un canale di notifica e usarlo per la pubblicazione di notifiche locali. Per un esempio di codice reale, vedere l'esempio [canali](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) . Questa app di esempio gestisce due canali e imposta altre opzioni di notifica.
+I [canali di notifica](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) spiegano come creare un canale di notifica e usarlo per la pubblicazione di notifiche locali. Per un esempio di codice reale, vedere l'esempio [canali](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) . Questa app di esempio gestisce due canali e imposta altre opzioni di notifica.
 
 
 
@@ -262,7 +262,7 @@ Quando l'app necessita di un tipo di carattere, `FontsRequest` si crea un oggett
 
 Quando si chiama il `RequestFonts` metodo, verifica innanzitutto se il tipo di carattere è memorizzato nella cache locale (da una chiamata precedente `RequestFont`a). Se non viene memorizzato nella cache, chiama il provider del tipo di carattere, recupera il tipo di carattere in modo asincrono e quindi passa i risultati all'app richiamando il `OnTypeFaceRetrieved` metodo.
 
-L'esempio di [tipi di carattere scaricabili](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) illustra come usare la funzionalità per i tipi di carattere scaricabile introdotta in Android Oreo. 
+L'esempio di [tipi di carattere scaricabili](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) illustra come usare la funzionalità per i tipi di carattere scaricabile introdotta in Android Oreo. 
 
 Per altre informazioni sul download di tipi di carattere, vedere l'argomento relativo ai [tipi di carattere scaricabili](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) per sviluppatori Android.
 
@@ -272,7 +272,7 @@ Per altre informazioni sul download di tipi di carattere, vedere l'argomento rel
 
 Il nuovo Framework di _riempimento automatico_ in Android Oreo rende più semplice per gli utenti gestire attività ripetitive, ad esempio account di accesso, creazione di account e transazioni con carta di credito. Gli utenti dedicano meno tempo alla ridigitazione delle informazioni (che possono causare errori di input). Prima che l'app possa funzionare con il Framework di riempimento automatico, è necessario abilitare un servizio di riempimento automatico nelle impostazioni di sistema (gli utenti possono abilitare o disabilitare il riempimento automatico).
 
-L'esempio [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework/) illustra l'uso del Framework di riempimento automatico. Sono incluse le implementazioni delle attività client con le visualizzazioni che devono essere riempite automaticamente e un servizio in grado di fornire dati di riempimento automatico alle attività del client.
+L'esempio [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) illustra l'uso del Framework di riempimento automatico. Sono incluse le implementazioni delle attività client con le visualizzazioni che devono essere riempite automaticamente e un servizio in grado di fornire dati di riempimento automatico alle attività del client.
 
 Per altre informazioni sulla nuova funzionalità di riempimento automatico e su come ottimizzare l'app per il riempimento automatico, vedere l'argomento relativo al Framework per la [compilazione automatica](https://developer.android.com/guide/topics/text/autofill.html) per sviluppatori Android.
 
@@ -294,7 +294,7 @@ Per specificare il comportamento dell'attività in modalità PIP, utilizzare il 
 
 -   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; Aggiorna le impostazioni di configurazione PIP dell'attività, ad esempio una modifica nelle proporzioni.
 
-L'esempio [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) illustra l'uso di base della modalità PIP (immagine in immagine) per i dispositivi palmari introdotti in Oreo. Nell'esempio viene riprodotto un video che continua senza interruzioni durante lo spostamento tra le modalità di visualizzazione o altre attività.
+L'esempio [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) illustra l'uso di base della modalità PIP (immagine in immagine) per i dispositivi palmari introdotti in Oreo. Nell'esempio viene riprodotto un video che continua senza interruzioni durante lo spostamento tra le modalità di visualizzazione o altre attività.
 
 
 
@@ -313,7 +313,7 @@ Android Oreo include diverse modifiche del comportamento di sistema e API che po
 
 Per migliorare l'esperienza utente, Android Oreo impone limitazioni sulle app che possono essere eseguite in background. Ad esempio, se l'utente guarda un video o gioca una partita, un'app in esecuzione in background può compromettere le prestazioni di un'app a elevato utilizzo di video in esecuzione in primo piano. Di conseguenza, Android Oreo pone le restrizioni seguenti per le app che non interagiscono direttamente con l'utente:
 
-1.  **Limitazioni del servizio in background** &ndash; Quando un'app viene eseguita in background, presenta una finestra di diversi minuti in cui è ancora possibile creare e usare i servizi. Alla fine di tale finestra, Android arresta il servizio in background dell'app e lo considera inattivo .
+1.  **Limitazioni del servizio in background** &ndash; Quando un'app viene eseguita in background, presenta una finestra di diversi minuti in cui è ancora possibile creare e usare i servizi. Alla fine di tale finestra, Android arresta il servizio in background dell'app e lo considera inattivo.
 
 2.  **Limitazioni broadcast** &ndash; Android 7,0 (API 25) ha inserito limitazioni sulle trasmissioni che un'app registra per ricevere. Android Oreo rende più rigorose queste limitazioni. Ad esempio, le app Android Oreo non possono più registrare ricevitori broadcast per trasmissioni implicite nei propri manifesti.
 
@@ -333,19 +333,19 @@ Le app destinate a Android Oreo o versioni successive devono modificare le propr
 
 Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare le funzionalità di Android Oreo:
 
--   [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) illustra come usare il nuovo sistema di canali di notifica introdotto in Android Oreo. Questo esempio gestisce due canali di notifica: uno con priorità predefinita e l'altro con priorità elevata.
+-   [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) illustra come usare il nuovo sistema di canali di notifica introdotto in Android Oreo. Questo esempio gestisce due canali di notifica: uno con priorità predefinita e l'altro con priorità elevata.
 
--   [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) illustra l'uso di base della modalità PIP (immagine in immagine) per i dispositivi palmari introdotti in Oreo. Nell'esempio viene riprodotto un video che continua senza interruzioni durante lo spostamento tra le modalità di visualizzazione o altre attività.
+-   [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) illustra l'uso di base della modalità PIP (immagine in immagine) per i dispositivi palmari introdotti in Oreo. Nell'esempio viene riprodotto un video che continua senza interruzioni durante lo spostamento tra le modalità di visualizzazione o altre attività.
 
--   [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework) illustra l'uso del Framework di riempimento automatico. Sono incluse le implementazioni delle attività client con le visualizzazioni che devono essere riempite automaticamente e un servizio in grado di fornire dati di riempimento automatico alle attività del client.
+-   [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) illustra l'uso del Framework di riempimento automatico. Sono incluse le implementazioni delle attività client con le visualizzazioni che devono essere riempite automaticamente e un servizio in grado di fornire dati di riempimento automatico alle attività del client.
 
--   I [tipi di carattere scaricabili](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts) forniscono un esempio di come usare la funzionalità dei tipi di carattere scaricabile descritta in precedenza.
+-   I [tipi di carattere scaricabili](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) forniscono un esempio di come usare la funzionalità dei tipi di carattere scaricabile descritta in precedenza.
 
--   [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat) illustra l'uso della libreria di supporto EmojiCompat. È possibile usare questa libreria per impedire che l'app mostri caratteri emoji mancanti come caratteri "tofu".
+-   [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat) illustra l'uso della libreria di supporto EmojiCompat. È possibile usare questa libreria per impedire che l'app mostri caratteri emoji mancanti come caratteri "tofu".
 
--   [Gli aggiornamenti della posizione in sospeso](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent) illustrano l'uso dell'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo `PendingIntent`usando un.
+-   [Gli aggiornamenti della posizione in sospeso](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) illustrano l'uso dell'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo `PendingIntent`usando un.
 
--   [Location Updates Foreground Service](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService) illustra come usare l'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo usando un servizio in primo piano associato e avviato.
+-   [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) illustra come usare l'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo usando un servizio in primo piano associato e avviato.
 
 
 ## <a name="video"></a>Video

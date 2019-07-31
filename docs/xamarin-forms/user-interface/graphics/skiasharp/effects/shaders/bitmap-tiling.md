@@ -7,18 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d323aa6616f7547ab91dfe2b394c339e273d61c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322257"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650020"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Affiancamento di bitmap di SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
 Come si è visto in due articoli precedenti, il [ `SKShader` ](xref:SkiaSharp.SKShader) classe può creare sfumature lineari o circolare. Questo articolo illustra il `SKShader` oggetto che usa un'immagine bitmap per affiancare un'area. La bitmap può essere ripetuta orizzontalmente e verticalmente, nell'orientamento originale o in alternativa capovolta orizzontalmente e verticalmente. Il capovolgimento evita discontinuità tra i riquadri:
 
@@ -42,7 +42,7 @@ Questo articolo contiene alcuni esempi di uso di questa trasformazione di matric
 
 ## <a name="exploring-the-tile-modes"></a>Esplorare la modalità di affiancamento
 
-Il primo programma nel **Bitmap affiancamento** sezione del **shader e altri effetti** pagina del [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio vengono illustrati i risultati dei due `SKShaderTileMode` argomenti. Il **Capovolgi modalità di affiancamento Bitmap** crea un'istanza di file XAML un' `SKCanvasView` e due `Picker` viste che consentono di selezionare un `SKShaderTilerMode` valore per l'espansione orizzontale e verticale. Si noti che una matrice del `SKShaderTileMode` membri è definito nel `Resources` sezione:
+Il primo programma nel **Bitmap affiancamento** sezione del **shader e altri effetti** pagina del [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio vengono illustrati i risultati dei due `SKShaderTileMode` argomenti. Il **Capovolgi modalità di affiancamento Bitmap** crea un'istanza di file XAML un' `SKCanvasView` e due `Picker` viste che consentono di selezionare un `SKShaderTilerMode` valore per l'espansione orizzontale e verticale. Si noti che una matrice del `SKShaderTileMode` membri è definito nel `Resources` sezione:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -300,7 +300,7 @@ Si noti che il `SKShaderTileMode` argomenti `CreateBitmap` sono entrambi `Mirror
 
 Sono necessarie alcune operazioni per ottenere una bitmap appropriata per il riquadro. Questo non funziona molto bene perché il brick più scuro è l'acronimo una quantità eccessiva. Viene visualizzata regolarmente nelle immagini ripetute, rivelare il fatto che la bacheca brick è stata costruita da una bitmap più piccola.
 
-Il **supporti** cartella della [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio include anche l'immagine di una roccia parete:
+Il **supporti** cartella della [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio include anche l'immagine di una roccia parete:
 
 ![Dovranno essere parete Tile](bitmap-tiling-images/StoneWallTile.jpg "Stone parete riquadro")
 
@@ -366,7 +366,7 @@ Se la trasformazione viene applicata al singolo riquadro, quindi deve essere ruo
 
 Nella sezione [ **riquadro allineamento**](#tile-alignment), si noterà un esempio di una trasformazione di traslazione applicato allo shader.
 
-La versione autonoma [ **Clock Cat** ](https://developer.xamarin.com/samples/xamarin-forms/CatClock) esempio (non fa parte del **SkiaSharpFormsDemos**) simula uno sfondo wood granulare con affiancamento bitmap basato su questa mappa di bit 240 pixel quadrato:
+La versione autonoma [ **Clock Cat** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) esempio (non fa parte del **SkiaSharpFormsDemos**) simula uno sfondo wood granulare con affiancamento bitmap basato su questa mappa di bit 240 pixel quadrato:
 
 ![Il livello di dettaglio di legno](bitmap-tiling-images/WoodGrain.png "legno-livello di dettaglio")
 
@@ -780,5 +780,5 @@ Il `SKShaderTileMode.Mirror` opzioni assicurano che i rami di X in ogni bitmap j
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [CatClock (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)

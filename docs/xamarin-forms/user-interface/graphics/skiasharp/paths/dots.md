@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: f59aa92f5f4f013a2d14b1667f4d0679a7ba82b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384832"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643014"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Punti e trattini in SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Master le complicazioni del disegno di linee con tratteggiate o in SkiaSharp_
 
@@ -26,7 +26,7 @@ SkiaSharp consente di disegnare le righe che non sono affidabili ma che invece s
 
 Usando un *effetto del percorso*, che è un'istanza del [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) classe che è impostato sulla [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) proprietà di `SKPaint`. È possibile creare un percorso di effetto (o combinare percorso effetti) utilizzando uno dei metodi di creazione statici definiti da `SKPathEffect`. (`SKPathEffect` è uno dei sei gli effetti supportato da SkiaSharp; gli altri sono descritti nella sezione [ **effetto SkiaSharp**](../effects/index.md).)
 
-Per disegnare linee tratteggiate o punteggiate, si utilizza il [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) metodo statico. Esistono due argomenti: In questo primo è una matrice di `float` valori che indicano la lunghezza dei punti e trattini e la lunghezza degli spazi tra di essi. Questa matrice deve avere un numero pari di elementi e devono essere presenti almeno due elementi. (Può essere zero elementi nella matrice, ma che i risultati in una linea continua.) Se sono presenti due elementi, la prima è la lunghezza di un punto o trattino e il secondo è la lunghezza del gap prima il successivo punto o trattino. Se sono presenti più di due elementi, quindi sono nell'ordine indicato: trattino di lunghezza, durata dell'intervallo, lunghezza del trattino, durata dell'intervallo e così via.
+Per disegnare linee tratteggiate o punteggiate, si utilizza il [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) metodo statico. Esistono due argomenti: Questa prima è una matrice di `float` valori che indicano le lunghezze dei punti e dei trattini e la lunghezza degli spazi tra di essi. Questa matrice deve avere un numero pari di elementi e devono essere presenti almeno due elementi. (Può essere zero elementi nella matrice, ma che i risultati in una linea continua.) Se sono presenti due elementi, la prima è la lunghezza di un punto o trattino e il secondo è la lunghezza del gap prima il successivo punto o trattino. Se sono presenti più di due elementi, quindi sono nell'ordine indicato: trattino di lunghezza, durata dell'intervallo, lunghezza del trattino, durata dell'intervallo e così via.
 
 In generale, è opportuno apportare le lunghezze dash e gap un multiplo dello spessore del tratto. Se lo spessore del tratto è di 10 pixel, ad esempio, quindi la matrice {10, 10} verrà disegnare una linea punteggiata in cui i punti e spazi vuoti sono della stessa lunghezza come lo spessore del tratto.
 
@@ -217,4 +217,4 @@ Naturalmente, è possibile eseguire effettivamente il programma per verificare l
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

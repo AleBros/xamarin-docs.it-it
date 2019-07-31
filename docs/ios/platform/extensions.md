@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 74f08a274eec4560846fb0c0067e3209031f5c6e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4137ce7542a213a0a4c27b6a66b38828e4646520
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511757"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653473"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni iOS in Novell. iOS
 
@@ -27,7 +27,7 @@ Tutte le estensioni vengono installate insieme a un'app contenitore (con entramb
 
 ## <a name="extension-points"></a>Punti di estensione
 
-|Type|DESCRIZIONE|Punto di estensione|App host|
+|Type|Descrizione|Punto di estensione|App host|
 |--- |--- |--- |--- |
 |Azione|Editor o Visualizzatore specializzato per un tipo di supporto specifico|`com.apple.ui-services`|Any|
 |Provider di documenti|Consente all'app di usare un archivio documenti remoto|`com.apple.fileprovider-ui`|App che usano un [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
@@ -92,7 +92,7 @@ Il progetto dell'estensione, inoltre, presenta i requisiti seguenti:
 - Deve avere un identificatore del bundle che inizia con l'identificatore del bundle dell'app contenitore. Se ad esempio l'identificatore `com.myCompany.ContainerApp`del bundle dell'app contenitore è, l'identificatore dell'estensione potrebbe essere: `com.myCompany.ContainerApp.MyExtension` 
 
     ![](extensions-images/bundleidentifiers.png) 
-- `NSExtensionPointIdentifier`Deve definire la chiave, con un valore appropriato, `com.apple.widget-extension` ad esempio per un widget  del centro `Info.plist` notifiche di oggi, nel file.
+- `NSExtensionPointIdentifier`Deve definire la chiave, con un valore appropriato, `com.apple.widget-extension` ad esempio per un widget del centro `Info.plist` notifiche di oggi, nel file.
 - Deve *anche definire la* `NSExtensionMainStoryboard` chiave o `Info.plist` la `NSExtensionPrincipalClass` chiave nel file con un valore appropriato:
     - Usare la `NSExtensionMainStoryboard` chiave per specificare il nome dello storyboard che presenta l'interfaccia utente principale per l'estensione (meno `.storyboard`). Ad esempio, `Main` per il `Main.storyboard` file.
     - Usare la `NSExtensionPrincipalClass` chiave per specificare la classe che verrà inizializzata quando viene avviata l'estensione. Il valore deve corrispondere al valore del **Registro** del `UIViewController`: 
@@ -264,7 +264,7 @@ Il nuovo widget verrà aggiunto alla visualizzazione **Today** e i risultati ver
 
 ## <a name="communicating-with-the-host-app"></a>Comunicazione con l'app host
 
-L'estensione Today di esempio creata in precedenza non comunica con la relativa app host (  la schermata odierna). In caso affermativo, utilizzerebbe la proprietà [ExtensionContext](xref:Foundation.NSExtensionContext) delle `TodayViewController` classi o `CodeBasedViewController` . 
+L'estensione Today di esempio creata in precedenza non comunica con la relativa app host ( la schermata odierna). In caso affermativo, utilizzerebbe la proprietà [ExtensionContext](xref:Foundation.NSExtensionContext) delle `TodayViewController` classi o `CodeBasedViewController` . 
 
 Per le estensioni che riceveranno i dati dalle app host, i dati sono sotto forma di matrice di oggetti [NSExtensionItem](xref:Foundation.NSExtensionItem) archiviati nella proprietà [InputItems](xref:Foundation.NSExtensionContext.InputItems) di [ExtensionContext](xref:Foundation.NSExtensionContext) dell'estensione `UIViewController`.
 
@@ -462,5 +462,5 @@ In questo documento sono state analizzate le estensioni, il tipo di punti di est
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ContainerApp (esempio)](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
+- [ContainerApp (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
 - [Creazione di estensioni in Novell. iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)

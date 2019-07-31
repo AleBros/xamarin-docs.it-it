@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c89f04b1d1d87fed8d86d50cb68527391a7f317
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250582"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656197"
 ---
 # <a name="xamarinforms-stepper"></a>Gestore di istruzioni di xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Usare un gestore di istruzioni per la selezione di un valore numerico da un intervallo di valori._
 
@@ -42,11 +42,11 @@ Il [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) oggetti
 
 ## <a name="basic-stepper-code-and-markup"></a>Markup e codice di gestore di istruzioni di base
 
-Il [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) esempio contiene tre pagine che sono funzionalmente identici, ma vengono implementate in modi diversi. Usa solo la prima pagina C# code, il secondo Usa XAML con un gestore eventi nel codice e della terza è in grado di evitare il gestore eventi usando un'associazione dati nel file XAML.
+Il [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) esempio contiene tre pagine che sono funzionalmente identici, ma vengono implementate in modi diversi. Usa solo la prima pagina C# code, il secondo Usa XAML con un gestore eventi nel codice e della terza è in grado di evitare il gestore eventi usando un'associazione dati nel file XAML.
 
 ### <a name="creating-a-stepper-in-code"></a>Creazione di un gestore di istruzioni nel codice
 
-Il **gestore di istruzioni di base del codice** pagina il [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) esempio viene illustrato come creare un [ `Stepper` ](xref:Xamarin.Forms.Stepper) e due [ `Label` ](xref:Xamarin.Forms.Label) gli oggetti nel codice:
+Il **gestore di istruzioni di base del codice** pagina il [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) esempio viene illustrato come creare un [ `Stepper` ](xref:Xamarin.Forms.Stepper) e due [ `Label` ](xref:Xamarin.Forms.Label) gli oggetti nel codice:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -182,7 +182,7 @@ Il **associazioni di gestore di istruzioni di base** pagina viene illustrato com
 </ContentPage>
 ```
 
-Il [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) proprietà del primo [ `Label` ](xref:Xamarin.Forms.Label) è associato ai [ `Value` ](xref:Xamarin.Forms.Stepper.Value) proprietà del [ `Stepper` ](xref:Xamarin.Forms.Stepper), poiché è il [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà del secondo `Label` con un `StringFormat` specifica. Il **associazioni di gestore di istruzioni base** pagina funzioni un po' diverso da due pagine precedenti: Quando la pagina viene visualizzata prima di tutto, il secondo `Label` consente di visualizzare la stringa di testo con il valore. Si tratta di un vantaggio dell'uso del data binding. Per visualizzare il testo senza l'associazione di dati, è necessario inizializzare in modo specifico la `Text` proprietà del `Label` o si simula un'attivazione del [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chiamando il gestore dell'evento dal costruttore della classe .
+Il [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) proprietà del primo [ `Label` ](xref:Xamarin.Forms.Label) è associato ai [ `Value` ](xref:Xamarin.Forms.Stepper.Value) proprietà del [ `Stepper` ](xref:Xamarin.Forms.Stepper), poiché è il [ `Text` ](xref:Xamarin.Forms.Label.Text) proprietà del secondo `Label` con un `StringFormat` specifica. La pagina **associazioni stepper di base** funziona in modo leggermente diverso dalle due pagine precedenti: Quando la pagina viene visualizzata per la prima `Label` volta, il secondo Visualizza la stringa di testo con il valore. Si tratta di un vantaggio dell'uso del data binding. Per visualizzare il testo senza l'associazione di dati, è necessario inizializzare in modo specifico la `Text` proprietà del `Label` o si simula un'attivazione del [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chiamando il gestore dell'evento dal costruttore della classe .
 
 ## <a name="precautions"></a>Precauzioni relative alla
 
@@ -258,5 +258,5 @@ Quando [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum) è impostato su 180, [ 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di demo di gestore di istruzioni](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+- [Esempio di demo di gestore di istruzioni](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [Gestore di istruzioni API](xref:Xamarin.Forms.Stepper)

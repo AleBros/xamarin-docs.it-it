@@ -1,78 +1,78 @@
 ---
-title: Utilizzo di controlli di pagina in Xamarin tvOS
-description: Questo documento descrive come usare i controlli di pagina tvOS in un'app compilata con Xamarin. Fornisce una descrizione dettagliata dei controlli di pagina, viene illustrato come configurare gli storyboard e prende in esame come rispondere agli eventi di modifica pagina.
+title: Uso dei controlli pagina di tvOS in Novell
+description: Questo documento descrive come usare i controlli pagina di tvOS in un'app compilata con Novell. Viene fornita una descrizione di alto livello dei controlli pagina, viene illustrato come impostarli negli storyboard ed esamina come rispondere agli eventi di modifica della pagina.
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 173bc7713b5b8c330d4d4c5863bef24be8bdcb52
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bb53c11612cf492cda39067db861c1d67e0d3e16
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61179612"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648987"
 ---
-# <a name="working-with-tvos-page-controls-in-xamarin"></a>Utilizzo di controlli di pagina in Xamarin tvOS
+# <a name="working-with-tvos-page-controls-in-xamarin"></a>Uso dei controlli pagina di tvOS in Novell
 
-In alcuni casi potrebbe essere necessario visualizzare una serie di immagini o pagine nell'app xamarin. tvos. Un controllo pagina è stato progettato per illustrare chiaramente quale pagina di un utente si trova in rispetto al numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti su scuro, oval a forma di sfondo. Nella pagina corrente verrà visualizzato un pallino, tutte le altre pagine mostrano come punti vuoti. Il controllo pagina verrà ritagliata i punti la maggior parte delle esterni se sono presenti troppi per rientrare nella relativa area di sfondo.
+In alcuni casi potrebbe essere necessario visualizzare una serie di pagine o immagini nell'app Novell. tvOS. Un controllo pagina è stato progettato per indicare in modo chiaro quale pagina di un utente si trova al di fuori del numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti su uno sfondo scuro a forma ovale. Nella pagina corrente viene visualizzato un punto pieno, tutte le altre pagine vengono visualizzate come punti vuoti. Il controllo pagina Ritaglia i punti più esterni se sono presenti troppi per adattarsi all'area di sfondo.
 
-[![](page-controls-images/page01.png "Esempio di controllo pagina")](page-controls-images/page01.png#lightbox)
+[![](page-controls-images/page01.png "Controllo pagina di esempio")](page-controls-images/page01.png#lightbox)
 
-Controllo pagina in un elemento interattivo progettato per fornire commenti e suggerimenti solo all'utente. È necessario aggiungere altri controlli per modificare il numero di pagina correnti (ad esempio i movimenti o i pulsanti).
+Controllo pagina in un elemento non interattivo progettato per fornire commenti e suggerimenti all'utente. Sarà necessario aggiungere altri controlli per modificare il numero di pagina corrente, ad esempio movimenti o pulsanti.
 
-Apple ha i suggerimenti seguenti quando si usa un controllo pagina:
+Quando si usa un controllo pagina, Apple presenta i suggerimenti seguenti:
 
-- **Usare solo le raccolte complete su** -controlli per le pagine funzionano meglio in un ambiente a schermo intero per visualizzare più pagine esistenti in una singola raccolta.
-- **Limitare il numero di pagine** -controlli per le pagine funzionano meglio per le pagine di dieci (10) o meno e un massimo di venti (20) pagine. Per le pagine più di venti, è consigliabile usare un [visualizzazione di raccolta](~/ios/tvos/user-interface/collection-views.md) e visualizzare le pagine in una griglia.
+- **Usa solo in raccolte complete** : i controlli pagina funzionano meglio in un ambiente a schermo intero per visualizzare più pagine presenti in una singola raccolta.
+- **Limitare il numero di** pagine-i controlli di pagina sono ideali per dieci (10) o un numero inferiore di pagine e un massimo di 20 (20) pagine. Per più di venti pagine, è consigliabile utilizzare una [visualizzazione di raccolta](~/ios/tvos/user-interface/collection-views.md) e visualizzare le pagine in una griglia.
 
 <a name="Page-Controls-and-Storyboards" />
 
-## <a name="page-controls-and-storyboards"></a>I controlli di pagina e gli storyboard
+## <a name="page-controls-and-storyboards"></a>Controlli e storyboard della pagina
 
-Il modo più semplice per usare i controlli di pagina in un'app xamarin. tvos è per aggiungerli all'interfaccia utente dell'app usando iOS Designer.
+Il modo più semplice per usare i controlli pagina in un'app Novell. tvOS consiste nell'aggiungerli all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
     
-1. Nel **riquadro della soluzione**, fare doppio clic il `Main.storyboard` file e aprirlo e modificarlo.
-1. Trascinare un **controllo della pagina** dal **della casella degli strumenti** e rilasciarlo nella vista: 
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Trascinare un **controllo pagina** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    [![](page-controls-images/page02.png "Un controllo pagina")](page-controls-images/page02.png#lightbox)
-1. Nel **scheda Widget** del **riquadro delle proprietà**, è possibile modificare diverse proprietà del controllo pagina come relativo **pagina corrente** e **& delle pagine**: 
+    [![](page-controls-images/page02.png "Controllo pagina")](page-controls-images/page02.png#lightbox)
+1. Nella **scheda Widget** del **riquadro delle proprietà**è possibile modificare diverse proprietà del controllo pagina, ad esempio la **pagina corrente** e il **numero di pagine**: 
 
-    [![](page-controls-images/page03.png "La scheda di Widget")](page-controls-images/page03.png#lightbox)
-1. Successivamente, aggiungere i movimenti o i controlli alla visualizzazione per spostarsi avanti e indietro tramite la raccolta di pagine.
-1. Infine, assegnare **nomi** ai controlli in modo da poter rispondere ad essi in C# codice. Ad esempio: 
+    [![](page-controls-images/page03.png "Scheda widget")](page-controls-images/page03.png#lightbox)
+1. Successivamente, aggiungere controlli o movimenti alla visualizzazione per spostarsi avanti e indietro nella raccolta di pagine.
+1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Ad esempio: 
 
-    [![](page-controls-images/page04.png "Nome del controllo")](page-controls-images/page04.png#lightbox)
+    [![](page-controls-images/page04.png "Assegnare un nome al controllo")](page-controls-images/page04.png#lightbox)
 1. Salvare le modifiche.
     
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
     
-1. Nel **Esplora soluzioni**, fare doppio clic il `Main.storyboard` file e aprirlo e modificarlo.
-1. Trascinare un **controllo della pagina** dal **della casella degli strumenti** e rilasciarlo nella vista: 
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Trascinare un **controllo pagina** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    [![](page-controls-images/page02-vs.png "Un controllo pagina")](page-controls-images/page02-vs.png#lightbox)
-1. Nel **scheda Widget** del **riquadro delle proprietà**, è possibile modificare diverse proprietà del controllo pagina, ad esempio relativi **pagina corrente** e **& delle pagine**: 
+    [![](page-controls-images/page02-vs.png "Controllo pagina")](page-controls-images/page02-vs.png#lightbox)
+1. Nella **scheda Widget** di **Esplora proprietà**è possibile modificare diverse proprietà del controllo pagina, ad esempio la **pagina corrente** e il **numero di pagine**: 
 
-    [![](page-controls-images/page03-vs.png "La scheda di Widget")](page-controls-images/page03-vs.png#lightbox)
-1. Successivamente, aggiungere i movimenti o i controlli alla visualizzazione per spostarsi avanti e indietro tramite la raccolta di pagine.
-1. Infine, assegnare **nomi** ai controlli in modo da poter rispondere ad essi in C# codice. Ad esempio: 
+    [![](page-controls-images/page03-vs.png "Scheda widget")](page-controls-images/page03-vs.png#lightbox)
+1. Successivamente, aggiungere controlli o movimenti alla visualizzazione per spostarsi avanti e indietro nella raccolta di pagine.
+1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Ad esempio: 
 
-    [![](page-controls-images/page04-vs.png "Nome del controllo")](page-controls-images/page04-vs.png#lightbox)
+    [![](page-controls-images/page04-vs.png "Assegnare un nome al controllo")](page-controls-images/page04-vs.png#lightbox)
 1. Salvare le modifiche.
     
 
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare gli eventi, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un UIButton) in iOS Designer, non verrà mai chiamato perché non dispone di un tocco Apple TV a schermo intero o supportare gli eventi di tocco. È consigliabile usare sempre la `Primary Action` eventi durante la creazione di gestori eventi per tvOS elementi dell'interfaccia utente.
+> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, questo non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta eventi di tocco. È consigliabile usare sempre l' `Primary Action` evento quando si creano gestori eventi per gli elementi dell'interfaccia utente tvOS.
 
-Modificare il Controller di visualizzazione (esempio `ViewController.cs`) file e aggiungere il codice per gestire le pagine da modificare. Ad esempio:
+Modificare il file del controller di `ViewController.cs`visualizzazione (esempio) e aggiungere il codice per gestire le pagine modificate. Ad esempio:
 
 ```csharp
 using System;
@@ -146,7 +146,7 @@ namespace MySingleView
 }
 ```
 
-Diamo uno sguardo a due proprietà del controllo pagina. In primo luogo, per specificare il numero massimo di pagine, usare quanto segue:
+Verranno ora esaminate in dettaglio due proprietà del controllo pagina. In primo luogo, per specificare il numero massimo di pagine, utilizzare quanto segue:
 
 ```csharp
 PageView.Pages = 6;
@@ -158,21 +158,21 @@ Per modificare il numero di pagina corrente, usare il codice seguente:
 PageView.CurrentPage = PageNumber;
 ```
 
-Il `CurrentPage` proprietà è zero (0) di base, in modo che la prima pagina sarà zero e l'ultimo sarà uno meno il numero massimo di pagine.
+La `CurrentPage` proprietà è zero (0) in base a, quindi la prima pagina sarà zero e l'ultimo sarà uno meno il numero massimo di pagine.
 
-Per altre informazioni sull'utilizzo degli storyboard, vedere la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la progettazione e l'utilizzo di controllo pagina all'interno di un'app xamarin. tvos.
+Questo articolo ha trattato la progettazione e l'uso del controllo pagina all'interno di un'app Novell. tvOS.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

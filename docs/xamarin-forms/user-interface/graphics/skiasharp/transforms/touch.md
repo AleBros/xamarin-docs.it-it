@@ -7,16 +7,16 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 407fe78618c5e5fcd8732d9ff3cea50561ca78f3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876848"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655555"
 ---
 # <a name="touch-manipulations"></a>Manipolazioni tramite tocco
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Trasformazioni di usare matrici per implementare il trascinamento di tocco, avvicinare e rotazione_
 
@@ -273,7 +273,7 @@ Il **ruota Bitmap** pagina consente di usare due dita per rotazione o scalabilit
 
 La grande differenza prima questo programma è la logica di hit testing. I programmi precedenti utilizzati il `Contains` metodo `SKRect` per determinare se il punto di tocco è all'interno del rettangolo trasformato corrispondente nella bitmap. Ma mentre l'utente modifica la bitmap, bitmap può essere ruotata, e `SKRect` correttamente non può rappresentare un rettangolo ruotato. Si potrebbe ritenere che la logica di hit testing deve implementare in tal caso piuttosto complessa della geometria analitica.
 
-Tuttavia, è disponibile un collegamento: Determinare se un punto si trova entro i limiti di un rettangolo trasformato è quello utilizzato per determinare se un punto trasformato inverso si trova entro i limiti del rettangolo di stato non trasformato. Questo è un calcolo molto più semplice e la logica è possibile continuare a usare il pratico `Contains` metodo:
+Tuttavia, è disponibile un collegamento: Determinare se un punto si trova all'interno dei limiti di un rettangolo trasformato equivale a determinare se un punto trasformato inverso si trova all'interno dei limiti del rettangolo non trasformato. Questo è un calcolo molto più semplice e la logica è possibile continuare a usare il pratico `Contains` metodo:
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage
@@ -703,7 +703,7 @@ class TouchManipulationBitmap
 
 Nel `Moved` e `Released` eventi, le chiamate al metodo `Manipulate`. In questi casi, il `touchDictionary` contiene uno o più `TouchManipulationInfo` oggetti. Se il `touchDictionary` contiene un elemento, è probabile che il `PreviousPoint` e `NewPoint` valori non sono uguali e rappresentano lo spostamento di un dito. Se più dita stanno toccando la mappa di bit, il dizionario contiene più di un elemento, ma solo uno di questi elementi presenta diversi `PreviousPoint` e `NewPoint` valori. Tutti gli altri hanno uguale `PreviousPoint` e `NewPoint` valori.
 
-Questo è importante: Il `Manipulate` metodo può presupporre che sia in corso lo spostamento di un solo dito. Al momento della chiamata nessuna delle altre dita stanno spostando e se è realmente spostano (come probabilmente), tali spostamenti verranno elaborati in chiamate successive a `Manipulate`.
+Questo è importante: Il `Manipulate` metodo può presumere che sia in corso l'elaborazione dello spostamento di un solo dito. Al momento della chiamata nessuna delle altre dita stanno spostando e se è realmente spostano (come probabilmente), tali spostamenti verranno elaborati in chiamate successive a `Manipulate`.
 
 Il `Manipulate` metodo copia prima di tutto il dizionario in una matrice per motivi di praticità. Ignora un valore diverso dalle prime due voci. Se più di due dita siano tentando di modificare la mappa di bit, gli altri vengono ignorati. `Manipulate` è il membro finale della `TouchManipulationBitmap`:
 
@@ -1272,5 +1272,5 @@ Questo codice in modo efficace divide l'area della bitmap in una forma di rombo 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Richiamo di eventi dagli effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

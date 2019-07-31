@@ -1,24 +1,24 @@
 ---
-title: Fast ListView lo scorrimento in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare Android specifico della piattaforma che consente lo scorrimento rapido di dati in un ListView.
+title: Scorrimento rapido di ListView in Android
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. In questo articolo viene illustrato come utilizzare la piattaforma Android specifica che consente lo scorrimento rapido dei dati in un controllo ListView.
 ms.prod: xamarin
 ms.assetid: 37D95A2D-74AC-488A-B903-2BDD799EAA5C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 6ae266f9309e32c79ec6028d737cfdcaaa85b0d4
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ce51483da9599cf049cf005ae18b35d110aa325b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926578"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649982"
 ---
-# <a name="listview-fast-scrolling-on-android"></a>Fast ListView lo scorrimento in Android
+# <a name="listview-fast-scrolling-on-android"></a>Scorrimento rapido di ListView in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma Android consente di abilitare lo scorrimento veloce dei dati in un [ `ListView` ](xref:Xamarin.Forms.ListView). Vengono utilizzati in XAML, impostando il `ListView.IsFastScrollEnabled` proprietà associata una `boolean` valore:
+Questo specifico della piattaforma Android viene usato per consentire lo scorrimento rapido dei dati in un [`ListView`](xref:Xamarin.Forms.ListView). Vengono utilizzati in XAML, impostando il `ListView.IsFastScrollEnabled` proprietà associata una `boolean` valore:
 
 ```xaml
 <ContentPage ...
@@ -48,19 +48,19 @@ listView.GroupDisplayBinding = new Binding("Key");
 listView.On<Android>().SetIsFastScrollEnabled(true);
 ```
 
-Il `ListView.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il `ListView.SetIsFastScrollEnabled` metodo, nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usato per abilitare lo scorrimento rapido di dati in un [ `ListView` ](xref:Xamarin.Forms.ListView). Inoltre, il `SetIsFastScrollEnabled` metodo può essere utilizzato per attivare o disattivare lo scorrimento veloce chiamando il `IsFastScrollEnabled` metodo restituisca se lo scorrimento veloce è abilitato:
+Il `ListView.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il `ListView.SetIsFastScrollEnabled` metodo, nel [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usato per abilitare lo scorrimento rapido di dati in un [`ListView`](xref:Xamarin.Forms.ListView). Inoltre, il `SetIsFastScrollEnabled` metodo può essere utilizzato per attivare o disattivare lo scorrimento veloce chiamando il `IsFastScrollEnabled` metodo restituisca se lo scorrimento veloce è abilitato:
 
 ```csharp
 listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScrollEnabled());
 ```
 
-Il risultato è che lo scorrimento veloce tra i dati in un [ `ListView` ](xref:Xamarin.Forms.ListView) può essere abilitata, che modifica la dimensione dello scorrimento:
+Il risultato è che lo scorrimento veloce tra i dati in un [`ListView`](xref:Xamarin.Forms.ListView) può essere abilitata, che modifica la dimensione dello scorrimento:
 
 [![](listview-fast-scrolling-images/fastscroll.png "Specifica della piattaforma FastScroll ListView")](listview-fast-scrolling-images/fastscroll-large.png#lightbox "ListView FastScroll specifiche della piattaforma")
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 21d25315aec5c056df90da11b8a51ee1493a45a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659078"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656675"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestione di file in Xamarin.Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate._
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-La variabile `text` può quindi essere usata per visualizzare il testo oppure è possibile usarla nel codice. Questo screenshot dell'[app di esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) illustra il testo visualizzabile in un controllo `Label`.
+La variabile `text` può quindi essere usata per visualizzare il testo oppure è possibile usarla nel codice. Questo screenshot dell'[app di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) illustra il testo visualizzabile in un controllo `Label`.
 
  [![File di testo incorporato nella libreria di classi portabile](files-images/pcltext-sml.png "File di testo incorporato nella libreria di classi portabile visualizzato nell'app")](files-images/pcltext.png#lightbox "File di testo incorporato nella libreria di classi portabile visualizzato nell'app")
 
@@ -166,7 +166,7 @@ Questo articolo ha illustrato semplici operazioni su file per il salvataggio e i
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di file](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+- [Esempio di file](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Esempi di Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md) (Uso del file system in Xamarin.iOS)
 

@@ -1,44 +1,44 @@
 ---
-title: Layout associabile in xamarin. Forms
-description: Layout associabile Abilita classi di layout generare il contenuto mediante l'associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un DataTemplate.
+title: Layout associabili in Novell. Forms
+description: I layout associabili consentono alle classi di layout di generare il contenuto mediante associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un oggetto DataTemplate.
 ms.prod: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: a824c892d21df9264b772bed09a4aef893f3b949
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970972"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647900"
 ---
-# <a name="bindable-layouts-in-xamarinforms"></a>Layout associabile in xamarin. Forms
+# <a name="bindable-layouts-in-xamarinforms"></a>Layout associabili in Novell. Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
-Layout associabile consentono a qualsiasi classe di layout che deriva dal [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe per cui generare il contenuto mediante l'associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate). Layout associabile forniti dal `BindableLayout` (classe), che espone le proprietà associate seguenti:
+I layout associabili consentono a qualsiasi classe di layout che deriva [`Layout<T>`](xref:Xamarin.Forms.Layout`1) dalla classe di generare il contenuto mediante associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)un oggetto. I `BindableLayout` layout associabili sono forniti dalla classe, che espone le proprietà associate seguenti:
 
-- `ItemsSource` : specifica la raccolta di `IEnumerable` gli elementi da visualizzare per il layout.
-- `ItemTemplate` : specifica la [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) da applicare a ogni elemento nella raccolta di elementi visualizzati dal layout.
-- `ItemTemplateSelector` : specifica la [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) che verrà usato per scegliere una [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) per un elemento in fase di esecuzione.
+- `ItemsSource`: specifica la raccolta di `IEnumerable` elementi che devono essere visualizzati dal layout.
+- `ItemTemplate`: specifica l' [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto da applicare a ogni elemento nella raccolta di elementi visualizzati dal layout.
+- `ItemTemplateSelector`: specifica l' [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) oggetto che verrà usato per scegliere un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) oggetto per un elemento in fase di esecuzione.
 
-Queste proprietà possono essere collegate per la [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout), [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout), [ `Grid` ](xref:Xamarin.Forms.Grid), [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) , e [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) classi che derivano da tutti i [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe.
+Queste proprietà possono essere collegate alle [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)classi, [`FlexLayout`](xref:Xamarin.Forms.FlexLayout), [`Grid`](xref:Xamarin.Forms.Grid), [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)e [`StackLayout`](xref:Xamarin.Forms.StackLayout) , che derivano tutte dalla [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classe.
 
 > [!NOTE]
-> Il `ItemTemplate` proprietà ha la precedenza quando sia il `ItemTemplate` e `ItemTemplateSelector` proprietà vengono impostate.
+> La `ItemTemplate` proprietà ha la precedenza quando vengono `ItemTemplate` impostate `ItemTemplateSelector` entrambe le proprietà e.
 
-Il `Layout<T>` classe espone un [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) insieme, in cui vengono aggiunti gli elementi figlio di un layout. Quando la `BinableLayout.ItemsSource` proprietà è impostata su una raccolta di elementi e collegato a un [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-viene aggiunta la classe derivata, ogni elemento nella raccolta la `Layout<T>.Children` raccolta per la visualizzazione per il layout. Il `Layout<T>`-classe derivata aggiornerà le relative visualizzazioni figlio quando viene modificata la raccolta sottostante. Per altre informazioni sul ciclo di layout di xamarin. Forms, vedere [creazione di un Layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
+La `Layout<T>` classe espone una [`Children`](xref:Xamarin.Forms.Layout`1.Children) raccolta alla quale vengono aggiunti gli elementi figlio di un layout. Quando la `BinableLayout.ItemsSource` proprietà è impostata su una raccolta di elementi e collegata a una [`Layout<T>`](xref:Xamarin.Forms.Layout`1)classe derivata da, ogni elemento della `Layout<T>.Children` raccolta viene aggiunto alla raccolta per la visualizzazione da parte del layout. La `Layout<T>`classe derivata da aggiorna quindi le visualizzazioni figlio quando viene modificata la raccolta sottostante. Per ulteriori informazioni sul ciclo di layout di Novell. Forms, vedere [creazione di un layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md).
 
-Layout associabili deve essere utilizzato solo quando la raccolta di elementi da visualizzare è piccola e lo scorrimento e la selezione non è necessaria. Durante lo scorrimento è possibile specificare eseguendo il wrapping di un layout associabile in una [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), ciò non è consigliata perché layout associabile non dispongono di virtualizzazione dell'interfaccia utente. Una visualizzazione scorrevole che comprende la virtualizzazione dell'interfaccia utente, ad esempio, quando lo scorrimento è necessario [ `ListView` ](xref:Xamarin.Forms.ListView) oppure [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), deve essere utilizzato. Il mancato rispetto di questa raccomandazione può causare problemi di prestazioni.
+I layout associabili devono essere usati solo quando la raccolta di elementi da visualizzare è di piccole dimensioni e lo scorrimento e la selezione non sono necessari. Sebbene sia possibile fornire lo scorrimento eseguendo il wrapping di un layout associabile in un [`ScrollView`](xref:Xamarin.Forms.ScrollView), questa operazione non è consigliata perché i layout associabili non hanno la virtualizzazione dell'interfaccia utente. Quando è necessario lo scorrimento, è necessario utilizzare una visualizzazione scorrevole che includa la virtualizzazione [`CollectionView`](xref:Xamarin.Forms.CollectionView)dell'interfaccia utente, ad esempio [`ListView`](xref:Xamarin.Forms.ListView) o. L'impossibilità di osservare questa raccomandazione può causare problemi di prestazioni.
 
 > [!IMPORTANT]
->Sebbene sia tecnicamente possibile collegare un layout associabile a qualsiasi classe di layout da cui deriva il [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) (classe), non è sempre pratico eseguire questa operazione, in particolare per il [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) , [ `Grid` ](xref:Xamarin.Forms.Grid), e [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) classi. Ad esempio, si consideri lo scenario di si desideri visualizzare una raccolta di dati in un [ `Grid` ](xref:Xamarin.Forms.Grid) utilizzando un layout associabile, in cui ogni elemento nella raccolta è un oggetto che contiene più proprietà. Ogni riga nel `Grid` dovrebbe visualizzare un oggetto dalla raccolta, con ogni colonna il `Grid` visualizzazione di una delle proprietà dell'oggetto. Poiché il [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) per il layout associabile può contenere solo un singolo oggetto, è necessario per l'oggetto sia una classe di layout che contiene più viste in ciascuno dei quali una delle proprietà dell'oggetto in una determinata `Grid` colonna. Sebbene questo scenario può essere realizzato con layout associabile, il risultato è un elemento padre `Grid` contenente un elemento figlio `Grid` per ciascun elemento della raccolta associata, ovvero un utilizzo estremamente inefficiente e problemi di `Grid` layout.
+>Sebbene sia tecnicamente possibile aggiungere un layout associabile a qualsiasi [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classe di layout che deriva dalla classe, non è sempre praticabile, in particolare per le [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)classi, [`Grid`](xref:Xamarin.Forms.Grid)e [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Si consideri, ad esempio, lo scenario in cui si desidera visualizzare una [`Grid`](xref:Xamarin.Forms.Grid) raccolta di dati in un oggetto utilizzando un layout associabile, in cui ogni elemento della raccolta è un oggetto che contiene più proprietà. Ogni riga in `Grid` deve visualizzare un oggetto della raccolta, con ogni colonna `Grid` in che visualizza una delle proprietà dell'oggetto. Poiché il [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) per il layout associabile può contenere solo un singolo oggetto, è necessario che l'oggetto sia una classe layout contenente più visualizzazioni che ognuna Visualizza una delle proprietà dell'oggetto in una colonna specifica. `Grid` Sebbene questo scenario possa essere realizzato con layout associabili, il `Grid` `Grid` risultato è un elemento padre che contiene un `Grid` elemento figlio per ogni elemento nella raccolta associata, che è un utilizzo estremamente inefficiente e problematico del layout.
 
-## <a name="populating-a-bindable-layout-with-data"></a>Popolamento di un layout con i dati associabile
+## <a name="populating-a-bindable-layout-with-data"></a>Popolamento di un layout associabile con dati
 
-Un layout associabile viene popolato con i dati tramite l'impostazione relativa `ItemsSource` a qualsiasi insieme che implementa `IEnumerable`e allegarlo a un [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-classe derivata:
+Un layout associabile viene popolato con i dati `ItemsSource` impostando la relativa proprietà su `IEnumerable`qualsiasi raccolta che implementa e associando [`Layout<T>`](xref:Xamarin.Forms.Layout`1)tale layout a una classe derivata da:
 
 ```xaml
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
@@ -52,11 +52,11 @@ var grid = new Grid();
 BindableLayout.SetItemsSource(grid, items);
 ```
 
-Quando la `BindableLayout.ItemsSource` proprietà associata è impostata su un layout, ma la `BindableLayout.ItemTemplate` proprietà associata non è impostato, tutti gli elementi `IEnumerable` raccolta verrà visualizzata da una [ `Label` ](xref:Xamarin.Forms.Label) creato dal `BindableLayout` classe.
+Quando la `BindableLayout.ItemsSource` proprietà associata è impostata su un layout, ma la `BindableLayout.ItemTemplate` proprietà associata non è impostata `IEnumerable` , ogni elemento della raccolta verrà `BindableLayout` visualizzato da un [`Label`](xref:Xamarin.Forms.Label) oggetto creato dalla classe.
 
-## <a name="defining-item-appearance"></a>La definizione dell'aspetto degli elementi
+## <a name="defining-item-appearance"></a>Definizione dell'aspetto dell'elemento
 
-L'aspetto di ogni elemento nel layout associabile può essere definita impostando il `BindableLayout.ItemTemplate` associata a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+L'aspetto di ogni elemento nel layout associabile può essere definito impostando la `BindableLayout.ItemTemplate` proprietà associata su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)oggetto:
 
 ```xaml
 <StackLayout BindableLayout.ItemsSource="{Binding User.TopFollowers}"
@@ -83,15 +83,15 @@ BindableLayout.SetItemsSource(stackLayout, viewModel.User.TopFollowers);
 BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 ```
 
-In questo esempio, tutti gli elementi di `TopFollowers` raccolta verrà visualizzata da un `CircleImage` le viste definite nel [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+In questo esempio, ogni elemento della `TopFollowers` raccolta verrà visualizzato da una `CircleImage` visualizzazione definita in [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
-![Layout associabili con un DataTemplate](bindable-layouts-images/top-followers.png "associabile layout con un modello di dati")
+![Layout associabile a un oggetto DataTemplate](bindable-layouts-images/top-followers.png "Layout associabile con un modello di dati")
 
 Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
-## <a name="choosing-item-appearance-at-runtime"></a>Scelta dell'aspetto degli elementi in fase di esecuzione
+## <a name="choosing-item-appearance-at-runtime"></a>Scelta dell'aspetto dell'elemento in fase di esecuzione
 
-È possibile scegliere l'aspetto di ogni elemento nel layout associabile in fase di esecuzione, basati sul valore dell'elemento, impostando il `BindableLayout.ItemTemplateSelector` associata a un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector):
+È possibile scegliere l'aspetto di ogni elemento nel layout associabile in fase di esecuzione, in base al valore dell'elemento, `BindableLayout.ItemTemplateSelector` impostando la proprietà [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)associata su un oggetto:
 
 ```xaml
 <FlexLayout BindableLayout.ItemsSource="{Binding User.FavoriteTech}"
@@ -108,7 +108,7 @@ BindableLayout.SetItemsSource(flexLayout, viewModel.User.FavoriteTech);
 BindableLayout.SetItemTemplateSelector(flexLayout, dataTemplateSelector);
 ```
 
-Il [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) usato nell'esempio di applicazione è illustrata nell'esempio seguente:
+L' [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) oggetto usato nell'applicazione di esempio è illustrato nell'esempio seguente:
 
 ```csharp
 public class TechItemTemplateSelector : DataTemplateSelector
@@ -123,15 +123,15 @@ public class TechItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-Il `TechItemTemplateSelector` classe definisce `DefaultTemplate` e `XamarinFormsTemplate` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) le proprietà impostate per i modelli di dati diversi. Il `OnSelectTemplate` restituzione del metodo di `XamarinFormsTemplate`, che consente di visualizzare un elemento in rosso scuro con un cuore accanto a esso, quando l'elemento è uguale a "Xamarin. Forms". Quando l'elemento non è uguale a "Xamarin. Forms", il `OnSelectTemplate` metodo restituisce il `DefaultTemplate`, che consente di visualizzare un elemento utilizzando il colore predefinito di un [ `Label` ](xref:Xamarin.Forms.Label):
+La `TechItemTemplateSelector` classe definisce `DefaultTemplate` le `XamarinFormsTemplate` proprietà [e`DataTemplate`](xref:Xamarin.Forms.DataTemplate) impostate su modelli di dati diversi. Il `OnSelectTemplate` metodo`XamarinFormsTemplate`restituisce, che visualizza un elemento in rosso scuro con un cuore accanto, quando l'elemento è uguale a "Novell. Forms". Quando l'elemento non è uguale a "Novell. Forms" `OnSelectTemplate` , il metodo `DefaultTemplate`restituisce, che visualizza un elemento usando il colore predefinito di [`Label`](xref:Xamarin.Forms.Label)un oggetto:
 
-![Layout associabili con un DataTemplateSelector](bindable-layouts-images/favorite-tech.png "associabile layout con un selettore di modello di dati")
+![Layout associabile con DataTemplateSelector](bindable-layouts-images/favorite-tech.png "Layout associabile con un selettore di modello di dati")
 
-Per altre informazioni sui selettori di modello di dati, vedere [creando un DataTemplateSelector xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Per ulteriori informazioni sui selettori di modelli di dati, vedere [Creating a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di Layout associabile (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [Demo sul layout associabile (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Creazione di un layout personalizzato](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Modelli di dati di xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Creazione di un DataTemplateSelector xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Creazione di un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

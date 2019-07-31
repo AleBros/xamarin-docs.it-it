@@ -1,22 +1,22 @@
 ---
-title: Store e accedere ai dati in archiviazione di Azure da xamarin. Forms
-description: Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere utilizzata per archiviare i dati non strutturati e strutturati. Questo articolo illustra come usare xamarin. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati.
+title: Archiviare e accedere ai dati in archiviazione di Azure da Novell. Forms
+description: Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere utilizzata per archiviare i dati non strutturati e strutturati. Questo articolo illustra come usare Novell. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 044ff7448cc302da4d0efdf88325c40b9db0315c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658628"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649717"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Store e accedere ai dati in archiviazione di Azure da xamarin. Forms
+# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Archiviare e accedere ai dati in archiviazione di Azure da Novell. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere utilizzata per archiviare i dati non strutturati e strutturati. Questo articolo illustra come usare xamarin. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati._
 
@@ -260,8 +260,8 @@ Dopo aver recuperato un riferimento al contenitore, il metodo recupera un riferi
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Archiviazione di Azure (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+- [Archiviazione di Azure (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introduzione all'archiviazione](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Come usare archiviazione Blob da Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
-- [Uso delle firme di accesso condiviso (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Uso delle firme di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [Archiviazione di Windows Azure (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

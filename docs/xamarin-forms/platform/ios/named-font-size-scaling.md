@@ -1,24 +1,24 @@
 ---
-title: Ridimensionamento di accessibilità per denominato le dimensioni dei caratteri in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare iOS specifico della piattaforma che disabilita la scalabilità per le dimensioni dei caratteri denominato accessibilità.
+title: Ridimensionamento dell'accessibilità per le dimensioni dei tipi di carattere
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che disabilita la scalabilità dell'accessibilità per le dimensioni dei tipi di carattere denominati.
 ms.prod: xamarin
 ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: 1fc6fefe1f9fe48fe2abb367b376a5a6f3484462
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 678ea2210389eb33bc3a184d758f2bfa07c60bd9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517950"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656737"
 ---
-# <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Ridimensionamento di accessibilità per denominato le dimensioni dei caratteri in iOS
+# <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Ridimensionamento dell'accessibilità per le dimensioni dei tipi di carattere
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma iOS Disabilita scalabilità per le dimensioni dei caratteri denominato accessibilità. Vengono utilizzati in XAML, impostando il `Application.EnableAccessibilityScalingForNamedFontSizes` la proprietà associabile per `false`:
+Questa specifica della piattaforma iOS Disabilita la scalabilità dell'accessibilità per le dimensioni dei tipi di carattere denominate. Vengono utilizzati in XAML, impostando il `Application.EnableAccessibilityScalingForNamedFontSizes` la proprietà associabile per `false`:
 
 ```xaml
 <Application ...
@@ -38,10 +38,10 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetEnableAccessibilityScalingForNamedFontSizes(false);
 ```
 
-Il `Application.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Application.SetEnableAccessibilityScalingForNamedFontSizes` metodo, nelle [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usato per disabilitare le dimensioni dei caratteri denominato da ridimensionare dalle impostazioni di accessibilità di iOS. Inoltre, il `Application.GetEnableAccessibilityScalingForNamedFontSizes` metodo può essere utilizzato da restituire se le impostazioni di accessibilità di iOS vengono ridotte le dimensioni dei caratteri denominato.
+Il `Application.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Application.SetEnableAccessibilityScalingForNamedFontSizes` metodo, [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) nello spazio dei nomi, viene usato per disabilitare le dimensioni del carattere denominate ridimensionate in base alle impostazioni di accessibilità iOS. Inoltre, il `Application.GetEnableAccessibilityScalingForNamedFontSizes` metodo può essere usato per restituire se le dimensioni dei tipi di carattere denominate vengono ridimensionate in base alle impostazioni di accessibilità iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

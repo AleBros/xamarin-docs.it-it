@@ -1,53 +1,53 @@
 ---
-title: Feedback Aptico in xamarin. IOS
-description: Questo documento descrive come fornire l'implementazione del feedback aptico in un'app xamarin. IOS. Viene descritto UIImpactFeedbackGenerator UINotificationFeedbackGenerator e UISelectionFeedbackGenerator.
+title: Fornire feedback tattile in Novell. iOS
+description: Questo documento descrive come fornire commenti e suggerimenti tattili in un'app Novell. iOS. Vengono illustrati UIImpactFeedbackGenerator, UINotificationFeedbackGenerator e UISelectionFeedbackGenerator.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b2c381c59ba1574e80babc2c7e68535a3deffe35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9054135713837374dade958b3ccb35cc239bdb94
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384619"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655869"
 ---
-# <a name="providing-haptic-feedback-in-xamarinios"></a>Feedback Aptico in xamarin. IOS
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Fornire feedback tattile in Novell. iOS
 
 <a name="Overview" />
 
 ## <a name="overview"></a>Panoramica
 
-Sull'iPhone 7 e iPhone 7 Plus, Apple ha incluso nuove risposte aptico che forniscono altri modi per fisicamente coinvolgere l'utente. Implementazione del Feedback aptico (noto anche semplicemente come Haptics) usa il senso di tocco, tramite forza, vibrazioni o movimento, nella progettazione dell'interfaccia utente. Usare queste nuove opzioni tattili commenti e suggerimenti per rafforzare le relative azioni e ottenere l'attenzione dell'utente.
+In iPhone 7 e iPhone 7 Plus, Apple ha incluso nuove risposte tattili che offrono ulteriori modalità di coinvolgimento fisico dell'utente. Il feedback tattile (spesso definito semplicemente come haptics) usa il senso di tocco (via forza, vibrazioni o movimento) nella progettazione dell'interfaccia utente. Usare queste nuove opzioni di feedback tattile per attirare l'attenzione dell'utente e rafforzare le azioni.
 
 Gli argomenti seguenti vengono descritti nel dettaglio:
 
-- [Sul Feedback Aptico](#About-Haptic-Feedback)
+- [Informazioni sul feedback tattile](#About-Haptic-Feedback)
 - [UIImpactFeedbackGenerator](#UIImpactFeedbackGenerator)
 - [UINotificationFeedbackGenerator](#UINotificationFeedbackGenerator)
 - [UISelectionFeedbackGenerator](#UISelectionFeedbackGenerator)
 
 <a name="About-Haptic-Feedback" />
 
-## <a name="about-haptic-feedback"></a>Sul Feedback Aptico
+## <a name="about-haptic-feedback"></a>Informazioni sul feedback tattile
 
-Diversi elementi dell'interfaccia utente predefiniti forniscono già del feedback aptico quali controlli di selezione, commutatori e i dispositivi di scorrimento. iOS 10 è ora aggiunta la possibilità di generare a livello di programmazione haptics usando una sottoclasse concreta del `UIFeedbackGenerator` classe.
+Molti elementi dell'interfaccia utente incorporati forniscono già Commenti tattili, ad esempio Picker, commutatori e dispositivi di scorrimento. iOS 10 aggiunge ora la possibilità di attivare haptics a livello di codice usando una sottoclasse `UIFeedbackGenerator` concreta della classe.
 
-Lo sviluppatore può utilizzare uno dei seguenti `UIFeedbackGenerator` alle sottoclassi di trigger a livello di programmazione del feedback aptico:
+Lo sviluppatore può usare una delle sottoclassi `UIFeedbackGenerator` seguenti per attivare il feedback tattile a livello di codice:
 
-- `UIImpactFeedbackGenerator` -Usare il generatore di commenti e suggerimenti per integrare un'azione o attività, ad esempio la presentazione di un "thud" quando si scorre una visualizzazione nella posizione corretta oppure se sono in conflitto di due oggetti sullo schermo.
-- `UINotificationFeedbackGenerator` -Usare il generatore di commenti e suggerimenti per le notifiche, ad esempio un tipo di completamento, errore o qualsiasi altra azione di avviso.
-- `UISelectionFeedbackGenerator` -Usare il generatore di commenti e suggerimenti per una selezione attiva la modifica, ad esempio il prelievo di un elemento da un elenco.
+- `UIImpactFeedbackGenerator`-Usare questo generatore di commenti per integrare un'azione o un'attività, ad esempio la presentazione di un "tonfo" quando una visualizzazione viene spostata sul posto o se due oggetti sullo schermo sono in conflitto.
+- `UINotificationFeedbackGenerator`-Usare questo generatore di commenti per le notifiche, ad esempio il completamento di un'azione, l'errore o qualsiasi altro tipo di avviso.
+- `UISelectionFeedbackGenerator`-Usare questo generatore di commenti per una selezione che cambia attivamente, ad esempio selezionando un elemento da un elenco.
 
 <a name="UIImpactFeedbackGenerator" />
 
 ### <a name="uiimpactfeedbackgenerator"></a>UIImpactFeedbackGenerator
 
-Usare il generatore di commenti e suggerimenti per integrare un'azione o attività, ad esempio la presentazione di un "thud" quando si scorre una visualizzazione nella posizione corretta oppure se sono in conflitto di due oggetti sullo schermo.
+Usare questo generatore di commenti per integrare un'azione o un'attività, ad esempio la presentazione di un "tonfo" quando una visualizzazione viene spostata sul posto o se due oggetti sullo schermo sono in conflitto.
 
-Usare il codice seguente ai commenti e suggerimenti impatto di trigger:
+Usare il codice seguente per attivare il feedback sull'effetto:
 
 ```csharp
 using UIKit;
@@ -61,23 +61,23 @@ impact.Prepare ();
 impact.ImpactOccurred ();
 ```
 
-Quando lo sviluppatore crea una nuova istanza della `UIImpactFeedbackGenerator` classe forniscono un `UIImpactFeedbackStyle` specificando l'attendibilità del feedback come:
+Quando lo sviluppatore crea una nuova istanza della `UIImpactFeedbackGenerator` classe, fornisce un oggetto `UIImpactFeedbackStyle` che specifica l'attendibilità del feedback come:
 
 - `Heavy`
 - `Medium`
 - `Light`
 
-Il `Prepare` metodo di `UIImpactFeedbackGenerator` viene chiamato per informare il sistema che del feedback aptico sta per verificarsi in modo che è possibile ridurre al minimo la latenza.
+Il `Prepare` metodo`UIImpactFeedbackGenerator` di viene chiamato per informare il sistema che il feedback tattile sta per essere eseguito, in modo da ridurre al minimo la latenza.
 
-Il `ImpactOccurred` metodo attiva quindi del feedback aptico.
+Il `ImpactOccurred` metodo attiva quindi il feedback tattile.
 
 <a name="UINotificationFeedbackGenerator" />
 
 ### <a name="uinotificationfeedbackgenerator"></a>UINotificationFeedbackGenerator
 
-Usare il generatore di commenti e suggerimenti per le notifiche, ad esempio un tipo di completamento, errore o qualsiasi altra azione di avviso.
+Usare questo generatore di feedback per le notifiche, ad esempio il completamento di un'azione, l'errore o qualsiasi altro tipo di avviso.
 
-Usare il codice seguente ai commenti e suggerimenti notifica trigger:
+Usare il codice seguente per attivare il feedback delle notifiche:
 
 ```csharp
 using UIKit;
@@ -91,9 +91,9 @@ notification.Prepare ();
 notification.NotificationOccurred (UINotificationFeedbackType.Error);
 ```
 
-Una nuova istanza di `UINotificationFeedbackGenerator` classe viene creata e la relativa `Prepare` metodo viene chiamato per informare il sistema che del feedback aptico sta per verificarsi in modo che è possibile ridurre al minimo la latenza.
+Viene creata una nuova istanza `UINotificationFeedbackGenerator` della classe e viene chiamato `Prepare` il relativo metodo per informare il sistema che il feedback tattile sta per essere eseguito, in modo da ridurre al minimo la latenza.
 
-Il `NotificationOccurred` viene chiamato per attivare del feedback aptico con un determinato `UINotificationFeedbackType` di:
+Viene `NotificationOccurred` chiamato per attivare il feedback tattile con un `UINotificationFeedbackType` dato di:
 
 - `Success`
 - `Warning`
@@ -103,9 +103,9 @@ Il `NotificationOccurred` viene chiamato per attivare del feedback aptico con un
 
 ### <a name="uiselectionfeedbackgenerator"></a>UISelectionFeedbackGenerator
 
-Usare il generatore di commenti e suggerimenti per una selezione attiva la modifica, ad esempio il prelievo di un elemento da un elenco.
+Usare questo generatore di commenti per una selezione che cambia attivamente, ad esempio selezionando un elemento da un elenco.
 
-Usare il codice seguente per il feedback della selezione di trigger:
+Usare il codice seguente per attivare il feedback di selezione:
 
 ```csharp
 using UIKit;
@@ -119,14 +119,14 @@ selection.Prepare ();
 selection.SelectionChanged ();
 ```
 
-Una nuova istanza di `UISelectionFeedbackGenerator` classe viene creata e la relativa `Prepare` metodo viene chiamato per informare il sistema che del feedback aptico sta per verificarsi in modo che è possibile ridurre al minimo la latenza.
+Viene creata una nuova istanza `UISelectionFeedbackGenerator` della classe e viene chiamato `Prepare` il relativo metodo per informare il sistema che il feedback tattile sta per essere eseguito, in modo da ridurre al minimo la latenza.
 
-Il `SelectionChanged` metodo attiva quindi del feedback aptico.
+Il `SelectionChanged` metodo attiva quindi il feedback tattile.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato i nuovi tipi di feedback aptico disponibile in iOS 10 e come implementarli in xamarin. IOS.
+Questo articolo ha illustrato i nuovi tipi di feedback tattili disponibili in iOS 10 e come implementarli in Novell. iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Esempi di iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

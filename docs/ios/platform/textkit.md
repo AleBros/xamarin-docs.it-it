@@ -1,24 +1,24 @@
 ---
-title: TextKit in xamarin. IOS
-description: Questo documento descrive come usare TextKit in xamarin. IOS. TextKit testo potenti funzionalità di layout e rendering.
+title: TextKit in Novell. iOS
+description: Questo documento descrive come usare TextKit in Novell. iOS. TextKit fornisce funzionalità avanzate di rendering e layout del testo.
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f08e37d17cc32e45232d54cc4a51bb48d7ec94b1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4d4785d6e556c856b0f7b4db2accd87f5297e277
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61184515"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655364"
 ---
-# <a name="textkit-in-xamarinios"></a>TextKit in xamarin. IOS
+# <a name="textkit-in-xamarinios"></a>TextKit in Novell. iOS
 
-TextKit è una nuova API che offre funzionalità di layout e rendering del testo completa. È basato su framework Core testo a basso livello, ma è molto più facile da usare rispetto al testo di base.
+TextKit è una nuova API che offre funzionalità avanzate per il layout e il rendering del testo. Si basa sul Framework di testo principale di basso livello, ma è molto più semplice da usare rispetto al testo principale.
 
-Per rendere le funzionalità di TextKit disponibile per i controlli standard, numerosi controlli di testo iOS sono stati reimplementati usare TextKit, tra cui:
+Per rendere disponibili le funzionalità di TextKit ai controlli standard, diversi controlli testo iOS sono stati riimplementati per l'uso di TextKit, tra cui:
 
 -  UITextView
 -  UITextField
@@ -26,24 +26,24 @@ Per rendere le funzionalità di TextKit disponibile per i controlli standard, nu
 
 ## <a name="architecture"></a>Architettura
 
-TextKit offre un'architettura a più livelli che separa l'archiviazione di testo dal layout e visualizzazione, ad esempio le classi seguenti:
+TextKit fornisce un'architettura a più livelli che separa l'archiviazione di testo dal layout e dalla visualizzazione, incluse le classi seguenti:
 
--  `NSTextContainer` : Fornisce la geometria di cui viene usato per il testo di layout e il sistema di coordinate.
--  `NSLayoutManager` – Dispone il testo da trasformare il testo in glifi. 
--  `NSTextStorage` : Contiene i dati di testo, nonché gestisce gli aggiornamenti delle proprietà testo batch. Tutti gli aggiornamenti batch sono passati al gestore di layout per l'elaborazione delle modifiche, ad esempio il ricalcolo del layout e ridisegnando il testo effettivo.
+-  `NSTextContainer`: Fornisce il sistema di coordinate e la geometria usati per il layout del testo.
+-  `NSLayoutManager`: Consente di disporre il testo trasformando il testo in glifi. 
+-  `NSTextStorage`: Include i dati di testo e gestisce gli aggiornamenti delle proprietà del testo del batch. Eventuali aggiornamenti batch vengono passati a gestione layout per l'effettiva elaborazione delle modifiche, ad esempio il ricalcolo del layout e il ridisegno del testo.
 
 
-Queste tre classi vengono applicate a una vista che esegue il rendering di testo. Gestione visualizzazioni, come del testo incorporato `UITextView`, `UITextField`, e `UILabel` sono già disponibili impostata, ma è possibile creare e applicarle a qualsiasi `UIView` anche l'istanza.
+Queste tre classi vengono applicate a una visualizzazione che esegue il rendering del testo. Le visualizzazioni di gestione del testo predefinite, ad esempio `UITextView`, `UITextField`e `UILabel` sono già impostate, ma è possibile crearle e applicarle anche a qualsiasi `UIView` istanza.
 
-Nella figura seguente viene illustrata questa architettura:
+Questa architettura è illustrata nella figura seguente:
 
  ![](textkit-images/textkitarch.png "Questa figura illustra l'architettura TextKit")
 
-## <a name="text-storage-and-attributes"></a>Gli attributi e la memorizzazione del testo
+## <a name="text-storage-and-attributes"></a>Archiviazione di testo e attributi
 
-Il `NSTextStorage` la classe contiene il testo visualizzato da una vista. Comunica inoltre le modifiche per il testo, ad esempio modifiche ai caratteri o i relativi attributi: per la gestione di layout per la visualizzazione. `NSTextStorage` eredita da `MSMutableAttributed` stringa, che consente le modifiche agli attributi di testo per specificare in batch tra `BeginEditing` e `EndEditing` chiamate.
+La `NSTextStorage` classe include il testo visualizzato da una visualizzazione. Comunica anche le modifiche apportate al testo, ad esempio le modifiche apportate ai caratteri o ai rispettivi attributi, al gestore del layout per la visualizzazione. `NSTextStorage`eredita da `MSMutableAttributed` String, consentendo la specifica delle modifiche agli attributi di testo nei batch `BeginEditing` tra `EndEditing` le chiamate a e.
 
-Ad esempio, il frammento di codice seguente specifica una modifica in primo piano e sfondo colori, rispettivamente e destinato a determinati intervalli:
+Il frammento di codice seguente, ad esempio, specifica una modifica ai colori di primo piano e di sfondo, rispettivamente e ha come destinazione intervalli specifici:
 
 ```csharp
 textView.TextStorage.BeginEditing ();
@@ -52,17 +52,17 @@ textView.TextStorage.AddAttribute(UIStringAttributeKey.BackgroundColor, UIColor.
 textView.TextStorage.EndEditing ();
 ```
 
-Dopo aver `EndEditing` viene chiamato, le modifiche vengono inviate al gestore di layout, che a sua volta esegue qualsiasi layout necessarie e i calcoli per il rendering per il testo da visualizzare nella visualizzazione.
+Dopo `EndEditing` la chiamata a, le modifiche vengono inviate al gestore del layout, che a sua volta esegue tutti i calcoli di layout e rendering necessari per il testo da visualizzare nella visualizzazione.
 
 ## <a name="layout-with-exclusion-path"></a>Layout con percorso di esclusione
 
-TextKit inoltre supporta il layout e consente scenari complessi, ad esempio testo a più colonne e propagazione i percorsi specificati chiamato *esclusione percorsi*. Esclusione percorsi vengono applicati per il contenitore di testo, che modifica la geometria del layout del testo, quindi il testo può circondare i percorsi specificati.
+TextKit supporta anche il layout e consente scenari complessi, ad esempio il testo a più colonne e la propagazione del testo intorno ai percorsi specificati, detti *percorsi di esclusione*. Il percorso di esclusione viene applicato al contenitore di testo, che modifica la geometria del layout del testo, causando il flusso del testo intorno ai percorsi specificati.
 
-Aggiunta di un percorso di esclusione richiede l'impostazione di `ExclusionPaths` proprietà nel gestore del layout. Impostando questa proprietà, il gestore di layout invalidare il layout del testo e scorrere il testo racchiudere il percorso di esclusione.
+Per aggiungere un percorso di esclusione è `ExclusionPaths` necessario impostare la proprietà su Gestione layout. Impostando questa proprietà, il layout del testo viene invalidato dal gestore del layout e il testo viene propagato attorno al percorso di esclusione.
 
-### <a name="exclusion-based-on-a-cgpath"></a>Esclusione in base un CGPath
+### <a name="exclusion-based-on-a-cgpath"></a>Esclusione basata su un CGPath
 
-Tenere presente quanto segue `UITextView` implementazione sottoclasse:
+Si consideri la seguente `UITextView` implementazione della sottoclasse:
 
 ```csharp
 public class ExclusionPathView : UITextView
@@ -139,35 +139,35 @@ public class ExclusionPathView : UITextView
 }
 ```
 
-Questo codice aggiunge il supporto per il disegno nella visualizzazione di testo tramite Core Graphics. Poiché il `UITextView` classe ora è incorporata per l'uso TextKit per il rendering del testo e il layout, è possibile usare tutte le funzionalità di TextKit, ad esempio l'impostazione di percorsi di esclusione.
+Questo codice aggiunge il supporto per il disegno nella visualizzazione di testo usando la grafica principale. Poiché la `UITextView` classe è ora compilata per usare TextKit per il rendering e il layout del testo, può usare tutte le funzionalità di TextKit, ad esempio l'impostazione dei percorsi di esclusione.
 
 > [!IMPORTANT]
-> Le sottoclassi in questo esempio `UITextView` aggiungere touch supporto di disegno. Creazione di una sottoclasse `UITextView` non è necessario per ottenere le funzionalità di TextKit.
+> Questo esempio `UITextView` di sottoclassi per aggiungere il supporto per il disegno tocco. La sottoclasse `UITextView` non è necessaria per ottenere le funzionalità di TextKit.
 
 
 
-Dopo che l'utente lo disegna nella visualizzazione di testo, il disegnato `CGPath` viene applicato a un `UIBezierPath` istanza impostando la `UIBezierPath.CGPath` proprietà:
+Dopo che l'utente ha disegnato la visualizzazione di testo, `CGPath` l'oggetto disegnato viene `UIBezierPath` applicato a un'istanza `UIBezierPath.CGPath` di impostando la proprietà:
 
 ```csharp
 bezierPath.CGPath = exclusionPath;
 ```
 
-Aggiornare la riga di codice seguente esegue il layout del testo aggiornare racchiudere il percorso:
+L'aggiornamento della riga di codice seguente consente di aggiornare il layout del testo intorno al percorso:
 
 ```csharp
 TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 ```
 
-Lo screenshot seguente illustra come il layout del testo cambia in modo che scorrano racchiudere il percorso creato:
+Lo screenshot seguente illustra il modo in cui il layout del testo cambia per scorrere il tracciato disegnato:
 
 <!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
-![](textkit-images/exclusionpath2.png "In questo screenshot illustra come il layout del testo cambia in modo che scorrano intorno al tracciato disegnato")
+![](textkit-images/exclusionpath2.png "In questa schermata viene illustrato il modo in cui il layout del testo cambia per scorrere il tracciato disegnato")
 
-Si noti che il gestore di layout `AllowsNonContiguousLayout` proprietà è impostata su false, in questo caso. In questo modo il layout di ricalcolo per tutti i casi in cui il testo viene modificato. Se impostato su true possono essere utili le prestazioni evitando un aggiornamento full-layout, soprattutto nel caso dei documenti di grandi dimensioni. Tuttavia, l'impostazione `AllowsNonContiguousLayout` a true potrebbe impedire il percorso di esclusione di aggiornamento del layout in alcune circostanze, ad esempio, se si immette testo in fase di esecuzione senza un ritorno a finali prima il percorso da impostare.
+Si noti che in questo caso `AllowsNonContiguousLayout` la proprietà del gestore del layout è impostata su false. Questo fa sì che il layout venga ricalcolato per tutti i casi in cui il testo viene modificato. L'impostazione di questa opzione su true può trarre vantaggio dalle prestazioni evitando un aggiornamento del layout completo, soprattutto nel caso di documenti di grandi dimensioni. Tuttavia, se `AllowsNonContiguousLayout` si imposta su true, il percorso di esclusione non può aggiornare il layout in alcune circostanze, ad esempio se il testo viene inserito in fase di esecuzione senza un ritorno a capo finale prima dell'impostazione del percorso.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Introduzione a iOS 7 (esempio)](https://developer.xamarin.com/samples/monotouch/IntroToiOS7)
+- [Introduzione ad iOS 7 (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
 - [Panoramica dell'interfaccia utente di iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Elaborazione in background](~/ios/app-fundamentals/backgrounding/index.md)

@@ -1,45 +1,45 @@
 ---
-title: Introduzione a CoreML in xamarin. IOS
-description: Questo documento descrive CoreML, che consente di machine learning in iOS. Questo documento descrive come iniziare a usare CoreML e come usarlo con il framework di visione artificiale.
+title: Introduzione a CoreML in Novell. iOS
+description: Questo documento descrive CoreML, che consente l'apprendimento automatico in iOS. Questo documento illustra come iniziare a usare CoreML e come usarlo con il Framework di visione.
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: 3a00a7256cace9cbcff3478d866646d48cfdc50b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c2092cd9e7beb233c9478869ebff91d85b5b30c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61385081"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649611"
 ---
-# <a name="introduction-to-coreml-in-xamarinios"></a>Introduzione a CoreML in xamarin. IOS
+# <a name="introduction-to-coreml-in-xamarinios"></a>Introduzione a CoreML in Novell. iOS
 
-CoreML offre machine learning per iOS: le app possono sfruttare i vantaggi dei modelli di apprendimento automatico sottoposto a training per eseguire tutti i tipi di attività, dalla risoluzione dei problemi al riconoscimento di immagini.
+CoreML offre l'apprendimento automatico per iOS: le app possono sfruttare i modelli di apprendimento automatico con training per eseguire tutti i tipi di attività, dalla risoluzione dei problemi al riconoscimento delle immagini.
 
-In questa introduzione illustra le attività seguenti:
+In questa introduzione vengono trattati gli elementi seguenti:
 
-- [Guida introduttiva a CoreML](#coreml)
-- [Uso di CoreML con il framework di visione artificiale](#coremlvision)
+- [Introduzione con CoreML](#coreml)
+- [Uso di CoreML con il Framework di visione](#coremlvision)
 
 <a name="coreml" />
 
-## <a name="getting-started-with-coreml"></a>Guida introduttiva a CoreML
+## <a name="getting-started-with-coreml"></a>Introduzione con CoreML
 
-Questi passaggi descrivono come aggiungere CoreML a un progetto iOS. Vedere le [esempio Mars Habitat Pricer](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/) per un esempio pratico.
+Questi passaggi descrivono come aggiungere CoreML a un progetto iOS. Per un esempio pratico, vedere l'esempio di [Mars habitat pricer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) .
 
-![Screenshot di esempio Predittore dei prezzi Habitat MARS](coreml-images/marspricer-heading.png)
+![Schermata di esempio del predittore del prezzo di Mars habitat](coreml-images/marspricer-heading.png)
 
 ### <a name="1-add-the-coreml-model-to-the-project"></a>1. Aggiungere il modello CoreML al progetto
 
-Aggiungere un modello CoreML (un file con il **.mlmodel** estensione) per il **risorse** directory del progetto. 
+Aggiungere un modello CoreML (un file con estensione **mlmodel** ) alla directory Resources del progetto. 
 
-Nelle proprietà del file del modello relativa **azione di compilazione** è impostata su **CoreMLModel**. Ciò significa che verrà compilato in un **.mlmodelc** file quando viene compilata l'applicazione.
+Nelle proprietà del file del modello, l' **azione di compilazione** è impostata su **CoreMLModel**. Ciò significa che verrà compilato in un file con **estensione mlmodelc** durante la compilazione dell'applicazione.
 
 ### <a name="2-load-the-model"></a>2. Caricare il modello
 
-Caricare il modello usando il `MLModel.Create` metodo statico:
+Caricare il modello utilizzando il `MLModel.Create` metodo statico:
 
 ```csharp
 var assetPath = NSBundle.MainBundle.GetUrlForResource("NameOfModel", "mlmodelc");
@@ -48,11 +48,11 @@ model = MLModel.Create(assetPath, out NSError error1);
 
 ### <a name="3-set-the-parameters"></a>3. Impostare i parametri
 
-Parametri del modello vengono passati in ingresso e in uscita usando una classe contenitore che implementa `IMLFeatureProvider`.
+I parametri del modello vengono passati all'interno e all'esterno utilizzando una `IMLFeatureProvider`classe contenitore che implementa.
 
-Classi di provider di funzionalità si comportano come un dizionario di stringhe e `MLFeatureValue`s, dove ogni valore di funzionalità potrebbe essere una semplice stringa o numero, una matrice o dati o un buffer di pixel che contiene un'immagine.
+Le classi del provider di funzionalità si comportano `MLFeatureValue`come un dizionario di stringa e s, dove ogni valore della funzionalità può essere una stringa o un numero semplice, una matrice o dati o un buffer di pixel che contiene un'immagine.
 
-Seguito è riportato il codice per un provider di funzionalità a valore singolo:
+Di seguito è riportato il codice per un provider di funzionalità a valore singolo:
 
 ```csharp
 public class MyInput : NSObject, IMLFeatureProvider
@@ -67,11 +67,11 @@ public class MyInput : NSObject, IMLFeatureProvider
   }
 ```
 
-Usare le classi simile al seguente, è possono specificare i parametri di input in modo comprensibile da CoreML. I nomi delle funzionalità (ad esempio `myParam` nell'esempio di codice) deve corrispondere a ciò che prevede che il modello.
+Utilizzando classi come questa, i parametri di input possono essere forniti in modo comprensibile da CoreML. I nomi delle funzionalità, ad `myParam` esempio nell'esempio di codice, devono corrispondere a quanto previsto dal modello.
 
 ### <a name="4-run-the-model"></a>4. Eseguire il modello
 
-Usando il modello richiede che il provider di funzionalità da cui creare istanze e i parametri impostati, quindi che il `GetPrediction` chiamare il metodo:
+Per usare il modello è necessario creare un'istanza del provider di funzionalità e impostare i parametri, quindi `GetPrediction` chiamare il metodo:
 
 ```csharp
 var input = new MyInput {MyParam = 13};
@@ -80,7 +80,7 @@ var outFeatures = model.GetPrediction(inputFeatures, out NSError error2);
 
 ### <a name="5-extract-the-results"></a>5. Estrarre i risultati
 
-Il risultato di stima `outFeatures` è anche un'istanza di `IMLFeatureProvider`; output i valori sono accessibili tramite `GetFeatureValue` con il nome di ogni parametro di output (ad esempio `theResult`), come in questo esempio:
+Il risultato `outFeatures` della stima è anche un'istanza di `IMLFeatureProvider`. è possibile accedere ai valori di `GetFeatureValue` output usando con il `theResult`nome di ogni parametro di output, ad esempio, come nell'esempio seguente:
 
 ```csharp
 var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 6227020800
@@ -88,17 +88,17 @@ var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 622702
 
 <a name="coremlvision" />
 
-## <a name="using-coreml-with-the-vision-framework"></a>Uso di CoreML con il Framework di visione artificiale
+## <a name="using-coreml-with-the-vision-framework"></a>Uso di CoreML con il Framework di visione
 
-CoreML anche utilizzabile in combinazione con il framework di visione artificiale per eseguire operazioni sull'immagine, ad esempio il riconoscimento delle forme, identificazione di oggetti e altre attività.
+CoreML può essere usato anche in combinazione con il Framework di visione per eseguire operazioni sull'immagine, ad esempio il riconoscimento delle forme, l'identificazione degli oggetti e altre attività.
 
-I passaggi seguenti descrivono come Vision e CoreML vengono usati insieme nel [CoreMLVision esempio](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/). Combina il codice di esempio il [riconoscimento rettangoli](~/ios/platform/introduction-to-ios11/vision.md#rectangles) dal framework di visione artificiale con i _MNINSTClassifier_ modelli CoreML per identificare una cifra in una fotografia scritto a mano.
+I passaggi seguenti descrivono come CoreML e visione vengono usati insieme nell' [esempio CoreMLVision](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). L'esempio combina il [riconoscimento](~/ios/platform/introduction-to-ios11/vision.md#rectangles) dei rettangoli dal framework di visione con il modello _MNINSTClassifier_ CoreML per identificare una cifra scritta a mano in una foto.
 
-![Riconoscimento di immagini di numero 3](coreml-images/vision3.png) ![Riconoscimento di immagini del numero 5](coreml-images/vision5.png)
+![Riconoscimento immagini di numero 3](coreml-images/vision3.png) ![Riconoscimento immagini di numero 5](coreml-images/vision5.png)
 
-### <a name="1-create-a-vision-coreml-model"></a>1. Creare un modello di visione artificiale CoreML
+### <a name="1-create-a-vision-coreml-model"></a>1. Creare un modello CoreML per la visione artificiale
 
-I modelli CoreML _MNISTClassifier_ viene caricato e quindi eseguito il wrapping in un `VNCoreMLModel` il modello che rende disponibili per le attività di visione artificiale. Questo codice crea inoltre due richieste di visione artificiale: prima di tutto per trovare i rettangoli in un'immagine, quindi per l'elaborazione di un rettangolo con il modello CoreML:
+Il modello CoreML _MNISTClassifier_ viene caricato e quindi sottoposto a `VNCoreMLModel` wrapper in un che rende il modello disponibile per le attività visive. Questo codice crea anche due richieste di visione: innanzitutto per trovare rettangoli in un'immagine e quindi per elaborare un rettangolo con il modello CoreML:
 
 ```csharp
 // Load the ML model
@@ -113,11 +113,11 @@ RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 ClassificationRequest = new VNCoreMLRequest(model, HandleClassification);
 ```
 
-La classe deve comunque implementare il `HandleRectangles` e `HandleClassification` metodi per le richieste di visione artificiale, illustrate nei passaggi 3 e 4 di seguito.
+La classe deve comunque implementare i `HandleRectangles` metodi e `HandleClassification` per le richieste di visione, illustrati nei passaggi 3 e 4 di seguito.
 
-### <a name="2-start-the-vision-processing"></a>2. Avviare l'elaborazione di visione artificiale
+### <a name="2-start-the-vision-processing"></a>2. Avviare l'elaborazione della visione
 
-Il codice seguente avvia l'elaborazione della richiesta. Nel **CoreMLVision** esempio, questo codice viene eseguito dopo che l'utente ha selezionato un'immagine:
+Il codice seguente avvia l'elaborazione della richiesta. Nell'esempio **CoreMLVision** questo codice viene eseguito dopo che l'utente ha selezionato un'immagine:
 
 ```csharp
 // Run the rectangle detector, which upon completion runs the ML classifier.
@@ -127,13 +127,13 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Questo gestore passa il `ciImage` al framework Vision `VNDetectRectanglesRequest` che è stato creato nel passaggio 1.
+Questo gestore passa `ciImage` al Framework `VNDetectRectanglesRequest` di visione creato nel passaggio 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Gestire i risultati dell'elaborazione di visione artificiale
+### <a name="3-handle-the-results-of-vision-processing"></a>3. Gestire i risultati dell'elaborazione della visione
 
-Una volta completato il rilevamento di rettangolo, viene eseguita la `HandleRectangles` metodo, che ritaglia l'immagine per estrarre il primo rettangolo, converte l'immagine del rettangolo in scala di grigi e lo passa al modello CoreML per la classificazione.
+Una volta completato il rilevamento del rettangolo, viene eseguito il `HandleRectangles` metodo, che ritaglia l'immagine per estrarre il primo rettangolo, converte l'immagine del rettangolo in scala di grigi e la passa al modello CoreML per la classificazione.
 
-Il `request` parametro passato a questo metodo contiene i dettagli della richiesta di visione artificiale e l'uso di `GetResults<VNRectangleObservation>()` metodo, viene restituito un elenco dei rettangoli individuati nell'immagine. Il primo rettangolo `observations[0]` viene estratto e passato al modello CoreML:
+Il `request` parametro passato a questo metodo contiene i dettagli della richiesta di visione e, usando il `GetResults<VNRectangleObservation>()` metodo, restituisce un elenco di rettangoli trovati nell'immagine. Il primo rettangolo `observations[0]` viene estratto e passato al modello CoreML:
 
 ```csharp
 void HandleRectangles(VNRequest request, NSError error) {
@@ -149,11 +149,11 @@ void HandleRectangles(VNRequest request, NSError error) {
 }
 ```
 
-Il `ClassificationRequest` inizializzato nel passaggio 1 per usare il `HandleClassification` metodo definito nel passaggio successivo.
+L' `ClassificationRequest` oggetto è stato inizializzato nel passaggio 1 `HandleClassification` per utilizzare il metodo definito nel passaggio successivo.
 
-### <a name="4-handle-the-coreml"></a>4. Gestire il CoreML
+### <a name="4-handle-the-coreml"></a>4. Gestire CoreML
 
-Il `request` parametro passato a questo metodo contiene i dettagli della richiesta e CoreML e l'uso di `GetResults<VNClassificationObservation>()` metodo, viene restituito un elenco di possibili risultati ordinati in tutta sicurezza (confidenza più elevato prima):
+Il `request` parametro passato a questo metodo contiene i dettagli della richiesta CoreML e, usando il `GetResults<VNClassificationObservation>()` metodo, restituisce un elenco di risultati possibili ordinati in base alla confidenza (primo livello di confidenza):
 
 ```csharp
 void HandleClassification(VNRequest request, NSError error){
@@ -169,19 +169,19 @@ void HandleClassification(VNRequest request, NSError error){
 
 ## <a name="samples"></a>Esempi
 
-Esistono tre campioni CoreML per provare:
+Esistono tre esempi di CoreML da provare:
 
-* Il [esempio di Predittore dei prezzi Habitat Mars](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/) dispone di semplice input e output numerici.
+* L' [esempio Mars habitat Price](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) predittor dispone di semplici output e input numerici.
 
-* Il [Vision e CoreML esempio](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/) accetta un parametro di immagine e Usa il framework di visione artificiale per identificare aree quadrate nell'immagine, in cui vengono passate a un modello CoreML che riconosce singole cifre.
+* L' [esempio vision & CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) accetta un parametro image e usa il Framework di visione per identificare le aree quadre nell'immagine, che vengono passate a un modello CoreML che riconosce le cifre singole.
 
-* Infine, il [esempio di riconoscimento di immagini CoreML](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/) Usa CoreML per identificare le funzionalità di una foto. Per impostazione predefinita viene utilizzato il valore più piccolo **SqueezeNet** modello (5MB), ma è stato scritto in modo che è possibile scaricare e incorporare il più grande **VGG16** modello (553 MB). Per altre informazioni, vedere la [Leggimi dell'esempio](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+* Infine, l' [esempio CoreML Image Recognition](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) USA CoreML per identificare le funzionalità di una foto. Per impostazione predefinita, usa il modello **SqueezeNet** più piccolo (5 MB), ma è stato scritto in modo che sia possibile scaricare e incorporare il modello **VGG16** più grande (553MB). Per ulteriori informazioni, vedere il [file Leggimi dell'esempio](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Machine Learning (Apple)](https://developer.apple.com/machine-learning/)
-- [Esempio CoreML (Mars Habitat) (esempio)](https://developer.xamarin.com/samples/monotouch/ios11/CoreML/)
-- [CoreML e visione artificiale (riconoscimento di numero) (esempio)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/)
-- [Riconoscimento di immagini CoreML (esempio)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/)
-- [CoreML con visione artificiale personalizzato di Azure (esempio)](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel)
+- [Esempio di CoreML (Mars habitat) (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/)
+- [CoreML e visione (riconoscimento numerico) (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
+- [Riconoscimento immagine CoreML (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [CoreML con Azure Visione personalizzata (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
 - [Introduzione a CoreML (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/703/)

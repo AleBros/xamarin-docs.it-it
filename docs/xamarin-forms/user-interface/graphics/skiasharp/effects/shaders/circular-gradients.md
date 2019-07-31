@@ -7,16 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df45908af9e2d13dcaeff732e8e8b1b49c523934
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218185"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647664"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Le sfumature circolare SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Il [ `SKShader` ](xref:SkiaSharp.SKShader) classe definisce i metodi statici per creare quattro tipi diversi di sfumature. Il [ **sfumatura lineare SkiaSharp** ](linear-gradient.md) articolo vengono illustrate le [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) (metodo). Questo articolo illustra i tre tipi di sfumature, ognuno dei quali si basano su cerchi.
 
@@ -54,7 +54,7 @@ I primi due argomenti specificano il centro del cerchio e un raggio. La sfumatur
 
 Se si usa `CreateRadialGradient` per riempire un cerchio, è possibile impostare il centro della sfumatura per il centro del cerchio e il raggio della sfumatura e il raggio del cerchio. In tal caso, il `SKShaderTileMode` argomento non ha alcun effetto sul rendering della sfumatura. Se l'area riempita con sfumatura è maggiore rispetto a quello definito per la sfumatura, tuttavia il `SKShaderTileMode` argomento ha ripercussioni su cosa accade di fuori del cerchio.
 
-L'effetto della `SKShaderMode` è illustrato nel **sfumatura radiale** nella pagina il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio. Il file XAML della pagina Crea un `Picker` che consente di selezionare uno dei tre membri del `SKShaderTileMode` enumerazione:
+L'effetto della `SKShaderMode` è illustrato nel **sfumatura radiale** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio. Il file XAML della pagina Crea un `Picker` che consente di selezionare uno dei tre membri del `SKShaderTileMode` enumerazione:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ Questo codice crea una sfumatura con nero al centro, gradualmente a dissolvenza 
 
 [![Sfumatura radiale](circular-gradients-images/RadialGradient.png "sfumatura radiale")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-In tutti i tre casi, la sfumatura riempie l'area di disegno. Nella schermata iOS a sinistra, la sfumatura di oltre il raggio continua con l'ultimo colore, che è il bianco. Che rappresenta il risultato di `SKShaderTileMode.Clamp`. Schermata di Android Mostra l'effetto della `SKShaderTileMode.Repeat`: 100 pixel dal centro, la sfumatura inizia nuovamente con il primo colore, che è nero. La sfumatura viene ripetuta ogni 100 pixel, del raggio. 
+In tutti i tre casi, la sfumatura riempie l'area di disegno. Nella schermata iOS a sinistra, la sfumatura di oltre il raggio continua con l'ultimo colore, che è il bianco. Che rappresenta il risultato di `SKShaderTileMode.Clamp`. La schermata Android Mostra l'effetto di `SKShaderTileMode.Repeat`: A 100 pixel dal centro, la sfumatura inizia di nuovo con il primo colore, che è il nero. La sfumatura viene ripetuta ogni 100 pixel, del raggio. 
 
 La schermata (Universal Windows Platform) a destra come `SKShaderTileMode.Mirror` fa sì che le istruzioni alternative per le sfumature. La sfumatura di primo è dal nero al centro su bianco in un raggio pari a 100 pixel. Successivo è il bianco dal raggio 100 pixel su nero a un raggio di 200 pixel e sfumatura successiva viene invertita nuovamente.
 
@@ -620,4 +620,4 @@ Centri di avere due cerchi `offCenter` e `center`. Il cerchio centrati nella `ce
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

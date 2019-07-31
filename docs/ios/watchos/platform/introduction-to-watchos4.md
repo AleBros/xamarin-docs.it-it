@@ -1,36 +1,36 @@
 ---
 title: Introduzione a watchOS 4
-description: Questo documento fornisce un'introduzione generale a watchOS 4, che descrive le nuove funzionalità che sono ora disponibili per gli sviluppatori di Xamarin.
+description: Questo documento offre un'introduzione generale a watchos 4, che descrive le nuove funzionalità ora disponibili per gli sviluppatori Novell.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
-ms.openlocfilehash: ca922840b47899b62615bded852e66fe81b3371c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e3766815e071c190046cc5bc7d436621bcee3d29
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61223970"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651542"
 ---
 # <a name="introduction-to-watchos-4"></a>Introduzione a watchOS 4
 
-Accedere alle nuove funzionalità di watchOS 4 nelle tue App:
+Accedi alle nuove funzionalità di watchos 4 nelle tue app:
 
-* Leggere i dati altimeter barometric nel nuovo 3 serie di Apple Watch.
-* Connettersi direttamente alle risorse di rete dati cellulare disponibili su alcuni modelli di 3 serie di Apple Watch.
-* Bluetooth core può connettersi direttamente a accessori.
-* Nuova modalità in background per le App per gli allenamenti e audio.
-* Nuovo SiriKit Intent per [gli elenchi e le note](~/ios/platform/introduction-to-ios11/sirikit.md).
+* Leggere i dati dell'altimetro barometrico nella nuova serie di Apple Watch 3.
+* Connettersi direttamente a risorse di rete con dati cellulari disponibili in alcuni modelli di Apple Watch serie 3.
+* Il Bluetooth di base può connettersi direttamente agli accessori.
+* Nuove modalità di background per le app di allenamento e audio.
+* Nuovi Intent SiriKit per [elenchi e note](~/ios/platform/introduction-to-ios11/sirikit.md).
 
-Modifiche apportate dal watchOS 3:
+Modifiche rispetto a watchos 3:
 
-* Codice dell'App e dell'interfaccia utente vengono eseguiti in un unico processo.
-* Autorizzazione di posizione è possibile concedere per l'espressione di controllo (senza bisogno di chiedere all'utente di accettare sul telefono).
+* Il codice dell'app e l'interfaccia utente vengono eseguiti in un unico processo.
+* L'autorizzazione location può essere concessa nell'espressione di controllo (non è necessario richiedere all'utente di accettare il proprio telefono).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Esempi di watchOS](https://developer.xamarin.com/samples/watchos/all/)
+* [Esempi di watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
 * [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
-* [Novità in watchOS 4 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)
+* [Novità di watchos 4 (Apple) (video)](https://developer.apple.com/videos/play/wwdc2017/205/)

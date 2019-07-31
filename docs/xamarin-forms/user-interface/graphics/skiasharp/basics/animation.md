@@ -7,16 +7,16 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 8a533dd48acf698667044d600338555b6c00a0ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61181323"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648737"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animazione di base in SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Informazioni su come aggiungere un'animazione di grafica in SkiaSharp_
 
@@ -24,7 +24,7 @@ _Informazioni su come aggiungere un'animazione di grafica in SkiaSharp_
 
 ![](animation-images/animationexample.png "Alcuni dei cerchi concentrici apparentemente espansione dal centro")
 
-Il **Pulsating ellisse** pagina il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma anima due assi di un'ellisse in modo che il file sembra essere pulsating ed è anche possibile controllare il frequenza di questo pulsazioni. Il [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file crea un'istanza di un xamarin. Forms `Slider` e un `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Questo è un modo comune per integrare un `SKCanvasView` con altre viste di xamarin. Forms:
+Il **Pulsating ellisse** pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma anima due assi di un'ellisse in modo che il file sembra essere pulsating ed è anche possibile controllare il frequenza di questo pulsazioni. Il [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) file crea un'istanza di un xamarin. Forms `Slider` e un `Label` per visualizzare il valore corrente del dispositivo di scorrimento. Questo è un modo comune per integrare un `SKCanvasView` con altre viste di xamarin. Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -250,4 +250,4 @@ Il risultato è che l'immagine di ricerca stesso when `t` è uguale a 0 come qua
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,24 +1,24 @@
 ---
 ms.assetid: 77F12838-DBB1-48AC-ACF8-B934998B6EC8
-title: Esempi desktop multipiattaforma
-description: Questo documento include diverse applicazioni di esempio che sono state convertite per l'esecuzione come App multipiattaforma con Xamarin.
+title: Esempi di desktop multipiattaforma
+description: Questo documento contiene collegamenti a diverse applicazioni di esempio che sono state trasferite per essere eseguite come app multipiattaforma con Novell.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 4f77353345c6ed1ce1cde8190a347f3deb1c0348
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7af820e1c73c3b41e58ef8a9ee8ab5ea3a601834
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269939"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647556"
 ---
-# <a name="cross-platform-desktop-samples"></a>Esempi desktop multipiattaforma
+# <a name="cross-platform-desktop-samples"></a>Esempi di desktop multipiattaforma
 
-## <a name="wpf-to-cross-platform-with-xamarinforms"></a>WPF per lo sviluppo multipiattaforma con xamarin. Forms
+## <a name="wpf-to-cross-platform-with-xamarinforms"></a>Da WPF a multipiattaforma con Novell. Forms
 
-### <a name="expenses-app"></a>App per le spese
+### <a name="expenses-app"></a>App spese
 
-[WPFToMobile source su GitHub](https://github.com/nishanil/WPFToMobile)
+[Origine WPFToMobile su GitHub](https://github.com/nishanil/WPFToMobile)
 
 #### <a name="original-app"></a>App originale
 
@@ -26,7 +26,7 @@ ms.locfileid: "61269939"
 
 #### <a name="cross-platform-apps"></a>App multipiattaforma
 
-Usa xamarin. Forms, l'app originale è stato in grado di trasferire in un back-end di Azure che esegue l'App per dispositivi mobili, tablet e desktop:
+Usando Novell. Forms, l'app originale è stata in grado di eseguire il porting in un back-end di Azure in esecuzione su dispositivi mobili, tablet e desktop:
 
 * Android
 * iOS
@@ -34,16 +34,16 @@ Usa xamarin. Forms, l'app originale è stato in grado di trasferire in un back-e
 
 ## <a name="architecture-guidance"></a>Linee guida sull'architettura
 
-### <a name="eshop-on-containers-app"></a>eShop (in contenitori) App
+### <a name="eshop-on-containers-app"></a>App eShop (on Containers)
 
-[eShopOnContainers source su GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
+[origine eShopOnContainers su GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
 
-App di esempio fa riferimento il seguente:
+App di esempio a cui fa riferimento il codice seguente:
 
-* [E-book di Microservizi .NET](https://aka.ms/microservicesebook)
-* [E-book di containerized Docker Application Lifecycle Management](https://aka.ms/dockerlifecycleebook)
-* [Ebook Enterprise modelli di applicazione con xamarin. Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
+* [EBook di microservizi .NET](https://aka.ms/microservicesebook)
+* [EBook del ciclo di vita delle applicazioni Docker in contenitori](https://aka.ms/dockerlifecycleebook)
+* [Modelli di applicazioni aziendali con l'eBook Novell. Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
 
-## <a name="mobile-app-samples"></a>Esempi di App per dispositivi mobili
+## <a name="mobile-app-samples"></a>Esempi di app per dispositivi mobili
 
-* Altri [degli esempi di Xamarin](https://developer.xamarin.com/samples/)
+* Altri [esempi di Novell](https://docs.microsoft.com/samples/browse/?products=xamarin)

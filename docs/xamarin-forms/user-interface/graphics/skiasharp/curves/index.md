@@ -7,22 +7,22 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: c71f0c0e5224c3fc4615d570487ed63c957c5556
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 09f2c2c0367b50146a564b370f555a1ed804371e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61344743"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642553"
 ---
 # <a name="skiasharp-curves-and-paths"></a>I percorsi e curve di SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Informazioni su come usare SkiaSharp disegnare curve e usare le funzionalità di percorso_
 
 L'esplorazione del [ `SKPath` ](xref:SkiaSharp.SKPath) ha iniziato a metodi e proprietà nel [ **SkiaSharp linee e tracciati** ](../paths/index.md) articolo. Gli articoli di seguito continuano con i metodi che aggiungono curve a un `SKPath` dell'oggetto e sfruttare altre funzionalità potenti percorso. Si noterà come è possibile specificare un percorso completo nella stringa di testo conciso, come utilizzare effetti per il tracciato e come approfondire meccanismi interni di percorso.
 
-Tutti i programmi di esempio in questa sezione sono disponibili nel **SkiaSharp curve e tracciati** pagina della [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma e nel [  **Curve** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) cartella della soluzione.
+Tutti i programmi di esempio in questa sezione sono disponibili nel **SkiaSharp curve e tracciati** pagina della [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma e nel [  **Curve** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) cartella della soluzione.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Tre modi per disegnare un arco](arcs.md)
 
@@ -56,4 +56,4 @@ Ottenere informazioni sui percorsi ed enumerare il contenuto
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

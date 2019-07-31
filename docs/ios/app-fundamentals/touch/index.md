@@ -1,30 +1,30 @@
 ---
-title: La gestione tocco nelle App xamarin. IOS
-description: Questo documento include collegamenti alle guide che illustrano come lavorare con il tocco, multitocco, movimenti e funzionalità Touch 3D in un'app xamarin. IOS.
+title: Gestione del tocco nelle app Novell. iOS
+description: Questo documento contiene collegamenti a guide che descrivono come usare touch, multitouch, movimenti e 3D touch in un'app Novell. iOS.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: 5aabc3a3c2ffbcffc0e12379989f7eb43b03a902
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8ed9ab164f6b14d794b29667ec96afab47e3fcde
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399291"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655168"
 ---
-# <a name="handling-touch-in-xamarinios-apps"></a>La gestione tocco nelle App xamarin. IOS
+# <a name="handling-touch-in-xamarinios-apps"></a>Gestione del tocco nelle app Novell. iOS
 
-Come altre piattaforme per dispositivi mobili, iOS offre numerosi modi per gestire il tocco. Può supportare Multi-touch, ovvero numero di punti di contatto nella schermata e i movimenti complessi. Questa guida presenta alcuni dei concetti, nonché particolarità di implementazione di tocco e movimenti in iOS.
+Analogamente ad altre piattaforme per dispositivi mobili, iOS offre diversi modi per gestire il tocco. Può supportare la funzionalità multitocco, ovvero molti punti di contatto sullo schermo, e movimenti complessi. Questa guida presenta alcuni concetti, nonché le peculiarità dell'implementazione di tocco e movimenti in iOS.
 
-iOS incapsula i dati di tocco nel `UITouch` classe, che viene reso disponibile alle applicazioni attraverso una serie di `UIResponder` metodi. Le applicazioni possono eseguire l'override di questi metodi in sottoclassi della `UIView` e `UIViewController`, che ereditano entrambe dalla `UIResponder`.
+iOS incapsula i dati di tocco nella `UITouch` classe, resi disponibili per le applicazioni tramite una serie di `UIResponder` metodi. Le applicazioni possono eseguire l'override di questi metodi nelle `UIView` sottoclassi di e `UIViewController`, entrambi ereditano da `UIResponder`.
 
-Oltre ad acquisire i dati di tocco, iOS fornisce i mezzi per l'interpretazione degli schemi di tocchi in movimenti. I riconoscitori di movimento a sua volta possono essere utilizzati per interpretare comandi specifici dell'applicazione, ad esempio una rotazione di un'immagine o un turno di una pagina. iOS offre un'ampia raccolta di classi per gestire i movimenti comuni senza codice aggiuntivo minimo.
+Oltre a acquisire i dati di tocco, iOS fornisce i mezzi per interpretare i modelli di tocchi nei movimenti. Questi riconoscitori di movimento possono a sua volta essere usati per interpretare i comandi specifici dell'applicazione, ad esempio una rotazione di un'immagine o una volta una pagina. iOS fornisce un'ampia raccolta di classi per gestire i movimenti comuni con codice aggiunto minimo.
 
-La scelta tra i tocchi e i riconoscitori di movimento può essere un poco chiaro. Questa Guida suggerisce che in genere, dovrebbe dare la preferenza per i riconoscitori di movimento. I riconoscitori di movimento sono implementati come classi discrete, che forniscono una maggiore separazione delle competenze e un miglior incapsulamento. Ciò rende molto semplice condividere la logica tra diverse visualizzazioni, riducendo al minimo la quantità di codice scritto.
+La scelta tra i riconoscitori dei movimenti e i riconoscitori di movimento può essere confusa. Questa guida suggerisce che in generale è necessario assegnare una preferenza ai riconoscitori di movimento. I riconoscitori di movimento vengono implementati come classi discrete, che offrono una maggiore separazione dei problemi e una migliore incapsulamento. Questo rende più semplice condividere la logica tra visualizzazioni diverse, riducendo al minimo la quantità di codice scritto.
 
-Tuttavia, esistono casi è necessario usare l'elaborazione di basso livello touch e anche tenere traccia più dita, ad esempio, per creare un programma finger-paint.
+Tuttavia, in alcuni casi è necessario usare l'elaborazione del tocco di basso livello e persino tenere traccia di più dita, ad esempio per creare un programma di disegno con dito.
 
 ## <a name="sections"></a>Sezioni
 
@@ -32,13 +32,13 @@ Tuttavia, esistono casi è necessario usare l'elaborazione di basso livello touc
 -  [Procedura dettagliata: Uso del tocco in iOS](ios-touch-walkthrough.md)
 -  [Rilevamento del multitouch](touch-tracking.md)
 
-Questa guida serve come introduzione a tocco in iOS. Per altre informazioni sull'uso 3D Touch e del Feedback Aptico in iOS, che sono stati introdotti in iOS 9 e 10 rispettivamente, vedere le guide seguenti specifiche:
+Questa guida funge da introduzione al tocco in iOS. Per ulteriori informazioni sull'utilizzo di commenti e suggerimenti tattili 3D in iOS, introdotti rispettivamente in iOS 9 e 10, consultare le guide specifiche seguenti:
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [iOS Touch avviare (esempio)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
-- [iOS Touch finale (esempio)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
-- [Pittura con le dita (esempio)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)
+- [iOS touch Start (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
+- [iOS touch finale (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [FingerPaint (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

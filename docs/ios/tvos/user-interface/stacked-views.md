@@ -1,156 +1,156 @@
 ---
-title: Utilizzo delle visualizzazioni in pila tvOS in Xamarin
-description: Questo documento descrive come ha collaborato con tvOS in pila di visualizzazioni in un'app compilata con Xamarin. Fornisce una panoramica generale delle viste in pila e viene illustrato il Layout automatico, posizionamento e ridimensionamento di una visualizzazione in pila, comuni Usa, integrazione con gli storyboard e altro ancora.
+title: Uso di viste in pila tvOS in Novell
+description: Questo documento descrive come usare le viste in pila tvOS in un'app compilata con Novell. Fornisce una panoramica generale delle visualizzazioni in pila e illustra il layout automatico, il posizionamento e il ridimensionamento di una visualizzazione in pila, usi comuni, integrazione con storyboard e altro ancora.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f51ed3d6dbbfc8a7e430c2949485838a7471e545
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 646a26b4c9b2d44595315a6a32b7294b18c42d7a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161469"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648956"
 ---
-# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Utilizzo delle visualizzazioni in pila tvOS in Xamarin
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Uso di viste in pila tvOS in Novell
 
-Il controllo di visualizzazione dello Stack (`UIStackView`) sfrutta la potenza del Layout automatico e le classi di dimensioni per gestire una pila di visualizzazioni secondarie, orizzontalmente o verticalmente, che risponde dinamicamente alle modifiche del contenuto e dimensioni dello schermo del dispositivo Apple TV.
+Il controllo di visualizzazione Stack`UIStackView`() sfrutta la potenza del layout automatico e delle classi di dimensioni per gestire uno stack di visualizzazioni, orizzontalmente o verticalmente, che risponde dinamicamente alle modifiche del contenuto e alle dimensioni dello schermo del dispositivo Apple TV.
 
-In base alle proprietà definite per gli sviluppatori, ad esempio asse, distribuzione, allineamento e spaziatura gestire il layout di tutte le visualizzazioni secondarie associata a una visualizzazione dello Stack:
+Il layout di tutte le sottoviste associate a una visualizzazione dello stack viene gestito da esso in base alle proprietà definite dallo sviluppatore, ad esempio asse, distribuzione, allineamento e spaziatura:
 
-[![](stacked-views-images/stacked01.png "Diagramma del layout visualizzazione secondaria")](stacked-views-images/stacked01.png#lightbox)
+[![](stacked-views-images/stacked01.png "Diagramma di layout della visualizzazione secondaria")](stacked-views-images/stacked01.png#lightbox)
 
-Quando si usa un' `UIStackView` in un'app xamarin. tvos, lo sviluppatore può definire le visualizzazioni secondarie sia all'interno di uno Storyboard in iOS Designer, o aggiungendo e rimuovendo le visualizzazioni secondarie in C# codice.
+Quando si usa `UIStackView` un oggetto in un'app Novell. tvOS, lo sviluppatore può definire le sottoviste all'interno di uno storyboard in iOS designer o aggiungere e rimuovere le visualizzazioni in C# codice.
 
-## <a name="about-stacked-view-controls"></a>Informazioni sui controlli di visualizzazione in pila 
+## <a name="about-stacked-view-controls"></a>Informazioni sui controlli visualizzazione in pila 
 
-Il `UIStackView` è progettata come una visualizzazione del contenitore non relative al rendering e di conseguenza, non viene disegnato all'area di disegno, ad esempio altre sottoclassi di `UIView`. Impostazione delle proprietà, ad esempio `BackgroundColor` o si esegue l'override `DrawRect` non avranno alcun effetto visivo.
+È progettato come una visualizzazione del contenitore non di rendering e, di conseguenza, non viene disegnato nell'area di disegno come le altre sottoclassi `UIView`di. `UIStackView` L'impostazione di `BackgroundColor` proprietà come o l' `DrawRect` override non avrà alcun effetto visivo.
 
-Esistono diverse proprietà che controllano il modo in cui una visualizzazione dello Stack verranno organizzati relativa raccolta di visualizzazioni secondarie:
+Sono disponibili diverse proprietà che consentono di controllare il modo in cui una visualizzazione stack organizzerà la raccolta di visualizzazioni.
 
-- **Asse** : determina se la visualizzazione dello Stack vengono disposti sia le visualizzazioni secondarie **orizzontalmente** oppure **verticalmente**.
-- **Allineamento** : controlla la modalità di allineamento le visualizzazioni secondarie all'interno della visualizzazione dello Stack.
-- **Distribuzione** – controlla come vengono ridimensionate le visualizzazioni secondarie all'interno della visualizzazione dello Stack.
-- **Spaziatura** – controlla lo spazio minimo tra ogni visualizzazione secondaria nella visualizzazione dello Stack.
-- **Linea di base relativi** : se `true`, la spaziatura verticale di ogni visualizzazione secondaria verrà derivata dal relativo della linea di base.
-- **Layout dei margini relativo** – inserisce le visualizzazioni secondarie relativo ai margini layout standard.
+- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste orizzontalmente o verticalmente.
+- **Alignment** : controlla il modo in cui le visualizzazioni sono allineate nella visualizzazione stack.
+- **Distribution** : controlla il modo in cui le visualizzazioni vengono ridimensionate all'interno della visualizzazione stack.
+- **Spaziatura** : controlla lo spazio minimo tra le singole visualizzazioni nella visualizzazione stack.
+- **Relativa** alla baseline: `true`se, la spaziatura verticale di ogni sottovista sarà derivata dalla relativa Baseline.
+- **Layout margini relativi** : inserisce le visualizzazioni subordinate rispetto ai margini di layout standard.
 
-In genere si utilizzerà una visualizzazione dello Stack per disporre di un numero ridotto di visualizzazioni secondarie. È possibile creare interfacce utente più complesse mediante l'inserimento di una o più visualizzazioni dello Stack all'interno di altre.
+In genere si utilizzerà una visualizzazione stack per disporre un numero ridotto di visualizzazioni. È possibile creare interfacce utente più complesse annidando una o più visualizzazioni dello stack l'una all'altra.
 
-È possibile ottimizzare ulteriormente l'aspetto delle interfacce utente mediante l'aggiunta di vincoli aggiuntivi per le visualizzazioni secondarie (ad esempio al controllo larghezza o all'altezza). Tuttavia, necessario fare attenzione a non includere i vincoli in conflitto a quelle introdotte dalla visualizzazione Stack se stesso.
+È possibile ottimizzare ulteriormente l'aspetto dell'utente aggiungendo vincoli aggiuntivi alle visualizzazioni (ad esempio per controllare l'altezza o la larghezza). Tuttavia, prestare attenzione a non includere vincoli in conflitto con quelli introdotti dalla visualizzazione stack.
 
 <a name="Auto-Layout-and-Size-Classes" />
 
-## <a name="auto-layout-and-size-classes"></a>Layout automatico e le classi di dimensioni
+## <a name="auto-layout-and-size-classes"></a>Classi layout e dimensioni automatiche
 
-Quando una visualizzazione secondaria viene aggiunto a una visualizzazione Stack completamente il layout viene controllato da tale visualizzazione Stack con Layout automatico e le classi di dimensioni per posizionare e ridimensionare le visualizzazioni disposte.
+Quando una sottovista viene aggiunta a una visualizzazione stack, il layout è completamente controllato da tale visualizzazione dello stack utilizzando il layout automatico e le classi di dimensioni per posizionare e ridimensionare le visualizzazioni disposte.
 
-La visualizzazione dello Stack verranno _pin_ la visualizzazione e il cognome secondaria nella propria raccolta per il **Top** e **inferiore** bordi per le visualizzazioni dello Stack verticale o **asinistra**e **destra** bordi per le visualizzazioni dello Stack orizzontale. Se si impostano i `LayoutMarginsRelativeArrangement` proprietà `true`, quindi la vista blocca le visualizzazioni secondarie margini rilevanti anziché il bordo.
+La visualizzazione dello stack consente di _aggiungere_ la prima e l'ultima visualizzazione della raccolta ai bordi **superiore** e **inferiore** per le visualizzazioni dello stack verticali o i bordi **sinistro** e **destro** per le visualizzazioni dello stack orizzontale. Se si imposta la `LayoutMarginsRelativeArrangement` proprietà su `true`, la visualizzazione aggiunge le sottoviste ai margini rilevanti anziché al bordo.
 
-La visualizzazione dello Stack Usa la visualizzazione secondaria `IntrinsicContentSize` proprietà quando si calcolano le dimensioni di visualizzazioni secondarie lungo definiti `Axis` (tranne che per il `FillEqually Distribution`). Il `FillEqually Distribution` ridimensiona tutte le visualizzazioni secondarie in modo che siano le stesse dimensioni, pertanto la compilazione di visualizzazione dello Stack lungo il `Axis`.
+La visualizzazione dello stack usa la proprietà della `IntrinsicContentSize` Sottovisualizzazione quando si calcolano le dimensioni delle visualizzazioni di `Axis` visualizzazione lungo l'oggetto `FillEqually Distribution`definito (ad eccezione di). Ridimensiona tutte le sottoviste in modo che abbiano le stesse dimensioni, riempiendo così la visualizzazione dello stack `Axis`lungo. `FillEqually Distribution`
 
-Ad eccezione dei `Fill Alignment`, la visualizzazione dello Stack Usa la visualizzazione secondaria `IntrinsicContentSize` proprietà per il calcolo delle dimensioni della visualizzazione perpendicolare al determinato `Axis`. Per il `Fill Alignment`, tutte le visualizzazioni secondarie vengono ridimensionate in modo da occupare la visualizzazione dello Stack perpendicolare al determinato `Axis`.
+Ad eccezione di `Fill Alignment`, la visualizzazione dello stack utilizza la `IntrinsicContentSize` proprietà della Sottovisualizzazione per calcolare la dimensione della visualizzazione perpendicolare all'oggetto specificato `Axis`. Per, tutte le sottoviste vengono ridimensionate in modo da riempire la visualizzazione dello stack perpendicolare all' `Axis`oggetto specificato. `Fill Alignment`
 
 <a name="Positioning-and-Sizing-the-Stack-View" />
 
-## <a name="positioning-and-sizing-the-stack-view"></a>Posizionamento e ridimensionamento la visualizzazione dello Stack
+## <a name="positioning-and-sizing-the-stack-view"></a>Posizionamento e ridimensionamento della visualizzazione dello stack
 
-Durante la visualizzazione dello Stack ha il controllo completo sul layout dei qualsiasi visualizzazione secondaria (in base alle proprietà, ad esempio `Axis` e `Distribution`), è comunque necessario posizionare la visualizzazione dello Stack (`UIStackView`) all'interno della visualizzazione padre con Layout automatico e le classi di dimensioni.
+Mentre la visualizzazione dello stack dispone del controllo totale sul layout di qualsiasi vista (in base alle proprietà, `Axis` ad `Distribution`esempio e), è comunque necessario posizionare la visualizzazione dello`UIStackView`stack () all'interno della visualizzazione padre usando le classi di layout e dimensioni automatiche.
 
-In genere, ciò comporta l'aggiunta di almeno due bordi della vista dello Stack per espandere e comprimere, definendo pertanto la posizione. Senza i vincoli aggiuntivi, la visualizzazione dello Stack verrà ridimensionata automaticamente per adattare l'intero le visualizzazioni secondarie come indicato di seguito:
+In genere, ciò significa bloccare almeno due bordi della visualizzazione dello stack per espanderli e configurarli, definendone la posizione. Senza vincoli aggiuntivi, la visualizzazione dello stack verrà ridimensionata automaticamente per adattarsi a tutte le relative visualizzazioni, come indicato di seguito:
 
-* Le dimensioni lungo relativo `Axis` sarà costituito dalla somma di tutte le dimensioni di visualizzazione secondaria e quindi qualsiasi spazio che è stata definita tra ogni visualizzazione secondaria.
-* Se il `LayoutMarginsRelativeArrangement` è di proprietà `true`, la dimensione dello Stack viste includerà anche spazio per i margini.
-* Le dimensioni perpendicolare al `Axis` verrà impostato per la visualizzazione più grande secondaria nella raccolta.
+* La dimensione lungo il `Axis` suo sarà la somma di tutte le dimensioni della vista, oltre a qualsiasi spazio definito tra le singole sottoviste.
+* Se la `LayoutMarginsRelativeArrangement` proprietà è `true`, nella dimensione delle visualizzazioni dello stack sarà inclusa anche la stanza per i margini.
+* La dimensione perpendicolare all' `Axis` oggetto verrà impostata sulla Sottovisualizzazione più grande nella raccolta.
 
-Inoltre, è possibile specificare vincoli per la visualizzazione di Stack **altezza** e **larghezza**. In questo caso, le visualizzazioni secondarie verranno disposte (dimensioni) per riempire lo spazio specificato dalla visualizzazione Stack come determinato dal `Distribution` e `Alignment` proprietà.
+Inoltre, è possibile specificare vincoli per l' **altezza** e la **larghezza**della visualizzazione stack. In questo caso, le sottoviste verranno disposte (ridimensionate) in modo da riempire lo spazio specificato dalla visualizzazione dello stack in base `Distribution` a `Alignment` quanto determinato dalle proprietà e.
 
-Se il `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni secondarie verranno disposte in base della linea di base, della prima o nell'ultima visualizzazione secondaria invece di usare i **Top**, **inferiore** o **Center* -  **Y** posizione. Questi vengono calcolati come indicato di seguito sul contenuto della visualizzazione dello Stack:
+Se la `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni subordinate verranno disposte in base alla linea di base della prima o dell'ultima Sottovisualizzazione, anziché utilizzare la posizione **Top**, **Bottom** o **Center*- **Y** . Tali informazioni vengono calcolate nel contenuto della visualizzazione stack come indicato di seguito:
 
-* Una visualizzazione Stack verticale restituirà la prima visualizzazione secondaria per la prima linea di base e l'ultimo per l'ultimo. Se una di queste visualizzazioni secondarie fanno visualizzazioni dello Stack, quindi verrà utilizzato il primo o ultimo della linea di base.
-* Una visualizzazione Stack orizzontale userà la più alta secondaria per la previsione e il cognome. Se la vista più alta è anche una visualizzazione dello Stack, è più alta secondaria userà come linea di base.
+* Una visualizzazione dello stack verticale restituirà la prima Sottovisualizzazione per la prima linea di base e l'ultima per l'ultima. Se una di queste visualizzazioni è a loro volta viste dello stack, verrà usata la prima o l'ultima Baseline.
+* Una visualizzazione Stack orizzontale utilizzerà la relativa Sottovisualizzazione più alta per la prima e l'ultima Baseline. Se anche la visualizzazione più alta è una visualizzazione dello stack, verrà usata come linea di base la visualizzazione più alta.
 
 > [!IMPORTANT]
-> Allineamento della linea di base non funziona sulle dimensioni di visualizzazione secondaria allungata o compressa come verrà calcolato la linea di base alla posizione corretta. Per l'allineamento della linea di base, verificare che la visualizzazione secondaria **altezza** corrisponda alla visualizzazione del contenuto intrinseco **altezza**.
+> L'allineamento della linea di base non funziona sulle dimensioni delle sottoviste estese o compresse perché la linea di base verrà calcolata in una posizione errata. Per l'allineamento della linea di base, assicurarsi che l' **altezza** della Sottovisualizzazione corrisponda all' **Altezza**della visualizzazione contenuto intrinseca.
 
 
 
 
 <a name="Common-Stack-View-Uses" />
 
-## <a name="common-stack-view-uses"></a>Utilizzi comuni di vista dello Stack
+## <a name="common-stack-view-uses"></a>Usi comuni della visualizzazione stack
 
-Esistono diversi tipi di layout che funzionano bene con controlli di visualizzazione dello Stack. In base a Apple, ecco alcuni degli usi più comuni:
+Sono disponibili diversi tipi di layout che funzionano bene con i controlli di visualizzazione stack. In base a Apple, di seguito sono riportati alcuni degli usi più comuni:
 
-- **Definire dimensioni lungo l'asse** : per l'aggiunta di entrambi i bordi lungo della visualizzazione Stack `Axis` e uno dei lati adiacenti per impostare la posizione, lo Stack di dimensioni aumentano visualizzazione lungo l'asse per adattarsi allo spazio definito dalle visualizzazioni secondarie.
-*  **Definire la posizione della visualizzazione secondaria** – aggiungendo ai bordi adiacenti della visualizzazione Stack alla relativa visualizzazione padre, la visualizzazione dello Stack aumenteranno in entrambe le dimensioni in base alle relative visualizzazioni secondarie che lo contiene.
-- **Definire le dimensioni e la posizione dello Stack** – aggiungendo le quattro contorni della visualizzazione dello Stack per la visualizzazione padre, la visualizzazione dello Stack organizza le visualizzazioni secondarie basate allo spazio definito all'interno della visualizzazione dello Stack.
-*  **Definire le dimensioni perpendicolari all'asse** : per l'aggiunta di entrambi perpendicolarmente bordi della visualizzazione Stack `Axis` e uno dei bordi lungo l'asse di impostare la posizione, lo Stack di visualizzazione aumenterà perpendicolare all'asse per adattarsi allo spazio definito da relativo visualizzazioni secondarie.
+- **Definisci le dimensioni lungo l'asse** , bloccando entrambi i bordi lungo la visualizzazione `Axis` stack e uno dei bordi adiacenti per impostare la posizione, la visualizzazione dello stack aumenterà lungo l'asse per adattarla allo spazio definito dalle relative viste sottostanti.
+*  **Definire la posizione della Sottovisualizzazione** : l'aggiunta ai bordi adiacenti della visualizzazione dello stack alla visualizzazione padre, la visualizzazione dello stack aumenterà in entrambe le dimensioni per adattarla alle sottoviste che la contengono.
+- **Definire le dimensioni e la posizione dello stack** : aggiungendo tutti i quattro bordi della visualizzazione stack alla visualizzazione padre, la visualizzazione dello stack dispone le visualizzazioni in base allo spazio definito nella visualizzazione dello stack.
+*  **Definire la dimensione perpendicolare all'asse** , bloccando entrambi i bordi perpendicolari alla visualizzazione `Axis` dello stack e uno dei bordi lungo l'asse per impostare la posizione, la visualizzazione dello stack aumenterà perpendicolarmente all'asse per adattarla allo spazio definito dalle relative visualizzazioni.
 
 <a name="Stack-Views-and-Storyboards" />
 
-## <a name="stack-views-and-storyboards"></a>Le visualizzazioni dello stack e storyboard
+## <a name="stack-views-and-storyboards"></a>Visualizzazioni dello stack e storyboard
 
-Il modo più semplice per lavorare con le visualizzazioni dello Stack in un'app xamarin. tvos è per aggiungerli all'interfaccia utente dell'app usando iOS Designer.
+Il modo più semplice per usare le visualizzazioni dello stack in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nel **riquadro della soluzione**, facendo doppio clic su di `Main.storyboard` file e aprirlo e modificarlo.
-1. Progettare il layout dei singoli elementi che si desidera aggiungere alla visualizzazione dello Stack: 
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Progettare il layout dei singoli elementi che si intende aggiungere alla visualizzazione dello stack: 
 
-    [![](stacked-views-images/layout01.png "Esempio di layout elemento")](stacked-views-images/layout01.png#lightbox)
-1. Aggiungere eventuali vincoli necessari per gli elementi per garantire una che scalabilità in modo corretto. Questo passaggio è importante dopo l'elemento viene aggiunto alla visualizzazione dello Stack.
-1. Verificare il numero necessario di copie (quattro in questo caso): 
+    [![](stacked-views-images/layout01.png "Esempio di layout degli elementi")](stacked-views-images/layout01.png#lightbox)
+1. Aggiungere tutti i vincoli obbligatori agli elementi per garantirne la scalabilità corretta. Questo passaggio è importante quando l'elemento viene aggiunto alla visualizzazione stack.
+1. Apportare il numero di copie necessario (quattro in questo caso): 
 
-    [![](stacked-views-images/layout02.png "Il numero necessario di copie")](stacked-views-images/layout02.png#lightbox)
-1. Trascinare un **visualizzazione Stack** dalle **della casella degli strumenti** e rilasciarla sulla vista: 
+    [![](stacked-views-images/layout02.png "Numero di copie necessario")](stacked-views-images/layout02.png#lightbox)
+1. Trascinare una **visualizzazione stack** dalla **casella degli strumenti** e rilasciarla nella visualizzazione: 
 
-    [![](stacked-views-images/layout03.png "Una visualizzazione Stack")](stacked-views-images/layout03.png#lightbox)
-1. Selezionare la visualizzazione dello Stack, nelle **scheda Widget** del **riquadro delle proprietà** selezionare **riempire** per il **allineamento**, **riempimento Ugualmente** per il **distribuzione** e immettere `25` per il **spaziatura**: 
+    [![](stacked-views-images/layout03.png "Visualizzazione stack")](stacked-views-images/layout03.png#lightbox)
+1. Selezionare la visualizzazione dello stack, nella **scheda Widget** del **riquadro delle proprietà** Selezionare **riempimento** per l' **allineamento**, **compilare ugualmente** per la **distribuzione** e immettere `25` per la **spaziatura**: 
 
-    [![](stacked-views-images/layout04.png "La scheda di Widget")](stacked-views-images/layout04.png#lightbox)
-1. Posizionare la visualizzazione dello Stack sullo schermo in cui desiderato e aggiungere i vincoli per mantenere i dati nella posizione desiderata.
-1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello Stack: 
+    [![](stacked-views-images/layout04.png "Scheda widget")](stacked-views-images/layout04.png#lightbox)
+1. Posizionare la visualizzazione dello stack sullo schermo in cui si desidera e aggiungere vincoli per mantenerla nella posizione richiesta.
+1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello stack: 
 
-    [![](stacked-views-images/layout05.png "I singoli elementi nella visualizzazione Stack")](stacked-views-images/layout05.png#lightbox)
-1. Il layout verrà regolato e gli elementi verranno disposte nella visualizzazione Stack basati sugli attributi che è impostato in precedenza.
-1. Assegnare **nomi** nel **scheda Widget** del **Esplora proprietà** per lavorare con i controlli dell'interfaccia utente in C# codice.
+    [![](stacked-views-images/layout05.png "Singoli elementi nella visualizzazione dello stack")](stacked-views-images/layout05.png#lightbox)
+1. Il layout verrà regolato e gli elementi verranno disposti nella visualizzazione dello stack in base agli attributi impostati in precedenza.
+1. Assegnare i **nomi** nella **scheda Widget** di **Esplora proprietà** per usare i controlli dell'interfaccia utente nel C# codice.
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Nel **Esplora soluzioni**, facendo doppio clic su di `Main.storyboard` file e aprirlo e modificarlo.
-1. Progettare il layout dei singoli elementi che si desidera aggiungere alla visualizzazione dello Stack: 
+1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Progettare il layout dei singoli elementi che si intende aggiungere alla visualizzazione dello stack: 
 
-    [![](stacked-views-images/layout01.png "Esempio di layout elemento")](stacked-views-images/layout01.png#lightbox)
-1. Aggiungere eventuali vincoli necessari per gli elementi per garantire una che scalabilità in modo corretto. Questo passaggio è importante dopo l'elemento viene aggiunto alla visualizzazione dello Stack.
-1. Verificare il numero necessario di copie (quattro in questo caso): 
+    [![](stacked-views-images/layout01.png "Esempio di layout degli elementi")](stacked-views-images/layout01.png#lightbox)
+1. Aggiungere tutti i vincoli obbligatori agli elementi per garantirne la scalabilità corretta. Questo passaggio è importante quando l'elemento viene aggiunto alla visualizzazione stack.
+1. Apportare il numero di copie necessario (quattro in questo caso): 
 
-    [![](stacked-views-images/layout02.png "Il numero necessario di copie")](stacked-views-images/layout02.png#lightbox)
-1. Trascinare un **visualizzazione Stack** dalle **della casella degli strumenti** e rilasciarla sulla vista: 
+    [![](stacked-views-images/layout02.png "Numero di copie necessario")](stacked-views-images/layout02.png#lightbox)
+1. Trascinare una **visualizzazione stack** dalla **casella degli strumenti** e rilasciarla nella visualizzazione: 
 
-    [![](stacked-views-images/layout03-vs.png "Una visualizzazione Stack")](stacked-views-images/layout03-vs.png#lightbox)
-1. Selezionare la visualizzazione dello Stack, nel **scheda Widget** del **riquadro delle proprietà** selezionare **riempire** per il **allineamento**, **riempimento Ugualmente** per il **distribuzione** e immettere `25` per il **spaziatura**: 
+    [![](stacked-views-images/layout03-vs.png "Visualizzazione stack")](stacked-views-images/layout03-vs.png#lightbox)
+1. Selezionare la visualizzazione dello stack, nella **scheda Widget** di **Esplora proprietà** Selezionare **riempimento** per l' **allineamento**, **compilare ugualmente** per la **distribuzione** e immettere `25` per la **spaziatura**: 
 
-    [![](stacked-views-images/layout04-vs.png "La scheda di Widget")](stacked-views-images/layout04-vs.png#lightbox)
-1. Posizionare la visualizzazione dello Stack sullo schermo in cui desiderato e aggiungere i vincoli per mantenere i dati nella posizione desiderata.
-1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello Stack: 
+    [![](stacked-views-images/layout04-vs.png "Scheda widget")](stacked-views-images/layout04-vs.png#lightbox)
+1. Posizionare la visualizzazione dello stack sullo schermo in cui si desidera e aggiungere vincoli per mantenerla nella posizione richiesta.
+1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello stack: 
 
-    [![](stacked-views-images/layout05-vs.png "I singoli elementi nella visualizzazione Stack")](stacked-views-images/layout05-vs.png#lightbox)
-1. Il layout verrà regolato e gli elementi verranno disposte nella visualizzazione Stack basati sugli attributi che è impostato in precedenza.
-1. Assegnare **nomi** nel **scheda Widget** del **Esplora proprietà** per lavorare con i controlli dell'interfaccia utente in C# codice.
+    [![](stacked-views-images/layout05-vs.png "Singoli elementi nella visualizzazione dello stack")](stacked-views-images/layout05-vs.png#lightbox)
+1. Il layout verrà regolato e gli elementi verranno disposti nella visualizzazione dello stack in base agli attributi impostati in precedenza.
+1. Assegnare i **nomi** nella **scheda Widget** di **Esplora proprietà** per usare i controlli dell'interfaccia utente nel C# codice.
 1. Salvare le modifiche.
 
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare le azioni, ad esempio `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio un `UIButton`) in iOS Designer durante la creazione di un gestore eventi, non verrà mai chiamato perché non dispone di un tocco Apple TV a schermo intero o supportare gli eventi di tocco. È consigliabile usare sempre il valore predefinito `Action Type` durante la creazione di azioni per tvOS elementi dell'interfaccia utente.
+> Sebbene sia possibile assegnare azioni come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio `UIButton`,) in iOS designer durante la creazione di un gestore eventi, non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta gli eventi di tocco. Quando si creano azioni per gli `Action Type` elementi dell'interfaccia utente di tvOS, è consigliabile usare sempre il valore predefinito.
 
-Per altre informazioni sull'utilizzo degli storyboard, vedere la [App Tvos Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-Nel caso di questo esempio, è stata esposta un Outlet e azioni per il controllo di segmento e una presa per ogni scheda di Windows Media player"". Nel codice, è nascondere e mostrare player basata il segmento corrente. Ad esempio:
+Nel caso dell'esempio, abbiamo esposto un Outlet e un'azione per il controllo Segment e un outlet per ogni "Player Card". Nel codice viene nascosto e mostrato il lettore in base al segmento corrente. Ad esempio:
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
@@ -185,21 +185,21 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-Quando viene eseguita l'app, i quattro elementi verranno distribuiti in modo uniforme nella nostra vista dello Stack:
+Quando si esegue l'app, i quattro elementi verranno distribuiti equamente nella visualizzazione dello stack:
 
-[![](stacked-views-images/layout06.png "Quando viene eseguita l'app, i quattro elementi verranno distribuiti in modo uniforme nella nostra vista dello Stack")](stacked-views-images/layout06.png#lightbox)
+[![](stacked-views-images/layout06.png "Quando si esegue l'app, i quattro elementi verranno distribuiti equamente nella visualizzazione stack")](stacked-views-images/layout06.png#lightbox)
 
-Se è diminuito il numero di giocatori, vengono nascoste le viste inutilizzate e la visualizzazione dello Stack modificare il layout in base alle:
+Se il numero di giocatori viene ridotto, le visualizzazioni inutilizzate vengono nascoste e la visualizzazione dello stack regola il layout in base alle esigenze:
 
-[![](stacked-views-images/layout07.png "Se è diminuito il numero di giocatori, le viste non utilizzate sono nascoste e la visualizzazione dello Stack modificare il layout per adattarlo")](stacked-views-images/layout07.png#lightbox)
+[![](stacked-views-images/layout07.png "Se il numero di giocatori viene ridotto, le visualizzazioni inutilizzate vengono nascoste e la visualizzazione dello stack regola il layout in base alle esigenze")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 
-### <a name="populate-a-stack-view-from-code"></a>Popolare una visualizzazione Stack dal codice
+### <a name="populate-a-stack-view-from-code"></a>Popolare una visualizzazione stack dal codice
 
-Oltre a definire completamente il contenuto e il layout di una visualizzazione dello Stack in iOS Designer, è possibile creare e rimuovere l'oggetto in modo dinamico da C# codice.
+Oltre a definire completamente il contenuto e il layout di una visualizzazione stack in iOS designer, è possibile crearlo e rimuoverlo dinamicamente dal C# codice.
 
-Eseguire l'esempio seguente che usa una visualizzazione dello Stack per la gestione "stars in una revisione (da 1 a 5):
+Nell'esempio seguente viene usata una visualizzazione stack per gestire le "stelle" in una revisione (da 1 a 5):
 
 ```csharp
 public int Rating { get; set;} = 0;
@@ -251,32 +251,32 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 }
 ```
 
-Diamo un'occhiata alcune parti di questo codice in modo dettagliato. Innanzitutto, utilizziamo un `if` istruzioni per verificare che non vi è più di cinque "stelle" o è minore di zero.
+Verranno ora esaminati in dettaglio alcune parti di questo codice. In primo luogo, vengono `if` usate istruzioni per verificare che non siano presenti più di cinque "stelle" o minori di zero.
 
-Per aggiungere un nuovo "star" è caricare la propria immagine e impostare relativi **modalità a contenuti** al **aspetto adatta**:
+Per aggiungere una nuova "stella", caricare la relativa immagine e impostarne la **modalità di contenuto** per la scalabilità dell' **aspetto**:
 
 ```csharp
 var icon = new UIImageView (new UIImage("icon.png"));
 icon.ContentMode = UIViewContentMode.ScaleAspectFit;
 ```
 
-In tal modo l'icona "a stella" possono essere distorto quando viene aggiunto alla visualizzazione dello Stack.
+In questo modo l'icona "stella" viene distorta quando viene aggiunta alla visualizzazione stack.
 
-Successivamente, aggiungiamo la nuova icona "a stella" alla raccolta della visualizzazione dello Stack delle visualizzazioni secondarie:
+Si aggiunge quindi la nuova icona "Star" alla raccolta di visualizzazioni di visualizzazione dello stack:
 
 ```csharp
 RatingView.AddArrangedSubview(icon);
 ```
 
-Si noterà che è stato aggiunto il `UIImageView` per il `UIStackView`del `ArrangedSubviews` proprietà e non sul `SubView`. Qualsiasi visualizzazione che si desidera che la visualizzazione dello Stack per controllare il layout deve essere aggiunto al `ArrangedSubviews` proprietà.
+Si noterà `UIImageView` che è stato aggiunto `UIStackView` `ArrangedSubviews` all'oggetto della proprietà e non a `SubView`. Qualsiasi visualizzazione che si desidera venga controllata dalla visualizzazione dello stack per il layout deve essere aggiunta `ArrangedSubviews` alla proprietà.
 
-Per rimuovere una visualizzazione secondaria da una visualizzazione dello Stack, si ottiene prima di tutto la visualizzazione secondaria da rimuovere:
+Per rimuovere una Sottovisualizzazione da una visualizzazione stack, è prima di tutto necessario rimuovere la visualizzazione:
 
 ```csharp
 var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 ```
 
-È necessario rimuoverlo da entrambi i `ArrangedSubviews` raccolta e la visualizzazione con privilegi elevati:
+Quindi è necessario rimuoverlo dalla `ArrangedSubviews` raccolta e dalla visualizzazione Super:
 
 ```csharp
 // Remove from stack and screen
@@ -284,15 +284,15 @@ RatingView.RemoveArrangedSubview(icon);
 icon.RemoveFromSuperview();
 ```
 
-Rimozione di una visualizzazione secondaria da solo la `ArrangedSubviews` raccolta lo accetta dal controllo della visualizzazione dello Stack, ma non rimuoverla dalla schermata.
+La rimozione di una Sottovisualizzazione solo `ArrangedSubviews` dalla raccolta lo estrae dal controllo della visualizzazione stack, ma non dalla schermata.
 
 <a name="Dynamically-Changing-Content" />
 
 ## <a name="dynamically-changing-content"></a>Modifica dinamica del contenuto
 
-Una visualizzazione Stack regolerà automaticamente il layout delle visualizzazioni secondarie ogni volta che una visualizzazione secondaria viene aggiunto, rimosso o nascosta. Il layout verrà regolato anche se le proprietà della visualizzazione Stack viene regolata (ad esempio relativi `Axis`).
+Una visualizzazione stack regola automaticamente il layout delle visualizzazioni subordinate ogni volta che una vista viene aggiunta, rimossa o nascosta. Il layout verrà regolato anche se una proprietà della visualizzazione dello stack viene regolata, ad esempio `Axis`.
 
-Le modifiche del layout possono essere animate, posizionandoli all'interno di un blocco di animazione, ad esempio:
+Le modifiche al layout possono essere animate inserendole in un blocco di animazione, ad esempio:
 
 ```csharp
 // Animate stack
@@ -302,19 +302,19 @@ UIView.Animate(0.25, ()=>{
 });
 ```
 
-Molte delle proprietà della visualizzazione Stack può essere specificati usando le classi di dimensioni all'interno di uno Storyboard. Queste proprietà verrà automaticamente aggiunta un'animazione è risposta alle modifiche di dimensione o orientamento.
+Molte delle proprietà della visualizzazione stack possono essere specificate utilizzando le classi di dimensioni all'interno di uno storyboard. Queste proprietà verranno automaticamente animate in risposta alle modifiche alle dimensioni o all'orientamento.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la progettazione e l'utilizzo di visualizzazione in pila all'interno di un'app xamarin. tvos.
+In questo articolo è stata illustrata la progettazione e l'utilizzo di una vista in pila all'interno di un'app Novell. tvOS.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

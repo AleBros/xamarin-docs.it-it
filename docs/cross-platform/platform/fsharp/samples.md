@@ -1,39 +1,33 @@
 ---
-title: F#Esempi di Xamarin
-description: F#può essere utilizzato per compilare le applicazioni Xamarin. Questo documento i collegamenti ai vari dispositivi iOS, Mac e app Xamarin di esempio xamarin. Forms progetti scritti in F#.
+title: F#Esempi per Novell
+description: F#può essere usato per creare applicazioni Novell. Questo documento è collegato a diversi progetti di app Novell di esempio per iOS, Mac e Novell. F#Forms scritti in.
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7ca7f2d88e2330ffc55f7b2629f1ea6c35733fbd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 8c71ad269731c943060932aa30de95345e577ccf
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035984"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646138"
 ---
-# <a name="f-samples-for-xamarin"></a>F#Esempi di Xamarin
+# <a name="f-samples-for-xamarin"></a>F#Esempi per Novell
 
-Questa pagina si collega ad alcune F# esempi di uso di Xamarin.
+Questa pagina contiene collegamenti ad F# alcuni esempi che usano Novell.
 
 ## <a name="ios"></a>iOS
 
-Il [città FSSceneKit](https://developer.xamarin.com/samples/monotouch/ios8/FSSceneKit/) esempio viene illustrato come creare una città generato casualmente utilizzando [SceneKit](xref:SceneKit) e F#. È inoltre disponibile un' [Edition "Oculus Thrift" (Google cartone)](https://developer.xamarin.com/samples/monotouch/ios8/SceneKitFSharp/).
+Nell'esempio [FSSceneKit City](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-fsscenekit/) viene illustrato come creare una città generata in modo casuale usando [SceneKit](xref:SceneKit) e F#. C'è anche un' [edizione "Oculus Thrifty" (Google carton)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-scenekitfsharp/).
 
-[![](samples-images/fxscenekit-sml.png "Esiste anche un'edizione di Google cartone Oculus Thrift")](samples-images/fxscenekit.png#lightbox)
+[![C'è anche un Oculus Thrifty Google carton Edition](samples-images/fxscenekit-sml.png)](samples-images/fxscenekit.png#lightbox)
 
-[Superficiale](https://github.com/dvdsgl/shallow) viene illustrato un divertente scorrere dall'interfaccia utente compilato con F# per iOS.
-
-## <a name="mac"></a>Mac
-
-[FSEvent Watcher](https://developer.xamarin.com/samples/mac/FSEvents/) viene scritta un'app Mac OS X di esempio con F#.
-
-[![](samples-images/fsevents-sml.png "Il FSEvent Watcher è un'app Mac OS X di esempio scritta conF#")](samples-images/fsevents.png#lightbox)
+[Shallow](https://github.com/dvdsgl/shallow) Mostra un Fun swipe-interfaccia utente compilata F# con per iOS.
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Un numero di campioni per il [libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) sono state convertite per F#. Questi collegamenti consentono di accedere al percorso di github per ciascun capitolo:
+Un numero di esempi per il [libro Novell. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) è stato trasferito in F#. Questi collegamenti consentono di passare al percorso di GitHub per ogni capitolo:
 
 - [Capitolo 2. Anatomia di un'app](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Capitolo 3. Dettagli della gestione del testo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)

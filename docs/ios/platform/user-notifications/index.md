@@ -1,38 +1,38 @@
 ---
-title: Framework per le notifiche utente in xamarin. IOS
-description: Include collegamenti a documenti che descrivono il framework per le notifiche utente e come usarlo per inviare e ricevere le notifiche locali e remote in un'app xamarin. IOS.
+title: Framework delle notifiche utente in Novell. iOS
+description: Collegamenti ai documenti che descrivono il framework delle notifiche utente e come usarlo per inviare e ricevere notifiche locali e remote in un'app Novell. iOS.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/01/2016
-ms.openlocfilehash: 3e9103b02dd17529d0084d6f7eb4ddcc7749659a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 13fb48d5ee64c1d84926158381f0f69655fb2cf2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423318"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651183"
 ---
-# <a name="user-notifications-framework-in-xamarinios"></a>Framework per le notifiche utente in xamarin. IOS
+# <a name="user-notifications-framework-in-xamarinios"></a>Framework delle notifiche utente in Novell. iOS
 
-Novità di iOS 10, la notifica all'utente consente a framework per il recapito e la gestione delle notifiche locali e remote. Uso di questo framework, l'app o l'estensione dell'App può pianificare il recapito di notifiche locali specificando un set di condizioni, ad esempio posizione o l'ora del giorno.
+Una novità di iOS 10, il Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Con questo Framework, l'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
-Inoltre, l'app o l'estensione può ricevere (e potenzialmente modificare) le notifiche locali e remote quando vengono recapitate al dispositivo iOS dell'utente.
+Inoltre, l'app o l'estensione può ricevere e potenzialmente modificare le notifiche locali e remote quando vengono recapitate al dispositivo iOS dell'utente.
 
-Il nuovo framework di interfaccia utente di notifica utente consente all'app o l'estensione dell'App per personalizzare l'aspetto delle notifiche locali e remote quando sono presentati all'utente.
+Il nuovo Framework dell'interfaccia utente di notifica utente consente all'app o all'estensione dell'app di personalizzare l'aspetto delle notifiche locali e remote quando vengono presentate all'utente.
 
 ## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notifiche utente migliorate](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
-Questo articolo illustra tutte le modalità che le notifiche utente sono state migliorate per iOS 10 e offre un'introduzione rapida all'implementazione tramite il nuovo framework di notifica all'utente.
+Questo articolo presenta tutti i modi in cui le notifiche utente sono state migliorate per iOS 10 e offre una rapida introduzione all'implementazione di tali notifiche usando il nuovo Framework di notifica utente.
 
 ## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notifiche utente avanzate](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
-Questo articolo viene approfondito il nuovo framework di notifiche per l'utente e su come sfruttare al meglio di esso in un'app xamarin. IOS.
+Questo articolo illustra in modo più approfondito il nuovo Framework notifiche utente e come sfruttarlo completamente in un'app Novell. iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Riferimento a Framework di UserNotifications](https://developer.apple.com/reference/usernotifications)
+- [Esempi di iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Guida di riferimento a UserNotifications Framework](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guida alla programmazione di notifiche locali e remoti](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)
+- [Guida alla programmazione di notifiche locali e remote](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

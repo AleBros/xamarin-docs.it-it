@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 12e7e31cda9818a3cb2e2efc331a0be5d0c334e5
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: d924bac99b4edc5f41afd024d56fb0c6ace2613d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740851"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647626"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
-Il [GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) esempio viene illustrato come implementare il modello di spostamento selezione 2D per Android Wear.
+L'esempio [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) illustra come implementare il modello di navigazione di selezione 2D per Android Wear.
 
-![Screenshot di esempio del GridViewPager su uno schermo quadrato](gridviewpager-images/gridviewpager.png)
+![Schermata di esempio di GridViewPager in una visualizzazione quadrata](gridviewpager-images/gridviewpager.png)
 
-Aggiungere prima la [supporto di Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear/) pacchetto NuGet al progetto.
+Per prima cosa, aggiungere il pacchetto NuGet [Novell Android Wear support](https://www.nuget.org/packages/Xamarin.Android.Wear/) al progetto.
 
-Il layout XML simile al seguente:
+Il codice XML del layout è simile al seguente:
 
 ```xml
 <android.support.wearable.view.GridViewPager xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,11 +31,11 @@ Il layout XML simile al seguente:
     android:keepScreenOn="true" />
 ```
 
-Creare un [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(o una sottoclasse, ad esempio [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
-per fornire visualizzazioni da visualizzare come l'utente si sposta.
+Creazione di un[`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(o sottoclasse come[`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+per fornire le visualizzazioni da visualizzare quando l'utente si sposta.
 
-Il [adapter di esempio](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) illustra come implementare i metodi richiesti, incluso gli override per `RowCount`, `GetColumnCount`, `GetBackground`, e `GetFragment`
+Nell' [adapter di esempio](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) viene illustrato come implementare i metodi necessari, incluse le `RowCount`sostituzioni `GetBackground`per, `GetColumnCount`, e`GetFragment`
 
 Collegare la scheda come illustrato:
 
@@ -47,6 +47,6 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Doc selezione 2D di Google](https://developer.android.com/training/wearables/ui/2d-picker.html)
-- [Android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [GridViewPager (esempio)](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)
+- [Documento di selezione 2D di Google](https://developer.android.com/training/wearables/ui/2d-picker.html)
+- [documentazione di Android. support. Wearable](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [GridViewPager (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)
