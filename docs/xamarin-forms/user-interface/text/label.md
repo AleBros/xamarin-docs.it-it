@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 31303114ddd829b596569981b5812b91c4e95b30
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: 5c12b5a5c0e558403362bd12baddfb8201f40759
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557448"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642930"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Testo visualizzato in xamarin. Forms_
 
-Il [ `Label` ](xref:Xamarin.Forms.Label) vista utilizzata per la visualizzazione di testo, un o più righe. Le etichette prevede le decorazioni di testo, testo colorato e usare i tipi di carattere personalizzati (famiglie di dimensioni e opzioni).
+Il [`Label`](xref:Xamarin.Forms.Label) vista utilizzata per la visualizzazione di testo, un o più righe. Le etichette prevede le decorazioni di testo, testo colorato e usare i tipi di carattere personalizzati (famiglie di dimensioni e opzioni).
 
 ## <a name="text-decorations"></a>Decorazioni di testo
 
-Decorazioni di testo barrato e sottolineato possono essere applicate a [ `Label` ](xref:Xamarin.Forms.Label) istanze impostando il `Label.TextDecorations` a uno o più proprietà `TextDecorations` membri dell'enumerazione:
+Decorazioni di testo barrato e sottolineato possono essere applicate a [`Label`](xref:Xamarin.Forms.Label) istanze impostando il `Label.TextDecorations` a uno o più proprietà `TextDecorations` membri dell'enumerazione:
 
 - `None`
 - `Underline`
@@ -46,16 +46,16 @@ var strikethroughLabel = new Label { Text = "This is text with strikethrough.", 
 var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
 ```
 
-L'esempio di screenshot seguente mostra le `TextDecorations` applicati a membri dell'enumerazione [ `Label` ](xref:Xamarin.Forms.Label) istanze:
+L'esempio di screenshot seguente mostra le `TextDecorations` applicati a membri dell'enumerazione [`Label`](xref:Xamarin.Forms.Label) istanze:
 
 ![](label-images/label-textdecorations.png "Etichette con le decorazioni di testo")
 
 > [!NOTE]
-> Decorazioni di testo possono essere applicate anche a [ `Span` ](xref:Xamarin.Forms.Span) istanze. Per altre informazioni sul `Span` classe, vedere [testo formattato](#Formatted_Text).
+> Decorazioni di testo possono essere applicate anche a [`Span`](xref:Xamarin.Forms.Span) istanze. Per altre informazioni sul `Span` classe, vedere [testo formattato](#Formatted_Text).
 
 ## <a name="colors"></a>Colori
 
-Le etichette possono essere impostate su utilizza un colore del testo personalizzato tramite l'associabile [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) proprietà.
+Le etichette possono essere impostate su utilizza un colore del testo personalizzato tramite l'associabile [`TextColor`](xref:Xamarin.Forms.Label.TextColor) proprietà.
 
 Particolare attenzione è necessario assicurarsi che i colori saranno utilizzabili in ogni piattaforma. Poiché ogni piattaforma ha valori predefiniti diversi per i colori di sfondo e testo, è necessario prestare attenzione a scegliere un valore predefinito che funziona su ognuno.
 
@@ -114,13 +114,13 @@ Le etichette possono essere impostate su gestione di testo non può essere conte
 
 ## <a name="displaying-a-specific-number-of-lines"></a>Visualizzazione di un determinato numero di righe
 
-Il numero di righe visualizzate da un [ `Label` ](xref:Xamarin.Forms.Label) può essere specificato impostando il `Label.MaxLines` proprietà su un `int` valore:
+Il numero di righe visualizzate da un [`Label`](xref:Xamarin.Forms.Label) può essere specificato impostando il `Label.MaxLines` proprietà su un `int` valore:
 
-- Quando `MaxLines` è 0, il `Label` rispetta il valore della [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) proprietà per visualizzare sia sufficiente una riga, probabilmente troncata, o tutte le righe con tutto il testo.
-- Quando `MaxLines` è 1, il risultato è identico all'impostazione di [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) proprietà [ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode), [ `HeadTruncation` ](xref:Xamarin.Forms.LineBreakMode), [ `MiddleTruncation` ](xref:Xamarin.Forms.LineBreakMode), o [ `TailTruncation` ](xref:Xamarin.Forms.LineBreakMode). Tuttavia, il `Label` rispetterà il valore della [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) proprietà in relazione al posizionamento dei puntini di sospensione, se applicabile.
-- Quando `MaxLines` è maggiore di 1, il `Label` verranno visualizzati fino al numero specificato di righe, rispettando il valore della [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) proprietà in relazione al posizionamento dei puntini di sospensione, se applicabile. Tuttavia, impostando il `MaxLines` proprietà su un valore maggiore di 1 non ha alcun effetto se il [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) viene impostata su [ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode).
+- Quando `MaxLines` è 0, il `Label` rispetta il valore della [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) proprietà per visualizzare sia sufficiente una riga, probabilmente troncata, o tutte le righe con tutto il testo.
+- Quando `MaxLines` è 1, il risultato è identico all'impostazione di [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) proprietà [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode), o [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). Tuttavia, il `Label` rispetterà il valore della [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) proprietà in relazione al posizionamento dei puntini di sospensione, se applicabile.
+- Quando `MaxLines` è maggiore di 1, il `Label` verranno visualizzati fino al numero specificato di righe, rispettando il valore della [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) proprietà in relazione al posizionamento dei puntini di sospensione, se applicabile. Tuttavia, impostando il `MaxLines` proprietà su un valore maggiore di 1 non ha alcun effetto se il [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) viene impostata su [`NoWrap`](xref:Xamarin.Forms.LineBreakMode).
 
-Nell'esempio XAML seguente viene illustrata l'impostazione di `MaxLines` proprietà in un [ `Label` ](xref:Xamarin.Forms.Label):
+Nell'esempio XAML seguente viene illustrata l'impostazione di `MaxLines` proprietà in un [`Label`](xref:Xamarin.Forms.Label):
 
 ```xaml
 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
@@ -146,9 +146,9 @@ Le schermate seguenti illustrano il risultato dell'impostazione di `MaxLines` pr
 
 ## <a name="formatted-text"></a>Testo formattato
 
-Le etichette di espongono una [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) proprietà che consente la presentazione del testo con più tipi di carattere e colori nella stessa visualizzazione.
+Le etichette espongono una [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) proprietà che consente la presentazione del testo con più tipi di carattere e colori nella stessa visualizzazione.
 
-Il `FormattedText` proprietà è di tipo [ `FormattedString` ](xref:Xamarin.Forms.FormattedString), che include uno o più [ `Span` ](xref:Xamarin.Forms.Span) istanze, viene impostate tramite la [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) proprietà . Nell'esempio `Span` proprietà possono essere usate per impostare l'aspetto visivo:
+Il `FormattedText` proprietà è di tipo [`FormattedString`](xref:Xamarin.Forms.FormattedString), che include uno o più [`Span`](xref:Xamarin.Forms.Span) istanze, viene impostate tramite la [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) proprietà . Nell'esempio `Span` proprietà possono essere usate per impostare l'aspetto visivo:
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) : il colore di sfondo span.
 - [`Font`](xref:Xamarin.Forms.Span.Font) : il tipo di carattere per il testo nel controllo span.
@@ -157,17 +157,17 @@ Il `FormattedText` proprietà è di tipo [ `FormattedString` ](xref:Xamarin.Form
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – le dimensioni del carattere per il testo nel controllo span.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) : il colore del testo nel controllo span. Questa proprietà è obsoleta ed è stata sostituita dal `TextColor` proprietà.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -il moltiplicatore da applicare per l'altezza della riga predefinita dell'intervallo. Per altre informazioni, vedere [altezza riga](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style)  – lo stile da applicare all'intervallo.
+- [`Style`](xref:Xamarin.Forms.Span.Style): stile da applicare all'intervallo.
 - [`Text`](xref:Xamarin.Forms.Span.Text) -il testo dell'intervallo.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) : il colore del testo nel controllo span.
 - `TextDecorations` -gli effetti da applicare al testo nel controllo span. Per altre informazioni, vedere [decorazioni di testo](#text-decorations).
 
 > [!NOTE]
-> Il [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor), [ `Text` ](xref:Xamarin.Forms.Span.Text), e [ `Text` ](xref:Xamarin.Forms.Span.Text) proprietà associabili hanno una modalità di associazione predefinito di [ `OneWay` ](xref:Xamarin.Forms.BindingMode). Per altre informazioni su questa modalità di associazione, vedere [la modalità di associazione predefinito](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) nel [modalità di associazione](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) Guida.
+> Le [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor)proprietà [`Text`](xref:Xamarin.Forms.Span.Text)associabili [`Text`](xref:Xamarin.Forms.Span.Text) , e hanno una modalità di [`OneWay`](xref:Xamarin.Forms.BindingMode)associazione predefinita. Per ulteriori informazioni su questa modalità di associazione, vedere [la modalità di associazione predefinita](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) nella Guida alla [modalità di associazione](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) .
 
-Inoltre, il [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) proprietà può essere utilizzata per definire una raccolta di riconoscitori di movimento che risponde ai movimenti nella [ `Span` ](xref:Xamarin.Forms.Span).
+Inoltre, il [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) proprietà può essere utilizzata per definire una raccolta di riconoscitori di movimento che risponde ai movimenti nella [`Span`](xref:Xamarin.Forms.Span).
 
-L'esempio XAML seguente illustra un `FormattedText` proprietà che è costituito da tre [ `Span` ](xref:Xamarin.Forms.Span) istanze:
+L'esempio XAML seguente illustra un `FormattedText` proprietà che è costituito da tre [`Span`](xref:Xamarin.Forms.Span) istanze:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -217,9 +217,9 @@ public class LabelPageCode : ContentPage
 ```
 
 > [!IMPORTANT]
-> Il [ `Text` ](xref:Xamarin.Forms.Span.Text) proprietà di un `Span` possono essere impostate tramite associazione dati. Per altre informazioni, vedere [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+> Il [`Text`](xref:Xamarin.Forms.Span.Text) proprietà di un `Span` possono essere impostate tramite associazione dati. Per altre informazioni, vedere [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-Si noti che un [ `Span` ](xref:Xamarin.Forms.Span) inoltre può rispondere a tutti i movimenti che vengono aggiunti per l'intervallo [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) raccolta. Ad esempio, un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) è stato aggiunto al secondo `Span` negli esempi di codice riportato sopra. Pertanto, quando ciò `Span` toccando il `TapGestureRecognizer` risponderà eseguendo il `ICommand` definito dal [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà. Per altre informazioni sui riconoscitori di movimento, vedere [movimenti di xamarin. Forms](~/xamarin-forms/app-fundamentals/gestures/index.md).
+Si noti che un [`Span`](xref:Xamarin.Forms.Span) inoltre può rispondere a tutti i movimenti che vengono aggiunti per l'intervallo [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) raccolta. Ad esempio, un [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) è stato aggiunto al secondo `Span` negli esempi di codice riportato sopra. Pertanto, quando ciò `Span` toccando il `TapGestureRecognizer` risponderà eseguendo il `ICommand` definito dal [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà. Per altre informazioni sui riconoscitori di movimento, vedere [movimenti di xamarin. Forms](~/xamarin-forms/app-fundamentals/gestures/index.md).
 
 Le schermate seguenti illustrano il risultato dell'impostazione di `FormattedString` tre proprietà `Span` istanze:
 
@@ -227,14 +227,14 @@ Le schermate seguenti illustrano il risultato dell'impostazione di `FormattedStr
 
 ## <a name="line-height"></a>Altezza riga
 
-L'altezza verticale di un [ `Label` ](xref:Xamarin.Forms.Label) e un [ `Span` ](xref:Xamarin.Forms.Span) può essere personalizzato tramite l'impostazione di [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) proprietà o [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) a un `double` valore. In iOS e Android tali valori sono i moltiplicatori dell'altezza della riga originale e in Universal Windows Platform (UWP) il `Label.LineHeight` valore della proprietà è un moltiplicatore delle dimensioni del carattere etichetta.
+L'altezza verticale di un [`Label`](xref:Xamarin.Forms.Label) e un [`Span`](xref:Xamarin.Forms.Span) può essere personalizzato tramite l'impostazione di [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) proprietà o [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) a un `double` valore. In iOS e Android tali valori sono i moltiplicatori dell'altezza della riga originale e in Universal Windows Platform (UWP) il `Label.LineHeight` valore della proprietà è un moltiplicatore delle dimensioni del carattere etichetta.
 
 > [!NOTE]
-> - In iOS, il [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) e [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) proprietà modificare l'altezza della riga di testo che rientra in una singola riga e che esegue il wrapping su più righe.
-> - In Android, il [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) e [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) proprietà solo modificare l'altezza della riga di testo che esegue il wrapping su più righe.
-> - Nella piattaforma UWP, il [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) proprietà viene modificata l'altezza della riga di testo che esegue il wrapping su più righe, e il [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) proprietà non ha alcun effetto.
+> - In iOS, il [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) e [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà modificare l'altezza della riga di testo che rientra in una singola riga e che esegue il wrapping su più righe.
+> - In Android, il [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) e [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà solo modificare l'altezza della riga di testo che esegue il wrapping su più righe.
+> - Nella piattaforma UWP, il [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) proprietà viene modificata l'altezza della riga di testo che esegue il wrapping su più righe, e il [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà non ha alcun effetto.
 
-Nell'esempio XAML seguente viene illustrata l'impostazione di [ `LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) proprietà in un [ `Label` ](xref:Xamarin.Forms.Label):
+Nell'esempio XAML seguente viene illustrata l'impostazione di [`LineHeight`](xref:Xamarin.Forms.Label.LineHeight) proprietà in un [`Label`](xref:Xamarin.Forms.Label):
 
 ```xaml
 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
@@ -252,11 +252,11 @@ var label =
 };
 ```
 
-Le schermate seguenti illustrano il risultato dell'impostazione di [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) proprietà 1.8:
+Le schermate seguenti illustrano il risultato dell'impostazione di [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) proprietà 1.8:
 
 ![](label-images/label-lineheight.png "Esempio di etichetta LineHeight")
 
-Nell'esempio XAML seguente viene illustrata l'impostazione di [ `LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) proprietà in un [ `Span` ](xref:Xamarin.Forms.Span):
+Nell'esempio XAML seguente viene illustrata l'impostazione di [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà in un [`Span`](xref:Xamarin.Forms.Span):
 
 ```xaml
 <Label LineBreakMode="WordWrap">
@@ -292,20 +292,20 @@ var label = new Label
 };
 ```
 
-Le schermate seguenti illustrano il risultato dell'impostazione di [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) proprietà 1.8:
+Le schermate seguenti illustrano il risultato dell'impostazione di [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà 1.8:
 
 ![](label-images/span-lineheight.png "Esempio LineHeight span")
 
 ## <a name="hyperlinks"></a>Collegamenti ipertestuali
 
-Il testo visualizzato da [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) istanze possono essere trasformate in collegamenti ipertestuali con l'approccio seguente:
+Il testo visualizzato dalle [`Label`](xref:Xamarin.Forms.Label) istanze [`Span`](xref:Xamarin.Forms.Span) di e può essere trasformato in collegamenti ipertestuali con l'approccio seguente:
 
-1. Impostare il `TextColor` e `TextDecoration` le proprietà del [ `Label` ](xref:Xamarin.Forms.Label) oppure [ `Span` ](xref:Xamarin.Forms.Span).
-1. Aggiungere un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) per il [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) raccolta del [ `Label` ](xref:Xamarin.Forms.Label) o [ `Span` ](xref:Xamarin.Forms.Span), la cui [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà viene associata a un `ICommand`e il cui [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) proprietà contiene l'URL da aprire.
-1. Definire il `ICommand` che verrà eseguito per il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer).
-1. Scrivere il codice che verrà eseguito dalla `ICommand`.
+1. Impostare le `TextColor` proprietà `TextDecoration` e dell'oggetto [`Label`](xref:Xamarin.Forms.Label) o [`Span`](xref:Xamarin.Forms.Span).
+1. Aggiungere un [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) oggetto [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) alla raccolta di [`Label`](xref:Xamarin.Forms.Label) o [`Span`](xref:Xamarin.Forms.Span), la cui [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà è associata a un `ICommand`oggetto e la [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) cui proprietà contiene l'URL da aprire.
+1. Definire l' `ICommand` oggetto che verrà eseguito [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)da.
+1. Scrivere il codice che verrà eseguito da `ICommand`.
 
-Esempio di codice seguente, tratto dal [demo di collegamento ipertestuale](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) esempio, viene illustrata una [ `Label` ](xref:Xamarin.Forms.Label) il cui contenuto è impostato da più [ `Span` ](xref:Xamarin.Forms.Span) istanze:
+L'esempio di codice seguente, tratto dall'esempio demos di [collegamento ipertestuale](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , Mostra un oggetto il [`Span`](xref:Xamarin.Forms.Span) [`Label`](xref:Xamarin.Forms.Label) cui contenuto è impostato da più istanze:
 
 ```xaml
 <Label>
@@ -326,13 +326,13 @@ Esempio di codice seguente, tratto dal [demo di collegamento ipertestuale](https
 </Label>
 ```
 
-In questo esempio, il primo e terzo [ `Span` ](xref:Xamarin.Forms.Span) istanze includono testo, mentre il secondo `Span` rappresenta un collegamento ipertestuale tappable. Si ha il colore del testo impostato su blu e ha un effetto di testo sottolineato. Ciò consente di creare l'aspetto di un collegamento ipertestuale, come illustrato negli screenshot seguenti:
+In questo esempio, la prima e la [`Span`](xref:Xamarin.Forms.Span) terza istanza includono testo, mentre la seconda `Span` rappresenta un collegamento ipertestuale toccabile. Il colore del testo è impostato su blu e presenta un effetto di testo sottolineato. Viene così creato l'aspetto di un collegamento ipertestuale, come illustrato nelle schermate seguenti:
 
-[![I collegamenti ipertestuali](label-images/hyperlinks-small.png "collegamenti ipertestuali")](label-images/hyperlinks-large.png#lightbox)
+[![Collegamenti ipertestuali](label-images/hyperlinks-small.png "Collegamenti ipertestuali")](label-images/hyperlinks-large.png#lightbox)
 
-Quando si tocca il collegamento ipertestuale, il [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) risponderà eseguendo il `ICommand` definito da relativo [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà. Inoltre, l'URL specificato dal [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) verrà passata alla proprietà di `ICommand` come parametro.
+Quando viene toccato il collegamento ipertestuale, [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) risponderà eseguendo l'oggetto `ICommand` definito dalla relativa [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) proprietà. Inoltre, l'URL specificato dalla [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) proprietà verrà passato `ICommand` a come parametro.
 
-Contiene il code-behind per la pagina XAML di `TapCommand` implementazione:
+Il code-behind per la pagina XAML contiene l' `TapCommand` implementazione:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -352,13 +352,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Il `TapCommand` viene eseguita la `OpenBrowser` , passando il [ `TapGestureRecognizer.CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) come parametro un valore di proprietà. A sua volta, questo metodo chiama il [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) metodo per aprire l'URL in un web browser. Pertanto, l'effetto generale è che quando toccando il collegamento ipertestuale nella pagina, viene visualizzato un web browser e viene esplorato l'URL associato al collegamento ipertestuale.
+Esegue il `OpenBrowser` metodo passando il valore della [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) proprietà come parametro. `TapCommand` A sua volta, questo metodo chiama [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) il metodo per aprire l'URL in un Web browser. Pertanto, l'effetto complessivo è che, quando il collegamento ipertestuale viene toccato sulla pagina, viene visualizzato un Web browser e l'URL associato al collegamento ipertestuale viene indirizzato a.
 
-### <a name="creating-a-reusable-hyperlink-class"></a>Creazione di una classe riutilizzabile collegamento ipertestuale
+### <a name="creating-a-reusable-hyperlink-class"></a>Creazione di una classe di collegamento ipertestuale riutilizzabile
 
-L'approccio precedente per creare un collegamento ipertestuale richiede la scrittura di codice ripetitivo ogni volta che è necessario un collegamento ipertestuale nell'applicazione. Tuttavia, entrambe le [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) classi possono essere sottoclassate per creare `HyperlinkLabel` e `HyperlinkSpan` classi, con il riconoscitore di movimento e codice di formattazione del testo aggiunto qui.
+L'approccio precedente alla creazione di un collegamento ipertestuale richiede la scrittura di codice ripetitivo ogni volta che è necessario un collegamento ipertestuale nell'applicazione. Tuttavia, entrambe le [`Label`](xref:Xamarin.Forms.Label) classi [`Span`](xref:Xamarin.Forms.Span) e possono essere sottoclassate per creare `HyperlinkLabel` classi `HyperlinkSpan` e, con il riconoscimento del movimento e il codice di formattazione del testo aggiunto.
 
-Esempio di codice seguente, tratto dal [demo di collegamento ipertestuale](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) esempio, viene illustrata una `HyperlinkSpan` classe:
+L'esempio di codice seguente, tratto dall'esempio demos di [collegamento ipertestuale](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , Mostra una `HyperlinkSpan` classe:
 
 ```csharp
 public class HyperlinkSpan : Span
@@ -384,9 +384,9 @@ public class HyperlinkSpan : Span
 }
 ```
 
-Il `HyperlinkSpan` classe definisce un `Url` proprietà e associato [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty), e il costruttore imposta l'aspetto di collegamento ipertestuale e la [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) che risponderà Quando si tocca il collegamento ipertestuale. Quando un `HyperlinkSpan` toccando, il `TapGestureRecognizer` risponderà eseguendo il [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) metodo per aprire l'URL, specificata dal `Url` proprietà, in un web browser.
+La `HyperlinkSpan` classe definisce una `Url` proprietà e associata [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)e il costruttore imposta l'aspetto del collegamento ipertestuale e [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) l'oggetto che risponderà quando viene toccato il collegamento ipertestuale. Quando viene `HyperlinkSpan` toccato un oggetto, il `TapGestureRecognizer` risponderà eseguendo il [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) metodo `Url` per aprire l'URL, specificato dalla proprietà, in un Web browser.
 
-Il `HyperlinkSpan` classe può essere utilizzata tramite l'aggiunta di un'istanza della classe per il XAML:
+La `HyperlinkSpan` classe può essere utilizzata aggiungendo un'istanza della classe a XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -411,12 +411,12 @@ Il `HyperlinkSpan` classe può essere utilizzata tramite l'aggiunta di un'istanz
 
 ## <a name="styling-labels"></a>Lo stile etichette
 
-Le sezioni precedenti trattati impostazione [ `Label` ](xref:Xamarin.Forms.Label) e [ `Span` ](xref:Xamarin.Forms.Span) proprietà in ogni istanza. Tuttavia, i set di proprietà possono essere raggruppati in uno stile che viene applicato in modo coerente a uno o più viste. Ciò può migliorare la leggibilità del codice e apportare modifiche alla struttura più semplice da implementare. Per altre informazioni, vedere [stili](~/xamarin-forms/user-interface/text/styles.md).
+Le sezioni precedenti trattati impostazione [`Label`](xref:Xamarin.Forms.Label) e [`Span`](xref:Xamarin.Forms.Span) proprietà in ogni istanza. Tuttavia, i set di proprietà possono essere raggruppati in uno stile che viene applicato in modo coerente a uno o più viste. Ciò può migliorare la leggibilità del codice e apportare modifiche alla struttura più semplice da implementare. Per altre informazioni, vedere [stili](~/xamarin-forms/user-interface/text/styles.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Testo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Collegamenti ipertestuali (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Hyperlinks)
+- [Testo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Collegamenti ipertestuali (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
 - [Creazione di App per dispositivi mobili con xamarin. Forms, capitolo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [API di etichetta](xref:Xamarin.Forms.Label)
 - [Intervallo di API](xref:Xamarin.Forms.Span)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: e2abb37a69fc059cea499814eb48453f3bbbed72
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 416106f9948c1757f398589e730e01ab55dd01a9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61078543"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642982"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin. Forms AbsoluteLayout
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) posizione e dimensioni proporzionale alle dimensioni e posizione o per i valori assoluti di elementi figlio. Visualizzazioni figlio possono essere posizionato e dimensione usando valori proporzionali o valori statici, pertanto proporzionale e possono essere combinati valori statici.
 
@@ -291,5 +291,5 @@ Si noti che `AbsoluteLayout`s sono annidate, in quanto in alcuni casi i layout d
 
 - [Creazione di App per dispositivi mobili con xamarin. Forms, il capitolo 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
 - [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)
-- [Layout (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Esempio BusinessTumble (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Esempio BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

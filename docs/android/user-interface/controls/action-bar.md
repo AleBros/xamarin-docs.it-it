@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7717e247ca3b3ecf82e1814ab43e8351b4f75ba6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510447"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643048"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>ActionBar per Novell. Android
 
@@ -87,7 +87,7 @@ La `ShareActionProvider` classe consente di eseguire un'azione di condivisione d
 
 ### <a name="image-sharing-example"></a>Esempio di condivisione immagini
 
-Ad esempio, di seguito è riportata una schermata di un Barra delle azioni con una voce di menu per condividere un'immagine (tratto dall'esempio [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ). Quando l'utente tocca la voce di menu nella Barra delle azioni, ShareActionProvider carica l'applicazione per gestire uno scopo associato a `ShareActionProvider`. In questo esempio, l'applicazione di messaggistica è stata usata in precedenza, quindi viene presentata nel Barra delle azioni.
+Ad esempio, di seguito è riportata una schermata di un Barra delle azioni con una voce di menu per condividere un'immagine (tratto dall'esempio [ShareActionProvider](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) ). Quando l'utente tocca la voce di menu nella Barra delle azioni, ShareActionProvider carica l'applicazione per gestire uno scopo associato a `ShareActionProvider`. In questo esempio, l'applicazione di messaggistica è stata usata in precedenza, quindi viene presentata nel Barra delle azioni.
 
 [![Screenshot dell'icona dell'applicazione di messaggistica nell'Barra delle azioni](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
@@ -150,7 +150,7 @@ L'immagine nell'esempio di codice precedente viene inclusa come asset con l'appl
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Scheda Hello ICS (esempio)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
-- [Demo di ShareActionProvider (esempio)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Scheda Hello ICS (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
+- [Demo di ShareActionProvider (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 - [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

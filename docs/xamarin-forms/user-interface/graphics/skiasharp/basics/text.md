@@ -7,16 +7,16 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 995291c438bdb510536294d4c3bb0e4e37ac737d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d23b4dbb97f4f98ff0361bb056e394bb7cbd941a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61228935"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645640"
 ---
 # <a name="integrating-text-and-graphics"></a>Integrazione di testo e grafica
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Informazioni su come determinare le dimensioni della stringa di testo sottoposto a rendering per l'integrazione di testo con la grafica di SkiaSharp_
 
@@ -177,4 +177,4 @@ Un altro oggetto con interfaccia grafico comune è la bitmap. Questo è un argom
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

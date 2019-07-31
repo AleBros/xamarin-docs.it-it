@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 05d5003d349ae11a1ec6a1b6f3d66b2f68ffad8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357176"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652872"
 ---
 # <a name="path-information-and-enumeration"></a>Informazioni sui tracciati ed enumerazione
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Ottenere informazioni sui percorsi ed enumerare il contenuto_
 
@@ -24,7 +24,7 @@ Il [ `SKPath` ](xref:SkiaSharp.SKPath) classe definisce diverse proprietà e met
 
 È talvolta utile determinare la lunghezza totale di tutte le linee e curve che costituiscono un percorso. Calcolare la lunghezza non è un'attività semplice modo algoritmico, in modo che un'intera classe denominata [ `PathMeasure` ](xref:SkiaSharp.SKPathMeasure) è dedicato ad esso.
 
-È anche talvolta utile ottenere tutte le operazioni e punti che compongono un percorso di disegno. Inizialmente, questa funzionalità potrebbe sembrare non necessaria: Se il programma ha creato il percorso, il programma conosce già il contenuto. Tuttavia, si è visto che i percorsi possono essere creati anche da [effetti per il tracciato](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e dalla conversione [stringhe di testo in tracciati](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). È anche possibile ottenere tutte le operazioni e punti che compongono queste percorsi di disegno. Una possibilità è per applicare una trasformazione algoritmica per tutti i punti, ad esempio, per disporre testo intorno a un emisfero:
+È anche talvolta utile ottenere tutte le operazioni e punti che compongono un percorso di disegno. Inizialmente, questa funzionalità potrebbe sembrare superflua: Se il programma ha creato il percorso, il programma ne conosce già il contenuto. Tuttavia, si è visto che i percorsi possono essere creati anche da [effetti per il tracciato](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e dalla conversione [stringhe di testo in tracciati](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). È anche possibile ottenere tutte le operazioni e punti che compongono queste percorsi di disegno. Una possibilità è per applicare una trasformazione algoritmica per tutti i punti, ad esempio, per disporre testo intorno a un emisfero:
 
 ![](information-images/pathenumerationsample.png "Testo disposto su un emisfero")
 
@@ -140,7 +140,7 @@ Il **Pipe con metà del monociclo si trova** pagina consente di animare una figu
 
 [![](information-images/unicyclehalfpipe-small.png "Tripla screenshot della pagina del monociclo si trova Pipe con metà")](information-images/unicyclehalfpipe-large.png#lightbox "tripla screenshot della pagina di Pipe con metà del monociclo si trova")
 
-Il `SKPaint` oggetto utilizzato per che traccia la metà-pipe sia del monociclo si trova è definito come un campo il `UnicycleHalfPipePage` classe. È anche definito il `SKPath` oggetto per del monociclo si trova:
+L' `SKPaint` oggetto utilizzato per tracciare la metà della pipe e il monociclo viene definito come un campo `UnicycleHalfPipePage` nella classe. È anche definito il `SKPath` oggetto per del monociclo si trova:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -255,7 +255,7 @@ La maggior parte di queste lettere sono costituiti da linee rette, ma tali linee
 
 La chiave è che le linee rette originale sono suddivisi in una serie di linee rette più piccole. Quindi queste singole linee rette più piccole possono essere modificate in modi diversi in modo da formare una curva.
 
-Per facilitare questo processo, il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio contiene un valore statico [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe con un `Interpolate` metodo che suddivide un linea retta in numerose le righe brevi che sono solo un'unità di lunghezza. Inoltre, la classe contiene diversi metodi che convertono i tre tipi di curve di Bézier in una serie di linee rette piccole dimensioni che si avvicinano della curva. (Nell'articolo sono state presentate le formule parametriche [ **tre tipi di curve di Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Questo processo è detto _bidimensionalità_ curva:
+Per facilitare questo processo, il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio contiene un valore statico [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe con un `Interpolate` metodo che suddivide un linea retta in numerose le righe brevi che sono solo un'unità di lunghezza. Inoltre, la classe contiene diversi metodi che convertono i tre tipi di curve di Bézier in una serie di linee rette piccole dimensioni che si avvicinano della curva. (Nell'articolo sono state presentate le formule parametriche [ **tre tipi di curve di Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Questo processo è detto _bidimensionalità_ curva:
 
 ```csharp
 static class PathExtensions
@@ -523,4 +523,4 @@ Questa è una tecnica molto versatile. Se la matrice degli effetti di percorso d
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

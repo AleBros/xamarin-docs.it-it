@@ -1,49 +1,49 @@
 ---
-title: Tocco e movimenti in xamarin. Android
-description: "Touchscreen su molti dei dispositivi moderni consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento di tocco semplice: è possibile usare anche i movimenti. Ad esempio, il movimento di zoom con avvicinamento delle dita è un esempio molto comune di questo oggetto dall'avvicinamento una parte della schermata con due dita, che l'utente può eseguire lo zoom avanti o indietro. Questa guida esamina il tocco e movimenti in Android."
+title: Tocco e movimenti in Novell. Android
+description: Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento semplice del tocco. è anche possibile usare i movimenti. Ad esempio, il gesto di pinch-to-zoom è un esempio molto comune, pizzicando una parte dello schermo con due dita, l'utente può ingrandire o ridurre. Questa guida esamina il tocco e i movimenti in Android.
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7f957c9ff5a0e7c3a0821978703860ed2f723a92
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1efccdd5f56194f002731b0490bad7573321d7d2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013137"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643990"
 ---
-# <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in xamarin. Android
+# <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in Novell. Android
 
-_Touchscreen su molti dei dispositivi moderni consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento di tocco semplice: è possibile usare anche i movimenti. Ad esempio, il movimento di zoom con avvicinamento delle dita è un esempio molto comune di questo oggetto dall'avvicinamento una parte della schermata con due dita, che l'utente può eseguire lo zoom avanti o indietro. Questa guida esamina il tocco e movimenti in Android._
+_Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento semplice del tocco. è anche possibile usare i movimenti. Ad esempio, il gesto di pinch-to-zoom è un esempio molto comune, pizzicando una parte dello schermo con due dita, l'utente può ingrandire o ridurre. Questa guida esamina il tocco e i movimenti in Android._
 
-## <a name="touch-overview"></a>Panoramica di tocco
+## <a name="touch-overview"></a>Panoramica sul tocco
 
-iOS e Android sono simili nei modi in cui gestiscono il tocco. Entrambi possono supportare Multi-touch - numero di punti di contatto nella schermata di - e i movimenti complessi. Questa guida presenta alcune analogie fra i concetti, nonché particolarità di implementazione di tocco e movimenti in entrambe le piattaforme.
+iOS e Android sono simili nei modi in cui gestiscono il tocco. Entrambi possono supportare molti punti di contatto a più touch sullo schermo e i movimenti complessi. Questa guida presenta alcune delle analogie nei concetti, nonché le peculiarità dell'implementazione di tocco e movimenti su entrambe le piattaforme.
 
-Android Usa un `MotionEvent` oggetto per incapsulare i dati di tocco e i metodi sull'oggetto visualizzazione per l'ascolto delle tocchi.
+Android usa un `MotionEvent` oggetto per incapsulare i dati di tocco e i metodi sull'oggetto visualizzazione per restare in ascolto dei tocchi.
 
-Oltre ad acquisire i dati di tocco, iOS e Android fornisce mezzi per l'interpretazione degli schemi di tocchi in movimenti. I riconoscitori di movimento a sua volta possono essere utilizzati per interpretare comandi specifici dell'applicazione, ad esempio una rotazione di un'immagine o un turno di una pagina. Android fornisce un numero limitato di movimenti supportati, nonché delle risorse per garantire l'aggiunta di movimenti personalizzati complessi semplice.
+Oltre a acquisire i dati di tocco, iOS e Android forniscono i mezzi per interpretare i modelli di tocchi nei movimenti. Questi riconoscitori di movimento possono a sua volta essere usati per interpretare i comandi specifici dell'applicazione, ad esempio una rotazione di un'immagine o una volta una pagina. Android offre alcuni movimenti supportati, oltre alle risorse per semplificare l'aggiunta di movimenti personalizzati complessi.
 
-Se si lavora su Android o iOS, la scelta tra i tocchi e i riconoscitori di movimento può essere uno confuso. Questa Guida suggerisce che in genere, dovrebbe dare la preferenza per i riconoscitori di movimento. I riconoscitori di movimento sono implementati come classi discrete, che forniscono una maggiore separazione delle competenze e un miglior incapsulamento. Questo rende facile condividere la logica tra diverse visualizzazioni, riducendo al minimo la quantità di codice scritto.
+Indipendentemente dal fatto che si stia lavorando a Android o iOS, la scelta tra i riconoscimenti e i riconoscitori di movimento può essere confusa. Questa guida suggerisce che in generale è necessario assegnare una preferenza ai riconoscitori di movimento. I riconoscitori di movimento vengono implementati come classi discrete, che offrono una maggiore separazione dei problemi e una migliore incapsulamento. In questo modo è più semplice condividere la logica tra visualizzazioni diverse, riducendo al minimo la quantità di codice scritto.
 
-Questa guida segue un formato simile per ogni sistema operativo: per prima cosa, tocco della piattaforma API vengono introdotti e spiegate, così come sono la base su cui tocco vengono compilate le interazioni. Quindi, possiamo addentrarci nel mondo dei riconoscitori di movimento – prima di tutto esplorando alcuni movimenti comune, e completamento dell'operazione con la creazione di movimenti personalizzati per le applicazioni. Infine, si noterà come tenere traccia delle singole dita uso del rilevamento di tocco di basso livello per creare un programma finger-paint.
+Questa guida segue un formato simile per ogni sistema operativo: prima di tutto, vengono introdotte e spiegate le API Touch della piattaforma, in quanto costituiscono la base in cui vengono compilate le interazioni di tocco. Viene quindi analizzato il mondo dei riconoscitori di movimento, prima esplorando alcuni movimenti comuni e terminando con la creazione di movimenti personalizzati per le applicazioni. Infine, si vedrà come tenere traccia delle singole dita usando il rilevamento del tocco di basso livello per creare un programma di disegno Finger.
 
 ## <a name="sections"></a>Sezioni
 
 -  [Tocco in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 -  [Procedura dettagliata: Uso del tocco in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Rilevamento del multitouch](touch-tracking.md)
+-  [Rilevamento multitocco](touch-tracking.md)
 
 ## <a name="summary"></a>Riepilogo
 
-In questa guida viene esaminato il tocco in Android. Per entrambi i sistemi operativi, è stato descritto come abilitare il tocco e come rispondere agli eventi di tocco. Successivamente, abbiamo imparato a movimenti e alcuni dei riconoscitori di movimento che forniscono iOS e Android per gestire alcuni degli scenari più comuni. Abbiamo esaminato come creare i movimenti personalizzati e implementarli nelle applicazioni. Una procedura dettagliata illustrati i concetti e le API per ogni sistema operativo in azione ed è stato anche illustrato come tenere traccia delle singole dita.
+In questa guida è stato esaminato il tocco in Android. Per entrambi i sistemi operativi è stato illustrato come abilitare il tocco e come rispondere agli eventi di tocco. A questo punto, sono stati appresi i movimenti e alcuni dei riconoscitori di movimento che sia Android che iOS forniscono per gestire alcuni degli scenari più comuni. È stato esaminato come creare movimenti personalizzati e come implementarli nelle applicazioni. Una procedura dettagliata ha illustrato i concetti e le API per ogni sistema operativo in azione ed è stato anche illustrato come tenere traccia delle singole dita.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android toccare Start (esempio)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
-- [Android Touch finale (esempio)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
-- [Pittura con le dita (esempio)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)
+- [Android touch Start (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android touch finale (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
+- [FingerPaint (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

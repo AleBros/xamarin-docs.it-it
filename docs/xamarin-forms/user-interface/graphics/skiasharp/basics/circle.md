@@ -7,22 +7,22 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 484a3ac742d162e1d6faaa38ad2e4eb056ed64a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018307"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644489"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Disegnare un cerchio semplice in SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Apprendere le nozioni di base di disegno di SkiaSharp, tra cui Canvas e disegnare gli oggetti_
 
 Questo articolo vengono illustrati i concetti di creazione grafica in xamarin. Forms con SkiaSharp, compresa la creazione di un' `SKCanvasView` oggetto per ospitare la grafica, la gestione di `PaintSurface` evento e l'utilizzo un `SKPaint` oggetto per specificare colori e altri disegno attributi.
 
-Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programma contiene tutto il codice di esempio per questa serie di articoli di SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe delle pagine [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice illustra come disegnare un cerchio al centro della pagina con un raggio pari a 100 pixel. Il contorno del cerchio è rosso e l'interno del cerchio è blu.
+Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programma contiene tutto il codice di esempio per questa serie di articoli di SkiaSharp. La prima pagina è autorizzata a utilizzare **cerchio semplice** e richiama la classe delle pagine [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Questo codice illustra come disegnare un cerchio al centro della pagina con un raggio pari a 100 pixel. Il contorno del cerchio è rosso e l'interno del cerchio è blu.
 
 ![](circle-images/circleexample.png "Un cerchio blu evidenziato in rosso")
 
@@ -153,7 +153,7 @@ Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle
 > [!NOTE]
 > Il `SKPaint` classe definisce un [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) per abilitare l'anti-aliasing per il rendering degli elementi grafici. Anti-aliasing comporta in genere archi visivamente più uniforme, pertanto è opportuno impostare questa proprietà su `true` nella maggior parte dei `SKPaint` oggetti. Per motivi di semplicità, questa proprietà è _non_ impostare nella maggior parte delle pagine di esempio.
 
-Anche se la larghezza del contorno del cerchio è specificata come 25 pixel &mdash; o un quarto del raggio del cerchio &mdash; risulta essere più sottili e vi è un buon motivo per cui: Metà della larghezza della riga è nascosto dai cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
+Anche se la larghezza del contorno del cerchio viene specificata come 25 &mdash; pixel o un trimestre del raggio del cerchio &mdash; , risulta più sottile ed esiste un motivo valido: Metà della lunghezza della linea è nascosta dal cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
 
 Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
 
@@ -161,4 +161,4 @@ Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

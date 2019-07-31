@@ -1,26 +1,26 @@
 ---
-title: Riconoscimento di movimento zoom simultanee in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare iOS specifiche della piattaforma che consente il riconoscimento di movimento zoom simultanee da utilizzare in un'applicazione.
+title: Riconoscimento simultaneo di movimenti di Pan in iOS
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la piattaforma iOS specifica che consente di usare il riconoscimento simultaneo dei movimenti di Pan in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4587bb89ddfe43873e666a07514075f1a952e985
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8e86141ac27999a71a84ae7150b19ef3f60c117f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926775"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655974"
 ---
-# <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Riconoscimento di movimento zoom simultanee in iOS
+# <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Riconoscimento simultaneo di movimenti di Pan in iOS
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Quando un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) collegata a una visualizzazione all'interno di una visualizzazione a scorrimento, tutti il pan movimenti acquisiti dal `PanGestureRecognizer` e non vengono passati alla visualizzazione scorrimento. Pertanto, non è più scorre la visualizzazione a scorrimento.
+Quando un [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) collegata a una visualizzazione all'interno di una visualizzazione a scorrimento, tutti il pan movimenti acquisiti dal `PanGestureRecognizer` e non vengono passati alla visualizzazione scorrimento. Pertanto, non è più scorre la visualizzazione a scorrimento.
 
-Questo specifico della piattaforma iOS consente un `PanGestureRecognizer` in una visualizzazione a scorrimento per acquisire e condividere il movimento di zoom con la visualizzazione a scorrimento. Vengono utilizzati in XAML, impostando il [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) proprietà associata `true`:
+Questa specifica della piattaforma iOS consente a `PanGestureRecognizer` un oggetto in una visualizzazione a scorrimento di acquisire e condividere il movimento della panoramica con la visualizzazione a scorrimento. Vengono utilizzati in XAML, impostando il [`Application.PanGestureRecognizerShouldRecognizeSimultaneously`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) proprietà associata `true`:
 
 ```xaml
 <Application ...
@@ -40,12 +40,12 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
 ```
 
-Il `Application.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.SetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application},System.Boolean)) metodo, nelle [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usata per controllare se un riconoscitore di movimento di zoom in una visualizzazione a scorrimento sarà acquisire il movimento di zoom, o acquisire e condividere il pan movimento con la visualizzazione a scorrimento. Inoltre, il [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.GetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application})) metodo può essere utilizzato da restituire se il movimento di zoom è condiviso con la visualizzazione a scorrimento che contiene il [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
+Il `Application.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il [`Application.SetPanGestureRecognizerShouldRecognizeSimultaneously`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.SetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application},System.Boolean)) metodo, nelle [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) dello spazio dei nomi, viene usata per controllare se un riconoscitore di movimento di zoom in una visualizzazione a scorrimento sarà acquisire il movimento di zoom, o acquisire e condividere il pan movimento con la visualizzazione a scorrimento. Inoltre, il [`Application.GetPanGestureRecognizerShouldRecognizeSimultaneously`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.GetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application})) metodo può essere utilizzato da restituire se il movimento di zoom è condiviso con la visualizzazione a scorrimento che contiene il [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer).
 
-Pertanto, con questo specifico della piattaforma abilitata, quando un [ `ListView` ](xref:Xamarin.Forms.ListView) contiene una [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer), entrambi i `ListView` e il `PanGestureRecognizer` riceverà il movimento di zoom e elaborarlo. Tuttavia, con questo specifico della piattaforma disabilitato, quando un `ListView` contiene un `PanGestureRecognizer`, il `PanGestureRecognizer` sarà acquisire il movimento di zoom ed elaborarlo e il `ListView` non riceverà il movimento di zoom.
+Pertanto, con questo specifico della piattaforma abilitata, quando un [`ListView`](xref:Xamarin.Forms.ListView) contiene una [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer), entrambi i `ListView` e il `PanGestureRecognizer` riceverà il movimento di zoom e elaborarlo. Tuttavia, con questo specifico della piattaforma disabilitato, quando un `ListView` contiene un `PanGestureRecognizer`, il `PanGestureRecognizer` sarà acquisire il movimento di zoom ed elaborarlo e il `ListView` non riceverà il movimento di zoom.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

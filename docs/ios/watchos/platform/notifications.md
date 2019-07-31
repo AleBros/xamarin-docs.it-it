@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60897246"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645914"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>le notifiche in Xamarin watchOS
 
@@ -69,11 +69,11 @@ La visualizzazione dinamica può visualizzare più dati e fornire maggiore inter
 
 Le notifiche possono provenire da un server remoto ([servizio di notifiche Push di Apple](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), o servizio APN) o possono essere generati in locale nell'app per iOS.
 
-Fare riferimento al [procedura dettagliata di notifiche di iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) per un esempio di come generare le notifiche locali e il [esempio WatchNotifications](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) per un esempio funzionante.
+Fare riferimento al [procedura dettagliata di notifiche di iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) per un esempio di come generare le notifiche locali e il [esempio WatchNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) per un esempio funzionante.
 
 Le notifiche locali devono avere il `AlertTitle` impostato da visualizzare nella finestra di di Apple Watch - il `AlertTitle` stringa viene visualizzata nell'interfaccia breve sguardo. Sia la `AlertTitle` e `AlertBody` vengono visualizzati nell'elenco delle notifiche; e il `AlertBody` viene visualizzato nell'interfaccia prolungata la ricerca.
 
-In questo screenshot appare il `AlertTitle` visualizzati nell'elenco delle notifiche e la `AlertBody` visualizzata nell'interfaccia di aspetto prolungata (usando la [esempi di codice](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
+In questo screenshot appare il `AlertTitle` visualizzati nell'elenco delle notifiche e la `AlertBody` visualizzata nell'interfaccia di aspetto prolungata (usando la [esempi di codice](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
 
 ![](notifications-images/watch-notificationslist-sml.png "In questo screenshot appare il AlertTitle visualizzati nell'elenco delle notifiche") ![](notifications-images/watch-notificationcontroller-sml.png "The AlertBody visualizzata nell'interfaccia di Long-Cerca")
 
@@ -126,7 +126,7 @@ Il controller di notifica predefinito aspetto simile al seguente durante il test
 
 ### <a name="example-notification-payload"></a>Payload di notifica di esempio
 
-Nel [catalogo Kit Watch](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) esempio vi è un file JSON di esempio payload **NotificationPayload.json** (elencati di seguito).
+Nel [catalogo Kit Watch](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) esempio vi è un file JSON di esempio payload **NotificationPayload.json** (elencati di seguito).
 
 ```csharp
 {
@@ -151,6 +151,6 @@ Nel [catalogo Kit Watch](https://developer.xamarin.com/samples/monotouch/watchOS
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [WatchNotifications (notifiche locali) (esempio)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchNotifications (notifiche locali) (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
+- [WatchKitCatalog (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documentazione di Apple Watch Kit notifiche](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

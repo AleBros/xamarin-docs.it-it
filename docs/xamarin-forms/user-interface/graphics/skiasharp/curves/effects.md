@@ -7,16 +7,16 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: ee1df713315559c076fbfaed6f5a34057940ff36
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61083131"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642761"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effetti per il tracciato in SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Individuare i vari effetti di percorso che consentono i percorsi da utilizzare per la traccia e la compilazione_
 
@@ -418,7 +418,7 @@ Sotto forma di un catenaria si blocca una catena o cable della distribuzione del
 
 `y = a · cosh(x / a)`
 
-Il *cosh* è la funzione coseno iperbolico. Per la *x* uguale a 0, *cosh* è uguale a zero e *y* equals *un*. Che è al centro della catenaria. Ad esempio il *coseno* (funzione), *cosh* è detto *anche*, vale a dire che *cosh(–x)* è uguale a *cosh(x)*, e aumentano i valori per l'aumento argomenti positivi o negativi. Questi valori descrivono le curve che costituiscono i lati del catenaria.
+Il *cosh* è la funzione coseno iperbolico. Per la *x* uguale a 0, *cosh* è uguale a zero e *y* equals *un*. Che è al centro della catenaria. Ad esempio il *coseno* (funzione), *cosh* è detto *anche*, vale a dire che *cosh(–x)* è uguale a *cosh(x)* , e aumentano i valori per l'aumento argomenti positivi o negativi. Questi valori descrivono le curve che costituiscono i lati del catenaria.
 
 Trovare il valore corretto della *un* per adattarsi catenaria in base alle dimensioni della pagina del telefono non è un calcolo diretto. Se *w* e *h* è la larghezza e altezza di un rettangolo, il valore ottimale della *un* soddisfa l'equazione seguente:
 
@@ -794,13 +794,13 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-Se si osserva con attenzione i risultati, si noterà che non sono limitate le linee tratteggiate rosse e blu con precisione al rettangolo arrotondato. (Si tratta apparentemente una caratteristica del codice sottostante Skia.) Se questo non è soddisfacente, è illustrato un approccio alternativo per le linee diagonali tratteggiate in verde: Il rettangolo arrotondato viene utilizzato come un tracciato di ritaglio e vengono disegnate le linee tratteggiate nella pagina intera.
+Se si osserva con attenzione i risultati, si noterà che non sono limitate le linee tratteggiate rosse e blu con precisione al rettangolo arrotondato. (Si tratta apparentemente una caratteristica del codice sottostante Skia.) Se questo non è soddisfacente, viene visualizzato un approccio alternativo per le linee di tratteggio diagonali in verde: Il rettangolo arrotondato viene utilizzato come tracciato di ritaglio e le linee tratteggiate vengono disegnate sull'intera pagina.
 
 Il `PaintSurface` gestore si conclude con una chiamata a semplicemente disegnare il rettangolo arrotondato, in modo da visualizzare la discrepanza con le linee tratteggiate rosse e blu:
 
 [![](effects-images/hatchfill-small.png "Tripla screenshot della pagina di tratteggio riempimento")](effects-images/hatchfill-large.png#lightbox "tripla screenshot della pagina di tratteggio riempimento")
 
-La schermata Android non davvero un aspetto simile: Il ridimensionamento dello screenshot ha causato il sottili linee rosse e spazi thin consolidare in linee rosse apparentemente più ampia e spazi più ampio.
+La schermata Android non ha un aspetto simile al seguente: Il ridimensionamento dello screenshot ha causato il consolidamento delle linee rosse sottili e degli spazi sottili in linee rosse apparentemente più ampie e spazi più ampi.
 
 ## <a name="filling-with-a-path"></a>Riempimento con un percorso
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Sono necessari solo i primi due argomenti. Il metodo accede il percorso fa riferimento il `src` argomento, modifica i dati del percorso basati le proprietà relative al tratto nel `SKPaint` oggetto (inclusi i `PathEffect` proprietà) e quindi scrive i risultati nel `dst` percorso. Il `resScale` parametro consente di ridurre la precisione per creare un percorso di destinazione più piccolo e il `cullRect` argomento consente di eliminare i contorni all'esterno di un rettangolo.
 
-Un uso di base di questo metodo non comporta effetti per il tracciato affatto: Se il `SKPaint` oggetto ha relativo `Style` impostata su `SKPaintStyle.Stroke`ed esegue *non* hanno relativo `PathEffect` impostare, quindi `GetFillPath` viene creato un percorso che rappresenta un *struttura*del percorso di origine come se fosse stato tracciato dalle proprietà di disegno.
+Un uso di base di questo metodo non implica tutti gli effetti del percorso: Se la `SKPaint` `Style` proprietà dell'oggetto è impostata su `SKPaintStyle.Stroke` `PathEffect` eilrelativooggettononèimpostato,invienecreatounpercorsocherappresentaunastrutturadelpercorsodioriginecomesefossestato`GetFillPath` tracciato da Proprietà del disegno.
 
 Ad esempio, se il `src` il percorso è un cerchio semplice del raggio 500 e il `SKPaint` oggetto specifica uno spessore pari a 100, il `dst` percorso diventa due cerchi concentrici, uno con un raggio di 450 e l'altro con un raggio di 550. Il metodo viene chiamato `GetFillPath` poiché il riempimento si `dst` percorso è lo stesso come che traccia il `src` percorso. Ma è anche possibile tracciare il `dst` percorso per verificare i contorni di percorso.
 
@@ -1418,4 +1418,4 @@ Ora che si sono visto gli effetti di percorso che spaziano da semplici punti e t
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 693bca77fc22ac68c4a0480315363b241c3cf98b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 2a6de91772b1b6135a5b3567f691b8cd3522a924
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511217"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643247"
 ---
 # <a name="android-speech"></a>Sintesi vocale Android
 
@@ -234,8 +234,8 @@ In questa guida sono state esaminate le nozioni di base per la conversione di te
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Novell. Forms DependencyService](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [Sintesi vocale (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
-- [Sintesi vocale (esempio)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
+- [Novell. Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Sintesi vocale (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
+- [Sintesi vocale (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Spazio dei nomi Android. Speech](xref:Android.Speech)
 - [Spazio dei nomi Android. Speech. TTS](xref:Android.Speech.Tts)

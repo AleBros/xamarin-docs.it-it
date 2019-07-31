@@ -7,16 +7,16 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: eb7622fb2cebc13abd5e49e42b21511e45c72a45
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 571ddae0757691cd7fee301076f0b1310749531d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61302044"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657462"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Disegno a mano libera in SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usare le dita per disegnare nell'area di disegno._
 
@@ -24,9 +24,9 @@ Un `SKPath` oggetto può essere continuamente aggiornato e visualizzato. Questa 
 
 ![](finger-paint-images/fingerpaintsample.png "Un esercizio di disegno a mano libera")
 
-Il supporto per il tocco in xamarin. Forms non consente di rilevamento delle singole dita sullo schermo, in modo che un effetto di tocco di rilevamento di xamarin. Forms è stato sviluppato per fornire il supporto di tocco aggiuntive. Questo effetto è descritto nell'articolo [ **richiamo eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Il programma di esempio [ **Touch-rilevamento effetto demo** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) include due pagine che utilizzano SkiaSharp, tra cui un programma dipingere.
+Il supporto per il tocco in xamarin. Forms non consente di rilevamento delle singole dita sullo schermo, in modo che un effetto di tocco di rilevamento di xamarin. Forms è stato sviluppato per fornire il supporto di tocco aggiuntive. Questo effetto è descritto nell'articolo [ **richiamo eventi dagli effetti**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). Il programma di esempio [ **Touch-rilevamento effetto demo** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) include due pagine che utilizzano SkiaSharp, tra cui un programma dipingere.
 
-Il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) soluzione include questo evento di tocco di rilevamento. Il progetto di libreria .NET Standard include la `TouchEffect` (classe), il `TouchActionType` enumerazione, la `TouchActionEventHandler` delegato e il `TouchActionEventArgs` classe. Ognuno dei progetti della piattaforma include un' `TouchEffect` classe per la piattaforma, il progetto iOS contiene anche un `TouchRecognizer` classe.
+Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) soluzione include questo evento di tocco di rilevamento. Il progetto di libreria .NET Standard include la `TouchEffect` (classe), il `TouchActionType` enumerazione, la `TouchActionEventHandler` delegato e il `TouchActionEventArgs` classe. Ognuno dei progetti della piattaforma include un' `TouchEffect` classe per la piattaforma, il progetto iOS contiene anche un `TouchRecognizer` classe.
 
 Il **dito Paint** nella pagina **SkiaSharpFormsDemos** è un'implementazione semplificata di disegno a mano libera. Non consentire la selezione di colore o tracciare larghezza non è possibile cancellare l'area di disegno e ovviamente non è possibile salvare l'oggetto grafico.
 
@@ -172,6 +172,6 @@ A questo punto si è appreso come per disegnare linee e curve utilizzando equazi
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [Touch-rilevamento effetto demo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Touch-rilevamento effetto demo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 - [Richiamo di eventi dagli effetti](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

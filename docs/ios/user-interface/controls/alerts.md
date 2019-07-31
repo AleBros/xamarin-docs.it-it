@@ -1,48 +1,48 @@
 ---
-title: La visualizzazione degli avvisi in xamarin. IOS
-description: Questo documento descrive come visualizzare gli avvisi in xamarin. IOS tramite l'API introdotte in iOS 8 UIAlertController.
+title: Visualizzazione di avvisi in Novell. iOS
+description: Questo documento descrive come visualizzare gli avvisi in Novell. iOS usando le API UIAlertController introdotte in iOS 8.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 576de9a46fc89fe01c564c05568d4331a32dbd96
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 4c47e12468d9107cbe03d4bc45ffa77e4ad918e9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674402"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652053"
 ---
-# <a name="displaying-alerts-in-xamarinios"></a>La visualizzazione degli avvisi in xamarin. IOS
+# <a name="displaying-alerts-in-xamarinios"></a>Visualizzazione di avvisi in Novell. iOS
 
-A partire da iOS 8, UIAlertController ha completato UIActionSheet sostituito e UIAlertView entrambe di cui sono stati deprecati.
+A partire da iOS 8, UIAlertController ha completato la sostituzione di UIActionSheet e UIAlertView che ora sono deprecate.
 
-A differenza delle classi che sostituisce, che rappresentano le sottoclassi di UIView, UIAlertController è una sottoclasse di UIViewController.
+Diversamente dalle classi che ha sostituito, ovvero sottoclassi di UIView, UIAlertController è una sottoclasse di UIViewController.
 
-Usare `UIAlertControllerStyle` per indicare il tipo di avviso da visualizzare. Questi tipi di avvisi sono:
+Consente `UIAlertControllerStyle` di indicare il tipo di avviso da visualizzare. Questi tipi di avvisi sono:
 
 - **UIAlertControllerStyleActionSheet**
-    * Pre-iOS 8 questo sarebbe stata una UIActionSheet
+    * Pre-iOS 8 questa sarebbe stata una UIActionSheet
 - **UIAlertControllerStyleAlert**
     * Pre-iOS 8 questo sarebbe stato UIAlertView 
 
-Esistono tre passaggi necessari per prendere durante la creazione di un Controller di avvisi:
+Quando si crea un controller di avviso, è necessario eseguire tre passaggi:
 
-- Creare e configurare l'avviso gli elementi seguenti:
+- Creare e configurare l'avviso con un:
     * title
-    * messaggio
+    * message
     * preferredStyle
     
-- (Facoltativo) Aggiungere un campo di testo
+- Opzionale Aggiungere un campo di testo
 - Aggiungere le azioni necessarie
-- Presentare il Controller di visualizzazione
+- Presentare il controller di visualizzazione
 
-L'avviso più semplice contiene un singolo pulsante, come illustrato in questo screenshot:
+L'avviso più semplice contiene un solo pulsante, come illustrato in questo screenshot:
 
- ![Avviso con un solo pulsante](alerts-images/alert1.png)
+ ![Avviso con un pulsante](alerts-images/alert1.png)
 
-Il codice per visualizzare un avviso semplice è come segue:
+Il codice per la visualizzazione di un avviso semplice è il seguente:
 
 ```csharp
 okayButton.TouchUpInside += (sender, e) => {
@@ -58,7 +58,7 @@ okayButton.TouchUpInside += (sender, e) => {
 };
 ```
 
-La visualizzazione di un avviso con più opzioni, viene eseguito in modo simile, ma aggiungere due azioni. Ad esempio, lo screenshot seguente mostra un avviso con due pulsanti:
+La visualizzazione di un avviso con più opzioni viene eseguita in modo analogo, ma aggiunge due azioni. Ad esempio, la schermata seguente mostra un avviso con due pulsanti:
 
  ![Avviso con due pulsanti](alerts-images/alert2.png)
 
@@ -77,11 +77,11 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 });
 ```
 
-Gli avvisi possono visualizzare anche un foglio di azione, simile allo screenshot seguente:
+Gli avvisi possono anche visualizzare un foglio di azione, simile allo screenshot seguente:
 
- ![Avviso di foglio di azione](alerts-images/alert3.png)
+ ![Avviso del foglio di azione](alerts-images/alert3.png)
 
-Vengono aggiunti i pulsanti per l'avviso, usare il `AddAction` metodo:
+I pulsanti vengono aggiunti all'avviso con il `AddAction` metodo:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -111,5 +111,5 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Controlli (esempio)](https://developer.xamarin.com/samples/monotouch/Controls/)
-- [Controller di avvisi](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)
+- [Controlli (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controller di avviso](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

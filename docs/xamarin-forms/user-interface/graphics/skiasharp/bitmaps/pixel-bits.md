@@ -7,20 +7,20 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c066f89dc8f558a9154138bf38ad4326fe21291
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61411272"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642528"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>L'accesso ai bit di pixel bitmap SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Come illustrato nell'articolo [ **SkiaSharp salvataggio di bitmap per i file**](saving.md), generalmente le bitmap vengono archiviate nei file in un formato compresso, come JPEG o PNG. Contrariamente, una bitmap di SkiaSharp archiviata nella memoria non viene compresso. Sono archiviati come una serie sequenziale di pixel. Questo formato non compresso facilita il trasferimento delle bitmap a una superficie di visualizzazione.
 
-Il blocco di memoria occupato da una bitmap di SkiaSharp è organizzato in modo molto semplice: Inizia con la prima riga del pixel, da sinistra a destra e continua quindi con la seconda riga. Per le bitmap a colori, ogni pixel costituita da quattro byte, il che significa che lo spazio di memoria totale necessario per la bitmap è quattro volte il prodotto di larghezza e altezza.
+Il blocco di memoria occupato da una bitmap SkiaSharp è organizzato in modo molto semplice: Inizia con la prima riga di pixel, da sinistra a destra, quindi continua con la seconda riga. Per le bitmap a colori, ogni pixel costituita da quattro byte, il che significa che lo spazio di memoria totale necessario per la bitmap è quattro volte il prodotto di larghezza e altezza.
 
 Questo articolo descrive come un'applicazione può ottenere l'accesso a tali pixel, direttamente tramite l'accesso a blocco di memoria della bitmap in pixel, o indirettamente. In alcuni casi, potrebbe essere necessario un programma analizzare i pixel di un'immagine e creare un istogramma di qualche tipo. Più comunemente, le applicazioni possono costruire immagini univoche creando modo algoritmico i pixel che compongono la bitmap:
 
@@ -37,7 +37,7 @@ SkiaSharp offre diverse tecniche per l'accesso ai bit di pixel della bitmap. Que
 
 È possibile considerare le prime due tecniche come "generale" e i due secondi come "livello basso." Esistono alcuni altri metodi e proprietà che è possibile usare, ma questi sono i più importanti.
 
-Consente di visualizzare le differenze di prestazioni tra queste tecniche, il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) applicazione contiene una pagina denominata **Bitmap sfumatura** che Crea una bitmap con pixel che combinano le sfumature di colore rosso e blue per creare una sfumatura. Il programma consente di creare otto copie diverse di questa bitmap, tutti con tecniche diverse per l'impostazione di pixel della bitmap. Ognuno di tali otto bitmap viene creato in un metodo separato che imposta una breve descrizione della tecnica e calcola il tempo necessario per impostare tutti i pixel. Ogni metodo esegue il ciclo attraverso la logica di impostazione di pixel 100 volte per ottenere una stima più accurata delle prestazioni.
+Consente di visualizzare le differenze di prestazioni tra queste tecniche, il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) applicazione contiene una pagina denominata **Bitmap sfumatura** che Crea una bitmap con pixel che combinano le sfumature di colore rosso e blue per creare una sfumatura. Il programma consente di creare otto copie diverse di questa bitmap, tutti con tecniche diverse per l'impostazione di pixel della bitmap. Ognuno di tali otto bitmap viene creato in un metodo separato che imposta una breve descrizione della tecnica e calcola il tempo necessario per impostare tutti i pixel. Ogni metodo esegue il ciclo attraverso la logica di impostazione di pixel 100 volte per ottenere una stima più accurata delle prestazioni.
 
 ### <a name="the-setpixel-method"></a>Il metodo SetPixel
 
@@ -280,7 +280,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-La domanda sola è il seguente: Rappresenta il formato di numero intero del `SKColor` valore nell'ordine del `SKColorType.Rgba8888` colore, tipo o il `SKColorType.Bgra8888` colore tipo, o si tratta di un altro elemento interamente? La risposta alla domanda dovrà essere rivelata al più presto.
+L'unica domanda è la seguente: È il formato intero del `SKColor` valore nell'ordine `SKColorType.Rgba8888` del tipo di colore o del `SKColorType.Bgra8888` tipo di colore oppure è interamente un altro? La risposta alla domanda dovrà essere rivelata al più presto.
 
 ### <a name="the-setpixels-method"></a>Metodo SetPixels
 
@@ -294,7 +294,7 @@ bitmap.SetPixels(intPtr);
 
 Inizialmente, può sembrare come se `SetPixels` ti offre non sono più potenza e prestazioni rispetto a `GetPixels` pur essendo meno utile. Con `GetPixels` è ottenere il blocco di memoria della bitmap e accedervi. Con `SetPixels` è possibile allocare e accedere a parte della memoria e quindi impostare questo valore come il blocco di memoria della bitmap.
 
-Ma tramite `SetPixels` offre un vantaggio sintattico distinto: Consente di accedere ai bit di pixel della bitmap utilizzando una matrice. Ecco il metodo `GradientBitmapPage` che illustra questa tecnica. Prima di tutto, il metodo definisce una matrice di byte multidimensionale corrispondenti ai byte di pixel della bitmap. La prima dimensione è la riga, la seconda dimensione è la colonna e corrisponde la terza dimensione a quattro componenti di ogni pixel:
+Tuttavia, `SetPixels` l'utilizzo di offre un vantaggio sintattico distinto: Consente di accedere ai bit di pixel bitmap usando una matrice. Ecco il metodo `GradientBitmapPage` che illustra questa tecnica. Prima di tutto, il metodo definisce una matrice di byte multidimensionale corrispondenti ai byte di pixel della bitmap. La prima dimensione è la riga, la seconda dimensione è la colonna e corrisponde la terza dimensione a quattro componenti di ogni pixel:
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -499,7 +499,7 @@ Ecco una tabella che consolida i tempi di esecuzione in millisecondi:
 
 Come previsto, la chiamata `SetPixel` volte 65.536 è il modo effeicient minimi per impostare i pixel della bitmap. La compilazione un' `SKColor` matrice e impostando il `Pixels` proprietà è molto meglio e persino Confronta agevolmente con alcune del `GetPixels` e `SetPixels` tecniche. Lavora `uint` valori di pixel è veloce rispetto all'impostazione separato `byte` componenti e la conversione il `SKColor` valore intero senza segno aggiunge overhead per il processo.
 
-È inoltre interessante confrontare le sfumature diverse: Le prime righe di ogni piattaforma sono uguali e mostrano la sfumatura nel modo previsto. Ciò significa che il `SetPixel` metodo e `Pixels` proprietà creare correttamente pixel da colori indipendentemente dal formato pixel sottostante.
+È anche interessante confrontare le varie sfumature: Le prime righe di ogni piattaforma sono le stesse e mostrano la sfumatura come previsto. Ciò significa che il `SetPixel` metodo e `Pixels` proprietà creare correttamente pixel da colori indipendentemente dal formato pixel sottostante.
 
 Le due righe successive di iOS e Android schermate sono anche gli stessi, a conferma del fatto che il piccolo `MakePixel` per il valore predefinito è correttamente definito metodo `Rgba8888` formato pixel per queste piattaforme.
 
@@ -794,4 +794,4 @@ Il codice nel costruttore accede a ogni pixel, esegue un'operazione con AND bit 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

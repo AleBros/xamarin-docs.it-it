@@ -7,16 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9054539b08da89c0f7d8a93150866fb1b41e63f1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162587"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642788"
 ---
 # <a name="the-non-separable-blend-modes"></a>Le modalità di blend non separabili
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Come illustrato nell'articolo [ **modalità di blend in SkiaSharp separabili**](separable.md), le modalità di blend separabili eseguono operazioni sui canali di colore rosso, verde e blu separatamente. Le modalità di blend non separabili non lo sono. Operando al momento i livelli di tonalità, saturazione e luminosità del colore, le modalità di blend non separabili possono modificare i colori in modi interessanti:
 
@@ -28,7 +28,7 @@ Per comprendere le modalità di blend non separabili, è necessario trattare i p
 
 Il modello di colori HSL illustrato nell'articolo [ **l'integrazione con xamarin. Forms** ](../../basics/integration.md) e un programma di esempio in questo articolo consente la sperimentazione con colori HSL. È possibile creare un `SKColor` valore utilizzando i valori di tonalità, saturazione e luminosità con il metodo statico [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) (metodo).
 
-La tonalità rappresenta la lunghezza d'onda dominante del colore. Hue valori compresi tra 0 e 360 e scorrere gli elementi primari additivi e sottrattivi: Rosso è il valore 0, giallo è 60, verde è 120, ciano è 180, blu è 240, magenta è 300 e il ciclo ritorna a rosso in 360.
+La tonalità rappresenta la lunghezza d'onda dominante del colore. I valori di tonalità variano da 0 a 360 e passano attraverso le primarie additive e sottrattive: Il valore rosso è 0, il giallo è 60, il verde è 120, cyan è 180, il blu è 240, il magenta è 300 e il ciclo torna a rosso a 360.
 
 Se non vi è alcun colore dominante &mdash; ad esempio, il colore è bianco o il nero o a una gradazione di grigio &mdash; la tonalità è non definita e in genere impostata su 0. 
 
@@ -198,7 +198,7 @@ Il `SKBlendModes.Color` fusione mantiene la luminosità dell'oggetto di destinaz
 
 Si vedrà a breve un'applicazione di questa modalità blend.
 
-Infine, il `SKBlendModes.Luminosity` modalità blend è l'opposto di `SKBlendModes.Color`. Mantiene il colore e la saturazione della destinazione, ma usa la luminosità dell'origine. Il `Luminosity` modalità blend è più misteriosi del batch: I dispositivi di scorrimento colore e la saturazione influiscono sull'immagine, ma anche a luminosità di medie dimensioni, l'immagine non è distinto:
+Infine, il `SKBlendModes.Luminosity` modalità blend è l'opposto di `SKBlendModes.Color`. Mantiene il colore e la saturazione della destinazione, ma usa la luminosità dell'origine. La `Luminosity` modalità Blend è la più misteriosa del batch: I dispositivi di scorrimento Hue e saturazione influiscono sull'immagine, ma anche alla luminosità media, l'immagine non è diversa:
 
 [![Modalità di Blend non separabili - luminosità](non-separable-images/NonSeparableBlendModes-Luminosity.png "modalità Blend Non separabili - luminosità")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
@@ -208,11 +208,11 @@ In genere non è il caso che è opportuno usare una delle modalità blend non se
 
 ## <a name="a-matte-for-a-separable-mode"></a>Per una modalità separabile mascherino
 
-Ecco un'immagine bitmap inclusa come risorsa nel [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio. Il nome del file viene **Banana.jpg**:
+Ecco un'immagine bitmap inclusa come risorsa nel [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio. Il nome del file viene **Banana.jpg**:
 
 ![Monkey banana](non-separable-images/Banana.jpg "Monkey Banana")
 
-È possibile creare un alone che include solo il banana. Si tratta inoltre di una risorsa nel [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio. Il nome del file viene **BananaMatte.png**:
+È possibile creare un alone che include solo il banana. Si tratta inoltre di una risorsa nel [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio. Il nome del file viene **BananaMatte.png**:
 
 ![Banana mascherino](non-separable-images/BananaMatte.png "mascherino Banana")
 
@@ -292,4 +292,4 @@ Provare a modificare la modalità di sfumatura da `SKBlendMode.Saturation`. Il b
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

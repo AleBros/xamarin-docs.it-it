@@ -7,16 +7,16 @@ ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 43a427b4eca174dce4af47bb43cb1a048a6cfe7c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61158541"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647680"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Sfumatura lineare SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Il [ `SKPaint` ](xref:SkiaSharp.SKPaint) classe definisce un [ `Color` ](xref:SkiaSharp.SKPaint.Color) proprietà utilizzato per disegnare linee o aree di riempimento con un colore a tinta unita. In alternativa è possibile disegnare linee o riempire le aree _sfumature_, quali sono le sfumature graduale dei colori:
 
@@ -27,7 +27,7 @@ Il tipo di base della sfumatura è un _lineare_ sfumatura. Si verifica la combin
 Questi metodi restituiscono un oggetto di tipo [ `SKShader` ](xref:SkiaSharp.SKShader) impostato per il [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) proprietà `SKPaint`. Se il `Shader` proprietà è diverso da null, viene eseguito l'override di `Color` proprietà. Tutte le righe che viene tracciata o qualsiasi area in cui viene riempito con questo `SKPaint` oggetto si basa sulla sfumatura anziché il colore a tinta unita.
 
 > [!NOTE]
-> Il `Shader` proprietà viene ignorata quando si include un' `SKPaint` dell'oggetto un `DrawBitmap` chiamare. È possibile usare la `Color` proprietà di `SKPaint` per impostare un livello di trasparenza per la visualizzazione di una mappa di bit (come descritto nell'articolo [bitmap visualizzazione SkiaSharp](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), ma non è possibile usare il `Shader` proprietà per la visualizzazione una bitmap con una trasparenza della sfumatura. Altre tecniche sono disponibili per la visualizzazione di bitmap con lucidi sfumatura: Questi elementi sono descritti negli articoli [sfumature circolare SkiaSharp](circular-gradients.md#radial-gradients-for-masking) e [modalità di composizione e blend SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
+> Il `Shader` proprietà viene ignorata quando si include un' `SKPaint` dell'oggetto un `DrawBitmap` chiamare. È possibile usare la `Color` proprietà di `SKPaint` per impostare un livello di trasparenza per la visualizzazione di una mappa di bit (come descritto nell'articolo [bitmap visualizzazione SkiaSharp](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), ma non è possibile usare il `Shader` proprietà per la visualizzazione una bitmap con una trasparenza della sfumatura. Sono disponibili altre tecniche per la visualizzazione di bitmap con lucidi sfumatura: Questi sono descritti negli articoli [SkiaSharp](circular-gradients.md#radial-gradients-for-masking) le sfumature circolari e le [modalità di composizione e fusione SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
 
 ## <a name="corner-to-corner-gradients"></a>Sfumature angolo a altro
 
@@ -37,7 +37,7 @@ Spesso una sfumatura lineare compreso tra un angolo di un rettangolo a un altro.
 - in senso orizzontale all'angolo superiore destro
 - in senso diagonale all'angolo in basso a destra
 
-Sfumatura lineare diagonale è illustrata nella prima pagina nel **SkiaSharp shader e altri effetti** sezione il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio. Il **angolo a altro sfumatura** pagina Crea un `SKCanvasView` nel relativo costruttore. Il `PaintSurface` gestore crea un' `SKPaint` dell'oggetto un `using` istruzione e quindi definisce un rettangolo di 300 pixel quadrato centrato nell'area di disegno:
+Sfumatura lineare diagonale è illustrata nella prima pagina nel **SkiaSharp shader e altri effetti** sezione il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio. Il **angolo a altro sfumatura** pagina Crea un `SKCanvasView` nel relativo costruttore. Il `PaintSurface` gestore crea un' `SKPaint` dell'oggetto un `using` istruzione e quindi definisce un rettangolo di 300 pixel quadrato centrato nell'area di disegno:
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -477,7 +477,7 @@ public class GradientAnimationPage : ContentPage
 
 Il `OnTimerTick` metodo calcola un `angle` valore che viene animata da 0 a 2π ogni 3 secondi. 
 
-Ecco un modo per calcolare i due punti di sfumatura. Un' `SKPoint` valore denominato `vector` viene calcolata per estendere dal centro dell'area di disegno a un punto sul raggio del cerchio. La direzione del vettore corrente si basa sui valori seno e il coseno dell'angolo. I due punti di sfumatura opposti sono quindi viene calcolati: Un punto viene calcolato sottraendo tale vettore dal punto center e altri punti viene calcolato aggiungendo il vettore punto centrale:
+Ecco un modo per calcolare i due punti di sfumatura. Un' `SKPoint` valore denominato `vector` viene calcolata per estendere dal centro dell'area di disegno a un punto sul raggio del cerchio. La direzione del vettore corrente si basa sui valori seno e il coseno dell'angolo. Vengono quindi calcolati i due punti di sfumatura opposti: Un punto viene calcolato sottraendo il vettore dal punto centrale e un altro punto viene calcolato aggiungendo il vettore al punto centrale:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -511,7 +511,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-Un approccio leggermente diverso richiede meno codice. Questo approccio Usa la [ `SKShader.CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) overload di metodo con una trasformazione di matrice come ultimo argomento. Questo approccio è la versione di [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio:
+Un approccio leggermente diverso richiede meno codice. Questo approccio Usa la [ `SKShader.CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) overload di metodo con una trasformazione di matrice come ultimo argomento. Questo approccio è la versione di [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -617,13 +617,13 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-I due punti di sfumatura nel `CreateLinearGradient` metodo si basano su due dei punti che definiscono questo percorso: Entrambi i punti sono più vicino all'angolo superiore sinistro. Il primo è sul bordo superiore dell'area di disegno e il secondo è il bordo sinistro dell'area di disegno. Ecco il risultato:
+I due punti sfumatura nel `CreateLinearGradient` metodo sono basati su due punti che definiscono il percorso seguente: Entrambi i punti sono vicini all'angolo superiore sinistro. Il primo è sul bordo superiore dell'area di disegno e il secondo è il bordo sinistro dell'area di disegno. Ecco il risultato:
 
 [![Sfumatura con arcobaleno difettoso](linear-gradient-images/RainbowGradientFaulty.png "sfumatura arcobaleno difettoso")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 
 Si tratta di un'immagine di interessante, ma non è abbastanza lo scopo. Il problema è che quando si crea una sfumatura lineare, le righe di costante di colore sono perpendicolare alla linea della sfumatura. La linea della sfumatura si basa sui punti in cui la figura interessa i bordi superiore e sinistro e tale riga non è in genere perpendicolare ai bordi che si estendono all'angolo inferiore destro della figura. Questo approccio funzionerebbe solo se l'area di disegno sono stato quadrato.
 
-Per creare una sfumatura con arcobaleno appropriate, la linea della sfumatura deve essere perpendicolare al bordo dell'arcobaleno. Ovvero un calcolo più complesso. Deve essere definito un vettore parallela sul lato lungo della figura. Il vettore è ruotata di 90 gradi in modo che risulti perpendicolare a tale lato. Quindi allungamento per essere la larghezza dell'elemento figure moltiplicando per `rainbowWidth`. I due punti di sfumatura in un punto di fianco nella figura vengono calcolati in base e che puntano oltre il vettore. Ecco il codice che viene visualizzato nei **arcobaleno sfumatura** nella pagina il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio:
+Per creare una sfumatura con arcobaleno appropriate, la linea della sfumatura deve essere perpendicolare al bordo dell'arcobaleno. Ovvero un calcolo più complesso. Deve essere definito un vettore parallela sul lato lungo della figura. Il vettore è ruotata di 90 gradi in modo che risulti perpendicolare a tale lato. Quindi allungamento per essere la larghezza dell'elemento figure moltiplicando per `rainbowWidth`. I due punti di sfumatura in un punto di fianco nella figura vengono calcolati in base e che puntano oltre il vettore. Ecco il codice che viene visualizzato nei **arcobaleno sfumatura** nella pagina il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio:
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -917,4 +917,4 @@ Il `CreateLinearGradient` chiamata definisce una sfumatura dall'inizio di questo
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

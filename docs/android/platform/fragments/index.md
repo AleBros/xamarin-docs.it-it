@@ -1,68 +1,68 @@
 ---
 title: Frammenti
-description: Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettazioni più flessibile per le dimensioni dello schermo diverse molti trovate su telefoni e Tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni xamarin. Android, nonché come supportare frammenti dispositivi precedenti ad Android 3.0 (API livello 11).
+description: Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Novell. Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11).
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 4347ee40b0b72cc2d182ba1ef8f111212dd0ee47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cfc4420d95778188368f3e7d3595713d83371d33
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026066"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643599"
 ---
 # <a name="fragments"></a>Frammenti
 
-_Android 3.0 ha introdotto i frammenti, che illustra come supportare le progettazioni più flessibile per le dimensioni dello schermo diverse molti trovate su telefoni e Tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni xamarin. Android, nonché come supportare frammenti dispositivi precedenti ad Android 3.0 (API livello 11)._
+_Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni più flessibili per le diverse dimensioni dello schermo disponibili in telefoni e tablet. Questo articolo illustra come usare i frammenti per sviluppare applicazioni Novell. Android e come supportare i frammenti nei dispositivi pre-Android 3,0 (livello API 11)._
 
-## <a name="fragments-overview"></a>Panoramica di frammenti
+## <a name="fragments-overview"></a>Cenni preliminari sui frammenti
 
-Le dimensioni dello schermo più grande trovate nella maggior parte dei Tablet aggiunti a un ulteriore livello di complessità per lo sviluppo di Android, un layout destinato schermo di piccole dimensioni non funzionano necessariamente anche per schermi più grandi e viceversa. Per ridurre il numero di complicazioni che questa situazione ha introdotto, Android 3.0 ha aggiunto due nuove funzionalità *frammenti* e *pacchetti di supporto*.
+Le dimensioni dello schermo più grandi trovate nella maggior parte dei tablet hanno aggiunto un ulteriore livello di complessità allo sviluppo per Android: un layout progettato per la piccola schermata non funziona necessariamente anche per schermi più grandi e viceversa. Per ridurre il numero di complicazioni introdotte da questa introduzione, Android 3,0 ha aggiunto due nuove funzionalità, *frammenti* e *pacchetti di supporto*.
 
-Frammenti possono essere considerati come moduli di interfaccia utente. Essi consentono agli sviluppatori di suddividere l'interfaccia utente in parti isolate e riutilizzabili che possono essere eseguiti in attività distinte. In fase di esecuzione, le attività stesse deciderà quale frammenti da utilizzare.
+I frammenti possono essere considerati come moduli dell'interfaccia utente. Consentono allo sviluppatore di dividere l'interfaccia utente in parti isolate e riutilizzabili che possono essere eseguite in attività separate. In fase di esecuzione, le attività stabiliranno i frammenti da usare.
 
-Pacchetti di supporto sono stati chiamati originariamente *compatibilità delle librerie* e consentiti frammenti da usare nei dispositivi che eseguono versioni di Android precedente alla 3.0 Android (API livello 11).
+I pacchetti di supporto sono stati originariamente denominati *librerie di compatibilità* e frammenti consentiti da usare nei dispositivi che eseguono versioni di Android prima di Android 3,0 (livello API 11).
 
-Ad esempio, nell'immagine seguente illustra il modo in cui una singola applicazione usa frammenti tra diverse tipologie di dispositivi.
+Nell'immagine seguente, ad esempio, viene illustrato il modo in cui una singola applicazione utilizza frammenti in diversi fattori di forma del dispositivo.
 
-[![Diagramma della modalità di utilizzo frammenti nei Tablet e dispositivi](images/00.png)](images/00.png#lightbox)
+[![Diagramma del modo in cui vengono usati i frammenti nei tablet e nei dispositivi portatili](images/00.png)](images/00.png#lightbox)
 
-*Un frammento* contiene un elenco, mentre *frammento B* contiene i dettagli relativi agli elementi selezionati nell'elenco. Quando l'applicazione viene eseguita su un tablet, è possibile visualizzare entrambi i frammenti nella stessa attività. Quando la stessa applicazione viene eseguita in un ricevitore (con le dimensioni dello schermo più piccolo), i frammenti sono ospitati in due attività distinte. Frammento di A e B frammento sono gli stessi in entrambi i fattori di forma, ma le attività che li ospitano sono diverse.
+Il *frammento a* contiene un elenco, mentre il *frammento B* contiene i dettagli per un elemento selezionato nell'elenco. Quando l'applicazione viene eseguita in un tablet, può visualizzare entrambi i frammenti nella stessa attività. Quando la stessa applicazione viene eseguita su un dispositivo portatile (con dimensioni dello schermo inferiori), i frammenti sono ospitati in due attività separate. Il frammento A e il frammento B sono gli stessi in entrambi i fattori di forma, ma le attività che li ospitano sono differenti.
 
-Per coordinare e gestire tutti i frammenti di un'attività, Android ha introdotto una nuova classe denominata la *FragmentManager*. Ogni attività ha una propria istanza di un `FragmentManager` per l'aggiunta, eliminazione e individuazione ospitato frammenti. Il diagramma seguente illustra la relazione tra le attività e frammenti:
+Per consentire a un'attività di coordinare e gestire tutti questi frammenti, Android ha introdotto una nuova classe denominata *FragmentManager*. Ogni attività dispone di una propria istanza di `FragmentManager` un oggetto per l'aggiunta, l'eliminazione e la ricerca di frammenti ospitati. Il diagramma seguente illustra la relazione tra i frammenti e le attività:
 
-[![Diagramma che illustra le relazioni tra attività, gestione di frammento e frammenti](images/01.png)](images/01.png#lightbox)
+[![Diagramma che illustra le relazioni tra attività, Gestione frammenti e frammenti](images/01.png)](images/01.png#lightbox)
 
-In alcuni saluti, frammenti possono essere considerati come i controlli composti o mini-Activities. Essi vengono raggruppate le parti dell'interfaccia utente in moduli riutilizzabili che possono quindi essere utilizzati in modo indipendente dagli sviluppatori nelle attività. Un frammento dispone di una gerarchia di visualizzazione, ovvero come un'attività, ma, a differenza di un'attività, può essere condivisa tra le schermate. Le visualizzazioni sono diverse dalle frammenti in frammenti hanno proprio ciclo di vita; le viste non lo sono.
+Per quanto riguarda, i frammenti possono essere considerati come controlli compositi o come mini-attività. Combinano parti dell'interfaccia utente in moduli riutilizzabili che possono essere usati in modo indipendente dagli sviluppatori nelle attività. Un frammento ha una gerarchia di visualizzazione, come un'attività, ma, a differenza di un'attività, può essere condivisa tra le schermate. Le visualizzazioni differiscono da frammenti in quanto i frammenti hanno il proprio ciclo di vita; le visualizzazioni non lo sono.
 
-L'attività è un host a uno o più frammenti, ma non direttamente a conoscenza dei frammenti stessi. I frammenti in modo analogo, non sono direttamente a conoscenza di altri frammenti nell'attività di hosting. Tuttavia, sono consapevoli di frammenti e attività di `FragmentManager` le loro attività. Tramite il `FragmentManager`, è possibile che un'attività o un frammento di ottenere un riferimento a un'istanza specifica di un frammento, e quindi chiamare metodi su quell'istanza. In questo modo, l'attività o frammenti possono comunicare e interagire con altri frammenti.
+Mentre l'attività è un host di uno o più frammenti, non è in grado di riconoscere direttamente i frammenti. Analogamente, i frammenti non sono in grado di riconoscere direttamente altri frammenti nell'attività di hosting. Tuttavia, i frammenti e le `FragmentManager` attività sono consapevoli di nell'attività. Utilizzando, è `FragmentManager`possibile che un'attività o un frammento ottenga un riferimento a un'istanza specifica di un frammento e quindi chiami i metodi su tale istanza. In questo modo, l'attività o i frammenti possono comunicare e interagire con altri frammenti.
 
-Questa guida contiene una descrizione dettagliata sull'uso di frammenti, tra cui:
+Questa guida contiene una copertura completa su come usare i frammenti, tra cui:
 
--   **Creazione di frammenti** : come creare un frammento di base e metodi principali che devono essere implementati.
--   **Frammento di gestione e le transazioni** : come modificare i frammenti in fase di esecuzione.
--   **Pacchetto di supporto Android** : usare le librerie che consentono di frammenti da utilizzare nelle versioni precedenti di Android.
+-   **Creazione di frammenti** : come creare un frammento di base e metodi chiave che devono essere implementati.
+-   **Gestione dei frammenti e transazioni** : come modificare i frammenti in fase di esecuzione.
+-   **Pacchetto di supporto Android** : come usare le librerie che consentono di usare i frammenti nelle versioni precedenti di Android.
 
 
 ## <a name="requirements"></a>Requisiti
 
-I frammenti sono disponibili in Android SDK inizia con il livello API 11 (Android 3.0), come illustrato nello screenshot seguente:
+I frammenti sono disponibili nell'Android SDK a partire dal livello API 11 (Android 3,0), come illustrato nello screenshot seguente:
 
-[![Selezionando il livello API di Android SDK Manager](images/02.png)](images/02.png#lightbox)
+[![Selezione del livello API in gestione Android SDK](images/02.png)](images/02.png#lightbox)
 
-I frammenti sono disponibili in xamarin. Android 4.0 e versioni successive. Un'applicazione xamarin. Android deve avere come destinazione almeno API livello 11 (Android 3.0) o versione successiva per poter usare i frammenti. Il Framework di destinazione può essere impostato nel progetto di proprietà come illustrato di seguito:
+I frammenti sono disponibili in Novell. Android 4,0 e versioni successive. Per poter usare i frammenti, un'applicazione Novell. Android deve avere come destinazione almeno l'API livello 11 (Android 3,0) o versione successiva. Il Framework di destinazione può essere impostato nelle proprietà del progetto, come illustrato di seguito:
 
-[![Impostazione del livello API di Framework di destinazione nelle opzioni del progetto](images/03-sml.png)](images/03.png#lightbox)
+[![Impostazione del livello API del Framework di destinazione nelle opzioni del progetto](images/03-sml.png)](images/03.png#lightbox)
 
-È possibile usare i frammenti in versioni precedenti di Android usando il pacchetto di supporto Android e xamarin. Android 4.2 o versione successiva. Come eseguire questa operazione è descritta più dettagliatamente nei documenti in questa sezione.
+È possibile usare i frammenti nelle versioni precedenti di Android usando il pacchetto del supporto Android e Novell. Android 4,2 o versione successiva. Questa operazione viene illustrata più dettagliatamente nei documenti di questa sezione.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Raccolta honeycomb (esempio)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
+- [Raccolta di honeycomb (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Frammenti](https://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Pacchetto di supporto](https://developer.android.com/sdk/compatibility-library.html)
-- [Webinar MOTODEV: Introduzione a frammenti](http://motodev.adobeconnect.com/p9h1aqk3ttn/)
+- [Pacchetto per il supporto](https://developer.android.com/sdk/compatibility-library.html)
+- [Webinar MOTODEV: Introduzione ai frammenti](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

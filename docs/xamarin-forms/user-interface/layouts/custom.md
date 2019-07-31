@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 56f7a5308d15425bdedd7d9098882a072d90d1f7
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347062"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645195"
 ---
 # <a name="creating-a-custom-layout"></a>Creazione di un Layout personalizzato
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin. Forms definisce quattro classi di layout: StackLayout, AbsoluteLayout, RelativeLayout e griglia, e ognuno dispone i relativi elementi figlio in modo diverso. Tuttavia, talvolta è necessario organizzare i contenuti di pagina utilizzando un layout non fornito da xamarin. Forms. Questo articolo illustra come scrivere una classe di layout personalizzato e viene illustrata una classe WrapLayout orientamento minuscole che dispone i relativi elementi figlio orizzontalmente orizzontalmente nella pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive._
 
@@ -427,7 +427,7 @@ Il numero di colonne in ogni riga dipende la dimensione di foto, la larghezza de
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [WrapLayout (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
+- [WrapLayout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Layout personalizzati](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Creazione di layout personalizzati in xamarin. Forms (video)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
 - [Layout<T>](xref:Xamarin.Forms.Layout`1)

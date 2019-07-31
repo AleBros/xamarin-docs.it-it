@@ -1,32 +1,32 @@
 ---
-title: Interfacce utente interattive notifica in xamarin. IOS
-description: Con iOS 12, è possibile creare interfacce utente interattive per le notifiche locali e remote. Questa guida descrive come usare queste funzionalità con xamarin. IOS.
+title: Interfacce utente di notifica interattiva in Novell. iOS
+description: Con iOS 12, è possibile creare interfacce utente interattive per le notifiche locali e remote. Questa guida descrive come usare queste funzionalità con Novell. iOS.
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: e6dc2f14b36c9d6f67f1df5ad3d118fa423e0d4d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc566cf3744b8d6ec05204153b7c731935f98b8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034913"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652447"
 ---
-# <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Interfacce utente interattive notifica in xamarin. IOS
+# <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Interfacce utente di notifica interattiva in Novell. iOS
 
-[Le estensioni del contenuto di notifica](~/ios/platform/user-notifications/advanced-user-notifications.md), introdotto in iOS 10, consentono di creare interfacce utente personalizzate per le notifiche. A partire da iOS 12, le interfacce utente di notifica possono contenere elementi interattivi quali pulsanti e i dispositivi di scorrimento.
+Le [estensioni di contenuto delle notifiche](~/ios/platform/user-notifications/advanced-user-notifications.md), introdotte in iOS 10, consentono di creare interfacce utente personalizzate per le notifiche. A partire da iOS 12, le interfacce utente di notifica possono contenere elementi interattivi quali pulsanti e dispositivi di scorrimento.
 
 ## <a name="sample-app-redgreennotifications"></a>App di esempio: RedGreenNotifications
 
-Il [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) app di esempio contiene un'estensione per contenuto notifiche con un'interfaccia utente interattiva.
+L'app di esempio [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) contiene un'estensione per il contenuto delle notifiche con un'interfaccia utente interattiva.
 
-Frammenti di codice in questa guida provengono da questo esempio.
+I frammenti di codice in questa guida provengono da questo esempio.
 
-## <a name="notification-content-extension-infoplist-file"></a>File Info. plist di estensione per contenuto notifiche
+## <a name="notification-content-extension-infoplist-file"></a>File INFO. plist dell'estensione del contenuto delle notifiche
 
-Nell'app di esempio, il **Info. plist** del file nei **RedGreenNotificationsContentExtension** progetto contiene la configurazione seguente:
+Nell'app di esempio, il file **info. plist** nel progetto **RedGreenNotificationsContentExtension** contiene la configurazione seguente:
 
 ```xml
 <!-- ... -->
@@ -56,17 +56,17 @@ Nell'app di esempio, il **Info. plist** del file nei **RedGreenNotificationsCont
 <!-- ... -->
 ```
 
-Tenere presente le seguenti funzionalità:
+Si notino le funzionalità seguenti:
 
-- Il `UNNotificationExtensionCategory` matrice indica il tipo delle categorie di notifica gestisce l'estensione di contenuto.
-- Per supportare il contenuto interattivo, imposta l'estensione per contenuto notifiche il `UNNotificationExtensionUserInteractionEnabled` chiave `true`.
-- Il `UNNotificationExtensionInitialContentSizeRatio` chiave specifica il rapporto tra larghezza/altezza iniziale per l'interfaccia dell'estensione per il contenuto.
+- La `UNNotificationExtensionCategory` matrice specifica il tipo di categorie di notifiche gestite dall'estensione di contenuto.
+- Per supportare il contenuto interattivo, l'estensione per il contenuto delle notifiche `UNNotificationExtensionUserInteractionEnabled` imposta la `true`chiave su.
+- La `UNNotificationExtensionInitialContentSizeRatio` chiave specifica il rapporto altezza/larghezza iniziale per l'interfaccia dell'estensione di contenuto.
 
 ## <a name="interactive-interface"></a>Interfaccia interattiva
 
-**MainInterface.storyboard**, che definisce l'interfaccia per un'estensione per contenuto notifiche, è uno standard storyboard che contiene un controller di visualizzazione singola. Nell'app di esempio, il controller di visualizzazione è di tipo `NotificationViewController`, e contiene una visualizzazione immagine, tre pulsanti e un dispositivo di scorrimento. Lo storyboard associa questi controlli con gestori definiti nel **NotificationViewController.cs**:
+**MainInterface. Storyboard**, che definisce l'interfaccia per un'estensione del contenuto delle notifiche, è uno storyboard standard che contiene un singolo controller di visualizzazione. Nell'app di esempio, il controller di visualizzazione è di `NotificationViewController`tipo e contiene una visualizzazione immagine, tre pulsanti e un dispositivo di scorrimento. Lo storyboard associa questi controlli ai gestori definiti in **NotificationViewController.cs**:
 
-- Il **App avviare** pulsante chiamate del gestore di `PerformNotificationDefaultAction` metodo di azione per `ExtensionContext`, che consente di avviare l'app:
+- Il gestore del pulsante **Launch App** chiama `PerformNotificationDefaultAction` il metodo di `ExtensionContext`azione su, che avvia l'app:
 
     ```csharp
     partial void HandleLaunchAppButtonTap(UIButton sender)
@@ -75,7 +75,7 @@ Tenere presente le seguenti funzionalità:
     }
     ```
 
-    In, il centro notifiche utente dell'app `Delegate` (nell'app di esempio, il `AppDelegate`) può rispondere all'interazione nel `DidReceiveNotificationResponse` metodo:
+    Nell'app, il centro `Delegate` notifiche utente (nell'app `AppDelegate`di esempio) può rispondere `DidReceiveNotificationResponse` all'interazione nel metodo:
 
     ```csharp
     [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -87,7 +87,7 @@ Tenere presente le seguenti funzionalità:
             // ...
     ```
 
-- Il **Ignora notifica** pulsante chiamate del gestore `DismissNotificationContentExtension` su `ExtensionContext`, che chiude la notifica:
+- Il gestore del pulsante **Ignora notifica** `DismissNotificationContentExtension` chiama `ExtensionContext`on, che chiude la notifica:
 
     ```csharp
     partial void HandleDismissNotificationButtonTap(UIButton sender)
@@ -96,7 +96,7 @@ Tenere presente le seguenti funzionalità:
     }
     ```
 
-- Il **una notifica di rimozione** gestore del pulsante Ignora la notifica e lo rimuove dall'area di notifica:
+- Il gestore del pulsante **Rimuovi notifica** respinge la notifica e la rimuove dal centro notifiche:
 
     ```csharp
     partial void HandleRemoveNotificationButtonTap(UIButton sender)
@@ -106,7 +106,7 @@ Tenere presente le seguenti funzionalità:
     }
     ```
 
-- Il metodo che gestisce le modifiche dei valori sul dispositivo di scorrimento aggiorna il valore alfa dell'immagine visualizzata nell'interfaccia della notifica:
+- Il metodo che gestisce le modifiche dei valori sul dispositivo di scorrimento aggiorna l'alfa dell'immagine visualizzata nell'interfaccia della notifica:
 
     ```csharp
     partial void HandleSliderValueChanged(UISlider sender)
@@ -117,10 +117,10 @@ Tenere presente le seguenti funzionalità:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [App di esempio: RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Framework per le notifiche utente in xamarin. IOS](~/ios/platform/user-notifications/index.md)
+- [App di esempio-RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Framework delle notifiche utente in Novell. iOS](~/ios/platform/user-notifications/index.md)
 - [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Novità in notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Le procedure consigliate e quali sono le novità per le notifiche utente (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
-- [Rich Notifications (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/817/)
+- [Novità delle notifiche utente (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Procedure consigliate e novità delle notifiche utente (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Notifiche avanzate (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/817/)
 - [Generazione di una notifica remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

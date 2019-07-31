@@ -1,22 +1,22 @@
 ---
 title: Creazione di estensioni di Markup XAML
-description: Questo articolo illustra come definire delle estensioni di markup XAML di xamarin. Forms personalizzate. Un'estensione di markup XAML è una classe che implementa il IMarkupExtension oppure IMarkupExtension<T> interfaccia.
+description: Questo articolo illustra come definire delle estensioni di markup XAML di xamarin. Forms personalizzate. Un'estensione di markup XAML è una classe che implementa l'interfaccia IMarkupExtension<T> o IMarkupExtension.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e69d4b9dcf93c095804c5ac46527c03049580d1c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4d26713f258a8c97abd4b4e9970ebdd4d490f485
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178108"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655856"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Creazione di estensioni di markup XAML
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Il livello a livello di codice, un'estensione di markup XAML è una classe che implementa il [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) oppure [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interfaccia. È possibile esplorare il codice sorgente delle estensioni di markup standard descritto di seguito nel [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repository GitHub xamarin. Forms.
 
@@ -203,5 +203,5 @@ Le estensioni di markup XAML svolgono un ruolo fondamentale in XAML mediante l'e
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Estensioni di markup (esempio)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Estensioni di markup (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capitolo di estensioni di markup XAML dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

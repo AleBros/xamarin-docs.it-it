@@ -1,73 +1,73 @@
 ---
-title: Copiare e incollare in xamarin. Mac
-description: Questo articolo descrive come usare il tavolo alla invierà copia e Incolla in un'applicazione xamarin. Mac. Viene illustrato come lavorare con i tipi di dati standard che possono essere condivisi tra più App e come supportare dati personalizzati all'interno di una determinata app.
+title: Copia e incolla in Novell. Mac
+description: Questo articolo illustra l'uso del tavolo di montaggio per fornire copia e incolla in un'applicazione Novell. Mac. Mostra come usare i tipi di dati standard che possono essere condivisi tra più app e come supportare i dati personalizzati in una determinata app.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: f9e05b6d16210021257fe3958966739e526aed18
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 61b9d84d6d5882d447a78e6583a399013f8919ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61378644"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656552"
 ---
-# <a name="copy-and-paste-in-xamarinmac"></a>Copiare e incollare in xamarin. Mac
+# <a name="copy-and-paste-in-xamarinmac"></a>Copia e incolla in Novell. Mac
 
-_Questo articolo descrive come usare il tavolo alla invierà copia e Incolla in un'applicazione xamarin. Mac. Viene illustrato come lavorare con i tipi di dati standard che possono essere condivisi tra più App e come supportare dati personalizzati all'interno di una determinata app._
+_Questo articolo illustra l'uso del tavolo di montaggio per fornire copia e incolla in un'applicazione Novell. Mac. Mostra come usare i tipi di dati standard che possono essere condivisi tra più app e come supportare i dati personalizzati in una determinata app._
 
 ## <a name="overview"></a>Panoramica
 
-Quando si usa c# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare lo stesso tavolo di montaggio (copia e Incolla) supporto che dispone di uno sviluppatore che lavora in Objective-C.
+Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere allo stesso supporto di cartone (copia e incolla) dello sviluppatore che lavora in Objective-C.
 
-In questo articolo è verranno illustrati due modi principali per usare tavolo in un'app xamarin. Mac:
+In questo articolo verranno illustrati i due modi principali per usare il tavolo di montaggio in un'app Novell. Mac:
 
-1. **Tipi di dati standard** -poiché operazioni tavolo di montaggio sono in genere effettuate tra due App non correlate, nessuna delle due app conosce i tipi di dati che l'altro supporta. Per aumentare al massimo il potenziale per la condivisione, tavolo può contenere più rappresentazioni di un determinato articolo (tramite un set standard di tipi di dati comuni), questo consente all'app dispendiosa in termini di selezionare la versione più adatta per le esigenze.
-2. **Dati personalizzati** : per supportare le operazioni copia e Incolla di dati complessi all'interno di xamarin. Mac è possibile definire un tipo di dati personalizzato che verrà gestito da tavolo. Ad esempio, un'app di disegno vettoriale che consente all'utente copiare e incollare forme complesse costituite da più tipi di dati e punti.
+1. **Tipi di dati standard** : poiché le operazioni di tavolo di montaggio vengono in genere eseguite tra due app non correlate, nessuna app conosce i tipi di dati supportati dagli altri. Per massimizzare il rischio di condivisione, il tavolo di montaggio può tenere più rappresentazioni di un determinato elemento (usando un set standard di tipi di dati comuni), in modo da consentire all'app di utilizzo di scegliere la versione più adatta alle proprie esigenze.
+2. **Dati personalizzati** : per supportare la copia e incolla di dati complessi all'interno di Novell. Mac è possibile definire un tipo di dati personalizzato che verrà gestito dal tavolo di montaggio. Ad esempio, un'app Vector Drawing che consente all'utente di copiare e incollare forme complesse che sono costituite da più tipi di dati e punti.
 
-[![Esempio di app in esecuzione](copy-paste-images/intro01.png "esempio di app in esecuzione")](copy-paste-images/intro01-large.png#lightbox)
+[![Esempio di app in esecuzione](copy-paste-images/intro01.png "Esempio di app in esecuzione")](copy-paste-images/intro01-large.png#lightbox)
 
-In questo articolo, si affronterà le nozioni di base dell'utilizzo di area di montaggio in un'applicazione xamarin. Mac per supportare la copia e incollare le operazioni. È altamente consigliabile usare la [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare le [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) le sezioni, perché illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
+In questo articolo verranno illustrate le nozioni di base relative all'uso del tavolo di montaggio in un'applicazione Novell. Mac per supportare le operazioni di copia e incolla. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-È possibile ottenere un quadro il [c# esposizione di classi / metodi di Objective-c](~/mac/internals/how-it-works.md) sezione del [meccanismi interni di xamarin. Mac](~/mac/internals/how-it-works.md) del documento, viene spiegato il `Register` e `Export` attributi utilizzato per impostare backup di classi c# per gli oggetti di Objective-C e interfaccia utente di elementi.
+Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando `Register` gli attributi e `Export` usati per collegare le C# classi a Oggetti Objective-C ed elementi dell'interfaccia utente.
 
-## <a name="getting-started-with-the-pasteboard"></a>Introduzione a tavolo
+## <a name="getting-started-with-the-pasteboard"></a>Introduzione al riquadro di montaggio
 
-Tavolo presenta un meccanismo standard per lo scambio di dati all'interno di una determinata applicazione o tra le applicazioni. L'utilizzo tipico per un tavolo in un'applicazione xamarin. Mac è gestire copia e Incolla le operazioni, tuttavia, un numero di altre operazioni è supportato anche (ad esempio trascinamento e rilascio e servizi dell'applicazione).
+Il tavolo di montaggio presenta un meccanismo standardizzato per lo scambio di dati all'interno di una determinata applicazione o tra applicazioni. L'uso tipico di un tavolo di montaggio in un'applicazione Novell. Mac consiste nel gestire le operazioni di copia e incolla, tuttavia sono supportate anche diverse altre operazioni, ad esempio il trascinamento & l'eliminazione e la Servizi per le applicazioni.
 
-Per ottenere rapidamente è il piede giusto, si intende iniziare con una semplice introduzione pratica a uso pasteboards in un'app xamarin. Mac. In seguito, forniremo una spiegazione dettagliata del funzionamento di spazio di lavoro e i metodi usati.
+Per iniziare rapidamente, si inizierà con una semplice introduzione pratica all'uso di Pasteboards in un'app Novell. Mac. In seguito verrà fornita una spiegazione approfondita del funzionamento del tavolo di montaggio e dei metodi utilizzati.
 
-Per questo esempio, che verrà creata un'applicazione semplice documento basato che gestisce una finestra contenente una visualizzazione di immagini. L'utente sarà in grado di copiare e incollare le immagini tra i documenti nell'app e a o da altre App o più finestre all'interno dell'app stessa.
+Per questo esempio verrà creata una semplice applicazione basata su documenti che gestisce una finestra contenente una visualizzazione immagine. L'utente potrà copiare e incollare immagini tra documenti nell'app e in o da altre app o più finestre all'interno della stessa app.
 
-### <a name="creating-the-xamarin-project"></a>Creazione del progetto Xamarin
+### <a name="creating-the-xamarin-project"></a>Creazione del progetto Novell
 
-In primo luogo, si intende creare una nuova app xamarin. Mac documento basato che abbiamo verrà aggiunta di copia e incollare il supporto per.
+In primo luogo, si creerà una nuova app Novell. Mac basata su documenti che verrà aggiunta al supporto di copia e incolla per.
 
 Seguire questa procedura:
 
-1. Avviare Visual Studio per Mac e fare clic su di **nuovo progetto...**  collegamento.
-2. Selezionare **Mac** > **App** > **App Cocoa**, quindi fare clic su di **successivo** pulsante: 
+1. Avviare Visual Studio per Mac e fare clic sul collegamento **nuovo progetto...** .
+2. Selezionare app **Mac** > **app** > **Cocoa**, quindi fare clic sul pulsante **Avanti** : 
 
-    [![Crea un nuovo progetto di app Cocoa](copy-paste-images/sample01.png "creando un nuovo progetto di app Cocoa")](copy-paste-images/sample01-large.png#lightbox)
-3. Immettere `MacCopyPaste` per il **nome progetto** e mantenere tutto il resto come predefinito. Fare clic su Avanti: 
+    [![Creazione di un nuovo progetto di app Cocoa](copy-paste-images/sample01.png "Creazione di un nuovo progetto di app Cocoa")](copy-paste-images/sample01-large.png#lightbox)
+3. Immettere `MacCopyPaste` per il **nome del progetto** e Mantieni tutti gli altri come predefiniti. Fare clic su Avanti: 
 
-    [![Impostazione del nome del progetto](copy-paste-images/sample01a.png "impostazione del nome del progetto")](copy-paste-images/sample01a-large.png#lightbox)
+    [![Impostazione del nome del progetto](copy-paste-images/sample01a.png "Impostazione del nome del progetto")](copy-paste-images/sample01a-large.png#lightbox)
 
-4. Scegliere il **Create** pulsante: 
+4. Fare clic sul pulsante **Crea** : 
 
-    [![Conferma le nuove impostazioni di progetto](copy-paste-images/sample02.png "conferma le nuove impostazioni di progetto")](copy-paste-images/sample02-large.png#lightbox)
+    [![Conferma delle impostazioni del nuovo progetto](copy-paste-images/sample02.png "Conferma delle impostazioni del nuovo progetto")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>Aggiungere un NSDocument
 
-Ora si aggiungerà custom `NSDocument` classe che verrà usato come risorsa di archiviazione in background per l'interfaccia utente dell'applicazione. Verrà contengono una singola visualizzazione di immagini e sapere come copiare un'immagine dalla visualizzazione nell'area di montaggio predefinito e su come acquisire un'immagine da tavolo predefinito e visualizzarlo nella visualizzazione immagine.
+Successivamente, verrà aggiunta una `NSDocument` classe personalizzata che fungerà da archivio in background per l'interfaccia utente dell'applicazione. Conterrà una singola visualizzazione immagine e sarà in grado di copiare un'immagine dalla visualizzazione nel riquadro di montaggio predefinito e come estrarre un'immagine dal tavolo di montaggio predefinito e visualizzarla nella visualizzazione immagine.
 
-Pulsante destro del mouse sul progetto xamarin. Mac nel **riquadro della soluzione** e selezionare **Add** > **nuovo File...** :
+Fare clic con il pulsante destro del mouse sul progetto Novell. Mac nella **riquadro della soluzione** e selezionare **Aggiungi** > **nuovo file..** :
 
-![L'aggiunta al progetto un NSDocument](copy-paste-images/sample03.png "aggiungendo un NSDocument al progetto")
+![Aggiunta di un NSDocument al progetto](copy-paste-images/sample03.png "Aggiunta di un NSDocument al progetto")
 
-Immettere `ImageDocument` in **Nome** e fare clic sul pulsante **Nuovo**. Modificare il **ImageDocument.cs** classe e renderlo simile al seguente:
+Immettere `ImageDocument` in **Nome** e fare clic sul pulsante **Nuovo**. Modificare la classe **ImageDocument.cs** e renderla simile alla seguente:
 
 ```csharp
 using System;
@@ -172,9 +172,9 @@ namespace MacCopyPaste
 }
 ```
 
-Diamo un'occhiata ad alcune del codice in dettaglio di seguito.
+Di seguito viene illustrato il codice illustrato in dettaglio di seguito.
 
-Il codice seguente fornisce una proprietà per verificare l'esistenza dei dati dell'immagine sul tavolo predefinito, se è disponibile, un'immagine `true` viene restituito else `false`:
+Il codice seguente fornisce una proprietà che consente di verificare l'esistenza di dati immagine nel tavolo di montaggio predefinito, se è disponibile un' `true` immagine, viene `false`restituito else:
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -189,7 +189,7 @@ public bool ImageAvailableOnPasteboard {
 }
 ```
 
-Il codice seguente consente di copiare un'immagine dalla visualizzazione immagine allegata nell'area di montaggio predefinito:
+Nel codice seguente viene copiata un'immagine dalla visualizzazione immagine collegata al tavolo di montaggio predefinito:
 
 ```csharp
 [Export("CopyImage:")]
@@ -229,7 +229,7 @@ public void CopyImage(NSObject sender) {
 }
 ```
 
-E il codice seguente consente di incollare un'immagine da tavolo predefinito e lo visualizza nella visualizzazione immagine allegata (se tavolo contiene un'immagine valida):
+Il codice seguente incolla un'immagine dal tavolo di montaggio predefinito e la Visualizza nella visualizzazione dell'immagine connessa (se il tavolo di montaggio contiene un'immagine valida):
 
 ```csharp
 [Export("PasteImage:")]
@@ -259,27 +259,27 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-Con questo documento nella posizione, si creerà l'interfaccia utente per l'app xamarin. Mac.
+Con questo documento verrà creata l'interfaccia utente per l'app Novell. Mac.
 
-### <a name="building-the-user-interface"></a>Creazione dell'interfaccia utente
+### <a name="building-the-user-interface"></a>Compilazione dell'interfaccia utente
 
-Fare doppio clic il **Main. Storyboard** file per aprirlo in Xcode. Successivamente, aggiungere anche una barra degli strumenti e un'immagine e configurarli come illustrato di seguito:
+Fare doppio clic sul file **Main. Storyboard** per aprirlo in Xcode. Aggiungere quindi una barra degli strumenti e un'immagine e configurarle come segue:
 
-[![Barra degli strumenti di modifica](copy-paste-images/sample04.png "barra degli strumenti di modifica")](copy-paste-images/sample04-large.png#lightbox)
+[![Modifica della barra degli strumenti](copy-paste-images/sample04.png "Modifica della barra degli strumenti")](copy-paste-images/sample04-large.png#lightbox)
 
-Aggiungere una copia e Incolla **immagine della barra degli strumenti** sul lato sinistro della barra degli strumenti. Verrà usato come tasti di scelta rapida per copiare e incollare dal menu Modifica. Successivamente, aggiungere quattro **immagine della barra degli strumenti elementi** sul lato destro della barra degli strumenti. Si userà queste per popolare l'immagine con alcune immagini predefinite.
+Aggiungere un **elemento della barra degli strumenti** copia e incolla immagine sul lato sinistro della barra degli strumenti. Verranno utilizzati come collegamenti per copiare e incollare dal menu Modifica. Successivamente, aggiungere quattro **elementi della barra degli strumenti immagine** sul lato destro della barra degli strumenti. Verranno usati per popolare l'immagine con alcune immagini predefinite.
 
-Per altre informazioni sull'uso delle barre degli strumenti, vedere la [barre degli strumenti](~/mac/user-interface/toolbar.md) documentazione.
+Per ulteriori informazioni sull'utilizzo delle barre degli strumenti, vedere la documentazione della [barra degli strumenti](~/mac/user-interface/toolbar.md) .
 
-Successivamente, è possibile esporre anche il Outlet e azioni per gli elementi della barra degli strumenti e l'immagine seguente:
+Si esporrà quindi gli Outlet e le azioni seguenti per gli elementi della barra degli strumenti e l'immagine:
 
-[![Creazione di Outlet e azioni](copy-paste-images/sample05.png "creazione Outlet e azioni")](copy-paste-images/sample05-large.png#lightbox)
+[![Creazione di Outlet e azioni](copy-paste-images/sample05.png "Creazione di Outlet e azioni")](copy-paste-images/sample05-large.png#lightbox)
 
-Per altre informazioni sull'uso di Outlet e azioni, vedere la [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) sezione del nostro [Hello, Mac](~/mac/get-started/hello-mac.md) documentazione.
+Per altre informazioni sull'uso di Outlet e azioni, vedere la sezione [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) della documentazione [Hello, Mac](~/mac/get-started/hello-mac.md) .
 
 ### <a name="enabling-the-user-interface"></a>Abilitazione dell'interfaccia utente
 
-Con l'interfaccia utente creata in Xcode e l'elemento dell'interfaccia utente vengono esposte tramite Outlet e azioni, è necessario aggiungere il codice per abilitare l'interfaccia utente. Fare doppio clic il **ImageWindow.cs** del file nei **riquadro della soluzione** e renderlo simile al seguente:
+Con l'interfaccia utente creata in Xcode e l'elemento dell'interfaccia utente esposto tramite Outlet e azioni, è necessario aggiungere il codice per abilitare l'interfaccia utente. Fare doppio clic sul file **ImageWindow.cs** nel **riquadro della soluzione** e fare in modo che l'aspetto sia simile al seguente:
 
 ```csharp
 using System;
@@ -395,9 +395,9 @@ namespace MacCopyPaste
 }
 ```
 
-Diamo un'occhiata a questo codice in dettaglio di seguito.
+Di seguito viene illustrato il codice in dettaglio.
 
-In primo luogo, è necessario esporre un'istanza di `ImageDocument` classe creati in precedenza:
+Prima di tutto, viene esposta un'istanza `ImageDocument` della classe creata in precedenza:
 
 ```csharp
 private ImageDocument _document;
@@ -414,9 +414,9 @@ public ImageDocument Document {
 }
 ```
 
-Usando `Export`, `WillChangeValue` e `DidChangeValue`, è stato configurato il `Document` la proprietà chiave-valore di codifica e il Data Binding in Xcode.
+Usando `Export`, `WillChangeValue` e `Document` , è stata impostata la proprietà per consentire la codifica e il data binding chiave-valore in Xcode. `DidChangeValue`
 
-Si espone anche l'immagine dall'immagine che e abbiamo aggiunto alla nostra interfaccia utente in Xcode con la proprietà seguente:
+Si espone anche l'immagine dall'immagine aggiunta all'interfaccia utente in Xcode con la proprietà seguente:
 
 ```csharp
 public ViewController ImageViewController {
@@ -433,7 +433,7 @@ public NSImage Image {
 }
 ```
 
-Quando la finestra principale viene caricata e visualizzata, viene creata un'istanza del nostro `ImageDocument` classe e collegarvi immagine dell'interfaccia utente anche con il codice seguente:
+Quando la finestra principale viene caricata e visualizzata, si crea un'istanza della `ImageDocument` classe e si collega l'immagine dell'interfaccia utente con il codice seguente:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -448,7 +448,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Infine, in risposta all'utente facendo clic sugli elementi della barra degli strumenti di copia e Incolla, viene chiamato l'istanza del `ImageDocument` classe per eseguire le operazioni effettive:
+Infine, in risposta all'utente che fa clic sugli elementi della barra degli strumenti copia e incolla, viene chiamata l' `ImageDocument` istanza della classe per eseguire il lavoro effettivo:
 
 ```csharp
 partial void CopyImage (NSObject sender) {
@@ -460,11 +460,11 @@ partial void PasteImage (Foundation.NSObject sender) {
 }
 ```
 
-### <a name="enabling-the-file-and-edit-menus"></a>Abilitare i menu File e modifica
+### <a name="enabling-the-file-and-edit-menus"></a>Abilitazione del file e modifica dei menu
 
-L'ultima cosa dobbiamo fare è abilitare la **New** voce di menu dalle **File** menu (per creare nuove istanze della nostra finestra principale) e abilitare il **Taglia**, **copia**  e **incollare** voci di menu dal **modifica** menu.
+L'ultima cosa da fare è abilitare la **nuova** voce di menu dal menu **file** (per creare nuove istanze della finestra principale) e per abilitare le voci di menu **taglia**, **copia** e **Incolla** dal menu **Modifica** .
 
-Per abilitare il **New** dal menu Modifica, il **AppDelegate.cs** file e aggiungere il codice seguente:
+Per abilitare la **nuova** voce di menu, modificare il file **AppDelegate.cs** e aggiungere il codice seguente:
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
@@ -484,9 +484,9 @@ void NewDocument (NSObject sender) {
 }
 ```
 
-Per altre informazioni, vedere la [utilizzo di Windows più](~/mac/user-interface/window.md) sezione del nostro [Windows](~/mac/user-interface/window.md) documentazione.
+Per ulteriori informazioni, vedere la sezione [utilizzo di più finestre](~/mac/user-interface/window.md) della documentazione di [Windows](~/mac/user-interface/window.md) .
 
-Per abilitare la **tagliare**, **copia** e **Incolla** voci di menu, modificare il **AppDelegate.cs** file e aggiungere il codice seguente:
+Per abilitare le voci di menu **taglia**, **copia** e **incolla** , modificare il file **AppDelegate.cs** e aggiungere il codice seguente:
 
 ```csharp
 [Export("copy:")]
@@ -535,21 +535,21 @@ void PasteImage (NSObject sender)
 }
 ```
 
-Per ogni voce di menu, viene visualizzata la finestra corrente, in primo piano, chiave ed eseguire il cast a nostro `ImageWindow` classe:
+Per ogni voce di menu, si ottiene la finestra di chiave corrente, in primo piano e ne viene `ImageWindow` eseguito il cast alla classe:
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-Da qui definiamo il `ImageDocument` istanza della classe della finestra per gestire la copia e Incolla. Ad esempio: 
+Da qui viene chiamata l' `ImageDocument` istanza della classe di tale finestra per gestire le azioni di copia e incolla. Ad esempio: 
 
 ```csharp
 window.Document.CopyImage (sender);
 ```
 
-Vogliamo solo **tagliare**, **copia** e **Incolla** voci di menu per essere accessibili se è presente immagine dei dati in area di montaggio predefinito o nell'immagine anche della finestra attiva corrente.
+Si desidera che le voci di menu **taglia**, **copia** e **Incolla** siano accessibili solo se sono presenti dati immagine nel tavolo di montaggio predefinito o nell'immagine della finestra attiva corrente.
 
-È possibile aggiungere un **EditMenuDelegate.cs** file al progetto xamarin. Mac e renderlo simile al seguente:
+Aggiungere un file **EditMenuDelegate.cs** al progetto Novell. Mac e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -600,9 +600,9 @@ namespace MacCopyPaste
 }
 ```
 
-Anche in questo caso, viene visualizzata la finestra corrente, in primo piano e usare relativo `ImageDocument` istanza della classe per controllare se i dati dell'immagine necessaria esistano. Quindi si userà il `MenuWillHighlightItem` metodo per abilitare o disabilitare ogni elemento di base a questo stato.
+Anche in questo caso, si ottiene la finestra in primo piano corrente `ImageDocument` e si usa la relativa istanza di classe per verificare se sono presenti i dati di immagine richiesti. Viene quindi usato il `MenuWillHighlightItem` metodo per abilitare o disabilitare ogni elemento in base a questo stato.
 
-Modificare il **AppDelegate.cs** del file e verificare il `DidFinishLaunching` metodo aspetto simile al seguente:
+Modificare il file **AppDelegate.cs** e fare in `DidFinishLaunching` modo che il metodo sia simile al seguente:
  
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -613,95 +613,95 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-In primo luogo, si disabilita l'attivazione automatica e la disabilitazione di voci di menu nel menu Modifica. Successivamente, si collega un'istanza di `EditMenuDelegate` classe creati in precedenza.
+In primo luogo, viene disabilitata l'abilitazione e la disabilitazione automatica delle voci di menu nel menu Modifica. Si aggiunge quindi un'istanza della `EditMenuDelegate` classe creata in precedenza.
 
-Per altre informazioni, vedere la [menu](~/mac/user-interface/menu.md) documentazione.
+Per ulteriori informazioni, consultare la documentazione relativa ai [menu](~/mac/user-interface/menu.md) .
 
 ### <a name="testing-the-app"></a>Test dell'app
 
-Con tutti gli elementi sul posto, siamo pronti testare l'applicazione. Compilare ed eseguire l'app e viene visualizzata l'interfaccia principale:
+Con tutti gli elementi disponibili, è possibile testare l'applicazione. Compilare ed eseguire l'app e viene visualizzata l'interfaccia principale:
 
-![Esecuzione dell'applicazione](copy-paste-images/run01.png "esecuzione dell'applicazione")
+![Esecuzione dell'applicazione](copy-paste-images/run01.png "Esecuzione dell'applicazione")
 
-Se si apre il menu Modifica, si noti che **tagliare**, **copia** e **Incolla** sono disabilitati perché non è presente alcuna immagine nell'immagine nell'area di montaggio predefinito o anche:
+Se si apre il menu modifica, si noti che **taglia**, **copia** e **Incolla** sono disabilitati perché non è presente un'immagine nell'area dell'immagine o nel tavolo di montaggio predefinito:
 
-![Aprire il menu Modifica](copy-paste-images/run02.png "aprendo il menu di modifica")
+![Apertura del menu modifica](copy-paste-images/run02.png "Apertura del menu modifica")
 
-Se si aggiunta anche un'immagine per l'immagine e si riapre il menu Modifica, gli elementi verranno abilitati:
+Se si aggiunge un'immagine all'immagine e si riapre il menu modifica, gli elementi verranno ora abilitati:
 
-![Che mostra le voci di menu di modifica sono abilitate](copy-paste-images/run03.png "che mostra le voci di menu di modifica sono abilitati")
+![Visualizzazione delle voci di menu modifica abilitata](copy-paste-images/run03.png "Visualizzazione delle voci di menu modifica abilitata")
 
-Se si copia l'immagine e selezionare **New** dal menu file, è possibile incollare tale immagine in nuova finestra:
+Se si copia l'immagine e si sceglie **nuovo** dal menu file, è possibile incollare l'immagine nella nuova finestra:
 
-![Incollare un'immagine in una nuova finestra](copy-paste-images/run04.png "incollare un'immagine in una nuova finestra")
+![Incollare un'immagine in una nuova finestra](copy-paste-images/run04.png "Incollare un'immagine in una nuova finestra")
 
-Nelle sezioni seguenti, articolo verrà fornita un'analisi approfondita lavora sul tavolo in un'applicazione xamarin. Mac.
+Nelle sezioni seguenti verrà esaminata in dettaglio l'utilizzo del tavolo di montaggio in un'applicazione Novell. Mac.
 
-## <a name="about-the-pasteboard"></a>Sull'area di montaggio
+## <a name="about-the-pasteboard"></a>Informazioni sul tavolo di montaggio
 
-In macOS (precedentemente noto come OS X) tavolo (`NSPasteboard`) fornisce il supporto di diversi server elabora ad esempio copiare e incollare, trascinare e rilasciare e servizi dell'applicazione. Nelle sezioni seguenti verranno illustrate le diverse concetti tavolo di montaggio.
+In MacOS (precedentemente noto come OS X) il tavolo di`NSPasteboard`montaggio () fornisce il supporto per diversi processi del server, ad esempio copia & incolla, trascina & drop e servizi per le applicazioni. Nelle sezioni seguenti verranno esaminati in dettaglio diversi concetti chiave di un tavolo di montaggio.
 
-### <a name="what-is-a-pasteboard"></a>Che cos'è un tavolo?
+### <a name="what-is-a-pasteboard"></a>Che cos'è un tavolo di montaggio?
 
-Il `NSPasteboard` classe fornisce un meccanismo standard per lo scambio di informazioni tra applicazioni o all'interno di una determinata app. La funzione principale di un tavolo è per la gestione delle operazioni di copia e Incolla:
+La `NSPasteboard` classe fornisce un meccanismo standardizzato per lo scambio di informazioni tra applicazioni o all'interno di una determinata app. La funzione principale di un tavolo di montaggio è la gestione delle operazioni di copia e incolla:
 
-1. Quando l'utente seleziona un elemento in un'app e Usa il **tagliare** oppure **copia** voce di menu, uno o più rappresentazioni dell'elemento selezionato vengono posizionate sul tavolo.
-2. Quando l'utente utilizza il **Incolla** voce di menu (all'interno della stessa app o uno diverso), la versione dei dati che è possibile gestire viene copiata da tavolo e aggiunta all'app.
+1. Quando l'utente seleziona un elemento in un'app e usa la voce di menu **taglia** o **copia** , una o più rappresentazioni dell'elemento selezionato vengono posizionate nel tavolo di montaggio.
+2. Quando l'utente usa la voce di menu **Incolla** (all'interno della stessa app o di un altro), la versione dei dati che può gestire viene copiata dal tavolo di montaggio e aggiunta all'app.
 
-Usi tavolo di montaggio meno ovvi includono find, trascinare, trascinamento della selezione e le operazioni di servizi delle applicazioni:
+Gli utilizzi di cartone meno ovvi sono le operazioni di ricerca, trascinamento, trascinamento e rilascio e i servizi dell'applicazione:
 
-- Quando l'utente avvia un'operazione di trascinamento, i dati di trascinamento vengono copiati da tavolo. Se l'operazione di trascinamento termina con un elenco in un'altra app, che l'app consente di copiare i dati da tavolo.
-- Per i servizi di traduzione, il conversione dei dati viene copiati da tavolo dall'app per la richiesta. Il servizio dell'applicazione, recupera i dati da tavolo, esegue la conversione, consente di incollare i dati nuovamente sul tavolo.
+- Quando l'utente avvia un'operazione di trascinamento, i dati di trascinamento vengono copiati nel tavolo di montaggio. Se l'operazione di trascinamento termina con un rilascio su un'altra app, l'app copia i dati dal tavolo di montaggio.
+- Per i servizi di traduzione, i dati da tradurre vengono copiati nel tavolo di montaggio dall'app richiedente. Il servizio dell'applicazione, recupera i dati da un tavolo di montaggio, esegue la traduzione, quindi incolla i dati nel tavolo di montaggio.
 
-Nella forma più semplice, pasteboards consentono di spostare i dati all'interno di una determinata applicazione o tra App e, pertanto, esiste in un'area di memoria globale speciale all'esterno del processo dell'app. Mentre i concetti del pasteboards sono facilmente grasps, esistono diversi aspetti più complessi che devono essere considerati. Si parlerà in dettaglio di seguito.
+Nella forma più semplice, i Pasteboards vengono usati per spostare i dati all'interno di una determinata app o tra le app e sono presenti in un'area di memoria globale speciale al di fuori del processo dell'app. Sebbene i concetti di Pasteboards siano facilmente comprensibili, è necessario prendere in considerazione diversi dettagli più complessi. Questi verranno descritti in dettaglio di seguito.
 
-### <a name="named-pasteboards"></a>Pasteboards denominata
+### <a name="named-pasteboards"></a>Denominato Pasteboards
 
-Un tavolo può essere pubblico o privato e può essere usato per diversi scopi in un'applicazione o tra più app. macOS sono disponibili diversi pasteboards standard, ognuno con un utilizzo specifico e ben definito:
+Un tavolo di montaggio può essere pubblico o privato e può essere usato per diversi scopi all'interno di un'applicazione o tra più app. macOS offre diversi Pasteboards standard, ognuno con un utilizzo specifico e ben definito:
 
-- `NSGeneralPboard` -Dello spazio di lavoro l'impostazione predefinita per **tagliare**, **copia** e **Incolla** operazioni.
-- `NSRulerPboard` -Supporta **tagliare**, **copia** e **Incolla** operazioni sulle **righelli**.
-- `NSFontPboard` -Supporta **tagliare**, **copia** e **Incolla** operazioni su `NSFont` oggetti.
-- `NSFindPboard` -Supporta specifiche dell'applicazione Trova riquadri che possono condividere il testo di ricerca.
-- `NSDragPboard` -Supporta **trascinamento della selezione** operazioni.
+- `NSGeneralPboard`: Il tavolo di montaggio predefinito per le operazioni **taglia**, **copia** e **Incolla** .
+- `NSRulerPboard`: Supporta le operazioni **taglia**, **copia** e **Incolla** sui **righelli**.
+- `NSFontPboard`: Supporta operazioni **taglia**, **copia** e **Incolla** sugli `NSFont` oggetti.
+- `NSFindPboard`: Supporta i pannelli di ricerca specifici dell'applicazione che possono condividere il testo di ricerca.
+- `NSDragPboard`: Supporta le operazioni di trascinamento **& rilascio** .
 
-La maggior parte dei casi, si userà una del pasteboards definito dal sistema. Tuttavia, potrebbero esserci situazioni in cui è necessario creare il proprio pasteboards. In queste situazioni, è possibile usare la `FromName (string name)` metodo di `NSPasteboard` classe per creare un tavolo personalizzato con il nome specificato.
+Per la maggior parte delle situazioni, si userà uno dei Pasteboards definiti dal sistema. Tuttavia potrebbero essere presenti situazioni che richiedono la creazione di Pasteboards personalizzati. In questi casi, è possibile usare il `FromName (string name)` metodo `NSPasteboard` della classe per creare un tavolo di montaggio personalizzato con il nome specificato.
 
-Facoltativamente, è possibile chiamare il `CreateWithUniqueName` metodo di `NSPasteboard` classe per creare un nome univoco dello spazio di lavoro.
+Facoltativamente, è possibile chiamare il `CreateWithUniqueName` metodo `NSPasteboard` della classe per creare un oggetto di cartone denominato in modo univoco.
 
-### <a name="pasteboard-items"></a>Elementi tavolo di montaggio
+### <a name="pasteboard-items"></a>Elementi di cartone
 
-Ogni porzione di dati che scrive un'applicazione a un tavolo viene considerata una _tavolo elemento_ , un tavolo può contenere più elementi contemporaneamente. In questo modo, un'app può scrivere più versioni di dati da copiare per un tavolo (ad esempio, testo normale e testo formattato) e il recupero delle app possono leggere solo i dati che può elaborare (ad esempio, di solo testo normale).
+Ogni parte dei dati scritti da un'applicazione in un tavolo di montaggio viene considerata come un _elemento di cartone_ e un tavolo di montaggio può tenere più elementi contemporaneamente. In questo modo, un'app può scrivere più versioni dei dati copiati in un tavolo di montaggio (ad esempio, testo normale e testo formattato) e l'app di recupero può leggere solo i dati che è in grado di elaborare, ad esempio solo testo normale.
 
-### <a name="data-representations-and-uniform-type-identifiers"></a>Rappresentazioni di dati e gli identificatori di tipo uniform
+### <a name="data-representations-and-uniform-type-identifiers"></a>Rappresentazioni di dati e identificatori di tipi uniformi
 
-Operazioni tavolo di montaggio accettano in genere le applicazioni tra di due (o più) che non sono a conoscenza della loro o i tipi di dati che ognuna possa gestire. Come indicato nella sezione precedente, per aumentare al massimo il potenziale per la condivisione di informazioni, un tavolo può contenere più rappresentazioni dei dati viene copiato e incollato.
+In genere, le operazioni di montaggio avvengono tra due o più applicazioni che non hanno alcuna conoscenza dell'altra o dei tipi di dati che possono essere gestiti da ciascuno. Come indicato nella sezione precedente, per massimizzare il rischio di condivisione delle informazioni, un tavolo di montaggio può mantenere più rappresentazioni dei dati copiati e incollati.
 
-Tutte le rappresentazioni viene identificata tramite un Uniform tipo identificatore (UTI), che non è altro che una semplice stringa che identifica in modo univoco il tipo di data presentato (per altre informazioni, vedere Apple [Panoramica di identificatori di tipo Uniform ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) documentazione). 
+Ogni rappresentazione viene identificata tramite un identificatore di tipo uniforme (UTI), che non è nient'altro che una semplice stringa che identifica in modo univoco il tipo di data presentato (per altre informazioni, vedere [Cenni preliminari sugli identificatori di tipo uniforme](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) di Apple). documentazione). 
 
-Se si sta creando un tipo di dati personalizzati (ad esempio, un disegno in un'app di disegno vettoriale), è possibile creare il proprio UTI per facilitarne l'identificazione nella copia e incollare le operazioni in modo univoco.
+Se si sta creando un tipo di dati personalizzato (ad esempio, un oggetto Drawing in un'app Vector Drawing), è possibile creare il proprio UTI per identificarlo in modo univoco nelle operazioni di copia e incolla.
 
-Quando si prepara un'app per incollare dati copiati da un tavolo, deve trovare la rappresentazione che meglio soddisfa le funzionalità (se presente). In genere si tratterà il tipo più completo disponibile (testo formattato, ad esempio per un'app di elaborazione di testo), eseguire il fallback su tipi più semplici disponibili come richiesto (testo normale per un semplice editor di testo).
+Quando un'applicazione viene preparata per incollare i dati copiati da un tavolo di montaggio, deve trovare la rappresentazione più adatta alle proprie capacità (se presente). Si tratta in genere del tipo più completo disponibile, ad esempio un testo formattato per un'app per l'elaborazione di testi, che esegue il fallback alle forme più semplici disponibili come richiesto (testo normale per un semplice editor di testo).
 
 <a name="Promised_Data" />
 
 ### <a name="promised-data"></a>Dati promessi
 
-In generale, è necessario fornire tutte le rappresentazioni di dati da copiare possibili per ottimizzare la condivisione tra le app. A causa dei vincoli di tempo o memoria, tuttavia, può essere impraticabile necessarie per scrivere ogni tipo di dati nell'area di montaggio.
+In generale, è necessario fornire il maggior numero di rappresentazioni dei dati copiati il più possibile per ottimizzare la condivisione tra le app. Tuttavia, a causa dei vincoli di tempo o di memoria, potrebbe non essere pratico scrivere effettivamente ogni tipo di dati nel tavolo di montaggio.
 
-In questo caso, è possibile inserire la rappresentazione dei dati prima nell'area di montaggio e l'app ricevente può richiedere una rappresentazione diversa, che può essere generato in volo appena prima dell'operazione Incolla.
+In questa situazione, è possibile inserire la prima rappresentazione di dati nel tavolo di montaggio e l'app ricevente può richiedere una rappresentazione diversa, che può essere generata immediatamente immediatamente prima dell'operazione Incolla.
 
-Quando si inserisce l'elemento iniziale nell'area di montaggio, si specificherà che uno o più delle altre rappresentazioni disponibili vengono forniti da un oggetto che è conforme al `NSPasteboardItemDataProvider` interfaccia. Questi oggetti fornirà le rappresentazioni aggiuntive su richiesta, come richiesto dall'applicazione ricevente.
+Quando si inserisce l'elemento iniziale nel tavolo di montaggio, si specifica che una o più delle altre rappresentazioni disponibili vengono fornite da un oggetto conforme all' `NSPasteboardItemDataProvider` interfaccia. Questi oggetti forniranno le rappresentazioni aggiuntive su richiesta, come richiesto dall'applicazione ricevente.
 
-### <a name="change-count"></a>Modificare il numero di
+### <a name="change-count"></a>Conteggio modifiche
 
-Ogni dello spazio di lavoro mantiene una _Changecount_ che viene incrementato ogni volta un nuovo proprietario è dichiarato. Un'app è possibile determinare se il contenuto dell'area di montaggio è stato modificato dall'ultima volta che viene esaminata controllando il valore del conteggio di modifiche.
+Ogni tavolo di montaggio mantiene un _conteggio delle modifiche_ che incrementa ogni volta che viene dichiarato un nuovo proprietario. Un'app può determinare se il contenuto della tavolozza è stato modificato dall'ultima volta in cui è stato esaminato controllando il valore del conteggio delle modifiche.
 
-Usare la `ChangeCount` e `ClearContents` metodi del `NSPasteboard` classe per modificare conteggio di un determinato dello spazio di lavoro di modifiche.
+Usare i `ChangeCount` metodi `ClearContents` e della `NSPasteboard` classe per modificare il numero di modifiche di un tavolo di montaggio specifico.
 
-## <a name="copying-data-to-a-pasteboard"></a>Copia dei dati su un tavolo
+## <a name="copying-data-to-a-pasteboard"></a>Copia dei dati in un tavolo di montaggio
 
-Si esegue un'operazione di copia prima l'accesso a un tavolo, deselezionando qualsiasi contenuto esistente e la scrittura di tanti rappresentazioni dei dati come sono necessari per il tavolo.
+Per eseguire un'operazione di copia è necessario prima accedere a un tavolo di montaggio, cancellare tutti i contenuti esistenti e scrivere il numero di rappresentazioni dei dati necessari per il tavolo di montaggio.
 
 Ad esempio:
 
@@ -716,24 +716,24 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-In genere, è semplicemente possibile scrivere da tavolo generale, come nell'esempio precedente è stato eseguito. Qualsiasi oggetto che si invia al `WriteObjects` metodo *deve* conformi al `INSPasteboardWriting` interfaccia. Classi predefinite diverse, (ad esempio `NSString`, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString`, e `NSPasteboardItem`) rendono automaticamente conformi a questa interfaccia.
+In genere, è sufficiente scrivere sul tavolo di montaggio generale, come è stato fatto nell'esempio precedente. Qualsiasi oggetto inviato al `WriteObjects` metodo *deve* essere conforme all' `INSPasteboardWriting` interfaccia. Diverse classi predefinite, ad esempio `NSString` `NSURL`, `NSImage`,, `NSColor`, `NSAttributedString`e `NSPasteboardItem`, sono conformi automaticamente a questa interfaccia.
 
-Se si sta scrivendo una classe di dati personalizzate da tavolo deve essere conforme per il `INSPasteboardWriting` interfaccia o eseguire il wrapping in un'istanza del `NSPasteboardItem` classe (vedere il [tipi di dati personalizzati](#Custom_Data_Types) sezione riportata di seguito).
+Se si scrive una classe di dati personalizzata nel tavolo di montaggio, deve essere conforme all' `INSPasteboardWriting` interfaccia o essere racchiusa in un'istanza `NSPasteboardItem` della classe (vedere la sezione tipi di [dati personalizzati](#Custom_Data_Types) più avanti).
 
-## <a name="reading-data-from-a-pasteboard"></a>La lettura dei dati da un tavolo
+## <a name="reading-data-from-a-pasteboard"></a>Lettura di dati da un tavolo di montaggio
 
-Come indicato in precedenza, per aumentare al massimo il potenziale per la condivisione dei dati tra le app, più rappresentazioni dei dati copiati potrebbero essere scritti tavolo. Spetta all'app ricevente di selezionare la versione più ampia possibile che le funzionalità (se presente).
+Come indicato in precedenza, per massimizzare il rischio di condivisione dei dati tra le app, è possibile scrivere più rappresentazioni dei dati copiati nel tavolo di montaggio. Spetta all'app ricevente selezionare la versione più ricca possibile per le sue funzionalità (se presente).
 
 ### <a name="simple-paste-operation"></a>Operazione Incolla semplice
 
-Leggere dati da tavolo di montaggio usando il `ReadObjectsForClasses` (metodo). Richiederà due parametri:
+È possibile leggere i dati dal tavolo di `ReadObjectsForClasses` montaggio usando il metodo. Sono necessari due parametri:
 
-1. Matrice di `NSObject` basati su tipi di classe che si desidera leggere dall'area di montaggio. Sarà necessario ordinare ciò con il tipo di dati più desiderato in primo luogo, con tutti i tipi rimanenti nel preferenza decrescente.
-2. Dizionario che contiene vincoli aggiuntivi (ad esempio limitando a specifici tipi di contenuto di URL) o un dizionario vuoto se nessun altri vincoli sono necessari.
+1. Matrice di tipi `NSObject` di classe basati che si desidera leggere dal tavolo di montaggio. Per prima cosa è necessario ordinare il tipo di dati più desiderato, con qualsiasi tipo rimanente in preferenza decrescente.
+2. Dizionario contenente vincoli aggiuntivi, ad esempio la limitazione a tipi di contenuto di URL specifici, oppure un dizionario vuoto se non sono necessari altri vincoli.
 
-Il metodo restituisce una matrice di elementi che soddisfano i criteri che è passati e pertanto includa al massimo lo stesso numero di tipi di dati che vengono richiesti. è anche possibile che nessuno dei tipi di richiesta sono presenti e verrà restituita una matrice vuota.
+Il metodo restituisce una matrice di elementi che soddisfano i criteri passati e che quindi contengono al massimo lo stesso numero di tipi di dati richiesti. è anche possibile che nessuno dei tipi richiesti sia presente e che venga restituita una matrice vuota.
 
-Ad esempio, il codice seguente verifica se un `NSImage` presente nell'area generale di montaggio e lo visualizza in un'immagine ben in caso affermativo:
+Il codice seguente, ad esempio, verifica se esiste un `NSImage` oggetto nel tavolo di montaggio generale e lo Visualizza in un'immagine in un secondo caso:
 
 ```csharp
 [Export("PasteImage:")]
@@ -763,22 +763,22 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-### <a name="requesting-multiple-data-types"></a>La richiesta più tipi di dati
+### <a name="requesting-multiple-data-types"></a>Richiesta di più tipi di dati
 
-In base al tipo di applicazione xamarin. Mac viene creato, potrebbe essere in grado di gestire più rappresentazioni dei dati da incollare. In questo caso, esistono due scenari per il recupero dei dati dall'area di montaggio:
+In base al tipo di applicazione Novell. Mac da creare, può essere in grado di gestire più rappresentazioni dei dati incollati. In questa situazione sono disponibili due scenari per il recupero dei dati dal tavolo di montaggio:
 
-1. Una singola chiamata a rendere la `ReadObjectsForClasses` (metodo) e fornendo una matrice di tutte le rappresentazioni desiderato (nell'ordine preferito).
-2. Effettuare più chiamate al `ReadObjectsForClasses` ogni volta che i tipi di metodo che richiede una matrice diversa di.
+1. Eseguire una singola chiamata al `ReadObjectsForClasses` metodo e fornire una matrice di tutte le rappresentazioni desiderate (nell'ordine preferenziale).
+2. Eseguire più chiamate al `ReadObjectsForClasses` metodo richiedendo ogni volta una matrice di tipi diversa.
 
-Vedere le **semplice operazione Incolla** sezione precedente per altri dettagli su come recuperare dati da un tavolo.
+Per ulteriori informazioni sul recupero di dati da un tavolo di montaggio, vedere la sezione **operazione Incolla semplice** precedente.
 
-### <a name="checking-for-existing-data-types"></a>Controllo per tipi di dati esistenti
+### <a name="checking-for-existing-data-types"></a>Verifica dei tipi di dati esistenti
 
-Esistono situazioni in cui si potrebbero voler controllare se un tavolo contiene una rappresentazione di dati specificato senza dover leggere effettivamente i dati da tavolo (ad esempio l'abilitazione di **Incolla** voce di menu solo quando esistono dati validi).
+In alcuni casi potrebbe essere necessario controllare se un tavolo di montaggio contiene una data rappresentazione dati senza effettivamente leggere i dati dal tavolo di montaggio (ad esempio, abilitando la voce di menu **Incolla** solo quando esistono dati validi).
 
-Chiamare il `CanReadObjectForClasses` del tavolo per verificare se contiene un determinato tipo di metodo.
+Chiamare il `CanReadObjectForClasses` metodo del tavolo di montaggio per verificare se contiene un tipo specificato.
 
-Ad esempio, il codice seguente determina se il generale dello spazio di lavoro contiene un `NSImage` istanza:
+Il codice seguente, ad esempio, determina se il tavolo di montaggio `NSImage` generale contiene un'istanza:
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -793,25 +793,25 @@ public bool ImageAvailableOnPasteboard {
 }
 ```
 
-### <a name="reading-urls-from-the-pasteboard"></a>La lettura di URL da tavolo
+### <a name="reading-urls-from-the-pasteboard"></a>Lettura degli URL dal tavolo di montaggio
 
-In base alla funzione di un'app xamarin. Mac, può risultare necessaria per leggere gli URL da un tavolo, ma solo se soddisfano un determinato set di criteri (ad esempio, che punta al file o URL di un tipo di dati specifici). In questo caso, è possibile specificare criteri di ricerca aggiuntivi tramite il secondo parametro del `CanReadObjectForClasses` o `ReadObjectsForClasses` metodi.
+In base alla funzione di un'app Novell. Mac specificata, potrebbe essere necessario leggere gli URL da un tavolo di montaggio, ma solo se soddisfano un determinato set di criteri, ad esempio puntando a file o URL di un tipo di dati specifico. In questa situazione è possibile specificare criteri di ricerca aggiuntivi usando il secondo parametro del `CanReadObjectForClasses` metodo o. `ReadObjectsForClasses`
 
 <a name="Custom_Data_Types" />
 
 ## <a name="custom-data-types"></a>Tipi di dati personalizzati
 
-Vi sono casi quando è necessario salvare i tipi personalizzati da tavolo da un'app xamarin. Mac. Ad esempio, un disegno vettoriale app che consente all'utente di copiare e incollare oggetti disegno.
+In alcuni casi è necessario salvare i tipi personalizzati nel tavolo di montaggio da un'app Novell. Mac. Ad esempio, un'app Vector Drawing che consente all'utente di copiare e incollare oggetti Drawing.
 
-In questo caso, è necessario progettare la classe personalizzata dei dati in modo che erediti da `NSObject` e sia conforme a alcune interfacce (`INSCoding`, `INSPasteboardWriting` e `INSPasteboardReading`). Facoltativamente, è possibile usare un `NSPasteboardItem` per incapsulare i dati copiati o incollati.
+In questa situazione è necessario progettare la classe personalizzata dei dati in modo che erediti `NSObject` da ed è conforme a alcune interfacce (`INSCoding`, `INSPasteboardWriting` e `INSPasteboardReading`). Facoltativamente, è possibile utilizzare un `NSPasteboardItem` oggetto per incapsulare i dati da copiare o incollare.
 
-Entrambe le opzioni vengono trattati in dettaglio di seguito.
+Entrambe queste opzioni verranno descritte in dettaglio di seguito.
 
 ### <a name="using-a-custom-class"></a>Uso di una classe personalizzata
 
-In questa sezione verranno essere espansione dell'app di esempio semplice che abbiamo creato all'inizio di questo documento e aggiunta di una classe personalizzata per tenere traccia delle informazioni sull'immagine che si sta copiando e incollando tra le finestre.
+In questa sezione si espanderà l'app semplice di esempio creata all'inizio di questo documento e si aggiungerà una classe personalizzata per tenere traccia delle informazioni sull'immagine che si sta copiando e incollando tra le finestre.
 
-Aggiungere una nuova classe al progetto e denominarlo **ImageInfo.cs**. Modificare il file e renderlo simile al seguente:
+Aggiungere una nuova classe al progetto e denominarla **IMAGEINFO.cs**. Modificare il file e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -925,11 +925,11 @@ namespace MacCopyPaste
     
 ```
 
-Nelle sezioni seguenti articolo verrà fornita un'analisi approfondita questa classe.
+Nelle sezioni seguenti verrà esaminata in dettaglio questa classe.
 
 #### <a name="inheritance-and-interfaces"></a>Ereditarietà e interfacce
 
-Prima di una classe di dati personalizzata può essere scritto o letto da un tavolo, deve essere conforme per il `INSPastebaordWriting` e `INSPasteboardReading` interfacce. Inoltre, deve ereditare da `NSObject` e anche conforme al `INSCoding` interfaccia:
+Prima che una classe di dati personalizzata possa essere scritta o letta da un tavolo di montaggio, deve essere `INSPastebaordWriting` conforme alle interfacce e `INSPasteboardReading` . Inoltre, deve ereditare da `NSObject` e essere conforme `INSCoding` all'interfaccia:
 
 ```csharp
 [Register("ImageInfo")]
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-Deve anche esporre la classe Objective-c usando il `Register` direttiva e si devono esporre le proprietà obbligatorie o i metodi usando `Export`. Ad esempio:
+La classe deve essere esposta anche a Objective-C usando la `Register` direttiva ed è necessario esporre le proprietà o i metodi richiesti `Export`usando. Ad esempio:
 
 ```csharp
 [Export("name")]
@@ -947,13 +947,13 @@ public string Name { get; set; }
 public string ImageType { get; set; }
 ```
 
-Si sta esponendo i due campi di dati che questa classe conterrà - nome dell'immagine e il relativo tipo (jpg, png e così via). 
+Verranno esposti i due campi di dati che questa classe conterrà: il nome dell'immagine e il relativo tipo (jpg, PNG e così via). 
 
-Per altre informazioni, vedere la [c# esposizione di classi / metodi di Objective-c](~/mac/internals/how-it-works.md) sezione del [meccanismi interni di xamarin. Mac](~/mac/internals/how-it-works.md) documentazione, viene spiegato il `Register` e `Export` attributi utilizzato per impostare backup di classi c# per gli oggetti di Objective-C e interfaccia utente di elementi.
+Per ulteriori informazioni, vedere la [sezione esporre C# classi/metodi a Objective-C](~/mac/internals/how-it-works.md) della documentazione [interna di Novell. Mac](~/mac/internals/how-it-works.md) , spiega gli `Register` attributi e `Export` usati per collegare le C# classi a Oggetti Objective-C ed elementi dell'interfaccia utente.
 
 #### <a name="constructors"></a>Costruttori
 
-Due costruttori (correttamente esposti Objective-c) sono necessari per la nostra classe di dati personalizzati in modo che possono essere lette da un tavolo:
+Due costruttori (correttamente esposti a Objective-C) saranno necessari per la classe di dati personalizzata in modo che possano essere letti da un tavolo di montaggio:
 
 ```csharp
 [Export ("init")]
@@ -974,17 +974,17 @@ public ImageInfo(NSCoder decoder) {
 }
 ```
 
-In primo luogo, è necessario esporre il _vuote_ costruttore sotto il metodo di Objective-C predefinito `init`.
+In primo luogo, il costruttore _vuoto_ viene esposto nel metodo Objective-C predefinito `init`di.
 
-Successivamente, è necessario esporre un `NSCoding` costruttore conforme che verrà utilizzato per creare una nuova istanza dell'oggetto da tavolo, quando si incolla sotto il nome del esportato `initWithCoder`.
+Successivamente, viene esposto un `NSCoding` Costruttore conforme che verrà utilizzato per creare una nuova istanza dell'oggetto dal tavolo di montaggio quando si incolla con il nome esportato `initWithCoder`di.
 
-Questo costruttore non accetta un `NSCoder` (creato da un `NSKeyedArchiver` quando scritta da tavolo), estrae i dati chiave/valore associato e lo salva i campi delle proprietà della classe di dati.
+Questo costruttore accetta un `NSCoder` oggetto, creato da un `NSKeyedArchiver` oggetto quando viene scritto nel tavolo di montaggio, estrae i dati associati chiave/valore e li salva nei campi delle proprietà della classe di dati.
 
-#### <a name="writing-to-the-pasteboard"></a>La scrittura da tavolo
+#### <a name="writing-to-the-pasteboard"></a>Scrittura nel tavolo di montaggio
 
-Rispettando la conformità per i `INSPasteboardWriting` , è necessario implementare l'interfaccia espone due metodi e, facoltativamente, un terzo metodo, in modo che la classe può essere scritti da tavolo.
+Conformemente all' `INSPasteboardWriting` interfaccia, è necessario esporre due metodi e, facoltativamente, un terzo metodo, in modo che la classe possa essere scritta nel tavolo di montaggio.
 
-In primo luogo, è necessario indicare il tavolo quali dati digitare rappresentazioni che è possibile scrivere la classe personalizzata:
+In primo luogo, è necessario indicare al tavolo di montaggio il tipo di dati di cui è possibile scrivere la classe personalizzata:
 
 ```csharp
 [Export ("writableTypesForPasteboard:")]
@@ -994,11 +994,11 @@ public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) 
 }
 ```
 
-Tutte le rappresentazioni viene identificata tramite un Uniform tipo identificatore (UTI), che non è altro che una semplice stringa che identifica in modo univoco il tipo di dati presentati (per altre informazioni, vedere Apple [Panoramica di identificatori di tipo Uniform ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) documentazione).
+Ogni rappresentazione viene identificata tramite un identificatore di tipo uniforme (UTI), che non è nient'altro che una semplice stringa che identifica in modo univoco il tipo di dati presentati (per altre informazioni, vedere [Cenni preliminari sugli identificatori di tipo uniforme](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) di Apple). documentazione).
 
-Per il formato personalizzato, stiamo creando un UTI: "com.xamarin.image-info" (si noti che si trova in notazione inversa proprio come un identificatore dell'App). La classe è inoltre in grado di scrivere una stringa standard da tavolo (`public.text`). 
+Per il nostro formato personalizzato, creiamo il nostro UTI: "com. Novell. Image-Info" (si noti che è in notazione inversa esattamente come un identificatore di app). La nostra classe è anche in grado di scrivere una stringa standard nel tavolo`public.text`di montaggio (). 
 
-Successivamente, è necessario creare l'oggetto nel formato richiesto che in realtà vengono scritte da tavolo:
+Successivamente, è necessario creare l'oggetto nel formato richiesto che venga effettivamente scritto nel tavolo di montaggio:
 
 ```csharp
 [Export ("pasteboardPropertyListForType:")]
@@ -1017,7 +1017,7 @@ public virtual NSObject GetPasteboardPropertyListForType (string type) {
 }
 ```
 
-Per il `public.text` tipo, si sta restituendo un semplice formato `NSString` oggetto. Per l'oggetto personalizzato `com.xamarin.image-info` tipo, si sta usando una `NSKeyedArchiver` e il `NSCoder` interfaccia per codificare la classe di dati personalizzati a un archivio chiave/valore associato. È necessario implementare il metodo seguente per gestire la codifica:
+Per il `public.text` tipo, viene restituito un semplice oggetto formattato `NSString` . Per il tipo `com.xamarin.image-info` personalizzato, viene usato un oggetto `NSKeyedArchiver` e l' `NSCoder` interfaccia per codificare la classe di dati personalizzata in un archivio associato chiave/valore. È necessario implementare il metodo seguente per gestire effettivamente la codifica:
 
 ```csharp
 [Export ("encodeWithCoder:")]
@@ -1029,9 +1029,9 @@ public void EncodeTo (NSCoder encoder) {
 }
 ```
 
-Le coppie chiave/valore singoli vengono scritti al codificatore e verranno decodificate tramite il secondo costruttore che abbiamo aggiunto in precedenza.
+Le singole coppie chiave/valore vengono scritte nel codificatore e verranno decodificate usando il secondo costruttore aggiunto in precedenza.
 
-Facoltativamente, possiamo includere il metodo seguente per definire le opzioni durante la scrittura di dati in area di montaggio:
+Facoltativamente, è possibile includere il metodo seguente per definire qualsiasi opzione durante la scrittura dei dati nel tavolo di montaggio:
 
 ```csharp
 [Export ("writingOptionsForType:pasteboard:"), CompilerGenerated]
@@ -1040,9 +1040,9 @@ public virtual NSPasteboardWritingOptions GetWritingOptionsForType (string type,
 }
 ```
 
-Attualmente solo il `WritingPromised` opzione è disponibile e deve essere utilizzato quando un determinato tipo è prevista solo e non vengono scritto nell'area di montaggio. Per altre informazioni, vedere la [promesso dati](#Promised_Data) sezione precedente.
+Attualmente solo l' `WritingPromised` opzione è disponibile e deve essere utilizzata quando un tipo specificato viene promesso e non effettivamente scritto nel tavolo di montaggio. Per ulteriori informazioni, vedere la sezione relativa ai [dati promessi](#Promised_Data) sopra.
 
-Con questi metodi posto, il codice seguente è utilizzabile per scrivere questa classe personalizzata in area di montaggio:
+Con questi metodi, è possibile usare il codice seguente per scrivere la classe personalizzata nel tavolo di montaggio:
 
 ```csharp
 // Get the standard pasteboard
@@ -1055,11 +1055,11 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new ImageInfo[] { Info });
 ```
 
-#### <a name="reading-from-the-pasteboard"></a>La lettura da tavolo
+#### <a name="reading-from-the-pasteboard"></a>Lettura dal tavolo di montaggio
 
-Rispettando la conformità per i `INSPasteboardReading` , è necessario implementare l'interfaccia espone tre metodi in modo che la classe di dati personalizzate può essere lette da tavolo.
+Conformemente all' `INSPasteboardReading` interfaccia, è necessario esporre tre metodi in modo che la classe di dati personalizzata possa essere letta dal tavolo di montaggio.
 
-In primo luogo, è necessario indicare tavolo rappresentazioni in grado di leggere la classe personalizzata dagli Appunti di tipi di dati:
+In primo luogo, è necessario indicare al tavolo di montaggio il tipo di dati che la classe personalizzata può leggere dagli Appunti:
 
 ```csharp
 [Export ("readableTypesForPasteboard:")]
@@ -1069,9 +1069,9 @@ public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard){
 }
 ```
 
-Anche in questo caso, questi vengono definiti come semplici uti e sono gli stessi tipi che è stato definito nel **scrivendo tavolo** sezione precedente.
+Anche in questo caso, questi sono definiti come semplici uti e sono gli stessi tipi definiti nella sezione scrittura nella sezione **di montaggio** riportata in precedenza.
 
-Successivamente, è necessario indicare il tavolo _come_ ognuno dei tipi UTI verrà letto usando il metodo seguente:
+Successivamente, è necessario indicare al tavolo di montaggio _come_ ognuno dei tipi uti verrà letto usando il metodo seguente:
 
 ```csharp
 [Export ("readingOptionsForType:pasteboard:")]
@@ -1090,9 +1090,9 @@ public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, 
 }
 ```
 
-Per il `com.xamarin.image-info` tipo, si definiranno il tavolo da decodificare la coppia chiave/valore che è stata creata con il `NSKeyedArchiver` quando la scrittura della classe tavolo chiamando il `initWithCoder:` costruttore che abbiamo aggiunto alla classe.
+Per il `com.xamarin.image-info` tipo, viene indicato al tavolo di montaggio di decodificare la coppia chiave/valore creata `NSKeyedArchiver` con quando si scrive la classe nel tavolo di montaggio chiamando il `initWithCoder:` Costruttore aggiunto alla classe.
 
-Infine, è necessario aggiungere il metodo seguente per leggere le altre rappresentazioni di dati UTI da tavolo:
+Infine, è necessario aggiungere il metodo seguente per leggere le altre rappresentazioni di dati UTI dal tavolo di montaggio:
 
 ```csharp
 [Export ("initWithPasteboardPropertyList:ofType:")]
@@ -1109,7 +1109,7 @@ public NSObject InitWithPasteboardPropertyList (NSObject propertyList, string ty
 }
 ```
 
-Tutti questi metodi posto la classe di dati personalizzate può essere lette da tavolo usando il codice seguente:
+Con tutti questi metodi sul posto, la classe di dati personalizzata può essere letta dal tavolo di montaggio usando il codice seguente:
 
 ```csharp
 // Initialize the pasteboard
@@ -1129,15 +1129,15 @@ if (ok) {
 }
 ```
 
-### <a name="using-a-nspasteboarditem"></a>Usando un NSPasteboardItem
+### <a name="using-a-nspasteboarditem"></a>Uso di un NSPasteboardItem
 
-Talvolta potrebbe essere quando è necessario scrivere le voci personalizzate dello spazio di lavoro che non garantiscono la creazione di una classe personalizzata o si desidera fornire i dati in un formato comune, solo in base alle esigenze. Per queste situazioni, è possibile usare un `NSPasteboardItem`.
+In alcuni casi è possibile che sia necessario scrivere elementi personalizzati nel tavolo di montaggio che non garantiscano la creazione di una classe personalizzata o che si desideri fornire dati in un formato comune, solo se necessario. Per queste situazioni, è possibile usare un `NSPasteboardItem`.
 
-Oggetto `NSPasteboardItem` fornisce un controllo accurato dei dati che viene scritto il tavolo ed sono progettati per l'accesso temporaneo - deve essere eliminato dopo che è stata scritta da tavolo.
+Un `NSPasteboardItem` oggetto offre un controllo granulare dei dati scritti nel tavolo di montaggio ed è progettato per l'accesso temporaneo, ma deve essere eliminato dopo essere stato scritto nel tavolo di montaggio.
 
-#### <a name="writing-data"></a>La scrittura dati
+#### <a name="writing-data"></a>Scrittura di dati
 
-Per scrivere i dati personalizzati a un `NSPasteboardItem` sarà necessario fornire un oggetto personalizzato `NSPasteboardItemDataProvider`. Aggiungere una nuova classe al progetto e denominarlo **ImageInfoDataProvider.cs**. Modificare il file e renderlo simile al seguente:
+Per scrivere i dati personalizzati in un `NSPasteboardItem` , è necessario fornire un oggetto personalizzato `NSPasteboardItemDataProvider`. Aggiungere una nuova classe al progetto e denominarla **ImageInfoDataProvider.cs**. Modificare il file e renderlo simile al seguente:
 
 ```csharp
 using System;
@@ -1200,9 +1200,9 @@ namespace MacCopyPaste
 }
 ```
 
-Come è stato fatto con la classe di dati personalizzate, è necessario usare il `Register` e `Export` direttive per esporla a Objective-C. La classe deve ereditare da `NSPasteboardItemDataProvider` e deve implementare il `FinishedWithDataProvider` e `ProvideDataForType` metodi.
+Come è stato fatto con la classe di dati personalizzata, è necessario usare `Register` le `Export` direttive e per esporla a Objective-C. La classe deve ereditare `NSPasteboardItemDataProvider` da e deve implementare `FinishedWithDataProvider` i `ProvideDataForType` metodi e.
 
-Usare la `ProvideDataForType` metodo per fornire i dati che verranno eseguiti nel `NSPasteboardItem` come indicato di seguito:
+Usare il `ProvideDataForType` metodo per fornire i dati di cui verrà eseguito il wrapper `NSPasteboardItem` nel come indicato di seguito:
 
 ```csharp
 [Export ("pasteboard:item:provideDataForType:")]
@@ -1220,9 +1220,9 @@ public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardIt
 }
 ```
 
-In questo caso, stiamo l'archiviazione dei due tipi di informazioni sui nostri immagine (nome e ImageType) e la scrittura di quelli in una stringa semplice (`public.text`).
+In questo caso vengono archiviate due informazioni sull'immagine (Name e ImageType) e scritte in una stringa semplice (`public.text`).
 
-Tipo di scrivere i dati sul tavolo, usare il codice seguente:
+Digitare scrivere i dati nel tavolo di montaggio, usare il codice seguente:
 
 ```csharp
 // Get the standard pasteboard
@@ -1242,9 +1242,9 @@ if (ok) {
 }
 ```
 
-#### <a name="reading-data"></a>La lettura dei dati
+#### <a name="reading-data"></a>Lettura di dati
 
-Per leggere i dati da tavolo, usare il codice seguente:
+Per leggere nuovamente i dati dal tavolo di montaggio, usare il codice seguente:
 
 ```csharp
 // Initialize the pasteboard
@@ -1274,13 +1274,13 @@ if (ok) {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo, è state lavora sul tavolo in un'applicazione xamarin. Mac per supportare la copia e Incolla le operazioni di un'analisi approfondita. In primo luogo, ha introdotto un esempio semplice per acquisire familiarità con le operazioni di pasteboards standard. Successivamente, ha richiesto un'analisi approfondita tavolo e su come leggere e scrivere dati da esso. Infine, esaminato utilizzando un tipo di dati personalizzato per supportare le operazioni copia e Incolla dei tipi di dati complessi all'interno di un'app.
+Questo articolo ha esaminato in dettaglio l'uso del tavolo di montaggio in un'applicazione Novell. Mac per supportare le operazioni di copia e incolla. In primo luogo, è stato introdotto un semplice esempio per acquisire familiarità con le operazioni Pasteboards standard. Successivamente, è stata esaminata dettagliatamente il cartone e viene illustrato come leggere e scrivere i dati. Infine, è stato esaminato l'uso di un tipo di dati personalizzato per supportare la copia e incolla di tipi di dati complessi all'interno di un'app.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MacCopyPaste (esempio)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (esempio)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Guida per programmatori tavolo di montaggio](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
+- [Guida per programmatori di cartone](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [Linee guida dell'interfaccia umana macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

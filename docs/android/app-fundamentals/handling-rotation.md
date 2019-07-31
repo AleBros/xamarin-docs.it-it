@@ -1,52 +1,52 @@
 ---
 title: Gestione della rotazione
-description: In questo argomento viene descritto come gestire le modifiche apportate orientamento di dispositivo in xamarin. Android. Viene illustrato come lavorare con il sistema risorse Android per caricare automaticamente le risorse per un orientamento del dispositivo specifico nonché come gestire a livello di codice l'orientamento viene modificato.
+description: Questo argomento descrive come gestire le modifiche dell'orientamento del dispositivo in Novell. Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento.
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 62e64be89e26e5a8412cd34221da581e99fc5e6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b1039dd433456731b775399ab42222fe0e4cc6d9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61017333"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644366"
 ---
 # <a name="handling-rotation"></a>Gestione della rotazione
 
-_In questo argomento viene descritto come gestire le modifiche apportate orientamento di dispositivo in xamarin. Android. Viene illustrato come lavorare con il sistema risorse Android per caricare automaticamente le risorse per un orientamento del dispositivo specifico nonché come gestire a livello di codice l'orientamento viene modificato._
+_Questo argomento descrive come gestire le modifiche dell'orientamento del dispositivo in Novell. Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento._
 
 
 ## <a name="overview"></a>Panoramica
 
-Poiché i dispositivi mobili con facilità vengono ruotati, rotazione incorporata è una funzionalità standard di sistemi operativi per dispositivi mobili. Android fornisce un framework sofisticato per la gestione della rotazione all'interno delle applicazioni, se l'interfaccia utente viene creato in modo dichiarativo nel codice XML o a livello di programmazione nel codice. Quando si gestisce automaticamente le modifiche di layout dichiarativo in un dispositivo ruotato, un'applicazione può trarre vantaggio da una stretta integrazione con il sistema risorse Android. Per il layout a livello di codice, è necessario gestire manualmente le modifiche. Ciò consente un maggiore controllo in fase di esecuzione, ma a scapito della quantità di lavoro per gli sviluppatori. Un'applicazione può anche scegliere di rifiutare esplicitamente il riavvio di attività e assumere il controllo manuale delle modifiche apportate orientamento.
+Poiché i dispositivi mobili sono facilmente ruotati, la rotazione incorporata è una funzionalità standard di sistemi operativi mobili. Android fornisce un Framework sofisticato per la gestione della rotazione all'interno delle applicazioni, indipendentemente dal fatto che l'interfaccia utente venga creata in modo dichiarativo in XML o a livello di codice nel codice. Quando si gestiscono automaticamente le modifiche del layout dichiarativo in un dispositivo ruotato, un'applicazione può trarre vantaggio dalla stretta integrazione con il sistema di risorse Android. Per il layout a livello di codice, le modifiche devono essere gestite manualmente. Questo consente un controllo più preciso in fase di esecuzione, ma a scapito di più lavoro per lo sviluppatore. Un'applicazione può anche scegliere di rifiutare esplicitamente il riavvio dell'attività e di assumere il controllo manuale delle modifiche dell'orientamento.
 
 Questa guida esamina gli argomenti di orientamento seguenti:
 
--   **Rotazione di Layout dichiarativa** &ndash; come usare il sistema risorse Android per compilare applicazioni compatibili con l'orientamento, incluse le procedure caricare i layout sia drawable per gli orientamenti particolari.
+-   **Rotazione del layout** dichiarativa &ndash; Come usare il sistema di risorse Android per creare applicazioni in grado di riconoscere l'orientamento, incluso il caricamento di layout e drawables per orientamenti particolari.
 
--   **Rotazione di Layout a livello di programmazione** &ndash; come aggiungere controlli a livello di codice, nonché come gestire manualmente le modifiche apportate orientamento.
+-   **Rotazione layout a livello di codice** &ndash; Come aggiungere controlli a livello di codice e come gestire manualmente le modifiche dell'orientamento.
 
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Gestione della rotazione in modo dichiarativo con layout
 
 Includendo i file nelle cartelle che seguono le convenzioni di denominazione, Android carica automaticamente i file appropriati quando cambia l'orientamento.
-Ciò include il supporto per:
+Questo include il supporto per:
 
--   *Le risorse di layout* &ndash; che specifica quali file di layout sono a inflating per ogni orientamento.
+-   *Risorse di layout* &ndash; Specificare i file di layout per ogni orientamento.
 
--   *Risorse drawable* &ndash; specificando quali drawable vengono caricate per ogni orientamento.
+-   *Risorse disegnatore* &ndash; Specificare quali drawables vengono caricati per ogni orientamento.
 
 
 ### <a name="layout-resources"></a>Risorse di layout
 
-Per impostazione predefinita, i file XML Android (AXML) inclusi nel **risorse/layout** cartella vengono utilizzati per le visualizzazioni per il rendering per un'attività. Risorse della cartella vengono usate per l'orientamento sia verticale e orizzontale se non sono presenti risorse aggiuntive di layout vengono fornite appositamente per orizzontale. Si consideri la struttura del progetto creata dal modello di progetto predefinita:
+Per impostazione predefinita, i file di Android XML (AXML) inclusi nella cartella Resources **/layout** vengono usati per il rendering delle visualizzazioni per un'attività. Le risorse di questa cartella vengono usate per l'orientamento verticale e orizzontale se non vengono fornite risorse di layout aggiuntive per il panorama. Si consideri la struttura del progetto creata dal modello di progetto predefinito:
 
-[![Struttura modello di progetto predefinita](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
+[![Struttura del modello di progetto predefinito](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
-Questo progetto viene creato un singolo **Main. axml** del file nei **risorse/layout** cartella. Quando l'attività `OnCreate` viene chiamato il metodo, ingrandisce la visualizzazione definita in **Main. axml,** che dichiara un pulsante come illustrato nel codice XML riportato di seguito:
+Questo progetto crea un singolo file **Main. aXML** nella cartella **Resources/layout** . Quando viene chiamato il `OnCreate` metodo dell'attività, viene ingrandita la vista definita in **Main. aXML,** che dichiara un pulsante come illustrato nel codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -62,16 +62,16 @@ Questo progetto viene creato un singolo **Main. axml** del file nei **risorse/la
 </LinearLayout>
 ```
 
-Se il dispositivo viene ruotato in orientamento orizzontale, l'attività del `OnCreate` metodo viene chiamato nuovamente e lo stesso **Main. axml** file è sottoposto a inflating, come illustrato nello screenshot seguente:
+Se il dispositivo viene ruotato in orientamento orizzontale, il `OnCreate` metodo dell'attività viene chiamato nuovamente e lo stesso file **Main. aXML** viene ingrandito, come illustrato nella schermata seguente:
 
-[![Ma nella stessa schermata orientamento orizzontale](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
+[![Stessa schermata ma con orientamento orizzontale](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
 
 
-#### <a name="orientation-specific-layouts"></a>Layout orientamento specifici
+#### <a name="orientation-specific-layouts"></a>Layout specifici dell'orientamento
 
-Aggiunta alla cartella di layout (quale verticale per impostazione predefinita e possono anche essere denominate in modo esplicito *layout-port* includendo una cartella denominata `layout-land`), un'applicazione di definire le viste necessarie quando nel panorama senza codice modifiche.
+Oltre alla cartella layout (il cui valore predefinito è Portrait e può anche essere *denominati* in modo esplicito con una cartella denominata `layout-land`), un'applicazione può definire le viste necessarie in orizzontale senza apportare modifiche al codice.
 
-Si supponga che il **Main. axml** file contiene il codice XML seguente:
+Si supponga che il file **Main. aXML** contenesse il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -85,7 +85,7 @@ Si supponga che il **Main. axml** file contiene il codice XML seguente:
 </RelativeLayout>
 ```
 
-Se una cartella denominata land layout che contiene un'ulteriore **Main. axml** file viene aggiunto al progetto, ciò fa aumentare erroneamente il layout quando nel panorama ora genererà in Android il caricamento appena aggiunta **Main. axml.** Prendere in considerazione la versione del panorama applicativo del **Main. axml** file che contiene il codice seguente (per motivi di semplicità, questo codice XML è simile a quella verticale predefinito del codice, ma usa una stringa diversa nel `TextView`):
+Se una cartella denominata layout-Land che contiene un file **Main. aXML** aggiuntivo viene aggiunta al progetto, se il layout viene aggiunto nel formato orizzontale, il caricamento di Android sarà stato aggiunto al nuovo file **Main. aXML.** Si consideri la versione orizzontale del file **Main. aXML** che contiene il codice seguente (per semplicità, questo XML è simile alla versione verticale predefinita del codice, ma usa una stringa diversa in `TextView`):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -99,16 +99,16 @@ Se una cartella denominata land layout che contiene un'ulteriore **Main. axml** 
 </RelativeLayout>
 ```
 
-Esecuzione del codice e ruotare il dispositivo da verticale a orizzontale viene illustrato il nuovo caricamento di XML, come illustrato di seguito:
+L'esecuzione di questo codice e la rotazione del dispositivo da verticale a orizzontale illustrano il nuovo caricamento XML, come illustrato di seguito:
 
-[![Screenshot Portrait e landscape stampa la modalità verticale](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
+[![Schermate verticale e orizzontale che stampano la modalità verticale](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
 
-### <a name="drawable-resources"></a>Risorse drawable
+### <a name="drawable-resources"></a>Risorse disegnatore
 
-Durante la rotazione, Android considera risorse drawable in modo analogo alle risorse di layout. In questo caso, il sistema Ottiene i drawable dal **risorse/drawable** e **risorse/drawable-land** cartelle, rispettivamente.
+Durante la rotazione, Android considera le risorse di disegno in modo analogo alle risorse di layout. In questo caso, il sistema ottiene il drawables dalle cartelle **Resources/disegnator** e Resources **/Landings** , rispettivamente.
 
-Ad esempio, il progetto include un'immagine denominata Monkey.png nel **risorse/drawable** cartella, dove il drawable viene fatto riferimento da un `ImageView` nel codice XML simile al seguente:
+Si immagini, ad esempio, che il progetto includa un'immagine denominata Monkey. png nella cartella Resources **/disegnatore** , in cui si fa `ImageView` riferimento all'oggetto disegnatore da un oggetto in XML come segue:
 
 ```xml
 <ImageView
@@ -119,28 +119,28 @@ Ad esempio, il progetto include un'immagine denominata Monkey.png nel **risorse/
   android:layout_centerHorizontal="true" />
 ```
 
-Si supponga che una versione diversa di **Monkey.png** è incluso nella **risorse/drawable-land**. Proprio come con i file di layout, quando il dispositivo viene ruotato, le modifiche drawable per l'orientamento specificato, come illustrato di seguito:
+Si supponga inoltre che una versione diversa di **Monkey. png** sia inclusa in **risorse/** che può essere disegnato. Come per i file di layout, quando il dispositivo viene ruotato, le modifiche di disegno per l'orientamento specificato, come illustrato di seguito:
 
-[![Versione diversa di Monkey.png visualizzato in modalità verticale e orizzontale](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
+[![Versione diversa di Monkey. png mostrata in modalità verticale e orizzontale](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
 
 ## <a name="handling-rotation-programmatically"></a>Gestione della rotazione a livello di codice
 
-In alcuni casi definiamo layout nel codice. Questa situazione può verificarsi per diversi motivi, tra cui limiti tecnici delle preferenze per gli sviluppatori, e così via. Quando si aggiungono i controlli a livello di codice, un'applicazione manualmente è necessario tenere conto di orientamento del dispositivo, che viene gestito automaticamente quando si usano risorse XML.
+A volte i layout vengono definiti nel codice. Questo problema può verificarsi per diversi motivi, ad esempio limitazioni tecniche, preferenza per gli sviluppatori e così via. Quando si aggiungono controlli a livello di codice, un'applicazione deve tenere conto manualmente dell'orientamento del dispositivo, che viene gestito automaticamente quando si usano le risorse XML.
 
 
 ### <a name="adding-controls-in-code"></a>Aggiunta di controlli nel codice
 
-Per aggiungere controlli a livello di codice, un'applicazione deve eseguire la procedura seguente:
+Per aggiungere controlli a livello di codice, un'applicazione deve eseguire i passaggi seguenti:
 
 -  Creare un layout.
--  Impostare i parametri di layout.
--  Creare i controlli.
--  Impostare i parametri di layout di controllo.
--  Aggiungere controlli al layout.
--  Impostare il layout della visualizzazione del contenuto.
+-  Imposta i parametri di layout.
+-  Creazione di controlli.
+-  Imposta i parametri di layout del controllo.
+-  Aggiungere i controlli al layout.
+-  Impostare il layout come visualizzazione contenuto.
 
-Si consideri ad esempio un'interfaccia utente costituito da una singola `TextView` aggiunto al controllo un `RelativeLayout`, come illustrato nel codice seguente.
+Si consideri, ad esempio, un'interfaccia utente costituita da un `TextView` singolo `RelativeLayout`controllo aggiunto a un oggetto, come illustrato nel codice seguente.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -169,14 +169,14 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Questo codice crea un'istanza di un `RelativeLayout` classi e i set relativo `LayoutParameters` proprietà. Il `LayoutParams` classe è modo di Android che incapsula la modalità con cui i controlli vengono posizionati in modo riutilizzabile. Dopo aver creata un'istanza di un layout, controlli possono essere creati e aggiunti a esso. Controlli dispone anche `LayoutParameters`, ad esempio il `TextView` in questo esempio. Dopo il `TextView` viene creato, aggiungendolo al `RelativeLayout` e impostando il `RelativeLayout` dei risultati di visualizzazione di contenuto la visualizzazione delle applicazioni il `TextView` come illustrato:
+Questo codice crea un'istanza di una `RelativeLayout` classe e ne imposta `LayoutParameters` la proprietà. La `LayoutParams` classe è il modo in cui Android incapsula la posizione dei controlli in modo riutilizzabile. Una volta creata un'istanza di un layout, i controlli possono essere creati e aggiunti. `LayoutParameters` I`TextView` controlli hanno anche, ad esempio, in questo esempio. Dopo aver `TextView` creato l'oggetto, aggiungerlo all' `RelativeLayout` oggetto e impostare `RelativeLayout` la visualizzazione del contenuto come risultato nell'applicazione che visualizza `TextView` l'oggetto come illustrato di seguito:
 
-[![Pulsante di contatore incremento visualizzato in modalità sia verticale e orizzontale](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
+[![Pulsante incrementa contatore visualizzato in modalità verticale e orizzontale](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
 
-### <a name="detecting-orientation-in-code"></a>Rilevamento di orientamento nel codice
+### <a name="detecting-orientation-in-code"></a>Rilevamento dell'orientamento nel codice
 
-Se un'applicazione tenta di caricare un'interfaccia utente diversa per ogni orientamento quando `OnCreate` viene chiamato (ciò si verifica ogni volta che un dispositivo viene ruotato), deve rilevare l'orientamento e quindi caricare il codice dell'interfaccia utente desiderato. Android ha una classe denominata la `WindowManager`, che può essere usato per determinare la rotazione del dispositivo corrente tramite il `WindowManager.DefaultDisplay.Rotation` proprietà, come illustrato di seguito:
+Se un'applicazione tenta di caricare un'interfaccia utente diversa per ogni orientamento quando `OnCreate` viene chiamato il metodo (questa operazione viene eseguita ogni volta che un dispositivo viene ruotato), deve rilevare l'orientamento e quindi caricare il codice dell'interfaccia utente desiderato. Android dispone di una classe denominata `WindowManager`, che può essere usata per determinare la rotazione del dispositivo corrente tramite `WindowManager.DefaultDisplay.Rotation` la proprietà, come illustrato di seguito:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -216,19 +216,19 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Questo codice imposta la `TextView` sia posizionato 100 pixel dalla parte superiore sinistra della schermata, l'animazione automaticamente per il nuovo layout quando ruotata all'orientamento orizzontale, come illustrato di seguito:
+Questo codice imposta l' `TextView` oggetto da posizionare a 100 pixel dalla parte superiore sinistra dello schermo, animando automaticamente il nuovo layout, quando viene ruotato in orizzontale, come illustrato di seguito:
 
-[![Lo stato di visualizzazione viene mantenuto tra le diverse modalità verticale e orizzontale](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
+[![Lo stato di visualizzazione viene mantenuto in modalità verticale e orizzontale](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
 
 
-### <a name="preventing-activity-restart"></a>Impedisce il riavvio di attività
+### <a name="preventing-activity-restart"></a>Impedisci riavvio attività
 
-Oltre alla gestione di tutti gli elementi in `OnCreate`, un'applicazione può inoltre impedire un'attività in fase di riavvio quando viene modificato impostando l'orientamento `ConfigurationChanges` nel `ActivityAttribute` come indicato di seguito:
+Oltre a gestire tutti gli elementi `OnCreate`in, un'applicazione può anche impedire il riavvio `ConfigurationChanges` di un'attività quando l'orientamento cambia impostando nel `ActivityAttribute` modo seguente:
 
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 ```
-Ora quando il dispositivo viene ruotato, l'attività non viene riavviato. Per gestire manualmente le modifiche di orientamento in questo caso, è possibile eseguire l'override di un'attività di `OnConfigurationChanged` metodo e determinare l'orientamento dal `Configuration` oggetto che viene passata, come la nuova implementazione dell'attività seguente:
+Ora, quando il dispositivo viene ruotato, l'attività non viene riavviata. Per gestire manualmente la modifica dell'orientamento in questo caso, un'attività può eseguire l'override `OnConfigurationChanged` del metodo e determinare l'orientamento `Configuration` dall'oggetto passato, come nella nuova implementazione dell'attività seguente:
 
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
@@ -279,34 +279,34 @@ public class CodeLayoutActivity : Activity
 }
 ```
 
-In questo caso il `TextView's` parametri del layout vengono inizializzati per verticale e orizzontale. Le variabili di classe contenere i parametri, insieme al `TextView` stesso, poiché l'attività non verrà nuovamente creato quando viene modificato l'orientamento. Il codice Usa ancora la `surfaceOrientartion` nelle `OnCreate` per impostare il layout iniziale per il `TextView`. Successivamente, `OnConfigurationChanged` gestisce tutte le modifiche di layout successive.
+In questo `TextView's` caso i parametri di layout vengono inizializzati sia per landscape che per verticale. Le variabili di classe contengono i parametri, insieme `TextView` a se stesso, perché l'attività non verrà ricreata quando l'orientamento cambia. Il codice usa `surfaceOrientartion` ancora in `OnCreate` per impostare `TextView`il layout iniziale per. Successivamente, `OnConfigurationChanged` gestisce tutte le modifiche di layout successive.
 
-Quando si esegue l'applicazione, Android carica le modifiche all'interfaccia utente quando si verifica, rotazione del dispositivo e non riavvia l'attività.
-
-
-## <a name="preventing-activity-restart-for-declarative-layouts"></a>Impedisce il riavvio di attività per layout dichiarativo
-
-Riavvio di attività ha causato dalla rotazione del dispositivo può essere evitato anche se si definisce il layout in formato XML. Ad esempio, è possibile usare questo approccio se si vuole impedire il riavvio di un'attività (per motivi di prestazioni, ad esempio) e non sono necessarie caricare le nuove risorse per gli orientamenti diversi.
-
-A tale scopo, si seguirà la stessa procedura che viene usato con un layout a livello di codice. È sufficiente impostare `ConfigurationChanges` nella `ActivityAttribute`, come abbiamo fatto `CodeLayoutActivity` in precedenza. Qualsiasi codice che è necessario eseguire la modifica l'orientamento può essere implementata nuovamente nel `OnConfigurationChanged` (metodo).
+Quando si esegue l'applicazione, Android carica le modifiche dell'interfaccia utente quando si verifica la rotazione del dispositivo e non riavvia l'attività.
 
 
-## <a name="maintaining-state-during-orientation-changes"></a>Gestione dello stato durante le modifiche apportate orientamento
+## <a name="preventing-activity-restart-for-declarative-layouts"></a>Prevenzione del riavvio delle attività per i layout dichiarativi
 
-Se Gestione della rotazione in modo dichiarativo o a livello di codice, tutte le applicazioni Android devono implementare le stesse tecniche per la gestione dello stato quando viene modificato l'orientamento del dispositivo. La gestione dello stato è importante perché il riavvio del sistema un'attività in esecuzione quando un dispositivo Android viene ruotato. Android ha lo scopo rendono più semplice caricare risorse alternative, ad esempio i layout e drawable progettati specificamente per l'orientamento specifico. Se il riavvio, l'attività perde qualsiasi stato temporaneo che siano stati archiviati nelle variabili locali di classe. Pertanto, se un'attività è stato dipendenze, è necessario rendere persistente lo stato a livello di applicazione. Un'applicazione deve gestire il salvataggio e il ripristino dello stato qualsiasi applicazione che vuole conservare in tutte le modifiche apportate orientamento.
+I riavvii delle attività causati dalla rotazione del dispositivo possono anche essere evitati se si definisce il layout in XML. Ad esempio, è possibile usare questo approccio se si vuole impedire il riavvio di un'attività (per motivi di prestazioni, forse) e non è necessario caricare nuove risorse per orientamenti diversi.
 
-Per altre informazioni sullo stato persistente in Android, vedere la [ciclo di vita attività](~/android/app-fundamentals/activity-lifecycle/index.md) Guida.
+A tale scopo, si seguirà la stessa procedura usata con un layout a livello di codice. È sufficiente `ConfigurationChanges` impostare `ActivityAttribute`in, `CodeLayoutActivity` come in precedenza. Il codice che deve essere eseguito per la modifica dell'orientamento può essere nuovamente implementato nel `OnConfigurationChanged` metodo.
+
+
+## <a name="maintaining-state-during-orientation-changes"></a>Gestione dello stato durante le modifiche dell'orientamento
+
+Se si gestisce la rotazione in modo dichiarativo o a livello di codice, tutte le applicazioni Android devono implementare le stesse tecniche per la gestione dello stato quando l'orientamento del dispositivo cambia La gestione dello stato è importante perché il sistema riavvia un'attività in esecuzione quando un dispositivo Android viene ruotato. Android esegue questa operazione per facilitare il caricamento di risorse alternative, ad esempio layout e drawables progettati specificamente per un particolare orientamento. Quando viene riavviato, l'attività perde tutti gli stati temporanei che possono essere archiviati nelle variabili di classe locali. Di conseguenza, se un'attività è dipendente dallo stato, deve mantenerne lo stato a livello di applicazione. Un'applicazione deve gestire il salvataggio e il ripristino dello stato dell'applicazione che si desidera mantenere tra le modifiche all'orientamento.
+
+Per altre informazioni sullo stato di salvataggio permanente in Android, vedere la guida del ciclo di vita delle [attività](~/android/app-fundamentals/activity-lifecycle/index.md) .
 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come usare le funzionalità integrate di Android per lavorare con rotazione. In primo luogo, spiega come usare il sistema risorse Android per creare applicazioni compatibili con l'orientamento. Quindi presentato come aggiungere i controlli nel codice, nonché come gestire manualmente le modifiche apportate orientamento.
+Questo articolo ha illustrato come usare le funzionalità predefinite di Android per lavorare con la rotazione. In primo luogo, è stato illustrato come usare il sistema di risorse Android per creare applicazioni in grado di riconoscere l'orientamento. È stato quindi illustrato come aggiungere controlli nel codice e come gestire manualmente le modifiche dell'orientamento.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di rotazione (esempio)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/RotationDemo/)
+- [Demo sulla rotazione (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-rotationdemo)
 - [Ciclo di vita dell'attività](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Gestione delle modifiche di Runtime](https://developer.android.com/guide/topics/resources/runtime-changes.html)
-- [Cambia l'orientamento dello schermo veloce](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)
+- [Gestione delle modifiche di runtime](https://developer.android.com/guide/topics/resources/runtime-changes.html)
+- [Modifica dell'orientamento rapido dello schermo](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

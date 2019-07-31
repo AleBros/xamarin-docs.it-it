@@ -1,100 +1,100 @@
 ---
-title: watchOS 3 risoluzione dei problemi
-description: Questo documento fornisce alcuni suggerimenti sulla risoluzione dei problemi utili quando si lavora con watchOS 3 in Xamarin. Suggerimenti riguardano le attività, Apple Pay, aggiornamento in background, NSURLConnection, privacy e altro ancora.
+title: watchos 3 risoluzione dei problemi
+description: Questo documento offre diversi suggerimenti per la risoluzione dei problemi quando si lavora con watchos 3 in Novell. I suggerimenti sono correlati a attività, Apple Pay, aggiornamento in background, NSURLConnection, privacy e altro ancora.
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6d2aaf12bd6c45f6268cf87a77d2ee03a9d7a888
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 323aad42832a70bf80e7a5bf3508bb9b65e77b5a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61224032"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655196"
 ---
-# <a name="watchos-3-troubleshooting"></a>watchOS 3 risoluzione dei problemi
+# <a name="watchos-3-troubleshooting"></a>watchos 3 risoluzione dei problemi
 
-_Questo articolo fornisce alcuni suggerimenti sulla risoluzione dei problemi per l'uso di watchOS 3 nelle App Xamarin Apple Watch._
+_Questo articolo fornisce alcuni suggerimenti per la risoluzione dei problemi per l'uso di watchos 3 in Novell Apple Watch app._
 
-Questa pagina elenca alcuni problemi noti che possono verificarsi quando si usa 3 watchOS con Xamarin e la soluzione per risolvere tali problemi.
+Questa pagina elenca alcuni problemi noti che possono verificarsi quando si usa watchos 3 con Novell e la soluzione a tali problemi.
 
 ## <a name="activities"></a>Attività
 
-Per l'attività di condivisione per funzionare correttamente, tutte le espressioni di controllo Apple associato deve essere in esecuzione watchOS 3.
+Per il corretto funzionamento della condivisione delle attività, tutti gli Apple Watch associati devono eseguire watchos 3.
 
 Problemi noti:
 
-- In alcuni casi la risposta a una notifica di condivisione di attività ha esito negativo.
-- La risposta a una notifica la condivisione di attività con un messaggio potrebbe non riuscire.
-- Testo contesto di sopra di un messaggio di notifica delle attività di condivisione sarà errato.
+- La risposta a una notifica di condivisione attività a volte ha esito negativo.
+- La risposta a una notifica di condivisione attività con un messaggio potrebbe non riuscire.
+- Il testo contestuale sopra un messaggio di notifica di condivisione attività non sarà corretto.
 
 ## <a name="apple-pay"></a>Apple Pay
 
 Problemi noti:
 
-- Se una data di scadenza non corretto o codice CW viene inserito per un nuovo cura di pagamento in Apple Pay, al raggiungimento **successivo** si arresterà il processo in esecuzione.
-- Gli acquisti in-App Apple Pay che richiedono un codice PIN potrebbero bloccarsi.
+- Se viene immessa una data di scadenza non corretta o un codice CW per una nuova assistenza per il pagamento nel Apple Pay, quando si **raggiunge il processo** in esecuzione si arresterà in modo anomalo
+- Gli acquisti in-app Apple Pay che richiedono un numero PIN potrebbero arrestarsi in modo anomalo.
 
-## <a name="auto-mac-unlock"></a>Lo sblocco automatico Mac
+## <a name="auto-mac-unlock"></a>Sblocco automatico Mac
 
-Con watchOS 3 beta 2 (o versioni successiva) e macOS Sierra beta 2 (o versione successiva), se l'autenticazione a due fattori è abilitata nell'account iCloud dell'utente, utilizzano i Apple Watch per auto sbloccare i loro computer Mac.
+Se si usa watchos 3 Beta 2 (o versione successiva) e macOS Sierra Beta 2 (o versione successiva), se l'autenticazione a due fattori è abilitata nell'account iCloud dell'utente, può usare i Apple Watch per sbloccare automaticamente il Mac.
 
 ## <a name="background-refresh"></a>Aggiornamento in background
 
-Che violano le risorse di sistema comporterà un arresto anomalo dell'app watchOS 3 con i codici di eccezione seguente:
+Se si violano le risorse di sistema, si verifica un arresto anomalo dell'app watchos 3 con i seguenti codici di eccezione:
 
-- **0xc51bad01** -l'app utilizza una quantità eccessiva tempo di CPU.
-- **0xc51bad02** -l'app utilizza una quantità eccessiva tempo parete.
-- **0xc51bad03** -l'app non è sufficiente runtime per completare l'attività corrente.
+- **0xc51bad01** : l'app ha utilizzato un tempo di CPU troppo elevato.
+- **0xc51bad02** : l'app ha usato troppi tempi di incasso.
+- **0xc51bad03** : l'app non dispone di un runtime sufficiente per completare l'attività corrente.
 
 ## <a name="clock"></a>Clock
 
-Complicazioni dalle App Apple Watch appena installata possono visualizzata come spazio vuoto. Riavviare il sistema di Apple Watch per risolvere il problema.
+Le complicazioni delle app Apple Watch appena installate possono essere visualizzate come vuote. Riavviare Apple Watch per risolvere il problema.
 
 ## <a name="connectivity"></a>Connettività
 
 Problemi noti:
 
-- watchOS non chiederà all'utente l'autorizzazione di accesso per i dati utente protetti sul Apple Watch. Concedere l'accesso nell'app iPhone prima di usare dati in app watch.
-- L'Apple Watch può entrare in uno stato in cui tutte le trasmissioni WatchConnectivity hanno esito negativo, riavviare l'Apple Watch da risolvere.
+- watchos non richiede all'utente l'autorizzazione di accesso per i dati utente protetti nella Apple Watch. Concedere l'accesso all'app iPhone prima di usare i dati nell'app Watch.
+- Il Apple Watch può entrare in uno stato in cui tutte le trasmissioni WatchConnectivity hanno esito negativo, riavviare il Apple Watch per correggere il problema.
 
 ## <a name="notifications"></a>Notifiche
 
-Se un file multimediale allegato è troppo grande, si visualizzerà in iPhone dell'utente, ma non i Apple Watch.
+Se un allegato multimediale è troppo grande, verrà visualizzato nell'iPhone dell'utente, ma non in Apple Watch.
 
 ## <a name="nsurlconnection"></a>NSURLConnection
 
-Qualsiasi `NSURLConnection` connessioni usando i protocolli TLS precedenti avrà esito negativo. Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è disabilitata per impostazione predefinita. Inoltre, l'API di trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app interrompere l'uso della crittografia SHA-1 e 3DES appena possibile.
+Tutte `NSURLConnection` le connessioni che usano protocolli TLS meno recenti avranno esito negativo. Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app smetta di usare la crittografia SHA-1 e 3DES il prima possibile.
 
-A partire da watchOS 3, protezione delle connessioni SSL/TLS è rigorosamente imposta da Apple. Le App e servizi interessati devono aggiornati i server web per usare le versioni del protocollo TLS più recenti.
+A partire da watchos 3, la sicurezza delle connessioni SSL/TLS viene applicata rigorosamente da Apple. I servizi e le app interessati devono aggiornare i server Web per usare le versioni più recenti del protocollo TLS.
 
 ## <a name="nsurlsession"></a>NSURLSession
 
-A partire da watchOS 3, il `HTTPBodyStream` proprietà del `NSMutableURLRequest` classe deve essere impostata su un flusso aperto dopo `NSURLConnection` e `NSURLSession` ora applicherà in modo rigoroso questo requisito.
+A partire da watchos 3, `HTTPBodyStream` la proprietà `NSMutableURLRequest` della classe deve essere impostata su un flusso non aperto a partire `NSURLConnection` da `NSURLSession` e ora impone rigorosamente questo requisito.
 
 ## <a name="privacy"></a>Privacy
 
 Problemi noti:
 
-Quando si lavora `https://` entrambi gli URL `NSURLSession` e `NSURLConnection` non supporterà più pacchetti di crittografia RC4 durante l'handshake TLS. Uno dei codici di errore seguenti può essere generato:
+Quando si lavora `https://` con gli `NSURLSession` URL `NSURLConnection` e non sono più supportati i pacchetti di crittografia RC4 durante l'handshake TLS. È possibile che venga generato uno dei codici di errore seguenti:
 
-- **-1200 o-98** : per `NSURLErrorSecurityConnectionFailed` ed errori SecureTransport.
-- **[3:-9824]-1200** -carico http non è riuscita.
-- **-1200**  -  `NSURLConnection` terminato con errori.
+- **-1200 o-98** -per `NSURLErrorSecurityConnectionFailed` ed errori SecureTransport.
+- **-1200 [3:-9824]** -il caricamento http non è riuscito.
+- **-**  -  1200`NSURLConnection` completato con errore.
 
-A partire da watchOS 3, protezione delle connessioni SSL/TLS è rigorosamente imposta da Apple. Le App e servizi interessati devono aggiornati i server web per usare le versioni del protocollo TLS più recenti. Visualizzare [NSURLConnection](#nsurlconnection) sopra per altre informazioni.
+A partire da watchos 3, la sicurezza delle connessioni SSL/TLS viene applicata rigorosamente da Apple. I servizi e le app interessati devono aggiornare i server Web per usare le versioni più recenti del protocollo TLS. Per ulteriori informazioni, vedere [NSURLConnection](#nsurlconnection) .
 
 ## <a name="snapshots"></a>Snapshot
 
-App WatchKit che non hanno adottato il nuovo `HandelBackgroundTask` API non riceverà più gli aggiornamenti periodici in watchOS 3. 
+Le app WatchKit che non hanno adottato la `HandelBackgroundTask` nuova API non riceveranno più aggiornamenti periodici in watchos 3. 
 
 ## <a name="watchkit"></a>WatchKit
 
-Le scene SpriteKit e SceneKit verranno sospeso quando lo sfondo entra in un'app nel Dock watchOS.
+Le scene SpriteKit e SceneKit verranno sospese quando un'app entra in background nel Dock watchos.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di watchOS](https://developer.xamarin.com/samples/watchos/all/)
-- [Novità in watchOS 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)
+- [Esempi di watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [Novità di watchos 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

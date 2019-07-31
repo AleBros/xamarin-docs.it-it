@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a5a70594b0fe48fe601ef836977f69b29e097ab5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 74d626fb1028c630b67888f84153adeb33ae32b9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510388"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644700"
 ---
 # <a name="xamarinandroid-cardview"></a>Novell. Android CardView
 
@@ -157,7 +157,7 @@ Quando questo esempio di layout viene usato per visualizzare un'immagine in un'a
 
 [![CardView con un'immagine e una didascalia sotto l'immagine](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
-Questa schermata è ricavata dall'app di esempio [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer) , che `RecyclerView` usa un widget per presentare un elenco di `CardView` immagini a scorrimento per visualizzare le foto. Per ulteriori informazioni su `RecyclerView`, vedere la Guida di [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) .
+Questa schermata è ricavata dall'app di esempio [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) , che `RecyclerView` usa un widget per presentare un elenco di `CardView` immagini a scorrimento per visualizzare le foto. Per ulteriori informazioni su `RecyclerView`, vedere la Guida di [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) .
 
 Si noti che `CardView` un oggetto può visualizzare più di una visualizzazione figlio nella relativa area di contenuto. Ad esempio, nell'esempio di app per la visualizzazione di foto precedente l'area di contenuto è costituita da `ListView` un `ImageView` oggetto che `TextView`contiene e. Sebbene `CardView` le istanze siano spesso disposte verticalmente, è anche possibile disporli orizzontalmente (vedere [creazione di uno stile di visualizzazione personalizzato](~/android/user-interface/material-theme.md#customview) per uno screenshot di esempio).
 
@@ -253,6 +253,6 @@ Questa guida ha introdotto il `CardView` nuovo widget incluso in Android 5,0 (Lo
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [RecyclerView (esempio)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerView (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introduzione a lollipop](~/android/platform/lollipop.md)
 - [Riferimento alla classe CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

@@ -7,16 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60de4b8abc200ac7892838765210167f8a79dcfe
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61205887"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645840"
 ---
 # <a name="porter-duff-blend-modes"></a>Metodi di fusione porter Duff
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 I metodi di fusione Porter Duff sono nominati a Thomas Porter e Tom Duff, che ha sviluppato un algebra di composizione durante l'utilizzo per Lucasfilm. La carta [ _la composizione di immagini digitali_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) è stato pubblicato nel numero di luglio 1984 di _infografica_, pagine da 253 a 259. Queste modalità di blend sono essenziali per la composizione di cui è assemblando diverse immagini in una scena composita:
 
@@ -78,10 +78,10 @@ Di seguito sono le modalità Porter Duff 14 come definito in SkiaSharp. La tabel
 | `SrcIn`    |             | Origine       |        |
 | `DstIn`    |             | Destinazione  |        |
 | `SrcOut`   |             |              | x      |
-| `DstOut`   | x           |              |        |
+| `DstOut`   | X           |              |        |
 | `SrcATop`  | x           | Origine       |        |
 | `DstATop`  |             | Destinazione  | x      |
-| `Xor`      | x           |              | x      |
+| `Xor`      | X           |              | X      |
 | `Plus`     | x           | Sum          | x      |
 | `Modulate` |             | Prodotto      |        | 
 
@@ -279,11 +279,11 @@ Potrebbe esserci una tentazione di sostituire le bitmap nel **griglia Porter Duf
 
 ## <a name="using-mattes-with-porter-duff"></a>Uso di mascherini con Porter Duff
 
-Il **composizione dei Brick-Wall** pagina mostra un esempio di un'attività di composizione classico: Un'immagine deve essere raccolto da più parti, tra cui una bitmap con uno sfondo che deve essere eliminata. Di seguito è riportato il **SeatedMonkey.jpg** bitmap con lo sfondo problematico:
+La pagina di **composizione Brick-Wall** Mostra un esempio di attività di composizione classica: È necessario assemblare un'immagine da diverse parti, inclusa una bitmap con uno sfondo che deve essere eliminata. Di seguito è riportato il **SeatedMonkey.jpg** bitmap con lo sfondo problematico:
 
 ![Seduto Monkey](porter-duff-images/SeatedMonkey.jpg "seduto Monkey")
 
-In preparazione per la composizione di un oggetto corrispondente _mascherino_ è stato creato, ovvero un'altra mappa di bit che è in caso contrario, nero in cui si desidera che l'immagine da visualizzare e trasparente. Questo file è denominato **SeatedMonkeyMatte.png** ed è tra le risorse nel **supporti** cartella il [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio :
+In preparazione per la composizione di un oggetto corrispondente _mascherino_ è stato creato, ovvero un'altra mappa di bit che è in caso contrario, nero in cui si desidera che l'immagine da visualizzare e trasparente. Questo file è denominato **SeatedMonkeyMatte.png** ed è tra le risorse nel **supporti** cartella il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio :
 
 ![Seduto Monkey mascherino](porter-duff-images/SeatedMonkeyMatte.png "seduto mascherino Monkey")
 
@@ -505,9 +505,9 @@ La notazione nella tabella seguente vengono utilizzati le abbreviazioni seguenti
 - **SA** è il canale alfa di origine
 - **SC** è l'origine di colore RGB
 
-I colori RGB sono pre-moltiplicati per il valore alfa. Ad esempio, se **Sc** rappresenta il rosso puro ma **Sa** è 0x80, allora è il colore RGB **(0x80, 0, 0)**. Se **Sa** è 0, quindi tutti i componenti RGB inoltre sono pari a zero.
+I colori RGB sono pre-moltiplicati per il valore alfa. Ad esempio, se **Sc** rappresenta il rosso puro ma **Sa** è 0x80, allora è il colore RGB **(0x80, 0, 0)** . Se **Sa** è 0, quindi tutti i componenti RGB inoltre sono pari a zero.
 
-Il risultato viene visualizzato tra parentesi quadre con il canale alfa e il colore RGB separati da virgole: **[colore alfa,]**. Per il colore, il calcolo viene eseguito separatamente per i componenti rossi, verdi e blu:
+Il risultato viene visualizzato tra parentesi quadre con il canale alfa e il colore RGB separati da virgole: **[colore alfa,]** . Per il colore, il calcolo viene eseguito separatamente per i componenti rossi, verdi e blu:
 
 | Modalità       | Operazione |
 | ---------- | --------- |
@@ -526,11 +526,11 @@ Il risultato viene visualizzato tra parentesi quadre con il canale alfa e il col
 | `Plus`     | [Sa + Da, Sc + controller di dominio] |
 | `Modulate` | [Sa· Applicazione distribuita, Sc· Controller di dominio] | 
 
-Queste operazioni sono più facili da analizzare quando **Da** e **Sa** sono 0 o 1. Ad esempio, per impostazione predefinita `SrcOver` modalità, se **Sa** è 0, quindi **Sc** viene inoltre 0 e il risultato è **[Da, Cc]**, il valore alfa di destinazione e il colore. Se **Sa** è 1, il risultato è **[Sa, Sc]**, i valori alfa origine e il colore, o **[1, Sc]**.
+Queste operazioni sono più facili da analizzare quando **Da** e **Sa** sono 0 o 1. Ad esempio, per impostazione predefinita `SrcOver` modalità, se **Sa** è 0, quindi **Sc** viene inoltre 0 e il risultato è **[Da, Cc]** , il valore alfa di destinazione e il colore. Se **Sa** è 1, il risultato è **[Sa, Sc]** , i valori alfa origine e il colore, o **[1, Sc]** .
 
-Il `Plus` e `Modulate` modalità sono un po' diversa dagli altri, in quanto possono causare nuovi colori dalla combinazione di origine e destinazione. Il `Plus` modalità può essere interpretata con componenti di byte o a virgola mobile. Nel **griglia Porter Duff** pagina mostrata in precedenza, il colore di destinazione viene **(0xC0, 0x80, 0x00)** e il colore di origine è **(0x00, 0x80, 0xC0)**. Viene aggiunto ogni coppia di componenti, ma la somma viene impostato a 0xFF. Il risultato è il colore **(0xC0, 0xFF, 0xC0)**. Che corrisponde al colore visualizzato nel punto di intersezione.
+Il `Plus` e `Modulate` modalità sono un po' diversa dagli altri, in quanto possono causare nuovi colori dalla combinazione di origine e destinazione. Il `Plus` modalità può essere interpretata con componenti di byte o a virgola mobile. Nel **griglia Porter Duff** pagina mostrata in precedenza, il colore di destinazione viene **(0xC0, 0x80, 0x00)** e il colore di origine è **(0x00, 0x80, 0xC0)** . Viene aggiunto ogni coppia di componenti, ma la somma viene impostato a 0xFF. Il risultato è il colore **(0xC0, 0xFF, 0xC0)** . Che corrisponde al colore visualizzato nel punto di intersezione.
 
-Per il `Modulate` modalità, i valori RGB devono essere convertiti a virgola mobile. Il colore di destinazione è **(0.75, 0,5, 0)** e l'origine è **(0, 0.5, 0.75)**. I componenti RGB sono ognuno moltiplicati insieme e il risultato viene **(0, 0.25, 0)**. Che rappresenta il colore indicato nel punto di intersezione nel **Porter Duff griglia** pagina per questa modalità.
+Per il `Modulate` modalità, i valori RGB devono essere convertiti a virgola mobile. Il colore di destinazione è **(0.75, 0,5, 0)** e l'origine è **(0, 0.5, 0.75)** . I componenti RGB sono ognuno moltiplicati insieme e il risultato viene **(0, 0.25, 0)** . Che rappresenta il colore indicato nel punto di intersezione nel **Porter Duff griglia** pagina per questa modalità.
 
 Il **Porter Duff trasparenza** pagina consente di esaminare il modo in cui le modalità di blend Porter Duff operano su oggetti grafici che sono parzialmente trasparenti. Il file XAML include un `Picker` con le modalità Porter Duff:
 
@@ -903,4 +903,4 @@ Le schermate seguenti illustrano i tre tipi di diverse transizioni, ognuna in co
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

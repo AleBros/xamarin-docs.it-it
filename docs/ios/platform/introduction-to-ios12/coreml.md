@@ -1,34 +1,34 @@
 ---
-title: Core ML 2 in Xamarin.iOS
-description: Questo documento descrive gli aggiornamenti da Core ML disponibili come parte di iOS è 12. In particolare, analizza i miglioramenti delle prestazioni associati con la nuova API di stima batch.
+title: Core ML 2 in Novell. iOS
+description: Questo documento descrive gli aggiornamenti di core ML disponibili nell'ambito di iOS 12. In particolare, analizza i miglioramenti delle prestazioni associati alla nuova API di stima di batch.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fc72e855101f110310a46145c577b272a647ac3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398845"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645712"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Xamarin.iOS
+# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Novell. iOS
 
-ML core è una tecnologia disponibile in iOS, macOS, tvOS e watchOS di apprendimento. Consente alle app di eseguire stime basate sui modelli di machine learning.
+Core ML è una tecnologia di machine learning disponibile in iOS, macOS, tvOS e watchos. Consente alle app di eseguire stime basate sui modelli di machine learning.
 
-In iOS 12, ML Core include un'API di elaborazione batch. Questa API rende più efficiente Core ML e offre miglioramenti delle prestazioni negli scenari in cui viene usato un modello per creare una sequenza di stime.
+In iOS 12, Core ML include un'API di elaborazione batch. Questa API rende più efficiente Core ML e fornisce miglioramenti delle prestazioni negli scenari in cui viene usato un modello per creare una sequenza di stime.
 
 ## <a name="sample-app-marshabitatcoremltimer"></a>App di esempio: MarsHabitatCoreMLTimer
 
-Per illustrare le stime in batch con Core ML, esaminare i [MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer) app di esempio. Questo esempio viene utilizzata per stimare il costo della creazione di un habitat in Mars, eseguito il training di un modello ML Core basata su vari input: numero di pannelli solari, numero di serre e numero di acri.
+Per illustrare le stime in batch con core ML, vedere l'app di esempio [MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer) . Questo esempio usa un modello di core ML con training per stimare il costo della creazione di un habitat su Marte, in base a diversi input: numero di pannelli solari, numero di serre e numero di acri.
 
-I frammenti di codice in questo documento provengono da questo esempio.
+I frammenti di codice di questo documento provengono da questo esempio.
 
 ## <a name="generate-sample-data"></a>Generare dati di esempio
 
-Nelle `ViewController`, l'app di esempio `ViewDidLoad` chiamate al metodo `LoadMLModel`, che carica il modello di Machine Learning Core incluso:
+In `ViewController`il metodo dell'app di `ViewDidLoad` esempio chiama `LoadMLModel`, che carica il modello di core ml incluso:
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-Quindi, l'app di esempio crea 100.000 `MarsHabitatPricerInput` oggetti da utilizzare come input per le stime di Machine Learning Core sequenziale. Ogni esempio generato ha un valore casuale impostato per il numero di pannelli solari, il numero di serre e il numero di acri:
+Quindi, l'app di esempio crea `MarsHabitatPricerInput` oggetti 100.000 da usare come input per le stime di core ml sequenziali. Ogni campione generato ha un valore casuale impostato per il numero di pannelli solari, il numero di serre e il numero di acri:
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-Toccando uno qualsiasi dei tre pulsanti dell'app viene eseguita due sequenze di stime: uno che utilizza un `for` ciclo for e un altro servizio mediante il nuovo batch `GetPredictions` metodo introdotto in iOS 12:
+Toccare uno dei tre pulsanti dell'app esegue due sequenze di stime: una usando un `for` ciclo e l'altra usando il nuovo metodo batch `GetPredictions` introdotto in iOS 12:
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (ciclo)
 
-Il `for` versione loop del test gestire scorre il numero specificato di input, chiamare [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) per ognuno ed eliminando il risultato. Il metodo si verifica il tempo necessario per eseguire le stime:
+La `for` versione del ciclo del test esegue l'iterazione in base al numero di input specificato, [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) chiamando per ogni e ignorando il risultato. Il metodo impiega il tempo necessario per eseguire le stime:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -92,10 +92,10 @@ async Task FetchNonBatchResults(int num)
 }
 ```
 
-## <a name="getpredictions-new-batch-api"></a>GetPredictions (batch nuova API)
+## <a name="getpredictions-new-batch-api"></a>Getpredictions (nuova API batch)
 
-La versione di batch di test crea un `MLArrayBatchProvider` oggetto della matrice di input (poiché si tratta di un parametro di input obbligatorio per il `GetPredictions` (metodo)), crea un [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-oggetto che impedisce che i calcoli di stima vengano limitate alla CPU e Usa il `GetPredictions` dell'API per recuperare le stime, anche in questo caso ignorando il risultato:
+La versione batch del test crea un `MLArrayBatchProvider` oggetto dalla matrice di input (poiché si tratta di un parametro di input obbligatorio per il `GetPredictions` metodo), crea un'[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+oggetto che impedisce che i calcoli di stima vengano limitati alla CPU e utilizza l' `GetPredictions` API per recuperare le stime, eliminando nuovamente il risultato:
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,13 +118,13 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>Risultati
 
-Simulatore sia sul dispositivo, `GetPredictions` termine più rapidamente le stime di Machine Learning di Core in base al ciclo.
+Sia per il simulatore che `GetPredictions` per il dispositivo, termina più rapidamente rispetto alle stime di core ml basate su loop.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [App di esempio: MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
-- [Nuove funzionalità di ML Core, parte 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
-- [Nuove funzionalità di ML Core, parte 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introduzione a Core ML in xamarin. IOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [App di esempio-MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+- [Novità di core ML, parte 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
+- [Novità di core ML, parte 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
+- [Introduzione a core ML in Novell. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [Core ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
-- [Utilizzo dei modelli di ML Core](https://developer.apple.com/machine-learning/build-run-models/)
+- [Uso dei modelli di base ML](https://developer.apple.com/machine-learning/build-run-models/)

@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: c85dd8dbc654ee9c55248db1133135a2806f4bf2
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d4d7358ca6188f2528ea200f901823f04324ba3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829887"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647477"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Stile App xamarin. Forms con Cascading Style Sheets (CSS)
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin. Forms supporta gli elementi visivi di stile usando Cascading Style Sheets (CSS)._
 
@@ -76,7 +76,7 @@ In xamarin. Forms, fogli di stile CSS vengono analizzati e valutati in fase di e
 > [!NOTE]
 > Attualmente tutti gli stili che sono possibili eseguire con lo stile di XAML non può essere eseguiti con CSS. Tuttavia, gli stili XAML consente di integrare CSS per le proprietà che non sono attualmente supportate da xamarin. Forms. Per altre informazioni sugli stili XAML, vedere [lo stile delle App xamarin. Forms usando gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-Il [MonkeyAppCSS](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/) illustra l'uso di CSS per applicare uno stile a una semplice app di esempio e viene illustrato negli screenshot seguenti:
+Il [MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) illustra l'uso di CSS per applicare uno stile a una semplice app di esempio e viene illustrato negli screenshot seguenti:
 
 [![Pagina principale MonkeyApp con lo stile CSS](css-images/MonkeyAppMainPage.png "MonkeyApp Main pagina con lo stile CSS")](css-images/MonkeyAppMainPage-Large.png#lightbox "MonkeyApp Main pagina con lo stile CSS")
 
@@ -342,7 +342,7 @@ I selettori CSS seguenti sono supportati da xamarin. Forms:
 |`.class`|`.header`|Seleziona tutti gli elementi di `StyleClass` proprietà che contiene 'header'. Si noti che questo selettore distinzione maiuscole / minuscole.|
 |`#id`|`#email`|Seleziona tutti gli elementi `StyleId` impostato su `email`. Se `StyleId` non è impostata, il fallback a `x:Name`. Quando si usa XAML, `x:Name` è preferibile a `StyleId`. Si noti che questo selettore distinzione maiuscole / minuscole.|
 |`*`|`*`|Seleziona tutti gli elementi.|
-|`element`|`label`|Seleziona tutti gli elementi di tipo `Label`, ma non alle sottoclassi. Si noti che questo selettore maiuscole e minuscole.|
+|`element`|`label`|Seleziona tutti gli elementi di `Label`tipo, ma non le sottoclassi. Si noti che questo selettore maiuscole e minuscole.|
 |`^base`|`^contentpage`|Seleziona tutti gli elementi `ContentPage` come classe di base, tra cui `ContentPage` stesso. Si noti che questo selettore non distingue tra maiuscole e non fa parte della specifica di CSS.|
 |`element,element`|`label,button`|Seleziona tutti gli elementi `Button` elementi e i `Label` elementi. Si noti che questo selettore maiuscole e minuscole.|
 |`element element`|`stacklayout label`|Seleziona tutti gli elementi `Label` elementi all'interno di un `StackLayout`. Si noti che questo selettore maiuscole e minuscole.|
@@ -428,7 +428,7 @@ Le proprietà seguenti non sono attualmente supportate:
 
 Inoltre, vi è alcun `inherit` ereditarietà valore e pertanto non è supportato. Pertanto non è possibile, ad esempio, impostare il `font-size` proprietà in un layout e attendere che tutti i [ `Label` ](xref:Xamarin.Forms.Label) istanze nel layout per ereditare il valore. L'unica eccezione è il `direction` proprietà, che ha un valore predefinito di `inherit`.
 
-### <a name="xamarinforms-specific-properties"></a>Proprietà specifiche di xamarin. Forms
+### <a name="xamarinforms-specific-properties"></a>Proprietà specifiche di Novell. Forms
 
 Sono supportate anche le seguenti proprietà CSS specifiche xamarin. Forms (nel **i valori** sono tipi di colonna _corsivo_, mentre i valori letterali stringa sono `gray`):
 
@@ -447,9 +447,9 @@ Sono supportate anche le seguenti proprietà CSS specifiche xamarin. Forms (nel 
 |`-xf-thumb-color`|`Slider`|_Colore_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_Valore Double_ \| `initial` |`-xf-spacing: 8;`|
 
-### <a name="xamarinforms-shell-specific-properties"></a>Proprietà specifiche della Shell di xamarin. Forms
+### <a name="xamarinforms-shell-specific-properties"></a>Proprietà specifiche della shell Novell. Forms
 
-Sono supportate anche le seguenti proprietà CSS specifiche della Shell di xamarin. Forms (nelle **valori** sono tipi di colonna _corsivo_, mentre i valori letterali stringa sono `gray`):
+Sono supportate anche le proprietà CSS specifiche della shell Novell. Forms (nella colonna **valori** , i tipi sono in _corsivo_, mentre i valori `gray`letterali stringa sono):
 
 |Proprietà|Si applica a|Valori|Esempio|
 |---|---|---|---|
@@ -504,10 +504,10 @@ Il significato esatto di ogni `namedsize` valore è dipendente dalla piattaforma
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Video di xamarin. Forms 3.0 CSS**
+**Novell. Forms 3,0 video CSS**
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MonkeyAppCSS (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+- [MonkeyAppCSS (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -1,108 +1,108 @@
 ---
-title: Introduzione agli storyboard in xamarin. Mac
-description: Questo articolo fornisce un'introduzione all'uso con gli storyboard in un'app xamarin. Mac. Viene descritto come creare e gestire l'interfaccia utente dell'app usando gli storyboard e Interface Builder di Xcode.
+title: Introduzione agli storyboard in Novell. Mac
+description: Questo articolo fornisce un'introduzione all'uso degli storyboard in un'app Novell. Mac. Viene descritto come creare e gestire l'interfaccia utente dell'app usando gli storyboard e Interface Builder di Xcode.
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 75affbdb6e919c15c644a68ae45e7ff657a53f6a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832296"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652287"
 ---
-# <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduzione agli storyboard in xamarin. Mac
+# <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduzione agli storyboard in Novell. Mac
 
-_Questo articolo fornisce un'introduzione all'uso con gli storyboard in un'app xamarin. Mac. Viene illustrata la creazione e la gestione dell'interfaccia utente dell'app usando gli storyboard e Interface Builder di Xcode._
+_Questo articolo fornisce un'introduzione all'uso degli storyboard in un'app Novell. Mac. Viene illustrata la creazione e la gestione dell'interfaccia utente dell'app usando gli storyboard e la Interface Builder di Xcode._
 
-Gli storyboard consentono inoltre di sviluppare un'interfaccia utente per l'app xamarin. Mac che include non solo i controlli e le definizioni di finestra, ma contiene anche i collegamenti tra finestre diverse (tramite gli elementi segue) e visualizzare gli stati.
+Gli storyboard consentono di sviluppare un'interfaccia utente per l'app Novell. Mac che non include solo le definizioni e i controlli della finestra, ma contiene anche i collegamenti tra le diverse finestre (tramite gli elementi segue) e gli Stati di visualizzazione.
 
-[![](images/intro01.png "Un esempio dell'interfaccia utente in Xcode")](images/intro01.png#lightbox)
+[![](images/intro01.png "Interfaccia utente di esempio in Xcode")](images/intro01.png#lightbox)
 
-Questo articolo fornirà un'introduzione all'uso degli storyboard per definire l'interfaccia utente di un'app xamarin. Mac.
+Questo articolo fornisce un'introduzione all'uso degli storyboard per definire l'interfaccia utente di un'app Novell. Mac.
 
 <a name="What-are-Storyboards" />
 
-## <a name="what-are-storyboards"></a>Quali sono gli storyboard?
+## <a name="what-are-storyboards"></a>Che cosa sono gli storyboard?
 
-Usando gli storyboard, tutti dell'interfaccia utente di un'app xamarin. Mac possono essere definiti in un'unica posizione con tutta la navigazione tra le interfacce utente e singoli elementi. Storyboard per xamarin. Mac, funziona in modo molto simile agli storyboard per xamarin. IOS. Tuttavia, contengono un set diverso di _tipi di elemento Segue_ a causa di idiomi di interfaccia diverse.
+Usando gli storyboard, è possibile definire l'interfaccia utente di un'app Novell. Mac in un'unica posizione con tutta la navigazione tra i singoli elementi e le interfacce utente. Gli storyboard per Novell. Mac funzionano in modo molto simile agli storyboard per Novell. iOS. Tuttavia, contengono un set diverso di _tipi segue_ a causa dei diversi idiomi dell'interfaccia.
 
 <a name="Working-with-Scenes" />
 
-### <a name="working-with-scenes"></a>Lavora in background
+### <a name="working-with-scenes"></a>Uso delle scene
 
-Come indicato in precedenza, uno Storyboard definisce tutti l'interfaccia utente per una determinata app, suddivise in una panoramica delle funzionalità del relativo _controller di visualizzazione_. In Interface Builder di Xcode, ognuno di questi controller si trova un proprio _scena_.
+Come indicato in precedenza, uno storyboard definisce tutta l'interfaccia utente per una determinata app suddivisa in una panoramica funzionale dei _controller di visualizzazione_. In Interface Builder di Xcode, ognuno di questi controller si trova in una propria _scena_.
 
 [![](images/intro02.png "Un controller di visualizzazione di esempio")](images/intro02.png#lightbox)
 
-Ogni scena rappresenta un vista e una coppia di Controller di visualizzazione specificato con un set di righe (denominato segue) che si connettono ogni scena nell'interfaccia utente, pertanto che mostra le relative relazioni. Alcuni segue definire un Controller di visualizzazione contiene uno o più visualizzazioni figlio o i controller di visualizzazione. Altri segue, definire le transizioni tra Controller di visualizzazione (ad esempio visualizzando una finestra di dialogo o nel popover). 
+Ogni scena rappresenta una coppia visualizzazione e controller di visualizzazione specificata con un set di righe (denominato gli elementi segue) che connette ogni scena nell'interfaccia utente, mostrando così le relazioni. Alcuni gli elementi segue definiscono il modo in cui un controller di visualizzazione contiene una o più visualizzazioni figlio o controller di visualizzazione. Gli altri gli elementi segue definiscono le transizioni tra il controller di visualizzazione, ad esempio la visualizzazione di una finestra di dialogo o un messaggio. 
 
-[![](images/intro03.png "Elemento segue un esempio")](images/intro03.png#lightbox)
+[![](images/intro03.png "Segue di esempio")](images/intro03.png#lightbox)
 
-L'aspetto più importante da notare è che ogni elemento Segue rappresenta il flusso di qualche tipo di dati tra l'elemento specificato dell'interfaccia utente dell'app.
+L'aspetto più importante da notare è che ogni segue rappresenta il flusso di una forma di dati tra l'elemento specificato dell'interfaccia utente dell'app.
 
 <a name="Working-with-View-Controllers" />
 
-### <a name="working-with-view-controllers"></a>Utilizzo di controller di visualizzazione
+### <a name="working-with-view-controllers"></a>Uso dei controller di visualizzazione
 
-I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello Storyboard rappresenta un Controller di visualizzazione nel codice dell'app xamarin. Mac.
+I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello storyboard rappresenta un controller di visualizzazione nel codice dell'app Novell. Mac.
 
-[![](images/intro04.png "Un esempio di controller di visualizzazione vengono ignorati")](images/intro04.png#lightbox)
+[![](images/intro04.png "Un esempio di scorrimento di un controller di visualizzazione")](images/intro04.png#lightbox)
 
-In questo modo, ogni Controller di visualizzazione è un'associazione indipendente e riutilizzabile di rappresentazione visiva dell'informazione (visualizzazione) e la logica per consentire di controllare le informazioni.
+In questo modo, ogni controller di visualizzazione è un'associazione autonoma e riutilizzabile della rappresentazione visiva (visualizzazione) delle informazioni e della logica per presentare e controllare tali informazioni.
 
-All'interno di una scena specificata, è possibile eseguire tutte le operazioni che verrebbero normalmente sono state gestite da singoli `.xib` file: 
+All'interno di una determinata scena, è possibile eseguire tutte le operazioni normalmente gestite da singoli `.xib` file: 
 
-- Posizione subviews e controlli (ad esempio i pulsanti e caselle di testo).
-- Definire le posizioni dell'elemento e i vincoli per il layout automatico.
-- Wireup azioni e gli Outlet per esporre gli elementi dell'interfaccia utente al codice.
+- Posizionare le sottovisualizzazioni e i controlli, ad esempio pulsanti e caselle di testo.
+- Definire le posizioni degli elementi e i vincoli di layout automatico.
+- Azioni di collegamento e Outlet per esporre gli elementi dell'interfaccia utente al codice.
 
 <a name="Working-with-Segues" />
 
-### <a name="working-with-segues"></a>Utilizzo con gli elementi segue
+### <a name="working-with-segues"></a>Uso di gli elementi segue
 
-Come indicato in precedenza, segue forniscono le relazioni tra tutte le scene di cui definiscono l'interfaccia utente dell'app. Se si ha familiarità con l'utilizzo degli storyboard in iOS, si è certi che gli elementi segue per iOS in genere definiscono transizioni tra le viste schermo intero. Questo comportamento è diverso da macOS, quando si segue in genere definito "contenimento" (dove una scena rappresenta l'elemento figlio di un elemento padre scena).
+Come indicato in precedenza, gli elementi segue fornisce le relazioni tra tutte le scene che definiscono l'interfaccia utente dell'app. Se si ha familiarità con l'uso degli storyboard in iOS, si sa che gli elementi segue per iOS definisce in genere le transizioni tra le visualizzazioni a schermo intero. Questo comportamento è diverso da macOS, quando gli elementi segue in genere definiscono "containment" (dove una scena è l'elemento figlio di una scena padre).
 
-In macOS, la maggior parte delle App tendono a raggruppare le visualizzazioni insieme all'interno della stessa finestra usando gli elementi dell'interfaccia utente, ad esempio schede e viste di divisione. A differenza di iOS, in cui le visualizzazioni dovranno eseguire la transizione accensione e spegnimento dello schermo, visualizzare lo spazio a causa di fisica limitata.
+In macOS la maggior parte delle app tende a raggruppare le visualizzazioni all'interno della stessa finestra usando gli elementi dell'interfaccia utente, ad esempio le visualizzazioni e le schede suddivise. A differenza di iOS, in cui le visualizzazioni devono essere sottoposte a transizione sullo schermo, a causa dello spazio di visualizzazione fisico limitato.
 
-Dato utenti di macOS verso il contenimento, esistono situazioni in cui _presentazione gli elementi segue_ vengono usati, ad esempio Windows modale, foglio le visualizzazioni e Popovers.
+Date le tendenze di macOS all'indipendenza, esistono situazioni in cui vengono usate le _gli elementi segue di presentazione_ , ad esempio le finestre modali, le visualizzazioni dei fogli e i Popov.
 
-Quando si usano gli elementi segue presentazione, è possibile eseguire l'override di `PrepareForSegue` metodo del Controller di visualizzazione padre per la presentazione per inizializzare e le variabili e fornire i dati per il Controller di visualizzazione viene presentato.
+Quando si usa Presentation gli elementi segue, è possibile eseguire `PrepareForSegue` l'override del metodo del controller di visualizzazione padre per la presentazione per inizializzare e variabili e fornire i dati al controller di visualizzazione visualizzato.
 
 <a name="Design-and-Run-Times" />
 
-### <a name="design-and-run-times"></a>Progettazione e tempi di esecuzione
+### <a name="design-and-run-times"></a>Progettazione ed esecuzione
 
-In fase di progettazione (quando layout orizzontale l'interfaccia utente in Interface Builder di Xcode), ogni elemento dell'interfaccia utente dell'app è suddivisa in elementi costitutivi è:
+In fase di progettazione (quando si crea il layout dell'interfaccia utente nel Interface Builder di Xcode), ogni elemento dell'interfaccia utente dell'app viene suddiviso in elementi costitutivi:
 
-- **Le scene** , ovvero sono costituiti da:
-    - **Consente di visualizzare Controller** -che definiscono le relazioni tra le visualizzazioni e i dati che li supportano.
-    - **Le viste e le visualizzazioni secondarie** -gli elementi effettivi che costituiscono l'interfaccia utente.
-    - **Contenimento segue** -che definiscono le relazioni padre-figlio tra le scene.
-- **Presentazione segue** -che definiscono le modalità di presentazione singoli. 
+- **Scene** , che sono costituite da:
+    - **Controller di visualizzazione** : che definiscono le relazioni tra le visualizzazioni e i dati che li supportano.
+    - **Visualizzazioni e sottoviste** : gli elementi effettivi che costituiscono l'interfaccia utente.
+    - **Gli elementi segue** di contenimento che definiscono le relazioni padre-figlio tra le scene.
+- **Gli elementi segue di presentazione** : definiscono le singole modalità di presentazione. 
 
-Definendo ogni elemento in questo modo, consente il caricamento lazy di ogni elemento solo quando è necessario in fase di esecuzione. In macOS, l'intero processo è stato progettato per consentire allo sviluppatore di creare interfacce utente complesse e flessibile che richiedono un minimo di un backup di codice per farli funzionare, tutti pur essendo efficienti con le risorse di sistema possibili.
+Definendo ogni elemento in questo modo, consente il caricamento lazy di ogni elemento solo quando è necessario in fase di esecuzione. In macOS, l'intero processo è stato progettato in modo da consentire allo sviluppatore di creare interfacce utente complesse e flessibili che richiedono un minimo di codice di supporto per poterle lavorare, il tutto con la massima efficienza delle risorse di sistema.
 
 <a name="Storyboard-Quick-Start" />
 
-## <a name="storyboard-quick-start"></a>Avvio rapido di storyboard
+## <a name="storyboard-quick-start"></a>Avvio rapido storyboard
 
-Nel [avvio rapido di Storyboard](~/mac/platform/storyboards/quickstart.md) Guida, si creerà una semplice app xamarin. Mac che introduce i concetti chiave di utilizzo degli storyboard per creare un'interfaccia utente. L'app di esempio sarà costituito da una vista consente di dividere contenente un _Area di contenuto_ e un _Inspector Area_ e presenta una semplice finestra di dialogo Preferenze. Segue verrà usato per unire tutti gli elementi dell'interfaccia utente.
+Nella Guida [avvio rapido storyboard](~/mac/platform/storyboards/quickstart.md) verrà creata una semplice app Novell. Mac che introduce i concetti chiave dell'utilizzo degli storyboard per creare un'interfaccia utente. L'app di esempio è costituita da una visualizzazione a dispari contenente un' _area di contenuto_ e un' _area di controllo_ e presenta una finestra di dialogo di preferenze semplice. Si utilizzerà gli elementi segue per associare tutti gli elementi dell'interfaccia utente.
 
 <a name="Working-with-Storyboards" />
 
 ## <a name="working-with-storyboards"></a>Utilizzo degli storyboard
 
-Questa sezione vengono illustrati i dettagli approfonditi del [funziona con gli storyboard](~/mac/platform/storyboards/indepth.md) in un'app xamarin. Mac. Prendiamo uno sguardo approfondito sui scene e come sono composti di controller di visualizzazione e visualizzazione. Quindi, prenderemo in esame la modalità in background sono unite da segue. Infine, Daremo un'occhiata a lavorare con i tipi di elemento Segue personalizzati. 
+In questa sezione vengono illustrati i dettagli approfonditi sull' [utilizzo degli storyboard](~/mac/platform/storyboards/indepth.md) in un'app Novell. Mac. Vengono esaminate in dettaglio le scene e il modo in cui sono composte dai controller e dalle visualizzazioni di visualizzazione. Verrà quindi esaminata la correlazione tra le scene e gli elementi segue. Infine, verranno esaminate le operazioni con i tipi di segue personalizzati. 
 
 <a name="Complex-Storyboard-Example" />
 
-## <a name="complex-storyboard-example"></a>Esempio di Storyboard complessi
+## <a name="complex-storyboard-example"></a>Esempio di storyboard complesso
 
-Per un esempio di un esempio complesso di lavorare con gli storyboard in un'app xamarin. Mac, vedere la [App di esempio SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
+Per un esempio di un esempio complesso di utilizzo degli storyboard in un'app Novell. Mac, vedere l'app di [esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
 
 Il codice SourceWriter include tutti i commenti e, dove possibile, sono stati indicati i collegamenti delle tecnologie e dei metodi principali alle informazioni corrispondenti nelle guide di Xamarin.Mac.
 
@@ -110,12 +110,12 @@ Il codice SourceWriter include tutti i commenti e, dove possibile, sono stati in
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha assunto un esame rapido di utilizzo degli storyboard in un'app xamarin. Mac. È stato illustrato come creare una nuova app usando gli storyboard e come definire un'interfaccia utente. È stato anche illustrato come spostarsi tra le diverse finestre e gli stati di visualizzazione tramite gli elementi segue.
+Questo articolo ha esaminato rapidamente l'uso degli storyboard in un'app Novell. Mac. Abbiamo visto come creare una nuova app usando gli storyboard e come definire un'interfaccia utente. È stato inoltre illustrato come spostarsi tra le diverse finestre e gli Stati di visualizzazione utilizzando gli elementi segue.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, Mac (sample)](https://developer.xamarin.com/samples/mac/Hello_Mac/) (Hello, Mac - Esempio)
+- [Hello, Mac (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac) (Hello, Mac - Esempio)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
 - [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

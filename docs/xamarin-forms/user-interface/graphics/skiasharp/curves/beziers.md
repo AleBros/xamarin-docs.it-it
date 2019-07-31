@@ -7,22 +7,22 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7802360c95d31f237cf69c69728cffe02ad47e5a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229627"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646234"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tre tipi di curve di Bézier
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Scopri come usare SkiaSharp per eseguire il rendering di curve di Bézier cubica continua, quadratiche e conica_
 
 La curva di Bézier denominata dopo Pierre Bézier (1910: 1999), un francese engineer presso l'azienda automobilistica europea alleanza Renault, che hanno usato la curva per la progettazione assistita da computer di corpi di automobili.
 
-Curve di Bézier sono noti per essere particolarmente adatta alla finestra di progettazione interattiva: Sono ben progettate &mdash; in altre parole, non ci siano singolarità che causano la curva diventare difficile da gestire o infinito &mdash; e sono in genere esteticamente piacevole:
+Le curve di Bézier sono note per essere particolarmente adatte alla progettazione interattiva: Si tratta &mdash; di un comportamento corretto in altre parole, non ci sono singolarità che fanno sì che la curva diventi infinita o &mdash; ingombrante e che in genere siano gradevoli da un punto di vista estetico:
 
 ![](beziers-images/beziersample.png "Una curva di Bézier di esempio")
 
@@ -493,7 +493,7 @@ In teoria, i pesi negativi sono consentiti e causano la curva a piegare *assente
 
 ![](beziers-images/conicarc.png "A seguito del rendering arco conica di un arco circolare")
 
-È possibile usare trigonometria per determinare la distanza del punto di controllo dal centro del cerchio: È il raggio del cerchio diviso per metà dell'angolo α il coseno. Per disegnare un arco circolare tra i punti iniziale e finale, impostare il peso su tale stesso coseno metà dell'angolo. Si noti che se l'angolo è 180 gradi, quindi le righe tangente mai conformi e il peso è uguale a zero. Ma per gli angoli minore di 180 gradi, i calcoli matematici funzionano correttamente.
+È possibile usare la trigonometria per determinare la distanza del punto di controllo dal centro del cerchio: Si tratta del raggio del cerchio diviso per il coseno della metà dell'angolo α. Per disegnare un arco circolare tra i punti iniziale e finale, impostare il peso su tale stesso coseno metà dell'angolo. Si noti che se l'angolo è 180 gradi, quindi le righe tangente mai conformi e il peso è uguale a zero. Ma per gli angoli minore di 180 gradi, i calcoli matematici funzionano correttamente.
 
 Il **arco circolare conica** pagina viene illustrata questa. Il [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) crea un'istanza di file un `Slider` per la selezione angolo. Il `PaintSurface` gestore nel [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) file code-behind viene calcolato il punto di controllo e il peso:
 
@@ -557,4 +557,4 @@ Rappresenta un problema in questo caso che `ConicTo` nepodporuje pesi negativi, 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

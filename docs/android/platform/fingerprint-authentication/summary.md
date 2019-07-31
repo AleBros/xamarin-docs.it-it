@@ -1,44 +1,44 @@
 ---
-title: Materiale sussidiario di autenticazione tramite impronta digitale
+title: Indicazioni sull'autenticazione con impronta digitale
 ms.prod: xamarin
 ms.assetid: B40332CC-8123-4150-B47E-996214388842
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 535eabe07cb4f4d36e6a6f918b5717efcc99185d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 08738a751fd630c6a413b1c7393f8007f5c97060
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023536"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643556"
 ---
-# <a name="fingerprint-authentication-guidance"></a>Materiale sussidiario di autenticazione tramite impronta digitale
+# <a name="fingerprint-authentication-guidance"></a>Indicazioni sull'autenticazione con impronta digitale
 
-## <a name="fingerprint-authentication-guidance"></a>Materiale sussidiario di autenticazione tramite impronta digitale
+## <a name="fingerprint-authentication-guidance"></a>Indicazioni sull'autenticazione con impronta digitale
 
-Ora che abbiamo visto i concetti e le API che circondano Android 6.0 di impronte digitali l'autenticazione, verranno ora esaminati alcuni consigli generali per l'uso delle API di impronta digitale.
+Ora che sono stati illustrati i concetti e le API che racchiudono l'autenticazione con impronta digitale Android 6,0, verranno illustrati alcuni consigli generali per l'uso delle API per le impronte digitali.
 
-1. **Usare le API di compatibilità della libreria di supporto Android v4** &ndash; questo semplificherà il codice dell'applicazione rimuovendo il controllo API dal codice e consentono a un'applicazione per il massimo possibile di dispositivi di destinazione.
-2. **Offrono alternative all'autenticazione con impronta digitale** &ndash; autenticazione tramite impronta digitale è un modo eccezionale e rapido per un'applicazione autenticare un utente, tuttavia, non è possibile presupporre che sarà sempre di lavoro o essere disponibili. È possibile che lo scanner di impronta digitale può avere esito negativo, l'obiettivo è forse essere dirty, l'utente potrebbe non avere configurato il dispositivo per usare l'autenticazione tramite impronta digitale o le impronte digitali poiché sono andati persi. È anche possibile che l'utente potrebbe non vuole usare l'autenticazione tramite impronta digitale con l'applicazione. Per questi motivi, un'applicazione Android deve fornire un processo di autenticazione alternativo, ad esempio nome utente e password.
-3. **Utilizzare l'icona di impronta digitale di Google** &ndash; tutte le applicazioni devono usare la stessa icona di impronta digitale fornita da Google. L'uso di un'icona standard rende più semplice per gli utenti Android riconoscere in cui le App in cui viene utilizzata l'autenticazione tramite impronta digitale: 
+1. **Usare le API di compatibilità V4 per la libreria di supporto Android** &ndash; Il codice dell'applicazione verrà semplificato rimuovendo il controllo dell'API dal codice e consentendo a un'applicazione di usare la maggior parte dei dispositivi.
+2. **Fornire alternative all'autenticazione con impronta digitale** &ndash; L'autenticazione con impronta digitale è un modo rapido e rapido per consentire a un'applicazione di autenticare un utente, ma non è possibile presupporre che funzioni sempre o sia disponibile. È possibile che lo scanner di impronta digitale possa avere esito negativo, che l'obiettivo sia Dirty, che l'utente non abbia configurato il dispositivo per l'uso dell'autenticazione tramite impronta digitale o che le impronte digitali siano mancanti. È anche possibile che l'utente non voglia usare l'autenticazione con impronta digitale con l'applicazione. Per questi motivi, un'applicazione Android deve fornire un processo di autenticazione alternativo, ad esempio nome utente e password.
+3. **Usare l'icona dell'impronta digitale di Google** &ndash; Tutte le applicazioni devono usare la stessa icona di impronta digitale fornita da Google. L'uso di un'icona standard consente agli utenti di Android di riconoscere la posizione in cui viene usata l'autenticazione con impronta digitale delle app: 
     
     ![Icona di impronta digitale Android](summary-images/ic-fp-40px.png)
     
-4. **Notifica all'utente** &ndash; un'applicazione deve visualizzare un tipo di notifica per l'utente che lo scanner di impronta digitale è attivo e in attesa di un tocco o scorrere rapidamente. 
+4. **Invia notifica all'utente** &ndash; Un'applicazione deve visualizzare un tipo di notifica all'utente che lo scanner di impronta digitale è attivo e in attesa di tocco o scorrimento. 
 
 ## <a name="summary"></a>Riepilogo
 
-Autenticazione tramite impronta digitale è un ottimo modo per consentire a un'applicazione xamarin. Android verificare rapidamente gli utenti, rendendo più semplice per gli utenti di interagire con le funzionalità sensibili, ad esempio acquisti in-app. Questa guida ha illustrato i concetti e il codice necessario per incorporare l'impronta digitale Android 6.0 dell'API nell'applicazione xamarin. Android.
+L'autenticazione con impronta digitale è un ottimo modo per consentire a un'applicazione Novell. Android di verificare rapidamente gli utenti, semplificando l'interazione degli utenti con funzionalità sensibili come gli acquisti in-app. Questa guida ha illustrato i concetti e il codice necessari per incorporare l'API per le impronte digitali Android 6,0 nell'applicazione Novell. Android.
 
-Prima di tutto è stata illustrata l'API le stesse, impronta digitale `FingerprintManager` (e `FingerprintManagerCompat`). Abbiamo esaminato come la `FingerprintManager.AuthenticationCallbacks` classe astratta deve essere esteso da un'applicazione e usata come intermediario tra l'hardware di impronta digitale e l'applicazione stessa. Quindi abbiamo esaminato il modo verificare l'integrità dei risultati dello scanner di impronta digitale usando un linguaggio `Cipher` oggetto. Infine, abbiamo modificate leggermente sul test tramite cui viene descritto come registrare un'impronta digitale su un dispositivo e l'uso **adb** per simulare un passaggio del dito impronta digitale in un emulatore. 
+Prima abbiamo discusso le API dell'impronta digitale, `FingerprintManager` (e `FingerprintManagerCompat`). È stato esaminato il `FingerprintManager.AuthenticationCallbacks` modo in cui la classe astratta deve essere estesa da un'applicazione e usata come intermediario tra l'hardware dell'impronta digitale e l'applicazione stessa. È stato quindi esaminato come verificare l'integrità dei risultati dello scanner di impronta digitale usando `Cipher` un oggetto Java. Infine, abbiamo toccato un po' di test descrivendo come registrare un'impronta digitale in un dispositivo e usando **ADB** per simulare un swipe impronta digitale su un emulatore. 
 
-Se non già stato fatto, è consigliabile esaminare i [applicazione di esempio](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) che accompagna questa Guida. Il [esempio di finestra di dialogo di impronte digitali](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/) è stata portata da Java in xamarin. Android e fornisce un altro esempio su come aggiungere l'autenticazione tramite impronta digitale per un'applicazione Android.
+Se non è già stato fatto, è necessario esaminare l' [applicazione di esempio](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) che accompagna questa guida. L' [esempio di finestra di dialogo impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) è stato trasferito da Java a Novell. Android e fornisce un altro esempio su come aggiungere l'autenticazione con impronta digitale a un'applicazione Android.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [App di esempio Guida impronta digitale](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
-- [Esempio di finestra di dialogo di impronta digitale](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
-- [Icona di impronta digitale](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)
+- [App di esempio per la Guida all'impronta digitale](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
+- [Esempio di finestra di dialogo impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
+- [Icona impronta digitale](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)

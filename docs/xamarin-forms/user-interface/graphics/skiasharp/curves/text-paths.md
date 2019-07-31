@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
-ms.openlocfilehash: 366a6e9585817c5a47ba5bec14fb2f238ab23a6b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d38391f3fd0f02dda8bfd92fce650c557bda0153
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61022038"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645220"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Tracciati e testo in SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Esplorare l'intersezione dei tracciati e testo_
 
@@ -30,7 +30,7 @@ Oltre a utilizzare un effetto di percorso per tracciare una descrizione di carat
 
 Nell'articolo precedente sulla [ **effetti per il tracciato**](effects.md), si è visto come il [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) metodo `SKPaint` può ottenere una struttura di un percorso tracciato. È anche possibile usare questo metodo con percorsi derivati da contorni dei caratteri.
 
-Infine, in questo articolo viene illustrato un altro punto di intersezione tra tracciati e testo: Il [ `DrawTextOnPath` ](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) metodo `SKCanvas` consente di visualizzare una stringa di testo in modo che la linea di base del testo segua un tracciato curvo.
+Infine, in questo articolo viene illustrata un'altra intersezione di percorsi e testo: Il [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) metodo di `SKCanvas` consente di visualizzare una stringa di testo in modo che la linea di base del testo segua un tracciato curvo.
 
 ## <a name="text-to-path-conversion"></a>Testo per la conversione di percorso
 
@@ -128,7 +128,7 @@ Il **effetto di testo percorso** pagina converte un carattere e commerciale sing
 
 [![](text-paths-images/textpatheffect-small.png "Tripla screenshot della pagina di testo percorso effetto")](text-paths-images/textpatheffect-large.png#lightbox "tripla screenshot della pagina di effetto di testo percorso")
 
-Quantità di lavoro nel [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe viene generata nei campi e un costruttore. I due `SKPaint` gli oggetti definiti come campi usati per due scopi diversi: Il primo (denominato `textPathPaint`) viene usata per convertire la e commerciale con un `TextSize` 50 a un percorso per l'effetto di percorso 1 giorno. Il secondo (`textPaint`) consente di visualizzare la versione più grande di una e commerciale con effetto tale percorso. Per questo motivo, il `Style` di questo secondo vernice è impostata su `Stroke`, ma il `StrokeWidth` proprietà non è impostata perché tale proprietà non è necessaria quando si usa un effetto di percorso 1D:
+Quantità di lavoro nel [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe viene generata nei campi e un costruttore. I due `SKPaint` oggetti definiti come campi vengono usati per due scopi diversi: Il primo (denominato `textPathPaint`) viene utilizzato per convertire la e commerciale con `TextSize` una di 50 in un percorso per l'effetto del percorso 1D. Il secondo (`textPaint`) consente di visualizzare la versione più grande di una e commerciale con effetto tale percorso. Per questo motivo, il `Style` di questo secondo vernice è impostata su `Stroke`, ma il `StrokeWidth` proprietà non è impostata perché tale proprietà non è necessaria quando si usa un effetto di percorso 1D:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -285,7 +285,7 @@ Esistono, tuttavia, si vogliano testo per eseguire una curva. Questo è lo scopo
 public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOffset, SKPaint paint)
 ```
 
-Il testo specificato nel primo argomento è tentato di eseguire lungo il percorso specificato come secondo argomento. È possibile iniziare il testo in un offset dall'inizio del percorso con il `hOffset` argomento. In genere il percorso del form la linea di base del testo: I tratti ascendenti testo sono sul uno lato del percorso e tratti discendenti di testo sono in altro. Ma è possibile compensare la linea di base di testo dal percorso con il `vOffset` argomento.
+Il testo specificato nel primo argomento è tentato di eseguire lungo il percorso specificato come secondo argomento. È possibile iniziare il testo in un offset dall'inizio del percorso con il `hOffset` argomento. In genere il percorso costituisce la linea di base del testo: Il testo ascendenti si trovano su un lato del percorso e i discendenti di testo sono sull'altro. Ma è possibile compensare la linea di base di testo dal percorso con il `vOffset` argomento.
 
 Questo metodo non dispone di funzionalità per fornire materiale sussidiario sulla configurazione di `TextSize` proprietà di `SKPaint` per rendere il testo ridimensionato perfettamente per l'esecuzione dall'inizio del percorso fino alla fine. In alcuni casi è possibile determinare tale dimensione del testo per conto proprio. In altri casi è necessario usare le funzioni di misurazione percorso a essere descritta nell'articolo successivo in [ **informazioni sul percorso e l'enumerazione**](information.md).
 
@@ -326,9 +326,9 @@ Il `TextSize` proprietà di `textPaint` viene quindi regolato in modo che la lar
 
 [![](text-paths-images/circulartext-small.png "Tripla screenshot della pagina di testo circolare")](text-paths-images/circulartext-large.png#lightbox "tripla screenshot della pagina di testo circolare")
 
-Il testo stesso è stato scelto sia abbastanza circolari anche: La parola "circle" è l'oggetto della frase sia l'oggetto di una frase preposizionali.
+Il testo stesso è stato scelto anche come circolare: La parola "Circle" è sia l'oggetto della frase che l'oggetto di una frase preposizionale.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169996"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647623"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizzazione dell'aspetto di ListView
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-[`ListView`](xref:Xamarin.Forms.ListView) ha la possibilità di controllare la presentazione dell'elenco, oltre al [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) istanze per ogni riga nell'elenco.
+[`ListView`](xref:Xamarin.Forms.ListView)ha la possibilità di controllare la presentazione dell'elenco, oltre alle [`ViewCell`](xref:Xamarin.Forms.ViewCell) istanze per ogni riga nell'elenco.
 
 <a name="Grouping" />
 
@@ -78,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-Nel codice precedente, è anche possibile chiamare `Add` sugli elementi della `groups`, che sono istanze del tipo `PageTypeGroup`. Ciò è possibile in quanto `PageTypeGroup` eredita da `List<PageModel>`. Questo è un esempio dell'elenco di elenchi modello indicato in precedenza.
+Nel codice precedente, è anche possibile chiamare `Add` sugli elementi di `groups`, che sono istanze di tipo `PageTypeGroup`. Ciò è possibile in quanto `PageTypeGroup` eredita da `List<PageModel>`. Questo è un esempio dell'elenco di elenchi modello indicato in precedenza.
 
 Ecco il XAML per la visualizzazione elenco raggruppato:
 
@@ -203,11 +203,11 @@ Per creare un'intestazione personalizzata e un piè di pagina, definire le visua
 
 ## <a name="scrollbar-visibility"></a>Visibilità della barra di scorrimento
 
-[`ListView`](xref:Xamarin.Forms.ListView) ha `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` le proprietà, che ottiene o imposta un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valore che rappresenta quando la barra di scorrimento orizzontale o verticale, è visibile. Entrambe le proprietà possono essere impostate sui valori seguenti:
+[`ListView`](xref:Xamarin.Forms.ListView)dispone `HorizontalScrollBarVisibility` di `VerticalScrollBarVisibility` proprietà e, che ottengono o impostano un [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valore che rappresenta quando la barra di scorrimento orizzontale o verticale è visibile. Entrambe le proprietà possono essere impostate sui valori seguenti:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica il comportamento di barra di scorrimento predefinito per la piattaforma ed è il valore predefinito per il `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` proprietà.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento sarà visibile, anche quando il contenuto viene adattato nella visualizzazione.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non sarà visibile, anche se il contenuto non rientra nella visualizzazione.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica il comportamento predefinito della barra di scorrimento per la piattaforma e è il valore predefinito per `HorizontalScrollBarVisibility` le `VerticalScrollBarVisibility` proprietà e.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica che le barre di scorrimento saranno visibili, anche quando il contenuto si adatterà alla visualizzazione.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica che le barre di scorrimento non saranno visibili, anche se il contenuto non rientra nella visualizzazione.
 
 <a name="Row_Separators" />
 
@@ -342,8 +342,8 @@ Si noti che esiste una forte possibilità di riduzione delle prestazioni se ques
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Raggruppamento (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Visualizzazione di Renderer personalizzato (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Ridimensionamento di righe dinamiche (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
+- [Raggruppamento (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Visualizzazione di Renderer personalizzato (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Ridimensionamento di righe dinamiche (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [note sulla versione 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [note sulla versione 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

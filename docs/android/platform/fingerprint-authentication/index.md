@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7917f0cc03a4079d6b2adaba37fdc0332f8626c8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b865f08c9f6506996b5303bb80677977f1d0fa21
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510601"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643568"
 ---
 # <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
@@ -59,8 +59,8 @@ Per l'autenticazione con impronta digitale è necessario Android 6,0 (livello AP
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [App di esempio per la Guida all'impronta digitale](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
-- [Esempio di finestra di dialogo impronta digitale](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
+- [App di esempio per la Guida all'impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fingerprintguide)
+- [Esempio di finestra di dialogo impronta digitale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [Richiesta di autorizzazioni in fase di esecuzione](https://developer.android.com/training/permissions/requesting.html)
 - [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
 - [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
