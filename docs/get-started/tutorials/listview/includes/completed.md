@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1433246ee892d7642cb012a1aa9372153741f2b0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 736b4242549e76ad42d87616ca23759e5f421845
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037580"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669699"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
@@ -23,6 +23,6 @@ Per altre informazioni sulle nozioni di base della creazione di applicazioni per
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ListViewTutorial (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/ListViewTutorial)
+- [ListViewTutorial (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-listviewtutorial/)
 - [ListView Xamarin.Forms (guida)](~/xamarin-forms/user-interface/listview/index.md)
 - [API ListView](xref:Xamarin.Forms.ListView)

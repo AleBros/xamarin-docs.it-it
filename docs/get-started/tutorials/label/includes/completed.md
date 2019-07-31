@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37c2ba1b03d4894d7d7528f4cf520ddb4e6e5aab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896674"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669692"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
@@ -22,6 +22,6 @@ Per altre informazioni sulle nozioni di base della creazione di applicazioni per
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [LabelTutorial (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LabelTutorial)
+- [LabelTutorial (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Etichetta Xamarin.Forms (guida)](~/xamarin-forms/user-interface/text/label.md)
 - [API Etichetta](xref:Xamarin.Forms.Label)

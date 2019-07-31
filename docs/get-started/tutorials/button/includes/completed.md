@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 623802729bd5ef0429e329b193a4b331cd1cbc3f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d1aa70c5cfeeccbbb29d600c4ac92aff0d5aacfd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61372950"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669688"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
@@ -22,6 +22,6 @@ Per altre informazioni sulle nozioni di base della creazione di applicazioni per
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ButtonTutorial (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/ButtonTutorial)
+- [ButtonTutorial (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-buttontutorial/)
 - [Pulsante Xamarin.Forms (guida)](~/xamarin-forms/user-interface/button.md)
 - [API Pulsante](xref:Xamarin.Forms.Button)

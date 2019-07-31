@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58dde82ed95feea8616e144085009b2adb97de8a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 92c0dd4b2b2afc03347af8508fe9a56fc9fd152e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382534"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669689"
 ---
 L'esercitazione è stata completata. Si è appreso come:
 
@@ -22,7 +22,7 @@ Per altre informazioni sulle nozioni di base della creazione di applicazioni per
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [StackLayoutTutorial (esempio)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/StackLayoutTutorial)
+- [StackLayoutTutorial (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
 - [StackLayout Xamarin.Forms (guida)](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [Margine e spaziatura interna (guida)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [Opzioni di layout in Xamarin.Forms (guida)](~/xamarin-forms/user-interface/layouts/layout-options.md)

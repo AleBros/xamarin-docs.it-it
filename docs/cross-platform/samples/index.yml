@@ -11,7 +11,7 @@ abstract:
   description: 'App e demo di codice di esempio multipiattaforma Xamarin per iniziare a creare app per dispositivi mobili con C# e Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: Tutti gli esempi di Xamarin
 sections:
   - title: Introduzione
@@ -20,11 +20,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             html: 'Questo esempio è una dimostrazione di un''applicazione di tipo Elenco attività compilata con Xamarin.Forms, in cui i dati vengono archiviati e sono accessibili in un database locale di SQLite.'
             image:
               src: images/todo.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             title: Todo
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: 'App demo che consente al personale di vendita di tenere traccia dei risultati di vendita, gestire i clienti potenziali, visualizzare i contatti, gestire gli ordini e consultare il catalogo prodotti.'
@@ -74,9 +74,9 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             html: Set completo di app e demo di codice di esempio multipiattaforma Xamarin.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             title: Tutti gli esempi di Xamarin
