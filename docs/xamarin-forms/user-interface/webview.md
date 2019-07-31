@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: a56764771f3106f73809a51616e90fa30692a4d4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649640"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656258"
 ---
 # <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) è una vista per la visualizzazione del contenuto HTML e web nell'app. A differenza `OpenUri`, che accetta l'utente per il web browser nel dispositivo, `WebView` consente di visualizzare il contenuto HTML all'interno dell'app.
 
@@ -110,7 +110,7 @@ browser.Source = htmlSource;
 Nel codice precedente, `@` viene usato per contrassegnare il codice HTML sotto forma di stringa letterale, vale a dire tutti i caratteri di escape consueti vengono ignorati.
 
 > [!NOTE]
-> Potrebbe essere necessario impostare il `WidthRequest` e `HeightRequest` proprietà del [ `WebView` ](xref:Xamarin.Forms.WebView) per visualizzare il contenuto HTML, a seconda del layout di `WebView` è un figlio di. Ad esempio, questa operazione è necessaria un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
+> Potrebbe essere `WidthRequest` necessario impostare le proprietà e `HeightRequest` del [`WebView`](xref:Xamarin.Forms.WebView) per visualizzare il `WebView` contenuto HTML, a seconda del layout di cui è figlio. Ad esempio, questa operazione è necessaria in [`StackLayout`](xref:Xamarin.Forms.StackLayout)un oggetto.
 
 ### <a name="local-html-content"></a>Contenuto HTML locale
 
@@ -334,25 +334,25 @@ La procedura è terminata.
 
 WebView genera gli eventi seguenti che consentono di rispondere alle modifiche nello stato:
 
-- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) : evento generato quando la visualizzazione Web inizia a caricare una nuova pagina.
-- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) : evento generato quando la pagina viene caricata e spostamento è stato arrestato.
-- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) : evento generato quando viene effettuata una richiesta di ricaricare il contenuto corrente.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating): evento generato quando la WebView inizia a caricare una nuova pagina.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated): evento generato quando la pagina viene caricata e l'esplorazione è stata arrestata.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested): evento generato quando viene effettuata una richiesta per ricaricare il contenuto corrente.
 
-Il [ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs) oggetti che accompagna il [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) evento dispone di quattro proprietà:
+L' [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs) oggetto che accompagna l' [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) evento è costituito da quattro proprietà:
 
-- `Cancel` : indica se annullare lo spostamento o meno.
-- `NavigationEvent` -l'evento di navigazione che è stato generato.
-- `Source` : l'elemento che eseguire la navigazione.
-- `Url` : destinazione di navigazione.
+- `Cancel`: indica se annullare o meno la navigazione.
+- `NavigationEvent`: l'evento di navigazione che è stato generato.
+- `Source`: elemento che ha eseguito lo spostamento.
+- `Url`: destinazione di navigazione.
 
-Il [ `WebNavigatedEventArgs` ](xref:Xamarin.Forms.WebNavigatedEventArgs) oggetti che accompagna il [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) evento dispone di quattro proprietà:
+L' [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) oggetto che accompagna l' [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) evento è costituito da quattro proprietà:
 
-- `NavigationEvent` -l'evento di navigazione che è stato generato.
-- `Result` – descrive il risultato della navigazione, usando un [ `WebNavigationResult` ](xref:Xamarin.Forms.WebNavigationResult) membro di enumerazione. I valori validi sono `Cancel`, `Failure`, `Success` e `Timeout`.
-- `Source` : l'elemento che eseguire la navigazione.
-- `Url` : destinazione di navigazione.
+- `NavigationEvent`: l'evento di navigazione che è stato generato.
+- `Result`: descrive il risultato della navigazione, usando un [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) membro di enumerazione. I valori validi sono `Cancel`, `Failure`, `Success` e `Timeout`.
+- `Source`: elemento che ha eseguito lo spostamento.
+- `Url`: destinazione di navigazione.
 
-Se prevedi di usare le pagine Web che richiedono molto tempo per caricare, è consigliabile usare la [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) e [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) eventi per implementare un indicatore di stato. Ad esempio:
+Se si prevede di usare le pagine Web che impiegano molto tempo per il caricamento, provare [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) a [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) usare gli eventi e per implementare un indicatore di stato. Ad esempio:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -482,7 +482,7 @@ Griglia *senza* WidthRequest & HeightRequest. Griglia è uno dei layout alcuni c
 
 ## <a name="invoking-javascript"></a>Richiamo di JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) include la possibilità di richiamare una funzione JavaScript da C#e restituire risultati al chiamante C# codice. Questa operazione viene eseguita con il [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) metodo, che viene visualizzato nell'esempio seguente dal [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) esempio:
+[`WebView`](xref:Xamarin.Forms.WebView) include la possibilità di richiamare una funzione JavaScript da C#e restituire risultati al chiamante C# codice. Questa operazione viene eseguita con il [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) metodo, che viene visualizzato nell'esempio seguente dal [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) esempio:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -516,5 +516,5 @@ function factorial(num) {
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Utilizzo di WebView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
-- [WebView (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)
+- [Utilizzo di WebView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)

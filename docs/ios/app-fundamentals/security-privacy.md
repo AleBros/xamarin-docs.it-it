@@ -1,121 +1,121 @@
 ---
-title: iOS funzionalità di sicurezza e Privacy
-description: Questo documento vengono descritte funzionalità di sicurezza e privacy di iOS e illustra come usarli con xamarin. IOS. Prende in considerazione aggiornamenti apportati in iOS 10 e come accedere ai dati personali dell'utente.
+title: Funzionalità per la sicurezza e la privacy di iOS
+description: In questo documento vengono descritte le funzionalità di sicurezza e privacy di iOS e viene illustrato come usarle con Novell. iOS. Vengono esaminati gli aggiornamenti apportati in iOS 10 e viene illustrato come accedere ai dati utente privati.
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 119fd478727a002622861c94462b93b75720a992
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9fcd4820b5e22254356250ef2d26714dc32a59f4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61400583"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655213"
 ---
-# <a name="ios-security-and-privacy-features"></a>iOS funzionalità di sicurezza e Privacy
+# <a name="ios-security-and-privacy-features"></a>Funzionalità per la sicurezza e la privacy di iOS
 
-_Questo articolo descrive l'uso con la sicurezza e privacy in iOS e gli effetti di un'app xamarin. IOS._
+_Questo articolo illustra l'uso della sicurezza e della privacy in iOS e del modo in cui influiscono su un'app Novell. iOS._
 
-Apple ha introdotto numerosi miglioramenti al sia sicurezza e privacy in iOS 10 (e versioni successive) che consentono allo sviluppatore di migliorare la sicurezza delle proprie App e garantire la privacy dell'utente finale. Questo articolo illustra l'implementazione di queste funzionalità in un'app xamarin. IOS.
+Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in iOS 10 (e versioni successive) che aiuteranno lo sviluppatore a migliorare la sicurezza delle app e garantire la privacy degli utenti finali. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Novell. iOS.
     
 <a name="General-Enhancements" />
 
 ## <a name="general-enhancements"></a>Miglioramenti generali
 
-Le seguenti modifiche generali sono state apportate alla sicurezza e Privacy in iOS 10:
+In iOS 10 sono state apportate le seguenti modifiche generali alla sicurezza e alla privacy:
 
-- Common Data Security Architecture (CDSA) API è obsoleta e deve essere sostituito con l'API SecKey per generare le chiavi asimmetriche.
-- Il nuovo `NSAllowsArbitraryLoadsInWebContent` chiave può essere aggiunti a di un'app **Info. plist** file e consentirà alle pagine web di caricare correttamente mentre protezione Apple Transport Security (ATS) è ancora abilitata per il resto dell'app. Per altre informazioni, vedere la [App Transport Security](~/ios/app-fundamentals/ats.md) documentazione.
-- Poiché nuovi negli Appunti in iOS 10 e macOS Sierra consente all'utente di copia e incolla tra i dispositivi, l'API è stata estesa per consentire gli Appunti essere limitata a un dispositivo specifico e che timestamp da cancellare automaticamente in un determinato punto. Inoltre, pasteboards denominati non sono più persistenti e devono essere sostituiti con i contenitori tavolo di montaggio condivisi.
-- Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è disabilitata per impostazione predefinita. Inoltre, l'API di trasporto sicuro non supporta più SSLv3 ed è consigliabile che lo sviluppatore di interrompere l'uso della crittografia SHA-1 e 3DES appena possibile.
+- L'API CDSA (Common Data Security Architecture) è stata deprecata e deve essere sostituita con l'API SecKey per generare chiavi asimmetriche.
+- La nuova `NSAllowsArbitraryLoadsInWebContent` chiave può essere aggiunta al file **info. plist** dell'app e consentirà di caricare le pagine Web correttamente mentre la protezione di Apple Transport Security (ATS) è ancora abilitata per il resto dell'app. Per ulteriori informazioni, vedere la documentazione [sulla sicurezza del trasporto delle app](~/ios/app-fundamentals/ats.md) .
+- Poiché i nuovi Appunti in iOS 10 e macOS Sierra consentono all'utente di copiare e incollare tra dispositivi, l'API è stata espansa in modo da consentire la limitazione di uno degli Appunti a un dispositivo specifico e il timestamp da cancellare automaticamente in un determinato punto. Inoltre, il nome Pasteboards non è più permanente e deve essere sostituito con i contenitori di montaggio condivisi.
+- Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile arrestare il prima possibile l'utilizzo della crittografia SHA-1 e 3DES.
 
 <a name="Accessing-Private-User-Data" />
 
 ## <a name="accessing-private-user-data"></a>Accesso ai dati utente privati
 
-Le App in esecuzione in iOS 10 (o versione successiva) devono dichiarare in modo statico manifestato l'intenzione di accedere a funzionalità specifiche o informazioni utente immettendo una o più chiavi di Privacy nelle loro **Info. plist** i file in cui viene illustrato all'utente perché l'app desidera ottenere accesso.
+Le app in esecuzione in iOS 10 (o versioni successive) devono dichiarare in modo statico l'intenzione di accedere a funzionalità specifiche o a informazioni utente immettendo una o più chiavi di privacy nei file **info. plist** che spiegano all'utente il motivo per cui l'app desidera ottenere l'accesso.
 
 > [!IMPORTANT]
-> Le app che non riescono a fornire le chiavi necessarie verranno automaticamente terminate dal sistema quando tentano di accedere a una delle funzionalità con restrizioni o informazioni utente, _senza errori_! Se un'app inizia a generare errori in modo imprevisto in iOS 10, assicurarsi che tutti i necessari **Info. plist** sono stati specificati.
+> Le app che non riescono a fornire le chiavi obbligatorie verranno interrotte automaticamente dal sistema quando tenteranno di accedere a una delle funzionalità limitate o alle informazioni dell'utente, _senza errori_. Se un'app viene avviata in modo imprevisto in iOS 10, verificare che siano stati specificati tutti i file **info. plist** richiesti.
 
-La Privacy seguente relative chiavi sono disponibili:
+Sono disponibili le seguenti chiavi correlate alla privacy:
 
-- **Privacy - descrizione utilizzo di Apple Music** (`NSAppleMusicUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui vuole che l'app per accedere alla libreria di supporto dell'utente.
-- **Privacy - descrizione Utilizzo periferica Bluetooth** (`NSBluetoothPeripheralUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app deve accedere a Bluetooth nel dispositivo dell'utente.
-- **Privacy - descrizione utilizzo calendari** (`NSCalendarsUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al calendario dell'utente.
-- **Privacy - descrizione utilizzo fotocamera** (`NSCameraUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere la fotocamera del dispositivo.
-- **Privacy - descrizione utilizzo contatti** (`NSContactsUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere ai contatti dell'utente.
-- **Privacy - descrizione utilizzo dati salute** (`NSHealthShareUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere ai dati di integrità dell'utente. Per altre informazioni, vedere di Apple [riferimento alla classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore).
-- **Privacy - descrizione utilizzo aggiornamento informazioni salute** (`NSHealthUpdateUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera modificare i dati di integrità dell'utente. Per altre informazioni, vedere di Apple [riferimento alla classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore).
-- **Privacy - descrizione utilizzo HomeKit** (`NSHomeKitUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere ai dati di configurazione dell'utente HomeKit.
-- **Privacy - descrizione utilizzo di percorso sempre** (`NSLocationAlwaysUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera abbiano sempre accesso alla posizione dell'utente.
-- [Deprecato] **Privacy - descrizione utilizzo posizione** (`NSLocationUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al percorso utente. *NOTA: Questa chiave è stata deprecata in iOS 8 (e versioni successive). Uso `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` invece.*
-- **Privacy - quando In uso descrizione utilizzo posizione** (`NSLocationWhenInUseUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al percorso dell'utente durante l'esecuzione.
-- [Deprecato] **Privacy - descrizione utilizzo libreria multimediale** -consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al catalogo multimediale dell'utente. *NOTA: Questa chiave è stata deprecata in iOS 8 (e versioni successive). Usare `NSAppleMusicUsageDescription` invece.*
-- **Privacy - descrizione utilizzo microfono** (`NSMicrophoneUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere al microfono di dispositivi.
-- **Privacy - descrizione utilizzo movimento** (`NSMotionUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere a accelerometro del dispositivo.
-- **Privacy - descrizione utilizzo raccolta foto** (`NSPhotoLibraryUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui vuole che l'app per accedere alla libreria di foto dell'utente.
-- **Privacy - descrizione utilizzo promemoria** (`NSRemindersUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere a promemoria dell'utente.
-- **Privacy - descrizione utilizzo Siri** (`NSSiriUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera inviare i dati dell'utente a Siri.
-- **Privacy - descrizione utilizzo di riconoscimento vocale** (`NSSpeechRecognitionUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera inviare i dati utente nei server di riconoscimento vocale di Apple.
-- **Privacy - descrizione utilizzo Provider TV** (`NSVideoSubscriberAccountUsageDescription`)-consente agli sviluppatori di descrivere il motivo per cui l'app desidera accedere l'account dell'utente TV provider.
+- **Privacy-Descrizione utilizzo Apple Music** (`NSAppleMusicUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al catalogo multimediale dell'utente.
+- **Privacy-Descrizione Utilizzo periferica Bluetooth** (`NSBluetoothPeripheralUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere a Bluetooth sul dispositivo dell'utente.
+- **Privacy-Descrizione utilizzo calendari** (`NSCalendarsUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al calendario dell'utente.
+- **Privacy-Descrizione utilizzo fotocamera** (`NSCameraUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere alla fotocamera del dispositivo.
+- **Privacy-Descrizione utilizzo Contatti** (`NSContactsUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere ai contatti dell'utente.
+- **Privacy-Descrizione Utilizzo condivisione integrità** (`NSHealthShareUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere ai dati di integrità dell'utente. Per ulteriori informazioni, vedere la pagina relativa al [riferimento alla classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)di Apple.
+- **Descrizione utilizzo: privacy-aggiornamento integrità** (`NSHealthUpdateUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole modificare i dati di integrità dell'utente. Per ulteriori informazioni, vedere la pagina relativa al [riferimento alla classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)di Apple.
+- **Privacy-Descrizione utilizzo HomeKit** (`NSHomeKitUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere ai dati di configurazione HomeKit dell'utente.
+- **Descrizione utilizzo: privacy-location always** (`NSLocationAlwaysUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole avere sempre accesso alla posizione dell'utente.
+- Deprecato **Descrizione utilizzo: privacy-location** (`NSLocationUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al percorso utente. *SI NOTI Questa chiave è stata deprecata in iOS 8 (e versioni successive). In `NSLocationAlwaysUsageDescription` alternativa `NSLocationWhenInUseUsageDescription` , usare o.*
+- **Descrizione utilizzo: privacy-posizione in uso** (`NSLocationWhenInUseUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere alla posizione dell'utente mentre è in esecuzione.
+- Deprecato **Privacy-Descrizione utilizzo libreria multimediale** : consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al catalogo multimediale dell'utente. *SI NOTI Questa chiave è stata deprecata in iOS 8 (e versioni successive). In `NSAppleMusicUsageDescription` alternativa, usare.*
+- **Privacy-Descrizione utilizzo microfono** (`NSMicrophoneUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al microfono dei dispositivi.
+- **Descrizione utilizzo: privacy-Motion** (`NSMotionUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere all'accelerometro del dispositivo.
+- **Privacy-Descrizione utilizzo raccolta foto** (`NSPhotoLibraryUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere alla raccolta foto dell'utente.
+- **Descrizione utilizzo: privacy-promemoria** (`NSRemindersUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere ai promemoria dell'utente.
+- **Privacy-Descrizione utilizzo Siri** (`NSSiriUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole inviare i dati utente a Siri.
+- **Descrizione utilizzo: privacy-riconoscimento vocale** (`NSSpeechRecognitionUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole inviare i dati utente ai server di riconoscimento vocale Apple.
+- **Descrizione utilizzo: privacy-TV provider** (`NSVideoSubscriberAccountUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere all'account del provider TV dell'utente.
 
-Per altre informazioni sull'uso dei **Info. plist** le chiavi, vedere di Apple [informazioni di riferimento sulle chiavi elenco proprietà](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1).
+Per altre informazioni sull'uso delle chiavi **info. plist** , vedere [le informazioni di riferimento sulla chiave dell'elenco delle proprietà](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1)di Apple.
 
 <a name="Setting-Privacy-Keys" />
 
-## <a name="setting-privacy-keys"></a>Impostazione delle chiavi di Privacy
+## <a name="setting-privacy-keys"></a>Impostazione delle chiavi di privacy
 
-Eseguire l'esempio seguente di accesso a HomeKit in iOS 10 (e versioni successive), lo sviluppatore avrà bisogno di aggiungere il `NSHomeKitUsageDescription` chiave per l'app **Info. plist** file e fornire una dichiarazione di stringa perché l'app desidera accedere a HomeKit dell'utente database. Questa stringa verrà visualizzata il tempo utente la prima che esecuzione dell'app:
+Per l'accesso a HomeKit in iOS 10 (e versioni successive), lo sviluppatore dovrà aggiungere la `NSHomeKitUsageDescription` chiave al file **info. plist** dell'app e fornire una stringa che dichiara il motivo per cui l'app vuole accedere al database HomeKit dell'utente. Questa stringa verrà presentata all'utente la prima volta che esegue l'app:
 
-![Un avviso di esempio NSHomeKitUsageDescription](security-privacy-images/info01.png "un avviso NSHomeKitUsageDescription di esempio")
+![Un avviso di NSHomeKitUsageDescription di esempio](security-privacy-images/info01.png "Un avviso di NSHomeKitUsageDescription di esempio")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Xamarin. IOS per Visual Studio attualmente non supporta la modifica di **Info. plist** chiavi privacy all'interno di iOS predefinito manifest editor. È necessario invece utilizzare l'editor PList generico, quindi, eseguire le operazioni seguenti:
+Novell. iOS per Visual Studio attualmente non supporta la modifica delle chiavi di privacy **info. plist** nell'editor di manifesti iOS predefinito. Sarà invece necessario usare l'editor PList generico, quindi eseguire le operazioni seguenti:
 
-1. Fare clic sui **Info. plist** del file nei **Esplora soluzioni** e selezionare **Apri con...** .
-2. Selezionare il **l'Editor PList generico** dall'elenco dei programmi per aprire il file, quindi fare clic su **OK**.
+1. Fare clic con il pulsante destro del mouse sul file **info. plist** nel **Esplora soluzioni** e scegliere **Apri con...** .
+2. Selezionare l' **Editor PList generico** nell'elenco dei programmi per aprire il file e quindi fare clic su **OK**.
 
-    ![Selezionare l'Editor PList generici](security-privacy-images/InfoEditorSelectionVs.png "selezionare l'Editor PList generico")
-3. Scegliere il **+** pulsante nell'ultima riga nell'editor aggiungere una nuova voce all'elenco. Questo evento viene chiamato "Proprietà personalizzata", con il tipo impostato su `String` e un valore vuoto.
+    ![Selezionare l'editor PList generico](security-privacy-images/InfoEditorSelectionVs.png "Selezionare l'editor PList generico")
+3. Fare clic sul pulsante nell'ultima riga dell'editor per aggiungere una nuova voce all'elenco. **+** Questa operazione verrà denominata "proprietà personalizzata", con il tipo impostato su `String` e un valore vuoto.
 4. Fare clic sul nome della proprietà e verrà visualizzato un elenco a discesa.
-5. Nell'elenco a discesa, selezionare una chiave privata (ad esempio **Privacy - descrizione utilizzo HomeKit**): 
+5. Nell'elenco a discesa selezionare una chiave per la privacy, ad esempio **privacy-HomeKit Usage Description**: 
 
-    ![Selezionare una chiave per la Privacy](security-privacy-images/InfoPListEditorSelectKey.png "selezionare una chiave per la Privacy")
-6. Immettere una descrizione nella colonna valore per il motivo per cui l'app deve accedere alle informazioni utente o funzionalità specificati: 
+    ![Selezionare una chiave per la privacy](security-privacy-images/InfoPListEditorSelectKey.png "Selezionare una chiave per la privacy")
+6. Immettere una descrizione nella colonna valore per il motivo per cui l'app vuole accedere alla funzionalità o alle informazioni utente specificate: 
 
-    ![Immettere una descrizione](security-privacy-images/InfoPListSetValue.png "immettere una descrizione")
+    ![Immettere una descrizione](security-privacy-images/InfoPListSetValue.png "Immettere una descrizione")
 7. Salvare le modifiche apportate al file.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Per impostare una delle chiavi di Privacy, eseguire le operazioni seguenti:
+Per impostare le chiavi sulla privacy, procedere come segue:
 
 1. Fare doppio clic sul file **Info.plist** in **Esplora soluzioni** per aprirlo e modificarlo.
-2. Nella parte inferiore della schermata, passare al **origine** visualizzazione.
-3. Aggiungere un nuovo **voce** all'elenco.
-4. Nell'elenco a discesa, selezionare una chiave privata (ad esempio **Privacy - descrizione utilizzo HomeKit**): 
+2. Nella parte inferiore della schermata passare alla visualizzazione **origine** .
+3. Consente di aggiungere una nuova **voce** all'elenco.
+4. Nell'elenco a discesa selezionare una chiave per la privacy, ad esempio **privacy-HomeKit Usage Description**: 
 
-    ![Selezionare una chiave per la Privacy](security-privacy-images/info02.png "selezionare una chiave per la Privacy")
-5. Immettere una descrizione per il motivo per cui l'app deve accedere alle informazioni utente o funzionalità specificati: 
+    ![Selezionare una chiave per la privacy](security-privacy-images/info02.png "Selezionare una chiave per la privacy")
+5. Immettere una descrizione per il motivo per cui l'app vuole accedere alla funzionalità o alle informazioni utente specificate: 
 
-    ![Immettere una descrizione](security-privacy-images/info03.png "immettere una descrizione")
+    ![Immettere una descrizione](security-privacy-images/info03.png "Immettere una descrizione")
 6. Salvare le modifiche apportate al file.
 
 -----
 
 > [!IMPORTANT]
-> Nell'esempio indicato in precedenza, il tentativo di impostare il `NSHomeKitUsageDescription` chiavi nel **Info. plist** file comporterebbe l'app _invisibile all'utente non riusciti_ (viene chiuso dal sistema in fase di esecuzione) senza errori quando si esegue in iOS 10 ( o versione successiva).
+> Nell'esempio precedente, se non si imposta la `NSHomeKitUsageDescription` chiave nel file **info. plist** , l'app avrà esito negativo in modo invisibile all' _utente_ (chiusa dal sistema in fase di esecuzione) senza errori quando viene eseguita in iOS 10 (o versione successiva).
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la sicurezza e privacy apportate ai che Apple con iOS 10 e gli effetti di un'app xamarin. IOS.
+Questo articolo ha illustrato le modifiche alla sicurezza e alla privacy apportate da Apple in iOS 10 e come incidono sull'app Novell. iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Esempi di iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

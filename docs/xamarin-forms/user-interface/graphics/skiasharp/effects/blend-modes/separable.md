@@ -7,16 +7,16 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 8c86782d5b8b8250049d0ae060ca7bd548c5a4ef
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5bd1e883adc3be89bde7cc0e1529e77165247
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61387360"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655036"
 ---
 # <a name="the-separable-blend-modes"></a>I metodi di fusione separabili
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Come illustrato nell'articolo [ **SkiaSharp Porter-Duff blend modalità**](porter-duff.md), le modalità di blend-Duff Porter in genere eseguono operazioni di ritaglio. I metodi di fusione separabili sono diversi. Le modalità separabili modificano i componenti di colore rosso, verde e blu singoli di un'immagine. I metodi di fusione separabili possono combinare colore per dimostrare che la combinazione di colore rosso, verde e blu è effettivamente bianca:
 
@@ -127,7 +127,7 @@ Gli screenshot da sinistra a destra mostrano sempre più grandi `Slider` i valor
 
 [![Rendere più chiari e più scura](separable-images/LightenAndDarken.png "rendere più chiari e più scura")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-Questo programma illustra il modo consueto in cui vengono usati i metodi di fusione separabili: La destinazione è un'immagine di qualche tipo, molto spesso una bitmap. L'origine è un rettangolo visualizzato utilizzando un `SKPaint` dell'oggetto con relativo `BlendMode` proprietà è impostata su una modalità blend separabili. Il rettangolo può essere un colore a tinta unita (come succede qui) o una sfumatura. La trasparenza _non_ generalmente usati con le modalità di blend separabili.
+Questo programma illustra il modo normale in cui vengono usate le modalità di Blend separabili: La destinazione è un'immagine di un ordinamento, molto spesso una bitmap. L'origine è un rettangolo visualizzato utilizzando un `SKPaint` dell'oggetto con relativo `BlendMode` proprietà è impostata su una modalità blend separabili. Il rettangolo può essere un colore a tinta unita (come succede qui) o una sfumatura. La trasparenza _non_ generalmente usati con le modalità di blend separabili.
 
 Durante l'esperimento con questo programma, si scoprirà che queste modalità due blend non rendere più chiari e quale scurire l'immagine in modo uniforme. Al contrario, il `Slider` sembra impostare una soglia di qualche tipo. Ad esempio, quando si aumenta il `Slider` per il `Lighten` modalità, le aree più scure dell'immagine di accedervi light prima mentre le aree più chiare rimangono invariati.
 
@@ -149,9 +149,9 @@ La tabella seguente illustra tutte le modalità di blend separabili con una brev
 
 | Modalità di blend   | Nessuna modifica | Operazione |
 | ------------ | --------- | --------- |
-| `Plus`       | Nero     | Schiarisce mediante l'aggiunta di colori: Sc + Dc |
-| `Modulate`   | Bianco     | Diventa più scura moltiplicando colori: Sc·Dc | 
-| `Screen`     | Nero     | Si integra con prodotti di integra: SC + Dc &ndash; Sc· Controller di dominio |
+| `Plus`       | Nero     | Schiarisce aggiungendo colori: SC + DC |
+| `Modulate`   | Bianco     | Si scurisce moltiplicando i colori: SC DC | 
+| `Screen`     | Nero     | Complemento al prodotto di complemento: SC + DC &ndash; SC · DC |
 | `Overlay`    | Grigio      | Inverso della `HardLight` |
 | `Darken`     | Bianco     | Minimo dei colori: min (Sc, controller di dominio) |
 | `Lighten`    | Nero     | Numero massimo di colori: max (Sc, controller di dominio) |
@@ -159,9 +159,9 @@ La tabella seguente illustra tutte le modalità di blend separabili con una brev
 | `ColorBurn`  | Bianco     | Diventa più scura basata sull'origine di destinazione | 
 | `HardLight`  | Grigio      | Simile all'effetto di spotlight harsh |
 | `SoftLight`  | Grigio      | Simile all'effetto di software spotlight | 
-| `Difference` | Nero     | Sottrae il colore più scuro dal più chiaro: Abs(Dc &ndash; Sc) | 
+| `Difference` | Nero     | Sottrae il più scuro dal più chiaro: Abs(Dc &ndash; Sc) | 
 | `Exclusion`  | Nero     | Simile a `Difference` ma inferiore a contrasto elevato |
-| `Multiply`   | Bianco     | Diventa più scura moltiplicando colori: Sc·Dc |
+| `Multiply`   | Bianco     | Si scurisce moltiplicando i colori: SC DC |
 
 Algoritmi più dettagliati sono reperibili nel W3C [ **la composizione e fusione 1 livello** ](https://www.w3.org/TR/compositing-1/) specifica e il Skia [ **SkBlendMode riferimento** ](https://skia.org/user/api/SkBlendMode_Reference), anche se la notazione in queste due origini non corrisponde. Tenere presente che `Plus` comunemente viene considerato come una modalità di blend-Duff Porter, e `Modulate` non fa parte della specifica W3C.
 
@@ -428,4 +428,4 @@ Il `Darken` modalità funziona anche per questo stesso effetto.
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

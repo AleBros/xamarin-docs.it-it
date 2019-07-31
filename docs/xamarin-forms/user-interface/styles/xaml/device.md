@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 05e8fb9ef26f2a2a0b812b25853e4f61e658fa46
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 4131844d49d7fdad4c97d07fb699b96db2020ec4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970559"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647289"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Stili di dispositivo in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Xamarin. Forms include sei stili dinamici, noti come gli stili di dispositivo, nella classe Device.Styles._
 
@@ -29,7 +29,7 @@ Il *dispositivo* gli stili sono:
 - [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
 - [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-Tutti i sei stili possono essere applicati solo a [ `Label` ](xref:Xamarin.Forms.Label) istanze. Ad esempio, un `Label` che visualizza il corpo di un paragrafo D97B relativi [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle).
+Tutti i sei stili possono essere applicati solo a [`Label`](xref:Xamarin.Forms.Label) istanze. Ad esempio, un `Label` che visualizza il corpo di un paragrafo D97B relativi [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle).
 
 Esempio di codice seguente viene illustrato come utilizzare il *dispositivo* stili in una pagina XAML:
 
@@ -69,7 +69,7 @@ Gli stili di dispositivo associati all'uso di `DynamicResource` estensione di ma
 
 ![](device-images/device-styles.png "Stili di dispositivo in ogni piattaforma")
 
-*Periferica* stili possono anche essere derivati dalle impostando il [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) proprietà per il nome della chiave per lo stile di dispositivo. Nell'esempio di codice precedente, `myBodyStyle` eredita da [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle) e imposta un colore del testo accentate. Per altre informazioni sull'ereditarietà degli stili dinamici, vedere [ereditarietà degli stili dinamici](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
+*Periferica* stili possono anche essere derivati dalle impostando il [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) proprietà per il nome della chiave per lo stile di dispositivo. Nell'esempio di codice precedente, `myBodyStyle` eredita da [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle) e imposta un colore del testo accentate. Per altre informazioni sull'ereditarietà degli stili dinamici, vedere [ereditarietà degli stili dinamici](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
 Esempio di codice seguente illustra la pagina equivalente nel linguaggio C#:
 
@@ -109,7 +109,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-Il [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà della ognuno [ `Label` ](xref:Xamarin.Forms.Label) istanza è impostata sulla proprietà appropriata dal [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe.
+Il [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà della ognuno [`Label`](xref:Xamarin.Forms.Label) istanza è impostata sulla proprietà appropriata dal [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) classe.
 
 ## <a name="accessibility"></a>Accessibilità
 
@@ -127,8 +127,8 @@ Gli screenshot seguenti illustrano gli stili di dispositivo in ogni piattaforma,
 
 - [Stili del testo](~/xamarin-forms/user-interface/text/styles.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Stili dinamici (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [Utilizzo di stili (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Stili dinamici (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Utilizzo di stili (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device.Styles](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Stile di visualizzazione](xref:Xamarin.Forms.Style)

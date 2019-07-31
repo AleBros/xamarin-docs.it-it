@@ -1,134 +1,134 @@
 ---
-title: Tecniche per interazioni rapide per watchOS 3 in Xamarin
-description: Questo articolo illustra le tecniche per interazioni rapide Apple ha aggiunto in watchOS 3 e come implementarli in xamarin. IOS per Apple Watch.
+title: Tecniche di interazione rapida per watchos 3 in Novell
+description: Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Novell. iOS per Apple Watch.
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 83b8b6b443a794b1001c581f45299dbd22133c80
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61082323"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656425"
 ---
-# <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche per interazioni rapide per watchOS 3 in Xamarin
+# <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
 
-_Questo articolo illustra le tecniche per interazioni rapide Apple ha aggiunto in watchOS 3 e come implementarli in xamarin. IOS per Apple Watch._
+_Questo articolo illustra le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Novell. iOS per Apple Watch._
 
-Fornire interazioni dell'utente rapida sono essenziali per la creazione di applicazioni Apple Watch accattivanti e complessità. Nuovo a watchOS 3, Apple ha aggiunto il supporto per i riconoscitori di movimento, accesso ai Crown digitale e nuove tecniche di navigazione e notifica all'utente. Questa operazione, insieme al supporto aggiunto per SceneKit sia SpriteKit, consentono allo sviluppatore di creare con facilità interfacce avanzate e glanceable veloce e reattivo.
+Fornire interazioni utente rapide è essenziale per la creazione di applicazioni e complicazioni di Apple Watch accattivanti. Una novità di watchos 3, Apple ha aggiunto il supporto per i riconoscitori di movimento, l'accesso alla Digital Crown e le nuove tecniche di notifica e navigazione degli utenti. Questo, insieme al supporto aggiunto sia per SceneKit che per SpriteKit, consente allo sviluppatore di creare con facilità interfacce accattivanti e accattivanti, rapide e reattive.
 
-## <a name="what-are-quick-interactions"></a>Quali sono le interazioni rapide
+## <a name="what-are-quick-interactions"></a>Che cosa sono le interazioni rapide
 
-Per gli sviluppatori che consente di creare applicazioni per iOS o macOS, in cui la quantità di tempo che un utente dedica l'interazione con l'app è espresso in minuti o ore, la progettazione di un'app di successo per l'Apple Watch può risultare difficile e richiede un oggetto diverso approccio.
+Per uno sviluppatore usato per la creazione di applicazioni per iOS o macOS (in cui la quantità di tempo impiegato da un utente per l'interazione con l'app viene misurata in minuti o ore), la progettazione di un'app corretta per la Apple Watch può essere una sfida e richiede un'altra approccio.
 
-In watchOS, l'utente desidera in genere generare il polso, rapidamente interagire con un'app (in genere per un paio di secondi), quindi eliminare il polso e continuare ripristinato lo stato che vengono eseguite.
+In watchos, l'utente in genere vuole alzare di livello il polso, interagire rapidamente con un'app (in genere per un breve paio di secondi), quindi rilasciare il polso e continuare a usare qualsiasi operazione.
 
-Di seguito sono indicati alcuni esempi di interazioni rapide tipiche sul Apple Watch:
+Di seguito sono riportati alcuni esempi di interazioni rapide tipiche sul Apple Watch:
 
-- A partire un timer.
-- Verifica le condizioni meteo.
-- Contrassegnare un elemento all'esterno di un elenco di attività.
+- Avvio di un timer.
+- Verifica del tempo.
+- Contrassegno di un elemento da un elenco todo.
 
-Per raggiungere questi obiettivi, deve essere un'app nel Apple Watch:
+Per raggiungere questi obiettivi, un'applicazione nel Apple Watch deve essere:
 
-- **Glanceable** -vale a dire che con un rapido riepilogo l'utente deve essere in grado di ottenere le informazioni di cui hanno bisogno. 
-- **Utilità pratica** -che significa che gli utenti debba essere in grado di prendere decisioni ben informate e rapide.
-- **Velocità di risposta** -che significa che l'utente deve attendere mai per ricevere le informazioni di cui hanno bisogno oppure per ottenere l'azione hanno l'esigenza di.
+- Con un' **occhiata** , il che significa che, con un rapido riepilogo, l'utente deve essere in grado di ottenere le informazioni necessarie. 
+- **Azionabile** , che significa che gli utenti devono essere in grado di prendere decisioni rapide e informate.
+- **Reattivo** : indica che l'utente non deve mai attendere di ricevere le informazioni necessarie o per ottenere l'azione desiderata.
 
-### <a name="quick-interactions-length"></a>Lunghezza di interazioni rapide
+### <a name="quick-interactions-length"></a>Lunghezza interazioni rapide
 
-A causa della natura glanceable dell'App Apple Watch, suggerite da Apple che la lunghezza ideale di un'interazione rapida deve essere di due secondi o meno. In seguito a questo limite secondo due, lo sviluppatore dovrà dedicano una quantità elevata di tempo sia progettazione e implementazione di un'app per Apple Watch. 
+A causa della natura di Apple Watch app, Apple suggerisce che la lunghezza ideale di un'interazione rapida deve essere di due secondi o meno. Come risultato di questo limite di due secondi, lo sviluppatore dovrà dedicare una notevole quantità di tempo alla progettazione e all'implementazione di un'app Apple Watch. 
 
-## <a name="new-watchos-3-features-and-apis"></a>Nuovo watchOS 3 funzioni e API
+## <a name="new-watchos-3-features-and-apis"></a>Nuove funzionalità e API di watchos 3
 
-Apple ha aggiunto diverse nuove funzionalità e le API a WatchKit per consentono allo sviluppatore di aggiungere le interazioni rapide alle proprie App Apple Watch:
+Apple ha aggiunto diverse nuove funzionalità e API a WatchKit per aiutare gli sviluppatori ad aggiungere interazioni rapide alle app Apple Watch:
 
-- watchOS 3 consente di accedere a nuovi tipi di input, ad esempio utente:
+- watchos 3 consente di accedere ai nuovi tipi di input utente, ad esempio:
     - Riconoscitori di movimento
-    - Rotazione Crown digitale 
-- watchOS 3 offre nuove modalità di visualizzazione e l'aggiornamento delle informazioni, ad esempio:
-    - Navigazione migliorata di tabella
-    - Nuovo supporto per framework notifica utente
-    - Integrazione SpriteKit e SceneKit
+    - Rotazione Digital Crown 
+- watchos 3 offre nuove modalità di visualizzazione e aggiornamento delle informazioni, ad esempio:
+    - Esplorazione avanzata delle tabelle
+    - Nuovo supporto per il Framework notifiche utente
+    - Integrazione di SpriteKit e SceneKit
 
-Implementando queste nuove funzionalità, lo sviluppatore può verificare che l'app watchOS 3 sia Glanceable, realizzabili e reattivo.
+Grazie all'implementazione di queste nuove funzionalità, lo sviluppatore può garantire che l'app watchos 3 sia rapida, interoperabile e reattiva.
 
-### <a name="gesture-recognizer-support"></a>Supporto di riconoscitore di movimento
+### <a name="gesture-recognizer-support"></a>Supporto del riconoscimento di movimento
 
-Se lo sviluppatore ha implementato i riconoscitori di movimento in iOS, è consigliabile notevole familiarità con modalità di funzionamento i riconoscitori di movimento in watchOS 3. Per aggiornare, i riconoscitori di movimento sono oggetti che analizza gli eventi di tocco di basso livello in movimenti predefiniti, riconoscibili.
+Se lo sviluppatore ha implementato i riconoscitori di movimento in iOS, dovrebbe avere una certa familiarità con il funzionamento dei riconoscitori di movimento in watchos 3. Per eseguire l'aggiornamento, i riconoscitori dei movimenti sono oggetti che analizzano eventi di tocco di basso livello in movimenti riconoscibili e predefiniti.
 
-watchOS 3 supporterà i riconoscitori di movimento seguenti quattro:
+watchos 3 supporterà i quattro riconoscitori di movimento seguenti:
 
 - Tipi di movimenti discreti:
-    - Il gesto di scorrimento rapido (`WKSwipeGestureRecognizer`).
-    - Il gesto tocco (`WKTapGestureRecognizer`).
-- Tipi di movimento continua:
-    - Il movimento di zoom (`WKPanGestureRecognizer`).
-    - Il movimento di pressione prolungata (`WKLongPressGestureRecognizer`).
+    - Gesto di scorrimento (`WKSwipeGestureRecognizer`).
+    - Movimento TAP (`WKTapGestureRecognizer`).
+- Tipi di movimento continuo:
+    - Movimento della panoramica (`WKPanGestureRecognizer`).
+    - Gesto con pressione prolungata`WKLongPressGestureRecognizer`().
 
-Per implementare uno dei riconoscitori di movimento nuovo, è sufficiente trascinarlo nell'area di progettazione in iOS Designer in Visual Studio per Mac e configurarne le proprietà.
+Per implementare uno dei nuovi riconoscitori di movimento, è sufficiente trascinarlo su un'area di progettazione in iOS designer in Visual Studio per Mac e configurarne le proprietà.
 
-Nel codice, risposta all'azione del riconoscimento per gestire il movimento viene attivato dall'utente. Anche in questo caso, questa operazione viene eseguita esattamente come verrebbe essere gestita in iOS.
+Nel codice rispondere all'azione del sistema di riconoscimento per gestire il movimento attivato dall'utente. Anche in questo caso, questa operazione viene eseguita nello stesso modo in cui verrebbe gestita in iOS.
 
 #### <a name="discrete-gesture-states"></a>Stati di movimento discreti
 
-Per i movimenti discreti, l'azione viene chiamato quando viene riconosciuto il movimento e uno stato (`WKGestureRecognizerState`) viene assegnato come:
+Per i movimenti discreti, l'azione viene chiamata quando il movimento viene riconosciuto e uno stato`WKGestureRecognizerState`() viene assegnato come:
 
 [![](quick-interaction-techniques-images/quick01.png "Stati di movimento discreti")](quick-interaction-techniques-images/quick01.png#lightbox)
 
-Tutti i movimenti discreti come inizio la `Possible` lo stato e transizione a uno il `Failed` o `Recognized` dello stato. Quando si usano i movimenti discreti, lo sviluppatore in genere non riguarda direttamente lo stato. Al contrario, si basano sull'azione che è chiamato quando il movimento viene riconosciuto solo.
+Tutti i movimenti discreti iniziano nello `Possible` stato e la transizione `Failed` allo stato o `Recognized` . Quando si usano movimenti discreti, lo sviluppatore in genere non si occupa direttamente dello stato. Si basano invece sull'azione chiamata quando il movimento viene riconosciuto solo.
 
-#### <a name="continuous-gesture-states"></a>Stati di movimento continua
+#### <a name="continuous-gesture-states"></a>Stati di movimento continuo
 
-I movimenti continuati sono leggermente diversi da movimenti discreta, in cui l'azione viene chiamata più volte come il movimento è in corso il riconoscimento:
+I movimenti continui sono leggermente diversi dai movimenti discreti, in cui l'azione viene chiamata più volte durante il riconoscimento del movimento:
 
-[![](quick-interaction-techniques-images/quick02.png "Stati di movimento continua")](quick-interaction-techniques-images/quick02.png#lightbox)
+[![](quick-interaction-techniques-images/quick02.png "Stati di movimento continuo")](quick-interaction-techniques-images/quick02.png#lightbox)
 
-Anche in questo caso, i movimenti continua viene avviata nel `Possible` dello stato, ma l'avanzamento il numero degli aggiornamenti. In questo caso lo sviluppatore dovrà prendere in considerazione lo stato del motore di riconoscimento e aggiornare l'interfaccia utente dell'app durante la `Changed` fase fino a quando il movimento è finalmente `Recognized` o `Canceled`.
+Anche in questo caso, i `Possible` movimenti continui iniziano nello stato, ma avanzano su più aggiornamenti. Lo sviluppatore dovrà prendere in considerazione lo stato del sistema di riconoscimento e aggiornare l'interfaccia utente dell'app `Changed` durante la fase fino a quando `Recognized` il `Canceled`movimento non è finale o.
 
-#### <a name="gesture-recognizer-usage-tips"></a>Suggerimenti sull'utilizzo riconoscitore di movimento
+#### <a name="gesture-recognizer-usage-tips"></a>Suggerimenti sull'utilizzo del riconoscitore di movimento
 
-Quando si lavora con i riconoscitori di movimento in watchOS 3, Apple consiglia quanto segue:
+Quando si utilizzano i riconoscitori di movimento in watchos 3, Apple suggerisce quanto segue:
 
-- Aggiungere i riconoscitori di movimento per raggruppare gli elementi invece di singoli controlli. Poiché l'Apple Watch ha dimensioni dello schermo fisico inferiori, raggruppare gli elementi tendono a essere più grande e più facile destinazioni per l'utente prema. Inoltre, i riconoscitori di movimento possano determinare conflitti con incorporato movimenti già nei controlli dell'interfaccia utente nativa.
-- Impostare le relazioni di dipendenza nello Storyboard dell'app per le espressioni di controllo.
-- Alcuni movimenti hanno la precedenza rispetto ad altri tipi di movimento, ad esempio:
+- Aggiungere i riconoscitori di movimento agli elementi del gruppo anziché ai singoli controlli. Poiché il Apple Watch ha dimensioni di schermo fisico inferiori, gli elementi del gruppo tendono a essere più grandi e più semplici destinazioni che l'utente può raggiungere. Inoltre, i riconoscitori dei movimenti possono entrare in conflitto con i movimenti predefiniti già presenti nei controlli dell'interfaccia utente nativi.
+- Impostare le relazioni di dipendenza nello storyboard dell'app Watch.
+- Alcuni movimenti hanno la precedenza su altri tipi di movimento, ad esempio:
     - Scorrimento
-    - Forzare il tocco
+    - Force Touch
  
-### <a name="digital-crown-rotation"></a>Rotazione Crown digitale
+### <a name="digital-crown-rotation"></a>Rotazione Digital Crown
 
-Mediante l'implementazione di supporto digitale Crown nelle proprie App watchOS 3, uno sviluppatore può consentire la navigazione maggiore interazioni tra velocità e precisione per gli utenti.
+Implementando il supporto Digital Crown nelle app watchos 3, uno sviluppatore può garantire una maggiore velocità di navigazione e interazioni di precisione per gli utenti.
 
-Poiché watchOS 2, dell'app Apple Watch è possibile usare la `WKInterfacePicker` oggetto a cui accedere il Crown digitali, fornendo un elenco di `WKPickerItems` e uno stile di selezione (elenco, in pila o sequenza di immagini). quindi, watchOS consentito all'utente di usare il Crown digitali per selezionare un elemento dall'elenco.
+Dal momento che watchos 2, Apple Watch app può usare `WKInterfacePicker` l'oggetto per accedere al Digital Crown fornendo un elenco di `WKPickerItems` e uno stile di selezione (elenco, sequenza di immagini o in pila). watchos ha quindi consentito all'utente di usare la Digital Crown per selezionare un elemento dall'elenco.
 
-Quando si usa un `WKInterfacePicker`, gestisce la maggior parte del lavoro da WatchKit:
+Quando si usa `WKInterfacePicker`un, WatchKit gestisce la maggior parte delle operazioni:
 
-- Nell'elenco e gli elementi dell'interfaccia singole di disegno.
-- Elaborazione degli eventi Crown digitale.
-- La chiamata a un'azione quando viene selezionato un elemento.
+- Disegno dell'elenco e dei singoli elementi dell'interfaccia.
+- Elaborazione degli eventi Digital Crown.
+- Chiamata di un'azione quando viene selezionato un elemento.
 
-Nuovo a watchOS 3, lo sviluppatore ha ora accesso diretto agli eventi di rotazione Crown digitale che consente di creare i propri elementi dell'interfaccia utente che rispondono a valori di rotazione.
+Una novità di watchos 3, lo sviluppatore ora ha accesso diretto agli eventi di rotazione Digital Crown che consentono loro di creare elementi dell'interfaccia utente personalizzati che rispondono ai valori di rotazione.
 
-Viene fornito accesso digitale in Crown dagli elementi seguenti:
+Digital Crown l'accesso viene fornito dagli elementi seguenti:
 
-- `WKCrownSequencer` -Fornisce l'accesso per le rotazioni al secondo.
-- `WKCrownDelegate` -Fornisce l'accesso a eventi delta rotazionali.
+- `WKCrownSequencer`: Fornisce l'accesso alle rotazioni al secondo.
+- `WKCrownDelegate`: Fornisce l'accesso agli eventi Delta rotazionali.
 
 #### <a name="rotations-per-second"></a>Rotazioni al secondo
 
-L'accesso a rotazioni al secondo dal Crown digitale risulta utile quando lavoro con fisica base animazioni. Per accedere le rotazioni al secondo, usare il `CrownSequencer` proprietà del `WKInterfaceController` dell'estensione di espressioni di controllo. Ad esempio:
+L'accesso alle rotazioni al secondo dall'Digital Crown è utile quando si lavora con animazioni basate sulla fisica. Per accedere alle rotazioni al secondo, utilizzare la `CrownSequencer` proprietà dell'oggetto `WKInterfaceController` dell'estensione Watch. Ad esempio:
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 ```
 
-#### <a name="rotational-deltas"></a>Delta di rotazionali
+#### <a name="rotational-deltas"></a>Delta rotazionali
 
-Usare i delta dal Crown digitale rotazionale per contare il numero di rotazioni. Usare la `CrownDidRotate` eseguire l'override del metodo di `WKCrownDelegate` accedere i delta rotazionali. Ad esempio:
+Usare i Delta rotazionali dalla Digital Crown per contare il numero di rotazioni. Usare il `CrownDidRotate` metodo `WKCrownDelegate` di override di per accedere ai Delta rotazionali. Ad esempio:
 
 ```csharp
 using System;
@@ -162,197 +162,197 @@ namespace MonkeyWatch.MonkeySeeExtension
 }
 ```
 
-In questo caso l'app mantiene un accumulatore (`AccumulatedRotations`) per determinare il numero delle rotazioni. È uguale a un delta cumulativo di una rotazione completa del Crown Digital `1.0` e una rotazione metà sarebbe `0.5`.
+Qui l'app gestisce un accumulatore`AccumulatedRotations`() per determinare il numero di rotazioni. Una rotazione completa del Digital Crown è uguale a una Delta accumulata di `1.0` e una metà della rotazione `0.5`sarebbe.
 
-Apple ha lasciato compito dello sviluppatore per determinare la corrispondano tra i conteggi di rotazione al livello di riservatezza delle modifiche per l'elemento dell'interfaccia utente in fase di aggiornamento.
+Apple ha lasciato lo sviluppatore per determinare il modo in cui i conteggi della rotazione corrispondono alla sensibilità delle modifiche nell'elemento dell'interfaccia utente da aggiornare.
 
-Il segno (`+/-`) dal valore differenziale rotazionale indica la direzione che l'utente sta diventando la Crown digitale:
+Il segno (`+/-`) del Delta rotazionale indica la direzione in cui l'utente sta trasformando la Digital Crown:
 
-[![](quick-interaction-techniques-images/quick03.png "Il segno del Delta rotazionale indica la direzione che l'utente sta diventando la Crown digitale")](quick-interaction-techniques-images/quick03.png#lightbox)
+[![](quick-interaction-techniques-images/quick03.png "Il segno del Delta rotazionale indica la direzione in cui l'utente sta trasformando il Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
-Se l'utente viene effettuato uno scorrimento backup, WatchKit restituirà i delta positivi e se scorrendo verso il basso, quindi i delta negativi verranno restituiti, indipendentemente da quali orientamento l'utente è che le espressioni di controllo in.
+Se l'utente sta scorrendo verso l'alto, WatchKit restituirà Delta positivi e, in caso di scorrimento verso il basso, verranno restituiti Delta negativi, a prescindere dall'orientamento che l'utente sta indossando.
 
-#### <a name="digital-crown-focus"></a>Stato attivo Crown digitale
+#### <a name="digital-crown-focus"></a>Digital Crown lo stato attivo
 
-Proprio come qualsiasi altro elemento di interfaccia, il Crown digitale è presente il concetto di interesse. Questo stato attivo può essere spostato dal Crown digitali per altri elementi dell'interfaccia basate sul modo in cui l'utente interagisce con l'orologio. 
+Analogamente a qualsiasi altro elemento dell'interfaccia, il Digital Crown ha il concetto di messa a fuoco. Questo stato attivo può essere spostato dalla Digital Crown ad altri elementi dell'interfaccia in base alla modalità di interazione dell'utente con l'espressione di controllo. 
 
-Uno dei seguenti controlli, ad esempio, potrebbe rubare l'obiettivo del Crown digitale:
+Ad esempio, uno dei controlli seguenti potrebbe sottrarre l'attenzione del Digital Crown:
 
 - Selezione
 - Slider
-- Lo scorrimento Controller
+- Controller di scorrimento
 
-È responsabilità dello sviluppatore determinare quando deve essere l'obiettivo del Crown digitale rispettivo elemento di interfaccia personalizzata. Suggerite da Apple con il nuovo riconoscitori di movimento per ottenere lo stato attivo nell'elemento dell'interfaccia utente personalizzata.
+Spetta allo sviluppatore determinare quando l'elemento dell'interfaccia personalizzata deve essere l'obiettivo del Digital Crown. Apple suggerisce di usare i nuovi riconoscitori dei movimenti per ottenere lo stato attivo nell'elemento personalizzato dell'interfaccia utente.
 
-### <a name="vertical-paging"></a>Spostamento verticale
+### <a name="vertical-paging"></a>Paging verticale
 
-Il metodo standard che un utente si sposta una visualizzazione tabella in un'app watchOS consiste per scorrere la porzione di dati desiderata, toccare su una riga specifica da visualizzare nella visualizzazione dettagliata, toccare il pulsante indietro quando terminato di visualizzare i dettagli e ripetere il processo per qualsiasi altra informazione che la y sono interessati all'interno della tabella:
+Il modo standard in cui un utente accede a una visualizzazione tabella in un'app watchos consiste nello scorrere fino al pezzo di dati desiderato, toccare una riga specifica per visualizzare la visualizzazione dettagliata, toccare il pulsante indietro al termine della visualizzazione dei dettagli e ripetere il processo per tutte le altre informazioni che il y è interessato all'interno della tabella:
 
-[![](quick-interaction-techniques-images/quick04.png "Lo spostamento tra una tabella e la visualizzazione dettagli")](quick-interaction-techniques-images/quick04.png#lightbox)
+[![](quick-interaction-techniques-images/quick04.png "Passaggio tra una tabella e la visualizzazione dettagli")](quick-interaction-techniques-images/quick04.png#lightbox)
 
-Nuovo a watchOS 3, lo sviluppatore può attivare il Paging verticali i controlli di visualizzazione tabella. Con questa funzionalità è abilitata, l'utente può scorrere per trovare una riga della visualizzazione tabella e toccare la riga per visualizzarne i dettagli come prima. Tuttavia, si può ora far scorrere backup per selezionare la riga successiva nella tabella o il basso e selezionare la riga precedente (oppure utilizzare il Crown digitale), tutto senza dover tornare alla visualizzazione tabella prima di tutto:
+Nuovo con watchos 3, lo sviluppatore può abilitare il paging verticale nei controlli di visualizzazione tabella. Se questa funzionalità è abilitata, l'utente può scorrere per trovare una riga di visualizzazione tabella e toccare la riga per visualizzarne i dettagli come prima. Tuttavia, ora è possibile scorrere verso l'alto per selezionare la riga successiva nella tabella o verso il basso per selezionare la riga precedente (oppure utilizzare il Digital Crown), il tutto senza dover tornare prima alla visualizzazione tabella:
 
-[![](quick-interaction-techniques-images/quick05.png "Lo spostamento tra una tabella e la visualizzazione di dettaglio e scorrendo rapidamente su e giù per spostarsi tra le altre righe")](quick-interaction-techniques-images/quick05.png#lightbox)
+[![](quick-interaction-techniques-images/quick05.png "Spostamento tra una tabella e la visualizzazione dettagli e scorrimento verso l'alto e verso il basso per spostarsi tra le altre righe")](quick-interaction-techniques-images/quick05.png#lightbox)
 
-Per abilitare questa modalità, aprire Storyboard dell'app watchOS in Xcode per la modifica, selezionare la visualizzazione di tabella e verificare i **Paging dettaglio verticale** casella di controllo:
+Per abilitare questa modalità, aprire lo storyboard dell'app watchos in Xcode per la modifica, selezionare la visualizzazione tabella e selezionare la casella di controllo **Vertical detail paging** :
 
-[![](quick-interaction-techniques-images/quick06.png "Selezionare la casella di controllo Paging dettaglio verticale")](quick-interaction-techniques-images/quick06.png#lightbox)
+[![](quick-interaction-techniques-images/quick06.png "Casella di controllo per il paging dei dettagli verticali")](quick-interaction-techniques-images/quick06.png#lightbox)
 
-Assicurarsi che la tabella usi segue per visualizzare la visualizzazione dettagliata e salvare le modifiche apportate allo Storyboard e tornare a Visual Studio per Mac per la sincronizzazione.
+Assicurarsi che la tabella utilizzi gli elementi segue per visualizzare la visualizzazione dettagliata e salvare le modifiche apportate allo storyboard e tornare a Visual Studio per Mac per la sincronizzazione.
 
-Lo sviluppatore è possibile coinvolgere a livello di programmazione Paging verticale a una riga specifica usando il codice seguente su una vista di tabella:
+Lo sviluppatore può coinvolgere a livello di codice il paging verticale in una riga specifica utilizzando il codice seguente in una vista tabella:
 
 ```csharp
 // Segue into Vertical Paging and select the first row
 MenuTable.PerformSegue (0);
 ```
 
-Quando si usa il Paging verticale, lo sviluppatore deve essere a conoscenza che WatchKit gestirà automaticamente il precaricamento dei controller e di conseguenza, alcuni metodi del ciclo di vita del controller possono essere chiamati prima che l'interfaccia utente è visibile o meno.
+Quando si usa il paging verticale, lo sviluppatore deve tenere presente che WatchKit gestirà automaticamente il precaricamento dei controller e, di conseguenza, alcuni metodi del ciclo di vita del controller possono essere chiamati prima che l'interfaccia utente sia effettivamente visibile.
 
-### <a name="notification-enhancements"></a>Miglioramenti di notifica
+### <a name="notification-enhancements"></a>Miglioramenti delle notifiche
 
-Notifica sono la forma principale di rapida interazione in cui un utente si verifica in genere in watchOS e sono state disponibile dopo il primo di Apple Watch e watchOS 1.
+La notifica è la forma principale di interazione rapida che un utente ha in genere sperimentato in watchos e che è stata disponibile dal primo Apple Watch e watchos 1.
 
-Un tipico interazioni rapide di notifica è il seguente:
+Di seguito è riportata una tipica interazione rapida di notifica:
 
-1. L'utente ritiene Aptico la notifica quando viene ricevuta una nuova notifica.
-2. La generazione del loro polso per visualizzare l'interfaccia aspetto breve per la notifica.
-3. Se continuano a mantenere il polso generato, watchOS diventa automaticamente l'interfaccia di notifica di ricerca lunghi.
+1. Quando viene ricevuta una nuova notifica, l'utente percepisce l'ansa di notifica.
+2. Si sollevano i polsi per vedere l'interfaccia breve per la notifica.
+3. Se continuano a tenere alzati i polsi, watchos passa automaticamente all'interfaccia di notifica Long look.
 
-Esistono vari modi in cui un utente può rispondere alla notifica:
+È possibile che un utente risponda alla notifica in diversi modi:
 
-- Per un ben definite e visualizzata la notifica, l'utente non eseguono alcuna operazione e chiudere semplicemente la notifica.
-- È anche possibile toccare della notifica per avviare l'app watchOS.
-- Per una notifica che supporta le azioni personalizzate, l'utente può selezionare una delle azioni personalizzate. Possono essere:
-    - **Le azioni in primo piano** -questi avviare l'app per eseguire l'azione.
-    - **Le azioni in background** : sono state sempre indirizzate allo iPhone in watchOS 2 ma possono essere indirizzate a watchApp in watchOS 3.
+- Per una notifica ben definita e presentata, l'utente non eseguirà alcuna operazione e chiuderà semplicemente la notifica.
+- Potrebbero anche toccare la notifica per avviare l'app watchos.
+- Per una notifica che supporta azioni personalizzate, l'utente potrebbe selezionare una delle azioni personalizzate. I possibili valori sono i seguenti:
+    - **Azioni in primo piano** : avviano l'app per eseguire l'azione.
+    - **Azioni in background** : sono sempre state indirizzate all'iPhone in watchos 2 ma possono essere indirizzate a watchApp in watchos 3.
 
-Novità di watchOS 3:
+Novità per watchos 3:
 
-* Notifica Usa un'API simile in tutte le piattaforme (iOS, watchOS, tvOS e macOS).
-* Notifica locale può essere pianificata nel Apple Watch.
-* Notifica in background verrà indirizzata all'estensione dell'app se sono state pianificate nel Apple Watch.
+* La notifica usa un'API simile in tutte le piattaforme (iOS, watchos, tvOS e macOS).
+* La notifica locale può essere pianificata nel Apple Watch.
+* La notifica in background verrà instradata all'estensione dell'app se è stata pianificata nel Apple Watch.
 
-#### <a name="notification-scheduling-and-delivery"></a>Notifica pianificazione e recapito
+#### <a name="notification-scheduling-and-delivery"></a>Pianificazione e recapito delle notifiche
 
-Notifica da iPhone dell'utente, è necessario inoltrare l'Apple Watch quando si verifica quanto segue:
+La notifica dall'iPhone dell'utente sarà successiva alla Apple Watch quando si verifica quanto segue:
 
-* Schermata dell'iPhone è disattivata.
-* L'Apple Watch è indossato ed è stata sbloccata.
+* Lo schermo dell'iPhone è disattivato.
+* Il Apple Watch viene utilizzato ed è stato sbloccato.
 
-In watchOS 3, le notifiche locali possono essere pianificate nel Apple Watch e vengono fornite solo le espressioni di controllo. Spetta allo sviluppatore di pianificare un iPhone corrispondente notifica se richiesto dall'app.
+In watchos 3 le notifiche locali possono essere pianificate nel Apple Watch e vengono recapitate solo nell'orologio. Lo sviluppatore può pianificare una notifica iPhone corrispondente se è richiesta dall'app.
 
-Includendo lo stesso identificatore di notifica sul Apple Watch e iPhone versioni delle notifiche, che impedisce le notifiche duplicate venga visualizzata nuovamente nelle espressioni di controllo. La versione di Apple Watch della notifica avrà la precedenza rispetto alla versione di iPhone.
+Includendo lo stesso identificatore di notifica per le versioni Apple Watch e iPhone delle notifiche, impedisce la visualizzazione delle notifiche duplicate nell'orologio. La versione Apple Watch della notifica avrà la precedenza sulla versione di iPhone.
 
-Poiché watchOS 3 Usa lo stesso `UINotification` framework di API come 10, iOS, vedere di iOS 10 [Framework notifica utente](~/ios/platform/user-notifications/index.md) informazioni più dettagliate.
+Poiché watchos 3 usa lo stesso `UINotification` Framework API di iOS 10, vedere la documentazione del [Framework di notifica utente](~/ios/platform/user-notifications/index.md) iOS 10 per altri dettagli.
 
-### <a name="using-spritekit-and-scenekit"></a>Con SpriteKit e SceneKit
+### <a name="using-spritekit-and-scenekit"></a>Uso di SpriteKit e SceneKit
 
-Nuovo a watchOS 3, lo sviluppatore può ora utilizzare oggetti SpritKit sia SceneKit nella progettazione dell'interfaccia utente dell'app relativi presentare grafica sia 2D e 3D.
+Una novità di watchos 3, lo sviluppatore può ora usare gli oggetti SpritKit e SceneKit nella progettazione dell'interfaccia utente dell'app per presentare grafica 2D e 3D.
 
-Sono state aggiunte due nuove classi di interfaccia per supportare questa funzionalità:
+Per supportare questa funzionalità sono state aggiunte due nuove classi di interfaccia:
 
-- `WKInterfaceSKScene` -Per l'utilizzo di grafica 2D SpriteKit.
-- `WKInterfaceSCNScene` -Per l'utilizzo di grafica 3D di SceneKit.
+- `WKInterfaceSKScene`-Per lavorare con SpriteKit 2D graphics.
+- `WKInterfaceSCNScene`-Per lavorare con SceneKit 3D graphics.
 
-Per usare questi oggetti, è sufficiente trascinarli nell'area di progettazione all'interno Storyboard dell'app per le espressioni di controllo di Interface Builder di Xcode e usare la **Attributes Inspector** per configurarli.
+Per usare questi oggetti, è sufficiente trascinarli nell'area di progettazione all'interno dello storyboard dell'app Watch nel Interface Builder di Xcode e usare il **controllo attributi** per configurarli.
 
-A questo punto, funzionante con SpriteKit o SceneKit scene funziona esattamente come avviene all'interno di un'app per iOS. L'app watch presenterà una `WKInterfaceSKScene` chiamando uno del `Present` metodi. Per SceneKit, è sufficiente impostare il `Scene` proprietà del `WKInterfaceSCNScene` oggetto.
+Da questo punto, l'uso di SpriteKit o SceneKit Scenes funziona nello stesso modo in cui si trova all'interno di un'app iOS. L'app Watch presenta una `WKInterfaceSKScene` chiamando uno `Present` dei metodi. Per SceneKit, è sufficiente impostare `Scene` la proprietà `WKInterfaceSCNScene` dell'oggetto.
 
-## <a name="actionable-complications"></a>Problemi di utilità pratiche
+## <a name="actionable-complications"></a>Complicazioni interoperabili
 
-In watchOS 2, Apple ha introdotto complicazioni per le app di terze parti 3rd. In watchOS 3, Apple ha esteso le funzionalità che uno sviluppatore può includere in una complicazione WatchKit. 
+In watchos 2 Apple ha introdotto alcune complicazioni per le app di terze parti. In watchos 3, Apple ha ampliato le capacità che uno sviluppatore può includere in una complicazione WatchKit. 
 
-Inoltre, più predefinite nelle espressioni di controllo facce possono ora includere complicazioni e i volti delle espressioni di controllo esistente che già supportate complicazioni ora includere anche altre complicazioni.
+Inoltre, la maggior parte delle espressioni di controllo predefinite ora può includere complicazioni e visi di controllo esistenti che possono ora includere ancora più complicazioni.
 
-Anche nuovi è costituito dalla possibilità per un utente di scorrere rapidamente verso sinistra o destra per passare tutti i volti di espressioni di controllo che vengono installate nel loro Apple Watch. Usando la nuova raccolta nell'app iPhone per complementare dell'Apple Watch, l'utente può aggiungere e personalizzare nuove icone di espressioni di controllo e in tutte le complicazioni che possono includere.
+Inoltre, una novità è la possibilità per un utente di scorrere rapidamente verso sinistra o verso destra per passare attraverso tutti i visi che hanno installato sul proprio Apple Watch. Usando la nuova raccolta nell'app iPhone complementare Apple Watch, l'utente può aggiungere e personalizzare i nuovi visi e le eventuali complicazioni che possono includere.
 
-Grazie a queste nuove funzionalità, suggerite da Apple che ogni app in Apple Watch anche deve includere almeno una complicazione e di conseguenza, tutte le app Native di Apple Watch disporrà a complicazioni.
+A causa di queste nuove funzionalità, Apple suggerisce che ogni app in Apple Watch deve includere anche almeno una complicazione e, di conseguenza, tutte le app Apple Watch Native presentano ora delle complicazioni.
 
-Complicazioni forniscono le funzionalità seguenti a un'app:
+Le complicazioni forniscono le funzionalità seguenti a un'app:
 
-- Sono altamente glanceable perché sono sempre presenti nel quadrante dell'orologio.
-- Complicazioni vengono aggiornati di frequente per watchOS. Qualsiasi app che include una complicazione nel quadrante di orologio attualmente visualizzato dell'utente viene aggiornato almeno due volte un'ora.
-- Qualsiasi app con una complicazione nel quadrante di orologio attualmente visualizzato dell'utente viene mantenuta in memoria che consente di avviare rapidamente l'app e migliora la velocità di risposta dall'app.
-- Complicazioni semplificano l'utente può avviare le funzionalità specifiche in un'app watchOS.
+- Sono estremamente esaltabili poiché sono sempre presenti sul quadrante dell'orologio.
+- Le complicazioni vengono spesso aggiornate da watchos. Qualsiasi app che includa una complicazione sul quadrante dell'orologio attualmente visualizzato dell'utente viene aggiornata almeno due volte all'ora.
+- Qualsiasi app con una complicazione sul quadrante dell'orologio attualmente visualizzato viene mantenuta in memoria, rendendo l'app avviata rapidamente e migliorando la velocità delle risposte dall'app.
+- Le complicazioni consentono all'utente di avviare in modo semplice funzionalità specifiche in un'app watchos.
 
-## <a name="glanceable-notification"></a>Notifica glanceable
+## <a name="glanceable-notification"></a>Notifica a colpo d'occhio
 
-Notifica per Apple Watch consentono di eccezionali e personalizzabile rapidamente informare l'utente di nuove informazioni quali i messaggi in ingresso o raggiungere un obiettivo in un'app per gli allenamenti o eventi.
+La notifica su Apple Watch offre un modo eccezionale e personalizzabile per informare rapidamente l'utente di eventi o nuove informazioni, ad esempio messaggi in arrivo o raggiungere un obiettivo in un'app di allenamento.
 
-Usando una notifica, preziose informazioni possono essere rapidamente presentate all'utente. In molte situazioni, una notifica ben progettata può rimuovere la necessità per l'utente avviare effettivamente l'app.
+Utilizzando una notifica, le informazioni importanti possono essere presentate rapidamente all'utente. In molte situazioni, una notifica ben progettata può rimuovere la necessità per l'utente di avviare effettivamente l'app.
 
-Nuovo a watchOS 3, tutte le notifiche ora supportano:
+Novità di watchos 3, tutte le notifiche ora supportano:
 
 - SpriteKit
 - SceneKit
-- inline Video
+- Video inline
 
 ## <a name="enhanced-ui-with-spritekit-and-scenekit"></a>Interfaccia utente avanzata con SpriteKit e SceneKit
 
-In genere, uno sviluppatore potrebbe pensare di gioco dell'interfaccia utente quando vengono citati SpriteKit e SceneKit. Tuttavia, può essere utile per la creazione di interfacce utente che includono i layout personalizzati, contenuti e le animazioni che non sono possibili in WatchKit solo in caso contrario, non di gioco SpriteKit sia SceneKit.
+In genere, uno sviluppatore potrebbe pensare all'interfaccia utente del gioco quando vengono citati SpriteKit e SceneKit. Tuttavia, SpriteKit e SceneKit possono essere utili per la creazione di interfacce utente non di gioco che includono layout personalizzati, contenuto e animazioni che non sono altrimenti possibili in WatchKit.
 
-Ad esempio, una notifica all'utente da un'app di condivisione foto può usare SpriteKit per offrire un'esperienza utente avanzata, includendo l'utente che ha pubblicato il quadro insieme alle altre informazioni personalizzate che arricchisce l'esperienza utente e l'immagine effettiva.
+Ad esempio, una notifica utente da un'app di condivisione foto può usare SpriteKit per offrire un'esperienza utente avanzata includendo l'utente che ha pubblicato l'immagine insieme a un'immagine effettiva e altre informazioni personalizzate che arricchiscono l'esperienza utente.
 
-Inoltre sia SpriteKit SceneKit può essere combinato con gli elementi UI WatchKit standard nella progettazione dell'interfaccia utente dell'app.
+Inoltre, SpriteKit e SceneKit possono essere combinati con gli elementi dell'interfaccia utente di WatchKit standard nella progettazione dell'interfaccia utente dell'app.
 
-## <a name="simple-navigation"></a>Spostamento semplice
+## <a name="simple-navigation"></a>Navigazione semplice
 
-watchOS 3 presenta vari modi che uno sviluppatore può semplificare la navigazione all'interno delle App watchOS, ad esempio la nuova [Paging verticale](#vertical-paging), [supporto riconoscitore di movimento](#gesture-recognizer-support) e [Crown digitale Rotazione](#digital-crown-rotation) funzionalità illustrate in precedenza.
+watchos 3 presenta diversi modi in cui uno sviluppatore può semplificare la navigazione all'interno delle app watchos, ad esempio il nuovo [paging verticale](#vertical-paging), il [supporto del riconoscimento dei movimenti](#gesture-recognizer-support) e le funzionalità di [rotazione Digital Crown](#digital-crown-rotation) presentate sopra.
 
-Il Crown digitale è univoca per l'Apple Watch e può essere usata in diversi modi per semplificare la navigazione. Ad esempio, un'applicazione di timer può utilizzare il Crown digitali per eseguire lo scrubbing attraverso le lunghezze di timer disponibili.
+Il Digital Crown è univoco per l'Apple Watch e può essere usato in molti modi diversi per semplificare la navigazione. Ad esempio, un'applicazione timer può utilizzare il Digital Crown per pulire le lunghezze del timer disponibili.
 
-Movimenti personalizzati possono presentare modi nuovi e univoci per l'utente può interagire con un'app e consente inoltre di semplificare la navigazione delle app.
+I movimenti personalizzati possono presentare modi nuovi e univoci per l'interazione dell'utente con un'app Watch e possono essere usati anche per semplificare la navigazione delle app.
 
-Apple consiglia alla ricerca di modi combinare tutte le nuove funzionalità di interazione rapida aggiunte in watchOS 3 per presentare avanzato, facilmente e rapidamente a usare le interfacce app watchOS.
+Apple suggerisce la ricerca di modi per combinare tutte le nuove funzionalità di interazione rapida aggiunte in watchos 3 per presentare interfacce di app watchos avanzate, semplici e veloci da usare.
 
-## <a name="finishing-the-quick-interaction"></a>Terminare l'interazione rapida
+## <a name="finishing-the-quick-interaction"></a>Completamento dell'interazione rapida
 
-Un'esperienza di interazioni rapide ben progettato fornirà all'utente la fiducia necessaria per eliminare il polso (e disattivare con l'app) quando vengono completati l'interazione corrente.
+Un'esperienza di interazione rapida ben progettata conferisce all'utente la fiducia necessaria per eliminare il polso (e disattivarla con l'app) quando ha terminato l'interazione corrente.
 
-Dove in particolare, questo diventa un problema è quando l'app watch viene esegue qualsiasi tipo di connessione di rete o condivisione delle informazioni con l'app iPhone complementare. Questo spesso può causare un indicatore di attesa mentre la transazione è in corso, che non è opportuno durante un'interazione rapida. Vedere l'esempio seguente:
+Questo problema si verifica in modo specifico quando l'app Watch sta effettuando qualsiasi tipo di connessione di rete o condivide le informazioni con l'app iPhone complementare. Questo può spesso causare un indicatore di attesa mentre è in corso la transazione, che non è auspicabile durante un'interazione rapida. Vedere l'esempio seguente:
 
-[![](quick-interaction-techniques-images/quick07.png "Diagramma dell'app per le espressioni di controllo eseguire una connessione di rete e condivisione delle informazioni con l'app iPhone companion")](quick-interaction-techniques-images/quick07.png#lightbox)
+[![](quick-interaction-techniques-images/quick07.png "Diagramma dell'app Watch che esegue una connessione di rete e condivide le informazioni con la relativa app iPhone complementare")](quick-interaction-techniques-images/quick07.png#lightbox)
 
-1. L'utente sceglie un elemento per l'acquisto nelle espressioni di controllo.
-2. Si tocca il pulsante di acquisto.
-3. L'app viene avviata la transazione di rete e viene visualizzato un indicatore di caricamento.
-4. Successivamente, al completamento della transazione e l'app Visualizza una conferma di acquisto.
-5. L'utente rilascia il polso e consente di scollegare con l'app.
+1. L'utente sceglie un elemento da acquistare nell'orologio.
+2. Toccare il pulsante Acquista.
+3. L'app avvia la transazione di rete e visualizza un indicatore di caricamento.
+4. In un secondo momento, la transazione viene completata e l'app visualizza una conformità per l'acquisto.
+5. L'utente rilascia il polso e si disinnesta con l'app.
 
-Dal momento in cui che l'utente tocca il pulsante di acquisto fino a quando la transazione viene completata, hanno il polso generato esaminando un indicatore di caricamento. Per risolvere questa situazione, suggerite da Apple che lo sviluppatore deve presentare un feedback immediato all'utente anziché mostrare un indicatore di caricamento. 
+Dal momento in cui l'utente tocca il pulsante Acquista finché la transazione non viene completata, i polsi hanno generato un indicatore di caricamento. Per risolvere questa situazione, Apple suggerisce che lo sviluppatore deve presentare un feedback istantaneo all'utente anziché visualizzare un indicatore di caricamento. 
 
-Usa modello consigliato di Apple, dare un'occhiata anche in questo caso l'interazione rapida stesso:
+Con il modello consigliato di Apple, esaminare di nuovo la stessa interazione rapida:
 
-[![](quick-interaction-techniques-images/quick08.png "Diagramma del modello consigliato di mele")](quick-interaction-techniques-images/quick08.png#lightbox)
+[![](quick-interaction-techniques-images/quick08.png "Diagramma del modello suggerito dalle mele")](quick-interaction-techniques-images/quick08.png#lightbox)
 
-1. L'utente sceglie un elemento per l'acquisto nelle espressioni di controllo.
-2. Si tocca il pulsante di acquisto.
-3. L'app viene avviata la transazione di rete e viene visualizzato un messaggio che informa che l'acquisto è stato avviato correttamente.
-4. L'utente rilascia il polso e consente di scollegare con l'app.
-5. Quando la transazione viene completata correttamente alcuni minuti in un secondo momento, l'app Visualizza una notifica locale per informare l'utente di un acquisto ha esito positivo.
+1. L'utente sceglie un elemento da acquistare nell'orologio.
+2. Toccare il pulsante Acquista.
+3. L'app avvia la transazione di rete e visualizza un messaggio che informa che l'acquisto è stato avviato correttamente.
+4. L'utente rilascia il polso e si disinnesta con l'app.
+5. Quando la transazione viene completata correttamente in un secondo momento, l'app visualizza una notifica locale per informare l'utente di un acquisto riuscito.
 
-Questa volta, non appena l'utente tocca il pulsante di acquisto che vengono visualizzati un messaggio che informa che l'acquisto è stato avviato, in modo possono rilasciare loro polso e terminano a questo punto l'interazione rapida in tutta sicurezza. In un secondo momento vengono informati dell'esito positivo o negativo della transazione in una notifica all'utente. In questo modo, l'utente sta interagendo solo con l'app durante le fasi del processo "attive".
+Questa volta, non appena l'utente tocca il pulsante Acquista, viene visualizzato un messaggio che informa che l'acquisto è stato avviato, in modo che possa tranquillamente eliminare il polso e terminare l'interazione rapida a questo punto. Successivamente, vengono informati dell'esito positivo o negativo della transazione in una notifica utente. In questo modo, l'utente interagisce solo con l'app durante le fasi "attive" del processo.
 
-Per le app sono le reti, è possibile usare uno sfondo `NSURLSession` per gestire la comunicazione di rete con un'attività di download. In questo modo l'app può essere riattivato in background per elaborare le informazioni scaricate. Per l'app che richiedono l'elaborazione in background, usare un'asserzione di attività in Background per gestire l'elaborazione necessaria.
+Per le app che eseguono la rete, possono usare uno sfondo `NSURLSession` per gestire la comunicazione di rete con un'attività di download. Ciò consentirà di riattivare l'app in background per elaborare le informazioni scaricate. Per un'app che richiede l'elaborazione in background, usare un'asserzione di attività in background per gestire l'elaborazione richiesta.
 
-## <a name="quick-interaction-design-tips"></a>Suggerimenti sulla progettazione di interazioni rapide
+## <a name="quick-interaction-design-tips"></a>Suggerimenti per la progettazione dell'interazione rapida
 
-Poiché la lunghezza desiderata di un'interazione rapida è di due secondi o meno, lo sviluppatore deve concentrarsi sulla progettazione di interazioni dell'app sin dall'inizio del processo di progettazione. Individuare le aree in cui tali interazioni possono essere semplificati (tramite la tecnica descritta in precedenza) e usano le nuove funzionalità di watchOS 3 per rendere l'app, veloce e reattivo.
+Poiché la lunghezza desiderata di un'interazione rapida è di due secondi o meno, lo sviluppatore deve concentrarsi sulla progettazione delle interazioni dell'app fin dall'inizio del processo di progettazione. Individuare le aree in cui è possibile semplificare le interazioni (usando la tecnica descritta in precedenza) e usare le nuove funzionalità di watchos 3 per rendere l'app rapida e reattiva.
 
-Le seguenti suggerite da Apple:
+Apple suggerisce quanto segue:
 
-- Concentrati sulle interazioni rapide unendo le funzionalità dell'app usate più avanti.
-- Usare complicazioni e le notifiche utente per le funzionalità e funzioni comuni della superficie di attacco.
-- Creare l'interfaccia utente avanzata, glanceable con SceneKit e SpriteKit.
-- Quando possibile, semplificare la navigazione all'interno dell'app.
-- Non apportare mai l'utente di attesa, consentire loro di eliminare il polso e disattivare con l'app appena possibile.
+- Concentrati sulle interazioni rapide con le funzionalità più usate dell'app in futuro.
+- Usare le complicazioni e le notifiche utente per la superficie delle funzionalità e delle funzioni comuni.
+- Crea un'interfaccia utente completa e accattivante con SceneKit e SpriteKit.
+- Laddove possibile, semplificare la navigazione all'interno dell'app.
+- Non fare mai in modo che l'utente attenda, lasciare il polso e disimpegnarsi con l'app il prima possibile.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato le tecniche per interazioni rapide Apple ha aggiunto in watchOS 3 e come implementarli in xamarin. IOS per Apple Watch.
+Questo articolo ha trattato le tecniche di interazione rapida che Apple ha aggiunto in watchos 3 e come implementarle in Novell. iOS per Apple Watch.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di watchOS](https://developer.xamarin.com/samples/watchos/all/)
+- [Esempi di watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)

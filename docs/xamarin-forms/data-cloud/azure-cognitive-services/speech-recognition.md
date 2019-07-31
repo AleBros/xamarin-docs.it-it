@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: f854ac363fe3e5b9dc3df046c9fab592b97bc962
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675252"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655463"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Riconoscimento vocale usando l'API riconoscimento vocale di Microsoft
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _L'API traduzione vocale Microsoft è un'API basata sul cloud che fornisce algoritmi per elaborare il linguaggio parlato. Questo articolo illustra come usare l'API REST di riconoscimento vocale Microsoft per convertire audio in testo in un'applicazione xamarin. Forms._
 
@@ -114,7 +114,7 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-La configurazione principale eseguita dal `GenerateRequestUri` metodo consiste nell'impostare le impostazioni locali del contenuto audio. Per un elenco delle impostazioni locali supportate, vedere [lingue supportate](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
+La configurazione principale eseguita dal `GenerateRequestUri` metodo consiste nell'impostare le impostazioni locali del contenuto audio. Per un elenco delle impostazioni locali supportate, vedere [linguaggi supportati](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
 
 ### <a name="sending-the-request"></a>L'invio della richiesta
 
@@ -171,4 +171,4 @@ Questo articolo ha illustrato come usare l'API REST di riconoscimento vocale di 
 
 - [Documentazione API traduzione vocale Microsoft](/azure/cognitive-services/speech/home/).
 - [Utilizzare un servizio Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Servizi cognitivi TODO (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Servizi cognitivi TODO (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

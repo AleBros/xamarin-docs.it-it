@@ -8,39 +8,39 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 1889579a48364204a977d63bd9bdb875df37a2bf
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977789"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657026"
 ---
 # <a name="layouts-in-xamarinforms"></a>Layout di xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Xamarin. Forms dispone di diversi layout e le funzionalità nell'organizzazione del contenuto sullo schermo.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Video di layout di xamarin. Forms**
+**Video sui layout di Novell. Forms**
 
 Ogni controllo di layout è descritta di seguito, oltre a informazioni dettagliate su come gestire le modifiche apportate orientamento dello schermo:
 
-* **[StackLayout](stack-layout.md)**  -usato per disporre le visualizzazioni in modo lineare, orizzontalmente o verticalmente. Viste in un StackLayout possono essere allineate al centro, a sinistra o destro del layout.
-* **[AbsoluteLayout](absolute-layout.md)**  : consente di organizzare le visualizzazioni impostando le coordinate & sioni in termini di valori assoluti o rapporti. AbsoluteLayout utilizzabile per le visualizzazioni di livello, nonché ancorarli a sinistra, destra o al centro.
-* **[RelativeLayout](relative-layout.md)**  -usato per disporre le visualizzazioni impostando vincoli rispetto al relativo elemento padre le dimensioni e posizione.
-* **[Griglia](grid.md)**  -usato per disporre le viste in una griglia. Le righe e colonne possono essere specificate in termini di valori assoluti o rapporti.
-* **[FlexLayout](flex-layout.md)**  -usato per disporre le visualizzazioni in senso orizzontale o verticale con ritorno a capo.
-* **[ScrollView](scroll-view.md)**  -usato per fornire lo scorrimento quando una vista non può essere contenuta interamente all'interno della schermata.
-* **[LayoutOptions](layout-options.md)**  : definire l'allineamento e la sostituzione per una vista, rispetto al padre.
-* **[Input trasparenza](#input_transparency)**  : Specifica se un elemento riceve l'input.
-* **[Margini e spaziatura interna](margin-and-padding.md)**  : viene illustrato come controllare il comportamento di layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
-* **[Orientamento del dispositivo](device-orientation.md)**  : viene illustrato come gestire le modifiche apportate orientamento di dispositivo.
-* **[Layout nei dispositivi desktop e tablet](tablet.md)**  : illustra come ottimizzare per schermi di dimensioni maggiori in ogni piattaforma.
-* **[Layout associabile](bindable-layouts.md)**  : abilitare le classi di layout generare il contenuto mediante l'associazione a una raccolta di elementi.
-* **[Creazione di un Layout personalizzato](custom.md)**  : viene illustrato come creare una classe di layout personalizzato.
-* **[Compressione del layout](layout-compression.md)**  – rimuove specificato layout dall'albero visuale nel tentativo di migliorare le prestazioni per il rendering della pagina.
+* **[StackLayout](stack-layout.md)** : usato per disporre le visualizzazioni in modo lineare, orizzontalmente o verticalmente. Viste in un StackLayout possono essere allineate al centro, a sinistra o destro del layout.
+* **[AbsoluteLayout](absolute-layout.md)** : consente di disporre le viste impostando le coordinate & dimensioni in termini di valori assoluti o rapporti. AbsoluteLayout utilizzabile per le visualizzazioni di livello, nonché ancorarli a sinistra, destra o al centro.
+* **[Sul relativelayout](relative-layout.md)** : utilizzato per disporre le viste impostando vincoli relativi alle dimensioni del padre & posizione.
+* **[Grid](grid.md)** : usato per disporre le visualizzazioni in una griglia. Le righe e colonne possono essere specificate in termini di valori assoluti o rapporti.
+* **[FlexLayout](flex-layout.md)** : usato per disporre le visualizzazioni orizzontalmente o verticalmente con il wrapping.
+* **[ScrollView](scroll-view.md)** : viene usato per fornire lo scorrimento quando una visualizzazione non può adattarsi interamente ai limiti dello schermo.
+* **[LayoutOptions](layout-options.md)** : definisce l'allineamento e l'espansione per una vista rispetto al relativo elemento padre.
+* **[Trasparenza input](#input_transparency)** : specifica se un elemento riceve input.
+* **[Margin e Padding](margin-and-padding.md)** : illustra come controllare il comportamento del layout quando viene eseguito il rendering di un elemento nell'interfaccia utente.
+* **[Orientamento del dispositivo](device-orientation.md)** : spiega come gestire le modifiche dell'orientamento del dispositivo.
+* **[Layout su tablet e dispositivi desktop](tablet.md)** : Mostra come ottimizzare per schermi più grandi in ogni piattaforma.
+* **[Layout associabili](bindable-layouts.md)** : consente alle classi di layout di generare il contenuto mediante associazione a una raccolta di elementi.
+* **[Creazione di un layout personalizzato](custom.md)** : viene illustrato come creare una classe di layout personalizzata.
+* **[Compressione del layout](layout-compression.md)** : rimuove il layout specificato dalla struttura ad albero visuale nel tentativo di migliorare le prestazioni di rendering della pagina.
 
 I controlli della piattaforma sono anche utilizzabile direttamente nei layout di xamarin. Forms con [ **incorporamento nativa** ](~/xamarin-forms/platform/native-views/index.md) (novità in xamarin. Forms 2.2), ed è possibile [ **creare layout personalizzati** ](custom.md) per soddisfare requisiti specifici.
 
@@ -206,7 +206,7 @@ iOS, Android e Universal Windows Platform tutte supportano le dimensioni dello s
 
 ### <a name="bindable-layoutsbindable-layoutsmd"></a>[Layout associabili](bindable-layouts.md)
 
-Il `BindableLayout` classe consente a qualsiasi classe di layout da cui deriva il [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe per cui generare il contenuto mediante l'associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di ogni elemento con un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
+La `BindableLayout` classe consente a tutte le classi di layout che derivano [`Layout<T>`](xref:Xamarin.Forms.Layout`1) dalla classe di generare il contenuto mediante l'associazione a una raccolta di elementi, con l'opzione per impostare l'aspetto di [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)ogni elemento con un oggetto.
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[Creazione di un layout personalizzato](custom.md)
 
@@ -225,5 +225,5 @@ Non è possibile realizzare la maggior parte delle progettazioni con un solo lay
 
 - [Human Interface Guidelines di Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG)
 - [Sito Web di progettazione di Android](https://developer.android.com/design/index.html)
-- [Layout (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Esempio BusinessTumble (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Esempio BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

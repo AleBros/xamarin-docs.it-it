@@ -7,16 +7,16 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 604067ac853bd53707e059b7db4abf2cfade21ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 69f77ef7959a53fa46210d7e6e68b9666692423b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076920"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653089"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animazione di bitmap di SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Le applicazioni che eseguono l'animazione della grafica di SkiaSharp in genere chiamano `InvalidateSurface` nella `SKCanvasView` a un corrispettivo fisso, spesso ogni 16 millisecondi. Invalida l'area attiva una chiamata al `PaintSurface` gestore per ridisegnare la visualizzazione. Come gli oggetti visivi vengono ridisegnati 60 volte al secondo, sembrano essere animate senza problemi.
 
@@ -34,9 +34,9 @@ Nel secondo esempio viene illustrato come utilizzare SkiaSharp per il rendering 
 
 ## <a name="bitmap-animation"></a>Animazione di bitmap
 
-Il Set di Mandelbrot è visivamente affascinanti ma computionally lunga durata. (Per una descrizione del Set di Mandelbrot e la matematica usata in questo esempio, vedere [capitolo 20 _creazione di App per dispositivi mobili con xamarin. Forms_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) iniziale nella pagina 666. La descrizione seguente si presuppone che informazioni di background.)
+Il Set di Mandelbrot è visivamente affascinanti ma computionally lunga durata. (Per una descrizione del Set di Mandelbrot e la matematica usata in questo esempio, vedere [capitolo 20 _creazione di App per dispositivi mobili con xamarin. Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) iniziale nella pagina 666. La descrizione seguente si presuppone che informazioni di background.)
 
-Il [ **animazione di Mandelbrot** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/) esempio Usa l'animazione di bitmap per simulare uno zoom continuo di un punto fisso nel Set di Mandelbrot. Lo zoom avanti è seguito da uno zoom indietro, e quindi il ciclo viene ripetuto all'infinito o fino al termine del programma.
+Il [**animazione di Mandelbrot**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) esempio Usa l'animazione di bitmap per simulare uno zoom continuo di un punto fisso nel Set di Mandelbrot. Lo zoom avanti è seguito da uno zoom indietro, e quindi il ciclo viene ripetuto all'infinito o fino al termine del programma.
 
 Il programma Prepara per questa animazione mediante la creazione di un massimo di 50 bitmap archiviati nell'archiviazione locale dell'applicazione. Ogni bitmap comprende metà della larghezza e altezza del piano complesso come mappa di bit precedente. (In programma, si dice che tali bitmap per rappresentare integrale _livelli di zoom_.) Le mappe di bit vengono quindi visualizzati nella sequenza. Il ridimensionamento di ogni bitmap viene animato per fornire una progressione smooth da una singola bitmap a altro.
 
@@ -469,7 +469,7 @@ Ecco il programma in esecuzione:
 
 La specifica di formato GIF (Graphics Interchange) include una funzionalità che consente a un singolo file GIF contenga più frame sequenziali di una scena che possono essere visualizzati in successione, spesso in un ciclo. Questi file sono dette _GIF animati_. Web browser possono svolgere animate e SkiaSharp consente a un'applicazione per estrarre i frame da un file GIF animato e li visualizza in sequenza.
 
-Il [SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) esempio include una risorsa di GIF animata denominata **Newtons_cradle_animation_book_2.gif** creati da DemonDeLuxe e scaricata dal [alloggiamento del Newton ](https://en.wikipedia.org/wiki/Newton%27s_cradle) pagina su Wikipedia. Il **GIF animata** pagina include un file XAML che fornisce tali informazioni e crea un'istanza di un `SKCanvasView`:
+Il [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) esempio include una risorsa di GIF animata denominata **Newtons_cradle_animation_book_2.gif** creati da DemonDeLuxe e scaricata dal [alloggiamento del Newton ](https://en.wikipedia.org/wiki/Newton%27s_cradle) pagina su Wikipedia. Il **GIF animata** pagina include un file XAML che fornisce tali informazioni e crea un'istanza di un `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -500,15 +500,15 @@ Il file code-behind non è generalizzato per riprodurre qualsiasi file GIF anima
 
 L'uso di SkisSharp per estrarre i frame di un GIF animato non sembra essere documentato ovunque, in modo che la descrizione del codice che segue è più dettagliata superiore al normale:
 
-La decodifica del file GIF animato si verifica nel costruttore della pagina e richiede che il `Stream` oggetto che fa riferimento la mappa di bit consentono di creare un' `SKManagedStream` oggetto e quindi un' [ `SKCodec` ](xref:SkiaSharp.SKCodec) oggetto. Il [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount) proprietà indica il numero di frame che costituiscono l'animazione.
+La decodifica del file GIF animato si verifica nel costruttore della pagina e richiede che il `Stream` oggetto che fa riferimento la mappa di bit consentono di creare un' `SKManagedStream` oggetto e quindi un' [`SKCodec`](xref:SkiaSharp.SKCodec) oggetto. Il [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) proprietà indica il numero di frame che costituiscono l'animazione.
 
 Questi frame alla fine vengono salvati come le bitmap singoli, in modo che il costruttore Usa `FrameCount` per allocare una matrice di tipo `SKBitmap` usi e due `int` matrici per la durata di ogni fotogramma e (per semplificare la logica dell'animazione) l'accumulato durate.
 
-Il [ `FrameInfo` ](xref:SkiaSharp.SKCodec.FrameInfo) proprietà della `SKCodec` classe è una matrice di [ `SKCodecFrameInfo` ](xref:SkiaSharp.SKCodecFrameInfo) valori, uno per ogni fotogramma, ma l'unico elemento questo programma richiede da tale struttura è la [ `Duration` ](xref:SkiaSharp.SKCodecFrameInfo.Duration) del frame in millisecondi.
+Il [`FrameInfo`](xref:SkiaSharp.SKCodec.FrameInfo) proprietà della `SKCodec` classe è una matrice di [`SKCodecFrameInfo`](xref:SkiaSharp.SKCodecFrameInfo) valori, uno per ogni fotogramma, ma l'unico elemento questo programma richiede da tale struttura è la [`Duration`](xref:SkiaSharp.SKCodecFrameInfo.Duration) del frame in millisecondi.
 
-`SKCodec` definisce una proprietà denominata [ `Info` ](xref:SkiaSharp.SKCodec.Info) typu [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo), ma tale `SKImageInfo` il valore indica (almeno per questa immagine) che il tipo di colore è `SKColorType.Index8`, vale a dire che ogni pixel è un indice in un tipo di colore. Per evitare di interferire con le tabelle di colore, il programma Usa la [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) e [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) informazioni da tale struttura per crearlo è il proprietario a colori `ImageInfo` valore. Ogni `SKBitmap` viene creato da quello.
+`SKCodec` definisce una proprietà denominata [ `Info` ](xref:SkiaSharp.SKCodec.Info) typu [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo), ma tale `SKImageInfo` il valore indica (almeno per questa immagine) che il tipo di colore è `SKColorType.Index8`, vale a dire che ogni pixel è un indice in un tipo di colore. Per evitare di interferire con le tabelle di colore, il programma Usa la [`Width`](xref:SkiaSharp.SKImageInfo.Width) e [`Height`](xref:SkiaSharp.SKImageInfo.Height) informazioni da tale struttura per crearlo è il proprietario a colori `ImageInfo` valore. Ogni `SKBitmap` viene creato da quello.
 
-Il `GetPixels` metodo di `SKBitmap` restituisce un `IntPtr` che fa riferimento il bit di pixel di quella bitmap. Questi bit di pixel non sono ancora state impostate. Che `IntPtr` viene passato a uno dei [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) metodi `SKCodec`. Tale metodo copia i frame dal file GIF nello spazio di memoria a cui fanno riferimento le `IntPtr`. Il [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions) costruttore indica il numero di frame:
+Il `GetPixels` metodo di `SKBitmap` restituisce un `IntPtr` che fa riferimento il bit di pixel di quella bitmap. Questi bit di pixel non sono ancora state impostate. Che `IntPtr` viene passato a uno dei [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) metodi `SKCodec`. Tale metodo copia i frame dal file GIF nello spazio di memoria a cui fanno riferimento le `IntPtr`. Il [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions) costruttore indica il numero di frame:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -660,5 +660,5 @@ Naturalmente, è opportuno eseguire il programma autonomamente per visualizzare 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [Animazione di Mandelbrot (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Animazione di Mandelbrot (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: b00452d348072060ab0e31a64fdb8cd4eb177471
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7a6ea06d77b8eb170f4165bfc8cf2fd643d56406
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926974"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651657"
 ---
 # <a name="passing-arguments-in-xaml"></a>Passaggio di argomenti in XAML
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
 _Questo articolo viene illustrato come utilizzare gli attributi XAML che possono essere usati per passare argomenti per i costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico._
 
@@ -173,5 +173,5 @@ L'articolo descrive gli attributi XAML può essere usato per passare argomenti p
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Spazi dei nomi XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Il passaggio di argomenti del costruttore (esempio)](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
-- [Chiamata di metodi Factory (esempio)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)
+- [Il passaggio di argomenti del costruttore (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [Chiamata di metodi Factory (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)

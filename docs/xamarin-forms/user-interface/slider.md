@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1fa46af1ac1cf6ea49a53e3f8d3c3dca6ba83e13
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e54b36989f5b4694da5d46a89391d56920b8d6a9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511893"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656246"
 ---
 # <a name="xamarinforms-slider"></a>Dispositivo di scorrimento di xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Usare un dispositivo di scorrimento per selezionare da un intervallo di valori continui._
 
@@ -56,11 +56,11 @@ Il `Slider` definisce inoltre diverse proprietà che interessano l'aspetto del c
 
 ## <a name="basic-slider-code-and-markup"></a>Markup e codice di dispositivo di scorrimento di base
 
-Il [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) esempio inizia con tre pagine che sono funzionalmente identici, ma vengono implementate in modi diversi. La prima pagina Usa solo il codice C#, il secondo Usa XAML con un gestore eventi nel codice e il terzo è in grado di evitare il gestore dell'evento usando l'associazione dati nel file XAML.
+Il [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) esempio inizia con tre pagine che sono funzionalmente identici, ma vengono implementate in modi diversi. La prima pagina Usa solo il codice C#, il secondo Usa XAML con un gestore eventi nel codice e il terzo è in grado di evitare il gestore dell'evento usando l'associazione dati nel file XAML.
 
 ### <a name="creating-a-slider-in-code"></a>Creazione di un dispositivo di scorrimento nel codice
 
-Il **dispositivo di scorrimento di base del codice** pagina il [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) illustra Mostra come creare un `Slider` e due `Label` gli oggetti nel codice:
+Il **dispositivo di scorrimento di base del codice** pagina il [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) illustra Mostra come creare un `Slider` e due `Label` gli oggetti nel codice:
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -295,7 +295,7 @@ L'implementazione di Android `Slider` si basa su Android [`SeekBar`](xref:Androi
 
 L'implementazione di UWP del `Slider` si basa su UWP [`Slider`](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) controllo. Il `StepFrequency` proprietà dell'App UWP `Slider` è impostato per la differenza tra le `Maximum` e `Minimum` proprietà diviso per 10, ma non maggiore di 1.
 
-Ad esempio, per l'intervallo predefinito di 0 e 1, il `StepFrequency` è impostata su 0,1. Come le `Slider` manipolato, il `Value` proprietà è limitata a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0.6, 0,7, 0.8, 0.9 e 1.0. (Ciò è evidente nell'ultima pagina di [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) esempio.) Quando la differenza tra il `Maximum` e `Minimum` delle proprietà è 10 o versione successiva, quindi `StepFrequency` è impostato su 1 e il `Value` proprietà presenta valori integrali.
+Ad esempio, per l'intervallo predefinito di 0 e 1, il `StepFrequency` è impostata su 0,1. Come le `Slider` manipolato, il `Value` proprietà è limitata a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0.6, 0,7, 0.8, 0.9 e 1.0. (Ciò è evidente nell'ultima pagina di [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) esempio.) Quando la differenza tra il `Maximum` e `Minimum` delle proprietà è 10 o versione successiva, quindi `StepFrequency` è impostato su 1 e il `Value` proprietà presenta valori integrali.
 
 ### <a name="the-stepslider-solution"></a>La soluzione StepSlider
 
@@ -303,7 +303,7 @@ Più versatili `StepSlider` viene discusso in [capitolo 27. Renderer personalizz
 
 ## <a name="sliders-for-color-selection"></a>Dispositivi di scorrimento per la selezione dei colori
 
-Finale due pagine nel [**SliderDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) esempio entrambi usano tre `Slider` istanze per la selezione del colore. La prima pagina gestisce tutte le interazioni nel file code-behind, mentre la seconda pagina illustra come usare il data binding con un elemento ViewModel.
+Finale due pagine nel [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) esempio entrambi usano tre `Slider` istanze per la selezione del colore. La prima pagina gestisce tutte le interazioni nel file code-behind, mentre la seconda pagina illustra come usare il data binding con un elemento ViewModel.
 
 ### <a name="handling-sliders-in-the-code-behind-file"></a>La gestione di dispositivi di scorrimento nel file code-behind
 
@@ -509,5 +509,5 @@ Il `StringFormat` del componente di `Binding` estensione di markup viene imposta
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di demo di Slider](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+- [Esempio di demo di Slider](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [Dispositivo di scorrimento API](xref:Xamarin.Forms.Slider)

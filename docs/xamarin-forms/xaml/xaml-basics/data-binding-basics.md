@@ -7,22 +7,22 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309524"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655245"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Le associazioni dati consentono di proprietà di due oggetti da collegare in modo che una modifica in una causa una modifica in altro. Questo è uno strumento molto utile e mentre i data binding può essere definito completamente nel codice, XAML fornisce tasti di scelta rapida e convenience. Di conseguenza, una delle estensioni di markup più importanti in xamarin. Forms è associato._
 
 ## <a name="data-bindings"></a>Associazioni dati
 
-Le associazioni dati connettono le proprietà di due oggetti, denominati il *origine* e il *destinazione*. Nel codice, sono necessari due passaggi: Il `BindingContext` proprietà dell'oggetto di destinazione deve essere impostata per l'oggetto di origine e il `SetBinding` metodo (spesso usato in combinazione con il `Binding` classe) deve essere chiamato sull'oggetto di destinazione per associare una proprietà di tale oggetto a una proprietà dell'origine oggetto.
+Le associazioni dati connettono le proprietà di due oggetti, denominati il *origine* e il *destinazione*. Nel codice sono necessari due passaggi: La `BindingContext` proprietà dell'oggetto di destinazione deve essere impostata sull'oggetto di origine e il `SetBinding` metodo (spesso usato in combinazione con la `Binding` classe) deve essere chiamato sull'oggetto di destinazione per associare una proprietà di tale oggetto a una proprietà dell'origine oggetto.
 
 La proprietà di destinazione deve essere una proprietà associabile, il che significa che l'oggetto di destinazione deve derivare da `BindableObject`. La documentazione online di xamarin. Forms indica le proprietà che sono proprietà associabili. Una proprietà del `Label` , ad esempio `Text` associata con la proprietà associabile `TextProperty`.
 
@@ -114,11 +114,11 @@ La soluzione a questo e altri problemi prevede la `Mode` proprietà, che è impo
 - `OneWay` ovvero i valori vengono trasferiti dall'origine alla destinazione
 - `OneWayToSource` ovvero i valori vengono trasferiti dalla destinazione all'origine
 - `TwoWay` ovvero i valori vengono trasferiti in entrambe le direzioni tra origine e destinazione
-- `OneTime` ovvero dati vengono inviati dall'origine alla destinazione, ma solo quando il `BindingContext` modifiche
+- `OneTime`: i dati passano dall'origine alla destinazione, ma solo quando `BindingContext` cambiano
 
 Il programma seguente viene illustrato un caso frequente il `OneWayToSource` e `TwoWay` modalità di associazione. Quattro `Slider` viste sono destinate al controllo il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà di un `Label`. Inizialmente, può sembrare come se questi quattro proprietà del `Label` deve essere destinazioni di associazione dati, perché ognuno viene impostata un `Slider`. Tuttavia, il `BindingContext` di `Label` può essere solo un oggetto e non esistono quattro diversi dispositivi di scorrimento.
 
-Per questo motivo, tutte le associazioni vengono impostate apparentemente con le versioni precedenti modi: Il `BindingContext` della ognuno dei quattro i dispositivi di scorrimento è impostato sul `Label`, e le associazioni vengono impostate per il `Value` le proprietà di scorrimento. Tramite il `OneWayToSource` e `TwoWay` modalità, queste `Value` proprietà possono impostare le proprietà di origine, che sono il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà del `Label`:
+Per questo motivo, tutte le associazioni sono impostate in modi apparentemente indietro: Il `BindingContext` di ognuno dei quattro dispositivi di scorrimento è impostato `Label`su e le associazioni sono impostate sulle `Value` proprietà dei dispositivi di scorrimento. Tramite il `OneWayToSource` e `TwoWay` modalità, queste `Value` proprietà possono impostare le proprietà di origine, che sono il `Scale`, `Rotate`, `RotateX`, e `RotateY` le proprietà del `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -255,7 +255,7 @@ Per definire un modello per gli elementi, è opportuno suddividere il `ItemTempl
 ```
 
 > [!NOTE]
-> L'origine di associazione per le celle e gli elementi figlio di celle, è il `ListView.ItemsSource` raccolta.
+> L'origine del binding per le celle e gli elementi figlio delle celle `ListView.ItemsSource` è la raccolta.
 
 Il `Label` elemento è impostato sul `View` proprietà del `ViewCell`. (Il `ViewCell.View` tag non sono necessarie perché il `View` è la proprietà content di `ViewCell`.) Questo markup consente di visualizzare il `FriendlyName` proprietà della ognuno `NamedColor` oggetto:
 
@@ -410,7 +410,7 @@ Le associazioni dati forniscono un meccanismo potente per il collegamento tra du
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introduzione a XAML (esempio)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintassi XAML essenziale (esempio)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Estensioni di Markup XAML (esempio)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

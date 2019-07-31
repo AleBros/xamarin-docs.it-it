@@ -1,5 +1,5 @@
 ---
-title: Introduzione di servizi cognitivi di Azure e xamarin. Forms
+title: Introduzione a Novell. Forms e servizi cognitivi di Azure
 description: Questo articolo fornisce un'introduzione a un'applicazione di esempio che illustra come richiamare alcune delle API servizi cognitivi Microsoft.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 36aa53a6d257d8f5311cab84485e608bef3e97f8
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 52774b387644b14e3d4612dffa6d3c3b28a37f25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659268"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652318"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Introduzione di servizi cognitivi di Azure e xamarin. Forms
+# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Introduzione a Novell. Forms e servizi cognitivi di Azure
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Servizi cognitivi Microsoft sono un set di API, SDK e servizi disponibili per gli sviluppatori a rendere più intelligenti le applicazioni tramite l'aggiunta di funzionalità, ad esempio il riconoscimento facciale, vocale e language Understanding Intelligent Service. Questo articolo fornisce un'introduzione all'applicazione di esempio che illustra come richiamare alcune delle API servizi cognitivi Microsoft._
 
@@ -50,9 +50,9 @@ Facendo clic sul pulsante smilies sul `TodoListPage` passa al `RateAppPage`, che
 
 Il `RateAppPage` consente all'utente di scattare una foto della loro visi, che viene inviata all'API viso con le emozioni restituito viene visualizzato.
 
-## <a name="understand-the-application-anatomy"></a>Analizzare le parti dell'applicazione
+## <a name="understand-the-application-anatomy"></a>Comprendere l'anatomia dell'applicazione
 
-Il progetto codice condiviso per l'applicazione di esempio è costituito da cinque cartelle principali:
+Il progetto di codice condiviso per l'applicazione di esempio è costituito da cinque cartelle principali:
 
 |Cartella|Scopo|
 |--- |--- |
@@ -62,7 +62,7 @@ Il progetto codice condiviso per l'applicazione di esempio è costituito da cinq
 |Utils|Contiene il `Timer` (classe), che viene usato dal `AuthenticationService` classe per rinnovare un token di accesso JWT ogni 9 minuti.|
 |Visualizzazioni|Contiene le pagine dell'applicazione.|
 
-Il progetto codice condiviso contiene anche alcuni file importanti:
+Il progetto di codice condiviso contiene anche alcuni file importanti:
 
 |File|Scopo|
 |--- |--- |
@@ -96,7 +96,7 @@ public class TodoItem
 
 Il `ID` proprietà viene utilizzata per identificare in modo univoco ogni `TodoItem` di istanza ed è decorato con attributi di SQLite che rendono la proprietà di una chiave primaria con incremento automatico nel database.
 
-### <a name="invoke-database-operations"></a>Richiamare operazioni del database
+### <a name="invoke-database-operations"></a>Richiama operazioni del database
 
 Il `TodoItemRepository` classe implementa le operazioni di database e un'istanza della classe sono accessibili tramite il `App.TodoManager` proprietà. Il `TodoItemRepository` classe fornisce i metodi seguenti per richiamare le operazioni di database:
 
@@ -105,15 +105,15 @@ Il `TodoItemRepository` classe implementa le operazioni di database e un'istanza
 - **SaveItemAsync** : crea o aggiorna un elemento nel database SQLite locale.
 - **DeleteItemAsync** – Elimina l'elemento specificato dal database SQLite locale.
 
-### <a name="platform-project-implementations"></a>Implementazioni di progetto della piattaforma
+### <a name="platform-project-implementations"></a>Implementazioni del progetto di piattaforma
 
-Il `Services` cartella nel progetto codice condiviso contiene il `IFileHelper` e `IAudioRecorderService` interfacce utilizzate per il `DependencyService` classe per individuare le classi che implementano le interfacce nei progetti di piattaforma.
+La `Services` cartella nel progetto di codice condiviso contiene le `IFileHelper` interfacce `IAudioRecorderService` e usate dalla `DependencyService` classe per individuare le classi che implementano le interfacce nei progetti di piattaforma.
 
 Il `IFileHelper` viene implementata mediante il `FileHelper` classe in ogni progetto della piattaforma. Questa classe è costituito da un singolo metodo, `GetLocalFilePath`, che restituisce un percorso file locale per memorizzare database SQLite.
 
 Il `IAudioRecorderService` viene implementata mediante il `AudioRecorderService` classe in ogni progetto della piattaforma. Questa classe è costituita `StartRecording`, `StopRecording`e il supporto di metodi che usano le API della piattaforma di registrare l'audio dal microfono del dispositivo e archiviano come un file wav. In iOS, il `AudioRecorderService` utilizza il `AVFoundation` API per registrare l'audio. In Android, il `AudioRecordService` utilizza il `AudioRecord` API per registrare l'audio. In Universal Windows Platform (UWP), il `AudioRecorderService` utilizza il `AudioGraph` API per registrare l'audio.
 
-### <a name="invoke-cognitive-services"></a>Richiamare i servizi cognitivi
+### <a name="invoke-cognitive-services"></a>Richiama Servizi cognitivi
 
 L'applicazione di esempio richiama i servizi cognitivi Microsoft seguenti:
 
@@ -125,4 +125,4 @@ L'applicazione di esempio richiama i servizi cognitivi Microsoft seguenti:
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Documentazione dei servizi cognitivi Microsoft](https://www.microsoft.com/cognitive-services/documentation)
-- [Servizi cognitivi TODO (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Servizi cognitivi TODO (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

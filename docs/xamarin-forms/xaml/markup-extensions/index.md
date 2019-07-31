@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b135f916225f896680cfb73175ba0568928be06
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075481"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655753"
 ---
 # <a name="xaml-markup-extensions"></a>Estensioni di Markup XAML
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Le estensioni di markup XAML consentono ad ampliare la potenza e flessibilità di XAML, consentendo di attributi dell'elemento da impostare da origini diverse dalle stringhe di testo letterale.
 
@@ -36,7 +36,7 @@ In entrambi i casi, la stringa di testo impostato sul `Color` attributo viene co
 
 È preferibile invece impostare il `Color` attributo da un valore archiviato in un dizionario risorse, o dal valore di una proprietà statica di una classe che è stata creata oppure da una proprietà di tipo `Color` di un altro elemento nella pagina o costruiti da separare i valori di tonalità, saturazione e luminosità.
 
-Tutte queste opzioni sono possibili utilizzando le estensioni di markup XAML. Ma non lasciare la frase "estensioni di markup" spaventare: Estensioni di markup XAML sono *non* XML estensioni. Anche con le estensioni di markup XAML, XAML è sempre XML validi.
+Tutte queste opzioni sono possibili utilizzando le estensioni di markup XAML. Ma non lasciare la frase "estensioni di markup": Le estensioni di markup XAML *non* sono estensioni per XML. Anche con le estensioni di markup XAML, XAML è sempre XML validi.
 
 Un'estensione di markup è semplicemente un modo per esprimere un attributo di un elemento diverso. Le estensioni di markup XAML sono in genere identificabili da un'impostazione dell'attributo che è racchiuso tra parentesi graffe:
 
@@ -60,7 +60,7 @@ Scrittura delle estensioni di markup XAML personalizzate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Estensioni di markup (esempio)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Estensioni di markup (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capitolo di estensioni di markup XAML dal libro di xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dizionari di risorse](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Stili dinamici](~/xamarin-forms/user-interface/styles/dynamic.md)

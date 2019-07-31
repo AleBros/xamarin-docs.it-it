@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 34339b9ca3a15c7f7f24edee5401c542fd09ba74
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 79f3f88dba37899bcb9467fcd6d1bd7e9dc5eb10
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370796"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657156"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) include layout e consente loro di scorrimento fuori schermo. `ScrollView` viene inoltre utilizzato per consentire le visualizzazioni spostare automaticamente per la parte visibile dello schermo quando viene visualizzata la tastiera.
 
@@ -119,5 +119,5 @@ Si noti che potrebbero essere un valore negativo, a causa l'effetto di rimbalzo 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Layout (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Esempio BusinessTumble (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Esempio BusinessTumble (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

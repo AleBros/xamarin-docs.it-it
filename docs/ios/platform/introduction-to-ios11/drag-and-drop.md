@@ -1,67 +1,67 @@
 ---
-title: Trascinare e rilasciare in xamarin. IOS
-description: Questo documento descrive come implementare il trascinamento della selezione nelle App xamarin. IOS usando le API introdotte in iOS 11. In particolare, vengono illustrati abilitazione di trascinamento della selezione in UITableView.
+title: Trascinamento della selezione in Novell. iOS
+description: Questo documento descrive come implementare il trascinamento della selezione nelle app Novell. iOS usando le API introdotte in iOS 11. In particolare, viene illustrato come abilitare il trascinamento della selezione in UITableView.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/05/2017
-ms.openlocfilehash: aa93e015a399e733a2bb52f087a1e482bc23a00a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb982b1cd2340262101ff09bce2c37c69864b8dc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169668"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656474"
 ---
-# <a name="drag-and-drop-in-xamarinios"></a>Trascinare e rilasciare in xamarin. IOS
+# <a name="drag-and-drop-in-xamarinios"></a>Trascinamento della selezione in Novell. iOS
 
-_Implementazione di trascinamento della selezione per iOS 11_
+_Implementazione del trascinamento della selezione per iOS 11_
 
-iOS 11 include trascinare e rilasciare il supporto per copiare dati tra le applicazioni in un iPad. Gli utenti possono selezionare e trascinare tutti i tipi di contenuto da app posizionata side-by-side, o mediante il trascinamento sull'icona di un'app che verrà attivata l'app per aprire e consentire i dati che si desidera eliminare:
+iOS 11 include il supporto per il trascinamento della selezione per copiare i dati tra le applicazioni nell'iPad. Gli utenti possono selezionare e trascinare tutti i tipi di contenuto dalle app posizionate side-by-side oppure trascinando l'icona di un'app che attiverà l'apertura dell'app e consentirà l'eliminazione dei dati:
 
-![Esempio di trascinamento della selezione da app personalizzata in app di Lotus Notes](drag-and-drop-images/drag-drop-sml.png)
+![Esempio di trascinamento della selezione dall'app personalizzata all'app note](drag-and-drop-images/drag-drop-sml.png)
 
 > [!NOTE]
-> Trascinamento della selezione è disponibile solo all'interno dell'app stessa su iPhone.
+> Il trascinamento della selezione è disponibile solo all'interno della stessa app in iPhone.
 
-Prendere in considerazione che supporta trascinamento e rilascio operazioni in un punto qualsiasi del contenuto possono essere create o modificate:
+Provare a supportare le operazioni di trascinamento della selezione ovunque sia possibile creare o modificare il contenuto:
 
-- I controlli di testo supportano trascinamento e rilascio per tutte le app basate su iOS 11, senza operazioni aggiuntive.
-- Le visualizzazioni di tabelle e viste di raccolta includono miglioramenti in iOS 11 che semplificano l'aggiunta di trascinare e rilasciare il comportamento.
-- Qualsiasi altra visualizzazione può essere reso supporta trascinamento e rilascio con un'ulteriore personalizzazione.
+- I controlli di testo supportano il trascinamento della selezione per tutte le app compilate con iOS 11, senza alcuna attività aggiuntiva.
+- Le visualizzazioni delle tabelle e delle raccolte includono miglioramenti in iOS 11 che semplificano l'aggiunta del comportamento di trascinamento della selezione.
+- Qualsiasi altra visualizzazione può essere eseguita per supportare il trascinamento della selezione con personalizzazione aggiuntiva.
 
-Quando l'aggiunta di trascinamento e rilascio supporta alle tue App, è possibile fornire livelli diversi di fedeltà del contenuto; ad esempio, è possibile fornire il testo formattato sia una versione in testo normale dei dati in modo che l'app ricevente può scegliere che si integra meglio la destinazione del trascinamento. È anche possibile personalizzare la visualizzazione di trascinamento e anche per abilitare il trascinamento di più elementi in una sola volta.
+Quando si aggiunge il supporto per il trascinamento della selezione alle app, è possibile fornire diversi livelli di fedeltà del contenuto; ad esempio, è possibile specificare una versione di testo formattata e testo normale dei dati, in modo che l'app ricevente possa scegliere la soluzione più adatta alla destinazione di trascinamento. È anche possibile personalizzare la visualizzazione del trascinamento e anche per abilitare il trascinamento di più elementi contemporaneamente.
 
-## <a name="drag-and-drop-with-text-controls"></a>Trascinare e rilasciare i controlli di testo
+## <a name="drag-and-drop-with-text-controls"></a>Trascinamento della selezione con controlli testo
 
-`UITextView` e `UITextField` supportano automaticamente il testo selezionato out, trascinamento della selezione di contenuto in.
+`UITextView`e `UITextField` supportano automaticamente il trascinamento del testo selezionato e l'eliminazione del contenuto di testo in.
 
 <a name="uitableview" />
 
 ## <a name="drag-and-drop-with-uitableview"></a>Trascinamento della selezione con UITableView
 
-`UITableView` supporta la gestione incorporata per trascinare e rilasciare le interazioni con righe della tabella, che richiede solo pochi metodi per abilitare il comportamento predefinito.
+`UITableView`dispone di una gestione incorporata per le interazioni con trascinamento della selezione con righe di tabella, che richiede solo alcuni metodi per abilitare il comportamento predefinito.
 
-Sono disponibili due interfacce:
+Sono necessarie due interfacce:
 
-- `IUITableViewDragDelegate` : Le informazioni di pacchetti quando viene avviato un trascinamento nella visualizzazione della tabella.
-- `IUITableViewDropDelegate` – Elabora le informazioni quando un rilascio è in corso tentativi e completato.
+- `IUITableViewDragDelegate`: Informazioni sui pacchetti quando viene avviato un trascinamento nella visualizzazione tabella.
+- `IUITableViewDropDelegate`: Elabora le informazioni quando viene eseguito un tentativo e il completamento di un rilascio.
 
-Nel [esempio DragAndDropTableView](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/) queste due interfacce vengono entrambi implementate nel `UITableViewController` (classe), con il delegato e l'origine dati. Sono state assegnate nel `ViewDidLoad` metodo:
+Nell' [esempio DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) queste due interfacce sono entrambe implementate nella `UITableViewController` classe, insieme al delegato e all'origine dati. Sono assegnati nel `ViewDidLoad` metodo:
 
 ```csharp
 this.TableView.DragDelegate = this;
 this.TableView.DropDelegate = this;
 ```
 
-La quantità minima di codice necessaria per queste due interfacce è illustrata di seguito.
+Il codice minimo necessario per queste due interfacce è illustrato di seguito.
 
-### <a name="table-view-drag-delegate"></a>Delegato di trascinamento di visualizzazione tabella
+### <a name="table-view-drag-delegate"></a>Delega di trascinamento vista tabella
 
-L'unico metodo _obbligatorio_ per supportare il trascinamento di una riga da una visualizzazione tabella è `GetItemsForBeginningDragSession`. Se l'utente inizia a trascinare una riga, questo metodo verrà chiamato.
+L'unico metodo _necessario_ per supportare il trascinamento di una riga da una `GetItemsForBeginningDragSession`vista tabella è. Se l'utente inizia a trascinare una riga, questo metodo verrà chiamato.
 
-Seguito è riportata un'implementazione. Recupera i dati associati con la riga trascinata, viene eseguita la codifica e configura un `NSItemProvider` che determina il modo in cui le applicazioni gestirà la parte "drop" dell'operazione (ad esempio, se può gestire il tipo di dati `PlainText`, nell'esempio):
+Di seguito è riportata un'implementazione di. Recupera i dati associati alla riga trascinata, li codifica e configura un oggetto `NSItemProvider` che determina il modo in cui le applicazioni gestiranno la parte "drop" dell'operazione (ad esempio, se possono gestire il tipo di dati, `PlainText`nell'esempio):
 
 ```csharp
 public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
@@ -85,19 +85,19 @@ public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
 }
 ```
 
-Esistono molti metodi facoltativi sul delegato trascinamento che può essere implementato per personalizzare il comportamento di trascinamento, ad esempio il più rappresentazioni di dati che possono avvantaggiarsi nelle app di destinazione (ad esempio testo formattato come anche come testo normale o un vettore e mappa di bit le versioni di un disegno). È anche possibile fornire le rappresentazioni di dati personalizzate da usare durante il trascinamento della selezione all'interno dell'app stessa.
+Sono disponibili molti metodi facoltativi sul delegato di trascinamento che possono essere implementati per personalizzare il comportamento di trascinamento, ad esempio fornire più rappresentazioni di dati che possono essere sfruttate nelle app di destinazione (ad esempio testo formattato, testo normale o vettore e versioni bitmap di un disegno). È anche possibile fornire rappresentazioni di dati personalizzate da usare durante il trascinamento e l'eliminazione all'interno della stessa app.
 
-### <a name="table-view-drop-delegate"></a>Delegato di rilascio di visualizzazione tabella
+### <a name="table-view-drop-delegate"></a>Delega visualizzazione tabella
 
-I metodi sul delegato rilascio vengono chiamati quando un'operazione di trascinamento viene eseguita tramite una visualizzazione tabella, o completato sopra di esso. I metodi richiesti determinano se i dati sono consentiti da eliminare e le azioni da eseguire se il trascinamento è stato completato:
+I metodi sul delegato Drop vengono chiamati quando si verifica un'operazione di trascinamento in una vista tabella o viene completata al di sopra di esso. I metodi obbligatori determinano se i dati possono essere eliminati e quali azioni vengono eseguite se il rilascio è completato:
 
-- `CanHandleDropSession` : Durante un trascinamento è in corso, e potenzialmente da eliminare nell'applicazione, questo metodo determina se i dati trascinati può essere eliminato.
-- `DropSessionDidUpdate` – Mentre l'operazione di trascinamento è in corso, questo metodo viene chiamato per determinare quale azione è destinato. Informazioni di visualizzazione della tabella che viene trascinato sul, la sessione di trascinamento e il percorso di indice possibili tutte utilizzabili per determinare il comportamento e fornito all'utente indicazioni visive.
-- `PerformDrop` : Quando l'utente completa il trascinamento (sollevare il dito), questo metodo consente di estrarre i dati trascinati e modifica la visualizzazione di tabella per aggiungere i dati in una nuova riga (o righe).
+- `CanHandleDropSession`-Mentre è in corso un trascinamento e potenzialmente rilasciato sull'applicazione, questo metodo determina se i dati trascinati possono essere eliminati.
+- `DropSessionDidUpdate`-Mentre è in corso il trascinamento, questo metodo viene chiamato per determinare l'azione desiderata. Le informazioni della vista tabella trascinate, la sessione di trascinamento e il percorso di indice possibile possono essere utilizzate per determinare il comportamento e il feedback visivo forniti all'utente.
+- `PerformDrop`: Quando l'utente completa il rilascio (sollevando il dito), questo metodo estrae i dati trascinati e modifica la visualizzazione della tabella per aggiungere i dati in una nuova riga o righe.
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession` indica se la visualizzazione di tabella può accettare dati trascinati. In questo frammento di codice `CanLoadObjects` viene usato per confermare che la visualizzazione di tabella può accettare dati di tipo stringa.
+`CanHandleDropSession`indica se la visualizzazione tabella può accettare i dati trascinati. In questo frammento `CanLoadObjects` di codice viene usato per confermare che questa visualizzazione tabella può accettare dati di stringa.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -108,10 +108,10 @@ public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
 
 #### <a name="dropsessiondidupdate"></a>DropSessionDidUpdate
 
-Il `DropSessionDidUpdate` metodo viene chiamato ripetutamente mentre l'operazione di trascinamento è in corso, per fornire indicazioni visive per l'utente.
+Il `DropSessionDidUpdate` metodo viene chiamato ripetutamente mentre è in corso l'operazione di trascinamento per fornire segnali visivi all'utente.
 
-Nel codice seguente, `HasActiveDrag` viene usato per determinare se l'operazione ha avuto origine nella visualizzazione della tabella corrente. In questo caso, sono consentite solo singole righe da spostare.
-Se l'operazione di trascinamento proviene da un'altra origine, verrà indicata un'operazione di copia:
+Nel codice riportato di seguito `HasActiveDrag` , viene utilizzato per determinare se l'operazione ha avuto origine nella visualizzazione tabella corrente. In tal caso, è consentito spostare solo righe singole.
+Se il trascinamento è da un'altra origine, verrà indicata un'operazione di copia:
 
 ```csharp
 public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDropSession session, NSIndexPath destinationIndexPath)
@@ -131,13 +131,13 @@ public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDr
 }
 ```
 
-L'operazione di trascinamento può essere uno dei `Cancel`, `Move`, o `Copy`.
+L'operazione DROP può essere una tra `Cancel`, `Move`o `Copy`.
 
-L'obiettivo di rilascio è possibile inserire una nuova riga o aggiungere/aggiunta dati in una riga esistente.
+L'obiettivo di rilascio può essere l'inserimento di una nuova riga o l'aggiunta o l'aggiunta di dati a una riga esistente.
 
 #### <a name="performdrop"></a>PerformDrop
 
-Il `PerformDrop` metodo viene chiamato quando l'utente completa l'operazione e modifica l'origine dati e visualizzazione della tabella in modo da riflettere i dati rilasciati.
+Il `PerformDrop` metodo viene chiamato quando l'utente completa l'operazione e modifica la visualizzazione della tabella e l'origine dati in modo da riflettere i dati eliminati.
 
 ```csharp
 public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coordinator)
@@ -176,20 +176,20 @@ public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coord
 }
 ```
 
-Aggiungere il codice aggiuntivo per caricare in modo asincrono gli oggetti di grandi quantità di dati.
+È possibile aggiungere codice aggiuntivo per caricare in modo asincrono oggetti dati di grandi dimensioni.
 
-### <a name="testing-drag-and-drop"></a>Selezione e trascinamento test
+### <a name="testing-drag-and-drop"></a>Test del trascinamento della selezione
 
-È necessario usare un iPad per testare la [esempio](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/).
-Aprire l'esempio insieme a un'altra app (ad esempio, le note) e trascinare il testo e righe tra di essi:
+Per testare l' [esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview), è necessario usare un iPad.
+Aprire l'esempio insieme a un'altra app, ad esempio note, e trascinare le righe e il testo tra di essi:
 
-![screenshot di operazione di trascinamento in corso](drag-and-drop-images/01-sml.png)
+![screenshot dell'operazione di trascinamento in corso](drag-and-drop-images/01-sml.png)
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Trascinare e rilasciare Human Interface Guidelines (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
-- [Trascinamento della selezione di esempio di visualizzazione tabella](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView/)
-- [Trascinare e rilasciare il campione di visualizzazione raccolta](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCollectionView)
-- [Introduzione a Drag and Drop (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/203/)
-- [Trascinamento della selezione con raccolta e visualizzazione di tabella (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/223/)
+- [Trascinare e rilasciare le linee guida per l'interfaccia umana (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
+- [Esempio di visualizzazione della tabella di trascinamento della selezione](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [Esempio di trascinamento della selezione della vista raccolta](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [Introduzione a trascinamento della selezione (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/203/)
+- [Trascinamento della selezione con la raccolta e la visualizzazione tabella (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/223/)

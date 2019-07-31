@@ -1,58 +1,58 @@
 ---
-title: Elenchi di origine in xamarin. Mac
-description: Questo articolo descrive come usare gli elenchi di origine in un'applicazione xamarin. Mac. Descrive la creazione e la gestione di elenchi di origine in Xcode e Interface Builder e sull'interazione con essi nel codice c#.
+title: Elenchi di origine in Novell. Mac
+description: Questo articolo illustra l'uso degli elenchi di origine in un'applicazione Novell. Mac. Viene descritto come creare e gestire gli elenchi di origine in Xcode e Interface Builder e interagire con C# essi nel codice.
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 33ef45fa08748e70ef376e43cb5ed9b12ba55198
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290586"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655266"
 ---
-# <a name="source-lists-in-xamarinmac"></a>Elenchi di origine in xamarin. Mac
+# <a name="source-lists-in-xamarinmac"></a>Elenchi di origine in Novell. Mac
 
-_Questo articolo descrive come usare gli elenchi di origine in un'applicazione xamarin. Mac. Descrive la creazione e la gestione di elenchi di origine in Xcode e Interface Builder e sull'interazione con essi nel codice c#._
+_Questo articolo illustra l'uso degli elenchi di origine in un'applicazione Novell. Mac. Viene descritto come creare e gestire gli elenchi di origine in Xcode e Interface Builder e interagire con C# essi nel codice._
 
-Quando si lavora con C# e .NET in un'applicazione xamarin. Mac, è possibile utilizzare la stessa origine che elenca gli sviluppatori che lavorano *Objective-C* e *Xcode* viene. Poiché xamarin. Mac si integra direttamente con Xcode, è possibile usare Xcode _Interface Builder_ per creare e gestire gli elenchi di origine (oppure crearle direttamente nel codice c#).
+Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile accedere agli stessi elenchi di origine che uno sviluppatore utilizza in *Objective-C* e *Xcode* . Poiché Novell. Mac si integra direttamente con Xcode, è possibile usare _Interface Builder_ di Xcode per creare e gestire gli elenchi di origine (oppure, facoltativamente, crearli direttamente nel C# codice).
 
-Un elenco di origine è un tipo speciale della visualizzazione struttura consente di visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes.
+Un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes.
 
 [![](source-list-images/source05.png "Un elenco di origine di esempio")](source-list-images/source05.png#lightbox)
 
-In questo articolo, si affronterà le nozioni di base dell'uso degli elenchi di origine in un'applicazione xamarin. Mac. È altamente consigliabile usare la [Hello, Mac](~/mac/get-started/hello-mac.md) articolo prima di tutto, in particolare le [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) le sezioni, perché illustra i concetti chiave e le tecniche che verrà usato in questo articolo.
+In questo articolo verranno illustrate le nozioni di base relative all'uso degli elenchi di origine in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-È possibile ottenere un quadro il [c# esposizione di classi / metodi di Objective-c](~/mac/internals/how-it-works.md) sezione del [meccanismi interni di xamarin. Mac](~/mac/internals/how-it-works.md) del documento, viene spiegato il `Register` e `Export` comandi utilizzato per wireup classi c# per gli oggetti di Objective-C e gli elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando `Register` i comandi e `Export` usati per collegare le C# classi a. Oggetti Objective-C ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Outline_Views" />
 
 ## <a name="introduction-to-source-lists"></a>Introduzione agli elenchi di origine
 
-Come indicato in precedenza, un elenco di origine è che un tipo speciale della visualizzazione struttura consente di visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. Un elenco di origine è un tipo di tabella che consente all'utente di espandere o comprimere le righe di dati gerarchici. A differenza di una visualizzazione tabella, gli elementi in un elenco di origine non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido. Se un elemento in un elenco di origine contiene altri elementi, possono essere espansi o compressi dall'utente.
+Come indicato in precedenza, un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. Un elenco di origine è un tipo di tabella che consente all'utente di espandere o comprimere righe di dati gerarchici. Diversamente da una vista tabella, gli elementi in un elenco di origine non sono in un elenco semplice, sono organizzati in una gerarchia, ad esempio file e cartelle su un disco rigido. Se un elemento in un elenco di origine contiene altri elementi, può essere espanso o compresso dall'utente.
 
-L'elenco di origine è una visualizzazione in stile in modo speciale (`NSOutlineView`), che a sua volta è una sottoclasse della visualizzazione della tabella (`NSTableView`) e di conseguenza, gran parte del suo comportamento eredita dalla classe padre. Di conseguenza, molte operazioni supportate da una visualizzazione struttura, sono supportati anche da un elenco di origine. Un'applicazione xamarin. Mac ha il controllo di queste funzionalità ed è possibile configurare i parametri dell'elenco di origine (sia nel codice o Interface Builder) per consentire o impedire determinate operazioni.
+L'elenco di origine è una visualizzazione struttura con stile speciale`NSOutlineView`(), che a sua volta è una sottoclasse della`NSTableView`visualizzazione tabella () e, di conseguenza, eredita gran parte del suo comportamento dalla relativa classe padre. Di conseguenza, molte operazioni supportate da una visualizzazione struttura sono supportate anche da un elenco di origine. Un'applicazione Novell. Mac ha il controllo di queste funzionalità e può configurare i parametri dell'elenco di origine (nel codice o in Interface Builder) per consentire o impedire determinate operazioni.
 
-Un elenco di origine non archivia i propri dati, ma si basa su un'origine dati (`NSOutlineViewDataSource`) per fornire sia le righe e colonne necessari, su una base alle esigenze.
+Un elenco di origine non archivia i propri dati, ma si basa su un'origine dati (`NSOutlineViewDataSource`) per fornire le righe e le colonne necessarie, in base alle esigenze.
 
-Comportamento dell'elenco di origine può essere personalizzato specificando una sottoclasse del delegato di visualizzazione di struttura (`NSOutlineViewDelegate`) per supportare il tipo di struttura per selezionare funzionalità, elemento di selezione e modifica, rilevamento personalizzati e visualizzazioni personalizzate per i singoli elementi.
+È possibile personalizzare il comportamento di un elenco di origine fornendo una sottoclasse del delegato della visualizzazione`NSOutlineViewDelegate`struttura () per supportare il tipo di struttura per selezionare la funzionalità, la selezione e la modifica degli elementi, il rilevamento personalizzato e le visualizzazioni personalizzate per i singoli elementi.
 
-Poiché un elenco di origine condivida molte funzionalità e il suo comportamento con una visualizzazione tabella e una visualizzazione della struttura, è possibile passare attraverso il [viste delle tabelle](~/mac/user-interface/table-view.md) e [la visualizzazione della struttura](~/mac/user-interface/outline-view.md) documentazione prima di continuare In questo articolo.
+Poiché un elenco di origine condivide gran parte del comportamento e delle funzionalità con una visualizzazione tabella e una visualizzazione struttura, è possibile esaminare la documentazione delle [visualizzazioni di tabella](~/mac/user-interface/table-view.md) e delle [visualizzazioni struttura](~/mac/user-interface/outline-view.md) prima di continuare con questo articolo.
 
 <a name="Working_with_Source_Lists" />
 
 ## <a name="working-with-source-lists"></a>Utilizzo degli elenchi di origine
 
-Un elenco di origine è un tipo speciale della visualizzazione struttura consente di visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. A differenza delle visualizzazioni della struttura, prima si definisce l'elenco di origine in Interface Builder, è possibile creare le classi di supporto in xamarin. Mac.
+Un elenco di origine è un tipo speciale di visualizzazione struttura usata per visualizzare l'origine di un'azione, ad esempio la barra laterale in Finder o iTunes. A differenza delle visualizzazioni struttura, prima di definire l'elenco di origine in Interface Builder, è ora di creare le classi di supporto in Novell. Mac.
 
-In primo luogo, è possibile creare un nuovo `SourceListItem` classe per contenere i dati per l'elenco di origine. Nel **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `SourceListItem` per il **nome** e fare clic su di **New** pulsante:
+Prima di tutto, creare una nuova `SourceListItem` classe per conservare i dati per l'elenco di origine. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...** Selezionare > **classe vuota**generale, immettere `SourceListItem` come **nome** e fare clic sul pulsante **nuovo** :
 
 [![](source-list-images/source01.png "Aggiunta di una classe vuota")](source-list-images/source01.png#lightbox)
 
-Rendere il `SourceListItem.cs` file aspetto simile al seguente: 
+Fare in `SourceListItem.cs` modo che il file abbia un aspetto simile al seguente: 
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ namespace MacOutlines
 }
 ```
 
-Nel **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `SourceListDataSource` per il **nome** e fare clic su di **New** pulsante. Rendere il `SourceListDataSource.cs` file aspetto simile al seguente:
+Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...** Selezionare > **classe vuota**generale, immettere `SourceListDataSource` come **nome** e fare clic sul pulsante **nuovo** . Fare in `SourceListDataSource.cs` modo che il file abbia un aspetto simile al seguente:
 
 ```csharp
 using System;
@@ -352,9 +352,9 @@ namespace MacOutlines
 }
 ```
 
-Questo fornirà i dati per l'elenco di origine.
+Questa operazione fornirà i dati per l'elenco di origine.
 
-Nel **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `SourceListDelegate` per il **nome** e fare clic su di **New** pulsante. Rendere il `SourceListDelegate.cs` file aspetto simile al seguente:
+Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...** Selezionare > **classe vuota**generale, immettere `SourceListDelegate` come **nome** e fare clic sul pulsante **nuovo** . Fare in `SourceListDelegate.cs` modo che il file abbia un aspetto simile al seguente:
 
 ```csharp
 using System;
@@ -444,9 +444,9 @@ namespace MacOutlines
 }
 ```
 
-Ciò fornirà il comportamento del nostro elenco di origine.
+In questo modo verrà fornito il comportamento dell'elenco di origine.
 
-Infine, nella **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **nuovo File...** Selezionare **generali** > **classe vuota**, immettere `SourceListView` per il **nome** e fare clic su di **New** pulsante. Rendere il `SourceListView.cs` file aspetto simile al seguente:
+Infine, nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...** Selezionare > **classe vuota**generale, immettere `SourceListView` come **nome** e fare clic sul pulsante **nuovo** . Fare in `SourceListView.cs` modo che il file abbia un aspetto simile al seguente:
 
 ```csharp
 using System;
@@ -524,25 +524,25 @@ namespace MacOutlines
 }
 ```
 
-Verrà creata una sottoclasse riutilizzabile e personalizzata di `NSOutlineView` (`SourceListView`) che è possibile usare per gestire l'elenco di origine in qualsiasi applicazione xamarin. Mac che commettiamo.
+In questo modo viene creata una sottoclasse personalizzata `NSOutlineView` riutilizzabile di (`SourceListView`) che è possibile usare per guidare l'elenco di origine in qualsiasi applicazione Novell. Mac.
 
 <a name="Creating_and_Maintaining_Source_Lists_in_Xcode" />
 
-## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Creare e gestire gli elenchi di origine in Xcode
+## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Creazione e gestione degli elenchi di origine in Xcode
 
-A questo punto, è possibile progettare l'elenco di origine in Interface Builder. Fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo in Interface Builder e trascinare una doppia visualizzazione dal **Library Inspector**, aggiungerlo al Controller di visualizzazione e impostarlo per ridimensionare con la visualizzazione nel **Editor vincoli di** :
+A questo punto, progettare l'elenco di origine in Interface Builder. Fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica in Interface Builder e trascinare una visualizzazione divisa da **libreria Inspector**, aggiungerla al controller di visualizzazione e impostarla in modo da ridimensionarla con la visualizzazione nell' **Editor vincoli**:
 
 [![](source-list-images/source00.png "Modifica di vincoli")](source-list-images/source00.png#lightbox)
 
-Trascinare quindi un elenco di origine dal **Library Inspector**, aggiungerlo al lato sinistro della visualizzazione suddivisa e impostarlo per ridimensionare con la visualizzazione nel **Editor vincoli di**:
+Trascinare quindi un elenco di origine da **libreria Inspector**, aggiungerlo al lato sinistro della visualizzazione divisa e impostarlo in modo che venga ridimensionato con la visualizzazione nell' **editor di vincoli**:
 
 [![](source-list-images/source02.png "Modifica di vincoli")](source-list-images/source02.png#lightbox)
 
-Successivamente, passare al **visualizzazione di identità**, selezionare l'elenco di origine e modificarlo del **classe** a `SourceListView`:
+Passare quindi alla **visualizzazione Identity**, selezionare l'elenco di origine e modificare la **classe** in `SourceListView`:
 
-[![](source-list-images/source03.png "Impostazione del nome di classe")](source-list-images/source03.png#lightbox)
+[![](source-list-images/source03.png "Impostazione del nome della classe")](source-list-images/source03.png#lightbox)
 
-Infine, creare un **Outlet** per l'elenco di origine denominata `SourceList` nel `ViewController.h` file:
+Infine, creare un **Outlet** per l'elenco di origine `SourceList` denominato nel `ViewController.h` file:
 
 [![](source-list-images/source04.png "Configurazione di un Outlet")](source-list-images/source04.png#lightbox)
 
@@ -552,7 +552,7 @@ Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione c
 
 ## <a name="populating-the-source-list"></a>Popolamento dell'elenco di origine
 
-È possibile modificare il `RotationWindow.cs` del file in Visual Studio per Mac e renderlo del `AwakeFromNib` metodo aspetto simile al seguente:
+Modificare il `RotationWindow.cs` file in Visual Studio per Mac e fare in `AwakeFromNib` modo che il metodo sia simile al seguente:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -591,7 +591,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Il `Initialize ()` metodo deve essere chiamato per l'elenco di origine **Outlet** _prima_ tutti gli elementi vengono aggiunti a esso. Per ogni gruppo di elementi, verrà creato un elemento padre e quindi aggiungere gli elementi secondari a tale elemento di gruppo. Ogni gruppo viene quindi aggiunto alla raccolta dell'elenco origine `SourceList.AddItem (...)`. Le ultime due righe caricare i dati per l'elenco di origine e si espande tutti i gruppi:
+Il `Initialize ()` metodo deve essere chiamato sull'Outlet dell'elenco di origine _prima_ di aggiungervi elementi. Per ogni gruppo di elementi, si crea un elemento padre e quindi si aggiungono gli elementi secondari all'elemento del gruppo. Ogni gruppo viene quindi aggiunto alla raccolta `SourceList.AddItem (...)`dell'elenco di origine. Le ultime due righe caricano i dati per l'elenco di origine ed espande tutti i gruppi:
 
 ```csharp
 // Display side list
@@ -599,7 +599,7 @@ SourceList.ReloadData ();
 SourceList.ExpandItem (null, true);
 ```
 
-Infine, modificare il `AppDelegate.cs` file e apportare le `DidFinishLaunching` metodo aspetto simile al seguente:
+Infine, modificare il `AppDelegate.cs` file e fare in `DidFinishLaunching` modo che il metodo sia simile al seguente:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -612,24 +612,24 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-Se eseguiamo l'applicazione, di seguito verrà visualizzato:
+Se si esegue l'applicazione, verranno visualizzati gli elementi seguenti:
 
-[![](source-list-images/source05.png "Eseguire un'app di esempio")](source-list-images/source05.png#lightbox)
+[![](source-list-images/source05.png "Esecuzione di un'app di esempio")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha fatto un quadro dettagliato di utilizzo degli elenchi di origine in un'applicazione xamarin. Mac. Abbiamo visto come creare e gestire gli elenchi di origine in Interface Builder di Xcode e su come usare gli elenchi di origine nel codice c#.
+Questo articolo ha esaminato in dettaglio l'uso degli elenchi di origine in un'applicazione Novell. Mac. È stato illustrato come creare e gestire elenchi di origine in Interface Builder di Xcode e come usare gli elenchi di origine C# nel codice.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MacOutlines (esempio)](https://developer.xamarin.com/samples/mac/MacOutlines/)
+- [MacOutlines (esempio)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Table Views](~/mac/user-interface/table-view.md) (Visualizzazioni tabelle)
 - [Outline Views](~/mac/user-interface/outline-view.md) (Visualizzazioni struttura)
 - [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
-- [Introduzione a visualizzazioni della struttura](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
+- [Introduzione alle visualizzazioni struttura](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)
 - [NSOutlineViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSOutlineViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008609)

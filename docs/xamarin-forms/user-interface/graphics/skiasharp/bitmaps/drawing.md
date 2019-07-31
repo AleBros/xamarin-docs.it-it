@@ -7,16 +7,16 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 030655ba94130294729871348b3408fe6c3695e6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61401596"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656948"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Creazione e disegno nella bitmap di SkiaSharp
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Si è visto come un'applicazione può caricare bitmap dal Web, dalle risorse dell'applicazione e dalla libreria foto dell'utente. È anche possibile creare nuove bitmap all'interno dell'applicazione. L'approccio più semplice prevede uno dei costruttori del [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
@@ -56,7 +56,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 La mappa di bit può quindi essere visualizzato. In un secondo momento, è possibile creare un nuovo `SKCanvas` oggetto basato sulla stessa bitmap e disegnare su di esso ancora.
 
-Il **Hello Bitmap** pagina il **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** applicazione scrive il testo "Hello, Bitmap!" in una bitmap e visualizza tale bitmap più volte.  
+Il **Hello Bitmap** pagina il **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** applicazione scrive il testo "Hello, Bitmap!" in una bitmap e visualizza tale bitmap più volte.  
 
 Il costruttore del `HelloBitmapPage` inizia creando un `SKPaint` oggetto per la visualizzazione di testo. Determina le dimensioni della stringa di testo e crea una bitmap con tali dimensioni. Viene quindi creato un `SKCanvas` oggetto basato sull'immagine, chiamate `Clear`e quindi chiama `DrawText`. È sempre una buona idea per chiamare `Clear` con una nuova bitmap perché una bitmap appena creata potrebbe contenere dati casuali.
 
@@ -121,7 +121,7 @@ L'aspetto dello sfondo azzurro rivela che la bitmap è trasparente ad eccezione 
 
 La visualizzazione delle **Hello Bitmap** pagina dimostra che la mappa di bit del programma creato è trasparente, ad eccezione di testo di colore nero. Ecco perché viene visualizzato il colore azzurro dell'area di visualizzazione attraverso.
 
-La documentazione del `Clear` metodi di `SKCanvas` descritte tali con l'istruzione: "Sostituisce tutti i pixel nella raccolta corrente di area di disegno". L'uso della parola "sostituisce" rivela una caratteristica importante di questi metodi: Tutti i metodi di disegno `SKCanvas` aggiunte all'area di visualizzazione esistente. Il `Clear` metodi _sostituire_ ciò che è già presente.
+La documentazione relativa ai `Clear` metodi di `SKCanvas` li descrive con l'istruzione: "Sostituisce tutti i pixel nell'area di disegno ' Current clip". L'uso della parola "sostituisce" rivela una caratteristica importante di questi metodi: Tutti i metodi di disegno `SKCanvas` di aggiungono qualcosa alla superficie di visualizzazione esistente. Il `Clear` metodi _sostituire_ ciò che è già presente.
 
 `Clear` è disponibile in due diverse versioni: 
 
@@ -131,7 +131,7 @@ La documentazione del `Clear` metodi di `SKCanvas` descritte tali con l'istruzio
 
 La chiamata `Clear` senza argomenti in una nuova bitmap Inizializza l'intera bitmap da completamente trasparente. Qualsiasi elemento successivamente disegnare sulla bitmap in genere è opaco o parzialmente opaco.
 
-Ecco alcune informazioni per provare: Nel **Hello Bitmap** pagina, sostituire il `Clear` applicato al metodo il `bitmapCanvas` con questo:
+Ecco alcuni elementi da provare: Nella pagina **Hello bitmap** sostituire il `Clear` `bitmapCanvas` metodo applicato a con quello seguente:
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));
@@ -262,9 +262,9 @@ Il costruttore si conclude con la creazione di un' `SKCanvasView` cui `PaintSurf
 
 I metodi della `SKCanvas` che è possibile utilizzare per disegnare in una mappa di bit includono `DrawBitmap`. Ciò significa che è possibile disegnare una bitmap in un altro, in genere modificandola in qualche modo.
 
-Il modo più versatile per modificare un'immagine bitmap è tramite l'accesso a effettivi bit di pixel, dell'oggetto descritto nell'articolo  **[pixel bitmap l'accesso a SkiaSharp](pixel-bits.md)**. Ma esistono diverse altre tecniche per modificare le bitmap che non richiedono l'accesso i bit di pixel.
+Il modo più versatile per modificare un'immagine bitmap è tramite l'accesso a effettivi bit di pixel, dell'oggetto descritto nell'articolo  **[pixel bitmap l'accesso a SkiaSharp](pixel-bits.md)** . Ma esistono diverse altre tecniche per modificare le bitmap che non richiedono l'accesso i bit di pixel.
 
-La bitmap seguente inclusa con il **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** applicazione è 360 pixel di larghezza e 480 pixel in altezza:
+La bitmap seguente inclusa con il **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** applicazione è 360 pixel di larghezza e 480 pixel in altezza:
 
 ![Mountain bungee](drawing-images/MountainClimbers.jpg "Mountain bungee")
 
@@ -496,7 +496,7 @@ La bitmap ruotata è sufficiente a includere l'intera bitmap originale, ma non s
 
 Un'altra operazione comunemente eseguita su bitmap viene chiamata _capovolgimento_. Concettualmente, la bitmap viene ruotata in tre dimensioni intorno a un asse verticale o asse orizzontale tramite il centro della bitmap. Capovolgimento verticale viene creata un'immagine speculare.
 
-Il **Bitmap Flipper** pagina il **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** applicazione illustra questi processi. Il file XAML contiene una `SKCanvasView` e due pulsanti per capovolgere verticalmente e orizzontalmente:
+Il **Bitmap Flipper** pagina il **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** applicazione illustra questi processi. Il file XAML contiene una `SKCanvasView` e due pulsanti per capovolgere verticalmente e orizzontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -599,4 +599,4 @@ Un'altra attività comune che può essere gestita usando tecniche simili è rita
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [API di SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

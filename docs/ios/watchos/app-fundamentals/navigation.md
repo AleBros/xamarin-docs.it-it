@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 264bdcc9a7a0d73ebe3385246ee6dfae3d9a850f
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: f49416eddb69e2900eb427f27057cd8f1cb9ceb5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740999"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654693"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Utilizzo di watchOS navigazione in Xamarin
 
@@ -53,7 +53,7 @@ Presenta le scene come uno stack che è possibile spostarsi all'indietro, in mod
 
 Come con iOS, un left-edge-passaggio del dito consente di passare nuovamente al controller in uno stack di navigazione gerarchica padre.
 
-Entrambi i [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) e [WatchTables](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) esempi includono navigazione gerarchica.
+Entrambi i [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) e [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) esempi includono navigazione gerarchica.
 
 ### <a name="pushing-and-popping-in-code"></a>Eseguire il push e si estraggono nel codice
 
@@ -117,5 +117,5 @@ PresentController (controllerNames, contexts);
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [WatchKitCatalog (esempio)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (esempio)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

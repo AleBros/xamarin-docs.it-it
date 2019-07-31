@@ -1,105 +1,105 @@
 ---
-title: Lo stato di avanzamento e gli indicatori di attività in xamarin. IOS
-description: Questo documento illustra come usare gli indicatori di stato e attività in xamarin. IOS. Viene descritto come usarli sia a livello di codice e con uno storyboard.
+title: Indicatori di stato e attività in Novell. iOS
+description: Questo documento illustra come usare gli indicatori di stato e attività in Novell. iOS. Viene descritto come utilizzarli sia a livello di codice che con uno storyboard.
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: d39170d0109d7f81d3f02ec36381ebcd46c0143d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e65836fe9b86cd4e05f60ad4ab116a14e43ad2ce
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61029591"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655706"
 ---
-# <a name="progress-and-activity-indicators-in-xamarinios"></a>Lo stato di avanzamento e gli indicatori di attività in xamarin. IOS
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicatori di stato e attività in Novell. iOS
 
-È probabile che l'app dovrà svolgere prolungata che eseguono attività quali il caricamento o l'elaborazione dati e che questo ritardo può comportare un ritardo nell'aggiornamento dell'interfaccia utente. Durante questo periodo è consigliabile usare sempre un indicatore di stato per rassicurare l'utente che il sistema è occupato in questo lavoro. In questo modo il controllo utente che l'app sta lavorando per la richiesta, che non è in attesa per l'input, e può fornire un mezzo che riporta in dettaglio esattamente quanto tempo dovranno attendere.
+È probabile che l'app debba eseguire attività a esecuzione prolungata, ad esempio il caricamento o l'elaborazione dei dati e che questo ritardo può causare un ritardo nell'aggiornamento dell'interfaccia utente. Durante questo intervallo di tempo è necessario usare sempre un indicatore di stato per rassicurare l'utente che il sistema è occupato a lavorare. In questo modo si fornisce al controllo utente che l'app sta lavorando alla richiesta, che non è in attesa dell'input e che può fornire un modo per definirne i dettagli esattamente quanto tempo è necessario attendere.
 
-iOS offre due modi principali per fornire questa indicazione dell'avanzamento nell'app: Gli indicatori di attività (tra cui una determinata _rete_ indicatore dell'attività) e le barre di avanzamento.
+iOS offre due modi principali per fornire questa indicazione di stato nell'app: Indicatori di attività (incluso un indicatore di attività di _rete_ specifico) e barre di stato.
 
-## <a name="activity-indicator"></a>Indicatore dell'attività
+## <a name="activity-indicator"></a>Indicatore attività
 
-Gli indicatori di attività devono essere visualizzati quando l'app è in esecuzione un processo lungo, ma non si conosce l'esatto periodo di tempo che richiederà l'attività.
+Gli indicatori di attività devono essere visualizzati quando l'app esegue un processo lungo, ma non si conosce l'esatto periodo di tempo necessario per l'attività.
 
-Apple ha i seguenti suggerimenti per lavorare con gli indicatori di attività:
+Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di attività:
 
-- **Se possibile, usare invece le barre di stato di avanzamento** - perché un indicatore dell'attività che consente all'utente alcun feedback sulla durata del processo eseguito richiederà, usare sempre un indicatore di stato se la lunghezza è noto (ad esempio, il numero di byte per il download in un file).
-- **Mantenere l'indicatore animata** -utenti correlati un indicatore dell'attività di fermo a un'app bloccata in modo da avere sempre l'indicatore animato quando viene visualizzato.
-- **Descrivere l'attività in fase di elaborazione** -solo visualizzazione l'indicatore dell'attività di per sé non è sufficiente, l'utente deve essere informato il processo di cui sono in attesa. Includere un'etichetta significativa (in genere una frase unica e completa) che definisca chiaramente l'attività.
+- **Quando possibile, usare invece le barre di stato** , perché un indicatore di attività fornisce all'utente nessun feedback per quanto tempo verrà eseguito dal processo, usare sempre un indicatore di stato se la lunghezza è nota (ad esempio, il numero di byte da scaricare in un file).
+- **Tenere l'** indicatore animato-gli utenti correlano un indicatore di attività stazionari a un'app bloccata, quindi è necessario che l'indicatore venga sempre animato mentre viene visualizzato.
+- **Descrivere l'attività in fase di elaborazione** . la semplice visualizzazione dell'indicatore di attività non è sufficiente, l'utente deve essere informato del processo in attesa. Includere un'etichetta significativa (in genere una singola frase completa) che definisce chiaramente l'attività.
 
-### <a name="implementing-an-activity-indicator"></a>Implementazione di un indicatore dell'attività
+### <a name="implementing-an-activity-indicator"></a>Implementazione di un indicatore di attività
 
-Un indicatore dell'attività viene implementato tramite il [ `UIActivityIndictorView` ](xref:UIKit.UIActivityIndicatorView) classe per indicare che un `UIActivity` sia in esecuzione.
+Un indicatore di attività viene implementato tramite [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) la classe per indicare che `UIActivity` si sta effettuando una.
 
-### <a name="activity-indicators-and-storyboards"></a>Storyboard e gli indicatori di attività
+### <a name="activity-indicators-and-storyboards"></a>Indicatori di attività e storyboard
 
-Se si usa iOS Designer per creare l'interfaccia utente, l'indicatore di attività possono essere aggiunti al layout dalla casella degli strumenti. Le proprietà seguenti possono essere modificate dal riquadro delle proprietà:
+Se si usa la finestra di progettazione iOS per creare l'interfaccia utente, è possibile aggiungere l'indicatore di attività al layout dalla casella degli strumenti. Le proprietà seguenti possono essere modificate dal riquadro delle proprietà:
 
-![Riquadro delle proprietà](progress-activity-indicator-images/progress-indicator1.png)
+![riquadro delle proprietà](progress-activity-indicator-images/progress-indicator1.png)
 
-### <a name="managing-activity-indicator-behavior"></a>Gestione del comportamento di indicatore di attività
+### <a name="managing-activity-indicator-behavior"></a>Gestione del comportamento dell'indicatore di attività
 
-Usare la `StartAnimating()` e `StopAnimating()` metodi per avviare e arrestare l'animazione di indicatore di attività.
+Usare i `StartAnimating()` metodi `StopAnimating()` e per avviare e arrestare l'animazione dell'indicatore di attività.
 
-Impostare il `HidesWhenStopped` proprietà `true` per rendere l'indicatore di attività scomparire dopo aver `StopAnimating()` è stato chiamato. È impostato su `true` per impostazione predefinita. In qualsiasi momento è possibile visualizzare se l'indicatore di attività è in esecuzione l'animazione di rotazione controllando il `IsAnimating` proprietà. 
+Impostare la `HidesWhenStopped` proprietà su `true` per rendere l'indicatore di attività scomparire dopo che `StopAnimating()` è stato chiamato. Questa impostazione è impostata `true` su per impostazione predefinita. In qualsiasi momento è possibile verificare se l'indicatore di attività sta eseguendo l'animazione rotante controllando la `IsAnimating` proprietà. 
 
 
-### <a name="managing-activity-indicator-appearances"></a>Gestire gli aspetti di indicatore di attività
+### <a name="managing-activity-indicator-appearances"></a>Gestione dell'aspetto degli indicatori di attività
 
-Il `UIActivityIndicatorViewStyle` enumerazione può essere passato come parametro quando si crea l'indicatore di attività. È possibile usare ciò su cui per impostare lo stile di visualizzazione `Gray`, `White`, o `WhiteLarge`, ad esempio:
+L' `UIActivityIndicatorViewStyle` enumerazione può essere passata come parametro quando si crea un'istanza dell'indicatore di attività. È possibile utilizzare questa impostazione per impostare lo stile di `Gray`visualizzazione `White`su, `WhiteLarge`o, ad esempio:
 
 ```csharp
 activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
 ```
 
-È possibile ignorare il colore disql `UIActivityIndicatorViewStyle` impostando la `Color` proprietà.
+È possibile eseguire l'override del colore `UIActivityIndicatorViewStyle` fornito da impostando la `Color` proprietà.
 
 ## <a name="progress-bar"></a>ProgressBar
 
-Un indicatore di stato viene presentato come una riga che viene riempito con il colore per indicare lo stato e lunghezza di un'attività che richiedono molto tempo. Le barre di avanzamento deve sempre essere utilizzate quando la lunghezza delle attività è sa o può essere calcolata.
+Un indicatore di stato presenta una linea che riempie il colore per indicare lo stato e la lunghezza di un'attività che richiede molto tempo. Gli indicatori di stato devono essere sempre utilizzati quando la lunghezza delle attività è noto o può essere calcolata.
 
-Apple ha i seguenti suggerimenti per l'uso di indicatori di stato:
+Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di stato:
 
-- **Segnalare con precisione lo stato** -indicatori di stato deve essere sempre una rappresentazione accurata del tempo necessario per completare un'attività. Non falsificare mai il tempo necessario per rendere l'app disponibile.
-- **Uso di durate Well-Defined** -indicatore di stato deve non solo mostra che è in corso un'attività di lunga durata posizionare, ma offrono all'utente e indicazione della quantità di attività viene completata e una stima del tempo rimanente.
+- **Segnala accuratamente lo stato** di avanzamento: le barre di avanzamento devono essere sempre una rappresentazione accurata del tempo necessario per completare un'attività. Non falsificare mai il tempo necessario per far sembrare l'app occupata.
+- **Usare per le durate ben definite** : l'indicatore di stato non solo indica che è in corso un'attività lunga, ma è possibile fornire all'utente e indicare la quantità di attività completata e una stima del tempo rimanente.
 
 ### <a name="implementing-an-progress-bar"></a>Implementazione di un indicatore di stato
 
-Un indicatore di stato viene creato creando un [`UIProgressView`](xref:UIKit.UIProgressView)
+Un indicatore di stato viene creato creando un'istanza di[`UIProgressView`](xref:UIKit.UIProgressView)
 
-### <a name="progress-bars-and-storyboards"></a>Indicatori di stato e gli storyboard
+### <a name="progress-bars-and-storyboards"></a>Barre di stato e storyboard
 
-È anche possibile aggiungere un indicatore di stato per l'interfaccia utente quando si usa iOS Designer. Cercare **Visualizza lo stato di avanzamento** nel **della casella degli strumenti** e trascinarla per la visualizzazione.
+È anche possibile aggiungere un indicatore di stato all'interfaccia utente quando si usa iOS designer. Cercare **visualizzazione stato** nella **casella degli strumenti** e trascinarlo nella visualizzazione.
 
-Il riquadro delle proprietà è possibile regolare le proprietà seguenti:
+Nel riquadro delle proprietà è possibile modificare le proprietà seguenti:
 
-![Riquadro delle proprietà](progress-activity-indicator-images/progress-indicator3.png)
+![riquadro delle proprietà](progress-activity-indicator-images/progress-indicator3.png)
 
 
-### <a name="managing-progress-bar-behavior"></a>Gestione del comportamento di indicatore di stato
+### <a name="managing-progress-bar-behavior"></a>Gestione del comportamento dell'indicatore di stato
 
-Lo stato di avanzamento della barra può essere impostata inizialmente tramite il `Progress` proprietà:
+Lo stato di avanzamento della barra può essere impostato inizialmente tramite la `Progress` proprietà:
 
 ```csharp
 ProgressBar.Progress = 0f;
 ```
 
-Lo stato di avanzamento può essere modificata tramite il `SetProgress` metodo e passando un valore booleano dichiarare se si desidera che la modifica animata o No.
+Lo stato di avanzamento può essere regolato utilizzando `SetProgress` il metodo e passando un valore booleano che dichiara se si desidera che la modifica venga animata o meno.
 
 ```csharp
 ProgressBar.SetProgress(1.0f, true);
 ```
 
-Per altre informazioni sull'utilizzo della barra di stato di avanzamento, vedere la [lo stato di avanzamento Reporting](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress) ricetta e il [UICatalog tvOS esempio](https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/).
+Per ulteriori informazioni sull'utilizzo dell'indicatore di stato, fare riferimento alla ricetta dello [stato di avanzamento del report](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress) e all' [esempio UICatalog tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog).
 
-### <a name="managing-progress-bar-appearance"></a>La gestione di aspetto della barra di stato di avanzamento
+### <a name="managing-progress-bar-appearance"></a>Gestione dell'aspetto della barra di stato
 
-Simile a un indicatore dell'attività, il `UIProgressViewStyle` enumerazione può essere passato come parametro quando si crea l'indicatore di stato.
+Analogamente a un indicatore di attività `UIProgressViewStyle` , l'enumerazione può essere passata come parametro quando si crea un'istanza della barra di stato.
 
-L'avanzamento e Track immagine e colore tinta può essere modificata tramite le proprietà seguenti:
+È possibile modificare l'immagine di avanzamento e di traccia e il colore della tinta usando le proprietà seguenti:
 
 ```csharp
 progressBar = new UIProgressView(UIProgressViewStyle.Default)

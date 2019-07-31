@@ -1,22 +1,22 @@
 ---
 title: Controllo TimePicker xamarin. Forms
-description: Il controllo TimePicker è una vista di xamarin. Forms che consente all'utente di selezionare un'ora. Questo articolo illustra come usare un controllo TimePicker in un'applicazione xamarin. Forms.
+description: TimePicker è una vista Novell. Forms che consente all'utente di selezionare un'ora. Questo articolo illustra come usare un controllo TimePicker in un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: 1b929b507d738cb4000bab20cfab5480b2222ed2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d5c4cc6600c8192718257abf4ef1cbec49c12eee
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61024085"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656482"
 ---
 # <a name="xamarinforms-timepicker"></a>Controllo TimePicker xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 
 _Una vista di xamarin. Forms che consente all'utente di selezionare un'ora._
 
@@ -79,7 +79,7 @@ Tuttavia, questa operazione è sconsigliata. A seconda dell'impostazione delle [
 
 ## <a name="timepicker-in-an-application"></a>Controllo TimePicker in un'applicazione
 
-Il [ **SetTimer** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/) l'esempio comprende [ `TimePicker` ](xref:Xamarin.Forms.TimePicker), [ `Entry` ](xref:Xamarin.Forms.Entry), e [ `Switch` ](xref:Xamarin.Forms.Switch) viste nella relativa pagina. Il `TimePicker` può essere utilizzato per selezionare un intervallo di tempo e se da allora viene generato viene visualizzata una finestra di dialogo di avviso che ricorda all'utente del testo nel `Entry`, disponibile il `Switch` è attivata o disattivata sulla. Ecco il file XAML:
+Il [ **SetTimer** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) l'esempio comprende [ `TimePicker` ](xref:Xamarin.Forms.TimePicker), [ `Entry` ](xref:Xamarin.Forms.Entry), e [ `Switch` ](xref:Xamarin.Forms.Switch) viste nella relativa pagina. Il `TimePicker` può essere utilizzato per selezionare un intervallo di tempo e se da allora viene generato viene visualizzata una finestra di dialogo di avviso che ricorda all'utente del testo nel `Entry`, disponibile il `Switch` è attivata o disattivata sulla. Ecco il file XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -179,5 +179,5 @@ Non appena viene visualizzata la finestra di dialogo di avviso, il [ `Switch` ](
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio SetTimer](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
+- [Esempio SetTimer](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)
 - [Controllo TimePicker API](xref:Xamarin.Forms.TimePicker)

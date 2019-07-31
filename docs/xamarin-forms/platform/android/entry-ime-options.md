@@ -1,24 +1,24 @@
 ---
-title: Voce di Input Method Editor opzioni in Android
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare Android specifico della piattaforma che consente di impostare il metodo di input per una voce opzioni dell'editor per la tastiera.
+title: Opzioni dell'editor del metodo di input voce in Android
+description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma Android che imposta le opzioni di Input Method Editor per la tastiera soft per una voce.
 ms.prod: xamarin
 ms.assetid: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 4da446cf342065ce7766f8df0c71008ab47c31c4
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 3711e85bd30deb06f351f4539c5ffc7e4236efb6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926822"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653594"
 ---
-# <a name="entry-input-method-editor-options-on-android"></a>Voce di Input Method Editor opzioni in Android
+# <a name="entry-input-method-editor-options-on-android"></a>Opzioni dell'editor del metodo di input voce in Android
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questo specifico della piattaforma Android imposta il metodo di input opzioni dell'editor (IME) per la tastiera per un [ `Entry` ](xref:Xamarin.Forms.Entry). Ciò include l'impostazione di pulsante di azione utente nell'angolo in basso della tastiera software e le interazioni con di `Entry`. Vengono utilizzati in XAML, impostando il [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) proprietà associata a un valore del [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumerazione:
+Questa specifica della piattaforma Android imposta le opzioni di Input Method Editor (IME) per la tastiera soft per [`Entry`](xref:Xamarin.Forms.Entry)un. Ciò include l'impostazione di pulsante di azione utente nell'angolo in basso della tastiera software e le interazioni con di `Entry`. Vengono utilizzati in XAML, impostando il [`Entry.ImeOptions`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) proprietà associata a un valore del [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumerazione:
 
 ```xaml
 <ContentPage ...
@@ -40,7 +40,7 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 entry.On<Android>().SetImeOptions(ImeFlags.Send);
 ```
 
-Il `Entry.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il [ `Entry.SetImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)) metodo, nel [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usato per impostare l'opzione di azione del metodo di input per la tastiera per il [ `Entry` ](xref:Xamarin.Forms.Entry), con il [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumerazione che fornisce i valori seguenti:
+Il `Entry.On<Android>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in Android. Il [`Entry.SetImeOptions`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)) metodo, nel [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) dello spazio dei nomi, viene usato per impostare l'opzione di azione del metodo di input per la tastiera per il [`Entry`](xref:Xamarin.Forms.Entry), con il [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumerazione che fornisce i valori seguenti:
 
 - [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) : indica che è richiesto alcun codice di azione specifico e che il controllo sottostante genererà autonomamente se possibile. Si tratterà `Next` o `Done`.
 - [`None`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.None) : indica che nessuna chiave azione sarà disponibile.
@@ -56,13 +56,13 @@ Il `Entry.On<Android>` metodo consente di specificare che questo specifico della
 - [`NoExtractUi`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoExtractUi) : indica che nessuna interfaccia utente verrà visualizzato per il testo estratto.
 - [`NoAccessoryAction`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoAccessoryAction) : indica che non verrà visualizzata alcuna interfaccia utente per le azioni personalizzate.
 
-Il risultato è che un oggetto specificato [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) valore viene applicato per la tastiera per il [ `Entry` ](xref:Xamarin.Forms.Entry), il metodo di input che imposta le opzioni dell'editor:
+Il risultato è che un oggetto specificato [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) valore viene applicato per la tastiera per il [`Entry`](xref:Xamarin.Forms.Entry), il metodo di input che imposta le opzioni dell'editor:
 
 [![Metodo editor specifici della piattaforma di input voce](entry-ime-options-images/entry-imeoptions.png "movimento di input metodo editor specifici della piattaforma")](entry-ime-options-images/entry-imeoptions-large.png#lightbox "movimento di input specifico della piattaforma editor (metodo)")
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PlatformSpecifics (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creazione di funzionalità specifiche della piattaforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

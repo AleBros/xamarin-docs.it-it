@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3e30e3d4ea3bf0ec58aff842ffee68885a47d44a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363927"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656182"
 ---
 # <a name="text-in-xamarinforms"></a>Testo in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Scaricare l'esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Con xamarin. Forms è possibile immettere o visualizzare il testo._
 
@@ -76,4 +76,4 @@ Fare riferimento alle [operazioni con gli stili](~/xamarin-forms/user-interface/
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Testo (esempio)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Testo (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
