@@ -1,47 +1,47 @@
 ---
-title: 'Procedura dettagliata: Uso del tocco in xamarin. IOS'
-description: Questo documento descrive come gestire touch nelle applicazioni xamarin. IOS, che illustrano le interazioni tramite tocco di esempio, i riconoscitori di movimento e i riconoscitori di movimento personalizzato.
+title: 'Procedura dettagliata: Uso di touch in Novell. iOS'
+description: Questo documento descrive come gestire il tocco nelle applicazioni Novell. iOS, illustrando le interazioni tocco di esempio, i riconoscitori di movimento e i riconoscitori di movimento personalizzati.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: abcd89a6c4547680df0b96d235531312d3b21c52
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f772bf1309330b41f9faea812e2cdcdba8e969cb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864337"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653134"
 ---
-# <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso del tocco in xamarin. IOS
+# <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso di touch in Novell. iOS
 
-Questa procedura dettagliata illustra come scrivere codice che risponde a diversi tipi di eventi di tocco. Ogni esempio è contenuto in una schermata separata:
+In questa procedura dettagliata viene illustrato come scrivere codice che risponde a diversi tipi di eventi di tocco. Ogni esempio è contenuto in una schermata separata:
 
-- [Esempi di tocco](#Touch_Samples) – come rispondere agli eventi di tocco.
-- [Esempi di riconoscitore di movimento](#Gesture_Recognizer_Samples) – come usare i riconoscitori di movimento predefiniti.
-- [Esempio di riconoscitore di movimento personalizzato](#Custom_Gesture_Recognizer) : come compilare un riconoscitore di movimento personalizzato.
+- [Esempi di tocco](#Touch_Samples) : come rispondere agli eventi di tocco.
+- [Esempi di riconoscimento del movimento](#Gesture_Recognizer_Samples) : come usare i riconoscitori di movimento predefiniti.
+- [Esempio di riconoscimento di movimenti personalizzati](#Custom_Gesture_Recognizer) : come creare un riconoscimento di movimento personalizzato.
 
 Ogni sezione contiene istruzioni per scrivere il codice da zero.
-Il [avvio di codice di esempio](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) include già una schermata dello storyboard e menu completata:
+Il [codice di esempio iniziale](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) include già uno storyboard completo e una schermata di menu:
 
- [![](ios-touch-walkthrough-images/image3.png "L'esempio include schermata del menu")](ios-touch-walkthrough-images/image3.png#lightbox)
+ [![](ios-touch-walkthrough-images/image3.png "La schermata di menu Includi di esempio")](ios-touch-walkthrough-images/image3.png#lightbox)
 
-Seguire le istruzioni seguenti per aggiungere codice allo storyboard e Scopri i diversi tipi di eventi di tocco disponibili in iOS. In alternativa, aprire il [esempio completato](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) per verificare che tutto funziona.
+Seguire le istruzioni riportate di seguito per aggiungere codice allo storyboard e ottenere informazioni sui diversi tipi di eventi di tocco disponibili in iOS. In alternativa, aprire l' [esempio completato](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) per vedere tutto funziona.
 
 <a name="Touch_Samples"/>
 
 ## <a name="touch-samples"></a>Esempi di tocco
 
-In questo esempio viene illustrato alcune delle API il tocco. Seguire questi passaggi per aggiungere il codice necessario per implementare gli eventi di tocco:
+In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il codice necessario per implementare gli eventi Touch, attenersi alla procedura seguente:
 
 
-1. Aprire il progetto **Touch_Start**. Prima di eseguire il progetto per assicurarsi che tutto sia corretto e il tocco di **Touch esempi** pulsante. Si verrà visualizzata una schermata simile alla seguente (anche se nessuno dei pulsanti funzionerà):
+1. Aprire il progetto **Touch_Start**. Eseguire prima il progetto per verificare che tutto sia corretto e toccare il pulsante di **esempio touch** . Verrà visualizzata una schermata simile alla seguente (anche se nessuno dei pulsanti funzionerà):
     
-    [![](ios-touch-walkthrough-images/image4.png "App di esempio eseguito con i pulsanti non funzionante")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "App di esempio eseguita con pulsanti non funzionanti")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
-1. Modificare il file **TouchViewController.cs** e aggiungere le variabili di due istanza seguenti alla classe `TouchViewController`:
+1. Modificare il file **TouchViewController.cs** e aggiungere le due variabili di istanza seguenti alla classe `TouchViewController`:
 
     ```csharp 
     #region Private Variables
@@ -94,13 +94,13 @@ In questo esempio viene illustrato alcune delle API il tocco. Seguire questi pas
     }
     ```
     
-    Questo metodo funziona cercando un `UITouch` dell'oggetto e se presente, eseguire operazioni basate sul quale si è verificato il tocco:
+    Questo metodo funziona controllando la presenza `UITouch` di un oggetto e, se esiste, eseguire un'azione in base al punto in cui si è verificato il tocco:
 
-    * _All'interno di TouchImage_ -il testo visualizzato `Touches Began` in un'etichetta e la modifica dell'immagine.
-    * _All'interno di DoubleTouchImage_ : modificare l'immagine visualizzata se il movimento è stato un doppio tocco.
-    * _All'interno di DragImage_ : impostare un flag che indica che il tocco è stato avviato. Il metodo `TouchesMoved` utilizzerà questo flag per determinare se `DragImage` deve essere spostato attorno alla schermata oppure No, come viene illustrato nel passaggio successivo.
+    * _All'interno di TouchImage_ : Visualizza `Touches Began` il testo in un'etichetta e modifica l'immagine.
+    * _All'interno di DoubleTouchImage_ : modificare l'immagine visualizzata se il movimento è un doppio tocco.
+    * _All'interno di DragImage_ : impostare un flag che indica che il tocco è stato avviato. Il metodo `TouchesMoved` userà questo flag per determinare se `DragImage` deve essere spostato intorno allo schermo, come si vedrà nel passaggio successivo.
 
-    Il codice riportato sopra esegue solo i tocchi singoli, non è ancora presente alcun comportamento se l'utente sta spostando il dito sullo schermo. Per rispondere al movimento, implementare `TouchesMoved` come illustrato nel codice seguente:
+    Il codice precedente riguarda solo i singoli tocchi, non esiste ancora alcun comportamento se l'utente sta muovendo il dito sullo schermo. Per rispondere allo spostamento, implementare `TouchesMoved` come illustrato nel codice seguente:
 
     ```csharp 
     public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -129,11 +129,11 @@ In questo esempio viene illustrato alcune delle API il tocco. Seguire questi pas
     }
     ```
 
-    Questo metodo ottiene un `UITouch` oggetto, quindi controlla per vedere dove si è verificato il tocco. Se si è verificato il tocco `TouchImage`, quindi il testo spostato tocchi viene visualizzato sullo schermo. 
+    Questo metodo ottiene un `UITouch` oggetto, quindi controlla la posizione in cui si è verificato il tocco. Se il tocco si è `TouchImage`verificato in, i ritocchi di testo spostati vengono visualizzati sullo schermo. 
 
-    Se `touchStartedInside` è true, si sa che l'utente abbia il dito `DragImage` e sia gli spostamenti. Il codice si sposterà `DragImage` quando l'utente sposta il dito sullo schermo.
+    Se `touchStartedInside` è true, sappiamo che l'utente ha il dito ed è in `DragImage` grado di spostarlo. Il codice verrà spostato `DragImage` quando l'utente sposta il dito intorno allo schermo.
 
-1. È necessario gestire il caso quando l'utente solleva il dito il propria fuori dallo schermo o iOS Annulla l'evento di tocco. A tale scopo, Implementiamo `TouchesEnded` e `TouchesCancelled` come illustrato di seguito:
+1. È necessario gestire il caso in cui l'utente solleva il dito del dito dallo schermo oppure iOS Annulla l'evento Touch. A tale proposito, verrà implementato `TouchesEnded` e `TouchesCancelled` come illustrato di seguito:
 
     ```csharp
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -165,33 +165,33 @@ In questo esempio viene illustrato alcune delle API il tocco. Seguire questi pas
     }
     ```
     
-    Entrambi questi metodi verrà reimpostato il `touchStartedInside` flag su false. `TouchesEnded` viene inoltre visualizzato `TouchesEnded` sullo schermo.
+    In entrambi i modi il `touchStartedInside` flag viene reimpostato su false. `TouchesEnded`viene visualizzata `TouchesEnded` anche sullo schermo.
 
-1. A questo punto è terminata la schermata di esempi di tocco. Si noti come la schermata Cambia durante l'interazione con ognuna delle immagini, come illustrato nello screenshot seguente:
+1. A questo punto la schermata dei campioni di tocco è stata completata. Si noti che la schermata cambia quando si interagisce con ognuna delle immagini, come illustrato nello screenshot seguente:
         
-    [![](ios-touch-walkthrough-images/image4.png "La schermata iniziale dell'app")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "Schermata iniziale dell'app")](ios-touch-walkthrough-images/image4.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image5.png "La schermata dopo che l'utente trascina un pulsante")](ios-touch-walkthrough-images/image5.png#lightbox)
+    [![](ios-touch-walkthrough-images/image5.png "Schermata dopo che l'utente trascina un pulsante")](ios-touch-walkthrough-images/image5.png#lightbox)
  
 
 <a name="Gesture_Recognizer_Samples" />
 
-## <a name="gesture-recognizer-samples"></a>Esempi di riconoscitore di movimento
+## <a name="gesture-recognizer-samples"></a>Esempi di riconoscimento del movimento
 
-Il [sezione precedente](#Touch_Samples) è stato illustrato come trascinare un oggetto attorno alla schermata tramite gli eventi di tocco.
-In questa sezione si verrà eliminare gli eventi di tocco e Mostra come usare i riconoscitori di movimento seguenti:
+Nella [sezione precedente](#Touch_Samples) è stato illustrato come trascinare un oggetto intorno allo schermo utilizzando gli eventi di tocco.
+In questa sezione si elimineranno gli eventi touch e si mostrerà come usare i riconoscitori di movimento seguenti:
 
--  Il `UIPanGestureRecognizer` per il trascinamento di un'immagine attorno alla schermata.
--  Il `UITapGestureRecognizer` per rispondere a double scelte sullo schermo.
+-  Oggetto `UIPanGestureRecognizer` per il trascinamento di un'immagine intorno allo schermo.
+-  Oggetto `UITapGestureRecognizer` per rispondere a doppi tocchi sullo schermo.
 
-Se si esegue il [esempio di codice a partire](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) e fare clic sul **esempi riconoscitore di movimento** pulsante, viene visualizzata la schermata seguente:
+Se si esegue il [codice di esempio iniziale](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) e si fa clic sul pulsante **Samples Recognizer Samples** , verrà visualizzata la schermata seguente:
 
- [![](ios-touch-walkthrough-images/image6.png "Fare clic sul pulsante Samples riconoscitore di movimento per visualizzare questa schermata")](ios-touch-walkthrough-images/image6.png#lightbox)
+ [![](ios-touch-walkthrough-images/image6.png "Facendo clic sul pulsante esempi di riconoscimento movimento viene visualizzata questa schermata")](ios-touch-walkthrough-images/image6.png#lightbox)
 
-Seguire questi passaggi per implementare i riconoscitori di movimento:
+Per implementare i riconoscitori di movimento, attenersi alla procedura seguente:
 
 
-1. Modificare il file **GestureViewController.cs** e aggiungere la variabile di istanza seguenti:
+1. Modificare il file **GestureViewController.cs** e aggiungere la variabile di istanza seguente:
 
     ```csharp
     #region Private Variables
@@ -200,8 +200,8 @@ Seguire questi passaggi per implementare i riconoscitori di movimento:
     #endregion
     ```
 
-    Abbiamo bisogno di questa variabile di istanza per tenere traccia del percorso precedente dell'immagine.
-Il riconoscitore di movimento di zoom utilizzerà il `originalImageFrame` valore per calcolare l'offset è necessario ridisegnare l'immagine nella schermata.
+    Questa variabile di istanza è necessaria per tenere traccia della posizione precedente dell'immagine.
+Il riconoscitore di movimento Pan utilizzerà il `originalImageFrame` valore per calcolare l'offset necessario per ricreare l'immagine sullo schermo.
 
 1. Aggiungere il metodo seguente al controller:
 
@@ -219,8 +219,8 @@ Il riconoscitore di movimento di zoom utilizzerà il `originalImageFrame` valore
     }
     ```
 
-    Questo codice crea un'istanza un `UIPanGestureRecognizer` dell'istanza e lo aggiunge a una visualizzazione.
-Si noti che è assegnare una destinazione per il movimento sotto forma del metodo `HandleDrag` : questo metodo viene fornito nel passaggio successivo.
+    Questo codice crea un'istanza `UIPanGestureRecognizer` di un'istanza di e la aggiunge a una visualizzazione.
+Si noti che viene assegnata una destinazione al gesto sotto forma di metodo `HandleDrag` . questo metodo viene fornito nel passaggio successivo.
 
 1. Per implementare HandleDrag, aggiungere il codice seguente al controller:
 
@@ -246,10 +246,10 @@ Si noti che è assegnare una destinazione per il movimento sotto forma del metod
     }
     ```
 
-    Il codice riportato sopra verrà prima di tutto controllare lo stato di riconoscimento di movimento e quindi spostare l'immagine attorno alla schermata. Con questo codice, il controller può ora supportano il trascinamento di un'immagine attorno alla schermata.
+    Il codice precedente verificherà innanzitutto lo stato del sistema di riconoscimento del movimento, quindi sposterà l'immagine intorno allo schermo. Con questo codice, il controller è ora in grado di supportare il trascinamento di un'immagine intorno allo schermo.
 
 
-1. Aggiungere un `UITapGestureRecognizer` che modifica l'immagine viene visualizzata nel DoubleTouchImage. Aggiungere il metodo seguente per il `GestureViewController` controller:
+1. Aggiungere un `UITapGestureRecognizer` che cambierà l'immagine visualizzata in DoubleTouchImage. Aggiungere il metodo seguente al `GestureViewController` controller:
 
     ```csharp
     private void WireUpTapGestureRecognizer()
@@ -283,9 +283,9 @@ Si noti che è assegnare una destinazione per il movimento sotto forma del metod
     }
     ```
 
-    Questo codice è molto simile al codice per il `UIPanGestureRecognizer` ma invece di usare un delegato per una destinazione a cui si sta usando un `Action`. 
+    Questo codice è molto simile al codice per `UIPanGestureRecognizer` , ma invece di usare un delegato per una destinazione si usa un oggetto. `Action` 
 
-1. L'ultimo aspetto che dobbiamo fare è modificare `ViewDidLoad` in modo che chiami i metodi appena aggiunto. Modificare ViewDidLoad in modo che risulti simile al seguente:
+1. L'ultima cosa da fare è modificare `ViewDidLoad` in modo da chiamare i metodi appena aggiunti. Modificare ViewDidLoad in modo che sia simile al codice seguente:
 
     ```csharp
     public override void ViewDidLoad()
@@ -302,28 +302,28 @@ Si noti che è assegnare una destinazione per il movimento sotto forma del metod
     }
     ```
 
-    Si noti anche che si inizializza il valore di `originalImageFrame`.
+    Si noti anche che viene inizializzato il valore `originalImageFrame`di.
 
 
 1. Eseguire l'applicazione e interagire con le due immagini.
 Lo screenshot seguente è un esempio di queste interazioni:
     
-    [![](ios-touch-walkthrough-images/image7.png "In questo screenshot appare un'interazione di trascinamento")](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![](ios-touch-walkthrough-images/image7.png "Questa schermata mostra un'interazione di trascinamento")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
 
 <a name="Custom_Gesture_Recognizer"/>
 
-## <a name="custom-gesture-recognizer"></a>Riconoscitore di movimento personalizzato
+## <a name="custom-gesture-recognizer"></a>Riconoscimento di movimenti personalizzati
 
-In questa sezione si applicherà i concetti nella sezione precedente per compilare un riconoscitore di movimento personalizzato. Il riconoscitore di movimento personalizzato verrà sottoclassi `UIGestureRecognizer`e riconoscere quando l'utente lo disegna "V" nella schermata quindi attivare/disattivare una bitmap. Lo screenshot seguente è riportato un esempio di questa schermata:
+In questa sezione verranno applicati i concetti delle sezioni precedenti per creare un riconoscimento di movimenti personalizzato. Il riconoscitore di movimenti personalizzati sarà sottoclass `UIGestureRecognizer`e rileverà quando l'utente disegna una "V" sullo schermo, quindi attiva o Disabilita una bitmap. Lo screenshot seguente è un esempio di questa schermata:
 
- [![](ios-touch-walkthrough-images/image8.png "L'app verrà riconosciuto quando l'utente lo disegna un \"V\" sullo schermo")](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![](ios-touch-walkthrough-images/image8.png "L'app rileverà quando l'utente disegna una \"V\" sullo schermo")](ios-touch-walkthrough-images/image8.png#lightbox)
 
-Seguire questi passaggi per creare un riconoscitore di movimento personalizzato:
+Seguire questa procedura per creare un riconoscimento di movimento personalizzato:
 
 
-1. Aggiungere una nuova classe al progetto denominato `CheckmarkGestureRecognizer`, rendendola simile al codice seguente:
+1. Aggiungere una nuova classe al progetto denominato `CheckmarkGestureRecognizer`e renderla simile al codice seguente:
 
     ```csharp
     using System;
@@ -438,12 +438,12 @@ Seguire questi passaggi per creare un riconoscitore di movimento personalizzato:
     }
     ```
 
-    Il metodo Reset viene chiamato quando la `State` proprietà viene modificato in `Recognized` o `Ended`. Questo è il tempo per reimpostare qualsiasi stato interno, imposta il riconoscitore di movimento personalizzato.
-La classe può ora riavviamolo volta successiva che l'utente interagisce con l'applicazione e preparati a eseguire nuovamente il riconoscimento di movimento.
+    Il metodo Reset viene chiamato quando la `State` proprietà viene modificata `Recognized` in o `Ended`. Si tratta del momento in cui reimpostare lo stato interno impostato nel riconoscimento di movimento personalizzato.
+A questo punto la classe può essere avviata la volta successiva che l'utente interagisce con l'applicazione ed è pronto per ritentare il riconoscimento del movimento.
 
 
 
-1. Ora che abbiamo definito un riconoscitore di movimento personalizzato (`CheckmarkGestureRecognizer`) modifica la **CustomGestureViewController.cs** file e aggiungere le variabili di due istanza seguenti:
+1. Ora che è stato definito un riconoscimento di movimento personalizzato (`CheckmarkGestureRecognizer`), modificare il file **CustomGestureViewController.cs** e aggiungere le due variabili di istanza seguenti:
 
     ```csharp
     #region Private Variables
@@ -493,19 +493,19 @@ La classe può ora riavviamolo volta successiva che l'utente interagisce con l'a
     }
     ```
 
-1. Eseguire l'applicazione e provare a tracciare un "V" sullo schermo. Dovrebbe essere visualizzato l'immagine da modificare, come illustrato negli screenshot seguenti:
+1. Eseguire l'applicazione e provare a disegnare una "V" sullo schermo. Si noterà che la visualizzazione dell'immagine viene modificata, come illustrato nelle schermate seguenti:
     
-    [![](ios-touch-walkthrough-images/image9.png "Il pulsante selezionato")](ios-touch-walkthrough-images/image9.png#lightbox)
+    [![](ios-touch-walkthrough-images/image9.png "Pulsante selezionato")](ios-touch-walkthrough-images/image9.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image10.png "Il pulsante di opzione non è selezionato")](ios-touch-walkthrough-images/image10.png#lightbox)
+    [![](ios-touch-walkthrough-images/image10.png "Pulsante deselezionato")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 
 
-Il codice precedente tre sezioni illustrato i diversi modi per rispondere al tocco gli eventi in iOS: usando gli eventi di tocco, i riconoscitori di movimento predefiniti, o con un riconoscitore di movimento personalizzato.
+Nelle tre sezioni precedenti sono stati illustrati diversi modi per rispondere agli eventi di tocco in iOS: usando gli eventi Touch, i riconoscitori di movimento predefiniti o con un riconoscimento di movimento personalizzato.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [iOS Touch avviare (esempio)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
-- [iOS Touch finale (esempio)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
+- [iOS touch Start (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
+- [iOS touch finale (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
