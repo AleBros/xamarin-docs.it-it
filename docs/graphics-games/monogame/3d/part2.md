@@ -1,54 +1,54 @@
 ---
-title: Disegno di grafica 3D con vertici in MonoGame
-description: MonoGame supporta l'utilizzo di matrici di vertici per definire la modalità di rendering in base al punto di un oggetto 3D. Gli utenti possono sfruttare le matrici di vertici per creare una geometria dinamica, implementare effetti speciali e migliorare l'efficienza delle loro il rendering tramite della faccia posteriore.
+title: Disegno di immagini 3D con vertici in monogame
+description: Monogame supporta l'uso di matrici di vertici per definire la modalità di rendering di un oggetto 3D in base al punto. Gli utenti possono sfruttare gli array di vertici per creare geometria dinamica, implementare effetti speciali e migliorare l'efficienza del rendering attraverso l'abbattimento.
 ms.prod: xamarin
 ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: df36c149e98e8c0cbb16de4c2cf52def5713ec13
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f125f8f20d22da4e988440cbaa936771d86a7673
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178589"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680975"
 ---
-# <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Disegno di grafica 3D con vertici in MonoGame
+# <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Disegno di immagini 3D con vertici in monogame
 
-_MonoGame supporta l'utilizzo di matrici di vertici per definire la modalità di rendering in base al punto di un oggetto 3D. Gli utenti possono sfruttare le matrici di vertici per creare una geometria dinamica, implementare effetti speciali e migliorare l'efficienza delle loro il rendering tramite della faccia posteriore._
+_Monogame supporta l'uso di matrici di vertici per definire la modalità di rendering di un oggetto 3D in base al punto. Gli utenti possono sfruttare gli array di vertici per creare geometria dinamica, implementare effetti speciali e migliorare l'efficienza del rendering attraverso l'abbattimento._
 
-Gli utenti che hanno già letto tramite il [Guida per il rendering di modelli](~/graphics-games/monogame/3d/part1.md) avranno familiarità con il rendering di un modello 3D in MonoGame. Il `Model` classe è un metodo efficace per eseguire il rendering di grafica 3D quando si lavora con i dati definiti in un file (ad esempio. fbx) e quando si lavora con dati statici. Alcuni giochi richiedono la geometria 3D da definire o modificati in modo dinamico in fase di esecuzione. In questi casi, è possibile usare le matrici di *vertici* per definire ed eseguire il rendering della geometria. Il vertice è un termine generale per un punto nello spazio 3D che fa parte di un elenco ordinato consente di definire la geometria. In genere i vertici vengono ordinati in modo da definire una serie di triangoli.
+Gli utenti che hanno letto la [Guida sui modelli di rendering](~/graphics-games/monogame/3d/part1.md) avranno familiarità con il rendering di un modello 3D in monogame. La `Model` classe è un modo efficace per eseguire il rendering della grafica 3D quando si utilizzano i dati definiti in un file, ad esempio FBX, e quando si gestiscono dati statici. Per alcuni giochi è necessario definire o modificare dinamicamente la geometria 3D in fase di esecuzione. In questi casi, è possibile usare matrici di *vertici* per definire ed eseguire il rendering della geometria. Un vertice è un termine generale per un punto nello spazio 3D che fa parte di un elenco ordinato usato per definire la geometria. In genere i vertici sono ordinati in modo da definire una serie di triangoli.
 
-Per semplificare la visualizzazione come vertici vengono utilizzati per creare oggetti 3D, si consideri la sfera seguente:
+Per facilitare la visualizzazione del modo in cui i vertici vengono usati per creare oggetti 3D, consideriamo la sfera seguente:
 
-![](part2-images/image1.png "Per semplificare la visualizzazione come vertici vengono utilizzati per creare oggetti 3D, prendere in considerazione questo sfera")
+![](part2-images/image1.png "Per facilitare la visualizzazione del modo in cui vengono usati i vertici per creare oggetti 3D, considerare questa sfera")
 
-Come illustrato in precedenza, la sfera è chiaramente composta da più di triangoli. È possibile visualizzare la struttura della sfera per visualizzare come vertici connettono a triangoli form:
+Come illustrato in precedenza, la sfera è chiaramente composta da più triangoli. È possibile visualizzare il wireframe della sfera per vedere il modo in cui i vertici si connettono ai triangoli dei form:
 
-![](part2-images/image2.png "Visualizzare la struttura della sfera per visualizzare come vertici connettono a triangoli form")
+![](part2-images/image2.png "Visualizzare il wireframe della sfera per vedere il modo in cui i vertici si connettono ai triangoli dei form")
 
-Questa procedura dettagliata verrà trattati i seguenti argomenti:
+In questa procedura dettagliata vengono trattati gli argomenti seguenti:
 
 - Creazione di un progetto
-- Creazione di vertici
-- Aggiunta di codice di disegno
-- Rendering con una trama
-- Modifica le coordinate di trama
-- I vertici con modelli di rendering
+- Creazione dei vertici
+- Aggiunta del codice di disegno
+- Rendering con trama
+- Modifica di coordinate di trama
+- Rendering dei vertici con i modelli
 
-Progetto finito conterrà un piano a scacchi che verrà disegnato usando una matrice di vertice:
+Il progetto finito conterrà un piano a scacchi che verrà disegnato usando una matrice di vertici:
 
-![](part2-images/image3.png "Il progetto completato conterrà un piano a scacchi che verrà disegnato usando una matrice di vertice")
+![](part2-images/image3.png "Il progetto finito conterrà un piano a scacchi che verrà disegnato usando una matrice di vertici")
 
 ## <a name="creating-a-project"></a>Creazione di un progetto
 
-In primo luogo, si verrà scaricato un progetto che verrà utilizzata come il punto di partenza. Si userà il progetto di modello [cui è disponibile qui](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/).
+Prima di tutto, verrà scaricato un progetto che fungerà da punto di partenza. Verrà usato il progetto di modello [disponibile qui](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/).
 
-Dopo aver scaricato e decompresso, aprire ed eseguire il progetto. Si prevede di visualizzare sei modelli robot da disegnare sullo schermo:
+Una volta scaricato e decompresso, aprire ed eseguire il progetto. Si prevede di visualizzare sei modelli robotizzati disegnati sullo schermo:
 
-![](part2-images/image4.png "Sei modelli robot da disegnare sullo schermo")
+![](part2-images/image4.png "Sei modelli robotizzati disegnati sullo schermo")
 
-Entro la fine di questo progetto si sarà combinazione personalizzato per il rendering del vertice personalizzato con i robot `Model`, in modo che non ci occuperemo per eliminare il codice per il rendering di robot. Al contrario, viene possibile semplicemente cancellare le il `Game1.Draw` chiamata per rimuovere il disegno dei 6 robot per il momento. A tale scopo, aprire il **Game1.cs** del file e individuare il `Draw` (metodo). Modificarla in modo che contenga il codice seguente:
+Alla fine di questo progetto verrà combinato il rendering del vertice personalizzato con il robot `Model`, quindi non verrà eliminato il codice di rendering del robot. Al contrario, è sufficiente cancellare `Game1.Draw` la chiamata per rimuovere il disegno dei 6 robot per il momento. A tale scopo, aprire il file **Game1.cs** e individuare il `Draw` metodo. Modificarlo in modo che contenga il codice seguente:
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -58,37 +58,37 @@ protected override void Draw(GameTime gameTime)
 }
 ```
 
-Ciò comporterà il gioco visualizzando una schermata blu vuota:
+Questo comporterà la visualizzazione di una schermata blu vuota nel gioco:
 
-![](part2-images/image5.png "L'operazione comporterà il gioco visualizzando una schermata blu vuota")
+![](part2-images/image5.png "Questo comporterà la visualizzazione di una schermata blu vuota nel gioco")
 
-## <a name="creating-the-vertices"></a>Creazione di vertici
+## <a name="creating-the-vertices"></a>Creazione dei vertici
 
-Si creerà una matrice di vertici per definire la geometria. In questa procedura dettagliata, verrà creato un piano 3D (un quadrato nello spazio 3D, non un aereo). Anche se il piano ha quattro angoli e quattro i lati, si sarà composta da due triangoli, ognuno dei quali richiede tre vertici. Pertanto, si verrà definito un totale di sei punti.
+Viene creata una matrice di vertici per definire la geometria. In questa procedura dettagliata verrà creato un piano 3D (un quadrato nello spazio 3D, non un aeroplano). Sebbene il piano abbia quattro lati e quattro angoli, sarà composto da due triangoli, ognuno dei quali richiede tre vertici. Pertanto, verrà definito un totale di sei punti.
 
-Finora è stato già accennato vertici in senso generale, ma MonoGame fornisce alcuni struct standard che può essere usato per i vertici:
+Finora abbiamo parlato dei vertici in senso generale, ma monogame fornisce alcuni struct standard che possono essere usati per i vertici:
 
 - `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
 - `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
 - `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
 - `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
 
-Nome del tipo di ogni indica i componenti in che esso contenuti. Ad esempio, `VertexPositionColor` contiene valori per la posizione e il colore. Esaminiamo ciascuno dei componenti:
+Il nome di ogni tipo indica i componenti in essa contenuti. Contiene, ad `VertexPositionColor` esempio, i valori per position e color. Esaminiamo ogni componente:
 
-- Posizione: tutti i vertici che includono un `Position` componente. Il `Position` valori definiscono dove si trova sul vertice nello spazio 3D (X, Y e Z).
-- Colore: vertici, è possibile specificare un `Color` valore eseguire tinte personalizzato.
-- Normale: Normals definiscono in che modo è rivolta la superficie dell'oggetto. Le normali sono necessari che se il rendering di un oggetto con illuminazione poiché la direzione che impatti chiaro quanto che riceve è rivolta verso una superficie. Le normali sono in genere specificate come un *vettore unitario* – un vettore 3D con una lunghezza pari a 1.
-- Trama-trama fa riferimento a coordinate di trama, vale a dire, quale parte di una trama dovrebbe essere posizionata in un determinato vertice. I valori di trama sono necessari se il rendering di un oggetto 3D con una trama. Le coordinate di trama sono coordinate normalizzate, che significa che i valori verranno compreso tra 0 e 1. Illustreremo le coordinate di trama in modo più dettagliato più avanti in questa Guida.
+- Position: tutti i tipi di vertici includono un `Position` componente. I `Position` valori definiscono la posizione in cui si trova il vertice nello spazio 3D (X, Y e Z).
+- Color: i vertici possono facoltativamente specificare `Color` un valore per eseguire la colorazione personalizzata.
+- Normale: i normali definiscono il modo in cui la superficie dell'oggetto è rivolte. I normali sono necessari se il rendering di un oggetto con illuminazione dopo la direzione di una superficie ha un effetto sulla quantità di luce che riceve. Le normali vengono in genere specificate come *vettore di unità* , ovvero un vettore 3D con lunghezza pari a 1.
+- Trama: la trama si riferisce alle coordinate di trama, ovvero la parte di una trama da visualizzare in un vertice specificato. I valori di trama sono necessari se si esegue il rendering di un oggetto 3D con una trama. Le coordinate di trama sono coordinate normalizzate, il che significa che i valori saranno compresi tra 0 e 1. Le coordinate di trama verranno illustrate in modo più dettagliato più avanti in questa guida.
 
-Il piano fungerà da un piano e si voglia applicare una trama quando si esegue il rendering, in modo che si userà il `VertexPositionTexture` tipo per definire i vertici.
+Il piano verrà usato come base e si desidera applicare una trama durante l'esecuzione del rendering, quindi verrà usato il `VertexPositionTexture` tipo per definire i vertici.
 
-In primo luogo, viene aggiunto un membro alla nostra classe Game1:
+In primo luogo, verrà aggiunto un membro alla classe Game1:
 
 ```csharp
 VertexPositionTexture[] floorVerts; 
 ```
 
-Successivamente, definire i vertici in `Game1.Initialize`. Si noti che il modello fornito fa riferimento più indietro in questo articolo non contiene un `Game1.Initialize` metodo, pertanto è necessario aggiungere l'intero metodo a `Game1`:
+Definire quindi i vertici in `Game1.Initialize`. Si noti che il modello fornito a cui viene fatto riferimento in precedenza in questo `Game1.Initialize` articolo non contiene un metodo, quindi è necessario aggiungere l' `Game1`intero metodo a:
 
 ```csharp
 protected override void Initialize ()
@@ -105,17 +105,17 @@ protected override void Initialize ()
 }
 ```
 
-Per consentire di visualizzare i vertici avrà un aspetto, ad esempio, si consideri il diagramma seguente:
+Per semplificare la visualizzazione dei vertici, prendere in considerazione il diagramma seguente:
 
-![](part2-images/image6.png "Per semplificare la visualizzazione dei vertici aspetto, prendere in considerazione questo diagramma")
+![](part2-images/image6.png "Per semplificare la visualizzazione dei vertici, considerare questo diagramma")
 
-È necessario fare affidamento sul nostro diagramma per visualizzare i vertici fino a quando non è completare l'implementazione di codice per il rendering.
+È necessario basarsi sul diagramma per visualizzare i vertici fino a quando non viene completata l'implementazione del codice di rendering.
 
-## <a name="adding-drawing-code"></a>Aggiunta di codice del disegno
+## <a name="adding-drawing-code"></a>Aggiunta del codice di disegno
 
-Ora che abbiamo le posizioni per la geometria definita, è possibile scrivere codice per il rendering.
+Ora che sono state definite le posizioni per la geometria, è possibile scrivere il codice di rendering.
 
-In primo luogo, sarà necessario definire un `BasicEffect` istanza che conterrà i parametri per il rendering, ad esempio posizione e illuminazione. A questo scopo, aggiungere un `BasicEffect` membro per il `Game1` classe inferiore rispetto alla posizione di `floorVerts` campo viene definito:
+Prima di tutto, è necessario definire un' `BasicEffect` istanza che conterrà i parametri per il rendering, ad esempio posizione e illuminazione. A tale scopo, aggiungere un `BasicEffect` membro `Game1` alla classe di seguito in cui `floorVerts` è definito il campo:
 
 
 ```csharp
@@ -125,7 +125,7 @@ VertexPositionTexture[] floorVerts;
 BasicEffect effect;
 ```
 
-A questo punto, modificare il `Initialize` metodo per definire l'effetto:
+Modificare quindi il `Initialize` metodo per definire l'effetto:
 
 ```csharp
 protected override void Initialize ()
@@ -146,7 +146,7 @@ protected override void Initialize ()
 }
 ```
 
-A questo punto è possibile aggiungere codice per eseguire le operazioni di disegno:
+A questo punto è possibile aggiungere il codice per eseguire il disegno:
 
 ```csharp
 void DrawGround()
@@ -188,7 +188,7 @@ void DrawGround()
 }
 ```
 
-È necessario chiamare `DrawGround` nel nostro `Game1.Draw`:
+È necessario chiamare `DrawGround`: `Game1.Draw`
 
 ```csharp
 protected override void Draw (GameTime gameTime)
@@ -201,41 +201,41 @@ protected override void Draw (GameTime gameTime)
 }
 ```
 
-L'app visualizzerà quanto segue quando eseguita:
+Quando viene eseguita, l'app visualizzerà quanto segue:
 
-![](part2-images/image7.png "L'app visualizzerà questo quando eseguita")
+![](part2-images/image7.png "L'app visualizzerà questa operazione al momento dell'esecuzione")
 
-Esaminiamo alcuni dettagli nel codice precedente.
+Esaminiamo alcuni dei dettagli nel codice riportato sopra.
 
-### <a name="view-and-projection-properties"></a>Visualizzare e le proprietà di proiezione
+### <a name="view-and-projection-properties"></a>Proprietà di visualizzazione e proiezione
 
-Il `View` e `Projection` proprietà controllano come considereremo della scena. Si verrà modificato il codice in un secondo momento quando si aggiunge nuovamente il codice del modello di rendering. In particolare `View` controlla la posizione e l'orientamento della fotocamera, e `Projection` controlli il *campo visivo* (che può essere utilizzata per zoom della fotocamera).
+Le `View` proprietà `Projection` e controllano la modalità di visualizzazione della scena. Questo codice verrà modificato in un secondo momento, quando si aggiunge di nuovo il codice per il rendering del modello. In particolare `View` , controlla la posizione e l'orientamento della fotocamera e `Projection` controlla il *campo di visualizzazione* , che può essere usato per ingrandire la fotocamera.
 
-### <a name="techniques-and-passes"></a>Le tecniche e passa
+### <a name="techniques-and-passes"></a>Tecniche e sessioni
 
-Una volta è stato assegnato proprietà sul nostro effettiva che è possibile eseguire il rendering effettivo. 
+Una volta assegnate le proprietà, è possibile eseguire il rendering effettivo. 
 
-Microsoft non verrà modificato il `CurrentTechnique` proprietà in questa procedura dettagliata, ma i giochi più avanzati potrebbero avere un singolo effetto che può eseguire il disegno in modi diversi (ad esempio come viene applicato il valore del colore). Ognuna di queste modalità di rendering può essere rappresentato come una tecnica che può essere assegnata prima del rendering. Inoltre, ogni tecnica potrebbe necessitare di più passaggi per eseguire il rendering correttamente. Se il rendering di oggetti visivi complessi, ad esempio un surface brillante o pelo, effetti potrebbe essere necessario più passaggi.
+Non verrà modificata la proprietà `CurrentTechnique` in questa procedura dettagliata, ma i giochi più avanzati possono avere un singolo effetto che può eseguire il disegno in modi diversi, ad esempio come viene applicato il valore del colore. Ognuna di queste modalità di rendering può essere rappresentata come una tecnica che può essere assegnata prima del rendering. Ogni tecnica può inoltre richiedere più passaggi per il rendering corretto. Gli effetti possono richiedere più sessioni se si esegue il rendering di oggetti visivi complessi, ad esempio una superficie o una pelliccia incandescente.
 
-La cosa importante da tenere presente è che il `foreach` ciclo consente lo stesso C# codice per eseguire il rendering di alcun effetto indipendentemente dalla complessità dell'oggetto sottostante `BasicEffect`.
+L'aspetto importante da tenere presente è che il `foreach` ciclo consente allo stesso C# codice di eseguire il rendering di qualsiasi effetto indipendentemente dalla complessità dell'oggetto `BasicEffect`sottostante.
 
 ### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
-`DrawUserPrimitives` è in cui viene eseguito il rendering dei vertici. Il primo parametro indica il metodo come sono stati organizzati i vertici. È stata strutturata in modo che ogni triangolo è definito da tre vertici ordinati, perciò usiamo il `PrimitiveType.TriangleList` valore.
+`DrawUserPrimitives`è il punto in cui viene eseguito il rendering dei vertici. Il primo parametro indica al metodo come sono stati organizzati i vertici. Sono state strutturate in modo che ogni triangolo venga definito da tre vertici ordinati, quindi viene usato `PrimitiveType.TriangleList` il valore.
 
-Il secondo parametro è la matrice di vertici che è stato definito in precedenza.
+Il secondo parametro è la matrice dei vertici definiti in precedenza.
 
-Il terzo parametro specifica il primo indice da disegnare. Poiché si desidera che la matrice di intero vertice da sottoporre a rendering, passiamo a un valore pari a 0.
+Il terzo parametro specifica il primo indice da creare. Poiché si vuole che venga eseguito il rendering dell'intera matrice di vertici, viene passato un valore pari a 0.
 
-Infine, specifichiamo quanti triangoli per eseguire il rendering. La matrice di vertice contiene due triangoli, quindi, passare un valore pari a 2.
+Infine, viene specificato il numero di triangoli di cui eseguire il rendering. La matrice di vertici contiene due triangoli, quindi passare il valore 2.
 
-## <a name="rendering-with-a-texture"></a>Rendering con una trama
+## <a name="rendering-with-a-texture"></a>Rendering con trama
 
-A questo punto l'app esegue il rendering di un piano di bianco (nel punto di vista). Successivamente si aggiungerà una trama al progetto da utilizzare per il rendering del nostro piano. 
+A questo punto, l'app esegue il rendering di un piano bianco (in prospettiva). Si aggiungerà quindi una trama al progetto da usare quando si esegue il rendering del piano. 
 
-Per semplificare le operazioni si aggiungerà il PNG direttamente alla parte del progetto anziché utilizzare lo strumento della MonoGame Pipeline. A tale scopo, scaricare [questo file con estensione PNG](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) nel computer. Al termine del download, fare clic sul **contenuti** cartella nel riquadro della soluzione e selezionare **Aggiungi > Aggiungi file...**  . Se si lavora su Android, questa cartella verrà creata sotto la **asset** cartella nel progetto Android specifici. Se in iOS, questa cartella sarà nella radice del progetto iOS. Passare al percorso in cui **checkerboard.png** viene salvato e selezionare questo file. Selezionare questa opzione per copiare il file nella directory.
+Per semplificare l'attività, aggiungeremo il. png direttamente al progetto anziché usare lo strumento della pipeline monogame. A tale scopo, scaricare il [file con estensione png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) nel computer. Al termine del download, fare clic con il pulsante destro del mouse sulla cartella **contenuto** nel riquadro della soluzione e scegliere **Aggiungi > Aggiungi file.** Se si usa Android, questa cartella si trova nella cartella assets del progetto specifico per Android. Se si utilizza iOS, la cartella si troverà nella radice del progetto iOS. Passare al percorso in cui è stato salvato il file **scacchi. png** e selezionare il file. Selezionare per copiare il file nella directory.
 
-Successivamente, si aggiungerà il codice per creare il `Texture2D` istanza. In primo luogo, aggiungere il `Texture2D` come membro del `Game1` sotto il `BasicEffect` istanza:
+Successivamente, verrà aggiunto il codice per creare `Texture2D` l'istanza. `Texture2D` Per prima cosa, aggiungere come membro di `Game1` sotto l' `BasicEffect` istanza:
 
 ```csharp
 ...
@@ -244,7 +244,7 @@ BasicEffect effect;
 Texture2D checkerboardTexture;
 ```
 
-Modificare `Game1.LoadContent` come indicato di seguito:
+Modificare `Game1.LoadContent` come segue:
 
 
 ```csharp
@@ -264,7 +264,7 @@ protected override void LoadContent()
 }
 ```
 
-A questo punto, modificare il `DrawGround` (metodo). L'unica modifica necessaria consiste nell'assegnare `effect.TextureEnabled` al `true` e impostare le `effect.Texture` a `checkerboardTexture`:
+Modificare quindi il `DrawGround` metodo. L'unica modifica necessaria consiste nell'assegnare `effect.TextureEnabled` a `true` e a impostare `effect.Texture` su `checkerboardTexture`:
 
 ```csharp
 void DrawGround()
@@ -304,7 +304,7 @@ void DrawGround()
 }
 ```
 
-Infine, è necessario modificare il `Game1.Initialize` metodo anche assegnare trama coordina sui nostri vertici:
+Infine, è necessario modificare il metodo `Game1.Initialize` in modo da assegnare anche le coordinate di trama sui vertici:
 
 
 ```csharp
@@ -335,19 +335,19 @@ protected override void Initialize ()
 } 
 ```
 
-Se eseguiamo il codice, è possibile osservare che il piano viene ora visualizzato un motivo a scacchi:
+Se eseguiamo il codice, possiamo notare che il nostro piano ora Visualizza un modello a scacchi:
 
-![](part2-images/image8.png "Il piano viene ora visualizzato un motivo a scacchi")
+![](part2-images/image8.png "Il piano ora Visualizza un modello a scacchi")
 
-## <a name="modifying-texture-coordinates"></a>Coordina la modifica di trama
+## <a name="modifying-texture-coordinates"></a>Modifica di coordinate di trama
 
-MonoGame utilizzata normalizzato le coordinate di trama, vengono coordinate compreso tra 0 e 1 anziché tra 0 e la larghezza della trama o dell'altezza. Il diagramma seguente può semplificare la visualizzazione delle coordinate normalizzate:
+Monogame USA coordinate di trama normalizzate, ovvero coordinate comprese tra 0 e 1 anziché tra 0 e la larghezza o l'altezza della trama. Il diagramma seguente può essere utile per visualizzare le coordinate normalizzate:
 
-![](part2-images/image9.png "Questo diagramma può semplificare la visualizzazione delle coordinate normalizzate")
+![](part2-images/image9.png "Questo diagramma può essere utile per visualizzare le coordinate normalizzate")
 
-Le coordinate di trama normalizzato consentono il ridimensionamento della trama senza la necessità di riscrivere il codice o ricreare i modelli (ad esempio i file. fbx). Questo è possibile perché normalizzate coordinate rappresentano una percentuale anziché pixel specifico. Ad esempio, verranno (1,1) rappresentano sempre l'angolo inferiore destro indipendentemente dalle dimensioni della trama.
+Le coordinate di trama normalizzate consentono il ridimensionamento della trama senza la necessità di riscrivere il codice o di ricreare i modelli, ad esempio i file con estensione FBX. Questo è possibile perché le coordinate normalizzate rappresentano un rapporto anziché pixel specifici. Ad esempio, (1,1) rappresenterà sempre l'angolo inferiore destro indipendentemente dalle dimensioni della trama.
 
-È possibile modificare l'assegnazione di coordinate di trama per usare una singola variabile per il numero di ripetizioni:
+È possibile modificare l'assegnazione delle coordinate di trama per usare una singola variabile per il numero di ripetizioni:
 
 
 ```csharp
@@ -379,14 +379,14 @@ protected override void Initialize ()
 }
 ```
 
-Ciò comporta la trama ripetere 20 volte:
+In questo modo la trama viene ripetuta 20 volte:
 
-![](part2-images/image10.png "Ciò comporta la trama ripetere 20 volte")
+![](part2-images/image10.png "In questo modo la trama viene ripetuta 20 volte")
 
 
-## <a name="rendering-vertices-with-models"></a>I vertici con modelli di rendering
+## <a name="rendering-vertices-with-models"></a>Rendering dei vertici con i modelli
 
-Ora che il piano viene eseguito il rendering correttamente, è possibile aggiungere nuovamente i modelli per visualizzare tutti gli elementi tra loro. In primo luogo, si aggiungerà nuovamente il codice di modello al nostro `Game1.Draw` metodo (con posizioni di modificare):
+Ora che è in corso il rendering corretto del piano, è possibile aggiungere nuovamente i modelli per visualizzare tutti gli elementi insieme. In primo luogo, il codice del modello verrà aggiunto nuovamente al `Game1.Draw` metodo (con le posizioni modificate):
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -407,7 +407,7 @@ protected override void Draw(GameTime gameTime)
 } 
 ```
 
-Verrà anche creato un `Vector3` in `Game1` per rappresentare la posizione della camera nostro. Si aggiungerà un campo nel nostro `checkerboardTexture` dichiarazione:
+Viene anche creato un `Vector3` in `Game1` per rappresentare la posizione della fotocamera. Si aggiungerà un campo nella `checkerboardTexture` dichiarazione:
 
 ```csharp
 ...
@@ -416,7 +416,7 @@ Texture2D checkerboardTexture;
 Vector3 cameraPosition = new Vector3(0, 10, 10); 
 ```
 
-Successivamente, rimuovere locale `cameraPosition` variabile dal `DrawModel` metodo:
+Rimuovere quindi la variabile locale `cameraPosition` `DrawModel` dal metodo:
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -438,7 +438,7 @@ void DrawModel(Vector3 modelPosition)
             ...
 ```
 
-Rimuovere in modo analogo locale `cameraPosition` variabile dal `DrawGround` metodo:
+Analogamente, rimuovere `cameraPosition` la variabile locale `DrawGround` dal metodo:
 
 ```csharp
 void DrawGround()
@@ -453,25 +453,25 @@ void DrawGround()
     ... 
 ```
 
-Se eseguiamo il codice si può vedere ora entrambi i modelli e zero allo stesso tempo:
+A questo punto, se si esegue il codice, è possibile visualizzare contemporaneamente i modelli e il campo:
 
-![](part2-images/image11.png "I modelli sia zero vengono visualizzati nello stesso momento")
+![](part2-images/image11.png "Sia i modelli che il terreno vengono visualizzati contemporaneamente")
 
-Se si modifica la posizione della camera (ad esempio aumentando il valore di X, che in questo caso consente di spostare la fotocamera a sinistra) si noterà che il valore influisce sia zero e i modelli:
+Se si modifica la posizione della fotocamera, ad esempio aumentando il valore X, che in questo caso sposta la fotocamera a sinistra, è possibile osservare che il valore influisca sia sulla base che sui modelli:
 
 ```csharp
 Vector3 cameraPosition = new Vector3(15, 10, 10);
 ```
 
-Questo codice produce quanto segue:
+Questo codice comporta quanto segue:
 
-![](part2-images/image3.png "Questo codice genera in questa visualizzazione")
+![](part2-images/image3.png "Questo codice genera questa visualizzazione")
 
 ## <a name="summary"></a>Riepilogo
 
-Questa procedura dettagliata ha illustrata come usare una matrice di vertici per eseguire il rendering personalizzato. In questo caso, abbiamo creato un piano a scacchi combinando il rendering basato su vertici con una trama e `BasicEffect`, ma il codice presentato qui viene utilizzato come base per l'eventuale rendering in 3D. È stato inoltre illustrato che il rendering di vertici in base può essere combinato con i modelli nella scena stesso.
+In questa procedura dettagliata è stato illustrato come utilizzare una matrice di vertici per eseguire il rendering personalizzato. In questo caso, è stato creato un piano a scacchi combinando il rendering basato su vertici con una `BasicEffect`trama e, ma il codice presentato viene utilizzato come base per qualsiasi rendering 3D. È stato inoltre illustrato che il rendering basato sui vertici può essere combinato con i modelli nella stessa scena.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [File scacchiera (esempio)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
-- [Progetto completato (esempio)](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/)
+- [File scacchi (esempio)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
+- [Progetto completato (esempio)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)

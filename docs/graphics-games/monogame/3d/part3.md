@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f2e65439084d4e89ae529bda79c2cb2739f1529d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c44e6b76751096d817727df759ecbeca5bd5a8f3
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656210"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680987"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordinate 3D in monogame
 
@@ -37,7 +37,7 @@ Al termine, si disporrà di un progetto con un robot che si sposta in un cerchio
 
 ## <a name="creating-a-project"></a>Creazione di un progetto
 
-Questa procedura dettagliata è incentrata sullo spostare gli oggetti nello spazio 3D. Si inizierà con il progetto per il rendering di modelli e matrici di vertici [disponibili qui](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/). Una volta scaricato, decomprimere e aprire il progetto per assicurarsi che venga eseguito e dovrebbe essere visualizzato quanto segue:
+Questa procedura dettagliata è incentrata sullo spostare gli oggetti nello spazio 3D. Si inizierà con il progetto per il rendering di modelli e matrici di vertici [disponibili qui](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Una volta scaricato, decomprimere e aprire il progetto per assicurarsi che venga eseguito e dovrebbe essere visualizzato quanto segue:
 
 ![](part3-images/image2.png "Una volta scaricato, decomprimere e aprire il progetto per assicurarsi che venga eseguito e che questa visualizzazione venga visualizzata")
 

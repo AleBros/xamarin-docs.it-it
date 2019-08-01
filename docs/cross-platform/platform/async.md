@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4ade8fbb3ac596ef2da5d76b4efa751661cd8611
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646256"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680944"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
@@ -89,7 +89,7 @@ Per altre informazioni sull'annullamento, vedere [Ottimizzazione dell'app asincr
 
 ## <a name="example"></a>Esempio
 
-Scaricare la [soluzione Novell di esempio](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (per iOS e Android) per visualizzare un esempio funzionante di `async` e `await` nelle app per dispositivi mobili. Il codice di esempio viene illustrato più dettagliatamente in questa sezione.
+Scaricare la [soluzione Novell di esempio](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (per iOS e Android) per visualizzare un esempio funzionante di `async` e `await` nelle app per dispositivi mobili. Il codice di esempio viene illustrato più dettagliatamente in questa sezione.
 
 ### <a name="writing-an-async-method"></a>Scrittura di un metodo asincrono
 
@@ -196,7 +196,7 @@ In questo documento è stata fornita una panoramica delle parole chiave e degli 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [AsyncAwait (esempio)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [AsyncAwait (esempio)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [Callback come l'istruzione Go to delle generazioni](https://tirania.org/blog/archive/2013/Aug-15.html)
 - [Dati (iOS) (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
 - [HttpClient (iOS) (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
