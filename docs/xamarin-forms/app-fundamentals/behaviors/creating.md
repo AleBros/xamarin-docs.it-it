@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 650c341ab4b599a4eaf0cab81ba6f9129699e15d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: addb367d8e730919b621b5858f458444ace62024
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926030"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651005"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Creare comportamenti di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 _I comportamenti di Xamarin.Forms vengono creati attraverso la derivazione della classe Behavior o Behavior&lt;T&gt;. Questo articolo spiega come creare e usare i comportamenti di Xamarin.Forms._
 
@@ -211,7 +211,7 @@ Questo articolo ha spiegato come creare e usare i comportamenti di Xamarin.Forms
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xamarin.Forms Behavior (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/) (Comportamento di Xamarin.Forms)
-- [Xamarin.Forms Behavior applied with a Style (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehaviorStyle/) (Comportamento di Xamarin.Forms applicato con uno stile)
+- [Xamarin.Forms Behavior (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior) (Comportamento di Xamarin.Forms)
+- [Xamarin.Forms Behavior applied with a Style (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehaviorstyle) (Comportamento di Xamarin.Forms applicato con uno stile)
 - [Classe Behavior](xref:Xamarin.Forms.Behavior)
 - [Classe Behavior <T><T>](xref:Xamarin.Forms.Behavior`1)

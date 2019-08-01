@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 3f22556948fc87dc604870f5a8625b80a4a0b29d
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: a79dcf14ddefd13d17e218602030a6467a3f1448
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827207"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643832"
 ---
 # <a name="linking-on-android"></a>Collegamento in Android
 
 Le applicazioni Xamarin.Android usano un *linker* per ridurre le dimensioni dell'applicazione. Il linker esegue un'analisi statica dell'applicazione per determinare gli assembly, i tipi e i membri effettivamente usati. Il linker si comporta quindi come *Garbage Collector*, cercando continuamente gli assembly, i tipi e i membri referenziati, fino a trovare l'intera closure di assembly, tipi e membri referenziati. Tutto quello che è esterno a questa closure viene quindi *rimosso*.
 
-Considerando l'esempio [Hello, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/):
+Considerando l'esempio [Hello, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a):
 
 |Configurazione|Dimensioni 1.2.0|Dimensioni 4.0.1|
 |---|---|---|
@@ -98,7 +98,7 @@ Il linker rimuove talvolta parti di codice che si potrebbe voler mantenere. Ad e
 
 -   Se si usa la serializzazione XML, potrebbe essere necessario mantenere le proprietà dei tipi.
 
-In questi casi, è possibile usare l'attributo [Android.Runtime.Preserve](https://developer.xamarin.com/api/type/Android.Runtime.PreserveAttribute/). Poiché ogni membro che non è collegato in modo statico dall'applicazione è soggetto alla rimozione, è possibile usare questo attributo per contrassegnare i membri non referenziati in modo statico, ma che sono comunque necessari per l'applicazione. È possibile applicare questo attributo a ogni membro di un tipo oppure al tipo stesso.
+In questi casi, è possibile usare l'attributo [Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute). Poiché ogni membro che non è collegato in modo statico dall'applicazione è soggetto alla rimozione, è possibile usare questo attributo per contrassegnare i membri non referenziati in modo statico, ma che sono comunque necessari per l'applicazione. È possibile applicare questo attributo a ogni membro di un tipo oppure al tipo stesso.
 
 Nell'esempio seguente questo attributo viene usato per mantenere il costruttore della classe `Example`:
 

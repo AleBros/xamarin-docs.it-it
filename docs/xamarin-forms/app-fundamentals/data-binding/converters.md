@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 34b449aa358874f06a495ec52578dcca2dd13767
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054331"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654732"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Convertitori dei valori di binding di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In genere i data binding trasferiscono i dati da una proprietà di origine a una proprietà di destinazione e in alcuni casi dalla proprietà di destinazione alla proprietà di origine. Si tratta di un semplice trasferimento quando la proprietà di origine e quella di destinazione sono dello stesso tipo o quando un tipo può essere convertito nell'altro tipo tramite una conversione implicita. Se non è questo il caso, è necessaria una conversione del tipo.
 
@@ -51,7 +51,7 @@ Il metodo `ConvertBack` viene chiamato quando i dati vengono trasferiti dalla de
 
 Se il data binding include anche un'impostazione `StringFormat`, il convertitore di valori viene richiamato prima che il risultato sia formattato come stringa.
 
-La pagina **Enable Buttons** (Abilita pulsanti) nell'esempio [**Data Binding Demos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo del data binding) illustra come usare questo convertitore di valori in un data binding. Viene creata un'istanza di `IntToBoolConverter` nel dizionario risorse della pagina, a cui si fa riferimento con un'estensione di markup `StaticResource` per impostare la proprietà `Converter` nei due data binding. È prassi molto comune condividere i convertitori i dati tra più data binding nella pagina:
+La pagina **Enable Buttons** (Abilita pulsanti) nell'esempio [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo del data binding) illustra come usare questo convertitore di valori in un data binding. Viene creata un'istanza di `IntToBoolConverter` nel dizionario risorse della pagina, a cui si fa riferimento con un'estensione di markup `StaticResource` per impostare la proprietà `Converter` nei due data binding. È prassi molto comune condividere i convertitori i dati tra più data binding nella pagina:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -467,5 +467,5 @@ Il risultato è il seguente:
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
 - [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

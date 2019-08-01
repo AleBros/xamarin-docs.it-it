@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 10e45ec438f1e698a9f09223cecea5934de54da8
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 0a3238d614ee655bdf883f30adbc7969346fdfa7
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617714"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508897"
 ---
 # <a name="xamarinandroid-performance"></a>Prestazioni di Xamarin.Android
 
@@ -43,9 +43,9 @@ Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percep
 
 ## <a name="optimize-layout-hierarchies"></a>Ottimizzare le gerarchie di layout
 
-Ogni layout aggiunto a un'applicazione richiede inizializzazione, layout e disegno. Il passaggio di layout può essere dispendioso in presenza di istanze di [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) annidate che usano il parametro `weight`, perché ogni elemento figlio verrà misurato due volte. L'uso di istanze annidate di `LinearLayout` può portare a una gerarchia di visualizzazione su molti livelli, con conseguente riduzione delle prestazioni per i layout sottoposti a inflating più volte, come in un [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/). È pertanto importante ottimizzare questi layout, perché i vantaggi a livello di prestazioni risulteranno moltiplicati.
+Ogni layout aggiunto a un'applicazione richiede inizializzazione, layout e disegno. Il passaggio di layout può essere dispendioso in presenza di istanze di [`LinearLayout`](xref:Android.Widget.LinearLayout) annidate che usano il parametro `weight`, perché ogni elemento figlio verrà misurato due volte. L'uso di istanze annidate di `LinearLayout` può portare a una gerarchia di visualizzazione su molti livelli, con conseguente riduzione delle prestazioni per i layout sottoposti a inflating più volte, come in un [`ListView`](xref:Android.Widget.ListView). È pertanto importante ottimizzare questi layout, perché i vantaggi a livello di prestazioni risulteranno moltiplicati.
 
-Si consideri ad esempio [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) per una riga di una visualizzazione elenco con un'icona, un titolo e una descrizione. `LinearLayout` conterrà un [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/) e un `LinearLayout` verticale che contiene due istanze di [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/):
+Si consideri ad esempio [`LinearLayout`](xref:Android.Widget.LinearLayout) per una riga di una visualizzazione elenco con un'icona, un titolo e una descrizione. `LinearLayout` conterrà un [`ImageView`](xref:Android.Widget.ImageView) e un `LinearLayout` verticale che contiene due istanze di [`TextView`](xref:Android.Widget.TextView):
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -80,7 +80,7 @@ Si consideri ad esempio [`LinearLayout`](https://developer.xamarin.com/api/type/
 </LinearLayout>
 ```
 
-Questo layout ha una profondità di 3 livelli e comporta sprechi quando viene sottoposto a inflating per ogni riga [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/). Può tuttavia essere migliorato appiattendolo, come illustrato nell'esempio di codice seguente:
+Questo layout ha una profondità di 3 livelli e comporta sprechi quando viene sottoposto a inflating per ogni riga [`ListView`](xref:Android.Widget.ListView). Può tuttavia essere migliorato appiattendolo, come illustrato nell'esempio di codice seguente:
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -118,26 +118,26 @@ Questo layout ha una profondità di 3 livelli e comporta sprechi quando viene so
 </RelativeLayout>
 ```
 
-La gerarchia precedente di 3 livelli è stata ridotta a 2 livelli e un singolo [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) ha sostituito due istanze di [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/). Si otterrà un aumento significativo delle prestazioni con l'inflating del layout per ogni riga di [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
+La gerarchia precedente di 3 livelli è stata ridotta a 2 livelli e un singolo [`RelativeLayout`](xref:Android.Widget.RelativeLayout) ha sostituito due istanze di [`LinearLayout`](xref:Android.Widget.LinearLayout). Si otterrà un aumento significativo delle prestazioni con l'inflating del layout per ogni riga di [`ListView`](xref:Android.Widget.ListView).
 
 <a name="optimizelistviews" />
 
 ## <a name="optimize-list-views"></a>Ottimizzare le visualizzazioni elenco
 
-Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per le istanze di [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/). Le prestazioni di scorrimento possono tuttavia peggiorare quando ogni riga della visualizzazione elenco contiene gerarchie di visualizzazione con molti livelli di annidamento o quando le righe contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `ListView`:
+Gli utenti si aspettano uno scorrimento fluido e tempi di caricamento rapidi per le istanze di [`ListView`](xref:Android.Widget.ListView). Le prestazioni di scorrimento possono tuttavia peggiorare quando ogni riga della visualizzazione elenco contiene gerarchie di visualizzazione con molti livelli di annidamento o quando le righe contengono layout complessi. Alcune tecniche consentono tuttavia di evitare un peggioramento delle prestazioni di `ListView`:
 
 - Riutilizzare le visualizzazioni delle righe. Per altre informazioni, vedere [Riutilizzare le visualizzazioni delle righe](#reuserowviews).
 - Appiattire i layout, laddove possibile.
 - Memorizzare nella cache il contenuto delle righe recuperato da un servizio Web.
 - Evitare il ridimensionamento delle immagini.
 
-Nel loro insieme, queste tecniche consentono di mantenere uno scorrimento fluido per le istanze di [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
+Nel loro insieme, queste tecniche consentono di mantenere uno scorrimento fluido per le istanze di [`ListView`](xref:Android.Widget.ListView).
 
 <a name="reuserowviews" />
 
 ### <a name="reuse-row-views"></a>Riutilizzare le visualizzazioni delle righe
 
-Se si visualizzano centinaia di righe in [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/), sarebbe uno spreco di memoria creare centinaia di oggetti [`View`](https://developer.xamarin.com/api/type/Android.Views.View/) quando poi ne vengono visualizzati contemporaneamente sullo schermo solo alcuni. Solo gli oggetti `View` visibili nelle righe sullo schermo possono essere invece caricati in memoria e il **contenuto** viene caricato in questi oggetti riutilizzati. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
+Se si visualizzano centinaia di righe in [`ListView`](xref:Android.Widget.ListView), sarebbe uno spreco di memoria creare centinaia di oggetti [`View`](xref:Android.Views.View) quando poi ne vengono visualizzati contemporaneamente sullo schermo solo alcuni. Solo gli oggetti `View` visibili nelle righe sullo schermo possono essere invece caricati in memoria e il **contenuto** viene caricato in questi oggetti riutilizzati. Questo impedisce la creazione di istanze di centinaia di oggetti aggiuntivi, con conseguente risparmio di tempo e memoria.
 
 Quando una riga viene rimossa dallo schermo, quindi, la visualizzazione può essere inserita in una coda per essere riutilizzata in seguito, come illustrato nell'esempio di codice seguente:
 
@@ -154,7 +154,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 }
 ```
 
-Mentre l'utente scorre, [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) chiama l'override di `GetView` per richiedere nuove visualizzazioni da mostrare. Se disponibili, passa una visualizzazione inutilizzata nel parametro `convertView`. Se questo valore è `null`, il codice crea una nuova istanza di [`View`](https://developer.xamarin.com/api/type/Android.Views.View/). In caso contrario, le proprietà `convertView` possono essere reimpostate e riutilizzate.
+Mentre l'utente scorre, [`ListView`](xref:Android.Widget.ListView) chiama l'override di `GetView` per richiedere nuove visualizzazioni da mostrare. Se disponibili, passa una visualizzazione inutilizzata nel parametro `convertView`. Se questo valore è `null`, il codice crea una nuova istanza di [`View`](xref:Android.Views.View). In caso contrario, le proprietà `convertView` possono essere reimpostate e riutilizzate.
 
 Per altre informazioni, vedere [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) (Riutilizzo della visualizzazione delle righe) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md) (Popolamento dei dati in ListView).
 
@@ -199,17 +199,17 @@ Il ciclo di vita di un servizio può essere limitato tramite `IntentService`, ch
 
 ## <a name="release-resources-when-notified"></a>Rilasciare le risorse in seguito a una notifica
 
-Durante il ciclo di vita dell'applicazione, il callback [`OnTrimMemory`](https://developer.xamarin.com/api/member/Android.App.Activity.OnTrimMemory/p/Android.Content.TrimMemory/) fornisce una notifica quando la memoria del dispositivo è insufficiente. Questo callback deve essere implementato per l'ascolto delle notifiche relative al livello di memoria seguenti:
+Durante il ciclo di vita dell'applicazione, il callback [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) fornisce una notifica quando la memoria del dispositivo è insufficiente. Questo callback deve essere implementato per l'ascolto delle notifiche relative al livello di memoria seguenti:
 
-- [`TrimMemoryRunningModerate`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate/): l'applicazione *potrebbe* voler rilasciare alcune risorse non necessarie.
-- [`TrimMemoryRunningLow`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryRunningLow/): l'applicazione *deve* rilasciare le risorse non necessarie.
-- [`TrimMemoryRunningCritical`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryRunningCritical/): l'applicazione *deve* rilasciare il maggior numero di processi non critici possibile.
+- [`TrimMemoryRunningModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate): l'applicazione *potrebbe* voler rilasciare alcune risorse non necessarie.
+- [`TrimMemoryRunningLow`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningLow): l'applicazione *deve* rilasciare le risorse non necessarie.
+- [`TrimMemoryRunningCritical`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningCritical): l'applicazione *deve* rilasciare il maggior numero di processi non critici possibile.
 
-Inoltre, quando il processo dell'applicazione viene memorizzato nella cache, le notifiche del livello di memoria seguenti possono essere ricevute dal callback [`OnTrimMemory`](https://developer.xamarin.com/api/member/Android.App.Activity.OnTrimMemory/p/Android.Content.TrimMemory/):
+Inoltre, quando il processo dell'applicazione viene memorizzato nella cache, le notifiche del livello di memoria seguenti possono essere ricevute dal callback [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*):
 
-- [`TrimMemoryBackground`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryBackground/): rilasciare le risorse che possono essere ricreate velocemente e in modo efficiente se l'utente torna all'app.
-- [`TrimMemoryModerate`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryModerate/): il rilascio delle risorse può consentire al sistema di mantenere altri processi memorizzati nella cache per un miglioramento complessivo delle prestazioni.
-- [`TrimMemoryComplete`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryComplete/): il processo dell'applicazione verrà terminato presto se non si recupera velocemente ulteriore memoria.
+- [`TrimMemoryBackground`](xref:Android.Content.ComponentCallbacks2.TrimMemoryBackground): rilasciare le risorse che possono essere ricreate velocemente e in modo efficiente se l'utente torna all'app.
+- [`TrimMemoryModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryModerate): il rilascio delle risorse può consentire al sistema di mantenere altri processi memorizzati nella cache per un miglioramento complessivo delle prestazioni.
+- [`TrimMemoryComplete`](xref:Android.Content.ComponentCallbacks2.TrimMemoryComplete): il processo dell'applicazione verrà terminato presto se non si recupera velocemente ulteriore memoria.
 
 Occorre rispondere alle notifiche rilasciando le risorse in base al livello ricevuto.
 
@@ -219,7 +219,7 @@ Occorre rispondere alle notifiche rilasciando le risorse in base al livello rice
 
 Rilasciare le eventuali risorse usate dall'interfaccia utente dell'app quando l'utente passa a un'altra app, perché ciò può aumentare notevolmente la capacità di Android per i processi memorizzati nella cache, con conseguenti effetti potenziali sulla qualità dell'esperienza utente.
 
-Per ricevere una notifica quando l'utente esce dall'interfaccia utente, implementare il callback [`OnTrimMemory`](https://developer.xamarin.com/api/member/Android.App.Activity.OnTrimMemory/p/Android.Content.TrimMemory/) nelle classi `Activity` e restare in ascolto del livello [`TrimMemoryUiHidden`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryUiHidden/), che indica che l'interfaccia utente è nascosta dalla visualizzazione. Questa notifica viene ricevuta solo quando *tutti* i componenti dell'interfaccia utente dell'applicazione sono nascosti all'utente. Il rilascio delle risorse dell'interfaccia utente quando si riceve questa notifica garantisce che le risorse dell'interfaccia utente siano ancora disponibili per riprendere l'attività se l'utente torna all'interfaccia utente da un'altra attività nell'app.
+Per ricevere una notifica quando l'utente esce dall'interfaccia utente, implementare il callback [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) nelle classi `Activity` e restare in ascolto del livello [`TrimMemoryUiHidden`](xref:Android.Content.ComponentCallbacks2.TrimMemoryUiHidden), che indica che l'interfaccia utente è nascosta dalla visualizzazione. Questa notifica viene ricevuta solo quando *tutti* i componenti dell'interfaccia utente dell'applicazione sono nascosti all'utente. Il rilascio delle risorse dell'interfaccia utente quando si riceve questa notifica garantisce che le risorse dell'interfaccia utente siano ancora disponibili per riprendere l'attività se l'utente torna all'interfaccia utente da un'altra attività nell'app.
 
 <a name="optimizeimages" />
 
@@ -235,7 +235,7 @@ Per altre informazioni, vedere [Ottimizzare le risorse immagine](~/cross-platfor
 
 Per risparmiare memoria, è consigliabile eliminare le risorse immagine di grandi dimensioni non più necessarie. Tuttavia, è importante assicurarsi che le immagini vengano eliminate correttamente. Invece di usare una chiamata esplicita di `.Dispose()`, è possibile sfruttare le istruzioni [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) per garantire un utilizzo corretto degli oggetti `IDisposable`. 
 
-Ad esempio, la classe [Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) implementa `IDisposable`. Il wrapping della creazione dell'istanza di un oggetto `BitMap` in un blocco `using` ne garantisce la corretta eliminazione all'uscita dal blocco:
+Ad esempio, la classe [Bitmap](xref:Android.Graphics.Bitmap) implementa `IDisposable`. Il wrapping della creazione dell'istanza di un oggetto `BitMap` in un blocco `using` ne garantisce la corretta eliminazione all'uscita dal blocco:
 
 ```csharp
 using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallImageByte.Length))
@@ -260,7 +260,7 @@ Nei dispositivi Android i calcoli aritmetici a virgola mobile sono circa due vol
 
 ## <a name="dismiss-dialogs"></a>Chiudere le finestre di dialogo
 
-Quando si usa la classe [`ProgressDialog`](https://developer.xamarin.com/api/type/Android.App.ProgressDialog/) (o qualsiasi finestra di dialogo o avviso), invece di chiamare il metodo [`Hide`](https://developer.xamarin.com/api/member/Android.App.Dialog.Hide()/) una volta soddisfatti gli scopi della finestra di dialogo, chiamare il metodo [`Dismiss`](https://developer.xamarin.com/api/member/Android.App.Dialog.Dismiss()/). In caso contrario, la finestra di dialogo rimane attiva causando perdite di risorse a causa del riferimento in essere all'attività.
+Quando si usa la classe [`ProgressDialog`](xref:Android.App.ProgressDialog) (o qualsiasi finestra di dialogo o avviso), invece di chiamare il metodo [`Hide`](xref:Android.App.Dialog.Hide*) una volta soddisfatti gli scopi della finestra di dialogo, chiamare il metodo [`Dismiss`](xref:Android.App.Dialog.Dismiss*). In caso contrario, la finestra di dialogo rimane attiva causando perdite di risorse a causa del riferimento in essere all'attività.
 
 ## <a name="summary"></a>Riepilogo
 

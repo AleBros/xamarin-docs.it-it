@@ -5,7 +5,7 @@ metadata:
   description: App di esempio multipiattaforma Xamarin per gli sviluppatori per dispositivi mobili.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/26/2018
+  ms.date: 07/30/2019
   ms.topic: sample
 abstract:
   description: 'App e demo di codice di esempio multipiattaforma Xamarin per iniziare a creare app per dispositivi mobili con C# e Xamarin.'

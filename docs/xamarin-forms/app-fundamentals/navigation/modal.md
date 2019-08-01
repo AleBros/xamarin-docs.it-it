@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: cd29e284c45bfe59633dde924e27d8022e8416ba
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329286"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645929"
 ---
 # <a name="xamarinforms-modal-pages"></a>Pagine modali Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
 _Xamarin.Forms supporta le pagine modali. Una pagina modale richiede agli utenti il completamento di un'attività indipendente, dalla quale non è possibile spostarsi fino a quando non viene completata o annullata. Questo articolo illustra come spostarsi tra pagine modali._
 
@@ -262,5 +262,5 @@ In questo articolo è stato illustrato come spostarsi tra pagine modali. Una pag
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) (Spostamenti tra le pagine)
-- [Modal (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/) (Esempio di pagina modale)
-- [Passing Data (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/) (Esempio di passaggio dei dati)
+- [Modal (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal) (Esempio di pagina modale)
+- [Passing Data (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata) (Esempio di passaggio dei dati)

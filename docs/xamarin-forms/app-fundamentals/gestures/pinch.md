@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 2eb6e6f94887301b78f401bf73a4ffaa01559c37
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: be7a145e93aa4720b38921efc895ca3f3f33edb3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059392"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656025"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di avvicinamento delle dita
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 
 _Il movimento di avvicinamento delle dita viene usato per lo zoom interattivo e viene implementato con la classe PinchGestureRecognizer. Uno scenario comune per il movimento di avvicinamento delle dita è l'esecuzione dello zoom interattivo di un'immagine in corrispondenza della posizione di avvicinamento delle dita. Questa operazione viene eseguita modificando in scala il contenuto del riquadro di visualizzazione ed è illustrata in questo articolo._
 
@@ -164,6 +164,6 @@ Questo metodo aggiorna il livello di zoom dell'elemento dell'interfaccia utente 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PinchGesture (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
+- [PinchGesture (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PinchGestureRecognizer](xref:Xamarin.Forms.PinchGestureRecognizer)

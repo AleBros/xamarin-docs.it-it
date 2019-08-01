@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/14/2019
-ms.openlocfilehash: 0642f304589d30284bc8d3577c0383099e349033
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: fbc966fdf1d79ecc9794d2156db81b583694ce36
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513041"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665689"
 ---
 # <a name="create-a-controltemplate"></a>Creare un ControlTemplate
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 
 _È possibile definire i modelli del controllo a livello di applicazione o a livello di pagina. Questo articolo illustra come creare e usare i modelli del controllo._
 
@@ -236,7 +236,7 @@ class MyCustomControl : ContentView
 {
     Label myLabel;
 
-    protected override OnApplyTemplate()
+    protected override void OnApplyTemplate()
     {  
         myLabel = GetTemplateChild("myLabel");
     }
@@ -249,7 +249,7 @@ In questo esempio, viene recuperato l'oggetto [`Label`](xref:Xamarin.Forms.Label
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Stili](~/xamarin-forms/user-interface/styles/index.md)
-- [Simple Theme (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/) (Tema semplice)
+- [Simple Theme (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme) (Tema semplice)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)

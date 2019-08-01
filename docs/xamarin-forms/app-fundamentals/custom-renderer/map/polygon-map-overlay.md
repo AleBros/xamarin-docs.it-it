@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 01db31a797efc4b383f3bda3fbcf3bb91e0d38e1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 45a85c8ac2f40e92078d46f5765aaf2af1518b77
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926045"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650735"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Evidenziazione di una regione su una mappa
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)
 
 _Questo articolo ha illustrato come aggiungere una sovrimpressione poligonale a una mappa per evidenziare un'area della mappa stessa. I poligoni sono forme chiuse con riempimento._
 
@@ -308,6 +308,6 @@ Questo articolo ha illustrato come aggiungere una sovrimpressione poligonale a u
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Polygon Map Overlay (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/) (Sovrimpressione poligonale in una mappa)
+- [Polygon Map Overlay (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon) (Sovrimpressione poligonale in una mappa)
 - [Personalizzazione di una puntina per la mappa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

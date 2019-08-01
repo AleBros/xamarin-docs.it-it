@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8cf6c11675f0f3ddca0d5aea69e5e07160ef8454
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114782"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509215"
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
@@ -137,7 +137,7 @@ Per informazioni sugli altri comandi disponibili, immettere **adb** e leggere i 
 
 ## <a name="writing-to-the-debug-log"></a>Scrittura nel log di debug
 
-È possibile scrivere messaggi nel **log di debug** usando i metodi della classe [Android.Util.Log](https://developer.xamarin.com/api/type/Android.Util.Log/).
+È possibile scrivere messaggi nel **log di debug** usando i metodi della classe [Android.Util.Log](xref:Android.Util.Log).
 Ad esempio: 
 
 ```csharp

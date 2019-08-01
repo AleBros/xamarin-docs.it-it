@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 17e6f4a935924b9c7e282747443bb579d08a5ab9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971255"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651110"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Proprietà di automazione in Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms consente di impostare i valori di accessibilità su elementi dell'interfaccia utente tramite le proprietà associate della classe AutomationProperties, che, a sua volta, imposta valori di accessibilità nativi. Questo articolo illustra come usare la classe AutomationProperties, in modo che un'utilità per la lettura dello schermo possa annunciare gli elementi della pagina._
 
@@ -179,4 +179,4 @@ In Android i valori delle proprietà `AutomationProperties.Name` e/o `Automation
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Proprietà associate](~/xamarin-forms/xaml/attached-properties.md)
-- [Esempio di accessibilità](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [Esempio di accessibilità](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

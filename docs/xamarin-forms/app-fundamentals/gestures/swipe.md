@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ae9b5eb5b768b50ddcbc199040074de855f220de
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059418"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649452"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di scorrimento rapido
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_Il movimento di scorrimento rapido si verifica quando si muove un dito sullo schermo in senso orizzontale o verticale e viene spesso usato per avviare la navigazione nel contenuto. Gli esempi di codice in questo articolo sono tratti da [SwipeGesture](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)._
+_Il movimento di scorrimento rapido si verifica quando si muove un dito sullo schermo in senso orizzontale o verticale e viene spesso usato per avviare la navigazione nel contenuto. Gli esempi di codice in questo articolo sono tratti da [SwipeGesture](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)._
 
 Per fare in modo che un elemento [`View`](xref:Xamarin.Forms.View) riconosca un movimento di scorrimento rapido, creare un'istanza di [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer), impostare la proprietà [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) su un valore di enumerazione [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) (`Left`, `Right`, `Up` o `Down`), se necessario impostare la proprietà [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), gestire l'evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) e aggiungere il nuovo sistema di riconoscimento del movimento alla raccolta [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) per la vista. L'esempio di codice seguente visualizza un `SwipeGestureRecognizer` associato a un elemento [`BoxView`](xref:Xamarin.Forms.BoxView):
 
@@ -207,6 +207,6 @@ Quando [`BoxView`](xref:Xamarin.Forms.BoxView) riceve un movimento di scorriment
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Swipe Gesture (esempio)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+- [Swipe Gesture (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

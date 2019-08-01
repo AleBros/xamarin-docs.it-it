@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 93383376c9167900bd69e43e8d83044bfdc3b607
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8a83fd7fca15214711dd90dcbf80eb0d56a3df34
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924972"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650448"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Associazione di origini video al lettore
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-Quando la proprietà `Source` della visualizzazione di `VideoPlayer` viene impostata su un nuovo file video, la riproduzione del video esistente viene arrestata e inizia il nuovo video. Questa funzionalità è dimostrata dalla pagina **Select Web Video** dell'esempio [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/). La pagina include un controllo `ListView` con i titoli dei tre video a cui fa riferimento il file **App.xaml**:
+Quando la proprietà `Source` della visualizzazione di `VideoPlayer` viene impostata su un nuovo file video, la riproduzione del video esistente viene arrestata e inizia il nuovo video. Questa funzionalità è dimostrata dalla pagina **Select Web Video** dell'esempio [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). La pagina include un controllo `ListView` con i titoli dei tre video a cui fa riferimento il file **App.xaml**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -142,4 +142,4 @@ Come con la prima pagina **Select Web Video**, inizialmente non è selezionato a
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

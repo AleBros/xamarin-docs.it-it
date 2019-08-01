@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3e5db00a73047aaadb1162fa1cc8a21f6e77b3a0
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926200"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650629"
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 I controlli di trasporto di un lettore video includono i pulsanti che eseguono le funzioni di **riproduzione**, **pausa** e **arresto**. Questi pulsanti sono identificati in genere con icone note anziché testo e le funzioni di **riproduzione** e **pausa** sono in genere unite in un unico pulsante.
 
@@ -364,7 +364,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-status-setting"></a>Impostazione di stato Android
 
-La proprietà [`IsPlaying`](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) di `VideoView` Android è un valore booleano che indica solo se il video è in riproduzione o in pausa. Per determinare se `VideoView` non può ancora riprodurre né mettere in pausa il video, è necessario che venga gestito l'evento `Prepared` di `VideoView`. Questi due gestori sono impostati nel metodo `OnElementChanged` e disconnessi durante l'override di `Dispose`:
+La proprietà [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) di `VideoView` Android è un valore booleano che indica solo se il video è in riproduzione o in pausa. Per determinare se `VideoView` non può ancora riprodurre né mettere in pausa il video, è necessario che venga gestito l'evento `Prepared` di `VideoView`. Questi due gestori sono impostati nel metodo `OnElementChanged` e disconnessi durante l'override di `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -660,4 +660,4 @@ In un'applicazione di produzione è probabile che si desideri usare le proprie i
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo lettore video (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [Demo lettore video (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

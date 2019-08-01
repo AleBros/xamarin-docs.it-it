@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: ab48d6d3a463a287af8de7d3926287b799ae43a6
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6cb828f59505159c972d40905f22995055f207df
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926259"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646850"
 ---
 # <a name="xamarinforms-data-templates"></a>Modelli di dati Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Un oggetto DataTemplate viene usato per specificare l'aspetto dei dati nei controlli supportati e in genere è associato ai dati da visualizzare._
 
@@ -35,4 +35,4 @@ Un oggetto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) con
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Modelli di dati (esempio)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+- [Modelli di dati (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

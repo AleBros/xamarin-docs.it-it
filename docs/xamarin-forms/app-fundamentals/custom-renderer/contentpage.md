@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 290cd36f36d86d161b7fc124f8961888ade41955
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925943"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650924"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un elemento ContentPage
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _ContentPage è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo. Questo articolo illustra come creare un renderer personalizzato per la pagina ContentPage che consente agli sviluppatori di eseguire l'override del rendering nativo predefinito usando una personalizzazione specifica della piattaforma._
 
@@ -199,7 +199,7 @@ namespace CustomRenderer.Droid
 
 La chiamata al metodo `OnElementChanged` della classe di base crea un'istanza di un controllo `ViewGroup` Android, ovvero un gruppo di visualizzazioni. Il rendering dello streaming live della fotocamera viene eseguito solo a condizione che il renderer non sia già collegato a un elemento Xamarin.Forms esistente e che sia presente un'istanza della pagina di cui il renderer personalizzato stia eseguendo il rendering.
 
-La pagina viene quindi personalizzata richiamando una serie di metodi che usano l'API `Camera` per consentire lo streaming live dalla fotocamera e la possibilità di scattare una foto prima che venga richiamato il metodo `AddView` per aggiungere l'interfaccia utente dello streaming live della fotocamera al controllo `ViewGroup`. Tenere presente che in Android è anche necessario eseguire l'override del metodo `OnLayout` per eseguire operazioni di misura e layout nella visualizzazione. Per altre informazioni, vedere l'[esempio di renderer ContentPage](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/).
+La pagina viene quindi personalizzata richiamando una serie di metodi che usano l'API `Camera` per consentire lo streaming live dalla fotocamera e la possibilità di scattare una foto prima che venga richiamato il metodo `AddView` per aggiungere l'interfaccia utente dello streaming live della fotocamera al controllo `ViewGroup`. Tenere presente che in Android è anche necessario eseguire l'override del metodo `OnLayout` per eseguire operazioni di misura e layout nella visualizzazione. Per altre informazioni, vedere l'[esempio di renderer ContentPage](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Creazione del renderer di pagina in UWP
 
@@ -257,4 +257,4 @@ Questo articolo ha illustrato come creare un renderer personalizzato per la pagi
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [CustomRendererContentPage (esempio)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+- [CustomRendererContentPage (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

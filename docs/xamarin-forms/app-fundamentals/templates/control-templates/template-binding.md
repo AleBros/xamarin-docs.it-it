@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: e4e67ba63d2040bff264498bc9c00124dfd22164
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 41e5bbc42ccde5cdd5223a7d2cb0a77da66e10c1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926345"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647010"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Associazione da un ControlTemplate Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleThemeWithTemplateBinding/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebinding)
 
 _Le associazioni a modello consentono di associare dati dei controlli di un modello del controllo a proprietà pubbliche, permettendo la modifica intuitiva dei valori delle proprietà dei controlli nel modello del controllo. Questo articolo illustra come usare le associazioni a modello per eseguire data binding da un modello del controllo._
 
@@ -181,8 +181,8 @@ In questo articolo è stato illustrato come usare le associazioni a modello per 
 
 - [Nozioni di base sul data binding](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 - [Da data binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
-- [Simple Theme with Template Binding (sample)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleThemeWithTemplateBinding/) (Esempio di tema semplice con associazione a modello)
-- [Simple Theme with Template Binding and ViewModel (sample)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/) (Esempio di tema semplice con associazione a modello e ViewModel)
+- [Simple Theme with Template Binding (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebinding) (Esempio di tema semplice con associazione a modello)
+- [Simple Theme with Template Binding and ViewModel (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simplethemewithtemplatebindingandviewmodel) (Esempio di tema semplice con associazione a modello e ViewModel)
 - [TemplateBinding](xref:Xamarin.Forms.TemplateBinding)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentView](xref:Xamarin.Forms.ContentView)

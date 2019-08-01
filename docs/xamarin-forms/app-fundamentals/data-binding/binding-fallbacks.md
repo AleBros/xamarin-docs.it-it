@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: 505b5bfb9681e5bc30ff84aa90c8e148ed6db4b1
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 67fd8070ae36bdc1a90b8a33b25f13369d8d995d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058285"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650206"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Fallback per i binding di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 In alcuni casi i data binding non riescono perché l'origine del binding non può essere risolta o perché il binding ha esito positivo ma restituisce un valore `null`. Anche se questi scenari possono essere gestiti con convertitori di valori o altro codice aggiuntivo, i data binding possono essere resi più solidi mediante la definizione di valori di fallback da usare se il processo di binding ha esito negativo. Questa operazione può essere eseguita definendo le proprietà [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) in un'espressione di binding. Dato che queste proprietà risiedono nella classe [`BindingBase`](xref:Xamarin.Forms.BindingBase) possono essere usate con binding, binding compilati e con l'estensione di markup `Binding`.
 
@@ -106,4 +106,4 @@ Quando la proprietà `TargetNullValue` non è impostata in un'espressione di bin
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo sul data binding (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demo sul data binding (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

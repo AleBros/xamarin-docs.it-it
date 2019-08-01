@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 4b50d230be642466de68c54957a3fe9a79c1093b
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ebf29e99e1145c23bf476cb80e068e79f72816f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670948"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643907"
 ---
 # <a name="publishing-an-application"></a>Pubblicazione di un'applicazione
 
@@ -55,7 +55,7 @@ Questa sezione illustra come caricare l'applicazione in uno store, ad esempio in
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [HelloWorldPublishing (sample)](https://developer.xamarin.com/samples/monodroid/HelloWorldPublishing/) (HelloWorldPublishing - Esempio)
+- [HelloWorldPublishing (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing) (HelloWorldPublishing - Esempio)
 - [Processo di compilazione](~/android/deploy-test/building-apps/build-process.md)
 - [Collegamento](~/android/deploy-test/linker.md)
 - [Ottenere una chiave API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)

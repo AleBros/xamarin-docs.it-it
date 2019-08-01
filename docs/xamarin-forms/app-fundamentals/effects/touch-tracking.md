@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: 87542bbd158b8c8ab0f48bb57fa0d19ce8f374c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411765"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651671"
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _Un effetto può definire e richiamare un evento, segnalando le modifiche nella visualizzazione nativa sottostante. Questo articolo illustra come implementare il rilevamento del tocco nel multitouch di basso livello e come generare eventi che segnalino attività tocco._
 
@@ -52,7 +52,7 @@ Per questo motivo, l'effetto di rilevamento del tocco descritto in questo artico
 
 ## <a name="the-touch-tracking-effect-api"></a>API dell'effetto di rilevamento del tocco
 
-L'esempio [**Touch Tracking Effect Demos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) (Demo dell'effetto di rilevamento del tocco) contiene le classi e un'enumerazione che implementano il rilevamento del tocco di basso livello. Questi tipi appartengono allo spazio dei nomi `TouchTracking` e iniziano con la parola `Touch`. Il progetto di libreria .NET Standard **TouchTrackingEffectDemos** include l'enumerazione `TouchActionType` per il tipo di eventi di tocco:
+L'esempio [**Touch Tracking Effect Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) (Demo dell'effetto di rilevamento del tocco) contiene le classi e un'enumerazione che implementano il rilevamento del tocco di basso livello. Questi tipi appartengono allo spazio dei nomi `TouchTracking` e iniziano con la parola `Touch`. Il progetto di libreria .NET Standard **TouchTrackingEffectDemos** include l'enumerazione `TouchActionType` per il tipo di eventi di tocco:
 
 ```csharp
 public enum TouchActionType
@@ -359,7 +359,7 @@ Buona parte della struttura della classe `TouchRecognizer` è simile alla classe
 
 ## <a name="putting-the-touch-effect-to-work"></a>Mettere in azione l'effetto di tocco
 
-Il programma [**TouchTrackingEffectDemos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) contiene cinque pagine di test dell'effetto di rilevamento del tocco per attività comuni.
+Il programma [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) contiene cinque pagine di test dell'effetto di rilevamento del tocco per attività comuni.
 
 La pagina **BoxView Dragging** consente di aggiungere elementi `BoxView` a un `AbsoluteLayout` e quindi di trascinare tali elementi all'interno dello schermo. Il [file XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) crea un'istanza di due visualizzazioni `Button` per l'aggiunta di elementi `BoxView` ad `AbsoluteLayout` e la cancellazione di `AbsoluteLayout`.
 
@@ -809,4 +809,4 @@ Questo articolo ha illustrato come chiamare eventi in un effetto e come scrivere
 
 - [Rilevamento del tocco nel multitouch in iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Rilevamento del tocco nel multitouch in Android](~/android/app-fundamentals/touch/touch-tracking.md)
-- [Effetto di rilevamento del tocco (esempio)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+- [Effetto di rilevamento del tocco (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

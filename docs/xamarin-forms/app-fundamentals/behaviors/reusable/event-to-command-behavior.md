@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 1bb3f319eb104a7425c3be820f5c91efe300737f
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925175"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650905"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior riutilizzabile
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 _I comportamenti possono essere usati per associare comandi a controlli che non sono stati progettati per interagire con i comandi. Questo articolo illustra la creazione e l'uso di un comportamento di Xamarin.Forms per la chiamata di un comando quando viene generato un evento._
 
@@ -35,7 +35,7 @@ Per usare il comportamento, è necessario impostare le proprietà del comportame
 - **Converter**: implementazione di [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) che cambia il formato dei dati dell'argomento dell'evento quando vengono passati tra *origine* e *destinazione* dal motore di binding.
 
 > [!NOTE]
-> `EventToCommandBehavior` è una classe personalizzata disponibile nell'[esempio di comportamento di EventToCommand](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/) e non fa parte di Xamarin.Forms.
+> `EventToCommandBehavior` è una classe personalizzata disponibile nell'[esempio di comportamento di EventToCommand](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior) e non fa parte di Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Creazione del comportamento
 
@@ -208,6 +208,6 @@ Questo articolo ha illustrato l'uso di un comportamento di Xamarin.Forms per la 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [EventToCommand Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/) (Comportamento EventToCommand (esempio))
+- [EventToCommand Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior) (Comportamento EventToCommand (esempio))
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

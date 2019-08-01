@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9ea2b3ddef731efb9e4bf291ec836248c13d6390
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 400075a1cbd2303f2ecddb9b1cc9465bbcbde32d
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113143"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680260"
 ---
 # <a name="profiling-android-apps"></a>Profilatura delle app Android
 
@@ -38,7 +38,7 @@ Android Studio 3.0 e versione successiva include lo strumento Android Profiler. 
 
 ### <a name="launching-a-xamarin-android-app-in-android-profiler"></a>Avvio di un'app Xamarin Android in Android Profiler
 
-I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nello strumento Android Profiler di Android Studio. Negli screenshot di esempio riportati di seguito l'app [XamagonXuzzle](https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/) di Xamarin Forms viene compilata e profilata con Android Profiler:
+I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nello strumento Android Profiler di Android Studio. Negli screenshot di esempio riportati di seguito l'app [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) di Xamarin Forms viene compilata e profilata con Android Profiler:
 
 1.  Nelle opzioni di compilazione del progetto Android disabilitare **Use Shared Runtime** (Usa runtime condiviso). In questo modo si garantisce che il pacchetto dell'applicazione Android (APK) venga compilato senza una dipendenza dal runtime di Mono in fase di sviluppo condiviso.
 

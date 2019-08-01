@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 36f01fb309f174e0ed7c709fb77f133b101ef8e0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 03b9c5f903cea67032a9560754a32ac552635e92
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061093"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653868"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Aggiunta di un sistema di riconoscimento del movimento di panoramica
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 
 _Il movimento di panoramica viene usato per rilevare il movimento delle dita sullo schermo e applicare tale movimento al contenuto e viene implementato con la classe `PanGestureRecognizer`. Uno scenario comune per questo movimento è l'esecuzione di una panoramica in orizzontale e in verticale di un'immagine, in modo da poter vedere tutto il contenuto dell'immagine quando è visualizzata in un viewport più piccolo rispetto alle dimensioni dell'immagine. Questa operazione viene eseguita spostando l'immagine all'interno del viewport ed è illustrata in questo articolo._
 
@@ -151,6 +151,6 @@ Per la panoramica del contenuto in un elemento che non occupa l'intero schermo, 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PanGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/) (Esempio di PanGesture)
+- [PanGesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture) (Esempio di PanGesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

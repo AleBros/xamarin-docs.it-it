@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9c6edddd70fa7a74a72857a94dbed613b5b0d66d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053464"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657143"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Interfaccia di comando di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Nell'architettura Model-View-ViewModel (MVVM), vengono definiti data binding tra le proprietà in ViewModel, che in genere è una classe che deriva da `INotifyPropertyChanged`, e le proprietà in View, che in genere è il file XAML. In alcuni casi un'applicazione ha esigenze che vanno oltre queste associazioni di proprietà, richiedendo che l'utente avvii comandi che hanno un effetto all'interno di ViewModel. Questi comandi vengono in genere segnalati dal clic su un pulsante o dal tocco con un dito e in genere vengono elaborati nel file code-behind in un gestore per l'evento `Clicked` dell'elemento `Button` o per l'evento `Tapped` di un elemento `TapGestureRecognizer`.
 
@@ -86,7 +86,7 @@ Se la condivisione di ViewModel tra Windows e Xamarin.Forms non rappresenta un p
 
 ## <a name="basic-commanding"></a>Esecuzione di comandi di base
 
-La pagina **Person Entry** (Voce persona) nel programma [**Data Binding Demos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo del data binding) illustra alcuni semplici comandi implementati in un elemento ViewModel.
+La pagina **Person Entry** (Voce persona) nel programma [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo del data binding) illustra alcuni semplici comandi implementati in un elemento ViewModel.
 
 `PersonViewModel` definisce tre proprietà, `Name`, `Age` e `Skills`, che definiscono una persona. Questa classe *non* contiene proprietà `ICommand`:
 
@@ -693,7 +693,7 @@ Se si vuole usare l'interfaccia di esecuzione dei comandi con visualizzazioni ch
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Esecuzione dei comandi asincrona per i menu di spostamento
 
-L'esecuzione dei comandi è comoda per l'implementazione dei menu di spostamento, ad esempio per quello del programma [**Data Binding Demo**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo del data binding) stesso. Ecco una parte di **MainPage.xaml**:
+L'esecuzione dei comandi è comoda per l'implementazione dei menu di spostamento, ad esempio per quello del programma [**Data Binding Demo**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo del data binding) stesso. Ecco una parte di **MainPage.xaml**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -767,5 +767,5 @@ I data binding possono essere complessi in alcuni casi, ma, come si è visto in 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Data Binding Demos (esempio)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demo di data binding)
+- [Data Binding Demos (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) (Demo di data binding)
 - [Capitolo sul data binding della documentazione di Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

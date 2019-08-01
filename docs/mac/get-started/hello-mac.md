@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 8f5be75c750a6ee7efc52300382ca2241b87ecd3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855315"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656929"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac - Procedura dettagliata
 
@@ -579,9 +579,9 @@ Con le nozioni di base sull'uso di un'applicazione Xamarin.Mac, vedere i documen
 - [Collection Views](~/mac/user-interface/collection-view.md) (Visualizzazioni raccolta): questo articolo descrive l'uso delle visualizzazioni raccolta in un'applicazione Xamarin.Mac. Viene descritto come creare e gestire le visualizzazioni raccolta in Xcode e Interface Builder, esporre gli elementi della visualizzazione raccolta al codice usando outlet e azioni, popolare le visualizzazioni raccolta e rispondere alle visualizzazioni raccolta nel codice C#.
 - [Working with Images](~/mac/app-fundamentals/image.md) (Uso delle immagini): questo articolo descrive l'uso delle immagini e delle icone in un'applicazione Xamarin.Mac. Viene descritto come creare e gestire le immagini necessarie per creare l'icona di un'app e usare le immagini nel codice C# e in Interface Builder di Xcode.
 
-La [raccolta di esempi Mac](https://developer.xamarin.com/samples/mac/all/) contiene esempi di codice pronti per l'uso per facilitare l'apprendimento di Xamarin.Mac.
+La [raccolta di esempi Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac) contiene esempi di codice pronti per l'uso per facilitare l'apprendimento di Xamarin.Mac.
 
-L'[app di esempio SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/) è un'app Xamarin.Mac completa che include molte delle funzioni che gli utenti si aspettano di trovare in un tipica applicazione Mac. SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
+L'[app di esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter) è un'app Xamarin.Mac completa che include molte delle funzioni che gli utenti si aspettano di trovare in un tipica applicazione Mac. SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
 
 Il codice SourceWriter include tutti i commenti e, dove possibile, sono indicati i collegamenti dalle tecnologie o i metodi principali alle informazioni corrispondenti nella documentazione di Xamarin.Mac.
 
@@ -591,5 +591,5 @@ Questo articolo ha descritto i componenti di base di un'app Xamarin.Mac standard
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, Mac (sample)](https://developer.xamarin.com/samples/mac/Hello_Mac/) (Hello, Mac - Esempio)
+- [Hello, Mac (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac) (Hello, Mac - Esempio)
 - [Linee guida dell'interfaccia umana macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
