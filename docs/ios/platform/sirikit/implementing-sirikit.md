@@ -1,110 +1,110 @@
 ---
-title: Implementazione di SiriKit in xamarin. IOS
-description: Questo documento descrive i passaggi necessari per implementare il supporto di SiriKit in un'App xamarin. IOS. Illustra le estensioni di Intent e interfaccia utente Intent.
+title: Implementazione di SiriKit in Novell. iOS
+description: Questo documento descrive i passaggi necessari per implementare il supporto SiriKit in un'app Novell. iOS. Vengono illustrate le estensioni per gli Intent e le estensioni dell'interfaccia utente.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 7fc675b69132ac41ffa9d87f4b3264de431b11bd
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 78d39b080a136f66c81b48d6cceb5fbdd9d24c11
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865669"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654932"
 ---
-# <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in xamarin. IOS
+# <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in Novell. iOS
 
-_Questo articolo illustra i passaggi necessari per implementare il supporto di SiriKit in un'App xamarin. IOS._
+_Questo articolo illustra i passaggi necessari per implementare il supporto SiriKit in un'app Novell. iOS._
 
-Nuovo ai dispositivi iOS 10, SiriKit consente a un'app xamarin. IOS fornire servizi accessibili all'utente tramite Siri e all'app mappe su un dispositivo iOS. Questo articolo illustra i passaggi necessari per implementare il supporto di SiriKit nelle App xamarin. IOS aggiungendo le estensioni necessarie Intent, estensioni dell'interfaccia utente Intent e vocabolario.
+Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questo articolo illustra i passaggi necessari per implementare il supporto di SiriKit nelle app Novell. iOS aggiungendo le estensioni per Intent, le estensioni dell'interfaccia utente e il vocabolario richiesti.
 
-Siri funziona con il concetto di **domini**, gruppi di conoscono le azioni per le attività correlate. Ogni interazione con l'app con Siri deve rientrare in uno dei domini del servizio noto come indicato di seguito:
+Siri funziona con il concetto di **domini**, gruppi di azioni di conoscenza per le attività correlate. Ogni interazione eseguita dall'app con Siri deve rientrare in uno dei relativi domini di servizio noti, come indicato di seguito:
 
-- Audio o video chiamata.
-- Una questione di prenotazione.
-- La gestione di allenamenti.
+- Chiamata audio o video.
+- Prenotare una corsa.
+- Gestione degli allenamenti.
 - Messaggistica.
 - Ricerca di foto.
-- Inviare o ricevere i pagamenti.
+- Invio o ricezione dei pagamenti.
 
-Quando l'utente effettua una richiesta di Siri con uno dei servizi dell'estensione App, SiriKit invia l'estensione di un **finalità** oggetto che descrive la richiesta dell'utente insieme a eventuali dati di supporto. l'estensione dell'App, quindi genera appropriato **risposta** dell'oggetto per il determinato **finalità**, che riporta in dettaglio come l'estensione può gestire la richiesta.
+Quando l'utente effettua una richiesta di Siri che interessa uno dei servizi dell'estensione dell'app, SiriKit invia all'estensione un oggetto **preventivo** che descrive la richiesta dell'utente insieme a tutti i dati di supporto. l'estensione dell'app genera quindi l'oggetto **Response** appropriato per la **finalità**specificata, in cui viene illustrato in dettaglio il modo in cui l'estensione può gestire la richiesta.
 
-Questa guida presenta un rapido esempio di incluso il supporto di SiriKit in un'app esistente. Ai fini di questo esempio verrà usato l'app MonkeyChat fittizio:
+Questa guida presenta un rapido esempio di inclusione del supporto SiriKit in un'app esistente. Ai fini di questo esempio, si userà l'app Fake MonkeyChat:
 
-[![](implementing-sirikit-images/monkeychat01.png "L'icona MonkeyChat")](implementing-sirikit-images/monkeychat01.png#lightbox)
+[![](implementing-sirikit-images/monkeychat01.png "Icona MonkeyChat")](implementing-sirikit-images/monkeychat01.png#lightbox)
 
-MonkeyChat mantiene il proprio contatto libro di amici dell'utente, ognuno associato a un nome della schermata (ad esempio Bobo, ad esempio) e consente all'utente di inviare testo chat a ogni amico in base al nome della schermata.
+MonkeyChat mantiene il proprio libro di contatto degli amici dell'utente, ognuno associato a un nome di schermata (ad esempio, Bobo) e consente all'utente di inviare chat di testo a ogni amico con il nome dello schermo.
 
-## <a name="extending-the-app-with-sirikit"></a>Estensione dell'App con SiriKit
+## <a name="extending-the-app-with-sirikit"></a>Estensione dell'app con SiriKit
 
-Come illustrato nella [informazioni sui concetti di SiriKit](~/ios/platform/sirikit/understanding-sirikit.md) Guida, sono interessati a estendere un'app con SiriKit tre parti principali:
+Come illustrato nella Guida [Understanding SiriKit Concepts](~/ios/platform/sirikit/understanding-sirikit.md) , sono disponibili tre parti principali per l'estensione di un'app con SiriKit:
 
-[![](implementing-sirikit-images/elements01.png "Estensione dell'App con il diagramma di SiriKit")](implementing-sirikit-images/elements01.png#lightbox)
+[![](implementing-sirikit-images/elements01.png "Estensione dell'app con il diagramma SiriKit")](implementing-sirikit-images/elements01.png#lightbox)
 
 Sono inclusi:
 
-1. **Estensione per Intent** -verificherà le risposte degli utenti, conferma che l'app può gestire la richiesta ed esegue effettivamente l'attività per soddisfare la richiesta dell'utente.
-2. **Estensione per interfaccia utente Intent** - *facoltativo*, fornisce un'interfaccia utente personalizzata per le risposte nell'ambiente di Siri e può visualizzare le App dell'interfaccia utente e della personalizzazione in Siri per arricchire l'esperienza dell'utente.
-3. **App** -fornisce l'App con i vocabolari specifici utente per facilitare l'uso con esso Siri. 
+1. **Estensione** per Intent: verifica le risposte degli utenti, conferma che l'app è in grado di gestire la richiesta ed esegue effettivamente l'attività per soddisfare la richiesta dell'utente.
+2. **Estensione per interfaccia utente Intent**facoltativa, fornisce un'interfaccia utente personalizzata alle risposte nell'ambiente Siri e può portare l'interfaccia utente e la personalizzazione delle app in Siri per arricchire l'esperienza dell'utente. - 
+3. **App** : fornisce l'app con vocabolari specifici dell'utente per facilitare l'uso di Siri. 
 
-Tutti questi elementi e i passaggi per includerli nell'app verrà descritto dettagliatamente nelle sezioni seguenti.
+Tutti questi elementi e i passaggi per includerli nell'app verranno descritti in dettaglio nelle sezioni riportate di seguito.
 
 
-## <a name="preparing-the-app"></a>Preparare l'App
+## <a name="preparing-the-app"></a>Preparazione dell'app
 
-SiriKit si basa sulle estensioni, tuttavia, prima di aggiungere tutte le estensioni per l'app, esistono alcuni aspetti che lo sviluppatore deve fare per facilitare l'adozione di SiriKit.
+SiriKit si basa sulle estensioni, tuttavia, prima di aggiungere estensioni all'app, è necessario che lo sviluppatore richieda l'adozione di SiriKit.
 
-### <a name="moving-common-shared-code"></a>Lo spostamento di codice condiviso comune 
+### <a name="moving-common-shared-code"></a>Trasferimento di codice condiviso comune 
 
-In primo luogo, lo sviluppatore può spostare parte del codice più comune che verrà condivise tra l'app e le estensioni in uno _progetti condivisi_, _librerie di classi portabili (librerie di classi portabili)_ o _nativo Librerie_.
+In primo luogo, lo sviluppatore può spostare parte del codice comune che verrà condiviso tra l'app e le estensioni in _progetti condivisi_, librerie di classi portabili _(classi portabili)_ o _librerie native_.
 
-Le estensioni dovranno essere in grado di eseguire tutte le operazioni che esegue l'app. In termini di app di esempio MonkeyChat cose come trovare i contatti, aggiunta di nuovi contatti, inviare messaggi e recuperare la cronologia dei messaggi.
+Le estensioni dovranno essere in grado di eseguire tutte le operazioni eseguite dall'app. Nei termini dell'app MonkeyChat di esempio, come trovare contatti, aggiungere nuovi contatti, inviare messaggi e recuperare la cronologia dei messaggi.
 
-Spostando il codice comune in un progetto condiviso, libreria di classi Portabile o una raccolta nativa perché semplifica la manutenzione del codice in un'unica posizione comune e garantisce che l'estensione e l'app padre forniscono uniforme esperienze e funzionalità per l'utente.
+Spostando questo codice comune in un progetto condiviso, in una libreria di classi portabile o in una libreria nativa, semplifica la gestione di tale codice in un'unica posizione e garantisce che l'estensione e l'app padre forniscano esperienze e funzionalità uniformi per l'utente.
 
-Nel caso dell'app di esempio MonkeyChat, i modelli di dati e codice per l'elaborazione, ad esempio l'accesso di rete e il database verrà spostati in una libreria nativa.
+Nel caso dell'app di esempio MonkeyChat, i modelli di dati e il codice di elaborazione, ad esempio l'accesso alla rete e al database, verranno spostati in una libreria nativa.
 
 Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Avviare Visual Studio per Mac e aprire l'app MonkeyChat.
-2. Fare clic sul nome della soluzione nel **riquadro della soluzione** e selezionare **Add** > **nuovo progetto...** : 
+2. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **riquadro della soluzione** e scegliere **Aggiungi** > **nuovo progetto...** : 
 
     [![](implementing-sirikit-images/prep01.png "Aggiungere un nuovo progetto")](implementing-sirikit-images/prep01.png#lightbox)
-3. Selezionare **iOS** > **libreria** > **libreria di classi** e fare clic su di **successivo** pulsante: 
+3. Selezionare libreria di**classi** della**libreria** >  **iOS** > e fare clic sul pulsante **Avanti** : 
 
-    [![](implementing-sirikit-images/prep02.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02.png#lightbox)
-4. Immettere `MonkeyChatCommon` per il **Name** e fare clic sui **Create** pulsante: 
+    [![](implementing-sirikit-images/prep02.png "Seleziona libreria di classi")](implementing-sirikit-images/prep02.png#lightbox)
+4. Immettere `MonkeyChatCommon` come **nome** e fare clic sul pulsante **Crea** : 
 
-    [![](implementing-sirikit-images/prep03.png "Immettere nome MonkeyChatCommon")](implementing-sirikit-images/prep03.png#lightbox)
-5. Fare clic sui **riferimenti** cartella dell'app principale nella **Esplora soluzioni** e selezionare **Modifica riferimenti...** . Verificare i **MonkeyChatCommon** sul progetto e scegliere il **OK** pulsante: 
+    [![](implementing-sirikit-images/prep03.png "Immettere MonkeyChatCommon per il nome")](implementing-sirikit-images/prep03.png#lightbox)
+5. Fare clic con il pulsante destro del mouse sulla cartella **riferimenti** dell'app principale nel **Esplora soluzioni** e scegliere **modifica riferimenti.** Controllare il progetto **MonkeyChatCommon** e fare clic sul pulsante **OK** : 
 
-    [![](implementing-sirikit-images/prep05.png "Archiviare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05.png#lightbox)
-6. Nel **Esplora soluzioni**, trascinare il codice comune condiviso dall'app principale per la libreria nativa.
-7. Nel caso di MonkeyChat, trascinare il **DataModels** e **processori** cartelle dall'app principale nella libreria nativa: 
+    [![](implementing-sirikit-images/prep05.png "Controllare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05.png#lightbox)
+6. Nel **Esplora soluzioni**trascinare il codice condiviso comune dall'app principale alla libreria nativa.
+7. Nel caso di MonkeyChat, trascinare le cartelle datamodes e **Processor** dall'app principale nella libreria nativa: 
 
-    [![](implementing-sirikit-images/prep06.png "Le cartelle DataModels e processori in Esplora soluzioni")](implementing-sirikit-images/prep06.png#lightbox)
+    [![](implementing-sirikit-images/prep06.png "Le cartelle datamodes e Processor nella Esplora soluzioni")](implementing-sirikit-images/prep06.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Avviare Visual Studio e aprire l'app MonkeyChat.
-2. Fare clic sul nome della soluzione nel **Esplora soluzioni** e selezionare **Add** > **nuovo progetto...** .
-3. Selezionare **Visual C#**   >  **progetto condiviso** e scegliere il **Avanti** pulsante: 
+2. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo progetto**.
+3.  > Selezionare **progetto condiviso** **visuale C#** e fare clic sul pulsante **Avanti** : 
 
-    [![](implementing-sirikit-images/prep02.w157-sml.png "Selezionare una libreria di classi")](implementing-sirikit-images/prep02.w157.png#lightbox)
-4. Immettere `MonkeyChatCommon` per il **Name** e fare clic sui **Create** pulsante.
-5. Fare clic sui **riferimenti** cartella dell'app principale nella **Esplora soluzioni** e selezionare **Modifica riferimenti...** . Verificare i **MonkeyChatCommon** sul progetto e scegliere il **OK** pulsante: 
+    [![](implementing-sirikit-images/prep02.w157-sml.png "Seleziona libreria di classi")](implementing-sirikit-images/prep02.w157.png#lightbox)
+4. Immettere `MonkeyChatCommon` come **nome** e fare clic sul pulsante **Crea** .
+5. Fare clic con il pulsante destro del mouse sulla cartella **riferimenti** dell'app principale nel **Esplora soluzioni** e scegliere **modifica riferimenti.** Controllare il progetto **MonkeyChatCommon** e fare clic sul pulsante **OK** : 
 
-    [![](implementing-sirikit-images/prep05w.png "Archiviare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png#lightbox)
-6. Nel **Esplora soluzioni**, trascinare il codice comune condiviso dall'app principale nel progetto condiviso.
-7. Nel caso di MonkeyChat, trascinare il **DataModels** e **processori** cartelle dall'app principale nella libreria nativa.
+    [![](implementing-sirikit-images/prep05w.png "Controllare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png#lightbox)
+6. Nel **Esplora soluzioni**trascinare il codice condiviso comune dall'app principale al progetto condiviso.
+7. Nel caso di MonkeyChat, trascinare le cartelle datamodes e **Processor** dall'app principale nella libreria nativa.
 
 -----
 
-Modificare i file che sono state spostate nella libreria nativa e lo spazio dei nomi affinché corrisponda a quello della libreria. Ad esempio, modificando `MonkeyChat` a `MonkeyChatCommon`:
+Modificare i file spostati nella libreria nativa e modificare lo spazio dei nomi in modo che corrisponda a quello della libreria. Ad esempio, `MonkeyChat` modificando `MonkeyChatCommon`in:
 
 ```csharp
 using System;
@@ -123,7 +123,7 @@ namespace MonkeyChatCommon
 }
 ```
 
-Successivamente, tornare all'app principale e aggiungere un `using` istruzione per spazio dei nomi della libreria nativa in qualsiasi punto l'app Usa una delle classi che sono state spostate:
+Tornare quindi all'app principale e aggiungere un' `using` istruzione per lo spazio dei nomi della libreria nativa in qualsiasi punto in cui l'app usa una delle classi che sono state spostate:
 
 ```csharp
 using System;
@@ -145,52 +145,52 @@ namespace MonkeyChat
 }
 ```
 
-### <a name="architecting-the-app-for-extensions"></a>Progettazione di App per le estensioni
+### <a name="architecting-the-app-for-extensions"></a>Architettura dell'app per le estensioni
 
-In genere, un'app effettuerà l'iscrizione per finalità più e lo sviluppatore deve assicurarsi che l'app è progettato per il numero appropriato di estensioni di Intent.
+In genere, un'app si iscrive a più Intent e lo sviluppatore deve assicurarsi che l'applicazione sia progettata per il numero appropriato di estensioni per finalità.
 
-Nel caso in cui un'app richiede più di un Intent, lo sviluppatore ha la possibilità di tutta la gestione preventivo inserimento in un'unica estensione di finalità o la creazione di un'estensione per Intent separato per ogni scopo.
+Nel caso in cui un'app richieda più di un Intent, lo sviluppatore può scegliere di inserire tutte le finalità di gestione in un'estensione per finalità o di creare un'estensione per finalità separate per ogni finalità.
 
-Se si sceglie di creare un'estensione per Intent separato per ogni scopo, lo sviluppatore è stato possibile duplicare una grande quantità di codice boilerplate in ogni estensione e creare una grande quantità di risorse del processore e memoria.
+Se si sceglie di creare un'estensione per finalità separate per ogni finalità, lo sviluppatore potrebbe duplicare una grande quantità di codice standard in ogni estensione e creare una grande quantità di sovraccarico del processore e della memoria.
 
-Per consentire di scegliere tra le due opzioni, vedere se una delle finalità naturalmente formano insieme. Ad esempio, un'app che ha effettuato le chiamate audio e video potrebbe voler includere entrambi tali finalità in un'unica estensione finalità come che devono svolgere attività simili e può fornire il riutilizzo di codice la maggior parte.
+Per facilitare la scelta tra le due opzioni, vedere se una qualsiasi delle finalità appartiene naturalmente insieme. Ad esempio, un'app che ha eseguito chiamate audio e video potrebbe voler includere entrambi gli Intent in una singola estensione per finalità che gestiscono attività simili e potrebbe fornire il riutilizzo del codice.
 
-Per qualsiasi scopo o il gruppo di Intent che non rientrano in un gruppo esistente, creare una nuova estensione per Intent nella soluzione dell'app per contenerli.
+Per finalità o gruppi di Intent che non rientrano in un gruppo esistente, creare una nuova estensione per le finalità nella soluzione dell'app per contenerli.
 
 
-### <a name="setting-the-required-entitlements"></a>Impostare gli Entitlement necessari
+### <a name="setting-the-required-entitlements"></a>Impostazione dei diritti obbligatori
 
-Tutte le app xamarin. IOS che include l'integrazione di SiriKit, devono avere i diritti corretti impostato. Se lo sviluppatore non impostata correttamente questi Entitlement necessari, non saranno in grado di installare o testare le app in iOS reali 10 (o versione successiva) hardware, che è anche requisito poiché iOS 10 simulatore nepodporuje funkci SiriKit.
+Per tutte le app Novell. iOS che includono l'integrazione con SiriKit è necessario impostare i diritti corretti. Se lo sviluppatore non imposta correttamente questi diritti obbligatori, non sarà in grado di installare o testare l'app in un hardware reale iOS 10 (o versione successiva), che è anche un requisito poiché il simulatore iOS 10 non supporta SiriKit.
 
 Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare doppio clic il `Entitlements.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-2. Passare al **origine** scheda.
-3. Aggiungere il `com.apple.developer.siri` **proprietà**, impostare il **tipo** a `Boolean` e il **valore** a `Yes`: 
+1. Fare doppio clic sul `Entitlements.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
+2. Passare alla scheda **origine** .
+3. Aggiungere la `com.apple.developer.siri` **proprietà**, impostare il **tipo** su `Boolean` e il **valore** su `Yes`: 
 
-    [![](implementing-sirikit-images/setup01.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01.png#lightbox)
+    [![](implementing-sirikit-images/setup01.png "Aggiungere la proprietà com. Apple. Developer. Siri")](implementing-sirikit-images/setup01.png#lightbox)
 4. Salvare le modifiche apportate al file.
-5. Fare doppio clic il **File di progetto** nel **Esplora soluzioni** per aprirlo e modificarlo.
-6. Selezionare **firma del Bundle iOS** e assicurarsi che le `Entitlements.plist` Seleziona file nei **Entitlement personalizzati** campo: 
+5. Fare doppio clic sul **file di progetto** nella **Esplora soluzioni** per aprirlo per la modifica.
+6. Selezionare **firma del bundle iOS** e assicurarsi che `Entitlements.plist` il file sia selezionato nel campo dei **diritti personalizzati** : 
 
-    [![](implementing-sirikit-images/setup02.png "Selezionare il file entitlements. plist nel campo Custom Entitlement")](implementing-sirikit-images/setup02.png#lightbox)
+    [![](implementing-sirikit-images/setup02.png "Selezionare il file titles. plist nel campo dei diritti personalizzati")](implementing-sirikit-images/setup02.png#lightbox)
 7. Fare clic su **OK** per salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare doppio clic il `Entitlements.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-2. Aggiungere il `com.apple.developer.siri` **proprietà**, impostare il **tipo** a `Boolean` e il **valore** a `Yes`: 
+1. Fare doppio clic sul `Entitlements.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
+2. Aggiungere la `com.apple.developer.siri` **proprietà**, impostare il **tipo** su `Boolean` e il **valore** su `Yes`: 
 
-    [![](implementing-sirikit-images/setup01w.png "Aggiungere la proprietà com.apple.developer.siri")](implementing-sirikit-images/setup01w.png#lightbox)
+    [![](implementing-sirikit-images/setup01w.png "Aggiungere la proprietà com. Apple. Developer. Siri")](implementing-sirikit-images/setup01w.png#lightbox)
 3. Salvare le modifiche apportate al file.
-4. Fare doppio clic il **File di progetto** nel **Esplora soluzioni** per aprirlo e modificarlo.
-5. Selezionare **firma del Bundle iOS** e assicurarsi che le `Entitlements.plist` Seleziona file nei **Entitlement personalizzati** campo.
+4. Fare doppio clic sul **file di progetto** nella **Esplora soluzioni** per aprirlo per la modifica.
+5. Selezionare **firma del bundle iOS** e assicurarsi che `Entitlements.plist` il file sia selezionato nel campo **diritti personalizzati** .
 
 -----
 
-Al termine, l'app `Entitlements.plist` file dovrebbe essere simile al seguente (in aperto in un editor esterno):
+Al termine, il `Entitlements.plist` file dell'applicazione dovrebbe essere simile al seguente (in aperto in un editor esterno):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -203,68 +203,68 @@ Al termine, l'app `Entitlements.plist` file dovrebbe essere simile al seguente (
 </plist>
 ```
 
-### <a name="correctly-provisioning-the-app"></a>Correttamente il Provisioning dell'App
+### <a name="correctly-provisioning-the-app"></a>Provisioning corretto dell'app
 
-A causa di rigide normative di sicurezza che Apple ha inserito tutto il framework di SiriKit, tutte le app xamarin. IOS che implementa SiriKit _necessario_ hanno l'ID App e i diritti (vedere la sezione precedente) corretta e deve essere firmato con una corretta Profilo di provisioning.
+A causa della rigorosa sicurezza che Apple ha inserito in SiriKit Framework, qualsiasi app Novell. iOS che implementi SiriKit _deve_ avere i diritti e l'ID app corretti (vedere la sezione precedente) e deve essere firmata con un profilo di provisioning appropriato.
 
-Eseguire le operazioni seguenti nel computer Mac:
+Nel Mac eseguire le operazioni seguenti:
 
-1. In un web browser, passare a [ https://developer.apple.com ](https://developer.apple.com) e accedere al proprio account.
+1. In un Web browser passare a [https://developer.apple.com](https://developer.apple.com) e accedere al proprio account.
 2. Fare clic su **certificati**, **identificatori** e **profili**.
-3. Selezionare **profili di Provisioning** e selezionare **App ID**, quindi fare clic sui **+** pulsante.
+3. Selezionare **profili** di provisioning e selezionare **ID app**, quindi fare **+** clic sul pulsante.
 4. Immettere un **nome** per il nuovo profilo.
-5. Immettere un **ID Bundle** seguendo Apple di denominazione del Consiglio.
-6. Scorrere verso il basso il **servizi App** sezione, selezionare **SiriKit** e fare clic sui **continua** pulsante: 
+5. Immettere un **ID bundle** che segue la raccomandazione di denominazione di Apple.
+6. Scorrere verso il basso fino alla sezione **Servizi app** , selezionare **SiriKit** e fare clic sul pulsante **continue (continua** ): 
 
-    [![](implementing-sirikit-images/setup03.png "Selezionare SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
-7. Verificare tutte le impostazioni, quindi **Submit** ID. l'App
-8. Selezionare **profili di Provisioning** > **sviluppo**, fare clic sui **+** pulsante, seleziona il **ID Apple**, quindi fare clic su **continuazione**.
-9. Fare clic sul selettore **tutte**, quindi fare clic su **continua**.
-10. Fare clic su **Seleziona tutto** nuovamente, quindi fare clic su **continua**.
-11. Immettere un **nome profilo** usando Apple di suggerimenti sulla denominazione, quindi fare clic su **continua**.
+    [![](implementing-sirikit-images/setup03.png "Seleziona SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
+7. Verificare tutte le impostazioni, quindi **inviare** l'ID app.
+8. Selezionare > lo**sviluppo**di profili di provisioning **+** , fare clic sul pulsante, selezionare l' **ID Apple**, quindi fare clic su **continua**.
+9. Fare clic su Seleziona **tutto**e quindi su **continua**.
+10. Fare di nuovo clic su **Seleziona tutto** e quindi su **continua**.
+11. Immettere un **nome di profilo** usando i suggerimenti per la denominazione di Apple, quindi fare clic su **continua**.
 12. Avviare Xcode.
-13. Nel menu Xcode selezionare **preferenze...**
-14. Selezionare **conti**, quindi fare clic su di **Visualizza i dettagli...** Pulsante: 
+13. Dal menu Xcode selezionare **Preferenze...**
+14. Selezionare **account**, quindi fare clic su **Visualizza dettagli...** pulsante 
 
-    [![](implementing-sirikit-images/setup04.png "Selezionare gli account")](implementing-sirikit-images/setup04.png#lightbox)
-15. Scegliere il **Scarica tutti i profili** pulsante in basso a sinistra: 
+    [![](implementing-sirikit-images/setup04.png "Seleziona account")](implementing-sirikit-images/setup04.png#lightbox)
+15. Fare clic sul pulsante **Scarica tutti i profili** nell'angolo in basso a sinistra: 
 
     [![](implementing-sirikit-images/setup05.png "Scarica tutti i profili")](implementing-sirikit-images/setup05.png#lightbox)
-16. Verificare che il **profilo di Provisioning** creato sopra è stato installato in Xcode.
-17. Aprire il progetto per aggiungere il supporto di SiriKit per Visual Studio per Mac.
-18. Fare doppio clic il `Info.plist` del file nei **Esplora soluzioni**.
-19. Verificare che il **identificatore del Bundle** corrisponde a quello creato nel portale per sviluppatori Apple sopra: 
+16. Verificare che il **profilo** di provisioning creato in precedenza sia stato installato in Xcode.
+17. Aprire il progetto per aggiungere il supporto SiriKit a in Visual Studio per Mac.
+18. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni**.
+19. Verificare che l' **identificatore del bundle** corrisponda a quello creato nel portale per sviluppatori di Apple sopra: 
 
-    [![](implementing-sirikit-images/setup06.png "L'identificatore del Bundle")](implementing-sirikit-images/setup06.png#lightbox)
-20. Nel **Esplora soluzioni**, selezionare la **progetto**.
-21. Fare clic sul progetto e selezionare **opzioni**.
-22. Selezionare **firma del Bundle iOS**, selezionare la **identità di firma** e **profilo di Provisioning** creato in precedenza: 
+    [![](implementing-sirikit-images/setup06.png "Identificatore del bundle")](implementing-sirikit-images/setup06.png#lightbox)
+20. Nella **Esplora soluzioni**selezionare il **progetto**.
+21. Fare clic con il pulsante destro del mouse sul progetto e scegliere **Opzioni**.
+22. Selezionare **firma del bundle iOS**, selezionare l' **identità di firma** e il profilo di provisioning creato in precedenza: 
 
-    [![](implementing-sirikit-images/setup07.png "Selezionare l'identità di firma e profilo di Provisioning")](implementing-sirikit-images/setup07.png#lightbox)
+    [![](implementing-sirikit-images/setup07.png "Selezionare l'identità di firma e il profilo di provisioning")](implementing-sirikit-images/setup07.png#lightbox)
 23. Fare clic su **OK** per salvare le modifiche.
 
 > [!IMPORTANT]
-> Test SiriKit funziona solo su un reale iOS 10 dispositivi Hardware e non in iOS 10 simulatore. Se verificano problemi di installazione di un SiriKit abilitato app xamarin. IOS sulll'hardware effettivo, verificare che l'Entitlement necessari, l'ID App, identificatore firma e profilo di Provisioning siano state configurate correttamente in Apple Developer Portal e Visual Studio per Mac.
+> Il test di SiriKit funziona solo in un dispositivo hardware iOS 10 reale e non nel simulatore iOS 10. Se si verificano problemi durante l'installazione di un'app Novell. iOS abilitata per SiriKit in un hardware reale, assicurarsi che i diritti obbligatori, l'ID app, l'identificatore di firma e il profilo di provisioning siano stati configurati correttamente nel portale per sviluppatori di Apple e Visual Studio per Mac.
 
-### <a name="requesting-siri-authorization"></a>Richiede l'autorizzazione di Siri
+### <a name="requesting-siri-authorization"></a>Richiesta dell'autorizzazione Siri
 
-Prima che l'app aggiunge specifica terminologia qualsiasi utente o le estensioni di Intent si connette a Siri, è necessario richiede l'autorizzazione da parte dell'utente a Siri di accedere.
+Prima che l'app aggiunga un vocabolario specifico dell'utente o le estensioni per Intent si connette a Siri, deve richiedere l'autorizzazione all'utente per accedere a Siri.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Modificare l'app `Info.plist` file, passare al **origine** consente di visualizzare e aggiungere il `NSSiriUsageDescription` chiave con un valore stringa che descrive come l'app userà Siri e quali tipi di dati verranno inviati. Ad esempio, è possibile che l'app MonkeyChat "contatti MonkeyChat verranno inviati a Siri":
+Modificare il `Info.plist` file dell'app, passare alla visualizzazione **origine** e aggiungere la `NSSiriUsageDescription` chiave con un valore stringa che descrive il modo in cui l'app userà Siri e i tipi di dati che verranno inviati. Ad esempio, l'app MonkeyChat potrebbe indicare che "i contatti MonkeyChat verranno inviati a Siri":
 
-[![](implementing-sirikit-images/request01.png "NSSiriUsageDescription nell'editor Info. plist")](implementing-sirikit-images/request01.png#lightbox)
+[![](implementing-sirikit-images/request01.png "NSSiriUsageDescription nell'editor info. plist")](implementing-sirikit-images/request01.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Modificare l'app `Info.plist` file e aggiungere il `NSSiriUsageDescription` chiave con un valore stringa che descrive come l'app userà Siri e quali tipi di dati verranno inviati. Ad esempio, è possibile che l'app MonkeyChat "contatti MonkeyChat verranno inviati a Siri":
+Modificare il `Info.plist` file dell'app e aggiungere la `NSSiriUsageDescription` chiave con un valore stringa che descrive il modo in cui l'app userà Siri e i tipi di dati che verranno inviati. Ad esempio, l'app MonkeyChat potrebbe indicare che "i contatti MonkeyChat verranno inviati a Siri":
 
-[![](implementing-sirikit-images/request01w.png "NSSiriUsageDescription nell'editor Info. plist")](implementing-sirikit-images/request01w.png#lightbox)
+[![](implementing-sirikit-images/request01w.png "NSSiriUsageDescription nell'editor info. plist")](implementing-sirikit-images/request01w.png#lightbox)
 
 -----
 
-Chiamare il `RequestSiriAuthorization` metodo del `INPreferences` classe al primo avvio dell'app. Modificare il `AppDelegate.cs` classi e rendere il `FinishedLaunching` metodo aspetto simile al seguente:
+Chiamare il `RequestSiriAuthorization` metodo `INPreferences` della classe quando l'app viene avviata per la prima volta. Modificare la `AppDelegate.cs` classe e fare in `FinishedLaunching` modo che il metodo sia simile al seguente:
 
 
 ```csharp
@@ -294,13 +294,13 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-La prima volta, che questo metodo viene chiamato, viene visualizzato un avviso che richiede all'utente di consentire all'app di accedere a Siri. Il messaggio che lo sviluppatore di aggiunta il `NSSiriUsageDescription` sopra verrà visualizzato in questo avviso. Se l'utente inizialmente Nega l'accesso, possono usare la **impostazioni** app per concedere l'accesso all'app.
+La prima volta che viene chiamato questo metodo, viene visualizzato un avviso in cui viene richiesto all'utente di consentire all'app di accedere a Siri. Il messaggio aggiunto `NSSiriUsageDescription` allo sviluppatore precedente verrà visualizzato in questo avviso. Se inizialmente l'utente nega l'accesso, può usare l'app **Impostazioni** per concedere l'accesso all'app.
 
-In qualsiasi momento, l'app può controllare possibilità dell'app di accedere a Siri chiamando il `SiriAuthorizationStatus` metodo di `INPreferences` classe.
+In qualsiasi momento, l'app può controllare la capacità dell'app di accedere a Siri chiamando il `SiriAuthorizationStatus` metodo `INPreferences` della classe.
 
 ### <a name="localization-and-siri"></a>Localizzazione e Siri
 
-In un dispositivo iOS, l'utente è in grado di selezionare una lingua per Siri diverso, quindi l'impostazione predefinita. Quando si lavora con i dati localizzati, l'app dovrà usare il `SiriLanguageCode` metodo di `INPreferences` classe per ottenere il codice della lingua da Siri. Ad esempio:
+In un dispositivo iOS, l'utente è in grado di selezionare una lingua per Siri diversa da quella predefinita del sistema. Quando si lavora con i dati localizzati, l'app deve usare `SiriLanguageCode` il metodo `INPreferences` della classe per ottenere il codice della lingua da Siri. Ad esempio:
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -311,20 +311,20 @@ if (language == "en-US") {
 }
 ```
 
-### <a name="adding-user-specific-vocabulary"></a>Aggiunta utente specifica terminologia
+### <a name="adding-user-specific-vocabulary"></a>Aggiunta del vocabolario specifico dell'utente
 
-La specifica terminologia utente dovrà fornire parole o frasi specifiche dei singoli utenti dell'app. Questi vengono forniti in fase di esecuzione dell'App principale (non le estensioni App) come un set ordinato di termini, ordinati in una priorità di utilizzo più significativa per gli utenti, con i termini più importanti all'inizio dell'elenco.
+Il vocabolario specifico dell'utente fornirà parole o frasi univoche per i singoli utenti dell'app. Questi verranno forniti in fase di esecuzione dall'app principale (non dalle estensioni dell'app) come set ordinato di termini, ordinati in base alla priorità di utilizzo più significativa per gli utenti, con le condizioni più importanti all'inizio dell'elenco.
 
-Utente specifico vocabolario devono appartenere a una delle categorie seguenti:
+Il vocabolario specifico dell'utente deve appartenere a una delle categorie seguenti:
 
-- Nomi di contatti (che non sono gestiti dal framework di contatti).
-- Tag della foto.
-- Nomi degli Album di foto.
-- Per gli allenamenti nomi.
+- Nomi dei contatti (non gestiti dal Framework contacts).
+- Tag foto.
+- Nomi degli album di foto.
+- Nomi degli allenamenti.
 
-Quando si seleziona la terminologia da registrare come vocabolario personalizzato, scegliere solo le condizioni che potrebbero essere frainteso da chiunque non abbia familiarità con l'app. Mai register termini comuni, ad esempio "My allenamento" o "My Album". Ad esempio, l'app MonkeyChat registrerà i nomi alternativi associati a ogni contatto nella rubrica dell'utente.
+Quando si seleziona la terminologia da registrare come vocabolario personalizzato, scegliere solo i termini che potrebbero essere fraintesi da un utente che non ha familiarità con l'app. Non registrare mai termini comuni, ad esempio "My workout" o "My album". Ad esempio, l'app MonkeyChat registrerà i nomi alternativi associati a ogni contatto nella rubrica dell'utente.
 
-L'app fornisce la specifica terminologia utente chiamando il `SetVocabularyStrings` metodo per il `INVocabulary` classe e passando un `NSOrderedSet` raccolta dall'app principale. L'app deve chiamare sempre il `RemoveAllVocabularyStrings` metodo prima, per rimuovere tutte le condizioni esistenti prima di aggiungere quelli nuovi. Ad esempio:
+L'app fornisce il vocabolario specifico dell'utente chiamando `SetVocabularyStrings` il metodo `INVocabulary` della classe e passando una `NSOrderedSet` raccolta dall'app principale. L'app deve sempre chiamare prima `RemoveAllVocabularyStrings` il metodo per rimuovere eventuali termini esistenti prima di aggiungerne di nuovi. Ad esempio:
 
 ```csharp
 using System;
@@ -378,7 +378,7 @@ namespace MonkeyChatCommon
 }
 ```
 
-Con questo codice, si potrebbe essere chiamato come segue:
+Con questo codice, potrebbe essere chiamato come segue:
 
 ```csharp
 using System;
@@ -430,266 +430,266 @@ namespace MonkeyChat
 ```
 
 > [!IMPORTANT]
-> Siri vocabolario personalizzato vengono considerati gli hint e incorporerà come parte della terminologia come possibili. Tuttavia, lo spazio per il vocabolario personalizzato è limitata, pertanto è importante registrare _solo_ la terminologia che potrebbe generare confusione, pertanto ridurre il numero totale di termini registrati al minimo.
+> Siri considera il vocabolario personalizzato come hint e incorpora la maggior parte della terminologia possibile. Tuttavia, lo spazio per il vocabolario personalizzato è limitato rendendo importante la registrazione _solo_ della terminologia che potrebbe creare confusione, mantenendo al minimo il numero totale di condizioni registrate.
 
-Per altre informazioni, vedere la [riferimento vocabolario specifici dell'utente](~/ios/platform/sirikit/understanding-sirikit.md) e di Apple [specifica personalizzata del vocabolario riferimento](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
+Per altre informazioni, vedere il [riferimento al vocabolario specifico dell'utente](~/ios/platform/sirikit/understanding-sirikit.md) e Apple specificando il [riferimento al vocabolario personalizzato](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
-### <a name="adding-app-specific-vocabulary"></a>Aggiunta di vocabolario specifico dell'App
+### <a name="adding-app-specific-vocabulary"></a>Aggiunta del vocabolario specifico dell'app
 
-La specifica terminologia App definisce le parole o frasi specifiche che saranno noto a tutti gli utenti dell'app, ad esempio per gli allenamenti nomi o tipi di veicoli. Poiché questi fanno parte dell'applicazione, vengono definiti un `AppIntentVocabulary.plist` file come parte del bundle dell'app principale. Inoltre, queste parole e frasi devono essere localizzate.
+Il vocabolario specifico dell'app definisce le parole e le frasi specifiche che saranno note a tutti gli utenti dell'app, ad esempio i tipi di veicolo o i nomi degli allenamenti. Poiché queste sono parte dell'applicazione, sono definite in un `AppIntentVocabulary.plist` file come parte del bundle principale dell'app. Inoltre, le parole e le frasi devono essere localizzate.
 
-I termini del vocabolario specifico dell'App devono appartenere a una delle categorie seguenti:
+I termini del vocabolario specifici dell'app devono appartenere a una delle categorie seguenti:
 
-- Recarsi opzioni.
-- Per gli allenamenti nomi.
+- Opzioni di corsa.
+- Nomi degli allenamenti.
 
-Il file di vocabolario specifiche App contiene due chiavi a livello di radice:
+Il file del vocabolario specifico dell'app contiene due chiavi a livello radice:
 
-- `ParameterVocabularies` **Obbligatorio** -definisce condizioni personalizzate e parametri con finalità di si applicano a dell'app.
-- `IntentPhrases` **Facoltativo** -contiene le frasi di esempio usando i termini personalizzati definiti nel `ParameterVocabularies`.
+- `ParameterVocabularies`**Obbligatorio** : definisce i termini e i parametri di finalità personalizzati dell'app a cui si applicano.
+- `IntentPhrases`**Facoltativo** : contiene frasi di esempio che usano i termini personalizzati definiti `ParameterVocabularies`in.
 
-Ogni voce di `ParameterVocabularies` deve specificare una stringa di ID, termine e l'intento di cui si applica il termine. Inoltre, un singolo termine potrebbe riguardare più finalità.
+Ogni voce in `ParameterVocabularies` deve specificare una stringa ID, un termine e l'intento a cui si applica il termine. Inoltre, un singolo termine può essere applicato a più Intent.
 
-Per un elenco completo dei valori accettabili e struttura dei file necessari, vedere di Apple [riferimento sul formato di File vocabolario App](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1).
+Per un elenco completo dei valori accettabili e della struttura dei file necessari, vedere le informazioni di [riferimento sul formato di file](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1)per il vocabolario delle app Apple.
 
-Per aggiungere un `AppIntentVocabulary.plist` file al progetto di app, eseguire le operazioni seguenti:
+Per aggiungere un `AppIntentVocabulary.plist` file al progetto dell'app, eseguire le operazioni seguenti:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare clic sul nome del progetto nel **Esplora soluzioni** e selezionare **Add** > **nuovo File...**   >  **iOS**:
+1. Fare clic con il pulsante destro del mouse sul nome del progetto nella **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo file...**  >  **iOS**:
 
     [![](implementing-sirikit-images/plist01.png "Aggiungere un elenco di proprietà")](implementing-sirikit-images/plist01.png#lightbox)
-2. Fare doppio clic il `AppIntentVocabulary.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-3. Fare clic sui **+** per aggiungere una chiave, impostare il **nome** a `ParameterVocabularies` e il **tipo** a `Array`:
+2. Fare doppio clic sul `AppIntentVocabulary.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
+3. `ParameterVocabularies` `Array` **+** Fare clic su per aggiungere una chiave, impostare il nome su e il **tipo** su:
 
-    [![](implementing-sirikit-images/plist02.png "Impostare il nome su ParameterVocabularies e il tipo di matrice")](implementing-sirikit-images/plist02.png#lightbox)
-4. Espandere `ParameterVocabularies` e fare clic sui **+** pulsante e impostarne il **tipo** a `Dictionary`:
+    [![](implementing-sirikit-images/plist02.png "Impostare il nome su ParameterVocabularies e il tipo su array")](implementing-sirikit-images/plist02.png#lightbox)
+4. Espandere `ParameterVocabularies` e fare clic **+** sul pulsante e impostare il tipo `Dictionary`su:
 
-    [![](implementing-sirikit-images/plist03.png "Impostare il tipo di dizionario")](implementing-sirikit-images/plist03.png#lightbox)
-5. Fare clic sui **+** per aggiungere una nuova chiave, impostare il **nome** a `ParameterNames` e il **tipo** a `Array`:
+    [![](implementing-sirikit-images/plist03.png "Imposta il tipo su Dictionary")](implementing-sirikit-images/plist03.png#lightbox)
+5. `ParameterNames` `Array` **+** Fare clic su per aggiungere una nuova chiave, impostare il nome su e il **tipo** su:
 
-    [![](implementing-sirikit-images/plist04.png "Impostare il nome su ParameterNames e il tipo di matrice")](implementing-sirikit-images/plist04.png#lightbox)
-6. Fare clic sui **+** per aggiungere una nuova chiave con il **tipo** di `String` e il valore come uno dei nomi dei parametri disponibili. Ad esempio, `INStartWorkoutIntent.workoutName`:
+    [![](implementing-sirikit-images/plist04.png "Impostare il nome su ParameterNames e il tipo su array")](implementing-sirikit-images/plist04.png#lightbox)
+6. Fare clic su `String` **peraggiungereunanuovachiaveconiltipoeilvalorecomeunodeinomidiparametro+** disponibili. Ad esempio `INStartWorkoutIntent.workoutName`:
 
-    [![](implementing-sirikit-images/plist05.png "La chiave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05.png#lightbox)
-7. Aggiungere il `ParameterVocabulary` chiave per il `ParameterVocabularies` chiave con il **tipo** di `Array`:
+    [![](implementing-sirikit-images/plist05.png "Chiave INStartWorkoutIntent. workoutname")](implementing-sirikit-images/plist05.png#lightbox)
+7. Aggiungere la `ParameterVocabulary` `ParameterVocabularies` chiave alla chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist06.png "Aggiungere la chiave ParameterVocabulary alla chiave ParameterVocabularies con il tipo di matrice")](implementing-sirikit-images/plist06.png#lightbox)
 8. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
     [![](implementing-sirikit-images/plist07.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist07.png#lightbox)
-9. Aggiungere il `VocabularyItemIdentifier` chiave con il **tipo** di `String` e specificare un ID univoco per il termine:
+9. Aggiungere la `VocabularyItemIdentifier` chiave con il **tipo** di `String` e specificare un ID univoco per il termine:
 
     [![](implementing-sirikit-images/plist08.png "Aggiungere la chiave VocabularyItemIdentifier con il tipo di stringa e specificare un ID univoco")](implementing-sirikit-images/plist08.png#lightbox)
-10. Aggiungere il `VocabularyItemSynonyms` chiave con il **tipo** di `Array`:
+10. Aggiungere la `VocabularyItemSynonyms` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist09.png "Aggiungere la chiave VocabularyItemSynonyms con il tipo di matrice")](implementing-sirikit-images/plist09.png#lightbox)
 11. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
     [![](implementing-sirikit-images/plist10.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist10.png#lightbox)
-12. Aggiungere il `VocabularyItemPhrase` chiave con il **tipo** di `String` e il termine app definisce:
+12. Aggiungere la `VocabularyItemPhrase` chiave con il **tipo** di `String` e il termine definito dall'app:
 
-    [![](implementing-sirikit-images/plist11.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine sta definendo l'app")](implementing-sirikit-images/plist11.png#lightbox)
-13. Aggiungere il `VocabularyItemPronunciation` chiave con il **tipo** di `String` e Pronuncia fonetica del periodo di validità:
+    [![](implementing-sirikit-images/plist11.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine definito dall'app")](implementing-sirikit-images/plist11.png#lightbox)
+13. Aggiungere la `VocabularyItemPronunciation` chiave con il **tipo** `String` e la pronuncia fonetica del termine:
 
-    [![](implementing-sirikit-images/plist12.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del periodo di validità")](implementing-sirikit-images/plist12.png#lightbox)
-14. Aggiungere il `VocabularyItemExamples` chiave con il **tipo** di `Array`:
+    [![](implementing-sirikit-images/plist12.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del termine")](implementing-sirikit-images/plist12.png#lightbox)
+14. Aggiungere la `VocabularyItemExamples` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist13.png "Aggiungere la chiave VocabularyItemExamples con il tipo di matrice")](implementing-sirikit-images/plist13.png#lightbox)
-15. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
+15. Aggiungere alcune `String` chiavi con esempi di utilizzo del termine:
 
     [![](implementing-sirikit-images/plist14.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist14.png#lightbox)
-16. Ripetere i passaggi precedenti per l'app è necessario definire altre condizioni personalizzate.
-17. Comprimi il `ParameterVocabularies` chiave.
-18. Aggiungere il `IntentPhrases` chiave con il **tipo** di `Array`:
+16. Ripetere i passaggi precedenti per tutti gli altri termini personalizzati che l'app deve definire.
+17. Comprime la `ParameterVocabularies` chiave.
+18. Aggiungere la `IntentPhrases` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist15.png "Aggiungere la chiave IntentPhrases con il tipo di matrice")](implementing-sirikit-images/plist15.png#lightbox)
 19. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
     [![](implementing-sirikit-images/plist16.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist16.png#lightbox)
-20. Aggiungere il `IntentName` chiave con il **tipo** di `String` e finalità dell'esempio:
+20. Aggiungere la `IntentName` chiave con il **tipo** `String` e lo scopo per l'esempio:
 
-    [![](implementing-sirikit-images/plist17.png "Aggiungere la chiave IntentName con il tipo di stringa e lo scopo dell'esempio")](implementing-sirikit-images/plist17.png#lightbox)
-21. Aggiungere il `IntentExamples` chiave con il **tipo** di `Array`:
+    [![](implementing-sirikit-images/plist17.png "Aggiungere la chiave intentname con il tipo di stringa e la finalità dell'esempio")](implementing-sirikit-images/plist17.png#lightbox)
+21. Aggiungere la `IntentExamples` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist18.png "Aggiungere la chiave IntentExamples con il tipo di matrice")](implementing-sirikit-images/plist18.png#lightbox)
-22. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
+22. Aggiungere alcune `String` chiavi con esempi di utilizzo del termine:
 
     [![](implementing-sirikit-images/plist19.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist19.png#lightbox)
-23. Ripetere i passaggi precedenti per qualsiasi finalità l'app è necessario fornire esempi di utilizzo di.
+23. Ripetere i passaggi precedenti per gli Intent necessari all'app per fornire esempi di utilizzo di.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare clic sul nome del progetto nel **Esplora soluzioni** e selezionare **Aggiungi > Nuovo elemento... > Apple > elenco proprietà > Info. plist**:
+1. Fare clic con il pulsante destro del mouse sul nome del progetto nella **Esplora soluzioni** e scegliere **Aggiungi > nuovo elemento... > Elenco di proprietà di Apple > > info. plist**:
 
-    [![](implementing-sirikit-images/plist01.w157-sml.png "Aggiungere un nuovo file Info. plist")](implementing-sirikit-images/plist01.w157.png#lightbox)
+    [![](implementing-sirikit-images/plist01.w157-sml.png "Aggiungere un nuovo file INFO. plist")](implementing-sirikit-images/plist01.w157.png#lightbox)
 
-2. Fare doppio clic il `AppIntentVocabulary.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-3. Fare clic sui **+** per aggiungere una chiave, impostare il **nome** a `ParameterVocabularies` e il **tipo** a `Array`:
+2. Fare doppio clic sul `AppIntentVocabulary.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
+3. `ParameterVocabularies` `Array` **+** Fare clic su per aggiungere una chiave, impostare il nome su e il **tipo** su:
 
-    [![](implementing-sirikit-images/plist02w.png "Impostare il nome su ParameterVocabularies e il tipo di matrice")](implementing-sirikit-images/plist02w.png#lightbox)
-4. Espandere `ParameterVocabularies` e fare clic sui **+** pulsante e impostarne il **tipo** a `Dictionary`:
+    [![](implementing-sirikit-images/plist02w.png "Impostare il nome su ParameterVocabularies e il tipo su array")](implementing-sirikit-images/plist02w.png#lightbox)
+4. Espandere `ParameterVocabularies` e fare clic **+** sul pulsante e impostare il tipo `Dictionary`su:
 
-    [![](implementing-sirikit-images/plist03w.png "Impostare il tipo di dizionario")](implementing-sirikit-images/plist03w.png#lightbox)
-5. Fare clic sui **+** per aggiungere una nuova chiave, impostare il **nome** a `ParameterNames` e il **tipo** a `Array`:
+    [![](implementing-sirikit-images/plist03w.png "Imposta il tipo su Dictionary")](implementing-sirikit-images/plist03w.png#lightbox)
+5. `ParameterNames` `Array` **+** Fare clic su per aggiungere una nuova chiave, impostare il nome su e il **tipo** su:
 
-    [![](implementing-sirikit-images/plist04w.png "Impostare il nome su ParameterNames e il tipo di matrice")](implementing-sirikit-images/plist04w.png#lightbox)
-6. Fare clic sui **+** per aggiungere una nuova chiave con il **tipo** di `String` e il valore come uno dei nomi dei parametri disponibili. Ad esempio, `INStartWorkoutIntent.workoutName`:
+    [![](implementing-sirikit-images/plist04w.png "Impostare il nome su ParameterNames e il tipo su array")](implementing-sirikit-images/plist04w.png#lightbox)
+6. Fare clic su `String` **peraggiungereunanuovachiaveconiltipoeilvalorecomeunodeinomidiparametro+** disponibili. Ad esempio `INStartWorkoutIntent.workoutName`:
 
-    [![](implementing-sirikit-images/plist05w.png "La chiave INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05w.png#lightbox)
-7. Aggiungere il `ParameterVocabulary` chiave per il `ParameterVocabularies` chiave con il **tipo** di `Array`:
+    [![](implementing-sirikit-images/plist05w.png "Chiave INStartWorkoutIntent. workoutname")](implementing-sirikit-images/plist05w.png#lightbox)
+7. Aggiungere la `ParameterVocabulary` `ParameterVocabularies` chiave alla chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist06w.png "Aggiungere la chiave ParameterVocabulary alla chiave ParameterVocabularies con il tipo di matrice")](implementing-sirikit-images/plist06w.png#lightbox)
 8. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
     [![](implementing-sirikit-images/plist07w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist07w.png#lightbox)
-9. Aggiungere il `VocabularyItemIdentifier` chiave con il **tipo** di `String` e specificare un ID univoco per il termine:
+9. Aggiungere la `VocabularyItemIdentifier` chiave con il **tipo** di `String` e specificare un ID univoco per il termine:
 
     [![](implementing-sirikit-images/plist08w.png "Aggiungere la chiave VocabularyItemIdentifier con il tipo di stringa e specificare un ID univoco per il termine")](implementing-sirikit-images/plist08w.png#lightbox)
-10. Aggiungere il `VocabularyItemSynonyms` chiave con il **tipo** di `Array`:
+10. Aggiungere la `VocabularyItemSynonyms` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist09w.png "Aggiungere la chiave VocabularyItemSynonyms con il tipo di matrice")](implementing-sirikit-images/plist09w.png#lightbox)
 11. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
     [![](implementing-sirikit-images/plist10w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist10w.png#lightbox)
-12. Aggiungere il `VocabularyItemPhrase` chiave con il **tipo** di `String` e il termine app definisce:
+12. Aggiungere la `VocabularyItemPhrase` chiave con il **tipo** di `String` e il termine definito dall'app:
 
-    [![](implementing-sirikit-images/plist11w.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine sta definendo l'app")](implementing-sirikit-images/plist11w.png#lightbox)
-13. Aggiungere il `VocabularyItemPronunciation` chiave con il **tipo** di `String` e Pronuncia fonetica del periodo di validità:
+    [![](implementing-sirikit-images/plist11w.png "Aggiungere la chiave VocabularyItemPhrase con il tipo di stringa e il termine definito dall'app")](implementing-sirikit-images/plist11w.png#lightbox)
+13. Aggiungere la `VocabularyItemPronunciation` chiave con il **tipo** `String` e la pronuncia fonetica del termine:
 
-    [![](implementing-sirikit-images/plist12w.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del periodo di validità")](implementing-sirikit-images/plist12w.png#lightbox)
-14. Aggiungere il `VocabularyItemExamples` chiave con il **tipo** di `Array`:
+    [![](implementing-sirikit-images/plist12w.png "Aggiungere la chiave VocabularyItemPronunciation con il tipo di stringa e la pronuncia fonetica del termine")](implementing-sirikit-images/plist12w.png#lightbox)
+14. Aggiungere la `VocabularyItemExamples` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist13w.png "Aggiungere la chiave VocabularyItemExamples con il tipo di matrice")](implementing-sirikit-images/plist13w.png#lightbox)
-15. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
+15. Aggiungere alcune `String` chiavi con esempi di utilizzo del termine:
 
     [![](implementing-sirikit-images/plist14w.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist14w.png#lightbox)
-16. Ripetere i passaggi precedenti per l'app è necessario definire altre condizioni personalizzate.
-17. Comprimi il `ParameterVocabularies` chiave.
-18. Aggiungere il `IntentPhrases` chiave con il **tipo** di `Array`:
+16. Ripetere i passaggi precedenti per tutti gli altri termini personalizzati che l'app deve definire.
+17. Comprime la `ParameterVocabularies` chiave.
+18. Aggiungere la `IntentPhrases` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist15w.png "Aggiungere la chiave IntentPhrases con il tipo di matrice")](implementing-sirikit-images/plist15w.png#lightbox)
 19. Aggiungere una nuova chiave con il **tipo** di `Dictionary`:
 
     [![](implementing-sirikit-images/plist16w.png "Aggiungere una nuova chiave con il tipo di dizionario")](implementing-sirikit-images/plist16w.png#lightbox)
-20. Aggiungere il `IntentName` chiave con il **tipo** di `String` e finalità dell'esempio:
+20. Aggiungere la `IntentName` chiave con il **tipo** `String` e lo scopo per l'esempio:
 
-    [![](implementing-sirikit-images/plist17w.png "Aggiungere la chiave IntentName con il tipo di stringa e lo scopo dell'esempio")](implementing-sirikit-images/plist17w.png#lightbox)
-21. Aggiungere il `IntentExamples` chiave con il **tipo** di `Array`:
+    [![](implementing-sirikit-images/plist17w.png "Aggiungere la chiave intentname con il tipo di stringa e la finalità dell'esempio")](implementing-sirikit-images/plist17w.png#lightbox)
+21. Aggiungere la `IntentExamples` chiave con il **tipo** di `Array`:
 
     [![](implementing-sirikit-images/plist18w.png "Aggiungere la chiave IntentExamples con il tipo di matrice")](implementing-sirikit-images/plist18w.png#lightbox)
-22. Aggiungere alcuni `String` chiavi con esempi di utilizzo del termine:
+22. Aggiungere alcune `String` chiavi con esempi di utilizzo del termine:
 
     [![](implementing-sirikit-images/plist19w.png "Aggiungere alcune chiavi di stringa con esempi di utilizzo del termine")](implementing-sirikit-images/plist19w.png#lightbox)
-23. Ripetere i passaggi precedenti per qualsiasi finalità l'app è necessario fornire esempi di utilizzo di.
+23. Ripetere i passaggi precedenti per gli Intent necessari all'app per fornire esempi di utilizzo di.
 
 -----
 
 > [!IMPORTANT]
-> Il `AppIntentVocabulary.plist` verrà registrato con Siri sul test dispositivi durante lo sviluppo e potrebbero richiedere tempo per Siri incorporare il vocabolario personalizzato. Di conseguenza, il tester dovrà attendere qualche minuto prima di provare a testare l'App specifica terminologia quando è stato aggiornato.
+> Il `AppIntentVocabulary.plist` verrà registrato con Siri nei dispositivi di test durante lo sviluppo e potrebbe essere necessario un po' di tempo prima che Siri includa il vocabolario personalizzato. Di conseguenza, il tester dovrà attendere alcuni minuti prima di provare a testare il vocabolario specifico dell'app quando è stato aggiornato.
 
-Per altre informazioni, vedere la [riferimento vocabolario specifico dell'App](~/ios/platform/sirikit/understanding-sirikit.md) e di Apple [specifica personalizzata del vocabolario riferimento](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
+Per altre informazioni, vedere il [riferimento al vocabolario specifico dell'app](~/ios/platform/sirikit/understanding-sirikit.md) e Apple specificando il riferimento al vocabolario [personalizzato](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
 ## <a name="adding-an-intents-extension"></a>Aggiunta di un'estensione per Intent
 
-Ora che l'app è stata preparata ad adottare SiriKit, lo sviluppatore dovrà aggiungere estensioni Intent uno (o più) alla soluzione per gestire i tipi necessari per l'integrazione di Siri.
+Ora che l'app è stata preparata per l'adozione di SiriKit, lo sviluppatore dovrà aggiungere una o più estensioni per Intent alla soluzione per gestire gli Intent necessari per l'integrazione con Siri.
 
-Per ogni estensione per Intent necessari, procedere come segue:
+Per ogni estensione per Intent è necessario eseguire le operazioni seguenti:
 
-- Aggiungere un progetto di estensione per Intent per la soluzione per app xamarin. IOS.
-- Configurare l'estensione per Intent `Info.plist` file.
-- Modificare la classe principale di estensione per Intent.
+- Aggiungere un progetto di estensione per Intent alla soluzione app Novell. iOS.
+- Configurare il file di estensione `Info.plist` per Intent.
+- Modificare la classe principale dell'estensione per Intent.
 
-Per altre informazioni, vedere la [il riferimento all'estensione per Intent](~/ios/platform/sirikit/understanding-sirikit.md) e di Apple [la creazione del riferimento di estensione per Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1).
+Per altre informazioni, vedere le informazioni di [riferimento sull'estensione](~/ios/platform/sirikit/understanding-sirikit.md) per Intent e la pagina relativa alla [creazione del riferimento all'estensione](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1)per Intent.
 
 ### <a name="creating-the-extension"></a>Creazione dell'estensione
 
-Per aggiungere un'estensione per Intent alla soluzione, eseguire le operazioni seguenti:
+Per aggiungere un'estensione per Intent alla soluzione, procedere come segue:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare clic sui **Nome soluzione** nel **riquadro della soluzione** e selezionare **Add** > **Aggiungi nuovo progetto...** .
-2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione per Intent** e fare clic su di **successivo** pulsante: 
+1. Fare clic con il pulsante destro del mouse sul **nome della soluzione** nel **riquadro della soluzione** e scegliere **Aggiungi** > **Aggiungi nuovo progetto.**
+2. Nella finestra di dialogo selezionare**estensioni** > per l'**estensione** **iOS** > e fare clic sul pulsante **Avanti** : 
 
-    [![](implementing-sirikit-images/intents05.png "Selezionare l'estensione per Intent")](implementing-sirikit-images/intents05.png#lightbox)
-3. Immettere quindi una **Name** per l'estensione per Intent e fare clic sul **successivo** pulsante: 
+    [![](implementing-sirikit-images/intents05.png "Seleziona estensione per finalità")](implementing-sirikit-images/intents05.png#lightbox)
+3. Immettere quindi un **nome** per l'estensione finalità e fare clic sul pulsante **Avanti** : 
 
-    [![](implementing-sirikit-images/intents06.png "Immettere un nome per l'estensione per Intent")](implementing-sirikit-images/intents06.png#lightbox)
-4. Infine, fare clic sui **Create** pulsante per aggiungere l'estensione per Intent per la soluzione App: 
+    [![](implementing-sirikit-images/intents06.png "Immettere un nome per l'estensione per finalità")](implementing-sirikit-images/intents06.png#lightbox)
+4. Infine, fare clic sul pulsante **Crea** per aggiungere l'estensione per finalità alla soluzione app: 
 
-    [![](implementing-sirikit-images/intents07.png "Aggiungere l'estensione per Intent alla soluzione di App")](implementing-sirikit-images/intents07.png#lightbox)
-5. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante: 
+    [![](implementing-sirikit-images/intents07.png "Aggiungere l'estensione per finalità alla soluzione app")](implementing-sirikit-images/intents07.png#lightbox)
+5. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** dell'estensione per finalità appena creata. Controllare il nome del progetto di libreria di codice condiviso comune (creato dall'app precedente) e fare clic sul pulsante **OK** : 
 
-    [![](implementing-sirikit-images/intents08.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08.png#lightbox)
+    [![](implementing-sirikit-images/intents08.png "Consente di selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08.png#lightbox)
     
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare clic sui **Nome soluzione** nel **Esplora soluzioni** e selezionare **Add** > **Aggiungi nuovo progetto...** .
-2. Nella finestra di dialogo selezionare **Visual C# > estensioni iOS > estensione per Intent** e fare clic sui **successiva** pulsante:
+1. Fare clic con il pulsante destro del mouse sul **nome della soluzione** nel **Esplora soluzioni** e scegliere **Aggiungi** > **Aggiungi nuovo progetto.**
+2. Nella finestra di dialogo selezionare **Visual C# > iOS Extensions > estensione per finalità** e fare clic sul pulsante **Avanti** :
 
-    [![](implementing-sirikit-images/intents05.w157-sml.png "Selezionare l'estensione per Intent")](implementing-sirikit-images/intents05.w157.png#lightbox)
-3. Immettere quindi un' **Name** per l'estensione per Intent e fare clic sulla **OK** pulsante.
-4. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato e scegliere **Aggiungi > riferimento**. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante:
+    [![](implementing-sirikit-images/intents05.w157-sml.png "Seleziona estensione per finalità")](implementing-sirikit-images/intents05.w157.png#lightbox)
+3. Immettere quindi un **nome** per l'estensione finalità e fare clic sul pulsante **OK** .
+4. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** dell'estensione per Intents appena creata e scegliere **Aggiungi > riferimento**. Controllare il nome del progetto di libreria di codice condiviso comune (creato dall'app precedente) e fare clic sul pulsante **OK** :
 
-    [![](implementing-sirikit-images/intents08w.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08w.png#lightbox)
+    [![](implementing-sirikit-images/intents08w.png "Consente di selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents08w.png#lightbox)
     
 -----
 
-Ripetere questi passaggi per il numero di estensioni di Intent (basato su [architettura dell'App per le estensioni](#architecting-the-app-for-extensions) sezione precedente) che l'app richiederà.
+Ripetere questi passaggi per il numero di estensioni per finalità (basate sull' [architettura dell'app per le estensioni](#architecting-the-app-for-extensions) precedente) richieste dall'app.
 
-### <a name="configuring-the-infoplist"></a>Configurazione di Info. plist
+### <a name="configuring-the-infoplist"></a>Configurazione di info. plist
 
-Per ognuna delle estensioni di Intent che hanno aggiunto alla soluzione dell'app, devono essere configurate nel `Info.plist` file per utilizzarli con l'app.
+Per ogni estensione per Intent che è stata aggiunta alla soluzione dell'app, deve essere configurata nei `Info.plist` file per l'uso con l'app.
 
-Proprio come qualsiasi tipica estensione dell'App, l'app avrà le chiavi esistenti di `NSExtension` e `NSExtensionAttributes`. Per un'estensione per Intent sono disponibili due nuovi attributi che devono essere configurati:
+Analogamente a qualsiasi estensione di app tipica, l'app avrà le chiavi esistenti `NSExtension` di `NSExtensionAttributes`e. Per un'estensione per Intent è necessario configurare due nuovi attributi:
 
 [![](implementing-sirikit-images/intents01.png "I due nuovi attributi che devono essere configurati")](implementing-sirikit-images/intents01.png#lightbox)
 
-- **IntentsSupported** : È obbligatorio ed è costituito da una matrice di nomi di classe Intent che l'app deve supportare dall'estensione per Intent.
-- **IntentsRestrictedWhileLocked** -è una chiave facoltativa per l'app specificare il comportamento dello schermo di blocco dell'estensione. È costituito da una matrice di nomi di classe Intent che l'app deve richiedere all'utente di avere effettuato l'accesso da utilizzare dall'estensione per l'intento.
+- **IntentsSupported** : è obbligatorio ed è costituito da una matrice di nomi di classe Intent che l'app vuole supportare dall'estensione per finalità.
+- **IntentsRestrictedWhileLocked** -chiave facoltativa per l'app per specificare il comportamento della schermata di blocco dell'estensione. È costituito da una matrice di nomi di classe Intent che l'app vuole richiedere che l'utente sia connesso per l'uso dall'estensione per finalità.
 
-Per configurare l'estensione di finalità `Info.plist` file, fare doppio clic su esso nel **Esplora soluzioni** per aprirlo e modificarlo. Successivamente, passare al **origine** consente di visualizzare, quindi espandere il `NSExtension` e `NSExtensionAttributes` chiavi nell'editor:
-
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
-
-[![](implementing-sirikit-images/intents02.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02.png#lightbox)
-
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-[![](implementing-sirikit-images/intents02w.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02w.png#lightbox)
-
------
-
-Espandere il `IntentsSupported` della chiave e aggiungere il nome di una classe con finalità di questa estensione supporta. Per l'app MonkeyChat di esempio, supporta il `INSendMessageIntent`:
+Per configurare il `Info.plist` file dell'estensione Intent, fare doppio clic su di esso nel **Esplora soluzioni** per aprirlo per la modifica. Passare quindi alla visualizzazione **origine** , quindi espandere le `NSExtension` chiavi e `NSExtensionAttributes` nell'Editor:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](implementing-sirikit-images/intents09.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents09.png#lightbox)
+[![](implementing-sirikit-images/intents02.png "Chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](implementing-sirikit-images/intents09w.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents09w.png#lightbox)
+[![](implementing-sirikit-images/intents02w.png "Chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents02w.png#lightbox)
 
 -----
 
-Se l'app, facoltativamente, richiede che l'utente essere connesso al dispositivo per usare uno scopo specifico, espandere il `IntentRestrictedWhileLocked` della chiave e aggiungere i nomi delle classi di Intent che hanno accesso limitato. Per l'app MonkeyChat di esempio, l'utente deve essere connesso per inviare un messaggio di chat, in modo che sono state aggiunte `INSendMessageIntent`:
+Espandere la `IntentsSupported` chiave e aggiungere il nome di una classe di finalità che verrà supportata da questa estensione. Per l'app MonkeyChat di esempio, supporta `INSendMessageIntent`:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](implementing-sirikit-images/intents10.png "La chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10.png#lightbox)
+[![](implementing-sirikit-images/intents09.png "Chiave INSendMessageIntent")](implementing-sirikit-images/intents09.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](implementing-sirikit-images/intents10w.png "La chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10w.png#lightbox)
+[![](implementing-sirikit-images/intents09w.png "Chiave INSendMessageIntent")](implementing-sirikit-images/intents09w.png#lightbox)
+
+-----
+
+Se l'app richiede facoltativamente che l'utente sia connesso al dispositivo per usare un determinato scopo, espandere la `IntentRestrictedWhileLocked` chiave e aggiungere i nomi delle classi degli Intent con accesso limitato. Per l'app MonkeyChat di esempio, l'utente deve essere connesso per inviare un messaggio di chat, quindi è `INSendMessageIntent`stato aggiunto quanto segue:
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
+
+[![](implementing-sirikit-images/intents10.png "Chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10.png#lightbox)
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+[![](implementing-sirikit-images/intents10w.png "Chiave INSendMessageIntent aggiunta")](implementing-sirikit-images/intents10w.png#lightbox)
 
 -----
 
 
-Per un elenco completo di domini con finalità di disponibili, vedere di Apple [finalità domini riferimento](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2).
+Per un elenco completo dei domini per finalità disponibili, vedere le informazioni di [riferimento sui domini Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)di Apple.
 
-### <a name="configuring-the-main-class"></a>Configurare la classe principale
+### <a name="configuring-the-main-class"></a>Configurazione della classe principale
 
-Successivamente, lo sviluppatore sarà necessario configurare la classe principale che funge da punto di ingresso principale per l'estensione per Intent in Siri. Deve essere una sottoclasse di `INExtension` cui è conforme al `IINIntentHandler` delegare. Ad esempio:
+Successivamente, lo sviluppatore dovrà configurare la classe principale che funge da punto di ingresso principale per l'estensione della finalità in Siri. Deve essere una sottoclasse di `INExtension` che è conforme `IINIntentHandler` al delegato. Ad esempio:
 
 ```csharp
 using System;
@@ -724,25 +724,25 @@ namespace MonkeyChatIntents
 }
 ```
 
-È presente un metodo solitari che l'app deve implementare sulla classe principale di estensione per Intent, il `GetHandler` (metodo). Questo metodo viene passato un Intent per SiriKit e l'app deve restituire un **finalità gestore** che corrisponde al tipo dello scopo specifico.
+Esiste un solo metodo solitario che l'app deve implementare nella classe principale dell'estensione Intent, `GetHandler` ovvero il metodo. A questo metodo viene passato un preventivo da SiriKit e l'app deve restituire un **gestore preventivo** corrispondente al tipo della finalità specificata.
 
-Poiché l'app di esempio MonkeyChat gestisce solo un solo intent, restituisce se stesso nel `GetHandler` (metodo). Se l'estensione gestita più di un intent, lo sviluppatore potrebbe aggiungere una classe per ogni tipo intent e restituire un'istanza qui in base il `Intent` passato al metodo.
+Poiché l'app MonkeyChat di esempio gestisce solo una finalità, viene restituita nel `GetHandler` metodo. Se l'estensione ha gestito più finalità, lo sviluppatore aggiunge una classe per ogni tipo di Intent e restituisce un'istanza in base all'oggetto `Intent` passato al metodo.
 
-### <a name="handling-the-resolve-stage"></a>Gestisce la fase di risoluzione
+### <a name="handling-the-resolve-stage"></a>Gestione della fase di risoluzione
 
-La fase di risoluzione è in cui l'estensione per Intent verranno chiarire e convalidare i parametri passati da Siri e sono state impostate tramite conversazioni dell'utente.
+La fase di risoluzione è il punto in cui l'estensione finalità chiarirà e convaliderà i parametri passati da Siri e sarà stata impostata tramite la conversazione dell'utente.
 
-Per ogni parametro che vengono inviato da Siri, sussiste un `Resolve` (metodo). L'app sarà necessario implementare questo metodo per ogni parametro che l'app potrebbe essere necessario della Guida di Siri per ottenere la risposta corretta da parte dell'utente.
+Per ogni parametro che viene inviato da Siri, esiste un `Resolve` metodo. L'app dovrà implementare questo metodo per ogni parametro che l'app potrebbe richiedere alla guida di Siri per ottenere la risposta corretta dall'utente.
 
-Nel caso dell'app MonkeyChat di esempio, l'estensione per Intent richiederanno un uno o più destinatari a cui inviare il messaggio. Per ogni destinatario nell'elenco, l'estensione dovrà eseguire una ricerca di contatto che può avere il risultato seguente:
+Nel caso dell'app MonkeyChat di esempio, l'estensione per finalità richiederà uno o più destinatari a cui inviare il messaggio. Per ogni destinatario nell'elenco, l'estensione dovrà eseguire una ricerca di contatti che può avere il risultato seguente:
 
-- Esattamente un solo contatto corrispondente è stato trovato.
-- Sono disponibili due o più contatti corrispondenti.
-- Viene trovato alcun contatto corrisponda.
+- Viene trovato esattamente un contatto corrispondente.
+- Sono stati trovati due o più contatti corrispondenti.
+- Nessun contatto corrispondente trovato.
 
-Inoltre, MonkeyChat richiede il contenuto per il corpo del messaggio. Se l'utente non ha fornito questo, Siri deve richiedere all'utente per il contenuto.
+Inoltre, MonkeyChat richiede contenuto per il corpo del messaggio. Se l'utente non lo ha specificato, Siri deve richiedere all'utente il contenuto.
 
-L'estensione per Intent dovrà gestire correttamente a ognuno di questi casi.
+L'estensione per finalità dovrà gestire correttamente ognuno di questi casi.
 
 
 ```csharp
@@ -786,11 +786,11 @@ public void ResolveContent (INSendMessageIntent intent, Action<INStringResolutio
 }
 ```
 
-Per altre informazioni, vedere la [il riferimento fase risolvere](~/ios/platform/sirikit/understanding-sirikit.md) e di Apple [Resolving e gestisce gli Intent riferimento](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ResolvingandHandlingIntents.html#//apple_ref/doc/uid/TP40016875-CH5-SW1).
+Per altre informazioni, vedere la Guida di riferimento per [la fase di risoluzione e la risoluzione dei](~/ios/platform/sirikit/understanding-sirikit.md) [problemi di gestione](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ResolvingandHandlingIntents.html#//apple_ref/doc/uid/TP40016875-CH5-SW1)degli Intent in Apple.
 
-### <a name="handling-the-confirm-stage"></a>Gestisce la fase di conferma
+### <a name="handling-the-confirm-stage"></a>Gestione della fase di conferma
 
-La fase di conferma è dove l'estensione per Intent controlla per verificare che dispone di tutte le informazioni per soddisfare la richiesta dell'utente. L'app desidera inviare conferma lungo verrà tutti i dettagli di supporto di ciò che sta per verificarsi a Siri in modo che può essere confermata con l'utente che si tratta dell'azione desiderata.
+La fase di conferma è il punto in cui l'estensione preventivo verifica che disponga di tutte le informazioni per soddisfare la richiesta dell'utente. L'app vuole inviare la conferma insieme a tutti i dettagli di supporto di ciò che sta per succedere a Siri, in modo che possa essere confermata con l'utente che si tratta dell'azione desiderata.
 
 ```csharp
 [Export ("confirmSendMessage:completion:")]
@@ -805,11 +805,11 @@ public void ConfirmSendMessage (INSendMessageIntent intent, Action<INSendMessage
 }
 ```
 
-Per altre informazioni, vedere la [The confermare fase riferimento](~/ios/platform/sirikit/understanding-sirikit.md).
+Per ulteriori informazioni, vedere la Guida di [riferimento per la fase di conferma](~/ios/platform/sirikit/understanding-sirikit.md).
 
-### <a name="processing-the-intent"></a>La finalità di elaborazione
+### <a name="processing-the-intent"></a>Elaborazione della finalità
 
-Questo è il punto in cui l'estensione per Intent esegue effettivamente l'attività per soddisfare la richiesta dell'utente e passare i risultati a Siri in modo che l'utente può essere informato.
+Questo è il punto in cui l'estensione finalità esegue effettivamente l'attività per soddisfare la richiesta dell'utente e passa i risultati a Siri in modo che l'utente possa essere informato.
 
 
 ```csharp
@@ -850,92 +850,92 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 }
 ```
 
-Per altre informazioni, vedere la [The gestire fase riferimento](~/ios/platform/sirikit/understanding-sirikit.md).
+Per altre informazioni, vedere [il riferimento per la fase di handle](~/ios/platform/sirikit/understanding-sirikit.md).
 
 ## <a name="adding-an-intents-ui-extension"></a>Aggiunta di un'estensione per interfaccia utente Intent
 
-L'estensione dell'interfaccia utente Intent facoltativa presenta la possibilità di portare l'interfaccia utente dell'app e informazioni personalizzate distintive nell'esperienza Siri e rendere gli utenti è connessa all'app. Con questa estensione per l'app può portare il marchio, nonché informazioni visual e altri nella trascrizione.
+L'estensione facoltativa dell'interfaccia utente di Intent è la possibilità di portare l'interfaccia utente e la personalizzazione dell'app nell'esperienza Siri e di fare in modo che gli utenti si sentano connessi all'app. Con questa estensione, l'app può portare il marchio, nonché informazioni visive e altre informazioni nella trascrizione.
 
-[![](implementing-sirikit-images/intentsui01.png "Un esempio di output di estensione per interfaccia utente Intent")](implementing-sirikit-images/intentsui01.png#lightbox)
+[![](implementing-sirikit-images/intentsui01.png "Output dell'estensione dell'interfaccia utente di esempio")](implementing-sirikit-images/intentsui01.png#lightbox)
 
-Proprio come l'estensione per Intent, lo sviluppatore eseguirà il passaggio seguente per l'estensione dell'interfaccia utente Intent:
+Analogamente all'estensione per Intent, lo sviluppatore eseguirà il passaggio seguente per l'estensione dell'interfaccia utente Intent:
 
-- Aggiungere un progetto di estensione per interfaccia utente Intent per la soluzione per app xamarin. IOS.
-- Configurare l'estensione dell'interfaccia utente Intent `Info.plist` file.
-- Modificare la classe principale di estensione per interfaccia utente Intent.
+- Aggiungere un progetto di estensione per interfaccia utente Intent alla soluzione app Novell. iOS.
+- Configurare il file di estensione `Info.plist` dell'interfaccia utente di Intent.
+- Modificare la classe principale dell'estensione dell'interfaccia utente di Intent.
 
-Per altre informazioni, vedere la [il riferimento dell'estensione dell'interfaccia utente Intent](~/ios/platform/sirikit/understanding-sirikit.md) e di Apple [fornendo un riferimento all'interfaccia personalizzata](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ProvidingaCustomInterface.html#//apple_ref/doc/uid/TP40016875-CH7-SW1).
+Per ulteriori informazioni, vedere la Guida di [riferimento per l'estensione dell'interfaccia utente Intent](~/ios/platform/sirikit/understanding-sirikit.md) e Apple [fornisce un riferimento all'interfaccia personalizzata](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ProvidingaCustomInterface.html#//apple_ref/doc/uid/TP40016875-CH7-SW1).
 
 ### <a name="creating-the-extension"></a>Creazione dell'estensione
 
-Per aggiungere un'estensione per interfaccia utente Intent per la soluzione, eseguire le operazioni seguenti:
+Per aggiungere un'estensione per interfaccia utente Intent alla soluzione, procedere come segue:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare clic sui **Nome soluzione** nel **riquadro della soluzione** e selezionare **Add** > **Aggiungi nuovo progetto...** .
-2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione dell'interfaccia utente Intent** e fare clic su di **successivo** pulsante: 
+1. Fare clic con il pulsante destro del mouse sul **nome della soluzione** nel **riquadro della soluzione** e scegliere **Aggiungi** > **Aggiungi nuovo progetto.**
+2. Nella finestra di dialogo selezionare estensione **iOS** > **estensioni** > per l'**interfaccia utente** e fare clic sul pulsante **Avanti** : 
 
-    [![](implementing-sirikit-images/intents11.png "Selezionare l'estensione dell'interfaccia utente Intent")](implementing-sirikit-images/intents11.png#lightbox)
-3. Immettere quindi una **Name** per l'estensione per Intent e fare clic sul **successivo** pulsante: 
+    [![](implementing-sirikit-images/intents11.png "Selezionare l'estensione dell'interfaccia utente")](implementing-sirikit-images/intents11.png#lightbox)
+3. Immettere quindi un **nome** per l'estensione finalità e fare clic sul pulsante **Avanti** : 
 
-    [![](implementing-sirikit-images/intents12.png "Immettere un nome per l'estensione per Intent")](implementing-sirikit-images/intents12.png#lightbox)
-4. Infine, fare clic sui **Create** pulsante per aggiungere l'estensione per Intent per la soluzione App: 
+    [![](implementing-sirikit-images/intents12.png "Immettere un nome per l'estensione per finalità")](implementing-sirikit-images/intents12.png#lightbox)
+4. Infine, fare clic sul pulsante **Crea** per aggiungere l'estensione per finalità alla soluzione app: 
 
-    [![](implementing-sirikit-images/intents13.png "Aggiungere l'estensione per Intent alla soluzione di App")](implementing-sirikit-images/intents13.png#lightbox)
-5. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante: 
+    [![](implementing-sirikit-images/intents13.png "Aggiungere l'estensione per finalità alla soluzione app")](implementing-sirikit-images/intents13.png#lightbox)
+5. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** dell'estensione per finalità appena creata. Controllare il nome del progetto di libreria di codice condiviso comune (creato dall'app precedente) e fare clic sul pulsante **OK** : 
 
-    [![](implementing-sirikit-images/intents14.png "Selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents14.png#lightbox)
+    [![](implementing-sirikit-images/intents14.png "Consente di selezionare il nome del progetto di libreria di codice condiviso comune")](implementing-sirikit-images/intents14.png#lightbox)
     
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare clic sui **Nome soluzione** nel **Esplora soluzioni** e selezionare **Add** > **Aggiungi nuovo progetto...**
-2. Nella finestra di dialogo selezionare **iOS** > **estensioni** > **estensione dell'interfaccia utente Intent** e fare clic su di **successivo** pulsante.
-3. Immettere quindi un' **Name** per l'estensione per Intent e fare clic sulla **OK** pulsante.
-4. Nel **Esplora soluzioni**, fare clic sui **riferimenti** cartella dell'estensione per Intent appena creato. Controllare il nome del progetto di libreria il codice condiviso comune (che l'app creata in precedenza) e scegliere il **OK** pulsante.
+1. Fare clic con il pulsante destro del mouse sul **nome della soluzione** nel **Esplora soluzioni** e scegliere **Aggiungi** > **Aggiungi nuovo progetto...**
+2. Nella finestra di dialogo selezionare estensione **iOS** > **estensioni** > per l'**interfaccia utente** e fare clic sul pulsante **Avanti** .
+3. Immettere quindi un **nome** per l'estensione finalità e fare clic sul pulsante **OK** .
+4. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **riferimenti** dell'estensione per finalità appena creata. Controllare il nome del progetto di libreria di codice condiviso comune (creato dall'app precedente) e fare clic sul pulsante **OK** .
     
 -----
 
-### <a name="configuring-the-infoplist"></a>Configurazione di Info. plist
+### <a name="configuring-the-infoplist"></a>Configurazione di info. plist
 
-Configurare l'estensione dell'interfaccia utente Intent `Info.plist` possa funzionare con l'app.
+Configurare il `Info.plist` file dell'estensione dell'interfaccia utente Intent in modo che funzioni con l'app.
 
-Proprio come qualsiasi tipica estensione dell'App, l'app avrà le chiavi esistenti di `NSExtension` e `NSExtensionAttributes`. Per un'estensione per Intent sussiste un nuovo attributo che deve essere configurato:
+Analogamente a qualsiasi estensione di app tipica, l'app avrà le chiavi esistenti `NSExtension` di `NSExtensionAttributes`e. Per un'estensione per Intent è necessario configurare un nuovo attributo:
 
 [![](implementing-sirikit-images/intents03.png "Un nuovo attributo che deve essere configurato")](implementing-sirikit-images/intents03.png#lightbox)
 
-**IntentsSupported** è obbligatorio ed è costituito da una matrice di nomi di classe Intent che l'app desidera supportare dall'estensione per l'intento.
+**IntentsSupported** è obbligatorio ed è costituito da una matrice di nomi di classe Intent che l'app vuole supportare dall'estensione per finalità.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Per configurare l'estensione dell'interfaccia utente Intent `Info.plist` file, fare doppio clic su esso nel **Esplora soluzioni** per aprirlo e modificarlo. Successivamente, passare al **origine** consente di visualizzare, quindi espandere il `NSExtension` e `NSExtensionAttributes` chiavi nell'editor:
+Per configurare il `Info.plist` file dell'estensione dell'interfaccia utente, fare doppio clic su di esso nel **Esplora soluzioni** per aprirlo per la modifica. Passare quindi alla visualizzazione **origine** , quindi espandere le `NSExtension` chiavi e `NSExtensionAttributes` nell'Editor:
 
-[![](implementing-sirikit-images/intents04.png "Le chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04.png#lightbox)
+[![](implementing-sirikit-images/intents04.png "Chiavi NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per configurare l'estensione dell'interfaccia utente Intent `Info.plist` file, fare doppio clic su esso nel **Esplora soluzioni** per aprirlo e modificarlo. Espandere la `NSExtension` e `NSExtensionAttributes` chiavi nell'editor:
+Per configurare il `Info.plist` file dell'estensione dell'interfaccia utente, fare doppio clic su di esso nel **Esplora soluzioni** per aprirlo per la modifica. Espandere le `NSExtension` chiavi `NSExtensionAttributes` e nell'Editor:
 
-[![](implementing-sirikit-images/intents04w.png "Chiavi Tthe NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04w.png#lightbox)
+[![](implementing-sirikit-images/intents04w.png "Chiavi TImpossibile NSExtension e NSExtensionAttributes nell'editor")](implementing-sirikit-images/intents04w.png#lightbox)
 
 -----
 
-Espandere il `IntentsSupported` della chiave e aggiungere il nome di una classe con finalità di questa estensione supporta. Per l'app MonkeyChat di esempio, supporta il `INSendMessageIntent`:
+Espandere la `IntentsSupported` chiave e aggiungere il nome di una classe di finalità che verrà supportata da questa estensione. Per l'app MonkeyChat di esempio, supporta `INSendMessageIntent`:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](implementing-sirikit-images/intents15.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents15.png#lightbox)
+[![](implementing-sirikit-images/intents15.png "Chiave INSendMessageIntent")](implementing-sirikit-images/intents15.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](implementing-sirikit-images/intents15w.png "La chiave INSendMessageIntent")](implementing-sirikit-images/intents15w.png#lightbox)
+[![](implementing-sirikit-images/intents15w.png "Chiave INSendMessageIntent")](implementing-sirikit-images/intents15w.png#lightbox)
 
 -----
 
-Per un elenco completo di domini con finalità di disponibili, vedere di Apple [finalità domini riferimento](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2).
+Per un elenco completo dei domini per finalità disponibili, vedere le informazioni di [riferimento sui domini Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)di Apple.
 
-### <a name="configuring-the-main-class"></a>Configurare la classe principale
+### <a name="configuring-the-main-class"></a>Configurazione della classe principale
 
-Configurare la classe principale che funge da punto di ingresso principale per l'estensione dell'interfaccia utente Intent in Siri. Deve essere una sottoclasse `UIViewController` che è conforme al `IINUIHostedViewController` interfaccia. Ad esempio:
+Configurare la classe principale che funge da punto di ingresso principale per l'estensione dell'interfaccia utente Intent in Siri. Deve essere una sottoclasse di `UIViewController` che è conforme `IINUIHostedViewController` all'interfaccia. Ad esempio:
 
 ```csharp
 using System;
@@ -993,30 +993,30 @@ namespace MonkeyChatIntentsUI
 }
 ```
 
-Siri passerà una `INInteraction` istanza della classe per il `Configure` metodo del `UIViewController` istanza all'interno di estensione per interfaccia utente Intent.
+Siri passerà un' `INInteraction` istanza della classe `Configure` al metodo dell' `UIViewController` istanza all'interno dell'estensione dell'interfaccia utente per finalità.
 
-Il `INInteraction` oggetto fornisce tre tipi principali di informazioni per l'estensione:
+L' `INInteraction` oggetto fornisce tre elementi chiave di informazioni all'estensione:
 
-1. L'oggetto preventivo in fase di elaborazione.
-2. L'oggetto risposta finalità dal `Confirm` e `Handle` metodi di estensione con finalità.
-3. Lo stato di interazione che definisce lo stato dell'interazione tra l'app e Siri.
+1. Oggetto preventivo in fase di elaborazione.
+2. Oggetto di risposta Intent dai `Confirm` metodi `Handle` e dell'estensione per finalità.
+3. Stato di interazione che definisce lo stato dell'interazione tra l'app e Siri.
 
-Il `UIViewController` istanza è la classe di entità per l'interazione con Siri e perché eredita da `UIViewController`, dispone dell'accesso a tutte le funzionalità di UIKit.
+L' `UIViewController` istanza è la classe principale per l'interazione con Siri e, poiché eredita da `UIViewController`, ha accesso a tutte le funzionalità di UIKit.
 
-Quando Siri chiama il `Configure` metodo del `UIViewController` passa in un contesto di visualizzazione che informa che il Controller di visualizzazione verrà sia ospitato in un Siri Snippit o mappe carta.
+Quando Siri chiama il `Configure` metodo dell'oggetto `UIViewController` , viene passato un contesto di visualizzazione che informa che il controller di visualizzazione verrà ospitato in una scheda Siri snippit o maps.
 
-Siri passerà anche in un gestore di completamento che l'app necessario per restituire le dimensioni desiderate della vista, una volta terminata la configurazione dell'app.
+Siri passerà anche un gestore di completamento che l'app deve restituire la dimensione desiderata della visualizzazione al termine della configurazione dell'app.
 
-### <a name="design-the-ui-in-ios-designer"></a>Progettare l'interfaccia utente in iOS Designer
+### <a name="design-the-ui-in-ios-designer"></a>Progettare l'interfaccia utente in iOS designer
 
-Layout dell'interfaccia utente dell'estensione dell'interfaccia utente Intent in iOS Designer. Fare doppio clic dell'estensione `MainInterface.storyboard` del file nei **Esplora soluzioni** per aprirlo e modificarlo. Trascinare in tutti gli elementi dell'interfaccia utente necessari per compilare l'interfaccia utente e salvare le modifiche.
+Layout dell'interfaccia utente dell'estensione per interfaccia utente Intent in iOS designer. Fare doppio clic sul `MainInterface.storyboard` file dell'estensione nella **Esplora soluzioni** per aprirlo per la modifica. Trascinare tutti gli elementi dell'interfaccia utente necessari per compilare l'interfaccia utente e salvare le modifiche.
 
 > [!IMPORTANT]
-> Sebbene sia possibile aggiungere elementi interattivi, ad esempio `UIButtons` oppure `UITextFields` per l'estensione dell'interfaccia utente Intent `UIViewController`, questi vengono rigorosamente non consentiti come l'interfaccia utente Intent in modalità interattiva e l'utente non sarà in grado di interagire con essi.
+> Sebbene sia possibile aggiungere elementi interattivi `UIButtons` `UIViewController`, ad esempio o `UITextFields` , all'estensione dell'interfaccia utente Intent, questi sono rigorosamente proibiti come l'interfaccia utente Intent in non interattivo e l'utente non sarà in grado di interagire con essi.
 
-### <a name="wire-up-the-user-interface"></a>L'interfaccia utente trasmissione-Up
+### <a name="wire-up-the-user-interface"></a>Collegare l'interfaccia utente
 
-Interfaccia utente dell'estensione dell'interfaccia utente Intent creato in iOS Designer, modificare il `UIViewController` sottoclasse ed eseguire l'override di `Configure` metodo come indicato di seguito:
+Con l'interfaccia utente dell'estensione dell'interfaccia utente Intent creata in iOS designer, modificare `UIViewController` la sottoclasse ed `Configure` eseguire l'override del metodo come indicato di seguito:
 
 ```csharp
 [Export ("configureWithInteraction:context:completion:")]
@@ -1037,15 +1037,15 @@ public CGSize DesiredSize ()
 }
 ```
 
-### <a name="overriding-the-default-siri-ui"></a>L'interfaccia utente di Siri predefinito viene sottoposto a override
+### <a name="overriding-the-default-siri-ui"></a>Override dell'interfaccia utente Siri predefinita
 
-L'estensione per interfaccia utente Intent verrà sempre visualizzato insieme ad altro contenuto Siri, ad esempio l'icona dell'app e il nome nella parte superiore dell'interfaccia utente o, in base all'intento, pulsanti, come trasmissione o Annulla, potrebbero essere visualizzati nella parte inferiore.
+L'estensione dell'interfaccia utente Intent verrà sempre visualizzata insieme ad altri contenuti Siri, ad esempio l'icona e il nome dell'app nella parte superiore dell'interfaccia utente o, in base allo scopo, i pulsanti (ad esempio Send o Cancel) potrebbero essere visualizzati in basso.
 
-Sono presenti poche istanze in cui l'app può sostituire le informazioni cui Siri viene visualizzato all'utente per impostazione predefinita, come messaggistica o mappe in cui l'app può sostituire l'utilizzo predefinito con uno su misura per l'app.
+Esistono alcuni casi in cui l'app può sostituire le informazioni che Siri Visualizza all'utente per impostazione predefinita, ad esempio la messaggistica o le mappe in cui l'app può sostituire l'esperienza predefinita con una personalizzata per l'app.
 
-Se l'estensione per interfaccia utente Intent deve eseguire l'override di elementi dell'oggetto default Siri UI, il `UIViewController` sottoclasse dovrà implementare il `IINUIHostedViewSiriProviding` interfaccia e acconsentire esplicitamente alla visualizzazione di un elemento di interfaccia specifica.
+Se l'estensione dell'interfaccia utente Intent deve eseguire l'override degli elementi dell'interfaccia utente Siri `UIViewController` predefinita, la sottoclasse dovrà `IINUIHostedViewSiriProviding` implementare l'interfaccia e acconsentire esplicitamente alla visualizzazione di un particolare elemento di interfaccia.
 
-Aggiungere il codice seguente per il `UIViewController` sottoclasse per indicare a Siri di che l'estensione dell'interfaccia utente Intent è già visualizzato il contenuto del messaggio:
+Aggiungere il codice seguente alla `UIViewController` sottoclasse per indicare a Siri che l'estensione dell'interfaccia utente Intent sta già visualizzando il contenuto del messaggio:
 
 ```csharp
 public bool DisplaysMessage {
@@ -1055,23 +1055,23 @@ public bool DisplaysMessage {
 
 ### <a name="considerations"></a>Considerazioni
 
-Che lo sviluppatore di tenere presente quanto segue account quando si progetta e implementa le estensioni dell'interfaccia utente Intent suggerite da Apple:
+Apple suggerisce che lo sviluppatore prende in considerazione le considerazioni seguenti quando si progettano e implementano le estensioni dell'interfaccia utente per finalità:
 
-- **Essere consapevoli dell'utilizzo della memoria** : le estensioni dell'interfaccia utente Intent perché sono temporanee e visualizzato solo per un breve periodo di tempo, il sistema impone limitazioni di memoria maggiore rispetto a quelle usate con un'app completa.
-- **Prendere in considerazione minimo e massimo delle dimensioni di visualizzazione** -assicurarsi che le estensioni dell'interfaccia utente Intent sembra corretto in ogni tipo di dispositivo iOS, dimensioni e orientamento. Inoltre, le dimensioni desiderate che l'app invia al Siri non potrebbero essere in grado di essere concesso.
-- **Usare, flessibile e modelli di Layout adattivo** , ancora una volta, per garantire che l'interfaccia utente sembra eccezionale su tutti i dispositivi.
+- **Tenere presente l'utilizzo della memoria** : poiché le estensioni dell'interfaccia utente per finalità sono temporanee e vengono visualizzate solo per un breve periodo di tempo, il sistema impone vincoli di memoria più rigidi rispetto a quelli usati con un'applicazione completa.
+- **Prendere in considerazione le dimensioni di visualizzazione minime e massime** : assicurarsi che le estensioni dell'interfaccia utente siano valide per ogni tipo di dispositivo iOS, dimensioni e orientamento. Inoltre, potrebbe non essere possibile concedere le dimensioni desiderate restituite dall'app a Siri.
+- **Usare i modelli di layout flessibili e adattivi** per assicurarsi che l'interfaccia utente abbia un aspetto eccezionale in ogni dispositivo.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato SiriKit e illustrato come può essere aggiunto all'App xamarin. IOS per fornire servizi accessibili all'utente tramite Siri e all'app mappe su un dispositivo iOS.
+Questo articolo ha illustrato SiriKit e come può essere aggiunto alle app Novell. iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [ElizaChat Sample](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
-- [Guida per programmatori di SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
-- [Riferimento a Framework Intent](https://developer.apple.com/reference/intents)
-- [Riferimento a Framework dell'interfaccia utente Intent](https://developer.apple.com/reference/intentsui)
-- [Riferimento a domini preventivo](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)
+- [Esempio ElizaChat](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [Guida alla programmazione di SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
+- [Informazioni di riferimento sul Framework Intent](https://developer.apple.com/reference/intents)
+- [Informazioni di riferimento sul Framework dell'interfaccia utente Intent](https://developer.apple.com/reference/intentsui)
+- [Informazioni di riferimento sui domini Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)

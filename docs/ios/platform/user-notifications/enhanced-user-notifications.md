@@ -1,133 +1,133 @@
 ---
-title: Notifiche utente migliorate in xamarin. IOS
-description: Questo articolo descrive il framework per le notifiche utente introdotto in iOS 10. Illustra le notifiche locali, le notifiche remote, gestione delle notifiche, le azioni di notifica e altro ancora.
+title: Notifiche utente migliorate in Novell. iOS
+description: Questo articolo descrive il framework delle notifiche utente introdotto in iOS 10. Vengono illustrate le notifiche locali, le notifiche remote, la gestione delle notifiche, le azioni di notifica e altro ancora.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: afa20a264e2509a5658cd0d8f90da3148315e803
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 775675e11b85bb53bb51c36b71129a086d9dd60f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865717"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651254"
 ---
-# <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in xamarin. IOS
+# <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in Novell. iOS
 
-Novità di iOS 10, la notifica all'utente consente a framework per il recapito e la gestione delle notifiche locali e remote. Uso di questo framework, un'app o l'estensione dell'App può pianificare il recapito di notifiche locali specificando un set di condizioni, ad esempio posizione o l'ora del giorno.
+Una novità di iOS 10, il Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Usando questo Framework, un'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
 ## <a name="about-user-notifications"></a>Informazioni sulle notifiche utente
 
-Come indicato in precedenza, il nuovo framework di notifica all'utente consente il recapito e la gestione delle notifiche locali e remote. Uso di questo framework, un'app o l'estensione dell'App può pianificare il recapito di notifiche locali specificando un set di condizioni, ad esempio posizione o l'ora del giorno.
+Come indicato in precedenza, il nuovo Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Usando questo Framework, un'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
-Inoltre, l'app o l'estensione può ricevere (e potenzialmente modificare) le notifiche locali e remote quando vengono recapitate al dispositivo iOS dell'utente.
+Inoltre, l'app o l'estensione può ricevere e potenzialmente modificare le notifiche locali e remote quando vengono recapitate al dispositivo iOS dell'utente.
 
-Il nuovo framework di interfaccia utente di notifica utente consente a un'app o l'estensione dell'App per personalizzare l'aspetto delle notifiche locali e remote quando sono presentati all'utente.
+Il nuovo Framework dell'interfaccia utente di notifica utente consente a un'app o all'estensione dell'app di personalizzare l'aspetto delle notifiche locali e remote quando vengono presentate all'utente.
 
-Questo framework offre le seguenti modalità che un'app può recapitare le notifiche a un utente:
+Questo Framework fornisce i metodi seguenti che un'app può recapitare le notifiche a un utente:
 
-- **Avvisi Visual** , in cui la notifica esegue il roll verso il basso dalla parte superiore dello schermo sotto forma di banner.
-- **File audio e alle vibrazioni** -può essere associato a una notifica.
-- **Badge sull'icona di app** - dove l'icona dell'app Visualizza una notifica che mostra che il nuovo contenuto è disponibile, ad esempio il numero di messaggi di posta elettronica non letta.
+- **Avvisi visivi** , in cui la notifica viene spostata verso il basso dalla parte superiore dello schermo come banner.
+- **Audio e vibrazioni** : possono essere associati a una notifica.
+- **Icona dell'app promuovere presso** -dove l'icona dell'app visualizza una notifica che mostra che è disponibile nuovo contenuto, ad esempio il numero di messaggi di posta elettronica non letti.
 
-Inoltre, a seconda del contesto corrente dell'utente, esistono diversi modi in cui verrà visualizzata una notifica:
+Inoltre, a seconda del contesto corrente dell'utente, esistono diversi modi in cui verrà presentata una notifica:
 
-- Se il dispositivo è sbloccato, la notifica viene continuata verso il basso dalla parte superiore dello schermo sotto forma di banner.
+- Se il dispositivo è sbloccato, la notifica verrà visualizzata come banner nella parte superiore della schermata.
 - Se il dispositivo è bloccato, la notifica verrà visualizzata nella schermata di blocco dell'utente.
-- Se l'utente ha perso una notifica, possono aprire il centro notifiche e visualizzare le notifiche di attesa disponibili, non esiste.
+- Se l'utente ha perso una notifica, può aprire il centro notifiche e visualizzare eventuali notifiche in attesa disponibili.
 
-Un'app xamarin. IOS include due tipi di notifiche utente che è in grado di inviare:
+Un'app Novell. iOS include due tipi di notifiche utente che è in grado di inviare:
 
-- **Le notifiche locali** -questi vengono inviati dall'App installate in locale nel dispositivo dell'utente.
-- **Notifiche remote** -vengono inviati da un computer remoto server e presentata all'utente o attivano un aggiornamento in background di contenuto dell'app.
+- **Notifiche locali** : vengono inviate dalle app installate localmente nel dispositivo degli utenti.
+- **Notifiche remote** : vengono inviate da un server remoto e presentate all'utente o attivano un aggiornamento in background del contenuto dell'app.
 
 ### <a name="about-local-notifications"></a>Informazioni sulle notifiche locali
 
-Le notifiche locali che può inviare un'app per iOS sono le funzionalità e gli attributi seguenti:
+Le notifiche locali che un'app per iOS può inviare hanno le seguenti caratteristiche e attributi:
 
-- Vengono inviati dall'App che sono locali nel dispositivo dell'utente. 
-- Sono possono essere configurati per usare tempo o percorso basato su trigger. 
-- L'app consente di pianificare la notifica con il dispositivo dell'utente e viene visualizzato quando viene soddisfatta la condizione del trigger.
-- Quando l'utente interagisce con una notifica, l'applicazione riceverà un callback.
+- Vengono inviati dalle app locali sul dispositivo dell'utente. 
+- Possono essere configurati in modo da usare i trigger time o location based. 
+- L'app pianifica la notifica con il dispositivo dell'utente e viene visualizzata quando viene soddisfatta la condizione del trigger.
+- Quando l'utente interagisce con una notifica, l'app riceverà un callback.
 
-Alcuni esempi delle notifiche locali:
+Di seguito sono riportati alcuni esempi di notifiche locali:
 
 - Avvisi del calendario
-- Avvisi di promemoria
-- Trigger con riconoscimento percorso
+- Avvisi promemoria
+- Trigger con rilevamento della posizione
 
-Per altre informazioni, vedere di Apple [locale e Guida alla programmazione di notifiche Remote](https://developer.apple.com/documentation/usernotifications) documentazione.
+Per ulteriori informazioni, vedere la documentazione della [Guida alla programmazione delle notifiche remote e locali](https://developer.apple.com/documentation/usernotifications) di Apple.
 
-### <a name="about-remote-notifications"></a>Informazioni sulle notifiche Remote
+### <a name="about-remote-notifications"></a>Informazioni sulle notifiche remote
 
-Le notifiche Remote che può inviare un'app per iOS sono le funzionalità e gli attributi seguenti:
+Le notifiche remote che un'app per iOS può inviare presentano le funzionalità e gli attributi seguenti:
 
-- L'app ha un componente sul lato server con cui comunica.
-- Consente la trasmissione di un recapito sforzo di notifiche Remote per il dispositivo dell'utente dai server basati sul cloud per gli sviluppatori di Apple Push Notification Service (APNs).
-- Quando l'app riceve la notifica remota che verrà visualizzato all'utente.
-- Quando l'utente interagisce con la notifica, l'applicazione riceverà un callback.
+- L'app dispone di un componente lato server con cui comunica.
+- Il Apple Push Notification Service (APNs) viene usato per trasmettere al dispositivo dell'utente un recapito ottimale delle notifiche remote dai server basati sul cloud dello sviluppatore.
+- Quando l'app riceve la notifica remota, verrà visualizzata all'utente.
+- Quando l'utente interagisce con la notifica, l'app riceverà un callback.
 
-Alcuni esempi di notifiche Remote:
+Di seguito sono riportati alcuni esempi di notifiche remote:
 
-- Avvisi sulle notizie
-- Aggiornamenti di sport
-- Messaggi di messaggistica immediati
+- Avvisi notizie
+- Aggiornamenti sportivi
+- Messaggi di messaggistica immediata
 
-Sono disponibili due tipi di notifiche Remote a un'app iOS:
+Sono disponibili due tipi di notifiche remote per un'app iOS:
 
-- **Utente con connessione** -i requisiti vengono visualizzati all'utente nel dispositivo.
-- **Aggiornamenti invisibile all'utente** -forniscono un meccanismo per aggiornare il contenuto di un'app per iOS in background. Quando viene ricevuto un aggiornamento invisibile all'utente, l'app può contattare per rimuovere i server a discesa del contenuto più recente.
+- **Interfaccia utente** : vengono visualizzati dall'utente sul dispositivo.
+- **Aggiornamenti automatici** : forniscono un meccanismo per aggiornare il contenuto di un'app iOS in background. Quando viene ricevuto un aggiornamento invisibile all'utente, l'app può raggiungere il contenuto più recente nell'app Rimuovi server.
 
-Per altre informazioni, vedere di Apple [locale e Guida alla programmazione di notifiche Remote](https://developer.apple.com/documentation/usernotifications) documentazione.
+Per ulteriori informazioni, vedere la documentazione della [Guida alla programmazione delle notifiche remote e locali](https://developer.apple.com/documentation/usernotifications) di Apple.
 
-### <a name="about-the-existing-notifications-api"></a>Sulle notifiche API esistente
+### <a name="about-the-existing-notifications-api"></a>Informazioni sull'API delle notifiche esistente
 
-Prima di iOS 10, si userà un'app per iOS `UIApplication` per registrare una notifica con il sistema e per pianificare la modalità di notifica dovrebbe essere attivata (in base al tempo o percorso).
+Prima di iOS 10, un'app per iOS avrebbe `UIApplication` usato per registrare una notifica con il sistema e per pianificare la modalità di attivazione della notifica (in base all'ora o alla posizione).
 
-Esistono diversi problema che lo sviluppatore può verificarsi quando si lavora con l'API di notifica esistente:
+Esistono diversi problemi che uno sviluppatore potrebbe incontrare quando si usa l'API di notifica esistente:
 
-- Si sono verificati diversi callback necessari per locale o remoto notifiche che potrebbe causare la duplicazione del codice.
-- L'app ha un controllo limitato della notifica dopo che è stato pianificato con il sistema.
-- Si sono verificati diversi livelli di supporto in tutte le piattaforme esistenti di Apple.
+- Sono state richieste diverse richiamate per le notifiche locali o remote che potrebbero causare la duplicazione del codice.
+- L'app aveva un controllo limitato della notifica dopo che era stata pianificata con il sistema.
+- Esistono diversi livelli di supporto per tutte le piattaforme esistenti di Apple.
 
-### <a name="about-the-new-user-notification-framework"></a>Sul nuovo Framework di notifica utente
+### <a name="about-the-new-user-notification-framework"></a>Informazioni sul nuovo Framework di notifica utente
 
-Con iOS 10, Apple ha introdotto il nuovo framework di notifica all'utente, che sostituisce l'oggetto esistente `UIApplication` metodo indicato in precedenza.
+Con iOS 10, Apple ha introdotto il nuovo Framework di notifica utente, che sostituisce il `UIApplication` metodo esistente indicato in precedenza.
 
-Il framework di notifica all'utente offre quanto segue:
+Il Framework di notifica utente offre quanto segue:
 
-- Un'API familiare che include la parità di funzionalità con i metodi precedenti, rendendo più semplice al porting del codice dal framework esistenti.
-- Include un'ampia gamma di opzioni relative al contenuto che consente le notifiche più complete da inviare all'utente.
-- Locali e le notifiche Remote possono essere gestite mediante lo stesso codice e i callback.
-- Semplifica il processo di gestione di callback che vengono inviati a un'app quando l'utente interagisce con una notifica.
-- Gestione migliorata delle notifiche in sospeso sia recapitate inclusa la possibilità di rimuovere o aggiornare le notifiche.
-- Aggiunge la possibilità di eseguire operazioni in-app presentazione delle notifiche.
-- Aggiunge la possibilità di pianificare e gestire le notifiche da entro le estensioni dell'App.
-- Aggiunge nuovo punto di estensione per le notifiche stesse. 
+- Un'API familiare che include la parità di funzionalità con i metodi precedenti, semplificando la porta del codice dal Framework esistente.
+- Include un set espanso di opzioni di contenuto che consente l'invio di notifiche più complete all'utente.
+- Le notifiche locali e remote possono essere gestite con lo stesso codice e i callback.
+- Semplifica il processo di gestione dei callback che vengono inviati a un'app quando l'utente interagisce con una notifica.
+- Gestione migliorata delle notifiche in sospeso e recapitate, inclusa la possibilità di rimuovere o aggiornare le notifiche.
+- Aggiunge la possibilità di eseguire la presentazione delle notifiche in-app.
+- Consente di pianificare e gestire le notifiche dall'interno delle estensioni dell'app.
+- Aggiunge un nuovo punto di estensione per le notifiche stesse. 
 
-Il nuovo framework di notifica all'utente fornisce una notifica unified API tra il più delle piattaforme che Apple supporta tra cui: 
+Il nuovo Framework di notifica utente fornisce un'API di notifica unificata sul multiplo di piattaforme supportate da Apple, tra cui: 
 
-- **iOS** -supporto per gestire e pianificare le notifiche completo.
-- **tvOS** -consente di eseguire badge le icone dell'app per le notifiche locali e remote.
-- **watchOS** : aggiunge la possibilità di inoltrare le notifiche dal dispositivo iOS associato dell'utente a loro Apple Watch e offre la possibilità di eseguire le notifiche locali direttamente nel stesso Apple watch App watch.
+- **iOS** : supporto completo per la gestione e la pianificazione delle notifiche.
+- **tvOS** : aggiunge la possibilità di notificare le icone dell'app per le notifiche locali e remote.
+- **watchos** : aggiunge la possibilità di trasmettere le notifiche dal dispositivo iOS associato all'utente alla Apple Watch e fornisce alle app di controllo la possibilità di eseguire notifiche locali direttamente sull'orologio.
 
-Per altre informazioni, vedere di Apple [riferimento a Framework di UserNotifications](https://developer.apple.com/reference/usernotifications) e [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui) documentazione.
+Per ulteriori informazioni, vedere la documentazione di [riferimento di UserNotifications Framework](https://developer.apple.com/reference/usernotifications) e la documentazione di [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui) .
 
 ## <a name="preparing-for-notification-delivery"></a>Preparazione per il recapito delle notifiche
 
-Prima di iOS app può inviare notifiche all'utente che l'app deve essere registrato con il sistema e, trattandosi di una notifica di un'interruzione all'utente, un'app deve richiedere in modo esplicito l'autorizzazione prima di inviarli.
+Prima che un'app iOS possa inviare notifiche all'utente, l'app deve essere registrata con il sistema e, poiché una notifica è un'interruzione dell'utente, un'app deve richiedere esplicitamente l'autorizzazione prima di inviarle.
 
-Esistono tre diversi livelli di richieste di notifica che l'utente può approvare per un'app:
+Sono disponibili tre diversi livelli di richieste di notifica che l'utente può approvare per un'app:
 
-- Banner viene visualizzato.
-- Gli avvisi di suoni.
-- Badge sull'icona dell'app.
+- Visualizzazione banner.
+- Avvisi audio.
+- Promuovere presso l'icona dell'app.
 
-Inoltre, questi livelli di approvazione devono essere richiesto e impostare per le notifiche locali e remote.
+Inoltre, questi livelli di approvazione devono essere richiesti e impostati per le notifiche locali e remote.
 
-Deve essere richieste l'autorizzazione di notifica non appena viene avviata l'app aggiungendo il codice seguente per il `FinishedLaunching` metodo per il `AppDelegate` e impostando il tipo di notifica desiderato (`UNAuthorizationOptions`):
+È necessario richiedere l'autorizzazione di notifica non appena l'app viene avviata aggiungendo il codice seguente `FinishedLaunching` al metodo `AppDelegate` di e impostando il tipo di notifica`UNAuthorizationOptions`desiderato ():
 
 ```csharp
 using UserNotifications;
@@ -144,7 +144,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-Inoltre, un utente può sempre modificare i privilegi di notifica per un'app in qualsiasi momento tramite il **impostazioni** app sul dispositivo. L'app controllerebbe per i privilegi dell'utente notifica richiesta prima di presentare una notifica tramite il codice seguente:
+Inoltre, un utente può sempre modificare i privilegi di notifica per un'app in qualsiasi momento usando l'app **Impostazioni** nel dispositivo. L'app deve verificare i privilegi di notifica richiesti dall'utente prima di presentare una notifica usando il codice seguente:
 
 ```csharp
 // Get current notification settings
@@ -153,64 +153,64 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 });    
 ``` 
 
-### <a name="configuring-the-remote-notifications-environment"></a>Configurazione dell'ambiente notifiche Remote
+### <a name="configuring-the-remote-notifications-environment"></a>Configurazione dell'ambiente di notifiche remote
 
-Nuovo ai dispositivi iOS 10, lo sviluppatore deve informare il sistema operativo qual è l'ambiente Push Notification sono in esecuzione in come lo sviluppo o produzione. Non viene fornito queste informazioni può causare l'app verrà rifiutato quando inviato per l'App Store iTunes con una notifica simile al seguente:
+Una novità di iOS 10, lo sviluppatore deve informare il sistema operativo quali notifiche push dell'ambiente sono in esecuzione in fase di sviluppo o di produzione. L'impossibilità di fornire queste informazioni può causare il rifiuto dell'app quando viene inviata all'App Store di iTune con una notifica simile alla seguente:
 
-> Diritto di notifica Push mancano - l'app include un'API per il servizio di notifica Push di Apple, ma il `aps-environment` entitlement è mancanti dalla firma dell'app.
+> Diritto di notifica push mancante: l'app include un'API per il servizio di notifica push di Apple `aps-environment` , ma il diritto non è presente nella firma dell'app.
 
-Per fornire i diritti necessari, procedere come segue:
+Per fornire i diritti necessari, eseguire le operazioni seguenti:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare doppio clic il `Entitlements.plist` del file nei **riquadro della soluzione** per aprirlo e modificarlo.
-2. Passare al **origine** Vista: 
+1. Fare doppio clic sul `Entitlements.plist` file nella **riquadro della soluzione** per aprirlo per la modifica.
+2. Passare alla visualizzazione **origine** : 
 
-    [![](enhanced-user-notifications-images/setup01.png "La visualizzazione origine")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. Scegliere il **+** pulsante per aggiungere una nuova chiave.
-4. Immettere `aps-environment` per il **proprietà**, lasciare il **tipo** come `String` e immettere uno `development` oppure `production` per il **valore**: 
+    [![](enhanced-user-notifications-images/setup01.png "Visualizzazione origine")](enhanced-user-notifications-images/setup01.png#lightbox)
+3. Fare clic **+** sul pulsante per aggiungere una nuova chiave.
+4. Immettere `aps-environment` per la **proprietà**, lasciare il `development` tipo come `String` e immettere o `production` per il **valore**: 
 
-    [![](enhanced-user-notifications-images/setup02.png "La proprietà aps-environment")](enhanced-user-notifications-images/setup02.png#lightbox)
+    [![](enhanced-user-notifications-images/setup02.png "Proprietà APS-Environment")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. Salvare le modifiche apportate al file.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare doppio clic il `Entitlements.plist` del file nei **Esplora soluzioni** per aprirlo e modificarlo.
-2. Scegliere il **+** pulsante per aggiungere una nuova chiave.
-3. Immettere `aps-environment` per il **proprietà**, lasciare il **tipo** come `String` e immettere uno `development` oppure `production` per il **valore**: 
+1. Fare doppio clic sul `Entitlements.plist` file nella **Esplora soluzioni** per aprirlo per la modifica.
+2. Fare clic **+** sul pulsante per aggiungere una nuova chiave.
+3. Immettere `aps-environment` per la **proprietà**, lasciare il `development` tipo come `String` e immettere o `production` per il **valore**: 
 
-    [![](enhanced-user-notifications-images/setup02w.png "La proprietà aps-environment")](enhanced-user-notifications-images/setup02.png#lightbox)
+    [![](enhanced-user-notifications-images/setup02w.png "Proprietà APS-Environment")](enhanced-user-notifications-images/setup02.png#lightbox)
 4. Salvare le modifiche apportate al file.
 
 -----
 
-### <a name="registering-for-remote-notifications"></a>La registrazione per le notifiche Remote
+### <a name="registering-for-remote-notifications"></a>Registrazione per le notifiche remote
 
-Se l'app verrà l'invio e ricezione di notifiche Remote, sarà comunque necessario eseguire _Token di registrazione_ usando l'oggetto esistente `UIApplication` API. Questa registrazione è necessario il dispositivo deve avere un accesso alla connessione di rete in tempo reale APNs, che genera il token necessario che verrà inviato all'app. L'app deve quindi inoltrare il token dell'app lato server per gli sviluppatori per la registrazione per notifiche remote:
+Se l'app invierà e riceverà notifiche remote, sarà comunque necessario eseguire la _registrazione del token_ usando l'API `UIApplication` esistente. Questa registrazione richiede che il dispositivo disponga di un accesso alla connessione di rete in tempo reale APNs, che genererà il token necessario che verrà inviato all'app. L'app deve quindi inviare questo token all'app lato server dello sviluppatore per eseguire la registrazione per le notifiche remote:
 
-[![](enhanced-user-notifications-images/token01.png "Panoramica di registrazione del token")](enhanced-user-notifications-images/token01.png#lightbox)
+[![](enhanced-user-notifications-images/token01.png "Cenni preliminari sulla registrazione di token")](enhanced-user-notifications-images/token01.png#lightbox)
 
-Usare il codice seguente per inizializzare la registrazione richiesti:
+Usare il codice seguente per inizializzare la registrazione richiesta:
 
 ```csharp
 UIApplication.SharedApplication.RegisterForRemoteNotifications ();
 ```
 
-Il token che venga inviato all'app sul lato server per gli sviluppatori dovrà essere incluso come parte del Payload di notifica che get inviati dal server al servizio APN quando si invia una notifica remota:
+Il token che viene inviato all'app lato server dello sviluppatore deve essere incluso come parte del payload di notifica inviato dal server a APNs quando si invia una notifica remota:
 
-[![](enhanced-user-notifications-images/token02.png "Il token incluso come parte del Payload della notifica")](enhanced-user-notifications-images/token02.png#lightbox)
+[![](enhanced-user-notifications-images/token02.png "Token incluso come parte del payload di notifica")](enhanced-user-notifications-images/token02.png#lightbox)
 
-Il token funge da chiave che collega la notifica e l'app usata per aprire o rispondere alla notifica.
+Il token funge da chiave che unisce la notifica e l'app usata per aprire o rispondere alla notifica.
 
-Per altre informazioni, vedere di Apple [locale e Guida alla programmazione di notifiche Remote](https://developer.apple.com/documentation/usernotifications) documentazione.
+Per ulteriori informazioni, vedere la documentazione della [Guida alla programmazione delle notifiche remote e locali](https://developer.apple.com/documentation/usernotifications) di Apple.
 
 ## <a name="notification-delivery"></a>Recapito delle notifiche
 
-Con l'app è completamente registrato e le autorizzazioni necessarie richiedano dal e concesso dall'utente, l'app è ora pronto per inviare e ricevere le notifiche. 
+Con l'app completamente registrata e le autorizzazioni necessarie richieste e concesse dall'utente, l'app è ora pronta per l'invio e la ricezione di notifiche. 
 
-### <a name="providing-notification-content"></a>Specificare il contenuto di notifica
+### <a name="providing-notification-content"></a>Fornire il contenuto delle notifiche
 
-Nuovo ai dispositivi iOS 10, tutte le notifiche contengono entrambe una **titolo** e **sottotitolo** che verrà sempre visualizzata con il **corpo** del contenuto della notifica. Nuova, è anche la possibilità di aggiungere **gli allegati multimediali** per il contenuto della notifica.
+Una novità di iOS 10, tutte le notifiche contengono un **titolo** e un sottotitolo che saranno sempre visualizzati con il **corpo** del contenuto della notifica. Inoltre, è la possibilità di aggiungere **allegati multimediali** al contenuto della notifica.
 
 Per creare il contenuto di una notifica locale, usare il codice seguente:
 
@@ -222,7 +222,7 @@ content.Body = "This is the message body of the notification.";
 content.Badge = 1;
 ```
 
-Per le notifiche Remote, il processo è simile:
+Per le notifiche remote, il processo è simile:
 
 ```csharp
 {
@@ -237,18 +237,18 @@ Per le notifiche Remote, il processo è simile:
 }
 ```
 
-### <a name="scheduling-when-a-notification-is-sent"></a>Quando una notifica di pianificazione viene inviata
+### <a name="scheduling-when-a-notification-is-sent"></a>Pianificazione quando viene inviata una notifica
 
-Con il contenuto della notifica di creazione, l'app deve pianificare quando verrà visualizzata la notifica all'utente impostando un *Trigger*. iOS 10 offre i quattro diversi tipi di Trigger:
+Con il contenuto della notifica creata, l'app deve pianificare il momento in cui la notifica verrà presentata all'utente impostando un *trigger*. iOS 10 fornisce quattro tipi di trigger diversi:
 
-- **Notifica push** : viene utilizzata esclusivamente con le notifiche Remote e viene attivato quando creare un pacchetto servizio APN invia una notifica all'app in esecuzione nel dispositivo.
-- **Intervallo di tempo** -consente a una notifica locale di essere pianificati dall'ora di un'intervallo per iniziare adesso e termina un certo punto futuro. Ad esempio, `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`.
-- **Data di calendario** -consente le notifiche locali per la pianificazione di una data e ora specifiche.
-- **Basato su percorso** -consente le notifiche locali di essere pianificati quando il dispositivo iOS è immettendo o uscire da una posizione geografia specifica o in una determinato prossimità per qualsiasi beacon Bluetooth.
+- **Notifica push** : viene usato esclusivamente con le notifiche remote e viene attivato quando APNs Invia un pacchetto di notifica all'app in esecuzione nel dispositivo.
+- **Intervallo di tempo** : consente di pianificare una notifica locale da un intervallo di tempo che inizia con ora e termina un punto successivo. Ad esempio, `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`.
+- **Data calendario** : consente la pianificazione delle notifiche locali per una data e un'ora specifiche.
+- **Basato sulla posizione** : consente di pianificare le notifiche locali quando il dispositivo iOS entra o esce da una posizione geografica specifica oppure si trova in una determinata vicinanza a qualsiasi Beacon Bluetooth.
 
-Quando una notifica locale è pronta, l'app deve chiamare il `Add` metodo di `UNUserNotificationCenter` oggetto per pianificare la visualizzazione all'utente. Per le notifiche Remote, l'app sul lato server invia un Payload di notifica per il servizio APNs, che quindi invia il pacchetto al dispositivo dell'utente.
+Quando una notifica locale è pronta, l'app deve chiamare il `Add` metodo `UNUserNotificationCenter` dell'oggetto per pianificare la visualizzazione per l'utente. Per le notifiche remote, l'app sul lato server invia un payload di notifica al APNs, che quindi invia il pacchetto al dispositivo dell'utente.
 
-Un esempio di notifica locale innovativo, riunisce tutte le parti, potrebbe essere analogo:
+Unendo tutti i componenti, una notifica locale di esempio può essere simile alla seguente:
 
 ```csharp
 using UserNotifications;
@@ -272,9 +272,9 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 });
 ```
 
-## <a name="handling-foreground-app-notifications"></a>Gestione delle notifiche delle App in primo piano
+## <a name="handling-foreground-app-notifications"></a>Gestione delle notifiche delle app in primo piano
 
-Nuovo ai dispositivi iOS 10, un'app per le possa gestire le notifiche in modo diverso quando è in primo piano e viene attivata una notifica. Fornendo una `UNUserNotificationCenterDelegate` e l'implementazione di `WillPresentNotification` metodo, l'app può assumersi la responsabilità per la visualizzazione della notifica. Ad esempio:
+Una novità di iOS 10, un'app può gestire le notifiche in modo diverso quando si trova in primo piano e viene attivata una notifica. Fornendo un `UNUserNotificationCenterDelegate` e implementando il `WillPresentNotification` metodo, l'app può assumere la responsabilità di visualizzare la notifica. Ad esempio:
 
 ```csharp
 using System;
@@ -305,15 +305,15 @@ namespace MonkeyNotification
 }
 ```
 
-Questo codice viene semplicemente scritto il contenuto del `UNNotification` per l'Output dell'applicazione e chiede al sistema per visualizzare l'avviso standard per la notifica. 
+Questo codice scrive semplicemente il contenuto di `UNNotification` nell'output dell'applicazione e chiede al sistema di visualizzare l'avviso standard per la notifica. 
 
-Se l'app desidera visualizzare la notifica in sé quando era in primo piano e non utilizza le impostazioni predefinite del sistema, passare `None` al gestore di completamento. Esempio:
+Se l'app voleva visualizzare la notifica quando era in primo piano e non usa le impostazioni predefinite di sistema, passare `None` al gestore di completamento. Esempio:
 
 ```csharp
 completionHandler (UNNotificationPresentationOptions.None);
 ```
 
-Con questo codice, aprire il `AppDelegate.cs` per la modifica di file e modificare il `FinishedLaunching` metodo aspetto analogo al seguente:
+Con questo codice, aprire il `AppDelegate.cs` file per la modifica e modificare il `FinishedLaunching` metodo in modo che abbia un aspetto simile al seguente:
 
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -330,17 +330,17 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-Questo codice riguarda il collegamento personalizzato `UNUserNotificationCenterDelegate` precedente all'attuale `UNUserNotificationCenter` in modo che l'app può gestire la notifica mentre è attiva e in primo piano.
+Questo codice collega l'oggetto personalizzato `UNUserNotificationCenterDelegate` da sopra a quello corrente `UNUserNotificationCenter` , in modo che l'app possa gestire la notifica mentre è attiva e in primo piano.
 
-## <a name="notification-management"></a>Gestione delle notifiche
+## <a name="notification-management"></a>Gestione notifiche
 
-Nuovo ai dispositivi iOS 10, gestione di notifica fornisce l'accesso alle notifiche in sospeso sia recapitate e aggiunge la possibilità di rimuovere, aggiornare o alzare di livello queste notifiche.
+Una novità di iOS 10, gestione notifiche fornisce accesso alle notifiche in sospeso e recapitate e consente di rimuovere, aggiornare o promuovere queste notifiche.
 
-Una parte importante della gestione delle notifiche è il _identificatore richiesta_ che è stato assegnato alla notifica quando è stata creata e pianificato con il sistema. Per le notifiche Remote, viene assegnato tramite il nuovo `apps-collapse-id` campo nell'intestazione della richiesta HTTP.
+Una parte importante della gestione delle notifiche è l' _identificatore della richiesta_ assegnato alla notifica quando è stato creato e pianificato con il sistema. Per le notifiche remote, questo viene assegnato tramite il `apps-collapse-id` nuovo campo nell'intestazione della richiesta HTTP.
 
-Consente di selezionare la notifica che l'app desidera eseguire la gestione di notifica sull'identificatore della richiesta.
+L'identificatore della richiesta viene usato per selezionare la notifica di cui l'app desidera eseguire la gestione delle notifiche.
 
-### <a name="removing-notifications"></a>Rimozione delle notifiche
+### <a name="removing-notifications"></a>Rimozione di notifiche
 
 Per rimuovere una notifica in sospeso dal sistema, usare il codice seguente:
 
@@ -349,16 +349,16 @@ var requests = new string [] { "sampleRequest" };
 UNUserNotificationCenter.Current.RemovePendingNotificationRequests (requests);
 ```
 
-Per rimuovere una notifica già recapitata, utilizzare il codice seguente:
+Per rimuovere una notifica già recapitata, usare il codice seguente:
 
 ```csharp
 var requests = new string [] { "sampleRequest" };
 UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 ```
 
-### <a name="updating-an-existing-notification"></a>L'aggiornamento di una notifica esistente
+### <a name="updating-an-existing-notification"></a>Aggiornamento di una notifica esistente
 
-Per aggiornare una notifica esistente, è sufficiente creare una nuova notifica con i parametri desiderati modificati (ad esempio, una nuova ora di trigger) e aggiungerlo al sistema con lo stesso identificatore richiesta la notifica che deve essere modificato. Esempio:
+Per aggiornare una notifica esistente, è sufficiente creare una nuova notifica con i parametri desiderati modificati, ad esempio una nuova ora di attivazione, e aggiungerla al sistema con lo stesso identificatore di richiesta della notifica che deve essere modificata. Esempio:
 
 
 ```csharp
@@ -387,17 +387,17 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 });
 ```
 
-Per le notifiche già recapitate, la notifica esistente otterrà aggiornata e innalzate di livello nella parte superiore dell'elenco nelle schermate Home e blocco e nel centro notifiche se è già stata letta dall'utente.
+Per le notifiche già recapitate, la notifica esistente verrà aggiornata e innalzata di livello all'inizio dell'elenco nelle schermate Home e di blocco e nel centro notifiche se è già stata letta dall'utente.
 
-## <a name="working-with-notification-actions"></a>Uso di azioni di notifica
+## <a name="working-with-notification-actions"></a>Utilizzo delle azioni di notifica
 
-In iOS 10, le notifiche vengono recapitate per l'utente non sono statiche e forniscono numerose funzionalità che l'utente può interagire con essi (da incorporato per azioni personalizzate).
+In iOS 10, le notifiche che vengono recapitate all'utente non sono statiche e forniscono diversi modi per interagire con l'utente (da azioni predefinite ad azioni personalizzate).
 
-Esistono tre tipi di azioni in grado di rispondere a un'app per iOS:
+Sono disponibili tre tipi di azioni a cui un'app iOS può rispondere:
 
-- **Azione predefinita** -si tratta di quando l'utente tocca una notifica per aprire l'app e visualizzare i dettagli di notifica specifica.
-- **Azioni personalizzate** -questi sono stati aggiunti in iOS 8 e rappresentano un modo rapido per l'utente eseguire un'attività personalizzata direttamente dalla notifica senza la necessità di avviare l'app. Può essere presentati come un elenco di pulsanti con titoli personalizzabili o un campo di immissione testo che può essere eseguito in Background (in cui l'app ha una piccola quantità di tempo per soddisfare la richiesta) o in primo piano (in cui viene avviata l'app in primo piano per /fu lfill richiesta). Azioni personalizzate sono disponibili in iOS e watchOS.
-- **Elimina azione** -questa azione viene inviato all'app quando l'utente chiude una notifica specifica.
+- **Azione predefinita** : quando l'utente tocca una notifica per aprire l'app e visualizzare i dettagli della notifica specificata.
+- **Azioni personalizzate** : sono state aggiunte in iOS 8 e consentono all'utente di eseguire in modo rapido un'attività personalizzata direttamente dalla notifica senza dover avviare l'app. Possono essere presentati come un elenco di pulsanti con titoli personalizzabili o un campo di input di testo che può essere eseguito in background (in cui l'app ha un piccolo periodo di tempo per soddisfare la richiesta) o in primo piano (in cui l'app viene avviata in primo piano a fu lfill la richiesta). Le azioni personalizzate sono disponibili sia per iOS che per watchos.
+- **Ignora azione** : questa azione viene inviata all'app quando l'utente ignora una determinata notifica.
 
 ### <a name="creating-custom-actions"></a>Creazione di azioni personalizzate
 
@@ -421,17 +421,17 @@ var categories = new UNNotificationCategory [] { category };
 UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotificationCategory>(categories)); 
 ```
 
-Quando si crea un nuovo `UNNotificationAction`, viene assegnato un ID univoco e il titolo che verrà visualizzato sul pulsante. Per impostazione predefinita, l'azione verrà creato come azione in Background, tuttavia, è possibile specificare le opzioni per modificare il comportamento dell'azione (ad esempio impostandolo come un'azione di primo piano).
+Quando si crea un `UNNotificationAction`nuovo oggetto, viene assegnato un ID univoco e il titolo che verrà visualizzato sul pulsante. Per impostazione predefinita, l'azione verrà creata come un'azione in background, tuttavia è possibile specificare le opzioni per modificare il comportamento dell'azione, ad esempio impostando come un'azione in primo piano.
 
-Ognuna delle azioni create devono essere associati a una categoria. Quando si crea un nuovo `UNNotificationCategory`, viene assegnato un ID univoco, un elenco di azioni che è possibile eseguire un elenco di ID con finalità di fornire ulteriori informazioni sull'intento delle azioni nella categoria e alcune opzioni per controllare il comportamento della categoria.
+Ognuna delle azioni create deve essere associata a una categoria. Quando si crea un `UNNotificationCategory`nuovo oggetto, viene assegnato un ID univoco, un elenco di azioni che è possibile eseguire, un elenco di ID finalità per fornire ulteriori informazioni sullo scopo delle azioni nella categoria e alcune opzioni per controllare il comportamento della categoria.
 
-Infine, tutte le categorie registrate con il sistema utilizzando la `SetNotificationCategories` (metodo).
+Infine, tutte le categorie vengono registrate con il sistema utilizzando il `SetNotificationCategories` metodo.
 
-### <a name="presenting-custom-actions"></a>Presentazione delle azioni personalizzate
+### <a name="presenting-custom-actions"></a>Presentazione di azioni personalizzate
 
-Una volta che un set di azioni personalizzate e le categorie sono creati e registrati con il sistema, può essere presentati da locale o le notifiche Remote.
+Una volta che un set di azioni e categorie personalizzate è stato creato e registrato con il sistema, può essere presentato da notifiche locali o remote.
 
-Per ricevere una notifica remota, impostare un `category` nel Payload della notifica remota che corrisponde a una delle categorie create in precedenza. Ad esempio:
+Per la notifica remota, impostare `category` un nel payload di notifica remoto corrispondente a una delle categorie create in precedenza. Ad esempio:
 
 ```csharp
 {
@@ -442,7 +442,7 @@ Per ricevere una notifica remota, impostare un `category` nel Payload della noti
 }
 ```
 
-Per le notifiche locali, impostare il `CategoryIdentifier` proprietà del `UNMutableNotificationContent` oggetto. Ad esempio:
+Per le notifiche locali, impostare `CategoryIdentifier` la proprietà `UNMutableNotificationContent` dell'oggetto. Ad esempio:
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -454,11 +454,11 @@ content.CategoryIdentifier = "message";
 ...
 ```
 
-Anche in questo caso, questo ID deve corrispondere a una delle categorie che è stato creato in precedenza.
+Anche in questo caso, l'ID deve corrispondere a una delle categorie create in precedenza.
 
-### <a name="handling-dismiss-actions"></a>Azioni di ignorare la gestione
+### <a name="handling-dismiss-actions"></a>Gestione delle azioni ignorate
 
-Come indicato in precedenza, un'azione di ignorare possono essere inviata all'app quando l'utente chiude una notifica. Poiché non si tratta di un'azione standard, un'opzione dovrà essere impostato quando viene creata la categoria. Ad esempio:
+Come indicato in precedenza, un'azione di disattivazione può essere inviata all'app quando l'utente ignora una notifica. Poiché non si tratta di un'azione standard, sarà necessario impostare un'opzione quando la categoria viene creata. Ad esempio:
 
 ```csharp
 var categoryID = "message";
@@ -469,9 +469,9 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ```
 
-### <a name="handling-action-responses"></a>Risposte alle azioni di gestione
+### <a name="handling-action-responses"></a>Gestione delle risposte alle azioni
 
-Quando l'utente interagisce con le azioni personalizzate e le categorie che sono state create in precedenza, l'app deve soddisfare l'attività richiesta. Ciò avviene specificando una `UNUserNotificationCenterDelegate` e l'implementazione di `UserNotificationCenter` (metodo). Ad esempio:
+Quando l'utente interagisce con le azioni e le categorie personalizzate create in precedenza, l'app deve soddisfare l'attività richiesta. Questa operazione viene eseguita fornendo un `UNUserNotificationCenterDelegate` oggetto e implementando il `UserNotificationCenter` metodo. Ad esempio:
 
 ```csharp
 using System;
@@ -509,59 +509,59 @@ namespace MonkeyNotification
 }
 ```
 
-Il valore passato in `UNNotificationResponse` classe ha un `ActionIdentifier` proprietà che può essere l'azione predefinita o l'azione di ignorare. Usare `response.Notification.Request.Identifier` da verificare per tutte le azioni personalizzate.
+La `UNNotificationResponse` classe passata ha una `ActionIdentifier` proprietà che può essere l'azione predefinita o l'azione Ignora. Usare `response.Notification.Request.Identifier` per verificare le azioni personalizzate.
 
-Il `UserText` proprietà contiene il valore di input di testo qualsiasi utente. Il `Notification` proprietà contiene la notifica di origine che include la richiesta con il Trigger e notifica contenuto. L'app può decidere se fosse una variabile locale o remoto notifica in base al tipo di trigger.
+La `UserText` proprietà include il valore di qualsiasi input di testo utente. La `Notification` proprietà contiene la notifica di origine che include la richiesta con il trigger e il contenuto della notifica. L'app può decidere se si tratta di una notifica locale o remota basata sul tipo di trigger.
 
 > [!NOTE]
-> iOS 12 rende possibile per una notifica di modifica relativi pulsanti di azione in fase di esecuzione personalizzata dell'interfaccia utente. Per altre informazioni, esaminare i [pulsanti di azione di notifica dinamica](~/ios/platform/introduction-to-ios12/notifications/dynamic-actions.md) documentazione.
+> iOS 12 rende possibile a un'interfaccia utente di notifica personalizzata di modificare i pulsanti di azione in fase di esecuzione. Per ulteriori informazioni, vedere la documentazione relativa ai [pulsanti di azione di notifica dinamica](~/ios/platform/introduction-to-ios12/notifications/dynamic-actions.md) .
 
-## <a name="working-with-service-extensions"></a>Utilizzo di estensioni del servizio
+## <a name="working-with-service-extensions"></a>Utilizzo delle estensioni del servizio
 
-Quando si lavora con le notifiche Remote _estensioni servizio_ offrono un modo per abilitare la crittografia end-to-end all'interno del Payload di notifica. Le estensioni del servizio sono un'estensione dell'interfaccia utente (disponibile in iOS 10) eseguiti in background con lo scopo principale di aumento o sostituendo il contenuto visibile di una notifica prima di essere presentati all'utente. 
+Quando si utilizzano le notifiche remote, le _estensioni del servizio_ consentono di abilitare la crittografia end-to-end all'interno del payload di notifica. Le estensioni del servizio sono un'estensione dell'interfaccia non utente (disponibile in iOS 10) che viene eseguita in background con lo scopo principale di aumentare o sostituire il contenuto visibile di una notifica prima che venga presentata all'utente. 
 
-[![](enhanced-user-notifications-images/extension01.png "Panoramica di estensione del servizio")](enhanced-user-notifications-images/extension01.png#lightbox)
+[![](enhanced-user-notifications-images/extension01.png "Panoramica dell'estensione del servizio")](enhanced-user-notifications-images/extension01.png#lightbox)
 
-Le estensioni del servizio devono essere eseguiti rapidamente e vengono fornite solo un breve periodo di tempo per l'esecuzione dal sistema. Nel caso in cui l'estensione del servizio non riesce a completare l'attività nel periodo di tempo stabilito, verrà chiamato un metodo di fallback. Se il fallback non riesce, il contenuto di notifiche originale verrà visualizzato all'utente.
+Le estensioni del servizio sono progettate per essere eseguite rapidamente e vengono fornite solo una breve quantità di tempo per l'esecuzione da parte del sistema. Nel caso in cui l'estensione del servizio non riesca a completare l'attività nell'intervallo di tempo assegnato, verrà chiamato un metodo di fallback. Se il fallback ha esito negativo, il contenuto originale della notifica verrà visualizzato all'utente.
 
-Alcuni possibili usi delle estensioni del servizio includono:
+Alcuni possibili utilizzi delle estensioni del servizio includono:
 
 - Fornire la crittografia end-to-end del contenuto della notifica remota.
-- Aggiunta di allegati a cui vengono le notifiche Remote.
+- Aggiunta di allegati alle notifiche remote per arricchirli.
 
 ### <a name="implementing-a-service-extension"></a>Implementazione di un'estensione del servizio
 
-Per implementare un'estensione del servizio in un'app xamarin. IOS, effettuare le operazioni seguenti:
+Per implementare un'estensione del servizio in un'app Novell. iOS, seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Aprire la soluzione dell'app in Visual Studio per Mac.
-2. Fare clic sul nome della soluzione nel **riquadro della soluzione** e selezionare **Add** > **Aggiungi nuovo progetto**.
-3. Selezionare **iOS** > **estensioni** > **le estensioni del servizio di notifica** e fare clic su di **successivo** pulsante: 
+2. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **riquadro della soluzione** e scegliere **Aggiungi** > **Aggiungi nuovo progetto**.
+3. Selezionare **estensioni iOS** >  notifiche del servizio e fare clic sul pulsante Avanti: >  
 
     [![](enhanced-user-notifications-images/extension02.png "Selezionare le estensioni del servizio di notifica")](enhanced-user-notifications-images/extension02.png#lightbox)
-4. Immettere un **Name** per l'estensione e fare clic sui **successivo** pulsante: 
+4. Immettere un **nome** per l'estensione e fare clic sul pulsante **Avanti** : 
 
     [![](enhanced-user-notifications-images/extension03.png "Immettere un nome per l'estensione")](enhanced-user-notifications-images/extension03.png#lightbox)
-5. Modificare il **nome progetto** e/o **Nome soluzione** se necessario e fare clic sui **crea** pulsante: 
+5. Modificare il **nome del progetto** e/o il **nome della soluzione** , se necessario, e fare clic sul pulsante **Crea** : 
 
     [![](enhanced-user-notifications-images/extension04.png "Modificare il nome del progetto e/o il nome della soluzione")](enhanced-user-notifications-images/extension04.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Aprire la soluzione dell'app in Visual Studio.
-2. Fare clic sul nome della soluzione nel **Esplora soluzioni** e selezionare **Aggiungi > Nuovo progetto...** .
-3. Selezionare **Visual C# > estensioni iOS > estensione per servizio notifiche**:
+2. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e scegliere **Aggiungi > nuovo progetto.**
+3. Selezionare **Visual C# > estensioni iOS > estensione servizio di notifica**:
 
     [![](enhanced-user-notifications-images/extension01.w157-sml.png "Selezionare le estensioni del servizio di notifica")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
-4. Immettere un **Name** per l'estensione e fare clic sui **OK** pulsante.
+4. Immettere un **nome** per l'estensione e fare clic sul pulsante **OK** .
 
 -----
 
 > [!IMPORTANT]
-> L'identificatore del Bundle per l'estensione del servizio deve corrispondere all'identificatore del Bundle dell'app principale con `.appnameserviceextension` aggiunto alla fine. Ad esempio, se l'app principale ha un identificatore del Bundle del `com.xamarin.monkeynotify`, l'estensione del servizio deve avere un identificatore del Bundle di `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Questo deve essere impostato automaticamente quando l'estensione viene aggiunta alla soluzione. 
+> L'identificatore del bundle per l'estensione del servizio deve corrispondere all'identificatore del bundle dell'app `.appnameserviceextension` principale con accodato alla fine. Se ad esempio l'app principale include un identificatore del `com.xamarin.monkeynotify`bundle, l'estensione del servizio deve avere un identificatore di `com.xamarin.monkeynotify.monkeynotifyserviceextension`bundle. Questa impostazione deve essere impostata automaticamente quando l'estensione viene aggiunta alla soluzione. 
 
-È disponibile una classe principale nell'estensione del servizio di notifica che dovrà essere modificato per fornire le funzionalità richieste. Ad esempio:
+Nell'estensione Notification Service è presente una classe principale che deve essere modificata per fornire la funzionalità necessaria. Ad esempio:
 
 ```csharp
 using System;
@@ -610,13 +610,13 @@ namespace MonkeyChatServiceExtension
 }
 ```
 
-Il primo metodo, `DidReceiveNotificationRequest`, verrà passato l'identificatore di notifica, nonché il contenuto di notifiche tramite il `request` oggetto. Il valore passato in `contentHandler` dovrà essere chiamato per presentare la notifica all'utente.
+Al primo metodo, `DidReceiveNotificationRequest`, verrà passato l'identificatore di notifica e il contenuto della notifica tramite l' `request` oggetto. Il passato `contentHandler` deve essere chiamato per presentare la notifica all'utente.
 
-Il secondo metodo, `TimeWillExpire`, verrà chiamato appena prima che ora il limite massimo consentito per l'estensione del servizio elaborare la richiesta. Se l'estensione del servizio non riesce a chiamare il `contentHandler` nel periodo di tempo stabilito, il contenuto originale verrà visualizzato all'utente.
+Il secondo metodo, `TimeWillExpire`, verrà chiamato immediatamente prima che sta per essere esaurito per l'estensione del servizio per l'elaborazione della richiesta. Se l'estensione del servizio non riesce a `contentHandler` chiamare il nell'intervallo di tempo assegnato, il contenuto originale verrà visualizzato all'utente.
 
 ### <a name="triggering-a-service-extension"></a>Attivazione di un'estensione del servizio
 
-Con un'estensione del servizio creato e recapitati con l'app può essere attivata modificando il Payload della notifica remota inviata al dispositivo. Ad esempio:
+Se un'estensione del servizio è stata creata e distribuita con l'app, può essere attivata modificando il payload di notifica remoto inviato al dispositivo. Ad esempio:
 
 ```csharp
 {
@@ -628,7 +628,7 @@ Con un'estensione del servizio creato e recapitati con l'app può essere attivat
 }
 ```
 
-Il nuovo `mutable-content` chiave specifica che l'estensione del servizio dovrà essere avviata per aggiornare il contenuto della notifica remota. Il `encrypted-content` chiave contiene i dati crittografati in grado di decrittografare l'estensione del servizio prima di presentare all'utente.
+La nuova `mutable-content` chiave specifica che è necessario avviare l'estensione del servizio per aggiornare il contenuto della notifica remota. La `encrypted-content` chiave include i dati crittografati che l'estensione del servizio è in grado di decrittografare prima di presentare all'utente.
 
 Esaminare l'estensione del servizio di esempio seguente:
 
@@ -659,17 +659,17 @@ namespace myApp {
 }
 ```
 
-Questo codice consente di decrittografare il contenuto crittografato dal `encrypted-content` della chiave, crea un nuovo `UNMutableNotificationContent`, imposta le `Body` viene impostata sul contenuto decrittografato e Usa il `contentHandler` per presentare la notifica all'utente.
+Questo codice `encrypted-content` decrittografa il contenuto crittografato dalla chiave, ne crea uno nuovo `UNMutableNotificationContent`, imposta la `Body` proprietà sul contenuto decrittografato e USA `contentHandler` per presentare la notifica all'utente.
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato tutte le modalità che notifica gli utenti sono stata migliorata per iOS 10. Presentato il nuovo framework di notifica all'utente e come usarlo in un'app xamarin. IOS o un'estensione dell'App.
+Questo articolo ha trattato tutti i modi in cui la notifica degli utenti è stata migliorata da iOS 10. Viene presentato il nuovo Framework di notifica utente e viene illustrato come usarlo in un'app Novell. iOS o in un'estensione di app.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Riferimento a Framework di UserNotifications](https://developer.apple.com/reference/usernotifications)
+- [Esempi di iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Guida di riferimento a UserNotifications Framework](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guida alla programmazione di notifiche locali e remoti](https://developer.apple.com/documentation/usernotifications)
+- [Guida alla programmazione di notifiche locali e remote](https://developer.apple.com/documentation/usernotifications)

@@ -1,188 +1,188 @@
 ---
-title: Utilizzo di tvOS campi Text e ricerca in Xamarin
-description: Questo documento descrive come usare i campi text e ricerca in un'app tvOS compilate con Xamarin. Fornisce una panoramica generale dei campi text e ricerca e vengono illustrate le tastiere, integrazione dello storyboard, modelli di dati di ricerca e altro ancora.
+title: Uso del testo e dei campi di ricerca di tvOS in Novell
+description: Questo documento descrive come usare i campi di testo e di ricerca in un'app tvOS compilata con Novell. Viene fornita una panoramica di alto livello dei campi di testo e di ricerca e vengono illustrate le tastiere, l'integrazione con storyboard, i modelli di dati di ricerca e altro ancora.
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f1085044f2147bec0910a87f8a6174c4648ef9b8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb8520a223a2bc10706c7e5bcebf8fc412d4e64e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162431"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652299"
 ---
-# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Utilizzo di tvOS campi Text e ricerca in Xamarin
+# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
 
-Quando richiesto, l'app xamarin. tvos può richiedere piccole parti di testo da parte dell'utente (ad esempio ID utente e password) usando un campo di testo e la tastiera su schermo:
+Quando necessario, l'app Novell. tvOS può richiedere piccole parti di testo dall'utente (ad esempio ID utente e password) usando un campo di testo e la tastiera sullo schermo:
 
 [![](text-fields-and-search-images/intro01.png "Campo di ricerca di esempio")](text-fields-and-search-images/intro01.png#lightbox)
 
-È anche possibile specificare capacità di ricerca di parola chiave del contenuto dell'app usando un campo di ricerca:
+Facoltativamente, è possibile fornire la funzionalità di ricerca di parole chiave del contenuto dell'app usando un campo di ricerca:
 
 [![](text-fields-and-search-images/intro02.png "Risultati della ricerca di esempio")](text-fields-and-search-images/intro02.png#lightbox)
 
-Questo documento illustra i dettagli di utilizzo di testo e campi di ricerca in un'app xamarin. tvos.
+Questo documento illustra i dettagli dell'uso del testo e dei campi di ricerca in un'app Novell. tvOS.
 
 <a name="About-Text-and-Search-Fields" />
 
-## <a name="about-text-and-search-fields"></a>Informazioni sul testo e campi di ricerca
+## <a name="about-text-and-search-fields"></a>Informazioni sui campi testo e cerca
 
-Come indicato in precedenza, se necessario, di xamarin. tvos può presentare uno o più campi di testo per la raccolta di piccole quantità di testo dall'utente se si utilizza sullo schermo (o della tastiera bluetooth facoltativa a seconda della versione di tvOS installata dall'utente). 
+Come indicato in precedenza, se necessario, Novell. tvOS può presentare uno o più campi di testo per raccogliere piccole quantità di testo da parte dell'utente usando uno schermo o una tastiera Bluetooth facoltativa a seconda della versione di tvOS installata dall'utente. 
 
-Aggiunta, se l'app presenta grandi quantità di contenuto all'utente (ad esempio un musica, film o una raccolta di immagini), si potrebbe essere necessario includere un campo di ricerca che consente all'utente di immettere una piccola quantità di testo per filtrare l'elenco di elementi disponibili.
+Inoltre, se l'app presenta grandi quantità di contenuto per l'utente (ad esempio musica, filmati o raccolta immagini), potrebbe essere necessario includere un campo di ricerca che consenta all'utente di immettere una piccola quantità di testo per filtrare l'elenco di elementi disponibili.
 
 <a name="Text-Fields" />
 
 ## <a name="text-fields"></a>Campi di testo
 
-In tvOS, un campo di testo viene presentato come una casella angolo arrotondato, altezza fissa movimento attiverà una tastiera su schermo quando l'utente fa clic su di essa:
+In tvOS, un campo di testo viene visualizzato come una casella di immissione con angolo arrotondato a altezza fissa che visualizza una tastiera sullo schermo quando l'utente fa clic su di esso:
 
-[![](text-fields-and-search-images/text01.png "Testo In campi tvOS")](text-fields-and-search-images/text01.png#lightbox)
+[![](text-fields-and-search-images/text01.png "Campi di testo in tvOS")](text-fields-and-search-images/text01.png#lightbox)
 
-Quando l'utente sposta [messa a fuoco](~/ios/tvos/app-fundamentals/navigation-focus.md) per un determinato campo di testo, verrà aumento delle dimensioni più grande e visualizza un'ombra avanzata. È necessario tenere a mente durante la progettazione dell'interfaccia utente, come gli altri elementi dell'interfaccia utente quando messa a fuoco possono sovrapporsi a campi di testo.
+Quando l'utente sposta lo [stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) su un campo di testo specificato, aumenterà le dimensioni e visualizzerà un'ombreggiatura profonda. È necessario tenere presente questo aspetto quando si progetta l'interfaccia utente, poiché i campi di testo possono sovrapporsi ad altri elementi dell'interfaccia utente quando sono in stato attivo.
 
-Apple ha i seguenti suggerimenti per l'utilizzo di campi di testo:
+Apple presenta i suggerimenti seguenti per l'utilizzo dei campi di testo:
 
-- **Usare testo voce sporadicamente** : a causa della natura della tastiera su schermo, immettendo lungo sezioni di testo o la compilazione di più campi di testo è noioso all'utente. Una soluzione migliore consiste nel limitare la quantità di immissione di testo tramite gli elenchi di selezione oppure [pulsanti](~/ios/tvos/user-interface/buttons.md).
-- **Utilizzare gli hint a scopo di comunicare** -campo di testo è possibile visualizzare suggerimenti"segnaposto" quando è vuoto. Ove applicabile, usare gli hint per descrivere lo scopo del campo di testo invece di un'etichetta separata.
-- **Selezionare il tipo appropriato da tastiera predefinita** -tvOS fornisce diversi tipi di tastiera diverso, scopo compilato che è possibile specificare per il campo di testo. Ad esempio, la tastiera di indirizzo di posta elettronica facilita voce, consentendo all'utente di selezionare da un elenco di indirizzi immessi di recente.
-- **Quando appropriato, usare i campi di testo protetto** -un campo di testo protetto presenta i caratteri immessi come punti (anziché le lettere reali). Usare sempre un campo di testo protetto per la raccolta di informazioni riservate, ad esempio le password.
+- **Usare la voce di testo sporadicamente** , a causa della natura della tastiera su schermo, l'immissione di sezioni lunghe di testo o la compilazione di più campi di testo è noiosa per l'utente. Una soluzione migliore consiste nel limitare la quantità di voci di testo usando gli elenchi di selezione o i [pulsanti](~/ios/tvos/user-interface/buttons.md).
+- **USA hint per comunicare il campo di testo di scopo** è possibile visualizzare "hint" segnaposto quando è vuoto. Se applicabile, usare hint per descrivere lo scopo del campo di testo anziché un'etichetta separata.
+- **Selezionare il tipo di tastiera predefinito appropriato** -tvOS offre diversi tipi di tastiera compilati per lo scopo che è possibile specificare per il campo di testo. Ad esempio, la tastiera dell'indirizzo di posta elettronica può semplificare l'immissione consentendo all'utente di effettuare una selezione da un elenco di indirizzi immessi di recente.
+- **Quando appropriato, usare i campi di testo protetti** . un campo di testo protetto presenta i caratteri immessi come punti, anziché le lettere reali. Usare sempre un campo di testo protetto quando si raccolgono informazioni riservate, ad esempio le password.
 
 <a name="Keyboards" />
 
 ## <a name="keyboards"></a>Tastiere
 
-Ogni volta che l'utente fa clic su un campo di testo nell'interfaccia utente, lineari sullo schermo viene visualizzata della tastiera. L'utente usa l'area Touch il [remoti per Siri](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) per selezionare le singole lettere dalla tastiera e immettere le informazioni richieste:
+Ogni volta che l'utente fa clic su un campo di testo nell'interfaccia utente, viene visualizzata una tastiera lineare sullo schermo. L'utente utilizza la superficie di tocco del [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) per selezionare singole lettere dalla tastiera e immettere le informazioni richieste:
 
-[![](text-fields-and-search-images/keyboard01.png "La tastiera remoti per Siri")](text-fields-and-search-images/keyboard01.png#lightbox)
+[![](text-fields-and-search-images/keyboard01.png "Tastiera remota Siri")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-Se è presente più di un campo di testo nella visualizzazione corrente, un **successivo** pulsante verrà visualizzato automaticamente per rendere l'utente per il campo di testo successivo. Oggetto **Done** pulsante verrà visualizzato per l'ultimo campo di testo che terminerà l'immissione di testo e restituire l'utente alla schermata precedente. 
+Se è presente più di un campo di testo nella visualizzazione corrente, verrà visualizzato automaticamente un pulsante **Avanti** per portare l'utente al campo di testo successivo. Verrà visualizzato un pulsante **done** per l'ultimo campo di testo che terminerà l'immissione di testo e restituirà l'utente alla schermata precedente. 
 
-In qualsiasi momento, l'utente è possibile anche premere il **Menu** pulsante nell'elemento remoto di Siri per terminare l'immissione di testo e restituire nuovamente alla schermata precedente.
+In qualsiasi momento, l'utente può anche premere il pulsante di **menu** nella voce di testo di Siri Remote to end e tornare alla schermata precedente.
 
-Apple ha i seguenti suggerimenti per l'utilizzo su schermo tastiere:
+Apple presenta i suggerimenti seguenti per l'utilizzo delle tastiere sullo schermo:
 
-- **Selezionare il tipo appropriato da tastiera predefinita** -tvOS fornisce diversi tipi di tastiera diverso, scopo compilato che è possibile specificare per il campo di testo. Ad esempio, la tastiera di indirizzo di posta elettronica facilita voce, consentendo all'utente di selezionare da un elenco di indirizzi immessi di recente.
-- **Quando appropriato, utilizzare le visualizzazioni accessorio tastiera** : oltre alle standard informazioni che viene sempre visualizzato facoltativo accessorio visualizzazioni (ad esempio immagini o etichette) possono essere aggiunte alla tastiera su schermo per chiarire lo scopo di immissione di testo o a assistere l'utente immette le informazioni necessarie.
+- **Selezionare il tipo di tastiera predefinito appropriato** -tvOS offre diversi tipi di tastiera compilati per lo scopo che è possibile specificare per il campo di testo. Ad esempio, la tastiera dell'indirizzo di posta elettronica può semplificare l'immissione consentendo all'utente di effettuare una selezione da un elenco di indirizzi immessi di recente.
+- **Quando appropriato, utilizzare le visualizzazioni accessorie della tastiera** , oltre alle informazioni standard sempre visualizzate, le visualizzazioni accessorie facoltative, ad esempio immagini o etichette, possono essere aggiunte alla tastiera sullo schermo per chiarire lo scopo della voce di testo o di assistere utente che immette le informazioni necessarie.
 
-Per altre informazioni sull'utilizzo con la tastiera su schermo, vedere di Apple [UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType), [la gestione della tastiera](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW1), [visualizzazioni personalizzate per l'Input di dati](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/InputViews/InputViews.html#//apple_ref/doc/uid/TP40009542-CH12-SW1) e [ Guida per programmatori testo ai dispositivi iOS](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html) documentazione.
+Per altre informazioni sull'uso della tastiera su schermo, vedere la documentazione di Apple [UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType), [gestione della tastiera](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW1), [visualizzazioni personalizzate per la](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/InputViews/InputViews.html#//apple_ref/doc/uid/TP40009542-CH12-SW1) [Guida alla programmazione di input e testo per](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html) i dati nella documentazione di iOS.
 
 <a name="Search" />
 
 ## <a name="search"></a>Cerca
 
-Un campo di ricerca viene visualizzata una schermata di specializzato che fornisce un campo di testo e della tastiera su schermo che consente all'utente filtrare una raccolta di elementi che sono visualizzate sotto la tastiera:
+Un campo di ricerca presenta una schermata specializzata che fornisce un campo di testo e una tastiera sullo schermo che consentono all'utente di filtrare una raccolta di elementi visualizzati sotto la tastiera:
 
 [![](text-fields-and-search-images/search01.png "Risultati della ricerca di esempio")](text-fields-and-search-images/search01.png#lightbox)
 
-Quando l'utente ne immette di lettere nel campo di ricerca, i risultati riportati di seguito rifletterà automaticamente i risultati della ricerca. In qualsiasi momento, l'utente può spostare lo stato attivo per i risultati e selezionare uno degli elementi presentati.
+Quando l'utente immette lettere nel campo di ricerca, i risultati seguenti rifletteranno automaticamente i risultati della ricerca. In qualsiasi momento, l'utente può spostare lo stato attivo sui risultati e selezionare uno degli elementi presentati.
 
-Apple ha i seguenti suggerimenti per l'utilizzo di campi di ricerca:
+Apple presenta i suggerimenti seguenti per l'utilizzo dei campi di ricerca:
 
-- **Fornire le ricerche recenti** - perché immettendo il testo con il remoti per Siri può rivelarsi noiosa e gli utenti tendono a ripetere le richieste di ricerca, è possibile aggiungere una sezione dei risultati della ricerca recente prima i risultati correnti nell'area della tastiera.
-- **Quando possibile, limitare il numero di risultati** - perché un lungo elenco di elementi può essere difficile all'utente di analizzare e passare, è consigliabile limitare il numero di risultati restituiti.
-- **Se appropriato, il risultato di ricerca specificare filtri** : se il contenuto fornito dalla tua app si presta, considerare l'aggiunta di barre di ambito per consentire all'utente filtrare ulteriormente i risultati della ricerca restituiti.
+- **Fornire ricerche recenti** : poiché l'immissione di testo con Siri Remote può essere noiosa e gli utenti tendono a ripetere le richieste di ricerca, è consigliabile aggiungere una sezione di risultati di ricerca recenti prima dei risultati correnti sotto l'area della tastiera.
+- **Quando possibile, limitare il numero di risultati** . Poiché un elenco di elementi di grandi dimensioni può essere difficile per l'analisi e la navigazione da parte dell'utente, è consigliabile limitare il numero di risultati restituiti.
+- **Se appropriato, fornire i filtri dei risultati di ricerca** : se il contenuto fornito dall'app si presta a se stesso, è consigliabile aggiungere le barre dell'ambito per consentire all'utente di filtrare ulteriormente i risultati della ricerca restituiti.
 
-Per altre informazioni, vedere di Apple [riferimento alla classe UISearchController](https://developer.apple.com/library/tvos/documentation/UIKit/Reference/UISearchController/index.html).
+Per ulteriori informazioni, vedere la pagina relativa al [riferimento alla classe UISearchController](https://developer.apple.com/library/tvos/documentation/UIKit/Reference/UISearchController/index.html)di Apple.
 
 <a name="Working-with-Text-Fields" />
 
-## <a name="working-with-text-fields"></a>Utilizzo dei campi di testo
+## <a name="working-with-text-fields"></a>Uso dei campi di testo
 
-Il modo più semplice per lavorare con i campi di testo in un'app xamarin. tvos è per aggiungerli alla progettazione dell'interfaccia utente usando iOS Designer.
+Il modo più semplice per lavorare con i campi di testo in un'app Novell. tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando iOS designer.
 
 Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nel **riquadro della soluzione**, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo.
-1. Trascinare uno o più **campi di testo** int nell'area di progettazione in una visualizzazione: 
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica.
+1. Trascinare uno o più **campi di testo** int l'area di progettazione in una visualizzazione: 
 
     [![](text-fields-and-search-images/text02.png "Un campo di testo")](text-fields-and-search-images/text02.png#lightbox)
-1. Selezionare il **campi di testo** e assegnare a ognuno un valore univoco **nome** nel **Widget** scheda della finestra di **riquadro delle proprietà**: 
+1. Selezionare i **campi di testo** e assegnare a ognuno **un nome** univoco nella scheda **widget** della **riquadro delle proprietà**: 
 
-    [![](text-fields-and-search-images/text03.png "La scheda di Widget del riquadro delle proprietà")](text-fields-and-search-images/text03.png#lightbox)
-1. Nel **campo di testo** sezione, è possibile definire elementi, ad esempio le **segnaposto** hint e predefinito **valore**: 
+    [![](text-fields-and-search-images/text03.png "Scheda widget della riquadro delle proprietà")](text-fields-and-search-images/text03.png#lightbox)
+1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito: 
 
-    [![](text-fields-and-search-images/text04.png "La sezione dei campi di testo")](text-fields-and-search-images/text04.png#lightbox)
-1. Scorrere verso il basso per definire le proprietà, ad esempio **ortografico**, **maiuscole/minuscole** e il valore predefinito **tastiera tipo**: 
+    [![](text-fields-and-search-images/text04.png "Sezione del campo di testo")](text-fields-and-search-images/text04.png#lightbox)
+1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito: 
 
-    [![](text-fields-and-search-images/text05.png "Controllo ortografico, maiuscole/minuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05.png#lightbox) 
-1. Salvare le modifiche dello Storyboard.
+    [![](text-fields-and-search-images/text05.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05.png#lightbox) 
+1. Salvare le modifiche apportate allo storyboard.
     
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
 1. In **Esplora soluzioni** fare doppio clic sul file `Main.storyboard` per aprirlo e modificarlo.
-1. Trascinare uno o più **campi di testo** int nell'area di progettazione in una visualizzazione: 
+1. Trascinare uno o più **campi di testo** int l'area di progettazione in una visualizzazione: 
 
     [![](text-fields-and-search-images/text02-vs.png "Un campo di testo")](text-fields-and-search-images/text02-vs.png#lightbox)
-1. Selezionare il **campi di testo** e assegnare a ognuno un valore univoco **nome** nel **Widget** scheda della finestra di **Esplora proprietà**: 
+1. Selezionare i **campi di testo** e assegnare a ognuno **un nome** univoco nella scheda **widget** di **Esplora proprietà**: 
 
-    [![](text-fields-and-search-images/text03-vs.png "La scheda di Widget")](text-fields-and-search-images/text03-vs.png#lightbox)
-1. Nel **campo di testo** sezione, è possibile definire elementi, ad esempio le **segnaposto** hint e predefinito **valore**: 
+    [![](text-fields-and-search-images/text03-vs.png "Scheda widget")](text-fields-and-search-images/text03-vs.png#lightbox)
+1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito: 
 
-    [![](text-fields-and-search-images/text04-vs.png "La sezione dei campi di testo")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Scorrere verso il basso per definire le proprietà, ad esempio **ortografico**, **maiuscole/minuscole** e il valore predefinito **tastiera tipo**: 
+    [![](text-fields-and-search-images/text04-vs.png "Sezione del campo di testo")](text-fields-and-search-images/text04-vs.png#lightbox)
+1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito: 
 
-    [![](text-fields-and-search-images/text05-vs.png "Controllo ortografico, maiuscole/minuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05-vs.png#lightbox) 
-1. Salvare le modifiche dello Storyboard.
+    [![](text-fields-and-search-images/text05-vs.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05-vs.png#lightbox) 
+1. Salvare le modifiche apportate allo storyboard.
     
 -----
 
-Nel codice, è possibile ottenere o impostare il valore di un campo di testo utilizzando le `Text` proprietà:
+Nel codice è possibile ottenere o impostare il valore di un campo di testo usando la `Text` relativa proprietà:
 
 ```csharp
 Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
 ```
 
-È anche possibile usare la `Started` e `Ended` gli eventi di campo di testo per rispondere alla voce di testo iniziale e finale.
+Facoltativamente, è possibile usare `Started` gli `Ended` eventi campo di testo e per rispondere alla voce di testo iniziale e finale.
 
 <a name="Working-with-Search-Fields" />
 
-## <a name="working-with-search-fields"></a>Utilizzo dei campi di ricerca
+## <a name="working-with-search-fields"></a>Uso dei campi di ricerca
 
-Il modo più semplice per lavorare con i campi di ricerca in un'app xamarin. tvos è per aggiungerli alla progettazione dell'interfaccia utente usando la finestra di progettazione di interfaccia.
+Il modo più semplice per usare i campi di ricerca in un'app Novell. tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando progettazione interfaccia.
 
 Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
     
-1. Nel **riquadro della soluzione**, fare doppio clic il `Main.storyboard` file per aprirlo e modificarlo.
-1. Trascinare un nuovo Controller di visualizzazione raccolta allo Storyboard per presentare i risultati della ricerca dell'utente: 
+1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica.
+1. Trascinare un nuovo controller di visualizzazione raccolta nello storyboard per presentare i risultati della ricerca dell'utente: 
 
-    [![](text-fields-and-search-images/search02.png "Un Controller di visualizzazione raccolta")](text-fields-and-search-images/search02.png#lightbox)
-1. Nel **Widget** scheda della finestra di **riquadro delle proprietà**, usare `SearchResultsViewController` per il **classe** e `SearchResults` per il **ID Storyboard**: 
+    [![](text-fields-and-search-images/search02.png "Controller di visualizzazione raccolta")](text-fields-and-search-images/search02.png#lightbox)
+1. Nella scheda **widget** della **riquadro delle proprietà**usare `SearchResultsViewController` per la **classe** e `SearchResults` per l' **ID storyboard**: 
 
-    [![](text-fields-and-search-images/search03.png "La scheda di Widget")](text-fields-and-search-images/search03.png#lightbox)
-1. Selezionare il **cella prototipo** nell'area di progettazione.
-1. Nel **Widget** scheda della finestra di **Esplora proprietà**, usare `SearchResultCell` per il **classe** e `ImageCell` per il **identificatore**: 
+    [![](text-fields-and-search-images/search03.png "Scheda widget")](text-fields-and-search-images/search03.png#lightbox)
+1. Selezionare il **prototipo di cella** nell'area di progettazione.
+1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**: 
 
-    [![](text-fields-and-search-images/search04.png "La scheda di Widget")](text-fields-and-search-images/search04.png#lightbox)
-1. Layout di progettazione della **cella prototipo** ed esporre ogni elemento con un valore univoco **nome** nel **Widget** scheda della finestra di **Esplora proprietà**: 
+    [![](text-fields-and-search-images/search04.png "Scheda widget")](text-fields-and-search-images/search04.png#lightbox)
+1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**: 
 
-    [![](text-fields-and-search-images/search05.png "Layout di progettazione del prototipo della cella")](text-fields-and-search-images/search05.png#lightbox)
-1. Salvare le modifiche dello Storyboard.
+    [![](text-fields-and-search-images/search05.png "Layout della progettazione del prototipo di cella")](text-fields-and-search-images/search05.png#lightbox)
+1. Salvare le modifiche apportate allo storyboard.
     
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
 1. In **Esplora soluzioni** fare doppio clic sul file `Main.storyboard` per aprirlo e modificarlo.
-1. Trascinare un nuovo Controller di visualizzazione raccolta allo Storyboard per presentare i risultati della ricerca dell'utente: 
+1. Trascinare un nuovo controller di visualizzazione raccolta nello storyboard per presentare i risultati della ricerca dell'utente: 
 
-    [![](text-fields-and-search-images/seach02-vs.png "Un Controller di visualizzazione raccolta")](text-fields-and-search-images/seach02-vs.png#lightbox)
-1. Nel **Widget** scheda della finestra di **Esplora proprietà**, usare `SearchResultsViewController` per il **classe** e `SearchResults` per il **ID Storyboard**: 
+    [![](text-fields-and-search-images/seach02-vs.png "Controller di visualizzazione raccolta")](text-fields-and-search-images/seach02-vs.png#lightbox)
+1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultsViewController` per la **classe** e `SearchResults` per l' **ID storyboard**: 
 
-    [![](text-fields-and-search-images/search03-vs.png "La scheda di Widget")](text-fields-and-search-images/search03-vs.png#lightbox)
-1. Selezionare il **cella prototipo** nell'area di progettazione.
-1. Nel **Widget** scheda della finestra di **Esplora proprietà**, usare `SearchResultCell` per il **classe** e `ImageCell` per il **identificatore**: 
+    [![](text-fields-and-search-images/search03-vs.png "Scheda widget")](text-fields-and-search-images/search03-vs.png#lightbox)
+1. Selezionare il **prototipo di cella** nell'area di progettazione.
+1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**: 
 
-    [![](text-fields-and-search-images/search04-vs.png "La scheda di Widget")](text-fields-and-search-images/search04-vs.png#lightbox)
-1. Layout di progettazione della **cella prototipo** ed esporre ogni elemento con un valore univoco **nome** nel **Widget** scheda della finestra di **Esplora proprietà**: 
+    [![](text-fields-and-search-images/search04-vs.png "Scheda widget")](text-fields-and-search-images/search04-vs.png#lightbox)
+1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**: 
 
-    [![](text-fields-and-search-images/search05-vs.png "Layout di progettazione del prototipo della cella")](text-fields-and-search-images/search05-vs.png#lightbox)
-1. Salvare le modifiche dello Storyboard.
+    [![](text-fields-and-search-images/search05-vs.png "Layout della progettazione del prototipo di cella")](text-fields-and-search-images/search05-vs.png#lightbox)
+1. Salvare le modifiche apportate allo storyboard.
     
 -----
 
@@ -192,19 +192,19 @@ Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Successivamente, è necessario fornire una classe da usare come modello di dati per i risultati che verrà ricercati l'utente. Nel **Esplora soluzioni**, fare clic sul nome del progetto e selezionare **Add** > **nuovo File...**   >  **Generali** > **classe vuota** e fornire un **nome**: 
+Successivamente, sarà necessario fornire una classe che funga da modello di dati per i risultati cercati dall'utente. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo file...** Classe vuotaGenerale > e specificare un nome:  >  
 
-[![](text-fields-and-search-images/search06.png "Selezionare classe vuota e specificare un nome")](text-fields-and-search-images/search06.png#lightbox)
+[![](text-fields-and-search-images/search06.png "Selezionare una classe vuota e specificare un nome")](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Successivamente, è necessario fornire una classe da usare come modello di dati per i risultati che verrà ricercati l'utente. Nel **Esplora soluzioni**, fare clic sul nome del progetto e selezionare **Add** > **nuovo elemento...**   >  **Apple** > **varie** > **classe** e fornire un **nome**: 
+Successivamente, sarà necessario fornire una classe che funga da modello di dati per i risultati cercati dall'utente. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo elemento...**  > Classevarie > di Apple e specificare un nome:  >  
 
-[![](text-fields-and-search-images/search06-vs.png "Seleziona classe e specificare un nome")](text-fields-and-search-images/search06-vs.png#lightbox)
+[![](text-fields-and-search-images/search06-vs.png "Selezionare la classe e specificare un nome")](text-fields-and-search-images/search06-vs.png#lightbox)
 
 -----
 
-Ad esempio, un'app che consente all'utente di eseguire la ricerca di una raccolta di immagini in base al titolo e la parola chiave potrebbe essere simile al seguente:
+Ad esempio, un'app che consente all'utente di eseguire la ricerca in una raccolta di immagini in base al titolo e alla parola chiave può avere un aspetto simile al seguente:
 
 ```csharp
 using System;
@@ -235,9 +235,9 @@ namespace tvText
 
 <a name="The-Collection-View-Cell" />
 
-### <a name="the-collection-view-cell"></a>La cella di visualizzazione raccolta
+### <a name="the-collection-view-cell"></a>Cella di visualizzazione raccolta
 
-Il modello di dati nella posizione, modificare il **cella prototipo** (`SearchResultViewCell.cs`) e impostarlo come aspetto si trovano le seguenti:
+Con il modello di dati sul posto, modificare la **cella** del`SearchResultViewCell.cs`prototipo () e fare in modo che l'aspetto sia il seguente:
 
 ```csharp
 using Foundation;
@@ -291,13 +291,13 @@ namespace tvText
 }
 ```
 
-Il `UpdateUI` metodo verrà utilizzato per visualizzare i singoli campi del **PictureInformation** elementi (la `PictureInfo` proprietà) in elementi dell'interfaccia utente denominati viene aggiornata ogni volta che la proprietà. Ad esempio, l'immagine e titolo associate a un'immagine.
+Il `UpdateUI` metodo verrà usato per visualizzare i singoli campi degli elementi **PictureInformation** (la `PictureInfo` proprietà) negli elementi dell'interfaccia utente denominati ogni volta che la proprietà viene aggiornata. Ad esempio, l'immagine e il titolo associati all'immagine.
 
 <a name="The-Collection-View-Controller" />
 
-### <a name="the-collection-view-controller"></a>Il Controller di visualizzazione raccolta
+### <a name="the-collection-view-controller"></a>Controller di visualizzazione raccolta
 
-Successivamente, modificare il Controller di visualizzazione raccolta di risultati di ricerca (`SearchResultsViewController.cs`) e renderlo simile al seguente:
+Modificare quindi il controller di visualizzazione della raccolta dei risultati`SearchResultsViewController.cs`di ricerca () e renderlo simile al seguente:
 
 ```csharp
 using Foundation;
@@ -449,19 +449,19 @@ namespace tvText
 }
 ```
 
-Prima di tutto la `IUISearchResultsUpdating` interfaccia viene aggiunta alla classe per gestire il filtro di ricerca Controller in corso l'aggiornamento dall'utente:
+In primo luogo `IUISearchResultsUpdating` , l'interfaccia viene aggiunta alla classe per gestire il filtro del controller di ricerca aggiornato dall'utente:
 
 ```csharp
 public partial class SearchResultsViewController : UICollectionViewController , IUISearchResultsUpdating
 ```
 
-Una costante è definita anche per specificare l'ID del **cella prototipo** (che corrisponde all'ID definito nella finestra di progettazione dell'interfaccia precedente) che verrà usato in un secondo momento quando il Controller di raccolta richiede una nuova cella:
+Viene anche definita una costante per specificare l'ID della **cella** del prototipo, che corrisponde all'ID definito nella finestra di progettazione dell'interfaccia precedente, che verrà usata in un secondo momento quando il controller della raccolta richiede una nuova cella:
 
 ```csharp
 public const string CellID = "ImageCell";
 ```
 
-Viene creata l'archiviazione per l'elenco completo degli elementi viene eseguita la ricerca, il termine di filtro di ricerca e un elenco di elementi corrispondente a tale termine:
+Viene creata l'archiviazione per l'elenco completo degli elementi cercati, il termine del filtro di ricerca e l'elenco degli elementi corrispondenti a tale termine:
 
 ```csharp
 private string _searchFilter = "";
@@ -479,7 +479,7 @@ public string SearchFilter {
 }
 ```
 
-Quando il `SearchFilter` è stato modificato, viene aggiornato l'elenco di elementi corrispondenti e verrà ricaricato il contenuto della visualizzazione raccolta. Il `FindPictures` routine è responsabile per la ricerca degli elementi che corrispondono al nuovo termine di ricerca:
+`SearchFilter` Quando viene modificato, l'elenco di elementi corrispondenti viene aggiornato e il contenuto della visualizzazione della raccolta viene ricaricato. La `FindPictures` routine è responsabile della ricerca di elementi che corrispondono al nuovo termine di ricerca:
 
 ```csharp
 private void FindPictures ()
@@ -500,7 +500,7 @@ private void FindPictures ()
 }
 ```
 
-Il valore della `SearchFilter` verrà aggiornata (che aggiornerà la visualizzazione di raccolta dei risultati) quando l'utente modifica il filtro nel Controller di ricerca:
+Il valore di `SearchFilter` verrà aggiornato (che aggiornerà la visualizzazione raccolta risultati) quando l'utente modifica il filtro nel controller di ricerca:
 
 ```csharp
 public void UpdateSearchResultsForSearchController (UISearchController searchController)
@@ -510,7 +510,7 @@ public void UpdateSearchResultsForSearchController (UISearchController searchCon
 }
 ```
 
-Il `PopulatePictures` metodo popola inizialmente la raccolta di elementi disponibile:
+Il `PopulatePictures` metodo popola inizialmente la raccolta di elementi disponibili:
 
 ```csharp
 private void PopulatePictures ()
@@ -524,9 +524,9 @@ private void PopulatePictures ()
 }
 ```
 
-Ai fini di questo esempio, tutti i dati di esempio viene creata in memoria quando viene caricato il Controller di visualizzazione raccolta. In un'app reale, questi dati verranno probabilmente letti da un database o un servizio web e soltanto quando è necessario impedire sovraccaricare il Apple TV memoria limitata.
+Ai fini di questo esempio, tutti i dati di esempio vengono creati in memoria durante il caricamento del controller di visualizzazione raccolta. In un'app reale questi dati verrebbero probabilmente letti da un database o da un servizio Web e solo se necessario per evitare di eseguire l'overrunning della memoria limitata di Apple TV.
 
-Il `NumberOfSections` e `GetItemsCount` metodi forniscono il numero di elementi corrispondenti:
+I `NumberOfSections` metodi `GetItemsCount` e forniscono il numero di elementi corrispondenti:
 
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
@@ -542,7 +542,7 @@ public override nint GetItemsCount (UICollectionView collectionView, nint sectio
 }
 ```
 
-Il `GetCell` restituisce un nuovo metodo **cella prototipo** (in base il `CellID` definiti in precedenza nello Storyboard) per ogni elemento nella visualizzazione raccolta:
+Il `GetCell` metodo restituisce una nuova **cella** del prototipo `CellID` (basata sulla definizione precedente nello storyboard) per ogni elemento nella visualizzazione della raccolta:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -553,7 +553,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 }
 ```
 
-Il `WillDisplayCell` metodo viene chiamato prima della cella viene visualizzata in modo che può essere configurato:
+Il `WillDisplayCell` metodo viene chiamato prima della visualizzazione della cella in modo che possa essere configurata:
 
 ```csharp
 public override void WillDisplayCell (UICollectionView collectionView, UICollectionViewCell cell, NSIndexPath indexPath)
@@ -569,7 +569,7 @@ public override void WillDisplayCell (UICollectionView collectionView, UICollect
 }
 ```
 
-Il `DidUpdateFocus` metodo fornisce un feedback visivo all'utente appena vengono evidenziati gli elementi nella visualizzazione di raccolta dei risultati:
+Il `DidUpdateFocus` metodo fornisce un feedback visivo all'utente durante l'evidenziazione degli elementi nella visualizzazione raccolta risultati:
 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
@@ -590,7 +590,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 }
 ```
 
-Infine, il `ItemSelected` metodo gestisce l'utente seleziona un elemento (facendo clic nell'area di tocco con il remoti per Siri) nella visualizzazione di raccolta dei risultati:
+Infine, il `ItemSelected` metodo gestisce l'utente che seleziona un elemento (facendo clic sulla superficie di tocco con il comando Siri Remote) nella visualizzazione raccolta risultati:
 
 ```csharp
 public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
@@ -605,20 +605,20 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Se il campo di ricerca è stato presentato come una visualizzazione della finestra di dialogo modale (nella parte superiore della visualizzazione, una chiamata), usare il `DismissViewController` metodo per chiudere la visualizzazione di ricerca quando l'utente seleziona un elemento. Per questo esempio, il campo di ricerca viene presentato come il contenuto di una scheda di visualizzazione della scheda, in modo che non si sta ignorando qui.
+Se il campo di ricerca è stato presentato come visualizzazione di finestra di dialogo modale (sulla parte superiore della visualizzazione che lo chiama `DismissViewController` ), usare il metodo per chiudere la visualizzazione di ricerca quando l'utente seleziona un elemento. Per questo esempio, il campo di ricerca viene presentato come contenuto di una scheda di visualizzazione a schede, quindi non viene rilasciata qui.
 
-Per altre informazioni sulle viste di raccolta, vedere la [utilizzo delle visualizzazioni raccolta](~/ios/tvos/user-interface/collection-views.md) documentazione.
+Per ulteriori informazioni sulle visualizzazioni di raccolta, vedere la documentazione [utilizzo delle visualizzazioni di raccolta](~/ios/tvos/user-interface/collection-views.md) .
 
 <a name="Presenting the Search Field" />
 
-### <a name="presenting-the-search-field"></a>Presentare il campo di ricerca
+### <a name="presenting-the-search-field"></a>Presentazione del campo di ricerca
 
-Esistono due modi principali che un campo di ricerca (e l'identificatore associato tastiera su schermo e i risultati della ricerca) può essere presentato all'utente in tvOS: 
+Esistono due modi principali per presentare all'utente in tvOS un campo di ricerca (e i risultati di ricerca e tastiera sullo schermo associati): 
 
-- **Visualizza finestra di dialogo modale** -il campo di ricerca possono essere presentato tramite l'oggetto corrente visualizzazione e Controller di visualizzazione come una visualizzazione della finestra di dialogo modale a schermo intero. Questa operazione viene in genere eseguita in risposta all'utente facendo clic su un pulsante o un altro elemento dell'interfaccia utente. La finestra di dialogo viene ignorata quando l'utente seleziona un elemento nei risultati della ricerca.
-- **Visualizzare il contenuto** -il campo di ricerca è una parte di una determinata visualizzazione diretta. Ad esempio il contenuto di una scheda di ricerca in un Controller di visualizzazione della scheda.
+- **Visualizzazione finestra di dialogo modale** : il campo di ricerca può essere visualizzato nella visualizzazione corrente e nel controller di visualizzazione come visualizzazione della finestra di dialogo modale a schermo intero. Questa operazione viene in genere eseguita in risposta all'utente che fa clic su un pulsante o su un altro elemento dell'interfaccia utente. La finestra di dialogo viene rilasciata quando l'utente seleziona un elemento dai risultati della ricerca.
+- **Visualizza contenuto** : il campo di ricerca è una parte diretta di una determinata visualizzazione. Ad esempio, come contenuto di una scheda di ricerca in un controller di visualizzazione a schede.
 
-Per un esempio di un elenco disponibili per la ricerca di immagini indicata in precedenza, il campo di ricerca viene presentato come Visualizza contenuto della scheda di ricerca e il Controller di visualizzazione scheda ricerca simile al seguente:
+Per l'esempio di un elenco di immagini in cui è possibile eseguire ricerche, il campo di ricerca viene presentato come Visualizza contenuto nella scheda Cerca e il controller di visualizzazione scheda di ricerca è simile al seguente:
 
 ```csharp
 using System;
@@ -696,13 +696,13 @@ namespace tvText
 }
 ```
 
-In primo luogo, viene definita una costante che corrisponde alla **Storyboard identificatore** che è stato assegnato al controller di visualizzazione di raccolta dei risultati di ricerca nella finestra di progettazione dell'interfaccia:
+In primo luogo, viene definita una costante che corrisponde all' **identificatore dello storyboard** assegnato al controller di visualizzazione della raccolta dei risultati di ricerca nella finestra di progettazione dell'interfaccia:
 
 ```csharp
 public const string SearchResultsID = "SearchResults";
 ```
 
-Successivamente, il `ShowSearchController` metodo crea un nuovo Controller di raccolta vista di ricerca e consente di visualizzare che è necessario:
+Successivamente, il `ShowSearchController` metodo crea un nuovo controller di raccolta della visualizzazione di ricerca e ne Visualizza il necessario:
 
 ```csharp
 public void ShowSearchController ()
@@ -734,16 +734,16 @@ public void ShowSearchController ()
 }
 ```
 
-Nel metodo precedente, una volta una `SearchResultsViewController` è stata creata un'istanza dallo Storyboard, un nuovo `UISearchController` viene creato per presentare il campo di ricerca e tastiera su schermo all'utente. La raccolta di risultati della ricerca (come definito dal `SearchResultsViewController`) verranno visualizzate in questo tipo di tastiera.
+Nel metodo precedente, dopo che è `SearchResultsViewController` stata creata un'istanza di un oggetto dallo storyboard, `UISearchController` viene creato un nuovo oggetto per presentare il campo di ricerca e la tastiera sullo schermo all'utente. La raccolta dei risultati di ricerca (come definito `SearchResultsViewController`da) verrà visualizzata sotto la tastiera.
 
-Successivamente, il `SearchBar` è configurato con le informazioni, ad esempio il **segnaposto** hint. Fornisce informazioni sul tipo di ricerca viene effettuata all'utente.
+Successivamente, l' `SearchBar` oggetto viene configurato con le informazioni, ad esempio l'hint **segnaposto** . In questo modo vengono fornite all'utente informazioni sul tipo di ricerca in corso di esecuzione.
 
-Il campo di ricerca viene quindi presentato all'utente in uno dei due modi:
+Il campo di ricerca viene quindi presentato all'utente in uno dei due modi seguenti:
 
-- **Visualizza finestra di dialogo modale** - il `PresentViewController` metodo viene chiamato per presentare la ricerca tramite la vista esistente, a schermo intero.
-- **Visualizzare il contenuto** : un `UISearchContainerViewController` creato per contenere il Controller di ricerca. Oggetto `UINavigationController` viene creato per contenere il contenitore di ricerca, il Controller di spostamento viene aggiunto al Controller di visualizzazione `AddChildViewController (navController)`e la visualizzazione presentati `View.Add (navController.View)`.
+- **Visualizzazione finestra di dialogo modale** : viene chiamato il `PresentViewController` metodo per presentare la ricerca nella visualizzazione esistente a schermo intero.
+- **Visualizza contenuto** : viene `UISearchContainerViewController` creato un oggetto per contenere il controller di ricerca. Viene `UINavigationController` creato un oggetto che contiene il contenitore di ricerca, quindi il controller di spostamento viene aggiunto al `AddChildViewController (navController)`controller di visualizzazione e la `View.Add (navController.View)`visualizzazione visualizzata.
 
-Infine e nuovamente basati sul tipo di presentazione, ovvero il `ViewDidLoad` o `ViewDidAppear` metodo chiamerà il `ShowSearchController` metodo per la ricerca di presentare all'utente:
+Infine, e di nuovo in base al tipo di presentazione, `ViewDidLoad` il `ViewDidAppear` metodo o chiamerà il `ShowSearchController` metodo per presentare la ricerca all'utente:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -766,27 +766,27 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Quando l'app viene eseguita e la scheda ricerca selezionata dall'utente, verrà visualizzato l'elenco completo non filtrata di elementi per l'utente:
+Quando l'app viene eseguita e la scheda Cerca selezionata dall'utente, l'elenco completo non filtrato di elementi verrà visualizzato all'utente:
 
-[![](text-fields-and-search-images/intro02.png "Risultati di ricerca predefinito")](text-fields-and-search-images/intro02.png#lightbox)
+[![](text-fields-and-search-images/intro02.png "Risultati della ricerca predefiniti")](text-fields-and-search-images/intro02.png#lightbox)
 
-Quando l'utente inizia a immettere un termine di ricerca, l'elenco dei risultati verrà filtrato in base a tale termine e aggiornato automaticamente:
+Quando l'utente inizia a immettere un termine di ricerca, l'elenco di risultati verrà filtrato in base a tale termine e aggiornato automaticamente:
 
-[![](text-fields-and-search-images/intro03.png "Risultati della ricerca filtrata")](text-fields-and-search-images/intro03.png#lightbox)
+[![](text-fields-and-search-images/intro03.png "Risultati della ricerca filtrati")](text-fields-and-search-images/intro03.png#lightbox)
 
-In qualsiasi momento, l'utente può spostare lo stato attivo a un elemento nei risultati della ricerca e fare clic nell'area di tocco dell'elemento remoto Siri per selezionarlo.
+In qualsiasi momento, l'utente può spostare lo stato attivo su un elemento nei risultati della ricerca e fare clic sull'area di tocco del Siri remoto per selezionarlo.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato la progettazione e utilizzo di testo e campi di ricerca all'interno di un'app xamarin. tvos. È stato illustrato come creare contenuto di testo e l'insieme di ricerca nella finestra di progettazione di interfaccia ed è stato illustrato a due diversi modi che un campo di ricerca possono essere presentato all'utente in tvOS.
+Questo articolo ha spiegato come progettare e usare i campi di testo e di ricerca all'interno di un'app Novell. tvOS. È stato illustrato come creare il testo e il contenuto della raccolta di ricerca in Interface Designer, mostrando due modi diversi per presentare un campo di ricerca all'utente in tvOS.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempi di tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Esempi di tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [le guide dell'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guida alla programmazione di App per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guide all'interfaccia umana tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guida alla programmazione delle app per tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
