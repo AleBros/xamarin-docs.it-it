@@ -1,0 +1,117 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Nozioni di base sulle applicazioni Xamarin.Forms
+metadata:
+  title: Nozioni di base sulle applicazioni Xamarin.Forms
+  description: Informazioni sui concetti fondamentali dello sviluppo di applicazioni per dispositivi mobili con Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/30/2019
+abstract:
+  description: Informazioni sui concetti fondamentali dello sviluppo di applicazioni per dispositivi mobili con Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: accessibility/index.md
+            html: Informazioni su come rendere le applicazioni semplici da usare per gli utenti che si avvicinano all'interfaccia utente con le più diverse esigenze ed esperienze.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_accessibility.svg'
+              href: accessibility/index.md
+            title: Accessibilità
+          - href: application-class.md
+            html: Informazioni sulle funzionalità esposte da una classe di applicazione sottoclassata.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
+              href: application-class.md
+            title: Classe App
+          - href: app-lifecycle.md
+            html: Informazioni sulla gestione degli eventi del ciclo di vita dell'applicazione.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
+              href: app-lifecycle.md
+            title: Ciclo di vita dell'app
+          - href: deep-linking.md
+            html: Informazioni su come usare la funzionalità di indicizzazione e deep linking delle applicazioni per rendere disponibile per la ricerca il contenuto di applicazioni in iOS e Android.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_link.svg'
+              href: deep-linking.md
+            title: Indicizzazione e deep linking delle applicazioni
+          - href: behaviors/index.md
+            html: Informazioni su come aggiungere funzionalità ai controlli senza sottoclassarli.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: behaviors/index.md
+            title: comportamenti
+          - href: custom-renderer/index.md
+            html: Informazioni su come estendere i controlli Xamarin.Forms creando nuovi controlli personalizzati e modificando i controlli esistenti.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_extend.svg'
+              href: custom-renderer/index.md
+            title: Renderer personalizzati
+          - href: data-binding/index.md
+            html: Informazioni su come sincronizzare automaticamente un'interfaccia utente con l'origine dati.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_sync.svg'
+              href: data-binding/index.md
+            title: Data binding
+          - href: dependency-service/index.md
+            html: 'Informazioni su come richiamare le funzionalità della piattaforma nativa dal codice condiviso, con la classe DependencyService.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: dependency-service/index.md
+            title: Servizio di dipendenza
+          - href: effects/index.md
+            html: Informazioni su come regolare il comportamento dei controlli Xamarin.Forms accedendo ai controlli nativi sottostanti.
+            image:
+              src: ~/media/icons/i_platform.svg
+              href: effects/index.md
+            title: Effetti
+          - href: gestures/index.md
+            html: 'Informazioni su come usare il riconoscimento movimenti per aggiungere alle applicazioni il supporto per il gesto tocco, il movimento di avvicinamento delle dita o panoramico e il gesto scorrimento rapido con un dito.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_form.svg'
+              href: gestures/index.md
+            title: Movimenti
+          - href: localization/index.md
+            html: Informazioni su come sviluppare applicazioni multilingue con Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: localization/index.md
+            title: Localizzazione
+          - href: messaging-center.md
+            html: Informazioni su come usare la comunicazione basata su messaggi per ridurre le dipendenze tra i tipi.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mail.svg'
+              href: messaging-center.md
+            title: Centro di messaggistica
+          - href: navigation/index.md
+            html: Informazioni su come spostarsi nelle applicazioni Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_class.svg'
+              href: navigation/index.md
+            title: Navigazione
+          - href: shell/index.md
+            html: Informazioni su come usare la shell di Xamarin.Forms per ridurre la complessità dello sviluppo di applicazioni per dispositivi mobili.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+              href: shell/index.md
+            title: Shell
+          - href: templates/index.md
+            html: Informazioni su come usare le funzionalità di creazione di modelli fornite da Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_template.svg'
+              href: templates/index.md
+            title: Modelli
+          - href: triggers.md
+            html: Informazioni su come esprimere in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: triggers.md
+            title: Trigger

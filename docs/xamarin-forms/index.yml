@@ -57,7 +57,7 @@ sections:
         className: cardsB
         items:
           - href: ~/xamarin-forms/app-fundamentals/
-            html: 'Tutto quello che serve sapere per creare app Xamarin.Forms, come l''utilizzo di file, immagini, database e altri elementi.'
+            html: 'Tutto quello che serve per sviluppare app Xamarin.Forms, ad esempio spostamento, movimenti, data binding e altro ancora.'
             image:
               src: ~/media/icons/i_app-build.svg
               href: ~/xamarin-forms/app-fundamentals/
