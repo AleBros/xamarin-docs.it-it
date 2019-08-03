@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645248"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739171"
 ---
 # <a name="xamarinforms-local-databases"></a>Database locali Xamarin.Forms
 
@@ -24,7 +24,7 @@ _Xamarin.Forms supporta applicazioni basate su database con il motore di databas
 
 Le applicazioni Xamarin.Forms possono usare il pacchetto [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) per incorporare le operazioni di database nel codice condiviso facendo riferimento alle classi `SQLite` incluse in NuGet. Le operazioni di database possono essere definite nel progetto della libreria .NET Standard della soluzione Xamarin.Forms.
 
-L'[applicazione di esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) associata è una semplice applicazione per elenchi di attività. Gli screenshot seguenti illustrano come viene visualizzato l'esempio in ogni piattaforma:
+L'[applicazione di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) associata è una semplice applicazione per elenchi di attività. Gli screenshot seguenti illustrano come viene visualizzato l'esempio in ogni piattaforma:
 
 [![Screenshot dell'esempio di database Xamarin.Forms](databases-images/todo-list-sml.png "Screenshot della prima pagina di TodoList")](databases-images/todo-list.png#lightbox "Screenshot della prima pagina di TodoList") [![Screenshot dell'esempio di database Xamarin.Forms](databases-images/todo-list-sml.png "Screenshot della prima pagina di TodoList")](databases-images/todo-list.png#lightbox "Screenshot della prima pagina di TodoList")
 
@@ -124,4 +124,3 @@ Questo articolo è incentrato sull'**accesso** a un database SQLite tramite Xama
 
 - [Esempio Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 - [Esempi di Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-

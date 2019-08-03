@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: c0e772e0207d2ccc9a94aefd9655dc1bb6776bba
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 997c9e023a743b8e5128ffc566e50da63652f945
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653476"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739010"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Approfondimento sulla Guida introduttiva a Novell. Forms
 
@@ -532,7 +532,7 @@ In alternativa, per informazioni aggiuntive su Xamarin.Forms un buon punto di pa
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md)
+- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml)
 - [Data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Riferimento per i controlli](~/xamarin-forms/user-interface/controls/index.md)
 - [Estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

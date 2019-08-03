@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: c05bc88ef6d182f282decedff3e4fb03b4bb96b1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: feae1a33b2e090ccfe3573285c75978aacd1799a
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334696"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739196"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creazione di App per dispositivi mobili con xamarin. Forms libro
 
@@ -26,11 +26,11 @@ Il libro è stato pubblicato nella primavera del 2016 e non è stato aggiornato 
 
 Scaricare il formato preferito e-book di Microsoft Virtual Academy:
 
-*    [**PDF (56Mb)**](https://aka.ms/xamebook)
+*    [**PDF (56Mb)** ](https://aka.ms/xamebook)
 
-*    [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
+*    [**ePub (151Mb)** ](https://aka.ms/xamebook/epub)
 
-*    [**Kindle edition (325Mb)**](https://aka.ms/xamebook/mobi)
+*    [**Kindle edition (325Mb)** ](https://aka.ms/xamebook/mobi)
 
 È anche possibile [scaricare singoli capitoli](#download-chapters-and-summaries) come file PDF.
 
@@ -44,7 +44,7 @@ Riassunti dei capitoli sono disponibili nel [tabella capitolo](#download-chapter
 
 - Collegamenti ai capitoli del libro (nella parte inferiore della pagina) effettivi, nonché per articoli correlati
 
-- Collegamenti a tutti gli esempi nel [ **xamarin-forms-book-samples** ](https://github.com/xamarin/xamarin-forms-book-samples) repository GitHub
+- Collegamenti a tutti gli esempi nel [**xamarin-forms-book-samples**](https://github.com/xamarin/xamarin-forms-book-samples) repository GitHub
 
 - Collegamenti alla documentazione dell'API per una descrizione più dettagliata di xamarin. Forms classi, strutture, le proprietà, enumerazioni e così via
 
@@ -97,13 +97,13 @@ Libreria di classi portabile è stata sostituita con una libreria .NET Standard 
 
 La maggior parte delle informazioni del libro riguardanti il ruolo della libreria di classi portabile rimane invariato per una libreria .NET Standard 2.0. Una differenza è che solo una libreria di classi Portabile ha un valore numerico "profilo". Inoltre, esistono alcuni vantaggi per le librerie .NET Standard 2.0. Ad esempio, il capitolo 20 [Async e/o File](summaries/chapter20.md) viene descritto come utilizzare le piattaforme sottostanti per l'esecuzione dei / o file. Ciò non è più necessario. La libreria .NET Standard 2.0 supporta i consueti [System.IO](xref:System.IO) classi per tutte le piattaforme di xamarin. Forms.
 
-La libreria .NET Standard 2.0 consente inoltre alle applicazioni xamarin. Forms di usare [ `HttpClient` ](xref:System.Net.Http.HttpClient) per accedere ai file tramite Internet anziché [ `WebRequest` ](xref:System.Net.WebRequest) o di altre classi.
+La libreria .NET Standard 2.0 consente inoltre alle applicazioni xamarin. Forms di usare [`HttpClient`](xref:System.Net.Http.HttpClient) per accedere ai file tramite Internet anziché [`WebRequest`](xref:System.Net.WebRequest) o di altre classi.
 
 ### <a name="the-role-of-xaml-has-been-elevated"></a>È stato portato il ruolo di XAML
 
-<i>Creazione di App per dispositivi mobili con xamarin. Forms</i> inizia con la descrizione di come scrivere applicazioni xamarin. Forms usando C#. Il linguaggio Extensible Application Markup Language (XAML) non viene introdotto solo [capitolo 7. Visual Studio XAML. Codice](summaries/chapter07.md).
+<i>Creazione di App per dispositivi mobili con xamarin. Forms</i> inizia con la descrizione di come scrivere applicazioni xamarin. Forms usando c#. Il linguaggio Extensible Application Markup Language (XAML) non viene introdotto solo [capitolo 7. Visual Studio XAML. Codice](summaries/chapter07.md).
 
-XAML è ora un ruolo di maggior in xamarin. Forms. I modelli di soluzione xamarin. Forms distribuiti con Visual Studio creano i file di paging basato su XAML. Uno sviluppatore che usa xamarin. Forms deve acquisire familiarità con XAML appena possibile. Il [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md) sezione della documentazione di xamarin. Forms contiene diversi articoli su XAML per iniziare a usare.
+XAML è ora un ruolo di maggior in xamarin. Forms. I modelli di soluzione xamarin. Forms distribuiti con Visual Studio creano i file di paging basato su XAML. Uno sviluppatore che usa xamarin. Forms deve acquisire familiarità con XAML appena possibile. Il [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) sezione della documentazione di xamarin. Forms contiene diversi articoli su XAML per iniziare a usare.
 
 ### <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -124,7 +124,7 @@ I riepiloghi capitolo includono informazioni riguardanti le modifiche in xamarin
 
 ### <a name="samples"></a>Esempi
 
-Nel [ **xamarin-forms-book-samples** ](https://github.com/xamarin/xamarin-forms-book-samples) repository di GitHub, il **originale codice dal libro** ramo contiene esempi di programma coerenti con il libro. Il **master** ramo contiene progetti che sono stati aggiornati per rimuovere API deprecate e riflettere le API avanzate. Inoltre, i progetti in Android le **master** ramo sono stati aggiornati per Android [Material Design tramite AppCompat](~/xamarin-forms/platform/android/index.md) e visualizzerà in genere testo nero su sfondo bianco.
+Nel [**xamarin-forms-book-samples**](https://github.com/xamarin/xamarin-forms-book-samples) repository di GitHub, il **originale codice dal libro** ramo contiene esempi di programma coerenti con il libro. Il **master** ramo contiene progetti che sono stati aggiornati per rimuovere API deprecate e riflettere le API avanzate. Inoltre, i progetti in Android le **master** ramo sono stati aggiornati per Android [Material Design tramite AppCompat](~/xamarin-forms/platform/android/index.md) e visualizzerà in genere testo nero su sfondo bianco.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

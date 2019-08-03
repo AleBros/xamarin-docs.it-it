@@ -1,33 +1,33 @@
 ---
-title: Xamarin.Forms CheckBox
-description: La casella di controllo di xamarin. Forms è un tipo di pulsante che può essere controllato o vuoto. Se una casella di controllo è selezionata, è considerato in. Quando una casella di controllo è vuoto, questo ha considerato per essere disattivato.
+title: Casella di controllo Novell. Forms
+description: La casella di controllo Novell. Forms è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
 ms.prod: xamarin
 ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 42631b1b67dc1d342e9f8666916604e68ee158d8
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517920"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739151"
 ---
-# <a name="xamarinforms-checkbox"></a>Xamarin.Forms CheckBox
+# <a name="xamarinforms-checkbox"></a>Casella di controllo Novell. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
-Xamarin. Forms `CheckBox` è un tipo di pulsante che può essere selezionato o vuoto. Se una casella di controllo è selezionata, è considerato in. Quando una casella di controllo è vuoto, questo ha considerato per essere disattivato.
+Novell. Forms `CheckBox` è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
 
-`CheckBox` definisce un `bool` proprietà denominata `IsChecked`, che indica se il `CheckBox` sia selezionata. Questa proprietà è supportata anche da un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetto, il che significa che possono essere personalizzati con stili e può essere la destinazione di associazioni dati.
+`CheckBox`definisce una `bool` proprietà denominata `IsChecked`, che indica se l' `CheckBox` oggetto è selezionato. Questa proprietà è supportata anche da un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetto, il che significa che è possibile applicare uno stile e essere la destinazione delle associazioni dati.
 
 > [!NOTE]
-> Il `IsChecked` proprietà associabili ha una modalità di associazione predefinita [ `BindingMode.TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay).
+> La `IsChecked` proprietà associabile ha una modalità di [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay)associazione predefinita.
 
-`CheckBox` definisce un `CheckedChanged` evento generato quando il `IsChecked` le modifiche alle proprietà, tramite la modifica dell'utente o quando un'applicazione imposta il `IsChecked` proprietà. Il `CheckedChangedEventArgs` che accompagna il `CheckedChanged` evento dispone di una singola proprietà denominata `Value`, di tipo `bool`. Quando viene generato l'evento, il valore della `Value` proprietà è impostata sul nuovo valore della `IsChecked` proprietà.
+`CheckBox`definisce un `CheckedChanged` evento generato quando la `IsChecked` proprietà viene modificata, tramite la manipolazione dell'utente o quando un'applicazione imposta la `IsChecked` proprietà. L' `CheckedChangedEventArgs` oggetto che accompagna l' `CheckedChanged` evento ha una singola proprietà denominata `Value`, di tipo `bool`. Quando viene generato l'evento, il valore della `Value` proprietà viene impostato sul nuovo valore `IsChecked` della proprietà.
 
-## <a name="create-a-checkbox"></a>Creare una casella di controllo
+## <a name="create-a-checkbox"></a>Crea una casella di controllo
 
 Nell'esempio seguente viene mostrato come creare un `CheckBox` in XAML:
 
@@ -35,29 +35,29 @@ Nell'esempio seguente viene mostrato come creare un `CheckBox` in XAML:
 <CheckBox />
 ```
 
-Questo XAML determina l'aspetto illustrato negli screenshot seguenti:
+Questo codice XAML genera l'aspetto illustrato nelle schermate seguenti:
 
-![Screenshot di una casella di controllo vuoto in iOS e Android](checkbox-images/checkbox-empty.png "vuota la casella di controllo")
+![Screenshot di una casella di controllo vuota, in iOS e Android](checkbox-images/checkbox-empty.png "Casella") di controllo vuota
 
-Per impostazione predefinita, il `CheckBox` è vuoto. Il `CheckBox` può essere controllato mediante la modifica dell'utente, o impostando il `IsChecked` proprietà `true`:
+Per impostazione predefinita, `CheckBox` è vuoto. L' `CheckBox` oggetto può essere controllato dalla manipolazione dell'utente oppure impostando `IsChecked` la proprietà `true`su:
 
 ```xaml
 <CheckBox IsChecked="true" />
 ```
 
-Questo XAML determina l'aspetto illustrato negli screenshot seguenti:
+Questo codice XAML genera l'aspetto illustrato nelle schermate seguenti:
 
-![Screenshot di una casella di controllo selezionata, in iOS e Android](checkbox-images/checkbox-checked.png "selezionata la casella di controllo")
+![Screenshot di una casella di controllo selezionata, in iOS e Android](checkbox-images/checkbox-checked.png "Casella di controllo selezionata")
 
-In alternativa, un `CheckBox` possono essere creati nel codice:
+In alternativa, è `CheckBox` possibile creare un oggetto nel codice:
 
 ```csharp
 CheckBox checkBox = new CheckBox { IsChecked = true };
 ```
 
-## <a name="respond-to-a-checkbox-changing-state"></a>Rispondere a una casella di controllo modifica dello stato
+## <a name="respond-to-a-checkbox-changing-state"></a>Rispondi a una casella di controllo modifica stato
 
-Quando la `IsChecked` le modifiche alle proprietà, tramite la modifica dell'utente o quando un'applicazione imposta il `IsChecked` proprietà, il `CheckedChanged` viene generato l'evento. Un gestore eventi per questo evento può essere registrato per rispondere alla modifica:
+Quando la `IsChecked` proprietà viene modificata, tramite la manipolazione dell'utente o quando un'applicazione `IsChecked` imposta la proprietà `CheckedChanged` , viene generato l'evento. Un gestore eventi per questo evento può essere registrato per rispondere alla modifica:
 
 ```xaml
 <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
@@ -74,7 +74,7 @@ void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
 
 Il `sender` argomento è il `CheckBox` responsabile di questo evento. Ciò consente di accedere il `CheckBox` oggetto, o per distinguere tra più `CheckBox` gli oggetti che condividono lo stesso `CheckedChanged` evento.
 
-In alternativa, un gestore eventi per il `CheckedChanged` può essere registrato un evento nel codice:
+In alternativa, un gestore eventi per l' `CheckedChanged` evento può essere registrato nel codice:
 
 ```csharp
 CheckBox checkBox = new CheckBox { ... };
@@ -84,9 +84,9 @@ checkBox.CheckedChanged += (sender, e) =>
 };
 ```
 
-## <a name="data-bind-a-checkbox"></a>Associa dati di una casella di controllo
+## <a name="data-bind-a-checkbox"></a>Casella di controllo Associa dati
 
-Il `CheckedChanged` gestore dell'evento possa essere eliminato usando data binding e trigger per rispondere a un `CheckBox` selezionato o vuoto:
+Il `CheckedChanged` gestore eventi può essere eliminato utilizzando Data Binding e trigger per rispondere a un `CheckBox` oggetto che viene verificato o vuoto:
 
 ```xaml
 <CheckBox x:Name="checkBox" />
@@ -104,33 +104,33 @@ Il `CheckedChanged` gestore dell'evento possa essere eliminato usando data bindi
 </Label>
 ```
 
-In questo esempio, il [ `Label` ](xref:Xamarin.Forms.Label) Usa un'espressione di associazione in un trigger di dati per monitorare il `IsChecked` proprietà del `CheckBox`. Quando questa proprietà diventa `true`, il `FontAttributes` e `FontSize` delle proprietà del `Label` modificare. Quando la `IsChecked` proprietà restituisce al `false`, il `FontAttributes` e `FontSize` le proprietà del `Label` vengono reimpostati allo stato iniziale.
+In questo esempio, [`Label`](xref:Xamarin.Forms.Label) usa un'espressione di associazione in un trigger di dati per monitorare la `IsChecked` proprietà dell' `CheckBox`oggetto. Quando questa proprietà diventa `true`, le `FontAttributes` proprietà `FontSize` e della `Label` modifica. Quando la `IsChecked` `false`proprietà restituisce, le `FontAttributes` proprietà e `FontSize` dell'oggetto `Label` vengono reimpostate sullo stato iniziale.
 
-Nelle schermate seguenti, la schermata iOS Mostra il [ `Label` ](xref:Xamarin.Forms.Label) formattazione quando il `CheckBox` è vuoto, mentre la schermata Android Mostra il `Label` formattazione quando il `CheckBox` viene controllata:
+Negli screenshot seguenti lo screenshot iOS Mostra [`Label`](xref:Xamarin.Forms.Label) la formattazione `CheckBox` quando è vuoto, mentre lo screenshot di Android Mostra la `Label` formattazione quando è selezionata l' `CheckBox` opzione:
 
-[![Screenshot di un dato associato casella di controllo, in iOS e Android](checkbox-images/checkbox-databinding.png "casella di controllo con associazione a dati")](checkbox-images/checkbox-databinding-large.png#lightbox "casella di controllo con associazione a dati")
+[ ![Screenshot della casella di controllo Data Binding, nella casella di]controllo(checkbox-images/checkbox-databinding.png "Data Binding") iOS e Android] (checkbox-images/checkbox-databinding-large.png#lightbox "Casella di controllo Data Binding")
 
-Per altre informazioni sui trigger, vedere [trigger di xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Per ulteriori informazioni sui trigger, vedere [trigger Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="disable-a-checkbox"></a>Disabilitare una casella di controllo
 
-In alcuni casi un'applicazione passa allo stato in cui un `CheckBox` sottoposto al controllo non è un'operazione valida. In questi casi, il `CheckBox` possono essere disabilitate impostando relativi `IsEnabled` proprietà `false`.
+A volte un'applicazione entra in uno stato `CheckBox` in cui un controllo non è un'operazione valida. In questi casi, `CheckBox` può essere disabilitato impostando la relativa `IsEnabled` proprietà `false`su.
 
-## <a name="checkbox-appearance"></a>Aspetto di casella di controllo
+## <a name="checkbox-appearance"></a>Aspetto casella di controllo
 
-Oltre alle proprietà che `CheckBox` eredita dal [ `View` ](xref:Xamarin.Forms.View) (classe), `CheckBox` definisce anche un `Color` proprietà che imposta il colore di un [ `Color` ](xref:Xamarin.Forms.Color):
+Oltre alle proprietà che `CheckBox` ereditano [`View`](xref:Xamarin.Forms.View) dalla classe, `CheckBox` definisce anche una `Color` proprietà che ne imposta il colore su un oggetto [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <CheckBox Color="Red" />
 ```
 
-Le schermate seguenti illustrano una serie di checked `CheckBox` oggetti, dove ogni oggetto dispone relativo `Color` proprietà è impostata su una diversa [ `Color` ](xref:Xamarin.Forms.Color):
+Gli screenshot seguenti mostrano una serie di oggetti controllati `CheckBox` , in cui ogni oggetto ha la `Color` proprietà impostata su un valore [`Color`](xref:Xamarin.Forms.Color)diverso:
 
-![Schermata di caselle di controllo colorata, su iOS e Android](checkbox-images/checkbox-colors.png "casella di controllo colorata")
+![Screenshot delle caselle di controllo colorate, in iOS e Android](checkbox-images/checkbox-colors.png "Casella") di controllo colorato
 
-## <a name="checkbox-visual-states"></a>Stati di visualizzazione di casella di controllo
+## <a name="checkbox-visual-states"></a>Stati di visualizzazione casella di controllo
 
-`CheckBox` è un' `IsChecked` [ `VisualState` ](xref:Xamarin.Forms.VisualState) che può essere utilizzato per avviare una modifica visiva al `CheckBox` quando è stato selezionato.
+`CheckBox`dispone di `IsChecked` un oggetto [`VisualState`](xref:Xamarin.Forms.VisualState) che può essere utilizzato per avviare `CheckBox` una modifica visiva a quando viene controllata.
 
 Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizzazione per il `IsChecked` stato:
 
@@ -156,12 +156,12 @@ Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizz
 </CheckBox>
 ```
 
-In questo esempio, il `IsChecked` [ `VisualState` ](xref:Xamarin.Forms.VisualState) specifica che quando il `CheckBox` è selezionata, relativo `Color` verrà impostata su verde. Il `Normal` `VisualState` specifica che quando il `CheckBox` è in uno stato normale, relativo `Color` verrà impostata su rosso. Pertanto, il risultato complessivo è che il `CheckBox` è rosso quando è vuoto e verde quando viene selezionato.
+`IsChecked` In questo esempio, [`VisualState`](xref:Xamarin.Forms.VisualState) specifica che quando `CheckBox` è selezionato, `Color` la proprietà verrà impostata su verde. Specifica che quando`CheckBox` è in uno stato normale, la relativa `Color` proprietà sarà impostata su rosso. `Normal` `VisualState` Pertanto, l'effetto complessivo è che il `CheckBox` è rosso quando è vuoto e verde quando è selezionato.
 
-Per altre informazioni sugli stati visual, vedere [xamarin. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Demo di casella di controllo (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
-- [Trigger di xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Demo CheckBox (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+- [Trigger di Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Gestore dello stato di visualizzazione di Novell. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
