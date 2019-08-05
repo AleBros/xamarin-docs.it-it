@@ -1,0 +1,129 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Extensible Application Markup Language (XAML)
+metadata:
+  title: Extensible Application Markup Language (XAML)
+  description: Informazioni su come usare XAML per definire le interfacce utente Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/31/2019
+abstract:
+  description: Informazioni su come usare XAML per definire le interfacce utente Xamarin.Forms.
+sections:
+  - title: Introduzione
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: xaml-basics/index.md
+            html: Informazioni di base sullo sviluppo di interfacce utente Xamarin.Forms con XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
+              href: xaml-basics/index.md
+            title: Nozioni fondamentali
+          - href: xaml-controls.md
+            html: Informazioni sulle viste Xamarin.Forms a cui è possibile fare riferimento da file XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_form.svg'
+              href: xaml-controls.md
+            title: Controlli
+          - href: xamlc.md
+            html: Informazioni su come compilare codice XAML direttamente nel linguaggio intermedio con il compilatore XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_build.svg'
+              href: xamlc.md
+            title: Compilazione
+          - href: markup-extensions/index.md
+            html: 'Informazioni sulle estensioni di markup XAML, che consentono di impostare gli attributi degli elementi da origini diverse dalle stringhe di testo letterali.'
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: markup-extensions/index.md
+            title: Estensioni di markup
+  - title: Strumenti
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: toolbox.md
+            html: Informazioni su come usare la casella degli strumenti XAML per trascinare i controlli e i layout di Xamarin.Forms nell'editor XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
+              href: toolbox.md
+            title: Casella degli strumenti
+          - href: xaml-previewer/index.md
+            html: Informazioni su come usare il visualizzatore anteprima XAML per visualizzare un'anteprima in tempo reale di una pagina affiancata al markup XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_responsive.svg'
+              href: xaml-previewer/index.md
+            title: Visualizzatore anteprima
+  - title: Spazi dei nomi
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: namespaces.md
+            html: Informazioni sulla sintassi dello spazio dei nomi XAML e su come dichiarare uno spazio dei nomi XAML per accedere a un tipo.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_namespace.svg'
+              href: namespaces.md
+            title: Spazi dei nomi
+          - href: custom-namespace-schemas.md
+            html: 'Informazioni su come creare schemi spazio dei nomi XAML personalizzati, che specificano un mapping tra un URL personalizzato e uno o più spazi dei nomi CLR.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
+              href: custom-namespace-schemas.md
+            title: Schemi spazio dei nomi personalizzati
+          - href: custom-prefix.md
+            html: Informazioni su come specificare un prefisso consigliato da associare a uno spazio dei nomi XAML per l'uso in XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-automate.svg'
+              href: custom-prefix.md
+            title: Prefissi consigliati per lo spazio dei nomi
+  - title: Altre funzionalità
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: bindable-properties.md
+            html: Informazioni su come creare proprietà associabili e su come usarle da XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
+              href: bindable-properties.md
+            title: Proprietà associabili
+          - href: attached-properties.md
+            html: Informazioni su come creare proprietà associate e su come usarle da XAML.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
+              href: bindable-properties.md
+            title: Proprietà associate
+          - href: resource-dictionaries.md
+            html: Informazioni su come creare risorse XAML e su come riusarle in un'applicazione Xamarin.Forms.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
+              href: resource-dictionaries.md
+            title: Dizionari di risorse
+          - href: passing-arguments.md
+            html: 'Informazioni su come usare XAML per passare argomenti a costruttori, per chiamare metodi factory e per specificare il tipo di un argomento generico.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
+              href: passing-arguments.md
+            title: Passaggio di argomenti
+          - href: field-modifiers.md
+            html: 'Informazioni sui modificatori di campo XAML, che specificano il livello di accesso ai campi generati per gli elementi XAML denominati.'
+            image:
+              src: ~/media/icons/i_xaml-forms.svg
+              href: field-modifiers.md
+            title: Modificatori di campo
+          - href: runtime-load.md
+            html: Informazioni su come caricare e analizzare XAML in fase di esecuzione.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+              href: runtime-load.md
+            title: Caricare XAML in fase di esecuzione
