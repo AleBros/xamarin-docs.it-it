@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 71343aa69cc7fa34fb716ea39454e6437a64169f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c9f9fb7eecd41c3aeffb7a28042f944c9d6a320b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855081"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644066"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: Guida rapida
 
 _In questa guida divisa in due parti è possibile creare per la prima volta un'applicazione Xamarin.Android usando Visual Studio e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin._
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
 
 Verrà creata un'applicazione che converte un numero di telefono alfanumerico immesso dall'utente in un numero di telefono numerico e visualizza il numero di telefono numerico all'utente. L'applicazione finale ha l'aspetto seguente:
 
@@ -72,6 +72,11 @@ Nella finestra di dialogo **Nuova app Android** fare clic su **App vuota** e far
 
 ## <a name="create-a-layout"></a>Creare un layout
 
+> [!TIP]
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
+>
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
+
 Dopo aver creato il nuovo progetto, espandere la cartella **Risorse** e quindi la cartella di **layout** in **Esplora soluzioni**.
 Fare doppio clic su **activity_main.axml** per aprirlo in Android Designer. Questo è il file di layout per la schermata dell'app:
 
@@ -91,7 +96,7 @@ Con l'opzione **Testo (grande)** selezionata nell'area di progettazione, usare i
 
 [![Impostare le proprietà di un testo di grandi dimensioni](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
 
-Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)**. Il posizionamento del widget non avverrà finché il puntatore del mouse non verrà spostato in un punto del layout che può accettare il widget. Nelle schermate seguenti, il widget non può essere posizionato (come illustrato a sinistra) finché il puntatore del mouse non viene spostato appena sotto il precedente `TextView` (come illustrato a destra):
+Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)** . Il posizionamento del widget non avverrà finché il puntatore del mouse non verrà spostato in un punto del layout che può accettare il widget. Nelle schermate seguenti, il widget non può essere posizionato (come illustrato a sinistra) finché il puntatore del mouse non viene spostato appena sotto il precedente `TextView` (come illustrato a destra):
 
 [![Il mouse indica il punto in cui il widget può essere posizionato](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
 
@@ -291,6 +296,11 @@ Nella finestra di dialogo **Configura nuova app Android** lasciare i nomi della 
 
 ## <a name="create-a-layout"></a>Creare un layout
 
+> [!TIP]
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
+>
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
+
 Dopo aver creato il nuovo progetto, espandere la cartella **Risorse** e quindi la cartella di **layout** nel riquadro della **soluzione**.
 Fare doppio clic su **Main.axml** per aprirlo in Android Designer. Questo è il file di layout della schermata visualizzata in Android Designer:
 
@@ -306,7 +316,7 @@ Con il widget **Testo (grande)** selezionato nell'area di progettazione, è poss
 
 [![Impostare le proprietà del widget di testo di grandi dimensioni](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
 
-Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)**. Si noti che è possibile usare il campo di ricerca per individuare i widget per nome:
+Trascinare un widget **Testo normale** dalla **Casella degli strumenti** all'area di progettazione e inserirlo sotto il widget **Testo (grande)** . Si noti che è possibile usare il campo di ricerca per individuare i widget per nome:
 
 [![Aggiungere un widget Testo normale](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
 
@@ -525,4 +535,4 @@ L'applicazione Xamarin.Android è stata completata.
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Icone delle app Android Xamarin (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (sample)](https://developer.xamarin.com/samples/monodroid/Phoneword) (Phoneword - Esempio)
+- [Phoneword (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (Phoneword - Esempio)

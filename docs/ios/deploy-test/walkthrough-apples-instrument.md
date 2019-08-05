@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: d0c79a5eb417762531245256ff062c5c34ca394c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f06af6a2121fc037f5c3f496ee8bd6b91e2969e6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112325"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656740"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Procedura dettagliata: Uso di Apple Instruments
 
 _Questo articolo illustra in dettaglio l'uso di Apple Instruments per diagnosticare problemi di memoria in un'applicazione iOS compilata con Xamarin. Illustra come avviare Instruments, come creare snapshot dell'heap e come analizzare la crescita della memoria. Descrive anche come usare Instruments per visualizzare ed evidenziare le righe di codice specifiche che causano il problema di memoria._
 
 Questo articolo spiega come usare lo strumento **Xcode Instruments** per diagnosticare un problema di memoria in un'applicazione iOS.
-Per iniziare, scaricare l'[esempio MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) e aprire la soluzione **before** in Visual Studio per Mac.
+Per iniziare, scaricare l'[esempio MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) e aprire la soluzione **before** in Visual Studio per Mac.
 
 ## <a name="diagnosing-the-memory-issues"></a>Diagnostica dei problemi di memoria
 
@@ -37,7 +37,7 @@ Per iniziare, scaricare l'[esempio MemoryDemo](https://developer.xamarin.com/sam
 
 6. Scegliere il pulsante **Record** (Registra) (il cerchio rosso in alto a sinistra) in Instruments per avviare l'applicazione.
 
-7. Selezionare la riga **VM Tracker** (Registro VM) nel riquadro superiore (ora che l'app è in esecuzione, conterrà due sezioni: Dirty [Modificato] e Resident Size [Dimensioni residenti]). Nel riquadro **Inspector** (Finestra di ispezione) selezionare l'opzione **Show Display Settings** (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo **Automatic Snapshotting** (Creazione automatica snapshot), visualizzata nell'angolo inferiore destro della schermata seguente:
+7. Selezionare la riga **VM Tracker** (Registro VM) nel riquadro superiore. Ora che l'app è in esecuzione, conterrà due sezioni: Dirty (Modificato) e Resident Size (Dimensioni residenti). Nel riquadro **Inspector** (Finestra di ispezione) selezionare l'opzione **Show Display Settings** (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo **Automatic Snapshotting** (Creazione automatica snapshot), visualizzata nell'angolo inferiore destro della schermata seguente:
 
     ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Selezionare l'opzione Show Display Settings (Mostra impostazioni di visualizzazione) (l'icona a forma di ingranaggi), quindi selezionare la casella di controllo Automatic Snapshotting (Creazione automatica snapshot)")
 
@@ -85,7 +85,7 @@ Ora, quando l'applicazione viene eseguita, l'uso della memoria risulta significa
 
 ![](walkthrough-apples-instrument-images/06-reduced-memory.png "Uso della memoria dell'app")
 
-Il codice migliorato è disponibile nell'[esempio MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) nella soluzione **after** in Visual Studio per Mac.
+Il codice migliorato è disponibile nell'[esempio MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) nella soluzione **after** in Visual Studio per Mac.
 
 Questo blog di community su [Garbage Collection di Xamarin.iOS](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) è un riferimento utile per la gestione dei problemi di memoria di Xamarin.iOS.
 
@@ -97,5 +97,5 @@ Infine, l'applicazione è stata riesaminata per verificare che il problema sia s
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/)
+- [Esempio MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
 - [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) (Garbage Collection di Xamarin.iOS - post di blog)

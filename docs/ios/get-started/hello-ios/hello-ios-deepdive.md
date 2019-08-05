@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
-ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
+ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58751255"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647041"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
@@ -414,7 +414,7 @@ Il simulatore iOS consente di testare le applicazioni in modo rapido. Il simulat
 Il provisioning di un dispositivo richiede tempo e un account sviluppatore Apple. La guida [Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) offre istruzioni esaurienti per la predisposizione di un dispositivo per lo sviluppo.
 
 > [!NOTE]
-> Al momento, a causa di un requisito Apple, per compilare codice per un dispositivo o un simulatore è necessario un certificato di sviluppo o un'_identità di firma_. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+> Al momento, a causa di un requisito Apple, per compilare codice per un dispositivo fisico o per il simulatore, è necessario un certificato di sviluppo o un'_identità di firma_. Per soddisfare questo requisito, seguire i passaggi nella [guida Provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
 Dopo il provisioning del dispositivo, per usare il dispositivo stesso come destinazione della distribuzione è necessario collegarlo, modificare la destinazione sulla barra degli strumenti di compilazione per il dispositivo iOS e premere **Avvia** ( **Riproduci**) come illustrato nello screenshot seguente:
 
@@ -462,6 +462,6 @@ Nella [prossima esercitazione della serie introduttiva](~/ios/get-started/hello-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) (Hello, iOS - Esempio)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Portale di provisioning iOS](https://developer.apple.com/account/#/overview)

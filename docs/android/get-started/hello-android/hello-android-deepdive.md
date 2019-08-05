@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670181"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509583"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: Approfondimenti
 
@@ -153,6 +153,11 @@ Le prossime sezioni analizzano le relazioni tra le diverse parti dell'applicazio
 
 ## <a name="user-interface"></a>Interfaccia utente
 
+> [!TIP]
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
+>
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
+
 ::: zone pivot="windows"
 
 **activity_main.axml** è il file di layout dell'interfaccia utente per la prima schermata nell'applicazione. L'estensione axml indica che si tratta di un file di progettazione Android (AXML è l'acronimo di *Android XML*). Il nome *Main* è arbitrario dal punto di vista di Android &ndash; il file di layout avrebbe potuto avere un nome diverso. Quando si apre **activity_main.axml** nell'IDE, viene visualizzato l'editor visivo per i file di layout Android, *Android Designer*:
@@ -193,7 +198,7 @@ Tutto ciò che viene definito nell'area di progettazione viene convertito in XML
 
 ::: zone-end
 
-Il codice sorgente XML deve contenere gli elementi **Testo (grande)**, **Testo normale**e i due **Pulsanti**. Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
+Questo codice sorgente XML deve contenere quattro elementi di controllo: due elementi **TextView**, un elemento **EditText** e un elemento **Button**. Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
 
 La trattazione degli strumenti e dei concetti alla base della parte visiva dell'interfaccia utente è completata. È il momento di passare al codice che consente il funzionamento dell'interfaccia utente, con l'analisi delle attività e del loro ciclo di vita.
 
@@ -207,7 +212,7 @@ Questa sezione introduce la classe `Activity`, illustra il ciclo di vita delle a
 
 L'applicazione **Phoneword** ha una sola schermata (attività). La classe che consente il funzionamento della schermata è denominata `MainActivity` e si trova nel file **MainActivity.cs**. Il nome `MainActivity` non ha alcun significato particolare in Android &ndash;. Anche se per convenzione alla prima attività in un'applicazione viene assegnato il nome `MainActivity`, per Android non è rilevante se il nome assegnato è diverso.
 
-Quando si apre **MainActivity.cs**, è possibile vedere che la classe `MainActivity` è una *sottoclasse* della classe `Activity` e che l'attività è decorata con l'attributo [Activity](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/):
+Quando si apre **MainActivity.cs**, è possibile vedere che la classe `MainActivity` è una *sottoclasse* della classe `Activity` e che l'attività è decorata con l'attributo [Activity](xref:Android.App.ActivityAttribute):
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]
@@ -333,7 +338,7 @@ Dopo aver configurato il dispositivo, per usarlo come destinazione della distrib
 ::: zone-end
 ::: zone pivot="macos"
 
-Dopo aver configurato il dispositivo, per usarlo come destinazione della distribuzione è necessario collegarlo, premere **Avvia (Riproduci)**, selezionarlo dalla finestra di dialogo **Seleziona dispositivo** e quindi premere **OK**:
+Dopo aver configurato il dispositivo, per usarlo come destinazione della distribuzione è necessario collegarlo, premere **Avvia (Riproduci)** , selezionarlo dalla finestra di dialogo **Seleziona dispositivo** e quindi premere **OK**:
 
 [![Selezionare il dispositivo di debug](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 

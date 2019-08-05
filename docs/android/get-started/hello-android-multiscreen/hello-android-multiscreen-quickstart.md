@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
-ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
+ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418660"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643969"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Guida rapida
 
 _Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android._
 
-Nella parte relativa alla procedura dettagliata di questa guida, verrà aggiunta una seconda schermata all'applicazione [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) per tenere traccia della cronologia dei numeri convertiti tramite l'app. L'[applicazione finale](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/) avrà una seconda schermata che visualizzerà i numeri che sono stati "convertiti", come illustrato nello screenshot a destra:
+Nella parte relativa alla procedura dettagliata di questa guida, verrà aggiunta una seconda schermata all'applicazione [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) per tenere traccia della cronologia dei numeri convertiti tramite l'app. L'[applicazione finale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) avrà una seconda schermata che visualizzerà i numeri che sono stati "convertiti", come illustrato nello screenshot a destra:
 
 [![Screenshot dell'app di esempio](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -29,7 +29,7 @@ L'[approfondimento](~/android/get-started/hello-android-multiscreen/hello-androi
 ## <a name="requirements"></a>Requisiti
 
 Questa guida inizia dal punto in cui [Hello, Android](~/android/get-started/hello-android/index.md) termina. È quindi necessario aver completato [Hello, Android: guida introduttiva](~/android/get-started/hello-android/hello-android-quickstart.md).
-Se si vuole passare direttamente alla procedura dettagliata che segue, è possibile scaricare la versione completata di [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) (da Hello, Android: guida introduttiva) e usarla per iniziare la procedura dettagliata.
+Se si vuole passare direttamente alla procedura dettagliata che segue, è possibile scaricare la versione completata di [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (da Hello, Android: guida introduttiva) e usarla per iniziare la procedura dettagliata.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
@@ -38,6 +38,11 @@ In questa procedura dettagliata si aggiungerà la schermata **Translation Histor
 ::: zone pivot="windows"
 
 Per iniziare, aprire l'applicazione **Phoneword** in Visual Studio e modificare **Main.axml** da **Esplora soluzioni**.
+
+> [!TIP]
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
+>
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
 
 ### <a name="updating-the-layout"></a>Aggiornamento del layout
 
@@ -73,7 +78,7 @@ Dopo aver selezionato il pulsante **Translation History** (Cronologia delle conv
 
 ### <a name="creating-the-second-activity"></a>Creazione della seconda attività
 
-Creare una seconda attività per consentire il funzionamento della seconda schermata. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword** e scegliere **Aggiungi > Nuovo elemento...**:
+Creare una seconda attività per consentire il funzionamento della seconda schermata. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **Phoneword** e scegliere **Aggiungi > Nuovo elemento...** :
 
 [![Aggiungere un nuovo file](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -177,6 +182,11 @@ Distribuire l'applicazione in un emulatore o in un dispositivo. Gli screenshot s
 ::: zone pivot="macos"
 
 Per iniziare, aprire il progetto **Phoneword** in Visual Studio per Mac e modificare **Main.axml** dal **riquadro della soluzione**.
+
+> [!TIP]
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
+>
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
 
 ### <a name="updating-the-layout"></a>Aggiornamento del layout
 
@@ -313,5 +323,5 @@ L'applicazione Xamarin.Android multischermata è stata completata. È ora possib
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Icone e schermate di avvio delle app Xamarin (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (sample)](https://developer.xamarin.com/samples/monodroid/Phoneword) (Phoneword - Esempio)
-- [PhonewordMultiscreen (sample)](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen) (PhonewordMultiscreen - Esempio)
+- [Phoneword (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (Phoneword - Esempio)
+- [PhonewordMultiscreen (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) (PhonewordMultiscreen - Esempio)

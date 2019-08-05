@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f3fb083457fa1fbf6590eb53eea504257e93ecc6
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d59d4fc3ff9df3ea883ab4d5845da193e6cb8c51
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617774"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643779"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 
@@ -174,7 +174,7 @@ Java e C# usano linguaggi di programmazione orientata a oggetti molto simili:
 
 -   Tutte le istanze delle classi vengono create nell'heap tramite l'operatore `new`.
 
--   Poiché entrambi i linguaggi usano il processo di Garbage Collection, è possibile rilasciare in modo esplicito gli oggetti inutilizzati, ovvero non c'è una parola chiave `delete` come in C++.
+-   Poiché entrambi i linguaggi usano il processo di Garbage Collection, non è possibile rilasciare in modo esplicito gli oggetti inutilizzati, ovvero non esiste una parola chiave `delete` come in C++.
 
 -   È possibile estendere le classi attraverso l'ereditarietà ed entrambi i linguaggi consentono solo una singola classe di base per ogni tipo.
 
@@ -286,9 +286,9 @@ In questo caso, il metodo `OnCreate` definito dalla classe derivata (`MainActivi
 
 Java e C# supportano entrambi i modificatori di accesso `public`, `private` e `protected`. C#, tuttavia, supporta due modificatori di accesso aggiuntivi:
 
--   **`internal`**: il membro della classe è accessibile solo all'interno dell'assembly corrente.
+-   **`internal`** : il membro della classe è accessibile solo all'interno dell'assembly corrente.
 
--   **`protected internal`**: il membro della classe è accessibile all'interno dell'assembly di definizione, della classe di definizione e delle classi derivate (l'accesso è consentito alle classi derivate sia all'interno che all'esterno dell'assembly).
+-   **`protected internal`** : il membro della classe è accessibile all'interno dell'assembly di definizione, della classe di definizione e delle classi derivate (l'accesso è consentito alle classi derivate sia all'interno che all'esterno dell'assembly).
 
 Per altre informazioni sui modificatori di accesso C#, vedere l'argomento [Modificatori di accesso](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
 
@@ -433,7 +433,7 @@ Per altre informazioni sul supporto delle funzionalità di programmazione asincr
 
 Numerose parole chiave del linguaggio usate in Java sono usate anche in C#. Ci sono anche molte parole chiave Java che hanno una controparte in C# equivalente ma con un nome diverso, come elencato in questa tabella:
 
-|Java|C#|Descrizione|
+|Java|C#|DESCRIZIONE|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Usata per dichiarare i valori booleani true e false.|
 |`extends`|`:`|Precede la classe e le interfacce da cui ereditare.|
@@ -448,9 +448,9 @@ Numerose parole chiave del linguaggio usate in Java sono usate anche in C#. Ci s
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Esegue il wrapping di una sezione critica del codice con acquisizione e rilascio del blocco.|
 
 
-Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una controparte in Java. Il codice Xamarin.Android usa spesso le parole chiave C# seguenti (questa tabella è utile come riferimento quando si legge il [codice di esempio](https://developer.xamarin.com/samples/android/all/) Xamarin.Android):
+Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una controparte in Java. Il codice Xamarin.Android usa spesso le parole chiave C# seguenti (questa tabella è utile come riferimento quando si legge il [codice di esempio](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) Xamarin.Android):
 
-|C#|Descrizione|
+|C#|DESCRIZIONE|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Esegue conversioni tra tipi riferimento compatibili o tipi nullable.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Specifica che un'espressione lambda o un metodo è asincrono.|
@@ -473,7 +473,7 @@ Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una contro
 |[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|Tipo di valore che incapsula un gruppo di variabili correlate.|
 |[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|Ottiene il tipo di un oggetto.|
 |[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|Dichiara una variabile locale tipizzata in modo implicito.|
-|[valore](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Fa riferimento al valore che il codice client vuole assegnare a una proprietà.|
+|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Fa riferimento al valore che il codice client vuole assegnare a una proprietà.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Consente l'override di un metodo in una classe derivata.|
 
 

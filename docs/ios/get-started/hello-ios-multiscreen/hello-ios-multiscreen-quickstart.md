@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 849c60507fe0ff7b8bf1743be5bbf89ca94b9d6f
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 61bf1c99b90d21d701dd923dcca4a203c96b69a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865571"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657050"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS Multiscreen - Guida introduttiva
 
@@ -26,7 +26,7 @@ Nell'[approfondimento accluso alla guida](~/ios/get-started/hello-ios-multiscree
 
 ## <a name="requirements"></a>Requisiti
 
-Questa guida inizia dal punto in cui è terminato il documento Hello, iOS e richiede il completamento della [guida rapida Hello, iOS](~/ios/get-started/hello-ios/index.md). La versione completa dell'app Phoneword può essere scaricata dall'[esempio di Hello, iOS](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+Questa guida inizia dal punto in cui è terminato il documento Hello, iOS e richiede il completamento della [guida rapida Hello, iOS](~/ios/get-started/hello-ios/index.md). Scaricare la versione completa dell'app Phoneword dall'[esempio di Hello, iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 ::: zone pivot="macos"
 
@@ -34,7 +34,7 @@ Questa guida inizia dal punto in cui è terminato il documento Hello, iOS e rich
 
 In questa procedura dettagliata verrà aggiunta la schermata Call History all'applicazione **Phoneword**.
 
-1. Aprire l'applicazione **Phoneword** in Visual Studio per Mac. Se necessario, è possibile scaricare l'applicazione Phoneword completata nella [procedura dettagliata Hello, iOS](~/ios/get-started/hello-ios/index.md) da [qui](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+1. Aprire l'applicazione **Phoneword** in Visual Studio per Mac. Se necessario, è possibile scaricare l'applicazione Phoneword completata nella [procedura dettagliata Hello, iOS](~/ios/get-started/hello-ios/index.md) da [qui](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 2. Aprire il file **Main.storyboard** dal **riquadro della soluzione**:
 
@@ -275,7 +275,7 @@ L'applicazione Xamarin.iOS Multiscreen è stata completata.
 
 In questa procedura dettagliata verrà aggiunta la schermata Call History all'applicazione **Phoneword**.
 
-1. Aprire l'applicazione **Phoneword** in Visual Studio. Se necessario, scaricare l'[applicazione Phoneword completata](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) dalla [procedura dettagliata Hello, iOS](~/ios/get-started/hello-ios/index.md). Tenere presente che è necessario connettersi a un [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) per usare iOS Designer e il simulatore iOS.
+1. Aprire l'applicazione **Phoneword** in Visual Studio. Se necessario, scaricare l'[applicazione Phoneword completata](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) dalla [procedura dettagliata Hello, iOS](~/ios/get-started/hello-ios/index.md). Tenere presente che è necessario connettersi a un [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) per usare iOS Designer e il simulatore iOS.
 
 2. Iniziare modificando l'interfaccia utente. Aprire il file **Main.storyboard** dal **riquadro della soluzione**, verificando che **Visualizza come** sia impostato su _iPhone 6_:
 
@@ -517,6 +517,6 @@ L'app è ora in grado di gestire la navigazione usando gli elementi Storyboard S
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) (Hello, iOS - Esempio)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
 - [Linee guida dell'interfaccia umana iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portale di provisioning iOS](https://developer.apple.com/ios/manage/overview/index.action)

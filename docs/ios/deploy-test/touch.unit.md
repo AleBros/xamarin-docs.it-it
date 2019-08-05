@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f488ebe1df814a476346de15c740093fc6de54df
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 6757f25cb54adc464f7e41a1cd59db8cf6c7d22a
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854691"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511705"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Unit test di app Xamarin.iOS
 
@@ -119,11 +119,10 @@ Si può anche consultare la finestra Output applicazione nell'IDE per verificare
 ## <a name="writing-new-tests"></a>Scrittura di nuovi test
 
 NUnitLite è una versione modificata del progetto NUnit denominato [Touch.Unit](https://github.com/xamarin/Touch.Unit). È un framework di testing leggero per .NET, basato sulle idee contenute in [NUnit](http://nunit.com/), di cui fornisce un sottoinsieme di funzionalità.
-Usa una quantità minima di risorse e può essere eseguito su piattaforme con limitazioni di risorse come quelle usate per lo sviluppo per sistemi operativi Mobile ed Embedded. È possibile [esplorare l'API NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/) disponibile in Xamarin.iOS. Con lo scheletro di base fornito dal modello di unit test, il punto di ingresso principale è costituito dai metodi della [classe Assert](https://developer.xamarin.com/api/type/NUnit.Framework.Assert/).
+Usa una quantità minima di risorse e può essere eseguito su piattaforme con limitazioni di risorse come quelle usate per lo sviluppo per sistemi operativi Mobile ed Embedded. L'API NUnitLite disponibile in Xamarin.iOS. Con lo scheletro di base fornito dal modello di unit test, il punto di ingresso principale è costituito dai metodi della [classe Assert](xref:NUnit.Framework.Assert).
 
 Oltre a questi metodi, la funzionalità di testing unità è suddivisa negli spazi dei nomi seguenti che fanno parte di NUnitLite:
 
-- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
-- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
-- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
-- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
+- [NUnit.Framework](xref:NUnit.Framework)
+- [NUnit.Constraints](xref:NUnit.Framework.Constraints)
+- [NUniteLite.Runner](xref:NUnitLite.Runner)

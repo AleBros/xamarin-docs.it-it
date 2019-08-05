@@ -8,23 +8,23 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 08c026a636d28bac3b2dc3b4734704b8110cbef1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bfe0e9c112784c93f1c27fb82e303bbd590f775f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109575"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644756"
 ---
 # <a name="sample-app-hello-ios"></a>App di esempio: Hello, iOS
 
-## <a name="part-1-quickstartiosget-startedhello-ioshello-ios-quickstartmd"></a>[Parte 1: guida introduttiva](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ioshello-ios-quickstartmd"></a>[Parte 1. Avvio rapido](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
 
 La prima parte della guida descrive come creare un'applicazione che converte un numero di telefono alfanumerico immesso dall'utente in un numero di telefono numerico e lo chiama.
 
-## <a name="part-2-deep-diveiosget-startedhello-ioshello-ios-deepdivemd"></a>[Part 2: Deep Dive](~/ios/get-started/hello-ios/hello-ios-deepdive.md) (Parte 2: approfondimento)
+## <a name="part-2-deep-diveiosget-startedhello-ioshello-ios-deepdivemd"></a>[Parte 2. Approfondimenti](~/ios/get-started/hello-ios/hello-ios-deepdive.md)
 
 Nella seconda parte del documento viene rivista la compilazione dell'applicazione e vengono illustrati i concetti di base del funzionamento delle applicazioni iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) (Hello, iOS - Esempio)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) (Hello, iOS - Esempio)
