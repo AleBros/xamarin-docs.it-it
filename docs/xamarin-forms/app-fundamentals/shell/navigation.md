@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 9f48659a8af7bb74cc33ec0929f41b2a881e1978
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
+ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469516"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739262"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navigazione nella shell Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 La shell Xamarin.Forms include un'esperienza di navigazione basata su URI che usa le route per il passaggio a qualsiasi pagina nell'applicazione, senza dover seguire una gerarchia di navigazione specifica. Offre inoltre la possibilità di navigare all'indietro senza dover visitare tutte le pagine dello stack di navigazione.
 
@@ -156,7 +156,7 @@ Questo esempio consente di passare alla pagina per la route `monkeydetails`.
 
 Sono inoltre supportati i seguenti formati di route relative:
 
-| Formato | Description |
+| Formato | DESCRIZIONE |
 | --- | --- |
 | //*route* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso l'alto a partire dalla route attualmente visualizzata. |
 | ///*route* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso il basso a partire dalla route attualmente visualizzata. |
@@ -211,7 +211,7 @@ La classe `Tab` definisce una proprietà `Stack`, di tipo `IReadOnlyList<Page>`,
 
 La classe `Shell` definisce un evento `Navigating`, che viene generato quando sta per essere eseguita la navigazione, a livello di codice o in seguito all'interazione dell'utente. L'oggetto `ShellNavigatingEventArgs` che accompagna l'evento `Navigating` fornisce le proprietà seguenti:
 
-| Proprietà | Tipo | Description |
+| Proprietà | Tipo | DESCRIZIONE |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI della pagina corrente. |
 | `Source` | `ShellNavigationSource` | Tipo di navigazione eseguita. |
@@ -226,7 +226,7 @@ La classe `ShellNavigatingEventArgs` fornisce anche un metodo `Cancel` che è po
 
 La classe `Shell` definisce anche un evento `Navigated`, che viene generato al completamento della navigazione. L'oggetto `ShellNavigatedEventArgs` che accompagna l'evento `Navigating` fornisce le proprietà seguenti:
 
-| Proprietà | Tipo | Description |
+| Proprietà | Tipo | DESCRIZIONE |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI della pagina corrente. |
 | `Previous`| `ShellNavigationState` | URI della pagina precedente. |
@@ -339,4 +339,4 @@ La proprietà `Command` è impostata su un oggetto `ICommand` da eseguire quando
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Xaminals (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
