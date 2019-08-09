@@ -1,28 +1,26 @@
 ---
 title: Riferimento per i controlli
-description: Descrizione di tutti gli elementi visivi usati per costruire un'applicazione xamarin. Forms. Questo articolo elenca i gruppi di controllo che costituiscono l'interfaccia utente di un'applicazione xamarin. Forms.
+description: Descrizione di tutti gli elementi dell'interfaccia utente utilizzati per creare un'applicazione Novell. Forms. Questo articolo elenca i gruppi di controllo che costituiscono l'interfaccia utente di un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: 85a1f34e1115c29840b08cfc85969d10d3971939
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 08/08/2019
+ms.openlocfilehash: 9456512931822abd59a081485744846a11cdea88
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655594"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869365"
 ---
 # <a name="controls-reference"></a>Riferimento per i controlli
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
-_Descrizione di tutti gli elementi visivi usati per costruire un'applicazione xamarin. Forms._
+L'interfaccia utente di un'applicazione Novell. Forms è costituita da oggetti mappati ai controlli nativi di ogni piattaforma di destinazione. Ciò consente alle applicazioni specifiche della piattaforma per iOS, Android e al piattaforma UWP (Universal Windows Platform) di usare il codice Novell. Forms contenuto in una [libreria di .NET standard](~/cross-platform/app-fundamentals/net-standard.md).
 
-L'interfaccia visiva di un'applicazione xamarin. Forms è costituita da oggetti che eseguono il mapping ai controlli nativi di ogni piattaforma di destinazione. Ciò consente alle applicazioni specifiche della piattaforma per iOS, Android e la piattaforma universale di Windows usare il codice xamarin. Forms contenuto un [libreria .NET Standard](~/cross-platform/app-fundamentals/net-standard.md) o una [progetto condiviso](~/cross-platform/app-fundamentals/shared-projects.md).
-
-I quattro gruppi di controllo principale usati per creare l'interfaccia utente di un'applicazione xamarin. Forms sono illustrati negli articoli seguenti quattro:
+I quattro gruppi di controllo principali usati per creare l'interfaccia utente di un'applicazione Novell. Forms sono i seguenti:
 
 - [**Pagine**](pages.md)
 - [**Layout**](layouts.md)
@@ -31,7 +29,9 @@ I quattro gruppi di controllo principale usati per creare l'interfaccia utente d
 
 In genere, una pagina di xamarin. Forms occupa l'intera schermata. La pagina contiene in genere un layout, che contiene le viste e possibilmente altri layout. Le celle sono componenti specializzati utilizzati in combinazione con [`TableView`](views.md#tableView) e [`ListView`](views.md#listView).
 
-Negli articoli su quattro [**pagine**](pages.md), [**layout**](layouts.md), [**viste**](views.md), e [**celle**](cells.md), con collegamenti alla relativa documentazione dell'API, un articolo che descrive l'uso (se presente) e uno o più programmi di esempio viene descritto ciascun tipo di controllo (se presenti). Ogni tipo di controllo è accompagnato anche da una schermata che illustra una pagina dal [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) esempio in esecuzione in iOS, Android e UWP i dispositivi. Ogni schermata seguente sono riportati collegamenti al codice sorgente per la pagina in C#, la pagina XAML equivalente e (se appropriato) il file code-behind C# per la pagina XAML.
+Negli articoli su quattro [**pagine**](pages.md), [**layout**](layouts.md), [**viste**](views.md), e [**celle**](cells.md), con collegamenti alla relativa documentazione dell'API, un articolo che descrive l'uso (se presente) e uno o più programmi di esempio viene descritto ciascun tipo di controllo (se presenti). Ogni tipo di controllo è anche accompagnato da una schermata che mostra una pagina dell'esempio [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) in esecuzione su dispositivi iOS e Android. Ogni schermata seguente sono riportati collegamenti al codice sorgente per la pagina in C#, la pagina XAML equivalente e (se appropriato) il file code-behind C# per la pagina XAML.
+
+Oltre ai controlli forniti con Novell. Forms, sono disponibili controlli di terze parti. Per altre informazioni, vedere [controlli di terze parti](thirdparty.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,5 +1,5 @@
 ---
-title: Riconoscimento delle emozioni usando l'API viso
+title: Riconoscimento delle emozioni percepito usando il API Viso
 description: L'API viso accetta un'espressione del viso in un'immagine come input e restituisce i dati che includono livelli di confidenza in un set di emozioni per ogni viso nell'immagine. Questo articolo illustra come usare l'API viso per riconoscere le emozioni, per valutare un'applicazione xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
@@ -7,22 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 6f03ae1030ef4a69b15c5e219785eee12c4e603b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656568"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869389"
 ---
-# <a name="emotion-recognition-using-the-face-api"></a>Riconoscimento delle emozioni usando l'API viso
+# <a name="perceived-emotion-recognition-using-the-face-api"></a>Riconoscimento delle emozioni percepito usando il API Viso
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_L'API viso accetta un'espressione del viso in un'immagine come input e restituisce i dati che includono livelli di confidenza in un set di emozioni per ogni viso nell'immagine. Questo articolo illustra come usare l'API viso per riconoscere le emozioni, per valutare un'applicazione xamarin. Forms._
+Il API Viso è in grado di eseguire il rilevamento delle emozioni per rilevare rabbia, distemperanza, disgusto, paura, felicità, neutralità, tristezza e sorpresa, in un'espressione facciale basata su annotazioni percepite da parte dei codificatori umani. È importante notare, tuttavia, che solo le espressioni facciali potrebbero non rappresentare necessariamente gli Stati interni delle persone.
 
-## <a name="overview"></a>Panoramica
-
-L'API viso è possibile eseguire il rilevamento di emozioni per rilevare rabbia, biasimo, disgusto, paura, felicità, neutralità, tristezza e sorpresa, in un'espressione del viso. Queste emozioni vengono comunicate universalmente e visualizzarli tramite espressioni del viso base stesso. Oltre a restituire un risultato di emozioni per un'espressione del viso, l'API viso possono anche restituisce un riquadro delimitatore per i volti rilevati. Si noti che una chiave API deve essere ottenuta per usare l'API viso. Per ottenere tale valore in [prova servizi cognitivi](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Oltre a restituire un risultato emotivo per un'espressione facciale, il API Viso può anche restituire un rettangolo di delimitazione per i visi rilevati. Si noti che una chiave API deve essere ottenuta per usare l'API viso. Per ottenere tale valore in [prova servizi cognitivi](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Riconoscimento delle emozioni può essere eseguito tramite una libreria client e tramite l'API REST. Questo articolo è incentrato su come eseguire il riconoscimento delle emozioni tramite l'API REST. Per altre informazioni sull'API REST, vedere [API REST viso](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
@@ -44,7 +42,7 @@ public FaceRecognitionService()
 
 Errore per passare una chiave API valida per l'API viso comporterà un errore di 401 risposta.
 
-## <a name="performing-emotion-recognition"></a>Esecuzione di riconoscimento delle emozioni
+## <a name="perform-emotion-recognition"></a>Eseguire il riconoscimento delle emozioni
 
 Riconoscimento delle emozioni viene eseguito mediante una richiesta POST contenente un'immagine per il `detect` all'API `https://[location].api.cognitive.microsoft.com/face/v1.0`, dove `[location]]` è l'area è utilizzato per ottenere la chiave API. I parametri della richiesta facoltativo sono:
 
@@ -81,7 +79,7 @@ Questo metodo genera un URI di richiesta e quindi invia la richiesta per il `det
 > [!NOTE]
 > Nelle chiamate API viso come è stato usato per ottenere le chiavi di sottoscrizione, è necessario usare la stessa area. Ad esempio, se è stato ottenuto le chiavi di sottoscrizione dal `westus` area, l'endpoint di rilevamento viso sarà `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
-### <a name="sending-the-request"></a>L'invio della richiesta
+### <a name="send-the-request"></a>Invia la richiesta
 
 Il `SendRequestAsync` metodo effettua la richiesta POST all'API viso e restituisce il risultato come un `Face` matrice:
 
@@ -132,7 +130,7 @@ La richiesta POST viene quindi inviata a `detect` API. La risposta viene letto, 
 
 Il `detect` API invierà il codice di stato HTTP 200 (OK) in risposta, fornita che la richiesta sia valida, che indica che la richiesta ha avuto esito positivo e che le informazioni richieste sono presenti nella risposta. Per un elenco di possibili risposte di errore, vedere [API REST viso](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
-### <a name="processing-the-response"></a>L'elaborazione della risposta
+### <a name="process-the-response"></a>Elaborare la risposta
 
 La risposta dell'API viene restituita in formato JSON. I dati JSON seguenti mostrano un messaggio di risposta con esito positivo tipico che fornisce i dati richiesti dall'applicazione di esempio:
 
@@ -173,10 +171,6 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 Lo screenshot seguente mostra il risultato del processo di riconoscimento delle emozioni nell'applicazione di esempio:
 
 ![](emotion-recognition-images/emotion-recognition.png "Riconoscimento delle emozioni")
-
-## <a name="summary"></a>Riepilogo
-
-Questo articolo ha illustrato come usare l'API viso per riconoscere le emozioni, per valutare un'applicazione xamarin. Forms. L'API viso accetta un'espressione del viso in un'immagine come input e restituisce i dati che include il livello di confidenza in un set di emozioni per ogni viso nell'immagine.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
