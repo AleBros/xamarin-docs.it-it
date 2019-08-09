@@ -151,6 +151,7 @@
 #### [Layout](user-interface/controls/layouts.md)
 #### [Visualizzazioni](user-interface/controls/views.md)
 #### [Celle](user-interface/controls/cells.md)
+#### [Controlli di terze parti](user-interface/controls/thirdparty.md)
 ### [DataPages](user-interface/datapages/index.md)
 #### [Introduzione](user-interface/datapages/get-started.md)
 #### [Riferimento per i controlli](user-interface/datapages/controls.md)
@@ -339,7 +340,7 @@
 #### [Riconoscimento vocale](data-cloud/azure-cognitive-services/speech-recognition.md)
 #### [Controllo ortografico](data-cloud/azure-cognitive-services/spell-check.md)
 #### [Traduzione di testi](data-cloud/azure-cognitive-services/text-translation.md)
-#### [Riconoscimento delle emozioni](data-cloud/azure-cognitive-services/emotion-recognition.md)
+#### [Riconoscimento delle emozioni percepite](data-cloud/azure-cognitive-services/emotion-recognition.md)
 ### Servizi Web
 #### [Panoramica dei servizi Web ](data-cloud/web-services/index.md)
 #### [Introduzione](data-cloud/web-services/introduction.md)

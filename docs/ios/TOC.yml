@@ -829,6 +829,8 @@
               href: troubleshooting/questions/exception-marshal-obj-c.md
             - name: 'Errore di runtime: Impossibile trovare o caricare l''assembly mscorlib.dll'
               href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: 'Errore di compilazione: Impossibile codificare l''offset X in una rilocazione distribuita risultante'
+              href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
             - name: Il file IPA è di 0 byte
               href: troubleshooting/questions/ipa-zero-bytes.md
             - name: 'Errore IBTool: Non è stato possibile completare l''operazione.'
