@@ -1,56 +1,60 @@
 ---
-title: 'Parte 1: creazione di un MonoGame multipiattaforma'
-description: Questa procedura dettagliata viene illustrato come creare un nuovo progetto per iOS e Android con MonoGame. Il risultato è un Visual Studio per la soluzione Mac con un progetto di codice condiviso multipiattaforma, nonché un unico progetto per ogni piattaforma. Questo progetto visualizzerà una schermata blu vuota quando eseguita.
+title: 'Parte 1: creazione di un monogame multipiattaforma'
+description: Questa procedura dettagliata illustra come creare un nuovo progetto per iOS e Android usando monogame. Il risultato è una soluzione di Visual Studio per Mac con un progetto di codice condiviso multipiattaforma e un progetto per ogni piattaforma. Questo progetto visualizzerà una schermata blu vuota quando viene eseguita.
 ms.prod: xamarin
 ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c8ef426c742f875e26fc0fcf88a9468e1618e30f
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: d72c428bb4b8c88365180c5c3c50b107eed2b21d
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832532"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978450"
 ---
-# <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: creazione di un MonoGame multipiattaforma
+# <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: creazione di un monogame multipiattaforma
 
-_Questa procedura dettagliata viene illustrato come creare un nuovo progetto per iOS e Android con MonoGame. Il risultato è un Visual Studio per la soluzione Mac con un progetto di codice condiviso multipiattaforma, nonché un unico progetto per ogni piattaforma. Questo progetto visualizzerà una schermata blu vuota quando eseguita._
+_Questa procedura dettagliata illustra come creare un nuovo progetto per iOS e Android usando monogame. Il risultato è una soluzione di Visual Studio per Mac con un progetto di codice condiviso multipiattaforma e un progetto per ogni piattaforma. Questo progetto visualizzerà una schermata blu vuota quando viene eseguita._
 
-MonoGame consente lo sviluppo di giochi multipiattaforma con gran parte del riutilizzo del codice. Questa procedura dettagliata sarà incentrata su come configurare una soluzione contenente progetti per iOS e Android, nonché un progetto di codice condiviso per il codice multipiattaforma.
+Monogame consente lo sviluppo di giochi multipiattaforma con grande parte del riutilizzo del codice. Questa procedura dettagliata si concentra sulla configurazione di una soluzione che contiene progetti per iOS e Android, nonché un progetto di codice condiviso per il codice multipiattaforma.
 
-Al termine, verrà dispone di un progetto con la struttura appropriata per l'esecuzione di logica di aggiornamento del gioco e giochi per la logica di disegno a 30 fotogrammi al secondo. Può essere utilizzato come progetto di base per qualsiasi progetto MonoGame. Il progetto avrà un aspetto simile al seguente quando eseguita:
+Al termine, il progetto ha la struttura corretta per eseguire la logica di aggiornamento del gioco e la logica di disegno del gioco a 30 fotogrammi al secondo. Può essere usato come progetto di base per qualsiasi progetto MonoGame. Il progetto sarà simile al seguente quando viene eseguito:
 
 ![Schermata blu vuota](part1-images/image1.png)
 
-## <a name="adding-monogame-to-visual-studio-for-mac"></a>Aggiunta di MonoGame a Visual Studio per Mac
-
-MonoGame può essere aggiunto come un componente aggiuntivo per Visual Studio per Mac. In Mac, selezionare **Visual Studio per Mac** > **Gestione componenti aggiuntivi...**  . In Windows, selezionare * * Strumenti * * > **Gestione componenti aggiuntivi...**  . Selezionare il **Gallery** scheda, quindi espandere il **lo sviluppo di giochi** categoria e selezionare **MonoGame Addin**, quindi fare clic su **installare**:
-
-![Visual Studio per la raccolta di estensioni di Mac selezionando MonoGame](part1-images/image2.png)
+## <a name="adding-monogame-to-visual-studio"></a>Aggiunta di monogame a Visual Studio
 
 > [!IMPORTANT]
-> Se il **lo sviluppo di giochi** sezione non viene visualizzata nella gestione aggiuntivo, è possibile scaricare e installare la versione più recente da qui manualmente: http://www.monogame.net/downloads/. Si potrebbe essere necessario riavviare Visual Studio per Mac per i modelli di visualizzazione.
+> Monogame non è installato per impostazione predefinita in Visual Studio 2019 o Visual Studio per Mac.
+>
+> È necessario scaricare e installare manualmente la versione più recente http://www.monogame.net/downloads/ di, quindi eseguire il programma di installazione. Potrebbe essere necessario riavviare Visual Studio per visualizzare i modelli.
+>
+> La sezione **sviluppo del gioco** dovrebbe quindi essere visualizzata nella **Gestione componenti**aggiuntivi.
 
-Una volta installato, MonoGame modelli verranno visualizzato in Visual Studio per Mac, come vedremo nella prossima sezione.
+Per abilitare il componente aggiuntivo monogame per Visual Studio per Mac, selezionare **Visual Studio per Mac** > **Gestione componenti aggiuntivi...** . Per Visual Studio 2019 in Windows, selezionare **strumenti** > **Gestione componenti aggiuntivi...** . Selezionare la scheda **raccolta** , espandere la categoria **sviluppo gioco** e selezionare **componente aggiuntivo monogame**, quindi fare clic su **Installa...** :
 
-## <a name="creating-a-new-solution"></a>Creare una nuova soluzione
+![Raccolta di estensioni Visual Studio per Mac selezione di monogame](part1-images/image2.png)
 
-In Visual Studio per selezionare Mac **File > nuova soluzione**. Nel **nuovo progetto** finestra di dialogo, fare clic su **varie**, scorrere fino al **generale** selezionare la * * applicazione universale per dispositivi mobili MonoGame * *, l'opzione e fare clic su Avanti.
+Una volta installato, i modelli monogame verranno visualizzati in Visual Studio per Mac, come si vedrà nella sezione successiva.
 
-![Finestra Nuovo progetto, creazione di un'applicazione MonoGame](part1-images/image3.png)
+## <a name="creating-a-new-solution"></a>Creazione di una nuova soluzione
+
+In Visual Studio per Mac selezionare **File > nuova soluzione**. Nella finestra di dialogo **nuovo progetto** fare clic su **varie**, scorrere fino alla sezione **generale** , selezionare l'opzione **applicazione universale monogame per dispositivi mobili** e fare clic su Avanti.
+
+![Finestra di dialogo nuovo progetto Creazione di un'applicazione monogame](part1-images/image3.png)
 
 Denominare il progetto WalkingGame e fare clic su Crea:
 
-![Finestra Nuovo progetto scegliere un nome e percorso](part1-images/image4.png)
+![Finestra di dialogo nuovo progetto selezione di un nome e un percorso](part1-images/image4.png)
 
-A questo punto il progetto verrà eseguito esattamente come qualsiasi altro iOS o Android project. Il progetto deve essere eseguito visualizzare uno sfondo blu fiordaliso:
+Il progetto verrà ora eseguito esattamente come qualsiasi altro progetto iOS o Android. Il progetto deve essere eseguito visualizzando uno sfondo blu fiordaliso:
 
-![In background app blu vuota](part1-images/image5.png)
+![Sfondo app blu vuota](part1-images/image5.png)
 
-## <a name="fixing-android-compile-errors"></a>Correzione di errori di compilazione Android
+## <a name="fixing-android-compile-errors"></a>Correzione degli errori di compilazione di Android
 
-La versione corrente dei modelli del MonoGame include alcuni errori di sintassi nella finestra di Android `Activity1.cs` file. Per risolvere questi problemi, sostituire il `OnCreate` funzione con il codice seguente:
+La versione corrente dei modelli monogame include alcuni errori di sintassi nel `Activity1.cs` file di Android. Per risolvere questi problemi, sostituire la `OnCreate` funzione con il codice seguente:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -65,10 +69,10 @@ protected override void OnCreate (Bundle bundle)
 
 ## <a name="summary"></a>Riepilogo
 
-Questa procedura dettagliata viene descritto come creare un progetto MonoGame multipiattaforma usando Visual Studio per Mac. Il risultato di questo oggetto è una schermata blu vuota. Questo progetto può essere utilizzato come punto di partenza per qualsiasi iOS e Android gioco.
+Questa procedura dettagliata ha illustrato come creare un progetto MonoGame multipiattaforma usando Visual Studio per Mac. Il risultato è una schermata blu vuota. Questo progetto può essere usato come punto di partenza per qualsiasi gioco iOS e Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [NuGet MonoGame Android](https://www.nuget.org/packages/MonoGame.Framework.Android/)
-- [MonoGame iOS NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
-- [Documentazione API MonoGame](http://www.monogame.net/documentation/?page=main)
+- [NuGet Android monogame](https://www.nuget.org/packages/MonoGame.Framework.Android/)
+- [NuGet iOS monogame](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
+- [Documentazione dell'API monogame](http://www.monogame.net/documentation/?page=main)

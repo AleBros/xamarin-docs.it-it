@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: d47a8d4a0fa72cee59a054554e9868f20323d00b
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832433"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980793"
 ---
 # <a name="getting-started-with-datapages"></a>Introduzione a DataPages
 
@@ -21,8 +21,7 @@ ms.locfileid: "67832433"
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 
 > [!IMPORTANT]
-> DataPages richiede un [tema di xamarin. Forms](~/xamarin-forms/user-interface/themes/index.md) riferimento per il rendering.
-
+> Per il rendering delle pagine Web è necessario un riferimento al tema Novell. Forms. Ciò comporta l'installazione del pacchetto NuGet [Novell. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Novell. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Novell. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
 Per iniziare a creare una pagina semplice basato sui dati usando l'anteprima DataPages, attenersi alla procedura seguente. Usi questa demo uno stile hardcoded ("eventi") nell'anteprima di compilazioni che funziona solo con il formato JSON specifico nel codice.
 
@@ -34,7 +33,7 @@ Aggiungere i pacchetti Nuget per i progetti di libreria e applicazione xamarin. 
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
-* Un'implementazione di tema Nuget (ad es. Xamarin.Forms.Theme.Light)
+* Un'implementazione di tema Nuget (ad es. Novell. Forms. Theme. Light)
 
 ## <a name="2-add-theme-reference"></a>2. Aggiungere il riferimento di tema
 
@@ -52,7 +51,7 @@ Nel **app. XAML** , aggiungere una classe personalizzata `xmlns:mytheme` per il 
 ```
 
 > [!IMPORTANT]
-> È anche consigliabile seguire i passaggi necessari per [caricare gli assembly di tema (sotto)](#loadtheme) aggiungendo codice boilerplate per iOS `AppDelegate` e Android `MainActivity`. Questo verrà migliorato in una versione futura versione di anteprima.
+> È anche necessario seguire i passaggi per [caricare gli assembly del tema (di seguito)](#loadtheme) aggiungendo codice standard a iOS `AppDelegate` e Android `MainActivity`. Questo verrà migliorato in una versione futura versione di anteprima.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. Aggiungere una pagina XAML
@@ -100,7 +99,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 Eliminare il `Content` elemento e sostituirlo con un `p:ListDataPage.DataSource` per popolare la pagina con i dati. Nell'esempio seguente un oggetto Json remoto i file di dati viene caricato da un URL.
 
 > [!NOTE]
-> L'anteprima *richiede* un `StyleClass` attributo fornire suggerimenti per il rendering per l'origine dati. Il `StyleClass="Events"` fa riferimento a un layout in cui è già definito nell'anteprima e contiene gli stili *hardcoded* in base all'origine dei dati JSON in uso.
+> L'anteprima *richiede* un `StyleClass` attributo per fornire hint di rendering per l'origine dati. Il `StyleClass="Events"` fa riferimento a un layout in cui è già definito nell'anteprima e contiene gli stili *hardcoded* in base all'origine dei dati JSON in uso.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -177,10 +176,10 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
 
-È un po' più lavoro da creare temi da zero (vedere la [Guida per i temi](~/xamarin-forms/user-interface/themes/index.md)) ma versioni di anteprima future per facilitare questo scopo.
+La creazione di temi da zero è un po' più semplice, ma le future versioni di anteprima faciliteranno questa operazione.
 
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 <a name="loadtheme" />
 

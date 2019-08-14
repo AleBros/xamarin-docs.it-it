@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019
-ms.openlocfilehash: 9456512931822abd59a081485744846a11cdea88
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 925e97292d19745b0b89fb98103d205ab8476157
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869365"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980756"
 ---
 # <a name="controls-reference"></a>Riferimento per i controlli
 
@@ -27,7 +27,7 @@ I quattro gruppi di controllo principali usati per creare l'interfaccia utente d
 - [**Visualizzazioni**](views.md)
 - [**Celle**](cells.md)
 
-In genere, una pagina di xamarin. Forms occupa l'intera schermata. La pagina contiene in genere un layout, che contiene le viste e possibilmente altri layout. Le celle sono componenti specializzati utilizzati in combinazione con [`TableView`](views.md#tableView) e [`ListView`](views.md#listView).
+In genere, una pagina di xamarin. Forms occupa l'intera schermata. La pagina contiene in genere un layout, che contiene le viste e possibilmente altri layout. Le celle sono componenti specializzati utilizzati in combinazione con [`TableView`](views.md#tableView) e [`ListView`](views.md#listView). Un diagramma classi che mostra la gerarchia dei tipi che vengono in genere usati per compilare un'interfaccia utente in Novell. Forms è disponibile nella [gerarchia di classi di controlli Novell. Forms](~/xamarin-forms/internals/class-hierarchy.md).
 
 Negli articoli su quattro [**pagine**](pages.md), [**layout**](layouts.md), [**viste**](views.md), e [**celle**](cells.md), con collegamenti alla relativa documentazione dell'API, un articolo che descrive l'uso (se presente) e uno o più programmi di esempio viene descritto ciascun tipo di controllo (se presenti). Ogni tipo di controllo è anche accompagnato da una schermata che mostra una pagina dell'esempio [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) in esecuzione su dispositivi iOS e Android. Ogni schermata seguente sono riportati collegamenti al codice sorgente per la pagina in C#, la pagina XAML equivalente e (se appropriato) il file code-behind C# per la pagina XAML.
 
@@ -36,4 +36,5 @@ Oltre ai controlli forniti con Novell. Forms, sono disponibili controlli di terz
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di xamarin. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Gerarchia di classi di controlli Novell. Forms](~/xamarin-forms/internals/class-hierarchy.md)
 - [Documentazione delle API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

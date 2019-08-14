@@ -6,12 +6,12 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 47ed7fc1b4485864646a17940aceed395a4a8983
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680918"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978385"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introduzione allo sviluppo di giochi con monogame
 
@@ -23,7 +23,7 @@ MonoGame è un'API multipiattaforma con accelerazione hardware che fornisce graf
 
 La prima sezione di questa procedura dettagliata è incentrata sull'impostazione di un progetto vuoto. Nell'ultima sezione viene illustrata la scrittura di tutti i contenuti e la logica del gioco, la maggior parte dei quali sarà multipiattaforma.
 
-Al termine di questa procedura dettagliata, verrà creato un semplice gioco in cui il lettore può controllare un carattere animato con input tocco.  Anche se non si tratta tecnicamente di un gioco completo (poiché non presenta condizioni di vittoria o di perdita), illustra diversi concetti di sviluppo di giochi e può essere usato come base per molti tipi di giochi. 
+Al termine di questa procedura dettagliata, verrà creato un semplice gioco in cui il lettore può controllare un carattere animato con input tocco.  Anche se non si tratta tecnicamente di un gioco completo (poiché non presenta condizioni di vittoria o di perdita), illustra diversi concetti di sviluppo di giochi e può essere usato come base per molti tipi di giochi.
 
 Di seguito viene illustrato il risultato di questa procedura dettagliata:
 
@@ -31,10 +31,9 @@ Di seguito viene illustrato il risultato di questa procedura dettagliata:
 
 ## <a name="monogame-and-xna"></a>Monogame e XNA
 
-La libreria monogame è progettata per simulare la libreria XNA di Microsoft in sintassi e funzionalità.  Tutti gli oggetti monogame sono presenti nello spazio dei nomi Microsoft. XNA, consentendo la maggior parte del codice XNA da usare in monogame senza alcuna modifica. 
+La libreria monogame è progettata per simulare la libreria XNA di Microsoft in sintassi e funzionalità.  Tutti gli oggetti monogame sono presenti nello spazio dei nomi Microsoft. XNA, consentendo la maggior parte del codice XNA da usare in monogame senza alcuna modifica.
 
 Gli sviluppatori che hanno familiarità con XNA acquisiranno già familiarità con la sintassi di monogame e gli sviluppatori che cercano informazioni aggiuntive sull'uso di monogame potranno fare riferimento a procedure dettagliate, documentazione API e discussioni di XNA online esistenti.
-
 
 ## <a name="walkthrough-parts"></a>Parti della procedura dettagliata
 

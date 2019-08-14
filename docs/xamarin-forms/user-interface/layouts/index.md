@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 1889579a48364204a977d63bd9bdb875df37a2bf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7d63dafbb17a3757f5d15f65e977b4b0cb8bc44a
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657026"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980868"
 ---
 # <a name="layouts-in-xamarinforms"></a>Layout di xamarin. Forms
 
@@ -32,6 +32,7 @@ Ogni controllo di layout è descritta di seguito, oltre a informazioni dettaglia
 * **[Sul relativelayout](relative-layout.md)** : utilizzato per disporre le viste impostando vincoli relativi alle dimensioni del padre & posizione.
 * **[Grid](grid.md)** : usato per disporre le visualizzazioni in una griglia. Le righe e colonne possono essere specificate in termini di valori assoluti o rapporti.
 * **[FlexLayout](flex-layout.md)** : usato per disporre le visualizzazioni orizzontalmente o verticalmente con il wrapping.
+* **[Frame](frame.md)** : utilizzato per eseguire il wrapping di una visualizzazione con un bordo o un frame, che può essere configurato con colore, ombreggiatura e altro ancora.
 * **[ScrollView](scroll-view.md)** : viene usato per fornire lo scorrimento quando una visualizzazione non può adattarsi interamente ai limiti dello schermo.
 * **[LayoutOptions](layout-options.md)** : definisce l'allineamento e l'espansione per una vista rispetto al relativo elemento padre.
 * **[Trasparenza input](#input_transparency)** : specifica se un elemento riceve input.
@@ -179,6 +180,10 @@ Tenere presente i seguenti aspetti di codice riportato in precedenza:
 - Griglie e le colonne sono specificate in modo esplicito, non è stato dedotto dal contenuto.
 - `Height` e `Width` valori possono essere impostati su stelle, il che significa che la griglia verrà impostato tali valori per riempire lo spazio disponibile.
 - Posizione di ogni pulsante viene specificata da `Grid.Row`  &  `Grid.Column` proprietà.
+
+### <a name="frameframemd"></a>[Frame](frame.md)
+
+Un `Frame` layout viene usato per creare un bordo personalizzabile intorno al `View`figlio. Un `Frame` oggetto può essere usato per posizionare un bordo intorno a un controllo, `Button` ad `Label` esempio o, oppure può eseguire il wrapping di altri layout per creare oggetti dell'interfaccia utente più complessi, ad esempio una scheda.
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 

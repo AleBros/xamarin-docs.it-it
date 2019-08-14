@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: da19b9071695f11a7c5591b7e715d85daa01841b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 3291589f4a61fad7d7465e0ac2bd4844ae4a0655
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508725"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980742"
 ---
 # <a name="xamarinios-errors"></a>Errori di Novell. iOS
 
@@ -137,7 +137,7 @@ Verificare che la versione installata di Xcode supporti le architetture selezion
 
 <a name="MT0015" />
 
-### <a name="mt0015-invalid-abi--supported-abis-are-i386-x8664--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: ABI non valido: *. Le interfacce Abi supportate sono: i386, x86_64, ARMv7, ARMv7 + LLVM, ARMv7 + LLVM + Thumb2, armv7s, armv7s + LLVM, armv7s + LLVM + Thumb2, arm64 e arm64 + LLVM.
+### <a name="mt0015-invalid-abi--supported-abis-are-i386-x86_64--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: ABI non valido: *. Le interfacce Abi supportate sono: i386, x86_64, ARMv7, ARMv7 + LLVM, ARMv7 + LLVM + Thumb2, armv7s, armv7s + LLVM, armv7s + LLVM + Thumb2, arm64 e arm64 + LLVM.
 
 Un ABI non valido è stato passato a mTouch. Specificare un valore ABI valido.
 
@@ -252,7 +252,7 @@ Per risolvere questo problema, modificare il nome dell'applicazione nelle opzion
 
 <a name="MT0037" />
 
-### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x8664"></a>MT0037: MonoTouch. dll non è compatibile con 64 bit. È possibile fare riferimento a Novell. iOS. dll o non compilare per un'architettura a 64 bit (ARM64 e/o x86_64).
+### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: MonoTouch. dll non è compatibile con 64 bit. È possibile fare riferimento a Novell. iOS. dll o non compilare per un'architettura a 64 bit (ARM64 e/o x86_64).
 
 <a name="MT0038" />
 
@@ -838,7 +838,7 @@ Per altre informazioni, vedere il bug #[52727](https://bugzilla.xamarin.com/show
 
 Si è verificato un errore durante il tocco di un file (operazione eseguita per garantire che le compilazioni parziali vengano eseguite correttamente).
 
-Questo avviso può essere probabilmente ignorato. in caso di problemi, è possibile che si https://bugzilla.xamarin.com verifichi un https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) bug (], che verrà analizzato.
+Questo avviso può essere probabilmente ignorato. in caso di problemi, è possibile che [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) si verifichi un bug.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Messaggi di errore relativi al progetto
 
@@ -1678,7 +1678,7 @@ A volte è possibile aggirare questo problema disabilitando le compilazioni incr
 
 <a name="MT3002" />
 
-### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvancedtopicslimitationsreversecallbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: Restrizione AOT: Il metodo ' *' deve essere statico perché è decorato con [MonoPInvokeCallback]. Vedere [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
+### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: Restrizione AOT: Il metodo ' *' deve essere statico perché è decorato con [MonoPInvokeCallback]. Vedere [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
 
 Questo messaggio di errore deriva dal compilatore AOT.
 
@@ -1824,7 +1824,7 @@ Si tratta sempre di un bug in Novell. iOS; inviare un report sui bug in [http://
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvancedtopicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: Il Registrar ha rilevato un `*`tipo non valido. La registrazione di tipi generici con Objective-C non è supportata e può causare un comportamento casuale e/o arresti anomali (per compatibilità con le versioni precedenti di Novell. iOS è possibile ignorare questo errore passando `--unsupported--enable-generics-in-registrar` come mTouch aggiuntivi argomento nella pagina delle opzioni di compilazione iOS del progetto. Per ulteriori informazioni, vedere [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) .
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: Il Registrar ha rilevato un `*`tipo non valido. La registrazione di tipi generici con Objective-C non è supportata e può causare un comportamento casuale e/o arresti anomali (per compatibilità con le versioni precedenti di Novell. iOS è possibile ignorare questo errore passando `--unsupported--enable-generics-in-registrar` come mTouch aggiuntivi argomento nella pagina delle opzioni di compilazione iOS del progetto. Per ulteriori informazioni, vedere [Developer.Xamarin.com/guides/iOS/advanced_topics/registrar](~/ios/internals/registrar.md) .
 
 <a name="MT4113" />
 
@@ -2110,7 +2110,7 @@ Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [htt
 
 <a name="MT4168" />
 
-### <a name="mt4168-cannot-register-the-type-managedname-because-its-objective-c-name-exportedname-is-an-objective-c-keyword-please-use-a-different-name"></a>MT4168: Non è possibile registrare il tipo '\_{Managed Name}' perché il nome Objective-c\_' {exported Name}' è una parola chiave Objective-c. Usare un nome diverso.
+### <a name="mt4168-cannot-register-the-type-managed_name-because-its-objective-c-name-exported_name-is-an-objective-c-keyword-please-use-a-different-name"></a>MT4168: Non è possibile registrare il tipo '\_{Managed Name}' perché il nome Objective-c\_' {exported Name}' è una parola chiave Objective-c. Usare un nome diverso.
 
 Il nome Objective-C per il tipo in questione non è un identificatore Objective-C valido.
 
@@ -3017,6 +3017,6 @@ Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla
 
 <a name="MT8024" />
 
-### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Non è stato possibile trovare un tipo di estensione valido per l'enumerazione intelligente ' {smart_type}'. Inviare un bug all'indirizzo https://bugzilla.xamarin.com.
+### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Non è stato possibile trovare un tipo di estensione valido per l'enumerazione intelligente ' {smart_type}'. Inviare un bug all'indirizzo https://bugzilla.xamarin.com.
 
 Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).

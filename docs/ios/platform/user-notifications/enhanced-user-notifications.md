@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 775675e11b85bb53bb51c36b71129a086d9dd60f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651254"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980795"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in Novell. iOS
 
@@ -78,7 +78,7 @@ Di seguito sono riportati alcuni esempi di notifiche remote:
 Sono disponibili due tipi di notifiche remote per un'app iOS:
 
 - **Interfaccia utente** : vengono visualizzati dall'utente sul dispositivo.
-- **Aggiornamenti automatici** : forniscono un meccanismo per aggiornare il contenuto di un'app iOS in background. Quando viene ricevuto un aggiornamento invisibile all'utente, l'app può raggiungere il contenuto più recente nell'app Rimuovi server.
+- **Aggiornamenti automatici** : forniscono un meccanismo per aggiornare il contenuto di un'app iOS in background. Quando viene ricevuto un aggiornamento invisibile all'utente, l'app può contattare i server remoti per eseguire il pull del contenuto più recente.
 
 Per ulteriori informazioni, vedere la documentazione della [Guida alla programmazione delle notifiche remote e locali](https://developer.apple.com/documentation/usernotifications) di Apple.
 

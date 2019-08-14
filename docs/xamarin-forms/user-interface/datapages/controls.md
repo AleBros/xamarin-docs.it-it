@@ -1,30 +1,29 @@
 ---
-title: Riferimento per i controlli DataPages
-description: Questo articolo presenta i controlli che sono disponibili nel pacchetto NuGet di xamarin. Forms DataPages.
+title: Riferimento ai controlli DataPages
+description: Questo articolo presenta i controlli disponibili nel pacchetto NuGet Novell. Forms.
 ms.prod: xamarin
 ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: c907d55f09d334e167c831a19f9d0edc4c97732f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2af4bc3bd4dc6ae47f573c58c84aad54f41d42cd
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161762"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980811"
 ---
-# <a name="datapages-controls-reference"></a>Riferimento per i controlli DataPages
+# <a name="datapages-controls-reference"></a>Riferimento ai controlli DataPages
 
 ![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
 
 > [!IMPORTANT]
-> DataPages richiede un [tema di xamarin. Forms](~/xamarin-forms/user-interface/themes/index.md) riferimento per il rendering.
+> Per il rendering delle pagine Web è necessario un riferimento al tema Novell. Forms. Ciò comporta l'installazione del pacchetto NuGet [Novell. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Novell. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Novell. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
 
+Il NuGet DataPages di Novell. Forms include una serie di controlli che possono sfruttare l'associazione dell'origine dati.
 
-Xamarin. Forms DataPages Nuget include una serie di controlli che possono sfruttare i vantaggi dell'associazione all'origine dati.
-
-Per usare questi controlli in XAML, assicurarsi che lo spazio dei nomi è stato incluso, ad esempio vedere il `xmlns:pages` dichiarazione seguente:
+Per usare questi controlli in XAML, verificare che lo spazio dei nomi sia stato incluso, ad `xmlns:pages` esempio, vedere la dichiarazione seguente:
 
 ```xaml
 <ContentPage
@@ -34,7 +33,7 @@ Per usare questi controlli in XAML, assicurarsi che lo spazio dei nomi è stato 
     x:Class="DataPagesDemo.Detail">
 ```
 
-Gli esempi seguenti includono `DynamicResource` riferimenti che dovranno presente nel dizionario di risorse del progetto per lavorare. È anche disponibile un esempio di come compilare un [controllo personalizzato](#custom)
+Gli esempi seguenti includono `DynamicResource` riferimenti che dovrebbero esistere nel dizionario delle risorse del progetto per funzionare. È inoltre disponibile un esempio di creazione di un [controllo personalizzato](#custom)
 
 ## <a name="built-in-controls"></a>Controlli predefiniti
 
@@ -73,9 +72,9 @@ Il `HeroImage` controllo dispone di quattro proprietà:
 
 ### <a name="listitem"></a>ListItem
 
-Il `ListItem` layout del controllo è simile a native per iOS e Android elenco o tabella di righe, tuttavia può anche essere utilizzato come una visualizzazione normale. Nell'esempio di codice sotto di essa è illustrato ospitato all'interno di un `StackLayout`, ma può anche essere utilizzato nei controlli list scolling associato a dati.
+Il `ListItem` layout del controllo è simile a quello delle righe della tabella o dell'elenco iOS e Android nativo, ma può anche essere usato come visualizzazione normale. Nel codice di esempio riportato di seguito viene visualizzato ospitato all' `StackLayout`interno di un, ma può anche essere usato in controlli elenco scolling associati a dati.
 
-Sono presenti cinque proprietà:
+Sono disponibili cinque proprietà:
 
 * Titolo
 * Dettagli
@@ -93,7 +92,7 @@ Sono presenti cinque proprietà:
     />
 ```
 
-Questi screenshot mostrano il `ListItem` su piattaforme iOS e Android usando sia chiaro e scuro temi:
+Queste schermate mostrano le `ListItem` piattaforme iOS e Android con i temi chiaro e scuro:
 
 **Android**
 
@@ -106,7 +105,7 @@ Questi screenshot mostrano il `ListItem` su piattaforme iOS e Android usando sia
 
 ## <a name="custom-control-example"></a>Esempio di controllo personalizzato
 
-L'obiettivo di questo personalizzato `CardView` controllo è simile a quella di widget CardView Android nativo.
+L'obiettivo di questo controllo `CardView` personalizzato è simile al CardView Android nativo.
 
 Conterrà tre proprietà:
 
@@ -114,7 +113,7 @@ Conterrà tre proprietà:
 * Dettagli
 * ImageSource
 
-L'obiettivo è un controllo personalizzato che avrà un aspetto simile al codice riportato di seguito (si noti che un oggetto personalizzato `xmlns:local` è necessario che fa riferimento all'assembly corrente):
+L'obiettivo è un controllo personalizzato che apparirà come il codice seguente (si noti che `xmlns:local` è necessario un oggetto personalizzato che fa riferimento all'assembly corrente):
 
 ```xaml
 <local:CardView
@@ -124,7 +123,7 @@ L'obiettivo è un controllo personalizzato che avrà un aspetto simile al codice
 />
 ```
 
-Dovrebbe essere simile agli screenshot seguente usando i colori corrispondenti per i temi chiaro e scuro predefiniti:
+Dovrebbe apparire come gli screenshot seguenti usando i colori che corrispondono ai temi predefiniti chiaro e scuro:
 
 **Android**
 
@@ -136,21 +135,21 @@ Dovrebbe essere simile agli screenshot seguente usando i colori corrispondenti p
 
 <a name="custom" />
 
-### <a name="building-the-custom-cardview"></a>Creazione di widget CardView personalizzato
+### <a name="building-the-custom-cardview"></a>Creazione del CardView personalizzato
 
 1. [Sottoclasse DataView](#1)
-2. [Definire tipi di carattere, il Layout e i margini](#2)
-3. [Creare stili agli elementi figlio del controllo](#3)
-4. [Creare il modello di Layout di controllo](#4)
-5. [Aggiungere le risorse specifiche per i temi](#5)
-6. [Impostare l'elemento ControlTemplate per la classe CardView](#6)
+2. [Definire il tipo di carattere, il layout e i margini](#2)
+3. [Crea stili per gli elementi figlio del controllo](#3)
+4. [Creazione del modello di layout del controllo](#4)
+5. [Aggiungere le risorse specifiche del tema](#5)
+6. [Impostare ControlTemplate per la classe CardView](#6)
 7. [Aggiungere il controllo a una pagina](#7)
 
 <a name="1" />
 
 #### <a name="1-dataview-subclass"></a>1. Sottoclasse DataView
 
-Sottoclasse c# di `DataView` definisce le proprietà associabile per il controllo.
+La C# sottoclasse `DataView` di definisce le proprietà associabili per il controllo.
 
 ```csharp
 public class CardView : DataView
@@ -190,11 +189,11 @@ public class CardView : DataView
 
 <a name="2" />
 
-#### <a name="2-define-font-layout-and-margins"></a>2. Definire tipi di carattere, il Layout e i margini
+#### <a name="2-define-font-layout-and-margins"></a>2. Definire il tipo di carattere, il layout e i margini
 
-La finestra di progettazione potrebbe determinare questi valori come parte della progettazione dell'interfaccia utente per il controllo personalizzato. In cui le specifiche di specifiche della piattaforma sono necessari, il `OnPlatform` elemento viene usato.
+Nella finestra di progettazione controlli questi valori verranno considerati come parte della progettazione dell'interfaccia utente per il controllo personalizzato. Se sono necessarie specifiche specifiche della piattaforma, viene `OnPlatform` usato l'elemento.
 
-Si noti che alcuni valori fanno riferimento a `StaticResource`s, questi verranno definiti in [passaggio 5](#5).
+Si noti che alcuni valori fanno `StaticResource`riferimento a s, che verranno definiti nel [passaggio 5](#5).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -248,9 +247,9 @@ Si noti che alcuni valori fanno riferimento a `StaticResource`s, questi verranno
 
 <a name="3" />
 
-#### <a name="3-create-styles-for-the-controls-children"></a>3. Creare stili agli elementi figlio del controllo
+#### <a name="3-create-styles-for-the-controls-children"></a>3. Crea stili per gli elementi figlio del controllo
 
-Fare riferimento a tutti gli elementi definiti per creare gli elementi figlio che verranno utilizzati nel controllo personalizzato:
+Fare riferimento a tutti gli elementi definiti in per creare gli elementi figlio che verranno utilizzati nel controllo personalizzato:
 
 ```xml
 <!-- EXPLICIT STYLES (will be Classes) -->
@@ -280,9 +279,9 @@ Fare riferimento a tutti gli elementi definiti per creare gli elementi figlio ch
 
 <a name="4" />
 
-#### <a name="4-create-the-control-layout-template"></a>4. Creare il modello di Layout di controllo
+#### <a name="4-create-the-control-layout-template"></a>4. Creazione del modello di layout del controllo
 
-La progettazione visiva del controllo personalizzato viene dichiarata in modo esplicito nel modello del controllo, usando le risorse definite in precedenza:
+La progettazione visiva del controllo personalizzato viene dichiarata in modo esplicito nel modello di controllo, usando le risorse definite in precedenza:
 
 ```xml
 <!--- CARDVIEW -->
@@ -324,11 +323,11 @@ La progettazione visiva del controllo personalizzato viene dichiarata in modo es
 
 <a name="5" />
 
-#### <a name="5-add-the-theme-specific-resources"></a>5. Aggiungere le risorse specifiche per i temi
+#### <a name="5-add-the-theme-specific-resources"></a>5. Aggiungere le risorse specifiche del tema
 
-Poiché si tratta di un controllo personalizzato, aggiungere le risorse corrispondenti al tema si usa il dizionario risorse:
+Poiché si tratta di un controllo personalizzato, aggiungere le risorse che corrispondono al tema usato nel dizionario risorse:
 
-##### <a name="light-theme-colors"></a>Colori del tema chiaro
+##### <a name="light-theme-colors"></a>Colori tema chiaro
 
 ```xaml
 <Color x:Key="iOSCardViewBackgroundColor">#FFFFFF</Color>
@@ -357,9 +356,9 @@ Poiché si tratta di un controllo personalizzato, aggiungere le risorse corrispo
 
 <a name="6" />
 
-#### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. Impostare l'elemento ControlTemplate per la classe CardView
+#### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. Impostare ControlTemplate per la classe CardView
 
-Infine, verificare che la classe c# creata in [passaggio 1](#1) Usa il modello del controllo definito nel [passaggio4](#4) usando una `Style` `Setter` elemento
+Infine, assicurarsi che C# la classe creata nel [passaggio 1](#1) usi il modello di controllo definito nel [passaggio 4](#4) usando un `Style`elemento `Setter`
 
 ```xml
 <Style TargetType="local:CardView">
@@ -373,7 +372,7 @@ Infine, verificare che la classe c# creata in [passaggio 1](#1) Usa il modello d
 
 #### <a name="7-add-the-control-to-a-page"></a>7. Aggiungere il controllo a una pagina
 
-Il `CardView` controllo può ora essere aggiunto a una pagina. Nell'esempio seguente viene illustrato come viene ospitato in un `StackLayout`:
+Il `CardView` controllo può ora essere aggiunto a una pagina. L'esempio seguente mostra che è ospitato in `StackLayout`un:
 
 ```xaml
 <StackLayout Spacing="0">
