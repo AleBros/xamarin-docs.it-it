@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 3291589f4a61fad7d7465e0ac2bd4844ae4a0655
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 736195182713eb35ad18fb1ae12c5cc7ddce0787
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980742"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012526"
 ---
 # <a name="xamarinios-errors"></a>Errori di Novell. iOS
 
@@ -30,7 +30,7 @@ ad esempio parametri, ambiente, strumenti mancanti.
 
 ### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: Errore imprevisto. compilare un report sui bug in https://github.com/xamarin/xamarin-macios/issues/new
 
-Si è verificata una condizione di errore imprevista. Inviare [un report sui bug](https://github.com/xamarin/xamarin-macios/issues/new) con quante più informazioni possibile, tra cui:
+Si è verificata una condizione di errore imprevista. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con il maggior numero di informazioni possibile, tra cui:
 
 * Log di compilazione completi, con livello di dettaglio massimo ( `-v -v -v -v` ad esempio negli **argomenti mTouch aggiuntivi**);
 * Test case minimo per riprodurre l'errore. e
@@ -94,7 +94,7 @@ Più di un assembly radice è stato passato a mTouch, mentre può essere present
 
 ### <a name="mt0009-error-while-loading-assemblies-"></a>MT0009: Errore durante il caricamento degli assembly: *.
 
-Si è verificato un errore durante il caricamento degli assembly a cui fa riferimento l'assembly radice. Ulteriori informazioni possono essere fornite nell'output di compilazione.
+Si è verificato un errore durante il caricamento degli assembly dai riferimenti all'assembly radice. Ulteriori informazioni possono essere fornite nell'output di compilazione.
 
 <a name="MT0010" />
 
@@ -324,7 +324,7 @@ Non è stata specificata alcuna azione per mTouch.
 
 ### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: Impossibile Canonicalize il percorso "*": *
 
-Si tratta di un errore interno. Se viene visualizzato questo errore, inviare un bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Si tratta di un errore interno. Se viene visualizzato questo errore, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0055" />
 
@@ -374,7 +374,7 @@ Si tratta di un avviso informativo, che spiega quale Xcode verrà usato, perché
 
 Ogni info. plist deve avere un eseguibile (usando la voce CFBundleExecutable), tuttavia una voce deve essere generata automaticamente durante la compilazione.
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0064" />
 
@@ -394,13 +394,13 @@ Aggiornare la destinazione di distribuzione nel file INFO. plist del progetto a 
 
 ### <a name="mt0066-invalid-build-registrar-assembly-"></a>MT0066: Assembly registrar compilazione non valido: *
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0067" />
 
 ### <a name="mt0067-invalid-registrar-"></a>MT0067: Registrar non valido: *
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0068" />
 
@@ -422,13 +422,13 @@ Un Framework di destinazione non valido è stato passato usando l'argomento--Tar
 
 ### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: Piattaforma sconosciuta: *. Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in http://bugzilla.xamarin.com con un test case.
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0072" />
 
 ### <a name="mt0072-extensions-are-not-supported-for-the-platform-"></a>MT0072: Le estensioni non sono supportate per la piattaforma ' *'.
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0073" />
 
@@ -454,19 +454,19 @@ Selezionare una destinazione di distribuzione minima precedente nel file INFO. p
 
 <a name="MT0076" />
 
-### <a name="mt0075-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0075: Non è stata specificata alcuna architettura (usando l'argomento--ABI). È necessaria un'architettura per i progetti *.
+### <a name="mt0076-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0076: Non è stata specificata alcuna architettura (usando l'argomento--ABI). È necessaria un'architettura per i progetti *.
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0077" />
 
-### <a name="mt0076-watchos-projects-must-be-extensions"></a>MT0076: I progetti watchos devono essere estensioni.
+### <a name="mt0077-watchos-projects-must-be-extensions"></a>MT0077: I progetti watchos devono essere estensioni.
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0078" />
 
-### <a name="mt0077-incremental-builds-are-enabled-with-a-deployment-target--80-currently--this-is-not-supported-the-resulting-application-will-not-launch-on-ios-9-so-the-deployment-target-will-be-set-to-80"></a>MT0077: Le compilazioni incrementali sono abilitate con una destinazione di distribuzione < 8,0 (attualmente *). Questa operazione non è supportata (l'applicazione risultante non verrà avviata in iOS 9), quindi la destinazione della distribuzione verrà impostata su 8,0.
+### <a name="mt0078-incremental-builds-are-enabled-with-a-deployment-target--80-currently--this-is-not-supported-the-resulting-application-will-not-launch-on-ios-9-so-the-deployment-target-will-be-set-to-80"></a>MT0078: Le compilazioni incrementali sono abilitate con una destinazione di distribuzione < 8,0 (attualmente *). Questa operazione non è supportata (l'applicazione risultante non verrà avviata in iOS 9), quindi la destinazione della distribuzione verrà impostata su 8,0.
 
 Si tratta di un avviso che informa che la destinazione di distribuzione è stata impostata su 8,0 per questa compilazione, in modo che le compilazioni incrementali funzionino correttamente.
 
@@ -474,7 +474,7 @@ Le compilazioni incrementali sono supportate solo se la destinazione di distribu
 
 <a name="MT0079" />
 
-### <a name="mt0078-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0078: La versione di Xcode consigliata per Novell. iOS * è Xcode * o versione successiva. La versione corrente di Xcode (disponibile in *) è *.
+### <a name="mt0079-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0079: La versione di Xcode consigliata per Novell. iOS * è Xcode * o versione successiva. La versione corrente di Xcode (disponibile in *) è *.
 
 Si tratta di un avviso che informa che la versione corrente di Xcode non è la versione consigliata di Xcode per questa versione di Novell. iOS.
 
@@ -512,7 +512,7 @@ La nuova funzionalità refcount è ora obbligatoria per tutti i progetti e perta
 
 ### <a name="mt0086-a-target-framework---target-framework-must-be-specified-when-building-for-tvos-or-watchos"></a>MT0086: È necessario specificare un Framework di destinazione (--Target-Framework) quando si compila per TVOS o Watchos.
 
-Questo indica in genere un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0087" />
 
@@ -561,7 +561,7 @@ Una soluzione Last-Straw è quella di usare una versione precedente di Novell. i
 
 Questo messaggio di errore viene segnalato quando una verifica di coerenza interna in Novell. iOS ha esito negativo.
 
-Indica un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0100" />
 
@@ -569,7 +569,7 @@ Indica un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xama
 
 Questo messaggio di errore viene segnalato quando una verifica di coerenza interna in Novell. iOS ha esito negativo.
 
-Si tratta sempre di un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un test case.
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT0101" />
 
@@ -838,7 +838,19 @@ Per altre informazioni, vedere il bug #[52727](https://bugzilla.xamarin.com/show
 
 Si è verificato un errore durante il tocco di un file (operazione eseguita per garantire che le compilazioni parziali vengano eseguite correttamente).
 
-Questo avviso può essere probabilmente ignorato. in caso di problemi, è possibile che [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) si verifichi un bug.
+Questo avviso può essere probabilmente ignorato. in caso di problemi, si verifica un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) che verrà analizzato.
+
+<a name="MT0135" />
+
+### <a name="mt0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MT0135: Il Framework di{0}sistema '' (a cui fa riferimento l'assembly '{1}') non è stato collegato {2} perché è stato introdotto in {3}e {2} viene usato l' {4} SDK.
+
+Per compilare l'applicazione, Novell. iOS deve collegarsi a librerie di sistema, alcune delle quali dipendono dalla versione SDK specificata nel messaggio di errore. Poiché si sta usando una versione precedente dell'SDK, le chiamate a tali API possono avere esito negativo in fase di esecuzione.
+
+Il metodo consigliato per correggere questo errore consiste nell'aggiornare Xcode per ottenere l'SDK necessario. Se sono installate più versioni di Xcode o si vuole usare un Xcode in un percorso non predefinito, assicurarsi di impostare il percorso di Xcode corretto nelle preferenze dell'IDE.
+
+In alternativa, consentire al [linker](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) gestito di rimuovere le API inutilizzate, tra cui, nella maggior parte dei casi, quelle nuove che richiedono la libreria specificata. Tuttavia, questa operazione non funzionerà se il progetto richiede API introdotte in un SDK più recente rispetto a quello fornito da Xcode.
+
+Come ultima soluzione di paglia, usare una versione precedente di Novell. iOS che non richiede che questi nuovi SDK siano presenti durante il processo di compilazione.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Messaggi di errore relativi al progetto
 
@@ -864,6 +876,8 @@ Questo avviso può essere probabilmente ignorato. in caso di problemi, è possib
 <a name="MT1004" />
 
 ### <a name="mt1004-could-not-get-the-list-of-installed-applications"></a>MT1004: Non è stato possibile ottenere l'elenco delle applicazioni installate.
+
+## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Messaggi di errore relativi al progetto
 
 <a name="MT1005" />
 
@@ -901,7 +915,7 @@ Se si verifica questa situazione, provare la soluzione alternativa seguente:
 sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/*/*.mdb
 ```
 
-Tuttavia, poiché il problema è stato risolto nella versione più recente di Novell. iOS, inserire un nuovo bug in [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con le informazioni complete sulla versione e l'output del log di compilazione.
+Tuttavia, poiché questo problema è stato risolto nella versione più recente di Novell. iOS, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con le informazioni complete sulla versione e l'output del log di compilazione.
 
 <a name="MT1010" />
 
@@ -919,7 +933,7 @@ Tuttavia, poiché il problema è stato risolto nella versione più recente di No
 
 ### <a name="mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT1013: Errore di rilevamento delle dipendenze: nessun file da confrontare. Inviare un report sui bug in http://bugzilla.xamarin.com con un test case.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug a [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un CAES di test.
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un test case.
 
 <a name="MT1014" />
 
@@ -1565,7 +1579,7 @@ Non è stato possibile caricare l'assembly radice. Verificare che il percorso ne
 
 ### <a name="mt202x-binding-optimizer-failed-processing-"></a>MT202x: L'elaborazione `...`dell'utilità di ottimizzazione del binding non è riuscita.
 
-Si è verificato un errore imprevisto durante il tentativo di ottimizzare il codice di associazione generato. Il nome dell'elemento che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario che l'assembly denominato (o che contiene il tipo o il metodo denominato) venga fornito in un [report di bug](http://bugzilla.xamarin.com) insieme a un log di compilazione completo con il `-v -v -v -v` livello di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di ottimizzare il codice di associazione generato. Il nome dell'elemento che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario che l'assembly denominato (o che contiene il tipo o il metodo denominato) venga fornito in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato (ad esempio negli **argomenti mTouch aggiuntivi**).
 
 L'ultima cifra `x` sarà:
 * `0`per un nome di assembly;
@@ -1576,7 +1590,7 @@ L'ultima cifra `x` sarà:
 
 ### <a name="mt2030-remove-user-resources-failed-processing-"></a>MT2030: L'elaborazione `...`delle risorse utente non è riuscita.
 
-Si è verificato un errore imprevisto durante il tentativo di rimuovere le risorse utente. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](http://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato `-v -v -v -v` , ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di rimuovere le risorse utente. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 Le risorse utente sono file inclusi all'interno di assembly (come risorse) che devono essere estratti, in fase di compilazione, per creare il bundle dell'applicazione. vale a dire:
 
@@ -1587,37 +1601,37 @@ Le risorse utente sono file inclusi all'interno di assembly (come risorse) che d
 
 ### <a name="mt2040-default-httpmessagehandler-setter-failed-processing-"></a>MT2040: L'elaborazione `...`del setter HttpMessageHandler predefinito non è riuscita.
 
-Si è verificato un errore imprevisto durante il `HttpMessageHandler` tentativo di impostare l'impostazione predefinita per l'applicazione. Inviare un [report](http://bugzilla.xamarin.com) `-v -v -v -v` sui bug insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il `HttpMessageHandler` tentativo di impostare l'impostazione predefinita per l'applicazione. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello di dettaglio abilitato, `-v -v -v -v` ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2050" />
 
 ### <a name="mt2050-code-remover-failed-processing-"></a>MT2050: Impossibile elaborare `...`il codice di rimozione.
 
-Si è verificato un errore imprevisto durante il tentativo di rimuovere il codice dalla libreria BCL con l'applicazione. Inviare un [report](http://bugzilla.xamarin.com) `-v -v -v -v` sui bug insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di rimuovere il codice dalla libreria BCL con l'applicazione. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello di dettaglio abilitato, `-v -v -v -v` ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2060" />
 
 ### <a name="mt2060-sealer-failed-processing-"></a>MT2060: L'elaborazione `...`del Sealer non è riuscita.
 
-Si è verificato un errore imprevisto durante il tentativo di sealing di tipi o metodi (finali) o durante la devirtualizzazione di alcuni metodi. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](http://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato `-v -v -v -v` , ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di sealing di tipi o metodi (finali) o durante la devirtualizzazione di alcuni metodi. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2070" />
 
 ### <a name="mt2070-metadata-reducer-failed-processing-"></a>MT2070: Impossibile elaborare `...`il riduttore dei metadati.
 
-Si è verificato un errore imprevisto durante il tentativo di ridurre i metadati dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](http://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato `-v -v -v -v` , ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di ridurre i metadati dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2080" />
 
 ### <a name="mt2080-marknsobjects-failed-processing-"></a>MT2080: Elaborazione `...`di MarkNSObjects non riuscita.
 
-Si è verificato un errore imprevisto `NSObject` durante il tentativo di contrassegnare le sottoclassi dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](http://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato `-v -v -v -v` , ad esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto `NSObject` durante il tentativo di contrassegnare le sottoclassi dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2090" />
 
 ### <a name="mt2090-inliner-failed-processing-"></a>MT2090: Elaborazione `...`inline non riuscita.
 
-Si è verificato un errore imprevisto durante il tentativo di incorporare il codice dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](https://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad `-v -v -v -v` esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di incorporare il codice dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad esempio `-v -v -v -v` negli **argomenti mTouch aggiuntivi**.
 
 <!-- MT21xx: more linker errors -->
 
@@ -1627,7 +1641,7 @@ Si è verificato un errore imprevisto durante il tentativo di incorporare il cod
 
 ### <a name="mt2100-smart-enum-conversion-preserver-failed-processing-"></a>MT2100: L'elaborazione `...`del preserver di conversione Smart enum non è riuscita.
 
-Si è verificato un errore imprevisto durante il tentativo di contrassegnare i metodi di conversione per le enumerazioni intelligenti dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](https://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad `-v -v -v -v` esempio negli **argomenti mTouch aggiuntivi**.
+Si è verificato un errore imprevisto durante il tentativo di contrassegnare i metodi di conversione per le enumerazioni intelligenti dall'applicazione. Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad esempio `-v -v -v -v` negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2101" />
 
@@ -1635,7 +1649,7 @@ Si è verificato un errore imprevisto durante il tentativo di contrassegnare i m
 
 Si è verificato un riferimento a un assembly non valido durante l'elaborazione del metodo indicato nel messaggio di errore.
 
-Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](https://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato `-v -v -v -v` , ad esempio negli **argomenti mTouch aggiuntivi**.
+Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2102" />
 
@@ -1643,7 +1657,7 @@ Il nome dell'assembly che causa il problema è indicato nel messaggio di errore.
 
 Si è verificato un evento imprevisto durante il tentativo di contrassegnare il metodo indicato nel messaggio di errore.
 
-Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](https://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato `-v -v -v -v` , ad esempio negli **argomenti mTouch aggiuntivi**.
+Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2103" />
 
@@ -1651,7 +1665,7 @@ Il nome dell'assembly che causa il problema è indicato nel messaggio di errore.
 
 Si è verificato un errore imprevisto durante l'elaborazione di un assembly.
 
-Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un [report sui bug](https://bugzilla.xamarin.com) insieme a un log di compilazione completo con il livello di dettaglio abilitato, ad `-v -v -v -v` esempio negli **argomenti mTouch aggiuntivi**.
+Il nome dell'assembly che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario fornire l'assembly in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato, ad esempio negli **argomenti mTouch aggiuntivi**.
 
 <a name="MT2104" />
 
@@ -1659,7 +1673,7 @@ Il nome dell'assembly che causa il problema è indicato nel messaggio di errore.
 
 Gli assembly in modalità mista non possono essere elaborati dal linker.
 
-Per https://msdn.microsoft.com/library/x0w2664k.aspx ulteriori informazioni sugli assembly in modalità mista, vedere.
+Per https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies ulteriori informazioni sugli assembly in modalità mista, vedere.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Messaggi di errore AOT
 
@@ -1672,7 +1686,7 @@ Per https://msdn.microsoft.com/library/x0w2664k.aspx ulteriori informazioni sugl
 
 ### <a name="mt3001-could-not-aot-the-assembly-"></a>MT3001: Non è stato possibile AOT l'assembly ' *'
 
-Questo indica in genere un bug nel compilatore AOT. Inviare un bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) con un progetto che può essere usato per riprodurre l'errore.
+Questo indica in genere un bug nel compilatore AOT. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con un progetto che può essere usato per riprodurre l'errore.
 
 A volte è possibile aggirare questo problema disabilitando le compilazioni incrementali nell'opzione di compilazione iOS del progetto (ma si tratta comunque di un bug, quindi è necessario segnalarlo comunque).
 
@@ -1734,13 +1748,13 @@ Disabilitare il supporto di bitcode o abilitare LLVM.
 
 ### <a name="mt4001-the-main-template-could-not-be-expanded-to-"></a>MT4001: Non è stato possibile espandere il modello principale `*`in.
 
-Si è verificato un errore durante la generazione di Main. m. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Si è verificato un errore `main.m`durante la generazione di. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4002" />
 
 ### <a name="mt4002-failed-to-compile-the-generated-code-for-pinvoke-methods-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4002: Impossibile compilare il codice generato per i metodi P/Invoke. Inviare un report sui bug in http://bugzilla.xamarin.com
 
-Impossibile compilare il codice generato per i metodi P/Invoke. Inviare un report sui bug all' [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)indirizzo.
+Impossibile compilare il codice generato per i metodi P/Invoke. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt41xx-registrar"></a>MT41xx: Registrar
 
@@ -1754,7 +1768,7 @@ Impossibile compilare il codice generato per i metodi P/Invoke. Inviare un repor
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento all' [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)indirizzo.
+Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4102" />
 
@@ -1774,13 +1788,13 @@ Questo errore si verifica quando il registrar incontra un tipo in una firma con 
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento all' [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)indirizzo.
+Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4105" />
 
 ### <a name="mt4105-the-registrar-cannot-marshal-the-parameter-of-type--in-signature-for-method-"></a>MT4105: Il registrar non può effettuare il marshalling del parametro di `*`tipo `*` nella firma per il metodo.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento all' [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)indirizzo.
+Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4106" />
 
@@ -1788,7 +1802,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento all' [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)indirizzo.
+Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4107" />
 
@@ -1796,7 +1810,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento all' [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)indirizzo.
+Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4108" />
 
@@ -1804,7 +1818,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 È stato trovato un tipo nell'API esportata che il runtime non è in grado di eseguire il marshalling da e verso Objective-C.
 
-Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento all' [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)indirizzo.
+Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4109" />
 
@@ -1812,7 +1826,7 @@ Se si ritiene che Novell. iOS supporti il tipo in questione, inviare una richies
 
 Impossibile compilare il codice generato per il registrar. Il log di compilazione conterrà l'output del compilatore nativo, spiegando il motivo per cui il codice non viene compilato.
 
-Si tratta sempre di un bug in Novell. iOS; inviare un report sui bug in [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com) con il progetto o un test case.
+Si tratta sempre di un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con il progetto o un test case.
 
 <a name="MT4110" />
 
@@ -1854,7 +1868,7 @@ Si tratta sempre di un bug in Novell. iOS; inviare un report sui bug in [http://
 
 ### <a name="mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4120: Il Registrar ha trovato un tipo di\*campo sconosciuto ''\*nel campo '. *'. Inviare un report sui bug in http://bugzilla.xamarin.com
 
-Questo errore indica un bug in Novell. iOS. Inviare un report sui bug all' [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)indirizzo.
+Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4121" />
 
@@ -1872,7 +1886,7 @@ Questo errore indica un bug in Novell. iOS. Inviare un report sui bug all' [http
 
 ### <a name="mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4124: * Trovato non valido in ' *'. Inviare un report sui bug in http://bugzilla.xamarin.com
 
-Questo errore indica un bug in Novell. iOS. Inviare un report sui bug all' [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)indirizzo.
+Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4125" />
 
@@ -1990,7 +2004,7 @@ In questo caso Novell. iOS eseguirà `retain`l' `release` override `dealloc` di 
 
 ### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144: Non è possibile registrare il metodo ' *' perché non dispone di un trampolino associato. Inviare un report sui bug all' http://bugzilla.xamarin.com indirizzo.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4145" />
 
@@ -2080,7 +2094,7 @@ Aggiornare Xcode.
 
 ### <a name="mt4163-internal-error-in-the-registrar--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4163: Errore interno del registrar (*). Inviare un report sui bug in http://bugzilla.xamarin.com
 
-Questo errore indica un bug in Novell. iOS. Inviare un report sui bug all' [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)indirizzo.
+Questo errore indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4164" />
 
@@ -2094,19 +2108,19 @@ Usare un identificatore Objective-C valido come selettori.
 
 ### <a name="mt4165-the-registrar-couldnt-find-the-type-systemvoid-in-any-of-the-referenced-assemblies"></a>MT4165: Il registrar non è riuscito a trovare il tipo ' System. void ' in nessuno degli assembly a cui si fa riferimento.
 
-Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un report sui bug all' [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)indirizzo.
+Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4166" />
 
 ### <a name="mt4166-cannot-register-the-method--because-the-signature-contains-a-type--that-isnt-a-reference-type"></a>MT4166: Non è possibile registrare il\*metodo '' perché la firma contiene un\*tipo () che non è un tipo di riferimento.
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4167" />
 
 ### <a name="mt4167-cannot-register-the-method--because-the-signature-contains-a-generic-type--with-a-generic-argument-type-that-isnt-an-nsobject-subclass-"></a>MT4167: Non è possibile registrare il\*metodo '' perché la firma contiene un tipo\*generico () con un tipo di argomento generico che non è una sottoclasse NSObject (*).
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4168" />
 
@@ -2141,12 +2155,9 @@ Verificare che il tipo nell'attributo binds corrisponda al tipo del membro a cui
 
 Il registrar non supporta la conversione tra i tipi indicati.
 
-Si tratta di un bug in Novell. iOS se l'API in questione viene fornita da Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com][1].
+Si tratta di un bug in Novell. iOS se l'API in questione viene fornita da Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Se si esegue questa operazione durante lo sviluppo di un progetto di binding per una libreria nativa, è possibile aggiungere il supporto per nuove combinazioni di tipi. In tal caso, è necessario inviare una richiesta di miglioramento ([http://bugzilla.xamarin.com][2]) con un test case e valutarlo.
-
-[1]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS
-[2]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS&component=General&bug_severity=enhancement
+Se si esegue questa operazione durante lo sviluppo di un progetto di binding per una libreria nativa, è possibile aggiungere il supporto per nuove combinazioni di tipi. In tal caso, inviare una richiesta di miglioramento su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con una test case e valutarla.
 
 ## <a name="mt5xxx-gcc-and-toolchain-error-messages"></a>MT5xxx: Messaggi di errore GCC e.
 
@@ -2179,7 +2190,7 @@ Se si esegue questa operazione durante lo sviluppo di un progetto di binding per
 
 ### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106: Non è stato possibile compilare i file ' *'. Inviare un report sui bug in http://bugzilla.xamarin.com
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt52xx-linking"></a>MT52xx: Collegamento
 
@@ -2338,7 +2349,7 @@ Si tratta di un avviso che indica che è stato rilevato un P/Invoke per fare rif
 
 Questo errore viene segnalato durante il collegamento dell'output dal compilatore AOT.
 
-Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un report sui bug all' [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)indirizzo.
+Questo errore indica con maggiore probabilità un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT5217" />
 
@@ -2915,19 +2926,19 @@ Dove * può essere:
 
 ### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: La versione caricata di Novell. iOS. dll è stata compilata per * BITS, mentre il processo è * BITS. Inviare un bug all'indirizzo http://bugzilla.xamarin.com.
 
-Ciò indica che si è verificato un errore nel processo di compilazione. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica che si è verificato un errore nel processo di compilazione. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8009" />
 
 ### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: Impossibile individuare il blocco da delegare al metodo di conversione per il metodo *.* parametro s # *. Inviare un bug all'indirizzo http://bugzilla.xamarin.com.
 
-Indica che un'API non è stata associata correttamente. Se si tratta di un'API esposta da Novell, inviare un bug in Bugzilla ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)), se si tratta di un'associazione di terze parti, contattare il fornitore.
+Indica che un'API non è stata associata correttamente. Se si tratta di un'API esposta da Novell, inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new). Se si tratta di un'associazione di terze parti, rivolgersi al fornitore.
 
 <a name="MT8010" />
 
 ### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>MT8010: Dimensioni del tipo nativo non corrispondenti tra Novell. [iOS | Mac]. dll e l'architettura in esecuzione. Novell. [iOS | Mac]. dll è stato compilato per * bit, mentre il processo corrente è * bit.
 
-Ciò indica che si è verificato un errore nel processo di compilazione. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica che si è verificato un errore nel processo di compilazione. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8011" />
 
@@ -2935,7 +2946,7 @@ Ciò indica che si è verificato un errore nel processo di compilazione. Inviare
 
 Novell. iOS non è stato in grado di individuare un metodo necessario in fase di esecuzione (per convertire un delegato in un blocco).
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8012" />
 
@@ -2943,23 +2954,23 @@ Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [htt
 
 L'attributo DelegateProxy per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8013" />
 
 ### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: DelegateProxyAttribute non valido per il valore restituito per il metodo *.* : DelegateType ({2}) specifica un tipo senza un campo ' Handler '. Inviare un bug all'indirizzo http://bugzilla.xamarin.com.
 
-L'attributo DelegateProxy per il metodo in questione non è valido.
+L' `[DelegateProxy]` attributo per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8014" />
 
 ### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: DelegateProxyAttribute non valido per il valore restituito per il metodo *.* : Il campo ' Handler{2}' di delegateType è null. Inviare un bug all'indirizzo http://bugzilla.xamarin.com.
 
-L'attributo DelegateProxy per il metodo in questione non è valido.
+L' `[DelegateProxy]` attributo per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8015" />
 
@@ -2967,15 +2978,15 @@ Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [htt
 
 L'attributo DelegateProxy per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8016" />
 
 ### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: Non è possibile convertire il delegato in blocco per il valore restituito per il metodo *.* poiché l'input non è un delegato, è un *. Inviare un bug all'indirizzo http://bugzilla.xamarin.com.
 
-L'attributo DelegateProxy per il metodo in questione non è valido.
+L' `[DelegateProxy]` attributo per il metodo in questione non è valido.
 
-Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Questo indica in genere un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <!-- 8017 is used by mmp -->
 
@@ -2983,40 +2994,40 @@ Questo indica in genere un bug in Novell. iOS; inviare un bug all'indirizzo [htt
 
 ### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: Errore di coerenza interna. Inviare un report sui bug all' http://bugzilla.xamarin.com indirizzo.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8019" />
 
 ### <a name="mt8019-could-not-find-the-assembly--in-the-loaded-assemblies"></a>MT8019: Impossibile trovare l'assembly * negli assembly caricati.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8020" />
 
 ### <a name="mt8020-could-not-find-the-module-with-metadatatoken--in-the-assembly-"></a>MT8020: Il modulo con MetadataToken * non è stato trovato nell'assembly *.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8021" />
 
 ### <a name="mt8021-unknown-implicit-token-type-"></a>MT8021: Tipo di token implicito sconosciuto: *.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8022" />
 
 ### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: È previsto che il riferimento al token * sia un *, ma è un *. Inviare un report sui bug all' http://bugzilla.xamarin.com indirizzo.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8023" />
 
 ### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: Un oggetto istanza è necessario per costruire un metodo generico chiuso per il metodo generico aperto: * (riferimento al token: *). Inviare un report sui bug all' http://bugzilla.xamarin.com indirizzo.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8024" />
 
 ### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Non è stato possibile trovare un tipo di estensione valido per l'enumerazione intelligente ' {smart_type}'. Inviare un bug all'indirizzo https://bugzilla.xamarin.com.
 
-Ciò indica un bug in Novell. iOS. Inviare un bug all'indirizzo [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ciò indica un bug in Novell. iOS. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
