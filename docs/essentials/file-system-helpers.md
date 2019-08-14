@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: File System Helpers'
+title: 'Xamarin.Essentials: Helper di file system'
 description: La classe FileSystem in Xamarin.Essentials contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 74089d55006555168d9774924c484cb8866cfb37
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898850"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738860"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: File System Helpers
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Helper di file system
 
 La classe **FileSystem** contiene una serie di helper per trovare le directory della cache e dei dati dell'applicazione e per aprire i file all'interno del pacchetto dell'app.
 
@@ -28,7 +28,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-Per ottenere la directory dell'applicazione in cui archiviare i **dati della cache**. I dati della cache sono utilizzabili per tutti i dati che è necessario conservare per un periodo più lungo dei dati temporanei, ma non devono essere dati necessari per il corretto funzionamento.
+Per ottenere la directory dell'applicazione in cui archiviare i **dati della cache**. I dati della cache sono utilizzabili per tutti i dati che è necessario conservare per un periodo più lungo dei dati temporanei, ma non devono essere dati necessari per il corretto funzionamento, perché è il sistema operativo a determinare quando questa risorsa di archiviazione viene cancellata.
 
 ```csharp
 var cacheDir = FileSystem.CacheDirectory;
