@@ -1,5 +1,5 @@
 ---
-title: Creazione di un Layout personalizzato
+title: Creare un layout personalizzato in Novell. Forms
 description: Questo articolo illustra come scrivere una classe di layout personalizzato e viene illustrata una classe WrapLayout orientamento minuscole che dispone i relativi elementi figlio orizzontalmente orizzontalmente nella pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -7,20 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0f2136aa4a07d289e1e8aecc6cb37460fdc5727c
+ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645195"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024522"
 ---
-# <a name="creating-a-custom-layout"></a>Creazione di un Layout personalizzato
+# <a name="create-a-custom-layout-in-xamarinforms"></a>Creare un layout personalizzato in Novell. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin. Forms definisce quattro classi di layout: StackLayout, AbsoluteLayout, RelativeLayout e griglia, e ognuno dispone i relativi elementi figlio in modo diverso. Tuttavia, talvolta è necessario organizzare i contenuti di pagina utilizzando un layout non fornito da xamarin. Forms. Questo articolo illustra come scrivere una classe di layout personalizzato e viene illustrata una classe WrapLayout orientamento minuscole che dispone i relativi elementi figlio orizzontalmente orizzontalmente nella pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive._
-
-## <a name="overview"></a>Panoramica
 
 In xamarin. Forms, derivano da tutte le classi di layout la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe e il tipo generico per vincolare [ `View` ](xref:Xamarin.Forms.View) e i tipi derivati. A sua volta, il `Layout<T>` deriva dalla classe la [ `Layout` ](xref:Xamarin.Forms.Layout) classe, che fornisce un meccanismo per il posizionamento e ridimensionamento figlio elementi.
 
@@ -67,7 +65,7 @@ Il [ `Layout` ](xref:Xamarin.Forms.Layout) classe definisce anche un [ `Invalida
 
 Il [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) possono eseguire l'override per implementare una cache per ridurre al minimo le chiamate ricorrenti del [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) metodi degli elementi figlio del layout. Si esegue l'override di `InvalidateLayout` metodo fornirà una notifica di quando gli elementi figlio vengono aggiunti o rimossi dal layout. Analogamente, il [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) metodo può essere sostituito per fornire una notifica quando viene modificato uno degli elementi figlio del layout delle dimensioni. Per entrambi gli override dei metodi, cancellando la cache deve rispondere un layout personalizzato. Per altre informazioni, vedere [calcolo e la memorizzazione nella cache dati](#caching).
 
-## <a name="creating-a-custom-layout"></a>Creazione di un Layout personalizzato
+## <a name="create-a-custom-layout"></a>Creazione di un layout personalizzato
 
 Il processo per la creazione di un layout personalizzato è come segue:
 
@@ -89,7 +87,7 @@ La classe di layout può essere quindi usata, aggiungerlo a un [ `Page` ](xref:X
 
 <a name="creating" />
 
-### <a name="creating-a-wraplayout"></a>Creazione di un WrapLayout
+### <a name="create-a-wraplayout"></a>Creare un WrapLayout
 
 L'applicazione di esempio viene illustrato un orientamento minuscole `WrapLayout` classe che dispone gli elementi figlio in senso orizzontale attraverso la pagina e quindi esegue il wrapping la visualizzazione degli elementi figlio successivi per le righe aggiuntive.
 
@@ -107,7 +105,7 @@ public class WrapLayout : Layout<View>
 
 <a name="caching" />
 
-#### <a name="calculating-and-caching-layout-data"></a>Il calcolo e la memorizzazione nella cache i dati di Layout
+#### <a name="calculate-and-cache-layout-data"></a>Calcolare e memorizzare nella cache i dati di layout
 
 Il `LayoutData` struttura consente di archiviare dati relativi a una raccolta di elementi figlio in un numero di proprietà:
 
@@ -200,7 +198,7 @@ Il `GetLayoutData` metodo esegue le operazioni seguenti:
 
 <a name="adding_properties" />
 
-#### <a name="adding-properties-backed-by-bindable-properties"></a>Aggiunta di proprietà supportate da proprietà associabili
+#### <a name="add-properties-backed-by-bindable-properties"></a>Aggiungere proprietà supportate da proprietà associabili
 
 Il `WrapLayout` classe definisce `ColumnSpacing` e `RowSpacing` proprietà, i cui valori vengono utilizzati per separare le righe e colonne nel layout, e che sono supportate da proprietà associabili. Le proprietà associabili sono illustrate nell'esempio di codice seguente:
 
@@ -230,7 +228,7 @@ Richiama il gestore di modifica delle proprietà di ciascuna proprietà associab
 
 <a name="onmeasure" />
 
-#### <a name="overriding-the-onmeasure-method"></a>Override del metodo OnMeasure
+#### <a name="override-the-onmeasure-method"></a>Eseguire l'override del metodo onmeasure
 
 Il `OnMeasure` override è illustrato nell'esempio di codice seguente:
 
@@ -256,7 +254,7 @@ Richiama l'override di `GetLayoutData` metodo e costrutti di un `SizeRequest` og
 
 <a name="layoutchildren" />
 
-#### <a name="overriding-the-layoutchildren-method"></a>Override del metodo LayoutChildren
+#### <a name="override-the-layoutchildren-method"></a>Eseguire l'override del metodo LayoutChildren
 
 Il `LayoutChildren` override è illustrato nell'esempio di codice seguente:
 
@@ -307,7 +305,7 @@ Per altre informazioni sul `GetLayoutData` metodo, vedere [calcolo e la memorizz
 
 <a name="invalidatelayout" />
 
-#### <a name="overriding-the-invalidatelayout-method"></a>Override del metodo InvalidateLayout
+#### <a name="overridethe-invalidatelayout-method"></a>Metodo Overridethe InvalidateLayout
 
 Il [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) override viene richiamato quando gli elementi figlio vengono aggiunti o rimossi dal layout o quando uno del `WrapLayout` valore della proprietà modificato, come illustrato nell'esempio di codice seguente:
 
@@ -326,7 +324,7 @@ La sostituzione invalida il layout e rimuove tutte le informazioni di layout mem
 
 <a name="onchildmeasureinvalidated" />
 
-#### <a name="overriding-the-onchildmeasureinvalidated-method"></a>Override del metodo OnChildMeasureInvalidated
+#### <a name="override-the-onchildmeasureinvalidated-method"></a>Eseguire l'override del metodo OnChildMeasureInvalidated
 
 Il [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) override viene richiamato quando uno degli elementi figlio del layout consente di modificare dimensioni e viene illustrato nell'esempio di codice seguente:
 
@@ -342,7 +340,7 @@ La sostituzione invalida il layout del figlio e rimuove tutte le informazioni di
 
 <a name="consuming" />
 
-### <a name="consuming-the-wraplayout"></a>Utilizzo di WrapLayout
+### <a name="consume-the-wraplayout"></a>Utilizzare WrapLayout
 
 Il `WrapLayout` classe può essere usata da posizionarlo su un [ `Page` ](xref:Xamarin.Forms.Page) derivato a tipo, come illustrato nell'esempio di codice XAML seguente:
 
