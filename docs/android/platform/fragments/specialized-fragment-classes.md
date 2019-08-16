@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 67fb12fd66d4d218f6e8bd40e21499e6c07e9e15
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e49f12dd656d5e07feccd34e231a00124d81048a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510596"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524283"
 ---
 # <a name="specialized-fragment-classes"></a>Classi di frammenti specializzate
 
 L'API Fragments fornisce altre sottoclassi che incapsulano alcune delle funzionalità più comuni rilevate nelle applicazioni. Queste sottoclassi sono:
 
--   **ListFragment** &ndash; Questo frammento viene utilizzato per visualizzare un elenco di elementi associati a un'origine dati, ad esempio una matrice o un cursore.
+- **ListFragment** &ndash; Questo frammento viene utilizzato per visualizzare un elenco di elementi associati a un'origine dati, ad esempio una matrice o un cursore.
 
--   **DialogFragment** &ndash; Questo frammento viene usato come wrapper intorno a una finestra di dialogo. Il frammento visualizzerà la finestra di dialogo sopra l'attività.
+- **DialogFragment** &ndash; Questo frammento viene usato come wrapper intorno a una finestra di dialogo. Il frammento visualizzerà la finestra di dialogo sopra l'attività.
 
--   **PreferenceFragment** &ndash; Questo frammento viene utilizzato per mostrare gli oggetti preferenza come elenchi.
+- **PreferenceFragment** &ndash; Questo frammento viene utilizzato per mostrare gli oggetti preferenza come elenchi.
 
 
 
@@ -91,9 +91,9 @@ Nel codice precedente, quando l'utente seleziona un elemento in `ListFragment`, 
 
 Un `DialogFragment` oggetto garantisce che lo stato tra il frammento e la finestra di dialogo rimanga coerente. Tutte le interazioni e il controllo dell'oggetto finestra di dialogo devono `DialogFragment` essere eseguiti tramite l'API e non devono essere eseguiti con chiamate dirette sull'oggetto finestra di dialogo. L' `DialogFragment` API fornisce a ogni istanza un `Show()` metodo utilizzato per visualizzare un frammento. Esistono due modi per eliminare un frammento:
 
--  `DialogFragment.Dismiss()` Chiamare`DialogFragment` sull'istanza. 
+- `DialogFragment.Dismiss()` Chiamare`DialogFragment` sull'istanza. 
 
--  Visualizzare un `DialogFragment`altro.
+- Visualizzare un `DialogFragment`altro.
 
 Per creare un `DialogFragment`oggetto, una classe eredita `Android.App.DialogFragment,` da e quindi esegue l'override di uno dei due metodi seguenti:
 

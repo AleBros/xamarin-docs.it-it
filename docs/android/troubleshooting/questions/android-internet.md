@@ -7,27 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: cd27d5c884086cd0fade4364851039fd0cd915a0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dc84ecc0ee3a71cc4e1d4233f4d6d5f22f597b07
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945461"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523490"
 ---
 # <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Perché non è possibile connettere la build di versione Android a Internet?
 
 ## <a name="cause"></a>Causa
 
-La causa più comune di questo problema è che il **INTERNET** autorizzazione viene automaticamente incluso in una build di debug, ma deve essere impostato manualmente per una build di rilascio. Poiché l'autorizzazione Internet viene utilizzato per consentire al debugger di connettersi al processo, come descritto per "DebugSymbols" [qui](~/android/deploy-test/building-apps/build-process.md).
+La causa più comune di questo problema è che l'autorizzazione **Internet** viene inclusa automaticamente in una build di debug, ma deve essere impostata manualmente per una build di rilascio. Questo perché l'autorizzazione Internet viene usata per consentire a un debugger di connettersi al processo, come descritto per "DebugSymbols" [qui](~/android/deploy-test/building-apps/build-process.md).
 
 
-## <a name="fix"></a>Correggi
+## <a name="fix"></a>Correzione
 
-Per risolvere il problema, è possibile richiedere l'autorizzazione Internet nel manifesto Android. Questa operazione può essere eseguita tramite l'editor del manifesto o sourcecode del manifesto:
+Per risolvere il problema, è possibile richiedere l'autorizzazione Internet nel manifesto Android. Questa operazione può essere eseguita tramite l'editor del manifesto o il codice sorgente del manifesto:
 
--   Correggere nell'Editor: Nel progetto Android, passare a **proprietà -> androidmanifest. Xml -> autorizzazioni necessarie** e controllare **Internet**
+- Correzione nell'Editor: Nel progetto Android passare a **Properties-> file AndroidManifest. XML-> le autorizzazioni necessarie** e controllare **Internet**
 
--   Risolvere in Sourcecode: Aprire il AndroidManifest in un editor di origine e aggiungere il tag di autorizzazione all'interno di `<Manifest>` tag:
+- Correzione nel codice sorgente: Aprire file AndroidManifest in un editor di origine e aggiungere il tag di autorizzazione all' `<Manifest>` interno dei tag:
 
     ```xml
     <Manifest>

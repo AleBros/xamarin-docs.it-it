@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: fd813427836b0250b84941eca54d6bbe6219518e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645326"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522501"
 ---
 # <a name="extending-the-recyclerview-example"></a>Estensione dell'esempio RecyclerView
 
@@ -26,11 +26,11 @@ Quando un utente tocca un elemento in `RecyclerView`, viene generato un evento d
 
 Per illustrare come gestire gli eventi di clic sugli elementi, i passaggi seguenti illustrano come viene modificata l'app di visualizzazione foto di base per segnalare quale fotografia è stata toccata dall'utente. Quando si verifica un evento di clic sull'elemento nell'app di esempio, viene eseguita la sequenza seguente:
 
-1.  La foto rileva `CardView` l'evento di clic sull'elemento e invia una notifica all'adapter.
+1. La foto rileva `CardView` l'evento di clic sull'elemento e invia una notifica all'adapter.
 
-2.  L'adapter invia l'evento (con le informazioni sulla posizione dell'elemento) al gestore di clic dell'elemento dell'attività.
+2. L'adapter invia l'evento (con le informazioni sulla posizione dell'elemento) al gestore di clic dell'elemento dell'attività.
 
-3.  Il gestore di clic dell'elemento dell'attività risponde all'evento clic sull'elemento.
+3. Il gestore di clic dell'elemento dell'attività risponde all'evento clic sull'elemento.
 
 Per prima cosa, un membro del `ItemClick` gestore eventi denominato viene `PhotoAlbumAdapter` aggiunto alla definizione della classe:
 

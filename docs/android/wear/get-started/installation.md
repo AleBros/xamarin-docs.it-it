@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 0099414529027a9a6e52b79393cfa6f0f3bc24d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1f6fa57bbe47bbc2fe97bbd0df7018fc1cd3897a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647796"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522177"
 ---
 # <a name="setup-and-installation"></a>Installazione e configurazione
 
@@ -22,13 +22,13 @@ _Questo articolo illustra i passaggi di installazione e i dettagli di configuraz
 
 Per creare app di Android Wear basate su Novell, è necessario quanto segue:
 
--   **Visual Studio o Visual Studio per Mac** &ndash; È necessario Visual Studio 2017 community o versione successiva.
+- **Visual Studio o Visual Studio per Mac** &ndash; È necessario Visual Studio 2017 community o versione successiva.
 
--   **Novell. Android** &ndash; Novell. Android 4,17 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Novell. Android** &ndash; Novell. Android 4,17 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
--   **Android SDK** -Android SDK 5.0.1 (API 21) o versione successiva deve essere installato tramite il gestore di Android SDK.
+- **Android SDK** -Android SDK 5.0.1 (API 21) o versione successiva deve essere installato tramite il gestore di Android SDK.
 
--   **Java Developer Kit** Per lo sviluppo di Novell Android è necessario [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24). &ndash;
+- **Java Developer Kit** Per lo sviluppo di Novell Android è necessario [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se si sta sviluppando per il livello API 24 o versione successiva (JDK 1,8 supporta anche i livelli API precedenti a 24). &ndash;
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti.
 
@@ -39,9 +39,9 @@ Per creare app di Android Wear basate su Novell, è necessario quanto segue:
 
 Dopo aver installato Novell. Android, seguire questa procedura in modo da essere pronti per compilare e testare le app di Android Wear: 
 
-1.  Installare gli strumenti e Android SDK necessari.
-2.  Configurare un dispositivo di test.
-3.  Creare la prima app Android Wear.
+1. Installare gli strumenti e Android SDK necessari.
+2. Configurare un dispositivo di test.
+3. Creare la prima app Android Wear.
 
 Questi passaggi sono descritti nelle sezioni seguenti.
 

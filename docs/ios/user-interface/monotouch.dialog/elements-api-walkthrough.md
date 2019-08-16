@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 82320b069156828101d17e79ca48a8933b8a8777
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655085"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528458"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creazione di un'applicazione Novell. iOS tramite l'API Elements
 
 _Questo articolo si basa sulle informazioni presentate nella finestra di dialogo Introduzione a MonoTouch. Viene presentata una procedura dettagliata che illustra come usare il MonoTouch. Dialog (MT. D) elementi API per iniziare rapidamente a creare un'applicazione con MT. D._
 
-In questa procedura dettagliata verrà usato il MT. D elementi API per creare uno stile Master-Details dell'applicazione in cui viene visualizzato un elenco attività. Quando l'utente seleziona il <span class="ui">+</span> pulsante nella barra di navigazione, viene aggiunta una nuova riga alla tabella per l'attività. Selezionando la riga, si passerà alla schermata dei dettagli che consente di aggiornare la descrizione dell'attività e la data di scadenza, come illustrato di seguito:
+In questa procedura dettagliata verrà usato il MT. D elementi API per creare uno stile Master-Details dell'applicazione in cui viene visualizzato un elenco attività. Quando l'utente seleziona il **+** pulsante nella barra di navigazione, viene aggiunta una nuova riga alla tabella per l'attività. Selezionando la riga, si passerà alla schermata dei dettagli che consente di aggiornare la descrizione dell'attività e la data di scadenza, come illustrato di seguito:
 
  [![](elements-api-walkthrough-images/01-task-list-app.png "Selezionando la riga, si passerà alla schermata dei dettagli che consente di aggiornare la descrizione dell'attività e la data di scadenza")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
@@ -36,11 +36,11 @@ Per avviare il processo di creazione della schermata, MonoTouch. Dialog `DialogV
 
 Per creare un'applicazione multischermata con MonoTouch. Dialog, è necessario:
 
-1.  Creazione di un`UINavigationController.`
-1.  Creazione di un`DialogViewController.`
-1.  `DialogViewController` Aggiungere come radice del`UINavigationController.` 
-1.  Aggiungere un `RootElement` alla`DialogViewController.`
-1.  Aggiungere `Sections` e `Elements` al`RootElement.` 
+1. Creazione di un`UINavigationController.`
+1. Creazione di un`DialogViewController.`
+1. `DialogViewController` Aggiungere come radice del`UINavigationController.` 
+1. Aggiungere un `RootElement` alla`DialogViewController.`
+1. Aggiungere `Sections` e `Elements` al`RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>Uso di un UINavigationController
 
@@ -77,14 +77,14 @@ Le sezioni sono costituite da elementi, altre sezioni o altro `RootElements`anco
 
 ### <a name="using-dialogviewcontroller"></a>Uso di DialogViewController
 
-L' `DialogViewController`oggetto, che `UITableViewController` è una sottoclasse `UITableView` , ha come visualizzazione. In questo esempio, si desidera aggiungere elementi alla tabella ogni volta che si tocca <span class="ui">+</span> il pulsante. <span class="ui">+</span> `RightBarButton` `NavigationItem` `UINavigationController`Poiché è stato aggiunto a un oggetto, è possibile usare la proprietà di per aggiungere il pulsante, come illustrato di seguito: `DialogViewController`
+L' `DialogViewController`oggetto, che `UITableViewController` è una sottoclasse `UITableView` , ha come visualizzazione. In questo esempio, si desidera aggiungere elementi alla tabella ogni volta che si tocca **+** il pulsante. **+** `RightBarButton` `NavigationItem` `UINavigationController`Poiché è stato aggiunto a un oggetto, è possibile usare la proprietà di per aggiungere il pulsante, come illustrato di seguito: `DialogViewController`
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-Quando abbiamo creato il `RootElement` precedente, abbiamo passato una singola `Section` istanza in modo che potessimo aggiungere elementi quando il <span class="ui">+</span> pulsante è stato toccato dall'utente. Per eseguire questa operazione nel gestore dell'evento per il pulsante, è possibile usare il codice seguente:
+Quando abbiamo creato il `RootElement` precedente, abbiamo passato una singola `Section` istanza in modo che potessimo aggiungere elementi quando il **+** pulsante è stato toccato dall'utente. Per eseguire questa operazione nel gestore dell'evento per il pulsante, è possibile usare il codice seguente:
 
 ```csharp
 _addButton.Clicked += (sender, e) => {                

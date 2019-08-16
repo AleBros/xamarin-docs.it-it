@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e4676314b361bac17b3c6df64631572e62f4d870
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6960fe3db1ddf7d6d911fe8151e49b1a42388d26
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653735"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527852"
 ---
 # <a name="core-image-in-xamarinios"></a>Immagine di base in Novell. iOS
 
@@ -22,9 +22,9 @@ L'immagine principale è un nuovo Framework introdotto in iOS 5 che offre una se
 
 Questo documento contiene esempi semplici di:
 
--  Rilevamento viso.
--  Applicazione di filtri a un'immagine
--  Elenco dei filtri disponibili.
+- Rilevamento viso.
+- Applicazione di filtri a un'immagine
+- Elenco dei filtri disponibili.
 
 
 Questi esempi sono utili per iniziare a incorporare le funzionalità di base delle immagini nelle applicazioni Novell. iOS.
@@ -49,12 +49,12 @@ CIFeature[] features = detector.FeaturesInImage(ciImage);
 
 La matrice delle funzionalità verrà popolata `CIFaceFeature` con gli oggetti (se sono state rilevate facce). Esiste un oggetto `CIFaceFeature` per ogni face. `CIFaceFeature`dispone delle proprietà seguenti:
 
--  HasMouthPosition: indica se è stata rilevata una bocca per questa faccia.
--  HasLeftEyePosition: indica se l'occhio sinistro è stato rilevato per questa faccia.
--  HasRightEyePosition: indica se l'occhio destro è stato rilevato per questa faccia. 
--  MouthPosition: coordinate della bocca per questa faccia.
--  LeftEyePosition: le coordinate dell'occhio sinistro per questa faccia.
--  RightEyePosition: coordinate dell'occhio destro per questa faccia.
+- HasMouthPosition: indica se è stata rilevata una bocca per questa faccia.
+- HasLeftEyePosition: indica se l'occhio sinistro è stato rilevato per questa faccia.
+- HasRightEyePosition: indica se l'occhio destro è stato rilevato per questa faccia. 
+- MouthPosition: coordinate della bocca per questa faccia.
+- LeftEyePosition: le coordinate dell'occhio sinistro per questa faccia.
+- RightEyePosition: coordinate dell'occhio destro per questa faccia.
 
 
 Le coordinate per tutte queste proprietà hanno origine in basso a sinistra, a differenza di UIKit che usa la parte superiore sinistra dell'origine. Quando `CIFaceFeature` si usano le coordinate, assicurarsi di "capovolgerle". Questa visualizzazione di immagini personalizzate di base in CoreImage\CoreImageViewController.cs illustra come creare triangoli dell'indicatore del volto sull'immagine (si noti il `FlipForBottomOrigin` metodo):

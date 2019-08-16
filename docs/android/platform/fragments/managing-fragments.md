@@ -6,23 +6,23 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 3e0430b8ed9c42030441021e71c3b08b1ddccc57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5b829b1c38007bbb070b643a355d70bffaef01a5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61022204"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524308"
 ---
 # <a name="managing-fragments"></a>Gestione dei frammenti
 
-Per facilitare la gestione di frammenti, Android offre il `FragmentManager` classe. Ogni attività dispone di un'istanza di `Android.App.FragmentManager` che verrà trovare o modificare in modo dinamico relativi frammenti. Ogni set di queste modifiche è noto come un *transazione*e viene eseguita usando una delle API contenute nella classe `Android.App.FragmentTransation`, che è gestito dal `FragmentManager`. Un'attività può avviare una transazione simile alla seguente:
+Per semplificare la gestione dei frammenti, Android fornisce la `FragmentManager` classe. Ogni attività dispone di un'istanza `Android.App.FragmentManager` di in grado di trovare o modificare in modo dinamico i relativi frammenti. Ogni set di queste modifiche è noto come *transazione*e viene eseguito tramite una delle API contenute nella classe `Android.App.FragmentTransation`, gestito da. `FragmentManager` Un'attività può avviare una transazione come la seguente:
 
 ```csharp
 FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
 ```
 
-Queste modifiche per i frammenti vengono eseguite nel `FragmentTransaction` quando si utilizza, ad esempio i metodi `Add()`, `Remove(),` e `Replace().` le modifiche vengono quindi applicate utilizzando `Commit()`. Le modifiche in una transazione non vengono eseguite immediatamente.
-Al contrario, vengono pianificati per l'esecuzione nel thread dell'interfaccia utente dell'attività appena possibile.
+Queste modifiche ai frammenti vengono eseguite nell' `FragmentTransaction` istanza di tramite metodi `Add()`quali `Remove(),` `Commit()`e `Replace().` le modifiche vengono quindi applicate tramite. Le modifiche in una transazione non vengono eseguite immediatamente.
+Sono invece pianificati per essere eseguiti nel thread dell'interfaccia utente dell'attività appena possibile.
 
 Nell'esempio seguente viene illustrato come aggiungere un frammento a un contenitore esistente:
 
@@ -38,11 +38,11 @@ fragmentTx.Add(Resource.Id.fragment_container, aDifferentDetailsFrag);
 fragmentTx.Commit();
 ```
 
-Se una transazione viene eseguito il commit dopo `Activity.OnSaveInstanceState()` viene chiamato, verrà generata un'eccezione. Ciò accade perché quando l'attività Salva lo stato, Android salva anche lo stato di eventuali frammenti ospitati. Se tutte le transazioni frammento vengono eseguito il commit dopo questo punto, lo stato di queste transazioni andranno perse quando l'attività viene ripristinato.
+Se viene eseguito il commit di `Activity.OnSaveInstanceState()` una transazione dopo la chiamata a, verrà generata un'eccezione. Questo problema si verifica perché quando l'attività Salva il proprio stato, Android salva anche lo stato dei frammenti ospitati. Se dopo questo punto viene eseguito il commit di transazioni di frammenti, lo stato di queste transazioni andrà perso quando viene ripristinata l'attività.
 
-È possibile salvare le transazioni di frammento dell'attività [stack Indietro](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) effettuando una chiamata a `FragmentTransaction.AddToBackStack()`. Ciò consente all'utente di spostarsi all'indietro tramite frammento viene modificato quando il **nuovamente** pulsante viene premuto. Senza una chiamata a questo metodo, frammenti che sono state rimosse verranno eliminato definitivamente e non sarà disponibili se l'utente passa attraverso l'attività.
+È possibile salvare le transazioni Fragment nello [stack back](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) dell'attività effettuando una chiamata a `FragmentTransaction.AddToBackStack()`. Ciò consente all'utente di spostarsi all'indietro tra le modifiche del frammento quando viene premuto il pulsante **indietro** . Senza una chiamata a questo metodo, i frammenti rimossi verranno eliminati definitivamente e non saranno disponibili se l'utente torna all'interno dell'attività.
 
-Nell'esempio seguente viene illustrato come utilizzare il `AddToBackStack` metodo di un `FragmentTransaction` per sostituire un frammento, mantenendo lo stato del primo frammento nello stack indietro:
+Nell'esempio seguente viene illustrato come utilizzare il `AddToBackStack` metodo di un `FragmentTransaction` oggetto per sostituire un frammento, mantenendo allo stesso tempo lo stato del primo frammento sullo stack indietro:
 
 ```csharp
 // Create a new fragment and a transaction.
@@ -62,15 +62,15 @@ fragmentTx.Commit();
 
 ## <a name="communicating-with-fragments"></a>Comunicazione con frammenti
 
-Il *FragmentManager* a conoscenza di tutti i frammenti associati a un'attività e fornisce due metodi per consentire di individuare questi frammenti:
+*FragmentManager* conosce tutti i frammenti collegati a un'attività e fornisce due metodi che consentono di trovare i frammenti seguenti:
 
--   **FindFragmentById** &ndash; questo metodo troverà un frammento con l'ID specificato nel file di layout o l'ID del contenitore quando il frammento è stato aggiunto come parte di una transazione.
+- **FindFragmentById** &ndash; Questo metodo troverà un frammento usando l'ID specificato nel file di layout o l'ID del contenitore quando il frammento è stato aggiunto come parte di una transazione.
 
--   **FindFragmentByTag** &ndash; questo metodo viene utilizzato per trovare un frammento che ha un tag che è stato specificato nel file di layout o che è stato aggiunto in una transazione.
+- **FindFragmentByTag** &ndash; Questo metodo viene utilizzato per trovare un frammento con un tag fornito nel file di layout o aggiunto in una transazione.
 
-I frammenti e attività di riferimento di `FragmentManager`, in modo che le stesse tecniche utilizzate per comunicare avanti e indietro tra di essi. Un'applicazione può trovare un frammento di riferimento usando uno di questi due metodi, eseguire il cast di tale riferimento al tipo appropriato e quindi chiamare direttamente i metodi per il frammento. Il frammento di codice seguente viene fornito un esempio:
+Sia i frammenti che le `FragmentManager`attività fanno riferimento a, quindi le stesse tecniche vengono usate per comunicare tra loro. Un'applicazione può trovare un frammento di riferimento usando uno di questi due metodi, eseguire il cast del riferimento al tipo appropriato e quindi chiamare direttamente i metodi sul frammento. Il frammento di codice seguente fornisce un esempio:
 
-È anche possibile usare l'attività di `FragmentManager` trovare frammenti:
+È anche possibile che l'attività usi per individuare i `FragmentManager` frammenti:
 
 ```csharp
 var emailList = FragmentManager.FindFragmentById<EmailListFragment>(Resource.Id.email_list_fragment);
@@ -80,7 +80,7 @@ emailList.SomeCustomMethod(parameter1, parameter2);
 
 ### <a name="communicating-with-the-activity"></a>Comunicazione con l'attività
 
-È possibile che un frammento di utilizzare il `Fragment.Activity` proprietà che fa riferimento il relativo host. Eseguendo il cast di attività per un tipo più specifico, è possibile che un'attività per chiamare metodi e proprietà sul relativo host, come illustrato nell'esempio seguente:
+È possibile che un frammento usi la `Fragment.Activity` proprietà per fare riferimento al relativo host. Eseguendo il cast dell'attività a un tipo più specifico, è possibile che un'attività chiami metodi e proprietà nell'host, come illustrato nell'esempio seguente:
 
 ```csharp
 var myActivity = (MyActivity) this.Activity;

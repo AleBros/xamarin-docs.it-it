@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655479"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529275"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
@@ -441,9 +441,9 @@ Le dimensioni dei risultanti `BoxView` rispetto allo schermo dipende dalla piatt
 
 Diverse estensioni di markup sono intrinseche di XAML e supportati in file XAML di xamarin. Forms. Alcuni di questi non vengono usati molto spesso ma sono essenziali quando sono necessarie:
 
--  Se dispone di una proprietà non - `null` valore per impostazione predefinita, ma si desidera impostarlo `null`, impostarla sul `{x:Null}` estensione di markup.
--  Se una proprietà è di tipo `Type`, è possibile assegnarla a una `Type` dell'oggetto usando l'estensione di markup `{x:Type someClass}`.
--  È possibile definire le matrici in XAML usando il `x:Array` estensione di markup. Questa estensione di markup ha un attributo obbligatorio denominato `Type` che indica il tipo degli elementi nella matrice.
+- Se dispone di una proprietà non - `null` valore per impostazione predefinita, ma si desidera impostarlo `null`, impostarla sul `{x:Null}` estensione di markup.
+- Se una proprietà è di tipo `Type`, è possibile assegnarla a una `Type` dell'oggetto usando l'estensione di markup `{x:Type someClass}`.
+- È possibile definire le matrici in XAML usando il `x:Array` estensione di markup. Questa estensione di markup ha un attributo obbligatorio denominato `Type` che indica il tipo degli elementi nella matrice.
 - Il `Binding` estensione di markup viene discusso in [parte 4. Data Binding nozioni di base](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## <a name="the-constraintexpression-markup-extension"></a>L'estensione di Markup ConstraintExpression

@@ -1,35 +1,35 @@
 ---
-title: Le transazioni e la verifica in xamarin. IOS
-description: Questo documento descrive come consentire per il ripristino degli ultimi acquisti in un'app xamarin. IOS. Illustra anche modi per proteggere gli acquisti e prodotti fornita dal server.
+title: Transazioni e verifica in Novell. iOS
+description: Questo documento descrive come consentire il ripristino degli acquisti precedenti in un'app Novell. iOS. Vengono inoltre illustrati i modi per proteggere gli acquisti e i prodotti distribuiti dal server.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 83f5fd233c004271169a4d00d0a65e70aa925b95
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2a0d0e1ab7272094d55dff7fa083e61ee9c3286c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61369108"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527594"
 ---
-# <a name="transactions-and-verification-in-xamarinios"></a>Le transazioni e la verifica in xamarin. IOS
+# <a name="transactions-and-verification-in-xamarinios"></a>Transazioni e verifica in Novell. iOS
 
-## <a name="restoring-past-transactions"></a>Il ripristino di oltre le transazioni
+## <a name="restoring-past-transactions"></a>Ripristino di transazioni passate
 
-Se l'applicazione supporta i tipi di prodotti che è possibile ripristinare, è necessario includere alcuni elementi dell'interfaccia utente per consentire agli utenti di ripristinare tali acquisti.
-Questa funzionalità consente a un cliente per aggiungere il prodotto a dispositivi aggiuntivi o ripristinare il prodotto allo stesso dispositivo dopo venga cancellato pulita o la rimozione e reinstallazione dell'app. I seguenti tipi di prodotto sono ripristinabili:
+Se l'applicazione supporta i tipi di prodotto ripristinabili, è necessario includere alcuni elementi dell'interfaccia utente per consentire agli utenti di ripristinare tali acquisti.
+Questa funzionalità consente a un cliente di aggiungere il prodotto a dispositivi aggiuntivi o di ripristinare il prodotto sullo stesso dispositivo dopo la cancellazione o la rimozione e la reinstallazione dell'app. I tipi di prodotto seguenti sono ripristinabili:
 
--  Prodotti non riproducibile
--  Sottoscrizioni di auto-rinnovabile
--  Sottoscrizioni gratuite
+- Prodotti non utilizzabili
+- Sottoscrizioni rinnovate automaticamente
+- Sottoscrizioni gratuite
 
-Il processo di ripristino deve aggiornare il record è mantenere sul dispositivo per soddisfare i prodotti. Il cliente può scegliere di ripristinare in qualsiasi momento, in uno qualsiasi dei propri dispositivi. Il processo di ripristino invia nuovamente tutte le transazioni precedenti per tale utente. il codice dell'applicazione deve quindi determinare l'azione da intraprendere con queste informazioni (ad esempio, verifica se è già presente un record di acquisto nel dispositivo e non, creando un record di acquisto e attivazione del prodotto per l'utente).
+Il processo di ripristino dovrebbe aggiornare i record conservati sul dispositivo per soddisfare i prodotti. Il cliente può scegliere di eseguire il ripristino in qualsiasi momento, su qualsiasi dispositivo. Il processo di ripristino invia nuovamente tutte le transazioni precedenti per tale utente; il codice dell'applicazione deve quindi determinare l'azione da intraprendere con tali informazioni (ad esempio, verificare se è già presente un record di tale acquisto nel dispositivo e, in caso contrario, creare un record dell'acquisto e abilitare il prodotto per l'utente).
 
-### <a name="implementing-restore"></a>Implementazione di ripristino
+### <a name="implementing-restore"></a>Implementazione del ripristino
 
-L'interfaccia utente **ripristinare** pulsante chiama il metodo seguente, che attiva RestoreCompletedTransactions il `SKPaymentQueue`.
+Il pulsante **ripristino** interfaccia utente chiama il metodo seguente, che attiva RestoreCompletedTransactions su `SKPaymentQueue`.
 
 ```csharp
 public void Restore()
@@ -39,9 +39,9 @@ public void Restore()
 }
 ```
 
-StoreKit invierà la richiesta di ripristino per i server Apple in modo asincrono.   
+StoreKit invierà la richiesta di ripristino ai server Apple in modo asincrono.   
    
-Poiché il `CustomPaymentObserver` è registrato come un osservatore di transazione, riceveranno i messaggi quando i server Apple risponderanno. La risposta conterrà tutte le transazioni che utente effettuate in questa applicazione (in tutti i dispositivi). Il codice scorre ogni transazione, rileva lo stato di ripristinata e chiama il `UpdatedTransactions` metodo elaborarlo come illustrato di seguito:
+Poiché è `CustomPaymentObserver` registrato come Observer di transazione, riceverà messaggi quando i server Apple rispondono. La risposta conterrà tutte le transazioni eseguite dall'utente in questa applicazione (in tutti i dispositivi). Il codice scorre ogni transazione, rileva lo stato ripristinato e chiama il `UpdatedTransactions` metodo per elaborarlo come illustrato di seguito:
 
 ```csharp
 // called when the transaction status is updated
@@ -67,9 +67,9 @@ default:
 }
 ```
 
-Se non sono presenti prodotti per l'utente, che è possibile ripristinare `UpdatedTransactions` non viene chiamato.   
+Se non sono presenti prodotti ripristinabili per l'utente, `UpdatedTransactions` non viene chiamato.   
    
-Il codice possibili più semplice per ripristinare una determinata transazione nell'esempio esegue le stesse azioni quando un acquisto avviene, tranne il fatto che il `OriginalTransaction` proprietà viene utilizzata per accedere all'ID prodotto:
+Il codice più semplice possibile per ripristinare una determinata transazione nell'esempio esegue le stesse operazioni di quando viene acquistato un acquisto, ad eccezione del fatto `OriginalTransaction` che la proprietà viene utilizzata per accedere all'ID prodotto:
 
 ```csharp
 public void RestoreTransaction (SKPaymentTransaction transaction)
@@ -82,11 +82,11 @@ public void RestoreTransaction (SKPaymentTransaction transaction)
 }
 ```
 
-Un'implementazione più sofisticata può controllare altri `transaction.OriginalTransaction` proprietà, ad esempio il numero originale di data e la ricezione. Queste informazioni saranno utili per alcuni tipi di prodotto (ad esempio le sottoscrizioni).
+Un'implementazione più sofisticata può verificare `transaction.OriginalTransaction` altre proprietà, ad esempio la data originale e il numero di ricezione. Queste informazioni saranno utili per alcuni tipi di prodotto, ad esempio le sottoscrizioni.
 
-#### <a name="restore-completion"></a>Ripristinare il completamento
+#### <a name="restore-completion"></a>Completamento ripristino
 
-Il `CustomPaymentObserver` dispone di due metodi aggiuntivi che verranno chiamati da StoreKit quando il processo di ripristino è stata completata (riuscito o con un errore), illustrato di seguito:
+`CustomPaymentObserver` Dispone di due metodi aggiuntivi che verranno chiamati da StoreKit al termine del processo di ripristino (con esito positivo o negativo), come indicato di seguito:
 
 ```csharp
 public override void PaymentQueueRestoreCompletedTransactionsFinished (SKPaymentQueue queue)
@@ -99,95 +99,95 @@ public override void RestoreCompletedTransactionsFailedWithError (SKPaymentQueue
 }
 ```
 
-Nell'esempio questi metodi eseguono alcuna operazione, tuttavia, un'applicazione reale è possibile scegliere di implementare un messaggio all'utente o altre funzionalità.
+Nell'esempio questi metodi non eseguono alcuna operazione, tuttavia un'applicazione reale può scegliere di implementare un messaggio per l'utente o altre funzionalità.
 
-## <a name="securing-purchases"></a>Proteggere gli acquisti
+## <a name="securing-purchases"></a>Protezione degli acquisti
 
-I due esempi in questo documento usa `NSUserDefaults` per tenere traccia degli acquisti:   
+I due esempi in questo documento usano `NSUserDefaults` per tenere traccia degli acquisti:   
    
- **Beni di consumo** – il saldo del credito acquisti è un semplice `NSUserDefaults` valore intero che viene incrementato con ogni acquisto.   
+ Beni di **consumo** : il "saldo" degli acquisti di credito `NSUserDefaults` è un valore intero semplice incrementato a ogni acquisto.   
    
- **Non-sussidiarie** – ogni acquisto di filtro foto viene archiviata come una coppia chiave-valore in `NSUserDefaults`.
+ **Non materiali di consumo** : ogni acquisto di filtro foto viene archiviato come coppia chiave-valore `NSUserDefaults`in.
 
-Usando `NSUserDefaults` mantiene il codice di esempio semplice, ma non offre una soluzione molto sicura perché potrebbe essere tecnicamente si occupano di utenti possono aggiornare le impostazioni (ignorando il meccanismo di pagamento).   
+L' `NSUserDefaults` uso di mantiene il codice di esempio semplice, ma non offre una soluzione molto sicura, poiché può essere possibile per gli utenti che si occupano tecnicamente di aggiornare le impostazioni (ignorando il meccanismo di pagamento).   
    
-Nota: Applicazioni reali dovrebbero adottare un meccanismo protetto per l'archiviazione acquistati contenuto non soggette alla manomissione utente. Questa operazione potrebbe comportare la crittografia e/o altre tecniche, inclusa l'autenticazione server remoto.   
+Nota: Le applicazioni reali devono adottare un meccanismo sicuro per archiviare il contenuto acquistato che non è soggetto alla manomissione dell'utente. Questa operazione può comportare la crittografia e/o altre tecniche, inclusa l'autenticazione del server remoto.   
    
- Il meccanismo deve anche essere progettato per sfruttare le funzionalità di backup e ripristino incorporate di iOS, iTunes e iCloud. Ciò garantisce che dopo che un utente che ripristina un backup degli acquisti precedenti saranno immediatamente disponibili.   
+ Il meccanismo deve anche essere progettato per sfruttare le funzionalità di backup e ripristino predefinite di iOS, iTunes e iCloud. In questo modo, dopo che un utente ha ripristinato un backup, gli acquisti precedenti saranno immediatamente disponibili.   
    
-Fare riferimento a Secure codifica Guida Apple per ulteriori linee guida specifiche iOS.
+Per altre linee guida specifiche per iOS, vedere la guida alla codifica sicura di Apple.
 
-## <a name="receipt-verification-and-server-delivered-products"></a>Verifica di carico e i prodotti fornita dal Server
+## <a name="receipt-verification-and-server-delivered-products"></a>Verifica della ricezione e prodotti distribuiti dal server
 
-Gli esempi in questo documento finora hanno è costituita esclusivamente l'applicazione che comunica direttamente con i server di App Store per condurre le transazioni di acquisto, quale sbloccare caratteristiche o funzionalità già codificate nell'app.   
+Gli esempi in questo documento finora sono consistiti esclusivamente dell'applicazione che comunica direttamente con i server dell'app Store per condurre le transazioni di acquisto, che sbloccano funzionalità o funzionalità già codificate nell'app.   
    
-Apple offre un ulteriore livello di sicurezza di acquisto di consentendo le conferme di acquisto per la verifica in modo indipendente da un altro server, che può essere utile per convalidare una richiesta prima di recapitare contenuto digitale come parte di un acquisto (ad esempio un libro digitale o Magazine).   
+Apple fornisce un livello aggiuntivo di sicurezza degli acquisti consentendo la verifica indipendente da parte di un altro server delle ricevute di acquisto, che può essere utile per convalidare una richiesta prima di fornire contenuti digitali come parte di un acquisto, ad esempio un libro digitale o Magazine).   
    
- **Prodotti incorporati** – come negli esempi in questo documento, il prodotto viene acquistato esiste come funzionalità fornite con l'applicazione. Un acquisto in-app consente all'utente accedere alla funzionalità.
-ID prodotto sono hardcoded.   
+ **Prodotti predefiniti** : come gli esempi in questo documento, il prodotto acquistato esiste come funzionalità fornita con l'applicazione. Un acquisto in-app consente all'utente di accedere alla funzionalità.
+Gli ID prodotto sono hardcoded.   
    
- **I prodotti server-recapitati** : il prodotto è costituita da contenuto scaricabile che viene archiviato in un server remoto fino a quando una transazione ha esito positivo fa sì che il contenuto da scaricare.
-Esempi possono essere libri o problemi di magazine. ID prodotto generalmente sono originati da un server esterno (in cui il contenuto del prodotto è anche ospitato). Le applicazioni devono implementare un modo affidabile per la registrazione quando una transazione è stata completata, in modo che se si verifica un errore di download di contenuto può essere eseguito un tentativo senza confondere l'utente.
+ **Prodotti distribuiti dal server** : il prodotto è costituito da contenuti scaricabili archiviati in un server remoto fino a quando la transazione non riesce a causare il download del contenuto.
+Esempi possono includere problemi relativi a libri o riviste. Gli ID prodotto sono in genere originati da un server esterno (in cui è ospitato anche il contenuto del prodotto). Le applicazioni devono implementare una modalità di registrazione affidabile quando una transazione è stata completata, in modo che se il download del contenuto non riesce, è possibile ritentarne l'esecuzione senza confusione per l'utente.
 
-### <a name="server-delivered-products"></a>Prodotti fornita dal server
+### <a name="server-delivered-products"></a>Prodotti distribuiti dal server
 
-Del contenuto, alcuni prodotti del, ad esempio libri e riviste (o anche un livello di gioco) desidera essere scaricati da un server remoto durante il processo di acquisto. Ciò significa che un server aggiuntivo è necessaria per archiviare e trasmettere i contenuti del prodotto una volta acquistato.
+Il contenuto di alcuni prodotti, ad esempio libri e riviste (o anche un livello di gioco), deve essere scaricato da un server remoto durante il processo di acquisto. Ciò significa che è necessario un server aggiuntivo per archiviare e recapitare il contenuto del prodotto dopo l'acquisto.
 
-#### <a name="getting-prices-for-server-delivered-products"></a>Introduzione ai prezzi per i prodotti fornita dal Server
+#### <a name="getting-prices-for-server-delivered-products"></a>Ottenere i prezzi per i prodotti distribuiti dal server
 
-Poiché i prodotti vengono recapitati in modalità remota, è anche possibile aggiungere più prodotti nel tempo (senza aggiornare il codice dell'app), ad esempio l'aggiunta di ulteriori libri o nuovi problemi di una rivista. In modo che l'applicazione può individuare questi prodotti di notizie e visualizzarli all'utente, il server aggiuntivo deve archiviare e fornire le informazioni.   
+Poiché i prodotti vengono recapitati in modalità remota, è anche possibile aggiungere altri prodotti nel tempo (senza aggiornare il codice dell'app), ad esempio aggiungendo più libri o nuovi problemi di una rivista. In modo che l'applicazione possa individuare questi prodotti e visualizzarli per l'utente, il server aggiuntivo dovrebbe archiviare e fornire tali informazioni.   
    
-[![](transactions-and-verification-images/image38.png "Introduzione ai prezzi per i prodotti fornita dal Server")](transactions-and-verification-images/image38.png#lightbox)   
+[![](transactions-and-verification-images/image38.png "Ottenere i prezzi per i prodotti distribuiti dal server")](transactions-and-verification-images/image38.png#lightbox)   
    
-1. Informazioni sul prodotto devono essere archiviati in più posizioni: nel server e in iTunes Connect. Inoltre, ogni prodotto avrà i file di contenuto associati. Questi file verranno recapitati dopo un acquisto ha esito positivo.   
+1. Le informazioni sul prodotto devono essere archiviate in più posizioni: sul server e in iTunes Connect. Inoltre, a ogni prodotto sarà associato un file di contenuto. Questi file verranno recapitati dopo un acquisto riuscito.   
    
-2. Quando l'utente desidera acquistare un prodotto, l'applicazione deve determinare quali prodotti sono disponibili. Queste informazioni possono essere memorizzati nella cache, ma devono essere fornite da un server remoto in cui è archiviato l'elenco master dei prodotti.   
+2. Quando l'utente desidera acquistare un prodotto, l'applicazione deve determinare quali prodotti sono disponibili. Queste informazioni possono essere memorizzate nella cache, ma devono essere recapitate da un server remoto in cui è archiviato l'elenco principale di prodotti.   
    
 3. Il server restituisce un elenco di ID prodotto per l'applicazione da analizzare.   
    
-4. Quindi, l'applicazione determina a quali di questi ID prodotto per l'invio di StoreKit per recuperare i prezzi e descrizioni.   
+4. L'applicazione determina quindi quale di questi ID prodotto inviare a StoreKit per recuperare prezzi e descrizioni.   
    
-5. StoreKit invia l'elenco di ID prodotto per i server Apple.   
+5. StoreKit invia l'elenco di ID prodotto ai server Apple.   
    
-6. I server di iTunes risponderanno con informazioni sul prodotto valido (descrizione e prezzo corrente).   
+6. I server iTunes rispondono con informazioni valide sul prodotto (Descrizione e prezzo corrente).   
    
-7. L'applicazione `SKProductsRequestDelegate` viene passato le informazioni sul prodotto per la visualizzazione all'utente.
+7. All'applicazione `SKProductsRequestDelegate` vengono passate le informazioni sul prodotto per la visualizzazione all'utente.
 
-#### <a name="purchasing-server-delivered-products"></a>Acquisto di prodotti fornita dal Server
+#### <a name="purchasing-server-delivered-products"></a>Acquisto di prodotti distribuiti dal server
 
-Poiché il server remoto richiede un modo per convalidare che una richiesta di contenuto sia valida (ad esempio. è stata pagata per), le informazioni di ricezione vengono passate lungo per l'autenticazione. Il server remoto inoltra i dati a iTunes per la verifica e, se ha esito positivo, include il contenuto del prodotto in risposta all'applicazione.   
+Poiché il server remoto richiede un modo per convalidare che una richiesta di contenuto sia valida (ad esempio, è stata pagata), le informazioni di ricezione vengono passate per l'autenticazione. Il server remoto invia i dati a iTunes per la verifica e, in caso di esito positivo, include il contenuto del prodotto nella risposta all'applicazione.   
    
- [![](transactions-and-verification-images/image39.png "Acquisto di prodotti fornita dal Server")](transactions-and-verification-images/image39.png#lightbox)   
+ [![](transactions-and-verification-images/image39.png "Acquisto di prodotti distribuiti dal server")](transactions-and-verification-images/image39.png#lightbox)   
    
-1. L'app aggiunge un `SKPayment` alla coda. Se l'utente verrà richiesto l'ID Apple e viene richiesto di confermare il pagamento necessari.   
+1. L'app aggiunge un `SKPayment` oggetto alla coda. Se necessario, all'utente verrà richiesto l'ID Apple e verrà richiesto di confermare il pagamento.   
    
-2. StoreKit invia la richiesta al server per l'elaborazione.   
+2. StoreKit Invia la richiesta al server per l'elaborazione.   
    
-3. Quando la transazione viene completata, il server risponde con un valore di ricezione delle transazioni.   
+3. Al termine della transazione, il server risponde con una ricevuta di transazione.   
    
-4. Il `SKPaymentTransactionObserver` sottoclasse riceve la ricezione e lo elabora. Poiché il prodotto deve essere scaricato da un server, l'applicazione avvia una richiesta di rete al server remoto.   
+4. La `SKPaymentTransactionObserver` sottoclasse riceve la ricevuta e la elabora. Poiché il prodotto deve essere scaricato da un server, l'applicazione avvia una richiesta di rete al server remoto.   
    
-5. La richiesta di download è accompagnata dai dati del carico in modo che il server remoto può verificare che è autorizzato ad accedere al contenuto. Client di rete dell'applicazione è in attesa di una risposta a questa richiesta.   
+5. La richiesta di download è accompagnata dai dati di ricezione, in modo che il server remoto possa verificare che sia autorizzato ad accedere al contenuto. Il client di rete dell'applicazione attende una risposta a questa richiesta.   
    
-6. Quando il server riceve una richiesta per il contenuto, analizza i dati di conferma e invia una richiesta direttamente ai server di iTunes per verificare la ricezione sia per una transazione valida. Il server deve usare una logica per determinare se inviare la richiesta all'URL di produzione o sandbox. Suggerite da Apple sempre utilizzando l'URL di produzione e di passare a sandbox se la ricezione dello stato 21007 (ricezione sandbox inviata al server di produzione). Fare riferimento a Apple [Guida alla programmazione di ricezione convalida](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) per altri dettagli.
+6. Quando il server riceve una richiesta di contenuto, analizza i dati di ricezione e invia una richiesta direttamente ai server iTunes per verificare che la ricezione sia relativa a una transazione valida. Il server deve usare una logica per determinare se inviare la richiesta all'URL di produzione o sandbox. Apple suggerisce sempre di usare l'URL di produzione e di passare a sandbox se lo stato di ricezione 21007 (ricezione sandbox inviato al server di produzione). Per altri dettagli, vedere la [Guida alla programmazione della convalida della ricevuta](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) di Apple.
    
-7. iTunes verifica la ricezione e restituire uno stato pari a zero se è valido.   
+7. iTunes verificherà la ricezione e restituirà lo stato zero se è valido.   
    
-8. Il server è in attesa di risposta degli iTunes. Se riceve una risposta valida, il codice dovrebbe individuare il file di contenuto associati prodotto da includere nella risposta all'applicazione.   
+8. Il server attende la risposta di iTunes. Se viene ricevuta una risposta valida, il codice deve individuare il file di contenuto del prodotto associato da includere nella risposta all'applicazione.   
   
-9. L'applicazione riceve e analizza la risposta, viene salvato il contenuto di prodotto al file System del dispositivo.   
+9. L'applicazione riceve e analizza la risposta, salvando il contenuto del prodotto nel file System del dispositivo.   
    
-10. L'applicazione consente il prodotto e quindi chiama di StoreKit `FinishTransaction`. L'applicazione può quindi facoltativamente, visualizzare il contenuto acquistato (ad esempio, Mostra la prima pagina di un libro acquistata o alla rivista).
+10. L'applicazione Abilita il prodotto e quindi chiama StoreKit `FinishTransaction`. L'applicazione può quindi visualizzare facoltativamente il contenuto acquistato (ad esempio, Mostra la prima pagina di un problema relativo a un libro o a una rivista acquistata).
 
-Un'implementazione alternativa per i file di contenuto di dimensioni molto grandi prodotto può comportare semplicemente se archiviare la ricezione delle transazioni nel passaggio #9 in modo che la transazione può essere completata rapidamente e fornisce un'interfaccia utente per l'utente di scaricare il contenuto effettivo del prodotto in un secondo momento. La richiesta di download successivi può inviare nuovamente il carico stored per accedere al file di contenuto di prodotto obbligatorio.
+Un'implementazione alternativa per i file di contenuto del prodotto di grandi dimensioni può comportare semplicemente l'archiviazione della ricezione della transazione nel passaggio #9 in modo che la transazione possa essere completata rapidamente e fornire un'interfaccia utente per l'utente per scaricare il contenuto effettivo del prodotto in un secondo momento. La richiesta di download successiva può inviare nuovamente la ricezione archiviata per accedere al file di contenuto del prodotto richiesto.
 
-### <a name="writing-server-side-receipt-verification-code"></a>La scrittura di codice di verifica di ricezione sul lato Server
+### <a name="writing-server-side-receipt-verification-code"></a>Scrittura del codice di verifica della ricezione lato server
 
-Convalida una ricevuta nel codice lato server può avvenire con una semplice HTTP POST richiesta/risposta che include i passaggi da 5 # tramite #8 nel diagramma del flusso di lavoro.   
+La convalida di una ricevuta nel codice sul lato server può essere eseguita con una semplice richiesta/risposta HTTP POST che include i passaggi #5 tramite #8 nel diagramma del flusso di lavoro.   
    
-Estrarre il `SKPaymentTansaction.TransactionReceipt` proprietà nell'app. Si tratta dei dati che devono essere inviate a iTunes per la verifica (passaggio #5).
+Estrarre la `SKPaymentTansaction.TransactionReceipt` proprietà nell'app. Si tratta dei dati che devono essere inviati a iTunes per la verifica (passaggio #5).
 
-Codifica Base64 i dati di ricezione delle transazioni (sia nel passaggio 5 # o #6).
+Codifica Base64 i dati di ricezione della transazione (nel passaggio #5 o #6).
 
 Creare un semplice payload JSON simile al seguente:
 
@@ -197,7 +197,7 @@ Creare un semplice payload JSON simile al seguente:
 }
 ```
 
-Il codice JSON per POST HTTP [ https://buy.itunes.apple.com/verifyReceipt ](https://buy.itunes.apple.com/verifyReceipt) per la produzione o [ https://sandbox.itunes.apple.com/verifyReceipt ](https://sandbox.itunes.apple.com/verifyReceipt) per il test.   
+HTTP pubblica il JSON in [https://buy.itunes.apple.com/verifyReceipt](https://buy.itunes.apple.com/verifyReceipt) per la produzione [https://sandbox.itunes.apple.com/verifyReceipt](https://sandbox.itunes.apple.com/verifyReceipt) o per il test.   
    
  La risposta JSON conterrà le chiavi seguenti:
 
@@ -208,6 +208,6 @@ Il codice JSON per POST HTTP [ https://buy.itunes.apple.com/verifyReceipt ](http
 }
 ```
 
-Uno stato pari a zero indica una ricezione valida. Il server è possibile procedere per soddisfare il contenuto del prodotto acquistato. La chiave ricevuta contiene un dizionario JSON con le stesse proprietà di `SKPaymentTransaction` oggetto ricevuto dall'app, in modo che il codice del server può eseguire una query per recuperare informazioni quali il product_id e la quantità dell'acquisto di questo dizionario.
+Uno stato pari a zero indica una ricevuta valida. Il server può continuare a soddisfare il contenuto del prodotto acquistato. La chiave di ricezione contiene un dizionario JSON con le stesse proprietà dell' `SKPaymentTransaction` oggetto ricevuto dall'app, quindi il codice server può eseguire query in questo dizionario per recuperare informazioni come il product_id e la quantità di acquisto.
 
-Vedere di Apple [Guida alla programmazione di ricezione convalida](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Introduction.html) documentazione per informazioni aggiuntive.
+Per ulteriori informazioni, vedere la documentazione della [Guida alla programmazione della convalida della ricevuta](https://developer.apple.com/library/archive/releasenotes/General/ValidateAppStoreReceipt/Introduction.html) di Apple.

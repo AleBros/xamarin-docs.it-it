@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: b20ce0dc76cbe663d35e7fab01d9a4ba943c0cd6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1948c700827f1cc235de5857cde9a2a149af8412
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510612"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524374"
 ---
 # <a name="creating-a-fragment"></a>Creazione di un frammento
 
@@ -34,9 +34,9 @@ Il codice precedente consente `Resource.Layout.Example_Fragment` `ViewGroup` di 
 
 È possibile che un frammento sia ospitato all'interno di un'attività in due modi:
 
--   In **modo** dichiarativo I frammenti possono essere usati in modo dichiarativo all'interno `.axml` dei `<Fragment>` file di layout usando il tag. &ndash;
+- In **modo** dichiarativo I frammenti possono essere usati in modo dichiarativo all'interno `.axml` dei `<Fragment>` file di layout usando il tag. &ndash;
 
--   **A livello di codice** È anche possibile creare istanze dei frammenti in modo dinamico usando l' `FragmentManager` API della classe. &ndash;
+- **A livello di codice** È anche possibile creare istanze dei frammenti in modo dinamico usando l' `FragmentManager` API della classe. &ndash;
 
 L'utilizzo programmatico `FragmentManager` tramite la classe verrà illustrato più avanti in questa guida.
 
@@ -67,9 +67,9 @@ I frammenti che vengono aggiunti in modo dichiarativo a un'attività sono static
 
 A ogni frammento deve essere assegnato un identificatore univoco:
 
--  **Android: ID** &ndash; Come per gli altri elementi dell'interfaccia utente in un file di layout, si tratta di un ID univoco.
+- **Android: ID** &ndash; Come per gli altri elementi dell'interfaccia utente in un file di layout, si tratta di un ID univoco.
 
--  **Android: Tag** &ndash; Questo attributo è una stringa univoca.
+- **Android: Tag** &ndash; Questo attributo è una stringa univoca.
 
 Se non viene usato nessuno dei due metodi precedenti, il frammento presuppone l'ID della visualizzazione del contenitore. Nell'esempio seguente, in cui `android:id` né `android:tag` né viene fornito, Android assegnerà l' `fragment_container` ID al frammento:
 
@@ -115,37 +115,37 @@ Ad esempio, quando un'attività viene sospesa, tutti i frammenti associati vengo
 
 L'elenco seguente illustra il flusso dei diversi callback nel ciclo di vita di un frammento durante la creazione:
 
--   **`OnInflate()`** &ndash; Chiamato quando il frammento viene creato come parte di un layout di visualizzazione. Questa operazione può essere chiamata immediatamente dopo la creazione dichiarativa del frammento da un file di layout XML. Il frammento non è ancora associato all'attività, ma l' **attività**, il bundle e il **set**di **attributi** dalla gerarchia di visualizzazione vengono passati come parametri. Questo metodo è particolarmente utile per l'analisi dell' **attributo** e per il salvataggio degli attributi che potrebbero essere utilizzati in un secondo momento dal frammento.
+- **`OnInflate()`** &ndash; Chiamato quando il frammento viene creato come parte di un layout di visualizzazione. Questa operazione può essere chiamata immediatamente dopo la creazione dichiarativa del frammento da un file di layout XML. Il frammento non è ancora associato all'attività, ma l' **attività**, il bundle e il **set**di **attributi** dalla gerarchia di visualizzazione vengono passati come parametri. Questo metodo è particolarmente utile per l'analisi dell' **attributo** e per il salvataggio degli attributi che potrebbero essere utilizzati in un secondo momento dal frammento.
 
--   **`OnAttach()`** &ndash; Chiamato dopo che il frammento è associato all'attività. Si tratta del primo metodo da eseguire quando il frammento è pronto per essere utilizzato. In generale, i frammenti non devono implementare un costruttore o eseguire l'override del costruttore predefinito. Tutti i componenti necessari per il frammento devono essere inizializzati in questo metodo.
+- **`OnAttach()`** &ndash; Chiamato dopo che il frammento è associato all'attività. Si tratta del primo metodo da eseguire quando il frammento è pronto per essere utilizzato. In generale, i frammenti non devono implementare un costruttore o eseguire l'override del costruttore predefinito. Tutti i componenti necessari per il frammento devono essere inizializzati in questo metodo.
 
--   **`OnCreate()`** &ndash; Chiamato dall'attività per creare il frammento. Quando viene chiamato questo metodo, non è possibile creare un'istanza completa della gerarchia di visualizzazione dell'attività host, quindi il frammento non deve basarsi su alcuna parte della gerarchia di visualizzazione dell'attività fino a un momento successivo nel ciclo di vita del frammento. Ad esempio, non usare questo metodo per eseguire modifiche o modifiche all'interfaccia utente dell'applicazione. Questa è la prima volta in cui il frammento può iniziare a raccogliere i dati necessari. Il frammento viene eseguito nel thread dell'interfaccia utente in questo punto, evitando così la lunga elaborazione o eseguendo tale elaborazione in un thread in background. Questo metodo può essere ignorato se viene chiamato **SetRetainInstance (true)** .
+- **`OnCreate()`** &ndash; Chiamato dall'attività per creare il frammento. Quando viene chiamato questo metodo, non è possibile creare un'istanza completa della gerarchia di visualizzazione dell'attività host, quindi il frammento non deve basarsi su alcuna parte della gerarchia di visualizzazione dell'attività fino a un momento successivo nel ciclo di vita del frammento. Ad esempio, non usare questo metodo per eseguire modifiche o modifiche all'interfaccia utente dell'applicazione. Questa è la prima volta in cui il frammento può iniziare a raccogliere i dati necessari. Il frammento viene eseguito nel thread dell'interfaccia utente in questo punto, evitando così la lunga elaborazione o eseguendo tale elaborazione in un thread in background. Questo metodo può essere ignorato se viene chiamato **SetRetainInstance (true)** .
     Questa alternativa verrà descritta in dettaglio più avanti.
 
--   **`OnCreateView()`** &ndash; Crea la visualizzazione per il frammento.
+- **`OnCreateView()`** &ndash; Crea la visualizzazione per il frammento.
     Questo metodo viene chiamato dopo il completamento del metodo OnCreate **()** dell'attività. A questo punto, è possibile interagire in modo sicuro con la gerarchia di visualizzazione dell'attività. Questo metodo deve restituire la vista che verrà usata dal frammento.
 
--   **`OnActivityCreated()`** Chiamato dopo che **Activity.** OnCreate è stato completato dall'attività host. &ndash;
+- **`OnActivityCreated()`** Chiamato dopo che **Activity.** OnCreate è stato completato dall'attività host. &ndash;
     Le modifiche finali apportate all'interfaccia utente devono essere eseguite in questo momento.
 
--   **`OnStart()`** &ndash; Chiamato dopo che l'attività contenitore è stata ripresa. In questo modo, il frammento viene reso visibile all'utente. In molti casi, il frammento conterrà codice che altrimenti sarebbe presente nel metodo OnStart **()** di un'attività.
+- **`OnStart()`** &ndash; Chiamato dopo che l'attività contenitore è stata ripresa. In questo modo, il frammento viene reso visibile all'utente. In molti casi, il frammento conterrà codice che altrimenti sarebbe presente nel metodo OnStart **()** di un'attività.
 
--   **`OnResume()`** &ndash; Si tratta dell'ultimo metodo chiamato prima che l'utente possa interagire con il frammento. Un esempio del tipo di codice che deve essere eseguito in questo metodo è l'abilitazione di funzionalità di un dispositivo con cui l'utente può interagire, ad esempio la fotocamera che i servizi di posizione. I servizi come questi possono causare un esaurimento della batteria, tuttavia, e un'applicazione dovrebbe ridurre al minimo l'uso per preservare la durata della batteria.
+- **`OnResume()`** &ndash; Si tratta dell'ultimo metodo chiamato prima che l'utente possa interagire con il frammento. Un esempio del tipo di codice che deve essere eseguito in questo metodo è l'abilitazione di funzionalità di un dispositivo con cui l'utente può interagire, ad esempio la fotocamera che i servizi di posizione. I servizi come questi possono causare un esaurimento della batteria, tuttavia, e un'applicazione dovrebbe ridurre al minimo l'uso per preservare la durata della batteria.
 
 
 ### <a name="fragment-destruction-lifecycle-methods"></a>Metodi ciclo di vita distruzione frammenti
 
 Nell'elenco seguente vengono illustrati i metodi del ciclo di vita che vengono chiamati come frammento che viene eliminato:
 
--   **`OnPause()`** &ndash; L'utente non è più in grado di interagire con il frammento. Questa situazione è dovuta al fatto che un'altra operazione Fragment sta modificando il frammento oppure l'attività di hosting è sospesa. È possibile che l'attività che ospita questo frammento possa essere ancora visibile, ovvero che l'attività in stato attivo sia parzialmente trasparente o non occupi lo schermo intero. Quando questo metodo diventa attivo, è la prima indicazione che l'utente sta lasciando il frammento. Il frammento deve salvare le modifiche.
+- **`OnPause()`** &ndash; L'utente non è più in grado di interagire con il frammento. Questa situazione è dovuta al fatto che un'altra operazione Fragment sta modificando il frammento oppure l'attività di hosting è sospesa. È possibile che l'attività che ospita questo frammento possa essere ancora visibile, ovvero che l'attività in stato attivo sia parzialmente trasparente o non occupi lo schermo intero. Quando questo metodo diventa attivo, è la prima indicazione che l'utente sta lasciando il frammento. Il frammento deve salvare le modifiche.
 
--   **`OnStop()`** &ndash; Il frammento non è più visibile. L'attività host può essere arrestata o un'operazione di frammento la modifica nell'attività. Questo callback funziona allo stesso modo di **Activity. OnStop**.
+- **`OnStop()`** &ndash; Il frammento non è più visibile. L'attività host può essere arrestata o un'operazione di frammento la modifica nell'attività. Questo callback funziona allo stesso modo di **Activity. OnStop**.
 
--   **`OnDestroyView()`** &ndash; Questo metodo viene chiamato per pulire le risorse associate alla visualizzazione. Questo metodo viene chiamato quando la visualizzazione associata al frammento è stata eliminata definitivamente.
+- **`OnDestroyView()`** &ndash; Questo metodo viene chiamato per pulire le risorse associate alla visualizzazione. Questo metodo viene chiamato quando la visualizzazione associata al frammento è stata eliminata definitivamente.
 
--   **`OnDestroy()`** &ndash; Questo metodo viene chiamato quando il frammento non è più in uso. È ancora associato all'attività, ma il frammento non è più funzionante. Questo metodo deve rilasciare tutte le risorse usate dal frammento, ad esempio un [**SurfaceView**](xref:Android.Views.SurfaceView) che può essere usato per una fotocamera. Questo metodo può essere ignorato se viene chiamato **SetRetainInstance (true)** . Questa alternativa verrà descritta in dettaglio più avanti.
+- **`OnDestroy()`** &ndash; Questo metodo viene chiamato quando il frammento non è più in uso. È ancora associato all'attività, ma il frammento non è più funzionante. Questo metodo deve rilasciare tutte le risorse usate dal frammento, ad esempio un [**SurfaceView**](xref:Android.Views.SurfaceView) che può essere usato per una fotocamera. Questo metodo può essere ignorato se viene chiamato **SetRetainInstance (true)** . Questa alternativa verrà descritta in dettaglio più avanti.
 
--   **`OnDetach()`** &ndash; Questo metodo viene chiamato immediatamente prima che il frammento non sia più associato all'attività. La gerarchia di visualizzazione del frammento non esiste più e tutte le risorse usate dal frammento devono essere rilasciate a questo punto.
+- **`OnDetach()`** &ndash; Questo metodo viene chiamato immediatamente prima che il frammento non sia più associato all'attività. La gerarchia di visualizzazione del frammento non esiste più e tutte le risorse usate dal frammento devono essere rilasciate a questo punto.
 
 
 ### <a name="using-setretaininstance"></a>Uso di SetRetainInstance
@@ -194,9 +194,9 @@ Poiché il `EditText` controllo ha un `id` assegnato, il frammento Salva automat
 
 Sebbene l' `OnSaveInstanceState` utilizzo di consenta di salvare facilmente i dati temporanei, l'utilizzo di questo metodo presenta alcune limitazioni:
 
--  Se il frammento non viene aggiunto allo stack indietro, il suo stato non verrà ripristinato quando l'utente preme il pulsante **indietro** .
+- Se il frammento non viene aggiunto allo stack indietro, il suo stato non verrà ripristinato quando l'utente preme il pulsante **indietro** .
 
--  Quando si usa il bundle per salvare i dati, i dati vengono serializzati. Questo può causare ritardi di elaborazione.
+- Quando si usa il bundle per salvare i dati, i dati vengono serializzati. Questo può causare ritardi di elaborazione.
 
 
 ## <a name="contributing-to-the-menu"></a>Aggiunta come contributo al menu

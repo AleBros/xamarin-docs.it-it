@@ -1,62 +1,62 @@
 ---
-title: Architettura di App iOS
-description: Questo documento descrive xamarin. IOS in un codice nativo e gestito basso livello, che pubblica interagire, la compilazione AOT, i selettori, Registrar, avvio dell'applicazione e il generatore.
+title: Architettura app iOS
+description: Questo documento descrive Novell. iOS a un livello basso, illustrando il modo in cui il codice nativo e gestito interagiscono, la compilazione AOT, i selettori, i registrar, l'avvio dell'applicazione e il generatore.
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 426c5ef5cc32877546ebb88cb485a81723816e6e
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 3178c47fbbea66d1e88b3ff48654faff14462f9a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675058"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526458"
 ---
-# <a name="ios-app-architecture"></a>Architettura di App iOS
+# <a name="ios-app-architecture"></a>Architettura app iOS
 
-Le applicazioni xamarin. IOS eseguire all'interno dell'ambiente di esecuzione Mono e utilizzare la compilazione Ahead of Time (AOT) completo per compilare C# esecuzione di codice in linguaggio assembly ARM. Ciò comporta l'esecuzione side-by-side con la [Runtime Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Entrambi gli ambienti di runtime eseguiti su un kernel simili a UNIX, in particolare [XNU](https://en.wikipedia.org/wiki/XNU)ed esporre diverse API per il codice utente che consente agli sviluppatori di accedere al sistema nativo o gestito sottostante.
+Le applicazioni Novell. iOS vengono eseguite nell'ambiente di esecuzione mono e usano la compilazione AOT (Full ahead of Time) C# per compilare il codice nel linguaggio assembly ARM. Questa operazione viene eseguita side-by-side con il [runtime di Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Entrambi gli ambienti di runtime vengono eseguiti su un kernel di tipo UNIX, in particolare [XNU](https://en.wikipedia.org/wiki/XNU), ed espongono diverse API al codice utente, consentendo agli sviluppatori di accedere al sistema nativo o gestito sottostante.
 
 Il diagramma seguente mostra una panoramica di base di questa architettura:
 
-[![](architecture-images/ios-arch-small.png "Questo diagramma mostra una panoramica di base dell'architettura la compilazione Ahead of Time (AOT)")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "Questo diagramma mostra una panoramica di base dell'architettura di compilazione ahead of Time (AOT)")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>Nativo e codice gestito: Una spiegazione
+## <a name="native-and-managed-code-an-explanation"></a>Codice nativo e gestito: Una spiegazione
 
-Durante lo sviluppo per Xamarin i termini *nativi e gestiti* codice vengono spesso usati. [Codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è il codice che include l'esecuzione gestita dal [Common Language Runtime di .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), o, in caso di Xamarin: il Runtime di Mono. Questo è ciò che chiamiamo un linguaggio intermedio.
+Quando si sviluppa per Novell, vengono spesso usati i termini *nativi e codice gestito* . Il [codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice in cui l'esecuzione viene gestita dal [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)o nel caso di Novell: il runtime di mono. Questo è il cosiddetto linguaggio intermedio.
 
-Codice nativo è codice che verrà eseguito in modo nativo nella piattaforma specifica (ad esempio, Objective-C o anche il codice di compilazione AOT, in un chip ARM). Questa Guida Esplora come AOT compila il codice gestito a codice nativo e spiega come funziona un'applicazione xamarin. IOS, basate sull'uso delle API di iOS di Apple tramite l'uso di associazioni, ma anche di accedere a. Libreria di classi base della rete e un linguaggio sofisticato, ad esempio C#.
+Il codice nativo è codice che verrà eseguito in modalità nativa sulla piattaforma specifica, ad esempio Objective-C o anche codice compilato AOT, su un chip ARM. Questa guida illustra il modo in cui AOT compila il codice gestito in codice nativo e illustra il funzionamento di un'applicazione Novell. iOS, sfruttando al meglio le API iOS di Apple tramite l'uso di binding, pur avendo accesso a. BCL di NET e un linguaggio sofisticato, C#ad esempio.
 
 ## <a name="aot"></a>AOT
 
-Quando si esegue la compilazione di qualsiasi applicazione della piattaforma Xamarin, di Mono C# (o F#) del compilatore verrà eseguito e verrà compilato il C# e F# codice in Microsoft Intermediate Language (MSIL). Se si esegue un xamarin. Android, un'applicazione xamarin. Mac o persino un'applicazione xamarin. IOS nel simulatore, il [.NET Common Language Runtime (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compila il codice MSIL con un solo nel compilatore Time (JIT). In fase di esecuzione in questo viene compilato in codice nativo, che può eseguire sull'architettura corretta per l'applicazione.
+Quando si compila un'applicazione della piattaforma Novell, il C# compilatore mono F#(o) verrà eseguito e compilerà F# il codice e il C# codice in MSIL (Microsoft Intermediate Language). Se si esegue un Novell. Android, un'applicazione Novell. Mac o anche un'applicazione Novell. iOS nel simulatore, [Common Language Runtime (CLR) di .NET](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compila il codice MSIL usando un compilatore just-in-time (JIT). In fase di esecuzione viene compilato in un codice nativo, che può essere eseguito nell'architettura corretta per l'applicazione.
 
-Tuttavia, vi è una restrizione di sicurezza in iOS, configurate da Apple, che non consente l'esecuzione del codice generato dinamicamente in un dispositivo.
-Per garantire che sono conformi a questi protocolli di sicurezza, xamarin. IOS Usa invece un compilatore Ahead of Time (AOT) per compilare il codice gestito. Questa operazione produce una binaria, native per iOS, facoltativamente, ottimizzata con LLVM per i dispositivi, che possono essere distribuiti nel processore basato su ARM di Apple. Di seguito è illustrato un diagramma di base di questo adattamento insieme:
+Tuttavia, esiste una restrizione di sicurezza in iOS, impostata da Apple, che impedisce l'esecuzione di codice generato dinamicamente in un dispositivo.
+Per assicurarsi di rispettare questi protocolli di sicurezza, Novell. iOS usa invece un compilatore AOT (Ahead of Time) per compilare il codice gestito. Questo produce un file binario iOS nativo, ottimizzato facoltativamente con LLVM per i dispositivi, che può essere distribuito nel processore basato su ARM di Apple. Di seguito è illustrato un diagramma di approssimazione del modo in cui questo si integra.
 
-[![](architecture-images/aot.png "Un diagramma approssimativo del modo in cui questo di integrazione")](architecture-images/aot-large.png#lightbox)
+[![](architecture-images/aot.png "Un diagramma di approssimazione del modo in cui si integra")](architecture-images/aot-large.png#lightbox)
 
-Uso di AOT presenta alcune limitazioni, illustrate in dettaglio nella [limitazioni](~/ios/internals/limitations.md) Guida. Fornisce inoltre una serie di miglioramenti tramite JIT attraverso una riduzione del tempo di avvio e varie ottimizzazioni delle prestazioni
+L'utilizzo di AOT presenta diverse limitazioni, descritte in dettaglio nella Guida alle [limitazioni](~/ios/internals/limitations.md) . Fornisce inoltre una serie di miglioramenti rispetto a JIT attraverso una riduzione del tempo di avvio e diverse ottimizzazioni delle prestazioni
 
-Ora che è stato esaminato come il codice viene compilato dall'origine al codice nativo, diamo uno sguardo dietro le quinte per vedere come xamarin. IOS consente di scrivere applicazioni completamente native per iOS
+Ora che è stata esaminata la modalità di compilazione del codice dal codice sorgente al codice nativo, è possibile osservare in che modo Novell. iOS ci consente di scrivere applicazioni iOS completamente native
 
 ## <a name="selectors"></a>Selettori
 
-Con Xamarin, abbiamo due ecosistemi separati, .NET e Apple, che è necessario visualizzare insieme a sembrare come semplice possibile garantire che l'obiettivo finale è un'esperienza utente uniforme. Abbiamo visto nella sezione precedente modalità di comunicazione tra i due runtime, e si è già molto bene del termine 'binding' che consente l'API da usare in Xamarin native per iOS. Le associazioni sono illustrate in dettaglio nel nostro [binding Objective-C](~/cross-platform/macios/binding/overview.md) documentazione, pertanto, per Ora esaminiamo funzionamento iOS dietro le quinte.
+Con Novell sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API iOS native in Novell. Le associazioni sono illustrate in modo dettagliato nella documentazione di [binding di Objective-C](~/cross-platform/macios/binding/overview.md) , quindi per ora si analizzerà il funzionamento di iOS dietro le quinte.
 
-In primo luogo, deve esistere un modo per esporre Objective-C in C#, che viene eseguita tramite i selettori. Un selettore è un messaggio che viene inviato a un oggetto o classe. Con Objective-C questa operazione viene eseguita tramite il [objc_msgSend](~/cross-platform/macios/binding/overview.md) funzioni.
-Per altre informazioni sull'uso dei selettori, consultare il [selettori Objective-C](~/ios/internals/objective-c-selectors.md) Guida. È anche con un metodo per esporre il codice gestito a Objective-C, che è più complicato dovuto al fatto che Objective-C non conosce il codice gestito. Per evitare questo problema, usiamo *Registrar*. Questi sono spiegati più dettagliatamente nella sezione successiva.
+In primo luogo, è necessario un modo per esporre Objective-C a C#, operazione eseguita tramite selettori. Un selettore è un messaggio inviato a un oggetto o a una classe. Con Objective-C questa operazione viene eseguita tramite le funzioni [objc_msgSend](~/cross-platform/macios/binding/overview.md) .
+Per ulteriori informazioni sull'utilizzo dei selettori, vedere la guida ai selettori [Objective-C](~/ios/internals/objective-c-selectors.md) . Deve inoltre essere disponibile un modo per esporre il codice gestito a Objective-C, che è più complicato a causa del fatto che Objective-C non conosce nulla sul codice gestito. Per aggirare questo problema, vengonousati i registrar. Queste informazioni sono descritte più dettagliatamente nella sezione successiva.
 
 ## <a name="registrars"></a>Registrar
 
-Come indicato in precedenza, il programma di registrazione è codice che espone il codice gestito per Objective-C. A tale scopo, si crea un elenco di ogni classe gestita che deriva da NSObject:
+Come indicato in precedenza, il registrar è codice che espone il codice gestito a Objective-C. Questa operazione viene eseguita creando un elenco di tutte le classi gestite che derivano da NSObject:
 
-- Per tutte le classi che non esegue il wrapping di una classe di Objective-C esistente, creata una nuova classe di Objective-C con i membri di Objective-C mirroring tutti i membri gestiti con un [`Export`] attributo.
+- Per tutte le classi che non eseguono il wrapping di una classe Objective-c esistente, viene creata una nuova classe Objective-c con membri Objective-c che eseguono il mirroring di tutti`Export`i membri gestiti che dispongono di un attributo [].
 
-- Nelle implementazioni per ogni membro di Objective-C, viene aggiunto automaticamente codice per chiamare il membro gestito con mirroring.
+- Nelle implementazioni per ogni membro Objective-C, il codice viene aggiunto automaticamente per chiamare il membro gestito con mirroring.
 
-Il pseudo-codice seguente viene illustrato un esempio di questa procedura:
+Lo pseudo-codice seguente mostra un esempio di come eseguire questa operazione:
 
 **C#(Codice gestito)**
 
@@ -87,38 +87,38 @@ Il pseudo-codice seguente viene illustrato un esempio di questa procedura:
 
 ```
 
-Il codice gestito può contenere gli attributi `[Register]` e `[Export]`, che usa le registrar per sapere che l'oggetto deve essere esposto per Objective-C.
-Il `[Register]` attributo viene usato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non è adatto. Tutte le classi derivate da NSObject vengono registrate automaticamente in Objective-C.
-Obbligatorio `[Export]` attributo contiene una stringa che rappresenta il selettore usato nella classe generata Objective-C.
+Il codice gestito può contenere gli attributi, `[Register]` e `[Export]`, utilizzati dal registrar per tenere presente che l'oggetto deve essere esposto a Objective-C.
+L' `[Register]` attributo viene utilizzato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non sia appropriato. Tutte le classi derivate da NSObject vengono registrate automaticamente con Objective-C.
+L'attributo `[Export]` required contiene una stringa, ovvero il selettore usato nella classe Objective-C generata.
 
-Esistono due tipi di registri usati in xamarin. ios: statiche e dinamiche:
+Esistono due tipi di registrar usati in Novell. iOS, dinamici e statici:
 
 
-- **Registrar dinamica** – programma di registrazione dinamica viene la registrazione di tutti i tipi nell'assembly in fase di esecuzione. A tale scopo, utilizzo delle funzioni fornite da [runtime dell'Objective-C API](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Il programma di registrazione dinamica ha pertanto un avvio più lento, ma un veloce fase di compilazione. Questa è predefinita per il simulatore iOS. Le funzioni native (in genere in C), chiamate trampolines, vengono utilizzate come implementazioni del metodo quando si usano le Registrar dinamico. Variano tra architetture diverse.
+- **Registrar dinamici** : il registrar dinamico esegue la registrazione di tutti i tipi nell'assembly in fase di esecuzione. Questa operazione viene eseguita usando le funzioni fornite dall' [API di runtime di Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Il registrar dinamico ha pertanto un avvio più lento, ma un tempo di compilazione più rapido. Questo è il valore predefinito per il simulatore iOS. Le funzioni native, in genere in C, denominate trampolini, vengono usate come implementazioni del metodo quando si usano i registrar dinamici. Variano a seconda delle diverse architetture.
 
-- **Registrar statico** – programma di registrazione statico genera il codice Objective-C durante la compilazione, che viene quindi compilata in una libreria statica e collegata nel file eseguibile. Questo consente un avvio più veloce, ma richiede più tempo durante la fase di compilazione. Per impostazione predefinita viene utilizzato per le compilazioni di dispositivo. Il programma di registrazione statico è anche utilizzabile con il simulatore iOS passando `--registrar:static` come un `mtouch` attributo nelle opzioni di compilazione del progetto, come illustrato di seguito:
+- **Registrar statici** : il registrar statico genera codice Objective-C durante la compilazione, che viene quindi compilato in una libreria statica e collegato all'eseguibile. Questo consente un avvio più rapido, ma richiede più tempo durante la fase di compilazione. Viene usato per impostazione predefinita per le compilazioni di dispositivi. Il registrar statico può essere usato anche con il simulatore iOS `--registrar:static` passando `mtouch` come attributo nelle opzioni di compilazione del progetto, come illustrato di seguito:
 
-    [![](architecture-images/image1.png "Impostazione degli argomenti aggiuntivi di mtouch")](architecture-images/image1.png#lightbox)
+    [![](architecture-images/image1.png "Impostazione di argomenti mTouch aggiuntivi")](architecture-images/image1.png#lightbox)
 
-Per altre informazioni sulle specifiche di iOS sistema di registrazione del tipo usato da xamarin. IOS, vedere la [Registrar tipo](~/ios/internals/registrar.md) Guida.
+Per ulteriori informazioni sulle specifiche del sistema di registrazione dei tipi iOS utilizzato da Novell. iOS, vedere la guida relativa ai [tipi registrar](~/ios/internals/registrar.md) .
 
 ## <a name="application-launch"></a>Avvio dell'applicazione
 
-Il punto di ingresso di tutti gli eseguibili di xamarin. IOS viene fornito da una funzione denominata `xamarin_main`, che consente di inizializzare mono.
+Il punto di ingresso di tutti i file eseguibili Novell. iOS viene fornito da `xamarin_main`una funzione chiamata che Inizializza mono.
 
-A seconda del tipo di progetto, viene eseguita la seguente:
+A seconda del tipo di progetto, vengono eseguite le operazioni seguenti:
 
-- Per regolare iOS e tvOS applicazioni, viene chiamato il metodo Main gestito, fornito dall'app per Xamarin. Questa operazione gestita metodo Main chiama quindi `UIApplication.Main`, ovvero il punto di ingresso per Objective-C. UIApplication.Main riguarda il binding di Objective-C `UIApplicationMain` (metodo).
-- Le estensioni, la funzione nativa – `NSExtensionMain` o (`NSExtensionmain` per le estensioni WatchOS), fornito da Apple librerie viene chiamato. Poiché questi progetti sono librerie di classi e i progetti non eseguibili, non sono metodi Main gestiti per l'esecuzione.
+- Per le normali applicazioni iOS e tvOS, viene chiamato il metodo Main gestito, fornito dall'app Novell. Questo metodo Main gestito chiama `UIApplication.Main`quindi, che è il punto di ingresso per Objective-C. UIApplication. Main è l'associazione per il `UIApplicationMain` metodo di Objective-C.
+- Per le estensioni, viene chiamata la `NSExtensionMain` funzione nativa`NSExtensionmain` , o (per le estensioni watchos), fornita dalle librerie Apple. Poiché si tratta di progetti di librerie di classi e non eseguibili, non sono disponibili metodi Main gestiti da eseguire.
 
-Tutta questa sequenza di avvio viene compilato in una libreria statica, che viene quindi collegata nell'eseguibile finale in modo che l'app sa come cominciare.
+Tutta questa sequenza di avvio viene compilata in una libreria statica, che viene quindi collegata all'eseguibile finale in modo che l'app sappia come uscire da zero.
 
-A questo punto è stata avviata l'App nell'app, Mono è in esecuzione, siamo in codice gestito e abbiamo imparato a chiamare codice nativo e richiamato. La prossima cosa che dobbiamo fare è avviare l'aggiunta di controlli e rendere l'app interattive effettivamente.
+A questo punto l'app è stata avviata, mono è in esecuzione, il codice è gestito ed è noto come chiamare il codice nativo e richiamarlo. L'operazione successiva consiste nell'iniziare ad aggiungere controlli e rendere l'app interattiva.
 
 
 ## <a name="generator"></a>Generator
 
-Xamarin. IOS contiene definizioni per ogni singola API di iOS. È possibile esplorare tramite uno di questi sul [repository github MaciOS](https://github.com/xamarin/xamarin-macios/tree/master/src). Queste definizioni contengono si interfaccia con attributi, nonché qualsiasi proprietà e metodi necessari. Ad esempio, il codice seguente consente di definire un UIToolbar nel UIKit [dello spazio dei nomi](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327). Si noti che è un'interfaccia con un numero di metodi e proprietà:
+Novell. iOS contiene le definizioni per ogni singola API iOS. È possibile esplorare uno di questi nel [repository GitHub MaciOS](https://github.com/xamarin/xamarin-macios/tree/master/src). Queste definizioni contengono interfacce con attributi, nonché eventuali metodi e proprietà necessari. Il codice seguente, ad esempio, viene usato per definire un UIToolbar nello [spazio dei nomi](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327)UIKit. Si noti che si tratta di un'interfaccia con diversi metodi e proprietà:
 
 ```csharp
 [BaseType (typeof (UIView))]
@@ -153,30 +153,30 @@ public interface UIToolbar : UIBarPositioning {
 }
 ```
 
-Il generatore, chiamato [ `btouch` ](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) in xamarin. IOS, accetta questi file di definizione e Usa gli strumenti di .NET per [compilarli in un assembly temporaneo](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). Tuttavia, questo assembly temporaneo non è facile da usare per chiamare codice Objective-C. Il generatore, quindi legge l'assembly temporaneo e viene generato l'errore C# codice che può essere usato in fase di esecuzione.
-Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale per il file con estensione cs della definizione, non verrà visualizzati nel codice di output. Il generatore non sa su di esso e pertanto `btouch` all'oscuro da cercare nell'assembly temporaneo può eseguirne l'output.
+Il generatore, chiamato [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) in Novell. iOS, accetta questi file di definizione e usa gli strumenti .NET per compilarli [in un assembly temporaneo](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione.
+Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e `btouch` pertanto non è in grado di cercarlo nell'assembly temporaneo per l'output.
 
-Dopo aver creato la DLL, mtouch verrà riunire tutti i componenti di elementi.
+Dopo la creazione di Novell. iOS. dll, mTouch raggruppa tutti i componenti.
 
-A livello generale, raggiunge questo eseguendo le attività seguenti:
+A un livello elevato, ottiene questo risultato eseguendo le attività seguenti:
 
--   Creare una struttura di bundle dell'app.
--   Copiare negli assembly gestiti.
--   Se il collegamento è abilitato, eseguire il linker gestito per ottimizzare gli assembly mediante copia da parti non utilizzate out.
--   Compilazione AOT.
--   Creare un file eseguibile nativo, che invia l'output di una serie di librerie statiche (uno per ogni assembly) collegate nel file eseguibile nativo, in modo che il file eseguibile nativo è costituito da tutti gli output da AOT il codice dell'utilità di avvio e il codice di registrar (Se static) compilatore
+- Creare una struttura del bundle dell'app.
+- Copiare gli assembly gestiti.
+- Se è abilitato il collegamento, eseguire il linker gestito per ottimizzare gli assembly mediante l'estrazione di parti inutilizzate.
+- Compilazione AOT.
+- Creare un eseguibile nativo, che restituisce una serie di librerie statiche, una per ogni assembly, collegate all'eseguibile nativo, in modo che il file eseguibile nativo sia costituito dal codice dell'utilità di avvio, dal codice del registrar (se statico) e da tutti gli output dell'AOT compilatore
 
 
-Per altre informazioni sul linker e su come utilizzarlo, vedere la [Linker](~/ios/deploy-test/linker.md) Guida.
+Per informazioni più dettagliate sul linker e su come viene usato, vedere la guida del [linker](~/ios/deploy-test/linker.md) .
 
 ## <a name="summary"></a>Riepilogo
 
-Questa guida ha illustrato la compilazione AOT di App xamarin. IOS, xamarin. IOS esplorati e relativa relazione con Objective-C in modo approfondito.
+Questa guida ha esaminato la compilazione AOT delle app Novell. iOS ed Esplora Novell. iOS e la relativa relazione con Objective-C in modo approfondito.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Limitazioni](~/ios/internals/limitations.md)
 - [Binding di Objective-C](~/cross-platform/macios/binding/overview.md)
 - [Selettori Objective-C](~/ios/internals/objective-c-selectors.md)
-- [Tipo Registrar](~/ios/internals/registrar.md)
+- [Registrar di tipo](~/ios/internals/registrar.md)
 - [Linker](~/ios/deploy-test/linker.md)

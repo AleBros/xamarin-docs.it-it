@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 92278fb84cba6329c33ac8a972a686fff7186f67
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647432"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522323"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layout a schede con ActionBar
 
@@ -47,17 +47,17 @@ Quando ActionBar non è in grado di visualizzare tutte le schede, imposta le sch
 
 Ogni scheda nella barra delle azioni deve essere associata a un [*frammento*](~/android/platform/fragments/index.md). Quando l'utente seleziona una scheda, l'applicazione visualizzerà il frammento associato alla scheda. Il ActionBar non è responsabile della visualizzazione del frammento appropriato per l'utente. Al contrario, ActionBar invierà una notifica all'applicazione sulle modifiche di stato in una scheda tramite una classe che implementa l'interfaccia ActionBar. ITabListener. Questa interfaccia fornisce tre metodi di callback che Android richiamerà quando lo stato della scheda cambia: 
 
--  **OnTabSelected** : questo metodo viene chiamato quando l'utente seleziona la scheda. Dovrebbe visualizzare il frammento.
+- **OnTabSelected** : questo metodo viene chiamato quando l'utente seleziona la scheda. Dovrebbe visualizzare il frammento.
 
--  **OnTabReselected** : questo metodo viene chiamato quando la scheda è già selezionata, ma viene nuovamente selezionata dall'utente. Questo callback viene in genere usato per aggiornare o aggiornare il frammento visualizzato.
+- **OnTabReselected** : questo metodo viene chiamato quando la scheda è già selezionata, ma viene nuovamente selezionata dall'utente. Questo callback viene in genere usato per aggiornare o aggiornare il frammento visualizzato.
 
--  **OnTabUnselected** : questo metodo viene chiamato quando l'utente seleziona un'altra scheda. Questo callback viene utilizzato per salvare lo stato nel frammento visualizzato prima che venga visualizzato.
+- **OnTabUnselected** : questo metodo viene chiamato quando l'utente seleziona un'altra scheda. Questo callback viene utilizzato per salvare lo stato nel frammento visualizzato prima che venga visualizzato.
 
 Novell. Android esegue il `ActionBar.ITabListener` wrapping di con eventi `ActionBar.Tab` sulla classe. Le applicazioni possono assegnare i gestori eventi a uno o più di questi eventi. Ci sono tre eventi (uno per ogni metodo in `ActionBar.ITabListener`) che verrà generato da una scheda della barra delle azioni: 
 
--  TabSelected
--  TabReselected
--  TabUnselected
+- TabSelected
+- TabReselected
+- TabUnselected
 
 
 

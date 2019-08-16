@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: fe0f3c6904255284c01cbb3277086b01ec852d7b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 54e910d0a4f3301ca441fd18ddb27da930e9415c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654060"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528779"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID in Novell. iOS
 
@@ -127,7 +127,7 @@ Si esaminerà quindi l'aggiunta di un'autenticazione Touch ID all'applicazione. 
 3. Trascinare un nuovo **controller di visualizzazione** dalla **casella degli strumenti** al **area di progettazione**. Impostare questa impostazione come **controller visualizzazione radice** premendo **Ctrl + trascina** dal **controller di spostamento**:
 
     [![](touchid-images/image4.png "Imposta il controller visualizzazione radice")](touchid-images/image4.png#lightbox)
-4.  Assegnare un nome al nuovo `AuthenticationViewController`controller di visualizzazione.
+4. Assegnare un nome al nuovo `AuthenticationViewController`controller di visualizzazione.
 5. Trascinare quindi un pulsante e posizionarlo in `AuthenticationViewController`. Chiamare questo `AuthenticateButton`oggetto e assegnargli il testo `Add a Chore`.
 6. Creare un evento nell'oggetto `AuthenticateButton` chiamato `AuthenticateMe`.
 7. Creare un segue manuale da `AuthenticationViewController` facendo clic sulla barra nera nella parte inferiore e **Ctrl + trascina** dalla barra fino `MasterViewController` al e scegliendo **push** (o **Mostra** se si usano le classi di dimensioni):

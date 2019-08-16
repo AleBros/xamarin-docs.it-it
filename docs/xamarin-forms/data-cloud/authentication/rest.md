@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 5a0e820c8a9f04b7ad9173893852285d53dbe7a6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650391"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529207"
 ---
 # <a name="authenticate-a-restful-web-service"></a>Autenticare un servizio Web RESTful
 
@@ -35,7 +35,7 @@ L'autenticazione di base è il meccanismo di autenticazione più semplice suppor
 ![](rest-images/basic-authentication-success.png "L'autenticazione di base successiva")
 
 > [!NOTE]
-> L'autenticazione di base deve essere utilizzato solo con una connessione HTTPS. Se utilizzato su una connessione HTTP, il <code>Authorization</code> intestazione può essere decodificata con facilità se il traffico HTTP viene acquisito da un utente malintenzionato.
+> L'autenticazione di base deve essere utilizzato solo con una connessione HTTPS. Se utilizzato su una connessione HTTP, il `Authorization` intestazione può essere decodificata con facilità se il traffico HTTP viene acquisito da un utente malintenzionato.
 
 ## <a name="specifying-basic-authentication-in-a-web-request"></a>Specifica l'autenticazione di base in una richiesta Web
 
@@ -73,11 +73,11 @@ public class RestService : IRestService
 Quindi quando viene effettuata una richiesta per un'operazione del servizio web la richiesta viene firmata con la `Authorization` intestazione, che indica se l'utente dispone dell'autorizzazione per richiamare l'operazione.
 
 > [!NOTE]
-> Mentre questo codice vengono archiviate le credenziali come costanti, non devono essere archiviati in un formato non protetto in un'applicazione pubblicata. Il [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet fornisce funzionalità per l'archiviazione sicura delle credenziali. Per altre informazioni, vedere [memorizzazione e recupero di informazioni sull'account nei dispositivi](~/xamarin-forms/data-cloud/authentication/oauth.md).
+> Sebbene questo codice memorizzi le credenziali come costanti, non devono essere archiviate in un formato non sicuro in un'applicazione pubblicata. Il [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet fornisce funzionalità per l'archiviazione sicura delle credenziali. Per altre informazioni, vedere [memorizzazione e recupero di informazioni sull'account nei dispositivi](~/xamarin-forms/data-cloud/authentication/oauth.md).
 
 ## <a name="processing-the-authorization-header-server-side"></a>Elaborazione sul lato Server dell'intestazione di autorizzazione
 
-Il servizio REST deve decorare con ogni azione di `[BasicAuthentication]` attributo. Questo attributo viene usato per analizzare le `Authorization` intestazione e determinare se le credenziali con codificata base 64 vengono confrontandole con i valori archiviati nel *Web. config*. Sebbene questo approccio è adatto per un esempio di servizio, è necessario per l'estensione per un servizio web rivolte al pubblico.
+Il servizio REST deve decorare ogni azione con l' `[BasicAuthentication]` attributo. Questo attributo viene usato per analizzare l' `Authorization` intestazione e determinare se le credenziali con codifica Base64 sono valide confrontandolo con i valori archiviati nel *file Web. config*. Sebbene questo approccio sia appropriato per un servizio di esempio, è necessario estendere per un servizio Web pubblico.
 
 Nel modulo di autenticazione di base usato da IIS, gli utenti vengono autenticati con le proprie credenziali di Windows. Di conseguenza, gli utenti devono avere account nel dominio del server. Tuttavia, il modello di autenticazione di base può essere configurato per consentire l'autenticazione personalizzata, in cui gli account utente sono autenticati da un'origine esterna, ad esempio un database. Per altre informazioni, vedere [autenticazione di base nell'API Web ASP.NET](http://www.asp.net/web-api/overview/security/basic-authentication) sul sito Web ASP.NET.
 
@@ -86,5 +86,5 @@ Nel modulo di autenticazione di base usato da IIS, gli utenti vengono autenticat
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Utilizzare un servizio web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Utilizzare un servizio Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

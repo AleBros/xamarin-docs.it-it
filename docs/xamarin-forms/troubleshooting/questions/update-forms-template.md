@@ -7,39 +7,40 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: e439d39dd8591cad14485e64aabab2d6016a8e27
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c0b5e04bafc748b48ea007162cfd7277cc23752
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345909"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528350"
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>È possibile aggiornare il modello predefinito di Xamarin.Forms a un pacchetto NuGet più recente?
 
-Questa Guida Usa il modello di libreria xamarin. Forms .NET Standard come esempio, ma lo stesso metodo generale funzioneranno anche per il modello di progetto condiviso xamarin. Forms. Questa guida è stata scritta con l'esempio di aggiornamento da xamarin. Forms 1.5.1.6471 a 2.1.0.6529, ma gli stessi passaggi sono possibili impostare invece altre versioni come impostazione predefinita.
+Questa guida usa il modello di libreria .NET Standard Novell. Forms come esempio, ma lo stesso metodo generale funzionerà anche per il modello di progetto condiviso Novell. Forms. Questa guida è stata scritta con l'esempio di aggiornamento da Novell. Forms 1.5.1.6471 a 2.1.0.6529, ma gli stessi passaggi sono possibili per impostare altre versioni come valore predefinito.
 
-1.  Copiare il modello originale `.zip` da:
+1. Copiare il modello `.zip` originale da:
 
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\T\PT\Cross-Platform\Xamarin.Forms.PCL.zip`
 
-2.  Decomprimere il `.zip` in un percorso temporaneo.
+2. Decomprimere il `.zip` in un percorso temporaneo.
 
-3.  Modificare tutte le occorrenze della versione precedente del pacchetto form alla nuova versione da usare.
-    *   `FormsTemplate\FormsTemplate.vstemplate`
-    *   `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
-    *   `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
+3. Modificare tutte le occorrenze della versione precedente del pacchetto Novell. Forms nella nuova versione che si vuole usare.
+    * `FormsTemplate\FormsTemplate.vstemplate`
+    * `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
+    * `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
 
-    Esempio: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
+    Esempio`<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4.  Modificare l'elemento "name" di principale [file modello multiprogetto](https://msdn.microsoft.com/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) per renderlo univoco. Ad esempio:
-    > <Name>App vuota (xamarin. Forms portabile) - 2.1.0.6529</Name>
+4. Modificare l'elemento "Name" del file del [modello](https://msdn.microsoft.com/library/ms185308.aspx) di più progetti principale (`Xamarin.Forms.PCL.vstemplate`) per renderlo univoco. Ad esempio:
 
-5.  Comprimere nuovamente la cartella del modello intero. Assicurarsi di corrisponde alla struttura di file originale del `.zip` file. Il `Xamarin.Forms.PCL.vstemplate` file deve essere in cima il `.zip` file, non all'interno di tutte le cartelle.
+    > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 
-6.  Creare una sottodirectory "App per dispositivi mobili" nella cartella modelli di Visual Studio per ogni utente:
+5. Eseguire nuovamente il CAP dell'intera cartella del modello. Assicurarsi di trovare la corrispondenza con la struttura di file `.zip` originale del file. Il `Xamarin.Forms.PCL.vstemplate` file deve trovarsi all'inizio `.zip` del file, non all'interno di alcuna cartella.
+
+6. Creare una sottodirectory "app per dispositivi mobili" nella cartella dei modelli di Visual Studio per ogni utente:
     > `%USERPROFILE%\Documents\Visual Studio 2013\Templates\ProjectTemplates\Visual C#\Mobile Apps`
 
-7.  Copiare la nuova cartella del modello di backup compressi nella nuova directory "App per dispositivi mobili".
+7. Copiare la nuova cartella del modello compresso nella nuova directory "app per dispositivi mobili".
 
-8.  Scaricare il pacchetto NuGet corrispondente alla versione del passaggio 3. Ad esempio, [ http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529 ](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (vedere anche [ https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file ](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copiarlo nella sottocartella appropriata della cartella delle estensioni Xamarin Visual Studio:
+8. Scaricare il pacchetto NuGet che corrisponde alla versione del passaggio 3. Ad esempio, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (vedere anche [https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copiarlo nella sottocartella appropriata della cartella Novell di Visual Studio Extensions:
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 209d8a61e6505e34fdf714b94ba40465f7f6aa4b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646365"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528806"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
@@ -38,10 +38,10 @@ Questo articolo illustra i concetti chiave necessari per creare un'app Apple TV 
 
 Verranno illustrati i concetti seguenti:
 
--  **Visual Studio per Mac** : introduzione al Visual Studio per Mac e alla procedura di creazione di applicazioni Novell. tvOS.
--  **Anatomia di un'app Novell. tvOS** : che cos'è costituito da un'app Novell. tvOS.
--  **Creazione di un'interfaccia utente** : come usare per Xamarin designer per iOS per creare un'interfaccia utente.
--  **Distribuzione e test** : come eseguire e testare l'app nel simulatore tvOS e su hardware tvOS reale.
+- **Visual Studio per Mac** : introduzione al Visual Studio per Mac e alla procedura di creazione di applicazioni Novell. tvOS.
+- **Anatomia di un'app Novell. tvOS** : che cos'è costituito da un'app Novell. tvOS.
+- **Creazione di un'interfaccia utente** : come usare per Xamarin designer per iOS per creare un'interfaccia utente.
+- **Distribuzione e test** : come eseguire e testare l'app nel simulatore tvOS e su hardware tvOS reale.
 
 ## <a name="starting-a-new-xamarintvos-app-in-visual-studio-for-mac"></a>Avvio di una nuova app Novell. tvOS in Visual Studio per Mac
 
@@ -77,12 +77,12 @@ Se si ha familiarità con la programmazione iOS, si noterà una grande quantità
 
 Verranno ora esaminati i file del progetto:
 
--   `Main.cs`: contiene il punto di ingresso principale dell'app. All'avvio l'app contiene la prima classe e il primo metodo eseguiti.
--   `AppDelegate.cs`: Questo file contiene la classe principale dell'applicazione che è responsabile dell'ascolto degli eventi dal sistema operativo.
--   `Info.plist`: Questo file contiene le proprietà dell'applicazione, ad esempio il nome dell'applicazione, le icone e così via.
--   `ViewController.cs`: Questa è la classe che rappresenta la finestra principale e ne controlla il ciclo di vita.
--   `ViewController.designer.cs`: Questo file contiene codice plumbing che consente di eseguire l'integrazione con l'interfaccia utente della schermata principale.
--  `Main.storyboard`: Interfaccia utente per la finestra principale. Questo file può essere creato e gestito dal Xamarin Designer per iOS.
+- `Main.cs`: contiene il punto di ingresso principale dell'app. All'avvio l'app contiene la prima classe e il primo metodo eseguiti.
+- `AppDelegate.cs`: Questo file contiene la classe principale dell'applicazione che è responsabile dell'ascolto degli eventi dal sistema operativo.
+- `Info.plist`: Questo file contiene le proprietà dell'applicazione, ad esempio il nome dell'applicazione, le icone e così via.
+- `ViewController.cs`: Questa è la classe che rappresenta la finestra principale e ne controlla il ciclo di vita.
+- `ViewController.designer.cs`: Questo file contiene codice plumbing che consente di eseguire l'integrazione con l'interfaccia utente della schermata principale.
+- `Main.storyboard`: Interfaccia utente per la finestra principale. Questo file può essere creato e gestito dal Xamarin Designer per iOS.
 
 Nelle sezioni seguenti verranno esaminati rapidamente alcuni di questi file. Verranno esaminati in modo più dettagliato in un secondo momento, ma è consigliabile comprenderne le nozioni di base.
 
@@ -290,7 +290,7 @@ Seguire questa procedura:
 7. Selezionare il punto di manipolazione T nella parte superiore dell'etichetta e trascinarlo sul bordo superiore della finestra:
 
     [![](hello-tvos-images/designer09.png "Trascinare il quadratino di controllo sul bordo superiore della finestra")](hello-tvos-images/designer09.png#lightbox)
-8. Quindi, fare clic sulla larghezza e quindi sul punto di controllo *dell'altezza,* come illustrato di seguito:
+8. Quindi, fare clic sulla larghezza e quindi sul punto di controllo dell'altezza, come illustrato di seguito:
 
     [![](hello-tvos-images/designer10.png "La larghezza e i punti di ridimensionamento dell'altezza")](hello-tvos-images/designer10.png#lightbox)
 
@@ -435,8 +435,8 @@ Con tutti gli elementi, è ora possibile compilare e testare l'applicazione Nove
 
 Ogni volta che si compila un'applicazione, è possibile scegliere il tipo di compilazione desiderato:
 
--   **Debug** : una compilazione di debug viene compilata in un file '' (applicazione) con metadati aggiuntivi che consentono di eseguire il debug di ciò che accade durante l'esecuzione dell'applicazione.
--   **Versione** : una build di rilascio crea anche un file '', ma non include informazioni di debug, quindi è più piccolo ed eseguito più velocemente.  
+- **Debug** : una compilazione di debug viene compilata in un file '' (applicazione) con metadati aggiuntivi che consentono di eseguire il debug di ciò che accade durante l'esecuzione dell'applicazione.
+- **Versione** : una build di rilascio crea anche un file '', ma non include informazioni di debug, quindi è più piccolo ed eseguito più velocemente.  
 
 È possibile selezionare il tipo di compilazione dal selettore **configurazione** nell'angolo superiore sinistro della schermata Visual Studio per Mac:
 
@@ -452,9 +452,9 @@ Se non sono stati riscontrati errori, nella barra di stato di Visual Studio per 
 
 Per eseguire l'applicazione, sono disponibili tre opzioni:
 
--  Premere **⌘+INVIO**.
--  Scegliere **Debug** dal menu **Esegui**.
--  Fare clic sul pulsante **Esegui** nella barra degli strumenti di Visual Studio per Mac (sopra **Esplora soluzioni**).
+- Premere **⌘+INVIO**.
+- Scegliere **Debug** dal menu **Esegui**.
+- Fare clic sul pulsante **Esegui** nella barra degli strumenti di Visual Studio per Mac (sopra **Esplora soluzioni**).
 
 L'applicazione verrà compilata (se non è già stata compilata), avviata in modalità di debug, il simulatore tvOS verrà avviato e l'app verrà avviata e visualizzata la finestra principale dell'interfaccia:
 
@@ -468,7 +468,7 @@ Usando il simulatore remoto, se si fa clic sul pulsante alcune volte l'etichetta
 
 [![](hello-tvos-images/run05.png "Etichetta con conteggio aggiornato")](hello-tvos-images/run05.png#lightbox)
 
-Congratulazioni! In questo articolo è stata illustrata una grande quantità di informazioni, ma se è stata seguita questa esercitazione dall'inizio alla fine, è ora necessario conoscere in modo approfondito i componenti di un'app Novell. tvOS, oltre agli strumenti usati per crearli.
+La procedura è stata completata. In questo articolo è stata illustrata una grande quantità di informazioni, ma se è stata seguita questa esercitazione dall'inizio alla fine, è ora necessario conoscere in modo approfondito i componenti di un'app Novell. tvOS, oltre agli strumenti usati per crearli.
 
 ## <a name="where-to-next"></a>Posizione successiva
 

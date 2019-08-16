@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: a9297d9a19ef56d658e983c38329b1aa400ffd05
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680944"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521714"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
@@ -120,9 +120,9 @@ public async Task<int> DownloadHomepage()
 
 Si notino i seguenti punti:
 
--  La dichiarazione di metodo include `async` la parola chiave.
--  Il tipo restituito è `Task<int>` quindi il codice chiamante può accedere `int` al valore calcolato in questo metodo.
--  L'istruzione return è `return exampleInt;` un oggetto Integer, il fatto che il metodo restituisce `Task<int>` una parte dei miglioramenti del linguaggio.
+- La dichiarazione di metodo include `async` la parola chiave.
+- Il tipo restituito è `Task<int>` quindi il codice chiamante può accedere `int` al valore calcolato in questo metodo.
+- L'istruzione return è `return exampleInt;` un oggetto Integer, il fatto che il metodo restituisce `Task<int>` una parte dei miglioramenti del linguaggio.
 
 
 ### <a name="calling-an-async-method-1"></a>Chiamata di un metodo asincrono 1
@@ -148,11 +148,11 @@ GetButton.Click += async (sender, e) => {
 
 Note:
 
--  Il delegato anonimo ha il prefisso della parola chiave async.
--  Il metodo asincrono DownloadHomepage restituisce un'attività <int> archiviata nella variabile sizeTask.
--  Il codice è in attesa sulla variabile sizeTask.  Si *tratta della* posizione in cui il metodo viene sospeso e il controllo viene restituito al codice chiamante fino al termine dell'attività asincrona nel relativo thread.
--  L'esecuzione non *viene sospesa* quando l'attività viene creata nella prima riga del metodo, indipendentemente dall'attività in fase di creazione. La parola chiave await indica la posizione in cui viene sospesa l'esecuzione.
--  Al termine dell'attività asincrona, intResult viene impostato e l'esecuzione continua nel thread originale dalla riga await.
+- Il delegato anonimo ha il prefisso della parola chiave async.
+- Il metodo asincrono DownloadHomepage restituisce un'attività\<int > archiviata nella variabile sizeTask.
+- Il codice è in attesa sulla variabile sizeTask.  Si tratta della posizione in cui il metodo viene sospeso e il controllo viene restituito al codice chiamante fino al termine dell'attività asincrona nel relativo thread.
+- L'esecuzione non viene sospesa quando l'attività viene creata nella prima riga del metodo, indipendentemente dall'attività in fase di creazione. La parola chiave await indica la posizione in cui viene sospesa l'esecuzione.
+- Al termine dell'attività asincrona, intResult viene impostato e l'esecuzione continua nel thread originale dalla riga await.
 
 
 ### <a name="calling-an-async-method-2"></a>Chiamata a un metodo asincrono 2
@@ -181,9 +181,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 Alcuni punti importanti:
 
--  Il metodo è contrassegnato come `async` ma restituisce `void` . Questa operazione viene in genere eseguita solo per i gestori eventi. in caso contrario `Task` , `Task<TResult>` viene restituito un oggetto o.
--  Codice `await` s `intResult` nel metodo direttamente in un'assegnazione a una variabile () a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività. `DownloadHomepage`  Si *tratta della* posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
--  Quando il metodo asincrono viene completato e restituisce, l'esecuzione riprende in `await` , ovvero viene restituito il risultato Integer e quindi ne viene eseguito il rendering in un widget dell'interfaccia utente.
+- Il metodo è contrassegnato come `async` ma restituisce `void` . Questa operazione viene in genere eseguita solo per i gestori eventi. in caso contrario `Task` , `Task<TResult>` viene restituito un oggetto o.
+- Codice `await` s `intResult` nel metodo direttamente in un'assegnazione a una variabile () a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività. `DownloadHomepage`  Si tratta della posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
+- Quando il metodo asincrono viene completato e restituisce, l'esecuzione riprende in `await` , ovvero viene restituito il risultato Integer e quindi ne viene eseguito il rendering in un widget dell'interfaccia utente.
 
 
 ## <a name="summary"></a>Riepilogo

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 12bb8fe6f8ed77ea9091c165d4656da292266679
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9412012949cd012d572b65b7af6e2890160338dc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656610"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527940"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animazione principale in Novell. iOS
 
@@ -40,9 +40,9 @@ UIKit offre diverse funzionalità che semplificano l'aggiunta di animazioni a un
 
 Questa sezione illustra le funzionalità di animazione UIKit, tra cui:
 
--  Transizioni tra controller
--  Transizioni tra viste
--  Visualizza animazione proprietà
+- Transizioni tra controller
+- Transizioni tra viste
+- Visualizza animazione proprietà
 
 
 ### <a name="view-controller-transitions"></a>Transizioni dei controller di visualizzazione
@@ -59,9 +59,9 @@ SecondViewController vc2 = new SecondViewController {
 
 In questo caso viene `PartialCurl` usata un'animazione, sebbene siano disponibili diverse altre, tra cui:
 
--  `CoverVertical`: Scorre verso l'alto dalla parte inferiore dello schermo
--  `CrossDissolve`-La visualizzazione precedente si dissolve & la nuova visualizzazione si dissolve in
--  `FlipHorizontal`-Un flip orizzontale da destra a sinistra. In fase di chiusura la transizione viene invertita da sinistra a destra.
+- `CoverVertical`: Scorre verso l'alto dalla parte inferiore dello schermo
+- `CrossDissolve`-La visualizzazione precedente si dissolve & la nuova visualizzazione si dissolve in
+- `FlipHorizontal`-Un flip orizzontale da destra a sinistra. In fase di chiusura la transizione viene invertita da sinistra a destra.
 
 
 Per aggiungere un'animazione alla transizione, `true` passare come secondo argomento a `PresentViewController`:
@@ -100,12 +100,12 @@ La schermata seguente mostra la transizione animata tra le visualizzazioni immag
 
 UIKit supporta l' `UIView` animazione gratuita di un'ampia gamma di proprietà nella classe, tra cui:
 
--  Frame
--  Limiti
--  Center
--  Alfa
--  Transform
--  Colore
+- Frame
+- Limiti
+- Center
+- Alfa
+- Transform
+- Colore
 
 
 Queste animazioni si verificano in modo implicito specificando `NSAction` le modifiche alle proprietà in `UIView.Animate` un delegato passato al metodo statico. Il codice seguente, ad esempio, anima il punto centrale di un `UIImageView`oggetto:

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: 4e98dd824d5044367b975ae66c77327f10e826f1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 729daef1a7a003613bebc4f82067bc267dab8e00
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510189"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522853"
 ---
 # <a name="xamarinandroid-ratingbar"></a>Novell. Android RatingBar
 
@@ -48,5 +48,5 @@ Un RatingBar è un widget dell'interfaccia utente che visualizza una valutazione
 
     Acquisisce il [`RatingBar`](xref:Android.Widget.RatingBar) widget dal layout con [`FindViewById`](xref:Android.App.Activity.FindViewById*) e quindi imposta un metodo di evento, quindi definisce l'azione da eseguire quando l'utente imposta una classificazione. In questo caso, un messaggio [`Toast`](xref:Android.Widget.Toast) semplice Visualizza la nuova classificazione.
 
-3.  Eseguire l'applicazione.
+3. Eseguire l'applicazione.
 

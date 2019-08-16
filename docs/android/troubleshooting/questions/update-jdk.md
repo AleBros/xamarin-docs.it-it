@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 02768bfcae9da06d8fd86ada63dd2d463245d254
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 193f9f92f112608908d2feb50f815a670d48b39c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510456"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523412"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Come si aggiorna la versione di Java Development Kit (JDK)?
 
@@ -27,19 +27,19 @@ Per eseguire l'aggiornamento a Microsoft Mobile OpenJDK, vedere [Microsoft Mobil
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Scaricare JDK 8 (1,8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Scaricare JDK 8 (1,8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot della pagina di download di JDK nel sito Web Oracle](update-jdk-images/image1.png)
 
-2.  Selezionare la versione a 64 bit per consentire il rendering di [controlli personalizzati](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) in Novell Android designer:
+2. Selezionare la versione a 64 bit per consentire il rendering di [controlli personalizzati](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) in Novell Android designer:
 
     ![Selezione del pacchetto JDK Windows x64 da scaricare dalla pagina di download di JDK](update-jdk-images/image2.png)
 
-3.  Eseguire il file con estensione exe e installare gli **strumenti di sviluppo**:
+3. Eseguire il file con estensione exe e installare gli **strumenti di sviluppo**:
 
     ![Installazione degli strumenti di sviluppo nel programma di installazione di JDK](update-jdk-images/image3.png)
 
-4.  Aprire Visual Studio e aggiornare il **percorso di Java Development Kit** in modo che punti al nuovo JDK in **strumenti > opzioni > Novell > Android Settings > percorso di Java Development Kit**:
+4. Aprire Visual Studio e aggiornare il **percorso di Java Development Kit** in modo che punti al nuovo JDK in **strumenti > opzioni > Novell > Android Settings > percorso di Java Development Kit**:
 
     [![Impostazione del percorso per il JDK nella pagina delle impostazioni di Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
@@ -47,11 +47,11 @@ Assicurarsi di riavviare Visual Studio dopo aver aggiornato il percorso.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1.  Scaricare JDK 8 (1,8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Scaricare JDK 8 (1,8) dal [sito Web Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot della pagina di download di JDK nel sito Web Oracle](update-jdk-images/image1.png)
 
-2.  Aprire il file con estensione DMG ed eseguire il programma di installazione con estensione pkg:
+2. Aprire il file con estensione DMG ed eseguire il programma di installazione con estensione pkg:
 
     ![Esecuzione del programma di installazione di JDK in macOS](update-jdk-images/image5.png)
 

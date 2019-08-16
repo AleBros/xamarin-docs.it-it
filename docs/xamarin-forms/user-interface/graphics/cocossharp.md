@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: f5a672f6b34edf02eeac0f2820989d0656342167
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a6077029a82577cccbf060f14cdd7586c2793a94
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648834"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529261"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Uso di CocosSharp in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](hhttps://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](h https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp può essere utilizzato per aggiungere la forma esatta, l'immagine e il rendering del testo a un'applicazione per la visualizzazione avanzata_
 
@@ -62,7 +62,7 @@ Tutto il codice verrà scritto nel progetto della libreria .NET Standard. Tuttav
 Il pacchetto Nuget di CocosSharp contiene tutti gli oggetti necessari per creare oggetti CocosSharp.
 Il pacchetto nuget CocosSharp.Forms include il `CocosSharpView` classe, che viene usata per ospitare CocosSharp in xamarin. Forms.
 Aggiungere il **CocosSharp.Forms** NuGet e **CocosSharp** verranno aggiunti automaticamente anche.
-A tale scopo, fare clic sui <span class="UIItem">pacchetti</span> cartella nel progetto di libreria .NET Standard e selezionare <span class="UIItem">Aggiungi pacchetti... </span>. Immettere il termine di ricerca <span class="UIItem">CocosSharp.Forms</span>, selezionare <span class="UIItem">CocosSharp per xamarin. Forms</span>, quindi fare clic su <span class="UIItem">Add Package</span>.
+A tale scopo, fare clic sui **pacchetti** cartella nel progetto di libreria .NET Standard e selezionare **Aggiungi pacchetti...** . Immettere il termine di ricerca **CocosSharp.Forms**, selezionare **CocosSharp per xamarin. Forms**, quindi fare clic su **Add Package**.
 
 ![](cocossharp-images/image1.png "Aggiungi finestra di dialogo di pacchetti")
 

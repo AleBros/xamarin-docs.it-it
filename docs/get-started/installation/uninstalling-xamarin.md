@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 6a0fe95d6d471bfb464234f0540b8398acb22e6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97b870d96a2ffc599e010e049554b51b550a7311
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61262979"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521587"
 ---
 # <a name="uninstalling-xamarin"></a>Disinstallazione di Xamarin
 
@@ -196,14 +196,18 @@ Per eseguire lo script, seguire questa procedura:
 
 1. Fare clic con il pulsante destro del mouse sullo script e selezionare Salva con nome per salvare il file sul Mac.
 
-2.  Aprire **Terminale** e modificare la directory di lavoro in cui lo script è stato scaricato:
+2. Aprire **Terminale** e modificare la directory di lavoro in cui lo script è stato scaricato:
 
-        $ cd /location/of/file
+    ```
+    cd /location/of/file
+    ```
 
 3. Rendere eseguibile lo script ed eseguirlo con **sudo**:
 
-        $ chmod +x ./xamarin_uninstall.sh
-        $ sudo ./xamarin_uninstall.sh
+    ```
+    chmod +x ./xamarin_uninstall.sh
+    sudo ./xamarin_uninstall.sh
+    ```
 
 4. Infine, eliminare lo script di disinstallazione.
 
@@ -215,7 +219,7 @@ A questo punto, Xamarin dovrebbe essere disinstallato dal computer.
 
 Xamarin è supportato in:
 
-- [Visual Studio 2017 e Visual Studio 2019](#uninstallvs2017)
+- [Visual Studio 2019 e Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
 - [Visual Studio 2013](#uninstallvs2015) [**non supportato**]
 - [Xamarin Studio](#uninstallxamarinstudio) [**non supportato**]
@@ -224,7 +228,7 @@ Xamarin è supportato in:
 
 ### <a name="visual-studio-2019-and-visual-studio-2017"></a>Visual Studio 2019 e Visual Studio 2017
 
-Xamarin può essere disinstallato da Visual Studio 2019 e Visual Studio 2017, usando l'app del programma di installazione:
+Novell viene disinstallato da Visual Studio 2019 e Visual Studio 2017 usando l'app del programma di installazione:
 
 1. Usare il **menu Start** per aprire il **programma di installazione di Visual Studio**.
 

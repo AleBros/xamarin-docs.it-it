@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 027b526815c56e5a0092b68b550129d9ffbf1493
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 610f9be346b761c4d20e4bbf97ecfcda74c0bee0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643030"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523058"
 ---
 # <a name="xamarinandroid-calendar"></a>Calendario di Novell. Android
 
@@ -224,10 +224,10 @@ Viene visualizzato un elenco di eventi, come mostrato di seguito:
 
 Abbiamo visto come leggere i dati del calendario. Si vedrà ora come aggiungere un evento a un calendario. Per eseguire questa operazione, assicurarsi di includere l' `android.permission.WRITE_CALENDAR` autorizzazione citata in precedenza. Per aggiungere un evento a un calendario, è necessario:
 
-1.  Creare un' `ContentValues` istanza di.
-1.  Usare le chiavi della `CalendarContract.Events.InterfaceConsts` classe per popolare l' `ContentValues` istanza.
-1.  Impostare i fusi orari per le ore di inizio e di fine dell'evento.
-1.  Utilizzare un `ContentResolver` oggetto per inserire i dati dell'evento nel calendario.
+1. Creare un' `ContentValues` istanza di.
+1. Usare le chiavi della `CalendarContract.Events.InterfaceConsts` classe per popolare l' `ContentValues` istanza.
+1. Impostare i fusi orari per le ore di inizio e di fine dell'evento.
+1. Utilizzare un `ContentResolver` oggetto per inserire i dati dell'evento nel calendario.
 
 
 Il codice seguente illustra questi passaggi:

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: cfc4420d95778188368f3e7d3595713d83371d33
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b04ecf0685e78b73346ea5af815ed46f98b5da0f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643599"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524353"
 ---
 # <a name="fragments"></a>Frammenti
 
@@ -42,9 +42,9 @@ Mentre l'attività è un host di uno o più frammenti, non è in grado di ricono
 
 Questa guida contiene una copertura completa su come usare i frammenti, tra cui:
 
--   **Creazione di frammenti** : come creare un frammento di base e metodi chiave che devono essere implementati.
--   **Gestione dei frammenti e transazioni** : come modificare i frammenti in fase di esecuzione.
--   **Pacchetto di supporto Android** : come usare le librerie che consentono di usare i frammenti nelle versioni precedenti di Android.
+- **Creazione di frammenti** : come creare un frammento di base e metodi chiave che devono essere implementati.
+- **Gestione dei frammenti e transazioni** : come modificare i frammenti in fase di esecuzione.
+- **Pacchetto di supporto Android** : come usare le librerie che consentono di usare i frammenti nelle versioni precedenti di Android.
 
 
 ## <a name="requirements"></a>Requisiti

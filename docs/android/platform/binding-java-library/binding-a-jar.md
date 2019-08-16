@@ -1,54 +1,54 @@
 ---
 title: Associazione di un file JAR
-description: Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di una libreria di binding di xamarin. Android Java da Android. File JAR.
+description: Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File JAR.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 3c84b29807fd4a181ed867095645005bf9ba4df0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6aa9367495ba00138a38816ffab51c1ab43eec94
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957336"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524814"
 ---
 # <a name="binding-a-jar"></a>Associazione di un file JAR
 
-_Questa procedura dettagliata vengono fornite istruzioni dettagliate per la creazione di una libreria di binding di xamarin. Android Java da Android. File JAR._
+_Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File JAR._
 
 ## <a name="overview"></a>Panoramica
 
-La community di Android sono disponibili molte librerie Java che vuoi usare nell'app. Queste librerie Java sono spesso inseriti in pacchetti. Formato di file JAR (Java Archive), ma è possibile creare un pacchetto una. File JAR in una *libreria di binding Java* in modo che la relativa funzionalità è disponibile per le app xamarin. Android. Lo scopo della libreria di binding di linguaggio consiste nel rendere le API nel. File con estensione JAR disponibili per C# codice tramite wrapper del codice generato automaticamente.
+La community Android offre molte librerie Java che è possibile usare nell'app. Queste librerie Java sono spesso impacchettate in. Formato JAR (Java Archive), ma è possibile creare il pacchetto a. JAR it in una *libreria di binding Java* in modo che la relativa funzionalità sia disponibile per le app Novell. Android. Lo scopo della libreria dei binding Java è quello di rendere le API in. File JAR disponibile per C# il codice tramite wrapper di codice generati automaticamente.
 
-Gli strumenti di Xamarin è possono generare una libreria di binding da uno o più input. File con estensione JAR. La libreria di binding (. Assembly DLL) contiene quanto segue: 
+Gli strumenti Novell possono generare una libreria di binding da uno o più input. File JAR. Libreria di binding (. Assembly DLL) contiene gli elementi seguenti: 
 
--   Il contenuto dell'originale. File con estensione JAR.
+- Contenuto dell'oggetto originale. File JAR.
 
--   Gestito Callable Wrapper (MCW), che sono C# i tipi che eseguono il wrapping per i tipi Java corrispondente all'interno di. File con estensione JAR.
+- Gestiti Callable Wrapper (MCW), che sono C# tipi che eseguono il wrapping dei tipi Java corrispondenti all'interno di. File JAR.
 
-Il codice generato in MCW Usa JNI (Java Native Interface) per inoltrare le chiamate all'API sottostante. File JAR. È possibile creare librerie di associazioni per qualsiasi. File JAR destinazione originale per l'uso con Android (si noti che gli strumenti di Xamarin non supporta attualmente l'associazione delle librerie non Android Java). È anche possibile scegliere di compilare la libreria di binding senza includere il contenuto della. File JAR in modo che la DLL presenta una dipendenza di. File JAR in fase di esecuzione.
+Il codice MCW generato USA JNI (Java Native Interface) per inviare le chiamate API all'oggetto sottostante. File JAR. È possibile creare librerie di binding per qualsiasi. File JAR originariamente destinato a essere usato con Android (si noti che gli strumenti Novell attualmente non supportano l'associazione di librerie Java non Android). È inoltre possibile scegliere di compilare la libreria dei binding senza includere il contenuto di. File JAR in modo che la DLL abbia una dipendenza da. JAR in fase di esecuzione.
 
-In questa Guida, si sarà scorrere le nozioni di base della creazione di una libreria di binding per una singola. File JAR. Verrà illustrata con un esempio in cui tutto va a destra &ndash; in cui nessuna personalizzazione o il debug delle associazioni è obbligatorio. 
-[Creazione di metadati utilizzando associazioni](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) offre un esempio di uno scenario più avanzato in cui il processo di associazione non è completamente automatico e alcune entità dell'intervento manuale è obbligatorio. Per una panoramica di Java della libreria di associazione in generale (con un esempio di codice di base), vedere [associazione di una libreria Java](~/android/platform/binding-java-library/index.md). 
+In questa guida verranno illustrate le nozioni di base per la creazione di una libreria di binding per un singolo. File JAR. Verrà illustrato un esempio in cui tutto va bene &ndash; , in cui non è richiesta alcuna personalizzazione o debug delle associazioni. 
+La [creazione di associazioni usando i metadati](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) offre un esempio di scenario più avanzato in cui il processo di associazione non è completamente automatico e è necessaria una certa quantità di intervento manuale. Per una panoramica dell'associazione di librerie Java in generale (con un esempio di codice di base), vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md). 
 
  
 ## <a name="walkthrough"></a>Procedura dettagliata
 
-Nella seguente procedura dettagliata, si creerà una libreria di binding per [Picasso](http://square.github.io/picasso/), un Android più diffusi. File JAR che fornisce il caricamento e la funzionalità di memorizzazione nella cache di immagini. Si userà la procedura seguente per associare **picasso 2.x.x.jar** per creare un nuovo assembly .NET che è possibile usare in un progetto xamarin. Android: 
+Nella procedura dettagliata seguente verrà creata una libreria di binding per [Picasso](http://square.github.io/picasso/), un dispositivo Android molto diffuso. JAR che fornisce funzionalità di caricamento di immagini e memorizzazione nella cache. Usare i passaggi seguenti per associare **Picasso-2. x.x. x. jar** per creare un nuovo assembly .NET che è possibile usare in un progetto Novell. Android: 
 
 1. Creare un nuovo progetto di libreria di binding Java.
 
-2. Aggiungere il. File JAR al progetto.
+2. Aggiungere il. File JAR nel progetto.
 
-3. Impostare l'azione di compilazione appropriata per il. File JAR.
+3. Impostare l'azione di compilazione appropriata per l'oggetto. File JAR.
 
-4. Scegliere un framework di destinazione che il. Supporta file JAR.
+4. Scegliere un Framework di destinazione per il. JAR supporta.
 
-5. Compilare la libreria di binding.
+5. Compilare la libreria dei binding.
 
-Dopo aver creato la libreria di binding, sviluppiamo sarà una piccola app di Android che illustra la possibilità di chiamare le API nella libreria di binding. In questo esempio si vuole accedere ai metodi di **picasso 2.x.x.jar**:
+Una volta creata la libreria bindings, verrà sviluppata una piccola app per Android che dimostra la possibilità di chiamare le API nella libreria Bindings. In questo esempio si vuole accedere ai metodi di **Picasso-2. x.x. x. jar**:
 
 ```java
 package com.squareup.picasso
@@ -63,7 +63,7 @@ public class Picasso
 }
 ```
 
-Dopo che si genera una libreria di binding per **picasso 2.x.x.jar**, è possibile chiamare questi metodi da C#. Ad esempio:
+Dopo aver generato una libreria di binding per **Picasso-2. x.x. x. jar**, è possibile chiamare questi metodi da C#. Ad esempio:
 
 ```csharp
 using Com.Squareup.Picasso;
@@ -75,76 +75,76 @@ Picasso.With (this)
 ```
 
 
-### <a name="creating-the-bindings-library"></a>Creare la libreria di binding
+### <a name="creating-the-bindings-library"></a>Creazione della libreria bindings
 
-Prima di iniziare con la procedura seguente, scaricare [picasso 2.x.x.jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
+Prima di iniziare con la procedura seguente, scaricare [Picasso-2. x.x. x. jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
 
-In primo luogo, creare un nuovo progetto di libreria di binding. In Visual Studio per Mac o Visual Studio, creare una nuova soluzione e selezionare il *libreria di binding Android* modello. (Le schermate contenute in questa procedura dettagliata usano Visual Studio, ma Visual Studio per Mac è molto simile). Denominare la soluzione **JarBinding**: 
+Per prima cosa, creare un nuovo progetto di libreria di binding. In Visual Studio per Mac o Visual Studio creare una nuova soluzione e selezionare il modello *libreria bindings Android* . Gli screenshot di questa procedura dettagliata usano Visual Studio, ma Visual Studio per Mac è molto simile. Assegnare alla soluzione il nome **JarBinding**: 
 
-[![Creare il progetto di libreria JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
+[![Creare un progetto di libreria JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
-Il modello include un **Jars** cartella in cui si aggiungono i. JAR(s) al progetto libreria di binding. Fare doppio clic il **Jars** cartella e selezionare **Aggiungi > elemento esistente**: 
+Il modello include una cartella **jar** in cui si aggiunge il. JAR (s) per il progetto di libreria dei binding. Fare clic con il pulsante destro del mouse sulla cartella **jar** e scegliere **Aggiungi > elemento esistente**: 
 
 [![Aggiungi elemento esistente](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
-Passare il **picasso 2.x.x.jar** file scaricato in precedenza, selezionarla e fare clic su **Add**: 
+Passare al file **Picasso-2. x. x. jar** scaricato in precedenza, selezionarlo e fare clic su **Aggiungi**: 
 
-[![Selezionare il file con estensione jar e fare clic su Aggiungi](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
+[![Selezionare file jar e fare clic su Aggiungi](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
-Verificare che il **picasso 2.x.x.jar** file è stato aggiunto al progetto: 
+Verificare che il file **Picasso-2. x.x. x. jar** sia stato aggiunto correttamente al progetto: 
 
-[![Con estensione jar aggiunti al progetto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
+[![Jar aggiunto al progetto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
-Quando si crea un progetto di libreria di binding Java, è necessario specificare se il. File JAR si trova nella raccolta di associazioni incorporati o disponibile come pacchetto separato. A tale scopo, specificare uno dei seguenti *azioni di compilazione*: 
+Quando si crea un progetto di libreria di binding Java, è necessario specificare se. JAR deve essere incorporato nella libreria bindings o essere incluso in un pacchetto separatamente. A tale scopo, è necessario specificare una delle *azioni di compilazione*seguenti: 
 
--   **EmbeddedJar** &ndash; il. File JAR verrà incorporato nella raccolta di associazioni.
+- **EmbeddedJar** &ndash; oggetto. JAR sarà incorporato nella libreria Bindings.
 
--   **InputJar** &ndash; il. File JAR verrà mantenuto separato dalla libreria di binding.
+- **InputJar** &ndash; oggetto. Il file JAR verrà mantenuto separato dalla libreria dei binding.
 
-In genere, si usa la **EmbeddedJar** azione di compilazione in modo che il. Viene automaticamente incluso nel pacchetto JAR nella libreria di binding. Si tratta dell'opzione più semplice &ndash; bytecode Java nel. File JAR viene convertito in Dex bytecode e viene incorporata (insieme ad gestiti Callable Wrapper) nel pacchetto APK. Se si desidera mantenere il. JAR separato dalla libreria di binding, è possibile usare la **InputJar** option; tuttavia, è necessario assicurarsi che il. File con estensione JAR è disponibili sul dispositivo che esegue l'app. 
+In genere, si usa l'azione di compilazione **EmbeddedJar** in modo che. JAR viene automaticamente incluso nella libreria Bindings. Si tratta dell'opzione &ndash; più semplice bytecode Java in. JAR viene convertito in bytecode DEX ed è incorporato (insieme ai wrapper richiamabili gestiti) nell'APK. Se si vuole usare. JAR separato dalla libreria Bindings. è possibile usare l'opzione **InputJar** . Tuttavia, è necessario assicurarsi che. Il file JAR è disponibile nel dispositivo che esegue l'app. 
 
-Impostare l'azione di compilazione **EmbeddedJar**: 
+Impostare l'azione di compilazione su **EmbeddedJar**: 
 
 [![Selezionare l'azione di compilazione EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
-Successivamente, aprire il progetto di proprietà per configurare il *Framework di destinazione*. Se il. File JAR Usa qualsiasi API Android, impostare il Framework di destinazione per il livello API di. File JAR si aspetta. In genere, lo sviluppatore della. File con estensione JAR indicherà quale livello API (o livelli) che il. È compatibile con i file JAR. (Per altre informazioni sui Framework di destinazione e i livelli API Android in generale, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).)
+Successivamente, aprire le proprietà del progetto per configurare il *Framework di destinazione*. Se il. JAR usa qualsiasi API Android, impostare il Framework di destinazione sul livello API. JAR prevede. In genere, lo sviluppatore del. Il file JAR indicherà il livello o i livelli API di. JAR è compatibile con. Per ulteriori informazioni sull'impostazione del Framework di destinazione e sui livelli dell'API Android in generale, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
-Impostazione livello API di destinazione per la libreria di binding (in questo esempio, utilizziamo API livello 19): 
+Impostare il livello API di destinazione per la libreria dei binding (in questo esempio si usa il livello API 19): 
 
 [![Livello API di destinazione impostato su API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
-Infine, compilare la libreria di binding. Anche se potrebbero essere visualizzati alcuni messaggi di avviso, il progetto libreria di binding deve compilare correttamente e produrre un output. DLL nel percorso seguente: **JarBinding/bin/Debug/JarBinding.dll**
+Infine, compilare la libreria Bindings. Sebbene sia possibile visualizzare alcuni messaggi di avviso, il progetto di libreria di associazioni dovrebbe compilarsi correttamente e produrre un output. DLL nel percorso seguente: **JarBinding/bin/Debug/JarBinding.dll**
     
 
 
-### <a name="using-the-bindings-library"></a>Uso della libreria di binding
+### <a name="using-the-bindings-library"></a>Uso della libreria bindings
 
-Per utilizzare questa soluzione. DLL nell'app xamarin. Android, eseguire le operazioni seguenti:
+Per utilizzare questo. DLL nell'app Novell. Android, seguire questa procedura:
 
-1.  Aggiungere un riferimento alla libreria di binding.
+1. Aggiungere un riferimento alla libreria dei binding.
 
-2.  Effettuare chiamate nel. JAR tramite Callable Wrapper gestiti. 
+2. Effettuare chiamate a. JAR tramite i wrapper richiamabili gestiti. 
 
-In questa procedura, si creerà un'app minima che usa la libreria di binding per scaricare e visualizzare un'immagine in un `ImageView`; il "pesante" viene eseguito dal codice che si trova nel. File JAR. 
+Nei passaggi seguenti verrà creata un'app minima che usa la libreria Bindings per scaricare e visualizzare un'immagine in un oggetto `ImageView`. il "sollevamento intenso" viene eseguito dal codice che risiede in. File JAR. 
 
-Innanzitutto, creare una nuova app xamarin. Android che usa la libreria di binding. La soluzione e scegliere **Aggiungi nuovo progetto**; denominare il nuovo progetto **BindingTest**. Stiamo creando l'app nella stessa soluzione come libreria di binding per semplificare questa procedura dettagliata; Tuttavia, le app che usa la libreria di binding possibile, invece, si trovano in una soluzione diversa: 
+Per prima cosa, creare una nuova app Novell. Android che utilizza la libreria Bindings. Fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Aggiungi nuovo progetto**. assegnare al nuovo progetto il nome **BindingTest**. Questa app viene creata nella stessa soluzione della libreria Bindings per semplificare questa procedura dettagliata. Tuttavia, l'app che utilizza la libreria dei binding può invece risiedere in una soluzione diversa: 
 
 [![Aggiungi nuovo progetto BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
-Fare doppio clic sui **riferimenti** nodo del **BindingTest** del progetto e selezionare **Aggiungi riferimento...** :
+Fare clic con il pulsante destro del mouse sul nodo **riferimenti** del progetto **BindingTest** e scegliere **Aggiungi riferimento...** :
 
-[![A destra aggiungere riferimento](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
+[![Aggiungi riferimento a destra](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
-Verificare i **JarBinding** progetto creato in precedenza e fare clic su **OK**:
+Controllare il progetto **JarBinding** creato in precedenza e fare clic su **OK**:
 
 [![Selezionare il progetto JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
-Aprire il **riferimenti** nodo delle **BindingTest** del progetto e verificare che il **JarBinding** riferimento è presente: 
+Aprire il nodo **riferimenti** del progetto **BindingTest** e verificare che sia presente il riferimento **JarBinding** : 
 
-[![JarBinding viene visualizzato in riferimenti](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
+[![JarBinding viene visualizzato sotto riferimenti](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
-Modificare il **BindingTest** layout (**Main. axml**) in modo che includa un unico `ImageView`:
+Modificare il layout di **BindingTest** (**Main. aXML**) in modo che disponga di `ImageView`un solo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -161,13 +161,13 @@ Modificare il **BindingTest** layout (**Main. axml**) in modo che includa un uni
 </LinearLayout>
 ```
 
-Aggiungere il codice seguente `using` dell'istruzione **MainActivity.cs** &ndash; in questo modo è possibile accedere facilmente ai metodi del basata su Java `Picasso` classe che si trova nella libreria di binding:
+Aggiungere l'istruzione `using` seguente a **MainActivity.cs** &ndash; . in questo modo è possibile accedere facilmente ai metodi della classe basata su `Picasso` Java che risiede nella libreria bindings:
 
 ```csharp
 using Com.Squareup.Picasso;
 ```
 
-Modificare il `OnCreate` metodo in modo che utilizzi il `Picasso` classe per caricare un'immagine da un URL e lo visualizza nel `ImageView`: 
+Modificare il `OnCreate` metodo in modo che usi la `Picasso` classe per caricare un'immagine da un URL `ImageView`e visualizzarla in: 
 
 ```csharp
 public class MainActivity : Activity
@@ -186,20 +186,20 @@ public class MainActivity : Activity
 }
 ```
 
-Compilare ed eseguire la **BindingTest** progetto. L'app verrà avviato e, dopo un breve ritardo (in base alle condizioni di rete), è necessario scaricare e visualizzare un'immagine simile allo screenshot seguente:
+Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e dopo un breve ritardo (a seconda delle condizioni della rete) dovrebbe scaricare e visualizzare un'immagine simile alla schermata seguente:
 
-[![Schermata di BindingTest esecuzione](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
+[![Screenshot di BindingTest in esecuzione](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
-La procedura è stata completata. È stata associata correttamente una libreria Java. File JAR e quindi averla usata nell'app xamarin. Android.
+La procedura è stata completata. La libreria Java è stata associata correttamente. JAR e usarlo nell'app Novell. Android.
  
  
 ## <a name="summary"></a>Riepilogo
 
-In questa procedura dettagliata, viene creata una libreria di binding per una terza parte. JAR file, aggiungere la libreria di binding a un'app di test minima e poi si esegue l'app e verificare che il C# codice può chiamare codice Java che si trovano nel. File JAR. 
+In questa procedura dettagliata è stata creata una libreria Bindings per un di terze parti. File JAR, è stata aggiunta la libreria bindings a un'app di test minima e quindi l'app è stata eseguita C# per verificare che il codice sia in grado di chiamare il codice Java che risiede in. File JAR. 
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Creazione di una libreria di binding Java (video)](https://university.xamarin.com/classes#10090)
+- [Compilazione di una libreria di binding Java (video)](https://university.xamarin.com/classes#10090)
 - [Associazione di una libreria Java](~/android/platform/binding-java-library/index.md)

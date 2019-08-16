@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f772bf1309330b41f9faea812e2cdcdba8e969cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653134"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527060"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso di touch in Novell. iOS
 
@@ -181,8 +181,8 @@ In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il 
 Nella [sezione precedente](#Touch_Samples) è stato illustrato come trascinare un oggetto intorno allo schermo utilizzando gli eventi di tocco.
 In questa sezione si elimineranno gli eventi touch e si mostrerà come usare i riconoscitori di movimento seguenti:
 
--  Oggetto `UIPanGestureRecognizer` per il trascinamento di un'immagine intorno allo schermo.
--  Oggetto `UITapGestureRecognizer` per rispondere a doppi tocchi sullo schermo.
+- Oggetto `UIPanGestureRecognizer` per il trascinamento di un'immagine intorno allo schermo.
+- Oggetto `UITapGestureRecognizer` per rispondere a doppi tocchi sullo schermo.
 
 Se si esegue il [codice di esempio iniziale](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) e si fa clic sul pulsante **Samples Recognizer Samples** , verrà visualizzata la schermata seguente:
 

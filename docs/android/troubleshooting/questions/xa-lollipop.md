@@ -7,20 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: fb357f0342aef68cd2e20d8f8d83474686593743
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4fe1bd4dda9a54eb3a1692f07d1069adb39345cb
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510945"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523287"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>In quale versione di Xamarin.Android è stato aggiunto il supporto di Lollipop?
 
 > [!NOTE]
 > Questa guida è stata scritta originariamente per Android L Preview.
 
--   [Novell. Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) ha aggiunto il supporto per Android L Preview.
--   [Novell. Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) ha aggiunto il supporto di Android Lollipop.
+- [Novell. Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) ha aggiunto il supporto per Android L Preview.
+- [Novell. Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) ha aggiunto il supporto di Android Lollipop.
 
 Novell supporta attivamente solo la versione stabile corrente degli strumenti di Novell. Le informazioni riportate di seguito vengono fornite "così come sono" per le versioni precedenti degli strumenti. Per le informazioni più aggiornate sulle versioni di Novell, vedere [qui](http://releases.xamarin.com/).
 
@@ -46,8 +46,8 @@ Esistono alcune soluzioni alternative per questo problema:
 
 3. Eseguire temporaneamente il downgrade all'anteprima dell'API Android livello 21 "L" [1]:
 
-    1.  Eliminare le **piattaforme\\\\\\Android-21 dell'SDK% LocalAppData% Android-21\\** 
-    2.  Estrarre [1] in **C:\\utenti\\&lt;nomeutente&gt;\\AppDataLocal\\AndroidAndroid-\\SDK Platforms da creare\\\\** una cartella **Android-L** .
+    1. Eliminare le **piattaforme\\\\\\Android-21 dell'SDK% LocalAppData% Android-21\\** 
+    2. Estrarre [1] in **C:\\utenti\\&lt;nomeutente&gt;\\AppDataLocal\\AndroidAndroid-\\SDK Platforms da creare\\\\** una cartella **Android-L** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -70,8 +70,8 @@ Esistono alcune soluzioni alternative per questo problema:
 
 3. Eseguire temporaneamente il downgrade all'anteprima dell'API Android livello 21 "L" [1]:
 
-    1.  Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
-    2.  Estrarre [1] in **/Users/username/Library/Developer/Xamarin/Android-SDK-MacOSX** per creare una cartella **Android-L** .
+    1. Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
+    2. Estrarre [1] in **/Users/username/Library/Developer/Xamarin/Android-SDK-MacOSX** per creare una cartella **Android-L** .
 
 -----
 

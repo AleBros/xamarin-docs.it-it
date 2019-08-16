@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: d9f624084c83b318487f1162a9a2350f9e2cc409
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 750cf801d8ae9dfe63f9b2259d4a3f6a386a4404
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510495"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523241"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificatori delle risorse e opzioni di visualizzazione
 
@@ -29,9 +29,9 @@ _In questo argomento viene illustrato come definire le risorse che verranno util
 
 Questa finestra di dialogo presenta i menu a discesa per i qualificatori di risorse seguenti:
 
--   **Lingua** di &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per l'aggiunta di nuove risorse di lingua/area geografica.
+- **Lingua** di &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per l'aggiunta di nuove risorse di lingua/area geografica.
 
--   **Modalità interfaccia utente** Elenca le modalità di visualizzazione (ad esempio, docking auto e **Dock desk**), nonché le direzioni di layout.  &ndash;
+- **Modalità interfaccia utente** Elenca le modalità di visualizzazione (ad esempio, docking auto e **Dock desk**), nonché le direzioni di layout. &ndash;
 
 Ognuno di questi menu a discesa apre nuove finestre di dialogo in cui è possibile selezionare e configurare i qualificatori delle risorse (come illustrato di seguito).
 
@@ -71,11 +71,11 @@ L'icona **delle impostazioni della barra delle azioni** è disponibile a sinistr
 
 Questa icona consente di aprire una finestra di dialogo in cui è possibile selezionare una delle tre modalità Barra delle azioni:
 
--   **Standard** &ndash; È costituito da un logo o da un'icona e da un testo del titolo con un sottotitolo facoltativo.
+- **Standard** &ndash; È costituito da un logo o da un'icona e da un testo del titolo con un sottotitolo facoltativo.
 
--   **Elenco** di &ndash; Modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
+- **Elenco** di &ndash; Modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
 
--   **Schede** di &ndash; Modalità di spostamento a schede. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
+- **Schede** di &ndash; Modalità di spostamento a schede. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
 
 ## <a name="themes"></a>Themes
 
@@ -111,9 +111,9 @@ Per altre informazioni sui tipi di risorse, vedere [risorse Android](~/android/a
 
 Questa finestra di dialogo presenta i menu a discesa per i qualificatori di risorse seguenti:
 
--   **Lingua** di &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per l'aggiunta di nuove risorse di lingua/area geografica.
+- **Lingua** di &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per l'aggiunta di nuove risorse di lingua/area geografica.
 
--   **Modalità interfaccia utente** Elenca le modalità di visualizzazione (ad esempio, docking auto e **Dock desk**), nonché le direzioni di layout.  &ndash;
+- **Modalità interfaccia utente** Elenca le modalità di visualizzazione (ad esempio, docking auto e **Dock desk**), nonché le direzioni di layout. &ndash;
 
 Ognuno di questi menu a discesa apre nuove finestre di dialogo in cui è possibile selezionare e configurare i qualificatori delle risorse (come illustrato di seguito).
 
@@ -153,11 +153,11 @@ L'icona **delle impostazioni della barra delle azioni** è disponibile a sinistr
 
 Questa icona consente di aprire una finestra di dialogo in cui è possibile selezionare una delle tre modalità Barra delle azioni:
 
--   **Standard** &ndash; È costituito da un logo o da un'icona e un testo del titolo con un sottotitolo facoltativo.
+- **Standard** &ndash; È costituito da un logo o da un'icona e un testo del titolo con un sottotitolo facoltativo.
 
--   **Elenco** di &ndash; Modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
+- **Elenco** di &ndash; Modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
 
--   **Schede** di &ndash; Modalità di spostamento a schede. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
+- **Schede** di &ndash; Modalità di spostamento a schede. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
 
 ## <a name="themes"></a>Themes
 

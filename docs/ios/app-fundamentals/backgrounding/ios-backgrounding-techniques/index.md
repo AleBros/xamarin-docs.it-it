@@ -1,25 +1,25 @@
 ---
 title: Tecniche di elaborazione in background in iOS
-description: 'Questo documento i collegamenti alle guide che descrivono diverse tecniche backgrounding in iOS: attività in background, il servizio di trasferimento in background, recupero in background e le notifiche remote.'
+description: 'Questo documento contiene collegamenti a guide che descrivono diverse tecniche di background in iOS: attività in background, servizio trasferimento in background, recupero in background e notifiche remote.'
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 00cca0c75cc79858f6edda5d6fb954611d81161b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e438ed1a2367dee722a0129fce2e44f5083b757a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169607"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521290"
 ---
 # <a name="ios-backgrounding-techniques"></a>Tecniche di elaborazione in background in iOS
 
-Nelle sezioni seguenti, esamineremo le seguenti funzionalità di iOS con le opzioni backgrounding esistente:
+Nelle sezioni seguenti si esamineranno le seguenti funzionalità di iOS insieme alle opzioni di background esistenti:
 
--  [Le attività in Background opportunistici](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background_tasks_in_iOS_7) -preservare la durata della batteria eseguendo le attività in background in base a blocchi opportunistici quando il dispositivo è attivo per altri tipi di elaborazione.
--  [Servizio di trasferimento in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background-transfers) : in modo affidabile caricare e scaricare i file, indipendentemente dalle dimensioni dello stato o un file di rete.
--  [Recupero di sfondo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#background_fetch) -aggiornare un'applicazione da background a intervalli determinati dal sistema.
--  [Notifiche remote](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#remote_notifications) -notifiche push utilizzare per attivare gli aggiornamenti del contenuto in background prima che l'utente apre l'applicazione, con un'opzione per notificare all'utente o l'aggiornamento invisibile all'utente.
--  **Aggiornamenti dell'interfaccia utente di sfondo** : preparare l'applicazione dell'interfaccia utente per l'utente e aggiornare snapshot dell'applicazione, tutto dallo sfondo.
+- [Attività in background opportunistico](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background_tasks_in_iOS_7) : preservare la durata della batteria eseguendo attività in background in blocchi opportunistici quando il dispositivo è sveglio per altre elaborazioni.
+- [Servizio trasferimento in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md#background-transfers) : caricare e scaricare i file in modo affidabile indipendentemente dallo stato della rete o dalle dimensioni del file.
+- [Recupero in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#background_fetch) : aggiornare un'applicazione dallo sfondo a intervalli determinati dal sistema.
+- [Notifiche remote](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md#remote_notifications) : usare le notifiche push per attivare gli aggiornamenti del contenuto in background prima che l'utente apra l'applicazione, con un'opzione per inviare una notifica all'utente o aggiornarla in modo invisibile all'utente.
+- **Aggiornamenti dell'interfaccia utente in background** : preparare l'interfaccia utente dell'applicazione per l'utente e aggiornare lo snapshot dell'applicazione in background.

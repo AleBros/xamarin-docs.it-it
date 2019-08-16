@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 1c3be128749b9fd0f67aa83038b3d30f4b2fcd2d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7fe03fbbdff02df9494317abe223ede5ed386c48
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657535"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528934"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barre schede e controller di barra schede in xamarin. IOS
 
@@ -26,8 +26,8 @@ Verrà esaminato uso schede qui usando una procedura dettagliata di una semplice
 
 Il `UITabBarController` supporta lo sviluppo di applicazioni a schede dalle condizioni seguenti:
 
--  Che consente più controller da aggiungere ad esso.
--  Fornisce un'interfaccia utente a schede, tramite il `UITabBar` (classe), per consentire all'utente di spostarsi tra i controller e le visualizzazioni. 
+- Che consente più controller da aggiungere ad esso.
+- Fornisce un'interfaccia utente a schede, tramite il `UITabBar` (classe), per consentire all'utente di spostarsi tra i controller e le visualizzazioni. 
 
 
 Controller vengono aggiunti al `UITabBarController` tramite il `ViewControllers` proprietà, ovvero un `UIViewController` matrice. Il `UITabBarController` stesso gestisce il caricamento del controller corretto e presentare la visualizzazione in base al scheda selezionata.
@@ -69,9 +69,9 @@ Il `TabController` classe conterrà l'implementazione del `UITabBarController` c
 
 Per implementare il `UITabBarController` dobbiamo eseguire le operazioni seguenti:
 
-1.  Impostare la classe di base di `TabController` a `UITabBarController` . 
-1.  Creare `UIViewController` istanze da aggiungere al `TabController` . 
-1.  Aggiungere il `UIViewController` istanze in una matrice assegnata per il `ViewControllers` proprietà del `TabController` . 
+1. Impostare la classe di base di `TabController` a `UITabBarController` . 
+1. Creare `UIViewController` istanze da aggiungere al `TabController` . 
+1. Aggiungere il `UIViewController` istanze in una matrice assegnata per il `ViewControllers` proprietà del `TabController` . 
 
 
 Aggiungere il codice seguente per il `TabController` classe per ottenere questi passaggi:
@@ -283,8 +283,8 @@ Successivamente, si creerà una semplice interfaccia utente per ognuna delle vis
 
 Si vuole trascinare un `Label` e una `Button` in ViewController1 dal **della casella degli strumenti** sul lato destro. Successivamente si userà il riquadro delle proprietà per modificare il nome e il testo dei controlli al seguente:
 
--  **Etichetta** : `Text` = **Uno**
--  **Pulsante** : `Title` = **L'utente esegue un'azione iniziale**
+- **Etichetta** : `Text` = **Uno**
+- **Pulsante** : `Title` = **L'utente esegue un'azione iniziale**
 
 
 Si verrà controllata la visibilità del pulsante in un `TouchUpInside` evento ed è necessario fare riferimento a esso nel code-behind. È possibile identificare con il **Name** `aButton` nel riquadro delle proprietà, come illustrato nello screenshot seguente:

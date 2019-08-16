@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 11bca4bc74316f87ab7b329c897efcd4b768bc03
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f81a9d232e1702d112e837a80d35403162e3adca
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657112"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529338"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Da Data Binding a MVVM
 
@@ -304,26 +304,26 @@ Tuttavia, in alcuni casi la vista deve contenere i pulsanti per attivano azioni 
 
 Per consentire ViewModel essere più indipendente di oggetti dell'interfaccia utente specifico, ma consentire comunque i metodi da chiamare all'interno di ViewModel, un *comando* interfaccia esistente. Questa interfaccia di comando è supportata dai seguenti elementi in xamarin. Forms:
 
--  `Button`
--  `MenuItem`
--  `ToolbarItem`
--  `SearchBar`
--  `TextCell` (e pertanto anche `ImageCell`)
--  `ListView`
--  `TapGestureRecognizer`
+- `Button`
+- `MenuItem`
+- `ToolbarItem`
+- `SearchBar`
+- `TextCell` (e pertanto anche `ImageCell`)
+- `ListView`
+- `TapGestureRecognizer`
 
 Fatta eccezione per il `SearchBar` e `ListView` elemento, questi elementi definiscono due proprietà:
 
--  `Command` di tipo  `System.Windows.Input.ICommand`
--  `CommandParameter` di tipo  `Object`
+- `Command` di tipo  `System.Windows.Input.ICommand`
+- `CommandParameter` di tipo  `Object`
 
 Il `SearchBar` definisce `SearchCommand` e `SearchCommandParameter` delle proprietà, mentre il `ListView` definisce una `RefreshCommand` vlastnosti typu `ICommand`.
 
 Il `ICommand` interfaccia definisce un evento e due metodi:
 
--  `void Execute(object arg)`
--  `bool CanExecute(object arg)`
--  `event EventHandler CanExecuteChanged`
+- `void Execute(object arg)`
+- `bool CanExecute(object arg)`
+- `event EventHandler CanExecuteChanged`
 
 L'elemento ViewModel può definire le proprietà di tipo `ICommand`. È quindi possibile associare queste proprietà per il `Command` proprietà della ognuno `Button` o altro elemento, o forse una visualizzazione personalizzata che implementa questa interfaccia. È anche possibile impostare il `CommandParameter` proprietà per identificare i singoli `Button` oggetti (o altri elementi) sono associati a questa proprietà ViewModel. Internamente, il `Button` chiamate il `Execute` metodo ogni volta che l'utente tocca il `Button`, passando al `Execute` metodo relativo `CommandParameter`.
 

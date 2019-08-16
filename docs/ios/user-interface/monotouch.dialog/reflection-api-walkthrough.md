@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 9dc98480d57dc7d4883306e9f4fc530599af9bd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6482d0626874b3f2ca5e90efb0e376be60551fd7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652413"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528455"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creazione di un'applicazione Novell. iOS tramite l'API Reflection
 
@@ -26,9 +26,9 @@ Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante d
 
 L'uso dell'API di Reflection è semplice quanto segue:
 
-1.  Creazione di una classe decorata con MT. Attributi D.
-1.  Creazione di `BindingContext` un'istanza di, passaggio di un'istanza della classe precedente. 
-1.  Creazione di `DialogViewController` un oggetto, passandogli. `BindingContext’s` `RootElement` 
+1. Creazione di una classe decorata con MT. Attributi D.
+1. Creazione di `BindingContext` un'istanza di, passaggio di un'istanza della classe precedente. 
+1. Creazione di `DialogViewController` un oggetto, passandogli. `BindingContext’s` `RootElement` 
 
 
 Viene ora esaminato un esempio per illustrare come usare l'API di Reflection. In questo esempio verrà creata una schermata di immissione dati semplice, come illustrato di seguito:

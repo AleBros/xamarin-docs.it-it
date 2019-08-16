@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 30e471174d30e58b126c174fd4eacfdbe87d97b0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646053"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522182"
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
@@ -25,11 +25,11 @@ Un'app Android impiega un po' di tempo per l'avvio, specialmente durante la prim
 
 Questa guida illustra una tecnica per implementare una schermata iniziale in un'applicazione Android. Vengono illustrati i passaggi seguenti:
 
-1.  Creazione di una risorsa disegnatore per la schermata iniziale.
+1. Creazione di una risorsa disegnatore per la schermata iniziale.
 
-2.  Definizione di un nuovo tema che visualizzerà la risorsa che può essere disegnato.
+2. Definizione di un nuovo tema che visualizzerà la risorsa che può essere disegnato.
 
-3.  Aggiunta di una nuova attività all'applicazione che verrà usata come schermata iniziale definita dal tema creato nel passaggio precedente.
+3. Aggiunta di una nuova attività all'applicazione che verrà usata come schermata iniziale definita dal tema creato nel passaggio precedente.
 
 [![Schermata iniziale del logo Novell di esempio seguita dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
@@ -178,11 +178,11 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
     </layer-list>
     ```
 
-3.  Creare la cartella Resources **/values-Land** se non esiste già.
+3. Creare la cartella Resources **/values-Land** se non esiste già.
 
-4.  Aggiungere i file **Colors. XML** e **Style. XML** a **values-Land** , che possono essere copiati e modificati dai file **values/Colors. XML** e **values/Style. XML** esistenti.
+4. Aggiungere i file **Colors. XML** e **Style. XML** a **values-Land** , che possono essere copiati e modificati dai file **values/Colors. XML** e **values/Style. XML** esistenti.
 
-5.  Modificare **values-Land/Style. XML** in modo che usi la versione orizzontale dell'oggetto disegnabile per `windowBackground`. In questo esempio viene usato **splash_screen_land. XML** :
+5. Modificare **values-Land/Style. XML** in modo che usi la versione orizzontale dell'oggetto disegnabile per `windowBackground`. In questo esempio viene usato **splash_screen_land. XML** :
 
     ```xml
     <resources>
@@ -200,7 +200,7 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
     </resources>
     ```
 
-6.  Modificare **values-Land/Colors. XML** per configurare i colori che si desidera utilizzare per la versione orizzontale della schermata iniziale. In questo esempio, il colore di sfondo iniziale viene modificato in blu per la modalità orizzontale:
+6. Modificare **values-Land/Colors. XML** per configurare i colori che si desidera utilizzare per la versione orizzontale della schermata iniziale. In questo esempio, il colore di sfondo iniziale viene modificato in blu per la modalità orizzontale:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,7 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
     </resources>
     ```
 
-7.  Compilare ed eseguire nuovamente l'app. Ruotare il dispositivo in modalità orizzontale mentre è ancora visualizzata la schermata iniziale. La schermata iniziale passa alla versione orizzontale:
+7. Compilare ed eseguire nuovamente l'app. Ruotare il dispositivo in modalità orizzontale mentre è ancora visualizzata la schermata iniziale. La schermata iniziale passa alla versione orizzontale:
 
     [![Rotazione della schermata iniziale in modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 

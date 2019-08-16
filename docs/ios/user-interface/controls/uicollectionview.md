@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 256f38b4e08b1a7cb91b0a0a977ef222f7affbb4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 871020ff1f69edc20b582806a584dfd51982d336
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642878"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528600"
 ---
 # <a name="collection-views-in-xamarinios"></a>Viste di raccolta in Novell. iOS
 
@@ -28,9 +28,9 @@ iOS fornisce una classe layout denominata `UICollectionViewFlowLayout` che conse
 
 La `UICollectionView` classe è costituita da tre elementi diversi:
 
--  **Celle** : viste basate sui dati per ogni elemento
--  **Visualizzazioni aggiuntive** : viste basate sui dati associate a una sezione.
--  **Visualizzazioni di decorazione** : viste non basate sui dati create da un layout
+- **Celle** : viste basate sui dati per ogni elemento
+- **Visualizzazioni aggiuntive** : viste basate sui dati associate a una sezione.
+- **Visualizzazioni di decorazione** : viste non basate sui dati create da un layout
 
 ## <a name="cells"></a>Celle
 
@@ -40,9 +40,9 @@ Le celle sono oggetti che rappresentano un singolo elemento nel set di dati pres
 
 La `UICollectionViewCell` classe dispone delle proprietà seguenti per ognuna di queste visualizzazioni:
 
--   `ContentView`: Questa vista contiene il contenuto presente nella cella. Viene eseguito il rendering nell'ordine z in primo piano sullo schermo.
--   `SelectedBackgroundView`: Le celle hanno incorporato il supporto per la selezione. Questa vista consente di indicare visivamente che è selezionata una cella. Ne viene eseguito il rendering immediatamente `ContentView` dopo la selezione di una cella.
--   `BackgroundView`: Le celle possono anche visualizzare uno sfondo, presentato da `BackgroundView` . Questa vista viene sottoposta `SelectedBackgroundView` a rendering sotto.
+- `ContentView`: Questa vista contiene il contenuto presente nella cella. Viene eseguito il rendering nell'ordine z in primo piano sullo schermo.
+- `SelectedBackgroundView`: Le celle hanno incorporato il supporto per la selezione. Questa vista consente di indicare visivamente che è selezionata una cella. Ne viene eseguito il rendering immediatamente `ContentView` dopo la selezione di una cella.
+- `BackgroundView`: Le celle possono anche visualizzare uno sfondo, presentato da `BackgroundView` . Questa vista viene sottoposta `SelectedBackgroundView` a rendering sotto.
 
 
 Impostando su `ContentView` un valore inferiore `BackgroundView` rispetto a e `SelectedBackgroundView`, è possibile utilizzare `BackgroundView` l'oggetto per incorniciare visivamente il contenuto, mentre l' `SelectedBackgroundView` oggetto verrà visualizzato quando viene selezionata una cella, come illustrato di seguito:
@@ -142,10 +142,10 @@ Le visualizzazioni di decorazione sono visualizzazioni puramente visive che poss
 
 Come per le altre parti di iOS, ad `UITableView` esempio `MKMapView`e `UICollectionView` , ottiene i dati da un' *origine dati*esposta in Novell. iOS tramite la **`UICollectionViewDataSource`** classe. Questa classe è responsabile della fornitura di contenuto a `UICollectionView` , ad esempio:
 
--  **Celle** : restituite `GetCell` dal metodo.
--  **Viste supplementari** : restituite dal `GetViewForSupplementaryElement` metodo.
--  **Numero di sezioni** : restituite `NumberOfSections` dal metodo. Il valore predefinito è 1 se non è implementato.
--  **Numero di elementi per sezione** : restituiti dal `GetItemsCount` metodo.
+- **Celle** : restituite `GetCell` dal metodo.
+- **Viste supplementari** : restituite dal `GetViewForSupplementaryElement` metodo.
+- **Numero di sezioni** : restituite `NumberOfSections` dal metodo. Il valore predefinito è 1 se non è implementato.
+- **Numero di elementi per sezione** : restituiti dal `GetItemsCount` metodo.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 Per praticità, `UICollectionViewController` la classe è disponibile. Questa configurazione viene configurata automaticamente in modo che sia il delegato, illustrato nella sezione successiva, e l'origine dati `UICollectionView` per la visualizzazione.
@@ -193,9 +193,9 @@ In questo caso, registrando la `AnimalCell` classe, iOS creerà un nuovo `Animal
 
 La `UICollectionView` classe usa un delegato di tipo `UICollectionViewDelegate` per supportare l'interazione con il `UICollectionView`contenuto in. Questo consente il controllo di:
 
--  **Selezione cella** : determina se una cella è selezionata.
--  **Evidenziazione celle** : determina se è in corso il tocco di una cella.
--  Menu **delle celle** : menu visualizzato per una cella in risposta a un movimento di pressione lungo.
+- **Selezione cella** : determina se una cella è selezionata.
+- **Evidenziazione celle** : determina se è in corso il tocco di una cella.
+- Menu **delle celle** : menu visualizzato per una cella in risposta a un movimento di pressione lungo.
 
 
 Come per l'origine dati, `UICollectionViewController` è configurato per impostazione predefinita come delegato per l'oggetto. `UICollectionView`
@@ -250,9 +250,9 @@ Quando l'evidenziazione è disabilitata, viene disabilitato anche il processo di
 
 Ogni cella in un `UICollectionView` è in grado di visualizzare un menu che consente facoltativamente di eseguire operazioni Taglia, copia e incolla. Per creare un menu modifica in una cella:
 
-1.  Eseguire `ShouldShowMenu` l'override di e restituire true se l'elemento deve visualizzare un menu.
-1.  Eseguire `CanPerformAction` l'override di e restituire true per ogni azione che l'elemento è in grado di eseguire, che sarà qualsiasi taglia, copia o Incolla.
-1.  Eseguire `PerformAction` l'override di per eseguire la modifica copia dell'operazione Incolla.
+1. Eseguire `ShouldShowMenu` l'override di e restituire true se l'elemento deve visualizzare un menu.
+1. Eseguire `CanPerformAction` l'override di e restituire true per ogni azione che l'elemento è in grado di eseguire, che sarà qualsiasi taglia, copia o Incolla.
+1. Eseguire `PerformAction` l'override di per eseguire la modifica copia dell'operazione Incolla.
 
 
 Lo screenshot seguente mostra il menu quando si preme lungo una cella:
@@ -274,8 +274,8 @@ Utilizzando il sistema di layout, un'applicazione può supportare layout come la
 
 I layout in un `UICollectionView` oggetto sono definiti in una classe che eredita `UICollectionViewLayout`da. L'implementazione del layout è responsabile della creazione degli attributi di layout per ogni elemento `UICollectionView`in. Esistono due modi per creare un layout:
 
--  Utilizzare l'oggetto incorporato `UICollectionViewFlowLayout` .
--  Fornire un layout personalizzato ereditando da `UICollectionViewLayout` .
+- Utilizzare l'oggetto incorporato `UICollectionViewFlowLayout` .
+- Fornire un layout personalizzato ereditando da `UICollectionViewLayout` .
 
 
  <a name="Flow_Layout" />
@@ -287,14 +287,14 @@ La `UICollectionViewFlowLayout` classe fornisce un layout basato su riga che è 
 
 Per usare un layout di flusso:
 
--  Creare un'istanza di `UICollectionViewFlowLayout` :
+- Creare un'istanza di `UICollectionViewFlowLayout` :
 
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
--  Passare l'istanza al costruttore dell'oggetto `UICollectionView` :
+- Passare l'istanza al costruttore dell'oggetto `UICollectionView` :
 
 
 ```csharp
@@ -332,10 +332,10 @@ Nell'edizione a cui `UICollectionViewFlowLayout` si utilizza direttamente, può 
 
 Per implementare questa operazione tramite la sottoclasse `UICollectionViewFlowLayout` è necessario:
 
--  Inizializzazione di tutte le proprietà di layout valide per il layout stesso o per tutti gli elementi nel layout del costruttore.
--  Eseguendo l' `ShouldInvalidateLayoutForBoundsChange` override di, restituendo true in modo che quando `UICollectionView` i limiti delle modifiche cambiano, il layout delle celle verrà ricalcolato. Questa operazione viene utilizzata in questo caso per garantire che il codice per la trasformazione applicato alla cella effettuare venga applicato durante lo scorrimento.
--  Eseguire l' `TargetContentOffset` override di per fare in modo che lo snap della cella `UICollectionView` effettuare al centro di come si interrompe lo scorrimento.
--  Override `LayoutAttributesForElementsInRect` per restituire una matrice di `UICollectionViewLayoutAttributes` . Ogni `UICollectionViewLayoutAttribute` contiene informazioni su come eseguire il layout di un particolare elemento, incluse proprietà quali `Center` , `Size` `ZIndex` e `Transform3D` .
+- Inizializzazione di tutte le proprietà di layout valide per il layout stesso o per tutti gli elementi nel layout del costruttore.
+- Eseguendo l' `ShouldInvalidateLayoutForBoundsChange` override di, restituendo true in modo che quando `UICollectionView` i limiti delle modifiche cambiano, il layout delle celle verrà ricalcolato. Questa operazione viene utilizzata in questo caso per garantire che il codice per la trasformazione applicato alla cella effettuare venga applicato durante lo scorrimento.
+- Eseguire l' `TargetContentOffset` override di per fare in modo che lo snap della cella `UICollectionView` effettuare al centro di come si interrompe lo scorrimento.
+- Override `LayoutAttributesForElementsInRect` per restituire una matrice di `UICollectionViewLayoutAttributes` . Ogni `UICollectionViewLayoutAttribute` contiene informazioni su come eseguire il layout di un particolare elemento, incluse proprietà quali `Center` , `Size` `ZIndex` e `Transform3D` .
 
 
 Nel codice seguente viene illustrata un'implementazione di questo tipo:
@@ -416,9 +416,9 @@ Oltre a usare `UICollectionViewFlowLayout`, i layout possono anche essere comple
 
 I metodi principali per eseguire l'override sono:
 
--   `PrepareLayout`: Usato per l'esecuzione di calcoli geometrici iniziali che verranno usati durante il processo di layout.
--   `CollectionViewContentSize`: Restituisce le dimensioni dell'area utilizzata per visualizzare il contenuto.
--   `LayoutAttributesForElementsInRect`: Come per l'esempio UICollectionViewFlowLayout illustrato in precedenza, questo metodo viene usato per fornire informazioni alla `UICollectionView` relativa modalità di layout di ogni elemento. Tuttavia, a differenza di `UICollectionViewFlowLayout` , quando si crea un layout personalizzato, è possibile posizionare gli elementi comunque.
+- `PrepareLayout`: Usato per l'esecuzione di calcoli geometrici iniziali che verranno usati durante il processo di layout.
+- `CollectionViewContentSize`: Restituisce le dimensioni dell'area utilizzata per visualizzare il contenuto.
+- `LayoutAttributesForElementsInRect`: Come per l'esempio UICollectionViewFlowLayout illustrato in precedenza, questo metodo viene usato per fornire informazioni alla `UICollectionView` relativa modalità di layout di ogni elemento. Tuttavia, a differenza di `UICollectionViewFlowLayout` , quando si crea un layout personalizzato, è possibile posizionare gli elementi comunque.
 
 
 Ad esempio, lo stesso contenuto può essere presentato in un layout circolare come illustrato di seguito:

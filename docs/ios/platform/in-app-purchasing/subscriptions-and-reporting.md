@@ -1,72 +1,72 @@
 ---
-title: Le sottoscrizioni e gestione rapporti in xamarin. IOS
-description: Questo documento descrive non rinnovare le sottoscrizioni, le sottoscrizioni gratuite, rinnovabile automatica delle sottoscrizioni e tramite iTunes Connect per eseguire segnalazioni su questi elementi.
+title: Sottoscrizioni e creazione di report in Novell. iOS
+description: Questo documento descrive le sottoscrizioni senza rinnovo, le sottoscrizioni gratuite, le sottoscrizioni rinnovate automaticamente e l'uso di iTunes Connect per creare report su questi elementi.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 44dd2b2eea31f47ed53d8ef25ff7b0667286179d
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: ea016860bc30d9f6b70f41b85db09bf5544304ba
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674551"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528285"
 ---
-# <a name="subscriptions-and-reporting-in-xamarinios"></a>Le sottoscrizioni e gestione rapporti in xamarin. IOS
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Novell. iOS
 
-## <a name="about-non-renewing-subscriptions"></a>Su Non-rinnovo degli abbonamenti
+## <a name="about-non-renewing-subscriptions"></a>Informazioni sulle sottoscrizioni senza rinnovo
 
-Le sottoscrizioni con rinnovo non sono pensate per i prodotti che rappresentano le vendite di un servizio con una restrizione di tempo, ad esempio (accesso di una settimana a un'applicazione di navigazione) o accesso temporaneo a un archivio dati.   
+Le sottoscrizioni che non si rinnovano sono destinate ai prodotti che rappresentano la vendita di un servizio con una restrizione temporale, ad esempio l'accesso a una settimana a un'applicazione di navigazione o l'accesso limitato al tempo a un archivio dati.   
    
-Differenze principali tra le sottoscrizioni non rinnovo e altri tipi di prodotto:
+Differenze principali tra sottoscrizioni non di rinnovo e altri tipi di prodotto:
 
--  La definizione di prodotto in iTunes Connect non include il termine. Il codice dell'applicazione deve essere in grado di dedurre il periodo di validità dall'ID del prodotto. 
--  Essi possono essere acquistati più volte (ad esempio, un prodotto può essere utilizzato). Le applicazioni sono necessarie per gestire la sottoscrizione termini/scadenza e il rinnovo e impedisce all'utente di acquisto di sottoscrizioni sovrapposte. 
--  Gli acquisti non sono supportati dalla funzione di StoreKit ripristinare. Se la sottoscrizione deve essere disponibile in tutti i dispositivi dell'utente, l'applicazione sarà necessario progettare e implementare questa funzionalità in combinazione con un server remoto. Le applicazioni sono anche responsabili backup lo stato della sottoscrizione per i casi quando un dispositivo risulta sottoposto a backup quindi ripristinato dal-backup. 
--  Panoramica dell'implementazione
--  Le sottoscrizioni con rinnovo non devono essere implementate in genere usando il flusso di lavoro fornita dal Server e gestiti, ad esempio prodotti di consumo. 
-
-
-## <a name="about-free-subscriptions"></a>Sulle sottoscrizioni gratuite
-
-Le sottoscrizioni gratuite consentono agli sviluppatori di inserire il contenuto disponibile nelle app di Newsstand (non possono essere utilizzate nelle App non Newsstand). Dopo aver avviata una sottoscrizione gratuita sarà disponibile in tutti i dispositivi dell'utente. Le sottoscrizioni gratuite scadono mai. scadono solo quando viene disinstallata l'applicazione.
-
-### <a name="implementation-overview"></a>Panoramica dell'implementazione
-
-Le sottoscrizioni gratuite si comportano più come rinnovabile automaticamente le sottoscrizioni. L'applicazione deve avere un prodotto di sottoscrizione gratuita disponibile per "purchase" in iTunes Connect. Quando si è acquistato dall'utente, l'acquisto dell'abbonamento gratuito deve essere convalidato, ad esempio un prodotto di sottoscrizione automatica rinnovabile. È possibile ripristinare le transazioni di sottoscrizione gratuita.
+- La definizione di prodotto in iTunes Connect non include il termine. Il codice dell'applicazione deve essere in grado di dedurre il periodo di validità dall'ID prodotto. 
+- Possono essere acquistati più volte (ad esempio un prodotto consumabile). Le applicazioni sono necessarie per gestire i termini della sottoscrizione, la scadenza e il rinnovo e impediscono all'utente di acquistare sottoscrizioni sovrapposte. 
+- Gli acquisti non sono supportati dalla funzione di ripristino StoreKit. Se la sottoscrizione deve essere disponibile in tutti i dispositivi di un utente, l'applicazione dovrà progettare e implementare questa funzionalità in combinazione con un server remoto. Le applicazioni sono anche responsabili del backup dello stato della sottoscrizione nei casi in cui viene eseguito il backup di un dispositivo, quindi il ripristino da un backup. 
+- Panoramica dell'implementazione
+- Le sottoscrizioni che non si rinnovano in genere devono essere implementate tramite il flusso di lavoro distribuito dal server e gestite come prodotti utilizzabili. 
 
 
-## <a name="about-auto-renewable-subscriptions"></a>Informazioni sulle sottoscrizioni rinnovabile automatico
+## <a name="about-free-subscriptions"></a>Informazioni sulle sottoscrizioni gratuite
 
-Auto-rinnovabile sottoscrizioni vengono principalmente utilizzate nelle applicazioni Newsstand. Rappresentano un prodotto che concede all'utente l'accesso al contenuto dinamico per un determinato periodo di tempo, viene configurata in iTunes Connect (impostare periodi che variano da 7 giorni per 1 anno). Le sottoscrizioni vengono rinnovate automaticamente, l'addebito ha l'ID Apple gli utenti alla fine di ogni periodo di sottoscrizione, a meno che l'utente rifiuta esplicitamente. Questo tipo di prodotto funziona bene per le sottoscrizioni di rivista o notizie, in cui l'utente ottiene accesso a ogni problema pubblicato mentre l'abbonamento è valido.
+Le sottoscrizioni gratuite consentono agli sviluppatori di inserire contenuti gratuiti nelle app in edicola (non possono essere usati nelle app non in edicola). Una volta avviata, una sottoscrizione gratuita sarà disponibile su tutti i dispositivi dell'utente. Le sottoscrizioni gratuite non scadono mai; terminano solo quando viene disinstallata l'applicazione.
 
 ### <a name="implementation-overview"></a>Panoramica dell'implementazione
 
-Sottoscrizioni rinnovabile automatico deve essere implementate usando il flusso di lavoro prodotti Server-Delivered (fare riferimento al *ricezione verifica e prodotti Server-Delivered* sezione).
+Le sottoscrizioni gratuite si comportano come le sottoscrizioni rinnovabili automaticamente. L'applicazione deve disporre di un prodotto di sottoscrizione gratuita disponibile per l'acquisto in iTunes Connect. Quando viene acquistato dall'utente, l'acquisto di sottoscrizioni gratuite deve essere convalidato come prodotto di sottoscrizione rinnovata automaticamente. È possibile ripristinare le transazioni di sottoscrizione gratuite.
+
+
+## <a name="about-auto-renewable-subscriptions"></a>Informazioni sulle sottoscrizioni rinnovate automaticamente
+
+Le sottoscrizioni rinnovate automaticamente vengono usate principalmente nelle applicazioni edicole. Rappresentano un prodotto che concede all'utente l'accesso al contenuto dinamico per un determinato periodo di tempo, configurato in iTunes Connect (set di periodi compresi tra 7 giorni e 1 anno). Le sottoscrizioni vengono rinnovate automaticamente, addebitando l'ID Apple degli utenti alla fine di ogni periodo di sottoscrizione, a meno che l'utente non opti esplicitamente. Questo tipo di prodotto funziona bene per le sottoscrizioni di riviste o notizie, in cui l'utente ottiene l'accesso a ogni problema pubblicato mentre la sottoscrizione è valida.
+
+### <a name="implementation-overview"></a>Panoramica dell'implementazione
+
+Le sottoscrizioni rinnovate automaticamente devono essere implementate usando il flusso di lavoro dei prodotti distribuiti dal server (vedere la sezione *Verifica della ricezione e prodotti* recapitati dal server).
 
 #### <a name="shared-secret"></a>Segreto condiviso
 
-Il segreto condiviso acquisto In-App deve essere utilizzato nella richiesta JSON durante la verifica automatica rinnovabile sottoscrizioni nel server. Il segreto condiviso viene creato o accedervi tramite iTunes Connect.
+Il segreto condiviso di acquisto in-app deve essere usato nella richiesta JSON quando si verificano sottoscrizioni rinnovabili automaticamente nel server. Il segreto condiviso viene creato/accessibile tramite iTunes Connect.
 
-Da iTunes Connect pagina iniziale selezionare **My Apps**:   
+Dal home page iTunes Connect selezionare **app personali**:   
    
  [![](subscriptions-and-reporting-images/image2.png "Selezionare le app personali")](subscriptions-and-reporting-images/image2.png#lightbox)  
  
-Selezionare un'applicazione e fare clic sui **acquisti In-App** scheda:
+Selezionare un'applicazione e fare clic sulla scheda **acquisti in-app** :
 
-[![](subscriptions-and-reporting-images/image6.png "Fare clic sulla scheda gli acquisti In-App")](subscriptions-and-reporting-images/image6.png#lightbox)
+[![](subscriptions-and-reporting-images/image6.png "Fare clic sulla scheda acquisti in-app")](subscriptions-and-reporting-images/image6.png#lightbox)
 
-Nella parte inferiore della pagina, selezionare **visualizzazione o generare una chiave privata condivisa**:
+Nella parte inferiore della pagina selezionare **Visualizza o genera un segreto condiviso**:
    
- [![](subscriptions-and-reporting-images/image40.png "Selezionare Vista o generare una chiave privata condivisa")](subscriptions-and-reporting-images/image40.png#lightbox)
+ [![](subscriptions-and-reporting-images/image40.png "Selezionare Visualizza o genera un segreto condiviso")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "Generare un segreto condiviso")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image41.png "Genera un segreto condiviso")](subscriptions-and-reporting-images/image41.png#lightbox)   
    
    
    
- Per usare il segreto condiviso, includerlo nel payload JSON che vengono inviati ai server di Apple durante la convalida di una conferma di acquisto in-app per una sottoscrizione di auto-rinnovabile, simile al seguente:
+ Per usare il segreto condiviso, includerlo nel payload JSON che viene inviato ai server Apple quando si convalida una ricevuta di acquisto in-app per una sottoscrizione rinnovabile automaticamente, come indicato di seguito:
 
 ```csharp
 {
@@ -75,11 +75,11 @@ Nella parte inferiore della pagina, selezionare **visualizzazione o generare una
 }
 ```
 
-Campo relativo allo stato della risposta sarà zero se l'acquisto è valido, come con altri tipi di prodotto.
+Il campo di stato della risposta sarà zero se l'acquisto è valido, come per gli altri tipi di prodotto.
 
-#### <a name="downloading-items-after-the-initial-subscription-term"></a>Download degli elementi dopo il termine sottoscrizione iniziale
+#### <a name="downloading-items-after-the-initial-subscription-term"></a>Download degli elementi dopo il termine iniziale della sottoscrizione
 
-Come parte della distribuzione di prodotti con sottoscrizione, il codice deve verificare spesso la ricezione nota più recente contro i server Apple. Se una sottoscrizione ha rinnovato automaticamente dopo l'ultima verifica, la risposta JSON contiene campi aggiuntivi che una notifica all'applicazione della transazione che si è verificata (che deve estendere la validità delle sottoscrizioni). Conterrà la risposta JSON:
+Nell'ambito della distribuzione dei prodotti di sottoscrizione, il codice deve verificare spesso l'ultima ricevuta nota rispetto ai server Apple. Se una sottoscrizione viene rinnovata automaticamente dopo l'ultima verifica, la risposta JSON conterrà campi aggiuntivi che notificano all'applicazione la transazione che si è verificata (che deve estendere la validità delle sottoscrizioni). La risposta JSON conterrà:
 
 ```csharp
 {
@@ -90,33 +90,33 @@ Come parte della distribuzione di prodotti con sottoscrizione, il codice deve ve
 }
 ```
 
-Se lo stato è zero la sottoscrizione sia ancora valida e gli altri campi contengono dati validi. Se lo stato è 21006 la sottoscrizione è scaduta. Vedere le [verifica una ricevuta di sottoscrizione automatica rinnovabile](https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) documentazione per gli altri codici di errore.
+Se lo stato è zero, la sottoscrizione è ancora valida e gli altri campi contengono dati validi. Se lo stato è 21006, la sottoscrizione è scaduta. Vedere la documentazione relativa alla [Verifica di una ricevuta di sottoscrizione rinnovata automaticamente](https://developer.apple.com/library/ios/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html) per altri codici di errore.
 
-#### <a name="restoring-auto-renewable-subscriptions"></a>Il ripristino automatico rinnovabile sottoscrizioni
+#### <a name="restoring-auto-renewable-subscriptions"></a>Ripristino di sottoscrizioni rinnovate automaticamente
 
-Si otterrà più transazioni, la transazione di acquisto originale nonché una transazione distinta per ogni periodo di tempo che è stato rinnovato l'abbonamento. È necessario tenere traccia delle date di inizio e termini per comprendere che cos'è il periodo di validità.   
+Si otterranno più transazioni: la transazione di acquisto originale più una transazione separata per ogni periodo di tempo in cui la sottoscrizione è stata rinnovata. È necessario tenere traccia delle date e dei termini di inizio per comprendere il periodo di validità.   
    
    
    
- L'oggetto SKPaymentTransaction non include il termine sottoscrizione, è necessario utilizzare un ID di prodotto diverso per ogni periodo di validità e scrivere codice che è possibile estrapolare il periodo di sottoscrizione dalla data di acquisto della transazione.
+ L'oggetto SKPaymentTransaction non include il periodo di validità della sottoscrizione. è necessario utilizzare un ID prodotto diverso per ogni termine e scrivere codice in grado di estrapolare il periodo di sottoscrizione dalla data di acquisto della transazione.
 
-#### <a name="testing-auto-renewal"></a>Test di rinnovo automatico
+#### <a name="testing-auto-renewal"></a>Test del rinnovo automatico
 
-Per renderne più semplice testare le sottoscrizioni, la loro durata viene compressi durante il test nell'ambiente sandbox. 1 settimana le sottoscrizioni vengono rinnovate ogni 3 minuti, le sottoscrizioni vengono rinnovate ogni ora 1 anno. Le sottoscrizioni verranno rinnovate automaticamente un massimo di 6 volte durante il test nell'ambiente sandbox.
+Per semplificare il test delle sottoscrizioni, le relative durate vengono compresse durante i test in sandbox. le sottoscrizioni di 1 settimana si rinnovano ogni 3 minuti, le sottoscrizioni di 1 anno si rinnovano ogni Le sottoscrizioni vengono rinnovate automaticamente per un massimo di 6 volte durante i test in sandbox.
 
-## <a name="reporting"></a>Reporting
+## <a name="reporting"></a>Report
 
-iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) fornisce:   
+iTunes Connect ( [iTunesConnect.Apple.com](http://itunesconnect.apple.com)) fornisce:   
    
- **Vendite e le tendenze** – download Visualizza i dettagli dell'app, gli aggiornamenti e acquisti in-app.   
+ **Vendite e tendenze** : Visualizza i dettagli relativi a download di app, aggiornamenti e acquisti in-app.   
    
- **Pagamenti e rendiconti finanziari** – illustra in dettaglio il reddito ottenuto tramite l'App, nonché listato pagamenti che sono stati apportati per te e per quanto presa.
+ **Pagamenti e report finanziari** : dettagli sul reddito guadagnato dalle app, oltre a elencare i pagamenti effettuati per l'utente e il relativo importo.
 
-Seguito è riportato un esempio di report di vendite e le tendenze:   
+Di seguito è riportato un esempio di report sulle vendite e le tendenze:   
 
- [![](subscriptions-and-reporting-images/image42.png "Un esempio di report di vendite e tendenze")](subscriptions-and-reporting-images/image42.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image42.png "Report vendite e tendenze di esempio")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
- È inoltre disponibile un' [ **Mobile Connect ITC**app per iOS (collegamento a iTunes)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
-di seguito sono riportati screenshot di iPhone per alcune delle statistiche disponibili:   
+ È disponibile anche un' [app per **dispositivi mobili iOS di ITC Connect**(collegamento iTunes)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
+gli screenshot di iPhone per alcune delle statistiche disponibili sono illustrati di seguito:   
    
- [![](subscriptions-and-reporting-images/image43.png "screenshot di iPhone per alcune delle statistiche disponibili")](subscriptions-and-reporting-images/image43.png#lightbox)
+ [![](subscriptions-and-reporting-images/image43.png "schermate di iPhone per alcune delle statistiche disponibili")](subscriptions-and-reporting-images/image43.png#lightbox)

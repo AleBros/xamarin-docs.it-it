@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: abc7bb09791df115536f552979b48a3a12b4f443
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646341"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522536"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Popolamento di un controllo ListView Novell. Android con dati
 
@@ -62,14 +62,14 @@ Ora l'utente può toccare una riga e verrà `Toast` visualizzato un avviso:
 `ArrayAdapter<string>`è molto grande grazie alla sua semplicità, ma è estremamente limitato. Tuttavia, spesso si ha una raccolta di entità di business, anziché solo le stringhe che si desidera associare.
 Se, ad esempio, i dati sono costituiti da una raccolta di classi Employee, è possibile che l'elenco visualizzi semplicemente i nomi di ogni dipendente. Per personalizzare il comportamento di un `ListView` oggetto per controllare quali dati vengono visualizzati, è necessario implementare una `BaseAdapter` sottoclasse dell'override dei quattro elementi seguenti:
 
--   **Numero** di &ndash; Per indicare al controllo il numero di righe presenti nei dati.
+- **Numero** di &ndash; Per indicare al controllo il numero di righe presenti nei dati.
 
--   **GetView** &ndash; Per restituire una visualizzazione per ogni riga, popolata con i dati.
+- **GetView** &ndash; Per restituire una visualizzazione per ogni riga, popolata con i dati.
     Questo metodo dispone di un parametro affinché `ListView` l'oggetto passi una riga esistente non utilizzata per riutilizzarla.
 
--   **GetItemID** &ndash; Restituisce un identificatore di riga, in genere il numero di riga, anche se può essere qualsiasi valore lungo desiderato.
+- **GetItemID** &ndash; Restituisce un identificatore di riga, in genere il numero di riga, anche se può essere qualsiasi valore lungo desiderato.
 
--   Questo indicizzatore &ndash; **[int]** per restituire i dati associati a un numero di riga specifico.
+- Questo indicizzatore &ndash; **[int]** per restituire i dati associati a un numero di riga specifico.
 
 Il codice di esempio in **BasicTableAdapter/HomeScreenAdapter. cs** Mostra come sottoclasse `BaseAdapter`:
 
@@ -159,11 +159,11 @@ Un indice di sezione fornisce commenti e suggerimenti aggiuntivi per gli utenti 
 
 Per implementare `ISectionIndexer` è necessario aggiungere tre metodi a un adapter:
 
--   GetSections &ndash; Fornisce l'elenco completo dei titoli degli indici di sezione che possono essere visualizzati. Questo metodo richiede una matrice di oggetti Java in modo che il codice debba creare `Java.Lang.Object[]` un oggetto da una raccolta .NET. Nell'esempio viene restituito un elenco dei caratteri iniziali nell'elenco come `Java.Lang.String` .
+- GetSections &ndash; Fornisce l'elenco completo dei titoli degli indici di sezione che possono essere visualizzati. Questo metodo richiede una matrice di oggetti Java in modo che il codice debba creare `Java.Lang.Object[]` un oggetto da una raccolta .NET. Nell'esempio viene restituito un elenco dei caratteri iniziali nell'elenco come `Java.Lang.String` .
 
--   **GetPositionForSection** &ndash; Restituisce la prima posizione di riga per un indice di sezione specificato.
+- **GetPositionForSection** &ndash; Restituisce la prima posizione di riga per un indice di sezione specificato.
 
--   **GetSectionForPosition** &ndash; Restituisce l'indice della sezione da visualizzare per una determinata riga.
+- **GetSectionForPosition** &ndash; Restituisce l'indice della sezione da visualizzare per una determinata riga.
 
 
 Il file `SectionIndex/HomeScreenAdapter.cs` di esempio implementa tali metodi e il codice aggiuntivo nel costruttore. Il costruttore compila l'indice della sezione eseguendo il ciclo di ogni riga ed estraendo il primo carattere del titolo (gli elementi devono essere già ordinati affinché questo funzioni).

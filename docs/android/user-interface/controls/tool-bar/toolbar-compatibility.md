@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: ce13532026e2c49cb733e5afc0f6abd41ff1abdd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 31602b14179691d13d8058c90cf20a6f7f667124
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645026"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522816"
 ---
 # <a name="toolbar-compatibility"></a>Compatibilità di Toolbar
 
@@ -24,13 +24,13 @@ Poiché `Toolbar` fa parte della libreria di supporto di Android V7, può essere
 
 Per modificare un'app per l'uso della versione AppCompat della barra degli strumenti: 
 
-1.  Impostare le versioni di Android minime e di destinazione per l'app.
+1. Impostare le versioni di Android minime e di destinazione per l'app.
 
-2.  Installare il pacchetto NuGet AppCompat.
+2. Installare il pacchetto NuGet AppCompat.
 
-3.  Usare un tema AppCompat invece di un tema Android incorporato.
+3. Usare un tema AppCompat invece di un tema Android incorporato.
 
-4.  Modificare `MainActivity` in modo che `AppCompatActivity` sottoclassi anziché `Activity`. 
+4. Modificare `MainActivity` in modo che `AppCompatActivity` sottoclassi anziché `Activity`. 
 
 Ognuno di questi passaggi è illustrato in dettaglio nelle sezioni seguenti.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 881590b7b2b7277a2f8f2cc17ce1c8bdff68c626
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655783"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528048"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit in Novell. iOS
 
@@ -22,8 +22,8 @@ EventKit Framework fornisce un modo per accedere ai *calendari*, *agli eventi de
 
 In questa guida verranno illustrate le operazioni seguenti:
 
--   **Nozioni di base su EventKit** : in questo modo si introdurranno le parti fondamentali di EventKit tramite le classi principali e ne viene fornita una conoscenza sul loro utilizzo. Questa sezione è obbligatoria per la lettura prima di affrontare la parte successiva del documento. 
--   **Attività comuni** : la sezione attività comuni è concepita come riferimento rapido su come eseguire operazioni comuni, ad esempio. l'enumerazione dei calendari, la creazione, il salvataggio e il recupero di eventi e promemoria del calendario, nonché l'utilizzo dei controller predefiniti per la creazione e la modifica di eventi del calendario. Questa sezione non deve essere letta in primo piano perché è concepita come riferimento per determinate attività. 
+- **Nozioni di base su EventKit** : in questo modo si introdurranno le parti fondamentali di EventKit tramite le classi principali e ne viene fornita una conoscenza sul loro utilizzo. Questa sezione è obbligatoria per la lettura prima di affrontare la parte successiva del documento. 
+- **Attività comuni** : la sezione attività comuni è concepita come riferimento rapido su come eseguire operazioni comuni, ad esempio. l'enumerazione dei calendari, la creazione, il salvataggio e il recupero di eventi e promemoria del calendario, nonché l'utilizzo dei controller predefiniti per la creazione e la modifica di eventi del calendario. Questa sezione non deve essere letta in primo piano perché è concepita come riferimento per determinate attività. 
 
 
 Tutte le attività di questa guida sono disponibili nell'applicazione di esempio complementare:

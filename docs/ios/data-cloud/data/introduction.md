@@ -1,76 +1,76 @@
 ---
-title: Introduzione ad archiviazione di dati nelle App xamarin. IOS
-description: Questo documento descrive vari meccanismi di archiviazione dei dati in un'applicazione xamarin. IOS e fornisce informazioni specifiche sui vantaggi di SQLite.
+title: Introduzione all'archiviazione dei dati nelle app Novell. iOS
+description: Questo documento descrive i vari metodi di archiviazione dei dati in un'applicazione Novell. iOS e fornisce informazioni specifiche sui vantaggi di SQLite.
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
-ms.openlocfilehash: 5df001926512b182c19ccfcf896057e88f5a597a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 375144804fceb473ec4642dbcf451497c55bcba7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650237"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527325"
 ---
-# <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introduzione ad archiviazione di dati nelle App xamarin. IOS
+# <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introduzione all'archiviazione dei dati nelle app Novell. iOS
 
-## <a name="when-to-use-a-database"></a>Quando usare un Database
+## <a name="when-to-use-a-database"></a>Quando utilizzare un database
 
-Mentre le funzionalità di elaborazione e archiviazione dei dispositivi mobili aumentano, telefoni e Tablet ancora ritardo delle loro desktop &amp; controparti portatile. Per questo motivo, vale la pena mettendo un po' per pianificare l'architettura di archiviazione dei dati per l'app, anziché solo supponendo che la soluzione giusta tutto il tempo è un database. Esistono una serie di opzioni diverse che soddisfare requisiti diversi, ad esempio:
+Mentre le funzionalità di archiviazione ed elaborazione dei dispositivi mobili aumentano, i telefoni e i tablet continuano a &amp; rimanere dietro le controparti del portatile desktop. Per questo motivo è opportuno prendere tempo per pianificare l'architettura di archiviazione dei dati per l'app piuttosto che solo supponendo che un database sia la risposta giusta sempre. Sono disponibili diverse opzioni che soddisfano requisiti diversi, ad esempio:
 
--  **Preferenze** – iOS offre un meccanismo predefinito per l'archiviazione di coppie chiave-valore semplice dei dati. Se si archiviano le impostazioni utente semplice o piccole porzioni di dati (ad esempio le informazioni sulla personalizzazione) usare le funzionalità native della piattaforma per l'archiviazione di questo tipo di informazioni. Per iOS è anche possibile sfruttare i vantaggi di iCloud sincronizzazione per questi dati, sia per il backup e sincronizzazione per gli utenti con più dispositivi.
--  **File di testo** – input dell'utente o le cache del contenuto (ad esempio scaricato HTML) possono essere archiviati direttamente nel file system. Usare una convenzione di denominazione dei file appropriata per organizzare i file e trovare i dati.
--  **I file di dati serializzati** : possono essere resi persistenti gli oggetti in formato XML o JSON nel file system. .NET framework include le librerie che semplificano la serializzazione e deserializzazione degli oggetti. Usare i nomi appropriati per organizzare i file di dati.
--  **Database** – di SQLite e motore di database disponibili iOS, è utile per archiviare dati strutturati che è necessario eseguire una query, ordinamento o modificare in altro modo. Archiviazione del database è adatta agli elenchi di dati con molte proprietà.
--  **File di immagine** : sebbene sia possibile archiviare i dati binari nel database in un dispositivo mobile, è consigliabile archiviarli direttamente nel file system. Se necessario è possibile archiviare i nomi di file in un database da associare l'immagine di altri dati. Quando si usano immagini di grandi dimensioni, o un numero elevato di immagini, è consigliabile pianificare una strategia di memorizzazione nella cache che elimina i file che non è più necessario per evitare un utilizzo spazio di archiviazione dell'utente.
-
-
-Se un database è il meccanismo di archiviazione corretto per l'app, il resto di questo documento viene illustrato come utilizzare SQLite nella piattaforma Xamarin.
-
-## <a name="advantages-of-using-a-database"></a>Vantaggi dell'uso di un Database
-
-Esistono numerosi vantaggi rispetto all'utilizzo di un database SQL in app per dispositivi mobili:
-
--  Database SQL consentono di archiviare dati strutturati in modo efficiente.
--  I dati specifici possono essere estratti con query complesse.
--  È possibile ordinare i risultati della query.
--  È possibile aggregare i risultati della query.
--  Gli sviluppatori con competenze sui database esistenti possono usare le proprie conoscenze per progettare il codice di accesso ai database e dei dati.
--  Il modello di dati dal componente server di un'applicazione connessa possa essere utilizzato nuovamente (in toto o in parte) nell'applicazione per dispositivi mobili.
+- **Preferenze** : iOS offre un meccanismo incorporato per l'archiviazione di semplici coppie chiave-valore di dati. Se si archiviano semplici impostazioni utente o piccole parti di dati (ad esempio informazioni sulla personalizzazione), utilizzare le funzionalità native della piattaforma per archiviare questo tipo di informazioni. Per iOS è inoltre possibile sfruttare la sincronizzazione di iCloud per questi dati, sia per il backup che per la sincronizzazione per gli utenti con più dispositivi.
+- **File di testo** : input utente o cache del contenuto scaricato, ad esempio HTML) può essere archiviato direttamente nel file System. Usare una convenzione di denominazione dei file appropriata per organizzare i file e trovare i dati.
+- **File di dati serializzati** : gli oggetti possono essere salvati in modo permanente come XML o JSON nel file System. In .NET Framework sono incluse librerie che semplificano la serializzazione e la deserializzazione di oggetti. Usare i nomi appropriati per organizzare i file di dati.
+- **Database** : il motore di database SQLite è disponibile per iOS ed è utile per archiviare i dati strutturati necessari per eseguire query, ordinare o modificare in altro modo. L'archiviazione del database è adatta agli elenchi di dati con molte proprietà.
+- **File di immagine** : Sebbene sia possibile archiviare dati binari nel database di un dispositivo mobile, è consigliabile archiviarli direttamente nel file System. Se necessario, è possibile archiviare i nomi di file in un database per associare l'immagine ad altri dati. Quando si gestiscono immagini di grandi dimensioni o molte immagini, è consigliabile pianificare una strategia di memorizzazione nella cache che elimini i file che non sono più necessari per evitare l'utilizzo dello spazio di archiviazione dell'utente.
 
 
-## <a name="sqlite-database-engine"></a>Motore di Database SQLite
+Se un database è il meccanismo di archiviazione corretto per l'app, nella parte restante di questo documento viene illustrato come usare SQLite nella piattaforma Novell.
 
-SQLite è un motore di database open source che è stato adottato da Apple per le rispettive piattaforme per dispositivi mobili. Il motore di database SQLite è integrato per iOS in modo che non vi è alcuna attività aggiuntiva per gli sviluppatori a sfruttare i vantaggi di esso. SQLite è particolarmente adatto per lo sviluppo per dispositivi mobili multipiattaforma in quanto:
+## <a name="advantages-of-using-a-database"></a>Vantaggi dell'utilizzo di un database
 
--  Il motore di database è piccolo, veloce e facilmente trasferibili.
--  Un database viene archiviato in un singolo file, è facile da gestire nei dispositivi mobili.
--  Il formato del file è facile da usare per più piattaforme: se 32 o 64 bit e i sistemi big - endian o little-endian.
--  Implementa la maggior parte di standard di SQL92.
+L'uso di un database SQL nell'app per dispositivi mobili presenta diversi vantaggi:
 
-
-Poiché SQLite è progettato per essere piccoli e veloci, esistono alcune limitazioni sul relativo uso:
-
--  Parte della sintassi di OUTER join non è supportato.
--  Solo la RIDENOMINAZIONE di tabella e ADDCOLUMN sono supportati. È possibile eseguire altre modifiche allo schema.
--  Le viste sono di sola lettura.
+- I database SQL consentono l'archiviazione efficiente di dati strutturati.
+- È possibile estrarre dati specifici con query complesse.
+- I risultati della query possono essere ordinati.
+- I risultati della query possono essere aggregati.
+- Gli sviluppatori con competenze di database esistenti possono utilizzare le proprie conoscenze per progettare il database e il codice di accesso ai dati.
+- Il modello di dati dal componente server di un'applicazione connessa può essere riutilizzato (interamente o in parte) nell'applicazione per dispositivi mobili.
 
 
-Altre informazioni su SQLite nel sito Web - [SQLite.org](http://SQLite.org) : tuttavia, tutte le informazioni necessarie per l'uso di SQLite con Xamarin sono contenute in questo documento e associati gli esempi. Il motore di database SQLite è incorporato per tutte le versioni di iOS.
-Anche se non trattate in questo capitolo, SQLite è anche disponibile per l'utilizzo in applicazioni di Windows e Windows Phone.
+## <a name="sqlite-database-engine"></a>motore di database SQLite
+
+SQLite è un motore di database open source che è stato adottato da Apple per la piattaforma per dispositivi mobili. Il motore di database SQLite è integrato in iOS, quindi non sono previsti altri lavori per gli sviluppatori. SQLite è particolarmente adatto per lo sviluppo di app per dispositivi mobili multipiattaforma perché:
+
+- Il motore di database è di dimensioni ridotte, veloci e facilmente portabili.
+- Un database viene archiviato in un singolo file, che è facile da gestire nei dispositivi mobili.
+- Il formato del file è facile da usare tra le piattaforme: se 32 o 64 bit e i sistemi Big o little-endian.
+- Implementa la maggior parte dello standard SQL92.
+
+
+Poiché SQLite è progettato per essere piccolo e veloce, esistono alcune avvertenze sull'uso:
+
+- La sintassi di OUTER join non è supportata.
+- Sono supportate solo le ridenominazioni di tabelle e ADDCOLUMN. Non è possibile apportare altre modifiche allo schema.
+- Le visualizzazioni sono di sola lettura.
+
+
+Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](http://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è integrato in tutte le versioni di iOS.
+Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'uso in applicazioni Windows Phone e Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows e Windows Phone
 
-SQLite è anche utilizzabile nelle piattaforme Windows, anche se queste piattaforme non incluse in questo documento.
-Altre informazioni, vedere la [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [Tasky Pro](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) case study e rivedere [blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+SQLite può essere usato anche nelle piattaforme Windows, anche se queste piattaforme non sono descritte in questo documento.
+Per altre informazioni, vedere la pagina relativa ai case study di [attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [attività professionali](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) e consultare [il Blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [iOS recipe di dati](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
+- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b1039dd433456731b775399ab42222fe0e4cc6d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 198d667ea52fcad4758c2845e5f2e935d1f74a0b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644366"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521116"
 ---
 # <a name="handling-rotation"></a>Gestione della rotazione
 
@@ -25,9 +25,9 @@ Poiché i dispositivi mobili sono facilmente ruotati, la rotazione incorporata �
 
 Questa guida esamina gli argomenti di orientamento seguenti:
 
--   **Rotazione del layout** dichiarativa &ndash; Come usare il sistema di risorse Android per creare applicazioni in grado di riconoscere l'orientamento, incluso il caricamento di layout e drawables per orientamenti particolari.
+- **Rotazione del layout** dichiarativa &ndash; Come usare il sistema di risorse Android per creare applicazioni in grado di riconoscere l'orientamento, incluso il caricamento di layout e drawables per orientamenti particolari.
 
--   **Rotazione layout a livello di codice** &ndash; Come aggiungere controlli a livello di codice e come gestire manualmente le modifiche dell'orientamento.
+- **Rotazione layout a livello di codice** &ndash; Come aggiungere controlli a livello di codice e come gestire manualmente le modifiche dell'orientamento.
 
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Gestione della rotazione in modo dichiarativo con layout
@@ -35,9 +35,9 @@ Questa guida esamina gli argomenti di orientamento seguenti:
 Includendo i file nelle cartelle che seguono le convenzioni di denominazione, Android carica automaticamente i file appropriati quando cambia l'orientamento.
 Questo include il supporto per:
 
--   *Risorse di layout* &ndash; Specificare i file di layout per ogni orientamento.
+- *Risorse di layout* &ndash; Specificare i file di layout per ogni orientamento.
 
--   *Risorse disegnatore* &ndash; Specificare quali drawables vengono caricati per ogni orientamento.
+- *Risorse disegnatore* &ndash; Specificare quali drawables vengono caricati per ogni orientamento.
 
 
 ### <a name="layout-resources"></a>Risorse di layout
@@ -69,7 +69,7 @@ Se il dispositivo viene ruotato in orientamento orizzontale, il `OnCreate` metod
 
 #### <a name="orientation-specific-layouts"></a>Layout specifici dell'orientamento
 
-Oltre alla cartella layout (il cui valore predefinito è Portrait e può anche essere *denominati* in modo esplicito con una cartella denominata `layout-land`), un'applicazione può definire le viste necessarie in orizzontale senza apportare modifiche al codice.
+Oltre alla cartella layout (il cui valore predefinito è Portrait e può anche essere denominati in modo esplicito con una cartella denominata `layout-land`), un'applicazione può definire le viste necessarie in orizzontale senza apportare modifiche al codice.
 
 Si supponga che il file **Main. aXML** contenesse il codice XML seguente:
 
@@ -133,12 +133,12 @@ A volte i layout vengono definiti nel codice. Questo problema può verificarsi p
 
 Per aggiungere controlli a livello di codice, un'applicazione deve eseguire i passaggi seguenti:
 
--  Creare un layout.
--  Imposta i parametri di layout.
--  Creazione di controlli.
--  Imposta i parametri di layout del controllo.
--  Aggiungere i controlli al layout.
--  Impostare il layout come visualizzazione contenuto.
+- Creare un layout.
+- Imposta i parametri di layout.
+- Creazione di controlli.
+- Imposta i parametri di layout del controllo.
+- Aggiungere i controlli al layout.
+- Impostare il layout come visualizzazione contenuto.
 
 Si consideri, ad esempio, un'interfaccia utente costituita da un `TextView` singolo `RelativeLayout`controllo aggiunto a un oggetto, come illustrato nel codice seguente.
 

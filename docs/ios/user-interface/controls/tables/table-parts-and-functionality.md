@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d6ad088f9223dccb1966148fe8f53d76e85040a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645610"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528599"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Parti e funzionalità della tabella in Novell. iOS
 
 Un UITableView può avere uno stile "raggruppato" o "normale" ed è costituito dalle parti seguenti:
 
--  [Intestazione della sezione](#Section_Header)
--  [Celle](#Cells) di (o righe, se si preferisce)
--  [Piè di pagina della sezione](#Section_Footer)
--  [Index](#Index)
--  [Modalità di modifica](#Edit_Features) (include ' scorri da eliminare ' e trascinare gli handle per modificare l'ordine delle righe) 
+- [Intestazione della sezione](#Section_Header)
+- [Celle](#Cells) di (o righe, se si preferisce)
+- [Piè di pagina della sezione](#Section_Footer)
+- [Index](#Index)
+- [Modalità di modifica](#Edit_Features) (include ' scorri da eliminare ' e trascinare gli handle per modificare l'ordine delle righe) 
 
 Queste schermate mostrano come vengono visualizzate le righe, le intestazioni, i piè di pagina, i controlli di modifica e l'indice.
 

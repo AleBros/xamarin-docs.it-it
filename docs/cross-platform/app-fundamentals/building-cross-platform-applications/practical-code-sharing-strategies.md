@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f374da4a541b81bb1bcf84f2b9342785551c15a4
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: e7739642bdb9a10046286035c4aa1a3699bb75b0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512971"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526783"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5 - Strategie pratiche di condivisione del codice
 
@@ -29,7 +29,7 @@ Viene eseguito in un'ampia gamma di piattaforme, tra cui Windows, Android, iOS e
 
 SQLite è un'implementazione di database open source. L'origine e la documentazione reperibili [SQLite.org](http://www.sqlite.org/). Supporto di SQLite è disponibile in ogni piattaforma per dispositivi mobili:
 
--  **iOS** – incorporato sistema operativo.
+- **iOS** – incorporato sistema operativo.
 - **Android** – incorporato nel sistema operativo poiché Android 2.2 (livello API 10).
 - **Windows** : vedere la [SQLite per estensione (Universal Windows Platform)](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936).
 
@@ -97,10 +97,10 @@ SQLite-NET agisce come un semplice ORM che consentirà di salvare e recuperare l
 
 Funzionalità di SQLite-NET:
 
--  Le tabelle vengono definite aggiungendo attributi alle classi di modello.
--  Un'istanza del database è rappresentata da una sottoclasse di `SQLiteConnection` , la classe principale nella libreria di SQLite-Net.
--  È possibile inserire i dati, sottoposti a query ed eliminate tramite gli oggetti. Nessun istruzioni SQL sono necessari (sebbene sia possibile scrivere istruzioni SQL, se necessario).
--  Le query Linq di base possono essere eseguite nelle raccolte restituite da SQLite-NET.
+- Le tabelle vengono definite aggiungendo attributi alle classi di modello.
+- Un'istanza del database è rappresentata da una sottoclasse di `SQLiteConnection` , la classe principale nella libreria di SQLite-Net.
+- È possibile inserire i dati, sottoposti a query ed eliminate tramite gli oggetti. Nessun istruzioni SQL sono necessari (sebbene sia possibile scrivere istruzioni SQL, se necessario).
+- Le query Linq di base possono essere eseguite nelle raccolte restituite da SQLite-NET.
 
 
 Il codice sorgente e documentazione per SQLite-NET è disponibile all'indirizzo [SQLite-Net su github](https://github.com/praeclarum/sqlite-net) ed è stato implementato in entrambi casi. Un semplice esempio di codice di SQLite-NET (dal *Tasky Pro* case study) è illustrato di seguito.
@@ -141,9 +141,9 @@ Vedere il codice sorgente di case study per esempi completi.
 
 Accesso ai file è determinato da una parte fondamentale di qualsiasi applicazione. Esempi comuni di file che potrebbero far parte di un'applicazione includono:
 
--  File di database SQLite.
--  Dati generati dall'utente (testo, immagini, audio, video).
--  Dati scaricati per la memorizzazione nella cache (immagini, html o i file PDF).
+- File di database SQLite.
+- Dati generati dall'utente (testo, immagini, audio, video).
+- Dati scaricati per la memorizzazione nella cache (immagini, html o i file PDF).
 
 
 
@@ -154,10 +154,10 @@ Xamarin. IOS e xamarin. Android consentire accesso al file system utilizzando le
 
 Ogni piattaforma presentano restrizioni di accesso diversi che devono essere prese in considerazione:
 
--  le applicazioni iOS vengono eseguite in una sandbox con accesso molto limitato di file system. Apple ulteriormente determina come si deve usare il file system specificando determinati percorsi che vengono sottoposti a backup (e altri che non sono). Vedere la [funziona con File System in xamarin. IOS](~/ios/app-fundamentals/file-system.md) Guida per altre informazioni.
--  Android limita inoltre l'accesso a determinate directory relativa all'applicazione, ma supporta anche un supporto esterno (ad es. Le schede SD) e l'accesso ai dati condivisi.
--  Windows Phone 8 (Silverlight) non consentono l'accesso diretto al file: i file possono essere modificati solo tramite `IsolatedStorage`.
--  I progetti UWP di Windows 10 e Windows 8.1 WinRT offrono solo operazioni asincrone sui file tramite `Windows.Storage` API, che sono diverse da altre piattaforme.
+- le applicazioni iOS vengono eseguite in una sandbox con accesso molto limitato di file system. Apple ulteriormente determina come si deve usare il file system specificando determinati percorsi che vengono sottoposti a backup (e altri che non sono). Vedere la [funziona con File System in xamarin. IOS](~/ios/app-fundamentals/file-system.md) Guida per altre informazioni.
+- Android limita inoltre l'accesso a determinate directory relativa all'applicazione, ma supporta anche un supporto esterno (ad es. Le schede SD) e l'accesso ai dati condivisi.
+- Windows Phone 8 (Silverlight) non consentono l'accesso diretto al file: i file possono essere modificati solo tramite `IsolatedStorage`.
+- I progetti UWP di Windows 10 e Windows 8.1 WinRT offrono solo operazioni asincrone sui file tramite `Windows.Storage` API, che sono diverse da altre piattaforme.
 
 #### <a name="example-for-ios-and-android"></a>Esempio per iOS e Android
 
@@ -216,10 +216,10 @@ Non sono disponibili nell'API di archiviazione di tipo isolato [librerie di clas
 
 Applicazioni per dispositivi mobili più avranno il componente di rete, ad esempio:
 
--  Download di immagini, video e audio (ad es. le anteprime, fotografie, brani musicali).
--  Download dei documenti (ad es. HTML, PDF).
--  Caricamento dei dati utente (ad esempio foto o testo).
--  L'accesso a servizi web o parti 3rd API (tra cui SOAP, XML o JSON).
+- Download di immagini, video e audio (ad es. le anteprime, fotografie, brani musicali).
+- Download dei documenti (ad es. HTML, PDF).
+- Caricamento dei dati utente (ad esempio foto o testo).
+- L'accesso a servizi web o parti 3rd API (tra cui SOAP, XML o JSON).
 
 
 .NET Framework fornisce alcune classi diverse per l'accesso alle risorse di rete: `HttpClient`, `WebClient`, e `HttpWebRequest`.
@@ -290,9 +290,9 @@ I dispositivi mobili funzionano sotto una varietà di condizioni di rete da velo
 
 Le azioni di che un'app per dispositivi mobili potrebbero essere necessari in queste situazioni includono:
 
--  Se la rete non è disponibile, richiedere all'utente. Se è stato disabilitato manualmente dall'utente (ad es. Modalità aereo o la disattivazione di Wi-Fi), quindi è possibile risolvere il problema.
--  Se la connessione è 3G, le applicazioni possono comportarsi in modo diverso (ad esempio, Apple non consente le app maggiori di 20Mb per essere scaricato oltre 3G). Le applicazioni è stato possibile usare queste informazioni per avvertire l'utente download eccessivo volte durante il recupero dei file di grandi dimensioni.
--  Anche se la rete è disponibile, è buona norma per verificare la connettività con il server di destinazione prima dell'avvio di altre richieste. Questo impedirà ripetutamente operazioni di rete dell'app dal timeout e consentono inoltre di un messaggio di errore più informativo da visualizzare all'utente.
+- Se la rete non è disponibile, richiedere all'utente. Se è stato disabilitato manualmente dall'utente (ad es. Modalità aereo o la disattivazione di Wi-Fi), quindi è possibile risolvere il problema.
+- Se la connessione è 3G, le applicazioni possono comportarsi in modo diverso (ad esempio, Apple non consente le app maggiori di 20Mb per essere scaricato oltre 3G). Le applicazioni è stato possibile usare queste informazioni per avvertire l'utente download eccessivo volte durante il recupero dei file di grandi dimensioni.
+- Anche se la rete è disponibile, è buona norma per verificare la connettività con il server di destinazione prima dell'avvio di altre richieste. Questo impedirà ripetutamente operazioni di rete dell'app dal timeout e consentono inoltre di un messaggio di errore più informativo da visualizzare all'utente.
 
 
 È presente una [esempio di xamarin. IOS](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponibili (che si basa su Apple [codice di esempio raggiungibilità](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) per aiutare a rilevare la disponibilità della rete.
@@ -378,10 +378,10 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
 Per il codice che non usa la libreria Task Parallel Library, ogni piattaforma ha una propria sintassi per le operazioni di marshalling nel thread dell'interfaccia utente:
 
--  **iOS** : `owner.BeginInvokeOnMainThread(new NSAction(action))`
--  **Android** : `owner.RunOnUiThread(action)`
--  **Xamarin. Forms** : `Device.BeginInvokeOnMainThread(action)`
--  **Windows** : `Deployment.Current.Dispatcher.BeginInvoke(action)`
+- **iOS** : `owner.BeginInvokeOnMainThread(new NSAction(action))`
+- **Android** : `owner.RunOnUiThread(action)`
+- **Xamarin. Forms** : `Device.BeginInvokeOnMainThread(action)`
+- **Windows** : `Deployment.Current.Dispatcher.BeginInvoke(action)`
 
 
 

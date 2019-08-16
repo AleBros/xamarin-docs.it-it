@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/06/2016
-ms.openlocfilehash: d01814bc241dcfb7b62f40bef226ee720a96ff23
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0dd3830b4903658d0b014eceaad9c57859963c04
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657001"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528637"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilizzo di tabelle e celle in Novell. iOS
 
@@ -22,10 +22,10 @@ Per coloro che lavorano su applicazioni multipiattaforma con Novell. Android, il
 
 In questi articoli verranno esaminati in maniera completa l'utilizzo delle tabelle, tra cui:
 
--   **Parti della tabella** : introduzione e spiegazione degli elementi visivi `UITableView` del controllo. 
--   **Visualizzazione di dati nelle tabelle** : viene illustrato come creare e popolare una tabella, utilizzare stili di tabelle e celle diversi ed evitare problemi di memoria rilasciando gli oggetti cella. 
--   **Utilizzo avanzato** : creazione di celle personalizzate e utilizzo delle funzionalità di modifica della classe UITableView. 
--   **Creazione visiva di una tabella** : utilizzo del Xamarin designer per iOS per creare un'interfaccia basata su tabelle con uno storyboard. 
+- **Parti della tabella** : introduzione e spiegazione degli elementi visivi `UITableView` del controllo. 
+- **Visualizzazione di dati nelle tabelle** : viene illustrato come creare e popolare una tabella, utilizzare stili di tabelle e celle diversi ed evitare problemi di memoria rilasciando gli oggetti cella. 
+- **Utilizzo avanzato** : creazione di celle personalizzate e utilizzo delle funzionalità di modifica della classe UITableView. 
+- **Creazione visiva di una tabella** : utilizzo del Xamarin designer per iOS per creare un'interfaccia basata su tabelle con uno storyboard. 
 
 ## <a name="contents"></a>Sommario
 

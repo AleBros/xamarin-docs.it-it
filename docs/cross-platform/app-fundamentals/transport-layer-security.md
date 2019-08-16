@@ -6,19 +6,19 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: 639a62316d718534677b0ae86f9e5b57791c23e1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 31069199e8ebc89da76b63e58651adea82db6882
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649221"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526775"
 ---
 # <a name="transport-layer-security-tls-12"></a>Transport Layer Security (TLS) 1,2
 
 L'uso della versione più recente di [ _Transport Layer Security_ (TLS)](https://en.wikipedia.org/wiki/Transport_Layer_Security) è importante per garantire la protezione delle comunicazioni di rete dell'applicazione.
 
 > [!WARNING]
-> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2.  Per impostazione predefinita, i progetti Novell creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
+> **Aprile 2018** : a causa di un aumento dei requisiti di sicurezza, tra cui la conformità PCI, i principali provider di servizi cloud e i server Web dovrebbero smettere di supportare le versioni TLS precedenti a 1,2. Per impostazione predefinita, i progetti Novell creati nelle versioni precedenti di Visual Studio usano le versioni precedenti di TLS.
 >
 > Per garantire che le app continuino a funzionare con questi server e servizi, **è necessario aggiornare i progetti Novell in modo da usare le impostazioni seguenti, quindi ricompilare e ridistribuire le app** agli utenti.
 

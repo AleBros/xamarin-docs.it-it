@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 74d626fb1028c630b67888f84153adeb33ae32b9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6daead7962e472c3c7d0b117d545efdbd3c65886
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644700"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523099"
 ---
 # <a name="xamarinandroid-cardview"></a>Novell. Android CardView
 
@@ -32,11 +32,11 @@ Questa guida illustra come aggiungere il `CardView` pacchetto al progetto Novell
 
 Per usare le nuove funzionalità di Android 5,0 e versioni successive (incluso `CardView`) nelle app basate su Novell, è necessario quanto segue:
 
--  **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
--  **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite Android SDK Manager.
+- **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite Android SDK Manager.
 
--  **Java JDK 1,8** &ndash; JDK 1,7 può essere usato se si destinazione in modo specifico il livello API 23 e versioni precedenti. JDK 1,8 è disponibile da [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- **Java JDK 1,8** &ndash; JDK 1,7 può essere usato se si destinazione in modo specifico il livello API 23 e versioni precedenti. JDK 1,8 è disponibile da [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 L'app deve includere anche il `Xamarin.Android.Support.v7.CardView` pacchetto. Per aggiungere il `Xamarin.Android.Support.v7.CardView` pacchetto in Visual Studio per Mac:
 
@@ -103,8 +103,8 @@ In questo esempio, lo stile dell'app è impostato sul tema materiale chiaro (`Th
 Nell'esempio di layout successivo, viene usato `CardView` un oggetto personalizzato per creare una simulazione di una fotografia di stampa ("snapshot"). Un `ImageView` oggetto viene aggiunto all' `CardView` oggetto per la visualizzazione dell'immagine e `TextView` un oggetto viene posizionato `ImageView` sotto l'oggetto per visualizzare il titolo dell'immagine.
 In questo layout di esempio, `CardView` presenta le seguenti personalizzazioni:
 
--  `cardElevation` Viene aumentata a 4DP per eseguire il cast di un'ombreggiatura maggiore.
--  `cardCornerRadius` Viene aumentata a 5DP per fare in modo che gli angoli risultino più arrotondati.
+- `cardElevation` Viene aumentata a 4DP per eseguire il cast di un'ombreggiatura maggiore.
+- `cardCornerRadius` Viene aumentata a 5DP per fare in modo che gli angoli risultino più arrotondati.
 
 Poiché `CardView` è fornito dalla libreria di supporto per Android V7, i relativi attributi non sono disponibili `android:` dallo spazio dei nomi. Pertanto, è necessario definire uno spazio dei nomi XML personalizzato e utilizzare tale spazio `CardView` dei nomi come prefisso dell'attributo. Nell'esempio di layout seguente verrà usata questa riga per definire uno spazio dei nomi denominato `cardview`:
 
@@ -180,15 +180,15 @@ Si noti che questi attributi (ad eccezione del colore di sfondo) accettano un va
 
 Gli attributi di riempimento vengono spiegati come segue:
 
--  `contentPadding`Spaziatura interna tra le visualizzazioni figlio `CardView` di e tutti i bordi della scheda. &ndash;
+- `contentPadding`Spaziatura interna tra le visualizzazioni figlio `CardView` di e tutti i bordi della scheda. &ndash;
 
--  `contentPaddingBottom`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo inferiore della scheda. &ndash;
+- `contentPaddingBottom`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo inferiore della scheda. &ndash;
 
--  `contentPaddingLeft`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo sinistro della scheda. &ndash;
+- `contentPaddingLeft`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo sinistro della scheda. &ndash;
 
--  `contentPaddingRight`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo destro della scheda. &ndash;
+- `contentPaddingRight`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo destro della scheda. &ndash;
 
--  `contentPaddingTop`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo superiore della scheda. &ndash;
+- `contentPaddingTop`Spaziatura interna tra le visualizzazioni figlio `CardView` di e il bordo superiore della scheda. &ndash;
 
 Gli attributi di riempimento del contenuto sono relativi al limite dell'area di contenuto anziché a qualsiasi widget specificato all'interno dell'area del contenuto.
 Ad esempio, se `contentPadding` l'app di visualizzazione foto è sufficientemente aumentata, il `CardView` Ritaglia l'immagine e il testo visualizzato sulla scheda.
@@ -203,9 +203,9 @@ Ad esempio, se `contentPadding` l'app di visualizzazione foto è sufficientement
 
 Gli attributi di elevazione sono descritti di seguito:
 
--  `cardElevation`L'elevazione di (rappresenta l'asse Z). `CardView` &ndash;
+- `cardElevation`L'elevazione di (rappresenta l'asse Z). `CardView` &ndash;
 
--  `cardMaxElevation`Valore massimo dell'elevazione `CardView`di. &ndash;
+- `cardMaxElevation`Valore massimo dell'elevazione `CardView`di. &ndash;
 
 I valori maggiori `cardElevation` di aumentano le dimensioni dell' `CardView` ombreggiatura in modo da sembrare fluttuare più in alto rispetto allo sfondo. L' `cardElevation` attributo determina anche l'ordine di disegno delle visualizzazioni sovrapposte, ovvero l'oggetto `CardView` verrà disegnato in un'altra visualizzazione sovrapposta con un'impostazione di elevazione più elevata e sopra qualsiasi vista sovrapposta con un'impostazione di elevazione inferiore.
 Questa impostazione è utile quando l'applicazione cambia in &ndash; modo dinamico l'elevazione dei privilegi evitando che l'ombreggiatura si estenda oltre il limite definito con questa impostazione. `cardMaxElevation`
@@ -219,9 +219,9 @@ Questa impostazione è utile quando l'applicazione cambia in &ndash; modo dinami
 
 Questi attributi sono descritti di seguito:
 
--  `cardCornerRadius`Raggio dell'angolo di tutti gli angoli dell' `CardView`oggetto. &ndash;
+- `cardCornerRadius`Raggio dell'angolo di tutti gli angoli dell' `CardView`oggetto. &ndash;
 
--  `cardBackgroundColor`Colore di sfondo dell'oggetto `CardView`. &ndash;
+- `cardBackgroundColor`Colore di sfondo dell'oggetto `CardView`. &ndash;
 
 In questo diagramma, `cardCornerRadius` è impostato su un 10DP più arrotondato `cardBackgroundColor` ed è impostato `"#FFFFCC"` su (giallo chiaro).
 
@@ -233,15 +233,15 @@ Tuttavia, è necessario installare il `Xamarin.Android.Support.v7.CardView` pacc
 
 `CardView`presenta un comportamento leggermente diverso nei dispositivi prima del Lollipop (livello API 21):
 
--  `CardView`Usa un'implementazione Shadow a livello di codice che aggiunge spaziatura interna aggiuntiva.
+- `CardView`Usa un'implementazione Shadow a livello di codice che aggiunge spaziatura interna aggiuntiva.
 
--  `CardView`non Ritaglia le `CardView`visualizzazioni figlio che si intersecano con gli angoli arrotondati.
+- `CardView`non Ritaglia le `CardView`visualizzazioni figlio che si intersecano con gli angoli arrotondati.
 
 Per semplificare la gestione di queste differenze di `CardView` compatibilità, in sono disponibili diversi attributi aggiuntivi che è possibile configurare nel layout:
 
--   `cardPreventCornerOverlap`Impostare questo attributo su per aggiungere spaziatura interna quando l'app è in esecuzione in versioni precedenti di Android (livello API 20 e versioni precedenti). `true` &ndash; Questa impostazione impedisce `CardView` che il `CardView`contenuto venga intersecato con gli angoli arrotondati.
+- `cardPreventCornerOverlap`Impostare questo attributo su per aggiungere spaziatura interna quando l'app è in esecuzione in versioni precedenti di Android (livello API 20 e versioni precedenti). `true` &ndash; Questa impostazione impedisce `CardView` che il `CardView`contenuto venga intersecato con gli angoli arrotondati.
 
--   `cardUseCompatPadding`Impostare questo attributo su `true` per aggiungere spaziatura interna quando l'app è in esecuzione in versioni di Android a o superiore al livello API 21. &ndash; Se si vuole usare `CardView` nei dispositivi pre-Lollipop e si ha lo stesso aspetto sul simbolo (o versione successiva), impostare questo `true`attributo su. Quando questo attributo è abilitato, `CardView` aggiunge spaziatura interna aggiuntiva per creare ombre quando viene eseguito su dispositivi pre-Lollipop. Ciò consente di superare le differenze nella spaziatura interna che vengono introdotte quando sono attive le implementazioni Shadow programmatiche pre-Lollipop.
+- `cardUseCompatPadding`Impostare questo attributo su `true` per aggiungere spaziatura interna quando l'app è in esecuzione in versioni di Android a o superiore al livello API 21. &ndash; Se si vuole usare `CardView` nei dispositivi pre-Lollipop e si ha lo stesso aspetto sul simbolo (o versione successiva), impostare questo `true`attributo su. Quando questo attributo è abilitato, `CardView` aggiunge spaziatura interna aggiuntiva per creare ombre quando viene eseguito su dispositivi pre-Lollipop. Ciò consente di superare le differenze nella spaziatura interna che vengono introdotte quando sono attive le implementazioni Shadow programmatiche pre-Lollipop.
 
 Per altre informazioni sulla gestione della compatibilità con le versioni precedenti di Android, vedere [gestione della compatibilità](https://developer.android.com/training/material/compatibility.html).
 

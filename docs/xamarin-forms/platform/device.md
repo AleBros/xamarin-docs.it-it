@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655961"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529055"
 ---
 # <a name="xamarinforms-device-class"></a>Classe di dispositivi di xamarin. Forms
 
@@ -71,12 +71,12 @@ In alternativa, il `OnPlatform` estensione di markup può essere utilizzato in X
 
 Il `Device.Idiom` proprietà può essere utilizzata per modificare layout o la funzionalità a seconda del dispositivo, l'applicazione è in esecuzione. Il [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) enumerazione contiene i valori seguenti:
 
--  **Telefono** : iPhone, iPod touch e i dispositivi Android più stretto di 600 DIP ^
--  **Tablet** : iPad, i dispositivi Windows e i dispositivi Android più ampio di 600 DIP ^
--  **Desktop** : solo restituito nella [App della piattaforma UWP](~/xamarin-forms/platform/windows/installation/index.md) nei computer desktop Windows 10 (restituisce `Phone` nei dispositivi mobili di Windows, inclusi negli scenari di continuità)
--  **TV** – dispositivi Tizen TV
--  **Espressioni di controllo** – dispositivi watch Tizen
--  **Non supportato** : non usato
+- **Telefono** : iPhone, iPod touch e i dispositivi Android più stretto di 600 DIP ^
+- **Tablet** : iPad, i dispositivi Windows e i dispositivi Android più ampio di 600 DIP ^
+- **Desktop** : solo restituito nella [App della piattaforma UWP](~/xamarin-forms/platform/windows/installation/index.md) nei computer desktop Windows 10 (restituisce `Phone` nei dispositivi mobili di Windows, inclusi negli scenari di continuità)
+- **TV** – dispositivi Tizen TV
+- **Espressioni di controllo** – dispositivi watch Tizen
+- **Non supportato** : non usato
 
 *^ DIP non è necessariamente il numero di pixel fisici*
 
@@ -188,7 +188,7 @@ Le applicazioni a volte usano i thread in background per eseguire operazioni pot
 
 La `Device` classe include i metodi `static` seguenti che possono essere usati per interagire con gli elementi dell'interfaccia utente dai thread di background:
 
-| Metodo | Argomenti | Valore restituito | Scopo |
+| Metodo | Argomenti | Valori di codice restituiti | Scopo |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Richiama un oggetto `Action` sul thread principale e non ne attende il completamento. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Richiama un oggetto `Func<T>` sul thread principale e ne attende il completamento. |

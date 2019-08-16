@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 21d25315aec5c056df90da11b8a51ee1493a45a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0d4e32b7bf98758f12dc038e0b61ffa0132f234d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656675"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529233"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestione di file in Xamarin.Forms
 
@@ -115,8 +115,8 @@ I progetti condivisi possono anche contenere file come risorse incorporate. Tutt
 
 Nei progetti condivisi questo problema ha due soluzioni:
 
--  **Sincronizzare i progetti**: modificare le proprietà del progetto per ogni piattaforma in modo da usare lo **stesso** nome di assembly e spazio dei nomi predefinito. Questo valore può quindi essere impostato come "hardcoded" e usato come prefisso per gli ID della risorsa incorporata nel progetto condiviso.
--  **Direttive #if del compilatore**: usare le direttive del compilatore per impostare il prefisso di ID risorsa corretto e usare questo valore per costruire in modo dinamico l'ID risorsa corretto.
+- **Sincronizzare i progetti**: modificare le proprietà del progetto per ogni piattaforma in modo da usare lo **stesso** nome di assembly e spazio dei nomi predefinito. Questo valore può quindi essere impostato come "hardcoded" e usato come prefisso per gli ID della risorsa incorporata nel progetto condiviso.
+- **Direttive #if del compilatore**: usare le direttive del compilatore per impostare il prefisso di ID risorsa corretto e usare questo valore per costruire in modo dinamico l'ID risorsa corretto.
 
 
 Il codice che illustra la seconda opzione è riportato di seguito. Le direttive del compilatore vengono usate per selezionare il prefisso hardcoded della risorsa che in genere corrisponde allo spazio dei nomi predefinito per il progetto di riferimento. Viene quindi usata la variabile `resourcePrefix` per creare un ID risorsa valido concatenandolo con il nome file della risorsa incorporata.

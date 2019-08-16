@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 18e6e82011460a51a96df4694f15b36c5ec94ab5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510703"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524766"
 ---
 # <a name="limitations"></a>Limitazioni
 
@@ -90,7 +90,7 @@ class MyIntentService : IntentService {
 Le C# classi generiche sono supportate solo parzialmente. Esistono le limitazioni seguenti:
 
 
--   I tipi generici non `[Export]` possono `[ExportField`utilizzare o]. Il tentativo di eseguire questa operazione genererà `XA4207` un errore.
+- I tipi generici non `[Export]` possono `[ExportField`utilizzare o]. Il tentativo di eseguire questa operazione genererà `XA4207` un errore.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -103,7 +103,7 @@ Le C# classi generiche sono supportate solo parzialmente. Esistono le limitazion
     }
     ```
 
--   I metodi generici non `[Export]` possono `[ExportField]`usare o:
+- I metodi generici non `[Export]` possono `[ExportField]`usare o:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -118,7 +118,7 @@ Le C# classi generiche sono supportate solo parzialmente. Esistono le limitazion
     }
     ```
 
--   `[ExportField]`non può essere usato nei metodi che restituiscono `void`:
+- `[ExportField]`non può essere usato nei metodi che restituiscono `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -131,7 +131,7 @@ Le C# classi generiche sono supportate solo parzialmente. Esistono le limitazion
     }
     ```
 
--   Le istanze dei tipi generici _non devono_ essere create dal codice Java.
+- Le istanze dei tipi generici _non devono_ essere create dal codice Java.
     Possono essere creati solo in modo sicuro dal codice gestito:
 
     ```csharp

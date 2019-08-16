@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fad85eadd819c04d087345c6bf4b5e977c9ec279
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a0c659904be2f6755ff4a32853e141ee8572e839
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656518"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521252"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Trasferimento in background e NSURLSession in Novell. iOS
 
@@ -52,15 +52,15 @@ Ora che è stata configurata una sessione in background, è possibile avviare le
 
 Per verificare lo stato del trasferimento, fornisceimetodidibaseseguenti:`NSUrlSessionDelegate`
 
--  *DidFinishEventsForBackgroundSession* : questo metodo viene chiamato al termine di tutte le attività e il trasferimento viene completato.
--  *DidReceiveChallenge* : chiamato per richiedere le credenziali quando è richiesta l'autorizzazione.
--  *DidBecomeInvalidWithError* : viene chiamato se `NSURLSession` l'oggetto viene invalidato.
+- *DidFinishEventsForBackgroundSession* : questo metodo viene chiamato al termine di tutte le attività e il trasferimento viene completato.
+- *DidReceiveChallenge* : chiamato per richiedere le credenziali quando è richiesta l'autorizzazione.
+- *DidBecomeInvalidWithError* : viene chiamato se `NSURLSession` l'oggetto viene invalidato.
 
 
 Per le sessioni in background sono necessari delegati più specializzati a seconda dei tipi di attività in esecuzione. Le sessioni in background sono limitate a due tipi di attività:
 
--  *Attività di caricamento* : le `NSUrlSessionTaskDelegate` attività `NSUrlSessionUploadTask` di tipo usano, che eredita `NSUrlSessionDelegate` da. Questo delegato fornisce metodi aggiuntivi per tenere traccia dello stato di avanzamento del caricamento, gestire il reindirizzamento HTTP e altro ancora.
--  *Attività di download* : le `NSUrlSessionDownloadDelegate` attività `NSUrlSessionDownloadTask` di tipo usano, che eredita `NSUrlSessionTaskDelegate` da. Questo delegato fornisce tutti i metodi per caricare le attività, nonché metodi specifici del download per tenere traccia dello stato di avanzamento del download e determinare quando un'attività di download è stata ripresa o completata.
+- *Attività di caricamento* : le `NSUrlSessionTaskDelegate` attività `NSUrlSessionUploadTask` di tipo usano, che eredita `NSUrlSessionDelegate` da. Questo delegato fornisce metodi aggiuntivi per tenere traccia dello stato di avanzamento del caricamento, gestire il reindirizzamento HTTP e altro ancora.
+- *Attività di download* : le `NSUrlSessionDownloadDelegate` attività `NSUrlSessionDownloadTask` di tipo usano, che eredita `NSUrlSessionTaskDelegate` da. Questo delegato fornisce tutti i metodi per caricare le attività, nonché metodi specifici del download per tenere traccia dello stato di avanzamento del download e determinare quando un'attività di download è stata ripresa o completata.
 
 
 Il codice seguente definisce un'attività che può essere usata per scaricare un'immagine da un URL. L'attività viene avviata chiamando `CreateDownloadTask` la sessione in background e passando la richiesta dell'URL:

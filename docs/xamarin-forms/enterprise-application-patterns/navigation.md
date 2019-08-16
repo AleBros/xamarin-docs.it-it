@@ -1,42 +1,42 @@
 ---
-title: Spostamento di App aziendali
-description: In questo capitolo viene illustrato come l'app per dispositivi mobili di eShopOnContainers esegue view model-first navigazione dalla visualizzazione di modelli.
+title: Esplorazione di app aziendali
+description: Questo capitolo illustra il modo in cui l'app per dispositivi mobili eShopOnContainers esegue la navigazione del primo modello di visualizzazione dai modelli di visualizzazione.
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: d306b0c1c0d08129671e27b96911ec771acb658e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3ca06ae6fb26fce87f14b9cdb34a700ef49655e1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298941"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528380"
 ---
-# <a name="enterprise-app-navigation"></a>Spostamento di App aziendali
+# <a name="enterprise-app-navigation"></a>Esplorazione di app aziendali
 
-Xamarin. Forms include il supporto per la navigazione tra le pagine, che in genere i risultati dall'interazione dell'utente con l'interfaccia utente o dall'app stessa in seguito a modifiche di stato interno basato su logica. Tuttavia, navigazione può essere complessa da implementare nelle App che usano il modello Model-View-ViewModel (MVVM), come devono essere soddisfatte le seguenti sfide:
+Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa in seguito a modifiche dello stato basato su logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVC (Model-View-ViewModel), in quanto devono essere soddisfatte le seguenti difficoltà:
 
--   Come identificare la vista per essere esplorato, usando un approccio che non introduce un accoppiamento rigido e le dipendenze tra le visualizzazioni.
--   Come coordinare il processo mediante il quale la visualizzazione a reindirizzato viene creata un'istanza e inizializzata. Quando si usa MVVM, la visualizzazione e il modello di visualizzazione necessario creare istanze e associati tra loro tramite il contesto di associazione della visualizzazione. Quando un'app Usa un contenitore di inserimento delle dipendenze, la creazione di istanze di viste e i modelli di visualizzazione potrebbe richiedere un meccanismo di formulazione specifica.
--   Se si desidera eseguire navigazione visualizzazione-first o visualizzare navigazione model-first. Con la navigazione visualizzazione-first, la pagina per passare a fa riferimento al nome del tipo di visualizzazione. Durante la navigazione, viene creata la visualizzazione specificata, con il corrispondente modello di visualizzazione e altri servizi dipendenti. Un approccio alternativo consiste nell'utilizzare la visualizzazione model-first, in cui la pagina per passare a fa riferimento al nome del tipo di modello di visualizzazione.
--   Come per correttamente separare il comportamento dell'app per la navigazione tra le visualizzazioni e i modelli di visualizzazione. Il modello MVVM fornisce una separazione tra interfaccia utente dell'app e la sua presentazione e logica di business. Tuttavia, il comportamento di navigazione di un'app sarà spesso si estendono le parti dell'interfaccia utente e le presentazioni dell'app. L'utente sarà spesso avviare la navigazione da una visualizzazione e la visualizzazione verrà sostituita in seguito a riquadro di spostamento. Tuttavia, navigazione potrebbe essere necessario spesso anche essere avviata o coordinato all'interno del modello di visualizzazione.
--   Come passare i parametri durante la navigazione per l'inizializzazione. Ad esempio, se l'utente passa a una vista per aggiornare i dettagli dell'ordine, i dati dell'ordine dovrà essere passati alla visualizzazione in modo che sia possibile visualizzare i dati corretti.
--   Modalità di navigazione di coordinata, per garantire che determinate regole di business vengono osservate. Ad esempio, agli utenti potrebbero essere richiesto prima di uscire da una vista in modo che è possibile correggere eventuali dati non validi o essere richiesto di inviare o annullare le modifiche dei dati che sono state apportate all'interno della visualizzazione.
+- Come identificare la vista a cui spostarsi, usando un approccio che non introduce un accoppiamento stretto e dipendenze tra le visualizzazioni.
+- Viene creata un'istanza e viene inizializzata la modalità di coordinamento del processo in base al quale è possibile spostarsi nella visualizzazione. Quando si usa MVVM, è necessario creare un'istanza del modello di visualizzazione e visualizzazione e associarlo tra loro tramite il contesto di associazione della visualizzazione. Quando un'app usa un contenitore di inserimento delle dipendenze, la creazione di istanze di viste e modelli di visualizzazione potrebbe richiedere un meccanismo di costruzione specifico.
+- Indica se eseguire la navigazione prima o dopo la visualizzazione del primo modello. Con la navigazione di visualizzazione-prima, la pagina in cui spostarsi si riferisce al nome del tipo di visualizzazione. Durante lo spostamento, viene creata un'istanza della visualizzazione specificata, insieme al modello di visualizzazione corrispondente e ad altri servizi dipendenti. Un approccio alternativo consiste nell'utilizzare la navigazione Visualizza prima modello, in cui la pagina a cui spostarsi fa riferimento al nome del tipo di modello di visualizzazione.
+- Come separare in modo semplice il comportamento di spostamento dell'app tra le visualizzazioni e i modelli di visualizzazione. Il modello MVVM fornisce una separazione tra l'interfaccia utente dell'app e la relativa presentazione e la logica di business. Tuttavia, il comportamento di navigazione di un'app spesso si estende sull'interfaccia utente e le parti di presentazione dell'app. L'utente avvierà spesso la navigazione da una vista e la visualizzazione verrà sostituita come risultato della navigazione. Tuttavia, la navigazione potrebbe spesso dover essere avviata o coordinata dall'interno del modello di visualizzazione.
+- Come passare i parametri durante la navigazione a scopo di inizializzazione. Ad esempio, se l'utente passa a una visualizzazione per aggiornare i dettagli dell'ordine, i dati dell'ordine dovranno essere passati alla visualizzazione in modo che sia in grado di visualizzare i dati corretti.
+- Come coordinare la navigazione, per assicurarsi che vengano rispettate determinate regole business. Ad esempio, è possibile che venga richiesto agli utenti prima di uscire da una vista, in modo che possano correggere eventuali dati non validi o richiedere l'invio o l'eliminazione di eventuali modifiche apportate ai dati nella vista.
 
-In questo capitolo affronta queste sfide, presentando un `NavigationService` classe che viene usato per eseguire la visualizzazione pagina model-first.
+Questo capitolo affronta tali problemi presentando una `NavigationService` classe che viene utilizzata per eseguire l'esplorazione delle pagine con il primo modello di visualizzazione.
 
 > [!NOTE]
-> Il `NavigationService` usato per l'app è progettata unicamente per eseguire la navigazione gerarchica tra le istanze di ContentPage. Uso del servizio per spostarsi tra gli altri tipi di pagina potrebbe causare comportamenti imprevisti.
+> Il `NavigationService` usato dall'app è progettato solo per eseguire la navigazione gerarchica tra le istanze di ContentPage. L'uso del servizio per spostarsi tra gli altri tipi di pagina potrebbe causare un comportamento imprevisto.
 
 ## <a name="navigating-between-pages"></a>Spostamento tra le pagine
 
-Per la logica di navigazione può risiedere nel code-behind di una vista o nei dati di un modello di visualizzazione associata. Inserire la logica di navigazione in una vista potrebbe essere l'approccio più semplice, ma non facilmente testabile tramite unit test. Inserire la logica di navigazione nella visualizzazione di classi del modello significa che la logica può essere usata tramite unit test. Inoltre, il modello di visualizzazione possa quindi implementare la logica per controllare il passaggio per garantire che vengano applicate alcune regole di business. Ad esempio, un'app potrebbe non consentire all'utente esce dalla pagina senza prima verificare che i dati immessi siano validi.
+La logica di navigazione può risiedere nel code-behind di una vista o in un modello di visualizzazione con associazione a dati. Sebbene la logica di spostamento in una visualizzazione possa essere l'approccio più semplice, non è facile da verificare tramite unit test. L'inserimento della logica di navigazione nelle classi del modello di visualizzazione significa che la logica può essere esercitata tramite unit test. Inoltre, il modello di visualizzazione può implementare la logica per controllare la navigazione per assicurarsi che vengano applicate determinate regole business. Ad esempio, un'app potrebbe non consentire all'utente di uscire da una pagina senza prima verificare che i dati immessi siano validi.
 
-Oggetto `NavigationService` classe in genere viene richiamata dalla visualizzazione di modelli, per promuovere di testabilità. Tuttavia, passare ad visualizzazioni dai modelli di visualizzazione richiederebbe la visualizzazione di modelli fanno riferimento a viste, e in particolare le viste che il modello di visualizzazione attiva non è associato, che non è consigliata. Pertanto, il `NavigationService` presentato in questo caso specifica il tipo di modello di visualizzazione come destinazione a cui passare.
+Una `NavigationService` classe viene in genere richiamata dai modelli di visualizzazione per promuovere la testabilità. Tuttavia, se si passa alle viste dai modelli di visualizzazione, è necessario che i modelli di visualizzazione facciano riferimento alle viste e, in particolare, le visualizzazioni a cui il modello di visualizzazione attivo non è associato, operazione sconsigliata. Pertanto, l' `NavigationService` oggetto presentato qui specifica il tipo di modello di visualizzazione come destinazione a cui passare.
 
-L'app per dispositivi mobili di eShopOnContainers Usa i `NavigationService` classe per la consultazione view model-first. Questa classe implementa il `INavigationService` interfaccia, che viene visualizzato nell'esempio di codice seguente:
+L'app per dispositivi mobili eShopOnContainers `NavigationService` usa la classe per fornire la navigazione del primo modello di visualizzazione. Questa classe implementa l' `INavigationService` interfaccia, illustrata nell'esempio di codice seguente:
 
 ```csharp
 public interface INavigationService  
@@ -54,40 +54,40 @@ Questa interfaccia specifica che una classe di implementazione deve fornire i me
 
 |Metodo|Scopo|
 |--- |--- |
-|`InitializeAsync`|Eseguire la navigazione a una delle due pagine quando viene avviata l'app.|
+|`InitializeAsync`|Esegue lo spostamento a una delle due pagine quando viene avviata l'app.|
 |`NavigateToAsync`|Esegue la navigazione gerarchica in una pagina specificata.|
 |`NavigateToAsync(parameter)`|Esegue la navigazione gerarchica in una pagina specificata, passando un parametro.|
-|`RemoveLastFromBackStackAsync`|Rimuove lo stack di navigazione alla pagina precedente.|
+|`RemoveLastFromBackStackAsync`|Rimuove la pagina precedente dallo stack di navigazione.|
 |`RemoveBackStackAsync`|Rimuove tutte le pagine precedenti dallo stack di navigazione.|
 
-Inoltre, il `INavigationService` interfaccia specifica che una classe di implementazione deve fornire un `PreviousPageViewModel` proprietà. Questa proprietà restituisce il tipo di modello di visualizzazione associato alla pagina precedente nello stack di navigazione.
+Inoltre, l' `INavigationService` interfaccia specifica che una classe di implementazione deve fornire una `PreviousPageViewModel` proprietà. Questa proprietà restituisce il tipo di modello di visualizzazione associato alla pagina precedente nello stack di navigazione.
 
 > [!NOTE]
-> Un' `INavigationService` interfaccia sarebbe in genere specificare anche un `GoBackAsync` metodo, che consente di restituire a livello di codice alla pagina precedente nello stack di navigazione. Tuttavia, questo metodo è disponibile l'app per dispositivi mobili di eShopOnContainers perché non è obbligatorio.
+> Un' `INavigationService` interfaccia in genere specifica anche un `GoBackAsync` metodo, che viene usato per tornare a livello di codice alla pagina precedente nello stack di navigazione. Tuttavia, questo metodo non è presente nell'app per dispositivi mobili eShopOnContainers perché non è obbligatorio.
 
 ### <a name="creating-the-navigationservice-instance"></a>Creazione dell'istanza NavigationService
 
-Il `NavigationService` classe che implementa il `INavigationService` interfaccia, viene registrato come un singleton con il contenitore di inserimento delle dipendenze di Autofac, come illustrato nell'esempio di codice seguente:
+La `NavigationService` classe, che implementa l' `INavigationService` interfaccia, è registrata come singleton con il contenitore di inserimento delle dipendenze di Autofac, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
 ```
 
-Il `INavigationService` interfaccia è stato risolto nel `ViewModelBase` costruttore della classe, come illustrato nell'esempio di codice seguente:
+L' `INavigationService` interfaccia viene risolta `ViewModelBase` nel costruttore della classe, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
-Restituisce un riferimento al `NavigationService` oggetto archiviato nel contenitore di inserimento delle dipendenze Autofac, che viene creato tramite il `InitNavigation` metodo nel `App` classe. Per altre informazioni, vedere [esplorazione quando l'App viene avviata](#navigating_when_the_app_is_launched).
+Viene restituito un riferimento all' `NavigationService` oggetto archiviato nel contenitore di inserimento delle dipendenze di Autofac, creato `InitNavigation` dal metodo nella `App` classe. Per altre informazioni, vedere [navigazione all'avvio dell'app](#navigating_when_the_app_is_launched).
 
-Il `ViewModelBase` classe archivia i `NavigationService` dell'istanza in un `NavigationService` proprietà, di tipo `INavigationService`. Pertanto, in tutte le visualizzazione classi del modello, che ne derivano il `ViewModelBase` classe, può usare il `NavigationService` per accedere ai metodi specificati dalla proprietà il `INavigationService` interfaccia. Questo modo si evita il sovraccarico dell'inserimento di `NavigationService` oggetto dal contenitore Autofac dependency injection in ogni classe di modello di visualizzazione.
+La `ViewModelBase` classe archivia l' `NavigationService` istanza di in `NavigationService` una proprietà di tipo `INavigationService`. Pertanto, tutte le classi del modello di visualizzazione, che derivano dalla `ViewModelBase` classe, possono utilizzare la `NavigationService` proprietà per accedere `INavigationService` ai metodi specificati dall'interfaccia. In questo modo si evita l'overhead di inserimento `NavigationService` dell'oggetto dal contenitore di inserimento delle dipendenze di Autofac in ogni classe del modello di visualizzazione.
 
-### <a name="handling-navigation-requests"></a>La gestione delle richieste di navigazione
+### <a name="handling-navigation-requests"></a>Gestione delle richieste di navigazione
 
-Xamarin. Forms fornisce il [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) classe che implementa un'esperienza di navigazione gerarchica in cui l'utente è in grado di scorrere le pagine avanti e indietro in base alle esigenze. Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Novell. Forms fornisce [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) la classe, che implementa un'esperienza di navigazione gerarchica in cui l'utente è in grado di spostarsi tra le pagine, avanti e indietro, a seconda delle esigenze. Per altre informazioni sulla navigazione gerarchica, vedere [Navigazione gerarchica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
-Invece di usare la [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) classe direttamente, esegue il wrapping di app eShopOnContainers il `NavigationPage` classe la `CustomNavigationView` classe, come illustrato nell'esempio di codice seguente:
+Invece di usare direttamente [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) la classe, l'app eShopOnContainers esegue il wrapping `NavigationPage` della classe nella `CustomNavigationView` classe, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 public partial class CustomNavigationView : NavigationPage  
@@ -104,15 +104,15 @@ public partial class CustomNavigationView : NavigationPage
 }
 ```
 
-Lo scopo di questa disposizione è per facilitare l'applicazione di stili di [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) istanza all'interno del file XAML per la classe.
+Lo scopo di questo wrapping è semplificare l' [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) applicazione di stili all'istanza nel file XAML per la classe.
 
-Navigazione viene eseguita all'interno delle classi di modello di visualizzazione chiamando uno del `NavigateToAsync` metodi, che specifica il tipo di modello di visualizzazione per la pagina di cui si accede a, come illustrato nell'esempio di codice seguente:
+Lo spostamento viene eseguito all'interno delle classi del modello di visualizzazione richiamando uno dei `NavigateToAsync` metodi, specificando il tipo di modello di visualizzazione per la pagina a cui si accede, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 await NavigationService.NavigateToAsync<MainViewModel>();
 ```
 
-Nell'esempio di codice riportato di seguito viene illustrato il `NavigateToAsync` metodi forniti dal `NavigationService` classe:
+Nell'esempio `NavigateToAsync` `NavigationService` di codice riportato di seguito vengono illustrati i metodi forniti dalla classe:
 
 ```csharp
 public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase  
@@ -126,7 +126,7 @@ public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel�
 }
 ```
 
-Ogni metodo consente a qualsiasi classe di modello di visualizzazione da cui deriva il `ViewModelBase` classe per eseguire lo spostamento gerarchico richiamando il `InternalNavigateToAsync` (metodo). Inoltre, il secondo `NavigateToAsync` metodo consente di specificare come argomento passato al modello di visualizzazione a cui si accede, dove in genere viene usata per eseguire l'inizializzazione dei dati di navigazione. Per altre informazioni, vedere [passando i parametri durante la navigazione](#passing_parameters_during_navigation).
+Ogni metodo consente a qualsiasi classe del modello di visualizzazione che deriva `ViewModelBase` dalla classe di eseguire la navigazione gerarchica richiamando il `InternalNavigateToAsync` metodo. Il secondo `NavigateToAsync` metodo consente inoltre di specificare i dati di navigazione come un argomento passato al modello di visualizzazione a cui si accede, in cui viene in genere usato per eseguire l'inizializzazione. Per ulteriori informazioni, vedere [passaggio di parametri durante la navigazione](#passing_parameters_during_navigation).
 
 Il `InternalNavigateToAsync` metodo esegue la richiesta di navigazione e viene illustrato nell'esempio di codice seguente:
 
@@ -178,27 +178,27 @@ private Page CreatePage(Type viewModelType, object parameter)
 }
 ```
 
-Il `InternalNavigateToAsync` metodo esegue la navigazione a un modello di visualizzazione da chiamare prima il `CreatePage` (metodo). Questo metodo individua la visualizzazione che corrisponde al tipo di modello di visualizzazione specificato e crea e restituisce un'istanza di questo tipo di visualizzazione. La visualizzazione che corrisponde al tipo di modello di vista di individuazione viene utilizzato un approccio basato su convenzioni, in cui si presuppone che:
+Il `InternalNavigateToAsync` metodo esegue la navigazione a un modello di visualizzazione chiamando prima `CreatePage` il metodo. Questo metodo individua la visualizzazione che corrisponde al tipo di modello di visualizzazione specificato e crea e restituisce un'istanza di questo tipo di visualizzazione. L'individuazione della vista che corrisponde al tipo di modello di visualizzazione usa un approccio basato sulle convenzioni, che presuppone quanto segue:
 
--   Le visualizzazioni sono nello stesso assembly come tipi di modello di visualizzazione.
--   Le visualizzazioni sono una. Spazio dei nomi di visualizzazioni figlio.
--   Visualizzazione di modelli è in una. Spazio dei nomi figlio ViewModel.
--   Visualizzare i nomi corrispondono per visualizzare i nomi di modello, con "Modello" rimosso.
+- Le visualizzazioni si trovano nello stesso assembly dei tipi di modello di visualizzazione.
+- Le visualizzazioni si trovano in un. Spazio dei nomi figlio views.
+- I modelli di visualizzazione si trovano in un. Spazio dei nomi figlio ViewModels.
+- I nomi delle viste corrispondono ai nomi dei modelli di visualizzazione, con la rimozione di "Model".
 
-Quando viene creata un'istanza di una vista, questi vengono associati il corrispondente modello di visualizzazione. Per altre informazioni sul modo in cui ciò si verifica, vedere [creazione automatica di un modello di visualizzazione con un localizzatore di modello di visualizzazione](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+Quando viene creata un'istanza di una vista, questa viene associata al modello di visualizzazione corrispondente. Per ulteriori informazioni su questo problema, vedere [creazione automatica di un modello di visualizzazione con un localizzatore del modello di visualizzazione](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
-Se la visualizzazione da creare è un `LoginView`, vengono incapsulati all'interno di una nuova istanza della `CustomNavigationView` classe e assegnati al [ `Application.Current.MainPage` ](xref:Xamarin.Forms.Application.MainPage) proprietà. In caso contrario, il `CustomNavigationView` istanza viene recuperata e fornito che non è null, il [ `PushAsync` ](xref:Xamarin.Forms.NavigationPage) metodo viene richiamato per eseguire il push la vista viene creata nello stack di navigazione. Tuttavia, se recuperata `CustomNavigationView` istanza è `null`, viene eseguito il wrapping di visualizzazione viene creata all'interno di una nuova istanza del `CustomNavigationView` classe e assegnato al `Application.Current.MainPage` proprietà. Questo meccanismo garantisce che durante la navigazione, vengono aggiunte pagine correttamente allo stack di navigazione sia quando è vuoto e se contiene dati.
+Se la vista creata è un oggetto `LoginView`, viene incapsulato all'interno di una nuova `CustomNavigationView` istanza della [`Application.Current.MainPage`](xref:Xamarin.Forms.Application.MainPage) classe e assegnato alla proprietà. In caso contrario `CustomNavigationView` , l'istanza viene recuperata e, a condizione che non [`PushAsync`](xref:Xamarin.Forms.NavigationPage) sia null, viene richiamato il metodo per eseguire il push della visualizzazione creata nello stack di navigazione. Tuttavia, se l'istanza `CustomNavigationView` recuperata `null`è, la vista creata viene racchiusa in `CustomNavigationView` una nuova istanza della classe e assegnata alla `Application.Current.MainPage` proprietà. Questo meccanismo garantisce che durante lo spostamento le pagine vengano aggiunte correttamente allo stack di navigazione quando è vuota e quando contiene dati.
 
 > [!TIP]
-> Prendere in considerazione la memorizzazione nella cache le pagine. Pagina memorizzazione nella cache i risultati in termini di consumo di memoria per le visualizzazioni che non sono attualmente visualizzati. Tuttavia, senza la memorizzazione nella cache di pagina significa che l'analisi XAML e la costruzione della pagina e il relativo modello di visualizzazione verrà eseguita ogni volta che una nuova pagina viene esplorata, che possono avere un impatto sulle prestazioni per una pagina complessa. Per una pagina ben progettata che non usa un numero eccessivo di controlli, le prestazioni dovrebbero essere sufficienti. Tuttavia, la memorizzazione nella cache di pagina può essere utile se si verificano tempi di caricamento pagina lenti.
+> Si consiglia di memorizzare nella cache le pagine. La memorizzazione nella cache della pagina produce un consumo di memoria per le visualizzazioni che non sono attualmente visualizzate. Tuttavia, senza caching della pagina, significa che l'analisi e la costruzione di XAML della pagina e del relativo modello di visualizzazione si verificheranno ogni volta che viene spostata una nuova pagina, che può avere un effetto sulle prestazioni per una pagina complessa. Per una pagina ben progettata che non usa un numero eccessivo di controlli, le prestazioni dovrebbero essere sufficienti. Tuttavia, la memorizzazione nella cache delle pagine può essere utile se vengono rilevati tempi di caricamento della pagina lenti.
 
-Dopo la visualizzazione viene creata e aperto, il `InitializeAsync` metodo del modello di visualizzazione associata della visualizzazione viene eseguito. Per altre informazioni, vedere [passando i parametri durante la navigazione](#passing_parameters_during_navigation).
+Una volta creata e spostata la vista, viene eseguito `InitializeAsync` il metodo del modello di visualizzazione associato della visualizzazione. Per ulteriori informazioni, vedere [passaggio di parametri durante la navigazione](#passing_parameters_during_navigation).
 
 <a name="navigating_when_the_app_is_launched" />
 
-### <a name="navigating-when-the-app-is-launched"></a>Esplorazione quando l'App viene avviata
+### <a name="navigating-when-the-app-is-launched"></a>Spostamento all'avvio dell'app
 
-Quando l'app viene avviata, il `InitNavigation` nel metodo il `App` classe viene richiamata. L'esempio di codice seguente illustra il metodo:
+Quando viene avviata l'app, `InitNavigation` viene richiamato `App` il metodo nella classe. L'esempio di codice seguente illustra il metodo:
 
 ```csharp
 private Task InitNavigation()  
@@ -208,12 +208,12 @@ private Task InitNavigation()
 }
 ```
 
-Il metodo crea un nuovo `NavigationService` oggetti nel contenitore Autofac dependency injection e restituisce un riferimento a esso, prima di richiamare il `InitializeAsync` (metodo).
+Il metodo crea un nuovo `NavigationService` oggetto nel contenitore di inserimento delle dipendenze Autofac e restituisce un riferimento a esso, prima di richiamare `InitializeAsync` il metodo.
 
 > [!NOTE]
-> Quando la `INavigationService` interfaccia viene risolto mediante il `ViewModelBase` (classe), il contenitore restituisce un riferimento al `NavigationService` oggetto creato quando viene richiamato il metodo InitNavigation.
+> Quando l' `INavigationService` interfaccia viene risolta `ViewModelBase` dalla classe, il contenitore `NavigationService` restituisce un riferimento all'oggetto creato quando viene richiamato il metodo InitNavigation.
 
-Nell'esempio di codice riportato di seguito viene illustrato il `NavigationService` `InitializeAsync` metodo:
+Nell'esempio di codice riportato di `NavigationService` seguito viene illustrato il `InitializeAsync` metodo:
 
 ```csharp
 public Task InitializeAsync()  
@@ -225,17 +225,17 @@ public Task InitializeAsync()
 }
 ```
 
-Il `MainView` viene esplorato se l'app ha un token di accesso memorizzato nella cache, che viene usato per l'autenticazione. In caso contrario, il `LoginView` si accede.
+`MainView` Viene passato a se l'app dispone di un token di accesso memorizzato nella cache, che viene usato per l'autenticazione. In caso contrario `LoginView` , l'oggetto viene spostato a.
 
-Per altre informazioni sul contenitore Autofac dependency injection, vedere [Introduzione all'inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+Per altre informazioni sul contenitore di inserimento delle dipendenze di Autofac, vedere [Introduzione all'inserimento](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)delle dipendenze.
 
 <a name="passing_parameters_during_navigation" />
 
 ### <a name="passing-parameters-during-navigation"></a>Passaggio di parametri durante la navigazione
 
-Uno dei `NavigateToAsync` metodi, specificati da di `INavigationService` interfaccia, i dati di navigazione consente di specificare come argomento passato al modello di visualizzazione a cui si accede, dove in genere viene usata per eseguire l'inizializzazione.
+Uno dei `NavigateToAsync` metodi, specificato `INavigationService` dall'interfaccia, consente di specificare i dati di navigazione come un argomento passato al modello di visualizzazione a cui viene eseguita la navigazione, in cui viene in genere usato per eseguire l'inizializzazione.
 
-Ad esempio, il `ProfileViewModel` classe contiene un `OrderDetailCommand` che viene eseguito quando l'utente seleziona un ordine del `ProfileView` pagina. A sua volta, verrà eseguito il `OrderDetailAsync` metodo, che viene visualizzato nell'esempio di codice seguente:
+Ad esempio, la `ProfileViewModel` classe contiene un `OrderDetailCommand` oggetto che viene eseguito quando l'utente `ProfileView` seleziona un ordine nella pagina. A sua volta, viene eseguito il `OrderDetailAsync` metodo, illustrato nell'esempio di codice seguente:
 
 ```csharp
 private async Task OrderDetailAsync(Order order)  
@@ -244,9 +244,9 @@ private async Task OrderDetailAsync(Order order)
 }
 ```
 
-Questo metodo richiama navigazione per la `OrderDetailViewModel`, passando un' `Order` istanza che rappresenta l'ordine in cui l'utente ha selezionato nel `ProfileView` pagina. Quando il `NavigationService` classe consente di creare le `OrderDetailView`, il `OrderDetailViewModel` classe viene creata un'istanza e assegnata alla visualizzazione [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext). Dopo l'accesso al `OrderDetailView`, il `InternalNavigateToAsync` metodo viene eseguito il `InitializeAsync` associato del metodo della visualizzazione modello di visualizzazione.
+Questo metodo richiama la navigazione all'oggetto `OrderDetailViewModel`, passando un' `Order` istanza di che rappresenta l'ordine selezionato dall'utente nella `ProfileView` pagina. Quando la `NavigationService` classe crea l' `OrderDetailView`oggetto, `OrderDetailViewModel` viene [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)creata un'istanza della classe e viene assegnata all'oggetto della visualizzazione. Dopo la navigazione all'oggetto `OrderDetailView`, il `InternalNavigateToAsync` metodo esegue il `InitializeAsync` metodo del modello di visualizzazione associato della visualizzazione.
 
-Il `InitializeAsync` metodo viene definito nel `ViewModelBase` classe un metodo che può essere sottoposto a override. Questo metodo viene specificato un `object` argomento che rappresenta i dati da passare a un modello di visualizzazione durante un'operazione di navigazione. Pertanto, classi di modello di visualizzazione che desidera ricevere i dati da un'operazione di navigazione forniscono la propria implementazione del `InitializeAsync` metodo per eseguire l'inizializzazione richiesta. Nell'esempio di codice riportato di seguito viene illustrato il `InitializeAsync` metodo dal `OrderDetailViewModel` classe:
+Il `InitializeAsync` metodo viene definito `ViewModelBase` nella classe come un metodo di cui è possibile eseguire l'override. Questo metodo specifica un `object` argomento che rappresenta i dati da passare a un modello di visualizzazione durante un'operazione di navigazione. Pertanto, le classi di modelli di visualizzazione che desiderano ricevere dati da un'operazione di spostamento forniscono una `InitializeAsync` propria implementazione del metodo per eseguire l'inizializzazione richiesta. Nell'esempio `InitializeAsync` `OrderDetailViewModel` di codice seguente viene illustrato il metodo della classe:
 
 ```csharp
 public override async Task InitializeAsync(object navigationData)  
@@ -261,13 +261,13 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-Questo metodo recupera il `Order` illustra in dettaglio dall'istanza in cui è stato passato nel modello di visualizzazione durante l'operazione di spostamento e lo usa per recuperare l'ordine completa il `OrderService` istanza.
+Questo metodo recupera l' `Order` istanza di passata al modello di visualizzazione durante l'operazione di navigazione e la utilizza per recuperare i dettagli dell'ordine completo `OrderService` dall'istanza di.
 
 <a name="invoking_navigation_using_behaviors" />
 
-### <a name="invoking-navigation-using-behaviors"></a>Richiamo di navigazione usando i comportamenti
+### <a name="invoking-navigation-using-behaviors"></a>Richiamo della navigazione mediante i comportamenti
 
-Navigazione viene in genere attivata da una vista da un'interazione utente. Ad esempio, il `LoginView` esegue la navigazione dopo la riuscita dell'autenticazione. Esempio di codice seguente mostra come viene richiamata la navigazione da un comportamento:
+La navigazione viene in genere attivata da una vista da un'interazione dell'utente. Ad esempio, esegue `LoginView` la navigazione in seguito all'autenticazione riuscita. Nell'esempio di codice seguente viene illustrato come la navigazione viene richiamata da un comportamento:
 
 ```xaml
 <WebView ...>  
@@ -280,9 +280,9 @@ Navigazione viene in genere attivata da una vista da un'interazione utente. Ad e
 </WebView>
 ```
 
-In fase di esecuzione, il `EventToCommandBehavior` risponderà all'interazione con il [ `WebView` ](xref:Xamarin.Forms.WebView). Quando il `WebView` passa a una pagina web, il [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) , quindi, viene generato l'evento cui verrà eseguita la `NavigateCommand` nel `LoginViewModel`. Per impostazione predefinita, gli argomenti dell'evento per l'evento vengono passati al comando. Questi dati viene convertiti come viene passato tra origine e destinazione per il convertitore specificato nella `EventArgsConverter` proprietà, che restituisce il [ `Url` ](xref:Xamarin.Forms.WebNavigationEventArgs.Url) dal [ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs). Pertanto, quando la `NavigationCommand` viene eseguita, l'Url della pagina web viene passato come parametro per l'oggetto registrato `Action`.
+In fase di esecuzione `EventToCommandBehavior` , risponderà all'interazione con [`WebView`](xref:Xamarin.Forms.WebView)il. Quando passa a una pagina Web, l' [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) evento viene attivato `NavigateCommand` , che eseguirà in `LoginViewModel`. `WebView` Per impostazione predefinita, gli argomenti dell'evento per l'evento vengono passati al comando. Questi dati vengono convertiti come passati tra l'origine e la destinazione dal convertitore specificato nella `EventArgsConverter` proprietà, che restituisce l'oggetto [`Url`](xref:Xamarin.Forms.WebNavigationEventArgs.Url) dall' [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs)oggetto. Pertanto, quando `NavigationCommand` viene eseguito, l'URL della pagina Web viene passato come parametro al registrato `Action`.
 
-A sua volta, il `NavigationCommand` esegue il `NavigateAsync` metodo, che viene visualizzato nell'esempio di codice seguente:
+A sua volta, `NavigationCommand` esegue il `NavigateAsync` metodo, illustrato nell'esempio di codice seguente:
 
 ```csharp
 private async Task NavigateAsync(string url)  
@@ -294,20 +294,20 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-Questo metodo richiama navigazione per la `MainViewModel`, e seguire navigazione, rimuove il `LoginView` pagina dallo stack di navigazione.
+Questo metodo richiama la navigazione all'oggetto `MainViewModel`e, dopo lo spostamento, la `LoginView` pagina viene rimossa dallo stack di navigazione.
 
-### <a name="confirming-or-cancelling-navigation"></a>Per confermare o annullare spostamento
+### <a name="confirming-or-cancelling-navigation"></a>Conferma o annullamento della navigazione
 
-Un'app potrebbe essere necessario interagire con l'utente durante un'operazione di spostamento, in modo che l'utente possa confermare o annullare lo spostamento. Questo potrebbe essere necessario, ad esempio, quando l'utente tenta di passare prima completamente dopo aver completato una pagina di immissione dati. In questo caso, un'app deve fornire una notifica che consente all'utente per uscire dalla pagina o annullare l'operazione di navigazione prima che venga eseguita. Ciò può essere ottenuto in una classe di modello di visualizzazione usando la risposta da una notifica per controllare o meno lo spostamento viene effettuato.
+Un'app potrebbe dover interagire con l'utente durante un'operazione di navigazione, in modo che l'utente possa confermare o annullare la navigazione. Questo potrebbe essere necessario, ad esempio, quando l'utente tenta di spostarsi prima di completare una pagina di immissione dati. In questa situazione, un'app deve fornire una notifica che consenta all'utente di uscire dalla pagina o di annullare l'operazione di spostamento prima che si verifichi. Questa operazione può essere eseguita in una classe modello di visualizzazione utilizzando la risposta di una notifica per controllare se la navigazione viene richiamata o meno.
 
 ## <a name="summary"></a>Riepilogo
 
-Xamarin. Forms include il supporto per la navigazione tra le pagine, che in genere comporta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche di stato interno basato su logica. Tuttavia, navigazione può essere complessa da implementare nelle App che usano il modello MVVM.
+Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
 
-In questo capitolo presentato un `NavigationService` (classe), che consente di eseguire view model-first navigazione dalla visualizzazione di modelli. Inserire la logica di navigazione nella visualizzazione di classi del modello significa che la logica può essere usata tramite i test automatizzati. Inoltre, il modello di visualizzazione possa quindi implementare la logica per controllare il passaggio per garantire che vengano applicate alcune regole di business.
+In questo capitolo è `NavigationService` stata presentata una classe, che viene utilizzata per eseguire l'esplorazione del primo modello di visualizzazione dai modelli di visualizzazione. L'inserimento della logica di navigazione nelle classi del modello di visualizzazione significa che la logica può essere esercitata tramite test automatizzati. Inoltre, il modello di visualizzazione può implementare la logica per controllare la navigazione per assicurarsi che vengano applicate determinate regole business.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Scarica eBook (PDF 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [Scarica eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

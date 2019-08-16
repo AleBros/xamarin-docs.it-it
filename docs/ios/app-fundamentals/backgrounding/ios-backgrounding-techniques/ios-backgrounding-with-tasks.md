@@ -1,35 +1,35 @@
 ---
 title: Elaborazione in background in iOS con le attività
-description: Questo documento descrive come usare le attività in background per eseguire attività con esecuzione prolungata dopo che un'applicazione viene inserita in background.
+description: In questo documento viene descritto come utilizzare le attività in background per eseguire attività a esecuzione prolungata dopo che un'applicazione viene posizionata in background.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: ec5439e11b0edd2b6ad5391254e40e01271879a7
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 56ee93146bb84de0b48885d80407316e81cb512c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268825"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521371"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>Elaborazione in background in iOS con le attività
 
-Il modo più semplice per eseguire l'elaborazione in background in IOS è suddividere i requisiti backgrounding in attività ed eseguire le attività in background. Le attività sono in un limite di tempo strict e ottengono in genere circa 600 secondi (10 minuti) del tempo di elaborazione dopo che un'applicazione è stato spostato in background in iOS 6 e meno di 10 minuti in iOS 7 +.
+Il modo più semplice per eseguire informazioni in background in iOS è suddividere i requisiti in background in attività ed eseguire le attività in background. Le attività sono soggette a un limite di tempo rigoroso e in genere ottengono circa 600 secondi (10 minuti) di tempo di elaborazione dopo che un'applicazione è stata spostata in background in iOS 6 e meno di 10 minuti su iOS 7 +.
 
-Le attività in background possono essere suddivisi in tre categorie:
+Le attività in background possono essere suddivise in tre categorie:
 
-1.  **Le attività in background-Safe** : viene chiamato in qualsiasi punto dell'applicazione in cui è presente un'attività non si desidera interrotta deve l'applicazione, immettere lo sfondo.
-1.  **Attività DidEnterBackground** : viene chiamato durante la `DidEnterBackground` metodo del ciclo di vita delle applicazioni utili per la pulizia e il salvataggio dello stato.
-1.  **I trasferimenti (iOS 7 +) di sfondo** -un tipo speciale di attività in background usato per eseguire trasferimenti di rete in iOS 7. A differenza delle normali attività, trasferimenti in background non è un limite di tempo predeterminato.
+1. **Attività in background-Safe** : chiamate in qualsiasi punto dell'applicazione in cui è presente un'attività che non si vuole interrompere se l'applicazione entra in background.
+1. **Attività DidEnterBackground** : chiamate durante il `DidEnterBackground` metodo del ciclo di vita dell'applicazione per semplificare la pulizia e il salvataggio dello stato.
+1. **Trasferimenti in background (iOS 7 +)** : tipo speciale di attività in background usato per eseguire i trasferimenti di rete in iOS 7. Diversamente dalle normali attività, i trasferimenti in background non hanno un limite di tempo predeterminato.
 
 
-In background-safe e `DidEnterBackground` attività sono sicuri per l'uso on iOS 6 e iOS 7, con alcune piccole differenze. Verrà esaminato questi due tipi di attività in modo più dettagliato.
+Le attività in background `DidEnterBackground` e sicure sono sicure da usare in iOS 6 e iOS 7, con alcune piccole differenze. Esaminiamo questi due tipi di attività in modo più dettagliato.
 
-## <a name="creating-background-safe-tasks"></a>Creazione di attività in Background-Safe
+## <a name="creating-background-safe-tasks"></a>Creazione di attività in background-Safe
 
-Alcune applicazioni contengono le attività che non devono essere interrotta da iOS deve modificare l'applicazione dello stato. Un modo per proteggere queste attività venga interrotto deve registrarli con iOS come attività con esecuzione prolungata. È possibile usare questo modello in un punto qualsiasi all'interno dell'applicazione in cui non si desidera un'attività in corso interrotta deve put l'utente dell'app in background. Un ottimo candidato per questo modello potrebbe essere attività quali l'invio di informazioni di registrazione del nuovo utente al server o la verifica per determinare se le informazioni di accesso.
+Alcune applicazioni contengono attività che non devono essere interrotte da iOS se lo stato dell'applicazione viene modificato. Un modo per proteggere queste attività dall'interruzione consiste nel registrarle con iOS come attività a esecuzione prolungata. È possibile usare questo modello in qualsiasi punto dell'applicazione in cui non si vuole che un'attività venga interrotta se l'utente inserisce l'app in background. Un candidato ideale per questo modello è costituito da attività come l'invio di informazioni di registrazione di un nuovo utente al server o la verifica delle informazioni di accesso.
 
 Il frammento di codice seguente illustra la registrazione di un'attività da eseguire in background:
 
@@ -42,17 +42,17 @@ FinishLongRunningTask(taskID);
 UIApplication.SharedApplication.EndBackgroundTask(taskID);
 ```
 
-Il processo di registrazione un'attività con un identificatore univoco, di coppie `taskID`e quindi ne esegue il wrapping nella corrispondenza `BeginBackgroundTask` e `EndBackgroundTask` chiamate. Per generare l'identificatore, abbiamo effettuare una chiamata ai `BeginBackgroundTask` metodo su di `UIApplication` dell'oggetto e quindi avviare l'attività di lunga durata, in genere in un nuovo thread. Una volta completata l'attività, chiamiamo `EndBackgroundTask` e passare lo stesso identificatore. Questo è importante perché iOS per terminare l'applicazione se un `BeginBackgroundTask` chiamata non ha un corrispondente `EndBackgroundTask`.
+Il processo di registrazione associa un'attività a un identificatore univoco `taskID`,, quindi ne esegue il wrapping nelle `BeginBackgroundTask` chiamate `EndBackgroundTask` e corrispondenti. Per generare l'identificatore, effettuare una chiamata al `BeginBackgroundTask` metodo `UIApplication` sull'oggetto, quindi avviare l'attività a esecuzione prolungata, in genere in un nuovo thread. Quando l'attività viene completata, viene chiamato `EndBackgroundTask` e passato lo stesso identificatore. Questo è importante perché iOS terminerà l'applicazione se una `BeginBackgroundTask` chiamata non ha un corrispondente. `EndBackgroundTask`
 
 > [!IMPORTANT]
-> Le attività in background-safe è possono eseguire sul thread principale o un thread in background, in base alle esigenze dell'applicazione.
+> Le attività in background possono essere eseguite sul thread principale o su un thread in background, a seconda delle esigenze dell'applicazione.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>Esecuzione di attività durante DidEnterBackground
 
-Oltre a creare un'attività a esecuzione prolungata in background-safe, la registrazione può essere utilizzata per avviare le attività come un'applicazione viene inserita in background. iOS offre un metodo di evento nel *AppDelegate* classe denominata `DidEnterBackground` che può essere utilizzato per salvare lo stato dell'applicazione, salvare i dati utente e crittografare i contenuti sensibili prima di un'applicazione passerà in background. Un'applicazione dispone di circa cinque secondi per restituire da questo metodo o verrà terminata. Di conseguenza, le attività di pulizia che potrebbero essere necessari più di cinque secondi per il completamento possono essere chiamate dall'interno il `DidEnterBackground` (metodo). Queste attività devono essere richiamate su un thread separato.
+Oltre a rendere un'attività a esecuzione prolungata sicura, la registrazione può essere usata per avviare le attività quando un'applicazione viene messa in background. iOS fornisce un metodo di evento nella classe *AppDelegate* chiamata `DidEnterBackground` che può essere usata per salvare lo stato dell'applicazione, salvare i dati utente e crittografare il contenuto sensibile prima che un'applicazione entri in background. Un'applicazione ha circa cinque secondi per restituire da questo metodo o verrà terminata. Pertanto, le attività di pulizia che potrebbero richiedere più di cinque secondi per il completamento possono essere chiamate `DidEnterBackground` dall'interno del metodo. Queste attività devono essere richiamate in un thread separato.
 
-Il processo è quasi identico a quello di registrazione di un'attività a esecuzione prolungata. Il frammento di codice seguente viene illustrata questa in azione:
+Il processo è quasi identico a quello di registrazione di un'attività a esecuzione prolungata. Il frammento di codice seguente illustra questo comportamento:
 
 ```csharp
 public override void DidEnterBackground (UIApplication application) {
@@ -64,29 +64,29 @@ public override void DidEnterBackground (UIApplication application) {
 }
 ```
 
-Iniziare eseguendo l'override di `DidEnterBackground` metodo nella `AppDelegate`, in cui si registra l'attività tramite `BeginBackgroundTask` come è stato fatto nell'esempio precedente. Successivamente, è possibile distribuire un nuovo thread ed eseguire l'attività a esecuzione prolungata. Si noti che il `EndBackgroundTask` viene ora effettuata all'interno di attività a esecuzione prolungata, poiché il `DidEnterBackground` metodo sarà ritornato già.
+Si inizia eseguendo l'override del `DidEnterBackground` metodo `AppDelegate`in, in cui viene registrata l'attività tramite `BeginBackgroundTask` come nell'esempio precedente. Successivamente, si genera un nuovo thread e si esegue l'attività a esecuzione prolungata. Si noti che `EndBackgroundTask` la chiamata viene ora eseguita dall'interno dell'attività a esecuzione prolungata `DidEnterBackground` , perché il metodo sarà già stato restituito.
 
 > [!IMPORTANT]
-> iOS Usa una [sorveglianza meccanismo](https://developer.apple.com/library/ios/qa/qa1693/_index.html) per assicurare che rimanga reattiva dell'interfaccia utente di un'applicazione. Un'applicazione che impiega troppo tempo in `DidEnterBackground` risponderanno nell'interfaccia utente. Consente l'avvio di attività da eseguire in background `DidEnterBackground` da restituire in modo tempestivo, mantenere reattiva l'interfaccia utente e impedire che il watchdog terminazione dell'applicazione.
+> iOS usa un [meccanismo watchdog](https://developer.apple.com/library/ios/qa/qa1693/_index.html) per garantire che l'interfaccia utente di un'applicazione rimanga reattiva. Un'applicazione che trascorre troppo tempo in `DidEnterBackground` non risponderà nell'interfaccia utente. Avviare le attività per l'esecuzione in background consente `DidEnterBackground` un ritorno tempestivo, mantenendo la risposta dell'interfaccia utente e impedendo al watchdog di terminare l'applicazione.
 
 
-## <a name="handling-background-task-time-limits"></a>Limiti di tempo di attività in Background la gestione
+## <a name="handling-background-task-time-limits"></a>Gestione dei limiti temporali delle attività in background
 
-iOS consente di definire limiti strict su come long un'attività in background può essere eseguito e se il `EndBackgroundTask` chiamata non viene stabilita entro il tempo stabilito, l'applicazione verrà terminata. Per tenere traccia dell'elaborazione in background in tempo rimanente e utilizzo dei gestori di scadenza quando necessario, è possibile evitare di terminare l'applicazione iOS.
+iOS pone limiti rigidi per quanto tempo può essere eseguita un'attività in background e `EndBackgroundTask` se la chiamata non viene eseguita entro il tempo assegnato, l'applicazione verrà terminata. Tenendo traccia del tempo di background rimanente e usando i gestori di scadenza quando necessario, è possibile evitare che iOS interrompa l'applicazione.
 
-### <a name="accessing-background-time-remaining"></a>L'accesso a sfondo tempo rimanente
+### <a name="accessing-background-time-remaining"></a>Accesso al tempo rimanente in background
 
-Se un'applicazione con attività registrate Ottiene spostata in background eseguire le attività registrate otterrà circa 600 secondi. È possibile controllare quanto tempo l'attività deve essere completata usando il metodo statico `BackgroundTimeRemaining` proprietà del `UIApplication` classe. Il codice riportato di seguito fornirà il tempo, espresso in secondi, che ha lasciato la nostra attività in background:
+Se un'applicazione con attività registrate viene spostata in background, le attività registrate otterranno circa 600 secondi per l'esecuzione. È possibile controllare il tempo necessario per completare l'attività usando la proprietà statica `BackgroundTimeRemaining` `UIApplication` della classe. Il codice seguente ci fornirà il tempo, in secondi, che l'attività in background ha lasciato:
 
 ```csharp
 double timeRemaining = UIApplication.SharedApplication.BackgroundTimeRemaining;
 ```
 
-### <a name="avoiding-app-termination-with-expiration-handlers"></a>Evitare la chiusura delle App con i gestori di scadenza
+### <a name="avoiding-app-termination-with-expiration-handlers"></a>Evitare la terminazione dell'app con gestori di scadenza
 
-Oltre a concedere l'accesso per il `BackgroundTimeRemaining` iOS di proprietà, fornisce un modo per gestire la scadenza di tempo in background mediante un **gestore scadenza**. Si tratta di un blocco di codice verrà eseguiti quando il tempo assegnato per un'attività sta per scadere facoltativo. Il codice nel gestore di scadenza chiama `EndBackgroundTask` e passa l'ID attività, che indica che l'app funzioni correttamente e che impedisce a iOS di terminazione, anche se l'attività viene eseguita all'esterno di tempo. `EndBackgroundTask` deve essere chiamato all'interno del gestore di scadenza, oltre che durante il normale funzionamento di esecuzione. 
+Oltre a fornire l'accesso alla proprietà `BackgroundTimeRemaining` , iOS fornisce un modo normale per gestire la scadenza del tempo di background tramite un **gestore di scadenza**. Si tratta di un blocco facoltativo di codice che verrà eseguito quando il tempo assegnato a un'attività sta per scadere. Il codice nel gestore di scadenza `EndBackgroundTask` chiama e passa l'ID attività, che indica che l'app funziona correttamente e impedisce a iOS di terminare l'app anche se l'attività non è più disponibile. `EndBackgroundTask`deve essere chiamato all'interno del gestore di scadenza, così come nel normale corso di esecuzione. 
 
-Il gestore di scadenza viene espresso come una funzione anonima tramite un'espressione lambda, come illustrato di seguito:
+Il gestore della scadenza viene espresso come funzione anonima usando un'espressione lambda, come illustrato di seguito:
 
 ```csharp
 Task.Factory.StartNew( () => {
@@ -106,43 +106,43 @@ Task.Factory.StartNew( () => {
 });
 ```
 
-Anche se i gestori di scadenza non sono necessari per eseguire il codice, è sempre necessario utilizzare un gestore di scadenza con un'attività in background.
+Sebbene i gestori di scadenza non siano necessari per l'esecuzione del codice, è consigliabile utilizzare sempre un gestore scadenza con un'attività in background.
 
  <a name="background_tasks_in_iOS_7" />
 
 ## <a name="background-tasks-in-ios-7"></a>Attività in background in iOS 7 +
 
-Il cambiamento più significativo in iOS 7 per quanto riguarda le attività in background non è modo in cui vengono implementate le attività, ma quando l'esecuzione.
+La modifica più importante in iOS 7 per quanto riguarda le attività in background non è la modalità di implementazione delle attività, ma quando vengono eseguite.
 
-È importante ricordare che pre-iOS 7, un'attività in esecuzione in background doveva 600 secondi completare. Uno dei motivi per questo limite è che un'attività in esecuzione in background consigliabile mantenere i dispositivi attivi per la durata dell'attività:
+Tenere presente che prima di iOS 7, un'attività in esecuzione in background aveva 600 secondi per il completamento. Uno dei motivi di questo limite è che un'attività in esecuzione in background mantiene il dispositivo sveglio per la durata dell'attività:
 
- [![](ios-backgrounding-with-tasks-images/ios6.png "Grafico dell'attività di app molto attivi pre-iOS 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
+ [![](ios-backgrounding-with-tasks-images/ios6.png "Grafico dell'attività che mantiene l'app pre-iOS 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
-l'elaborazione in background di iOS 7 è ottimizzato per la durata della batteria. In iOS 7, elaborazione in background in diventa opportunistico: invece di mantenere i dispositivi attivi, le attività rispettano quando il dispositivo passa alla modalità sospensione ed eseguire invece ordinarne l'elaborazione in blocchi quando il dispositivo viene attivato per gestire chiamate telefoniche, notifiche, in ingresso messaggi di posta elettronica e l'altro interruzioni più comuni. Il diagramma seguente fornisce informazioni approfondite come un'attività potrebbe essere interrotta backup:
+l'elaborazione in background di iOS 7 è ottimizzata per la durata della batteria maggiore. In iOS 7, lo sfondo diventa opportunistico: invece di tenere il dispositivo sveglio, le attività rispettano quando il dispositivo passa alla modalità di sospensione e invece eseguono la loro elaborazione in blocchi quando il dispositivo viene riattivato per gestire chiamate telefoniche, notifiche, messaggi di posta elettronica in arrivo e altro interruzioni comuni. Il diagramma seguente illustra in che modo è possibile suddividere un'attività:
 
- [![](ios-backgrounding-with-tasks-images/ios7.png "Grafico dell'attività viene suddiviso in blocchi di post-iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
+ [![](ios-backgrounding-with-tasks-images/ios7.png "Grafico dell'attività suddivisa in blocchi post-iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
-Poiché il momento dell'esecuzione dell'attività non è più continua, le attività eseguibili tramite i trasferimenti di rete devono essere gestite in modo diverso in iOS 7. Gli sviluppatori sono invitati a usare il `NSURlSession` API per gestire i trasferimenti di rete. Nella sezione successiva viene fornita una panoramica dei trasferimenti in background.
+Poiché il tempo di esecuzione dell'attività non è più continuo, le attività che eseguono trasferimenti di rete devono essere gestite in modo diverso in iOS 7. Gli sviluppatori sono invitati a usare `NSURlSession` l'API per gestire i trasferimenti di rete. La sezione successiva è una panoramica dei trasferimenti in background.
 
  <a name="background-transfers" />
 
 ## <a name="background-transfers"></a>Trasferimenti in background
 
-La struttura portante di trasferimenti in background in iOS 7 è il nuovo `NSURLSession` API. `NSURLSession` Consente di creare attività per:
+Il backbone dei trasferimenti in background in iOS 7 è la `NSURLSession` nuova API. `NSURLSession`consente di creare attività per:
 
-1.  Trasferire il contenuto tramite le interruzioni di rete e il dispositivo.
-1.  Caricare e scaricare file di grandi dimensioni ( *servizio di trasferimento in Background* ).
+1. Trasferire il contenuto attraverso le interruzioni della rete e dei dispositivi.
+1. Caricare e scaricare file di grandi dimensioni ( *servizio trasferimento in background* ).
 
 
-Esaminiamo più da vicino il funzionamento.
+Esaminiamo in dettaglio il funzionamento.
 
-### <a name="nsurlsession-api"></a>API di NSURLSession
+### <a name="nsurlsession-api"></a>API NSURLSession
 
- `NSURLSession` è un'API potente per il trasferimento di contenuto attraverso la rete. Fornisce un set di strumenti per gestire il trasferimento dei dati tramite le interruzioni della rete e le modifiche dello stato dell'applicazione.
+ `NSURLSession`è un'API potente per il trasferimento di contenuto in rete. Fornisce un set di strumenti per gestire il trasferimento di dati tramite interruzioni di rete e modifiche negli Stati dell'applicazione.
 
-Il `NSURLSession` API crea uno o più sessioni, che a sua volta spawn attività per shuttle di blocchi di dati correlati attraverso la rete. Le attività eseguite in modo asincrono per il trasferimento dati rapido e affidabile. Poiché `NSURLSession` è asincrono, ogni sessione richiede un blocco del gestore di completamento per consentire il sistema e l'applicazione conosce quando un trasferimento è stato completato.
+L' `NSURLSession` API crea una o più sessioni, che a loro volta generano attività per i blocchi Shuttle dei dati correlati attraverso la rete. Le attività vengono eseguite in modo asincrono per trasferire i dati in modo rapido e affidabile. Poiché `NSURLSession` è asincrono, ogni sessione richiede un blocco del gestore di completamento per consentire al sistema e all'applicazione di stabilire quando un trasferimento viene completato.
 
-Per eseguire un trasferimento tramite rete valida per pre-iOS 7 e post-iOS 7, controllare se un `NSURLSession` è disponibile per i trasferimenti di accodamento e usare un'attività in background regolari per eseguire il trasferimento, se non è:
+Per eseguire un trasferimento di rete valido sia in pre-iOS 7 che dopo iOS 7, verificare `NSURLSession` che sia disponibile per i trasferimenti di Accodamento e utilizzare un'attività in background regolare per eseguire il trasferimento in caso contrario:
 
 ```csharp
 if ([NSURLSession class]) {
@@ -155,16 +155,16 @@ else {
 ```
 
 > [!IMPORTANT]
-> Evitare di effettuare chiamate all'aggiornamento l'interfaccia utente da background in iOS codice conforme a 6, iOS 6 non supporta gli aggiornamenti dell'interfaccia utente in background e terminare l'applicazione.
+> Evitare di effettuare chiamate per aggiornare l'interfaccia utente dallo sfondo del codice conforme a iOS 6, perché iOS 6 non supporta gli aggiornamenti dell'interfaccia utente in background e interromperà l'applicazione.
 
 
-Il `NSURLSession` API include un'ampia gamma di funzionalità per gestire l'autenticazione, gestire i trasferimenti non riusciti e segnalare errori lato client, ma non sul lato server -. Consente di sfruttare che le interruzioni nelle attività di fase di esecuzione introdotta in iOS 7 e fornisce inoltre supporto per il trasferimento dei file di grandi dimensioni in modo rapido e affidabile. La prossima sezione viene illustrata questa funzionalità di secondo.
+L' `NSURLSession` API include un set completo di funzionalità per gestire l'autenticazione, gestire i trasferimenti non riusciti e segnalare gli errori sul lato client, ma non sul lato server. Consente di colmare le interruzioni nel tempo di esecuzione delle attività introdotte in iOS 7 e fornisce anche il supporto per trasferire file di grandi dimensioni in modo rapido e affidabile. Nella sezione successiva viene esaminata questa seconda funzionalità.
 
-### <a name="background-transfer-service"></a>Servizio di trasferimento in background
+### <a name="background-transfer-service"></a>Servizio trasferimento in background
 
-Prima di iOS 7, caricare o scaricare file in background non erano affidabili. Le attività in background ottengono un periodo di tempo limitato per l'esecuzione, ma il tempo che necessario per trasferire un file varia in base alla rete e le dimensioni del file. In iOS 7, è possibile usare un `NSURLSession` correttamente caricare e scaricare file di grandi dimensioni. Il particolare `NSURLSession` tipo di sessione che gestisce i trasferimenti di rete del file di grandi dimensioni in background è noto come il *servizio di trasferimento in Background*.
+Prima di iOS 7, il caricamento o il download di file in background non era affidabile. Le attività in background ottengono un tempo di esecuzione limitato, ma il tempo necessario per il trasferimento di un file varia a seconda della rete e delle dimensioni del file. In iOS 7, è possibile usare un `NSURLSession` per caricare e scaricare correttamente file di grandi dimensioni. Il tipo `NSURLSession` di sessione specifico che gestisce i trasferimenti di rete di file di grandi dimensioni in background è noto come *servizio di trasferimento in background*.
 
-Trasferimenti avviati tramite il servizio di trasferimento in Background sono gestiti dal sistema operativo e forniscono le API per gestire l'autenticazione e gli errori. Perché i trasferimenti non sono associati a un limite di tempo arbitrario, possono essere utilizzati per caricare o scaricare file di grandi dimensioni, l'aggiornamento automatico del contenuto in background e altro ancora. Vedere le [procedura dettagliata di trasferimento in Background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) per informazioni dettagliate su come implementare il servizio.
+I trasferimenti avviati tramite il servizio trasferimento in background vengono gestiti dal sistema operativo e forniscono API per gestire l'autenticazione e gli errori. Poiché i trasferimenti non sono associati da un limite di tempo arbitrario, possono essere usati per caricare o scaricare file di grandi dimensioni, aggiornare automaticamente il contenuto in background e altro ancora. Per informazioni dettagliate su come implementare il servizio, vedere la [procedura dettagliata](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) relativa al trasferimento in background.
 
-Il servizio di trasferimento in Background è spesso accompagnato da recupero in Background o notifiche Remote per consentire le applicazioni di aggiornare il contenuto in background. Nelle prossime due sezioni, si introducono il concetto di registrazione di intere applicazioni per l'esecuzione in background in iOS 6 e iOS 7.
+Il servizio trasferimento in background è spesso associato a recupero in background o a notifiche remote per consentire alle applicazioni di aggiornare il contenuto in background. Nelle due sezioni successive viene introdotto il concetto di registrazione di intere applicazioni per l'esecuzione in background in iOS 6 e iOS 7.
 

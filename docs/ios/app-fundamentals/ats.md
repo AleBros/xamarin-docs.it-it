@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 62ccaea83a3648c5d9b0a029b3a22d136c4f2cee
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649420"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521425"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Sicurezza del trasporto delle app in Novell. iOS
 
@@ -175,7 +175,7 @@ Ogni chiave presenta il tipo e il significato seguenti:
 - **NSAllowsArbitraryLoads** (`Boolean`)-Se `YES` ATS verrà disabilitato per tutti i domini **non** elencati `NSExceptionDomains`in. Per i domini elencati, verranno usate le impostazioni di sicurezza specificate.
 - **NSAllowsArbitraryLoadsInWebContent** (`Boolean`)-Se `YES` consentirà il caricamento corretto delle pagine Web mentre la protezione di Apple Transport Security (ATS) è ancora abilitata per il resto dell'app.
 - **NSExceptionDomains** (`Dictionary`): Raccolta di domini che e le impostazioni di sicurezza che devono essere utilizzate da ATS per un determinato dominio.
-- **< Domain-Name-for-exception-As-string >** (`Dictionary`): Raccolta di eccezioni per un determinato dominio, ad esempio `www.xamarin.com`).
+- `Dictionary`  **Domain-Name-for-exception-As-String>()-unaraccoltadieccezioniperundeterminato\<** dominio (ad esempio, `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** (`String`): Versione minima `TLSv1.0`di TLS come `TLSv1.1` o `TLSv1.2` (impostazione predefinita).
 - **NSExceptionRequiresForwardSecrecy** (`Boolean`)-Se `NO` per il dominio non è necessario utilizzare una crittografia con sicurezza in diretta. Il valore predefinito è `YES`.
 - **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`)-Se `NO` (impostazione predefinita) tutte le comunicazioni con il `HTTPS` dominio devono essere presenti nel protocollo.

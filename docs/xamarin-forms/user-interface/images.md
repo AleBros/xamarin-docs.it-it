@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 40a44b2748b29b21a1456c55cb75514f18506dd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4a3ba0ae860f2e6b42fc4cf349ec1bc8e83979e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648564"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527068"
 ---
 # <a name="images-in-xamarinforms"></a>Immagini in xamarin. Forms
 
@@ -204,7 +204,7 @@ Per utilizzare questa estensione, aggiungere una classe personalizzata `xmlns` p
 
 #### <a name="debugging-code"></a>Debug del codice
 
-Perché a volte è difficile da comprendere perché una risorsa particolare immagine non viene caricata, il seguente codice di debug può essere aggiunto temporaneamente a un'applicazione per verificare che le risorse siano configurate correttamente. Verranno visualizzate tutte le note risorse incorporate nell'assembly specificato per il <span class="UIItem">Console</span> per facilitare il debug di problemi di caricamento delle risorse.
+Perché a volte è difficile da comprendere perché una risorsa particolare immagine non viene caricata, il seguente codice di debug può essere aggiunto temporaneamente a un'applicazione per verificare che le risorse siano configurate correttamente. Verranno visualizzate tutte le note risorse incorporate nell'assembly specificato per il **Console** per facilitare il debug di problemi di caricamento delle risorse.
 
 ```csharp
 using System.Reflection;

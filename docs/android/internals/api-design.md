@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2958e456aeb25ba39697ad82500d574907e963e4
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d32b96cd489f84ea93e7ada9b6458272d0dea1c0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510757"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524869"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione dell'API Novell. Android
 
@@ -24,23 +24,23 @@ Alla base di Novell. Android è disponibile un motore di interoperabilità che C
 
 Questi sono alcuni dei principi di progettazione per l'associazione di Novell. Android
 
--  Sono conformi alle [linee guida di progettazione .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+- Sono conformi alle [linee guida di progettazione .NET Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
--  Consente agli sviluppatori di sottoclassare classi Java.
+- Consente agli sviluppatori di sottoclassare classi Java.
 
--  La sottoclasse dovrebbe C# funzionare con costrutti standard.
+- La sottoclasse dovrebbe C# funzionare con costrutti standard.
 
--  Derivare da una classe esistente.
+- Derivare da una classe esistente.
 
--  Chiamare il costruttore di base per concatenare.
+- Chiamare il costruttore di base per concatenare.
 
--  L'override dei metodi deve essere eseguito C#con il sistema di override di.
+- L'override dei metodi deve essere eseguito C#con il sistema di override di.
 
--  Semplifica le attività Java comuni e le attività Java rigide.
+- Semplifica le attività Java comuni e le attività Java rigide.
 
--  Esporre le proprietà JavaBean C# come proprietà.
+- Esporre le proprietà JavaBean C# come proprietà.
 
--  Esporre un'API fortemente tipizzata:
+- Esporre un'API fortemente tipizzata:
 
     - Aumentare l'indipendenza dai tipi.
 
@@ -50,7 +50,7 @@ Questi sono alcuni dei principi di progettazione per l'associazione di Novell. A
 
     - Consente la documentazione popup IDE.
 
--  Incoraggiare l'esplorazione nell'IDE delle API:
+- Incoraggiare l'esplorazione nell'IDE delle API:
 
     - Usare alternative del Framework per ridurre al minimo l'esposizione a CLASSLIB Java.
 
@@ -73,13 +73,13 @@ Le associazioni alla piattaforma Android sono contenute nell' `Mono.Android.dll`
 
 Le API Android utilizzano ampiamente le raccolte Java. util per fornire elenchi, set e mappe. Questi elementi vengono esposti usando le interfacce [System. Collections. Generic](xref:System.Collections.Generic) nell'associazione. I mapping fondamentali sono:
 
--   [java. util. set<E> ](https://developer.android.com/reference/java/util/Set.html) esegue il mapping al tipo di sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime<T>. JavaSet](xref:Android.Runtime.JavaSet`1).
+- [Java. util. set\<E >](https://developer.android.com/reference/java/util/Set.html) è mappato al tipo di sistema [\<ICollection T >](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime\<. JavaSet T >](xref:Android.Runtime.JavaSet`1).
 
--   [java. util. List<E> ](https://developer.android.com/reference/java/util/List.html) è mappato al tipo di sistema [IList<T>](xref:System.Collections.Generic.IList`1), classe [<T>Helper Android. Runtime. Java](xref:Android.Runtime.JavaList`1).
+- [Java. util. List\<E >](https://developer.android.com/reference/java/util/List.html) viene mappato al tipo di sistema [IList\<t >](xref:System.Collections.Generic.IList`1), classe helper [Android. Runtime.\<Java elenco >](xref:Android.Runtime.JavaList`1).
 
--   [java. util. Map < K, v >](https://developer.android.com/reference/java/util/Map.html) esegue il mapping al tipo di sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe helper [Android. Runtime. JavaDictionary < K, v >](xref:Android.Runtime.JavaDictionary`2).
+- [java. util. Map < K, v >](https://developer.android.com/reference/java/util/Map.html) esegue il mapping al tipo di sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe helper [Android. Runtime. JavaDictionary < K, v >](xref:Android.Runtime.JavaDictionary`2).
 
--   [java. util. Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) è mappato al tipo di sistema [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe [<T>Helper Android. Runtime. javacollection](xref:Android.Runtime.JavaCollection`1).
+- [Java. util. Collection\<E >](https://developer.android.com/reference/java/util/Collection.html) è mappato al tipo di sistema [\<ICollection T >](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime.\<javacollection t >](xref:Android.Runtime.JavaCollection`1).
 
 Sono state fornite classi helper per facilitare il marshalling non copiato più veloce di questi tipi. Quando possibile, è consigliabile usare queste raccolte fornite anziché l'implementazione fornita dal Framework, ad [`List<T>`](xref:System.Collections.Generic.List`1) esempio [`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2)o. Le implementazioni di [Android. Runtime](xref:Android.Runtime) usano una raccolta Java nativa internamente e pertanto non richiedono la copia da e verso una raccolta nativa quando passano a un membro API Android.
 
@@ -108,13 +108,13 @@ if (goodSource.Count != 4) // false
 
 I metodi Java vengono trasformati in proprietà, quando necessario:
 
--  La coppia `T getFoo()` di metodi Java `void setFoo(T)` e viene trasformata nella `Foo` proprietà. Esempio: [Activity. Intent](xref:Android.App.Activity.Intent).
+- La coppia `T getFoo()` di metodi Java `void setFoo(T)` e viene trasformata nella `Foo` proprietà. Esempio: [Activity. Intent](xref:Android.App.Activity.Intent).
 
--  Il metodo `getFoo()` Java viene trasformato nella proprietà Foo di sola lettura. Esempio: [Context. PackageName](xref:Android.Content.Context.PackageName).
+- Il metodo `getFoo()` Java viene trasformato nella proprietà Foo di sola lettura. Esempio: [Context. PackageName](xref:Android.Content.Context.PackageName).
 
--  Non vengono generate proprietà di sola impostazione.
+- Non vengono generate proprietà di sola impostazione.
 
--  Le proprietà *non* vengono generate se il tipo di proprietà è una matrice.
+- Le proprietà *non* vengono generate se il tipo di proprietà è una matrice.
 
 
 
@@ -157,7 +157,7 @@ C#gli eventi o le proprietà vengono generati automaticamente solo se il metodo 
 1. Accetta un solo parametro, il tipo di parametro è un'interfaccia, l'interfaccia dispone di un solo metodo e il nome dell'interfaccia `Listener` termina in, ad esempio il [ *listener*View. OnClick](xref:Android.Views.View.IOnClickListener).
 
 
-Inoltre, se il metodo dell'interfaccia del listener ha un tipo  restituito booleano anziché **void**, la sottoclasse *EventArgs* generata conterrà una proprietà *gestita* . Il valore della proprietà *Handled* viene usato come valore restituito per il metodo *listener* e per `true`impostazione predefinita è.
+Inoltre, se il metodo dell'interfaccia del listener ha un tipo restituito booleano anziché **void**, la sottoclasse *EventArgs* generata conterrà una proprietà *gestita* . Il valore della proprietà *Handled* viene usato come valore restituito per il metodo *listener* e per `true`impostazione predefinita è.
 
 Ad esempio, il metodo [View. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) di Android accetta l'interfaccia [View. OnKeyListener](xref:Android.Views.View.IOnKeyListener) e il metodo [View. OnKeyListener. onKey (View, int, fileEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) ha un tipo restituito booleano. Novell. Android genera un evento [View. KeyPress](xref:Android.Views.View.KeyPress) corrispondente, che è una [visualizzazione&lt;EventHandler. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
 La classe *KeyEventArgs* a sua volta ha una proprietà [View. KeyEventArgs. Handled](xref:Android.Views.View.KeyEventArgs.Handled) , che viene usata come valore restituito per il metodo *View. OnKeyListener. onKey ()* .
@@ -234,10 +234,10 @@ I tipi annidati sono "rilocati" come elementi di pari livello dell'interfaccia d
 
 Si consideri ad esempio l'interfaccia [Android. OS.](xref:Android.OS.Parcelable) .
 L'interfaccia a *pacchetti* contiene metodi, tipi annidati e costanti. I metodi di interfaccia a *pacchetti* sono inseriti nell'interfaccia [Android. OS. IParcelable](xref:Android.OS.IParcelable) .
-Le costanti di interfaccia a *pacchetti* sono inserite nel tipo [Android. OS. ParcelableConsts](xref:Android.OS.ParcelableConsts) . I tipi di > di [Android. OS. ClassLoaderCreator&lt;> t](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) annidati e Android. OS. compilable [.&lt;Creator t](https://developer.android.com/reference/android/os/Parcelable.Creator.html) non sono attualmente associati a causa delle limitazioni del supporto per i generics; se sono supportati, sarebbero presenti come interfacce *Android. OS. IParcelableClassLoaderCreator* e *Android. OS. IParcelableCreator* . Ad esempio, l'interfaccia di [Android. OS. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) annidata è associata come interfaccia [Android. OS. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
+Le costanti di interfaccia a *pacchetti* sono inserite nel tipo [Android. OS. ParcelableConsts](xref:Android.OS.ParcelableConsts) . I tipi di > di [Android. OS. ClassLoaderCreator\<> t](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) annidati e Android. OS. compilable [.\<Creator t](https://developer.android.com/reference/android/os/Parcelable.Creator.html) non sono attualmente associati a causa delle limitazioni del supporto per i generics; se sono supportati, sarebbero presenti come interfacce *Android. OS. IParcelableClassLoaderCreator* e *Android. OS. IParcelableCreator* . Ad esempio, l'interfaccia di [Android. OS. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) annidata è associata come interfaccia [Android. OS. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
 
 > [!NOTE]
-> A partire da Novell. Android 1,9, le costanti di interfaccia  Java vengono duplicate nel tentativo di semplificare il porting del codice Java. Questo consente di migliorare il porting di codice Java che si basa sulle costanti dell'interfaccia del [provider Android](https://developer.android.com/reference/android/provider/package-summary.html) .
+> A partire da Novell. Android 1,9, le costanti di interfaccia Java vengono duplicate nel tentativo di semplificare il porting del codice Java. Questo consente di migliorare il porting di codice Java che si basa sulle costanti dell'interfaccia del [provider Android](https://developer.android.com/reference/android/provider/package-summary.html) .
 
 Oltre ai tipi precedenti, sono disponibili quattro ulteriori modifiche:
 
@@ -258,7 +258,7 @@ Di conseguenza, l'espressione Java *Mediastore. video. VideoColumns. title* deve
 Inoltre, si consideri il tipo [Android. OS. bundle](xref:Android.OS.Bundle) , che implementa l'interfaccia java per i *pacchetti* . Poiché implementa l'interfaccia, tutte le costanti su tale interfaccia sono accessibili da "tramite" al tipo di bundle, ad esempio *bundle. CONTENTS_FILE_DESCRIPTOR* è un'espressione Java perfettamente valida.
 In precedenza, per trasferire questa espressione C# a è necessario esaminare tutte le interfacce implementate per vedere da quale tipo deriva *CONTENTS_FILE_DESCRIPTOR* . A partire da Novell. Android 1,9, le classi che implementano le interfacce Java che contengono costanti avranno un tipo *InterfaceConsts* annidato che conterrà tutte le costanti di interfaccia ereditate. Questa operazione consentirà di convertire *bundle. CONTENTS_FILE_DESCRIPTOR* in [*bundle. InterfaceConsts. ContentsFileDescriptor*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor).
 
-Infine, i tipi con  suffisso const, ad esempio *Android. OS. ParcelableConsts* , sono ora obsoleti, oltre ai tipi annidati InterfaceConsts appena introdotti. Verranno rimossi in Novell. Android 3,0.
+Infine, i tipi con suffisso const, ad esempio *Android. OS. ParcelableConsts* , sono ora obsoleti, oltre ai tipi annidati InterfaceConsts appena introdotti. Verranno rimossi in Novell. Android 3,0.
 
 
 ## <a name="resources"></a>Risorse
@@ -268,21 +268,23 @@ Diverse API Android sono progettate per [operare sugli ID di risorsa](https://de
 
 Ad esempio, un'app Android di esempio che contiene un layout dell'interfaccia `main.axml`utente (), una stringa della tabella `strings.xml`di internazionalizzazione () e `drawable-*/icon.png`alcune icone () mantengono le risorse nella directory "Resources" dell'applicazione:
 
-    Resources/
-        drawable-hdpi/
-            icon.png
+```
+Resources/
+    drawable-hdpi/
+        icon.png
 
-        drawable-ldpi/
-            icon.png
+    drawable-ldpi/
+        icon.png
 
-        drawable-mdpi/
-            icon.png
+    drawable-mdpi/
+        icon.png
 
-        layout/
-            main.axml
+    layout/
+        main.axml
 
-        values/
-            strings.xml
+    values/
+        strings.xml
+```
 
 Le API native di Android non funzionano direttamente con i nomi di file, ma operano invece con gli ID di risorsa. Quando si compila un'applicazione Android che usa risorse, il sistema di compilazione comprimerà le risorse per la distribuzione e genererà una classe denominata `Resource` che contiene i token per ciascuna delle risorse incluse. Ad esempio, per il layout delle risorse sopra riportato, questo è ciò che verrà esposto dalla classe R:
 

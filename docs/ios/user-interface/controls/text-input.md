@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 2bcbdf437956ed2e03e91236125d5e050cf349be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: edabddfeeac7f1c75df298cba6f885ec130972ba
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642774"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528560"
 ---
 # <a name="text-input-in-xamarinios"></a>Input di testo in Novell. iOS
 
@@ -37,15 +37,15 @@ Il `UITextField` controllo viene spesso usato per accettare una singola riga di 
 
 Questi controlli sono illustrati di seguito:
 
--  **Segnaposto** : si tratta di un parametro facoltativo. Se impostato, viene visualizzato quando il campo di testo è vuoto, in genere per spiegare all'utente l'input previsto.
--  **Pulsante Cancella** : consente di controllare quando viene visualizzato il pulsante Cancella standard (il cerchio grigio con (X)) nel campo di testo, in modo che l'utente cancelli rapidamente il testo. Può essere nascosto, in modo permanente, visibile o visualizzato in modo permanente, a seconda che il campo venga modificato o meno.
--  **Dimensioni minime del carattere** e adatta **alla** finestra: consente di adattare automaticamente le dimensioni del carattere per adattarle a un testo più lungo e impedire il troncamento, ma con un limite di dimensioni inferiori a quelle specificate.
--  **Maiuscole** : indica se sfruttare automaticamente le parole, le frasi o tutti gli input.
--  **Correzione** : indica se il controllo ortografico e i suggerimenti sono abilitati.
--  **Tastiera** : controlla lo stile della tastiera visualizzato per l'input e quindi le chiavi disponibili sulla tastiera. Sono inclusi il tastierino numerico, il tastierino telefonico, la posta elettronica e l'URL insieme ad altre opzioni.
--  **Aspetto** : controlla lo stile di aspetto della tastiera e sarà scuro o chiaro.
--  **Chiave restituita** : modificare l'etichetta della chiave restituita in modo da riflettere meglio l'azione che verrà eseguita. I valori supportati includono go, join, Next, Route, done e search.
--  **Secure** : indica se l'input è mascherato, ad esempio per un input di password.
+- **Segnaposto** : si tratta di un parametro facoltativo. Se impostato, viene visualizzato quando il campo di testo è vuoto, in genere per spiegare all'utente l'input previsto.
+- **Pulsante Cancella** : consente di controllare quando viene visualizzato il pulsante Cancella standard (il cerchio grigio con (X)) nel campo di testo, in modo che l'utente cancelli rapidamente il testo. Può essere nascosto, in modo permanente, visibile o visualizzato in modo permanente, a seconda che il campo venga modificato o meno.
+- **Dimensioni minime del carattere** e adatta **alla** finestra: consente di adattare automaticamente le dimensioni del carattere per adattarle a un testo più lungo e impedire il troncamento, ma con un limite di dimensioni inferiori a quelle specificate.
+- **Maiuscole** : indica se sfruttare automaticamente le parole, le frasi o tutti gli input.
+- **Correzione** : indica se il controllo ortografico e i suggerimenti sono abilitati.
+- **Tastiera** : controlla lo stile della tastiera visualizzato per l'input e quindi le chiavi disponibili sulla tastiera. Sono inclusi il tastierino numerico, il tastierino telefonico, la posta elettronica e l'URL insieme ad altre opzioni.
+- **Aspetto** : controlla lo stile di aspetto della tastiera e sarà scuro o chiaro.
+- **Chiave restituita** : modificare l'etichetta della chiave restituita in modo da riflettere meglio l'azione che verrà eseguita. I valori supportati includono go, join, Next, Route, done e search.
+- **Secure** : indica se l'input è mascherato, ad esempio per un input di password.
 
 
 Se un UITextField chiamato `textfield1` è stato aggiunto a una schermata con la finestra di progettazione, è possibile impostare o modificare le C# proprietà in come indicato di seguito:
@@ -81,8 +81,8 @@ Il `UITextView` controllo può essere usato per visualizzare il testo di sola le
 
 Le proprietà specifiche includono:
 
--  **Comportamento** : indica se il testo è modificabile o di sola lettura.
--  **Rilevamento** : rileva e converte i dati inseriti in elementi selezionabili, ad esempio numeri di telefono che possono attivare una chiamata, indirizzi che diventano collegamenti a mappe, URL aperti in Safari o date e ore che diventano eventi nel calendario.
+- **Comportamento** : indica se il testo è modificabile o di sola lettura.
+- **Rilevamento** : rileva e converte i dati inseriti in elementi selezionabili, ad esempio numeri di telefono che possono attivare una chiamata, indirizzi che diventano collegamenti a mappe, URL aperti in Safari o date e ore che diventano eventi nel calendario.
 
 
 Se un UITextView è stato aggiunto a una schermata con la finestra di progettazione, è possibile impostare o modificare le proprietà come segue:

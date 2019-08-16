@@ -1,26 +1,26 @@
 ---
-title: Utilizzo di ADO.NET con xamarin. IOS
-description: Questo documento descrive come usare ADO.NET come un metodo per accedere a SQLite in un'applicazione xamarin. IOS. Illustra l'esempio BasicDataAccess riferimenti ad assembly e Mono.Data.Sqlite.
+title: Uso di ADO.NET con Novell. iOS
+description: Questo documento descrive come usare ADO.NET come metodo per accedere a SQLite in un'applicazione Novell. iOS. Vengono illustrati i riferimenti agli assembly, mono. Data. sqlite e l'esempio BasicDataAccess.
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 293ccc66395edbe18399717caf632292ff760b0b
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 4f2d16ca2ff258da1b65bf7c7174c989ead7782c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650194"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527357"
 ---
-# <a name="using-adonet-with-xamarinios"></a>Utilizzo di ADO.NET con xamarin. IOS
+# <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Novell. iOS
 
-Xamarin offre supporto predefinito per il database SQLite che è disponibile in iOS, esposto tramite sintassi familiare simile a ADO.NET. Usando queste API richiede la scrittura di istruzioni SQL che vengono elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e `SELECT` istruzioni.
+Novell include il supporto predefinito per il database SQLite disponibile in iOS, esposto mediante una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad `CREATE TABLE`esempio `INSERT` le `SELECT` istruzioni e.
 
 ## <a name="assembly-references"></a>Riferimenti dell'assembly
 
-Per usare l'accesso tramite ADO.NET, è necessario aggiungere SQLite `System.Data` e `Mono.Data.Sqlite` fa riferimento al progetto iOS, come illustrato di seguito (per gli esempi in Visual Studio per Mac e Visual Studio):
+Per usare l'accesso a SQLite tramite ADO.NET, `System.Data` è `Mono.Data.Sqlite` necessario aggiungere i riferimenti al progetto iOS, come illustrato di seguito (per gli esempi in Visual Studio per Mac e Visual Studio):
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -32,21 +32,21 @@ Per usare l'accesso tramite ADO.NET, è necessario aggiungere SQLite `System.Dat
 
 -----
 
-Fare doppio clic su **riferimenti > Modifica i riferimenti...**  quindi fare clic per selezionare gli assembly necessari.
+Fare clic con il pulsante destro del mouse su **riferimenti > modifica riferimenti...** quindi fare clic per selezionare gli assembly necessari.
 
-## <a name="about-monodatasqlite"></a>Sulle Mono.Data.Sqlite
+## <a name="about-monodatasqlite"></a>Informazioni su mono. Data. sqlite
 
-Si userà il `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di database vuoto e quindi creare un'istanza `SqliteCommand` gli oggetti che è possibile usare per eseguire istruzioni SQL sul database.
+Verrà utilizzata la `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di database vuoto e quindi per creare `SqliteCommand` un'istanza degli oggetti che è possibile utilizzare per eseguire istruzioni SQL sul database.
 
 
-1. **Creazione di un Database vuoto** -chiamare le `CreateFile` metodo con un valore valido (ie. scrivibile) percorso del file. È necessario controllare se il file esiste già prima di chiamare questo metodo, in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore di quello precedente e i dati nel vecchio file andranno persi:
+1. **Creazione di un database vuoto** : chiamare `CreateFile` il metodo con un percorso di file valido (IE. Writeable). È necessario verificare se il file esiste già prima di chiamare questo metodo. in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore del vecchio e i dati nel file precedente andranno perduti:
 
     `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
 
     > [!NOTE]
-    > Il `dbPath` variabile deve essere determinata in base alla regole illustrate in precedenza in questo documento.
+    > La `dbPath` variabile deve essere determinata in base alle regole descritte in precedenza in questo documento.
 
-2. **Creazione di una connessione al Database** - dopo aver creato il file di database SQLite è possibile creare un oggetto di connessione per accedere ai dati. La connessione viene costruita con una stringa di connessione che assume la forma di `Data Source=file_path`, come illustrato di seguito:
+2. **Creazione di una connessione al database** : dopo che è stato creato il file di database SQLite, è possibile creare un oggetto connessione per accedere ai dati. La connessione viene costruita con una stringa di connessione che assume la forma `Data Source=file_path`di, come illustrato di seguito:
 
     ```csharp
     var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -55,9 +55,9 @@ Si userà il `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di da
     connection.Close();
     ```
 
-    Come accennato in precedenza, una connessione non deve essere mai usata nuovamente in thread diversi. In caso di dubbio, creare la connessione in base alle esigenze e chiuderla quando l'operazione è terminata; Tuttavia, tenere in considerazione di eseguire spesso questa maggiore rispetto a quello richiesto troppo.
+    Come indicato in precedenza, una connessione non deve mai essere riutilizzata tra thread diversi. In caso di dubbi, creare la connessione come richiesto e chiuderla al termine dell'operazione. Tuttavia, tenere presente questo problema più spesso del necessario.
     
-3. **Creazione ed esecuzione di un comando di Database** : dopo aver ottenuto una connessione è possibile eseguire i comandi SQL arbitrari su di esso. Il codice seguente illustra un'istruzione CREATE TABLE in esecuzione.
+3. **Creazione ed esecuzione di un comando di database** : una volta che è presente una connessione, è possibile eseguire comandi SQL arbitrari. Nel codice riportato di seguito viene illustrata un'istruzione CREATE TABLE eseguita.
 
     ```csharp
     using (var command = connection.CreateCommand ()) {
@@ -66,17 +66,17 @@ Si userà il `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di da
     }
     ```
 
-Quando si esegue SQL direttamente nel database è consigliabile adottare le precauzioni normale non effettuare le richieste non valide, ad esempio si tenta di creare una tabella già esistente. Tenere traccia della struttura del database in modo che non si provochi un SqliteException, ad esempio "tabella degli errori di SQLite [elementi] esiste già".
+Quando si esegue SQL direttamente sul database, è consigliabile evitare di eseguire richieste non valide, ad esempio il tentativo di creare una tabella già esistente. Tenere traccia della struttura del database in modo che non si verifichi una Sqliteexception, ad esempio "tabella degli errori SQLite [Items] già esistente".
 
 ## <a name="basic-data-access"></a>Accesso ai dati di base
 
-Il *DataAccess_Basic* codice di esempio per questo documento aspetto simile al seguente quando si esegue iOS:
+Il codice di esempio *DataAccess_Basic* per questo documento è simile al seguente quando viene eseguito in iOS:
 
- ![](using-adonet-images/image9.png "esempio ADO.NET iOS")
+ ![](using-adonet-images/image9.png "esempio di ADO.NET iOS")
 
-Il codice seguente viene illustrato come eseguire semplici operazioni di SQLite e vengono illustrati i risultati in formato testo nella finestra principale dell'applicazione.
+Il codice seguente illustra come eseguire semplici operazioni SQLite e visualizzare i risultati in come testo nella finestra principale dell'applicazione.
 
-È necessario includere questi spazi dei nomi:
+È necessario includere gli spazi dei nomi seguenti:
 
 ```csharp
 using System;
@@ -84,13 +84,13 @@ using System.IO;
 using Mono.Data.Sqlite;
 ```
 
-Esempio di codice seguente mostra un'interazione intero database:
+Nell'esempio di codice riportato di seguito viene illustrata un'intera interazione con il database:
 
-1.  Creazione del file di database
-2.  Inserimento di alcuni dati
-3.  Esecuzione di una query sui dati
+1. Creazione del file di database
+2. Inserimento di alcuni dati
+3. Esecuzione di una query sui dati
 
-Queste operazioni in genere potrebbero apparire in più posizioni in tutto il codice, ad esempio è possibile creare le tabelle e file di database al primo avvio dell'applicazione ed eseguire letture di dati e le scritture in singole schermate nell'app. Nell'esempio riportato di seguito sono state raggruppate in un singolo metodo per questo esempio:
+Queste operazioni vengono in genere visualizzate in più posizioni nel codice. ad esempio, è possibile creare il file di database e le tabelle quando l'applicazione viene avviata per la prima volta ed eseguire operazioni di lettura e scrittura dei dati nelle singole schermate dell'app. Nell'esempio seguente sono stati raggruppati in un unico metodo per questo esempio:
 
 ```csharp
 public static SqliteConnection connection;
@@ -147,16 +147,16 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>Query più complesse
 
-Poiché SQLite consente arbitrari comandi SQL da eseguire sui dati, è possibile eseguire qualsiasi creare, inserire, aggiornare, eliminare o si desidera che le istruzioni SELECT. È possibile leggere sui comandi SQL supportati da SQLite in sito Web di Sqlite. Le istruzioni SQL vengono eseguite utilizzando uno dei tre metodi su un oggetto SqliteCommand:
+Poiché SQLite consente l'esecuzione di comandi SQL arbitrari sui dati, è possibile eseguire qualsiasi istruzione di creazione, inserimento, aggiornamento, eliminazione o selezione. Per informazioni sui comandi SQL supportati da SQLite, vedere il sito Web SQLite. Le istruzioni SQL vengono eseguite utilizzando uno dei tre metodi su un oggetto SqliteCommand:
 
--  **ExecuteNonQuery** : in genere usato per l'inserimento di dati o la creazione di tabella. Il valore restituito per alcune operazioni è il numero di righe interessate, in caso contrario è -1.
--  **ExecuteReader** – utilizzato quando una raccolta di righe deve essere restituita come un `SqlDataReader` .
--  **ExecuteScalar** : recupera un singolo valore (ad esempio una funzione di aggregazione).
+- **ExecuteNonQuery** : usato in genere per la creazione di tabelle o l'inserimento di dati. Il valore restituito per alcune operazioni è il numero di righe interessate; in caso contrario, è-1.
+- **ExecuteReader** : usato quando una raccolta di righe deve essere restituita come `SqlDataReader` .
+- **ExecuteScalar** : Recupera un singolo valore (ad esempio un'aggregazione).
 
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
-Le istruzioni INSERT, UPDATE e DELETE restituirà il numero di righe interessate. Tutte le altre istruzioni SQL restituirà -1.
+Le istruzioni INSERT, UPDATE e DELETE restituiranno il numero di righe interessate. Tutte le altre istruzioni SQL restituiranno-1.
 
 ```csharp
 using (var c = connection.CreateCommand ()) {
@@ -167,7 +167,7 @@ using (var c = connection.CreateCommand ()) {
 
 ### <a name="executereader"></a>EXECUTEREADER
 
-Il metodo seguente viene illustrata una clausola WHERE nell'istruzione SELECT. Poiché il codice consiste nel creare un'istruzione SQL completa è necessario prestare attenzione per eseguire l'escape di caratteri riservati, ad esempio le virgolette (') in stringhe.
+Il metodo seguente mostra una clausola WHERE nell'istruzione SELECT. Poiché il codice sta creando un'istruzione SQL completa, è necessario eseguire l'escape dei caratteri riservati, ad esempio le virgolette (') intorno alle stringhe.
 
 ```csharp
 public static string MoreComplexQuery ()
@@ -194,15 +194,15 @@ public static string MoreComplexQuery ()
 }
 ```
 
-Il metodo ExecuteReader restituisce un oggetto SqliteDataReader. Oltre al metodo di lettura illustrato nell'esempio, includere altre proprietà utili:
+Il metodo ExecuteReader restituisce un oggetto SqliteDataReader. Oltre al metodo Read illustrato nell'esempio, altre proprietà utili includono:
 
--  **RowsAffected** : conteggio delle righe interessate dalla query.
--  **HasRows** : indica se tutte le righe sono state restituite.
+- **RowsAffected** : numero di righe interessate dalla query.
+- **HasRows** : indica se sono state restituite righe.
 
 
 ### <a name="executescalar"></a>EXECUTESCALAR
 
-Questa scheda per le istruzioni SELECT che restituiscono un singolo valore (ad esempio, una funzione di aggregazione).
+Usare questa istruzione per istruzioni SELECT che restituiscono un singolo valore, ad esempio un'aggregazione.
 
 ```csharp
 using (var contents = connection.CreateCommand ()) {
@@ -211,12 +211,12 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-Il `ExecuteScalar` è di tipo restituito del metodo `object` : è necessario il cast del risultato a seconda della query di database. Il risultato potrebbe essere un numero intero da una query di conteggio o una stringa da una query di selezione singola colonna. Si noti che ciò è diverso da altri metodi Execute che restituiscono un oggetto lettore o un conteggio del numero di righe interessate.
+Il `ExecuteScalar` tipo restituito del metodo è `object` : è necessario eseguire il cast del risultato in base alla query di database. Il risultato può essere un numero intero da una query COUNT o una stringa da una singola colonna SELECT query. Si noti che questa operazione è diversa dagli altri metodi Execute che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [iOS recipe di dati](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
+- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)

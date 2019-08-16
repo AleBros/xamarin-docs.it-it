@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 067d97e6a36dae6c11f056241c08c21899e96c08
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 885cf4b77d4eac0668a2e70c57187e9b23a91dd1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649336"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527563"
 ---
 # <a name="introduction-to-ios-7"></a>Introduzione a iOS 7
 
@@ -28,8 +28,8 @@ iOS 7 aumenta il supporto dell'animazione in UIKit, consentendo alle applicazion
 
  `UIView`supporta ora l'animazione delle modifiche delle proprietà con effetto primaverile. Per aggiungere questo oggetto, chiamare il `AnimateNotify` metodo `AnimateNotifyAsync` o, passando i valori per il rapporto di smorzamento della molla e la velocità iniziale della molla, come descritto di seguito:
 
--  `springWithDampingRatio`: Valore compreso tra 0 e 1, in cui l'oscillazione aumenta per un valore inferiore.
--  `initialSpringVelocity`: La velocità iniziale della molla come percentuale della distanza di animazione totale al secondo.
+- `springWithDampingRatio`: Valore compreso tra 0 e 1, in cui l'oscillazione aumenta per un valore inferiore.
+- `initialSpringVelocity`: La velocità iniziale della molla come percentuale della distanza di animazione totale al secondo.
 
 
 Il codice seguente produce un effetto primaverile quando il centro della visualizzazione immagine cambia:
@@ -97,19 +97,19 @@ L'API è di natura dichiarativa. Si dichiara il comportamento delle interazioni 
 
 Sono disponibili diversi comportamenti primitivi per attivare interazioni complesse, tra cui:
 
--  `UIAttachmentBehavior`: Collega due elementi dinamici in modo che vengano spostati insieme o allegano un elemento dinamico a un punto di collegamento.
--  `UICollisionBehavior`: Consente agli elementi dinamici di partecipare ai conflitti.
--  `UIDynamicItemBehavior`: Specifica un set generale di proprietà da applicare agli elementi dinamici, ad esempio elasticità, densità e attrito.
--  `UIGravityBehavior`-Applica la gravità a un elemento dinamico, causando l'accelerazione degli elementi nella direzione gravitazionale.
--  `UIPushBehavior`: Applica Force a un elemento dinamico.
--  `UISnapBehavior`: Consente a un elemento dinamico di bloccarsi in una posizione con effetto elastico.
+- `UIAttachmentBehavior`: Collega due elementi dinamici in modo che vengano spostati insieme o allegano un elemento dinamico a un punto di collegamento.
+- `UICollisionBehavior`: Consente agli elementi dinamici di partecipare ai conflitti.
+- `UIDynamicItemBehavior`: Specifica un set generale di proprietà da applicare agli elementi dinamici, ad esempio elasticità, densità e attrito.
+- `UIGravityBehavior`-Applica la gravità a un elemento dinamico, causando l'accelerazione degli elementi nella direzione gravitazionale.
+- `UIPushBehavior`: Applica Force a un elemento dinamico.
+- `UISnapBehavior`: Consente a un elemento dinamico di bloccarsi in una posizione con effetto elastico.
 
 
 Sebbene esistano molte primitive, il processo generale per l'aggiunta di interazioni basate su fisica a una vista con UIKit Dynamics è coerente nei comportamenti:
 
-1.  Creare un animatore dinamico.
-1.  Crea comportamenti.
-1.  Consente di aggiungere comportamenti a Dynamic Animator.
+1. Creare un animatore dinamico.
+1. Crea comportamenti.
+1. Consente di aggiungere comportamenti a Dynamic Animator.
 
 
 ### <a name="dynamics-example"></a>Esempio di Dynamics
@@ -230,9 +230,9 @@ Per ulteriori informazioni, vedere la [TextKit](~/ios/platform/textkit.md)
 
 iOS 7 cambia quando e come viene eseguito il lavoro in background. Il completamento delle attività in iOS 7 non mantiene più le applicazioni sveglie quando le attività vengono eseguite in background e le applicazioni vengono riattivate per l'elaborazione in background in modo non contiguo. iOS 7 aggiunge anche tre nuove API per l'aggiornamento delle applicazioni con nuovo contenuto in background:
 
--  Recupero in background: consente alle applicazioni di aggiornare il contenuto in background a intervalli regolari.
--  Notifiche remote: consente alle applicazioni di aggiornare il contenuto quando riceve una notifica push. Le notifiche possono essere in modalità invisibile all'utente o visualizzare un banner nella schermata di blocco.
--  Servizio trasferimento in background: consente il caricamento e il download di dati, ad esempio file di grandi dimensioni, senza un limite di tempo fisso.
+- Recupero in background: consente alle applicazioni di aggiornare il contenuto in background a intervalli regolari.
+- Notifiche remote: consente alle applicazioni di aggiornare il contenuto quando riceve una notifica push. Le notifiche possono essere in modalità invisibile all'utente o visualizzare un banner nella schermata di blocco.
+- Servizio trasferimento in background: consente il caricamento e il download di dati, ad esempio file di grandi dimensioni, senza un limite di tempo fisso.
 
 
 Per ulteriori informazioni sulle nuove funzionalità multitasking, vedere le sezioni iOS della [Guida in background](~/ios/app-fundamentals/backgrounding/index.md)Novell.

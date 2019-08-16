@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 4d4785d6e556c856b0f7b4db2accd87f5297e277
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655364"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528721"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit in Novell. iOS
 
@@ -20,17 +20,17 @@ TextKit è una nuova API che offre funzionalità avanzate per il layout e il ren
 
 Per rendere disponibili le funzionalità di TextKit ai controlli standard, diversi controlli testo iOS sono stati riimplementati per l'uso di TextKit, tra cui:
 
--  UITextView
--  UITextField
--  UILabel
+- UITextView
+- UITextField
+- UILabel
 
 ## <a name="architecture"></a>Architettura
 
 TextKit fornisce un'architettura a più livelli che separa l'archiviazione di testo dal layout e dalla visualizzazione, incluse le classi seguenti:
 
--  `NSTextContainer`: Fornisce il sistema di coordinate e la geometria usati per il layout del testo.
--  `NSLayoutManager`: Consente di disporre il testo trasformando il testo in glifi. 
--  `NSTextStorage`: Include i dati di testo e gestisce gli aggiornamenti delle proprietà del testo del batch. Eventuali aggiornamenti batch vengono passati a gestione layout per l'effettiva elaborazione delle modifiche, ad esempio il ricalcolo del layout e il ridisegno del testo.
+- `NSTextContainer`: Fornisce il sistema di coordinate e la geometria usati per il layout del testo.
+- `NSLayoutManager`: Consente di disporre il testo trasformando il testo in glifi. 
+- `NSTextStorage`: Include i dati di testo e gestisce gli aggiornamenti delle proprietà del testo del batch. Eventuali aggiornamenti batch vengono passati a gestione layout per l'effettiva elaborazione delle modifiche, ad esempio il ricalcolo del layout e il ridisegno del testo.
 
 
 Queste tre classi vengono applicate a una visualizzazione che esegue il rendering del testo. Le visualizzazioni di gestione del testo predefinite, ad esempio `UITextView`, `UITextField`e `UILabel` sono già impostate, ma è possibile crearle e applicarle anche a qualsiasi `UIView` istanza.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: e4728d14e4fdb914fbfc950ffe38abee031b4c49
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649648"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527574"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con Novell. iOS
 
@@ -45,9 +45,9 @@ Le applicazioni devono essere configurate per usare iCloud sia nel portale di pr
 
 Per configurare correttamente un'applicazione per accedere a iCloud:
 
--   **Trovare il TeamID** di accesso a [Developer.Apple.com](https://developer.apple.com) e visitare il **centro per i membri > il proprio account > Riepilogo account sviluppatore** per ottenere l'ID del team (o ID singolo per gli sviluppatori singoli). Si tratta di una stringa di 10 caratteri (ad esempio, **A93A5CM278** ), che fa parte dell'"identificatore del contenitore".
+- **Trovare il TeamID** di accesso a [Developer.Apple.com](https://developer.apple.com) e visitare il **centro per i membri > il proprio account > Riepilogo account sviluppatore** per ottenere l'ID del team (o ID singolo per gli sviluppatori singoli). Si tratta di una stringa di 10 caratteri (ad esempio, **A93A5CM278** ), che fa parte dell'"identificatore del contenitore".
 
--   **Creare un nuovo ID app** : per creare un ID app, seguire i passaggi descritti nella [sezione provisioning for Store Technologies della Guida](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)al provisioning dei dispositivi e assicurarsi di controllare **iCloud** come servizio consentito:
+- **Creare un nuovo ID app** : per creare un ID app, seguire i passaggi descritti nella [sezione provisioning for Store Technologies della Guida](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)al provisioning dei dispositivi e assicurarsi di controllare **iCloud** come servizio consentito:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Controllare iCloud come servizio consentito")](introduction-to-icloud-images/icloud.png#lightbox)
 

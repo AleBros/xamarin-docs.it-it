@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 80ec7a2ae13b3c76bccae80d2c6956533b027047
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e36a8e25c5924ac82356c0f1c3110d1596f81cbf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643269"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523892"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con Novell. Android
 
@@ -22,9 +22,9 @@ _Questo articolo illustra come usare le mappe e il percorso con Novell. Android.
 
 Le tecnologie di mapping sono un complemento universale ai dispositivi mobili. I computer desktop e i portatili non tendono a avere la consapevolezza della posizione incorporata. D'altra parte, i dispositivi mobili usano tali applicazioni per individuare i dispositivi e visualizzare le informazioni sulla posizione modificabile. Android offre una tecnologia incorporata potente che Visualizza i dati relativi alla posizione sulle mappe usando l'hardware del percorso che può essere disponibile nel dispositivo. Questo articolo illustra una serie di informazioni che le applicazioni Maps in Novell. Android devono offrire, tra cui: 
 
--  Utilizzo dell'applicazione mappe predefinite per aggiungere rapidamente la funzionalità di mapping.
--  Uso dell'API Maps per controllare la visualizzazione di una mappa.
--  Uso di diverse tecniche per aggiungere sovrapposizioni grafiche.
+- Utilizzo dell'applicazione mappe predefinite per aggiungere rapidamente la funzionalità di mapping.
+- Uso dell'API Maps per controllare la visualizzazione di una mappa.
+- Uso di diverse tecniche per aggiungere sovrapposizioni grafiche.
 
 Negli argomenti di questa sezione viene illustrata un'ampia gamma di funzionalità di mapping.
 In primo luogo, spiegano come sfruttare le mappe predefinite di Android e come visualizzare una vista panoramica di una posizione. Viene quindi illustrato come usare l'API Maps per incorporare le funzionalità di mapping direttamente all'interno di un'applicazione, coprendo sia come controllare la posizione che la visualizzazione di una mappa, sia come aggiungere sovrapposizioni grafiche.

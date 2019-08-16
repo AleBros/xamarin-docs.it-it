@@ -6,30 +6,30 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7f68695b4fa6b8abb7938dd96794eb1d0d1d13a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 274c441e0507f100697fc153a9f748de1bce4cf3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643950"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526076"
 ---
 # <a name="touch-in-android"></a>Tocco in Android
 
 Analogamente a iOS, Android crea un oggetto che include i dati sull'interazione fisica dell'utente con la &ndash; schermata `Android.View.MotionEvent` di un oggetto. Questo oggetto include dati quali l'azione eseguita, la posizione in cui si è verificato il tocco, la quantità di pressione applicata e così via. Un `MotionEvent` oggetto suddivide lo spostamento in con i valori seguenti:
 
--  Codice di azione che descrive il tipo di movimento, ad esempio il tocco iniziale, il tocco in movimento sullo schermo o il tocco finale.
+- Codice di azione che descrive il tipo di movimento, ad esempio il tocco iniziale, il tocco in movimento sullo schermo o il tocco finale.
 
--  Set di valori dell'asse che descrivono la posizione di `MotionEvent` e altre proprietà di spostamento, ad esempio il punto in cui si verifica il tocco, il momento in cui si è verificato il tocco e la quantità di pressione utilizzata.
+- Set di valori dell'asse che descrivono la posizione di `MotionEvent` e altre proprietà di spostamento, ad esempio il punto in cui si verifica il tocco, il momento in cui si è verificato il tocco e la quantità di pressione utilizzata.
    I valori dell'asse possono essere diversi a seconda del dispositivo, quindi l'elenco precedente non descrive tutti i valori dell'asse.
 
 
 L' `MotionEvent` oggetto verrà passato a un metodo appropriato in un'applicazione. È possibile che un'applicazione Novell. Android risponda a un evento Touch in tre modi:
 
--  *Assegnare un gestore eventi a `View.Touch`*  : la `Android.Views.View` classe dispone di `EventHandler<View.TouchEventArgs>` un oggetto a cui le applicazioni possono assegnare un gestore. Si tratta di un comportamento tipico di .NET.
+- *Assegnare un gestore eventi a `View.Touch`*  : la `Android.Views.View` classe dispone di `EventHandler<View.TouchEventArgs>` un oggetto a cui le applicazioni possono assegnare un gestore. Si tratta di un comportamento tipico di .NET.
 
--  *Implementazione`View.IOnTouchListener`* : le istanze di questa interfaccia possono essere assegnate a un oggetto visualizzazione utilizzando la vista. `SetOnListener`Metodo. Dal `View.Touch` punto di vista funzionale equivale all'assegnazione di un gestore eventi all'evento. Se è presente una logica comune o condivisa che molte visualizzazioni diverse potrebbero avere bisogno quando vengono modificate, sarà più efficiente creare una classe e implementare questo metodo anziché assegnare a ogni visualizzazione il proprio gestore eventi.
+- *Implementazione`View.IOnTouchListener`* : le istanze di questa interfaccia possono essere assegnate a un oggetto visualizzazione utilizzando la vista. `SetOnListener`Metodo. Dal `View.Touch` punto di vista funzionale equivale all'assegnazione di un gestore eventi all'evento. Se è presente una logica comune o condivisa che molte visualizzazioni diverse potrebbero avere bisogno quando vengono modificate, sarà più efficiente creare una classe e implementare questo metodo anziché assegnare a ogni visualizzazione il proprio gestore eventi.
 
--  *Esegue `View.OnTouchEvent` l'override* di tutte le viste `Android.Views.View`nella sottoclasse Android. Quando viene toccata una visualizzazione, Android `OnTouchEvent` chiamerà e passa un `MotionEvent` oggetto come parametro.
+- *Esegue `View.OnTouchEvent` l'override* di tutte le viste `Android.Views.View`nella sottoclasse Android. Quando viene toccata una visualizzazione, Android `OnTouchEvent` chiamerà e passa un `MotionEvent` oggetto come parametro.
 
 
 > [!NOTE]
@@ -67,17 +67,17 @@ public override bool OnTouchEvent(MotionEvent e)
 Quando un'istanza di `GestureDetector` identifica un movimento di interesse, invierà una notifica all'attività o all'applicazione generando un evento o tramite un callback fornito `GestureDetector.IOnGestureListener`da.
 Questa interfaccia fornisce sei metodi per i diversi movimenti:
 
--  *Ondown* : viene chiamato quando si verifica un tap ma non viene rilasciato.
+- *Ondown* : viene chiamato quando si verifica un tap ma non viene rilasciato.
 
--  *Onfling* : viene chiamato quando si verifica un'operazione di Fling e fornisce i dati sul tocco iniziale e finale che ha attivato l'evento.
+- *Onfling* : viene chiamato quando si verifica un'operazione di Fling e fornisce i dati sul tocco iniziale e finale che ha attivato l'evento.
 
--  *OnLongPress* : viene chiamato quando si verifica una pressione prolungata.
+- *OnLongPress* : viene chiamato quando si verifica una pressione prolungata.
 
--  *Onscroll* : chiamato quando si verifica un evento Scroll.
+- *Onscroll* : chiamato quando si verifica un evento Scroll.
 
--  *OnShowPress* : viene chiamato dopo che si è verificato un ondown e non è stato eseguito un evento di spostamento o di discesa.
+- *OnShowPress* : viene chiamato dopo che si è verificato un ondown e non è stato eseguito un evento di spostamento o di discesa.
 
--  *OnSingleTapUp* : viene chiamato quando si verifica un solo tocco.
+- *OnSingleTapUp* : viene chiamato quando si verifica un solo tocco.
 
 
 In molti casi le applicazioni possono essere interessate solo a un subset di movimenti. In questo caso, le applicazioni devono estendere la classe GestureDetector. SimpleOnGestureListener ed eseguire l'override dei metodi che corrispondono agli eventi a cui sono interessati.

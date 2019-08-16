@@ -1,165 +1,165 @@
 ---
-title: Funzionalità e le parti di RecyclerView
-description: Panoramica del gestore di layout RecyclerView, adapter e titolare della visualizzazione.
+title: Parti e funzionalità di RecyclerView
+description: Panoramica di RecyclerView Layout Manager, adapter e View Holder.
 ms.prod: xamarin
 ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 13678d3b1bca102e6f608ad1c11838db1f14cd08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 89b7f70ae69987edbd465d669f1bac17ddebc7c8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61309186"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522452"
 ---
-# <a name="recyclerview-parts-and-functionality"></a>Funzionalità e le parti di RecyclerView
+# <a name="recyclerview-parts-and-functionality"></a>Parti e funzionalità di RecyclerView
 
 
-`RecyclerView` gli handle di alcune attività internamente (ad esempio la scorrimento e il riciclo delle visualizzazioni), ma è essenzialmente un manager che coordina le classi helper per la visualizzazione di una raccolta. `RecyclerView` delega le attività per le classi helper seguenti:
+`RecyclerView`gestisce alcune attività internamente, ad esempio lo scorrimento e il riciclo delle viste, ma è essenzialmente un responsabile che coordina le classi helper per la visualizzazione di una raccolta. `RecyclerView`delega le attività alle classi helper seguenti:
 
--   **`Adapter`** &ndash; Incrementa i layout di elementi (crea il contenuto di un file di layout) e associa i dati alle viste che vengono visualizzate all'interno di un `RecyclerView`. L'adapter segnala anche gli eventi click di elemento.
+- **`Adapter`** Consente di ingrandire i layout degli elementi (creare un'istanza del contenuto di un file di layout) e di associare i dati alle visualizzazioni visualizzate all'interno di un oggetto `RecyclerView`. &ndash; L'adapter segnala anche gli eventi di clic sugli elementi.
 
--   **`LayoutManager`** &ndash; Misura e posiziona le viste di elemento all'interno di un `RecyclerView` e gestisce i criteri per il riciclaggio di visualizzazione.
+- **`LayoutManager`** Misura e posiziona le visualizzazioni di elementi `RecyclerView` all'interno di un e gestisce i criteri per il riciclo della visualizzazione. &ndash;
 
--   **`ViewHolder`** &ndash; Ricerca e archivia i riferimenti di visualizzazione. Il titolare della visualizzazione consente inoltre di rilevare i clic visualizzazione dell'elemento.
+- **`ViewHolder`** &ndash; Cerca e archivia i riferimenti alla visualizzazione. Il titolare della visualizzazione consente inoltre di rilevare i clic per la visualizzazione di elementi.
 
--   **`ItemDecoration`** &ndash; Consente a un'app aggiungere gli offset di disegno e layout speciali a visualizzazioni specifiche per il disegno di separatori tra gli elementi, evidenziazioni e i limiti di raggruppamento visivo.
+- **`ItemDecoration`** &ndash; Consente a un'app di aggiungere offset di disegno e layout speciali a visualizzazioni specifiche per il disegno di divisori tra gli elementi, le evidenziazioni e i limiti di raggruppamento visivo.
 
--   **`ItemAnimator`** &ndash; Definisce le animazioni che si verificano durante le azioni di elemento o come le modifiche vengono apportate all'adapter.
+- **`ItemAnimator`** &ndash; Definisce le animazioni che si verificano durante le azioni dell'elemento o quando vengono apportate modifiche all'adapter.
 
-La relazione tra il `RecyclerView`, `LayoutManager`, e `Adapter` classi è illustrata nel diagramma seguente:
+La relazione tra le `RecyclerView`classi `LayoutManager`, e `Adapter` è illustrata nel diagramma seguente:
 
-![Diagramma di RecyclerView contenente LayoutManager, l'utilizzo degli Adapter per accedere ai Set di dati](parts-and-functionality-images/01-recyclerview-diagram.png)
+![Diagramma di RecyclerView contenente LayoutManager, uso dell'adapter per accedere al set di dati](parts-and-functionality-images/01-recyclerview-diagram.png)
 
-Come illustrato nella figura, il `LayoutManager` possono essere considerati come intermediario tra il `Adapter` e il `RecyclerView`. Il `LayoutManager` effettua chiamate al `Adapter` metodi per conto del `RecyclerView`. Ad esempio, il `LayoutManager` chiamate un' `Adapter` metodo quando si è pronti per creare una nuova visualizzazione per una posizione particolare elemento nel `RecyclerView`. Il `Adapter` incrementa il layout per l'elemento e crea un `ViewHolder` istanza (non mostrato) i riferimenti alle viste in tale posizione. Quando la `LayoutManager` chiama il `Adapter` per associare un particolare elemento nel set di dati, il `Adapter` individua i dati per tale elemento, li recupera dal set di dati e lo copia alla visualizzazione elemento associato.
+Come illustrato nella figura, il `LayoutManager` può essere considerato come l'intermediario `Adapter` tra e `RecyclerView`. Esegue `LayoutManager` le `Adapter` chiamate ai metodi per conto dell'oggetto `RecyclerView`. Ad esempio, chiama `LayoutManager` un `Adapter` metodo quando è il momento di creare una nuova visualizzazione per una posizione `RecyclerView`particolare dell'elemento in. Consente di ingrandire il layout per l'elemento e di `ViewHolder` creare un'istanza (non visualizzata) per memorizzare nella cache i riferimenti alle viste in tale posizione. `Adapter` `LayoutManager` Quando `Adapter` chiama per associare un particolare elemento al set di dati, il individua i dati per tale elemento, li recupera dal set di dati e li copia nella visualizzazione elemento associato. `Adapter`
 
-Quando si usa `RecyclerView` nell'app, è necessario creare tipi derivati delle classi seguenti:
+Quando si `RecyclerView` USA nell'app, è necessario creare tipi derivati delle classi seguenti:
 
--   **`RecyclerView.Adapter`** &ndash; Fornisce un'associazione dal set di dati dell'app, ovvero specifici per l'applicazione, alle viste di elemento che vengono visualizzati all'interno di `RecyclerView`. L'adapter conosca come associare ogni posizione visualizzazione dell'elemento nella `RecyclerView` in una posizione specifica nell'origine dati. Inoltre, l'adattatore gestisce il layout del contenuto all'interno di ogni singolo elemento di visualizzazione e consente di creare il contenitore di visualizzazione per ogni visualizzazione. L'adapter segnala anche gli eventi elemento clic che vengono rilevati mediante la visualizzazione elemento.
+- **`RecyclerView.Adapter`** Fornisce un'associazione dal set di dati dell'app (specifico dell'app) alle visualizzazioni di elementi visualizzate `RecyclerView`all'interno di. &ndash; L'adapter sa come associare ogni posizione di visualizzazione degli `RecyclerView` elementi in a una posizione specifica nell'origine dati. Inoltre, l'adapter gestisce il layout del contenuto all'interno di ogni singola visualizzazione di elementi e crea il contenitore di visualizzazione per ogni visualizzazione. L'adapter segnala anche gli eventi click-through che vengono rilevati dalla visualizzazione dell'elemento.
 
--   **`RecyclerView.ViewHolder`** &ndash; Memorizza nella cache i riferimenti alle visualizzazioni nel file di layout di elementi in modo che le ricerche di risorse non vengono ripetute inutilmente. Il contenitore di visualizzazione dispone anche essere inoltrato all'adapter quando un utente tocca la visualizzazione elemento associato del titolare visualizzazione elemento-fare clic su eventi.
+- **`RecyclerView.ViewHolder`** &ndash; Memorizza nella cache i riferimenti alle viste nel file di layout dell'elemento in modo che le ricerche di risorse non vengano ripetute inutilmente. Il titolare della visualizzazione dispone inoltre degli eventi di clic dell'elemento da inviare all'adapter quando un utente tocca la visualizzazione elemento associato del contenitore di visualizzazione.
 
--   **`RecyclerView.LayoutManager`** &ndash; Posiziona gli elementi all'interno di `RecyclerView`. È possibile usare uno dei gestori di layout predefinite diverse, oppure è possibile implementare il proprio gestore di layout personalizzati.
-    `RecyclerView` i delegati i criteri di layout per la gestione di layout, quindi è possibile inserire in un gestore di layout diversi senza dover eseguire di significative modifiche all'app.
+- **`RecyclerView.LayoutManager`** Posiziona gli elementi all' `RecyclerView`interno di. &ndash; È possibile utilizzare uno dei vari gestori di layout predefiniti oppure implementare un gestore di layout personalizzato.
+    `RecyclerView`delega i criteri di layout a gestione layout, in modo da poter collegare un diverso gestore di layout senza dover apportare modifiche significative all'app.
 
-Inoltre, è facoltativamente possibile estendere le classi seguenti per modificare l'aspetto di `RecyclerView` nell'app:
+Inoltre, è possibile estendere facoltativamente le classi seguenti per modificare l'aspetto di `RecyclerView` nell'app:
 
--   **`RecyclerView.ItemDecoration`**
--   **`RecyclerView.ItemAnimator`**
+- **`RecyclerView.ItemDecoration`**
+- **`RecyclerView.ItemAnimator`**
 
-Se non si estende `ItemDecoration` e `ItemAnimator`, `RecyclerView` utilizza le implementazioni predefinite. Questa Guida non illustra come la creazione personalizzata `ItemDecoration` e `ItemAnimator` classi; per altre informazioni su queste classi, vedere [RecyclerView.ItemDecoration](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html) e [RecyclerView.ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
+Se non si estende `ItemDecoration` e, `ItemAnimator` `RecyclerView` usa le implementazioni predefinite. In questa guida non viene illustrato come creare classi `ItemDecoration` e `ItemAnimator` personalizzate. per ulteriori informazioni su queste classi, vedere [RecyclerView. ItemDecoration](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html) e [RecyclerView. ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
 
 <a name="recycling" />
 
-### <a name="how-view-recycling-works"></a>Come visualizzare il riciclo Works
+### <a name="how-view-recycling-works"></a>Funzionamento del riciclo della visualizzazione
 
-`RecyclerView` non alloca un'elemento di visualizzazione per ogni elemento nell'origine dati. Al contrario, alloca solo il numero di viste di elemento che lo schermo e riusa i layout di elementi come l'utente scorre. Quando la visualizzazione prima di tutto scorre non è più visualizzata, passano attraverso il processo di riciclo illustrato nella figura seguente:
+`RecyclerView`non alloca una visualizzazione elemento per ogni elemento nell'origine dati. Al contrario, alloca solo il numero di visualizzazioni di elementi che si adattano allo schermo e riutilizza tali layout degli elementi quando l'utente scorre. Quando la vista scorre per la prima volta, viene eseguito il processo di riciclo illustrato nella figura seguente:
 
-[![Diagramma che illustra i sei passaggi del riciclo di visualizzazione](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
+[![Diagramma che illustra i sei passaggi per il riciclo delle visualizzazioni](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
-1.  Quando una visualizzazione scorre non è più visualizzata e non viene più visualizzata, diventa un *scartare visualizzazione*.
+1. Quando una visualizzazione scorre fuori vista e non è più visualizzata, diventa una *visualizzazione di scarto*.
 
-2.  La visualizzazione frammento viene inserita in un pool e diventa un *riciclare visualizzazione*.
-    Questo pool è una cache di viste che consentono di visualizzare lo stesso tipo di dati.
+2. La visualizzazione dei frammenti viene posizionata in un pool e diventa una *vista*di riciclo.
+    Questo pool è una cache di visualizzazioni che visualizza lo stesso tipo di dati.
 
-3.  Quando un nuovo elemento deve essere visualizzato, una vista viene preso dal pool di riciclo per il riutilizzo. Poiché in questa vista deve essere riassociata dall'adapter prima di essere visualizzato, viene chiamato un *dirty visualizzazione*.
+3. Quando viene visualizzato un nuovo elemento, una vista viene ricavata dal pool di riciclo per il riutilizzo. Poiché questa visualizzazione deve essere riassociata dall'adapter prima di essere visualizzata, viene definita *visualizzazione Dirty*.
 
-4.  La vista dirty viene riciclata: l'adapter consente di individuare i dati per l'elemento successivo deve essere visualizzato e questi dati vengono copiati per le viste per questo elemento. Riferimenti relativi a queste visualizzazioni vengono recuperati dal titolare visualizzazione associato alla visualizzazione riciclata.
+4. La visualizzazione Dirty viene riciclata: l'adapter individua i dati per l'elemento successivo da visualizzare e copia questi dati nelle visualizzazioni per questo elemento. I riferimenti per queste viste vengono recuperati dal titolare della visualizzazione associato alla visualizzazione riciclata.
 
-5.  La vista riciclata viene aggiunto all'elenco di elementi nel `RecyclerView` che sta tentando di passare sullo schermo.
+5. La vista riciclata viene aggiunta all'elenco di elementi in `RecyclerView` che stanno per essere visualizzati sullo schermo.
 
-6.  La vista riciclata va sullo schermo come l'utente scorre il `RecyclerView` all'elemento successivo nell'elenco. Nel frattempo, un'altra visualizzazione scorre non è più visualizzata e viene riciclata seguendo i passaggi precedenti.
+6. La visualizzazione riciclata viene visualizzata sullo schermo quando l'utente scorre l' `RecyclerView` oggetto all'elemento successivo nell'elenco. Nel frattempo, un'altra visualizzazione scorre fuori dalla vista e viene riciclata in base ai passaggi precedenti.
 
-Oltre a riutilizzo visualizzazione dell'elemento, `RecyclerView` Usa anche un'altra ottimizzazione dell'efficienza: visualizzare i titolari. Oggetto *titolare della vista* è una classe semplice che memorizza nella cache consente di visualizzare i riferimenti. Ogni volta che l'adapter ingrandisce un file di layout degli elementi, crea anche un contenitore di visualizzazione corrispondente. Il titolare della vista utilizza `FindViewById` per ottenere i riferimenti alle viste all'interno del file di layout elemento maggiori del necessario. Questi riferimenti vengono usati per caricare le visualizzazioni nuovi dati ogni volta che il layout viene riciclato per visualizzare i nuovi dati.
+Oltre al riutilizzo di visualizzazione elementi, `RecyclerView` usa anche un'altra ottimizzazione dell'efficienza: Visualizza i titolari. Un *contenitore di visualizzazione* è una semplice classe che memorizza nella cache i riferimenti di visualizzazione. Ogni volta che l'adapter gonfia un file di layout elemento, crea anche un contenitore di visualizzazione corrispondente. Il titolare della visualizzazione `FindViewById` USA per ottenere i riferimenti alle viste all'interno del file di layout degli elementi inflat. Questi riferimenti vengono utilizzati per caricare nuovi dati nelle visualizzazioni ogni volta che il layout viene riciclato per visualizzare nuovi dati.
  
 
 
-### <a name="the-layout-manager"></a>Il gestore di Layout
+### <a name="the-layout-manager"></a>Gestione layout
 
-Layout è responsabile per il posizionamento di elementi nel `RecyclerView` visualizzare; determina il tipo di presentazione (un elenco o una griglia), l'orientamento (se gli elementi vengono visualizzati verticalmente o orizzontalmente) e quali elementi direzione devono essere visualizzati. (in ordine normale o in ordine inverso). È inoltre responsabile per il calcolo della dimensione e posizione di ogni elemento nel gestore del layout le **RecycleView** visualizzare.
+Il gestore del layout è responsabile del posizionamento degli elementi `RecyclerView` nella visualizzazione. determina il tipo di presentazione (un elenco o una griglia), l'orientamento (se gli elementi vengono visualizzati verticalmente o orizzontalmente) e gli elementi della direzione da visualizzare (in ordine normale o in ordine inverso). Il gestore del layout è inoltre responsabile del calcolo delle dimensioni e della posizione di ogni elemento nella visualizzazione **RecycleView** .
 
-La gestione di layout ha uno scopo ulteriore: determina i criteri per i casi riciclare le viste di elemento che non sono più visibili all'utente.
-Poiché il gestore di layout è a conoscenza di quali visualizzazioni sono visibili (e quali non), è nella posizione ideale per decidere quando una visualizzazione può essere riciclata. Per riciclare una visualizzazione, il gestore di layout effettua chiamate all'adapter per sostituire il contenuto di una vista riciclato con dati diversi, in genere come descritto in precedenza in [come funziona il riciclo visualizzazione](#recycling).
+Il gestore del layout ha uno scopo aggiuntivo: determina i criteri per il momento in cui riciclare le visualizzazioni di elementi che non sono più visibili all'utente.
+Poiché il gestore del layout è in grado di riconoscere quali visualizzazioni sono visibili (e quali non sono), si trova nella posizione migliore per decidere quando una vista può essere riciclata. Per riciclare una visualizzazione, il gestore del layout esegue in genere chiamate all'adapter per sostituire il contenuto di una visualizzazione riciclata con dati diversi, come descritto in precedenza in [come funziona](#recycling)il riciclo della visualizzazione.
 
-È possibile estendere `RecyclerView.LayoutManager` per creare un proprio layout manager oppure è possibile utilizzare un gestore di layout predefinito. `RecyclerView` Fornisce i gestori di layout predefinite seguenti:
+È possibile estendere `RecyclerView.LayoutManager` per creare il proprio gestore di layout oppure è possibile usare un gestore di layout predefinito. `RecyclerView`in sono disponibili i gestori di layout predefiniti seguenti:
 
--   **`LinearLayoutManager`** &ndash; Dispone gli elementi in una colonna che è possibile scorrere in verticale o in una riga che è possibile scorrere orizzontalmente.
+- **`LinearLayoutManager`** &ndash; Dispone gli elementi di una colonna di cui è possibile scorrere verticalmente o in una riga che può essere spostata orizzontalmente.
 
--   **`GridLayoutManager`** &ndash; Visualizza gli elementi in una griglia.
+- **`GridLayoutManager`** &ndash; Visualizza gli elementi in una griglia.
 
--   **`StaggeredGridLayoutManager`** &ndash; Visualizza gli elementi in una griglia fasi successive, in cui alcuni elementi hanno larghezze e altezze diverse.
+- **`StaggeredGridLayoutManager`** &ndash; Visualizza gli elementi in una griglia sfalsata, in cui alcuni elementi hanno altezze e larghezze diverse.
 
-Per specificare il gestore di layout, creare un'istanza di gestione di layout scelto e passarlo al `SetLayoutManager` (metodo). Si noti che si *devono* specificare la gestione di layout &ndash; `RecyclerView` non seleziona una gestione di layout predefinito per impostazione predefinita.
+Per specificare il gestore del layout, creare un'istanza del gestore del layout scelto e passarlo al `SetLayoutManager` metodo. Si noti che per impostazione predefinita, è &ndash; necessario specificare che gestione `RecyclerView` layout non selezioni un gestore di layout predefinito.
 
-Per altre informazioni sulla gestione di layout, vedere la [riferimento alla classe RecyclerView.LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
+Per ulteriori informazioni su Gestione layout, vedere il [riferimento alla classe RecyclerView. LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
 
 ### <a name="the-view-holder"></a>Il titolare della visualizzazione
 
-Il titolare della visualizzazione è una classe definita per la memorizzazione nella cache i riferimenti di visualizzazione. L'adapter utilizza i riferimenti di visualizzazione per associare ogni vista in base al contenuto. Tutti gli elementi di `RecyclerView` dispone di un'istanza del titolare della visualizzazione associata che memorizza nella cache i riferimenti di visualizzazione per quell'elemento. Per creare un contenitore di visualizzazione, usare la procedura seguente per definire una classe che contenga il set esatto delle visualizzazioni per ogni elemento:
+Il titolare della visualizzazione è una classe definita per la memorizzazione nella cache dei riferimenti di visualizzazione. L'adapter utilizza questi riferimenti di visualizzazione per associare ogni visualizzazione al relativo contenuto. Ogni elemento in `RecyclerView` dispone di un'istanza del contenitore di visualizzazione associata che memorizza nella cache i riferimenti alla visualizzazione per l'elemento. Per creare un contenitore di visualizzazione, attenersi alla procedura seguente per definire una classe che contenga il set esatto di visualizzazioni per ogni elemento:
 
-1.  Subclass `RecyclerView.ViewHolder`.
-2.  Implementa un costruttore che cerca e archivia i riferimenti di visualizzazione.
-3.  Implementare proprietà che l'adapter può usare per accedere a tali riferimenti.
+1. Sottoclasse `RecyclerView.ViewHolder`.
+2. Implementare un costruttore che cerca e archivia i riferimenti alla visualizzazione.
+3. Implementare le proprietà che l'adapter può utilizzare per accedere a questi riferimenti.
 
-Un esempio dettagliato di una `ViewHolder` implementazione viene presentata nella [un esempio di RecyclerView base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
-Per altre informazioni sulle `RecyclerView.ViewHolder`, vedere la [riferimento alla classe RecyclerView.ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
-
-### <a name="the-adapter"></a>L'Adapter
-
-La maggior parte del "impegnativa" del `RecyclerView` integrazione del codice viene eseguita nell'adapter. `RecyclerView` è necessario fornire un adattatore derivato da `RecyclerView.Adapter` per accedere all'origine dati e popolare ogni elemento con contenuto dall'origine dati.
-Poiché l'origine dati è specifico dell'app, è necessario implementare funzionalità dell'adapter che siano in grado di accedere ai dati. L'adapter estrae le informazioni dall'origine dati e li carica in ogni elemento di `RecyclerView` raccolta.
-
-Nel disegno seguente viene illustrato come l'adapter esegue il mapping del contenuto in un'origine dati tramite i titolari di visualizzazione per singole viste all'interno di ogni elemento di riga il `RecyclerView`:
-
-[![Diagramma che illustra la connessione origine dati a ViewHolders Adapter](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
-
-L'adapter carica ogni `RecyclerView` riga con i dati per un elemento di riga specifico. Per la posizione della riga *P*, ad esempio, l'adapter consente di individuare i dati associati nella posizione *P* all'interno dell'origine dati e le copie di questi dati per la riga di elemento nella posizione *P* di `RecyclerView` raccolta.
-Nel disegno precedente, ad esempio, l'adapter utilizza il contenitore di visualizzazione per cercare i riferimenti per il `ImageView` e `TextView` in tale posizione, in modo non è necessario chiamare ripetutamente `FindViewById` per tali visualizzazioni come l'utente scorre la raccolta e Riutilizza le visualizzazioni.
-
-Quando si implementa un adapter, è necessario eseguire l'override seguente `RecyclerView.Adapter` metodi:
-
--   **`OnCreateViewHolder`** &ndash; Crea un'istanza titolare di file e Visualizza layout dell'elemento.
-
--   **`OnBindViewHolder`** &ndash; Carica i dati nella posizione specificata nelle viste a cui i riferimenti vengono archiviati nel contenitore di visualizzazione specificata.
-
--   **`ItemCount`** &ndash; Restituisce il numero di elementi nell'origine dati.
-
-Gestore del layout chiama questi metodi anche se è posizionamento di elementi all'interno di `RecyclerView`. 
+Un esempio dettagliato di `ViewHolder` implementazione viene presentato in [un esempio di RecyclerView di base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
+Per ulteriori informazioni su `RecyclerView.ViewHolder`, vedere il [riferimento alla classe RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
 
+### <a name="the-adapter"></a>Adapter
 
-### <a name="notifying-recyclerview-of-data-changes"></a>RecyclerView notifica delle modifiche ai dati
+La maggior parte delle operazioni di "sollevamento intensivo `RecyclerView` " del codice di integrazione si verifica nell'adapter. `RecyclerView`richiede la fornitura di un adapter derivato da `RecyclerView.Adapter` per accedere all'origine dati e popolare ogni elemento con contenuto dall'origine dati.
+Poiché l'origine dati è specifica dell'app, è necessario implementare la funzionalità dell'adapter per comprendere come accedere ai dati. L'adapter estrae le informazioni dall'origine dati e le carica in ogni elemento `RecyclerView` della raccolta.
 
-`RecyclerView` non aggiornare automaticamente la relativa visualizzazione quando il contenuto dei dati di origine le modifiche. l'adapter deve inviare una notifica `RecyclerView` quando viene apportata una modifica nel set di dati. Il set di dati è possibile modificare in molti modi; ad esempio possibile modificare il contenuto all'interno di un elemento o la struttura generale dei dati può essere modificata.
-`RecyclerView.Adapter` fornisce una serie di metodi che è possibile chiamare in modo che `RecyclerView` risponde alle modifiche dei dati in maniera più efficiente:
+Nel disegno seguente viene illustrato il modo in cui l'adapter esegue il mapping del contenuto in un'origine dati tramite i titolari di visualizzazione a `RecyclerView`singole visualizzazioni all'interno di ogni elemento riga in:
 
--  **`NotifyItemChanged`** &ndash; Segnala che è stato modificato l'elemento in corrispondenza della posizione specificata.
+[![Diagramma che illustra l'origine dati per la connessione dell'adapter a ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
--  **`NotifyItemRangeChanged`** &ndash; Segnala che gli elementi nell'intervallo specificato di posizioni sono state modificate.
+L'adapter carica ogni `RecyclerView` riga con i dati di un particolare elemento di riga. Per la posizione della riga *p*, ad esempio, l'adapter individua i dati associati nella posizione *p* all'interno dell'origine dati e copia questi dati nell'elemento riga nella `RecyclerView` posizione p della raccolta.
+Nel disegno precedente, ad esempio, l'adapter usa il titolare della visualizzazione per cercare i riferimenti per `ImageView` e `TextView` in tale posizione, in modo che non debba chiamare `FindViewById` ripetutamente per tali viste quando l'utente scorre la raccolta e Riutilizza le visualizzazioni.
 
--  **`NotifyItemInserted`** &ndash; Segnala che l'elemento nella posizione specificata è stata appena inserita.
+Quando si implementa un adapter, è necessario eseguire l'override `RecyclerView.Adapter` dei metodi seguenti:
 
--  **`NotifyItemRangeInserted`** &ndash; Segnala che gli elementi nell'intervallo specificato di posizioni di cui sono stati appena inseriti.
+- **`OnCreateViewHolder`** &ndash; Crea un'istanza del file di layout dell'elemento e del titolare della visualizzazione.
 
--  **`NotifyItemRemoved`** &ndash; Segnala che l'elemento nella posizione specificata è stata rimossa.
+- **`OnBindViewHolder`** &ndash; Carica i dati nella posizione specificata nelle viste i cui riferimenti sono archiviati nel contenitore di visualizzazione specificato.
 
--  **`NotifyItemRangeRemoved`** &ndash; Segnala che gli elementi nell'intervallo specificato di posizioni sono state rimosse.
+- **`ItemCount`** &ndash; Restituisce il numero di elementi nell'origine dati.
 
--  **`NotifyDataSetChanged`** &ndash; Segnala che è stato modificato il set di dati (forza un aggiornamento completo).
+Il gestore del layout chiama questi metodi mentre posiziona gli elementi all'interno `RecyclerView`di. 
 
-Se si conosce esattamente come il set di dati è stata modificata, è possibile chiamare i metodi appropriati precedenti per aggiornare `RecyclerView` in maniera più efficiente. Se non si conosce esattamente come il set di dati è stata modificata, è possibile chiamare `NotifyDataSetChanged`, che è molto meno efficiente perché `RecyclerView` necessario Aggiorna tutte le viste che sono visibili all'utente. Per altre informazioni su questi metodi, vedere [RecyclerView.Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
-Nell'argomento successivo [un esempio di RecyclerView base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md), viene implementata un'app di esempio per illustrare gli esempi di codice reale le parti e le funzionalità descritte sopra.
+
+### <a name="notifying-recyclerview-of-data-changes"></a>Notifica di RecyclerView delle modifiche dei dati
+
+`RecyclerView`non aggiorna automaticamente la visualizzazione quando il contenuto dell'origine dati cambia; l'adapter deve inviare `RecyclerView` una notifica quando viene apportata una modifica al set di dati. Il set di dati può cambiare in molti modi; ad esempio, il contenuto di un elemento può cambiare o la struttura complessiva dei dati può essere modificata.
+`RecyclerView.Adapter`in sono disponibili diversi metodi che è possibile chiamare in modo `RecyclerView` che risponda alle modifiche dei dati nel modo più efficiente:
+
+- **`NotifyItemChanged`** &ndash; Segnala che l'elemento in corrispondenza della posizione specificata è stato modificato.
+
+- **`NotifyItemRangeChanged`** &ndash; Segnala che gli elementi nell'intervallo di posizioni specificato sono stati modificati.
+
+- **`NotifyItemInserted`** &ndash; Segnala che l'elemento nella posizione specificata è stato appena inserito.
+
+- **`NotifyItemRangeInserted`** &ndash; Segnala che gli elementi nell'intervallo di posizioni specificato sono stati appena inseriti.
+
+- **`NotifyItemRemoved`** &ndash; Segnala che l'elemento nella posizione specificata è stato rimosso.
+
+- **`NotifyItemRangeRemoved`** &ndash; Segnala che gli elementi nell'intervallo di posizioni specificato sono stati rimossi.
+
+- **`NotifyDataSetChanged`** &ndash; Segnala che il set di dati è stato modificato (impone un aggiornamento completo).
+
+Se si conosce esattamente il modo in cui il set di dati è stato modificato, è possibile chiamare i `RecyclerView` metodi appropriati sopra per eseguire l'aggiornamento nel modo più efficiente. Se non si conosce esattamente il modo in cui il set di dati è stato modificato `NotifyDataSetChanged`, è possibile chiamare, che è `RecyclerView` molto meno efficiente perché deve aggiornare tutte le visualizzazioni visibili all'utente. Per ulteriori informazioni su questi metodi, vedere [RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
+
+Nell'argomento successivo, [un esempio di RecyclerView di base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md), viene implementata un'app di esempio per illustrare esempi di codice reali delle parti e delle funzionalità descritte in precedenza.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
-- [Un esempio di RecyclerView base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)
-- [Estendendo l'esempio di RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md)
+- [Esempio di RecyclerView di base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)
+- [Estensione dell'esempio RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md)
 - [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html)

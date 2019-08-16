@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 1d4c93e625b92275828428917ebbc86d931e8363
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649501"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522013"
 ---
 # <a name="binding-objective-c-libraries"></a>Binding di librerie Objective-C
 
@@ -97,10 +97,10 @@ Una descrizione dettagliata del formato del file API e degli attributi che è po
 
 Per produrre un'associazione completa, in genere si gestiscono quattro componenti:
 
--  Il file di definizione dell'`ApiDefinition.cs` API (nel modello).
--  Facoltativo: qualsiasi enum, tipo, struct richiesto dal file di definizione dell'API (`StructsAndEnums.cs` nel modello).
--  Facoltativo: origini aggiuntive che potrebbero espandere l'associazione generata o fornire un'API più C# intuitiva (tutti C# i file aggiunti al progetto).
--  Libreria nativa che si sta associando.
+- Il file di definizione dell'`ApiDefinition.cs` API (nel modello).
+- Facoltativo: qualsiasi enum, tipo, struct richiesto dal file di definizione dell'API (`StructsAndEnums.cs` nel modello).
+- Facoltativo: origini aggiuntive che potrebbero espandere l'associazione generata o fornire un'API più C# intuitiva (tutti C# i file aggiunti al progetto).
+- Libreria nativa che si sta associando.
 
 Questo grafico mostra la relazione tra i file:
 
@@ -309,10 +309,10 @@ interface MyMutableTree {
 
 Lo `btouch-native` strumento genererà automaticamente quattro costruttori nella classe, per una determinata classe `Foo`, genera:
 
--  `Foo ()`: il costruttore predefinito (esegue il mapping al costruttore "init" di Objective-C)
--  `Foo (NSCoder)`: Costruttore usato durante la deserializzazione dei file del PENNino (esegue il mapping al costruttore "initWithCoder:" di Objective-C).
--  `Foo (IntPtr handle)`: costruttore per la creazione basata su handle, che viene richiamato dal runtime quando il runtime deve esporre un oggetto gestito da un oggetto non gestito.
--  `Foo (NSEmptyFlag)`: viene usato dalle classi derivate per impedire l'inizializzazione doppia.
+- `Foo ()`: il costruttore predefinito (esegue il mapping al costruttore "init" di Objective-C)
+- `Foo (NSCoder)`: Costruttore usato durante la deserializzazione dei file del PENNino (esegue il mapping al costruttore "initWithCoder:" di Objective-C).
+- `Foo (IntPtr handle)`: costruttore per la creazione basata su handle, che viene richiamato dal runtime quando il runtime deve esporre un oggetto gestito da un oggetto non gestito.
+- `Foo (NSEmptyFlag)`: viene usato dalle classi derivate per impedire l'inizializzazione doppia.
 
 Per i costruttori definiti, devono essere dichiarati usando la firma seguente all'interno della definizione dell'interfaccia: devono restituire un `IntPtr` valore e il nome del metodo deve essere Constructor. Ad esempio, per associare `initWithFrame:` il costruttore, questo è ciò che si utilizzerebbe:
 
@@ -545,14 +545,14 @@ Nell'esempio precedente viene generato `LonelyClass` un oggetto che non deriva d
 
 L' [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attributo può essere applicato ai tipi di dati seguenti:
 
--  `NSString`riferimenti (solo proprietà di sola lettura)
--  `NSArray`riferimenti (solo proprietà di sola lettura)
--  int a 32 bit (`System.Int32`)
--  int a 64 bit (`System.Int64`)
--  float a 32 bit (`System.Single`)
--  float a 64 bit (`System.Double`)
--  `System.Drawing.SizeF`
--  `CGSize`
+- `NSString`riferimenti (solo proprietà di sola lettura)
+- `NSArray`riferimenti (solo proprietà di sola lettura)
+- int a 32 bit (`System.Int32`)
+- int a 64 bit (`System.Int64`)
+- float a 32 bit (`System.Single`)
+- float a 64 bit (`System.Double`)
+- `System.Drawing.SizeF`
+- `CGSize`
 
 Oltre al nome del campo nativo, è possibile specificare il nome della libreria in cui si trova il campo passando il nome della libreria:
 
@@ -1197,9 +1197,9 @@ Quando si usa l' [`[Export]`](~/cross-platform/macios/binding/binding-types-refe
 
 Il valore precedente contrassegna il valore come avente la semantica "Mantieni". La semantica disponibile è la seguente:
 
--  Assegna
--  Copia
--  Mantieni
+- Assegna
+- Copia
+- Mantieni
 
 <a name="Style_Guidelines" />
 
@@ -1255,9 +1255,9 @@ interface MyClassDelegate {
 
 Per eseguire il wrapping della classe è necessario:
 
--  Nella classe host aggiungere al[`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
+- Nella classe host aggiungere al[`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
    dichiarare il tipo che funge da delegato e il C# nome esposto. Nell'esempio precedente sono `typeof (MyClassDelegate)` rispettivamente e. `WeakDelegate`
--  Nella classe Delegate, per ogni metodo con più di due parametri, è necessario specificare il tipo che si desidera utilizzare per la classe EventArgs generata automaticamente.
+- Nella classe Delegate, per ogni metodo con più di due parametri, è necessario specificare il tipo che si desidera utilizzare per la classe EventArgs generata automaticamente.
 
 Il generatore di associazioni non è limitato al wrapping di una sola destinazione di evento. è possibile che alcune classi Objective-C creino messaggi a più di un delegato, pertanto sarà necessario fornire matrici per supportare questa configurazione. Per la maggior parte delle configurazioni non sarà necessario, ma il generatore sarà pronto per supportare tali casi.
 

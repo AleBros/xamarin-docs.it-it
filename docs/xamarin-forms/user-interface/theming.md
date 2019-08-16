@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
-ms.openlocfilehash: 644728d70946180f79523eeb98baabdb6daa1980
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984363"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529284"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Temi di un'applicazione Novell. Forms
 
@@ -89,7 +89,7 @@ Un'applicazione richiede un tema predefinito, in modo che i controlli dispongano
 </Application>
 ```
 
-Per ulteriori informazioni sull'Unione dei dizionari risorse, vedere [Unione di dizionari in Novell. forms 3,0](~/xamarin-forms/xaml/resource-dictionaries.md#merging-dictionaries-in-xamarinforms-30).
+Per altre informazioni sull'Unione dei dizionari risorse, vedere [dizionari risorse Uniti](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries).
 
 ## <a name="consume-theme-resources"></a>Utilizzare le risorse del tema
 

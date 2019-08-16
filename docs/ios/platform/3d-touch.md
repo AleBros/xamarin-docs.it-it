@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 209d70c2e158261ca671e6a889e979de39362d53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 38d58350cf067a2d5f7813250590cc0715b6c9ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647977"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527380"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione a 3D touch in Novell. iOS
 
@@ -105,7 +105,7 @@ Questo metodo può essere chiamato prima *o dopo* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>Gestione di Peek e pop
 
-In un dispositivo iOS in grado di gestire il tocco 3D, è possibile usare un'istanza `UIViewControllerPreviewingDelegate` della classe per gestire la visualizzazione **dei dettagli** dell'elemento di visualizzazione e **pop** . Se, ad esempio, si dispone di un controller di `MasterViewController` visualizzazione tabella denominato, è possibile utilizzare il codice seguente per supportare la **visualizzazione** e il **pop**:
+In un dispositivo iOS in grado di gestire il tocco 3D, è possibile usare un'istanza `UIViewControllerPreviewingDelegate` della classe per gestire la visualizzazione dei dettagli dell'elemento di visualizzazione e **pop** . Se, ad esempio, si dispone di un controller di `MasterViewController` visualizzazione tabella denominato, è possibile utilizzare il codice seguente per supportare la **visualizzazione** e il **pop**:
 
 ```csharp
 using System;
@@ -173,9 +173,9 @@ namespace DTouch
 }
 ```
 
-Il `GetViewControllerForPreview` metodo viene utilizzato per eseguire l'operazione di **visualizzazione** . Ottiene l'accesso alla cella della tabella e al backup dei dati, quindi carica l' `DetailViewController` oggetto dallo storyboard corrente. Impostando `PreferredContentSize` su (0, 0) viene richiesta la dimensione della visualizzazione di **visualizzazione predefinita.** Infine, viene offuscato tutto tranne la cella visualizzata con `previewingContext.SourceRect = cell.Frame` e viene restituita la nuova visualizzazione per la visualizzazione.
+Il `GetViewControllerForPreview` metodo viene utilizzato per eseguire l'operazione di **visualizzazione** . Ottiene l'accesso alla cella della tabella e al backup dei dati, quindi carica l' `DetailViewController` oggetto dallo storyboard corrente. Impostando `PreferredContentSize` su (0, 0) viene richiesta la dimensione della visualizzazione di visualizzazione predefinita. Infine, viene offuscato tutto tranne la cella visualizzata con `previewingContext.SourceRect = cell.Frame` e viene restituita la nuova visualizzazione per la visualizzazione.
 
-Il `CommitViewController` riutilizza la visualizzazione creata nella **visualizzazione per la** visualizzazione **pop** quando l'utente preme più difficile.
+Il `CommitViewController` riutilizza la visualizzazione creata nella visualizzazione per la visualizzazione **pop** quando l'utente preme più difficile.
 
 ### <a name="registering-for-peek-and-pop"></a>Registrazione per PEEK e pop
 
@@ -274,11 +274,11 @@ Qui vengono definiti due elementi di azione rapida statici con le chiavi seguent
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-        ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![](3d-touch-images/uiapplicationshortcuticontype.png "Immagini UIApplicationShortcutIconType")
 
-* `UIApplicationShortcutItemSubtitle`: Definisce il sottotitolo dell'elemento.
-* `UIApplicationShortcutItemTitle`: Definisce il titolo dell'elemento.
-* `UIApplicationShortcutItemType`-Valore stringa che verrà usato per identificare l'elemento nell'app. Per altre informazioni, vedere la sezione successiva.
+- `UIApplicationShortcutItemSubtitle`: Definisce il sottotitolo dell'elemento.
+- `UIApplicationShortcutItemTitle`: Definisce il titolo dell'elemento.
+- `UIApplicationShortcutItemType`-Valore stringa che verrà usato per identificare l'elemento nell'app. Per altre informazioni, vedere la sezione successiva.
 
 > [!IMPORTANT]
 > Non è possibile accedere agli elementi rapidi dell' `Info.plist` azione rapida impostati nel file con `Application.ShortcutItems` la proprietà. Vengono passati solo al `HandleShortcutItem` gestore eventi.

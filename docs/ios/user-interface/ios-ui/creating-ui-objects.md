@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dd935e6feb14d9077c1ad98a2e7e10e67646dc4f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f77a4f2f31c72726515e33dc273616f175df2891
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650110"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528534"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in Novell. iOS
 
@@ -28,9 +28,9 @@ Tutti i controlli descritti in questo capitolo si trovano nello spazio dei nomi 
 
 È possibile modificare i layout e i controlli dell'interfaccia utente in tre modi:
 
--  **[Novell iOS designer](~/ios/user-interface/designer/index.md)** : usare la finestra di progettazione layout predefinita di Novell per progettare le schermate. Fare doppio clic su file storyboard o XIB per modificare con la finestra di progettazione incorporata.
--  **Xcode Interface Builder** : trascinare i controlli sui layout dello schermo con Interface Builder. Aprire il file storyboard o XIB in Xcode facendo clic con il pulsante destro del mouse sul file nella **riquadro della soluzione** e scegliendo **Apri con > Xcode Interface Builder**.
--  **Using C#**  : i controlli possono essere costruiti anche a livello di codice e aggiunti alla gerarchia di visualizzazione.
+- **[Novell iOS designer](~/ios/user-interface/designer/index.md)** : usare la finestra di progettazione layout predefinita di Novell per progettare le schermate. Fare doppio clic su file storyboard o XIB per modificare con la finestra di progettazione incorporata.
+- **Xcode Interface Builder** : trascinare i controlli sui layout dello schermo con Interface Builder. Aprire il file storyboard o XIB in Xcode facendo clic con il pulsante destro del mouse sul file nella **riquadro della soluzione** e scegliendo **Apri con > Xcode Interface Builder**.
+- **Using C#**  : i controlli possono essere costruiti anche a livello di codice e aggiunti alla gerarchia di visualizzazione.
 
 È possibile aggiungere nuovi file storyboard e XIB facendo clic con il pulsante destro del mouse su un progetto iOS e scegliendo **aggiungi > nuovo file.**
 
@@ -92,12 +92,12 @@ Per altre informazioni sull'integrazione di Interface Builder di Xcode con Visua
 
 Se si decide di creare a livello di codice un oggetto dell' C# interfaccia utente usando (ad esempio, in una vista o in un controller di visualizzazione), seguire questa procedura:
 
--  Dichiarare un campo a livello di classe per l'oggetto dell'interfaccia utente. Creare il controllo in `ViewDidLoad` una sola volta, ad esempio. È possibile fare riferimento all'oggetto in tutti i metodi del ciclo di vita del controller di visualizzazione, ad esempio
+- Dichiarare un campo a livello di classe per l'oggetto dell'interfaccia utente. Creare il controllo in `ViewDidLoad` una sola volta, ad esempio. È possibile fare riferimento all'oggetto in tutti i metodi del ciclo di vita del controller di visualizzazione, ad esempio
 `ViewWillAppear`).
--  Creare un `CGRect` oggetto che definisce il frame del controllo (le relative coordinate X e Y sullo schermo, nonché la larghezza e l'altezza). È necessario assicurarsi di disporre di una `using CoreGraphics` direttiva per questa operazione.
--  Chiamare il costruttore per creare e assegnare il controllo.
--  Impostare le proprietà o i gestori eventi.
--  Chiamare `Add()` per aggiungere il controllo alla gerarchia di visualizzazione.
+- Creare un `CGRect` oggetto che definisce il frame del controllo (le relative coordinate X e Y sullo schermo, nonché la larghezza e l'altezza). È necessario assicurarsi di disporre di una `using CoreGraphics` direttiva per questa operazione.
+- Chiamare il costruttore per creare e assegnare il controllo.
+- Impostare le proprietà o i gestori eventi.
+- Chiamare `Add()` per aggiungere il controllo alla gerarchia di visualizzazione.
 
 Di seguito è riportato un esempio semplice di `UILabel` creazione di un oggetto in C#un controller di visualizzazione utilizzando:
 

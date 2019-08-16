@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: 329f7dc9cc43582f630a4895fba452a8496bae9a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656179"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529311"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in xamarin. Forms
 
@@ -58,9 +58,9 @@ Novell. Forms definisce anche i campi [`NamedSize`](xref:Xamarin.Forms.NamedSize
 
 Tipo di carattere, ad esempio stili **grassetto** e *corsivo* può essere impostata sul `FontAttributes` proprietà. I valori seguenti sono attualmente supportati:
 
--  **None**
--  **Grassetto**
--  **Corsivo**
+- **None**
+- **Grassetto**
+- **Corsivo**
 
 Il `FontAttribute` enumerazione può essere utilizzata come indicato di seguito (è possibile specificare un singolo attributo o `OR` uno a altro):
 
@@ -100,7 +100,7 @@ Xamarin. Forms consente di controllare che il testo visualizzato tutti hanno un 
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) è anche utilizzabile in XAML per il rendering di un carattere diverso in ogni piattaforma. L'esempio seguente usa un tipo di carattere personalizzato in iOS (<span style="font-family:MarkerFelt-Thin">Thin MarkerFelt</span>) e specifica solo le dimensioni e attributi nelle altre piattaforme:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) è anche utilizzabile in XAML per il rendering di un carattere diverso in ogni piattaforma. L'esempio seguente usa un tipo di carattere personalizzato in iOS (MarkerFelt-Thin) e specifica solo le dimensioni e gli attributi sulle altre piattaforme:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -183,7 +183,7 @@ new Label
 
 ### <a name="windows"></a>WINDOWS
 
-Xamarin. Forms per le piattaforme Windows può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Prima di tutto aggiungere il file del tipo di carattere per il **/Assets/tipi di carattere/** cartella nel progetto di applicazione e impostare il <span class="UIItem">contenuto: azione di compilazione</span>. Quindi usare il nome di percorso e il tipo di carattere completo, seguito da un cancelletto (#) e il <span class="UIItem">nome del tipo di carattere</span>, come illustrato di seguito il frammento di codice riportato di seguito:
+Xamarin. Forms per le piattaforme Windows può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Prima di tutto aggiungere il file del tipo di carattere per il **/Assets/tipi di carattere/** cartella nel progetto di applicazione e impostare il **contenuto: azione di compilazione**. Quindi usare il nome di percorso e il tipo di carattere completo, seguito da un cancelletto (#) e il **nome del tipo di carattere**, come illustrato di seguito il frammento di codice riportato di seguito:
 
 ```csharp
 new Label

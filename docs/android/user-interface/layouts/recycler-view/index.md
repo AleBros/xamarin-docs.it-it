@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
-ms.openlocfilehash: 95d71beff2bd5219712494deb43f1f9fb4b082ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7c98686a1aa99e250b3fd1d0fcc6ae64d625a11f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646300"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522400"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -27,9 +27,9 @@ Molte app devono visualizzare le raccolte dello stesso tipo (ad esempio messaggi
 
 `RecyclerView`in sono disponibili due funzionalità interessanti:
 
--  Dispone di un'architettura flessibile che consente di modificarne il comportamento tramite l'inserimento di componenti preferiti.
+- Dispone di un'architettura flessibile che consente di modificarne il comportamento tramite l'inserimento di componenti preferiti.
 
--  È efficiente con le raccolte di grandi dimensioni perché riutilizza le visualizzazioni di elementi e richiede l'uso di titolari di *visualizzazione* per memorizzare nella cache i riferimenti alla visualizzazione.
+- È efficiente con le raccolte di grandi dimensioni perché riutilizza le visualizzazioni di elementi e richiede l'uso di titolari di *visualizzazione* per memorizzare nella cache i riferimenti alla visualizzazione.
 
 Questa guida illustra come usare `RecyclerView` nelle applicazioni Novell. Android. viene illustrato come aggiungere il `RecyclerView` pacchetto al progetto Novell. Android e viene descritto come `RecyclerView` funzioni in un'applicazione tipica. Sono disponibili esempi di codice reali che illustrano come integrare `RecyclerView` nell'applicazione, come implementare la visualizzazione di elementi e come aggiornarli `RecyclerView` quando cambiano i dati sottostanti. Questa guida presuppone che l'utente abbia familiarità con lo sviluppo di Novell. Android.
 
@@ -38,27 +38,27 @@ Questa guida illustra come usare `RecyclerView` nelle applicazioni Novell. Andro
 
 Sebbene `RecyclerView` sia spesso associato al Lollipop di Android 5,0, viene offerto come libreria &ndash; `RecyclerView` di supporto funziona con le app che hanno come destinazione API Level 7 (Android 2,1) e versioni successive. Per usare `RecyclerView` le applicazioni basate su Novell, è necessario quanto segue:
 
--  **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
--  Il progetto dell'app deve includere il pacchetto **Novell. Android. support. V7. RecyclerView** . Per ulteriori informazioni sull'installazione di pacchetti NuGet, [vedere Procedura dettagliata: Inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+- Il progetto dell'app deve includere il pacchetto **Novell. Android. support. V7. RecyclerView** . Per ulteriori informazioni sull'installazione di pacchetti NuGet, [vedere Procedura dettagliata: Inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ### <a name="overview"></a>Panoramica
 
 `RecyclerView`può essere considerato come una sostituzione per i `ListView` widget e `GridView` in Android. Analogamente ai predecessori `RecyclerView` , è progettato per visualizzare un set di dati di grandi dimensioni in una `RecyclerView` piccola finestra, ma offre più opzioni di layout ed è ottimizzato per la visualizzazione di raccolte di grandi dimensioni. Se si ha familiarità `ListView`con, esistono alcune differenze importanti tra `ListView` e `RecyclerView`:
 
--   `RecyclerView`è leggermente più complesso da usare: è necessario scrivere altro codice da usare `RecyclerView` rispetto a. `ListView`
+- `RecyclerView`è leggermente più complesso da usare: è necessario scrivere altro codice da usare `RecyclerView` rispetto a. `ListView`
 
--   `RecyclerView`non fornisce un adapter predefinito; è necessario implementare il codice dell'adattatore che accede all'origine dati. Tuttavia, Android include diversi adapter predefiniti che funzionano con `ListView` e. `GridView`
+- `RecyclerView`non fornisce un adapter predefinito; è necessario implementare il codice dell'adattatore che accede all'origine dati. Tuttavia, Android include diversi adapter predefiniti che funzionano con `ListView` e. `GridView`
 
--   `RecyclerView`non offre un evento di clic dell'elemento quando un utente tocca un elemento; gli eventi di clic sugli elementi vengono invece gestiti da classi helper. Al contrario, `ListView` offre un evento click-through.
+- `RecyclerView`non offre un evento di clic dell'elemento quando un utente tocca un elemento; gli eventi di clic sugli elementi vengono invece gestiti da classi helper. Al contrario, `ListView` offre un evento click-through.
 
--   `RecyclerView`consente di migliorare le prestazioni tramite il riciclo delle visualizzazioni e l'applicazione del modello del supporto di visualizzazione, che elimina le ricerche non necessarie sulle risorse di layout. L'uso del modello del supporto di visualizzazione è facoltativo `ListView`in.
+- `RecyclerView`consente di migliorare le prestazioni tramite il riciclo delle visualizzazioni e l'applicazione del modello del supporto di visualizzazione, che elimina le ricerche non necessarie sulle risorse di layout. L'uso del modello del supporto di visualizzazione è facoltativo `ListView`in.
 
--   `RecyclerView`si basa su una progettazione modulare che ne semplifica la personalizzazione. Ad esempio, è possibile inserire un criterio di layout diverso senza modifiche significative al codice per l'app.
+- `RecyclerView`si basa su una progettazione modulare che ne semplifica la personalizzazione. Ad esempio, è possibile inserire un criterio di layout diverso senza modifiche significative al codice per l'app.
     Al contrario, `ListView` è relativamente monolitico nella struttura.
 
--   `RecyclerView`include animazioni predefinite per l'aggiunta e la rimozione di elementi. `ListView`le animazioni richiedono alcuni sforzi aggiuntivi da parte dello sviluppatore di app.
+- `RecyclerView`include animazioni predefinite per l'aggiunta e la rimozione di elementi. `ListView`le animazioni richiedono alcuni sforzi aggiuntivi da parte dello sviluppatore di app.
 
 
 ### <a name="sections"></a>Sezioni

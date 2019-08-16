@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 4878f2516e764f3ea01ac89569ab4dfdbdbd37e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5e0f096e5f2c05452a285182db4e455769aa737b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647583"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529028"
 ---
 # <a name="xib-files-in-xamarinmac"></a>file con estensione XIB in Novell. Mac
 
@@ -79,14 +79,14 @@ Nella sezione **Properties** (Proprietà) sono incluse 8 *schede di controllo*, 
 
 Da sinistra a destra, queste schede sono:
 
--   **File Inspector** (Controllo file): visualizza le informazioni sui file, ad esempio il nome file e il percorso del file Xib in fase di modifica.
--   **Quick Help** (Guida rapida): questa scheda offre una guida contestuale in base all'elemento selezionato in Xcode.
--   **Identity Inspector** (Controllo identità): offre informazioni sul comando o la visualizzazione selezionata.
--   **Attributi Inspector** : il controllo attributi consente di personalizzare diversi attributi della visualizzazione o del controllo selezionato.
--   **Size Inspector** : il controllo delle dimensioni consente di controllare le dimensioni e il comportamento di ridimensionamento del controllo/visualizzazione selezionato.
--   **Connections Inspector** : il controllo Connections Mostra le connessioni Outlet e Action dei controlli selezionati. Gli Outlet e le azioni verranno esaminati in pochi istanti.
--   **Bindings Inspector** : il controllo Binding consente di configurare i controlli in modo che i relativi valori vengano associati automaticamente ai modelli di dati.
--   **View Effects Inspector** : il controllo degli effetti di visualizzazione consente di specificare gli effetti sui controlli, ad esempio le animazioni.
+- **File Inspector** (Controllo file): visualizza le informazioni sui file, ad esempio il nome file e il percorso del file Xib in fase di modifica.
+- **Quick Help** (Guida rapida): questa scheda offre una guida contestuale in base all'elemento selezionato in Xcode.
+- **Identity Inspector** (Controllo identità): offre informazioni sul comando o la visualizzazione selezionata.
+- **Attributi Inspector** : il controllo attributi consente di personalizzare diversi attributi della visualizzazione o del controllo selezionato.
+- **Size Inspector** : il controllo delle dimensioni consente di controllare le dimensioni e il comportamento di ridimensionamento del controllo/visualizzazione selezionato.
+- **Connections Inspector** : il controllo Connections Mostra le connessioni Outlet e Action dei controlli selezionati. Gli Outlet e le azioni verranno esaminati in pochi istanti.
+- **Bindings Inspector** : il controllo Binding consente di configurare i controlli in modo che i relativi valori vengano associati automaticamente ai modelli di dati.
+- **View Effects Inspector** : il controllo degli effetti di visualizzazione consente di specificare gli effetti sui controlli, ad esempio le animazioni.
 
 Nella sezione **libreria** è possibile trovare controlli e oggetti da inserire nella finestra di progettazione per creare graficamente l'interfaccia utente:
 
@@ -271,8 +271,8 @@ Seguire questa procedura:
 
 Che cosa sono gli Outlet e le azioni? Nella programmazione tradizione dell'interfaccia utente .NET, i comandi dell'interfaccia utente vengono esposti automaticamente come proprietà quando vengono aggiunti. In Mac ciò non avviene, la semplice aggiunta di un comando in una visualizzazione non lo rende accessibile al codice. Lo sviluppatore deve esporre esplicitamente l'elemento dell'interfaccia utente al codice. A tale scopo, Apple fornisce due opzioni:
 
--  **Outlet**: gli outlet sono analoghi alle proprietà. Se si collega un controllo a un Outlet, questo viene esposto al codice tramite una proprietà, in modo che sia possibile eseguire operazioni come collegare gestori eventi, chiamare metodi su di esso e così via.
--  **Azioni**: le azioni sono analoghe al modello di comando in WPF. Ad esempio, quando un'azione viene eseguita su un controllo, ad esempio un clic del pulsante, il controllo chiamerà automaticamente un metodo nel codice. Le azioni sono potenti e convenienti perché è possibile collegare molti controlli alla stessa azione.
+- **Outlet**: gli outlet sono analoghi alle proprietà. Se si collega un controllo a un Outlet, questo viene esposto al codice tramite una proprietà, in modo che sia possibile eseguire operazioni come collegare gestori eventi, chiamare metodi su di esso e così via.
+- **Azioni**: le azioni sono analoghe al modello di comando in WPF. Ad esempio, quando un'azione viene eseguita su un controllo, ad esempio un clic del pulsante, il controllo chiamerà automaticamente un metodo nel codice. Le azioni sono potenti e convenienti perché è possibile collegare molti controlli alla stessa azione.
 
 In Xcode gli Outlet e le azioni vengono aggiunti direttamente nel codice tramite il trascinamento del *controllo*. In particolare, ciò significa che per creare un outlet o un'azione, è possibile scegliere l'elemento di controllo che si vuole aggiungere a un punto di uscita o un'azione, tenendo premuto il pulsante di **controllo** sulla tastiera e trascinando il controllo direttamente nel codice.
 

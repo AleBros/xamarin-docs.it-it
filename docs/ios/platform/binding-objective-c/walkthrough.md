@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b73f00eb704d80da6b0bab3a34f08f2d1cb70a16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646181"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528001"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Binding di una libreria Objective-C in iOS
 
@@ -45,10 +45,10 @@ Nell'applicazione di esempio viene illustrato come usare un delegato forte per l
 
 Questo articolo presuppone che l'utente abbia familiarità con Xcode e il linguaggio Objective-C ed è stata letta la documentazione relativa al [binding di Objective-c](~/cross-platform/macios/binding/index.md) . Per completare i passaggi presentati sono inoltre necessari gli elementi seguenti:
 
--  **Xcode e iOS SDK** : Xcode di Apple e la versione più recente dell'API iOS devono essere installate e configurate nel computer dello sviluppatore.
--  **[Strumenti da riga di comando Xcode](#Installing_the_Xcode_Command_Line_Tools)** : è necessario installare gli strumenti da riga di comando Xcode per la versione attualmente installata di Xcode (vedere di seguito per i dettagli di installazione).
--  **Visual Studio per Mac o Visual Studio** : la versione più recente di Visual Studio per Mac o Visual Studio deve essere installata e configurata nel computer di sviluppo. Per lo sviluppo di un'applicazione Novell. iOS è necessario un Mac Apple e, quando si usa Visual Studio, è necessario essere connessi a [un host di compilazione Novell. iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **La versione più recente di Objective Sharpie** : una copia corrente dello strumento Objective Sharpe scaricato da [qui](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Se è già stato installato Objective Sharpie, è possibile aggiornarlo alla versione più recente tramite il`sharpie update`
+- **Xcode e iOS SDK** : Xcode di Apple e la versione più recente dell'API iOS devono essere installate e configurate nel computer dello sviluppatore.
+- **[Strumenti da riga di comando Xcode](#Installing_the_Xcode_Command_Line_Tools)** : è necessario installare gli strumenti da riga di comando Xcode per la versione attualmente installata di Xcode (vedere di seguito per i dettagli di installazione).
+- **Visual Studio per Mac o Visual Studio** : la versione più recente di Visual Studio per Mac o Visual Studio deve essere installata e configurata nel computer di sviluppo. Per lo sviluppo di un'applicazione Novell. iOS è necessario un Mac Apple e, quando si usa Visual Studio, è necessario essere connessi a [un host di compilazione Novell. iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **La versione più recente di Objective Sharpie** : una copia corrente dello strumento Objective Sharpe scaricato da [qui](~/cross-platform/macios/binding/objective-sharpie/get-started.md). Se è già stato installato Objective Sharpie, è possibile aggiornarlo alla versione più recente tramite il`sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 
@@ -679,7 +679,7 @@ Si ottiene innanzitutto un'istanza di `InfColorPickerController` tramite un meto
 
 [![](walkthrough-images/run01.png "Esecuzione dell'applicazione")](walkthrough-images/run01.png#lightbox)
 
-Congratulazioni! A questo punto è stata creata e associata una libreria Objective-C da usare in un'applicazione Novell. iOS. Successivamente, si apprenderà come usare i delegati vulnerabili.
+La procedura è stata completata. A questo punto è stata creata e associata una libreria Objective-C da usare in un'applicazione Novell. iOS. Successivamente, si apprenderà come usare i delegati vulnerabili.
 
 ### <a name="implementing-a-weak-delegate"></a>Implementazione di un delegato vulnerabile
 

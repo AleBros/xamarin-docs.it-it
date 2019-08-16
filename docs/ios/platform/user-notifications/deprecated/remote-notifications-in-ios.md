@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 143dd8c5ad2e762235641680e1217a11e1b48bb5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651326"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528760"
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
 
@@ -32,24 +32,24 @@ Apple gestisce due ambienti di APNS: un ambiente *sandbox* e un ambiente di *pro
 
 La notifica push deve osservare le regole seguenti che sono determinate dall'architettura di APNS:
 
--  **limite di messaggi di 256 byte** : le dimensioni dell'intero messaggio della notifica non devono superare 256 byte.
--  **Nessuna conferma di ricezione** : APNS non fornisce al mittente alcuna notifica che un messaggio lo ha fatto al destinatario previsto. Se il dispositivo non è raggiungibile e vengono inviate più notifiche sequenziali, verranno perse tutte le notifiche tranne quelle più recenti. Solo la notifica più recente verrà recapitata al dispositivo.
--  **Ogni applicazione richiede un certificato sicuro: la** comunicazione con APNs deve essere eseguita tramite SSL.
+- **limite di messaggi di 256 byte** : le dimensioni dell'intero messaggio della notifica non devono superare 256 byte.
+- **Nessuna conferma di ricezione** : APNS non fornisce al mittente alcuna notifica che un messaggio lo ha fatto al destinatario previsto. Se il dispositivo non è raggiungibile e vengono inviate più notifiche sequenziali, verranno perse tutte le notifiche tranne quelle più recenti. Solo la notifica più recente verrà recapitata al dispositivo.
+- **Ogni applicazione richiede un certificato sicuro: la** comunicazione con APNs deve essere eseguita tramite SSL.
 
 
 ## <a name="creating-and-using-certificates"></a>Creazione e utilizzo di certificati
 
 Ognuno degli ambienti indicati nella sezione precedente richiede il proprio certificato. Questa sezione illustra come creare un certificato, associarlo a un profilo di provisioning e quindi ottenere un certificato di scambio di informazioni personali da usare con PushSharp.
 
-1.  Per creare un certificato, passare al portale di provisioning iOS nel sito Web di Apple, come illustrato nella schermata seguente (si noti la voce di menu ID app a sinistra):
+1. Per creare un certificato, passare al portale di provisioning iOS nel sito Web di Apple, come illustrato nella schermata seguente (si noti la voce di menu ID app a sinistra):
 
     [![](remote-notifications-in-ios-images/image5new.png "Portale di provisioning iOS nel sito Web Apple")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
-2.  Passare quindi alla sezione ID app e creare un nuovo ID app, come illustrato nello screenshot seguente:
+2. Passare quindi alla sezione ID app e creare un nuovo ID app, come illustrato nello screenshot seguente:
 
     [![](remote-notifications-in-ios-images/image6new.png "Passare alla sezione ID app e creare un nuovo ID app")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  Quando si fa clic sul **+** pulsante, sarà possibile immettere la descrizione e un identificatore del bundle per l'ID app, come illustrato nello screenshot seguente:
+3. Quando si fa clic sul **+** pulsante, sarà possibile immettere la descrizione e un identificatore del bundle per l'ID app, come illustrato nello screenshot seguente:
 
     [![](remote-notifications-in-ios-images/image7new.png "Immettere la descrizione e un identificatore del bundle per l'ID app")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
@@ -63,7 +63,7 @@ Ognuno degli ambienti indicati nella sezione precedente richiede il proprio cert
 
     [![](remote-notifications-in-ios-images/image9new.png "Confermare la registrazione del nuovo ID app")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
-7.  Successivamente, è necessario creare il certificato per l'ID app. Nella finestra di spostamento a sinistra passare a **certificati > tutti** e selezionare il `+` pulsante, come illustrato nello screenshot seguente:
+7. Successivamente, è necessario creare il certificato per l'ID app. Nella finestra di spostamento a sinistra passare a **certificati > tutti** e selezionare il `+` pulsante, come illustrato nello screenshot seguente:
 
     [![](remote-notifications-in-ios-images/image10new.png "Creare il certificato per l'ID app")](remote-notifications-in-ios-images/image8.png#lightbox)
 
@@ -75,24 +75,24 @@ Ognuno degli ambienti indicati nella sezione precedente richiede il proprio cert
 
     [![](remote-notifications-in-ios-images/image12new.png "Selezionare il nuovo ID app appena creato")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
-10.  Verranno visualizzate le istruzioni che illustrano il processo di creazione di una *richiesta di firma del certificato* tramite l'applicazione di **Accesso Keychain** nel Mac.
+10. Verranno visualizzate le istruzioni che illustrano il processo di creazione di una *richiesta di firma del certificato* tramite l'applicazione di **Accesso Keychain** nel Mac.
 
-11.  Ora che il certificato è stato creato, è necessario usarlo come parte del processo di compilazione per firmare l'applicazione in modo che possa essere registrata con APNs. A tale scopo, è necessario creare e installare un profilo di provisioning che usa il certificato.
+11. Ora che il certificato è stato creato, è necessario usarlo come parte del processo di compilazione per firmare l'applicazione in modo che possa essere registrata con APNs. A tale scopo, è necessario creare e installare un profilo di provisioning che usa il certificato.
 
-12.  Per creare un profilo di provisioning di sviluppo, passare alla sezione **profili** di provisioning e seguire i passaggi per crearlo, usando l'ID app appena creato.
+12. Per creare un profilo di provisioning di sviluppo, passare alla sezione **profili** di provisioning e seguire i passaggi per crearlo, usando l'ID app appena creato.
 
-13.  Dopo aver creato il profilo di provisioning, aprire **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning creato non viene visualizzato, potrebbe essere necessario scaricare il profilo dal portale di provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:  
+13. Dopo aver creato il profilo di provisioning, aprire **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning creato non viene visualizzato, potrebbe essere necessario scaricare il profilo dal portale di provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:  
     [![](remote-notifications-in-ios-images/image13new.png "Questo screenshot mostra un esempio della libreria con il profilo di provisioning aggiunto")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-14.  A questo punto è necessario configurare il progetto Novell. iOS in modo da usare il profilo di provisioning appena creato. Questa operazione viene eseguita dalla finestra di dialogo **Opzioni progetto** , nella scheda **firma bundle iOS** , come illustrato nello screenshot seguente:  
+14. A questo punto è necessario configurare il progetto Novell. iOS in modo da usare il profilo di provisioning appena creato. Questa operazione viene eseguita dalla finestra di dialogo **Opzioni progetto** , nella scheda **firma bundle iOS** , come illustrato nello screenshot seguente:  
     [![](remote-notifications-in-ios-images/image11.png "Configurare il progetto Novell. iOS per usare il profilo di provisioning appena creato")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 A questo punto l'applicazione è configurata per l'uso con le notifiche push. Tuttavia, esistono ancora alcuni passaggi necessari con il certificato. Questo certificato è in formato DER che non è compatibile con PushSharp, che richiede un certificato PKCS12 (Personal Information Exchange). Per convertire il certificato in modo che sia utilizzabile da PushSharp, eseguire questi passaggi finali:
 
-1.  **Scaricare il file di certificato** : accedere al portale di provisioning iOS, scegliere la scheda certificati, selezionare il certificato associato al profilo di provisioning corretto e scegliere **download** .
-1.  **Apri Accesso Keychain** : questa applicazione è un'interfaccia GUI per il sistema di gestione delle password in OS X.
-1.  **Importa il certificato** : se il certificato non è già installato, **file... Importa gli elementi** dal menu di accesso portachiavi. Passare al certificato esportato in precedenza e selezionarlo.
-1.  **Esportare il certificato** : espandere il certificato in modo che la chiave privata associata sia visibile, fare clic con il pulsante destro del mouse sulla chiave e scegliere Esporta. Verrà richiesto di specificare un nome file e una password per il file esportato.
+1. **Scaricare il file di certificato** : accedere al portale di provisioning iOS, scegliere la scheda certificati, selezionare il certificato associato al profilo di provisioning corretto e scegliere **download** .
+1. **Apri Accesso Keychain** : questa applicazione è un'interfaccia GUI per il sistema di gestione delle password in OS X.
+1. **Importa il certificato** : se il certificato non è già installato, **file... Importa gli elementi** dal menu di accesso portachiavi. Passare al certificato esportato in precedenza e selezionarlo.
+1. **Esportare il certificato** : espandere il certificato in modo che la chiave privata associata sia visibile, fare clic con il pulsante destro del mouse sulla chiave e scegliere Esporta. Verrà richiesto di specificare un nome file e una password per il file esportato.
 
 A questo punto, l'operazione è stata eseguita con i certificati. È stato creato un certificato che verrà usato per firmare le applicazioni iOS e convertirlo in un formato che può essere usato con PushSharp in un'applicazione server. Verrà ora esaminato il modo in cui le applicazioni iOS interagiscono con APNS.
 

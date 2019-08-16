@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 2bd694d903da9f30f8fffa5fea991c1f386752dd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656377"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528323"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit in Novell. iOS
 
@@ -31,17 +31,17 @@ Le funzionalità di PassKit descritte in questo documento richiedono iOS 6 e Xco
 
 Il problema principale che PassKit risolve è la distribuzione e la gestione dei codici a barre. Di seguito sono riportati alcuni esempi reali del modo in cui vengono attualmente usati i codici a barre:
 
--   **Acquisto dei biglietti online** : i clienti vengono in genere inviati tramite posta elettronica a un codice a barre che rappresenta i biglietti. Questo codice a barre viene stampato e portato al cinema per essere analizzato per l'immissione.
--   **Carte fedeltà** : i clienti contengono una serie di schede specifiche del negozio nel portafoglio o nella borsa, per la visualizzazione e l'analisi quando acquistano beni.
--   **Buoni** : i buoni vengono distribuiti tramite posta elettronica, come pagine Web stampabili, tramite letterbox e come codici a barre in giornali e riviste. I clienti li portano a uno Store per l'analisi, per ricevere beni, servizi o sconti in cambio.
--   **Passaggi di imbarco** : simili all'acquisto di un ticket di film.
+- **Acquisto dei biglietti online** : i clienti vengono in genere inviati tramite posta elettronica a un codice a barre che rappresenta i biglietti. Questo codice a barre viene stampato e portato al cinema per essere analizzato per l'immissione.
+- **Carte fedeltà** : i clienti contengono una serie di schede specifiche del negozio nel portafoglio o nella borsa, per la visualizzazione e l'analisi quando acquistano beni.
+- **Buoni** : i buoni vengono distribuiti tramite posta elettronica, come pagine Web stampabili, tramite letterbox e come codici a barre in giornali e riviste. I clienti li portano a uno Store per l'analisi, per ricevere beni, servizi o sconti in cambio.
+- **Passaggi di imbarco** : simili all'acquisto di un ticket di film.
 
 PassKit offre un'alternativa per ognuno di questi scenari:
 
--   **Ticket di film** : dopo l'acquisto, il cliente aggiunge un ticket di ticket di evento (tramite posta elettronica o un collegamento al sito Web). Nel momento in cui si avvicina il film, il pass verrà automaticamente visualizzato nella schermata di blocco come promemoria e all'arrivo al cinema il pass viene facilmente recuperato e visualizzato in Wallet per l'analisi.
--   **Carte fedeltà** : anziché (o oltre a) fornire una scheda fisica, gli archivi possono emettere (tramite posta elettronica o dopo un accesso al sito Web) un pass per la scheda dello Store. Lo Store può fornire funzionalità aggiuntive, ad esempio l'aggiornamento del saldo dell'account nel passaggio tramite notifiche push e l'uso dei servizi di georilevazione. il passaggio potrebbe essere visualizzato automaticamente nella schermata di blocco quando il cliente si trova vicino a una posizione di negozio.
--   **Buoni** : i pass per i tagliandi possono essere facilmente generati con caratteristiche univoche per facilitare il rilevamento e la distribuzione tramite posta elettronica o collegamenti a siti Web. I tagliandi scaricati possono essere visualizzati automaticamente nella schermata di blocco quando l'utente si trova vicino a una posizione specifica e/o in una data specifica, ad esempio quando si avvicina la data di scadenza. Poiché i buoni sono archiviati sul telefono dell'utente, sono sempre pratici e non vengono posizionati in una posizione non configurata. I buoni possono incoraggiare i clienti a scaricare app complementari perché i collegamenti all'App Store possono essere incorporati nel passaggio, aumentando il coinvolgimento del cliente.
--   **Passaggi di imbarco** : dopo un processo di archiviazione online, il cliente riceverà il pass-through tramite posta elettronica o un collegamento. Un'app complementare fornita dal provider di trasporto potrebbe includere il processo di archiviazione e consentire al cliente di eseguire altre funzioni, ad esempio la scelta della loro postazione o pasto. Il provider di trasporto può utilizzare le notifiche push per aggiornare il passaggio se il trasporto viene posticipato o annullato. Quando il tempo di imbarco si avvicina, il passaggio verrà visualizzato nella schermata di blocco come promemoria e per fornire accesso rapido al passaggio.
+- **Ticket di film** : dopo l'acquisto, il cliente aggiunge un ticket di ticket di evento (tramite posta elettronica o un collegamento al sito Web). Nel momento in cui si avvicina il film, il pass verrà automaticamente visualizzato nella schermata di blocco come promemoria e all'arrivo al cinema il pass viene facilmente recuperato e visualizzato in Wallet per l'analisi.
+- **Carte fedeltà** : anziché (o oltre a) fornire una scheda fisica, gli archivi possono emettere (tramite posta elettronica o dopo un accesso al sito Web) un pass per la scheda dello Store. Lo Store può fornire funzionalità aggiuntive, ad esempio l'aggiornamento del saldo dell'account nel passaggio tramite notifiche push e l'uso dei servizi di georilevazione. il passaggio potrebbe essere visualizzato automaticamente nella schermata di blocco quando il cliente si trova vicino a una posizione di negozio.
+- **Buoni** : i pass per i tagliandi possono essere facilmente generati con caratteristiche univoche per facilitare il rilevamento e la distribuzione tramite posta elettronica o collegamenti a siti Web. I tagliandi scaricati possono essere visualizzati automaticamente nella schermata di blocco quando l'utente si trova vicino a una posizione specifica e/o in una data specifica, ad esempio quando si avvicina la data di scadenza. Poiché i buoni sono archiviati sul telefono dell'utente, sono sempre pratici e non vengono posizionati in una posizione non configurata. I buoni possono incoraggiare i clienti a scaricare app complementari perché i collegamenti all'App Store possono essere incorporati nel passaggio, aumentando il coinvolgimento del cliente.
+- **Passaggi di imbarco** : dopo un processo di archiviazione online, il cliente riceverà il pass-through tramite posta elettronica o un collegamento. Un'app complementare fornita dal provider di trasporto potrebbe includere il processo di archiviazione e consentire al cliente di eseguire altre funzioni, ad esempio la scelta della loro postazione o pasto. Il provider di trasporto può utilizzare le notifiche push per aggiornare il passaggio se il trasporto viene posticipato o annullato. Quando il tempo di imbarco si avvicina, il passaggio verrà visualizzato nella schermata di blocco come promemoria e per fornire accesso rapido al passaggio.
 
 PassKit fornisce un modo semplice e pratico per archiviare e visualizzare i codici a barre sul dispositivo iOS. Grazie all'integrazione della schermata di blocco di tempo e località, le notifiche push e le applicazioni complementari si integrano e offrono una base per servizi di vendita, ticket e fatturazione molto sofisticati.
 
@@ -53,11 +53,11 @@ PassKit non è solo un'API all'interno di CocoaTouch, ma fa parte di un ecosiste
 
 Ogni parte dell'ecosistema ha un ruolo ben definito:
 
--   **Wallet** : app iOS incorporata di Apple che archivia e Visualizza i pass. Questa è l'unica posizione in cui viene eseguito il rendering di pass per l'uso nel mondo reale, ovvero viene visualizzato il codice a barre, insieme a tutti i dati localizzati nel passaggio.
--   **App complementari** : app iOS 6 compilate dai provider di servizi di passaggio per estendere la funzionalità dei passaggi che emettono, ad esempio l'aggiunta di un valore a una scheda dello Store, la modifica della posizione in un passaggio di imbarco o di altre funzioni specifiche dell'azienda. Non sono necessarie app complementari per un passaggio.
--   **Server** : server protetto in cui è possibile generare e firmare i passaggi per la distribuzione. L'app complementare può connettersi al server per generare nuovi passaggi o richiedere aggiornamenti ai pass esistenti. Facoltativamente, è possibile implementare l'API del servizio Web che il portafogli chiamerà per aggiornare le sessioni.
--   **Server APNs** : il server è in grado di inviare notifiche al portafogli degli aggiornamenti a un passaggio in un determinato dispositivo usando APNs. Effettuare il push di una notifica a Wallet, che contatterà il server per informazioni dettagliate sulla modifica. Le `PKPassLibraryDidChangeNotification` app complementari non devono implementare APNs per questa funzionalità (possono restare in ascolto di).
--   **App Conduit** : applicazioni che non modificano direttamente i pass (ad esempio, le app complementari), ma che possono migliorare la propria utilità riconoscendo i pass e consentendone l'aggiunta al portafogli. I client di posta, i browser di social networking e altre app per l'aggregazione di dati possono incontrare tutti gli allegati o i collegamenti da passare.
+- **Wallet** : app iOS incorporata di Apple che archivia e Visualizza i pass. Questa è l'unica posizione in cui viene eseguito il rendering di pass per l'uso nel mondo reale, ovvero viene visualizzato il codice a barre, insieme a tutti i dati localizzati nel passaggio.
+- **App complementari** : app iOS 6 compilate dai provider di servizi di passaggio per estendere la funzionalità dei passaggi che emettono, ad esempio l'aggiunta di un valore a una scheda dello Store, la modifica della posizione in un passaggio di imbarco o di altre funzioni specifiche dell'azienda. Non sono necessarie app complementari per un passaggio.
+- **Server** : server protetto in cui è possibile generare e firmare i passaggi per la distribuzione. L'app complementare può connettersi al server per generare nuovi passaggi o richiedere aggiornamenti ai pass esistenti. Facoltativamente, è possibile implementare l'API del servizio Web che il portafogli chiamerà per aggiornare le sessioni.
+- **Server APNs** : il server è in grado di inviare notifiche al portafogli degli aggiornamenti a un passaggio in un determinato dispositivo usando APNs. Effettuare il push di una notifica a Wallet, che contatterà il server per informazioni dettagliate sulla modifica. Le `PKPassLibraryDidChangeNotification` app complementari non devono implementare APNs per questa funzionalità (possono restare in ascolto di).
+- **App Conduit** : applicazioni che non modificano direttamente i pass (ad esempio, le app complementari), ma che possono migliorare la propria utilità riconoscendo i pass e consentendone l'aggiunta al portafogli. I client di posta, i browser di social networking e altre app per l'aggregazione di dati possono incontrare tutti gli allegati o i collegamenti da passare.
 
 L'intero ecosistema sembra complesso, quindi vale la pena notare che alcuni componenti sono facoltativi e sono possibili implementazioni PassKit più semplici.
 
@@ -69,11 +69,11 @@ Un pass è una raccolta di dati che rappresentano un ticket, un buono o una sche
 
 Attualmente cinque tipi supportati, che possono essere distinti nell'app Wallet dal layout e dal bordo superiore del passaggio:
 
--  **Ticket evento** : piccolo ritaglio semicircolare.
--   **Boarding Pass** : è possibile specificare un'icona specifica del trasporto, ad esempio bus, treno, aereo).
--   **Scheda dello Store** : arrotondato in alto, ad esempio una carta di credito o di debito.
--  **Cedole** : perforato lungo la parte superiore.
--  **Generico** : uguale alla scheda dello Store, arrotondato in alto.
+- **Ticket evento** : piccolo ritaglio semicircolare.
+- **Boarding Pass** : è possibile specificare un'icona specifica del trasporto, ad esempio bus, treno, aereo).
+- **Scheda dello Store** : arrotondato in alto, ad esempio una carta di credito o di debito.
+- **Cedole** : perforato lungo la parte superiore.
+- **Generico** : uguale alla scheda dello Store, arrotondato in alto.
 
 
 In questa schermata vengono mostrati i cinque tipi di pass (in ordine: cedola, generico, scheda dello Store, carta di imbarco e ticket di evento):
@@ -84,13 +84,13 @@ In questa schermata vengono mostrati i cinque tipi di pass (in ordine: cedola, g
 
 Un file pass è in realtà un archivio ZIP con estensione **pkpass** , che contiene alcuni file JSON specifici (obbligatorio), un'ampia gamma di file di immagine (facoltativo) e stringhe localizzate (anche facoltative).
 
--   **Pass. JSON** : obbligatorio. Contiene tutte le informazioni per il passaggio.
--   **manifest. JSON** : obbligatorio. Contiene gli hash SHA1 per ogni file nel passaggio, ad eccezione del file di firma e del file (manifest. Json).
--   **firma** : obbligatorio. Creato firmando il `manifest.json` file con il certificato generato nel portale di provisioning iOS.
--  **logo. png** -facoltativo.
--  **background. png** -facoltativo.
--  **Icon. png** : facoltativo.
--  **File di stringhe localizzabili** -facoltativo.
+- **Pass. JSON** : obbligatorio. Contiene tutte le informazioni per il passaggio.
+- **manifest. JSON** : obbligatorio. Contiene gli hash SHA1 per ogni file nel passaggio, ad eccezione del file di firma e del file (manifest. Json).
+- **firma** : obbligatorio. Creato firmando il `manifest.json` file con il certificato generato nel portale di provisioning iOS.
+- **logo. png** -facoltativo.
+- **background. png** -facoltativo.
+- **Icon. png** : facoltativo.
+- **File di stringhe localizzabili** -facoltativo.
 
 Di seguito è riportata la struttura di directory di un file di pass (questo è il contenuto dell'archivio ZIP):
 
@@ -100,9 +100,9 @@ Di seguito è riportata la struttura di directory di un file di pass (questo è 
 
 JSON è il formato perché i passaggi vengono in genere creati in un server, ovvero il codice di generazione è indipendente dalla piattaforma sul server. Le tre principali informazioni in ogni passaggio sono:
 
--   **teamIdentifier** : tutti i collegamenti che vengono generati nell'account di App Store. Questo valore è visibile nel portale di provisioning iOS.
--   **passTypeIdentifier** : consente di eseguire la registrazione nel portale di provisioning per raggruppare i passaggi (se si produce più di un tipo). Ad esempio, un coffee shop potrebbe creare un tipo di pass per la carta dello Store per consentire ai clienti di ottenere crediti di fedeltà, ma anche un tipo di pass per i tagliandi separato per creare e distribuire i buoni sconto. Lo stesso coffee bar potrebbe anche conservare eventi Live Music e inviare ticket di ticket per gli eventi.
--   **serialNumber** : stringa univoca all'interno `passTypeidentifier` di questo oggetto. Il valore è opaco rispetto al portafoglio, ma è importante per tenere traccia dei passaggi specifici durante la comunicazione con il server.
+- **teamIdentifier** : tutti i collegamenti che vengono generati nell'account di App Store. Questo valore è visibile nel portale di provisioning iOS.
+- **passTypeIdentifier** : consente di eseguire la registrazione nel portale di provisioning per raggruppare i passaggi (se si produce più di un tipo). Ad esempio, un coffee shop potrebbe creare un tipo di pass per la carta dello Store per consentire ai clienti di ottenere crediti di fedeltà, ma anche un tipo di pass per i tagliandi separato per creare e distribuire i buoni sconto. Lo stesso coffee bar potrebbe anche conservare eventi Live Music e inviare ticket di ticket per gli eventi.
+- **serialNumber** : stringa univoca all'interno `passTypeidentifier` di questo oggetto. Il valore è opaco rispetto al portafoglio, ma è importante per tenere traccia dei passaggi specifici durante la comunicazione con il server.
 
 Ogni passaggio include un numero elevato di altre chiavi JSON, un esempio di quanto illustrato di seguito:
 
@@ -199,10 +199,10 @@ La conversione di un passaggio in più linguaggi è simile alla localizzazione d
 
 Le sessioni sono firmate con un certificato privato generato nel portale di provisioning iOS. I passaggi per la firma del passaggio sono:
 
-1.  Calcolare un hash SHA1 per ogni file nella directory Pass (non includere il `manifest.json` file o `signature` , nessuno dei quali deve esistere in questa fase).
-1.  Scrivere `manifest.json` come un elenco di chiavi/valori JSON di ogni nome file con il relativo hash.
-1.  Utilizzare il certificato per firmare il `manifest.json` file e scrivere il risultato in un file denominato `signature` .
-1.  Comprimere tutti gli elementi e assegnare al file `.pkpass` risultante un'estensione di file.
+1. Calcolare un hash SHA1 per ogni file nella directory Pass (non includere il `manifest.json` file o `signature` , nessuno dei quali deve esistere in questa fase).
+1. Scrivere `manifest.json` come un elenco di chiavi/valori JSON di ogni nome file con il relativo hash.
+1. Utilizzare il certificato per firmare il `manifest.json` file e scrivere il risultato in un file denominato `signature` .
+1. Comprimere tutti gli elementi e assegnare al file `.pkpass` risultante un'estensione di file.
 
 
 Poiché la chiave privata è necessaria per firmare il passaggio, questo processo deve essere eseguito solo su un server protetto controllato dall'utente. NON distribuire le chiavi per provare a generare i passaggi in un'applicazione.
@@ -216,8 +216,8 @@ Questa sezione contiene istruzioni per la configurazione dei dettagli del provis
 
 Per poter accedere all'App Store, un pass deve essere collegato a un account per sviluppatore. Questa operazione richiede due passaggi:
 
-1.  Il passaggio deve essere registrato usando un identificatore univoco, denominato ID del tipo di pass.
-1.  Per firmare il pass con la firma digitale dello sviluppatore, è necessario generare un certificato valido.
+1. Il passaggio deve essere registrato usando un identificatore univoco, denominato ID del tipo di pass.
+1. Per firmare il pass con la firma digitale dello sviluppatore, è necessario generare un certificato valido.
 
 Per creare un ID di tipo pass, eseguire le operazioni seguenti.
 
@@ -227,23 +227,23 @@ Il primo passaggio consiste nell'impostare un ID del tipo di passaggio per ogni 
 
 1. Nella [sezione certificati, identificatori e profili del portale di provisioning iOS](https://developer.apple.com/account/overview.action)passare a identificatori e selezionare **passa ID tipo** . Quindi selezionare il **+** pulsante per creare un nuovo tipo di pass: [![](passkit-images/passid.png "Crea un nuovo tipo di passaggio")](passkit-images/passid.png#lightbox)
 
-2.   Specificare una **Descrizione** (nome) e un **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID di tipo pass devono iniziare `pass.` con la stringa in questo `pass.com.xamarin.coupon.banana` esempio: [![](passkit-images/register.png "Specificare una descrizione e un identificatore")](passkit-images/register.png#lightbox)
+2. Specificare una **Descrizione** (nome) e un **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID di tipo pass devono iniziare `pass.` con la stringa in questo `pass.com.xamarin.coupon.banana` esempio: [![](passkit-images/register.png "Specificare una descrizione e un identificatore")](passkit-images/register.png#lightbox)
 
 
-3.   Confermare il pass ID premendo il pulsante **Register (registra** ).
+3. Confermare il pass ID premendo il pulsante **Register (registra** ).
 
 #### <a name="generate-a-certificate"></a>Generare un certificato
 
 Per creare un nuovo certificato per questo ID tipo di pass, procedere come segue:
 
-1.  Selezionare l'ID passato appena creato dall'elenco e fare clic su **modifica** : [![](passkit-images/pass-done.png "Selezionare il nuovo ID Pass dall'elenco")](passkit-images/pass-done.png#lightbox)
+1. Selezionare l'ID passato appena creato dall'elenco e fare clic su **modifica** : [![](passkit-images/pass-done.png "Selezionare il nuovo ID Pass dall'elenco")](passkit-images/pass-done.png#lightbox)
 
     Selezionare quindi **Crea certificato...** :
 
     [![](passkit-images/cert-dist.png "Selezionare Crea certificato")](passkit-images/cert-dist.png#lightbox)
 
 
-2.  Seguire i passaggi per creare una richiesta di firma del certificato (CSR).
+2. Seguire i passaggi per creare una richiesta di firma del certificato (CSR).
   
 3. Premere il pulsante **continue (continua** ) nel portale per sviluppatori e caricare il certificato CSR per generare il certificato.
 
@@ -258,12 +258,12 @@ Per altre informazioni sul provisioning per Wallet, vedere la Guida [uso delle f
 
 Ora che è stato creato il tipo di passaggio, è possibile creare manualmente una sessione di test nel simulatore o in un dispositivo. I passaggi per creare un passaggio sono:
 
--  Creare una directory in cui includere i file di pass.
--  Creare un file pass. JSON che contenga tutti i dati necessari.
--  Includere le immagini nella cartella (se necessario).
--  Calcolare gli hash SHA1 per ogni file nella cartella e scrivere in manifest. JSON.
--  Firmare manifest. JSON con il file Certificate. P12 scaricato.
--  Comprimere il contenuto della directory e rinominare con l'estensione PKPASS.
+- Creare una directory in cui includere i file di pass.
+- Creare un file pass. JSON che contenga tutti i dati necessari.
+- Includere le immagini nella cartella (se necessario).
+- Calcolare gli hash SHA1 per ogni file nella cartella e scrivere in manifest. JSON.
+- Firmare manifest. JSON con il file Certificate. P12 scaricato.
+- Comprimere il contenuto della directory e rinominare con l'estensione PKPASS.
 
 
 Nel [codice di esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) per questo articolo sono presenti alcuni file di origine che possono essere usati per generare un pass. Usare i file nella `CouponBanana.raw` directory della directory CreateAPassManually. Sono presenti i file seguenti:
@@ -315,12 +315,12 @@ Wallet è la parte centrale dell'ecosistema PassKit. Questa schermata mostra il 
 
 Le funzionalità di Wallet includono:
 
--  È l'unica posizione in cui viene eseguito il rendering con il codice a barre per l'analisi.
--  L'utente può modificare le impostazioni per gli aggiornamenti. Se abilitate, le notifiche push possono attivare gli aggiornamenti ai dati nel passaggio.
--  L'utente può abilitare o disabilitare l'integrazione della schermata di blocco. Se abilitata, consente di visualizzare automaticamente il pass per la schermata di blocco, in base ai dati relativi al tempo e alla posizione incorporati nel passaggio.
--  Il lato inverso del passaggio supporta il pull a Refresh, se viene fornito un URL server Web nel passaggio JSON.
--  Le app complementari possono essere aperte (o scaricate) se l'ID dell'app viene specificato nel passaggio JSON.
--  È possibile eliminare le sessioni (con un'animazione di suddivisione).
+- È l'unica posizione in cui viene eseguito il rendering con il codice a barre per l'analisi.
+- L'utente può modificare le impostazioni per gli aggiornamenti. Se abilitate, le notifiche push possono attivare gli aggiornamenti ai dati nel passaggio.
+- L'utente può abilitare o disabilitare l'integrazione della schermata di blocco. Se abilitata, consente di visualizzare automaticamente il pass per la schermata di blocco, in base ai dati relativi al tempo e alla posizione incorporati nel passaggio.
+- Il lato inverso del passaggio supporta il pull a Refresh, se viene fornito un URL server Web nel passaggio JSON.
+- Le app complementari possono essere aperte (o scaricate) se l'ID dell'app viene specificato nel passaggio JSON.
+- È possibile eliminare le sessioni (con un'animazione di suddivisione).
 
 ## <a name="adding-passes-into-wallet"></a>Aggiunta di pass a Wallet
 
@@ -334,9 +334,9 @@ I passaggi possono essere aggiunti al portafogli nei modi seguenti:
 
 Le applicazioni Conduit sono app intermedie che potrebbero ricevere i pass per conto di un utente e devono essere programmate per riconoscerne il tipo di contenuto e fornire funzionalità da aggiungere al portafoglio. Esempi di app Conduit includono:
 
--   **Posta** : riconosce l'allegato come un pass.
--   **Safari** : riconosce il passaggio Content-Type quando si fa clic su un collegamento pass URL.
--   **Altre app personalizzate** : qualsiasi app che riceve allegati o collegamenti aperti (client di social media, lettori di posta elettronica e così via).
+- **Posta** : riconosce l'allegato come un pass.
+- **Safari** : riconosce il passaggio Content-Type quando si fa clic su un collegamento pass URL.
+- **Altre app personalizzate** : qualsiasi app che riceve allegati o collegamenti aperti (client di social media, lettori di posta elettronica e così via).
 
 
 Questo screenshot mostra come la **posta elettronica** in iOS 6 riconosca un allegato pass e, quando viene toccato, consente di aggiungerlo al portafogli.
@@ -347,9 +347,9 @@ Questo screenshot mostra come la **posta elettronica** in iOS 6 riconosca un all
 
 Se si compila un'app che potrebbe essere un canale per i passaggi, possono essere riconosciuti da:
 
--  **Estensione di file** :. pkpass
--  **Tipo MIME** -application/vnd. Apple. pkpass
--  **Uti** – com. Apple. pkpass
+- **Estensione di file** :. pkpass
+- **Tipo MIME** -application/vnd. Apple. pkpass
+- **Uti** – com. Apple. pkpass
 
 
 Il funzionamento di base di un'applicazione Conduit consiste nel recuperare il file pass e chiamare PassKit `PKAddPassesViewController` per fornire all'utente la possibilità di aggiungere il pass al portafogli. L'implementazione di questo controller di visualizzazione viene trattata nella sezione successiva sulle **applicazioni complementari**.
@@ -419,10 +419,10 @@ la matrice `pass-type-identifiers` dei diritti non è corretta (o non corrispond
 
 Sono disponibili le seguenti classi PassKit per le app per l'accesso ai passaggi:
 
--  **PKPass** : istanza di un passaggio.
--  **PKPassLibrary** : fornisce l'API per accedere ai passaggi del dispositivo.
--  **PKAddPassesViewController** : consente di visualizzare un passaggio per l'utente per il salvataggio nel portafogli.
--  **PKAddPassesViewControllerDelegate** -Novell. iOS-sviluppatori
+- **PKPass** : istanza di un passaggio.
+- **PKPassLibrary** : fornisce l'API per accedere ai passaggi del dispositivo.
+- **PKAddPassesViewController** : consente di visualizzare un passaggio per l'utente per il salvataggio nel portafogli.
+- **PKAddPassesViewControllerDelegate** -Novell. iOS-sviluppatori
 
 ## <a name="example"></a>Esempio
 

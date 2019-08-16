@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: c5348ab754139dbd4012f6bfe9d22068ac16d12b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d5b3f084be7adc664dcb52342af617788f4dde48
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509249"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526226"
 ---
 # <a name="creating-a-service"></a>Creazione di un servizio
 
@@ -38,7 +38,7 @@ In fase di compilazione, Novell. Android registrerà il servizio inserendo l'ele
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
 ```
 
-È possibile condividere un servizio con altre applicazioni Android esportandolo  . Questa operazione viene eseguita impostando `Exported` la proprietà nell' `ServiceAttribute`oggetto. Quando si esporta un servizio, `ServiceAttribute.Name` la proprietà deve essere impostata anche per fornire un nome pubblico significativo per il servizio. Questo frammento di codice illustra come esportare e denominare un servizio:
+È possibile condividere un servizio con altre applicazioni Android esportandolo . Questa operazione viene eseguita impostando `Exported` la proprietà nell' `ServiceAttribute`oggetto. Quando si esporta un servizio, `ServiceAttribute.Name` la proprietà deve essere impostata anche per fornire un nome pubblico significativo per il servizio. Questo frammento di codice illustra come esportare e denominare un servizio:
 
 ```csharp
 [Service(Exported=true, Name="com.xamarin.example.DemoService")]
@@ -75,7 +75,7 @@ Il passaggio successivo consiste nell'esaminare come avviare un servizio e quind
 
 Il modo più semplice per avviare un servizio in Android è inviare un oggetto `Intent` che contiene i metadati per identificare il servizio da avviare. Per avviare un servizio, è possibile usare due stili diversi di Intent:
 
--   **Finalità esplicita** Una finalità esplicita identificherà esattamente il servizio da usare per completare una determinata azione.  &ndash; Una finalità esplicita può essere considerata come una lettera con un indirizzo specifico. Android instraderà l'intento al servizio identificato in modo esplicito. Questo frammento di codice è un esempio dell'uso di un'intenzione esplicita `DownloadService`per avviare un servizio denominato:
+- **Finalità esplicita** Una finalità esplicita identificherà esattamente il servizio da usare per completare una determinata azione. &ndash; Una finalità esplicita può essere considerata come una lettera con un indirizzo specifico. Android instraderà l'intento al servizio identificato in modo esplicito. Questo frammento di codice è un esempio dell'uso di un'intenzione esplicita `DownloadService`per avviare un servizio denominato:
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -83,7 +83,7 @@ Il modo più semplice per avviare un servizio in Android è inviare un oggetto `
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Finalità implicita** &ndash; Questo tipo di finalità identifica in modo generico l'azione che l'utente desidera eseguire, ma il servizio esatto per completare l'azione è sconosciuto. Un intento implicito può essere considerato come una lettera "a chi potrebbe preoccuparsi...".
+- **Finalità implicita** &ndash; Questo tipo di finalità identifica in modo generico l'azione che l'utente desidera eseguire, ma il servizio esatto per completare l'azione è sconosciuto. Un intento implicito può essere considerato come una lettera "a chi potrebbe preoccuparsi...".
     Android analizzerà il contenuto della finalità e determinerà se esiste già un servizio che corrisponde allo scopo.
 
     Viene utilizzato un _filtro preventivo_ per trovare una corrispondenza tra finalità implicita e un servizio registrato. Un filtro preventivo è un elemento XML aggiunto a **file AndroidManifest. XML** che contiene i metadati necessari per consentire la corrispondenza di un servizio con finalità implicite.

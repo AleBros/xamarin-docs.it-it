@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4eb115889b65819e969b8024fc9fbcdc02b566fb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648200"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527795"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Panoramica di StoreKit e recupero di informazioni sul prodotto in Novell. iOS
 
@@ -28,14 +28,14 @@ L'implementazione di acquisti in-app richiede le classi seguenti dal Framework S
    
  **SKProductsRequest** : una richiesta di StoreKit per i prodotti approvati da vendere (App Store). Può essere configurato con un numero di ID prodotto.
 
--   **SKProductsRequestDelegate** : dichiara i metodi per gestire le richieste e le risposte del prodotto. 
--   **SKProductsResponse** : inviato di nuovo al delegato da StoreKit (App Store). Contiene SKProducts che corrispondono agli ID prodotto inviati con la richiesta. 
--   **SKProduct** : prodotto recuperato da StoreKit (configurato in iTunes Connect). Contiene informazioni sul prodotto, ad esempio ID prodotto, titolo, descrizione e prezzo. 
--   **SKPayment** : creato con un ID prodotto e aggiunto alla coda di pagamento per effettuare un acquisto. 
--   **SKPaymentQueue** : richieste di pagamento in coda da inviare ad Apple. Le notifiche vengono attivate in seguito all'elaborazione di ogni pagamento. 
--   **SKPaymentTransaction** : rappresenta una transazione completata (una richiesta di acquisto che è stata elaborata dall'App Store e restituita all'applicazione tramite StoreKit). È possibile che la transazione sia stata acquistata, ripristinata o non riuscita. 
--   **SKPaymentTransactionObserver** : sottoclasse personalizzata che risponde agli eventi generati dalla coda di pagamento di StoreKit. 
--   **Le operazioni StoreKit sono asincrone** , dopo l'avvio di un SKProductRequest o l'aggiunta di un SKPayment alla coda, il controllo viene restituito al codice. StoreKit chiamerà i metodi sulla sottoclasse SKProductsRequestDelegate o SKPaymentTransactionObserver quando riceve i dati dai server Apple. 
+- **SKProductsRequestDelegate** : dichiara i metodi per gestire le richieste e le risposte del prodotto. 
+- **SKProductsResponse** : inviato di nuovo al delegato da StoreKit (App Store). Contiene SKProducts che corrispondono agli ID prodotto inviati con la richiesta. 
+- **SKProduct** : prodotto recuperato da StoreKit (configurato in iTunes Connect). Contiene informazioni sul prodotto, ad esempio ID prodotto, titolo, descrizione e prezzo. 
+- **SKPayment** : creato con un ID prodotto e aggiunto alla coda di pagamento per effettuare un acquisto. 
+- **SKPaymentQueue** : richieste di pagamento in coda da inviare ad Apple. Le notifiche vengono attivate in seguito all'elaborazione di ogni pagamento. 
+- **SKPaymentTransaction** : rappresenta una transazione completata (una richiesta di acquisto che è stata elaborata dall'App Store e restituita all'applicazione tramite StoreKit). È possibile che la transazione sia stata acquistata, ripristinata o non riuscita. 
+- **SKPaymentTransactionObserver** : sottoclasse personalizzata che risponde agli eventi generati dalla coda di pagamento di StoreKit. 
+- **Le operazioni StoreKit sono asincrone** , dopo l'avvio di un SKProductRequest o l'aggiunta di un SKPayment alla coda, il controllo viene restituito al codice. StoreKit chiamerà i metodi sulla sottoclasse SKProductsRequestDelegate o SKPaymentTransactionObserver quando riceve i dati dai server Apple. 
 
 
 Il diagramma seguente illustra le relazioni tra le varie classi StoreKit (le classi astratte devono essere implementate nell'applicazione):   
@@ -95,11 +95,11 @@ Il primo passaggio per la vendita di un prodotto di acquisto in-app è visualizz
    
  Indipendentemente dal tipo di prodotti che un'app vende (utilizzabile, non utilizzabile o da un tipo di sottoscrizione), il processo di recupero delle informazioni sul prodotto per la visualizzazione è lo stesso. Il codice InAppPurchaseSample che accompagna questo articolo contiene un progetto denominato *materiali di consumo* che illustra come recuperare le informazioni di produzione per la visualizzazione. Viene illustrato come:
 
--  Creare un'implementazione di `SKProductsRequestDelegate` e implementare il `ReceivedResponse` metodo abstract. Il codice di esempio chiama questa `InAppPurchaseManager` classe. 
--  Verificare con StoreKit per verificare se i pagamenti sono consentiti (usando `SKPaymentQueue.CanMakePayments` ). 
--  Creare un' `SKProductsRequest` istanza di con gli ID prodotto definiti in iTunes Connect. Questa operazione viene eseguita nel `InAppPurchaseManager.RequestProductData` metodo dell'esempio. 
--  Chiamare il metodo Start su `SKProductsRequest` . Viene attivata una chiamata asincrona ai server dell'app Store. Il delegato ( `InAppPurchaseManager` ) verrà richiamato con i risultati. 
--  Il metodo del delegato `InAppPurchaseManager` ( `ReceivedResponse` ) aggiorna l'interfaccia utente con i dati restituiti dall'App Store (prezzi dei prodotti & descrizioni o messaggi relativi a prodotti non validi). 
+- Creare un'implementazione di `SKProductsRequestDelegate` e implementare il `ReceivedResponse` metodo abstract. Il codice di esempio chiama questa `InAppPurchaseManager` classe. 
+- Verificare con StoreKit per verificare se i pagamenti sono consentiti (usando `SKPaymentQueue.CanMakePayments` ). 
+- Creare un' `SKProductsRequest` istanza di con gli ID prodotto definiti in iTunes Connect. Questa operazione viene eseguita nel `InAppPurchaseManager.RequestProductData` metodo dell'esempio. 
+- Chiamare il metodo Start su `SKProductsRequest` . Viene attivata una chiamata asincrona ai server dell'app Store. Il delegato ( `InAppPurchaseManager` ) verrà richiamato con i risultati. 
+- Il metodo del delegato `InAppPurchaseManager` ( `ReceivedResponse` ) aggiorna l'interfaccia utente con i dati restituiti dall'App Store (prezzi dei prodotti & descrizioni o messaggi relativi a prodotti non validi). 
 
 L'interazione complessiva ha un aspetto simile al seguente ( **StoreKit** è incorporato in iOS e l' **App Store** rappresenta i server Apple):
 

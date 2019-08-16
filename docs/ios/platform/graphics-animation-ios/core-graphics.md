@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: dac81a40983ea8414ec730f10c4c1f17e4d9915c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0c606e001552f1c4267ffc29bd69b2f38f2ec971
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653803"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527924"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Grafica principale in Novell. iOS
 
@@ -24,10 +24,10 @@ La grafica principale è un Framework di grafica 2D di basso livello che consent
 
 La grafica principale supporta il disegno in diversi scenari, tra cui:
 
--  [Disegno sullo schermo tramite un oggetto `UIView` ](#Drawing_in_a_UIView_Subclass) .
--  [Disegno di immagini in memoria o sullo schermo](#Drawing_Images_and_Text).
--  Creazione e disegno in un file PDF.
--  Lettura e creazione di un file PDF esistente.
+- [Disegno sullo schermo tramite un oggetto `UIView` ](#Drawing_in_a_UIView_Subclass) .
+- [Disegno di immagini in memoria o sullo schermo](#Drawing_Images_and_Text).
+- Creazione e disegno in un file PDF.
+- Lettura e creazione di un file PDF esistente.
 
 
 ## <a name="geometric-space"></a>Spazio geometrico
@@ -36,9 +36,9 @@ Indipendentemente dallo scenario, tutto il disegno con la grafica principale vie
 
 Questo approccio presenta alcuni vantaggi:
 
--  Il disegno del codice diventa dinamico e successivamente può modificare la grafica in fase di esecuzione.
--  Ridurre la necessità di immagini statiche nel bundle dell'applicazione può ridurre le dimensioni dell'applicazione.
--  I grafici diventano più resilienti alle modifiche di risoluzione nei dispositivi.
+- Il disegno del codice diventa dinamico e successivamente può modificare la grafica in fase di esecuzione.
+- Ridurre la necessità di immagini statiche nel bundle dell'applicazione può ridurre le dimensioni dell'applicazione.
+- I grafici diventano più resilienti alle modifiche di risoluzione nei dispositivi.
 
 <a name="Drawing_in_a_UIView_Subclass"/>
 
@@ -270,10 +270,10 @@ Il testo risultante viene visualizzato con l'immagine, come illustrato di seguit
 
 Oltre a creare il contesto grafico di una visualizzazione, la grafica principale supporta la creazione di immagini supportate da memoria, nota anche come disegno fuori schermo. Questa operazione richiede:
 
--  Creazione di un contesto grafico supportato da una bitmap in memoria
--  Impostazione dello stato di disegno ed esecuzione di comandi di disegno
--  Recupero dell'immagine dal contesto
--  Rimozione del contesto
+- Creazione di un contesto grafico supportato da una bitmap in memoria
+- Impostazione dello stato di disegno ed esecuzione di comandi di disegno
+- Recupero dell'immagine dal contesto
+- Rimozione del contesto
 
 
 A differenza del `Draw` metodo, in cui il contesto viene fornito dalla vista, in questo caso il contesto viene creato in uno dei due modi seguenti:

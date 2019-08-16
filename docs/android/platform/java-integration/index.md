@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: f577af88140c5797182617a22efbb2e7991a8abc
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510559"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524082"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integrazione Java con Novell. Android
 
@@ -24,11 +24,11 @@ Data la portata dell'ecosistema Java, è molto probabile che tutte le funzionali
 
 Esistono tre modi possibili per riutilizzare le librerie Java in un'applicazione Novell. Android: 
 
--   **Creare una libreria di binding Java** Con questa tecnica, viene usato un progetto Novell. Android per creare C# wrapper intorno ai tipi Java. &ndash; Un'applicazione Novell. Android può quindi fare riferimento C# ai wrapper creati da questo progetto e quindi usare il `.jar` file. 
+- **Creare una libreria di binding Java** Con questa tecnica, viene usato un progetto Novell. Android per creare C# wrapper intorno ai tipi Java. &ndash; Un'applicazione Novell. Android può quindi fare riferimento C# ai wrapper creati da questo progetto e quindi usare il `.jar` file. 
 
--   **Interfaccia java nativa** C++ C#   Java Native Interface (JNI) è un Framework che consente a codice non Java (ad esempio o) di chiamare o essere chiamato da codice Java in esecuzione all'interno di un JVM. &ndash; 
+- **Interfaccia java nativa** C++ C# Java Native Interface (JNI) è un Framework che consente a codice non Java (ad esempio o) di chiamare o essere chiamato da codice Java in esecuzione all'interno di un JVM. &ndash; 
 
--   **Porta il codice** Questo metodo implica l'esecuzione del codice sorgente Java e la relativa conversione in C# &ndash; Questa operazione può essere eseguita manualmente o usando uno strumento automatizzato, ad esempio affila. 
+- **Porta il codice** Questo metodo implica l'esecuzione del codice sorgente Java e la relativa conversione in C# &ndash; Questa operazione può essere eseguita manualmente o usando uno strumento automatizzato, ad esempio affila. 
 
 Alla base delle prime due tecniche è JNI ( *Java Native Interface* ). JNI è un Framework che consente alle applicazioni non scritte in Java di interagire con il codice Java in esecuzione in un Java Virtual Machine. Novell. Android USA JNI per creare *Binding* per C# il codice. 
 

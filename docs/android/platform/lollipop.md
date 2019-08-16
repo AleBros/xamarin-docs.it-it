@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c89b78e58918d2b561c6236ac273ffdb872211f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 7cc7eeabebbfbcd4b264202235307638b88842d8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511403"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524206"
 ---
 # <a name="lollipop-features"></a>Funzioni Lollipop
 
@@ -24,32 +24,32 @@ Android 5,0 (Lollipop) introduce un nuovo linguaggio di progettazione, un *proge
 
 Il *tema materiale* è l'incarnazione di questi principi di progettazione dell'interfaccia utente in Android. Questo articolo inizia con la copertura delle funzionalità di supporto del tema del materiale:
 
--   **Animazioni**     Animazioni di feedback tocco, animazioni di transizione delle attività, animazioni di transizione dello stato di visualizzazione e un effetto di rivelamento. &ndash;
+- **Animazioni** Animazioni di feedback tocco, animazioni di transizione delle attività, animazioni di transizione dello stato di visualizzazione e un effetto di rivelamento. &ndash;
 
--   **Visualizza ombre ed elevazione** Le visualizzazioni dispongono ora `elevation` di una proprietà. le `elevation` visualizzazioni con valori più elevati hanno il cast di ombre più grandi sullo sfondo. &ndash;
+- **Visualizza ombre ed elevazione** Le visualizzazioni dispongono ora `elevation` di una proprietà. &ndash;   le visualizzazioni con `elevation` valori più elevati hanno il cast di ombre più grandi sullo sfondo.
 
--   **Funzionalità colore** La colorazione disegnatore consente di riutilizzare gli asset delle immagini modificando il colore e l' *estrazione dei colori prominente* consente di eseguire dinamicamente il tema dell'app in base ai colori di un'immagine.  &ndash;
+- **Funzionalità colore** La colorazione disegnatore consente di riutilizzare gli asset delle immagini modificando il colore e l' *estrazione dei colori prominente* consente di eseguire dinamicamente il tema dell'app in base ai colori di un'immagine. &ndash;
 
 Molte funzionalità dei temi materiali sono già integrate nell'esperienza dell'interfaccia utente di Android 5,0, mentre altre devono essere aggiunte in modo esplicito alle app. Ad esempio, alcune visualizzazioni standard, ad esempio i pulsanti, includono già animazioni di feedback tocco, mentre le app devono abilitare la maggior parte delle ombreggiature di visualizzazione.
 
 Oltre ai miglioramenti apportati all'interfaccia utente per quanto riguarda il tema Material, Android 5,0 include anche diverse altre nuove funzionalità descritte in questo articolo:
 
--   **Notifiche avanzate** Le notifiche in Android 5,0 sono state aggiornate in modo significativo con un nuovo aspetto, il supporto per le notifiche di lockscreen e un nuovo formato di presentazione delle notifiche *Heads-up.* &ndash;
+- **Notifiche avanzate** Le notifiche in Android 5,0 sono state aggiornate in modo significativo con un nuovo aspetto, il supporto per le notifiche di lockscreen e un nuovo formato di presentazione delle notifiche *Heads-up.* &ndash;
 
--   **Nuovi widget dell'interfaccia utente** Il nuovo `RecyclerView` widget rende più semplice per le app fornire set di dati di grandi dimensioni e informazioni complesse e `CardView` il nuovo widget fornisce un formato di presentazione di tipo scheda semplificato per la visualizzazione di testo e immagini. &ndash;
+- **Nuovi widget dell'interfaccia utente** Il nuovo `RecyclerView` widget rende più semplice per le app fornire set di dati di grandi dimensioni e informazioni complesse e `CardView` il nuovo widget fornisce un formato di presentazione di tipo scheda semplificato per la visualizzazione di testo e immagini. &ndash;
 
--   **Nuove API** &ndash; Android 5,0 aggiunge nuove API per il supporto di più reti, connettività Bluetooth migliorata, gestione dell'archiviazione più semplice e controllo più flessibile dei lettori multimediali e dei dispositivi della fotocamera. È disponibile una nuova funzionalità di pianificazione del processo per eseguire le attività in modo asincrono ai tempi pianificati. Questa funzionalità consente di migliorare la durata della batteria, ad esempio pianificando le attività da eseguire quando il dispositivo viene collegato e caricato.
+- **Nuove API** &ndash; Android 5,0 aggiunge nuove API per il supporto di più reti, connettività Bluetooth migliorata, gestione dell'archiviazione più semplice e controllo più flessibile dei lettori multimediali e dei dispositivi della fotocamera. È disponibile una nuova funzionalità di pianificazione del processo per eseguire le attività in modo asincrono ai tempi pianificati. Questa funzionalità consente di migliorare la durata della batteria, ad esempio pianificando le attività da eseguire quando il dispositivo viene collegato e caricato.
 
 
 ## <a name="requirements"></a>Requisiti
 
 Per usare le nuove funzionalità di Android 5,0 nelle app basate su Novell, è necessario quanto segue:
 
--   **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
+- **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac. 
 
--   **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite Android SDK Manager.
+- **Android SDK** &ndash; Android 5,0 (API 21) o versione successiva deve essere installato tramite Android SDK Manager.
 
--   **Java Developer Kit** Novell. Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o superiore (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). &ndash; La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
+- **Java Developer Kit** Novell. Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o superiore (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). &ndash; La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti.
 
@@ -93,11 +93,11 @@ Le app Android pubblicate in precedenza potrebbero essere interessate dalle modi
 
 Android 5,0 usa il nuovo runtime di Android (ART) come runtime predefinito anziché Dalvik. ART implementa diverse nuove funzionalità principali:
 
--   **Compilazione AOT (Ahead of Time)** &ndash; AOT può migliorare le prestazioni dell'app compilando il codice dell'app prima che l'app venga avviata per la prima volta. Quando viene installata un'app, l'arte genera un file eseguibile dell'app compilato per il dispositivo di destinazione.
+- **Compilazione AOT (Ahead of Time)** &ndash; AOT può migliorare le prestazioni dell'app compilando il codice dell'app prima che l'app venga avviata per la prima volta. Quando viene installata un'app, l'arte genera un file eseguibile dell'app compilato per il dispositivo di destinazione.
 
--   **Garbage Collection migliorata (GC)** &ndash; I miglioramenti della GC nell'arte possono anche migliorare le prestazioni dell'app. Garbage Collection ora usa una pausa GC anziché due e le operazioni GC simultanee vengono completate in modo più tempestivo.
+- **Garbage Collection migliorata (GC)** &ndash; I miglioramenti della GC nell'arte possono anche migliorare le prestazioni dell'app. Garbage Collection ora usa una pausa GC anziché due e le operazioni GC simultanee vengono completate in modo più tempestivo.
 
--   **Debug delle app migliorato** &ndash; Art fornisce un maggior numero di dettagli diagnostici per l'analisi delle eccezioni e dei report di arresto anomalo.
+- **Debug delle app migliorato** &ndash; Art fornisce un maggior numero di dettagli diagnostici per l'analisi delle eccezioni e dei report di arresto anomalo.
 
 Le app esistenti dovrebbero funzionare senza modifiche in &ndash; arte, ad eccezione delle app che sfruttano le tecniche univoche del precedente Runtime Dalvik, che potrebbe non funzionare in arte. Per altre informazioni su queste modifiche, vedere [Verifica del comportamento delle app in Android Runtime (Art)](https://developer.android.com/guide/practices/verifying-apps-art.html).
 
@@ -106,23 +106,23 @@ Le app esistenti dovrebbero funzionare senza modifiche in &ndash; arte, ad eccez
 
 Le notifiche sono state modificate in modo significativo in Android 5,0:
 
--   **I suoni e le vibrazioni vengono gestiti in modo diverso** `Ringtone` `Notification.Builder` `Vibrator`I suoni e le vibrazioni delle notifiche vengono ora gestiti da anziché `MediaPlayer`, e. &ndash;
+- **I suoni e le vibrazioni vengono gestiti in modo diverso** `Ringtone` `Notification.Builder` `Vibrator`I suoni e le vibrazioni delle notifiche vengono ora gestiti da anziché `MediaPlayer`, e. &ndash;
 
--   **Nuova combinazione colori** &ndash; In base al tema Material, le notifiche vengono visualizzate con testo scuro su sfondi bianco o molto chiaro. Inoltre, i canali alpha nelle icone di notifica possono essere modificati da Android per coordinarsi con le combinazioni di colori del sistema. 
+- **Nuova combinazione colori** &ndash; In base al tema Material, le notifiche vengono visualizzate con testo scuro su sfondi bianco o molto chiaro. Inoltre, i canali alpha nelle icone di notifica possono essere modificati da Android per coordinarsi con le combinazioni di colori del sistema. 
 
--   **Notifiche di lockscreen** &ndash; È ora possibile visualizzare le notifiche nel dispositivo lockscreen.
+- **Notifiche di lockscreen** &ndash; È ora possibile visualizzare le notifiche nel dispositivo lockscreen.
 
--   **Intestazioni** &ndash; Le notifiche ad alta priorità vengono ora visualizzate in una finestra mobile di piccole dimensioni (notifica di verifica) quando il dispositivo viene sbloccato e la schermata è accesa.
+- **Intestazioni** &ndash; Le notifiche ad alta priorità vengono ora visualizzate in una finestra mobile di piccole dimensioni (notifica di verifica) quando il dispositivo viene sbloccato e la schermata è accesa.
 
 Nella maggior parte dei casi, la funzionalità di notifica delle app esistente a Android 5,0 richiede i passaggi seguenti:
 
-1.  Convertire il codice in modo `Notification.Builder` da usare `NotificationsCompat.Builder`(o) per la creazione di notifiche. 
+1. Convertire il codice in modo `Notification.Builder` da usare `NotificationsCompat.Builder`(o) per la creazione di notifiche. 
 
-2.  Verificare che gli asset di notifica esistenti siano visualizzabili nella nuova combinazione di colori del tema Material.
+2. Verificare che gli asset di notifica esistenti siano visualizzabili nella nuova combinazione di colori del tema Material.
 
-3.  Decidere quale visibilità deve avere le notifiche quando vengono presentate in lockscreen. Se una notifica non è pubblica, quale contenuto dovrebbe essere visualizzato in lockscreen?
+3. Decidere quale visibilità deve avere le notifiche quando vengono presentate in lockscreen. Se una notifica non è pubblica, quale contenuto dovrebbe essere visualizzato in lockscreen?
 
-4.  Impostare la categoria delle notifiche in modo che vengano gestite correttamente nella nuova modalità Android 5,0  non disturbare.
+4. Impostare la categoria delle notifiche in modo che vengano gestite correttamente nella nuova modalità Android 5,0 non disturbare.
 
 Se le notifiche presentano controlli di trasporto, visualizzare lo stato della riproduzione `RemoteControlClient`multimediale, usare `ActivityManager.GetRecentTasks`o chiamare, vedere [modifiche di comportamento importanti](https://developer.android.com/preview/api-overview.html#Behaviors) per altre informazioni sull'aggiornamento delle notifiche per Android 5,0.
 
@@ -163,11 +163,11 @@ Per altre informazioni sulle animazioni di feedback tocco in Android 5,0, vedere
 
 Le animazioni di transizione delle attività offrono agli utenti un senso di continuità visiva quando un'attività esegue la transizione a un'altra. Le app possono specificare tre tipi di animazioni di transizione:
 
--   **Immettere la transizione** &ndash; Quando un'attività entra nella scena.
+- **Immettere la transizione** &ndash; Quando un'attività entra nella scena.
 
--   **Transizione di uscita** &ndash; Quando un'attività esce dalla scena.
+- **Transizione di uscita** &ndash; Quando un'attività esce dalla scena.
 
--   **Transizione di elementi condivisi** &ndash; Quando viene modificata una vista comune a due attività quando la prima attività esegue la transizione a quella successiva.
+- **Transizione di elementi condivisi** &ndash; Quando viene modificata una vista comune a due attività quando la prima attività esegue la transizione a quella successiva.
 
 Ad esempio, la sequenza di screenshot seguente illustra una transizione di elemento condiviso:
 
@@ -179,31 +179,31 @@ Un elemento condiviso (foto di un bruco) è una delle diverse visualizzazioni ne
 
 Per le transizioni Enter, Android 5,0 fornisce tre tipi di animazioni:
 
--   **Esplodi animazione** &ndash; Ingrandisce una visualizzazione dal centro della scena.
+- **Esplodi animazione** &ndash; Ingrandisce una visualizzazione dal centro della scena.
 
--   **Animazione diapositiva** &ndash; Sposta una visualizzazione in da uno dei bordi di una scena.
+- **Animazione diapositiva** &ndash; Sposta una visualizzazione in da uno dei bordi di una scena.
 
--   **Animazione Fade** &ndash; Dissolve una visualizzazione nella scena.
+- **Animazione Fade** &ndash; Dissolve una visualizzazione nella scena.
 
 #### <a name="exit-transition-animation-types"></a>Tipi di animazione di transizione Exit
 
 Per le transizioni di uscita, Android 5,0 fornisce tre tipi di animazioni:
 
--   **Esplodi animazione** &ndash; Compatta una visualizzazione al centro della scena.
+- **Esplodi animazione** &ndash; Compatta una visualizzazione al centro della scena.
 
--   **Animazione diapositiva** &ndash; Sposta una visualizzazione in uno dei bordi di una scena.
+- **Animazione diapositiva** &ndash; Sposta una visualizzazione in uno dei bordi di una scena.
 
--   **Animazione Fade** &ndash; Dissolve una visualizzazione fuori dalla scena.
+- **Animazione Fade** &ndash; Dissolve una visualizzazione fuori dalla scena.
 
 #### <a name="shared-element-transition-animation-types"></a>Tipi di animazione di transizioni di elementi condivisi
 
 Le transizioni di elementi condivisi supportano più tipi di animazioni, ad esempio:
 
--   Modifica del layout o dei limiti di ritaglio di una visualizzazione.
+- Modifica del layout o dei limiti di ritaglio di una visualizzazione.
 
--   Modificare la scala e la rotazione di una visualizzazione.
+- Modificare la scala e la rotazione di una visualizzazione.
 
--   Modifica delle dimensioni e del tipo di scala per una visualizzazione.
+- Modifica delle dimensioni e del tipo di scala per una visualizzazione.
 
 Per altre informazioni sulle animazioni di transizione delle attività in Android 5,0, vedere Personalizzare le transizioni di [attività](https://developer.android.com/training/material/animations.html#Transitions).
 
@@ -212,9 +212,9 @@ Per altre informazioni sulle animazioni di transizione delle attività in Androi
 
 Android 5,0 rende possibile l'esecuzione delle animazioni quando cambia lo stato di una vista. È possibile animare le transizioni di stato di visualizzazione utilizzando una delle tecniche seguenti:
 
--   Creare drawables che animano le modifiche di stato associate a una visualizzazione specifica. La nuova `AnimatedStateListDrawable` classe consente di creare drawables per la visualizzazione delle animazioni tra le modifiche dello stato di visualizzazione.
+- Creare drawables che animano le modifiche di stato associate a una visualizzazione specifica. La nuova `AnimatedStateListDrawable` classe consente di creare drawables per la visualizzazione delle animazioni tra le modifiche dello stato di visualizzazione.
 
--   Definire la funzionalità di animazione che viene eseguita quando cambia lo stato di una vista. La nuova `StateListAnimator` classe consente di definire un animatore che viene eseguito quando lo stato di una visualizzazione viene modificato.
+- Definire la funzionalità di animazione che viene eseguita quando cambia lo stato di una vista. La nuova `StateListAnimator` classe consente di definire un animatore che viene eseguito quando lo stato di una visualizzazione viene modificato.
 
 Per altre informazioni sulle animazioni di transizione dello stato di visualizzazione in Android 5,0, vedere [animazione delle modifiche allo stato di visualizzazione](https://developer.android.com/training/material/animations.html#ViewState).
 
@@ -238,11 +238,11 @@ Per altre informazioni sull'effetto di rivelamento di Android 5,0 in, vedere [us
 
 Oltre a queste funzionalità di animazione, Android 5,0 fornisce anche nuove API che consentono di specificare le curve temporali e di movimento delle animazioni. Android 5,0 usa queste curve per interpolare lo spostamento temporale e spaziale durante le animazioni. In Android 5,0 sono definite tre curve:
 
--   **Fast\_out\_Linearin\_** accelera&ndash; rapidamente e continua ad accelerare fino alla fine dell'animazione.
+- **Fast\_out\_Linearin\_** accelera&ndash; rapidamente e continua ad accelerare fino alla fine dell'animazione.
 
--   **\_Il rallentamentorapido\_in accelera rapidamente e lentamente rallenta verso la fine dell'animazione.\_** &ndash;
+- **\_Il rallentamentorapido\_in accelera rapidamente e lentamente rallenta verso la fine dell'animazione.\_** &ndash;
 
--   **Linear\_out\_Slowin\_** inizia&ndash; con una velocità massima e rallenta lentamente fino alla fine dell'animazione.
+- **Linear\_out\_Slowin\_** inizia&ndash; con una velocità massima e rallenta lentamente fino alla fine dell'animazione.
 
 È possibile utilizzare la nuova `PathInterpolator` classe per specificare come avviene l'interpolazione di movimento. `PathInterpolator`è un interpolatore che attraversa i percorsi di animazione in base ai punti di controllo e alle curve di movimento specificati. Per altre informazioni su come specificare le impostazioni di movimento curvo in Android 5,0, vedere [usare un movimento curvo](https://developer.android.com/training/material/animations.html#CurvedMotion).
 
@@ -264,9 +264,9 @@ Per altre informazioni su come visualizzare le ombreggiature in Android 5,0, ved
 
 Android 5,0 fornisce due nuove funzionalità per la gestione dei colori nelle app:
 
--   La *colorazione disegnatore* consente di modificare i colori delle risorse dell'immagine modificando un attributo di layout.
+- La *colorazione disegnatore* consente di modificare i colori delle risorse dell'immagine modificando un attributo di layout.
 
--   L' *estrazione dei colori prominente* consente di personalizzare dinamicamente il tema colori dell'app per coordinarsi con la tavolozza dei colori di un'immagine visualizzata.
+- L' *estrazione dei colori prominente* consente di personalizzare dinamicamente il tema colori dell'app per coordinarsi con la tavolozza dei colori di un'immagine visualizzata.
 
 
 ### <a name="drawable-tinting"></a>Colorazione ricavabile
@@ -288,17 +288,17 @@ Per altre informazioni sulla colorazione delineabile in Android 5,0, vedere la p
 
 La nuova classe Android `Palette` 5,0 consente di estrarre i colori da un'immagine in modo che sia possibile applicarli dinamicamente a una tavolozza dei colori personalizzata. La `Palette` classe estrae sei colori da un'immagine ed etichetta questi colori in base ai relativi livelli di saturazione e luminosità dei colori:
 
--   Vibrante
+- Vibrante
 
--   Scuro intenso
+- Scuro intenso
 
--   Luce vibrante
+- Luce vibrante
 
--   Disattivato
+- Disattivato
 
--   Disattivato scuro
+- Disattivato scuro
 
--   Luce silenziata
+- Luce silenziata
 
 Negli screenshot seguenti, ad esempio, un'app di visualizzazione foto estrae i colori prominenti dall'immagine visualizzata e usa questi colori per adattare la combinazione di colori dell'app in modo che corrisponda all'immagine:
 
@@ -313,9 +313,9 @@ Per altre informazioni sull'estrazione dei colori in Android 5,0, vedere [estraz
 
 Android 5,0 introduce due nuovi widget dell'interfaccia utente:
 
--   `RecyclerView`&ndash; Gruppo di visualizzazioni che visualizza un elenco di elementi scorrevoli.
+- `RecyclerView`&ndash; Gruppo di visualizzazioni che visualizza un elenco di elementi scorrevoli.
 
--   `CardView`&ndash; Layout di base con angoli arrotondati.
+- `CardView`&ndash; Layout di base con angoli arrotondati.
 
 Entrambi i widget includono il supporto cotto per le funzionalità del tema Material; `RecyclerView` USA ad esempio le animazioni per l'aggiunta e la rimozione delle `CardView` visualizzazioni e usa le ombreggiature delle visualizzazioni per far apparire ogni scheda come float sopra lo sfondo. Gli esempi di questi nuovi widget sono illustrati negli screenshot seguenti:
 
@@ -375,13 +375,13 @@ Android 5,0 introduce un nuovo formato di presentazione delle notifiche con prio
 
 Le notifiche Heads-up vengono in genere usate per gli eventi seguenti:
 
--   Un nuovo messaggio successivo
+- Un nuovo messaggio successivo
 
--   Telefonata in arrivo
+- Telefonata in arrivo
 
--   Indicazione batteria insufficiente
+- Indicazione batteria insufficiente
 
--   Un allarme
+- Un allarme
 
 Android 5,0 Visualizza una notifica nel formato Heads-up solo quando ha un'impostazione di priorità alta o massima.
 
@@ -401,13 +401,13 @@ Android 5,0 fornisce diverse nuove API per migliorare le funzionalità della fot
 
 Le API seguenti rendono possibili queste nuove funzionalità:
 
--   `CameraManager.GetCameraIdList`Consente di accedere a livello di codice ai dispositivi della fotocamera `CameraManager.OpenCamera` , usando per connettersi a un dispositivo della fotocamera specifico. &ndash;
+- `CameraManager.GetCameraIdList`Consente di accedere a livello di codice ai dispositivi della fotocamera `CameraManager.OpenCamera` , usando per connettersi a un dispositivo della fotocamera specifico. &ndash;
 
--   `CameraCaptureSession`&ndash; Acquisisce o trasmette immagini dal dispositivo della fotocamera. Implementare un' `CameraCaptureSession.CaptureListener` interfaccia per gestire i nuovi eventi di acquisizione di immagini.
+- `CameraCaptureSession`&ndash; Acquisisce o trasmette immagini dal dispositivo della fotocamera. Implementare un' `CameraCaptureSession.CaptureListener` interfaccia per gestire i nuovi eventi di acquisizione di immagini.
 
--   `CaptureRequest`&ndash; Definisce i parametri di acquisizione.
+- `CaptureRequest`&ndash; Definisce i parametri di acquisizione.
 
--   `CaptureResult`&ndash; Fornisce i risultati di un'operazione di acquisizione dell'immagine.
+- `CaptureResult`&ndash; Fornisce i risultati di un'operazione di acquisizione dell'immagine.
 
 Per altre informazioni sulle nuove API della fotocamera in Android 5,0, vedere [supporti](https://developer.android.com/about/versions/android-5.0.html#Media).
 
@@ -415,11 +415,11 @@ Per altre informazioni sulle nuove API della fotocamera in Android 5,0, vedere [
 
 Android 5,0 aggiorna la `AudioTrack` classe per una migliore riproduzione audio:
 
--   `ENCODING_PCM_FLOAT`&ndash; Configurainmododaaccettareidatiaudioinformatoavirgolamobileperunintervallodinamicomigliore,unamaggiorecapacitàeunaqualitàsuperiore(grazieauna`AudioTrack` maggiore precisione). Il formato a virgola mobile consente inoltre di evitare il ritaglio audio.
+- `ENCODING_PCM_FLOAT`&ndash; Configurainmododaaccettareidatiaudioinformatoavirgolamobileperunintervallodinamicomigliore,unamaggiorecapacitàeunaqualitàsuperiore(grazieauna`AudioTrack` maggiore precisione). Il formato a virgola mobile consente inoltre di evitare il ritaglio audio.
 
--   `ByteBuffer`È ora possibile fornire dati audio a `AudioTrack` come matrice di byte. &ndash;
+- `ByteBuffer`È ora possibile fornire dati audio a `AudioTrack` come matrice di byte. &ndash;
 
--   `WRITE_NON_BLOCKING`&ndash; Questa opzione semplifica il buffering e il multithreading per alcune app.
+- `WRITE_NON_BLOCKING`&ndash; Questa opzione semplifica il buffering e il multithreading per alcune app.
 
 Per ulteriori informazioni `AudioTrack` sui miglioramenti apportati a Android 5,0, vedere [supporti](https://developer.android.com/about/versions/android-5.0.html#Media).
 
@@ -427,9 +427,9 @@ Per ulteriori informazioni `AudioTrack` sui miglioramenti apportati a Android 5,
 
 Android 5,0 introduce la nuova `Android.Media.MediaController` classe, che sostituisce `RemoteControlClient`. `Android.Media.MediaController`fornisce API di controllo del trasporto semplificate e offre il controllo thread-safe della riproduzione all'esterno del contesto dell'interfaccia utente. Le nuove API seguenti gestiscono il controllo di trasporto:
 
--   `Android.Media.Session.MediaSession`&ndash; Una sessione di controllo multimediale che gestisce più controller. Si chiama `MediaSession.GetSessionToken` per richiedere un token usato dall'app per interagire con la sessione.
+- `Android.Media.Session.MediaSession`&ndash; Una sessione di controllo multimediale che gestisce più controller. Si chiama `MediaSession.GetSessionToken` per richiedere un token usato dall'app per interagire con la sessione.
 
--   `MediaController.TransportControls`Gestisce i comandi di trasporto, ad esempio **Play**, **Stop**e **Skip.** &ndash;
+- `MediaController.TransportControls`Gestisce i comandi di trasporto, ad esempio **Play**, **Stop**e **Skip.** &ndash;
 
 Inoltre, è possibile usare la nuova `Android.App.Notification.MediaStyle` classe per associare una sessione multimediale con contenuto di notifica avanzato, ad esempio l'estrazione e la visualizzazione di album.
 
@@ -439,11 +439,11 @@ Per altre informazioni sulle nuove funzionalità di controllo della riproduzione
 
 Android 5,0 aggiorna il Framework di accesso alle archiviazione per semplificare l'uso delle applicazioni con directory e documenti:
 
--   Per selezionare un sottoalbero di directory, è possibile compilare e `Android.Intent.Action.OPEN_DOCUMENT_TREE` inviare uno scopo. Questa finalità determina la visualizzazione da parte del sistema di tutte le istanze del provider che supportano la selezione del sottoalbero. l'utente quindi Cerca e seleziona una directory.
+- Per selezionare un sottoalbero di directory, è possibile compilare e `Android.Intent.Action.OPEN_DOCUMENT_TREE` inviare uno scopo. Questa finalità determina la visualizzazione da parte del sistema di tutte le istanze del provider che supportano la selezione del sottoalbero. l'utente quindi Cerca e seleziona una directory.
 
--   Per creare e gestire nuovi documenti o directory in qualsiasi punto di un sottoalbero, usare `CreateDocument`i `RenameDocument`nuovi metodi `DeleteDocument` , e `DocumentsContract`di.
+- Per creare e gestire nuovi documenti o directory in qualsiasi punto di un sottoalbero, usare `CreateDocument`i `RenameDocument`nuovi metodi `DeleteDocument` , e `DocumentsContract`di.
 
--   Per ottenere i percorsi delle directory multimediali in tutti i dispositivi di archiviazione condivisi, chiamare `Android.Content.Context.GetExternalMediaDirs` il nuovo metodo.
+- Per ottenere i percorsi delle directory multimediali in tutti i dispositivi di archiviazione condivisi, chiamare `Android.Content.Context.GetExternalMediaDirs` il nuovo metodo.
 
 Per altre informazioni sulle nuove API di archiviazione in Android 5,0, vedere [archiviazione](https://developer.android.com/preview/api-overview.html#Storage).
 
@@ -451,11 +451,11 @@ Per altre informazioni sulle nuove API di archiviazione in Android 5,0, vedere [
 
 Android 5,0 aggiunge i miglioramenti apportati alle API seguenti per la connettività e wireless:
 
--   Nuove  API multirete che consentono alle app di individuare e selezionare le reti con funzionalità specifiche prima di stabilire una connessione.
+- Nuove API multirete che consentono alle app di individuare e selezionare le reti con funzionalità specifiche prima di stabilire una connessione.
 
--   Funzionalità di broadcast Bluetooth che consente a un dispositivo Android 5,0 di agire come periferica Bluetooth a basso consumo.
+- Funzionalità di broadcast Bluetooth che consente a un dispositivo Android 5,0 di agire come periferica Bluetooth a basso consumo.
 
--   Miglioramenti NFC che semplificano l'uso delle funzionalità di comunicazione Near Field per la condivisione di dati con altri dispositivi.
+- Miglioramenti NFC che semplificano l'uso delle funzionalità di comunicazione Near Field per la condivisione di dati con altri dispositivi.
 
 Per altre informazioni sulle nuove API wireless e di connettività in Android 5,0, vedere [wireless e connettività](https://developer.android.com/preview/api-overview.html#Wireless).
 
@@ -469,19 +469,19 @@ Per altre informazioni sulle nuove API di pianificazione dei processi in Android
 
 Questo articolo fornisce una panoramica delle nuove funzionalità importanti di Android 5,0 per gli sviluppatori di app Novell. Android:
 
--   Tema Material
+- Tema Material
 
--   Animations
+- Animations
 
--   Visualizza ombre ed elevazione
+- Visualizza ombre ed elevazione
 
--   Caratteristiche cromatiche, ad esempio la colorazione e l'estrazione di colori prominenti
+- Caratteristiche cromatiche, ad esempio la colorazione e l'estrazione di colori prominenti
 
--   Nuovi `RecyclerView` widget e `CardView`
+- Nuovi `RecyclerView` widget e `CardView`
 
--   Miglioramenti delle notifiche
+- Miglioramenti delle notifiche
 
--   Nuove API per fotocamere, riproduzione audio, controllo multimediale, archiviazione, wireless/connettività e pianificazione dei processi
+- Nuove API per fotocamere, riproduzione audio, controllo multimediale, archiviazione, wireless/connettività e pianificazione dei processi
 
 Se non si ha familiarità con lo sviluppo di Novell Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Novell. Android.
 [Hello, Android](~/android/get-started/hello-android/index.md) è un'ottima introduzione per imparare a creare progetti Android.

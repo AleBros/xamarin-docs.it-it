@@ -1,5 +1,5 @@
 ---
-title: "Errore di compilazione Android: LinkAssemblies l'attività non è riuscita"
+title: "Errore di compilazione Android: l'attività LinkAssemblies non è riuscita in modo imprevisto"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EB3BE685-CB72-48E3-89D7-C845E76B9FA2
@@ -7,33 +7,33 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: f517aaa770fa7b2f1463954638f0afc95168bf65
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 71305dd7287df56036d0298ebfcf8a8cb7c4d3b3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250741"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528371"
 ---
-# <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: LinkAssemblies l'attività non è riuscita
+# <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Errore di compilazione Android: l'attività LinkAssemblies non è riuscita in modo imprevisto
 
-Si può vedere un messaggio di errore `The "LinkAssemblies" task failed unexpectedly` quando la compilazione di un progetto xamarin. Android che utilizza form. Ciò si verifica quando il linker è attivo (in genere in un *rilascio* compilazione per ridurre le dimensioni del pacchetto dell'app); e ciò avviene perché gli obiettivi di Android non sono aggiornati per il framework più recente. (Altre informazioni: [Xamarin. Forms per i requisiti di Android](~/get-started/requirements.md#android))
+È possibile che venga visualizzato un `The "LinkAssemblies" task failed unexpectedly` messaggio di errore quando si compila un progetto Novell. Android che usa i moduli. Questo errore si verifica quando il linker è attivo (in genere in una build di *rilascio* per ridurre le dimensioni del pacchetto dell'app); il problema si verifica perché le destinazioni Android non vengono aggiornate al Framework più recente. Ulteriori informazioni: [Novell. Forms per i requisiti di Android](~/get-started/requirements.md#android))
 
-La soluzione per questo problema consiste nell'assicurarsi di disporre le ultime versioni supportate di Android SDK e impostare il **Framework di destinazione** per la piattaforma installata più recente. È inoltre consigliabile impostare il **la versione Android di destinazione** per la piattaforma installata più recente e il **versione minima di Android** su API 19 o superiore. Questa viene considerata la configurazione supportata.
+La risoluzione di questo problema consiste nel verificare che siano disponibili le versioni di Android SDK supportate più recenti e impostare il **Framework di destinazione** sulla piattaforma installata più recente. Si consiglia inoltre di impostare la versione di **Android di destinazione** sull'ultima piattaforma installata e la **versione minima di Android** sull'API 19 o successiva. Questa operazione è considerata la configurazione supportata.
 
 ## <a name="setting-in-visual-studio-for-mac"></a>Impostazione in Visual Studio per Mac
 
-1.  Fare clic con il pulsante destro sul progetto Android e selezionare **opzioni** nel menu di scelta.
-2.  Nel **opzioni progetto** finestra di dialogo passa alla **compilazione > Generale**.
-3.  Impostare il **la compilazione con la versione di Android: (Framework di destinazione)**  per la piattaforma installata più recente.
-4.  Nel **opzioni progetto** finestra di dialogo passa alla **compilazione > applicazione Android**.
-5.  Impostare il **Minimum Android version** a livello API 19 o superiore e il **Target Android version** per la piattaforma installata più recente si è scelto in (3).
+1. Fare clic con il pulsante destro del mouse sul progetto Android e scegliere **Opzioni** dal menu.
+2. Nella finestra di dialogo **Opzioni progetto** passare a **Compila > generale**.
+3. Imposta la **versione di compilazione usando Android: (Framework di destinazione)**  alla piattaforma installata più recente.
+4. Nella finestra di dialogo **Opzioni progetto** passare a **Compila > applicazione Android**.
+5. Impostare la **versione minima di Android** sul livello API 19 o versione successiva e la **versione di Android di destinazione** sull'ultima piattaforma installata scelta in (3).
 
 ## <a name="setting-in-visual-studio"></a>Impostazione in Visual Studio
 
-1.  Fare clic con il pulsante destro sul progetto Android e selezionare **mostrarle** nel menu di scelta.
-2.  Nelle proprietà del progetto, passare a **applicazione**.
-3.  Impostare il **la compilazione con la versione di Android: (Framework di destinazione)**  per la piattaforma installata più recente.
-4.  Nelle proprietà del progetto, passare a **manifesto Android**.
-5.  Impostare il **Minimum Android version** a livello API 19 o superiore e il **Target Android version** per la piattaforma installata più recente si è scelto in (3).
+1. Fare clic con il pulsante destro del mouse sul progetto Android e scegliere **appropriate** nel menu.
+2. Nelle proprietà del progetto passare a **applicazione**.
+3. Imposta la **versione di compilazione usando Android: (Framework di destinazione)**  alla piattaforma installata più recente.
+4. Nelle proprietà del progetto passare a **manifesto Android**.
+5. Impostare la **versione minima di Android** sul livello API 19 o versione successiva e la **versione di Android di destinazione** sull'ultima piattaforma installata scelta in (3).
 
-Dopo avere aggiornato queste impostazioni, per pulire e ricompilare il progetto per assicurarsi che le modifiche vengono prelevate.
+Dopo aver aggiornato le impostazioni, pulire e ricompilare il progetto per assicurarsi che le modifiche vengano selezionate.

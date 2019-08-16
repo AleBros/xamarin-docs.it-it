@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6826088dcc192f4bc4dcfa7424236f98391e0bd6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656708"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528400"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -105,37 +105,39 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. Chiudere lo storyboard e tornare a Visual Studio per Mac. Creare un nuovo C# file **MyInterfaceController.cs** (o il nome desiderato) nel progetto di **estensione Watch app** (non l'app Watch in cui si trova lo storyboard). Aggiungere il codice seguente (aggiornamento dello spazio dei nomi, NomeClasse e nome del costruttore):
 
-        using System;
-        using WatchKit;
-        using Foundation;
-        
-        namespace WatchAppExtension  // remember to update this
+    ```csharp
+    using System;
+    using WatchKit;
+    using Foundation;
+
+    namespace WatchAppExtension  // remember to update this
+    {
+        public partial class MyInterfaceController // remember to update this
+        : WKInterfaceController
         {
-            public partial class MyInterfaceController // remember to update this
-            : WKInterfaceController
+            public MyInterfaceController // remember to update this
+            (IntPtr handle) : base (handle)
             {
-                public MyInterfaceController // remember to update this
-                (IntPtr handle) : base (handle)
-                {
-                }
-                public override void Awake (NSObject context)
-                {
-                    base.Awake (context);
-                    // Configure interface objects here.
-                    Console.WriteLine ("{0} awake with context", this);
-                }
-                public override void WillActivate ()
-                {
-                    // This method is called when the watch view controller is about to be visible to the user.
-                    Console.WriteLine ("{0} will activate", this);
-                }
-                public override void DidDeactivate ()
-                {
-                    // This method is called when the watch view controller is no longer visible to the user.
-                    Console.WriteLine ("{0} did deactivate", this);
-                }
+            }
+            public override void Awake (NSObject context)
+            {
+                base.Awake (context);
+                // Configure interface objects here.
+                Console.WriteLine ("{0} awake with context", this);
+            }
+            public override void WillActivate ()
+            {
+                // This method is called when the watch view controller is about to be visible to the user.
+                Console.WriteLine ("{0} will activate", this);
+            }
+            public override void DidDeactivate ()
+            {
+                // This method is called when the watch view controller is no longer visible to the user.
+                Console.WriteLine ("{0} did deactivate", this);
             }
         }
+    }
+    ```
 
 5. Creare un altro C# nuovo file **MyInterfaceController.designer.cs** nel progetto di **estensione Watch app** e aggiungere il codice seguente. Assicurarsi di aggiornare lo spazio dei nomi, la classname `Register` e l'attributo:
 
@@ -165,7 +167,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Interface Builder")
 
-8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. [https://login.microsoftonline.com/consumers/](`MyInterfaceController`).
+8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`.
 Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
 
     ![](troubleshooting-images/add-4.png "Impostazione di una classe personalizzata")
@@ -188,22 +190,22 @@ Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente ne
 
 11. Una volta salvate le modifiche dello storyboard e Xcode è chiuso, tornare a Visual Studio per Mac. Verranno rilevate le modifiche apportate al file di intestazione e verrà automaticamente aggiunto il codice al file con **estensione designer.cs** :
 
+    ```csharp
+    [Register ("MyInterfaceController")]
+    partial class MyInterfaceController
+    {
+        [Outlet]
+        WatchKit.WKInterfaceButton myButton { get; set; }
 
-        [Register ("MyInterfaceController")]
-        partial class MyInterfaceController
+        void ReleaseDesignerOutlets ()
         {
-            [Outlet]
-            WatchKit.WKInterfaceButton myButton { get; set; }
-        
-            void ReleaseDesignerOutlets ()
-            {
-                if (myButton != null) {
-                    myButton.Dispose ();
-                    myButton = null;
-                }
+            if (myButton != null) {
+                myButton.Dispose ();
+                myButton = null;
             }
         }
-
+    }
+    ```
 
 È ora possibile fare riferimento al controllo (o implementare l'azione) C#in.
 

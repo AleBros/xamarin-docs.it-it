@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: 9307e440a780d60a8301c58d70ee882fbbdebab1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646393"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522613"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalizzazione dell'aspetto di un controllo ListView con Novell. Android
 
@@ -164,17 +164,17 @@ Le quattro visualizzazioni di righe predefinite sono molto semplici. Per visuali
 
 Questo esempio è diverso rispetto agli esempi precedenti in diversi modi:
 
--  Eredita da `Activity` e non `ListActivity` da. È possibile personalizzare le righe per `ListView` qualsiasi, ma anche altri controlli possono essere inclusi in `Activity` un layout, ad esempio un'intestazione, pulsanti o altri elementi dell'interfaccia utente. Questo esempio aggiunge un'intestazione sopra `ListView` a per illustrare.
+- Eredita da `Activity` e non `ListActivity` da. È possibile personalizzare le righe per `ListView` qualsiasi, ma anche altri controlli possono essere inclusi in `Activity` un layout, ad esempio un'intestazione, pulsanti o altri elementi dell'interfaccia utente. Questo esempio aggiunge un'intestazione sopra `ListView` a per illustrare.
 
--  Richiede un file di layout AXML per la schermata. Negli esempi `ListActivity` precedenti non è necessario un file di layout. Questo AXML contiene una `ListView` dichiarazione del controllo.
+- Richiede un file di layout AXML per la schermata. Negli esempi `ListActivity` precedenti non è necessario un file di layout. Questo AXML contiene una `ListView` dichiarazione del controllo.
 
--  Richiede un file di layout AXML per eseguire il rendering di ogni riga. Il file AXML contiene i controlli Text e image con impostazioni del tipo di carattere e del colore personalizzate.
+- Richiede un file di layout AXML per eseguire il rendering di ogni riga. Il file AXML contiene i controlli Text e image con impostazioni del tipo di carattere e del colore personalizzate.
 
--  Usa un file XML selettore personalizzato facoltativo per impostare l'aspetto della riga quando viene selezionato.
+- Usa un file XML selettore personalizzato facoltativo per impostare l'aspetto della riga quando viene selezionato.
 
--  L' `Adapter` implementazione restituisce un layout personalizzato `GetView` dalla sostituzione.
+- L' `Adapter` implementazione restituisce un layout personalizzato `GetView` dalla sostituzione.
 
--  `ItemClick`deve essere dichiarata in modo diverso (un gestore `ListView.ItemClick` eventi è associato a anziché `OnListItemClick` a `ListActivity`un oggetto che esegue l'override in).
+- `ItemClick`deve essere dichiarata in modo diverso (un gestore `ListView.ItemClick` eventi è associato a anziché `OnListItemClick` a `ListActivity`un oggetto che esegue l'override in).
 
 
 Queste modifiche sono descritte in dettaglio di seguito, a partire dalla creazione della visualizzazione dell'attività e della visualizzazione riga personalizzata, oltre a coprire le modifiche apportate alla scheda e all'attività per eseguirne il rendering.

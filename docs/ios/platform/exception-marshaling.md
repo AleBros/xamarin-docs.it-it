@@ -1,40 +1,40 @@
 ---
-title: Eccezioni di marshalling in xamarin. IOS
-description: Questo documento descrive come gestire le eccezioni native e gestite in un'app xamarin. IOS. Illustra i problemi che possono verificarsi e una soluzione per questi problemi.
+title: Marshalling delle eccezioni in Novell. iOS
+description: Questo documento descrive come usare le eccezioni native e gestite in un'app Novell. iOS. Vengono illustrati i problemi che possono verificarsi e una soluzione per questi problemi.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/05/2017
-ms.openlocfilehash: 167d6ac421bdd2652e7f8474e1ea21bd9040723f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 13b88619ccd7d01f32afd5b9332c7dcb426380b0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075094"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527987"
 ---
-# <a name="exception-marshaling-in-xamarinios"></a>Eccezioni di marshalling in xamarin. IOS
+# <a name="exception-marshaling-in-xamarinios"></a>Marshalling delle eccezioni in Novell. iOS
 
-_Xamarin. IOS include nuovi eventi per rispondere alle eccezioni, in particolare nel codice nativo._
+_Novell. iOS contiene nuovi eventi che consentono di rispondere alle eccezioni, in particolare nel codice nativo._
 
-Sia il codice gestito e Objective-C sono supportati per le eccezioni di runtime (clausole try/catch/finally).
+Il codice gestito e Objective-C sono supportati per le eccezioni di runtime (clausole try/catch/finally).
 
-Tuttavia, le implementazioni sono diverse, il che significa che le librerie di runtime (runtime di Mono e le librerie di runtime di Objective-C) hanno problemi quando devono gestire le eccezioni e quindi eseguire il codice scritto in altri linguaggi.
+Tuttavia, le rispettive implementazioni sono diverse, il che significa che le librerie di runtime (il runtime di mono e le librerie di runtime di Objective-C) presentano problemi quando devono gestire le eccezioni e quindi eseguire il codice scritto in altri linguaggi.
 
-Questo documento illustra i problemi che possono verificarsi e le possibili soluzioni.
+In questo documento vengono illustrati i problemi che possono verificarsi e le possibili soluzioni.
 
-Include anche un progetto di esempio [marshalling delle eccezioni](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling), che può essere usato per verificare diversi scenari e le relative soluzioni.
+Include anche un progetto di esempio, il marshalling delle [eccezioni](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling), che può essere usato per testare diversi scenari e le relative soluzioni.
 
 ## <a name="problem"></a>Problema
 
-Il problema si verifica quando un'eccezione viene generata un'eccezione e viene rilevata durante la rimozione di un frame dello stack che corrisponde al tipo di eccezione generata.
+Il problema si verifica quando viene generata un'eccezione e durante la rimozione dello stack viene rilevato un frame che non corrisponde al tipo di eccezione generata.
 
-Un esempio tipico di questo oggetto per xamarin. IOS o xamarin. Mac è quando un'API nativa verrà generata un'eccezione di Objective-C, e quindi tale eccezione Objective-C deve essere gestito in qualche modo quando il processo di rimozione dello stack raggiunge un frame gestito.
+Un esempio tipico di questo tipo per Novell. iOS o Novell. Mac è quando un'API nativa genera un'eccezione Objective-C e quindi tale eccezione di Objective-C deve essere gestita in qualche modo quando il processo di rimozione dello stack raggiunge un frame gestito.
 
-L'azione predefinita consiste nell'eseguire alcuna operazione. Per l'esempio precedente, ciò significa che i frame di rimozione gestiti runtime Objective-C. Ciò è problematica, perché il runtime di Objective-C non sa come per la rimozione di frame gestiti; ad esempio non verrà eseguito qualsiasi `catch` o `finally` clausole nel frame.
+L'azione predefinita consiste nel non eseguire alcuna operazione. Per l'esempio precedente, ciò significa consentire al runtime di Objective-C di rimuovere i frame gestiti. Questo problema è dovuto al fatto che il runtime di Objective-C non è in grado di rimuovere i frame gestiti; ad esempio, non verrà eseguita `catch` alcuna `finally` clausola OR in quel frame.
 
-### <a name="broken-code"></a>Codice danneggiato
+### <a name="broken-code"></a>Codice interruppe
 
 Si consideri l'esempio di codice seguente:
 
@@ -43,25 +43,29 @@ var dict = new NSMutableDictionary ();
 dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero); 
 ```
 
-Nel codice nativo, verrà generata un' NSInvalidArgumentException Objective-C:
+Verrà generato un NSInvalidArgumentException Objective-C in codice nativo:
 
-    NSInvalidArgumentException *** setObjectForKey: key cannot be nil
+```
+NSInvalidArgumentException *** setObjectForKey: key cannot be nil
+```
 
-E l'analisi dello stack sarà simile al seguente:
+E l'analisi dello stack sarà simile alla seguente:
 
-    0   CoreFoundation          __exceptionPreprocess + 194
-    1   libobjc.A.dylib         objc_exception_throw + 52
-    2   CoreFoundation          -[__NSDictionaryM setObject:forKey:] + 1015
-    3   libobjc.A.dylib         objc_msgSend + 102
-    4   TestApp                 ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
-    5   TestApp                 Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr)
-    6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
+```
+0   CoreFoundation          __exceptionPreprocess + 194
+1   libobjc.A.dylib         objc_exception_throw + 52
+2   CoreFoundation          -[__NSDictionaryM setObject:forKey:] + 1015
+3   libobjc.A.dylib         objc_msgSend + 102
+4   TestApp                 ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
+5   TestApp                 Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr)
+6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
+```
 
-Frame 0-3 sono visualizzati frame nativi e l'agente di rimozione dello stack nel runtime Objective-C _possibile_ i frame di rimozione. In particolare, sarà eseguito qualsiasi Objective-C `@catch` o `@finally` clausole.
+I frame 0-3 sono frame nativi e lo stato di rimozione dello stack nel runtime Objective-C _può_ rimuovere tali frame. In particolare, eseguirà qualsiasi clausola Objective-C `@catch` o `@finally` .
 
-Tuttavia, è l'agente di rimozione dello stack di Objective-C _non_ in grado di rimozione in modo corretto i frame gestiti (fotogrammi 4-6), in quanto i frame verrà rimosso, ma non verrà eseguita per la logica di eccezione gestita.
+Tuttavia, l'operazione di rimozione dello stack Objective-C _non_ è in grado di rimuovere correttamente i frame gestiti (frame 4-6), in quanto i frame verranno rimossi, ma la logica di eccezione gestita non verrà eseguita.
 
-Che significa che in genere non è possibile intercettare queste eccezioni nel modo seguente:
+Il che significa che non è in genere possibile intercettare queste eccezioni nel modo seguente:
 
 ```csharp
 try {
@@ -74,38 +78,40 @@ try {
 }
 ```
 
-Infatti, l'agente di rimozione dello stack di Objective-C non conosce gestita `catch` clausola e non verrà il `finally` clausola da eseguire.
+Ciò è dovuto al fatto che l'operazione di rimozione dello stack Objective-C non è `catch` a conoscenza della clausola gestita e `finally` nessuna delle due verrà eseguita.
 
-Quando l'esempio di codice precedente _è_ efficace, è perché Objective-C dispone di un metodo di ricevere una notifica di eccezioni non gestite Objective-C, [`NSSetUncaughtExceptionHandler`][2], che Xamarin. IOS e utilizzare Xamarin.Mac e a questo punto tenta di convertire tutte le eccezioni Objective-C per le eccezioni gestite.
+Quando l'esempio di codice precedente _è_ efficace, è perché Objective-c ha un metodo di notifica delle eccezioni Objective-c non gestite, [`NSSetUncaughtExceptionHandler`][2], che Novell. iOS e Novell. Mac usano, e a quel punto tenta di convertire le eccezioni Objective-c per le eccezioni gestite.
 
 ## <a name="scenarios"></a>Scenari
 
-### <a name="scenario-1---catching-objective-c-exceptions-with-a-managed-catch-handler"></a>Scenario 1: rilevare eccezioni Objective-C con un gestore catch gestito
+### <a name="scenario-1---catching-objective-c-exceptions-with-a-managed-catch-handler"></a>Scenario 1: intercettazione delle eccezioni Objective-C con un gestore catch gestito
 
-Nello scenario seguente, è possibile intercettare le eccezioni Objective-C usando managed `catch` gestori:
+Nello scenario seguente è possibile rilevare le eccezioni Objective-C tramite gestori gestiti `catch` :
 
-1. Viene generata un'eccezione di Objective-C.
-2. Il runtime di Objective-C analizza lo stack, ma non di rimozione, cercando nativo `@catch` gestore in grado di gestire l'eccezione.
-3. Il runtime di Objective-C non trova qualsiasi `@catch` gestori eventi, le chiamate `NSGetUncaughtExceptionHandler`e richiama il gestore installato da Xamarin.iOS/Xamarin.Mac.
-4. Gestore Xamarin.iOS/Xamarin.Mac's convertirà l'eccezione di Objective-C in un'eccezione gestita e praticità del forno. Poiché di Objective-C runtime non è stata di rimozione dello stack (solo esaminato lo), il frame corrente è uguale a quello in cui è stata generata l'eccezione di Objective-C.
+1. Viene generata un'eccezione Objective-C.
+2. Il runtime di Objective-C scorre lo stack, ma non lo rimuove, cercando un gestore nativo `@catch` in grado di gestire l'eccezione.
+3. Il runtime di Objective-C non trova `@catch` gestori, chiamate `NSGetUncaughtExceptionHandler`e richiama il gestore installato da Novell. iOS/Novell. Mac.
+4. Il gestore di Novell. iOS/Novell. Mac convertirà l'eccezione Objective-C in un'eccezione gestita e la genererà. Poiché il runtime di Objective-C non ha rimosso lo stack (solo a sua volta), il frame corrente è lo stesso in cui è stata generata l'eccezione Objective-C.
 
-Un altro problema si verifica in questo caso, perché il runtime di Mono non sa come per la rimozione di fotogrammi Objective-C in modo corretto.
+Un altro problema si verifica qui, perché il runtime di mono non è in grado di rimuovere correttamente i frame Objective-C.
 
-Quando viene chiamato callback degli xamarin. IOS non rilevate Objective-C dell'eccezione, lo stack è simile al seguente:
+Quando viene chiamato il callback di eccezioni Objective-C di Novell. iOS, lo stack è simile al seguente:
 
-     0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
-     1 CoreFoundation           __handleUncaughtException + 809
-     2 libobjc.A.dylib          _objc_terminate() + 100
-     3 libc++abi.dylib          std::__terminate(void (*)()) + 14
-     4 libc++abi.dylib          __cxa_throw + 122
-     5 libobjc.A.dylib          objc_exception_throw + 337
-     6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
-     7 libxamarin-debug.dylib   xamarin_dyn_objc_msgSend + 102
-     8 TestApp                  ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
-     9 TestApp                  Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr) [0x00000]
-    10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
+```
+ 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
+ 1 CoreFoundation           __handleUncaughtException + 809
+ 2 libobjc.A.dylib          _objc_terminate() + 100
+ 3 libc++abi.dylib          std::__terminate(void (*)()) + 14
+ 4 libc++abi.dylib          __cxa_throw + 122
+ 5 libobjc.A.dylib          objc_exception_throw + 337
+ 6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
+ 7 libxamarin-debug.dylib   xamarin_dyn_objc_msgSend + 102
+ 8 TestApp                  ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
+ 9 TestApp                  Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr) [0x00000]
+10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
+```
 
-In questo caso, i frame gestiti soli sono fotogrammi 8 a 10, ma viene generata l'eccezione gestita in frame di 0. Ciò significa che il runtime di Mono necessario rimuoverli frame nativi 0-7, che comporta un problema equivalente al problema indicato in precedenza: anche se il runtime di Mono ripercorrerà frame nativi, non verrà eseguito alcun Objective-C `@catch` o `@finally` clausole .
+In questo caso, gli unici frame gestiti sono i frame 8-10, ma l'eccezione gestita viene generata nel frame 0. Ciò significa che il runtime di mono deve rimuovere i frame nativi 0-7, causando un problema equivalente al problema descritto in precedenza: anche se il runtime di mono rimuove i frame nativi, non esegue alcuna clausola Objective-C `@catch` o `@finally` .
 
 Esempio di codice:
 
@@ -121,9 +127,9 @@ Esempio di codice:
 }
 ```
 
-E `@finally` clausola non verrà eseguita perché il runtime di Mono che viene rimosso questo frame non segnalarlo.
+E la `@finally` clausola non verrà eseguita perché il runtime di mono che rimuove questo frame non ne è a conoscenza.
 
-Una variante di questo oggetto consiste nel generare un'eccezione gestita in codice gestito e quindi per la rimozione tramite i frame nativi per ottenere il primo gestiti `catch` clausola:
+Una variante di questo è la generazione di un'eccezione gestita nel codice gestito e la rimozione dei frame nativi per ottenere la prima clausola gestita `catch` :
 
 ```csharp
 class AppDelegate : UIApplicationDelegate {
@@ -142,51 +148,53 @@ class AppDelegate : UIApplicationDelegate {
 }
 ```
 
-Managed `UIApplication:Main` metodo chiama il metodo nativo `UIApplicationMain` (metodo) e quindi iOS eseguirà numerosi l'esecuzione di codice nativo prima di chiamare managed `AppDelegate:FinishedLaunching` metodo, ancora molti dei frame nativi nello stack quando un'eccezione gestita è generata:
+Il metodo `UIApplication:Main` gestito chiamerà il metodo nativo `UIApplicationMain` e quindi iOS effettuerà una grande esecuzione del codice nativo prima di chiamare il metodo gestito `AppDelegate:FinishedLaunching` , con una grande quantità di frame nativi nello stack quando l'eccezione gestita è generata
 
-     0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
-     1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
-     2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
-     3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
-     4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
-     5: libmonosgen-2.0.dylib   mono_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>)
-     6: libxamarin-debug.dylib  xamarin_invoke_trampoline(type=<unavailable>, self=<unavailable>, sel="application:didFinishLaunchingWithOptions:", iterator=<unavailable>), context=<unavailable>)
-     7: libxamarin-debug.dylib  xamarin_arch_trampoline(state=0xbff45ad4)
-     8: libxamarin-debug.dylib  xamarin_i386_common_trampoline
-     9: UIKit                   -[UIApplication _handleDelegateCallbacksWithOptions:isSuspended:restoreState:]
-    10: UIKit                   -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:]
-    11: UIKit                   -[UIApplication _runWithMainScene:transitionContext:completion:]
-    12: UIKit                   __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke.3124
-    13: UIKit                   -[UIApplication workspaceDidEndTransaction:]
-    14: FrontBoardServices      __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2
-    15: FrontBoardServices      __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke
-    16: FrontBoardServices      __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__
-    17: FrontBoardServices      -[FBSSerialQueue _performNext]
-    18: FrontBoardServices      -[FBSSerialQueue _performNextFromRunLoopSource]
-    19: FrontBoardServices      FBSSerialQueueRunLoopSourceHandler
-    20: CoreFoundation          __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__
-    21: CoreFoundation          __CFRunLoopDoSources0
-    22: CoreFoundation          __CFRunLoopRun
-    23: CoreFoundation          CFRunLoopRunSpecific
-    24: CoreFoundation          CFRunLoopRunInMode
-    25: UIKit                   -[UIApplication _run]
-    26: UIKit                   UIApplicationMain
-    27: TestApp                 (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
-    28: TestApp                 UIKit.UIApplication:Main (string[],intptr,intptr)
-    29: TestApp                 UIKit.UIApplication:Main (string[],string,string)
-    30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
+```
+ 0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
+ 1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
+ 2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
+ 3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
+ 4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
+ 5: libmonosgen-2.0.dylib   mono_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>)
+ 6: libxamarin-debug.dylib  xamarin_invoke_trampoline(type=<unavailable>, self=<unavailable>, sel="application:didFinishLaunchingWithOptions:", iterator=<unavailable>), context=<unavailable>)
+ 7: libxamarin-debug.dylib  xamarin_arch_trampoline(state=0xbff45ad4)
+ 8: libxamarin-debug.dylib  xamarin_i386_common_trampoline
+ 9: UIKit                   -[UIApplication _handleDelegateCallbacksWithOptions:isSuspended:restoreState:]
+10: UIKit                   -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:]
+11: UIKit                   -[UIApplication _runWithMainScene:transitionContext:completion:]
+12: UIKit                   __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke.3124
+13: UIKit                   -[UIApplication workspaceDidEndTransaction:]
+14: FrontBoardServices      __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2
+15: FrontBoardServices      __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke
+16: FrontBoardServices      __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__
+17: FrontBoardServices      -[FBSSerialQueue _performNext]
+18: FrontBoardServices      -[FBSSerialQueue _performNextFromRunLoopSource]
+19: FrontBoardServices      FBSSerialQueueRunLoopSourceHandler
+20: CoreFoundation          __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__
+21: CoreFoundation          __CFRunLoopDoSources0
+22: CoreFoundation          __CFRunLoopRun
+23: CoreFoundation          CFRunLoopRunSpecific
+24: CoreFoundation          CFRunLoopRunInMode
+25: UIKit                   -[UIApplication _run]
+26: UIKit                   UIApplicationMain
+27: TestApp                 (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
+28: TestApp                 UIKit.UIApplication:Main (string[],intptr,intptr)
+29: TestApp                 UIKit.UIApplication:Main (string[],string,string)
+30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
+```
 
-Vengono gestiti frame 0-1 e 27-30, mentre tutti quelli tra sono native. Se viene rimosso Mono tramite questi frame, nessun Objective-C `@catch` o `@finally` verranno eseguite le clausole.
+I frame 0-1 e 27-30 vengono gestiti, mentre tutti quelli compresi tra sono nativi. Se mono viene rimosso attraverso questi frame, non verrà eseguita alcuna clausola `@catch` Objective `@finally` -C o.
 
 ### <a name="scenario-2---not-able-to-catch-objective-c-exceptions"></a>Scenario 2: non è possibile intercettare le eccezioni Objective-C
 
-Nello scenario seguente, si tratta _non_ possibile intercettare le eccezioni Objective-C usando managed `catch` gestori perché è stata gestita l'eccezione di Objective-C in un altro modo:
+Nello scenario seguente _non_ è possibile intercettare le eccezioni Objective-c tramite gestori gestiti `catch` perché l'eccezione Objective-c è stata gestita in un altro modo:
 
-1. Viene generata un'eccezione di Objective-C.
-2. Il runtime di Objective-C analizza lo stack, ma non di rimozione, cercando nativo `@catch` gestore in grado di gestire l'eccezione.
-3. Il runtime di Objective-C rileva un `@catch` gestore, rimuove lo stack e inizia l'esecuzione di `@catch` gestore.
+1. Viene generata un'eccezione Objective-C.
+2. Il runtime di Objective-C scorre lo stack, ma non lo rimuove, cercando un gestore nativo `@catch` in grado di gestire l'eccezione.
+3. Il runtime di Objective-C trova `@catch` un gestore, rimuove lo stack e avvia l'esecuzione del `@catch` gestore.
 
-Questo scenario viene comunemente trovato nelle App xamarin. IOS, poiché nel thread principale in genere codice simile al seguente:
+Questo scenario è comunemente disponibile nelle app Novell. iOS, perché sul thread principale è in genere presente codice simile al seguente:
 
 ``` objective-c
 void UIApplicationMain ()
@@ -203,17 +211,17 @@ void UIApplicationMain ()
 
 ```
 
-Ciò significa che nel thread principale non è mai effettivamente un'eccezione non gestita di Objective-C e pertanto non viene mai chiamato il callback che converte le eccezioni Objective-C per le eccezioni gestite.
+Ciò significa che nel thread principale non esiste mai un'eccezione Objective-C non gestita e pertanto il callback che converte le eccezioni Objective-C in eccezioni gestite non viene mai chiamato.
 
-Questo è anche piuttosto comune durante il debug di App xamarin. Mac su una versione di macOS precedente rispetto a xamarin. Mac supporta perché esaminare la maggior parte degli oggetti dell'interfaccia utente nel debugger proverà a recuperare le proprietà che corrispondono a selettori che non esistono sul (piattaforma in esecuzione Poiché xamarin. Mac include il supporto per una versione recente di macOS). La chiamata di tali selettori genererà un `NSInvalidArgumentException` ("selettore non riconosciuti inviati a..."), che alla fine causa l'arresto anomalo del processo.
+Questa operazione è molto comune anche quando si esegue il debug di app Novell. Mac in una versione precedente di macOS rispetto a Novell. Mac perché il controllo della maggior parte degli oggetti dell'interfaccia utente nel debugger tenterà di recuperare proprietà che corrispondono ai selettori che non esistono nella piattaforma in esecuzione ( Poiché Novell. Mac include il supporto per una versione di macOS più elevata). La chiamata di tali selettori `NSInvalidArgumentException` genererà un ("selettore non riconosciuto inviato a..."), che alla fine causa l'arresto anomalo del processo.
 
-Per riepilogare, con il runtime di Objective-C o i frame di rimozione di runtime di Mono non sono previste a handle può causare comportamenti imprevedibili, ad esempio arresti anomali del sistema, le perdite di memoria e altri tipi di comportamenti imprevedibili (mis).
+Per riepilogare, la presenza del runtime di Objective-C o dei frame di rimozione del runtime di mono che non sono programmati per la gestione può causare comportamenti indefiniti, ad esempio arresti anomali, perdite di memoria e altri tipi di comportamenti imprevedibili (MIS).
 
 ## <a name="solution"></a>Soluzione
 
-In xamarin. IOS 10 e 2.10 di xamarin. Mac, è stato aggiunto il supporto per intercettare le eccezioni gestite e Objective-C in qualsiasi limite gestito a nativo e per la conversione di tale eccezione in altro tipo.
+In Novell. iOS 10 e Novell. Mac 2,10 è stato aggiunto il supporto per intercettare le eccezioni gestite e Objective-C su qualsiasi limite nativo gestito e per convertire l'eccezione in un altro tipo.
 
-Pseudo-codice, simile al seguente:
+In pseudo-codice l'aspetto è simile al seguente:
 
 ``` csharp
 [DllImport ("libobjc.dylib")]
@@ -225,7 +233,7 @@ static void DoSomething (NSObject obj)
 }
 ```
 
-P/Invoke per objc_msgSend viene intercettato e questo viene invece chiamato:
+Viene intercettato P/Invoke per objc_msgSend, che viene invece chiamato:
 
 ``` objective-c
 void
@@ -239,43 +247,43 @@ xamarin_dyn_objc_msgSend (id obj, SEL sel)
 }
 ```
 
-E una schermata simile viene eseguita per il case inverso (marshalling le eccezioni gestite in eccezioni Objective-C).
+Per la Reverse (marshalling di eccezioni gestite a eccezioni Objective-C) viene eseguita un'operazione simile.
 
-Rilevamento delle eccezioni in corrispondenza del limite gestito a nativo non è senza costi, pertanto è non sempre abilitato per impostazione predefinita:
+L'intercettazione delle eccezioni sul limite nativo gestito non è priva di costi, quindi non è sempre abilitata per impostazione predefinita:
 
-- Xamarin.iOS/tvOS: l'intercettazione delle eccezioni Objective-C è abilitato nel simulatore.
-- Xamarin. watchos: l'intercettazione viene applicata in tutti i casi, perché consente la rimozione di runtime di Objective-C gestita frame potrebbe causare problemi al garbage collector e rendere il blocco o un arresto anomalo del sistema.
-- Xamarin. Mac: l'intercettazione delle eccezioni Objective-C è abilitata per le compilazioni di debug.
+- Novell. iOS/tvOS: l'intercettazione delle eccezioni Objective-C è abilitata nel simulatore.
+- Novell. watchos: l'intercettazione viene applicata in tutti i casi, perché consentire ai frame gestiti di rimozione del runtime di Objective-C di confondere il Garbage Collector e di bloccarlo o arrestarlo in modo anomalo.
+- Novell. Mac: l'intercettazione di eccezioni Objective-C è abilitata per le compilazioni di debug.
 
-Il [flag in fase di compilazione](#build_time_flags) sezione viene illustrato come abilitare l'intercettazione quando non è abilitato per impostazione predefinita.
+La sezione [flag della fase di compilazione](#build_time_flags) illustra come abilitare l'intercettazione quando non è abilitata per impostazione predefinita.
 
 ## <a name="events"></a>Eventi
 
-Sono disponibili due nuovi eventi che vengono generati una volta che viene intercettata un'eccezione: `Runtime.MarshalManagedException` e `Runtime.MarshalObjectiveCException`.
+Una volta intercettata un'eccezione vengono generati due nuovi eventi: `Runtime.MarshalManagedException` e. `Runtime.MarshalObjectiveCException`
 
-Entrambi gli eventi vengono passati un `EventArgs` oggetto che contiene l'eccezione originale che è stata generata un'eccezione (il `Exception` proprietà) e un `ExceptionMode` proprietà da definire come effettuare il marshalling dell'eccezione.
+A entrambi gli eventi viene `EventArgs` passato un oggetto che contiene l'eccezione originale generata (la `Exception` proprietà) e una `ExceptionMode` proprietà per definire la modalità di marshalling dell'eccezione.
 
-Il `ExceptionMode` proprietà può essere modificata nell'evento gestore per modificare il comportamento in base a qualsiasi elaborazione personalizzata eseguita nel gestore. Ad esempio, è possibile interrompere il processo se si verifica un'eccezione di determinati.
+La `ExceptionMode` proprietà può essere modificata nel gestore eventi per modificare il comportamento in base a qualsiasi elaborazione personalizzata eseguita nel gestore. Un esempio potrebbe essere interrompere il processo se si verifica una determinata eccezione.
 
-Modifica il `ExceptionMode` proprietà viene applicata all'evento singolo, non influenza tutte le eccezioni intercettate in futuro.
+La modifica `ExceptionMode` della proprietà si applica al singolo evento, ma non influisce sulle eccezioni intercettate in futuro.
 
 Sono disponibili le modalità seguenti:
 
-- `Default`: Il valore predefinito varia a seconda della piattaforma. Si tratta `ThrowObjectiveCException` se il Garbage Collector è in modalità cooperativa (watchOS), e `UnwindNativeCode` in caso contrario (iOS / watchOS / macOS). Il valore predefinito può cambiare in futuro.
-- `UnwindNativeCode`: Questo è il comportamento precedente (undefined). Non è disponibile quando si usa il Garbage Collector in modalità cooperativa (che è l'unica opzione disponibile in watchOS; pertanto, questo non è un'opzione valida in watchOS), ma è l'opzione predefinita per tutte le altre piattaforme.
-- `ThrowObjectiveCException`: Convertire le eccezioni gestite in un'eccezione di Objective-C e generare l'eccezione di Objective-C. Questo è l'impostazione predefinita in watchOS.
+- `Default`: Il valore predefinito varia in base alla piattaforma. È se il GC è in modalità cooperativa (watchos) e `UnwindNativeCode` in caso contrario (iOS/watchos/MacOS). `ThrowObjectiveCException` Il valore predefinito può cambiare in futuro.
+- `UnwindNativeCode`: Si tratta del comportamento precedente (non definito). Questa opzione non è disponibile quando si usa GC in modalità cooperativa, che è l'unica opzione disponibile in watchos; pertanto, non è un'opzione valida in watchos, ma è l'opzione predefinita per tutte le altre piattaforme.
+- `ThrowObjectiveCException`: Convertire l'eccezione gestita in un'eccezione Objective-C e generare l'eccezione Objective-C. Questa è l'impostazione predefinita per watchos.
 - `Abort`: Interrompere il processo.
-- `Disable`: Disabilita l'intercettazione di eccezioni, in modo che non ha senso per impostare questo valore nel gestore dell'evento, ma una volta che viene generato l'evento è troppo tardi per disabilitarlo. In ogni caso, se impostato, si comportano come `UnwindNativeCode`.
+- `Disable`: Disabilita l'intercettazione delle eccezioni, pertanto non ha senso impostare questo valore nel gestore dell'evento, ma una volta generato l'evento è troppo tardi per disabilitarlo. In ogni caso, se impostato, si comporterà `UnwindNativeCode`come.
 
-Per effettuare il marshalling delle eccezioni Objective-C al codice gestito, sono disponibili le modalità seguenti:
+Per il marshalling di eccezioni Objective-C al codice gestito, sono disponibili le modalità seguenti:
 
-- `Default`: Il valore predefinito varia a seconda della piattaforma. Si tratta `ThrowManagedException` se il Garbage Collector è in modalità cooperativa (watchOS), e `UnwindManagedCode` in caso contrario (iOS o tvOS / macOS). Il valore predefinito può cambiare in futuro.
-- `UnwindManagedCode`: Questo è il comportamento precedente (undefined). Non è disponibile quando si usa il Garbage Collector in modalità cooperativa, che corrisponde alla modalità GC valida solo in watchOS, pertanto questo non è un'opzione valida in watchOS, ma è il valore predefinito per tutte le altre piattaforme.
-- `ThrowManagedException`: Convertire l'eccezione di Objective-C in un'eccezione gestita e generano un'eccezione gestita. Questo è l'impostazione predefinita in watchOS.
+- `Default`: Il valore predefinito varia in base alla piattaforma. È se il GC è in modalità cooperativa (watchos) e `UnwindManagedCode` in caso contrario (iOS/tvOS/MacOS). `ThrowManagedException` Il valore predefinito può cambiare in futuro.
+- `UnwindManagedCode`: Si tratta del comportamento precedente (non definito). Questa opzione non è disponibile quando si usa GC in modalità cooperativa (che è l'unica modalità GC valida in watchos, quindi questa non è un'opzione valida in watchos), ma è l'impostazione predefinita per tutte le altre piattaforme.
+- `ThrowManagedException`: Convertire l'eccezione Objective-C in un'eccezione gestita e generare l'eccezione gestita. Questa è l'impostazione predefinita per watchos.
 - `Abort`: Interrompere il processo.
-- `Disable`: Disabilita l'intercettazione di eccezioni, in modo che non ha senso per impostare questo valore nel caso in cui gestore, ma una volta l'evento viene generato, è troppo tardi per disabilitarla. In ogni caso se impostato, verrà interrotto il processo.
+- `Disable`:D Abilita l'intercettazione delle eccezioni, pertanto non ha senso impostare questo valore nel gestore eventi, ma una volta generato l'evento, è troppo tardi per disabilitarlo. In ogni caso, se impostato, il processo verrà interrotto.
 
-Pertanto, per visualizzare ogni volta che viene effettuato il marshalling un'eccezione, è possibile eseguire questa operazione:
+Quindi, per visualizzare ogni volta che viene eseguito il marshalling di un'eccezione, è possibile eseguire questa operazione:
 
 ``` csharp
 Runtime.MarshalManagedException += (object sender, MarshalManagedExceptionEventArgs args) =>
@@ -295,9 +303,9 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 
 <a name="build_time_flags" />
 
-## <a name="build-time-flags"></a>Flag di fase di compilazione
+## <a name="build-time-flags"></a>Flag della fase di compilazione
 
-È possibile passare le opzioni seguenti per **mtouch** (per le app xamarin. IOS) e **mmp** (per le app xamarin. Mac), che verrà determinare se è attivata l'intercettazione di eccezioni e impostare l'azione predefinita che deve verificarsi:
+È possibile passare le opzioni seguenti a **mTouch** (per le app Novell. iOS) e **MMP** (per le app Novell. Mac), per determinare se l'intercettazione delle eccezioni è abilitata e impostare l'azione predefinita che deve verificarsi:
 
 - `--marshal-managed-exceptions=`
   - `default`
@@ -313,17 +321,17 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
   - `abort`
   - `disable`
 
-Ad eccezione di `disable`, questi valori sono identici al `ExceptionMode` i valori passati al `MarshalManagedException` e `MarshalObjectiveCException` eventi.
+Ad eccezione `disable`di, questi valori sono identici `ExceptionMode` ai valori passati agli `MarshalManagedException` eventi e `MarshalObjectiveCException` .
 
-Il `disable` opzione verrà _prevalentemente_ disabilitare l'intercettazione, ma è comunque possibile intercettare le eccezioni quando non viene aggiunto alcun overhead di esecuzione. Gli eventi di marshalling vengono comunque generati per queste eccezioni, con la modalità predefinita in corso la modalità predefinita per la piattaforma in esecuzione.
+L' `disable` opzione Disabilita _per lo più_ l'intercettazione, con la differenza che verranno comunque intercettate le eccezioni quando non viene aggiunto alcun overhead di esecuzione. Gli eventi di marshalling vengono comunque generati per queste eccezioni e la modalità predefinita è la modalità predefinita per la piattaforma in esecuzione.
 
 ## <a name="limitations"></a>Limitazioni
 
-Abbiamo solo intercettare P/Invoke di `objc_msgSend` della famiglia di funzioni quando si tenta di rilevare le eccezioni Objective-C. Ciò significa che P/Invoke per un'altra funzione C, che quindi avvia eventuali eccezioni Objective-C, verrà comunque eseguito il comportamento precedente e non definito (ciò può essere migliorata in futuro).
+Quando si tenta di rilevare le eccezioni Objective- `objc_msgSend` C, vengono intercettati solo i P/Invoke alla famiglia di funzioni. Ciò significa che un P/Invoke per un'altra funzione C, che quindi genera eccezioni Objective-C, verrà comunque eseguito nel comportamento precedente e non definito (questo potrebbe essere migliorato in futuro).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Marshalling di eccezione (esempio)](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)
+- [Marshalling delle eccezioni (esempio)](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)

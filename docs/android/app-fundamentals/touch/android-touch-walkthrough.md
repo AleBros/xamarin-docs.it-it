@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: 78878e62a36e3f6dd6ca3c7fcfb6413da4f0e0f9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: efff9edd81f17979ce8f4441da3d512d0a8ec188
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644117"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526274"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procedura dettagliata-uso del tocco in Android
 
@@ -23,17 +23,17 @@ Nella prima attività, touch Sample, viene illustrato come utilizzare i gestori 
 
 ## <a name="touch-sample-activity"></a>Attività di esempio touch
 
--   Aprire il progetto **TouchWalkthrough\_Start**. Il **MainActivity** è impostato su Go &ndash; per implementare il comportamento di tocco nell'attività. Se si esegue l'applicazione e si fa clic su **touch Sample**, verrà avviata l'attività seguente:
+- Aprire il progetto **TouchWalkthrough\_Start**. Il **MainActivity** è impostato su Go &ndash; per implementare il comportamento di tocco nell'attività. Se si esegue l'applicazione e si fa clic su **touch Sample**, verrà avviata l'attività seguente:
 
     [![Schermata dell'attività con il tocco visualizzato](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
--   Ora che è stato confermato che l'attività viene avviata, aprire il file **TouchActivity.cs** e aggiungere un gestore per `Touch` l'evento del `ImageView`:
+- Ora che è stato confermato che l'attività viene avviata, aprire il file **TouchActivity.cs** e aggiungere un gestore per `Touch` l'evento del `ImageView`:
 
     ```csharp
     _touchMeImageView.Touch += TouchMeImageViewOnTouch;
     ```
 
--   Aggiungere quindi il metodo seguente a **TouchActivity.cs**:
+- Aggiungere quindi il metodo seguente a **TouchActivity.cs**:
 
     ```csharp
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
@@ -74,7 +74,7 @@ Fino a quando l'utente sta toccando `ImageView`il, il **tocco** verrà visualizz
 
 Consente ora di implementare l'attività del riconoscitore di movimento. Questa attività illustra come trascinare una visualizzazione intorno allo schermo e come illustrare un modo per implementare il pinch-to-zoom.
 
--   Aggiungere una nuova attività all'applicazione denominata `GestureRecognizer`.
+- Aggiungere una nuova attività all'applicazione denominata `GestureRecognizer`.
     Modificare il codice per questa attività in modo che sia simile al codice seguente:
 
     ```csharp
@@ -89,7 +89,7 @@ Consente ora di implementare l'attività del riconoscitore di movimento. Questa 
     }
     ```
 
--   Aggiungere una nuova visualizzazione Android al progetto e denominarla `GestureRecognizerView`. Aggiungere le variabili seguenti a questa classe:
+- Aggiungere una nuova visualizzazione Android al progetto e denominarla `GestureRecognizerView`. Aggiungere le variabili seguenti a questa classe:
 
     ```csharp
     private static readonly int InvalidPointerId = -1;
@@ -105,7 +105,7 @@ Consente ora di implementare l'attività del riconoscitore di movimento. Questa 
     private float _scaleFactor = 1.0f;
     ```
 
--   Aggiungere il costruttore seguente a `GestureRecognizerView`. Questo costruttore consente di aggiungere `ImageView` un oggetto all'attività. A questo punto, il codice non verrà compilato &ndash; , ma è necessario creare la `MyScaleListener` classe che consentirà di ridimensionare `ImageView` quando l'utente lo pizzica:
+- Aggiungere il costruttore seguente a `GestureRecognizerView`. Questo costruttore consente di aggiungere `ImageView` un oggetto all'attività. A questo punto, il codice non verrà compilato &ndash; , ma è necessario creare la `MyScaleListener` classe che consentirà di ridimensionare `ImageView` quando l'utente lo pizzica:
 
     ```csharp
     public GestureRecognizerView(Context context): base(context, null, 0)
@@ -116,7 +116,7 @@ Consente ora di implementare l'attività del riconoscitore di movimento. Questa 
     }
     ```
 
--   Per creare l'immagine nell'attività, è necessario eseguire l'override del `OnDraw` metodo della classe di visualizzazione, come illustrato nel frammento di codice seguente. Questo codice sposta l' `ImageView` oggetto nella posizione specificata da `_posX` e `_posY` , oltre a ridimensionare l'immagine in base al fattore di scala:
+- Per creare l'immagine nell'attività, è necessario eseguire l'override del `OnDraw` metodo della classe di visualizzazione, come illustrato nel frammento di codice seguente. Questo codice sposta l' `ImageView` oggetto nella posizione specificata da `_posX` e `_posY` , oltre a ridimensionare l'immagine in base al fattore di scala:
 
     ```csharp
     protected override void OnDraw(Canvas canvas)
@@ -130,7 +130,7 @@ Consente ora di implementare l'attività del riconoscitore di movimento. Questa 
     }
     ```
 
--   Successivamente, è necessario aggiornare la variabile `_scaleFactor` di istanza quando l'utente pizzica il. `ImageView` Si aggiungerà una classe denominata `MyScaleListener`. Questa classe resterà in ascolto degli eventi di ridimensionamento che verranno generati da Android quando l'utente pizzica `ImageView`il.
+- Successivamente, è necessario aggiornare la variabile `_scaleFactor` di istanza quando l'utente pizzica il. `ImageView` Si aggiungerà una classe denominata `MyScaleListener`. Questa classe resterà in ascolto degli eventi di ridimensionamento che verranno generati da Android quando l'utente pizzica `ImageView`il.
     Aggiungere la classe interna seguente a `GestureRecognizerView`. Questa classe è un `ScaleGesture.SimpleOnScaleGestureListener`oggetto. Questa classe è una classe di praticità che i listener possono sottoclassare quando si è interessati a un subset di movimenti:
 
     ```csharp
@@ -163,7 +163,7 @@ Consente ora di implementare l'attività del riconoscitore di movimento. Questa 
     }
     ```
 
--   Il metodo successivo in cui è necessario eseguire `GestureRecognizerView` l' `OnTouchEvent`override di è. Il codice seguente elenca l'implementazione completa di questo metodo. Qui c'è una grande quantità di codice, quindi diamo un minuto per vedere cosa succede qui. La prima operazione eseguita &ndash; `_scaleDetector.OnTouchEvent`da questo metodo è la scalabilità dell'icona, se necessario, che viene gestita chiamando. Successivamente si tenterà di individuare l'azione che ha chiamato questo metodo:
+- Il metodo successivo in cui è necessario eseguire `GestureRecognizerView` l' `OnTouchEvent`override di è. Il codice seguente elenca l'implementazione completa di questo metodo. Qui c'è una grande quantità di codice, quindi diamo un minuto per vedere cosa succede qui. La prima operazione eseguita &ndash; `_scaleDetector.OnTouchEvent`da questo metodo è la scalabilità dell'icona, se necessario, che viene gestita chiamando. Successivamente si tenterà di individuare l'azione che ha chiamato questo metodo:
 
     - Se l'utente ha toccato la schermata con, vengono registrate le posizioni X e Y e l'ID del primo puntatore che ha toccato lo schermo.
 
@@ -231,12 +231,12 @@ Consente ora di implementare l'attività del riconoscitore di movimento. Questa 
     }
     ```
 
--   A questo punto, eseguire l'applicazione e avviare l'attività del riconoscitore di movimento.
+- A questo punto, eseguire l'applicazione e avviare l'attività del riconoscitore di movimento.
     All'avvio, la schermata dovrebbe essere simile alla schermata seguente:
 
     [![Schermata iniziale del riconoscitore di movimento con icona Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
--   A questo punto, toccare l'icona e trascinarla intorno allo schermo. Provare a eseguire il movimento di tocco. A un certo punto la schermata potrebbe essere simile alla schermata seguente:
+- A questo punto, toccare l'icona e trascinarla intorno allo schermo. Provare a eseguire il movimento di tocco. A un certo punto la schermata potrebbe essere simile alla schermata seguente:
 
     [![Icona Sposta movimenti intorno allo schermo](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
@@ -248,7 +248,7 @@ La schermata finale in questa procedura dettagliata utilizzerà movimenti person
 
 Ai fini di questa procedura dettagliata, la libreria movimenti è già stata creata usando lo strumento movimento e aggiunta al progetto nelle **risorse file/RAW/gestures**. Con questo tipo di manutenzione, è possibile iniziare con l'attività finale nella procedura dettagliata.
 
--   Aggiungere un file di layout **denominato\_Custom\_gesture layout. aXML** al progetto con il contenuto seguente. Il progetto contiene già tutte le immagini nella cartella Resources:
+- Aggiungere un file di layout **denominato\_Custom\_gesture layout. aXML** al progetto con il contenuto seguente. Il progetto contiene già tutte le immagini nella cartella Resources:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -274,14 +274,14 @@ Ai fini di questa procedura dettagliata, la libreria movimenti è già stata cre
     </LinearLayout>
     ```
 
--   Successivamente, aggiungere una nuova attività al progetto e denominarla `CustomGestureRecognizerActivity.cs`. Aggiungere due variabili di istanza alla classe, come illustrato nelle due righe di codice seguenti:
+- Successivamente, aggiungere una nuova attività al progetto e denominarla `CustomGestureRecognizerActivity.cs`. Aggiungere due variabili di istanza alla classe, come illustrato nelle due righe di codice seguenti:
 
     ```csharp
     private GestureLibrary _gestureLibrary;
     private ImageView _imageView;
     ```
 
--   Modificare il `OnCreate` metodo di questa attività in modo che sia simile al codice seguente. È possibile decifrare un minuto per spiegare cosa accade in questo codice. La prima cosa da fare è creare un'istanza `GestureOverlayView` di e impostarla come visualizzazione radice dell'attività.
+- Modificare il `OnCreate` metodo di questa attività in modo che sia simile al codice seguente. È possibile decifrare un minuto per spiegare cosa accade in questo codice. La prima cosa da fare è creare un'istanza `GestureOverlayView` di e impostarla come visualizzazione radice dell'attività.
     Viene inoltre assegnato un gestore eventi all' `GesturePerformed` evento di. `GestureOverlayView` A questo punto, è possibile aumentare il file di layout creato in precedenza e aggiungerlo come visualizzazione figlio del `GestureOverlayView`. Il passaggio finale consiste nell'inizializzare la `_gestureLibrary` variabile e caricare il file dei movimenti dalle risorse dell'applicazione. Se per qualche motivo non è possibile caricare il file dei movimenti, non è possibile eseguire questa attività, pertanto viene arrestato:
 
     ```csharp
@@ -306,7 +306,7 @@ Ai fini di questa procedura dettagliata, la libreria movimenti è già stata cre
     }
     ```
 
--   L'ultima cosa da fare è implementare il metodo `GestureOverlayViewOnGesturePerformed` , come illustrato nel frammento di codice seguente. Quando rileva `GestureOverlayView` un movimento, richiama il metodo. La prima cosa da fare è provare a `IList<Prediction>` ottenere un oggetto che corrisponda al `_gestureLibrary.Recognize()`gesto chiamando. Viene usato un bit di LINQ per ottenere l' `Prediction` oggetto con il punteggio più alto per il movimento.
+- L'ultima cosa da fare è implementare il metodo `GestureOverlayViewOnGesturePerformed` , come illustrato nel frammento di codice seguente. Quando rileva `GestureOverlayView` un movimento, richiama il metodo. La prima cosa da fare è provare a `IList<Prediction>` ottenere un oggetto che corrisponda al `_gestureLibrary.Recognize()`gesto chiamando. Viene usato un bit di LINQ per ottenere l' `Prediction` oggetto con il punteggio più alto per il movimento.
 
     Se non esiste un movimento corrispondente con un punteggio sufficientemente elevato, il gestore eventi viene chiuso senza eseguire alcuna operazione. In caso contrario, si verificherà il nome della stima e si modificherà l'immagine da visualizzare in base al nome del movimento:
 
@@ -339,7 +339,7 @@ Ai fini di questa procedura dettagliata, la libreria movimenti è già stata cre
     }
     ```
 
--   Eseguire l'applicazione e avviare l'attività di riconoscimento del movimento personalizzato. Dovrebbe avere un aspetto simile allo screenshot seguente:
+- Eseguire l'applicazione e avviare l'attività di riconoscimento del movimento personalizzato. Dovrebbe avere un aspetto simile allo screenshot seguente:
 
     [![Screenshot con immagine check me](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 

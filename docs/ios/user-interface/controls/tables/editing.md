@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a95e772ab0ba5fa6687ef941034f1de87f5d608a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f82057957e76ee683e2a649fdf6c2350bf282c18
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655915"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528644"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Modifica di tabelle con Novell. iOS
 
@@ -27,9 +27,9 @@ La funzionalità di scorrimento da eliminare è un gesto naturale in iOS previst
 
 Sono disponibili tre override dei metodi che influiscono sul gesto di scorrimento rapido per visualizzare un pulsante **Elimina** in una cella:
 
--   **CommitEditingStyle** : l'origine della tabella rileva se questo metodo viene sottoposto a override e Abilita automaticamente il gesto di scorrimento rapido. L'implementazione del metodo deve chiamare `DeleteRows` `UITableView` su per far scomparire le celle e rimuovere anche i dati sottostanti dal modello, ad esempio una matrice, un dizionario o un database. 
--   **CanEditRow** : se viene eseguito l'override di CommitEditingStyle, si presuppone che tutte le righe siano modificabili. Se questo metodo viene implementato e restituisce false (per alcune righe specifiche o per tutte le righe), il movimento di scorrimento rapido non sarà disponibile in tale cella. 
--   **TitleForDeleteConfirmation** : consente di specificare il testo per il pulsante **Elimina** . Se questo metodo non viene implementato, il testo del pulsante sarà "Delete". 
+- **CommitEditingStyle** : l'origine della tabella rileva se questo metodo viene sottoposto a override e Abilita automaticamente il gesto di scorrimento rapido. L'implementazione del metodo deve chiamare `DeleteRows` `UITableView` su per far scomparire le celle e rimuovere anche i dati sottostanti dal modello, ad esempio una matrice, un dizionario o un database. 
+- **CanEditRow** : se viene eseguito l'override di CommitEditingStyle, si presuppone che tutte le righe siano modificabili. Se questo metodo viene implementato e restituisce false (per alcune righe specifiche o per tutte le righe), il movimento di scorrimento rapido non sarà disponibile in tale cella. 
+- **TitleForDeleteConfirmation** : consente di specificare il testo per il pulsante **Elimina** . Se questo metodo non viene implementato, il testo del pulsante sarà "Delete". 
 
 
 Questi metodi sono implementati nella `TableSource` classe seguente:
@@ -71,10 +71,10 @@ L'esempio **TableEditMode** implementa queste funzionalità come illustrato.
 
 Sono disponibili diversi metodi che influiscono sul `UITableViewSource` comportamento della modalità di modifica di una tabella:
 
--   **CanEditRow** : indica se è possibile modificare ogni riga. Restituisce false per impedire l'esecuzione di scorrimenti a eliminazione ed eliminazione in modalità di modifica. 
--   **CanMoveRow** : restituisce true per abilitare lo spostamento ' handle ' o false per impedire lo spostamento. 
--   **EditingStyleForRow** : quando la tabella è in modalità di modifica, il valore restituito da questo metodo determina se la cella Visualizza l'icona di eliminazione rossa o l'icona Aggiungi verde. Restituisce `UITableViewCellEditingStyle.None` se la riga non deve essere modificabile. 
--   **MoveRow** : viene chiamato quando viene spostata una riga in modo che sia possibile modificare la struttura dei dati sottostante in modo che corrisponda ai dati visualizzati nella tabella. 
+- **CanEditRow** : indica se è possibile modificare ogni riga. Restituisce false per impedire l'esecuzione di scorrimenti a eliminazione ed eliminazione in modalità di modifica. 
+- **CanMoveRow** : restituisce true per abilitare lo spostamento ' handle ' o false per impedire lo spostamento. 
+- **EditingStyleForRow** : quando la tabella è in modalità di modifica, il valore restituito da questo metodo determina se la cella Visualizza l'icona di eliminazione rossa o l'icona Aggiungi verde. Restituisce `UITableViewCellEditingStyle.None` se la riga non deve essere modificabile. 
+- **MoveRow** : viene chiamato quando viene spostata una riga in modo che sia possibile modificare la struttura dei dati sottostante in modo che corrisponda ai dati visualizzati nella tabella. 
 
 
 L'implementazione per i primi tre metodi è relativamente semplice, a meno che non si desideri usare `indexPath` per modificare il comportamento di righe specifiche, ma è sufficiente impostare come hardcoded i valori restituiti per l'intera tabella.
@@ -137,15 +137,15 @@ L'inserimento di righe dall'interno della tabella è un'interfaccia utente non c
 
 Sono disponibili diversi metodi che influiscono sul `UITableViewSource` comportamento della modalità di modifica di una tabella. Questi metodi sono stati implementati come indicato di seguito nel codice di esempio:
 
--   **EditingStyleForRow** : restituisce `UITableViewCellEditingStyle.Delete` per le righe contenenti dati e restituisce `UITableViewCellEditingStyle.Insert` per l'ultima riga, che verrà aggiunta in modo specifico per comportarsi come pulsante di inserimento. 
--   **CustomizeMoveTarget** -mentre l'utente sta muovendo una cella, il valore restituito da questo metodo facoltativo può ignorare la scelta della posizione. Ciò significa che è possibile impedire che venga eliminato la cella in determinate posizioni, ad esempio questo esempio che impedisce lo spostamento di una riga dopo la riga **(Aggiungi nuovo)** . 
--   **CanMoveRow** : restituisce true per abilitare lo spostamento ' handle ' o false per impedire lo spostamento. Nell'esempio, l'ultima riga ha lo spostamento ' handle ' nascosto perché è destinato al server come solo pulsante di inserimento. 
+- **EditingStyleForRow** : restituisce `UITableViewCellEditingStyle.Delete` per le righe contenenti dati e restituisce `UITableViewCellEditingStyle.Insert` per l'ultima riga, che verrà aggiunta in modo specifico per comportarsi come pulsante di inserimento. 
+- **CustomizeMoveTarget** -mentre l'utente sta muovendo una cella, il valore restituito da questo metodo facoltativo può ignorare la scelta della posizione. Ciò significa che è possibile impedire che venga eliminato la cella in determinate posizioni, ad esempio questo esempio che impedisce lo spostamento di una riga dopo la riga **(Aggiungi nuovo)** . 
+- **CanMoveRow** : restituisce true per abilitare lo spostamento ' handle ' o false per impedire lo spostamento. Nell'esempio, l'ultima riga ha lo spostamento ' handle ' nascosto perché è destinato al server come solo pulsante di inserimento. 
 
 
 Vengono inoltre aggiunti due metodi personalizzati per aggiungere la riga "Insert" e quindi rimuoverla nuovamente quando non è più necessario. Vengono chiamati dai pulsanti **modifica** e **fine** :
 
--   **WillBeginTableEditing** : quando viene toccato il pulsante **modifica** , chiama `SetEditing` per inserire la tabella in modalità di modifica. Viene attivato il metodo WillBeginTableEditing in cui viene visualizzata la riga **(Aggiungi nuovo)** alla fine della tabella per fungere da pulsante di inserimento. 
--   **DidFinishTableEditing** : quando viene toccato `SetEditing` il pulsante Done, viene chiamato di nuovo per disattivare la modalità di modifica. Il codice di esempio rimuove la riga **(Aggiungi nuovo)** dalla tabella quando la modifica non è più necessaria. 
+- **WillBeginTableEditing** : quando viene toccato il pulsante **modifica** , chiama `SetEditing` per inserire la tabella in modalità di modifica. Viene attivato il metodo WillBeginTableEditing in cui viene visualizzata la riga **(Aggiungi nuovo)** alla fine della tabella per fungere da pulsante di inserimento. 
+- **DidFinishTableEditing** : quando viene toccato `SetEditing` il pulsante Done, viene chiamato di nuovo per disattivare la modalità di modifica. Il codice di esempio rimuove la riga **(Aggiungi nuovo)** dalla tabella quando la modifica non è più necessaria. 
 
 
 Queste sostituzioni dei metodi sono implementate nel file di esempio **TableEditModeAdd/code/TableSource. cs**:

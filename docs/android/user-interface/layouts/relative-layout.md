@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: a53baed9d5f291628d7d1a8da05739e43412d473
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: af74ae3c7c87f501bff519bcfa361264205ca3f1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509720"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522383"
 ---
 # <a name="xamarinandroid-relativelayout"></a>Novell. Android sul relativelayout
 
@@ -90,5 +90,4 @@ Eseguire l'applicazione. Dovrebbe essere visualizzato il layout seguente:
 - [`EditText`](xref:Android.Widget.EditText)
 - [`Button`](xref:Android.Widget.Button)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella*
-[*licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/).
+_Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella [licenza Creative Commons 2,5 Attribution](http://creativecommons.org/licenses/by/2.5/)._

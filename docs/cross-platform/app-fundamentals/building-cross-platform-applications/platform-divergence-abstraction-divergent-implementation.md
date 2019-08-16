@@ -1,114 +1,114 @@
 ---
 title: Parte 4 - Gestione di più piattaforme
-description: Questo documento descrive come gestire divergenza di applicazioni basata su piattaforme o funzionalità. Viene descritto di dimensioni dello schermo, metafore di navigazione, tocco e i movimenti, le notifiche push e paradigmi di interfaccia, ad esempio gli elenchi e schede.
+description: Questo documento descrive come gestire la divergenza dell'applicazione in base alla piattaforma o alla funzionalità. Illustra le dimensioni dello schermo, le metafore di navigazione, il tocco e i movimenti, le notifiche push e i paradigmi di interfaccia, ad esempio elenchi e tabulazioni.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8fb373aa5081c8937da5110bad47c3f0decf0126
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 773bc5a6f80fa16de8fd7dc2ae86664d6250c4fc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61275539"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526831"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - Gestione di più piattaforme
 
-## <a name="handling-platform-divergence-amp-features"></a>La gestione della piattaforma divergenza &amp; funzionalità
+## <a name="handling-platform-divergence-amp-features"></a>Gestione delle funzionalità &amp; di divergenza della piattaforma
 
-Divergenza non è semplicemente un problema di 'cross-platform'; i dispositivi nella piattaforma 'stesso' hanno funzionalità diverse (in particolare l'ampia gamma di dispositivi Android disponibili). Il modo più ovvio e base è dimensioni dello schermo, ma gli altri attributi del dispositivo possono variare e richiedono un'applicazione di controllo per alcune funzionalità e si comportano in base ai loro presenza (o l'assenza).
+La divergenza non è solo un problema "multipiattaforma"; i dispositivi nella piattaforma "stessa" hanno funzionalità diverse, in particolare la vasta gamma di dispositivi Android disponibili. Il più ovvio e Basic è la dimensione dello schermo, ma gli altri attributi del dispositivo possono variare e richiedere a un'applicazione di controllare determinate funzionalità e si comportano in modo diverso in base alla loro presenza (o assenza).
 
-Ciò significa che tutte le applicazioni devono affrontare riduzione del funzionamento della funzionalità, altrimenti presentare un insieme di funzionalità minimo comune denominatore graficamente meno elegante. Integrazione completa di Xamarin con SDK nativi di tutte le piattaforme consentono alle applicazioni di sfruttare le funzionalità specifiche della piattaforma, quindi è opportuno progettare app di usare tali funzionalità.
+Ciò significa che tutte le applicazioni devono gestire la degradazione normale della funzionalità, altrimenti presentano un set di funzionalità non accattivante, il più basso comune. L'integrazione completa di Novell con gli SDK nativi di ogni piattaforma consente alle applicazioni di sfruttare le funzionalità specifiche della piattaforma, quindi è opportuno progettare le app per l'uso di tali funzionalità.
 
-Vedere la documentazione di funzionalità della piattaforma per una panoramica del modo in cui le piattaforme differiscono dalle funzionalità.
+Vedere la documentazione sulle funzionalità della piattaforma per una panoramica delle differenze tra le piattaforme e le funzionalità.
 
-## <a name="examples-of-platform-divergence"></a>Esempi di divergenza di piattaforma
+## <a name="examples-of-platform-divergence"></a>Esempi di divergenza della piattaforma
 
 ### <a name="fundamental-elements-that-exist-across-platforms"></a>Elementi fondamentali presenti tra le piattaforme
 
 Esistono alcune caratteristiche delle applicazioni per dispositivi mobili universali.
-Questi sono i concetti di livello superiore che sono in genere accade per tutti i dispositivi e possono quindi costituire la base della progettazione dell'applicazione:
+Si tratta di concetti di livello più alto che in genere sono veri di tutti i dispositivi e possono quindi formare la base della progettazione dell'applicazione:
 
--  Selezione di funzionalità tramite le schede o i menu
--  Elenchi di dati e lo scorrimento
--  Sola visualizzazioni dei dati
--  Modifica di viste singole dei dati
--  Tornare indietro
+- Selezione delle funzioni tramite schede o menu
+- Elenchi di dati e scorrimento
+- Visualizzazioni singole dei dati
+- Modifica di visualizzazioni singole dei dati
+- Spostamento indietro
 
-Quando si progetta il flusso di alto livello dello schermo è possibile basare i un'esperienza utente comune su questi concetti.
+Quando si progetta il flusso dello schermo di alto livello, è possibile basare un'esperienza utente comune su questi concetti.
 
 ### <a name="platform-specific-attributes"></a>Attributi specifici della piattaforma
 
-Oltre agli elementi di base presenti in tutte le piattaforme, è necessario per le differenze principali della piattaforma di indirizzo nella progettazione. Potrebbe essere necessario prendere in considerazione (e scrivere codice in modo specifico per gestire) queste differenze:
+Oltre agli elementi di base presenti in tutte le piattaforme, è necessario risolvere le principali differenze della piattaforma nella progettazione. Potrebbe essere necessario prendere in considerazione (e scrivere codice in modo specifico per gestire) queste differenze:
 
--   **Dimensioni di schermi** – alcune piattaforme (ad esempio, iOS e le versioni precedenti di Windows Phone) usa le dimensioni dello schermo che sono relativamente semplici di destinazione. I dispositivi Android hanno un'ampia gamma di dimensioni dello schermo, che richiedono più complessa per il supporto nell'applicazione.
--   **Metafore navigazione** – differiscono tra le piattaforme (ad es. pulsante hardware 'indietro', controllo dell'interfaccia utente Panorama) e all'interno di piattaforme (Android 2 e 4, iPhone e iPad).
--   **Tastiere** : i dispositivi Android alcuni hanno tastiere fisiche mentre altri utenti hanno solo una tastiera software. Il codice che rileva se in una soft-tastiera copre parte della schermata deve essere sensibile a queste differenze.
--   **Tocco e movimenti** – varia in sistemi operativi supportati per il riconoscimento di movimento, soprattutto nelle versioni precedenti di ogni sistema operativo. Le versioni precedenti di Android hanno molto supporto limitato per le operazioni di tocco, vale a dire che i dispositivi meno recenti supportati potrebbe richiedere codice separato
--   **Le notifiche push** : sono disponibili diverse funzionalità/implementazioni in ogni piattaforma (ad es. Riquadri animati in Windows).
+- **Dimensioni dello schermo** : alcune piattaforme (ad esempio iOS e versioni precedenti Windows Phone) hanno dimensioni dello schermo standardizzate relativamente semplici da usare come destinazione. I dispositivi Android hanno un'ampia gamma di dimensioni dello schermo, che richiedono più impegno per supportare nell'applicazione.
+- **Metafore di navigazione** : differenze tra le piattaforme (ad esempio, pulsante hardware "indietro", controllo dell'interfaccia utente di panorama "e all'interno di piattaforme (Android 2 e 4, iPhone rispetto a iPad).
+- **Tastiere** : alcuni dispositivi Android hanno tastiere fisiche, mentre altri hanno solo una tastiera software. Il codice che rileva quando una tastiera morbida è nascosta parte della schermata deve essere sensibile a queste differenze.
+- **Tocco e movimenti** : il supporto del sistema operativo per il riconoscimento dei movimenti varia, soprattutto nelle versioni precedenti di ogni sistema operativo. Le versioni precedenti di Android hanno un supporto molto limitato per le operazioni di tocco, vale a dire che il supporto di dispositivi meno recenti potrebbe richiedere codice separato
+- **Notifiche push** : sono disponibili diverse funzionalità/implementazioni in ogni piattaforma, ad esempio Riquadri animati in Windows).
 
 ### <a name="device-specific-features"></a>Funzionalità specifiche del dispositivo
 
-Determinare quali le funzionalità minime necessarie per l'applicazione devono essere; In alternativa, quando decidere quali funzionalità aggiuntive per sfruttare in ogni piattaforma. Sarà necessario codice per rilevare le funzionalità e disabilitare la funzionalità o offrono alternative (ad es. un'alternativa alla località geografica potrebbe essere che consente di digitare un percorso oppure sceglierne una mappa):
+Determinare quali sono le funzionalità minime necessarie per l'applicazione. o quando decidere quali funzionalità aggiuntive sfruttare in ogni piattaforma. Il codice verrà richiesto per rilevare le funzionalità e disabilitare le funzionalità o offrire alternative, ad esempio un'alternativa alla posizione geografica può essere consentire all'utente di digitare un percorso o scegliere da una mappa:
 
--   **Fotocamera** – funzionalità varia tra i dispositivi: alcuni dispositivi non hanno una fotocamera, altri dispongono di entrambe le telecamere anteriore e posteriore. Alcuni fotocamere sono in grado di registrare video.
--   **Posizione geografica & mapping** : supporto per la posizione GPS o Wi-Fi non è presente in tutti i dispositivi. Le app è inoltre necessitano tenere in considerazione per i diversi livelli di precisione supportato da ogni metodo.
--   **Accelerometro, il Giroscopio e compass** – queste funzionalità sono spesso disponibili in solo una selezione dei dispositivi in ogni piattaforma, in modo che le app devono quasi sempre fornire un fallback quando l'hardware non è supportato.
--   **Twitter e Facebook** : solo 'predefinita' su iOS5 e iOS6 rispettivamente. In altre piattaforme e versioni precedenti è necessario fornire funzioni di autenticazione e interfacciarsi direttamente con ogni API di servizi.
--   **Quasi campo Communications (NFC)** : solo in (alcuni) telefoni Android (al momento della stesura).
+- **Fotocamera** : la funzionalità differisce tra i dispositivi: alcuni dispositivi non hanno una fotocamera, altri hanno fotocamere frontali e posteriori. Alcune fotocamere sono in grado di registrare video.
+- **Area geografica & Maps** : il supporto per il percorso GPS o Wi-Fi non è presente in tutti i dispositivi. Le app devono inoltre soddisfare i diversi livelli di precisione supportati da ogni metodo.
+- **Accelerometro, giroscopio e bussola** : queste funzionalità sono spesso disponibili solo in una selezione di dispositivi in ogni piattaforma, quindi le app devono sempre fornire un fallback quando l'hardware non è supportato.
+- **Twitter e Facebook** : solo ' built-in ' in iOS5 e iOS6 rispettivamente. Nelle versioni precedenti e in altre piattaforme sarà necessario fornire le proprie funzioni di autenticazione e l'interfaccia direttamente con l'API di ogni servizio.
+- **NFC (Near Field Communications** ): solo su (alcuni) telefoni Android (al momento della stesura del documento).
 
-## <a name="dealing-with-platform-divergence"></a>Gestione di divergenza di piattaforma
+## <a name="dealing-with-platform-divergence"></a>Gestione della divergenza della piattaforma
 
-Esistono due diversi approcci per supportare più piattaforme dalla stessa codebase, ognuno con un proprio set di vantaggi e svantaggi.
+Esistono due diversi approcci per supportare più piattaforme dalla stessa codebase, ognuna con un proprio set di vantaggi e svantaggi.
 
--   **Astrazione della piattaforma** : Schema facciata Business offre un accesso unificato tra le piattaforme e consente di astrarre le implementazioni della piattaforma particolare in un'API unificata.
--   **Implementazione divergenti** : chiamata di piattaforma specifica funzionalità tramite le implementazioni divergenti tramite gli strumenti di architettura, ad esempio compilazione condizionale o di ereditarietà e interfacce.
+- **Astrazione della piattaforma** : modello di facciata aziendale, fornisce un accesso unificato tra piattaforme ed estrae le specifiche implementazioni della piattaforma in una singola API unificata.
+- **Implementazione divergente** : chiamata di funzionalità specifiche della piattaforma tramite implementazioni divergenti tramite strumenti di architettura quali interfacce ed ereditarietà o compilazione condizionale.
 
 ## <a name="platform-abstraction"></a>Astrazione della piattaforma
 
 ### <a name="class-abstraction"></a>Astrazione della classe
 
-Usando interfacce o classi di base definito nel codice condiviso e implementate o estese in progetti specifici delle piattaforme. La scrittura e l'estensione di codice condiviso di astrazioni di classe è particolarmente adatta alle librerie di classi portabile perché hanno un subset limitato di framework disponibili e non può contenere le direttive del compilatore per supportare i rami di codice specifico della piattaforma.
+Utilizzando interfacce o classi di base definite nel codice condiviso e implementate o estese nei progetti specifici della piattaforma. La scrittura e l'estensione di codice condiviso con astrazioni di classi sono particolarmente adatte alle librerie di classi portabili, perché hanno un subset limitato del Framework disponibile e non possono contenere direttive del compilatore per supportare rami di codice specifici della piattaforma.
 
 #### <a name="interfaces"></a>Interfacce
 
-Uso di interfacce consente di implementare classi specifiche della piattaforma che possono ancora essere passate nelle librerie condivise per sfruttare il codice comune.
+L'uso delle interfacce consente di implementare classi specifiche della piattaforma che possono essere ancora passate nelle librerie condivise per sfruttare i vantaggi del codice comune.
 
-L'interfaccia è definita nel codice condiviso e passata nella libreria condivisa come un parametro o una proprietà.
+L'interfaccia viene definita nel codice condiviso e passata nella libreria condivisa come parametro o proprietà.
 
-Le applicazioni specifiche della piattaforma possono quindi implementare l'interfaccia e comunque sfruttare il codice condiviso per 'elaborarli'.
+Le applicazioni specifiche della piattaforma possono implementare l'interfaccia e sfruttare al tempo stesso il codice condiviso per l'elaborazione.
 
  **Vantaggi**
 
-L'implementazione può contenere codice specifico della piattaforma e anche fare riferimento alle librerie esterne specifico della piattaforma.
+L'implementazione può contenere codice specifico della piattaforma e anche fare riferimento a librerie esterne specifiche della piattaforma.
 
  **Svantaggi**
 
-Necessità di creare e passare le implementazioni il codice condiviso. Se l'interfaccia viene usata nel codice condiviso quindi finiscono per passare più parametri di metodo o in caso contrario propagato attraverso la catena di chiamate. Se il codice condiviso che utilizzano grandi quantità di interfacce diverse quindi sono devono tutte essere creati e impostati nel codice condiviso in un punto.
+Necessità di creare e passare implementazioni nel codice condiviso. Se l'interfaccia viene usata all'interno del codice condiviso, viene passata attraverso più parametri del metodo o in caso contrario viene spostata attraverso la catena di chiamate. Se il codice condiviso usa un numero elevato di interfacce diverse, è necessario crearle e impostarle nel codice condiviso in un punto qualsiasi.
 
 #### <a name="inheritance"></a>Ereditarietà
 
-Il codice condiviso è stato possibile implementare classi astratte o virtuale che può essere estesa in uno o più progetti specifici della piattaforma. Questa operazione è simile all'uso di interfacce, ma con un comportamento già implementata. Esistono diversi punti di vista se interfacce o un'ereditarietà sono una scelta di progettazione migliore: in particolare perché c# consente solo l'ereditarietà singola è possibile imporre il modo in cui le API possono essere progettate in futuro. Utilizzare l'ereditarietà con cautela.
+Il codice condiviso può implementare classi astratte o virtuali che possono essere estese in uno o più progetti specifici della piattaforma. Questa operazione è simile all'uso delle interfacce ma con un comportamento già implementato. Sono disponibili diversi punti di vista se le interfacce o l'ereditarietà rappresentano una scelta migliore: in C# particolare perché consente solo l'ereditarietà singola può determinare il modo in cui è possibile progettare le API in futuro. Usare l'ereditarietà con cautela.
 
-I vantaggi e svantaggi delle interfacce sono ugualmente applicabili a ereditarietà, con l'ulteriore vantaggio di classe di base può contenere un codice di implementazione (probabilmente un'intera piattaforma agnostico implementazione che può essere facoltativamente estesi).
+I vantaggi e gli svantaggi delle interfacce si applicano ugualmente all'ereditarietà, con il vantaggio aggiuntivo che la classe di base può contenere un codice di implementazione (probabilmente un'intera implementazione indipendente dalla piattaforma che può essere facoltativamente estesa).
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Vedere le [xamarin. Forms](~/get-started/index.yml) documentazione.
+Vedere la documentazione di [Novell. Forms](~/get-started/index.yml) .
 
 ### <a name="other-cross-platform-libraries"></a>Altre librerie multipiattaforma
 
-Queste librerie offrono anche funzionalità di multi-piattaforma per C# gli sviluppatori:
+Queste librerie offrono inoltre funzionalità multipiattaforma per C# gli sviluppatori:
 
-- [**Xamarin.Essentials** ](~/essentials/index.md) – APIs multipiattaforma per le funzionalità comuni.
-- [**SkiaSharp** ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) : grafica 2D multipiattaforma.
+- [**Novell. Essentials**](~/essentials/index.md) : API multipiattaforma per le funzionalità comuni.
+- [**SkiaSharp**](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) : grafica 2D multipiattaforma.
 
 ## <a name="conditional-compilation"></a>Compilazione condizionale
 
-Esistono alcune situazioni in cui il codice condiviso dovranno comunque funzionare in modo diverso in ogni piattaforma, possibilmente l'accesso a classi o funzionalità che si comportano in modo diverso. Compilazione condizionale funziona meglio con progetti Asset condivisi, in cui viene fatto riferimento stesso file di origine in più progetti con diversi simboli definiti.
+Esistono situazioni in cui il codice condiviso dovrà comunque funzionare in modo diverso in ogni piattaforma, possibilmente accedendo a classi o funzionalità che si comportano in modo diverso. La compilazione condizionale funziona meglio con i progetti di asset condivisi, in cui viene fatto riferimento allo stesso file di origine in più progetti con simboli diversi definiti.
 
-Progetti Xamarin è sempre necessario definiscono `__MOBILE__` che è true per iOS e i progetti applicazione Android (si noti il doppio carattere di sottolineatura pre-elaborazione e post-correzione in questi simboli).
+I progetti Novell definiscono `__MOBILE__` sempre ciò che è vero per i progetti di applicazioni iOS e Android. prendere nota del doppio carattere di sottolineatura pre e post-correzione su questi simboli.
 
 ```csharp
 #if __MOBILE__
@@ -117,7 +117,7 @@ Progetti Xamarin è sempre necessario definiscono `__MOBILE__` che è true per i
 ```
 #### <a name="ios"></a>iOS
 
-Xamarin. IOS definisce `__IOS__` che è possibile usare per rilevare i dispositivi iOS.
+Novell. iOS definisce `__IOS__` che è possibile usare per rilevare i dispositivi iOS.
 
 ```csharp
 #if __IOS__
@@ -125,7 +125,7 @@ Xamarin. IOS definisce `__IOS__` che è possibile usare per rilevare i dispositi
 #endif
 ```
 
-Sono inoltre disponibili i simboli specifici di espressioni di controllo e programmi TV:
+Sono disponibili anche simboli specifici per l'espressione di controllo e la TV:
 
 ```csharp
 #if __TVOS__
@@ -139,7 +139,7 @@ Sono inoltre disponibili i simboli specifici di espressioni di controllo e progr
 
 #### <a name="android"></a>Android
 
-Il codice che deve essere compilato solo nelle applicazioni xamarin. Android può usare il seguente
+Il codice che deve essere compilato solo in applicazioni Novell. Android può usare gli elementi seguenti
 
 ```csharp
 #if __ANDROID__
@@ -147,7 +147,7 @@ Il codice che deve essere compilato solo nelle applicazioni xamarin. Android pu�
 #endif
 ```
 
-Ogni versione dell'API definisce anche una nuova direttiva del compilatore, in modo da codice simile al seguente in questo modo è aggiungere funzionalità se vengono considerati come destinazione le API più recenti. Ogni livello API include tutti i simboli di livello 'inferiori'. Questa funzionalità non è particolarmente utile per il supporto di più piattaforme; in genere il `__ANDROID__` simbolo sarà sufficiente.
+Ogni versione dell'API definisce anche una nuova direttiva del compilatore, quindi il codice di questo tipo consente di aggiungere funzionalità se le API più recenti sono destinate. Ogni livello API include tutti i simboli di livello "Lower". Questa funzionalità non è molto utile per supportare più piattaforme. il `__ANDROID__` simbolo sarà in genere sufficiente.
 
 ```csharp
 #if __ANDROID_11__
@@ -157,7 +157,7 @@ Ogni versione dell'API definisce anche una nuova direttiva del compilatore, in m
 
 #### <a name="mac"></a>Mac
 
-Non esiste attualmente un simbolo incorporato per xamarin. Mac, ma è possibile aggiungere un progetto di app nel Mac **Opzioni > compilazione > compilatore** nel **definiscono i simboli** , o modificarne la **csproj**  file e aggiungere presente (ad esempio `__MAC__`)
+Attualmente non è disponibile un simbolo predefinito per Novell. Mac, ma è possibile aggiungerne uno personalizzato nelle opzioni del progetto dell'app Mac **> compilare > compilatore** nella casella **Definisci simboli** oppure modificare il file con **estensione csproj** e aggiungerlo (ad esempio `__MAC__`).
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
@@ -165,7 +165,7 @@ Non esiste attualmente un simbolo incorporato per xamarin. Mac, ma è possibile 
 
 #### <a name="universal-windows-platform-uwp"></a>Piattaforma UWP (Universal Windows Platform)
 
-Usare `WINDOWS_UWP`. Sono non disponibili caratteri di sottolineatura che circondano la stringa, ad esempio i simboli di piattaforma Xamarin.
+Usare `WINDOWS_UWP`. Non sono presenti caratteri di sottolineatura che racchiudono la stringa come i simboli della piattaforma Novell.
 
 ```csharp
 #if WINDOWS_UWP
@@ -173,16 +173,16 @@ Usare `WINDOWS_UWP`. Sono non disponibili caratteri di sottolineatura che circon
 #endif
 ```
 
-#### <a name="using-conditional-compilation"></a>Utilizza la compilazione condizionale
+#### <a name="using-conditional-compilation"></a>Uso della compilazione condizionale
 
-Un semplice esempio case study di compilazione condizionale è l'impostazione il percorso del file per il file di database SQLite. Tre piattaforme presentano requisiti leggermente diversi per specificare il percorso del file:
+Un esempio di caso di compilazione condizionale semplice è l'impostazione del percorso del file del database SQLite. Le tre piattaforme hanno requisiti leggermente diversi per specificare il percorso del file:
 
--   **iOS** : Apple preferenziale per dati non utente da inserire in un percorso specifico (la directory di libreria), ma non vi è alcuna costante di sistema per questa directory. Codice specifico della piattaforma è necessario per compilare il percorso corretto.
--   **Android** : il percorso di sistema restituito da `Environment.SpecialFolder.Personal` è un percorso accettabile per archiviare il file di database.
--   **Windows Phone** – il meccanismo di memorizzazione isolato non supporta un percorso completo, specificare solo un percorso relativo e nome file.
--   **Piattaforma Windows Universal** – utilizza `Windows.Storage` API.
+- **iOS** : Apple preferisce che i dati non utente siano posizionati in un percorso specifico (la directory della libreria), ma non esiste alcuna costante di sistema per questa directory. Il codice specifico della piattaforma è necessario per compilare il percorso corretto.
+- **Android** : il percorso di sistema restituito `Environment.SpecialFolder.Personal` da è una posizione accettabile per archiviare il file di database.
+- **Windows Phone** : il meccanismo di archiviazione isolata non consente di specificare un percorso completo, ma solo un percorso relativo e un nome file.
+- **Piattaforma UWP (Universal Windows Platform)** : USA `Windows.Storage` le API.
 
-Il codice seguente usa la compilazione condizionale per garantire la `DatabaseFilePath` sia corretto per ogni piattaforma:
+Il codice seguente usa la compilazione condizionale per `DatabaseFilePath` assicurarsi che sia corretto per ogni piattaforma:
 
 ```csharp
 public static string DatabaseFilePath {
@@ -212,4 +212,4 @@ public static string DatabaseFilePath {
 }
 ```
 
-Il risultato è una classe che può essere compilata e usata in tutte le piattaforme, inserendo il file di database SQLite in un percorso diverso in ogni piattaforma.
+Il risultato è una classe che può essere compilata e utilizzata in tutte le piattaforme, posizionando il file di database SQLite in un percorso diverso in ogni piattaforma.

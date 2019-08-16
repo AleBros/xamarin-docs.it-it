@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643770"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524730"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -23,9 +23,9 @@ Android Beam funziona eseguendo il push dei messaggi su NFC quando due dispositi
 
 Android supporta due modalità di impostazione dei messaggi con il raggio Android:
 
--   `SetNdefPushMessage`-Prima dell'avvio di Android Beam, un'applicazione può chiamare SetNdefPushMessage per specificare un NdefMessage per eseguire il push su NFC e l'attività che lo sta eseguendo il push. Questo meccanismo è particolarmente utile quando un messaggio non viene modificato mentre un'applicazione è in uso.
+- `SetNdefPushMessage`-Prima dell'avvio di Android Beam, un'applicazione può chiamare SetNdefPushMessage per specificare un NdefMessage per eseguire il push su NFC e l'attività che lo sta eseguendo il push. Questo meccanismo è particolarmente utile quando un messaggio non viene modificato mentre un'applicazione è in uso.
 
--   `SetNdefPushMessageCallback`-Quando viene avviato un fascio Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente il ritardo della creazione dei messaggi fino a quando i dispositivi non rientrano nell'intervallo. Supporta scenari in cui il messaggio può variare in base a ciò che avviene nell'applicazione.
+- `SetNdefPushMessageCallback`-Quando viene avviato un fascio Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente il ritardo della creazione dei messaggi fino a quando i dispositivi non rientrano nell'intervallo. Supporta scenari in cui il messaggio può variare in base a ciò che avviene nell'applicazione.
 
 
 In entrambi i casi, per inviare dati con Android Beam, un'applicazione invia `NdefMessage`un oggetto, assemblando i `NdefRecords`dati in diversi. Diamo uno sguardo ai punti chiave che devono essere risolti prima di poter attivare il fascio Android. In primo luogo, si userà lo stile di callback per la `NdefMessage`creazione di un oggetto.

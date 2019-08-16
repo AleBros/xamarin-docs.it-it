@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15ff11c5100f697e1945793da0baca68add082be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a4e165f6156bf5224881327049b2c3ed48b5c2fe
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646555"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522752"
 ---
 # <a name="viewpager-with-views"></a>ViewPager con visualizzazioni
 
@@ -101,11 +101,11 @@ protected override void OnCreate(Bundle bundle)
 
 Questo codice esegue le operazioni seguenti:
 
-1.  Imposta la visualizzazione dalla risorsa di layout **Main. aXML** .
+1. Imposta la visualizzazione dalla risorsa di layout **Main. aXML** .
 
-2.  Recupera un riferimento a `ViewPager` dal layout.
+2. Recupera un riferimento a `ViewPager` dal layout.
 
-3.  Crea un'istanza di `TreeCatalog` un nuovo oggetto come origine dati.
+3. Crea un'istanza di `TreeCatalog` un nuovo oggetto come origine dati.
 
 Quando si compila ed esegue questo codice, viene visualizzata una schermata simile alla seguente: 
 
@@ -120,13 +120,13 @@ A questo punto, `ViewPager` è vuoto perché manca un adattatore per accedere al
 
 Quando si implementa un `PagerAdapter`, è necessario eseguire l'override di quanto segue:
 
--   **InstantiateItem** Crea la pagina (`View`) per una posizione specificata `ViewPager`e la aggiunge alla raccolta di viste di. &ndash; 
+- **InstantiateItem** Crea la pagina (`View`) per una posizione specificata `ViewPager`e la aggiunge alla raccolta di viste di. &ndash; 
 
--   **DestroyItem** &ndash; Rimuove una pagina da una posizione specificata.
+- **DestroyItem** &ndash; Rimuove una pagina da una posizione specificata.
 
--   **Numero** di &ndash; Proprietà di sola lettura che restituisce il numero di visualizzazioni (pagine) disponibili. 
+- **Numero** di &ndash; Proprietà di sola lettura che restituisce il numero di visualizzazioni (pagine) disponibili. 
 
--   **IsViewFromObject** &ndash; Determina se una pagina è associata a un oggetto chiave specifico. Questo oggetto viene creato dal `InstantiateItem` metodo. In questo esempio, l'oggetto chiave è l' `TreeCatalog` oggetto dati.
+- **IsViewFromObject** &ndash; Determina se una pagina è associata a un oggetto chiave specifico. Questo oggetto viene creato dal `InstantiateItem` metodo. In questo esempio, l'oggetto chiave è l' `TreeCatalog` oggetto dati.
 
 Aggiungere un nuovo file denominato **TreePagerAdapter.cs** e sostituirne il contenuto con il codice seguente: 
 
@@ -224,14 +224,14 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 
 Questo codice esegue le operazioni seguenti:
 
-1.  Crea un'istanza di `ImageView` un nuovo oggetto per visualizzare l'immagine della struttura ad albero in corrispondenza della posizione specificata. L'app `MainActivity` è il contesto che verrà passato `ImageView` al costruttore.
+1. Crea un'istanza di `ImageView` un nuovo oggetto per visualizzare l'immagine della struttura ad albero in corrispondenza della posizione specificata. L'app `MainActivity` è il contesto che verrà passato `ImageView` al costruttore.
 
-2.  Imposta la `ImageView` risorsa `TreeCatalog` sull'ID risorsa dell'immagine in corrispondenza della posizione specificata.
+2. Imposta la `ImageView` risorsa `TreeCatalog` sull'ID risorsa dell'immagine in corrispondenza della posizione specificata.
 
-3.  Esegue il cast del contenitore `View` passato a `ViewPager` un riferimento.
+3. Esegue il cast del contenitore `View` passato a `ViewPager` un riferimento.
     Si noti che è necessario `JavaCast<ViewPager>()` usare per eseguire correttamente questo cast (necessario in modo che Android esegua una conversione del tipo controllata dal Runtime).
 
-4.  Aggiunge l'oggetto di `ImageView` cui è `ViewPager` stata creata un' `ImageView` istanza all'oggetto e restituisce al chiamante.
+4. Aggiunge l'oggetto di `ImageView` cui è `ViewPager` stata creata un' `ImageView` istanza all'oggetto e restituisce al chiamante.
 
 Quando l' `ViewPager` immagine viene visualizzata in `position`, viene visualizzata `ImageView`. Inizialmente, `InstantiateItem` viene chiamato due volte per popolare le prime due pagine con le visualizzazioni. Mentre l'utente scorre, viene chiamato di nuovo per mantenere le visualizzazioni immediatamente dietro e avanti rispetto all'elemento attualmente visualizzato. 
 
@@ -253,11 +253,11 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 Questo codice esegue le operazioni seguenti:
 
-1.  Esegue il cast del contenitore `View` passato in `ViewPager` un riferimento.
+1. Esegue il cast del contenitore `View` passato in `ViewPager` un riferimento.
 
-2.  Esegue il cast dell'oggetto Java passato`view`() in C# `View` un`view as View`();
+2. Esegue il cast dell'oggetto Java passato`view`() in C# `View` un`view as View`();
 
-3.  Rimuove la visualizzazione da `ViewPager`. 
+3. Rimuove la visualizzazione da `ViewPager`. 
 
 
 

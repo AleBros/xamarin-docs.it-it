@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1f29f283207ed8c1382424b3680177886ad2c806
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f68e192db0b7acceb325ad44f40dce9cb229a26a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653163"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528981"
 ---
 # <a name="colors-in-xamarinforms"></a>Colori in xamarin. Forms
 
@@ -24,12 +24,12 @@ Questo articolo presenta le varie modalità di `Color` classe può essere utiliz
 
 Il `Color` classe fornisce numerosi metodi per creare un'istanza di colore
 
--  **Colori denominati** -una raccolta di denominato-colori comuni, tra cui `Red`, `Green`, e `Blue`.
--  **FromHex** -valore stringa simile alla sintassi utilizzata in HTML, ad esempio "00FF00". È possibile specificare facoltativamente Alpha come prima coppia di caratteri ("CC00FF00").
--  **FromHsla** -tonalità, saturazione e luminosità `double` valori, con valore alfa facoltativo (0,0-1,0).
--  **FromRgb** -rosso, verde e blu `int` valori (0-255).
--  **FromRgba** -rosso, verde, blu e alfa `int` valori (0-255).
--  **FromUint** -impostare un'unica `double` valore che rappresenta **argb**.
+- **Colori denominati** -una raccolta di denominato-colori comuni, tra cui `Red`, `Green`, e `Blue`.
+- **FromHex** -valore stringa simile alla sintassi utilizzata in HTML, ad esempio "00FF00". È possibile specificare facoltativamente Alpha come prima coppia di caratteri ("CC00FF00").
+- **FromHsla** -tonalità, saturazione e luminosità `double` valori, con valore alfa facoltativo (0,0-1,0).
+- **FromRgb** -rosso, verde e blu `int` valori (0-255).
+- **FromRgba** -rosso, verde, blu e alfa `int` valori (0-255).
+- **FromUint** -impostare un'unica `double` valore che rappresenta **argb**.
 
 Ecco alcuni colori di esempio, assegnati al `BackgroundColor` di alcune etichette usando diverse varianti della sintassi consentita:
 
@@ -69,11 +69,11 @@ In iOS e Android questa istanza è impostata su un colore a contrasto è visibil
 
 `Color` istanze includono metodi aggiuntivi che possono essere utilizzati per creare nuovi colori:
 
--  **AddLuminosity** -restituisce un nuovo colore mediante la modifica della luminosità per il valore delta specificato.
--  **WithHue** -restituisce un nuovo colore, sostituendo la tonalità con il valore specificato.
--  **WithLuminosity** -restituisce un nuovo colore, sostituendo la luminosità con il valore specificato.
--  **WithSaturation** -restituisce un nuovo colore, sostituendo la saturazione con il valore specificato.
--  **MultiplyAlpha** -restituisce un nuovo colore modificando i valori alfa, moltiplicandolo per il valore alfa specificato.
+- **AddLuminosity** -restituisce un nuovo colore mediante la modifica della luminosità per il valore delta specificato.
+- **WithHue** -restituisce un nuovo colore, sostituendo la tonalità con il valore specificato.
+- **WithLuminosity** -restituisce un nuovo colore, sostituendo la luminosità con il valore specificato.
+- **WithSaturation** -restituisce un nuovo colore, sostituendo la saturazione con il valore specificato.
+- **MultiplyAlpha** -restituisce un nuovo colore modificando i valori alfa, moltiplicandolo per il valore alfa specificato.
 
 ## <a name="implicit-conversions"></a>Conversioni implicite
 

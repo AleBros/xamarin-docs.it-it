@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/14/2016
-ms.openlocfilehash: 7bc728360c26321c16839c5d67b93a91d2593602
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 26c418355c83da807d6dfa514e58f9bf1675759f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655508"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528418"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchos-procedura dettagliata
 
@@ -43,10 +43,10 @@ Dovrebbe essere possibile eseguire l'app Watch adesso, ma poiché il file dello 
 Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Novell iOS designer. Se si è in un Mac, è anche possibile fare clic con il pulsante destro del mouse e **aprire con > Xcode Interface Builder**)
 
 
-1.  Verificare che i rilievi della **casella degli strumenti** e delle **Proprietà** siano visibili,
-1.  Fare clic per selezionare il controller di interfaccia,
-1.  Impostare l'identificatore e il titolo del controller di interfaccia su **interfaceController** e **Hi Watch**,
-1.  Verificare che la **classe** sia impostata su **InterfaceController**
+1. Verificare che i rilievi della **casella degli strumenti** e delle **Proprietà** siano visibili,
+1. Fare clic per selezionare il controller di interfaccia,
+1. Impostare l'identificatore e il titolo del controller di interfaccia su **interfaceController** e **Hi Watch**,
+1. Verificare che la **classe** sia impostata su **InterfaceController**
 
     ![](hello-watch-images/interfacecontrollerattributes.png "Impostare l'identificatore e il titolo del controller di interfaccia su interfaceController e Hi Watch")
 
@@ -54,10 +54,10 @@ Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Novell 
 
 Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per modificare con Novell iOS designer in Visual Studio:
 
-1.  Aprire il riquadro proprietà;
-1.  Modificare la classe in **InterfaceController**;
-1.  Fare clic sul controller di interfaccia; e
-1.  Impostare l'identificatore e il titolo del controller di interfaccia su **interfaceController** e **Hi Watch**.
+1. Aprire il riquadro proprietà;
+1. Modificare la classe in **InterfaceController**;
+1. Fare clic sul controller di interfaccia; e
+1. Impostare l'identificatore e il titolo del controller di interfaccia su **interfaceController** e **Hi Watch**.
 
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Impostare l'identificatore e il titolo del controller di interfaccia su interfaceController e Hi Watch")
 

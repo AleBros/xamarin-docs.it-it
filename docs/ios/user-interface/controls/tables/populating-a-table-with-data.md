@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a27bc699d6c7a77c8a970e363ca55bf54751df66
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 32cb0e376646478ad01a6ea7784094d23529b0b4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655635"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528617"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in Novell. iOS
 
@@ -34,8 +34,8 @@ Una `UITableViewSource` sottoclasse viene assegnata `UITableView`a ogni. La visu
 
 Per fare in modo che una tabella visualizzi i dati, sono necessari solo due metodi obbligatori:
 
--   **RowsInSection** : restituisce un [`nint`](~/cross-platform/macios/nativetypes.md) conteggio del numero totale di righe di dati che devono essere visualizzate nella tabella.
--   **GetCell** : restituisce un `UITableCellView` oggetto popolato con i dati per l'indice di riga corrispondente passato al metodo.
+- **RowsInSection** : restituisce un [`nint`](~/cross-platform/macios/nativetypes.md) conteggio del numero totale di righe di dati che devono essere visualizzate nella tabella.
+- **GetCell** : restituisce un `UITableCellView` oggetto popolato con i dati per l'indice di riga corrispondente passato al metodo.
 
 
 Il file di esempio BasicTable **TableSource.cs** include l'implementazione più semplice possibile `UITableViewSource`di. Nel frammento di codice riportato di seguito viene accettata una matrice di stringhe da visualizzare nella tabella e viene restituito uno stile di cella predefinito contenente ogni stringa:
@@ -239,9 +239,9 @@ keys = indexedTableItems.Keys.ToArray ();
 
 Per usare la `Dictionary<>` sottoclasseèquindinecessarioaggiungereomodificareimetodiseguenti:`UITableViewSource`
 
--   **NumberOfSections** : questo metodo è facoltativo. per impostazione predefinita, la tabella presuppone una sezione. Quando si visualizza un indice, questo metodo deve restituire il numero di elementi nell'indice, ad esempio 26 se l'indice contiene tutte le lettere dell'alfabeto inglese.
--   **RowsInSection** : restituisce il numero di righe in una sezione specificata.
--   **SectionIndexTitles** : restituisce la matrice di stringhe che verrà utilizzata per visualizzare l'indice. Il codice di esempio restituisce una matrice di lettere.
+- **NumberOfSections** : questo metodo è facoltativo. per impostazione predefinita, la tabella presuppone una sezione. Quando si visualizza un indice, questo metodo deve restituire il numero di elementi nell'indice, ad esempio 26 se l'indice contiene tutte le lettere dell'alfabeto inglese.
+- **RowsInSection** : restituisce il numero di righe in una sezione specificata.
+- **SectionIndexTitles** : restituisce la matrice di stringhe che verrà utilizzata per visualizzare l'indice. Il codice di esempio restituisce una matrice di lettere.
 
 
 I metodi aggiornati nel file di esempio **BasicTableIndex/TableSource. cs** hanno un aspetto simile al seguente:
@@ -275,8 +275,8 @@ L'output sarà analogo al seguente:
 
 Per visualizzare le intestazioni e i piè `UITableViewSource` di pagina, la sottoclasse richiede questi metodi aggiuntivi:
 
--   **TitleForHeader** : restituisce il testo da utilizzare come intestazione
--   **TitleForFooter** : restituisce il testo da utilizzare come piè di pagina.
+- **TitleForHeader** : restituisce il testo da utilizzare come intestazione
+- **TitleForFooter** : restituisce il testo da utilizzare come piè di pagina.
 
 
 I metodi aggiornati nel file di esempio **BasicTableHeaderFooter/code/TableSource. cs** hanno un aspetto simile al seguente:

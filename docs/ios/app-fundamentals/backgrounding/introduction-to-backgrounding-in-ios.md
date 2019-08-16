@@ -1,87 +1,87 @@
 ---
 title: Introduzione all'elaborazione in background in iOS
-description: "Questo documento descrive l'elaborazione in background in iOS: stati dell'applicazione, i metodi del ciclo di vita dell'applicazione e all'aggiornamento di app in background."
+description: "Questo documento descrive in background in iOS: Stati dell'applicazione, metodi del ciclo di vita delle applicazioni e aggiornamento delle app in background."
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/24/2018
-ms.openlocfilehash: c533dd54e3b6b11465cfd7daf5b9a93265dbe7b7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1899ee225d0ea285a38ba7b4d341e5d3a4452639
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169762"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521397"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introduzione all'elaborazione in background in iOS
 
-iOS regola l'elaborazione attentamente in background e sono disponibili tre metodi per la relativa implementazione:
+iOS regola in modo molto rigoroso l'elaborazione in background e offre tre approcci per implementarla:
 
--  **Registrare un'attività in Background** -se un'applicazione deve effettuare un'attività importante, è possibile chiedere iOS non interrompere l'attività quando l'applicazione viene spostata in background. Ad esempio, un'applicazione potrebbe essere necessario completare la registrazione di un utente o terminarne scaricando un file di grandi dimensioni.
--  **Registra come applicazione in Background necessarie** -un'app può registrare come un tipo specifico di applicazione che è noto, i requisiti di elaborazione in background in specifici, ad esempio *Audio* , *VoIP* ,  *Accessori esterni* , *Newsstand* , e *percorso* . Queste applicazioni sono consentite in background continua l'elaborazione dei privilegi, purché che eseguono attività che sono all'interno dei parametri del tipo di applicazione registrata.
--  **Abilitare gli aggiornamenti in Background** -le applicazioni possono attivare gli aggiornamenti in background con *area monitoraggio* o in attesa degli *modifiche significative percorso* . A partire da iOS 7, le applicazioni possono anche registrarsi per aggiornare il contenuto in background usando *recupero in Background* oppure *notifiche Remote* .
-
-
-## <a name="application-states-and-application-delegate-methods"></a>Stati dell'applicazione e i metodi delegato dell'applicazione
-
-Prima di approfondire il codice per l'elaborazione in iOS in background, è necessario comprendere la modalità elaborazione in background in effetti il ciclo di vita di un'applicazione iOS.
-
-Il ciclo di vita dell'applicazione iOS è una raccolta di stati dell'applicazione e i metodi per lo spostamento tra di essi. Un'applicazione esegue la transizione tra stati in base il backgrounding requisiti dell'applicazione e il comportamento dell'utente. Lo spostamento è illustrato nel diagramma seguente:
-
- [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Diagramma di stati dell'applicazione e i metodi delegato dell'applicazione")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
-
--  **Non è in esecuzione** -l'applicazione non è ancora stata avviata nel dispositivo.
--  **Esecuzione/attivo** -l'applicazione è sullo schermo ed è l'esecuzione di codice in primo piano.
--  **Inattivo** -l'applicazione verrà interrotto da una chiamata in arrivo, text o altre interruzioni.
--  **Supportata da un background** -l'applicazione viene spostata in background e continua l'esecuzione di codice in background.
--  **Suspended** : se l'applicazione è associato alcun codice per l'esecuzione in background o se tutto il codice è stata completata, l'app sarà *Suspended* dal sistema operativo. Processo di un'applicazione sospesa viene mantenuto attivo, ma l'applicazione è in grado di eseguire qualsiasi codice in questo stato.
--  **Tornare alla non esecuzione/terminazione (Rare)** : in alcuni casi, il processo dell'applicazione viene eliminata definitivamente e l'applicazione torna al *non è in esecuzione* dello stato. Si verifica nelle situazioni di memoria insufficiente, o se l'utente termina manualmente l'applicazione.
+- **Registrare un'attività in background** : se un'applicazione deve completare un'attività importante, può richiedere a iOS di non interrompere l'attività quando l'applicazione viene spostata in background. Ad esempio, un'applicazione potrebbe dover completare la registrazione di un utente o terminare il download di un file di grandi dimensioni.
+- Eseguire la **registrazione come applicazione in background necessaria** : un'app può registrarsi come un tipo specifico di applicazione con requisiti di background noti e specifici, ad esempio *audio* , *VoIP* , *accessorio esterno* , *edicola* , e *posizione* . A queste applicazioni sono consentiti privilegi di elaborazione in background continui, purché eseguano attività che si trovano all'interno dei parametri del tipo di applicazione registrato.
+- **Abilitare gli aggiornamenti in background** : le applicazioni possono attivare gli aggiornamenti in background con il *monitoraggio dell'area* o in attesa di *modifiche significative alla località* . A partire da iOS 7, le applicazioni possono anche registrarsi per aggiornare il contenuto in background tramite il *recupero in background* o le *notifiche remote* .
 
 
-Dall'introduzione del supporto per il multitasking, raramente termina inattività delle applicazioni iOS e mantiene invece dei processi *Suspended* in memoria. Mantiene attivo un processo di applicazione assicura che l'applicazione viene avviata rapidamente alla successiva che l'utente lo apre. Significa anche le applicazioni è possono spostare liberamente dal *degli elementi sospesi* dello stato nel *Backgrounded* stato senza disegno delle risorse di sistema. iOS 7 sfrutta questa funzionalità con nuove API che consentono alle applicazioni di sospendere le attività in background quando il dispositivo va in sospensione, il contenuto di aggiornamento direttamente da background senza interazione dell'utente e altro ancora. Verranno esaminate le nuove API nel [tecniche di elaborazione in background in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
+## <a name="application-states-and-application-delegate-methods"></a>Stati dell'applicazione e metodi del delegato dell'applicazione
 
-## <a name="application-lifecycle-methods"></a>Metodi del ciclo di vita delle applicazioni
+Prima di approfondire il codice per l'elaborazione in background in iOS, è necessario comprendere come il background influisca sul ciclo di vita di un'applicazione iOS.
 
-Quando un'app viene modificato lo stato, iOS notifica all'applicazione tramite i metodi di eventi nel `AppDelegate` classe:
+Il ciclo di vita dell'applicazione iOS è una raccolta di Stati dell'applicazione e metodi per lo spostamento tra di essi. Un'applicazione esegue la transizione tra gli stati in base al comportamento dell'utente e ai requisiti in background dell'applicazione. Lo spostamento viene illustrato nel diagramma seguente:
 
--  `OnActivated` -Si tratta la prima volta viene avviata l'applicazione, e ogni volta che l'app torna in primo piano. Questa è la posizione in cui inserire il codice che deve essere eseguita ogni volta che l'app viene aperta.
--  `OnResignActivation` -Se l'utente riceve un'interruzione, ad esempio un testo o una chiamata telefonica, questo metodo viene chiamato e l'app viene temporaneamente disattivato. L'utente deve accettare la telefonata, l'app verrà inviata allo sfondo.
--  `DidEnterBackground` -Chiamata quando l'app passa allo stato backgrounded, questo metodo fornisce a un'applicazione circa cinque secondi per la preparazione per la terminazione possibili. Utilizzare questa volta per salvare le attività e dati utente e rimuovere informazioni riservate nella schermata.
--  `WillEnterForeground` -Quando un utente restituisce a un'applicazione supportata da un background o sospesa e lo avvia in primo piano, `WillEnterForeground` venga chiamato. Questo è il tempo necessario per preparare l'app da eseguire in primo piano da qualsiasi stato salvato durante la riattivazione `DidEnterBackground` .  `OnActivated` verrà chiamato immediatamente dopo il completamento del metodo.
--  `WillTerminate` -L'applicazione viene arrestata e il processo viene eliminato definitivamente. Questo metodo viene chiamato solo se il multitasking non è disponibile nel dispositivo o per la versione del sistema operativo, se la memoria è insufficiente o se l'utente termina manualmente un'applicazione backgrounded. Si noti che sospese le applicazioni che venire terminate non chiamerà `WillTerminate` .
+ [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Diagramma di Stati dell'applicazione e metodi delegati dell'applicazione")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
+
+- **Non in esecuzione** : l'applicazione non è ancora stata avviata nel dispositivo.
+- **Running/Active** : l'applicazione è sullo schermo e sta eseguendo il codice in primo piano.
+- **Inattivo** : l'applicazione viene interrotta da una telefonata in arrivo, da un testo o da un'altra interruzione.
+- In **background** : l'applicazione viene spostata in background e continua l'esecuzione del codice in background.
+- **Suspended** : se l'applicazione non dispone di codice per l'esecuzione in background o se tutto il codice è stato completato, l'app verrà *sospesa* dal sistema operativo. Il processo di un'applicazione sospesa viene mantenuto attivo, ma l'applicazione non è in grado di eseguire il codice in questo stato.
+- **Torna a non in esecuzione/terminazione (rara)** . occasionalmente, il processo dell'applicazione viene eliminato definitivamente e l'applicazione torna allo stato *non in esecuzione* . Questo problema si verifica in situazioni di memoria insufficiente o se l'utente termina manualmente l'applicazione.
 
 
-Il diagramma seguente illustra come gli Stati dell'applicazione e i metodi del ciclo di vita si integrino:
+Dall'introduzione del supporto multitasking, iOS raramente termina le applicazioni inattive e mantiene i processi sospesi in memoria. Mantenere attivo il processo di un'applicazione garantisce che l'applicazione si avvii rapidamente al successivo avvio dell'utente. Significa anche che le applicazioni possono spostarsi liberamente dallo stato di *sospensione* allo stato in *background* senza eseguire il disegno delle risorse di sistema. iOS 7 sfrutta questa funzionalità con le nuove API che consentono alle applicazioni di sospendere le attività in background quando il dispositivo passa alla modalità di sospensione, aggiorna il contenuto direttamente dallo sfondo senza interazione dell'utente e altro ancora. Si tratteranno le nuove API nelle [tecniche di background di iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
 
- [![](introduction-to-backgrounding-in-ios-images/image2.png "Questo diagramma illustra come gli Stati dell'applicazione e i metodi del ciclo di vita si integrino")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
+## <a name="application-lifecycle-methods"></a>Metodi del ciclo di vita dell'applicazione
 
-## <a name="user-controls-for-backgrounding-in-ios"></a>Controlli utente di background in iOS
+Quando si modifica lo stato di un'app, iOS invia una notifica all'applicazione tramite `AppDelegate` i metodi dell'evento nella classe:
 
-iOS 7 ha introdotto diverse funzionalità per offrire agli utenti maggiore controllo sulla stato backgrounded di un'applicazione. Sia il cambio modalità per App e l'impostazione di aggiornamento di App in Background influenzano il ciclo di vita dell'applicazione.
+- `OnActivated`Questo metodo viene chiamato la prima volta che l'applicazione viene avviata e ogni volta che l'app torna in primo piano. Questa è la posizione in cui inserire il codice che deve essere eseguito ogni volta che viene aperta l'app.
+- `OnResignActivation`-Se l'utente riceve un'interruzione, ad esempio un testo o una telefonata, questo metodo viene chiamato e l'app è temporaneamente disattivata. Se l'utente accetta la telefonata, l'app verrà inviata in background.
+- `DidEnterBackground`-Chiamato quando l'app entra nello stato in background, questo metodo fornisce a un'applicazione circa cinque secondi per preparare la possibile terminazione. Usare questa volta per salvare i dati e le attività dell'utente e rimuovere le informazioni riservate dalla schermata.
+- `WillEnterForeground`-Quando un utente torna a un'applicazione in background o sospesa e lo avvia in primo piano, `WillEnterForeground` viene chiamato. Si tratta del tempo necessario per preparare l'app in modo da portare in primo piano la reidratazione di qualsiasi stato salvato durante `DidEnterBackground` .  `OnActivated`verrà chiamato immediatamente dopo il completamento di questo metodo.
+- `WillTerminate`-L'applicazione viene arrestata e il processo viene eliminato definitivamente. Questo metodo viene chiamato solo se il multitasking non è disponibile nel dispositivo o nella versione del sistema operativo, se la memoria è insufficiente o se l'utente termina manualmente un'applicazione in background. Si noti che le applicazioni sospese che vengono interrotte non chiameranno `WillTerminate` .
 
-### <a name="app-switcher"></a>Cambio modalità per App
 
-Cambio modalità per l'App è una caratteristica importante del controllo introdotta in iOS 7. Viene avviata tramite doppio tocco il **Home** pulsante e Mostra le applicazioni cui processi sono attivi:
+Il diagramma seguente illustra il modo in cui si integrano gli Stati e i metodi del ciclo di vita dell'applicazione:
 
- [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Lo spostamento tra le app tramite il cambio modalità per App")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
+ [![](introduction-to-backgrounding-in-ios-images/image2.png "Questo diagramma illustra il modo in cui gli Stati dell'applicazione e i metodi del ciclo di vita si integrano")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
-Usa la selezione di App, agli utenti di scorrere gli snapshot di tutte le applicazioni supportata da un background o sospesi. Se si tocca un'applicazione, lo avvia in primo piano. Scorrendo rapidamente backup rimuove l'applicazione di background, il processo verrà terminato. Verrà usato da vicino la selezione di App nel [Demo del ciclo di vita dell'applicazione iOS](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) nella sezione successiva.
+## <a name="user-controls-for-backgrounding-in-ios"></a>Controlli utente per l'utilizzo in background in iOS
+
+iOS 7 ha introdotto diverse funzionalità per offrire agli utenti un maggiore controllo sullo stato in background di un'applicazione. Sia lo switcher dell'app che l'impostazione di aggiornamento dell'app in background hanno effetto sul ciclo di vita dell'applicazione.
+
+### <a name="app-switcher"></a>Switcher app
+
+Lo strumento di selezione delle app è una funzionalità di controllo importante introdotta in iOS 7. Viene avviata con un doppio tocco del pulsante **Home** e Mostra le applicazioni i cui processi sono attivi:
+
+ [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Passaggio tra app con lo strumento di selezione delle app")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
+
+Usando lo strumento di selezione delle app, gli utenti possono scorrere gli snapshot di tutte le applicazioni in background e sospese. Toccando un'applicazione, questa viene avviata in primo piano. Se si scorre rapidamente, l'applicazione viene rimossa dallo sfondo, terminando il processo. Nella sezione successiva verrà esaminato in dettaglio lo strumento di selezione delle app nella demo del ciclo di vita [dell'applicazione iOS](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) .
 
 > [!IMPORTANT]
-> La selezione di App non include una differenza tra le applicazioni supportata da un background e sospese.
+> Lo strumento di selezione dell'app non mostra alcuna differenza tra le applicazioni in background e sospese.
 
 
 
-### <a name="background-app-refresh-settings"></a>Impostazioni di aggiornamento di App in background
+### <a name="background-app-refresh-settings"></a>Impostazioni di aggiornamento dell'app in background
 
-iOS 7 aumenta il controllo utente al ciclo di vita dell'applicazione, consentendo agli utenti di rifiutare esplicitamente l'elaborazione in background in Applications [registrato per l'elaborazione in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md). *Ciò non impedisce l'esecuzione di attività in background delle applicazioni*.
+iOS 7 aumenta il controllo utente sul ciclo di vita dell'applicazione consentendo agli utenti di rifiutare esplicitamente le applicazioni in background [registrate per l'elaborazione in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md). *Ciò non impedisce alle applicazioni di eseguire attività in background*.
 
-Gli utenti possono modificare questa impostazione, passare a <span class="uiitem">Impostazioni > generali > Aggiorna App in Background</span> e modifica i privilegi backgrounding per un'applicazione selezionata. Se l'aggiornamento di App in Background è impostata su off, l'applicazione verrà sospesi immediatamente al momento dell'immissione di background e impedito di eseguire qualsiasi elaborazione in background:
+Gli utenti possono modificare questa impostazione passando a **impostazioni > generale > aggiornamento dell'app in background** e modificando i privilegi in background per un'applicazione selezionata. Se l'aggiornamento dell'app in background è impostato su off, l'applicazione verrà sospesa immediatamente dopo l'immissione dello sfondo e impedirà l'esecuzione di qualsiasi elaborazione in background:
 
- [![](introduction-to-backgrounding-in-ios-images/settings-.png "Impostazioni di aggiornamento di App in background")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
+ [![](introduction-to-backgrounding-in-ios-images/settings-.png "Impostazioni di aggiornamento dell'app in background")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
-Gli sviluppatori possono controllare lo stato in Background Aggiorna l'applicazione con il `BackgroundRefreshStatus` API. Per un esempio, vedere la [recipe controlla impostazione di aggiornamento in Background](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
+Gli sviluppatori possono controllare lo stato dell'applicazione di aggiornamento `BackgroundRefreshStatus` in background con l'API. Per un esempio, vedere la [ricetta relativa all'impostazione di aggiornamento in background](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 
-Che avremo illustrato le nozioni di base del ciclo di vita dell'applicazione iOS e le funzionalità per controllare il ciclo di vita dell'applicazione. Successivamente, di seguito viene illustrato il ciclo di vita dell'applicazione iOS in azione.
+Sono stati trattati i concetti di base del ciclo di vita delle applicazioni iOS e le funzionalità per il controllo del ciclo di vita dell'applicazione. Verrà ora visualizzato il ciclo di vita dell'applicazione iOS in azione.
 

@@ -1,73 +1,73 @@
 ---
-title: Introduzione ad archiviazione di dati in Android
+title: Introduzione all'archiviazione dei dati in Android
 ms.prod: xamarin
 ms.assetid: FDAC0771-4749-4758-865A-F1BD190CA54B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 6fb6235f35408cd1263f21da1f802ff0cf5a5cc6
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 7e3f871d9d5992429c6f6619b2f5ff7059558045
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649512"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525955"
 ---
 # <a name="introduction"></a>Introduzione
 
-## <a name="when-to-use-a-database"></a>Quando usare un Database
+## <a name="when-to-use-a-database"></a>Quando utilizzare un database
 
-Mentre le funzionalità di elaborazione e archiviazione dei dispositivi mobili aumentano, telefoni e Tablet ancora ritardo delle controparti desktop e portatili. Per questo motivo, vale la pena mettendo un po' per pianificare l'architettura di archiviazione dei dati per l'app, anziché solo supponendo che la soluzione giusta tutto il tempo è un database. Esistono una serie di opzioni diverse che soddisfare requisiti diversi, ad esempio:
+Mentre le funzionalità di archiviazione e di elaborazione dei dispositivi mobili aumentano, i telefoni e i tablet restano in ritardo dietro le controparti desktop e portatili. Per questo motivo è opportuno prendere tempo per pianificare l'architettura di archiviazione dei dati per l'app piuttosto che solo supponendo che un database sia la risposta giusta sempre. Sono disponibili diverse opzioni che soddisfano requisiti diversi, ad esempio:
 
--  **Preferenze** – Android offre un meccanismo predefinito per l'archiviazione di coppie chiave-valore semplice dei dati. Se si archiviano le impostazioni utente semplice o piccole porzioni di dati (ad esempio le informazioni sulla personalizzazione) usare le funzionalità native della piattaforma per l'archiviazione di questo tipo di informazioni.
--  **File di testo** – input dell'utente o le cache del contenuto (ad esempio scaricato HTML) possono essere archiviati direttamente nel file system. Usare una convenzione di denominazione dei file appropriata per organizzare i file e trovare i dati.
--  **I file di dati serializzati** : possono essere resi persistenti gli oggetti in formato XML o JSON nel file system. .NET framework include le librerie che semplificano la serializzazione e deserializzazione degli oggetti. Usare i nomi appropriati per organizzare i file di dati.
--  **Database** : motore di database SQLite la è disponibile nella piattaforma Android e sono strutturati utili per archiviare i dati necessari per eseguire una query, ordinamento o modificare in altro modo. Archiviazione del database è adatta agli elenchi di dati con molte proprietà.
--  **File di immagine** : sebbene sia possibile archiviare i dati binari nel database in un dispositivo mobile, è consigliabile archiviarli direttamente nel file system. Se necessario è possibile archiviare i nomi di file in un database da associare l'immagine di altri dati. Quando si usano immagini di grandi dimensioni, o un numero elevato di immagini, è consigliabile pianificare una strategia di memorizzazione nella cache che elimina i file che non è più necessario per evitare un utilizzo spazio di archiviazione dell'utente.
+- **Preferenze** : Android offre un meccanismo incorporato per l'archiviazione di semplici coppie chiave-valore di dati. Se si archiviano semplici impostazioni utente o piccole parti di dati (ad esempio informazioni sulla personalizzazione), utilizzare le funzionalità native della piattaforma per archiviare questo tipo di informazioni.
+- **File di testo** : input utente o cache del contenuto scaricato, ad esempio HTML) può essere archiviato direttamente nel file System. Usare una convenzione di denominazione dei file appropriata per organizzare i file e trovare i dati.
+- **File di dati serializzati** : gli oggetti possono essere salvati in modo permanente come XML o JSON nel file System. In .NET Framework sono incluse librerie che semplificano la serializzazione e la deserializzazione di oggetti. Usare i nomi appropriati per organizzare i file di dati.
+- **Database** : il motore di database SQLite è disponibile nella piattaforma Android ed è utile per archiviare i dati strutturati necessari per eseguire query, ordinare o modificare in altro modo. L'archiviazione del database è adatta agli elenchi di dati con molte proprietà.
+- **File di immagine** : Sebbene sia possibile archiviare dati binari nel database di un dispositivo mobile, è consigliabile archiviarli direttamente nel file System. Se necessario, è possibile archiviare i nomi di file in un database per associare l'immagine ad altri dati. Quando si gestiscono immagini di grandi dimensioni o molte immagini, è consigliabile pianificare una strategia di memorizzazione nella cache che elimini i file che non sono più necessari per evitare l'utilizzo dello spazio di archiviazione dell'utente.
 
-Se un database è il meccanismo di archiviazione corretto per l'app, il resto di questo documento viene illustrato come utilizzare SQLite nella piattaforma Xamarin.
+Se un database è il meccanismo di archiviazione corretto per l'app, nella parte restante di questo documento viene illustrato come usare SQLite nella piattaforma Novell.
 
-## <a name="advantages-of-using-a-database"></a>Vantaggi dell'uso di un Database
+## <a name="advantages-of-using-a-database"></a>Vantaggi dell'utilizzo di un database
 
-Esistono numerosi vantaggi rispetto all'utilizzo di un database SQL in app per dispositivi mobili:
+L'uso di un database SQL nell'app per dispositivi mobili presenta diversi vantaggi:
 
--  Database SQL consentono di archiviare dati strutturati in modo efficiente.
--  I dati specifici possono essere estratti con query complesse.
--  È possibile ordinare i risultati della query.
--  È possibile aggregare i risultati della query.
--  Gli sviluppatori con competenze sui database esistenti possono usare le proprie conoscenze per progettare il codice di accesso ai database e dei dati.
--  Il modello di dati dal componente server di un'applicazione connessa possa essere utilizzato nuovamente (in toto o in parte) nell'applicazione per dispositivi mobili.
-
-
-## <a name="sqlite-database-engine"></a>Motore di Database SQLite
-
-SQLite è un motore di database open source che è stato adottato da Google per le rispettive piattaforme per dispositivi mobili. Il motore di database SQLite è incorporato per entrambi i sistemi operativi, pertanto non presenta alcuna attività aggiuntiva per gli sviluppatori a sfruttare i vantaggi di esso. SQLite è particolarmente adatto per lo sviluppo per dispositivi mobili multipiattaforma in quanto:
-
--  Il motore di database è piccolo, veloce e facilmente trasferibili.
--  Un database viene archiviato in un singolo file, è facile da gestire nei dispositivi mobili.
--  Il formato del file è facile da usare per più piattaforme: se 32 o 64 bit e i sistemi big - endian o little-endian.
--  Implementa la maggior parte di standard di SQL92.
+- I database SQL consentono l'archiviazione efficiente di dati strutturati.
+- È possibile estrarre dati specifici con query complesse.
+- I risultati della query possono essere ordinati.
+- I risultati della query possono essere aggregati.
+- Gli sviluppatori con competenze di database esistenti possono utilizzare le proprie conoscenze per progettare il database e il codice di accesso ai dati.
+- Il modello di dati dal componente server di un'applicazione connessa può essere riutilizzato (interamente o in parte) nell'applicazione per dispositivi mobili.
 
 
-Poiché SQLite è progettato per essere piccoli e veloci, esistono alcune limitazioni sul relativo uso:
+## <a name="sqlite-database-engine"></a>motore di database SQLite
 
--  Parte della sintassi di OUTER join non è supportato.
--  Solo la RIDENOMINAZIONE di tabella e ADDCOLUMN sono supportati. È possibile eseguire altre modifiche allo schema.
--  Le viste sono di sola lettura.
+SQLite è un motore di database open source che è stato adottato da Google per la piattaforma per dispositivi mobili. Il motore di database SQLite è integrato in entrambi i sistemi operativi, pertanto non è necessario alcun lavoro aggiuntivo da parte degli sviluppatori. SQLite è particolarmente adatto per lo sviluppo di app per dispositivi mobili multipiattaforma perché:
+
+- Il motore di database è di dimensioni ridotte, veloci e facilmente portabili.
+- Un database viene archiviato in un singolo file, che è facile da gestire nei dispositivi mobili.
+- Il formato del file è facile da usare tra le piattaforme: se 32 o 64 bit e i sistemi Big o little-endian.
+- Implementa la maggior parte dello standard SQL92.
 
 
-Altre informazioni su SQLite nel sito Web - [SQLite.org](http://SQLite.org) : tuttavia, tutte le informazioni necessarie per l'uso di SQLite con Xamarin sono contenute in questo documento e associati gli esempi. Il motore di database SQLite è supportato in Android partire da Android 2.
-Anche se non trattate in questo capitolo, SQLite è anche disponibile per l'utilizzo in applicazioni di Windows e Windows Phone.
+Poiché SQLite è progettato per essere piccolo e veloce, esistono alcune avvertenze sull'uso:
+
+- La sintassi di OUTER join non è supportata.
+- Sono supportate solo le ridenominazioni di tabelle e ADDCOLUMN. Non è possibile apportare altre modifiche allo schema.
+- Le visualizzazioni sono di sola lettura.
+
+
+Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](http://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è stato supportato in Android a partire da Android 2.
+Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'uso in applicazioni Windows Phone e Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows e Windows Phone
 
-SQLite è anche utilizzabile nelle piattaforme Windows, anche se queste piattaforme non incluse in questo documento.
-Altre informazioni, vedere la [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) case study e rivedere [blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+SQLite può essere usato anche nelle piattaforme Windows, anche se queste piattaforme non sono descritte in questo documento.
+Per altre informazioni, vedere la pagina relativa ai case study di [attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [attività professionali](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e consultare [il Blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Ricette dei dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Accesso ai dati di xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Ricette per i dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
+- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)

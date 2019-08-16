@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 9387b44419af87785d45a25ab254d3361a5615a3
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485929"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523659"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Uso di Novell. Android Designer
 
@@ -25,9 +25,9 @@ Le interfacce utente Android possono essere create in modo dichiarativo tramite 
 Questo articolo illustra come usare Novell. Android Designer per creare visivamente un'interfaccia utente.
 
 > [!TIP]
-> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione XML all'interno del Android Designer.
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
 >
-> I file con estensione aXML e XML sono supportati nell'Android Designer.
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
@@ -105,11 +105,11 @@ Se i due `textView` widget non si trovano all' `linearLayout1`interno di `linear
 
 Il passaggio successivo consiste nel modificare l'interfaccia utente per visualizzare `ImageView` l'oggetto a sinistra, con i `TextView` due widget `ImageView`in pila a destra di.
 
-1.  Selezionare `ImageView`.
+1. Selezionare `ImageView`.
 
-2.  Nella **finestra Proprietà**immettere *Width* nella casella di ricerca e individuare **Larghezza layout**.
+2. Nella **finestra Proprietà**immettere *Width* nella casella di ricerca e individuare **Larghezza layout**.
 
-3.  Modificare l'impostazione della **larghezza** del `wrap_content`layout in:
+3. Modificare l'impostazione della **larghezza** del `wrap_content`layout in:
 
 ![Imposta contenuto a capo](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
@@ -121,7 +121,7 @@ Se si fa nuovamente clic sul `Width` triangolo, `match_parent`l'impostazione vie
 
 [![Seleziona LinearLayout radice](designer-walkthrough-images/vs/16-root-linearlayout-w158-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout-w158.png#lightbox)
 
-Con la radice `LinearLayout` selezionata, tornare al riquadro **proprietà** , immettere *orientamento* nella casella di ricerca e individuare l'impostazione **orientamento** . Modificare  l'orientamento `horizontal`in:
+Con la radice `LinearLayout` selezionata, tornare al riquadro **proprietà** , immettere *orientamento* nella casella di ricerca e individuare l'impostazione **orientamento** . Modificare l'orientamento `horizontal`in:
 
 ![Seleziona orientamento orizzontale](designer-walkthrough-images/vs/17-horizontal-orientation-w158.png)
 
@@ -140,7 +140,7 @@ Nel riquadro **Proprietà** immettere `padding` nella casella di ricerca e immet
 
 [![Imposta spaziatura interna](designer-walkthrough-images/vs/19-padding-widths-w158-sml.png)](designer-walkthrough-images/vs/19-padding-widths-w158.png#lightbox)
 
-Le impostazioni di riempimento inferiore, sinistro, destro e superiore possono essere impostate in modo indipendente inserendo i valori **nei campi riempimento** **inferiore**, a **sinistra**, a **destra**e spaziatura interna, rispettivamente.
+Le impostazioni di riempimento inferiore, sinistro, destro e superiore possono essere impostate in modo indipendente inserendo i valori nei campi riempimento **inferiore**, a **sinistra**, a **destra**e spaziatura interna, rispettivamente.
 Ad esempio, impostare il campo di **riempimento** a `5dp` sinistra su e i campi **riempimento inferiore**, **riempimento a destra**e **riempimento superiore** per `10dp`:
 
 [![Impostazioni di riempimento personalizzate](designer-walkthrough-images/vs/20-custom-padding-w158-sml.png)](designer-walkthrough-images/vs/20-custom-padding-w158.png#lightbox)
@@ -153,11 +153,11 @@ Modificare quindi la posizione del `LinearLayout` widget che contiene i due `Tex
 
 `ImageView` Poiché viene usato per visualizzare i colori (anziché le immagini), il passaggio successivo consiste nel rimuovere l'origine immagine predefinita aggiunta dal modello.
 
-1.  Selezionare la `ImageView` nell' **area di progettazione**.
+1. Selezionare la `ImageView` nell' **area di progettazione**.
 
-2.  In **Proprietà**immettere *src* nella casella di ricerca.
+2. In **Proprietà**immettere *src* nella casella di ricerca.
 
-3.  Fare clic sul piccolo quadrato a destra dell'impostazione della proprietà **src** e selezionare **Reset (Reimposta**):
+3. Fare clic sul piccolo quadrato a destra dell'impostazione della proprietà **src** e selezionare **Reset (Reimposta**):
 
 [![Deselezionare l'impostazione src di ImageView](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
@@ -357,11 +357,11 @@ Se i due `textView` widget non si trovano all' `linearLayout1`interno di `linear
 
 Il passaggio successivo consiste nel modificare l'interfaccia utente per visualizzare `ImageView` l'oggetto a sinistra, con i `TextView` due widget `ImageView`in pila a destra di.
 
-1.  Con l' `ImageView` opzione selezionata, fare clic sulla scheda **proprietà** .
+1. Con l' `ImageView` opzione selezionata, fare clic sulla scheda **proprietà** .
 
-2.  Appena sotto la scheda **Proprietà** , fare clic su **layout**.
+2. Appena sotto la scheda **Proprietà** , fare clic su **layout**.
 
-3.  Scorrere verso il  basso fino a ViewGroup `Width` e modificare `wrap_content`l'impostazione in:
+3. Scorrere verso il basso fino a ViewGroup `Width` e modificare `wrap_content`l'impostazione in:
 
 [![Imposta contenuto a capo](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
 
@@ -397,11 +397,11 @@ Modificare quindi la posizione del `LinearLayout` widget che contiene i due `Tex
 
 `ImageView` Poiché viene usato per visualizzare i colori (anziché le immagini), il passaggio successivo consiste nel rimuovere l'origine immagine predefinita aggiunta dal modello.
 
-1.  Selezionare `ImageView`.
+1. Selezionare `ImageView`.
 
-2.  Fare clic sulla scheda **widget** in **Proprietà**.
+2. Fare clic sulla scheda **widget** in **Proprietà**.
 
-3.  Deselezionare l' `Src` impostazione in modo che sia vuota:
+3. Deselezionare l' `Src` impostazione in modo che sia vuota:
 
 [![Deselezionare l'impostazione src di ImageView](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 

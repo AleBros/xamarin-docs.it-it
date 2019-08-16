@@ -1,69 +1,69 @@
 ---
-title: App Wear creazione dei pacchetti
+title: Creazione di pacchetti di app Wear
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 585c276b327a9092bdd13fa633307477017558c5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bca29089a61ed1f3400458f4b102c61023f47247
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276795"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522105"
 ---
-# <a name="packaging-wear-apps"></a>App Wear creazione dei pacchetti
+# <a name="packaging-wear-apps"></a>Creazione di pacchetti di app Wear
 
-Sono inclusi le app Android Wear con un'app di Android completo per la distribuzione in Google Play. 
+Le app Android Wear sono assemblate con un'app Android completa per la distribuzione in Google Play. 
 
-## <a name="automatic-packaging"></a>Creazione automatica di pacchetti
+## <a name="automatic-packaging"></a>Creazione automatica dei pacchetti
 
-A partire da Xamarin Android 5.0, l'app Wear viene automaticamente fornito come una risorsa nell'app palmari quando si crea un riferimento al progetto dal progetto palmare al progetto Wear. È possibile utilizzare la procedura seguente per creare questa associazione: 
+A partire da Novell Android 5,0, l'app Wear viene automaticamente assemblata come risorsa nell'app palmare quando si crea un riferimento al progetto dal progetto palmare al progetto Wear. Per creare questa associazione, è possibile usare i passaggi seguenti: 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Se l'app Wear non è già parte della soluzione palmare, fare doppio clic sul nodo della soluzione e selezionare **Aggiungi > Aggiungi progetto esistente...** .
+1. Se l'app Wear non fa già parte della soluzione Handheld, fare clic con il pulsante destro del mouse sul nodo della soluzione e scegliere **aggiungi > Aggiungi progetto esistente**.
 
-2. Passare al **file con estensione csproj** file dell'app per Wear, selezionarlo e fare clic su **Open**. Il progetto dell'app Wear dovrebbe essere ora visibile nella soluzione palmare.
+2. Passare al file con **estensione csproj** dell'app Wear, selezionarlo e fare clic su **Apri**. Il progetto di app Wear dovrebbe essere ora visibile nella soluzione Handheld.
 
-3. Fare doppio clic il **riferimenti** nodo e selezionare **Aggiungi riferimento**.
+3. Fare clic con il pulsante destro del mouse sul nodo **riferimenti** e selezionare **Aggiungi riferimento**.
 
-4. Nel **gestione riferimenti** finestra di dialogo, usura del progetto (fare clic per aggiungere un segno di spunta), quindi fare clic su enable **OK**.
+4. Nella finestra di dialogo **Gestione riferimenti** abilitare il progetto Wear (fare clic per aggiungere un segno di spunta), quindi fare clic su **OK**.
 
-5. Modificare il nome del pacchetto per il progetto Wear in modo che corrisponda il nome del pacchetto del progetto palmare (il nome del pacchetto può essere modificato in **proprietà > manifesto Android**).
+5. Modificare il nome del pacchetto per il progetto Wear in modo che corrisponda al nome del pacchetto del progetto Handheld (il nome del pacchetto può essere modificato in **proprietà > manifesto Android**).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Se l'app Wear non è già parte della soluzione palmare, fare doppio clic sul nodo della soluzione e selezionare **Aggiungi > Aggiungi progetto esistente...** .
+1. Se l'app Wear non fa già parte della soluzione Handheld, fare clic con il pulsante destro del mouse sul nodo della soluzione e scegliere **aggiungi > Aggiungi progetto esistente**.
 
-2. Passare al **file con estensione csproj** file dell'app per Wear, selezionarlo e fare clic su **Open**. Il progetto dell'app Wear dovrebbe essere ora visibile nella soluzione palmare.
+2. Passare al file con **estensione csproj** dell'app Wear, selezionarlo e fare clic su **Apri**. Il progetto di app Wear dovrebbe essere ora visibile nella soluzione Handheld.
 
-3. Fare clic sul nodo del progetto palmari nella soluzione e fare clic su **Modifica riferimenti...** .
+3. Fare clic con il pulsante destro del mouse sul nodo del progetto Handheld nella soluzione e scegliere **modifica riferimenti.**
 
-4. Nel **Modifica riferimenti** finestra di dialogo, usura del progetto (fare clic per aggiungere un segno di spunta), quindi fare clic su enable **OK**.
+4. Nella finestra di dialogo **modifica riferimenti** abilitare il progetto Wear (fare clic per aggiungere un segno di spunta), quindi fare clic su **OK**.
 
-5. Modificare il nome del pacchetto per il progetto Wear in modo che corrisponda il nome del pacchetto del progetto palmare (il nome del pacchetto può essere modificato in **opzioni progetto > applicazione Android**).
+5. Modificare il nome del pacchetto per il progetto Wear in modo che corrisponda al nome del pacchetto del progetto Handheld (il nome del pacchetto può essere modificato in **Opzioni progetto > applicazione Android**).
 
 -----
 
 
-Si noti che si otterrà un' **XA5211** errore se il nome del pacchetto dell'app Wear corrisponde il nome del pacchetto dell'app palmari. Ad esempio:
+Si noti che si riceverà un errore **XA5211** se il nome del pacchetto dell'app Wear non corrisponde al nome del pacchetto dell'app Handheld. Ad esempio:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
 app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 ```
 
-Per correggere questo errore, modificare il nome del pacchetto dell'app Wear in modo che corrisponda il nome del pacchetto dell'app palmari.
+Per correggere l'errore, modificare il nome del pacchetto dell'app Wear in modo che corrisponda al nome del pacchetto dell'app Handheld.
 
-Quando fa clic su **compilazione > compila tutto**, questa associazione attiva automatiche dei pacchetti del progetto Wear nel progetto principale palmare (Phone). L'app Wear viene automaticamente creata e inclusa come risorsa nell'app palmari.
+Quando si fa clic su **compila > compila tutto**, questa associazione attiva il packaging automatico del progetto Wear nel progetto principale (telefono) del palmare. L'app Wear viene automaticamente compilata e inclusa come risorsa nell'app Handheld.
 
-L'assembly che genera il progetto dell'app Wear non viene usato come un riferimento all'assembly nel progetto palmare (Phone). Al contrario, il processo di compilazione esegue le operazioni seguenti:
+L'assembly generato dal progetto di app Wear non viene usato come riferimento a un assembly nel progetto Handheld (Phone). Al contrario, il processo di compilazione esegue le operazioni seguenti:
 
--   Verifica che il pacchetto nomi corrispondano. 
+- Verifica che i nomi dei pacchetti corrispondano. 
 
--   Genera codice XML e lo aggiunge al progetto portatile per associarlo all'app Wear. Ad esempio: 
+- Genera il codice XML e lo aggiunge al progetto Handheld per associarlo all'app Wear. Ad esempio: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -74,20 +74,20 @@ L'assembly che genera il progetto dell'app Wear non viene usato come un riferime
     </ProjectReference>
     ```
 
--   Aggiunge l'app per Wear come un **raw** risorse al progetto portatile. 
+- Aggiunge l'app Wear come risorsa non elaborata al progetto Handheld. 
 
 
-## <a name="manual-packaging"></a>Creazione di pacchetti manuale
+## <a name="manual-packaging"></a>Creazione manuale del pacchetto
 
-È possibile scrivere le app Android Wear in xamarin. Android precedenti alla versione 5.0, ma è necessario seguire queste istruzioni di creazione di pacchetti manuale per distribuire l'app: 
+È possibile scrivere app Android Wear in Novell. Android prima della versione 5,0, ma è necessario seguire le istruzioni per la creazione manuale del pacchetto per distribuire l'app: 
 
-1. Verificare che il progetto indossabile e progetti palmare (Phone) abbiano lo stesso nome del pacchetto e del numero di versione.
+1. Assicurarsi che i progetti di progetto e palmare (telefono) indossabili abbiano lo stesso numero di versione e il nome del pacchetto.
 
-2. Creare manualmente il progetto indossabile come un **rilascio** di compilazione.
+2. Compilare manualmente il progetto indossabile come build di **rilascio** .
 
-3. Aggiungere manualmente la versione **. File APK** dal passaggio (2) il **risorse/raw** directory del progetto palmare (Phone).
+3. Aggiungere manualmente la versione **. APK** dal passaggio (2) nella directory **Resources/RAW** del progetto Handheld (Phone).
 
-4. Aggiungere manualmente una nuova risorsa XML **Resources/xml/wearable_app_desc.xml** nel progetto palmare che fa riferimento a indossabile **APK** ottenuto nel passaggio (3):
+4. Aggiungere manualmente una nuova risorsa XML Resource **/XML/wearable_app_desc. XML** nel progetto Handheld, che fa riferimento a **apk** indossabile dal passaggio (3):
 
     ```xml
     <wearableApp package="wearable.app.package.name">
@@ -97,12 +97,12 @@ L'assembly che genera il progetto dell'app Wear non viene usato come un riferime
     </wearableApp>
     ```
 
-5. Aggiungere manualmente un `<meta-data />` elemento del progetto palmari **androidmanifest. XML** `<application>` elemento che fa riferimento alla nuova risorsa XML:
+5. Aggiungere manualmente un `<meta-data />` elemento all'elemento **file AndroidManifest. XML** `<application>` del progetto Handheld che fa riferimento alla nuova risorsa XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"
         android:resource="@xml/wearable_app_desc"/>
     ```
 
-Vedere anche il sito di Android Developer [packging manuale istruzioni](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually).
+Vedere anche le [istruzioni packging manuali](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)del sito per sviluppatori Android.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: d48f7012d0389b262e2dfce560d4f8aa925c21d5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655659"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528896"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Modifiche aggiuntive al framework macOS Sierra
 
@@ -39,12 +39,12 @@ Sono state apportate le seguenti funzionalità avanzate al Framework di AppKit p
 - Il passaggio di layout della visualizzazione posticipato è stato ottimizzato ed esteso.
 - L'API di trascinamento della selezione include ora le `NSFilePromiseProvider` nuove `NSFilePromiseReceiver` classi e per supportare il trascinamento della moltitudine.
 - Ai controlli esistenti sono stati aggiunti diversi costruttori pratici:
-    -  `NSButton`include nuovi costruttori per la creazione di pulsanti di comando, caselle di controllo e pulsanti di opzione.
-    -  `NSTextField`include nuovi costruttori per la creazione di incapsulamento e non wrapping di etichette, etichette con attributi e campi di testo modificabili.
-    -  `NSSegmentedControl`include nuovi costruttori per la creazione di controlli segmentati da un gruppo di etichette o immagini.
-    -  `NSSlider`include nuovi costruttori per la creazione di dispositivi di scorrimento lineari orizzontali.
-    -  `NSImageView`include nuovi costruttori per la creazione di visualizzazioni di immagine non modificabili da `NSImage`un dato oggetto.
--  Il nuovo `NSGridView` è stato aggiunto a layout automatico una raccolta di visualizzazioni secondarie in una griglia con righe e colonne di dimensioni variabili che possono essere nascoste o visualizzate dinamicamente.
+    - `NSButton`include nuovi costruttori per la creazione di pulsanti di comando, caselle di controllo e pulsanti di opzione.
+    - `NSTextField`include nuovi costruttori per la creazione di incapsulamento e non wrapping di etichette, etichette con attributi e campi di testo modificabili.
+    - `NSSegmentedControl`include nuovi costruttori per la creazione di controlli segmentati da un gruppo di etichette o immagini.
+    - `NSSlider`include nuovi costruttori per la creazione di dispositivi di scorrimento lineari orizzontali.
+    - `NSImageView`include nuovi costruttori per la creazione di visualizzazioni di immagine non modificabili da `NSImage`un dato oggetto.
+- Il nuovo `NSGridView` è stato aggiunto a layout automatico una raccolta di visualizzazioni secondarie in una griglia con righe e colonne di dimensioni variabili che possono essere nascoste o visualizzate dinamicamente.
 
 <a name="AVFoundation-Framework-Enhancements" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 4b0e540bdcdf061f64880ea961a5e07a0a45b22e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d7bd3d64d7e9f4ad8298120a017719b3cbb1410e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642910"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528691"
 ---
 # <a name="maps-in-xamarinios"></a>Mappe in Novell. iOS
 
@@ -48,8 +48,8 @@ map.MapType = MKMapType.Hybrid;
 
  `MKMapView`include il supporto per le funzionalità di interattività mappa, ad esempio:
 
--  Zoom tramite un movimento di pizzico
--  Panoramica tramite un movimento di Pan
+- Zoom tramite un movimento di pizzico
+- Panoramica tramite un movimento di Pan
 
 
 Queste funzionalità possono essere abilitate o disabilitate semplicemente impostando `ScrollEnabled` le `ZoomEnabled` proprietà e `MKMapView` dell'istanza, in cui il valore predefinito è true per entrambi. Per visualizzare, ad esempio, una mappa statica, è sufficiente impostare le proprietà appropriate su false:
@@ -96,8 +96,8 @@ map.ShowsUserLocation = true;
 
 Un'annotazione è costituita da due parti:
 
--  `MKAnnotation` Oggetto che include i dati del modello relativi all'annotazione, ad esempio il titolo e la posizione dell'annotazione.
--  Oggetto `MKAnnotationView` che contiene l'immagine da visualizzare e, facoltativamente, un callout visualizzato quando l'utente tocca l'annotazione.
+- `MKAnnotation` Oggetto che include i dati del modello relativi all'annotazione, ad esempio il titolo e la posizione dell'annotazione.
+- Oggetto `MKAnnotationView` che contiene l'immagine da visualizzare e, facoltativamente, un callout visualizzato quando l'utente tocca l'annotazione.
 
 
 Map Kit usa il modello di delega iOS per aggiungere annotazioni a una mappa, `Delegate` in cui la `MKMapView` proprietà di è impostata su un'istanza `MKMapViewDelegate`di un oggetto. Si tratta dell'implementazione di questo delegato responsabile della restituzione dell' `MKAnnotationView` oggetto per un'annotazione.
@@ -177,9 +177,9 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 Un altro modo per eseguire il livello di grafica su una mappa consiste nell'usare sovrimpressioni. Le sovrimpressioni supportano contenuto grafico di tipo disegno che viene ridimensionato con la mappa quando si esegue lo zoom. iOS fornisce supporto per diversi tipi di sovrimpressione, tra cui:
 
--  Poligoni: usati comunemente per evidenziare alcune aree su una mappa.
--  Polilinee: spesso visualizzate quando si mostra una route.
--  Cerchi, usati per evidenziare un'area circolare di una mappa.
+- Poligoni: usati comunemente per evidenziare alcune aree su una mappa.
+- Polilinee: spesso visualizzate quando si mostra una route.
+- Cerchi, usati per evidenziare un'area circolare di una mappa.
 
 
 Inoltre, è possibile creare sovrapposizioni personalizzate per mostrare geometrie arbitrarie con codice di disegno granulare e personalizzato. Ad esempio, il radar meteorologico è un buon candidato per una sovrapposizione personalizzata.
@@ -188,8 +188,8 @@ Inoltre, è possibile creare sovrapposizioni personalizzate per mostrare geometr
 
 Analogamente alle annotazioni, l'aggiunta di una sovrapposizione implica due parti:
 
--  Creazione di un oggetto modello per la sovrimpressione e aggiunta a `MKMapView` .
--  Creazione di una vista per la sovrimpressione `MKMapViewDelegate` in.
+- Creazione di un oggetto modello per la sovrimpressione e aggiunta a `MKMapView` .
+- Creazione di una vista per la sovrimpressione `MKMapViewDelegate` in.
 
 
 Il modello per la sovrimpressione può essere `MKShape` qualsiasi sottoclasse. Novell. iOS include `MKShape` sottoclassi per poligoni, polilinee e cerchi, rispettivamente tramite le `MKPolygon`classi, `MKPolyline` e `MKCircle` .
@@ -225,10 +225,10 @@ iOS include un'API di ricerca locale con Map Kit, che consente la ricerca asincr
 
 Per eseguire una ricerca locale, un'applicazione deve attenersi alla seguente procedura:
 
-1.  Crea `MKLocalSearchRequest` oggetto.
-1.  Creare un `MKLocalSearch` oggetto `MKLocalSearchRequest` da.
-1.  Chiamare il `Start` metodo `MKLocalSearch` sull'oggetto.
-1.  Recuperare l' `MKLocalSearchResponse` oggetto in un callback.
+1. Crea `MKLocalSearchRequest` oggetto.
+1. Creare un `MKLocalSearch` oggetto `MKLocalSearchRequest` da.
+1. Chiamare il `Start` metodo `MKLocalSearch` sull'oggetto.
+1. Recuperare l' `MKLocalSearchResponse` oggetto in un callback.
 
 
 L'API di ricerca locale non fornisce alcuna interfaccia utente. Non richiede neanche una mappa da usare. Tuttavia, per utilizzare in modo pratico la ricerca locale, un'applicazione deve fornire un modo per specificare una query di ricerca e visualizzare i risultati. Inoltre, poiché i risultati conterranno i dati relativi alla posizione, sarà spesso utile visualizzarli su una mappa.

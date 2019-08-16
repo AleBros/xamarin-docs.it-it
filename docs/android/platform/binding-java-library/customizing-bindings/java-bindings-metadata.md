@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: f0f15647e439381c2aa291234b444d668d1b63d0
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 05b8be21373930ae2b501c84757b7be11f794aa9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869360"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524615"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
@@ -55,21 +55,21 @@ Al contrario, le modifiche vengono registrate in file XML speciali forniti dal m
 
 Questi file di mapping XML possono essere trovati nella cartella Transforms del progetto:
 
--   **Metadata. XML** &ndash; consente di apportare modifiche all'API finale, ad esempio la modifica dello spazio dei nomi dell'associazione generata. 
+- **Metadata. XML** &ndash; consente di apportare modifiche all'API finale, ad esempio la modifica dello spazio dei nomi dell'associazione generata. 
 
--   **EnumFields. XML** &ndash; contiene il mapping tra le `int` costanti Java e C# `enums` . 
+- **EnumFields. XML** &ndash; contiene il mapping tra le `int` costanti Java e C# `enums` . 
 
--   **EnumMethods. XML** &ndash; consente di modificare i parametri del metodo e i `int` tipi restituiti dalle C# `enums` costanti Java a. 
+- **EnumMethods. XML** &ndash; consente di modificare i parametri del metodo e i `int` tipi restituiti dalle C# `enums` costanti Java a. 
 
 Il file **Metadata. XML** è la maggior parte dell'importazione di questi file poiché consente di apportare modifiche generali all'associazione, ad esempio:
 
--   Rinominare gli spazi dei nomi, le classi, i metodi o i campi in modo che seguano le convenzioni .NET. 
+- Rinominare gli spazi dei nomi, le classi, i metodi o i campi in modo che seguano le convenzioni .NET. 
 
--   Rimuovere gli spazi dei nomi, le classi, i metodi o i campi che non sono necessari. 
+- Rimuovere gli spazi dei nomi, le classi, i metodi o i campi che non sono necessari. 
 
--   Trasferimento di classi in spazi dei nomi diversi. 
+- Trasferimento di classi in spazi dei nomi diversi. 
 
--   L'aggiunta di altre classi di supporto per la progettazione dell'associazione segue i criteri di .NET Framework. 
+- L'aggiunta di altre classi di supporto per la progettazione dell'associazione segue i criteri di .NET Framework. 
 
 Consente di passare al documento **Metadata. XML** in modo più dettagliato.
 
@@ -103,13 +103,13 @@ Di seguito è riportato un esempio di file **Metadata. XML** :
 
 Di seguito sono elencati alcuni degli elementi XPath usati più di frequente per le API Java:
 
--   `interface`&ndash; Usato per individuare un'interfaccia java. `/interface[@name='AuthListener']`ad esempio,
+- `interface`&ndash; Usato per individuare un'interfaccia java. `/interface[@name='AuthListener']`ad esempio,
 
--   `class`&ndash; Usato per individuare una classe. `/class[@name='MapView']`ad esempio,
+- `class`&ndash; Usato per individuare una classe. `/class[@name='MapView']`ad esempio,
 
--   `method`&ndash; Usato per individuare un metodo su una classe o un'interfaccia java. `/class[@name='MapView']/method[@name='setTitleSource']`ad esempio,
+- `method`&ndash; Usato per individuare un metodo su una classe o un'interfaccia java. `/class[@name='MapView']/method[@name='setTitleSource']`ad esempio,
 
--   `parameter`&ndash; Identificare un parametro per un metodo. e.g.`/parameter[@name='p0']`
+- `parameter`&ndash; Identificare un parametro per un metodo. e.g.`/parameter[@name='p0']`
 
 
 

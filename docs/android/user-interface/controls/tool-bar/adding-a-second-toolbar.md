@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 5d2fec537f10ad3ef5300275c9851d4f57bc961d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645164"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522872"
 ---
 # <a name="adding-a-second-toolbar"></a>Aggiunta di una seconda barra degli strumenti
 
@@ -86,13 +86,13 @@ In questa sezione viene illustrato come aggiungere voci di menu modifica in `Too
 
 Per aggiungere voci di menu a un `Toolbar`database secondario: 
 
-1.  Aggiungere le `mipmap-` icone del menu alle cartelle del progetto dell'app, se necessario.
+1. Aggiungere le `mipmap-` icone del menu alle cartelle del progetto dell'app, se necessario.
 
-2.  Definire il contenuto delle voci di menu aggiungendo un file di risorse di menu aggiuntivo a **risorse/menu**. 
+2. Definire il contenuto delle voci di menu aggiungendo un file di risorse di menu aggiuntivo a **risorse/menu**. 
 
-3.  Nel `OnCreate` metodo dell'attività, `Toolbar` trovare (chiamando `FindViewById`) e inflatare i `Toolbar`menu di.
+3. Nel `OnCreate` metodo dell'attività, `Toolbar` trovare (chiamando `FindViewById`) e inflatare i `Toolbar`menu di.
 
-4.  Implementare un gestore di clic `OnCreate` in per le nuove voci di menu. 
+4. Implementare un gestore di clic `OnCreate` in per le nuove voci di menu. 
 
 Le sezioni seguenti illustrano questo processo in modo dettagliato: Le voci di menu **taglia**, **copia**e **Incolla** vengono aggiunte alla fine `Toolbar`. 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 79f97382b6d8bd7875e4921c859f92cd6b321687
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3817a6a111bb8a19248127d3be31a719fac68ba8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646316"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522565"
 ---
 # <a name="xamarinandroid-listview"></a>ListView Novell. Android
 
@@ -192,26 +192,26 @@ Eseguire l'applicazione. Viene visualizzato un output simile al seguente:
 
 Gli argomenti rimanenti (collegati di seguito) esaminano in maniera completa l' `ListView` utilizzo della classe e dei diversi tipi di adapter che è possibile utilizzare. La struttura è la seguente:
 
--   **Aspetto visivo** &ndash; Parti`ListView` del controllo e relativa modalità di funzionamento.
+- **Aspetto visivo** &ndash; Parti`ListView` del controllo e relativa modalità di funzionamento.
 
--   **Classi** Panoramica delle classi usate per visualizzare un oggetto `ListView`. &ndash;
+- **Classi** Panoramica delle classi usate per visualizzare un oggetto `ListView`. &ndash;
 
--   **Visualizzazione di dati in un controllo ListView** Come visualizzare un semplice elenco di dati, come implementare `ListView's` le funzionalità di usabilità; come utilizzare diversi layout di riga predefiniti e come gli adapter salvano la memoria riutilizzando le visualizzazioni di riga. &ndash;
+- **Visualizzazione di dati in un controllo ListView** Come visualizzare un semplice elenco di dati, come implementare `ListView's` le funzionalità di usabilità; come utilizzare diversi layout di riga predefiniti e come gli adapter salvano la memoria riutilizzando le visualizzazioni di riga. &ndash;
 
--   **Aspetto personalizzato** Modifica dello stile `ListView` di con layout personalizzati, tipi di carattere e colori. &ndash;
+- **Aspetto personalizzato** Modifica dello stile `ListView` di con layout personalizzati, tipi di carattere e colori. &ndash;
 
--   **Uso di SQLite** Come visualizzare i dati da un database SQLite con un `CursorAdapter`. &ndash;
+- **Uso di SQLite** Come visualizzare i dati da un database SQLite con un `CursorAdapter`. &ndash;
 
--   **Ciclo** di vita delle attività Considerazioni di progettazione per `ListView` l'implementazione di attività, tra cui il punto nel ciclo di vita in cui è necessario popolare i dati e quando rilasciare le risorse. &ndash;
+- **Ciclo** di vita delle attività Considerazioni di progettazione per `ListView` l'implementazione di attività, tra cui il punto nel ciclo di vita in cui è necessario popolare i dati e quando rilasciare le risorse. &ndash;
 
 La discussione, suddivisa in sei parti, inizia con una panoramica della `ListView` classe stessa prima di introdurre esempi progressivamente più complessi su come usarlo.
 
--   [Parti e funzionalità di ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
--   [Popolamento di un controllo ListView con dati](~/android/user-interface/layouts/list-view/populating.md)
--   [Personalizzazione dell'aspetto di un controllo ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [Uso di CursorAdapter](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [Uso di un ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView e ciclo di vita delle attività](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+- [Parti e funzionalità di ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+- [Popolamento di un controllo ListView con dati](~/android/user-interface/layouts/list-view/populating.md)
+- [Personalizzazione dell'aspetto di un controllo ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+- [Uso di CursorAdapter](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+- [Uso di un ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
+- [ListView e ciclo di vita delle attività](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
 ## <a name="summary"></a>Riepilogo

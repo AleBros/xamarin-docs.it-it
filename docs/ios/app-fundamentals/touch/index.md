@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: 8ed9ab164f6b14d794b29667ec96afab47e3fcde
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f11e72e433c443fbb9639b1f972ec4d87adf8b58
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655168"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526906"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Gestione del tocco nelle app Novell. iOS
 
@@ -28,9 +28,9 @@ Tuttavia, in alcuni casi è necessario usare l'elaborazione del tocco di basso l
 
 ## <a name="sections"></a>Sezioni
 
--  [Tocco in iOS](touch-in-ios.md)
--  [Procedura dettagliata: Uso del tocco in iOS](ios-touch-walkthrough.md)
--  [Rilevamento del multitouch](touch-tracking.md)
+- [Tocco in iOS](touch-in-ios.md)
+- [Procedura dettagliata: Uso del tocco in iOS](ios-touch-walkthrough.md)
+- [Rilevamento del multitouch](touch-tracking.md)
 
 Questa guida funge da introduzione al tocco in iOS. Per ulteriori informazioni sull'utilizzo di commenti e suggerimenti tattili 3D in iOS, introdotti rispettivamente in iOS 9 e 10, consultare le guide specifiche seguenti:
 

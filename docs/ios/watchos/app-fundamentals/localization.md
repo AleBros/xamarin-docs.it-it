@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 70555a0e2df3bcdd9c3abe47cf8231145891a826
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865954"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528409"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Utilizzo di watchOS localizzazione in Xamarin
 
@@ -56,7 +56,7 @@ Per impostazione predefinita l'app watch non è configurato per la localizzazion
 
 1. Creare **Base.lproj** directory e spostare le **Interface.storyboard** al suo interno.
 
-2. Creare  **<language>.lproj** directory per ogni lingua si desidera supportare.
+2. Creare le directory  **Language>.lprojperognilinguachesivuolesupportare\<** .
 
 3. Il **.lproj** directory devono contenere un' **Interface.strings** file di testo (il nome del file deve corrispondere a quello del storboard). È facoltativamente possibile inserire tutte le immagini che necessitano di localizzazione in tali directory.
 
@@ -125,7 +125,7 @@ displayText.SetText (localizedDisplay);
 
 Le immagini che vengono popolate dal codice possono essere impostate in due modi.
 
-1. È possibile modificare un `Image` controllo impostandone il valore per il nome della stringa di un'immagine che già esiste nell'App Watch, ad esempio
+1. È possibile modificare un `Image` controllo impostando il relativo valore sul nome di stringa di un'immagine già esistente nell'app Watch, ad esempio
 
     ```csharp
     displayImage.SetImage("gradient"); // image in Watch App (as shown above)
@@ -139,7 +139,7 @@ Le immagini che vengono popolate dal codice possono essere impostate in due modi
     }
     ```
 
-    Si noti che non è necessario specificare il **@2x** quando si fa riferimento al nome file dell'immagine.
+    Si noti che non è necessario specificare **@2x** quando si fa riferimento al nome file dell'immagine.
 
 Il secondo metodo è applicabile se si scarica un'immagine da un server remoto per eseguire il rendering in watch; anche Tuttavia in questo caso è necessario assicurarsi che l'immagine che è scaricare è localizzato correttamente in base alle preferenze dell'utente.
 

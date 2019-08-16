@@ -1,41 +1,41 @@
 ---
-title: Unit test di App aziendali
-description: In questo capitolo viene illustrato come gli unit test viene eseguito nell'app per dispositivi mobili di eShopOnContainers.
+title: Unit test di app aziendali
+description: Questo capitolo illustra il modo in cui viene eseguito il testing unità nell'app per dispositivi mobili eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831089"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529079"
 ---
-# <a name="unit-testing-enterprise-apps"></a>Unit test di App aziendali
+# <a name="unit-testing-enterprise-apps"></a>Unit test di app aziendali
 
-App per dispositivi mobili presentano problemi univoci che applicazioni desktop e basate sul web non sono necessario preoccuparsi. Gli utenti mobili variano dai dispositivi che usano, dalla connettività di rete, la disponibilità dei servizi e una gamma di altri fattori. Pertanto, è necessario testare le App per dispositivi mobili perché verrà usati nel mondo reale per migliorare la qualità, affidabilità e le prestazioni. Esistono molti tipi di test che devono essere eseguiti in un'app, tra cui unit test, test di integrazione e test, con gli unit test in corso la forma più comune di test dell'interfaccia utente.
+Le app per dispositivi mobili presentano problemi specifici che le applicazioni desktop e basate sul Web non devono preoccuparsi. Gli utenti mobili si differenziano per i dispositivi usati, dalla connettività di rete, dalla disponibilità dei servizi e da una serie di altri fattori. Pertanto, le app per dispositivi mobili devono essere testate perché verranno usate nel mondo reale per migliorare la qualità, l'affidabilità e le prestazioni. Sono disponibili molti tipi di test da eseguire in un'app, inclusi testing unità, test di integrazione e test dell'interfaccia utente, con testing unità la forma più comune di test.
 
-Uno unit test accetta un'unità di piccole dimensioni dell'app, in genere un metodo, isolato dal resto del codice e consente di verificare che tutto funzioni come previsto. L'obiettivo consiste nel verificare che ogni unità funzionale eseguita come previsto, in modo che gli errori non propagano in tutta l'app. Rilevamento di bug in cui si verifica è più efficiente che osservare l'effetto di un bug indirettamente in un momento secondario di errore.
+Una unit test accetta una piccola unità dell'app, in genere un metodo, la isola dalla parte rimanente del codice e verifica che si comportano come previsto. Il suo obiettivo consiste nel verificare che ogni unità di funzionalità venga eseguita come previsto, in modo che gli errori non si propaghino nell'intera app. Il rilevamento di un bug in cui si verifica è più efficiente che osservando l'effetto di un bug indirettamente in un punto secondario di errore.
 
-Gli unit test raggiungono la massima efficacia sulla qualità del codice quando è parte integrante del flusso di lavoro di sviluppo software. Non appena è stato scritto un metodo, devono essere scritti gli unit test verificare il comportamento del metodo in risposta a casi standard, limite e non corretti dei dati di input e che il controllo eventuali ipotesi esplicite o implicite effettuate dal codice. In alternativa, lo sviluppo basato su test e unit test vengono scritti prima del codice. In questo scenario, gli unit test è fungere da documentazione di progettazione sia come specifiche funzionali.
+Il testing unità ha il massimo effetto sulla qualità del codice quando è parte integrante del flusso di lavoro di sviluppo del software. Non appena è stato scritto un metodo, è necessario scrivere unit test che verificano il comportamento del metodo in risposta a casi standard, limite e non corretti di dati di input e che controllano qualsiasi presupposto esplicito o implicito eseguito dal codice. In alternativa, con lo sviluppo basato su test, gli unit test vengono scritti prima del codice. In questo scenario gli unit test agiscono sia come documentazione di progettazione sia come specifiche funzionali.
 
 > [!NOTE]
-> Unit test risultano molto efficace contro la regressione, vale a dire, la funzionalità che consentono di utilizzare, ma è stata distribuita da un aggiornamento difettoso.
+> Gli unit test sono molto efficaci rispetto alla regressione, ovvero le funzionalità che hanno usato per lavorare ma sono state disturbate da un aggiornamento difettoso.
 
-Gli unit test usano in genere il modello arrange-act-assert:
+Gli unit test usano in genere il modello Arrange-Act-Assert:
 
--   Il *disponi* sezione del metodo di unit test Inizializza oggetti e imposta il valore dei dati che viene passati al metodo sottoposto a test.
--   Il *agire* sezione richiama il metodo sottoposto a test con gli argomenti obbligatori.
--   Il *assert* sezione verifica che l'azione del metodo da testare si comporti come previsto.
+- La sezione *Arrange* del metodo unit test Inizializza gli oggetti e imposta il valore dei dati passati al metodo sottoposto a test.
+- La sezione *Act* richiama il metodo sottoposto a test con gli argomenti obbligatori.
+- La sezione *Assert* verifica che l'azione del metodo sottoposto a test si comportano come previsto.
 
-Seguendo questo modello garantisce che gli unit test sono leggibili e coerente.
+Seguendo questo modello si garantisce che gli unit test siano leggibili e coerenti.
 
-## <a name="dependency-injection-and-unit-testing"></a>Inserimento di dipendenze e gli Unit test
+## <a name="dependency-injection-and-unit-testing"></a>Inserimento di dipendenze e unit test
 
-Uno dei motivi per adottare un'architettura a regime di controllo è che facilita gli unit test. Uno dei tipi registrati con Autofac è il `OrderService` classe. Esempio di codice seguente mostra un contorno di questa classe:
+Una delle motivazioni per l'adozione di un'architettura a regime di controllo libero è che facilita il testing unità. Uno dei tipi registrati con Autofac è la `OrderService` classe. Nell'esempio di codice seguente viene illustrata una struttura di questa classe:
 
 ```csharp
 public class OrderDetailViewModel : ViewModelBase  
@@ -50,34 +50,34 @@ public class OrderDetailViewModel : ViewModelBase
 }
 ```
 
-Il `OrderDetailViewModel` classe presenta una dipendenza la `IOrderService` digitare che si risolve il contenitore quando crea un'istanza di un `OrderDetailViewModel` oggetto. Tuttavia, invece di creare un `OrderService` oggetto lo unit test la `OrderDetailViewModel` (classe), invece, sostituire il `OrderService` oggetto con una simulazione allo scopo di test. Figura 10-1 illustra questa relazione.
+La `OrderDetailViewModel` classe presenta una dipendenza `IOrderService` dal tipo che il contenitore risolve quando crea un'istanza di un `OrderDetailViewModel` oggetto. Tuttavia, invece di creare un `OrderService` oggetto per unit test la `OrderDetailViewModel` classe, sostituire l' `OrderService` oggetto con una simulazione per lo scopo dei test. La figura 10-1 illustra questa relazione.
 
 ![](unit-testing-images/unittesting.png "Classi che implementano l'interfaccia IOrderService")
 
 **Figura 10-1:** Classi che implementano l'interfaccia IOrderService
 
-Questo approccio consente la `OrderService` oggetto da passare nel `OrderDetailViewModel` classi in fase di esecuzione e ai fini di testabilità, consente il `OrderMockService` classe deve essere passato nel `OrderDetailViewModel` classe in fase di test. Il vantaggio principale di questo approccio è che consente gli unit test per essere eseguiti senza risorse difficile da gestire, ad esempio servizi web o database.
+Questo approccio consente di `OrderService` passare `OrderDetailViewModel` l'oggetto alla classe in fase di esecuzione e, per motivi di testabilità, consente di passare `OrderDetailViewModel` la `OrderMockService` classe alla classe in fase di test. Il vantaggio principale di questo approccio è che consente di eseguire gli unit test senza richiedere risorse non ingombranti, ad esempio servizi Web o database.
 
 ## <a name="testing-mvvm-applications"></a>Test delle applicazioni MVVM
 
-Test di modelli di visualizzazione dei modelli e dalle applicazioni MVVM è identico a un'altra classe di test e gli stessi strumenti e tecniche, ad esempio unit test e simulazione, possono essere usate. Tuttavia, esistono alcuni modelli tipici al modello e le classi di modello di visualizzazione, che possono trarre vantaggio dalle tecniche di test di unità specifica.
+Il testing dei modelli e la visualizzazione di modelli dalle applicazioni MVVM è identico a quello di qualsiasi altra classe ed è possibile usare gli stessi strumenti e tecniche, ad esempio gli unit test e le simulazioni. Tuttavia, esistono alcuni modelli tipici per modellare e visualizzare le classi di modelli, che possono trarre vantaggio da specifiche tecniche di unit test.
 
 > [!TIP]
-> Testare una cosa con ogni unit test. Non può essere tentati di far sì che un'unità di esercizio più di un aspetto del comportamento dell'unità. Questa operazione comporta i test che sono difficili da leggere e aggiornare. Può anche causare confusione durante l'interpretazione di un errore.
+> Testare una cosa con ogni unit test. Non tentare di creare un unit test esercitare più di un aspetto del comportamento dell'unità. Questa operazione conduce a test difficili da leggere e aggiornare. Può anche causare confusione durante l'interpretazione di un errore.
 
-L'app per dispositivi mobili Usa eShopOnContainers [xUnit](https://xunit.github.io/) per eseguire unit test, che supporta due tipi diversi di unit test:
+L'app per dispositivi mobili eShopOnContainers USA [xUnit](https://xunit.github.io/) per eseguire unit test, che supporta due tipi diversi di unit test:
 
--   I fact sono i test che sono sempre true, quale testare condizioni invarianti.
--   Teorie sono test che sono solo true per un particolare set di dati.
+- I fact sono test sempre veri, che testano le condizioni invariabili.
+- Le teorie sono test che sono veri solo per un determinato set di dati.
 
-Gli unit test inclusi con l'app per dispositivi mobili di eShopOnContainers vengono fatti i test e quindi, ogni metodo di unit test è decorata con il `[Fact]` attributo.
+Gli unit test inclusi con l'app per dispositivi mobili eShopOnContainers sono test di fact, quindi ogni unit test metodo è decorato con l' `[Fact]` attributo.
 
 > [!NOTE]
-> xUnit test vengono eseguiti da un test runner. Per eseguire il test runner, eseguire il progetto eShopOnContainers.TestRunner per la piattaforma richiesta.
+> i test xUnit vengono eseguiti da un test runner. Per eseguire il test runner, eseguire il progetto eShopOnContainers. TestRunner per la piattaforma richiesta.
 
 ### <a name="testing-asynchronous-functionality"></a>Test della funzionalità asincrona
 
-Quando si implementa il pattern MVVM, visualizzazione di modelli in genere richiama le operazioni sui servizi, spesso in modo asincrono. Test per codice che richiama in genere queste operazioni utilizzano gli oggetti fittizi come sostituzioni per i servizi effettivamente. Esempio di codice seguente viene illustrato il test di funzionalità asincrona passando un servizio fittizio in un modello di visualizzazione:
+Quando si implementa il modello MVVM, i modelli di visualizzazione in genere richiamano le operazioni sui servizi, spesso in modo asincrono. I test per il codice che richiama queste operazioni in genere utilizzano simulazioni come sostituzioni per i servizi effettivi. Nell'esempio di codice seguente viene illustrato il test della funzionalità asincrona passando un servizio fittizio in un modello di visualizzazione:
 
 ```csharp
 [Fact]  
@@ -93,15 +93,15 @@ public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()
 }
 ```
 
-Questo unit test verifica che il `Order` proprietà del `OrderDetailViewModel` istanza avrà un valore dopo il `InitializeAsync` metodo è stato richiamato. Il `InitializeAsync` metodo viene richiamato quando si accede alla vista corrispondente del modello di visualizzazione. Per altre informazioni sulla navigazione, vedere [navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
+Questo unit test verifica che la `Order` proprietà `OrderDetailViewModel` dell'istanza avrà un valore dopo che il `InitializeAsync` metodo è stato richiamato. Il `InitializeAsync` metodo viene richiamato quando si passa alla visualizzazione corrispondente del modello di visualizzazione. Per ulteriori informazioni sulla navigazione, vedere [navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 
-Quando la `OrderDetailViewModel` viene creata l'istanza, è previsto che un `OrderService` istanza specificare come argomento. Tuttavia, il `OrderService` recupera i dati da un servizio web. Di conseguenza, un' `OrderMockService` istanza, che è una versione fittizia del `OrderService` classe, viene specificato come argomento per il `OrderDetailViewModel` costruttore. Quindi, quando il modello di visualizzazione `InitializeAsync` metodo viene richiamato, che richiama `IOrderService` operazioni, dati fittizi sono recuperati, piuttosto che stanno comunicando con un servizio web.
+Quando viene `OrderDetailViewModel` creata l'istanza, prevede che un' `OrderService` istanza venga specificata come argomento. Tuttavia, recupera `OrderService` i dati da un servizio Web. Pertanto, un' `OrderMockService` istanza `OrderService` di, che è una versione fittizia della classe, viene specificata come argomento per il `OrderDetailViewModel` costruttore. Quindi, quando viene richiamato il `InitializeAsync` metodo del modello di visualizzazione, che `IOrderService` richiama le operazioni, vengono recuperati i dati fittizi anziché comunicare con un servizio Web.
 
-### <a name="testing-inotifypropertychanged-implementations"></a>Test di implementazioni INotifyPropertyChanged
+### <a name="testing-inotifypropertychanged-implementations"></a>Test delle implementazioni di INotifyPropertyChanged
 
-Implementazione di `INotifyPropertyChanged` interfaccia consente di reagire alle modifiche che derivano dalla visualizzazione viste modelli e i modelli. Queste modifiche non sono limitate ai dati visualizzati nei controlli, vengono usati anche per gestire la visualizzazione, ad esempio gli stati del modello di visualizzazione che generano le animazioni da avviare o controlli deve essere disabilitata.
+L'implementazione `INotifyPropertyChanged` dell'interfaccia consente alle viste di rispondere alle modifiche che hanno origine da modelli e modelli di visualizzazione. Queste modifiche non sono limitate ai dati visualizzati nei controlli, ma vengono usate anche per controllare la visualizzazione, ad esempio gli Stati di visualizzazione del modello che provocano l'avvio delle animazioni o la disabilitazione dei controlli.
 
-Proprietà che possono essere aggiornate direttamente dallo unit test può essere testata mediante l'aggiunta di un gestore eventi per il `PropertyChanged` eventi e verifica se l'evento viene generato dopo aver impostato un nuovo valore della proprietà. Esempio di codice seguente mostra un test di questo tipo:
+Le proprietà che possono essere aggiornate direttamente dalla unit test possono essere testate connettendo un gestore eventi all' `PropertyChanged` evento e controllando se l'evento viene generato dopo l'impostazione di un nuovo valore per la proprietà. Nell'esempio di codice seguente viene illustrato un test di questo tipo:
 
 ```csharp
 [Fact]  
@@ -123,11 +123,11 @@ public async Task SettingOrderPropertyShouldRaisePropertyChanged()
 }
 ```
 
-Richiama questo unit test di `InitializeAsync` metodo per il `OrderViewModel` classe, determinando in tal modo relativo `Order` proprietà da aggiornare. Lo unit test passerà, a condizione che il `PropertyChanged` evento viene generato per il `Order` proprietà.
+Questo unit test richiama il metodo `InitializeAsync` `OrderViewModel` della classe, che determina l'aggiornamento della `Order` relativa proprietà. Il unit test passerà, a condizione che `PropertyChanged` l'evento venga generato per `Order` la proprietà.
 
 ### <a name="testing-message-based-communication"></a>Test della comunicazione basata su messaggi
 
-Visualizzazione di modelli che utilizzano le [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe per la comunicazione tra le classi di accoppiamento possibile unit test tramite sottoscrive il messaggio inviato dal codice sottoposto a test, come illustrato nell'esempio di codice seguente:
+I modelli di visualizzazione che [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) usano la classe per la comunicazione tra classi a regime di controllo libero possono essere unit test sottoscrivendo il messaggio inviato dal codice sottoposto a test, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 [Fact]  
@@ -148,11 +148,11 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
 }
 ```
 
-Questo unit test verifica che il `CatalogViewModel` pubblica il `AddProduct` messaggio di risposta alla relativa `AddCatalogItemCommand` in esecuzione. Poiché il [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe supporta le sottoscrizioni di messaggio multicast, lo unit test può sottoscrivere il `AddProduct` messaggi ed eseguire un delegato di callback in risposta alla ricezione. Imposta il delegato di callback, specificato come un'espressione lambda, un `boolean` campo che viene usato per il `Assert` istruzione per verificare il comportamento del test.
+Questo unit test verifica che il `CatalogViewModel` pubblichi il `AddProduct` messaggio in risposta alla sua `AddCatalogItemCommand` esecuzione. Poiché la [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe supporta le sottoscrizioni di messaggi multicast, il unit test può `AddProduct` sottoscrivere il messaggio ed eseguire un delegato di callback in risposta alla ricezione. Questo delegato di callback, specificato come espressione lambda, imposta un `boolean` campo usato `Assert` dall'istruzione per verificare il comportamento del test.
 
-### <a name="testing-exception-handling"></a>La gestione delle eccezioni di test
+### <a name="testing-exception-handling"></a>Test della gestione delle eccezioni
 
-Gli unit test possono essere scritto anche che il controllo che vengono generate eccezioni specifiche per le azioni non è valide o input, come illustrato nell'esempio di codice seguente:
+È anche possibile scrivere unit test che verificano che vengano generate eccezioni specifiche per le azioni o gli input non validi, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 [Fact]  
@@ -168,16 +168,16 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 }
 ```
 
-Questo unit test verrà generata un'eccezione, perché il [ `ListView` ](xref:Xamarin.Forms.ListView) controllo non dispone di un evento denominato `OnItemTapped`. Il `Assert.Throws<T>` è un metodo generico in cui `T` è il tipo dell'eccezione prevista. L'argomento passato al `Assert.Throws<T>` metodo è un'espressione lambda che genererà l'eccezione. Pertanto, lo unit test si passerà a condizione che l'espressione lambda genera un `ArgumentException`.
+Questa unit test genererà un'eccezione, perché il [`ListView`](xref:Xamarin.Forms.ListView) controllo non ha un evento denominato. `OnItemTapped` Il `Assert.Throws<T>` metodo è un metodo generico in `T` cui è il tipo dell'eccezione prevista. L'argomento passato al `Assert.Throws<T>` metodo è un'espressione lambda che genererà l'eccezione. Pertanto, il unit test passerà a condizione che l'espressione lambda generi `ArgumentException`un'eccezione.
 
 > [!TIP]
-> Evitare la scrittura di unit test che esaminano le stringhe di messaggio eccezione. Le stringhe di messaggio di eccezione possono cambiare nel tempo e quindi gli unit test che si basano sulla loro presenza sono considerati come fragile.
+> Evitare di scrivere unit test che esaminano le stringhe di messaggio di eccezione. Le stringhe dei messaggi di eccezione potrebbero cambiare nel tempo, quindi gli unit test che si basano sulla loro presenza vengono considerati fragili.
 
-### <a name="testing-validation"></a>Test della convalida
+### <a name="testing-validation"></a>Verifica della convalida
 
-Esistono due aspetti legati all'esecuzione di test l'implementazione di convalida: test che qualsiasi regola di convalida viene implementati in modo corretto e che il `ValidatableObject<T>` classe eseguita come previsto.
+Esistono due aspetti per testare l'implementazione della convalida: verificare che le regole di convalida siano implementate correttamente e verificare che `ValidatableObject<T>` la classe esegua come previsto.
 
-La logica di convalida è in genere semplice da testare, perché in genere è un processo self-contained in cui l'output dipende dall'input. Dovrebbe esserci test sui risultati della chiamata di `Validate` metodo su ogni proprietà dispone di almeno una regola di convalida associati, come illustrato nell'esempio di codice seguente:
+La logica di convalida è in genere semplice da testare, perché si tratta in genere di un processo indipendente in cui l'output dipende dall'input. Devono essere testati i risultati della chiamata al `Validate` metodo su ogni proprietà con almeno una regola di convalida associata, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 [Fact]  
@@ -193,9 +193,9 @@ public void CheckValidationPassesWhenBothPropertiesHaveDataTest()
 }
 ```
 
-Questo unit test verifica che la convalida ha esito positivo quando le due `ValidatableObject<T>` delle proprietà nel `MockViewModel` istanza entrambi disporre dei dati.
+Questo unit test verifica che la convalida abbia esito positivo `ValidatableObject<T>` quando le due `MockViewModel` proprietà nell'istanza dispongono di dati.
 
-Oltre a controllare che la convalida ha esito positivo, convalida gli unit test devono anche verificare i valori delle `Value`, `IsValid`, e `Errors` proprietà della ognuno `ValidatableObject<T>` istanza, verificare che la classe eseguita come previsto. L'esempio di codice seguente illustra uno unit test che esegue questa operazione:
+Oltre a verificare che la convalida abbia esito positivo, gli unit test di convalida devono anche controllare `Value`i `IsValid`valori della `Errors` proprietà, e `ValidatableObject<T>` di ogni istanza, per verificare che la classe venga eseguita come previsto. Nell'esempio di codice seguente viene illustrata una unit test che esegue questa operazione:
 
 ```csharp
 [Fact]  
@@ -216,18 +216,18 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 }
 ```
 
-Questo unit test verifica che la convalida ha esito negativo quando la `Surname` proprietà del `MockViewModel` non dispone di tutti i dati e il `Value`, `IsValid`, e `Errors` proprietà della ognuno `ValidatableObject<T>` istanza siano impostate correttamente.
+Questo unit test verifica che la convalida abbia esito negativo quando `MockViewModel` la `Surname` proprietà di non contiene dati e `Value`la `IsValid`proprietà, `Errors` e di ogni `ValidatableObject<T>` istanza sono impostate correttamente.
 
 ## <a name="summary"></a>Riepilogo
 
-Uno unit test accetta un'unità di piccole dimensioni dell'app, in genere un metodo, isolato dal resto del codice e consente di verificare che tutto funzioni come previsto. L'obiettivo consiste nel verificare che ogni unità funzionale eseguita come previsto, in modo che gli errori non propagano in tutta l'app.
+Una unit test accetta una piccola unità dell'app, in genere un metodo, la isola dalla parte rimanente del codice e verifica che si comportano come previsto. Il suo obiettivo consiste nel verificare che ogni unità di funzionalità venga eseguita come previsto, in modo che gli errori non si propaghino nell'intera app.
 
-Il comportamento di un oggetto sottoposto a test può essere isolato, sostituendo gli oggetti dipendenti con oggetti fittizi che simulano il comportamento degli oggetti dipendenti. In questo modo gli unit test per essere eseguiti senza risorse difficile da gestire, ad esempio servizi web o database.
+Il comportamento di un oggetto sottoposto a test può essere isolato sostituendo gli oggetti dipendenti con oggetti fittizi che simulano il comportamento degli oggetti dipendenti. In questo modo è possibile eseguire unit test senza richiedere risorse ingombranti, ad esempio servizi Web o database.
 
-Test di modelli di visualizzazione dei modelli e dalle applicazioni MVVM è identico a un'altra classe di test e gli stessi strumenti e tecniche da utilizzare.
+Il testing di modelli e modelli di visualizzazione da applicazioni MVVM è identico a quello di altre classi ed è possibile usare gli stessi strumenti e tecniche.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Scarica eBook (PDF 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [Scarica eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

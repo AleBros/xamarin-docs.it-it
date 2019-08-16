@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0f2136aa4a07d289e1e8aecc6cb37460fdc5727c
-ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
+ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024522"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526960"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Creare un layout personalizzato in Novell. Forms
 
@@ -428,6 +428,6 @@ Il numero di colonne in ogni riga dipende la dimensione di foto, la larghezza de
 - [WrapLayout (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Layout personalizzati](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Creazione di layout personalizzati in xamarin. Forms (video)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
-- [Layout<T>](xref:Xamarin.Forms.Layout`1)
+- [Layout\<T >](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

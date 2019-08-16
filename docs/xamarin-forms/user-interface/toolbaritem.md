@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: dfc50defb6eafe705cc9c59b1b9793f1ce48c527
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: b42a300d9d76a18322891856486720116eb6a8d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984303"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522034"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Novell. Forms ToolbarItem
 
@@ -37,6 +37,9 @@ La `ToolbarItem` classe eredita le seguenti proprietà utilizzate in genere `Men
 * [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)è un `object` oggetto che specifica il parametro che deve essere passato `SearchCommand`a.
 
 Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) in modo che `ToolbarItem` un'istanza possa essere la destinazione delle associazioni dati.
+
+> [!NOTE]
+> Un'alternativa alla creazione di una barra [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) degli strumenti dagli oggetti consiste [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) nell'impostare la proprietà associata su una classe layout contenente più visualizzazioni. Per ulteriori informazioni, vedere [visualizzazione delle visualizzazioni nella barra di spostamento](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md#displaying-views-in-the-navigation-bar).
 
 ## <a name="create-a-toolbaritem"></a>Creare un ToolbarItem
 

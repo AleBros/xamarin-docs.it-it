@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 26. Layout personalizzati
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 26. Layout personalizzati'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 26. Layout personalizzati'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 9fa9802f94e10612c4b0fe02c84ddcabc89820a8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a9887d12d251e60cf6767fe89f6125fe1438d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331560"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529243"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Riepilogo del capitolo 26. Layout personalizzati
 
@@ -116,7 +116,7 @@ Infinito vincoli indicano che le dimensioni richieste devono riflettere le dimen
 
 Il [ **ExploreChildSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) vincolo Visualizza e dimensioni richiedere informazioni sul layout semplice.
 
-## <a name="deriving-from-layoutview"></a>Derivazione da Layout<View>
+## <a name="deriving-from-layoutview"></a>Derivazione dalla\<visualizzazione layout >
 
 Una classe di layout personalizzato deriva da `Layout<View>`. Ha due compiti:
 

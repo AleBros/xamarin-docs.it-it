@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 2efc782386b8ec39ecca21aaf88738c813c260f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511653"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529053"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -143,8 +143,8 @@ Il Xamarin Profiler può essere avviato dall'IDE quando si esegue la profilatura
 
 #### <a name="launching-from-visual-studio"></a>Avvio da Visual Studio
 
-1.  Prima di tutto, assicurarsi che l'applicazione sia caricata in Visual Studio e selezionare la configurazione di debug (impostazione predefinita), come specificato in precedenza.
-2.  Sfogliare per **analizzare > Xamarin Profiler** in Visual Studio per aprire il profiler, come illustrato nel diagramma seguente:
+1. Prima di tutto, assicurarsi che l'applicazione sia caricata in Visual Studio e selezionare la configurazione di debug (impostazione predefinita), come specificato in precedenza.
+2. Sfogliare per **analizzare > Xamarin Profiler** in Visual Studio per aprire il profiler, come illustrato nel diagramma seguente:
 
 ![Avvio del profiler da Visual Studio](images/start-profiling-vs.png)
 
@@ -231,8 +231,8 @@ Sono disponibili diverse visualizzazioni dati nello strumento allocazioni, che c
 La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e raggruppare oggetti, fornire statistiche sulla memoria allocata e le allocazioni principali, nonché visualizzazioni per traccia dello stack e percorso alla radice.
 
 - **Albero delle chiamate** : viene visualizzata l'intera struttura ad albero delle chiamate di tutti i thread dell'applicazione e sono incluse informazioni sulla memoria allocata in ogni nodo. Quando si seleziona un elemento nell'elenco, tutti i nodi di pari livello verranno visualizzati in grigio. È possibile espandere l'albero o fare doppio clic sull'elemento per eseguire il drill-down. Quando si visualizza questa vista dati, è possibile utilizzare la vista impostazioni di visualizzazione per modificare il modo in cui viene visualizzata. Attualmente sono disponibili due opzioni:
-    1.  **Albero delle chiamate invertito** : considera l'analisi dello stack dall'alto verso il basso. Si tratta di un'opzione di visualizzazione utile che indica i metodi più profondi in cui la CPU ha speso il suo tempo.
-    2.  **Separa per thread** : questa opzione consente di organizzare l'albero delle chiamate per thread.
+    1. **Albero delle chiamate invertito** : considera l'analisi dello stack dall'alto verso il basso. Si tratta di un'opzione di visualizzazione utile che indica i metodi più profondi in cui la CPU ha speso il suo tempo.
+    2. **Separa per thread** : questa opzione consente di organizzare l'albero delle chiamate per thread.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

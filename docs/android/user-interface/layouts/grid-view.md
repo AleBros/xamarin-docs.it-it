@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a1bcb83d6057cb7d4a43c510d7b5805b574812e6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: f71c275dd2beee6aedf41ecd19c8a4a39ab5a36f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510054"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522636"
 ---
 # <a name="xamarinandroid-gridview"></a>GridView Novell. Android
 
@@ -166,5 +166,4 @@ modificando le proprietà degli elementi. Ad esempio, anziché utilizzare [`Layo
 - [`ImageView`](xref:Android.Widget.ImageView)
 - [`BaseAdapter`](xref:Android.Widget.BaseAdapter)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella*
-[*licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/).
+_Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella [licenza Creative Commons 2,5 Attribution](http://creativecommons.org/licenses/by/2.5/)._

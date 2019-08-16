@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 2320aa9a611a44d654bcbae18bb2664797054e50
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fb8f4a8e62ea163dc58589382c31c4bf19973c36
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647914"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528266"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
 
@@ -20,11 +20,11 @@ le applicazioni iOS possono vendere prodotti o servizi digitali usando StoreKit,
 
 Per fornire funzionalità di acquisto in-app, è necessario eseguire una serie di passaggi:
 
--  **Configurazione dell'app** : il profilo di provisioning dell'applicazione deve essere configurato correttamente.
--  **Creazione di prodotti** : le descrizioni e i prezzi dei prodotti devono essere creati nel portale di iTunes Connect.
--  **Implementazione di StoreKit** : l'API StoreKit deve essere implementata in base ai tipi di prodotti venduti.
--  **Compilazione dell'interfaccia utente e dei prodotti stessi** : i prodotti devono essere implementati, inclusi i meccanismi per tenere traccia di ogni acquisto e backup/ripristino, se appropriato.
--  **Monitoraggio delle vendite e della ricezione dei fondi** : usare le informazioni fornite da iTunes Connect per monitorare le tendenze di vendita e tenere traccia del reddito.
+- **Configurazione dell'app** : il profilo di provisioning dell'applicazione deve essere configurato correttamente.
+- **Creazione di prodotti** : le descrizioni e i prezzi dei prodotti devono essere creati nel portale di iTunes Connect.
+- **Implementazione di StoreKit** : l'API StoreKit deve essere implementata in base ai tipi di prodotti venduti.
+- **Compilazione dell'interfaccia utente e dei prodotti stessi** : i prodotti devono essere implementati, inclusi i meccanismi per tenere traccia di ogni acquisto e backup/ripristino, se appropriato.
+- **Monitoraggio delle vendite e della ricezione dei fondi** : usare le informazioni fornite da iTunes Connect per monitorare le tendenze di vendita e tenere traccia del reddito.
 
 Questo documento illustra come eseguire tutti questi passaggi per fornire acquisti in-app con Novell. iOS.
 
@@ -50,11 +50,11 @@ Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione
 
 Questo articolo ha introdotto il concetto di acquisto in-app, descritto come configurare l'applicazione per sfruttarne i vantaggi ed esempi presentati con Novell. iOS. È stato analizzato:
 
--  **portale** di provisioning iOS: linee guida per abilitare la funzionalità di acquisto in-app.
--  **iTunes Connect** : configurazione dei prodotti da vendere nell'app.
--  **Store Kit** : spiegazione delle classi usate per compilare le funzionalità di acquisto in-app.
--  **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Novell. iOS.
--  **Creazione di report** : Panoramica delle statistiche disponibili tramite iTunes Connect.
+- **portale** di provisioning iOS: linee guida per abilitare la funzionalità di acquisto in-app.
+- **iTunes Connect** : configurazione dei prodotti da vendere nell'app.
+- **Store Kit** : spiegazione delle classi usate per compilare le funzionalità di acquisto in-app.
+- **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Novell. iOS.
+- **Creazione di report** : Panoramica delle statistiche disponibili tramite iTunes Connect.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

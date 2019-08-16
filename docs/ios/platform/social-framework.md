@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 715fd408cc05671beba0277a690585fdbb558c7e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff406b8bd6630ef9e17011e0b4b6b996fa944d89
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654023"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528790"
 ---
 # <a name="social-framework-in-xamarinios"></a>Framework di social networking in Novell. iOS
 
@@ -55,9 +55,9 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 
  `SLComposeViewController`non invia mai direttamente un tweet senza l'intervento dell'utente. Tuttavia, può essere inizializzato con i metodi seguenti:
 
--   `SetInitialText`: Aggiunge il testo iniziale da visualizzare nel Tweet. 
--  `AddUrl`: Aggiunge un URL al tweet.
--  `AddImage`: Aggiunge un'immagine al tweet.
+- `SetInitialText`: Aggiunge il testo iniziale da visualizzare nel Tweet. 
+- `AddUrl`: Aggiunge un URL al tweet.
+- `AddImage`: Aggiunge un'immagine al tweet.
 
 
 Una volta inizializzato `PresentVIewController` , chiamando viene visualizzata la vista `SLComposeViewController`creata da. L'utente può quindi modificare e inviare il tweet, oppure annullarne l'invio. In entrambi i casi, il controller deve essere chiuso nella `CompletionHandler`, dove il risultato può essere controllato anche per verificare se il tweet è stato inviato o annullato, come illustrato di seguito:

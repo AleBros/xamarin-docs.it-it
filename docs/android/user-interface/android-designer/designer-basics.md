@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: 383a49f9baa85d50c956efbdd2ce29e3d62977b4
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485936"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523710"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Nozioni di base su Novell. Android Designer
 
@@ -34,9 +34,9 @@ Analogamente, è possibile aggiungere un nuovo layout facendo clic con il pulsan
 Viene creato un nuovo file di layout con **estensione aXML** che viene caricato nella finestra di progettazione.
 
 > [!TIP]
-> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione XML all'interno del Android Designer.
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
 >
-> I file con estensione aXML e XML sono supportati nell'Android Designer.
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
 
 ## <a name="designer-features"></a>Funzionalità della finestra di progettazione
 
@@ -46,17 +46,17 @@ La finestra di progettazione è costituita da diverse sezioni che supportano le 
 
 Quando si modifica un layout nella finestra di progettazione, è possibile utilizzare le funzionalità seguenti per creare e modellare la progettazione:
 
--   **Area di progettazione** &ndash; Semplifica la costruzione visiva dell'interfaccia utente fornendo una rappresentazione modificabile del modo in cui il layout verrà visualizzato nel dispositivo. Il **area di progettazione** viene visualizzato all'interno del **riquadro di progettazione** (con la **barra degli strumenti della finestra di progettazione** posizionata sopra).
+- **Area di progettazione** &ndash; Semplifica la costruzione visiva dell'interfaccia utente fornendo una rappresentazione modificabile del modo in cui il layout verrà visualizzato nel dispositivo. Il **area di progettazione** viene visualizzato all'interno del **riquadro di progettazione** (con la **barra degli strumenti della finestra di progettazione** posizionata sopra).
 
--   **Riquadro di origine** Fornisce una visualizzazione dell'origine XML sottostante che corrisponde alla progettazione presentata nell' **area di progettazione.** &ndash;
+- **Riquadro di origine** Fornisce una visualizzazione dell'origine XML sottostante che corrisponde alla progettazione presentata nell' **area di progettazione.** &ndash;
 
--   **Barra degli strumenti della finestra di progettazione** &ndash; Visualizza un elenco di selettori: **Dispositivo**, **versione**, **tema**, configurazione layout e impostazioni barra delle azioni. La **barra degli strumenti di progettazione** include anche le icone per l'avvio dell'editor del tema e per l'abilitazione della griglia di progettazione materiale.
+- **Barra degli strumenti della finestra di progettazione** &ndash; Visualizza un elenco di selettori: **Dispositivo**, **versione**, **tema**, configurazione layout e impostazioni barra delle azioni. La **barra degli strumenti di progettazione** include anche le icone per l'avvio dell'editor del tema e per l'abilitazione della griglia di progettazione materiale.
 
--   **Casella degli strumenti** Fornisce un elenco di widget e layout che è possibile trascinare nella **area di progettazione.** &ndash;
+- **Casella degli strumenti** Fornisce un elenco di widget e layout che è possibile trascinare nella **area di progettazione.** &ndash;
 
--   **Finestra Proprietà** &ndash; Elenca le proprietà del widget selezionato per la visualizzazione e la modifica.
+- **Finestra Proprietà** &ndash; Elenca le proprietà del widget selezionato per la visualizzazione e la modifica.
 
--   **Struttura documento** &ndash; Visualizza la struttura ad albero dei widget che compongono il layout. È possibile fare clic su un elemento nell'albero per fare in modo che sia selezionato nella **area di progettazione**. Inoltre, facendo clic su un elemento nell'albero vengono caricate le proprietà dell'elemento nella finestra **Proprietà** .
+- **Struttura documento** &ndash; Visualizza la struttura ad albero dei widget che compongono il layout. È possibile fare clic su un elemento nell'albero per fare in modo che sia selezionato nella **area di progettazione**. Inoltre, facendo clic su un elemento nell'albero vengono caricate le proprietà dell'elemento nella finestra **Proprietà** .
 
 ## <a name="design-surface"></a>Area di progettazione
 
@@ -74,31 +74,31 @@ La **barra degli strumenti della finestra di progettazione** (posizionata sopra 
 
 La **barra degli strumenti di progettazione** consente di accedere alle funzionalità seguenti:
 
--   Selettore di **layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
+- Selettore di **layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
 
--   **Selettore dispositivi** &ndash; Definisce un set di qualificatori, ad esempio le dimensioni dello schermo, la risoluzione e la disponibilità della tastiera, associati a un dispositivo specifico. È anche possibile aggiungere ed eliminare nuovi dispositivi.
+- **Selettore dispositivi** &ndash; Definisce un set di qualificatori, ad esempio le dimensioni dello schermo, la risoluzione e la disponibilità della tastiera, associati a un dispositivo specifico. È anche possibile aggiungere ed eliminare nuovi dispositivi.
 
--   Selettore di **versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
+- Selettore di **versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
 
--   **Selettore tema** &ndash; Consente di selezionare il tema dell'interfaccia utente per il layout.
+- **Selettore tema** &ndash; Consente di selezionare il tema dell'interfaccia utente per il layout.
 
--   **Selettore configurazione** Seleziona la configurazione del dispositivo, ad esempio *verticale* o *orizzontale.* &ndash;
+- **Selettore configurazione** Seleziona la configurazione del dispositivo, ad esempio *verticale* o *orizzontale.* &ndash;
 
--   **Opzioni qualificatore risorse**    Apre una finestra di dialogo in cui sono presenti menu a discesa per la selezione delle opzioni lingua, modalità interfaccia utente, modalità notturna e schermata rotonda. &ndash;
+- **Opzioni qualificatore risorse**Apre una finestra di dialogo in cui sono presenti menu a discesa per la selezione delle opzioni lingua, modalità interfaccia utente, modalità notturna e schermata rotonda. &ndash;
 
--   **Impostazioni barra delle azioni** &ndash; Configura le impostazioni barra delle azioni per il layout.
+- **Impostazioni barra delle azioni** &ndash; Configura le impostazioni barra delle azioni per il layout.
 
--   **Editor tema** Apre l' *Editor del tema*, che consente di personalizzare gli elementi del tema selezionato. &ndash;
+- **Editor tema** Apre l' *Editor del tema*, che consente di personalizzare gli elementi del tema selezionato. &ndash;
 
--   **Griglia di progettazione materiale** Abilita o Disabilita la griglia di *progettazione materiali.* &ndash; La voce di menu a discesa accanto alla griglia di progettazione materiale apre una finestra di dialogo che consente di personalizzare la griglia.
+- **Griglia di progettazione materiale** Abilita o Disabilita la griglia di *progettazione materiali.* &ndash; La voce di menu a discesa accanto alla griglia di progettazione materiale apre una finestra di dialogo che consente di personalizzare la griglia.
 
 Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomenti seguenti:
 
--   [I qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul selettore di **dispositivo**, il selettore di **versione di Android**, il selettore del **tema**, il selettore   **Opzioni**e **barra delle azioni Impostazioni**.
+- [I qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul selettore di **dispositivo**, il selettore di **versione di Android**, il selettore del **tema**, il selettore  **Opzioni**e **barra delle azioni Impostazioni**.
 
--   [In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il selettore di **layout alternativo**.
+- [In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il selettore di **layout alternativo**.
 
--   [Novell. Android designer le funzionalità di progettazione del materiale](~/android/user-interface/android-designer/material-design-features.md) forniscono una panoramica completa dell' **Editor del tema** e della griglia di **progettazione del materiale**.
+- [Novell. Android designer le funzionalità di progettazione del materiale](~/android/user-interface/android-designer/material-design-features.md) forniscono una panoramica completa dell' **Editor del tema** e della griglia di **progettazione del materiale**.
 
 ### <a name="context-menu-commands"></a>Comandi del menu di scelta rapida
 
@@ -108,9 +108,9 @@ Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomen
 
 In questo esempio, facendo clic con il `TextView` pulsante destro del mouse su un viene aperto un menu di scelta rapida che fornisce diverse opzioni:
 
--   **LinearLayout** apre un sottomenu per la modifica `LinearLayout` dell'elemento padre `TextView`di. &ndash;
+- **LinearLayout** apre un sottomenu per la modifica `LinearLayout` dell'elemento padre `TextView`di. &ndash;
 
--   **Elimina**, **copia**e **taglia** &ndash; le operazioni `TextView`che si applicano al pulsante destro del mouse.
+- **Elimina**, **copia**e **taglia** &ndash; le operazioni `TextView`che si applicano al pulsante destro del mouse.
 
 
 ### <a name="zoom-controls"></a>Controlli zoom
@@ -121,15 +121,15 @@ Il **area di progettazione** supporta lo zoom con diversi controlli, come illust
 
 Questi controlli semplificano la visualizzazione di determinate aree dell'interfaccia utente nella finestra di progettazione:
 
--   **Evidenziare i contenitori** Evidenzia i contenitori nel area di progettazione in modo che risultino più facili da individuare quando si esegue lo zoom avanti e indietro.  &ndash;
+- **Evidenziare i contenitori** Evidenzia i contenitori nel area di progettazione in modo che risultino più facili da individuare quando si esegue lo zoom avanti e indietro. &ndash;
 
--   **Dimensioni normali** &ndash; Esegue il rendering del formato pixel per pixel in modo da visualizzare il modo in cui il layout esamina la risoluzione del dispositivo selezionato.
+- **Dimensioni normali** &ndash; Esegue il rendering del formato pixel per pixel in modo da visualizzare il modo in cui il layout esamina la risoluzione del dispositivo selezionato.
 
--   **Adatta alla finestra** &ndash; Imposta il livello di zoom in modo che l'intero layout sia visibile nel area di progettazione.
+- **Adatta alla finestra** &ndash; Imposta il livello di zoom in modo che l'intero layout sia visibile nel area di progettazione.
 
--   **Zoom avanti** &ndash; Esegue lo zoom avanti in modo incrementale a ogni clic, ingrandindo il layout.
+- **Zoom avanti** &ndash; Esegue lo zoom avanti in modo incrementale a ogni clic, ingrandindo il layout.
 
--   **Zoom indietro** &ndash; Esegue lo zoom indietro in modo incrementale a ogni clic, facendo in modo che il layout risulti più piccolo nell'area di progettazione.
+- **Zoom indietro** &ndash; Esegue lo zoom indietro in modo incrementale a ogni clic, facendo in modo che il layout risulti più piccolo nell'area di progettazione.
 
 Si noti che l'impostazione di zoom scelta non influisce sull'interfaccia utente dell'applicazione in fase di esecuzione.
 
@@ -141,17 +141,17 @@ Nella striscia centrale tra i riquadri **progettazione** e **origine** sono disp
 
 Questi pulsanti eseguono le operazioni seguenti:
 
--   **Progettazione** Questo pulsante in primo piano, **progettazione**, seleziona il riquadro di **progettazione.** &ndash; Quando si fa clic su questo pulsante, i riquadri **casella degli strumenti** e **Proprietà** sono abilitati e la **barra degli strumenti Editor di testo** non viene visualizzata. Quando si fa clic sul pulsante **Comprimi** (vedere di seguito), il riquadro di **progettazione** viene presentato da solo senza il riquadro di **origine** .
+- **Progettazione** Questo pulsante in primo piano, **progettazione**, seleziona il riquadro di **progettazione.** &ndash; Quando si fa clic su questo pulsante, i riquadri **casella degli strumenti** e **Proprietà** sono abilitati e la **barra degli strumenti Editor di testo** non viene visualizzata. Quando si fa clic sul pulsante **Comprimi** (vedere di seguito), il riquadro di **progettazione** viene presentato da solo senza il riquadro di **origine** .
 
--   **Scambia riquadri**     Questo pulsante (che assomiglia a due frecce opposte) scambia i riquadri di progettazione e di origine in modo che il riquadro di origine si trovi a sinistra e il riquadro di progettazione si trovi a destra. &ndash; Se si fa clic nuovamente, i riquadri vengono nuovamente scambiati nei rispettivi percorsi originali.
+- **Scambia riquadri** Questo pulsante (che assomiglia a due frecce opposte) scambia i riquadri di progettazione e di origine in modo che il riquadro di origine si trovi a sinistra e il riquadro di progettazione si trovi a destra. &ndash; Se si fa clic nuovamente, i riquadri vengono nuovamente scambiati nei rispettivi percorsi originali.
 
--   **Origine** dati Questo pulsante, che è simile a due parentesi angolari opposte, seleziona il riquadro di **origine.** &ndash; Quando si fa clic su questo pulsante, i riquadri **casella degli strumenti** e **Proprietà** vengono disabilitati e la **barra degli strumenti Editor di testo** viene resa visibile nella parte superiore di Visual Studio. Quando si fa clic sul pulsante **Comprimi** (vedere di seguito), facendo clic sul pulsante **source** viene visualizzato il riquadro di **origine** anziché il riquadro di **progettazione** .
+- **Origine** dati Questo pulsante, che è simile a due parentesi angolari opposte, seleziona il riquadro di **origine.** &ndash; Quando si fa clic su questo pulsante, i riquadri **casella degli strumenti** e **Proprietà** vengono disabilitati e la **barra degli strumenti Editor di testo** viene resa visibile nella parte superiore di Visual Studio. Quando si fa clic sul pulsante **Comprimi** (vedere di seguito), facendo clic sul pulsante **source** viene visualizzato il riquadro di **origine** anziché il riquadro di **progettazione** .
 
--   **Divisione verticale** Questo pulsante, simile a una barra verticale, Visualizza i riquadri di **progettazione** e di origine affiancati.  &ndash; Questa è la disposizione predefinita.
+- **Divisione verticale** Questo pulsante, simile a una barra verticale, Visualizza i riquadri di **progettazione** e di origine affiancati. &ndash; Questa è la disposizione predefinita.
 
--   **Suddivisione orizzontale** Questo pulsante, simile a una barra orizzontale, Visualizza il riquadro di **progettazione** sopra il riquadro di **origine.** &ndash; È possibile fare clic sui riquadri di **scambio** per posizionare il riquadro di **origine** sopra il riquadro di **progettazione** .
+- **Suddivisione orizzontale** Questo pulsante, simile a una barra orizzontale, Visualizza il riquadro di **progettazione** sopra il riquadro di **origine.** &ndash; È possibile fare clic sui riquadri di **scambio** per posizionare il riquadro di **origine** sopra il riquadro di **progettazione** .
 
--   **Comprimi riquadro** Questo pulsante, che è simile a due parentesi angolari a destra, "comprime" la visualizzazione a doppio riquadro della progettazione e dell' **origine** in una singola visualizzazione di uno di questi riquadri.  &ndash;
+- **Comprimi riquadro** Questo pulsante, che è simile a due parentesi angolari a destra, "comprime" la visualizzazione a doppio riquadro della progettazione e dell' **origine** in una singola visualizzazione di uno di questi riquadri. &ndash;
     Questo pulsante diventa il pulsante **Espandi riquadro** (che somiglia a due parentesi angolari a sinistra), su cui è possibile fare clic per tornare alla modalità di visualizzazione dual-pane (**progettazione** e **origine**).
 
 Quando si fa clic sul **riquadro Comprimi** , viene visualizzato solo il riquadro di **progettazione** . Tuttavia, è possibile fare clic sul pulsante **origine** per visualizzare solo il riquadro di **origine** . Fare di nuovo clic sul pulsante **progettazione** per tornare al riquadro di **progettazione** .
@@ -306,9 +306,9 @@ Allo stesso modo, è possibile aggiungere un nuovo layout facendo clic con il pu
 Viene creato un nuovo file con estensione aXML che viene caricato nel Area di progettazione.
 
 > [!TIP]
-> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione XML all'interno del Android Designer.
+> Le versioni più recenti di Visual Studio supportano l'apertura dei file con estensione xml all'interno di Android Designer.
 >
-> I file con estensione aXML e XML sono supportati nell'Android Designer.
+> I file con estensione axml e xml sono entrambi supportati in Android Designer.
 
 ## <a name="designer-features"></a>Funzionalità della finestra di progettazione
 
@@ -318,15 +318,15 @@ La finestra di progettazione è costituita da diverse sezioni che supportano le 
 
 Quando si modifica un layout nella finestra di progettazione, è possibile utilizzare le funzionalità seguenti per creare e modellare la progettazione:
 
--   **Area di progettazione** &ndash; Semplifica la costruzione visiva dell'interfaccia utente fornendo una rappresentazione modificabile del modo in cui il layout verrà visualizzato nel dispositivo.
+- **Area di progettazione** &ndash; Semplifica la costruzione visiva dell'interfaccia utente fornendo una rappresentazione modificabile del modo in cui il layout verrà visualizzato nel dispositivo.
 
--   **Barra degli strumenti** &ndash; Visualizza un elenco di selettori: **Dispositivo**, **versione**, **tema**, configurazione layout e impostazioni barra delle azioni. La barra degli strumenti include anche le icone per l'avvio dell'editor del tema e per l'abilitazione della griglia di progettazione materiali.
+- **Barra degli strumenti** &ndash; Visualizza un elenco di selettori: **Dispositivo**, **versione**, **tema**, configurazione layout e impostazioni barra delle azioni. La barra degli strumenti include anche le icone per l'avvio dell'editor del tema e per l'abilitazione della griglia di progettazione materiali.
 
--   **Casella degli strumenti** &ndash; Fornisce un elenco di widget e layout che è possibile trascinare nella area di progettazione.
+- **Casella degli strumenti** &ndash; Fornisce un elenco di widget e layout che è possibile trascinare nella area di progettazione.
 
--   **Riquadro delle proprietà** &ndash; Elenca le proprietà del widget selezionato per la visualizzazione e la modifica.
+- **Riquadro delle proprietà** &ndash; Elenca le proprietà del widget selezionato per la visualizzazione e la modifica.
 
--   **Struttura documento** &ndash; Visualizza la struttura ad albero dei widget che compongono il layout. È possibile fare clic su un elemento nell'albero per selezionarlo nella finestra di progettazione. Inoltre, facendo clic su un elemento nell'albero vengono caricate le proprietà dell'elemento nel riquadro proprietà.
+- **Struttura documento** &ndash; Visualizza la struttura ad albero dei widget che compongono il layout. È possibile fare clic su un elemento nell'albero per selezionarlo nella finestra di progettazione. Inoltre, facendo clic su un elemento nell'albero vengono caricate le proprietà dell'elemento nel riquadro proprietà.
 
 ## <a name="toolbar"></a>ToolBar
 
@@ -336,27 +336,27 @@ La barra degli strumenti (posizionata sopra la Area di progettazione) presenta i
 
 La barra degli strumenti consente di accedere alle funzionalità seguenti:
 
--   Selettore di **layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
+- Selettore di **layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
 
--   **Selettore dispositivi** &ndash; Definisce un set di qualificatori associati a un dispositivo specifico, ad esempio le dimensioni dello schermo, la risoluzione e la disponibilità della tastiera. È anche possibile aggiungere ed eliminare nuovi dispositivi.
+- **Selettore dispositivi** &ndash; Definisce un set di qualificatori associati a un dispositivo specifico, ad esempio le dimensioni dello schermo, la risoluzione e la disponibilità della tastiera. È anche possibile aggiungere ed eliminare nuovi dispositivi.
 
--   Selettore di **versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
+- Selettore di **versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
 
--   **Selettore tema** &ndash; Consente di selezionare il tema dell'interfaccia utente per il layout.
+- **Selettore tema** &ndash; Consente di selezionare il tema dell'interfaccia utente per il layout.
 
--   **Selettore configurazione** Seleziona la configurazione del dispositivo, ad esempio *verticale* o *orizzontale.* &ndash;
+- **Selettore configurazione** Seleziona la configurazione del dispositivo, ad esempio *verticale* o *orizzontale.* &ndash;
 
--   **Opzioni qualificatore risorse**    Apre una finestra di dialogo in cui sono presenti menu a discesa per la selezione delle opzioni lingua, modalità interfaccia utente, modalità notturna e schermata rotonda. &ndash;
+- **Opzioni qualificatore risorse**Apre una finestra di dialogo in cui sono presenti menu a discesa per la selezione delle opzioni lingua, modalità interfaccia utente, modalità notturna e schermata rotonda. &ndash;
 
--   **Impostazioni barra delle azioni** &ndash; Configura le impostazioni barra delle azioni per il layout.
+- **Impostazioni barra delle azioni** &ndash; Configura le impostazioni barra delle azioni per il layout.
 
--   **Editor tema** Apre l' *Editor del tema*, che consente di personalizzare gli elementi del tema selezionato. &ndash;
+- **Editor tema** Apre l' *Editor del tema*, che consente di personalizzare gli elementi del tema selezionato. &ndash;
 
--   **Griglia di progettazione materiale** Abilita o Disabilita la griglia di *progettazione materiali.* &ndash; La voce di menu a discesa accanto alla griglia di progettazione materiale apre una finestra di dialogo che consente di personalizzare la griglia.
+- **Griglia di progettazione materiale** Abilita o Disabilita la griglia di *progettazione materiali.* &ndash; La voce di menu a discesa accanto alla griglia di progettazione materiale apre una finestra di dialogo che consente di personalizzare la griglia.
 
 Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomenti seguenti:
 
-[I qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul selettore di **dispositivo**, il selettore di **versione di Android**, il selettore del **tema**, il selettore   **Opzioni**e **barra delle azioni Impostazioni**.
+[I qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul selettore di **dispositivo**, il selettore di **versione di Android**, il selettore del **tema**, il selettore  **Opzioni**e **barra delle azioni Impostazioni**.
 
 [In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il selettore di **layout alternativo**.
 
@@ -378,9 +378,9 @@ Inoltre, i widget possono essere copiati: è possibile usare copia e incolla per
 
 In questo esempio, facendo clic con il `Button` pulsante destro del mouse su un viene aperto un menu di scelta rapida che fornisce diverse opzioni:
 
--   **LinearLayout** apre un sottomenu per la modifica `LinearLayout` dell'elemento padre `Button`di. &ndash;
+- **LinearLayout** apre un sottomenu per la modifica `LinearLayout` dell'elemento padre `Button`di. &ndash;
 
--   Operazioni **taglia**, **copia**ed **Elimina** &ndash; `Button`che si applicano al pulsante destro del mouse.
+- Operazioni **taglia**, **copia**ed **Elimina** &ndash; `Button`che si applicano al pulsante destro del mouse.
 
 ### <a name="zoom-controls"></a>Controlli zoom
 
@@ -390,15 +390,15 @@ Il Area di progettazione supporta lo zoom con diversi controlli, come illustrato
 
 Questi controlli semplificano la visualizzazione di determinate aree dell'interfaccia utente nella finestra di progettazione:
 
--   **Evidenziare i contenitori** &ndash; Evidenzia i contenitori nel area di progettazione in modo che risultino più facili da individuare quando si esegue lo zoom avanti e indietro.
+- **Evidenziare i contenitori** &ndash; Evidenzia i contenitori nel area di progettazione in modo che risultino più facili da individuare quando si esegue lo zoom avanti e indietro.
 
--   **Dimensioni normali** &ndash; Esegue il rendering del formato pixel per pixel in modo da visualizzare il modo in cui il layout esamina la risoluzione del dispositivo selezionato.
+- **Dimensioni normali** &ndash; Esegue il rendering del formato pixel per pixel in modo da visualizzare il modo in cui il layout esamina la risoluzione del dispositivo selezionato.
 
--   **Adatta alla finestra** &ndash; Imposta il livello di zoom in modo che l'intero layout sia visibile nel area di progettazione.
+- **Adatta alla finestra** &ndash; Imposta il livello di zoom in modo che l'intero layout sia visibile nel area di progettazione.
 
--   **Zoom avanti** &ndash; Esegue lo zoom avanti in modo incrementale a ogni clic, ingrandindo il layout.
+- **Zoom avanti** &ndash; Esegue lo zoom avanti in modo incrementale a ogni clic, ingrandindo il layout.
 
--   **Zoom indietro** &ndash; Esegue lo zoom indietro in modo incrementale a ogni clic, facendo in modo che il layout risulti più piccolo nell'area di progettazione.
+- **Zoom indietro** &ndash; Esegue lo zoom indietro in modo incrementale a ogni clic, facendo in modo che il layout risulti più piccolo nell'area di progettazione.
 
 Si noti che l'impostazione di zoom scelta non influisce sull'interfaccia utente dell'applicazione in fase di esecuzione.
 
@@ -412,15 +412,15 @@ La finestra di progettazione supporta la modifica delle proprietà del widget tr
 
 Il riquadro delle proprietà è suddiviso in diverse sezioni che raggruppano &ndash; insieme proprietà simili in modo da semplificare l'individuazione delle proprietà di interesse:
 
--   **Widget** di Proprietà principali del widget, `id`ad esempio, `visibility` `text`, e così via. &ndash; Le proprietà per la gestione del contenuto del widget vengono in genere inserite qui.
+- **Widget** di Proprietà principali del widget, `id`ad esempio, `visibility` `text`, e così via. &ndash; Le proprietà per la gestione del contenuto del widget vengono in genere inserite qui.
 
--   **Stile** Proprietà che modificano l'aspetto visivo del widget, `font`ad esempio, `text color` `background`, e così via. &ndash;
+- **Stile** Proprietà che modificano l'aspetto visivo del widget, `font`ad esempio, `text color` `background`, e così via. &ndash;
 
--   **Layout** di &ndash; Proprietà che impostano la posizione e le dimensioni del widget.
+- **Layout** di &ndash; Proprietà che impostano la posizione e le dimensioni del widget.
 
--   **Scorri** &ndash; Proprietà di scorrimento.
+- **Scorri** &ndash; Proprietà di scorrimento.
 
--   **Comportamento** &ndash; Flag che impostano il comportamento del widget.
+- **Comportamento** &ndash; Flag che impostano il comportamento del widget.
 
 ### <a name="default-values"></a>Valori predefiniti
 

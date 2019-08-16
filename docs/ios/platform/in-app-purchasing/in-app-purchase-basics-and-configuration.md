@@ -1,116 +1,116 @@
 ---
-title: Nozioni di base di acquisto in-App e la configurazione di xamarin. IOS
-description: Questo documento descrive gli acquisti in-app in xamarin. IOS, che illustrano le informazioni pertinenti sulle regole, la configurazione e iTunes Connect.
+title: Nozioni di base e configurazione di acquisto in-app in Novell. iOS
+description: Questo documento descrive gli acquisti in-app in Novell. iOS, illustrando le informazioni rilevanti su regole, configurazione e iTunes Connect.
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 267dac5b6aec263f1d8b69d81f34f732118c1802
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4c8e08c5393bed1f96baa7c1bced85eed3d2d0c6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61406895"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527920"
 ---
-# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base di acquisto in-App e la configurazione di xamarin. IOS
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Novell. iOS
 
-Implementazione di acquisti in-app richiede che l'applicazione a usare l'API di StoreKit nel dispositivo. StoreKit gestisce tutte le comunicazioni con i server di Apple iTunes per ottenere informazioni sul prodotto ed eseguire le transazioni. Il profilo di provisioning deve essere configurato per acquisti in-app e le informazioni sul prodotto devono essere immessi in iTunes Connect.
+Per implementare gli acquisti in-app, è necessario che l'applicazione utilizzi l'API StoreKit sul dispositivo. StoreKit gestisce tutte le comunicazioni con i server iTunes di Apple per ottenere informazioni sui prodotti ed eseguire transazioni. Il profilo di provisioning deve essere configurato per l'acquisto in-app e le informazioni sul prodotto devono essere immesse in iTunes Connect.
 
  [![](in-app-purchase-basics-and-configuration-images/image1.png "StoreKit gestisce tutte le comunicazioni con Apple, come illustrato in questo grafico")](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
 
-Uso di App Store per offrire acquisti in-app richiede l'installazione e la configurazione seguente:
+L'uso dell'app Store per fornire l'acquisto in-app richiede l'installazione e la configurazione seguenti:
 
--  **iTunes Connect** : configurazione di prodotti per la vendita e impostazione degli account utente di sandbox per testare l'acquisto. È necessario anche aver fornito le informazioni bancarie e fiscali ad Apple, in modo che possibile rimettere fondi raccolti per tuo conto.
--   **Portale di Provisioning iOS** : creazione di un identificatore del Bundle e abilitazione dell'accesso di App Store per l'app.
--  **Store Kit** – aggiunta di codice all'App per la visualizzazione dei prodotti, acquisto di prodotti e il ripristino delle transazioni.
--  **Codice personalizzato** : per rilevare gli acquisti effettuati dai clienti e fornire i prodotti o servizi che hai acquistato. È possibile inoltre necessario implementare un processo lato server per convalidare le conferme se i prodotti è costituito da contenuto scaricato da un server (ad esempio libri e riviste problemi).
+- **iTunes Connect** : configurazione dei prodotti per la vendita e la configurazione degli account utente sandbox per testare l'acquisto. È inoltre necessario fornire le informazioni bancarie e fiscali ad Apple in modo che possano ripartire i fondi raccolti per conto dell'utente.
+- **portale** di provisioning iOS: creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app.
+- **Store Kit** -aggiunta di codice all'app per la visualizzazione di prodotti, l'acquisto di prodotti e il ripristino di transazioni.
+- **Codice personalizzato** : per tenere traccia degli acquisti effettuati dai clienti e fornire i prodotti o i servizi acquistati. Potrebbe anche essere necessario implementare un processo sul lato server per convalidare le ricevute se i prodotti sono costituiti da contenuto scaricato da un server, ad esempio problemi relativi a libri e riviste.
 
 
-Esistono due Store Kit "ambienti server":
+Ci sono due "ambienti server" del kit di archiviazione:
 
--  **Ambiente di produzione** : le transazioni con denaro reale. Accessibile solo tramite applicazioni che sono state inviate e approvate da Apple. I prodotti di acquisto in-app devono essere anche esaminati e approvati prima che siano disponibili nell'ambiente di produzione.
--  **Sandbox** cui avviene l'attività di test. I prodotti sono disponibili qui immediatamente dopo la creazione (il processo di approvazione si applica solo all'ambiente di produzione). Le transazioni nell'ambiente sandbox richiedono agli utenti di test (ID Apple non reali) eseguire le transazioni.
+- **Produzione** : transazioni con denaro reale. Accessibile solo tramite le applicazioni inviate e approvate da Apple. I prodotti di acquisto in-app devono anche essere rivisti e approvati prima che siano disponibili nell'ambiente di produzione.
+- **Sandbox** : dove si verifica il test. I prodotti sono disponibili qui subito dopo la creazione (il processo di approvazione si applica solo all'ambiente di produzione). Per le transazioni in sandbox è necessario che gli utenti di test (non gli ID Apple reali) eseguano le transazioni.
 
-## <a name="in-app-purchase-rules"></a>Regole di acquisto in-App
+## <a name="in-app-purchase-rules"></a>Regole di acquisto in-app
 
-È possibile accettare le altre forme di pagamento per i prodotti digitali o i servizi all'interno dell'app, né trattarle o vi fanno riferimento gli utenti dall'interno di un'app. Ciò significa che non è possibile accettare carte di credito o di PayPal quando acquisti in-app è il meccanismo di pagamento più appropriato. C'è un caso speciale per l'acquisto di prodotti digitali all'esterno dell'app, ma per usare l'App, ad esempio l'acquisto di libri in un sito Web che sono associati a uno specifico "login" e l'uso di "accesso" nell'app consente all'utente l'accesso i libri acquistati.
-Applicazioni che funzionano in questo modo non è possibile menzionare o sul collegamento per la funzionalità di acquisizione esterna: gli sviluppatori devono comunicare questa funzionalità agli utenti in altri modi (magari tramite attività di marketing tramite posta elettronica o alcuni altri su un canale diretto).
+Non è possibile accettare altre forme di pagamento per i prodotti o i servizi digitali all'interno dell'app, né citarli o farvi riferimento dagli utenti all'interno di un'app. Ciò significa che non è possibile accettare carte di credito o PayPal quando l'acquisto in-app è il meccanismo di pagamento più appropriato. Un caso speciale per l'acquisto di prodotti digitali all'esterno dell'app, ma per l'uso nell'app, ad esempio l'acquisto di libri in un sito Web associato a un "account di accesso" specifico e l'uso di tale "account di accesso" nell'app, consente all'utente di accedere ai libri acquistati.
+Le applicazioni che operano in questo modo non possono citare o collegarsi alla funzionalità di acquisto esterna: gli sviluppatori devono comunicare questa funzionalità ai propri utenti in altri modi, ad esempio tramite il marketing tramite posta elettronica o un altro canale diretto.
 
-Tuttavia, poiché non è possibile usare acquisti in-app per beni, nel cui caso è possibile usare un meccanismo alternativo di pagamento (ad es. carta di credito, PayPal) all'interno dell'app.
+Tuttavia, poiché non è possibile usare gli acquisti in-app per i beni fisici, in tal caso è possibile usare un meccanismo di pagamento alternativo, ad esempio carta di credito, PayPal) dall'interno dell'app.
 
-Apple deve approvare ogni prodotto prima entrerà in vendita: nome, descrizione e uno screenshot del prodotto' ' è obbligatorio per la revisione. Tempi di revisione di prodotto sono gli stessi delle revisioni dell'applicazione.
+Apple deve approvare ogni prodotto prima di procedere alla vendita: il nome, la descrizione e una schermata del ' prodotto ' sono necessari per la revisione. I tempi di revisione del prodotto sono identici a quelli delle revisioni delle applicazioni.
 
-Non è possibile scegliere qualsiasi prezzo del prodotto: è possibile selezionare solo un 'livello di prezzo' che ha un valore specifico in ogni paese/valuta che supporta Apple. È possibile avere un livello di prezzo diverso nei diversi mercati.
+Non è possibile scegliere alcun prezzo per il prodotto: è possibile selezionare solo un "piano tariffario" con un valore specifico in ogni paese/valuta supportato da Apple. Non è possibile avere un livello di prezzo diverso in mercati diversi.
 
 ## <a name="configuration"></a>Configurazione
 
-Prima di scrivere codice acquisti in-app è necessario eseguire alcune operazioni di configurazione in iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) e il portale di Provisioning iOS ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
+Prima di scrivere il codice di acquisto in-app, è necessario eseguire alcune operazioni di configurazione in iTunes Connect ( [iTunesConnect.Apple.com](http://itunesconnect.apple.com)) e nel portale di provisioning iOS ( [Developer.Apple.com/iOS](https://developer.apple.com/iOS)).
 
-Questi tre passaggi devono essere completati prima di scrivere codice:
+Questi tre passaggi devono essere completati prima di scrivere il codice:
 
--  **Account sviluppatore Apple** : inviare le informazioni bancarie e fiscali ad Apple.
--  **Portale di Provisioning iOS** : verificare che l'app ha un ID App valido (non un carattere jolly con un asterisco * in esso) e sono state nell'acquisto di App abilitate.
--  **iTunes Connect Application Management** – aggiungere prodotti all'applicazione.
+- **Account per sviluppatore Apple** : inviare le informazioni bancarie e fiscali ad Apple.
+- **portale** di provisioning di iOS: assicurarsi che l'app abbia un ID app valido (non un carattere jolly con un asterisco *) e che sia abilitato per l'acquisto di app.
+- **gestione delle applicazioni di iTunes Connect** : aggiungere i prodotti all'applicazione.
 
 
 ### <a name="apple-developer-account"></a>Account per sviluppatore Apple
 
-Creazione e la distribuzione di App gratuite richiede una configurazione minima nel [iTunes Connect](https://itunesconnect.apple.com), tuttavia per vendere a pagamento App o gli acquisti in-app è necessario fornire Apple con le informazioni bancarie e fiscali. Fare clic su **contratti, imposte e banche** dal menu principale illustrato di seguito:
+Per la compilazione e la distribuzione di app gratuite è richiesta una configurazione minima in [iTunes Connect](https://itunesconnect.apple.com). Tuttavia, per vendere app a pagamento o acquisti in-app, è necessario fornire Apple con informazioni fiscali e bancarie. Fare clic su **agreements, Tax and Banking** dal menu principale riportato di seguito:
 
- [![](in-app-purchase-basics-and-configuration-images/image2.png "Fare clic su contratti, imposte e banche dal menu principale")](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image2.png "Fare clic su agreements, Tax and Banking dal menu principale")](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
 
-L'Account per sviluppatore deve avere un **applicazioni a pagamento iOS** contratto in effetti, come illustrato in questo screenshot:
+Per l'account sviluppatore deve essere attivo un contratto per **applicazioni a pagamento iOS** , come illustrato in questo screenshot:
 
- [![](in-app-purchase-basics-and-configuration-images/image3.png "L'Account per sviluppatore deve avere un iOS applicazioni a pagamento del contratto in vigore")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image3.png "L'account sviluppatore deve avere un contratto di applicazioni a pagamento iOS attivo")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
 
-Non sarà in grado di testare qualsiasi funzionalità di StoreKit finché non possiedi un **applicazioni iOS a pagamento** contratto: StoreKit chiamate nel codice avranno esito negativo fino a quando non è elaborato Apple le **contratti, imposte e banche** informazioni.
+Non sarà possibile testare le funzionalità di StoreKit fino a quando non si dispone di un contratto per **le applicazioni a pagamento iOS** : le chiamate StoreKit nel codice avranno esito negativo fino a quando Apple non avrà elaborato i **contratti,** le imposte e le informazioni bancarie.
 
 ### <a name="ios-provisioning-portal"></a>Portale di provisioning iOS
 
-Le nuove applicazioni vengono impostate nel **App IDs** sezione del **portale di Provisioning iOS**. Per creare un nuovo ID App, visitare il [Member Center del portale di Provisioning iOS](https://developer.apple.com/membercenter/index.action), passare alla **certificati, identificatori e profili** sezione del portale e fare clic su **identificatori** sotto *delle App iOS*. Quindi, fare clic su "+" in alto a destra per generare un nuovo ID App.
+Le nuove applicazioni vengono configurate nella sezione **ID app** del **portale**di provisioning iOS. Per creare un nuovo ID app, passare al [centro membri del portale di provisioning iOS](https://developer.apple.com/membercenter/index.action), passare alla sezione **certificati, identificatori e profili** del portale e fare clic su identificatori in *app iOS*. Quindi, fare clic su "+" in alto a destra per generare un nuovo ID app.
 
 
-Il form per la creazione di nuove **gli ID App**
+Il modulo per la creazione di nuovi **ID app**
 
  ha un aspetto simile al seguente:
 
- [![](in-app-purchase-basics-and-configuration-images/image4.png "Il modulo per la creazione di nuovi ID App")](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image4.png "Il modulo per la creazione di nuovi ID app")](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
 
-Immettere un nome appropriato per il *descrizione*, pertanto è possibile identificare facilmente questo ID App in un elenco. Per il *prefisso ID App*, selezionare l'ID del Team.
+Immettere un valore appropriato per la *Descrizione*, in modo da poter identificare facilmente questo ID app in un elenco. Per il *prefisso ID app*selezionare l'ID del team.
 
-#### <a name="bundle-identifierapp-id-suffix-format"></a>Formato di suffisso dell'ID bundle dell'App o l'identificatore
+#### <a name="bundle-identifierapp-id-suffix-format"></a>Formato identificatore bundle/suffisso ID app
 
-È possibile usare qualsiasi stringa desiderato per il **identificatore del Bundle** (purché sia univoca nel proprio account), tuttavia, Apple consiglia è conforme al formato DNS inverso anziché usare una stringa arbitraria. L'applicazione di esempio che accompagna questo articolo Usa com.xamarin.storekit.testing per l'identificatore del Bundle, ma sarà ugualmente corretto da usare un identificatore, ad esempio my_store_example (sebbene non consigliabile Apple).
+È possibile usare qualsiasi stringa per l'identificatore del **bundle** (purché sia univoco nell'account). Tuttavia, Apple consiglia di seguire il formato DNS inverso anziché usare qualsiasi stringa arbitraria. L'applicazione di esempio che accompagna questo articolo usa com. Novell. storekit. testing per l'identificatore del bundle, ma sarebbe ugualmente valido usare un identificatore come my_store_example (anche se Apple non lo consiglia).
 
 > [!IMPORTANT]
-> Apple consente inoltre con caratteri jolly asterisco da aggiungere alla fine di una **Bundle Identifier** in modo che un singolo ID dell'App può essere usato per più applicazioni, tuttavia _gli ID delle App con caratteri jolly non può essere usati perInAppPurchase_. Un esempio di identificatore del Bundle con caratteri jolly potrebbe essere com.xamarin.*
+> Apple consente inoltre di aggiungere un asterisco jolly alla fine di un **identificatore del bundle** , in modo da poter usare un singolo ID app per più applicazioni, ma _non è possibile usare gli ID app con caratteri jolly per AppPurchase_. Un esempio di identificatore di bundle con carta jolly potrebbe essere com. Novell. *
 
-#### <a name="enabling-app-services"></a>Abilitazione di servizi App
+#### <a name="enabling-app-services"></a>Abilitazione dei servizi app
 
-Si noti che **acquisto In-App** verrà abilitata automaticamente nell'elenco dei servizi:
+Si noti che l' **acquisto in-app** verrà abilitato automaticamente nell'elenco dei servizi:
 
- [![](in-app-purchase-basics-and-configuration-images/image5.png "Acquisto in-App verrà abilitata automaticamente nell'elenco dei servizi")](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image5.png "L'acquisto in-app verrà abilitato automaticamente nell'elenco dei servizi")](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
 
 #### <a name="provisioning-profiles"></a>Profili di provisioning
 
-Come si farebbe, in genere selezionando l'ID di App a cui è stata configurata per l'acquisto In-App, creare lo sviluppo e i profili di Provisioning di produzione. Vedere il [iOS Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) e [pubblicazione per l'App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) Guide per altre informazioni.
+Creare i profili di provisioning di sviluppo e produzione normalmente, selezionando l'ID app configurato per l'acquisto in-app. Per ulteriori informazioni, vedere la pagina relativa al provisioning e alla pubblicazione dei [dispositivi iOS](~/ios/get-started/installation/device-provisioning/index.md) nelle guide all' [App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) .
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
-Fare clic su **My Apps** in iTunes Connect per creare o modificare una voce di applicazione iOS. La pagina di panoramica dell'applicazione è illustrata di seguito:
+Fare clic su **app personali** in iTunes Connect per creare o modificare una voce di applicazione iOS. La pagina Panoramica dell'applicazione è illustrata di seguito:
 
- [![](in-app-purchase-basics-and-configuration-images/image6.png "La pagina di panoramica dell'applicazione")](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image6.png "Pagina Panoramica dell'applicazione")](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
 
-Fare clic su **acquisti In-App** per creare o modificare i prodotti in vendita. Questa schermata mostra l'app di esempio con diversi prodotti già aggiunti:
+Fare clic su **acquisti in-app** per creare o modificare i prodotti per la vendita. Questa schermata mostra l'app di esempio con diversi prodotti già aggiunti:
 
- [![](in-app-purchase-basics-and-configuration-images/image7.png "L'app di esempio con diversi prodotti già aggiunto")](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image7.png "L'app di esempio con diversi prodotti è già stata aggiunta")](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
 
-Processo di aggiunta di nuovi prodotti prevede due passaggi:
+Il processo per aggiungere nuovi prodotti è costituito da due passaggi:
 
-1.   Scegliere il tipo di prodotto: [![](in-app-purchase-basics-and-configuration-images/image8.png "Scegliere il tipo di prodotto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Immettere gli attributi del prodotto, tra cui l'Id prodotto, piano tariffario e le descrizioni localizzate: [![](in-app-purchase-basics-and-configuration-images/image9.png "Immettere gli attributi di prodotti")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1. Scegliere il tipo di prodotto:  [![](in-app-purchase-basics-and-configuration-images/image8.png "Scegliere il tipo di prodotto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2. Immettere gli attributi del prodotto, inclusi l'ID prodotto, il piano tariffario e le descrizioni localizzate:  [![](in-app-purchase-basics-and-configuration-images/image9.png "Immissione degli attributi dei prodotti")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 I campi necessari per ogni prodotto di acquisto in-app sono descritti di seguito:
 
@@ -121,11 +121,11 @@ Il nome di riferimento non viene visualizzato agli utenti; è per uso interno e 
 
 ### <a name="product-id-format"></a>Formato ID prodotto
 
-Un identificatore del prodotto può contenere solo caratteri alfanumerici (alla Z, a-z, 0-9), un carattere di sottolineatura (_) e caratteri punto (.). Sebbene sia possibile usare qualsiasi stringa per gli identificatori degli, Apple consiglia il formato DNS inverso. Ad esempio, l'applicazione di esempio Usa questo identificatore del Bundle:
+Un identificatore di prodotto può contenere solo caratteri alfanumerici (A-Z, a-z, 0-9), caratteri di sottolineatura (_) e punto (.). Sebbene sia possibile usare qualsiasi stringa per gli identificatori, Apple consiglia il formato DNS inverso. Ad esempio, l'applicazione di esempio usa questo identificatore del bundle:
 
  `com.xamarin.storekit.testing`
 
-Di conseguenza la convenzione per identificare i prodotti di acquisto in-app sarà come segue:
+La convenzione per identificare i prodotti di acquisto in-app, quindi, è la seguente:
 
 ```csharp
 com.xamarin.storekit.testing.consume5credits
@@ -134,67 +134,67 @@ com.xamarin.storekit.testing.sepia
 com.xamarin.storekit.testing.greyscale
 ```
 
-Non viene applicata questa convenzione di denominazione, è sufficiente una raccomandazione per la gestione dei prodotti. Inoltre, malgrado seguendo la stessa convenzione di DNS inverso, gli identificatori di prodotto sono *non correlati* per l'identificatore del Bundle e sono non è necessario per iniziare con la stessa stringa. Ma rimarrebbe comunque valido per l'utilizzo di identificatori come photo_product_greyscale (sebbene non consigliabile Apple).
+Questa convenzione di denominazione non viene applicata, semplicemente una raccomandazione che consente di gestire i prodotti. Inoltre, nonostante la stessa convenzione DNS inversa, gli identificatori di prodotto *non sono correlati* all'identificatore del bundle e non devono iniziare con la stessa stringa. Sarebbe comunque valido usare gli identificatori come photo_product_greyscale (anche se Apple non lo consiglia).
 
-ID prodotto non viene visualizzato agli utenti, ma viene usato per fare riferimento del prodotto nel codice dell'applicazione.
+L'ID prodotto non viene visualizzato agli utenti, ma viene usato per fare riferimento al prodotto nel codice dell'applicazione.
 
 ### <a name="product-type"></a>Tipo di prodotto
 
-Esistono cinque tipi di prodotto di acquisto in-app che è possibile offrire:
+Sono disponibili cinque tipi di prodotto di acquisto in-app che è possibile offrire:
 
-1.  **Utilizzabile** : ciò che è "usati backup", ad esempio valuta nel gioco che può impiegare Windows Media player. Se l'utente esegue un backup o ripristino o in caso contrario, il dispositivo è aggiornato, una transazione può essere utilizzata non vengono ripristinata anche (che in modo efficace produrrebbe l'assegnatario di questo vantaggio soggiacente). Il codice dell'applicazione è necessario assicurarsi di fornire l'elemento può essere utilizzato, non appena la transazione viene completata.
-1.  **Non riproducibile** – prodotti che l'utente 'proprietario' una volta acquistati, ad esempio un problema di magazine digitale o un livello di gioco.
-1.  **Auto-rinnovabile sottoscrizioni** – è sufficiente, ad esempio abbonamenti a riviste reali, alla fine del periodo di sottoscrizione Apple automaticamente gli addebiti per il cliente anche in questo caso ed estende il periodo di sottoscrizione all'infinito o fino a quando il cliente in modo esplicito lo Annulla. Si tratta del metodo di pagamento preferita per le app di Newsstand (in effetti, le applicazioni devono supportare questo metodo di pagamento per essere approvato per la distribuzione di Newsstand).
-1.  **Sottoscrizione gratuita** : possono essere offerti solo nelle App abilitate per Newsstand e consente agli utenti di accedere al contenuto di sottoscrizione su tutti i dispositivi. Le sottoscrizioni gratuite senza scadono.
-1.  **Sottoscrizione di rinnovo non** : deve essere usata per la vendita periodo di tempo limitato l'accesso a contenuto statico, ad esempio l'accesso di un mese in un archivio di foto.
+1. Utilizzabile: elementi che sono "usati", ad esempio valuta del gioco che il giocatore può spendere. Se l'utente esegue un backup o un ripristino o se il dispositivo viene aggiornato, non viene ripristinata anche una transazione utilizzabile (il che darebbe al giocatore lo stesso vantaggio). Il codice dell'applicazione deve assicurarsi di fornire l'elemento "utilizzabile" non appena la transazione viene completata.
+1. **Non** utilizzabile: i prodotti che l'utente ' possiede ' ha acquistato, ad esempio un problema di rivista digitale o un livello di gioco.
+1. **Sottoscrizioni rinnovate** automaticamente: Analogamente a una sottoscrizione di Magazine reale, al termine del periodo di sottoscrizione Apple addebita automaticamente il cliente ed estende il periodo di validità della sottoscrizione, per sempre o fino a quando non viene annullato esplicitamente dal cliente. Questo è il metodo di pagamento preferito per le app in edicola (infatti, le app devono supportare questo metodo di pagamento per essere approvate per la distribuzione in edicola).
+1. **Sottoscrizione gratuita** : può essere offerta solo nelle app abilitate per l'edicola e consente al cliente di accedere al contenuto della sottoscrizione su tutti i dispositivi. Le sottoscrizioni gratuite non scadono mai.
+1. **Sottoscrizione senza rinnovo** : è consigliabile usare per vendere un accesso limitato al tempo al contenuto statico, ad esempio l'accesso di un mese a un archivio foto.
 
 
- *Questo documento illustra attualmente solo i primi due tipi di prodotti (che può essere utilizzato e Non riproducibile).*
+ *Questo documento include attualmente solo i primi due tipi di prodotto (utilizzabili e non utilizzabili).*
 
  <a name="Price_Tiers" />
 
-### <a name="price-tiers"></a>Livelli di prezzo
+### <a name="price-tiers"></a>Piani tariffari
 
-L'App Store non è possibile scegliere un prezzo arbitrario per i prodotti, Apple offre i livelli di prezzo fisso che è possibile scegliere tra. I prezzi indicati sono stati risolti in ognuna delle valute e Apple si riserva il diritto di modificare i prezzi relativi (ad esempio, dopo un cambiamento prolungato del tasso di cambio esteri relativo tra una determinata valuta e il dollaro Statunitense).
+L'App Store non consente di scegliere un prezzo arbitrario per i prodotti, Apple fornisce piani tariffari fissi tra cui è possibile scegliere. I prezzi sono corretti in ogni valuta e Apple si riserva il diritto di modificare i prezzi relativi (ad esempio, dopo una modifica apportata al tasso di cambio estero corrispondente tra una determinata valuta e il dollaro USA).
 
-Apple offre una matrice di prezzo che consentono di selezionare il livello corretto per il valuta/prezzo desiderato. Di seguito è riportato un estratto della matrice prezzo (agosto 2012):
+Apple fornisce una tabella dei prezzi che consente di selezionare il livello corretto per la valuta e il prezzo desiderati. Di seguito è riportato un estratto della matrice dei prezzi (agosto 2012):
 
- [![](in-app-purchase-basics-and-configuration-images/image10.png "Un estratto della matrice prezzo agosto 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image10.png "Estratto della tabella dei prezzi agosto 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
-Al momento della scrittura (giugno 2013) sono disponibili 87 livelli da USD 0,99 a 999.99 dollari USA. La matrice dei prezzi Mostra il costo che paghino i clienti e anche la quantità, riceverai da Apple: questo è meno il costo del 30% e anche eventuali imposte locale sono necessarie per raccogliere (si noti che nell'esempio che i venditori di Stati Uniti e Canada ricevono 70c per un esempio di c 99 p redefinita, mentre i venditori australiani ricevono solo 63 c a causa dell'errore ' beni &amp; Services Tax' colpiscono il prezzo di vendita).
+Al momento della stesura (giugno 2013) sono presenti 87 livelli da 0,99 a USD 999,99. La matrice dei prezzi Mostra il prezzo che i clienti pagheranno e anche la quantità ricevuta da Apple. si tratta di un costo inferiore al 30% e di eventuali imposte locali che devono essere raccolti (si noti che nell'esempio i venditori statunitensi e canadesi ricevono 70C per un 99C p) Product, mentre i venditori australiani ricevono solo 63C a causa di &amp; "Tax Services Tax" addebitato sul prezzo di vendita.
 
-Prezzi del prodotto possono essere aggiornati in qualsiasi momento, incluse le modifiche di prezzo pianificati che vengono applicate in una data futura. Questo screenshot Mostra come viene aggiunta una variazione di prezzo con date future, il prezzo viene temporaneamente modificato da livello 1 al livello 3 per il mese di settembre solo:
+I prezzi del prodotto possono essere aggiornati in qualsiasi momento, incluse le modifiche dei prezzi pianificate che hanno effetto su una data futura. Questo screenshot mostra come viene aggiunta una modifica del prezzo con data successiva: il prezzo viene temporaneamente modificato dal livello 1 al livello 3 solo per il mese di settembre:
 
- [![](in-app-purchase-basics-and-configuration-images/image11.png "Una variazione di prezzo con date future in cui il prezzo viene temporaneamente modificato da livello 1 al livello 3 per il mese di settembre solo")](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image11.png "Variazione del prezzo con data successiva in cui il prezzo viene temporaneamente modificato dal livello 1 al livello 3 solo per il mese di settembre")](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
 
 ### <a name="free-products-not-supported"></a>Prodotti gratuiti non supportati
 
-Sebbene Apple ha fornito un'opzione di sottoscrizione gratuita speciale per le app di Newsstand, non è possibile impostare un prezzo pari a zero (gratuito) per qualsiasi altro tipo di acquisto in-app. Sebbene sia possibile modificare (ie. inferiore) i prezzi per le promozioni di vendite, è possibile effettuare acquisti in-app 'gratuiti' tramite iTunes Connect.
+Sebbene Apple abbia fornito una speciale opzione di sottoscrizione gratuita per le app in edicola, non è possibile impostare un prezzo zero (gratuito) per qualsiasi altro tipo di acquisto in-app. Sebbene sia possibile modificare i prezzi (IE. Lower) per le promozioni di vendita, non è possibile effettuare acquisti in-app ' gratuiti ' tramite iTunes Connect.
 
 ### <a name="localization"></a>Localizzazione
 
-In iTunes Connect è possibile immettere testo di nome e una descrizione diversi per un numero qualsiasi delle lingue supportate. Ogni lingua può essere aggiunto/modificato in tramite una finestra popup:
+In iTunes Connect è possibile immettere un nome e un testo di descrizione diversi per qualsiasi numero di lingue supportate. Ogni lingua può essere aggiunta/modificata tramite un popup:
 
- [![](in-app-purchase-basics-and-configuration-images/image12.png "Ogni lingua può essere aggiunto/modificato in tramite una finestra popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
+ [![](in-app-purchase-basics-and-configuration-images/image12.png "Ogni lingua può essere aggiunta/modificata tramite un popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
    
    
    
- Quando si visualizzano le informazioni sul prodotto nell'app, è disponibile per consentire la visualizzazione tramite StoreKit il testo localizzato. La visualizzazione di valuta deve anche essere localizzata per mostrare il simbolo corretto e la formattazione decimali: questo tipo di formattazione viene descritta più avanti nel documento.
+ Quando si visualizzano le informazioni sul prodotto nell'app, il testo localizzato è disponibile per la visualizzazione tramite StoreKit. La visualizzazione della valuta deve essere localizzata anche per mostrare il simbolo e la formattazione decimali corretti. questa formattazione è illustrata più avanti nel documento.
 
-### <a name="app-store-review"></a>Revisione di App Store
+### <a name="app-store-review"></a>Revisione dell'app Store
 
-Come le app: ogni prodotto viene esaminato da Apple prima di poter passare in vendita. I prodotti possono essere rifiutati per contenuti inappropriati nel nome o descrizione, o Apple può decidere che si è scelto il tipo di prodotto sbagliato (ad es. è stato creato un libro o alla rivista ma utilizzato il tipo di prodotto può essere utilizzato). Recensioni dei prodotti possono richiedere fino a una verifica dell'app.
+Uguale alle app: ogni prodotto viene rivisto da Apple prima di essere autorizzato a passare alla vendita. I prodotti possono essere rifiutati per contenuti inappropriati nel nome o nella descrizione oppure Apple potrebbe decidere di aver scelto il tipo di prodotto errato (ad esempio, è stato creato un problema relativo a un libro o una rivista ma è stato usato il tipo di prodotto utilizzabile. Le revisioni del prodotto possono richiedere fino a quando una revisione dell'app.
 
-La prima volta che un'app viene inviata con acquisti in-app abilitata, sia che si tratta di una nuova app, la funzionalità è stata aggiunta a uno esistente, è necessario scegliere alcuni prodotti di inviare con esso. Il portale di iTunes Connect verrà richiesto di eseguire questa operazione, come illustrato in questo screenshot:
+La prima volta che un'app viene inviata con l'acquisto in-app abilitata (se si tratta di una nuova app o se la funzionalità è stata aggiunta a una esistente), è necessario anche scegliere alcuni prodotti da inviare. Il portale di iTunes Connect richiederà di eseguire questa operazione, come illustrato in questo screenshot:
 
- [![](in-app-purchase-basics-and-configuration-images/image13.png "Il portale di iTunes Connect verrà richiesto di inviare anche alcuni prodotti")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
+ [![](in-app-purchase-basics-and-configuration-images/image13.png "Il portale di iTunes Connect richiederà di inviare anche alcuni prodotti")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
    
    
    
- In modo che tutti ottenere approvati in una sola volta (in modo che l'app non viene accettata nell'archivio senza eventuali prodotti approvati!), verranno esaminati tra loro, l'applicazione e gli acquisti in-app.
+ L'applicazione e gli acquisti in-app verranno esaminati insieme, in modo che tutti i dati vengano approvati in una sola volta (in modo che l'app non possa entrare nello Store senza alcun prodotto approvato).
 
-Dopo la prima versione con funzionalità di acquisto in-app è stata approvata, è possibile aggiungere altri prodotti e inviarle per la revisione in qualsiasi momento. È possibile anche scegliere di inviare una nuova versione insieme ai prodotti di acquisto in-app specifiche, usando il **informazioni dettagliate sulla versione** pagina come suggerisce il prompt dei comandi.
+Dopo che la prima versione con la funzionalità di acquisto in-app è stata approvata, è possibile aggiungere altri prodotti e inviarli per la revisione in qualsiasi momento. È anche possibile scegliere di inviare una nuova versione insieme a specifici prodotti di acquisto in-app, usando la pagina dei **Dettagli della versione** come suggerito dal prompt.
 
-Vedere le [App Store Review Guidelines](https://developer.apple.com/appstore/guidelines.html) per altre informazioni.
+Per ulteriori informazioni, vedere le [linee guida per la revisione dell'app Store](https://developer.apple.com/appstore/guidelines.html) .
 
- [Parte 2: Panoramica sul Kit di Store e prodotti durante il recupero delle informazioni](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ [Parte 2: Panoramica del kit di archiviazione e informazioni sul prodotto recupero](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)

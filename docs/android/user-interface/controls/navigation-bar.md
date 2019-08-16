@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c017ab96bdd78a41b31a3305021c5bc1f8e472d0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644918"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522929"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra di spostamento Novell. Android
 
@@ -22,9 +22,9 @@ Lo screenshot seguente mostra la barra di navigazione da un dispositivo Nexus Pr
 
 Sono disponibili diversi nuovi flag che controllano la visibilità della barra di navigazione e dei relativi controlli, nonché la visibilità della barra di sistema introdotta in Android 3. I flag sono definiti nella `Android.View.View` classe e sono elencati di seguito:
 
--   `SystemUiFlagVisible`&ndash; Rende visibile la barra di navigazione. 
--   `SystemUiFlagLowProfile`&ndash; Offusca i controlli nella barra di spostamento. 
--   `SystemUiFlagHideNavigation`&ndash; Nasconde la barra di navigazione. 
+- `SystemUiFlagVisible`&ndash; Rende visibile la barra di navigazione. 
+- `SystemUiFlagLowProfile`&ndash; Offusca i controlli nella barra di spostamento. 
+- `SystemUiFlagHideNavigation`&ndash; Nasconde la barra di navigazione. 
 
 
 Questi flag possono essere applicati a qualsiasi visualizzazione nella gerarchia di visualizzazione impostando la `SystemUiVisibility` proprietà. Se questa proprietà è impostata su più visualizzazioni, il sistema le combina con un'operazione o e le applica purché la finestra in cui sono impostati i flag mantenga lo stato attivo. Quando si rimuove una vista, verranno rimossi anche tutti i flag impostati.

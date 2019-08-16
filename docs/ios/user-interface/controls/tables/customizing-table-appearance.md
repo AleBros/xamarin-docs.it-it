@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: cad7378e3d569454606a9d472cf30c42956553e4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24f5ce0daddab090b5486af99eebc0d6e7a2b1dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644939"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528676"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizzazione dell'aspetto di una tabella in Novell. iOS
 
@@ -22,10 +22,10 @@ Il modo più semplice per modificare l'aspetto di una tabella consiste nell'usar
 
 Sono disponibili quattro stili predefiniti:
 
--  **Predefinito** : supporta `UIImageView`.
--  **Sottotitolo** : supporta un `UIImageView` sottotitolo e.
--  **Value1** : sottotitolo allineato a destra `UIImageView`, supporta un.
--  **Value2** : il titolo è allineato a destra e il sottotitolo è allineato a sinistra (ma nessuna immagine).
+- **Predefinito** : supporta `UIImageView`.
+- **Sottotitolo** : supporta un `UIImageView` sottotitolo e.
+- **Value1** : sottotitolo allineato a destra `UIImageView`, supporta un.
+- **Value2** : il titolo è allineato a destra e il sottotitolo è allineato a sinistra (ma nessuna immagine).
 
 
 Queste schermate mostrano come viene visualizzato ogni stile:
@@ -53,10 +53,10 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 Alle celle possono essere aggiunti gli accessori seguenti a destra della visualizzazione:
 
--   Segno di **spunta** : può essere usato per indicare la selezione multipla in una tabella.
--   **DetailButton** : risponde al tocco indipendentemente dal resto della cella, consentendo di eseguire una funzione diversa per toccare la cella stessa, ad esempio l'apertura di un popup o di una nuova finestra che non fa parte di `UINavigationController` uno stack.
--   **DisclosureIndicator** : normalmente usato per indicare che toccare la cella consente di aprire un'altra visualizzazione.
--   **DetailDisclosureButton** : combinazione di `DetailButton` e `DisclosureIndicator`.
+- Segno di **spunta** : può essere usato per indicare la selezione multipla in una tabella.
+- **DetailButton** : risponde al tocco indipendentemente dal resto della cella, consentendo di eseguire una funzione diversa per toccare la cella stessa, ad esempio l'apertura di un popup o di una nuova finestra che non fa parte di `UINavigationController` uno stack.
+- **DisclosureIndicator** : normalmente usato per indicare che toccare la cella consente di aprire un'altra visualizzazione.
+- **DetailDisclosureButton** : combinazione di `DetailButton` e `DisclosureIndicator`.
 
 
 Si tratta di un aspetto simile al seguente:
@@ -124,9 +124,9 @@ L'esempio CellCustomTable implementa una `UITableViewCell` sottoclasse che defin
 
 La classe di celle personalizzata è costituita solo da tre metodi:
 
--   **Costruttore** : crea i controlli dell'interfaccia utente e imposta le proprietà di stile personalizzate, ad esempio tipo di carattere, dimensioni e colori.
--   **UpdateCell** : metodo `UITableView.GetCell` utilizzato da per impostare le proprietà della cella.
--   **LayoutSubviews** : consente di impostare il percorso dei controlli dell'interfaccia utente. Nell'esempio ogni cella presenta lo stesso layout, ma una cella più complessa, in particolare quelle con dimensioni variabili, potrebbe richiedere posizioni di layout diverse a seconda del contenuto visualizzato.
+- **Costruttore** : crea i controlli dell'interfaccia utente e imposta le proprietà di stile personalizzate, ad esempio tipo di carattere, dimensioni e colori.
+- **UpdateCell** : metodo `UITableView.GetCell` utilizzato da per impostare le proprietà della cella.
+- **LayoutSubviews** : consente di impostare il percorso dei controlli dell'interfaccia utente. Nell'esempio ogni cella presenta lo stesso layout, ma una cella più complessa, in particolare quelle con dimensioni variabili, potrebbe richiedere posizioni di layout diverse a seconda del contenuto visualizzato.
 
 
 Il codice di esempio completo in **CellCustomTable > CustomVegeCell.cs** segue:
