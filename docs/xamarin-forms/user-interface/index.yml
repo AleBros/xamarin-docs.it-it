@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
+  ms.date: 08/07/2019
 abstract:
   description: Informazioni sulla creazione di interfacce utente con Xamarin.Forms.
 sections:
@@ -115,6 +115,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: map.md
             title: Mappe
+          - href: menuitem.md
+            html: Informazioni su come usare la classe MenuItem per aggiungere voci al menu di scelta rapida delle celle di ListView.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: menuitem.md
+            title: MenuItem
           - href: picker/index.md
             html: Informazioni su come usare il controllo Picker per selezionare un elemento di testo da un elenco di dati.
             image:
@@ -169,12 +175,24 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: text/index.md
             title: Testo
+          - href: theming.md
+            html: Informazioni su come creare temi per le applicazioni Xamarin.Forms e cambiare il tema in fase di esecuzione.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: theming.md
+            title: Temi
           - href: timepicker.md
             html: Informazioni su come usare un controllo TimePicker per consentire la selezione di un periodo di tempo.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: timepicker.md
             title: TimePicker
+          - href: toolbaritem.md
+            html: Informazioni su come usare una classe ToolbarItem per aggiungere pulsanti alla barra di spostamento.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: toolbaritem.md
+            title: ToolbarItem
           - href: visual/index.md
             html: Informazioni su come usare Xamarin.Forms Material Visual per creare applicazioni con un aspetto identico o in gran parte identico in iOS e Android.
             image:
