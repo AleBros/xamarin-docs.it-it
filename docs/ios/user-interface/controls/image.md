@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/13/2018
-ms.openlocfilehash: fb51d0d04c86274d43e23e4912ed16765b7cdc8b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7f1e61f9364a6a59f2bbacd1c773fe49cc338db9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657525"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528822"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con Novell. iOS
 
@@ -48,8 +48,8 @@ L'immagine verrà aggiunta al progetto e sarà disponibile per essere caricata e
 
 I file inseriti nella directory **delle risorse** vengono trattati in modo diverso rispetto ai file normali. il contenuto della cartella delle **risorse** viene copiato nella radice dell'applicazione ed è possibile farvi riferimento nel codice. Questa operazione può essere utile per diversi motivi:
 
--  Archiviazione delle immagini configurate nelle proprietà dell'applicazione, ad esempio le immagini di avvio predefinite e le icone dell'applicazione.
--  L'archiviazione di altre immagini e file separatamente dal codice, in modo che siano più facili da gestire (le sottodirectory vengono mantenute quando viene copiato il contenuto della directory delle risorse).
+- Archiviazione delle immagini configurate nelle proprietà dell'applicazione, ad esempio le immagini di avvio predefinite e le icone dell'applicazione.
+- L'archiviazione di altre immagini e file separatamente dal codice, in modo che siano più facili da gestire (le sottodirectory vengono mantenute quando viene copiato il contenuto della directory delle risorse).
 
 
 La directory Resources è particolarmente utile in un progetto di libreria, poiché il codice può presumere che tali immagini verranno copiate nella radice dell'applicazione consumer, semplificando la scrittura di librerie di codice condiviso che richiedono immagine, audio, video, XML o altri file.
