@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 87542bbd158b8c8ab0f48bb57fa0d19ce8f374c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 94a10213f8ae42d6e8f3407b18051021d92be5bc
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651671"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978555"
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
@@ -40,7 +40,7 @@ In Android, la classe `View` definisce un metodo sottoponibile a override, `OnTo
 
 Nella piattaforma UWP (Universal Windows Platform) la classe `UIElement` definisce gli eventi `PointerPressed`, `PointerMoved` e `PointerReleased`. Questi sono descritti nell'articolo [Gestire l'input del puntatore](/windows/uwp/input-and-devices/handle-pointer-input/) in MSDN e nella documentazione dell'API per la classe [`UIElement`](/uwp/api/windows.ui.xaml.uielement/).
 
-L'API `Pointer` nella piattaforma UWP ha lo scopo di unificare mouse, tocco e input penna. Per questo motivo, l'evento `PointerMoved` viene chiamato quando il mouse viene spostato attraverso un elemento, anche se non si preme alcun pulsante del mouse. L'oggetto `PointerRoutedEventArgs` che accompagna questi eventi ha una proprietà denominata `Pointer` che a sua volta ha una proprietà denominata `IsInContact` che indica se un pulsante del mouse è premuto o se un dito è a contatto con lo schermo.
+L'API `Pointer` nella piattaforma UWP ha lo scopo di unificare mouse, tocco e input penna. Per questo motivo, l'evento `PointerMoved` viene richiamato quando il mouse viene spostato su un elemento, anche se non si preme alcun pulsante del mouse. L'oggetto `PointerRoutedEventArgs` che accompagna questi eventi ha una proprietà denominata `Pointer` che a sua volta ha una proprietà denominata `IsInContact` che indica se un pulsante del mouse è premuto o se un dito è a contatto con lo schermo.
 
 La piattaforma UWP definisce anche altri due eventi, `PointerEntered` e `PointerExited`, che indicano quando il mouse o un dito si sposta da un elemento a un altro. Si considerino, ad esempio, due elementi adiacenti, denominati A e B. Per entrambi gli elementi sono installati gestori per gli eventi del puntatore. Se un dito preme A, viene richiamato l'evento `PointerPressed`. Se il dito si sposta, A richiama eventi `PointerMoved`. Se il dito si sposta da A a B, A richiama un evento `PointerExited` e B richiama un evento `PointerEntered`. Se il dito viene quindi sollevato, B richiama un evento `PointerReleased`.
 
