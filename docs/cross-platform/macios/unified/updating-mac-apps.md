@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c1a374feaadf28898b7fde8e364cf0adab83acd5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509598"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560297"
 ---
 # <a name="updating-existing-mac-apps"></a>Aggiornamento delle app Mac esistenti
 
@@ -70,7 +70,7 @@ Aggiungere le seguenti righe di codice dopo l' `<AssemblyName>` elemento:
 
 Esempio:
 
-![](updating-mac-apps-images/csproj3.png "Aggiungere queste righe di codice dopo l'elemento < AssemblyName >")
+![Aggiungere queste righe di codice dopo l' \<elemento AssemblyName >](updating-mac-apps-images/csproj3.png)
 
 ### <a name="2-update-project-references"></a>2. Aggiornare i riferimenti al progetto
 

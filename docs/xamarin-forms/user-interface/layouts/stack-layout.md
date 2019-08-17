@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad20ba50b8ff0f7dcbba3e8d297b2281544a373b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b2660ec18d075279f9cb84be4521429c05974e59
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657079"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560287"
 ---
 # <a name="xamarinforms-stacklayout"></a>StackLayout xamarin. Forms
 
@@ -219,7 +219,7 @@ Il codice precedente genera il layout seguente:
 
 ![](stack-layout-images/stack.png "StackLayout complessi")
 
-Si noti che `StackLayouts`s sono annidate, in quanto in alcuni casi i layout di annidamento può risultare più semplice rispetto a presentare tutti gli elementi all'interno del layout stesso. Si noti inoltre che, in quanto `StackLayout` non supporta elementi sovrapposti, trovare la pagina non sono in parte il niceties layout nelle pagine per gli altri layout.
+Si noti che `StackLayouts` sono annidati, perché in alcuni casi i layout di annidamento possono essere più semplici rispetto alla presentazione di tutti gli elementi all'interno dello stesso layout. Si noti inoltre che, in quanto `StackLayout` non supporta elementi sovrapposti, trovare la pagina non sono in parte il niceties layout nelle pagine per gli altri layout.
 
 
 
