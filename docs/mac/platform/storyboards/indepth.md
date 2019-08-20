@@ -1,34 +1,34 @@
 ---
-title: Utilizzo degli storyboard in xamarin. Mac
-description: Questo documento viene descritto come lavorare con gli storyboard in xamarin. Mac, esaminare le procedure per caricarle dal codice, il ciclo di vita di controller di visualizzazione, la catena di risponditore, gli elementi segue, controller di finestra, i riconoscitori di movimento e altro ancora.
+title: Uso degli storyboard in Novell. Mac
+description: Questo documento descrive come usare gli storyboard in Novell. Mac, esaminando come caricarli dal codice, il ciclo di vita del controller di visualizzazione, la catena di risponditori, gli elementi segue, i controller di finestra, i riconoscitori dei movimenti e altro ancora.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: e24b448bedc60a537bfcd4a5bfbdbe9562163818
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 06d3127bbe7766a70efc570bd455a8d570548731
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865925"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653778"
 ---
-# <a name="working-with-storyboards-in-xamarinmac"></a>Utilizzo degli storyboard in xamarin. Mac
+# <a name="working-with-storyboards-in-xamarinmac"></a>Uso degli storyboard in Novell. Mac
 
-Uno storyboard definisce tutti l'interfaccia utente per una determinata app, suddivise in una panoramica delle funzionalità dei controller di visualizzazione. In Interface Builder di Xcode, ognuno di questi controller si trova in un proprio scena.
+Uno storyboard definisce tutta l'interfaccia utente per una determinata app suddivisa in una panoramica funzionale dei controller di visualizzazione. In Interface Builder di Xcode, ognuno di questi controller si trova in una propria scena.
 
-[![](indepth-images/intro01.png "Uno storyboard di Interface Builder di Xcode")](indepth-images/intro01.png#lightbox)
+[![](indepth-images/intro01.png "Uno storyboard nella Interface Builder di Xcode")](indepth-images/intro01.png#lightbox)
 
-Lo storyboard è un file di risorse (con le estensioni di `.storyboard`) che vengono inclusi nel bundle dell'app xamarin. Mac quando viene compilato e spedito. Per definire lo Storyboard inizio per l'app, modificarla del `Info.plist` file e selezionare il **interfaccia principale** dalla casella a discesa: 
+Lo storyboard è un file di risorse (con le estensioni `.storyboard`di) che viene incluso nel bundle dell'app Novell. Mac quando viene compilato e spedito. Per definire lo storyboard iniziale per l'app, modificare `Info.plist` il file e selezionare l' **interfaccia principale** nella casella a discesa: 
 
-[![](indepth-images/sb01.png "L'editor Info. plist")](indepth-images/sb01.png#lightbox)
+[![](indepth-images/sb01.png "Editor info. plist")](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
-## <a name="loading-from-code"></a>Il caricamento dal codice
+## <a name="loading-from-code"></a>Caricamento dal codice
 
-Potrebbero esserci casi è necessario per caricare uno Storyboard specifico dal codice e creare manualmente un Controller di visualizzazione. È possibile usare il codice seguente per eseguire questa azione:
+In alcuni casi è possibile che sia necessario caricare uno Storyboard specifico dal codice e creare manualmente un controller di visualizzazione. Per eseguire questa azione, è possibile usare il codice seguente:
 
 ```csharp
 // Get new window
@@ -39,101 +39,101 @@ var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") a
 controller.ShowWindow(this);
 ```
 
-Il `FromName` carica il file di Storyboard con il nome specificato che è stato incluso nel bundle dell'app. Il `InstantiateControllerWithIdentifier` crea un'istanza del Controller di visualizzazione con l'identità specificata. È consigliabile impostare l'identità in Interface Builder di Xcode durante la progettazione dell'interfaccia utente:
+`FromName` Carica il file storyboard con il nome specificato che è stato incluso nel bundle dell'app. `InstantiateControllerWithIdentifier` Crea un'istanza del controller di visualizzazione con l'identità specificata. È possibile impostare l'identità nel Interface Builder di Xcode durante la progettazione dell'interfaccia utente:
 
-[![](indepth-images/sb02.png "Impostazione dell'ID di Storyboard")](indepth-images/sb02.png#lightbox)
+[![](indepth-images/sb02.png "Impostazione dell'ID storyboard")](indepth-images/sb02.png#lightbox)
 
-Facoltativamente, è possibile usare il `InstantiateInitialController` per caricare il Controller di visualizzazione che è stato assegnato il Controller iniziale in Interface Builder:
+Facoltativamente, è possibile usare il `InstantiateInitialController` metodo per caricare il controller di visualizzazione a cui è stato assegnato il controller iniziale in Interface Builder:
 
-[![](indepth-images/sb03.png "Impostazione del controller di iniziale")](indepth-images/sb03.png#lightbox)
+[![](indepth-images/sb03.png "Impostazione del controller iniziale")](indepth-images/sb03.png#lightbox)
 
-È contrassegnato per la **punto di ingresso dello Storyboard** e freccia open è terminata.
+È contrassegnato dal punto di **ingresso dello storyboard** e dalla freccia chiusa aperta sopra.
 
 <a name="View-Controllers" />
 
 ## <a name="view-controllers"></a>Controller di visualizzazione
 
-I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello Storyboard rappresenta un Controller di visualizzazione nel codice dell'app xamarin. Mac.
+I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello storyboard rappresenta un controller di visualizzazione nel codice dell'app Novell. Mac.
 
 <a name="The-View-Controller-Lifecycle" />
 
-### <a name="the-view-controller-lifecycle"></a>Il ciclo di vita di Controller di visualizzazione
+### <a name="the-view-controller-lifecycle"></a>Ciclo di vita del controller di visualizzazione
 
-Sono stati aggiunti diversi nuovi metodi per il `NSViewController` classe per supportare gli storyboard in macOS. Sono ancora più importante che usano i metodi seguenti per rispondere al ciclo di vita della visualizzazione che viene controllata dal Controller di visualizzazione specificata:
+Sono stati aggiunti diversi nuovi metodi alla classe `NSViewController` per supportare gli storyboard in MacOS. In particolare, i metodi seguenti usano per rispondere al ciclo di vita della visualizzazione controllata dal controller di visualizzazione specificato:
 
-- `ViewDidLoad` -Questo metodo viene chiamato quando la visualizzazione viene caricata dal file di Storyboard.
-- `ViewWillAppear` -Questo metodo viene chiamato subito prima della visualizzazione viene visualizzata sullo schermo.
-- `ViewDidAppear` -Questo metodo viene chiamato direttamente dopo la visualizzazione è stata visualizzata sullo schermo.
-- `ViewWillDisappear` -Questo metodo viene chiamato subito prima della visualizzazione viene rimossa dallo schermo.
-- `ViewDidDisappear` -Questo metodo viene chiamato direttamente dopo la visualizzazione è stato rimosso dallo schermo.
-- `UpdateViewConstraints` -Questo metodo viene chiamato quando i vincoli che definiscono una vista auto layout posizione e le dimensioni devono essere aggiornati.
-- `ViewWillLayout` -Questo metodo viene chiamato poco prima che le visualizzazioni secondarie di questa visualizzazione sono visualizzate sullo schermo.
-- `ViewDidLayout` -Questo metodo viene chiamato direttamente dopo le visualizzazioni secondarie della visualizzazione sono visualizzate sullo schermo.
+- `ViewDidLoad`-Questo metodo viene chiamato quando la vista viene caricata dal file dello storyboard.
+- `ViewWillAppear`-Questo metodo viene chiamato immediatamente prima che la visualizzazione venga visualizzata sullo schermo.
+- `ViewDidAppear`-Questo metodo viene chiamato direttamente dopo che la visualizzazione è stata visualizzata sullo schermo.
+- `ViewWillDisappear`-Questo metodo viene chiamato immediatamente prima della rimozione della visualizzazione dalla schermata.
+- `ViewDidDisappear`-Questo metodo viene chiamato direttamente dopo che la visualizzazione è stata rimossa dalla schermata.
+- `UpdateViewConstraints`-Questo metodo viene chiamato quando è necessario aggiornare i vincoli che definiscono la posizione e la dimensione del layout automatico.
+- `ViewWillLayout`-Questo metodo viene chiamato immediatamente prima che le sottoviste di questa visualizzazione siano disposte sullo schermo.
+- `ViewDidLayout`-Questo metodo viene chiamato direttamente dopo la disposizione delle visualizzazioni visualizzate sullo schermo.
 
 <a name="The-Responder-Chain" />
 
-### <a name="the-responder-chain"></a>La catena del risponditore
+### <a name="the-responder-chain"></a>Catena di risponditori
 
-È inoltre `NSViewControllers` fanno ora parte della finestra _catena risponditore_:
+Inoltre, `NSViewControllers` fa ora parte della _catena_di risponditori della finestra:
 
-[![](indepth-images/vc01.png "La catena del risponditore")](indepth-images/vc01.png#lightbox)
+[![](indepth-images/vc01.png "Catena di risponditori")](indepth-images/vc01.png#lightbox)
 
-E di conseguenza sono reti cablate-fino a ricevere e rispondere agli eventi, ad esempio le selezioni delle voci di menu Taglia, copia e Incolla. Questo wire-up del Controller di visualizzazione automatica si verifica solo nelle App in esecuzione in macOS Sierra (10.12) e versioni successive.
+E, di conseguenza, vengono cablati per ricevere e rispondere a eventi quali le selezioni delle voci di menu taglia, copia e incolla. Questo cablaggio del controller di visualizzazione automatico si verifica solo nelle app in esecuzione in macOS Sierra (10,12) e versioni successive.
 
 <a name="Containment" />
 
 ### <a name="containment"></a>Contenuto
 
-Negli storyboard, i controller di visualizzazione (ad esempio il Controller di visualizzazione di divisione e il Controller di visualizzazione della scheda) ora è possibile implementare _contenimento_, in modo che sia possibile "contengono" altri sub i controller di visualizzazione:
+Negli storyboard, i controller di visualizzazione, come il controller di visualizzazione suddiviso e il controller di visualizzazione a schede, possono ora implementare il contenimento, in modo che possano "contenere" altri controller di visualizzazione secondari:
 
-[![](indepth-images/vc02.png "Un esempio di contenimento di Controller di visualizzazione")](indepth-images/vc02.png#lightbox)
+[![](indepth-images/vc02.png "Esempio di contenimento del controller di visualizzazione")](indepth-images/vc02.png#lightbox)
 
-I controller di visualizzazione figlio contiene i metodi e proprietà per collegarle nuovamente al rispettivo Controller di visualizzazione padre e a lavorare con la visualizzazione e rimozione di viste dalla schermata.
+I controller di visualizzazione figlio contengono metodi e proprietà per associarli di nuovo al controller di visualizzazione padre e per lavorare con la visualizzazione e la rimozione di visualizzazioni dalla schermata.
 
-Tutti i controller di visualizzazione contenitore incorporato in macOS hanno un layout specifico che Apple consigliabile seguire se creare i propri controller di visualizzazione contenitore personalizzato:
+Tutti i controller di visualizzazione contenitore incorporati in macOS hanno un layout specifico che Apple suggerisce di seguire se si crea un controller di visualizzazione del contenitore personalizzato:
 
-[![](indepth-images/vc03.png "Il layout del Controller di visualizzazione")](indepth-images/vc03.png#lightbox)
+[![](indepth-images/vc03.png "Layout del controller di visualizzazione")](indepth-images/vc03.png#lightbox)
 
-Il Controller di visualizzazione raccolta contiene una matrice di elementi di visualizzazione di raccolta, ognuno dei quali contiene uno o più controller di visualizzazione che contengono le proprie visualizzazioni.
+Il controller di visualizzazione raccolta contiene una matrice di elementi della visualizzazione raccolta, ognuno dei quali contiene uno o più controller di visualizzazione che contengono visualizzazioni personalizzate.
 
 <a name="Segues" />
 
 ## <a name="segues"></a>Gli elementi segue
 
-Gli elementi segue forniscono le relazioni tra tutte le scene di cui definiscono l'interfaccia utente dell'app. Se si ha familiarità con l'utilizzo degli storyboard in iOS, si è certi che gli elementi segue per iOS in genere definiscono transizioni tra le viste schermo intero. Questo comportamento è diverso da macOS, quando si definiscono in genere segue "[contenimento](#Containment)", dove una scena rappresenta l'elemento figlio di un elemento padre di scena.
+Gli elementi segue forniscono le relazioni tra tutte le scene che definiscono l'interfaccia utente dell'app. Se si ha familiarità con l'uso degli storyboard in iOS, si sa che gli elementi segue per iOS definisce in genere le transizioni tra le visualizzazioni a schermo intero. Questo comportamento è diverso da macOS, quando gli elementi segue in genere definiscono "[contenimento](#Containment)", dove una scena è l'elemento figlio di una scena padre.
 
-In macOS, la maggior parte delle App tendono a raggruppare le visualizzazioni insieme all'interno della stessa finestra usando gli elementi dell'interfaccia utente, ad esempio schede e viste di divisione. A differenza di iOS, in cui le visualizzazioni dovranno eseguire la transizione accensione e spegnimento dello schermo, visualizzare lo spazio a causa di fisica limitata.
+In macOS la maggior parte delle app tende a raggruppare le visualizzazioni all'interno della stessa finestra usando gli elementi dell'interfaccia utente, ad esempio le visualizzazioni e le schede suddivise. A differenza di iOS, in cui le visualizzazioni devono essere sottoposte a transizione sullo schermo, a causa dello spazio di visualizzazione fisico limitato.
 
 <a name="Presentation-Segues" />
 
 ### <a name="presentation-segues"></a>Gli elementi segue presentazione
 
-Dato utenti di macOS verso il contenimento, esistono situazioni in cui _presentazione gli elementi segue_ vengono usati, ad esempio Windows modale, foglio le visualizzazioni e Popovers. i tipi di macOS fornisce segue predefiniti seguenti:
+Date le tendenze di macOS all'indipendenza, esistono situazioni in cui vengono usate le _gli elementi segue di presentazione_ , ad esempio le finestre modali, le visualizzazioni dei fogli e i Popov. macOS fornisce i tipi di segue predefiniti seguenti:
 
-- **Mostra** -Visualizza la destinazione dell'elemento Segue come una finestra non modale. Ad esempio, usare questo tipo di elemento Segue per presentare un'altra istanza di una finestra del documento nell'app.
-- **Modale** -presenta la destinazione dell'elemento Segue come una finestra modale. Ad esempio, usare questo tipo di elemento Segue per presentare la finestra Preferenze per l'app.
-- **Foglio** -presenta la destinazione dell'elemento Segue come un foglio associata alla finestra padre. Ad esempio, usare questo tipo di elemento segue per presentare un Trova e Sostituisci foglio.
-- **Nel popover** -presenta la destinazione dell'elemento Segue come in una finestra nel popover. Ad esempio, usare questo tipo di elemento Segue per presentare opzioni quando viene fatto clic su un elemento dell'interfaccia utente dell'utente.
-- **Personalizzato** -presenta la destinazione dell'elemento Segue usando un tipo di elemento Segue personalizzate definite dallo sviluppatore. Vedere le [creazione personalizzata gli elementi segue](#Creating-Custom-Segues) sezione di seguito per altri dettagli.
+- **Show** : Visualizza la destinazione del segue come finestra non modale. Usare, ad esempio, questo tipo di segue per presentare un'altra istanza di una finestra del documento nell'app.
+- **Modale** : presenta la destinazione di segue come finestra modale. Usare, ad esempio, questo tipo di segue per presentare la finestra delle preferenze per l'app.
+- **Sheet** : viene visualizzata la destinazione di segue come foglio collegato alla finestra padre. Usare, ad esempio, questo tipo di segue per presentare un foglio di ricerca e sostituzione.
+- **Popover** : presenta la destinazione del segue come in una finestra di popopov. Usare, ad esempio, questo tipo di segue per presentare le opzioni quando si fa clic su un elemento dell'interfaccia utente.
+- **Personalizzata** : presenta la destinazione del segue usando un tipo di segue personalizzato definito dallo sviluppatore. Per altri dettagli, vedere la sezione [creazione di gli elementi segue personalizzati](#Creating-Custom-Segues) di seguito.
 
-Quando si usano gli elementi segue presentazione, è possibile eseguire l'override di `PrepareForSegue` metodo del Controller di visualizzazione padre per la presentazione per inizializzare e le variabili e fornire i dati per il Controller di visualizzazione viene presentato.
+Quando si usa Presentation gli elementi segue, è possibile eseguire `PrepareForSegue` l'override del metodo del controller di visualizzazione padre per la presentazione per inizializzare e variabili e fornire i dati al controller di visualizzazione visualizzato.
 
 <a name="Triggered-Segues" />
 
-### <a name="triggered-segues"></a>Attivato gli elementi segue
+### <a name="triggered-segues"></a>Gli elementi segue attivato
 
-Segue attivate consentono di specificare segue denominata (tramite loro **Identifier** proprietà in Interface Builder) e che siano attivati dagli eventi, ad esempio l'utente facendo clic su un pulsante o chiamando il `PerformSegue` metodo nel codice:
+I gli elementi segue attivati consentono di specificare il nome gli elementi segue (tramite la relativa proprietà **Identifier** in Interface Builder) e di attivarli da eventi quali l'utente che fa clic su un pulsante o `PerformSegue` chiamando il metodo nel codice:
 
 ```csharp
 // Display the Scene defined by the given Segue ID
 PerformSegue("MyNamedSegue", this);
 ``` 
 
-L'ID elemento Segue è definito all'interno di Interface Builder di Xcode durante sono il layout dell'interfaccia utente dell'app:
+L'ID segue viene definito all'interno del Interface Builder di Xcode quando si definisce l'interfaccia utente dell'app:
 
-[![](indepth-images/sg02.png "Immettere un nome di elemento Segue")](indepth-images/sg02.png#lightbox)
+[![](indepth-images/sg02.png "Immissione di un nome segue")](indepth-images/sg02.png#lightbox)
 
-Nel Controller di visualizzazione che rappresenta l'origine dell'elemento Segue, è necessario eseguire l'override di `PrepareForSegue` metodo ed effettuare qualsiasi inizializzazione necessaria prima che venga eseguito il Segue e il Controller di visualizzazione specificato viene visualizzato:
+Nel controller di visualizzazione che funge da origine del segue, è necessario eseguire l'override del `PrepareForSegue` metodo ed eseguire qualsiasi inizializzazione richiesta prima che venga eseguito il segue e venga visualizzato il controller di visualizzazione specificato:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -150,15 +150,15 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Facoltativamente, è possibile eseguire l'override di `ShouldPerformSegue` metodo e il controllo o meno l'elemento Segue viene effettivamente eseguita tramite C# codice. Per i controller di visualizzazione manualmente presentata, chiamare il metodo loro `DismissController` metodo rimuoverle da visualizzare quando non sono più necessari.
+Facoltativamente, è possibile eseguire l' `ShouldPerformSegue` override del metodo e controllare se il segue viene effettivamente eseguito tramite C# codice. Per i controller di visualizzazione presentati manualmente, `DismissController` chiamare il metodo per rimuoverli dalla visualizzazione quando non sono più necessari.
 
 <a name="Creating-Custom-Segues" />
 
-### <a name="creating-custom-segues"></a>Creazione personalizzata gli elementi segue
+### <a name="creating-custom-segues"></a>Creazione di gli elementi segue personalizzati
 
-Potrebbero esserci volte quando l'app richiede un tipo di elemento Segue non fornito da segue compilazione aggiuntivo definito in macOS. In questo caso, è possibile creare un elemento Segue personalizzati che possono essere assegnati in Interface Builder di Xcode durante il layout dell'interfaccia utente dell'app.
+In alcuni casi è possibile che l'app richieda un tipo di segue non fornito dalla gli elementi segue di compilazione definita in macOS. In tal caso, è possibile creare un segue personalizzato che può essere assegnato nella Interface Builder di Xcode quando si definisce l'interfaccia utente dell'app.
 
-Per creare un nuovo tipo di elemento Segue che sostituisce il Controller di visualizzazione corrente all'interno di una finestra (invece di aprire la destinazione di scena in una nuova finestra), ad esempio, è possibile usare il codice seguente:
+Ad esempio, per creare un nuovo tipo segue che sostituisce il controller di visualizzazione corrente all'interno di una finestra, anziché aprire la scena di destinazione in una nuova finestra, è possibile usare il codice seguente:
 
 ```csharp
 using System;
@@ -206,157 +206,156 @@ namespace OnCardMac
 }
 ```
 
-Un paio di aspetti da notare:
+Ecco alcuni aspetti da considerare:
 
-- Usiamo il `Register` attributo per esporre questa classe per Objective-C/macOS.
-- Viene eseguito l'override di `Perform` metodo per eseguire effettivamente l'azione del nostro elemento Segue personalizzato.
-- Si sta sostituendo la finestra `ContentViewController` controller con quello definito dalla destinazione (destinazione) di elemento Segue.
-- Verranno rimosse il Controller di visualizzazione originale per liberare memoria tramite la `RemoveFromParentViewController` (metodo).
+- Si sta usando l' `Register` attributo per esporre questa classe a Objective-C/MacOS.
+- Viene eseguito l'override del `Perform` metodo per eseguire effettivamente l'azione del segue personalizzato.
+- Il `ContentViewController` controller della finestra viene sostituito con quello definito dalla destinazione (destinazione) del segue.
+- Il controller di visualizzazione originale verrà rimosso per liberare memoria utilizzando il `RemoveFromParentViewController` metodo.
 
-Per usare questo nuovo tipo di elemento Segue in Interface Builder di Xcode, è necessario compilare l'app in primo luogo, quindi passare a Xcode e aggiungere un nuovo elemento Segue tra le due scene. Impostare il **stile** a **personalizzato** e il **classe Segue** a `ReplaceViewSegue` (il nome della nostra classe di elemento Segue personalizzato):
+Per usare questo nuovo tipo di segue nel Interface Builder di Xcode, è necessario compilare prima l'app, quindi passare a Xcode e aggiungere una nuova segue tra due scene. Impostare lo **stile** su **Custom** e la **classe segue** su `ReplaceViewSegue` (il nome della classe segue personalizzata):
 
-[![](indepth-images/sg01.png "L'impostazione della classe di elemento Segue")](indepth-images/sg01.png#lightbox)
+[![](indepth-images/sg01.png "Impostazione della classe segue")](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
 ## <a name="window-controllers"></a>Controller di finestra
 
-I controller di finestra contengono e controllano i diversi tipi di finestra in grado di creare l'app macOS. Per gli storyboard, presentano le caratteristiche seguenti:
+I controller di finestra contengono e controllano i diversi tipi di finestra che l'app macOS può creare. Per gli storyboard sono disponibili le funzionalità seguenti:
 
-1. Devono specificare un Controller di visualizzazione del contenuto. Questo sarà il Controller di visualizzazione del contenuto stesso con la finestra figlio.
-2. Il `Storyboard` proprietà conterrà lo Storyboard il Controller di finestra caricato da, altrimenti `null` se non è stato caricato da uno Storyboard.
-3. È possibile chiamare il `DismissController` metodo per chiudere la finestra specificata e lo rimuove dalla visualizzazione.
+1. È necessario che forniscano un controller di visualizzazione del contenuto. Si tratta dello stesso controller di visualizzazione del contenuto della finestra figlio.
+2. La `Storyboard` proprietà conterrà lo storyboard dal quale è stato caricato il controller della finestra `null` ; in caso contrario, se non è stato caricato da uno storyboard.
+3. È possibile chiamare il `DismissController` metodo per chiudere la finestra specificata e rimuoverla dalla visualizzazione.
 
-Come i controller di visualizzazione, i controller di finestra implementano la `PerformSegue`, `PrepareForSegue` e il `ShouldPerformSegue` metodi e può essere usato come origine di un'operazione di elemento Segue.
+Come i controller di visualizzazione, i controller `PerformSegue`di `PrepareForSegue` finestra implementano i `ShouldPerformSegue` metodi e e possono essere usati come origine di un'operazione segue.
 
-Controller di finestra sono responsabili per le caratteristiche seguenti di un'app macOS:
+Il controller di finestra è responsabile delle funzionalità seguenti di un'app macOS:
 
-- Che gestiscono una specifica finestra.
-- Barra del titolo della finestra e sulla barra degli strumenti che gestiscono (se disponibile).
-- Che gestiscono il Controller di visualizzazione del contenuto per visualizzare il contenuto della finestra.
+- Gestiscono una finestra specifica.
+- Gestiscono la barra del titolo della finestra e la barra degli strumenti, se disponibile.
+- Gestiscono il controller di visualizzazione del contenuto per visualizzare il contenuto della finestra.
 
 <a name="Gesture-Recognizers" />
 
 ## <a name="gesture-recognizers"></a>Riconoscitori di movimento
 
-I riconoscitori di movimento per macOS sono quasi identici alle rispettive controparti in iOS e consentono agli sviluppatori di aggiungere facilmente i movimenti (ad esempio, facendo clic su un pulsante del mouse) agli elementi nell'interfaccia utente dell'app.
+I riconoscitori dei movimenti per macOS sono quasi identici alle loro controparti in iOS e consentono allo sviluppatore di aggiungere facilmente movimenti, ad esempio facendo clic su un pulsante del mouse, per gli elementi nell'interfaccia utente dell'app.
 
-Tuttavia, in cui i movimenti in iOS sono determinati in base alla progettazione dell'app (ad esempio, se si tocca la schermata con due dita), più i movimenti in macOS sono determinati dall'hardware.
+Tuttavia, quando i movimenti in iOS sono determinati dalla progettazione dell'applicazione (ad esempio, toccando lo schermo con due dita), la maggior parte dei movimenti in macOS sono determinati dall'hardware.
 
-Usando i riconoscitori di movimento, è possibile ridurre notevolmente la quantità di codice necessario per aggiungere questo tipo di interazione a un elemento nell'interfaccia utente. Come si può determinare automaticamente tra i clic doppie e singole, fare clic e trascinare gli eventi e così via.
+Utilizzando i riconoscitori di movimento, è possibile ridurre notevolmente la quantità di codice necessaria per aggiungere interazioni personalizzate a un elemento nell'interfaccia utente. Poiché possono determinare automaticamente tra doppio e singolo clic, fare clic e trascinare gli eventi e così via.
 
-Invece di sostituire il `MouseDown` evento nel Controller di visualizzazione, è consigliabile usare un riconoscitore di movimento per gestire l'evento di input utente quando si lavora con gli storyboard.
+Anziché eseguire l'override dell' `MouseDown` evento nel controller di visualizzazione, è necessario utilizzare un riconoscimento di movimento per gestire l'evento di input utente quando si utilizzano gli storyboard.
 
-I riconoscitori di movimento seguenti sono disponibili in macOS:
+In macOS sono disponibili i riconoscitori dei movimenti seguenti:
 
-- `NSClickGestureRecognizer` -Registrare mouse verso il basso e gli eventi.
-- `NSPanGestureRecognizer` -Registri pulsante del mouse premuto, trascinare e rilasciare gli eventi.
-- `NSPressGestureRecognizer` -Registri premuto un pulsante del mouse per una determinata quantità di eventi di tempo.
-- `NSMagnificationGestureRecognizer` : Registra un evento di ingrandimento dall'hardware trackpad.
-- `NSRotationGestureRecognizer` : Registra un evento di rotazione da hardware trackpad.
+- `NSClickGestureRecognizer`-Registrare gli eventi del mouse verso il basso e verso l'alto.
+- `NSPanGestureRecognizer`-Registra gli eventi di trascinamento e rilascio del pulsante del mouse.
+- `NSPressGestureRecognizer`: Registra tenendo premuto il pulsante del mouse per un determinato periodo di tempo.
+- `NSMagnificationGestureRecognizer`: Registra un evento di ingrandimento dall'hardware del trackpad.
+- `NSRotationGestureRecognizer`: Registra un evento di rotazione dall'hardware del trackpad.
 
 <a name="Using-Storyboard-References" />
 
-## <a name="using-storyboard-references"></a>Utilizzo di riferimenti a uno Storyboard
+## <a name="using-storyboard-references"></a>Utilizzo di riferimenti a storyboard
 
-Un riferimento di Storyboard consente di prendere una progettazione dello Storyboard grande e complessa e di suddividerlo in più piccoli storyboard che ottenere cui viene fatto riferimento dall'originale, pertanto la rimozione di complessità e rendendo più semplice progettare e gestire gli storyboard singoli risultanti.
+Un riferimento a storyboard consente di eseguire una progettazione storyboard complessa e di grandi dimensioni e suddividerla in storyboard più piccoli a cui viene fatto riferimento dall'originale, eliminando così la complessità e rendendo più semplice la progettazione e la gestione degli storyboard singoli risultanti.
 
-Inoltre, fornisce un riferimento di Storyboard un' _ancoraggio_ alla scena un altro all'interno dello stesso Storyboard o una scena specifica in una diversa.
+Inoltre, un riferimento a storyboard può fornire un _ancoraggio_ a un'altra scena nello stesso storyboard o in una scena specifica in un'altra.
 
 <a name="Referencing-an-External-Storyboard" />
 
-### <a name="referencing-an-external-storyboard"></a>Riferimento a uno Storyboard di esterno
+### <a name="referencing-an-external-storyboard"></a>Riferimento a uno storyboard esterno
 
-Per aggiungere un riferimento a uno Storyboard esterno, eseguire le operazioni seguenti:
+Per aggiungere un riferimento a uno storyboard esterno, procedere come segue:
 
-1. Nel **Esplora soluzioni**, fare doppio clic sul nome del progetto e selezionare **Add** > **nuovo File...**   >  **Mac** > **Storyboard**. Immettere un **Name** per il nuovo Storyboard e fare clic sui **New** pulsante: 
+1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo file...** Storyboard Mac.  >  >  Immettere un **nome** per il nuovo storyboard e fare clic sul pulsante **nuovo** : 
 
-    [![](indepth-images/ref01.png "Aggiunta di un nuovo Storyboard")](indepth-images/ref01.png#lightbox)
-2. Nel **Esplora soluzioni**, fare doppio clic il nuovo nome di uno Storyboard per aprirlo e modificarlo in Interface Builder di Xcode.
-3. Progettare il layout delle scene dello Storyboard di nuovo normalmente verrebbe e salvare le modifiche: 
+    [![](indepth-images/ref01.png "Aggiunta di un nuovo storyboard")](indepth-images/ref01.png#lightbox)
+2. Nella **Esplora soluzioni**fare doppio clic sul nuovo nome dello storyboard per aprirlo per la modifica nella Interface Builder di Xcode.
+3. Progettare il layout dei nuovi scenari dello storyboard come si farebbe normalmente e salvare le modifiche: 
 
     [![](indepth-images/ref02.png "Progettazione dell'interfaccia")](indepth-images/ref02.png#lightbox)
-4. Passare allo Storyboard che si sta per essere aggiunto il riferimento a in Interface Builder.
-5. Trascinare un **riferimento di Storyboard** dalle **oggetto libreria** nell'area di progettazione: 
+4. Passare allo storyboard a cui si intende aggiungere il riferimento nel Interface Builder.
+5. Trascinare un **riferimento a Storyboard** dalla **libreria di oggetti** nel area di progettazione: 
 
-    [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard nella libreria")](indepth-images/ref03.png#lightbox)
-6. Nel **attributo Inspector**, selezionare il nome del **Storyboard** creata in precedenza: 
+    [![](indepth-images/ref03.png "Selezione di un riferimento a Storyboard nella libreria")](indepth-images/ref03.png#lightbox)
+6. In **attributo Inspector**selezionare il nome dello **storyboard** creato in precedenza: 
 
-    [![](indepth-images/ref04.png "Configurazione di riferimento")](indepth-images/ref04.png#lightbox)
-7. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato.  Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
+    [![](indepth-images/ref04.png "Configurazione del riferimento")](indepth-images/ref04.png#lightbox)
+7. CTRL: fare clic su un widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo segue per il **riferimento allo storyboard** appena creato.  Dal menu popup selezionare **Mostra** per completare il segue: 
 
-    [![](indepth-images/ref06.png "Impostare il tipo di elemento Segue")](indepth-images/ref06.png#lightbox) 
-8. Salvare le modifiche allo Storyboard.
-9. Tornare a Visual Studio per Mac sincronizzare le modifiche.
+    [![](indepth-images/ref06.png "Impostazione del tipo segue")](indepth-images/ref06.png#lightbox) 
+8. Salvare le modifiche apportate allo storyboard.
+9. Tornare a Visual Studio per Mac per sincronizzare le modifiche.
 
-Verrà visualizzato quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente che è stato creato l'elemento Segue da, il Controller di finestra iniziale dallo Storyboard esterno specificati nel riferimento Storyboard.
+Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente da cui è stato creato il segue, viene visualizzato il controller della finestra iniziale dello storyboard esterno specificato nel riferimento dello storyboard.
 
 <a name="Referencing-a-Specific-Scene-in-an-External-Storyboard" />
 
-### <a name="referencing-a-specific-scene-in-an-external-storyboard"></a>Riferimento a una scena specifica in uno Storyboard di esterno
+### <a name="referencing-a-specific-scene-in-an-external-storyboard"></a>Riferimento a una scena specifica in uno storyboard esterno
 
-Per aggiungere un riferimento a una scena specifico uno Storyboard esterno e non i Controller di finestra iniziale, eseguire le operazioni seguenti:
+Per aggiungere un riferimento a una scena specifica uno storyboard esterno (e non il controller della finestra iniziale), eseguire le operazioni seguenti:
 
-1. Nel **Esplora soluzioni**, fare doppio clic sullo Storyboard esterno per aprirlo e modificarlo in Interface Builder di Xcode.
-2. Aggiungere una nuova scena e progettare il layout come di consueto: 
+1. Nella **Esplora soluzioni**fare doppio clic sullo storyboard esterno per aprirlo per la modifica nella Interface Builder di Xcode.
+2. Aggiungere una nuova scena e progettarne il layout normalmente: 
 
-    [![](indepth-images/ref07.png "Progettare il layout in Xcode")](indepth-images/ref07.png#lightbox)
-3. Nel **Identity Inspector**, immettere una **ID Storyboard** per finestra del Controller della scena nuova: 
+    [![](indepth-images/ref07.png "Progettazione del layout in Xcode")](indepth-images/ref07.png#lightbox)
+3. In **Identity Inspector**immettere un **ID storyboard** per il controller di finestra della nuova scena: 
 
-    [![](indepth-images/ref08.png "Impostazione dell'ID di Storyboard")](indepth-images/ref08.png#lightbox)
-4. Aprire lo Storyboard che si sta per essere aggiunto il riferimento a in Interface Builder.
-5. Trascinare un **riferimento di Storyboard** dalle **oggetto libreria** nell'area di progettazione: 
+    [![](indepth-images/ref08.png "Impostazione dell'ID storyboard")](indepth-images/ref08.png#lightbox)
+4. Aprire lo storyboard a cui si intende aggiungere il riferimento in Interface Builder.
+5. Trascinare un **riferimento a Storyboard** dalla **libreria di oggetti** nel area di progettazione: 
 
-    [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
-6. Nel **Identity Inspector**, selezionare il nome del **Storyboard** e il **ID riferimento** (ID di Storyboard) della scena creata in precedenza: 
+    [![](indepth-images/ref03.png "Selezione di un riferimento a Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
+6. Nel **controllo di identità**selezionare il nome dello **storyboard** e l'ID di **riferimento** (ID Storyboard) della scena creata in precedenza: 
 
     [![](indepth-images/ref09.png "Impostazione dell'ID di riferimento")](indepth-images/ref09.png#lightbox)
-7. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
+7. CTRL: fare clic su un widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo segue per il **riferimento allo storyboard** appena creato. Dal menu popup selezionare **Mostra** per completare il segue: 
 
-    [![](indepth-images/ref06.png "Impostare il tipo di elemento Segue")](indepth-images/ref06.png#lightbox) 
-8. Salvare le modifiche allo Storyboard.
-9. Tornare a Visual Studio per Mac sincronizzare le modifiche.
+    [![](indepth-images/ref06.png "Impostazione del tipo segue")](indepth-images/ref06.png#lightbox) 
+8. Salvare le modifiche apportate allo storyboard.
+9. Tornare a Visual Studio per Mac per sincronizzare le modifiche.
 
-Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente che è stato creato l'elemento Segue da, scena con la determinata **ID di Storyboard** dallo Storyboard esterno specificati nel riferimento Storyboard verranno visualizzati.
+Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente da cui è stato creato il segue, viene visualizzata la scena con l' **ID di storyboard** specificato dallo storyboard esterno specificato nel riferimento dello storyboard.
 
 <a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard" />
 
-### <a name="referencing-a-specific-scene-in-the-same-storyboard"></a>Riferimento a una scena specifica nello stesso Storyboard
+### <a name="referencing-a-specific-scene-in-the-same-storyboard"></a>Riferimento a una scena specifica nello stesso storyboard
 
-Per aggiungere un riferimento a una scena specifica lo stesso Storyboard, eseguire le operazioni seguenti:
+Per aggiungere un riferimento a una scena specifica dello stesso storyboard, procedere come segue:
 
-1. Nel **Esplora soluzioni**, fare doppio clic sullo Storyboard per aprirlo e modificarlo.
-2. Aggiungere una nuova scena e progettare il layout come di consueto: 
+1. Nella **Esplora soluzioni**fare doppio clic sullo storyboard per aprirlo per la modifica.
+2. Aggiungere una nuova scena e progettarne il layout normalmente: 
 
-    [![](indepth-images/ref11.png "Modifica lo storyboard in Xcode")](indepth-images/ref11.png#lightbox)
-3. Nel **Identity Inspector**, immettere una **ID Storyboard** per finestra del Controller della scena nuova: 
+    [![](indepth-images/ref11.png "Modifica dello storyboard in Xcode")](indepth-images/ref11.png#lightbox)
+3. In **Identity Inspector**immettere un **ID storyboard** per il controller di finestra della nuova scena: 
 
-    [![](indepth-images/ref12.png "Impostazione dell'ID di Storyboard")](indepth-images/ref12.png#lightbox)
-4. Trascinare un **riferimento di Storyboard** dalle **della casella degli strumenti** nell'area di progettazione: 
+    [![](indepth-images/ref12.png "Impostazione dell'ID storyboard")](indepth-images/ref12.png#lightbox)
+4. Trascinare un **riferimento a Storyboard** dalla **casella degli strumenti** nel area di progettazione: 
 
-    [![](indepth-images/ref03.png "Selezione di un riferimento di Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
-5. Nelle **attributo Inspector**, selezionare **ID riferimento** (ID di Storyboard) della scena creata in precedenza: 
+    [![](indepth-images/ref03.png "Selezione di un riferimento a Storyboard dalla libreria")](indepth-images/ref03.png#lightbox)
+5. In **controllo attributi**selezionare **ID di riferimento** (ID Storyboard) della scena creata in precedenza: 
 
     [![](indepth-images/ref13.png "Impostazione dell'ID di riferimento")](indepth-images/ref13.png#lightbox)
-6. CTRL + clic su un Widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo elemento Segue per il **Storyboard riferimento** appena creato. Scegliere dal menu a comparsa **mostrare** per completare l'elemento Segue: 
+6. CTRL: fare clic su un widget dell'interfaccia utente (ad esempio un pulsante) in una scena esistente e creare un nuovo segue per il **riferimento allo storyboard** appena creato. Dal menu popup selezionare **Mostra** per completare il segue: 
 
-    [![](indepth-images/ref06.png "Selezione del tipo di elemento Segue")](indepth-images/ref06.png#lightbox) 
-7. Salvare le modifiche allo Storyboard.
-8. Tornare a Visual Studio per Mac sincronizzare le modifiche.
+    [![](indepth-images/ref06.png "Selezione del tipo di segue")](indepth-images/ref06.png#lightbox) 
+7. Salvare le modifiche apportate allo storyboard.
+8. Tornare a Visual Studio per Mac per sincronizzare le modifiche.
 
-Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente che è stato creato l'elemento Segue da, scena con la determinata **ID di Storyboard** nello Storyboard stesso specificati nel riferimento Storyboard verranno visualizzati.
+Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia utente da cui è stato creato il segue, viene visualizzata la scena con l' **ID di storyboard** specificato nello stesso storyboard specificato nel riferimento dello storyboard.
 
 <a name="Complex-Storyboard-Example" />
 
-## <a name="complex-storyboard-example"></a>Esempio di Storyboard complessi
+## <a name="complex-storyboard-example"></a>Esempio di storyboard complesso
 
-Per un esempio complesso di lavorare con gli storyboard in un'app xamarin. Mac, vedere la [App di esempio SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
+Per un esempio complesso di utilizzo degli storyboard in un'app Novell. Mac, vedere l'app di [esempio SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter è un editor di codice sorgente semplice che offre supporto per il completamento del codice e informazioni sulla sintassi.
 
 Il codice SourceWriter include tutti i commenti e, dove possibile, sono stati indicati i collegamenti delle tecnologie e dei metodi principali alle informazioni corrispondenti nelle guide di Xamarin.Mac.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MacStoryboard (esempio)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
 - [Linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

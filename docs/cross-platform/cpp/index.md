@@ -1,102 +1,102 @@
 ---
 ms.assetid: EA2D979E-9151-4CE9-9289-13B6A979838B
-title: Usare le librerie C/C++ con Xamarin
-description: Visual Studio per Mac può essere usato per compilare e integrare codice C/C++ multipiattaforma in App per dispositivi mobili per Android e iOS, usando Xamarin e C#. Questo articolo illustra come configurare ed eseguire il debug di un progetto C++ in un'app Xamarin.
+title: Usare C/C++ librerie con Novell
+description: Visual Studio per Mac può essere usato per compilare e integrare C/C++ codice multipiattaforma nelle app per dispositivi mobili per Android e iOS, usando Novell C#e. Questo articolo illustra come configurare ed eseguire il debug di C++ un progetto in un'app Novell.
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: 695714331f1056ab51b36d106a30deacd3a629a8
-ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
+ms.openlocfilehash: a6c5e172fa9fe41e210f332d351adc307d0c7df3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64986998"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648187"
 ---
-# <a name="use-cc-libraries-with-xamarin"></a>Usare le librerie C/C++ con Xamarin
+# <a name="use-cc-libraries-with-xamarin"></a>Usare C/C++ librerie con Novell
 
 ## <a name="overview"></a>Panoramica
 
-Xamarin consente agli sviluppatori di creare App per dispositivi mobili native multipiattaforma con Visual Studio. In generale, C# associazioni vengono utilizzate per esporre i componenti esistenti di piattaforma per gli sviluppatori. Tuttavia, esistono volte quando necessità di App Xamarin di lavorare con le basi di codice. In alcuni casi i team semplicemente non hanno il tempo, budget o risorse alla porta a grandi dimensioni, ben collaudato e altamente ottimizzata codebase per C#.
+Novell consente agli sviluppatori di creare app per dispositivi mobili native multipiattaforma con Visual Studio. In genere C# , le associazioni vengono utilizzate per esporre i componenti della piattaforma esistenti agli sviluppatori. In alcuni casi, tuttavia, le app Novell devono usare basi di codice esistenti. A volte i team non hanno il tempo, il budget o le risorse per trasferire una codebase di C#grandi dimensioni, ben collaudata e altamente ottimizzata.
 
-[Visual C++ per lo sviluppo per dispositivi mobili multipiattaforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) consente di C/C++ e C# codice da compilare come parte della stessa soluzione, che offre numerosi vantaggi tra cui un'esperienza di debug unificata. Microsoft ha usato in questo modo per distribuire le app, ad esempio C/C++ e Xamarin [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [fotocamera Pix](https://www.microsoft.com/microsoftpix).
+[Visual C++ per lo sviluppo di app per dispositivi mobili](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) multipiattaformaC++ consente di compilare il codice C/e C# come parte della stessa soluzione, offrendo molti vantaggi, tra cui un'esperienza di debug unificata. Microsoft ha usato C/C++ e Novell in questo modo per fornire app come la fotocamera con [dispositivi mobili iperscaduti](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [pix](https://www.microsoft.com/microsoftpix).
 
-Tuttavia, in alcuni casi vi è un desiderio (o requisito) mantenere strumenti C/C++ e i processi e per mantenere il codice della libreria di disaccoppiare l'applicazione, considerando la libreria come se fosse analoga a un componente di terze parti esistenti. In queste situazioni, la richiesta di verifica non solo espone i membri rilevanti da C# , ma la libreria come una dipendenza di gestione. E, naturalmente, automatizzare la maggior parte di questo processo possibili.  
+Tuttavia, in alcuni casi è preferibile (o requisito) che i processi C/C++ strumenti e i processi esistenti vengano mantenuti e che il codice di libreria venga separato dall'applicazione, considerando la libreria come se fosse simile a un componente di terze parti. In queste situazioni, la sfida non solo espone i membri rilevanti a C# ma gestisce la libreria come dipendenza. E, naturalmente, automatizzare il maggior parte del processo possibile.  
 
-In questo post illustra un approccio di alto livello per questo scenario e illustra un esempio semplice.
+Questo post illustra un approccio di alto livello per questo scenario ed esamina un semplice esempio.
 
 ## <a name="background"></a>Sfondo
 
-C/C++ viene considerato un linguaggio lo sviluppo multipiattaforma, ma è necessario prestare particolare attenzione per assicurarsi che il codice sorgente sia effettivamente lo sviluppo multipiattaforma, tramite C/C++ solo supportati da tutti i compilatori di destinazione e che contiene minime o non piattaforma in modo condizionale incluso o codice specifico del compilatore.
+C/C++ è considerato un linguaggio multipiattaforma, ma è necessario prestare particolare attenzione per garantire che il codice sorgente sia effettivamente multipiattaforma, usando solo C/C++ supportato da tutti i compilatori di destinazione e che contenga una piattaforma o nessuna piattaforma inclusa in modo condizionale o codice specifico del compilatore.
 
-In definitiva il codice deve compilare ed eseguire correttamente anche in tutte le piattaforme di destinazione, che pertanto si tratta per la somiglianza tra le piattaforme (e compilatori) di destinazione. Ancora si verifichino problemi da differenze minime tra i compilatori e quindi completa test (preferibilmente automatizzati) in ogni destinazione piattaforma diventa sempre più importante.  
+Infine, il codice deve essere compilato ed eseguito correttamente in tutte le piattaforme di destinazione, quindi questa operazione si riduce alla comunanza tra le piattaforme (e i compilatori) di destinazione. I problemi possono ancora verificarsi da piccole differenze tra i compilatori e, di conseguenza, un test completo (preferibilmente automatizzato) in ogni piattaforma di destinazione diventa sempre più importante.  
 
-## <a name="high-level-approach"></a>Approccio generale
+## <a name="high-level-approach"></a>Approccio di alto livello
 
-Nella figura seguente rappresenta l'approccio di quattro fasi consente di trasformare il codice sorgente C/C++ in una libreria Xamarin multipiattaforma che viene condiviso tramite NuGet e quindi viene utilizzata in un'app xamarin. Forms.
+La figura seguente rappresenta l'approccio in quattro fasi usato per trasformare il codiceC++ C/sorgente in una libreria Novell multipiattaforma condivisa tramite NuGet e quindi viene utilizzata in un'app Novell. Forms.
  
-![Approccio generale per l'utilizzo di C/C++ con Xamarin](images/cpp-steps.jpg)
+![Approccio di alto livello per l'utilizzo diC++ C/con Novell](images/cpp-steps.jpg)
 
-Le 4 fasi sono:
+Le quattro fasi sono:
 
-1. La compilazione di codice sorgente C/C++ in librerie native specifiche della piattaforma.
-2. Ritorno a capo le librerie native con una soluzione di Visual Studio.
-3. Creazione di un pacchetto e il push di un pacchetto NuGet per il wrapper .NET.
-4. Utilizza il pacchetto NuGet da un'app Xamarin.
+1. Compilazione del codice C/C++ source nelle librerie native specifiche della piattaforma.
+2. Wrapping delle librerie native con una soluzione di Visual Studio.
+3. Compressione e push di un pacchetto NuGet per il wrapper .NET.
+4. Utilizzo del pacchetto NuGet da un'app Novell.
 
-### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>Fase 1: La compilazione del codice di origine C/C++ in librerie native specifiche della piattaforma
+### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>Fase 1: Compilazione del codice C/C++ source in librerie native specifiche della piattaforma
 
-L'obiettivo di questa fase consiste nel creare librerie native che possono essere chiamate per il C# wrapper. Può supportare o potrebbe non essere pertinente a seconda della situazione. Molti strumenti e processi che possono essere attivati da ricordare in questo scenario comune non rientrano nell'ambito di questo articolo. Le principali considerazioni sono mantenere C/C++ codebase sincronizzato con qualsiasi codice wrapper nativo, unit test, sufficienti e automazione della compilazione. 
+L'obiettivo di questa fase è creare librerie native che possono essere chiamate dal C# wrapper. Questo potrebbe non essere pertinente a seconda della situazione. I numerosi strumenti e processi che possono essere portati in questo scenario comune esulano dall'ambito di questo articolo. Le considerazioni principali sono la sincronizzazione diC++ C/codebase con qualsiasi codice wrapper nativo, testing unità sufficiente e automazione della compilazione. 
 
-Le librerie nella procedura dettagliata sono state create usando Visual Studio Code con uno script shell associato. Una versione estesa di questa procedura dettagliata è reperibile nella [repository GitHub CAT Mobile](https://github.com/xamarin/mobcat/blob/dev/samples/cpp_with_xamarin/) che illustra questa parte dell'esempio nel modo più approfondito. Le librerie native viene considerate come una dipendenza di terze parti in questo caso tuttavia questa fase è illustrata per il contesto.
+Le librerie nella procedura dettagliata sono state create usando Visual Studio Code con uno script della shell associato. Una versione estesa di questa procedura dettagliata è reperibile nel repository di [GitHub per dispositivi mobili](https://github.com/xamarin/mobcat/blob/dev/samples/cpp_with_xamarin/) che illustra questa parte dell'esempio in modo più approfondito. Le librerie native vengono considerate come dipendenze di terze parti in questo caso, tuttavia questa fase viene illustrata per il contesto.
 
-Per semplicità, la procedura dettagliata ha come destinazione solo un subset delle architetture. Per iOS, Usa l'utilità lipo per creare una singola file System fat binario dai singoli file binari specifici dell'architettura. Android userà dinamico dei file binari con estensione SO e iOS userà una file System fat statica binaria con estensione a estensione. 
+Per semplicità, la procedura dettagliata è destinata solo a un subset di architetture. Per iOS, usa l'utilità Lipo per creare un singolo file binario Fat dai singoli file binari specifici dell'architettura. Android utilizzerà i binari dinamici con. Pertanto, l'estensione e iOS utilizzeranno un file binario Fat statico con estensione. 
 
-### <a name="stage-2-wrapping-the-native-libraries-with-a-visual-studio-solution"></a>Fase 2: Ritorno a capo le librerie native con una soluzione di Visual Studio
+### <a name="stage-2-wrapping-the-native-libraries-with-a-visual-studio-solution"></a>Fase 2: Wrapping delle librerie native con una soluzione di Visual Studio
 
-La fase successiva consiste nell'inserire le librerie native in modo che vengano utilizzati con facilità da .NET. Questa operazione viene eseguita con una soluzione di Visual Studio con quattro progetti. Un progetto condiviso contiene il codice comune. I progetti destinati a ognuno di xamarin. Android, xamarin. IOS e .NET Standard consentono la raccolta a cui fare riferimento in modo indipendente dalla piattaforma.
+La fase successiva consiste nel eseguire il wrapping delle librerie native in modo che siano facilmente utilizzabili da .NET. Questa operazione viene eseguita con una soluzione di Visual Studio con quattro progetti. Un progetto condiviso contiene il codice comune. I progetti destinati a ogni Novell. Android, Novell. iOS e .NET Standard consentono di fare riferimento alla libreria in modo indipendente dalla piattaforma.
 
-Degli utilizzi wrapper[lo stratagemma specchietto per le allodole](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/),' descritto da Paul Betts. Ciò non è l'unico modo, ma questo servizio semplifica fare riferimento alla libreria e evita la necessità di gestire in modo esplicito le implementazioni specifiche della piattaforma all'interno dell'applicazione dispendiosa in termini di se stesso. Lo stratagemma consiste essenzialmente nel garantire che le destinazioni (.NET Standard, Android, iOS) condividano lo stesso spazio dei nomi, nome dell'assembly e struttura delle classi. Poiché NuGet preferiranno sempre una libreria specifica della piattaforma, la versione di .NET Standard non è mai usata in fase di esecuzione.
+Il wrapper USA '[The Bait and switch Trick](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)', descritto da Paul Betts. Questo non è l'unico modo, ma semplifica la creazione di un riferimento alla libreria evitando la necessità di gestire in modo esplicito le implementazioni specifiche della piattaforma all'interno dell'applicazione stessa. Il trucco è essenzialmente garantire che le destinazioni (.NET Standard, Android, iOS) condividano lo stesso spazio dei nomi, il nome dell'assembly e la struttura della classe. Poiché NuGet preferisce sempre una libreria specifica della piattaforma, la versione .NET Standard non viene mai usata in fase di esecuzione.
 
-La maggior parte del lavoro in questo passaggio verrà illustrato tramite P/Invoke per chiamare i metodi della libreria nativa e la gestione di riferimenti agli oggetti sottostanti. L'obiettivo consiste nell'esporre la funzionalità della libreria per il consumer durante l'estrazione di qualsiasi complessità. Gli sviluppatori di xamarin. Forms non sono necessario avere familiarità con i meccanismi interni della libreria non gestita. Dovrebbe risultare come qualsiasi altro gestite usano C# library.
+La maggior parte delle operazioni in questo passaggio si focalizzerà sull'uso di P/Invoke per chiamare i metodi della libreria nativa e la gestione dei riferimenti agli oggetti sottostanti. L'obiettivo è esporre la funzionalità della libreria al consumer astraendone qualsiasi complessità. Gli sviluppatori Novell. Forms non devono avere conoscenze operative sui lavori interni della libreria non gestita. Dovrebbe sembrare che usi qualsiasi altra libreria gestita C# .
 
-In definitiva, l'output di questa fase è un set di librerie .NET, uno per ogni destinazione, insieme a un documento nuspec che contiene le informazioni necessarie per compilare il pacchetto nel passaggio successivo.
+Infine, l'output di questa fase è costituito da un set di librerie .NET, uno per destinazione, insieme a un documento NuSpec che contiene le informazioni necessarie per compilare il pacchetto nel passaggio successivo.
 
-**Fase 3: Creazione di un pacchetto e il push di un pacchetto NuGet per il wrapper .NET**
+**Fase 3: Compressione e push di un pacchetto NuGet per il wrapper .NET**
 
-La terza fase consiste nel creare un pacchetto NuGet con gli elementi di compilazione nel passaggio precedente. Il risultato da questo passaggio è un pacchetto NuGet che può essere utilizzato da un'app Xamarin. La procedura dettagliata Usa una directory locale come feed NuGet. Nell'ambiente di produzione, questo passaggio deve pubblicare un pacchetto a un pubblico o privato NuGet feed e devono essere completamente automatizzato.
+La terza fase sta creando un pacchetto NuGet usando gli artefatti di compilazione del passaggio precedente. Il risultato di questo passaggio è un pacchetto NuGet che può essere utilizzato da un'app Novell. Nella procedura dettagliata viene usata una directory locale che funge da feed NuGet. In produzione, questo passaggio deve pubblicare un pacchetto in un feed NuGet pubblico o privato e deve essere completamente automatizzato.
 
-**Fase 4: Che utilizzano il pacchetto NuGet da un'app xamarin. Forms**
+**Fase 4: Utilizzo del pacchetto NuGet da un'app Novell. Forms**
 
-Il passaggio finale consiste per fare riferimento e usare il pacchetto NuGet da un'app xamarin. Forms. Ciò richiede la configurazione di NuGet feed in Visual Studio per usare il feed definito nel passaggio precedente.
+Il passaggio finale consiste nel fare riferimento e usare il pacchetto NuGet da un'app Novell. Forms. Questa operazione richiede la configurazione del feed NuGet in Visual Studio per usare il feed definito nel passaggio precedente.
 
-Dopo aver configurato il feed, il pacchetto è necessario fare riferimento a ogni progetto nell'app xamarin. Forms multipiattaforma. 'Il trucco bait-and-switch' fornisce interfacce identiche, in modo che la funzionalità della libreria nativa può essere chiamata usando codice definito in un'unica posizione.
+Una volta configurato il feed, è necessario fare riferimento al pacchetto da ogni progetto nell'app Novell. Forms multipiattaforma. ' The Bait-and-switch Trick ' offre interfacce identiche, quindi la funzionalità della libreria nativa può essere chiamata usando il codice definito in un'unica posizione.
 
-Repository del codice sorgente contiene un' [elenco di letture di approfondimento](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) che include articoli su come configurare un feed su Azure DevOps NuGet privati e su come effettuare il push del pacchetto tale feed. Questa tecnologia richiede un po' più tempo di installazione di una directory locale, questo tipo di feed è preferibile in un ambiente di sviluppo del team.
+Il repository del codice sorgente contiene un [elenco di ulteriori letture](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) che include articoli su come configurare un feed NuGet privato in Azure DevOps e su come eseguire il push del pacchetto nel feed. Quando si richiede un tempo di installazione inferiore rispetto a una directory locale, questo tipo di feed è migliore in un ambiente di sviluppo team.
 
 ## <a name="walk-through"></a>Procedura dettagliata
 
-I passaggi descritti sono specifici di **Visual Studio per Mac**, ma il funzionamento della struttura **Visual Studio 2017** anche.
+I passaggi forniti sono specifici per **Visual Studio per Mac**, ma la struttura funziona anche in **Visual Studio 2017** .
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-Per seguire la procedura, lo sviluppatore avrà bisogno:
+Per seguire la procedura, lo sviluppatore dovrà:
 
-- [Riga di comando NuGet (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [Riga di comando di NuGet (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
 
 - [*Visual Studio* *per Mac*](https://visualstudio.microsoft.com/downloads)
 
 > [!NOTE]
-> Un oggetto attivo [ **Account per sviluppatore Apple** ](https://developer.apple.com/) è necessaria per distribuire le App in un iPhone.
+> Per distribuire le app in un iPhone, è necessario un [**account Apple Developer**](https://developer.apple.com/) attivo.
 
 ## <a name="creating-the-native-libraries-stage-1"></a>Creazione di librerie native (fase 1)
 
-La funzionalità della libreria nativa è basata sull'esempio [procedura dettagliata: Creazione e utilizzo di una libreria statica (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+La funzionalità della libreria nativa è basata sull'esempio [della procedura dettagliata: Creazione e utilizzo di una libreria staticaC++(](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)).
 
-Questa procedura dettagliata ignora la prima fase, la creazione di librerie native, poiché la libreria viene fornita come una dipendenza di terze parti in questo scenario. Le librerie native precompilate sono incluso con il [esempi di codice](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) oppure può essere [scaricato](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) direttamente.
+Questa procedura dettagliata ignora la prima fase, compilando le librerie native, perché la libreria viene fornita come dipendenza di terze parti in questo scenario. Le librerie native precompilate sono incluse insieme al [codice di esempio](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) oppure possono essere [scaricate](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) direttamente.
 
-### <a name="working-with-the-native-library"></a>Utilizzo della libreria nativa di
+### <a name="working-with-the-native-library"></a>Uso della libreria nativa
 
-Originale *MathFuncsLib* esempio include una sola classe denominata `MyMathFuncs` con la definizione seguente:
+L'esempio *MathFuncsLib* originale include una singola classe denominata `MyMathFuncs` con la definizione seguente:
 
 ```cpp
 namespace MathFuncs
@@ -112,7 +112,7 @@ namespace MathFuncs
 }
 ```
 
-Una classe aggiuntiva definisce funzioni wrapper che consentono un consumer di .NET creare, eliminare e interagire con l'oggetto nativo sottostante `MyMathFuncs` classe.
+Una classe aggiuntiva definisce funzioni wrapper che consentono a un consumer .NET di creare, eliminare e interagire con la `MyMathFuncs` classe nativa sottostante.
 
 ```cpp
 #include "MyMathFuncs.h"
@@ -128,68 +128,68 @@ extern "C" {
 }
 ```
 
-Sarà queste funzioni wrapper che vengono usate nel [Xamarin](https://visualstudio.microsoft.com/xamarin/) lato.
+Si tratta di funzioni wrapper utilizzate sul lato [Novell](https://visualstudio.microsoft.com/xamarin/) .
 
-## <a name="wrapping-the-native-library-stage-2"></a>Ritorno a capo la libreria nativa (fase 2)
+## <a name="wrapping-the-native-library-stage-2"></a>Wrapping della libreria nativa (fase 2)
 
-Questa fase richiede la [precompilato librerie](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritti nel [sezione precedente](##creating-the-native-libraries-stage-1).
+Questa fase richiede le [librerie](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) precompilate descritte nella [sezione precedente](##creating-the-native-libraries-stage-1).
 
-### <a name="creating-the-visual-studio-solution"></a>Creazione della soluzione di Visual Studio
+### <a name="creating-the-visual-studio-solution"></a>Creazione della soluzione Visual Studio
 
-1. Nelle **Visual Studio per Mac**, fare clic su **nuovo progetto** (dal *Paginainiziale*) o **nuova soluzione** (dal *File* dal menu).
-2. Dal **nuovo progetto** finestra, scegliere **progetto condiviso** (dall'interno *multipiattaforma > libreria*) e quindi fare clic su **Avanti**.
-3. Aggiornare i campi seguenti, quindi fare clic su **Create**:
+1. In **Visual Studio per Mac**fare clic su **nuovo progetto** (nella *pagina iniziale*) o su **nuova soluzione** (dal menu *file* ).
+2. Dalla finestra **nuovo progetto** scegliere **progetto condiviso** (dall'interno di *Libreria > multipiattaforma*) e quindi fare clic su **Avanti**.
+3. Aggiornare i campi seguenti, quindi fare clic su **Crea**:
 
-    - **Nome del progetto:** MathFuncs.Shared  
-    - **Nome della soluzione:** MathFuncs  
-    - **Percorso:** Usare il valore predefinito percorso di salvataggio (o un'alternativa di selezione)   
-    - **Creare un progetto nella directory della soluzione:** Impostare questa opzione per selezionata
-4. Dal **Esplora soluzioni**, fare doppio clic sulla **MathFuncs.Shared** del progetto e passare a **impostazioni principali**.
-5. Rimuovere **. Shared** dal **Default Namespace** in modo da impostarlo su **MathFuncs** solo, quindi fare clic su **OK**.
-6. Aprire **MyClass.cs** (creato dal modello), quindi rinominare la classe e nome file in cui **MyMathFuncsWrapper** e modificare lo spazio dei nomi **MathFuncs**.
-7. **CTRL + clic** sulla soluzione **MathFuncs**, quindi scegliere **Aggiungi nuovo progetto...**  dal **Add** menu.
-8. Dal **nuovo progetto** finestra, scegliere **libreria .NET Standard** (dall'interno *multipiattaforma > libreria*) e quindi fare clic su **Avanti**.
-9. Scegli **.NET Standard 2.0** e quindi fare clic su **successivo**.
-10. Aggiornare i campi seguenti, quindi fare clic su **Create**:
+    - **Nome progetto:** MathFuncs. Shared  
+    - **Nome soluzione:** MathFuncs  
+    - **Percorso** Usa il percorso di salvataggio predefinito (oppure scegli un'alternativa)   
+    - **Creare un progetto all'interno della directory della soluzione:** Imposta questa opzione su Checked
+4. In **Esplora soluzioni**fare doppio clic sul progetto **MathFuncs. Shared** e passare a **impostazioni principali**.
+5. Rimuovere **. Condiviso** dallo **spazio dei nomi predefinito** in modo che sia impostato solo su **MathFuncs** , quindi fare clic su **OK**.
+6. Aprire **MyClass.cs** (creato dal modello), quindi rinominare sia la classe che il nome del file in **MyMathFuncsWrapper** e impostare lo spazio dei nomi su **MathFuncs**.
+7. **Controllare e fare clic** sulla soluzione **MathFuncs**, quindi scegliere **Aggiungi nuovo progetto** dal menu **Aggiungi** .
+8. Dalla finestra **nuovo progetto** scegliere **libreria .NET standard** (dall'interno di *Libreria > multipiattaforma*) e quindi fare clic su **Avanti**.
+9. Scegliere **.NET Standard 2,0** , quindi fare clic su **Avanti**.
+10. Aggiornare i campi seguenti, quindi fare clic su **Crea**:
 
-    - **Nome del progetto:** MathFuncs.Standard  
-    - **Percorso:** Usare lo stesso percorso del progetto condiviso di salvataggio   
+    - **Nome progetto:** MathFuncs.Standard  
+    - **Percorso** USA lo stesso percorso di salvataggio del progetto condiviso   
 
-11. Dal **Esplora soluzioni**, fare doppio clic sulla **MathFuncs.Standard** progetto.
-12. Passare a **impostazioni principali**, quindi aggiornare **Namespace predefinito** al **MathFuncs**.
-13. Passare al **Output** le impostazioni, quindi aggiornare **il nome dell'Assembly** al **MathFuncs**.
-14. Passare al **compilatore** cambiano le impostazioni la **Configuration** a **versione**, l'impostazione **informazioni di Debug** a  **Solo i simboli** quindi fare clic su **OK**.
-15. Eliminare **Class1.cs/Getting avviato** dal progetto (se uno di questi è stata incluso come parte del modello).
-16. **CTRL + clic** sul progetto **dipendenze/References** cartella, quindi scegliere **Modifica riferimenti**.
-17. Selezionare **MathFuncs.Shared** dalle **progetti** tab, quindi fare clic su **OK**.
-18. Ripetere i passaggi da 7-17 (ignorando passaggio 9) usando le configurazioni seguenti:
+11. In **Esplora soluzioni**fare doppio clic sul progetto **MathFuncs. standard** .
+12. Passare a **impostazioni principali**, quindi aggiornare **lo spazio dei nomi predefinito** a **MathFuncs**.
+13. Passare alle impostazioni di **output** , quindi aggiornare il **nome dell'assembly** a **MathFuncs**.
+14. Passare alle impostazioni del **compilatore** , modificare la **configurazione** in **Release**, impostare le **informazioni di debug sui** **simboli solo** e quindi fare clic su **OK**.
+15. Elimina **Class1.cs/getting avviata** dal progetto (se una di queste è stata inclusa come parte del modello).
+16. **Controllare e fare clic** sulla cartella **dipendenze/riferimenti** del progetto, quindi scegliere **modifica riferimenti**.
+17. Selezionare **MathFuncs. Shared** dalla scheda **progetti** , quindi fare clic su **OK**.
+18. Ripetere i passaggi 7-17 (ignorando il passaggio 9) utilizzando le configurazioni seguenti:
 
-    | **NOME DEL PROGETTO**  | **NOME DEL MODELLO**   | **MENU NUOVO PROGETTO**   |
+    | **NOME PROGETTO**  | **NOME MODELLO**   | **MENU NUOVO PROGETTO**   |
     |-------------------| --------------------| -----------------------|
-    | MathFuncs.Android | Libreria di classi       | Android > libreria      |
-    | MathFuncs.iOS     | Libreria di binding     | iOS > libreria          |
+    | MathFuncs.Android | Libreria di classi       | Libreria di > Android      |
+    | MathFuncs.iOS     | Libreria di associazione     | Libreria > iOS          |
 
-19. Dal **Esplora soluzioni**, fare doppio clic sul **MathFuncs.Android** del progetto e quindi passare al **compilatore** impostazioni.
+19. Da **Esplora soluzioni**fare doppio clic sul progetto **MathFuncs. Android** , quindi passare alle impostazioni del **compilatore** .
 
-20. Con il **Configuration** impostata su **eseguire il Debug**, modificare **Definisci simboli** includere **Android;**.
+20. Con la **configurazione** impostata su **debug**, modificare **definire i simboli** per includere **Android;** .
 
-21. Modifica il **Configuration** al **Release**, quindi modificare **Definisci simboli** per includere anche **Android;**.
+21. Modificare la **configurazione** in **Release**, quindi modificare **define symbols** per includere anche **Android;** .
 
-22. Ripetere i passaggi da 19-20 per **MathFuncs.iOS**, modifica **Definisci simboli** includere **iOS;** anziché **Android;** in entrambi i casi.
+22. Ripetere i passaggi 19-20 per **MathFuncs. iOS**, modificando la **definizione dei simboli** per includere **iOS** , anziché **Android;** in entrambi i casi.
 
-23. Compilare la soluzione **Release** configuration (**controllo + comando + B**) e verificare che tutti gli assembly di output di tre (Android, iOS, .NET Standard) (nelle cartelle bin rispettivo progetto) condividono lo stesso nome **MathFuncs.dll**.
+23. Compilare la soluzione in configurazione **versione** (**CTRL + comando + B**) e verificare che tutti e tre gli assembly di output (Android, iOS, .NET standard) (nelle rispettive cartelle bin del progetto) condividano lo stesso nome **MathFuncs. dll**.
 
-In questa fase, la soluzione deve avere tre destinazioni, uno ciascuno per Android, iOS e .NET Standard e un progetto condiviso a cui viene fatto riferimento da ognuna delle tre destinazioni. Che devono essere configurati per usare gli stessi assembly di output e dello spazio dei nomi predefinito con lo stesso nome. Ciò è necessario per l'approccio di 'specchietto per le allodole' indicato in precedenza.
+In questa fase, la soluzione deve avere tre destinazioni, una a parte per Android, iOS e .NET Standard e un progetto condiviso a cui fa riferimento ognuna delle tre destinazioni. Questi devono essere configurati in modo da usare lo stesso spazio dei nomi e assembly di output predefiniti con lo stesso nome. Questa operazione è necessaria per l'approccio "Bait and switch" descritto in precedenza.
 
-### <a name="adding-the-native-libraries"></a>Aggiungere le librerie native
+### <a name="adding-the-native-libraries"></a>Aggiunta di librerie native
 
-Il processo di aggiunta di librerie native per la soluzione wrapper varia leggermente tra Android e iOS.
+Il processo di aggiunta delle librerie native alla soluzione wrapper varia leggermente tra Android e iOS.
 
-#### <a name="native-references-for-mathfuncsandroid"></a>Riferimenti nativi per MathFuncs.Android
+#### <a name="native-references-for-mathfuncsandroid"></a>Riferimenti nativi per MathFuncs. Android
 
-1. **CTRL + clic** nella **MathFuncs.Android** del progetto, quindi scegliere **nuova cartella** dal **Add** menu denominarlo **libs**.
+1. **Controllare e fare clic** sul progetto **MathFuncs. Android** , quindi scegliere **nuova cartella** dal menu **Aggiungi** in cui è denominato **libs**.
 
-2. Per ognuno **ABI** (Application Binary Interface), **CTRL + clic** sul **libs** cartella, quindi scegliere **nuova cartella** dal  **Aggiungere** menu, denominarlo in seguito rispettivi **ABI**. In questo caso:
+2. Per ogni interfaccia **Abi** (Application Binary Interface), **controllare e fare clic** sulla cartella **libs** , quindi scegliere **nuova cartella** dal menu **Aggiungi** , denominarla dopo la rispettiva **Abi**. In questo caso:
 
     - arm64-v8a
     - armeabi-v7a
@@ -197,9 +197,9 @@ Il processo di aggiunta di librerie native per la soluzione wrapper varia legger
     - x86_64  
 
     > [!NOTE]
-    > Per una panoramica più dettagliata, vedere la [architetture e le CPU](https://developer.android.com/ndk/guides/arch) argomento dalle [Guida di developer NDK](https://developer.android.com/ndk/guides/), in particolare la sezione su come rispondere [codice nativo in pacchetti di applicazioni](https://developer.android.com/ndk/guides/abis#native-code-in-app-packages) .
+    > Per una panoramica più dettagliata, vedere l'argomento [architetture e CPU](https://developer.android.com/ndk/guides/arch) dalla guida per gli [sviluppatori di NDK](https://developer.android.com/ndk/guides/), in particolare la sezione relativa all'indirizzamento del [codice nativo nei pacchetti dell'applicazione](https://developer.android.com/ndk/guides/abis#native-code-in-app-packages).
 
-3. Verificare che la struttura di cartelle:  
+3. Verificare la struttura di cartelle:  
 
     ```folders
     - lib
@@ -209,9 +209,9 @@ Il processo di aggiunta di librerie native per la soluzione wrapper varia legger
         - x86_64
     ```
 
-4. Aggiungere corrispondente **SO** librerie a ognuna delle **ABI** cartelle in base al mapping seguente:
+4. Aggiungere le librerie **. so** corrispondenti a ogni cartella **Abi** in base al mapping seguente:
 
-    **arm64-v8a:** libs/Android/arm64
+    **arm64-V8A:** libs/Android/arm64
 
     **armeabi-v7a:** libs/Android/arm  
 
@@ -220,11 +220,11 @@ Il processo di aggiunta di librerie native per la soluzione wrapper varia legger
     **x86_64:** libs/Android/x86_64
 
     > [!NOTE]
-    > Per aggiungere file, **CTRL + clic** per la cartella che rappresenta la rispettiva **ABI**, quindi scegliere **Aggiungi file...**  dal **Add** menu. Scegliere la libreria appropriata (dal **PrecompiledLibs** directory) quindi fare clic su **Open** e quindi fare clic su **OK** lasciando l'opzione predefinita *copia di file nella directory*.
+    > Per aggiungere file, **controllare e fare clic** sulla cartella che rappresenta il rispettivo **Abi**, quindi scegliere **Aggiungi file** dal menu **Aggiungi** . Scegliere la libreria appropriata (dalla directory **PrecompiledLibs** ), quindi fare clic su **Apri** e quindi su **OK** lasciando l'opzione predefinita per *copiare il file nella directory*.
 
-5. Per ognuno del **SO** i file, **CTRL + clic** quindi scegliere il **EmbeddedNativeLibrary** opzione il **azione di compilazione** menu.
+5. Per ognuno dei file **. so** , **controllare** e scegliere l'opzione **EmbeddedNativeLibrary** dal menu **azione di compilazione** .
 
-A questo punto il **libs** cartella apparirà come segue:
+A questo punto la cartella **libs** dovrebbe apparire come segue:
 
 ```folders
 - lib
@@ -238,34 +238,34 @@ A questo punto il **libs** cartella apparirà come segue:
         - libMathFuncs.so
 ```
 
-#### <a name="native-references-for-mathfuncsios"></a>Riferimenti nativi per MathFuncs.iOS
+#### <a name="native-references-for-mathfuncsios"></a>Riferimenti nativi per MathFuncs. iOS
 
-1. **CTRL + clic** nella **MathFuncs.iOS** del progetto, quindi scegliere **aggiungere riferimento nativo** dal **Aggiungi** menu. 
-2. Scegliere il **libMathFuncs.a** libreria (da libs/ios sotto il **PrecompiledLibs** directory) quindi fare clic su **Open** 
-3. **CTRL + clic** sul **libMathFuncs** file (all'interno di **riferimenti nativi** cartella, quindi scegliere il **proprietà** dal menu di scelta  
-4. Configurare il **riferimento nativo** delle proprietà in modo che queste vengono confrontate (rappresentato da un'icona di segno di graduazione) nel **proprietà** riempimento:
+1. **Controllare e fare clic** sul progetto **MathFuncs. iOS** , quindi scegliere **Aggiungi riferimento nativo** dal menu **Aggiungi** . 
+2. Scegliere la libreria **libMathFuncs. a** (da libs/iOS sotto la directory **PrecompiledLibs** ), quindi fare clic su **Apri** 
+3. **CTRL + clic** sul file **libMathFuncs** (nella cartella **riferimenti nativi** , quindi scegliere l'opzione **Proprietà** dal menu  
+4. Configurare le proprietà dei **riferimenti nativi** in modo che siano controllate (mostrando un'icona di segno di spunta) nel riquadro delle **Proprietà** :
 
-    - Caricamento forzato
-    - È C++
+    - Forza caricamento
+    - ÈC++
     - Collegamento intelligente
 
     > [!NOTE]
-    > Usando un tipo di progetto libreria di binding insieme a un [riferimento nativo](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) incorpora la libreria statica e consente di essere collegate automaticamente con l'app xamarin. IOS che vi fa riferimento (anche quando viene incluso tramite un pacchetto NuGet).
+    > L'uso di un tipo di progetto di libreria di associazione insieme a un [riferimento nativo](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) incorpora la libreria statica e la consente di collegarsi automaticamente all'app Novell. iOS che vi fa riferimento (anche quando è inclusa tramite un pacchetto NuGet).
 
-5. Aprire **ApiDefinition.cs**, l'eliminazione basata su modelli di codice commentato (lasciando solo il `MathFuncs` dello spazio dei nomi), quindi eseguire la stessa procedura per **Structs.cs** 
+5. Aprire **ApiDefinition.cs**, eliminando il codice commentato basato su modelli (lasciando `MathFuncs` solo lo spazio dei nomi), quindi eseguire lo stesso passaggio per **structs.cs** 
 
     > [!NOTE]
-    > Questi file è necessario un progetto di libreria di Binding (con il *ObjCBindingApiDefinition* e *ObjCBindingCoreSource* azioni di compilazione) per compilare. Tuttavia, si scriverà il codice, per chiamare la libreria nativa, di fuori di questi file in modo che possono essere condivisi tra le destinazioni libreria di Android e iOS usando standard di P/Invoke.
+    > Per la compilazione di un progetto di libreria di associazione è necessario che questi file (con le azioni di compilazione *ObjCBindingApiDefinition* e *ObjCBindingCoreSource* ) siano disponibili. Tuttavia, si scriverà il codice per chiamare la libreria nativa, al di fuori di questi file in modo che possa essere condivisa tra le destinazioni della libreria Android e iOS usando P/Invoke standard.
 
 ### <a name="writing-the-managed-library-code"></a>Scrittura del codice di libreria gestita
 
-A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obiettivo consiste nel nascondere qualsiasi complessità sottostanti. Il consumer non necessitano di alcuna conoscenza di utilizzo dei componenti interni della libreria nativa o dei concetti di P/Invoke.  
+A questo punto, C# scrivere il codice per chiamare la libreria nativa. L'obiettivo è nascondere qualsiasi complessità sottostante. Il consumer non deve necessariamente avere una conoscenza del funzionamento degli elementi interni della libreria nativa o dei concetti di P/Invoke.  
 
-#### <a name="creating-a-safehandle"></a>Creazione di SafeHandle
+#### <a name="creating-a-safehandle"></a>Creazione di un SafeHandle
 
-1. **CTRL + clic** nella **MathFuncs.Shared** del progetto, quindi scegliere **Add File...**  dal **Add** menu. 
-2. Scegliere **classe vuota** dalle **nuovo File** finestra, denominarlo **MyMathFuncsSafeHandle** e quindi fare clic su **New**
-3. Implementare il **MyMathFuncsSafeHandle** classe:
+1. **Controllare e fare clic** sul progetto **MathFuncs. Shared** , quindi scegliere **Aggiungi file** dal menu **Aggiungi** . 
+2. Scegliere **classe vuota** dalla finestra **nuovo file** , denominarla **MyMathFuncsSafeHandle** e quindi fare clic su **nuovo** .
+3. Implementare la classe **MyMathFuncsSafeHandle** :
 
     ```csharp
     using System;
@@ -289,11 +289,11 @@ A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obietti
     ```
 
     > [!NOTE]
-    > Oggetto [SafeHandle](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) è il modo migliore per lavorare con le risorse non gestite nel codice gestito. Ciò consente di evitare una grande quantità di codice boilerplate correlati al ciclo di vita oggetto e finalizzazione critica. Il proprietario di questo handle può successivamente considerarla come qualsiasi altra risorsa gestita e non sarà necessario implementare la versione completa [modello Disposable](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose). 
+    > Un [SafeHandle](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle?view=netframework-4.7.2) è il modo migliore per lavorare con le risorse non gestite nel codice gestito. In questo modo si estrae una grande quantità di codice standard correlato alla finalizzazione critica e al ciclo di vita degli oggetti. Il proprietario di questo handle può quindi gestirlo come qualsiasi altra risorsa gestita e non dovrà implementare il [modello Disposable](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose)completo. 
 
 #### <a name="creating-the-internal-wrapper-class"></a>Creazione della classe wrapper interna
 
-1. Aprire **MyMathFuncsWrapper.cs**, modificandolo in una classe statica interna
+1. Aprire **MyMathFuncsWrapper.cs**e modificarlo in una classe statica interna
 
     ```csharp
     namespace MathFuncs
@@ -304,7 +304,7 @@ A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obietti
     }
     ```
 
-2. Nello stesso file, aggiungere l'istruzione condizionale seguente alla classe:
+2. Nello stesso file aggiungere l'istruzione condizionale seguente alla classe:
 
     ```csharp
     #if Android
@@ -315,15 +315,15 @@ A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obietti
     ```
 
     > [!NOTE]
-    > Consente di impostare il **DllName** base indica se la libreria viene compilata per valore costante **Android** o **iOS**. Si tratta per soddisfare le diverse convenzioni di denominazione usate da ogni rispettiva piattaforma, ma anche il tipo di libreria in uso in questo caso. Android Usa una libreria dinamica e pertanto si aspetta che un nome di file, inclusi l'estensione. Per iOS, '*__Internal*' è obbligatorio poiché si sta usando una libreria statica.
+    > Viene impostato il valore costante **dllname** a seconda che la libreria venga compilata per **Android** o **iOS**. Questo consente di risolvere le diverse convenzioni di denominazione usate da ogni piattaforma, ma anche il tipo di libreria usato in questo caso. Android usa una libreria dinamica e quindi prevede un nome file, inclusa l'estensione. Per iOS è necessario ' *__Internal*' perché è in uso una libreria statica.
 
-3. Aggiungere un riferimento a **InteropServices** nella parte superiore delle **MyMathFuncsWrapper.cs** file
+3. Aggiungere un riferimento a **System. Runtime. InteropServices** nella parte superiore del file **MyMathFuncsWrapper.cs**
 
     ```csharp
     using System.Runtime.InteropServices;
     ```
 
-4. Aggiungere i metodi wrapper per gestire la creazione e l'eliminazione delle **MyMathFuncs** classe:
+4. Aggiungere i metodi wrapper per gestire la creazione e l'eliminazione della classe **MyMathFuncs** :
 
     ```csharp
     [DllImport(DllName, EntryPoint = "CreateMyMathFuncsClass")]
@@ -334,9 +334,9 @@ A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obietti
     ```
 
     > [!NOTE]
-    > Si sta inoltrando la costante **DllName** per il **DllImport** attributo con il **EntryPoint** che indica di in modo esplicito di runtime di .NET il nome della funzione da chiamare all'interno della libreria. Tecnicamente, non è necessario fornire il **EntryPoint** valore se ai nomi di metodo gestito sono stati identici a quello non gestito. Se non ne viene specificato, il nome di metodo gestito potrebbe essere usato come le **EntryPoint** invece. Tuttavia, è preferibile essere espliciti.  
+    > Viene passato il **dllname** costante all'attributo **dllimport** insieme al **EntryPoint** , che indica in modo esplicito al runtime .NET il nome della funzione da chiamare all'interno della libreria. Tecnicamente, non è necessario specificare il valore **EntryPoint** se i nomi dei metodi gestiti erano identici a quelli non gestiti. Se non ne viene specificato uno, verrà usato il nome del metodo gestito come **EntryPoint** . Tuttavia, è preferibile essere esplicito.  
 
-5. Aggiungere i metodi wrapper per consentire di lavorare con i **MyMathFuncs** classe usando il codice seguente:
+5. Aggiungere i metodi wrapper per consentire l'uso della classe **MyMathFuncs** usando il codice seguente:
 
     ```csharp
     [DllImport(DllName, EntryPoint = "MyMathFuncsAdd")]
@@ -353,9 +353,9 @@ A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obietti
     ```
 
     > [!NOTE]
-    > Uso di tipi semplici per i parametri in questo esempio. Poiché il marshalling è una copia bit per bit in questo caso non richiede alcuna attività aggiuntiva da parte nostra. Si noti inoltre l'utilizzo dei **MyMathFuncsSafeHandle** classe invece dello standard **IntPtr**. Il **IntPtr** automaticamente viene eseguito il mapping per il **SafeHandle** come parte del processo di marshalling.
+    > In questo esempio vengono utilizzati tipi semplici per i parametri. Poiché il marshalling è una copia bit per bit, in questo caso non richiede alcun lavoro aggiuntivo da parte dell'it. Si noti anche l'uso della classe **MyMathFuncsSafeHandle** anziché di **IntPtr**standard. Il **IntPtr** viene automaticamente mappato a **SafeHandle** come parte del processo di marshalling.
 
-6. Verificare che il termine **MyMathFuncsWrapper** classe viene visualizzata come di seguito:
+6. Verificare che la classe **MyMathFuncsWrapper** completata venga visualizzata come indicato di seguito:
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -391,33 +391,33 @@ A questo punto, scrivere il C# codice per chiamare la libreria nativa. L'obietti
     }
     ```
 
-#### <a name="completing-the-mymathfuncssafehandle-class"></a>La classe MyMathFuncsSafeHandle completato
+#### <a name="completing-the-mymathfuncssafehandle-class"></a>Completamento della classe MyMathFuncsSafeHandle
 
-1. Aprire il **MyMathFuncsSafeHandle** classe, passare il segnaposto **TODO** commenti all'interno i **ReleaseHandle** (metodo):
+1. Aprire la classe **MyMathFuncsSafeHandle** , passare al commento **todo** segnaposto all'interno del metodo **ReleaseHandle** :
 
     ```csharp
     // TODO: Release the handle here
     ```
 
-1. Sostituire il **TODO** riga:
+1. Sostituire la riga **todo** :
 
     ```csharp
     MyMathFuncsWrapper.DisposeMyMathFuncs(this);
     ```
 
-#### <a name="writing-the-mymathfuncs-class"></a>Scrive la classe MyMathFuncs
+#### <a name="writing-the-mymathfuncs-class"></a>Scrittura della classe MyMathFuncs
 
-Ora che il wrapper è completo, creare una classe MyMathFuncs che gestirà il riferimento all'oggetto MyMathFuncs C++ non gestito.  
+Ora che il wrapper è stato completato, creare una classe MyMathFuncs che gestirà il riferimento all'oggetto C++ MyMathFuncs non gestito.  
 
-1. **CTRL + clic** nella **MathFuncs.Shared** del progetto, quindi scegliere **Add File...**  dal **Add** menu. 
-2. Scegliere **classe vuota** dalle **nuovo File** finestra, denominarlo **MyMathFuncs** e quindi fare clic su **New**
-3. Aggiungere i membri seguenti per il **MyMathFuncs** classe:
+1. **Controllare e fare clic** sul progetto **MathFuncs. Shared** , quindi scegliere **Aggiungi file** dal menu **Aggiungi** . 
+2. Scegliere **classe vuota** dalla finestra **nuovo file** , denominarla **MyMathFuncs** e quindi fare clic su **nuovo** .
+3. Aggiungere i membri seguenti alla classe **MyMathFuncs** :
 
     ```csharp
     readonly MyMathFuncsSafeHandle handle;
     ```
 
-4. Implementare il costruttore della classe in modo che crea e archivia un handle all'oggetto nativo **MyMathFuncs** quando viene creata un'istanza della classe dell'oggetto:
+4. Implementare il costruttore per la classe in modo da creare e archiviare un handle per l'oggetto **MyMathFuncs** nativo quando viene creata un'istanza della classe:
 
     ```csharp
     public MyMathFuncs()
@@ -426,7 +426,7 @@ Ora che il wrapper è completo, creare una classe MyMathFuncs che gestirà il ri
     }
     ```
 
-5. Implementare il **IDisposable** interfaccia usando il codice seguente:
+5. Implementare l'interfaccia **IDisposable** usando il codice seguente:
 
     ```csharp
     public class MyMathFuncs : IDisposable
@@ -449,7 +449,7 @@ Ora che il wrapper è completo, creare una classe MyMathFuncs che gestirà il ri
     }
     ```
 
-6. Implementare il **MyMathFuncs** metodi usando la **MyMathFuncsWrapper** classe per eseguire il lavoro effettivo dietro le quinte, passando il puntatore è stato archiviato l'oggetto non gestito sottostante. Il codice dovrebbe essere come segue:
+6. Implementare i metodi **MyMathFuncs** usando la classe **MyMathFuncsWrapper** per eseguire il lavoro reale sotto la cappa passando il puntatore archiviato all'oggetto non gestito sottostante. Il codice deve essere il seguente:
 
     ```csharp
     public double Add(double a, double b)
@@ -473,14 +473,14 @@ Ora che il wrapper è completo, creare una classe MyMathFuncs che gestirà il ri
     }
     ```
 
-#### <a name="creating-the-nuspec"></a>La creazione del nuspec
+#### <a name="creating-the-nuspec"></a>Creazione di NuSpec
 
-Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la soluzione richiede un **nuspec** file. Si identificherà cui assembly risultante verrà incluso per ogni piattaforma supportata.
+Per fare in modo che la libreria venga impacchettata e distribuita tramite NuGet, la soluzione richiede un file **NuSpec** . In questo modo verrà identificato quale degli assembly risultanti verrà incluso per ogni piattaforma supportata.
 
-1. **CTRL + clic** sulla soluzione **MathFuncs**, quindi scegliere **Aggiungi cartella soluzione** dal **Add** menu denominarlo **SolutionItems**.
-2. **CTRL + clic** nella **SolutionItems** cartella, quindi scegliere **nuovo File...**  dal **Add** menu.
-3. Scegliere **File XML vuoto** dalle **nuovo File** finestra, denominarlo **MathFuncs.nuspec** e quindi fare clic su **New**.
-4. Update **MathFuncs.nuspec** con i metadati del pacchetto di base da visualizzare per il **NuGet** consumer. Ad esempio:
+1. **Controllare e fare clic** sulla soluzione **MathFuncs**, quindi scegliere **Aggiungi cartella soluzione** dal menu **Aggiungi** per denominarlo **SolutionItems**.
+2. **Controllare e fare clic** sulla cartella **SolutionItems** , quindi scegliere **nuovo file** dal menu **Aggiungi** .
+3. Scegliere **file XML vuoto** dalla finestra **nuovo file** , denominarlo **MathFuncs. NuSpec** e quindi fare clic su **nuovo**.
+4. Aggiornare **MathFuncs. NuSpec** con i metadati del pacchetto di base da visualizzare al consumer **NuGet** . Ad esempio:
 
     ```xml
     <?xml version="1.0"?>
@@ -497,9 +497,9 @@ Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la solu
     ```
 
     > [!NOTE]
-    > Vedere le [di riferimento su nuspec](https://docs.microsoft.com/nuget/reference/nuspec) documento per ulteriori dettagli sullo schema usato per questo manifesto.
+    > Per altri dettagli sullo schema usato per questo manifesto, vedere il documento di [riferimento di NuSpec](https://docs.microsoft.com/nuget/reference/nuspec) .
 
-5. Aggiungere un `<files>` come figlio dell'elemento di `<package>` elemento (immediatamente sotto `<metadata>`), identificando ogni file con un oggetto separato `<file>` elemento:
+5. Aggiungere un `<files>` elemento come figlio `<package>` dell'elemento (appena sotto `<metadata>`), identificando ogni file con un elemento separato `<file>` :
 
     ```xml
     <files>
@@ -514,30 +514,30 @@ Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la solu
     ```
 
     > [!NOTE]
-    > Quando un pacchetto viene installato in un progetto e in cui sono presenti più assembly specificati con lo stesso nome, NuGet in modo efficace sceglierà l'assembly che è più specifico per la piattaforma specificata.
+    > Quando un pacchetto viene installato in un progetto e dove sono presenti più assembly specificati con lo stesso nome, NuGet sceglie in modo efficace l'assembly più specifico per la piattaforma specificata.
 
-6. Aggiungere il `<file>` elementi per il **Android** assembly:
+6. Aggiungere gli `<file>` elementi per gli assembly **Android** :
 
     ```xml
     <file src="MathFuncs.Android/bin/Release/MathFuncs.dll" target="lib/MonoAndroid81/MathFuncs.dll" />
     <file src="MathFuncs.Android/bin/Release/MathFuncs.pdb" target="lib/MonoAndroid81/MathFuncs.pdb" />
     ```
 
-7. Aggiungere il `<file>` elementi per il **iOS** assembly:
+7. Aggiungere gli `<file>` elementi per gli assembly **iOS** :
 
     ```xml
     <file src="MathFuncs.iOS/bin/Release/MathFuncs.dll" target="lib/Xamarin.iOS10/MathFuncs.dll" />
     <file src="MathFuncs.iOS/bin/Release/MathFuncs.pdb" target="lib/Xamarin.iOS10/MathFuncs.pdb" />
     ```
 
-8. Aggiungere il `<file>` elementi per il **netstandard2.0** assembly:
+8. Aggiungere gli `<file>` elementi per gli assembly **netstandard 2.0** :
 
     ```xml
     <file src="MathFuncs.Standard/bin/Release/netstandard2.0/MathFuncs.dll" target="lib/netstandard2.0/MathFuncs.dll" />
     <file src="MathFuncs.Standard/bin/Release/netstandard2.0/MathFuncs.pdb" target="lib/netstandard2.0/MathFuncs.pdb" />
     ```
 
-9. Verificare i **nuspec** manifesto:
+9. Verificare il manifesto **NuSpec** :
 
     ```xml
     <?xml version="1.0"?>
@@ -569,115 +569,115 @@ Per avere la libreria incluso nel pacchetto e distribuiti tramite NuGet, la solu
     ```
 
     > [!NOTE]
-    > Questo file specifica i percorsi di output di assembly da un **rilascio** di compilazione, pertanto assicurarsi di compilare la soluzione usando tale configurazione.
+    > Questo file specifica i percorsi di output dell'assembly da una build di **rilascio** , quindi assicurarsi di compilare la soluzione usando tale configurazione.
 
-A questo punto, la soluzione contiene 3 assembly .NET e un tipo di supporto **nuspec** manifesto.
+A questo punto, la soluzione contiene 3 assembly .NET e un manifesto **NuSpec** di supporto.
 
-## <a name="distributing-the-net-wrapper-with-nuget"></a>Distribuire il wrapper .NET con NuGet
+## <a name="distributing-the-net-wrapper-with-nuget"></a>Distribuzione del wrapper .NET con NuGet
 
-Il passaggio successivo è assemblare e distribuire il pacchetto NuGet, pertanto può essere facilmente utilizzata dall'app e gestita come una dipendenza. Il ritorno a capo e consumo potrebbe essere eseguite tutte in una singola soluzione, ma distribuzione della libreria tramite NuGet facilita la separazione e consente a Microsoft di gestire queste basi di codice in modo indipendente.
+Il passaggio successivo consiste nel creare il pacchetto e distribuire il pacchetto NuGet in modo che possa essere facilmente utilizzato dall'app e gestito come dipendenza. Il wrapping e l'utilizzo possono essere eseguiti in un'unica soluzione, ma la distribuzione della libreria tramite NuGet facilita la separazione e consente di gestire queste codebase in modo indipendente.
 
-### <a name="preparing-a-local-packages-directory"></a>Preparazione di una directory locale dei pacchetti
+### <a name="preparing-a-local-packages-directory"></a>Preparazione di una directory dei pacchetti locale
 
-La forma più semplice dei feed NuGet è una directory locale:
+La forma più semplice del feed NuGet è una directory locale:
 
-1. Nelle **Finder**, passare a una directory pratica. Ad esempio, **/Users**.
-2. Scegli **nuova cartella** dalle **File** menu, fornire un nome significativo, ad esempio **locale-nuget-feed**.
+1. In **Finder**passare a una directory comoda. Ad esempio, **/Users**.
+2. Scegliere **nuova cartella** dal menu **file** , specificando un nome significativo, ad esempio **local-NuGet-feed**.
 
 ### <a name="creating-the-package"></a>Creazione del pacchetto
 
-1. Impostare il **configurazione compilazione** al **Release**ed esegue una compilazione usando **comando + B**.
-2. Aprire **terminale** e passare alla directory alla cartella contenente il **nuspec** file.
-3. Nella **Terminal**, eseguire il **nuget pack** comando specificando il **nuspec** file, il **versione** (ad esempio, 1.0.0) e la  **OutputDirectory** Usa la cartella creata nel [passaggio precedente](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), vale a dire **locale-nuget-feed**. Ad esempio:
+1. Impostare la **configurazione della build** su **Release**ed eseguire una compilazione usando il **comando + B**.
+2. Aprire il **terminale** e spostarsi nella cartella contenente il file **NuSpec** .
+3. Nel **terminale**eseguire il comando di **NuGet Pack** specificando il file **NuSpec** , la **versione** (ad esempio 1.0.0) e il **OutputDirectory** usando la cartella creata nel [passaggio precedente](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), ovvero  **local-NuGet-feed**. Ad esempio:
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
     ```
 
-4. **Confermare** che **MathFuncs.1.0.0.nupkg** creato nel **locale-nuget-feed** directory.
+4. **Verificare** che **MathFuncs. 1.0.0. nupkg** sia stato creato nella directory **local-NuGet-feed** .
 
-### <a name="optional-using-a-private-nuget-feed-with-azure-devops"></a>[FACOLTATIVO] Uso privato del feed NuGet con la metodologia DevOps di Azure
+### <a name="optional-using-a-private-nuget-feed-with-azure-devops"></a>OPZIONALE Uso di un feed NuGet privato con Azure DevOps
 
-Una tecnica più solida è descritta nella [Introduzione a pacchetti NuGet in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), che mostra come creare un feed privato e il push del pacchetto (generato nel passaggio precedente) per tale feed.
+Una tecnica più affidabile è descritta in [Introduzione ai pacchetti NuGet in Azure DevOps](https://docs.microsoft.com/azure/devops/artifacts/get-started-nuget?view=vsts&tabs=new-nav#publish-a-package), che illustra come creare un feed privato ed effettuare il push del pacchetto (generato nel passaggio precedente) a tale feed.
 
-È consigliabile che questo flusso di lavoro completamente automatizzata, ad esempio tramite [pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). Per altre informazioni, vedere [iniziare con le pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
+È preferibile che questo flusso di lavoro sia completamente automatizzato, ad esempio usando [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index?view=vsts). Per ulteriori informazioni, vedere [Introduzione a Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/index?view=vsts).
 
-## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Utilizzo del wrapper .NET da un'app xamarin. Forms
+## <a name="consuming-the-net-wrapper-from-a-xamarinforms-app"></a>Utilizzo del wrapper .NET da un'app Novell. Forms
 
-Per completare la procedura dettagliata, creare un **xamarin. Forms** utilizzare semplicemente il pacchetto dell'app pubblicata in locale **NuGet** feed.
+Per completare la procedura dettagliata, creare un'app **Novell. Forms** per utilizzare il pacchetto appena pubblicato nel feed **NuGet** locale.
 
-### <a name="creating-the-xamarinforms-project"></a>Creazione di **xamarin. Forms** progetto
+### <a name="creating-the-xamarinforms-project"></a>Creazione del progetto **Novell. Forms**
 
-1. Aprire una nuova istanza della **Visual Studio per Mac**. Questa operazione può essere eseguita dal **Terminal**:
+1. Aprire una nuova istanza di **Visual Studio per Mac**. Questa operazione può essere eseguita dal **terminale**:
 
     ```bash
     open -n -a "Visual Studio"
     ```
 
-2. Nelle **Visual Studio per Mac**, fare clic su **nuovo progetto** (dal *Paginainiziale*) o **nuova soluzione** (dal *File* dal menu).
-3. Dal **nuovo progetto** finestra, scegliere **App Forms vuota** (dall'interno *multipiattaforma > App*) e quindi fare clic su **Avanti**.
-4. Aggiornare i campi seguenti, quindi fare clic su **successivo**:
+2. In **Visual Studio per Mac**fare clic su **nuovo progetto** (nella *pagina iniziale*) o su **nuova soluzione** (dal menu *file* ).
+3. Dalla finestra **nuovo progetto** scegliere **app moduli vuota** (dall'interno dell' *app multipiattaforma >* ), quindi fare clic su **Avanti**.
+4. Aggiornare i campi seguenti, quindi fare clic su **Avanti**:
 
-    - **Nome dell'App:** MathFuncsApp.
-    - **Identificatore dell'organizzazione:** Usare uno spazio dei nomi inverso, ad esempio _com. {your_org}_.
+    - **Nome dell'app:** MathFuncsApp.
+    - **Identificatore dell'organizzazione:** Usare uno spazio dei nomi inverso, ad esempio, _com. {Your_Org}_ .
     - **Piattaforme di destinazione:** Usare il valore predefinito (destinazioni Android e iOS).
-    - **Codice condiviso:** Impostare su .NET Standard (una soluzione "Shared Library" è possibile, ma oltre l'ambito di questa procedura dettagliata).
+    - **Codice condiviso:** Impostare questa impostazione su .NET Standard (è possibile una soluzione "Shared Library", ma esula dall'ambito di questa procedura dettagliata).
 
-5. Aggiornare i campi seguenti, quindi fare clic su **Create**:
+5. Aggiornare i campi seguenti, quindi fare clic su **Crea**:
 
-    - **Nome del progetto:** MathFuncsApp.
-    - **Nome della soluzione:** MathFuncsApp.  
-    - **Percorso:** Usare il valore predefinito percorso di salvataggio (o scegliere un'alternativa).
+    - **Nome progetto:** MathFuncsApp.
+    - **Nome soluzione:** MathFuncsApp.  
+    - **Percorso** Usare il percorso di salvataggio predefinito oppure scegliere un'alternativa.
 
-6. Nelle **Esplora soluzioni**, **CTRL + clic** nella destinazione (**MathFuncsApp.Android** oppure **MathFuncs.iOS**) per il test iniziale, quindi Scegli **imposta come progetto di avvio**.
-7. Scegliere il valore desiderato **periferica** oppure **simulatore**/**emulatore**. 
-8. Eseguire la soluzione (**comando + RETURN**) per convalidare che basata su modelli **xamarin. Forms** progetto compilato ed eseguito corretto. 
+6. In **Esplora soluzioni**, **controllare e fare clic** sulla destinazione (**MathFuncsApp. Android** o **MathFuncs. iOS**) per il test iniziale, quindi scegliere **Imposta come progetto di avvio**.
+7. Scegliere l'**emulatore**di **dispositivo** o **simulatore**/preferito. 
+8. Eseguire la soluzione (**comando + return**) per verificare che il progetto **Novell. Forms** basato su modelli venga compilato ed eseguito in modo corretto. 
 
     > [!NOTE]
-    > **iOS** (in particolare il simulatore) tende ad avere il tempo di compilazione/distribuzione più veloce.
+    > **iOS** (in particolare il simulatore) tende a disporre del tempo di compilazione/distribuzione più rapido.
 
-### <a name="adding-the-local-nuget-feed-to-the-nuget-configuration"></a>Aggiunta di NuGet locali feed alla configurazione di NuGet
+### <a name="adding-the-local-nuget-feed-to-the-nuget-configuration"></a>Aggiunta del feed NuGet locale alla configurazione NuGet
 
-1. Nelle **Visual Studio**, scegliere **preferenze** (dal **Visual Studio** menu).
-2. Scegli **origini** sotto il **NuGet** sezione e quindi fare clic su **Add**.
+1. In **Visual Studio**scegliere **Preferenze** dal menu di **Visual Studio** .
+2. Scegliere **origini** dalla sezione **NuGet** , quindi fare clic su **Aggiungi**.
 3. Aggiornare i campi seguenti, quindi fare clic su **Aggiungi origine**:
 
-    - **Nome:** Specificare un nome significativo, ad esempio, i pacchetti locale.  
-    - **Percorso:** Specificare il **local-nuget-feed** creato nella cartella le [passaggio precedente](#preparing-a-local-packages-directory).
+    - **Name:** Fornire un nome significativo, ad esempio, local-Packages.  
+    - **Percorso** Specificare la cartella **local-NuGet-feed** creata nel [passaggio precedente](#preparing-a-local-packages-directory).
 
     > [!NOTE]
-    > In questo caso non è necessario specificare una **nomeutente** e **Password**. 
+    > In questo caso non è necessario specificare un **nome utente** e una **password**. 
 
 4. Fare clic su **OK**.
 
 ### <a name="referencing-the-package"></a>Riferimento al pacchetto
 
-Ripetere i passaggi seguenti per ogni progetto (**MathFuncsApp**, **MathFuncsApp.Android**, e **MathFuncsApp.iOS**).
+Ripetere i passaggi seguenti per ogni progetto (**MathFuncsApp**, **MathFuncsApp. Android**e **MathFuncsApp. iOS**).
 
-1. **CTRL + clic** dal progetto, quindi scegliere **Aggiungi pacchetti NuGet...**  dal **Add** menu.
+1. **Controllare e fare clic** sul progetto, quindi scegliere **Aggiungi pacchetti NuGet** dal menu **Aggiungi** .
 2. Cercare **MathFuncs**. 
-3. Verificare i **versione** del pacchetto viene **1.0.0** e altri dettagli vengono visualizzati come previsto, ad esempio il **Title** e **descrizione**, vale a dire , *MathFuncs* e *libreria Wrapper C++ di esempio*. 
-4. Selezionare il **MathFuncs** del pacchetto, quindi fare clic su **Add Package**.
+3. Verificare che la **versione** del pacchetto sia **1.0.0** e che gli altri dettagli siano visualizzati come previsto, ad esempio il **titolo** e la **Descrizione**, ovvero *MathFuncs* e la *libreria wrapper di C++ esempio*. 
+4. Selezionare il pacchetto **MathFuncs** , quindi fare clic su **Aggiungi pacchetto**.
 
-### <a name="using-the-library-functions"></a>Usando le funzioni della libreria
+### <a name="using-the-library-functions"></a>Uso delle funzioni della libreria
 
-A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto, le funzioni sono disponibili per il C# codice.
+Ora, con un riferimento al pacchetto **MathFuncs** in ogni progetto, le funzioni sono disponibili per il C# codice.
 
-1. Aprire **MainPage.xaml.cs** dall'interno di **MathFuncsApp** comuni **xamarin. Forms**progetto (a cui fanno riferimento entrambi **MathFuncsApp.Android**e **MathFuncsApp.iOS**).
-2. Aggiungere **usando** istruzioni **System. Diagnostics** e **MathFuncs** nella parte superiore del file:
+1. Aprire **MainPage.XAML.cs** dall'interno del progetto **Novell. Forms**comune **MathFuncsApp** (a cui fa riferimento sia **MathFuncsApp. Android** che **MathFuncsApp. iOS**).
+2. Aggiungere istruzioni **using** per **System. Diagnostics** e **MathFuncs** all'inizio del file:
 
     ```csharp
     using System.Diagnostics;
     using MathFuncs;
     ```
 
-3. Dichiarare un'istanza del `MyMathFuncs` nella parte superiore della classe di `MainPage` classe:
+3. Dichiarare un'istanza della `MyMathFuncs` classe all'inizio `MainPage` della classe:
 
     ```csharp
     MyMathFuncs myMathFuncs;
     ```
 
-4. Eseguire l'override di `OnAppearing` e `OnDisappearing` metodi dal `ContentPage` classe di base:
+4. Eseguire l' `OnAppearing` override `OnDisappearing` dei metodi `ContentPage` e della classe base:
 
     ```csharp
     protected override void OnAppearing()
@@ -691,7 +691,7 @@ A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto
     }
     ```
 
-5. Aggiorna il `OnAppearing` metodo per inizializzare il `myMathFuncs` variabile dichiarata in precedenza:
+5. Aggiornare il `OnAppearing` metodo per inizializzare `myMathFuncs` la variabile dichiarata in precedenza:
 
     ```csharp
     protected override void OnAppearing()
@@ -701,7 +701,7 @@ A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto
     }
     ```
 
-6. Aggiorna il `OnDisappearing` metodo da chiamare il `Dispose` metodo su `myMathFuncs`:
+6. Aggiornare il `OnDisappearing` metodo per chiamare il `Dispose` metodo su `myMathFuncs`:
 
     ```csharp
     protected override void OnDisappearing()
@@ -711,7 +711,7 @@ A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto
     }
     ```
 
-7. Implementare un metodo privato denominato **TestMathFuncs** come indicato di seguito:
+7. Implementare un metodo privato denominato **TestMathFuncs** come segue:
 
     ```csharp
     private void TestMathFuncs()
@@ -739,13 +739,13 @@ A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto
     }
     ```
 
-8. Infine, chiamare `TestMathFuncs` alla fine del `OnAppearing` metodo:
+8. Infine, chiamare `TestMathFuncs` alla fine `OnAppearing` del metodo:
 
     ```csharp
     TestMathFuncs();
     ```
 
-9. Eseguire l'app in ciascuna piattaforma di destinazione e convalidare l'output nel **Output applicazione** riquadro viene visualizzato come segue:
+9. Eseguire l'app in ogni piattaforma di destinazione e verificare che l'output nel riquadro di **output dell'applicazione** venga visualizzato come segue:
 
     ```csharp
     1 + 2 = 3
@@ -755,23 +755,23 @@ A questo punto, con un riferimento per il **MathFuncs** package in ogni progetto
     ```
 
     > [!NOTE]
-    > Se si verifica un '*DLLNotFoundException*' quando il test su Android o un errore di compilazione per iOS, si consiglia di verificare che l'architettura della CPU del dispositivo/emulatore o simulatore si usa sia compatibile con il subset che è stato scelto di supporto tecnico. 
+    > Se si verifica un "*DLLNotFoundException*" durante il test in Android o un errore di compilazione in iOS, assicurarsi di controllare che l'architettura della CPU del dispositivo/emulatore/simulatore usato sia compatibile con il subset che è stato scelto di supportare. 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come creare un'app xamarin. Forms che usa le librerie native tramite un wrapper .NET comune distribuite tramite il pacchetto NuGet. L'esempio fornito in questa procedura dettagliata è intenzionalmente molto semplice per illustrare più facilmente l'approccio. Un'applicazione reale dovrà occuparsi di complessità, ad esempio la gestione delle eccezioni, i callback, il marshalling dei tipi più complessi e di collegamento ad altre librerie di dipendenza. Un fattore fondamentale è il processo mediante il quale l'evoluzione del codice C++ è coordinato e sincronizzata con le applicazioni client e wrapper. Questo processo può variare a seconda del fatto che uno o entrambi questi problemi sono la responsabilità di un team singolo. In entrambi i casi, l'automazione è dei vantaggi reale. Di seguito sono riportate alcune risorse che fornisce altre informazioni, vedere alcuni dei concetti chiave e i download pertinenti. 
+Questo articolo ha illustrato come creare un'app Novell. Forms che usa librerie native tramite un wrapper .NET comune distribuito tramite un pacchetto NuGet. L'esempio fornito in questa procedura dettagliata è intenzionalmente molto semplicistico per illustrare più facilmente l'approccio. Un'applicazione reale dovrà gestire complessità quali la gestione delle eccezioni, i callback, il marshalling di tipi più complessi e il collegamento ad altre librerie di dipendenze. Una considerazione fondamentale è il processo mediante il quale l'evoluzione del C++ codice è coordinata e sincronizzata con il wrapper e le applicazioni client. Questo processo può variare a seconda che uno o entrambi i problemi siano responsabili di un singolo team. In entrambi i casi, l'automazione è un vero vantaggio. Di seguito sono riportate alcune risorse che forniscono ulteriori informazioni su alcuni concetti chiave insieme ai relativi download. 
 
 ### <a name="downloads"></a>Download
 
-- [Strumenti della riga di comando NuGet (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
+- [Strumenti della riga di comando di NuGet (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
 - [Visual Studio](https://visualstudio.microsoft.com/vs)
 
 ### <a name="examples"></a>Esempi
 
-- [Sviluppo mobile cross-platform di Hyperlapse con C++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
-- [Microsoft Pix (C++ e Xamarin)](https://blog.xamarin.com/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
-- [Mono San Angeles esempio porta](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [Sviluppo di app per dispositivi mobili multipiattaforma ipercadenti conC++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
+- [Microsoft Pix (C++ e Novell)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
+- [Porta di esempio di mono San Angeles](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk/)
 
 ### <a name="further-reading"></a>Ulteriori informazioni
 
-[Articoli relativi al contenuto di questo post](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up)
+[Articoli relativi al contenuto del post](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up)

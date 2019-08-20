@@ -1,72 +1,72 @@
 ---
 title: Android Wear
-description: Creazione di App per dispositivi Android indossabile.
+description: Creazione di app per dispositivi Android indossabili.
 ms.prod: xamarin
 ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: fca72291dd726d4f2a6635d26390baa103ee0d2d
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 13a9a02984828781cc6402e982a4b5151c077c52
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864909"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648337"
 ---
 # <a name="android-wear"></a>Android Wear
 
-Android Wear è una versione di Android progettata per indossabile dispositivi quali smart espressioni di controllo. In questa sezione include istruzioni su come installare e configurare gli strumenti necessari per lo sviluppo Wear, una procedura dettagliata per la creazione del primo dispositivo Wear e un elenco di esempi che è possibile fare riferimento per Wear le App per la creazione di propri.
+Android Wear è una versione di Android progettata per i dispositivi indossabili, ad esempio le Smart Watch. Questa sezione include istruzioni su come installare e configurare gli strumenti necessari per lo sviluppo di applicazioni, una procedura dettagliata per la creazione del primo dispositivo di consumo e un elenco di esempi a cui è possibile fare riferimento per creare app personalizzate.
 
 ## <a name="getting-startedandroidwearget-startedindexmd"></a>[Introduzione](~/android/wear/get-started/index.md)
 
-Introduce Android Wear, viene descritto come installare e configurare il computer per lo sviluppo di usura e vengono descritti i passaggi che consentono di creare ed eseguire la prima app Android Wear in un emulatore o un dispositivo Wear.
+Introduce Android Wear, descrive come installare e configurare il computer per lo sviluppo di usura e fornisce i passaggi per creare ed eseguire la prima app Android Wear in un emulatore o un dispositivo di consumo.
 
 ## <a name="user-interfaceandroidwearuser-interfaceindexmd"></a>[Interfaccia utente](~/android/wear/user-interface/index.md)
 
-Viene spiegato Android Wear specifici controlli e fornisce collegamenti a esempi che illustrano come usare questi controlli.
+Vengono illustrati i controlli specifici per Android Wear e vengono forniti collegamenti a esempi che illustrano come usare questi controlli.
 
 ## <a name="platform-featuresandroidwearplatformindexmd"></a>[Funzionalità della piattaforma](~/android/wear/platform/index.md)
 
-I documenti in questa sezione illustrano funzionalità specifiche di Android Wear. Qui troverai un argomento che descrive come creare un WatchFace.
+I documenti in questa sezione riguardano le funzionalità specifiche di Android Wear. Qui è disponibile un argomento che descrive come creare un WatchFace.
 
 ## <a name="screen-sizesandroidwearscreen-sizesmd"></a>[Dimensioni dello schermo](~/android/wear/screen-sizes.md)
 
-Visualizzare in anteprima e ottimizzare l'interfaccia utente per le dimensioni disponibile sullo schermo.
+Visualizzare in anteprima e ottimizzare l'interfaccia utente per le dimensioni dello schermo disponibili.
 
 ## <a name="deployment--testingandroidweardeploy-testindexmd"></a>[Distribuzione e test](~/android/wear/deploy-test/index.md)
 
-Viene illustrato come distribuire l'app Android Wear a un dispositivo Android Wear o all'emulatore Android configurato per Wear. Include anche il debug di suggerimenti e le informazioni su come configurare una connessione Bluetooth tra il computer di sviluppo e un dispositivo Android.
+Viene illustrato come distribuire l'app Android Wear in un dispositivo Android Wear o in un emulatore Android configurato per l'utilizzo. Include anche suggerimenti per il debug e informazioni su come configurare una connessione Bluetooth tra il computer di sviluppo e un dispositivo Android.
 
 ## <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Usare le API](https://developer.android.com/reference/android/support/wearable)
 
-Il sito per sviluppatori Android fornisce informazioni dettagliate sulla chiave, usare le API, ad esempio [attività indossabile](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [Intent](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [Authentication](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [ Complicazioni](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [complicazioni Rendering](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notifiche](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [visualizzazioni](https://developer.android.com/reference/android/support/wearable/view/package-summary.html), e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
+Il sito per sviluppatori Android fornisce informazioni dettagliate sulle API di utilizzo chiave, ad esempio [attività indossabili](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [Intent](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [autenticazione](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [complicazioni](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [rendering delle complicazioni](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notifiche](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Viste](https://developer.android.com/reference/android/support/wearable/view/package-summary.html) e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
 
 
 ## <a name="samples"></a>Esempi
 
-È possibile trovare numerose [samples](https://developer.xamarin.com/samples/android/Android%20Wear/) usando Android Wear (o passare direttamente alla [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
+È possibile trovare alcuni [esempi](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) di uso di Android Wear (oppure passare direttamente a [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
 |Esempio|Descrizione|Schermata|
 |--- |--- |--- |
-|[SkeletonWear](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)|Un semplice esempio di base dei progetti indossabile, tra cui GridViewPager e notifiche interattive.|![Screenshot della Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/)|Una semplice dimostrazione del controllo WatchViewStub che rileva la forma dello schermo e carica automaticamente il layout corretto. Verificare il funzionamento WatchViewStub il **Resources/layout/main_activity.xml** layout.|![Screenshot of WatchViewStub](images/watchview.png)|
-|[RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/)|Dimostrazione delle pagine di notifica Wear, sotto forma di passaggi di "ricetta". Le notifiche vengono create in RecipeService.cs.|![Screenshot della RecipeAssistant](images/recipeassist.png)|
-|[ElizaChat](https://developer.xamarin.com/samples/monodroid/wear/ElizaChat/)|Esempio divertente dell'interazione con un "assistente personale" chiamato Eliza, uso delle notifiche di interattiva Wear per creare una conversazione che utilizza le risposte scatola.|![Screenshot of ElizaChat](images/eliza.png)|
-|[GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)|GridViewPager implementa il modello di spostamento 2D, in cui l'utente passa verticalmente e orizzontalmente per spostarsi tra le opzioni e il contenuto.|![Screenshot della GridViewPager](images/gridviewpager.png)|
-|[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace è un viso di verifica personalizzato con stile analogico ora, minuto e secondo mani. Questo esempio viene illustrato come creare un servizio di volti espressioni di controllo che disegna l'ora corrente e la visibilità e la modalità ambiente gestisce gli eventi di modifica. Include un ricevitore di trasmissioni che ascolta le modifiche del fuso orario e aggiorna automaticamente il tempo di conseguenza.|![Screenshot of WatchFace](images/gridviewpager.png)|
+|[SkeletonWear](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|Un semplice esempio delle nozioni di base dei progetti indossabili, tra cui GridViewPager e le notifiche interattive.|![Screenshot di Skeletonwear](images/skeleton.png)|
+|[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|Demo semplice del controllo WatchViewStub che rileva la forma dello schermo e carica automaticamente il layout corretto. Per informazioni sul funzionamento di WatchViewStub, vedere il layout **risorse/layout/main_activity. XML** .|![Screenshot di WatchViewStub](images/watchview.png)|
+|[RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant)|Dimostrazione di pagine di notifica di utilizzo, sotto forma di procedure per la ricetta. Le notifiche vengono create in RecipeService.cs.|![Screenshot di RecipeAssistant](images/recipeassist.png)|
+|[ElizaChat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-elizachat)|Esempio divertente di interazione con un "Personal Assistant" chiamato Eliza, usando le notifiche interattive di Wear per creare una conversazione usando risposte inscatolate.|![Screenshot di ElizaChat](images/eliza.png)|
+|[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implementa il modello di navigazione 2D, in cui l'utente scorre verticalmente e quindi orizzontalmente per spostarsi tra le opzioni e il contenuto.|![Screenshot di GridViewPager](images/gridviewpager.png)|
+|[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace è un quadrante di orologio personalizzato con ore, minuti e secondi in stile analogico. In questo esempio viene illustrato come creare un servizio espressione di controllo che consente di disegnare l'ora corrente e gestire la modalità di ambiente e gli eventi di modifica della visibilità. Include un ricevitore di trasmissione che rimane in ascolto delle modifiche del fuso orario e aggiorna automaticamente l'ora di conseguenza.|![Screenshot di WatchFace](images/gridviewpager.png)|
 
 
 ## <a name="videos"></a>Video
 
-Consultare questi video i collegamenti che trattano di xamarin. Android con Wear supportano:
+Vedere questi collegamenti video che illustrano Novell. Android con supporto di utilizzo:
 
 |Descrizione|Schermata|
 |--- |--- |
-|[Android L e molto altro ancora](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; The Android L Developer Preview introdotte una vasta gamma di nuove API per gli sviluppatori a sfruttare i vantaggi, tra cui Material Design, notifiche e le nuove animazioni, per citarne alcuni.|![Schermata del video di presentazione](images/video-android-l.png)|
-|[C#è nella mio orecchie e il punto di vista: Google Glass e Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; computing indossabile può sembrare un elemento dal futuro (o un episodio di Gadget Inspector), ma molte persone già adottano il futuro oggi stesso! C#gli sviluppatori a conoscenza e dispongono già degli strumenti e le competenze necessarie per sfruttare la potenza dei dispositivi indossabile (da variare delle 2014).|![Schermata del video di presentazione](images/video-eyes-ears.png)|
-|[Novità in xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; L Android, Android Wear, Android TV, Android Auto, Material Design e ART; come funziona questo mean all'utente gli sviluppatori Xamarin? da variare delle 2014.|![Schermata del video di presentazione](Images/video-whats-new.png)|
+|[Android L e molto altro ancora](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android L Developer Preview ha introdotto una pletora di nuove API che consentono agli sviluppatori di sfruttare i vantaggi offerti da, ad esempio la progettazione di materiali, le notifiche e le nuove animazioni, per citarne alcune.|![Screenshot video della presentazione](images/video-android-l.png)|
+|[C#è a mio occhio: Google Glass e Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; wearable computing potrebbero sembrare qualcosa del futuro (o un episodio di Inspector Gadget), ma molte persone hanno già adottato il futuro. C#gli sviluppatori conoscono questo e hanno già gli strumenti e le competenze per sfruttare la potenza dei dispositivi indossabili (dall'evoluzione 2014).|![Screenshot video della presentazione](images/video-eyes-ears.png)|
+|[Novità di Novell. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android auto, Material Design e Art; che cosa si intende per gli sviluppatori Novell? di evolve 2014.|![Screenshot video della presentazione](Images/video-whats-new.png)|
 
 
 <!--

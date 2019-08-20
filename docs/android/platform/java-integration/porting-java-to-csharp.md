@@ -1,44 +1,37 @@
 ---
-title: Convertire Java in C#
-description: Una terza opzione per usare Java in un'applicazione xamarin. Android è possibile trasferire il codice sorgente Java in C#.
+title: Porting di Java C# a per Novell. Android
+description: Una terza opzione per l'uso di Java in un'applicazione Novell. Android consiste nel trasferire il codice sorgente C#Java a.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/05/2016
-ms.openlocfilehash: 9beb6d59c9376a404c06af7f0cd1efd985929843
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c6627f585326848c5221729ca94071b00651c59e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075144"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511178"
 ---
-# <a name="porting-java-to-c"></a>Convertire Java in C#
+# <a name="porting-java-to-c-for-xamarinandroid"></a>Porting di Java C# a per Novell. Android
 
-_Una terza opzione per usare Java in un'applicazione xamarin. Android è possibile trasferire il codice sorgente Java in C#._
+Questo approccio può essere interessante per le organizzazioni che:
 
-## <a name="overview"></a>Panoramica
+- **Stanno cambiando gli stack di tecnologia da Java C#a.**
+- **Deve mantenere un C# e una versione Java dello stesso prodotto.**
+- **Si vuole avere una versione .NET di una nota libreria Java.**
 
-Questo approccio può rivelarsi utile alle organizzazioni che:
+Esistono due modi per trasferire il codice Java a C#. Il primo consiste nel trasferire manualmente il codice. Si tratta di sviluppatori esperti che conoscono sia .NET che Java e hanno familiarità con gli idiomi appropriati per ogni linguaggio. Questo approccio è molto utile per piccole quantità di codice o per le organizzazioni che desiderano uscire completamente da Java a C#.
 
--  **Passa gli stack di tecnologie da Java a C#.**
--  **È necessario mantenere un C# e una versione di Java dello stesso prodotto.**
--  **Utile avere una versione di .NET di una libreria Java più diffusi.**
+La seconda metodologia di porting consiste nel provare a automatizzare il processo usando un convertitore di codice, ad esempio l'[affilatura](https://github.com/mono/sharpen). [Sharp](https://github.com/mono/sharpen) è un convertitore Open Source da Versant originariamente usato per trasferire il codice per *db4o* da Java a C#. db4o è un database orientato a oggetti che è inversamente sviluppato in Java e quindi trasferito a .NET. L'uso di un convertitore di codice può essere utile per i progetti che devono esistere in entrambi i linguaggi e che richiedono una certa parità tra i due.
 
+Un esempio di quando uno strumento di conversione automatica del codice è sensato può essere visualizzato nel progetto [Ngit](https://github.com/mono/ngit) .
+Ngit è una porta del progetto Java [le jgit](http://eclipse.org/).
+Le jgit è un'implementazione Java del sistema di gestione del codice sorgente di [git](http://git-scm.com/) . Per generare C# codice da Java, i programmatori Ngit usano un sistema automatico personalizzato per estrarre il codice Java da le jgit, applicare alcune patch per gestire il processo di conversione, quindi eseguire Sharp, che genera il C# codice. In questo modo, il progetto Ngit può trarre vantaggio dal lavoro continuo continuativo eseguito in le jgit.
 
-Esistono due modi per convertire il codice Java per C#. Il primo consiste nel trasferire manualmente il codice. Ciò comporta agli sviluppatori esperti che comprendere .NET e Java e si ha familiarità con i linguaggi appropriati per ogni lingua. Questo approccio più appropriato per piccole quantità di codice o per le organizzazioni che desiderano spostare completamente di fuori di Java per C#.
-
-La seconda metodologia porting consiste nel provare e automatizzare il processo utilizzando un convertitore di tipi di codice, ad esempio [contrasta](https://github.com/mono/sharpen). [Affinare](https://github.com/mono/sharpen) è un convertitore di tipi open source da Versant utilizzata originariamente per trasferire il codice per *db4o* da Java a C#. db4o è un database orientato Versant sviluppate in Java, e quindi trasferito in .NET. Utilizzo di un convertitore di codice può risultare utile per i progetti che deve essere presente in entrambi i linguaggi e che richiedono alcune parità tra i due.
-
-Un esempio di quando uno strumento di conversione del codice automatiche senso visualizzabili nel [ngit](https://github.com/mono/ngit) progetto.
-Ngit è una porta del progetto Java [jgit](http://eclipse.org/).
-Jgit stesso è un'implementazione Java del [Git](http://git-scm.com/) sistema di gestione del codice di origine. Per generare C# codice da Java, l'uso di programmatori ngit personalizzato automatico del sistema per estrarre il codice Java da jgit applicare alcune patch per supportare il processo di conversione e quindi eseguire contrasta, che genera il C# codice. In questo modo il progetto ngit per trarre vantaggio dal lavoro svolto su jgit continuo, in corso.
-
-È spesso una considerevole quantità di lavoro coinvolti con uno strumento di conversione del codice automatiche di avvio automatico e questo potrebbe rivelarsi una barriera da utilizzare. In molti casi, potrebbe essere più semplice e facile da porta Java per C# manualmente.
-
-
+Spesso è necessario eseguire il bootstrap di uno strumento di conversione automatica del codice e questo potrebbe rivelarsi una barriera da usare. In molti casi, può essere più semplice e facile trasferire i Java in modo C# manuale.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Strumento di conversione precisione](https://github.com/mono/sharpen)
+- [Affila strumento di conversione](https://github.com/mono/sharpen)

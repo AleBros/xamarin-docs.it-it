@@ -1,29 +1,29 @@
 ---
-title: Menu di scelta rapida
-description: Come aggiungere un menu di scelta rapida che è ancorata in una visualizzazione particolare.
+title: Menu PopUp
+description: Come aggiungere un menu popup che è ancorato a una visualizzazione specifica.
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 1e74c8b7745936f6e9a8890fd26acafe2f2fb6d5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9b3e4177d6be5854e80952d091aa78787d9645bb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61288654"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644928"
 ---
-# <a name="popup-menu"></a>Menu di scelta rapida
+# <a name="xamarinandroid-popup-menu"></a>Menu di scelta rapida Novell. Android
 
-Il [PopupMenu](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/) (detto anche una _dal menu di scelta rapida_) è un menu di cui è ancorato a una particolare visualizzazione. Nell'esempio seguente, una singola attività contiene un pulsante. Quando l'utente tocca il pulsante, viene visualizzato un menu popup tre voci:
+Il [PopupMenu](xref:Android.Widget.PopupMenu) , detto anche _menu di scelta rapida_, è un menu che è ancorato a una visualizzazione specifica. Nell'esempio seguente, una singola attività contiene un pulsante. Quando l'utente tocca il pulsante, viene visualizzato un menu popup a tre elementi:
 
-[![Esempio di un'app con un pulsante e tre voci di menu di scelta rapida](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[![Esempio di un'app con un pulsante e un menu a comparsa a tre elementi](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
-## <a name="creating-a-popup-menu"></a>Creazione di un Menu Popup
+## <a name="creating-a-popup-menu"></a>Creazione di un menu popup
 
-Il primo passaggio consiste nel creare un file di risorse di menu per il menu di scelta e inserirla **risorse/menu**. Ad esempio, il codice XML seguente è il codice visualizzato nello screenshot precedente, il menu di tre voci **Resources/menu/popup_menu.xml**:
+Il primo passaggio consiste nel creare un file di risorse di menu per il menu e inserirlo in **risorse/menu**. Il codice XML seguente, ad esempio, è il codice per il menu di tre elementi visualizzato nella schermata precedente, Resources **/menu/popup_menu. XML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -37,9 +37,9 @@ Il primo passaggio consiste nel creare un file di risorse di menu per il menu di
 </menu>
 ```
 
-Successivamente, creare un'istanza di `PopupMenu` e ancorata alla relativa visualizzazione. Quando si crea un'istanza di `PopupMenu`, si passa il relativo costruttore un riferimento al `Context` , nonché la vista a cui verrà associato il menu di scelta. Di conseguenza, il menu di scelta rapida è agganciato a questa visualizzazione durante la costruzione.
+Successivamente, creare un'istanza di `PopupMenu` e ancorarla alla relativa visualizzazione. Quando si crea un'istanza di `PopupMenu`, si passa il relativo costruttore a un riferimento `Context` a e alla visualizzazione a cui il menu verrà collegato. Di conseguenza, il menu di scelta rapida è ancorato a questa visualizzazione durante la relativa costruzione.
 
-Nell'esempio seguente, il `PopupMenu` viene creato nel gestore eventi click del pulsante (che ha un nome `showPopupMenu`). Questo pulsante è anche la vista a cui il `PopupMenu` è ancorata, come illustrato nell'esempio di codice seguente:
+Nell'esempio seguente, `PopupMenu` viene creato nel gestore dell'evento click per il pulsante (denominato `showPopupMenu`). Questo pulsante è anche la visualizzazione a cui è `PopupMenu` ancorato l'oggetto, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -47,7 +47,7 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-Infine, è necessario il menu di scelta rapida *gonfiato* con la risorsa di menu che è stata creata in precedenza. Nell'esempio seguente, la chiamata al menu [Inflate](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/) metodo viene aggiunto e i relativi [mostrano](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/) viene chiamato per consentire la visualizzazione:
+Infine, il menu di scelta rapida *deve essere* ingrandito con la risorsa di menu creata in precedenza. Nell'esempio seguente viene aggiunta la chiamata al metodo [Inflate](xref:Android.Views.LayoutInflater.Inflate*) del menu e viene chiamato il metodo [Show](xref:Android.Widget.PopupMenu.Show) per visualizzarlo:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -58,9 +58,9 @@ showPopupMenu.Click += (s, arg) => {
 ```
 
 
-## <a name="handling-menu-events"></a>Gestione degli eventi di Menu
+## <a name="handling-menu-events"></a>Gestione degli eventi di menu
 
-Quando l'utente seleziona una voce di menu, il [MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/) fare clic su verrà generato l'evento e il menu di scelta verrà chiusa. Toccando un punto qualsiasi all'esterno del menu verrà semplicemente ignorarlo. In entrambi i casi, quando viene chiuso il menu di scelta, relativi [DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/) , verrà generato. Il codice seguente aggiunge gestori eventi per entrambi i `MenuItemClick` e `DismissEvent` eventi:
+Quando l'utente seleziona una voce di menu, viene generato l'evento Click [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) e il menu viene eliminato. Toccare un punto qualsiasi all'esterno del menu lo chiuderà semplicemente. In entrambi i casi, quando il menu viene eliminato, viene generato il relativo [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) . Il codice seguente aggiunge i gestori eventi per gli `MenuItemClick` eventi e: `DismissEvent`
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -82,4 +82,4 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [PopupMenuDemo (esempio)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
+- [PopupMenuDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo)

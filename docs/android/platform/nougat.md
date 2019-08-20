@@ -1,156 +1,156 @@
 ---
-title: Funzionalità nougat
-description: Come iniziare a usare xamarin. Android per sviluppare App per Android Nougat.
+title: Funzionalità torrone
+description: Come iniziare a usare Novell. Android per sviluppare app per Android torrone.
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: de2b92a4007f085a14c16f0c1e8ca9e568df1aff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.openlocfilehash: a28368e0fa4574fbb92a43dbd650a127008f5d06
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61209199"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643460"
 ---
-# <a name="nougat-features"></a>Funzionalità nougat
+# <a name="nougat-features"></a>Funzionalità torrone
 
-_Come iniziare a usare xamarin. Android per sviluppare App per Android Nougat._
+_Come iniziare a usare Novell. Android per sviluppare app per Android torrone._
 
-Questo articolo fornisce una descrizione delle funzionalità introdotte in Android Nougat, spiega come preparare xamarin. Android per lo sviluppo di Android Nougat e vengono forniti collegamenti ad applicazioni di esempio che illustrano come usare funzionalità di Android Nougat App xamarin. Android.
+Questo articolo fornisce una descrizione delle funzionalità introdotte in Android torrone, spiega come preparare Novell. Android for Android torrone Development e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità torrone di Android in App Novell. Android.
 
 
 ## <a name="overview"></a>Panoramica
 
-[Android Nougat](https://developer.android.com/about/versions/nougat/android-7.0.html) è completamento di Google per Android Marshmallow 6.0. Xamarin. Android fornisce il supporto per **Android 7.x associazioni** in Xamarin Android 7.0 e versioni successive. Android Nougat aggiunge molte nuove API per le funzionalità di Nougat descritte di seguito; Queste API sono disponibili per le app xamarin. Android quando si usa xamarin. Android 7.0.
+Il [torrone Android](https://developer.android.com/about/versions/nougat/android-7.0.html) è il follow-up di Google per Android 6,0 marshmallow. Novell. Android fornisce il supporto per le **associazioni Android 7. x** in novell Android 7,0 e versioni successive. Il torrone Android aggiunge molte nuove API per le funzionalità torrone descritte di seguito. Queste API sono disponibili per le app Novell. Android quando si usa Novell. Android 7,0.
 
-[![Immagini di logo alto dei Tablet e telefoni che eseguono Android Nougat Android](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
+[![Immagini Hero di Tablet e telefoni Android che eseguono il torrone Android](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
-Per altre informazioni su Android 7.x API, vedere [Android 7.1 per gli sviluppatori](https://developer.android.com/preview/api-overview.html).
-Per un elenco di problemi noti di xamarin. Android 7.0, vedere la [note sulla versione](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/).
+Per altre informazioni sulle API Android 7. x, vedere [android 7,1 per sviluppatori](https://developer.android.com/preview/api-overview.html).
+Per un elenco dei problemi noti di Novell. Android 7,0, vedere le [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
-Android Nougat offre molte nuove funzionalità di interesse per gli sviluppatori di xamarin. Android. Queste funzionalità comprendono:
+Il torrone Android offre molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità comprendono:
 
--   **Il supporto di più finestre** &ndash; questa funzionalità avanzata consente agli utenti di aprire contemporaneamente due App sullo schermo.
+-   **Supporto** per più finestre &ndash; Questo miglioramento consente agli utenti di aprire contemporaneamente due app sullo schermo.
 
--   **Miglioramenti di notifica** &ndash; il sistema di notifiche riprogettata in Android Nougat include un *risposta diretta* funzionalità che consentono agli utenti di rispondere rapidamente ai messaggi di testo direttamente dalla notifica INTERFACCIA UTENTE. Inoltre, se l'app crea le notifiche per ricevuto i messaggi, il nuovo *abbinato notifiche* funzionalità possibile riunire le notifiche elementi in un singolo gruppo quando viene ricevuto più di un messaggio.
+-   **Miglioramenti delle notifiche** Il sistema di notifiche riprogettato in Android torrone include una funzionalità di *risposta diretta* che consente agli utenti di rispondere rapidamente ai messaggi di testo direttamente dall'interfaccia utente di notifica. &ndash; Inoltre, se l'app crea notifiche per i messaggi ricevuti, la nuova funzionalità di *notifica in bundle* può raggruppare le notifiche come un singolo gruppo quando viene ricevuto più di un messaggio.
 
--   **Dati Saver** &ndash; questa funzionalità è un nuovo servizio di sistema che consente di ridurre l'uso di dati cellulare, le app, offre agli utenti di controllo sul modo in cui le app usano dati cellulari.
+-   **Salva dati** &ndash; Questa funzionalità è un nuovo servizio di sistema che consente di ridurre l'uso dei dati cellulari da parte delle app; consente agli utenti di controllare il modo in cui le app usano i dati cellulari.
 
-Inoltre, Android Nougat comporta numerosi altri miglioramenti di interesse per gli sviluppatori di app, ad esempio una nuova funzionalità di configurazione di sicurezza di rete, Doze in viaggio, miglioramenti per l'attestazione, nuove API impostazioni rapide, supporto multi-impostazioni locali, le API ICU4J, WebView, della chiave accesso alle funzionalità del linguaggio Java 8, accesso alla directory con ambito, un'API personalizzata puntatore, supporto della piattaforma di realtà virtuale, file virtuali e le ottimizzazioni di elaborazione in background.
+Android torrone, inoltre, apporta molti altri miglioramenti di interesse per gli sviluppatori di app, ad esempio una nuova funzionalità di configurazione della sicurezza di rete, un servizio di attestazione delle chiavi, nuove API per le impostazioni rapide, supporto per più impostazioni locali, API ICU4J, miglioramenti di WebView, accesso alle funzionalità del linguaggio Java 8, all'accesso alla directory con ambito, a un'API puntatore personalizzata, al supporto per la piattaforma VR, ai file virtuali e alle ottimizzazioni di elaborazione in background.
 
-Questo articolo illustra come iniziare a creare App con Android Nougat per provare le nuove funzionalità e pianificare la migrazione o la funzionalità lavoro per la nuova piattaforma Android Nougat di destinazione.
+Questo articolo illustra come iniziare a creare app con il torrone Android per provare le nuove funzionalità e pianificare la migrazione o il lavoro delle funzionalità per la nuova piattaforma per i torrone Android.
 
 
 ## <a name="requirements"></a>Requisiti
 
-Per utilizzare le nuove funzionalità di Android Nougat nelle App basate su Xamarin è necessario quanto segue:
+Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità del torrone Android nelle app basate su Novell:
 
--   **Visual Studio o Visual Studio per Mac** &ndash; se si usa Visual Studio, versione 4.2.0.628 o successiva di Visual Studio Tools per Xamarin è obbligatorio. Se si usa Visual Studio per Mac, versione 6.1.0 o versione successiva di Visual Studio per Mac è obbligatorio.
+-   **Visual Studio o Visual Studio per Mac** &ndash; Se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Novell è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
 
--   **Xamarin. Android** &ndash; xamarin. Android 7.0 o versioni successive deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+-   **Novell. Android** &ndash; Novell. Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
--   **Android SDK** -Android 7.0 SDK (API 24) o versione successiva deve essere installato tramite Android SDK Manager.
+-   **Android SDK** -Android SDK 7,0 (API 24) o versione successiva deve essere installato tramite il Android SDK Manager.
 
--   **Java Developer Kit** &ndash; richiede lo sviluppo di Xamarin Android 7.0 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sviluppa per il livello API 24 o versione successiva (JDK 8 supporta anche i livelli API precedenti a 24). Se si usa il Visualizzatore anteprima del form o controlli personalizzati, è necessaria la versione a 64 bit di JDK 8.
+-   **Java Developer Kit** Per lo sviluppo di Novell Android 7,0 è necessario [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o versione successiva (JDK 8 supporta anche i livelli API precedenti a 24). &ndash; La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
 
-Si noti che le app devono essere ricompilate con Xamarin C6SR4 o versione successiva per funzionare in modo affidabile con Android Nougat. Poiché Android Nougat può collegarsi solo a [fornite NDK librerie native](https://developer.android.com/about/versions/nougat/android-7.0-changes.html), usando le librerie, ad esempio le app esistenti **Mono.Data.Sqlite.dll** potrebbe bloccarsi durante l'esecuzione in Android Nougat se non vengono correttamente ricompilato.
+Si noti che le app devono essere ricompilate con Novell C6SR4 o versione successiva per funzionare in modo affidabile con il torrone Android. Dal momento che Android torrone può collegarsi solo a [librerie native fornite da NDK](https://developer.android.com/about/versions/nougat/android-7.0-changes.html), le app esistenti che usano librerie come **mono. Data. sqlite. dll** potrebbero arrestarsi in modo anomalo quando vengono eseguite su un sistema operativo Android se non vengono ricompilate correttamente.
 
 
 
 ## <a name="getting-started"></a>Introduzione
 
-Per iniziare a usare Android Nougat con xamarin. Android, è necessario scaricare e installare gli strumenti più recenti e i pacchetti SDK prima di poter creare un progetto Android Nougat:
+Per iniziare a usare il torrone Android con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android torrone:
 
-1.  Installare gli ultimi aggiornamenti di xamarin. Android da di Xamarin.
+1.  Installare gli aggiornamenti più recenti di Novell. Android dalla Novell.
 
-2.  Installare il **Android 7.0 (API 24)** pacchetti e gli strumenti o versione successiva.
+2.  Installare gli strumenti e i pacchetti **Android 7,0 (API 24)** o versioni successive.
 
-3.  Creare un nuovo progetto xamarin. Android destinata a Android Nougat.
+3.  Creare un nuovo progetto Novell. Android destinato a Android torrone.
 
-4.  Configurare un dispositivo o emulatore per Android Nougat.
+4.  Configurare un emulatore o un dispositivo per il torrone Android.
 
-Ognuno di questi passaggi è illustrato nelle sezioni seguenti:
-
-
-### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Xamarin
-
-Per aggiungere il supporto di Xamarin per Android Nougat, modificare il canale aggiornamenti in Visual Studio o Visual Studio per Mac per il canale stabile e applicare gli aggiornamenti più recenti. Se è necessario anche le funzionalità attualmente disponibili solo nel canale alfa o Beta, è possibile passare al canale alfa o Beta (i canali alfa e Beta garantiscono inoltre supporto per Android 7.x). Per informazioni su come modificare il canale aggiornamenti (versioni), vedere [modificando il canale aggiornamenti](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
+Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
 
+### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Novell
 
-### <a name="install-the-android-sdk"></a>Installare Android SDK
+Per aggiungere il supporto Novell per il torrone Android, modificare il canale degli aggiornamenti in Visual Studio o Visual Studio per Mac nel canale stabile e applicare gli aggiornamenti più recenti. Se sono necessarie anche funzionalità attualmente disponibili solo nel canale Alpha o beta, è possibile passare al canale alfa o beta (i canali alpha e beta forniscono anche il supporto per Android 7. x). Per informazioni su come modificare il canale degli aggiornamenti (versioni), vedere [modifica del canale degli aggiornamenti](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
 
-Per creare un progetto con Xamarin Android 7.0, è necessario prima di tutto usare Android SDK Manager per installare **SDK della piattaforma Android N (API 24)** o versione successiva. È inoltre necessario installare la versione più recente **Android SDK Tools**:
 
-1.  Avviare Android SDK Manager (in Visual Studio per Mac, usare **strumenti > Apri Android SDK Manager&hellip;**; in Visual Studio, utilizzano **strumenti > Android > Android SDK Manager**).
 
-2.  Installare **Android 7.0 (API 24)** o versione successiva:
+### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
-    [![Selezionare i pacchetti Android 7.0 in Android SDK Manager](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
+Per creare un progetto con Novell Android 7,0, è necessario prima di tutto usare gestione Android SDK per installare la **piattaforma SDK Android N (API 24)** o versione successiva. È necessario installare anche la **Android SDK Tools**più recente:
+
+1.  Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > Apri&hellip;gestione Android SDK**. in Visual Studio usare **gli strumenti > Android > Android SDK Manager**).
+
+2.  Installare **Android 7,0 (API 24)** o versione successiva:
+
+    [![Selezione dei pacchetti Android 7,0 in gestione Android SDK](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
 3.  Installare gli strumenti di Android SDK più recenti:
 
-    [![Selezionare gli strumenti di Android SDK più recenti in Android SDK Manager](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
+    [![Selezione degli strumenti di Android SDK più recenti in gestione Android SDK](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
-    È necessario installare Android SDK Tools revisione 25.2.2 o versioni successive, Android strumenti piattaforma SDK 24.0.3 o versioni successive e Android SDK Build tools 24.0.2 o versione successiva.
+    È necessario installare Android SDK Tools Revision 25.2.2 o versioni successive, gli strumenti della piattaforma Android SDK 24.0.3 o versione successiva e Android SDK build Tools 24.0.2 o versione successiva.
 
-4.  Verificare che il **percorso di Java Development Kit** è configurato per JDK 1.8:
+4.  Verificare che il **percorso di Java Development Kit** sia configurato per JDK 1,8:
 
-    [![Configurare il percorso del JDK 8 in opzioni del menu Strumenti](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
+    [![Configurazione del percorso JDK 8 in strumenti opzioni](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
-    Per visualizzare questa impostazione in Visual Studio, fare clic su **strumenti > Opzioni > Xamarin > Impostazioni Android**. In Visual Studio per Mac, fare clic su **Preferenze > progetti > percorsi SDK > Android**.
+    Per visualizzare questa impostazione in Visual Studio, fare clic su **strumenti > opzioni > novell > Android Settings**. In Visual Studio per Mac fare clic su **preferenze > progetti > percorsi SDK > Android**.
 
 
 
-### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto xamarin. Android
+### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
 
-Creare un nuovo progetto xamarin. Android. Se si ha familiarità con lo sviluppo di Android con Xamarin, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti xamarin. Android.
+Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
 
-Quando si crea un progetto Android, è necessario configurare le impostazioni di versione di destinazione Android 7.0 o versione successiva. Ad esempio, per impostare come destinazione del progetto per Android 7.0, è necessario configurare il livello API Android di destinazione del progetto per **Android 7.0 (API 24 - Nougat)**. È consigliabile impostare il livello di framework di destinazione e API 24 o versioni successive. Per altre informazioni sulla configurazione dei livelli a livello API Android, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
+Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 7,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 7,0, è necessario configurare il livello API Android di destinazione del progetto su **android 7,0 (API 24-torrone)** . Si consiglia di impostare il livello di Framework di destinazione su API 24 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
 
 > [!NOTE]
-> Attualmente è necessario impostare il **Minimum Android version** al **Android 7.0 (API 24 - Nougat)** per distribuire l'app per Android Nougat dispositivi o emulatori.
+> Attualmente è necessario impostare la **versione minima di Android** su **Android 7,0 (API 24-torrone)** per distribuire l'app in dispositivi o emulatori torrone Android.
 
 
 
-### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o dispositivo
+### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o un dispositivo
 
 Se si usa un emulatore, avviare Android AVD Manager e creare un nuovo dispositivo usando le impostazioni seguenti:
 
--   Device: Nexus 5 X, Nexus 6 Nexus 6P, del lettore Nexus Nexus 9 o Pixel C.
--   Destinazione: Android 7.0 - livello API 24
--   : ABI x86 o x86\_64
+-   Device: Nexus 5X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9 o pixel C.
+-   Destinazione: Android 7,0-livello API 24
+-   Abi: x86 o x86\_64
 
-Ad esempio, il dispositivo virtuale è configurato per emulare un Nexus 6:
+Ad esempio, questo dispositivo virtuale è configurato per emulare un Nexus 6:
 
-[![Configurazione di un dispositivo virtuale Android usando dispositivi Nexus 6, destinazione di Android 7.0 e CPU/ABI Atom di Intel x86](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
+[![Configurazione di un AVD usando il dispositivo Nexus 6, la destinazione Android 7,0 e Intel Atom x86 CPU/ABI](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
 
-Se si usa un dispositivo fisico, ad esempio un Nexus 5 X, 6 o 9, è possibile aggiornare il dispositivo tramite automatico tramite gli aggiornamenti di air (OTA) o scaricare un'immagine del sistema e flash direttamente il dispositivo. Per altre informazioni sull'aggiornamento manuale del dispositivo per Android Nougat, vedere [OTA immagini per i dispositivi Nexus](https://developers.google.com/android/nexus/ota).
+Se si usa un dispositivo fisico, ad esempio un Nexus 5X, 6 o 9, è possibile aggiornare il dispositivo tramite gli aggiornamenti automatici via etere oppure scaricare un'immagine di sistema e lampeggiare direttamente il dispositivo. Per altre informazioni sull'aggiornamento manuale del dispositivo al torrone Android, vedere le [Immagini OTA per i dispositivi Nexus](https://developers.google.com/android/nexus/ota).
 
-Si noti che i dispositivi Nexus 5 non sono supportati da Android Nougat.
+Si noti che i dispositivi Nexus 5 non sono supportati da torrone per Android.
 
 
 
 ## <a name="new-features"></a>Nuove funzionalità
 
-Android Nougat introduce un'ampia gamma di nuove caratteristiche e funzionalità, quali il supporto di più finestre, i miglioramenti delle notifiche e Screen Saver di dati. Le sezioni seguenti vengono evidenziate queste funzionalità e forniscono i collegamenti che consentono di iniziare a usarle nell'app.
+Il torrone Android introduce un'ampia gamma di nuove caratteristiche e funzionalità, ad esempio il supporto per più finestre, i miglioramenti delle notifiche e il risparmio di dati. Le sezioni seguenti evidenziano queste funzionalità e forniscono collegamenti che consentono di iniziare a usarle nell'app.
 
 
 
-### <a name="multi-window-mode"></a>Modalità multi-finestra
+### <a name="multi-window-mode"></a>Modalità multifinestra
 
-La modalità multi-finestra rende possibile per gli utenti di aprire contemporaneamente due App con supporto completo multitasking. Queste App possono eseguire side-by-side (orizzontale) o uno-sopra-the-other (verticale) in modalità a schermo diviso.
-Gli utenti potranno trascinare un divisore tra le App per ridimensionarle e possono tagliare e incollare il contenuto di tra app. Quando vengono presentate due App in modalità a più finestre, l'attività selezionata resta in esecuzione mentre l'attività non selezionato è sospesa, ma rimane visibile. La modalità multi-finestra non modifica il ciclo di vita di attività Android.
+La modalità multifinestra consente agli utenti di aprire contemporaneamente due app con il supporto completo multitasking. Queste app possono essere eseguite side-by-Side (orizzontale) o una sopra l'altra (verticale) in modalità a schermo diviso.
+Gli utenti possono trascinare un divisore tra le app per ridimensionarle e possono tagliare e incollare contenuto tra le app. Quando due app vengono presentate in modalità multifinestra, l'attività selezionata continua a essere eseguita mentre l'attività non selezionata viene sospesa ma ancora visibile. La modalità multifinestra non modifica il ciclo di vita dell'attività Android.
 
-[![App di esempio in esecuzione in modalità a più finestre in verticale e orizzontale](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
+[![App di esempio in esecuzione in modalità a più finestre sia verticale che orizzontale](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-È possibile configurare come le attività dell'app xamarin. Android supportano la modalità a più finestre. Ad esempio, è possibile configurare gli attributi che impostare la dimensione minima e l'altezza predefinita e la larghezza dell'app in modalità a più finestre. È possibile usare il nuovo `Activity.IsInMultiWindowMode` proprietà per determinare se l'attività è in modalità a più finestre. Ad esempio:
+È possibile configurare il modo in cui le attività dell'app Novell. Android supportano la modalità a più finestre. È ad esempio possibile configurare gli attributi che impostano le dimensioni minime e l'altezza e la larghezza predefinite dell'app in modalità a più finestre. È possibile utilizzare la nuova `Activity.IsInMultiWindowMode` proprietà per determinare se l'attività è in modalità a più finestre. Ad esempio:
 
 ```csharp
 if (!IsInMultiWindowMode) {
@@ -160,26 +160,26 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-Il [MultiWindowPlayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/) app di esempio include codice c# che illustra come sfruttare i vantaggi della finestra più interfacce utente con l'app.
+L'app di esempio [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) C# include codice che illustra come sfruttare le interfacce utente di più finestre con l'app.
 
-Per altre informazioni sulla modalità a più finestre, vedere la [il supporto di più finestre](https://developer.android.com/guide/topics/ui/multi-window.html).
+Per ulteriori informazioni sulla modalità a più finestre, vedere Supporto di più [finestre](https://developer.android.com/guide/topics/ui/multi-window.html).
 
 
 
-### <a name="enhanced-notifications"></a>Notifiche migliorate
+### <a name="enhanced-notifications"></a>Notifiche avanzate
 
-Android Nougat introduce un sistema di notifica completamente rinnovata. È dotato di una nuova funzionalità di risposta diretta che rende possibile per gli utenti di rispondere rapidamente alle notifiche per i messaggi di testo in ingresso direttamente nella notifica dell'interfaccia utente. A partire da Android 7.0, i messaggi possono essere collegati tra loro come un unico gruppo quando viene ricevuto più di un messaggio di notifica. Inoltre, gli sviluppatori possono personalizzare notifica viste, sfruttare le decorazioni di sistema nelle notifiche e sfruttare i vantaggi di nuovi modelli di notifica durante la generazione di notifiche.
+Android torrone introduce un sistema di notifica riprogettato. Include una nuova funzionalità di risposta diretta che consente agli utenti di rispondere rapidamente alle notifiche per i messaggi di testo in arrivo direttamente nell'interfaccia utente di notifica. A partire da Android 7,0, i messaggi di notifica possono essere raggruppati come un singolo gruppo quando viene ricevuto più di un messaggio. Inoltre, gli sviluppatori possono personalizzare le visualizzazioni delle notifiche, sfruttare le decorazioni di sistema nelle notifiche e sfruttare i nuovi modelli di notifica per la generazione di notifiche.
 
 
 #### <a name="direct-reply"></a>Risposta diretta
 
-Quando un utente riceve una notifica di messaggio in ingresso, Android Nougat rende possibile rispondere al messaggio all'interno della notifica (anziché aprire l'app di messaggistica per inviare un messaggio di risposta).
-Questa funzionalità di risposta inline rende possibile per gli utenti di rispondere tempestivamente a un SMS o messaggio di testo direttamente all'interno dell'interfaccia di notifica:
+Quando un utente riceve una notifica per il messaggio in arrivo, il torrone Android rende possibile rispondere al messaggio all'interno della notifica, anziché aprire l'app di messaggistica per inviare una risposta.
+Questa funzionalità di risposta inline consente agli utenti di rispondere rapidamente a un SMS o a un messaggio di testo direttamente all'interno dell'interfaccia di notifica:
 
 [![Screenshot di una notifica con un campo di risposta diretta inline](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
 
-Per supportare questa funzionalità nell'app, è necessario aggiungere *azioni di risposta inline* all'App tramite un [RemoteInput](https://developer.xamarin.com/api/type/Android.App.RemoteInput/) dell'oggetto in modo che gli utenti possono rispondere tramite testo direttamente dalla notifica dell'interfaccia utente.
-Ad esempio, il codice seguente le compilazioni un `RemoteInput` per la ricezione di input di testo, compila un programma in sospeso per l'azione di risposta e crea un'azione abilitata input remota:
+Per supportare questa funzionalità nell'app, è necessario aggiungere *azioni di risposta inline* all'app tramite un oggetto [RemoteInput](xref:Android.App.RemoteInput) in modo che gli utenti possano rispondere tramite testo direttamente dall'interfaccia utente di notifica.
+Il codice seguente, ad esempio, Compila `RemoteInput` un oggetto per la ricezione di un input di testo, compila un intento in sospeso per l'azione di risposta e crea un'azione remote input Enabled:
 
 ```csharp
 // Build a RemoteInput for receiving text input:
@@ -200,7 +200,7 @@ NotificationCompat.Action actionReplyByRemoteInput = new NotificationCompat.Acti
     replyIntent).AddRemoteInput (remoteInput).Build ();
 ```
 
-Questa azione viene aggiunto a notifica:
+Questa azione viene aggiunta alla notifica:
 
 ```csharp
 // Create the notification:
@@ -210,66 +210,66 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-Il [il servizio di messaggistica](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/) app di esempio include codice c# che illustra come estendere le notifiche con un `RemoteInput` oggetto. Per altre informazioni sull'aggiunta di risposta inline azioni per l'app per Android 7.0 o versioni successive, vedere l'Android [rispondere alle notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) argomento.
+L'app di esempio del [servizio di messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) include C# codice che illustra come estendere le `RemoteInput` notifiche con un oggetto. Per altre informazioni sull'aggiunta di azioni di risposta inline all'app per Android 7,0 o versione successiva, vedere l'argomento [risposta alle notifiche per](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) Android.
 
 
 #### <a name="bundled-notifications"></a>Notifiche in bundle
 
-Android Nougat possibile raggruppare i messaggi di notifica (ad esempio, per l'argomento del messaggio) e visualizzare il gruppo piuttosto che ogni messaggio separato.
-Ciò *abbinato notifiche* funzionalità rende possibile per gli utenti di eliminare o archiviare un gruppo di notifiche in un'unica azione. L'utente può scorrere verso il basso per espandere il bundle di notifiche per visualizzare ogni notifica in modo dettagliato:
+Il torrone Android può raggruppare i messaggi di notifica (ad esempio, per argomento del messaggio) e visualizzare il gruppo anziché ogni messaggio separato.
+Questa funzionalità per le *notifiche in bundle* consente agli utenti di ignorare o archiviare un gruppo di notifiche in un'unica azione. L'utente può scorrere verso il basso per espandere il bundle di notifiche per visualizzare ogni notifica in dettaglio:
 
-[![Screenshot di esempio di notifiche in bundle](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
+[![Schermata di esempio delle notifiche in bundle](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
-Per supportare le notifiche in bundle, l'app può usare la [Builder.SetGroup](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetGroup/p/System.String/) metodo per creare un bundle simile notifiche. Per altre informazioni sui gruppi di notifica in bundle in Android N, vedere l'Android [creazione di bundle notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle) argomento.
+Per supportare le notifiche in bundle, l'app può usare il metodo [Builder. segroup](xref:Android.App.Notification.Builder.SetGroup*) per raggruppare le notifiche simili. Per ulteriori informazioni sui gruppi di notifiche in bundle in Android N, vedere l'argomento relativo alle [notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle) per la creazione di bundle Android.
 
 
 #### <a name="custom-views"></a>Viste personalizzate
 
-Android Nougat rende possibile creare viste personalizzate di notifica con layout espandibile, azioni e le intestazioni di notifica di sistema. Per altre informazioni sulle viste di notifica personalizzato in Android Nougat, vedere l'Android [miglioramenti della notifica](https://developer.android.com/about/versions/nougat/android-7.0.html#notification_enhancements) argomento.
+Il torrone Android consente di creare visualizzazioni di notifiche personalizzate con le intestazioni, le azioni e i layout espandibili delle notifiche di sistema. Per altre informazioni sulle visualizzazioni di notifiche personalizzate in Android torrone, vedere l'argomento [miglioramenti delle notifiche](https://developer.android.com/about/versions/nougat/android-7.0.html#notification_enhancements) per Android.
 
 
 
-### <a name="data-saver"></a>Screen Saver di dati
+### <a name="data-saver"></a>Salva dati
 
-A partire da Android Nougat, gli utenti possono abilitare una nuova *Saver dati* impostazione che blocchi sfondo sull'utilizzo dei dati. Questa impostazione Segnala anche all'app di usare meno dati in primo piano, laddove possibile. Il [ConnectivityManager](https://developer.xamarin.com/api/type/Android.Net.ConnectivityManager/) è stato esteso in Android Nougat in modo che l'app può controllare se l'utente ha abilitato dati Saver in modo che l'app può effettuare un impegno per limitare l'utilizzo di dati quando è abilitato Screen Saver di dati.
+A partire da Android torrone, gli utenti possono abilitare una nuova impostazione di *risparmio di dati* che blocca l'utilizzo dei dati in background. Questa impostazione segnala anche all'app di usare un minor numero di dati in primo piano, laddove possibile. Il [ConnectivityManager](xref:Android.Net.ConnectivityManager) è stato esteso in Android torrone, in modo che l'app possa controllare se l'utente ha abilitato il risparmio di dati, in modo che l'app possa impegnarsi per limitare l'utilizzo dei dati quando è abilitato il risparmio di dati.
 
-Per altre informazioni sulla nuova funzionalità in Android Nougat Screen Saver di dati, vedere l'Android [ottimizzazione della rete dati utilizzo](https://developer.android.com/training/basics/network-ops/data-saver.html) argomento.
+Per altre informazioni sulla nuova funzionalità di data saver in Android torrone, vedere l'argomento relativo all' [utilizzo dei dati di rete](https://developer.android.com/training/basics/network-ops/data-saver.html) per l'ottimizzazione di Android.
 
 
 
-### <a name="app-shortcuts"></a>Tasti di scelta rapida App
+### <a name="app-shortcuts"></a>Collegamenti alle app
 
-Android 7.1 introdotta un' *tasti di scelta rapida App* caratteristica che rende possibile per gli utenti rapidamente comuni o consigliata le attività di avvio con l'app.
-Per attivare il menu di scelta rapida, l'utente prolungata-pressioni sull'icona dell'app per un secondo o più &ndash; viene visualizzato il menu con un rapido esempio sulle vibrazioni.
-Rilasciare la pressione fa sì che il menu deve rimanere:
+Android 7,1 ha introdotto una funzionalità di *collegamenti alle app* che consente agli utenti di avviare rapidamente le attività comuni o consigliate con l'app.
+Per attivare il menu dei tasti di scelta rapida, l'utente preme a lungo l'icona dell'app per un &ndash; secondo o più il menu viene visualizzato con una vibrazione rapida.
+Se si rilascia la pressione, il menu rimarrà:
 
-[![Schermata di esempio di un menu di scelta rapida di app per un'app di messaggistica](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
+[![Schermata di esempio di un menu di scelta rapida dell'app per un'app di messaggistica](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
 
-Questa funzionalità è disponibile solo a livello API 25 o versione successiva.
-Per altre informazioni sulla nuova funzionalità di scelta rapida di App in Android 7.1, vedere l'Android [tasti di scelta rapida App](https://developer.android.com/guide/topics/ui/shortcuts.html) argomento.
+Questa funzionalità è disponibile solo per il livello API 25 o superiore.
+Per altre informazioni sulla nuova funzionalità di collegamenti alle app in Android 7,1, vedere l'argomento [tasti di scelta rapida](https://developer.android.com/guide/topics/ui/shortcuts.html) per le app Android.
 
 
 ### <a name="sample-code"></a>Codice di esempio
 
-Alcuni esempi di xamarin. Android sono disponibili per mostrarvi come sfruttare i vantaggi delle funzionalità di Android Nougat:
+Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare i vantaggi delle funzionalità torrone di Android:
 
--   [MultiWindowPlayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/) illustra l'uso dell'API disponibile in Android Nougat a più finestre. È possibile passare l'app di esempio in modalità multi-windows per osservare gli effetti ciclo di vita e il comportamento dell'app.
+-   [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) illustra l'uso dell'API multifinestra disponibile nel torrone Android. È possibile passare l'app di esempio in modalità multiwindows per vedere come influiscono sul ciclo di vita e sul comportamento dell'app.
 
--   [Servizio di messaggistica](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/) è un servizio semplice che invii notifiche tramite il `NotificationCompatManager`. Estende anche la notifica con un `RemoteInput` oggetto per consentire ai dispositivi Android Nougat a cui rispondere tramite testo direttamente dalla notifica senza dover aprire un'app.
+-   Il`NotificationCompatManager` [servizio messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) è un servizio semplice che invia notifiche tramite. Estende inoltre la notifica con un `RemoteInput` oggetto per consentire ai dispositivi Android torrone di rispondere tramite testo direttamente dalla notifica senza dover aprire un'app.
 
--   [Attive notifiche](https://developer.xamarin.com/samples/monodroid/android-n/ActiveNotifications/) illustra come usare il `NotificationManager` API per indicare il numero di notifiche è attualmente visualizzato o l'applicazione.
+-   [Notifiche attive](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) illustra come usare l'API `NotificationManager` per indicare il numero di notifiche attualmente visualizzate dall'applicazione.
 
--   [Nell'ambito di accesso alla Directory](https://developer.xamarin.com/samples/monodroid/android-n/ScopedDirectoryAccess/) viene illustrato come usare l'API di accesso con ambito di directory per accedere facilmente alle directory specifiche. Viene usato come alternativa alla necessità di definire `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE` autorizzazioni nel manifesto.
+-   [Accesso alla directory con ambito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Viene illustrato come utilizzare l'API di accesso alla directory con ambito per accedere facilmente a directory specifiche. Questa funzione funge da alternativa alla necessità di definire `READ_EXTERNAL_STORAGE` autorizzazioni `WRITE_EXTERNAL_STORAGE` o nel manifesto.
 
--   [Indirizzare avvio](https://developer.xamarin.com/samples/monodroid/android-n/DirectBoot/) viene illustrato come archiviare i dati in un archivio crittografato al dispositivo che è sempre disponibile anche se il dispositivo è stato avviato entrambi prima e dopo aver immesso i credentials(PIN/Pattern/Password) qualsiasi utente.
+-   [Avvio diretto](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) Viene illustrato come archiviare i dati in una risorsa di archiviazione crittografata dal dispositivo, che è sempre disponibile quando il dispositivo viene avviato sia prima che dopo l'immissione delle credenziali utente (PIN/criterio/password).
 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo introdotto Android Nougat ed è stato spiegato come installare e configurare gli strumenti e i pacchetti per lo sviluppo di xamarin. Android più recenti in Android Nougat. Inoltre fornita una panoramica delle funzionalità chiave disponibili in Android Nougat, con collegamenti a codice sorgente di esempio che consentono di iniziare la creazione di App per Android Nougat.
+In questo articolo è stato introdotto il torrone Android ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android nel torrone Android. Fornisce inoltre una panoramica delle funzionalità principali disponibili in Android torrone, con collegamenti ad esempi di codice sorgente che consentono di iniziare a creare app per il torrone Android.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android 7.1 per gli sviluppatori](https://developer.android.com/about/versions/nougat/android-7.1.html)
-- [Note sulla versione di Xamarin. Android 7.0](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/)
+- [Android 7,1 per sviluppatori](https://developer.android.com/about/versions/nougat/android-7.1.html)
+- [Note sulla versione di Novell Android 7,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md)
