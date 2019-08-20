@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4046dcff5cb572890ad41ab57efe6345d09f61fd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 16cf976b252e409ae4302ab51eb594370a6689d1
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646288"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620945"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Eseguire la migrazione di un binding all'API unificata
 
@@ -140,7 +140,8 @@ Se si usa un makefile per compilare il progetto di binding in un Novell. DLL, sa
 
 Quindi, dato quanto `MakeFile`segue:
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 BINDDIR=/src/binding
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=XMBindingLibrarySample
@@ -172,19 +173,22 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 clean:
     -rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 È necessario passare dalla chiamata `btouch` a `btouch-native`, in modo che la definizione della macro venga modificata come segue:
 
-```csharp
+```makefile
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
 Si aggiornerà la chiamata a `btouch` e si aggiungerà l' `--new-style` opzione come segue:
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMBindingLibrarySampleUniversal.a
     $(BTOUCH) -unsafe --new-style -out:$@ XMBindingLibrarySample.cs -x=AssemblyInfo.cs -x=extras.cs --link-with=libXMBindingLibrarySampleUniversal.a,libXMBindingLibrarySampleUniversal.a
 ```
+<!--markdownlint-enable MD010 -->
 
 È ora possibile eseguire `MakeFile` il normale per compilare la nuova versione di 64 bit dell'API.
 

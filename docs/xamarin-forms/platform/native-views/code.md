@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ebaf5bf2fcb82dd98147819ea9e089dcd427affc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e2d3a3590e8006c745d28026f3a359350f7ce940
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644448"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621070"
 ---
-# <a name="native-views-in-c"></a>Visualizzazioni native in c#
+# <a name="native-views-in-c"></a>Viste native in C\#
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di xamarin. Forms create utilizzando c#. Questo articolo illustra come aggiungere le visualizzazioni native in un layout di xamarin. Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API._
 

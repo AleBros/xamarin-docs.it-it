@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f77a4f2f31c72726515e33dc273616f175df2891
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: cfbd722726357b0adc9fa14ce2c9a13f8de1bb87
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528534"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620927"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in Novell. iOS
 
@@ -88,7 +88,7 @@ Quando si rilascia il clic, verrà richiesto di specificare un nome per l'Outlet
 
 Per altre informazioni sull'integrazione di Interface Builder di Xcode con Visual Studio per Mac, vedere il documento di [generazione del codice XIB](~/ios/internals/xib-code-generation.md#generated) .
 
-## <a name="using-c"></a>UsandoC#
+## <a name="using-c"></a>Utilizzo di C\#
 
 Se si decide di creare a livello di codice un oggetto dell' C# interfaccia utente usando (ad esempio, in una vista o in un controller di visualizzazione), seguire questa procedura:
 

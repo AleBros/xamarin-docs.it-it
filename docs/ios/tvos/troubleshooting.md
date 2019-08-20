@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ad0952bb620645a4cbc5fbc17b21f6a977c889ff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2503b8a96e8f1c6f08dfcd19672db3b93a5ce7e1
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657318"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620314"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS compilate con Novell
 
@@ -26,15 +26,15 @@ _Questo articolo illustra i problemi che possono verificarsi durante l'uso del s
 La versione corrente del supporto tvOS di Novell presenta i seguenti problemi noti:
 
 - **Mono Framework** : crittografia mono 4,3. ProtectedData non riesce a decrittografare i dati da mono 4,2. Di conseguenza, i pacchetti NuGet non vengono ripristinati con l'errore `Data unprotection failed` quando viene configurata un'origine NuGet protetta.
-    - **Soluzione alternativa** : in Visual Studio per Mac è necessario aggiungere tutte le origini dei pacchetti NuGet che usano l'autenticazione della password prima di ritentare il ripristino dei pacchetti.
+  - **Soluzione alternativa** : in Visual Studio per Mac è necessario aggiungere tutte le origini dei pacchetti NuGet che usano l'autenticazione della password prima di ritentare il ripristino dei pacchetti.
 - **Visual Studio per Mac w/ F# componente aggiuntivo** : errore durante la creazione di F# un modello Android in Windows. Questa operazione dovrebbe continuare a funzionare correttamente in Mac.
 - **Novell. Mac** : quando si esegue il progetto di modello unificato Novell. Mac con il Framework di `Unsupported`destinazione impostato su `Could not connect to the debugger` , è possibile che venga visualizzata la finestra popup.
-    - **Potenziale soluzione alternativa** : eseguire il downgrade della versione di mono Framework disponibile nel canale stabile.
+  - **Potenziale soluzione alternativa** : eseguire il downgrade della versione di mono Framework disponibile nel canale stabile.
 - **Novell Visual Studio & Novell. iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` è possibile che venga visualizzato l'errore.
 
 Segnalare eventuali bug trovati su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 9 con Novell. tvOS e la soluzione a questi problemi:
 
@@ -115,7 +115,7 @@ In tal caso, modificare il `Info.plist` file e verificare che disponga delle chi
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
 <array>
-    <string>arm64</string>
+  <string>arm64</string>
 </array>
 ```
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4c4aaeaa451a67da16057cd9b345fbbcd0af6f35
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528001"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621014"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Binding di una libreria Objective-C in iOS
 
@@ -74,16 +74,16 @@ Per installare gli strumenti, è necessario usare uno dei metodi seguenti:
 
 - **Installare Xcode** : quando si installa Xcode, viene fornito in bundle con tutti gli strumenti da riga di comando. Negli shim OS X 10,9 (installati in `/usr/bin`), è possibile eseguire il mapping di qualsiasi strumento incluso in `/usr/bin` allo strumento corrispondente all'interno di Xcode. Ad esempio, il `xcrun` comando, che consente di trovare o eseguire qualsiasi strumento all'interno di Xcode dalla riga di comando.
 - **Applicazione Terminal** : dall'applicazione Terminal, è possibile installare gli strumenti da riga di comando eseguendo il `xcode-select --install` comando:
-    - Avviare l'applicazione Terminal.
-    - Digitare `xcode-select --install` e premere **invio**, ad esempio:
+  - Avviare l'applicazione Terminal.
+  - Digitare `xcode-select --install` e premere **invio**, ad esempio:
 
-    ```bash
-    Europa:~ kmullins$ xcode-select --install
-    ```
+  ```bash
+  Europa:~ kmullins$ xcode-select --install
+  ```
 
-    - Verrà richiesto di installare gli strumenti da riga di comando, fare clic sul pulsante **Install (installa** ):   [![](walkthrough-images/xcode01.png "Installazione degli strumenti da riga di comando")](walkthrough-images/xcode01.png#lightbox)
+  - Verrà richiesto di installare gli strumenti da riga di comando, fare clic sul pulsante **Install (installa** ): [![](walkthrough-images/xcode01.png "Installazione degli strumenti da riga di comando")](walkthrough-images/xcode01.png#lightbox)
 
-    - Gli strumenti verranno scaricati e installati dai server Apple:   [![](walkthrough-images/xcode02.png "Download degli strumenti")](walkthrough-images/xcode02.png#lightbox)
+  - Gli strumenti verranno scaricati e installati dai server Apple: [![](walkthrough-images/xcode02.png "Download degli strumenti")](walkthrough-images/xcode02.png#lightbox)
 
 - **Download per gli sviluppatori Apple** : il pacchetto degli strumenti da riga di comando è disponibile nella pagina Web [download per sviluppatori Apple](https://developer.apple.com/downloads/index.action) . Accedere con l'ID Apple, quindi cercare e scaricare gli strumenti da riga di comando: [![](walkthrough-images/xcode03.png "Ricerca degli strumenti da riga di comando")](walkthrough-images/xcode03.png#lightbox)
 
@@ -186,7 +186,8 @@ Sebbene questi tre passaggi siano piuttosto semplici, potrebbe essere necessario
 
 Sono disponibili molti strumenti per automatizzare tali attività: uno script della shell, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)e [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando si installano gli strumenti da riga di `make` comando Xcode, viene installato anche, in modo che sia il sistema di compilazione che verrà usato per questa procedura dettagliata. Di seguito è riportato un **makefile** che è possibile usare per creare una libreria condivisa multiarchitettura che funzionerà su un dispositivo iOS e il simulatore per qualsiasi libreria:
 
-```bash
+<!--markdownlint-disable MD010 -->
+```makefile
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=./YOUR-PROJECT-NAME
 PROJECT=$(PROJECT_ROOT)/YOUR-PROJECT-NAME.xcodeproj
@@ -212,6 +213,7 @@ lib$(TARGET).a: lib$(TARGET)-i386.a lib$(TARGET)-armv7.a lib$(TARGET)-arm64.a
 clean:
     -rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 Immettere i comandi **makefile** nell'editor di testo normale scelto e aggiornare le sezioni con **il nome** del progetto con il nome del progetto. È inoltre importante assicurarsi di incollare esattamente le istruzioni riportate sopra, con le schede contenute nelle istruzioni mantenute.
 
@@ -622,21 +624,21 @@ using UIKit;
 
 namespace InfColorPickerSample
 {
-    public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  {
+    readonly UIViewController parent;
+
+    public ColorSelectedDelegate (UIViewController parent)
     {
-        readonly UIViewController parent;
-
-        public ColorSelectedDelegate (UIViewController parent)
-        {
-            this.parent = parent;
-        }
-
-        public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
-        {
-            parent.View.BackgroundColor = controller.ResultColor;
-            parent.DismissViewController (false, null);
-        }
+      this.parent = parent;
     }
+
+    public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
+    {
+      parent.View.BackgroundColor = controller.ResultColor;
+      parent.DismissViewController (false, null);
+    }
+  }
 }
 ```
 
@@ -653,9 +655,9 @@ ColorSelectedDelegate selector;
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
-    ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
-    selector = new ColorSelectedDelegate (this);
+  base.ViewDidLoad ();
+  ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
+  selector = new ColorSelectedDelegate (this);
 }
 ```
 **Implementare il metodo HandleTouchUpInsideWithStrongDelegate** -Next implementare il gestore eventi per quando l'utente tocca **ColorChangeButton**. Modificare `ViewController`e aggiungere il metodo seguente:

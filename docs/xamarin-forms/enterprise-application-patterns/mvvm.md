@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 1e3e1a2165c9acee127a543301f00262aa4bdc4f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2bd704b17f5aff1b4d3f2da1813d1eb19ef29e59
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529093"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620688"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Modello Model-View-ViewModel
 
@@ -284,7 +284,7 @@ I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfa
 
 Un comportamento associato a un controllo tramite le proprietà associate è noto come *comportamento associato*. Il comportamento può quindi usare l'API esposta dell'elemento a cui è collegata per aggiungere funzionalità a tale controllo, o altri controlli, nella struttura ad albero visuale della visualizzazione. L'app per dispositivi mobili eShopOnContainers `LineColorBehavior` contiene la classe, che è un comportamento associato. Per ulteriori informazioni su questo comportamento, vedere [visualizzazione degli errori di convalida](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
 
-Un comportamento Novell. Forms è una classe che deriva dalla [`Behavior`](xref:Xamarin.Forms.Behavior) classe o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) , dove `T `è il tipo del controllo a cui deve essere applicato il comportamento. Queste classi forniscono `OnAttachedTo` i `OnDetachingFrom` metodi e, che devono essere sottoposti a override per fornire la logica che verrà eseguita quando il comportamento viene collegato e scollegato dai controlli.
+Un comportamento Novell. Forms è una classe che deriva dalla [`Behavior`](xref:Xamarin.Forms.Behavior) classe o [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) , dove `T` è il tipo del controllo a cui deve essere applicato il comportamento. Queste classi forniscono `OnAttachedTo` i `OnDetachingFrom` metodi e, che devono essere sottoposti a override per fornire la logica che verrà eseguita quando il comportamento viene collegato e scollegato dai controlli.
 
 Nell'app per dispositivi mobili eShopOnContainers la `BindableBehavior<T>` classe deriva [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) dalla classe. Lo scopo della `BindableBehavior<T>` classe è fornire una classe base per i comportamenti di Novell. Forms che richiedono l' [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) impostazione del comportamento sul controllo associato.
 

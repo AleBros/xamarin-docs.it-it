@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: bd4c09b7defcc3038919a4dea841d7bd1d02f39e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654085"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620951"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Eseguire ricerche con markup Web in Novell. iOS
 
@@ -46,7 +46,7 @@ Il modo più semplice per trovare Apple nel sito Web dell'app è usarlo come sit
 
 Fornire un banner app intelligente nel sito Web per presentare un collegamento chiaro nell'app. Se l'app non è già installata, Safari chiederà automaticamente all'utente di installare l'app. In caso contrario, l'uso può toccare il collegamento **Visualizza** per avviare l'app dal sito Web. Ad esempio, per creare un banner di smart app, è possibile usare il codice seguente:
 
-```xml
+```html
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
@@ -65,7 +65,7 @@ Una novità di iOS 9, i collegamenti universali rappresentano un'alternativa mig
 
 È possibile fornire collegamenti profondi al contenuto dell'app tramite una scheda Twitter. Ad esempio:
 
-```xml
+```html
 <meta name="twitter:app:name:iphone" content="AppName">
 <meta name="twitter:app:id:iphone" content="AppNameID">
 <meta name="twitter:app:url:iphone" content="AppNameURL">
@@ -77,7 +77,7 @@ Per ulteriori informazioni, vedere la documentazione relativa al protocollo Twit
 
 È possibile fornire collegamenti profondi al contenuto dell'app usando un collegamento all'app Facebook. Ad esempio:
 
-```xml
+```html
 <meta property="al:ios:app_name" content="AppName">
 <meta property="al:ios:app_store_id" content="AppNameID">
 <meta property="al:ios:url" content="AppNameURL">
@@ -93,23 +93,23 @@ Per ulteriori informazioni, vedere la documentazione sui [collegamenti alle app]
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
 {
 
-    // Handling a URL in the form http://company.com/appname/?123
-    try {
-        var components = new NSUrlComponents(url,true);
-        var path = components.Path;
-        var query = components.Query;
+  // Handling a URL in the form http://company.com/appname/?123
+  try {
+    var components = new NSUrlComponents(url,true);
+    var path = components.Path;
+    var query = components.Query;
 
-        // Is this a known format?
-        if (path == "/appname") {
-            // Display the view controller for the content
-            // specified in query (123)
-            return ContentViewController.LoadContent(query);
-        }
-    } catch {
-        // Ignore issue for now
+    // Is this a known format?
+    if (path == "/appname") {
+      // Display the view controller for the content
+      // specified in query (123)
+      return ContentViewController.LoadContent(query);
     }
+  } catch {
+    // Ignore issue for now
+  }
 
-    return false;
+  return false;
 }
 ```
 
@@ -123,7 +123,7 @@ I risultati avanzati sono più accattivanti e possono contribuire a migliorare l
 
 Un'opzione per fornire markup di dati strutturati consiste nell'usare il grafo aperto. Ad esempio:
 
-```xml
+```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
 <meta property="og:audio" content="http://company.com/appname/theme.m4a">
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
@@ -133,22 +133,20 @@ Per ulteriori informazioni, vedere il sito Web di [Open Graph](http://ogp.me) .
 
 Un altro formato comune per il markup dei dati strutturati è il formato di microdati di schema. org. Ad esempio:
 
-```xml
+```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4** stars -
-    <span itemprop="reviewCount">255** reviews
-
-
+  <span itemprop="ratingValue">4** stars -
+  <span itemprop="reviewCount">255** reviews
 ```
 
 Le stesse informazioni possono essere rappresentate nel formato JSON-LD di schema. org:
 
-```xml
+```html
 <script type="application/ld+json">
-    "@content":"http://schema.org",
-    "@type":"AggregateRating",
-    "ratingValue":"4",
-    "reviewCount":"255"
+  "@content":"http://schema.org",
+  "@type":"AggregateRating",
+  "ratingValue":"4",
+  "reviewCount":"255"
 </script>
 ```
 
@@ -179,34 +177,28 @@ Tipi specifici di dati strutturati consentiranno a un risultato della ricerca di
 
 Ad esempio, la definizione di un'azione per comporre un numero di telefono potrebbe essere simile alla seguente:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/Organization">
-    <span itemprop="telephone">(408) 555-1212**
-
-
+  <span itemprop="telephone">(408) 555-1212**
 ```
 
 Quando il risultato della ricerca viene presentato all'utente finale, nel risultato viene visualizzata una piccola icona del telefono. Se l'utente tocca l'icona, verrà chiamato il numero specificato.
 
 Il codice HTML seguente aggiunge un'azione per riprodurre un file audio dai risultati della ricerca:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/AudioObject">
-    <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
-
-
+  <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
 ```
 
 Infine, il codice HTML seguente aggiunge un'azione per ottenere le direzioni dai risultati della ricerca:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="streetAddress">1 Infinite Loop**
-    <span itemprop="addressLocality">Cupertino**
-    <span itemprop="addressRegion">CA**
-    <span itemprop="postalCode">95014**
-
-
+  <span itemprop="streetAddress">1 Infinite Loop**
+  <span itemprop="addressLocality">Cupertino**
+  <span itemprop="addressRegion">CA**
+  <span itemprop="postalCode">95014**
 ```
 
 Per altre informazioni, vedere il sito per [sviluppatori di ricerca app](https://developer.apple.com/ios/search/)di Apple.

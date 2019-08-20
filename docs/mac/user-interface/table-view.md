@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a01369e1adac77e66412fd2aabb4adff49a9ac6f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b5ffa884def5acb01dc07ce39a2189e2570209c3
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655321"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620581"
 ---
 # <a name="table-views-in-xamarinmac"></a>Viste tabella in Novell. Mac
 
@@ -83,10 +83,10 @@ Selezionare la visualizzazione tabella nella **gerarchia dell'interfaccia** e le
 - **Colore griglia** : imposta il colore del bordo della cella.
 - **Background** : imposta il colore di sfondo della cella.
 - **Selezione** : consente di controllare il modo in cui l'utente può selezionare le celle nella tabella come:
-    - **Multiple** -if `true`, l'utente può selezionare più righe e colonne.
-    - **Column** : se `true`, l'utente può selezionare le colonne.
-    - **Digitare Select** -if `true`, l'utente può digitare un carattere per selezionare una riga.
-    - **Empty** -se `true`, l'utente non deve selezionare una riga o una colonna, la tabella non consente alcuna selezione.
+  - **Multiple** -if `true`, l'utente può selezionare più righe e colonne.
+  - **Column** : se `true`, l'utente può selezionare le colonne.
+  - **Digitare Select** -if `true`, l'utente può digitare un carattere per selezionare una riga.
+  - **Empty** -se `true`, l'utente non deve selezionare una riga o una colonna, la tabella non consente alcuna selezione.
 - **Salvataggio** automatico: il nome in base al quale il formato delle tabelle viene salvato automaticamente.
 - **Informazioni colonna** -se `true`, l'ordine e la larghezza delle colonne verranno salvati automaticamente.
 - **Interruzioni di riga** : consente di selezionare la modalità di gestione delle interruzioni di riga.
@@ -184,25 +184,25 @@ using System;
 
 namespace MacTables
 {
-    public class Product
+  public class Product
+  {
+    #region Computed Properties
+    public string Title { get; set;} = "";
+    public string Description { get; set;} = "";
+    #endregion
+
+    #region Constructors
+    public Product ()
     {
-        #region Computed Properties
-        public string Title { get; set;} = "";
-        public string Description { get; set;} = "";
-        #endregion
-
-        #region Constructors
-        public Product ()
-        {
-        }
-
-        public Product (string title, string description)
-        {
-            this.Title = title;
-            this.Description = description;
-        }
-        #endregion
     }
+
+    public Product (string title, string description)
+    {
+      this.Title = title;
+      this.Description = description;
+    }
+    #endregion
+  }
 }
 
 ```
@@ -221,25 +221,25 @@ using System.Collections.Generic;
 
 namespace MacTables
 {
-    public class ProductTableDataSource : NSTableViewDataSource
+  public class ProductTableDataSource : NSTableViewDataSource
+  {
+    #region Public Variables
+    public List<Product> Products = new List<Product>();
+    #endregion
+
+    #region Constructors
+    public ProductTableDataSource ()
     {
-        #region Public Variables
-        public List<Product> Products = new List<Product>();
-        #endregion
-
-        #region Constructors
-        public ProductTableDataSource ()
-        {
-        }
-        #endregion
-
-        #region Override Methods
-        public override nint GetRowCount (NSTableView tableView)
-        {
-            return Products.Count;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override Methods
+    public override nint GetRowCount (NSTableView tableView)
+    {
+      return Products.Count;
+    }
+    #endregion
+  }
 }
 
 ```
@@ -260,53 +260,53 @@ using System.Collections.Generic;
 
 namespace MacTables
 {
-    public class ProductTableDelegate: NSTableViewDelegate
+  public class ProductTableDelegate: NSTableViewDelegate
+  {
+    #region Constants 
+    private const string CellIdentifier = "ProdCell";
+    #endregion
+
+    #region Private Variables
+    private ProductTableDataSource DataSource;
+    #endregion
+
+    #region Constructors
+    public ProductTableDelegate (ProductTableDataSource datasource)
     {
-        #region Constants 
-        private const string CellIdentifier = "ProdCell";
-        #endregion
-
-        #region Private Variables
-        private ProductTableDataSource DataSource;
-        #endregion
-
-        #region Constructors
-        public ProductTableDelegate (ProductTableDataSource datasource)
-        {
-            this.DataSource = datasource;
-        }
-        #endregion
-
-        #region Override Methods
-        public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
-        {
-            // This pattern allows you reuse existing views when they are no-longer in use.
-            // If the returned view is null, you instance up a new view
-            // If a non-null view is returned, you modify it enough to reflect the new data
-            NSTextField view = (NSTextField)tableView.MakeView (CellIdentifier, this);
-            if (view == null) {
-                view = new NSTextField ();
-                view.Identifier = CellIdentifier;
-                view.BackgroundColor = NSColor.Clear;
-                view.Bordered = false;
-                view.Selectable = false;
-                view.Editable = false;
-            }
-
-            // Setup view based on the column selected
-            switch (tableColumn.Title) {
-            case "Product":
-                view.StringValue = DataSource.Products [(int)row].Title;
-                break;
-            case "Details":
-                view.StringValue = DataSource.Products [(int)row].Description;
-                break;
-            }
-
-            return view;
-        }
-        #endregion
+      this.DataSource = datasource;
     }
+    #endregion
+
+    #region Override Methods
+    public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
+    {
+      // This pattern allows you reuse existing views when they are no-longer in use.
+      // If the returned view is null, you instance up a new view
+      // If a non-null view is returned, you modify it enough to reflect the new data
+      NSTextField view = (NSTextField)tableView.MakeView (CellIdentifier, this);
+      if (view == null) {
+        view = new NSTextField ();
+        view.Identifier = CellIdentifier;
+        view.BackgroundColor = NSColor.Clear;
+        view.Bordered = false;
+        view.Selectable = false;
+        view.Editable = false;
+      }
+
+      // Setup view based on the column selected
+      switch (tableColumn.Title) {
+      case "Product":
+        view.StringValue = DataSource.Products [(int)row].Title;
+        break;
+      case "Details":
+        view.StringValue = DataSource.Products [(int)row].Description;
+        break;
+      }
+
+      return view;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -317,17 +317,17 @@ Per popolare la tabella, modificare il `ViewController.cs` file e fare in modo c
 ```csharp
 public override void AwakeFromNib ()
 {
-    base.AwakeFromNib ();
+  base.AwakeFromNib ();
 
-    // Create the Product Table Data Source and populate it
-    var DataSource = new ProductTableDataSource ();
-    DataSource.Products.Add (new Product ("Xamarin.iOS", "Allows you to develop native iOS Applications in C#"));
-    DataSource.Products.Add (new Product ("Xamarin.Android", "Allows you to develop native Android Applications in C#"));
-    DataSource.Products.Add (new Product ("Xamarin.Mac", "Allows you to develop Mac native Applications in C#"));
+  // Create the Product Table Data Source and populate it
+  var DataSource = new ProductTableDataSource ();
+  DataSource.Products.Add (new Product ("Xamarin.iOS", "Allows you to develop native iOS Applications in C#"));
+  DataSource.Products.Add (new Product ("Xamarin.Android", "Allows you to develop native Android Applications in C#"));
+  DataSource.Products.Add (new Product ("Xamarin.Mac", "Allows you to develop Mac native Applications in C#"));
 
-    // Populate the Product Table
-    ProductTable.DataSource = DataSource;
-    ProductTable.Delegate = new ProductTableDelegate (DataSource);
+  // Populate the Product Table
+  ProductTable.DataSource = DataSource;
+  ProductTable.Delegate = new ProductTableDelegate (DataSource);
 }
 ```
 
@@ -354,40 +354,40 @@ A questo punto, modificare `ProductTableDataSource.cs` il file e aggiungere i me
 ```csharp
 public void Sort(string key, bool ascending) {
 
-    // Take action based on key
-    switch (key) {
-    case "Title":
-        if (ascending) {
-            Products.Sort ((x, y) => x.Title.CompareTo (y.Title));
-        } else {
-            Products.Sort ((x, y) => -1 * x.Title.CompareTo (y.Title));
-        }
-        break;
-    case "Description":
-        if (ascending) {
-            Products.Sort ((x, y) => x.Description.CompareTo (y.Description));
-        } else {
-            Products.Sort ((x, y) => -1 * x.Description.CompareTo (y.Description));
-        }
-        break;
+  // Take action based on key
+  switch (key) {
+  case "Title":
+    if (ascending) {
+      Products.Sort ((x, y) => x.Title.CompareTo (y.Title));
+    } else {
+      Products.Sort ((x, y) => -1 * x.Title.CompareTo (y.Title));
     }
+    break;
+  case "Description":
+    if (ascending) {
+      Products.Sort ((x, y) => x.Description.CompareTo (y.Description));
+    } else {
+      Products.Sort ((x, y) => -1 * x.Description.CompareTo (y.Description));
+    }
+    break;
+  }
 
 }
 
 public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescriptor[] oldDescriptors)
 {
-    // Sort the data
-    if (oldDescriptors.Length > 0) {
-        // Update sort
-        Sort (oldDescriptors [0].Key, oldDescriptors [0].Ascending);
-    } else {
-        // Grab current descriptors and update sort
-        NSSortDescriptor[] tbSort = tableView.SortDescriptors; 
-        Sort (tbSort[0].Key, tbSort[0].Ascending); 
-    }
-            
-    // Refresh table
-    tableView.ReloadData ();
+  // Sort the data
+  if (oldDescriptors.Length > 0) {
+    // Update sort
+    Sort (oldDescriptors [0].Key, oldDescriptors [0].Ascending);
+  } else {
+    // Grab current descriptors and update sort
+    NSSortDescriptor[] tbSort = tableView.SortDescriptors; 
+    Sort (tbSort[0].Key, tbSort[0].Ascending); 
+  }
+      
+  // Refresh table
+  tableView.ReloadData ();
 }
 ```
 
@@ -413,7 +413,7 @@ Modificare quindi il `ProductTableDelegate.cs` file e aggiungere il metodo segue
 ```csharp
 public override bool ShouldSelectRow (NSTableView tableView, nint row)
 {
-    return true;
+  return true;
 }
 ```
 
@@ -442,7 +442,7 @@ Modificare quindi il `ProductTableDelegate.cs` file e aggiungere il metodo segue
 ```csharp
 public override bool ShouldSelectRow (NSTableView tableView, nint row)
 {
-    return true;
+  return true;
 }
 ```
 
@@ -475,16 +475,16 @@ A questo punto, modificare `ProductTableDelegate.cs` il file e aggiungere il met
 ```csharp
 public override nint GetNextTypeSelectMatch (NSTableView tableView, nint startRow, nint endRow, string searchString)
 {
-    nint row = 0;
-    foreach(Product product in DataSource.Products) {
-        if (product.Title.Contains(searchString)) return row;
+  nint row = 0;
+  foreach(Product product in DataSource.Products) {
+    if (product.Title.Contains(searchString)) return row;
 
-        // Increment row counter
-        ++row;
-    }
+    // Increment row counter
+    ++row;
+  }
 
-    // If not found select the first row
-    return 0;
+  // If not found select the first row
+  return 0;
 }
 ```
 
@@ -511,7 +511,7 @@ A questo punto, modificare `ProductTableDelegate.cs` il file e aggiungere il met
 ```csharp
 public override bool ShouldReorder (NSTableView tableView, nint columnIndex, nint newColumnIndex)
 {
-    return true;
+  return true;
 }
 ```
 
@@ -530,46 +530,46 @@ Se si desidera consentire all'utente di modificare i valori per una determinata 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
-    // This pattern allows you reuse existing views when they are no-longer in use.
-    // If the returned view is null, you instance up a new view
-    // If a non-null view is returned, you modify it enough to reflect the new data
-    NSTextField view = (NSTextField)tableView.MakeView (tableColumn.Title, this);
-    if (view == null) {
-        view = new NSTextField ();
-        view.Identifier = tableColumn.Title;
-        view.BackgroundColor = NSColor.Clear;
-        view.Bordered = false;
-        view.Selectable = false;
-        view.Editable = true;
+  // This pattern allows you reuse existing views when they are no-longer in use.
+  // If the returned view is null, you instance up a new view
+  // If a non-null view is returned, you modify it enough to reflect the new data
+  NSTextField view = (NSTextField)tableView.MakeView (tableColumn.Title, this);
+  if (view == null) {
+    view = new NSTextField ();
+    view.Identifier = tableColumn.Title;
+    view.BackgroundColor = NSColor.Clear;
+    view.Bordered = false;
+    view.Selectable = false;
+    view.Editable = true;
 
-        view.EditingEnded += (sender, e) => {
-                    
-            // Take action based on type
-            switch(view.Identifier) {
-            case "Product":
-                DataSource.Products [(int)view.Tag].Title = view.StringValue;
-                break;
-            case "Details":
-                DataSource.Products [(int)view.Tag].Description = view.StringValue;
-                break; 
-            }
-        };
-    }
-
-    // Tag view
-    view.Tag = row;
-
-    // Setup view based on the column selected
-    switch (tableColumn.Title) {
-    case "Product":
-        view.StringValue = DataSource.Products [(int)row].Title;
+    view.EditingEnded += (sender, e) => {
+          
+      // Take action based on type
+      switch(view.Identifier) {
+      case "Product":
+        DataSource.Products [(int)view.Tag].Title = view.StringValue;
         break;
-    case "Details":
-        view.StringValue = DataSource.Products [(int)row].Description;
-        break;
-    }
+      case "Details":
+        DataSource.Products [(int)view.Tag].Description = view.StringValue;
+        break; 
+      }
+    };
+  }
 
-    return view;
+  // Tag view
+  view.Tag = row;
+
+  // Setup view based on the column selected
+  switch (tableColumn.Title) {
+  case "Product":
+    view.StringValue = DataSource.Products [(int)row].Title;
+    break;
+  case "Details":
+    view.StringValue = DataSource.Products [(int)row].Description;
+    break;
+  }
+
+  return view;
 }
 ```
 
@@ -587,56 +587,56 @@ Per includere un'immagine come parte `NSTableView`della cella di un, è necessar
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
 
-    // This pattern allows you reuse existing views when they are no-longer in use.
-    // If the returned view is null, you instance up a new view
-    // If a non-null view is returned, you modify it enough to reflect the new data
-    NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
-    if (view == null) {
-        view = new NSTableCellView ();
-        if (tableColumn.Title == "Product") {
-            view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-            view.AddSubview (view.ImageView);
-            view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
-        } else {
-            view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
-        }
-        view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
-        view.AddSubview (view.TextField);
-        view.Identifier = tableColumn.Title;
-        view.TextField.BackgroundColor = NSColor.Clear;
-        view.TextField.Bordered = false;
-        view.TextField.Selectable = false;
-        view.TextField.Editable = true;
-
-        view.TextField.EditingEnded += (sender, e) => {
-
-            // Take action based on type
-            switch(view.Identifier) {
-            case "Product":
-                DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
-                break;
-            case "Details":
-                DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
-                break; 
-            }
-        };
+  // This pattern allows you reuse existing views when they are no-longer in use.
+  // If the returned view is null, you instance up a new view
+  // If a non-null view is returned, you modify it enough to reflect the new data
+  NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
+  if (view == null) {
+    view = new NSTableCellView ();
+    if (tableColumn.Title == "Product") {
+      view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+      view.AddSubview (view.ImageView);
+      view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+    } else {
+      view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
     }
+    view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
+    view.AddSubview (view.TextField);
+    view.Identifier = tableColumn.Title;
+    view.TextField.BackgroundColor = NSColor.Clear;
+    view.TextField.Bordered = false;
+    view.TextField.Selectable = false;
+    view.TextField.Editable = true;
 
-    // Tag view
-    view.TextField.Tag = row;
+    view.TextField.EditingEnded += (sender, e) => {
 
-    // Setup view based on the column selected
-    switch (tableColumn.Title) {
-    case "Product":
-        view.ImageView.Image = NSImage.ImageNamed ("tags.png");
-        view.TextField.StringValue = DataSource.Products [(int)row].Title;
+      // Take action based on type
+      switch(view.Identifier) {
+      case "Product":
+        DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
         break;
-    case "Details":
-        view.TextField.StringValue = DataSource.Products [(int)row].Description;
-        break;
-    }
+      case "Details":
+        DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
+        break; 
+      }
+    };
+  }
 
-    return view;
+  // Tag view
+  view.TextField.Tag = row;
+
+  // Setup view based on the column selected
+  switch (tableColumn.Title) {
+  case "Product":
+    view.ImageView.Image = NSImage.ImageNamed ("tags.png");
+    view.TextField.StringValue = DataSource.Products [(int)row].Title;
+    break;
+  case "Details":
+    view.TextField.StringValue = DataSource.Products [(int)row].Description;
+    break;
+  }
+
+  return view;
 }
 ```
 
@@ -659,7 +659,7 @@ Modificare quindi il `ViewController.cs` file e aggiungere il metodo pubblico se
 ```csharp
 public void ReloadTable ()
 {
-    ProductTable.ReloadData ();
+  ProductTable.ReloadData ();
 }
 ```
 
@@ -682,8 +682,8 @@ private ViewController Controller;
 #region Constructors
 public ProductTableDelegate (ViewController controller, ProductTableDataSource datasource)
 {
-    this.Controller = controller;
-    this.DataSource = datasource;
+  this.Controller = controller;
+  this.DataSource = datasource;
 }
 #endregion
 ```
@@ -693,32 +693,32 @@ Aggiungere quindi il nuovo metodo privato seguente alla classe:
 ```csharp
 private void ConfigureTextField (NSTableCellView view, nint row)
 {
-    // Add to view
-    view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
-    view.AddSubview (view.TextField);
+  // Add to view
+  view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
+  view.AddSubview (view.TextField);
 
-    // Configure
-    view.TextField.BackgroundColor = NSColor.Clear;
-    view.TextField.Bordered = false;
-    view.TextField.Selectable = false;
-    view.TextField.Editable = true;
+  // Configure
+  view.TextField.BackgroundColor = NSColor.Clear;
+  view.TextField.Bordered = false;
+  view.TextField.Selectable = false;
+  view.TextField.Editable = true;
 
-    // Wireup events
-    view.TextField.EditingEnded += (sender, e) => {
+  // Wireup events
+  view.TextField.EditingEnded += (sender, e) => {
 
-        // Take action based on type
-        switch (view.Identifier) {
-        case "Product":
-            DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
-            break;
-        case "Details":
-            DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
-            break;
-        }
-    };
+    // Take action based on type
+    switch (view.Identifier) {
+    case "Product":
+      DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
+      break;
+    case "Details":
+      DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
+      break;
+    }
+  };
 
-    // Tag view
-    view.TextField.Tag = row;
+  // Tag view
+  view.TextField.Tag = row;
 }
 ```
 
@@ -730,88 +730,88 @@ Infine, modificare il `GetViewForItem` metodo e renderlo simile al seguente:
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
 
-    // This pattern allows you reuse existing views when they are no-longer in use.
-    // If the returned view is null, you instance up a new view
-    // If a non-null view is returned, you modify it enough to reflect the new data
-    NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
-    if (view == null) {
-        view = new NSTableCellView ();
+  // This pattern allows you reuse existing views when they are no-longer in use.
+  // If the returned view is null, you instance up a new view
+  // If a non-null view is returned, you modify it enough to reflect the new data
+  NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
+  if (view == null) {
+    view = new NSTableCellView ();
 
-        // Configure the view
-        view.Identifier = tableColumn.Title;
+    // Configure the view
+    view.Identifier = tableColumn.Title;
 
-        // Take action based on title
-        switch (tableColumn.Title) {
-        case "Product":
-            view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-            view.AddSubview (view.ImageView);
-            view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
-            ConfigureTextField (view, row);
-            break;
-        case "Details":
-            view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
-            ConfigureTextField (view, row);
-            break;
-        case "Action":
-            // Create new button
-            var button = new NSButton (new CGRect (0, 0, 81, 16));
-            button.SetButtonType (NSButtonType.MomentaryPushIn);
-            button.Title = "Delete";
-            button.Tag = row;
-
-            // Wireup events
-            button.Activated += (sender, e) => {
-                // Get button and product
-                var btn = sender as NSButton;
-                var product = DataSource.Products [(int)btn.Tag];
-
-                // Configure alert
-                var alert = new NSAlert () {
-                    AlertStyle = NSAlertStyle.Informational,
-                    InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
-                    MessageText = $"Delete {product.Title}?",
-                };
-                alert.AddButton ("Cancel");
-                alert.AddButton ("Delete");
-                alert.BeginSheetForResponse (Controller.View.Window, (result) => {
-                    // Should we delete the requested row?
-                    if (result == 1001) {
-                        // Remove the given row from the dataset
-                        DataSource.Products.RemoveAt((int)btn.Tag);
-                        Controller.ReloadTable ();
-                    }
-                });
-            };
-
-            // Add to view
-            view.AddSubview (button);
-            break;
-        }
-
-    }
-
-    // Setup view based on the column selected
+    // Take action based on title
     switch (tableColumn.Title) {
     case "Product":
-        view.ImageView.Image = NSImage.ImageNamed ("tag.png");
-        view.TextField.StringValue = DataSource.Products [(int)row].Title;
-        view.TextField.Tag = row;
-        break;
+      view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+      view.AddSubview (view.ImageView);
+      view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+      ConfigureTextField (view, row);
+      break;
     case "Details":
-        view.TextField.StringValue = DataSource.Products [(int)row].Description;
-        view.TextField.Tag = row;
-        break;
+      view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+      ConfigureTextField (view, row);
+      break;
     case "Action":
-        foreach (NSView subview in view.Subviews) {
-            var btn = subview as NSButton;
-            if (btn != null) {
-                btn.Tag = row;
-            }
-        }
-        break;
+      // Create new button
+      var button = new NSButton (new CGRect (0, 0, 81, 16));
+      button.SetButtonType (NSButtonType.MomentaryPushIn);
+      button.Title = "Delete";
+      button.Tag = row;
+
+      // Wireup events
+      button.Activated += (sender, e) => {
+        // Get button and product
+        var btn = sender as NSButton;
+        var product = DataSource.Products [(int)btn.Tag];
+
+        // Configure alert
+        var alert = new NSAlert () {
+          AlertStyle = NSAlertStyle.Informational,
+          InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
+          MessageText = $"Delete {product.Title}?",
+        };
+        alert.AddButton ("Cancel");
+        alert.AddButton ("Delete");
+        alert.BeginSheetForResponse (Controller.View.Window, (result) => {
+          // Should we delete the requested row?
+          if (result == 1001) {
+            // Remove the given row from the dataset
+            DataSource.Products.RemoveAt((int)btn.Tag);
+            Controller.ReloadTable ();
+          }
+        });
+      };
+
+      // Add to view
+      view.AddSubview (button);
+      break;
     }
 
-    return view;
+  }
+
+  // Setup view based on the column selected
+  switch (tableColumn.Title) {
+  case "Product":
+    view.ImageView.Image = NSImage.ImageNamed ("tag.png");
+    view.TextField.StringValue = DataSource.Products [(int)row].Title;
+    view.TextField.Tag = row;
+    break;
+  case "Details":
+    view.TextField.StringValue = DataSource.Products [(int)row].Description;
+    view.TextField.Tag = row;
+    break;
+  case "Action":
+    foreach (NSView subview in view.Subviews) {
+      var btn = subview as NSButton;
+      if (btn != null) {
+        btn.Tag = row;
+      }
+    }
+    break;
+  }
+
+  return view;
 }
 ```
 
@@ -836,26 +836,26 @@ La `Tag` proprietà del pulsante viene utilizzata per conservare il numero della
 ```csharp
 // Wireup events
 button.Activated += (sender, e) => {
-    // Get button and product
-    var btn = sender as NSButton;
-    var product = DataSource.Products [(int)btn.Tag];
+  // Get button and product
+  var btn = sender as NSButton;
+  var product = DataSource.Products [(int)btn.Tag];
 
-    // Configure alert
-    var alert = new NSAlert () {
-        AlertStyle = NSAlertStyle.Informational,
-        InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
-        MessageText = $"Delete {product.Title}?",
-    };
-    alert.AddButton ("Cancel");
-    alert.AddButton ("Delete");
-    alert.BeginSheetForResponse (Controller.View.Window, (result) => {
-        // Should we delete the requested row?
-        if (result == 1001) {
-            // Remove the given row from the dataset
-            DataSource.Products.RemoveAt((int)btn.Tag);
-            Controller.ReloadTable ();
-        }
-    });
+  // Configure alert
+  var alert = new NSAlert () {
+    AlertStyle = NSAlertStyle.Informational,
+    InformativeText = $"Are you sure you want to delete {product.Title}? This operation cannot be undone.",
+    MessageText = $"Delete {product.Title}?",
+  };
+  alert.AddButton ("Cancel");
+  alert.AddButton ("Delete");
+  alert.BeginSheetForResponse (Controller.View.Window, (result) => {
+    // Should we delete the requested row?
+    if (result == 1001) {
+      // Remove the given row from the dataset
+      DataSource.Products.RemoveAt((int)btn.Tag);
+      Controller.ReloadTable ();
+    }
+  });
 };
 ```
 
@@ -873,22 +873,22 @@ Infine, se la cella di visualizzazione tabella viene riutilizzata anziché esser
 // Setup view based on the column selected
 switch (tableColumn.Title) {
 case "Product":
-    view.ImageView.Image = NSImage.ImageNamed ("tag.png");
-    view.TextField.StringValue = DataSource.Products [(int)row].Title;
-    view.TextField.Tag = row;
-    break;
+  view.ImageView.Image = NSImage.ImageNamed ("tag.png");
+  view.TextField.StringValue = DataSource.Products [(int)row].Title;
+  view.TextField.Tag = row;
+  break;
 case "Details":
-    view.TextField.StringValue = DataSource.Products [(int)row].Description;
-    view.TextField.Tag = row;
-    break;
+  view.TextField.StringValue = DataSource.Products [(int)row].Description;
+  view.TextField.Tag = row;
+  break;
 case "Action":
-    foreach (NSView subview in view.Subviews) {
-        var btn = subview as NSButton;
-        if (btn != null) {
-            btn.Tag = row;
-        }
+  foreach (NSView subview in view.Subviews) {
+    var btn = subview as NSButton;
+    if (btn != null) {
+      btn.Tag = row;
     }
-    break;
+  }
+  break;
 }
 
 ```

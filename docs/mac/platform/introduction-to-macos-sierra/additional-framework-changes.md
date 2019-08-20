@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b382b7dd66722df6acb4bb7c90e401e5895c0947
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528896"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620897"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Modifiche aggiuntive al framework macOS Sierra
 
@@ -33,17 +33,17 @@ I miglioramenti seguenti sono stati apportati al Framework di accelerazione per 
 Sono state apportate le seguenti funzionalità avanzate al Framework di AppKit per macOS Sierra:
 
 - Diversi miglioramenti a `NSCollectionView` , ad esempio:
-    - **Sezioni** comprimibili: consente all'utente di comprimere una sezione di visualizzazione raccolta in una singola riga orizzontale.
-    - **Intestazioni mobili** : le intestazioni e i piè di pagina possono essere ora sospesi (in un layout di flusso) usando la stessa API di [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
-    - **Visualizzazioni in background scorrevoli** : è ora possibile impostare uno sfondo per le visualizzazioni di raccolta per scorrere insieme al contenuto.
+  - **Sezioni** comprimibili: consente all'utente di comprimere una sezione di visualizzazione raccolta in una singola riga orizzontale.
+  - **Intestazioni mobili** : le intestazioni e i piè di pagina possono essere ora sospesi (in un layout di flusso) usando la stessa API di [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
+  - **Visualizzazioni in background scorrevoli** : è ora possibile impostare uno sfondo per le visualizzazioni di raccolta per scorrere insieme al contenuto.
 - Il passaggio di layout della visualizzazione posticipato è stato ottimizzato ed esteso.
 - L'API di trascinamento della selezione include ora le `NSFilePromiseProvider` nuove `NSFilePromiseReceiver` classi e per supportare il trascinamento della moltitudine.
 - Ai controlli esistenti sono stati aggiunti diversi costruttori pratici:
-    - `NSButton`include nuovi costruttori per la creazione di pulsanti di comando, caselle di controllo e pulsanti di opzione.
-    - `NSTextField`include nuovi costruttori per la creazione di incapsulamento e non wrapping di etichette, etichette con attributi e campi di testo modificabili.
-    - `NSSegmentedControl`include nuovi costruttori per la creazione di controlli segmentati da un gruppo di etichette o immagini.
-    - `NSSlider`include nuovi costruttori per la creazione di dispositivi di scorrimento lineari orizzontali.
-    - `NSImageView`include nuovi costruttori per la creazione di visualizzazioni di immagine non modificabili da `NSImage`un dato oggetto.
+  - `NSButton`include nuovi costruttori per la creazione di pulsanti di comando, caselle di controllo e pulsanti di opzione.
+  - `NSTextField`include nuovi costruttori per la creazione di incapsulamento e non wrapping di etichette, etichette con attributi e campi di testo modificabili.
+  - `NSSegmentedControl`include nuovi costruttori per la creazione di controlli segmentati da un gruppo di etichette o immagini.
+  - `NSSlider`include nuovi costruttori per la creazione di dispositivi di scorrimento lineari orizzontali.
+  - `NSImageView`include nuovi costruttori per la creazione di visualizzazioni di immagine non modificabili da `NSImage`un dato oggetto.
 - Il nuovo `NSGridView` è stato aggiunto a layout automatico una raccolta di visualizzazioni secondarie in una griglia con righe e colonne di dimensioni variabili che possono essere nascoste o visualizzate dinamicamente.
 
 <a name="AVFoundation-Framework-Enhancements" />

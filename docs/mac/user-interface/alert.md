@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 14a7fdc21c95b2febcf73497055461830b0df831
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 671a7c8aaa81094157056672c64f0c2dc847d6a7
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645781"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620919"
 ---
 # <a name="alerts-in-xamarinmac"></a>Avvisi in Novell. Mac
 
@@ -51,9 +51,9 @@ Come indicato in precedenza, gli avvisi devono essere visualizzati all'utente de
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Critical,
-    InformativeText = "We need to save the document here...",
-    MessageText = "Save Document",
+  AlertStyle = NSAlertStyle.Critical,
+  InformativeText = "We need to save the document here...",
+  MessageText = "Save Document",
 };
 alert.RunModal ();
 ```
@@ -65,9 +65,9 @@ Il codice precedente Visualizza un avviso con l'icona delle applicazioni sovrapp
 Apple fornisce diverse proprietà che possono essere usate per personalizzare un avviso:
 
 - **AlertStyle** definisce il tipo di un avviso come uno dei seguenti:
-    - **Avviso** : usato per avvisare l'utente di un evento corrente o imminente che non è critico. Questo è lo stile predefinito.
-    - **Informational** : usato per avvisare l'utente di un evento corrente o imminente. Attualmente, non esiste alcuna differenza visibile tra un **avviso** e un messaggio informativo
-    - **Critico** : usato per avvertire l'utente di conseguenze gravi di un evento imminente, ad esempio l'eliminazione di un file. Questo tipo di avviso deve essere usato con moderazione.
+  - **Avviso** : usato per avvisare l'utente di un evento corrente o imminente che non è critico. Questo è lo stile predefinito.
+  - **Informational** : usato per avvisare l'utente di un evento corrente o imminente. Attualmente, non esiste alcuna differenza visibile tra un **avviso** e un messaggio informativo
+  - **Critico** : usato per avvertire l'utente di conseguenze gravi di un evento imminente, ad esempio l'eliminazione di un file. Questo tipo di avviso deve essere usato con moderazione.
 - **MessageText** : si tratta del messaggio principale o del titolo dell'avviso e dovrebbe definire rapidamente la situazione all'utente.
 - **InformativeText** : questo è il corpo dell'avviso in cui è necessario definire la situazione in modo chiaro e presentare opzioni utilizzabili all'utente.
 - **Icona** : consente di visualizzare un'icona personalizzata per l'utente.
@@ -84,9 +84,9 @@ Esistono due modi diversi per visualizzare un avviso, mobile o come foglio. Il c
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.RunModal ();
 ```
@@ -98,9 +98,9 @@ Il codice seguente visualizza lo stesso avviso di un foglio:
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.BeginSheet (this);
 ```
@@ -118,9 +118,9 @@ Per impostazione predefinita, un avviso Visualizza solo il pulsante **OK** . Tut
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -142,15 +142,15 @@ Ecco il codice per lo stesso avviso di un foglio:
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.BeginSheetForResponse (this, (result) => {
-    Console.WriteLine ("Alert Result: {0}", result);
+  Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
 Se questo codice viene eseguito, verrà visualizzato quanto segue:
@@ -168,9 +168,9 @@ Se la `ShowSuppressButton` proprietà dell'avviso è `true`, l'avviso Visualizza
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -190,16 +190,16 @@ Ecco il codice per lo stesso avviso di un foglio:
 
 ```csharp
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.ShowsSuppressionButton = true;
 alert.BeginSheetForResponse (this, (result) => {
-    Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 
@@ -219,7 +219,7 @@ var input = new NSTextField (new CGRect (0, 0, 300, 20));
 var alert = new NSAlert () {
 AlertStyle = NSAlertStyle.Informational,
 InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -243,9 +243,9 @@ Di seguito è riportato lo stesso avviso di un foglio:
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
 
 var alert = new NSAlert () {
-    AlertStyle = NSAlertStyle.Informational,
-    InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-    MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -254,7 +254,7 @@ alert.ShowsSuppressionButton = true;
 alert.AccessoryView = input;
 alert.Layout ();
 alert.BeginSheetForResponse (this, (result) => {
-    Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 

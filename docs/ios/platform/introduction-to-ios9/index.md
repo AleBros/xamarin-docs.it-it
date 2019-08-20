@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 733f50954c7ea6bd4ada7468eb14443f4f3b1f1d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 69a599b6a7534cb77dd9e023d937f10a6b0523fb
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654421"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620664"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
@@ -29,7 +29,7 @@ Una novità di iOS 9 e di iPhone 6s e iPhone 6s Plus, 3D touch aggiunge moviment
 3D touch offre all'app le funzionalità seguenti:
 
 - **Sensibilità alla pressione** : le app possono ora misurare il livello di rigidezza o di luminosità dell'utente che tocca lo schermo e sfruttare tali informazioni. Ad esempio, un'app di disegno può rendere una linea più spessa o più sottile a seconda della difficoltà con cui l'utente tocca lo schermo.
-- **Peek e pop** : l'app può ora consentire all'utente di interagire con i dati senza dover uscire dal contesto corrente. Premendo hard sullo schermo, *è possibile visualizzare* l'elemento a cui si è interessati, ad esempio l'anteprima di un messaggio. Premendo più difficile, *è possibile visualizzare* l'elemento.
+- **Peek e pop** : l'app può ora consentire all'utente di interagire con i dati senza dover uscire dal contesto corrente. Premendo hard sullo schermo, è possibile visualizzare l' elemento a cui si è interessati, ad esempio l'anteprima di un messaggio. Premendo più difficile, è possibile visualizzare l'elemento.
 - **Azioni rapide** : si pensi a azioni rapide come i menu contestuali che possono essere visualizzati quando un utente fa clic con il pulsante destro del mouse su un elemento in un'app desktop. Con azioni rapide, è possibile aggiungere collegamenti comuni, rapidi e facili da accedere alle funzioni nell'app dall'icona della schermata iniziale sul dispositivo iOS.
 
 Per ulteriori informazioni, vedere la Guida [introduttiva a 3D Touch](~/ios/platform/3d-touch.md) .
@@ -124,12 +124,12 @@ Con iOS 9, Apple sta estendendo il supporto dell'estensione fornendo diversi nuo
 - **Nuovo punto di estensione unità audio** : usare questo punto di estensione per fornire effetti audio, strumenti musicali, generatori di suoni e così via, da usare in altre app host di unità audio (ad esempio, GarageBand). Questo punto di estensione consente anche di vendere _unità audio_ (plug-in audio) nell'App Store.
 - **Nuovo punto di estensione** per la manutenzione degli indici: usare questo punto di estensione per supportare la reindicizzazione dei dati dell'app senza richiedere il riavvio dell'app.
 - **Nuovi punti di estensione di rete** (è necessario disporre di un'autorizzazione speciale da Apple):
-    - **Estensione del provider del proxy applicazione** : usare questo punto di estensione per implementare un proxy di rete trasparente sul lato client personalizzato.
-    - **Filtrare l'estensione del provider del controllo provider di dati/filtro** : usare questi punti di estensione per implementare il filtro del contenuto della rete dinamica sul dispositivo.
-    - **Estensione del provider** di tunneling di pacchetti: usare questo punto di estensione per implementare un protocollo di tunneling VPN personalizzato sul lato client.
+  - **Estensione del provider del proxy applicazione** : usare questo punto di estensione per implementare un proxy di rete trasparente sul lato client personalizzato.
+  - **Filtrare l'estensione del provider del controllo provider di dati/filtro** : usare questi punti di estensione per implementare il filtro del contenuto della rete dinamica sul dispositivo.
+  - **Estensione del provider** di tunneling di pacchetti: usare questo punto di estensione per implementare un protocollo di tunneling VPN personalizzato sul lato client.
 - **Nuovi punti di estensione Safari**:
-    - **Estensione** per il blocco del contenuto: usare questo punto di estensione per definire un elenco di contenuto bloccato che non verrà visualizzato quando l'utente sta esplorando il Web.
-    - **Estensione per i collegamenti condivisi** : usare questo punto di estensione per abilitare la visualizzazione del contenuto dell'app nei collegamenti condivisi di Safari.
+  - **Estensione** per il blocco del contenuto: usare questo punto di estensione per definire un elenco di contenuto bloccato che non verrà visualizzato quando l'utente sta esplorando il Web.
+  - **Estensione per i collegamenti condivisi** : usare questo punto di estensione per abilitare la visualizzazione del contenuto dell'app nei collegamenti condivisi di Safari.
 
 Per altre informazioni, vedere la documentazione relativa [all'introduzione alle estensioni e alla guida alla](~/ios/platform/extensions.md) programmazione delle estensioni per le [app](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214) di Apple.
 
@@ -148,7 +148,7 @@ Per ulteriori informazioni, vedere la documentazione [introduttiva a Touch ID](~
 
 ## <a name="right-to-left-language-support"></a>Supporto per le lingue da destra a sinistra
 
-In iOS 9, Apple ha reso più semplice che mai l'interfaccia utente capovolta offrendo supporto completo per le lingue da destra a sinistra. Il comportamento predefinito include quanto segue:
+In iOS 9, Apple ha reso più semplice che mai l'interfaccia utente capovolta offrendo supporto completo per le lingue da destra a sinistra. Sono inclusi gli elementi seguenti:
 
 - I controlli [UIKit](xref:UIKit) standard verranno automaticamente invertiti da destra a sinistra in base alle impostazioni locali e della lingua dei dispositivi iOS.
 - La classe [UIView](xref:UIKit.UIView) fornisce attributi che consentono di definire la modalità di visualizzazione di una determinata visualizzazione quando viene capovolta da destra a sinistra.

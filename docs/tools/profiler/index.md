@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac77977f3832b0ab7ba440a2c795037e8fcf5f2e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529053"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620988"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -68,21 +68,21 @@ Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. An
 Il supporto per la Xamarin Profiler è disponibile nelle piattaforme seguenti:
 
 - Visual Studio per Mac (macOS, con licenza Enterprise)
-    - Android
-        - Dispositivo e emulatore
-    - iOS
-        - Dispositivo e simulatore
-    - tvOS (lo strumento di tempo non è supportato)
-        - Dispositivo e simulatore
-    - Mac
+  - Android
+    - Dispositivo e emulatore
+  - iOS
+    - Dispositivo e simulatore
+  - tvOS (lo strumento di tempo non è supportato)
+    - Dispositivo e simulatore
+  - Mac
 
 - Visual Studio (solo versione **Enterprise** )
-    - Android
-        - Dispositivo e emulatore
-    - iOS [sperimentale]
-        - Dispositivo e simulatore
-    - tvOS
-        - Dispositivo e simulatore
+  - Android
+    - Dispositivo e emulatore
+  - iOS [sperimentale]
+    - Dispositivo e simulatore
+  - tvOS
+    - Dispositivo e simulatore
 
 Si noti che è possibile profilare **solo** le configurazioni di **debug** .
 

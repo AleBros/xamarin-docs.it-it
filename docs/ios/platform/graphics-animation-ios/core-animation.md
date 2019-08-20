@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9412012949cd012d572b65b7af6e2890160338dc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4a5e4766321babebed9a84b37590ef1d50bfc77e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527940"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621119"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animazione principale in Novell. iOS
 
@@ -53,7 +53,7 @@ Si consideri, ad esempio, un'applicazione con due controller, in cui toccare un 
 
 ```csharp
 SecondViewController vc2 = new SecondViewController {
-    ModalTransitionStyle = UIModalTransitionStyle.PartialCurl
+  ModalTransitionStyle = UIModalTransitionStyle.PartialCurl
 };
 ```
 
@@ -82,12 +82,12 @@ Si immagini, ad esempio, di disporre di `UIImageView`un controller con, in cui i
 
 ```csharp
 UIView.Transition (
-    fromView: view1,
-    toView: view2,
-    duration: 2,
-    options: UIViewAnimationOptions.TransitionFlipFromTop |
-        UIViewAnimationOptions.CurveEaseInOut,
-    completion: () => { Console.WriteLine ("transition complete"); });
+  fromView: view1,
+  toView: view2,
+  duration: 2,
+  options: UIViewAnimationOptions.TransitionFlipFromTop |
+    UIViewAnimationOptions.CurveEaseInOut,
+  completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
 `UIView.Transition`accetta anche un `duration` parametro che controlla il tempo di esecuzione dell'animazione, [`options`](xref:UIKit.UIViewAnimationOptions) oltre a specificare elementi quali l'animazione da usare e la funzione di interpolazione. Inoltre, è possibile specificare un gestore di completamento che verrà chiamato al termine dell'animazione.
@@ -114,15 +114,15 @@ Queste animazioni si verificano in modo implicito specificando `NSAction` le mod
 pt = imgView.Center;
 
 UIView.Animate (
-    duration: 2, 
-    delay: 0, 
-    options: UIViewAnimationOptions.CurveEaseInOut | 
-        UIViewAnimationOptions.Autoreverse,
-    animation: () => {
-        imgView.Center = new CGPoint (View.Bounds.GetMaxX () 
-            - imgView.Frame.Width / 2, pt.Y);},
-    completion: () => {
-        imgView.Center = pt; }
+  duration: 2, 
+  delay: 0, 
+  options: UIViewAnimationOptions.CurveEaseInOut | 
+    UIViewAnimationOptions.Autoreverse,
+  animation: () => {
+    imgView.Center = new CGPoint (View.Bounds.GetMaxX () 
+      - imgView.Frame.Width / 2, pt.Y);},
+  completion: () => {
+    imgView.Center = pt; }
 );
 ```
 
@@ -153,17 +153,17 @@ Il codice seguente, ad esempio, imposta un livello `Contents` da un'immagine, im
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
+  base.ViewDidLoad ();
 
-    layer = new CALayer ();
-    layer.Bounds = new CGRect (0, 0, 50, 50);
-    layer.Position = new CGPoint (50, 50);
-    layer.Contents = UIImage.FromFile ("monkey2.png").CGImage;
-    layer.ContentsGravity = CALayer.GravityResize;
-    layer.BorderWidth = 1.5f;
-    layer.BorderColor = UIColor.Green.CGColor;
+  layer = new CALayer ();
+  layer.Bounds = new CGRect (0, 0, 50, 50);
+  layer.Position = new CGPoint (50, 50);
+  layer.Contents = UIImage.FromFile ("monkey2.png").CGImage;
+  layer.ContentsGravity = CALayer.GravityResize;
+  layer.BorderWidth = 1.5f;
+  layer.BorderColor = UIColor.Green.CGColor;
 
-    View.Layer.AddSublayer (layer);
+  View.Layer.AddSublayer (layer);
 }
 ```
 
@@ -172,14 +172,14 @@ Per aggiungere un'animazione implicita per il livello, è sufficiente eseguire i
 ```csharp
 public override void ViewDidAppear (bool animated)
 {
-    base.ViewDidAppear (animated);
+  base.ViewDidAppear (animated);
 
-    CATransaction.Begin ();
-    CATransaction.AnimationDuration = 10;
-    layer.Position = new CGPoint (50, 400);
-    layer.BorderWidth = 5.0f;
-    layer.BorderColor = UIColor.Red.CGColor;
-    CATransaction.Commit ();
+  CATransaction.Begin ();
+  CATransaction.AnimationDuration = 10;
+  layer.Position = new CGPoint (50, 400);
+  layer.BorderWidth = 5.0f;
+  layer.BorderColor = UIColor.Red.CGColor;
+  CATransaction.Commit ();
 }
 ```
 
@@ -202,29 +202,29 @@ Il codice seguente illustra un esempio di un'animazione esplicita che `CAKeyfram
 ```csharp
 public override void ViewDidAppear (bool animated)
 {
-    base.ViewDidAppear (animated);
-    
-    // get the initial value to start the animation from
-    CGPoint fromPt = layer.Position;
-    
-    /* set the position to coincide with the final animation value
-    to prevent it from snapping back to the starting position
-    after the animation completes*/
-    layer.Position = new CGPoint (200, 300);
-    
-    // create a path for the animation to follow
-    CGPath path = new CGPath ();
-    path.AddLines (new CGPoint[] { fromPt, new CGPoint (50, 300), new CGPoint (200, 50), new CGPoint (200, 300) });
-    
-    // create a keyframe animation for the position using the path
-    CAKeyFrameAnimation animPosition = (CAKeyFrameAnimation)CAKeyFrameAnimation.FromKeyPath ("position");
-    animPosition.Path = path;
-    animPosition.Duration = 2;
-    
-    // add the animation to the layer.
-    /* the "position" key is used to overwrite the implicit animation created
-    when the layer positino is set above*/
-    layer.AddAnimation (animPosition, "position");
+  base.ViewDidAppear (animated);
+  
+  // get the initial value to start the animation from
+  CGPoint fromPt = layer.Position;
+  
+  /* set the position to coincide with the final animation value
+  to prevent it from snapping back to the starting position
+  after the animation completes*/
+  layer.Position = new CGPoint (200, 300);
+  
+  // create a path for the animation to follow
+  CGPath path = new CGPath ();
+  path.AddLines (new CGPoint[] { fromPt, new CGPoint (50, 300), new CGPoint (200, 50), new CGPoint (200, 300) });
+  
+  // create a keyframe animation for the position using the path
+  CAKeyFrameAnimation animPosition = (CAKeyFrameAnimation)CAKeyFrameAnimation.FromKeyPath ("position");
+  animPosition.Path = path;
+  animPosition.Duration = 2;
+  
+  // add the animation to the layer.
+  /* the "position" key is used to overwrite the implicit animation created
+  when the layer positino is set above*/
+  layer.AddAnimation (animPosition, "position");
 }
 ```
 

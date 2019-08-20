@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 83b8b6b443a794b1001c581f45299dbd22133c80
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656425"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620516"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
 
@@ -47,12 +47,12 @@ A causa della natura di Apple Watch app, Apple suggerisce che la lunghezza ideal
 Apple ha aggiunto diverse nuove funzionalità e API a WatchKit per aiutare gli sviluppatori ad aggiungere interazioni rapide alle app Apple Watch:
 
 - watchos 3 consente di accedere ai nuovi tipi di input utente, ad esempio:
-    - Riconoscitori di movimento
-    - Rotazione Digital Crown 
+  - Riconoscitori di movimento
+  - Rotazione Digital Crown 
 - watchos 3 offre nuove modalità di visualizzazione e aggiornamento delle informazioni, ad esempio:
-    - Esplorazione avanzata delle tabelle
-    - Nuovo supporto per il Framework notifiche utente
-    - Integrazione di SpriteKit e SceneKit
+  - Esplorazione avanzata delle tabelle
+  - Nuovo supporto per il Framework notifiche utente
+  - Integrazione di SpriteKit e SceneKit
 
 Grazie all'implementazione di queste nuove funzionalità, lo sviluppatore può garantire che l'app watchos 3 sia rapida, interoperabile e reattiva.
 
@@ -63,11 +63,11 @@ Se lo sviluppatore ha implementato i riconoscitori di movimento in iOS, dovrebbe
 watchos 3 supporterà i quattro riconoscitori di movimento seguenti:
 
 - Tipi di movimenti discreti:
-    - Gesto di scorrimento (`WKSwipeGestureRecognizer`).
-    - Movimento TAP (`WKTapGestureRecognizer`).
+  - Gesto di scorrimento (`WKSwipeGestureRecognizer`).
+  - Movimento TAP (`WKTapGestureRecognizer`).
 - Tipi di movimento continuo:
-    - Movimento della panoramica (`WKPanGestureRecognizer`).
-    - Gesto con pressione prolungata`WKLongPressGestureRecognizer`().
+  - Movimento della panoramica (`WKPanGestureRecognizer`).
+  - Gesto con pressione prolungata`WKLongPressGestureRecognizer`().
 
 Per implementare uno dei nuovi riconoscitori di movimento, è sufficiente trascinarlo su un'area di progettazione in iOS designer in Visual Studio per Mac e configurarne le proprietà.
 
@@ -96,8 +96,8 @@ Quando si utilizzano i riconoscitori di movimento in watchos 3, Apple suggerisce
 - Aggiungere i riconoscitori di movimento agli elementi del gruppo anziché ai singoli controlli. Poiché il Apple Watch ha dimensioni di schermo fisico inferiori, gli elementi del gruppo tendono a essere più grandi e più semplici destinazioni che l'utente può raggiungere. Inoltre, i riconoscitori dei movimenti possono entrare in conflitto con i movimenti predefiniti già presenti nei controlli dell'interfaccia utente nativi.
 - Impostare le relazioni di dipendenza nello storyboard dell'app Watch.
 - Alcuni movimenti hanno la precedenza su altri tipi di movimento, ad esempio:
-    - Scorrimento
-    - Force Touch
+  - Scorrimento
+  - Force Touch
  
 ### <a name="digital-crown-rotation"></a>Rotazione Digital Crown
 
@@ -137,28 +137,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-    public class CrownDelegate : WKCrownDelegate
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
+
+    #region Constructors
+    public CrownDelegate ()
     {
-        #region Computed Properties
-        public double AccumulatedRotations { get; set;}
-        #endregion
-
-        #region Constructors
-        public CrownDelegate ()
-        {
-        }
-        #endregion
-
-        #region Override Methods
-        public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-        {
-            base.CrownDidRotate (crownSequencer, rotationalDelta);
-
-            // Accumulate rotations
-            AccumulatedRotations += rotationalDelta;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
+
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -225,8 +225,8 @@ Di seguito è riportata una tipica interazione rapida di notifica:
 - Per una notifica ben definita e presentata, l'utente non eseguirà alcuna operazione e chiuderà semplicemente la notifica.
 - Potrebbero anche toccare la notifica per avviare l'app watchos.
 - Per una notifica che supporta azioni personalizzate, l'utente potrebbe selezionare una delle azioni personalizzate. I possibili valori sono i seguenti:
-    - **Azioni in primo piano** : avviano l'app per eseguire l'azione.
-    - **Azioni in background** : sono sempre state indirizzate all'iPhone in watchos 2 ma possono essere indirizzate a watchApp in watchos 3.
+  - **Azioni in primo piano** : avviano l'app per eseguire l'azione.
+  - **Azioni in background** : sono sempre state indirizzate all'iPhone in watchos 2 ma possono essere indirizzate a watchApp in watchos 3.
 
 Novità per watchos 3:
 

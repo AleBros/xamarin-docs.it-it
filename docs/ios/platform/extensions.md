@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 4137ce7542a213a0a4c27b6a66b38828e4646520
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653473"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621087"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni iOS in Novell. iOS
 
@@ -91,13 +91,13 @@ Il progetto dell'estensione, inoltre, presenta i requisiti seguenti:
 
 - Deve avere un identificatore del bundle che inizia con l'identificatore del bundle dell'app contenitore. Se ad esempio l'identificatore `com.myCompany.ContainerApp`del bundle dell'app contenitore è, l'identificatore dell'estensione potrebbe essere: `com.myCompany.ContainerApp.MyExtension` 
 
-    ![](extensions-images/bundleidentifiers.png) 
+  ![](extensions-images/bundleidentifiers.png) 
 - `NSExtensionPointIdentifier`Deve definire la chiave, con un valore appropriato, `com.apple.widget-extension` ad esempio per un widget del centro `Info.plist` notifiche di oggi, nel file.
-- Deve *anche definire la* `NSExtensionMainStoryboard` chiave o `Info.plist` la `NSExtensionPrincipalClass` chiave nel file con un valore appropriato:
-    - Usare la `NSExtensionMainStoryboard` chiave per specificare il nome dello storyboard che presenta l'interfaccia utente principale per l'estensione (meno `.storyboard`). Ad esempio, `Main` per il `Main.storyboard` file.
-    - Usare la `NSExtensionPrincipalClass` chiave per specificare la classe che verrà inizializzata quando viene avviata l'estensione. Il valore deve corrispondere al valore del **Registro** del `UIViewController`: 
+- Deve anche definire la `NSExtensionMainStoryboard` chiave o `Info.plist` la `NSExtensionPrincipalClass` chiave nel file con un valore appropriato:
+  - Usare la `NSExtensionMainStoryboard` chiave per specificare il nome dello storyboard che presenta l'interfaccia utente principale per l'estensione (meno `.storyboard`). Ad esempio, `Main` per il `Main.storyboard` file.
+  - Usare la `NSExtensionPrincipalClass` chiave per specificare la classe che verrà inizializzata quando viene avviata l'estensione. Il valore deve corrispondere al valore del **Registro** del `UIViewController`: 
 
-    ![](extensions-images/registerandprincipalclass.png)
+  ![](extensions-images/registerandprincipalclass.png)
 
 Tipi specifici di estensioni possono avere requisiti aggiuntivi. Ad esempio, una classe principale dell'estensione **Today** o **Notification Center** deve implementare [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
@@ -182,28 +182,28 @@ using CoreGraphics;
 
 namespace DaysRemaining
 {
-    [Register("CodeBasedViewController")]
-    public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  [Register("CodeBasedViewController")]
+  public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  {
+    public CodeBasedViewController ()
     {
-        public CodeBasedViewController ()
-        {
-        }
-
-        public override void ViewDidLoad ()
-        {
-            base.ViewDidLoad ();
-
-            // Add label to view
-            var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
-                TextAlignment = UITextAlignment.Center
-            };
-
-            View.AddSubview (TodayMessage);
-            
-            // Insert code to power extension here...
-
-        }
     }
+
+    public override void ViewDidLoad ()
+    {
+      base.ViewDidLoad ();
+
+      // Add label to view
+      var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
+        TextAlignment = UITextAlignment.Center
+      };
+
+      View.AddSubview (TodayMessage);
+
+      // Insert code to power extension here...
+
+    }
+  }
 }
 ```
 
@@ -216,19 +216,19 @@ Con l'interfaccia utente creata, aprire il `TodayViewController.cs` `CodeBasedVi
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
+  base.ViewDidLoad ();
 
-    // Calculate the values
-    var dayOfYear = DateTime.Now.DayOfYear;
-    var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
-    var daysRemaining = 365 + leapYearExtra - dayOfYear;
+  // Calculate the values
+  var dayOfYear = DateTime.Now.DayOfYear;
+  var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
+  var daysRemaining = 365 + leapYearExtra - dayOfYear;
 
-    // Display the message
-    if (daysRemaining == 1) {
-        TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
-    } else {
-        TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
-    }
+  // Display the message
+  if (daysRemaining == 1) {
+    TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
+  } else {
+    TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
+  }
 }
 ```
 
