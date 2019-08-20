@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 518c13aea431a8e973579768cc70b8281a31acac
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: a937de27fc032b0d88dfdf717339b47e0df8e58d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674724"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644624"
 ---
-# <a name="edit-text"></a>Modifica testo
+# <a name="xamarinandroid-edit-text"></a>Testo di modifica di Novell. Android
 
-In questa sezione si userà il [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) widget per creare un campo di testo per l'input utente. Dopo che è stato immesso nel campo, il **invio** chiave verrà visualizzato il testo in un messaggio di tipo avviso popup.
+In questa sezione si userà il widget [EDITTEXT](xref:Android.Widget.EditText) per creare un campo di testo per l'input dell'utente. Una volta immesso il testo nel campo, il tasto **invio** visualizzerà il testo in un messaggio di avviso popup.
 
-Aprire **Resources/layout/activity_main.axml** e aggiungere il [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) elemento a un layout che lo contiene. Nell'esempio seguente **activity_main.axml** dispone di un `EditText` che è stato aggiunto a un `LinearLayout`:
+Aprire **Resources/layout/activity_main. aXML** e aggiungere l'elemento [EDITTEXT](xref:Android.Widget.EditText) a un layout contenitore. Nell'esempio seguente **activity_main. aXML** è `EditText` stato aggiunto a un `LinearLayout`oggetto:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,10 +35,10 @@ Aprire **Resources/layout/activity_main.axml** e aggiungere il [EditText](https:
 </LinearLayout>
 ```
 
-In questo esempio di codice, il `EditText` attributo `android:imeOptions` è impostata su `actionGo`. Questa impostazione viene modificata l'impostazione predefinita [eseguita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) azione per il [passare](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) azione in modo che se si tocca i **invio** trigger della chiave il `KeyPress` gestore di input.
-(In genere `actionGo` viene usato in modo che il **invio** chiave richiede all'utente di destinazione di un URL immesso nel.)
+In questo esempio di codice, `EditText` l' `android:imeOptions` attributo è impostato `actionGo`su. Questa impostazione consente di modificare l'azione predefinita [eseguita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) nell'azione [go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) , in modo che il tasto **invio** attivi `KeyPress` il gestore di input.
+`actionGo` Viene in genere utilizzato in modo che il tasto **invio immetta** all'utente la destinazione di un URL digitato.
 
-Per gestire l'input di testo dell'utente, aggiungere il codice seguente alla fine della [OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/) metodo nella **MainActivity.cs**:
+Per gestire l'input di testo dell'utente, aggiungere il codice seguente alla fine del metodo [OnCreate](xref:Android.App.Activity.OnCreate*) in **MainActivity.cs**:
 
 ```csharp
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
@@ -52,21 +52,21 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 };
 ```
 
-Inoltre, aggiungere quanto segue `using` all'inizio dell'istruzione **MainActivity.cs** se non è già presente:
+Aggiungere inoltre l'istruzione seguente `using` all'inizio di **MainActivity.cs** , se non è già presente:
 
 ```csharp
 using Android.Views;
 ```
 
-Questo esempio di codice la ingrandisce il [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) elemento dal layout e aggiunge un [KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/) gestore che definisce l'azione che deve essere effettuata quando viene premuto un tasto mentre il widget ha lo stato attivo. In questo caso, il metodo è definito per l'ascolto per il **invio** chiave (quando si tocca) e quindi visualizzata la un [tipo avviso popup](https://developer.xamarin.com/api/type/Android.Widget.Toast/) messaggio con il testo che è stata immessa. Si noti che il [Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/) proprietà dovrebbe sempre essere `true` se l'evento è stato gestito. Questa operazione è necessaria per impedire l'evento di bubbling remote (che comporterebbero un ritorno a capo nel campo di testo).
+Questo esempio di codice consente di ingrandire l'elemento [EDITTEXT](xref:Android.Widget.EditText) dal layout e di aggiungere un gestore [KeyPress](xref:Android.Views.View.KeyPress) che definisce l'azione da effettuare quando si preme un tasto mentre il widget ha lo stato attivo. In questo caso, il metodo viene definito per restare in attesa del tasto **invio** (quando viene toccato) e quindi [visualizzare un messaggio](xref:Android.Widget.Toast) popup con il testo immesso. Si noti che la proprietà [Handled](xref:Android.Views.View.KeyEventArgs.Handled) deve essere sempre `true` se l'evento è stato gestito. Questa operazione è necessaria per impedire che l'evento venga bubbling (che comporterebbe un ritorno a capo nel campo di testo).
 
-Eseguire l'applicazione e immettere il testo nel campo di testo. Quando si preme il **invio** chiave, di tipo avviso popup verrà visualizzato come illustrato a destra:
+Eseguire l'applicazione e immettere testo nel campo di testo. Quando si preme il tasto **invio** , il popup verrà visualizzato come mostrato a destra:
 
 [![Esempi di immissione di testo in EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e* [ *condiviso da Android Open Source Project* ](http://code.google.com/policies.html) *e usate in base a condizioni descritte nel* [ *Licenza di attribuzione creative Commons 2.5* ](http://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione si basa sul* [ *esercitazione Android cose modulo* ](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Parti di questa pagina sono modifiche basate sul lavoro creato e* [*condiviso dal progetto open source Android*](http://code.google.com/policies.html) *e usati in base alle condizioni descritte nel* [*Licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione è basata sull'esercitazione* relativa ai [*moduli Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [EditTextSample](https://developer.xamarin.com/samples/monodroid/UserInterface/EditTextSample/)
+- [EditTextSample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-edittextsample)
