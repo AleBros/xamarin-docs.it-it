@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 2b8e524d95fb60c8eb45b3dd5b64b68469d97ad1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510736"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524844"
 ---
 # <a name="architecture"></a>Architettura
 
@@ -33,12 +33,11 @@ Per altre informazioni sul modo in cui le classi Android comunicano con le class
 
 I pacchetti di applicazioni Android sono contenitori ZIP con estensione *apk* . I pacchetti dell'applicazione Novell. Android hanno la stessa struttura e il layout dei normali pacchetti Android, con le aggiunte seguenti:
 
--   Gli assembly dell'applicazione (contenenti IL) vengono *archiviati* non compressi nella cartella degli *assembly* . Durante l'avvio del processo nelle build di rilascio, il file con *estensione APK* è *mmap ()* ed è nel processo e gli assembly vengono caricati dalla memoria. Questo consente un avvio più veloce delle app, perché non è necessario estrarre gli assembly prima dell'esecuzione.  
--   *Nota:* Informazioni sul percorso degli assembly, ad esempio [assembly. location](xref:System.Reflection.Assembly.Location) e [assembly.](xref:System.Reflection.Assembly.CodeBase)
-    *non è possibile fare affidamento su* codebase nelle build di rilascio. Non esistono come voci di file System distinte e non hanno un percorso utilizzabile.
+- Gli assembly dell'applicazione (contenenti IL) vengono *archiviati* non compressi nella cartella degli *assembly* . Durante l'avvio del processo nelle build di rilascio, il file con *estensione APK* è *mmap ()* ed è nel processo e gli assembly vengono caricati dalla memoria. Questo consente un avvio più veloce delle app, perché non è necessario estrarre gli assembly prima dell'esecuzione.  
+- *Nota:* Informazioni sul percorso degli assembly, ad esempio [assembly. location](xref:System.Reflection.Assembly.Location) e [assembly.](xref:System.Reflection.Assembly.CodeBase) *non è possibile fare affidamento su* codebase nelle build di rilascio. Non esistono come voci di file System distinte e non hanno un percorso utilizzabile.
 
 
--   Le librerie native che contengono il runtime di mono sono presenti nel file con *estensione APK* . Un'applicazione Novell. Android deve contenere librerie native per le architetture Android desiderate/di destinazione, ad esempio *ARMEABI* , *ARMEABI-v7a* , *x86* . Le applicazioni Novell. Android non possono essere eseguite su una piattaforma a meno che non contenga le librerie di runtime appropriate.
+- Le librerie native che contengono il runtime di mono sono presenti nel file con *estensione APK* . Un'applicazione Novell. Android deve contenere librerie native per le architetture Android desiderate/di destinazione, ad esempio *ARMEABI* , *ARMEABI-v7a* , *x86* . Le applicazioni Novell. Android non possono essere eseguite su una piattaforma a meno che non contenga le librerie di runtime appropriate.
 
 
 Le applicazioni Novell. Android contengono anche i *wrapper richiamabili Android* per consentire a Android di effettuare chiamate nel codice gestito.
@@ -94,23 +93,23 @@ Questa operazione è supportata dalla creazione di un'istanza di LogTextBox tram
 
 Ordine degli eventi:
 
-1.  Il layout XML viene caricato in un [contentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
+1. Il layout XML viene caricato in un [contentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
 
-2.  Android crea un'istanza dell'oggetto layout Graph e crea un'istanza di *monodroid. apidemo. LogTextBox* , ACW per *LogTextBox* .
+2. Android crea un'istanza dell'oggetto layout Graph e crea un'istanza di *monodroid. apidemo. LogTextBox* , ACW per *LogTextBox* .
 
-3.  Il costruttore *monodroid. apidemo. LogTextBox* esegue il costruttore [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
+3. Il costruttore *monodroid. apidemo. LogTextBox* esegue il costruttore [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
 
-4.  Il Costruttore TextView richiama *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
+4. Il Costruttore TextView richiama *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
 
-5.  *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* richiama *LogTextBox. n_getDefaultMovementMethod ()* , che richiama TextView *. n_getDefaultMovementMethod ()* , che richiama [java. lang. Object. GetObject&lt; &gt; TextView (handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* richiama *LogTextBox. n_getDefaultMovementMethod ()* , che richiama TextView *. n_getDefaultMovementMethod ()* , che richiama [java. lang. Object. GetObject&lt; &gt; TextView (handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
 
-6.  *Java. lang. Object. GetObject&lt;TextView&gt;()* verifica se esiste già un'istanza corrispondente C# per *handle* . In caso contrario, viene restituito. In questo scenario non è presente, quindi *Object. GetObject&lt;t&gt;()* deve crearne uno.
+6. *Java. lang. Object. GetObject&lt;TextView&gt;()* verifica se esiste già un'istanza corrispondente C# per *handle* . In caso contrario, viene restituito. In questo scenario non è presente, quindi *Object. GetObject&lt;t&gt;()* deve crearne uno.
 
-7.  *Object. GetObject&lt;T&gt;()* Cerca il costruttore *LogTextBox (IntPtr, JniHandleOwneship)* , lo richiama, crea un mapping tra *handle* e l'istanza creata e restituisce l'istanza creata.
+7. *Object. GetObject&lt;T&gt;()* Cerca il costruttore *LogTextBox (IntPtr, JniHandleOwneship)* , lo richiama, crea un mapping tra *handle* e l'istanza creata e restituisce l'istanza creata.
 
-8.  *TextView. n_GetDefaultMovementMethod ()* richiama il getter della proprietà *LogTextBox. DefaultMovementMethod* .
+8. *TextView. n_GetDefaultMovementMethod ()* richiama il getter della proprietà *LogTextBox. DefaultMovementMethod* .
 
-9.  Il controllo viene restituito al costruttore *Android. widget. TextView* , che termina l'esecuzione.
+9. Il controllo viene restituito al costruttore *Android. widget. TextView* , che termina l'esecuzione.
 
 10. Il costruttore *monodroid. apidemo. LogTextBox* viene eseguito, richiamando *TypeManager. Activate ()* .
 

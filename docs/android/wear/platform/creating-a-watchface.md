@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: 52891a11dcc271497031658d0eff9f98a01d3555
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647874"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522247"
 ---
 # <a name="creating-a-watch-face"></a>Creazione di una watch face
 
@@ -35,9 +35,9 @@ I servizi Watch Face sono aggregati e installati come parte di un'app Wear 1,0. 
 
 Per implementare un servizio di controllo del viso, è necessario quanto segue:
 
--   Android 5,0 (livello API 21) o versione successiva nel dispositivo o nell'emulatore Wear.
+- Android 5,0 (livello API 21) o versione successiva nel dispositivo o nell'emulatore Wear.
 
--   È necessario aggiungere le [librerie di supporto Novell Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear) al progetto Novell. Android.
+- È necessario aggiungere le [librerie di supporto Novell Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear) al progetto Novell. Android.
 
 Sebbene Android 5,0 sia il livello API minimo per l'implementazione di un servizio Watch Face, è consigliabile Android 5,1 o versione successiva. I dispositivi Android Wear che eseguono Android 5,1 (API 22) o versioni successive consentono di usare app per il controllo di ciò che viene visualizzato sullo schermo quando il dispositivo è in modalità di *ambiente* a basso consumo. Quando il dispositivo lascia la modalità di *ambiente* a basso consumo, è in modalità *interattiva* . Per altre informazioni su queste modalità, vedere [mantenere visibile l'app](https://developer.android.com/training/wearables/apps/always-on.html).
 
@@ -127,17 +127,17 @@ Non illustrato in questo diagramma è un `Canvas` oggetto `CanvasWatchFaceServic
 
 Nelle sezioni seguenti viene creato un servizio di controllo del viso personalizzato attenendosi alla procedura seguente:
 
-1.  Definire una classe denominata `MyWatchFaceService` derivata da. `CanvasWatchFaceService`
+1. Definire una classe denominata `MyWatchFaceService` derivata da. `CanvasWatchFaceService`
 
-2.  In `MyWatchFaceService`creare una classe annidata denominata `MyWatchFaceEngine` derivata da `CanvasWatchFaceService.Engine`.
+2. In `MyWatchFaceService`creare una classe annidata denominata `MyWatchFaceEngine` derivata da `CanvasWatchFaceService.Engine`.
 
-3.  In `MyWatchFaceService`implementare un `CreateEngine` metodo che crea un'istanza `MyWatchFaceEngine` di e lo restituisce.
+3. In `MyWatchFaceService`implementare un `CreateEngine` metodo che crea un'istanza `MyWatchFaceEngine` di e lo restituisce.
 
-4.  In `MyWatchFaceEngine`implementare il `OnCreate` metodo per creare lo stile del quadrante dell'espressione di controllo ed eseguire altre attività di inizializzazione.
+4. In `MyWatchFaceEngine`implementare il `OnCreate` metodo per creare lo stile del quadrante dell'espressione di controllo ed eseguire altre attività di inizializzazione.
 
-5.  Implementare il `OnDraw` metodo di `MyWatchFaceEngine`. Questo metodo viene chiamato ogni volta che è necessario ricreare il quadrante dell'orologio (ovveroinvalidato). `OnDraw`è il metodo che disegna (e ridisegna) gli elementi del quadrante dell'orologio, ad esempio hour, minute e second hands.
+5. Implementare il `OnDraw` metodo di `MyWatchFaceEngine`. Questo metodo viene chiamato ogni volta che è necessario ricreare il quadrante dell'orologio (ovveroinvalidato). `OnDraw`è il metodo che disegna (e ridisegna) gli elementi del quadrante dell'orologio, ad esempio hour, minute e second hands.
 
-6.  Implementare il `OnTimeTick` metodo di `MyWatchFaceEngine`.
+6. Implementare il `OnTimeTick` metodo di `MyWatchFaceEngine`.
     `OnTimeTick`viene chiamato almeno una volta al minuto (in modalità ambiente e interattivo) o quando la data/ora è cambiata.
 
 Per altre informazioni su `CanvasWatchFaceService`, vedere la documentazione dell'API [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) per Android.
@@ -222,11 +222,11 @@ public override void OnCreate(ISurfaceHolder holder)
 
 La chiamata a `SetWatchFaceStyle` esegue le operazioni seguenti:
 
-1.  Imposta la *modalità* di `PeekModeShort`visualizzazione su, che fa sì che le notifiche vengano visualizzate come piccole schede "Peek" sullo schermo.
+1. Imposta la *modalità* di `PeekModeShort`visualizzazione su, che fa sì che le notifiche vengano visualizzate come piccole schede "Peek" sullo schermo.
 
-2.  Imposta la visibilità dello sfondo `Interruptive`su, che fa sì che lo sfondo di una scheda di anteprima venga visualizzato solo brevemente se rappresenta una notifica di interruzione.
+2. Imposta la visibilità dello sfondo `Interruptive`su, che fa sì che lo sfondo di una scheda di anteprima venga visualizzato solo brevemente se rappresenta una notifica di interruzione.
 
-3.  Disabilita l'ora dell'interfaccia utente di sistema predefinita da disegnare sul quadrante dell'orologio, in modo che il quadrante dell'orologio personalizzato possa visualizzare l'ora.
+3. Disabilita l'ora dell'interfaccia utente di sistema predefinita da disegnare sul quadrante dell'orologio, in modo che il quadrante dell'orologio personalizzato possa visualizzare l'ora.
 
 Per ulteriori informazioni su queste e altre opzioni relative allo stile del quadrante, vedere la documentazione dell'API Android [WatchFaceStyle. Builder](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) .
 
@@ -237,7 +237,7 @@ Al termine dell' operazione `SetWatchFaceStyle`, `OnCreate` crea un'istanza dell
 
 Il `OnDraw` metodo è forse il metodo più `CanvasWatchFaceService.Engine` &ndash; importante che è il metodo che disegna effettivamente gli elementi del quadrante di controllo, ad esempio cifre e lancetta del clock.
 Nell'esempio seguente viene disegnata una stringa di tempo sul quadrante dell'orologio.
-Aggiungere il seguente metodo a `MyWatchFaceEngine`:
+Aggiungere il metodo seguente a `MyWatchFaceEngine`:
 
 ```csharp
 public override void OnDraw (Canvas canvas, Rect frame)
@@ -256,7 +256,7 @@ Per ulteriori informazioni sul metodo `OnDraw`, vedere la documentazione relativ
 
 ### <a name="implement-the-engine-ontimetick-method"></a>Implementare il metodo OnTimeTick del motore
 
-Android chiama periodicamente il `OnTimeTick` metodo per aggiornare l'ora visualizzata dal quadrante dell'orologio. Viene chiamato almeno una volta al minuto (sia in modalità ambiente che interattiva) oppure quando la data/ora o il fuso orario è stato modificato. Aggiungere il seguente metodo a `MyWatchFaceEngine`:
+Android chiama periodicamente il `OnTimeTick` metodo per aggiornare l'ora visualizzata dal quadrante dell'orologio. Viene chiamato almeno una volta al minuto (sia in modalità ambiente che interattiva) oppure quando la data/ora o il fuso orario è stato modificato. Aggiungere il metodo seguente a `MyWatchFaceEngine`:
 
 ```csharp
 public override void OnTimeTick()
@@ -296,13 +296,13 @@ Per ulteriori informazioni sul `OnTimeTick` metodo, vedere la documentazione del
 
 Questo codice XML esegue le operazioni seguenti:
 
-1.  Imposta l' `android.permission.BIND_WALLPAPER` autorizzazione. Questa autorizzazione concede al servizio di controllo dell'espressione l'autorizzazione per modificare lo sfondo del sistema nel dispositivo. Si noti che questa autorizzazione deve essere impostata nella `<service>` sezione piuttosto che nella sezione esterna `<application>` .
+1. Imposta l' `android.permission.BIND_WALLPAPER` autorizzazione. Questa autorizzazione concede al servizio di controllo dell'espressione l'autorizzazione per modificare lo sfondo del sistema nel dispositivo. Si noti che questa autorizzazione deve essere impostata nella `<service>` sezione piuttosto che nella sezione esterna `<application>` .
 
-2.  Definisce una `watch_face` risorsa. Questa risorsa è un file XML breve che dichiara una `wallpaper` risorsa (il file verrà creato nella sezione successiva).
+2. Definisce una `watch_face` risorsa. Questa risorsa è un file XML breve che dichiara una `wallpaper` risorsa (il file verrà creato nella sezione successiva).
 
-3.  Dichiara un'immagine disegnatore denominata `preview` che verrà visualizzata dalla schermata di selezione della selezione del controllo.
+3. Dichiara un'immagine disegnatore denominata `preview` che verrà visualizzata dalla schermata di selezione della selezione del controllo.
 
-4.  Include un `intent-filter` per informare Android che `MyWatchFaceService` verrà visualizzato un quadrante dell'orologio.
+4. Include un `intent-filter` per informare Android che `MyWatchFaceService` verrà visualizzato un quadrante dell'orologio.
 
 Che completa il codice per l'esempio di `WatchFace` base. Il passaggio successivo consiste nell'aggiungere le risorse necessarie.
 
@@ -338,17 +338,17 @@ Installarlo in **Resources/disegnator/Preview. png**. Assicurarsi di aggiungere 
 
 Compilare e distribuire l'app nel dispositivo Wear. Verrà visualizzata la schermata Wear app come prima. Per abilitare la nuova espressione di controllo, eseguire le operazioni seguenti:
 
-1.  Scorrere verso destra fino a visualizzare lo sfondo della schermata espressioni di controllo.
+1. Scorrere verso destra fino a visualizzare lo sfondo della schermata espressioni di controllo.
 
-2.  Toccare e mantenere in qualsiasi punto lo sfondo dello schermo per due secondi.
+2. Toccare e mantenere in qualsiasi punto lo sfondo dello schermo per due secondi.
 
-3.  Scorrere rapidamente da sinistra verso destra per esplorare i vari visi.
+3. Scorrere rapidamente da sinistra verso destra per esplorare i vari visi.
 
-4.  Selezionare l'espressione di controllo di **esempio Novell** (visualizzata a destra):
+4. Selezionare l'espressione di controllo di **esempio Novell** (visualizzata a destra):
 
     [![Selezione Watchface](creating-a-watchface-images/11-watchface-picker.png "Scorrere rapidamente per individuare il quadrante dell'orologio di esempio Novell")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5.  Toccare l'espressione di controllo di **esempio Novell** per selezionarla.
+5. Toccare l'espressione di controllo di **esempio Novell** per selezionarla.
 
 In questo modo il quadrante dell'orologio del dispositivo Wear viene modificato per l'uso del servizio di controllo del viso personalizzato implementato fino a questo punto:
 
@@ -364,15 +364,15 @@ Nella sezione successiva questa espressione di controllo verrà aggiornata a un'
 
 Nella parte restante di questa procedura `MyWatchFaceService` dettagliata, viene aggiornato per visualizzare un quadrante di espressione di controllo analogo ed è esteso per supportare più funzionalità. Verranno aggiunte le funzionalità seguenti per creare il quadrante dell'orologio aggiornato:
 
-1.  Indica l'ora con l'ora, il minuto e il secondo lancette analoghi.
+1. Indica l'ora con l'ora, il minuto e il secondo lancette analoghi.
 
-2.  Reagisce alle modifiche della visibilità.
+2. Reagisce alle modifiche della visibilità.
 
-3.  Risponde alle modifiche tra la modalità ambiente e la modalità interattiva.
+3. Risponde alle modifiche tra la modalità ambiente e la modalità interattiva.
 
-4.  Legge le proprietà del dispositivo di usura sottostante.
+4. Legge le proprietà del dispositivo di usura sottostante.
 
-5.  Aggiorna automaticamente l'ora in cui viene apportata una modifica del fuso orario.
+5. Aggiorna automaticamente l'ora in cui viene apportata una modifica del fuso orario.
 
 Prima di implementare le modifiche al codice seguenti, scaricare il file con [estensione zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), decomprimerlo e spostare i file con estensione png decompressi in Resources **/disegnator** (sovrascrivere il file **Preview. png**precedente). Aggiungere i nuovi file con estensione png al `WatchFace` progetto.
 
@@ -387,13 +387,13 @@ Questa versione di **MyWatchFaceService.cs** aggiunge altro codice ai metodi esi
 
 Il metodo oncreat aggiornato configura lo stile del quadrante dell'espressione di controllo come prima, ma include alcuni passaggi aggiuntivi:
 
-1.  Imposta l'immagine di sfondo sulla risorsa **xamarin_background** che risiede in Resources **/drawable-HDPI/xamarin_background. png**.
+1. Imposta l'immagine di sfondo sulla risorsa **xamarin_background** che risiede in Resources **/drawable-HDPI/xamarin_background. png**.
 
-2.  Inizializza `Paint` gli oggetti per disegnare la lancetta dell'ora, la lancetta dei minuti e la seconda mano.
+2. Inizializza `Paint` gli oggetti per disegnare la lancetta dell'ora, la lancetta dei minuti e la seconda mano.
 
-3.  Inizializza un `Paint` oggetto per disegnare i segni di ora intorno al bordo del quadrante dell'orologio.
+3. Inizializza un `Paint` oggetto per disegnare i segni di ora intorno al bordo del quadrante dell'orologio.
 
-4.  Crea un timer che chiama il `Invalidate` metodo (ridisegnato) in modo che la seconda mano venga ridisegnato ogni secondo. Si noti che questo timer è necessario `OnTimeTick` perché `Invalidate` chiama una sola volta ogni minuto.
+4. Crea un timer che chiama il `Invalidate` metodo (ridisegnato) in modo che la seconda mano venga ridisegnato ogni secondo. Si noti che questo timer è necessario `OnTimeTick` perché `Invalidate` chiama una sola volta ogni minuto.
 
 Questo esempio include solo un'immagine **xamarin_background. png** ; Tuttavia, potrebbe essere necessario creare un'immagine di sfondo diversa per ogni densità dello schermo supportata dal quadrante dell'orologio personalizzato.
 
@@ -401,17 +401,17 @@ Questo esempio include solo un'immagine **xamarin_background. png** ; Tuttavia, 
 
 Il metodo **OnDraw** aggiornato disegna un tipo di espressione di controllo analogo attenendosi alla procedura seguente:
 
-1.  Ottiene l'ora corrente, ora gestita in un `time` oggetto.
+1. Ottiene l'ora corrente, ora gestita in un `time` oggetto.
 
-2.  Determina i limiti della superficie di disegno e del relativo centro.
+2. Determina i limiti della superficie di disegno e del relativo centro.
 
-3.  Disegna lo sfondo, ridimensionato per adattarsi al dispositivo quando viene disegnato lo sfondo.
+3. Disegna lo sfondo, ridimensionato per adattarsi al dispositivo quando viene disegnato lo sfondo.
 
-4.  Disegna dodici *tick* intorno al quadrante dell'orologio, corrispondente alle ore sul quadrante dell'orologio.
+4. Disegna dodici *tick* intorno al quadrante dell'orologio, corrispondente alle ore sul quadrante dell'orologio.
 
-5.  Calcola l'angolo, la rotazione e la lunghezza per ogni mano del controllo.
+5. Calcola l'angolo, la rotazione e la lunghezza per ogni mano del controllo.
 
-6.  Disegna ogni mano sull'area di controllo. Si noti che la seconda mano non viene disegnata se l'espressione di controllo è in modalità ambiente.
+6. Disegna ogni mano sull'area di controllo. Si noti che la seconda mano non viene disegnata se l'espressione di controllo è in modalità ambiente.
 
 
 #### <a name="onpropertieschanged"></a>OnPropertiesChanged

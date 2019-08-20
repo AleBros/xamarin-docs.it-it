@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: d81435f7d693204a76249fc3fa6953766f7ab59a
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
-ms.translationtype: HT
+ms.openlocfilehash: 16708ad1d26c9d7394ad95b2d449ca304534a2bd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012471"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528870"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Messaggi di errore di Novell. Mac (MMP)
 
@@ -103,7 +103,7 @@ Si è verificato un errore durante il caricamento degli assembly dai riferimenti
 
 <a name="MM0056" />
 
-#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: Xcode non è stato trovato nei percorsi predefiniti. Installare Xcode o passare un percorso personalizzato usando--sdkroot =<path>
+#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: Xcode non è stato trovato nei percorsi predefiniti. Installare Xcode o passare un percorso personalizzato usando--sdkroot =\<path >
 
 <a name="MM0059" />
 
@@ -566,7 +566,7 @@ Vedere l' [avviso mTouch equivalente](~/ios/troubleshooting/mtouch-errors.md#MT5
 
 <a name="MM5309" />
 
-#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309: Il collegamento nativo non è riuscito con codice di errore 1.  Per informazioni dettagliate, controllare il log di compilazione.
+#### <a name="mm5309-native-linking-failed-with-error-code-1-check-build-log-for-details"></a>MM5309: Il collegamento nativo non è riuscito con codice di errore 1. Per informazioni dettagliate, controllare il log di compilazione.
 
 <a name="MM5310" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: f57736238fc01d865d7655d72da427e2c18dca59
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
-ms.translationtype: HT
+ms.openlocfilehash: 5fccc07d35eda1ba420f48a8058d8d2a00b18fd9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68757253"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523193"
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
 
@@ -22,9 +22,9 @@ ms.locfileid: "68757253"
 Novell. Android presenta alcune posizioni da considerare quando si verificano diversi bug.
 Sono inclusi:
 
-1.  Output di MSBuild di diagnostica.
-2.  Log di distribuzione del dispositivo.
-3.  Output del log di debug Android.
+1. Output di MSBuild di diagnostica.
+2. Log di distribuzione del dispositivo.
+3. Output del log di debug Android.
 
 
 <a name="Diagnostic_MSBuild_Output" />
@@ -35,23 +35,23 @@ MSBuild di diagnostica può contenere informazioni aggiuntive relative alla comp
 
 Per abilitare l'output di MSBuild di diagnostica in Visual Studio:
 
-1.  Fare clic su **strumenti > opzioni...**
-2.  Nella visualizzazione albero a sinistra selezionare **progetti e soluzioni > compila ed Esegui**
-3.  Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dell'output di compilazione di MSBuild su diagnostica
-4.  Fare clic su **OK**
-5.  Pulire e ricompilare il pacchetto.
-6.  L'output di diagnostica è visibile all'interno del pannello di output.
+1. Fare clic su **strumenti > opzioni...**
+2. Nella visualizzazione albero a sinistra selezionare **progetti e soluzioni > compila ed Esegui**
+3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dell'output di compilazione di MSBuild su diagnostica
+4. Fare clic su **OK**
+5. Pulire e ricompilare il pacchetto.
+6. L'output di diagnostica è visibile all'interno del pannello di output.
 
 
 Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS X:
 
-1.  Fare clic su **Visual Studio per Mac > preferenze...**
-2.  Nella visualizzazione albero a sinistra selezionare **progetti > compila**
-3.  Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dei log su diagnostica
-4.  Fare clic su **OK**
-5.  Riavviare Visual Studio per Mac
-6.  Pulire e ricompilare il pacchetto.
-7.  L'output di diagnostica è visibile all'interno del riquadro errori (**visualizzare > rilievi > errori** ) facendo clic sul pulsante output compilazione.
+1. Fare clic su **Visual Studio per Mac > preferenze...**
+2. Nella visualizzazione albero a sinistra selezionare **progetti > compila**
+3. Nel pannello a destra impostare l'elenco a discesa del livello di dettaglio dei log su diagnostica
+4. Fare clic su **OK**
+5. Riavviare Visual Studio per Mac
+6. Pulire e ricompilare il pacchetto.
+7. L'output di diagnostica è visibile all'interno del riquadro errori (**visualizzare > rilievi > errori** ) facendo clic sul pulsante output compilazione.
 
 
 
@@ -60,16 +60,16 @@ Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS 
 
 Per abilitare la registrazione della distribuzione dei dispositivi in Visual Studio:
 
-1.  **Strumenti > Opzioni...** >
-2.  Nella visualizzazione albero a sinistra selezionare **novell > Android Settings**
-3.  Nel pannello a destra abilitare la casella di controllo [X] **Extension Debug Logging (scrive monodroid. log nel desktop)** .
-4.  I messaggi di log vengono scritti nel file monodroid. log sul desktop.
+1. **Strumenti > Opzioni...** >
+2. Nella visualizzazione albero a sinistra selezionare **novell > Android Settings**
+3. Nel pannello a destra abilitare la casella di controllo [X] **Extension Debug Logging (scrive monodroid. log nel desktop)** .
+4. I messaggi di log vengono scritti nel file monodroid. log sul desktop.
 
 
 Visual Studio per Mac scrive sempre i log di distribuzione del dispositivo. Trovarli è leggermente più difficile; viene creato un file di log *AndroidUtils* per ogni giorno + tempo in cui si verifica una distribuzione, ad esempio: **AndroidTools-2012-10-24_12-35-45.log**.
 
--  In Windows, i file di log vengono `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`scritti in.
--  In OS X, i file di log vengono `$HOME/Library/Logs/XamarinStudio-{VERSION}`scritti in.
+- In Windows, i file di log vengono `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`scritti in.
+- In OS X, i file di log vengono `$HOME/Library/Logs/XamarinStudio-{VERSION}`scritti in.
 
 
 
@@ -91,9 +91,9 @@ Le proprietà di sistema vengono lette durante l'avvio del processo e devono per
 
 Novell. Android supporta le proprietà di sistema seguenti:
 
--   *debug.mono.debug*: Se una stringa non vuota, equivale a `*mono-debug*`.
+- *debug.mono.debug*: Se una stringa non vuota, equivale a `*mono-debug*`.
 
--   *debug.mono.env*: Elenco di variabili di ambiente separate *|* da pipe ('') da esportare durante l'avvio dell'applicazione, *prima* dell'inizializzazione di mono. Ciò consente di impostare le variabili di ambiente che controllano la registrazione mono.
+- *debug.mono.env*: Elenco di variabili di ambiente separate *|* da pipe ('') da esportare durante l'avvio dell'applicazione, *prima* dell'inizializzazione di mono. Ciò consente di impostare le variabili di ambiente che controllano la registrazione mono.
 
     - *Nota*: Poiché il valore è' *|* ', separato, il valore deve avere un ulteriore livello di quota, perché il \`comando *ADB shell* \` rimuoverà un set di virgolette.
 
@@ -101,18 +101,20 @@ Novell. Android supporta le proprietà di sistema seguenti:
 
     - Esempio:
 
-            adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+      ```
+      adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+      ```
 
--   *debug.mono.log*: Elenco di componenti separati da virgole (' *,* ') che devono stampare messaggi aggiuntivi nel log di debug Android. Per impostazione predefinita, non viene impostato alcun elemento. I componenti includono:
+- *debug.mono.log*: Elenco di componenti separati da virgole (' *,* ') che devono stampare messaggi aggiuntivi nel log di debug Android. Per impostazione predefinita, non viene impostato alcun elemento. I componenti includono:
 
-    -   *tutti*: Stampa tutti i messaggi
-    -   *gc*: Stampare messaggi correlati a GC.
-    -   *gref*: Stampa (vulnerabile, globale) messaggi di allocazione e deallocazione di riferimento.
-    -   *lref*: Stampa i messaggi di allocazione e deallocazione dei riferimenti locali.
+    - *tutti*: Stampa tutti i messaggi
+    - *gc*: Stampare messaggi correlati a GC.
+    - *gref*: Stampa (vulnerabile, globale) messaggi di allocazione e deallocazione di riferimento.
+    - *lref*: Stampa i messaggi di allocazione e deallocazione dei riferimenti locali.
 
     *Nota*: si tratta di un livello *estremamente* dettagliato. Non abilitare, a meno che non sia effettivamente necessario.
 
--   *debug.mono.trace*: Consente di impostare l'impostazione [mono--Trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` .
+- *debug.mono.trace*: Consente di impostare l'impostazione [mono--Trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` .
 
 ## <a name="deleting-bin-and-obj"></a>Eliminazione `bin` di e`obj`
 
@@ -213,10 +215,10 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 
 Ci sono quattro messaggi di conseguenza:
 
--  Creazione di riferimenti globali: si tratta delle righe che iniziano con *+ g +* e forniscono una traccia dello stack per il percorso del codice di creazione.
--  Distruzione globale dei riferimenti: queste sono le righe che iniziano con *-g-* e possono fornire un'analisi dello stack per il percorso del codice che elimina il riferimento globale. Se il GC Elimina Gref, non verrà fornita alcuna traccia dello stack.
--  Creazione di riferimento globale debole: queste sono le righe che iniziano con *+ w +* .
--  Distruzione di riferimento globale debole: si tratta di righe che iniziano con *-w-* .
+- Creazione di riferimenti globali: si tratta delle righe che iniziano con *+ g +* e forniscono una traccia dello stack per il percorso del codice di creazione.
+- Distruzione globale dei riferimenti: queste sono le righe che iniziano con *-g-* e possono fornire un'analisi dello stack per il percorso del codice che elimina il riferimento globale. Se il GC Elimina Gref, non verrà fornita alcuna traccia dello stack.
+- Creazione di riferimento globale debole: queste sono le righe che iniziano con *+ w +* .
+- Distruzione di riferimento globale debole: si tratta di righe che iniziano con *-w-* .
 
 
 In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Novell. Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Novell. Android. Il valore handle *o obj-handle* è il valore dell'handle JNI e il carattere dopo ' */* ' è il tipo di valore handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per i riferimenti globali vulnerabili.
@@ -345,15 +347,15 @@ Assicurarsi di usare il nome corretto del simulatore, ovvero [il nome usato dura
 
 I nomi dei pacchetti Android *devono* contenere un punto (' *.* '). Modificare il nome del pacchetto in modo che contenga un punto.
 
--   All'interno di Visual Studio:
-    -   Fare clic con il pulsante destro del mouse sul progetto > Proprietà
-    -   Fare clic sulla scheda Manifesto Android sulla sinistra.
-    -   Aggiornare il campo del nome del pacchetto.
-        -   Se viene visualizzato il messaggio &ldquo;non è stato trovato file AndroidManifest. XML. Fare clic per aggiungerne una. &rdquo;, fare clic sul collegamento e quindi aggiornare il campo del nome del pacchetto.
--   All'interno Visual Studio per Mac:
-    -   Fare clic con il pulsante destro del mouse sul progetto > Opzioni
-    -   Passare alla sezione relativa all'applicazione Build/Android.
-    -   Modificare il campo del nome del pacchetto in modo che contenga ".".
+- All'interno di Visual Studio:
+    - Fare clic con il pulsante destro del mouse sul progetto > Proprietà
+    - Fare clic sulla scheda Manifesto Android sulla sinistra.
+    - Aggiornare il campo del nome del pacchetto.
+        - Se viene visualizzato il messaggio &ldquo;non è stato trovato file AndroidManifest. XML. Fare clic per aggiungerne una. &rdquo;, fare clic sul collegamento e quindi aggiornare il campo del nome del pacchetto.
+- All'interno Visual Studio per Mac:
+    - Fare clic con il pulsante destro del mouse sul progetto > Opzioni
+    - Passare alla sezione relativa all'applicazione Build/Android.
+    - Modificare il campo del nome del pacchetto in modo che contenga ".".
 
 
 
@@ -375,15 +377,15 @@ Ad esempio, se si aggiunge un riferimento a un assembly *mono. Android. GoogleMa
 
 I pacchetti Android hanno tre requisiti:
 
--   Devono contenere ' .' (vedere la voce precedente)
--   Devono avere un nome univoco per il pacchetto di stringhe, di conseguenza la convenzione di TLD inverso visualizzata nei nomi delle app Android, ad esempio com. Android. Chrome per l'app Chrome.
--   Quando si aggiornano i pacchetti, il pacchetto deve avere la stessa chiave di firma.
+- Devono contenere ' .' (vedere la voce precedente)
+- Devono avere un nome univoco per il pacchetto di stringhe, di conseguenza la convenzione di TLD inverso visualizzata nei nomi delle app Android, ad esempio com. Android. Chrome per l'app Chrome.
+- Quando si aggiornano i pacchetti, il pacchetto deve avere la stessa chiave di firma.
 
 Si supponga quindi che questo scenario:
 
-1.  Si compila & distribuire l'app come app di debug
-2.  Si modifica la chiave di firma, ad esempio per usarla come app per la versione (o perché la chiave di firma del debug specificata dal valore predefinito)
-3.  Si installa l'app senza rimuoverla prima, ad esempio debug > Avvia senza eseguire debug in Visual Studio
+1. Si compila & distribuire l'app come app di debug
+2. Si modifica la chiave di firma, ad esempio per usarla come app per la versione (o perché la chiave di firma del debug specificata dal valore predefinito)
+3. Si installa l'app senza rimuoverla prima, ad esempio debug > Avvia senza eseguire debug in Visual Studio
 
 
 Quando si verifica questa situazione, l'installazione del pacchetto avrà\_esito\_negativo con un errore di installazione dell'aggiornamento non compatibile, perché il nome del pacchetto non è\_stato modificato durante la chiave di firma. Il [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md) conterrà anche un messaggio simile a:
@@ -433,10 +435,10 @@ E/AndroidRuntime( 1710):        at java.lang.Runtime.loadLibrary(Runtime.java:36
 
 In tal caso, esistono due possibili cause:
 
-1.  Il file con estensione APK non fornisce un'ABI supportata dal dispositivo di destinazione.
+1. Il file con estensione APK non fornisce un'ABI supportata dal dispositivo di destinazione.
     Ad esempio, il file con estensione APK contiene solo file binari ARMEABI-v7a e il dispositivo di destinazione supporta solo ARMEABI.
 
-2.  Un [bug Android](http://code.google.com/p/android/issues/detail?id=21670). In tal caso, disinstallare l'app, incrociare le dita e reinstallare l'app.
+2. Un [bug Android](http://code.google.com/p/android/issues/detail?id=21670). In tal caso, disinstallare l'app, incrociare le dita e reinstallare l'app.
 
 Per correggere (1), modificare le proprietà e le opzioni del progetto e [aggiungere il supporto per l'interfaccia ABI richiesta all'elenco di Abi supportate](~/android/app-fundamentals/cpu-architectures.md). Per determinare quale ABI è necessario aggiungere, eseguire il comando ADB seguente sul dispositivo di destinazione:
 
@@ -457,7 +459,7 @@ $ adb shell getprop | grep ro.product.cpu
 
 Ciò significa in genere che si dispone di un computer HP e &ldquo;che&rdquo; la piattaforma della variabile di ambiente è stata impostata su un valore simile a MCD o Honolulu. Questa operazione è in conflitto con la proprietà della piattaforma MSBuild che &ldquo;in genere&rdquo; è impostata&rdquo;su qualsiasi CPU o &ldquo;x86. È necessario rimuovere questa variabile di ambiente dal computer prima che MSBuild possa funzionare:
 
--   Pannello di controllo > sistema > variabili di ambiente > avanzate
+- Pannello di controllo > sistema > variabili di ambiente > avanzate
 
 Riavviare Visual Studio o Visual Studio per Mac e provare a ricompilare. Gli elementi dovrebbero ora funzionare come previsto.
 
@@ -686,11 +688,11 @@ Per usare la\# dinamica C nell'applicazione o nella libreria, è necessario aggi
 
 ### <a name="in-release-build-missingmethodexception-occurs-for-dynamic-code-at-run-time"></a>Nella build di rilascio MissingMethodException si verifica per il codice dinamico in fase di esecuzione.
 
--   È probabile che il progetto dell'applicazione non includa riferimenti a System. Core. dll, Microsoft. CSharp. dll o mono. CSharp. dll. Assicurarsi che venga fatto riferimento a tali assembly.
+- È probabile che il progetto dell'applicazione non includa riferimenti a System. Core. dll, Microsoft. CSharp. dll o mono. CSharp. dll. Assicurarsi che venga fatto riferimento a tali assembly.
 
-    -   Tenere presente che il codice dinamico costi sempre. Se è necessario codice efficiente, provare a non usare il codice dinamico.
+    - Tenere presente che il codice dinamico costi sempre. Se è necessario codice efficiente, provare a non usare il codice dinamico.
 
--   Nella prima anteprima questi assembly sono stati esclusi a meno che i tipi in ogni assembly non vengano usati in modo esplicito dal codice dell'applicazione. Per una soluzione alternativa, vedere quanto segue:[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
+- Nella prima anteprima questi assembly sono stati esclusi a meno che i tipi in ogni assembly non vengano usati in modo esplicito dal codice dell'applicazione. Per una soluzione alternativa, vedere quanto segue:[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>Progetti compilati con AOT + LLVM arresti anomali sui dispositivi x86

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 4a5b0e7d45878dcaa0f3e97411c2ef83d2e26c5a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510700"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524690"
 ---
 # <a name="working-with-the-android-manifest"></a>Uso del manifesto Android
 
@@ -237,18 +237,18 @@ Sono disponibili molti attributi a livello di applicazione che è possibile conf
 
 ## <a name="list-of-custom-attributes"></a>Elenco di attributi personalizzati
 
--   [Android. app. ActivityAttribute](xref:Android.App.ActivityAttribute) : Genera un frammento XML [/manifest/Application/Activity](https://developer.android.com/guide/topics/manifest/activity-element.html) 
--   [Android. app. ApplicationAttribute](xref:Android.App.ApplicationAttribute) : Genera un frammento XML [/manifest/Application](https://developer.android.com/guide/topics/manifest/application-element.html) 
--   [Android. app. InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : Genera un frammento XML [/manifest/Instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
--   [Android. app. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : Genera un frammento XML [//Intent-Filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
--   [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Genera un frammento XML [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
--   [Android. app. PermissionAttribute](xref:Android.App.PermissionAttribute) : Genera un frammento XML [//Permission](https://developer.android.com/guide/topics/manifest/permission-element.html) 
--   [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : Genera un frammento XML [//Permission-Group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
--   [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : Genera un frammento XML [//Permission-Tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
--   [Android. app. ServiceAttribute](xref:Android.App.ServiceAttribute) : Genera un frammento XML [/manifest/Application/Service](https://developer.android.com/guide/topics/manifest/service-element.html) 
--   [Android. app. UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : Genera un frammento XML [/manifest/application/uses-Library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
--   [Android. app. UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : Genera un frammento XML [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
--   [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Genera un frammento XML [/manifest/Application/Receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
--   [Android. Content. ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Genera un frammento XML [/manifest/Application/Provider](https://developer.android.com/guide/topics/manifest/provider-element.html) 
--   [Android. Content. GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Genera un frammento XML [/manifest/Application/Provider/Grant-URI-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)
+- [Android. app. ActivityAttribute](xref:Android.App.ActivityAttribute) : Genera un frammento XML [/manifest/Application/Activity](https://developer.android.com/guide/topics/manifest/activity-element.html) 
+- [Android. app. ApplicationAttribute](xref:Android.App.ApplicationAttribute) : Genera un frammento XML [/manifest/Application](https://developer.android.com/guide/topics/manifest/application-element.html) 
+- [Android. app. InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : Genera un frammento XML [/manifest/Instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) 
+- [Android. app. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : Genera un frammento XML [//Intent-Filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
+- [Android. app. MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Genera un frammento XML [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) 
+- [Android. app. PermissionAttribute](xref:Android.App.PermissionAttribute) : Genera un frammento XML [//Permission](https://developer.android.com/guide/topics/manifest/permission-element.html) 
+- [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : Genera un frammento XML [//Permission-Group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) 
+- [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : Genera un frammento XML [//Permission-Tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) 
+- [Android. app. ServiceAttribute](xref:Android.App.ServiceAttribute) : Genera un frammento XML [/manifest/Application/Service](https://developer.android.com/guide/topics/manifest/service-element.html) 
+- [Android. app. UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : Genera un frammento XML [/manifest/application/uses-Library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) 
+- [Android. app. UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : Genera un frammento XML [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) 
+- [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Genera un frammento XML [/manifest/Application/Receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) 
+- [Android. Content. ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Genera un frammento XML [/manifest/Application/Provider](https://developer.android.com/guide/topics/manifest/provider-element.html) 
+- [Android. Content. GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Genera un frammento XML [/manifest/Application/Provider/Grant-URI-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html)
 

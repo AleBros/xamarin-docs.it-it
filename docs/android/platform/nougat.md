@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: a28368e0fa4574fbb92a43dbd650a127008f5d06
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 2abc4b9b39fa90e525c3562a27ffd5d8c67f0078
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643460"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523801"
 ---
 # <a name="nougat-features"></a>Funzionalità torrone
 
@@ -32,11 +32,11 @@ Per un elenco dei problemi noti di Novell. Android 7,0, vedere le [Note sulla ve
 
 Il torrone Android offre molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità comprendono:
 
--   **Supporto** per più finestre &ndash; Questo miglioramento consente agli utenti di aprire contemporaneamente due app sullo schermo.
+- **Supporto** per più finestre &ndash; Questo miglioramento consente agli utenti di aprire contemporaneamente due app sullo schermo.
 
--   **Miglioramenti delle notifiche** Il sistema di notifiche riprogettato in Android torrone include una funzionalità di *risposta diretta* che consente agli utenti di rispondere rapidamente ai messaggi di testo direttamente dall'interfaccia utente di notifica. &ndash; Inoltre, se l'app crea notifiche per i messaggi ricevuti, la nuova funzionalità di *notifica in bundle* può raggruppare le notifiche come un singolo gruppo quando viene ricevuto più di un messaggio.
+- **Miglioramenti delle notifiche** Il sistema di notifiche riprogettato in Android torrone include una funzionalità di *risposta diretta* che consente agli utenti di rispondere rapidamente ai messaggi di testo direttamente dall'interfaccia utente di notifica. &ndash; Inoltre, se l'app crea notifiche per i messaggi ricevuti, la nuova funzionalità di *notifica in bundle* può raggruppare le notifiche come un singolo gruppo quando viene ricevuto più di un messaggio.
 
--   **Salva dati** &ndash; Questa funzionalità è un nuovo servizio di sistema che consente di ridurre l'uso dei dati cellulari da parte delle app; consente agli utenti di controllare il modo in cui le app usano i dati cellulari.
+- **Salva dati** &ndash; Questa funzionalità è un nuovo servizio di sistema che consente di ridurre l'uso dei dati cellulari da parte delle app; consente agli utenti di controllare il modo in cui le app usano i dati cellulari.
 
 Android torrone, inoltre, apporta molti altri miglioramenti di interesse per gli sviluppatori di app, ad esempio una nuova funzionalità di configurazione della sicurezza di rete, un servizio di attestazione delle chiavi, nuove API per le impostazioni rapide, supporto per più impostazioni locali, API ICU4J, miglioramenti di WebView, accesso alle funzionalità del linguaggio Java 8, all'accesso alla directory con ambito, a un'API puntatore personalizzata, al supporto per la piattaforma VR, ai file virtuali e alle ottimizzazioni di elaborazione in background.
 
@@ -47,13 +47,13 @@ Questo articolo illustra come iniziare a creare app con il torrone Android per p
 
 Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità del torrone Android nelle app basate su Novell:
 
--   **Visual Studio o Visual Studio per Mac** &ndash; Se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Novell è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
+- **Visual Studio o Visual Studio per Mac** &ndash; Se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Novell è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
 
--   **Novell. Android** &ndash; Novell. Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Novell. Android** &ndash; Novell. Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
--   **Android SDK** -Android SDK 7,0 (API 24) o versione successiva deve essere installato tramite il Android SDK Manager.
+- **Android SDK** -Android SDK 7,0 (API 24) o versione successiva deve essere installato tramite il Android SDK Manager.
 
--   **Java Developer Kit** Per lo sviluppo di Novell Android 7,0 è necessario [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o versione successiva (JDK 8 supporta anche i livelli API precedenti a 24). &ndash; La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
+- **Java Developer Kit** Per lo sviluppo di Novell Android 7,0 è necessario [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o versione successiva (JDK 8 supporta anche i livelli API precedenti a 24). &ndash; La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
@@ -66,13 +66,13 @@ Si noti che le app devono essere ricompilate con Novell C6SR4 o versione success
 
 Per iniziare a usare il torrone Android con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android torrone:
 
-1.  Installare gli aggiornamenti più recenti di Novell. Android dalla Novell.
+1. Installare gli aggiornamenti più recenti di Novell. Android dalla Novell.
 
-2.  Installare gli strumenti e i pacchetti **Android 7,0 (API 24)** o versioni successive.
+2. Installare gli strumenti e i pacchetti **Android 7,0 (API 24)** o versioni successive.
 
-3.  Creare un nuovo progetto Novell. Android destinato a Android torrone.
+3. Creare un nuovo progetto Novell. Android destinato a Android torrone.
 
-4.  Configurare un emulatore o un dispositivo per il torrone Android.
+4. Configurare un emulatore o un dispositivo per il torrone Android.
 
 Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
@@ -87,19 +87,19 @@ Per aggiungere il supporto Novell per il torrone Android, modificare il canale d
 
 Per creare un progetto con Novell Android 7,0, è necessario prima di tutto usare gestione Android SDK per installare la **piattaforma SDK Android N (API 24)** o versione successiva. È necessario installare anche la **Android SDK Tools**più recente:
 
-1.  Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > Apri&hellip;gestione Android SDK**. in Visual Studio usare **gli strumenti > Android > Android SDK Manager**).
+1. Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > Apri&hellip;gestione Android SDK**. in Visual Studio usare **gli strumenti > Android > Android SDK Manager**).
 
-2.  Installare **Android 7,0 (API 24)** o versione successiva:
+2. Installare **Android 7,0 (API 24)** o versione successiva:
 
     [![Selezione dei pacchetti Android 7,0 in gestione Android SDK](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
-3.  Installare gli strumenti di Android SDK più recenti:
+3. Installare gli strumenti di Android SDK più recenti:
 
     [![Selezione degli strumenti di Android SDK più recenti in gestione Android SDK](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
     È necessario installare Android SDK Tools Revision 25.2.2 o versioni successive, gli strumenti della piattaforma Android SDK 24.0.3 o versione successiva e Android SDK build Tools 24.0.2 o versione successiva.
 
-4.  Verificare che il **percorso di Java Development Kit** sia configurato per JDK 1,8:
+4. Verificare che il **percorso di Java Development Kit** sia configurato per JDK 1,8:
 
     [![Configurazione del percorso JDK 8 in strumenti opzioni](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
@@ -123,9 +123,9 @@ Quando si crea un progetto Android, è necessario configurare le impostazioni de
 
 Se si usa un emulatore, avviare Android AVD Manager e creare un nuovo dispositivo usando le impostazioni seguenti:
 
--   Device: Nexus 5X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9 o pixel C.
--   Destinazione: Android 7,0-livello API 24
--   Abi: x86 o x86\_64
+- Device: Nexus 5X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9 o pixel C.
+- Destinazione: Android 7,0-livello API 24
+- Abi: x86 o x86\_64
 
 Ad esempio, questo dispositivo virtuale è configurato per emulare un Nexus 6:
 
@@ -253,15 +253,15 @@ Per altre informazioni sulla nuova funzionalità di collegamenti alle app in And
 
 Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare i vantaggi delle funzionalità torrone di Android:
 
--   [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) illustra l'uso dell'API multifinestra disponibile nel torrone Android. È possibile passare l'app di esempio in modalità multiwindows per vedere come influiscono sul ciclo di vita e sul comportamento dell'app.
+- [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) illustra l'uso dell'API multifinestra disponibile nel torrone Android. È possibile passare l'app di esempio in modalità multiwindows per vedere come influiscono sul ciclo di vita e sul comportamento dell'app.
 
--   Il`NotificationCompatManager` [servizio messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) è un servizio semplice che invia notifiche tramite. Estende inoltre la notifica con un `RemoteInput` oggetto per consentire ai dispositivi Android torrone di rispondere tramite testo direttamente dalla notifica senza dover aprire un'app.
+- Il`NotificationCompatManager` [servizio messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) è un servizio semplice che invia notifiche tramite. Estende inoltre la notifica con un `RemoteInput` oggetto per consentire ai dispositivi Android torrone di rispondere tramite testo direttamente dalla notifica senza dover aprire un'app.
 
--   [Notifiche attive](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) illustra come usare l'API `NotificationManager` per indicare il numero di notifiche attualmente visualizzate dall'applicazione.
+- [Notifiche attive](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) illustra come usare l'API `NotificationManager` per indicare il numero di notifiche attualmente visualizzate dall'applicazione.
 
--   [Accesso alla directory con ambito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Viene illustrato come utilizzare l'API di accesso alla directory con ambito per accedere facilmente a directory specifiche. Questa funzione funge da alternativa alla necessità di definire `READ_EXTERNAL_STORAGE` autorizzazioni `WRITE_EXTERNAL_STORAGE` o nel manifesto.
+- [Accesso alla directory con ambito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Viene illustrato come utilizzare l'API di accesso alla directory con ambito per accedere facilmente a directory specifiche. Questa funzione funge da alternativa alla necessità di definire `READ_EXTERNAL_STORAGE` autorizzazioni `WRITE_EXTERNAL_STORAGE` o nel manifesto.
 
--   [Avvio diretto](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) Viene illustrato come archiviare i dati in una risorsa di archiviazione crittografata dal dispositivo, che è sempre disponibile quando il dispositivo viene avviato sia prima che dopo l'immissione delle credenziali utente (PIN/criterio/password).
+- [Avvio diretto](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) Viene illustrato come archiviare i dati in una risorsa di archiviazione crittografata dal dispositivo, che è sempre disponibile quando il dispositivo viene avviato sia prima che dopo l'immissione delle credenziali utente (PIN/criterio/password).
 
 
 ## <a name="summary"></a>Riepilogo

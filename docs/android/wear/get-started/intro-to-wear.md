@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a57273005df45c2f8035563efe9562c27cdfa732
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 6a9bb5fae84b6883943410d0c2585ce60a1208a4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648417"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526446"
 ---
 # <a name="introduction-to-android-wear"></a>Introduzione ad Android Wear
 
@@ -90,15 +90,15 @@ L'uso della creazione di [pacchetti illustra la](~/android/wear/deploy-test/pack
 
 Il modo migliore per acquisire familiarità con Android Wear è compilare e testare la prima app. L'elenco seguente fornisce un ordine di lettura consigliato per velocizzare rapidamente:
 
-1.  Installazione [& installazione](~/android/wear/get-started/installation.md) fornisce istruzioni dettagliate per l'installazione e la configurazione dell'ambiente di sviluppo per la compilazione di app Novell. Android Wear. 
+1. Installazione [& installazione](~/android/wear/get-started/installation.md) fornisce istruzioni dettagliate per l'installazione e la configurazione dell'ambiente di sviluppo per la compilazione di app Novell. Android Wear. 
 
-2.  Dopo aver installato i pacchetti necessari e configurato un emulatore o un dispositivo, vedere [Hello, Wear](~/android/wear/get-started/hello-wear.md) per istruzioni dettagliate che illustrano come creare un piccolo progetto Android Wear che gestisce i clic sui pulsanti e visualizza un contatore di clic per l'usura dispositivo. 
+2. Dopo aver installato i pacchetti necessari e configurato un emulatore o un dispositivo, vedere [Hello, Wear](~/android/wear/get-started/hello-wear.md) per istruzioni dettagliate che illustrano come creare un piccolo progetto Android Wear che gestisce i clic sui pulsanti e visualizza un contatore di clic per l'usura dispositivo. 
 
-3.  La [distribuzione & test](~/android/wear/deploy-test/index.md) fornisce informazioni più dettagliate sulla configurazione e la distribuzione in emulatori e dispositivi, incluse le istruzioni su come distribuire l'app in un dispositivo Wear tramite Bluetooth.
+3. La [distribuzione & test](~/android/wear/deploy-test/index.md) fornisce informazioni più dettagliate sulla configurazione e la distribuzione in emulatori e dispositivi, incluse le istruzioni su come distribuire l'app in un dispositivo Wear tramite Bluetooth.
 
-4.  [Con le dimensioni dello schermo](~/android/wear/screen-sizes.md) viene illustrato come visualizzare in anteprima e ottimizzare l'interfaccia utente per le diverse dimensioni dello schermo disponibili nei dispositivi di consumo. 
+4. [Con le dimensioni dello schermo](~/android/wear/screen-sizes.md) viene illustrato come visualizzare in anteprima e ottimizzare l'interfaccia utente per le diverse dimensioni dello schermo disponibili nei dispositivi di consumo. 
 
-5.  L'uso della creazione di [pacchetti](~/android/wear/deploy-test/packaging.md) descrive i passaggi per la creazione manuale di app per la distribuzione in Google Play.
+5. L'uso della creazione di [pacchetti](~/android/wear/deploy-test/packaging.md) descrive i passaggi per la creazione manuale di app per la distribuzione in Google Play.
 
 Dopo aver creato la prima app Wear, è possibile provare a creare un quadrante di orologio personalizzato per Android Wear. 
 [La creazione di un quadrante con espressioni di controllo](~/android/wear/platform/creating-a-watchface.md) fornisce istruzioni dettagliate e codice di esempio per lo sviluppo di un servizio di tipo Watch-out digitale rimosso, seguito da un altro codice che lo migliora in modo analogo a un quadrante con funzionalità aggiuntive. 
@@ -169,8 +169,8 @@ Le app Android Wear 2,0 possono funzionare indipendentemente dalle app palmari. 
 
 I movimenti dei polsi consentono agli utenti di interagire con l'app senza usare il touchscreen &ndash; . gli utenti possono rispondere all'app con una sola mano. Sono supportati due movimenti del polso: 
 
--   Scorrimenti rapidi
--   Scorri il polso
+- Scorrimenti rapidi
+- Scorri il polso
 
 Per ulteriori informazioni, vedere l'argomento relativo ai [movimenti dei polsi](https://developer.android.com/wear/preview/features/gestures.html) Android. 
 

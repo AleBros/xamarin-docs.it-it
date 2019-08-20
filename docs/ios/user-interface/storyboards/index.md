@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 9b4f71599ecf85e51899c41c37aecc63e44e7188
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 86198c7a2fa0460070d012afd0b7b9d078d2a5f3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646419"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528569"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Novell. iOS
 
@@ -29,7 +29,7 @@ Gli storyboard possono essere usati con la finestra di progettazione iOS in Visu
 
 ## <a name="what-is-a-storyboard"></a>Che cos'è uno storyboard?
 
-Uno storyboard è la rappresentazione visiva di tutte le schermate in un'applicazione. Contiene una sequenza di scene, con ogni scena che rappresenta un *controller di visualizzazione* e le relative *visualizzazioni*. Queste visualizzazioni possono contenere oggetti e [controlli](~/ios/user-interface/controls/index.md) che consentiranno all'utente di interagire con l'applicazione. Questa raccolta di viste e controlli *(o*sottoviste) è nota come gerarchia di *visualizzazione del contenuto*. Le scene sono connesse da oggetti segue, che rappresentano una transizione tra i controller di visualizzazione. Questa operazione viene in genere eseguita creando un segue tra un oggetto nella visualizzazione iniziale e la visualizzazione connessione. Le relazioni nell'area di progettazione sono illustrate nell'immagine seguente:
+Uno storyboard è la rappresentazione visiva di tutte le schermate in un'applicazione. Contiene una sequenza di scene, con ogni scena che rappresenta un *controller di visualizzazione* e le relative *visualizzazioni*. Queste visualizzazioni possono contenere oggetti e [controlli](~/ios/user-interface/controls/index.md) che consentiranno all'utente di interagire con l'applicazione. Questa raccolta di viste e controlli (osottoviste) è nota come gerarchia di *visualizzazione del contenuto*. Le scene sono connesse da oggetti segue, che rappresentano una transizione tra i controller di visualizzazione. Questa operazione viene in genere eseguita creando un segue tra un oggetto nella visualizzazione iniziale e la visualizzazione connessione. Le relazioni nell'area di progettazione sono illustrate nell'immagine seguente:
 
  [![](images/storyboardsview.png "Le relazioni nell'area di progettazione sono illustrate in questa immagine")](images/storyboardsview.png#lightbox)
 
@@ -66,11 +66,11 @@ Al passaggio del mouse, viene visualizzato un menu che consente di scegliere l'a
 
 Sono disponibili diversi tipi di transizioni, ognuna delle quali fornisce il controllo sulla modalità di presentazione di un nuovo controller di visualizzazione all'utente e sul modo in cui interagisce con altri controller di visualizzazione nello storyboard. Queste sono illustrate di seguito. È anche possibile eseguire la sottoclasse di un oggetto segue per implementare una transizione personalizzata:
 
--  **Mostra/push** : un segue push aggiunge il controller di visualizzazione allo stack di navigazione. Si presuppone che il controller di visualizzazione che ha originato il push faccia parte dello stesso controller di spostamento del controller di visualizzazione aggiunto allo stack. Questa operazione equivale a `pushViewController` e viene in genere utilizzata quando esiste una relazione tra i dati sulle schermate. L'uso di push segue offre il lusso di avere una barra di navigazione con un pulsante indietro e un titolo aggiunti a ogni visualizzazione nello stack, consentendo di eseguire il drill-down nella gerarchia di visualizzazione.
--  **Modale** : un segue modale crea una relazione tra due controller di visualizzazione nel progetto, con l'opzione di una transizione animata visualizzata. Il controller di visualizzazione figlio nasconde completamente il controller di visualizzazione padre quando viene visualizzato. A differenza di un segue push, che aggiunge un pulsante indietro per noi; Quando si usa un segue `DismissViewController` modale, è necessario usare per tornare al controller di visualizzazione precedente.
--  **Personalizzata** : qualsiasi segue personalizzato può essere creato come sottoclasse di `UIStoryboardSegue`.
--  **Rimozione** : è possibile usare un segue di rimozione per tornare indietro tramite un segue push o modale, ad esempio, eliminando il controller di visualizzazione presentato in modo modale. Oltre a questo, è possibile rimuovere non solo uno, ma una serie di gli elementi segue push e modali e tornare a più passaggi nella gerarchia di navigazione con una singola azione di rimozione. Per informazioni su come usare un segue di rimozione in iOS, vedere la pagina relativa alla creazione della ricetta [gli elementi segue di rimozione](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
--  Senza **origine** : un segue di origine indica la scena contenente il controller di visualizzazione iniziale e quindi la visualizzazione che l'utente visualizzerà per primo. È rappresentato dal segue mostrato di seguito:  
+- **Mostra/push** : un segue push aggiunge il controller di visualizzazione allo stack di navigazione. Si presuppone che il controller di visualizzazione che ha originato il push faccia parte dello stesso controller di spostamento del controller di visualizzazione aggiunto allo stack. Questa operazione equivale a `pushViewController` e viene in genere utilizzata quando esiste una relazione tra i dati sulle schermate. L'uso di push segue offre il lusso di avere una barra di navigazione con un pulsante indietro e un titolo aggiunti a ogni visualizzazione nello stack, consentendo di eseguire il drill-down nella gerarchia di visualizzazione.
+- **Modale** : un segue modale crea una relazione tra due controller di visualizzazione nel progetto, con l'opzione di una transizione animata visualizzata. Il controller di visualizzazione figlio nasconde completamente il controller di visualizzazione padre quando viene visualizzato. A differenza di un segue push, che aggiunge un pulsante indietro per noi; Quando si usa un segue `DismissViewController` modale, è necessario usare per tornare al controller di visualizzazione precedente.
+- **Personalizzata** : qualsiasi segue personalizzato può essere creato come sottoclasse di `UIStoryboardSegue`.
+- **Rimozione** : è possibile usare un segue di rimozione per tornare indietro tramite un segue push o modale, ad esempio, eliminando il controller di visualizzazione presentato in modo modale. Oltre a questo, è possibile rimuovere non solo uno, ma una serie di gli elementi segue push e modali e tornare a più passaggi nella gerarchia di navigazione con una singola azione di rimozione. Per informazioni su come usare un segue di rimozione in iOS, vedere la pagina relativa alla creazione della ricetta [gli elementi segue di rimozione](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
+- Senza **origine** : un segue di origine indica la scena contenente il controller di visualizzazione iniziale e quindi la visualizzazione che l'utente visualizzerà per primo. È rappresentato dal segue mostrato di seguito:  
 
     [![](images/sourcelesssegue.png "Segue di origine")](images/sourcelesssegue.png#lightbox)
 
@@ -142,12 +142,14 @@ In alcuni casi potrebbe essere necessario aggiungere uno storyboard a un file no
     Questa operazione equivale a creare un'istanza del controller di visualizzazione iniziale nel `FinishedLaunching` metodo all'interno del delegato dell'applicazione. Se questa opzione è impostata, l'applicazione crea un'istanza di una finestra (vedere di seguito), carica lo storyboard principale e assegna un'istanza del controller di visualizzazione iniziale dello storyboard (quello accanto al segue di origine) come `RootViewController` proprietà della finestra e quindi crea finestra visibile sullo schermo.
 
 3. In eseguire l'override del metodo `Window` predefinito, con il codice seguente per implementare la proprietà della finestra: `AppDelegate`
-        
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Per creare un nuovo file storyboard, fare clic con il pulsante destro del mouse sul progetto per **aggiungere > nuovo file > iOS > lo storyboard vuoto**, come illustrato di seguito: 
@@ -162,11 +164,13 @@ In alcuni casi potrebbe essere necessario aggiungere uno storyboard a un file no
 
 3. In eseguire l'override del metodo `Window` predefinito, con il codice seguente per implementare la proprietà della finestra: `AppDelegate`
 
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 -----
 
 ## <a name="creating-a-storyboard-with-the-ios-designer"></a>Creazione di uno storyboard con iOS designer

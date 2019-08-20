@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: eda75041add4b5fc9f7998f426aab42ed2618c4b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: 91e49c387818ca4d7472325efa665a5c2bfd9e64
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508805"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522035"
 ---
 # <a name="activity-lifecycle"></a>Ciclo di vita dell'attività
 
@@ -29,9 +29,9 @@ Il ciclo di vita dell'attività viene implementato come una raccolta di metodi c
 
 In questo capitolo viene esaminato in dettaglio il ciclo di vita delle attività, tra cui:
 
--  Stati di attività
--  Metodi del ciclo di vita
--  Conservazione dello stato di un'applicazione
+- Stati di attività
+- Metodi del ciclo di vita
+- Conservazione dello stato di un'applicazione
 
 
 Questa sezione include anche una [procedura dettagliata](~/android/app-fundamentals/activity-lifecycle/saving-state.md) che fornisce esempi pratici su come salvare lo stato in modo efficiente durante il ciclo di vita dell'attività. Alla fine di questo capitolo è necessario conoscere il ciclo di vita delle attività e come supportarlo in un'applicazione Android.
@@ -48,14 +48,14 @@ Il sistema operativo Android arbitraggio le attività in base al relativo stato.
 
 Questi Stati possono essere suddivisi in 4 gruppi principali, come indicato di seguito:
 
-1.  *Attivo o in esecuzione* &ndash; Le attività sono considerate attive o in esecuzione se sono in primo piano, anche note come parte superiore dello stack di attività. Questa operazione è considerata l'attività con priorità più elevata in Android e, di conseguenza, verrà terminata solo dal sistema operativo in situazioni estreme, ad esempio se l'attività tenta di usare una quantità di memoria superiore a quella disponibile nel dispositivo, perché ciò potrebbe causare la mancata risposta dell'interfaccia utente.
+1. *Attivo o in esecuzione* &ndash; Le attività sono considerate attive o in esecuzione se sono in primo piano, anche note come parte superiore dello stack di attività. Questa operazione è considerata l'attività con priorità più elevata in Android e, di conseguenza, verrà terminata solo dal sistema operativo in situazioni estreme, ad esempio se l'attività tenta di usare una quantità di memoria superiore a quella disponibile nel dispositivo, perché ciò potrebbe causare la mancata risposta dell'interfaccia utente.
 
-1.  In *pausa* &ndash; Quando il dispositivo passa alla modalità di sospensione o un'attività rimane visibile ma parzialmente nascosta da una nuova attività non completa o trasparente, l'attività viene considerata sospesa. Le attività sospese sono ancora attive, ovvero mantengono tutte le informazioni sullo stato e sui membri e rimangono collegate a gestione finestre. Considerata come la seconda attività con priorità più elevata in Android e, di conseguenza, verrà terminata dal sistema operativo solo se la chiusura di questa attività soddisferà i requisiti di risorse necessari per assicurare la stabilità e la reattività dell'attività attiva/in esecuzione.
+1. In *pausa* &ndash; Quando il dispositivo passa alla modalità di sospensione o un'attività rimane visibile ma parzialmente nascosta da una nuova attività non completa o trasparente, l'attività viene considerata sospesa. Le attività sospese sono ancora attive, ovvero mantengono tutte le informazioni sullo stato e sui membri e rimangono collegate a gestione finestre. Considerata come la seconda attività con priorità più elevata in Android e, di conseguenza, verrà terminata dal sistema operativo solo se la chiusura di questa attività soddisferà i requisiti di risorse necessari per assicurare la stabilità e la reattività dell'attività attiva/in esecuzione.
 
-1.  *Arrestato/in background* &ndash; Le attività completamente nascoste da un'altra attività vengono considerate interrotte o in background.
+1. *Arrestato/in background* &ndash; Le attività completamente nascoste da un'altra attività vengono considerate interrotte o in background.
     Le attività interrotte continuano a mantenere le informazioni sullo stato e sui membri per il periodo di tempo più lungo possibile, ma le attività interrotte sono considerate la priorità più bassa dei tre Stati e, di conseguenza, il sistema operativo eliminerà prima le attività in questo stato per soddisfare la risorsa requisiti delle attività con priorità più elevata.
 
-1.  Riavviato &ndash; È possibile che un'attività che si trova in una posizione qualsiasi da sospesa a arrestata nel ciclo di vita venga rimossa dalla memoria da Android. Se l'utente torna all'attività, deve essere riavviato, ripristinato nello stato salvato in precedenza e quindi visualizzato all'utente.
+1. Riavviato &ndash; È possibile che un'attività che si trova in una posizione qualsiasi da sospesa a arrestata nel ciclo di vita venga rimossa dalla memoria da Android. Se l'utente torna all'attività, deve essere riavviato, ripristinato nello stato salvato in precedenza e quindi visualizzato all'utente.
 
 
 ### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Ricreazione dell'attività in risposta alle modifiche alla configurazione
@@ -116,11 +116,11 @@ Al termine, Android `OnStart`chiamerà. `OnCreate`
 Il sistema chiama [onResume](xref:Android.App.Activity.OnResume) quando l'attività è pronta per iniziare a interagire con l'utente.
 Le attività devono eseguire l'override di questo metodo per eseguire attività quali:
 
--  Aumento delle frequenze di fotogrammi (un'attività comune nello sviluppo di giochi)
--  Avvio di animazioni
--  Ascolto degli aggiornamenti GPS
--  Visualizzare eventuali avvisi o finestre di dialogo rilevanti
--  Collegare i gestori eventi esterni
+- Aumento delle frequenze di fotogrammi (un'attività comune nello sviluppo di giochi)
+- Avvio di animazioni
+- Ascolto degli aggiornamenti GPS
+- Visualizzare eventuali avvisi o finestre di dialogo rilevanti
+- Collegare i gestori eventi esterni
 
 
 Come esempio, il frammento di codice seguente mostra come inizializzare la fotocamera:
@@ -143,15 +143,15 @@ public void OnResume()
 
 [OnPause](xref:Android.App.Activity.OnPause) viene chiamato quando il sistema sta per inserire l'attività in background o quando l'attività viene nascosta parzialmente. Le attività devono eseguire l'override di questo metodo se è necessario:
 
--   Eseguire il commit delle modifiche non salvate nei dati persistenti
+- Eseguire il commit delle modifiche non salvate nei dati persistenti
 
--   Eliminare o eliminare altri oggetti che utilizzano risorse
+- Eliminare o eliminare altri oggetti che utilizzano risorse
 
--   Suddividere le frequenze fotogrammi e sospendere le animazioni
+- Suddividere le frequenze fotogrammi e sospendere le animazioni
 
--   Annulla la registrazione di gestori di eventi esterni o gestori di notifiche, ad esempio quelli collegati a un servizio. Questa operazione deve essere eseguita per evitare perdite di memoria di attività.
+- Annulla la registrazione di gestori di eventi esterni o gestori di notifiche, ad esempio quelli collegati a un servizio. Questa operazione deve essere eseguita per evitare perdite di memoria di attività.
 
--   Analogamente, se l'attività ha visualizzato qualsiasi finestra di dialogo o avviso, è necessario pulirla con `.Dismiss()` il metodo.
+- Analogamente, se l'attività ha visualizzato qualsiasi finestra di dialogo o avviso, è necessario pulirla con `.Dismiss()` il metodo.
 
 Ad esempio, il frammento di codice seguente rilascerà la fotocamera, perché non può essere usata dall'attività mentre è in pausa:
 
@@ -171,17 +171,17 @@ public void OnPause()
 
 Esistono due possibili metodi del ciclo di vita che verranno chiamati `OnPause`dopo:
 
-1.  `OnResume`verrà chiamato se l'attività deve essere restituita in primo piano.
-1.  `OnStop`verrà chiamato se l'attività viene posizionata in background.
+1. `OnResume`verrà chiamato se l'attività deve essere restituita in primo piano.
+1. `OnStop`verrà chiamato se l'attività viene posizionata in background.
 
 
 #### <a name="onstop"></a>OnStop
 
 [OnStop](xref:Android.App.Activity.OnStop) viene chiamato quando l'attività non è più visibile all'utente. Ciò si verifica quando si verifica una delle condizioni seguenti:
 
--  Viene avviata una nuova attività che copre questa attività.
--  Un'attività esistente viene portata in primo piano.
--  L'attività viene eliminata definitivamente.
+- Viene avviata una nuova attività che copre questa attività.
+- Un'attività esistente viene portata in primo piano.
+- L'attività viene eliminata definitivamente.
 
 
 `OnStop`potrebbe non essere sempre chiamato in situazioni di memoria insufficiente, ad esempio quando Android è affamato di risorse e non è in grado di eseguire correttamente il background dell'attività. Per questo motivo, è consigliabile non fare affidamento sulla `OnStop` chiamata quando si prepara un'attività per la distruzione. I successivi metodi del ciclo di vita che possono essere chiamati dopo questa `OnDestroy` operazione saranno se l'attività è in uscita `OnRestart` o se l'attività viene nuovamente intervenuta per interagire con l'utente.
@@ -330,11 +330,11 @@ Per un esempio di salvataggio dello stato usando `Bundle`un, vedere la [procedur
 
 Sebbene `OnSaveInstanceState` consenta di salvare facilmente i dati temporanei, presenta alcune limitazioni:
 
--   Non viene chiamato in tutti i casi. Se ad esempio si preme **Home** o **indietro** per uscire da un'attività, la `OnSaveInstanceState` chiamata non verrà eseguita.
+- Non viene chiamato in tutti i casi. Se ad esempio si preme **Home** o **indietro** per uscire da un'attività, la `OnSaveInstanceState` chiamata non verrà eseguita.
 
--   Il bundle passato in `OnSaveInstanceState` non è progettato per oggetti di grandi dimensioni, ad esempio immagini. Nel caso di oggetti di grandi dimensioni, è preferibile salvare l'oggetto da [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) , come descritto di seguito.
+- Il bundle passato in `OnSaveInstanceState` non è progettato per oggetti di grandi dimensioni, ad esempio immagini. Nel caso di oggetti di grandi dimensioni, è preferibile salvare l'oggetto da [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) , come descritto di seguito.
 
--   I dati salvati usando il bundle vengono serializzati, il che può causare ritardi.
+- I dati salvati usando il bundle vengono serializzati, il che può causare ritardi.
 
 Lo stato del bundle è utile per i dati semplici che non utilizzano molta memoria, mentre *i dati dell'istanza non di configurazione* sono utili per dati più complessi o per dati costosi da recuperare, ad esempio da una chiamata al servizio Web o da una query di database complessa. I dati dell'istanza non di configurazione vengono salvati in un oggetto in base alle esigenze. Nella sezione successiva viene `OnRetainNonConfigurationInstance` introdotto come metodo per mantenere i tipi di dati più complessi tramite le modifiche alla configurazione.
 
@@ -343,9 +343,9 @@ Lo stato del bundle è utile per i dati semplici che non utilizzano molta memori
 
 Oltre a salvare in modo permanente i dati nel bundle, Android supporta anche il salvataggio dei dati tramite l'override di [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) e la `Java.Lang.Object` restituzione di un'istanza di un che contiene i dati da salvare in modo permanente. Per salvare lo stato, è possibile `OnRetainNonConfigurationInstance` usare due vantaggi principali:
 
--   L'oggetto restituito da `OnRetainNonConfigurationInstance` garantisce prestazioni ottimali con tipi di dati più grandi e complessi, perché la memoria mantiene questo oggetto.
+- L'oggetto restituito da `OnRetainNonConfigurationInstance` garantisce prestazioni ottimali con tipi di dati più grandi e complessi, perché la memoria mantiene questo oggetto.
 
--   Il `OnRetainNonConfigurationInstance` metodo viene chiamato su richiesta e solo quando necessario. Questa operazione è più economica rispetto all'uso di una cache manuale.
+- Il `OnRetainNonConfigurationInstance` metodo viene chiamato su richiesta e solo quando necessario. Questa operazione è più economica rispetto all'uso di una cache manuale.
 
 L' `OnRetainNonConfigurationInstance` uso di è adatto per scenari in cui è costoso recuperare più volte i dati, ad esempio nelle chiamate al servizio Web. Si consideri, ad esempio, il codice seguente che cerca Twitter:
 
