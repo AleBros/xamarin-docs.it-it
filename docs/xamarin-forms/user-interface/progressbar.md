@@ -7,19 +7,19 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/09/2019
-ms.openlocfilehash: 78c5f38428e20a2e0c6a15d0964f8fd505a8d082
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: a4cfc6c54eb2864707f328106761af029e0734cf
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739407"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658087"
 ---
 # <a name="xamarinforms-progressbar"></a>ProgressBar di Novell. Forms
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
-Novell. Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) è un controllo che rappresenta visivamente lo stato di avanzamento come barra orizzontale riempita a una percentuale rappresentata `float` da un valore. La `ProgressBar` classe eredita da [`View`](xref:Xamarin.Forms.View).
+Il controllo Novell. [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) Forms rappresenta visivamente lo stato di avanzamento come barra orizzontale compilata con una percentuale `float` rappresentata da un valore. La `ProgressBar` classe eredita da [`View`](xref:Xamarin.Forms.View).
 
-Lo screenshot seguente mostra un `ProgressBar` in iOS e Android:
+Gli screenshot seguenti mostrano un `ProgressBar` in iOS e Android:
 
 ![Screenshot di ProgressBar in iOS e Android](progressbar-images/progressbars-default.png "ProgressBar in iOS e Android")
 
@@ -37,7 +37,7 @@ Il `ProgressBar` controllo definisce anche un `ProgressTo` metodo che aggiunge u
 
 ## <a name="create-a-progressbar"></a>Creare una ProgressBar
 
-È `ProgressBar` possibile creare un'istanza di un oggetto in XAML. La `Progress` proprietà può essere impostata in modo da determinare la percentuale di riempimento della barra colorata interna. Se la `Progress` proprietà non è impostata, il valore predefinito è 0. Nell'esempio seguente viene illustrato come creare un'istanza `ProgressBar` di in XAML con il `Progress` set di proprietà facoltativo:
+È `ProgressBar` possibile creare un'istanza di un oggetto in XAML. La `Progress` proprietà determina la percentuale di riempimento della barra colorata interna. Il valore `Progress` predefinito della proprietà è 0. Nell'esempio seguente viene illustrato come creare un'istanza `ProgressBar` di in XAML con il `Progress` set di proprietà facoltativo:
 
 ```xaml
 <ProgressBar Progress="0.5" />
@@ -54,7 +54,7 @@ ProgressBar progressBar = new ProgressBar { Progress = 0.5f };
 
 ## <a name="progressbar-appearance-properties"></a>Proprietà dell'aspetto ProgressBar
 
-La `ProgressColor` proprietà può essere impostata in modo da definire il colore della barra `Progress` interna quando la proprietà è maggiore di zero. Nell'esempio seguente viene illustrato come creare un'istanza `ProgressBar` di in XAML con `ProgressColor` il set di proprietà:
+La `ProgressColor` proprietà definisce il colore della barra interna quando `Progress` la proprietà è maggiore di zero. Nell'esempio seguente viene illustrato come creare un'istanza `ProgressBar` di in XAML con `ProgressColor` il set di proprietà:
 
 ```xaml
 <ProgressBar OnColor="Orange" />
@@ -66,7 +66,7 @@ La `ProgressColor` proprietà può essere impostata anche durante la creazione `
 ProgressBar progressBar = new ProgressBar { ProgressColor = Color.Orange };
 ```
 
-La schermata seguente mostra l' `ProgressBar` oggetto con `ProgressColor` la proprietà impostata `Color.Orange` su in iOS e Android:
+Gli screenshot seguenti mostrano `ProgressBar` `ProgressColor` con la proprietà impostata `Color.Orange` su in iOS e Android:
 
 ![Screenshot di ProgressBar con stile in iOS e Android](progressbar-images/progressbars-styled.png "ProgressBar con stile in iOS e Android")
 

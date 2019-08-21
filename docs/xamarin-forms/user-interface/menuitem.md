@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 68560c6cc814f54bb8ba9348bc53334089c36a93
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 396853e2e61904689069b7abd157c73d1da59fed
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984473"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658098"
 ---
 # <a name="xamarinforms-menuitem"></a>MenuItem Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
-La classe Novell. [`MenuItem`](xref:Xamarin.Forms.MenuItem) Forms è utilizzata per definire le voci di menu per menu `ListView` quali menu di scelta rapida dell'elemento e menu a comparsa dell'applicazione shell.
+La classe Novell. [`MenuItem`](xref:Xamarin.Forms.MenuItem) Forms definisce voci di menu per menu `ListView` come menu di scelta rapida dell'elemento e menu a comparsa dell'applicazione shell.
 
-Lo screenshot seguente mostra `MenuItem` gli oggetti in `ListView` un menu di scelta rapida in iOS e Android:
+Gli screenshot seguenti mostrano `MenuItem` gli oggetti in un `ListView` menu di scelta rapida in iOS e Android:
 
 [ !["MenuItems on iOS and Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems in iOS e Android") ] (menuitem-images/menuitem-demo-full.png#lightbox "MenuItems in iOS e Androidfull image")
 

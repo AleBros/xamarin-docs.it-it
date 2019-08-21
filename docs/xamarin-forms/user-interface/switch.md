@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: 58755c54ce2afe80a8bf43adc25a0cf2d90a0bb5
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739459"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658039"
 ---
 # <a name="xamarinforms-switch"></a>Opzione Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-Novell. Forms [`Switch`](xref:Xamarin.Forms.Switch) è un interruttore orizzontale che può essere modificato dall'utente per passare da uno stato all'altro e viceversa, rappresentato da un `boolean` valore. La `Switch` classe eredita da [`View`](xref:Xamarin.Forms.View).
+Il controllo Novell. [`Switch`](xref:Xamarin.Forms.Switch) Forms è un interruttore orizzontale che può essere modificato dall'utente per passare da uno stato all'altro e viceversa, rappresentato da un `boolean` valore. La `Switch` classe eredita da [`View`](xref:Xamarin.Forms.View).
 
-La schermata seguente mostra un `Switch` controllo negli Stati di attivazione e disattivazione in iOS e Android:
+Gli screenshot seguenti mostrano un `Switch` controllo negli Stati di attivazione e disattivazione in iOS e Android:
 
 ![Screenshot dei commutatori in stato on e off, in iOS e Android](switch-images/switch-states-default.png "Switch in iOS e Android")
 
@@ -44,7 +44,7 @@ Il `Switch` controllo definisce un `Toggled` evento generato quando la `IsToggle
 Un `Switch` oggetto può essere creato anche nel codice:
 
 ```csharp
-Switch switch = new Switch { IsToggled = true };
+Switch switchControl = new Switch { IsToggled = true };
 ```
 
 ### <a name="switch-style-properties"></a>Cambia proprietà stile
@@ -58,10 +58,10 @@ La `OnColor` proprietà può essere impostata in modo da `Switch` definire il co
 La `OnColor` proprietà può essere impostata anche durante la creazione `Switch` di un nel codice:
 
 ```csharp
-Switch switch = new Switch { OnColor = Color.Orange };
+Switch switchControl = new Switch { OnColor = Color.Orange };
 ```
 
-La schermata seguente Mostra gli `Switch` stati di attivazione e disattivazione `OnColor` `Color.Orange` , con la proprietà impostata su in iOS e Android:
+Le schermate seguenti mostrano gli `Switch` stati di attivazione e disattivazione `OnColor` `Color.Orange` , con la proprietà impostata su in iOS e Android:
 
 ![Screenshot dei commutatori in stato on e off, in iOS e Android](switch-images/switch-states-oncolor.png "Switch in iOS e Android")
 
@@ -87,8 +87,8 @@ L' `sender` argomento nel gestore eventi è responsabile dell' `Switch` attivazi
 Il `Toggled` gestore eventi può anche essere assegnato nel codice:
 
 ```csharp
-Switch switch = new Switch {...};
-switch.Toggled += (sender, e) =>
+Switch switchControl = new Switch {...};
+switchControl.Toggled += (sender, e) =>
 {
     // Perform an action after examining e.Value
 }
