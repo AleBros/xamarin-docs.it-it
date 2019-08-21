@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: 765f34af3b3c43531857b705bb4a39ea56e32f61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a13501218b6d3039f189693512d185a9d546d23f
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656129"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629653"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticare gli utenti con Azure Active Directory B2C
 
@@ -57,7 +57,7 @@ public static class Constants
 
 ## <a name="register-your-mobile-application-with-azure-active-directory-b2c"></a>Registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C
 
-Un'applicazione per dispositivi mobili deve essere registrata con il tenant per potersi connettere e autenticare gli utenti. Il processo di registrazione assegna un **ID applicazione** univoco all'applicazione e un URL di **Reindirizzamento** che reindirizza le risposte all'applicazione dopo l'autenticazione. Per ulteriori informazioni, vedere [Azure Active Directory B2C: Registrare l'applicazione](/azure/active-directory-b2c/active-directory-b2c-app-registration/). È necessario essere a conoscenza dell' **ID applicazione** assegnato all'applicazione, che viene elencato dopo il nome dell'applicazione nella visualizzazione delle proprietà. Lo screenshot seguente mostra dove trovare l'ID applicazione:
+Un'applicazione per dispositivi mobili deve essere registrata con il tenant per potersi connettere e autenticare gli utenti. Il processo di registrazione assegna un **ID applicazione** univoco all'applicazione e un URL di **Reindirizzamento** che reindirizza le risposte all'applicazione dopo l'autenticazione. Per altre informazioni, vedere [Azure Active Directory B2C: Registrare l'applicazione](/azure/active-directory-b2c/active-directory-b2c-app-registration/). È necessario essere a conoscenza dell' **ID applicazione** assegnato all'applicazione, che viene elencato dopo il nome dell'applicazione nella visualizzazione delle proprietà. Lo screenshot seguente mostra dove trovare l'ID applicazione:
 
 [![ID applicazione nella visualizzazione delle proprietà dell'applicazione Azure](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
 
@@ -81,7 +81,7 @@ public static class Constants
 
 ## <a name="create-sign-up-and-sign-in-policies-and-forgot-password-policies"></a>Creare criteri di iscrizione e accesso e criteri password dimenticati
 
-Un criterio è un'esperienza che gli utenti passano per completare un'attività, ad esempio la creazione di un account o la reimpostazione di una password. Un criterio specifica anche il contenuto dei token ricevuti dall'applicazione quando l'utente torna dall'esperienza. È necessario configurare i criteri per l'iscrizione e l'accesso all'account e la reimpostazione della password. Azure include criteri predefiniti che semplificano la creazione di criteri comuni. Per ulteriori informazioni, vedere [Azure Active Directory B2C: Criteri](/azure/active-directory-b2c/active-directory-b2c-reference-policies/)predefiniti.
+Un criterio è un'esperienza che gli utenti passano per completare un'attività, ad esempio la creazione di un account o la reimpostazione di una password. Un criterio specifica anche il contenuto dei token ricevuti dall'applicazione quando l'utente torna dall'esperienza. È necessario configurare i criteri per l'iscrizione e l'accesso all'account e la reimpostazione della password. Azure include criteri predefiniti che semplificano la creazione di criteri comuni. Per altre informazioni, vedere [Azure Active Directory B2C: Criteri](/azure/active-directory-b2c/active-directory-b2c-reference-policies/)predefiniti.
 
 Dopo aver completato la configurazione dei criteri, è necessario disporre di due criteri nella visualizzazione **flussi utente (criteri)** nella portale di Azure. Lo screenshot seguente illustra due criteri configurati nella portale di Azure:
 
@@ -247,7 +247,7 @@ public partial class LogoutPage : ContentPage
 
 ### <a name="ios"></a>iOS
 
-In iOS, lo schema URL personalizzato registrato con Azure Active Directory B2C deve essere registrato in **info. plist**. MSAL prevede che lo schema URL rispetti un modello specifico, descritto in precedenza in [registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). Lo screenshot seguente mostra lo schema URL personalizzato in **info. plist**.
+In iOS, lo schema URL personalizzato registrato con Azure Active Directory B2C deve essere registrato in **info. plist**. MSAL prevede che lo schema URL rispetti un modello specifico, descritto in precedenza in [registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). Lo screenshot seguente mostra lo schema URL personalizzato in **info. plist**.
 
 !["Registrazione di uno schema URL personalizzato in iOS"](azure-ad-b2c-images/customurl-ios.png)
 
@@ -277,7 +277,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-In Android è necessario che lo schema URL personalizzato registrato con Azure Active Directory B2C sia registrato in **file AndroidManifest. XML**. MSAL prevede che lo schema URL rispetti un modello specifico, descritto in precedenza in [registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). Nell'esempio seguente viene illustrato lo schema URL personalizzato in **file AndroidManifest. XML**.
+In Android è necessario che lo schema URL personalizzato registrato con Azure Active Directory B2C sia registrato in **file AndroidManifest. XML**. MSAL prevede che lo schema URL rispetti un modello specifico, descritto in precedenza in [registrare l'applicazione per dispositivi mobili con Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). Nell'esempio seguente viene illustrato lo schema URL personalizzato in **file AndroidManifest. XML**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -289,7 +289,9 @@ In Android è necessario che lo schema URL personalizzato registrato con Azure A
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />"
+        <!-- example -->
+        <!-- <data android:scheme="msalaaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee" android:host="auth" /> -->
+        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />
       </intent-filter>
     </activity>"
   </application>

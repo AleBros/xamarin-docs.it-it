@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4ce217d31811df82f0779a22d0c64464b5295fcc
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528400"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629664"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -92,7 +92,7 @@ with an alpha channel. Icons should not have an alpha channel.
 *Se* si usa Xcode Interface Builder, seguire questa procedura per creare nuovi controller di interfaccia per l'app Watch e abilitare la sincronizzazione con Xcode in modo che gli Outlet e le azioni C#siano disponibili in:
 
 1. Aprire l'app Watch ' s **Interface. Storyboard** in **Xcode Interface Builder**.
-    
+
     ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Xcode Interface Builder")
 
 2. Trascinare un nuovo `InterfaceController` nello storyboard:
@@ -144,7 +144,7 @@ with an alpha channel. Icons should not have an alpha channel.
     ```csharp
     using Foundation;
     using System.CodeDom.Compiler;
-    
+
     namespace HelloWatchExtension  // remember to update this
     {
         [Register ("MyInterfaceController")] // remember to update this
@@ -156,9 +156,10 @@ with an alpha channel. Icons should not have an alpha channel.
         }
     }
     ```
-    
-    Suggerimento: È possibile (facoltativamente) rendere questo file un nodo figlio del primo file trascinandolo sull'altro C# file nel riquadro della soluzione di Visual Studio per Mac. Verrà visualizzato come segue:
-    
+
+    > [!TIP]
+    > È possibile (facoltativamente) rendere questo file un nodo figlio del primo file trascinandolo sull'altro C# file nel riquadro della soluzione di Visual Studio per Mac. Verrà visualizzato come segue:
+
     ![](troubleshooting-images/add-5.png "Riquadro della soluzione")
 
 6. Selezionare **Compila > Compila tutto** in modo che la sincronizzazione Xcode riconosca la nuova classe `Register` (tramite l'attributo) usata.
@@ -167,8 +168,8 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Interface Builder")
 
-8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`.
-Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
+8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. [https://login.microsoftonline.com/common/](`MyInterfaceController`).
+    Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
 
     ![](troubleshooting-images/add-4.png "Impostazione di una classe personalizzata")
 
