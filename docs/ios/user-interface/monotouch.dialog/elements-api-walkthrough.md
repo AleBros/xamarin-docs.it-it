@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 88823aa2d86b7cc5db72b3949453cd6aa464bd74
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528458"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629631"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creazione di un'applicazione Novell. iOS tramite l'API Elements
 
@@ -20,9 +20,9 @@ _Questo articolo si basa sulle informazioni presentate nella finestra di dialogo
 
 In questa procedura dettagliata verrà usato il MT. D elementi API per creare uno stile Master-Details dell'applicazione in cui viene visualizzato un elenco attività. Quando l'utente seleziona il **+** pulsante nella barra di navigazione, viene aggiunta una nuova riga alla tabella per l'attività. Selezionando la riga, si passerà alla schermata dei dettagli che consente di aggiornare la descrizione dell'attività e la data di scadenza, come illustrato di seguito:
 
- [![](elements-api-walkthrough-images/01-task-list-app.png "Selezionando la riga, si passerà alla schermata dei dettagli che consente di aggiornare la descrizione dell'attività e la data di scadenza")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+[![](elements-api-walkthrough-images/01-task-list-app.png "Selezionando la riga, si passerà alla schermata dei dettagli che consente di aggiornare la descrizione dell'attività e la data di scadenza")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- ## <a name="setting-up-mtd"></a>Configurazione di MT. D
+## <a name="setting-up-mtd"></a>Configurazione di MT. D
 
 Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Quindi, aggiungere `using MonoTouch.Dialog` le istruzioni nel codice sorgente in base alle esigenze.
 
