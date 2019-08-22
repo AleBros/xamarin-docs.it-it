@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0c606e001552f1c4267ffc29bd69b2f38f2ec971
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a5587d5a4ed5201b8f09dfa3b4d2d292abd008d3
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527924"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889837"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Grafica principale in Novell. iOS
 
@@ -106,6 +106,7 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 ...
 }
 ```
+
 Con questa riga, ottiene prima di tutto il contesto grafico corrente da usare per il disegno. È possibile considerare un contesto grafico come l'area di disegno in cui si trova il disegno, che contiene tutti gli stati relativi al disegno, ad esempio i colori di tratto e riempimento, nonché la geometria da disegnare.
 
 ```csharp

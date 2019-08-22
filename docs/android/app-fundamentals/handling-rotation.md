@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 198d667ea52fcad4758c2845e5f2e935d1f74a0b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 394feda6f5a13855be1d1166dc22bb2a5c890d26
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521116"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887780"
 ---
 # <a name="handling-rotation"></a>Gestione della rotazione
 
@@ -228,6 +228,7 @@ Oltre a gestire tutti gli elementi `OnCreate`in, un'applicazione può anche impe
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 ```
+
 Ora, quando il dispositivo viene ruotato, l'attività non viene riavviata. Per gestire manualmente la modifica dell'orientamento in questo caso, un'attività può eseguire l'override `OnConfigurationChanged` del metodo e determinare l'orientamento `Configuration` dall'oggetto passato, come nella nuova implementazione dell'attività seguente:
 
 ```csharp

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9fafc6965c5d2dec79f440579a5cf3746a545bae
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: febb9b297712a97c03613468b79ca583ec300e77
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644401"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887718"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Procedura dettagliata - Salvataggio dello stato dell'attività
 
@@ -60,6 +60,7 @@ Quando si fa clic sul pulsante **indietro** , l' *attività B* viene distrutta e
 [ActivityLifecycle.SecondActivity] Activity B - OnStop
 [ActivityLifecycle.SecondActivity] Activity B - OnDestroy
 ```
+
 ### <a name="adding-a-click-counter"></a>Aggiunta di un contatore di clic
 
 A questo punto, si modificherà l'applicazione in modo che sia presente un pulsante che consente di contare e visualizzare il numero di volte in cui viene fatto clic. Prima di tutto, aggiungere una `_counter` variabile di istanza `MainActivity`a:

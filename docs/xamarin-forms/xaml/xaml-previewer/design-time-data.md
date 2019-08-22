@@ -1,26 +1,26 @@
 ---
 title: Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
-description: Questo articolo illustra come usare i dati della fase di progettazione per mostrare i layout con intensa attività di dati nel Visualizzatore anteprima XAML senza eseguire l'app.
+description: Questo articolo illustra come usare i dati in fase di progettazione per visualizzare layout intensivi dei dati nel Visualizzatore anteprima XAML senza eseguire l'app.
 ms.prod: xamarin
 ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557426"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887845"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
 
-_Alcuni layout sono difficili da visualizzare senza dati. Usare questi suggerimenti per sfruttare al meglio la visualizzazione in anteprima le pagine di dati con intensa attività nel Visualizzatore anteprima XAML._
+_Alcuni layout sono difficili da visualizzare senza dati. Usare questi suggerimenti per sfruttare al meglio l'anteprima delle pagine con dati intensivi nel Visualizzatore anteprime XAML._
 
-## <a name="design-time-data-basics"></a>Nozioni di base di tempo dei dati di progettazione
+## <a name="design-time-data-basics"></a>Nozioni fondamentali sui dati in fase di progettazione
 
-Fase i dati sono dati fittizi che è impostato per rendere più semplice visualizzare i controlli nel Visualizzatore anteprima XAML di progettazione. Per iniziare, aggiungere le seguenti righe di codice per l'intestazione della pagina XAML:
+I dati della fase di progettazione sono dati falsi impostati per semplificare la visualizzazione dei controlli nel Visualizzatore anteprime XAML. Per iniziare, aggiungere le righe di codice seguenti all'intestazione della pagina XAML:
 
 ```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -28,40 +28,41 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-Dopo aver aggiunto gli spazi dei nomi, è possibile inserire `d:` davanti a qualsiasi attributo o un controllo per visualizzarlo nel Visualizzatore anteprima XAML. Gli elementi con `d:` non vengono visualizzati in fase di esecuzione.
+Dopo aver aggiunto gli spazi dei nomi, è `d:` possibile posizionarli davanti a qualsiasi attributo o controllo per visualizzarli nel Visualizzatore anteprime XAML. Gli elementi `d:` con non vengono visualizzati in fase di esecuzione.
 
-Ad esempio, è possibile aggiungere testo a un'etichetta che in genere è associata a dati.
+Ad esempio, è possibile aggiungere testo a un'etichetta che in genere contiene dati associati.
 
 ```xaml
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![Progettazione di dati della fase con il testo in un'etichetta](xaml-previewer-images/designtimedata-label-sm.png "Design-time di dati con il testo di un'etichetta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Progettare dati in fase di progettazione con testo in un'etichetta](xaml-previewer-images/designtimedata-label-sm.png "Dati della fase di progettazione con un'etichetta di testo")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML mostrerebbe nothing per l'etichetta. Visualizza invece "Name". in cui l'etichetta avrà i dati reali in fase di esecuzione.
+In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML non visualizzerà nulla per l'etichetta. Viene invece visualizzato "nome!" dove l'etichetta avrà dati reali in fase di esecuzione.
 
-È possibile usare `d:` con qualsiasi attributo per un controllo di xamarin. Forms, come i colori, le dimensioni dei caratteri e la spaziatura. È anche possibile aggiungerlo al controllo stesso:
+È possibile utilizzare `d:` con qualsiasi attributo per un controllo Novell. Forms, ad esempio i colori, le dimensioni del carattere e la spaziatura. È anche possibile aggiungerlo al controllo stesso:
 
 ```xaml
 <d:Button Text="Design Time Button" />
 ```
 
-[![Progettare i dati temporali con un controllo Button](xaml-previewer-images/designtimedata-controls-sm.png "dati temporali con un controllo pulsante di progettazione")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Dati della fase di progettazione con un controllo Button](xaml-previewer-images/designtimedata-controls-sm.png "Dati della fase di progettazione con un controllo Button")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
-In questo esempio, il pulsante viene visualizzata solo in fase di progettazione. Usare questo metodo per inserire un segnaposto in per un [controllo personalizzato non è supportata per il Visualizzatore anteprima XAML](render-custom-controls.md).
+In questo esempio, il pulsante viene visualizzato solo in fase di progettazione. Utilizzare questo metodo per inserire un segnaposto in per un [controllo personalizzato non supportato dal Visualizzatore anteprima XAML](render-custom-controls.md).
 
-## <a name="preview-images-at-design-time"></a>Immagini di anteprima in fase di progettazione
+## <a name="preview-images-at-design-time"></a>Anteprima immagini in fase di progettazione
 
-È possibile impostare una fase di progettazione origine per le immagini che sono associati alla pagina o caricati in modo dinamico. Nel progetto Android, aggiungere l'immagine da visualizzare nel Visualizzatore anteprima XAML per il **risorse > Drawable** cartella. Nel progetto iOS, aggiungere l'immagine per il **risorse** cartella. È quindi possibile visualizzare tale immagine nel Visualizzatore anteprima XAML in fase di progettazione:
+È possibile impostare un'origine della fase di progettazione per le immagini associate alla pagina o caricate in modo dinamico. Nel progetto Android aggiungere l'immagine che si vuole visualizzare nel Visualizzatore anteprima XAML per le **risorse >** cartella che è possibile creare. Nel progetto iOS aggiungere l'immagine alla cartella Resources. È quindi possibile visualizzare l'immagine nel Visualizzatore anteprime XAML in fase di progettazione:
 
 ```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![I dati ora con le immagini di progettazione](xaml-previewer-images/designtimedata-image-sm.png "progettare dati temporali con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
-## <a name="design-time-data-for-listviews"></a>Dati della fase di progettazione per controlli ListView
+[![Dati della fase di progettazione con immagini](xaml-previewer-images/designtimedata-image-sm.png "Dati della fase di progettazione con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
-ListView che rappresentano una modalità comune per visualizzare i dati in un'app per dispositivi mobili. Tuttavia, sono difficili da visualizzare senza dati reali. Per usare i dati della fase di progettazione con essi, è necessario creare una matrice di fase di progettazione da usare come una proprietà ItemsSource. Il Visualizzatore anteprima XAML viene visualizzato ciò che è in tale array nel ListView in fase di progettazione.
+## <a name="design-time-data-for-listviews"></a>Dati della fase di progettazione per ListView
+
+I ListView sono un modo comune per visualizzare i dati in un'app per dispositivi mobili. Tuttavia, sono difficili da visualizzare senza dati reali. Per utilizzare i dati relativi alla fase di progettazione, è necessario creare una matrice della fase di progettazione da utilizzare come ItemsSource. Il Visualizzatore anteprima XAML Visualizza gli elementi presenti nella matrice in fase di progettazione in ListView.
 
 ```xaml
 <StackLayout>
@@ -83,26 +84,26 @@ ListView che rappresentano una modalità comune per visualizzare i dati in un'ap
 </StackLayout>
 ```
 
-[![Progettare i dati di tempo con un ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "progettare dati temporali con un ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Dati della fase di progettazione con ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Dati della fase di progettazione con ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
-Questo esempio viene illustrato un ListView di tre TextCells nel Visualizzatore anteprima XAML. È possibile modificare `x:String` a un modello di dati esistente nel progetto.
+In questo esempio viene mostrato un ListView di tre TextCells nel Visualizzatore anteprima XAML. È possibile passare `x:String` a un modello di dati esistente nel progetto.
 
-Fare riferimento a [app Hanselman.Forms di James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) per un esempio più complesso.
+Per un esempio più complesso, vedere l' [app hansels. Forms di James Montemagno su](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) .
 
-## <a name="alternative-hardcode-a-static-viewmodel"></a>In alternativa: Impostare come hardcoded un ViewModel statico
+## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternativa Impostare come hardcoded un ViewModel statico
 
-Se non si desidera aggiungere i dati della fase di progettazione a singoli controlli, è possibile impostare un archivio dati fittizi per l'associazione a una pagina. Fare riferimento a di James Montemagno [post di blog sull'aggiunta di dati design-time](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) per informazioni su come associare a un elemento ViewModel statiche in XAML.
+Se non si desidera aggiungere i dati della fase di progettazione ai singoli controlli, è possibile configurare un archivio dati fittizio da associare alla pagina. Vedere il post di Blog di James Montemagno su [sull'aggiunta di dati in fase di progettazione](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) per vedere come eseguire l'associazione a un ViewModel statico in XAML.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 ### <a name="requirements"></a>Requisiti
 
-Dati della fase di progettazione richiedono almeno la versione 3.6 di xamarin. Forms.
+I dati della fase di progettazione richiedono una versione minima di Novell. Forms 3,6.
 
-### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>In IntelliSense vengono mostrate le righe ondulate sotto i dati di fase di progettazione
+### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>IntelliSense mostra le linee ondulate nei dati della fase di progettazione
 
-Questo è un problema noto e verrà risolto in una versione futura di Visual Studio. Il progetto verrà comunque compilato senza errori.
+Si tratta di un problema noto che verrà risolto in una versione futura di Visual Studio. Il progetto viene comunque compilato senza errori.
 
 ### <a name="the-xaml-previewer-stopped-working"></a>Il Visualizzatore anteprima XAML ha smesso di funzionare
 
-Provare a chiudere e riaprire il file XAML e la pulizia e ricompilazione del progetto.
+Provare a chiudere e riaprire il file XAML e a pulire e ricompilare il progetto.

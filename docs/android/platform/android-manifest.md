@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1aaacae8cebed2396661a28c189af44c25238e7b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524690"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887833"
 ---
 # <a name="working-with-the-android-manifest"></a>Uso del manifesto Android
 
@@ -227,6 +227,7 @@ Questa dichiarazione causa la generazione del frammento XML seguente in **obj/de
              android:theme="@android:style/Theme.Light"
                 ... />
 ```
+
 In questo esempio, tutte le attività nell'app utilizzeranno per impostazione `Theme.Light` predefinita lo stile. Se si imposta il tema di un'attività `Theme.Dialog`su, solo quell'attività userà `Theme.Dialog` lo stile mentre tutte le altre attività nell' `Theme.Light` app utilizzeranno per impostazione predefinita lo stile impostato `<application>` nell'elemento. 
 
 L' `Application` elemento non è l'unico modo per configurare `<application>` gli attributi. In alternativa, è possibile inserire gli attributi direttamente nell' `<application>` elemento di **Properties/file AndroidManifest. XML**. Queste impostazioni vengono unite nell'elemento `<application>` finale che risiede in **obj/debug/Android/file AndroidManifest. XML**. Si noti che il contenuto di **Properties/file AndroidManifest. XML** esegue sempre l'override dei dati forniti dagli attributi personalizzati. 

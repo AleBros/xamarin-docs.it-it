@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d7bd3d64d7e9f4ad8298120a017719b3cbb1410e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528691"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887479"
 ---
 # <a name="maps-in-xamarinios"></a>Mappe in Novell. iOS
 
@@ -28,25 +28,27 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
- `MKMapView`è una `UIView` sottoclasse che visualizza una mappa. La semplice aggiunta della mappa usando il codice precedente produce una mappa interattiva:
+`MKMapView`è una `UIView` sottoclasse che visualizza una mappa. La semplice aggiunta della mappa usando il codice precedente produce una mappa interattiva:
 
- ![](images/00-map.png "Mappa di esempio")
+![](images/00-map.png "Mappa di esempio")
 
 ## <a name="map-style"></a>Stile mappa
 
- `MKMapView`supporta 3 stili diversi di Maps. Per applicare uno stile mappa, è sufficiente impostare `MapType` la proprietà su un valore `MKMapType` dell'enumerazione:
- ```
+`MKMapView`supporta 3 stili diversi di Maps. Per applicare uno stile mappa, è sufficiente impostare `MapType` la proprietà su un valore `MKMapType` dell'enumerazione:
+
+```
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
- ```
-  Lo screenshot seguente mostra i diversi stili di mappa disponibili:
+```
 
- ![](images/01-mapstyles.png "Questa schermata mostra i diversi stili di mappa disponibili")
+Lo screenshot seguente mostra i diversi stili di mappa disponibili:
+
+![](images/01-mapstyles.png "Questa schermata mostra i diversi stili di mappa disponibili")
 
 ## <a name="panning-and-zooming"></a>Panoramica e zoom
 
- `MKMapView`include il supporto per le funzionalità di interattività mappa, ad esempio:
+`MKMapView`include il supporto per le funzionalità di interattività mappa, ad esempio:
 
 - Zoom tramite un movimento di pizzico
 - Panoramica tramite un movimento di Pan

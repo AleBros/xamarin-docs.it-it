@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dba8fc3c239a8c20795913d6d1e5409a478c4072
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b666e8e8621019da4f2acb71ab5b3bf22fad3a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642735"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889767"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Annotazioni e sovrimpressioni in Novell. iOS
 
@@ -108,7 +108,7 @@ Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. 
     
     e stringa: 
 
-    [https://login.microsoftonline.com/consumers/](`Maps Walkthrough Docs Sample`).
+    [https://login.microsoftonline.com/common/](`Maps Walkthrough Docs Sample`).
 
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs: classe per le annotazioni personalizzate
@@ -178,6 +178,7 @@ Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. 
     
     map.AddOverlay (hotelOverlay);  
     ```
+
 Questa operazione completa il codice in `ViewDidLoad`. A questo punto è necessario implementare `MapDelegate` la classe per gestire la creazione delle visualizzazioni di annotazione e sovrapposizione rispettivamente.
 
 
@@ -192,6 +193,7 @@ Questa operazione completa il codice in `ViewDidLoad`. A questo punto è necessa
         ...
     }
     ```
+
     Qui abbiamo una sola annotazione, quindi il codice di riutilizzo non è strettamente necessario, ma è consigliabile includerlo.
 
 1. Implementare il `GetViewForAnnotation` metodo per restituire una visualizzazione `ConferenceAnnotation` per utilizzando l'immagine **Conference. png** inclusa in questa procedura dettagliata:
@@ -261,6 +263,7 @@ Questa operazione completa il codice in `ViewDidLoad`. A questo punto è necessa
         }
     }
     ```
+
     A questo punto è disponibile il codice per l'annotazione. Tutto ciò che rimane è quello di aggiungere codice a `MapDelegate` per creare la visualizzazione per la sovrimpressione dell'hotel.
 
 1. Aggiungere la seguente implementazione di `GetViewForOverlay` `MapDelegate`a:

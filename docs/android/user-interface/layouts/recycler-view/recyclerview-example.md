@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522462"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887537"
 ---
 # <a name="a-basic-recyclerview-example"></a>Esempio di RecyclerView di base
 
@@ -145,6 +145,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
     }
 }
 ```
+
 In questo esempio di codice, `PhotoViewHolder` al costruttore viene passato un riferimento alla visualizzazione elemento padre `CardView`() che `PhotoViewHolder` esegue il wrapping. Si noti che la visualizzazione dell'elemento padre viene sempre trasmessa al costruttore di base. Il `PhotoViewHolder` costruttore chiama `FindViewById` sulla visualizzazione elemento padre per individuare tutti i `ImageView` relativi riferimenti di visualizzazione figlio e `TextView`, archiviando rispettivamente i risultati nelle `Image` proprietà `Caption` e. L'adapter recupera in un secondo momento i riferimenti di visualizzazione da queste `CardView`proprietà quando aggiorna le visualizzazioni figlio con nuovi dati.
 
 Per ulteriori informazioni su `RecyclerView.ViewHolder`, vedere il [riferimento alla classe RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).

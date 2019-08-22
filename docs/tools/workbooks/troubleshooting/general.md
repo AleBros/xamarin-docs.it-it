@@ -1,70 +1,71 @@
 ---
-title: Problemi noti e soluzioni alternative
-description: Questo documento descrive problemi noti e soluzioni alternative per le cartelle di lavoro di Xamarin. Illustra i problemi di CultureInfo, JSON e altre problematiche.
+title: Problemi noti & soluzioni alternative
+description: Questo documento descrive i problemi noti e le soluzioni alternative per Xamarin Workbooks. Vengono illustrati i problemi di CultureInfo, i problemi JSON e altro ancora.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 221ed97db17da62f513448b6c85d4df205a7cbaf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61268882"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889395"
 ---
-# <a name="known-issues--workarounds"></a>Problemi noti e soluzioni alternative
+# <a name="known-issues--workarounds"></a>Problemi noti & soluzioni alternative
 
-## <a name="persistence-of-cultureinfo-across-cells"></a>Persistenza di CultureInfo nelle celle
+## <a name="persistence-of-cultureinfo-across-cells"></a>Persistenza di CultureInfo tra celle
 
-L'impostazione `System.Threading.CurrentThread.CurrentCulture` oppure `System.Globalization.CultureInfo.CurrentCulture` non viene mantenuta fra le celle della cartella di lavoro in destinazioni di cartelle di lavoro basato su Mono (Mac, iOS e Android) a causa dell'errore una [bug in Mono `AppContext.SetSwitch` ] [ appcontext-bug] implementazione .
+L'impostazione `System.Threading.CurrentThread.CurrentCulture` di o `System.Globalization.CultureInfo.CurrentCulture` non viene mantenute tra le celle delle cartelle di lavoro nelle destinazioni di cartelle di lavoro basate su mono (Mac, iOS e Android) a causa di un [bug nell'implementazione di mono. `AppContext.SetSwitch` ][appcontext-bug]
 
 ### <a name="workarounds"></a>Soluzioni
 
-* Impostare l'applicazione-dominio-local `DefaultThreadCurrentCulture`:
+* Impostare l'applicazione-dominio locale `DefaultThreadCurrentCulture`:
+
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* O aggiornamento a cartelle di lavoro 1.2.1 o versione successiva, che verrà riscrivere le assegnazioni ai `System.Threading.CurrentThread.CurrentCulture` e `System.Globalization.CultureInfo.CurrentCulture` per fornire il comportamento desiderato (risolvere i bug di Mono).
+* In alternativa, aggiornare le cartelle di lavoro 1.2.1 o successive, che riscriveranno le `System.Threading.CurrentThread.CurrentCulture` assegnazioni in e `System.Globalization.CultureInfo.CurrentCulture` per fornire il comportamento desiderato (aggirando il bug mono).
 
-## <a name="unable-to-use-newtonsoftjson"></a>Non è possibile usare newtonsoft. JSON
+## <a name="unable-to-use-newtonsoftjson"></a>Non è possibile usare Newtonsoft. JSON
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-* Aggiornamento a cartelle di lavoro 1.2.1, che installerà newtonsoft. JSON 9.0.1.
-  Le cartelle di lavoro 1.3, attualmente nel canale alfa, supporta le versioni 10 e versioni successive.
+* Aggiornare le cartelle di lavoro 1.2.1, che installeranno Newtonsoft. JSON 9.0.1.
+  Le cartelle di lavoro 1,3, attualmente nel canale alfa, supportano le versioni 10 e successive.
 
 ### <a name="details"></a>Dettagli
 
-È stato rilasciato newtonsoft. JSON 10 che ha respinto la dipendenza che è in conflitto con le cartelle di lavoro di versione viene fornito per il supporto Microsoft. CSharp `dynamic`. Questo problema viene risolto nella versione di anteprima le cartelle di lavoro 1.3, ma per ora abbiamo lavorato il problema dal blocco newtonsoft. JSON in modo specifico alla versione 9.0.1.
+È stato rilasciato Newtonsoft. JSON 10 che ha urtato la dipendenza da Microsoft. CSharp, che è in conflitto con le cartelle `dynamic`di lavoro della versione fornite per supportare. Questo problema viene risolto nella versione di anteprima della cartella di lavoro 1,3, ma per il momento è stato risolto il problema aggiungendo Newtonsoft. JSON in modo specifico alla versione 9.0.1.
 
-I pacchetti NuGet in modo esplicito in base 10 di newtonsoft. JSON o versioni successive sono supportati solo nella versione 1.3 di cartelle di lavoro, attualmente nel canale alfa.
+I pacchetti NuGet in modo esplicito a seconda di Newtonsoft. JSON 10 o versione successiva sono supportati solo nelle cartelle di lavoro 1,3, attualmente nel canale alfa.
 
-## <a name="code-tooltips-are-blank"></a>Descrizioni comandi del codice sono vuoto
+## <a name="code-tooltips-are-blank"></a>Descrizioni comando del codice vuote
 
-È presente una [bug nell'editor Monaco] [ monaco-bug] in Safari/WebKit, che viene usato nell'app per le cartelle di lavoro di Mac, che comporta il rendering delle descrizioni comando codice senza testo.
+È presente un [bug nell'editor di Monaco][monaco-bug] in Safari/WebKit, che viene usato nell'app per le cartelle di lavoro Mac, che consente il rendering del codice descrizioni comandi senza testo.
 
 ![](general-images/monaco-signature-help-bug.png)
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-* Facendo clic sul componente tooltip dopo che viene visualizzato forzerà il testo per il rendering.
+* Se si fa clic sulla descrizione comando dopo che è stata visualizzata, verrà forzato il rendering del testo.
 
-* O l'aggiornamento a cartelle di lavoro 1.2.1 o versione successiva
+* O eseguire l'aggiornamento alle cartelle di lavoro 1.2.1 o successive
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
 
-## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>I renderer di SkiaSharp non sono presenti nella versione 1.3 di cartelle di lavoro
+## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Renderer SkiaSharp mancanti nelle cartelle di lavoro 1,3
 
-A partire da 1.3 a cartelle di lavoro, è stata rimossa i renderer di SkiaSharp utilizzata nelle cartelle di lavoro 0.99.0, a favore di SkiaSharp propone i renderer, con nostro [SDK](~/tools/workbooks/sdk/index.md).
+A partire dalle cartelle di lavoro 1,3, sono stati rimossi i renderer SkiaSharp forniti nelle cartelle di lavoro di 0.99.0, a favore di SkiaSharp che forniscono i renderer stessi usando l' [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-* Aggiornare SkiaSharp alla versione più recente di NuGet. Al momento della scrittura, si tratta 1.57.1.
+* Aggiornare SkiaSharp alla versione più recente in NuGet. Al momento della stesura di questo documento, questo è 1.57.1.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Segnalazione dei bug](~/tools/workbooks/install.md#reporting-bugs)
+- [Segnalazione di bug](~/tools/workbooks/install.md#reporting-bugs)

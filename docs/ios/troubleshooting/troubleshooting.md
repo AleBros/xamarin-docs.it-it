@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: d26f8f68b2cf4eca2d28a365c921b533e657c64b
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: 06283987e1d70659653729b4f3d5a00e1877aa5f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629616"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887377"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Novell. iOS 
 
@@ -98,6 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
+
 ## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System. MissingMethodException: Non sono stati trovati costruttori per foo. bar:: ctor (System. IntPtr)
 
 Questo errore viene generato in fase di esecuzione quando il codice tenta di creare un'istanza delle classi a cui si fa riferimento dal file di Interface Builder. Ciò significa che si è dimenticato di aggiungere un costruttore che accetta un singolo IntPtr come parametro.
@@ -109,6 +110,7 @@ Per risolvere il problema, aggiungere la seguente riga di codice alla classe Foo
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
+
 ## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>Il tipo {Foo} non contiene una definizione per `GetNativeField` e non è stato `GetNativeField` trovato alcun metodo di estensione di tipo {Foo}
 
 Se si verifica questo errore nei file generati dalla finestra di progettazione (*. xib.designer.cs), significa che è possibile procedere in uno dei due modi seguenti:
@@ -388,6 +390,7 @@ Se si ottiene un arresto anomalo del runtime (SIGSEGV) all'interno del simulator
   at MonoTouch.ObjCRuntime.Runtime.RegisterAssembly (System.Reflection.Assembly)
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
+
 ... probabilmente si avrà un assembly non aggiornato nella directory dell'applicazione del simulatore. Tali assembly possono esistere perché il simulatore iOS di Apple aggiunge e aggiorna i file, ma non li elimina. In questo caso, la soluzione più semplice consiste nel selezionare "Reimposta e contenuto e impostazioni". dal menu simulatore.   
 
 > [!WARNING]

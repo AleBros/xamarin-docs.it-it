@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2019
-ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/18/2019
+ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657284"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887899"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di Markup XAML
 
@@ -28,6 +28,7 @@ Le estensioni di markup XAML consentono di migliorare la potenza e flessibilità
 - [`OnPlatform`](#onplatform) -personalizzare l'aspetto dell'interfaccia utente in base a ogni piattaforma.
 - [`OnIdiom`](#onidiom) -personalizzare l'aspetto dell'interfaccia utente in base l'idioma del dispositivo su cui è in esecuzione l'applicazione.
 - [`DataTemplate`](#datatemplate-markup-extension): converte un tipo in un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)oggetto.
+- [`FontImage`](#fontimage-markup-extension)-Visualizza un'icona del tipo di carattere in qualsiasi visualizzazione in `ImageSource`cui è possibile visualizzare un oggetto.
 
 Altre estensioni di markup XAML in passato sono supportate nelle altre implementazioni di XAML e sono supportate anche da xamarin. Forms. Questi elementi sono descritti più dettagliatamente negli altri articoli:
 
@@ -556,6 +557,37 @@ Un utilizzo tipico di questa estensione di markup si trova in un'applicazione sh
 In questo esempio, `MonkeysPage` viene convertito da un [`ContentPage`](xref:Xamarin.Forms.ContentPage) oggetto a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)un oggetto, `ShellContent.ContentTemplate` che viene impostato come valore della proprietà. Ciò garantisce che `MonkeysPage` venga creato solo quando si verifica la navigazione alla pagina, anziché all'avvio dell'applicazione.
 
 Per ulteriori informazioni sulle applicazioni shell, vedere [Novell. Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+
+## <a name="fontimage-markup-extension"></a>Estensione di markup FontImage
+
+L' `FontImage` estensione di markup consente di visualizzare un'icona del tipo di carattere in qualsiasi visualizzazione in `ImageSource`grado di visualizzare. Fornisce la stessa funzionalità `FontImageSource` della classe, ma con una rappresentazione più concisa.
+
+L' `FontImage` estensione`FontImageExtension` di markup è supportata dalla classe, che definisce le proprietà seguenti:
+
+- `FontFamily`di tipo `string`, la famiglia di caratteri a cui appartiene l'icona del tipo di carattere.
+- `Glyph`di tipo `string`, il valore del carattere Unicode dell'icona del tipo di carattere.
+- `Color`di tipo `Color`, il colore da utilizzare quando si visualizza l'icona del tipo di carattere.
+- `Size`di tipo `double`, la dimensione, in unità indipendenti dal dispositivo, dell'icona del tipo di carattere di cui è stato eseguito il rendering.
+
+> [!NOTE]
+> Il parser XAML consente di `FontImageExtension` abbreviare la classe come `FontImage`.
+
+Il `Glyph` è la proprietà content di `FontImageExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare il `Glyph=` fa parte dell'espressione di condizione che si tratta del primo argomento.
+
+La pagina **demo di FontImage** illustra come usare l' `FontImage` estensione di markup:
+
+```xaml
+<Image BackgroundColor="#D1D1D1"
+       Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=44}" />
+```
+
+In questo esempio, la versione abbreviata del `FontImageExtension` nome della classe viene usata per visualizzare un'icona di Xbox, dalla famiglia di caratteri Ionicons, [`Image`](xref:Xamarin.Forms.Image)in un oggetto. L'espressione usa anche l' `OnPlatform` estensione di markup per specificare `FontFamily` valori di proprietà diversi in iOS e Android. Inoltre, la `Glyph=` parte dell'espressione viene eliminata e le proprietà dell'estensione di markup impostate sono separate da virgole. Si noti che, mentre il carattere Unicode per l' `\uf30c`icona è, deve essere preceduto da un carattere di escape `&#xf30c;`in XAML e quindi diventa.
+
+Ecco il programma in esecuzione:
+
+[Screenshot della(consuming-images/fontimagedemo.png "demo FontImage") ![di FontImage Markup Extension]] (consuming-images/fontimagedemo-large.png#lightbox "Demo di FontImage")
+
+Per informazioni sulla visualizzazione delle icone dei tipi di carattere specificando i dati `FontImageSource` dell'icona del tipo di carattere in un oggetto, vedere [visualizzare le icone del carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
 ## <a name="define-your-own-markup-extensions"></a>Definire le proprie estensioni di Markup
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 20010fb3704da54ae1e1133c25f332e8481a1b87
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528535"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890167"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Novell. iOS
 
@@ -71,6 +71,7 @@ Il comportamento di caricamento dell'immagine in iOS riconosce `@3x` anche un su
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
+
 In alternativa, se l'immagine `MonkeyIcon.png` `MonkeyIcon@3x.png` viene assegnata a un elemento dell'interfaccia utente usando la finestra di progettazione iOS come, verrà usato di nuovo automaticamente in iPhone 6 Plus.
 
 <a name="dynamic-launch-screens" />
@@ -114,7 +115,7 @@ In questa sezione vengono descritti i tipi tipici di raccolte di tratti che l'ut
 
 Di seguito è riportato un tipico insieme di tratti che lo sviluppatore potrebbe vedere su un iPhone:
 
-|Proprietà|Value|
+|Proprietà|Valore|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Normale|
@@ -216,7 +217,7 @@ In primo luogo, iOS 8 esegue alcune operazioni di installazione per preparare la
 
 iOS 8 fornisce diverse richiamate che lo sviluppatore può usare per partecipare alla modifica del tratto, come illustrato nella tabella seguente:
 
-|Phase|Callback|DESCRIZIONE|
+|Phase|Callback|Descrizione|
 |--- |--- |--- |
 |Configurazione|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Questo metodo viene chiamato all'inizio di una modifica del tratto prima che un insieme di tratti venga impostato sul nuovo valore.</li><li>Il metodo viene chiamato quando il valore della raccolta di tratti è stato modificato ma prima che venga eseguita un'animazione.</li></ul>|
 |Animazione|`WillTransitionToTraitCollection`|Il coordinatore della transizione che viene passato a questo `AnimateAlongside` metodo dispone di una proprietà che consente allo sviluppatore di aggiungere animazioni che verranno eseguite insieme alle animazioni predefinite.|

@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 16cf976b252e409ae4302ab51eb594370a6689d1
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e6aac37561d107cb7e3f646c15621b86385dd0ee
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620945"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887515"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Eseguire la migrazione di un binding all'API unificata
 
@@ -89,6 +89,7 @@ Il nuovo binding verrà aggiornato in modo che sia:
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 Se si esegue il mapping a una libreria di terze parti di una versione più recente rispetto a quella a cui è stato `.h` inizialmente collegato, è necessario esaminare i file di intestazione per la libreria e verificare `int`se sono presenti chiamate esplicite di chiusura a, `int32_t`, `unsigned int`o `uint32_t` sono stati aggiornati in modo che `NSInteger`siano `NSUInteger` o `CGFloat`. `float` In tal caso, sarà necessario apportare anche `nint`le `nuint` stesse `nfloat` modifiche ai tipi e ai relativi mapping.
 
 Per ulteriori informazioni su queste modifiche ai tipi di dati, vedere il documento [tipi nativi](~/cross-platform/macios/nativetypes.md) .

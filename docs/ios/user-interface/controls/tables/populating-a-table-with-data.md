@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 32cb0e376646478ad01a6ea7784094d23529b0b4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d700aa8c0744d08e6536614b8cb8b024a99c84e1
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528617"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889798"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in Novell. iOS
 
@@ -109,6 +109,7 @@ Successivamente, creare un'istanza del controller di visualizzazione:
 ```csharp
 HomeScreen owner;
 ```
+
 Aggiungere un costruttore alla classe UITableViewSource che accetta un controller di visualizzazione come parametro e lo salva in un campo:
 
 ```csharp
@@ -119,11 +120,13 @@ public TableSource (string[] items, HomeScreen owner)
 
 }
 ```
+
 Modificare il metodo ViewDidLoad in cui viene creata la classe UITableViewSource per passare `this` il riferimento:
 
 ```csharp
 table.Source = new TableSource(tableItems, this);
 ```
+
 Infine, tornando al `RowSelected` metodo, chiamare `PresentViewController` sul campo memorizzato nella cache:
 
 ```csharp

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: ed9a376da0fcfebffd707e2e93919237adfef87b
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de7ec7dc87fc4ba61e76603240197fc9d041255
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620844"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887942"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Stile App xamarin. Forms con Cascading Style Sheets (CSS)
 
@@ -131,25 +131,7 @@ Per altre informazioni sui dizionari risorse, vedere [dizionari risorse](~/xamar
 
 ### <a name="c"></a>C\#
 
-In C#, un foglio di stile può essere caricato come risorsa incorporata e aggiunto a un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
-
-```csharp
-public partial class MyPage : ContentPage
-{
-    public MyPage()
-    {
-        InitializeComponent();
-
-        this.Resources.Add(StyleSheet.FromAssemblyResource(
-            IntrospectionExtensions.GetTypeInfo(typeof(MyPage)).Assembly,
-            "MyProject.Assets.styles.css"));
-    }
-}
-```
-
-Il primo argomento per il `StyleSheet.FromAssemblyResource` metodo è l'assembly contenente il foglio di stile, mentre il secondo argomento è un `string` che rappresenta l'identificatore della risorsa. L'identificatore della risorsa può essere ottenuto dal **proprietà** finestra quando viene selezionato il file CSS.
-
-In alternativa, è possibile caricare un foglio di stile da un `StringReader` e aggiunto a un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+In C#è possibile caricare un foglio di stile da un `StringReader` oggetto e aggiungerlo [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)a un oggetto:
 
 ```csharp
 public partial class MyPage : ContentPage
