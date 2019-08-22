@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: b1f2dbe87fed951223e731912b696c649d0b6edb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647186"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621093"
 ---
 # <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
@@ -366,5 +366,5 @@ Esistono alcune limitazioni da tenere presenti quando si visualizza una [`View`]
 - [Passing Data (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata) (Esempio di passaggio dei dati)
 - [LoginFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow) (Esempio di LoginFlow)
 - [TitleView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview) (Esempio di TitleView)
-- [How to Create a Sign In Screen Flow in Xamarin.Forms video](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms) (Come creare un flusso della schermata di accesso in Xamarin.Forms - video)
+- [How to Create a Sign In Screen Flow in Xamarin.Forms video](https://www.youtube.com/watch?v=qKQ7pyyG1fo) (Come creare un flusso della schermata di accesso in Xamarin.Forms - video)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

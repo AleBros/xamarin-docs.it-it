@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 4f6a0b45d37252c141b2741dd0b37a980c958a51
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 59b72daecdc1159494d069bec044ee1891916d11
+ms.sourcegitcommit: fd349a121164c85545f4b0881940eefdd0cf3b65
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896398"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Ricaricamento a caldo di XAML per Novell. Forms (anteprima)
 
@@ -30,7 +30,7 @@ Xamarin.Forms | 4,1 o versione successiva
 
 ## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Usare il ricaricamento a caldo di XAML per Novell. Forms
 
-Non è necessaria alcuna installazione o installazione aggiuntiva per usare il ricaricamento a caldo di XAML. È incorporata in Visual Studio e può essere abilitata nelle impostazioni dell'IDE. Una volta abilitata, è possibile iniziare a usare il ricaricamento a caldo di XAML eseguendo il debug dell'app in un emulatore, un simulatore o un dispositivo fisico.
+Non è necessaria alcuna installazione o installazione aggiuntiva per usare il ricaricamento a caldo di XAML. È incorporata in Visual Studio e può essere abilitata nelle impostazioni dell'IDE. Una volta abilitata, è possibile iniziare a usare il ricaricamento a caldo di XAML eseguendo il debug dell'app in un emulatore, un simulatore o un dispositivo fisico. Attualmente, il ricaricamento a caldo di XAML funziona solo quando si esegue il debug in iOS o Android.
 
 In Windows è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo Abilita ricaricamento a **caldo Novell** in **strumenti** > **Opzioni** > **Novell** > **ricarica a caldo**.
 
@@ -53,7 +53,7 @@ Se si effettua una modifica che non è possibile ricaricare il ricaricamento fre
 
 Se si fa parte dell'anteprima privata, l'estensione per il ricaricamento a caldo di XAML verrà aggiornata automaticamente al momento dell'aggiornamento di Visual Studio. Se si sceglie di non aggiornare Visual Studio, è possibile continuare a usare la versione corrente del ricaricamento a caldo di XAML, ma non si riceveranno altri aggiornamenti tramite il feed dell'estensione di anteprima privata.
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 - Se non è possibile inizializzare il ricaricamento a caldo di XAML:
   - Aggiornare la versione di Novell. Forms.

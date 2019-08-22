@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: a6fe5cc3a126cc42c07f38b89c5d1de308b3c0dc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109913"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525788"
 ---
 # <a name="application-package-size"></a>Dimensioni del pacchetto dell'applicazione
 
@@ -63,17 +63,17 @@ L'opzione di compilazione *Distribuzione rapida di assembly* può essere usata p
 
 Per abilitare *Distribuzione rapida di assembly*, seguire questa procedura:
 
-1.  Fare clic con il pulsante destro del mouse sul progetto Android in Esplora soluzioni e scegliere **Opzioni**.
+1. Fare clic con il pulsante destro del mouse sul progetto Android in Esplora soluzioni e scegliere **Opzioni**.
 
-2.  Nella finestra di dialogo Opzioni progetto selezionare **Compilazione Android**:  
+2. Nella finestra di dialogo Opzioni progetto selezionare **Compilazione Android**:  
 
     ![Compilazione Android in Opzioni progetto](app-package-size-images/fastdev0.png)
 
-3.  Selezionare le caselle di controllo **Usa runtime di Mono condiviso** e **Distribuzione rapida di assembly**:  
+3. Selezionare le caselle di controllo **Usa runtime di Mono condiviso** e **Distribuzione rapida di assembly**:  
 
     ![Caselle di controllo selezionate nella scheda Creazione pacchetto](app-package-size-images/fastdev.png)
 
-4.  Fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo Opzioni progetto.
+4. Fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo Opzioni progetto.
 
 
 La prossima volta che l'applicazione verrà compilata per il debug, gli assembly verranno installati direttamente nel dispositivo (se non lo sono già) e un pacchetto dell'applicazione di dimensioni inferiori (che non include gli assembly) verrà installato nel dispositivo. In questo modo le modifiche apportate all'applicazione saranno operative per il test più velocemente.

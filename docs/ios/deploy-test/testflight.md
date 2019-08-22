@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5729c32ca671a4fcc309d235a34929dcba6a3d03
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865586"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621107"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
@@ -55,21 +55,21 @@ Il flusso di lavoro seguente illustra i passaggi necessari per iniziare a usare 
 3. Gestire il test della versione beta:
     - Aggiungere i metadati.
     - Aggiungere gli utenti interni:
-        - Max 25 utenti.
+      - Max 25 utenti.
     - Aggiungere gli utenti esterni:
-        - Max 1000 utenti.
-        - È richiesta una revisione del test della versione beta per verificare la conformità alle linee guida di Apple.
+      - Max 1000 utenti.
+      - È richiesta una revisione del test della versione beta per verificare la conformità alle linee guida di Apple.
 4. Ricevere commenti e suggerimenti dagli utenti, intervenire e tornare al passaggio 2.
 
 ## <a name="create-an-itunes-connect-record"></a>Creare un record iTunes Connect
 
-1.  Accedere al [portale di iTunes Connect](https://itunesconnect.apple.com/) usando le credenziali per sviluppatore Apple.
-2.  Selezionare **My Apps** (App personali):
+1. Accedere al [portale di iTunes Connect](https://itunesconnect.apple.com/) usando le credenziali per sviluppatore Apple.
+2. Selezionare **My Apps** (App personali):
 
     [![](testflight-images/my-apps.png "Selezionare le app personali")](testflight-images/my-apps.png#lightbox)
 
 
-3.  Nella schermata **My Apps** (App personali) fare clic sul pulsante **+** nell'angolo superiore sinistro della schermata per aggiungere una nuova app. Se gli account per sviluppatore sono Mac e iOS, viene chiesto di scegliere il nuovo tipo di app.
+3. Nella schermata **My Apps** (App personali) fare clic sul pulsante **+** nell'angolo superiore sinistro della schermata per aggiungere una nuova app. Se gli account per sviluppatore sono Mac e iOS, viene chiesto di scegliere il nuovo tipo di app.
 
 Si aprirà la finestra di invio **New iOS App** (Nuova app iOS) in cui devono essere contenute esattamente le stesse informazioni specificate nel file Info.plist dell'app
 
@@ -84,12 +84,12 @@ Il modulo deve contenere esattamente le informazioni specificate nel file Info.p
 [![](testflight-images/infoplist.png "File Info.plist dell'app")](testflight-images/infoplist.png#lightbox)
 [![](testflight-images/newiosapp.png "Modulo in iTunes Connect")](testflight-images/newiosapp.png#lightbox)
 
--  **Name** (Nome): il nome descrittivo usato per la configurazione del bundle dell'app. Deve corrispondere esattamente al nome specificato in **Nome applicazione** specificato nel file `Info.plist`.
--  **Primary Language** (Lingua principale): la lingua di base dell'app. Di norma è la lingua parlata.
--  **Bundle ID** (ID bundle):un elenco sotto forma di menu a discesa di tutti gli ID app creati nell'account per sviluppatore.
-    *   **Bundle ID Suffix** (Suffisso ID bundle): se è stato selezionato un ID bundle con carattere jolly (ad esempio un ID che termina con *, come nell'esempio illustrato sopra), viene visualizzata una finestra aggiuntiva, in cui è necessario immettere il suffisso dell'ID Bundle. In questo esempio l'**ID bundle** e `mobi.chkn.*`, mentre il suffisso è **PageView**. Insieme costituiscono l'**ID bundle** nel file `Info.plist`.
--  **Versione** (Versione): il numero della versione dell'app che viene caricata. È scelta dallo sviluppatore.
--  **SKU** (SKU): il codice SKU è un ID univoco per l'app, che non è visualizzato dagli utenti. Può essere inteso come se fosse l'ID prodotto. Nell'esempio precedente sono stati scelta la data e un numero di versione per tale data.
+- **Name** (Nome): il nome descrittivo usato per la configurazione del bundle dell'app. Deve corrispondere esattamente al nome specificato in **Nome applicazione** specificato nel file `Info.plist`.
+- **Primary Language** (Lingua principale): la lingua di base dell'app. Di norma è la lingua parlata.
+- **Bundle ID** (ID bundle):un elenco sotto forma di menu a discesa di tutti gli ID app creati nell'account per sviluppatore.
+  - **Bundle ID Suffix** (Suffisso ID bundle): se è stato selezionato un ID bundle con carattere jolly (ad esempio un ID che termina con *, come nell'esempio illustrato sopra), viene visualizzata una finestra aggiuntiva, in cui è necessario immettere il suffisso dell'ID Bundle. In questo esempio l'**ID bundle** e `mobi.chkn.*`, mentre il suffisso è **PageView**. Insieme costituiscono l'**ID bundle** nel file `Info.plist`.
+- **Versione** (Versione): il numero della versione dell'app che viene caricata. È scelta dallo sviluppatore.
+- **SKU** (SKU): il codice SKU è un ID univoco per l'app, che non è visualizzato dagli utenti. Può essere inteso come se fosse l'ID prodotto. Nell'esempio precedente sono stati scelta la data e un numero di versione per tale data.
 
 
 ## <a name="upload-your-app"></a>Caricare l'app
@@ -190,9 +190,9 @@ Il test può essere disabilitato in qualsiasi momento.
 
 Sono tester interni i membri del team di sviluppo ai quali è assegnato uno dei ruoli seguenti in iTunes Connect:
 
--  **Admin** (Amministratore): un amministratore è autorizzato ad aggiungere e gestire nuovi utenti in iTunes Connect.
--  **Legal** (Legale): l'agente del team è l'unico utente amministratore a cui viene assegnato il ruolo Legal. che gli consente di firmare i contratti legali.
--  **Technical** (Tecnico): un utente tecnico può modificare la maggior parte delle proprietà riguardanti un'app. Può ad esempio modificare le informazioni sull'app, caricare un file binario e inviare un'app per la revisione.
+- **Admin** (Amministratore): un amministratore è autorizzato ad aggiungere e gestire nuovi utenti in iTunes Connect.
+- **Legal** (Legale): l'agente del team è l'unico utente amministratore a cui viene assegnato il ruolo Legal. che gli consente di firmare i contratti legali.
+- **Technical** (Tecnico): un utente tecnico può modificare la maggior parte delle proprietà riguardanti un'app. Può ad esempio modificare le informazioni sull'app, caricare un file binario e inviare un'app per la revisione.
 
 Ogni compilazione può essere condivisa da un massimo di 25 membri.
 

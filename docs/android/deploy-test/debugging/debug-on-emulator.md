@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 6d595a487d87c7e30c87a0347d25404d0b2f7dbc
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 133550bab03c4d2e3826ea59cf231ac3d85f29cc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527313"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525661"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Debug nell'emulatore Android
 
@@ -29,19 +29,19 @@ L'emulatore Android (installato con il carico di lavoro **Sviluppo di applicazio
 
 Visual Studio include dispositivi virtuali preconfigurati che vengono visualizzati nel menu a discesa dei dispositivi. Nello screenshot di Visual Studio 2017 seguente, ad esempio, sono disponibili diversi dispositivi virtuali preconfigurati:
 
--   **VisualStudio\_android-23\_arm\_phone**
+- **VisualStudio\_android-23\_arm\_phone**
 
--   **VisualStudio\_android-23\_arm\_tablet**
+- **VisualStudio\_android-23\_arm\_tablet**
 
--   **VisualStudio\_android-23\_x86\_phone** 
+- **VisualStudio\_android-23\_x86\_phone** 
 
--   **VisualStudio\_android-23\_x86\_tablet** 
+- **VisualStudio\_android-23\_x86\_tablet** 
 
 [![Dispositivi virtuali](debug-on-emulator-images/win/01-virtual-devices-sml.png)](debug-on-emulator-images/win/01-virtual-devices.png#lightbox)
 
 In genere, per le attività di test e debug di un'app per il telefono si seleziona il dispositivo virtuale **VisualStudio\_android 23\_x86\_phone**. Se uno di questi dispositivi virtuali preconfigurati soddisfa i requisiti (ad esempio, corrisponde al livello API di destinazione dell'app), passare ad [Avvio dell'emulatore](#launching) per iniziare l'esecuzione dell'app nell'emulatore. Se non si ha ancora familiarità con i livelli API di Android, vedere [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md) (Informazioni sui livelli API di Android).
 
-Se il progetto Xamarin.Android usa un livello di framework di destinazione non compatibile con i dispositivi virtuali disponibili, nel menu a discesa vengono elencati i dispositivi virtuali inutilizzabili in **Dispositivi non supportati**. Ad esempio, per il progetto seguente è impostato il framework di destinazione **Android 7.1 Nougat (API 25)**, non compatibile con i dispositivi virtuali **Android 6.0** elencati in questo esempio:
+Se il progetto Xamarin.Android usa un livello di framework di destinazione non compatibile con i dispositivi virtuali disponibili, nel menu a discesa vengono elencati i dispositivi virtuali inutilizzabili in **Dispositivi non supportati**. Ad esempio, per il progetto seguente è impostato il framework di destinazione **Android 7.1 Nougat (API 25)** , non compatibile con i dispositivi virtuali **Android 6.0** elencati in questo esempio:
 
 [![Dispositivo virtuale non compatibile](debug-on-emulator-images/win/02-incompatible-level-sml.png)](debug-on-emulator-images/win/02-incompatible-level.png#lightbox)
 
@@ -52,9 +52,9 @@ Prima di poter configurare i dispositivi virtuali per un nuovo livello API, è n
 
 Visual Studio per Mac include dispositivi virtuali preconfigurati visualizzati nel menu a discesa dei dispositivi. Nello screenshot seguente, ad esempio, sono disponibili due dispositivi virtuali preconfigurati:
 
--   **Android\_Accelerated\_x86**
+- **Android\_Accelerated\_x86**
 
--   **Android\_ARMv7a**
+- **Android\_ARMv7a**
 
 [![Dispositivi virtuali](debug-on-emulator-images/mac/01-virtual-devices-sml.png)](debug-on-emulator-images/mac/01-virtual-devices.png#lightbox)
 
@@ -96,8 +96,8 @@ L'emulatore può essere lasciato in esecuzione: non è necessario arrestarlo e a
 Le versioni più recenti dell'emulatore Android includono una funzionalità denominata _Avvio rapido_ che avvia l'emulatore in pochi secondi. Quando si chiude l'emulatore, viene eseguito uno snapshot dello stato del dispositivo virtuale, in modo che possa essere rapidamente ripristinato da tale stato quando viene riavviato.
 Per accedere a questa funzionalità, è necessario disporre di:
 
--   Emulatore Android 27.0.2 o versione successiva
--   Android SDK Tools 26.1.1 o versione successiva
+- Emulatore Android 27.0.2 o versione successiva
+- Android SDK Tools 26.1.1 o versione successiva
 
 Quando sono installate le versioni dell'emulatore e di SDK Tools elencate in precedenza, la funzionalità di avvio rapido è abilitata per impostazione predefinita. 
 
@@ -125,10 +125,10 @@ In questa guida è stato descritto il processo di configurazione dell'emulatore 
 
 Per altre informazioni sull'uso dell'emulatore Android, vedere gli argomenti seguenti per sviluppatori Android:
 
--   [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate) (Spostamenti nello schermo)
+- [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate) (Spostamenti nello schermo)
 
--   [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks) (Esecuzione di attività di base nell'emulatore)
+- [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks) (Esecuzione di attività di base nell'emulatore)
 
--   [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended) (Utilizzo di controlli estesi, impostazioni e Guida)
+- [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended) (Utilizzo di controlli estesi, impostazioni e Guida)
 
--   [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot) (Eseguire l'emulatore con l'avvio rapido)
+- [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot) (Eseguire l'emulatore con l'avvio rapido)

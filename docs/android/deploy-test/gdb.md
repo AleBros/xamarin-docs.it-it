@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: fe2cc5fb7c51425c8030d31015236473a5264efb
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: aa72daae1727e0d100592873a7895a7d8942b4f2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509012"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525494"
 ---
 # <a name="gdb"></a>GDB
 
@@ -24,9 +24,9 @@ In Xamarin.Android 4.10 è stato introdotto il supporto parziale per l'uso di `g
 
 È possibile usare `gdb` in tre modi:
 
-1.  [Build di debug con Fast Deployment abilitato](#Debug_Builds_with_Fast_Deployment).
-1.  [Build di debug con Fast Deployment disabilitato](#Debug_Builds_without_Fast_Deployment).
-1.  [Build di rilascio](#Release_Builds).
+1. [Build di debug con Fast Deployment abilitato](#Debug_Builds_with_Fast_Deployment).
+1. [Build di debug con Fast Deployment disabilitato](#Debug_Builds_without_Fast_Deployment).
+1. [Build di rilascio](#Release_Builds).
 
 
 Se si verificano problemi, vedere la sezione [Risoluzione dei problemi](#Troubleshooting).
@@ -83,8 +83,8 @@ Le build di debug *con* Fast Deployment copiano il programma `gdbserver` di Andr
 
 Esistono due soluzioni alternative:
 
--   Impostare la proprietà di sistema `debug.mono.log` in modo che venga creata la directory `.__override__`.
--   Includere `gdbserver` nel file `.apk`.
+- Impostare la proprietà di sistema `debug.mono.log` in modo che venga creata la directory `.__override__`.
+- Includere `gdbserver` nel file `.apk`.
 
 ### <a name="setting-the-debugmonolog-system-property"></a>Impostazione della proprietà di sistema `debug.mono.log`
 
@@ -141,9 +141,9 @@ GNU gdb (GDB) 7.3.1-gg2
 
 Il supporto di `gdb` presenta tre requisiti:
 
-1.  Autorizzazione `INTERNET`.
-2.  Debug dell'app abilitato.
-3.  `gdbserver` accessibile.
+1. Autorizzazione `INTERNET`.
+2. Debug dell'app abilitato.
+3. `gdbserver` accessibile.
 
 L'autorizzazione `INTERNET` è abilitata per impostazione predefinita nelle app di debug. Se non è già presente nell'applicazione, è possibile aggiungerla modificando **Properties/AndroidManifest.xml** o modificando le [proprietà del progetto](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
@@ -161,7 +161,7 @@ Tenere tuttavia presente che la destinazione MSBuild `_Gdb` terminerà le istanz
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-### <a name="monopmip-doesnt-work"></a>`mono_pmip` non funziona
+### <a name="mono_pmip-doesnt-work"></a>`mono_pmip` non funziona
 
 La funzione `mono_pmip` (utile per [ottenere stack frame gestiti](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb))viene esportata da `libmonosgen-2.0.so`, attualmente non scaricato dalla destinazione `_Gdb`. Questo problema verrà corretto in una versione futura.
 

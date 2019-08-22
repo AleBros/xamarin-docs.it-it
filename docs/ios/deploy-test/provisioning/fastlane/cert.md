@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e1792eb9150aa92b04b873ae18ccd89723722529
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8236dc01f31141544bef88011d87a457f18072e8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108041"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526560"
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane per iOS: cert
 
@@ -53,11 +53,15 @@ cert offre un'interfaccia di terminale per la creazione di nuove identità di fi
 
 Per usare l'utilità cert, immettere il comando seguente nell'interfaccia della riga di comando del terminale:
 
-    fastlane cert
+```
+fastlane cert
+```
 
 Per impostazione predefinita, verrà creato un certificato di distribuzione. Per creare un certificato di sviluppo, passare il flag `--development`:
 
-    fastlane cert --development
+```
+fastlane cert --development
+```
 
 Poiché cert chiederà l'ID e la password Apple, immetterli ora:
 
@@ -68,7 +72,9 @@ Poiché cert chiederà l'ID e la password Apple, immetterli ora:
 
 L'ID Apple può anche essere passato come argomento usando il comando seguente:
 
-    fastlane cert -u myemailadress@domain.com
+```
+fastlane cert -u myemailadress@domain.com
+```
 
 Se l'ID Apple è connesso a più team, questi verranno visualizzati qui. Selezionare il numero corrispondente al team che si vuole usare:
 
@@ -76,7 +82,9 @@ Se l'ID Apple è connesso a più team, questi verranno visualizzati qui. Selezio
 
 È possibile passare l'ID team anche usando il flag seguente:
 
-    fastlane cert -l 2TU993NY9J
+```
+fastlane cert -l 2TU993NY9J
+```
 
 fastlane controllerà se uno dei certificati di firma disponibili è installato nel computer locale e, se presente, lo userà.
 
@@ -99,12 +107,15 @@ Per un supporto aggiuntivo durante l'uso di cert, è possibile usare le opzioni 
 
 - Usare il flag `-–help` per un elenco di tutti i comandi disponibili:
 
-        fastlane cert --help
+    ```
+    fastlane cert --help
+    ```
 
 - Usare il flag `-–verbose` per aumentare il livello di dettaglio dell'output
 
-        fastlane cert --development --verbose
-
+    ```
+    fastlane cert --development --verbose
+    ```
 
 ## <a name="related-links"></a>Collegamenti correlati
 

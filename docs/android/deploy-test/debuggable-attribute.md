@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 66bbc7015daaba04f8431b31f639c9173484c790
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e0fb6c1ced4953fd03939f56eb4011d956dfcca6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108665"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525607"
 ---
 # <a name="debuggable-attribute"></a>Attributo Debuggable
 
@@ -21,8 +21,8 @@ Per consentire il debug, Android supporta Java Debug Wire Protocol (JDWP). Si tr
 
 JDWP può essere il valore dell'attributo `android:debuggable` in un'applicazione Android. Xamarin.Android offre i modi seguenti per impostare questo attributo:
 
-1.  Creare un file `AndroidManifext.xml` in cui impostare l'attributo `android:debuggable`.
-2.  Includere `ApplicationAttribute` in un file `.CS`, ad esempio `[assembly: Application(Debuggable=false)]`.
+1. Creare un file `AndroidManifext.xml` in cui impostare l'attributo `android:debuggable`.
+2. Includere `ApplicationAttribute` in un file `.CS`, ad esempio `[assembly: Application(Debuggable=false)]`.
 
 
 Se sono presenti sia `AndroidManifest.xml` che `ApplicationAttribute`, i contenuti di `AndroidManifest.xml` sono prioritari rispetto a quanto specificato da `ApplicationAttribute`.

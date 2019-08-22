@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5722a3a208942e8ecef6e5b3c092ac6c9825395f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865796"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890154"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
@@ -83,6 +83,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
     ```bash
     ssh amyb@10.1.8.95
     ```
+
     <a name="stepnine" />
 
 9. Se **il passaggio 8 ha esito positivo**, è possibile provare a eseguire un comando semplice, ad esempio `ls`, attraverso la connessione:
@@ -218,7 +219,7 @@ Questa sezione illustra alcuni messaggi che possono essere visualizzati nella fi
 
 È possibile ignorare questo messaggio, a meno che non si noti che la finestra di dialogo di connessione non visualizza l'indirizzo IP dell'host di compilazione Mac. Se l'indirizzo IP _manca_ in tale finestra di dialogo, è comunque possibile [aggiungere manualmente il Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
-#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"Invalid user a from 10.1.8.95" (Utente a non valido da 10.1.8.95) e "input\_userauth\_request: invalid user a [preauth]" (richiesta userauth di input: utente a non valido [preauth])
+#### <a name="invalid-user-a-from-101895-and-input_userauth_request-invalid-user-a-preauth"></a>"Invalid user a from 10.1.8.95" (Utente a non valido da 10.1.8.95) e "input\_userauth\_request: invalid user a [preauth]" (richiesta userauth di input: utente a non valido [preauth])
 
 Si può notare questo messaggio esaminando il file **sshd.log**. Questi messaggi fanno parte del processo di connessione normale. Vengono visualizzati perché Xamarin usa il nome utente **a** temporaneamente durante il recupero dell'_impronta digitale SSH_.
 

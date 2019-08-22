@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: b6b95f730b966ef5edaabbe7b0f333c2cacf5bc5
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: bc983fb43e0c649e3b7e231f42fce9d6af40e047
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58070839"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526753"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Installazione di NUnit 2.6.4 tramite NuGet
 
@@ -44,7 +44,7 @@ Nei passaggi seguenti viene descritto come installare NUnit 2.6.4.
 
     [![](installing-nunit-using-nuget-images/add-packages-xs.png "Fare clic con il pulsante destro del mouse su Pacchetti e selezionare Aggiungi pacchetti dal menu popup")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
     
-1. **Cercare `NUnit version:2.6.4`**, Visual Studio per Mac disinstallerà NUnit 3.0, se necessario, quindi scaricare e installare NUnit 2.6.4. Nella finestra di dialogo **Aggiungi pacchetti** immettere il testo `nunit version:2.6.4` nel campo di **ricerca** nell'angolo superiore destro. Selezionare **NUnit** dai risultati della ricerca e fare clic sul pulsante **Aggiungi pacchetto**:
+1. **Cercare `NUnit version:2.6.4`** , Visual Studio per Mac disinstallerà NUnit 3.0, se necessario, quindi scaricare e installare NUnit 2.6.4. Nella finestra di dialogo **Aggiungi pacchetti** immettere il testo `nunit version:2.6.4` nel campo di **ricerca** nell'angolo superiore destro. Selezionare **NUnit** dai risultati della ricerca e fare clic sul pulsante **Aggiungi pacchetto**:
 
     [![](installing-nunit-using-nuget-images/nunit-search-xs.png "Selezionare NUnit dai risultati della ricerca e fare clic sul pulsante Aggiungi pacchetto")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
 
@@ -84,25 +84,29 @@ Se viene visualizzato NUnit 3.0 o versione successiva sarà necessario effettuar
 
 1. **Disinstallare NUnit 3.0**. Usare il cmdlet `Uninstall-Package` per disinstallare NUnit 3.0:
 
-        <PM> Uninstall-Package NUnit -Project <TEST PROJECT NAME>
-        Attempting to gather dependencies information for package 'NUnit.3.0.1' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
-        Resolving actions to uninstall package 'NUnit.3.0.1'
-        Resolved actions to uninstall package 'NUnit.3.0.1'
-        Removed package 'NUnit.3.0.1' from 'packages.config'
-        Successfully uninstalled 'NUnit.3.0.1' from <TEST PROJECT NAME>
+    ```
+    <PM> Uninstall-Package NUnit -Project <TEST PROJECT NAME>
+    Attempting to gather dependencies information for package 'NUnit.3.0.1' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
+    Resolving actions to uninstall package 'NUnit.3.0.1'
+    Resolved actions to uninstall package 'NUnit.3.0.1'
+    Removed package 'NUnit.3.0.1' from 'packages.config'
+    Successfully uninstalled 'NUnit.3.0.1' from <TEST PROJECT NAME>
+    ```
 
 1. **Installare NUnit 2.6.4**. Installare NUnit 2.6.4 con il cmdlet `Install-Package` come illustrato nel frammento di codice seguente:
 
-        <PM> Install-Package NUnit -Version 2.6.4 -Project <TEST PROJECT NAME>
-        Attempting to gather dependencies information for package 'NUnit.2.6.4' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
-        Attempting to resolve dependencies for package 'NUnit.2.6.4' with DependencyBehavior 'Lowest'
-        Resolving actions to install package 'NUnit.2.6.4'
-        Resolved actions to install package 'NUnit.2.6.4'
-        Adding package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
-        Added package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
-        Added package 'NUnit.2.6.4' to 'packages.config'
-        Successfully installed 'NUnit 2.6.4' to <TEST PROJECT NAME>
-    
+    ```
+    <PM> Install-Package NUnit -Version 2.6.4 -Project <TEST PROJECT NAME>
+    Attempting to gather dependencies information for package 'NUnit.2.6.4' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
+    Attempting to resolve dependencies for package 'NUnit.2.6.4' with DependencyBehavior 'Lowest'
+    Resolving actions to install package 'NUnit.2.6.4'
+    Resolved actions to install package 'NUnit.2.6.4'
+    Adding package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
+    Added package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
+    Added package 'NUnit.2.6.4' to 'packages.config'
+    Successfully installed 'NUnit 2.6.4' to <TEST PROJECT NAME>
+    ```
+
 ## <a name="summary"></a>Riepilogo
 
 In questa guida è stato illustrato come effettuare il downgrade di NUnit 3.0 a NUnit 2.6.4 in Visual Studio 2015 o versioni successive tramite la console di Gestione pacchetti.

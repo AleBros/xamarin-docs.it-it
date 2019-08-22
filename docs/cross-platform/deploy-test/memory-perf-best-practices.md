@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 2665e45277eccaedbbbbd77f6c7c0ca47700d950
-ms.sourcegitcommit: c2bffcdee5a7c619280c6b9032ba90e4df8b63d9
+ms.openlocfilehash: 75bc540ee518a1f5cfef29886d968648ea5769ed
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533021"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526712"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
@@ -262,9 +262,9 @@ I linguaggi gestiti, come C#, usano la Garbage Collection per recuperare la memo
 
 Per allocare spazio per gli oggetti, SGen utilizza uno dei tre heap seguenti:
 
--  **Nursery**: qui vengono allocati i nuovi oggetti di piccole dimensioni. Quando lo spazio di questo heap si esaurisce, viene eseguita una Garbage Collection secondaria e tutti gli oggetti attivi vengono spostati nell'heap principale.
--  **Heap principale**: contiene gli oggetti a esecuzione prolungata. Se la memoria disponibile nell'heap principale non è sufficiente, viene eseguita un'operazione di Garbage Collection principale. Se la Garbage Collection principale non riesce a liberare una quantità di memoria sufficiente, SGen chiederà una maggiore quantità di memoria al sistema.
--  **Spazio dei Large Object**: contiene gli oggetti che richiedono più di 8000 byte. I Large Object non vengono creati nella Nursery, ma vengono allocati in questo heap.
+- **Nursery**: qui vengono allocati i nuovi oggetti di piccole dimensioni. Quando lo spazio di questo heap si esaurisce, viene eseguita una Garbage Collection secondaria e tutti gli oggetti attivi vengono spostati nell'heap principale.
+- **Heap principale**: contiene gli oggetti a esecuzione prolungata. Se la memoria disponibile nell'heap principale non è sufficiente, viene eseguita un'operazione di Garbage Collection principale. Se la Garbage Collection principale non riesce a liberare una quantità di memoria sufficiente, SGen chiederà una maggiore quantità di memoria al sistema.
+- **Spazio dei Large Object**: contiene gli oggetti che richiedono più di 8000 byte. I Large Object non vengono creati nella Nursery, ma vengono allocati in questo heap.
 
 Uno dei vantaggi offerti da SGen è che il tempo necessario per eseguire una Garbage Collection secondaria è proporzionale al numero di nuovi oggetti attivi creati dopo l'ultima Garbage Collection secondaria. Ciò riduce l'impatto dell'operazione di Garbage Collection sulle prestazioni di un'applicazione, dato che le operazioni di Garbage Collection secondaria richiedono meno tempo rispetto a quelle di Garbage Collection principale. La Garbage Collection principale continuerà ad essere eseguita, ma con frequenza minore.
 
@@ -307,16 +307,16 @@ Lo screenshot seguente illustra le opzioni del linker in Visual Studio per Mac p
 
 Per controllare il comportamento del linker sono disponibili tre impostazioni diverse:
 
--  **Non collegare**: il linker non rimuoverà i tipi e i metodi inutilizzati. Per motivi di prestazioni, questa è l'impostazione predefinita per le compilazioni di debug.
--  **Collega solo SDK del framework/Solo assembly SDK**: questa impostazione consente di ridurre le dimensioni dei soli assembly in dotazione con Xamarin e non influisce sul codice utente.
--  **Collega tutti gli assembly**: consente di eseguire un'ottimizzazione più aggressiva degli assembly dell'SDK e del codice utente. Per le associazioni verranno rimossi i campi sottostanti inutilizzati e ogni istanza (o ogni oggetto associato) verrà alleggerito e userà una quantità inferiore di memoria.
+- **Non collegare**: il linker non rimuoverà i tipi e i metodi inutilizzati. Per motivi di prestazioni, questa è l'impostazione predefinita per le compilazioni di debug.
+- **Collega solo SDK del framework/Solo assembly SDK**: questa impostazione consente di ridurre le dimensioni dei soli assembly in dotazione con Xamarin e non influisce sul codice utente.
+- **Collega tutti gli assembly**: consente di eseguire un'ottimizzazione più aggressiva degli assembly dell'SDK e del codice utente. Per le associazioni verranno rimossi i campi sottostanti inutilizzati e ogni istanza (o ogni oggetto associato) verrà alleggerito e userà una quantità inferiore di memoria.
 
 L'opzione *Collega tutti gli assembly* deve essere usata con cautela perché può compromettere l'applicazione in modo imprevisto. L'analisi statica eseguita dal linker potrebbe non identificare correttamente tutto il codice effettivamente necessario e, di conseguenza, potrebbe rimuovere una quantità eccessiva di codice dall'applicazione compilata. Questa situazione si rivela solo in runtime con l'arresto anomalo dell'applicazione. Per questo motivo, dopo aver modificato il comportamento del linker è importante testare l'applicazione in modo accurato.
 
 Se il test rivela che il linker ha erroneamente rimosso una classe o un metodo, è possibile contrassegnare i tipi o i metodi a cui non si fa riferimento in modo statico, ma che sono necessari per l'applicazione, tramite uno degli attributi seguenti:
 
--  `Xamarin.iOS.Foundation.PreserveAttribute`: attributo per progetti Xamarin.iOS.
--  `Android.Runtime.PreserveAttribute`: attributo per progetti Xamarin.Android.
+- `Xamarin.iOS.Foundation.PreserveAttribute`: attributo per progetti Xamarin.iOS.
+- `Android.Runtime.PreserveAttribute`: attributo per progetti Xamarin.Android.
 
 Può essere ad esempio necessario mantenere i costruttori predefiniti dei tipi di cui vengono create istanze in modo dinamico. L'uso della serializzazione XML, poi, può richiedere il mantenimento delle proprietà dei tipi.
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 7c7a3e311a6c5f19242b51dd14f59bcdc9a75c64
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: 2f580571e7b871e724ca1a760060a238098e4f44
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574715"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526506"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Installazione di Xamarin.iOS in Windows
 
@@ -71,10 +71,10 @@ Per impostare la configurazione per lo sviluppo con Xamarin.iOS in Visual Studio
 
 Per compilare le app Xamarin.iOS con Visual Studio 2017 in Windows, è necessario quanto segue:
 
--  Un computer Windows con Visual Studio 2017 installato. Può trattarsi di un computer fisico o di una macchina virtuale.
+- Un computer Windows con Visual Studio 2017 installato. Può trattarsi di un computer fisico o di una macchina virtuale.
     - [Requisiti di sistema Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
     
--  Un Mac accessibile dalla rete configurato con strumenti di compilazione Apple e Xamarin.iOS. Visual Studio 2017 accede a questa macchina tramite una connessione di rete per usare gli strumenti di compilazione Apple, necessari per la compilazione di applicazioni iOS native. 
+- Un Mac accessibile dalla rete configurato con strumenti di compilazione Apple e Xamarin.iOS. Visual Studio 2017 accede a questa macchina tramite una connessione di rete per usare gli strumenti di compilazione Apple, necessari per la compilazione di applicazioni iOS native. 
     - [Requisiti di sistema Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
 
 ## <a name="setup"></a>Configurazione

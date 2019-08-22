@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: aac558f52423132bef53f1754307e743c69f6f22
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b3bc6874a8584b60b15d1d373ad97fde565dfc4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121207"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527124"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilazione per dispositivi diversi in Xamarin.iOS
 
@@ -128,8 +128,8 @@ Se si vuole che il progetto sfrutti determinate funzionalit√† delle versioni pi√
 
 A tale scopo, seguire questa procedura:
 
--  Aprire **Opzioni progetto** e passare al riquadro **Compilazione iOS**.
--  Aggiungere `'-gcc_flags "-weak_framework iAd"'` a **Opzioni aggiuntive** per ogni configurazione con cui si vuole stabilire un collegamento debole:
+- Aprire **Opzioni progetto** e passare al riquadro **Compilazione iOS**.
+- Aggiungere `'-gcc_flags "-weak_framework iAd"'` a **Opzioni aggiuntive** per ogni configurazione con cui si vuole stabilire un collegamento debole:
 
 
 [![](compiling-for-different-devices-images/image3.png "Opzioni aggiuntive")](compiling-for-different-devices-images/image3.png#lightbox)

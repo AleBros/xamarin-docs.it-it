@@ -6,24 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3c00f074e2f002d82795e9bd445fdf617275089f
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
+ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301266"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525016"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manuale del file APK
 
 
 Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzione, il file APK deve essere firmato, in modo che possa essere eseguito in un dispositivo Android. Questo processo viene gestito in genere con l'ambiente IDE. In alcune situazioni, tuttavia, è necessario firmare il file APK manualmente dalla riga di comando. La firma di un file APK prevede i passaggi seguenti:
 
-1.   **Creazione di una chiave privata** &ndash; Questo passaggio deve essere eseguito una sola volta. La chiave privata è necessaria per firmare digitalmente il file APK.
+1. **Creazione di una chiave privata** &ndash; Questo passaggio deve essere eseguito una sola volta. La chiave privata è necessaria per firmare digitalmente il file APK.
     Dopo che la chiave privata è stata creata, è possibile ignorare questo passaggio per le compilazioni di rilascio future.
 
-2.   **Esecuzione di Zipalign per il file APK**  &ndash; *Zipalign* è un processo di ottimizzazione eseguito per un'applicazione. Questo processo consente ad Android di interagire in modo più efficiente con il file APK in runtime. Xamarin.Android esegue un controllo in runtime e consente l'esecuzione dell'applicazione solo se il file APK è stato sottoposto a Zipalign.
+2. **Esecuzione di Zipalign per il file APK**  &ndash; *Zipalign* è un processo di ottimizzazione eseguito per un'applicazione. Questo processo consente ad Android di interagire in modo più efficiente con il file APK in runtime. Xamarin.Android esegue un controllo in runtime e consente l'esecuzione dell'applicazione solo se il file APK è stato sottoposto a Zipalign.
 
-3.  **Firma del file APK** &ndash; Questo passaggio prevede l'uso dell'utilità **apksigner** di Android SDK e la firma del file APK con la chiave privata creata nel passaggio precedente. Le applicazioni sviluppate con versioni degli strumenti di compilazione di Android SDK precedenti alla versione 24.0.3 usano l'app **jarsigner** di JDK. Entrambi gli strumenti vengono trattati in dettaglio più avanti. 
+3. **Firma del file APK** &ndash; Questo passaggio prevede l'uso dell'utilità **apksigner** di Android SDK e la firma del file APK con la chiave privata creata nel passaggio precedente. Le applicazioni sviluppate con versioni degli strumenti di compilazione di Android SDK precedenti alla versione 24.0.3 usano l'app **jarsigner** di JDK. Entrambi gli strumenti vengono trattati in dettaglio più avanti. 
 
 L'ordine dei passaggi è importante e dipende dallo strumento usato per firmare il file APK. Quando si usa **apksigner**, è importante prima eseguire **Zipalign** per l'applicazione e quindi firmare quest'ultima con **apksigner**.  Se per firmare il file APK è necessario usare **jarsigner**, è importante prima firmare il file APK e quindi eseguire **Zipalign**. 
 

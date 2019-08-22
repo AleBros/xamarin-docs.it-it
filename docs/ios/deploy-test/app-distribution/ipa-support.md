@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 100b98d12d45713b0d5f6dfb435f3aa879e7da9f
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c430d7771d443b80bec2a3e8a79565e2a7994a8b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899122"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887584"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Supporto IPA in Xamarin.iOS
 
@@ -128,7 +128,7 @@ In alcuni casi, ad esempio in un ambiente di integrazione continua, può essere 
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     ```
 
-1. Se si include un file **iTunesMetadata.plist** facoltativo, fare clic sul pulsante **...**, selezionarlo dall'elenco e fare clic sul pulsante **OK**:
+1. Se si include un file **iTunesMetadata.plist** facoltativo, fare clic sul pulsante **...** , selezionarlo dall'elenco e fare clic sul pulsante **OK**:
 
      ![](ipa-support-images/imagexs03.png "Selezionare iTunesMetadata.plist dall'elenco")
 
@@ -153,7 +153,7 @@ Dopo la creazione e la selezione del profilo di provisioning, la creazione del f
     > [!NOTE]
     > Una configurazione ad hoc potrebbe non essere disponibile per i progetti Xamarin.iOS più recenti. Se non è disponibile, selezionare la configurazione **Rilascio**.
 
-3. Se si include un file **iTunesMetadata.plist** facoltativo, fare clic sul pulsante **...**, selezionarlo dall'elenco e fare clic sul pulsante **Apri**:
+3. Se si include un file **iTunesMetadata.plist** facoltativo, fare clic sul pulsante **...** , selezionarlo dall'elenco e fare clic sul pulsante **Apri**:
 
     ![](ipa-support-images/imagevs03.png "Selezionare iTunesMetadata.plist dall'elenco")
 
@@ -164,7 +164,7 @@ Dopo la creazione e la selezione del profilo di provisioning, la creazione del f
     ![](ipa-support-images/imagevs05.png "Selezionare Ad hoc dall'elenco a discesa Configurazione della build")
 
 7. Compilare il progetto per creare il pacchetto IPA.
-8. Il pacchetto IPA verrà compilato nella cartella **Bin > iOS Device > Ad Hoc (o Release)**:
+8. Il pacchetto IPA verrà compilato nella cartella **Bin > iOS Device > Ad Hoc (o Release)** :
 
     ![](ipa-support-images/imagevs06.png "Pacchetto IPA in Esplora file")
 
@@ -219,6 +219,7 @@ Un esempio completo che usa questo approccio è simile al seguente in Windows:
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
+
 O al seguente in Mac:
 
 ```bash

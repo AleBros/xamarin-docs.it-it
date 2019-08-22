@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ba09afc477ddaadc07aa415376860eea3c8c28d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 30731dda1007127caff84eae20696b45803b74f1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671468"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528991"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificati e identificatori in Xamarin.Mac
 
@@ -32,7 +32,7 @@ Quindi fare clic sul **collegamento Certificates** (Certificati) nella sezione *
 
 [![Selezione del collegamento Certificates (Certificati)](certificates-identifiers-images/devcenter03.png "Selezione del collegamento Certificates (Certificati)")](certificates-identifiers-images/devcenter03-large.png#lightbox)
 
-Fare clic sul collegamento **All** (Tutti) e fare clic sul pulsante **+**:
+Fare clic sul collegamento **All** (Tutti) e fare clic sul pulsante **+** :
 
 [![Selezione di All (Tutti) e aggiunta di un nuovo elemento](certificates-identifiers-images/certif01.png "Selezione di All (Tutti) e aggiunta di un nuovo elemento")](certificates-identifiers-images/certif01-large.png#lightbox)
 
@@ -40,10 +40,10 @@ Da qui scaricare i **certificati intermedi** (Worldwide Developer Relations Cert
 
 Nella parte restante di questa sezione vengono illustrati i quattro passaggi necessari per completare la configurazione di un account Mac Developer.
 
--   **Registrare l'ID app Mac**: lo sviluppatore dovrà seguire la procedura seguente per ogni applicazione scritta.
--   **Registrare sistemi macOS**: questo passaggio è richiesto solo per aggiungere computer con cui eseguire i test.
--   **Creare certificati**: questo passaggio è richiesto solo una prima volta per la configurazione dei certificati e successivamente per il rinnovo.
--   **Creare un profilo di provisioning**: lo sviluppatore dovrà seguire questa procedura per ogni nuova applicazione scritta e in caso di aggiunta di nuovi sistemi.
+- **Registrare l'ID app Mac**: lo sviluppatore dovrà seguire la procedura seguente per ogni applicazione scritta.
+- **Registrare sistemi macOS**: questo passaggio è richiesto solo per aggiungere computer con cui eseguire i test.
+- **Creare certificati**: questo passaggio è richiesto solo una prima volta per la configurazione dei certificati e successivamente per il rinnovo.
+- **Creare un profilo di provisioning**: lo sviluppatore dovrà seguire questa procedura per ogni nuova applicazione scritta e in caso di aggiunta di nuovi sistemi.
 
 Fare clic sul collegamento **Overview** (Panoramica) in alto a sinistra nella pagina per tornare a questo menu in qualsiasi momento.
 
@@ -77,7 +77,7 @@ Da qui lo sviluppatore può configurare i database che intende usare:
 
 Per creare un profilo di provisioning per il test, lo sviluppatore dovrà disporre di computer Mac registrati. È possibile registrare un massimo di 100 computer per testare le app Mac.
 
-In Mac Developer Center selezionare **All** (Tutti) nella sezione **Devices** (Dispositivi) e fare clic sul pulsante **+**:
+In Mac Developer Center selezionare **All** (Tutti) nella sezione **Devices** (Dispositivi) e fare clic sul pulsante **+** :
 
 [![Aggiunta di un nuovo computer](certificates-identifiers-images/devcenter10.png "Aggiunta di un nuovo computer")](certificates-identifiers-images/devcenter10-large.png#lightbox)
 
@@ -93,9 +93,9 @@ Usare la sezione Certificates (Certificati) per creare diversi tipi di certifica
 
 Esistono tre tipi principali di certificati:
 
--   **Certificato di sviluppo Mac**: facoltativo per lo sviluppo di app generali, ma obbligatorio se lo sviluppatore prevede di usare funzionalità quali iCloud o notifiche push. Lo sviluppatore avrà bisogno di un certificato di sviluppo prima di poter creare profili di provisioning per l'accesso a tali funzionalità.
--   **Mac App Store**: lo sviluppatore dovrà disporre di un certificato per l'app e di un altro certificato per il programma di installazione.
--   **ID sviluppatore**: certificati per l'app e il programma di installazione se si sceglie di eseguire la distribuzione all'esterno di Mac App Store.
+- **Certificato di sviluppo Mac**: facoltativo per lo sviluppo di app generali, ma obbligatorio se lo sviluppatore prevede di usare funzionalità quali iCloud o notifiche push. Lo sviluppatore avrà bisogno di un certificato di sviluppo prima di poter creare profili di provisioning per l'accesso a tali funzionalità.
+- **Mac App Store**: lo sviluppatore dovrà disporre di un certificato per l'app e di un altro certificato per il programma di installazione.
+- **ID sviluppatore**: certificati per l'app e il programma di installazione se si sceglie di eseguire la distribuzione all'esterno di Mac App Store.
 
 Le sezioni seguenti forniscono esempi della creazione di ognuno di questi tipi di certificati.
 
@@ -175,7 +175,7 @@ Per rilasciare autonomamente un'applicazione Xamarin.Mac (e non tramite App Stor
 
 Seguire questa procedura:
 
-1. Nella sezione **Certificates** (Certificati) iniziare facendo clic sul pulsante **+**, quindi selezionare il pulsante di opzione **Developer ID** (ID sviluppatore): 
+1. Nella sezione **Certificates** (Certificati) iniziare facendo clic sul pulsante **+** , quindi selezionare il pulsante di opzione **Developer ID** (ID sviluppatore): 
 
     [![Aggiunta di un ID sviluppatore](certificates-identifiers-images/certif07.png "Aggiunta di un ID sviluppatore")](certificates-identifiers-images/certif07-large.png#lightbox)
 2. Fare clic sul pulsante **Continue** (Continua) e selezionare il tipo di ID sviluppatore da creare: 

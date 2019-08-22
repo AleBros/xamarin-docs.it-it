@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c03815776921a61c1f54136e3f09c0996dff71d3
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: f632b44e087c0e380ecd81c2af7db3d49c072f7e
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528416"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887750"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>File iTunesMetadata.plist nelle app Xamarin.iOS
 
@@ -119,6 +119,7 @@ La chiave `UIRequiredDeviceCapabilities` consente a iTunes di conoscere le funzi
     <true/>
 </dict>
 ```
+
 Specifica che il dispositivo iOS deve supportare il set di istruzioni ARM7 e avere una fotocamera rivolta in avanti prima che questa applicazione possa essere installata nel dispositivo. Per un elenco completo di valori consentiti, vedere la documentazione su [UIRequiredDeviceCapabilities](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) di Apple.
 
 ### <a name="artistname-and-playlistartistname"></a>artistName e playlistArtistName

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865886"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526628"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisioning manuale per Xamarin.iOS
 
@@ -193,14 +193,14 @@ Dopo che è stato creato correttamente il profilo di provisioning, potrebbe esse
 
 I certificati e i profili di provisioning che sono stati creati nel portale Apple Developer potrebbero non essere visualizzati automaticamente in Xcode. Potrebbe quindi essere necessario scaricarli in modo da potervi accedere da Visual Studio per Mac e Visual Studio. Per aggiornare e scaricare i certificati creati nel portale Apple Developer, eseguire le operazioni seguenti:
 
-1.   Uscire da Visual Studio per Mac o Visual Studio.
-2.   Avviare Xcode.
-3.   Scegliere **Menu Xcode > Preferenze**
-4.   Fare clic sulla scheda **Account**.
-5.   Selezionare un team e fare clic sul pulsante **Download Manual Profiles** (Scarica profili manuali): [![](manual-provisioning-images/selectteam1.png "Download dei profili manuali")](manual-provisioning-images/selectteam1.png#lightbox)
+1. Uscire da Visual Studio per Mac o Visual Studio.
+2. Avviare Xcode.
+3. Scegliere **Menu Xcode > Preferenze**
+4. Fare clic sulla scheda **Account**.
+5. Selezionare un team e fare clic sul pulsante **Download Manual Profiles** (Scarica profili manuali):  [![](manual-provisioning-images/selectteam1.png "Download dei profili manuali")](manual-provisioning-images/selectteam1.png#lightbox)
 
-6.   Uscire da Xcode.
-7.  Avviare Visual Studio per Mac o Visual Studio.
+6. Uscire da Xcode.
+7. Avviare Visual Studio per Mac o Visual Studio.
 
 I nuovi certificati o profili di provisioning saranno disponibili in Visual Studio per Mac o Visual Studio e pronti per l'uso.
 

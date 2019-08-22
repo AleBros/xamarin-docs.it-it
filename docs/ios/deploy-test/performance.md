@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 4954b83b75618128f32b0e5fceed2f04df183433
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 47211f60d55f1f355a92307eff53ed9af754eda2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511477"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527407"
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 
@@ -62,10 +62,10 @@ L'oggetto `MyView` non gestito avrà un elemento `GCHandle` che punta all'oggett
 
 Nei casi in cui un oggetto contenuto mantiene un collegamento al contenitore, sono disponibili diverse opzioni per gestire il riferimento circolare:
 
--  Interrompere manualmente il ciclo impostando il collegamento al contenitore su `null`.
--  Rimuovere manualmente l'oggetto contenuto dal contenitore.
--  Chiamare `Dispose` sugli oggetti.
--  Evitare il riferimento circolare mantenendo un riferimento debole al contenitore. Sono disponibili altre informazioni sui riferimenti deboli.
+- Interrompere manualmente il ciclo impostando il collegamento al contenitore su `null`.
+- Rimuovere manualmente l'oggetto contenuto dal contenitore.
+- Chiamare `Dispose` sugli oggetti.
+- Evitare il riferimento circolare mantenendo un riferimento debole al contenitore. Sono disponibili altre informazioni sui riferimenti deboli.
 
 ### <a name="using-weakreferences"></a>Uso di WeakReference
 

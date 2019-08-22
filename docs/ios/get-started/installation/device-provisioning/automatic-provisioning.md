@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865315"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890107"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
@@ -43,12 +43,15 @@ Prima di avviare il processo di firma automatica, verificare di avere un ID Appl
 
 > [!IMPORTANT]
 > Prima di iniziare, assicurarsi di accedere a [iTunes Connect](https://itunesconnect.apple.com/) oppure [appleid.apple.com](https://appleid.apple.com) per verificare di avere accettato i criteri per l'account Apple più recenti. Se richiesto, completare i passaggi per accettare eventuali nuovi contratti per l'account da Apple. Se non si accetta l'informativa sulla privacy di maggio 2018, verrà visualizzato uno degli avvisi seguenti quando si tenta di eseguire il provisioning del dispositivo:
+>
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
 > }
 > ```
+>
 > oppure
+>
 > ```
 > Authentication Service Is Unavailable
 > ```

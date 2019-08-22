@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0363f6fa1611a15c6925717f7bdf3905f467831e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 92631fa50dc4826e70df4333bb55f7f69937d053
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107794"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526550"
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane per iOS: match
 
@@ -53,7 +53,9 @@ Se l'amministratore del team crea un repository git privato, tramite github.com 
 
 Usando il terminale, sostituire la directory con la directory del progetto ed eseguire:
 
-    fastlane match init
+```
+fastlane match init
+```
 
 Quando richiesto, immettere l'URL del repository git:
 
@@ -76,11 +78,13 @@ Con l'inizializzazione del progetto viene creato un matchfile, un file di testo 
 
 A seconda dell'ambiente necessario, è possibile usare uno dei comandi seguenti per creare un nuovo certificato e profilo di provisioning e archiviarlo nel nuovo repository git:
 
-    fastlane match appstore
+```
+fastlane match appstore
 
-    fastlane match adhoc
+fastlane match adhoc
 
-    fastlane match development
+fastlane match development
+```
 
 Oltre a creare nuovi certificati e profili, usando uno di questi comandi verranno aggiunti (o aggiornati, se esistono già) gli elementi seguenti al repository git:
 
@@ -99,15 +103,21 @@ I profili di provisioning vengono installati in `~/Library/MobileDevice/Provisio
 
 Se sono presenti certificati non ordinati, è possibile usare `nuke` per revocare i certificati e i profili per ogni ambiente usando i comandi seguenti:
 
-    fastlane match nuke
+```
+fastlane match nuke
+```
 
 Per revocare tutti i certificati e i profili di provisioning per un ambiente specifico:
 
-    fastlane match nuke development
+```
+fastlane match nuke development
+```
 
  oppure
 
-    fastlane match nuke distribution
+```
+fastlane match nuke distribution
+```
 
 fastlane confermerà i file che verranno rimossi prima di eseguire un'eliminazione.
 
@@ -127,15 +137,21 @@ Per un supporto aggiuntivo durante l'uso di match, è possibile usare le opzioni
 
 - Usare il flag `-–help` per un elenco di tutti i comandi disponibili:
 
-        fastlane match cert --help
+    ```
+    fastlane match cert --help
+    ```
 
 - Usare il flag `-–verbose` per aumentare il livello di dettaglio dell'output:
 
-        fastlane match --development --verbose
+    ```
+    fastlane match --development --verbose
+    ```
 
 - Usare il flag `--force_for_new_devices` per forzare il rinnovo dei profili di provisioning, se il conteggio dei dispositivi nel portale per sviluppatori è cambiato:
 
-        fastlane match development --force_for_new_devices
+    ```
+    fastlane match development --force_for_new_devices
+    ```
 
 ## <a name="related-links"></a>Collegamenti correlati
 

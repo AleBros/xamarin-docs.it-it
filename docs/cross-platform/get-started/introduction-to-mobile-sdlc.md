@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: conceptdev
 ms.author: crdun
 ms.date: 11/22/2016
-ms.openlocfilehash: 99be69abb11640418917d4d2cb9738a0a843d6d0
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: 4e2af0d1746ef1321db39d97a86af2b4bd769c69
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290146"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526700"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
 
@@ -19,8 +19,8 @@ La compilazione di applicazioni per dispositivi mobili può essere un'operazione
 
 In questo documento vengono fornite informazioni introduttive dettagliate sulla creazione di applicazioni per dispositivi mobili che includono:
 
-1.   **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui concepimento, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
-1.   **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
+1. **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui concepimento, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
+1. **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
 
 Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alla guida [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md) e tornare più tardi a questo documento.
 
@@ -28,11 +28,11 @@ Questo documento si propone di rispondere alle domande fondamentali sullo svilup
 
 Il ciclo di vita di sviluppo del software per dispositivi mobili non è totalmente diverso dal ciclo di vita di sviluppo del software per applicazioni Web o desktop. In entrambi si distinguono 5 fasi principali del processo:
 
-1.   **Concepimento**: tutte le app nascono da un'idea. L'idea viene solitamente perfezionata in una solida base per l'applicazione.
-1.   **Progettazione**: la fase di progettazione consiste nel definire l'esperienza utente dell'app, ad esempio il layout generale e il funzionamento, e nel trasformarla nella progettazione di un'interfaccia utente appropriata, in genere con l'aiuto di un Graphic Designer.
-1.   **Sviluppo**: solitamente la fase più dispendiosa in termini di risorse, si tratta dell'effettiva creazione dell'applicazione.
-1.   **Stabilizzazione**: quando lo sviluppo è a buon punto, gli addetti al controllo qualità iniziano a testare l'applicazione e a correggerne i bug. Spesso l'applicazione entra in una fase beta in cui viene data la possibilità a un pubblico di utenti più ampio di usare l'applicazione e inviare commenti o suggerire modifiche.
-1.  **Distribuzione**
+1. **Concepimento**: tutte le app nascono da un'idea. L'idea viene solitamente perfezionata in una solida base per l'applicazione.
+1. **Progettazione**: la fase di progettazione consiste nel definire l'esperienza utente dell'app, ad esempio il layout generale e il funzionamento, e nel trasformarla nella progettazione di un'interfaccia utente appropriata, in genere con l'aiuto di un Graphic Designer.
+1. **Sviluppo**: solitamente la fase più dispendiosa in termini di risorse, si tratta dell'effettiva creazione dell'applicazione.
+1. **Stabilizzazione**: quando lo sviluppo è a buon punto, gli addetti al controllo qualità iniziano a testare l'applicazione e a correggerne i bug. Spesso l'applicazione entra in una fase beta in cui viene data la possibilità a un pubblico di utenti più ampio di usare l'applicazione e inviare commenti o suggerire modifiche.
+1. **Distribuzione**
 
 Le fasi del ciclo di vita spesso si sovrappongono. Capita spesso ad esempio che mentre viene finalizzata l'interfaccia utente lo sviluppo sia ancora in corso e possa addirittura fornire dati per la progettazione dell'interfaccia. È anche possibile che venga iniziata la fase di stabilizzazione di un'applicazione mentre vengono aggiunte nuove funzioni a una nuova versione.
 
@@ -47,16 +47,16 @@ La diffusione e il livello di interazione degli utenti con i dispositivi mobili 
 La fase del concepimento riguarda la definizione e il perfezionamento dell'idea per un'app.
 Per creare un'app di successo, è importante porsi alcune domande fondamentali. Di seguito sono indicati alcuni aspetti da tenere presente prima di pubblicare un'app in uno degli App Store pubblici:
 
--   **Vantaggio competitivo**: esistono già app simili disponibili? In caso affermativo, come si differenzia l'applicazione dalle altre applicazioni?
+- **Vantaggio competitivo**: esistono già app simili disponibili? In caso affermativo, come si differenzia l'applicazione dalle altre applicazioni?
 
 Per le app che verranno distribuite in un'azienda:
 
--   **Integrazione dell'infrastruttura**: in quale infrastruttura già esistente dovrà essere integrata o quale infrastruttura dovrà estendere?
+- **Integrazione dell'infrastruttura**: in quale infrastruttura già esistente dovrà essere integrata o quale infrastruttura dovrà estendere?
 
 Le app dovranno anche essere valutate rispetto al fattore di forma dei dispositivi mobili:
 
--   **Valore**: qual è il valore offerto agli utenti? Come useranno l'app?
--   **Forma/Mobilità**: come funzionerà l'app nel fattore di forma di un dispositivo mobile? Com'è possibile aggiungere valore usando tecnologie per dispositivi mobili come il riconoscimento della posizione, la videocamera e così via?
+- **Valore**: qual è il valore offerto agli utenti? Come useranno l'app?
+- **Forma/Mobilità**: come funzionerà l'app nel fattore di forma di un dispositivo mobile? Com'è possibile aggiungere valore usando tecnologie per dispositivi mobili come il riconoscimento della posizione, la videocamera e così via?
 
 Per rendere più semplice la progettazione delle funzionalità di un'app può essere utile definire gli attori e i [casi d'uso](https://en.wikipedia.org/wiki/Use_case). Gli attori sono i ruoli all'interno di un'applicazione e sono spesso utenti. I casi d'uso sono in genere azioni o scopi.
 
@@ -76,9 +76,9 @@ L'esperienza utente viene in genere creata con wireframe o mockup usando uno dei
 
 Quando si creano i mockup di esperienza utente, è importante tenere presente le linee guida dell'interfaccia per le varie piattaforme a cui è destinata l'app. L'app deve adattarsi a ogni piattaforma. Le linee guida di progettazione ufficiali per ogni piattaforma sono le seguenti:
 
-1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android** -  [Design Guidelines](https://developer.android.com/design/index.html)
-1.   **UWP** - [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/) (Nozioni di base sulla progettazione per la piattaforma UWP)
+1. **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
+1. **Android** -  [Design Guidelines](https://developer.android.com/design/index.html)
+1. **UWP** - [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/) (Nozioni di base sulla progettazione per la piattaforma UWP)
 
 Ad esempio, ogni app ha una metafora per il passaggio da una sezione all'altra in un'applicazione. iOS usa una barra di schede nella parte inferiore della schermata, Android usa una barra di schede nella parte superiore della schermata e la piattaforma UWP usa la visualizzazione con [pivot o schede](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
 
@@ -110,10 +110,10 @@ La maggior parte delle esercitazioni che seguono è incentrata sulla fase di svi
 
 La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. Non soltanto da un punto di vista funzionale (ad esempio, l'arresto anomalo dell'applicazione quando si fa clic su un pulsante), ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
 
-1.   **Prototipo**: l'app è ancora nella fase di modello di verifica e solo la funzionalità principale e parti specifiche dell'applicazione sono funzionanti. Sono presenti i bug maggiori.
-1.   **Alfa**: il codice delle funzionalità principali è stato completato (le funzionalità sono state compilate ma non testate completamente). I bug maggiori sono ancora presenti e le funzionalità periferiche potrebbero non essere ancora presenti.
-1.   **Beta**: la maggior parte delle funzionalità è stata completata e sono stati eseguiti almeno un test parziale e la correzione dei bug. I principali problemi noti potrebbero essere ancora presenti.
-1.   **Versione finale candidata**: tutte le funzionalità sono state completate e testate. Ad eccezione di alcuni bug, l'app è candidata per il rilascio.
+1. **Prototipo**: l'app è ancora nella fase di modello di verifica e solo la funzionalità principale e parti specifiche dell'applicazione sono funzionanti. Sono presenti i bug maggiori.
+1. **Alfa**: il codice delle funzionalità principali è stato completato (le funzionalità sono state compilate ma non testate completamente). I bug maggiori sono ancora presenti e le funzionalità periferiche potrebbero non essere ancora presenti.
+1. **Beta**: la maggior parte delle funzionalità è stata completata e sono stati eseguiti almeno un test parziale e la correzione dei bug. I principali problemi noti potrebbero essere ancora presenti.
+1. **Versione finale candidata**: tutte le funzionalità sono state completate e testate. Ad eccezione di alcuni bug, l'app è candidata per il rilascio.
 
 Non è mai troppo presto per iniziare a testare un'applicazione. Ad esempio, se viene rilevato un problema importante nella fase di prototipo, l'esperienza utente dell'app può essere ancora modificata per risolverlo. Se viene rilevato un problema di prestazioni nella fase alfa, è ancora possibile modificare l'architettura prima che venga compilata una grande quantità di codice basato su assunzioni false.
 
@@ -131,9 +131,9 @@ Dopo che l'applicazione è stata stabilizzata, è possibile procedere alla distr
 
 Le app Xamarin.iOS e Objective-C vengono distribuite esattamente nello stesso modo:
 
-1.   **App Store di Apple**: l'App Store di Apple è un repository di applicazioni online con disponibilità globale creato in Mac OS X tramite iTunes. Si tratta del metodo di distribuzione più diffuso per le applicazioni e consente agli sviluppatori di commercializzare e distribuire le app online in modo molto semplice.
-1.   **Distribuzione interna**: distribuzione interna delle applicazioni aziendali non disponibili al pubblico tramite l'App Store.
-1.   **Distribuzione ad-hoc**: la distribuzione ad-hoc è destinata principalmente allo sviluppo e al test e consente di eseguire la distribuzione a un numero limitato di dispositivi di cui è stato effettuato correttamente il provisioning. La distribuzione a un dispositivo tramite Xcode o Visual Studio per Mac è considerata una distribuzione ad-hoc.
+1. **App Store di Apple**: l'App Store di Apple è un repository di applicazioni online con disponibilità globale creato in Mac OS X tramite iTunes. Si tratta del metodo di distribuzione più diffuso per le applicazioni e consente agli sviluppatori di commercializzare e distribuire le app online in modo molto semplice.
+1. **Distribuzione interna**: distribuzione interna delle applicazioni aziendali non disponibili al pubblico tramite l'App Store.
+1. **Distribuzione ad-hoc**: la distribuzione ad-hoc è destinata principalmente allo sviluppo e al test e consente di eseguire la distribuzione a un numero limitato di dispositivi di cui è stato effettuato correttamente il provisioning. La distribuzione a un dispositivo tramite Xcode o Visual Studio per Mac è considerata una distribuzione ad-hoc.
 
 #### <a name="android"></a>Android
 
@@ -146,10 +146,10 @@ Al contrario, tutti gli utenti sono liberi di creare un App Store e la maggior p
 
 Ciò offre agli sviluppatori un canale di distribuzione per le applicazioni più grande ma più complesso. [Google Play](https://play.google.com/store?hl=en) è l'App Store ufficiale di Google, ma sono disponibili numerosi altri Store. Alcuni degli Store più noti sono:
 
-1.  [AppBrain](http://www.appbrain.com/)
-1.  [Amazon Appstore per Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1.  [Handango](http://www.handango.com/)
-1.  [GetJar](http://www.getjar.com/)
+1. [AppBrain](http://www.appbrain.com/)
+1. [Amazon Appstore per Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](http://www.handango.com/)
+1. [GetJar](http://www.getjar.com/)
 
 #### <a name="uwp"></a>UWP
 
@@ -176,10 +176,10 @@ I telefoni hanno uno spazio sulla schermata molto limitato e i tablet, sebbene p
 
 È importante prendere in considerazione dispositivi diversi durante l'intero ciclo di vita di sviluppo del software:
 
-1.   **Concettualizzazione e pianificazione**: tenere presente che l'hardware e le funzioni varieranno da un dispositivo all'altro. È possibile che un'applicazione basata su determinate funzioni non funzioni correttamente su alcuni dispositivi. Ad esempio, poiché non tutti i dispositivi sono provvisti di videocamera, se si crea un'applicazione di messaggistica video, è possibile che alcuni dispositivi siano in grado di riprodurre i video ma non di registrarli.
-1.   **Progettazione**: durante la progettazione di un'esperienza utente, fare attenzione ai diversi formati e dimensioni dello schermo dei dispositivi. Inoltre, durante la progettazione dell'interfaccia utente di un'applicazione, è necessario considerare le diverse risoluzioni dello schermo.
-1.   **Sviluppo**: quando si usa una funzione dal codice, è necessario verificare sempre prima la presenza della funzione. Ad esempio, prima di usare una funzione del dispositivo come la videocamera, verificare sempre nel sistema operativo la presenza della funzione. Quindi, durante l'inizializzazione della funzione o del dispositivo, assicurarsi di richiedere gli elementi attualmente supportati dal sistema operativo relativi al dispositivo e quindi usare tali impostazioni di configurazione.
-1.   **Test**: è molto importante testare l'applicazione in fase iniziale e spesso sui dispositivi attuali. Anche i dispositivi con le stesse specifiche hardware possono variare notevolmente nel comportamento.
+1. **Concettualizzazione e pianificazione**: tenere presente che l'hardware e le funzioni varieranno da un dispositivo all'altro. È possibile che un'applicazione basata su determinate funzioni non funzioni correttamente su alcuni dispositivi. Ad esempio, poiché non tutti i dispositivi sono provvisti di videocamera, se si crea un'applicazione di messaggistica video, è possibile che alcuni dispositivi siano in grado di riprodurre i video ma non di registrarli.
+1. **Progettazione**: durante la progettazione di un'esperienza utente, fare attenzione ai diversi formati e dimensioni dello schermo dei dispositivi. Inoltre, durante la progettazione dell'interfaccia utente di un'applicazione, è necessario considerare le diverse risoluzioni dello schermo.
+1. **Sviluppo**: quando si usa una funzione dal codice, è necessario verificare sempre prima la presenza della funzione. Ad esempio, prima di usare una funzione del dispositivo come la videocamera, verificare sempre nel sistema operativo la presenza della funzione. Quindi, durante l'inizializzazione della funzione o del dispositivo, assicurarsi di richiedere gli elementi attualmente supportati dal sistema operativo relativi al dispositivo e quindi usare tali impostazioni di configurazione.
+1. **Test**: è molto importante testare l'applicazione in fase iniziale e spesso sui dispositivi attuali. Anche i dispositivi con le stesse specifiche hardware possono variare notevolmente nel comportamento.
 
 #### <a name="limited-resources"></a>Risorse limitate
 

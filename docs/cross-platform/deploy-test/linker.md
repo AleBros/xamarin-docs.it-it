@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: caf43e6cb975b65240f5c0f8538b9be175978eac
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: bf934d50c90efaba266cbfac00aa5140ea92009b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780460"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526681"
 ---
 # <a name="custom-linker-configuration"></a>Configurazione personalizzata del linker
 
@@ -20,12 +20,12 @@ Se il set predefinito di opzioni non è sufficiente, è possibile gestire il pro
 È possibile fornire definizioni aggiuntive al linker per impedire che il tipo, determinati metodi e/o determinati campi vengano eliminati dall'applicazione. Nel codice l'approccio consigliato consiste nell'usare l'attributo personalizzato `[Preserve]`, come descritto nelle guide [Collegamento in iOS](~/ios/deploy-test/linker.md) e [Collegamento in Android](~/android/deploy-test/linker.md).
 Tuttavia, se sono necessarie definizioni dagli assembly SDK o di prodotto, l'uso di un file XML può essere la soluzione migliore, rispetto all'aggiunta di codice che impedisca al linker di eliminare elementi necessari.
 
-A questo scopo, definire un file XML con l'elemento di primo livello <linker> che contiene nodi *assembly*, che a loro volta contengono nodi *type*, che contengono infine nodi *method* e *field*.
+A questo scopo, definire un file XML con l'elemento di primo livello `<linker>` che contiene nodi *assembly*, che a loro volta contengono nodi *type*, che contengono infine nodi *method* e *field*.
 
 Quando questo file di descrizione del linker è disponibile, aggiungerlo al progetto e quindi:
 
--  **Per Android**: impostare **Azione di compilazione** su **LinkDescription**
--  **Per iOS**: impostare **Azione di compilazione** su **LinkDescription**
+- **Per Android**: impostare **Azione di compilazione** su **LinkDescription**
+- **Per iOS**: impostare **Azione di compilazione** su **LinkDescription**
 
 
 L'esempio seguente mostra che aspetto avrà il file XML:

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: adfc8e34d64b6091ba8ffc56c0f93bcf560128b1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647041"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527713"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
@@ -442,14 +442,14 @@ Non tutti hanno a disposizione un designer che crei le icone e le immagini di av
 - [**Sketch**](https://www.sketchapp.com"): Sketch è un'app Mac per la progettazione di interfacce utente, icone e altro ancora. Questa è l'app con cui è stato progettato il set delle icone e delle immagini di avvio dell'app di Xamarin. Sketch 3 è disponibile nell'App Store. È anche possibile provare lo [strumento Sketch](http://bohemiancoding.com/sketch/tool/) gratuito.
 - [**Pixelmator**](http://www.pixelmator.com/): versatile app di modifica delle immagini per Mac a un costo di circa 30 dollari.
 - [**Glyphish**](http://www.glyphish.com/): set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
-- [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari.  I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
+- [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
 
 ::: zone-end
 ::: zone pivot="windows"
 
 * Visual Studio: è possibile usare questo strumento per creare un set di icone semplici per l'app direttamente nell'IDE.
 - [**Glyphish**](http://www.glyphish.com/): set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
-- [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari.  I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
+- [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
 
 ::: zone-end
 

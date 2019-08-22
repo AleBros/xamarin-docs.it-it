@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 4f545893ca4cde441cd05fc3d8e52ecf0f6aae98
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c67544824f23ea72ad325d39347330a863846c2b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669492"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526545"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso di mtouch per creare un bundle di app Xamarin.iOS
 
@@ -45,9 +45,9 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 
 Il comando `mtouch` può compilare il codice in tre modi diversi:
 
--  Compilare il codice per i test del simulatore.
--  Compilare il codice per la distribuzione del dispositivo.
--  Distribuire l'eseguibile nel dispositivo.
+- Compilare il codice per i test del simulatore.
+- Compilare il codice per la distribuzione del dispositivo.
+- Distribuire l'eseguibile nel dispositivo.
 
 
 ### <a name="building-for-the-simulator"></a>Compilazione per il simulatore

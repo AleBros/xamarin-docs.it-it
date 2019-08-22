@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 9ce29df9070ee99bb3de9579025f5b0f366d6331
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9c7572c3d3a785264e9f26c17e74c41ee28e8af6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655894"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526531"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS Multiscreen - approfondimento
 
@@ -72,17 +72,17 @@ Il controller di spostamento è comune nelle applicazioni iOS e offre funzioni d
 
 Il controller di spostamento svolge tre funzioni principali:
 
--  **Offre hook per la navigazione in avanti**: il controller di spostamento usa una metafora di navigazione gerarchica in cui le gerarchie di visualizzazione del contenuto vengono *inviate* su uno *stack di navigazione*. Lo stack di navigazione può essere considerato come un mazzo di carte impilato in cui è visibile solo la carta situata più in alto, come illustrato nella figura seguente:  
+- **Offre hook per la navigazione in avanti**: il controller di spostamento usa una metafora di navigazione gerarchica in cui le gerarchie di visualizzazione del contenuto vengono *inviate* su uno *stack di navigazione*. Lo stack di navigazione può essere considerato come un mazzo di carte impilato in cui è visibile solo la carta situata più in alto, come illustrato nella figura seguente:  
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "Questa figura illustra la navigazione come un mazzo di carte")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
--  **Facoltativamente, offre un pulsante Indietro**: quando si inserisce un nuovo elemento nello stack di navigazione, la barra del titolo può visualizzare automaticamente un *pulsante Indietro* che consente all'utente di spostarsi all'indietro. Premendo il pulsante Indietro, il controller di navigazione corrente viene *estratto* dallo stack di navigazione e viene caricata la gerarchia di visualizzazione del contenuto precedente nella finestra:  
+- **Facoltativamente, offre un pulsante Indietro**: quando si inserisce un nuovo elemento nello stack di navigazione, la barra del titolo può visualizzare automaticamente un *pulsante Indietro* che consente all'utente di spostarsi all'indietro. Premendo il pulsante Indietro, il controller di navigazione corrente viene *estratto* dallo stack di navigazione e viene caricata la gerarchia di visualizzazione del contenuto precedente nella finestra:  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "Questa figura illustra l'estrazione di una carta dal mazzo")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Include una barra del titolo**: la parte superiore del controller di spostamento viene chiamata *barra del titolo*. È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
+- **Include una barra del titolo**: la parte superiore del controller di spostamento viene chiamata *barra del titolo*. È responsabile della visualizzazione del titolo del controller di spostamento, come illustrato nella figura seguente:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "La barra del titolo è responsabile della visualizzazione del titolo del controller di spostamento")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
@@ -191,9 +191,9 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 L'applicazione Phoneword ha introdotto alcuni concetti non trattati in questa guida. Essi includono:
 
--  **Creazione automatica dei controller di visualizzazione**: quando si immette un nome di classe per il controller di visualizzazione nel **riquadro delle proprietà**, la finestra di progettazione iOS verifica se quella classe esiste e genera quindi automaticamente la classe sottostante del controller di visualizzazione. Per altre informazioni su questa e altre funzionalità di progettazione iOS, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione alla finestra di progettazione iOS).
--  **Controller di visualizzazione tabella**: `CallHistoryController` è un controller di visualizzazione tabella. Un controller di visualizzazione tabella contiene una visualizzazione tabella, lo strumento di visualizzazione di layout e dati più comune in iOS. Le tabelle non rientrano nell'ambito di questa guida. Per altre informazioni sul controller di visualizzazione tabella, vedere la guida [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) (Uso di tabelle e celle).
--   **ID storyboard**: l'impostazione dell'ID storyboard crea una classe del controller di visualizzazione in Objective-C, che contiene il code-behind per il controller di visualizzazione nello storyboard. L'ID di storyboard viene usato per trovare la classe Objective-C e creare un'istanza del controller di visualizzazione nello storyboard. Per altre informazioni sugli ID storyboard, vedere la guida [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introduzione agli storyboard).
+- **Creazione automatica dei controller di visualizzazione**: quando si immette un nome di classe per il controller di visualizzazione nel **riquadro delle proprietà**, la finestra di progettazione iOS verifica se quella classe esiste e genera quindi automaticamente la classe sottostante del controller di visualizzazione. Per altre informazioni su questa e altre funzionalità di progettazione iOS, vedere la guida [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md) (Introduzione alla finestra di progettazione iOS).
+- **Controller di visualizzazione tabella**: `CallHistoryController` è un controller di visualizzazione tabella. Un controller di visualizzazione tabella contiene una visualizzazione tabella, lo strumento di visualizzazione di layout e dati più comune in iOS. Le tabelle non rientrano nell'ambito di questa guida. Per altre informazioni sul controller di visualizzazione tabella, vedere la guida [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) (Uso di tabelle e celle).
+- **ID storyboard**: l'impostazione dell'ID storyboard crea una classe del controller di visualizzazione in Objective-C, che contiene il code-behind per il controller di visualizzazione nello storyboard. L'ID di storyboard viene usato per trovare la classe Objective-C e creare un'istanza del controller di visualizzazione nello storyboard. Per altre informazioni sugli ID storyboard, vedere la guida [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introduzione agli storyboard).
 
 ## <a name="summary"></a>Riepilogo
 
