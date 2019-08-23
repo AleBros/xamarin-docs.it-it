@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: choose-layout.md
+            html: Informazioni sul modo in cui le principali classi di layout in Xamarin.Forms posizionano e ridimensionano i relativi elementi figlio.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: choose-layout.md
+            title: Scegliere un layout
           - href: stack-layout.md
             html: 'Informazioni su come organizzare le viste in uno stack unidimensionale, orizzontalmente o verticalmente.'
             image:
@@ -37,18 +43,18 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: flex-layout.md
             title: FlexLayout
-          - href: absolute-layout.md
-            html: Informazioni su come organizzare le visualizzazioni impostando valori di coordinate e dimensioni che possono essere proporzionali o assoluti.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
           - href: relative-layout.md
             html: 'Informazioni su come organizzare le visualizzazioni impostando vincoli, in relazione alle proprietà del layout o delle visualizzazioni di pari livello.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: absolute-layout.md
             title: RelativeLayout
+          - href: absolute-layout.md
+            html: Informazioni su come organizzare le visualizzazioni impostando valori di coordinate e dimensioni che possono essere proporzionali o assoluti.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: AbsoluteLayout
           - href: scroll-view.md
             html: Informazioni su come rendere disponibile lo scorrimento quando una visualizzazione non rientra nei limiti dello schermo.
             image:
@@ -60,7 +66,7 @@ sections:
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: contentview.md
-            title: Frame
+            title: ContentView
           - href: frame.md
             html: 'Informazioni su come circondare una visualizzazione con un frame che può essere configurato con colore, ombreggiatura e altre opzioni.'
             image:
