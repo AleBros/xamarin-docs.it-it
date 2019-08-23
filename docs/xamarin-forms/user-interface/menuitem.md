@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 396853e2e61904689069b7abd157c73d1da59fed
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: cbc39ee38ce623ce446d50494829119058fc88dc
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658098"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976469"
 ---
 # <a name="xamarinforms-menuitem"></a>MenuItem Novell. Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
 La classe Novell. [`MenuItem`](xref:Xamarin.Forms.MenuItem) Forms definisce voci di menu per menu `ListView` come menu di scelta rapida dell'elemento e menu a comparsa dell'applicazione shell.
 
@@ -215,5 +215,5 @@ In UWP, il menu di scelta rapida viene attivato facendo clic con il pulsante des
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Demo MenuItem](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+* [Demo MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 * [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md)

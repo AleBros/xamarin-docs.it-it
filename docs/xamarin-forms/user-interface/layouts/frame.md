@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019
-ms.openlocfilehash: 329edf455a4778efa5f6fbd1ec88cfb274c5cb49
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 619b29a9d65594b1badd805c3361fe1a174d7174
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984423"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976493"
 ---
 # <a name="xamarinforms-frame"></a>Frame Novell. Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 La classe Novell. [`Frame`](xref:Xamarin.Forms.Frame) Forms è un layout usato per eseguire il wrapping di una visualizzazione con un bordo che può essere configurato con colore, ombreggiatura e altre opzioni. I frame vengono comunemente usati per creare bordi intorno ai controlli, ma possono essere usati per creare un'interfaccia utente più complessa. Per ulteriori informazioni, vedere [utilizzo avanzato dei frame](#advanced-frame-usage).
 
@@ -193,5 +193,5 @@ Frame circleImageFrame = new Frame
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Demo frame](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Demo frame](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 * [Immagini in Novell. Forms](~/xamarin-forms/user-interface/images.md)

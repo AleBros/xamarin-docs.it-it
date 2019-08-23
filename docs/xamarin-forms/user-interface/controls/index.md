@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019
-ms.openlocfilehash: 925e97292d19745b0b89fb98103d205ab8476157
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: dfc6c71a252b57bb39b464425b89fe8f5bda7d3e
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976507"
 ---
 # <a name="controls-reference"></a>Riferimento per i controlli
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 L'interfaccia utente di un'applicazione Novell. Forms è costituita da oggetti mappati ai controlli nativi di ogni piattaforma di destinazione. Ciò consente alle applicazioni specifiche della piattaforma per iOS, Android e al piattaforma UWP (Universal Windows Platform) di usare il codice Novell. Forms contenuto in una [libreria di .NET standard](~/cross-platform/app-fundamentals/net-standard.md).
 

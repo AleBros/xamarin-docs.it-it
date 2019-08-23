@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/12/2019
-ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 08/22/2019
+ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976580"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Layout di Novell. Forms CollectionView
 
@@ -319,9 +319,6 @@ Per impostazione predefinita, in [`GridItemsLayout`](xref:Xamarin.Forms.GridItem
 
 Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
-> [!IMPORTANT]
-> Le intestazioni e i piè di pagina sono attualmente supportati solo in Android.
-
 Quando un'intestazione viene aggiunta a un layout che cresce orizzontalmente, da sinistra a destra, l'intestazione viene visualizzata a sinistra dell'elenco. Analogamente, quando un piè di pagina viene aggiunto a un layout che cresce orizzontalmente, da sinistra a destra, il piè di pagina viene visualizzato a destra dell'elenco.
 
 ### <a name="display-strings-in-the-header-and-footer"></a>Visualizzare le stringhe nell'intestazione e nel piè di pagina
@@ -346,6 +343,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Questo codice genera gli screenshot seguenti, con l'intestazione mostrata nello screenshot iOS e il piè di pagina visualizzato nello screenshot Android:
+
+[ ![Screenshot di un'intestazione e un piè di pagina di una stringa CollectionView, nell'](layout-images/header-footer-string.png "intestazione e nel piè") di pagina di una stringa di iOS e Android CollectionView] (layout-images/header-footer-string-large.png#lightbox "Intestazione e piè di pagina di una stringa CollectionView")
 
 ### <a name="display-views-in-the-header-and-footer"></a>Visualizzazione delle visualizzazioni nell'intestazione e nel piè di pagina
 
@@ -395,6 +396,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Questo codice genera gli screenshot seguenti, con l'intestazione mostrata nello screenshot iOS e il piè di pagina visualizzato nello screenshot Android:
+
+[ ![Screenshot di un'intestazione e un piè di pagina di CollectionView usando le visualizzazioni, nell'](layout-images/header-footer-view.png "intestazione e nel piè") di pagina di visualizzazione di iOS e Android.] (layout-images/header-footer-view-large.png#lightbox "Intestazione e piè di pagina della visualizzazione CollectionView")
 
 ### <a name="display-a-templated-header-and-footer"></a>Visualizzare un'intestazione e un piè di pagina basati su modelli
 
@@ -446,6 +451,10 @@ collectionView.SetBinding(ItemsView.HeaderProperty, ".");
 collectionView.SetBinding(ItemsView.FooterProperty, ".");
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Questo codice genera gli screenshot seguenti, con l'intestazione mostrata nello screenshot iOS e il piè di pagina visualizzato nello screenshot Android:
+
+[ ![Screenshot di un'intestazione e un piè di pagina di CollectionView usando i modelli, nell'intestazione e nel piè di pagina per iOS e Android](layout-images/header-footer-template.png "CollectionView") ] (layout-images/header-footer-template-large.png#lightbox "Intestazione e piè di pagina del modello CollectionView")
 
 ## <a name="item-spacing"></a>Spaziatura elementi
 

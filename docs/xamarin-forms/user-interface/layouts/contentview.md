@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 379791d4dda676140425d79eca696cdca94cd55b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2dde7415f40c9db205351a81d63d273fc211ed2b
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888424"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976591"
 ---
 # <a name="xamarinforms-contentview"></a>Novell. Forms ContentView
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-cardview/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
 
 La classe Novell. [`ContentView`](xref:Xamarin.Forms.ContentView) Forms è un tipo `Layout` di che contiene un singolo elemento figlio e viene in genere usato per creare controlli personalizzati riutilizzabili. La `ContentView` classe eredita da [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). Questo articolo e l'esempio associato spiegano come creare un controllo personalizzato `CardView` basato `ContentView` sulla classe.
 
@@ -205,7 +205,7 @@ Per ulteriori informazioni sui modelli di controllo, vedere [Novell. Forms Contr
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Applicazione di esempio CardView](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-cardview/)
+* [Applicazione di esempio ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
 * [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md).
 * [Modelli di controllo Novell. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)

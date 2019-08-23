@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2019
-ms.openlocfilehash: 9d9d07388c2dc32e82fb780d0ed09e586e401662
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f146fc25af5b5c62acece5c736522773e6dc455d
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976524"
 ---
 # <a name="xaml-controls"></a>Controlli XAML
 
@@ -40,7 +40,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 | --- | --- |
 | <h3>Button</h3>Visualizza il testo in un oggetto rettangolare.<p align="center">![Screenshot di un pulsante](xaml-controls-images/Button.png "Pulsante")</p>[Guida](xref:Xamarin.Forms.Button) / [all'API](~/xamarin-forms/user-interface/button.md) | <p valign="center"><pre>&lt;Button Text="Click Me!"<br />        Font="Large"<br />        BorderWidth="1"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand"<br />        Clicked="OnButtonClicked" /&gt;</pre></p> |
 | <h3>ImageButton</h3>Visualizza un'immagine in un oggetto rettangolare.<p align="center">![Screenshot di un ImageButton](xaml-controls-images/ImageButton.png "ImageButton")</p>[Guida](xref:Xamarin.Forms.ImageButton) / [all'API](~/xamarin-forms/user-interface/imagebutton.md) | <p valign="center"><pre>&lt;ImageButton Source="XamarinLogo.png"<br />             HorizontalOptions="Center"<br />             VerticalOptions="CenterAndExpand"<br />             Clicked="OnImageButtonClicked" /&gt;</pre></p> |
-| <h3>SearchBar</h3>Consente di visualizzare una barra di ricerca per l'esecuzione di una ricerca.<p align="center">![Screenshot di un oggetto Searchbar](xaml-controls-images/SearchBar.png "Searchbar")</p>[API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
+| <h3>SearchBar</h3>Consente di visualizzare una barra di ricerca per l'esecuzione di una ricerca.<p align="center">![Screenshot di un oggetto Searchbar](xaml-controls-images/SearchBar.png "Searchbar")</p>[Guida](xref:Xamarin.Forms.SearchBar) / [all'API](~/xamarin-forms/user-interface/searchbar.md) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-for-setting-values"></a>Visualizzazioni per l'impostazione di valori
@@ -67,8 +67,8 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 
 |     |     |
 | --- | --- |
-| <h3>ActivityIndicator</h3>Visualizza un'animazione per indicare che l'applicazione è impegnata in un'attività di lunga durata, senza fornire indicazioni sullo stato di avanzamento.<p align="center">![Screenshot di un ActivityIndicator](xaml-controls-images/ActivityIndicator.png "ActivityIndicator")</p>[API](xref:Xamarin.Forms.ActivityIndicator) | <p valign="center"><pre>&lt;ActivityIndicator IsRunning="True"<br />                   VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>ProgressBar</h3>Visualizza un'animazione per mostrare che l'applicazione sta procedendo attraverso un'attività di lunga durata.<p align="center">![Screenshot di un ProgressBar](xaml-controls-images/ProgressBar.png "ProgressBar")</p>[API](xref:Xamarin.Forms.ProgressBar) | <p valign="center"><pre>&lt;ProgressBar Progress=".5"<br />             VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>ActivityIndicator</h3>Visualizza un'animazione per indicare che l'applicazione è impegnata in un'attività di lunga durata, senza fornire indicazioni sullo stato di avanzamento.<p align="center">![Screenshot di un ActivityIndicator](xaml-controls-images/ActivityIndicator.png "ActivityIndicator")</p>[Guida](xref:Xamarin.Forms.ActivityIndicator) / [all'API](~/xamarin-forms/user-interface/activityindicator.md) | <p valign="center"><pre>&lt;ActivityIndicator IsRunning="True"<br />                   VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>ProgressBar</h3>Visualizza un'animazione per mostrare che l'applicazione sta procedendo attraverso un'attività di lunga durata.<p align="center">![Screenshot di un ProgressBar](xaml-controls-images/ProgressBar.png "ProgressBar")</p>[Guida](xref:Xamarin.Forms.ProgressBar) / [all'API](~/xamarin-forms/user-interface/progressbar.md) | <p valign="center"><pre>&lt;ProgressBar Progress=".5"<br />             VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-that-display-collections"></a>Viste che consentono di visualizzare le raccolte
