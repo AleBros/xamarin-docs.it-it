@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: afb4da5e424fd86a386b85d8b64bd2a126af6add
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194932"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521100"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -45,15 +45,17 @@ Per i contributi con modifiche importanti e i nuovi contenuti, [aprire un proble
 
 Se si tratta di un nuovo argomento, è possibile usare il [file modello](../contributing-guidelines/template.md) come punto di partenza. Il file contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
 
-Aggiungere eventuali immagini e altre risorse statiche alla sottocartella denominata **<mypage>-images**. Se si sta creando una nuova cartella per il contenuto, aggiungere una cartella images alla nuova cartella.
+Aggiungere eventuali immagini e altre risorse statiche alla sottocartella denominata **\<nomepagina>-images**. Se si sta creando una nuova cartella per il contenuto, aggiungere una cartella images alla nuova cartella.
 
 #### <a name="example-structure"></a>Struttura di esempio
 
-    docs
-      /android
-          mypage.md
-          /mypage-images
-              some-image.png
+```
+docs
+    /android
+        mypage.md
+        /mypage-images
+            some-image.png
+```
 
 Assicurarsi di seguire la sintassi di Markdown appropriata. Per altre informazioni, vedere la [guida di stile](../contributing-guidelines/template.md).
 

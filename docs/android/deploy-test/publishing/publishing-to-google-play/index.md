@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668855"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525479"
 ---
 # <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
 
@@ -36,19 +36,19 @@ Google Play non è disponibile a livello globale. È possibile che la distribuzi
 
 Per pubblicare applicazioni in Google Play è necessario avere un account editore. Per creare un account editore seguire questa procedura:
 
-1.  Visitare [Google Play Developer Console](https://play.google.com/apps/publish).
-1.  Immettere le informazioni di base dell'identità di sviluppatore.
-1.  Leggere e accettare il Contratto di distribuzione per sviluppatori basato sulle impostazioni locali.
-1.  Pagare la tariffa di registrazione di 25 USD.
-1.  Confermare la verifica tramite posta elettronica.
-1.  Dopo aver creato l'account è possibile pubblicare applicazioni con Google Play.
+1. Visitare [Google Play Developer Console](https://play.google.com/apps/publish).
+1. Immettere le informazioni di base dell'identità di sviluppatore.
+1. Leggere e accettare il Contratto di distribuzione per sviluppatori basato sulle impostazioni locali.
+1. Pagare la tariffa di registrazione di 25 USD.
+1. Confermare la verifica tramite posta elettronica.
+1. Dopo aver creato l'account è possibile pubblicare applicazioni con Google Play.
 
 
 Google Play non supporta tutti i paesi del mondo. Gli elenchi di paesi più aggiornati sono disponibili nei collegamenti seguenti:
 
-1.  [Paesi in cui è supportata la registrazione come sviluppatore e commerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324): questo elenco include tutti i paesi in cui gli sviluppatori possono registrarsi come commercianti e vendere applicazioni.
+1. [Paesi in cui è supportata la registrazione come sviluppatore e commerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324): questo elenco include tutti i paesi in cui gli sviluppatori possono registrarsi come commercianti e vendere applicazioni.
 
-1.  [Paesi in cui è supportata la distribuzione per gli utenti Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294): questo elenco include tutti i paesi nei quali è possibile distribuire le applicazioni.
+1. [Paesi in cui è supportata la distribuzione per gli utenti Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294): questo elenco include tutti i paesi nei quali è possibile distribuire le applicazioni.
 
 
 
@@ -62,21 +62,21 @@ Per una promozione efficace dell'applicazione in Google Play, Google consente ag
 
 Un'*icona launcher* è un elemento grafico che rappresenta un'applicazione. Ogni icona launcher deve essere un file con estensione png a 32 bit dotato di un canale alfa per la trasparenza. Un'applicazione deve avere icone launcher per tutte le densità schermo generiche, come descritto nell'elenco seguente:
 
--   **ldpi** (120 dpi) &ndash; 36 x 36 pixel
--   **mdpi** (160 dpi) &ndash; 48 x 48 pixel
--   **hdpi** (240 dpi) &ndash; 72 x 72 pixel
--   **xhdpi** (320 dpi) &ndash; 96 x 96 pixel
+- **ldpi** (120 dpi) &ndash; 36 x 36 pixel
+- **mdpi** (160 dpi) &ndash; 48 x 48 pixel
+- **hdpi** (240 dpi) &ndash; 72 x 72 pixel
+- **xhdpi** (320 dpi) &ndash; 96 x 96 pixel
 
 
 Le icone launcher sono il primo elemento dell'applicazione visualizzato dall'utente in Google Play, pertanto devono essere significative e visivamente accattivanti.
 
 Suggerimenti per le icone launcher:
 
-1.  **Semplici ed essenziali**&ndash; Le icone launcher devono essere semplici e con i soli elementi essenziali. Evitare di includere il nome dell'applicazione nell'icona. Le icone più semplici sono più facili da ricordare e anche più facili da distinguere in dimensioni ridotte.
+1. **Semplici ed essenziali**&ndash; Le icone launcher devono essere semplici e con i soli elementi essenziali. Evitare di includere il nome dell'applicazione nell'icona. Le icone più semplici sono più facili da ricordare e anche più facili da distinguere in dimensioni ridotte.
 
-1.  **Le icone non devono essere sottili**&ndash; Le icone troppo sottili non risaltano adeguatamente su tutti gli sfondi.
+1. **Le icone non devono essere sottili**&ndash; Le icone troppo sottili non risaltano adeguatamente su tutti gli sfondi.
 
-1.  **Usare il canale alfa**&ndash; È importante che le icone facciano uso del canale alfa e non siano immagini full-framed.
+1. **Usare il canale alfa**&ndash; È importante che le icone facciano uso del canale alfa e non siano immagini full-framed.
 
 
 
@@ -84,9 +84,9 @@ Suggerimenti per le icone launcher:
 
 Per le applicazioni in Google Play deve essere disponibile una versione ad alta risoluzione dell'icona dell'applicazione. Questa versione viene usata solo da Google Play e non sostituisce l'icona launcher dell'applicazione. Le specifiche per l'icona ad alta risoluzione sono:
 
-1.  File con estensione png a 32 bit con un canale alfa
-1.  512 x 512 pixel
-1.  Dimensioni massime: 1024 KB
+1. File con estensione png a 32 bit con un canale alfa
+1. 512 x 512 pixel
+1. Dimensioni massime: 1024 KB
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) è uno strumento utile per creare icone launcher e l'icona dell'applicazione ad alta risoluzione.
 
@@ -98,8 +98,8 @@ Google Play richiede un minimo di due e un massimo di otto screenshot per un'app
 
 Le specifiche per gli screenshot sono le seguenti:
 
-1.  File con estensione png o jpg a 24 bit senza canale alfa
-1.  Larghezza x altezza: 320 x 480 o 480 x 800 o 480 x 854. Le immagini con orientamento orizzontale vengono ritagliate.
+1. File con estensione png o jpg a 24 bit senza canale alfa
+1. Larghezza x altezza: 320 x 480 o 480 x 800 o 480 x 854. Le immagini con orientamento orizzontale vengono ritagliate.
 
 
 
@@ -107,8 +107,8 @@ Le specifiche per gli screenshot sono le seguenti:
 
 Questa immagine facoltativa viene usata da Google Play:
 
-1.  È un file con estensione png o jpg a 24 bit con larghezza 180 e altezza 120, senza canale alfa.
-1.  Nessun bordo.
+1. È un file con estensione png o jpg a 24 bit con larghezza 180 e altezza 120, senza canale alfa.
+1. Nessun bordo.
 
 
 
@@ -116,9 +116,9 @@ Questa immagine facoltativa viene usata da Google Play:
 
 Usata nella sezione App in primo piano di Google Play. Questa immagine può essere visualizzata da sola, senza l'icona dell'applicazione.
 
-1.  File con estensione png o jpg con larghezza 1024 e altezza 500, senza canale alfa e senza trasparenza.
-1.  Tutto il contenuto importante va incluso in un frame da 924 x 500. I pixel esterni a questo frame potrebbero essere ritagliati per esigenze grafiche.
-1.  Questa immagine potrebbe essere ridotta in scala: usare testo grande e grafica semplice.
+1. File con estensione png o jpg con larghezza 1024 e altezza 500, senza canale alfa e senza trasparenza.
+1. Tutto il contenuto importante va incluso in un frame da 924 x 500. I pixel esterni a questo frame potrebbero essere ritagliati per esigenze grafiche.
+1. Questa immagine potrebbe essere ridotta in scala: usare testo grande e grafica semplice.
 
 
 
@@ -299,13 +299,13 @@ Nella finestra di dialogo **Account Google Play** selezionare un account Google 
 
 Google Play offre quattro versioni possibili per il caricamento dell'app:
 
--   **Alfa** &ndash; Usata per il caricamento di una versione iniziale dell'app destinata a un elenco limitato di tester.
+- **Alfa** &ndash; Usata per il caricamento di una versione iniziale dell'app destinata a un elenco limitato di tester.
 
--   **Beta** &ndash; Usata per il caricamento di una versione iniziale più avanzata dell'app, destinata a un elenco più ampio di tester.
+- **Beta** &ndash; Usata per il caricamento di una versione iniziale più avanzata dell'app, destinata a un elenco più ampio di tester.
 
--   **Implementazione** &ndash; Consente a una percentuale degli utenti di ricevere una versione aggiornata dell'app. È possibile iniziare ad esempio con il 10% degli utenti e incrementare la percentuale fino al 100% degli utenti man mano che i bug rilevati vengono risolti.
+- **Implementazione** &ndash; Consente a una percentuale degli utenti di ricevere una versione aggiornata dell'app. È possibile iniziare ad esempio con il 10% degli utenti e incrementare la percentuale fino al 100% degli utenti man mano che i bug rilevati vengono risolti.
 
--   **Produzione** &ndash; Selezionare questa versione quando l'app è pronta per la distribuzione completa in Google Play Store.
+- **Produzione** &ndash; Selezionare questa versione quando l'app è pronta per la distribuzione completa in Google Play Store.
 
 Per altre informazioni sul testing e sulle implementazioni in più fasi in Google Play, vedere [Configurare gli alpha e beta test](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 

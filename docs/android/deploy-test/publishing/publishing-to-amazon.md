@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: e65030092b1f59b1111bc521a8613cfe8a9160ee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 430f4fedc8e988c89826e3ae023fc25b7b798727
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118695"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525345"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Pubblicazione in Amazon Appstore
 
@@ -26,11 +26,11 @@ Amazon non applica limiti alla dimensione degli APK. Tuttavia, se un APK supera 
 
 Il processo di invio di un'applicazione in Amazon Appstore è simile a quello di Google Play. Per le applicazioni distribuite da Amazon sono necessarie le risorse seguenti: 
 
--   **Icona** &ndash;: file con estensione png di dimensioni 114 x 114 con sfondo trasparente. È obbligatorio.
--   **Anteprima** &ndash;: versione più grande dell'icona precedente. Le dimensioni devono essere di 512 x 512 pixel con uno sfondo trasparente. Anche questa icona è obbligatoria.
--   **Screenshot** &ndash;: Amazon richiede da un minimo di tre a un massimo di 10 screenshot. Le dimensioni in pixel degli screenshot devono essere di 1024 (larghezza) x 600 (altezza) o di 800 (larghezza) x 480 (altezza). Sono accettabili i formati PNG e JPG.
--   **Immagine promozionale** &ndash;: per includere l'applicazione in posizioni promozionali, ad esempio la home page, è possibile inviare facoltativamente un'immagine promozionale. L'immagine deve essere un file con estensione png o jpg di 1024 (larghezza) x 500 (altezza) pixel con orientamento orizzontale. Non deve includere animazioni.
--  È possibile inviare aggiornamenti per cinque video.
+- **Icona** &ndash;: file con estensione png di dimensioni 114 x 114 con sfondo trasparente. È obbligatorio.
+- **Anteprima** &ndash;: versione più grande dell'icona precedente. Le dimensioni devono essere di 512 x 512 pixel con uno sfondo trasparente. Anche questa icona è obbligatoria.
+- **Screenshot** &ndash;: Amazon richiede da un minimo di tre a un massimo di 10 screenshot. Le dimensioni in pixel degli screenshot devono essere di 1024 (larghezza) x 600 (altezza) o di 800 (larghezza) x 480 (altezza). Sono accettabili i formati PNG e JPG.
+- **Immagine promozionale** &ndash;: per includere l'applicazione in posizioni promozionali, ad esempio la home page, è possibile inviare facoltativamente un'immagine promozionale. L'immagine deve essere un file con estensione png o jpg di 1024 (larghezza) x 500 (altezza) pixel con orientamento orizzontale. Non deve includere animazioni.
+- È possibile inviare aggiornamenti per cinque video.
 
 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: b803c1ccfbd8bae008a763f8a31283b653ae4cf3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652158"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629620"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
@@ -111,7 +111,8 @@ che fa riferimento alle proprietà di un altro controllo. Quando la lunghezza di
 </Button>
 ```
 
-Suggerimento: quando viene valutato `Path=Text.Length`, specificare sempre un valore predefinito per la proprietà di destinazione, ad esempio `Text=""`). In caso contrario, il valore sarà `null` e il trigger non funzionerà come previsto.
+> [!TIP]
+> Quando viene valutato `Path=Text.Length`, specificare sempre un valore predefinito per la proprietà di destinazione, ad esempio `Text=""`). In caso contrario, il valore sarà `null` e il trigger non funzionerà come previsto.
 
 Oltre a specificare elementi `Setter`, è anche possibile scrivere le parti [`EnterActions` e `ExitActions`](#enterexit).
 

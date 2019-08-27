@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: a79dcf14ddefd13d17e218602030a6467a3f1448
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643832"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525426"
 ---
 # <a name="linking-on-android"></a>Collegamento in Android
 
@@ -55,9 +55,9 @@ public class MyActivity {
 
 Il meccanismo principale per controllare il linker è l'elenco a discesa **Comportamento del linker** (*Collegamento* in Visual Studio) all'interno della finestra di dialogo **Opzioni progetto**. Sono disponibili tre opzioni:
 
-1.  **Non collegare** (*Nessuno* in Visual Studio)
-1.  **Collega solo assembly SDK** (*Solo assembly SDK*)
-1.  **Collega tutti gli assembly** (*Assembly SDK e utente*)
+1. **Non collegare** (*Nessuno* in Visual Studio)
+1. **Collega solo assembly SDK** (*Solo assembly SDK*)
+1. **Collega tutti gli assembly** (*Assembly SDK e utente*)
 
 
 L'opzione **Non collegare** disattiva il linker. L'esempio delle dimensioni dell'applicazione con configurazione "Rilascio senza collegamento" mostrato sopra usa questo comportamento. Si tratta di un'opzione utile per la risoluzione di problemi causati da errori di runtime, per determinare se è responsabile il linker. Questa impostazione è in genere sconsigliata per le compilazioni di produzione.
@@ -92,11 +92,11 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 Il linker rimuove talvolta parti di codice che si potrebbe voler mantenere. Ad esempio:
 
--   Potrebbe essere presente codice che viene chiamato in modo dinamico tramite `System.Reflection.MemberInfo.Invoke`.
+- Potrebbe essere presente codice che viene chiamato in modo dinamico tramite `System.Reflection.MemberInfo.Invoke`.
 
--   Se si creano istanze dei tipi in modo dinamico, potrebbe essere necessario mantenere il costruttore predefinito dei tipi.
+- Se si creano istanze dei tipi in modo dinamico, potrebbe essere necessario mantenere il costruttore predefinito dei tipi.
 
--   Se si usa la serializzazione XML, potrebbe essere necessario mantenere le proprietà dei tipi.
+- Se si usa la serializzazione XML, potrebbe essere necessario mantenere le proprietà dei tipi.
 
 In questi casi, è possibile usare l'attributo [Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute). Poiché ogni membro che non è collegato in modo statico dall'applicazione è soggetto alla rimozione, è possibile usare questo attributo per contrassegnare i membri non referenziati in modo statico, ma che sono comunque necessari per l'applicazione. È possibile applicare questo attributo a ogni membro di un tipo oppure al tipo stesso.
 
@@ -198,27 +198,27 @@ edmx. I file di configurazione personalizzati del linker possono essere necessar
 
 Quando un assembly viene collegato, vengono rimossi i tipi di attributo personalizzati seguenti da tutti i membri:
 
--  System.ObsoleteAttribute
--  System.MonoDocumentationNoteAttribute
--  System.MonoExtensionAttribute
--  System.MonoInternalNoteAttribute
--  System.MonoLimitationAttribute
--  System.MonoNotSupportedAttribute
--  System.MonoTODOAttribute
--  System.Xml.MonoFIXAttribute
+- System.ObsoleteAttribute
+- System.MonoDocumentationNoteAttribute
+- System.MonoExtensionAttribute
+- System.MonoInternalNoteAttribute
+- System.MonoLimitationAttribute
+- System.MonoNotSupportedAttribute
+- System.MonoTODOAttribute
+- System.Xml.MonoFIXAttribute
 
 
 Quando un assembly viene collegato, vengono rimossi i tipi di attributo personalizzati seguenti da tutti i membri nelle compilazioni di rilascio:
 
--  System.Diagnostics.DebuggableAttribute
--  System.Diagnostics.DebuggerBrowsableAttribute
--  System.Diagnostics.DebuggerDisplayAttribute
--  System.Diagnostics.DebuggerHiddenAttribute
--  System.Diagnostics.DebuggerNonUserCodeAttribute
--  System.Diagnostics.DebuggerStepperBoundaryAttribute
--  System.Diagnostics.DebuggerStepThroughAttribute
--  System.Diagnostics.DebuggerTypeProxyAttribute
--  System.Diagnostics.DebuggerVisualizerAttribute
+- System.Diagnostics.DebuggableAttribute
+- System.Diagnostics.DebuggerBrowsableAttribute
+- System.Diagnostics.DebuggerDisplayAttribute
+- System.Diagnostics.DebuggerHiddenAttribute
+- System.Diagnostics.DebuggerNonUserCodeAttribute
+- System.Diagnostics.DebuggerStepperBoundaryAttribute
+- System.Diagnostics.DebuggerStepThroughAttribute
+- System.Diagnostics.DebuggerTypeProxyAttribute
+- System.Diagnostics.DebuggerVisualizerAttribute
 
 
 ## <a name="related-links"></a>Collegamenti correlati

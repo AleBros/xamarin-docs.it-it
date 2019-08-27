@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 0053bf97dbcc98c5ffbd6fbddb1e40f884810e60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 4aa549258d3261d00c0623c2b21a2cebaa226e54
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670753"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524939"
 ---
 # <a name="windows-installation"></a>Installazione di Windows
 
@@ -24,13 +24,13 @@ _Questa guida descrive le operazioni necessarie per l'installazione di Xamarin.A
 Poiché Xamarin è ora incluso gratuitamente in tutte le edizioni di Visual Studio e non richiede una licenza separata, è possibile usare il programma di installazione di Visual Studio per scaricare e installare gli strumenti di Xamarin.Android.
 L'installazione manuale e le operazioni per le licenze richieste per le versioni precedenti di Xamarin.Android non sono più necessarie. In questa guida si imparerà a:
 
--   Configurare percorsi personalizzati per Java Development Kit, Android SDK e Android NDK.
+- Configurare percorsi personalizzati per Java Development Kit, Android SDK e Android NDK.
 
--   Avviare Android SDK Manager per scaricare e installare altri componenti di Android SDK.
+- Avviare Android SDK Manager per scaricare e installare altri componenti di Android SDK.
 
--   Preparare un dispositivo Android o un emulatore per il debug e il test.
+- Preparare un dispositivo Android o un emulatore per il debug e il test.
 
--   Creare il primo progetto di app Xamarin.Android.
+- Creare il primo progetto di app Xamarin.Android.
 
 Al completamento di questa guida, sarà stata messa in funzione un'installazione Xamarin.Android integrata in Visual Studio e sarà possibile iniziare a compilare la prima applicazione Xamarin.Android.
 

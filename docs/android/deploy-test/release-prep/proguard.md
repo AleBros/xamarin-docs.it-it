@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f6f3377c4fdeedefa3277d05012ec868f6626c41
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2166cbbb3d15cde1af83b3071a0d83a1e8f51071
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669999"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560274"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -25,14 +25,14 @@ ProGuard rileva e rimuove classi, campi, metodi e attributi inutilizzati dal pac
 
 Per elaborare i file APK di input, ProGuard esegue i passaggi seguenti: 
 
-1.  **Compattazione** &ndash; ProGuard determina in modo ricorsivo quali classi e quali membri di queste vengono usati. Tutte le altre classi e tutti i membri di queste vengono eliminati. 
+1. **Compattazione** &ndash; ProGuard determina in modo ricorsivo quali classi e quali membri di queste vengono usati. Tutte le altre classi e tutti i membri di queste vengono eliminati. 
 
-2.  **Ottimizzazione** &ndash; ProGuard ottimizza ulteriormente il codice. 
+2. **Ottimizzazione** &ndash; ProGuard ottimizza ulteriormente il codice. 
     Tra l'altro, ProGuard rende privati, statici o finali le classi e i metodi che non rappresentano punti di ingresso, rimuove i parametri inutilizzati e imposta alcuni metodi come inline. 
 
-3.  **Offuscamento** &ndash; Nello sviluppo Android nativo ProGuard rinomina classi e membri di classi che non rappresentano punti di ingresso. Il mantenimento di punti di ingresso garantisce che le classi e i membri rinominati siano ancora accessibili con i nomi originari. Tuttavia, questo passaggio non è supportato da Xamarin.Android poiché l'app viene compilata nel linguaggio intermedio (IL).
+3. **Offuscamento** &ndash; Nello sviluppo Android nativo ProGuard rinomina classi e membri di classi che non rappresentano punti di ingresso. Il mantenimento di punti di ingresso garantisce che le classi e i membri rinominati siano ancora accessibili con i nomi originari. Tuttavia, questo passaggio non è supportato da Xamarin.Android poiché l'app viene compilata nel linguaggio intermedio (IL).
 
-4.  **Verifica preliminare** &ndash; ProGuard esegue controlli sui bytecode Java prima della fase di runtime e annota i file di classe a vantaggio della macchina virtuale Java. Questo è l'unico passaggio per il quale non ha bisogno conoscere i punti di ingresso. 
+4. **Verifica preliminare** &ndash; ProGuard esegue controlli sui bytecode Java prima della fase di runtime e annota i file di classe a vantaggio della macchina virtuale Java. Questo è l'unico passaggio per il quale non ha bisogno conoscere i punti di ingresso. 
 
 Ognuno di questi passaggi è *facoltativo*. Come verrà spiegato nella prossima sezione, in Xamarin.Android ProGuard usa solo un subset di questi passaggi. 
 
@@ -46,9 +46,9 @@ La configurazione di ProGuard per Xamarin.Android non esegue l'offuscamento dei 
 
 Un elemento importante da conoscere in anticipo prima di usare ProGuard è il funzionamento di questo strumento all'interno del processo di compilazione di `Xamarin.Android`. Questo processo si svolge in due passaggi distinti: 
 
-1.  Linker di Xamarin.Android
+1. Linker di Xamarin.Android
 
-2.  ProGuard
+2. ProGuard
 
 Di seguito viene descritto ognuno di questi passaggi.
 
@@ -58,11 +58,11 @@ Di seguito viene descritto ognuno di questi passaggi.
 
 Il linker di Xamarin.Android impiega l'analisi statica dell'applicazione per determinare quanto segue: 
 
--   Gli assembly effettivamente usati.
+- Gli assembly effettivamente usati.
 
--   I tipi effettivamente usati.
+- I tipi effettivamente usati.
 
--   I membri effettivamente usati. 
+- I membri effettivamente usati. 
 
 Il linker viene sempre eseguito prima del passaggio relativo a ProGuard. Per questo motivo, il linker può rimuovere un assembly, un tipo o un membro per il quale sia prevista l'esecuzione di ProGuard. Per altre informazioni sull'uso del linker in Xamarin.Android, vedere [Linking on Android](~/android/deploy-test/linker.md) (Uso del linker in Android).
 
@@ -84,17 +84,53 @@ Per usare ProGuard nel progetto dell'app, è prima necessario abilitare ProGuard
 
 Per abilitare ProGuard nel progetto dell'app, usare la procedura seguente:
 
-1.  Assicurarsi che per il progetto sia impostata la configurazione **Rilascio**. Questo passaggio è importante: perché sia possibile l'esecuzione di ProGuard, infatti, il linker deve essere in esecuzione: 
+1. Assicurarsi che per il progetto sia impostata la configurazione **Release**. Questo passaggio è importante perché è necessario che il linker sia in esecuzione per rendere possibile l'esecuzione di ProGuard: 
 
     [![Selezionare la configurazione Release](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2.  Abilitare ProGuard selezionando l'opzione **Abilita ProGuard** nella scheda **Creazione pacchetto** in **Proprietà > Opzioni Android**: 
+2. Abilitare ProGuard selezionando l'opzione **Abilita ProGuard** nella scheda **Creazione pacchetto** in **Proprietà > Opzioni Android**: 
 
     [![Opzione Abilita ProGuard selezionata](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
 
-Per la maggior parte delle app Xamarin.Android, il file di configurazione ProGuard predefinito fornito da Xamarin.Android è sufficiente per rimuovere tutto (e solo) il codice inutilizzato. Per visualizzare la configurazione di ProGuard predefinita, aprire il file **obj\\Release\\proguard\\proguard_xamarin.cfg**. La prossima sezione descrive come creare un file di configurazione di ProGuard personalizzato. 
+Per la maggior parte delle app Xamarin.Android, il file di configurazione ProGuard predefinito fornito da Xamarin.Android è sufficiente per rimuovere tutto (e solo) il codice inutilizzato. Per visualizzare la configurazione di ProGuard predefinita, aprire il file **obj\\Release\\proguard\\proguard_xamarin.cfg**.
 
+L'esempio seguente illustra un tipico file di configurazione **proguard_xamarin.cfg**:
 
+```cfg
+# This is Xamarin-specific (and enhanced) configuration.
+
+-dontobfuscate
+
+-keep class mono.MonoRuntimeProvider { *; <init>(...); }
+-keep class mono.MonoPackageManager { *; <init>(...); }
+-keep class mono.MonoPackageManager_Resources { *; <init>(...); }
+-keep class mono.android.** { *; <init>(...); }
+-keep class mono.java.** { *; <init>(...); }
+-keep class mono.javax.** { *; <init>(...); }
+-keep class opentk.platform.android.AndroidGameView { *; <init>(...); }
+-keep class opentk.GameViewBase { *; <init>(...); }
+-keep class opentk_1_0.platform.android.AndroidGameView { *; <init>(...); }
+-keep class opentk_1_0.GameViewBase { *; <init>(...); }
+
+-keep class android.runtime.** { <init>(***); }
+-keep class assembly_mono_android.android.runtime.** { <init>(***); }
+# hash for android.runtime and assembly_mono_android.android.runtime.
+-keep class md52ce486a14f4bcd95899665e9d932190b.** { *; <init>(...); }
+-keepclassmembers class md52ce486a14f4bcd95899665e9d932190b.** { *; <init>(...); }
+
+# Android's template misses fluent setters...
+-keepclassmembers class * extends android.view.View {
+   *** set*(***);
+}
+
+# also misses those inflated custom layout stuff from xml...
+-keepclassmembers class * extends android.view.View {
+   <init>(android.content.Context,android.util.AttributeSet);
+   <init>(android.content.Context,android.util.AttributeSet,int);
+}
+```
+
+La prossima sezione descrive come creare un file di configurazione di ProGuard personalizzato. 
 
 ### <a name="customizing-proguard"></a>Personalizzazione di ProGuard
 
@@ -104,45 +140,11 @@ Facoltativamente, è possibile aggiungere un file di configurazione di ProGuard 
 
 Tenere presente che questo file di configurazione non sostituisce il file **proguard_xamarin.cfg** di Xamarin.Android, dato che ProGuard li usa entrambi. 
 
-L'esempio seguente illustra un file di configurazione di ProGuard tipico:
-    
-
-    # This is Xamarin-specific (and enhanced) configuration.
-
-    -dontobfuscate
-
-    -keep class mono.MonoRuntimeProvider { *; <init>(...); }
-    -keep class mono.MonoPackageManager { *; <init>(...); }
-    -keep class mono.MonoPackageManager_Resources { *; <init>(...); }
-    -keep class mono.android.** { *; <init>(...); }
-    -keep class mono.java.** { *; <init>(...); }
-    -keep class mono.javax.** { *; <init>(...); }
-    -keep class opentk.platform.android.AndroidGameView { *; <init>(...); }
-    -keep class opentk.GameViewBase { *; <init>(...); }
-    -keep class opentk_1_0.platform.android.AndroidGameView { *; <init>(...); }
-    -keep class opentk_1_0.GameViewBase { *; <init>(...); }
-
-    -keep class android.runtime.** { <init>(***); }
-    -keep class assembly_mono_android.android.runtime.** { <init>(***); }
-    # hash for android.runtime and assembly_mono_android.android.runtime.
-    -keep class md52ce486a14f4bcd95899665e9d932190b.** { *; <init>(...); }
-    -keepclassmembers class md52ce486a14f4bcd95899665e9d932190b.** { *; <init>(...); }
-
-    # Android's template misses fluent setters...
-    -keepclassmembers class * extends android.view.View {
-       *** set*(***);
-    }
-
-    # also misses those inflated custom layout stuff from xml...
-    -keepclassmembers class * extends android.view.View {
-       <init>(android.content.Context,android.util.AttributeSet);
-       <init>(android.content.Context,android.util.AttributeSet,int);
-    }
-    
-
 In alcuni casi ProGuard non è in grado di analizzare correttamente l'applicazione e potrebbe rimuovere codice in realtà necessario. Se questo si verifica, è possibile aggiungere una riga `-keep` al file di configurazione ProGuard personalizzato: 
 
-    -keep public class MyClass
+```
+-keep public class MyClass
+```
 
 In questo esempio, `MyClass` rappresenta il nome effettivo della classe che deve essere ignorata da ProGuard.
 
@@ -156,35 +158,35 @@ ProGuard offre una serie di opzioni che è possibile configurare per controllare
 Xamarin supporta le opzioni di ProGuard seguenti: 
 
 
--    [Opzioni di input/output](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#iooptions)
+- [Opzioni di input/output](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#iooptions)
 
--    [Opzioni di mantenimento](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptions)
+- [Opzioni di mantenimento](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptions)
 
--    [Opzioni di compattazione](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#shrinkingoptions)
+- [Opzioni di compattazione](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#shrinkingoptions)
 
--    [Opzioni generali](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#generaloptions)
+- [Opzioni generali](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#generaloptions)
 
--    [Percorsi delle classi](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classpath)
+- [Percorsi delle classi](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classpath)
 
--    [Nomi di file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filename)
+- [Nomi di file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filename)
 
--    [Filtri di file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filefilters)
+- [Filtri di file](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filefilters)
 
--    [Filtri](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filters)
+- [Filtri](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filters)
 
--    [Panoramica delle opzioni `Keep`](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoverview)
+- [Panoramica delle opzioni `Keep`](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoverview)
 
--    [Modificatori delle opzioni di mantenimento](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptionmodifiers)
+- [Modificatori delle opzioni di mantenimento](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptionmodifiers)
 
--    [Specifiche delle classi](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classspecification)
+- [Specifiche delle classi](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classspecification)
 
 Le opzioni seguenti vengono *ignorate* da Xamarin.Android:
 
--    [Opzioni di ottimizzazione](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#optimizationoptions)
+- [Opzioni di ottimizzazione](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#optimizationoptions)
 
--    [Opzioni di offuscamento](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#obfuscationoptions) 
+- [Opzioni di offuscamento](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#obfuscationoptions) 
 
--    [Opzioni di verifica preliminare](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
+- [Opzioni di verifica preliminare](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
 
 
 
@@ -206,61 +208,64 @@ Di seguito sono riportati due file di configurazione di ProGuard di esempio. Si 
 
 Nell'esempio seguente viene illustrata la configurazione per una semplice attività Android:
 
-    -injars  bin/classes
-    -outjars bin/classes-processed.jar
-    -libraryjars /usr/local/java/android-sdk/platforms/android-9/android.jar
+```
+-injars  bin/classes
+-outjars bin/classes-processed.jar
+-libraryjars /usr/local/java/android-sdk/platforms/android-9/android.jar
 
-    -dontpreverify
-    -repackageclasses ''
-    -allowaccessmodification
-    -optimizations !code/simplification/arithmetic
+-dontpreverify
+-repackageclasses ''
+-allowaccessmodification
+-optimizations !code/simplification/arithmetic
 
-    -keep public class mypackage.MyActivity
+-keep public class mypackage.MyActivity
+```
 
 ### <a name="a-complete-android-application"></a>Un'applicazione Android completa
 
 Nell'esempio seguente viene illustrata la configurazione per un'app Android completa:
 
-    -injars  bin/classes
-    -injars  libs
-    -outjars bin/classes-processed.jar
-    -libraryjars /usr/local/java/android-sdk/platforms/android-9/android.jar
+```
+-injars  bin/classes
+-injars  libs
+-outjars bin/classes-processed.jar
+-libraryjars /usr/local/java/android-sdk/platforms/android-9/android.jar
 
-    -dontpreverify
-    -repackageclasses ''
-    -allowaccessmodification
-    -optimizations !code/simplification/arithmetic
-    -keepattributes *Annotation*
+-dontpreverify
+-repackageclasses ''
+-allowaccessmodification
+-optimizations !code/simplification/arithmetic
+-keepattributes *Annotation*
 
-    -keep public class * extends android.app.Activity
-    -keep public class * extends android.app.Application
-    -keep public class * extends android.app.Service
-    -keep public class * extends android.content.BroadcastReceiver
-    -keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
 
-    -keep public class * extends android.view.View {
-    public <init>(android.content.Context);
-    public <init>(android.content.Context, android.util.AttributeSet);
-    public <init>(android.content.Context, android.util.AttributeSet, int);
-    public void set*(...);
-    }
+-keep public class * extends android.view.View {
+public <init>(android.content.Context);
+public <init>(android.content.Context, android.util.AttributeSet);
+public <init>(android.content.Context, android.util.AttributeSet, int);
+public void set*(...);
+}
 
-    -keepclasseswithmembers class * {
-    public <init>(android.content.Context, android.util.AttributeSet);
-    }
+-keepclasseswithmembers class * {
+public <init>(android.content.Context, android.util.AttributeSet);
+}
 
-    -keepclasseswithmembers class * {
-    public <init>(android.content.Context, android.util.AttributeSet, int);
-    }
+-keepclasseswithmembers class * {
+public <init>(android.content.Context, android.util.AttributeSet, int);
+}
 
-    -keepclassmembers class * implements android.os.Parcelable {
-    static android.os.Parcelable$Creator CREATOR;
-    }
+-keepclassmembers class * implements android.os.Parcelable {
+static android.os.Parcelable$Creator CREATOR;
+}
 
-    -keepclassmembers class **.R$* {
-    public static <fields>;
-    }
-
+-keepclassmembers class **.R$* {
+public static <fields>;
+}
+```
 
 ## <a name="proguard-and-the-xamarinandroid-build-process"></a>ProGuard e il processo di compilazione di Xamarin.Android
 
@@ -281,31 +286,33 @@ L'attività ProGuard si trova all'interno dell'assembly **Xamarin.Android.Build.
 
 L'elenco seguente offre un esempio dei parametri predefiniti che vengono generati dopo la creazione di un nuovo progetto tramite **File > Nuovo progetto**: 
 
-    ProGuardJarPath = C:\Android\android-sdk\tools\proguard\lib\proguard.jar
-    AndroidSdkDirectory = C:\Android\android-sdk\
-    JavaToolPath = C:\Program Files (x86)\Java\jdk1.8.0_92\\bin
-    ProGuardToolPath = C:\Android\android-sdk\tools\proguard\
-    JavaPlatformJarPath = C:\Android\android-sdk\platforms\android-25\android.jar
-    ClassesOutputDirectory = obj\Release\android\bin\classes
-    AcwMapFile = obj\Release\acw-map.txt
-    ProGuardCommonXamarinConfiguration = obj\Release\proguard\proguard_xamarin.cfg
-    ProGuardGeneratedReferenceConfiguration = obj\Release\proguard\proguard_project_references.cfg
-    ProGuardGeneratedApplicationConfiguration = obj\Release\proguard\proguard_project_primary.cfg
-    ProGuardConfigurationFiles
+```
+ProGuardJarPath = C:\Android\android-sdk\tools\proguard\lib\proguard.jar
+AndroidSdkDirectory = C:\Android\android-sdk\
+JavaToolPath = C:\Program Files (x86)\Java\jdk1.8.0_92\\bin
+ProGuardToolPath = C:\Android\android-sdk\tools\proguard\
+JavaPlatformJarPath = C:\Android\android-sdk\platforms\android-25\android.jar
+ClassesOutputDirectory = obj\Release\android\bin\classes
+AcwMapFile = obj\Release\acw-map.txt
+ProGuardCommonXamarinConfiguration = obj\Release\proguard\proguard_xamarin.cfg
+ProGuardGeneratedReferenceConfiguration = obj\Release\proguard\proguard_project_references.cfg
+ProGuardGeneratedApplicationConfiguration = obj\Release\proguard\proguard_project_primary.cfg
+ProGuardConfigurationFiles
 
-      {sdk.dir}tools\proguard\proguard-android.txt;
-      {intermediate.common.xamarin};
-      {intermediate.references};
-      {intermediate.application};
-      ;
-     
-    JavaLibrariesToEmbed = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.0\mono.android.jar
-    ProGuardJarInput = obj\Release\proguard\__proguard_input__.jar
-    ProGuardJarOutput = obj\Release\proguard\__proguard_output__.jar
-    DumpOutput = obj\Release\proguard\dump.txt
-    PrintSeedsOutput = obj\Release\proguard\seeds.txt
-    PrintUsageOutput = obj\Release\proguard\usage.txt
-    PrintMappingOutput = obj\Release\proguard\mapping.txt
+    {sdk.dir}tools\proguard\proguard-android.txt;
+    {intermediate.common.xamarin};
+    {intermediate.references};
+    {intermediate.application};
+    ;
+
+JavaLibrariesToEmbed = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.0\mono.android.jar
+ProGuardJarInput = obj\Release\proguard\__proguard_input__.jar
+ProGuardJarOutput = obj\Release\proguard\__proguard_output__.jar
+DumpOutput = obj\Release\proguard\dump.txt
+PrintSeedsOutput = obj\Release\proguard\seeds.txt
+PrintUsageOutput = obj\Release\proguard\usage.txt
+PrintMappingOutput = obj\Release\proguard\mapping.txt
+```
 
 Il prossimo esempio illustra un comando ProGuard tipico eseguito nell'ambiente IDE:
 
@@ -319,7 +326,9 @@ C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sd
 
 Il messaggio di errore seguente può essere visualizzato quando ProGuard legge il proprio file di configurazione: 
 
-    Unknown option '-keep' in line 1 of file 'proguard.cfg'
+```
+Unknown option '-keep' in line 1 of file 'proguard.cfg'
+```
 
 Questo problema in genere si verifica in Windows a causa della codifica non corretta del file `.cfg`. ProGuard non è in grado di gestire eventuali caratteri _byte order mark_ (BOM) all'interno di file di testo. Se è presente un carattere BOM, ProGuard termina con l'errore precedente. 
 

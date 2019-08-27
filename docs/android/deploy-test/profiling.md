@@ -8,19 +8,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 400075a1cbd2303f2ecddb9b1cc9465bbcbde32d
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680260"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525576"
 ---
 # <a name="profiling-android-apps"></a>Profilatura delle app Android
 
 Prima di distribuire l'app in un app store, è importante identificare e risolvere eventuali colli di bottiglia delle prestazioni, problemi di utilizzo eccessivo della memoria o uso inefficiente delle risorse di rete. A questo scopo sono disponibili due strumenti del profiler:
 
--  Xamarin Profiler 
--  Android Profiler in Android Studio
+- Xamarin Profiler 
+- Android Profiler in Android Studio
 
 Questa guida presenta Xamarin Profiler e fornisce informazioni dettagliate per iniziare a usare Android Profiler.
 
@@ -40,38 +40,38 @@ Android Studio 3.0 e versione successiva include lo strumento Android Profiler. 
 
 I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nello strumento Android Profiler di Android Studio. Negli screenshot di esempio riportati di seguito l'app [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) di Xamarin Forms viene compilata e profilata con Android Profiler:
 
-1.  Nelle opzioni di compilazione del progetto Android disabilitare **Use Shared Runtime** (Usa runtime condiviso). In questo modo si garantisce che il pacchetto dell'applicazione Android (APK) venga compilato senza una dipendenza dal runtime di Mono in fase di sviluppo condiviso.
+1. Nelle opzioni di compilazione del progetto Android disabilitare **Use Shared Runtime** (Usa runtime condiviso). In questo modo si garantisce che il pacchetto dell'applicazione Android (APK) venga compilato senza una dipendenza dal runtime di Mono in fase di sviluppo condiviso.
 
     ![Disabilitazione di Use Shared Runtime (Usa runtime condiviso)](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
-2.  Compilare l'app per **Debug** e distribuirla in un dispositivo fisico o in un emulatore. In questo modo, viene compilata una versione **Debug** firmata del pacchetto APK.
+2. Compilare l'app per **Debug** e distribuirla in un dispositivo fisico o in un emulatore. In questo modo, viene compilata una versione **Debug** firmata del pacchetto APK.
     Per l'esempio **XamagonXuzzle**, il pacchetto APK risultante è denominato **com.companyname.XamagonXuzzle-Signed.apk**.
 
-3.  Aprire la cartella di progetto e passare a **bin/Debug**. In questa cartella individuare la versione **Signed.apk** dell'app e copiarla in una posizione facilmente accessibile (come il desktop). Nello screenshot seguente il file **com.companyname.XamagonXuzzle-Signed.apk** del pacchetto APK viene individuato e copiato sul desktop:
+3. Aprire la cartella di progetto e passare a **bin/Debug**. In questa cartella individuare la versione **Signed.apk** dell'app e copiarla in una posizione facilmente accessibile (come il desktop). Nello screenshot seguente il file **com.companyname.XamagonXuzzle-Signed.apk** del pacchetto APK viene individuato e copiato sul desktop:
 
     [![Percorso del file del pacchetto APK firmato per il debug](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
-4.  Avviare Android Studio e selezionare **Profile or debug APK** (Profila o esegui il debug del pacchetto APK):
+4. Avviare Android Studio e selezionare **Profile or debug APK** (Profila o esegui il debug del pacchetto APK):
 
     ![Avvio del profiler dalla schermata di avvio di Android Studio](profiling-images/vswin/03-android-studio.png)
 
-5.  Nella finestra di dialogo **Select APK File** (Seleziona file APK) passare al pacchetto APK compilato e copiato in precedenza. Selezionare il pacchetto APK e fare clic su **OK**: 
+5. Nella finestra di dialogo **Select APK File** (Seleziona file APK) passare al pacchetto APK compilato e copiato in precedenza. Selezionare il pacchetto APK e fare clic su **OK**: 
     
     ![Selezione del pacchetto APK nella finestra di dialogo Select APK File (Seleziona file APK)](profiling-images/vswin/04-select-apk-dialog.png)
 
-6.  Android Studio caricherà il pacchetto APK e disassemblerà **classes.dex**:
+6. Android Studio caricherà il pacchetto APK e disassemblerà **classes.dex**:
 
     ![Configurazione del pacchetto APK](profiling-images/vswin/05-setting-up-the-apk.png)
 
-7.  Al termine del caricamento del pacchetto APK, Android Studio visualizza la schermata di progetto seguente per il pacchetto APK. Fare clic con il pulsante destro del mouse sul nome dell'app nella visualizzazione struttura ad albero a sinistra e selezionare **Open Module Settings** (Apri impostazioni modulo):
+7. Al termine del caricamento del pacchetto APK, Android Studio visualizza la schermata di progetto seguente per il pacchetto APK. Fare clic con il pulsante destro del mouse sul nome dell'app nella visualizzazione struttura ad albero a sinistra e selezionare **Open Module Settings** (Apri impostazioni modulo):
 
     [![Voce di menu Open Module Settings (Apri impostazioni modulo)](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
-8.  Passare a **Project Settings > Modules** (Impostazioni progetto > Moduli), selezionare il nodo **-Signed** dell'app e quindi fare clic su **&lt;No SDK&gt;** (Nessun SDK):
+8. Passare a **Project Settings > Modules** (Impostazioni progetto > Moduli), selezionare il nodo **-Signed** dell'app e quindi fare clic su **&lt;No SDK&gt;** (Nessun SDK):
 
     [![Spostamento alla configurazione dell'SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
-9.  Nel menu a discesa **Module SDK** (SDK modulo) selezionare il livello di Android SDK usato per compilare l'app (in questo esempio è stato usato il livello API 26 per compilare **XamagonXuzzle**):
+9. Nel menu a discesa **Module SDK** (SDK modulo) selezionare il livello di Android SDK usato per compilare l'app (in questo esempio è stato usato il livello API 26 per compilare **XamagonXuzzle**):
 
     [![Impostazione del livello SDK di progetto](profiling-images/vswin/08-project-sdk-level-sml.png)](profiling-images/vswin/08-project-sdk-level.png#lightbox)
 
@@ -107,8 +107,8 @@ I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nell
 Informazioni dettagliate per l'uso di Android Profiler sono incluse nella [documentazione di Android Studio](https://developer.android.com/studio/profile/android-profiler.html).
 Gli argomenti seguenti sono di particolare interesse per gli sviluppatori Xamarin Android:
 
--   [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html) &ndash; Illustra come controllare l'utilizzo della CPU e l'attività di thread dell'app in tempo reale.
+- [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html) &ndash; Illustra come controllare l'utilizzo della CPU e l'attività di thread dell'app in tempo reale.
 
--   [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html) &ndash; Visualizza un grafico in tempo reale dell'utilizzo della memoria dell'app e include un pulsante per registrare le allocazioni di memoria per l'analisi.
+- [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html) &ndash; Visualizza un grafico in tempo reale dell'utilizzo della memoria dell'app e include un pulsante per registrare le allocazioni di memoria per l'analisi.
 
--   [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html) &ndash; Visualizza le attività di rete in tempo reale dei dati inviati e ricevuti dall'app.
+- [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html) &ndash; Visualizza le attività di rete in tempo reale dei dati inviati e ricevuti dall'app.

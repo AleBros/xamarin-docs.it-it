@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1906d8c5c001c2328a0dbdce58f92092454e2c0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119618"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525096"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Modifica delle proprietà del dispositivo virtuale Android
 
@@ -31,15 +31,15 @@ Quando si seleziona una proprietà, sul lato destro viene visualizzata una descr
 
 È possibile modificare le proprietà in base alle linee guida seguenti:
 
--   Per modificare una proprietà booleana, fare clic sul segno di spunta a destra della proprietà:
+- Per modificare una proprietà booleana, fare clic sul segno di spunta a destra della proprietà:
 
     ![Modifica di una proprietà booleana](device-properties-images/win/02-boolean-value.png)
 
--   Per modificare una proprietà *enum* (di enumerazione), fare clic sulla freccia giù a destra della proprietà e scegliere un nuovo valore.
+- Per modificare una proprietà *enum* (di enumerazione), fare clic sulla freccia giù a destra della proprietà e scegliere un nuovo valore.
 
     ![Modifica di una proprietà enum](device-properties-images/win/04-enum-value.png)
 
--   Per modificare una proprietà di tipo string o integer, fare doppio clic sull'impostazione corrente della proprietà nella colonna del valore e immettere un nuovo valore.
+- Per modificare una proprietà di tipo string o integer, fare doppio clic sull'impostazione corrente della proprietà nella colonna del valore e immettere un nuovo valore.
 
     ![Proprietà integer](device-properties-images/win/03-integer-value.png)
 
@@ -56,15 +56,15 @@ Quando si seleziona una proprietà, sul lato destro viene visualizzata una descr
 
 È possibile modificare le proprietà in base alle linee guida seguenti:
 
--   Per modificare una proprietà booleana, fare clic sul segno di spunta a destra della proprietà:
+- Per modificare una proprietà booleana, fare clic sul segno di spunta a destra della proprietà:
 
     ![Modifica di una proprietà booleana](device-properties-images/mac/02-boolean-value.png)
 
--   Per modificare una proprietà *enum* (di enumerazione), fare clic sul menu a discesa a destra della proprietà e scegliere un nuovo valore.
+- Per modificare una proprietà *enum* (di enumerazione), fare clic sul menu a discesa a destra della proprietà e scegliere un nuovo valore.
 
     ![Modifica di una proprietà enum](device-properties-images/mac/04-enum-value.png)
 
--   Per modificare una proprietà di tipo string o integer, fare doppio clic sull'impostazione corrente della proprietà nella colonna del valore e immettere un nuovo valore.
+- Per modificare una proprietà di tipo string o integer, fare doppio clic sull'impostazione corrente della proprietà nella colonna del valore e immettere un nuovo valore.
 
     ![Proprietà integer](device-properties-images/mac/03-integer-value.png)
 

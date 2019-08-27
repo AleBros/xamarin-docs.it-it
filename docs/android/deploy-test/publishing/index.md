@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ebf29e99e1145c23bf476cb80e068e79f72816f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b5f09413379de13aaf12e8113e8deb0f3c2bf0c3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643907"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525455"
 ---
 # <a name="publishing-an-application"></a>Pubblicazione di un'applicazione
 
@@ -22,9 +22,9 @@ Quando viene creata un'ottima applicazione, tutti vogliono usarla. Questa sezion
 
 Il passaggio finale dello sviluppo di un'applicazione Xamarin.Android è la pubblicazione dell'applicazione stessa. La pubblicazione è il processo con cui un'applicazione Xamarin.Android viene compilata in modo che gli utenti possano installarla nei propri dispositivi. Questo processo comporta due attività fondamentali:
 
--   **Preparazione per la pubblicazione**: viene creata una versione di rilascio dell'applicazione che possa essere distribuita in dispositivi Android. Per altre informazioni sulla preparazione di questa versione, vedere [Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md).
+- **Preparazione per la pubblicazione**: viene creata una versione di rilascio dell'applicazione che sia distribuibile in dispositivi Android. Per altre informazioni sulla preparazione di questa versione, vedere [Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md).
 
--   **Distribuzione**: la versione di rilascio dell'applicazione viene resa disponibile tramite uno o più dei diversi canali di distribuzione.
+- **Distribuzione**: la versione di rilascio di un'applicazione viene resa disponibile tramite uno o più dei diversi canali di distribuzione.
 
 Il diagramma seguente illustra i passaggi relativi alla pubblicazione di un'applicazione Xamarin.Android:
 
@@ -32,9 +32,9 @@ Il diagramma seguente illustra i passaggi relativi alla pubblicazione di un'appl
 
 Come si può notare dal diagramma precedente, la preparazione è la stessa indipendentemente dal metodo di distribuzione usato. Per rilasciare un'applicazione Android agli utenti sono disponibili diversi metodi:
 
--   **Tramite un sito Web**: un'applicazione Xamarin.Android può essere resa disponibile per il download in un sito Web, al cui interno gli utenti possono fare clic su un collegamento per installare l'applicazione.
--   **Tramite posta elettronica**: gli utenti possono installare un'applicazione Xamarin.Android dalla posta elettronica personale. L'applicazione viene installata quando l'allegato viene aperto con un dispositivo Android.
--   **Tramite un marketplace**: esistono diversi marketplace per la distribuzione di applicazioni, ad esempio [Google Play](http://play.google.com/) o [Amazon Appstore per Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
+- **Tramite un sito Web**: un'applicazione Xamarin.Android può essere resa disponibile per il download in un sito Web, al cui interno gli utenti possono fare clic su un collegamento per installare l'applicazione.
+- **Tramite posta elettronica**: gli utenti possono installare un'applicazione Xamarin.Android dalla posta elettronica personale. L'applicazione viene installata quando l'allegato viene aperto con un dispositivo Android.
+- **Tramite un marketplace**: esistono diversi marketplace per la distribuzione di applicazioni, ad esempio [Google Play](http://play.google.com/) o [Amazon Appstore per Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 
 L'uso di marketplace affermati è il modo più comune di pubblicare un'applicazione, dato che questi sono in grado di offrire la copertura di mercato più ampia e il controllo più solido sulla distribuzione. La pubblicazione di un'applicazione tramite un marketplace, tuttavia, richiede un impegno maggiore.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739262"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888963"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navigazione nella shell Xamarin.Forms
 
@@ -91,7 +91,7 @@ about
 Per passare all'oggetto `ShellContent` per la route `dogs`, l'URI della route assoluto è `//animals/domestic/dogs`. Analogamente, per passare all'oggetto `ShellContent` per la route `about`, l'URI della route assoluto è `//about`.
 
 > [!IMPORTANT]
-> Sono consentiti nomi duplicati di route. Tuttavia, non sono consentite route duplicate. Se viene rilevata una route duplicata, viene generata un'eccezione `ArgumentException` all'avvio dell'applicazione.
+> Se viene rilevata una route duplicata, viene generata un'eccezione `ArgumentException` all'avvio dell'applicazione. Questa eccezione viene generata anche se due o più route allo stesso livello nella gerarchia condividono un nome di route.
 
 #### <a name="register-page-routes"></a>Registrare le route di pagine
 
@@ -123,7 +123,7 @@ Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 Questo esempio abilita la navigazione contestuale tra le pagine, con la quale se si passa alla route `details` dalla pagina relativa a `monkeys` viene visualizzato l'oggetto `MonkeyDetailPage`. Analogamente, se si passa alla route `details` dalla pagina relativa a `elephants` viene visualizzato l'oggetto `ElephantDetailPage`.
 
 > [!IMPORTANT]
-> Attualmente sono consentiti i nomi di route duplicati quando si usa il metodo `Routing.RegisterRoute` e la registrazione di un duplicato sovrascrive la registrazione precedente.
+> Viene generata un'eccezione `ArgumentException` se il metodo `Routing.RegisterRoute` tenta di registrare la stessa route a due o più tipi diversi.
 
 ## <a name="perform-navigation"></a>Eseguire la navigazione
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d7135611c3c0a13794b1ed538d62a0788227b7bd
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 7d324d1faa045dcfbb2b3e6dcc3000a67b5f9e10
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977760"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525385"
 ---
 # <a name="publishing-independently"></a>Pubblicazione indipendente
 
@@ -21,11 +21,11 @@ ms.locfileid: "64977760"
 
 Sono disponibili diverse licenze per lo sviluppo, l'implementazione e la distribuzione di app Xamarin.Android:
 
--   **Visual Studio Community** &ndash; Per studenti, piccoli team e sviluppatori di sistemi operativi che usano Windows.
+- **Visual Studio Community** &ndash; Per studenti, piccoli team e sviluppatori di sistemi operativi che usano Windows.
 
--   **Visual Studio Professional** &ndash; Per singoli sviluppatori o piccoli team (solo Windows). Questa licenza offre una sottoscrizione standard o cloud senza restrizioni di utilizzo.
+- **Visual Studio Professional** &ndash; Per singoli sviluppatori o piccoli team (solo Windows). Questa licenza offre una sottoscrizione standard o cloud senza restrizioni di utilizzo.
 
--   **Visual Studio Enterprise** &ndash; Per team di qualsiasi dimensione (solo Windows). La licenza include funzionalità Enterprise con una sottoscrizione standard o cloud.
+- **Visual Studio Enterprise** &ndash; Per team di qualsiasi dimensione (solo Windows). La licenza include funzionalità Enterprise con una sottoscrizione standard o cloud.
 
 Visitare il sito [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) per scaricare l'edizione Community o per altre informazioni sull'acquisto delle edizioni Professional ed Enterprise.
 
@@ -60,8 +60,8 @@ Anche se la distribuzione tramite posta elettronica è semplice, offre poche pro
 
 L'installazione manuale è una terza opzione per l'installazione di applicazioni. Per eseguire l'installazione manuale di un'applicazione:
 
-1.   **Distribuire una copia dell'APK all'utente** &ndash; Ad esempio, distribuire la copia tramite un CD o un'unità flash USB.
-1.   **L'utente installa l'applicazione in un dispositivo Android** &ndash; Usare lo strumento da riga di comando *Android Debug Bridge* (**adb**). **adb** è uno strumento da riga di comando versatile che consente la comunicazione con un'istanza dell'emulatore o con un dispositivo Android. Android SDK include **adb** nella directory **<sdk>/platform-tools /**.
+1. **Distribuire una copia dell'APK all'utente** &ndash; Ad esempio, distribuire la copia tramite un CD o un'unità flash USB.
+1. **L'utente installa l'applicazione in un dispositivo Android** &ndash; Usare lo strumento da riga di comando *Android Debug Bridge* (**adb**). **adb** è uno strumento da riga di comando versatile che consente la comunicazione con un'istanza dell'emulatore o con un dispositivo Android. Android SDK include **adb** nella directory **\<sdk>/platform-tools/** .
 
 Il dispositivo Android deve essere collegato con un cavo USB al computer.
 I computer Windows potrebbero anche richiedere ulteriori driver USB dal fornitore del telefono per essere riconosciuti da **adb**. Le istruzioni per l'installazione di questi driver USB aggiuntivi esulano dagli scopi di questo documento.

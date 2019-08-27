@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: 9f2aecf1bcac8f9603db40e3562f49123e924bfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 07/19/2019
+ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739294"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889188"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Riquadro a comparsa della shell Xamarin.Forms
 
@@ -130,6 +130,32 @@ L'esempio seguente mostra come comprimere l'intestazione del riquadro a comparsa
     ...
 </Shell>
 ```
+
+## <a name="flyout-background-image"></a>Immagine di sfondo del riquadro a comparsa
+
+Il riquadro a comparsa può avere un'immagine di sfondo facoltativa, visualizzata sotto l'intestazione e dietro gli elementi e le voci di menu. È possibile specificare l'immagine di sfondo impostando la proprietà associabile `FlyoutBackgroundImage`, di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), su un file, una risorsa incorporata, un URI o un flusso.
+
+Le proporzioni dell'immagine di sfondo possono essere configurate impostando la proprietà associabile `FlyoutBackgroundImageAspect`, di tipo [`Aspect`](xref:Xamarin.Forms.Aspect), su uno dei membri dell'enumerazione `Aspect`:
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): ritaglia l'immagine in modo da riempire l'area di visualizzazione mantenendo le proporzioni.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): inserisce l'immagine nell'area di visualizzazione aggiungendo, se necessario, uno spazio vuoto in alto e in basso oppure ai lati, a seconda che l'immagine sia larga o alta.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill): estende l'immagine in modo da riempire completamente l'area di visualizzazione. Ciò può comportare la distorsione dell'immagine.
+
+Per impostazione predefinita, la proprietà `FlyoutBackgroundImageAspect` verrà impostata su `AspectFit`.
+
+L'esempio seguente mostra l'impostazione di queste proprietà:
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+Nel riquadro a comparsa viene quindi visualizzata un'immagine di sfondo:
+
+![Screenshot di un'immagine di sfondo del riquadro a comparsa](flyout-images/flyout-backgroundimage.png "Immagine di sfondo del riquadro a comparsa")
 
 ## <a name="flyout-items"></a>Elementi del riquadro a comparsa
 

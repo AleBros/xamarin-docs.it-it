@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509215"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525705"
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
@@ -22,8 +22,8 @@ Un espediente piuttosto comune a cui ricorrono gli sviluppatori per il debug del
 
 Lo strumento **Log di debug** fornisce un modo per visualizzare l'output del log durante il debug di un'app tramite Visual Studio. Il log di debug supporta i dispositivi seguenti:
 
--   Telefoni, tablet e dispositivi indossabili Android fisici.
--   Un dispositivo virtuale Android in esecuzione nell'emulatore Android. 
+- Telefoni, tablet e dispositivi indossabili Android fisici.
+- Un dispositivo virtuale Android in esecuzione nell'emulatore Android. 
 
 > [!NOTE]
 > Lo strumento **Log di debug** non funziona con Xamarin Live Player.
@@ -41,24 +41,24 @@ Per aprire lo strumento **Log del dispositivo** fare clic sull'icona **Log del d
 
 In alternativa, avviare lo strumento **Log del dispositivo** da uno dei comandi di menu seguenti:
 
--   **Visualizza -> Altre finestre -> Log del dispositivo**
--   **Strumenti -> Android -> Log del dispositivo**
+- **Visualizza -> Altre finestre -> Log del dispositivo**
+- **Strumenti -> Android -> Log del dispositivo**
 
 Lo screenshot seguente mostra le varie parti della finestra dello **strumento di debug**:
 
 [![Parti della finestra dello strumento di debug](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **Selettore del dispositivo** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
+- **Selettore del dispositivo** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
 
--   **Voci del log** &ndash; Tabella dei messaggi di log da logcat.
+- **Voci del log** &ndash; Tabella dei messaggi di log da logcat.
 
--   **Cancella voci del log** &ndash; Cancella tutte le voci di log correnti dalla tabella.
+- **Cancella voci del log** &ndash; Cancella tutte le voci di log correnti dalla tabella.
 
--   **Riproduci/Pausa** &ndash; Alterna l'aggiornamento o la sospensione della visualizzazione delle nuove voci del log.
+- **Riproduci/Pausa** &ndash; Alterna l'aggiornamento o la sospensione della visualizzazione delle nuove voci del log.
 
--   **Arresta** &ndash; Interrompe la visualizzazione delle nuove voci di log.
+- **Arresta** &ndash; Interrompe la visualizzazione delle nuove voci di log.
 
--   **Casella di ricerca** &ndash; Immettere stringhe di ricerca in questa finestra per filtrare le voci del log e visualizzarne un subset.
+- **Casella di ricerca** &ndash; Consente di immettere stringhe di ricerca per filtrare le voci di log e visualizzarne un subset.
 
 
 Quando la finestra dello strumento **Log di debug** è visualizzata, usare il menu a discesa dei dispositivi per scegliere il dispositivo Android da monitorare:
@@ -78,23 +78,23 @@ Lo screenshot seguente mostra le varie parti della finestra dello **strumento di
 
 [![Funzionalità della finestra dello strumento di debug](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **Selettore del dispositivo** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
+- **Selettore del dispositivo** &ndash; Consente di selezionare il dispositivo fisico o l'emulatore in esecuzione da monitorare.
 
--   **Voci del log** &ndash; Tabella dei messaggi di log da logcat.
+- **Voci del log** &ndash; Tabella dei messaggi di log da logcat.
 
--   **Cancella voci del log** &ndash; Cancella tutte le voci di log correnti dalla tabella.
+- **Cancella voci del log** &ndash; Cancella tutte le voci di log correnti dalla tabella.
 
--   **Casella di ricerca** &ndash; Immettere stringhe di ricerca in questa finestra per filtrare le voci del log e visualizzarne un subset.
+- **Casella di ricerca** &ndash; Consente di immettere stringhe di ricerca per filtrare le voci di log e visualizzarne un subset.
 
--   **Mostra messaggi** &ndash; Attiva o disattiva la visualizzazione dei messaggi informativi.
+- **Mostra messaggi** &ndash; Attiva o disattiva la visualizzazione dei messaggi informativi.
 
--   **Mostra avvisi** &ndash; Attiva o disattiva la visualizzazione di messaggi di avviso (i messaggi di avviso vengono mostrati in giallo).
+- **Mostra avvisi** &ndash; Attiva o disattiva la visualizzazione di messaggi di avviso (i messaggi di avviso vengono mostrati in giallo).
 
--   **Mostra errori** &ndash; Attiva o disattiva la visualizzazione dei messaggi di errore (i messaggi di errore vengono mostrati in rosso).
+- **Mostra errori** &ndash; Attiva o disattiva la visualizzazione dei messaggi di errore (i messaggi di errore vengono mostrati in rosso).
 
--   **Riconnetti** &ndash; Ristabilisce la connessione al dispositivo e aggiorna la visualizzazione delle voci di log.
+- **Riconnetti** &ndash; Ristabilisce la connessione al dispositivo e aggiorna la visualizzazione delle voci di log.
 
--   **Aggiungi marcatore** &ndash; Inserisce un messaggio marcatore (ad esempio `--- Marker N ---`) dopo l'ultima voce di log, dove _N_ è un contatore che inizia da 1 e aumenta di 1 man mano che vengono aggiunti nuovi marcatori.
+- **Aggiungi marcatore** &ndash; Inserisce un messaggio marcatore (ad esempio `--- Marker N ---`) dopo l'ultima voce di log, dove _N_ è un contatore che inizia da 1 e aumenta di 1 man mano che vengono aggiunti nuovi marcatori.
 
 Quando la finestra dello strumento Log di debug è visualizzata, usare il menu a discesa dei dispositivi per scegliere il dispositivo Android da monitorare:
 

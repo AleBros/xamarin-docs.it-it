@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: addb367d8e730919b621b5858f458444ace62024
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 37403b9e33ccd54baac4fd36afbe50504e0380f0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651005"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528963"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Creare comportamenti di Xamarin.Forms
 
@@ -214,4 +214,4 @@ Questo articolo ha spiegato come creare e usare i comportamenti di Xamarin.Forms
 - [Xamarin.Forms Behavior (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior) (Comportamento di Xamarin.Forms)
 - [Xamarin.Forms Behavior applied with a Style (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehaviorstyle) (Comportamento di Xamarin.Forms applicato con uno stile)
 - [Classe Behavior](xref:Xamarin.Forms.Behavior)
-- [Classe Behavior <T><T>](xref:Xamarin.Forms.Behavior`1)
+- [Behavior\<T>](xref:Xamarin.Forms.Behavior`1)
