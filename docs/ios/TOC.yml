@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Introduzione
+    - name: Attività iniziali
       items:
         - name: Introduzione a Xamarin.iOS
           href: get-started/index.md
@@ -12,7 +12,7 @@
               href: get-started/installation/index.md
             - name: Mac
               href: get-started/installation/mac.md
-            - name: WINDOWS
+            - name: Windows
               items:
                 - name: Installazione di Xamarin.iOS in Windows
                   href: get-started/installation/windows/index.md
@@ -248,17 +248,17 @@
           items:
             - name: Introduzione a iOS 13
               href: platform/ios13/index.md
-            - name: Introduzione
+            - name: Attività iniziali
               href: platform/ios13/get-started.md
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
           items:
             - name: Introduzione a iOS 12
               href: platform/introduction-to-ios12/index.md
-            - name: Introduzione
+            - name: Attività iniziali
               href: platform/introduction-to-ios12/get-started.md
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: platform/introduction-to-ios12/troubleshooting.md
         - name: iOS 11
           items:
@@ -273,7 +273,7 @@
                   href: platform/introduction-to-ios11/updating-your-app/visual-design.md
                 - name: Modifiche di App Store
                   href: platform/introduction-to-ios11/updating-your-app/app-store-changes.md
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: platform/introduction-to-ios11/troubleshooting.md
         - name: iOS 10
           items:
@@ -289,7 +289,7 @@
               href: platform/introduction-to-ios9/ios9.md
             - name: Modifiche aggiuntive del framework iOS 9
               href: platform/introduction-to-ios9/additional-framework-changes.md
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: platform/introduction-to-ios9/troubleshooting.md
         - name: iOS 8
           href: platform/introduction-to-ios8.md
@@ -338,7 +338,7 @@
           href: platform/extensions.md
         - name: Framework incorporati
           href: platform/embedded-frameworks.md
-        - name: Compressione di file
+        - name: Compressione dei file
           href: platform/file-compression.md
         - name: Grafica e animazione in iOS
           items:
@@ -351,7 +351,7 @@
               href: platform/graphics-animation-ios/core-graphics.md
             - name: Core Animation
               href: platform/graphics-animation-ios/core-animation.md
-            - name: Vision
+            - name: Visione
               href: platform/introduction-to-ios11/vision.md
             - name: 'Procedura dettagliata: Grafica e animazione'
               href: platform/graphics-animation-ios/graphics-animation-walkthrough.md
@@ -390,7 +390,7 @@
           href: platform/photokit.md
         - name: Fare riferimento a librerie native
           href: platform/native-interop.md
-        - name: API per la ricerca
+        - name: API di ricerca
           items:
             - name: Panoramica
               href: platform/search/index.md
@@ -447,7 +447,7 @@
           href: platform/textkit.md
         - name: 3D Touch
           href: platform/3d-touch.md
-        - name: ID tocco
+        - name: Touch ID
           href: platform/touchid.md
         - name: Framework per le notifiche utente
           items:
@@ -489,7 +489,7 @@
       items:
         - name: Informazioni su Xamarin.Essentials
           href: ~/essentials/index.md?context=xamarin/ios
-        - name: Introduzione
+        - name: Attività iniziali
           href: ~/essentials/get-started.md?context=xamarin/ios
         - name: Piattaforma e supporto funzionalità
           href: ~/essentials/platform-feature-support.md?context=xamarin/ios
@@ -549,7 +549,7 @@
           href: ~/essentials/secure-storage.md?context=xamarin/ios
         - name: Condividi
           href: ~/essentials/share.md?context=xamarin/ios
-        - name: SMS
+        - name: sms
           href: ~/essentials/sms.md?context=xamarin/ios
         - name: Sintesi vocale
           href: ~/essentials/text-to-speech.md?context=xamarin/ios
@@ -559,7 +559,9 @@
           href: ~/essentials/version-tracking.md?context=xamarin/ios
         - name: Vibrazione
           href: ~/essentials/vibrate.md?context=xamarin/ios
-        - name: Risoluzione dei problemi
+        - name: Note sulla versione di Xamarin.Essentials
+          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+        - name: risoluzione dei problemi
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
     - name: Dati e servizi cloud
       items:
@@ -571,9 +573,9 @@
             - name: Introduzione
               href: ~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios
               items:
-                - name: Passaggio 1. Registrazione
+                - name: Passaggio 1. Register
                   href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios
-                - name: Passaggio 2. Configurazione
+                - name: Passaggio 2. Configurare
                   href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/ios
             - name: Accesso all'API Graph
               href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/ios
@@ -651,7 +653,7 @@
                   href: deploy-test/provisioning/fastlane/match.md
         - name: Compilazione per dispositivi diversi
           href: deploy-test/compiling-for-different-devices.md
-        - name: Ambiente
+        - name: Environment
           href: deploy-test/environment.md
         - name: Meccanismi di compilazione per iOS
           href: deploy-test/ios-build-mechanics.md
@@ -673,7 +675,7 @@
           href: deploy-test/walkthrough-apples-instrument.md
         - name: Prestazioni
           href: deploy-test/performance.md
-        - name: Risoluzione dei problemi
+        - name: risoluzione dei problemi
           href: deploy-test/troubleshooting.md
     - name: Piattaforma Apple
       items:
@@ -734,7 +736,7 @@
                       href: ~/cross-platform/macios/binding/objective-sharpie/examples/advanced.md?context=xamarin/ios
                 - name: Cronologia dei rilasci
                   href: ~/cross-platform/macios/binding/objective-sharpie/releases.md?context=xamarin/ios
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: ~/cross-platform/macios/binding/troubleshooting.md?context=xamarin/ios
         - name: Riferimenti nativi
           href: ~/cross-platform/macios/native-references.md?context=xamarin/ios
@@ -780,7 +782,7 @@
           href: internals/objective-c-selectors.md
         - name: Registrar
           href: internals/registrar.md
-    - name: Risoluzione dei problemi
+    - name: risoluzione dei problemi
       items:
         - name: Panoramica
           href: troubleshooting/index.md
@@ -856,7 +858,7 @@
               href: watchos/get-started/installation.md
             - name: Prima app watchOS
               href: watchos/get-started/hello-watch.md
-            - name: Riferimenti al progetto
+            - name: Riferimenti del progetto
               href: watchos/get-started/project-references.md
         - name: Nozioni fondamentali sulle applicazioni
           href: watchos/app-fundamentals/index.md
@@ -882,7 +884,7 @@
           items:
             - name: Image
               href: watchos/user-interface/image.md
-            - name: Table
+            - name: Tabella
               href: watchos/user-interface/table.md
             - name: Menu (Force Touch)
               href: watchos/user-interface/menu.md
@@ -900,7 +902,7 @@
               items:
                 - name: Modifiche aggiuntive del framework watchOS 3
                   href: watchos/platform/introduction-to-watchos3/additional-framework-changes.md
-                - name: Risoluzione dei problemi
+                - name: risoluzione dei problemi
                   href: watchos/platform/introduction-to-watchos3/troubleshooting.md
             - name: Apple Pay
               href: watchos/platform/apple-pay.md
@@ -920,7 +922,7 @@
           items:
             - name: Informazioni su Xamarin.Essentials
               href: ~/essentials/index.md?context=xamarin/watchos
-            - name: Introduzione
+            - name: Attività iniziali
               href: ~/essentials/get-started.md?context=xamarin/watchos
             - name: Piattaforma e supporto funzionalità
               href: ~/essentials/platform-feature-support.md?context=xamarin/watchos
@@ -966,7 +968,7 @@
               href: ~/essentials/unit-converters.md?context=xamarin/watchos
             - name: Rilevamento versione
               href: ~/essentials/version-tracking.md?context=xamarin/watchos
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: ~/essentials/troubleshooting.md?context=xamarin/watchos
         - name: Distribuzione e test
           href: watchos/deploy-test/index.md
@@ -975,7 +977,7 @@
               href: watchos/deploy-test/device.md
             - name: App Store
               href: watchos/deploy-test/appstore.md
-        - name: Risoluzione dei problemi
+        - name: risoluzione dei problemi
           href: watchos/troubleshooting.md
     - name: tvOS
       items:
@@ -1011,7 +1013,7 @@
               items:
                 - name: Modifiche aggiuntive del framework iOS 10
                   href: tvos/platform/introduction-to-tvos10/additional-framework-changes.md
-                - name: Risoluzione dei problemi
+                - name: risoluzione dei problemi
                   href: tvos/platform/introduction-to-tvos10/troubleshooting.md
             - name: Introduzione a tvOS 9
               href: tvos/platform/tvos9.md
@@ -1023,7 +1025,7 @@
           items:
             - name: Informazioni su Xamarin.Essentials
               href: ~/essentials/index.md?context=xamarin/tvos
-            - name: Introduzione
+            - name: Attività iniziali
               href: ~/essentials/get-started.md?context=xamarin/tvos
             - name: Piattaforma e supporto funzionalità
               href: ~/essentials/platform-feature-support.md?context=xamarin/tvos
@@ -1053,7 +1055,7 @@
               href: ~/essentials/unit-converters.md?context=xamarin/tvos
             - name: Rilevamento versione
               href: ~/essentials/version-tracking.md?context=xamarin/tvos
-            - name: Risoluzione dei problemi
+            - name: risoluzione dei problemi
               href: ~/essentials/troubleshooting.md?context=xamarin/tvos
         - name: Interfaccia utente
           href: tvos/user-interface/index.md
@@ -1092,7 +1094,7 @@
                   href: tvos/deploy-test/app-distribution/itunes-connect.md
                 - name: Pubblicazione in Apple TV App Store
                   href: tvos/deploy-test/app-distribution/app-store-publishing.md
-        - name: Risoluzione dei problemi
+        - name: risoluzione dei problemi
           href: tvos/troubleshooting.md
         - name: Meccanismi interni
           href: tvos/internals/index.md
