@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 722dfbb301d6698ee58d42029c8f6b82ecddc37b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 14be0fec50138aed7b2b3e8d48d49cad86abbb2b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508990"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119422"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente Xamarin.Android
 
@@ -58,16 +58,16 @@ Aggiunto in Xamarin.Android 6.1.
 
 Xamarin.Android supporta le proprietà di sistema seguenti, che possono essere impostate tramite `adb shell setprop` o tramite l'azione di compilazione `$(AndroidEnvironment)`.
 
-* `debug.mono.debug`
-* `debug.mono.env`
-* `debug.mono.gc`
-* `debug.mono.log`
-* `debug.mono.max_grefc`
-* `debug.mono.profile`
-* `debug.mono.runtime_args`
-* `debug.mono.trace`
-* `debug.mono.wref`
-* `XA_HTTP_CLIENT_HANDLER_TYPE`
+- `debug.mono.debug`
+- `debug.mono.env`
+- `debug.mono.gc`
+- `debug.mono.log`
+- `debug.mono.max_grefc`
+- `debug.mono.profile`
+- `debug.mono.runtime_args`
+- `debug.mono.trace`
+- `debug.mono.wref`
+- `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 ### `debug.mono.debug`
 
@@ -90,15 +90,15 @@ Equivale ad avere la proprietà di sistema `debug.mono.log` contenente `gc`.
 Controlla quali informazioni aggiuntive verranno registrate da Xamarin.Android in `adb logcat`.
 Si tratta di una stringa delimitata da virgole (`,`), contenente uno dei valori seguenti:
 
-* `all`: visualizza *tutti* i messaggi. Non è in genere una scelta valida, perché include i messaggi `lref`.
-* `assembly`: visualizza il file `.apk` e i messaggi di analisi dell'assembly.
-* `gc`: visualizza i messaggi relativi a GC.
-* `gref`: visualizza i messaggi di riferimento globale JNI.
-* `lref`: visualizza i messaggi di riferimento locale JNI.  
+- `all`: visualizza *tutti* i messaggi. Non è in genere una scelta valida, perché include i messaggi `lref`.
+- `assembly`: visualizza il file `.apk` e i messaggi di analisi dell'assembly.
+- `gc`: visualizza i messaggi relativi a GC.
+- `gref`: visualizza i messaggi di riferimento globale JNI.
+- `lref`: visualizza i messaggi di riferimento locale JNI.  
     *Nota*: si tratta *effettivamente* di `adb logcat` di posta indesiderata.  
     In Xamarin.Android 5.1 verrà anche creato un file `.__override__/lrefs.txt`, che può assumere dimensioni *enormi*.  
     Da evitare.
-* `timing`: visualizza alcune informazioni sugli intervalli dei metodi. Verranno anche creati i file `.__override__/methods.txt` e `.__override__/counters.txt`.
+- `timing`: visualizza alcune informazioni sugli intervalli dei metodi. Verranno anche creati i file `.__override__/methods.txt` e `.__override__/counters.txt`.
 
 
 ### `debug.mono.max_grefc`
@@ -131,15 +131,15 @@ Tuttavia *a volte* consente di eseguire ulteriori indagini.
 
 La proprietà di sistema `debug.mono.wref` consente l'override del meccanismo di riferimento debole JNI rilevato predefinito. I valori supportati sono due:
 
-* `jni`: usa i riferimenti deboli JNI, creati da `JNIEnv::NewWeakGlobalRef()` ed eliminati definitivamente da `JNIEnv::DeleteWeakGlobalREf()`.
-* `java`: usa i riferimenti globali JNI che fanno riferimento alle istanze di `java.lang.WeakReference`.
+- `jni`: usa i riferimenti deboli JNI, creati da `JNIEnv::NewWeakGlobalRef()` ed eliminati definitivamente da `JNIEnv::DeleteWeakGlobalREf()`.
+- `java`: usa i riferimenti globali JNI che fanno riferimento alle istanze di `java.lang.WeakReference`.
 
 Per impostazione predefinita, `java` viene usato fino all'API 7 e nell'API 19 (Kit Kat) con ART abilitato. Nell'API 8 sono stati aggiunti i riferimenti `jni` e in ART sono stati *interrotti* i riferimenti `jni`.
 
 Questa proprietà di sistema è utile per i test e per alcune forme di analisi.
 *In generale* non deve essere modificata.
 
-### <a name="xahttpclienthandlertype"></a>XA\_HTTP\_CLIENT\_HANDLER\_TYPE
+### <a name="xa_http_client_handler_type"></a>XA\_HTTP\_CLIENT\_HANDLER\_TYPE
 
 Questa variabile di ambiente, introdotta in Xamarin.Android 6.1, dichiara l'implementazione `HttpMessageHandler` predefinita che verrà usata da `HttpClient`. Per impostazione predefinita, questa variabile non è impostata e Xamarin.Android userà `HttpClientHandler`.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 4ddae1ae4f49c01220b2f5ce78dc19122b3015a0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525284"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119622"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
@@ -271,7 +271,7 @@ Per altre informazioni su multidex, vedere [Configurare le app con più di 64.00
 
 <a name="Compile" />
 
-## <a name="compile"></a>Compile
+## <a name="compile"></a>Compilazione
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -319,15 +319,15 @@ La funzionalità **Gestione archivi** è costituita da un **elenco di soluzioni*
 
 L'**elenco di soluzioni** visualizza tutte le soluzioni con almeno un progetto archiviato. L'**elenco di soluzioni** comprende le seguenti sezioni:
 
-* **Soluzione corrente** &ndash; Visualizza la soluzione corrente. Si noti che quest'area può essere vuota se per la soluzione corrente non esiste un archivio.
-* **Tutti gli archivi** &ndash; Visualizza tutte le soluzioni con un archivio.
-* Casella di testo **Ricerca** (in alto) &ndash; Filtra le soluzioni elencate nell'elenco **Tutti gli archivi** in base alla stringa di ricerca immessa nella casella di testo.
+- **Soluzione corrente** &ndash; Visualizza la soluzione corrente. Si noti che quest'area può essere vuota se per la soluzione corrente non esiste un archivio.
+- **Tutti gli archivi** &ndash; Visualizza tutte le soluzioni con un archivio.
+- Casella di testo **Ricerca** (in alto) &ndash; Filtra le soluzioni elencate nell'elenco **Tutti gli archivi** in base alla stringa di ricerca immessa nella casella di testo.
 
 L'**elenco di archivi** visualizza l'elenco di tutti gli archivi per la soluzione selezionata. L'**elenco di archivi** comprende le seguenti sezioni:
 
-* **Nome della soluzione selezionata** &ndash; Nome della soluzione selezionata nell'**elenco di soluzioni**. Tutte le informazioni visualizzate nell'**elenco di archivi** fa riferimento a questa soluzione selezionata.
-* **Filtro Piattaforme** &ndash; Campo che consente di filtrare gli archivi in base al tipo di piattaforma (ad esempio iOS o Android).
-* **Archivi** &ndash; Elenco degli archivi per la soluzione selezionata. Ogni voce di questo elenco include il nome del progetto, la data di creazione e la piattaforma. Può anche visualizzare informazioni aggiuntive, ad esempio lo stato di avanzamento quando una voce viene archiviata o pubblicata.
+- **Nome della soluzione selezionata** &ndash; Nome della soluzione selezionata nell'**elenco di soluzioni**. Tutte le informazioni visualizzate nell'**elenco di archivi** fa riferimento a questa soluzione selezionata.
+- **Filtro Piattaforme** &ndash; Campo che consente di filtrare gli archivi in base al tipo di piattaforma (ad esempio iOS o Android).
+- **Archivi** &ndash; Elenco degli archivi per la soluzione selezionata. Ogni voce di questo elenco include il nome del progetto, la data di creazione e la piattaforma. Può anche visualizzare informazioni aggiuntive, ad esempio lo stato di avanzamento quando una voce viene archiviata o pubblicata.
 
 Il **riquadro dei dettagli** visualizza informazioni aggiuntive su ogni archivio. Consente inoltre all'utente di avviare il flusso di lavoro di distribuzione o aprire la cartella in cui è stata creata la distribuzione. La sezione **Commenti per la build** consente di includere commenti sulla compilazione nell'archivio.
 
@@ -343,9 +343,9 @@ La finestra di dialogo **Canale di distribuzione** visualizza informazioni sull'
 
 È possibile scegliere uno dei seguenti canali di distribuzione:
 
-* **Ad hoc** &ndash; Salva su disco un APK firmato che può essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione _ad hoc_ nel disco. Questo è un buon metodo per creare un file APK per il test.
+- **Ad hoc** &ndash; Salva su disco un APK firmato che può essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione _ad hoc_ nel disco. Questo è un buon metodo per creare un file APK per il test.
 
-* **Google Play** &ndash; Pubblica un file APK firmato in Google Play. Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
+- **Google Play** &ndash; Pubblica un file APK firmato in Google Play. Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

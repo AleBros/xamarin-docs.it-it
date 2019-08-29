@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 47211f60d55f1f355a92307eff53ed9af754eda2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b34ba7e3285549d62e5489287be8886db80bd1af
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527407"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064807"
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 
@@ -288,7 +288,7 @@ Se si evita la trasparenza di Core Animation, migliorano le prestazioni di compo
 
 La generazione dinamica di codice con `System.Reflection.Emit` o *Dynamic Language Runtime* deve essere evitata perché il kernel iOS impedisce l'esecuzione di dinamica di codice.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 

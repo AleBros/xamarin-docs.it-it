@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: adfc8e34d64b6091ba8ffc56c0f93bcf560128b1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 42edb04cb6dfe5fca59a6cc96f34cb8f9c5e1e88
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527713"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120577"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - Approfondimento
 
@@ -83,7 +83,7 @@ Questa sezione studia le relazioni illustrate nel diagramma seguente:
 
 [![](hello-ios-deepdive-images/image32.png "In questo diagramma sono illustrate le relazioni dei concetti fondamentali dell'architettura e delle app")](hello-ios-deepdive-images/image32.png#lightbox)
 
-### <a name="main-method"></a>metodo Main
+### <a name="main-method"></a>Metodo Main
 
 Il punto di ingresso principale di un'applicazione iOS è la classe `Application`. La classe `Application` è definita nel file **Main.cs** e contiene un metodo `Main` statico. Contiene una nuova istanza dell'applicazione Xamarin.iOS e passa il nome della classe *delegata dell'applicazione* che gestirà gli eventi del sistema operativo. Di seguito è riportato il codice del modello per il metodo statico `Main`:
 
@@ -447,7 +447,7 @@ Non tutti hanno a disposizione un designer che crei le icone e le immagini di av
 ::: zone-end
 ::: zone pivot="windows"
 
-* Visual Studio: è possibile usare questo strumento per creare un set di icone semplici per l'app direttamente nell'IDE.
+- Visual Studio: è possibile usare questo strumento per creare un set di icone semplici per l'app direttamente nell'IDE.
 - [**Glyphish**](http://www.glyphish.com/): set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
 - [**Fiverr**](http://www.fiverr.com/): consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi
 
@@ -455,9 +455,9 @@ Non tutti hanno a disposizione un designer che crei le icone e le immagini di av
 
 Per altre informazioni sulle dimensioni e sui requisiti delle icone, vedere la [guida Uso delle immagini](~/ios/app-fundamentals/images-icons/index.md).
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
-La procedura è stata completata. A questo punto si ha una solida conoscenza dei componenti delle applicazioni Xamarin.iOS e degli strumenti necessari per creare tali applicazioni.
+Congratulazioni! A questo punto si ha una solida conoscenza dei componenti delle applicazioni Xamarin.iOS e degli strumenti necessari per creare tali applicazioni.
 Nella [prossima esercitazione della serie introduttiva](~/ios/get-started/hello-ios-multiscreen/index.md), l'applicazione verrà estesa in modo da gestire più schermate. Nello stesso tempo, verrà implementato un controller di spostamento, verranno illustrati gli Storyboard Segue e verrà presentato lo schema MVC (Model, View, Controller).
 
 ## <a name="related-links"></a>Collegamenti correlati

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 24aa6dae3767255155c6b739e50174214a28d3d8
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 92081ceed9df0525f49005b636298a8142162a31
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855250"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120930"
 ---
 # <a name="xamarinios-installation"></a>Installazione di Xamarin.iOS
 
-## <a name="required-components"></a>Componenti obbligatori
+## <a name="required-components"></a>Componenti richiesti
 
 Per compilare per Xamarin.iOS, sono necessari i componenti seguenti:
 
@@ -40,5 +40,5 @@ Per istruzioni sull'installazione di Xamarin.iOS in un computer Windows, vedere 
 
 Dopo aver completato correttamente l'installazione di Xamarin.iOS, è necessario comprendere come eseguire il provisioning del dispositivo iOS in modo da poter sviluppare e testare un'applicazione Xamarin.iOS nel dispositivo.
 
-* [Set Up Device for Development](device-provisioning/index.md) (Configurare il dispositivo per lo sviluppo)
-* [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
+- [Set Up Device for Development](device-provisioning/index.md) (Configurare il dispositivo per lo sviluppo)
+- [Provisioning gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

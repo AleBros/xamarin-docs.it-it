@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: d9e3055130a66fe240bf378ad2f63679e71bec14
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629620"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121145"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
@@ -24,13 +24,13 @@ I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che mod
 
 Esistono quattro tipi di trigger:
 
-* [Trigger di proprietà](#property): si verifica quando una proprietà su un controllo è impostata su un particolare valore.
+- [Trigger di proprietà](#property): si verifica quando una proprietà su un controllo è impostata su un particolare valore.
 
-* [Trigger di dati](#data) : usa il data binding per eseguire il trigger sulla base delle proprietà di un altro controllo.
+- [Trigger di dati](#data) : usa il data binding per eseguire il trigger sulla base delle proprietà di un altro controllo.
 
-* [Trigger di evento](#event): si verifica quando un evento avviene su un controllo.
+- [Trigger di evento](#event): si verifica quando un evento avviene su un controllo.
 
-* [MultiTrigger](#multi): consente di impostare più condizioni di trigger prima che si verifichi un'azione.
+- [MultiTrigger](#multi): consente di impostare più condizioni di trigger prima che si verifichi un'azione.
 
 <a name="property" />
 
@@ -52,15 +52,15 @@ Questo esempio illustra un trigger che modifica il colore di sfondo di un oggett
 
 Le parti importanti della dichiarazione del trigger sono le seguenti:
 
-* **TargetType**: tipo di controllo a cui viene applicato il trigger.
+- **TargetType**: tipo di controllo a cui viene applicato il trigger.
 
-* **Property**: proprietà del controllo sottoposta a monitoraggio.
+- **Property**: proprietà del controllo sottoposta a monitoraggio.
 
-* **Value**: se si verifica per la proprietà monitorata, valore che determina l'attivazione del trigger.
+- **Value**: se si verifica per la proprietà monitorata, valore che determina l'attivazione del trigger.
 
-* **Setter**: è possibile aggiungere una raccolta di elementi `Setter` quando la condizione di trigger è soddisfatta. È necessario specificare gli oggetti `Property` e `Value` da impostare.
+- **Setter**: è possibile aggiungere una raccolta di elementi `Setter` quando la condizione di trigger è soddisfatta. È necessario specificare gli oggetti `Property` e `Value` da impostare.
 
-* **EnterActions ed ExitActions** (non illustrate): parti scritte nel codice che possono essere usate in aggiunta o al posto degli elementi `Setter`. Sono [descritte di seguito](#enterexit).
+- **EnterActions ed ExitActions** (non illustrate): parti scritte nel codice che possono essere usate in aggiunta o al posto degli elementi `Setter`. Sono [descritte di seguito](#enterexit).
 
 ### <a name="applying-a-trigger-using-a-style"></a>Applicazione di un trigger usando lo stile
 
@@ -140,11 +140,11 @@ Questa classe implementa `TriggerAction` che dovrà specificare un override per 
 
 L'implementazione di un'azione trigger deve eseguire le operazioni seguenti:
 
-* Implementare la classe `TriggerAction<T>` generica con il parametro generico corrispondente al tipo di controllo a cui verrà applicato il trigger. È possibile usare superclassi, ad esempio `VisualElement` per scrivere azioni trigger che funzionano con una serie di controlli, oppure specificare un controllo, ad esempio `Entry`.
+- Implementare la classe `TriggerAction<T>` generica con il parametro generico corrispondente al tipo di controllo a cui verrà applicato il trigger. È possibile usare superclassi, ad esempio `VisualElement` per scrivere azioni trigger che funzionano con una serie di controlli, oppure specificare un controllo, ad esempio `Entry`.
 
-* Eseguire l'override del metodo `Invoke`. Viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
+- Eseguire l'override del metodo `Invoke`. Viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
 
-* In alternativa, esporre le proprietà che possono essere impostata in XAML quando viene dichiarato il trigger. Nell'esempio sono `Anchor`, `Scale` e `Length`.
+- In alternativa, esporre le proprietà che possono essere impostata in XAML quando viene dichiarato il trigger. Nell'esempio sono `Anchor`, `Scale` e `Length`.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -236,9 +236,9 @@ Per usare il convertitore in un MultiTrigger, aggiungere prima l'elemento al diz
 
 Il linguaggio XAML è illustrato di seguito. Si notino le differenze rispetto al primo esempio MultiTrigger:
 
-* Il pulsante ha `IsEnabled="false"` impostato per impostazione predefinita.
-* Le condizioni MultiTrigger usano il convertitore per trasformare il valore `Text.Length` in un valore `boolean`.
-* Quando tutte le condizioni sono `true`, l'elemento Setter imposta la proprietà `IsEnabled` del pulsante su `true`.
+- Il pulsante ha `IsEnabled="false"` impostato per impostazione predefinita.
+- Le condizioni MultiTrigger usano il convertitore per trasformare il valore `Text.Length` in un valore `boolean`.
+- Quando tutte le condizioni sono `true`, l'elemento Setter imposta la proprietà `IsEnabled` del pulsante su `true`.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />

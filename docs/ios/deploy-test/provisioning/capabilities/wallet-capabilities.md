@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 25ebf101dfe0cc3d51e8411b7977e6dc0b061f2d
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8cb5d1cb29f5668194d15102c0b2fb4118388e94
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978399"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065466"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Funzionalità Portafoglio in Xamarin.iOS
 
@@ -22,11 +22,11 @@ Portafoglio è un'app che consente di archiviare e visualizzare codici a barre e
 
 Gli sviluppatori possono operare con Portafoglio in diversi modi:
 
-*   Per creare un pass non è necessario compilare l'applicazione. Un Passfile è un archivio compresso che contiene alcuni file JSON e file di metadati facoltativi. Per prepararlo sono necessari un [ID del tipo di pass](~/ios/platform/passkit.md) e un [certificato per il pass](~/ios/platform/passkit.md). Queste informazioni vengono quindi dichiarate in un file JSON. Altre informazioni sul provisioning di un Passfile sono disponibili nella guida [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit).
+* Per creare un pass non è necessario compilare l'applicazione. Un Passfile è un archivio compresso che contiene alcuni file JSON e file di metadati facoltativi. Per prepararlo sono necessari un [ID del tipo di pass](~/ios/platform/passkit.md) e un [certificato per il pass](~/ios/platform/passkit.md). Queste informazioni vengono quindi dichiarate in un file JSON. Altre informazioni sul provisioning di un Passfile sono disponibili nella guida [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit).
 
-*   Per distribuire pass è possibile scrivere app complementari che includono anche le funzionalità necessarie per creare, modificare e aggiornare i pass e per aggiungerli quindi all'app Portafoglio. Un buon esempio di questo tipo di app è un'app per il cinema: dopo che un utente ha acquistato un biglietto tramite l'app, questo potrà essere aggiunto a Portafoglio direttamente dall'app. Per usare un'app complementare, il profilo di provisioning deve includere un ID app con le funzionalità Portafoglio che è possibile impostare seguendo i passaggi indicati di seguito. L'app deve includere anche gli entitlement necessari.
+* Per distribuire pass è possibile scrivere app complementari che includono anche le funzionalità necessarie per creare, modificare e aggiornare i pass e per aggiungerli quindi all'app Portafoglio. Un buon esempio di questo tipo di app è un'app per il cinema: dopo che un utente ha acquistato un biglietto tramite l'app, questo potrà essere aggiunto a Portafoglio direttamente dall'app. Per usare un'app complementare, il profilo di provisioning deve includere un ID app con le funzionalità Portafoglio che è possibile impostare seguendo i passaggi indicati di seguito. L'app deve includere anche gli entitlement necessari.
 
-*   Le app Conduit sono app che non modificano direttamente i pass. A parte la possibilità di ricevere il pass e offrire all'utente l'opzione di aggiungerlo all'app Portafoglio, l'interazione di queste app con il pass è minima. Non necessitano di provisioning o entitlement speciali, ma usano alcuni metodi del framework di PassKit.
+* Le app Conduit sono app che non modificano direttamente i pass. A parte la possibilità di ricevere il pass e offrire all'utente l'opzione di aggiungerlo all'app Portafoglio, l'interazione di queste app con il pass è minima. Non necessitano di provisioning o entitlement speciali, ma usano alcuni metodi del framework di PassKit.
 
 ## <a name="developer-center"></a>Centro sviluppatori
 
@@ -57,7 +57,7 @@ Questo ID app può ora essere usato per generare o rigenerare un nuovo profilo d
 
 Per altre informazioni sull'uso di Portafoglio, vedere le guide seguenti:
 
-*   [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit)
+* [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit)
  
 ## <a name="next-steps"></a>Passaggi successivi
  

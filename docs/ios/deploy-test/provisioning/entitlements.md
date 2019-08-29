@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 0314ec958b2c38e702c56ef64d1cc2bba1383060
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: bbc01416fe49b361b163808f3502533db8e39d8c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865835"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121318"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
 
@@ -94,13 +94,13 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 ### <a name="wallet"></a>Wallet
 
-*   **Descrizione**: conosciuta comunemente come Passbook, Wallet è un'app per l'archiviazione e la gestione dei pass. Questi pass possono essere carte di credito, carte cliente, carte d'imbarco o biglietti.
+- **Descrizione**: conosciuta comunemente come Passbook, Wallet è un'app per l'archiviazione e la gestione dei pass. Questi pass possono essere carte di credito, carte cliente, carte d'imbarco o biglietti.
 
     - **Identificatore tipo di pass**
-        * **Chiavi**: com.apple.developer.pass-type-identifiers
-        * **Stringa**: `$(TeamIdentifierPrefix)*`
+        - **Chiavi**: com.apple.developer.pass-type-identifiers
+        - **Stringa**: `$(TeamIdentifierPrefix)*`
 
-* **Note**:
+- **Note**:
     - Permetterà all'app di consentire tutti i tipi di pass. Per limitare l'app e consentire solo un subset di tipi di pass per il team, impostare il valore della stringa su: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
     Dove pass.$(CFBundleIdentifier) è l'ID del pass creato [sopra](~/ios/platform/passkit.md)
@@ -109,7 +109,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 ### <a name="icloud"></a>iCloud
 
-*   **Descrizione**: iCloud offre agli utenti iOS un modo semplice e pratico per archiviare contenuti e condividerli tra i dispositivi. Gli sviluppatori possono usare iCloud in quattro modi per offrire ai propri utenti un mezzo di archiviazione: archiviazione chiave-valore, archiviazione UIDocument, CoreData e uso diretto di CloudKit per l'archiviazione di singoli file e directory. Per altre informazioni su questi argomenti, vedere la guida introduttiva a iCloud.
+- **Descrizione**: iCloud offre agli utenti iOS un modo semplice e pratico per archiviare contenuti e condividerli tra i dispositivi. Gli sviluppatori possono usare iCloud in quattro modi per offrire ai propri utenti un mezzo di archiviazione: archiviazione chiave-valore, archiviazione UIDocument, CoreData e uso diretto di CloudKit per l'archiviazione di singoli file e directory. Per altre informazioni su questi argomenti, vedere la guida introduttiva a iCloud.
 
     - **Documenti iCloud e CloudKit**
         - **Chiavi**: com.apple.developer.ubiquity-container-identifiers
@@ -118,7 +118,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
         - **Chiave**: com.apple.developer.ubiquity-kvstore-identifier
         - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
-* **Note**:
+- **Note**:
     - Per individuare la stringa `$(TeamIdentifierPrefix)`, accedere a developer.apple.com e visitare **Member Center > Account utente > Developer Account Summary (Riepilogo account per sviluppatore)** per ottenere l'ID del team (o l'ID individuale per i singoli sviluppatori). Sarà una stringa di 10 caratteri (ad esempio, A93A5CM278).
     - La stringa `$(CFBundleIdentifier)` inizia con `iCloud` e viene impostata quando il contenitore iCloud viene creato seguendo i passaggi della guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md).
     - Si possono usare i segnaposto $`(TeamIdentifierPrefix)` e `$(CFBundleIdentifier)` che verranno sostituiti con i valori corretti in fase di compilazione.
@@ -204,6 +204,6 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
     - **Key**: com.apple.developer.ClassKit-environment
     - **Stringa**: `development` oppure `production`
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questa guida ha illustrato gli entitlement e come usarli in Visual Studio per Mac e in Visual Studio. Ha anche fornito informazioni di riferimento sulle coppie chiave/valore per ogni funzionalità.

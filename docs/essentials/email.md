@@ -4,19 +4,19 @@ description: La classe Email in Xamarin.Essentials consente a un'applicazione di
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
-ms.openlocfilehash: f2c275260625fe3842b4473e404f49c71d1d28ae
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.date: 08/20/2019
+ms.openlocfilehash: cccbe5f539e2807e749433623e938438e67965e8
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012496"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060090"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
 La classe **Email** consente a un'applicazione di aprire l'applicazione di posta elettronica predefinita con le informazioni specificate, inclusi oggetto, corpo e destinatari (A, Cc, Ccn).
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -62,18 +62,9 @@ public class EmailTest
 }
 ```
 
-
 ## <a name="file-attachments"></a>File allegati
 
-![Funzionalità di anteprima](~/media/shared/preview.png)
-
-L'invio di file tramite posta elettronica è disponibile come anteprima sperimentale in Xamarin.Essentials versione 1.1.0. Questa funzionalità consente a un'app di inviare file in messaggi di posta elettronica nei client di posta elettronica del dispositivo. Per abilitare questa funzionalità impostare la proprietà seguente nel codice di avvio dell'app:
-
-```csharp
-ExperimentalFeatures.Enable(ExperimentalFeatures.EmailAttachments);
-```
-
-Dopo l'abilitazione della funzionalità è possibile inviare qualsiasi file tramite posta elettronica. Xamarin.Essentials rileva automaticamente il tipo di file (MIME) e richiede l'aggiunta del file come allegato. Ogni client di posta elettronica è diverso: un client potrebbe supportare solo estensioni di file specifica o nessuna estensione.
+Questa funzionalità consente a un'app di inviare file in messaggi di posta elettronica nei client di posta elettronica del dispositivo. Xamarin.Essentials rileva automaticamente il tipo di file (MIME) e richiede l'aggiunta del file come allegato. Ogni client di posta elettronica è diverso: un client potrebbe supportare solo estensioni di file specifica o nessuna estensione.
 
 Il seguente esempio mostra la scrittura di testo su disco e l'aggiunta del testo come allegato di posta elettronica:
 

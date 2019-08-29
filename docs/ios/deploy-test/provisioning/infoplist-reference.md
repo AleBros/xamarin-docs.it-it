@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/18/2017
-ms.openlocfilehash: 654eca1098f9486e0c41fd296b3f8d381ac7ea34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a61a4a313fa23b5cdc629279bee39f1eed792cc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105376"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120495"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Riferimenti Info.plist per Xamarin.iOS
 
 Per altre informazioni sull'uso delle chiavi Info.plist, vedere la guida [Working with Security and Privacy](~/ios/app-fundamentals/security-privacy.md) (Sicurezza e privacy). 
 
-## <a name="location"></a>Percorso 
+## <a name="location"></a>Location 
 
 Anche l'accesso al percorso dell'utente richiede modifiche a Info.plist. È necessario impostare le chiavi seguenti relative ai dati del percorso: 
 
-* **NSLocationWhenInUseUsageDescription**: per l'accesso al percorso dell'utente quando interagisce con l'app. 
-* **NSLocationAlwaysUsageDescription**: per l'accesso dell'app al percorso dell'utente in background.
+- **NSLocationWhenInUseUsageDescription**: per l'accesso al percorso dell'utente quando interagisce con l'app. 
+- **NSLocationAlwaysUsageDescription**: per l'accesso dell'app al percorso dell'utente in background.
 
 ## <a name="photos"></a>Foto 
 
@@ -45,11 +45,11 @@ NSRemindersUsageDescription
     
 NSBluetoothPeripheralUsageDescription 
 
-## <a name="microphone"></a>Microfono 
+## <a name="microphone"></a>Microphone 
 
 NSMicrophoneUsageDescription 
 
-## <a name="camera"></a>Fotocamera 
+## <a name="camera"></a>Camera 
     
 NSCameraUsageDescription 
 

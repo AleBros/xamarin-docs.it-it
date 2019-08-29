@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: ac4ae1d8b247a709307841be1ffa1fee2afbf68f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865496"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121484"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -89,15 +89,15 @@ Per eseguire la distribuzione in un dispositivo iOS o tvOS, attenersi alla proce
 
 Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless, pertanto è possibile usare i punti di interruzione impostati precedentemente e continuare il flusso di lavoro di debug come di consueto.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>risoluzione dei problemi
 
 1. Verificare sempre che il dispositivo iOS o Apple TV sia connesso alla stessa rete del Mac.
 
 2. Se il dispositivo non viene visualizzato in Visual Studio, controllare la finestra **Devices and Simulators** (Dispositivi e simulatori) di Xcode. 
 
-    * Se Xcode **non** mostra il dispositivo come connesso, provare ad [associare](#pair) nuovamente il dispositivo.
+    - Se Xcode **non** mostra il dispositivo come connesso, provare ad [associare](#pair) nuovamente il dispositivo.
 
-    * Se Xcode mostra il dispositivo come connesso, provare a riavviare Visual Studio e il dispositivo.
+    - Se Xcode mostra il dispositivo come connesso, provare a riavviare Visual Studio e il dispositivo.
 
 3. Se non è ancora stato fatto, sarà necessario effettuare il [provisioning](~/ios/get-started/installation/device-provisioning/index.md) del dispositivo.
 

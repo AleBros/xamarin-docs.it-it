@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 0dcc0c9499a1f4085e489fe6d8dcfa3fbf2fa3e0
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 20aa1da478916bf4c8949103a5ce7fbf1f5d8f93
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832412"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064831"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Funzionalità Gruppo di app in Xamarin.iOS
 
@@ -20,15 +20,15 @@ _L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore conf
 
 Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso. È possibile usare i Gruppi di app per dati quali:
 
-*   [Impostazioni di Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
-*   [NSUserDefaults condivisa](~/ios/app-fundamentals/user-defaults.md)
-*   [File condivisi](~/ios/watchos/app-fundamentals/parent-app.md#files)
+* [Impostazioni di Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
+* [NSUserDefaults condivisa](~/ios/app-fundamentals/user-defaults.md)
+* [File condivisi](~/ios/watchos/app-fundamentals/parent-app.md#files)
 
 ## <a name="configure-a-new-app-group"></a>Configurare un nuovo Gruppo di app
 
 Il percorso condiviso viene configurato usando un [Gruppo di app](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19) configurato nella sezione **Certificates, Identifiers & Profiles** (Certificati, identificatori e profili) del [centro sviluppatori Apple](https://developer.apple.com/account/). È necessario fare riferimento a questo valore anche nel file Entitlements.plist di ogni progetto.
 
-Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il prefisso group. Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
+Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il . Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
 
 Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
@@ -45,7 +45,7 @@ Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
 Dopo aver creato il Gruppo di app, configurare gli ID delle app in modo che le app possano usarlo.
 
-Seguire questa procedura:
+Eseguire le operazioni seguenti:
 
 1. Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple e accedere con un account sviluppatore Apple.
 2. Nel menu **Program Resources** (Risorse del programma) selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).

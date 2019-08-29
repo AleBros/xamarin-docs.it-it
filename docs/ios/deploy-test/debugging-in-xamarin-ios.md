@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 59df461c52cd01187ca3a9fc25fe741342910061
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e5f322ece2775f975ab3737eb20ebbd854afa6c4
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854535"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064843"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
@@ -108,11 +108,11 @@ Per impostare un punto di interruzione condizionale, accedere alla **finestra Pr
 
 - Per aggiungere un nuovo punto di interruzione condizionale, fare clic con il pulsante destro del mouse sul margine dell'editor, a sinistra del numero di riga per il codice in cui si vuole impostare il punto di interruzione, e quindi scegliere Nuovo punto di interruzione:
 
-    [![](debugging-in-xamarin-ios-images/image4.png "Selezionare Nuovo punto di interruzione")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "Selezionare Nuovo punto di interruzione")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - Per aggiungere una condizione a un punto di interruzione, fare clic con il pulsante destro del mouse sul punto di interruzione e scegliere **Proprietà punto di interruzione** o selezionare il pulsante Proprietà, mostrato di seguito, nel **riquadro Punti di interruzione**:
 
-    [![](debugging-in-xamarin-ios-images/image5.png "Riquadro Punti di interruzione")](debugging-in-xamarin-ios-images/image5.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image5.png "Riquadro Punti di interruzione")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 È quindi possibile immettere la condizione in base alla quale deve essere aggiunto il punto di interruzione:
@@ -145,7 +145,7 @@ I pulsanti avranno l'aspetto seguente in Visual Studio per Mac:
 
  [![](debugging-in-xamarin-ios-images/image7.png "Gli strumenti di debug consentono allo sviluppatore di ottenere il controllo sull'esecuzione del programma")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
-Questi sono:
+Si tratta di:
 
 - **Esegui/Arresta**: avvia/arresta l'esecuzione del codice, fino al punto di interruzione successivo.
 - **Esegui istruzione/routine**: esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
@@ -158,12 +158,12 @@ I pulsanti avranno l'aspetto seguente in Visual Studio:
 
 [![](debugging-in-xamarin-ios-images/image7vs.png "Gli strumenti di debug consentono allo sviluppatore di ottenere il controllo sull'esecuzione del programma")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
-Questi sono:
+Si tratta di:
 
 - **Esegui/Arresta**: avvia/arresta l'esecuzione del codice, fino al punto di interruzione successivo.
-- **Esegui istruzione/routine (F11)**: esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
-- **Esegui istruzione (F10)**: anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
-- **Esci da istruzione/routine (MAIUSC+F11)**: torna alla riga in cui è stata chiamata la funzione corrente.
+- **Esegui istruzione/routine (F11)** : esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante esegue la funzione e si ferma alla riga di codice successiva, _dopo_ la funzione.
+- **Esegui istruzione (F10)** : anche questo pulsante esegue la riga di codice successiva. Se la riga successiva è una chiamata di funzione, il pulsante si ferma alla prima riga della funzione, permettendo di continuare a eseguire il debug della funzione riga per riga. Se la riga successiva non è una funzione, il pulsante si comporta come il pulsante Esegui istruzione/routine.
+- **Esci da istruzione/routine (MAIUSC+F11)** : torna alla riga in cui è stata chiamata la funzione corrente.
 
 Per una documentazione più approfondita sul debug, vedere [Spostarsi nel codice con il debugger di Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
 

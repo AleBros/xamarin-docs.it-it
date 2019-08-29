@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0702241b5dbc744bf40c59928103d92a73a4c462
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526628"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121221"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisioning manuale per Xamarin.iOS
 
@@ -126,7 +126,7 @@ Quando si crea un profilo di provisioning per lo sviluppo, è necessario indicar
 
     [![](manual-provisioning-images/add06.png "Specificare un nome per il nuovo dispositivo e l'identificatore del dispositivo")](manual-provisioning-images/add06.png#lightbox)
 
-11. Fare clic sul pulsante **Continue** (Continua).
+11. Fare clic sul pulsante **Continue** (Continue).
 12. Esaminare infine le informazioni e fare clic sul pulsante **Register** (Registra):
 
     [![](manual-provisioning-images/add07.png "Esaminare le informazioni")](manual-provisioning-images/add07.png#lightbox)
@@ -143,7 +143,7 @@ Come con il certificato di sviluppo, i profili di provisioning possono essere cr
 
 Prima di creare un profilo di provisioning, è necessario creare un *App ID* (ID app). Un ID app è una stringa di tipo DNS inverso che identifica in modo univoco un'applicazione. Nella procedura seguente viene illustrato come creare un **Wildcard App ID** (ID app con caratteri jolly), che consente di compilare e installare la maggior parte delle applicazioni. Gli **Explicit App IDs** (ID app espliciti) consentono di installare solo un'applicazione (con l'ID del bundle corrispondente) e vengono in genere usati per determinate funzionalità di iOS, ad esempio Apple Pay e HealthKit. Per informazioni sulla creazione di ID app espliciti, vedere la guida [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Uso delle funzionalità).
 
-### <a name="app-id"></a>App ID
+### <a name="app-id"></a>ID app
 
 1. Nel [portale per sviluppatori](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili) di Apple Developer Center. Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
 2. Fare clic sul pulsante **+** e specificare un **Name** (Nome):
@@ -222,13 +222,13 @@ I nuovi certificati o profili di provisioning saranno disponibili in Visual Stud
 
 Apple offre una selezione di servizi speciali per le applicazioni, denominati anche funzionalità, che possono essere attivati per un'applicazione Xamarin.iOS. Questi servizi per le applicazioni devono essere configurati sia nel portale di provisioning iOS quando viene creato l'**ID app** sia nel file **Entitlements.plist** che è parte del progetto dell'applicazione Xamarin.iOS. Per informazioni sull'aggiunta dei servizi per le applicazioni all'app, vedere la guida [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Introduzione alle funzionalità) e la guida [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) (Uso degli entitlement).
 
-* Creare un ID app con i servizi app necessari.
-* Creare un nuovo [profilo di provisioning](#provisioningprofile) contenente tale ID app.
-* Impostare gli entitlement nel progetto Xamarin.iOS
+- Creare un ID app con i servizi app necessari.
+- Creare un nuovo [profilo di provisioning](#provisioningprofile) contenente tale ID app.
+- Impostare gli entitlement nel progetto Xamarin.iOS
 
 ## <a name="deploying-to-a-device"></a>Distribuzione in un dispositivo
 
-A questo punto il provisioning è completo e l'applicazione è pronta per essere distribuita al dispositivo. A tale scopo, seguire questa procedura:
+A questo punto il provisioning è completo e l'applicazione è pronta per essere distribuita al dispositivo. A questo scopo, eseguire la procedura seguente.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -269,7 +269,7 @@ A questo punto il provisioning è completo e l'applicazione è pronta per essere
 
 -----
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa guida sono stati illustrati i passaggi necessari per impostare l'ambiente di sviluppo per Xamarin.iOS. È stato spiegato come un'applicazione viene firmata con codice contenente informazioni sullo sviluppatore e il relativo team, i dispositivi sui quali può essere eseguita l'app e un ID app individuale.
 

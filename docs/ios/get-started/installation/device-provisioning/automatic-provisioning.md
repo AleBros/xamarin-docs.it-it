@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 4f5c28c4ad9b673ac50b404e7d34f718366bd11d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890107"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121457"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
@@ -100,11 +100,11 @@ Per firmare automaticamente l'app per la distribuzione in un dispositivo iOS, se
 
 Dopo l'abilitazione della firma automatica, Visual Studio per Mac aggiorna questi elementi, se necessario, quando si verifica uno degli eventi seguenti:
 
-* Un dispositivo iOS viene collegato al Mac
+- Un dispositivo iOS viene collegato al Mac
     - Viene automaticamente verificato se il dispositivo è registrato sul portale Apple Developer. Se non lo è, viene aggiunto e viene generato un nuovo profilo di provisioning che lo contiene.
-* L'ID bundle dell'app viene modificato
+- L'ID bundle dell'app viene modificato
     - Questa modifica causa l'aggiornamento dell'ID app. Viene quindi creato un nuovo profilo di provisioning che contiene questo ID app.
-* Una funzionalità supportata viene abilitata nel file Entitlements.plist
+- Una funzionalità supportata viene abilitata nel file Entitlements.plist
     - Questa funzionalità viene aggiunta all'ID app e viene generato un nuovo profilo di provisioning con l'ID app aggiornato.
     - Attualmente non sono supportate tutte le funzionalità. Per altre informazioni su quelle supportate, vedere la guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/index.md).
 

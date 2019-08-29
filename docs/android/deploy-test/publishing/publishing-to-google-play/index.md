@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525479"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119815"
 ---
 # <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
 
@@ -193,7 +193,7 @@ In primo luogo accedere all'[account per sviluppatore di Google Play](https://pl
 Se non si dispone di un account per sviluppatore di Google Play, vedere [Get Started with Publishing](https://developer.android.com/distribute/googleplay/start.html) (Introduzione alla pubblicazione).
 Anche la [Guida introduttiva](https://developers.google.com/android-publisher/getting_started) dell'API descrive come usare l'API Google Play Developer. Dopo aver effettuato l'accesso a Google Play Developer Console, fare clic su **Settings** (Impostazioni):
 
-[![Icona Settings (Impostazioni)](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)
+[![Icona Impostazioni](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)
 
 Nella pagina **SETTINGS** (Impostazioni) selezionare **API access** (Accesso all'API) e fare clic sul pulsante **Create new project** (Crea nuovo progetto):
 
@@ -246,10 +246,10 @@ Dopo aver fatto clic su **Allow** (Consenti), il browser visualizza il messaggio
 
 Viene visualizzata la finestra di dialogo **Versione di Google Play**. Google Play offre quattro versioni possibili per il caricamento dell'app:
 
-* **Alfa** &ndash; Usata per il caricamento di una versione iniziale dell'app destinata a un elenco limitato di tester.
-* **Beta** &ndash; Usata per il caricamento di una versione iniziale più avanzata dell'app, destinata a un elenco più ampio di tester.
-* **Implementazione** &ndash; Consente a una percentuale degli utenti di ricevere una versione aggiornata dell'app. È possibile iniziare ad esempio con il 10% degli utenti e incrementare la percentuale fino al 100% degli utenti man mano che i bug rilevati vengono risolti.
-* **Produzione** &ndash; Selezionare questa versione quando l'app è pronta per la distribuzione completa in Google Play Store.
+- **Alfa** &ndash; Usata per il caricamento di una versione iniziale dell'app destinata a un elenco limitato di tester.
+- **Beta** &ndash; Usata per il caricamento di una versione iniziale più avanzata dell'app, destinata a un elenco più ampio di tester.
+- **Implementazione** &ndash; Consente a una percentuale degli utenti di ricevere una versione aggiornata dell'app. È possibile iniziare ad esempio con il 10% degli utenti e incrementare la percentuale fino al 100% degli utenti man mano che i bug rilevati vengono risolti.
+- **Produzione** &ndash; Selezionare questa versione quando l'app è pronta per la distribuzione completa in Google Play Store.
 
 Scegliere la versione Google Play da usare per il caricamento dell'app e fare clic su **Carica**. Se si seleziona **Implementazione** specificare un valore percentuale:
 
@@ -271,7 +271,7 @@ Al termine del caricamento, un messaggio nell'angolo inferiore sinistro della fi
 [![Messaggio di completamento della pubblicazione del progetto](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
 
 
-### <a name="troubleshooting"></a>Risoluzione dei problemi
+### <a name="troubleshooting"></a>risoluzione dei problemi
 
 Si noti che per il funzionamento corretto di **Pubblica in Google Play** è necessario che almeno un pacchetto APK sia già stato inoltrato a Google Play Store. Se in precedenza non è stato caricato nessun pacchetto APK, la procedura di pubblicazione guidata visualizza il seguente messaggio di errore nel riquadro **Errori**:
 

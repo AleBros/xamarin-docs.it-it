@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: 9ab2f960872386b68063d7af209ec0a7a24ac287
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: d5408894a9eda6b782f1f790ed8f1d0bb138a2f3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479667"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120147"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batteria
 
@@ -171,12 +171,12 @@ Non esistono differenze per questa piattaforma.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Per testare le API, deve essere usato il dispositivo. 
-* Verrà restituito solo `AC` o `Battery` per `PowerSource`.
+- Per testare le API, deve essere usato il dispositivo. 
+- Verrà restituito solo `AC` o `Battery` per `PowerSource`.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* Verrà restituito solo `AC` o `Battery` per `PowerSource`.
+- Verrà restituito solo `AC` o `Battery` per `PowerSource`.
 
 -----
 

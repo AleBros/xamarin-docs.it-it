@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 7bb4e142a8b7bd0cf0691da381729dc226028193
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832172"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121364"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -21,28 +21,28 @@ _L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore conf
 Apple offre agli sviluppatori alcune _capacità_, spesso chiamate _servizi app_, che consentono di estendere le funzionalità e di ampliare le potenzialità dell'uso delle app iOS. Le funzionalità consentono agli sviluppatori di aggiungere all'applicazione una maggiore integrazione delle funzioni della piattaforma, ad esempio: la possibilità di avviare transazioni monetarie dall'app, servizi del dispositivo aggiuntivi, come Siri, e altro ancora.
 Queste funzionalità possono essere usate con i progetti Xamarin.iOS. L'elenco completo dei servizi è il seguente:
 
-* Gruppi di app
-* Domini associati
-* Protezione dati
-* Game Center
-* HealthKit
-* HomeKit
-* Configurazione accessori wireless
-* iCloud
-* Acquisto in-app
-* Audio Inter-App
-* Apple Pay
-* Wallet
-* Notifica push
-* VPN personale
-* Siri
-* Mappe
-* Modalità in background
-* Condivisione del keychain
-* Estensioni di rete
-* Configurazione area sensibile
-* A percorsi multipli
-* Lettura di tag NFC
+- Gruppi di app
+- Domini associati
+- Protezione dati
+- Game Center
+- HealthKit
+- HomeKit
+- Configurazione accessori wireless
+- iCloud
+- Acquisto in-app
+- Audio Inter-App
+- Apple Pay
+- Wallet
+- Notifica push
+- VPN personale
+- Siri
+- Mappe
+- Modalità in background
+- Condivisione del keychain
+- Estensioni di rete
+- Configurazione area sensibile
+- A percorsi multipli
+- Lettura di tag NFC
 
 Le funzionalità possono essere abilitate tramite Visual Studio per Mac e Visual Studio 2019 oppure manualmente in Apple Developer Portal. Per alcune funzionalità, ad esempio, Wallet, Apple Pay e iCloud, è necessaria una configurazione aggiuntiva degli ID delle app.
 
@@ -57,16 +57,16 @@ Questa sezione illustra come usare il provisioning automatico di Visual Studio o
 > [!IMPORTANT]
 > Non tutte le funzionalità possono essere aggiunte e gestite in Visual Studio con il provisioning automatico. L'elenco seguente contiene le funzionalità supportate:
 >
->* HealthKit 
->* HomeKit 
->* VPN personale 
->* Configurazione accessori wireless 
->* Audio Inter-App 
->* SiriKit 
->* Hotspot 
->* Estensioni di rete 
->* Lettura di tag NFC
->* A percorsi multipli 
+>- HealthKit 
+>- HomeKit 
+>- VPN personale 
+>- Configurazione accessori wireless 
+>- Audio Inter-App 
+>- SiriKit 
+>- Hotspot 
+>- Estensioni di rete 
+>- Lettura di tag NFC
+>- A percorsi multipli 
 >
 >Le funzionalità Notifiche push, Game Center, Acquisto in-app, Mappe, Condivisione del keychain, Domini associati e Protezione dati non sono attualmente supportate. Per aggiungere queste funzionalità, usare il provisioning manuale e seguire i passaggi della sezione [Centro sviluppatori](#devcenter).
 
@@ -85,8 +85,8 @@ Le funzionalità vengono aggiunte a **Entitlements.plist** in Visual Studio per 
     ![Aggiungere le funzionalità al file entitlements.plist](images/image17.png)
 
     La selezione di una funzionalità consente di ottenere due risultati:
-    * Aggiunta di tale funzionalità all'ID app
-    * Aggiunta della coppia chiave/valore degli entitlement al file Entitlements.plist.
+    - Aggiunta di tale funzionalità all'ID app
+    - Aggiunta della coppia chiave/valore degli entitlement al file Entitlements.plist.
 
     Visual Studio per Mac avviserà quando queste attività saranno state completate visualizzando il messaggio di operazione riuscita seguente:
 
@@ -108,8 +108,8 @@ Le funzionalità vengono aggiunte a **Entitlements.plist**. Per aggiungere funzi
 
     Quando si salva **Entitlement.plist** vengono eseguite due operazioni:
 
-    * Aggiunta di tale funzionalità all'ID app
-    * Aggiunta della coppia chiave/valore degli entitlement al file Entitlements.plist.
+    - Aggiunta di tale funzionalità all'ID app
+    - Aggiunta della coppia chiave/valore degli entitlement al file Entitlements.plist.
 
 -----
 
@@ -152,7 +152,7 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
 ### <a name="creating-a-provisioning-profile"></a>Creazione di un profilo di provisioning
 
-Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi riportati di seguito.
+Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passaggi indicati di seguito:
 
 1. Nel centro sviluppatori Apple passare a **Provisioning Profiles > All** (Profili di provisioning > Tutti):
 
@@ -196,8 +196,8 @@ Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi
 
 Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie ancora alcune operazioni per consentire all'app di usarla. Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 
-*   Usare lo spazio dei nomi del framework nell'app.
-*   Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
+- Usare lo spazio dei nomi del framework nell'app.
+- Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
 
 <a name="troubleshooting" />
 
@@ -214,6 +214,6 @@ Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che poss
 
 <a name="summary" />
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Questa guida ha illustrato le funzionalità, ovvero i _servizi app_, e ha descritto come possono essere abilitate in Visual Studio e nel centro sviluppatori Apple. Ha anche spiegato in dettaglio come configurare servizi più complessi, ad esempio Wallet, iCloud, Apple Pay e Gruppi di app. Ha infine illustrato i passaggi successivi per ottenere le opzioni per la configurazione e la risoluzione di problemi semplici.

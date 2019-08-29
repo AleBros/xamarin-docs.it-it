@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: e57254ce724c5660e53dcd9deaa0f4a27bf91400
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: a290f29707bd59a22f612f31e544a211488eba0d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675194"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121490"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Test e distribuzione di Xamarin.iOS - Risoluzione dei problemi
 
@@ -20,19 +20,19 @@ ms.locfileid: "67675194"
 
 Le operazioni di firma del codice e provisioning con iOS possono essere complesse, quindi è importante verificare che i certificati di firma del codice e i profili di provisioning siano in ordine.
 
-* I team di grandi dimensioni dovrebbero evitare di usare il pulsante "Fix issue" (Correggi problema), illustrato di seguito:
+- I team di grandi dimensioni dovrebbero evitare di usare il pulsante "Fix issue" (Correggi problema), illustrato di seguito:
 
     [![](troubleshooting-images/fixissue.png "Pulsante Fix issue (Correggi problema)")](troubleshooting-images/fixissue.png#lightbox)
 
     In questo modo vengono infatti creati nuovi profili di provisioning e certificati. Nella migliore delle ipotesi, viene creato un profilo di provisioning ogni volta che un membro del team fa clic sul pulsante, causando una disorganizzazione dei profili. Nella peggiore, vengono revocati i certificati per tutte le altre persone in azienda, le cui app smetteranno quindi di funzionare.
 
-* Mantenere organizzato l'accesso keychain ed eliminare i certificati e i profili scaduti. I certificati Enterprise hanno una validità di tre anni, mentre gli altri di un anno. I certificati non possono essere rinnovati, quindi è necessario crearne di nuovi prima che quelli vecchi scadano. Assicurarsi di revocare ed eliminare i vecchi certificati e di firmare di nuovo le app con i nuovi certificati.
+- Mantenere organizzato l'accesso keychain ed eliminare i certificati e i profili scaduti. I certificati Enterprise hanno una validità di tre anni, mentre gli altri di un anno. I certificati non possono essere rinnovati, quindi è necessario crearne di nuovi prima che quelli vecchi scadano. Assicurarsi di revocare ed eliminare i vecchi certificati e di firmare di nuovo le app con i nuovi certificati.
 
-* Rimuovere i vecchi profili di provisioning appena si installano quelli nuovi. Questo significa che Visual Studio per Mac non è in una posizione in cui deve decidere quale profilo usare. Per ottenere questo risultato, eliminare prima di tutto il profilo nel centro sviluppatori Apple, quindi passare a *Preferenze > Account > Visualizza dettagli*. Selezionare il profilo di provisioning e fare clic su **Mostra nel Finder**. Verrà visualizzata la posizione del profilo nel file system Mac, da cui potrà quindi essere eliminato mediante il Finder.
+- Rimuovere i vecchi profili di provisioning appena si installano quelli nuovi. Questo significa che Visual Studio per Mac non è in una posizione in cui deve decidere quale profilo usare. Per ottenere questo risultato, eliminare prima di tutto il profilo nel centro sviluppatori Apple, quindi passare a *Preferenze > Account > Visualizza dettagli*. Selezionare il profilo di provisioning e fare clic su **Mostra nel Finder**. Verrà visualizzata la posizione del profilo nel file system Mac, da cui potrà quindi essere eliminato mediante il Finder.
 
-* Assicurarsi che siano disponibili tutti i certificati necessari e le corrispondenti chiavi private. Per ogni team sarà necessario un certificato dello sviluppatore (per installare le app in un dispositivo personale) e un certificato di distribuzione (per installarle in altri dispositivi).
+- Assicurarsi che siano disponibili tutti i certificati necessari e le corrispondenti chiavi private. Per ogni team sarà necessario un certificato dello sviluppatore (per installare le app in un dispositivo personale) e un certificato di distribuzione (per installarle in altri dispositivi).
 
-* Riavviare Xcode e Visual Studio per Mac/Visual Studio quando viene installato un nuovo profilo di provisioning o un nuovo certificato.
+- Riavviare Xcode e Visual Studio per Mac/Visual Studio quando viene installato un nuovo profilo di provisioning o un nuovo certificato.
 
 ## <a name="testflight"></a>TestFlight
 
