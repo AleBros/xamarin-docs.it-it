@@ -1,109 +1,109 @@
 ---
-title: Distribuzione e test delle App watchOS con Xamarin
-description: Questo documento descrive come distribuire e testare l'App watchOS compilate con Xamarin. Fornisce un elenco di controllo di distribuzione, si esamina esplicito e gli ID, di app con caratteri jolly e si esaminano i gruppi di app.
+title: Distribuzione e test di app watchos con Novell
+description: Questo documento descrive come distribuire e testare le app watchos compilate con Novell. Viene fornito un elenco di controllo per la distribuzione, vengono illustrati gli ID app espliciti e con caratteri jolly e vengono esaminati i gruppi di app.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7d626b8a968835813d87c93e3cead57a00c14000
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d950ceb18bd13378ced06ec7257300fc5bf4504b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293388"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120184"
 ---
-# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test delle App watchOS con Xamarin
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test di app watchos con Novell
 
 ## <a name="deployment-checklist"></a>Elenco di controllo distribuzione
 
-Se si distribuisce a un test di espressione di controllo, o caricare l'App Store, è necessario completare i passaggi in questa pagina:
+Se si esegue la distribuzione in un test o si carica nell'App Store, è necessario completare i passaggi in questa pagina:
 
-- Nel **iOS Dev Center**:
-  - [ID dell'app](#App_IDs) sono stati creati.
-  - [I gruppi di app](#App_Groups) configurare (se richiesto).
-  - Profili di Provisioning di distribuzione creata
+- In **iOS Dev Center**:
+  - Gli [ID app](#App_IDs) sono stati creati.
+  - [Gruppi di app](#App_Groups) configurati (se richiesto).
+  - Profili di provisioning di distribuzione creati
 
 - Nella soluzione:
 
-  - Verificare i [riferimenti a progetti e gli ID Bundle](~/ios/watchos/get-started/installation.md) sono impostate.
-  - Controllare le icone siano [correttamente configurato](~/ios/watchos/app-fundamentals/icons.md).
-  - Verificare la corrispondenza di numeri di versione bundle in tutti i progetti.
-  - Configurare il **entitlements. plist** per App i gruppi (se richiesto).
+  - Verificare [che gli ID bundle e i riferimenti al progetto](~/ios/watchos/get-started/installation.md) siano impostati.
+  - Verificare che le icone siano configurate [correttamente](~/ios/watchos/app-fundamentals/icons.md).
+  - Verificare che i numeri di versione del bundle corrispondano in tutti i progetti.
+  - Configurare i **diritti. plist** per i gruppi di app, se necessario.
 
-* Seguire quindi le istruzioni per:
-  - [Distribuire un Apple Watch per i test](~/ios/watchos/deploy-test/device.md), o
-  - [Caricare l'App Store](~/ios/watchos/deploy-test/appstore.md).
+- Seguire quindi le istruzioni per:
+  - [Eseguire la distribuzione in un Apple Watch per](~/ios/watchos/deploy-test/device.md)il testing o
+  - [Caricare nell'App Store](~/ios/watchos/deploy-test/appstore.md).
 
 <a name="App_IDs"/>
 
-## <a name="app-ids"></a>ID dell'App
+## <a name="app-ids"></a>ID app
 
-Come descritto nel [istruzioni di installazione](~/ios/watchos/get-started/installation.md), tutte e tre i progetti in un'App sono correlati gli ID Bundle, ad esempio:
+Come illustrato nelle [istruzioni di installazione](~/ios/watchos/get-started/installation.md), tutti e tre i progetti in un'app Watch hanno ID bundle correlati, ad esempio:
 
-- Progetto unificata di xamarin. ios: `com.xamarin.WatchKitCatalog`
-- Progetto estensione WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
-- Progetto di App Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
+- Progetto unificato Novell. iOS-`com.xamarin.WatchKitCatalog`
+- Progetto di estensione WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
+- Guarda il progetto dell'app-`com.xamarin.WatchKitCatalog.watchkitapp`
 
-Tutti e tre i progetti richiedono un corrispondente distribuzione profilo di Provisioning, usando in modo esplicito gli ID delle App per ogni o un carattere jolly ID dell'App.
+Per tutti e tre i progetti è necessario un profilo di provisioning di distribuzione corrispondente, usando ID app esplicitamente per ognuno di essi o un ID app con caratteri jolly.
 
-### <a name="explicit-app-ids"></a>ID App esplicito
+### <a name="explicit-app-ids"></a>ID app espliciti
 
-Creare un **App ID** per l'ID Bundle di ogni progetto (che avrà un aspetto simile al seguente nel centro per sviluppatori iOS):
+Creare un **ID app** per l'ID bundle di ogni progetto, che sarà simile al seguente in iOS Dev Center:
 
-![Gli ID Bundle nel centro per sviluppatori iOS](images/appids-specific-sml.png)
+![ID bundle in iOS Dev Center](images/appids-specific-sml.png)
 
-Durante la creazione o la configurazione di ID App, ricordare di abilitare le funzionalità specifiche richieste dall'applicazione. Ad esempio le notifiche push e i gruppi di app.
+Quando si creano o si configurano gli ID app, ricordarsi di abilitare le funzionalità specifiche richieste dall'app. Potrebbero essere incluse le notifiche push e i gruppi di app.
 
-È necessario creare un profilo di Provisioning di distribuzione per ogni ID. App
+Sarà necessario creare un profilo di provisioning di distribuzione per ogni ID app.
 
-### <a name="wildcard-app-id"></a>ID dell'App con caratteri jolly
+### <a name="wildcard-app-id"></a>ID app con caratteri jolly
 
-In alternativa, è possibile creare un carattere jolly **App ID** che corrisponde a tutti e tre i progetti, ad esempio `com.xamarin.*`.
+In alternativa, è possibile creare un **ID app** con `com.xamarin.*`caratteri jolly che corrisponde a tutti e tre i progetti, ad esempio.
 
-Si noti che alcune funzionalità non possono essere utilizzate con un ID App con carattere jolly (ad esempio le notifiche push). Se l'app richiede queste funzionalità è necessario creare ID App espliciti.
+Si noti che alcune funzionalità non possono essere usate con un ID app con caratteri jolly, ad esempio le notifiche push. Se l'app richiede queste funzionalità, è necessario creare ID app espliciti.
 
-Per la distribuzione, è solo necessario creare una distribuzione profilo di Provisioning per il carattere jolly ID dell'App.
+Per la distribuzione, è necessario creare solo un profilo di provisioning di distribuzione per l'ID app con caratteri jolly.
 
 <a name="App_Groups" />
 
 ## <a name="app-groups"></a>Gruppi di app
 
-È possibile usare un gruppo di App di condividere dati tra le App di iOS e l'estensione di espressioni di controllo. È necessario assicurarsi che la soluzione contiene:
+È possibile usare un gruppo di app per condividere i dati tra l'app iOS e l'estensione Watch. È necessario assicurarsi che la soluzione abbia:
 
-- Configurato il **gruppo di App** del portale per sviluppatori Apple **i certificati, identificatori e profili** sezione.
+- Configurare il **gruppo di app** nella sezione certificati del portale per sviluppatori Apple **, identificatori & profili** .
 
-- Abilitata **gruppi di App** (e fornito il **ID del gruppo di App**) in *entrambi* App iOS e l'estensione di espressioni di controllo **ID App** e  **Entitlements. plist**.
+- **Gruppi di app** abilitati (e fornito l'ID del gruppo di **app**) nell'app iOS e nell' **ID app** dell'estensione Watch e in **titles. plist**.
 
-### <a name="certificates-identifiers--profiles"></a>I certificati, identificatori e profili
+### <a name="certificates-identifiers--profiles"></a>Certificati, identificatori & profili
 
-Per usare un gruppo di App, creare una voce nella **gruppi di App** dello schermo. Nell'esempio seguente il gruppo è denominato con lo stesso stile di DNS inverso comunemente usato per individuare gli ID App, ma con la `group.` il prefisso (obbligatorio):
+Per usare un gruppo di app, creare una voce nella schermata **gruppi di app** . Nell'esempio seguente il gruppo viene denominato con lo stesso stile DNS inverso, comunemente usato per gli ID app, ma con il `group.` prefisso (obbligatorio):
 
-![L'identificatore](images/appgroups-new-sml.png)
+![Identificatore](images/appgroups-new-sml.png)
 
 Il gruppo di app verrà quindi visualizzato nell'elenco:
 
-![L'elenco di identificatore](images/appgroups-setup-sml.png)
+![Elenco di identificatori](images/appgroups-setup-sml.png)
 
-Dopo aver creato il gruppo, è possibile farvi riferimento nel **App ID** configurazione. Ricordarsi di includerlo iOS entrambe le App e l'estensione Watch **App ID**.
+Una volta creato il gruppo, è possibile farvi riferimento nella configurazione dell' **ID app** . Ricordarsi di includere sia l'app iOS sia gli **ID app**di estensione di controllo.
 
 ![Configurazioni disponibili](images/appgroups-sml.png)
 
-Effettuare **non** Abilita gruppi di App nell'ID dell'App Apple Watch. Non è necessaria l'attivazione nella stesso Apple watch.
+**Non** abilitare i gruppi di app nell'ID app Apple Watch. Non è necessario che sia abilitato nell'espressione di controllo.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-Alcune funzionalità delle app (ad es. I gruppi di App) è necessario impostare i diritti.
-Fare doppio clic per modificare la **entitlements. plist** file in questi progetti:
+Alcune funzionalità delle app, ad esempio Per i gruppi di app è necessario impostare i diritti.
+Fare doppio clic per modificare il file **titles. plist** nei progetti seguenti:
 
-- progetto di App iOS
-- Progetto di estensione delle espressioni di controllo
+- progetto di app iOS
+- Progetto di estensione Watch
 
-.![L'editor entitlements. plist](images/entitlements-plist-sml.png)
+.![Editor dei diritti. plist](images/entitlements-plist-sml.png)
 
-Effettuare **non** Abilita gli Entitlement nel progetto di App Watch. Non è necessaria l'attivazione nella stesso Apple watch.
+**Non** abilitare i diritti nel progetto dell'app Watch. Non è necessario che sia abilitato nell'espressione di controllo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Guida di Apple WatchKit invio](https://developer.apple.com/app-store/watch/)
+- [Guida all'invio di Apple WatchKit](https://developer.apple.com/app-store/watch/)

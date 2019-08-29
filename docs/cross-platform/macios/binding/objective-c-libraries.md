@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522013"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120471"
 ---
 # <a name="binding-objective-c-libraries"></a>Binding di librerie Objective-C
 
@@ -918,8 +918,8 @@ La `Volume` proprietà è definita come valore Nullable float, poiché la conven
 
 A tale scopo, è necessario eseguire alcune operazioni:
 
-* Creare una classe fortemente tipizzata, che sottoclassi [DictionaryContainer](xref:Foundation.DictionaryContainer) e fornisca i vari getter e setter per ogni proprietà.
-* Dichiarare gli overload per i metodi `NSDictionary` che assumono la nuova versione fortemente tipizzata.
+- Creare una classe fortemente tipizzata, che sottoclassi [DictionaryContainer](xref:Foundation.DictionaryContainer) e fornisca i vari getter e setter per ogni proprietà.
+- Dichiarare gli overload per i metodi `NSDictionary` che assumono la nuova versione fortemente tipizzata.
 
 È possibile creare la classe fortemente tipizzata manualmente o usare il generatore per eseguire le operazioni.  Prima di tutto viene illustrato come eseguire questa operazione manualmente, in modo da comprendere cosa accade e quindi l'approccio automatico.
 
@@ -1404,3 +1404,4 @@ Storicamente è necessario copiare il protocollo in ogni implementazione, ma in 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio di binding](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+ 

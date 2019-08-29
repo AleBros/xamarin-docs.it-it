@@ -7,12 +7,12 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 1977da75e430e72bee151814abc4502ee090b40c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521490"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119970"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Dove si possono trovare informazioni sulla versione e i log?
 
@@ -182,9 +182,9 @@ Vedere anche la pagina del [log di debug Android](~/android/deploy-test/debuggin
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />log del simulatore iOS (su Mac)
 
-* Per accedere al registro di sistema, selezionare **Debug > Apri Registro di sistema** nell'app del simulatore iOS.
+- Per accedere al registro di sistema, selezionare **Debug > Apri Registro di sistema** nell'app del simulatore iOS.
 
-* Per visualizzare le segnalazioni di arresti anomali dal simulatore, aprire Console `~/Library/Logs > DiagnosticReports`. app e passare a.
+- Per visualizzare le segnalazioni di arresti anomali dal simulatore, aprire Console `~/Library/Logs > DiagnosticReports`. app e passare a.
 
 ### <a name="a-idios-device-logs-nameios-device-logs-ios-device-logs-on-mac"></a><a id="ios-device-logs" name="ios-device-logs" />log del dispositivo iOS (su Mac)
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1426054b60d182f7f40bf3c4b0bf69b2287ad57e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509413"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119147"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Novell. Android
 
@@ -22,15 +22,15 @@ Le applicazioni Android vengono eseguite nella propria sandbox e, per motivi di 
 
 Le autorizzazioni vengono dichiarate in **file AndroidManifest. XML** dallo sviluppatore dell'applicazione quando l'app viene sviluppata. Android dispone di due flussi di lavoro diversi per ottenere il consenso dell'utente per le autorizzazioni seguenti:
  
-* Per le app destinate a Android 5,1 (livello API 22) o inferiore, la richiesta di autorizzazione si è verificata durante l'installazione dell'app. Se l'utente non ha concesso le autorizzazioni, l'app non verrà installata. Una volta installata l'app, non è possibile revocare le autorizzazioni ad eccezione della disinstallazione dell'app.
-* A partire da Android 6,0 (API level 23), gli utenti hanno avuto maggiore controllo sulle autorizzazioni. possono concedere o revocare le autorizzazioni fino a quando l'app viene installata nel dispositivo. Questa schermata mostra le impostazioni di autorizzazione per l'app Google Contacts. Elenca le varie autorizzazioni e consente all'utente di abilitare o disabilitare le autorizzazioni:
+- Per le app destinate a Android 5,1 (livello API 22) o inferiore, la richiesta di autorizzazione si è verificata durante l'installazione dell'app. Se l'utente non ha concesso le autorizzazioni, l'app non verrà installata. Una volta installata l'app, non è possibile revocare le autorizzazioni ad eccezione della disinstallazione dell'app.
+- A partire da Android 6,0 (API level 23), gli utenti hanno avuto maggiore controllo sulle autorizzazioni. possono concedere o revocare le autorizzazioni fino a quando l'app viene installata nel dispositivo. Questa schermata mostra le impostazioni di autorizzazione per l'app Google Contacts. Elenca le varie autorizzazioni e consente all'utente di abilitare o disabilitare le autorizzazioni:
 
 ![Schermata delle autorizzazioni di esempio](permissions-images/01-permissions-check.png) 
 
 Le app Android devono verificare in fase di esecuzione per verificare se sono autorizzati ad accedere a una risorsa protetta. Se l'app non dispone delle autorizzazioni necessarie, deve effettuare richieste usando le nuove API fornite dal Android SDK per consentire all'utente di concedere le autorizzazioni. Le autorizzazioni sono divise in due categorie:
 
-* **Normali autorizzazioni** &ndash; Si tratta di autorizzazioni che comportano un minor rischio di sicurezza per la sicurezza o la privacy dell'utente. Android 6,0 concederà automaticamente le autorizzazioni normali al momento dell'installazione. Per un [elenco completo delle autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html), vedere la documentazione di Android.
-* **Autorizzazioni pericolose** &ndash; Diversamente dalle normali autorizzazioni, le autorizzazioni pericolose sono quelle che proteggono la privacy o la sicurezza dell'utente. Queste devono essere esplicitamente concesse dall'utente. L'invio o la ricezione di un messaggio SMS è un esempio di azione che richiede un'autorizzazione pericolosa.
+- **Normali autorizzazioni** &ndash; Si tratta di autorizzazioni che comportano un minor rischio di sicurezza per la sicurezza o la privacy dell'utente. Android 6,0 concederà automaticamente le autorizzazioni normali al momento dell'installazione. Per un [elenco completo delle autorizzazioni normali](https://developer.android.com/guide/topics/permissions/normal-permissions.html), vedere la documentazione di Android.
+- **Autorizzazioni pericolose** &ndash; Diversamente dalle normali autorizzazioni, le autorizzazioni pericolose sono quelle che proteggono la privacy o la sicurezza dell'utente. Queste devono essere esplicitamente concesse dall'utente. L'invio o la ricezione di un messaggio SMS è un esempio di azione che richiede un'autorizzazione pericolosa.
 
 > [!IMPORTANT]
 > La categoria a cui appartiene un'autorizzazione può cambiare nel tempo.  È possibile che un'autorizzazione che è stata categorizzata come "normale" possa essere elevata nei livelli API futuri in un'autorizzazione pericolosa.
@@ -121,8 +121,8 @@ Per le app destinate a Android 5.1 (livello API 22) o inferiore, non è necessar
 
 Il `ContextCompat.CheckSelfPermission` metodo, disponibile con la libreria di supporto Android, viene usato per verificare se è stata concessa un'autorizzazione specifica. Questo metodo restituirà un' [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enumerazione con uno dei due valori seguenti:
 
-* **`Permission.Granted`** &ndash; È stata concessa l'autorizzazione specificata.
-* **`Permission.Denied`** &ndash; L'autorizzazione specificata non è stata concessa.
+- **`Permission.Granted`** &ndash; È stata concessa l'autorizzazione specificata.
+- **`Permission.Denied`** &ndash; L'autorizzazione specificata non è stata concessa.
 
 Questo frammento di codice è un esempio di come verificare l'autorizzazione della fotocamera in un'attività: 
 
@@ -145,9 +145,9 @@ Il `ActivityCompat.ShouldShowRequestPermissionRationale` metodo viene utilizzato
 
 Se l'utente concede l'autorizzazione, è `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` necessario chiamare il metodo. Questo metodo richiede i parametri seguenti:
 
-* **attività** di &ndash; Si tratta dell'attività che richiede le autorizzazioni e deve essere aggiornata da Android dei risultati.
-* **autorizzazioni** &ndash; Elenco delle autorizzazioni richieste.
-* **requestCode** Valore intero utilizzato per associare i risultati della richiesta di autorizzazione a una `RequestPermissions` chiamata. &ndash; Questo valore deve essere maggiore di zero.
+- **attività** di &ndash; Si tratta dell'attività che richiede le autorizzazioni e deve essere aggiornata da Android dei risultati.
+- **autorizzazioni** &ndash; Elenco delle autorizzazioni richieste.
+- **requestCode** Valore intero utilizzato per associare i risultati della richiesta di autorizzazione a una `RequestPermissions` chiamata. &ndash; Questo valore deve essere maggiore di zero.
 
 Questo frammento di codice è un esempio dei due metodi illustrati. In primo luogo, viene eseguito un controllo per determinare se deve essere visualizzata la logica di autorizzazione. Se la logica deve essere mostrata, viene visualizzata una snackbar con la logica. Se l'utente fa clic su **OK** nel snackbar, l'app richiederà le autorizzazioni. Se l'utente non accetta la logica, l'app non deve continuare a richiedere le autorizzazioni. Se la logica non viene visualizzata, l'attività richiederà l'autorizzazione:
 

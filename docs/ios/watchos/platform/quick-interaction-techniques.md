@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620516"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120163"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
 
@@ -230,16 +230,16 @@ Di seguito è riportata una tipica interazione rapida di notifica:
 
 Novità per watchos 3:
 
-* La notifica usa un'API simile in tutte le piattaforme (iOS, watchos, tvOS e macOS).
-* La notifica locale può essere pianificata nel Apple Watch.
-* La notifica in background verrà instradata all'estensione dell'app se è stata pianificata nel Apple Watch.
+- La notifica usa un'API simile in tutte le piattaforme (iOS, watchos, tvOS e macOS).
+- La notifica locale può essere pianificata nel Apple Watch.
+- La notifica in background verrà instradata all'estensione dell'app se è stata pianificata nel Apple Watch.
 
 #### <a name="notification-scheduling-and-delivery"></a>Pianificazione e recapito delle notifiche
 
 La notifica dall'iPhone dell'utente sarà successiva alla Apple Watch quando si verifica quanto segue:
 
-* Lo schermo dell'iPhone è disattivato.
-* Il Apple Watch viene utilizzato ed è stato sbloccato.
+- Lo schermo dell'iPhone è disattivato.
+- Il Apple Watch viene utilizzato ed è stato sbloccato.
 
 In watchos 3 le notifiche locali possono essere pianificate nel Apple Watch e vengono recapitate solo nell'orologio. Lo sviluppatore può pianificare una notifica iPhone corrispondente se è richiesta dall'app.
 

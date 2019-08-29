@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b865f08c9f6506996b5303bb80677977f1d0fa21
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643568"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119528"
 ---
 # <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
@@ -27,9 +27,9 @@ Le API FingerprintManager sono destinate a dispositivi con scanner di impronte d
 
 [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e la relativa controparte della libreria di supporto, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) è la classe principale per l'uso dell'hardware di analisi delle impronte digitali. Questa classe è un wrapper Android SDK intorno al servizio a livello di sistema che gestisce le interazioni con l'hardware stesso. È responsabile dell'avvio dello scanner per le impronte digitali e della risposta ai commenti e suggerimenti dello scanner. Questa classe dispone di un'interfaccia piuttosto semplice con solo tre membri:
 
-* **`Authenticate`** &ndash; Questo metodo inizializza lo scanner hardware e avvia il servizio in background, in attesa che l'utente analizzi l'impronta digitale.
-* **`EnrolledFingerprints`** Questa proprietà restituirà `true` se l'utente ha registrato una o più impronte digitali con il dispositivo. &ndash;
-* **`HardwareDetected`** &ndash; Questa proprietà viene usata per determinare se il dispositivo supporta l'analisi delle impronte digitali.
+- **`Authenticate`** &ndash; Questo metodo inizializza lo scanner hardware e avvia il servizio in background, in attesa che l'utente analizzi l'impronta digitale.
+- **`EnrolledFingerprints`** Questa proprietà restituirà `true` se l'utente ha registrato una o più impronte digitali con il dispositivo. &ndash;
+- **`HardwareDetected`** &ndash; Questa proprietà viene usata per determinare se il dispositivo supporta l'analisi delle impronte digitali.
 
 Il `FingerprintManager.Authenticate` metodo viene usato da un'applicazione Android per avviare lo scanner di impronta digitale. Il frammento di codice seguente è un esempio di come richiamarlo usando le API di compatibilità della libreria di supporto:
 

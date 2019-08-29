@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: f11e72e433c443fbb9639b1f972ec4d87adf8b58
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60bd87adb56e311407280ba98f48d8c3e2160836
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526906"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121013"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Gestione del tocco nelle app Novell. iOS
 
@@ -34,8 +34,8 @@ Tuttavia, in alcuni casi è necessario usare l'elaborazione del tocco di basso l
 
 Questa guida funge da introduzione al tocco in iOS. Per ulteriori informazioni sull'utilizzo di commenti e suggerimenti tattili 3D in iOS, introdotti rispettivamente in iOS 9 e 10, consultare le guide specifiche seguenti:
 
-* [3D Touch](~/ios/platform/3d-touch.md)
-* [Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
+- [3D Touch](~/ios/platform/3d-touch.md)
+- [Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

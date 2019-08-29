@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9f15ef73e51a2e94e1a1174134f3e69d2cb2c4a3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511432"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119726"
 ---
 # <a name="an-introduction-to-renderscript"></a>Introduzione a renderScript
 
@@ -22,11 +22,11 @@ _Questa guida introduce renderScript e illustra come usare le API renderScript i
 
 RenderScript è un Framework di programmazione creato da Google allo scopo di migliorare le prestazioni delle applicazioni Android che richiedono risorse di calcolo estese. Si tratta di un'API ad alte prestazioni di basso livello basata su [C99](https://en.wikipedia.org/wiki/C99). Poiché si tratta di un'API di basso livello che verrà eseguita su CPU, GPU o DSP, renderScript è particolarmente adatto per le app Android che potrebbero dover eseguire una delle operazioni seguenti:
 
-* Grafica
-* Elaborazione di immagini
-* Crittografia
-* Elaborazione dei segnali
-* Routine matematiche
+- Grafica
+- Elaborazione di immagini
+- Crittografia
+- Elaborazione dei segnali
+- Routine matematiche
 
 RenderScript utilizzerà `clang` e compilerà gli script nel codice byte LLVM, incluso nell'apk. Quando l'app viene eseguita per la prima volta, il codice byte LLVM verrà compilato nel codice del computer per i processori del dispositivo. Questa architettura consente a un'applicazione Android di sfruttare i vantaggi del codice del computer senza che gli sviluppatori debbano scriverlo per ogni processore sul dispositivo stesso.
 

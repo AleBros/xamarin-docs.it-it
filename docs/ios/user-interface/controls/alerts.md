@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e8113a9cefad5f53b66595728340f71101faa9de
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: b8ffeb996783d7a3b1a385265b14f37f36126e8f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065572"
+ms.locfileid: "70119056"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Visualizzazione di avvisi in Novell. iOS
 
@@ -23,16 +23,16 @@ Diversamente dalle classi che ha sostituito, ovvero sottoclassi di UIView, UIAle
 Consente `UIAlertControllerStyle` di indicare il tipo di avviso da visualizzare. Questi tipi di avvisi sono:
 
 - **UIAlertControllerStyleActionSheet**
-  * Pre-iOS 8 questa sarebbe stata una UIActionSheet
+  - Pre-iOS 8 questa sarebbe stata una UIActionSheet
 - **UIAlertControllerStyleAlert**
-  * Pre-iOS 8 questo sarebbe stato UIAlertView 
+  - Pre-iOS 8 questo sarebbe stato UIAlertView 
 
 Quando si crea un controller di avviso, è necessario eseguire tre passaggi:
 
 - Creare e configurare l'avviso con un:
-  * title
-  * message
-  * preferredStyle
+  - title
+  - message
+  - preferredStyle
 
 - Opzionale Aggiungere un campo di testo
 - Aggiungere le azioni necessarie

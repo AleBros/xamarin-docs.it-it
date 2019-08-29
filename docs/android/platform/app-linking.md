@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d1a96c81da8d71d92e3ce5acd9928b293f3cf3dd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524712"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119699"
 ---
 # <a name="app-linking-in-android"></a>Collegamento di app in Android
 
@@ -55,12 +55,12 @@ La configurazione di collegamenti app in Android 6,0 prevede due passaggi princi
 
 È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI) da un sito Web a un'attività in un'applicazione Android. In Novell. Android questa relazione viene stabilita decorando un'attività con il [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Il filtro preventivo deve dichiarare le seguenti informazioni:
 
-* **`Intent.ActionView`** &ndash; Questa operazione registrerà il filtro preventivo per rispondere alle richieste di visualizzazione delle informazioni
-* **`Categories`** Il filtro preventivo deve registrare sia **[Intent. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** che **[Intent. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** per poter gestire correttamente l'URI Web. &ndash;
-* **`DataScheme`** Il filtro preventivo deve dichiarare `http` e/o `https`. &ndash; Questi sono gli unici due schemi validi.
-* **`DataHost`** &ndash; Si tratta del dominio da cui derivano gli URI.
-* **`DataPathPrefix`** &ndash; Si tratta di un percorso facoltativo per le risorse nel sito Web.
-* **`AutoVerify`** &ndash; L'`autoVerify` attributo indica a Android di verificare la relazione tra l'applicazione e il sito Web. Questo argomento verrà illustrato di seguito.
+- **`Intent.ActionView`** &ndash; Questa operazione registrerà il filtro preventivo per rispondere alle richieste di visualizzazione delle informazioni
+- **`Categories`** Il filtro preventivo deve registrare sia **[Intent. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** che **[Intent. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** per poter gestire correttamente l'URI Web. &ndash;
+- **`DataScheme`** Il filtro preventivo deve dichiarare `http` e/o `https`. &ndash; Questi sono gli unici due schemi validi.
+- **`DataHost`** &ndash; Si tratta del dominio da cui derivano gli URI.
+- **`DataPathPrefix`** &ndash; Si tratta di un percorso facoltativo per le risorse nel sito Web.
+- **`AutoVerify`** &ndash; L'`autoVerify` attributo indica a Android di verificare la relazione tra l'applicazione e il sito Web. Questo argomento verrà illustrato di seguito.
 
 Nell'esempio seguente viene illustrato come utilizzare [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) per gestire i collegamenti da `https://www.recipe-app.com/recipes` e da `http://www.recipe-app.com/recipes`:
 
@@ -90,9 +90,9 @@ Il file viene inserito dal webmaster del dominio nel percorso **https://domain/.
 
 Il file di asset digitale contiene i metadati necessari a Android per verificare l'associazione. Un file **assetlinks. JSON** presenta le coppie chiave-valore seguenti:
 
-* `namespace`&ndash; spazio dei nomi dell'applicazione Android.
-* `package_name`&ndash; nome del pacchetto dell'applicazione Android (dichiarato nel manifesto dell'applicazione).
-* `sha256_cert_fingerprints`&ndash; impronte digitali SHA256 dell'applicazione firmata. Per altre informazioni su come ottenere l'impronta digitale SHA1 di un'applicazione, vedere la Guida [trovare la firma MD5 o SHA1 dell'archivio](~/android/deploy-test/signing/keystore-signature.md) chiavi.
+- `namespace`&ndash; spazio dei nomi dell'applicazione Android.
+- `package_name`&ndash; nome del pacchetto dell'applicazione Android (dichiarato nel manifesto dell'applicazione).
+- `sha256_cert_fingerprints`&ndash; impronte digitali SHA256 dell'applicazione firmata. Per altre informazioni su come ottenere l'impronta digitale SHA1 di un'applicazione, vedere la Guida [trovare la firma MD5 o SHA1 dell'archivio](~/android/deploy-test/signing/keystore-signature.md) chiavi.
 
 Il frammento di codice seguente è un esempio di **assetlinks. JSON** con una singola applicazione elencata:
 
@@ -173,9 +173,9 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    * **`Package`** &ndash; Nome del pacchetto dell'applicazione.
-    * **`Domain`** &ndash; Domini (separati da spazi) i cui collegamenti Web verranno gestiti dall'applicazione
-    * **`Status`** &ndash; Si tratta dello stato corrente di gestione dei collegamenti per l'app. Il valore indica **sempre** che l'applicazione ha `android:autoVerify=true` dichiarato ed è stata superata la verifica del sistema. È seguito da un numero esadecimale che rappresenta il record del sistema Android della preferenza.
+    - **`Package`** &ndash; Nome del pacchetto dell'applicazione.
+    - **`Domain`** &ndash; Domini (separati da spazi) i cui collegamenti Web verranno gestiti dall'applicazione
+    - **`Status`** &ndash; Si tratta dello stato corrente di gestione dei collegamenti per l'app. Il valore indica **sempre** che l'applicazione ha `android:autoVerify=true` dichiarato ed è stata superata la verifica del sistema. È seguito da un numero esadecimale che rappresenta il record del sistema Android della preferenza.
 
     Ad esempio:
 

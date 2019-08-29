@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: d94a14bcd1486b7b64e9ce6d9fee6d36406b2710
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dd1e0838fbd3c3606021ddc996bf94cabc084f77
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511847"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119985"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Installazione e requisiti per le cartelle di lavoro
 
@@ -78,7 +78,7 @@ Collega sempre i file di log del client di cartelle di lavoro:
 
 Dal menu principale nelle cartelle di lavoro di:
 
-* **Guida > copiare le informazioni sulla versione**
+- **Guida > copiare le informazioni sulla versione**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>Istruzioni per le cartelle di lavoro 1,3 e versioni precedenti:
 

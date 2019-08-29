@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528323"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119178"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit in Novell. iOS
 
@@ -326,9 +326,9 @@ Le funzionalità di Wallet includono:
 
 I passaggi possono essere aggiunti al portafogli nei modi seguenti:
 
-* **App Conduit** : non modificano direttamente i pass, ma semplicemente caricano i file e presentano l'opzione per aggiungerli al portafogli. 
+- **App Conduit** : non modificano direttamente i pass, ma semplicemente caricano i file e presentano l'opzione per aggiungerli al portafogli. 
 
-* **App complementari** : vengono scritte dai provider per distribuire i pass e offrire funzionalità aggiuntive per sfogliarli o modificarli. Le applicazioni Novell. iOS hanno accesso completo all'API PassKit per creare e modificare i passaggi. I `PKAddPassesViewController`passaggi possono quindi essere aggiunti al portafogli usando. Questo processo viene descritto più dettagliatamente nella sezione **applicazioni complementari** di questo documento.
+- **App complementari** : vengono scritte dai provider per distribuire i pass e offrire funzionalità aggiuntive per sfogliarli o modificarli. Le applicazioni Novell. iOS hanno accesso completo all'API PassKit per creare e modificare i passaggi. I `PKAddPassesViewController`passaggi possono quindi essere aggiunti al portafogli usando. Questo processo viene descritto più dettagliatamente nella sezione **applicazioni complementari** di questo documento.
 
 ### <a name="conduit-applications"></a>Applicazioni Conduit
 

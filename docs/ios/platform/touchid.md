@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 0f92dca71f74266e1408cd65c842f729a9a648ce
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: cb71fc75b01621ed381f42b41df68fc80309f22c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065671"
+ms.locfileid: "70121294"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID in Novell. iOS
 
@@ -102,15 +102,15 @@ Per quanto riguarda la sicurezza, è inoltre estremamente importante tenere pres
 
 Per usare Touch ID senza keychain sfruttando l'API di autenticazione locale, è possibile usare alcune funzioni. Queste informazioni sono descritte di seguito:
 
-* `CanEvaluatePolicy`: Verrà semplicemente verificato se il dispositivo è in grado di accettare l'ID tocco.
-* `EvaluatePolicy`: Viene avviata l'operazione di autenticazione e viene visualizzata l'interfaccia utente `true` e `false` viene restituita una risposta o.
-* `DeviceOwnerAuthenticationWithBiometrics`: Criteri che possono essere usati per visualizzare la schermata Touch ID. Vale la pena notare che in questo caso non è presente alcun meccanismo di fallback del codice, ma è necessario implementare questo fallback nell'applicazione per consentire agli utenti di ignorare l'autenticazione con ID tocco.
+- `CanEvaluatePolicy`: Verrà semplicemente verificato se il dispositivo è in grado di accettare l'ID tocco.
+- `EvaluatePolicy`: Viene avviata l'operazione di autenticazione e viene visualizzata l'interfaccia utente `true` e `false` viene restituita una risposta o.
+- `DeviceOwnerAuthenticationWithBiometrics`: Criteri che possono essere usati per visualizzare la schermata Touch ID. Vale la pena notare che in questo caso non è presente alcun meccanismo di fallback del codice, ma è necessario implementare questo fallback nell'applicazione per consentire agli utenti di ignorare l'autenticazione con ID tocco.
 
 Esistono alcune avvertenze sull'uso dell'autenticazione locale, elencate di seguito:
 
-* Come con keychain, può essere eseguito solo in primo piano. La chiamata in un thread in background ne causerà l'esito negativo.
-* Tenere presente che la valutazione del criterio potrebbe non riuscire. Un pulsante di accesso di codice deve essere implementato come un fallback.
-* È necessario fornire un `localizedReason` oggetto per spiegare il motivo per cui è necessaria l'autenticazione. Questo consente di creare una relazione di trust con l'utente.
+- Come con keychain, può essere eseguito solo in primo piano. La chiamata in un thread in background ne causerà l'esito negativo.
+- Tenere presente che la valutazione del criterio potrebbe non riuscire. Un pulsante di accesso di codice deve essere implementato come un fallback.
+- È necessario fornire un `localizedReason` oggetto per spiegare il motivo per cui è necessaria l'autenticazione. Questo consente di creare una relazione di trust con l'utente.
 
 Successivamente, nella sezione seguente verrà illustrato come implementare l'API tenendo in considerazione queste considerazioni.
 

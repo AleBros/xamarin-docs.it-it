@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7dd3889e9fcbb2260165a96f32f56f437df15ade
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528843"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120734"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Uso di viste in pila tvOS in Novell
 
@@ -61,16 +61,16 @@ Mentre la visualizzazione dello stack dispone del controllo totale sul layout di
 
 In genere, ciò significa bloccare almeno due bordi della visualizzazione dello stack per espanderli e configurarli, definendone la posizione. Senza vincoli aggiuntivi, la visualizzazione dello stack verrà ridimensionata automaticamente per adattarsi a tutte le relative visualizzazioni, come indicato di seguito:
 
-* La dimensione lungo il `Axis` suo sarà la somma di tutte le dimensioni della vista, oltre a qualsiasi spazio definito tra le singole sottoviste.
-* Se la `LayoutMarginsRelativeArrangement` proprietà è `true`, nella dimensione delle visualizzazioni dello stack sarà inclusa anche la stanza per i margini.
-* La dimensione perpendicolare all' `Axis` oggetto verrà impostata sulla Sottovisualizzazione più grande nella raccolta.
+- La dimensione lungo il `Axis` suo sarà la somma di tutte le dimensioni della vista, oltre a qualsiasi spazio definito tra le singole sottoviste.
+- Se la `LayoutMarginsRelativeArrangement` proprietà è `true`, nella dimensione delle visualizzazioni dello stack sarà inclusa anche la stanza per i margini.
+- La dimensione perpendicolare all' `Axis` oggetto verrà impostata sulla Sottovisualizzazione più grande nella raccolta.
 
 Inoltre, è possibile specificare vincoli per l' **altezza** e la **larghezza**della visualizzazione stack. In questo caso, le sottoviste verranno disposte (ridimensionate) in modo da riempire lo spazio specificato dalla visualizzazione dello stack in base `Distribution` a `Alignment` quanto determinato dalle proprietà e.
 
 Se la `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni subordinate verranno disposte in base alla linea di base della prima o dell'ultima Sottovisualizzazione, anziché utilizzare la posizione **Top**, **Bottom** o **Center*- **Y** . Tali informazioni vengono calcolate nel contenuto della visualizzazione stack come indicato di seguito:
 
-* Una visualizzazione dello stack verticale restituirà la prima Sottovisualizzazione per la prima linea di base e l'ultima per l'ultima. Se una di queste visualizzazioni è a loro volta viste dello stack, verrà usata la prima o l'ultima Baseline.
-* Una visualizzazione Stack orizzontale utilizzerà la relativa Sottovisualizzazione più alta per la prima e l'ultima Baseline. Se anche la visualizzazione più alta è una visualizzazione dello stack, verrà usata come linea di base la visualizzazione più alta.
+- Una visualizzazione dello stack verticale restituirà la prima Sottovisualizzazione per la prima linea di base e l'ultima per l'ultima. Se una di queste visualizzazioni è a loro volta viste dello stack, verrà usata la prima o l'ultima Baseline.
+- Una visualizzazione Stack orizzontale utilizzerà la relativa Sottovisualizzazione più alta per la prima e l'ultima Baseline. Se anche la visualizzazione più alta è una visualizzazione dello stack, verrà usata come linea di base la visualizzazione più alta.
 
 > [!IMPORTANT]
 > L'allineamento della linea di base non funziona sulle dimensioni delle sottoviste estese o compresse perché la linea di base verrà calcolata in una posizione errata. Per l'allineamento della linea di base, assicurarsi che l' **altezza** della Sottovisualizzazione corrisponda all' **Altezza**della visualizzazione contenuto intrinseca.

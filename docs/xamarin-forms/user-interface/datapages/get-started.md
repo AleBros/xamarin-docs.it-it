@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d47a8d4a0fa72cee59a054554e9868f20323d00b
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: e6f26fb96c0a538543c8e0b0574461ea99709631
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980793"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119482"
 ---
 # <a name="getting-started-with-datapages"></a>Introduzione a DataPages
 
@@ -31,9 +31,9 @@ Per iniziare a creare una pagina semplice basato sui dati usando l'anteprima Dat
 
 Aggiungere i pacchetti Nuget per i progetti di libreria e applicazione xamarin. Forms .NET Standard:
 
-* Xamarin.Forms.Pages
-* Xamarin.Forms.Theme.Base
-* Un'implementazione di tema Nuget (ad es. Novell. Forms. Theme. Light)
+- Xamarin.Forms.Pages
+- Xamarin.Forms.Theme.Base
+- Un'implementazione di tema Nuget (ad es. Novell. Forms. Theme. Light)
 
 ## <a name="2-add-theme-reference"></a>2. Aggiungere il riferimento di tema
 
@@ -179,7 +179,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 La creazione di temi da zero è un po' più semplice, ma le future versioni di anteprima faciliteranno questa operazione.
 
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 <a name="loadtheme" />
 

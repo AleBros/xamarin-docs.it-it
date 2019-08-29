@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528806"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119171"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
@@ -327,8 +327,8 @@ Ora che è stata creata l'interfaccia utente, è necessario esporre gli elementi
 
 Esistono due modi principali per accedere ai controlli aggiunti in iOS designer dal codice:
 
-* Creazione di un gestore eventi su un controllo.
-* Assegnare un nome al controllo, in modo che sia possibile farvi riferimento in un secondo momento.
+- Creazione di un gestore eventi su un controllo.
+- Assegnare un nome al controllo, in modo che sia possibile farvi riferimento in un secondo momento.
 
 Quando uno di questi viene aggiunto, la classe parziale all'interno `ViewController.designer.cs` di verrà aggiornata per riflettere le modifiche. Ciò consentirà di accedere ai controlli nel controller di visualizzazione.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1e1bba499a14b92965a5fb544ccf321b0e453894
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: bd6f40a117734712941585b6ce0d630105e54693
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065445"
+ms.locfileid: "70121033"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso di touch in Novell. iOS
 
@@ -96,9 +96,9 @@ In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il 
     
     Questo metodo funziona controllando la presenza `UITouch` di un oggetto e, se esiste, eseguire un'azione in base al punto in cui si è verificato il tocco:
 
-    * _All'interno di TouchImage_ : Visualizza `Touches Began` il testo in un'etichetta e modifica l'immagine.
-    * _All'interno di DoubleTouchImage_ : modificare l'immagine visualizzata se il movimento è un doppio tocco.
-    * _All'interno di DragImage_ : impostare un flag che indica che il tocco è stato avviato. Il metodo `TouchesMoved` userà questo flag per determinare se `DragImage` deve essere spostato intorno allo schermo, come si vedrà nel passaggio successivo.
+    - _All'interno di TouchImage_ : Visualizza `Touches Began` il testo in un'etichetta e modifica l'immagine.
+    - _All'interno di DoubleTouchImage_ : modificare l'immagine visualizzata se il movimento è un doppio tocco.
+    - _All'interno di DragImage_ : impostare un flag che indica che il tocco è stato avviato. Il metodo `TouchesMoved` userà questo flag per determinare se `DragImage` deve essere spostato intorno allo schermo, come si vedrà nel passaggio successivo.
 
     Il codice precedente riguarda solo i singoli tocchi, non esiste ancora alcun comportamento se l'utente sta muovendo il dito sullo schermo. Per rispondere allo spostamento, implementare `TouchesMoved` come illustrato nel codice seguente:
 

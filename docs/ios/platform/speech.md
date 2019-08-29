@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fe871985700c5a40db2736ded78588b0b7d4f616
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655395"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121280"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in Novell. iOS
 
@@ -89,8 +89,8 @@ Ci sono quattro passaggi principali che lo sviluppatore deve adottare per adotta
 - Specificare una descrizione dell'utilizzo nel `Info.plist` file dell'app usando la `NSSpeechRecognitionUsageDescription` chiave. Ad esempio, un'app della fotocamera potrebbe includere la descrizione seguente: _"questa operazione consente di scattare una foto semplicemente pronunciando la parola" Cheese "._
 - Richiedere l'autorizzazione chiamando il `SFSpeechRecognizer.RequestAuthorization` metodo per presentare una spiegazione (fornita `NSSpeechRecognitionUsageDescription` nella chiave precedente) del motivo per cui l'app vuole che il riconoscimento vocale acceda all'utente in una finestra di dialogo e ne consenta l'accettazione o il rifiuto.
 - Creare una richiesta di riconoscimento vocale:
-    * Per l'audio pre-registrato sul disco, usare `SFSpeechURLRecognitionRequest` la classe.
-    * Per l'audio attivo (o audio dalla memoria), usare `SFSPeechAudioBufferRecognitionRequest` la classe.
+    - Per l'audio pre-registrato sul disco, usare `SFSpeechURLRecognitionRequest` la classe.
+    - Per l'audio attivo (o audio dalla memoria), usare `SFSPeechAudioBufferRecognitionRequest` la classe.
 - Passare la richiesta di riconoscimento vocale a un riconoscimento vocale (`SFSpeechRecognizer`) per avviare il riconoscimento. L'app può facoltativamente tenere presente l'oggetto `SFSpeechRecognitionTask` restituito per monitorare e tenere traccia dei risultati del riconoscimento.
 
 Questi passaggi verranno descritti in dettaglio di seguito.

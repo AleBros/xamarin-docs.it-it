@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 2445645012e54b1818b1ec72116a85d8b985ead3
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 2e429002923d4bfdd2cf5ded4ef1508f8ebf20b8
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976461"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121505"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
 
@@ -34,17 +34,17 @@ Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione
 
 ## <a name="contents"></a>Sommario
 
-* [Nozioni di base e configurazione degli acquisti in-app](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+- [Nozioni di base e configurazione degli acquisti in-app](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
-* [Panoramica di StoreKit e recupero di informazioni sul prodotto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+- [Panoramica di StoreKit e recupero di informazioni sul prodotto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
-* [Acquisto di prodotti di consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+- [Acquisto di prodotti di consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
-* [Acquisto di prodotti non di consumo](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+- [Acquisto di prodotti non di consumo](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
-* [Transazioni e verifica](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+- [Transazioni e verifica](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
-* [Sottoscrizioni e report](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+- [Sottoscrizioni e report](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## <a name="summary"></a>Riepilogo
 

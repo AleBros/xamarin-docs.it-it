@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 588c46274aa0b4d77742d004bf1fbe91e56a42c6
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: d75f46f8b06ef0e743218d5f42d5b2732b6e4158
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620599"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120967"
 ---
 # <a name="xamarinios-errors"></a>Errori di Novell. iOS
 
@@ -32,9 +32,9 @@ ad esempio parametri, ambiente, strumenti mancanti.
 
 Si è verificata una condizione di errore imprevista. Inviare un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) con il maggior numero di informazioni possibile, tra cui:
 
-* Log di compilazione completi, con livello di dettaglio massimo ( `-v -v -v -v` ad esempio negli **argomenti mTouch aggiuntivi**);
-* Test case minimo per riprodurre l'errore. e
-* Tutte le informazioni sulla versione
+- Log di compilazione completi, con livello di dettaglio massimo ( `-v -v -v -v` ad esempio negli **argomenti mTouch aggiuntivi**);
+- Test case minimo per riprodurre l'errore. e
+- Tutte le informazioni sulla versione
 
 Il modo più semplice per ottenere informazioni esatte sulla versione consiste nell'usare il menu **Visual Studio per Mac** , informazioni **su Visual Studio per Mac** elemento, visualizzare il pulsante **Dettagli** e copiare e incollare le informazioni sulla versione (è possibile usare il pulsante **copia informazioni** ) .
 
@@ -130,8 +130,8 @@ Questo errore non viene più segnalato nella versione corrente di Novell. iOS.
 
 Questo problema può verificarsi nelle circostanze seguenti:
 
-* ARMv6 è abilitato e viene installato Xcode 4,5 o versione successiva.
-* ARMv7s è abilitato e viene installato Xcode 4,4 o versioni precedenti.
+- ARMv6 è abilitato e viene installato Xcode 4,5 o versione successiva.
+- ARMv7s è abilitato e viene installato Xcode 4,4 o versioni precedenti.
 
 Verificare che la versione installata di Xcode supporti le architetture selezionate.
 
@@ -673,15 +673,15 @@ Per altre informazioni, vedere il bug #[51634](https://bugzilla.xamarin.com/show
 
 La condivisione del codice può essere disabilitata per più motivi:
 
-* Poiché la destinazione di distribuzione dell'app contenitore è precedente a iOS 8,0 (*).
+- Poiché la destinazione di distribuzione dell'app contenitore è precedente a iOS 8,0 (*).
 
 La condivisione del codice nativo richiede iOS 8,0 perché la condivisione del codice nativo viene implementata usando i Framework utente, introdotta con iOS 8,0.
 
-* Poiché l'app contenitore include gli assembly I18N (*).
+- Poiché l'app contenitore include gli assembly I18N (*).
 
 La condivisione del codice nativo non è attualmente supportata se l'app contenitore include gli assembly I18N.
 
-* Poiché l'app contenitore contiene definizioni XML personalizzate per il linker gestito (*).
+- Poiché l'app contenitore contiene definizioni XML personalizzate per il linker gestito (*).
 
 La condivisione del codice nativo richiede non è supportata per i progetti che usano definizioni XML personalizzate per il linker gestito.
 
@@ -689,59 +689,59 @@ La condivisione del codice nativo richiede non è supportata per i progetti che 
 
 ### <a name="mt0113-native-code-sharing-has-been-disabled-for-the-extension--because-"></a>MT0113: La condivisione del codice nativo è stata disabilitata per l'estensione ' *' perché *.
 
-* Poiché le opzioni di bitcode sono diverse dall'app contenitore\*() e dall'estensione\*().
+- Poiché le opzioni di bitcode sono diverse dall'app contenitore\*() e dall'estensione\*().
 
   Per la condivisione del codice nativo è necessario che le opzioni bitcode corrispondano tra i progetti che condividono il codice.
 
-* Poiché le opzioni--assembly-build-target sono diverse tra l'app contenitore (\*) e l'estensione (\*).
+- Poiché le opzioni--assembly-build-target sono diverse tra l'app contenitore (\*) e l'estensione (\*).
 
   Per la condivisione del codice nativo è necessario che le opzioni--assembly-build-target siano identiche tra i progetti che condividono il codice.
 
   Questa condizione può verificarsi se le compilazioni incrementali non sono abilitate o disabilitate in tutti i progetti.
 
-* Poiché gli assembly i18n sono diversi tra l'app contenitore (\*) e l'estensione (\*).
+- Poiché gli assembly i18n sono diversi tra l'app contenitore (\*) e l'estensione (\*).
 
   La condivisione del codice nativo non è attualmente supportata per le estensioni che includono gli assembly I18N.
 
-* Poiché gli argomenti del compilatore AOT sono diversi tra l'app contenitore (\*) e l'estensione (\*).
+- Poiché gli argomenti del compilatore AOT sono diversi tra l'app contenitore (\*) e l'estensione (\*).
 
   Per la condivisione del codice nativo è necessario che gli argomenti del compilatore AOT non differiscano tra i progetti che condividono il codice.
 
-* Poiché gli altri argomenti del compilatore AOT sono diversi tra l'app contenitore (\*) e l'estensione (\*).
+- Poiché gli altri argomenti del compilatore AOT sono diversi tra l'app contenitore (\*) e l'estensione (\*).
 
   Per la condivisione del codice nativo è necessario che gli argomenti del compilatore AOT non differiscano tra i progetti che condividono il codice.
 
   Questa condizione si verifica se l'esecuzione di tutte le operazioni float a 32 bit come float a 64 bit è diversa tra i progetti.
 
-* Poiché LLVM non è abilitato o disabilitato sia nell'app contenitore (\*) che nell'estensione (\*).
+- Poiché LLVM non è abilitato o disabilitato sia nell'app contenitore (\*) che nell'estensione (\*).
 
   Per la condivisione del codice nativo è necessario che LLVM sia abilitato o disabilitato per tutti i progetti che condividono il codice.
 
-* Poiché le impostazioni del linker gestite sono diverse tra l'app contenitore\*() e l'estensione\*().
+- Poiché le impostazioni del linker gestite sono diverse tra l'app contenitore\*() e l'estensione\*().
 
   Per la condivisione del codice nativo è necessario che le impostazioni del linker gestite siano identiche per tutti i progetti che condividono il codice.
 
-* Poiché gli assembly ignorati per il linker gestito sono diversi tra l'app contenitore (\*) e l'estensione (\*).
+- Poiché gli assembly ignorati per il linker gestito sono diversi tra l'app contenitore (\*) e l'estensione (\*).
 
   Per la condivisione del codice nativo è necessario che le impostazioni del linker gestite siano identiche per tutti i progetti che condividono il codice.
 
-* Poiché l'estensione dispone di definizioni XML personalizzate per il linker gestito (*).
+- Poiché l'estensione dispone di definizioni XML personalizzate per il linker gestito (*).
 
   La condivisione del codice nativo richiede non è supportata per i progetti che usano definizioni XML personalizzate per il linker gestito.
 
-* Poiché l'app contenitore non viene compilata per l'ABI * (mentre è in corso la compilazione dell'estensione per questa ABI).
+- Poiché l'app contenitore non viene compilata per l'ABI * (mentre è in corso la compilazione dell'estensione per questa ABI).
 
   Per la condivisione del codice nativo è necessario che l'app contenitore venga compilata per tutte le architetture per le quali viene compilata l'estensione.
 
   Ad esempio, questa condizione si verifica quando si compila un'estensione per ARM64 + ARMv7, ma l'app contenitore viene compilata solo per ARM64.
 
-* Poiché l'app contenitore viene compilata per \*l'ABI, che non è compatibile con l'Abi dell'\*estensione ().
+- Poiché l'app contenitore viene compilata per \*l'ABI, che non è compatibile con l'Abi dell'\*estensione ().
 
   Per la condivisione del codice nativo è necessario che tutti i progetti siano compilati per la stessa API.
 
   Ad esempio, questa condizione si verifica quando si compila un'estensione per ARMv7 + LLVM + Thumb2, ma l'app contenitore viene compilata solo per ARMv7 + LLVM.
 
-* Poiché l'app contenitore fa riferimento all'assembly '\*' di '\*', mentre l'estensione fa riferimento a una versione diversa da' *'.
+- Poiché l'app contenitore fa riferimento all'assembly '\*' di '\*', mentre l'estensione fa riferimento a una versione diversa da' *'.
 
   Per la condivisione del codice nativo è necessario che tutti i progetti che condividono il codice usino le stesse versioni per tutti gli assembly.
 
@@ -973,11 +973,11 @@ Rimuovere la directory `NOTICE` dal progetto.
 
 Questo problema può verificarsi se:
 
-* L'applicazione dispone di diritti non supportati dal profilo di provisioning corrente.
+- L'applicazione dispone di diritti non supportati dal profilo di provisioning corrente.
   Possibili soluzioni:
   - Specificare un profilo di provisioning diverso che supporti i diritti necessari per l'applicazione.
   - Rimuovere i diritti non supportati nel profilo di provisioning corrente.
-* Il dispositivo in cui si sta provando a eseguire la distribuzione non è incluso nel profilo di provisioning in uso.
+- Il dispositivo in cui si sta provando a eseguire la distribuzione non è incluso nel profilo di provisioning in uso.
   Possibili soluzioni:
   - Creare una nuova app da un modello in Xcode, selezionare lo stesso profilo di provisioning e distribuirlo nello stesso dispositivo. A volte Xcode può aggiornare automaticamente i profili di provisioning con i nuovi dispositivi (in altri casi Xcode chiederà cosa fare).
   -Accedere al centro per sviluppatori iOS e aggiornare il profilo di provisioning con il nuovo dispositivo, quindi scaricare il profilo di provisioning aggiornato nel computer.
@@ -1008,10 +1008,10 @@ Si è verificato un errore durante il tentativo di ricerca di un'applicazione ne
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
 
 <a name="MT1024" />
 
@@ -1029,11 +1029,11 @@ Si è verificato un errore durante il tentativo di elencare i report di arresto 
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1026" />
 
@@ -1043,11 +1043,11 @@ Si è verificato un errore durante il tentativo di scaricare le segnalazioni di 
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1027" />
 
@@ -1259,9 +1259,9 @@ Questo indica in genere un problema con Xcode.
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Usare il simulatore una volta in Xcode.
-* Passare una versione esplicita dell'SDK usando- \<-SDK version >.
-* Reinstallare Xcode.
+- Usare il simulatore una volta in Xcode.
+- Passare una versione esplicita dell'SDK usando- \<-SDK version >.
+- Reinstallare Xcode.
 
 <a name="MT1221" />
 
@@ -1323,11 +1323,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1401" />
 
@@ -1337,11 +1337,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1402" />
 
@@ -1351,11 +1351,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1403" />
 
@@ -1365,11 +1365,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1404" />
 
@@ -1379,11 +1379,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1405" />
 
@@ -1393,11 +1393,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <a name="MT1406" />
 
@@ -1407,11 +1407,11 @@ Si è verificato un errore durante il tentativo di accedere alle segnalazioni di
 
 Per risolvere il problema, eseguire le operazioni seguenti:
 
-* Eliminare l'applicazione dal dispositivo e riprovare.
-* Disconnettere il dispositivo e riconnetterlo.
-* Riavviare il dispositivo.
-* Riavviare il computer Mac.
-* Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
+- Eliminare l'applicazione dal dispositivo e riprovare.
+- Disconnettere il dispositivo e riconnetterlo.
+- Riavviare il dispositivo.
+- Riavviare il computer Mac.
+- Sincronizzare il dispositivo con iTunes. verranno rimossi tutti i report di arresto anomalo del dispositivo.
 
 <!--- 1407 used by mmp -->
 
@@ -1598,9 +1598,9 @@ Non è stato possibile caricare l'assembly radice. Verificare che il percorso ne
 Si è verificato un errore imprevisto durante il tentativo di ottimizzare il codice di associazione generato. Il nome dell'elemento che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario che l'assembly denominato (o che contiene il tipo o il metodo denominato) venga fornito in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato (ad esempio negli **argomenti mTouch aggiuntivi**).
 
 L'ultima cifra `x` sarà:
-* `0`per un nome di assembly;
-* `1`per un nome di tipo;
-* `3`per il nome di un metodo;
+- `0`per un nome di assembly;
+- `1`per un nome di tipo;
+- `3`per il nome di un metodo;
 
 <a name="MT2030" />
 
@@ -1610,8 +1610,8 @@ Si è verificato un errore imprevisto durante il tentativo di rimuovere le risor
 
 Le risorse utente sono file inclusi all'interno di assembly (come risorse) che devono essere estratti, in fase di compilazione, per creare il bundle dell'applicazione. vale a dire:
 
-* `__monotouch_content_*`e `__monotouch_pages_*` risorse e
-* Librerie native incorporate all'interno di un assembly di associazione.
+- `__monotouch_content_*`e `__monotouch_pages_*` risorse e
+- Librerie native incorporate all'interno di un assembly di associazione.
 
 <a name="MT2040" />
 
@@ -2238,7 +2238,7 @@ Questo indica in genere un bug in Novell. iOS; inviare un nuovo problema in [Git
 
 Ciò si verifica quando il linker nativo non riesce a trovare un simbolo a cui si fa riferimento in un punto qualsiasi. Questo problema può verificarsi per diversi motivi:
 
-* Un'associazione di terze parti richiede un Framework, ma il binding non lo specifica nell' `[LinkWith]` attributo. Soluzioni
+- Un'associazione di terze parti richiede un Framework, ma il binding non lo specifica nell' `[LinkWith]` attributo. Soluzioni
   - Se si è l'autore dell'associazione di terze parti o si ha accesso all'origine, modificare l' `[LinkWith]` attributo dell'associazione in modo da includere il Framework necessario:
 
     ```csharp
@@ -2246,11 +2246,11 @@ Ciò si verifica quando il linker nativo non riesce a trovare un simbolo a cui s
     ```
 
   - Se non è possibile modificare l'associazione di terze parti, è possibile collegarsi manualmente con il Framework `-gcc_flags '-framework SystemFramework'` richiesto `mtouch` passando a. questa operazione viene eseguita modificando gli argomenti aggiuntivi di mTouch nella pagina delle opzioni di compilazione iOS del progetto. Tenere presente che questa operazione deve essere eseguita per ogni configurazione di progetto.
-* In alcuni casi, un'associazione gestita è costituita da più librerie native e deve essere inclusa nelle associazioni. In ogni progetto di associazione è possibile avere più di una libreria nativa, quindi la soluzione consiste nell'aggiungere tutte le librerie native necessarie al progetto di binding.</li>
-* Un'associazione gestita fa riferimento a simboli nativi che non esistono nella libreria nativa.
+- In alcuni casi, un'associazione gestita è costituita da più librerie native e deve essere inclusa nelle associazioni. In ogni progetto di associazione è possibile avere più di una libreria nativa, quindi la soluzione consiste nell'aggiungere tutte le librerie native necessarie al progetto di binding.</li>
+- Un'associazione gestita fa riferimento a simboli nativi che non esistono nella libreria nativa.
     Questo problema si verifica in genere quando esiste un'associazione per un certo periodo di tempo e il codice nativo è stato modificato durante tale periodo di tempo, in modo che una determinata classe nativa sia stata rimossa o rinominata, mentre l'associazione non è stata aggiornata.
-* Un P/Invoke fa riferimento a un simbolo nativo che non esiste. A partire da Novell. iOS 7,4 verrà segnalato un errore <a href="#MT5214">MT5214</a> per questo caso. per ulteriori informazioni, vedere MT5214.
-* Un'associazione o una libreria di terze parti è C++stata compilata utilizzando, ma non viene specificata `[LinkWith]` nell'attributo dal binding. Si tratta in genere di un'operazione abbastanza semplice da riconoscere, perché i simboli C++ sono simboli alterati (un `__ZNKSt9exception4whatEv`esempio comune è).
+- Un P/Invoke fa riferimento a un simbolo nativo che non esiste. A partire da Novell. iOS 7,4 verrà segnalato un errore <a href="#MT5214">MT5214</a> per questo caso. per ulteriori informazioni, vedere MT5214.
+- Un'associazione o una libreria di terze parti è C++stata compilata utilizzando, ma non viene specificata `[LinkWith]` nell'attributo dal binding. Si tratta in genere di un'operazione abbastanza semplice da riconoscere, perché i simboli C++ sono simboli alterati (un `__ZNKSt9exception4whatEv`esempio comune è).
   - Se si è l'autore dell'associazione di terze parti o si ha accesso all'origine, modificare l' `[LinkWith]` attributo dell'associazione per impostare il `IsCxx` flag:
 
     ```csharp
@@ -2265,7 +2265,7 @@ Ciò si verifica quando il linker nativo non riesce a trovare un simbolo a cui s
 
 Ciò si verifica quando il linker nativo non riesce a trovare una classe Objective-C a cui si fa riferimento in un punto qualsiasi. Questo problema può verificarsi per diversi motivi: come per [MT5210](#MT5210) e in aggiunta:
 
-* Un'associazione di terze parti ha associato un protocollo Objective-C, ma non l'ha annotato con l'attributo nella definizione dell' `[Protocol]` API. Soluzioni
+- Un'associazione di terze parti ha associato un protocollo Objective-C, ma non l'ha annotato con l'attributo nella definizione dell' `[Protocol]` API. Soluzioni
   - Aggiungere l'attributo `[Protocol]` mancante:
 
     ```csharp
@@ -2282,9 +2282,9 @@ Ciò si verifica quando il linker nativo non riesce a trovare una classe Objecti
 
 Ciò si verifica quando il linker nativo rileva simboli duplicati tra tutte le librerie native. In seguito a questo errore potrebbero essere presenti uno o più errori [MT5213](#MT5213) con la posizione per ogni occorrenza del simbolo. Possibili cause dell'errore:
 
-* La stessa libreria nativa è inclusa due volte.
-* Due librerie native distinte si verificano per definire gli stessi simboli.
-* Una libreria nativa non è compilata correttamente e contiene lo stesso simbolo più di una volta.
+- La stessa libreria nativa è inclusa due volte.
+- Due librerie native distinte si verificano per definire gli stessi simboli.
+- Una libreria nativa non è compilata correttamente e contiene lo stesso simbolo più di una volta.
   Per confermare questo problema, è possibile usare il set di comandi seguente da un terminale (sostituire i386 con x86_64/ARMv7/armv7s/arm64 in base all'architettura per cui si sta creando):
 
   ```
@@ -2391,19 +2391,19 @@ In genere, Novell. IOS chiederà al linker nativo di memorizzare tali simboli `-
 
 Esistono alcune possibili origini per tali simboli dinamici:
 
-* P/richiama i metodi nelle librerie collegate in modo statico, in cui il nome della `__Internal` dll è nell'attributo `[DllImport ("__Internal")]`dllimport.
-* Riferimenti dei campi a posizioni di memoria nelle librerie collegate in modo statico da`[Field]` progetti di associazione (attributi).
-* Le classi Objective-C a cui viene fatto riferimento nelle librerie collegate in modo statico dai progetti di associazione (quando si usano compilazioni incrementali o quando non si usa il registrar statico).
+- P/richiama i metodi nelle librerie collegate in modo statico, in cui il nome della `__Internal` dll è nell'attributo `[DllImport ("__Internal")]`dllimport.
+- Riferimenti dei campi a posizioni di memoria nelle librerie collegate in modo statico da`[Field]` progetti di associazione (attributi).
+- Le classi Objective-C a cui viene fatto riferimento nelle librerie collegate in modo statico dai progetti di associazione (quando si usano compilazioni incrementali o quando non si usa il registrar statico).
 
 Possibili soluzioni:
 
-* Abilitare il linker gestito (se possibile per tutti gli assembly anziché solo gli assembly SDK). Questo potrebbe rimuovere un numero sufficiente di origini per i simboli dinamici, in modo che la riga di comando del linker non superi il valore massimo.
-* Ridurre il numero di P/Invoke, i riferimenti ai campi e/o le classi Objective-C.
-* Riscrivere i simboli dinamici per avere nomi più brevi.
-* Passare `-dlsym:false` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto. Con questa opzione, Novell. iOS genererà un riferimento nativo nel codice compilato con AOT e non sarà necessario richiedere al linker di memorizzare questo simbolo. Tuttavia, questo funziona solo per le compilazioni di dispositivi e causerà errori del linker se sono presenti P/Invoke per le funzioni che non esistono nella libreria statica.
-* Passare `--dynamic-symbol-mode=code` come argomenti mTouch aggiuntivi nelle opzioni di compilazione iOS del progetto. Con questa opzione, Novell. iOS genererà codice nativo aggiuntivo che fa riferimento a questi simboli anziché chiedere al linker nativo di conservarli usando gli argomenti della riga di comando. Lo svantaggio di questo approccio è che aumenterà le dimensioni del file eseguibile.
-* Abilitare il registrar statico passando `--registrar:static` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto (per le compilazioni del simulatore, perché il registrar statico è già quello predefinito per le compilazioni di dispositivi). Il registrar statico genererà codice che fa riferimento a classi Objective-C in modo statico, quindi non è necessario richiedere al linker nativo di mantengono tali classi.
-* Disabilitare le compilazioni incrementali (per le compilazioni di dispositivi). Quando le compilazioni incrementali sono abilitate, il codice generato dal registrar statico non verrà considerato dal linker nativo, il che significa che Novell. iOS deve comunque richiedere al linker di mantenere le classi Objective-C a cui si fa riferimento. In questo modo, la disabilitazione delle compilazioni incrementali impedisce tale necessità.
+- Abilitare il linker gestito (se possibile per tutti gli assembly anziché solo gli assembly SDK). Questo potrebbe rimuovere un numero sufficiente di origini per i simboli dinamici, in modo che la riga di comando del linker non superi il valore massimo.
+- Ridurre il numero di P/Invoke, i riferimenti ai campi e/o le classi Objective-C.
+- Riscrivere i simboli dinamici per avere nomi più brevi.
+- Passare `-dlsym:false` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto. Con questa opzione, Novell. iOS genererà un riferimento nativo nel codice compilato con AOT e non sarà necessario richiedere al linker di memorizzare questo simbolo. Tuttavia, questo funziona solo per le compilazioni di dispositivi e causerà errori del linker se sono presenti P/Invoke per le funzioni che non esistono nella libreria statica.
+- Passare `--dynamic-symbol-mode=code` come argomenti mTouch aggiuntivi nelle opzioni di compilazione iOS del progetto. Con questa opzione, Novell. iOS genererà codice nativo aggiuntivo che fa riferimento a questi simboli anziché chiedere al linker nativo di conservarli usando gli argomenti della riga di comando. Lo svantaggio di questo approccio è che aumenterà le dimensioni del file eseguibile.
+- Abilitare il registrar statico passando `--registrar:static` come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto (per le compilazioni del simulatore, perché il registrar statico è già quello predefinito per le compilazioni di dispositivi). Il registrar statico genererà codice che fa riferimento a classi Objective-C in modo statico, quindi non è necessario richiedere al linker nativo di mantengono tali classi.
+- Disabilitare le compilazioni incrementali (per le compilazioni di dispositivi). Quando le compilazioni incrementali sono abilitate, il codice generato dal registrar statico non verrà considerato dal linker nativo, il che significa che Novell. iOS deve comunque richiedere al linker di mantenere le classi Objective-C a cui si fa riferimento. In questo modo, la disabilitazione delle compilazioni incrementali impedisce tale necessità.
 
 <a name="MT5218" />
 
@@ -2413,10 +2413,10 @@ L'argomento `--ignore-dynamic-symbol=symbol` della riga di comando è stato pass
 
 Esistono due motivi principali:
 
-* Il nome del simbolo non è corretto.
-  * Non anteporre un carattere di sottolineatura al nome del simbolo.
-  * Il simbolo per le classi Objective-C `OBJC_CLASS_$_<classname>`è.
-* Il simbolo è corretto, ma è un simbolo che è già mantenuto per mezzo normale (alcune opzioni di compilazione causano la variazione esatta dell'elenco di simboli dinamici).
+- Il nome del simbolo non è corretto.
+  - Non anteporre un carattere di sottolineatura al nome del simbolo.
+  - Il simbolo per le classi Objective-C `OBJC_CLASS_$_<classname>`è.
+- Il simbolo è corretto, ma è un simbolo che è già mantenuto per mezzo normale (alcune opzioni di compilazione causano la variazione esatta dell'elenco di simboli dinamici).
 
 ### <a name="mt53xx-other-tools"></a>MT53xx: Altri strumenti
 

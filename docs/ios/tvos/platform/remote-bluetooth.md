@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 2def6280a159203fd2c8d3db01a8e66c9ae61688
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1e1e86c6301214c7117b8f3b21b19554499d7fbd
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657390"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121437"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Novell
 
@@ -58,10 +58,10 @@ La superficie di tocco di Siri Remote è in grado di rilevare un'ampia gamma di 
 
 Apple fornisce i suggerimenti seguenti per l'utilizzo dei movimenti della superficie di tocco:
 
-* **Distinguere tra clic e tocchi** , facendo clic su un'azione intenzionale da parte dell'utente ed è particolarmente adatta per la selezione, l'attivazione e il pulsante principale di un gioco. Il tocco è più semplice e deve essere usato con moderazione, in quanto l'utente ha spesso a disposizione il Siri remoto e può attivare un evento tap in modo semplice.
-* **Non ridefinire i movimenti standard** : l'utente ha la previsione che i movimenti specifici eseguiranno azioni specifiche. non è necessario ridefinire il significato o la funzione di questi movimenti nell'app. L'unica eccezione è rappresentata da un'app di gioco durante il gioco attivo.
-* **Definire nuovi movimenti sporadicamente** , l'utente ha la previsione che i movimenti specifici eseguiranno azioni specifiche. È consigliabile evitare di definire movimenti personalizzati per eseguire azioni standard. Anche in questo caso, i giochi sono l'eccezione più usuale, in cui i movimenti personalizzati possono aggiungere divertimento e gioco immersivo al gioco.
-* **Se necessario, rispondere ai rubinetti D-Pad,** toccando leggermente i bordi dell'angolo della superficie di tocco, si reagirà come un d-pad in un controller di gioco spostando lo stato attivo o direzione verso l'alto, verso il basso, verso sinistra o verso destra. Se necessario, è necessario rispondere a questi movimenti nell'app o nel gioco.
+- **Distinguere tra clic e tocchi** , facendo clic su un'azione intenzionale da parte dell'utente ed è particolarmente adatta per la selezione, l'attivazione e il pulsante principale di un gioco. Il tocco è più semplice e deve essere usato con moderazione, in quanto l'utente ha spesso a disposizione il Siri remoto e può attivare un evento tap in modo semplice.
+- **Non ridefinire i movimenti standard** : l'utente ha la previsione che i movimenti specifici eseguiranno azioni specifiche. non è necessario ridefinire il significato o la funzione di questi movimenti nell'app. L'unica eccezione è rappresentata da un'app di gioco durante il gioco attivo.
+- **Definire nuovi movimenti sporadicamente** , l'utente ha la previsione che i movimenti specifici eseguiranno azioni specifiche. È consigliabile evitare di definire movimenti personalizzati per eseguire azioni standard. Anche in questo caso, i giochi sono l'eccezione più usuale, in cui i movimenti personalizzati possono aggiungere divertimento e gioco immersivo al gioco.
+- **Se necessario, rispondere ai rubinetti D-Pad,** toccando leggermente i bordi dell'angolo della superficie di tocco, si reagirà come un d-pad in un controller di gioco spostando lo stato attivo o direzione verso l'alto, verso il basso, verso sinistra o verso destra. Se necessario, è necessario rispondere a questi movimenti nell'app o nel gioco.
 
 <a name="Siri-Remote-Buttons" />
 

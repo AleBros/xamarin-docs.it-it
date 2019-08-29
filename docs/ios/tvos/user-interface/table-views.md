@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3df0d8f686ec521a55948a9eb4632d77e5c3691f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652327"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121379"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Uso delle viste tabella tvOS in Novell
 
@@ -883,8 +883,8 @@ namespace tvTable
 
 Anche in questo caso, questa classe definisce solo alcuni collegamenti per semplificare la comunicazione tra i due lati del controller di visualizzazione divisa:
 
-* `SplitView`-È un collegamento al controller di visualizzazione suddivisa`MainSpiltViewController`() a cui appartiene il controller di visualizzazione di navigazione.
-* `TableController`-Ottiene il controller di visualizzazione tabella`AttractionTableViewController`() presentato come visualizzazione superiore nel controller della visualizzazione di navigazione.
+- `SplitView`-È un collegamento al controller di visualizzazione suddivisa`MainSpiltViewController`() a cui appartiene il controller di visualizzazione di navigazione.
+- `TableController`-Ottiene il controller di visualizzazione tabella`AttractionTableViewController`() presentato come visualizzazione superiore nel controller della visualizzazione di navigazione.
 
 <a name="The-Split-View-Controller" />
 

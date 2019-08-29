@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 634081b63ce4a70368ef7621837932a3ae6de0a8
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890399"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121343"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Binding di una libreria Objective-C in iOS
 
@@ -22,9 +22,9 @@ Quando si utilizza iOS, è possibile che si verifichino casi in cui si desidera 
 
 In genere nell'ecosistema iOS è possibile trovare le librerie in 3 varianti:
 
-* Come file di libreria statica precompilata con `.a` estensione insieme alle relative intestazioni (file con estensione h). Ad esempio, [la libreria di analisi di Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
-* Come Framework precompilato. Si tratta semplicemente di una cartella contenente la libreria statica, le intestazioni e talvolta risorse `.framework` aggiuntive con estensione. Ad esempio, [la libreria AdMob di Google](https://developers.google.com/admob/ios/download).
-* Come solo file di codice sorgente. Ad esempio, una libreria che contiene `.m` solo `.h` file e Objective C.
+- Come file di libreria statica precompilata con `.a` estensione insieme alle relative intestazioni (file con estensione h). Ad esempio, [la libreria di analisi di Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
+- Come Framework precompilato. Si tratta semplicemente di una cartella contenente la libreria statica, le intestazioni e talvolta risorse `.framework` aggiuntive con estensione. Ad esempio, [la libreria AdMob di Google](https://developers.google.com/admob/ios/download).
+- Come solo file di codice sorgente. Ad esempio, una libreria che contiene `.m` solo `.h` file e Objective C.
 
 Nel primo e secondo scenario è già presente una libreria statica CocoaTouch precompilata, quindi in questo articolo verrà illustrato il terzo scenario. Tenere presente che prima di iniziare a creare un'associazione, controllare sempre la licenza fornita con la libreria per assicurarsi di poterla associare.
 

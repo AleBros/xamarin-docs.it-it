@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: 22efd672c041ad84488f822ac2e7e51a80ea2b61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: be353c6274dcf69946740e2d195b9e4d64208313
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655325"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121568"
 ---
 # <a name="adding-ios-specific-formatting"></a>Aggiunta della formattazione specifica di iOS
 
@@ -20,8 +20,8 @@ Un modo per impostare la formattazione specifica di iOS consiste nel creare un [
 
 Altre opzioni per controllare il modo in cui l'aspetto dell'app per iOS Novell. Forms includono:
 
-* Configurazione delle opzioni di visualizzazione in [ **info. plist**](#info-plist)
-* Impostazione degli stili dei controlli tramite l' [ `UIAppearance` API](#uiappearance)
+- Configurazione delle opzioni di visualizzazione in [ **info. plist**](#info-plist)
+- Impostazione degli stili dei controlli tramite l' [ `UIAppearance` API](#uiappearance)
 
 Queste alternative sono illustrate di seguito.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: df13c1080be5fd466c4875ed8a3bdc2012a70df0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a7276b6a3269c012ad57e13510b6479266c43209
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526168"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119791"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 
@@ -731,9 +731,9 @@ In seguito a queste modifiche, `SendNotification` viene eseguito ogni volta che 
 
 Quando un'applicazione è in background, il [payload del messaggio](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) determinerà come viene gestito il messaggio:
 
-* **Notifica** di i messaggi verranno inviati alla **barra di sistema.** &ndash; Verrà visualizzata una notifica locale. Quando l'utente tocca la notifica, l'app viene avviata.
-* **Dati** di i messaggi verranno gestiti da `OnMessageReceived`. &ndash;
-* **Entrambi** &ndash; i messaggi con una notifica e un payload di dati verranno recapitati alla barra di sistema. Quando l'app viene avviata, il payload dei dati verrà `Extras` visualizzato nella `Intent` di usata per avviare l'app.
+- **Notifica** di i messaggi verranno inviati alla **barra di sistema.** &ndash; Verrà visualizzata una notifica locale. Quando l'utente tocca la notifica, l'app viene avviata.
+- **Dati** di i messaggi verranno gestiti da `OnMessageReceived`. &ndash;
+- **Entrambi** &ndash; i messaggi con una notifica e un payload di dati verranno recapitati alla barra di sistema. Quando l'app viene avviata, il payload dei dati verrà `Extras` visualizzato nella `Intent` di usata per avviare l'app.
 
 In questo esempio, se l'app è in background, `SendNotification` verrà eseguita se il messaggio dispone di un payload di dati. In caso contrario, verrà avviata una notifica in background, illustrata in precedenza in questa procedura dettagliata.
 

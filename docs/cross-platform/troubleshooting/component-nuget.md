@@ -1,47 +1,47 @@
 ---
-title: Aggiornamento dei riferimenti ai componenti per NuGet
-description: Questo documento descrive come sostituire i riferimenti a componenti con i pacchetti NuGet a prova di futuro delle App, poiché Store il componente Xamarin è stato interrotto.
+title: Aggiornamento di riferimenti ai componenti in NuGet
+description: Questo documento descrive come sostituire i riferimenti ai componenti con i pacchetti NuGet per la prova futura delle app, dal momento che l'archivio componenti Novell è stato interrotto.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: fbef8f60a31511be926ee2adf5e239ad8955b208
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 270d02fb5045e322b167101d82de9a61c64ce836
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864532"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70118950"
 ---
-# <a name="updating-component-references-to-nuget"></a>Aggiornamento dei riferimenti ai componenti per NuGet
+# <a name="updating-component-references-to-nuget"></a>Aggiornamento di riferimenti ai componenti in NuGet
 
 > [!IMPORTANT]
-> Store il componente è stato interrotto a partire dal 15 maggio 2018 (questa chiusura è stato originariamente [annunciato](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) nel novembre 2017).
+> L'archivio componenti è stato interrotto a partire dal 15 maggio 2018 (questa chiusura è stata originariamente [annunciata](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) nel 2017 novembre).
 >
-> I componenti di Xamarin non sono più supportati in Visual Studio e devono essere sostituiti da pacchetti NuGet. Seguire le istruzioni seguenti per rimuovere manualmente riferimenti a componenti dai progetti.
+> I componenti Novell non sono più supportati in Visual Studio e devono essere sostituiti dai pacchetti NuGet. Seguire le istruzioni riportate di seguito per rimuovere manualmente i riferimenti ai componenti dai progetti.
 
-Fare riferimento a queste istruzioni per l'aggiunta di pacchetti NuGet nel [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) oppure [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Vedere queste istruzioni per l'aggiunta di pacchetti NuGet in [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) o [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-Un elenco di Xamarin più diffusi [plug-in e le librerie](https://github.com/xamarin/XamarinComponents/blob/master/README.md) è disponibile per consentire di trovare alternative di componenti che non sono disponibili come pacchetti NuGet.
+È disponibile un elenco di [librerie e plug](https://github.com/xamarin/XamarinComponents/blob/master/README.md) -in Novell più diffusi che consentono di trovare alternative ai componenti non disponibili come pacchetti NuGet.
 
-## <a name="manually-removing-component-references"></a>Rimozione manuale di riferimenti a componenti
+## <a name="manually-removing-component-references"></a>Rimozione manuale di riferimenti ai componenti
 
-La versione 15.6 di Visual Studio e versione 7.4 di Visual Studio per Mac non supportano più componenti nel progetto. 
+La versione 15,6 di Visual Studio e la versione 7,4 di Visual Studio per Mac non supportano più i componenti del progetto. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Se si carica un progetto in Visual Studio, viene visualizzata la finestra di dialogo seguente, che spiega che è necessario rimuovere tutti i componenti dal progetto manualmente:
+Se si carica un progetto in Visual Studio, viene visualizzata la finestra di dialogo seguente, in cui viene spiegato che è necessario rimuovere manualmente i componenti dal progetto:
 
-![Finestra di dialogo che spiega che un componente è stato trovato nel progetto e deve essere rimosso di avviso](component-nuget-images/component-alert-vs.png)
+![Finestra di dialogo di avviso che informa che è stato trovato un componente nel progetto e che deve essere rimosso](component-nuget-images/component-alert-vs.png)
 
 Per rimuovere un componente dal progetto:
 
-1. Aprire il **file con estensione csproj** file. A tale scopo, fare doppio clic sul nome del progetto e selezionare **Scarica progetto**. 
+1. Aprire il file con **estensione csproj** . A tale scopo, fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Scarica progetto**. 
 
-2. Fare clic nuovamente sul progetto scaricato e selezionare **modifica {your-project-name} csproj**.
+2. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato e scegliere **modifica {nome-progetto}. csproj**.
 
-3. Trovare tutti i riferimenti nel file per `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
+3. Trovare tutti i riferimenti nel file a `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
 
     ```xml
     <ItemGroup>
@@ -60,23 +60,23 @@ Per rimuovere un componente dal progetto:
     </ItemGroup>
     ```
 
-4. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intera `ItemGroup`.
+4. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intero `ItemGroup`oggetto.
 
-5. Dopo aver salvato il file, fare doppio clic sul nome del progetto e selezionare **Ricarica progetto**.
+5. Una volta salvato il file, fare clic con il pulsante destro del mouse sul nome del progetto e selezionare **Ricarica progetto**.
 
 6. Ripetere i passaggi precedenti per ogni progetto nella soluzione.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Se si carica un progetto in Visual Studio per Mac, viene visualizzata la finestra di dialogo seguente, che spiega che è necessario rimuovere tutti i componenti dal progetto manualmente:
+Se si carica un progetto in Visual Studio per Mac, viene visualizzata la finestra di dialogo seguente, in cui viene spiegato che è necessario rimuovere manualmente i componenti dal progetto:
 
-![Finestra di dialogo che spiega che un componente è stato trovato nel progetto e deve essere rimosso di avviso](component-nuget-images/component-alert.png)
+![Finestra di dialogo di avviso che informa che è stato trovato un componente nel progetto e che deve essere rimosso](component-nuget-images/component-alert.png)
 
 Per rimuovere un componente dal progetto:
 
-1. Aprire il file con estensione csproj. A tale scopo, fare doppio clic sul nome del progetto e selezionare **strumenti > Modifica File**.
+1. Aprire il file con estensione csproj. A tale scopo, fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **strumenti > modifica file**.
 
-2. Trovare tutti i riferimenti nel file per `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
+2. Trovare tutti i riferimenti nel file a `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
 
     ```xml
     <ItemGroup>
@@ -95,7 +95,7 @@ Per rimuovere un componente dal progetto:
     </ItemGroup>
     ```
 
-3. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intera `ItemGroup`
+3. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intera`ItemGroup`
 
 4. Ripetere i passaggi precedenti per ogni progetto nella soluzione.
 
@@ -103,107 +103,107 @@ Per rimuovere un componente dal progetto:
 
 > [!WARNING]
 > Le istruzioni seguenti funzionano solo con le versioni precedenti di Visual Studio.
-> Il **componenti** nodo non è più disponibile nelle versioni correnti di Visual Studio 2017 o Visual Studio per Mac.
+> Il nodo **componenti** non è più disponibile nelle versioni correnti di Visual Studio 2017 o Visual Studio per Mac.
 
-Le sezioni seguenti illustrano come aggiornare le soluzioni esistenti di Xamarin per modificare i riferimenti ai componenti per i pacchetti NuGet.
+Le sezioni seguenti illustrano come aggiornare le soluzioni Novell esistenti per modificare i riferimenti ai componenti dei pacchetti NuGet.
 
-- [Componenti che contengono i pacchetti NuGet](#contain)
-- [Componenti con le sostituzioni di NuGet](#replace)
+- [Componenti che contengono pacchetti NuGet](#contain)
+- [Componenti con sostituzioni NuGet](#replace)
 
-La maggior parte dei componenti rientrano in una di queste categorie.
-Se si usa un componente che non dispone di un pacchetto NuGet equivalente, vedere la [componenti senza un percorso di migrazione NuGet](#require-update) sezione riportata di seguito.
+La maggior parte dei componenti rientra in una delle categorie precedenti.
+Se si usa un componente che non ha un pacchetto NuGet equivalente, leggere i [componenti senza una sezione del percorso di migrazione NuGet](#require-update) riportata di seguito.
 
 <a name="contain" />
 
-## <a name="components-that-contain-nuget-packages"></a>Componenti che contengono i pacchetti NuGet
+## <a name="components-that-contain-nuget-packages"></a>Componenti che contengono pacchetti NuGet
 
-Molti componenti contengono già i pacchetti NuGet e il percorso di migrazione consiste nell'eliminare il riferimento del componente.
+Molti componenti contengono già pacchetti NuGet e il percorso di migrazione è semplicemente eliminare il riferimento al componente.
 
 È possibile determinare se il componente include già un pacchetto NuGet facendo doppio clic sul componente nella soluzione:
 
 ![Nodo componenti espanso](component-nuget-images/solution-sml.png)
 
-Il **pacchetti** scheda elencherà tutti i pacchetti NuGet inclusi nel componente:
+Nella scheda **pacchetti** sono elencati tutti i pacchetti NuGet inclusi nel componente:
 
-![Scheda dei pacchetti contiene NuGet](component-nuget-images/packages-tab-sml.png)
+![Scheda pacchetti contiene NuGet](component-nuget-images/packages-tab-sml.png)
 
-Si noti che il **assembly** scheda sarà vuota:
+Si noti che la scheda **assembly** è vuota:
 
-![Scheda assembly è vuota](component-nuget-images/assemblies-tab-empty-sml.png)
+![Scheda assembly vuota](component-nuget-images/assemblies-tab-empty-sml.png)
 
-### <a name="updating-the-solution"></a>L'aggiornamento della soluzione
+### <a name="updating-the-solution"></a>Aggiornamento della soluzione
 
-Per aggiornare la soluzione, eliminare il **componente** voce dalla soluzione:
+Per aggiornare la soluzione, eliminare la voce del **componente** dalla soluzione:
 
 ![Elimina componente](component-nuget-images/delete-component-sml.png)
 
-Il pacchetto NuGet rimarrà elencato nel **pacchetti** nodo e l'app verrà compilata ed eseguita come di consueto. In futuro, verranno eseguiti aggiornamenti a questo pacchetto tramite il **Nuget** funzionalità di aggiornamento:
+Il pacchetto NuGet rimarrà elencato nel nodo **pacchetti** e l'app verrà compilata ed eseguita come di consueto. In futuro, gli aggiornamenti a questo pacchetto verranno eseguiti tramite la funzionalità di aggiornamento di **NuGet** :
 
 ![Aggiornare il pacchetto NuGet](component-nuget-images/nuget-update-sml.png)
 
 
 <a name="replace" />
 
-## <a name="components-with-nuget-replacements"></a>Componenti con le sostituzioni di NuGet
+## <a name="components-with-nuget-replacements"></a>Componenti con sostituzioni NuGet
 
-Se la pagina di informazioni sul componente **assembly** scheda contiene le voci, come illustrato di seguito, sarà necessario trovare manualmente il pacchetto NuGet equivalente.
+Se la scheda **assembly** pagina Informazioni componente contiene voci come illustrato di seguito, sarà necessario trovare il pacchetto NuGet equivalente manualmente.
 
-![Contiene gli assembly](component-nuget-images/assemblies-tab-sml.png)
+![Contiene assembly](component-nuget-images/assemblies-tab-sml.png)
 
-Si noti che il **pacchetti** scheda probabilmente sarà vuota:
+Si noti che la scheda **pacchetti** sarà probabilmente vuota:
 
 ![](component-nuget-images/packages-tab-empty-sml.png)
 
-_È possibile che contenga le dipendenze di NuGet, ma possono essere ignorati._
+_Può contenere dipendenze NuGet, ma è possibile ignorarle._
 
-Per verificare una sostituzione NuGet il pacchetto è presente, cercare [NuGet.org](https://www.nuget.org/packages), usando il nome del componente, oppure in alternativa dall'autore.
+Per confermare l'esistenza di un pacchetto NuGet sostitutivo, cercare in [NuGet.org](https://www.nuget.org/packages), usando il nome del componente o in alternativa per autore.
 
-Ad esempio, è possibile trovare il famoso **sqlite-net-libreria di classi portabile** pacchetto eseguendo una ricerca per:
+Ad esempio, è possibile trovare il popolare pacchetto **sqlite-net-PCL** cercando:
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) : il nome del prodotto.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) : il profilo dell'autore.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl): nome del prodotto.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum): profilo dell'autore.
 
-### <a name="updating-the-solution"></a>L'aggiornamento della soluzione
+### <a name="updating-the-solution"></a>Aggiornamento della soluzione
 
-Dopo aver verificato che il componente è disponibile in NuGet, seguire questa procedura:
+Dopo aver confermato che il componente è disponibile in NuGet, attenersi alla procedura seguente:
 
 #### <a name="delete-the-component"></a>Eliminare il componente
 
-Fare clic con il pulsante destro sul componente nella soluzione e scegliere **rimuovere**:
+Fare clic con il pulsante destro del mouse sul componente nella soluzione e scegliere **Rimuovi**:
 
 ![Rimuovi componente](component-nuget-images/remove-component-sml.png)
 
-Questa operazione eliminerà il componente e tutti i riferimenti. Questa operazione interrompe la compilazione, finché non si aggiunge il pacchetto NuGet equivalente per sostituirlo.
+Questa operazione eliminerà il componente e tutti i riferimenti. In questo modo si interrompe la compilazione, fino a quando non si aggiunge il pacchetto NuGet equivalente per sostituirlo.
 
 #### <a name="add-the-nuget-package"></a>Aggiungere il pacchetto NuGet
 
-1. Fare clic sui **pacchetti** nodo, quindi scegliere **Aggiungi pacchetti...** .
-2. Cercare la sostituzione di NuGet dal nome o dall'autore:
+1. Fare clic con il pulsante destro del mouse sul nodo **pacchetti** e scegliere **Aggiungi pacchetti...** .
+2. Cercare la sostituzione di NuGet in base al nome o all'autore:
 
     ![](component-nuget-images/nuget-search-sml.png)
 
 3. Premere **Aggiungi pacchetto**.
 
-Verrà aggiunto il pacchetto NuGet al progetto, insieme a eventuali dipendenze.
-Questo dovrebbe risolvere la compilazione. Se la compilazione continua ad avere esito negativo, esaminare gli errori per vedere se si sono verificati differenze tra API tra il componente e il pacchetto NuGet.
+Il pacchetto NuGet verrà aggiunto al progetto, insieme a tutte le dipendenze.
+Questa operazione dovrebbe correggere la compilazione. Se la compilazione continua a non riuscire, esaminare ogni errore per verificare se sono presenti differenze nell'API tra il componente e il pacchetto NuGet.
 
 <a name="require-update" />
 
-## <a name="components-without-a-nuget-migration-path"></a>Componenti senza un percorso di migrazione di NuGet
+## <a name="components-without-a-nuget-migration-path"></a>Componenti senza percorso di migrazione NuGet
 
-Non occorre preoccuparsi se non si trova immediatamente una sostituzione per i componenti utilizzati nell'applicazione. I componenti esistenti continueranno a funzionare in Visual Studio 15.5 e il **componenti** nodo verrà visualizzato nella soluzione come di consueto.
+Non è importante se non si trova immediatamente una sostituzione per i componenti usati nell'applicazione. I componenti esistenti continueranno a funzionare in Visual Studio 15,5 e il nodo **componenti** verrà visualizzato come di consueto nella soluzione.
 
-Le versioni future di Visual Studio, tuttavia, verranno _non_ ripristinare o aggiornare i componenti.
-Ciò significa che se si apre la soluzione in un nuovo computer, il componente verrà non scaricato e installato; e l'autore non sarà in grado di fornire aggiornamenti. È consigliabile pianificare:
+Le versioni future di Visual Studio, tuttavia, _non_ consentono di ripristinare o aggiornare i componenti.
+Ciò significa che se si apre la soluzione in un nuovo computer, il componente non verrà scaricato e installato; e l'autore non sarà in grado di fornire aggiornamenti. È necessario pianificare:
 
-* Estrarre gli assembly del componente e vi fanno riferimento direttamente nel progetto.
-* Contattare l'autore del componente e Chiedi informazioni sui piani per eseguire la migrazione a NuGet.
-* Analizzare i pacchetti NuGet alternativi, o se il componente è open source di ricerca del codice sorgente.
+- Estrarre gli assembly dal componente e farvi riferimento direttamente nel progetto.
+- Contattare l'autore del componente e richiedere i piani per la migrazione a NuGet.
+- Esaminare i pacchetti NuGet alternativi o cercare il codice sorgente se il componente è open source.
 
-Molti fornitori di componenti siano ancora lavorando su eseguire la migrazione a NuGet e altri utenti (inclusi i prodotti disponibili in commercio) potrebbero essere in corso le opzioni di recapito alternativi.
+Molti fornitori di componenti continuano a lavorare per eseguire la migrazione a NuGet e altri (inclusi i prodotti commercialmente disponibili) potrebbero esaminare opzioni di recapito alternative.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
-- [Elenco dei più diffusi Xamarin Plugins e librerie](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
+- [Elenco dei plug-in e delle librerie Novell più diffusi](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Installare e usare un pacchetto NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
-- [Inserimento di un pacchetto NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [Inclusione di un pacchetto NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5138062cec6ee71f1db17d0118001b59dd7bc02c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 58250770b925c20b912b71e5591b1d0e252c801a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642951"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119030"
 ---
 # <a name="xamarinmac-extension-support"></a>Supporto delle estensioni Xamarin.Mac
 
@@ -28,9 +28,9 @@ In Novell. Mac 2,10 è stato aggiunto il supporto per più punti di estensione m
 
 Di seguito sono riportate le limitazioni e i problemi che possono verificarsi durante lo sviluppo di estensioni in Novell. Mac:
 
-* Non è attualmente disponibile alcun supporto per il debug in Visual Studio per Mac. Tutto il debug deve essere eseguito tramite **NSLog** e la **console**. Per informazioni dettagliate, vedere la sezione suggerimenti riportata di seguito.
-* Le estensioni devono essere contenute in un'applicazione host, che viene eseguita una sola volta con Register con il sistema. Devono quindi essere abilitati nella sezione relativa all' **estensione** delle **Preferenze di sistema**. 
-* Alcuni arresti anomali dell'estensione possono destabilizzare l'applicazione host e causare un comportamento anomalo. In particolare, il **Finder** e la sezione **odierna** del **Centro notifiche** potrebbero diventare "bloccati" e non rispondere. Questo è stato sperimentato anche nei progetti di estensione in Xcode e attualmente non è correlato a Novell. Mac. Spesso questa operazione può essere visualizzata nel registro di sistema (tramite la **console**di, vedere Suggerimenti per i dettagli) stampa di messaggi di errore ripetuti. Per risolvere il problema, riavviare macOS.
+- Non è attualmente disponibile alcun supporto per il debug in Visual Studio per Mac. Tutto il debug deve essere eseguito tramite **NSLog** e la **console**. Per informazioni dettagliate, vedere la sezione suggerimenti riportata di seguito.
+- Le estensioni devono essere contenute in un'applicazione host, che viene eseguita una sola volta con Register con il sistema. Devono quindi essere abilitati nella sezione relativa all' **estensione** delle **Preferenze di sistema**. 
+- Alcuni arresti anomali dell'estensione possono destabilizzare l'applicazione host e causare un comportamento anomalo. In particolare, il **Finder** e la sezione **odierna** del **Centro notifiche** potrebbero diventare "bloccati" e non rispondere. Questo è stato sperimentato anche nei progetti di estensione in Xcode e attualmente non è correlato a Novell. Mac. Spesso questa operazione può essere visualizzata nel registro di sistema (tramite la **console**di, vedere Suggerimenti per i dettagli) stampa di messaggi di errore ripetuti. Per risolvere il problema, riavviare macOS.
 
 <a name="Tips" />
 

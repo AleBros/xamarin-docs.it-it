@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 4c01022e01c5ba6a9099b88e99558bd7d7ce728d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524552"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119637"
 ---
 # <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
@@ -68,36 +68,36 @@ using Com.Company.Package;
 
 Quando si associa una libreria Android esistente, è necessario tenere presente quanto segue:
 
-* **Sono presenti dipendenze esterne per la libreria?** &ndash;Tutte le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Novell. Android come **ReferenceJar** o come **EmbeddedReferenceJar**. Tutti gli assembly nativi devono essere aggiunti al progetto di associazione come **EmbeddedNativeLibrary**.  
+- **Sono presenti dipendenze esterne per la libreria?** &ndash;Tutte le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Novell. Android come **ReferenceJar** o come **EmbeddedReferenceJar**. Tutti gli assembly nativi devono essere aggiunti al progetto di associazione come **EmbeddedNativeLibrary**.  
 
-* **Quale versione dell'API Android è la destinazione della libreria Android?** &ndash;Non è possibile effettuare il "downgrade" del livello API Android; Verificare che il progetto di binding Novell. Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
+- **Quale versione dell'API Android è la destinazione della libreria Android?** &ndash;Non è possibile effettuare il "downgrade" del livello API Android; Verificare che il progetto di binding Novell. Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
 
-* **Quale versione del JDK è stata usata per compilare la libreria?** &ndash;È possibile che si verifichino errori di binding se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Novell. Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Novell. Android.
+- **Quale versione del JDK è stata usata per compilare la libreria?** &ndash;È possibile che si verifichino errori di binding se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Novell. Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Novell. Android.
 
 
 ## <a name="build-actions"></a>Azioni di compilazione
 
 Quando si crea una libreria di binding, si impostano le *azioni di compilazione* nel file con **estensione jar** o. File AAR incorporati nel progetto &ndash; di libreria dei binding ogni azione di compilazione determina il modo in cui il file con **estensione jar** o. Il file AAR verrà incorporato nella libreria dei binding (o a cui fa riferimento). Nell'elenco seguente sono riepilogate le azioni di compilazione seguenti:
 
-* `EmbeddedJar`Incorpora il file con **estensione jar** nella dll della libreria di associazioni risultante come risorsa incorporata. &ndash; Si tratta dell'azione di compilazione più semplice e usata più di frequente. Usare questa opzione quando si vuole che il file con **estensione jar** venga compilato automaticamente nel codice byte e incluso in un pacchetto nella libreria dei binding.
+- `EmbeddedJar`Incorpora il file con **estensione jar** nella dll della libreria di associazioni risultante come risorsa incorporata. &ndash; Si tratta dell'azione di compilazione più semplice e usata più di frequente. Usare questa opzione quando si vuole che il file con **estensione jar** venga compilato automaticamente nel codice byte e incluso in un pacchetto nella libreria dei binding.
 
-* `InputJar`Non incorpora il file con **estensione jar** nella libreria dei binding risultante. &ndash; DLL. Libreria di binding. La DLL avrà una dipendenza da this **. jar** in fase di esecuzione. Utilizzare questa opzione quando non si desidera includere il file con **estensione jar** nella libreria dei binding (ad esempio, per motivi di licenza). Se si usa questa opzione, è necessario assicurarsi che il file input **. jar** sia disponibile nel dispositivo che esegue l'app.
+- `InputJar`Non incorpora il file con **estensione jar** nella libreria dei binding risultante. &ndash; DLL. Libreria di binding. La DLL avrà una dipendenza da this **. jar** in fase di esecuzione. Utilizzare questa opzione quando non si desidera includere il file con **estensione jar** nella libreria dei binding (ad esempio, per motivi di licenza). Se si usa questa opzione, è necessario assicurarsi che il file input **. jar** sia disponibile nel dispositivo che esegue l'app.
 
-* `LibraryProjectZip`&ndash; Incorpora un oggetto. File AAR nella libreria dei binding risultante. DLL. Questa operazione è simile a EmbeddedJar, ad eccezione del fatto che è possibile accedere alle risorse (oltre al codice) nell'associazione. File AAR. Utilizzare questa opzione se si desidera incorporare un. AAR nella libreria dei binding.
+- `LibraryProjectZip`&ndash; Incorpora un oggetto. File AAR nella libreria dei binding risultante. DLL. Questa operazione è simile a EmbeddedJar, ad eccezione del fatto che è possibile accedere alle risorse (oltre al codice) nell'associazione. File AAR. Utilizzare questa opzione se si desidera incorporare un. AAR nella libreria dei binding.
 
-* `ReferenceJar`Specifica un file di riferimento. jar: un file di riferimento. jar è un file con estensione jar. &ndash; I file AAR dipendono da. Questo riferimento **. jar** viene usato solo per soddisfare le dipendenze in fase di compilazione. Quando si usa questa azione di compilazione C# , le associazioni non vengono create per il file Reference **. jar** e non sono incorporate nella libreria dei binding risultante. DLL. Usare questa opzione quando si renderà una libreria di binding per il file di riferimento **. jar** ma non ancora eseguita. Questa azione di compilazione è utile per la creazione di pacchetti di più file con **estensione jar**(e/o. AARs) in più librerie di binding interdipendenti.
+- `ReferenceJar`Specifica un file di riferimento. jar: un file di riferimento. jar è un file con estensione jar. &ndash; I file AAR dipendono da. Questo riferimento **. jar** viene usato solo per soddisfare le dipendenze in fase di compilazione. Quando si usa questa azione di compilazione C# , le associazioni non vengono create per il file Reference **. jar** e non sono incorporate nella libreria dei binding risultante. DLL. Usare questa opzione quando si renderà una libreria di binding per il file di riferimento **. jar** ma non ancora eseguita. Questa azione di compilazione è utile per la creazione di pacchetti di più file con **estensione jar**(e/o. AARs) in più librerie di binding interdipendenti.
 
-* `EmbeddedReferenceJar`Incorpora un file Reference **. jar** nella libreria dei binding risultante. &ndash; DLL. Utilizzare questa azione di compilazione quando si desidera creare C# binding per il file di input **. jar** (o. AAR) e tutti i relativi file di riferimento **. jar**nella libreria dei binding.
+- `EmbeddedReferenceJar`Incorpora un file Reference **. jar** nella libreria dei binding risultante. &ndash; DLL. Utilizzare questa azione di compilazione quando si desidera creare C# binding per il file di input **. jar** (o. AAR) e tutti i relativi file di riferimento **. jar**nella libreria dei binding.
 
-* `EmbeddedNativeLibrary`Incorpora un oggetto nativo **. quindi** nell'associazione. &ndash; Questa azione di compilazione viene utilizzata per i file **. so** necessari per il file con estensione **jar** associato. Potrebbe essere necessario caricare manualmente la libreria **. so** prima di eseguire il codice dalla libreria Java. Questa procedura è descritta di seguito.
+- `EmbeddedNativeLibrary`Incorpora un oggetto nativo **. quindi** nell'associazione. &ndash; Questa azione di compilazione viene utilizzata per i file **. so** necessari per il file con estensione **jar** associato. Potrebbe essere necessario caricare manualmente la libreria **. so** prima di eseguire il codice dalla libreria Java. Questa procedura è descritta di seguito.
 
 Queste azioni di compilazione sono descritte più dettagliatamente nelle guide seguenti.
 
 Inoltre, le azioni di compilazione seguenti consentono di importare la documentazione dell'API Java e di convertirle nella C# documentazione XML:
 
-* `JavaDocJar`viene usato per puntare al file jar di archivio Javadoc per una libreria Java conforme a uno stile del pacchetto Maven ( `FOOBAR-javadoc**.jar**`in genere).
-* `JavaDocIndex`viene usato per puntare al `index.html` file all'interno della documentazione di riferimento dell'API HTML.
-* `JavaSourceJar`viene usato per completare `JavaDocJar`, prima di generare Javadoc dalle origini e quindi trattare i risultati come `JavaDocIndex`, per una libreria Java conforme a uno stile del pacchetto Maven (in genere `FOOBAR-sources**.jar**`).
+- `JavaDocJar`viene usato per puntare al file jar di archivio Javadoc per una libreria Java conforme a uno stile del pacchetto Maven ( `FOOBAR-javadoc**.jar**`in genere).
+- `JavaDocIndex`viene usato per puntare al `index.html` file all'interno della documentazione di riferimento dell'API HTML.
+- `JavaSourceJar`viene usato per completare `JavaDocJar`, prima di generare Javadoc dalle origini e quindi trattare i risultati come `JavaDocIndex`, per una libreria Java conforme a uno stile del pacchetto Maven (in genere `FOOBAR-sources**.jar**`).
 
 La documentazione dell'API deve essere il valore predefinito di doclet da Java8, Java7 o java6 SDK (sono tutti formati diversi) o lo stile DroidDoc.
 

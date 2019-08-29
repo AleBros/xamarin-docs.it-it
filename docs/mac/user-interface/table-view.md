@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b5ffa884def5acb01dc07ce39a2189e2570209c3
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620581"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120836"
 ---
 # <a name="table-views-in-xamarinmac"></a>Viste tabella in Novell. Mac
 
@@ -40,8 +40,8 @@ Una vista tabella non archivia i propri dati, ma si basa su un'origine dati (`NS
 
 Quando si creano viste tabella, Apple suggerisce quanto segue:
 
-* Consente all'utente di ordinare la tabella facendo clic su un'intestazione di colonna.
-* Creare intestazioni di colonna che sono sostantivi o frasi sostantivi brevi che descrivono i dati visualizzati in tale colonna.
+- Consente all'utente di ordinare la tabella facendo clic su un'intestazione di colonna.
+- Creare intestazioni di colonna che sono sostantivi o frasi sostantivi brevi che descrivono i dati visualizzati in tale colonna.
 
 Per altre informazioni, vedere la sezione [visualizzazioni contenuto](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) delle [linee guida per l'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)di Apple.
 

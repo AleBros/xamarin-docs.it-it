@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: a6077029a82577cccbf060f14cdd7586c2793a94
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d6440518149a4fab8e9667a2a41d3df818e2a879
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529261"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120531"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Uso di CocosSharp in xamarin. Forms
 
@@ -28,9 +28,9 @@ _CocosSharp può essere utilizzato per aggiungere la forma esatta, l'immagine e 
 
 CocosSharp è una tecnologia potente e flessibile per la visualizzazione di grafica, la lettura dell'input tocco, la riproduzione di audio e la gestione dei contenuti. Questa guida illustra come aggiungere CocosSharp a un'applicazione xamarin. Forms. Viene descritto come il seguente:
 
-* [Che cos'è CocosSharp?](#what)
-* [Aggiunta di pacchetti CocosSharp Nuget](#nuget)
-* [Procedura dettagliata: Aggiunta di CocosSharp a un'app Novell. Forms](#add)
+- [Che cos'è CocosSharp?](#what)
+- [Aggiunta di pacchetti CocosSharp Nuget](#nuget)
+- [Procedura dettagliata: Aggiunta di CocosSharp a un'app Novell. Forms](#add)
 
 <a name="what" />
 
@@ -39,11 +39,11 @@ CocosSharp è una tecnologia potente e flessibile per la visualizzazione di graf
 [CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) è un motore di gioco open source che è disponibile nella piattaforma Xamarin.
 CocosSharp è una libreria di runtime efficiente che include le funzionalità seguenti:
 
-* Rendering di immagini con `CCSprite` la classe
-* Rendering delle forme usando `CCDrawNode` la classe
-* Logica di ogni frame che usa `CCNode.Schedule` la classe
-* Gestione dei contenuti (caricamento e scaricamento di risorse, ad esempio file con estensione png) con il`CCTextureCache`
-* Animazioni con la `CCAction` classe
+- Rendering di immagini con `CCSprite` la classe
+- Rendering delle forme usando `CCDrawNode` la classe
+- Logica di ogni frame che usa `CCNode.Schedule` la classe
+- Gestione dei contenuti (caricamento e scaricamento di risorse, ad esempio file con estensione png) con il`CCTextureCache`
+- Animazioni con la `CCAction` classe
 
 Obiettivo principale di CocosSharp consiste nel semplificare la creazione di giochi 2D multipiattaforma; Tuttavia, può essere anche un'aggiunta importante per le applicazioni Xamarin Form. Poiché i giochi richiedono in genere un rendering efficiente e un controllo preciso su oggetti visivi, CocosSharp è utilizzabile per aggiungere potenti funzionalità di visualizzazione e gli effetti alle applicazioni non di gioco.
 
@@ -273,9 +273,9 @@ Il `DesignResolution` rappresenta la larghezza e altezza dell'area di CocosSharp
 
 Il diagramma precedente visualizza le dimensioni in pixel all'esterno della schermata di testo di colore nero. Unità vengono visualizzate all'interno del diagramma nel testo bianco. Ecco alcuni dettagli importanti visualizzati sopra:
 
-* L'origine dello schermo CocosSharp è in basso a sinistra. Spostandosi quindi verso destra aumenta il valore di X, nonché spostando verso l'alto il valore Y. Si noti che il valore Y è invertito rispetto ad alcuni altri motori di layout 2D, in cui (0,0) è in alto a sinistra dell'area di disegno.
-* Il comportamento predefinito di CocosSharp consiste nel mantenere le proporzioni della relativa visualizzazione. Poiché la prima riga della griglia è maggiore dell'altezza, CocosSharp non riempie l'intera larghezza della cella, come mostrato dal rettangolo bianco punteggiato. Questo comportamento può essere modificato, come descritto nel [Guida per la gestione di più risoluzioni in CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md).
-* In questo esempio, si manterrà CocosSharp un'area di visualizzazione di 100 unità di larghezza e altezza indipendentemente dalle dimensioni e le proporzioni del dispositivo. Ciò significa che codice può presupporre che X = 100 è rappresentato dal associato all'estrema destra di CocosSharp visualizzare, layout mantenendo coerenti in tutti i dispositivi.
+- L'origine dello schermo CocosSharp è in basso a sinistra. Spostandosi quindi verso destra aumenta il valore di X, nonché spostando verso l'alto il valore Y. Si noti che il valore Y è invertito rispetto ad alcuni altri motori di layout 2D, in cui (0,0) è in alto a sinistra dell'area di disegno.
+- Il comportamento predefinito di CocosSharp consiste nel mantenere le proporzioni della relativa visualizzazione. Poiché la prima riga della griglia è maggiore dell'altezza, CocosSharp non riempie l'intera larghezza della cella, come mostrato dal rettangolo bianco punteggiato. Questo comportamento può essere modificato, come descritto nel [Guida per la gestione di più risoluzioni in CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md).
+- In questo esempio, si manterrà CocosSharp un'area di visualizzazione di 100 unità di larghezza e altezza indipendentemente dalle dimensioni e le proporzioni del dispositivo. Ciò significa che codice può presupporre che X = 100 è rappresentato dal associato all'estrema destra di CocosSharp visualizzare, layout mantenendo coerenti in tutti i dispositivi.
 
 #### <a name="ccdrawnode-details"></a>Dettagli CCDrawNode
 

@@ -5,12 +5,12 @@ ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
-ms.openlocfilehash: 15136cdb201b9c99df4c8db35ab595e5e016ea07
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4612f5d04da4ba82127d37abfa41dd1dff2985bc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528859"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120014"
 ---
 # <a name="net-embedding-on-android"></a>Incorporamento .NET in Android
 
@@ -101,4 +101,4 @@ Informazioni su come [effettuare chiamate C# tra e Java](callbacks.md).
 
 ## <a name="samples"></a>Esempi
 
-* [App di esempio Weather](https://github.com/jamesmontemagno/embeddinator-weather)
+- [App di esempio Weather](https://github.com/jamesmontemagno/embeddinator-weather)

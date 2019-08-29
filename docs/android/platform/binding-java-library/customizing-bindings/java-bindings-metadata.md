@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 05b8be21373930ae2b501c84757b7be11f794aa9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524615"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119848"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
@@ -79,9 +79,9 @@ Consente di passare al documento **Metadata. XML** in modo più dettagliato.
 Come abbiamo già imparato, il file **Metadata. XML** viene usato dal generatore di binding per influenzare la creazione dell'assembly di associazione.
 Il formato dei metadati usa la sintassi [XPath](https://www.w3.org/TR/xpath/) ed è quasi identico ai *metadati GAPI* descritti nella Guida ai [metadati di GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Questa implementazione è quasi un'implementazione completa di XPath 1,0 e pertanto supporta gli elementi dello standard 1,0. Questo file è un potente meccanismo basato su XPath per modificare, aggiungere, nascondere o spostare qualsiasi elemento o attributo nel file dell'API. Tutti gli elementi Rule nella specifica dei metadati includono un attributo path per identificare il nodo a cui deve essere applicata la regola. Le regole vengono applicate nell'ordine seguente:
 
-* **Aggiungi nodo** &ndash; Accoda un nodo figlio al nodo specificato dall'attributo path.
-* **attr** &ndash; Imposta il valore di un attributo dell'elemento specificato dall'attributo path.
-* **Remove-node** &ndash; Rimuove i nodi corrispondenti a un XPath specificato.
+- **Aggiungi nodo** &ndash; Accoda un nodo figlio al nodo specificato dall'attributo path.
+- **attr** &ndash; Imposta il valore di un attributo dell'elemento specificato dall'attributo path.
+- **Remove-node** &ndash; Rimuove i nodi corrispondenti a un XPath specificato.
 
 Di seguito è riportato un esempio di file **Metadata. XML** :
 
@@ -248,8 +248,8 @@ Modifica il tipo restituito di un metodo. Questa operazione non modifica l'attri
 
 Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Novell. Android C# e la relativa capacità di generare classi wrapper. Le caratteristiche delle classi offuscate includono: 
 
-* Il nome della classe include **$** , ad esempio, **una classe $.**
-* Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**
+- Il nome della classe include **$** , ad esempio, **una classe $.**
+- Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**
 
 Questo frammento di codice è un esempio di come generare un tipo "non offuscato" C# :
 

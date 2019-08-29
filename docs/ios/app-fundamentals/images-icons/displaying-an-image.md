@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 2c69c995317d5121f203946cf1a4196bce9b4177
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643082"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120594"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in Novell. iOS
 
@@ -159,9 +159,9 @@ Poiché la `RenderMode` proprietà di un `UIImage` oggetto è di sola lettura, `
 
 Esistono tre possibili impostazioni per `UIImage.RenderMode` tramite l' `UIImageRenderingMode` enumerazione:
 
-* `AlwaysOriginal`: Impone il rendering dell'immagine come file di immagine di origine originale senza alcuna modifica.
-* `AlwaysTemplate`-Impone il rendering dell'immagine come immagine modello colorando i pixel con il colore specificato `Tint` .
-* `Automatic`-Esegue il rendering dell'immagine come modello o originale in base all'ambiente in cui viene usato. Se, ad esempio, l'immagine viene usata in `UIToolBar`un `UINavigationBar`oggetto `UITabBar` , `UISegmentControl` o verrà considerata come un modello.
+- `AlwaysOriginal`: Impone il rendering dell'immagine come file di immagine di origine originale senza alcuna modifica.
+- `AlwaysTemplate`-Impone il rendering dell'immagine come immagine modello colorando i pixel con il colore specificato `Tint` .
+- `Automatic`-Esegue il rendering dell'immagine come modello o originale in base all'ambiente in cui viene usato. Se, ad esempio, l'immagine viene usata in `UIToolBar`un `UINavigationBar`oggetto `UITabBar` , `UISegmentControl` o verrà considerata come un modello.
 
 ## <a name="adding-new-assets-collections"></a>Aggiunta di nuove raccolte di asset
 

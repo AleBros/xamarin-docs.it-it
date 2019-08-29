@@ -6,26 +6,26 @@ ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: df29a7f595973a0447899666838e21418ff69330
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d1d05c75b8026112e8b81c91144361b65ad3a8e0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650079"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120029"
 ---
 # <a name="getting-started-with-android"></a>Introduzione ad Android
 
 Oltre ai requisiti della Guida introduttiva a [Java](~/tools/dotnet-embedding/get-started/java/index.md) , è necessario anche:
 
-* [Novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
-* [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1,8
+- [Novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva
+- [Android Studio 3. x](https://developer.android.com/studio/index.html) con Java 1,8
 
 Come panoramica, viene:
 
-* Creare un C# progetto di libreria Android
-* Installare l'incorporamento .NET tramite NuGet
-* Eseguire l'incorporamento .NET nell'assembly della libreria Android
-* Usare il file AAR generato in un progetto Java in Android Studio
+- Creare un C# progetto di libreria Android
+- Installare l'incorporamento .NET tramite NuGet
+- Eseguire l'incorporamento .NET nell'assembly della libreria Android
+- Usare il file AAR generato in un progetto Java in Android Studio
 
 ## <a name="create-an-android-library-project"></a>Creare un progetto di libreria Android
 
@@ -151,7 +151,7 @@ Se questa configurazione non è presente, l'app si arresterà in modo anomalo al
 com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavailable>'. Assuming this is part of Fast Deployment. Exiting...
 ```
 
-## <a name="run-the-app"></a>Eseguire l'app
+## <a name="run-the-app"></a>Esecuzione dell'app
 
 All'avvio dell'app:
 
@@ -159,17 +159,17 @@ All'avvio dell'app:
 
 Si noti che cosa è successo qui:
 
-* È presente una C# classe, `HelloActivity`, che sottoclassi Java
-* Sono presenti file di risorse Android
-* Sono stati usati da Java in Android Studio
+- È presente una C# classe, `HelloActivity`, che sottoclassi Java
+- Sono presenti file di risorse Android
+- Sono stati usati da Java in Android Studio
 
 Per il corretto funzionamento di questo esempio, nell'APK finale sono configurati tutti gli elementi seguenti:
 
-* Novell. Android è configurato all'avvio dell'applicazione
-* Assembly .NET inclusi in **Asset/assembly**
-* Modifiche a **file AndroidManifest. XML** per C# le attività e così via.
-* Risorse e asset Android dalle librerie .NET
-* [Android Callable Wrapper](~/android/platform/java-integration/android-callable-wrappers.md) per qualsiasi `Java.Lang.Object` sottoclasse
+- Novell. Android è configurato all'avvio dell'applicazione
+- Assembly .NET inclusi in **Asset/assembly**
+- Modifiche a **file AndroidManifest. XML** per C# le attività e così via.
+- Risorse e asset Android dalle librerie .NET
+- [Android Callable Wrapper](~/android/platform/java-integration/android-callable-wrappers.md) per qualsiasi `Java.Lang.Object` sottoclasse
 
 Se si sta cercando una procedura dettagliata aggiuntiva, vedere il video seguente, che illustra l'incorporamento della [demo FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) di Charles Petzold in un progetto Android Studio:
 
@@ -223,8 +223,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-* `[Register]`è necessario per eseguire il mapping a un nome di pacchetto Java desiderato
-* `[Export]`è necessario per rendere un metodo visibile a Java
+- `[Register]`è necessario per eseguire il mapping a un nome di pacchetto Java desiderato
+- `[Export]`è necessario per rendere un metodo visibile a Java
 
 È possibile usare `ViewSubclass` in Java come segue:
 
@@ -243,18 +243,18 @@ L'incorporamento di un singolo assembly è semplice; Tuttavia, è molto più pro
 
 Questo causa un dilemma, poiché l'incorporamento di .NET deve includere molti tipi di file nell'AAR finale, ad esempio:
 
-* Asset Android
-* Risorse Android
-* Librerie native Android
-* Origine Java Android
+- Asset Android
+- Risorse Android
+- Librerie native Android
+- Origine Java Android
 
 È probabile che non si voglia includere questi file dalla libreria del supporto Android o Google Play Services nell'AAR, ma usare invece la versione ufficiale di Google in Android Studio.
 
 Ecco l'approccio consigliato:
 
-* Passare .NET incorporando qualsiasi assembly di cui si è proprietari (avere origine) e si vuole chiamare da Java
-* Passare .NET incorporando qualsiasi assembly necessario per asset Android, librerie native o risorse da
-* Aggiungere dipendenze Java come la libreria di supporto Android o la Google Play Services in Android Studio
+- Passare .NET incorporando qualsiasi assembly di cui si è proprietari (avere origine) e si vuole chiamare da Java
+- Passare .NET incorporando qualsiasi assembly necessario per asset Android, librerie native o risorse da
+- Aggiungere dipendenze Java come la libreria di supporto Android o la Google Play Services in Android Studio
 
 Quindi, il comando potrebbe essere:
 
@@ -277,11 +277,11 @@ dependencies {
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
-* [Callback in Android](~/tools/dotnet-embedding/android/callbacks.md)
-* [Ricerca preliminare per Android](~/tools/dotnet-embedding/android/index.md)
-* [Limitazioni dell'incorporamento di .NET](~/tools/dotnet-embedding/limitations.md)
-* [Aggiunta come contributo al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Codici di errore e descrizioni](~/tools/dotnet-embedding/errors.md)
+- [Callback in Android](~/tools/dotnet-embedding/android/callbacks.md)
+- [Ricerca preliminare per Android](~/tools/dotnet-embedding/android/index.md)
+- [Limitazioni dell'incorporamento di .NET](~/tools/dotnet-embedding/limitations.md)
+- [Aggiunta come contributo al progetto open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+- [Codici di errore e descrizioni](~/tools/dotnet-embedding/errors.md)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

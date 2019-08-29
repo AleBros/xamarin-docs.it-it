@@ -1,54 +1,54 @@
 ---
-title: Localizzazione di Android
-description: Questo documento presenta le funzionalità di localizzazione di Android SDK e come accedervi con Xamarin.
+title: Localizzazione Android
+description: In questo documento vengono presentate le funzionalità di localizzazione del Android SDK e viene illustrato come accedervi con Novell.
 ms.prod: xamarin
 ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f6a7f8859340dcc8e48b6a4e6f56847168f4b71e
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: c76eb8c6553768af68687ab6a45447a16775940e
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829757"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119144"
 ---
-# <a name="android-localization"></a>Localizzazione di Android
+# <a name="android-localization"></a>Localizzazione Android
 
-_Questo documento presenta le funzionalità di localizzazione di Android SDK e come accedervi con Xamarin._
+_In questo documento vengono presentate le funzionalità di localizzazione del Android SDK e viene illustrato come accedervi con Novell._
 
 ## <a name="android-platform-features"></a>Funzionalità della piattaforma Android
 
-In questa sezione vengono descritte le funzionalità di localizzazione principale di Android. Ignorare per il [nella sezione successiva](#basics) per visualizzare codice specifico ed esempi.
+Questa sezione descrive le principali funzionalità di localizzazione di Android. Passare alla [sezione successiva](#basics) per visualizzare codice ed esempi specifici.
 
 ### <a name="locale"></a>Impostazioni locali
 
-Gli utenti di scegliere la lingua nel **Impostazioni > Language & input**. Questa selezione determina la lingua visualizzata e impostazioni internazionali usate (ad es. per la data e formattazione dei numeri).
+Gli utenti scelgono la lingua in **impostazioni > lingua & input**. Questa selezione controlla sia la lingua visualizzata sia le impostazioni internazionali usate (ad esempio, per la formattazione di data e numero).
 
-Le impostazioni locali correnti è possibile eseguire query tramite il contesto corrente `Resources`:
+Le impostazioni locali correnti possono essere sottoposte a query tramite il `Resources`contesto corrente:
 
 ```csharp
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
-Questo valore sarà un identificatore delle impostazioni locali che contiene un codice di lingua e un codice impostazioni locali, separati da un carattere di sottolineatura. Per riferimento, ecco una [elenco delle impostazioni locali di Java](https://www.oracle.com/technetwork/java/javase/locales-137662.html) e [impostazioni locali supportato da Android tramite StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+Questo valore sarà un identificatore delle impostazioni locali che contiene un codice di lingua e un codice delle impostazioni locali, separati da un carattere di sottolineatura. Per riferimento, di seguito è riportato un [elenco delle impostazioni locali Java e delle](https://www.oracle.com/technetwork/java/javase/locales-137662.html) [impostazioni locali supportate da Android tramite StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Ecco alcuni esempi comuni:
 
-* `en_US` per l'inglese (Stati Uniti)
-* `es_ES` per lo spagnolo (Spagna)
-* `ja_JP` per il giapponese (Giappone)
-* `zh_CN` per il cinese (Cina)
-* `zh_TW` per il cinese (Taiwan)
-* `pt_PT` per il portoghese (Portogallo)
-* `pt_BR` per il portoghese (Brasile)
+- `en_US`per l'inglese (Stati Uniti)
+- `es_ES`per spagnolo (Spagna)
+- `ja_JP`per giapponese (Giappone)
+- `zh_CN`Cinese (Cina)
+- `zh_TW`per il cinese (Taiwan)
+- `pt_PT`per portoghese (Portogallo)
+- `pt_BR`per portoghese (Brasile)
 
-### <a name="localechanged"></a>LOCALE_CHANGED
+### <a name="locale_changed"></a>LOCALE_CHANGED
 
 Android genera `android.intent.action.LOCALE_CHANGED` quando l'utente modifica la selezione della lingua.
 
-Le attività possono scegliere di gestire questa situazione impostando il `android:configChanges` attributo sull'attività, simile al seguente:
+Le attività possono scegliere di gestire questa impostazione impostando l' `android:configChanges` attributo sull'attività, come indicato di seguito:
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
@@ -57,43 +57,43 @@ Le attività possono scegliere di gestire questa situazione impostando il `andro
 
 <a name="basics" />
 
-## <a name="internationalization-basics-in-android"></a>Nozioni sull'internazionalizzazione in Android
+## <a name="internationalization-basics-in-android"></a>Nozioni fondamentali sull'internazionalizzazione in Android
 
-Strategia di localizzazione di Android include le parti principali seguenti:
+La strategia di localizzazione di Android presenta le parti principali seguenti:
 
-- Cartelle di risorse per contenere le stringhe localizzate, immagini e altre risorse.
+- Cartelle delle risorse che contengono stringhe localizzate, immagini e altre risorse.
 
-- `GetText` metodo, che viene usato per recuperare le stringhe localizzate nel codice
+- `GetText`Metodo, usato per recuperare le stringhe localizzate nel codice
 
-- `@string/id` nei file AXML, per inserire automaticamente le stringhe localizzate nei layout.
+- `@string/id`nei file AXML, per inserire automaticamente le stringhe localizzate nei layout.
 
-### <a name="resource-folders"></a>Cartelle di risorse
+### <a name="resource-folders"></a>Cartelle delle risorse
 
-Le applicazioni Android gestiscono la maggior parte dei contenuti in cartelle di risorse, ad esempio:
+Le applicazioni Android gestiscono la maggior parte del contenuto nelle cartelle delle risorse, ad esempio:
 
-* **layout** -contiene i file di layout AXML.
-* **drawable** -contiene le immagini e altre risorse drawable.
-* **i valori** -contiene le stringhe.
-* **Raw** -contiene i file di dati.
+- **layout** : contiene i file di layout di AXML.
+- **disegnatore** : contiene immagini e altre risorse ricavabili.
+- **values** : contiene le stringhe.
+- **RAW** : contiene file di dati.
 
-La maggior parte degli sviluppatori hanno familiari con l'uso di **dpi** suffissi sulle **drawable** directory per fornire più versioni di un'immagine, consentendo di Android scegliere la versione corretta per ogni dispositivo. Lo stesso meccanismo viene usato per fornire più traduzioni di linguaggio aggiungendo le directory delle risorse con gli identificatori di lingua e impostazioni cultura.
+La maggior parte degli sviluppatori ha già familiarità con l'uso dei suffissi **dpi** nella directory che è possibile **creare** per fornire più versioni di un'immagine, consentendo a Android di scegliere la versione corretta per ogni dispositivo. Lo stesso meccanismo viene usato per fornire traduzioni a più lingue tramite il suffisso delle directory di risorse con identificatori di lingua e impostazioni cultura.
 
-![Screenshot delle cartelle drawable/le risorse e le risorse e i valori per più identificatori relative alla lingua](localization-images/resources.png)
+![Screenshot delle cartelle risorse/riportabili e di risorse/valori per più identificatori culturali](localization-images/resources.png)
 
 > [!NOTE]
-> Quando si specifica un linguaggio di livello superiore, ad esempio `es` solo due caratteri sono richiesti; tuttavia, quando si specifica un'impostazione internazionale completa, il formato del nome directory richiede un trattino e una minuscola **r** per separare le due parti, ad esempio **pt rBR** oppure **zh-salti riga**. Confrontare questo con il valore restituito nel codice, che è un carattere di sottolineatura (ad es. `pt_BR`). Entrambi gli elementi sono diversi da quello .NET `CultureInfo` , utilizzato dalla classe che dispone di un trattino solo (ad es. `pt-BR`). Quando si lavora in piattaforme Xamarin, tenere presente queste differenze.
+> Quando si specifica una lingua di primo livello `es` , come sono necessari solo due caratteri; tuttavia, quando si specificano le impostazioni locali complete, il formato del nome di directory richiede un trattino e una **r** minuscola per separare le due parti, ad esempio **PT-rBR** o  **ZH-rCN**. Confrontare questo valore con il valore restituito nel codice, che presenta un carattere di sottolineatura, ad esempio `pt_BR`). Entrambi sono diversi dal valore usato dalla classe .NET `CultureInfo` , che ha solo un trattino (ad esempio, `pt-BR`). Tenere presenti queste differenze quando si lavora su piattaforme Novell.
 
-#### <a name="stringsxml-file-format"></a>Formato di file Strings. Xml
+#### <a name="stringsxml-file-format"></a>Formato file Strings. XML
 
-Localizzato **valori** directory (ad es. **i valori-es** oppure **valori: pt-rBR**) deve contenere un file denominato **Strings. XML** che conterrà il testo tradotto per tali impostazioni locali.
+Una directory di **valori** localizzati, ad esempio **values-es** o **values-PT-rBR**) deve contenere un file denominato **Strings. XML** che conterrà il testo tradotto per le impostazioni locali.
 
-Ogni stringa traducibile è un elemento XML con la risorsa con ID specificato come il `name` attributo e la stringa tradotta come valore:
+Ogni stringa traducibile è un elemento XML con l'ID risorsa specificato come `name` attributo e la stringa tradotta come valore:
 
 ```xml
 <string name="app_name">TaskyL10n</string>
 ```
 
-È necessario eseguire l'escape in base alle normali regole XML e il `name` deve essere un ID di risorsa di Android valido (senza spazi o trattini). Di seguito è riportato un esempio del file di stringhe (in inglese) predefinito per un esempio:
+È necessario eseguire l' `name` Escape in base alle normali regole XML e deve essere un ID di risorsa Android valido (senza spazi o trattini). Di seguito è riportato un esempio del file di stringhe predefinito (Inglese) per l'esempio:
 
 **values/Strings.xml**
 
@@ -108,7 +108,7 @@ Ogni stringa traducibile è un elemento XML con la risorsa con ID specificato co
 </resources>
 ```
 
-La directory spagnolo **valori-es** contiene un file con lo stesso nome (**Strings. XML**) che contiene le traduzioni:
+La directory spagnola **values-es** contiene un file con lo stesso nome (**Strings. XML**) che contiene le traduzioni:
 
 **values-es/Strings.xml**
 
@@ -124,13 +124,13 @@ La directory spagnolo **valori-es** contiene un file con lo stesso nome (**Strin
 </resources>
 ```
 
-![Schermata di più valori cartelle, ognuno dei quali contiene un file Strings. Xml](localization-images/values.png)
+![Screenshot di più cartelle di valori, ognuno dei quali contiene un file Strings. XML](localization-images/values.png)
 
-Con la configurazione di file di stringhe, i valori tradotti sono reperibile in entrambi i layout e codice.
+Con i file di stringhe impostati, è possibile fare riferimento ai valori tradotti sia nel layout che nel codice.
 
-### <a name="axml-layout-files"></a>File di Layout AXML
+### <a name="axml-layout-files"></a>File di layout di AXML
 
-Per fare riferimento a stringhe localizzate nei file di layout, usare il `@string/id` sintassi. Questo frammento di codice XML nell'esempio viene illustrato `text` proprietà impostate con localizzate (altri attributi sono stati omessi) ID risorsa:
+Per fare riferimento alle stringhe localizzate nei file di `@string/id` layout, usare la sintassi. Questo frammento di codice XML dell' `text` esempio mostra le proprietà impostate con gli ID di risorsa localizzati (altri attributi sono stati omessi):
 
 ```xml
 <TextView
@@ -143,24 +143,24 @@ Per fare riferimento a stringhe localizzate nei file di layout, usare il `@strin
     ... />
 ```
 
-### <a name="gettext-method"></a>GetText (metodo)
+### <a name="gettext-method"></a>Metodo GetText
 
-Per recuperare le stringhe tradotte nel codice, usare il `GetText` (metodo) e passare l'ID risorsa:
+Per recuperare le stringhe tradotte nel codice, `GetText` usare il metodo e passare l'ID risorsa:
 
 ```csharp
 var cancelText = Resources.GetText (Resource.String.taskcancel);
 ```
 
-#### <a name="quantity-strings"></a>Stringhe di quantità
+#### <a name="quantity-strings"></a>Quantità stringhe
 
-Risorse stringa Android consentono anche di creare *stringhe di quantità* che permette ai traduttori fornire traduzioni diverse per quantità diverse, ad esempio:
+Le risorse di tipo stringa Android consentono inoltre di creare *stringhe di quantità* che consentono ai traduttori di fornire traduzioni diverse per quantità diverse, ad esempio:
 
-* "Si è a sinistra di 1 attività".
-* "Esistono 2 attività ancora da eseguire."
+- "C'è 1 attività a sinistra".
+- "Ci sono 2 attività ancora da fare".
 
-(anziché un oggetto generico "There are a sinistra all'attività n").
+(invece di un generico "ci sono n attività rimaste").
 
-Nel **Strings. Xml**
+In **Strings. XML**
 
 ```xml
 <plurals name="numberOfTasks">
@@ -174,76 +174,76 @@ Nel **Strings. Xml**
  </plurals>
 ```
 
-Per eseguire il rendering di usare la stringa completa il `GetQuantityString` , passando l'ID di risorsa e il valore da visualizzare (che viene passato due volte). Il secondo parametro è utilizzato da Android per determinare *quale* `quantity` stringa da usare, il terzo parametro è il valore di sostituzione effettivamente nella stringa (entrambe sono necessarie).
+Per eseguire il rendering della stringa completa `GetQuantityString` , usare il metodo, passando l'ID risorsa e il valore da visualizzare (che viene passato due volte). Il secondo parametro viene usato da Android per determinare *quale* `quantity` stringa usare, il terzo parametro è il valore effettivamente sostituito nella stringa (sono necessari entrambi).
 
 ```csharp
 var translated = Resources.GetQuantityString (
                     Resource.Plurals.numberOfTasks, taskcount, taskcount);`
 ```
 
-Valido `quantity` le opzioni sono:
+Le `quantity` opzioni valide sono:
 
-* zero
-* one
-* two
-* alcuni
-* many
-* altro
+- zero
+- one
+- two
+- pochi
+- many
+- altro
 
-Descritto più dettagliatamente la [documentazione Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se una determinata lingua non richiede gestione 'speciale', quelli `quantity` stringhe verranno ignorate (in inglese, ad esempio, utilizza solo `one` e `other`; specificando un `zero` stringa non ha alcun effetto, non verrà utilizzato).
+Sono descritte più dettagliatamente nella documentazione di [Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se una determinata lingua non richiede la gestione "speciale", le `quantity` stringhe verranno ignorate. ad esempio, in inglese viene `one` usato `other`solo e; `zero` la specifica di una stringa non avrà alcun effetto, non verrà usata.
 
 ### <a name="images"></a>Immagini
 
-Le immagini localizzate seguono le stesse regole come file di stringhe: tutte le immagini di cui viene fatto riferimento nell'applicazione devono essere inserite in **drawable** directory pertanto non c'è un fallback.
+Le immagini localizzate seguono le stesse regole dei file di stringhe: tutte le immagini a cui viene fatto riferimento nell'applicazione devono essere inserite in directory di cui è possibile **creare** un fallback.
 
-Immagini specifiche delle impostazioni locali devono quindi trovarsi nel cartelle drawable completo, ad esempio **drawable-es** oppure **drawable Giappone** (identificatori di dpi possono anche essere aggiunto).
+Le immagini specifiche delle impostazioni locali devono quindi essere posizionate in cartelle ricavabili qualificate, ad esempio **disegnatore-es** o **Disegnatore-ja** (gli identificatori DPI possono essere aggiunti).
 
-In questo screenshot, quattro immagini vengono salvate nel **drawable** directory, ma solo uno **flag.png**, sia localizzata copie in altre directory.
+In questa schermata, le quattro immagini vengono salvate nella directory di cui è stata creata la **traccia** , ma solo una, **flag. png**, contiene copie localizzate in altre directory.
 
-![Schermata di più cartelle drawable, ognuno dei quali contiene uno o più file con estensione png localizzato](localization-images/drawable.png)
+![Screenshot di più cartelle che contengono uno o più file con estensione png localizzati](localization-images/drawable.png)
 
 
 #### <a name="other-resource-types"></a>Altri tipi di risorse
 
-È anche possibile fornire altri tipi di alternative, risorse specifiche della lingua, inclusi i layout, animazioni e i file non elaborati. Questo significa che è possibile fornire un layout di schermata specifica per uno o più delle lingue di destinazione, ad esempio è possibile creare un layout in modo specifico per il tedesco che consente di etichette di testo molto lunghi.
+È anche possibile fornire altri tipi di risorse alternative specifiche del linguaggio, tra cui layout, animazioni e file non elaborati. Ciò significa che è possibile fornire un layout di schermata specifico per una o più lingue di destinazione, ad esempio è possibile creare un layout specifico per il tedesco che consente etichette di testo molto lunghe.
 
-Ha introdotto il supporto per Android 4.2 [lingue destra-sinistra (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se si imposta l'impostazione dell'applicazione `android:supportsRtl="true"`. Il qualificatore delle risorse `"ldrtl"` possono essere inclusi in un nome di directory per contenere i layout personalizzati che sono progettati per la visualizzazione destra-sinistra.
+Android 4,2 ha introdotto il supporto per le [lingue da destra a sinistra (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se si `android:supportsRtl="true"`imposta l'impostazione dell'applicazione. Il qualificatore `"ldrtl"` di risorsa può essere incluso in un nome di directory per contenere layout personalizzati progettati per la visualizzazione RTL.
 
-Per ulteriori informazioni sulla denominazione directory delle risorse e del fallback, vedere la documentazione di Android [offrire risorse alternative](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+Per altre informazioni sulla denominazione e sul fallback delle directory delle risorse, vedere la documentazione di Android per [fornire risorse alternative](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### <a name="app-name"></a>Nome app
 
-Il nome dell'applicazione è semplice da localizzare utilizzando un `@string/id` in per il `MainLauncher` attività:
+Il nome dell'applicazione è facile da localizzare usando un `@string/id` in per l' `MainLauncher` attività:
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
     ConfigurationChanges =  ConfigChanges.Orientation | ConfigChanges.Locale)]
 ```
 
-### <a name="right-to-left-rtl-languages"></a>Lingue destra-sinistra (RTL)
+### <a name="right-to-left-rtl-languages"></a>Lingue da destra a sinistra (RTL)
 
-Android 4.2 e versioni successive fornisce supporto completo per i layout da destra a sinistra, descritti dettagliatamente nel [blog di supporto da destra a sinistra Native](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
+Android 4,2 e versioni successive offrono il supporto completo per i layout RTL, descritti in dettaglio nel [Blog nativo del supporto di RTL](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
-Quando si usa Android 4.2 (livello API 17) e l'allineamento più recente, i valori possono essere specificati con `start` e `end` invece di `left` e `right` (ad esempio `android:paddingStart`). Sono disponibili anche nuove API, ad esempio `LayoutDirection`, `TextDirection`, e `TextAlignment` per la creazione di schermate adattabili per i lettori da destra a sinistra.
+Quando si usa Android 4,2 (livello API 17) e versioni successive, è possibile specificare i `start` valori di allineamento `left` con `right` e `end` invece di `android:paddingStart`e (ad esempio). Sono inoltre disponibili nuove API, `LayoutDirection`ad `TextDirection`esempio, `TextAlignment` e, per facilitare la compilazione di schermate adatte per i lettori RTL.
 
-La schermata seguente mostra le [localizzata **Tasky** esempio](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in arabo:
+Lo screenshot seguente illustra l' [esempio di **attività** localizzate](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in arabo:
 
 [![Screenshot dell'app Tasky in arabo](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
-L'esempio di screenshot seguente mostra le [localizzata **Tasky** esempio](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in ebraico:
+Lo screenshot seguente mostra l' [esempio di **attività** localizzato](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in ebraico:
 
 [![Screenshot dell'app Tasky in ebraico](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
-Testo da destra a sinistra è localizzato usando **Strings. XML** file nello stesso modo come testo di conservazione a lungo termine.
+Il testo RTL viene localizzato utilizzando i file **Strings. XML** in modo analogo al testo ltr.
 
 ## <a name="testing"></a>Test
 
-Assicurarsi di testare completamente le impostazioni locali predefinite. L'applicazione viene interrotta se non è possibile caricare le risorse predefinite per qualche motivo (ad esempio sono mancanti).
+Assicurarsi di testare accuratamente le impostazioni locali predefinite. L'applicazione si arresterà in modo anomalo se non è possibile caricare le risorse predefinite per qualche motivo, ovvero mancanti.
 
-### <a name="emulator-testing"></a>Emulatore di test
+### <a name="emulator-testing"></a>Test dell'emulatore
 
-Fare riferimento a Google [test in un emulatore Android](https://developer.android.com/guide/topics/resources/localization.html#testing) per istruzioni su come impostare un emulatore per impostazioni locali specifiche utilizzando la shell ADB.
+Per istruzioni su come impostare un emulatore per le impostazioni locali specifiche usando la shell ADB, vedere la sezione test di Google [in una emulatore Android](https://developer.android.com/guide/topics/resources/localization.html#testing) .
 
 ```shell
 adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
@@ -251,22 +251,22 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 
 ### <a name="device-testing"></a>Test del dispositivo
 
-Per eseguire il test in un dispositivo, modificare la lingua nel **impostazioni** app.
+Per eseguire il test in un dispositivo, modificare la lingua nell'app **Impostazioni** .
 
 > [!TIP]
-> Prendere nota delle icone e del percorso delle voci di menu in modo che è possibile ripristinare la lingua per l'impostazione originale.
+> Prendere nota delle icone e della posizione delle voci di menu in modo da poter ripristinare l'impostazione originale della lingua.
 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo tratta i fondamenti della localizzazione di applicazioni Android tramite la gestione delle risorse predefiniti. Altre informazioni su i18n e L10n per iOS, Android e App multipiattaforma (tra cui xamarin. Forms) nelle [questa guida per lo sviluppo multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
+Questo articolo illustra le nozioni di base della localizzazione di applicazioni Android usando la gestione delle risorse incorporata. Sono disponibili altre informazioni su i18n e l10n per le app iOS, Android e multipiattaforma (incluse Novell. Forms) in [questa guida multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Tasky (localizzato in codice) (esempio)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Android con le risorse di localizzazione](https://developer.android.com/guide/topics/resources/localization.html)
-- [Panoramica sulla localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
-- [Localizzazione di xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
+- [Tasky (localizzato nel codice) (esempio)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
+- [Localizzazione di Android con risorse](https://developer.android.com/guide/topics/resources/localization.html)
+- [Panoramica della localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
+- [Localizzazione di Novell. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localizzazione in iOS](~/ios/app-fundamentals/localization/index.md)

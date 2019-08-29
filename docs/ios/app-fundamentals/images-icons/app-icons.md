@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 0f20e7dafaa855e3610595886537ee4910b09d2e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dd712940ff6e7000ffd9181f808a8ab32093b38d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643058"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121468"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Novell. iOS
 
 Gli argomenti seguenti vengono descritti nel dettaglio:
 
-* [Icone delle applicazioni, dei riflettori e delle impostazioni](#icon-types) : i diversi tipi di icone necessari per un'app iOS.
-* [Gestione delle icone con cataloghi di asset](#managing) -gestione delle icone delle applicazioni con i cataloghi di asset.
-* [artwork di iTunes](#itunes) : fornire la grafica di iTunes necessaria per il metodo ad hoc per la distribuzione dell'applicazione.
+- [Icone delle applicazioni, dei riflettori e delle impostazioni](#icon-types) : i diversi tipi di icone necessari per un'app iOS.
+- [Gestione delle icone con cataloghi di asset](#managing) -gestione delle icone delle applicazioni con i cataloghi di asset.
+- [artwork di iTunes](#itunes) : fornire la grafica di iTunes necessaria per il metodo ad hoc per la distribuzione dell'applicazione.
 
 <a name="icon-types" />
 

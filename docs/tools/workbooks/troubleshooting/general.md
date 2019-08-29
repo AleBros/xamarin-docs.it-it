@@ -6,12 +6,12 @@ ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 3701a2a111c5c18f694def241b1e888fa6f4ce19
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889395"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120324"
 ---
 # <a name="known-issues--workarounds"></a>Problemi noti & soluzioni alternative
 
@@ -21,20 +21,20 @@ L'impostazione `System.Threading.CurrentThread.CurrentCulture` di o `System.Glob
 
 ### <a name="workarounds"></a>Soluzioni
 
-* Impostare l'applicazione-dominio locale `DefaultThreadCurrentCulture`:
+- Impostare l'applicazione-dominio locale `DefaultThreadCurrentCulture`:
 
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* In alternativa, aggiornare le cartelle di lavoro 1.2.1 o successive, che riscriveranno le `System.Threading.CurrentThread.CurrentCulture` assegnazioni in e `System.Globalization.CultureInfo.CurrentCulture` per fornire il comportamento desiderato (aggirando il bug mono).
+- In alternativa, aggiornare le cartelle di lavoro 1.2.1 o successive, che riscriveranno le `System.Threading.CurrentThread.CurrentCulture` assegnazioni in e `System.Globalization.CultureInfo.CurrentCulture` per fornire il comportamento desiderato (aggirando il bug mono).
 
 ## <a name="unable-to-use-newtonsoftjson"></a>Non è possibile usare Newtonsoft. JSON
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-* Aggiornare le cartelle di lavoro 1.2.1, che installeranno Newtonsoft. JSON 9.0.1.
+- Aggiornare le cartelle di lavoro 1.2.1, che installeranno Newtonsoft. JSON 9.0.1.
   Le cartelle di lavoro 1,3, attualmente nel canale alfa, supportano le versioni 10 e successive.
 
 ### <a name="details"></a>Dettagli
@@ -51,9 +51,9 @@ I pacchetti NuGet in modo esplicito a seconda di Newtonsoft. JSON 10 o versione 
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-* Se si fa clic sulla descrizione comando dopo che è stata visualizzata, verrà forzato il rendering del testo.
+- Se si fa clic sulla descrizione comando dopo che è stata visualizzata, verrà forzato il rendering del testo.
 
-* O eseguire l'aggiornamento alle cartelle di lavoro 1.2.1 o successive
+- O eseguire l'aggiornamento alle cartelle di lavoro 1.2.1 o successive
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
@@ -64,7 +64,7 @@ A partire dalle cartelle di lavoro 1,3, sono stati rimossi i renderer SkiaSharp 
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-* Aggiornare SkiaSharp alla versione più recente in NuGet. Al momento della stesura di questo documento, questo è 1.57.1.
+- Aggiornare SkiaSharp alla versione più recente in NuGet. Al momento della stesura di questo documento, questo è 1.57.1.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

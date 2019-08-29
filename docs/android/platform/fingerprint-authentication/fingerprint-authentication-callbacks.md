@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: cb4933695d34a0805be4139c7b345f7a70f33613
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524327"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119594"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Risposta ai callback di autenticazione
 
 Lo scanner di impronte digitali viene eseguito in background sul proprio thread e, al termine, segnalerà i risultati dell'analisi richiamando un metodo di `FingerprintManager.AuthenticationCallback` sul thread UI. Un'applicazione Android deve fornire il proprio gestore che estende questa classe astratta, implementando tutti i metodi seguenti:
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Chiamato quando si verifica un errore irreversibile. Per risolvere il problema non è più possibile eseguire un'applicazione o un utente, ad eccezione di riprovare.
-* **`OnAuthenticationFailed()`** &ndash; Questo metodo viene richiamato quando un'impronta digitale è stata rilevata ma non riconosciuta dal dispositivo.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Chiamato quando si verifica un errore reversibile, ad esempio il dito sottoposto a scorrimento rapido sullo scanner.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Questa operazione viene chiamata quando viene riconosciuta un'impronta digitale.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Chiamato quando si verifica un errore irreversibile. Per risolvere il problema non è più possibile eseguire un'applicazione o un utente, ad eccezione di riprovare.
+- **`OnAuthenticationFailed()`** &ndash; Questo metodo viene richiamato quando un'impronta digitale è stata rilevata ma non riconosciuta dal dispositivo.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Chiamato quando si verifica un errore reversibile, ad esempio il dito sottoposto a scorrimento rapido sullo scanner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Questa operazione viene chiamata quando viene riconosciuta un'impronta digitale.
 
 Se è `CryptoObject` stato usato un oggetto `Authenticate`durante la chiamata a, è `Cipher.DoFinal` consigliabile `OnAuthenticationSuccessful`chiamare in.
 `DoFinal`genererà un'eccezione se la crittografia è stata manomessa o inizializzata in modo errato, a indicare che il risultato dello scanner di impronta digitale potrebbe essere stato manomesso all'esterno dell'applicazione.

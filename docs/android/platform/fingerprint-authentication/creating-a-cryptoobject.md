@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8e5d4cf50874a0976c1dd10e35e7bd84518f14c4
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 03796af880aaef74c2d4b54007ac34ef1c5dc180
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511150"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119831"
 ---
 # <a name="creating-a-cryptoobject"></a>Creazione di un CryptoObject
 
@@ -105,10 +105,10 @@ Viene creata un'istanza della crittografia con una chiamata `Cipher.GetInstance`
 
 È importante tenere presente che in alcuni casi Android può invalidare la chiave: 
 
-* Una nuova impronta digitale è stata registrata con il dispositivo.
-* Non sono presenti impronte digitali registrate con il dispositivo.
-* L'utente ha disabilitato il blocco dello schermo.
-* L'utente ha modificato il blocco dello schermo, ovvero il tipo di ScreenLock o il PIN o il modello usato.
+- Una nuova impronta digitale è stata registrata con il dispositivo.
+- Non sono presenti impronte digitali registrate con il dispositivo.
+- L'utente ha disabilitato il blocco dello schermo.
+- L'utente ha modificato il blocco dello schermo, ovvero il tipo di ScreenLock o il PIN o il modello usato.
 
 In tal caso, `Cipher.Init` genererà un' [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)operazione. Il codice di esempio precedente intercetta l'eccezione, Elimina la chiave e quindi ne crea una nuova.
 
@@ -122,11 +122,11 @@ Viene `KeyGenerator` creata un'istanza di un `GetInstance` oggetto usando il met
 
 Viene quindi creato `KeyGenParameterSpec` un oggetto `KeyGenParameterSpec.Builder`utilizzando. `KeyGenParameterSpec.Builder` Esegue il wrapping delle informazioni seguenti sulla chiave da creare:
 
-* Nome della chiave.
-* La chiave deve essere valida sia per la crittografia che per la decrittografia.
-* Nel codice `BLOCK_MODE` di esempio è impostato su _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), vale a dire che ogni blocco è XORed con il blocco precedente (creando dipendenze tra ogni blocco). 
-* USA Public [_Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (PKCS7) per generare i byte che comporteranno il riempimento dei blocchi per garantire la stessa dimensione. `CryptoObjectHelper`
-* `SetUserAuthenticationRequired(true)`indica che è necessaria l'autenticazione utente prima di poter usare la chiave.
+- Nome della chiave.
+- La chiave deve essere valida sia per la crittografia che per la decrittografia.
+- Nel codice `BLOCK_MODE` di esempio è impostato su _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), vale a dire che ogni blocco è XORed con il blocco precedente (creando dipendenze tra ogni blocco). 
+- USA Public [_Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (PKCS7) per generare i byte che comporteranno il riempimento dei blocchi per garantire la stessa dimensione. `CryptoObjectHelper`
+- `SetUserAuthenticationRequired(true)`indica che è necessaria l'autenticazione utente prima di poter usare la chiave.
 
 Una volta creato, viene usato per inizializzare la `KeyGenerator`, che genera una chiave e la archivia in modo sicuro nel dispositivo. `KeyGenParameterSpec` 
 
