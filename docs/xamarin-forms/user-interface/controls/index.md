@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019
-ms.openlocfilehash: dfc6c71a252b57bb39b464425b89fe8f5bda7d3e
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: f3aa8249b0e94721b8e35437997b74b24e31f689
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976507"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065244"
 ---
 # <a name="controls-reference"></a>Riferimento per i controlli
 
@@ -30,6 +30,9 @@ I quattro gruppi di controllo principali usati per creare l'interfaccia utente d
 In genere, una pagina di xamarin. Forms occupa l'intera schermata. La pagina contiene in genere un layout, che contiene le viste e possibilmente altri layout. Le celle sono componenti specializzati utilizzati in combinazione con [`TableView`](views.md#tableView) e [`ListView`](views.md#listView). Un diagramma classi che mostra la gerarchia dei tipi che vengono in genere usati per compilare un'interfaccia utente in Novell. Forms è disponibile nella [gerarchia di classi di controlli Novell. Forms](~/xamarin-forms/internals/class-hierarchy.md).
 
 Negli articoli su quattro [**pagine**](pages.md), [**layout**](layouts.md), [**viste**](views.md), e [**celle**](cells.md), con collegamenti alla relativa documentazione dell'API, un articolo che descrive l'uso (se presente) e uno o più programmi di esempio viene descritto ciascun tipo di controllo (se presenti). Ogni tipo di controllo è anche accompagnato da una schermata che mostra una pagina dell'esempio [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) in esecuzione su dispositivi iOS e Android. Ogni schermata seguente sono riportati collegamenti al codice sorgente per la pagina in C#, la pagina XAML equivalente e (se appropriato) il file code-behind C# per la pagina XAML.
+
+> [!NOTE]
+> Le pagine, i layout e le `VisualElement` visualizzazioni derivano dalla classe. La `VisualElement` classe fornisce un'ampia gamma di proprietà, metodi ed eventi utili per la derivazione delle classi. Per altre informazioni, vedere [proprietà, metodi ed eventi](common-properties.md)di visualElement.
 
 Oltre ai controlli forniti con Novell. Forms, sono disponibili controlli di terze parti. Per altre informazioni, vedere [controlli di terze parti](thirdparty.md).
 

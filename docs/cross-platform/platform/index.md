@@ -1,39 +1,39 @@
 ---
-title: Supporto delle lingue in Xamarin di programmazione
-description: Questo documento descrive i diversi linguaggi di programmazione supportati da Xamarin. Viene descritto C#, F#, Visual Basic.NET portabile e i modelli Razor.
+title: Supporto del linguaggio di programmazione in Novell
+description: Questo documento descrive i vari linguaggi di programmazione supportati da Novell. Vengono C#illustrati F#i modelli,, Portable Visual Basic.NET e Razor.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 6c0b8e6de0c414fb708c4027f4c536a21b6b011a
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 2ec934b2747f89e959d659615629489e86449660
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864369"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065161"
 ---
-# <a name="programming-language-support-in-xamarin"></a>Supporto delle lingue in Xamarin di programmazione
+# <a name="programming-language-support-in-xamarin"></a>Supporto del linguaggio di programmazione in Novell
 
-## <a name="c"></a>C# 
+## <a name="c"></a>C\#
 
 ### <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Panoramica del supporto asincrono](~/cross-platform/platform/async.md)
 
-Versione 5 di C# introdotte due nuove parole chiave per l'espressione di operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che utilizza la Task Parallel Library per l'esecuzione di operazioni a esecuzione prolungata (ad esempio l'accesso di rete) in un altro thread e accedere con facilità i risultati al completamento. Le ultime versioni di xamarin. IOS e xamarin. Android supportano async e await: questo documento vengono fornite spiegazioni e un esempio dell'uso della nuova sintassi con Xamarin.
+Nella versione 5 C# di sono state introdotte due nuove parole chiave per esprimere le operazioni asincrone: async e await. Queste parole chiave consentono di scrivere codice semplice che usa il Task Parallel Library per eseguire operazioni a esecuzione prolungata, ad esempio l'accesso alla rete, in un altro thread e accedere facilmente ai risultati al termine del completamento. Le versioni più recenti di Novell. iOS e Novell. Android supportano Async e await. questo documento fornisce spiegazioni e un esempio di utilizzo della nuova sintassi con Novell.
 
 ### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità del linguaggio C# 6](~/cross-platform/platform/csharp-six.md)
 
-La versione più recente del C# language – versione 6 – continua ad evolvere il linguaggio in modo da avere meno boilerplate, maggiore chiarezza e coerenza delle altre. Una sintassi più chiara l'inizializzazione, la possibilità di usare `await` nelle `catch/finally` blocchi e il condizionale null `?` operatore sono particolarmente utili.
+La versione più recente del C# linguaggio-versione 6-continua a evolvere il linguaggio in modo da avere meno standard, una maggiore chiarezza e una maggiore coerenza. La sintassi di inizializzazione più pulita, `await` la `catch/finally` possibilità di usare in blocchi e l' `?` operatore condizionale null sono particolarmente utili.
 
 ## <a name="ffsharpindexmd"></a>[F#](fsharp/index.md)
 
-Creazione di App per dispositivi mobili con F# e Xamarin.
+Creazione di app per F# dispositivi mobili con e Novell.
 
-## <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Portabile Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md)
+## <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Basic.NET visivi portatili](~/cross-platform/platform/visual-basic/index.md)
 
-Visual Studio supporta la creazione di librerie di classi portabili con Visual Basic.NET che può quindi essere incorporato nelle applicazioni Xamarin. Questo articolo illustra come creare una nuova libreria di classi Portabile Visual Basic e quindi usarlo in un'applicazione di esempio xamarin. IOS, xamarin. Android e Windows Phone.
+Visual Studio supporta la creazione di librerie di classi portabili usando Visual Basic.NET che può quindi essere incorporato in applicazioni Novell. Questo articolo illustra come creare un nuovo Visual Basic PCL e quindi usarlo in un'applicazione di esempio Novell. iOS, Novell. Android e Windows Phone.
 
-## <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Visualizzazioni HTML predefiniti con i modelli Razor](~/cross-platform/platform/razor-html-templates/index.md)
+## <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Creazione di visualizzazioni HTML con i modelli Razor](~/cross-platform/platform/razor-html-templates/index.md)
 
-Xamarin consente agli sviluppatori di sfruttare il motore di creazione modello Razor, funzionalità originariamente introdotto con ASP.NET MVC, insieme a C# per combinare facilmente i dati con HTML, Javascript e CSS senza il fastidioso uso di costruzione manuale di stringhe HTML nel codice.
-Questo articolo illustra come usare i modelli Razor con Xamarin per Android e iOS.
+Novell consente agli sviluppatori di sfruttare il motore di creazione di modelli Razor, originariamente introdotto con ASP.NET MVC C# , insieme a per combinare facilmente i dati con HTML, JavaScript e CSS senza dover compilare manualmente stringhe HTML nel codice.
+Questo articolo illustra come usare i modelli Razor con Novell per Android e iOS.

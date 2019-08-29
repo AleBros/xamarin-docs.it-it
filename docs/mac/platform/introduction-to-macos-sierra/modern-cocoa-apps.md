@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: f79e7f3576748737a4feb9204fb9840afdbb1ef4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 914afe63136323e3506bb40d4759869f97fb264c
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645440"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065687"
 ---
 # <a name="building-modern-macos-apps"></a>Creazione di app macOS moderne
 
@@ -508,7 +508,7 @@ namespace MacModern
 
 ## <a name="using-modern-drag-and-drop"></a>Uso del trascinamento della selezione moderna
 
-Per presentare un'esperienza di trascinamento della selezione per l'utente, lo sviluppatore _deve adottare il_ trascinamento della selezione nelle operazioni di trascinamento della selezione dell'app. Il trascinamento della moltitudine è il punto in cui ogni singolo file o elemento che viene trascinato inizialmente viene visualizzato come un singolo elemento che si raggruppa sotto il cursore con un conteggio del numero di elementi, perché l'utente continua l'operazione di trascinamento.
+Per presentare un'esperienza di trascinamento della selezione per l'utente, lo sviluppatore deve adottare il trascinamento della selezione nelle operazioni di trascinamento della selezione dell'app. Il trascinamento della moltitudine è il punto in cui ogni singolo file o elemento che viene trascinato inizialmente viene visualizzato come un singolo elemento che si raggruppa sotto il cursore con un conteggio del numero di elementi, perché l'utente continua l'operazione di trascinamento.
 
 Se l'utente termina l'operazione di trascinamento, i singoli elementi si alleveranno e torneranno ai percorsi originali.
 

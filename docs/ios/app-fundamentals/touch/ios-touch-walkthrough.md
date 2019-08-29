@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: MT
+ms.openlocfilehash: 1e1bba499a14b92965a5fb544ccf321b0e453894
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527060"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065445"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso di touch in Novell. iOS
 
@@ -37,7 +37,7 @@ In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il 
 
 
 1. Aprire il progetto **Touch_Start**. Eseguire prima il progetto per verificare che tutto sia corretto e toccare il pulsante di **esempio touch** . Verrà visualizzata una schermata simile alla seguente (anche se nessuno dei pulsanti funzionerà):
-    
+
     [![](ios-touch-walkthrough-images/image4.png "App di esempio eseguita con pulsanti non funzionanti")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
@@ -164,11 +164,11 @@ In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il 
         touchStartedInside = false;
     }
     ```
-    
+
     In entrambi i modi il `touchStartedInside` flag viene reimpostato su false. `TouchesEnded`viene visualizzata `TouchesEnded` anche sullo schermo.
 
 1. A questo punto la schermata dei campioni di tocco è stata completata. Si noti che la schermata cambia quando si interagisce con ognuna delle immagini, come illustrato nello screenshot seguente:
-        
+
     [![](ios-touch-walkthrough-images/image4.png "Schermata iniziale dell'app")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "Schermata dopo che l'utente trascina un pulsante")](ios-touch-walkthrough-images/image5.png#lightbox)

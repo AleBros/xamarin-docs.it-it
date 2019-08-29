@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 5109e3a66e22d885d8dc8b685db0817057709464
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b4d827715870d54de3116067a3e24e229ecda530
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653688"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065632"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso watchOS in Xamarin
 
@@ -29,9 +29,9 @@ Un'app è costituito da tre progetti:
 
 - **Progetto di app xamarin. IOS per iPhone** -si tratta di un progetto di iPhone normale, può essere uno dei modelli di xamarin. IOS. L'App e l'estensione viene possibile raggruppare queste all'interno di questo progetto principale.
 
-- **Progetto di estensione Watch** -contiene il codice (ad esempio le classi Controller) per l'App Watch.
+- **Progetto di estensione Watch** : contiene il codice, ad esempio le classi controller, per l'app Watch.
 
-- **Progetto di App Watch** -contiene il file storyboard dell'interfaccia utente con tutte le risorse dell'interfaccia utente per l'App Watch.
+- **Progetto di app Watch** : contiene il file dello storyboard dell'interfaccia utente con tutte le risorse dell'interfaccia utente per l'app Watch.
 
 Il [esempio Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) soluzione questo aspetto in xamarin Studio:
 
@@ -220,10 +220,10 @@ Per la modalità di notifica è possibile selezionare **Debug > Apri Log di sist
 
 <!--
 To test the functionality in your  and 
-    methods, use the **Hardware > Lock** command in the iOS Simulator.
-    Locking will trigger the `DidDeactivate` method and the watch simulator
-    will indicate that it has been locked. Swipe the iOS Simulator to unlock,
-    which triggers the `WillActivate` method of the watch app.
+  methods, use the **Hardware > Lock** command in the iOS Simulator.
+  Locking will trigger the `DidDeactivate` method and the watch simulator
+  will indicate that it has been locked. Swipe the iOS Simulator to unlock,
+  which triggers the `WillActivate` method of the watch app.
 -->
 
 I file di modello watchOS (ad esempio `InterfaceController`, `ExtensionDelegate`, `NotificationController`, e `ComplicationController`) forniti con i relativi metodi del ciclo di vita necessari già implementati. Aggiungere `Console.WriteLine` chiamate e leggere il **Output applicazione** per comprendere meglio il ciclo di vita di eventi.

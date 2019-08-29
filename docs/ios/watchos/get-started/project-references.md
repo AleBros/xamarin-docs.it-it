@@ -1,79 +1,79 @@
 ---
-title: riferimenti al progetto in Xamarin watchOS
-description: Questo documento descrive la relazione tra un'app per iOS, un'app e un'estensione dell'app watch. Illustra i riferimenti al progetto e bundle di identificatori.
+title: Riferimenti del progetto watchos in Novell
+description: Questo documento descrive la relazione tra un'app iOS, un'app Watch e un'estensione dell'app Watch. Vengono illustrati i riferimenti al progetto e gli identificatori del bundle.
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 60eaad98e2d5469e9c43e6b4ad889080e1aa63ba
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 9108f83d76e07d12d70b400075142d9c73519716
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832056"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065600"
 ---
-# <a name="watchos-project-references-in-xamarin"></a>riferimenti al progetto in Xamarin watchOS
+# <a name="watchos-project-references-in-xamarin"></a>Riferimenti del progetto watchos in Novell
 
-_Spiegazione della relazione tra l'app iOS, app e l'estensione dell'espressioni di controllo._
+_Spiegazione della relazione tra l'app iOS, l'app Watch e l'estensione Watch._
 
-Sono i tre progetti in una soluzione di watchOS *configurata automaticamente* per fare riferimento tra loro in modo specifico per le app watchOS 3 di essere compilati e in bundle in modo corretto. Questi riferimenti al progetto e impostazioni dell'identificatore di bundle sono descritte di seguito per riferimento.
+I tre progetti in una soluzione watchos vengono *automaticamente* configurati per fare riferimento reciprocamente in modo specifico per la compilazione e il raggruppamento delle app watchos 3. Questi riferimenti al progetto e le impostazioni dell'identificatore del bundle sono descritti di seguito per riferimento.
 
 ## <a name="project-references"></a>Riferimenti al progetto
 
-Visualizzare i riferimenti facendo doppio clic sui nodi riferimenti per ogni progetto:
+Per visualizzare i riferimenti, fare doppio clic sui nodi riferimenti per ogni progetto:
 
-- **app iPhone** riferimenti **App Watch**
+- App di **iPhone** riferimenti a **espressioni di controllo**
 
-  ![](project-references-images/catalog-reference1.png "app iPhone fa riferimento all'App Watch")
+  ![](project-references-images/catalog-reference1.png "App di iPhone riferimenti a espressioni di controllo")
 
-- **App di guardare** riferimenti **estensione dell'App Watch**
+- Espressioni di **controllo riferimenti app** **Controlla estensione app**
 
-  ![](project-references-images/catalog-reference2.png "app iPhone fa riferimento all'App Watch")
-
-
-- Il **estensione dell'App Watch** non fa riferimento a uno degli altri progetti
-
-  ![](project-references-images/catalog-reference3.png "Estensione dell'App Watch non fa riferimento ad altri progetti")
+  ![](project-references-images/catalog-reference2.png "App di iPhone riferimenti a espressioni di controllo")
 
 
+- L' **estensione Watch app** non fa riferimento ad alcun altro progetto
 
-## <a name="bundle-identifiers"></a>Identificatori di bundle
+  ![](project-references-images/catalog-reference3.png "L'estensione dell'app Watch non fa riferimento ad altri progetti")
 
-È anche necessario assicurarsi che il **identificatori di Bundle** siano corretti.
-Tutti e tre i progetti devono avere la *stessa* prefisso identificatore, con i progetti di due espressioni di controllo con predefinito delle estensioni di `watchkitextension` e `watchkitapp`, come indicato di seguito (per il **WatchKitCatalog** ad esempio):
 
-- Progetto unificata di xamarin. ios: `com.xamarin.WatchKitCatalog`
 
-- Progetto estensione WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
+## <a name="bundle-identifiers"></a>Identificatori bundle
 
-- Progetto di App Watch- `com.xamarin.WatchKitCatalog.watchkitapp`
+È anche necessario assicurarsi che gli identificatori del **bundle** siano corretti.
+Tutti e tre i progetti devono avere lo *stesso* prefisso identificatore, con i due progetti Watch con estensioni predefinite `watchkitextension` di `watchkitapp`e, come indicato di seguito (per l'esempio **WatchKitCatalog** ):
 
-Assicurarsi anche che questi **Info. plist** impostazioni siano corrette:
+- Progetto unificato Novell. iOS-`com.xamarin.WatchKitCatalog`
 
-- Il progetto di App Watch `WKCompanionAppBundleIdentifier` corrisponda all'ID Bundle dell'app/contenitore padre (ad esempio. è in esecuzione su iPhone);
+- Progetto di estensione WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
 
-- Il progetto di estensione di Kit Watch **ID Bundle di WKApp** corrisponde l'ID Bundle del progetto App Watch
+- Guarda il progetto dell'app-`com.xamarin.WatchKitCatalog.watchkitapp`
 
-È possibile modificare gli identificatori facendo doppio clic sui **Info. plist** file in ogni progetto.
+Assicurarsi inoltre che le impostazioni **info. plist** siano corrette:
 
-Questa schermata è il **espressioni di controllo dell'estensione** file Info. plist, che mostra le **dell'App Watch** anche identificatore:
+- Il progetto `WKCompanionAppBundleIdentifier` dell'app Watch corrisponde all'ID bundle dell'app padre/contenitore (IE. quello che viene eseguito nell'iPhone);
+
+- L' **ID bundle WKApp** del progetto dell'estensione Watch Kit corrisponde all'ID bundle del progetto dell'app Watch.
+
+È possibile modificare gli identificatori facendo doppio clic sul file **info. plist** in ogni progetto.
+
+Questa schermata è il file INFO. plist dell' **estensione Watch** , che mostra anche l'identificatore dell' **app Watch** :
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
-    
-![](project-references-images/infoplist-extension.png "Questa schermata è file Info. plist dell'estensione Watch")
+
+![](project-references-images/infoplist-extension.png "Questa schermata è il file INFO. plist dell'estensione Watch")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
-![](project-references-images/infoplist-extension-vs.png "Questa schermata è file Info. plist dell'estensione Watch")
+
+![](project-references-images/infoplist-extension-vs.png "Questa schermata è il file INFO. plist dell'estensione Watch")
 
 -----
 
-Questa schermata è il **dell'App Watch** file Info. plist.
-L'oggetto corrente **Watch OS** versione è 8.2, in modo che il **destinazione di distribuzione** per l'App Watch deve essere **8.2**. Si noti che se si dispone di Xcode 6.3 installato, questo valore può essere impostato su 8.3, è consigliabile modificarlo 8.2.
+Questa schermata è il file INFO. plist dell' **app Watch** .
+La versione corrente del **sistema operativo Watch** è 8,2, quindi la **destinazione di distribuzione** per l'App Watch deve essere **8,2**. Si noti che se è installato Xcode 6,3, questo valore potrebbe essere impostato su 8,3. è necessario modificarlo 8,2.
 
-![](project-references-images/infoplist-watchapp.png "Le espressioni di controllo file Info. plist")
+![](project-references-images/infoplist-watchapp.png "File Watch info. plist")
 
-La destinazione di distribuzione per l'App Watch possa essere diversa dalle espressioni di controllo estensione App iOS.
+La destinazione di distribuzione per l'app Watch può essere diversa dall'estensione Watch e dall'app iOS.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 2dde7415f40c9db205351a81d63d273fc211ed2b
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 86e92ee5293b4c9ed902f1c8d9858e06db1aa458
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976591"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065506"
 ---
 # <a name="xamarinforms-contentview"></a>Novell. Forms ContentView
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 La classe Novell. [`ContentView`](xref:Xamarin.Forms.ContentView) Forms è un tipo `Layout` di che contiene un singolo elemento figlio e viene in genere usato per creare controlli personalizzati riutilizzabili. La `ContentView` classe eredita da [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). Questo articolo e l'esempio associato spiegano come creare un controllo personalizzato `CardView` basato `ContentView` sulla classe.
 
@@ -205,7 +205,7 @@ Per ulteriori informazioni sui modelli di controllo, vedere [Novell. Forms Contr
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [Applicazione di esempio ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+* [Applicazione di esempio ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md).
 * [Modelli di controllo Novell. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 39c77b4016027171a4e76bc4fb15c77d733cf5ba
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645914"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065360"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>le notifiche in Xamarin watchOS
 
@@ -37,7 +37,7 @@ Dopo aver personalizzato il controller sarà simile a questo esempio dal WatchKi
 
 Esistono due tipi di notifica:
 
-- **La funzione di ricerca breve** -visualizzazione statica non scorrevole definito dal sistema.
+- Visualizzazione statica di **breve aspetto** non scorrevole definita dal sistema.
 
 - **Aspetto prolungata** - scorrevole, personalizzabile vista definita dall'utente. Una versione più semplice, statica e una versione dinamica più complessa possono essere specificati.
 
@@ -99,21 +99,21 @@ Si *necessario* fornire un payload JSON di test durante il test in modalità di 
 
 Visual Studio per Mac visualizzerà le opzioni aggiuntive quando un'estensione di espressioni di controllo è impostata come la **progetto di avvio**.
 Pulsante destro del mouse sul progetto di estensione di espressioni di controllo e scegliere **eseguire con > parametri personalizzati...** :
-    
+
 [![](notifications-images/runwith-customparams-sml.png "Esecuzione con le proprietà personalizzate")](notifications-images/runwith-customparams.png#lightbox)
-    
+
 Verrà visualizzata la **gli argomenti di esecuzione** finestra che contiene un **WatchKit** scheda. Selezionare **Notification** e specificare un payload JSON, quindi premere **Execute** per avviare l'app watch nel simulatore:
-    
+
 [![](notifications-images/runwith-execargs-sml.png "Selezionare l'impostazione predefinita di Payload di notifica")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Per impostare il payload di notifica di prova nella scelta di Visual Studio sull'estensione di espressioni di controllo per modificare la **proprietà del progetto**. Andare alla **Debug** sezione e selezionare un file JSON delle notifiche nell'elenco (verrà elencato automaticamente tutti i file JSON inclusi nel progetto).
-    
+
 [![](notifications-images/runwith-execargs-sml-vs.png "Selezionare un file JSON delle notifiche")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 Quando l'estensione di espressioni di controllo è il **progetto di avvio**, Visual Studio visualizzerà le opzioni aggiuntive, come illustrato di seguito. Scegliere una delle **Notification** le opzioni per avviare l'app watch in **notifica** modalità (usando il file JSON selezionato nella finestra proprietà):
-    
+
 ![](notifications-images/runwith-vs.png "Menu del dispositivo")
 
 -----
@@ -128,7 +128,7 @@ Il controller di notifica predefinito aspetto simile al seguente durante il test
 
 Nel [catalogo Kit Watch](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) esempio vi è un file JSON di esempio payload **NotificationPayload.json** (elencati di seguito).
 
-```csharp
+```json
 {
     "aps": {
         "alert": "Test message content",

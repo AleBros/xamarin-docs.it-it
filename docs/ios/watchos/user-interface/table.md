@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 079c72ee25f3b01c02b854a8a1eb258c885f2a96
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f3e991550cd58f20d52bebb208eedec4d8f7e41e
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642801"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065676"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controlli tabella watchos in Novell
 
@@ -48,7 +48,7 @@ Una volta impostata la classe per il controller della riga, l'IDE creerà un fil
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
-        // loads row controller by identifier
+    // loads row controller by identifier
 ```
 
 > [!IMPORTANT]
