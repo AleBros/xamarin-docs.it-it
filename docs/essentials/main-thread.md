@@ -1,28 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Thread principale'
+title: 'Xamarin.Essentials: MainThread'
 description: La classe MainThread consente alle applicazioni di eseguire il codice sul thread principale di esecuzione.
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7ec1420d87c898f63614eb6d980c28834e980afd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 08/20/2019
+ms.openlocfilehash: 9109e7bff4cfe60479e711240d290d77b60a9af6
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899005"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060113"
 ---
-# <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: Thread principale
+# <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 La classe **MainThread** consente alle applicazioni di eseguire il codice sul thread principale di esecuzione e di determinare se un particolare blocco di codice è attualmente in esecuzione sul thread principale.
 
-## <a name="background"></a>Sfondo
+## <a name="background"></a>Background
 
 La maggior parte dei sistemi operativi, tra cui iOS, Android e la piattaforma UWP, usa un modello a thread singolo per il codice che coinvolge l'interfaccia utente. Questo modello è necessario per serializzare correttamente gli eventi dell'interfaccia utente, inclusi l'input tocco e le sequenze di tasti. Questo thread viene spesso definito _thread principale_ o _thread dell'interfaccia utente_ o _thread UI_. Lo svantaggio di questo modello è che tutto il codice che accede a elementi dell'interfaccia utente deve essere eseguito sul thread principale dell'applicazione. 
 
 Le applicazioni devono talvolta usare eventi che chiamano il gestore dell'evento su un thread secondario di esecuzione. (Tutte le classi Xamarin.Essentials [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) e [`OrientationSensor`](orientation-sensor.md) potrebbero restituire informazioni su un thread secondario in caso d'uso con velocità maggiori.) Se il gestore eventi deve accedere a elementi dell'interfaccia utente, deve eseguire tale codice sul thread principale. La classe **MainThread** consente all'applicazione di eseguire questo codice sul thread principale.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -93,6 +93,18 @@ else
 Si potrebbe credere che questo controllo possa migliorare le prestazioni se il blocco di codice è già in esecuzione sul thread principale.
 
 _Tuttavia, questo controllo non è necessario._ Le implementazioni della piattaforma di `BeginInvokeOnMainThread` stesse controllano se la chiamata viene eseguita sul thread principale. L'impatto sulle prestazioni è molto limitato se si chiama `BeginInvokeOnMainThread` quando non è effettivamente necessario.
+
+## <a name="additional-methods"></a>Altri metodi
+
+La classe `MainThread` include i metodi aggiuntivi seguenti `static` che possono essere usati per interagire con gli elementi dell'interfaccia utente dai thread di background:
+
+| Metodo | Argomenti | Restituisce | Scopo |
+|---|---|---|---|
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Richiama un oggetto `Func<T>` sul thread principale e ne attende il completamento. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Richiama un oggetto `Action` sul thread principale e ne attende il completamento. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Richiama un oggetto `Func<Task<T>>` sul thread principale e ne attende il completamento. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Richiama un oggetto `Func<Task>` sul thread principale e ne attende il completamento. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Restituisce l'oggetto `SynchronizationContext` per il thread principale. |
 
 ## <a name="api"></a>API
 

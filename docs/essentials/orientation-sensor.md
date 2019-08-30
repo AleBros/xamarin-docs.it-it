@@ -1,25 +1,25 @@
 ---
-title: 'Xamarin.Essentials: Sensore di orientamento'
+title: 'Xamarin.Essentials: OrientationSensor'
 description: La classe OrientationSensor consente di monitorare l'orientamento di un dispositivo in uno spazio tridimensionale.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: f1fceaef93e7ac30bbbe0f13da7dde3cde5275fd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5423872da7966bc7e4bb88e278d76b709f114158
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898670"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120708"
 ---
-# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: Sensore di orientamento
+# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
 La classe **OrientationSensor** consente di monitorare l'orientamento di un dispositivo in uno spazio tridimensionale.
 
 > [!NOTE]
 > Questa classe è progettata per determinare l'orientamento di un dispositivo nello spazio 3D. Se è necessario determinare se lo schermo del dispositivo è in modalità verticale o orizzontale, usare la proprietà `Orientation` dell'oggetto `ScreenMetrics` disponibile dalla classe [`DeviceDisplay`](device-display.md).
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -98,13 +98,13 @@ Questi sono i sistemi di coordinate di destra, quindi con il pollice della mano 
 
 Esempi:
 
-* Quando il dispositivo è appoggiato su un piano con lo schermo rivolto verso l'alto, con la parte superiore del dispositivo (in modalità verticale) orientata a nord, i due sistemi di coordinate sono allineati. Il valore `Quaternion` rappresenta il quaternione identità (0, 0, 0, 1). Tutte le rotazioni possono essere analizzate rispetto a questa posizione.
+- Quando il dispositivo è appoggiato su un piano con lo schermo rivolto verso l'alto, con la parte superiore del dispositivo (in modalità verticale) orientata a nord, i due sistemi di coordinate sono allineati. Il valore `Quaternion` rappresenta il quaternione identità (0, 0, 0, 1). Tutte le rotazioni possono essere analizzate rispetto a questa posizione.
 
-* Quando il dispositivo è appoggiato su un piano con lo schermo rivolto verso l'alto e la parte superiore del dispositivo (in modalità verticale) è orientata a ovest, il valore di `Quaternion` è (0, 0, 0.707, 0.707). Il dispositivo è stato ruotato di 90 gradi attorno all'asse Z della terra.
+- Quando il dispositivo è appoggiato su un piano con lo schermo rivolto verso l'alto e la parte superiore del dispositivo (in modalità verticale) è orientata a ovest, il valore di `Quaternion` è (0, 0, 0.707, 0.707). Il dispositivo è stato ruotato di 90 gradi attorno all'asse Z della terra.
 
-* Quando il dispositivo viene mantenuto in verticale in modo che la parte superiore (in modalità verticale) punti verso il cielo e la parte posteriore del dispositivo sia rivolta verso nord, il dispositivo è stato ruotato di 90 gradi attorno all'asse X. Il valore di `Quaternion` è (0.707, 0, 0, 0.707).
+- Quando il dispositivo viene mantenuto in verticale in modo che la parte superiore (in modalità verticale) punti verso il cielo e la parte posteriore del dispositivo sia rivolta verso nord, il dispositivo è stato ruotato di 90 gradi attorno all'asse X. Il valore di `Quaternion` è (0.707, 0, 0, 0.707).
 
-* Se il dispositivo è posizionato in modo che il bordo sinistro sia appoggiato su un piano e la parte superiore sia rivolta a nord, il dispositivo è stato ruotato di &ndash;90 gradi attorno all'asse Y (o 90 gradi attorno all'asse Y negativo). Il valore di `Quaternion` è (0, -0.707, 0, 0.707).
+- Se il dispositivo è posizionato in modo che il bordo sinistro sia appoggiato su un piano e la parte superiore sia rivolta a nord, il dispositivo è stato ruotato di &ndash;90 gradi attorno all'asse Y (o 90 gradi attorno all'asse Y negativo). Il valore di `Quaternion` è (0, -0.707, 0, 0.707).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

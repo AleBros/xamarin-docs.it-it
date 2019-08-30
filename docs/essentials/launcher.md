@@ -4,19 +4,19 @@ description: La classe Launcher in Xamarin.Essentials consente a un'applicazione
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 26ab3687e9bcfecbd003ddd0a97f3e46a0cd92b2
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.date: 08/20/2019
+ms.openlocfilehash: 276e4d9bc1294984a73ef2214cf9c1fd6c3bb89b
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870053"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060108"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Utilità di avvio
 
-La classe **Launcher** consente a un'applicazione di aprire un URI dal sistema. Questa funzionalità viene usata spesso per il deep linking negli schemi URI personalizzati di un'altra applicazione. Se lo scopo è aprire il browser su un sito Web specifico, vedere l'API **[Browser](open-browser.md)**.
+La classe **Launcher** consente a un'applicazione di aprire un URI dal sistema. Questa funzionalità viene usata spesso per il deep linking negli schemi URI personalizzati di un'altra applicazione. Se lo scopo è aprire il browser su un sito Web specifico, vedere l'API **[Browser](open-browser.md)** .
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -40,6 +40,35 @@ public class LauncherTest
             await Launcher.OpenAsync("lyft://ridetype?id=lyft_line");
     }
 }
+```
+
+Questa operazione può essere combinata in una singola chiamata con `TryOpenAsync`, che controlla se il parametro può essere aperto e in caso affermativo lo apre.
+
+```csharp
+public class LauncherTest
+{
+    public async Task<bool> OpenRideShareAsync()
+    {
+        return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
+    }
+}
+```
+
+## <a name="files"></a>File
+
+Questa funzionalità consente a un'app di richiedere l'apertura e la visualizzazione di un file ad altre app. Xamarin.Essentials rileverà automaticamente il tipo di file (MIME) e richiederà l'apertura del file.
+
+Di seguito è riportato un esempio di scrittura di testo su disco e di richiesta di apertura:
+
+```csharp
+var fn = "File.txt";
+var file = Path.Combine(FileSystem.CacheDirectory, fn);
+File.WriteAllText(file, "Hello World");
+
+await Launcher.OpenAsync(new OpenFileRequest
+{
+    File = new ReadOnlyFile(file)
+});
 ```
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme

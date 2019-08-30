@@ -5,18 +5,18 @@ ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 342ae1b64fefebaa4b3fa82e9f48c6e9a58d4751
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899044"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976430"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometro
 
 La classe **Barometer** consente di monitorare il sensore barometro del dispositivo, che misura la pressione atmosferica.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -82,6 +82,8 @@ Nessun dettaglio di implementazione specifico della piattaforma.
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 Questa API usa [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter) per monitorare le variazioni della pressione, ovvero una funzionalità hardware aggiunta in iPhone 6 e nei dispositivi più recenti. Verrà generata una `FeatureNotSupportedException` nei dispositivi che non supportano l'altimetro.
+
+`SensorSpeed` non viene usato perché non è supportato in iOS.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
