@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: eac7d316b65b57231d2fc25ef6b859293650d3f8
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: e4c8e404f447dd88b338123335a291bc9f23e449
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "53709615"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119012"
 ---
 # <a name="metadata-and-markdown-template"></a>Modello Markdown e metadati
 
@@ -21,7 +21,7 @@ Questo modello contiene esempi di sintassi di Markdown, nonché indicazioni su c
 
 Quando si crea un file Markdown, è necessario copiare il modello in un nuovo file, compilare i metadati come specificato di seguito, impostare l'intestazione H1 sopra il titolo dell'articolo ed eliminare il contenuto.
 
-## <a name="metadata"></a>Metadati
+## <a name="metadata"></a>Metadata
 
 Il blocco dei metadati completo, con una serie di annotazioni, è mostrato di seguito:
 
@@ -65,12 +65,12 @@ Markdown usa caratteri speciali, ad esempio \*, \` e \#, per la formattazione. S
 ## <a name="file-name"></a>Nome file
 
 Per i nomi di file vengono usate le regole seguenti:
-* Devono contenere solo lettere minuscole, numeri e trattini.
-* Non possono contenere spazi o caratteri di punteggiatura. Usare i trattini per separare le parole e i numeri nel nome del file.
-* Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Evitare i sostantivi.
-* Non includere parole brevi, come un, e, il, in, o e così via.
-* Usare il formato Markdown e l'estensione di file md.
-* Mantenere i nomi di file relativamente brevi. Fanno parte dell'URL degli articoli.
+- Devono contenere solo lettere minuscole, numeri e trattini.
+- Non possono contenere spazi o caratteri di punteggiatura. Usare i trattini per separare le parole e i numeri nel nome del file.
+- Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Non usare parole al gerundio.
+- Non usare parole estremamente brevi, ad esempio "un", "e", "il", "in", "o" e così via.
+- Usare il formato Markdown e l'estensione di file md.
+- Mantenere i nomi di file relativamente brevi. Fanno parte dell'URL degli articoli.
 
 
 
@@ -84,7 +84,7 @@ Usare l'iniziale maiuscola solo per la prima parola. Scrivere sempre in maiuscol
 
 Nell'argomento **deve** essere presente una sola intestazione di primo livello (H1), che verrà visualizzata come titolo della pagina.
 
-Se l'intestazione termina con un carattere `#`, è necessario aggiungere un ulteriore carattere `#` alla fine per garantire che il rendering del titolo venga eseguito correttamente. Ad esempio `# Async Programming in F# #`.
+Se l'intestazione termina con un carattere `#`, è necessario aggiungere un ulteriore carattere `#` alla fine per garantire che il rendering del titolo venga eseguito correttamente. Ad esempio: `# Async Programming in F# #`.
 
 Le intestazioni di secondo livello verranno usate per generare il sommario della pagina, visualizzato nella sezione "Contenuto dell'articolo" sotto il titolo della pagina.
 
@@ -153,7 +153,7 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 ### <a name="ordered-lists"></a>Elenchi ordinati
 
 1. This
-1. È
+1. Is
 1. Un
 1. Ordered
 1. Elenco
@@ -173,7 +173,7 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 ### <a name="unordered-lists"></a>Elenchi non ordinati
 
-- This
+- Questo
 - is
 - a
 - puntato
@@ -182,7 +182,7 @@ Quando l'UID contiene i caratteri speciali \` o \#, il valore UID deve essere co
 
 ##### <a name="unordered-list-with-an-embedded-list"></a>Elenco non ordinato con un elenco incorporato
 
-- This
+- Questo
 - puntato
 - list
     - Signora Pavone
@@ -233,7 +233,7 @@ namespace HelloWorld
 }
 ```
 
-#### <a name="xml"></a>xml
+#### <a name="xml"></a>Xml
 
 ```xml
 <dict>
@@ -329,7 +329,7 @@ docs.microsoft fornisce alcune estensioni aggiuntive a GitHub Flavored Markdown 
 
 È importante usare gli stili di avviso seguenti, in modo che ne venga eseguito il rendering con lo stile appropriato nel sito della documentazione. Tuttavia, il motore di rendering in GitHub non li differenzia.
 
-#### <a name="note"></a>Nota
+#### <a name="note"></a>Note
 
 ```
 > [!NOTE]
