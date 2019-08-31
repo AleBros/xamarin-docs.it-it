@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9fcd4820b5e22254356250ef2d26714dc32a59f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c818cac3b26e94710a64938a80690b8d4946320
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655213"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200210"
 ---
 # <a name="ios-security-and-privacy-features"></a>Funzionalità per la sicurezza e la privacy di iOS
 
 _Questo articolo illustra l'uso della sicurezza e della privacy in iOS e del modo in cui influiscono su un'app Novell. iOS._
 
 Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in iOS 10 (e versioni successive) che aiuteranno lo sviluppatore a migliorare la sicurezza delle app e garantire la privacy degli utenti finali. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Novell. iOS.
-    
+
 <a name="General-Enhancements" />
 
 ## <a name="general-enhancements"></a>Miglioramenti generali
@@ -51,9 +51,9 @@ Sono disponibili le seguenti chiavi correlate alla privacy:
 - **Descrizione utilizzo: privacy-aggiornamento integrità** (`NSHealthUpdateUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole modificare i dati di integrità dell'utente. Per ulteriori informazioni, vedere la pagina relativa al [riferimento alla classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)di Apple.
 - **Privacy-Descrizione utilizzo HomeKit** (`NSHomeKitUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere ai dati di configurazione HomeKit dell'utente.
 - **Descrizione utilizzo: privacy-location always** (`NSLocationAlwaysUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole avere sempre accesso alla posizione dell'utente.
-- Deprecato **Descrizione utilizzo: privacy-location** (`NSLocationUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al percorso utente. *SI NOTI Questa chiave è stata deprecata in iOS 8 (e versioni successive). In `NSLocationAlwaysUsageDescription` alternativa `NSLocationWhenInUseUsageDescription` , usare o.*
+- Deprecato **Descrizione utilizzo: privacy-location** (`NSLocationUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al percorso utente. *NOTA: Questa chiave è stata deprecata in iOS 8 (e versioni successive). In `NSLocationAlwaysUsageDescription` alternativa `NSLocationWhenInUseUsageDescription` , usare o.*
 - **Descrizione utilizzo: privacy-posizione in uso** (`NSLocationWhenInUseUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere alla posizione dell'utente mentre è in esecuzione.
-- Deprecato **Privacy-Descrizione utilizzo libreria multimediale** : consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al catalogo multimediale dell'utente. *SI NOTI Questa chiave è stata deprecata in iOS 8 (e versioni successive). In `NSAppleMusicUsageDescription` alternativa, usare.*
+- Deprecato **Privacy-Descrizione utilizzo libreria multimediale** : consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al catalogo multimediale dell'utente. *NOTA: Questa chiave è stata deprecata in iOS 8 (e versioni successive). In `NSAppleMusicUsageDescription` alternativa, usare.*
 - **Privacy-Descrizione utilizzo microfono** (`NSMicrophoneUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere al microfono dei dispositivi.
 - **Descrizione utilizzo: privacy-Motion** (`NSMotionUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere all'accelerometro del dispositivo.
 - **Privacy-Descrizione utilizzo raccolta foto** (`NSPhotoLibraryUsageDescription`)-Consente allo sviluppatore di descrivere il motivo per cui l'app vuole accedere alla raccolta foto dell'utente.

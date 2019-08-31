@@ -1,26 +1,26 @@
 ---
-title: Xamarin e la risoluzione dei problemi di iOS 13
-description: In questa sezione contiene suggerimenti sulla risoluzione dei problemi per la funzionalità Xamarin correlate ai dispositivi iOS 13.
+title: Risoluzione dei problemi di Novell e iOS 13
+description: Questa sezione contiene suggerimenti per la risoluzione dei problemi relativi alle funzionalità Novell correlate a iOS 13.
 ms.prod: xamarin
 ms.assetid: 00DE8C33-1407-45C0-A0C7-32AF1E490034
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2019
-ms.openlocfilehash: 99fd7e41e1521c6a9254d286bf989281658ccf24
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: d2a2146a0b7345475e2eb93d52fb02387c833224
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039788"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200042"
 ---
-# <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Risoluzione dei problemi di suggerimenti per 13 iOS e xamarin. IOS
+# <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per iOS 13 e Novell. iOS
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
-## <a name="updating-to-xcode-11-stops-the-simulator-from-launching"></a>L'aggiornamento a Xcode 11 si arresta il simulatore l'avvio
+## <a name="updating-to-xcode-11-stops-the-simulator-from-launching"></a>L'aggiornamento a Xcode 11 interrompe l'avvio del simulatore
 
-Dopo l'aggiornamento a **Xcode 11 beta 1** ogni volta che viene avviato un simulatore viene generata l'eccezione seguente, e non si avvia il simulatore. Ciò accade con tutti i simulatori.
+Dopo l'aggiornamento a **Xcode 11 Beta 1** ogni volta che viene avviato un simulatore viene generata la seguente eccezione e il simulatore non viene avviato. Questa operazione viene eseguita con tutti i simulatori.
 
 ### <a name="exception"></a>Eccezione
 
@@ -28,24 +28,24 @@ Dopo l'aggiornamento a **Xcode 11 beta 1** ogni volta che viene avviato un simul
 
 ### <a name="workaround"></a>Soluzione alternativa
 
-Fino a quando non è presente una [correggere](https://github.com/xamarin/xamarin-macios/issues/6216), possono essere seguiti i passaggi seguenti per installare nuovamente il vecchio framework del simulatore per consentire agli sviluppatori di continuare a usare:
+Fino a quando non si verifica una [correzione](https://github.com/xamarin/xamarin-macios/issues/6216), è possibile seguire questa procedura per reinstallare il Framework del simulatore precedente per consentire agli sviluppatori di continuare a lavorare:
 
 > [!NOTE]
-> Questi passaggi si presuppone due applicazioni di Xcode:
-> - **Xcode11 beta1.app** : la versione beta, che non funziona con i simulatori e Visual Studio per Mac.
-> - **Xcode102.app** : una versione stabile di Xcode 10. Quelle in uso potrebbe essere anche chiamato **Xcode.app**.
+> Questi passaggi presuppongono che siano disponibili due applicazioni Xcode:
+> - **Xcode11-beta1. app** : versione beta che non funziona con simulatori e Visual Studio per Mac.
+> - **Xcode102. app** : versione stabile di Xcode 10. Potrebbe anche essere chiamato **Xcode. app**.
 >
-> Modificare gli esempi di riga di comando seguenti come appropriato per la configurazione.
+> Modificare gli esempi di riga di comando riportati di seguito in base alla propria configurazione.
 
-1. Assicurarsi di aver 11 Xcode selezionato tramite xcode-select:
+1. Assicurarsi di aver selezionato Xcode 11 tramite Xcode-Select:
 
    `sudo xcode-select -s /Applications/Xcode11-beta1.app/Contents/Developer/`
 
-2. Eseguire, se necessario, il programma di installazione degli strumenti per la prima volta.
+2. Eseguire, se necessario, gli strumenti di installazione per la prima volta.
 
     `/Applications/Xcode11-beta1.app/Contents/Developer/usr/bin/xcodebuild -runFirstLaunch`
 
-3. Rimuovere il framework seguente:
+3. Rimuovere il Framework seguente:
 
     `sudo rm -Rf  /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/*`
 
@@ -53,8 +53,8 @@ Fino a quando non è presente una [correggere](https://github.com/xamarin/xamari
 
    `sudo xcode-select -s /Applications/Xcode102.app/Contents/Developer/`
 
-5. Eseguire nuovamente il primo strumento di avvio per il _vecchio_ Xcode versione appena selezionata
+5. Eseguire nuovamente il primo strumento di avvio per la versione _precedente_ di Xcode appena selezionata
 
    `/Applications/Xcode102.app/Contents/Developer/usr/bin/xcodebuild -runFirstLaunch`
 
-Dopo aver completato questi passaggi, sarà possibile usare nuovamente con il simulatore iOS.
+Dopo aver seguito questa procedura, dovrebbe essere possibile usare nuovamente il simulatore iOS.

@@ -1,58 +1,58 @@
 ---
-title: Installazione di .NET di incorporamento
-description: Questo documento descrive come installare .NET di incorporamento. Illustra come eseguire gli strumenti manualmente, come le associazioni di generare automaticamente, come usare le destinazioni MSBuild personalizzate e passaggi di post-compilazione necessari.
+title: Installazione dell'incorporamento di .NET
+description: Questo documento descrive come installare l'incorporamento .NET. Viene illustrato come eseguire manualmente gli strumenti, come generare automaticamente le associazioni, come utilizzare le destinazioni MSBuild personalizzate e i passaggi di post-compilazione necessari.
 ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 04/18/2018
-ms.openlocfilehash: 2a572748c21d2a640add3346d1162f4b6bdc8e99
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7da163e85b04791c276f9cb14f5b21615b7909fb
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076610"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200165"
 ---
-# <a name="installing-net-embedding"></a>Installazione di .NET di incorporamento
+# <a name="installing-net-embedding"></a>Installazione dell'incorporamento di .NET
 
-## <a name="installing-net-embedding-from-nuget"></a>Installazione di incorporamento di .NET da NuGet
+## <a name="installing-net-embedding-from-nuget"></a>Installazione dell'incorporamento di .NET da NuGet
 
-Scegliere **Aggiungi > Aggiungi pacchetti NuGet...**  e installare **Embeddinator 4000** da Gestione pacchetti NuGet:
+Scegliere **aggiungi > Aggiungi pacchetti NuGet...** e installare **Embeddinator-4000** da Gestione pacchetti NuGet:
 
 ![Gestione pacchetti NuGet](images/visualstudionuget.png)
 
-Verrà installato **Embeddinator 4000.exe** e **objcgen** nel **pacchetti/Embeddinator-4000/tools** directory.
+Il file **Embeddinator-4000. exe** e **objcgen** verrà installato nella directory **packages/Embeddinator-4000/Tools** .
 
-In generale, è necessario selezionare la versione più recente di Embeddinator-4000 caratteri per il download. Supporto di Objective-C richiede 0.4 o versione successiva.
+In generale, per il download è necessario selezionare la versione più recente di Embeddinator-4000. Il supporto Objective-C richiede 0,4 o versione successiva.
 
 ## <a name="running-manually"></a>Esecuzione manuale
 
-Ora che NuGet è installato, è possibile eseguire gli strumenti manualmente.
+Ora che NuGet è installato, è possibile eseguire manualmente gli strumenti.
 
-- Aprire un terminale (macOS) o il prompt dei comandi (Windows)
-- Passare alla directory radice del soluzione
-- Gli strumenti viene installato in:
-    - **./packages/Embeddinator-4000.[VERSION]/tools/objcgen** (Objective-C)
-    - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C)
-- In macOS **objcgen** può essere eseguito direttamente.
-- In Windows, **Embeddinator 4000.exe** può essere eseguito direttamente.
-- In macOS **Embeddinator 4000.exe** deve essere eseguito con **mono**:
+- Aprire un terminale (macOS) o un prompt dei comandi (Windows)
+- Passare alla directory radice della soluzione
+- Gli strumenti vengono installati in:
+    - **./Packages/Embeddinator-4000. [Versione]/Tools/objcgen** (Objective-C)
+    - **./Packages/Embeddinator-4000. [Versione]/tools/Embeddinator-4000.exe** (Java/C)
+- In macOS, **objcgen** può essere eseguito direttamente.
+- In Windows, **Embeddinator-4000. exe** può essere eseguito direttamente.
+- In macOS, **Embeddinator-4000. exe** deve essere eseguito con **mono**:
     - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
-Ogni chiamata a un comando sarà necessario un numero di parametri elencati nella documentazione specifica della piattaforma.
+Ogni chiamata al comando richiede una serie di parametri elencati nella documentazione specifica della piattaforma.
 
-## <a name="automatic-binding-generation"></a>Generazione di associazione automatico
+## <a name="automatic-binding-generation"></a>Generazione automatica di binding
 
-Esistono due approcci per l'esecuzione automatica di incorporamento .NET parte del processo di compilazione.
+Esistono due approcci per l'esecuzione automatica della parte di incorporamento .NET del processo di compilazione.
 
 - Destinazioni MSBuild personalizzate
 - Passaggi di post-compilazione
 
-Sebbene questo documento illustra entrambi, è preferibile usare una destinazione di MSBuild personalizzata. I passaggi di compilazione successivi non verranno necessariamente eseguiti durante la compilazione dalla riga di comando.
+Sebbene in questo documento vengano descritti entrambi, è preferibile usare una destinazione MSBuild personalizzata. I passaggi di post-compilazione non vengono eseguiti necessariamente quando si compila dalla riga di comando.
 
 ### <a name="custom-msbuild-targets"></a>Destinazioni MSBuild personalizzate
 
-Per personalizzare la compilazione con le destinazioni di MSbuild, creare prima di tutto una **Embeddinator 4000.targets** file accanto il csproj simile al seguente:
+Per personalizzare la compilazione con le destinazioni MSbuild, creare prima un file **Embeddinator-4000. targets** accanto al file csproj simile al seguente:
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -62,13 +62,13 @@ Per personalizzare la compilazione con le destinazioni di MSbuild, creare prima 
 </Project>
 ```
 
-In questo caso, il testo del comando deve essere compilato con una delle chiamate dell'incorporamento di .NET elencate nella documentazione specifica della piattaforma.
+In questo caso, il testo del comando deve essere compilato con una delle chiamate di incorporamento .NET elencate nella documentazione specifica della piattaforma.
 
 Per usare questa destinazione:
 
 - Chiudere il progetto in Visual Studio 2017 o Visual Studio per Mac
-- Aprire il file csproj libreria in un editor di testo
-- Aggiungere questa riga nella parte inferiore, sopra l'elemento finale `</Project>` riga:
+- Aprire la libreria csproj in un editor di testo
+- Aggiungere questa riga nella parte inferiore, sopra la riga `</Project>` finale:
 
 ```xml
  <Import Project="Embeddinator-4000.targets" />
@@ -78,32 +78,33 @@ Per usare questa destinazione:
 
 ### <a name="post-build-steps"></a>Passaggi di post-compilazione
 
-I passaggi per aggiungere un passaggio di post-compilazione per eseguire l'incorporamento .NET variano a seconda dell'IDE:
+I passaggi per aggiungere un passaggio di post-compilazione per l'esecuzione dell'incorporamento di .NET variano a seconda dell'IDE:
 
 #### <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
-In Visual Studio per Mac, passare a **opzioni progetto > compilazione > comandi personalizzati** e aggiungere un' **dopo la compilazione** passaggio.
+In Visual Studio per Mac passare a **Opzioni progetto > compila > comandi personalizzati** e aggiungere un'istruzione **dopo la compilazione** .
 
-Configurare il comando riportato nella documentazione specifica della piattaforma.
+Configurare il comando elencato nella documentazione specifica della piattaforma.
 
 > [!NOTE]
-> Assicurarsi di usare il numero di versione che è stato installato da NuGet
+> Assicurarsi di usare il numero di versione installato da NuGet
 
-Se si intende eseguire lo sviluppo in corso su di C# progetto, è possibile anche aggiungere un comando personalizzato per pulire i **output** directory prima di eseguire l'incorporamento di .NET:
+Se si intende eseguire lo sviluppo continuo sul C# progetto, è anche possibile aggiungere un comando personalizzato per pulire la directory di **output** prima di eseguire l'incorporamento di .NET:
 
 ```shell
 rm -Rf '${SolutionDir}/output/'
 ```
 
-![Azione di compilazione personalizzato](images/visualstudiocustombuild.png)
+![Azione di compilazione personalizzata](images/visualstudiocustombuild.png)
 
 > [!NOTE]
-> L'associazione generata verrà inserito nella directory indicata dal `--outdir` o `--out` parametro. Il nome dell'associazione generate può variare poiché alcune piattaforme presentano alcune limitazioni nei nomi dei pacchetti.
+> Il binding generato verrà inserito nella directory indicata dal `--outdir` parametro o. `--out` Il nome dell'associazione generato può variare in quanto alcune piattaforme presentano limitazioni per i nomi dei pacchetti.
 
 #### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-Si configurerà essenzialmente la stessa operazione, ma il menu di scelta in Visual Studio 2017 sono leggermente diversi. Inoltre, i comandi della shell sono leggermente diversi.
+In sostanza, la stessa operazione viene configurata, ma i menu in Visual Studio 2017 sono leggermente diversi. Anche i comandi della shell sono leggermente diversi.
 
-Passare a **opzioni progetto > eventi di compilazione** e immettere il comando riportato nella documentazione specifica della piattaforma nel **riga di comando eventi post-compilazione** casella. Ad esempio:
+Passare a **Opzioni progetto > compila eventi** e immettere il comando elencato nella documentazione specifica della piattaforma nella casella **riga di comando eventi post-compilazione** . Ad esempio:
 
-![Incorporamento in Windows .NET](images/visualstudiowindows.png)
+![Incorporamento di .NET in Windows](images/visualstudiowindows.png)
+ 

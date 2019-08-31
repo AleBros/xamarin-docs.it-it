@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f4f063cf7004d35aa93f688e71a917caa7a3e5a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648950"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200245"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Novell
 
@@ -42,7 +42,7 @@ Non è possibile combinare testo e icone in un determinato segmento ed evitare d
 
 Apple apporta i suggerimenti seguenti per l'uso del testo del segmento:
 
-- **Utilizzare sostantivi brevi e significativi** : il titolo del segmento deve indicare chiaramente il tipo di contenuto che l'utente deve aspettarsi durante la selezione del segmento specificato. Ad esempio: Musica o video.
+- **Utilizzare sostantivi brevi e significativi** : il titolo del segmento deve indicare chiaramente il tipo di contenuto che l'utente deve aspettarsi durante la selezione del segmento specificato. Ad esempio:  Musica o video.
 - **Usare** le maiuscole/minuscole per maiuscole e minuscole: ogni parola del titolo del segmento deve essere in maiuscolo, ad eccezione di articoli, conjunction e preposizioni di meno di quattro (4) caratteri.
 - **Usa titoli brevi** e mirati: Mantieni i titoli, brevi e incentrati sul tipo di contenuto da prevedere quando viene selezionato il segmento.
 
@@ -71,7 +71,7 @@ Il modo più semplice per usare i controlli dei segmenti in un'app Novell. tvOS 
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **controllo Segment** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
@@ -85,7 +85,7 @@ Il modo più semplice per usare i controlli dei segmenti in un'app Novell. tvOS 
 
     [![](segmented-controls-images/segment04-vs.png "Assegnare un nome")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Salvare le modifiche.
-    
+
 -----
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
@@ -208,7 +208,7 @@ Dove `UIControlState` specifica lo stato del controllo per il quale si sta impos
 
 - Normale
 - Evidenziato
-- Disabled
+- Disabilitata
 - Selezionato
 - Con stato attivo
 

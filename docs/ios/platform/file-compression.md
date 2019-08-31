@@ -1,36 +1,36 @@
 ---
-title: Compressione dei file in xamarin. IOS
-description: Questo documento descrive come usare l'API libcompression in xamarin. IOS. Vengono illustrati deflazionando, ciò fa aumentare erroneamente, e i diversi algoritmi è supportato.
+title: Compressione di file in Novell. iOS
+description: Questo documento descrive come usare l'API libcompression in Novell. iOS. Vengono illustrati il Deflating, il gonfiaggio e i diversi algoritmi supportati.
 ms.prod: xamarin
 ms.assetid: 94D05DAB-01E8-4C62-9CEF-9D6417EEA8EB
 ms.technology: xamarin-ios
 author: mandel-macaque
 ms.author: mandel
 ms.date: 03/04/2019
-ms.openlocfilehash: f7a1df65047fd8040dd40e9f7f057d6bfe6dea61
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bcc63aa4e1926f5502d571bf47c83b0c8ea7e429
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61403031"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199517"
 ---
-# <a name="file-compression-in-xamarinios"></a>Compressione dei file in xamarin. IOS
+# <a name="file-compression-in-xamarinios"></a>Compressione di file in Novell. iOS
 
-Xamarin App destinate a iOS 9.0 o macOS 10.11 (e versioni successive) possono usare la _Framework di compressione_ per comprimere (codifica) e decomprimere (decodifica) dei dati. Xamarin. IOS fornisce questo framework seguendo l'API di Stream. Il framework di compressione consente agli sviluppatori di interagire con la compressione e decompressione dei dati come se fossero flussi normali senza la necessità di usare callback o delegati.
+Le app Novell destinate a iOS 9,0 o macOS 10,11 (e versioni successive) possono usare il _Framework di compressione_ per comprimere (codificare) e decomprimere (decodificare) i dati. Novell. iOS fornisce questo framework dopo l'API Stream. Il Framework di compressione consente agli sviluppatori di interagire con i dati compressi e decompressi come se fossero flussi normali senza la necessità di utilizzare callback o delegati.
 
-Il framework di compressione offre supporto per gli algoritmi seguenti:
+Il Framework di compressione fornisce supporto per gli algoritmi seguenti:
 
 * LZ4
-* LZ4 non elaborati
+* LZ4 RAW
 * Lzfse
-* Lzma
+* LZMA
 * Zlib
 
-Usando il framework di compressione consente agli sviluppatori di eseguire le operazioni di compressione senza librerie di terze parti o pacchetti NuGet. Ciò riduce le dipendenze esterne e assicura che le operazioni di compressione sono supportate in tutte le piattaforme (purché soddisfino i requisiti minimi del sistema operativo).
+L'uso del Framework di compressione consente agli sviluppatori di eseguire operazioni di compressione senza librerie o NuGet di terze parti. In questo modo si riducono le dipendenze esterne e si garantisce che le operazioni di compressione siano supportate in tutte le piattaforme (purché soddisfino i requisiti minimi del sistema operativo).
 
-## <a name="general-file-decompression"></a>Decompressione di file generici
+## <a name="general-file-decompression"></a>Decompressione generale dei file
 
-Il framework di compressione Usa un flusso di API in xamarin. IOS e xamarin. Mac. Questa API significa che per comprimere i dati, lo sviluppatore può utilizzare i modelli normali usati in altre API dei / o all'interno di .NET. L'esempio seguente illustra come decomprimere i dati con il framework di compressione, che è simile all'API nel `System.IO.Compression.DeflateStream` API:
+Il Framework di compressione usa un'API di flusso in Novell. iOS e Novell. Mac. Questa API significa che per comprimere i dati, lo sviluppatore può usare i modelli normali usati in altre API di i/o in .NET. Nell'esempio seguente viene illustrato come decomprimere i dati con il Framework di compressione, che è simile all'API `System.IO.Compression.DeflateStream` disponibile nell'API:
 
 ```csharp
 // sample zlib data
@@ -45,11 +45,11 @@ using (var reader = new StreamReader (decompressing))
 }
 ```
 
-Il `CompressionStream` implementa la `IDisposable` interfaccia, come altro `System.IO.Streams`, in modo che gli sviluppatori devono assicurarsi che le risorse vengono liberate quando non sono più necessari.
+Implementa l' `IDisposable` interfaccia, come altre `System.IO.Streams`, per consentire agli sviluppatori di garantire che le risorse vengano liberate una volta che non sono più necessarie. `CompressionStream`
 
-## <a name="general-file-compression"></a>Compressione di file generici
+## <a name="general-file-compression"></a>Compressione file generale
 
-L'API di compressione consente inoltre agli sviluppatori di comprimere i dati seguendo la stessa API. I dati possono essere compressi tramite uno degli algoritmi forniti indicati nella `CompressionAlgorithm` enumeratore.
+L'API di compressione consente inoltre agli sviluppatori di comprimere i dati dopo la stessa API. I dati possono essere compressi utilizzando uno degli algoritmi specificati indicati nell' `CompressionAlgorithm` enumeratore.
 
 ```csharp
 // sample method that copies the data from the source stream to the destination stream
@@ -85,4 +85,4 @@ static void CompressExample ()
 
 ## <a name="async-support"></a>Supporto di Async
 
-Il `CompressionStream` supporta tutte le operazioni asincrone che sono supportate dal `System.IO.DeflateStream`, il che significa che gli sviluppatori possono utilizzare la parola chiave async per eseguire le operazioni di compressione/decompressione senza bloccare il thread dell'interfaccia utente.
+Supporta tutte le operazioni asincrone supportate `System.IO.DeflateStream`da, il che significa che gli sviluppatori possono usare la parola chiave async per eseguire le operazioni di compressione/decompressione senza bloccare il thread dell'interfaccia utente. `CompressionStream`

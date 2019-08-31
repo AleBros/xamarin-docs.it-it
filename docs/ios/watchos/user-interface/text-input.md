@@ -1,37 +1,37 @@
 ---
-title: Utilizzo di watchOS Input di testo in Xamarin
-description: Questo documento descrive watchOS input di testo in Xamarin. Illustra il PresentTextInputController (metodo), scrittura manuale, testo normale, emoji e dettatura.
+title: Uso dell'input di testo watchos in Novell
+description: Questo documento descrive l'input di testo watchos in Novell. Viene illustrato il metodo PresentTextInputController, Scribble, testo normale, emoji e la dettatura.
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 2092b12254008936f2c5b6a7d9dd610ff751e802
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f77c48cbec6a672a67808cda4e7b8fe887b492af
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61207434"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200145"
 ---
-# <a name="working-with-watchos-text-input-in-xamarin"></a>Utilizzo di watchOS Input di testo in Xamarin
+# <a name="working-with-watchos-text-input-in-xamarin"></a>Uso dell'input di testo watchos in Novell
 
-L'Apple Watch non forniscono una tastiera per gli utenti di immettere testo, ma supporta alcune alternative di facile integrazione con espressioni di controllo:
+Il Apple Watch non fornisce una tastiera per consentire agli utenti di inserire il testo, tuttavia supporta alcune alternative intuitive:
 
-- La selezione da un elenco predefinito delle opzioni di testo,
-- Siri dettatura,
+- Selezione da un elenco predefinito di opzioni di testo
+- Dettatura Siri,
 - Scelta di un emoji,
-- Scribble riconoscimento della grafia lettera per lettera (introdotta in watchOS 3).
+- Riconoscimento della grafia lettera per lettera Scribble (introdotto in watchos 3).
 
-Il simulatore non supporta attualmente la dettatura ma è comunque possibile testare l'input di testo altre opzioni del controller, ad esempio Scribble, come illustrato di seguito:
+Il simulatore attualmente non supporta la dettatura, ma è comunque possibile testare le altre opzioni del controller di input di testo, ad esempio Scribble, come illustrato di seguito:
 
-![](text-input-images/textinput-sml.png "Prova l'opzione di scribble")
+![](text-input-images/textinput-sml.png "Test dell'opzione Scribble")
 
-Per accettare l'input di testo in un'app:
+Per accettare l'input di testo in un'app Watch:
 
-1. Creare una matrice di stringhe delle opzioni predefinite.
-2. Chiamare `PresentTextInputController` con la matrice, se si desidera consentire emoji oppure No e un `Action` che viene chiamato quando l'utente ha terminato.
-3. Nell'azione di completamento, verificare il risultato di input ed eseguire l'azione appropriata nell'app (possibilmente impostando il valore di testo dell'etichetta).
+1. Creare una matrice di stringhe di opzioni predefinite.
+2. Chiamare `PresentTextInputController` con la matrice, se consentire o meno emoji e un oggetto `Action` che viene chiamato al termine dell'utente.
+3. Nell'azione di completamento, testare il risultato di input e intraprendere l'azione appropriata nell'app (possibilmente impostando il valore di testo di un'etichetta).
 
 Il frammento di codice seguente presenta tre opzioni predefinite per l'utente:
 
@@ -49,41 +49,41 @@ PresentTextInputController (suggest, WatchKit.WKTextInputMode.AllowEmoji, (resul
 });
 ```
 
-Il `WKTextInputMode` enumerazione ha tre valori:
+L' `WKTextInputMode` enumerazione ha tre valori:
 
-- Normale
+- Pianura
 - AllowEmoji
 - AllowAnimatedEmoji
 
-## <a name="plain"></a>Normale
+## <a name="plain"></a>Pianura
 
-Quando è impostata la modalità semplice, l'utente può scegliere:
+Quando viene impostata la modalità normale, l'utente può scegliere:
 
-- Dettatura,
-- Scribble, o
-- da un elenco pre-definito che fornisce l'applicazione.
+- Dettatura
+- Scribble o
+- da un elenco predefinito fornito dall'applicazione.
 
-[![](text-input-images/plain-scribble-sml.png "Dettatura, Scribble, o da un elenco pre-definito che fornisce l'app")](text-input-images/plain-scribble.png#lightbox)
+[![](text-input-images/plain-scribble-sml.png "Dettatura, scarabocchio o da un elenco predefinito fornito dall'app")](text-input-images/plain-scribble.png#lightbox)
 
-Il risultato viene restituito sempre come una `NSObject` che può essere convertito in un `string`.
+Il risultato viene sempre restituito come oggetto `NSObject` di cui è possibile eseguire il `string`cast a un oggetto.
 
 ## <a name="emoji"></a>Emoji
 
-Esistono due tipi di emoji:
+Sono disponibili due tipi di emoji:
 
-- Emoji regolare di Unicode
+- Emoji Unicode normale
 - Immagini animate
 
 Quando l'utente sceglie un emoji Unicode, viene restituito sotto forma di stringa.
 
-Se si seleziona un emoji immagine animata la `result` nel completamento gestore conterrà un' `NSData` oggetto che contiene l'emoji `UIImage`.
+Se viene selezionata `result` un'immagine animata emoji, nel gestore di completamento sarà contenuto un `NSData` oggetto che contiene il emoji `UIImage`.
 
-## <a name="accepting-dictation-only"></a>Accetta solo la dettatura
+## <a name="accepting-dictation-only"></a>Accettazione solo della dettatura
 
-Per rendere l'utente direttamente alla schermata di dettatura senza mostrare suggerimenti (o l'opzione di Scribble):
+Per portare l'utente direttamente alla schermata di dettatura senza visualizzare alcun suggerimento (o l'opzione Scribble):
 
-- passa una matrice vuota per l'elenco di suggerimenti, e
-- Impostare `WatchKit.WKTextInputMode.Plain`.
+- passare una matrice vuota per l'elenco di suggerimenti e
+- impostare `WatchKit.WKTextInputMode.Plain`.
 
 ```csharp
 PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (result) => {
@@ -96,15 +96,15 @@ PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (resu
 });
 ```
 
-Quando l'utente sta parlando, la schermata di espressioni di controllo viene visualizzata la schermata seguente che include il testo è inteso (ad esempio "This is a test"):
+Quando l'utente sta parlando, nella schermata espressioni di controllo viene visualizzata la schermata seguente, che include il testo inteso (ad esempio "questo è un test"):
 
-![](text-input-images/dictation.png "Quando l'utente sta parlando, la schermata di espressioni di controllo viene visualizzato il testo viene riconosciuto")
+![](text-input-images/dictation.png "Quando l'utente sta parlando, la schermata espressioni di controllo Visualizza il testo come viene riconosciuto")
 
-Una volta premono il **Done** verrà restituito il testo del pulsante.
+Una volta premuto il pulsante **done** , viene restituito il testo.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Apple doc testo ed etichette](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html)
+- [Documento di Apple Text and labels](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html)
 - [Introduzione a watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

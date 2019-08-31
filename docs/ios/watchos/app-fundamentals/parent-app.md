@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfb419834c2eee94f98d023df3a3fe8d6eee90
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654562"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198124"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS padre Application in Xamarin
 
@@ -22,11 +22,11 @@ ms.locfileid: "68654562"
 
 Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene abbinato a:
 
-- Espressioni di controllo delle estensioni can [chiamare un metodo](#code) per l'app padre che viene eseguito in background nell'iPhone.
+- Le estensioni Watch possono [chiamare un metodo](#code) per l'app padre eseguita in background nell'iPhone.
 
 - Espressioni di controllo delle estensioni can [condividere un percorso di archiviazione](#storage) con l'app iPhone padre.
 
-- Utilizzo di Esegui Handoff per passare i dati da un riepilogo o una notifica all'app Watch, l'invio l'utente a un controller di interfaccia specifica nell'app.
+- Uso della consegna per passare i dati da un'occhiata o una notifica all'app Watch, inviando l'utente a uno specifico controller di interfaccia nell'app.
 
 L'App padre viene talvolta anche detto l'App contenitore.
 

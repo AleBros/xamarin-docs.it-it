@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: d75f46f8b06ef0e743218d5f42d5b2732b6e4158
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: aa8f25af4a394b981fdc7d5dc5a8836b7ff240cc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120967"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200267"
 ---
 # <a name="xamarinios-errors"></a>Errori di Novell. iOS
 
@@ -2506,7 +2506,7 @@ Passaggi per la risoluzione dei problemi:
 - provare a eseguire `csharp -e 'System.Net.Dns.GetHostEntry (System.Net.Dns.GetHostName ()).AddressList'` , che dovrebbe fornire un indirizzo IP e non un errore, ovviamente.
 - provare a eseguire "ping \`hostname\`", che potrebbe fornire ulteriori informazioni, ad esempio:`cannot resolve MyHost.local: Unknown host`
 
-In alcuni casi, si tratta di un problema di "rete locale" e può essere risolto aggiungendo l'host `127.0.0.1   MyHost.local` sconosciuto in. `/etc/hosts`
+In alcuni casi, si tratta di un problema di "rete locale" e può essere risolto aggiungendo l'host `127.0.0.1    MyHost.local` sconosciuto in. `/etc/hosts`
 
 <a name="MT7002" />
 

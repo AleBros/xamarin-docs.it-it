@@ -6,12 +6,12 @@ ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 9d43bbdb49fe4ab1ff909f709a37f979c360ceb9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509595"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199399"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipi nativi per iOS e macOS
 
@@ -45,9 +45,9 @@ Gli operatori di conversioni implicite vengono forniti quando non è possibile l
 
 Gli operatori di conversioni esplicite vengono forniti quando è possibile che si verifichi una perdita di dati (il valore 64 bit viene archiviato in un percorso di archiviazione 32 o potenzialmente 32).
 
- `int`, `uint` e `float` sono `nuint` tutticonvertibili`nfloat` in modo implicito in ,mentre32bitsiadattanosemprea32o64bit.`nint`
+`int`, `uint` e `float` sono `nuint` tutticonvertibili`nfloat` in modo implicito in ,mentre32bitsiadattanosemprea32o64bit.`nint`
 
- `nint`, `nuint` e `nfloat` sono `ulong` tutticonvertibili`double` in modo implicito in ,mentreivaloridibit32o64rientranosemprenell'archiviodibit64.`long`
+`nint`, `nuint` e `nfloat` sono `ulong` tutticonvertibili`double` in modo implicito in ,mentreivaloridibit32o64rientranosemprenell'archiviodibit64.`long`
 
 È necessario utilizzare le conversioni esplicite `nint`da `nuint` e `nfloat` in `int`e `uint` `float` , poiché i tipi nativi possono ospitare 64 bit di archiviazione.
 

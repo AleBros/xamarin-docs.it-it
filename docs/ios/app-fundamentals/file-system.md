@@ -4,15 +4,15 @@ description: Questo documento descrive come usare la file system in Novell. iOS.
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/12/2018
-ms.openlocfilehash: e52f9abb31090f3acc361eb5a3f9ae2e12600b36
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daa9625ccbac3661d3678889d4efd6319e0bd424
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653521"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198134"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Accesso al file System in Novell. iOS
 
@@ -198,7 +198,7 @@ Queste directory, come determinare il percorso e i rispettivi scopi sono elencat
 
 &nbsp;
 
-|Directory|Descrizione|
+|Directory|DESCRIZIONE|
 |---|---|
 |[ApplicationName]. app/|**In iOS 7 e versioni precedenti**, si tratta `ApplicationBundle` della directory in cui è archiviato il file eseguibile dell'applicazione. La struttura di directory creata nell'app esiste in questa directory, ad esempio immagini e altri tipi di file contrassegnati come risorse nel progetto Visual Studio per Mac.<br /><br />Se è necessario accedere ai file di contenuto all'interno del bundle dell'applicazione, il percorso di questa directory è disponibile `NSBundle.MainBundle.BundlePath` tramite la proprietà.|
 |Documenti|Utilizzare questa directory per archiviare documenti utente e file di dati dell'applicazione.<br /><br />Il contenuto di questa directory può essere reso disponibile all'utente tramite la condivisione di file iTunes (anche se è disabilitato per impostazione predefinita). Aggiungere una `UIFileSharingEnabled` chiave booleana al file INFO. plist per consentire agli utenti di accedere a questi file.<br /><br />Anche se un'applicazione non Abilita immediatamente la condivisione file, è consigliabile evitare di inserire i file che devono essere nascosti agli utenti in questa directory, ad esempio i file di database, a meno che non si desideri condividerli. Finché i file riservati rimangono nascosti, questi file non verranno esposti (e potenzialmente spostati, modificati o eliminati da iTunes) se la condivisione file è abilitata in una versione futura.<br /><br /> È possibile usare il `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` metodo per ottenere il percorso della directory dei documenti per l'applicazione.<br /><br />Il contenuto di questa directory viene sottoposto a backup da iTunes.|
@@ -241,7 +241,7 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 ## <a name="sharing-with-the-files-app"></a>Condivisione con l'app files
 
-iOS 11 ha introdotto **l'app file** , un visualizzatore di file per iOS, che consente all'utente di visualizzare e interagire con i file in iCloud e anche archiviati da qualsiasi applicazione che la supporti. Per consentire all'utente di accedere direttamente ai file nell'app, creare una nuova chiave booleana nel file `LSSupportsOpeningDocumentsInPlace` **info. plist** e impostarla su `true`, come indicato di seguito:
+iOS 11 ha introdotto l'app file, un visualizzatore di file per iOS, che consente all'utente di visualizzare e interagire con i file in iCloud e anche archiviati da qualsiasi applicazione che la supporti. Per consentire all'utente di accedere direttamente ai file nell'app, creare una nuova chiave booleana nel file `LSSupportsOpeningDocumentsInPlace` **info. plist** e impostarla su `true`, come indicato di seguito:
 
 ![Impostare LSSupportsOpeningDocumentsInPlace in info. plist](file-system-images/51-supports-opening.png)
 

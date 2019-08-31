@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d119d96a3ce8389a71726e1359e064efe1fbb1ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509441"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199216"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Aggiornamento delle app Novell. Forms esistenti
 
@@ -53,7 +53,7 @@ Fare clic sul progetto iOS in modo che sia selezionato, quindi scegliere **proge
 Questa operazione verrà automaticamente:
 
 - Modificare il tipo di progetto per supportare l'API Unified a 64 bit.
-- Modificare il riferimento al Framework in **Novell. iOS** (sostituendo  il vecchio riferimento MonoTouch).
+- Modificare il riferimento al Framework in **Novell. iOS** (sostituendo il vecchio riferimento MonoTouch).
 - Modificare i riferimenti allo spazio dei nomi nel codice per `MonoTouch` rimuovere il prefisso.
 - Aggiornare il file **csproj** per usare le destinazioni di compilazione corrette per la API unificata.
 
@@ -192,7 +192,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
  }
 ```
 
-### <a name="troubleshooting"></a>risoluzione dei problemi
+### <a name="troubleshooting"></a>Risoluzione dei problemi
 
 In alcuni casi verrà visualizzato un errore simile al seguente dopo l'aggiornamento del pacchetto NuGet Novell. Forms. Si verifica quando NuGet Updater non rimuove completamente i riferimenti alle versioni precedenti dai file **csproj** .
 

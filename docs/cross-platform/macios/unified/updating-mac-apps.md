@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
+ms.openlocfilehash: a6d245e60a0d163c054fd74e0fb64780225da031
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560297"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197812"
 ---
 # <a name="updating-existing-mac-apps"></a>Aggiornamento delle app Mac esistenti
 
@@ -118,7 +118,7 @@ Fino a quel momento, come per i componenti, è necessario cambiare il pacchetto 
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Abilitazione di Build a 64 bit di app Novell. Mac
 
 Per un'applicazione Novell. Mac per dispositivi mobili che è stata convertita nel API unificata, lo sviluppatore deve comunque abilitare la compilazione dell'applicazione per i computer a 64 bit dalle opzioni dell'app. Per istruzioni dettagliate sull'abilitazione di compilazioni a 64 bit, vedere la pagina relativa all' **Abilitazione delle build a 64 bit delle app Novell. Mac** del documento sulle [considerazioni sulla piattaforma di bit 32/64](~/cross-platform/macios/32-and-64/index.md)
-    
+
 ## <a name="finishing-up"></a>Completamento
 
 Indipendentemente dal fatto che si scelga di usare il metodo automatico o manuale per convertire l'applicazione Novell. Mac dalla versione classica alle API unificate, esistono diverse istanze che richiedono un intervento manuale. Per informazioni sui problemi noti e su come risolvere il problema, vedere [i suggerimenti per l'aggiornamento del codice al documento API unificata](~/cross-platform/macios/unified/updating-tips.md) .

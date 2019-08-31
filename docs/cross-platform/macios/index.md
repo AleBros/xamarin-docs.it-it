@@ -1,67 +1,67 @@
 ---
 title: Piattaforma Apple (iOS e Mac)
-description: "Questo documento descrive vari argomenti correlati allo sviluppo di xamarin. IOS e xamarin. Mac: codice di condivisione, l'API unificata, binding Objective-C librerie, i riferimenti nativi, i tipi nativi e altro ancora."
+description: 'Questo documento descrive vari argomenti correlati allo sviluppo di Novell. iOS e Novell. Mac: condivisione del codice, API unificata, binding di librerie Objective-C, riferimenti nativi, tipi nativi e altro ancora.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c30d70d8a36c0e5a9b9ff6ddc74710dec4fb86a4
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 2d57e69f3cb7662b1ff6e1e7fe1645605d7861b9
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864392"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199417"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Piattaforma Apple (iOS e Mac)
 
 ## <a name="code-sharing"></a>Condivisione del codice
 
-Per gli elementi del codice non con alcun elemento dell'interfaccia utente il modo migliore per condividere codice tra iOS e Mac viene comunque l'uso di [librerie di classi portabili](~/cross-platform/app-fundamentals/pcl.md).
+Per gli elementi del codice senza elementi dell'interfaccia utente, il modo migliore per condividere il codice tra iOS e Mac è ancora l'uso di [librerie di classi](~/cross-platform/app-fundamentals/pcl.md)portabili.
 
-Per il codice che è necessario eseguire alcune operazioni dell'interfaccia utente e ancora, si desidera condividere, è consigliabile usare [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md) che consentono di inserire il codice per condividere in un unico progetto che verrà compilato con Mac e iOS quando viene fatto riferimento.
+Per il codice che deve eseguire alcune operazioni dell'interfaccia utente e che tuttavia si vuole condividere, è necessario usare [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md) che consentono di inserire il codice da condividere in un singolo progetto e di compilarlo con Mac e iOS quando viene fatto riferimento.
 
 ## <a name="unified-apiunifiedindexmd"></a>[API unificata](unified/index.md)
 
-L'API unificata per progetti iOS e Mac Usa gli stessi spazi dei nomi per i Framework in modo che lo stesso file di codice può essere usato su entrambe le piattaforme, per facile condivisione del codice. Inoltre, consente le compilazioni di bit sia 32 e 64. L'API unificata anticipata 2015 è stato il modello come predefinito ed è consigliato per tutti i nuovi progetti - *solo* progetti API unificata è possono inviare l'App Store.
+Il API unificata per i progetti iOS e Mac usa gli stessi spazi dei nomi per i Framework in modo che lo stesso file di codice possa essere usato in entrambe le piattaforme, per una condivisione di codice uniforme. Consente inoltre le compilazioni di bit 32 e 64. Il API unificata è stato il modello predefinito dal primo 2015 ed è consigliato per tutti i nuovi progetti. è possibile inviare *solo* i progetti API unificata all'App Store.
 
-### <a name="classic-apis"></a>API classica
+### <a name="classic-apis"></a>API classiche
 
 > [!NOTE]
-> **Rimozione del profilo classico:** L'aggiunta di nuove piattaforme in xamarin. IOS è iniziata deprecare gradualmente le funzionalità dal profilo classico (monotouch). Ad esempio, l'opzione non NRC (nuova-ref-count) è stata rimossa. NRC sempre abilitato per applicazioni unificate tutto (vale a dire NRC non era mai un'opzione) e sono presenti problemi noti. Le versioni future rimuoverà la possibilità di usare Boehm come garbage collector. Questo era anche un'opzione mai disponibile per le applicazioni unificate. La rimozione completa di supporto classica è pianificata per autunno 2016 con la versione di xamarin. IOS 10.0.
+> **Deprecazione del profilo classico:** Man mano che vengono aggiunte nuove piattaforme in Novell. iOS, viene avviata la deprecazione graduale delle funzionalità del profilo classico (MonoTouch. dll). Ad esempio, l'opzione non-NRC (New-ref-Count) è stata rimossa. NRC è sempre stato abilitato per tutte le applicazioni unificate, ovvero non è mai stata un'opzione, ma non ha problemi noti. Nelle versioni future viene rimossa l'opzione di utilizzo di Boehm come Garbage Collector. Questa era anche un'opzione non disponibile per le applicazioni unificate. La rimozione completa del supporto classico è prevista per il calo 2016 con la versione di Novell. iOS 10,0.
 
-Xamarin. IOS (non-unificato) originale e le Xamarin.Mac APIs apportate condivisione del codice più difficile Framework nativi risultavano uno `MonoTouch.` o `MonoMac.` prefissi dello spazio dei nomi.  Microsoft fornisce alcuni spazi dei nomi vuoto che consente agli sviluppatori di condividere il codice aggiungendo `using` istruzioni che fanno riferimento a spazi dei nomi sia MonoMac e MonoTouch per lo stesso file, ma questo è stato un po' poco eleganti. L'API classica solo continueranno a essere utilizzata nelle applicazioni legacy che sono distribuite internamente (l'aggiornamento all'API unificata è consigliato).
+Le API originali (non unificate) Novell. iOS e Novell. Mac hanno reso più difficile la condivisione del codice perché i Framework `MonoTouch.` nativi contengono prefissi di spazio dei nomi o. `MonoMac.`  Sono stati forniti alcuni spazi dei nomi vuoti che consentono agli sviluppatori di condividere `using` il codice aggiungendo istruzioni che fanno riferimento a spazi dei nomi MonoMac e MonoTouch nello stesso file, ma si tratta di un po' brutto. Il API classica deve continuare a essere usato solo nelle app legacy distribuite internamente (è consigliabile eseguire l'aggiornamento al API unificata).
 
 
-### <a name="updating-from-classic-to-the-unified-api"></a>L'aggiornamento dalla versione classica per l'API unificata
+### <a name="updating-from-classic-to-the-unified-api"></a>Aggiornamento dal modello classico al API unificata
 
-Sono disponibili istruzioni dettagliate per l'aggiornamento di qualsiasi applicazione dalla distribuzione classica all'API unificata.
+Sono disponibili istruzioni dettagliate per l'aggiornamento di qualsiasi applicazione dal modello classico al API unificata.
 
 ## <a name="binding-objective-c-librariesbindingindexmd"></a>[Binding di librerie Objective-C](binding/index.md)
 
-Xamarin ti permette di importare le librerie native nelle tue App con le associazioni. Questa sezione viene illustrato:
+Novell consente di importare librerie native nelle app con binding. Questa sezione viene illustrato:
 
-- come funzionano le associazioni,
-- come creare manualmente un progetto di associazione che consente di trasferire codice Objective-C in Xamarin, e
-- come usare nostri **obiettivo Sharpie** degli strumenti per automatizzare il processo.
+- funzionamento delle associazioni,
+- come compilare manualmente un progetto di binding che consente di portare il codice Objective-C in Novell e
+- come usare lo strumento **Objective Sharpie** per semplificare l'automazione del processo.
 
 ## <a name="native-referencesnative-referencesmd"></a>[Riferimenti nativi](native-references.md)
 
-## <a name="macios-native-typesnativetypesmd"></a>[Tipi nativi di iOS/Mac](nativetypes.md)
+## <a name="macios-native-typesnativetypesmd"></a>[Tipi nativi Mac/iOS](nativetypes.md)
 
-Per supportare codice a bit 32 e 64 in modo trasparente da C# e F#, viene introdotto nuovi tipi di dati.   Informazioni sulle loro qui.
+Per supportare il codice di bit 32 e 64 in modo C# trasparente F#da e, vengono introdotti nuovi tipi di dati.   Per informazioni su questi elementi, vedere qui.
 
-## <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Compilazione di applicazioni a 32 e 64 bit](32-and-64/index.md)
+## <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Compilazione di app 32 e 64 bit](32-and-64/index.md)
 
-Quello che devi sapere per supportare applicazioni a 32 e 64 bit.
+Cosa è necessario sapere per supportare le applicazioni 32 e 64 bit.
 
 ## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[Utilizzo di tipi nativi nelle app multipiattaforma](native-types-cross-platform.md)
 
-Questo articolo illustra l'uso di iOS nuovi tipi Unified API nativo (`nint`, `nuint`, `nfloat`) in un'applicazione multipiattaforma in cui il codice è condiviso con i dispositivi non iOS, ad esempio Android o sistemi operativi Windows Phone.
-Fornisce informazioni su quando usare i tipi nativi e offre diverse soluzioni possibili per i casi in cui il nuovo tipo deve essere utilizzato con codice multipiattaforma.
+Questo articolo illustra l'uso dei nuovi tipi nativi iOS API unificata`nint`( `nuint`, `nfloat`,) in un'applicazione multipiattaforma in cui il codice viene condiviso con dispositivi non iOS, ad esempio Android o Windows Phone sistemi operativi.
+Fornisce informazioni dettagliate su quando usare i tipi nativi e fornisce diverse soluzioni possibili ai casi in cui il nuovo tipo deve essere usato con il codice multipiattaforma.
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Stack HttpClient e selettore dell'implementazione di SSL/TLS](http-stack.md)
 
-Il nuovo selettore di HttpClient Stack controlla quale implementazione di HttpClient da usare nell'app xamarin. IOS, tvos e xamarin. Mac. È ora possibile passare a un'implementazione che usa di iOS, del tvOS o OS x native trasporti (`NSUrlSession` o `CFNetwork` a seconda del sistema operativo).
+Il nuovo selettore dello stack HttpClient controlla quale implementazione di HttpClient usare nell'app Novell. iOS, Novell. tvOS e Novell. Mac. È ora possibile passare a un'implementazione che usa i trasporti nativi di iOS, tvOS o OS X (`NSUrlSession` o `CFNetwork` a seconda del sistema operativo).
 
-SSL (Secure Socket Layer) e il relativo successore, TLS (Transport Layer Security), forniscono il supporto per HTTP e altre connessioni di rete tramite `System.Net.Security.SslStream`. La nuova opzione di compilazione implementazione di SSL/TLS passa tra stack TLS di Mono e uno basato su stack TLS Apple presente nel Mac e iOS.
+SSL (Secure Socket Layer) e il suo successore, TLS (Transport Layer Security), forniscono il supporto per HTTP e altre connessioni `System.Net.Security.SslStream`di rete tramite. La nuova opzione di compilazione di implementazione SSL/TLS passa tra lo stack TLS di mono e uno basato sullo stack TLS di Apple presente in Mac e iOS.

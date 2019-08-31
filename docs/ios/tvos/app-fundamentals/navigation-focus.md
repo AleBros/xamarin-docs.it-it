@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a65509184611ae8fc4102f7c4f198cef7a5ff9d2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 96b35764da1922ae1810a78e760e8ed39a8a8a3b
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645491"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199633"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
 
@@ -74,7 +74,7 @@ Apple presenta i suggerimenti seguenti per lavorare con lo stato attivo e la sel
 - **Usare Parallax per fare in modo che gli elementi mirati** rispondano a piccoli movimenti circolari su Siri Remote result in un movimento leggero e in tempo reale dell'elemento con lo stato attivo. Questo [effetto di parallasse](#Focus-and-Parallax) è incorporato `UIKit` in _immagini sovrapposte_ per fornire all'utente un senso di connessione all'elemento con lo stato attivo.
 - **Crea elementi attivabili delle dimensioni appropriate** : gli elementi di grandi dimensioni con spaziatura ampia sono più semplici da selezionare e spostarsi rispetto a elementi più piccoli.
 - **Progettare l'elemento dell'interfaccia utente in modo che risulti valido o con lo stato attivo** , in genere Apple TV rappresenta l'elemento con lo stato attivo aumentando le dimensioni. Assicurarsi che gli elementi dell'interfaccia utente dell'app risultino ottimali in qualsiasi dimensione di presentazione e, se necessario, forniscano risorse per gli elementi di dimensioni maggiori.
-- **Rappresenta le modifiche** dello stato attivo: usare l'animazione per eseguire una dissolvenza uniforme **tra gli elementi** con stato attivo e non **attivo** per evitare che le transizioni siano stonate.
+- **Rappresenta le modifiche** dello stato attivo: usare l'animazione per eseguire una dissolvenza uniforme tra gli elementi con stato attivo e non **attivo** per evitare che le transizioni siano stonate.
 - **Non visualizzare un cursore** : gli utenti si aspettano di spostarsi nell'interfaccia utente dell'app usando lo stato attivo e non spostando un cursore sullo schermo. L'interfaccia utente deve sempre usare il modello di messa a fuoco per presentare un'esperienza utente coerente.
 
 <a name="Working-with-Focus" />

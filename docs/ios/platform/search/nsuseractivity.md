@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: f37511082dd3b81a3fba4d165c9276ac40267cbb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0b673128d675d825d4c0564929dbd3896c09b0c5
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656295"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198491"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Eseguire una ricerca con NSUserActivity in Novell. iOS
 
@@ -162,7 +162,7 @@ Solo perché un'attività è stata impostata per l'indicizzazione `EligibleForPu
 
 Adottando la ricerca di app `NSUserActivity` tramite nell'app, si ottengono anche le funzionalità seguenti:
 
-- Consegna **: poiché** la ricerca di app sta esponendo contenuto, navigazione e/o funzionalità con lo stesso meccanismo`NSUserActivity`di consegna (), è possibile consentire agli utenti dell'app di avviare un'attività in un dispositivo e continuare a usarla in un altro dispositivo.
+- Consegna: poiché la ricerca di app sta esponendo contenuto, navigazione e/o funzionalità con lo stesso meccanismo`NSUserActivity`di consegna (), è possibile consentire agli utenti dell'app di avviare un'attività in un dispositivo e continuare a usarla in un altro dispositivo.
 - **Siri suggerimenti** : insieme ai suggerimenti standard che Siri suggerisce di solito, gli attivi dall'app possono essere suggeriti automaticamente.
 - **Siri Smart promemoria** : gli utenti potranno chiedere a Siri di ricordare le attività dell'app.
 

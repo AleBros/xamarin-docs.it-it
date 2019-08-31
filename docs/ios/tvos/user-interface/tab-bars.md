@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649656"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199935"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Uso dei controller della barra schede tvOS in Novell
 
@@ -59,7 +59,7 @@ Ogni categoria (scheda) nella barra delle schede è rappresentata da un elemento
 Il modo più semplice per usare le barre delle schede in un'app Novell. tvOS consiste nell'aggiungerle all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
-    
+
 1. Avviare una nuova app Novell. tvOS e selezionare**app a schede** **tvOS** > **app** > : 
 
     [![](tab-bars-images/tab02.png "Seleziona app a schede")](tab-bars-images/tab02.png#lightbox)
@@ -84,7 +84,7 @@ Il modo più semplice per usare le barre delle schede in un'app Novell. tvOS con
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Avviare una nuova app Novell. tvOS e selezionare**app a schede** **tvOS** > **app** > : 
 
     [![](tab-bars-images/tab02vs.png "Seleziona app a schede")](tab-bars-images/tab02vs.png#lightbox)
@@ -107,7 +107,7 @@ Il modo più semplice per usare le barre delle schede in un'app Novell. tvOS con
 1. Esporre tutti gli eventi necessari per lavorare con i controlli dell' C# interfaccia utente nel codice.
 1. Assegnare un nome a tutti i controlli dell'interfaccia utente C# che si desidera esporre nel codice.
 1. Salvare le modifiche.
-    
+
 -----
 
 > [!IMPORTANT]

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/25/2018
-ms.openlocfilehash: 6ab1b4ad5493075e8806190e77f6d234354af9ff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab82b98351b95fbdea9c33a9eae7142c7a54fc77
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648966"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200300"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Uso degli indicatori di stato tvOS in Novell
 
@@ -46,7 +46,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di stato:
 Il modo più semplice per usare un indicatore di stato in un'app Novell. tvOS consiste nell'aggiungerlo all'interfaccia utente dell'app tramite iOS designer.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
-    
+
 1. Nella **riquadro della soluzione**fare doppio clic sul file **Main. Storyboard** e aprirlo per la modifica.
 
 2. Trascinare un **indicatore di attività** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
@@ -72,7 +72,7 @@ Il modo più semplice per usare un indicatore di stato in un'app Novell. tvOS co
 6. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Nella **Esplora soluzioni**fare doppio clic sul file **Main. Storyboard** e aprirlo per la modifica.
 
 2. Trascinare un **indicatore di attività** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121379"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199916"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Uso delle viste tabella tvOS in Novell
 
@@ -69,7 +69,7 @@ Il modo più semplice per usare le visualizzazioni di tabella in un'app Novell. 
 Per iniziare, eseguire le operazioni seguenti:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
-    
+
 1. In Visual Studio per Mac avviare un nuovo progetto di app tvOS e selezionare **tvOS** > **app** > **visualizzazione singola** app e fare clic sul pulsante **Avanti** : 
 
     [![](table-views-images/table02.png "Selezionare l'app visualizzazione singola")](table-views-images/table02.png#lightbox)
@@ -112,9 +112,9 @@ Per iniziare, eseguire le operazioni seguenti:
 
     [![](table-views-images/table15.png "Layout dell'interfaccia utente")](table-views-images/table15.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. In Visual Studio avviare un nuovo progetto di app tvOS e selezionare **tvOS** > **app visualizzazione singola** e immettere un nome per l'app. Fare clic sul pulsante **OK** per creare una nuova soluzione: 
 
     [![](table-views-images/table02-vs.png "Selezionare l'app visualizzazione singola")](table-views-images/table02-vs.png#lightbox)
@@ -153,7 +153,7 @@ Per iniziare, eseguire le operazioni seguenti:
 
     [![](table-views-images/table15.png "Layout dell'interfaccia utente")](table-views-images/table15.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
-    
+
 -----
 
 <a name="Designing-a-Data-Model" />
