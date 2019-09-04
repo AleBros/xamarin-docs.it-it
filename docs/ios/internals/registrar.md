@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/29/2018
-ms.openlocfilehash: 9817ac2df7a60b5358316599ce02702448b0c307
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199716"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226041"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrar di tipo per Novell. iOS
 
@@ -129,10 +129,10 @@ A partire dalla versione stabile di 6.2.6 e dalla versione beta di 6.3.4, è sta
 Questo nuovo sistema di registrazione offre le seguenti nuove funzionalità:
 
 - Rilevamento in fase di compilazione degli errori del programmatore:
-    - Due classi registrate con lo stesso nome.
-    - Più di un metodo esportato per rispondere allo stesso selettore
+  - Due classi registrate con lo stesso nome.
+  - Più di un metodo esportato per rispondere allo stesso selettore
 - Rimozione del codice nativo non usato:
-    - Il nuovo sistema di registrazione aggiungerà riferimenti sicuri al codice usato nelle librerie statiche, consentendo al linker nativo di rimuovere il codice nativo inutilizzato dal file binario risultante. Nelle associazioni di esempio di Novell, la maggior parte delle applicazioni diventa almeno 300K più piccola.
+  - Il nuovo sistema di registrazione aggiungerà riferimenti sicuri al codice usato nelle librerie statiche, consentendo al linker nativo di rimuovere il codice nativo inutilizzato dal file binario risultante. Nelle associazioni di esempio di Novell, la maggior parte delle applicazioni diventa almeno 300K più piccola.
 
 - Supporto per le sottoclassi generiche `NSObject`di; vedere [generics NSObject](~/ios/internals/api-design/nsobject-generics.md) per altre informazioni. Inoltre, il nuovo sistema di registrazione rileverà costrutti generici non supportati che in precedenza avrebbero causato un comportamento casuale in fase di esecuzione.
 
@@ -142,37 +142,37 @@ Di seguito sono riportati alcuni esempi degli errori rilevati dal nuovo registra
 
 - Esportazione dello stesso selettore più di una volta nella stessa classe:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo:")]
-        void Foo (NSString str);
-        [Export ("foo:")]
-        void Foo (string str)
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo:")]
+      void Foo (NSString str);
+      [Export ("foo:")]
+      void Foo (string str)
+  }
+  ```
 
 - Esportazione di più di una classe gestita con lo stesso nome Objective-C:
 
-    ```csharp
-    [Register ("Class")]
-    class MyClass : NSObject {}
+  ```csharp
+  [Register ("Class")]
+  class MyClass : NSObject {}
 
-    [Register ("Class")]
-    class YourClass : NSObject {}
-    ```
+  [Register ("Class")]
+  class YourClass : NSObject {}
+  ```
 
 - Esportazione di metodi generici:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo")]
-        void Foo<T> () {}
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo")]
+      void Foo<T> () {}
+  }
+  ```
 
 ### <a name="limitations-of-the-new-registrar"></a>Limitazioni del nuovo registrar
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: b639a7fdefb8fca67d833b07ef9aa1a85da67ef6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642892"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228018"
 ---
 # <a name="xamarinforms-text-styles"></a>Stili del testo di xamarin. Forms
 
@@ -48,7 +48,7 @@ In c#, gli stili predefiniti vengono selezionati dal `Device.Styles`:
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "Esempio di stili di dispositivo")
+![Esempio di stili del dispositivo](styles-images/builtinstyles.png)
 
 <a name="Custom_Styles" />
 
@@ -90,7 +90,7 @@ In XAML:
 
 Si noti che le risorse (inclusi tutti gli stili) vengono definite all'interno `ContentPage.Resources`, che è un elemento di pari livello della più familiare `ContentPage.Content` elemento.
 
-![](styles-images/customstyle.png "Esempio di stili personalizzati")
+![Esempio di stili personalizzati](styles-images/customstyle.png)
 
 <a name="Applying_Styles" />
 
@@ -137,11 +137,11 @@ Si consideri l'esempio seguente della stessa pagina delle viste uno stile defini
 
 Disabilitato:
 
-![](styles-images/pre-access.png "Stili di dispositivo con accessibilità disabilitato")
+![Stili del dispositivo con accessibilità disabilitata](styles-images/pre-access.png)
 
 Abilitato:
 
-![](styles-images/post-access.png "Stili di dispositivo con accessibilità abilitata")
+![Stili del dispositivo con accessibilità abilitata](styles-images/post-access.png)
 
 Per garantire l'accessibilità, assicurarsi che gli stili predefiniti vengono utilizzati come base per tutti gli stili correlate al testo all'interno dell'app e che si siano utilizzando gli stili in modo coerente. Visualizzare [stili](~/xamarin-forms/user-interface/styles/index.md) per altri dettagli sull'estensione e lavorare con gli stili in generale.
 

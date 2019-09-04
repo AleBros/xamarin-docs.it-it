@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: f3baa6756b4e72b750ff1b128b72802f8f1ce6d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7d5c9ebec2a1d79df7a9a16da91c79772746f6fc
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527344"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227536"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di Novell. iOS
 
@@ -57,11 +57,11 @@ Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico i
 
 - System. Reflection. Emit non è disponibile.
 - Nessun supporto per System. Runtime. Remoting.
-- Nessun supporto per la creazione dinamica dei tipi (nessun tipo. GetType ("MyType" 1 ")), sebbene la ricerca dei tipi esistenti (Type. GetType (" System. String "), ad esempio, funzioni correttamente. 
+- Nessun supporto per la creazione dinamica dei tipi (nessun tipo. GetType ("MyType" 1 ")), sebbene la ricerca dei tipi esistenti (Type. GetType (" System. String "), ad esempio, funzioni correttamente.
 - I callback inversi devono essere registrati con il runtime in fase di compilazione.
 
 
- 
+
  <a name="System.Reflection.Emit" />
 
 
@@ -71,7 +71,7 @@ La mancanza di System. Reflection. **Emit** significa che il codice che dipende 
 
 - Dynamic Language Runtime.
 - Qualsiasi linguaggio basato su Dynamic Language Runtime.
-- TransparentProxy di comunicazione remota o qualsiasi altro elemento che comporterebbe la generazione dinamica del codice da parte del runtime. 
+- TransparentProxy di comunicazione remota o qualsiasi altro elemento che comporterebbe la generazione dinamica del codice da parte del runtime.
 
 
   > [!IMPORTANT]
@@ -91,7 +91,7 @@ Se non si specifica uno di questi attributi, verrà generato un errore di runtim
 ```
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
- 
+
  <a name="Reverse_Callbacks" />
 
 
@@ -103,7 +103,7 @@ In mono questi Bridge vengono implementati dal compilatore just-in-time. Quando 
 
 - È necessario contrassegnare tutti i metodi di callback con [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
 - I metodi devono essere metodi statici e non è disponibile alcun supporto per i metodi di istanza.
- 
+
 <a name="No_Remoting" />
 
 ## <a name="no-remoting"></a>Nessuna comunicazione remota

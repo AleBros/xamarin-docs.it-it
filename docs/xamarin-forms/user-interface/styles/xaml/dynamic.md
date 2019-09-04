@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 1b4732e87fb09a4846bfe12b7a476dfef2d6f4f9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9a26532d13b843b812da94739be071c7accac212
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647233"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228198"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Stili dinamici in xamarin. Forms
 
@@ -82,10 +82,10 @@ public partial class DynamicStylesPage : ContentPage
 }
 ```
 
-Quando la `OnButtonClicked` viene eseguito il gestore eventi, `searchBarStyle` passa `blueSearchBarStyle` e `greenSearchBarStyle`. Ciò comporta l'aspetto illustrato negli screenshot seguenti:
+Quando la `OnButtonClicked` viene eseguito il gestore eventi, `searchBarStyle` passa `blueSearchBarStyle` e `greenSearchBarStyle`. Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[![](dynamic-images/dynamic-style-blue.png "Blu esempio stile di visualizzazione dinamica")](dynamic-images/dynamic-style-blue-large.png#lightbox "blu esempio Style dinamica")
-[![](dynamic-images/dynamic-style-green.png "verde esempio Style dinamica") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Verde esempio stile di visualizzazione dinamica")
+[![](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
+Esempio di[![stile dinamico verde di esempio di stile dinamico blu](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 Esempio di codice seguente illustra la pagina equivalente nel linguaggio C#:
 
@@ -161,10 +161,10 @@ L'esempio di codice seguente illustra *dinamica* applicare uno stile di ereditar
 
 Il [`SearchBar`](xref:Xamarin.Forms.SearchBar) istanze usare i `StaticResource` estensione di markup per fare riferimento a una [`Style`](xref:Xamarin.Forms.Style) denominato `tealSearchBarStyle`. Ciò `Style` imposta alcune proprietà aggiuntive e utilizza il [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) proprietà cui fare riferimento `searchBarStyle`. Il `DynamicResource` estensione di markup non è necessaria perché `tealSearchBarStyle` non verrà modificato, ad eccezione del `Style` deriva da. Pertanto `tealSearchBarStyle` mantiene un collegamento al `searchBarStyle` e viene modificato quando viene modificato lo stile di base.
 
-Nel file code-behind, il costruttore crea un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) voce con la chiave `searchBarStyle`, come indicato nell'esempio precedente che dimostrato stili dinamici. Quando la `OnButtonClicked` viene eseguito il gestore eventi, `searchBarStyle` passa `blueSearchBarStyle` e `greenSearchBarStyle`. Ciò comporta l'aspetto illustrato negli screenshot seguenti:
+Nel file code-behind, il costruttore crea un [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) voce con la chiave `searchBarStyle`, come indicato nell'esempio precedente che dimostrato stili dinamici. Quando la `OnButtonClicked` viene eseguito il gestore eventi, `searchBarStyle` passa `blueSearchBarStyle` e `greenSearchBarStyle`. Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Blu di esempio di ereditarietà di stile di visualizzazione dinamica")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "blu di esempio di ereditarietà di stile di visualizzazione dinamici")
-[![](dynamic-images/dynamic-style-inheritance-green.png "verde stile dinamico Esempio di ereditarietà")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "verde di esempio di ereditarietà di stile di visualizzazione dinamica")
+[![](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)Esempio di ereditarietà dello stile dinamico blu esempio di ereditarietà dello stile dinamico verde
+[![](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 Esempio di codice seguente illustra la pagina equivalente nel linguaggio C#:
 

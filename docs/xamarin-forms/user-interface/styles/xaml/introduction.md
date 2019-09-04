@@ -1,24 +1,24 @@
 ---
-title: Introduzione a xamarin. Forms stili
-description: Gli stili consentono l'aspetto degli elementi visivi per la personalizzazione. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili su tale tipo.
+title: Introduzione agli stili di Novell. Forms
+description: Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo.
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 9e5fb0196b67e23a034856ee0dd7b9c7d4846b31
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 35f8dad3590c07ceb3c93aa735b8c02d75098498
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971106"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228167"
 ---
-# <a name="introduction-to-xamarinforms-styles"></a>Introduzione a xamarin. Forms stili
+# <a name="introduction-to-xamarinforms-styles"></a>Introduzione agli stili di Novell. Forms
 
-_Gli stili consentono l'aspetto degli elementi visivi per la personalizzazione. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili su tale tipo._
+_Gli stili consentono di personalizzare gli elementi visivi. Gli stili vengono definiti per un tipo specifico e contengono i valori per le proprietà disponibili in tale tipo._
 
-Le applicazioni xamarin. Forms contengono spesso più controlli che hanno un aspetto identico. Ad esempio, un'applicazione può disporre di più [ `Label` ](xref:Xamarin.Forms.Label) istanze che hanno le stesse opzioni del tipo di carattere e le opzioni di layout, come illustrato nell'esempio di codice XAML seguente:
+Le applicazioni Novell. Forms spesso contengono più controlli che hanno un aspetto identico. Ad esempio, un'applicazione può avere più [`Label`](xref:Xamarin.Forms.Label) istanze con le stesse opzioni relative ai tipi di carattere e le stesse opzioni di layout, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -82,35 +82,35 @@ public class NoStylesPageCS : ContentPage
 }
 ```
 
-Ciascuna [ `Label` ](xref:Xamarin.Forms.Label) istanza dispone di valori di proprietà identici per controllare l'aspetto del testo visualizzato per il `Label`. Il risultato è l'aspetto illustrato negli screenshot seguenti:
+Ogni [`Label`](xref:Xamarin.Forms.Label) istanza ha valori di proprietà identici per controllare l'aspetto del testo visualizzato `Label`da. Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[![](introduction-images/no-styles.png "Etichetta aspetto senza stili")](introduction-images/no-styles-large.png#lightbox "etichettare aspetto senza stili")
+[![Aspetto etichetta senza stili](introduction-images/no-styles.png)](introduction-images/no-styles-large.png#lightbox)
 
-Impostazione dell'aspetto di ogni controllo singoli possono essere ricorrenti e tendente all'errore. Al contrario, uno stile può essere creato che definisce l'aspetto e quindi applicati per i controlli necessari.
+L'impostazione dell'aspetto di ogni singolo controllo può essere ripetitiva e soggetta a errori. È invece possibile creare uno stile che definisca l'aspetto e quindi applicato ai controlli richiesti.
 
 ## <a name="create-a-style"></a>Creare uno stile
 
-Il [ `Style` ](xref:Xamarin.Forms.Style) classe Raggruppa un insieme di valori di proprietà in un oggetto che può quindi essere applicato a più istanze di oggetto visivo. Ciò consente di ridurre markup ripetitiva e consente un aspetto delle applicazioni da modificare più facilmente.
+La [`Style`](xref:Xamarin.Forms.Style) classe raggruppa una raccolta di valori di proprietà in un oggetto che può quindi essere applicato a più istanze di elementi visivi. Questo consente di ridurre il markup ripetitivo e consente di modificare l'aspetto delle applicazioni in modo più semplice.
 
-Anche se gli stili sono stati progettati principalmente per le applicazioni basate su XAML, possono anche essere creati nel linguaggio c#:
+Sebbene gli stili siano stati progettati principalmente per le applicazioni basate su XAML, possono essere creati C#anche in:
 
-- [`Style`](xref:Xamarin.Forms.Style) le istanze create in XAML vengono in genere definite un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) che viene assegnato al [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) raccolta di un controllo, pagina o al [ `Resources` ](xref:Xamarin.Forms.Application.Resources) raccolta dell'applicazione.
-- [`Style`](xref:Xamarin.Forms.Style) le istanze create nel linguaggio c# sono in genere definite nella classe della pagina, o in una classe che è possibile accedere a livello globale.
+- [`Style`](xref:Xamarin.Forms.Style)le [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [istanzecreateinXAMLvengonoingeneredefiniteinunoggettoassegnatoallaraccoltadiuncontrollo,diunapaginaoallaraccoltadell'applicazione.`Resources`](xref:Xamarin.Forms.Application.Resources)
+- [`Style`](xref:Xamarin.Forms.Style)le istanze create C# in vengono in genere definite nella classe della pagina o in una classe a cui è possibile accedere a livello globale.
 
 La scelta della posizione in cui definire un oggetto [`Style`](xref:Xamarin.Forms.Style) ha effetto sulla posizione in cui può essere usato:
 
-- [`Style`](xref:Xamarin.Forms.Style) le istanze definite a livello di controllo possono essere applicate solo al controllo e ai relativi figli.
-- [`Style`](xref:Xamarin.Forms.Style) le istanze definite a livello di pagina possono essere applicate solo alla pagina e ai relativi figli.
-- [`Style`](xref:Xamarin.Forms.Style) le istanze definite a livello di applicazione possono essere applicate in tutta l'applicazione.
+- [`Style`](xref:Xamarin.Forms.Style)le istanze definite a livello di controllo possono essere applicate solo al controllo e ai relativi elementi figlio.
+- [`Style`](xref:Xamarin.Forms.Style)le istanze definite a livello di pagina possono essere applicate solo alla pagina e ai relativi elementi figlio.
+- [`Style`](xref:Xamarin.Forms.Style)le istanze definite a livello di applicazione possono essere applicate all'interno dell'applicazione.
 
-Ciascuna [ `Style` ](xref:Xamarin.Forms.Style) istanza contiene una raccolta di uno o più [ `Setter` ](xref:Xamarin.Forms.Setter) oggetti, con molti `Setter` aventi un [ `Property` ](xref:Xamarin.Forms.Setter.Property) e un [`Value`](xref:Xamarin.Forms.Setter.Value). Il `Property` è il nome della proprietà associabile dell'elemento, viene applicato lo stile e il `Value` è il valore che viene applicato alla proprietà.
+Ogni [`Style`](xref:Xamarin.Forms.Style) istanza contiene una raccolta di uno o più [`Setter`](xref:Xamarin.Forms.Setter) oggetti, ognuno `Setter` dei quali ha [`Property`](xref:Xamarin.Forms.Setter.Property) un oggetto [`Value`](xref:Xamarin.Forms.Setter.Value)e un oggetto. È il nome della proprietà associabile dell'elemento a cui viene applicato lo stile `Value` e è il valore applicato alla proprietà. `Property`
 
-Ciascuna [ `Style` ](xref:Xamarin.Forms.Style) istanza può essere *esplicita*, oppure *implicita*:
+Ogni [`Style`](xref:Xamarin.Forms.Style) istanza può essere *esplicita*o *implicita*:
 
-- Un' *esplicite* [ `Style` ](xref:Xamarin.Forms.Style) istanza viene definita specificando un [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) e un `x:Key` valore e impostando l'elemento di destinazione [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà di `x:Key` riferimento. Per altre informazioni sulle *esplicite* stili, vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md).
-- Un' *implicita* [ `Style` ](xref:Xamarin.Forms.Style) istanza viene definita specificando solo un [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType). Il `Style` istanza verrà automaticamente applicata a tutti gli elementi di quel tipo. Si noti che rappresenti le sottoclassi del `TargetType` non hanno automaticamente la `Style` applicato. Per altre informazioni sulle *implicita* stili, vedere [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
+- Un' [`Style`](xref:Xamarin.Forms.Style) istanza esplicita viene definita specificando [`TargetType`](xref:Xamarin.Forms.Style.TargetType) un oggetto `x:Key` e un valore `x:Key` e impostando la [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà dell'elemento di destinazione sul riferimento. Per ulteriori informazioni sugli stili espliciti, vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md).
+- Un' [`Style`](xref:Xamarin.Forms.Style) istanza implicita viene definita specificando solo [`TargetType`](xref:Xamarin.Forms.Style.TargetType)un. L' `Style` istanza verrà quindi applicata automaticamente a tutti gli elementi di quel tipo. Si noti che le `TargetType` `Style` sottoclassi di non hanno automaticamente applicato. Per ulteriori informazioni sugli stili impliciti, vedere [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
 
-Quando si crea una [ `Style` ](xref:Xamarin.Forms.Style), il [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà è sempre obbligatorio. Il codice seguente esempio illustra un' *esplicita* stile (nota di `x:Key`) creati in XAML:
+Quando si crea [`Style`](xref:Xamarin.Forms.Style)un oggetto [`TargetType`](xref:Xamarin.Forms.Style.TargetType) , la proprietà è sempre obbligatoria. Nell'esempio di codice riportato di seguito viene illustrato uno stile `x:Key`esplicito (si noti il) creato in XAML:
 
 ```xaml
 <Style x:Key="labelStyle" TargetType="Label">
@@ -120,20 +120,20 @@ Quando si crea una [ `Style` ](xref:Xamarin.Forms.Style), il [ `TargetType` ](xr
 </Style>
 ```
 
-Per applicare un `Style`, l'oggetto di destinazione deve essere un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) che corrisponde al [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) valore della proprietà di `Style`, come illustrato nell'esempio di codice XAML seguente:
+Per applicare un `Style`oggetto, l'oggetto di destinazione deve [`VisualElement`](xref:Xamarin.Forms.VisualElement) essere un che [`TargetType`](xref:Xamarin.Forms.Style.TargetType) corrisponde `Style`al valore della proprietà di, come illustrato nell'esempio di codice XAML seguente:
 
 ```xaml
 <Label Text="Demonstrating an explicit style" Style="{StaticResource labelStyle}" />
 ```
 
-Stili di livello inferiori nella gerarchia di visualizzazione hanno la precedenza rispetto a quelli definiti più backup. Ad esempio, impostando un [ `Style` ](xref:Xamarin.Forms.Style) che consente di scegliere [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) a `Red` nell'applicazione livello eseguirà l'override di uno stile a livello di pagina che imposta `Label.TextColor` a `Green`. Analogamente, uno stile a livello di pagina verrà sostituito da uno stile a livello di controllo. Inoltre, se `Label.TextColor` è impostato direttamente su una proprietà di controllo, questo ha la precedenza su tutti gli stili.
+Stili di livello inferiori nella gerarchia di visualizzazione hanno la precedenza rispetto a quelli definiti più backup. Ad esempio, impostando un [`Style`](xref:Xamarin.Forms.Style) che consente di scegliere [`Label.TextColor`](xref:Xamarin.Forms.Label.TextColor) a `Red` nell'applicazione livello eseguirà l'override di uno stile a livello di pagina che imposta `Label.TextColor` a `Green`. Analogamente, uno stile a livello di pagina verrà sostituito da uno stile a livello di controllo. Inoltre, se `Label.TextColor` è impostato direttamente su una proprietà del controllo, ha la precedenza su qualsiasi stile.
 
-Gli articoli in questa sezione illustrano e spiegano come creare e applicare *esplicite* e *implicita* stili, come creare stili globali, applicare uno stile a ereditarietà, come rispondere alle modifiche di stile di visualizzazione in fase di esecuzione e come utilizzare gli stili predefinite inclusi in xamarin. Forms.
+Gli articoli di questa sezione illustrano come creare e applicare stili *espliciti* e *impliciti* , come creare stili globali, ereditarietà dello stile, come rispondere alle modifiche di stile in fase di esecuzione e come usare gli stili incorporati inclusi in Novell. Forms.
 
 > [!NOTE]
 > **Che cos'è StyleId?**
 >
-> Precedenti la 2.2 di xamarin. Forms, il [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) proprietà è stata usata per identificare i singoli elementi in un'applicazione per l'identificazione in test dell'interfaccia utente e in motori di tema, ad esempio Pixate. Tuttavia, ha introdotto xamarin. Forms 2.2 il [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) proprietà, che ha sostituito il [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) proprietà.
+> Prima di Novell. Forms 2,2, [`StyleId`](xref:Xamarin.Forms.Element.StyleId) la proprietà è stata usata per identificare singoli elementi in un'applicazione per l'identificazione nei test dell'interfaccia utente e nei motori di tema come Pixate. Tuttavia, Novell. Forms 2,2 ha [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) introdotto la proprietà, che ha sostituito [`StyleId`](xref:Xamarin.Forms.Element.StyleId) la proprietà.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

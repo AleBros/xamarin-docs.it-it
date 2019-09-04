@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: c752f4acf4bf43c138a7b359b94620dae5e8d46e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2137ff95e65c6841b3e525f0c9755e013310c7e0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524530"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225590"
 ---
 # <a name="troubleshooting-bindings"></a>Risoluzione dei problemi delle associazioni
 
@@ -51,8 +51,8 @@ Dopo aver decompilato la libreria Android, esaminare il codice sorgente. In gene
 
 - **Classi con caratteristiche di offuscamento** &ndash; Le caratteristiche delle classi offuscate includono:
 
-    - Il nome della classe include **$** , ad esempio, **una classe $.**
-    - Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**      
+  - Il nome della classe include **$** , ad esempio, **una classe $.**
+  - Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**      
 
 - le istruzioni &ndash; **per le librerie senza riferimenti identificano la libreria senza riferimenti e aggiungono tali dipendenze al progetto di binding Novell. Android con un'azione di compilazione ReferenceJar o `import`**   **EmbedddedReferenceJar**.
 
@@ -114,19 +114,19 @@ Questo errore può verificarsi a causa di diversi motivi, come indicato di segui
 
 - Java consente di derivare una classe pubblica da una classe non pubblica, ma non è supportata in .NET. Poiché il generatore di associazioni non genera binding per le classi non pubbliche, le classi derivate, ad esempio, non possono essere generate correttamente. Per risolvere questo problema, rimuovere la voce di metadati per le classi derivate usando il Remove-node in **Metadata. XML**o correggere i metadati che rendono pubblica la classe non pubblica. Anche se quest'ultima soluzione creerà l'associazione in modo C# che l'origine venga compilata, non è consigliabile usare la classe non pubblica.
 
-    Ad esempio:
+  Ad esempio:
 
-    ```xml
-    <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
-        name="visibility">public</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
+      name="visibility">public</attr>
+  ```
 
 - Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Novell. Android C# e la relativa capacità di generare classi wrapper. Il frammento di codice seguente illustra come aggiornare **Metadata. XML** per deoffuscare il nome di una classe:
 
-    ```xml
-    <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
-        name="obfuscated">false</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
+      name="obfuscated">false</attr>
+  ```
 
 ### <a name="problem-generated-c-source-does-not-build-due-to-parameter-type-mismatch"></a>Problema: L' C# origine generata non viene compilata a causa della mancata corrispondenza del tipo di parametro
 
@@ -134,7 +134,7 @@ L'origine C# generata non viene compilata. I tipi di parametro del metodo sottop
 
 #### <a name="possible-causes"></a>Possibili cause:
 
-Novell. Android include un'ampia gamma di campi Java mappati alle enumerazioni nelle C# associazioni. Questi possono causare incompatibilità dei tipi nelle associazioni generate. Per risolvere questo problema, è necessario modificare le firme del metodo create dal generatore di binding per usare le enumerazioni. Per ulteriori informazioni, vedere [correzione](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md)delle enumerazioni.
+Novell. Android include un'ampia gamma di campi Java mappati alle enumerazioni nelle C# associazioni. Questi possono causare incompatibilità dei tipi nelle associazioni generate. Per risolvere questo problema, è necessario modificare le firme del metodo create dal generatore di binding per usare le enumerazioni. Per altre informazioni, vedere [correzione](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md)delle enumerazioni.
 
 ### <a name="problem-noclassdeffounderror-in-packaging"></a>Problema: NoClassDefFoundError nel pacchetto
 
@@ -203,24 +203,24 @@ Si tratta di un problema che si verifica con l'associazione di metodi Java con t
 
 - Aggiungere una dichiarazione di classe parziale `HttpURLConnectionRequestAdapter` per e implementare `IHttpRequest.Unwrap()`in modo esplicito:
 
-    ```csharp
-    namespace Oauth.Signpost.Basic {
-        partial class HttpURLConnectionRequestAdapter {
-            Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
-                return Unwrap();
-            }
-        }
-    }
-    ```
+  ```csharp
+  namespace Oauth.Signpost.Basic {
+      partial class HttpURLConnectionRequestAdapter {
+          Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
+              return Unwrap();
+          }
+      }
+  }
+  ```
 
 - Rimuovere la covarianza dal codice C# generato. Questa operazione comporta l'aggiunta della trasformazione seguente a `Java.Lang.Object` **Transforms\Metadata.XML** , che farà C# sì che il codice generato abbia un tipo restituito:
 
-    ```xml
-    <attr
-        path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
-        name="managedReturn">Java.Lang.Object
-    </attr>
-    ```
+  ```xml
+  <attr
+      path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
+      name="managedReturn">Java.Lang.Object
+  </attr>
+  ```
 
 ### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Conflitti di nomi per classi/proprietà interne
 

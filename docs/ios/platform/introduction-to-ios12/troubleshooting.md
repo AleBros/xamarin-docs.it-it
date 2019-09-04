@@ -1,44 +1,44 @@
 ---
-title: Risoluzione dei problemi di suggerimenti per 12 iOS e xamarin. IOS
-description: Questo articolo descrive le risorse che possono essere utilizzate per la risoluzione dei problemi relativi durante lo sviluppo di applicazioni xamarin. IOS. Illustra i problemi noti, segnalare un nuovo problema e altre risorse di risoluzione dei problemi.
+title: Suggerimenti per la risoluzione dei problemi per iOS 12 e Novell. iOS
+description: Questo articolo descrive le risorse che possono essere usate per la risoluzione dei problemi durante lo sviluppo di applicazioni Novell. iOS. Vengono illustrati i problemi noti, viene segnalato un nuovo problema e altre risorse per la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/05/2018
-ms.openlocfilehash: bc798d4df19082c67461aede1f40cfbddd85f5b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f2dbb95992725ec85edaf94b2c07912e2bc561c9
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034883"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227513"
 ---
-# <a name="troubleshooting-ios-12-development-with-xamarin"></a>Risoluzione dei problemi di sviluppo 12 di iOS con Xamarin
+# <a name="troubleshooting-ios-12-development-with-xamarin"></a>Risoluzione dei problemi relativi allo sviluppo di iOS 12 con Novell
 
-Questo documento descrive posizioni in cui cercare informazioni in caso di eventuali problemi di creazione di App iOS 12 con Xamarin.
+Questo documento descrive le posizioni in cui cercare assistenza in caso di problemi durante la creazione di app iOS 12 con Novell.
 
 ## <a name="known-issues"></a>Problemi noti
 
-Controllare le risorse seguenti per i problemi noti:
+Per i problemi noti, controllare le risorse seguenti:
 
 - Note sulla versione
-    - Il [le versioni di Xamarin](http://releases.xamarin.com/) blog
-    - Xamarin [note sulla versione](https://docs.microsoft.com/xamarin/ios/release-notes/) archive
-    - Visual Studio per Mac ([stabile](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [anteprima](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
-    - Visual Studio 2017 ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
+  - Blog sulle [versioni di Novell](http://releases.xamarin.com/)
+  - Archivio delle [Note sulla versione](https://docs.microsoft.com/xamarin/ios/release-notes/) di Novell
+  - Visual Studio per Mac ([stabile](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [Anteprima](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
+  - Visual Studio 2017 ([stabile](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [Anteprima](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [Community degli sviluppatori](https://developercommunity.visualstudio.com/search.html)
 - [GitHub](https://github.com/xamarin/xamarin-macios/issues)
 - [Xamarin Bugzilla](https://bugzilla.xamarin.com/query.cgi?product=iOS)
-- [Forum di Xamarin](https://forums.xamarin.com/categories/ios)
+- [Forum su Novell](https://forums.xamarin.com/categories/ios)
 
-## <a name="report-a-new-issue"></a>Segnalare un problema nuovo
+## <a name="report-a-new-issue"></a>Segnala un nuovo problema
 
-Segnalare nuovi problemi [Community degli sviluppatori](https://developercommunity.visualstudio.com/spaces/8/index.html) selezionando le **segnala un problema** opzione [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) o [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+Segnalare nuovi problemi nella [community degli sviluppatori](https://developercommunity.visualstudio.com/spaces/8/index.html) selezionando l'opzione **segnala un problema** in [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) o [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
 
-## <a name="xamarin-forums-and-stack-overflow"></a>Forum di Xamarin e Stack Overflow
+## <a name="xamarin-forums-and-stack-overflow"></a>Forum e Stack Overflow di Novell
 
-Per discutere le domande su come implementare le funzionalità di 12 specifico di iOS in xamarin. IOS, dare un'occhiata:
+Per informazioni su come implementare specifiche funzionalità iOS 12 in Novell. iOS, vedere:
 
-- Il [forum di Xamarin](http://forums.xamarin.com/categories/ios)
+- [Forum Novell](http://forums.xamarin.com/categories/ios)
 - [Overflow dello stack](https://stackoverflow.com/search?tab=newest&q=xamarin)

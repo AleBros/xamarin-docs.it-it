@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 4c612faca90d4b2b4e44cfbb53ff65ec07fcdfd1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ee29f54ac68f370cb9499d315116a030247f6044
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524831"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225724"
 ---
 # <a name="binding-an-aar"></a>Associazione di un file AAR
 
@@ -83,7 +83,7 @@ Prima di iniziare con la procedura seguente, scaricare il file di archivio Andro
 
 1. Creare un nuovo progetto di libreria di binding a partire dal modello di libreria di associazioni Android. È possibile usare Visual Studio per Mac o Visual Studio (gli screenshot seguenti mostrano Visual Studio, ma Visual Studio per Mac è molto simile). Assegnare alla soluzione il nome **AarBinding**:
 
-    [![Crea progetto AarBindings](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
+    [![Crea progetto AarBindings](binding-an-aar-images/01-new-bindings-library-vs-sml.w160.png)](binding-an-aar-images/01-new-bindings-library-vs.w160.png#lightbox)
 
 2. Il modello include una cartella **jar** in cui si aggiunge il. AAR (s) per il progetto della libreria di binding. Fare clic con il pulsante destro del mouse sulla cartella **jar** e scegliere **Aggiungi > elemento esistente**:
 

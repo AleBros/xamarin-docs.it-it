@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 4fa15e73575e20541df7ee8f606b01ec6e3d875a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656725"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226574"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Collegamenti Siri in Novell. iOS
 
@@ -264,19 +264,19 @@ Per compilare la libreria statica e generare C# le definizioni dei binding, atte
 
 - Configurare il sistema per l'uso degli strumenti da riga di comando di Xcode 10:
 
-    > [!WARNING]
-    > L'aggiornamento degli strumenti da riga di comando selezionati ha effetto su tutte le versioni di Xcode installate nel sistema. Dopo aver terminato di usare l'app di esempio Soup chef, assicurarsi di ripristinare la configurazione originale di questa impostazione.
+  > [!WARNING]
+  > L'aggiornamento degli strumenti da riga di comando selezionati ha effetto su tutte le versioni di Xcode installate nel sistema. Dopo aver terminato di usare l'app di esempio Soup chef, assicurarsi di ripristinare la configurazione originale di questa impostazione.
 
-    - In Xcode scegliere **xcode > preferenze > percorsi** e impostare **gli strumenti da riga di comando** per l'installazione di Xcode 10 più recente disponibile nel sistema.
+  - In Xcode scegliere **xcode > preferenze > percorsi** e impostare **gli strumenti da riga di comando** per l'installazione di Xcode 10 più recente disponibile nel sistema.
 
 - Nel terminale, `cd` alla directory **OrderSoupIntentStaticLib**
 
 - Digitare `make`, che compila:
 
-    - Libreria statica, **libOrderSoupIntentStaticLib. a**
-    - Nella directory di output **Bo** le C# definizioni dei binding:
-        - **ApiDefinitions.cs**
-        - **StructsAndEnums.cs**
+  - Libreria statica, **libOrderSoupIntentStaticLib. a**
+  - Nella directory di output **Bo** le C# definizioni dei binding:
+    - **ApiDefinitions.cs**
+    - **StructsAndEnums.cs**
 
 Il progetto **OrderSoupIntentBindings** , che si basa su questa libreria statica e le relative definizioni di binding associate, compila automaticamente questi elementi.
 Tuttavia, l'esecuzione manuale del processo precedente garantisce che venga compilato come previsto.
@@ -647,14 +647,14 @@ Nella sezione **Certificates, IDs &** profiles del [portale Apple Developer](htt
 
 - Creare tre ID app: uno per l'app, uno per l'estensione per Intent e uno per l'estensione dell'interfaccia utente Intent. Ad esempio:
 
-    - App: **com.yourcompanyname.SoupChef**
-        - Per questo ID app, assegnare le funzionalità SiriKit e **gruppi di app** .
+  - App: **com.yourcompanyname.SoupChef**
+    - Per questo ID app, assegnare le funzionalità SiriKit e **gruppi di app** .
 
-    - Estensione per Intent: **com. NomeSocietà. SoupChef. Intent**
-        - Per questo ID app, assegnare la funzionalità **gruppi di app** .
+  - Estensione per Intent: **com. NomeSocietà. SoupChef. Intent**
+    - Per questo ID app, assegnare la funzionalità **gruppi di app** .
 
-    - Estensione per interfaccia utente Intent: **com. NomeSocietà. SoupChef. Intentsui**
-        - Questo ID app non richiede funzionalità speciali.
+  - Estensione per interfaccia utente Intent: **com. NomeSocietà. SoupChef. Intentsui**
+    - Questo ID app non richiede funzionalità speciali.
 
 - Dopo aver creato gli ID app precedenti, modificare la funzionalità **gruppi di app** assegnata all'app e l'estensione per Intent, specificando il gruppo di app specifico creato in precedenza.
 
@@ -668,16 +668,16 @@ In Visual Studio per Mac o Visual Studio 2017 eseguire le operazioni seguenti:
 
 - Aggiornare i vari file **info. plist** nella soluzione. Impostare l'identificatore dell'app, l'estensione per Intent e l'identificatore del **bundle** di estensione dell'interfaccia utente per gli ID app definiti in precedenza:
 
-    - App: **com.yourcompanyname.SoupChef**
-    - Estensione per Intent: **com. NomeSocietà. SoupChef. Intent**
-    - Estensione per interfaccia utente Intent: **com. NomeSocietà. SoupChef. Intentsui**
+  - App: **com.yourcompanyname.SoupChef**
+  - Estensione per Intent: **com. NomeSocietà. SoupChef. Intent**
+  - Estensione per interfaccia utente Intent: **com. NomeSocietà. SoupChef. Intentsui**
 
 - Aggiornare il file con **estensione plist dei diritti** per il progetto **SoupChef** :
-    - Per la funzionalità **gruppi di app** , impostare il gruppo sul nuovo gruppo di app creato in precedenza (nell'esempio precedente, era **Group. com. NomeSocietà. SoupChef**).
-    - Verificare che **SiriKit** sia abilitato.
+  - Per la funzionalità **gruppi di app** , impostare il gruppo sul nuovo gruppo di app creato in precedenza (nell'esempio precedente, era **Group. com. NomeSocietà. SoupChef**).
+  - Verificare che **SiriKit** sia abilitato.
 
 - Aggiornare il file con **estensione plist dei diritti** per il progetto **SoupChefIntents** :
-    - Per la funzionalità **gruppi di app** , impostare il gruppo sul nuovo gruppo di app creato in precedenza (nell'esempio precedente, era **Group. com. NomeSocietà. SoupChef**).
+  - Per la funzionalità **gruppi di app** , impostare il gruppo sul nuovo gruppo di app creato in precedenza (nell'esempio precedente, era **Group. com. NomeSocietà. SoupChef**).
 
 - Infine, aprire **NSUserDefaultsHelper.cs**. Impostare la `AppGroup` variabile sul valore del nuovo gruppo di app (ad esempio, impostarlo su `group.com.yourcompanyname.SoupChef`).
 

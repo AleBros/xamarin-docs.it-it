@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67fbd3fb7fb9c7bf1e326404d0d63bc42a3fd8ed
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521425"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227674"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Sicurezza del trasporto delle app in Novell. iOS
 
@@ -41,7 +41,7 @@ ATS applicherà i requisiti seguenti per tutte le connessioni Internet:
 - Il protocollo Transport Layer Security (TLS) deve essere 1,2 o versione successiva.
 - Per tutti i certificati è necessario usare almeno un'impronta digitale SHA256 con una chiave RSA di 2048 bit o superiore oppure una chiave di tipo 256 bit o una curva ellittica (ECC).
 
-Anche in questo caso, poiché ATS è abilitato per impostazione predefinita in iOS 9, qualsiasi tentativo di creare una connessione che non soddisfi questi requisiti comporterà la generazione di un'eccezione. 
+Anche in questo caso, poiché ATS è abilitato per impostazione predefinita in iOS 9, qualsiasi tentativo di creare una connessione che non soddisfi questi requisiti comporterà la generazione di un'eccezione.
 
 <a name="ATS-Compatible-Ciphers" />
 
@@ -132,7 +132,7 @@ I professionisti
 Svantaggi
 
 - Richiede iOS 7 o versione successiva.
-- Alcune funzionalità e opzioni di HttpClient non sono disponibili. 
+- Alcune funzionalità e opzioni di HttpClient non sono disponibili.
 
 ## <a name="diagnosing-ats-issues"></a>Diagnosi dei problemi ATS
 
@@ -153,7 +153,7 @@ Apple fornisce anche l' [app di esempio TLSTool](https://developer.apple.com/lib
 
 È possibile configurare diverse funzionalità di ATS impostando i valori per chiavi specifiche nel file **info. plist** dell'app. Sono disponibili le chiavi seguenti per il controllo di ATS (rientrato_per mostrare come sono annidate_):
 
-```csharp
+```
 NSAppTransportSecurity
     NSAllowsArbitraryLoads
     NSAllowsArbitraryLoadsInWebContent

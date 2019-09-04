@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2019
 ms.custom: video
-ms.openlocfilehash: a9b9b2d12193161e0cb4514600381c3a7a38495a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7c0fffbe626a740c15d85b1277c5158a5e564a15
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529323"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228082"
 ---
 # <a name="resource-dictionaries"></a>Dizionari risorse
 
@@ -105,9 +105,9 @@ Ogni risorsa dispone di una chiave specificata utilizzando il `x:Key` attributo,
 </StackLayout>
 ```
 
-Il primo [ `Label` ](xref:Xamarin.Forms.Label) istanza recupera e utilizza il `LabelPageHeadingStyle` risorse definite nel livello di applicazione `ResourceDictionary`, con il secondo `Label` istanza il recupero e l'utilizzo di `LabelNormalStyle`risorse definite nel livello di controllo `ResourceDictionary`. Allo stesso modo, il [ `Button` ](xref:Xamarin.Forms.Button) istanza recupera e utilizza il `NormalTextColor` risorse definite nel livello di applicazione `ResourceDictionary`e la `MediumBoldText` risorse definite nel livello di controllo `ResourceDictionary`. Ciò comporta l'aspetto illustrato negli screenshot seguenti:
+Il primo [ `Label` ](xref:Xamarin.Forms.Label) istanza recupera e utilizza il `LabelPageHeadingStyle` risorse definite nel livello di applicazione `ResourceDictionary`, con il secondo `Label` istanza il recupero e l'utilizzo di `LabelNormalStyle`risorse definite nel livello di controllo `ResourceDictionary`. Allo stesso modo, il [ `Button` ](xref:Xamarin.Forms.Button) istanza recupera e utilizza il `NormalTextColor` risorse definite nel livello di applicazione `ResourceDictionary`e la `MediumBoldText` risorse definite nel livello di controllo `ResourceDictionary`. Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[![](resource-dictionaries-images/screenshots-sml.png "Utilizzo delle risorse di ResourceDictionary")](resource-dictionaries-images/screenshots.png#lightbox "utilizzano risorse di ResourceDictionary")
+[![Utilizzo di risorse ResourceDictionary](resource-dictionaries-images/screenshots-sml.png)](resource-dictionaries-images/screenshots.png#lightbox)
 
 > [!NOTE]
 > Le risorse specifiche per una singola pagina non devono essere incluso in un'applicazione a livello dizionario risorse, di conseguenza le risorse vengano analizzate all'avvio dell'applicazione anziché quando richiesto da una pagina. Per altre informazioni, vedere [ridurre le dimensioni del dizionario risorse dell'applicazione](~/xamarin-forms/deploy-test/performance.md).
@@ -142,7 +142,7 @@ Quando `ResourceDictionary` condividono risorse `x:Key` valori degli attributi, 
 
 Originale `PageBackgroundColor` e `NormalTextColor` sostituiscono le istanze, definite a livello di applicazione, il `PageBackgroundColor` e `NormalTextColor` istanze definite a livello di pagina. Di conseguenza, il colore di sfondo pagina diventa blu e il testo nella pagina diventa giallo, come illustrato negli screenshot seguenti:
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "Si esegue l'override delle risorse di ResourceDictionary")](resource-dictionaries-images/overridding-screenshots.png#lightbox "eseguendo l'override delle risorse di ResourceDictionary")
+[![Override di risorse ResourceDictionary](resource-dictionaries-images/overridding-screenshots-sml.png)](resource-dictionaries-images/overridding-screenshots.png#lightbox)
 
 Si noti tuttavia che la barra in background del [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) è ancora giallo, perché il [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) proprietà è impostata sul valore del `PageBackgroundColor` risorse definite nell'applicazione livello `ResourceDictionary`.
 

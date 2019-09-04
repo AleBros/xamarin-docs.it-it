@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 567985b1d6c6aff87e0a6879f05ab711a0095d6f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b7888ea29dd02733059346bca21fec0a4c510c2e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647208"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228004"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Stili espliciti in xamarin. Forms
 
@@ -64,9 +64,9 @@ Il codice seguente esempio illustra *esplicite* stili dichiarato in XAML in una 
 </ContentPage>
 ```
 
-Il [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) definisce tre *esplicita* stili applicati alla pagina [`Label`](xref:Xamarin.Forms.Label) istanze. Ogni `Style` consente di visualizzare il testo in un colore diverso, impostando allo stesso tempo il tipo di carattere opzioni di layout, dimensioni e orizzontali e verticali. Ogni `Style` viene applicato a un altro `Label` mediante l'impostazione relativa [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà mediante il `StaticResource` estensione di markup. Ciò comporta l'aspetto illustrato negli screenshot seguenti:
+Il [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) definisce tre *esplicita* stili applicati alla pagina [`Label`](xref:Xamarin.Forms.Label) istanze. Ogni `Style` consente di visualizzare il testo in un colore diverso, impostando allo stesso tempo il tipo di carattere opzioni di layout, dimensioni e orizzontali e verticali. Ogni `Style` viene applicato a un altro `Label` mediante l'impostazione relativa [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà mediante il `StaticResource` estensione di markup. Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[![](explicit-images/explicit-styles.png "Esempio di stili espliciti")](explicit-images/explicit-styles-large.png#lightbox "esempio stili espliciti")
+[![Esempio di stili espliciti](explicit-images/explicit-styles.png)](explicit-images/explicit-styles-large.png#lightbox)
 
 Inoltre, l'elemento finale [`Label`](xref:Xamarin.Forms.Label) ha un [`Style`](xref:Xamarin.Forms.Style) applicati, ma esegue anche l'override la [`TextColor`](xref:Xamarin.Forms.Label.TextColor) proprietà a un diverso `Color`valore.
 

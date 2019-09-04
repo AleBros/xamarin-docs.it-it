@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 8978bd386ec2f2ea0f9960f079ce82750941cfad
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655948"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228262"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio con tracciati e aree
 
@@ -22,7 +22,7 @@ _Usare i percorsi della grafica di ritaglio per aree specifiche e per creare are
 
 In alcuni casi è necessario limitare il rendering della grafica per una determinata area. Questo è noto come *ritaglio*. È possibile usare il ritaglio per gli effetti speciali, ad esempio l'immagine di un meccanico visualizzato attraverso un microchirurgia:
 
-![](clipping-images/clippingsample.png "Monkey tramite un microchirurgia")
+![Scimmia attraverso una serratura](clipping-images/clippingsample.png)
 
 Il *area di ritaglio* è l'area dello schermo in cui viene eseguito il rendering di grafica. Tutto ciò che viene visualizzato all'esterno dell'area di ritaglio non viene eseguito il rendering. L'area di ritaglio viene in genere definito da un rettangolo o un' [ `SKPath` ](xref:SkiaSharp.SKPath) oggetto, ma in alternativa possibile definire un'area di ritaglio utilizzando un' [ `SKRegion` ](xref:SkiaSharp.SKRegion) oggetto. Questi due tipi di oggetti con sembrino correlati poiché è possibile creare un'area da un percorso. Tuttavia, non è possibile creare un percorso da un'area e sono molto diversi internamente: Un percorso è costituito da una serie di linee e curve, mentre un'area è definita da una serie di linee di analisi orizzontali.
 
@@ -100,7 +100,7 @@ canvas.ClipPath(keyholePath);
 
 Il `PaintSurface` gestore viene quindi reimpostato le trasformazioni con una chiamata a `ResetMatrix` e consente di disegnare la bitmap per estendere all'altezza dello schermo. Questo codice presuppone che la bitmap è quadrata, ovvero questa bitmap particolare. La bitmap viene eseguito il rendering solo all'interno dell'area definita dal tracciato di ritaglio:
 
-[![](clipping-images/monkeythroughkeyhole-small.png "Schermata triplo del Monkey tramite pagina microchirurgia")](clipping-images/monkeythroughkeyhole-large.png#lightbox "tripla schermata del Monkey tramite pagina microchirurgia")
+[![Schermata tripla della scimmia attraverso la pagina della serratura](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
 
 Tracciato di ritaglio è soggetto alle trasformazioni attiva quando il `ClipPath` viene chiamato il metodo e non per le trasformazioni in vigore quando un oggetto grafico (ad esempio, una bitmap) viene visualizzato. Tracciato di ritaglio fa parte dello stato, area di disegno che viene salvato con il `Save` metodo e ripristinato con il `Restore` (metodo).
 
@@ -167,7 +167,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ciò che rimane è l'intersezione di questi quattro cerchi:
 
-[![](clipping-images//fourcircleintersectclip-small.png "Tripla screenshot della pagina di quattro cerchio si intersecano Clip")](clipping-images/fourcircleintersectclip-large.png#lightbox "tripla screenshot della pagina di quattro cerchio si intersecano Clip")
+[![Schermata tripla della pagina di ritaglio a quattro cerchi](clipping-images//fourcircleintersectclip-small.png)](clipping-images/fourcircleintersectclip-large.png#lightbox)
 
 Il [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumerazione ha solo due membri:
 
@@ -177,13 +177,13 @@ Il [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumerazione ha solo du
 
 Se si sostituisce le quattro `SKClipOperation.Intersect` argomenti in di `FourCircleIntersectClipPage` classe `SKClipOperation.Difference`, si noterà quanto segue:
 
-[![](clipping-images//fourcircledifferenceclip-small.png "Tripla screenshot della pagina di quattro cerchio si intersecano Clip con l'operazione di differenza")](clipping-images/fourcircledifferenceclip-large.png#lightbox "tripla screenshot della pagina di quattro cerchio si intersecano Clip con rilevamento delle differenze")
+[![Schermata tripla della pagina di ritaglio a quattro cerchi intersezione con operazione di differenza](clipping-images//fourcircledifferenceclip-small.png)](clipping-images/fourcircledifferenceclip-large.png#lightbox)
 
 Quattro cerchi sovrapposti sono stati rimossi dall'area di ritaglio.
 
 Il **operazioni di ritaglio** pagina viene illustrata la differenza tra queste due operazioni con solo una coppia di cerchi. Il primo controllo circle a sinistra viene aggiunto all'area di ritaglio con l'operazione di ritaglio predefinita di `Intersect`, mentre il secondo cerchio sul lato destro viene aggiunto all'area di ritaglio con l'operazione di ritaglio indicata dall'etichetta di testo:
 
-[![](clipping-images//clipoperations-small.png "Tripla screenshot della pagina delle operazioni di ritaglio")](clipping-images/clipoperations-large.png#lightbox "tripla screenshot della pagina delle operazioni di ritaglio")
+[![Schermata tripla della pagina operazioni di ritaglio](clipping-images//clipoperations-small.png)](clipping-images/clipoperations-large.png#lightbox)
 
 Il [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe vengono definiti due `SKPaint` oggetti come campi e quindi divide la schermata di in due aree rettangolari. Queste aree sono diverse a seconda del fatto che il telefono si trova in modalità verticale o orizzontale. Il `DisplayClipOp` classe visualizza il testo e chiamate `ClipPath` con i percorsi di due cerchio per illustrare ogni operazione di ritaglio:
 
@@ -282,7 +282,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 Lo screenshot seguente mostra le aree di ritaglio basate sulle operazioni sei area. Il cerchio a sinistra è l'area che il `Op` metodo viene chiamato su, e il controllo circle a destra è l'area passato al `Op` metodo:
 
-[![](clipping-images//regionoperations-small.png "Tripla screenshot della pagina operazioni sulle aree")](clipping-images/regionoperations-large.png#lightbox "tripla screenshot della pagina operazioni sulle aree")
+[![Schermata tripla della pagina operazioni area](clipping-images//regionoperations-small.png)](clipping-images/regionoperations-large.png#lightbox)
 
 Sono tali tutte le possibilità di combinazione di queste due cerchi? Prendere in considerazione l'immagine risultante come una combinazione di tre componenti, che da sole è visibili nel `Difference`, `Intersect`, e `ReverseDifference` operazioni. Il numero totale di combinazioni è 2 alla potenza di 3, oppure a otto. Le due che non sono presenti sono nell'area originale (risultante dalla chiamata non `Op` affatto) e un'area vuota interamente.
 
@@ -423,7 +423,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il `DrawRegion` chiamata riempie l'area in arancione, mentre il `DrawPath` chiamata i tratti del percorso originale in blu per il confronto:
 
-[![](clipping-images//regionpaint-small.png "Tripla screenshot della pagina area Paint")](clipping-images/regionpaint-large.png#lightbox "tripla screenshot della pagina di disegno di area")
+[![Schermata tripla della pagina Paint area](clipping-images//regionpaint-small.png)](clipping-images/regionpaint-large.png#lightbox)
 
 L'area è chiaramente una serie di coordinate discrete.
 
@@ -509,7 +509,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Davvero non sembra un – quattro sono ora disponibili, ma è un'immagine che altrimenti sarebbero difficile da eseguire il rendering senza ritaglio:
 
-[![](clipping-images//fourleafclover-small.png "Tripla screenshot della pagina sono ora disponibili – quattro")](clipping-images/fourleafclover-large.png#lightbox "tripla screenshot della pagina sono ora disponibili – quattro")
+[![Schermata tripla della pagina del trifoglio a quattro foglie](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Collegamenti correlati

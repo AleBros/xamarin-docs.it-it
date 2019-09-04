@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: aee3d81375ab619fa2016a87951cce3e72cdbe47
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650187"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227913"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creazione di controlli personalizzati in Novell. Mac
 
@@ -221,7 +221,7 @@ Esistono due modalità di base in cui è possibile aggiungere input utente al co
 
 #### <a name="handling-user-input-with-override-methods"></a>Gestione dell'input dell'utente con i metodi di override
 
-Gli oggetti che ereditano da `NSView`(o) dispongono di diversi metodi di override per la gestione dell'input del mouse o della `NSControl` tastiera. Per il controllo di esempio, si vuole capovolgere lo stato del compartitore quando **l'** utente fa clic sul controllo con il pulsante sinistro del mouse. Per gestire questo problema, è possibile aggiungere i `NSFlipSwitch` seguenti metodi di override alla classe:
+Gli oggetti che ereditano da `NSView`(o) dispongono di diversi metodi di override per la gestione dell'input del mouse o della `NSControl` tastiera. Per il controllo di esempio, si vuole capovolgere lo stato del compartitore quando l'utente fa clic sul controllo con il pulsante sinistro del mouse. Per gestire questo problema, è possibile aggiungere i `NSFlipSwitch` seguenti metodi di override alla classe:
 
 ```csharp
 #region Mouse Handling Methods
@@ -285,7 +285,7 @@ Anche in questo caso, il metodo da usare dipende da ciò che si sta tentando di 
 
 ### <a name="responding-to-state-change-events"></a>Risposta agli eventi di modifica dello stato
 
-Quando l'utente modifica lo stato del controllo personalizzato, è necessario un modo per rispondere alla modifica dello stato nel codice, ad esempio quando si fa clic su un pulsante personalizzato. 
+Quando l'utente modifica lo stato del controllo personalizzato, è necessario un modo per rispondere alla modifica dello stato nel codice, ad esempio quando si fa clic su un pulsante personalizzato.
 
 Per fornire questa funzionalità, modificare la `NSFlipSwitch` classe e aggiungere il codice seguente:
 
@@ -299,7 +299,7 @@ internal void RaiseValueChanged() {
 
     // Perform any action bound to the control from Interface Builder
     // via an Action.
-    if (this.Action !=null) 
+    if (this.Action !=null)
         NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 }
 ## endregion
@@ -320,7 +320,7 @@ In primo luogo, viene `ValueChanged` fornito un evento in cui è possibile aggiu
 In secondo luogo, poiché il controllo personalizzato `NSControl`eredita da, ha automaticamente un' **azione** che può essere assegnata nel Interface Builder di Xcode. Per chiamare questa **azione** quando lo stato viene modificato, viene usato il codice seguente:
 
 ```csharp
-if (this.Action !=null) 
+if (this.Action !=null)
     NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 ```
 
@@ -361,7 +361,7 @@ public override void ViewDidLoad ()
         Console.WriteLine("Option Two: {0}", OptionTwo.Value);
     };
 }
-``` 
+```
 
 Qui si risponde all' `ValueChanged` evento definito `NSFlipSwitch` in precedenza sulla classe e si scrive il **valore** corrente quando l'utente fa clic sul controllo.
 

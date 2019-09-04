@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 7c48244e316854b04234ec8dee4eebeb55a4f119
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526388"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225774"
 ---
 # <a name="alternate-resources"></a>Risorse alternative
 
@@ -73,52 +73,52 @@ I qualificatori possibili sono elencati di seguito per riferimento:
 
 - **Densità pixel schermo (dpi)** &ndash; Il numero di pixel in una determinata area della schermata fisica. Generalmente espresso come dpi (punti per pollice). I valori possibili sono:
 
-    - `ldpi`&ndash; Schermate a densità ridotta.
+  - `ldpi`&ndash; Schermate a densità ridotta.
 
-    - `mdpi`&ndash; Schermate a densità media
+  - `mdpi`&ndash; Schermate a densità media
 
-    - `hdpi`&ndash; Schermate ad alta densità
+  - `hdpi`&ndash; Schermate ad alta densità
 
-    - `xhdpi`&ndash; Schermate ad alta densità
+  - `xhdpi`&ndash; Schermate ad alta densità
 
-    - `nodpi`&ndash; Risorse che non devono essere ridimensionate
+  - `nodpi`&ndash; Risorse che non devono essere ridimensionate
 
-    - `tvdpi`&ndash; Introdotta in API Level 13 (Android 3,2) per le schermate tra MDPI e HDPI.
+  - `tvdpi`&ndash; Introdotta in API Level 13 (Android 3,2) per le schermate tra MDPI e HDPI.
 
 - **Tipo di touchscreen** &ndash; Specifica il tipo di touchscreen che può avere un dispositivo. I valori possibili `notouch` sono (senza touch screen) `stylus` , (un touchscreen resistivo adatto per uno stilo) `finger` e (touchscreen).
 
 - **Disponibilità tastiera** &ndash; Specifica il tipo di tastiera disponibile. Questo può cambiare durante il ciclo di vita di &ndash; un'applicazione, ad esempio quando un utente apre una tastiera hardware. I valori possibili sono:
 
-    - `keysexposed`&ndash; Sul dispositivo è disponibile una tastiera. Se la tastiera software non è abilitata, viene usata solo quando viene aperta la tastiera hardware.
+  - `keysexposed`&ndash; Sul dispositivo è disponibile una tastiera. Se la tastiera software non è abilitata, viene usata solo quando viene aperta la tastiera hardware.
 
-    - `keyshidden`&ndash; Il dispositivo dispone di una tastiera hardware ma è nascosto e non è abilitata alcuna tastiera software.
+  - `keyshidden`&ndash; Il dispositivo dispone di una tastiera hardware ma è nascosto e non è abilitata alcuna tastiera software.
 
-    - `keyssoft`&ndash; il dispositivo dispone di una tastiera software abilitata.
+  - `keyssoft`&ndash; il dispositivo dispone di una tastiera software abilitata.
 
 - **Metodo di input di testo primario** &ndash; Consente di specificare i tipi di chiavi hardware disponibili per l'input. I valori possibili sono:
 
-    - `nokeys`&ndash; Non sono presenti chiavi hardware per l'input.
+  - `nokeys`&ndash; Non sono presenti chiavi hardware per l'input.
 
-    - `qwerty`&ndash; È disponibile una tastiera QWERTY.
+  - `qwerty`&ndash; È disponibile una tastiera QWERTY.
 
-    - `12key`&ndash; È disponibile una tastiera hardware a 12 chiavi
+  - `12key`&ndash; È disponibile una tastiera hardware a 12 chiavi
 
 
 - **Disponibilità chiave di navigazione** &ndash; Per il momento in cui è disponibile la navigazione a 5 vie o d-pad (direzionale). Questo può cambiare durante il ciclo di vita dell'applicazione. I valori possibili sono:
 
-    - `navexposed`&ndash; le chiavi di spostamento sono disponibili per l'utente
+  - `navexposed`&ndash; le chiavi di spostamento sono disponibili per l'utente
 
-    - `navhidden`&ndash; le chiavi di spostamento non sono disponibili.
+  - `navhidden`&ndash; le chiavi di spostamento non sono disponibili.
 
 - **Metodo di navigazione non touch primario** &ndash; Tipo di navigazione disponibile nel dispositivo. I valori possibili sono:
 
-    - `nonav`&ndash; l'unica funzionalità di spostamento disponibile è il touchscreen
+  - `nonav`&ndash; l'unica funzionalità di spostamento disponibile è il touchscreen
 
-    - `dpad`&ndash; per lo spostamento è disponibile un d-pad (direzionale-pad)
+  - `dpad`&ndash; per lo spostamento è disponibile un d-pad (direzionale-pad)
 
-    - `trackball`&ndash; il dispositivo ha una trackball per la navigazione
+  - `trackball`&ndash; il dispositivo ha una trackball per la navigazione
 
-    - `wheel`&ndash; scenario non comune in cui sono disponibili una o più ruote direzionali
+  - `wheel`&ndash; scenario non comune in cui sono disponibili una o più ruote direzionali
 
 - **Versione della piattaforma (livello API)** Livello API supportato dal dispositivo nel formato v n, dove *N* è il livello API di destinazione. &ndash; Ad esempio, V11 è destinato a un dispositivo API livello 11 (Android 3,0).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8379b9c9575c5a4f24f6c35c37cf8682e53b78ec
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121132"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227246"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing di un'app Novell. Mac
 
@@ -68,24 +68,24 @@ Si verificherà che l'applicazione sia effettivamente sandbox e si apprenderà c
 Per creare il progetto di esempio, eseguire le operazioni seguenti:
 
 1. Avviare Visual Studio per Mac e fare clic sulla **nuova soluzione.** account".
-2. Nella finestra di dialogo **nuovo progetto** selezionare app **Mac** > **app** > **Cocoa**: 
+2. Nella finestra di dialogo **nuovo progetto** selezionare app **Mac** > **app** > **Cocoa**:
 
     [![Creazione di una nuova app Cocoa](sandboxing-images/sample01.png "Creazione di una nuova app Cocoa")](sandboxing-images/sample01-large.png#lightbox)
-3. Fare clic sul pulsante **Avanti** , `MacSandbox` immettere come nome del progetto e fare clic sul pulsante **Crea** : 
+3. Fare clic sul pulsante **Avanti** , `MacSandbox` immettere come nome del progetto e fare clic sul pulsante **Crea** :
 
     [![Immissione del nome dell'app](sandboxing-images/sample02.png "Immissione del nome dell'app")](sandboxing-images/sample02-large.png#lightbox)
-4. Nella **riquadro della soluzione**fare doppio clic sul file **Main. Storyboard** per aprirlo per la modifica in Xcode: 
+4. Nella **riquadro della soluzione**fare doppio clic sul file **Main. Storyboard** per aprirlo per la modifica in Xcode:
 
     [![Modifica dello storyboard principale](sandboxing-images/sample03.png "Modifica dello storyboard principale")](sandboxing-images/sample03-large.png#lightbox)
-5. Trascinare una **visualizzazione Web** sulla finestra, ridimensionarla per riempire l'area di contenuto e impostarla in modo da espanderla e compattarla con la finestra: 
+5. Trascinare una **visualizzazione Web** sulla finestra, ridimensionarla per riempire l'area di contenuto e impostarla in modo da espanderla e compattarla con la finestra:
 
     [![Aggiunta di una visualizzazione Web](sandboxing-images/sample04.png "Aggiunta di una visualizzazione Web")](sandboxing-images/sample04-large.png#lightbox)
-6. Creare un outlet per la visualizzazione Web denominata `webView`: 
+6. Creare un outlet per la visualizzazione Web denominata `webView`:
 
     [![Creazione di un nuovo outlet](sandboxing-images/sample05.png "Creazione di un nuovo outlet")](sandboxing-images/sample05-large.png#lightbox)
 7. Tornare a Visual Studio per Mac e fare doppio clic sul file **ViewController.cs** nel **riquadro della soluzione** per aprirlo per la modifica.
 8. Aggiungere la seguente istruzione using:`using WebKit;`
-9. Fare in `ViewDidLoad` modo che il metodo sia simile al seguente: 
+9. Fare in `ViewDidLoad` modo che il metodo sia simile al seguente:
 
     ```csharp
     public override void AwakeFromNib ()
@@ -109,34 +109,34 @@ Prima di poter abilitare la sandbox dell'app, è prima di tutto necessario effet
 
 Consente di eseguire le operazioni seguenti:
 
-1. Accedere al portale per sviluppatori Apple: 
+1. Accedere al portale per sviluppatori Apple:
 
     [![Accesso al portale per sviluppatori Apple](sandboxing-images/sign01.png "Accesso al portale per sviluppatori Apple")](sandboxing-images/sign01-large.png#lightbox)
-2. Selezionare **certificati, identificatori & profili**: 
+2. Selezionare **certificati, identificatori & profili**:
 
     [![Selezione di certificati, identificatori e profili](sandboxing-images/sign02.png "Selezione di certificati, identificatori e profili")](sandboxing-images/sign02-large.png#lightbox)
-3. In **app Mac**selezionare **identificatori**: 
+3. In **app Mac**selezionare **identificatori**:
 
     [![Selezione] degli identificatori (sandboxing-images/sign03.png "Selezione") degli identificatori](sandboxing-images/sign03-large.png#lightbox)
-4. Creare un nuovo ID per l'applicazione: 
+4. Creare un nuovo ID per l'applicazione:
 
     [![Creazione di un nuovo ID app](sandboxing-images/sign04.png "Creazione di un nuovo ID app")](sandboxing-images/sign04-large.png#lightbox)
-5. In **profili**di provisioning selezionare **sviluppo**: 
+5. In **profili**di provisioning selezionare **sviluppo**:
 
     [![Selezione dello sviluppo](sandboxing-images/sign05.png "Selezione dello sviluppo")](sandboxing-images/sign05-large.png#lightbox)
-6. Crea un nuovo profilo e seleziona **sviluppo di app Mac**: 
+6. Crea un nuovo profilo e seleziona **sviluppo di app Mac**:
 
     [![Creazione di un nuovo profilo](sandboxing-images/sign06.png "Creazione di un nuovo profilo")](sandboxing-images/sign06-large.png#lightbox)
-7. Selezionare l'ID app creato in precedenza: 
+7. Selezionare l'ID app creato in precedenza:
 
     [![Selezione dell'ID app](sandboxing-images/sign07.png "Selezione dell'ID app")](sandboxing-images/sign07-large.png#lightbox)
-8. Selezionare gli sviluppatori per questo profilo: 
+8. Selezionare gli sviluppatori per questo profilo:
 
     [![Aggiunta di sviluppatori](sandboxing-images/sign08.png "Aggiunta di sviluppatori")](sandboxing-images/sign08-large.png#lightbox)
-9. Selezionare i computer per questo profilo: 
+9. Selezionare i computer per questo profilo:
 
     [![Selezione dei computer] consentiti (sandboxing-images/sign09.png "Selezione dei computer") consentiti](sandboxing-images/sign09-large.png#lightbox)
-10. Assegnare un nome al profilo: 
+10. Assegnare un nome al profilo:
 
     [![Assegnazione di un nome al profilo](sandboxing-images/sign10.png "Assegnazione di un nome al profilo")](sandboxing-images/sign10-large.png#lightbox)
 11. Fai clic sul pulsante **Fine**.
@@ -146,10 +146,10 @@ Consente di eseguire le operazioni seguenti:
 
 Successivamente, è necessario caricare il nuovo ID app e il profilo nel computer di sviluppo. Eseguire le operazioni seguenti:
 
-1. Avviare Xcode e selezionare **Preferenze** dal menu **Xcode** : 
+1. Avviare Xcode e selezionare **Preferenze** dal menu **Xcode** :
 
     ![Modifica di account in Xcode](sandboxing-images/sign11.png "Modifica di account in Xcode")
-2. Fare clic sul pulsante **Visualizza dettagli...** : 
+2. Fare clic sul pulsante **Visualizza dettagli...** :
 
     ![Clic sul pulsante Visualizza dettagli](sandboxing-images/sign12.png "Clic sul pulsante Visualizza dettagli")
 3. Fare clic sul pulsante di **aggiornamento** nell'angolo in basso a sinistra.
@@ -158,17 +158,17 @@ Successivamente, è necessario caricare il nuovo ID app e il profilo nel compute
 Successivamente, è necessario selezionare il nuovo ID app e il profilo di provisioning nel progetto Novell. Mac. Eseguire le operazioni seguenti:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **info. plist** per aprirlo per la modifica.
-2. Verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza ( `com.appracatappra.MacSandbox`ad esempio:): 
+2. Verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza ( `com.appracatappra.MacSandbox`ad esempio:):
 
     [![Modifica dell'identificatore del bundle](sandboxing-images/sign13.png "Modifica dell'identificatore del bundle")](sandboxing-images/sign13-large.png#lightbox)
-3. Fare quindi doppio clic sul file **titles. plist** e assicurarsi che l' **Archivio chiave-valore di iCloud** e i **contenitori iCloud** corrispondano tutti all'ID app creato in precedenza (ad `com.appracatappra.MacSandbox`esempio:): 
+3. Fare quindi doppio clic sul file **titles. plist** e assicurarsi che l' **Archivio chiave-valore di iCloud** e i **contenitori iCloud** corrispondano tutti all'ID app creato in precedenza (ad `com.appracatappra.MacSandbox`esempio:):
 
     [![Modifica del file con estensione plist dei diritti](sandboxing-images/sign17.png "Modifica del file con estensione plist dei diritti")](sandboxing-images/sign17-large.png#lightbox)
 4. Salvare le modifiche.
-5. Nella **riquadro della soluzione**fare doppio clic sul file di progetto per aprirne le opzioni per la modifica:  
+5. Nella **riquadro della soluzione**fare doppio clic sul file di progetto per aprirne le opzioni per la modifica:
 
     ![Editign le opzioni della soluzione](sandboxing-images/sign14.png "Editign le opzioni della soluzione")
-6. Selezionare **firma Mac**, quindi selezionare firma **il bundle dell'applicazione** e **firmare il pacchetto del programma di installazione**. In **profilo**di provisioning selezionare quello creato in precedenza: 
+6. Selezionare **firma Mac**, quindi selezionare firma **il bundle dell'applicazione** e **firmare il pacchetto del programma di installazione**. In **profilo**di provisioning selezionare quello creato in precedenza:
 
     ![Impostazione del profilo di] provisioning (sandboxing-images/sign15.png "Impostazione del profilo di") provisioning
 7. Fai clic sul pulsante **Fine**.
@@ -195,7 +195,7 @@ Nel caso di un problema, correggere il problema nel portale Apple Developer, agg
 Per abilitare la sandbox dell'app, selezionare una casella di controllo nelle opzioni dei progetti. Seguire questa procedura:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **titles. plist** per aprirlo per la modifica.
-2. Selezionare **Abilita diritti** e **Abilita sandboxing app**: 
+2. Selezionare **Abilita diritti** e **Abilita sandboxing app**:
 
     [![Modifica dei diritti e abilitazione della sandbox](sandboxing-images/sign17.png "Modifica dei diritti e abilitazione della sandbox")](sandboxing-images/sign17-large.png#lightbox)
 3. Salvare le modifiche.
@@ -208,25 +208,25 @@ A questo punto, l'app sandbox è stata abilitata, ma non è stato fornito l'acce
 
 A parte il comportamento di blocco delle risorse, esistono tre modi principali per stabilire se un'applicazione Novell. Mac è stata creata in modalità sandbox:
 
-1. In Finder verificare il contenuto della `~/Library/Containers/` cartella: se l'app è in modalità sandbox, sarà presente una cartella denominata come l'identificatore del bundle dell'app, ad esempio: `com.appracatappra.MacSandbox` 
+1. In Finder verificare il contenuto della `~/Library/Containers/` cartella: se l'app è in modalità sandbox, sarà presente una cartella denominata come l'identificatore del bundle dell'app, ad esempio: `com.appracatappra.MacSandbox`
 
     [![Apertura del bundle dell'app](sandboxing-images/sample09.png "Apertura del bundle dell'app")](sandboxing-images/sample09-large.png#lightbox)
 2. Il sistema Visualizza l'app in modalità sandbox in Monitoraggio attività:
-    - Avviare Monitoraggio attività (in `/Applications/Utilities`). 
+    - Avviare Monitoraggio attività (in `/Applications/Utilities`).
     - Scegliere **Visualizza** > **colonne** e verificare che la voce di menu **sandbox** sia selezionata.
-    - Assicurarsi che la colonna sandbox legga `Yes` per l'applicazione: 
+    - Assicurarsi che la colonna sandbox legga `Yes` per l'applicazione:
 
     [![Controllo dell'app in Monitoraggio attività](sandboxing-images/sample10.png "Controllo dell'app in Monitoraggio attività")](sandboxing-images/sample10-large.png#lightbox)
 3. Verificare che il file binario dell'app sia in modalità sandbox:
     - Avviare l'app Terminal.
     - Passare alla directory delle `bin` applicazioni.
-    - Eseguire questo comando: `codesign -dvvv --entitlements :- executable_path` (dove `executable_path` è il percorso dell'applicazione): 
+    - Eseguire questo comando: `codesign -dvvv --entitlements :- executable_path` (dove `executable_path` è il percorso dell'applicazione):
 
     [![Verifica dell'app dalla riga di comando](sandboxing-images/sample11.png "Verifica dell'app dalla riga di comando")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>Debug di un'app in modalità sandbox
 
-Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* . 
+Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, per impostazione predefinita, quando si Abilita il sandboxing, non è in grado di connettersi all'app, pertanto se si tenta di eseguire l'app senza le autorizzazioni corrette abilitate, viene ricevuto un errore *"Impossibile connettersi al debugger"* .
 
 [![Impostazione delle opzioni obbligatorie](sandboxing-images/debug01.png "Impostazione delle opzioni obbligatorie")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -246,7 +246,7 @@ Seguire questa procedura:
 
 1. Compilare l'app in questione ed eseguirla da Visual Studio per Mac.
 2. Aprire l'applicazione **console** (da `/Applications/Utilties/`).
-3. Selezionare **tutti i messaggi** nella barra laterale e `sandbox` immettere nella ricerca: 
+3. Selezionare **tutti i messaggi** nella barra laterale e `sandbox` immettere nella ricerca:
 
     [![Esempio di un problema di sandboxing nella console](sandboxing-images/resolve01.png "Esempio di un problema di sandboxing nella console")](sandboxing-images/resolve01-large.png#lightbox)
 
@@ -259,7 +259,7 @@ Ora che abbiamo visto come trovare le violazioni di sandboxing delle app, vediam
 Seguire questa procedura:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **titles. plist** per aprirlo per la modifica.
-2. Nella sezione **diritti** selezionare la casella di controllo **Consenti connessioni di rete in uscita (client)** : 
+2. Nella sezione **diritti** selezionare la casella di controllo **Consenti connessioni di rete in uscita (client)** :
 
     [![Modifica dei diritti](sandboxing-images/sign17.png "Modifica dei diritti")](sandboxing-images/sign17-large.png#lightbox)
 3. Salvare le modifiche apportate all'applicazione.
@@ -280,7 +280,7 @@ Quando si progetta per la sandbox dell'app, si sta progettando uno scenario pegg
 
 Come illustrato sopra, un'applicazione Novell. Mac a cui non è stato eseguito il sandbox riceve i diritti completi e l'accesso dell'utente che esegue l'app. Se compromessa da codice dannoso, un'app non protetta può fungere da agente per comportamenti ostili, con un'ampia gamma di potenziali rischi.
 
-Abilitando la sandbox dell'app, si rimuove tutti i privilegi tranne un set minimo di privilegi, che vengono quindi riabilitati solo in base alla necessità usando i diritti dell'app Novell. Mac. 
+Abilitando la sandbox dell'app, si rimuove tutti i privilegi tranne un set minimo di privilegi, che vengono quindi riabilitati solo in base alla necessità usando i diritti dell'app Novell. Mac.
 
 Per modificare le risorse della sandbox dell'applicazione, modificare il file con **estensione plist** e controllare o selezionare i diritti richiesti dalle caselle a discesa degli editor:
 
@@ -356,13 +356,13 @@ Inoltre, il sistema consente automaticamente le operazioni seguenti a un'app cre
 - Apri file scegliere dall'utente dal menu **Apri recenti** .
 - Usare copia & incollare tra le altre applicazioni.
 - Leggi i file dalle seguenti posizioni leggibili in tutto il mondo:
-    - `/bin`
-    - `/sbin`
-    - `/usr/bin`
-    - `/usr/lib`
-    - `/usr/sbin`
-    - `/usr/share`
-    - `/System`
+  - `/bin`
+  - `/sbin`
+  - `/usr/bin`
+  - `/usr/lib`
+  - `/usr/sbin`
+  - `/usr/share`
+  - `/System`
 - Leggere e scrivere i file nelle directory create da `NSTemporaryDirectory`.
 
 Per impostazione predefinita, i file aperti o salvati da un'app Novell. Mac in modalità sandbox rimangono accessibili fino a quando l'app non viene terminata, a meno che il file non sia ancora aperto quando l'app si chiude. I file aperti verranno ripristinati automaticamente nella sandbox dell'app tramite la funzionalità di riattivazione macOS al successivo avvio dell'app.
@@ -401,10 +401,10 @@ Con i _segnalibri con ambito di sicurezza_, un'applicazione Novell. Mac in modal
 
 Quando si usano segnalibri con ambito di sicurezza e l'accesso alle risorse persistente, sono disponibili due casi d'uso della Sistina:
 
-- **Un segnalibro con ambito di app fornisce accesso permanente a una cartella o a un file specificato dall'utente.** 
+- **Un segnalibro con ambito di app fornisce accesso permanente a una cartella o a un file specificato dall'utente.**
 
     Ad esempio, se l'applicazione Novell. Mac in modalità sandbox consente a di aprire un documento esterno per la modifica (usando `NSOpenPanel`), l'app può creare un segnalibro con ambito di app in modo da poter accedere nuovamente allo stesso file in futuro.
-- **Un segnalibro con ambito documento fornisce un documento specifico accesso permanente a un file secondario.** 
+- **Un segnalibro con ambito documento fornisce un documento specifico accesso permanente a un file secondario.**
 
 Ad esempio, un'applicazione di modifica video che consente di creare un file di progetto che ha accesso alle singole immagini, clip video e file audio che verranno combinati in un unico film.
 
@@ -432,7 +432,7 @@ Dopo aver ceduto l'accesso a una risorsa, è necessario tornare al passaggio 4 p
 
 ### <a name="the-app-sandbox-and-code-signing"></a>Sandbox dell'app e firma del codice
 
-Dopo aver abilitato l'app sandbox e aver abilitato i requisiti specifici per l'app Novell. Mac (tramite diritti), è necessario firmare il progetto affinché il sandboxing venga applicato. È necessario eseguire la firma del codice perché i diritti necessari per il sandboxing dell'app sono collegati alla firma dell'app. 
+Dopo aver abilitato l'app sandbox e aver abilitato i requisiti specifici per l'app Novell. Mac (tramite diritti), è necessario firmare il progetto affinché il sandboxing venga applicato. È necessario eseguire la firma del codice perché i diritti necessari per il sandboxing dell'app sono collegati alla firma dell'app.
 
 macOS impone un collegamento tra il contenitore di un'app e la firma del codice, in questo modo nessun'altra applicazione può accedere a tale contenitore anche se esegue lo spoofing dell'ID bundle delle app. Questo meccanismo funziona nel modo seguente:
 
@@ -529,7 +529,7 @@ Di seguito sono riportati alcuni problemi comuni che è possibile eseguire per r
 - **Mantenere l'accesso alle risorse del file System** : se l'app Novell. Mac dipende dall'accesso permanente alle risorse esterne al contenitore, usare i segnalibri con ambito di sicurezza per mantenere l'accesso.
 - **Creare un elemento di accesso per un'app** : con l'app sandbox, non è possibile creare un elemento `LSSharedFileList` di accesso usando né modificare lo stato dei servizi di `LSRegisterURL`avvio usando. Usare la `SMLoginItemSetEnabled` funzione come descritto in mele [aggiunta di elementi di accesso tramite la documentazione del Framework di gestione dei servizi](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
 - **Accesso ai dati utente** : se si usano funzioni POSIX come `getpwuid` per ottenere la home directory dell'utente dai servizi directory, provare a usare i simboli Cocoa o Core `NSHomeDirectory`Foundation, ad esempio.
-- **Accesso alle preferenze di altre app** : poiché la sandbox dell'app indirizza le API di ricerca del percorso al contenitore dell'app, la modifica delle preferenze viene eseguita all'interno del contenitore e l'accesso alle preferenze di un'altra app non è consentito. 
+- **Accesso alle preferenze di altre app** : poiché la sandbox dell'app indirizza le API di ricerca del percorso al contenitore dell'app, la modifica delle preferenze viene eseguita all'interno del contenitore e l'accesso alle preferenze di un'altra app non è consentito.
 - **Uso del video HTML5 embedded in visualizzazioni Web** : se l'app Novell. Mac usa WebKit per riprodurre video HTML5 incorporati, è necessario collegare l'app anche a AV Foundation Framework. Il sandbox dell'app impedisce a CoreMedia di riprodurre questi video in caso contrario.
 
 ### <a name="applying-required-app-sandbox-entitlements"></a>Applicazione dei diritti di sandbox app richiesti
@@ -555,7 +555,7 @@ Per ulteriori informazioni, vedere la pagina relativa alla creazione di servizi 
 
 ### <a name="implement-a-migration-strategy"></a>Implementare una strategia di migrazione
 
-Se si sta rilasciando una nuova versione di un'applicazione Novell. Mac in modalità sandbox che in precedenza non era sandbox, è necessario assicurarsi che gli utenti correnti dispongano di un percorso di aggiornamento uniforme. 
+Se si sta rilasciando una nuova versione di un'applicazione Novell. Mac in modalità sandbox che in precedenza non era sandbox, è necessario assicurarsi che gli utenti correnti dispongano di un percorso di aggiornamento uniforme.
 
  Per informazioni dettagliate su come implementare un manifesto di migrazione del contenitore, vedere la documentazione relativa [alla migrazione di un'app in una sandbox di](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1) Apple.
 

@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 2b82de58b9d2f9e8acb8996f484845f9a71b6e80
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 844730d2ace717b951df2d80b2add6d1094fe997
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120303"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226106"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Suggerimenti per l'aggiornamento del codice per l'API unificata
 
@@ -59,7 +59,7 @@ Alcuni elementi che potrebbero dover essere corretti manualmente includono:
 
 - `NSDictionary.IntValue`ora restituisce un `nint`oggetto, `Int32Value` che può essere usato in alternativa.
 
-- `nfloat`i `nint` tipi e non possono `const`essere contrassegnati.   `static readonly nint` è un'alternativa ragionevole.
+- `nfloat`i `nint` tipi e non possono `const`essere contrassegnati. `static readonly nint` è un'alternativa ragionevole.
 
 - Gli `MonoTouch.` `MonoTouch.Constants.Version` `ObjCRuntime.Constants.Version`elementi che erano utilizzati direttamente nello spazio dei nomi sono ora generalmente nello spazio dei nomi (ad esempio, è ora). `ObjCRuntime.`
 
@@ -69,10 +69,10 @@ Alcuni elementi che potrebbero dover essere corretti manualmente includono:
 
 - I metodi esportati manualmente usando `[Export]` potrebbero non essere corretti automaticamente dallo strumento di migrazione, ad esempio in questo codice Snippert è necessario aggiornare manualmente il tipo restituito a: `nfloat`
 
-    ```csharp
-    [Export("tableView:heightForRowAtIndexPath:")]
-    public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
-    ```
+  ```csharp
+  [Export("tableView:heightForRowAtIndexPath:")]
+  public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
+  ```
 
 - Il API unificata non fornisce una conversione implicita tra NSDate e .NET DateTime perché non si tratta di una conversione senza perdita di perdite. Per evitare errori correlati alla `DateTimeKind.Unspecified` conversione di .NET `DateTime` in locale o UTC prima del cast `NSDate`a.
 
@@ -80,9 +80,9 @@ Alcuni elementi che potrebbero dover essere corretti manualmente includono:
 
 - Il codice che usa le `VideoSettings` classi AVFoundation con deve cambiare `WeakVideoSettings` per usare la proprietà. Questa operazione richiede `Dictionary`un oggetto, disponibile come proprietà nelle classi di impostazioni, ad esempio:
 
-    ```csharp
-    vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
-    ```
+  ```csharp
+  vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
+  ```
 
 - Il costruttore `.ctor(IntPtr)` NSObject è stato modificato da pubblico a protetto ([per evitare un uso non corretto](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 

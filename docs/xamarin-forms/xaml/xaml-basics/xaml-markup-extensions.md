@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 620a986ea9c5a6792d321b0c89dae936ffa256da
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529275"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227915"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
@@ -297,7 +297,7 @@ Ecco il file XAML completo finale con tre pulsanti, l'accesso a sei valori condi
 
 Gli screenshot verificare che l'applicazione di stili coerenti e gli stili di dipendente dalla piattaforma:
 
-[![](xaml-markup-extensions-images/sharedresources.png "I controlli in stile")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "nello stile di controlli")
+[![Controlli con stile](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Sebbene sia più comune per definire le `Resources` raccolta nella parte superiore della pagina, tenere presente che il `Resources` proprietà è definita dal `VisualElement`, ed è possibile avere `Resources` raccolte su altri elementi nella pagina. Ad esempio, provare ad aggiungere uno per il `StackLayout` in questo esempio:
 
@@ -435,7 +435,7 @@ Entrambe queste dichiarazioni dello spazio dei nomi inclusi nel **StaticConstant
 
 Le dimensioni dei risultanti `BoxView` rispetto allo schermo dipende dalla piattaforma:
 
- [![](xaml-markup-extensions-images/staticconstants.png "I controlli usando l'estensione di Markup X:Static")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "i controlli usando l'estensione di Markup X:Static")
+[![Controlli che usano l'estensione di markup x:Static](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## <a name="other-standard-markup-extensions"></a>Altre estensioni di Markup Standard
 
@@ -551,7 +551,7 @@ Probabilmente la lezione più importante da considerare in questo esempio è la 
 
 Ecco il programma in esecuzione:
 
-[![](xaml-markup-extensions-images/relativelayout.png "Layout relativo utilizzo di vincoli")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "relativo Layout usando i vincoli")
+[![Layout relativo con vincoli](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## <a name="summary"></a>Riepilogo
 

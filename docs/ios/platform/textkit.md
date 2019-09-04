@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c0ee125090a2bb817f09a18c34033a1f8a788569
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528721"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227286"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit in Novell. iOS
 
@@ -29,7 +29,7 @@ Per rendere disponibili le funzionalità di TextKit ai controlli standard, diver
 TextKit fornisce un'architettura a più livelli che separa l'archiviazione di testo dal layout e dalla visualizzazione, incluse le classi seguenti:
 
 - `NSTextContainer`: Fornisce il sistema di coordinate e la geometria usati per il layout del testo.
-- `NSLayoutManager`: Consente di disporre il testo trasformando il testo in glifi. 
+- `NSLayoutManager`: Consente di disporre il testo trasformando il testo in glifi.
 - `NSTextStorage`: Include i dati di testo e gestisce gli aggiornamenti delle proprietà del testo del batch. Eventuali aggiornamenti batch vengono passati a gestione layout per l'effettiva elaborazione delle modifiche, ad esempio il ricalcolo del layout e il ridisegno del testo.
 
 
@@ -160,7 +160,7 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 Lo screenshot seguente illustra il modo in cui il layout del testo cambia per scorrere il tracciato disegnato:
 
-<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
+<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")-->
 ![](textkit-images/exclusionpath2.png "In questa schermata viene illustrato il modo in cui il layout del testo cambia per scorrere il tracciato disegnato")
 
 Si noti che in questo caso `AllowsNonContiguousLayout` la proprietà del gestore del layout è impostata su false. Questo fa sì che il layout venga ricalcolato per tutti i casi in cui il testo viene modificato. L'impostazione di questa opzione su true può trarre vantaggio dalle prestazioni evitando un aggiornamento del layout completo, soprattutto nel caso di documenti di grandi dimensioni. Tuttavia, se `AllowsNonContiguousLayout` si imposta su true, il percorso di esclusione non può aggiornare il layout in alcune circostanze, ad esempio se il testo viene inserito in fase di esecuzione senza un ritorno a capo finale prima dell'impostazione del percorso.

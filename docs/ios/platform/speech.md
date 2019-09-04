@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121280"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227336"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in Novell. iOS
 
@@ -89,8 +89,8 @@ Ci sono quattro passaggi principali che lo sviluppatore deve adottare per adotta
 - Specificare una descrizione dell'utilizzo nel `Info.plist` file dell'app usando la `NSSpeechRecognitionUsageDescription` chiave. Ad esempio, un'app della fotocamera potrebbe includere la descrizione seguente: _"questa operazione consente di scattare una foto semplicemente pronunciando la parola" Cheese "._
 - Richiedere l'autorizzazione chiamando il `SFSpeechRecognizer.RequestAuthorization` metodo per presentare una spiegazione (fornita `NSSpeechRecognitionUsageDescription` nella chiave precedente) del motivo per cui l'app vuole che il riconoscimento vocale acceda all'utente in una finestra di dialogo e ne consenta l'accettazione o il rifiuto.
 - Creare una richiesta di riconoscimento vocale:
-    - Per l'audio pre-registrato sul disco, usare `SFSpeechURLRecognitionRequest` la classe.
-    - Per l'audio attivo (o audio dalla memoria), usare `SFSPeechAudioBufferRecognitionRequest` la classe.
+  - Per l'audio pre-registrato sul disco, usare `SFSpeechURLRecognitionRequest` la classe.
+  - Per l'audio attivo (o audio dalla memoria), usare `SFSPeechAudioBufferRecognitionRequest` la classe.
 - Passare la richiesta di riconoscimento vocale a un riconoscimento vocale (`SFSpeechRecognizer`) per avviare il riconoscimento. L'app può facoltativamente tenere presente l'oggetto `SFSpeechRecognitionTask` restituito per monitorare e tenere traccia dei risultati del riconoscimento.
 
 Questi passaggi verranno descritti in dettaglio di seguito.
@@ -380,8 +380,8 @@ RecognitionTask.Cancel ();
 Quando si lavora con il riconoscimento vocale in un'app iOS, Apple impone le seguenti limitazioni:
 
 - Il riconoscimento vocale è gratuito per tutte le app, ma il suo utilizzo non è illimitato:
-    - I singoli dispositivi iOS hanno un numero limitato di riconoscimenti che possono essere eseguiti ogni giorno.
-    - Le app verranno limitate a livello globale in base a una richiesta al giorno.
+  - I singoli dispositivi iOS hanno un numero limitato di riconoscimenti che possono essere eseguiti ogni giorno.
+  - Le app verranno limitate a livello globale in base a una richiesta al giorno.
 - L'app deve essere preparata a gestire gli errori di connessione di rete di riconoscimento vocale e limite di frequenza di utilizzo.
 - Il riconoscimento vocale può avere un costo elevato sia per lo svuotamento della batteria sia per il traffico di rete elevato sul dispositivo iOS dell'utente. per questo motivo, Apple impone un limite di durata audio di circa un minuto di max.
 

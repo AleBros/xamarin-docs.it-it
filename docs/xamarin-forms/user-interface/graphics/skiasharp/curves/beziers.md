@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 7802360c95d31f237cf69c69728cffe02ad47e5a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646234"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228275"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tre tipi di curve di Bézier
 
@@ -24,7 +24,7 @@ La curva di Bézier denominata dopo Pierre Bézier (1910: 1999), un francese eng
 
 Le curve di Bézier sono note per essere particolarmente adatte alla progettazione interattiva: Si tratta &mdash; di un comportamento corretto in altre parole, non ci sono singolarità che fanno sì che la curva diventi infinita o &mdash; ingombrante e che in genere siano gradevoli da un punto di vista estetico:
 
-![](beziers-images/beziersample.png "Una curva di Bézier di esempio")
+![Curva di Bezier di esempio](beziers-images/beziersample.png)
 
 Contorni dei caratteri dei tipi di carattere basati su computer sono in genere definite con curve di Bézier.
 
@@ -93,7 +93,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione:
 
-[![](beziers-images/beziercurve-small.png "Tripla screenshot della pagina della curva di Bézier")](beziers-images/beziercurve-large.png#lightbox "tripla screenshot della pagina della curva di Bezier")
+[![Schermata tripla della pagina curva di Bezier](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
 
 Matematica, la curva è una polinomiale cubica. La curva interseca al massimo una linea retta in tre punti. In corrispondenza del punto di inizio, la curva è sempre una linea retta dall'inizio tangente e nella stessa direzione, puntare al primo punto di controllo. In corrispondenza del punto di fine, la curva è sempre una linea retta nel secondo controllo tangente e nella stessa direzione, puntare al punto finale.
 
@@ -125,7 +125,7 @@ In alcuni casi è consigliabile usare una curva di Bezier per il rendering di un
 
 Il diagramma seguente mostra quattro punti etichettati `pto`, `pt1`, `pt2`, e `pt3` la definizione di una curva di Bézier (mostrata in rosso) che simula un arco circolare:
 
-![](beziers-images/bezierarc45.png "Approssimazione di un arco circolare con una curva di Bézier")
+![Approssimazione di un arco circolare con una curva di Bézier](beziers-images/bezierarc45.png)
 
 Le righe all'inizio e fine per i punti di controllo sono tangente al controllo circle e la curva di Bézier e hanno una lunghezza pari *L*. Il primo articolo citato in precedenza indica che la curva di Bézier migliore offre un'approssimazione di un arco circolare quando tale lunghezza *L* viene calcolato come segue:
 
@@ -211,13 +211,13 @@ I punti iniziale e finale (`point0` e `point3`) vengono calcolati in base a equa
 
 Ecco il programma in esecuzione con diverse angolazioni:
 
-[![](beziers-images/beziercirculararc-small.png "Tripla screenshot della pagina di arco circolare Bezier")](beziers-images/beziercirculararc-large.png#lightbox "tripla screenshot della pagina di arco circolare curva di Bezier")
+[![Schermata tripla della pagina di arco circolare di Bezier](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
 
 Esaminare attentamente la terza schermata e si noterà che la curva di Bézier in particolare si differenzia da un semicerchio quando l'angolo è 180 gradi, mentre la schermata di iOS che indica che sembra contenere un cerchio di quarto correttamente durante l'angolo è 90 gradi.
 
 Calcolare le coordinate di due punti di controllo è piuttosto semplice, quando il quarto di cerchio è orientato simile al seguente:
 
-![](beziers-images/bezierarc90.png "Approssimazione di un quarto di cerchio con una curva di Bézier")
+![Approssimazione di un cerchio del trimestre con una curva di Bézier](beziers-images/bezierarc90.png)
 
 Se il raggio del cerchio è 100, allora *L* è 55 e che è un numero facile da ricordare.
 
@@ -293,7 +293,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 I punti sono interpolati basata su un valore sinusoidally intermittenti di `t`. I punti interpolati vengono quindi utilizzati per costruire una serie di quattro curve di Bézier collegate. Di seguito è riportata l'animazione in esecuzione:
 
-[![](beziers-images/squaringthecircle-small.png "Schermata triplo del Squaring pagina cerchio")](beziers-images/squaringthecircle-large.png#lightbox "tripla screenshot del Squaring pagina cerchio")
+[![Schermata tripla del quadrato della pagina del cerchio](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
 
 Un'animazione di questo tipo sarebbe impossibile senza le curve che sono modo algoritmico sufficientemente flessibile da sottoporre a rendering come gli archi circolari e linee rette.
 
@@ -342,7 +342,7 @@ Potrebbe essere un esercizio ottimo per tracciare queste coordinate su carta gra
 
 Ecco il simbolo di infinito:
 
-[![](beziers-images/bezierinfinity-small.png "Tripla screenshot della pagina di Bézier Infinity")](beziers-images/bezierinfinity-large.png#lightbox "tripla screenshot della pagina del numero infinito di Bézier")
+[![Schermata tripla della pagina dell'infinito di Bézier](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
 
 È un po' più efficiente verso il centro di accesso di un numero infinito sottoposto a rendering dal **arco infinito** pagina dalle [ **tre modi per disegnare un arco** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) articolo.
 
@@ -405,7 +405,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 E qui è in esecuzione:
 
-[![](beziers-images/quadraticcurve-small.png "Tripla screenshot della pagina della curva quadratica")](beziers-images/quadraticcurve-large.png#lightbox "tripla screenshot della pagina della curva quadratica")
+[![Schermata tripla della pagina della curva quadratica](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
 
 Le linee punteggiate sono tangente della curva nel punto di inizio e fine e soddisfare in corrispondenza del punto di controllo.
 
@@ -483,7 +483,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione:
 
-[![](beziers-images/coniccurve-small.png "Tripla screenshot della pagina della curva conica")](beziers-images/coniccurve-large.png#lightbox "tripla screenshot della pagina della curva conica")
+[![Schermata tripla della pagina a curva conica](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
 
 Come può notare, il punto di controllo sembra pull la curva per lo più quando il peso è elevato. Quando il peso è uguale a zero, la curva diventa una linea retta tra il punto iniziale per il punto finale.
 
@@ -491,7 +491,7 @@ In teoria, i pesi negativi sono consentiti e causano la curva a piegare *assente
 
 È molto semplice derivare il punto di controllo e il peso da usare il `ConicTo` metodo consente di disegnare un arco circolare fino a (ma non con) un semicerchio. Nel diagramma seguente, le tangenti dai punti iniziale e finale soddisfano in corrispondenza del punto di controllo.
 
-![](beziers-images/conicarc.png "A seguito del rendering arco conica di un arco circolare")
+![Rendering di Arco conico di un arco circolare](beziers-images/conicarc.png)
 
 È possibile usare la trigonometria per determinare la distanza del punto di controllo dal centro del cerchio: Si tratta del raggio del cerchio diviso per il coseno della metà dell'angolo α. Per disegnare un arco circolare tra i punti iniziale e finale, impostare il peso su tale stesso coseno metà dell'angolo. Si noti che se l'angolo è 180 gradi, quindi le righe tangente mai conformi e il peso è uguale a zero. Ma per gli angoli minore di 180 gradi, i calcoli matematici funzionano correttamente.
 
@@ -547,7 +547,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Come si può notare, non vi è alcuna differenza tra visual il `ConicTo` percorso mostrati in rosso e il cerchio sottostante visualizzati per riferimento:
 
-[![](beziers-images/coniccirculararc-small.png "Tripla screenshot della pagina di arco circolare conica")](beziers-images/coniccirculararc-large.png#lightbox "tripla screenshot della pagina conica arco circolare")
+[![Schermata tripla della pagina di arco circolare conica](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
 
 Ma impostare l'angolo di 180 gradi e il matematica hanno esito negativo.
 

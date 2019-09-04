@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 4aae2a206f07ea6caa7fc0d7530fb9fec05ce5f0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f05703babd3f6e67713dfccdb1a1fc6a4ea6966e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648421"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228030"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
 
@@ -21,7 +21,7 @@ ms.locfileid: "68648421"
 [`ListView`](xref:Xamarin.Forms.ListView)è una visualizzazione per la presentazione di elenchi di dati, in particolare gli elenchi lunghi che richiedono lo scorrimento.
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)è una vista per la presentazione di elenchi di dati con specifiche di layout diverse. Mira a offrire un'alternativa più flessibile ed efficiente a [`ListView`](xref:Xamarin.Forms.ListView). Per altre informazioni, vedere [Novell. Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) è una vista per presentare elenchi di dati usando specifiche di layout diverse. Mira a offrire un'alternativa più flessibile ed efficiente a [`ListView`](xref:Xamarin.Forms.ListView). Per altre informazioni, vedere [CollectionView di Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/index.md).
 
 ## <a name="use-cases"></a>Casi d'uso
 
@@ -41,8 +41,8 @@ ListView è un numero di componenti disponibili per applicare la funzionalità n
 
 - **[Le celle](customizing-cell-appearance.md)**  &ndash; nelle celle di presentazione dei dati in un ListView. Ogni cella corrisponde a una riga di dati. Sono presenti celle predefinite per scegliere da, o è possibile definire il proprio cella personalizzata. Le celle incorporate e personalizzate possono essere usati/definito in XAML o codice.
   - **[Incorporati](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; compilati nelle celle, in particolare TextCell e ImageCell, può risultare molto utile per le prestazioni, poiché corrispondono ai controlli nativi in ciascuna piattaforma.
-       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; Visualizza una stringa di testo, facoltativamente con testo dettagliato. Testo dei dettagli viene visualizzato come una seconda riga in un carattere più piccolo con un colore.
-       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; Visualizza un'immagine con il testo. Viene visualizzato come un TextCell con un'immagine a sinistra.
+    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; Visualizza una stringa di testo, facoltativamente con testo dettagliato. Testo dei dettagli viene visualizzato come una seconda riga in un carattere più piccolo con un colore.
+    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; Visualizza un'immagine con il testo. Viene visualizzato come un TextCell con un'immagine a sinistra.
   - **[Le celle personalizzate](customizing-cell-appearance.md#customcells)**  &ndash; celle personalizzata sono molto utili se è necessario per presentare i dati complessi. Ad esempio, una visualizzazione personalizzata può essere usata per presentare un elenco di brani, tra cui album e artista:
 
 ![](images/image-cell-default.png "ListView con ImageCells")

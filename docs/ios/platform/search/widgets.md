@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f2ac37676dbdfc96c853c9bc679e79c2aae1adb1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71c58baee5e98efcfb38b75ffed2b85c90f8a131
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656241"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227356"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Miglioramenti ai widget della schermata iniziale e di ricerca in iOS 10
 
@@ -71,7 +71,7 @@ var vibrancy2 = UIVibrancyEffect.CreateSecondaryVibrancyEffectForNotificationCen
 
 Novità di iOS 10, i widget contengono ora una proprietà [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) che consente allo sviluppatore di descrivere la quantità di contenuto disponibile e consente all'utente di espandere e comprimere il contenuto.
 
-Quando un widget viene inizialmente visualizzato, si trova in uno stato compresso. Un widget compresso è costituito da un'altezza di circa due righe e da una metà standard della tabella iOS. Lo sviluppatore può richiedere le dimensioni per un widget espanso, ma dovrebbe essere idealmente minore dell'altezza dello schermo. 
+Quando un widget viene inizialmente visualizzato, si trova in uno stato compresso. Un widget compresso è costituito da un'altezza di circa due righe e da una metà standard della tabella iOS. Lo sviluppatore può richiedere le dimensioni per un widget espanso, ma dovrebbe essere idealmente minore dell'altezza dello schermo.
 
 Nello stato compresso, il widget dovrebbe visualizzare solo le informazioni essenziali, autonome. Se espanso, il widget dovrebbe visualizzare informazioni supplementari che migliorano il contenuto primario visualizzato nello stato compresso. Ad esempio, l'app Weather Mostra le condizioni meteo correnti quando viene compressa e aggiunge la previsione oraria quando viene espansa.
 

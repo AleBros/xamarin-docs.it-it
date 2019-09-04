@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1e1e86c6301214c7117b8f3b21b19554499d7fbd
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 99fafe0ae0186ac68609ebe22dabe64e588ee5e0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121437"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226668"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Novell
 
@@ -67,7 +67,7 @@ Apple fornisce i suggerimenti seguenti per l'utilizzo dei movimenti della superf
 
 ## <a name="siri-remote-buttons"></a>Pulsanti remoti Siri
 
-Oltre ai movimenti sulla superficie di tocco, l'app può rispondere all'utente facendo clic sulla superficie di tocco o premendo il pulsante Play/Pause. Se si accede a Siri remote usando il Framework di Game controller, è anche possibile rilevare il pulsante di menu premuto. 
+Oltre ai movimenti sulla superficie di tocco, l'app può rispondere all'utente facendo clic sulla superficie di tocco o premendo il pulsante Play/Pause. Se si accede a Siri remote usando il Framework di Game controller, è anche possibile rilevare il pulsante di menu premuto.
 
 Inoltre, le pressioni dei pulsanti di menu possono essere rilevate usando un `UIKit` riconoscitore di movimento con elementi standard. Se si preme il pulsante di menu premuto, sarà necessario chiudere la visualizzazione corrente e il controller di visualizzazione e tornare a quello precedente.
 
@@ -83,14 +83,14 @@ Il modo più semplice per usare Siri remote nell'app Novell. tvOS consiste nell'
 Per aggiungere un sistema di riconoscimento dei movimenti, procedere come segue:
 
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per modificare la finestra di progettazione interfaccia.
-2. Trascinare un **riconoscimento movimento tocco** dalla **libreria** e rilasciarlo nella visualizzazione: 
+2. Trascinare un **riconoscimento movimento tocco** dalla **libreria** e rilasciarlo nella visualizzazione:
 
     [![](remote-bluetooth-images/storyboard01.png "Riconoscimento del movimento tocco")](remote-bluetooth-images/storyboard01.png#lightbox)
-3. **Selezionare Seleziona** nella sezione **pulsante** di **controllo attributi**: 
+3. **Selezionare Seleziona** nella sezione **pulsante** di **controllo attributi**:
 
     [![](remote-bluetooth-images/storyboard02.png "Seleziona selezione")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Selezionare** significa che il movimento risponderà all'utente facendo clic sulla **superficie di tocco** sul Siri remoto. È inoltre possibile rispondere ai pulsanti **menu**, **Esegui/Sospendi**, **su**, **giù**, **sinistro** e **destro** .
-5. Successivamente, collegare un' **azione** dal riconoscimento del **movimento Tap** `TouchSurfaceClicked`e chiamarla: 
+5. Successivamente, collegare un' **azione** dal riconoscimento del **movimento Tap** `TouchSurfaceClicked`e chiamarla:
 
     [![](remote-bluetooth-images/storyboard03.png "Azione dal riconoscimento del movimento Tap")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac.
@@ -142,7 +142,7 @@ namespace tvRemote
         #region Override Methods
         public override void ViewDidLoad ()
         {
-            base.ViewDidLoad ();    
+            base.ViewDidLoad ();
 
             // Wire-up gestures
             var upGesture = new UISwipeGestureRecognizer (() => {
@@ -186,9 +186,9 @@ namespace tvRemote
 
 ## <a name="low-level-event-handling"></a>Gestione degli eventi di basso livello
 
-Se si sta creando un tipo personalizzato basato su `UIKit` nell'app Novell. tvOS (ad esempio `UIView`), è anche possibile fornire una gestione di basso livello di pressione dei pulsanti tramite `UIPress` gli eventi. 
+Se si sta creando un tipo personalizzato basato su `UIKit` nell'app Novell. tvOS (ad esempio `UIView`), è anche possibile fornire una gestione di basso livello di pressione dei pulsanti tramite `UIPress` gli eventi.
 
-Un `UIPress` evento consiste nel tvOS che cos' `UITouch` è un evento iOS, tranne `UIPress` che restituisce informazioni sulle pressioni dei pulsanti sul Siri remoto o su altri dispositivi Bluetooth collegati (ad esempio un controller di gioco). `UIPress`gli eventi descrivono il pulsante premuto e il relativo stato (inizio, annullato, modificato o terminato). 
+Un `UIPress` evento consiste nel tvOS che cos' `UITouch` è un evento iOS, tranne `UIPress` che restituisce informazioni sulle pressioni dei pulsanti sul Siri remoto o su altri dispositivi Bluetooth collegati (ad esempio un controller di gioco). `UIPress`gli eventi descrivono il pulsante premuto e il relativo stato (inizio, annullato, modificato o terminato).
 
 Per i pulsanti analoghi nei dispositivi come i controller `UIPress` di gioco Bluetooth, restituisce anche la quantità di forza applicata al pulsante. La `Type` proprietà`UIPress` dell'evento definisce il pulsante fisico con stato modificato, mentre le altre proprietà descrivono la modifica che si è verificata.
 
@@ -211,7 +211,7 @@ namespace tvRemote
         }
         #endregion
 
-        #region 
+        #region
         public EventView (IntPtr handle) : base (handle)
         {
         }

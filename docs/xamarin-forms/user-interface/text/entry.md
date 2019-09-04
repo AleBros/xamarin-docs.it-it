@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e712f0b69f87659499f7eab4955a9f943716f5b5
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650267"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227987"
 ---
 # <a name="xamarinforms-entry"></a>Voce di xamarin. Forms
 
@@ -105,7 +105,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Esempio di voce IsPassword")
+![Esempio di voce di password](entry-images/password.png)
 
 Segnaposto possono essere utilizzati con istanze di `Entry` che sono configurati come campi di password:
 
@@ -121,7 +121,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Esempio di segnaposto e IsPassword voce")
+![Esempio di immissione di password e segnaposto](entry-images/passwordplaceholder.png)
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>Impostazione posizione del cursore e lunghezza selezione testo
 
@@ -294,7 +294,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Esempio di voce TextColor")
+![Esempio di TextColor entry](entry-images/textcolor.png)
 
 Si noti che il segnaposto non è influenzato specificato `TextColor`.
 
@@ -311,7 +311,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Esempio di voce BackgroundColor")
+![Esempio di voce BackgroundColor](entry-images/textbackgroundcolor.png)
 
 Prestare attenzione per assicurarsi che i colori di sfondo e del testo che è scegliere possono essere utilizzati in ogni piattaforma e non nascondano qualsiasi testo segnaposto.
 

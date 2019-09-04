@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: aa6db1403a34b7228352e12e1b2f954308db3744
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3f36ef7541ea00e2a08733c9d47d252477da787a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528499"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227067"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controlli personalizzati nel Xamarin Designer per iOS
 
@@ -98,7 +98,7 @@ Prestare attenzione quando e dove inizializzare le proprietà designable in un c
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
-    
+
     [Export ("Counter"), Browsable (true)]
     public int Counter {get; set;}
 
@@ -179,7 +179,8 @@ L'area di progettazione può spesso rilevare le eccezioni generate dai singoli c
 
  ![](ios-designable-controls-overview-images/exception-box.png "Un controllo difettoso come segnaposto rosso e dettagli dell'eccezione")
 
-Se i simboli di debug sono disponibili per il controllo, la traccia avrà i nomi file e i numeri di riga. Se si fa doppio clic su una riga nell'analisi dello stack, si passerà a tale riga nel codice sorgente.
+Se i simboli di debug sono disponibili per il controllo, la traccia avrà i nomi file e i numeri di riga.
+Se si fa doppio clic su una riga nell'analisi dello stack, si passerà a tale riga nel codice sorgente.
 
 Se la finestra di progettazione non è in grado di isolare il controllo difettoso, verrà visualizzato un messaggio di avviso nella parte superiore dell'area di progettazione:
 

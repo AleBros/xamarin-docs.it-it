@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3f1761df5c2b638c5777e6384f4c0c06e9b3071f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657294"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227270"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Uso degli avvisi tvOS in Novell
 
@@ -34,7 +34,7 @@ Come indicato in precedenza, gli avvisi vengono usati per attirare l'attenzione 
 
 Apple presenta i suggerimenti seguenti per l'utilizzo degli avvisi:
 
-- **Usare gli avvisi sporadicamente** : gli avvisi interrompono il flusso dell'utente con l'app e interrompono l'esperienza utente e, di conseguenza, devono essere usati solo per situazioni importanti come le notifiche degli errori, gli acquisti in-app e le azioni distruttive. 
+- **Usare gli avvisi sporadicamente** : gli avvisi interrompono il flusso dell'utente con l'app e interrompono l'esperienza utente e, di conseguenza, devono essere usati solo per situazioni importanti come le notifiche degli errori, gli acquisti in-app e le azioni distruttive.
 - **Fornisce opzioni utili** : se l'avviso presenta opzioni all'utente, è necessario assicurarsi che ogni opzione offra informazioni critiche e fornisca azioni utili da parte dell'utente.
 
 <a name="Alert-Titles-and-Messages" />
@@ -44,7 +44,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo degli avvisi:
 Apple presenta i suggerimenti seguenti per presentare il titolo di un avviso e il messaggio facoltativo:
 
 - **Usare i titoli** con più parole: il titolo di un avviso dovrebbe ottenere il punto della situazione in modo chiaro, rimanendo comunque semplice. Una singola parola titolo fornisce raramente informazioni sufficienti.
-- **Usare titoli descrittivi che non richiedono un messaggio** : laddove possibile, provare a rendere il titolo dell'avviso sufficientemente descrittivo che il testo del messaggio facoltativo non sia necessario. 
+- **Usare titoli descrittivi che non richiedono un messaggio** : laddove possibile, provare a rendere il titolo dell'avviso sufficientemente descrittivo che il testo del messaggio facoltativo non sia necessario.
 - **Rendere il messaggio una frase breve e completa** : se il messaggio facoltativo è necessario per ottenere il punto dell'avviso, mantenerlo il più semplice possibile e renderlo una frase completa con maiuscole e punteggiatura corretti.
 
 <a name="Alert-Buttons" />
@@ -70,15 +70,15 @@ const string acceptButtonTitle = "OK";
 const string cancelButtonTitle = "Cancel";
 const string deleteButtonTitle = "Delete";
 ...
-        
+
 var alertController = UIAlertController.Create (title, message, UIAlertControllerStyle.Alert);
 
 // Create the action.
-var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ => 
+var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
-var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ => 
+var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
@@ -97,7 +97,7 @@ UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 Quindi, per ogni pulsante da visualizzare nell'avviso viene creata un'azione che definisce il titolo del pulsante, lo stile e l'azione che si desidera eseguire se viene premuto il pulsante:
 
 ```csharp
-UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
+UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
     // Do something when the button is pressed
     ...
 );

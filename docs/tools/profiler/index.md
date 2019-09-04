@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: ac77977f3832b0ab7ba440a2c795037e8fcf5f2e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620988"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227893"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -100,13 +100,13 @@ Prima di poter profilare correttamente l'app, è necessario consentire la profil
 
   **Compilazione > debug iOS > Abilita profilatura**
 
-  ![](images/ios-options-mac.png "Finestra di dialogo Opzioni iOS in Visual Studio per Mac")
+  ![Finestra di dialogo Opzioni iOS in Visual Studio per Mac](images/ios-options-mac.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
   **Proprietà > compilazione iOS > Abilita profilatura**
 
-  ![](images/ios-project-options-vs.png "Finestra di dialogo Opzioni iOS in Visual Studio")
+  ![Finestra di dialogo Opzioni iOS in Visual Studio](images/ios-project-options-vs.png)
 
 -----
 
@@ -137,7 +137,7 @@ Il Xamarin Profiler può essere avviato dall'IDE quando si esegue la profilatura
 1. Assicurarsi prima di tutto che l'applicazione sia caricata in Visual Studio per Mac e selezionare la configurazione di debug (impostazione predefinita).
 2. Sfogliare per **eseguire > avviare**la profilatura in Visual Studio per Mac o **analizzare > Xamarin Profiler** in Visual Studio per aprire il profiler, come illustrato nel diagramma seguente:
 
-  ![](images/start-profiling-xs.png "Avvio del profiler da Visual Studio per Mac")
+  ![Avvio del profiler da Visual Studio per Mac](images/start-profiling-xs.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -164,13 +164,13 @@ Per salvare una sessione di profilatura in qualsiasi momento, scegliere **File >
 
 Una volta installato, il Xamarin Profiler si trova nella cartella applicazioni, come illustrato nella schermata seguente:
 
-![](images/applications.png "Apri profiler autonomo da Mac")
+![Apri profiler autonomo da Mac](images/applications.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Dopo l'installazione, è possibile trovare Xamarin Profiler applicazione nella directory dell'applicazione:
 
-![](images/applications-vs.png "Apri profiler autonomo da Windows")
+![Apri profiler autonomo da Windows](images/applications-vs.png)
 
 -----
 
@@ -184,11 +184,11 @@ Il Xamarin Profiler è costituito da cinque sezioni, come illustrato di seguito:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](images/profiler-mac-sml.png "Sezioni del profiler in Visual Studio per Mac")](images/profiler-mac.png#lightbox) 
+[![Sezioni del profiler in Visual Studio per Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/profiler-vs.png "Sezioni del profiler in Visual Studio")](images/profiler-vs.png#lightbox)
+[![Sezioni del profiler in Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -206,11 +206,11 @@ Nella parte superiore del profiler è disponibile il grafico allocazioni, che co
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![](images/allocations1.png "Instrumentation (allocazioni)")](images/allocations1.png#lightbox) 
+[![Instrumentation (allocazioni)](images/allocations1.png)](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/allocations1-vs.png "Instrumentation (allocazioni)")](images/allocations1-vs.png#lightbox)
+[![Instrumentation (allocazioni)](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -220,11 +220,11 @@ Sono disponibili diverse visualizzazioni dati nello strumento allocazioni, che c
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![](images/allocations3.png "Scheda allocazioni")](images/allocations3.png#lightbox) 
+  [![Scheda allocazioni](images/allocations3.png)](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations2-vs.png "Scheda allocazioni")](images/allocations2-vs.png#lightbox)
+  [![Scheda allocazioni](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -236,11 +236,11 @@ La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![](images/allocations2.png "Scheda albero delle chiamate")](images/allocations2.png#lightbox) 
+  [![Scheda albero delle chiamate](images/allocations2.png)](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations3-vs.png "Scheda albero delle chiamate")](images/allocations3-vs.png#lightbox)
+  [![Scheda albero delle chiamate](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -248,11 +248,11 @@ La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![](images/allocations4.png "Scheda snapshot")](images/allocations4.png#lightbox) 
+  [![Scheda snapshot](images/allocations4.png)](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations4-vs.png "Scheda snapshot")](images/allocations4-vs.png#lightbox)
+  [![Scheda snapshot](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -280,11 +280,11 @@ Il grafico dei tracciati, come illustrato nella schermata seguente, Visualizza i
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![](images/time2.png "Strumento Profiler tempo-albero delle chiamate")](images/time2.png#lightbox) 
+  [![Strumento Profiler tempo-albero delle chiamate](images/time2.png)](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/time2-vs.png "Strumento Profiler tempo-albero delle chiamate")](images/time2-vs.png#lightbox) 
+  [![Strumento Profiler tempo-albero delle chiamate](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -315,7 +315,7 @@ Se si profila un'app con qualsiasi altra configurazione, verrà visualizzata la 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/image1vs.png "Finestra di dialogo di errore di profilatura")](images/image1vs.png#lightbox) 
+[![Finestra di dialogo di errore di profilatura](images/image1vs.png)](images/image1vs.png#lightbox) 
 
 -----
 

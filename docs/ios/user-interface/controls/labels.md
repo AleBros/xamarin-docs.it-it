@@ -1,60 +1,60 @@
 ---
-title: Etichette in xamarin. IOS
-description: Questo documento illustra come usare le etichette in xamarin. IOS. Viene descritto come creare le etichette a livello di codice e con iOS Designer.
+title: Etichette in Novell. iOS
+description: Questo documento illustra come usare le etichette in Novell. iOS. Viene descritto come creare etichette a livello di codice e con iOS designer.
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: cca74ac74e5077822193f6dd97a69f8d9b823561
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 41cd0eb93cee216311ea42f7ca027a1556b322e6
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61227829"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227082"
 ---
-# <a name="labels-in-xamarinios"></a>Etichette in xamarin. IOS
+# <a name="labels-in-xamarinios"></a>Etichette in Novell. iOS
 
-Il `UILabel` controllo viene usato per la visualizzazione singola e a più righe, testo di sola lettura. 
+Il `UILabel` controllo viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
 
 ## <a name="implementing-a-label"></a>Implementazione di un'etichetta
 
-Viene creata una nuova etichetta creando un [ `UILabel` ](xref:UIKit.UILabel):
+Viene creata una nuova etichetta creando un'istanza [`UILabel`](xref:UIKit.UILabel)di:
 
 ```csharp
 UILabel label = new UILabel();
 ```
 
-### <a name="labels-and-storyboards"></a>Le etichette e storyboard
+### <a name="labels-and-storyboards"></a>Etichette e storyboard
 
-È anche possibile aggiungere un'etichetta per l'interfaccia utente quando si usa iOS Designer. Cercare **Label** nel **della casella degli strumenti** e trascinarla per la visualizzazione:
+È anche possibile aggiungere un'etichetta all'interfaccia utente quando si usa iOS designer. Cercare **Label** nella **casella degli strumenti** e trascinarlo nella visualizzazione:
 
-![Assegnare un'etichetta nella casella degli strumenti](labels-images/image3.png)
+![Etichetta nella casella degli strumenti](labels-images/image3.png)
 
-Il riquadro delle proprietà è possibile regolare le proprietà seguenti:
+Nel riquadro delle proprietà è possibile modificare le proprietà seguenti:
 
-![Pannello proprietà etichetta](labels-images/image2.png)
+![Pannello Proprietà etichetta](labels-images/image2.png)
 
-- **Contesto testo** : normale o con attributi. Testo normale consente di impostare il [attributi di formattazione](#Formatting_Text_and_Label) sull'intera stringa. Testi con attributi consente di impostare diversi caratteri o parole nella stringa di formattazione.
-- **Colore, tipo di carattere, allineamento** : gli attributi di formattazione che possono essere applicati all'etichetta.
-- **Righe** : imposta il numero di righe che è possibile estendere l'etichetta. Impostare questa proprietà su 0 per consentire l'etichetta da utilizzare come numero di righe in base alle esigenze.
-- **Comportamento** – può essere impostato su Enabled o evidenziata. È abilitato per impostazione predefinita, il testo disabilitato verrà visualizzato in un colore grigio più chiaro. Evidenziato è disattivata per impostazione predefinita e consente l'etichetta ridisegno con uno stato evidenziato quando viene selezionato da un utente.
-- **Interruzione di riga e Baselane** : 
-    - Della linea di base determina come il testo verrà posizionato se le dimensioni dei caratteri è diversa da quella specificata.
-    - Le interruzioni di riga determinano come verrà eseguito il wrapping o troncata se risulta più di una singola riga di una stringa.
-- **Compattazione automatica** : determina come il tipo di carattere dimensionata verrà ridotta a icona all'interno di un'etichetta, se necessario.
-- **Evidenziato, ombreggiatura, Offset** : consente di impostare il colore di ombreggiatura e facciamo e offset dell'ombreggiatura.
+- **Contesto del testo** : semplice o con attributi. Testo normale consente di impostare gli [attributi di formattazione](#Formatting_Text_and_Label) dell'intera stringa. I testi con attributi consentono di impostare la formattazione su caratteri o parole diversi nella stringa.
+- Attributi **color, font, Alignment** -Formatting che possono essere applicati all'etichetta.
+- **Righe** : imposta il numero di righe che l'etichetta può estendere. Impostare su 0 per consentire all'etichetta di utilizzare il numero di righe desiderato.
+- **Comportamento** : può essere impostato su abilitato o evidenziato. Enabled è impostato per impostazione predefinita, il testo disabilitato verrà visualizzato in un colore grigio più chiaro. Evidenziato è disabilitato per impostazione predefinita e consente di ricreare l'etichetta con uno stato evidenziato quando viene selezionato da un utente.
+- **Baselane e interruzioni di riga** :
+  - Linea determina il modo in cui il testo verrà posizionato se le dimensioni del carattere sono diverse da quelle specificate.
+  - Le interruzioni di riga determinano il modo in cui una stringa verrà racchiusa o troncata se è più lunga di una singola riga.
+- **AutoShrink** : determina il modo in cui la dimensione del carattere verrà ridotta a icona all'interno di un'etichetta, se necessario.
+- **Evidenziato, ombreggiato, offset** : consente di impostare il noterete e il colore dell'ombreggiatura e l'offset dell'ombreggiatura.
 
-## <a name="truncating-and-wrapping"></a>Il troncamento e ritorno a capo
+## <a name="truncating-and-wrapping"></a>Troncamento e wrapping
 
-Per informazioni sull'uso di riga si interrompe in iOS, vedere la [Tronca e testo a capo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) recipe.
+Per informazioni sull'uso delle interruzioni di riga in iOS, vedere la ricetta di [troncamento e wrapping del testo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) .
 
 <a name="Formatting_Text_and_Label"/>
 
-## <a name="formatting-text-and-label"></a>Etichetta e la formattazione del testo
+## <a name="formatting-text-and-label"></a>Formattazione di testo e etichetta
 
-Per formattare la stringa utilizzata in un'etichetta è possibile impostare attributi per l'intera stringa di formattazione o è possibile usare le stringhe con Attribute. Negli esempi seguenti viene illustrato come implementare questi elementi:
+Per formattare la stringa usata in un'etichetta, è possibile impostare gli attributi di formattazione sull'intera stringa oppure è possibile usare stringhe con attributi. Gli esempi seguenti illustrano come implementarli:
 
 ```csharp
 label = new UILabel(){
@@ -74,19 +74,19 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Per altre informazioni sull'uso di testo lo stile `NSAttributedString` fanno riferimento al [stile testo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) recipe.
+Per ulteriori informazioni sull'applicazione di stili `NSAttributedString` al testo, vedere la ricetta di [testo di stile](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-Per impostazione predefinita hanno etichette di `Enabled` impostato su true, ma è possibile impostarlo su disabilitato per consentire all'utente un suggerimento che viene disabilitato un determinato controllo:
+Per impostazione predefinita, le `Enabled` etichette hanno il valore impostato su true, ma è possibile impostarlo su disabilitato per dare all'utente un suggerimento che un determinato controllo è disabilitato:
 
 ```csharp
 label.Enabled = false;
 ```
 
-Questo imposta l'etichetta con un colore grigio chiaro, come illustrato nell'immagine di esempio seguenti dello schermo, le restrizioni in iOS:
+In questo modo l'etichetta viene impostata su un colore grigio chiaro, come illustrato nell'immagine di esempio seguente della schermata restrizioni in iOS:
 
 ![Pulsante disabilitato in iOS](labels-images/image1.png)
 
-È anche possibile impostare i colori del testo di luci e ombre al testo dell'etichetta per gli effetti aggiuntivi:
+È anche possibile impostare i colori di evidenziazione e di testo ombreggiatura sul testo dell'etichetta per ulteriori effetti:
 
 ```csharp
 label.Highlighted = true;
@@ -96,11 +96,11 @@ label.ShadowColor = UIColor.Black;
 label.ShadowOffset = new CoreGraphics.CGSize(1.0f, 1.0f);
 ```
 
-Che consente di visualizzare il testo simile al seguente:
+Che Visualizza il testo simile al seguente:
 
-![Luci e ombre impostata sul testo](labels-images/image4.png)
+![Evidenziare e ombreggiatura sul testo](labels-images/image4.png)
 
-Per altre informazioni su come modificare il tipo di carattere di un UILabel, consultare il [modifica il carattere](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) recipe.
+Per ulteriori informazioni sulla modifica del tipo di carattere di un UILabel, vedere la ricetta relativa alla [modifica del tipo di carattere](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) .
 
 
 

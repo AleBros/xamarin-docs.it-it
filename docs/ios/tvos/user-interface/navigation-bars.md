@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bde37c907d2cad327dd2a72f26ee357a4391c43
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14fbbd72d3ec80d15d2dcae5938f8df28923ca4c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649050"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226614"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Novell
 
@@ -34,16 +34,16 @@ Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS c
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Nella **riquadro della soluzione**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
-1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata: 
+1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
 
     [![](navigation-bars-images/navbar02.png "Barra di spostamento")](navigation-bars-images/navbar02.png#lightbox)
-1. Fare doppio clic sulla **barra di spostamento** per selezionare l' **elemento di navigazione**. Nella scheda **widget** del **riquadro delle proprietà**è possibile impostare il **titolo**: 
+1. Fare doppio clic sulla **barra di spostamento** per selezionare l' **elemento di navigazione**. Nella scheda **widget** del **riquadro delle proprietà**è possibile impostare il **titolo**:
 
     [![](navigation-bars-images/navbar03.png "Imposta il titolo")](navigation-bars-images/navbar03.png#lightbox)
-1. Successivamente, è possibile aggiungere uno o più **elementi del pulsante della barra** a una delle estremità della barra: 
+1. Successivamente, è possibile aggiungere uno o più **elementi del pulsante della barra** a una delle estremità della barra:
 
     [![](navigation-bars-images/navbar04.png "Elemento di un pulsante A barre")](navigation-bars-images/navbar04.png#lightbox)
-1. Infine, collegare gli elementi del **pulsante della barra** alle azioni nella scheda **eventi** di **Esplora proprietà**: 
+1. Infine, collegare gli elementi del **pulsante della barra** alle azioni nella scheda **eventi** di **Esplora proprietà**:
 
     [![](navigation-bars-images/navbar05.png "Azione elemento pulsante A barre")](navigation-bars-images/navbar05.png#lightbox)
 1. Salvare le modifiche.
@@ -53,16 +53,16 @@ Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS c
 
 
 1. Nella **Esplora soluzioni**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
-1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata: 
+1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
 
     [![](navigation-bars-images/navbar02-vs.png "Barra di spostamento")](navigation-bars-images/navbar02-vs.png#lightbox)
-1. Fare doppio clic sulla **barra di spostamento** per selezionare l' **elemento di navigazione**. Nella scheda **widget** di **Esplora proprietà**è possibile impostare il **titolo**: 
+1. Fare doppio clic sulla **barra di spostamento** per selezionare l' **elemento di navigazione**. Nella scheda **widget** di **Esplora proprietà**è possibile impostare il **titolo**:
 
     [![](navigation-bars-images/navbar03-vs.png "Imposta il titolo")](navigation-bars-images/navbar03-vs.png#lightbox)
-1. Successivamente, è possibile aggiungere uno o più **elementi del pulsante della barra** a una delle estremità della barra: 
+1. Successivamente, è possibile aggiungere uno o più **elementi del pulsante della barra** a una delle estremità della barra:
 
     [![](navigation-bars-images/navbar04-vs.png "Elementi di un pulsante A barre")](navigation-bars-images/navbar04-vs.png#lightbox)
-1. Infine, collegare gli elementi del **pulsante della barra** alle azioni nella scheda **eventi** di **Esplora proprietà**: 
+1. Infine, collegare gli elementi del **pulsante della barra** alle azioni nella scheda **eventi** di **Esplora proprietà**:
 
     [![](navigation-bars-images/navbar05-vs.png "Azioni di elementi di un pulsante A barre")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Salvare le modifiche.
@@ -126,7 +126,7 @@ namespace MySingleView
 
 Fino a quando la `Enabled` proprietà di un pulsante è `true` e non è coperta da un altro controllo o visualizzazione, è possibile fare in modo che l'elemento attivo usi Siri remote.
 
-Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 

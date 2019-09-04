@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 1f49f3c24bc4c89edb005206b953176639214481
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647183"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226899"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-progettazione dell'interfaccia utente in Novell. Mac
 
@@ -35,16 +35,16 @@ Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predef
 Per passare a una finestra Xibless per un'applicazione, eseguire le operazioni seguenti:
 
 1. Aprire l'applicazione che si desidera arrestare utilizzando `.storyboard` i file o XIB per definire l'interfaccia utente in Visual Studio per Mac.
-2. Nel **riquadro della soluzione**fare clic con il pulsante destro del mouse sul file **Main. Storyboard** o **MainWindow. xib** e selezionare **Rimuovi**: 
+2. Nel **riquadro della soluzione**fare clic con il pulsante destro del mouse sul file **Main. Storyboard** o **MainWindow. xib** e selezionare **Rimuovi**:
 
     ![Rimozione dello storyboard o della finestra principale](xibless-ui-images/switch01.png "Rimozione dello storyboard o della finestra principale")
-3. Nella **finestra di dialogo Rimuovi**fare clic sul pulsante **Elimina** per rimuovere completamente il. Storyboard o. xib dal progetto: 
+3. Nella **finestra di dialogo Rimuovi**fare clic sul pulsante **Elimina** per rimuovere completamente il. Storyboard o. xib dal progetto:
 
     ![Conferma dell'eliminazione](xibless-ui-images/switch02.png "Conferma dell'eliminazione")
 
 A questo punto è necessario modificare il file **MainWindow.cs** per definire il layout della finestra e modificare il file **ViewController.cs** o **MainWindowController.cs** per `MainWindow` creare un'istanza della classe poiché non si sta più usando. storyboard o file XIB.
 
-Le app Novell. Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**Aggiungi** > **nuovo file...** Classe vuotaGenerale > ) e denominarla come il file mancante.  >  
+Le app Novell. Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**Aggiungi** > **nuovo file...** Classe vuotaGenerale > ) e denominarla come il file mancante.  > 
 
 
 ### <a name="defining-the-window-in-code"></a>Definizione della finestra nel codice
@@ -160,7 +160,7 @@ La `AutoresizingMask = NSViewResizingMask.MinYMargin` proprietà indica al pulsa
 
 Infine, il `ContentView.AddSubview (ClickMeButton)` metodo `NSButton` aggiunge alla visualizzazione contenuto in modo che venga visualizzato sullo schermo quando l'applicazione viene eseguita e viene visualizzata la finestra.
 
-Viene quindi aggiunta un'etichetta alla finestra che visualizzerà il numero di volte in cui `NSButton` è stato fatto clic sul pulsante: 
+Viene quindi aggiunta un'etichetta alla finestra che visualizzerà il numero di volte in cui `NSButton` è stato fatto clic sul pulsante:
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -172,7 +172,7 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
     StringValue = "Button has not been clicked yet."
 };
 ContentView.AddSubview (ClickMeLabel);
-``` 
+```
 
 Poiché MacOS non dispone di un elemento dell'interfaccia utente di _etichetta_ specifico, è stato aggiunto un oggetto con stile `NSTextField` , non modificabile, che funge da etichetta. Analogamente al pulsante precedente, la dimensione e la posizione prendono in considerazione che (0,0) si trova nella parte inferiore sinistra della finestra. La `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` proprietà usa l'operatore **or** per combinare due `NSViewResizingMask` funzionalità. In questo modo l'etichetta viene mantenuta nella stessa posizione dalla parte superiore della finestra quando la finestra viene ridimensionata verticalmente e viene compattata e aumentata a larghezza quando la finestra viene ridimensionata orizzontalmente.
 
@@ -239,7 +239,7 @@ Si definisce la posizione della finestra dello schermo con un `CGRect`. Proprio 
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
-``` 
+```
 
 Sono disponibili `NSWindowStyle` le seguenti funzionalità:
 
@@ -247,9 +247,9 @@ Sono disponibili `NSWindowStyle` le seguenti funzionalità:
 - **Titolo** : la finestra avrà una barra del titolo.
 - **Closable** : la finestra dispone di un pulsante Chiudi e può essere chiusa.
 - **Miniaturizable** -la finestra ha un pulsante miniaturizzare e può essere ridotta a icona.
-- **Ridimensionabile: la** finestra avrà un pulsante Ridimensiona e sarà ridimensionabile.
+- Ridimensionabile: la finestra avrà un pulsante Ridimensiona e sarà ridimensionabile.
 - **Utilità** : la finestra è una finestra di stile utilità (pannello).
-- **DocModal** -se la finestra è un pannello, sarà modale per i documenti anziché per il sistema modale. 
+- **DocModal** -se la finestra è un pannello, sarà modale per i documenti anziché per il sistema modale.
 - **NonactivatingPanel** -se la finestra è un pannello, la finestra principale non verrà creata.
 - **TexturedBackground** : la finestra avrà uno sfondo con trama.
 - Non ridimensionato: la finestra non verrà ridimensionata.
@@ -292,7 +292,7 @@ A questo punto, se l'applicazione viene eseguita e il pulsante ha fatto clic su 
 
 Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Novell. Mac esistente, fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi** > **nuovo file.** Nella finestra di dialogo **nuovo file** scegliere **Novell. Mac** > **Cocoa con controller**, come illustrato di seguito:
 
-![Aggiunta di un nuovo controller di finestra](xibless-ui-images/add01.png "Aggiunta di un nuovo controller di finestra") 
+![Aggiunta di un nuovo controller di finestra](xibless-ui-images/add01.png "Aggiunta di un nuovo controller di finestra")
 
 Esattamente come in precedenza, il file default. Storyboard o. xib verrà eliminato dal progetto (in questo caso **SecondWindow. xib**) e seguirà i passaggi nella sezione [passaggio a una finestra per utilizzare il codice](#Switching_a_Window_to_use_Code) precedente per coprire la definizione della finestra nel codice.
 

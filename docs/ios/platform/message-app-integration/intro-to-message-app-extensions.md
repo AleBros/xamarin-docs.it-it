@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7004c4692158be2e51eca93dece349da2a735bab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654386"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227489"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni fondamentali sull'estensione dell'app Message in Novell. iOS
 
 _Questo articolo illustra come includere un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
 
-Una novità di iOS 10, un'estensione di app per i messaggi si integra con **l'app** messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
+Una novità di iOS 10, un'estensione di app per i messaggi si integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
 ## <a name="about-message-app-extensions"></a>Informazioni sulle estensioni dell'app messaggio
 
@@ -118,14 +118,14 @@ Per creare un'esperienza adesiva personalizzata, seguire questa procedura:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Avviare Visual Studio per Mac.
-2. Aprire la soluzione per aggiungere un'estensione dell'app Message a. 
-3. Selezionare > **estensioni** iOS estensione iMessage e fare clic sul pulsante Avanti: >  
+2. Aprire la soluzione per aggiungere un'estensione dell'app Message a.
+3. Selezionare > **estensioni** iOS estensione iMessage e fare clic sul pulsante Avanti: > 
 
     [![](intro-to-message-app-extensions-images/message01.png "Selezionare l'estensione iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Immettere un **nome di estensione** e fare clic sul pulsante **Avanti** : 
+4. Immettere un **nome di estensione** e fare clic sul pulsante **Avanti** :
 
     [![](intro-to-message-app-extensions-images/message02.png "Immettere un nome di estensione")](intro-to-message-app-extensions-images/message02.png#lightbox)
-5. Fare clic sul pulsante **Crea** per compilare l'estensione: 
+5. Fare clic sul pulsante **Crea** per compilare l'estensione:
 
     [![](intro-to-message-app-extensions-images/message03.png "Fare clic sul pulsante Crea")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
@@ -158,7 +158,7 @@ Seguire questa procedura:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul nome del progetto dell'estensione e selezionare **Aggiungi** > **nuovo file...**  >  **iOS |**  > **Controller di interfaccia**Apple Watch.
-2. Immettere `StickerBrowserViewController` come **nome** e fare clic sul pulsante **nuovo** : 
+2. Immettere `StickerBrowserViewController` come **nome** e fare clic sul pulsante **nuovo** :
 
     [![](intro-to-message-app-extensions-images/browser01.png "Immettere StickerBrowserViewController per il nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Aprire il `StickerBrowserViewController.cs` file per la modifica.
@@ -166,7 +166,7 @@ Seguire questa procedura:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto dell'estensione e selezionare **Aggiungi** > **nuovo file...**  >  **iOS |**  > **Controller di interfaccia**Apple Watch.
-2. Immettere `StickerBrowserViewController` come **nome** e fare clic sul pulsante **nuovo** : 
+2. Immettere `StickerBrowserViewController` come **nome** e fare clic sul pulsante **nuovo** :
 
     [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Immettere StickerBrowserViewController per il nome")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. Aprire il `StickerBrowserViewController.cs` file per la modifica.
@@ -537,7 +537,7 @@ namespace MessageExtension
                 MessagesAppViewController.AddStickerToCollection (NewSticker);
             };
             View.AddSubview (doneButton);
-            
+
             ...
         }
         #endregion
@@ -702,7 +702,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
         break;
     }
 }
-``` 
+```
 
 ## <a name="summary"></a>Riepilogo
 

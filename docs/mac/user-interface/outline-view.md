@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a57363ef0fec4668fe35e1d7198372a543d672e7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3b045d18d66463a1464e446847cb5dbfd531bbf3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655340"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227876"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Strutturare le visualizzazioni in Novell. Mac
 
@@ -87,10 +87,10 @@ Selezionare la visualizzazione struttura nella **gerarchia dell'interfaccia** e 
 - **Colore griglia** : imposta il colore del bordo della cella.
 - **Background** : imposta il colore di sfondo della cella.
 - **Selezione** : consente di controllare il modo in cui l'utente può selezionare le celle nella tabella come:
-    - **Multiple** -if `true`, l'utente può selezionare più righe e colonne.
-    - **Column** : se `true`, l'utente può selezionare le colonne.
-    - **Digitare Select** -if `true`, l'utente può digitare un carattere per selezionare una riga.
-    - **Empty** -se `true`, l'utente non deve selezionare una riga o una colonna, la tabella non consente alcuna selezione.
+  - **Multiple** -if `true`, l'utente può selezionare più righe e colonne.
+  - **Column** : se `true`, l'utente può selezionare le colonne.
+  - **Digitare Select** -if `true`, l'utente può digitare un carattere per selezionare una riga.
+  - **Empty** -se `true`, l'utente non deve selezionare una riga o una colonna, la tabella non consente alcuna selezione.
 - **Salvataggio** automatico: il nome in base al quale il formato delle tabelle viene salvato automaticamente.
 - **Informazioni colonna** -se `true`, l'ordine e la larghezza delle colonne verranno salvati automaticamente.
 - **Interruzioni di riga** : consente di selezionare la modalità di gestione delle interruzioni di riga.
@@ -157,14 +157,14 @@ Analogamente a qualsiasi altro controllo dell'interfaccia utente di Cocoa, è ne
 
 Il processo è lo stesso per qualsiasi elemento di visualizzazione struttura che si vuole esporre:
 
-1. Passare all' **editor di assistente** e verificare che sia `ViewController.h` selezionato il file: 
+1. Passare all' **editor di assistente** e verificare che sia `ViewController.h` selezionato il file:
 
     [![](outline-view-images/edit11.png "Selezione del file con estensione h corretto")](outline-view-images/edit11.png#lightbox)
 2. Selezionare la visualizzazione struttura dalla **gerarchia dell'interfaccia**, fare clic sul pulsante e trascinarlo `ViewController.h` sul file.
-3. Creare un' **Outlet** per la visualizzazione struttura denominata `ProductOutline`: 
+3. Creare un' **Outlet** per la visualizzazione struttura denominata `ProductOutline`:
 
     [![](outline-view-images/edit13.png "Configurazione di un Outlet")](outline-view-images/edit13.png#lightbox)
-4. Creare **Outlet** per le colonne Tables, oltre `ProductColumn` `DetailsColumn`a: 
+4. Creare **Outlet** per le colonne Tables, oltre `ProductColumn` `DetailsColumn`a:
 
     [![](outline-view-images/edit14.png "Configurazione di un Outlet")](outline-view-images/edit14.png#lightbox)
 5. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
@@ -263,7 +263,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).Products [childIndex];
             }
-                
+
         }
 
         public override bool ItemExpandable (NSOutlineView outlineView, NSObject item)
@@ -273,7 +273,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).IsProductGroup;
             }
-        
+
         }
         #endregion
     }
@@ -298,7 +298,7 @@ namespace MacOutlines
 {
     public class ProductOutlineDelegate : NSOutlineViewDelegate
     {
-        #region Constants 
+        #region Constants
         private const string CellIdentifier = "ProdCell";
         #endregion
 
@@ -578,7 +578,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.StringValue;
-            break; 
+            break;
         }
     };
 
@@ -649,7 +649,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.TextField.StringValue;
-            break; 
+            break;
         }
     };
 

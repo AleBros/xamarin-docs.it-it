@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: cb8520a223a2bc10706c7e5bcebf8fc412d4e64e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652299"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226684"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
 
@@ -30,7 +30,7 @@ Questo documento illustra i dettagli dell'uso del testo e dei campi di ricerca i
 
 ## <a name="about-text-and-search-fields"></a>Informazioni sui campi testo e cerca
 
-Come indicato in precedenza, se necessario, Novell. tvOS può presentare uno o più campi di testo per raccogliere piccole quantità di testo da parte dell'utente usando uno schermo o una tastiera Bluetooth facoltativa a seconda della versione di tvOS installata dall'utente. 
+Come indicato in precedenza, se necessario, Novell. tvOS può presentare uno o più campi di testo per raccogliere piccole quantità di testo da parte dell'utente usando uno schermo o una tastiera Bluetooth facoltativa a seconda della versione di tvOS installata dall'utente.
 
 Inoltre, se l'app presenta grandi quantità di contenuto per l'utente (ad esempio musica, filmati o raccolta immagini), potrebbe essere necessario includere un campo di ricerca che consenta all'utente di immettere una piccola quantità di testo per filtrare l'elenco di elementi disponibili.
 
@@ -59,7 +59,7 @@ Ogni volta che l'utente fa clic su un campo di testo nell'interfaccia utente, vi
 
 [![](text-fields-and-search-images/keyboard01.png "Tastiera remota Siri")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-Se è presente più di un campo di testo nella visualizzazione corrente, verrà visualizzato automaticamente un pulsante **Avanti** per portare l'utente al campo di testo successivo. Verrà visualizzato un pulsante **done** per l'ultimo campo di testo che terminerà l'immissione di testo e restituirà l'utente alla schermata precedente. 
+Se è presente più di un campo di testo nella visualizzazione corrente, verrà visualizzato automaticamente un pulsante **Avanti** per portare l'utente al campo di testo successivo. Verrà visualizzato un pulsante **done** per l'ultimo campo di testo che terminerà l'immissione di testo e restituirà l'utente alla schermata precedente.
 
 In qualsiasi momento, l'utente può anche premere il pulsante di **menu** nella voce di testo di Siri Remote to end e tornare alla schermata precedente.
 
@@ -99,37 +99,37 @@ Seguire questa procedura:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica.
-1. Trascinare uno o più **campi di testo** int l'area di progettazione in una visualizzazione: 
+1. Trascinare uno o più **campi di testo** int l'area di progettazione in una visualizzazione:
 
     [![](text-fields-and-search-images/text02.png "Un campo di testo")](text-fields-and-search-images/text02.png#lightbox)
-1. Selezionare i **campi di testo** e assegnare a ognuno **un nome** univoco nella scheda **widget** della **riquadro delle proprietà**: 
+1. Selezionare i **campi di testo** e assegnare a ognuno **un nome** univoco nella scheda **widget** della **riquadro delle proprietà**:
 
     [![](text-fields-and-search-images/text03.png "Scheda widget della riquadro delle proprietà")](text-fields-and-search-images/text03.png#lightbox)
-1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito: 
+1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito:
 
     [![](text-fields-and-search-images/text04.png "Sezione del campo di testo")](text-fields-and-search-images/text04.png#lightbox)
-1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito: 
+1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito:
 
-    [![](text-fields-and-search-images/text05.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05.png#lightbox) 
+    [![](text-fields-and-search-images/text05.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. In **Esplora soluzioni** fare doppio clic sul file `Main.storyboard` per aprirlo e modificarlo.
-1. Trascinare uno o più **campi di testo** int l'area di progettazione in una visualizzazione: 
+1. Trascinare uno o più **campi di testo** int l'area di progettazione in una visualizzazione:
 
     [![](text-fields-and-search-images/text02-vs.png "Un campo di testo")](text-fields-and-search-images/text02-vs.png#lightbox)
-1. Selezionare i **campi di testo** e assegnare a ognuno **un nome** univoco nella scheda **widget** di **Esplora proprietà**: 
+1. Selezionare i **campi di testo** e assegnare a ognuno **un nome** univoco nella scheda **widget** di **Esplora proprietà**:
 
     [![](text-fields-and-search-images/text03-vs.png "Scheda widget")](text-fields-and-search-images/text03-vs.png#lightbox)
-1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito: 
+1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito:
 
     [![](text-fields-and-search-images/text04-vs.png "Sezione del campo di testo")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito: 
+1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito:
 
-    [![](text-fields-and-search-images/text05-vs.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05-vs.png#lightbox) 
+    [![](text-fields-and-search-images/text05-vs.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
-    
+
 -----
 
 Nel codice è possibile ottenere o impostare il valore di un campo di testo usando la `Text` relativa proprietà:
@@ -149,41 +149,41 @@ Il modo più semplice per usare i campi di ricerca in un'app Novell. tvOS consis
 Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
-    
+
 1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica.
-1. Trascinare un nuovo controller di visualizzazione raccolta nello storyboard per presentare i risultati della ricerca dell'utente: 
+1. Trascinare un nuovo controller di visualizzazione raccolta nello storyboard per presentare i risultati della ricerca dell'utente:
 
     [![](text-fields-and-search-images/search02.png "Controller di visualizzazione raccolta")](text-fields-and-search-images/search02.png#lightbox)
-1. Nella scheda **widget** della **riquadro delle proprietà**usare `SearchResultsViewController` per la **classe** e `SearchResults` per l' **ID storyboard**: 
+1. Nella scheda **widget** della **riquadro delle proprietà**usare `SearchResultsViewController` per la **classe** e `SearchResults` per l' **ID storyboard**:
 
     [![](text-fields-and-search-images/search03.png "Scheda widget")](text-fields-and-search-images/search03.png#lightbox)
 1. Selezionare il **prototipo di cella** nell'area di progettazione.
-1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**: 
+1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**:
 
     [![](text-fields-and-search-images/search04.png "Scheda widget")](text-fields-and-search-images/search04.png#lightbox)
-1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**: 
+1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**:
 
     [![](text-fields-and-search-images/search05.png "Layout della progettazione del prototipo di cella")](text-fields-and-search-images/search05.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. In **Esplora soluzioni** fare doppio clic sul file `Main.storyboard` per aprirlo e modificarlo.
-1. Trascinare un nuovo controller di visualizzazione raccolta nello storyboard per presentare i risultati della ricerca dell'utente: 
+1. Trascinare un nuovo controller di visualizzazione raccolta nello storyboard per presentare i risultati della ricerca dell'utente:
 
     [![](text-fields-and-search-images/seach02-vs.png "Controller di visualizzazione raccolta")](text-fields-and-search-images/seach02-vs.png#lightbox)
-1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultsViewController` per la **classe** e `SearchResults` per l' **ID storyboard**: 
+1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultsViewController` per la **classe** e `SearchResults` per l' **ID storyboard**:
 
     [![](text-fields-and-search-images/search03-vs.png "Scheda widget")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Selezionare il **prototipo di cella** nell'area di progettazione.
-1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**: 
+1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**:
 
     [![](text-fields-and-search-images/search04-vs.png "Scheda widget")](text-fields-and-search-images/search04-vs.png#lightbox)
-1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**: 
+1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**:
 
     [![](text-fields-and-search-images/search05-vs.png "Layout della progettazione del prototipo di cella")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
-    
+
 -----
 
 <a name="Provide-a-Data-Model" />
@@ -192,13 +192,13 @@ Seguire questa procedura:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Successivamente, sarà necessario fornire una classe che funga da modello di dati per i risultati cercati dall'utente. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo file...** Classe vuotaGenerale > e specificare un nome:  >  
+Successivamente, sarà necessario fornire una classe che funga da modello di dati per i risultati cercati dall'utente. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo file...** Classe vuotaGenerale > e specificare un nome:  > 
 
 [![](text-fields-and-search-images/search06.png "Selezionare una classe vuota e specificare un nome")](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Successivamente, sarà necessario fornire una classe che funga da modello di dati per i risultati cercati dall'utente. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo elemento...**  > Classevarie > di Apple e specificare un nome:  >  
+Successivamente, sarà necessario fornire una classe che funga da modello di dati per i risultati cercati dall'utente. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **nuovo elemento...**  > Classevarie > di Apple e specificare un nome:  > 
 
 [![](text-fields-and-search-images/search06-vs.png "Selezionare la classe e specificare un nome")](text-fields-and-search-images/search06-vs.png#lightbox)
 
@@ -613,7 +613,7 @@ Per ulteriori informazioni sulle visualizzazioni di raccolta, vedere la document
 
 ### <a name="presenting-the-search-field"></a>Presentazione del campo di ricerca
 
-Esistono due modi principali per presentare all'utente in tvOS un campo di ricerca (e i risultati di ricerca e tastiera sullo schermo associati): 
+Esistono due modi principali per presentare all'utente in tvOS un campo di ricerca (e i risultati di ricerca e tastiera sullo schermo associati):
 
 - **Visualizzazione finestra di dialogo modale** : il campo di ricerca può essere visualizzato nella visualizzazione corrente e nel controller di visualizzazione come visualizzazione della finestra di dialogo modale a schermo intero. Questa operazione viene in genere eseguita in risposta all'utente che fa clic su un pulsante o su un altro elemento dell'interfaccia utente. La finestra di dialogo viene rilasciata quando l'utente seleziona un elemento dai risultati della ricerca.
 - **Visualizza contenuto** : il campo di ricerca è una parte diretta di una determinata visualizzazione. Ad esempio, come contenuto di una scheda di ricerca in un controller di visualizzazione a schede.

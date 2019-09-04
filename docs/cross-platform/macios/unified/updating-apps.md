@@ -6,12 +6,12 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 61562eed8867b7a2e12b3d2e96feed28d957696b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 021139c817d2b0eb430a6c8fe09dbd07b7c17813
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511198"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226148"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Aggiornamento delle app esistenti al API unificata
 
@@ -40,7 +40,7 @@ Le app Novell. iOS esistenti possono essere aggiornate alla API unificata usando
 
 Le app Novell. Mac esistenti possono essere aggiornate alla API unificata usando lo strumento di migrazione automatico integrato in per Visual Studio per Mac. Potrebbero essere necessarie alcune correzioni aggiuntive, come descritto in [queste istruzioni](~/cross-platform/macios/unified/updating-mac-apps.md) e [suggerimenti](~/cross-platform/macios/unified/updating-tips.md).
 
-### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[App Novell. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[App Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
 Seguire queste istruzioni per aggiornare una soluzione Novell. Forms esistente con un progetto iOS per usare la API unificata. API unificata supporto è disponibile solo in Novell. Forms 1,3 e versioni successive, quindi [le istruzioni](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) illustrano anche come aggiornare l'app Novell. Forms alla versione 1,3. Questi [suggerimenti](~/cross-platform/macios/unified/updating-tips.md) possono aiutare ad aggiornare qualsiasi codice iOS nativo in renderer personalizzati o servizi di dipendenza.
 

@@ -1,45 +1,45 @@
 ---
-title: Le barre di ricerca in xamarin. IOS
-description: Questo documento descrive come usare le barre di ricerca in xamarin. IOS. Illustra come creare le barre di ricerca a livello di codice e in uno storyboard.
+title: Barre di ricerca in Novell. iOS
+description: Questo documento descrive come usare le barre di ricerca in Novell. iOS. Viene illustrato come creare barre di ricerca a livello di codice e in uno storyboard.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 75abb943dbc56d7b4213e0c36c19ff338182ae8a
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 78776b669b9f389398c54d72a9080a90f8664429
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674862"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226328"
 ---
-# <a name="search-bars-in-xamarinios"></a>Le barre di ricerca in xamarin. IOS
+# <a name="search-bars-in-xamarinios"></a>Barre di ricerca in Novell. iOS
 
-Il UISearchBar viene utilizzato per eseguire ricerche in un elenco di valori. 
+UISearchBar viene usato per eseguire la ricerca in un elenco di valori.
 
-Contiene tre componenti principali: 
+Contiene tre componenti principali:
 
-- Un campo usato per immettere testo. Gli utenti possono utilizzare questa opzione per immettere i termini di ricerca.
-- Pulsante cancellato, rimuovere qualsiasi testo dal campo di ricerca.
-- Un pulsante Annulla per uscire dalla funzione di ricerca.
+- Campo utilizzato per immettere il testo. Questo può essere utilizzato dagli utenti per immettere il termine di ricerca.
+- Pulsante Cancella per rimuovere il testo dal campo di ricerca.
+- Pulsante Annulla per uscire dalla funzione search.
 
 ![Barra di ricerca](searchbar-images/image1.png)
 
 ## <a name="implementing-the-search-bar"></a>Implementazione della barra di ricerca
 
-Per implementare l'inizio barra di ricerca creando una nuova:
+Per implementare la barra di ricerca iniziare creando un'istanza di un nuovo:
 
 ```csharp
 searchBar = new UISearchBar();
 ```
 
-E posizionarlo. L'esempio seguente viene illustrato come posizionarlo nella barra di spostamento o in HeaderView di una tabella:
+E quindi posizionarlo. Nell'esempio seguente viene illustrato come inserirlo nella barra di spostamento o nel HeaderView di una tabella:
 
 ```csharp
 NavigationItem.TitleView = searchBar;
 
-\\or
+// or
 
 TableView.TableHeaderView = searchBar;
 ```
@@ -57,7 +57,7 @@ Impostazione delle proprietà nella barra di ricerca:
 
 ![Proprietà barra di ricerca](searchbar-images/image6.png)
 
-Generare il `SearchButtonClicked` evento quando viene premuto il pulsante di ricerca. Verrà richiamata la logica di ricerca:
+Genera l' `SearchButtonClicked` evento quando viene premuto il pulsante Cerca. Verrà chiamata la logica di ricerca:
 
 ```csharp
 searchBar.SearchButtonClicked += (sender, e) => {
@@ -65,36 +65,36 @@ searchBar.SearchButtonClicked += (sender, e) => {
             };
 ```
 
-Per informazioni sulla gestione della presentazione della barra di ricerca e i risultati della ricerca, vedere la [ricerca Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) recipe.
+Per informazioni sulla gestione della presentazione della barra di ricerca e dei risultati della ricerca, vedere la ricetta del [controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller) di ricerca.
 
-## <a name="using-the-search-bar-in-the-designer"></a>Tramite la barra di ricerca nella finestra di progettazione
+## <a name="using-the-search-bar-in-the-designer"></a>Uso della barra di ricerca nella finestra di progettazione
 
-La finestra di progettazione offre due opzioni per l'implementazione di una barra di ricerca nella finestra di progettazione
+La finestra di progettazione offre due opzioni per implementare una barra di ricerca nella finestra di progettazione
 
 - Barra di ricerca
-- Barra di ricerca con il Controller di visualizzazione di ricerca (deprecato)
+- Barra di ricerca con il controller di visualizzazione della ricerca (deprecato)
 
-![Controlli barra di ricerca nella finestra di progettazione](searchbar-images/image2.png)
+![Controlli della barra di ricerca nella finestra di progettazione](searchbar-images/image2.png)
 
-Utilizzare il pannello delle proprietà per impostare proprietà sulla barra di ricerca
+Utilizzare il pannello Proprietà per impostare le proprietà nella barra di ricerca
 
-![Progettazione delle proprietà barra di ricerca](searchbar-images/image3.png)
+![Finestra di progettazione proprietà barra di ricerca](searchbar-images/image3.png)
 
-Queste proprietà vengono spiegate di seguito:
+Queste proprietà sono illustrate di seguito:
 
-- **Testo segnaposto, prompt dei comandi** – queste proprietà vengono usate per suggerire e indicare come gli utenti devono usare la barra di ricerca. Se l'app è visualizzato un elenco degli archivi, ad esempio, è possibile utilizzare la proprietà prompt per indicare che gli utenti possono "Immettere una città, nome del brano o codice postale"
-- **Stile di visualizzazione di ricerca** – è possibile impostare la barra di ricerca per essere **Prominent** oppure **minimo**. Usando il notificate all'utente verrà tingere tutto il resto sullo schermo, fatta eccezione per la ricerca della barra, causando lo stato attivo su cui disegnare la barra di ricerca. La barra di ricerca di stile minimo si mescoleranno con adatto al contesto.
-- **Funzionalità** : abilitazione di queste proprietà vengono visualizzate solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per questi generando l'evento corretto come illustrato in dettaglio nella [documentazione delle API di barra di ricerca](xref:UIKit.UISearchBar)
-    - Mostra i risultati della ricerca / pulsante dei segnalibri – Mostra un'icona di segnalibri o i risultati della ricerca nella barra di ricerca
-    - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile che questa opzione è selezionata.
-    - Mostra barra ambito – ciò consente agli utenti di limitare l'ambito della ricerca. Ad esempio, durante la ricerca nell'app music l'utente può selezionare se si desidera cercare la libreria per un brano musicale particolare o di un artista o Apple Music. Per visualizzare diverse opzioni, aggiungere una matrice di titoli per il **ScopeBarTitles** proprietà.
-    ![Titoli di ambito sulla barra di ricerca](searchbar-images/image4.png)
+- **Testo, segnaposto, prompt** : queste proprietà vengono usate per suggerire e indicare in che modo gli utenti devono usare la barra di ricerca. Ad esempio, se l'app Visualizza un elenco di archivi, è possibile usare la proprietà Richiedi per consigliare agli utenti di immettere una città, un nome di storia o un codice postale.
+- **Stile di ricerca** : è possibile impostare la barra di ricerca in modo che sia prominente o **minima**. Se si usa il primo piano, tutti gli altri elementi vengono tinti sullo schermo, ad eccezione della barra di ricerca, causando la traccia dello stato attivo sulla barra di ricerca. La barra di ricerca con stile minimo si mescolerà tra loro intorno.
+- **Funzionalità** : l'abilitazione di queste proprietà Visualizza solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per questi generando l'evento corretto come descritto in dettaglio nella [documentazione API della barra di ricerca](xref:UIKit.UISearchBar)
+  - Pulsante Cerca risultati/segnalibri-Mostra i risultati della ricerca o l'icona dei segnalibri nella barra di ricerca
+  - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile selezionare questa opzione.
+  - Mostra la barra dell'ambito: consente agli utenti di limitare l'ambito della ricerca. Ad esempio, quando si esegue la ricerca nell'app Music, l'utente può selezionare se desidera eseguire la ricerca Apple Music o la relativa libreria per un brano o un artista specifico. Per visualizzare varie opzioni, aggiungere una matrice di titoli alla proprietà **ScopeBarTitles** .
+  ![Titoli ambito barra di ricerca](searchbar-images/image4.png)
 
-- **Comportamento del testo** : queste opzioni vengono utilizzate per risolvere la formattazione dell'input utente durante la digitazione. L'uso delle maiuscole imposterà l'inizio di ogni parola o frase, ogni carattere come lettere maiuscole o. Correzione e ortografico con chiedere all'utente di forme suggerite parole digitazione.
-- **Tastiera** : controlli lo stile della tastiera visualizzata per l'input e pertanto le chiavi sono disponibili sulla tastiera. Oltre ad altre opzioni sono inclusi tastierino numerico, tastierino telefonico, indirizzo di posta elettronica, URL.
-- **Aspetto** : controlla l'aspetto e lo stile della tastiera e verranno entrambi scuro o con tema chiaro di.
-- **Il tasto** : modificare l'etichetta per la chiave Return per riflettere meglio l'azione che verrà eseguita. I valori supportati includono Go, Join, Next, Route, operazione eseguita e ricerca.
-- **Proteggere** : indica se l'input viene mascherato (ad esempio un input di Password).
+- **Comportamento del testo** : queste opzioni vengono usate per risolvere il modo in cui l'input dell'utente viene formattato durante la digitazione. Con l'uso di maiuscole, l'inizio di ogni parola o frase viene impostata in lettere maiuscole o ogni carattere. Correzione e controllo ortografico con la richiesta all'utente di ortografia suggerite delle parole durante la digitazione.
+- **Tastiera** : controlla lo stile della tastiera visualizzato per l'input e quindi le chiavi disponibili sulla tastiera. Sono inclusi il tastierino numerico, il tastierino telefonico, la posta elettronica e l'URL insieme ad altre opzioni.
+- **Aspetto** : controlla lo stile di aspetto della tastiera e sarà scuro o chiaro.
+- **Chiave restituita** : modificare l'etichetta della chiave restituita in modo da riflettere meglio l'azione che verrà eseguita. I valori supportati includono go, join, Next, Route, done e search.
+- **Secure** : indica se l'input è mascherato, ad esempio per un input di password.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

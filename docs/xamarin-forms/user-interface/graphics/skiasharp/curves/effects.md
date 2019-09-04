@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642761"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228252"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effetti per il tracciato in SkiaSharp
 
@@ -22,7 +22,7 @@ _Individuare i vari effetti di percorso che consentono i percorsi da utilizzare 
 
 Oggetto *effetto del percorso* è un'istanza del [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) classe che viene creato con uno degli otto metodi di creazione statico definiti dalla classe. Il `SKPathEffect` oggetto viene quindi impostato sul [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) proprietà di un [ `SKPaint` ](xref:SkiaSharp.SKPaint) oggetti per un'ampia gamma di effetti interessanti, ad esempio, che traccia una linea con un piccolo percorso replicato :
 
-![](effects-images/patheffectsample.png "L'esempio di catena collegato")
+![Esempio di catena collegata](effects-images/patheffectsample.png)
 
 Effetti per il tracciato consentono di:
 
@@ -51,7 +51,7 @@ Le entità finali di trattini sono interessate dal `StrokeCap` proprietà di `SK
 
 Il **animato testo puntato** pagina è simile al **testo con contorni** pagina descritta nell'articolo [ **l'integrazione di testo e grafica** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) in che viene visualizzato descritti caratteri del testo impostando il `Style` proprietà del `SKPaint` dell'oggetto a `SKPaintStyle.Stroke`. Inoltre **animato testo puntato** Usa `SKPathEffect.CreateDash` per concedere questo descrive un aspetto separata da punti e il programma aggiunge anche un'animazione la `phase` argomento del `SKPathEffect.CreateDash` metodo sembra che viaggiano attraverso il testo per i punti caratteri. Ecco la pagina in modalità orizzontale:
 
-[![](effects-images/animateddottedtext-small.png "Tripla screenshot della pagina aggiungendo un'animazione testo puntato")](effects-images/animateddottedtext-large.png#lightbox "tripla screenshot della pagina aggiungendo un'animazione testo punteggiato")
+[![Schermata tripla della pagina di testo tratteggiata animata](effects-images/animateddottedtext-small.png)](effects-images/animateddottedtext-large.png#lightbox)
 
 Il [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe inizia con la definizione di alcune costanti e sovrascrive anche il `OnAppearing` e `OnDisappearing` metodi per l'animazione:
 
@@ -159,7 +159,7 @@ Si noterà anche che come cerchio punti animati intorno caratteri del testo, c'�
 
 Il **Dot / Dash Morph** programma anima il motivo di tratteggio a se stessa in modo che sembrano trattini per dividere in punti, che combinano in trattini form nuovamente:
 
-[![](effects-images/dotdashmorph-small.png "Tripla screenshot della pagina Dot Dash Morph")](effects-images/dotdashmorph-large.png#lightbox "tripla screenshot della pagina Morph trattino punto")
+[![Schermata tripla della pagina morph del punto Dash](effects-images/dotdashmorph-small.png)](effects-images/dotdashmorph-large.png#lightbox)
 
 Il [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe sostituzioni il `OnAppearing` e `OnDisappearing` esattamente come il precedente programma ha, ma la classe definisce i metodi di `SKPaint` oggetto come un campo:
 
@@ -398,7 +398,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 Il `PaintSurface` gestore crea una curva di Bézier che un ciclo per se stesso e accede il selettore per determinare quali `PathEffect` deve essere usato per applicare la traccia. Le tre opzioni, ovvero `Translate`, `Rotate`, e `Morph` , ovvero vengono visualizzati da sinistra a destra:
 
-[![](effects-images/1dpatheffect-small.png "Tripla screenshot della pagina del percorso effetto 1D")](effects-images/1dpatheffect-large.png#lightbox "tripla screenshot della pagina del percorso effetto 1D")
+[![Schermata tripla della pagina effetto percorso 1D](effects-images/1dpatheffect-small.png)](effects-images/1dpatheffect-large.png#lightbox)
 
 Il percorso specificato nella `SKPathEffect.Create1DPath` metodo è sempre pieni. Il percorso specificato nel `DrawPath` metodo sempre viene tracciato se il `SKPaint` oggetto ha relativo `PathEffect` proprietà è impostata su un effetto di percorso 1 giorno. Si noti che il `pathPaint` oggetto non ha alcuno `Style` impostazione, impostazione predefinita è solitamente `Fill`, ma viene tracciato indipendentemente dal fatto che il percorso.
 
@@ -410,7 +410,7 @@ La forma rettangolo nel `Morph` esempio è 50 pixel in larghezza con un `advance
 
 Se il `advance` argomento è inferiore alla dimensione del percorso, quindi i percorsi replicati possono sovrapporsi. Ciò può comportare alcuni effetti interessanti. Il **catena collegato** pagina Visualizza una serie di cerchi che sembrano essere simile a una catena di collegato, si blocca nella forma distintivo di un catenaria sovrapposti:
 
-[![](effects-images/linkedchain-small.png "Tripla screenshot della pagina collegata catena")](effects-images/linkedchain-large.png#lightbox "tripla screenshot della pagina della catena collegato")
+[![Schermata tripla della pagina a catena collegata](effects-images/linkedchain-small.png)](effects-images/linkedchain-large.png#lightbox)
 
 Aspetto molto simili e si noterà che quelli non sono effettivamente cerchi. Ogni collegamento nella catena è due archi, ridimensionati e posizionati in modo che sembrano per la connessione con collegamenti adiacenti.
 
@@ -549,7 +549,7 @@ Il programma definisce il percorso utilizzato nella `Create1DPath` avere relativ
 
 Il **nastro trasportatore** pagina consente di creare un percorso simile a quello di un nastro trasportatore oblunghi con una curva superiore e inferiore che viene ridimensionata in base alle dimensioni della finestra. Tale percorso viene tracciato con un semplice `SKPaint` dell'oggetto di colore grigio e 20 pixel di larghezza e quindi tracciato nuovamente con un'altra `SKPaint` dell'oggetto con un `SKPathEffect` oggetti che fanno riferimento a un percorso che assomiglia a un bucket minimo:
 
-[![](effects-images/conveyorbelt-small.png "Tripla screenshot della pagina del nastro trasportatore")](effects-images/conveyorbelt-large.png#lightbox "tripla screenshot della pagina del nastro trasportatore")
+[![Schermata tripla della pagina del nastro trasportatore](effects-images/conveyorbelt-small.png)](effects-images/conveyorbelt-large.png#lightbox)
 
 I (0, 0) punto del percorso di bucket è l'handle, pertanto quando il `phase` argomento è animato, i bucket sembrano vertono sul nastro trasportatore, forse Rolly di acqua nella parte inferiore e il dump orizzontale nella parte superiore.
 
@@ -798,7 +798,7 @@ Se si osserva con attenzione i risultati, si noterà che non sono limitate le li
 
 Il `PaintSurface` gestore si conclude con una chiamata a semplicemente disegnare il rettangolo arrotondato, in modo da visualizzare la discrepanza con le linee tratteggiate rosse e blu:
 
-[![](effects-images/hatchfill-small.png "Tripla screenshot della pagina di tratteggio riempimento")](effects-images/hatchfill-large.png#lightbox "tripla screenshot della pagina di tratteggio riempimento")
+[![Schermata tripla della pagina di riempimento del tratteggio](effects-images/hatchfill-small.png)](effects-images/hatchfill-large.png#lightbox)
 
 La schermata Android non ha un aspetto simile al seguente: Il ridimensionamento dello screenshot ha causato il consolidamento delle linee rosse sottili e degli spazi sottili in linee rosse apparentemente più ampie e spazi più ampi.
 
@@ -852,7 +852,7 @@ public class PathTileFillPage : ContentPage
 
 Nel `PaintSurface` gestore, la `SKPathEffect.Create2DPath` chiamate imposta la spaziatura orizzontale e verticale a 64 per fare in modo i riquadri quadrati 80 pixel si sovrappongano. Per fortuna, il percorso è simile a una parte del puzzle, la generazione di mesh perfettamente con i riquadri adiacenti:
 
-[![](effects-images/pathtilefill-small.png "Tripla screenshot della pagina del percorso tessera occupa")](effects-images/pathtilefill-large.png#lightbox "tripla screenshot della pagina del percorso riquadro riempimento")
+[![Schermata tripla della pagina di riempimento del riquadro del percorso](effects-images/pathtilefill-small.png)](effects-images/pathtilefill-large.png#lightbox)
 
 Il ridimensionamento nella schermata originale fa sì che alcuni distorsione, in particolare nella schermata di Android.
 
@@ -927,7 +927,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 È possibile usare questo effetto con riempimento in base o che traccia il `Style` proprietà del `SKPaint` oggetto. Qui è in esecuzione:
 
-[![](effects-images/anotherroundedheptagon-small.png "Tripla screenshot della pagina di un altro Heptagon arrotondato")](effects-images/anotherroundedheptagon-large.png#lightbox "tripla screenshot della pagina di un altro Heptagon arrotondato")
+[![Schermata tripla della pagina di un'altra ettagono arrotondata](effects-images/anotherroundedheptagon-small.png)](effects-images/anotherroundedheptagon-large.png#lightbox)
 
 Si noterà che questo heptagon arrotondato sia identico al programma precedente. Se è necessario più convincente che il raggio dell'angolo è realmente 100 piuttosto che di 50 specificato nella `SKPathEffect.CreateCorner` chiamata, è possibile rimuovere il commento l'istruzione finale nel programma e vedere un cerchio di 100-radius sovrapposto all'angolo.
 
@@ -946,7 +946,7 @@ L'argomento finale è un valore di inizializzazione utilizzato per generare la s
 
 Il **instabilità sperimentare** pagina consente di sperimentare più valori in un rettangolo di traccia:
 
-[![](effects-images/jitterexperiment-small.png "Screenshot della pagina dell'esperimento instabilità è pari al triplo")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
+[![Schermata tripla della pagina JitterExperiment](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
 
 Il programma è semplice. Il [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) un'istanza di file due `Slider` gli elementi e un `SKCanvasView`:
 
@@ -1072,7 +1072,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Qui è in esecuzione in modalità orizzontale:
 
-[![](effects-images/jittertext-small.png "Screenshot della pagina di instabilità testo è pari al triplo")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
+[![Schermata tripla della pagina JitterText](effects-images/jittertext-small.png)](effects-images/jittertext-large.png#lightbox)
 
 ## <a name="path-outlining"></a>La struttura di percorso
 
@@ -1173,11 +1173,11 @@ public partial class TapToOutlineThePathPage : ContentPage
 
 Il cerchio viene riempito e tracciato come previsto:
 
-[![](effects-images/taptooutlinethepathnormal-small.png "Tripla screenshot della pagina toccare per il percorso della struttura normali")](effects-images/taptooutlinethepathnormal-large.png#lightbox "tripla screenshot della pagina toccare per il percorso della struttura normale")
+[![Schermata tripla del rubinetto normale per delineare la pagina del percorso](effects-images/taptooutlinethepathnormal-small.png)](effects-images/taptooutlinethepathnormal-large.png#lightbox)
 
 Quando si tocca la schermata `outlineThePath` è impostata su `true`e il `PaintSurface` gestore consente di creare una nuova `SKPath` dell'oggetto e lo usa come percorso di destinazione in una chiamata a `GetFillPath` sul `redThickStroke` oggetto paint. Tale percorso di destinazione viene quindi compilato e tracciato con `redThinStroke`, risultante in quanto segue:
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "Tripla screenshot della pagina toccare per il percorso della struttura contorno")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "tripla screenshot della pagina toccare per il percorso della struttura contorno")
+[![Schermata tripla del tocco indicato per delineare la pagina del percorso](effects-images/taptooutlinethepathoutlined-small.png)](effects-images/taptooutlinethepathoutlined-large.png#lightbox)
 
 Due cerchi rossi indicano chiaramente che il percorso circolare originale è stato convertito in due distribuzioni del circolare.
 
@@ -1241,7 +1241,7 @@ Abbiamo già visto come il `GetFillPath` metodo di `SKPaint` può convertire un 
 
 Un uso ovvio del `CreateSum` consiste nel definire un `SKPaint` che riempie un percorso con effetto di un percorso e i tratti il percorso con effetto di un altro percorso. Questa funzionalità viene illustrata la **gatti nel Frame** un esempio che visualizza una matrice di gatti all'interno di un frame con bordi ondulati:
 
-[![](effects-images/catsinframe-small.png "Tripla screenshot della pagina gatti In Frame")](effects-images/catsinframe-large.png#lightbox "tripla screenshot della pagina gatti In Frame")
+[![Schermata tripla dei gatti nella pagina frame](effects-images/catsinframe-small.png)](effects-images/catsinframe-large.png#lightbox)
 
 Il [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe inizia con la definizione dei campi diversi. È possibile che si riconoscano il primo campo dal [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe la [ **dati del tracciato SVG** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) articolo. Il secondo percorso si basa su una riga e un arco per il modello cresta del frame:
 
@@ -1409,7 +1409,7 @@ public class DashedHatchLinesPage : ContentPage
 
 Come già stato individuato, le linee tratteggiate non sono con precisione limitate all'interno dell'area e in questo esempio, iniziano sempre a sinistra con un trattino intero:
 
-[![](effects-images/dashedhatchlines-small.png "Tripla screenshot della pagina delle linee tratteggiate linee tratteggiate")](effects-images/dashedhatchlines-large.png#lightbox "tripla screenshot della pagina delle linee tratteggiate linee tratteggiate")
+[![Schermata tripla della pagina delle linee tratteggiate tratteggiate](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Ora che si sono visto gli effetti di percorso che spaziano da semplici punti e trattini per combinazioni di strano, usare la tua immaginazione e vedere cosa è possibile creare.
 

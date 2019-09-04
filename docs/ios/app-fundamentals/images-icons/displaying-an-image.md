@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8082fc6ab2625e68d64ee9d42a9b630f885d9002
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120594"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227757"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Visualizzazione di un'immagine in Novell. iOS
 
@@ -41,7 +41,7 @@ Per creare un nuovo set di immagini e aggiungervi immagini, eseguire le operazio
 3. Selezionare il nuovo set di immagini e l'editor verrà visualizzato:
 
     ![](displaying-an-image-images/imageset03.png "Editor del set di immagini")
-4. Da qui, trascinare le immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
+4. Da qui, trascinare le immagini per ognuno dei diversi dispositivi e risoluzioni necessarie.
 5. Fare doppio clic sul **nome** del nuovo set di immagini nell' **elenco asset** per modificarlo: ![](displaying-an-image-images/imageset04.png "Modifica del nome del nuovo set di immagini")
 
 Quando si usa un **set di immagini** in iOS designer, è sufficiente selezionare il nome del set dall'elenco a discesa nell'editor delle proprietà:
@@ -54,7 +54,7 @@ Quando si usa un **set di immagini** in iOS designer, è sufficiente selezionare
 
     ![](displaying-an-image-images/asset5.png "Fare clic sul pulsante con il segno più")
 
-2. Selezionare **Aggiungi set di immagini** e l'editor del set di immagini verrà visualizzato per il nuovo set di immagini. Da qui, trascinare le immagini per ognuno dei diversi dispositivi e risoluzioni necessarie. 
+2. Selezionare **Aggiungi set di immagini** e l'editor del set di immagini verrà visualizzato per il nuovo set di immagini. Da qui, trascinare le immagini per ognuno dei diversi dispositivi e risoluzioni necessarie.
 
     ![](displaying-an-image-images/asset7.png "Editor del set di immagini")
 
@@ -193,7 +193,7 @@ Oltre a usare le immagini per supportare un'app, iOS usa anche immagini con tipi
 
 ### <a name="frombundle"></a>FromBundle
 
-La `FromBundle` chiamata al metodo è una chiamata sincrona (blocco) che dispone di una serie di funzionalità di gestione e caricamento di immagini predefinite, ad esempio il supporto per la memorizzazione nella cache e la gestione automatica dei file di immagine per diverse soluzioni.  
+La `FromBundle` chiamata al metodo è una chiamata sincrona (blocco) che dispone di una serie di funzionalità di gestione e caricamento di immagini predefinite, ad esempio il supporto per la memorizzazione nella cache e la gestione automatica dei file di immagine per diverse soluzioni.
 
 Nell'esempio seguente viene illustrato come impostare l'immagine di un `UITabBarItem` oggetto in `UITabBar`un oggetto:
 

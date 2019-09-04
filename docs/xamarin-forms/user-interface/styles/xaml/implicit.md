@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 328063fd6924902738722813cfb961e56af5385e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cdbfaafdac8f965adaf4b840b568154e40ef7e10
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644468"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228176"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Stili impliciti in xamarin. Forms
 
@@ -51,9 +51,9 @@ Il codice seguente esempio illustra un' *implicita* stile dichiarato in XAML in 
 </ContentPage>
 ```
 
-Il [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) definisce un singolo *implicita* stile applicato alla pagina [`Entry`](xref:Xamarin.Forms.Entry) istanze. Il `Style` consente di visualizzare il testo in blu su uno sfondo giallo, durante l'impostazione anche altre opzioni di visualizzazione. Il `Style` viene aggiunto alla pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) senza specificare un `x:Key` attributo. Di conseguenza, il `Style` applicato a tutti la `Entry` le istanze in modo implicito i valori corrispondono il [`TargetType`](xref:Xamarin.Forms.Style.TargetType) proprietà del `Style` esattamente. Tuttavia, il `Style` non viene applicato al `CustomEntry` istanza, che è una sottoclasse `Entry`. Ciò comporta l'aspetto illustrato negli screenshot seguenti:
+Il [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) definisce un singolo *implicita* stile applicato alla pagina [`Entry`](xref:Xamarin.Forms.Entry) istanze. Il `Style` consente di visualizzare il testo in blu su uno sfondo giallo, durante l'impostazione anche altre opzioni di visualizzazione. Il `Style` viene aggiunto alla pagina [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) senza specificare un `x:Key` attributo. Di conseguenza, il `Style` applicato a tutti la `Entry` le istanze in modo implicito i valori corrispondono il [`TargetType`](xref:Xamarin.Forms.Style.TargetType) proprietà del `Style` esattamente. Tuttavia, il `Style` non viene applicato al `CustomEntry` istanza, che è una sottoclasse `Entry`. Il risultato è l'aspetto illustrato negli screenshot seguenti:
 
-[![](implicit-images/implicit-styles.png "Esempio di stili impliciti")](implicit-images/implicit-styles-large.png#lightbox "esempio stili impliciti")
+[![Esempio di stili impliciti](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
 Inoltre, la quarta [`Entry`](xref:Xamarin.Forms.Entry) esegue l'override la [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) e [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) proprietà dello stile implicito da diversi `Color`valori.
 
