@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9113ff728c382a26d0f0b5c0a6e40575cb8e776f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198292"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227943"
 ---
 # <a name="xamarinforms-webview"></a>WebView di xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "70198292"
 
 [`WebView`](xref:Xamarin.Forms.WebView) è una vista per la visualizzazione del contenuto HTML e web nell'app. A differenza `OpenUri`, che accetta l'utente per il web browser nel dispositivo, `WebView` consente di visualizzare il contenuto HTML all'interno dell'app.
 
-![](webview-images/in-app-browser.png "Nell'App Browser")
+![Nel browser app](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>Content
 
@@ -105,7 +105,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "Stringa HTML visualizzazione WebView")
+![Visualizzazione WebView della stringa HTML](webview-images/html-string.png)
 
 Nel codice precedente, `@` viene usato per contrassegnare il codice HTML sotto forma di stringa letterale, vale a dire tutti i caratteri di escape consueti vengono ignorati.
 
@@ -147,7 +147,7 @@ Alla visualizzazione locale contenuto usando un `WebView`, è necessario aprire 
 
 Gli screenshot seguenti mostrano il risultato della visualizzazione del contenuto locale in ogni piattaforma:
 
-![](webview-images/local-content.png "WebView visualizzando il contenuto locale")
+![Visualizzazione WebView del contenuto locale](webview-images/local-content.png)
 
 Anche se la prima pagina è stata caricata, il `WebView` non conosce la provenienza di HTML. Questo è un problema quando si lavora con le pagine che fanno riferimento a risorse locali. Sono esempi di quando ciò può verificarsi quando collegamento pagine locali a fianco, una pagina consente di utilizzare un file JavaScript separato, o una pagina si collega a un foglio di stile CSS.  
 
@@ -176,11 +176,11 @@ In iOS, il contenuto web deve trovarsi nella directory radice del progetto oppur
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "File locali in iOS")
+![File locali in iOS](webview-images/ios-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "File locali in iOS")
+![File locali in iOS](webview-images/ios-xs.png)
 
 -----
 
@@ -206,11 +206,11 @@ In Android, inserire HTML, CSS e immagini nella cartella asset con azione di com
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/android-vs.png "File locali in Android")
+![File locali in Android](webview-images/android-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![](webview-images/android-xs.png "File locali in Android")
+![File locali in Android](webview-images/android-xs.png)
 
 -----
 
@@ -328,7 +328,7 @@ public partial class InAppBrowserXaml : ContentPage
 
 La procedura è terminata.
 
-![](webview-images/in-app-browser.png "Pulsanti di navigazione WebView")
+![Pulsanti di spostamento WebView](webview-images/in-app-browser.png)
 
 ## <a name="events"></a>Eventi
 
@@ -383,11 +383,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Ciò produce l'output seguente (caricamento):
 
-![](webview-images/loading-start.png "Esempio di evento di navigazione WebView")
+![Esempio di evento di esplorazione WebView](webview-images/loading-start.png)
 
 Terminato il caricamento:
 
-![](webview-images/loading-end.png "Esempio di evento di spostamento WebView")
+![Esempio di evento di esplorazione WebView](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Ricaricamento del contenuto
 

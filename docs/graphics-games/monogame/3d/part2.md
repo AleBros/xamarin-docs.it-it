@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f125f8f20d22da4e988440cbaa936771d86a7673
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680975"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227731"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Disegno di immagini 3D con vertici in monogame
 
@@ -85,7 +85,7 @@ Il piano verrà usato come base e si desidera applicare una trama durante l'esec
 In primo luogo, verrà aggiunto un membro alla classe Game1:
 
 ```csharp
-VertexPositionTexture[] floorVerts; 
+VertexPositionTexture[] floorVerts;
 ```
 
 Definire quindi i vertici in `Game1.Initialize`. Si noti che il modello fornito a cui viene fatto riferimento in precedenza in questo `Game1.Initialize` articolo non contiene un metodo, quindi è necessario aggiungere l' `Game1`intero metodo a:
@@ -179,7 +179,7 @@ void DrawGround()
             PrimitiveType.TriangleList,
             // The array of verts that we want to render
             floorVerts,
-            // The offset, which is 0 since we want to start 
+            // The offset, which is 0 since we want to start
             // at the beginning of the floorVerts array
             0,
             // The number of triangles to draw
@@ -213,7 +213,7 @@ Le `View` proprietà `Projection` e controllano la modalità di visualizzazione 
 
 ### <a name="techniques-and-passes"></a>Tecniche e sessioni
 
-Una volta assegnate le proprietà, è possibile eseguire il rendering effettivo. 
+Una volta assegnate le proprietà, è possibile eseguire il rendering effettivo.
 
 Non verrà modificata la proprietà `CurrentTechnique` in questa procedura dettagliata, ma i giochi più avanzati possono avere un singolo effetto che può eseguire il disegno in modi diversi, ad esempio come viene applicato il valore del colore. Ognuna di queste modalità di rendering può essere rappresentata come una tecnica che può essere assegnata prima del rendering. Ogni tecnica può inoltre richiedere più passaggi per il rendering corretto. Gli effetti possono richiedere più sessioni se si esegue il rendering di oggetti visivi complessi, ad esempio una superficie o una pelliccia incandescente.
 
@@ -231,7 +231,7 @@ Infine, viene specificato il numero di triangoli di cui eseguire il rendering. L
 
 ## <a name="rendering-with-a-texture"></a>Rendering con trama
 
-A questo punto, l'app esegue il rendering di un piano bianco (in prospettiva). Si aggiungerà quindi una trama al progetto da usare quando si esegue il rendering del piano. 
+A questo punto, l'app esegue il rendering di un piano bianco (in prospettiva). Si aggiungerà quindi una trama al progetto da usare quando si esegue il rendering del piano.
 
 Per semplificare l'attività, aggiungeremo il. png direttamente al progetto anziché usare lo strumento della pipeline monogame. A tale scopo, scaricare il [file con estensione png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) nel computer. Al termine del download, fare clic con il pulsante destro del mouse sulla cartella **contenuto** nel riquadro della soluzione e scegliere **Aggiungi > Aggiungi file.** Se si usa Android, questa cartella si trova nella cartella assets del progetto specifico per Android. Se si utilizza iOS, la cartella si troverà nella radice del progetto iOS. Passare al percorso in cui è stato salvato il file **scacchi. png** e selezionare il file. Selezionare per copiare il file nella directory.
 
@@ -332,7 +332,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 Se eseguiamo il codice, possiamo notare che il nostro piano ora Visualizza un modello a scacchi:
@@ -404,7 +404,7 @@ protected override void Draw(GameTime gameTime)
     DrawModel (new Vector3 ( 4, 4, 3));
 
     base.Draw(gameTime);
-} 
+}
 ```
 
 Viene anche creato un `Vector3` in `Game1` per rappresentare la posizione della fotocamera. Si aggiungerà un campo nella `checkerboardTexture` dichiarazione:
@@ -413,7 +413,7 @@ Viene anche creato un `Vector3` in `Game1` per rappresentare la posizione della 
 ...
 Texture2D checkerboardTexture;
 // new code:
-Vector3 cameraPosition = new Vector3(0, 10, 10); 
+Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 Rimuovere quindi la variabile locale `cameraPosition` `DrawModel` dal metodo:
@@ -434,7 +434,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
 
             effect.View = Matrix.CreateLookAt (
-                cameraPosition, cameraLookAtVector, cameraUpVector); 
+                cameraPosition, cameraLookAtVector, cameraUpVector);
             ...
 ```
 
@@ -450,7 +450,7 @@ void DrawGround()
 
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
-    ... 
+    ...
 ```
 
 A questo punto, se si esegue il codice, è possibile visualizzare contemporaneamente i modelli e il campo:

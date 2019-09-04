@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be4d10eceb4ddf7da44409815f3e9c08117a06f7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120734"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227224"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Uso di viste in pila tvOS in Novell
 
@@ -24,7 +24,7 @@ Il layout di tutte le sottoviste associate a una visualizzazione dello stack vie
 
 Quando si usa `UIStackView` un oggetto in un'app Novell. tvOS, lo sviluppatore può definire le sottoviste all'interno di uno storyboard in iOS designer o aggiungere e rimuovere le visualizzazioni in C# codice.
 
-## <a name="about-stacked-view-controls"></a>Informazioni sui controlli visualizzazione in pila 
+## <a name="about-stacked-view-controls"></a>Informazioni sui controlli visualizzazione in pila
 
 È progettato come una visualizzazione del contenitore non di rendering e, di conseguenza, non viene disegnato nell'area di disegno come le altre sottoclassi `UIView`di. `UIStackView` L'impostazione di `BackgroundColor` proprietà come o l' `DrawRect` override non avrà alcun effetto visivo.
 
@@ -98,21 +98,21 @@ Il modo più semplice per usare le visualizzazioni dello stack in un'app Novell.
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
-1. Progettare il layout dei singoli elementi che si intende aggiungere alla visualizzazione dello stack: 
+1. Progettare il layout dei singoli elementi che si intende aggiungere alla visualizzazione dello stack:
 
     [![](stacked-views-images/layout01.png "Esempio di layout degli elementi")](stacked-views-images/layout01.png#lightbox)
 1. Aggiungere tutti i vincoli obbligatori agli elementi per garantirne la scalabilità corretta. Questo passaggio è importante quando l'elemento viene aggiunto alla visualizzazione stack.
-1. Apportare il numero di copie necessario (quattro in questo caso): 
+1. Apportare il numero di copie necessario (quattro in questo caso):
 
     [![](stacked-views-images/layout02.png "Numero di copie necessario")](stacked-views-images/layout02.png#lightbox)
-1. Trascinare una **visualizzazione stack** dalla **casella degli strumenti** e rilasciarla nella visualizzazione: 
+1. Trascinare una **visualizzazione stack** dalla **casella degli strumenti** e rilasciarla nella visualizzazione:
 
     [![](stacked-views-images/layout03.png "Visualizzazione stack")](stacked-views-images/layout03.png#lightbox)
-1. Selezionare la visualizzazione dello stack, nella **scheda Widget** del **riquadro delle proprietà** Selezionare **riempimento** per l' **allineamento**, **compilare ugualmente** per la **distribuzione** e immettere `25` per la **spaziatura**: 
+1. Selezionare la visualizzazione dello stack, nella **scheda Widget** del **riquadro delle proprietà** Selezionare **riempimento** per l' **allineamento**, **compilare ugualmente** per la **distribuzione** e immettere `25` per la **spaziatura**:
 
     [![](stacked-views-images/layout04.png "Scheda widget")](stacked-views-images/layout04.png#lightbox)
 1. Posizionare la visualizzazione dello stack sullo schermo in cui si desidera e aggiungere vincoli per mantenerla nella posizione richiesta.
-1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello stack: 
+1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello stack:
 
     [![](stacked-views-images/layout05.png "Singoli elementi nella visualizzazione dello stack")](stacked-views-images/layout05.png#lightbox)
 1. Il layout verrà regolato e gli elementi verranno disposti nella visualizzazione dello stack in base agli attributi impostati in precedenza.
@@ -122,21 +122,21 @@ Il modo più semplice per usare le visualizzazioni dello stack in un'app Novell.
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
-1. Progettare il layout dei singoli elementi che si intende aggiungere alla visualizzazione dello stack: 
+1. Progettare il layout dei singoli elementi che si intende aggiungere alla visualizzazione dello stack:
 
     [![](stacked-views-images/layout01.png "Esempio di layout degli elementi")](stacked-views-images/layout01.png#lightbox)
 1. Aggiungere tutti i vincoli obbligatori agli elementi per garantirne la scalabilità corretta. Questo passaggio è importante quando l'elemento viene aggiunto alla visualizzazione stack.
-1. Apportare il numero di copie necessario (quattro in questo caso): 
+1. Apportare il numero di copie necessario (quattro in questo caso):
 
     [![](stacked-views-images/layout02.png "Numero di copie necessario")](stacked-views-images/layout02.png#lightbox)
-1. Trascinare una **visualizzazione stack** dalla **casella degli strumenti** e rilasciarla nella visualizzazione: 
+1. Trascinare una **visualizzazione stack** dalla **casella degli strumenti** e rilasciarla nella visualizzazione:
 
     [![](stacked-views-images/layout03-vs.png "Visualizzazione stack")](stacked-views-images/layout03-vs.png#lightbox)
-1. Selezionare la visualizzazione dello stack, nella **scheda Widget** di **Esplora proprietà** Selezionare **riempimento** per l' **allineamento**, **compilare ugualmente** per la **distribuzione** e immettere `25` per la **spaziatura**: 
+1. Selezionare la visualizzazione dello stack, nella **scheda Widget** di **Esplora proprietà** Selezionare **riempimento** per l' **allineamento**, **compilare ugualmente** per la **distribuzione** e immettere `25` per la **spaziatura**:
 
     [![](stacked-views-images/layout04-vs.png "Scheda widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Posizionare la visualizzazione dello stack sullo schermo in cui si desidera e aggiungere vincoli per mantenerla nella posizione richiesta.
-1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello stack: 
+1. Selezionare i singoli elementi e trascinarli nella visualizzazione dello stack:
 
     [![](stacked-views-images/layout05-vs.png "Singoli elementi nella visualizzazione dello stack")](stacked-views-images/layout05-vs.png#lightbox)
 1. Il layout verrà regolato e gli elementi verranno disposti nella visualizzazione dello stack in base agli attributi impostati in precedenza.
