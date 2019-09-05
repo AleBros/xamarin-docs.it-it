@@ -4,15 +4,15 @@ description: Questo documento descrive le sottoscrizioni senza rinnovo, le sotto
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ea016860bc30d9f6b70f41b85db09bf5544304ba
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f455d2164573d68db0a9c764f2b2cef5cc6d739
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528285"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284036"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Novell. iOS
 
@@ -44,7 +44,7 @@ Le sottoscrizioni rinnovate automaticamente vengono usate principalmente nelle a
 
 ### <a name="implementation-overview"></a>Panoramica dell'implementazione
 
-Le sottoscrizioni rinnovate automaticamente devono essere implementate usando il flusso di lavoro dei prodotti distribuiti dal server (vedere la sezione *Verifica della ricezione e prodotti* recapitati dal server).
+Le sottoscrizioni rinnovate automaticamente devono essere implementate usando il flusso di lavoro dei prodotti distribuiti dal server (vedere la sezione *Verifica della ricezione e prodotti recapitati dal server* ).
 
 #### <a name="shared-secret"></a>Segreto condiviso
 

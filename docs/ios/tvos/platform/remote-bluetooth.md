@@ -4,15 +4,15 @@ description: Questo articolo descrive come usare i controller dei giochi di Siri
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 99fafe0ae0186ac68609ebe22dabe64e588ee5e0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 32deee1ea1e47438f4f671ac3ccaa09f4218a88b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226668"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290746"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Novell
 
@@ -117,7 +117,7 @@ namespace tvRemote
 }
 ```
 
-Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). In particolare, la [creazione dell'interfaccia utente](~/ios/tvos/get-started/hello-tvos.md#Creating-the-User-Interface) e [la scrittura del codice con](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) le sezioni Outlets e Actions.
+Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md). In particolare, la [creazione dell'interfaccia utente](~/ios/tvos/get-started/hello-tvos.md#Creating-the-User-Interface) e [la scrittura del codice con le sezioni Outlets e actions](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) .
 
 <a name="Gestures-and-Code" />
 

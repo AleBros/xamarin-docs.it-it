@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le barre di ricerca in Novell.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 78776b669b9f389398c54d72a9080a90f8664429
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226328"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283354"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barre di ricerca in Novell. iOS
 
@@ -83,7 +83,7 @@ Utilizzare il pannello Proprietà per impostare le proprietà nella barra di ric
 Queste proprietà sono illustrate di seguito:
 
 - **Testo, segnaposto, prompt** : queste proprietà vengono usate per suggerire e indicare in che modo gli utenti devono usare la barra di ricerca. Ad esempio, se l'app Visualizza un elenco di archivi, è possibile usare la proprietà Richiedi per consigliare agli utenti di immettere una città, un nome di storia o un codice postale.
-- **Stile di ricerca** : è possibile impostare la barra di ricerca in modo che sia prominente o **minima**. Se si usa il primo piano, tutti gli altri elementi vengono tinti sullo schermo, ad eccezione della barra di ricerca, causando la traccia dello stato attivo sulla barra di ricerca. La barra di ricerca con stile minimo si mescolerà tra loro intorno.
+- **Stile di ricerca** : è possibile impostare la barra di ricerca in modo che sia **prominente** o **minima**. Se si usa il primo piano, tutti gli altri elementi vengono tinti sullo schermo, ad eccezione della barra di ricerca, causando la traccia dello stato attivo sulla barra di ricerca. La barra di ricerca con stile minimo si mescolerà tra loro intorno.
 - **Funzionalità** : l'abilitazione di queste proprietà Visualizza solo l'elemento dell'interfaccia utente. La funzionalità deve essere implementata per questi generando l'evento corretto come descritto in dettaglio nella [documentazione API della barra di ricerca](xref:UIKit.UISearchBar)
   - Pulsante Cerca risultati/segnalibri-Mostra i risultati della ricerca o l'icona dei segnalibri nella barra di ricerca
   - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile selezionare questa opzione.

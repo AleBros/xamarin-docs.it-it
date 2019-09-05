@@ -4,15 +4,15 @@ description: Questo documento contiene collegamenti a guide che descrivono come 
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 110d6c95c1bcc93d541b908807fe26c700eb656e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6050320f781ea89c5455e10a8754a89d7086e92a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526597"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281735"
 ---
 # <a name="xamarinios-data-access"></a>Accesso ai dati di Novell. iOS
 

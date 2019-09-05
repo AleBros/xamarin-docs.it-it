@@ -4,15 +4,15 @@ description: Questo documento descrive come aggiungere alle app Novell. iOS le r
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 4b00efe1132f5588ee896fc2044c247acfe0723a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 00c2284a12d17e0dcd5a89cb0c39c1064665c6d7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198476"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288448"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Ridimensionamento automatico dell'altezza delle righe in Novell. iOS
 
@@ -22,7 +22,7 @@ iOS 11 ha aggiunto la possibilità di espandere automaticamente le righe. Le int
 
 ## <a name="cell-layout-in-the-ios-designer"></a>Layout di celle in iOS designer
 
-Aprire lo storyboard per la visualizzazione tabella per cui si desidera applicare il ridimensionamento automatico della riga in iOS designer, selezionare il prototipo della cella e progettare il layout della cella. Ad esempio:
+Aprire lo storyboard per la visualizzazione tabella per cui si desidera applicare il ridimensionamento automatico della riga in iOS designer, selezionare il *prototipo* della cella e progettare il layout della cella. Ad esempio:
 
 [![](autosizing-row-height-images/table01.png "Progettazione del prototipo della cella")](autosizing-row-height-images/table01.png#lightbox)
 
@@ -47,7 +47,7 @@ Successivamente, è necessario selezionare il prototipo di cella e assegnargli u
 Nel caso dell'esempio, `GrowCell`. Questo valore verrà usato in un secondo momento quando si popola la tabella.
 
 > [!IMPORTANT]
-> Se la tabella contiene più di un tipo di cella(prototipo), è necessario assicurarsi che ogni tipo disponga di `Identifier` un univoco per il ridimensionamento automatico delle righe.
+> Se la tabella contiene più di un tipo di cella (**prototipo**), è necessario assicurarsi che ogni tipo disponga di `Identifier` un univoco per il ridimensionamento automatico delle righe.
 
 Per ogni elemento del prototipo di cella, assegnare un **nome** per esporlo C# al codice. Ad esempio:
 

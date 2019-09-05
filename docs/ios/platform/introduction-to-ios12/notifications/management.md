@@ -4,15 +4,15 @@ description: Questo documento descrive come usare Novell. iOS per sfruttare le n
 ms.prod: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 69b6876a22e511d1c14a795d7b81c3a638492468
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b6c6baad2cbd923bde4dab3766040b5df4351787
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652393"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282122"
 ---
 # <a name="notification-management-in-xamarinios"></a>Gestione delle notifiche in Novell. iOS
 

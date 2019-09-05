@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69a599b6a7534cb77dd9e023d937f10a6b0523fb
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620664"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285200"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
@@ -29,7 +29,7 @@ Una novità di iOS 9 e di iPhone 6s e iPhone 6s Plus, 3D touch aggiunge moviment
 3D touch offre all'app le funzionalità seguenti:
 
 - **Sensibilità alla pressione** : le app possono ora misurare il livello di rigidezza o di luminosità dell'utente che tocca lo schermo e sfruttare tali informazioni. Ad esempio, un'app di disegno può rendere una linea più spessa o più sottile a seconda della difficoltà con cui l'utente tocca lo schermo.
-- **Peek e pop** : l'app può ora consentire all'utente di interagire con i dati senza dover uscire dal contesto corrente. Premendo hard sullo schermo, è possibile visualizzare l' elemento a cui si è interessati, ad esempio l'anteprima di un messaggio. Premendo più difficile, è possibile visualizzare l'elemento.
+- **Peek e pop** : l'app può ora consentire all'utente di interagire con i dati senza dover uscire dal contesto corrente. Premendo hard sullo schermo, è possibile visualizzare l'elemento a cui si è interessati *, ad esempio* l'anteprima di un messaggio. Premendo più difficile, *è possibile visualizzare* l'elemento.
 - **Azioni rapide** : si pensi a azioni rapide come i menu contestuali che possono essere visualizzati quando un utente fa clic con il pulsante destro del mouse su un elemento in un'app desktop. Con azioni rapide, è possibile aggiungere collegamenti comuni, rapidi e facili da accedere alle funzioni nell'app dall'icona della schermata iniziale sul dispositivo iOS.
 
 Per ulteriori informazioni, vedere la Guida [introduttiva a 3D Touch](~/ios/platform/3d-touch.md) .
@@ -122,11 +122,11 @@ In iOS 8 Apple ha introdotto le estensioni, ovvero le librerie presentate dal si
 Con iOS 9, Apple sta estendendo il supporto dell'estensione fornendo diversi nuovi _punti di estensione_ che definiscono i criteri di utilizzo e forniscono le API per lavorare all'interno di una determinata area, come indicato di seguito:
 
 - **Nuovo punto di estensione unità audio** : usare questo punto di estensione per fornire effetti audio, strumenti musicali, generatori di suoni e così via, da usare in altre app host di unità audio (ad esempio, GarageBand). Questo punto di estensione consente anche di vendere _unità audio_ (plug-in audio) nell'App Store.
-- **Nuovo punto di estensione** per la manutenzione degli indici: usare questo punto di estensione per supportare la reindicizzazione dei dati dell'app senza richiedere il riavvio dell'app.
+- **Nuovo punto di estensione per la manutenzione degli indici** : usare questo punto di estensione per supportare la reindicizzazione dei dati dell'app senza richiedere il riavvio dell'app.
 - **Nuovi punti di estensione di rete** (è necessario disporre di un'autorizzazione speciale da Apple):
   - **Estensione del provider del proxy applicazione** : usare questo punto di estensione per implementare un proxy di rete trasparente sul lato client personalizzato.
   - **Filtrare l'estensione del provider del controllo provider di dati/filtro** : usare questi punti di estensione per implementare il filtro del contenuto della rete dinamica sul dispositivo.
-  - **Estensione del provider** di tunneling di pacchetti: usare questo punto di estensione per implementare un protocollo di tunneling VPN personalizzato sul lato client.
+  - **Estensione del provider di tunneling di pacchetti** : usare questo punto di estensione per implementare un protocollo di tunneling VPN personalizzato sul lato client.
 - **Nuovi punti di estensione Safari**:
   - **Estensione** per il blocco del contenuto: usare questo punto di estensione per definire un elenco di contenuto bloccato che non verrà visualizzato quando l'utente sta esplorando il Web.
   - **Estensione per i collegamenti condivisi** : usare questo punto di estensione per abilitare la visualizzazione del contenuto dell'app nei collegamenti condivisi di Safari.

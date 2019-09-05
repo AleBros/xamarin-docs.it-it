@@ -4,15 +4,15 @@ description: Questo documento descrive come pubblicare un'app nell'App Store di 
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: aaffaf3d66bb51d467c40bc3e5707a149154c0a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528740"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282711"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in Apple TV App Store
 
@@ -33,7 +33,7 @@ In questo articolo vengono illustrati tutti i passaggi necessari per eseguire il
 ## <a name="before-you-submit-an-application"></a>Prima di inviare un'applicazione
 
 Dopo aver inviato un'app per la pubblicazione nell'App Store di Apple TV, viene eseguito un processo di revisione di Apple per assicurarsi che soddisfi le linee guida di Apple per la qualità e il contenuto. Se l'applicazione non soddisfa queste linee guida, Apple la rifiuterà. A questo punto, sarà necessario risolvere i problemi di non conformità segnalati da Apple e inviarla di nuovo.
-Per avere buone probabilità di superare il processo di revisione di Apple, è consigliabile familiarizzare con queste linee guida e tentare di adattare l'applicazione a tali regole. Le linee guida di Apple sono disponibili nelle [linee guida di revisione di App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html) e preparano l' [invio dell'app per il nuovo Apple TV](https://developer.apple.com/tvos/submit/).
+Per avere buone probabilità di superare il processo di revisione di Apple, è consigliabile familiarizzare con queste linee guida e tentare di adattare l'applicazione a tali regole. Le linee guida di Apple sono disponibili nelle [linee guida di revisione di App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html) e [preparano l'invio dell'app per il nuovo Apple TV](https://developer.apple.com/tvos/submit/).
 
 Di seguito sono specificati un paio di aspetti da verificare prima di inviare un'app:
 
@@ -77,7 +77,7 @@ Apple offre una selezione di Servizi per le applicazioni speciali, denominati an
 
 Per creare un ID app e facoltativamente selezionare gli entitlement è necessario seguire questa procedura che prevede l'uso del portale di provisioning iOS basato sul Web di Apple:
 
-1. Selezionare > **lo sviluppo**per il provisioning.
+1. Selezionare**lo sviluppo**per il **provisioning** > .
 2. Fare clic sul pulsante **+** e specificare **Nome** (Nome) e **Bundle ID** (ID bundle) per la nuova applicazione.
 3. Scorrere fino alla fine della schermata e selezionare tutti i **Servizi app** che saranno richiesti dall'app Novell. tvOS.
 4. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate per creare un nuovo ID app.
@@ -107,7 +107,7 @@ Per istruzioni dettagliate, vedere la documentazione sull' [uso di icone e immag
 
 ### <a name="creating-and-installing-a-distribution-profile"></a>Creazione e installazione di un profilo di distribuzione
 
-tvOS usa i *profili* di provisioning per controllare come può essere distribuita una determinata compilazione di applicazione. Si tratta di file che contengono informazioni sul certificato usato per firmare un'app, sull'*ID applicazione* e sul punto in cui poter installare l'app. Per lo sviluppo e la distribuzione ad hoc, il profilo di provisioning include anche l'elenco dei dispositivi consentiti in cui è possibile distribuire l'app. Tuttavia, per la distribuzione dell'app Store di Apple TV, sono incluse solo le informazioni relative a certificati e ID app, poiché l'unico meccanismo per la distribuzione pubblica è tramite l'App Store di Apple TV.
+tvOS usa i *profili di provisioning* per controllare come può essere distribuita una determinata compilazione di applicazione. Si tratta di file che contengono informazioni sul certificato usato per firmare un'app, sull'*ID applicazione* e sul punto in cui poter installare l'app. Per lo sviluppo e la distribuzione ad hoc, il profilo di provisioning include anche l'elenco dei dispositivi consentiti in cui è possibile distribuire l'app. Tuttavia, per la distribuzione dell'app Store di Apple TV, sono incluse solo le informazioni relative a certificati e ID app, poiché l'unico meccanismo per la distribuzione pubblica è tramite l'App Store di Apple TV.
 
 Il provisioning richiede questa procedura che prevede l'uso del portale di provisioning iOS basato sul Web di Apple:
 

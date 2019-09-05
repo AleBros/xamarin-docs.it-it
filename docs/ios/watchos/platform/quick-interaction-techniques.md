@@ -4,15 +4,15 @@ description: Questo articolo illustra le tecniche di interazione rapida che Appl
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120163"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286751"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
 

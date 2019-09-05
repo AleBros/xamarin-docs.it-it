@@ -4,15 +4,15 @@ description: Questo documento descrive come usare SiriKit in iOS 11. In particol
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 7aa3b430af28a85cb8b774baa9538306cb9dd673
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656401"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286746"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Aggiornamenti di SiriKit in iOS 11
 
@@ -30,7 +30,7 @@ SiriKit in iOS 11 aggiunge questi nuovi e aggiornati domini Intent:
 Le altre nuove funzionalità includono:
 
 - [**Nomi alternativi**](#alternativenames) per le app: fornisce alias che consentono ai clienti di indicare a Siri di usare come destinazione l'app offrendo nomi o pronunce alternative.
-- **Avvio** degli allenamenti: consente di avviare un allenamento in background.
+- **Avvio degli allenamenti** : consente di avviare un allenamento in background.
 
 Di seguito sono illustrate alcune di queste funzionalità. Per altri dettagli sugli altri, vedere la [documentazione di Apple SiriKit](https://developer.apple.com/documentation/sirikit).
 
@@ -118,7 +118,7 @@ Aggiungere quindi un nuovo progetto di estensione all'app per gestire le richies
 
 1. Fare clic con il pulsante destro del mouse sulla soluzione e scegliere **aggiungi > Aggiungi nuovo progetto...** .
 2. Scegliere il modello di **estensione per iOS > estensione > Intent** .
-3. Verranno aggiunti due nuovi progetti: Intent e IntentUI. La personalizzazione dell'interfaccia utente è facoltativa, pertanto nell'esempio è incluso solo il codice nel progetto Intent.
+3. Verranno aggiunti due nuovi progetti: Intent e IntentUI. La personalizzazione dell'interfaccia utente è facoltativa, pertanto nell'esempio è incluso solo il codice nel progetto **Intent** .
 
 Il progetto di estensione è il punto in cui verranno elaborate tutte le richieste SiriKit. Come estensione separata, non dispone automaticamente di alcun modo per comunicare con l'app principale, che in genere viene risolta implementando l'archiviazione di file condivisi usando gruppi di app.
 
@@ -211,7 +211,7 @@ Con i nomi di app alternativi impostati, le frasi seguenti funzioneranno anche p
 - "Aggiungi attività WWDC in _MonkeyTodo_"
 
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Alcuni errori che potrebbero verificarsi durante l'esecuzione dell'esempio o l'aggiunta di SiriKit alle applicazioni:
 

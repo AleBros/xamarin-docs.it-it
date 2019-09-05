@@ -4,15 +4,15 @@ description: Questo documento descrive come usare icone alternative dell'app in 
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e194edcea75df9dc18d89bba00c0b97e5bd71c34
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b15b39460b40bc2c9f993b3b0d9bca3275ac7644
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197866"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286810"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Icone alternative per le app in Novell. iOS
 
@@ -31,7 +31,7 @@ Apple ha aggiunto diversi miglioramenti a iOS 10,3 che consentono a un'app di ge
 
 ## <a name="adding-alternate-icons-to-a-xamarinios-project"></a>Aggiunta di icone alternative a un progetto Novell. iOS
 
-Per consentire a un'app di passare a un'icona alternativa, è necessario includere una raccolta di immagini icona nel progetto app Novell. iOS. Queste immagini non possono essere aggiunte al progetto usando il metodo `Assets.xcassets` tipico, ma devono essere aggiunte direttamente alla cartella Resources.
+Per consentire a un'app di passare a un'icona alternativa, è necessario includere una raccolta di immagini icona nel progetto app Novell. iOS. Queste immagini non possono essere aggiunte al progetto usando il metodo `Assets.xcassets` tipico, ma devono essere aggiunte direttamente alla cartella **Resources** .
 
 Seguire questa procedura:
 
@@ -43,7 +43,7 @@ Seguire questa procedura:
 
     ![](alternate-app-icons-images/icons02.png "Finestra di dialogo Aggiungi file a cartella")
 
-3. Al termine, la cartella Resources avrà un aspetto simile al seguente:
+3. Al termine, la cartella **Resources** avrà un aspetto simile al seguente:
 
     ![](alternate-app-icons-images/icons01.png "La cartella risorse dovrebbe essere simile alla seguente")
 
@@ -51,7 +51,7 @@ Seguire questa procedura:
 
 ## <a name="modifying-the-infoplist-file"></a>Modifica del file INFO. plist
 
-Con le immagini obbligatorie aggiunte alla cartella Resources, è necessario aggiungere la chiave [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) al file **info. plist** del progetto. Questa chiave definirà il nome della nuova icona e le immagini che lo compongono.
+Con le immagini obbligatorie aggiunte alla cartella **Resources** , è necessario aggiungere la chiave [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) al file **info. plist** del progetto. Questa chiave definirà il nome della nuova icona e le immagini che lo compongono.
 
 Seguire questa procedura:
 

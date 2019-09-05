@@ -4,15 +4,15 @@ description: In questo documento viene descritto come creare un controllo person
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 65b6f11662cdb8e1814e1146faf70cd01b2c11bc
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227093"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287318"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Uso di controlli personalizzati con iOS Designer
 
@@ -158,7 +158,7 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
     ```
 
 
-1. Aggiungere i `FillTexture.png`file `FillTexture2.png` , `Monkey.png` e (disponibili [da GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) alla cartella resources.
+1. Aggiungere i `FillTexture.png`file `FillTexture2.png` , `Monkey.png` e (disponibili [da GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) alla cartella **Resources** .
 
 1. Fare doppio clic sul `Main.storyboard` file per aprirlo nella finestra di progettazione:
 

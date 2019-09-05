@@ -4,15 +4,15 @@ description: iOS consente di applicare le impostazioni delle proprietà visive a
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/15/2018
-ms.openlocfilehash: 2211897af70712f9de2dec5c7c0771c5089dad1a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b0f09a729c6998e7a728bfc3d805058e7a43a54a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655888"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287073"
 ---
 # <a name="appearance-api-in-xamarinios"></a>API di aspetto in Novell. iOS
 

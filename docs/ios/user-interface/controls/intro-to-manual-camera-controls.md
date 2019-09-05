@@ -4,15 +4,15 @@ description: Questo documento descrive come è possibile usare il Framework AVFo
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6f60b52d4fd29aacf319f9de94051e28c9876e33
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6b7868475426b7e8536030ce9e35812db828b175
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226693"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288698"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controlli manuali della fotocamera in Novell. iOS
 
@@ -516,7 +516,7 @@ Prima di esaminare i dettagli del controllo dell'esposizione in un'applicazione 
 
 I tre elementi di base che si uniscono per controllare l'esposizione sono:
 
-- **Velocità** dell'otturatore: indica il periodo di tempo durante il quale l'otturatore è aperto per consentire la luce sul sensore della fotocamera. Più breve è il tempo di apertura dell'otturatore, minore è la luce e l'immagine è più nitida (meno sfocatura di movimento). Più a lungo l'otturatore è aperto, maggiore è la luce e maggiore è la sfocatura di movimento che si verifica.
+- **Velocità dell'otturatore** : indica il periodo di tempo durante il quale l'otturatore è aperto per consentire la luce sul sensore della fotocamera. Più breve è il tempo di apertura dell'otturatore, minore è la luce e l'immagine è più nitida (meno sfocatura di movimento). Più a lungo l'otturatore è aperto, maggiore è la luce e maggiore è la sfocatura di movimento che si verifica.
 - **Mapping ISO** : si tratta di un termine preso in prestito dalla fotografia del film e si riferisce alla sensibilità delle sostanze chimiche nel film alla luce. I valori ISO bassi nella pellicola hanno una riproduzione a colori meno granulare e più fine; i valori ISO bassi sui sensori digitali hanno meno rumore del sensore ma meno luminosità. Maggiore è il valore ISO, più luminoso è l'immagine, ma con maggiore rumore del sensore. "ISO" su un sensore digitale è una misura del [guadagno elettronico](https://en.wikipedia.org/wiki/Gain), non una funzionalità fisica.
 - **Apertura** della lente: questa è la dimensione dell'apertura dell'obiettivo. In tutti i dispositivi iOS l'apertura della lente è fissa, quindi gli unici due valori che è possibile usare per regolare l'esposizione sono la velocità dell'otturatore e l'ISO.
 

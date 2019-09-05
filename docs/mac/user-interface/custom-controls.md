@@ -4,15 +4,15 @@ description: Questo documento descrive come creare controlli personalizzati in N
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 24e4113f0437c626ba93f12c1124407c472fef8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227913"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284947"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creazione di controlli personalizzati in Novell. Mac
 
@@ -212,16 +212,16 @@ Si modificherà la rappresentazione visiva per il controllo quando viene modific
 
 ### <a name="responding-to-user-input"></a>Risposta all'input dell'utente
 
-Esistono due modalità di base in cui è possibile aggiungere input utente al controllo personalizzato: **Eseguire l'override delle routine di gestione del mouse** o dei riconoscitori di **movimento**. Il metodo usato sarà basato sulle funzionalità richieste dal controllo.
+Esistono due modalità di base in cui è possibile aggiungere input utente al controllo personalizzato: **Eseguire l'override delle routine di gestione del mouse** o dei **Riconoscitori di movimento**. Il metodo usato sarà basato sulle funzionalità richieste dal controllo.
 
 > [!IMPORTANT]
-> Per qualsiasi controllo personalizzato creato, è necessario usare i **metodi di override** _o_ i riconoscitori di **movimento**, ma non entrambi nello stesso momento in cui possono essere in conflitto tra loro.
+> Per qualsiasi controllo personalizzato creato, è necessario usare i **metodi di override** _o_ i **Riconoscitori di movimento**, ma non entrambi nello stesso momento in cui possono essere in conflitto tra loro.
 
 <a name="Summary" />
 
 #### <a name="handling-user-input-with-override-methods"></a>Gestione dell'input dell'utente con i metodi di override
 
-Gli oggetti che ereditano da `NSView`(o) dispongono di diversi metodi di override per la gestione dell'input del mouse o della `NSControl` tastiera. Per il controllo di esempio, si vuole capovolgere lo stato del compartitore quando l'utente fa clic sul controllo con il pulsante sinistro del mouse. Per gestire questo problema, è possibile aggiungere i `NSFlipSwitch` seguenti metodi di override alla classe:
+Gli oggetti che ereditano da `NSView`(o) dispongono di diversi metodi di override per la gestione dell'input del mouse o della `NSControl` tastiera. Per il controllo di esempio, si vuole capovolgere lo stato del **compartitore quando l'** utente fa **clic sul controllo** con il pulsante sinistro del mouse. Per gestire questo problema, è possibile aggiungere i `NSFlipSwitch` seguenti metodi di override alla classe:
 
 ```csharp
 #region Mouse Handling Methods

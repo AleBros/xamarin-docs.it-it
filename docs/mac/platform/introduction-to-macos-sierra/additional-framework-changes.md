@@ -4,15 +4,15 @@ description: Questo documento descrive le modifiche e i miglioramenti secondari 
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b382b7dd66722df6acb4bb7c90e401e5895c0947
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de3a0a67fb6abbd4423435b38d7712f583ab74d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620897"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284445"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Modifiche aggiuntive al framework macOS Sierra
 
@@ -33,7 +33,7 @@ I miglioramenti seguenti sono stati apportati al Framework di accelerazione per 
 Sono state apportate le seguenti funzionalità avanzate al Framework di AppKit per macOS Sierra:
 
 - Diversi miglioramenti a `NSCollectionView` , ad esempio:
-  - **Sezioni** comprimibili: consente all'utente di comprimere una sezione di visualizzazione raccolta in una singola riga orizzontale.
+  - **Sezioni comprimibili** : consente all'utente di comprimere una sezione di visualizzazione raccolta in una singola riga orizzontale.
   - **Intestazioni mobili** : le intestazioni e i piè di pagina possono essere ora sospesi (in un layout di flusso) usando la stessa API di [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
   - **Visualizzazioni in background scorrevoli** : è ora possibile impostare uno sfondo per le visualizzazioni di raccolta per scorrere insieme al contenuto.
 - Il passaggio di layout della visualizzazione posticipato è stato ottimizzato ed esteso.

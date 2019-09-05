@@ -4,15 +4,15 @@ description: In questo articolo viene illustrata la progettazione e l'utilizzo d
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199916"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288294"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Uso delle viste tabella tvOS in Novell
 
@@ -51,13 +51,13 @@ Un `UITableViewCell` oggetto viene utilizzato per rappresentare le singole righe
 
 Tutti i tipi di cella di visualizzazione tabella predefiniti supportano anche elementi grafici come indicatori di divulgazione o segni di spunta. 
 
-Inoltre, è possibile definire un tipo di cella di visualizzazione tabella **personalizzato** e presentare una _cella_del prototipo, che si crea in progettazione interfaccia o tramite codice.
+Inoltre, è possibile definire un tipo di cella di visualizzazione tabella **personalizzato** e presentare una _cella del prototipo_, che si crea in progettazione interfaccia o tramite codice.
 
 Apple presenta i suggerimenti seguenti per l'utilizzo delle celle di visualizzazione tabella:
 
-- **Evitare** il ritaglio del testo: tenere le singole righe di testo brevi, in modo che non vengano troncate. Le parole o le frasi troncate sono difficili da analizzare per l'utente in tutta la stanza.
+- **Evitare il ritaglio del testo** : tenere le singole righe di testo brevi, in modo che non vengano troncate. Le parole o le frasi troncate sono difficili da analizzare per l'utente in tutta la stanza.
 - **Considerare lo stato della riga con stato** attivo, perché una riga diventa più grande, con angoli più arrotondati quando sono concentrati, è necessario testare l'aspetto della cella in tutti gli Stati. Le immagini o il testo potrebbero essere ritagliati o sembrare non corretti nello stato attivo.
-- **Usare tabelle modificabili** in modalità sporadica: lo sfasamento o l'eliminazione di righe di tabella è più lungo in tvOS rispetto a iOS. È necessario decidere attentamente se questa funzionalità verrà aggiunta o distratto dall'app tvOS.
+- **Usare tabelle modificabili in modalità sporadica** : lo sfasamento o l'eliminazione di righe di tabella è più lungo in tvOS rispetto a iOS. È necessario decidere attentamente se questa funzionalità verrà aggiunta o distratto dall'app tvOS.
 - **Creazione di tipi di celle personalizzati, laddove appropriato** . i tipi di cella di visualizzazione tabella incorporata sono ottimi per molte situazioni, valutare la possibilità di creare tipi di celle personalizzati per informazioni non standard, in modo da fornire un maggiore controllo e di presentare meglio le informazioni al utente.
 
 <a name="Working-With-Table-Views" />
@@ -92,13 +92,13 @@ Per iniziare, eseguire le operazioni seguenti:
 1. È necessario selezionare ogni parte della visualizzazione tabella e assegnarle un **nome di classe** personalizzato nella scheda **widget** di **Esplora proprietà** in modo che sia possibile accedervi in un secondo momento nel C# codice. Ad esempio, il **controller di visualizzazione tabella**: 
 
     [![](table-views-images/table09.png "Assegnare un nome di classe")](table-views-images/table09.png#lightbox)
-1. Assicurarsi di creare una classe personalizzata per il **controller di visualizzazione tabella**, la **visualizzazione tabella** e le **celle**del prototipo. Visual Studio per Mac aggiungerà le classi personalizzate all'albero del progetto man mano che vengono create: 
+1. Assicurarsi di creare una classe personalizzata per il **controller di visualizzazione tabella**, la **visualizzazione tabella** e le **celle del prototipo**. Visual Studio per Mac aggiungerà le classi personalizzate all'albero del progetto man mano che vengono create: 
 
     [![](table-views-images/table10.png "Classi personalizzate nell'albero del progetto")](table-views-images/table10.png#lightbox)
-1. Selezionare quindi la visualizzazione tabella nella Area di progettazione e modificarne le proprietà in base alle esigenze. Ad esempio il numero di **celle** del prototipo e lo **stile** (normale o raggruppato): 
+1. Selezionare quindi la visualizzazione tabella nella Area di progettazione e modificarne le proprietà in base alle esigenze. Ad esempio il numero di **celle del prototipo** e lo **stile** (normale o raggruppato): 
 
     [![](table-views-images/table11.png "Scheda widget")](table-views-images/table11.png#lightbox)
-1. Per ogni **cella**del prototipo, selezionarla e assegnare un **identificatore** univoco nella scheda **widget** di **Esplora proprietà**. Questo passaggio è _molto importante_ perché questo identificatore sarà necessario in un secondo momento quando si popola la tabella. Ad esempio `AttrCell`: 
+1. Per ogni **cella del prototipo**, selezionarla e assegnare un **identificatore** univoco nella scheda **widget** di **Esplora proprietà**. Questo passaggio è _molto importante_ perché questo identificatore sarà necessario in un secondo momento quando si popola la tabella. Ad esempio `AttrCell`: 
 
     [![](table-views-images/table12.png "Scheda widget")](table-views-images/table12.png#lightbox)
 1. È inoltre possibile selezionare questa opzione per presentare la cella come uno dei [tipi di cella di visualizzazione tabella predefiniti](#table-view-cell-types) tramite l'elenco a discesa **stile** o impostarlo su **personalizzato** e utilizzare il area di progettazione per il layout della cella trascinando in altri widget dell'interfaccia utente dalla **casella degli strumenti**: 
@@ -133,13 +133,13 @@ Per iniziare, eseguire le operazioni seguenti:
 1. È necessario selezionare ogni parte della visualizzazione tabella e assegnarle un **nome di classe** personalizzato nella scheda **widget** di **Esplora proprietà** in modo che sia possibile accedervi in un secondo momento nel C# codice. Ad esempio, il **controller di visualizzazione tabella**: 
 
     [![](table-views-images/table09-vs.png "Scheda widget")](table-views-images/table09-vs.png#lightbox)
-1. Assicurarsi di creare una classe personalizzata per il **controller di visualizzazione tabella**, la **visualizzazione tabella** e le **celle**del prototipo. Visual Studio per Mac aggiungerà le classi personalizzate all'albero del progetto man mano che vengono create: 
+1. Assicurarsi di creare una classe personalizzata per il **controller di visualizzazione tabella**, la **visualizzazione tabella** e le **celle del prototipo**. Visual Studio per Mac aggiungerà le classi personalizzate all'albero del progetto man mano che vengono create: 
 
     [![](table-views-images/table10-vs.png "Classi personalizzate nell'albero del progetto")](table-views-images/table10-vs.png#lightbox)
-1. Selezionare quindi la visualizzazione tabella nella Area di progettazione e modificarne le proprietà in base alle esigenze. Ad esempio il numero di **celle** del prototipo e lo **stile** (normale o raggruppato): 
+1. Selezionare quindi la visualizzazione tabella nella Area di progettazione e modificarne le proprietà in base alle esigenze. Ad esempio il numero di **celle del prototipo** e lo **stile** (normale o raggruppato): 
 
     [![](table-views-images/table11-vs.png "Scheda widget")](table-views-images/table11-vs.png#lightbox)
-1. Per ogni **cella**del prototipo, selezionarla e assegnare un **identificatore** univoco nella scheda **widget** di **Esplora proprietà**. Questo passaggio è _molto importante_ perché questo identificatore sarà necessario in un secondo momento quando si popola la tabella. Ad esempio `AttrCell`: 
+1. Per ogni **cella del prototipo**, selezionarla e assegnare un **identificatore** univoco nella scheda **widget** di **Esplora proprietà**. Questo passaggio è _molto importante_ perché questo identificatore sarà necessario in un secondo momento quando si popola la tabella. Ad esempio `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "Assegnare un identificatore")](table-views-images/table12-vs.png#lightbox)
 1. È inoltre possibile selezionare questa opzione per presentare la cella come uno dei [tipi di cella di visualizzazione tabella predefiniti](#table-view-cell-types) tramite l'elenco a discesa **stile** o impostarlo su **personalizzato** e utilizzare il area di progettazione per il layout della cella trascinando in altri widget dell'interfaccia utente dalla **casella degli strumenti**: 

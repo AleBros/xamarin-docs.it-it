@@ -3,56 +3,56 @@ title: Domande frequenti generali
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b940199a1384540bcc9f7134dabf8b69ac3767e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61157193"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285005"
 ---
 # <a name="general-frequently-asked-questions"></a>Domande frequenti generali
 
 ## <a name="portable-class-libraries"></a>Librerie di classi portabili
 
 ### <a name="how-can-i-view-what-libraries-are-supported-in-a-pclpcl-support-librariesmd"></a>[Come è possibile visualizzare le librerie supportate in una libreria di classi portabile (PCL)?](pcl-support-libraries.md)
-Questa guida vengono elencati i metodi per determinare se la libreria esistente è supportata da varie piattaforme di destinazione di libreria di classi Portabile, oppure può essere convertita in un profilo di libreria di classi Portabile e le risorse.
+Questa guida elenca le risorse e i metodi per determinare se la libreria esistente è supportata dalle diverse piattaforme di destinazione PCL oppure può essere convertita in un profilo PCL.
 
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[API Reflection per librerie PCL](pcl-reflection.md)
-Microsoft ha sviluppato una nuova API di Reflection per l'uso nelle librerie di classi portabile. Se hai un codice di Reflection esistente che si desidera spostare in una libreria di classi Portabile, potrebbe non funzionare.
+Microsoft ha sviluppato una nuova API di reflection da usare nelle librerie di classi portabili. Se si dispone di un codice di Reflection esistente che si desidera spostare in una libreria di classi portabile, potrebbe non funzionare.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study di libreria di classi Portabile: Come è possibile risolvere i problemi correlati a Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
-Xamarin. IOS e xamarin. Android non implementano 100% di tutti i profili PCL che consentono come riferimenti. Per motivi di praticità pratiche in Visual Studio per Mac, Visual Studio e la gestione pacchetti NuGet, progetti Xamarin consentono l'uso dei diversi profili che hanno solo le implementazioni incomplete. Ad esempio, xamarin. IOS né xamarin. Android attualmente include un'implementazione completa dei tipi nel `System.Diagnostics.Tracing` dello spazio dei nomi di libreria di classi Portabile. È possibile risolvere il problema passando il progetto dell'app per fare riferimento il formato portabile TargetFramework="net45 win8 wp8 + wpa81 versione della libreria del flusso di dati TPL.
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study PCL: Come è possibile risolvere i problemi correlati a System. Diagnostics. Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
+Novell. iOS e Novell. Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Novell. iOS né Novell. Android includono attualmente un'implementazione completa dei tipi nello `System.Diagnostics.Tracing` spazio dei nomi PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
 
-## <a name="nuget-packages--xamarin-components"></a>I pacchetti NuGet e componenti di Xamarin
+## <a name="nuget-packages--xamarin-components"></a>Pacchetti NuGet & componenti Novell
 ### <a name="how-can-i-update-nugetnuget-updatemd"></a>[Come si aggiorna NuGet?](nuget-update.md)
-Aggiornamenti di NuGet, estensioni e componenti aggiuntivi sono disponibili nel **aggiornamenti** scheda le **Gestione pacchetti NuGet**. Navigazione dettagliati per trovare gli aggiornamenti in Visual Studio per Mac e Visual Studio è in questa Guida.
+Gli aggiornamenti, le estensioni e i componenti aggiuntivi di NuGet sono disponibili nella scheda **aggiornamenti** di **Gestione pacchetti NuGet**. La navigazione dettagliata per trovare gli aggiornamenti in Visual Studio per Mac & Visual Studio è illustrata in questa guida.
 
 ### <a name="how-do-i-downgrade-a-nuget-packagenuget-package-downgrademd"></a>[Come si effettua il downgrade di un pacchetto NuGet?](nuget-package-downgrade.md)
-Visual Studio per Mac e Visual Studio hanno caratteristiche per la selezione di versioni meno recenti dei pacchetti e installarli automaticamente. simile al modo in cui l'aggiornamento dei pacchetti works.
+Visual Studio per Mac & Visual Studio includono funzionalità per la selezione di versioni precedenti dei pacchetti e per l'installazione automatica. simile a come funziona l'aggiornamento dei pacchetti.
 
 ### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Errore di pacchetti mancanti dopo l'aggiornamento di pacchetti Nuget](nuget-packages-missing.md)
-Questo problema è stato segnalato principalmente sulle soluzioni di app di esempio xamarin. Forms, ma il potenziale per risolvere questo problema può verificarsi in qualsiasi progetto che usa i pacchetti NuGet.
+Questo problema è stato segnalato principalmente per le soluzioni di esempio di Novell. Forms, ma la possibilità di questo problema può verificarsi in qualsiasi progetto che usa pacchetti NuGet.
 
 ### <a name="unifying-google-play-services-components-and-nugetgps-components-nugetmd"></a>[Unificazione dei componenti di Google Play Services e NuGet](gps-components-nuget.md)
-Sono utilizzati da diversi componenti di Google Play Services e pacchetti NuGet, ma per semplificare le cose per gli sviluppatori, abbiamo abbiamo ora unificata i componenti e NuGet pacchetti in due parti. In quasi ogni caso, usare Google Play Services. L'unico motivo per usare il pacchetto (Froyo) è se si usa attivamente Froyo.
+Sono stati usati diversi componenti Google Play Services e pacchetti NuGet, ma per semplificare le operazioni per gli sviluppatori, abbiamo ora unificato i nostri componenti e pacchetti NuGet in due. In quasi tutti i casi, è necessario usare Google Play Services. L'unico motivo per usare il pacchetto (Froyo) è la destinazione attiva di Froyo.
 
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[In quale posizione sono archiviati i componenti nel computer?](component-storage.md)
-Quando si installa un componente Xamarin in un progetto di App, si ottiene inserito nei due percorsi elencati in questa Guida.
+Ogni volta che si installa un componente Novell in un progetto di app, questo viene inserito nelle due posizioni elencate in questa guida.
 
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Dove si possono trovare informazioni sulla versione e i log?](version-logs.md)
-Questa guida viene illustrato dove trovare la maggior parte delle informazioni di diagnostica che possono essere utilizzate per risolvere i problemi di Xamarin.
+Questa guida descrive in dettaglio dove trovare le informazioni di diagnostica che possono essere usate per risolvere i problemi relativi a Novell.
 
 ### <a name="when-and-how-should-i-file-a-bug-reporthowto-file-bugmd"></a>[Quando e come è opportuno registrare un report sui bug?](howto-file-bug.md)
-Questa guida vengono forniti suggerimenti per l'invio di segnalazioni di bug di alta qualità, in modo che i tecnici sono in grado di determinare la causa (e le potenziali correzioni) per un problema in modo più efficiente.
+Questa guida fornisce suggerimenti per la creazione di report di bug di alta qualità, in modo che i tecnici siano in grado di determinare la causa (e le eventuali correzioni potenziali) per un problema in modo più efficiente.
 
 ### <a name="why-isnt-jenkins-supported-by-xamarinxamarin-jenkinsmd"></a>[Perché Jenkins non è supportato da Xamarin?](xamarin-jenkins.md)
-Jenkins è una suite di integrazione continua open source; a causa di questo molti problemi sono causati direttamente dagli Jenkins *sé* dovrà essere presentata come problemi di in cui è stato ottenuto il codice, ad esempio il [repository Jenkins principale](https://github.com/jenkinsci/jenkins), o il repository per [ Jenkins.app](https://github.com/stisti/jenkins-app).
+Jenkins è una suite CI open source, a causa di questo problema, i problemi causati direttamente *da Jenkins dovranno* essere archiviati come problemi rispetto alla posizione in cui è stato ottenuto il codice; come il [repository Jenkins principale](https://github.com/jenkinsci/jenkins)o il repository per [Jenkins. app](https://github.com/stisti/jenkins-app).
 
 ### <a name="what-project-settings-are-required-for-the-debuggerdebugger-settingsmd"></a>[Quali impostazioni di progetto sono richieste per il debugger?](debugger-settings.md)
-Affinché il debugger a funzionare come previsto (passaggi dei punti di interruzione, visualizzare i log di debug e così via), visualizzazione di informazioni di debug e strumentazione per sviluppatori deve essere entrambi abilitata. Questa guida illustra come trovare e attivare queste impostazioni.
+Affinché il debugger funzioni come previsto (hit punti di interruzione, Visualizza log di debug e così via), è necessario abilitare entrambi gli strumenti per la visualizzazione di informazioni di debug e strumentazione per sviluppatori. Questa guida illustra come trovare e attivare queste impostazioni.
 

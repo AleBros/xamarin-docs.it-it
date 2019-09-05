@@ -1,41 +1,41 @@
 ---
 title: Modifiche all'architettura in iOS 11
-description: Questo documento descrive la deprecazione delle App a 32 bit in iOS 11. Illustra come aggiornare le applicazioni per le architetture a 64 bit di destinazione.
+description: Questo documento descrive la deprecazione delle app a 32 bit in iOS 11. Viene illustrato come aggiornare le applicazioni per le architetture a 64 bit di destinazione.
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: b7d1df6ed2a8bd480025681ebcbe48acd7592564
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 15cd6139cc83639146e6044d2b791d94ee30f2d9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169350"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286356"
 ---
 # <a name="architecture-changes-in-ios-11"></a>Modifiche all'architettura in iOS 11
 
-Una delle principali modifiche che è necessario essere consapevoli di IOS 11 è la rimozione del supporto di 32 bit per le app, come descritto nei [Apple](https://developer.apple.com/news/?id=06282017b) comunicati stampa. Tutte le nuove applicazioni e aggiornamenti per le app esistenti devono supportare a 64 bit. le app a 32 **non verranno avviate** in iOS 11.
+Una delle modifiche più importanti che è necessario conoscere con iOS 11 è la deprecazione del supporto a 32 bit per le app, come descritto in dettaglio in [Apple](https://developer.apple.com/news/?id=06282017b) Press Release. Tutte le nuove app e gli aggiornamenti per le app esistenti devono supportare 64 bit. le app a 32 bit **non vengono avviate** in iOS 11.
 
-Per aggiornare l'app in Visual Studio per Mac, usare la procedura seguente:
+Per aggiornare l'app in Visual Studio per Mac, seguire questa procedura:
 
-1. Fare doppio clic sul nome del progetto aprire **opzioni progetto**.
-2. Selezionare il **compilazione iOS** scheda.
-3. Impostare il **architetture supportate** elenco a discesa per **x86_64** per il **Debug | iPhoneSimulator** e **versione | iPhoneSimulator**:
+1. Fare clic con il pulsante destro del mouse sul nome del progetto per aprire **Opzioni progetto**.
+2. Passare alla scheda **compilazione iOS** .
+3. Impostare l'elenco a discesa **architetture supportate** su **x86_64** per **debug | iPhoneSimulator** e **Release | iPhoneSimulator**:
 
-    ![Modificare l'elenco a discesa architetture del simulatore](architecture-changes-images/image1.png)
+    ![Modificare l'elenco a discesa architetture simulatori](architecture-changes-images/image1.png)
 
-4. Per i dispositivi iOS, modificare la configurazione su **Debug | iPhone** e impostare le **architetture supportate** elenco a discesa per **ARM64**:
+4. Per i dispositivi iOS, modificare la configurazione in **debug | iPhone** e impostare l'elenco a discesa **architetture supportate** su **arm64**:
 
-    ![Modificare l'elenco a discesa architetture di dispositivo](architecture-changes-images/image2.png)
+    ![Modificare l'elenco a discesa architetture dispositivi](architecture-changes-images/image2.png)
 
-5. Modificare la configurazione su **versione | iPhone** e impostare le **architetture supportate** elenco a discesa per **ARM64**.
+5. Modificare la configurazione in **release | iPhone** e impostare l'elenco a discesa **architetture supportate** su **arm64**.
 
-Per altre informazioni su architetture a 32 bit e 64 bit, vedere la [considerazioni sulle piattaforme a 32 o 64 bit](~/cross-platform/macios/32-and-64/index.md#ios) Guida.
+Per ulteriori informazioni sulle architetture a 32 bit e a 64 bit, vedere la Guida alle [considerazioni sulla piattaforma di bit 32/64](~/cross-platform/macios/32-and-64/index.md#ios) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [What ' s New in iOS 11 (Apple)](https://developer.apple.com/ios/)
-- [Pagina del prodotto aggiornato App Store (Apple)](https://developer.apple.com/app-store/product-page/)
-- [Aggiornamento dell'App per iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)
+- [Novità di iOS 11 (Apple)](https://developer.apple.com/ios/)
+- [Pagina del prodotto App Store aggiornata (Apple)](https://developer.apple.com/app-store/product-page/)
+- [Aggiornamento dell'app per iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)

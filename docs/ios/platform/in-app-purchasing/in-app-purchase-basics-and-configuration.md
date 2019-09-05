@@ -4,15 +4,15 @@ description: Questo documento descrive gli acquisti in-app in Novell. iOS, illus
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0c24c0f3a57847a7ecf1a1410a1745419517e0c6
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198867"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288581"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Novell. iOS
 
@@ -23,7 +23,7 @@ Per implementare gli acquisti in-app, è necessario che l'applicazione utilizzi 
 L'uso dell'app Store per fornire l'acquisto in-app richiede l'installazione e la configurazione seguenti:
 
 - **iTunes Connect** : configurazione dei prodotti per la vendita e la configurazione degli account utente sandbox per testare l'acquisto. È inoltre necessario fornire le informazioni bancarie e fiscali ad Apple in modo che possano ripartire i fondi raccolti per conto dell'utente.
-- **portale** di provisioning iOS: creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app.
+- **portale di provisioning iOS** : creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app.
 - **Store Kit** -aggiunta di codice all'app per la visualizzazione di prodotti, l'acquisto di prodotti e il ripristino di transazioni.
 - **Codice personalizzato** : per tenere traccia degli acquisti effettuati dai clienti e fornire i prodotti o i servizi acquistati. Potrebbe anche essere necessario implementare un processo sul lato server per convalidare le ricevute se i prodotti sono costituiti da contenuto scaricato da un server, ad esempio problemi relativi a libri e riviste.
 
@@ -51,7 +51,7 @@ Prima di scrivere il codice di acquisto in-app, è necessario eseguire alcune op
 Questi tre passaggi devono essere completati prima di scrivere il codice:
 
 - **Account per sviluppatore Apple** : inviare le informazioni bancarie e fiscali ad Apple.
-- **portale** di provisioning di iOS: assicurarsi che l'app abbia un ID app valido (non un carattere jolly con un asterisco *) e che sia abilitato per l'acquisto di app.
+- **portale di provisioning di iOS** : assicurarsi che l'app abbia un ID app valido (non un carattere jolly con un asterisco *) e che sia abilitato per l'acquisto di app.
 - **gestione delle applicazioni di iTunes Connect** : aggiungere i prodotti all'applicazione.
 
 
@@ -65,11 +65,11 @@ Per l'account sviluppatore deve essere attivo un contratto per **applicazioni a 
 
  [![](in-app-purchase-basics-and-configuration-images/image3.png "L'account sviluppatore deve avere un contratto di applicazioni a pagamento iOS attivo")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
 
-Non sarà possibile testare le funzionalità di StoreKit fino a quando non si dispone di un contratto per **le applicazioni a pagamento iOS** : le chiamate StoreKit nel codice avranno esito negativo fino a quando Apple non avrà elaborato i **contratti,** le imposte e le informazioni bancarie.
+Non sarà possibile testare le funzionalità di StoreKit fino a quando non si dispone di un contratto per **le applicazioni a pagamento iOS** : le chiamate StoreKit nel codice avranno esito negativo fino a quando Apple non avrà elaborato i **contratti, le imposte e le informazioni bancarie** .
 
 ### <a name="ios-provisioning-portal"></a>Portale di provisioning iOS
 
-Le nuove applicazioni vengono configurate nella sezione **ID app** del **portale**di provisioning iOS. Per creare un nuovo ID app, passare al [centro membri del portale di provisioning iOS](https://developer.apple.com/membercenter/index.action), passare alla sezione **certificati, identificatori e profili** del portale e fare clic su identificatori in *app iOS*. Quindi, fare clic su "+" in alto a destra per generare un nuovo ID app.
+Le nuove applicazioni vengono configurate nella sezione **ID app** del **portale di provisioning iOS**. Per creare un nuovo ID app, passare al [centro membri del portale di provisioning iOS](https://developer.apple.com/membercenter/index.action), passare alla sezione **certificati, identificatori e profili** del portale e fare clic su **identificatori** in *app iOS*. Quindi, fare clic su "+" in alto a destra per generare un nuovo ID app.
 
 
 Il modulo per la creazione di nuovi **ID app**
@@ -95,7 +95,7 @@ Si noti che l' **acquisto in-app** verrà abilitato automaticamente nell'elenco 
 
 #### <a name="provisioning-profiles"></a>Profili di provisioning
 
-Creare i profili di provisioning di sviluppo e produzione normalmente, selezionando l'ID app configurato per l'acquisto in-app. Per ulteriori informazioni, vedere la pagina relativa al provisioning e alla pubblicazione dei [dispositivi iOS](~/ios/get-started/installation/device-provisioning/index.md) nelle guide all' [App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) .
+Creare i profili di provisioning di sviluppo e produzione normalmente, selezionando l'ID app configurato per l'acquisto in-app. Per ulteriori informazioni, vedere la pagina relativa al [provisioning](~/ios/get-started/installation/device-provisioning/index.md) e alla pubblicazione dei dispositivi iOS nelle guide all' [App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) .
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
@@ -142,7 +142,7 @@ L'ID prodotto non viene visualizzato agli utenti, ma viene usato per fare riferi
 
 Sono disponibili cinque tipi di prodotto di acquisto in-app che è possibile offrire:
 
-1. Utilizzabile: elementi che sono "usati", ad esempio valuta del gioco che il giocatore può spendere. Se l'utente esegue un backup o un ripristino o se il dispositivo viene aggiornato, non viene ripristinata anche una transazione utilizzabile (il che darebbe al giocatore lo stesso vantaggio). Il codice dell'applicazione deve assicurarsi di fornire l'elemento "utilizzabile" non appena la transazione viene completata.
+1. **Utilizzabile: elementi** che sono "usati", ad esempio valuta del gioco che il giocatore può spendere. Se l'utente esegue un backup o un ripristino o se il dispositivo viene aggiornato, non viene ripristinata anche una transazione utilizzabile (il che darebbe al giocatore lo stesso vantaggio). Il codice dell'applicazione deve assicurarsi di fornire l'elemento "utilizzabile" non appena la transazione viene completata.
 1. **Non** utilizzabile: i prodotti che l'utente ' possiede ' ha acquistato, ad esempio un problema di rivista digitale o un livello di gioco.
 1. **Sottoscrizioni rinnovate** automaticamente: Analogamente a una sottoscrizione di Magazine reale, al termine del periodo di sottoscrizione Apple addebita automaticamente il cliente ed estende il periodo di validità della sottoscrizione, per sempre o fino a quando non viene annullato esplicitamente dal cliente. Questo è il metodo di pagamento preferito per le app in edicola (infatti, le app devono supportare questo metodo di pagamento per essere approvate per la distribuzione in edicola).
 1. **Sottoscrizione gratuita** : può essere offerta solo nelle app abilitate per l'edicola e consente al cliente di accedere al contenuto della sottoscrizione su tutti i dispositivi. Le sottoscrizioni gratuite non scadono mai.

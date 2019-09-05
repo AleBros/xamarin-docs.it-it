@@ -3,15 +3,15 @@ title: Parte 5 - Strategie pratiche di condivisione del codice
 description: Questo documento vengono illustrate le strategie per scenari quali database, l'accesso ai file, le operazioni di rete e codice asincrono di condivisione del codice pratico.
 ms.prod: xamarin
 ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e7739642bdb9a10046286035c4aa1a3699bb75b0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9f0a4d0367142be500aeae67041feb8cd3bbca76
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526783"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288796"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5 - Strategie pratiche di condivisione del codice
 

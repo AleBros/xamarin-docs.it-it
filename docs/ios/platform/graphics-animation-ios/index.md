@@ -1,35 +1,35 @@
 ---
 title: Grafica e animazione in iOS
-description: Questo documento include collegamenti alle varie guide che illustrano come usare i framework di Core Animation, Core Graphics e immagine di base in xamarin. IOS.
+description: Questo documento contiene collegamenti a diverse guide che illustrano come usare l'immagine principale, la grafica principale e i Framework di animazione core in Novell. iOS.
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ab0a42fd717d62657e53fcc5c90669168860fdff
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 84e59c81e08bc354199565cb0a91b0aec0797feb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865743"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286077"
 ---
 # <a name="graphics-and-animation-in-ios"></a>Grafica e animazione in iOS
 
-![Images/00_final_app.PNG](images/00-final-app.png "eseguire un'app di esempio")
+![Images/00_final_app. png](images/00-final-app.png "Esecuzione di un'app di esempio")
 
-## <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Immagine di base](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
+## <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Immagine principale](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 
-CoreImage è un nuovo framework introdotto in iOS 5 che fornisce una serie di filtri predefiniti e gli effetti da applicare per le immagini e video, ad esempio rilevamento viso.
+CoreImage è un nuovo Framework introdotto in iOS 5 che offre una serie di filtri e effetti predefiniti da applicare alle immagini e ai video, incluso il rilevamento dei visi.
 
 ## <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
-Questo articolo illustra il framework iOS grafica di base che fornisce il supporto di disegno a basso livello. Viene illustrato come utilizzare Core Graphics per disegnare la geometria, immagini e PDF.
+Questo articolo illustra il Framework iOS di base della grafica che fornisce supporto per il disegno di basso livello. Viene illustrato come utilizzare la grafica di base per creare geometria, immagini e PDF.
 
 ## <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
 
-Questo articolo viene esaminato il framework di Core Animation, che mostra come creare ad alte prestazioni e le animazioni fluide in UIKit, e come usarlo direttamente per il controllo animazione di livello inferiore.
+Questo articolo esamina il Framework di animazione principale, mostrando come consente animazioni ad alte prestazioni e fluide in UIKit, oltre a come usarlo direttamente per il controllo di animazione di livello inferiore.
 
-## <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[Utilizzo Core Graphics e Core Animation](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
+## <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[Uso della grafica principale e dell'animazione principale](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 
-Procedura dettagliata, questo articolo illustra come creare un'applicazione che usa Core grafica e animazione di base. Viene illustrato come disegnare sullo schermo in risposta a tocco utente nonché come aggiungere un'animazione di un'immagine da percorrere lungo un percorso.
+Questo articolo illustra passo per passo come creare un'applicazione che usa la grafica di base e l'animazione principale. Viene illustrato come creare sullo schermo in risposta a tocco utente e come animare un'immagine per spostarsi lungo un tracciato.

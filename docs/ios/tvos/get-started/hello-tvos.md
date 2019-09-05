@@ -4,15 +4,15 @@ description: Questa guida illustra la creazione della prima app Novell. tvOS e d
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119171"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281813"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
@@ -53,7 +53,7 @@ Per iniziare, eseguire le operazioni seguenti:
 
     [![](hello-tvos-images/setup01.png "Visual Studio per Mac")](hello-tvos-images/setup01.png#lightbox)
 2. Fare clic sul collegamento **nuova soluzione** nell'angolo superiore sinistro della schermata per aprire la finestra di dialogo **nuovo progetto** .
-3. Selezionare app**visualizzazione singola** app **tvOS** >  > e fare clic sul pulsante **Avanti** :
+3. Selezionare**app** > **visualizzazione singola** app **tvOS** > e fare clic sul pulsante **Avanti** :
 
     [![](hello-tvos-images/setup02.png "Selezionare l'app visualizzazione singola")](hello-tvos-images/setup02.png#lightbox)
 4. Immettere `Hello, tvOS` per il **nome dell'app**, immettere l' **identificatore dell'organizzazione** e fare clic sul pulsante **Avanti** :
@@ -290,7 +290,7 @@ Seguire questa procedura:
 7. Selezionare il punto di manipolazione T nella parte superiore dell'etichetta e trascinarlo sul bordo superiore della finestra:
 
     [![](hello-tvos-images/designer09.png "Trascinare il quadratino di controllo sul bordo superiore della finestra")](hello-tvos-images/designer09.png#lightbox)
-8. Quindi, fare clic sulla larghezza e quindi sul punto di controllo dell'altezza, come illustrato di seguito:
+8. Quindi, fare clic sulla larghezza e quindi sul punto di controllo *dell'altezza,* come illustrato di seguito:
 
     [![](hello-tvos-images/designer10.png "La larghezza e i punti di ridimensionamento dell'altezza")](hello-tvos-images/designer10.png#lightbox)
 
@@ -438,7 +438,7 @@ Ogni volta che si compila un'applicazione, è possibile scegliere il tipo di com
 - **Debug** : una compilazione di debug viene compilata in un file '' (applicazione) con metadati aggiuntivi che consentono di eseguire il debug di ciò che accade durante l'esecuzione dell'applicazione.
 - **Versione** : una build di rilascio crea anche un file '', ma non include informazioni di debug, quindi è più piccolo ed eseguito più velocemente.  
 
-È possibile selezionare il tipo di compilazione dal selettore **configurazione** nell'angolo superiore sinistro della schermata Visual Studio per Mac:
+È possibile selezionare il tipo di compilazione dal **selettore configurazione** nell'angolo superiore sinistro della schermata Visual Studio per Mac:
 
 [![](hello-tvos-images/run01.png "Selezionare il tipo di compilazione")](hello-tvos-images/run01.png#lightbox)
 

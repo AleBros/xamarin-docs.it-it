@@ -1,34 +1,34 @@
 ---
 title: Panoramica dell'architettura
-description: Questo documento descrive l'architettura di Xamarin Workbooks, esaminare l'interazione tra l'agente interattivo e un client interattivo.
+description: In questo documento viene descritta l'architettura di Xamarin Workbooks, esaminando il modo in cui interagiscono tra l'agente interattivo e il client interattivo.
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: 352e8d0191512184ffd7d82fa0dfa0bc79fa24ca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7129d0bedddb272ef87e3d209cb05c2ca0c0acf4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61257425"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285286"
 ---
 # <a name="architecture-overview"></a>Panoramica dell'architettura
 
-Xamarin Workbooks include due componenti principali che devono funzionare in combinazione tra loro: _Agente_ e _Client_.
+Xamarin Workbooks include due componenti principali che devono funzionare insieme tra loro: _Agent_ e _client_.
 
-## <a name="interactive-agent"></a>Agente interattiva
+## <a name="interactive-agent"></a>Agente interattivo
 
-Il componente agente è un piccolo assembly specifici della piattaforma che viene eseguito nel contesto di un'applicazione .NET.
+Il componente Agent è un piccolo assembly specifico della piattaforma, che viene eseguito nel contesto di un'applicazione .NET.
 
-Xamarin Workbooks fornisce applicazioni "vuote" predefinite per numerose piattaforme, ad esempio iOS, Android, Mac e WPF. Queste applicazioni host in modo esplicito l'agente.
+Xamarin Workbooks offre applicazioni "vuote" predefinite per diverse piattaforme, ad esempio iOS, Android, Mac e WPF. Queste applicazioni ospitano in modo esplicito l'agente.
 
-Durante l'ispezione live (Xamarin Inspector), l'agente viene inserito tramite il debugger IDE in un'applicazione esistente come parte del normale sviluppo & debug del flusso di lavoro.
+Durante l'ispezione in tempo reale (Xamarin Inspector), l'agente viene inserito tramite il debugger IDE in un'applicazione esistente come parte del normale flusso di lavoro di debug & di sviluppo.
 
-## <a name="interactive-client"></a>Client Interactive
+## <a name="interactive-client"></a>Client interattivo
 
-Il client è una shell nativa (Cocoa in Mac, WPF in Windows) che ospita una superficie di browser web per la presentazione dell'interfaccia della cartella di lavoro o REPL. Dal punto di Vista SDK, le integrazioni di tutti i client vengono implementate in JavaScript e CSS.
+Il client è una Shell nativa (Cocoa in Mac, WPF in Windows) che ospita una superficie del browser Web per la presentazione dell'interfaccia cartella di lavoro/REPL. Dal punto di vista dell'SDK, tutte le integrazioni client sono implementate in JavaScript e CSS.
 
-Il client è responsabile (tramite Roslyn) per la compilazione di codice sorgente in assembly di piccole dimensioni e inviarle per l'esecuzione dell'agente connesso. Risultati dell'esecuzione vengono inviati al client per il rendering. Ogni cella in una cartella di lavoro genera un assembly cui fa riferimento all'assembly della cella precedente.
+Il client è responsabile (tramite Roslyn) per la compilazione di codice sorgente in piccoli assembly e per inviarli all'agente connesso per l'esecuzione. I risultati dell'esecuzione vengono restituiti al client per il rendering. Ogni cella di una cartella di lavoro produce un assembly che fa riferimento all'assembly della cella precedente.
 
-Poiché un agente può essere eseguito su qualsiasi tipo di piattaforma .NET e può accedere a qualsiasi elemento dell'applicazione in esecuzione, è necessario prestare attenzione alla serializzazione dei risultati in modo indipendente dalla piattaforma.
+Poiché un agente può essere eseguito in qualsiasi tipo di piattaforma .NET e può accedere a qualsiasi elemento nell'applicazione in esecuzione, è necessario prestare attenzione a serializzare i risultati in modo indipendente dalla piattaforma.

@@ -4,15 +4,15 @@ description: Questo documento fornisce un'introduzione agli storyboard in Novell
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 86198c7a2fa0460070d012afd0b7b9d078d2a5f3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 145c616cc0af8156f10b9db1d3fa36264cecd18b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528569"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284322"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Novell. iOS
 
@@ -29,7 +29,7 @@ Gli storyboard possono essere usati con la finestra di progettazione iOS in Visu
 
 ## <a name="what-is-a-storyboard"></a>Che cos'è uno storyboard?
 
-Uno storyboard è la rappresentazione visiva di tutte le schermate in un'applicazione. Contiene una sequenza di scene, con ogni scena che rappresenta un *controller di visualizzazione* e le relative *visualizzazioni*. Queste visualizzazioni possono contenere oggetti e [controlli](~/ios/user-interface/controls/index.md) che consentiranno all'utente di interagire con l'applicazione. Questa raccolta di viste e controlli (osottoviste) è nota come gerarchia di *visualizzazione del contenuto*. Le scene sono connesse da oggetti segue, che rappresentano una transizione tra i controller di visualizzazione. Questa operazione viene in genere eseguita creando un segue tra un oggetto nella visualizzazione iniziale e la visualizzazione connessione. Le relazioni nell'area di progettazione sono illustrate nell'immagine seguente:
+Uno storyboard è la rappresentazione visiva di tutte le schermate in un'applicazione. Contiene una sequenza di scene, con ogni scena che rappresenta un *controller di visualizzazione* e le relative *visualizzazioni*. Queste visualizzazioni possono contenere oggetti e [controlli](~/ios/user-interface/controls/index.md) che consentiranno all'utente di interagire con l'applicazione. Questa raccolta di viste e controlli *(o sottoviste)* è nota come gerarchia di *visualizzazione del contenuto*. Le scene sono connesse da oggetti segue, che rappresentano una transizione tra i controller di visualizzazione. Questa operazione viene in genere eseguita creando un segue tra un oggetto nella visualizzazione iniziale e la visualizzazione connessione. Le relazioni nell'area di progettazione sono illustrate nell'immagine seguente:
 
  [![](images/storyboardsview.png "Le relazioni nell'area di progettazione sono illustrate in questa immagine")](images/storyboardsview.png#lightbox)
 
@@ -58,7 +58,7 @@ Al passaggio del mouse, viene visualizzato un menu che consente di scegliere l'a
 [![](images/16new.png "Elenco a discesa segue azione con classi di dimensioni")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Se si usa VMWare per la macchina virtuale Windows, per impostazione predefinita viene eseguito il mapping di CTRL + clic con il pulsante _destro_ del mouse. Per creare un segue, modificare le preferenze della tastiera tramite la**tastiera** > delle **Preferenze** > & le**scelte rapide** del mouse e modificare il mapping del **pulsante secondario** come illustrato di seguito:
+> Se si usa VMWare per la macchina virtuale Windows, per impostazione predefinita viene eseguito il mapping di CTRL + clic con il pulsante _destro_ del mouse. Per creare un segue, modificare le preferenze della tastiera tramite la tastiera delle **Preferenze** >  **&**  > le**scelte rapide** del mouse e modificare il mapping del **pulsante secondario** come illustrato di seguito:
 > 
 > [![](images/image22.png "Impostazioni delle preferenze di tastiera e mouse")](images/image22.png#lightbox)
 > 

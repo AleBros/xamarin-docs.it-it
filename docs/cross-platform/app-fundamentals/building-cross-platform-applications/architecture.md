@@ -3,21 +3,21 @@ title: Parte 2 - Architettura
 description: Questo documento descrive i modelli di architettura utili per la creazione di applicazioni multipiattaforma. Vengono illustrati i tipici livelli dell'applicazione (livello dati, livello di accesso ai dati e così via) e i modelli comuni di software per dispositivi mobili (MVVM, MVC e così via)
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 23758e9794904e60b0ba09fe740574da8e7b830c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7657985ce14633140adb0e63a9817ddd0e48841d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526645"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284576"
 ---
 # <a name="part-2---architecture"></a>Parte 2 - Architettura
 
 Un principio fondamentale della creazione di app multipiattaforma consiste nel creare un'architettura che si presta a una massimizzazione della condivisione del codice tra le diverse piattaforme. La conformità ai seguenti principi di programmazione orientata a oggetti consente di creare un'applicazione ben progettata:
 
-- Incapsulamento: garantire che le classi e anche i livelli architetturali espongano solo un'API minima che esegua le funzioni obbligatorie e nasconda i dettagli di implementazione. A livello di classe, ciò significa che gli oggetti si comportano come "black box" e che l'utilizzo di codice non deve necessariamente essere in grado di eseguire le attività. A livello di architettura, significa implementare modelli come la facciata che favoriscono un'API semplificata che orchestra le interazioni più complesse per conto del codice in livelli più astratti. Questo significa che il codice dell'interfaccia utente (ad esempio) dovrebbe essere responsabile solo della visualizzazione delle schermate e dell'accettazione dell'input utente. e non interagiscono mai direttamente con il database. Analogamente, il codice di accesso ai dati deve solo leggere e scrivere nel database, ma non interagire direttamente con i pulsanti o le etichette.
+- **Incapsulamento** : garantire che le classi e anche i livelli architetturali espongano solo un'API minima che esegua le funzioni obbligatorie e nasconda i dettagli di implementazione. A livello di classe, ciò significa che gli oggetti si comportano come "black box" e che l'utilizzo di codice non deve necessariamente essere in grado di eseguire le attività. A livello di architettura, significa implementare modelli come la facciata che favoriscono un'API semplificata che orchestra le interazioni più complesse per conto del codice in livelli più astratti. Questo significa che il codice dell'interfaccia utente (ad esempio) dovrebbe essere responsabile solo della visualizzazione delle schermate e dell'accettazione dell'input utente. e non interagiscono mai direttamente con il database. Analogamente, il codice di accesso ai dati deve solo leggere e scrivere nel database, ma non interagire direttamente con i pulsanti o le etichette.
 - **Separazione delle responsabilità** : assicurarsi che ogni componente (a livello di architettura e di classe) abbia uno scopo chiaro e ben definito. Ogni componente deve eseguire solo le proprie attività definite ed esporre tale funzionalità tramite un'API accessibile alle altre classi che devono utilizzarlo.
 - **Polimorfismo** : la programmazione in un'interfaccia (o classe astratta) che supporta più implementazioni significa che il codice di base può essere scritto e condiviso tra le diverse piattaforme, continuando comunque a interagire con le funzionalità specifiche della piattaforma.
 

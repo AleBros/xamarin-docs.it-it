@@ -3,15 +3,15 @@ title: Panoramica sulla compilazione di applicazioni multipiattaforma
 description: Questo documento fornisce una panoramica di alto livello della creazione di applicazioni multipiattaforma. Viene illustrato il valore di C#, modelli di progettazione come MVC/MVVM e interfacce utente Native.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c97cfda836f59d4cdbcd234744f723eb9429ace4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526854"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288380"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Panoramica sulla compilazione di applicazioni multipiattaforma
 
@@ -46,7 +46,7 @@ Per aumentare la quantità di riutilizzo del codice, è possibile adottare compo
 1. Uso delle funzionalità di .NET Framework per la rete, i servizi Web, i/o e altro ancora.
 
 
-Alcuni di questi componenti sono implementati nella case study Tasky.
+Alcuni di questi componenti sono implementati nella case study *Tasky* .
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
 

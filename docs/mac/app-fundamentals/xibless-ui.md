@@ -4,15 +4,15 @@ description: Questo articolo illustra la creazione di un'interfaccia utente dell
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226899"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283323"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-progettazione dell'interfaccia utente in Novell. Mac
 
@@ -247,18 +247,18 @@ Sono disponibili `NSWindowStyle` le seguenti funzionalità:
 - **Titolo** : la finestra avrà una barra del titolo.
 - **Closable** : la finestra dispone di un pulsante Chiudi e può essere chiusa.
 - **Miniaturizable** -la finestra ha un pulsante miniaturizzare e può essere ridotta a icona.
-- Ridimensionabile: la finestra avrà un pulsante Ridimensiona e sarà ridimensionabile.
+- **Ridimensionabile: la** finestra avrà un pulsante Ridimensiona e sarà ridimensionabile.
 - **Utilità** : la finestra è una finestra di stile utilità (pannello).
 - **DocModal** -se la finestra è un pannello, sarà modale per i documenti anziché per il sistema modale.
 - **NonactivatingPanel** -se la finestra è un pannello, la finestra principale non verrà creata.
 - **TexturedBackground** : la finestra avrà uno sfondo con trama.
-- Non ridimensionato: la finestra non verrà ridimensionata.
+- Non **ridimensionato** : la finestra non verrà ridimensionata.
 - **UnifiedTitleAndToolbar** : le aree del titolo e della barra degli strumenti della finestra verranno unite.
 - **HUD** : la finestra verrà visualizzata come pannello di visualizzazione Heads-up.
 - **FullScreenWindow** -la finestra può passare alla modalità schermo intero.
 - **FullSizeContentView** : la visualizzazione contenuto della finestra è dietro il titolo e l'area della barra degli strumenti.
 
-Le ultime due proprietà definiscono il _tipo_ di buffering per la finestra e se il disegno della finestra verrà posticipato. Per ulteriori informazioni su `NSWindows`, vedere l' [introduzione di Apple alla](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) documentazione di Windows.
+Le ultime due proprietà definiscono il _tipo di buffering_ per la finestra e se il disegno della finestra verrà posticipato. Per ulteriori informazioni su `NSWindows`, vedere l' [introduzione di Apple alla](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) documentazione di Windows.
 
 Infine, poiché la finestra non viene ingrandita da un file con estensione storyboard o XIB, è necessario simularla nel **MainWindowController.cs** chiamando il metodo Windows `AwakeFromNib` :
 

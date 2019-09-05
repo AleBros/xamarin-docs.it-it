@@ -4,15 +4,15 @@ description: Questo articolo fornisce una procedura dettagliata per la creazione
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121343"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285771"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Binding di una libreria Objective-C in iOS
 
@@ -569,7 +569,7 @@ Verranno ora esaminati rapidamente i protocolli in Objective-C e il modo in cui 
 
 ### <a name="protocols-and-xamarinios"></a>Protocolli e Novell. iOS
 
-In Objective-C, un protocollo definisce i metodi (o messaggi) che possono essere usati in determinate circostanze. Concettualmente, sono molto simili alle interfacce in C#. Una delle differenze principali tra un protocollo Objective-C e C# un'interfaccia è che i protocolli possono avere metodi facoltativi che non devono essere implementati da una classe. In Objective-C viene @optional utilizzata la parola chiave per indicare quali metodi sono facoltativi. Per ulteriori informazioni sui protocolli [, vedere eventi, protocolli e](~/ios/app-fundamentals/delegates-protocols-and-events.md)delegati.
+In Objective-C, un protocollo definisce i metodi (o messaggi) che possono essere usati in determinate circostanze. Concettualmente, sono molto simili alle interfacce in C#. Una delle differenze principali tra un protocollo Objective-C e C# un'interfaccia è che i protocolli possono avere metodi facoltativi che non devono essere implementati da una classe. In Objective-C viene @optional utilizzata la parola chiave per indicare quali metodi sono facoltativi. Per ulteriori informazioni sui protocolli [, vedere eventi, protocolli e delegati](~/ios/app-fundamentals/delegates-protocols-and-events.md).
 
 **InfColorPickerController** dispone di un protocollo di questo tipo, illustrato nel frammento di codice seguente:
 

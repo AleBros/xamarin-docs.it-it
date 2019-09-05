@@ -4,15 +4,15 @@ description: Questo documento descrive come modificare le tabelle in Novell. iOS
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f82057957e76ee683e2a649fdf6c2350bf282c18
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90ef335bd3683028d5f9951cdf2ca341158209b9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528644"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284205"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Modifica di tabelle con Novell. iOS
 
