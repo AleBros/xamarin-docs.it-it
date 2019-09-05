@@ -1,75 +1,75 @@
 ---
-title: Nozioni fondamentali dell'applicazione xamarin. IOS
-description: Questo documento include collegamenti alle varie guide che descrivono i concetti fondamentali per lo sviluppo di xamarin. IOS, ad esempio la sicurezza di trasporto di app, elaborazione in background in, eventi e threading.
+title: Nozioni fondamentali sulle applicazioni Novell. iOS
+description: Questo documento contiene collegamenti a diverse guide che descrivono i concetti fondamentali per lo sviluppo di Novell. iOS, ad esempio sicurezza del trasporto delle app, background, eventi e Threading.
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/21/2017
-ms.openlocfilehash: 120bbfe0d5fa91e632fc56ee05431f5555653360
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 59257dafc1d92756feb85046df43de7b9da0cc42
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268601"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290148"
 ---
-# <a name="xamarinios-application-fundamentals"></a>Nozioni fondamentali dell'applicazione xamarin. IOS
+# <a name="xamarinios-application-fundamentals"></a>Nozioni fondamentali sulle applicazioni Novell. iOS
 
-In questa sezione fornisce una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere presenti quando si sviluppano applicazioni xamarin. IOS (in precedenza MonoTouch).
+Questa sezione fornisce una guida su alcune delle attività più comuni o sui concetti che gli sviluppatori devono tenere presenti durante lo sviluppo di applicazioni Novell. iOS (in precedenza MonoTouch).
 
 ## <a name="accessibilityiosapp-fundamentalsaccessibilitymd"></a>[Accessibilità](~/ios/app-fundamentals/accessibility.md)
 
-Questo documento descrive diverse API e strumenti che possono essere utilizzati per la creazione di applicazioni che sono accessibili a tutti gli utenti possibili.
+Questo documento descrive le varie API e gli strumenti che è possibile usare per creare applicazioni accessibili al maggior numero possibile di utenti.
 
 ## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[ATS (App Transport Security)](~/ios/app-fundamentals/ats.md)
 
-Questo articolo verrà introdotte le modifiche di sicurezza che applica la sicurezza del trasporto di App in un'app per iOS 9 e cosa significa questo per i progetti xamarin. IOS, verranno illustrati le opzioni di configurazione di ATS e illustrerà come rifiutare esplicitamente di ATS, se necessario. Poiché ATS è abilitato per impostazione predefinita, tutte le connessioni internet non sicuri genererà un'eccezione nelle app di iOS 9 (a meno che non è stata autorizzata in modo esplicito,).
+In questo articolo vengono introdotte le modifiche di sicurezza applicate dalla sicurezza del trasporto app in un'app iOS 9 e il significato per i progetti Novell. iOS, che includerà le opzioni di configurazione di ATS e verrà illustrato come rifiutare esplicitamente ATS, se necessario. Poiché ATS è abilitato per impostazione predefinita, eventuali connessioni Internet non sicure genereranno un'eccezione nelle app iOS 9 (a meno che non sia stata consentita in modo esplicito).
 
 ## <a name="backgroundingiosapp-fundamentalsbackgroundingindexmd"></a>[Elaborazione in background](~/ios/app-fundamentals/backgrounding/index.md)
 
-In background di elaborazione o l'elaborazione in background in è il processo di consentire alle applicazioni di eseguire attività in background mentre un'altra applicazione è in esecuzione in primo piano. Questa guida serve come un'introduzione a iOS di elaborazione in background.
+L'elaborazione in background o in background è il processo che consente alle applicazioni di eseguire le attività in background mentre un'altra applicazione viene eseguita in primo piano. Questa guida funge da introduzione all'elaborazione in background in iOS.
 
 ## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Creazione di applicazioni iOS nel codice](~/ios/app-fundamentals/ios-code-only.md)
 
-Questo articolo viene illustrato come creare applicazioni iOS interamente in codice con Visual Studio e Visual Studio per Mac. Viene illustrato come avviare da un modello di progetto vuoto per creare una schermata dell'applicazione in un controller creando una gerarchia di visualizzazioni da UIKit. Quindi, viene illustrato come creare viste personalizzate che possono essere caricate in un controller.
+Questo articolo esamina come creare applicazioni iOS interamente nel codice usando Visual Studio e Visual Studio per Mac. Viene illustrato come iniziare da un modello di progetto vuoto per creare una schermata dell'applicazione in un controller creando una gerarchia di viste da UIKit. Viene quindi illustrato come creare visualizzazioni personalizzate che possono essere caricate in un controller.
 
 ## <a name="exception-marshalingiosplatformexception-marshalingmd"></a>[Marshalling delle eccezioni](~/ios/platform/exception-marshaling.md)
 
-Descrive la modalità di marshalling di Objective-C e le eccezioni gestite tra i frame nativi e gestiti.
+Viene descritto come eseguire il marshalling di Objective-C e delle eccezioni gestite tra frame nativi e gestiti.
 
-## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Gli eventi, protocolli e delegati](~/ios/app-fundamentals/delegates-protocols-and-events.md)
+## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Eventi, protocolli e delegati](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 
-Questo articolo presenta le tecnologie chiave iOS usate per ricevere i callback e per popolare i controlli dell'interfaccia utente con i dati. Queste tecnologie sono gli eventi, protocolli e delegati. questo articolo illustra gli elementi ciascuno di essi è e come ognuno viene usato da c#. Viene illustrato come xamarin. IOS Usa controlli di iOS per esporre familiare .NET anche gli eventi, come xamarin. IOS fornisce il supporto per i concetti di Objective-C, ad esempio i protocolli e delegati (delegati Objective-C non devono essere confusi con delegati c#). Questo articolo offre anche esempi che illustrano come i protocolli vengono usati sia come base per i delegati di Objective-C e in scenari non delegato.
+Questo articolo presenta le principali tecnologie iOS usate per ricevere callback e per popolare i controlli dell'interfaccia utente con i dati. Queste tecnologie sono eventi, protocolli e delegati. in questo articolo vengono illustrati i singoli elementi e il modo in C#cui vengono utilizzati. Viene illustrato il modo in cui Novell. iOS usa i controlli iOS per esporre eventi .NET noti, nonché il modo in cui Novell. iOS fornisce supporto per concetti di Objective-C, ad esempio protocolli e delegati ( C# i delegati Objective-c non devono essere confusi con i delegati). Questo articolo fornisce anche esempi che illustrano come usare i protocolli come base per i delegati Objective-C e negli scenari non delegati.
 
-## <a name="working-with-the-file-systemiosapp-fundamentalsfile-systemmd"></a>[Utilizzo di file system](~/ios/app-fundamentals/file-system.md)
+## <a name="working-with-the-file-systemiosapp-fundamentalsfile-systemmd"></a>[Utilizzo del file system](~/ios/app-fundamentals/file-system.md)
 
-Xamarin. IOS è possibile usare le stesse classi System.IO per lavorare con file e directory in iOS che si utilizzerebbe in qualsiasi applicazione .NET. Tuttavia, nonostante le familiari classi e metodi, iOS implementa alcune restrizioni sui file che possono essere creati o si accede e fornisce anche funzionalità speciali per alcune directory. Questo articolo descrive queste restrizioni e funzionalità e illustra il funzionamento di accesso ai file in un'applicazione xamarin. IOS.
+Novell. iOS può usare le stesse classi System.IO per lavorare con i file e le directory in iOS da usare in qualsiasi applicazione .NET. Tuttavia, nonostante le classi e i metodi noti, iOS implementa alcune restrizioni sui file che è possibile creare o a cui si accede e fornisce anche funzionalità speciali per determinate directory. In questo articolo vengono descritte queste restrizioni e funzionalità e viene illustrato il funzionamento dell'accesso ai file in un'applicazione Novell. iOS.
 
-## <a name="working-with-imagesiosapp-fundamentalsimages-iconsindexmd"></a>[Utilizzo di immagini](~/ios/app-fundamentals/images-icons/index.md)
+## <a name="working-with-imagesiosapp-fundamentalsimages-iconsindexmd"></a>[Uso delle immagini](~/ios/app-fundamentals/images-icons/index.md)
 
-Questo articolo esamina come usare le immagini in xamarin. IOS, le immagini di supporto dell'applicazione (ad esempio icone, il caricamento di immagini e così via) sia immagini all'interno delle applicazioni (ad esempio immagini applicate ai controlli). Viene anche illustrato come usare Visual Studio per Mac per incorporare immagini, nonché come interagire con le immagini dal codice.
+Questo articolo illustra come usare le immagini in Novell. iOS, sia immagini di supporto dell'applicazione (ad esempio icone, caricamento di immagini e così via) che immagini all'interno delle applicazioni, ad esempio le immagini applicate ai controlli. Viene inoltre illustrato come utilizzare Visual Studio per Mac per incorporare immagini e come interagire con le immagini dal codice.
 
 ## <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[Localizzazione](~/ios/app-fundamentals/localization/index.md)
 
-Questa guida illustra l'aggiunta delle codifiche a un'applicazione xamarin. IOS per il supporto di internazionalizzazione.
+Questa guida illustra l'aggiunta di codifiche a un'applicazione Novell. iOS per supportare l'internazionalizzazione.
 
 ## <a name="working-with-property-listsiosapp-fundamentalsindexmd"></a>[Utilizzo degli elenchi di proprietà](~/ios/app-fundamentals/index.md)
 
-Questo documento presenta Visual Studio per l'editor dell'elenco (con estensione plist) proprietà grafiche e avanzato del Mac per l'utilizzo di Info. plist ed entitlements. plist. Viene illustrata l'impostazione delle icone e immagini per applicazione iOS, esecuzione e viene illustrato come specificare le funzionalità delle app (gli Entitlement) da Visual Studio per Mac.
+Questo documento introduce l'editor grafico e avanzato delle proprietà (estensione plist) di Visual Studio per Mac per l'uso di info. plist e dei diritti. plist. Viene illustrata l'impostazione delle icone e delle immagini di avvio per l'applicazione iOS e viene illustrato come specificare le funzionalità delle app (diritti) dall'interno Visual Studio per Mac.
 
-## <a name="working-with-security-and-privacyiosapp-fundamentalssecurity-privacymd"></a>[Utilizzo di sicurezza e privacy](~/ios/app-fundamentals/security-privacy.md)
+## <a name="working-with-security-and-privacyiosapp-fundamentalssecurity-privacymd"></a>[Uso della sicurezza e della privacy](~/ios/app-fundamentals/security-privacy.md)
 
-Apple ha introdotto numerosi miglioramenti al sia sicurezza e privacy in iOS 10 (e versioni successive) che consentono allo sviluppatore di migliorare la sicurezza delle proprie App e garantire la privacy dell'utente finale. Questo articolo illustra l'implementazione di queste funzionalità in un'app xamarin. IOS.
+Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in iOS 10 (e versioni successive) che aiuteranno lo sviluppatore a migliorare la sicurezza delle app e garantire la privacy degli utenti finali. In questo articolo viene illustrata l'implementazione di queste funzionalità in un'app Novell. iOS.
 
 ## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Threading](~/ios/app-fundamentals/threading.md)
 
-Questo articolo illustra il threading in un'applicazione xamarin. IOS e comunica con un po' sui pool di thread .NET, applicazioni reattive e operazioni di garbage collection.
+Questo articolo illustra il threading in un'applicazione Novell. iOS e comunica un po' sul pool di thread .NET, sulle applicazioni reattive e Garbage Collection.
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Tocco](~/ios/app-fundamentals/touch/index.md)
 
-Touchscreen su molti dei dispositivi moderni consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento di tocco semplice: è possibile usare anche i movimenti. Ad esempio, il movimento di zoom con avvicinamento delle dita è un esempio molto comune, dall'avvicinamento una parte della schermata con due dita, che l'utente può eseguire lo zoom avanti o indietro. Questa guida esamina il tocco e movimenti in iOS.
+Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di interagire in modo rapido ed efficiente con i dispositivi in modo naturale e intuitivo. Questa interazione non è limitata solo al rilevamento semplice del tocco: è possibile utilizzare anche i movimenti. Ad esempio, il gesto di pinch-to-zoom è un esempio molto comune: pizzicando una parte dello schermo con due dita, l'utente può ingrandire o ridurre. Questa guida esamina il tocco e i movimenti in iOS.
 
-## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Utilizzo di impostazioni predefinite dell'utente](~/ios/app-fundamentals/user-defaults.md)
+## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Utilizzo delle impostazioni predefinite dell'utente](~/ios/app-fundamentals/user-defaults.md)
 
-Il `NSUserDefaults` classe fornisce un modo per iOS App ed estensioni per interagire a livello di codice con il sistema a livello di sistema predefinito. Tramite il sistema per impostazione predefinita, l'utente può configurare il comportamento di un'app o applicazione di stili per soddisfare le proprie preferenze (in base alla struttura dell'app). Ad esempio, per presentare i dati in Visual Studio metrica misurazioni imperiale o selezionare un tema dell'interfaccia utente specificato.
+La `NSUserDefaults` classe fornisce un modo per le app e le estensioni iOS per interagire a livello di codice con il sistema predefinito a livello di sistema. Usando il sistema predefinito, l'utente può configurare il comportamento o lo stile di un'app per soddisfare le preferenze (in base alla progettazione dell'app). Ad esempio, per presentare i dati nelle misure metrica rispetto a quelle imperiali oppure selezionare un tema dell'interfaccia utente specifico.

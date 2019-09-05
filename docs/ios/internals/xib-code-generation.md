@@ -4,20 +4,20 @@ description: Questo documento descrive il modo in cui Novell. iOS genera il codi
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 280802adbb5326854b4d47045bbb1569dd123f30
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527337"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291826"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Generazione del codice XIB in Novell. iOS
 
 > [!IMPORTANT]
->  Questo documento illustra l'integrazione di Visual Studio per Mac solo con Interface Builder di Xcode, in quanto le azioni e gli Outlet non vengono usati nella Xamarin Designer per iOS. Per altre informazioni su iOS designer, vedere il documento di [iOS designer](~/ios/user-interface/designer/index.md) .
+> Questo documento illustra l'integrazione di Visual Studio per Mac solo con Interface Builder di Xcode, in quanto le azioni e gli Outlet non vengono usati nella Xamarin Designer per iOS. Per altre informazioni su iOS designer, vedere il documento di [iOS designer](~/ios/user-interface/designer/index.md) .
 
 Lo strumento di Interface Builder Apple ("IB") può essere usato per progettare visivamente interfacce utente. Le definizioni di interfaccia create da IB vengono salvate nei file con **estensione XIB** . Ai widget e ad altri oggetti nei file con **estensione XIB** può essere assegnata una "identità della classe", che può essere un tipo personalizzato definito dall'utente. In questo modo è possibile personalizzare il comportamento dei widget e scrivere widget personalizzati.
 

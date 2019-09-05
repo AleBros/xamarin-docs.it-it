@@ -4,15 +4,15 @@ description: Questa sezione illustra come implementare le notifiche locali in No
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 7f2619010a410cabc54074e669ff4f1ea24bd0fa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb8956e44a3148d79fff59d728cb63818b9bab60
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655498"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292743"
 ---
 # <a name="notifications-in-xamarinios"></a>Notifiche in Novell. iOS
 
@@ -23,7 +23,7 @@ iOS offre tre modi per indicare all'utente che è stata ricevuta una notifica:
 
 - **Audio o vibrazione** : iOS può riprodurre un suono per notificare agli utenti. Se il suono è disabilitato, il dispositivo può essere configurato per la vibrazione.
 - **Avvisi** : è possibile visualizzare una finestra di dialogo sullo schermo con le informazioni sulla notifica.
-- Notifiche: quando viene pubblicata una notifica, è possibile visualizzare un numero (con badge) nell'icona dell'applicazione.
+- Notifiche **: quando** viene pubblicata una notifica, è possibile visualizzare un numero (con badge) nell'icona dell'applicazione.
 
 iOS fornisce anche un *Centro notifiche* che consente di visualizzare tutte le notifiche, sia locali che remote, per l'utente. Gli utenti possono accedere a questa operazione scorrendo verso il basso dalla parte superiore della schermata:
 

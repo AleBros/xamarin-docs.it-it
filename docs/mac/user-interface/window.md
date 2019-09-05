@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso di finestre e pannelli in un'applica
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6d766e74f99e3c69259a41ce13501de80cf0231a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653110"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291541"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in Novell. Mac
 
@@ -57,7 +57,7 @@ Per altre informazioni, vedere la sezione [About Windows](https://developer.appl
 
 Windows in un'applicazione Novell. Mac può apparire e comportarsi in modo diverso in base alla modalità di interazione dell'utente. Il primo documento o la finestra dell'app attualmente concentrata sull'attenzione dell'utente è detta _finestra principale_. Nella maggior parte dei casi questa finestra sarà anche la _finestra chiave_ , ovvero la finestra che sta attualmente accettando l'input dell'utente. Tuttavia, questo non è sempre il caso, ad esempio, un selettore di colori potrebbe essere aperto ed essere la finestra chiave con cui l'utente interagisce per modificare lo stato di un elemento nella finestra del documento (che sarebbe ancora la finestra principale).
 
-Le finestre principale e chiave (se sono separate) sono sempre attive, le finestre inattive sono finestre aperte che non sono in primo piano. Ad esempio, un'applicazione editor di testo potrebbe avere più di un documento aperto alla volta, ma solo la finestra principale sarebbe attiva, tutte le altre sarebbero inattive. 
+Le finestre principale e chiave (se sono separate) sono sempre attive, le finestre _inattive_ sono finestre aperte che non sono in primo piano. Ad esempio, un'applicazione editor di testo potrebbe avere più di un documento aperto alla volta, ma solo la finestra principale sarebbe attiva, tutte le altre sarebbero inattive. 
 
 Per altre informazioni, vedere la sezione [About Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) delle [linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) di Apple
 
@@ -136,12 +136,12 @@ In **controllo attributi**sono disponibili diverse proprietà che è possibile u
 - **Barra degli strumenti e titolo unificato** : se la finestra include una barra degli strumenti, deve essere parte della barra del titolo.
 - **Visualizzazione contenuto con dimensioni complete** : consente all'area del contenuto della finestra di trovarsi sotto la barra del titolo.
 - **Shadow** : la finestra ha un'ombreggiatura.
-- Le finestre con trama con trama possono usare effetti (ad esempio, vivacità) e possono essere spostate trascinando in un punto qualsiasi del corpo.
+- Le finestre con trama **con trama possono** usare effetti (ad esempio, vivacità) e possono essere spostate trascinando in un punto qualsiasi del corpo.
 - **Close** : la finestra dispone di un pulsante Chiudi.
 - **Riduci a icona** -la finestra dispone di un pulsante Riduci a icona.
 - **Ridimensiona** : la finestra dispone di un controllo di ridimensionamento.
 - **Pulsante della barra degli strumenti** : la finestra dispone di un pulsante della barra degli strumenti Nascondi/Mostra.
-- Restorable-è la posizione e le impostazioni della finestra salvate e ripristinate automaticamente.
+- **Restorable** -è la posizione e le impostazioni della finestra salvate e ripristinate automaticamente.
 - **Visibile all'avvio** : è la finestra visualizzata automaticamente quando il `.xib` file viene caricato.
 - **Nascondi su Disattiva** : è la finestra nascosta quando l'applicazione entra in background.
 - **Rilascia alla chiusura** : la finestra viene rimossa dalla memoria quando viene chiusa.
@@ -746,7 +746,7 @@ Nel **controllo attributi**sono disponibili le seguenti opzioni specifiche per i
 
 - **Stile** : consente di modificare lo stile del pannello da: Pannello normale (simile a una finestra standard), il pannello utilità (ha una barra del titolo inferiore), il pannello HUD (è traslucido e la barra del titolo fa parte dello sfondo).
 - **Non attivato** : determina che nel pannello diventa la finestra principale.
-- Modale del documento: se il documento è modale, il pannello verrà spostato sopra le finestre dell'applicazione; in caso contrario, viene eseguito il float.
+- Modale **del documento:** se il documento è modale, il pannello verrà spostato sopra le finestre dell'applicazione; in caso contrario, viene eseguito il float.
 
 
 Per aggiungere un nuovo pannello, procedere come segue:
@@ -762,7 +762,7 @@ Per aggiungere un nuovo pannello, procedere come segue:
 5. Eliminare la finestra esistente e trascinare un pannello da **controllo libreria** nell'editor di **interfaccia**: 
 
     [![](window-images/panels01.png "Eliminazione della finestra esistente")](window-images/panels01.png#lightbox)
-6. Collegare il pannello alla**presa**della - **finestra** - proprietaria del file: 
+6. Collegare il pannello alla**presa**della**finestra** -  **proprietaria** - del file: 
 
     [![](window-images/panels02.png "Trascinamento per collegare il pannello")](window-images/panels02.png#lightbox)
 7. Passare al **controllo di identità** e impostare la classe del pannello su `DocumentPanel`: 

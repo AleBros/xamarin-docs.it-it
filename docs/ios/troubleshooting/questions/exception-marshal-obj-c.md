@@ -4,26 +4,26 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 3dbb4d9132d5d94e4533704730e95002b5aec0be
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 62a63dc5156d1acf9ad6ca15029978131c151726
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832267"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290477"
 ---
 # <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>Perché l'app iOS 9 restituisce l'errore: System.Exception: Failed to marshal the Objective-C object (System.Exception: marshalling oggetto Objective-C non riuscito)?
 
-Potrebbe essere visualizzato un errore di questo modulo:
+È possibile che venga visualizzato un errore nel formato seguente:
 
-> System.Exception: Non è riuscito a effettuare il marshalling dell'oggetto Objective-C... Impossibile trovare un'istanza gestita esistente per questo oggetto...
+> System.Exception: Non è stato possibile effettuare il marshalling dell'oggetto Objective-C... Impossibile trovare un'istanza gestita esistente per questo oggetto...
 
-Modifiche apportate all'API in iOS 9 richiede l'utilizzo di un costruttore di callback quando la chiamata a codice non gestito, come l'API sottostante a questo punto si aspetta. Usare la riga seguente per aggiungere il costruttore di callback alla classe: 
+Le modifiche alle API in iOS 9 richiedono che venga usato un costruttore di callback quando si chiama il codice non gestito, perché l'API sottostante ora lo prevede. Utilizzare la riga seguente per aggiungere il costruttore di callback alla classe: 
 
 `public foo (IntPtr handle) : base (handle)` 
 
 ### <a name="next-steps"></a>Fasi successive
 
-Per ulteriore assistenza, contattare il supporto tecnico o se il problema rimane anche dopo che usano le informazioni sopra riportate, vedi [le opzioni di supporto sono disponibili per Xamarin?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché come archiviare un nuovo bug se necessario. 
+Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario . 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523996"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280601"
 ---
 # <a name="location-services-on-android"></a>Servizi di posizione in Android
 
@@ -336,15 +336,15 @@ else
 ```
 
 > [!NOTE]
->  Se l'utente ha disabilitato tutti i provider `GetBestProvider` di percorsi `null`, restituirà. Per vedere come funziona questo codice in un dispositivo reale, assicurarsi di abilitare le reti GPS, Wi-Fi e cellulari in **Impostazioni Google > percorso >** come illustrato in questa schermata:
-
-[![Schermata Impostazioni modalità posizione in un telefono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-La schermata seguente illustra l'applicazione location in esecuzione `GetBestProvider`con:
-
-[![App GetBestProvider che visualizza latitudine, Longitudine e provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-Tenere presente che `GetBestProvider` non modifica il provider in modo dinamico. Determina invece il migliore provider disponibile una volta durante il ciclo di vita dell'attività. Se lo stato del provider cambia dopo che è stato impostato, l'applicazione richiederà codice aggiuntivo nei `ILocationListener` metodi &ndash; `OnProviderEnabled`, `OnProviderDisabled`e `OnStatusChanged` &ndash; per gestire tutte le possibilità correlate al opzione del provider.
+> Se l'utente ha disabilitato tutti i provider `GetBestProvider` di percorsi `null`, restituirà. Per vedere come funziona questo codice in un dispositivo reale, assicurarsi di abilitare le reti GPS, Wi-Fi e cellulari in **Impostazioni Google > percorso >** come illustrato in questa schermata:
+>
+> [![Schermata Impostazioni modalità posizione in un telefono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> La schermata seguente illustra l'applicazione location in esecuzione `GetBestProvider`con:
+>
+> [![App GetBestProvider che visualizza latitudine, Longitudine e provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> Tenere presente che `GetBestProvider` non modifica il provider in modo dinamico. Determina invece il migliore provider disponibile una volta durante il ciclo di vita dell'attività. Se lo stato del provider cambia dopo che è stato impostato, l'applicazione richiederà codice aggiuntivo nei `ILocationListener` metodi &ndash; `OnProviderEnabled`, `OnProviderDisabled`e `OnStatusChanged` &ndash; per gestire tutte le possibilità correlate al opzione del provider.
 
 ## <a name="summary"></a>Riepilogo
 

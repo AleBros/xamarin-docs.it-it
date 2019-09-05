@@ -1,74 +1,74 @@
 ---
-title: macOS, le API per gli sviluppatori di xamarin. Mac
-description: Questo documento descrive come leggere i selettori Objective-C e come trovare i relativi metodi c# in un'app xamarin. Mac.
+title: API macOS per sviluppatori Novell. Mac
+description: Questo documento descrive come leggere i selettori Objective-C e come trovare i metodi C# corrispondenti in un'app Novell. Mac.
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/02/2017
-ms.openlocfilehash: c387bbead1ac56d7f4c4c05a79c430302e50aec1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c7dfa87d2fa4e3e5b917029451a081640a552cce
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085281"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280996"
 ---
-# <a name="macos-apis-for-xamarinmac-developers"></a>macOS, le API per gli sviluppatori di xamarin. Mac
+# <a name="macos-apis-for-xamarinmac-developers"></a>API macOS per sviluppatori Novell. Mac
 
 ## <a name="overview"></a>Panoramica
 
-Per la maggior parte del tempo allo sviluppo con xamarin. Mac, è possibile pensare, leggere e scrivere in c# senza preoccuparsi con le API Objective-C sottostante. Tuttavia, in alcuni casi sarà necessario leggere la documentazione dell'API di Apple, tradurre una risposta di Stack Overflow per una soluzione al problema o confrontare con un esempio esistente.
+Per la maggior parte del tempo di sviluppo con Novell. Mac, è possibile pensare, leggere e scrivere C# senza preoccuparsi delle API Objective-C sottostanti. Tuttavia, a volte è necessario leggere la documentazione dell'API da Apple, tradurre una risposta da Stack Overflow a una soluzione per il problema oppure confrontarla con un esempio esistente.
 
-## <a name="reading-enough-objective-c-to-be-dangerous"></a>La lettura sufficiente Objective-C per rappresentare un pericolo
+## <a name="reading-enough-objective-c-to-be-dangerous"></a>Lettura di un numero sufficiente di Objective-C come pericoloso
 
-In alcuni casi sarà necessario leggere una definizione di Objective-C o metodo chiamare e traduce al metodo c# equivalente. È possibile osservare una definizione di funzione Objective-C e suddividere le parti. Questo metodo (un *selettore* in Objective-C) è reperibile nella `NSTableView`:
+In alcuni casi sarà necessario leggere una definizione Objective-C o una chiamata al metodo e tradurla nel metodo C# equivalente. Diamo un'occhiata a una definizione di funzione Objective-C e suddivido le parti. Questo metodo (un *selettore* in Objective-C) si trova `NSTableView`in:
 
 ```objc
 - (BOOL)canDragRowsWithIndexes:(NSIndexSet *)rowIndexes atPoint:(NSPoint)mouseDownPoint
 ```
 
-La dichiarazione può essere letto da sinistra a destra:
+La dichiarazione può essere letta da sinistra a destra:
 
-- Il `-` prefisso significa che è un metodo di istanza (non statico). + indica un metodo di classe (statico)
-- `(BOOL)` è il tipo restituito (bool in c#)
-- `canDragRowsWithIndexes` è la prima parte del nome.
-- `(NSIndexSet *)rowIndexes` è il primo parametro e con essa è di tipo. Il primo parametro è nel formato: `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` è il secondo parametro e il relativo tipo. Ogni parametro dopo il primo è il formato: `selectorPart:(Type) pararmName`
-- Il nome completo del selettore messaggio è: `canDragRowsWithIndexes:atPoint:`. Si noti il `:` alla fine, è importante.
-- L'effettiva associazione di xamarin. Mac in c# è: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- Il `-` prefisso indica che si tratta di un metodo di istanza (non statico). + indica che si tratta di un metodo di classe (statico)
+- `(BOOL)`tipo restituito (bool in C#)
+- `canDragRowsWithIndexes`è la prima parte del nome.
+- `(NSIndexSet *)rowIndexes`è il primo parametro e con il tipo. Il primo parametro è nel formato:`(Type) pararmName`
+- `atPoint:(NSPoint)mouseDownPoint`è il secondo parametro e il relativo tipo. Ogni parametro dopo il primo è il formato:`selectorPart:(Type) pararmName`
+- Il nome completo di questo selettore di `canDragRowsWithIndexes:atPoint:`messaggi è:. `:` Si noti che alla fine è importante.
+- Il binding Novell. Mac C# effettivo è:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
-Questa chiamata selettore può essere letti allo stesso modo:
+Questa chiamata al selettore può essere letta nello stesso modo:
 
 ```objc
 [v canDragRowsWithIndexes:set atPoint:point];
 ```
 
-- L'istanza `v` ha riscontrato relativi `canDragRowsWithIndexes:atPoint` selettore chiamato con due parametri, `set` e `point`, in passato.
-- In c#, la chiamata al metodo è simile al seguente: `x.CanDragRows (set, point);`
+- Il `v` `canDragRowsWithIndexes:atPoint` selettore dell'istanza viene chiamato con due parametri `set` , `point`e, passati.
+- In C#la chiamata al metodo ha un aspetto simile al seguente:`x.CanDragRows (set, point);`
 
 <a name="finding_selector" />
 
-## <a name="finding-the-c-member-for-a-given-selector"></a>Trovare il membro c# per un selettore specificato
+## <a name="finding-the-c-member-for-a-given-selector"></a>Ricerca del C# membro per un selettore specificato
 
-Ora che si trovano il selettore di Objective-C che è necessario richiamare, il passaggio successivo è associare che al membro c# equivalente. Esistono quattro possibili approcci è possibile provare a (continuare con la `NSTableView CanDragRows` riportato):
+Ora che è stato trovato il selettore Objective-C che è necessario richiamare, il passaggio successivo consiste nel mapping al C# membro equivalente. Sono disponibili quattro approcci che è possibile provare (continuando `NSTableView CanDragRows` con l'esempio):
 
-1. Usare l'elenco di completamento automatico per individuare rapidamente un elemento con lo stesso nome. Poiché si sa è un'istanza di `NSTableView` è possibile digitare:
-
-    - `NSTableView x;`
-    - `x.` [ctrl + barra spaziatrice se non viene visualizzato l'elenco).
-    - `CanDrag` [enter]
-    - Il pulsante destro del metodo, Vai a dichiarazione per aprire il Browser di Assembly in cui è possibile confrontare il `Export` attributo per il selettore in questione
-
-2. Ricerca l'associazione dell'intera classe. Poiché si sa è un'istanza di `NSTableView` è possibile digitare:
+1. Usare l'elenco di completamento automatico per analizzare rapidamente un elemento con lo stesso nome. Poiché è noto che si tratta di un' `NSTableView` istanza di, è possibile digitare:
 
     - `NSTableView x;`
-    - Fare doppio clic su `NSTableView`, Vai a dichiarazione al Browser di Assembly
-    - Ricerca per il selettore in questione
+    - `x.`[CTRL + barra spaziatrice se l'elenco non viene visualizzato).
+    - `CanDrag`entrare
+    - Fare clic con il pulsante destro del mouse sul metodo, scegliere Dichiarazione per aprire il browser assembly in `Export` cui è possibile confrontare l'attributo con il selettore in questione.
 
-3. È possibile usare la [documentazione online di API xamarin. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+2. Eseguire una ricerca nell'intera associazione di classe. Poiché è noto che si tratta di un' `NSTableView` istanza di, è possibile digitare:
 
-4. Miguel fornisce una visualizzazione "Rosetta Stone" APIs Xamarin.Mac [qui](https://tirania.org/tmp/rosetta.html) che è possibile cercare tramite un'API specifica. Se l'API non AppKit o macOS specifico, si può cercarla.
+    - `NSTableView x;`
+    - Fare clic con `NSTableView`il pulsante destro del mouse, scegliere dichiarazione in assembly browser
+    - Cerca il selettore in questione
+
+3. È possibile usare la [documentazione online dell'API Novell. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+
+4. Miguel fornisce una visualizzazione "Rosetta Stone" delle API di Novell. Mac [in cui è](https://tirania.org/tmp/rosetta.html) possibile eseguire ricerche per un'API specifica. Se l'API non è specifica di AppKit o macOS, potrebbe trovarlo qui.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

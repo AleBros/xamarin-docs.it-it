@@ -1,52 +1,52 @@
 ---
-title: Limitazioni di incorporamento di .NET
-description: Questo documento descrive le limitazioni di incorporamento, .NET, lo strumento che consente di usare codice .NET in altri linguaggi di programmazione.
+title: Limitazioni dell'incorporamento di .NET
+description: In questo documento vengono descritte le limitazioni dell'incorporamento di .NET, lo strumento che consente di utilizzare il codice .NET in altri linguaggi di programmazione.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945782"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292702"
 ---
-# <a name="net-embedding-limitations"></a>Limitazioni di incorporamento di .NET
+# <a name="net-embedding-limitations"></a>Limitazioni dell'incorporamento di .NET
 
-Questo documento vengono illustrati i limiti di incorporamento, .NET e, se possibile, vengono illustrate soluzioni alternative per tali.
+In questo documento vengono illustrate le limitazioni dell'incorporamento di .NET e, laddove possibile, le soluzioni alternative.
 
 ## <a name="general"></a>Generale
 
 ### <a name="use-more-than-one-embedded-library-in-a-project"></a>Usare più di una libreria incorporata in un progetto
 
-Non è possibile avere due runtime di Mono condiviso esistente all'interno della stessa applicazione. Ciò significa che non è possibile usare due diverse librerie di .NET incorporamento generati all'interno della stessa applicazione.
+Non è possibile avere due runtime di mono coesistenti all'interno della stessa applicazione. Ciò significa che non è possibile usare due diverse librerie generate per l'incorporamento di .NET all'interno della stessa applicazione.
 
-**Soluzione alternativa:** È possibile utilizzare il generatore per creare una singola raccolta che include diversi assembly (da progetti diversi).
+**Soluzione alternativa:** È possibile usare il generatore per creare una singola libreria che includa diversi assembly (da progetti diversi).
 
-### <a name="subclassing"></a>Creazione di una sottoclasse
+### <a name="subclassing"></a>Una sottoclasse
 
-Incorporamento di .NET semplifica l'integrazione del runtime di Mono all'interno delle applicazioni tramite l'esposizione di un set di API pronti da usare per la piattaforma e linguaggio di destinazione.
+L'incorporamento di .NET semplifica l'integrazione del runtime di mono all'interno delle applicazioni esponendo un set di API pronte per l'uso per il linguaggio e la piattaforma di destinazione.
 
-Tuttavia, questo non è un'integrazione bidirezionale, ad esempio, non è possibile sottoclasse un tipo gestito e prevede che il codice gestito per la richiamata all'interno del codice nativo, poiché il codice gestito è a conoscenza di questo coesistenza.
+Tuttavia, non si tratta di un'integrazione bidirezionale, ad esempio non è possibile eseguire la sottoclasse di un tipo gestito e si prevede che il codice gestito richiami all'interno del codice nativo, perché il codice gestito non è a conoscenza di questa coesistenza.
 
-A seconda delle esigenze, potrebbe essere possibile alle parti di soluzione alternativa di questa limitazione, ad esempio
+A seconda delle esigenze, potrebbe essere possibile aggirare le parti di questa limitazione, ad esempio
 
-* il codice gestito può p/invoke in codice nativo. È necessario personalizzare il codice gestito per consentire la personalizzazione dal codice nativo;
+* il codice gestito può p/invoke nel codice nativo. Questa operazione richiede la personalizzazione del codice gestito per consentire la personalizzazione dal codice nativo;
 
-* utilizzo dei prodotti, ad esempio xamarin. IOS ed esporre una libreria gestita che consentirebbe di che Objective-C (in questo caso) per creare una sottoclasse alcuni gestiti NSObject sottoclassi.
+* usare prodotti come Novell. iOS ed esporre una libreria gestita che consentirebbe a Objective-C (in questo caso) di sottoporre a sottoclasse alcune sottoclassi NSObject gestite.
 
 ## <a name="objective-c-generated-code"></a>Codice generato da Objective-C
 
-### <a name="nullability"></a>supporto di valori null
+### <a name="nullability"></a>Valori null
 
-Non sono presenti metadati di .NET che indica se un riferimento null è accettabile o meno per un'API. La maggior parte delle API genererà `ArgumentNullException` se non è possibile gestire un `null` argomento. Ciò risulta problematico come Objective-C gestione delle eccezioni è qualcosa di meglio evitare.
+In .NET non sono presenti metadati che indicano se un riferimento null è accettabile o meno per un'API. La maggior parte delle `ArgumentNullException` API genererà un'eccezione se `null` non è in grado di gestire un argomento. Questa situazione è problematica poiché la gestione delle eccezioni in Objective-C è una soluzione migliore.
 
-Poiché è possibile generare le annotazioni accurate ammissione di valori null nei file di intestazione e vuole ridurre al minimo le eccezioni gestite sono predefiniti per argomenti non null (`NS_ASSUME_NONNULL_BEGIN`) e aggiungere alcune specifiche, quando la precisione è possibile, le annotazioni di supporto di valori null.
+Poiché non è possibile generare annotazioni accurate di supporto dei valori null nei file di intestazione e si desidera ridurre al minimo le eccezioni gestite,`NS_ASSUME_NONNULL_BEGIN`per impostazione predefinita gli argomenti non null () e vengono aggiunti alcuni specifici, quando la precisione è possibile, le annotazioni dei valori null.
 
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 
-Incorporamento di .NET non supporta attualmente bitcode su iOS, che è abilitato per alcuni modelli di progetto Xcode. Questa dovrà essere disabilitato al framework di collegamento generato correttamente.
+Attualmente l'incorporamento .NET non supporta bitcode in iOS, che è abilitato per alcuni modelli di progetto Xcode. Questa operazione dovrà essere disabilitata per collegare correttamente i Framework generati.
 
-![Opzione Bitcode](images/ios-bitcode-option.png)
+![Bitcode-opzione](images/ios-bitcode-option.png)

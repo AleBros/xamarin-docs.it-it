@@ -1,71 +1,71 @@
 ---
-title: Architettura di xamarin. Mac
-description: Questa Guida Esplora xamarin. Mac e la relativa relazione Objective-c di basso livello. Vengono illustrati concetti, ad esempio la compilazione, i selettori, Registrar, avvio dell'app e il generatore.
+title: Architettura di Novell. Mac
+description: Questa guida esamina Novell. Mac e la relativa relazione con Objective-C a un livello basso. Vengono illustrati concetti quali la compilazione, i selettori, i registrar, l'avvio dell'app e il generatore.
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2c9bbd663257e937e35e062f03b4aa84813edb27
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034126"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287776"
 ---
-# <a name="xamarinmac-architecture"></a>Architettura di xamarin. Mac
+# <a name="xamarinmac-architecture"></a>Architettura di Novell. Mac
 
-_Questa Guida Esplora xamarin. Mac e la relativa relazione Objective-c di basso livello. Vengono illustrati concetti, ad esempio la compilazione, i selettori, Registrar, avvio dell'app e il generatore._
+_Questa guida esamina Novell. Mac e la relativa relazione con Objective-C a un livello basso. Vengono illustrati concetti quali la compilazione, i selettori, i registrar, l'avvio dell'app e il generatore._
 
 ## <a name="overview"></a>Panoramica
 
-Le applicazioni xamarin. Mac eseguire all'interno dell'ambiente di esecuzione Mono e consente di compilare fino a Intermediate Language (IL), che viene quindi Just-in-Time (JIT) compilate in codice nativo in fase di esecuzione del compilatore di Xamarin. Ciò comporta l'esecuzione side-by-side con il Runtime di Objective-C. Entrambi gli ambienti di runtime eseguiti su un kernel simili a UNIX, in particolare XNU ed espongono diverse API per il codice utente che consente agli sviluppatori di accedere al sistema nativo o gestito sottostante.
+Le applicazioni Novell. Mac vengono eseguite nell'ambiente di esecuzione mono e usano il compilatore di Novell per compilare il linguaggio intermedio (IL), che è quindi compilato JIT (just-in-Time) in codice nativo in fase di esecuzione. Questa operazione viene eseguita side-by-side con il runtime di Objective-C. Entrambi gli ambienti di runtime vengono eseguiti su un kernel di tipo UNIX, in particolare XNU, ed espongono diverse API al codice utente, consentendo agli sviluppatori di accedere al sistema nativo o gestito sottostante.
 
 Il diagramma seguente mostra una panoramica di base di questa architettura:
 
-[![Diagramma che mostra una panoramica di base dell'architettura](architecture-images/mac-arch.png "diagramma che mostra una panoramica di base dell'architettura")](architecture-images/mac-arch-large.png#lightbox)
+[![Diagramma che illustra una panoramica di base dell'architettura](architecture-images/mac-arch.png "Diagramma che illustra una panoramica di base dell'architettura")](architecture-images/mac-arch-large.png#lightbox)
 
 ### <a name="native-and-managed-code"></a>Codice nativo e gestito
 
-Durante lo sviluppo per Xamarin, i termini *nativi* e *gestito* codice vengono spesso usati. Il codice gestito è codice che include l'esecuzione gestita da Common Language Runtime di .NET Framework o in caso di Xamarin: il Runtime di Mono.
+Quando si sviluppa per Novell, vengono spesso usati i termini *nativi* e codice *gestito* . Il codice gestito è codice in cui l'esecuzione viene gestita dal .NET Framework Common Language Runtime o nel caso di Novell: il runtime di mono.
 
-Codice nativo è codice che verrà eseguito in modo nativo nella piattaforma specifica (ad esempio, Objective-C o anche il codice di compilazione AOT, in un chip ARM). Questa guida illustra come il codice gestito viene compilato in codice nativo e spiega come funziona un'applicazione xamarin. Mac, basate sull'uso delle API Mac Apple tramite l'uso di associazioni, mantenendo anche l'accesso a. Libreria di classi base della rete e un linguaggio sofisticato, ad esempio C#.
+Il codice nativo è codice che verrà eseguito in modalità nativa sulla piattaforma specifica, ad esempio Objective-C o anche codice compilato AOT, su un chip ARM. Questa guida illustra il modo in cui il codice gestito viene compilato in codice nativo e illustra il funzionamento di un'applicazione Novell. Mac, per sfruttare al meglio le API Mac di Apple tramite l'uso di binding, pur avendo accesso a. BCL di NET e un linguaggio sofisticato, C#ad esempio.
 
 ## <a name="requirements"></a>Requisiti
 
 Per sviluppare un'applicazione macOS con Xamarin.Mac è necessario quanto segue:
 
-- Un Mac che esegue macOS Sierra (10.12) o versione successiva.
-- La versione più recente di Xcode (installato dal [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12))
-- La versione più recente di xamarin. Mac e Visual Studio per Mac
+- Un Mac che esegue macOS Sierra (10,12) o versione successiva.
+- La versione più recente di Xcode (installata dall' [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12))
+- La versione più recente di Novell. Mac e Visual Studio per Mac
 
 Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisiti di sistema seguenti:
 
-- Un Mac che esegue Mac OS X 10.7 o versione successiva.
+- Mac che esegue Mac OS X 10,7 o versione successiva.
 
 ## <a name="compilation"></a>Compilazione
 
-Quando si esegue la compilazione di qualsiasi applicazione della piattaforma Xamarin, di Mono C# (o F#) del compilatore verrà eseguito e verrà compilato il C# e F# codice in Microsoft Intermediate Language (MSIL o IL). Xamarin. Mac Usa quindi un *Just in Time (JIT)* compilatore in fase di esecuzione per la compilazione codice nativo, consentendo l'esecuzione dell'architettura corretta in base alle esigenze.
+Quando si compila un'applicazione della piattaforma Novell, il C# compilatore mono F#(o) verrà eseguito e compilerà F# il codice e il C# codice in Microsoft Intermediate Language (MSIL o il). Novell. Mac usa quindi un compilatore *just-in-time (JIT)* in fase di esecuzione per compilare il codice nativo, consentendo l'esecuzione sull'architettura corretta, in base alle esigenze.
 
-In contrasto con xamarin. IOS che usa la compilazione AOT. Quando si usa il compilatore AOT, tutti gli assembly e tutti i metodi all'interno di essi vengono compilati in fase di compilazione. Con JIT, la compilazione viene eseguita su richiesta solo per i metodi che vengono eseguiti.
+Questo è contrario a Novell. iOS che usa la compilazione AOT. Quando si usa il compilatore AOT, tutti gli assembly e tutti i metodi in essi contenuti vengono compilati in fase di compilazione. Con JIT, la compilazione avviene su richiesta solo per i metodi che vengono eseguiti.
 
-Con le applicazioni xamarin. Mac, Mono viene in genere incorporata nel bundle dell'app (e dette **Embedded Mono**). Quando si usa l'API classica di xamarin. Mac, l'applicazione può usare invece **Mono di sistema**, tuttavia, ciò non è supportata nell'API unificata. Mono di sistema fa riferimento al progetto Mono è stato installato nel sistema operativo. All'avvio dell'applicazione, l'app xamarin. Mac verrà usato.
+Con le applicazioni Novell. Mac, mono viene in genere incorporato nel bundle dell'app e viene definito **mono incorporato**. Quando si usa l'API Novell. Mac classica, l'applicazione può invece usare **mono di sistema**, ma questa operazione non è supportata nel API unificata. System mono si riferisce a mono installato nel sistema operativo. All'avvio dell'applicazione, l'app Novell. Mac utilizzerà questa.
 
 ## <a name="selectors"></a>Selettori
 
-Con Xamarin, abbiamo due ecosistemi separati, .NET e Apple, che è necessario visualizzare insieme a sembrare come semplice possibile garantire che l'obiettivo finale è un'esperienza utente uniforme. Abbiamo visto nella sezione precedente modalità di comunicazione tra i due runtime, e si è già molto bene del termine 'binding' che consente le API Mac native da usare in Xamarin. Le associazioni sono illustrate in dettaglio nel [documentazione di binding di Objective-C](~/mac/platform/binding.md), pertanto per il momento, vediamo come funziona xamarin. Mac dietro le quinte.
+Con Novell sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API Mac native in Novell. Le associazioni sono illustrate in dettaglio nella [documentazione sull'associazione di Objective-C](~/mac/platform/binding.md), quindi per ora è possibile esaminare il funzionamento di Novell. Mac dietro le quinte.
 
-In primo luogo, deve esistere un modo per esporre Objective-C in C#, che viene eseguita tramite i selettori. Un selettore è un messaggio che viene inviato a un oggetto o classe. Con Objective-C questa operazione viene eseguita tramite il [objc_msgSend](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/index.html) funzioni. Per altre informazioni sull'uso dei selettori, fare riferimento a iOS [selettori Objective-C](~/ios/internals/objective-c-selectors.md) Guida. È anche con un metodo per esporre il codice gestito a Objective-C, che è più complicato dovuto al fatto che Objective-C non conosce il codice gestito. Per evitare questo problema, si usa un' [registrar](~/mac/internals/registrar.md). Questo è illustrato più dettagliatamente nella sezione successiva.
+In primo luogo, è necessario un modo per esporre Objective-C a C#, operazione eseguita tramite selettori. Un selettore è un messaggio inviato a un oggetto o a una classe. Con Objective-C questa operazione viene eseguita tramite le funzioni [objc_msgSend](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/index.html) . Per altre informazioni sull'uso dei selettori, vedere la guida per i selettori di iOS [Objective-C](~/ios/internals/objective-c-selectors.md) . Deve inoltre essere disponibile un modo per esporre il codice gestito a Objective-C, che è più complicato a causa del fatto che Objective-C non conosce nulla sul codice gestito. Per aggirare questo problema, viene usato un [registrar](~/mac/internals/registrar.md). Questa operazione è stata illustrata più dettagliatamente nella sezione successiva.
 
 ## <a name="registrar"></a>Registrar
 
-Come indicato in precedenza, il programma di registrazione è codice che espone il codice gestito per Objective-C. A tale scopo, si crea un elenco di ogni classe gestita che deriva da NSObject:
+Come indicato in precedenza, il registrar è codice che espone il codice gestito a Objective-C. Questa operazione viene eseguita creando un elenco di tutte le classi gestite che derivano da NSObject:
 
-- Per tutte le classi che non esegue il wrapping di una classe di Objective-C esistente, creata una nuova classe di Objective-C con i membri di Objective-C mirroring tutti i membri gestiti che hanno un `[Export]` attributo.
-- Nelle implementazioni per ogni membro di Objective-C, viene aggiunto automaticamente codice per chiamare il membro gestito con mirroring.
+- Per tutte le classi che non eseguono il wrapping di una classe Objective-c esistente, viene creata una nuova classe Objective-c con membri Objective-c che eseguono il mirroring di `[Export]` tutti i membri gestiti che dispongono di un attributo.
+- Nelle implementazioni per ogni membro Objective-C, il codice viene aggiunto automaticamente per chiamare il membro gestito con mirroring.
 
-Il pseudo-codice seguente viene illustrato un esempio di questa procedura:
+Lo pseudo-codice seguente mostra un esempio di come eseguire questa operazione:
 
 **C#(codice gestito):**
 
@@ -92,65 +92,65 @@ class MyViewController : UIViewController{
 @end
 ```
 
-Il codice gestito può contenere gli attributi `[Register]` e `[Export]`, che usa le registrar per sapere che l'oggetto deve essere esposto per Objective-C. L'attributo [registrare] consente di specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non è adatto. Tutte le classi derivate da NSObject vengono registrate automaticamente in Objective-C. L'attributo [esportazione] necessario contiene una stringa che rappresenta il selettore usato nella classe generata Objective-C.
+Il codice gestito può contenere gli attributi, `[Register]` e `[Export]`, utilizzati dal registrar per tenere presente che l'oggetto deve essere esposto a Objective-C. L'attributo [Register] viene utilizzato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non sia appropriato. Tutte le classi derivate da NSObject vengono registrate automaticamente con Objective-C. L'attributo obbligatorio [Export] contiene una stringa, ovvero il selettore usato nella classe Objective-C generata.
 
-Esistono due tipi di registri usati in xamarin. Mac: statiche e dinamiche:
+Esistono due tipi di registrar usati in Novell. Mac-Dynamic e static:
 
-- Registrar dinamica – questo è il programma di registrazione predefinito per tutte le compilazioni di xamarin. Mac. Il programma di registrazione dinamica esegue la registrazione di tutti i tipi nell'assembly in fase di esecuzione. Ciò avviene usando funzioni fornite dalle API di runtime di Objective-C. Il programma di registrazione dinamica ha pertanto un avvio più lento, ma un veloce fase di compilazione. Le funzioni native (in genere in C), chiamate trampolines, vengono utilizzate come implementazioni del metodo quando si usano le Registrar dinamico. Variano tra architetture diverse.
-- Registrar statico: il programma di registrazione statico genera il codice Objective-C durante la compilazione, che viene quindi compilata in una libreria statica e collegata nel file eseguibile. Questo consente un avvio più veloce, ma richiede più tempo durante la fase di compilazione.
+- Registrar dinamici: si tratta del registrar predefinito per tutte le compilazioni Novell. Mac. Il registrar dinamico esegue la registrazione di tutti i tipi nell'assembly in fase di esecuzione. Questa operazione viene eseguita usando le funzioni fornite dall'API di runtime di Objective-C. Il registrar dinamico ha pertanto un avvio più lento, ma un tempo di compilazione più rapido. Le funzioni native, in genere in C, denominate trampolini, vengono usate come implementazioni del metodo quando si usano i registrar dinamici. Variano a seconda delle diverse architetture.
+- Registrar statici: il registrar statico genera codice Objective-C durante la compilazione, che viene quindi compilato in una libreria statica e collegato all'eseguibile. Questo consente un avvio più rapido, ma richiede più tempo durante la fase di compilazione.
 
 ## <a name="application-launch"></a>Avvio dell'applicazione
 
-La logica di avvio di xamarin. Mac variano a seconda se incorporato o sistema Mono viene usato. Per visualizzare il codice e i passaggi per l'avvio dell'applicazione xamarin. Mac, vedere la [lancio intestazione](https://github.com/xamarin/xamarin-macios/blob/master/runtime/xamarin/launch.h) file nel repository pubblico macios di xamarin.
+La logica di avvio di Novell. Mac varia a seconda che venga usato embedded o System mono. Per visualizzare il codice e i passaggi per l'avvio dell'applicazione Novell. Mac, fare riferimento al file di [intestazione di avvio](https://github.com/xamarin/xamarin-macios/blob/master/runtime/xamarin/launch.h) nel repository pubblico Novell-macios.
 
 ## <a name="generator"></a>Generator
 
-Xamarin. Mac contiene definizioni per tutte le API Mac. È possibile esplorare tramite uno di questi sul [repository github MaciOS](https://github.com/xamarin/xamarin-macios/tree/master/src). Queste definizioni contengono si interfaccia con attributi, nonché qualsiasi proprietà e metodi necessari. Ad esempio, il codice seguente consente di definire un NSBox nel [dello spazio dei nomi di AppKit](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526). Si noti che è un'interfaccia con un numero di metodi e proprietà:
+Novell. Mac contiene le definizioni per ogni API Mac. È possibile esplorare uno di questi nel [repository GitHub MaciOS](https://github.com/xamarin/xamarin-macios/tree/master/src). Queste definizioni contengono interfacce con attributi, nonché eventuali metodi e proprietà necessari. Il codice seguente, ad esempio, viene usato per definire un NSBox nello [spazio dei nomi AppKit](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526). Si noti che si tratta di un'interfaccia con diversi metodi e proprietà:
 
 ```csharp
 [BaseType (typeof (NSView))]
 public interface NSBox {
 
-        …
+    …
 
-        [Export ("borderRect")]
-        CGRect BorderRect { get; }
+    [Export ("borderRect")]
+    CGRect BorderRect { get; }
 
-        [Export ("titleRect")]
-        CGRect TitleRect { get; }
+    [Export ("titleRect")]
+    CGRect TitleRect { get; }
 
-        [Export ("titleCell")]
-        NSObject TitleCell { get; }
+    [Export ("titleCell")]
+    NSObject TitleCell { get; }
 
-        [Export ("sizeToFit")]
-        void SizeToFit ();
+    [Export ("sizeToFit")]
+    void SizeToFit ();
 
-        [Export ("contentViewMargins")]
-        CGSize ContentViewMargins { get; set; }
+    [Export ("contentViewMargins")]
+    CGSize ContentViewMargins { get; set; }
 
-        [Export ("setFrameFromContentFrame:")]
-        void SetFrameFromContentFrame (CGRect contentFrame);
+    [Export ("setFrameFromContentFrame:")]
+    void SetFrameFromContentFrame (CGRect contentFrame);
 
-        …
+    …
 
 }
 ```
 
-Il generatore, chiamato `bmac` in xamarin. Mac, accetta questi file di definizione e Usa gli strumenti di .NET per compilarli in un assembly temporaneo. Tuttavia, questo assembly temporaneo non è facile da usare per chiamare codice Objective-C. Il generatore, quindi legge l'assembly temporaneo e viene generato l'errore C# codice che può essere usato in fase di esecuzione. Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale per il file con estensione cs della definizione, non verrà visualizzati nel codice di output. Il generatore non è conoscenza e pertanto `bmac` all'oscuro da cercare nell'assembly temporaneo può restituirlo.
+Il generatore, chiamato `bmac` in Novell. Mac, accetta questi file di definizione e usa gli strumenti .NET per compilarli in un assembly temporaneo. Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione. Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e pertanto `bmac` non è in grado di cercarlo nell'assembly temporaneo per l'output.
 
-Una volta di xamarin è stato creato, il packager `mmp`, verranno riunire tutti i componenti di elementi.
+Una volta creato il file Novell. Mac. dll, il Packager, `mmp`, raggruppa tutti i componenti.
 
-A livello generale, raggiunge questo eseguendo le attività seguenti:
+A un livello elevato, ottiene questo risultato eseguendo le attività seguenti:
 
-- Creare una struttura di bundle dell'app.
-- Copiare negli assembly gestiti.
-- Se il collegamento è abilitato, eseguire il linker gestito per ottimizzare gli assembly rimuovendo le parti non utilizzate.
-- Creare un'applicazione di utilità di avvio, il collegamento nel codice dell'utilità di avvio parlato con il codice di registrar se in modalità statica.
+- Creare una struttura del bundle dell'app.
+- Copiare gli assembly gestiti.
+- Se è abilitato il collegamento, eseguire il linker gestito per ottimizzare gli assembly rimuovendo le parti inutilizzate.
+- Creare un'applicazione di avvio. il collegamento nel codice dell'utilità di avvio è stato parlato insieme al codice del registrar se in modalità statica.
 
-Si tratta quindi Esegui come parte dell'utente che fanno riferimento a xamarin ed esecuzioni processo che viene compilato il codice utente in un assembly di compilazione. `mmp` per renderlo un pacchetto
+Questa operazione viene quindi eseguita come parte del processo di compilazione utente che compila il codice utente in un assembly che fa riferimento a Novell. Mac. dll `mmp` ed esegue per renderlo un pacchetto
 
-Per ulteriori informazioni sulla modalità di utilizzo e il linker, fare riferimento a iOS [Linker](~/ios/deploy-test/linker.md) Guida.
+Per informazioni più dettagliate sul linker e su come viene usato, vedere la guida del [linker](~/ios/deploy-test/linker.md) iOS.
 
 ## <a name="summary"></a>Riepilogo
 
-Questa Guida preso in esame la compilazione di App xamarin. Mac e xamarin. Mac esplorati e sua relazione con Objective-C.
+Questa guida ha esaminato la compilazione di app Novell. Mac ed Esplora Novell. Mac e la relativa relazione con Objective-C.

@@ -4,15 +4,15 @@ description: Questo documento descrive come usare i controller della barra sched
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199935"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283974"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Uso dei controller della barra schede tvOS in Novell
 
@@ -39,7 +39,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo delle barre delle schede:
 
 - **Usare le barre delle schede per organizzare logicamente il contenuto** : usare la barra delle schede per organizzare logicamente il contenuto con cui funziona l'app tvOS. Ad esempio, in primo piano, in primo piano, acquistato e ricerca.
 - **Aggiungere notifiche per informare gli utenti del nuovo contenuto** . Facoltativamente, è possibile visualizzare una notifica (un ovale rosso con un numero bianco o un punto esclamativo) per informare l'utente del nuovo contenuto in una categoria.
-- **Usare le notifiche** in modo sporadico. non ingombrare la barra delle schede con le notifiche e visualizzarle solo quando forniscono informazioni critiche all'utente.
+- **Usare le notifiche in modo sporadico** . non ingombrare la barra delle schede con le notifiche e visualizzarle solo quando forniscono informazioni critiche all'utente.
 - **Limitare il numero di categorie** : per ridurre la complessità e mantenere gestibili le app, non sovraccaricare la barra delle schede con le categorie e assicurarsi che tutte le categorie siano visibili e non affollate. I titoli semplici e brevi funzionano meglio.
 - **Non disabilitare una categoria** : tutte le schede (categorie) devono essere sempre visibili e abilitate in qualsiasi momento. Se una scheda specificata non contiene contenuto, fornire una spiegazione per l'utente. La scheda acquisti, ad esempio, sarà vuota se l'utente non ha effettuato acquisti.
 

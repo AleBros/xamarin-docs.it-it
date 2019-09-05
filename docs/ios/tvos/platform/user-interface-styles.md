@@ -4,15 +4,15 @@ description: Questo articolo illustra i temi dell'interfaccia utente chiaro e sc
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: fc9a8acb2c04d805e7abc52b2996ec5546b0fb69
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4df67221c367386cddd485fcd1853523d77158e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657375"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290677"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Stili dell'interfaccia utente di tvOS in Novell
 
@@ -48,10 +48,10 @@ Per acconsentire esplicitamente al supporto del tema chiaro e scuro, seguire que
 
 1. In **Esplora soluzioni** fare doppio clic sul file `Info.plist` per aprirlo e modificarlo.
 2. Selezionare la visualizzazione **origine** (nella parte inferiore dell'editor).
-3. Aggiungere una nuova chiave e chiamarla `UIUserInterfaceStyle`: 
+3. Aggiungere una nuova chiave e chiamarla `UIUserInterfaceStyle`:
 
     [![](user-interface-styles-images/theme03.png "Chiave UIUserInterfaceStyle")](user-interface-styles-images/theme03.png#lightbox)
-4. Lasciare il tipo impostato su `String` e immettere un `Automatic`valore: 
+4. Lasciare il tipo impostato su `String` e immettere un `Automatic`valore:
 
     [![](user-interface-styles-images/theme04.png "Immetti automaticamente")](user-interface-styles-images/theme04.png#lightbox)
 5. Salvare le modifiche apportate al file.
@@ -95,7 +95,7 @@ La nuova `UserInterfaceStyle` proprietà `UITraitCollection` della classe può e
 - Non **specificato** : la visualizzazione non è ancora stata visualizzata, quindi il tema dell'interfaccia utente corrente è sconosciuto.
 
 Inoltre, le raccolte di tratti hanno le funzionalità seguenti in tvOS 10:
- 
+
 - Il proxy `UserInterfaceStyle` di aspetto può essere personalizzato in base a di un `UITraitCollection` dato per modificare elementi quali immagini o colori di elementi in base al tema.
 - Un'app tvOS può gestire le modifiche alla raccolta dei tratti eseguendo `TraitCollectionDidChange` l'override del `UIView` metodo `UIViewController` di una classe o.
 
@@ -137,7 +137,7 @@ Ad esempio:
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
 {
     base.TraitCollectionDidChange (previousTraitCollection);
-    
+
     // Take action based on the Light or Dark theme
     ...
 }
@@ -160,7 +160,7 @@ var trait = new UITraitCollection ();
 SetOverrideTraitCollection (trait, this);
 ```
 
-Per altre informazioni, [vedere le sezioni](~/ios/user-interface/storyboards/unified-storyboards.md) relative ai tratti e all' [override dei tratti](~/ios/user-interface/storyboards/unified-storyboards.md) della documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+Per altre informazioni, [vedere le sezioni relative ai tratti e](~/ios/user-interface/storyboards/unified-storyboards.md) all'override dei [tratti](~/ios/user-interface/storyboards/unified-storyboards.md) della documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 <a name="Trait-Collections-and-Storyboards" />
 
@@ -170,37 +170,37 @@ In tvOS 10, lo storyboard di un'app può essere impostato in modo da rispondere 
 
 Per abilitare il supporto per la raccolta di tratti, procedere come segue:
 
-1. Fare clic con il pulsante destro del mouse sul file dello storyboard nel **Esplora soluzioni** e scegliere **Apri con** > **Xcode Interface Builder**: 
+1. Fare clic con il pulsante destro del mouse sul file dello storyboard nel **Esplora soluzioni** e scegliere **Apri con** > **Xcode Interface Builder**:
 
-    [![](user-interface-styles-images/theme05.png "Apri con Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox) 
-2. Per abilitare il supporto per la raccolta di tratti, passare a controllo **file** e selezionare la proprietà **USA variazioni tratto** nella sezione **documento Interface Builder** : 
+    [![](user-interface-styles-images/theme05.png "Apri con Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox)
+2. Per abilitare il supporto per la raccolta di tratti, passare a controllo **file** e selezionare la proprietà **USA variazioni tratto** nella sezione **documento Interface Builder** :
 
     [![](user-interface-styles-images/theme06.png "Abilita supporto per la raccolta di tratti")](user-interface-styles-images/theme06.png#lightbox)
-3. Confermare la modifica per usare le variazioni dei tratti: 
+3. Confermare la modifica per usare le variazioni dei tratti:
 
     [![](user-interface-styles-images/theme07.png "Avviso di utilizzo delle variazioni dei tratti")](user-interface-styles-images/theme07.png#lightbox)
 4. Salvare le modifiche apportate al file dello storyboard.
 
 Apple ha aggiunto le funzionalità seguenti quando si modificano gli storyboard tvOS in Interface Builder:
 
-* Lo sviluppatore può specificare diverse varianti di elementi dell'interfaccia utente in base al tema dell'interfaccia utente nel **controllo attributi**:
-    
-    * Diverse proprietà dispongono ora di **+** un accanto a cui è possibile fare clic per aggiungere una versione specifica del tema dell'interfaccia utente: 
+- Lo sviluppatore può specificare diverse varianti di elementi dell'interfaccia utente in base al tema dell'interfaccia utente nel **controllo attributi**:
 
-        [![](user-interface-styles-images/theme08.png "Aggiungere una versione specifica del tema dell'interfaccia utente")](user-interface-styles-images/theme08.png#lightbox) 
-    
-    * Lo sviluppatore può specificare una nuova proprietà o fare clic sul pulsante **x** per rimuoverlo: 
+  - Diverse proprietà dispongono ora di **+** un accanto a cui è possibile fare clic per aggiungere una versione specifica del tema dell'interfaccia utente:
 
-        [![](user-interface-styles-images/theme09.png "Specificare una nuova proprietà o fare clic sul pulsante x per rimuoverlo")](user-interface-styles-images/theme09.png#lightbox)
-* Lo sviluppatore può visualizzare in anteprima una progettazione dell'interfaccia utente in un tema chiaro o scuro dall'interno Interface Builder:
-    
-    * La parte inferiore del Area di progettazione consente allo sviluppatore di cambiare il tema corrente dell'interfaccia utente: 
+    [![](user-interface-styles-images/theme08.png "Aggiungere una versione specifica del tema dell'interfaccia utente")](user-interface-styles-images/theme08.png#lightbox)
 
-        [![](user-interface-styles-images/theme10.png "Parte inferiore del Area di progettazione")](user-interface-styles-images/theme10.png#lightbox)
-        
-    * Il nuovo tema verrà visualizzato in Interface Builder e verranno visualizzate le regolazioni specifiche della raccolta di tratti: 
+  - Lo sviluppatore può specificare una nuova proprietà o fare clic sul pulsante **x** per rimuoverlo:
 
-        [![](user-interface-styles-images/theme11.png "Il tema visualizzato in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
+    [![](user-interface-styles-images/theme09.png "Specificare una nuova proprietà o fare clic sul pulsante x per rimuoverlo")](user-interface-styles-images/theme09.png#lightbox)
+- Lo sviluppatore può visualizzare in anteprima una progettazione dell'interfaccia utente in un tema chiaro o scuro dall'interno Interface Builder:
+
+  - La parte inferiore del Area di progettazione consente allo sviluppatore di cambiare il tema corrente dell'interfaccia utente:
+
+    [![](user-interface-styles-images/theme10.png "Parte inferiore del Area di progettazione")](user-interface-styles-images/theme10.png#lightbox)
+
+  - Il nuovo tema verrà visualizzato in Interface Builder e verranno visualizzate le regolazioni specifiche della raccolta di tratti:
+
+    [![](user-interface-styles-images/theme11.png "Il tema visualizzato in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 
 Inoltre, il simulatore tvOS dispone ora di un tasto di scelta rapida che consente allo sviluppatore di spostarsi rapidamente tra i temi chiaro e scuro durante il debug di un'app tvOS. Usare la sequenza di tasti **MAIUSC + D** per passare da chiaro a scuro e viceversa.
 

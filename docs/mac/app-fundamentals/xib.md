@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso dei file con estensione XIB creati n
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: bdb27d42e872bff4004e8f43d13019dbc8bfeab9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f0889ecc428c595509fb23710bf3110c1bacad4e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227861"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290287"
 ---
 # <a name="xib-files-in-xamarinmac"></a>file con estensione XIB in Novell. Mac
 
@@ -227,7 +227,7 @@ Di seguito è riportato un esempio:
 8. Nella **casella ridimensionamento** automatico fare clic sulla **parentesi quadra di colore rossa** a destra e sulla **freccia orizzontale in rosso** al centro:
 
     ![Modifica delle proprietà di ridimensionamento] automatico (xib-images/xcode14.png "Modifica delle proprietà di ridimensionamento") automatico
-9. In questo modo si garantisce che l'etichetta si estenderà per espandersi e compattarla quando la finestra viene ridimensionata nell'applicazione in esecuzione. Le **parentesi quadre rosse** e la parte superiore e sinistra della casella della **casella** di ridimensionamento automatico indicano che l'etichetta deve essere bloccata nelle posizioni X e Y specificate.
+9. In questo modo si garantisce che l'etichetta si estenderà per espandersi e compattarla quando la finestra viene ridimensionata nell'applicazione in esecuzione. Le **parentesi quadre rosse** e la parte superiore e sinistra della casella della **casella di ridimensionamento** automatico indicano che l'etichetta deve essere bloccata nelle posizioni X e Y specificate.
 10. Salvare le modifiche apportate all'interfaccia utente
 
 Quando si ridimensionano e si spostano i controlli, è necessario notare che Interface Builder offre suggerimenti di snap utili basati sulle [linee guida dell'interfaccia umana di OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). Queste linee guida consentono di creare applicazioni di alta qualità che avranno un aspetto familiare per gli utenti Mac.
@@ -274,7 +274,7 @@ Che cosa sono gli Outlet e le azioni? Nella programmazione tradizione dell'inter
 - **Outlet**: gli outlet sono analoghi alle proprietà. Se si collega un controllo a un Outlet, questo viene esposto al codice tramite una proprietà, in modo che sia possibile eseguire operazioni come collegare gestori eventi, chiamare metodi su di esso e così via.
 - **Azioni**: le azioni sono analoghe al modello di comando in WPF. Ad esempio, quando un'azione viene eseguita su un controllo, ad esempio un clic del pulsante, il controllo chiamerà automaticamente un metodo nel codice. Le azioni sono potenti e convenienti perché è possibile collegare molti controlli alla stessa azione.
 
-In Xcode gli Outlet e le azioni vengono aggiunti direttamente nel codice tramite il trascinamento del *controllo*. In particolare, ciò significa che per creare un outlet o un'azione, è possibile scegliere l'elemento di controllo che si vuole aggiungere a un punto di uscita o un'azione, tenendo premuto il pulsante di **controllo** sulla tastiera e trascinando il controllo direttamente nel codice.
+In Xcode gli Outlet e le azioni vengono aggiunti direttamente nel codice tramite il *trascinamento del controllo*. In particolare, ciò significa che per creare un outlet o un'azione, è possibile scegliere l'elemento di controllo che si vuole aggiungere a un punto di uscita o un'azione, tenendo premuto il pulsante di **controllo** sulla tastiera e trascinando il controllo direttamente nel codice.
 
 Per gli sviluppatori Novell. Mac, ciò significa che si trascinano i file stub di Objective-C che C# corrispondono al file in cui si vuole creare il punto di uscita o l'azione. Visual Studio per Mac creato un file denominato **MainWindow. h** come parte del progetto shim Xcode generato per usare il Interface Builder:
 

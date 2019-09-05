@@ -4,15 +4,15 @@ description: Questo documento descrive Novell. iOS a un livello basso, illustran
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 2bb682dcd2218291c8a6332cf0c1ad548c0aa3e2
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 7d59a295961c25ecfcc99bb54fdc188c957cf3ee
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225990"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291949"
 ---
 # <a name="ios-app-architecture"></a>Architettura app iOS
 
@@ -46,7 +46,7 @@ Ora che è stata esaminata la modalità di compilazione del codice dal codice so
 Con Novell sono disponibili due ecosistemi distinti, ovvero .NET e Apple, che è necessario riunire per sembrare più semplici, per garantire che l'obiettivo finale sia un'esperienza utente uniforme. Nella sezione precedente è stato illustrato il modo in cui i due runtime comunicano ed è possibile che sia stato ascoltato il termine "Bindings", che consente di usare le API iOS native in Novell. Le associazioni sono illustrate in modo dettagliato nella documentazione di [binding di Objective-C](~/cross-platform/macios/binding/overview.md) , quindi per ora si analizzerà il funzionamento di iOS dietro le quinte.
 
 In primo luogo, è necessario un modo per esporre Objective-C a C#, operazione eseguita tramite selettori. Un selettore è un messaggio inviato a un oggetto o a una classe. Con Objective-C questa operazione viene eseguita tramite le funzioni [objc_msgSend](~/cross-platform/macios/binding/overview.md) .
-Per ulteriori informazioni sull'utilizzo dei selettori, vedere la guida ai selettori [Objective-C](~/ios/internals/objective-c-selectors.md) . Deve inoltre essere disponibile un modo per esporre il codice gestito a Objective-C, che è più complicato a causa del fatto che Objective-C non conosce nulla sul codice gestito. Per aggirare questo problema, vengonousati i registrar. Queste informazioni sono descritte più dettagliatamente nella sezione successiva.
+Per ulteriori informazioni sull'utilizzo dei selettori, vedere la guida ai [selettori Objective-C](~/ios/internals/objective-c-selectors.md) . Deve inoltre essere disponibile un modo per esporre il codice gestito a Objective-C, che è più complicato a causa del fatto che Objective-C non conosce nulla sul codice gestito. Per aggirare questo problema, vengono usati i *registrar*. Queste informazioni sono descritte più dettagliatamente nella sezione successiva.
 
 ## <a name="registrars"></a>Registrar
 
@@ -153,7 +153,7 @@ public interface UIToolbar : UIBarPositioning {
 }
 ```
 
-Il generatore, chiamato [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) in Novell. iOS, accetta questi file di definizione e usa gli strumenti .NET per compilarli [in un assembly temporaneo](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione.
+Il generatore, chiamato [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) in Novell. iOS, accetta questi file di definizione e usa gli strumenti .NET per [compilarli in un assembly temporaneo](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione.
 Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e `btouch` pertanto non è in grado di cercarlo nell'assembly temporaneo per l'output.
 
 Dopo la creazione di Novell. iOS. dll, mTouch raggruppa tutti i componenti.

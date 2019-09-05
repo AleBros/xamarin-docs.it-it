@@ -4,15 +4,15 @@ description: Questo documento descrive il Framework del linguaggio naturale. Int
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/20/2018
-ms.openlocfilehash: 235628b512a63ee2f7ec4de2176ab0b90ad65487
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b0d07f2153a0395146506a371631e0bcf75ebef
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652608"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292917"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Uso del Framework del linguaggio naturale con Novell. iOS
 
@@ -189,7 +189,7 @@ Il Framework del linguaggio naturale include il supporto incorporato per il rico
 > [!NOTE]
 > Il Framework del linguaggio naturale supporta anche gli schemi di assegnazione di tag personalizzati tramite i modelli di base di ML forniti dallo sviluppatore. Per ulteriori informazioni, vedere la sessione Introduzione al [Framework del linguaggio naturale](https://developer.apple.com/videos/play/wwdc2018/713/) da WWDC 2018.
 
-Toccare il pulsante **entità** o **parti del discorso** denominate per recuperare:
+Toccare il pulsante entità o **parti del discorso** **denominate** per recuperare:
 
 - Matrice di oggetti `NSValue` , ognuno dei quali viene `NSRange` sottoposta a wrapping per un token nel testo originale.
 - Matrice di [`NLTag`](xref:NaturalLanguage.NLTag) valori: categorie per i `NSValue` token in corrispondenza dello stesso indice di matrice.

@@ -3,15 +3,15 @@ title: Eseguire la migrazione di un binding all'API unificata
 description: Questo articolo illustra i passaggi necessari per aggiornare un progetto di binding Novell esistente per supportare le API unificate per le applicazioni Novell. IOS e Novell. Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 90ef47d4e105dc401369c92e9196111c060314e3
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976425"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287371"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Eseguire la migrazione di un binding all'API unificata
 
@@ -34,7 +34,7 @@ I progetti di binding non sono supportati in Visual Studio in un computer Window
 
 ## <a name="modify-the-using-statements"></a>Modificare le istruzioni using
 
-Le API unificate rendono più semplice che mai condividere il codice tra Mac e iOS, oltre a consentire il supporto di applicazioni a 32 e 64 bit con lo stesso file binario. Eliminando i prefissi _MonoMac_ e MonoTouch dagli spazi dei nomi, la condivisione più semplice viene eseguita nei progetti di applicazione Novell. Mac e Novell. iOS.
+Le API unificate rendono più semplice che mai condividere il codice tra Mac e iOS, oltre a consentire il supporto di applicazioni a 32 e 64 bit con lo stesso file binario. Eliminando i prefissi _MonoMac_ e _MonoTouch_ dagli spazi dei nomi, la condivisione più semplice viene eseguita nei progetti di applicazione Novell. Mac e Novell. iOS.
 
 Di conseguenza, è necessario modificare i contratti di binding (e `.cs` altri file nel progetto di binding) per rimuovere i prefissi _MonoMac_ e `using` MonoTouch dalle istruzioni.
 

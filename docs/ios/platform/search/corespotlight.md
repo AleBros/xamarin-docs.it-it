@@ -4,15 +4,15 @@ description: Questo documento descrive come usare Spotlight principale in un'app
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6b89b8e681cf0bd3715e2fb80ca794e594875d8c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 845257bc11d24865a01a992e99d39ad6c578b42c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227374"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291464"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Eseguire una ricerca con core Spotlight in Novell. iOS
 

@@ -1,36 +1,36 @@
 ---
-title: ApiDefinitions e StructsAndEnums file
-description: Questo documento descrive i file ApiDefinitions.cs e StructsAndEnums.cs Sharpie descrive come viene generato l'errore. Questi file vengono quindi usati per accedere al codice Objective-C da C#.
+title: File ApiDefinitions & StructsAndEnums
+description: Questo documento descrive i file ApiDefinitions.cs e StructsAndEnums.cs generati da Objective Sharpie. Questi file vengono quindi usati per accedere al codice Objective-C da C#.
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 3b991f6105c6053f473b049d195aaef63cbcdd57
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 950f9149744cb8aa2abaed60ccefb416405ab110
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977671"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290785"
 ---
-# <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions e StructsAndEnums file
+# <a name="apidefinitions--structsandenums-files"></a>File ApiDefinitions & StructsAndEnums
 
-Quando l'obiettivo Sharpie è stata eseguita correttamente, viene generato `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` file.
-Questi due file vengono aggiunti a un progetto di associazione in Visual Studio per Mac o passati direttamente al `btouch` o `bmac` strumenti per produrre l'associazione finale.
+Quando Objective è stato eseguito correttamente, genera `Binding/ApiDefinitions.cs` file e. `Binding/StructsAndEnums.cs`
+Questi due file vengono aggiunti a un progetto di binding in Visual Studio per Mac o passati direttamente agli `btouch` strumenti `bmac` o per produrre l'associazione finale.
 
-Nelle *alcuni* casi potrebbero essere sufficiente, i file generati ma più spesso lo sviluppatore avrà bisogno di modificare manualmente questi file per risolvere eventuali problemi che non può essere gestite automaticamente dallo strumento (ad esempio con i flag generati con un [ `Verify` attributo](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md)).
+In *alcuni* casi, questi file generati potrebbero essere tutti necessari, ma più spesso lo sviluppatore dovrà modificare manualmente i file generati per risolvere eventuali problemi che non possono essere gestiti automaticamente dallo strumento (ad esempio quelli contrassegnati con un [ `Verify`attributo](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md)).
 
-Alcuni dei passaggi successivi:
+Alcuni dei passaggi successivi includono:
 
-- **Modificare i nomi**: In alcuni casi è opportuno modificare i nomi dei metodi e classi in modo che corrispondano linee guida di progettazione di .NET Framework.
-- **Metodi o proprietà**: Approccio euristico utilizzato dall'obiettivo Sharpie talvolta sceglierà un metodo può essere trasformato in una proprietà. A questo punto, è possibile decidere se questo è il comportamento previsto o meno.
-- **Associare gli eventi**: È possibile collegare le classi con le classi di delegati e automaticamente generare eventi per quelle.
-- **Associare le notifiche**: Non è possibile estrarre il contratto API delle notifiche dai file di intestazione pura, questa operazione richiede una corsa alla documentazione dell'API. Se si desidera che le notifiche fortemente tipizzate, è necessario aggiornare il risultato.
-- **Cura dell'API**: A questo punto, è possibile scegliere di fornire costruttori aggiuntivi, aggiungere i metodi (per consentire C# initialize-sul-costruzione sintassi), operatore di overload e implementare interfacce personalizzate per il file di definizioni aggiuntive.
+- **Regolazione dei nomi**: In alcuni casi è opportuno modificare i nomi dei metodi e delle classi in modo che corrispondano alle linee guida di progettazione .NET Framework.
+- **Metodi o proprietà**: L'euristica usata da Objective Sharpe talvolta sceglierà un metodo da trasformare in una proprietà. A questo punto, è possibile decidere se questo è il comportamento previsto.
+- **Associare eventi**: È possibile collegare le classi alle classi delegate e generare automaticamente gli eventi per tali classi.
+- **Associare le notifiche**: Non è possibile estrarre il contratto API delle notifiche dai file di intestazione puri. questa operazione richiederà un viaggio alla documentazione dell'API. Se si desiderano notifiche fortemente tipizzate, sarà necessario aggiornare il risultato.
+- **Cura API**: A questo punto, è possibile scegliere di fornire costruttori aggiuntivi, aggiungere metodi (per consentire la sintassi C# di inizializzazione per costruzione), eseguire l'overload degli operatori e implementare interfacce personalizzate sul file di definizioni aggiuntive.
 
-Vedere le [associazione di un'API](~/cross-platform/macios/binding/objective-c-libraries.md) descrizione da visualizzare come questi file si inserisce nel processo di associazione, come illustrato nel diagramma seguente:
+Vedere la descrizione dell' [associazione di un'API](~/cross-platform/macios/binding/objective-c-libraries.md) per vedere come questi file rientrano nel processo di binding, come illustrato nel diagramma seguente:
 
-![](apidefinitions-structsandenums-images/binding-flowchart.png "Nella figura seguente viene illustrato il processo di associazione")
+![](apidefinitions-structsandenums-images/binding-flowchart.png "Il processo di associazione viene illustrato in questo diagramma")
 
-Vedere la [riferimento ai tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md) per altre informazioni sul contenuto di questi file.
+Per ulteriori informazioni sul contenuto di questi file, vedere il [riferimento ai tipi di binding](~/cross-platform/macios/binding/binding-types-reference.md) .
 

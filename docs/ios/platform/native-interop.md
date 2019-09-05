@@ -4,15 +4,15 @@ description: Questo documento illustra come collegare le librerie C native in un
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/28/2016
-ms.openlocfilehash: eb49be3e52258864d61521bbe1dc388e9f6d1210
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 75180152c3ed7056102038b9019f8017183c17ee
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198307"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279939"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Riferimento a librerie native in Novell. iOS
 

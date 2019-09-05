@@ -4,15 +4,15 @@ description: Questa guida introduce il layout automatico di iOS e descrive come 
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 5e70a34fe4381b7c6d636448501a03d4e61039d7
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198975"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279996"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con il Xamarin Designer per iOS
 
@@ -71,7 +71,7 @@ Nella sezione precedente è stato illustrato come aggiungere vincoli predefiniti
 
 ### <a name="creating-constraints"></a>Creazione di vincoli
 
-Lo strumento iOS designer offre due tipi di controlli per la modifica degli elementi nell'area di progettazione. Trascinando i controlli e i controlli con spaziatura dei *pin*, come illustrato nell'immagine seguente:
+Lo strumento iOS designer offre due tipi di controlli per la modifica degli elementi nell'area di progettazione. *Trascinando* i controlli e i *controlli con spaziatura dei pin*, come illustrato nell'immagine seguente:
 
 ![Visualizza controlli](designer-auto-layout-images/controls.png)
 
@@ -104,7 +104,7 @@ L'handle quadrato creerà un vincolo *CenterX* o *CenterY* , a seconda del conte
 
  [![](designer-auto-layout-images/centerc.png "Vincoli Center")](designer-auto-layout-images/centerc.png#lightbox)
 
-Se si sceglie un'area di rilascio verticale, verrà creato un vincolo di centratura. Se si sceglie un'area di rilascio orizzontale, il vincolo sarà basato su *CenterX*.
+Se si sceglie un'area di rilascio verticale, verrà creato un vincolo di *centratura* . Se si sceglie un'area di rilascio orizzontale, il vincolo sarà basato su *CenterX*.
 
 ### <a name="combinational-constraints"></a>Vincoli combinativi
 
@@ -127,7 +127,7 @@ Quando si aggiunge un vincolo, questo verrà visualizzato nell'area di progettaz
 Quando si usano i vincoli possono verificarsi diversi tipi di problemi:
 
 - **Vincoli in conflitto** : si verifica quando più vincoli forzano l'elemento a avere valori in conflitto per un attributo e il motore di vincoli non è in grado di riconciliarli.
-- **Elementi** sottovincolati: le proprietà di un elemento (posizione + dimensioni) devono essere interamente coperte dal set di vincoli e dalle dimensioni intrinseche per i vincoli validi. Se questi valori sono ambigui, l'elemento viene definito Sottovincolato.
+- **Elementi sottovincolati** : le proprietà di un elemento (posizione + dimensioni) devono essere interamente coperte dal set di vincoli e dalle dimensioni intrinseche per i vincoli validi. Se questi valori sono ambigui, l'elemento viene definito Sottovincolato.
 - **Spostamento del frame** : questo errore si verifica quando il frame di un elemento e il relativo set di vincoli definiscono due rettangoli risultanti diversi.
 
 

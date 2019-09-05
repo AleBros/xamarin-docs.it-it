@@ -4,15 +4,15 @@ description: Questo articolo illustra come usare i controlli AppKit standard, ad
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: e5868e2cfe9a054e84eeb67432a01c2d98b1c3e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648344"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292239"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controlli standard in Novell. Mac
 
@@ -54,10 +54,10 @@ Sono presenti un subset di controlli AppKit che includono uno stile di visualizz
 [![](standard-controls-images/mailapp.png "Cornice della finestra Mac")](standard-controls-images/mailapp.png#lightbox)
 
 - `NSButton` **Pulsante con trama arrotondato** : oggetto con stile. `NSTexturedRoundedBezelStyle`
-- **Controllo segmentato arrotondato** `NSSegmentedControl` `NSSegmentStyleTexturedRounded`con trama-a con stile.
-- **Controllo segmentato arrotondato** `NSSegmentedControl` `NSSegmentStyleSeparated`con trama-a con stile.
-- **Menu** a `NSPopUpButton` comparsa`NSTexturedRoundedBezelStyle`con trama arrotondata con stile.
-- **Menu** a `NSPopUpButton` discesa`NSTexturedRoundedBezelStyle`con trama arrotondata con stile.
+- **Controllo segmentato arrotondato** `NSSegmentStyleTexturedRounded`con trama- `NSSegmentedControl` a con stile.
+- **Controllo segmentato arrotondato** `NSSegmentStyleSeparated`con trama- `NSSegmentedControl` a con stile.
+- `NSPopUpButton` **Menu a comparsa con trama arrotondata** con stile `NSTexturedRoundedBezelStyle`.
+- `NSPopUpButton` **Menu a discesa con trama arrotondata** con stile `NSTexturedRoundedBezelStyle`.
 - **Barra di ricerca** - `NSSearchField`A.
 
 Apple suggerisce le linee guida seguenti quando si utilizzano i controlli AppKit in una cornice di finestra:
@@ -299,7 +299,7 @@ DisclosureButton.Activated += (sender, e) => {
 
 Dove `NSCellStateValue` può essere:
 
-- Il pulsante viene inserito o il controllo è selezionato, ad esempio un controllo in una casella di controllo.
+- **Il pulsante** viene inserito o il controllo è selezionato, ad esempio un controllo in una casella di controllo.
 - **Off** : il pulsante non viene inserito o il controllo non è selezionato.
 - **Mixed** -combinazione di stati **on** e **off** .
 
@@ -336,7 +336,7 @@ AdjustTime.Activated += (sender, e) => {
 
 Dove `NSCellStateValue` può essere:
 
-- Il pulsante viene inserito o il controllo è selezionato, ad esempio un controllo in una casella di controllo.
+- **Il pulsante** viene inserito o il controllo è selezionato, ad esempio un controllo in una casella di controllo.
 - **Off** : il pulsante non viene inserito o il controllo non è selezionato.
 - **Mixed** -combinazione di stati **on** e **off** .
 
@@ -618,7 +618,7 @@ Per creare un popopov, seguire questa procedura:
 
 ### <a name="tab-views"></a>Visualizzazioni a schede
 
-Le visualizzazioni a schede sono costituite da un elenco di schede (simile a un controllo segmentato) combinato con un set di vistedenominate riquadri. Quando l'utente seleziona una nuova scheda, verrà visualizzato il riquadro collegato. Ogni riquadro contiene un proprio set di controlli.
+Le visualizzazioni a schede sono costituite da un elenco di schede (simile a un controllo segmentato) combinato con un set di viste denominate _riquadri_. Quando l'utente seleziona una nuova scheda, verrà visualizzato il riquadro collegato. Ogni riquadro contiene un proprio set di controlli.
 
 Quando si lavora con una visualizzazione a schede nella Interface Builder di Xcode, usare il **controllo attribute** per impostare il numero di schede:
 

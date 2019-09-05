@@ -4,24 +4,24 @@ description: Questo documento descrive i concetti chiave necessari per l'uso di 
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: bce2c1e543084ea80908946b1e37e43cf53c1676
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227355"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292558"
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti di SiriKit
 
 _Questo articolo illustra i concetti chiave che saranno necessari per l'uso di SiriKit in un'app Novell. iOS._
 
 
-Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** Intent e Intent.
+Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
 
-SiriKit consente a un'app per iOS di fornire servizi accessibili all'utente usando Siri e l'app Maps in un dispositivo iOS usando le estensioni delle app e i nuovi framework **dell'interfaccia utente** Intent e Intent.
+SiriKit consente a un'app per iOS di fornire servizi accessibili all'utente usando Siri e l'app Maps in un dispositivo iOS usando le estensioni delle app e i **nuovi Framework** **dell'interfaccia utente** Intent e Intent.
 
 Siri funziona con il concetto di **domini**, gruppi di azioni di conoscenza per le attività correlate. Ogni interazione eseguita dall'app con Siri deve rientrare in uno dei relativi domini di servizio noti, come indicato di seguito:
 
@@ -38,7 +38,7 @@ Quando l'utente effettua una richiesta di Siri che interessa uno dei servizi del
 
 Siri e l'app Maps interagiscono con i servizi dell'app tramite due tipi diversi di estensioni dell'app:
 
-- **Estensione** per Intent: fornisce Siri ed esegue il mapping con il contenuto dell'app ed esegue le attività necessarie per soddisfare gli Intent supportati.
+- **Estensione per Intent** : fornisce Siri ed esegue il mapping con il contenuto dell'app ed esegue le attività necessarie per soddisfare gli Intent supportati.
 - **Estensione per interfaccia utente Intent** : fornisce un'interfaccia utente personalizzata che verrà visualizzata per il contenuto dell'app all'interno di Siri o maps.
 
 L'app deve fornire un'estensione per gli Intent per supportare SiriKit ed è responsabile della fornitura di informazioni che Siri e Maps possono presentare all'utente e per la gestione di Intent.
@@ -108,7 +108,7 @@ Quando l'utente effettua una richiesta verbale di Siri, questi sono i passaggi c
 
 1. Per prima cosa, Siri prende l'audio della **voce** dell'utente e lo converte in testo.
 2. Successivamente, il testo viene convertito in un **Intent**, una rappresentazione strutturata della richiesta dell'utente.
-3. In base allo scopo, Siri interviene per eseguire la richiesta dell'utente.
+3. In base allo scopo, Siri interviene **per eseguire** la richiesta dell'utente.
 4. Infine, Siri presenta le **risposte** (sia visive che verbali) per l'utente in base all'azione eseguita.
 
 Esistono tre modi principali in cui l'app può partecipare alla conversazione dell'utente con Siri:
@@ -135,7 +135,7 @@ Siri non ha il nome "Bobo" nel database, ma l'app esegue e condivide queste info
 
 Siri sa che è necessario più di inviare un messaggio rispetto a un solo destinatario, quindi verificherà rapidamente con l'estensione dell'app per verificare se un messaggio richiede contenuto. Poiché MonkeyChat lo fa, Siri risponderà all'utente con la domanda: *"Cosa vuoi dire a Bobo?"*
 
-Nell'esempio precedente l'utente ha risposto: *"inviare più banane"* , che Siri includerà un intento strutturato:
+Nell'esempio precedente l'utente ha risposto: *"inviare più banane"* , che Siri includerà un **intento**strutturato:
 
 [![](understanding-sirikit-images/monkeychat05.png "Siri raggruppa la risposta dell'utente in un intento strutturato")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
@@ -182,7 +182,7 @@ La risposta più comune da parte dell'app avrà **esito positivo**, ovvero l'app
 
 In alcuni casi l'app deve verificare che una determinata richiesta corrisponda alle informazioni corrette. In questi casi, invierà una risposta **ConfirmationRequired** per porre una domanda affermativa o no all'utente, ad esempio *"Send Message to Bobo The Great?"*
 
-Potrebbero essere presenti altri casi in cui l'app richiederà all'utente di scegliere un breve elenco di opzioni. In questo caso, l'app fornirà una risposta di risoluzione dell'ambiguità con un elenco di due o dieci opzioni che l'utente può scegliere, ad esempio:
+Potrebbero essere presenti altri casi in cui l'app richiederà all'utente di scegliere un breve elenco di opzioni. In questo caso, l'app fornirà una risposta di risoluzione dell' **ambiguità** con un elenco di due o dieci opzioni che l'utente può scegliere, ad esempio:
 
 ```csharp
 Who do you want to message?
@@ -227,7 +227,7 @@ Idealmente, l'app deve fornire una risposta a Siri entro due o tre secondi al ma
 
 Con SiriKit in iOS 10, Apple ha creato due nuovi punti di estensione:
 
-- **Estensione** per Intent: fornisce Siri con il contenuto dell'app ed esegue le attività necessarie per soddisfare gli Intent supportati.
+- **Estensione per Intent** : fornisce Siri con il contenuto dell'app ed esegue le attività necessarie per soddisfare gli Intent supportati.
 - **Estensione per interfaccia utente Intent** : fornisce un'interfaccia utente personalizzata che verrà visualizzata per il contenuto delle app all'interno di Siri.
 
 È inoltre disponibile un'API per fornire parole e frasi a Siri per facilitare il riconoscimento nel formato:

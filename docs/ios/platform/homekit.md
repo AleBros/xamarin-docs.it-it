@@ -4,15 +4,15 @@ description: HomeKit è il Framework di Apple per il controllo dei dispositivi d
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e8acec18785ff5017aa012a646f40f8a866070f8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656625"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292719"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit in Novell. iOS
 
@@ -54,12 +54,12 @@ Seguire questa procedura:
 
 1. Accedere al [portale Apple Developer](https://developer.apple.com).
 2. Fare clic su **certificati, identificatori & profili**.
-3. Se non è già stato fatto, fare clic su identificatori e creare un ID per l'app (ad `com.company.appname`esempio), altrimenti modificare l'ID esistente.
+3. Se non è già stato fatto, fare clic su **identificatori** e creare un ID per l'app (ad `com.company.appname`esempio), altrimenti modificare l'ID esistente.
 4. Verificare che il servizio **HomeKit** sia stato controllato per l'ID specificato: 
 
     [![](homekit-images/provision01.png "Abilita il servizio HomeKit per l'ID specificato")](homekit-images/provision01.png#lightbox)
 5. Salvare le modifiche.
-6. Fare clic su provisioning dei **profili** > **sviluppo** e creare un nuovo profilo di provisioning di sviluppo per l'app: 
+6. Fare clic su **provisioning dei profili** > **sviluppo** e creare un nuovo profilo di provisioning di sviluppo per l'app: 
 
     [![](homekit-images/provision02.png "Creare un nuovo profilo di provisioning di sviluppo per l'app")](homekit-images/provision02.png#lightbox)
 7. Scaricare e installare il nuovo profilo di provisioning o usare Xcode per scaricare e installare il profilo.
@@ -81,7 +81,7 @@ Con queste impostazioni, l'applicazione è ora pronta per accedere alle API del 
 
 ## <a name="the-homekit-accessory-simulator"></a>Simulatore di accessori HomeKit
 
-Per fornire un modo per testare tutti i servizi e i dispositivi di automazione di casa possibili, senza dover avere un dispositivo fisico, Apple ha creato il simulatore di _Accessori HomeKit_. Con questo simulatore è possibile configurare e configurare i dispositivi HomeKit virtuali.
+Per fornire un modo per testare tutti i servizi e i dispositivi di automazione di casa possibili, senza dover avere un dispositivo fisico, Apple ha creato il _simulatore di accessori HomeKit_. Con questo simulatore è possibile configurare e configurare i dispositivi HomeKit virtuali.
 
 ### <a name="installing-the-simulator"></a>Installazione del simulatore
 
@@ -454,7 +454,7 @@ L' `HMCharacteristicType` enumerazione fornisce un set di valori di metadati car
 - TargetTemperature
 - TargetVerticalTilt
 - TemperatureUnits
-- Version
+- Versione
 
 ### <a name="working-with-a-characteristics-value"></a>Uso del valore di una caratteristica
 
@@ -667,7 +667,7 @@ Deve modificare lo stato della luce nel simulatore di accessori HomeKit. Se il v
 Questo articolo ha trattato le funzionalità di base necessarie per l'uso di accessori HomeKit in un'app Novell. iOS. Esistono tuttavia diverse funzionalità avanzate di HomeKit che non sono descritte in questa introduzione:
 
 - **Rooms** : gli accessori abilitati per HomeKit possono essere organizzati facoltativamente in chat room dall'utente finale. Questo consente a HomeKit di presentare gli accessori in modo da semplificare la comprensione e l'utilizzo da parte dell'utente. Per altre informazioni sulla creazione e sulla gestione delle chat, vedere la documentazione di Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) .
-- **Zones** : le camere possono essere organizzate facoltativamente in zone dall'utente finale. Una zona fa riferimento a una raccolta di chat che l'utente può considerare come una singola unità. Ad esempio: Al piano superiore, in basso o in seminterrato. Anche in questo caso, questo consente a HomeKit di presentare e usare gli accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e la gestione delle zone, vedere la documentazione di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) .
+- **Zones** : le camere possono essere organizzate facoltativamente in zone dall'utente finale. Una zona fa riferimento a una raccolta di chat che l'utente può considerare come una singola unità. Ad esempio:  Al piano superiore, in basso o in seminterrato. Anche in questo caso, questo consente a HomeKit di presentare e usare gli accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e la gestione delle zone, vedere la documentazione di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) .
 - **Azioni e set** di azioni: le azioni modificano le caratteristiche del servizio accessorio e possono essere raggruppate in set. I set di azioni fungono da script per controllare un gruppo di accessori e coordinare le azioni. Uno script "Watch TV", ad esempio, potrebbe chiudere i bui, abbassare le luci e accendere la televisione e il suo sistema audio. Per altre informazioni sulla creazione e sulla gestione di azioni e set di azioni, vedere la documentazione di Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) e [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) .
 - **Trigger** : un trigger consente di attivare uno o più set di azioni quando un determinato set di condizioni è stato soddisfatto. Ad esempio, accendere la luce portch e bloccare tutte le porte esterne quando si trova all'esterno. Per altre informazioni sulla creazione e sulla gestione dei trigger, vedere la documentazione di Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) .
 

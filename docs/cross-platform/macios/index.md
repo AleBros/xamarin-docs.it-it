@@ -3,15 +3,15 @@ title: Piattaforma Apple (iOS e Mac)
 description: 'Questo documento descrive vari argomenti correlati allo sviluppo di Novell. iOS e Novell. Mac: condivisione del codice, API unificata, binding di librerie Objective-C, riferimenti nativi, tipi nativi e altro ancora.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d57e69f3cb7662b1ff6e1e7fe1645605d7861b9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199417"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290841"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Piattaforma Apple (iOS e Mac)
 

@@ -4,15 +4,15 @@ description: Questo documento descrive come distribuire e testare le app watchos
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d950ceb18bd13378ced06ec7257300fc5bf4504b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: af6d32808e2847c99c4f8a2d90e7dc2d3955ae03
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120184"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284668"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test di app watchos con Novell
 
@@ -28,12 +28,12 @@ Se si esegue la distribuzione in un test o si carica nell'App Store, è necessar
 - Nella soluzione:
 
   - Verificare [che gli ID bundle e i riferimenti al progetto](~/ios/watchos/get-started/installation.md) siano impostati.
-  - Verificare che le icone siano configurate [correttamente](~/ios/watchos/app-fundamentals/icons.md).
+  - Verificare che le icone siano [configurate correttamente](~/ios/watchos/app-fundamentals/icons.md).
   - Verificare che i numeri di versione del bundle corrispondano in tutti i progetti.
   - Configurare i **diritti. plist** per i gruppi di app, se necessario.
 
 - Seguire quindi le istruzioni per:
-  - [Eseguire la distribuzione in un Apple Watch per](~/ios/watchos/deploy-test/device.md)il testing o
+  - [Eseguire la distribuzione in un Apple Watch per il testing](~/ios/watchos/deploy-test/device.md)o
   - [Caricare nell'App Store](~/ios/watchos/deploy-test/appstore.md).
 
 <a name="App_IDs"/>
@@ -74,7 +74,7 @@ Per la distribuzione, è necessario creare solo un profilo di provisioning di di
 
 - Configurare il **gruppo di app** nella sezione certificati del portale per sviluppatori Apple **, identificatori & profili** .
 
-- **Gruppi di app** abilitati (e fornito l'ID del gruppo di **app**) nell'app iOS e nell' **ID app** dell'estensione Watch e in **titles. plist**.
+- **Gruppi di app** abilitati (e fornito l'ID del gruppo *di* **app**) nell'app iOS e nell' **ID app** dell'estensione Watch e in **titles. plist**.
 
 ### <a name="certificates-identifiers--profiles"></a>Certificati, identificatori & profili
 

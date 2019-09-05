@@ -3,15 +3,15 @@ title: Creazione di visualizzazioni HTML con i modelli Razor
 description: " L'uso di una pagina Web a schermo intero per il rendering del codice HTML può essere un modo semplice ed efficace per eseguire il rendering di una formattazione complessa in modo multipiattaforma, soprattutto se si dispone già di HTML, JavaScript e CSS da un progetto di sito Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621027"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284925"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Creazione di visualizzazioni HTML con i modelli Razor
 
@@ -58,7 +58,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-Per altre informazioni sull'uso del controllo WebView, vedere le ricette di WebView per [Android](http://docs.xamarin.com/recipes/android/controls/webview/) .
+Per altre informazioni sull'uso del controllo WebView, vedere le ricette di [WebView per Android](http://docs.xamarin.com/recipes/android/controls/webview/) .
 
 ### <a name="specifying-the-base-directory"></a>Specifica della directory di base
 
@@ -80,7 +80,7 @@ Il rendering dell'output del modello viene eseguito in iOS C# con il codice segu
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
-Viene specificata `NSBundle.MainBundle.BundleUrl` la directory di base che fa riferimento alla directory in cui è installata l'applicazione. Tutti i file nella cartella Resources vengono copiati in questo percorso, ad esempio il file **Style. CSS** illustrato di seguito:
+Viene specificata `NSBundle.MainBundle.BundleUrl` la directory di base che fa riferimento alla directory in cui è installata l'applicazione. Tutti i file nella cartella **Resources** vengono copiati in questo percorso, ad esempio il file **Style. CSS** illustrato di seguito:
 
  ![soluzione iPhoneHybrid](images/image1_240x163.png)
 
@@ -485,7 +485,7 @@ Questi modelli non usano controlli nativi in ogni piattaforma. l'intera schermat
 
 HTML può essere ideale per la realizzazione di prototipi e visualizzare i tipi di elementi più adatti al Web, ad esempio il testo RTF e il layout reattivo. Tuttavia, non tutte le attività sono adatte per HTML e JavaScript: lo scorrimento attraverso lunghi elenchi di dati, ad esempio, offre prestazioni migliori usando i controlli dell'interfaccia utente nativi (ad esempio UITableView in iOS o ListView in Android).
 
-Le visualizzazioni Web nel modello possono essere facilmente ampliate con i controlli specifici della piattaforma. è sufficiente modificare **file mainstoryboard. Storyboard** in iOS designer o Resources **/layout/Main. aXML** in Android.
+Le visualizzazioni Web nel modello possono essere facilmente ampliate con i controlli specifici della piattaforma. è sufficiente modificare **file mainstoryboard. Storyboard** in iOS designer o **Resources/layout/Main. aXML** in Android.
 
 ### <a name="razortodo-sample"></a>Esempio RazorTodo
 

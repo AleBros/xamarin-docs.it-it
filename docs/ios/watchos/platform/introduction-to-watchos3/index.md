@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2017
-ms.openlocfilehash: 5abd28dc9a6fc2a0dca5fa31908731a5496ce5fa
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 50278eaa6d3518b8de85685c1faf64eabac4531d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621043"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292195"
 ---
 # <a name="introduction-to-watchos-3"></a>Introduzione a watchOS 3
 
@@ -23,7 +23,7 @@ In questo documento vengono trattati gli argomenti seguenti:
 - [Novità di watchos 3](#Whats-New-in-watchOS-3)
   - [Apple pay miglioramenti](#Apple-Pay-Enhancements) aggiunge il supporto per i pagamenti in-app nel Apple Watch.
   - Le [attività in background](#Background-Tasks) offrono all'app la possibilità di aggiornare le informazioni in background, in modo che siano pronte quando l'utente la necessita.
-  - Sono stati apportati [miglioramenti](#Complications-Enhancements) alle complicazioni per watchos 3 che forniscono nuove funzionalità per le app.
+  - Sono stati apportati [miglioramenti alle complicazioni](#Complications-Enhancements) per watchos 3 che forniscono nuove funzionalità per le app.
   - I [Framework appena disponibili](#Newly-Available-Frameworks) sono esposti per le app watchos.
   - [Suggerimenti proattivi](#Proactive-Suggestions) consente all'app di visualizzare in modo proattivo le informazioni all'utente.
   - Sono stati apportati diversi [miglioramenti alla sicurezza e alla privacy](#Security-and-Privacy-Enhancements) per watchos 3.

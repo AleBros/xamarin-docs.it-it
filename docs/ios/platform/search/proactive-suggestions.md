@@ -4,15 +4,15 @@ description: Questo articolo illustra come usare i suggerimenti proattivi nell'a
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 294616e7766a6613a014495e5f9d124f74465072
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121417"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291733"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione ai suggerimenti proattivi in Novell. iOS
 
@@ -82,7 +82,7 @@ I suggerimenti proattivi funzionano con le app in tre modi principali:
 
 E sono supportati nell'app implementando gli elementi seguenti:
 
-- **La consegna è stata** aggiunta in iOS 8 per supportare la consegna, che consente allo sviluppatore di avviare un'attività in un dispositivo, quindi di continuare con un'altra (vedere [Introduzione alla](~/ios/platform/handoff.md)consegna).`NSUserActivity`  - 
+- **La consegna è stata aggiunta** in iOS 8 per supportare la consegna, che consente allo sviluppatore di avviare un'attività in un dispositivo, quindi di continuare con un'altra (vedere [Introduzione alla](~/ios/platform/handoff.md)consegna).`NSUserActivity`  - 
 - **Ricerca Spotlight** : iOS 9 ha aggiunto la possibilità di innalzare di livello il contenuto delle app nei `NSUserActivity` risultati della ricerca di Spotlight usando (vedere [eseguire ricerche con core Spotlight](~/ios/platform/search/corespotlight.md)).
 - **Reminders Siri contestuali** : in iOS 10 `NSUserActivity` è stato ampliato per consentire a Siri di creare rapidamente un promemoria per visualizzare il contenuto attualmente visualizzato dall'utente nell'app in un secondo momento.
 - **Suggerimenti** `NSUserActivity` per la posizione: iOS 10 migliora l'acquisizione delle posizioni visualizzate all'interno dell'app e le promuove in molte posizioni in tutto il sistema.
@@ -115,7 +115,7 @@ Per altre informazioni sulla consegna e la ricerca in evidenza, vedere le [guide
 
 ### <a name="creating-an-activity"></a>Creazione di un'attività
 
-Prima di creare un'attività, sarà necessario creare un identificatore del tipo di attività per identificarlo. L'identificatore del tipo di attività è una stringa breve aggiunta `NSUserActivityTypes` alla matrice del `Info.plist` file dell'app usata per identificare in modo univoco un determinato tipo di attività utente. Nella matrice sarà presente una voce per ogni attività supportata dall'app ed esposta alla ricerca di app. Per ulteriori informazioni, vedere il riferimento per la creazione di identificatori del [tipo di attività](~/ios/platform/search/nsuseractivity.md) .
+Prima di creare un'attività, sarà necessario creare un identificatore del tipo di attività per identificarlo. L'identificatore del tipo di attività è una stringa breve aggiunta `NSUserActivityTypes` alla matrice del `Info.plist` file dell'app usata per identificare in modo univoco un determinato tipo di attività utente. Nella matrice sarà presente una voce per ogni attività supportata dall'app ed esposta alla ricerca di app. Per ulteriori informazioni, vedere il riferimento per la [creazione di identificatori del tipo di attività](~/ios/platform/search/nsuseractivity.md) .
 
 Esaminare un esempio di un'attività:
 

@@ -1,147 +1,147 @@
 ---
 title: Parte 6 - Test e approvazioni per App Store
-description: Questo documento descrive come testare un'applicazione multipiattaforma su dispositivo, gestire i test case, automatizza i test, eseguire unit test e di lavoro tramite il processo di invio delle app.
+description: Questo documento descrive come testare un'applicazione multipiattaforma sul dispositivo, gestire i test case, automatizzare i test, eseguire unit test e usare il processo di invio dell'app.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 0faf7c9e4ff7c96cdfd25ab6d6658726ef247b32
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 049f01d47d303f07edd57c659361d9a123993ede
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61275407"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288647"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - Test e approvazioni per App Store
 
 ## <a name="testing"></a>Test
 
-Molte App (anche le app Android, in alcuni Store) dovrà superare un processo di approvazione prima che vengano pubblicati; in modo che il test è fondamentale per garantire l'app raggiunge il mercato (tantomeno ha esito positivo con i clienti). Testing può assumere molte forme, dal livello developer di unit test alla gestione dei test della versione beta in un'ampia gamma di hardware.
+Molte app (anche app Android, in alcuni negozi) dovranno passare un processo di approvazione prima della pubblicazione; quindi, i test sono fondamentali per garantire che l'app raggiunga il mercato (solo in caso di successo con i clienti). Il test può assumere diverse forme, dal testing unità a livello di sviluppatore alla gestione del test beta in un'ampia gamma di hardware.
 
-### <a name="test-on-all-platforms"></a>Esegui test su tutte le piattaforme
+### <a name="test-on-all-platforms"></a>Test su tutte le piattaforme
 
-Esistono sottili differenze tra gli elementi supportati di .NET su Windows phone, tablet e dispositivi desktop, nonché le limitazioni in iOS che impediscono la dinamica del codice da generare in tempo reale. Il piano per il test del codice su più piattaforme durante lo sviluppo, o pianifica ora effettuare il refactoring e aggiorna il modello-parte dell'applicazione alla fine del progetto.
+Esistono differenze minime tra le funzionalità supportate da .NET nei dispositivi Windows Phone, tablet e desktop, nonché le limitazioni di iOS che impediscono la generazione di codice dinamico in tempo reale. È possibile pianificare il test del codice su più piattaforme mentre lo si sviluppa o pianificare il tempo per effettuare il refactoring e aggiornare la parte del modello dell'applicazione alla fine del progetto.
 
-È sempre consigliabile usare il simulatore/emulatore per eseguire il test più versioni del sistema operativo e anche diverse funzionalità/configurazioni dei dispositivi.
+È sempre consigliabile usare il simulatore o l'emulatore per testare più versioni del sistema operativo e anche diverse funzionalità/configurazioni del dispositivo.
 
-È necessario testare anche sul numero di dispositivi hardware fisici diversi possibili.
+È anche necessario testare il numero di dispositivi hardware fisici più diversi possibile.
 
 #### <a name="devices-in-cloud"></a>Dispositivi nel cloud
 
-L'ecosistema di telefoni e tablet per dispositivi mobili cresce continuamente, rendendo impossibile eseguire il test crescente numero di dispositivi disponibili. Per risolvere questo problema numerosi servizi offrono la possibilità di controllare in remoto i dispositivi diversi, in modo che le applicazioni possono essere installate e testate senza la necessità di investire direttamente in un numero elevato di hardware.
+Il telefono cellulare e l'ecosistema di Tablet crescono continuamente, rendendo impossibile testare il numero sempre maggiore di dispositivi disponibili. Per risolvere questo problema, numerosi servizi offrono la possibilità di controllare in remoto molti dispositivi diversi, in modo che le applicazioni possano essere installate e testate senza dover investire direttamente in molti componenti hardware.
 
-[Test App Center](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) offre un modo semplice per testare applicazioni iOS e Android in centinaia di dispositivi diversi.
+[App Center Test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) offre un modo semplice per testare le applicazioni iOS e Android su centinaia di dispositivi diversi.
 
 ### <a name="test-management"></a>Gestione test
 
-Durante il test delle applicazioni all'interno dell'organizzazione o la gestione di un programma beta con utenti esterni, esistono due sfide:
+Quando si esegue il test delle applicazioni all'interno dell'organizzazione o si gestisce un programma beta con utenti esterni, esistono due problemi:
 
-- **Distribuzione** : gestione del processo di provisioning (soprattutto per i dispositivi iOS) e ottenere le versioni aggiornate del software ai tester.
-- **Commenti e suggerimenti** : la raccolta di informazioni sull'utilizzo dell'applicazione e informazioni dettagliate sugli errori che possono verificarsi.
+- **Distribuzione** : gestione del processo di provisioning (in particolare per i dispositivi iOS) e aggiornamento delle versioni di software ai tester.
+- **Commenti e suggerimenti** : raccolta di informazioni sull'utilizzo dell'applicazione e informazioni dettagliate sugli errori che possono verificarsi.
 
 
-Esistono una serie di servizi aiuto per risolvere questi problemi, fornendo un'infrastruttura che viene compilata nell'applicazione per raccogliere e segnalare errori e utilizzo e anche semplificando il processo di provisioning per consentire per l'abbonamento e gestire i propri dispositivi e i tester .
+Sono disponibili numerosi servizi che consentono di risolvere questi problemi, fornendo un'infrastruttura incorporata nell'applicazione per raccogliere e creare report sull'utilizzo e sugli errori, nonché semplificare il processo di provisioning per consentire l'iscrizione e la gestione dei tester e dei relativi dispositivi .
 
-[Visual Studio App Center](/appcenter/) offre una soluzione a questi problemi, fornendo le informazioni sull'utilizzo di applicazioni sofisticate, segnalazione degli arresti anomali e distribuzione della versione di test.
+[Visual Studio App Center](/appcenter/) offre una soluzione a questi problemi, che fornisce la distribuzione della versione di test, la segnalazione degli arresti anomali e informazioni sofisticate sull'utilizzo delle applicazioni.
 
 ### <a name="test-automation"></a>Automazione di test
 
-Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) utilizzabile per creare gli script di test che possono essere eseguiti in locale o caricati in interfaccia utente automatizzati [Test App Center](https://docs.microsoft.com/appcenter/test-cloud/).
+Novell [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) può essere usato per creare script di test automatizzati dell'interfaccia utente che possono essere eseguiti localmente o caricati in [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
 
 ## <a name="unit-testing"></a>Testing unità
 
-### <a name="touchunit"></a>Touch
+### <a name="touchunit"></a>Touch. unit
 
-Xamarin. IOS include un framework di unit test denominato Touch che segue lo stile di JUnit/NUnit la scrittura di test.
+Novell. iOS include un Framework di unit test denominato touch. Unit che segue i test di scrittura in stile JUnit/NUnit.
 
-Fare riferimento a nostro [Unit test con xamarin. IOS](~/ios/deploy-test/touch.unit.md) documentazione per informazioni dettagliate sulla scrittura di test e sull'esecuzione Touch.
+Per informazioni dettagliate sulla scrittura di test e sull'esecuzione di touch. Unit, vedere la documentazione relativa agli [unit test con Novell. iOS](~/ios/deploy-test/touch.unit.md) .
 
 ### <a name="andrunit"></a>Andr.Unit
 
-È equivalente a touch per Android chiamato Andr.Unit open source. È possibile scaricarlo dal [github](https://github.com/spouliot/Andr.Unit) e continuare a leggere sullo strumento [ @spouliotdel blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
+È disponibile un equivalente open source di touch. Unit per Android denominato Andr. Unit. È possibile scaricarlo da [GitHub](https://github.com/spouliot/Andr.Unit) e leggere lo strumento nel [ @spouliotBlog di](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## <a name="app-store-approvals"></a>Approvazioni di App Store
 
-Apple e Microsoft operano nell'archivio solo in piattaforme proposte: l'App Store e un Marketplace rispettivamente. Entrambi bloccare i dispositivi e implementare un processo di revisione app rigorosi per controllare la qualità delle applicazioni disponibili per il download. Natura aperta offre di Android significa che sono disponibili numerose opzioni di archivio che vanno da Google Play, che è ampiamente disponibile e non dispone di alcun processo di revisione, per Appstore di Amazon per Android e specifiche dell'hardware le attività, ad esempio le app Samsung che sono più limitate di distribuzione e implementare un processo di approvazione.
+Apple e Microsoft gestiscono l'unico archivio sulle piattaforme: App Store e Marketplace rispettivamente. Entrambi bloccano i dispositivi e implementano una rigorosa procedura di revisione dell'app per controllare la qualità delle applicazioni disponibili per il download. La natura aperta di Android significa che sono disponibili numerose opzioni di archiviazione che variano da Google Play, che è ampiamente disponibile e non prevede alcun processo di revisione, ad AppStore di Amazon per Android e a sforzi specifici dell'hardware come le app Samsung con una distribuzione più limitata e implementano un processo di approvazione.
 
-In attesa di un'app per la revisione può essere molto difficile - pressioni business spesso significa che le applicazioni vengono inviate per l'approvazione con il minimo margine di errore prima di una data di avvio "destinazione". Lo stesso processo può richiedere fino a due settimane e non è necessariamente trasparente: è limitato feedback sullo stato di avanzamento dell'applicazione fino a quando non viene infine rifiutato o approvato. Rifiuto può significare manca una finestra del marketing di opportunità, soprattutto se si verifica più volte e passaggio di settimane tra la data di avvio originale e quando l'app viene approvata infine.
+L'attesa della revisione di un'app può essere molto stresssa. le pressioni aziendali spesso significano che le applicazioni vengono inviate per l'approvazione con un margine minimo di errore prima di una data di avvio "mirata". Il processo stesso può richiedere fino a due settimane e non è necessariamente trasparente: è disponibile un feedback limitato sullo stato di avanzamento dell'applicazione fino a quando non viene definitivamente rifiutato o approvato. Il rifiuto può comportare la mancanza di una finestra di marketing di opportunità, soprattutto se si verifica più di una volta e le settimane passano tra la data di avvio originale e la fine dell'approvazione dell'app.
 
-### <a name="be-prepared"></a>Essere preparati
+### <a name="be-prepared"></a>Prepararsi
 
-La prima parte di consigli: pianificare in anticipo l'avvio dell'app e quindi tenere conto per un rifiuto possibili e nuovo INVIO. Ogni punto vendita è necessario creare un account prima di inviare l'app, eseguire questa operazione non appena possibile.
-Durante l'iscrizione a Google Play richiede solo pochi minuti se le app sono gratuite, il processo ottiene molto più complesso se si sono venderli ed è necessario fornire servizi bancari e fiscali. Apple e i processi di Microsoft sono entrambi molto più complessa di Google, potrebbe essere necessaria una settimana o informazioni per ottenere l'account approvato in modo influenzano questa volta i piani di avvio.
+Il primo Consiglio: pianificare l'avvio dell'app in anticipo e ottenere i diritti per un possibile rifiuto e un nuovo invio. Per ogni negozio è necessario creare un account prima di inviare l'app: eseguire questa operazione il prima possibile.
+Mentre l'iscrizione a Google Play richiede solo pochi minuti se le tue app sono gratuite, il processo diventa molto più complesso se li vendi ed è necessario fornire informazioni bancarie e fiscali. I processi di Apple e Microsoft sono molto più interessati rispetto a Google, potrebbe essere necessaria una settimana o più per ottenere l'approvazione dell'account, in modo da considerare questo tempo nei piani di lancio.
 
-Quando l'account è stato approvato, si è pronti per l'invio di un'app. Il processo effettivo per inviare l'App è illustrato nella documentazione seguente:
+Dopo che l'account è stato approvato, si è pronti per inviare un'app. Il processo effettivo per inviare le app viene trattato nella documentazione seguente:
 
-- [La pubblicazione in iOS di Apple App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Preparazione di un'applicazione per Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)
-- Gli sviluppatori di Windows, visitare il [Windows Dev Center](https://developer.microsoft.com/windows/windows-apps) a conoscenza di inviare le proprie app.
+- [Pubblicazione nell'App Store iOS di Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
+- [Preparazione di un'app per Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)
+- Gli sviluppatori Windows dovrebbero visitare [Windows Dev Center](https://developer.microsoft.com/windows/windows-apps) per informazioni sull'invio delle proprie app.
 
-Il resto di questa sezione vengono illustrati i fattori che è consigliabile prendere in considerazione per assicurarsi che l'app viene approvata senza eventuali interruzioni.
+Nella parte restante di questa sezione vengono illustrati gli aspetti da prendere in considerazione per assicurarsi che l'app venga approvata senza alcun singhiozzo.
 
 ### <a name="quality"></a>Qualità
 
-Sembra ovvio, ma le applicazioni spesso vengono rifiutate perché non soddisfano un certo livello di qualità: dopo tutto, questo è il motivo per cui gli archivi curati hanno un processo di approvazione in primo luogo!
+Sembra ovvio, ma le applicazioni vengono spesso rifiutate perché non soddisfano un certo livello di qualità: dopo tutto, questo è il motivo per cui i negozi curati hanno un processo di approvazione in primo luogo.
 
-Arresti anomali del sistema sono un motivo comune per il rifiuto. Se è troppo semplice rendere l'arresto anomalo dell'app, è ha garantito a essere rifiutate. La maggior parte degli sviluppatori non inviano le proprie App nella previsione che verrà arrestano, ma spesso lo fanno. Testare accuratamente l'app prima di inviarlo, concentrandosi solo per rendere non che tutto funzioni, ma anche di gestire scenari comuni di errore per dispositivi mobili, ad esempio problemi di rete e i vincoli di risorse, ad esempio memoria o spazio di archiviazione. Usare dispositivi fisici sia il simulatore per testare, indipendentemente dal modo in cui anche codice viene eseguito in un simulatore, solo un dispositivo può dimostrare le prestazioni reali dell'app. Usare diversi dispositivi come è possibile trovare e integrare un team di tester beta Se è possibile, i servizi di terze parti possono aiutare nella gestione di commenti e suggerimenti e la distribuzione beta.
+Gli arresti anomali sono un motivo comune per il rifiuto. Se è troppo semplice per eseguire l'arresto anomalo dell'app, è possibile che venga rifiutato. La maggior parte degli sviluppatori non inviano le proprie app con la previsione che si arresteranno in modo anomalo, ma spesso. Testare accuratamente l'app prima di inviarla, concentrandosi non solo sull'assicurandosi che tutto funzioni, ma anche che vengano gestiti scenari comuni di errore per dispositivi mobili, ad esempio problemi di rete e vincoli di risorse come la memoria o lo spazio di archiviazione. Usare sia il simulatore che i dispositivi fisici per eseguire il test, indipendentemente dalla modalità di esecuzione del codice in un simulatore, solo un dispositivo può dimostrare le reali prestazioni di un'app. Usa il numero di dispositivi diversi che puoi trovare e integra un team di beta-tester se è possibile: i servizi di terze parti possono aiutare a gestire la distribuzione e il feedback beta.
 
-Tutti i sistemi operativi per dispositivi mobili termina un'applicazione che non viene avviato in modo sufficientemente rapido. Il periodo di tempo può varia, ma in generale le app devono tendere a essere reattive in pochi secondi e usare le attività in background per eseguire alcuna operazione che richiederà più tempo. Le app che richiedono troppo tempo per caricare o non risponde in uso normale sei verranno rifiutate. Fornire sempre il feedback degli utenti quando qualcosa che avviene in background o l'app verrà visualizzata per avere un guasto e ancora una volta, vengono rifiutate.
+Tutti i sistemi operativi mobili uccidono un'applicazione che non viene avviata abbastanza rapidamente. L'intervallo di tempo consentito varia, ma in generale le app devono essere reattive in pochi secondi e usare le attività in background per eseguire qualsiasi operazione che richiederebbe più tempo. Le app che impiegano troppo tempo per il caricamento o che non sono sufficientemente reattive per un uso normale verranno rifiutate. Fornire sempre commenti e suggerimenti degli utenti quando si verifica un evento in background oppure l'app si presenta in modo anomalo e ancora una volta, viene rifiutata.
 
-### <a name="check-your-edge-cases"></a>Controllare i casi limite
+### <a name="check-your-edge-cases"></a>Verificare i casi di Edge
 
-Trap comune per gli sviluppatori non riesce a indirizzo estreme, specialmente quelle che richiedono riconfigurare il simulatore o il dispositivo per testare in modo corretto. Può essere facile dimenticare che non tutti i clienti sta per "Allow" all'app di accedere ai loro posizione perché dopo che lo sviluppatore ha accettato la richiesta di una sola volta, non verrà mai richiesto nuovamente. Utilizzo di rete e le autorizzazioni sono specificamente sono occupati durante il processo di approvazione, il che significa che una piccola supervisione in queste aree può causare il rifiuto.
+Un trap comune per gli sviluppatori non riesce a risolvere i problemi relativi ai bordi, in particolare quelli che richiedono la riconfigurazione del simulatore o del dispositivo per il test appropriato. Può essere facile dimenticare che non tutti i clienti dovranno "consentire" all'app di accedere alla propria posizione perché, dopo che lo sviluppatore ha accettato la richiesta una volta, non verrà mai visualizzata alcuna richiesta. Le autorizzazioni e l'utilizzo della rete sono focalizzate in modo specifico durante il processo di approvazione, il che significa che una piccola supervisione in queste aree può causare il rifiuto.
 
-Nell'elenco seguente è un buon punto di partenza per il controllo dei casi limite che potrebbero essere stati esclusi:
+L'elenco seguente è un valido punto di partenza per verificare i casi di Edge che potrebbero essere stati persi:
 
-- **I clienti possono 'deny' accesso ai servizi** , soprattutto in iOS, l'accesso ai dati, ad esempio informazioni di posizione geografica sono disponibile solo se l'utente concede l'autorizzazione all'applicazione. Tester di applicazioni devono spesso installare nuovamente l'applicazione nello stato iniziale e non consentire le richieste di autorizzazione per assicurarsi che l'applicazione si comporta in modo appropriato. Attivare l'autorizzazione e disattivata per verificare il comportamento corretto, come i clienti cambi idea.
-- **I clienti sono disponibili ovunque** – non dare per scontato che un'app per essere usata solo nella città o paese in cui è stato sviluppato. Tutti i codice che funziona con le coordinate GPS, i valori di data e ora e valute può essere interessato dalla posizione e le impostazioni locali del cliente. Tutte le piattaforme offerta un simulatore che consentono di specificare percorsi diversi e impostazioni locali - usato per località di test in altri emisferi e con le impostazioni cultura che formattano date e valute in modo diverso. I valori di latitudine e longitudine possono essere positivo o negativo, il separatore decimale può essere un punto o una virgola e le date possono essere formattate una miriade di modi - gestirlo con!
-- **Connessioni di rete lente** : consente agli sviluppatori di app spesso lavorano in un mondo' ideale' lavorare veloce, sempre la connettività di rete, che ovviamente non è il caso nel mondo reale. Test con connettività di rete lenta (ad esempio una connessione scarsa 3G) e nessun accesso alla rete è essenziale per garantire che non viene implementata un'app difettoso. Il processo di approvazione verrà sempre includere un test con il dispositivo in modalità aereo, pertanto è necessario verificare che sia stata testata che per se stessi.
-- **Hardware varia** : ricordare di test sull'hardware più vecchio, più lenta che si intende supportare. Esistono due aspetti che potrebbero incidere sull'app: prestazioni, che potrebbero essere inutilizzabile in un dispositivo meno recente e il supporto per le funzionalità hardware come una fotocamera, microfono, GPS, Giroscopio o altri componenti facoltativi. Devono ridurre le prestazioni delle applicazioni normalmente (e non di arresto anomalo) quando un componente non è disponibile.
+- **I clienti possono ' negare l'accesso ai servizi** , soprattutto in iOS, l'accesso ai dati, ad esempio le informazioni sulla posizione geografica, viene fornito solo se l'utente concede l'autorizzazione all'applicazione. I tester di applicazioni devono reinstallare spesso l'applicazione nello stato iniziale e non consentire le richieste di autorizzazione per assicurarsi che l'applicazione si comportano in modo appropriato. Attivare e disattivare l'autorizzazione per verificare il comportamento corretto quando i clienti cambiano idea.
+- **I clienti sono ovunque** : non presupporre che un'app verrà usata solo nella città o nel paese in cui è stata sviluppata. Il codice che funziona con le coordinate GPS, i valori di data e ora e le valute può essere influenzato dalla posizione e dalle impostazioni locali del cliente. Tutte le piattaforme offrono un simulatore che consente di specificare posizioni e impostazioni locali diverse, da usare per testare posizioni in altri emisferi e con impostazioni cultura che formattano date e valute in modo diverso. I valori di latitudine e longitudine possono essere positivi o negativi, il separatore decimale può essere un punto o una virgola e le date possono essere formattate con una miriade di modi.
+- **Connessioni di rete lente** : gli sviluppatori di app lavorano spesso in un "mondo ideale" della connettività di rete veloce e sempre funzionante, che ovviamente non è il caso del mondo reale. Il test con una connettività di rete lenta (ad esempio una connessione 3G scadente) e senza l'accesso alla rete è fondamentale per garantire che non venga distribuita un'app bacato. Il processo di approvazione includerà sempre un test con il dispositivo in modalità aereo, quindi assicurarsi che sia stato testato.
+- **Hardware varia** : ricordarsi di testare l'hardware più recente e più lento che si prevede di supportare. Esistono due aspetti che potrebbero influire sull'app: le prestazioni, che potrebbero essere inutilizzabili in un dispositivo precedente, e il supporto per le funzionalità hardware quali una fotocamera, un microfono, un GPS, un giroscopio o un altro componente facoltativo. Quando un componente non è disponibile, le applicazioni dovrebbero peggiorare normalmente (e non arrestarsi in modo anomalo).
 
-### <a name="guidelines-are-more-than-just-a-guide"></a>Linee guida sono oltre la semplice 'Guida'
+### <a name="guidelines-are-more-than-just-a-guide"></a>Le linee guida sono più di una semplice ' guida '
 
-Apple è noti per essere severe riguardo la conformità ai loro Human Interface Guidelines come uno dei principali vantaggi della piattaforma è coerenza (e l'aumento percepita di usabilità). Microsoft ha adottato un approccio simile con le applicazioni di Windows che implementa l'interfaccia utente in stile Metro. Il processo di approvazione per entrambe le piattaforme comporterà l'app viene valutato per la conformità alla filosofia di progettazione rilevanti.
+Apple è famoso per essere rigoroso rispetto alle linee guida dell'interfaccia umana, in quanto uno dei principali punti di forza della loro piattaforma è la coerenza e l'incremento percepibile di usabilità. Microsoft ha adottato un approccio simile a quello delle applicazioni Windows che implementano l'interfaccia utente in stile Metro. Il processo di approvazione per entrambe le piattaforme comporterà la valutazione dell'applicazione per la relativa adesione alla filosofia di progettazione pertinente.
 
-Questo non significa che l'innovazione dell'interfaccia utente non è supportato o incoraggiato, ma esistono alcune operazioni che è "semplicemente non deve eseguire" o l'app verrà rifiutato.
+Questo non significa che l'innovazione dell'interfaccia utente non è supportata o non è consigliata, ma ci sono alcuni aspetti da evitare o l'app verrà rifiutata.
 
-In iOS, inclusi uso improprio da parte delle icone predefinite o usando altri metafore consolidati in modo non coerente. ad esempio usando l'icona 'costituiscono' per qualsiasi elemento diverso da creare nuovo contenuto.
+In iOS è incluso un uso improprio delle icone predefinite o l'uso di altre metafore ben stabilite in modo non coerente; ad esempio, usando l'icona "compose" per qualsiasi elemento diverso dalla creazione di nuovi contenuti.
 
-Gli sviluppatori di Windows necessario prestare attenzione allo stesso modo; un errore comune non riesce a supportare l'hardware Indietro pulsante in base alle linee guida Microsoft.
+Gli sviluppatori Windows dovrebbero prestare attenzione allo stesso modo. un errore comune è la mancata corretta supporto del pulsante hardware indietro in base alle linee guida di Microsoft.
 
-Incoraggiare i progettisti per leggere e seguire le linee guida di progettazione per ogni piattaforma.
+Incoraggiare i progettisti a leggere e seguire le linee guida di progettazione per ogni piattaforma.
 
 ### <a name="implementing-platform-specific-features"></a>Implementazione di funzionalità specifiche della piattaforma
 
-Le cose sono un po' più severi se si desidera implementare i servizi specifici della piattaforma, in particolare in iOS. Per evitare il rifiuto automatico da Apple, esistono alcune regole da seguire con le seguenti funzionalità di iOS:
+Sono molto più rigorosi quando si tratta di implementare servizi specifici della piattaforma, soprattutto in iOS. Per evitare il rifiuto automatico da parte di Apple, è necessario seguire alcune regole con le seguenti funzionalità di iOS:
 
-- **Acquisti in-App** : le applicazioni non devono implementare meccanismi di pagamento esterno per i prodotti digitali incluse nel gioco valuta, le funzionalità dell'applicazione, sottoscrizioni magazine e molto altro ancora. le app iOS è necessario usare iTunes servizio Apple per questo tipo di funzionalità. È presente un punto debole - App, ad esempio il lettore Kindle e alcune App basate su abbonamento consentono di acquistare il contenuto in un punto che viene associato a un "account" è quindi possibile accedere tramite l'app, tuttavia in questo caso l'app non può contenere collegamenti o riferimenti al out-of-app processo di acquisto (o, ancora una volta, sarà possibile rifiutato).
-- **backup in iCloud** – con l'avvento di iCloud, i revisori di Apple sono molto più rigoroso riguardanti come app di usano l'archiviazione (per garantire l'esperienza di backup remoto del cliente è piacevole). Le app che lo spazio di archiviazione in grado di backup bonifica dei rifiuti può ottenere rifiutato, usare quindi la cartella della Cache in modo appropriato e seguire Apple di altre linee guida relative alla memoria.
-- **Newsstand** – App riviste e giornali sono un candidato ideale per Newsstand di Apple, ma le app devono implementare almeno un rinnovo automatico sottoscrizione e supporto in background il download per essere approvato.
-- **Esegue il mapping** – è sempre più comune per aggiungere mappe per dispositivi mobili sovrapposizioni e altre funzionalità, tuttavia attenzione a non essere per nascondere la mappa 'crediti' informazioni (ad esempio il logo Google in iOS5) come questa operazione comporterà il rifiuto.
+- **Acquisti in-app** : le applicazioni non devono implementare meccanismi di pagamento esterni per i prodotti digitali, tra cui valuta del gioco, funzionalità dell'applicazione, sottoscrizioni di riviste e molto altro ancora. per questo tipo di funzionalità, le app iOS devono usare il servizio Apple basato su iTunes. Esiste una scappatoia: app come il lettore Kindle e alcune app basate su sottoscrizione consentono di acquistare contenuto altrove che viene collegato a un "account" a cui è possibile accedere tramite l'app, ma in questo caso l'app non deve contenere collegamenti o riferimenti al il processo di acquisto out-of-app (o, anche in questo caso, verrà rifiutato).
+- **backup iCloud** : con l'avvento di iCloud, i revisori di Apple sono molto più rigorosi riguardo al modo in cui le app utilizzano l'archiviazione (per garantire che l'esperienza di backup remoto del cliente sia piacevole). Per le app che sprecano spazio di archiviazione che può essere rifiutato, usare la cartella della cache in modo appropriato e seguire le altre linee guida relative all'archiviazione di Apple.
+- **Edicola** : le app giornaliere e riviste sono ideali per l'edicola Apple. Tuttavia, le app devono implementare almeno una sottoscrizione di rinnovo automatico e supportare l'approvazione del download in background.
+- **Maps** : è sempre più comune aggiungere sovrapposizioni e altre funzionalità alle mappe per dispositivi mobili. Tuttavia, prestare attenzione a non nascondere le informazioni sui crediti della mappa, ad esempio il logo Google in iOS5, in quanto questa operazione comporterà il rifiuto.
 
 ### <a name="manage-your-metadata"></a>Gestire i metadati
 
-Oltre agli aspetti tecnici ovvi che possono comportare un'applicazione vengano rifiutata, esistono aspetti ulteriormente meno evidenti dell'invio dell'utente che potrebbe causare il rifiuto, soprattutto per quanto riguarda i metadati (descrizione, parole chiave e le immagini marketing) che si inviare l'applicazione per la visualizzazione all'interno dell'App Store o il Marketplace.
+Oltre ai problemi tecnici ovvi che possono comportare il rifiuto di un'applicazione, esistono alcuni aspetti più sottili dell'invio che potrebbero comportare il rifiuto, in particolare intorno ai metadati (descrizione, parole chiave e immagini di marketing) inviare con l'applicazione per la visualizzazione nell'App Store o nel Marketplace.
 
-- **Immagini** : seguire le linee guida della piattaforma per le icone dell'applicazione e archiviare le immagini. Non usare immagini di marchio, abbiamo visto le app vengono rifiutate perché le relative icone in primo piano il disegno di un iPhone.
-- **Marchi** : evitare di utilizzare qualsiasi marchi diverso dal proprio. Le app sono state negate per citare marchi la descrizione dell'app o persino le parole chiave in Apple App Store.
-- **Descrizione** : non usare la parola 'beta' o in qualsiasi modo indicare che l'app non è pronto per il lancio. Non fanno riferimento altre piattaforme per dispositivi mobili (anche se l'app è multipiattaforma). In particolare, assicurarsi che l'app esegue esattamente ciò che viene detto che affermativo. Se si elenca una serie di funzionalità nella descrizione, era meglio sia ovvio come utilizzare ognuna di queste funzionalità o si verificherà un rifiuto "citata nella descrizione dell'applicazione non implementata".
+- **Immagini** : seguire le linee guida della piattaforma per le icone dell'applicazione e le immagini del negozio. Non usare immagini con marchio, le app sono state rifiutate perché le icone in primo piano sono state disegnate da un iPhone.
+- **Marchi** : evitare di usare marchi diversi da quelli personalizzati. Le app sono state negate per citare i marchi nella descrizione dell'app o anche nelle parole chiave nell'App Store di Apple.
+- **Descrizione** : non usare la parola ' beta ' o in alcun modo per indicare che l'app non è pronta per la prima volta. Non menzionare altre piattaforme mobili (anche se l'app è multipiattaforma). Soprattutto, assicurarsi che l'app faccia esattamente ciò che si afferma. Se si elenca una serie di funzionalità nella descrizione, è stato meglio ovviare a come usare ognuna di queste funzionalità o si otterrà una "funzionalità indicata nella descrizione dell'applicazione non implementata".
 
-Inserire spendere una fatica eccessiva nei metadati dell'applicazione come nello sviluppo e test. Le applicazioni vengono rifiutate le violazioni secondarie nei metadati in modo che vale la pena grazie alla sfuggito.
+Inserire il maggior lavoro possibile nei metadati dell'applicazione in fase di sviluppo e test. Le applicazioni vengono rifiutate per violazioni di minore entità nei metadati, quindi è opportuno prendere il tempo giusto.
 
-### <a name="app-stores-not-for-everyone"></a>App Store: Non per tutti gli utenti
+### <a name="app-stores-not-for-everyone"></a>App Store: Non per tutti
 
-L'obiettivo principale degli archivi in ogni piattaforma è distribuzione consumer - la possibilità di raggiungere clienti tanti possibili. Tuttavia, non tutte le applicazioni destinate al consumer, è presente un'in rapida crescita base delle applicazioni interne e simile a extranet che richiedono la distribuzione limitata per i dipendenti, fornitori o clienti. Queste App non sono "per la vendita" e non richiedono l'approvazione, dopo la distribuzione di controlli per gli sviluppatori a un gruppo di utenti chiuso.
-Supporto per questo tipo di distribuzione varia a seconda della piattaforma.
+L'obiettivo principale dei negozi in ogni piattaforma è la distribuzione dei consumatori, ovvero la possibilità di raggiungere il maggior numero possibile di clienti. Tuttavia, non tutte le applicazioni sono destinate agli utenti, c'è una base in rapida crescita di applicazioni interne e Extranet, che richiedono una distribuzione limitata a dipendenti, fornitori o clienti. Queste app non sono "per la vendita" e non richiedono l'approvazione, perché lo sviluppatore controlla la distribuzione a un gruppo di utenti chiuso.
+Il supporto per questo tipo di distribuzione varia in base alla piattaforma.
 
-Android offre la massima flessibilità a questo proposito: è possibile installare applicazioni direttamente da un allegato di posta elettronica o URL (purché consente la configurazione del dispositivo). Ciò significa che è estremamente semplice per creare e distribuire applicazioni aziendale interne o pubblicare le applicazioni a clienti specifici o fornitori.
+Android offre la massima flessibilità a questo proposito: le applicazioni possono essere installate direttamente da un URL o un allegato di posta elettronica (purché la configurazione del dispositivo lo consenta). Ciò significa che è semplice creare e distribuire applicazioni aziendali interne o pubblicare applicazioni in specifici clienti o fornitori.
 
-Apple offre un'opzione di distribuzione interna per gli sviluppatori registrati in iOS Developer Enterprise Program, che consente di ignorare il processo di approvazione di App Store e consente alle aziende di distribuire App interne ai propri dipendenti.
-Purtroppo questa licenza non soddisfare le esigenze per la distribuzione di app extranet simile ad altri gruppi chiusi di clienti o fornitori. [Enterprise (e Ad Hoc) distribuzione](~/ios/deploy-test/app-distribution/ipa-support.md)
+Apple fornisce un'opzione di distribuzione interna per gli sviluppatori iscritti al programma iOS Developer Enterprise, che ignora il processo di approvazione dell'app Store e consente alle aziende di distribuire le app interne ai dipendenti.
+Sfortunatamente, questa licenza non risolve la necessità di distribuire app simili a Extranet ad altri gruppi chiusi di clienti o fornitori. [Distribuzione Enterprise (e ad hoc)](~/ios/deploy-test/app-distribution/ipa-support.md)
 
-### <a name="app-store-summary"></a>Riepilogo di App Store
+### <a name="app-store-summary"></a>Riepilogo App Store
 
-Il processo di revisione può essere molto complesso, ma, come il resto del ciclo di vita di sviluppo è possibile garantire successo con una pianificazione e attenzione ai dettagli. Si riduce tutto a pochi semplici passaggi: leggere e comprendere le linee guida dell'interfaccia utente, è necessario rispettare per, conforme alle regole per l'implementazione di funzionalità specifiche della piattaforma, testare accuratamente (quindi alcune informazioni di test) e infine verificare che i metadati dell'applicazione prima di inviare, sia corretto.
+Il processo di revisione può essere scoraggiante, ma come il resto del ciclo di vita di sviluppo, è possibile garantire il successo con alcune attività di pianificazione e attenzione ai dettagli. Si tratta di una procedura semplice: leggere e comprendere le linee guida dell'interfaccia utente a cui è necessario attenersi, attenersi alle regole se si implementano funzionalità specifiche della piattaforma, testare accuratamente (quindi verificare altre informazioni) e infine verificare i metadati dell'applicazione è corretto prima di inviare.
 
-Un'ultima parola di consigli per gli sviluppatori di pubblicazione in Google Play: la mancanza di processo di approvazione potrebbe sembrare che semplifica il processo, ma i clienti saranno ancora più complesse rispetto a un team di revisione. Seguire queste linee guida anche se l'app è stato possibile ottenere rifiutato, in caso contrario sarà i clienti che fanno di rifiuto.
+Un'ultima parola di Consiglio per gli sviluppatori che pubblicano Google Play: la mancanza di un processo di approvazione potrebbe sembrare un processo più semplice, ma i clienti saranno ancora più impegnativi rispetto a un team di revisione. Attenersi a queste linee guida come se l'app venisse rifiutata. in caso contrario, i clienti faranno il rifiuto.

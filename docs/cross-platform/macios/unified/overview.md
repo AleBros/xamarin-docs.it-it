@@ -3,15 +3,15 @@ title: Panoramica di API unificata
 description: Il API unificata di Novell consente di condividere il codice tra Mac e iOS e di supportare le applicazioni 32 e 64 bit con lo stesso file binario.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99347ccc2490361bedda926b25076158a12e39bf
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 75177daa2f8bd1faa271940713ff8543db3b97c0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065163"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287395"
 ---
 # <a name="unified-api-overview"></a>Panoramica di API unificata
 
@@ -83,7 +83,7 @@ Per un elenco completo delle modifiche apportate quando si passa dal modello cla
 
 ## <a name="updating-to-unified"></a>Aggiornamento a Unified
 
-Diverse API obsolete/obsolete o deprecate nel **modello classico** non sono disponibili nell'API unificata. Può essere più facile correggere gli `CS0616` avvisi prima di avviare l'aggiornamento (manuale o automatizzato), perché il `[Obsolete]` messaggio di attributo (parte dell'avviso) verrà visualizzato come guida all'API corretta.
+Diverse API obsolete/obsolete o deprecate nel **modello classico** non sono disponibili nell'API **unificata** . Può essere più facile correggere gli `CS0616` avvisi prima di avviare l'aggiornamento (manuale o automatizzato), perché il `[Obsolete]` messaggio di attributo (parte dell'avviso) verrà visualizzato come guida all'API corretta.
 
 Si noti che si sta pubblicando una [*differenza*](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) tra le modifiche alle API di Visual Studio classico e quelle unificate che possono essere usate prima o dopo gli aggiornamenti del progetto. Tuttavia, la correzione delle chiamate obsolete nel modello di distribuzione classica sarà spesso un risparmio di tempo (meno ricerche nella documentazione).
 
@@ -193,7 +193,7 @@ Ogni `NSObject` sottoclasse dispone di un costruttore che `IntPtr`accetta un ogg
 
 Nel modello classico era un `public` costruttore. Tuttavia è facile usare questa funzionalità nel codice utente, ad esempio creando diverse istanze gestite per una singola istanza di ObjC *o* creando un'istanza gestita che non avrebbe lo stato gestito previsto (per le sottoclassi).
 
-Per evitare questi tipi di problemi, `IntPtr` i costruttori sono ora `protected` in un'API unificata, da usare solo per la sottoclasse. In questo modo verrà utilizzata l'API corretta/sicura per creare un'istanza gestita dagli handle, ad esempio
+Per evitare questi tipi di problemi, `IntPtr` i costruttori sono ora `protected` in un'API **unificata** , da usare solo per la sottoclasse. In questo modo verrà utilizzata l'API corretta/sicura per creare un'istanza gestita dagli handle, ad esempio
 
 ```csharp
 var label = Runtime.GetNSObject<UILabel> (handle);
@@ -312,7 +312,7 @@ Le ulteriori modifiche da tenere presenti sono elencate nei [Suggerimenti per l'
 
 ## <a name="sample-code"></a>Codice di esempio
 
-A partire dal 31 luglio sono state pubblicate le porte degli esempi iOS per questa nuova API nel `magic-types` ramo in MonoTouch [-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
+A partire dal 31 luglio sono state pubblicate le porte degli esempi iOS per questa nuova API nel `magic-types` ramo in [MonoTouch-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
 Per Mac, è possibile controllare gli esempi sia nel repository [Mac-Samples](https://github.com/xamarin/mac-samples) (che mostra le nuove API in Mavericks/Yosemite), sia negli esempi di 32/64 bit nel ramo "Magic-types" [Mac-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 

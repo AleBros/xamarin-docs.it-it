@@ -4,15 +4,15 @@ description: Questo documento descrive come usare i campi di testo e di ricerca 
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226684"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292505"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
 
@@ -108,7 +108,7 @@ Seguire questa procedura:
 1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito:
 
     [![](text-fields-and-search-images/text04.png "Sezione del campo di testo")](text-fields-and-search-images/text04.png#lightbox)
-1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito:
+1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le **maiuscole** e il **tipo di tastiera**predefinito:
 
     [![](text-fields-and-search-images/text05.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
@@ -125,7 +125,7 @@ Seguire questa procedura:
 1. Nella sezione **campo di testo** è possibile definire elementi quali l'hint **segnaposto** e il **valore**predefinito:
 
     [![](text-fields-and-search-images/text04-vs.png "Sezione del campo di testo")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le maiuscole e il **tipo di tastiera**predefinito:
+1. Scorrere verso il basso per definire proprietà quali il **controllo ortografico**, le **maiuscole** e il **tipo di tastiera**predefinito:
 
     [![](text-fields-and-search-images/text05-vs.png "Controllo ortografico, maiuscole e il tipo di tastiera predefinito")](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
@@ -161,7 +161,7 @@ Seguire questa procedura:
 1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**:
 
     [![](text-fields-and-search-images/search04.png "Scheda widget")](text-fields-and-search-images/search04.png#lightbox)
-1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**:
+1. Layout della progettazione del **prototipo di cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**:
 
     [![](text-fields-and-search-images/search05.png "Layout della progettazione del prototipo di cella")](text-fields-and-search-images/search05.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
@@ -179,7 +179,7 @@ Seguire questa procedura:
 1. Nella scheda **widget** di **Esplora proprietà**usare `SearchResultCell` per la **classe** e `ImageCell` per l' **identificatore**:
 
     [![](text-fields-and-search-images/search04-vs.png "Scheda widget")](text-fields-and-search-images/search04-vs.png#lightbox)
-1. Layout della progettazione del prototipo di **cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**:
+1. Layout della progettazione del **prototipo di cella** ed esporre ogni elemento con un **nome** univoco nella scheda **widget** di **Esplora proprietà**:
 
     [![](text-fields-and-search-images/search05-vs.png "Layout della progettazione del prototipo di cella")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. Salvare le modifiche apportate allo storyboard.
@@ -237,7 +237,7 @@ namespace tvText
 
 ### <a name="the-collection-view-cell"></a>Cella di visualizzazione raccolta
 
-Con il modello di dati sul posto, modificare la **cella** del`SearchResultViewCell.cs`prototipo () e fare in modo che l'aspetto sia il seguente:
+Con il modello di dati sul posto, modificare la cella del`SearchResultViewCell.cs` **prototipo** () e fare in modo che l'aspetto sia il seguente:
 
 ```csharp
 using Foundation;
@@ -455,7 +455,7 @@ In primo luogo `IUISearchResultsUpdating` , l'interfaccia viene aggiunta alla cl
 public partial class SearchResultsViewController : UICollectionViewController , IUISearchResultsUpdating
 ```
 
-Viene anche definita una costante per specificare l'ID della **cella** del prototipo, che corrisponde all'ID definito nella finestra di progettazione dell'interfaccia precedente, che verrà usata in un secondo momento quando il controller della raccolta richiede una nuova cella:
+Viene anche definita una costante per specificare l'ID della **cella del prototipo** , che corrisponde all'ID definito nella finestra di progettazione dell'interfaccia precedente, che verrà usata in un secondo momento quando il controller della raccolta richiede una nuova cella:
 
 ```csharp
 public const string CellID = "ImageCell";
@@ -542,7 +542,7 @@ public override nint GetItemsCount (UICollectionView collectionView, nint sectio
 }
 ```
 
-Il `GetCell` metodo restituisce una nuova **cella** del prototipo `CellID` (basata sulla definizione precedente nello storyboard) per ogni elemento nella visualizzazione della raccolta:
+Il `GetCell` metodo restituisce una nuova **cella del prototipo** `CellID` (basata sulla definizione precedente nello storyboard) per ogni elemento nella visualizzazione della raccolta:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

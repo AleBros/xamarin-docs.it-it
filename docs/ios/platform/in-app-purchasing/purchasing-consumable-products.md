@@ -4,15 +4,15 @@ description: Questo documento descrive i prodotti utilizzabili in Novell. iOS. I
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 818412cef7359e134dea51e76567aa65bba8e613
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c23515c7fc7a3fef836cba76ec30279c94150da2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651638"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281527"
 ---
 # <a name="purchasing-consumable-products-in-xamarinios"></a>Acquisto di prodotti utilizzabili in Novell. iOS
 
@@ -356,7 +356,7 @@ L'applicazione ha un aspetto simile al seguente quando la funzionalità **acquis
    
    
 
-Le informazioni sul prodotto possono comunque essere `CanMakePayments` richieste quando è false, quindi l'app può comunque recuperare e visualizzare i prezzi. Ciò significa che se è stato `CanMakePayments` rimosso il controllo dal codice, i pulsanti di acquisto sarebbero ancora attivi. Tuttavia, quando viene effettuato un tentativo di acquisto, l'utente visualizzerà un messaggio che indica che gli **acquisti in-app non sono** consentiti (generati da StoreKit quando la coda di pagamento è accesso eseguito):   
+Le informazioni sul prodotto possono comunque essere `CanMakePayments` richieste quando è false, quindi l'app può comunque recuperare e visualizzare i prezzi. Ciò significa che se è stato `CanMakePayments` rimosso il controllo dal codice, i pulsanti di acquisto sarebbero ancora attivi. Tuttavia, quando viene effettuato un tentativo di acquisto, l'utente visualizzerà un messaggio che indica che gli **acquisti in-app non sono consentiti** (generati da StoreKit quando la coda di pagamento è accesso eseguito):   
    
    
    

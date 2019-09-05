@@ -4,15 +4,15 @@ description: Questo documento descrive come usare CloudKit in Novell. iOS. Viene
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/11/2016
-ms.openlocfilehash: af0765adb7e059bdc80c0b851b4bdcad8be0e3e4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 09275517a1d081073ab471d1e8c993dc232a4385
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227836"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292451"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit in Novell. iOS
 
@@ -62,7 +62,7 @@ Prima che un'applicazione Novell possa usare il Framework CloudKit, è necessari
 
     [![](intro-to-cloudkit-images/image27a.png "Selezionare le modalità di sfondo abilitate, gli aggiornamenti della posizione e le notifiche remote")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4. Fare clic con il pulsante destro del mouse sul progetto iOS nella soluzione e scegliere **Opzioni**.
-5. Selezionare **firma del bundle iOS**, selezionare l' **identità dello sviluppatore** e il **profilo** di provisioning creato in precedenza.
+5. Selezionare **firma del bundle iOS**, selezionare l' **identità dello sviluppatore** e il **profilo di provisioning** creato in precedenza.
 6. Assicurarsi che i **diritti. plist** includa **iCloud** , **archiviazione chiave-valore** e **CloudKit** .
 7. Verificare che il **contenitore di connettività** esista per l'applicazione, come creato in precedenza. Esempio: `iCloud.com.your-company.CloudKitAtlas`
 8. Salvare le modifiche apportate al file.
@@ -845,7 +845,7 @@ Seguire questa procedura:
 
     [![](intro-to-cloudkit-images/shipping06.png "Selezionare un metodo per l'esportazione")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
-8. Selezionare il **team di sviluppo** dall'elenco a discesa e fare clic sul pulsante Choose ( **Scegli** ):
+8. Selezionare il **team di sviluppo** dall'elenco a discesa e fare clic sul pulsante **Choose (Scegli** ):
 
     [![](intro-to-cloudkit-images/shipping07.png "Selezionare il team di sviluppo dall'elenco a discesa")](intro-to-cloudkit-images/shipping07.png#lightbox)
 

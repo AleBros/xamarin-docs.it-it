@@ -3,15 +3,15 @@ title: Uso del team City con Novell
 description: Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare applicazioni per dispositivi mobili e quindi inviarli a Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2880fcbc3366079955945c4780af2be82afe5a4a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511946"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293131"
 ---
 # <a name="using-team-city-with-xamarin"></a>Uso del team City con Novell
 
@@ -60,7 +60,7 @@ Un passaggio cruciale per la configurazione di un server di compilazione consist
 2. **Accedi all'archivio componenti di Novell** : si tratta di un passaggio facoltativo ed è necessario solo se l'applicazione usa componenti dall'archivio componenti di Novell. L'accesso proattivo nell'archivio componenti a questo punto impedirà eventuali problemi quando una compilazione TeamCity tenta di compilare l'applicazione.
 3. **Xcode** : Xcode è necessario per compilare e firmare le applicazioni iOS.
 4. **Strumenti da riga di comando Xcode** : questa procedura è descritta nel passaggio 1 della sezione relativa all'installazione della Guida relativa all' [aggiornamento di Ruby con rbenv](https://github.com/calabash/calabash-ios/wiki) .
-5. **Firma di identità & profili** di provisioning: importare i certificati e il profilo di provisioning tramite Xcode. Per altri dettagli, vedere la Guida di Apple sull' [esportazione di identità di firma e profili](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) di provisioning.
+5. **Firma di identità & profili di provisioning** : importare i certificati e il profilo di provisioning tramite Xcode. Per altri dettagli, vedere la Guida di Apple sull' [esportazione di identità di firma e profili di provisioning](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) .
 6. **Keystore Android** : copiare gli archivi chiavi Android necessari in una directory a cui l'utente TeamCity può accedere, ad esempio `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** : si tratta di un passaggio facoltativo se l'applicazione include test scritti con Calabash. Per ulteriori informazioni, vedere la Guida [installazione di Calabash in OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) e la guida sull' [aggiornamento di Ruby con rbenv](https://github.com/calabash/calabash-ios/wiki) .
 

@@ -1,47 +1,47 @@
 ---
 title: .NET Embedding
-description: Incorporamento di .NET consente il codice .NET esistente (C#, F#e così via) devono essere usati dal codice scritto in altri linguaggi di programmazione.
+description: L'incorporamento .NET consente di utilizzare il codiceC#.NET F#esistente (, e altri) dal codice scritto in altri linguaggi di programmazione.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: af068e5a09cc11eec33508a4f2eb33186168aae6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363485"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290221"
 ---
 # <a name="net-embedding"></a>.NET Embedding
 
 ![Anteprima](~/media/shared/preview.png)
 
-Incorporamento di .NET consente il codice .NET esistente (C#, F#e così via) devono essere usati da altri linguaggi di programmazione e in vari ambienti diversi.
+L'incorporamento .NET consente di utilizzare il codiceC#.NET F#esistente (, e altri) da altri linguaggi di programmazione e in diversi ambienti.
 
-Ciò significa che se si dispone di una libreria .NET che si desidera utilizzare dalla tua app iOS esistente, è possibile farlo.   O se si desidera collegare una libreria nativa C++, è possibile anche farlo.   O utilizzare il codice .NET da Java.
+Ciò significa che se si dispone di una libreria .NET che si vuole usare dall'app iOS esistente, è possibile farlo.   In alternativa, se si desidera collegarlo a una C++ libreria nativa, è anche possibile eseguire questa operazione.   Oppure utilizzare il codice .NET da Java.
 
-Incorporamento di .NET si basa sul [Embeddinator 4000](https://github.com/mono/Embeddinator-4000) progetto open source.
+L'incorporamento .NET è basato sul progetto open source [Embeddinator-4000](https://github.com/mono/Embeddinator-4000) .
 
-## <a name="environments-and-languages"></a>Linguaggi e ambienti
+## <a name="environments-and-languages"></a>Ambienti e linguaggi
 
-Lo strumento è entrambi conoscere l'ambiente che utilizzerà, nonché il linguaggio che lo utilizzano.   Ad esempio, la piattaforma iOS non supporta compilazione just-in-time (JIT), in modo che l'incorporamento .NET compilerà in modo statico il codice .NET nel codice nativo che può essere usato in iOS.  Altri ambienti si consentono la compilazione JIT e in tali ambienti, si è scelto a compilazione JIT.
+Lo strumento è in grado di riconoscere l'ambiente che utilizzerà, nonché il linguaggio che lo utilizzerà.   La piattaforma iOS, ad esempio, non consente la compilazione JIT (just-in-Time), quindi l'incorporamento di .NET compilerà in modo statico il codice .NET in codice nativo che può essere usato in iOS.  Gli altri ambienti consentono la compilazione JIT e in tali ambienti si sceglie la compilazione JIT.
 
-Supporta diversi consumer del linguaggio, pertanto Evidenzia codice .NET idiomatico codice nella lingua di destinazione.   Al momento si tratta dell'elenco delle lingue supportate:
+Supporta diversi consumer di lingue, quindi espone il codice .NET come codice idiomatiche nella lingua di destinazione.   Questo è l'elenco delle lingue supportate attualmente:
 
-- [**Objective-C** ](objective-c/index.md) – mapping .NET idiomatico API Objective-C
-- [**Java** ](android/index.md) – mapping .NET idiomatico API Java
-- [**C** ](get-started/c.md) : mapping di .NET a orientate a oggetti, ad esempio le API C
+- [**Objective-c**](objective-c/index.md) : mapping tra .NET e le API idiomatiche Objective-c
+- [**Java**](android/index.md) -mapping di .NET alle API Java idiomatiche
+- [**C**](get-started/c.md) : mapping tra .NET e le API c e orientate a oggetti
 
-Altre lingue saranno disponibile in un secondo momento.
+Più lingue verranno riprendete in seguito.
 
 ## <a name="getting-started"></a>Introduzione
 
-Per iniziare, esaminare uno dei nostri Guide per ognuna delle lingue attualmente supportate:
+Per iniziare, vedere una delle guide per ogni lingua attualmente supportata:
 
-- [**Objective-C** ](get-started/objective-c/index.md) – descritto come iOS e macOS
-- [**Java** ](get-started/java/index.md) – copre macOS e Android
-- [**C** ](get-started/c.md) – descrive il linguaggio C nelle piattaforme desktop
+- [**Objective-C**](get-started/objective-c/index.md) : illustra MacOS e iOS
+- [**Java**](get-started/java/index.md) : illustra MacOS e Android
+- [**C**](get-started/c.md) : copre il linguaggio c sulle piattaforme desktop
 
 ## <a name="related-links"></a>Collegamenti correlati
 

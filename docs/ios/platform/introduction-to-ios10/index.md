@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: edc585364df2e0b2129135e7bf5977c33a77a6e0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 465c8df864669ad47acd47ae380574e247a0acd6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647430"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292860"
 ---
 # <a name="introduction-to-ios-10"></a>Introduzione a iOS 10
 
@@ -97,7 +97,7 @@ Per ulteriori informazioni, vedere la Guida [introduttiva a Callkit](~/ios/platf
 
 ## <a name="message-app-integration"></a>Integrazione dell'app Messaggi
 
-iOS 10 consente l'inclusione di un'estensione di app per i messaggi nella soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi. Sono disponibili due tipi di estensione dell'app per i messaggi:
+iOS 10 consente l'inclusione di un'estensione di app per i messaggi nella soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi. Sono disponibili due tipi di estensione dell'app per i messaggi:
 
 - **Sticker pack** : contiene una raccolta di adesivi che l'utente può aggiungere a un messaggio. È possibile creare pacchetti di adesivi senza scrivere codice.
 - **app iMessage** : può presentare un'interfaccia utente personalizzata all'interno dell'app Messages per la selezione di adesivi, l'immissione di testo, inclusi i file multimediali (con conversioni di tipi facoltative) e la creazione, la modifica e l'invio di messaggi di interazione.
@@ -147,7 +147,7 @@ Per ulteriori informazioni, vedere la guida ai [miglioramenti per la sicurezza e
 
 ## <a name="sirikit"></a>SiriKit
 
-Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** Intent e Intent.
+Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
 
 SiriKit supporta i seguenti domini del servizio:
 
@@ -160,7 +160,7 @@ SiriKit supporta i seguenti domini del servizio:
 
 Quando l'utente effettua una richiesta di Siri che interessa uno dei servizi dell'estensione dell'app, SiriKit invia all'estensione un oggetto **preventivo** che descrive la richiesta dell'utente insieme a tutti i dati di supporto. L'estensione dell'app genera quindi l'oggetto **Response** appropriato per la **finalità**specificata, in cui viene illustrato in dettaglio il modo in cui l'estensione può gestire la richiesta.
 
-Mentre Siri gestisce in genere tutte le interazioni dell'utente, l'estensione dell'app può usare il Framework dell' **interfaccia** utente Intent per presentare un'interfaccia utente personalizzata avanzata con la personalizzazione dell'app e informazioni aggiuntive.
+Mentre Siri gestisce in genere tutte le interazioni dell'utente, l'estensione dell'app può usare il Framework dell' **interfaccia utente Intent** per presentare un'interfaccia utente personalizzata avanzata con la personalizzazione dell'app e informazioni aggiuntive.
 
 Per ulteriori informazioni, vedere la Guida [introduttiva a SiriKit](~/ios/platform/sirikit/index.md) .
 

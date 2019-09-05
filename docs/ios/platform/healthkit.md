@@ -4,15 +4,15 @@ description: Questo documento descrive HealthKit, un Framework introdotto in iOS
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 6446bd7ef196fadae25c0e4dc18542d269424d6d
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 7e8230af1e9d4eef43b4142834afc0e90973c768
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200276"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288663"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit in Novell. iOS
 
@@ -52,20 +52,20 @@ Prima che un'applicazione Novell iOS 8 possa usare l'API HealthKit, deve essere 
 Le app del kit di integrità richiedono:
 
 - **ID app**esplicito.
-- Un **profilo** di provisioning associato a tale **ID app** esplicito e con autorizzazioni del **Kit integrità** .
+- Un **profilo di provisioning** associato a tale **ID app** esplicito e con autorizzazioni del **Kit integrità** .
 - Con una `com.apple.developer.healthkit` proprietà di tipo `Boolean` impostata su `Yes`. `Entitlements.plist`
 - Oggetto `Info.plist` la `UIRequiredDeviceCapabilities` cui chiave contiene una voce con `String` il `healthkit`valore.
 - Il `Info.plist` deve avere anche le voci di spiegazione della privacy appropriate `String` : una spiegazione della `NSHealthUpdateUsageDescription` chiave se l'app scriverà i dati e una `String` spiegazione della chiave `NSHealthShareUsageDescription` se l'app legge il kit di integrità dati.
 
-Per altre informazioni sul provisioning di un'app per iOS, l'articolo sul provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md) nella serie **Introduzione** di Novell descrive la relazione tra certificati per sviluppatori, ID app, profili di provisioning e diritti delle app.
+Per altre informazioni sul provisioning di un'app per iOS, l'articolo sul [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) nella serie **Introduzione** di Novell descrive la relazione tra certificati per sviluppatori, ID app, profili di provisioning e diritti delle app.
 
 <a name="explicit-appid" />
 
 ### <a name="explicit-app-id-and-provisioning-profile"></a>ID app esplicito e profilo di provisioning
 
-La creazione di un **ID app** esplicito e di un **profilo** di provisioning appropriato viene eseguita nel [centro per sviluppatori iOS](https://developer.apple.com/devcenter/ios/index.action)di Apple. 
+La creazione di un **ID app** esplicito e di un **profilo di provisioning** appropriato viene eseguita nel centro per [sviluppatori iOS](https://developer.apple.com/devcenter/ios/index.action)di Apple. 
 
-Gli **ID app** correnti sono elencati nella sezione [Certificates, Identifiers &](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) profiles del Dev Center. In questo elenco vengono spesso visualizzati i valori ID `*`di, a indicare che il**nome** dell' **ID** - app può essere utilizzato con un numero qualsiasi di suffissi. Questi *ID app con caratteri jolly* non possono essere usati con Health Kit.
+Gli **ID app** correnti sono elencati nella sezione [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) del Dev Center. In questo elenco vengono spesso visualizzati i valori ID `*`di, a indicare che il**nome** dell' **ID** - app può essere utilizzato con un numero qualsiasi di suffissi. Questi *ID app con caratteri jolly* non possono essere usati con Health Kit.
  
 Per creare un **ID app**esplicito, fare **+** clic sul pulsante in alto a destra per passare alla pagina **registra ID app iOS** :
 
@@ -74,12 +74,12 @@ Per creare un **ID app**esplicito, fare **+** clic sul pulsante in alto a destra
 
 Come illustrato nell'immagine precedente, dopo aver creato una descrizione dell'app, usare la sezione **ID app esplicita** per creare un ID per l'applicazione. Nella sezione **Servizi app** , controllare il **Kit di integrità** nella sezione **abilitare i servizi** .
 
-Al termine, fare clic sul pulsante **continue (continua** ) per registrare l' **ID app** nell'account. Verrà visualizzata di nuovo la pagina **certificati, identificatori e profili** . Fare clic su **profili** di provisioning per passare all'elenco dei profili di provisioning correnti, quindi fare **+** clic sul pulsante nell'angolo in alto a destra per passare alla pagina **Aggiungi profilo** di provisioning iOS. Selezionare l'opzione **sviluppo app iOS** e fare clic su **continua** per passare alla pagina **Seleziona ID app** . Qui, selezionare l' **ID app** esplicito specificato in precedenza:
+Al termine, fare clic sul pulsante **continue (continua** ) per registrare l' **ID app** nell'account. Verrà visualizzata di nuovo la pagina **certificati, identificatori e profili** . Fare clic su **profili di provisioning** per passare all'elenco dei profili di provisioning correnti, quindi fare **+** clic sul pulsante nell'angolo in alto a destra per passare alla pagina **Aggiungi profilo di provisioning iOS** . Selezionare l'opzione **sviluppo app iOS** e fare clic su **continua** per passare alla pagina **Seleziona ID app** . Qui, selezionare l' **ID app** esplicito specificato in precedenza:
 
 
 [![](healthkit-images/image03.png "Selezionare l'ID app esplicito")](healthkit-images/image03.png#lightbox)
 
-Fare clic su **continua** e utilizzare le schermate rimanenti, in cui verranno specificati i **certificati dello sviluppatore**, i **dispositivi**e un **nome** per il profilo diprovisioning:
+Fare clic su **continua** e utilizzare le schermate rimanenti, in cui verranno specificati i **certificati dello sviluppatore**, i **dispositivi**e un **nome** per il profilo di **provisioning**:
 
 [![](healthkit-images/image04.png "Generazione del profilo di provisioning")](healthkit-images/image04.png#lightbox)
 
@@ -91,19 +91,19 @@ Fare clic su **genera** e attendere la creazione del profilo. Scaricare il file 
 
 ### <a name="associating-the-app-id-and-provisioning-profile-with-your-xamarinios-app"></a>Associazione dell'ID app e del profilo di provisioning all'app Novell. iOS
 
-Dopo aver creato e installato un **profilo** di provisioning appropriato come descritto, sarebbe in genere opportuno creare una soluzione in Visual Studio per Mac o Visual Studio. L'accesso al kit di integrità è disponibile C# per F# qualsiasi iOS o progetto.
+Dopo aver creato e installato un profilo di **provisioning** appropriato come descritto, sarebbe in genere opportuno creare una soluzione in Visual Studio per Mac o Visual Studio. L'accesso al kit di integrità è disponibile C# per F# qualsiasi iOS o progetto.
 
-Invece di esaminare il processo di creazione manuale di un progetto Novell iOS 8, aprire l'app di esempio collegata a questo articolo (che include uno storyboard e un codice predefiniti). Per associare l'app di esempio al **profilo**di provisioning abilitato per il kit di integrità, nel **riquadro della soluzione**, fare clic con il pulsante destro del mouse sul progetto e visualizzare la finestra di dialogo **Opzioni** . Passare al pannello **dell'applicazione iOS** e immettere l' **ID app** esplicito creato in precedenza come identificatore del **bundle**dell'app:
+Invece di esaminare il processo di creazione manuale di un progetto Novell iOS 8, aprire l'app di esempio collegata a questo articolo (che include uno storyboard e un codice predefiniti). Per associare l'app di esempio al **profilo di provisioning**abilitato per il kit di integrità, nel **riquadro della soluzione**, fare clic con il pulsante destro del mouse sul progetto e visualizzare la finestra di dialogo **Opzioni** . Passare al pannello **dell'applicazione iOS** e immettere l' **ID app** esplicito creato in precedenza come identificatore del **bundle**dell'app:
 
 [![](healthkit-images/image06.png "Immettere l'ID app esplicito")](healthkit-images/image06.png#lightbox)
 
-Passare ora al pannello di **firma del bundle iOS** . Il **profilo**di provisioning installato di recente, con la relativa associazione all' **ID app**esplicito, sarà ora disponibile come **profilo**di provisioning:
+Passare ora al pannello di **firma del bundle iOS** . Il **profilo di provisioning**installato di recente, con la relativa associazione all' **ID app**esplicito, sarà ora disponibile come **profilo di provisioning**:
 
 [![](healthkit-images/image07.png "Selezionare il profilo di provisioning")](healthkit-images/image07.png#lightbox)
 
-Se il **profilo** di provisioning non è disponibile, controllare l' **identificatore del bundle** nel pannello **applicazioni iOS** rispetto a quello specificato in **iOS Dev Center** e che il profilo di provisioning sia installato ( **Xcode > Preferenze > account > visualizzare i dettagli...** ).
+Se il **profilo di provisioning** non è disponibile, controllare l' **identificatore del bundle** nel pannello **applicazioni iOS** rispetto a quello specificato in **iOS Dev Center** e che il profilo di **provisioning** sia installato (**Xcode > Preferenze > account > visualizzare i dettagli...** ).
 
-Quando è selezionato il **profilo** di provisioning abilitato per il kit di integrità, fare clic su **OK** per chiudere la finestra di dialogo Opzioni progetto.
+Quando è selezionato il profilo di **provisioning** abilitato per il kit di integrità, fare clic su **OK** per chiudere la finestra di dialogo Opzioni progetto.
 
 ### <a name="entitlementsplist-and-infoplist-values"></a>Valori dei diritti. plist e INFO. plist
 
@@ -162,7 +162,7 @@ Gli utenti finali devono eseguire passaggi positivi per consentire a un'app di l
 
 [![](healthkit-images/image10.png "L'utente viene visualizzato con una finestra di dialogo di accesso all'integrità controllata dal sistema")](healthkit-images/image10.png#lightbox)
 
-Successivamente, l'utente può modificare le autorizzazioni usando la finestra di dialogo Sources dell'app Health:
+Successivamente, l'utente può modificare le autorizzazioni usando la finestra di dialogo **Sources** dell'app Health:
 
 [![](healthkit-images/image11.png "L'utente può modificare le autorizzazioni usando la finestra di dialogo origini app per l'integrità")](healthkit-images/image11.png#lightbox)
 
@@ -420,7 +420,7 @@ Abilitare l'app per aggiornare i dati della frequenza cardiaca e l'app verrà vi
 
 Premere il pulsante **registra** . In questo modo verrà `StoreData_TouchUpInside()` eseguito il gestore, che tenterà di analizzare il valore `heartRate` del campo di testo, convertire in un oggetto `HKQuantity` tramite la funzione discussa `HeartRateModel.HeartRateInBeatsPerMinute()` in precedenza e passare tale `HeartRateModel.StoreHeartRate()`quantità a. Come descritto in precedenza, in questo modo si tenterà di archiviare i dati e verrà `HeartRateStored` generato `ErrorMessageChanged` un evento o.
 
-Fare doppio clic sul pulsante **Home** nel dispositivo e aprire app per l'integrità. Fare clic sulla scheda Sources ( **origini** ). l'app di esempio sarà elencata. Selezionarlo e non consentire l'autorizzazione per aggiornare i dati della frequenza cardiaca. Fare doppio clic sul pulsante **Home** e tornare all'app. Anche `ReactToHealthCarePermissions()` in questo caso, verrà chiamato, ma questa volta, poiché l'accesso viene negato, il pulsante **StoreData** diventerà disabilitato (si noti che ciò si verifica in modo asincrono e la modifica dell'interfaccia utente potrebbe essere visibile all'utente finale).
+Fare doppio clic sul pulsante **Home** nel dispositivo e aprire app per l'integrità. Fare clic sulla scheda **Sources (origini** ). l'app di esempio sarà elencata. Selezionarlo e non consentire l'autorizzazione per aggiornare i dati della frequenza cardiaca. Fare doppio clic sul pulsante **Home** e tornare all'app. Anche `ReactToHealthCarePermissions()` in questo caso, verrà chiamato, ma questa volta, poiché l'accesso viene negato, il pulsante **StoreData** diventerà disabilitato (si noti che ciò si verifica in modo asincrono e la modifica dell'interfaccia utente potrebbe essere visibile all'utente finale).
 
 ## <a name="advanced-topics"></a>Argomenti avanzati
 

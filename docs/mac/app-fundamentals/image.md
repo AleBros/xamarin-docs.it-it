@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso di immagini e icone in un'applicazio
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: bdd4ba57dfce96e469639e4b90b06c73c339b0f0
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: b014c84a7bb23e723fbfbb7ead5e8dc9d9fdc549
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065392"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281698"
 ---
 # <a name="images-in-xamarinmac"></a>Immagini in Novell. Mac
 
@@ -43,7 +43,7 @@ In questo articolo verranno illustrate le nozioni di base per l'uso di immagini 
 Quando si aggiunge un'immagine da usare in un'applicazione Novell. Mac, esistono diverse posizioni e modi in cui lo sviluppatore può includere un file di immagine nell'origine del progetto:
 
 - **Albero del progetto principale [deprecato]** -le immagini possono essere aggiunte direttamente all'albero dei progetti. Quando si chiamano le immagini archiviate nell'albero del progetto principale dal codice, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage image = NSImage.ImageNamed("tags.png");`. 
-- **Cartella Resources [deprecato]** -la cartella **delle risorse** speciali è per qualsiasi file che diventerà parte del bundle dell'applicazione, ad esempio icona, schermata di avvio o immagini generali (o qualsiasi altra immagine o file che lo sviluppatore desidera aggiungere). Quando si chiamano le immagini archiviate nella cartella Resources dal codice, proprio come le immagini archiviate nell'albero del progetto principale, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage.ImageNamed("tags.png")`.
+- **Cartella Resources [deprecato]** -la cartella **delle risorse** speciali è per qualsiasi file che diventerà parte del bundle dell'applicazione, ad esempio icona, schermata di avvio o immagini generali (o qualsiasi altra immagine o file che lo sviluppatore desidera aggiungere). Quando si chiamano le immagini archiviate nella cartella **Resources** dal codice, proprio come le immagini archiviate nell'albero del progetto principale, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage.ImageNamed("tags.png")`.
 - **Cartella personalizzata o sottocartella [deprecato]** -lo sviluppatore può aggiungere una cartella personalizzata all'albero di origine dei progetti e archiviarvi le immagini. Il percorso in cui viene aggiunto il file può essere annidato in una sottocartella per facilitare l'organizzazione del progetto. Se, ad esempio, lo sviluppatore ha `Card` aggiunto una cartella al progetto e una sottocartella `Hearts` di a tale cartella, archiviare un'immagine **Jack. png** nella `Hearts` cartella, `NSImage.ImageNamed("Card/Hearts/Jack.png")` caricherà l'immagine in fase di esecuzione.
 - **Asset Catalog Image Set [preferito]** -aggiunto in OS X El Capitan, i **set di immagini di asset Catalogs** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessarie per supportare i vari dispositivi e i fattori di scalabilità per l'applicazione. Anziché basarsi sul nome file delle risorse immagine ( **@1x** , **@2x** ).
 
@@ -90,7 +90,7 @@ Quando si usa un **set di immagini** nella Interface Builder di Xcode, è possib
 
 ### <a name="adding-new-assets-collections"></a>Aggiunta di nuove raccolte di asset
 
-Quando si lavora con le immagini nei cataloghi di asset, a volte può essere necessario creare una nuova raccolta, anziché aggiungere tutte le immagini alla raccolta Assets **. xcassets** . Ad esempio, quando si progettano risorse su richiesta.
+Quando si lavora con le immagini nei cataloghi di asset, a volte può essere necessario creare una nuova raccolta, anziché aggiungere tutte le immagini alla raccolta **assets. xcassets** . Ad esempio, quando si progettano risorse su richiesta.
 
 Per aggiungere un nuovo catalogo asset al progetto:
 
@@ -99,7 +99,7 @@ Per aggiungere un nuovo catalogo asset al progetto:
 
     ![Aggiunta di un nuovo catalogo asset](image-images/asset01.png "Aggiunta di un nuovo catalogo asset")
 
-Da qui è possibile usare la raccolta in modo analogo alla raccolta Assets **. xcassets** predefinita inclusa automaticamente nel progetto.
+Da qui è possibile usare la raccolta in modo analogo alla raccolta **assets. xcassets** predefinita inclusa automaticamente nel progetto.
 
 
 ### <a name="adding-images-to-resources"></a>Aggiunta di immagini alle risorse
@@ -107,7 +107,7 @@ Da qui è possibile usare la raccolta in modo analogo alla raccolta Assets **. x
 > [!IMPORTANT]
 > Questo metodo di uso delle immagini in un'app macOS è stato deprecato da Apple. È consigliabile usare i [set di immagini del catalogo asset](#asset-catalogs) per dirigere le immagini dell'app.
 
-Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# codice o da Interface Builder), è necessario che sia incluso nella cartella Resources del progetto come **risorsa bundle**. Per aggiungere un file a un progetto, procedere come segue:
+Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# codice o da Interface Builder), è necessario che sia incluso nella cartella **Resources** del progetto come **risorsa bundle**. Per aggiungere un file a un progetto, procedere come segue:
 
 1. Fare clic con il pulsante destro del mouse sulla cartella **risorse** del progetto nella **riquadro della soluzione** e scegliere **Aggiungi** > **Aggiungi file...** : 
 
@@ -115,7 +115,7 @@ Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# c
 2. Nella finestra di dialogo **Aggiungi file** selezionare i file di immagine da aggiungere al progetto, selezionare `BundleResource` per l' **azione Sostituisci compilazione** e fare clic sul pulsante **Apri** :
 
     [![Selezione dei file da aggiungere](image-images/add02.png "Selezione dei file da aggiungere")](image-images/add02-large.png#lightbox)
-3. Se i file non sono già presenti nella cartella Resources, verrà chiesto se si desidera **copiare**, **spostare** o **collegare** i file. Scegliere la scelta più adatta alle proprie esigenze, in genereche verrà copiata:
+3. Se i file non sono già presenti nella cartella **Resources** , verrà chiesto se si desidera **copiare**, **spostare** o **collegare** i file. Scegliere la scelta più adatta alle proprie esigenze, in genere che verrà **copiata**:
 
     ![Selezione dell'azione Aggiungi](image-images/add04.png "Selezione dell'azione Aggiungi")
 4. I nuovi file verranno inclusi nel progetto e letti per l'uso: 
@@ -126,7 +126,7 @@ Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# c
 È possibile usare qualsiasi file PNG, jpg o PDF come immagine di origine nell'applicazione Novell. Mac. Nella sezione successiva si esamineranno le versioni ad alta risoluzione delle immagini e delle icone per supportare i Mac basati su retina.
 
 > [!IMPORTANT]
-> Se si aggiungono immagini alla cartella Resources, è possibile lasciare l' **azione Sostituisci compilazione** impostata su **predefinito**. L'azione di compilazione predefinita per questa cartella `BundleResource`è.
+> Se si aggiungono immagini alla cartella **Resources** , è possibile lasciare l' **azione Sostituisci compilazione** impostata su **predefinito**. L'azione di compilazione predefinita per questa cartella `BundleResource`è.
 
 ## <a name="provide-high-resolution-versions-of-all-app-graphics-resources"></a>Fornire versioni ad alta risoluzione di tutte le risorse grafiche di app
 
@@ -154,11 +154,11 @@ Quando l'applicazione Novell. Mac viene eseguita in un Mac, _ImageName_ **.** _n
 
 ## <a name="using-images-in-interface-builder"></a>Uso di immagini in Interface Builder
 
-Tutte le risorse immagine aggiunte alla cartella Resources nel progetto Novell. Mac e hanno impostato l'azione di compilazione su **BundleResource** verranno visualizzate automaticamente in Interface Builder e possono essere selezionate come parte di un elemento dell'interfaccia utente (se gestisce immagini).
+Tutte le risorse immagine aggiunte alla cartella **Resources** nel progetto Novell. Mac e hanno impostato l'azione di compilazione su **BundleResource** verranno visualizzate automaticamente in Interface Builder e possono essere selezionate come parte di un elemento dell'interfaccia utente (se gestisce immagini).
 
 Per usare un'immagine in Interface Builder, seguire questa procedura:
 
-1. Aggiungere un'immagine alla cartella Resources con un'azione di `BundleResource` **compilazione** : 
+1. Aggiungere un'immagine alla cartella **Resources** con un' **azione** di `BundleResource`compilazione: 
 
      ![Risorsa immagine nel riquadro della soluzione](image-images/ib00.png "Risorsa immagine nel riquadro della soluzione")
 2. Fare doppio clic sul file **Main. Storyboard** per aprirlo per la modifica in Interface Builder: 

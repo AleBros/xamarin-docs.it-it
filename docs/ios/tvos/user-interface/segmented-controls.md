@@ -4,15 +4,15 @@ description: Questo documento descrive come usare i controlli segmentati tvOS in
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9ca931058f15c2ff6f1b46810196d9ea2bb964e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200245"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291389"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Uso di controlli segmentati tvOS in Novell
 
@@ -42,9 +42,9 @@ Non è possibile combinare testo e icone in un determinato segmento ed evitare d
 
 Apple apporta i suggerimenti seguenti per l'uso del testo del segmento:
 
-- **Utilizzare sostantivi brevi e significativi** : il titolo del segmento deve indicare chiaramente il tipo di contenuto che l'utente deve aspettarsi durante la selezione del segmento specificato. Ad esempio:  Musica o video.
-- **Usare** le maiuscole/minuscole per maiuscole e minuscole: ogni parola del titolo del segmento deve essere in maiuscolo, ad eccezione di articoli, conjunction e preposizioni di meno di quattro (4) caratteri.
-- **Usa titoli brevi** e mirati: Mantieni i titoli, brevi e incentrati sul tipo di contenuto da prevedere quando viene selezionato il segmento.
+- **Utilizzare sostantivi brevi e significativi** : il titolo del segmento deve indicare chiaramente il tipo di contenuto che l'utente deve aspettarsi durante la selezione del segmento specificato. Ad esempio: Musica o video.
+- **Usare le maiuscole/minuscole per maiuscole e minuscole** : ogni parola del titolo del segmento deve essere in maiuscolo, ad eccezione di articoli, conjunction e preposizioni di meno di quattro (4) caratteri.
+- **Usa titoli brevi e mirati** : Mantieni i titoli, brevi e incentrati sul tipo di contenuto da prevedere quando viene selezionato il segmento.
 
 Anche in questo caso non è possibile combinare testo e icone in un determinato segmento ed evitare di combinare icone e testo in un singolo controllo segmentato.
 
@@ -125,7 +125,7 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-Nel caso dell'esempio precedente, il controllo segmento è stato esposto come `PlayerCount` nome `PlayerCountChanged` e azione dell'evento. Per altre informazioni sull'uso di azioni e Outlet, vedere la sezione [scrittura del codice con Outlet e azioni](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) di Hello [, tvOS Guida introduttiva](~/ios/tvos/get-started/hello-tvos.md).
+Nel caso dell'esempio precedente, il controllo segmento è stato esposto come `PlayerCount` nome `PlayerCountChanged` e azione dell'evento. Per altre informazioni sull'uso di azioni e Outlet, vedere la sezione [scrittura del codice con Outlet e azioni](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) di [Hello, tvOS Guida introduttiva](~/ios/tvos/get-started/hello-tvos.md).
 
 La `SelectedSegment` proprietà Ottiene o imposta il segmento attualmente selezionato come indice in base zero (0). Quindi, se si dispone di cinque (5) segmenti, il primo segmento avrà un indice pari a zero (0) e l'ultimo indice di quattro (4).
 

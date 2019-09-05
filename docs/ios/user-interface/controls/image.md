@@ -4,15 +4,15 @@ description: In questo documento viene descritto come visualizzare le immagini i
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 7f1e61f9364a6a59f2bbacd1c773fe49cc338db9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 191d037d12d27e2c6ab475467853023f440c71d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528822"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291371"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con Novell. iOS
 
@@ -52,9 +52,9 @@ I file inseriti nella directory **delle risorse** vengono trattati in modo diver
 - L'archiviazione di altre immagini e file separatamente dal codice, in modo che siano più facili da gestire (le sottodirectory vengono mantenute quando viene copiato il contenuto della directory delle risorse).
 
 
-La directory Resources è particolarmente utile in un progetto di libreria, poiché il codice può presumere che tali immagini verranno copiate nella radice dell'applicazione consumer, semplificando la scrittura di librerie di codice condiviso che richiedono immagine, audio, video, XML o altri file.
+La directory **Resources** è particolarmente utile in un progetto di libreria, poiché il codice può presumere che tali immagini verranno copiate nella radice dell'applicazione consumer, semplificando la scrittura di librerie di codice condiviso che richiedono immagine, audio, video, XML o altri file.
 
-La directory resources deve essere denominata e tutti i file devono avere l'azione di compilazione impostata su **BundleResource**.
+La directory **Resources** deve essere denominata e tutti i file devono avere l'azione di compilazione impostata su **BundleResource**.
 
 ## <a name="displaying-the-image"></a>Visualizzazione dell'immagine
 
@@ -68,7 +68,7 @@ Trascinare la **visualizzazione immagine** dalla **casella degli strumenti** sul
 
 ### <a name="displaying-the-image-programmatically"></a>Visualizzazione dell'immagine a livello di codice
 
-Poiché **SF Monkey. jpg** si trova nella directory principale della directory Resources, sarà disponibile in fase di esecuzione nella radice del bundle dell'applicazione. Per visualizzare questa immagine in un controllo di visualizzazione immagine, usare il codice seguente:
+Poiché **SF Monkey. jpg** si trova nella directory principale della directory **Resources** , sarà disponibile in fase di esecuzione nella radice del bundle dell'applicazione. Per visualizzare questa immagine in un controllo di visualizzazione immagine, usare il codice seguente:
 
 ```csharp
 imageview1.Image = UIImage.FromBundle("SF Monkey.png");
@@ -80,7 +80,7 @@ Se l'immagine è stata inserita in **/Resources/pics/SF Monkey. jpg**, il codice
 imageview1.Image = UIImage.FromBundle("Pics/SF Monkey.png");
 ```
 
-I riferimenti ai file di risorse non devono mai includere la cartella Resources.
+I riferimenti ai file di risorse non devono mai includere la cartella **Resources** .
 
 ## <a name="related-links"></a>Collegamenti correlati
 

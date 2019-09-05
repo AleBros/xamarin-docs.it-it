@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 1777bfe627d0dc579169c954f7799348befbf6b8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227020"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292843"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -168,7 +168,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Interface Builder")
 
-8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`.
+8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. [https://login.microsoftonline.com/consumers/](`MyInterfaceController`).
     Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
 
     ![](troubleshooting-images/add-4.png "Impostazione di una classe personalizzata")
@@ -216,7 +216,7 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Avvio dell'app Watch dalla riga di comando
 
 > [!IMPORTANT]
-> Per impostazione predefinita, è possibile avviare l'app Watch in modalità app normale e anche in modalità Glance o di **notifica** usando [parametri di esecuzione personalizzati](~/ios/watchos/get-started/installation.md#custommodes) in Visual Studio per Mac e Visual Studio.
+> Per impostazione predefinita, è possibile avviare l'app Watch in modalità app normale e anche in modalità **Glance** o di **notifica** usando [parametri di esecuzione personalizzati](~/ios/watchos/get-started/installation.md#custommodes) in Visual Studio per Mac e Visual Studio.
 
 
 È anche possibile usare la riga di comando per controllare il simulatore iOS. Lo strumento da riga di comando usato per avviare le app Watch è **mTouch**.

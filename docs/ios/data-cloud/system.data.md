@@ -4,15 +4,15 @@ description: Questo documento descrive come usare System. Data e mono. Data. sql
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 060dcef28f50b3368f126b4b5b6996d9b52bc260
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 36eeb517fee69742f900a0cf18e1d19d093dfc52
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526572"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290126"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data in Novell. iOS
 
@@ -147,7 +147,7 @@ La funzionalità mancante da **System. Data. dll** è costituita da:
 - [System. Data. Common. DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (dipende dal supporto per i file di configurazione XML)
 - [System.Data.OleDb](xref:System.Data.OleDb)
 - [System.Data.Odbc](xref:System.Data.Odbc)
-- La `System.EnterpriseServices.dll` dipendenza è stata rimossa da `System.Data.dll` , causando la rimozione del metodo SqlConnection [. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
+- La `System.EnterpriseServices.dll` dipendenza è stata *rimossa* da `System.Data.dll` , causando la rimozione del metodo [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
 
 
 <a name="Mono.Data.Sqlite" />

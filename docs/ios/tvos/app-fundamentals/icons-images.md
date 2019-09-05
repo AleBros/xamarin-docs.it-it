@@ -4,15 +4,15 @@ description: Questo documento descrive come usare icone e immagini in un'app tvO
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4c3739f7d1583966a58ebf102a3d3b2a0a9f93ab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f3a0525a42a59edfe08e5b478bf6af801008ef05
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653214"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70277858"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Novell
 
@@ -88,7 +88,7 @@ Apple apporta i suggerimenti seguenti per progettare le immagini a più livelli:
 - **Isolare gli elementi in primo piano e in background,** posizionando gli elementi prominenti (come i caratteri del gioco) in primo piano, usare il centro per gli elementi secondari o le ombreggiature. Includere infine uno sfondo neutro per fornire una fase per i livelli superiori.
 - **Mantieni il testo in primo piano** , a meno che il testo non venga nascosto in base a livelli più elevati, in genere deve trovarsi nel livello superiore.
 - **Usare un semplice layering** : l'effetto di parallasse è stato progettato per essere impercettibile, in modo da rendere i livelli minimi per prevenire effetti stonati e non realistici.
-- **Includere un'area sicura** : poiché i livelli superiori possono essere ritagliati durante un effetto di parallasse, è necessario creare un bordo della zona sicura in ogni livello. Se si ottiene il contenuto troppo vicino al bordo dei livelli, è possibile che venga ritagliato. I livelli superiori comportano una maggiore scalabilità e ritaglio rispetto ai livelli inferiori. Vedere la sezione ridimensionamento dei [livelli immagine](#Sizing-Image-Layers) di seguito.
+- **Includere un'area sicura** : poiché i livelli superiori possono essere ritagliati durante un effetto di parallasse, è necessario creare un bordo della zona sicura in ogni livello. Se si ottiene il contenuto troppo vicino al bordo dei livelli, è possibile che venga ritagliato. I livelli superiori comportano una maggiore scalabilità e ritaglio rispetto ai livelli inferiori. Vedere la sezione [ridimensionamento dei livelli immagine](#Sizing-Image-Layers) di seguito.
 - L' **Anteprima spesso** le immagini a livelli devono essere visualizzate in anteprima spesso per garantire che si verifichi l'effetto 3D desiderato e che nessuno dei contenuti sui singoli livelli venga ritagliato. È necessario visualizzare in anteprima le immagini sovrapposte su hardware Apple TV reale per assicurarsi che vengano visualizzate come previsto.
 
 Quando possibile, è consigliabile usare sempre i `UIKit` controlli predefiniti per visualizzare le immagini sovrapposte, in quanto otterranno automaticamente l'effetto di parallasse quando entrano nello stato attivo.
@@ -157,7 +157,7 @@ Apple fornisce i suggerimenti seguenti per la creazione delle icone dell'app:
 - **Non usare schermate** : le schermate sono troppo complesse per un'icona e non consentono all'utente di visualizzare lo scopo dell'app a colpo d'occhio.
 - **Mantieni icone quadre** : tvOS applica automaticamente una maschera che arrotonda in modo impercettibile gli angoli delle icone. Non includere l'arrotondamento.
 - **Separare attentamente i livelli** : il testo deve trovarsi sul livello superiore, gli elementi secondari al centro e uno sfondo neutro che consente di brillare i livelli superiori.
-- **Utilizzare attentamente le sfumature e** le ombreggiature: le sfumature e le ombreggiature possono contrastare con l'effetto di parallasse, in modo da poterle utilizzare con cautela. Gli stili di sfumatura semplice dall'alto in basso funzionano meglio. Le ombreggiature funzionano normalmente come tinte affilate e a taglio rigido.
+- **Utilizzare attentamente le sfumature e le ombreggiature** : le sfumature e le ombreggiature possono contrastare con l'effetto di parallasse, in modo da poterle utilizzare con cautela. Gli stili di sfumatura semplice dall'alto in basso funzionano meglio. Le ombreggiature funzionano normalmente come tinte affilate e a taglio rigido.
 - **Variazione della trasparenza** dei livelli: usare diversi livelli di trasparenza nei livelli superiori dell'icona dell'app per aumentare l'effetto 3D. Il livello di sfondo deve essere opaco o verrà generato un errore.
 
 <a name="Setting-the-App-Icons" />
@@ -203,7 +203,7 @@ Apple fornisce i suggerimenti seguenti per la creazione di immagini Top Shelf:
 - **Collegamento al contenuto dell'app** : i layout di scaffale dinamici principali forniscono un collegamento rapido al contenuto che l'utente trova più importante nell'app. Usare quest'area per fornire un collegamento rapido per avviare l'app e passare immediatamente al contenuto specificato.
 - **Presentazione del contenuto più recente: il contenuto più completo della** piattaforma può creare un utente nell'app e renderlo più utile. Usare questa come area per presentare il contenuto più alto valutato o più recente.
 - **Contenuto personalizzato** : gli utenti inseriscono le app più frequenti o preferite nella prima riga della schermata iniziale. Usare il ripiano superiore per visualizzare il contenuto a cui si è maggiormente interessati.
-- **Annunci non** consentiti: gli annunci non sono consentiti in modo esplicito nella mensola superiore. È possibile visualizzare il contenuto più recente acquistabile, ma non devono essere visualizzate informazioni sui prezzi.
+- **Annunci non consentiti: gli annunci non sono consentiti** in modo esplicito nella mensola superiore. È possibile visualizzare il contenuto più recente acquistabile, ma non devono essere visualizzate informazioni sui prezzi.
 
 ### <a name="setting-the-top-shelf-image"></a>Impostazione dell'immagine in primo piano
 

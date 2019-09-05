@@ -2,15 +2,15 @@
 title: Incorporamento .NET in Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/15/2018
-ms.openlocfilehash: 4612f5d04da4ba82127d37abfa41dd1dff2985bc
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 734c2181f1981ed4f342f78e705f23b0385b3eff
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120014"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292287"
 ---
 # <a name="net-embedding-on-android"></a>Incorporamento .NET in Android
 

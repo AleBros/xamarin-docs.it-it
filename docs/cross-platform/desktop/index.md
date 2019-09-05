@@ -1,37 +1,37 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
-title: Lo sviluppo multipiattaforma per sviluppatori Desktop
-description: Questo documento include collegamenti alle varie guide che descrivono xamarin. Forms per sviluppatori WPF e Windows Form. Il contenuto collegato esamina del ciclo di vita dell'applicazione, i controlli dell'interfaccia utente, il porting di linee guida ed esempi.
-author: asb3993
-ms.author: amburns
+title: Cross-Platform per sviluppatori desktop
+description: Questo documento contiene collegamenti a diverse guide che descrivono Novell. Forms per sviluppatori WPF e Windows Forms. Il contenuto collegato Esplora il ciclo di vita dell'applicazione, i controlli dell'interfaccia utente, le linee guida e gli esempi di porting.
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 21c74b8c0ccaffb2b3b8205a3bdda9101b99f072
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4c14b3f6458180c6da9f123cab5aad406091667
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270517"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290369"
 ---
-# <a name="cross-platform-for-desktop-developers"></a>Lo sviluppo multipiattaforma per sviluppatori Desktop
+# <a name="cross-platform-for-desktop-developers"></a>Cross-Platform per sviluppatori desktop
 
-In questa sezione contiene informazioni per aiutare gli sviluppatori WPF e Windows Form per informazioni sullo sviluppo di app per dispositivi mobili con Xamarin, mediante riferimenti incrociati le proprie conoscenze ed esperienza al idiomi per dispositivi mobili e fornisce esempi di porting di applicazioni desktop ai dispositivi mobili.
+Questa sezione contiene informazioni utili per consentire a WPF e Windows Forms agli sviluppatori di apprendere lo sviluppo di app per dispositivi mobili con Novell, facendo riferimento incrociato alle proprie conoscenze ed esperienze esistenti agli idiomi per dispositivi mobili e fornendo esempi di porting di applicazioni desktop ai dispositivi mobili.
 
-## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Confronto del ciclo di vita App](lifecycle.md)
+## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Confronto del ciclo di vita delle app](lifecycle.md)
 
-Differenze tra WPF e xamarin. Forms app avvio e lo sfondo degli stati.
+Informazioni sulle differenze tra gli Stati di avvio e di background dell'app WPF e Novell. Forms.
 
-## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Confronto tra i controlli dell'interfaccia utente](controls/index.md)
+## <a name="ui-controls-comparisoncontrolsindexmd"></a>[Confronto tra controlli dell'interfaccia utente](controls/index.md)
 
-Riferimento rapido per trovare controlli equivalenti in Windows Form, WPF e xamarin. Forms, incluse informazioni aggiuntive sulle differenze tra WPF e xamarin. Forms.
+Riferimento rapido per trovare controlli equivalenti in Windows Forms, WPF e Novell. Forms, incluse informazioni aggiuntive sulle differenze tra WPF e Novell. Forms.
 
-## <a name="porting-guidanceportingmd"></a>[Indicazioni sulla portabilità](porting.md)
+## <a name="porting-guidanceportingmd"></a>[Linee guida per il porting](porting.md)
 
-Usare Portability Analyzer per facilitare la migrazione di codice dell'applicazione desktop (ad eccezione dell'interfaccia utente) per xamarin. Forms.
+Uso di Portability Analyzer per facilitare la migrazione del codice dell'applicazione desktop (esclusa l'interfaccia utente) a Novell. Forms.
 
 ## <a name="samplessamplesmd"></a>[Esempi](samples.md)
 
-Esempi di riferimento illustrare l'architettura delle applicazioni aziendali e porting di codice da WPF a xamarin. Forms.
+Esempi di riferimento che illustrano l'architettura dell'applicazione aziendale e il codice di porting da WPF a Novell. Forms.
 
 ## <a name="learn-more"></a>Ulteriori informazioni
 
-[![Creazione di App per dispositivi mobili eBook](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [ ![eBook modelli di applicazioni aziendali](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
+Creazione di app per [ dispositivimobilieBookmodellidiapplicazioniaziendali![](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [ ![](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)

@@ -1,105 +1,105 @@
 ---
-title: Novità di App Store iOS 11
-description: Questo documento illustra le modifiche per l'App Store di iOS 11. Illustra icona store di un'applicazione, innalzata di livello gli acquisti in-app, la pagina prodotto riprogettato con un', comunicazione con il cliente e versioni in più fasi.
+title: Modifiche all'App Store in iOS 11
+description: Questo documento illustra le modifiche apportate all'App Store in iOS 11. Viene illustrata l'icona dello Store di un'applicazione, gli acquisti in-app promossi, la pagina di prodotto riprogettata, la comunicazione dei clienti e le versioni a fasi.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 022d6b5c3f85863352dd1343752e934240b357aa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229655"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286579"
 ---
-# <a name="app-store-changes-in-ios-11"></a>Novità di App Store iOS 11
+# <a name="app-store-changes-in-ios-11"></a>Modifiche all'App Store in iOS 11
 
-L'App Store iOS ha avuto una riprogettazione completa, che non solo consente agli utenti di passare in modo efficiente l'archivio, ma consente inoltre, gli sviluppatori per promuovere l'app agli utenti. Le promozioni includono gli aggiornamenti per gli acquisti in-app e aggiornamenti per la pagina del prodotto. iOS 11 aggiunge anche gli aggiornamenti relativi come comunicare con gli utenti, come aggiungere all'icona dell'app e come rilasciare l'app al pubblico.
+IOS App Store ha avuto una riprogettazione completa, che non solo consente agli utenti di spostarsi in modo efficiente nello Store, ma consente anche agli sviluppatori di promuovere l'app agli utenti. Queste promozioni includono aggiornamenti per gli acquisti in-app e gli aggiornamenti della pagina del prodotto. iOS 11 aggiunge anche aggiornamenti per la comunicazione con gli utenti, come aggiungere l'icona dell'app e come rilasciare l'app al pubblico.
 
-![Nuovo layout di app store](app-store-changes-images/image3.jpg)
+![Nuovo layout dell'app Store](app-store-changes-images/image3.jpg)
 
-L'archivio app riprogettata include le sezioni seguenti:
+L'App Store riprogettata include le sezioni seguenti:
 
-- **Oggi** : questa scheda include le App in primo piano app o un "pick redattore". Per alzare di livello l'app in questo caso immettere informazioni sul [alzare di livello](https://developer.apple.com//contact/app-store/promote/) pagina.
-- **Giochi** : qualsiasi App che è impostato sul **gioco** categoria in iTunes Connect sono disponibili in questa scheda.
-- **Le app** : questa scheda include tutte le altre app. Gli utenti possono cercare di App in primo piano, categorie, superiore a pagamento o gratuita.
-- **Gli aggiornamenti** : questa app consente di visualizzare gli aggiornamenti alle app. Anche se si rilascia un'app tramite [in più fasi di rilascio](#Phased_Release), gli utenti possono comunque accedere a questa scheda e scaricare la versione più recente.
-- **Ricerca** : questa scheda consente agli utenti di cercare l'app.
+- **Oggi** : questa scheda include le app che sono un'app in primo piano o un "Editor ' s pick". Per innalzare di livello l'app, inserire le informazioni nella pagina [Promote](https://developer.apple.com//contact/app-store/promote/) .
+- **Giochi** : tutte le app impostate per la categoria **Game** in iTunes Connect sono disponibili in questa scheda.
+- **App** : questa scheda presenta tutte le altre app. Gli utenti possono sfogliare le app in primo piano, le categorie, le prime a pagamento/gratuite.
+- **Aggiornamenti** : questa app Visualizza gli aggiornamenti per le app. Anche se si rilascia un'app tramite il rilascio in più [fasi](#Phased_Release), gli utenti possono comunque accedere a questa scheda e scaricare la versione più recente.
+- **Cerca** : questa scheda consente agli utenti di cercare l'app.
 
-## <a name="store-icon"></a>Icona Store
+## <a name="store-icon"></a>Icona archivio
 
-Le icone Store (o marketing le icone) non vengono più gestite in iTunes Connect e invece devono essere contenute sotto un' [catalogo di asset](~/ios/app-fundamentals/images-icons/app-icons.md) nel file binario app, simile alle icone dell'app. Un'icona di 1024 x 1024 archivio nel formato PNG deve essere incluso in un catalogo asset per l'invio ha esito positivo delle App iOS 11.
+Le icone dello Store (o le icone di marketing) non sono più gestite in iTunes Connect e devono invece essere contenute come [Catalogo asset](~/ios/app-fundamentals/images-icons/app-icons.md) nel file binario dell'app, in modo analogo alle icone dell'app. Per inviare correttamente le app iOS 11, è necessario includere in un catalogo asset un'icona di archivio 1024 x 1024 in formato PNG.
 
-App assottigliamento assicura che il catalogo di asset aggiuntivi non aumenta le dimensioni dell'app.
+Il DILUENTE delle app assicura che questo catalogo asset aggiuntivo non aumenti le dimensioni dell'app.
 
 
-## <a name="in-app-purchases-promoted-in-the-app-store"></a>Acquisti in-App alzare di livello l'App Store
+## <a name="in-app-purchases-promoted-in-the-app-store"></a>Acquisti in-app promossi nell'App Store
 
-Apple ha introdotto acquisti in-app più facilmente individuabile in Store l'App. È ora possibile aggiungere fino a 20 _Store App alzate di livello_ acquisti in-app sono ora disponibili nella pagina App, nella pagina del prodotto dell'app oppure eseguendo una ricerca.
+Apple ha reso più individuabili gli acquisti in-app nell'App Store. È ora possibile aggiungere fino a 20 acquisti in-app _promossi di App Store_ che ora possono essere trovati nella pagina app, nella pagina del prodotto dell'app o eseguendo una ricerca.
 
-Affinché gli acquisti in-app visualizzati in Store l'App è necessario includere i dati seguenti:
+Per visualizzare gli acquisti in-app nell'App Store, è necessario includere i dati seguenti:
 
-- **Immagine** : È necessario fornire un'immagine progettata appositamente per l'icona che descrive le operazioni eseguite l'acquisto in-app. Questa immagine deve essere diversa dall'icona dell'app e non può essere una schermata.
-- **Nome** : il nome può contenere solo un massimo di 30 caratteri.
-- **Descrizione** : la descrizione può contenere solo un massimo di 45 caratteri.
+- **Image (immagine** ): è necessario fornire un'immagine appositamente progettata per l'icona che descrive l'operazione di acquisto in-app. Questa immagine deve essere diversa dall'icona dell'app e non può essere una schermata.
+- **Nome** : il nome può essere costituito solo da un massimo di 30 caratteri.
+- **Descrizione** : la descrizione può contenere un massimo di 45 caratteri.
 
-Le promozioni di acquisto in-app sono soggetti a una verifica dell'app store prima di poter essere pubblicata.
+Eventuali promozioni di acquisto in-app sono soggette a una revisione dell'app Store prima di poterla pubblicare.
 
-Per effettuare gli acquisti in-app disponibili per alzare di livello, aprire l'app e passare a **funzioni > acquisti In-App**. Andare alla **innalzamento di livello di App Store (facoltativo)** della sezione e aggiungere un'immagine di 1024 x 1024 e **salvare**, come illustrato nell'immagine seguente:
+Per rendere disponibili gli acquisti in-app per alzare di livello, aprire l'app e passare a **funzionalità > acquisti in-app**. Passare alla sezione **Promozione App Store (facoltativo)** e aggiungere un'immagine 1024 x 1024 e **salvare**, come illustrato nell'immagine seguente:
 
-![Sezione di innalzamento di livello App Store di iTunes Connect](app-store-changes-images/image4.png)
+![Sezione Promozione App Store in iTune Connect](app-store-changes-images/image4.png)
 
-È inoltre necessario aggiungere il `ShouldAddStorePayment` metodo per il `SKPaymentTransactionObserver` protocollo nell'app.
+È anche necessario aggiungere il `ShouldAddStorePayment` metodo `SKPaymentTransactionObserver` al protocollo nell'app.
 
-Per ulteriori informazioni sulla promozione di acquisto in-app, vedere di Apple [innalzamento di livello acquisti In-App Your](https://developer.apple.com/app-store/promoting-in-app-purchases/) pagina.
+Per altre informazioni sulle promozioni di acquisto in-app, vedere la pagina relativa alla promozione della pagina [acquisti in-app](https://developer.apple.com/app-store/promoting-in-app-purchases/) di Apple.
 
-## <a name="redesigned-product-page"></a>Pagina prodotto riprogettato con
+## <a name="redesigned-product-page"></a>Pagina del prodotto riprogettata
 
-Le modifiche seguenti sono state apportate alla pagina del prodotto:
+Sono state apportate le modifiche seguenti alla pagina del prodotto:
 
-- I titoli vengono ora impostati su un massimo di 30 caratteri
+- I titoli sono ora impostati su un massimo di 30 caratteri
 - È stato aggiunto un sottotitolo
-    - Deve essere un breve riepilogo che integra il titolo.
-    - Sottotitoli in altre lingue dovrebbe avere un massimo di 30 caratteri
-- Anteprime di App
-    - È ora possibile avere tre schermate o video.
-    - Video su autoplay quando un utente visita la pagina.
-    - Per altre informazioni, vedere di Apple [anteprima dell'App](https://developer.apple.com/app-store/app-previews/) pagina.
+  - Si tratta di un breve riepilogo che complimenta il titolo.
+  - Il sottotitolo deve avere un massimo di 30 caratteri
+- Anteprime delle app
+  - È ora possibile avere tre video o schermate.
+  - Video AutoPlay quando un utente visita la pagina.
+  - Per altre informazioni, vedere la pagina di [anteprima dell'app](https://developer.apple.com/app-store/app-previews/) Apple.
 - Testo promozionale
-    - Questa nuova funzionalità fornisce 170 caratteri del testo consente di descrivere le informazioni sul soggetto a modifiche frequenti sull'app.
-    - Può essere aggiornata in qualsiasi momento senza dover inviare una nuova versione dell'app.
+  - Questa nuova funzionalità fornisce 170 caratteri di testo che consentono di descrivere le informazioni che cambiano di frequente sull'app.
+  - Può essere aggiornato in qualsiasi momento senza dover inviare una nuova versione dell'app.
 
-## <a name="customer-communication"></a>Comunicazione con il cliente
+## <a name="customer-communication"></a>Comunicazione con i clienti
 
-Nel 10.3, Apple lanciato un nuovo modo per gli sviluppatori di comunicare direttamente con gli utenti dell'app grazie alla possibilità di rispondere alle revisioni. È possibile accedere a questa nuova funzionalità in iTunes connect passando al **App > attività > classificazioni e recensioni**, come illustrato nell'immagine seguente:
+In 10,3, Apple ha lanciato un nuovo modo per consentire agli sviluppatori di comunicare direttamente con gli utenti delle app attraverso la possibilità di rispondere alle revisioni. È possibile accedere a questa nuova funzionalità in iTunes Connect passando ad **App > Activity > ratings and Revisios**, come illustrato nell'immagine seguente:
 
-![Finestra di dialogo con l'area per l'inserimento di risposta per impostare come commento](app-store-changes-images/image5.png)
+![Finestra di dialogo che mostra l'area in cui immettere la risposta al commento](app-store-changes-images/image5.png)
 
-Esistono alcuni aspetti da tenere presenti quando si risponde agli utenti:
+Ci sono alcuni aspetti da tenere presenti quando si risponde agli utenti:
 
-- È possibile rispondere solo una volta, ma entrambe le parti possono modificare i propri commenti come desiderato.
-- Gli utenti ricevere una notifica quando l'utente risponde a un commento.
-- Un nuovo supporto dei clienti ruolo è stato creato in iTunes connect. Gli utenti con questo ruolo o un ruolo di amministratore possono rispondere ai commenti.
+- È possibile rispondere solo una volta, ma entrambe le parti possono modificare i commenti nel modo desiderato.
+- Gli utenti ricevono una notifica quando si risponde a un commento.
+- In iTunes Connect è stato creato un nuovo ruolo di supporto clienti. Gli utenti con questo ruolo o un ruolo di amministratore possono rispondere ai commenti.
 
-Per altre informazioni, vedere di Apple [rispondere alle revisioni](https://developer.apple.com/app-store/responding-to-reviews/) pagina.
+Per altre informazioni, vedere la pagina relativa [alle revisioni](https://developer.apple.com/app-store/responding-to-reviews/) di Apple.
 
 <a name="Phased_Release"/>
 
-## <a name="phased-release"></a>Versione in più fasi
+## <a name="phased-release"></a>Versione graduale
 
-Con iOS 11, Apple ha implementato l'opzione delle versioni in più fasi per gli aggiornamenti all'app. È possibile abilitare le versioni in più fasi consentire l'aggiornamento dell'app essere rilasciate gradualmente per i clienti, assicurando che la richiesta non esegue l'overload dell'ambiente di produzione.
+Con iOS 11, Apple ha implementato l'opzione delle versioni in più fasi per gli aggiornamenti dell'app. È possibile abilitare le versioni in più fasi per consentire il rilascio graduale dell'aggiornamento dell'app ai clienti, assicurando che la richiesta non sovraccarichi l'ambiente di produzione.
 
-Le versioni in più fasi sono abilitate in iTunes Connect. Fare clic sull'app nell'intestazione laterale, scorrere fino al **in più fasi di rilascio per gli aggiornamenti automatici** sezione nella parte inferiore, quindi selezionare **versione aggiornamento rispetto all'uso periodo di 7 giorni in più fasi di rilascio**:
+Le versioni in più fasi sono abilitate in iTunes Connect. Fare clic sull'app nella barra laterale, scorrere fino al **rilascio in più fasi per aggiornamenti automatici** sezione nella parte inferiore e selezionare **versione aggiornamento per un periodo di 7 giorni usando la versione in più fasi**:
 
-![Visualizzazione di opzione in più fasi di rilascio per gli aggiornamenti automatici](app-store-changes-images/image6.png)
+![Opzione che mostra la versione in più fasi per gli aggiornamenti automatici](app-store-changes-images/image6.png)
 
-L'aggiornamento è disponibile immediatamente per il download nella scheda degli aggiornamenti di Store l'App. Sono disponibili per gli utenti che dispongono di download automatici selezionate solo le versioni in più fasi.
+L'aggiornamento è immediatamente disponibile per il download nella scheda aggiornamenti dell'app Store. Le versioni in più fasi sono disponibili solo per gli utenti che hanno selezionato download automatici.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [What ' s New in iOS 11 (Apple)](https://developer.apple.com/ios/)
-- [Pagina del prodotto aggiornato App Store (Apple)](https://developer.apple.com/app-store/product-page/)
-- [Aggiornamento dell'App per iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)
+- [Novità di iOS 11 (Apple)](https://developer.apple.com/ios/)
+- [Pagina del prodotto App Store aggiornata (Apple)](https://developer.apple.com/app-store/product-page/)
+- [Aggiornamento dell'app per iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)

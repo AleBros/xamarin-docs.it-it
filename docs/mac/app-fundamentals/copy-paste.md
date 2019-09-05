@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso del tavolo di montaggio per fornire 
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 43da869cfdb4ccbf5fcd8836a6fa5ca5ca732bfa
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199884"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291228"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copia e incolla in Novell. Mac
 
@@ -663,7 +663,7 @@ Un tavolo di montaggio può essere pubblico o privato e può essere usato per di
 - `NSRulerPboard`: Supporta le operazioni **taglia**, **copia** e **Incolla** sui **righelli**.
 - `NSFontPboard`: Supporta operazioni **taglia**, **copia** e **Incolla** sugli `NSFont` oggetti.
 - `NSFindPboard`: Supporta i pannelli di ricerca specifici dell'applicazione che possono condividere il testo di ricerca.
-- `NSDragPboard`: Supporta le operazioni di trascinamento **& rilascio** .
+- `NSDragPboard`: Supporta le operazioni di **Trascinamento & rilascio** .
 
 Per la maggior parte delle situazioni, si userà uno dei Pasteboards definiti dal sistema. Tuttavia potrebbero essere presenti situazioni che richiedono la creazione di Pasteboards personalizzati. In questi casi, è possibile usare il `FromName (string name)` metodo `NSPasteboard` della classe per creare un tavolo di montaggio personalizzato con il nome specificato.
 

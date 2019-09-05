@@ -1,42 +1,42 @@
 ---
-title: Xamarin Live Player per xamarin. Forms
-description: Questo documento vengono illustrate Xamarin Live Player per xamarin. Forms, che descrive l'installazione, l'app Xamarin Live Player, i campioni da utilizzare con Xamarin Live Player, limiti e la risoluzione dei problemi.
+title: Xamarin Live Player per Novell. Forms
+description: Questo documento illustra i Xamarin Live Player per Novell. Forms, che descrive l'installazione, l'app Xamarin Live Player, gli esempi da usare con Xamarin Live Player, limitazioni e risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2019
-ms.openlocfilehash: d4329f252bd75de3c149aea9f03c137bf0c73d5a
-ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
+ms.openlocfilehash: 02a4f5970e1c94385316c80b53d8262f47db6c60
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67157674"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278837"
 ---
-# <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player per xamarin. Forms
+# <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player per Novell. Forms
 
-Poiché viene interpretato il codice sorgente è possibile raggiungere il [limitazioni](limitations.md) dopo alcune tempo ed è necessario per completare la compilazione dell'app per dispositivo o emulatore.
+Poiché il codice sorgente viene interpretato, è possibile che si raggiungano le [limitazioni](limitations.md) dopo un certo periodo di tempo ed è necessario compilare completamente l'app per il dispositivo o l'emulatore.
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
 > [!WARNING]
-> Xamarin Live Player Preview è stata terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite per i clienti di continuare a usare l'anteprima con Visual Studio 2017.
+> L'anteprima del Xamarin Live Player è terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite ai clienti che continuano a usare l'anteprima con Visual Studio 2017.
 
 > [!TIP]
-> È possibile usare la [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare la progettazione dello schermo durante la modifica.
+> È possibile usare il visualizzatore [Anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare le progettazioni dello schermo durante la modifica.
 
-## <a name="how-xamarin-live-player-worked"></a>Funzionamento di Xamarin Live Player
+## <a name="how-xamarin-live-player-worked"></a>Come funziona Xamarin Live Player
 
-[![Xamarin Live Player: Test di codice, analisi,](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+[![Xamarin Live Player: Codice, analisi, test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Abilitare la *Xamarin Live Player* nel **preferenze**, quindi selezionare il dispositivo in uso il **dispositivi** elenco.
-2. Gestire i dispositivi Live Player per eseguire una scansione del codice per associare il dispositivo a Visual Studio.
-3. L'app viene eseguita sul telefono o tablet.
+1. Abilitare la *Xamarin Live Player* in **Preferenze**, quindi selezionare il dispositivo dall'elenco **dispositivi** .
+2. Gestire i dispositivi Live Player per eseguire la scansione di un codice a matrice per associare il dispositivo a Visual Studio.
+3. L'app viene eseguita sul telefono o sul tablet.
 
 ## <a name="xamarin-live-player-appplayermd"></a>[App Xamarin Live Player](player.md)
 
-Uso di Xamarin Live Player app.
+Uso dell'app Xamarin Live Player.
 
 ## <a name="troubleshootingtroubleshootingmd"></a>[Risoluzione dei problemi](troubleshooting.md)
 
-Trovare la Guida in caso di problemi.
+Trovare assistenza in caso di problemi.

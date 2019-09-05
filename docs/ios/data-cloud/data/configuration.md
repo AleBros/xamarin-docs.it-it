@@ -1,26 +1,26 @@
 ---
-title: Configurazione di SQLite in xamarin. IOS
-description: Questo documento descrive come determinare il percorso per un file di database SQLite in un'applicazione xamarin. IOS. Questi concetti sono rilevanti, indipendentemente dal meccanismo di accesso di dati selezionato.
+title: Configurazione di SQLite in Novell. iOS
+description: Questo documento descrive come determinare il percorso di un file di database SQLite in un'applicazione Novell. iOS. Questi concetti sono rilevanti a prescindere dal meccanismo di accesso ai dati selezionato.
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: afb582129a5587e6a386a0ce2c23368af9bcd619
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: c0a8f57e3f4f351cf5b874ded2639b975ea71cad
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650255"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281915"
 ---
-# <a name="configuring-sqlite-in-xamarinios"></a>Configurazione di SQLite in xamarin. IOS
+# <a name="configuring-sqlite-in-xamarinios"></a>Configurazione di SQLite in Novell. iOS
 
-Per l'uso di SQLite nell'applicazione xamarin. IOS è necessario determinare il percorso di file corretto per il file di database.
+Per usare SQLite nell'applicazione Novell. iOS, è necessario determinare il percorso del file corretto per il file di database.
 
-## <a name="database-file-path"></a>Percorso File di database
+## <a name="database-file-path"></a>Percorso file di database
 
-Indipendentemente dal metodo di accesso dei dati è usare, è necessario creare un file di database prima che i dati possono essere archiviati con SQLite. A seconda di quale piattaforma di destinazione è il percorso del file sarà diverso. Per iOS è possibile utilizzare la classe di ambiente per costruire un percorso valido, come illustrato nel frammento di codice seguente:
+Indipendentemente dal metodo di accesso ai dati usato, è necessario creare un file di database prima che i dati possano essere archiviati con SQLite. A seconda della piattaforma di destinazione, il percorso del file sarà diverso. Per iOS è possibile usare la classe Environment per costruire un percorso valido, come illustrato nel frammento di codice seguente:
 
 ```csharp
 string dbPath = Path.Combine (
@@ -29,9 +29,9 @@ string dbPath = Path.Combine (
 // dbPath contains a valid file path for the database file to be stored
 ```
 
-Ci sono altri aspetti da prendere in considerazione prima di decidere dove archiviare il file di database. In iOS è possibile utilizzare il database da backup automaticamente (o meno).
+Quando si decide dove archiviare il file di database, è necessario prendere in considerazione altri aspetti. In iOS è possibile che si desideri eseguire il backup del database automaticamente (o meno).
 
-Se si vuole usare un percorso diverso in ogni piattaforma nell'applicazione multipiattaforma: è possibile usare una direttiva del compilatore come illustrato per generare un percorso diverso per ogni piattaforma:
+Se si vuole usare un percorso diverso in ogni piattaforma nell'applicazione multipiattaforma, è possibile usare una direttiva del compilatore, come illustrato per generare un percorso diverso per ogni piattaforma:
 
 ```csharp
 var sqliteFilename = "MyDatabase.db3";
@@ -47,13 +47,13 @@ string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library f
 var path = Path.Combine (libraryPath, sqliteFilename);
 ```
 
-Vedere la [funziona con il File System](~/ios/app-fundamentals/file-system.md) per altre informazioni su quali percorsi di file da utilizzare in iOS. Vedere le [compilazione di applicazioni della piattaforma incrociata](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento per altre informazioni sull'uso di direttive del compilatore per scrivere il codice specifico per ogni piattaforma.
+Per ulteriori informazioni sui percorsi dei file da utilizzare in iOS, vedere l'articolo relativo all' [utilizzo del file System](~/ios/app-fundamentals/file-system.md) . Per altre informazioni sull'uso delle direttive del compilatore per scrivere codice specifico per ogni piattaforma, vedere il documento [compilazione di applicazioni multipiattaforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) .
 
 ## <a name="threading"></a>Threading
 
-Non si utilizzino la stessa connessione di database SQLite attraverso più thread. Prestare attenzione aprire, utilizzare e quindi chiudere tutte le connessioni create sullo stesso thread.
+Non usare la stessa connessione di database SQLite tra più thread. Prestare attenzione ad aprire, usare e quindi chiudere tutte le connessioni create nello stesso thread.
 
-Per assicurarsi che il codice non tenti di accedere al database SQLite da più thread contemporaneamente, attivare manualmente un blocco ogni volta che si desidera accedere al database, simile al seguente:
+Per assicurarsi che il codice non tenti di accedere al database SQLite da più thread contemporaneamente, eseguire manualmente un blocco ogni volta che si accede al database, come segue:
 
 ```csharp
 object locker = new object(); // class level private field
@@ -63,12 +63,12 @@ lock (locker){
 }
 ```
 
-L'accesso al database (letture, scritture, aggiornamenti e così via) deve essere eseguito il wrapping con lo stesso blocco. Prestare attenzione per evitare una situazione di deadlock, garantendo che il lavoro all'interno della clausola di blocco viene mantenuto semplice e non chiamare altri metodi che potrebbero anche richiedere un blocco.
+Tutti gli accessi al database (letture, Scritture, aggiornamenti e così via) devono essere racchiusi con lo stesso blocco. È necessario prestare attenzione per evitare una situazione di deadlock assicurandosi che il lavoro all'interno della clausola di blocco venga mantenuto semplice e non chiami altri metodi che potrebbero anche assumere un blocco.
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [iOS recipe di dati](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Accesso ai dati di xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Ricette per i dati iOS](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
+- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)

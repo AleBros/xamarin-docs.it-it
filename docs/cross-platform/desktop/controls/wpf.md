@@ -2,15 +2,15 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'Confronto tra WPF e Novell. Forms: Analogie & differenze'
 description: Questo documento consente di confrontare e contrapporre WPF a Novell. Forms. Vengono illustrati i modelli di controllo, XAML, l'infrastruttura di binding, i modelli di dati, ItemsControl, UserControl, la navigazione e l'esplorazione URL.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 149636719c7f8046b8a32d8d2f4157b663388cb1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: d23b449382183b0385eac38c0b9205e48dbe0a34
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227604"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290403"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Confronto tra WPF e Novell. Forms: Analogie & differenze
 
@@ -18,7 +18,7 @@ ms.locfileid: "70227604"
 
 WPF supporta il concetto di *modelli di controllo* che forniscono le istruzioni di visualizzazione per un controllo`Button`( `ListBox`, e così via). Come indicato in precedenza, Novell. Forms usa classi di _rendering_ concrete per questo che interagiscono con la piattaforma nativa (iOS, Android e così via) per visualizzare il controllo.
 
-Tuttavia, Novell. Forms ha un `ControlTemplate` tipo, che viene `Page` usato per gli oggetti di tema. Fornisce una definizione per un oggetto `Page` che fornisce contenuto coerente, ma consente all'utente della pagina di modificare i colori, i tipi di carattere e così via e persino di aggiungere elementi per renderli univoci per l'applicazione.
+Tuttavia, Novell _. Forms ha_ un `ControlTemplate` tipo, che viene `Page` usato per gli oggetti di tema. Fornisce una definizione per un oggetto `Page` che fornisce contenuto coerente, ma consente all'utente della pagina di modificare i colori, i tipi di carattere e così via e persino di aggiungere elementi per renderli univoci per l'applicazione.
 
 Gli utilizzi comuni per questa operazione sono, ad esempio, le finestre di dialogo di autenticazione, le richieste e fornire un aspetto standardizzato, ma a tema, che può essere personalizzato all'interno dell'app. Come parte di questo supporto, vengono usati molti controlli noti con nome WPF:
 
@@ -164,7 +164,7 @@ In WPF, `UserControl`i vengono usati per fornire una sezione dell'interfaccia ut
 
 WPF include un oggetto raramente `NavigationService` utilizzato che può essere utilizzato per fornire una funzionalità di navigazione "simile a un browser". Tuttavia, la maggior parte delle app non ha avuto alcun `Window` problema con questa operazione, ma usava invece elementi diversi o sezioni diverse della finestra per visualizzare i dati.
 
-Nei dispositivi telefonici, diverse schermate sono spesso la soluzione, quindi Novell. Forms include il supporto per diverse forme di navigazione:
+Nei dispositivi telefonici, diverse _schermate_ sono spesso la soluzione, quindi Novell. Forms include il supporto per diverse forme di navigazione:
 
 | Stile di navigazione | Tipo di pagina |
 |--- |--- |

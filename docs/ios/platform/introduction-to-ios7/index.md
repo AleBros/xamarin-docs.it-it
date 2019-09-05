@@ -4,15 +4,15 @@ description: Questo articolo illustra le nuove API principali introdotte in iOS 
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 962f06367542cc0e5d0d17f3261411c96f215e44
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227485"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292019"
 ---
 # <a name="introduction-to-ios-7"></a>Introduzione a iOS 7
 

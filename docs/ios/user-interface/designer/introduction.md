@@ -4,15 +4,15 @@ description: Questa guida presenta le Xamarin Designer per iOS. Viene illustrato
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: 2f47e655da60c05fe57e5c57b3a3236fee7cbd65
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f37905f483ad31d05276383718a3295d4a288f28
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528652"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285872"
 ---
 # <a name="ios-designer-basics"></a>Nozioni fondamentali su iOS designer
 
@@ -32,7 +32,7 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
 
 Questa sezione descrive come la finestra di progettazione iOS semplifica la creazione di un'interfaccia utente e la connessione al codice.
 
-IOS Designer consente agli sviluppatori di progettare visivamente l'interfaccia utente di un'applicazione. Come descritto nella Guida introduttiva [agli storyboard](~/ios/user-interface/storyboards/index.md) , uno storyboard descrive le schermate (controller di visualizzazione) che costituiscono un'app, gli elementi dell'interfaccia (visualizzazioni) posizionati su tali controller e il flusso di navigazione generale dell'app. 
+IOS Designer consente agli sviluppatori di progettare visivamente l'interfaccia utente di un'applicazione. Come descritto nella Guida [introduttiva agli storyboard](~/ios/user-interface/storyboards/index.md) , uno storyboard descrive le schermate (controller di visualizzazione) che costituiscono un'app, gli elementi dell'interfaccia (visualizzazioni) posizionati su tali controller e il flusso di navigazione generale dell'app. 
 
 Un controller di visualizzazione è costituito da due parti: una rappresentazione visiva in iOS designer C# e una classe associata:
 
@@ -221,11 +221,11 @@ La linea blu punteggiata nell'esempio precedente fornisce una linea guida per l'
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
  
-[![Barra degli strumenti dei] conformatori (introduction-images/11-constraintstoolbar-vsmac.png "Barra degli strumenti vincoli")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
+[![Barra degli strumenti dei conformatori](introduction-images/11-constraintstoolbar-vsmac.png "Barra degli strumenti vincoli")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Barra degli strumenti dei] conformatori (introduction-images/11-constraintstoolbar-vs.png "Barra degli strumenti vincoli")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
+[![Barra degli strumenti dei conformatori](introduction-images/11-constraintstoolbar-vs.png "Barra degli strumenti vincoli")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -286,11 +286,11 @@ Se espanso, nella barra degli strumenti inferiore vengono visualizzati tutti i d
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Barra degli strumenti inferiore, espansa per mostrare i dispositivi e] gli orientamenti (introduction-images/14-bottomtoolbarexpanded-vsmac.png "Barra degli strumenti inferiore, espansa per mostrare i dispositivi e") gli orientamenti](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
+[![Barra degli strumenti inferiore, espansa per mostrare i dispositivi e gli orientamenti](introduction-images/14-bottomtoolbarexpanded-vsmac.png "Barra degli strumenti inferiore, espansa per mostrare i dispositivi e gli orientamenti")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Barra degli strumenti inferiore, espansa per mostrare i dispositivi e] gli orientamenti (introduction-images/14-bottomtoolbarexpanded-vs.png "Barra degli strumenti inferiore, espansa per mostrare i dispositivi e") gli orientamenti](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
+[![Barra degli strumenti inferiore, espansa per mostrare i dispositivi e gli orientamenti](introduction-images/14-bottomtoolbarexpanded-vs.png "Barra degli strumenti inferiore, espansa per mostrare i dispositivi e gli orientamenti")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
 -----
 
@@ -420,13 +420,13 @@ Una volta specificato un gestore eventi, è necessario aggiungere un metodo con 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Eccezione] selettore non riconosciuta (introduction-images/20-unrecognizedselector-vsmac.png "Eccezione") selettore non riconosciuta](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
+[![Eccezione selettore non riconosciuta](introduction-images/20-unrecognizedselector-vsmac.png "Eccezione selettore non riconosciuta")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 Si noti che dopo che nel **riquadro delle proprietà**è stato specificato un gestore eventi, iOS designer aprirà immediatamente il file di codice corrispondente e offrirà l'offerta per inserire la dichiarazione del metodo. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Eccezione] selettore non riconosciuta (introduction-images/20-unrecognizedselector-vs.png "Eccezione") selettore non riconosciuta](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
+[![Eccezione selettore non riconosciuta](introduction-images/20-unrecognizedselector-vs.png "Eccezione selettore non riconosciuta")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
 -----
 

@@ -1,48 +1,48 @@
 ---
 title: Risoluzione dei problemi di associazione
-description: Questa guida descrive cosa fare se si riscontrano difficoltà nell'associazione di una libreria Objective-C. In particolare, vengono illustrate le associazioni mancante, eccezioni di argomento quando si passa null per un'associazione e la segnalazione dei bug.
+description: Questa guida descrive le operazioni da eseguire in caso di difficoltà nell'associazione di una libreria Objective-C. In particolare, vengono illustrate le associazioni mancanti, le eccezioni degli argomenti quando si passa null a un'associazione e si segnalano bug.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 686ce3b46f268b650c63cace2a29b9d501a4063c
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 8fd4a11208be1271785a7e02ad8d45db66d6f1fd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977604"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280881"
 ---
 # <a name="binding-troubleshooting"></a>Risoluzione dei problemi di associazione
 
-Alcuni suggerimenti per la risoluzione dei problemi di associazioni per macOS (precedentemente noto come OS X) le API in xamarin. Mac.
+Alcuni suggerimenti per la risoluzione dei problemi relativi alle associazioni alle API macOS (precedentemente note come OS X) in Novell. Mac.
 
-## <a name="missing-bindings"></a>Mancano le associazioni
+## <a name="missing-bindings"></a>Associazioni mancanti
 
-Sebbene xamarin. Mac copre molte delle API di Apple, in alcuni casi potrebbe essere necessario chiamare API Apple che non dispone di un'associazione ancora. In altri casi, è necessario chiamare terze parti, C/Objective-C che non rientrano nell'ambito dei binding xamarin. Mac.
+Sebbene Novell. Mac copra la maggior parte delle API Apple, a volte potrebbe essere necessario chiamare un'API Apple che non ha ancora un'associazione. In altri casi, è necessario chiamare la terza parte C/Objective-C che esula dall'ambito delle associazioni Novell. Mac.
 
-Se è necessario gestire un'API di Apple, il primo passaggio è indicare Xamarin che si raggiungono una sezione dell'API che non abbiamo code coverage per ancora. [Segnalare un bug](#reporting-bugs) annotando l'API manca. Usiamo i report da parte dei clienti per definire le priorità delle API di Microsoft si impegna facendo clic su Avanti. Inoltre, se si ha una licenza Business o Enterprise e l'assenza di un binding sta bloccando lo stato di avanzamento, anche seguire le istruzioni riportate in [supporto](http://xamarin.com/support) per inviare un ticket. Non possiamo promettere di un'associazione, ma in alcuni casi è possibile aggirare è un lavoro.
+Se si sta usando un'API Apple, il primo passaggio consiste nel lasciare che Novell sappia che si sta colpendo una sezione dell'API per cui non è ancora presente una copertura. [Archiviare un bug](#reporting-bugs) notando l'API mancante. Utilizziamo i report dei clienti per definire la priorità delle API che lavoriamo successivamente. Inoltre, se si dispone di una licenza aziendale o Enterprise e la mancanza di un binding blocca lo stato di avanzamento, seguire anche le istruzioni disponibili in [supporto](http://xamarin.com/support) per il file di un ticket. Non è possibile promettere un'associazione, ma in alcuni casi è possibile ottenere una soluzione.
 
-Una volta notificare a Xamarin (se applicabile) dell'associazione mancante, il passaggio successivo è da considerare associarla manualmente. È disponibile una guida completa [in questo caso](~/cross-platform/macios/binding/overview.md) e alcuni documenti non ufficiali [qui](http://brendanzagaeski.appspot.com/xamarin/0002.html) per eseguire il wrapping binding Objective-C manualmente. Se si chiama un'API C, è possibile usare C#del meccanismo P/Invoke, la documentazione è [qui](https://www.mono-project.com/docs/advanced/pinvoke/).
+Quando si invia una notifica a Novell (se applicabile) dell'associazione mancante, il passaggio successivo consiste nel prendere in considerazione l'associazione. [Qui abbiamo una guida completa](~/cross-platform/macios/binding/overview.md) e una documentazione non ufficiale per il wrapping [manuale dei binding](http://brendanzagaeski.appspot.com/xamarin/0002.html) Objective-C. Se si chiama un'API C, è possibile usare C#il meccanismo P/Invoke. la documentazione è disponibile [qui](https://www.mono-project.com/docs/advanced/pinvoke/).
 
-Se si decide di usare nell'associazione manualmente, tenere presente che gli errori di associazione possono produrre moltissime interessanti arresti anomali del sistema di runtime nativo. In particolare, prestare molta attenzione che la firma in C# corrisponde alla firma native nel numero di argomenti e le dimensioni di ogni argomento. In caso contrario, potrebbe essere danneggiata memoria e/o lo stack e si potrebbe arrestarsi in modo anomalo immediatamente o in un punto arbitrario nel futuro o danneggiare i dati.
+Se si decide di lavorare sul binding autonomamente, tenere presente che gli errori nell'associazione possono produrre arresti anomali interessanti nel runtime nativo. In particolare, prestare molta attenzione che la firma in C# corrisponda alla firma nativa in numero di argomenti e alla dimensione di ogni argomento. In caso contrario, potrebbe danneggiare la memoria e/o lo stack ed è possibile che si verifichi un arresto anomalo immediatamente o in un punto arbitrario nel futuro o nei dati danneggiati.
 
-## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>Eccezioni di argomento quando si passa null per un'associazione
+## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>Eccezioni degli argomenti durante il passaggio di valori null a un'associazione
 
-Sebbene Xamarin funzioni per fornire elevata qualità e ben collaudate associazioni per le API di Apple, talvolta errori e bug di trasporto. Problema di gran lunga il più comune che si potrebbe riscontrare è un'API generando un'eccezione `ArgumentNullException` quando si passa null quando l'API sottostante accetta `nil`. I file di intestazione native che definisce l'API spesso non forniscono informazioni sufficienti in cui le API accettano nil e che si arresteranno se lo si passa in.
+Sebbene Novell funzioni per fornire associazioni di qualità elevata e collaudate per le API Apple, a volte gli errori e i bug scivolano. Il problema più comune che è possibile riscontrare è la generazione `ArgumentNullException` di un'API quando si passa un valore null quando l'API sottostante accetta. `nil` I file di intestazione nativi che definiscono l'API spesso non forniscono informazioni sufficienti sulle API che accettano nil e che si arresteranno in modo anomalo se lo si passa.
 
-Se si esegue in un caso in cui passando `null` genera un `ArgumentNullException` ma si ritiene che deve lavorare, seguire questa procedura:
+Se si verifica un caso in cui il passaggio `null` di genera `ArgumentNullException` un'eccezione, ma si ritiene che debba funzionare, attenersi alla procedura seguente:
 
-1. Controllare la documentazione di Apple e/o esempi per vedere se è possibile trovare la prova che accetta `nil`. Se si ha familiarità con Objective-C, è possibile scrivere un programma di test di piccole dimensioni per la verifica.
-2. [Segnalare un bug](#reporting-bugs).
-3. Può risolvere i bug? Se non è possibile evitare la chiamata all'API con `null`, un semplice controllo null intorno alle chiamate può essere una semplice soluzione alternativa.
-4. Tuttavia, alcune API richiedono il passaggio di null per disattivare o disabilitare alcune funzionalità. In questi casi, è possibile risolvere il problema, grazie alla disponibilità di browser di assembly (vedere [ricerca di C# membro per un selettore specificato](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copia dell'associazione e rimuovendo il controllo dei valori null. Assicurarsi di archiviare un bug (passaggio 2) se questa operazione, come l'associazione copiato non riceverà gli aggiornamenti e correzioni che si prendono in xamarin. Mac e l'attività deve essere considerata per risolvere il problema a breve termine.
+1. Consultare la documentazione di Apple e/o gli esempi per verificare se è possibile trovare la prova `nil`accettata. Se si ha dimestichezza con Objective-C, è possibile scrivere un programma di test di piccole dimensioni per verificarlo.
+2. [Archiviare un bug](#reporting-bugs).
+3. È possibile risolvere il problema? Se è possibile evitare di chiamare l'API `null`con, un semplice controllo null intorno alle chiamate può essere una soluzione semplice.
+4. Alcune API, tuttavia, richiedono il passaggio di valori null per disattivare o disabilitare alcune funzionalità. In questi casi, è possibile aggirare il problema aprendo il browser assembly (vedere [ C# ricerca del membro per un determinato selettore](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copiando l'associazione e rimuovendo il controllo null. Assicurarsi di archiviare un bug (passaggio 2) se si esegue questa operazione, in quanto l'associazione copiata non riceverà gli aggiornamenti e le correzioni apportate in Novell. Mac e questa operazione dovrebbe essere considerata a breve termine.
 
 <a name="reporting-bugs"/>
 
-## <a name="reporting-bugs"></a>Segnalazione dei bug
+## <a name="reporting-bugs"></a>Segnalazione di bug
 
-I tuoi commenti sono importanti per noi. Se individuare i problemi con xamarin. Mac:
+Il feedback è importante per noi. Se si riscontrano problemi con Novell. Mac:
 
 - Controllare i [forum di Xamarin.Mac](https://forums.xamarin.com/categories/mac)
 - Cercare nel [repository di problemi](https://github.com/xamarin/xamarin-macios/issues) 

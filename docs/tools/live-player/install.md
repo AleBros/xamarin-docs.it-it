@@ -1,105 +1,105 @@
 ---
-title: Configurazione di Xamarin Live Player Visual Studio
-description: Questo documento descrive come usare Xamarin Live Player per apportare modifiche in tempo reale a un'applicazione in esecuzione.
+title: Xamarin Live Player la configurazione di Visual Studio
+description: Questo documento descrive come usare la Xamarin Live Player per eseguire modifiche in tempo reale in un'applicazione in esecuzione.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2019
-ms.openlocfilehash: a29a637526c2829b44ae89d505dac37a648dee77
-ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
+ms.openlocfilehash: 94f1d36bf97aab7eabb57e6f2712c9850b390ab1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67157749"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290480"
 ---
-# <a name="xamarin-live-player-visual-studio-configuration"></a>Configurazione di Xamarin Live Player Visual Studio
+# <a name="xamarin-live-player-visual-studio-configuration"></a>Xamarin Live Player la configurazione di Visual Studio
 
 ![Funzionalità di anteprima](~/media/shared/preview.png)
 
 > [!WARNING]
-> Xamarin Live Player Preview è stata terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite per i clienti di continuare a usare l'anteprima con Visual Studio 2017.
+> L'anteprima del Xamarin Live Player è terminata. L'app non è più disponibile. Le istruzioni riportate di seguito vengono fornite ai clienti che continuano a usare l'anteprima con Visual Studio 2017.
 
 > [!TIP]
-> È possibile usare la [Visualizzatore anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare la progettazione dello schermo durante la modifica.
+> È possibile usare il visualizzatore [Anteprima XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 o Visual Studio per Mac per visualizzare le progettazioni dello schermo durante la modifica.
 
 # <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
-## <a name="using-xamarin-live-player"></a>Uso di Xamarin Live Player
+## <a name="using-xamarin-live-player"></a>Utilizzo di Xamarin Live Player
 
-Hai già l'app Xamarin Live Player nel dispositivo. Non è più disponibile per il download.
+È necessario avere già l'app Xamarin Live Player nel dispositivo. Non è più disponibile per il download.
 
 1. Aprire **Visual Studio 2017**.
-2. Passare a **strumenti > Opzioni...**  e selezionare il **Xamarin > altro** scheda.
-3. Segni di graduazione **Abilita Xamarin Live Player**:
+2. Passare a **strumenti > opzioni...** e selezionare la **Novell > altra** scheda.
+3. Seleziona **Xamarin Live Player Abilita**:
 
-    ![Selezionare la casella Abilita Xamarin Live Player nella finestra di dialogo Opzioni](install-images/vs2017-options.png)
+    ![Selezionare la casella Abilita Xamarin Live Player nella finestra Opzioni](install-images/vs2017-options.png)
 
-4. Creare o aprire un progetto Xamarin (o un [esempio](~/tools/live-player/samples.md)).
-5. Scegli **Live Player** nell'elenco dei dispositivi:
+4. Creare o aprire un progetto Novell (o un [esempio](~/tools/live-player/samples.md)).
+5. Scegliere **Live Player** nell'elenco dei dispositivi:
 
-    ![Elenco dei dispositivi include un'opzione di Xamarin Live Player](install-images/devices-empty-windows.png)
+    ![L'elenco dei dispositivi include un'opzione di Xamarin Live Player](install-images/devices-empty-windows.png)
 
-    - Se si dispone già associato un dispositivo, sarà disponibile come opzione.
+    - Se un dispositivo è già stato associato, sarà disponibile come opzione.
     - In caso contrario, verrà richiesto di associare un dispositivo quando richiesto.
 
-6. Premere il **eseguiti** pulsante oppure selezionare una delle seguenti opzioni dal **eseguire** o menu di scelta rapida:
+6. Premere il pulsante **Esegui** oppure selezionare una delle opzioni seguenti dal menu **Esegui** o fare clic con il pulsante destro del mouse:
 
-    - **Avvia senza eseguire debug** – è possibile modificare l'app e vedere che si verificano le modifiche nel dispositivo (riavvio dell'app quando vengono apportate modifiche e salvare il file).
-    - **Avvia debug** : è possibile impostare punti di interruzione e ispezionare le variabili, ma non è possibile modificare codice.
+    - **Avvia senza eseguire debug** : è possibile modificare l'app e visualizzare le modifiche apportate nel dispositivo. l'app viene riavviata quando vengono apportate modifiche e il file viene salvato.
+    - **Avviare il debug** : è possibile impostare punti di interruzione ed esaminare le variabili, ma il codice non può essere modificato.
 
-    In alternativa, selezionare **strumenti > Xamarin Live Player > Vista corrente Live Run**, che consente di modificare l'app e vedere che si verificano le modifiche nel dispositivo. La visualizzazione corrente viene visualizzata (anziché schermata principale dell'applicazione).
+    In alternativa, selezionare **strumenti > Xamarin Live Player > Live Run Current View**, che consente di modificare l'app e visualizzare le modifiche apportate nel dispositivo. Viene visualizzata la visualizzazione corrente, invece della schermata principale dell'applicazione.
 
-7. Se è già associato un dispositivo e l'app Xamarin Live Player sia in esecuzione nel dispositivo, il codice verrà eseguito immediatamente.
+7. Se un dispositivo è già associato e l'app Xamarin Live Player è in esecuzione nel dispositivo, il codice viene eseguito immediatamente.
 
-    Se non è associato alcun dispositivo, verrà visualizzato un codice a matrice con istruzioni su come associare un dispositivo:
+    Se nessun dispositivo è associato, verrà visualizzato un codice a matrice con le istruzioni su come associare un dispositivo:
 
-    ![Coppia di una finestra del dispositivo](install-images/manage-empty-windows.png)
+    ![Associare una finestra del dispositivo](install-images/manage-empty-windows.png)
 
-    Se il dispositivo non può essere contattato presupposti per appaiare, potrebbe apparire un errore.
+    Se non è possibile contattare il dispositivo per l'associazione, potrebbe essere visualizzato un errore.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-## <a name="using-xamarin-live-player"></a>Uso di Xamarin Live Player
+## <a name="using-xamarin-live-player"></a>Utilizzo di Xamarin Live Player
 
-Hai già l'app Xamarin Live Player nel dispositivo. Non è più disponibile per il download.
+È necessario avere già l'app Xamarin Live Player nel dispositivo. Non è più disponibile per il download.
 
 1. Aprire **Visual Studio per Mac**.
-2. Passare a **Visual Studio > Preferenze...**  e selezionare il **progetti > Xamarin Live Player (anteprima)** scheda.
-3. Segni di graduazione **Abilita Xamarin Live Player**:
+2. Passare a **Visual Studio > preferenze** e selezionare la scheda **progetti > Xamarin Live Player (anteprima)** .
+3. Seleziona **Xamarin Live Player Abilita**:
 
-    [![Selezionare la casella Abilita Xamarin Live Player nella finestra di dialogo Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![Selezionare la casella Abilita Xamarin Live Player nella finestra Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
-4. Creare o aprire un progetto Xamarin (o un [esempio](~/tools/live-player/samples.md)).
-5. Scegli **Live Player** nell'elenco dei dispositivi.
+4. Creare o aprire un progetto Novell (o un [esempio](~/tools/live-player/samples.md)).
+5. Scegliere **Live Player** nell'elenco dei dispositivi.
 
-    ![Elenco dei dispositivi include un'opzione di Xamarin Live Player](install-images/devices.png)
+    ![L'elenco dei dispositivi include un'opzione di Xamarin Live Player](install-images/devices.png)
 
-    - Se si dispone già associato un dispositivo, sarà disponibile come opzione.
+    - Se un dispositivo è già stato associato, sarà disponibile come opzione.
     - In caso contrario, verrà richiesto di associare un dispositivo quando richiesto.
-    - Scegliere **dispositivi Xamarin Live Player...**  per gestire i dispositivi da usare con Xamarin Live Player.
+    - Scegliere **Xamarin Live Player dispositivi** per gestire i dispositivi che si desidera utilizzare con Xamarin Live Player.
 
-6. Premere il **eseguiti** pulsante oppure selezionare una delle seguenti opzioni dal **eseguire** o menu di scelta rapida:
+6. Premere il pulsante **Esegui** oppure selezionare una delle opzioni seguenti dal menu **Esegui** o fare clic con il pulsante destro del mouse:
 
-    ![Menu Opzioni di esecuzione](install-images/run-menu.png)
+    ![Opzioni del menu Esegui](install-images/run-menu.png)
 
-    - **Avvia senza eseguire debug** – è possibile modificare l'app e vedere che si verificano le modifiche nel dispositivo (riavvio dell'app quando vengono apportate modifiche e salvare il file).
-    - **Avvia debug** : È possibile impostare punti di interruzione e ispezionare le variabili, ma non è possibile modificare codice.
-    - **Eseguire Vista corrente Live** – è possibile modificare l'app e vedere che si verificano le modifiche nel dispositivo. La visualizzazione corrente viene visualizzata (anziché schermata principale dell'applicazione).
+    - **Avvia senza eseguire debug** : è possibile modificare l'app e visualizzare le modifiche apportate nel dispositivo. l'app viene riavviata quando vengono apportate modifiche e il file viene salvato.
+    - **Avviare il debug** : è possibile impostare punti di interruzione ed esaminare le variabili, ma il codice non può essere modificato.
+    - **Visualizzazione corrente Live Run** : è possibile modificare l'app e visualizzare le modifiche apportate nel dispositivo. Viene visualizzata la visualizzazione corrente, invece della schermata principale dell'applicazione.
 
-7. Se è già associato un dispositivo e l'app Xamarin Live Player sia in esecuzione nel dispositivo, il codice verrà eseguito immediatamente.
+7. Se un dispositivo è già associato e l'app Xamarin Live Player è in esecuzione nel dispositivo, il codice viene eseguito immediatamente.
 
-    Se non è associato alcun dispositivo, verrà visualizzato un codice a matrice con istruzioni su come associare un dispositivo:
+    Se nessun dispositivo è associato, verrà visualizzato un codice a matrice con le istruzioni su come associare un dispositivo:
 
-    ![Coppia di una finestra del dispositivo](install-images/manage-empty.png)
+    ![Associare una finestra del dispositivo](install-images/manage-empty.png)
 
-    Se il dispositivo non può essere contattato presupposti per appaiare, verrà visualizzato un errore:
+    Se non è possibile contattare il dispositivo per l'associazione, verrà visualizzato un errore:
 
-    ![Impossibile connettersi al messaggio di errore di dispositivo](install-images/error-cannot-connect.png)
+    ![Impossibile connettersi al messaggio di errore del dispositivo](install-images/error-cannot-connect.png)
 
 -----
 
-Se si riscontrano problemi o non è possibile connettersi, vedere [limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
+Se si verificano problemi o non è possibile connettersi, vedere [limitazioni e risoluzione dei problemi](~/tools/live-player/troubleshooting.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

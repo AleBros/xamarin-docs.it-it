@@ -4,15 +4,15 @@ description: Questo articolo illustra diversi suggerimenti, funzionalità e tecn
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 914afe63136323e3506bb40d4759869f97fb264c
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 04bcf1012800ef2883fef80580bcec869bd8e5a3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065687"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291475"
 ---
 # <a name="building-modern-macos-apps"></a>Creazione di app macOS moderne
 
@@ -508,7 +508,7 @@ namespace MacModern
 
 ## <a name="using-modern-drag-and-drop"></a>Uso del trascinamento della selezione moderna
 
-Per presentare un'esperienza di trascinamento della selezione per l'utente, lo sviluppatore deve adottare il trascinamento della selezione nelle operazioni di trascinamento della selezione dell'app. Il trascinamento della moltitudine è il punto in cui ogni singolo file o elemento che viene trascinato inizialmente viene visualizzato come un singolo elemento che si raggruppa sotto il cursore con un conteggio del numero di elementi, perché l'utente continua l'operazione di trascinamento.
+Per presentare un'esperienza di trascinamento della selezione per l'utente, lo sviluppatore _deve adottare il trascinamento_ della selezione nelle operazioni di trascinamento della selezione dell'app. Il trascinamento della moltitudine è il punto in cui ogni singolo file o elemento che viene trascinato inizialmente viene visualizzato come un singolo elemento che si raggruppa sotto il cursore con un conteggio del numero di elementi, perché l'utente continua l'operazione di trascinamento.
 
 Se l'utente termina l'operazione di trascinamento, i singoli elementi si alleveranno e torneranno ai percorsi originali.
 
@@ -584,7 +584,7 @@ Ciò consente allo sviluppatore di fornire un singolo `NSDraggingItem` per ogni 
 
 Quando si utilizza `WriteItemsAt` `PasteboardWriterForItemAt` `NSCollectionViews`, utilizzare nuovamente il metodo anziché il metodo quando inizia il trascinamento.
 
-Lo sviluppatore deve sempre evitare di inserire file di grandi dimensioni nel tavolo di montaggio. Una novità di MacOS Sierra, le promesse dei _file_ consentono allo sviluppatore di inserire i riferimenti ai file specificati nel tavolo di montaggio che in un secondo momento verranno soddisfatti quando l'utente `NSFilePromiseProvider` completa l'operazione di rilascio usando le nuove classi e. `NSFilePromiseReceiver`
+Lo sviluppatore deve sempre evitare di inserire file di grandi dimensioni nel tavolo di montaggio. Una novità di MacOS Sierra, le _promesse dei file_ consentono allo sviluppatore di inserire i riferimenti ai file specificati nel tavolo di montaggio che in un secondo momento verranno soddisfatti quando l'utente `NSFilePromiseProvider` completa `NSFilePromiseReceiver` l'operazione di rilascio usando le nuove classi e.
 
 <a name="Using-Modern-Event-Tracking" />
 
@@ -783,7 +783,7 @@ Apple suggerisce di eseguire le operazioni seguenti:
 - **Applicare gli attributi iniziali e finali** : poiché la direzione del testo può variare in base alla lingua dell'utente, `Leading` utilizzare gli `Right` attributi nuovo e `Trailing` vincolo anziché le `Left` attributi. `Leading`e `Trailing` verranno regolate automaticamente in base alla direzione dei linguaggi.
 - **Aggiungi visualizzazioni alle visualizzazioni adiacenti** : consente di riposizionare e ridimensionare le visualizzazioni in base alle modifiche apportate alle visualizzazioni in risposta alla lingua selezionata.
 - **Non impostare dimensioni minime e/o massime di Windows** : consente di modificare le dimensioni di Windows perché la lingua selezionata ridimensiona le aree di contenuto.
-- **Le modifiche di layout del test costantemente** -durante lo sviluppo all'app devono essere testate costantemente in linguaggi diversi. Per altri dettagli, vedere la documentazione su come [testare la](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) documentazione dell'app internazionalizzata di Apple.
+- **Le modifiche di layout del test costantemente** -durante lo sviluppo all'app devono essere testate costantemente in linguaggi diversi. Per altri dettagli, vedere la documentazione su come [testare la documentazione dell'app internazionalizzata](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) di Apple.
 - **Utilizzare NSStackViews per aggiungere visualizzazioni insieme**  -  `NSStackViews` consente di spostare e aumentare in modo prevedibile il contenuto e le dimensioni della modifica del contenuto in base alla lingua selezionata.
 
 <a name="Localizing-in-Xcodes-Interface-Builder" />

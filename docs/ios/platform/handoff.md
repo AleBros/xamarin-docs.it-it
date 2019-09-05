@@ -4,15 +4,15 @@ description: Questo articolo illustra come usare la consegna in un'app Novell. i
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 28c5086833ceb1dc8550e513b120f7355aa9bebe
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656571"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290763"
 ---
 # <a name="handoff-in-xamarinios"></a>Continuità in Novell. iOS
 
@@ -52,7 +52,7 @@ Solo le app che condividono lo stesso ID team dello sviluppatore e rispondono a 
 
 L'app ricevente usa le informazioni `NSUserActivity` `UserInfo` del dizionario di per configurare la relativa interfaccia utente e ripristinare lo stato dell'attività specificata in modo che la transizione risulti trasparente per l'utente finale.
 
-Se per la continuazione sono necessarie altre informazioni rispetto a quelle che `NSUserActivity`possono essere inviate in modo efficiente tramite un, l'app di ripresa può inviare una chiamata all'app di origine e stabilire uno o più flussi per trasmettere i dati necessari. Se, ad esempio, l'attività stava modificando un documento di testo di grandi dimensioni con più immagini, sarebbe necessario eseguire lo streaming per trasferire le informazioni necessarie per continuare l'attività sul dispositivo di destinazione. Per ulteriori informazioni, vedere la sezione [supporto dei flussi](#supporting-continuation-streams) di continuazione di seguito.
+Se per la continuazione sono necessarie altre informazioni rispetto a quelle che `NSUserActivity`possono essere inviate in modo efficiente tramite un, l'app di ripresa può inviare una chiamata all'app di origine e stabilire uno o più flussi per trasmettere i dati necessari. Se, ad esempio, l'attività stava modificando un documento di testo di grandi dimensioni con più immagini, sarebbe necessario eseguire lo streaming per trasferire le informazioni necessarie per continuare l'attività sul dispositivo di destinazione. Per ulteriori informazioni, vedere la sezione [supporto dei flussi di continuazione](#supporting-continuation-streams) di seguito.
 
 Come indicato in precedenza `NSDocument` , `UIDocument` o le app basate hanno automaticamente il supporto integrato. Per ulteriori informazioni, vedere la sezione [supporto della continuità in app basate su documenti](#supporting-handoff-in-document-based-apps) .
 
@@ -68,7 +68,7 @@ L' `NSUserActivityDelegate` oggetto viene usato per rendere aggiornate le `NSUse
 
 È `UserActivityWillSave` necessario implementare il metodo e apportare le modifiche `NSUserActivity` a (ad esempio `UserInfo`, `Title`, e così via) per assicurarsi che rifletta comunque lo stato dell'attività corrente. Quando il sistema chiama il `UserActivityWillSave` metodo, il `NeedsSave` flag verrà cancellato. Se si modifica una qualsiasi delle proprietà dei dati dell'attività, sarà necessario impostare `NeedsSave` di nuovo su. `true`
 
-Anziché utilizzare il `UserActivityWillSave` metodo illustrato in precedenza, è possibile facoltativamente disporre `UIKit` o `AppKit` gestire automaticamente l'attività utente. A tale scopo, impostare la `UserActivity` proprietà dell'oggetto risponditore e implementare il `UpdateUserActivityState` metodo. Per ulteriori informazioni, vedere la sezione supporto per la consegna dei risponditori riportata [di](#supporting-handoff-in-responders) seguito.
+Anziché utilizzare il `UserActivityWillSave` metodo illustrato in precedenza, è possibile facoltativamente disporre `UIKit` o `AppKit` gestire automaticamente l'attività utente. A tale scopo, impostare la `UserActivity` proprietà dell'oggetto risponditore e implementare il `UpdateUserActivityState` metodo. Per ulteriori informazioni, vedere la sezione supporto per la consegna dei [risponditori riportata di](#supporting-handoff-in-responders) seguito.
 
 ### <a name="app-framework-support"></a>Supporto per App Framework
 
@@ -94,7 +94,7 @@ Se più risponditori condividono una sola `NSUserActivity` istanza, ricevono un 
 
 Per disassociarsi da un'attività, un risponditore può impostare la `UserActivity` relativa proprietà `null`su. Quando un'istanza gestita `NSUserActivity` di App Framework non dispone di più risponditori o documenti associati, viene invalidata automaticamente.
 
-Per ulteriori informazioni, vedere la sezione supporto per la consegna dei risponditori riportata [di](#supporting-handoff-in-responders) seguito.
+Per ulteriori informazioni, vedere la sezione supporto per la consegna dei [risponditori riportata di](#supporting-handoff-in-responders) seguito.
 
 #### <a name="user-activities-and-the-appdelegate"></a>Attività utente e AppDelegate
 
@@ -112,12 +112,12 @@ Seguire questa procedura:
 
 1. Accedere al [portale Apple Developer](https://developer.apple.com).
 2. Fare clic su **certificati, identificatori & profili**.
-3. Se non è già stato fatto, fare clic su identificatori e creare un ID per l'app (ad `com.company.appname`esempio), altrimenti modificare l'ID esistente.
+3. Se non è già stato fatto, fare clic su **identificatori** e creare un ID per l'app (ad `com.company.appname`esempio), altrimenti modificare l'ID esistente.
 4. Verificare che il servizio **iCloud** sia stato controllato per l'ID specificato:
 
     [![](handoff-images/provision01.png "Abilita il servizio iCloud per l'ID specificato")](handoff-images/provision01.png#lightbox)
 5. Salvare le modifiche.
-6. Fare clic su provisioning dei **profili** > **sviluppo** e creare un nuovo profilo di provisioning di sviluppo per l'app:
+6. Fare clic su **provisioning dei profili** > **sviluppo** e creare un nuovo profilo di provisioning di sviluppo per l'app:
 
     [![](handoff-images/provision02.png "Creare un nuovo profilo di provisioning di sviluppo per l'app")](handoff-images/provision02.png#lightbox)
 7. Scaricare e installare il nuovo profilo di provisioning o usare Xcode per scaricare e installare il profilo.
@@ -201,7 +201,7 @@ namespace MonkeyBrowse
 }
 ```
 
-Il `UserActivityReceivedData` metodo viene chiamato quando un flusso di continuazione riceve i dati da un dispositivo di invio. Per ulteriori informazioni, vedere la sezione [supporto dei flussi](#supporting-continuation-streams) di continuazione di seguito.
+Il `UserActivityReceivedData` metodo viene chiamato quando un flusso di continuazione riceve i dati da un dispositivo di invio. Per ulteriori informazioni, vedere la sezione [supporto dei flussi di continuazione](#supporting-continuation-streams) di seguito.
 
 Il `UserActivityWasContinued` metodo viene chiamato quando un altro dispositivo ha rilevato un'attività dal dispositivo corrente. A seconda del tipo di attività, ad esempio l'aggiunta di un nuovo elemento a un elenco attività, l'app potrebbe dover interrompere l'attività sul dispositivo di invio.
 
@@ -246,7 +246,7 @@ userInfo.Add (new NSString ("Url"), new NSString (url));
 UserActivity.AddUserInfoEntries (userInfo);
 ```
 
-Apple consiglia di mantenere le informazioni inviate al minimo per garantire che l'attività venga inviata in modo tempestivo al dispositivo ricevente. Se sono necessarie informazioni più grandi, ad esempio l'invio di un'immagine collegata a un documento deve essere inviato, è necessario usare i flussi di continuazione. Per altri dettagli, vedere la sezione [supporto dei flussi](#supporting-continuation-streams) di continuazione di seguito.
+Apple consiglia di mantenere le informazioni inviate al minimo per garantire che l'attività venga inviata in modo tempestivo al dispositivo ricevente. Se sono necessarie informazioni più grandi, ad esempio l'invio di un'immagine collegata a un documento deve essere inviato, è necessario usare i flussi di continuazione. Per altri dettagli, vedere la sezione [supporto dei flussi di continuazione](#supporting-continuation-streams) di seguito.
 
 ### <a name="continuing-an-activity"></a>Continuazione di un'attività
 
@@ -592,7 +592,7 @@ Si userà un `NSInputStream` per fornire l'accesso in sola lettura ai dati di fl
 
 Anche nelle situazioni in cui è richiesto il flusso di continuità, dovrebbe essere presente una comunicazione minima tra le due app.
 
-Per ulteriori informazioni, vedere la documentazione relativa all' [utilizzo dei flussi](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Handoff/AdoptingHandoff/AdoptingHandoff.html#//apple_ref/doc/uid/TP40014338-CH2-SW13) di continuazione di Apple.
+Per ulteriori informazioni, vedere la documentazione relativa all' [utilizzo dei flussi di continuazione](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Handoff/AdoptingHandoff/AdoptingHandoff.html#//apple_ref/doc/uid/TP40014338-CH2-SW13) di Apple.
 
 ## <a name="handoff-best-practices"></a>Procedure consigliate per la consegna
 

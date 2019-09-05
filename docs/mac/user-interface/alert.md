@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso degli avvisi in un'applicazione Nove
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: c97006d1afb68d693e2792879788ea92907873fc
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 1e2ad12e7dc52b44bda079340638298b87ac5f65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889547"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291206"
 ---
 # <a name="alerts-in-xamarinmac"></a>Avvisi in Novell. Mac
 
@@ -66,7 +66,7 @@ Apple fornisce diverse proprietà che possono essere usate per personalizzare un
 
 - **AlertStyle** definisce il tipo di un avviso come uno dei seguenti:
   - **Avviso** : usato per avvisare l'utente di un evento corrente o imminente che non è critico. Questo è lo stile predefinito.
-  - **Informational** : usato per avvisare l'utente di un evento corrente o imminente. Attualmente, non esiste alcuna differenza visibile tra un **avviso** e un messaggio informativo
+  - **Informational** : usato per avvisare l'utente di un evento corrente o imminente. Attualmente, non esiste alcuna differenza visibile tra un **avviso** e un messaggio **informativo**
   - **Critico** : usato per avvertire l'utente di conseguenze gravi di un evento imminente, ad esempio l'eliminazione di un file. Questo tipo di avviso deve essere usato con moderazione.
 - **MessageText** : si tratta del messaggio principale o del titolo dell'avviso e dovrebbe definire rapidamente la situazione all'utente.
 - **InformativeText** : questo è il corpo dell'avviso in cui è necessario definire la situazione in modo chiaro e presentare opzioni utilizzabili all'utente.

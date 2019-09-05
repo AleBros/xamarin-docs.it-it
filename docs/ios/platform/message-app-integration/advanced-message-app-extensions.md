@@ -4,22 +4,22 @@ description: Questo articolo illustra le tecniche avanzate per l'uso delle esten
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e55e6d908bbeb9b4b42ccbcad8121a1b410b79af
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200139"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290950"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Estensioni avanzate dell'app per i messaggi in Novell. iOS
 
 _Questo articolo illustra le tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
 
 
-Una novità di iOS 10, un'estensione di app per i messaggi si integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
+Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
 ## <a name="about-message-app-extensions"></a>Informazioni sulle estensioni dell'app messaggio
 
@@ -188,7 +188,7 @@ Un'estensione dell'app messaggio può essere visualizzata in una delle due modal
 
 Un'estensione dell'app di messaggio può essere cambiata a livello di codice o manualmente dall'utente in qualsiasi momento e deve rispondere immediatamente a qualsiasi modifica in modalità di visualizzazione.
 
-Esaminare l'esempio seguente di gestione del passaggio tra le due diverse modalità di visualizzazione. Per ogni stato saranno necessari due diversi controller di visualizzazione. Gestisce la visualizzazione **compatta** e l'oggetto `AddStickerViewController` gestirà la visualizzazione espansa: `StickerBrowserViewController`
+Esaminare l'esempio seguente di gestione del passaggio tra le due diverse modalità di visualizzazione. Per ogni stato saranno necessari due diversi controller di visualizzazione. Gestisce la visualizzazione **compatta** e l'oggetto `AddStickerViewController` gestirà la visualizzazione **espansa:** `StickerBrowserViewController`
 
 ```csharp
 using System;
@@ -604,7 +604,7 @@ Verranno recapitati in un formato di fallback come due messaggi distinti:
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha presentato tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente.
+Questo articolo ha presentato tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

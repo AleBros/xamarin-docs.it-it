@@ -4,15 +4,15 @@ description: Questo articolo descrive il framework delle notifiche utente introd
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980795"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290577"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in Novell. iOS
 
@@ -210,7 +210,7 @@ Con l'app completamente registrata e le autorizzazioni necessarie richieste e co
 
 ### <a name="providing-notification-content"></a>Fornire il contenuto delle notifiche
 
-Una novità di iOS 10, tutte le notifiche contengono un **titolo** e un sottotitolo che saranno sempre visualizzati con il **corpo** del contenuto della notifica. Inoltre, è la possibilità di aggiungere **allegati multimediali** al contenuto della notifica.
+Una novità di iOS 10, tutte le notifiche contengono un **titolo** e un **sottotitolo** che saranno sempre visualizzati con il **corpo** del contenuto della notifica. Inoltre, è la possibilità di aggiungere **allegati multimediali** al contenuto della notifica.
 
 Per creare il contenuto di una notifica locale, usare il codice seguente:
 
@@ -537,7 +537,7 @@ Per implementare un'estensione del servizio in un'app Novell. iOS, seguire quest
 
 1. Aprire la soluzione dell'app in Visual Studio per Mac.
 2. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **riquadro della soluzione** e scegliere **Aggiungi** > **Aggiungi nuovo progetto**.
-3. Selezionare **estensioni iOS** >  notifiche del servizio e fare clic sul pulsante Avanti: >  
+3. Selezionare**estensioni** **iOS** >  notifiche del servizio e fare clic sul pulsante Avanti: >  
 
     [![](enhanced-user-notifications-images/extension02.png "Selezionare le estensioni del servizio di notifica")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. Immettere un **nome** per l'estensione e fare clic sul pulsante **Avanti** : 

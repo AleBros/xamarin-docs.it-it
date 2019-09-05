@@ -4,29 +4,29 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 376BBA27-8694-4E63-9976-BF60349D42D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 4835c980b6b11c92ec1c81dea69f229aa5652275
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10fc13124a1c97cc7534d8cf14b7717b2ddc4fa1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420936"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291046"
 ---
 # <a name="ipa-file-is-0-bytes"></a>Il file IPA è di 0 byte
 
 > [!IMPORTANT]
-> Questo problema è stato risolto nelle versioni recenti di Xamarin. Tuttavia, se il problema si verifica la versione più recente del software, inviare un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) il completo controllo delle versioni delle informazioni e full output del log di compilazione.
+> Questo problema è stato risolto nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
 
 
-Si sono verificati alcuni problemi noti nelle versioni precedenti di Xamarin che potrebbe causare il file IPA nel Windows sia pari a 0 byte. 
+Si sono verificati alcuni problemi noti nelle versioni precedenti di Novell che potevano causare 0 byte per il file IPA in Windows. 
 
-### <a name="fixed-in-xamarin-for-visual-studio-311584"></a>Risolto in Xamarin per Visual Studio 3.11.584 
-- [Bug 24416 - configurazione di compilazione "Ad Hoc" dalla riga di comando esegue non copia IPA file Windows](https://bugzilla.xamarin.com/show_bug.cgi?id=24416)
-- [Bug 24417 - modifica "proprietà progetto -> iOS IPA Opzioni -> nome del pacchetto" impedisce IPA che vengono copiati nuovamente in Windows](https://bugzilla.xamarin.com/show_bug.cgi?id=24417)
-- [Bug 29822 - [XVS.iOS 3.11] impostazione "Build" numero diverso da "Version" numerica cause IPA non devono essere copiati per Windows](https://bugzilla.xamarin.com/show_bug.cgi?id=29822)
+### <a name="fixed-in-xamarin-for-visual-studio-311584"></a>Correzione in Novell per Visual Studio 3.11.584 
+- [Bug 24416: la creazione della configurazione "ad-hoc" dalla riga di comando non copia il file IPA in Windows](https://bugzilla.xamarin.com/show_bug.cgi?id=24416)
+- [Bug 24417-modifica di "Proprietà progetto-> Opzioni IPA iOS-> nome pacchetto" impedisce che IPA venga copiato in Windows](https://bugzilla.xamarin.com/show_bug.cgi?id=24417)
+- [Bug 29822-[XVS. iOS 3,11] l'impostazione del numero "Build" diverso dal numero "Version" impedisce la copia del pacchetto IPA in Windows](https://bugzilla.xamarin.com/show_bug.cgi?id=29822)
 
-### <a name="fixed-in-xamarin-for-visual-studio-410496"></a>Risolto in Xamarin per Visual Studio 4.1.0.496
-- [Bug 27989 - Mostra file ipa nel caso di errore di compilazione server se il nome dell'Assembly non corrisponde al nome di progetto](https://bugzilla.xamarin.com/show_bug.cgi?id=27989)
+### <a name="fixed-in-xamarin-for-visual-studio-410496"></a>Correzione in Novell per Visual Studio 4.1.0.496
+- [Bug 27989-Mostra il file IPA nel server di compilazione non riesce se il nome dell'assembly non corrisponde al nome del progetto](https://bugzilla.xamarin.com/show_bug.cgi?id=27989)

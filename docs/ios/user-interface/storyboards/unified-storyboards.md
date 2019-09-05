@@ -4,15 +4,15 @@ description: Questo documento descrive gli storyboard unificati in Novell. iOS. 
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890167"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280856"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Novell. iOS
 
@@ -115,7 +115,7 @@ In questa sezione vengono descritti i tipi tipici di raccolte di tratti che l'ut
 
 Di seguito è riportato un tipico insieme di tratti che lo sviluppatore potrebbe vedere su un iPhone:
 
-|Proprietà|Valore|
+|Proprietà|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Normale|
@@ -126,7 +126,7 @@ Il set precedente rappresenterebbe una raccolta di tratti completa, in quanto di
 
 È anche possibile disporre di una raccolta di tratti in cui mancano alcuni dei relativi valori (a cui Apple fa riferimento come non *specificato*):
 
-|Proprietà|Value|
+|Proprietà|Valore|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Non specificata|
@@ -655,7 +655,7 @@ Anche in questo caso fare clic sul pulsante **Seleziona gioco** e il controller 
 
 ### <a name="excluding-an-element-from-a-size-class"></a>Esclusione di un elemento da una classe Size
 
-In alcuni casi un dato elemento, ad esempio una vista, un controllo o un vincolo, non è necessario all'interno di una classe di dimensioni specifiche. Per escludere un elemento da una classe size, selezionare l'elemento desiderato da escludere nella **area di progettazione**. Scorrere fino alla fine di **Esplora proprietà** e fare clic sul menu a discesa dell'ingranaggio. Selezionare la combinazione di **larghezza** e **altezza** da cui escludere l'elemento:
+In alcuni casi un dato elemento, ad esempio una vista, un controllo o un vincolo, non è necessario all'interno di una classe di dimensioni specifiche. Per escludere un elemento da una classe size, selezionare l'elemento desiderato da escludere nella **area di progettazione**. Scorrere fino alla fine di **Esplora proprietà** e fare clic sul menu a discesa dell' **ingranaggio** . Selezionare la combinazione di **larghezza** e **altezza** da cui escludere l'elemento:
 
 [![](unified-storyboards-images/exclude-a.png "Selezionare la combinazione di larghezza e altezza")](unified-storyboards-images/exclude-a.png#lightbox)
 
@@ -725,7 +725,7 @@ Seguire questa procedura:
 8. Selezionare la **destinazione applicazioni** e la scheda **generale** :
 
     [![](unified-storyboards-images/dls06.png "Selezionare la destinazione applicazioni e la scheda generale")](unified-storyboards-images/dls06.png#lightbox)
-9. Fare clic sul pulsante **Choose info. plist** , `Info.plist` selezionare il per l'app Novell e fare clic sul pulsante Choose ( **Scegli** ):
+9. Fare clic sul pulsante **Choose info. plist** , `Info.plist` selezionare il per l'app Novell e fare clic sul pulsante **Choose (Scegli** ):
 
     [![](unified-storyboards-images/dls07.png "Selezionare il file INFO. plist per l'app Novell")](unified-storyboards-images/dls07.png#lightbox)
 10. Nella sezione **icone e immagini di avvio dell'app** aprire l'elenco a discesa **file schermata** di avvio `LaunchScreen.xib` e scegliere il creato sopra:
@@ -757,7 +757,7 @@ Tornare a Visual Studio per Mac e arrestare l'esecuzione dell'applicazione.
 
 Per mantenere la compatibilità con le versioni precedenti di iOS 7, `Default.png` è sufficiente includere le normali risorse immagine come di consueto nell'applicazione iOS 8. iOS restituirà il comportamento precedente e utilizzerà tali file come schermata iniziale quando viene eseguito in un dispositivo iOS 7.
 
-Per un'implementazione di una schermata di avvio dinamico in Novell, vedere le schermate di [avvio dinamico](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) applicazione iOS 8 di esempio collegata a questo documento.
+Per un'implementazione di una schermata di avvio dinamico in Novell, vedere le [schermate di avvio dinamico](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) applicazione iOS 8 di esempio collegata a questo documento.
 
 ## <a name="summary"></a>Riepilogo
 

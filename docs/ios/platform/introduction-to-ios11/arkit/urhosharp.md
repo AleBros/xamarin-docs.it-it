@@ -4,15 +4,15 @@ description: Questo documento descrive come configurare un'app ARKit in Novell. 
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/01/2017
-ms.openlocfilehash: 106d6100d373c8d14a35aaee59035cf4a98083a5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4c23caade91a1a46d6b2b9bb2425a5bdead40030
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528261"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289239"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso di ARKit con UrhoSharp in Novell. iOS
 

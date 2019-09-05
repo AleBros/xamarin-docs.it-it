@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso dei nuovi framework dell'interfaccia
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8b551a17fc54ec1557cd385b4c91b33720316879
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225970"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278544"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatti e ContactsUI in Novell. iOS
 
@@ -263,7 +263,7 @@ I contatti di un utente possono esistere localmente sul dispositivo dell'utente 
 
 [![](contacts-images/containers01.png "Panoramica dei contenitori e dei gruppi")](contacts-images/containers01.png#lightbox)
 
-Alcuni contenitori consentono la disposizione dei contatti in uno o più _gruppi_ o sottogruppi. Questo comportamento dipende dall'archivio di backup per un contenitore specificato. Ad esempio, iCloud ha un solo contenitore ma può avere molti gruppi, ma non sottogruppi. Microsoft Exchange, invece, non supporta i gruppi, ma può avere più contenitori (uno per ogni cartella di Exchange).
+Alcuni contenitori consentono la disposizione dei contatti in uno o più _gruppi_ o _sottogruppi_. Questo comportamento dipende dall'archivio di backup per un contenitore specificato. Ad esempio, iCloud ha un solo contenitore ma può avere molti gruppi, ma non sottogruppi. Microsoft Exchange, invece, non supporta i gruppi, ma può avere più contenitori (uno per ogni cartella di Exchange).
 
 [![](contacts-images/containers02.png "Sovrapposizione all'interno di contenitori e gruppi")](contacts-images/containers02.png#lightbox)
 

@@ -4,15 +4,15 @@ description: Questo documento esamina diversi eventi del ciclo di vita gestiti d
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/17/2018
-ms.openlocfilehash: 4eefbd63a91c6fd9eeed7a6e5043db5a2ee9105b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649368"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289428"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Demo del ciclo di vita delle applicazioni per Novell. iOS
 
@@ -52,7 +52,7 @@ Questo articolo e il [codice di esempio](https://docs.microsoft.com/samples/xama
     ```
 
 1. Avviare l'applicazione nel simulatore o nel dispositivo. `OnActivated`verrà chiamato all'avvio dell'app. L'applicazione è ora nello stato _attivo_ .
-1. Premere il pulsante Home sul simulatore o sul dispositivo per portare l'applicazione in background. `OnResignActivation`e `DidEnterBackground` verranno chiamati durante le transizioni dell'app da `Active` a `Inactive` e nello `Backgrounded` stato. Poiché il codice dell'applicazione non è impostato per l'esecuzione in background, l'applicazione viene considerata sospesa in memoria.
+1. Premere il pulsante Home sul simulatore o sul dispositivo per portare l'applicazione in background. `OnResignActivation`e `DidEnterBackground` verranno chiamati durante le transizioni dell'app da `Active` a `Inactive` e nello `Backgrounded` stato. Poiché il codice dell'applicazione non è impostato per l'esecuzione in background, l'applicazione viene considerata _sospesa_ in memoria.
 1. Tornare all'app per ripristinarlo in primo piano. `WillEnterForeground``OnActivated` verranno entrambi chiamati:
 
     ![](application-lifecycle-demo-images/image4.png "Modifiche di stato stampate nella console")

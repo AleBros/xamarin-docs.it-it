@@ -3,15 +3,15 @@ title: Xamarin Profiler
 description: Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Novell.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ca26edc0311de2028af529dc43ea1ffde2383cf4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227893"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283671"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -19,7 +19,7 @@ _Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina 
 
 Il successo di un'applicazione dipende dall'esperienza dell'utente finale. In qualità di sviluppatore, è possibile che siano state implementate alcune funzionalità molto straordinarie nell'app, ma se l'app è lenta o piena di arresti anomali, è probabile che l'utente lo elimini.
 
-In passato, mono ha fornito un potente profiler della riga di comando per raccogliere informazioni sui programmi in esecuzione nel runtime di mono, denominato [mono log](https://www.mono-project.com/docs/debug+profile/profile/profiler/)Profiler. Il Xamarin Profiler un'interfaccia grafica per mono log Profiler e supporta la profilatura di applicazioni Android, iOS, tvOS e Mac su Mac e applicazioni Android, iOS e tvOS su Windows.
+In passato, mono ha fornito un potente profiler della riga di comando per raccogliere informazioni sui programmi in esecuzione nel runtime di mono, denominato [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/). Il Xamarin Profiler un'interfaccia grafica per mono log Profiler e supporta la profilatura di applicazioni Android, iOS, tvOS e Mac su Mac e applicazioni Android, iOS e tvOS su Windows.
 
 Il Xamarin Profiler dispone di numerosi strumenti disponibili per la profilatura: allocazioni, cicli e profiler del tempo. In questa guida vengono esaminati gli strumenti misurati e il modo in cui analizzano l'applicazione e viene spiegato il significato dei dati presentati in ogni schermata.
 
@@ -53,11 +53,11 @@ Il Xamarin Profiler fornisce agli sviluppatori un modo per profilare le applicaz
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Novell. iOS, Novell. Android e Novell. Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione `.mlpd` exe e creati da [mono log](https://www.mono-project.com/docs/debug+profile/profile/profiler/)Profiler.
+Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Novell. iOS, Novell. Android e Novell. Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione `.mlpd` exe e creati da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione `.mlpd` exe e creati da [mono log](https://www.mono-project.com/docs/debug+profile/profile/profiler/)Profiler.
+Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione `.mlpd` exe e creati da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 -----
 
@@ -135,7 +135,7 @@ Il Xamarin Profiler può essere avviato dall'IDE quando si esegue la profilatura
 #### <a name="launching-from-visual-studio-for-mac"></a>Avvio da Visual Studio per Mac
 
 1. Assicurarsi prima di tutto che l'applicazione sia caricata in Visual Studio per Mac e selezionare la configurazione di debug (impostazione predefinita).
-2. Sfogliare per **eseguire > avviare**la profilatura in Visual Studio per Mac o **analizzare > Xamarin Profiler** in Visual Studio per aprire il profiler, come illustrato nel diagramma seguente:
+2. Sfogliare per **eseguire > avviare la profilatura**in Visual Studio per Mac o **analizzare > Xamarin Profiler** in Visual Studio per aprire il profiler, come illustrato nel diagramma seguente:
 
   ![Avvio del profiler da Visual Studio per Mac](images/start-profiling-xs.png)
 
@@ -194,7 +194,7 @@ Il Xamarin Profiler è costituito da cinque sezioni, come illustrato di seguito:
 
 - **Barra degli strumenti** : si trova nella parte superiore del profiler, che offre opzioni per avviare/arrestare la profilatura, selezionare un processo di destinazione, visualizzare il tempo di esecuzione dell'app e selezionare le visualizzazioni divise che compongono l'applicazione del profiler.
 - **Instrument list** : elenca tutti gli strumenti caricati per la sessione di profilatura.
-- **Grafico** dei tracciati: questi grafici sono correlati orizzontalmente agli strumenti pertinenti nell'elenco di strumenti. Per modificare la scala, è possibile usare un dispositivo di scorrimento (visualizzato sotto Profiler temporale).
+- **Grafico dei tracciati** : questi grafici sono correlati orizzontalmente agli strumenti pertinenti nell'elenco di strumenti. Per modificare la scala, è possibile usare un dispositivo di scorrimento (visualizzato sotto Profiler temporale).
 - **Area dei dettagli dello strumento** : contiene i dati visualizzati dalla visualizzazione selezionata dello strumento corrente. Queste visualizzazioni vengono esaminate più dettagliatamente nella sezione seguente.
 - **Visualizzazione Inspector** : contiene le sezioni che possono essere selezionate dal controllo segmentato. Le sezioni dipendono dallo strumento selezionato e includono: Impostazioni di configurazione, statistiche, informazioni di analisi dello stack e percorso delle radici.
 
@@ -331,7 +331,7 @@ Applicazione Novell. iOS che usa il API classica usato il GC Boehm, un Garbage C
 
 Mentre viene visualizzata una finestra di dialogo di messaggio se l'app usa il GC Boehm, Novell non consiglia di cambiare l'applicazione iOS esistente che usa Boehm per SGen senza un'attenta ricerca e test completi. Novell non consiglia inoltre di passare a SGen per la profilatura e quindi di tornare indietro, in quanto questi risultati non forniranno benchmark accurati di utilizzo della memoria.
 
-Per ulteriori informazioni sulla gestione della memoria, vedere la Guida alle procedure consigliate per la [memoria e le prestazioni](~/cross-platform/deploy-test/memory-perf-best-practices.md) .
+Per ulteriori informazioni sulla gestione della memoria, vedere la Guida alle [procedure consigliate per la memoria e le prestazioni](~/cross-platform/deploy-test/memory-perf-best-practices.md) .
 
 ## <a name="summary"></a>Riepilogo
 

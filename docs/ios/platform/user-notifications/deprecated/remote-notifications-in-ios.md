@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le notifiche push in iOS 9 e v
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528760"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290583"
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
 
@@ -79,7 +79,7 @@ Ognuno degli ambienti indicati nella sezione precedente richiede il proprio cert
 
 11. Ora che il certificato è stato creato, è necessario usarlo come parte del processo di compilazione per firmare l'applicazione in modo che possa essere registrata con APNs. A tale scopo, è necessario creare e installare un profilo di provisioning che usa il certificato.
 
-12. Per creare un profilo di provisioning di sviluppo, passare alla sezione **profili** di provisioning e seguire i passaggi per crearlo, usando l'ID app appena creato.
+12. Per creare un profilo di provisioning di sviluppo, passare alla sezione **profili di provisioning** e seguire i passaggi per crearlo, usando l'ID app appena creato.
 
 13. Dopo aver creato il profilo di provisioning, aprire **Xcode Organizer** e aggiornarlo. Se il profilo di provisioning creato non viene visualizzato, potrebbe essere necessario scaricare il profilo dal portale di provisioning iOS e importarlo manualmente. Lo screenshot seguente mostra un esempio della libreria con il profilo di provisioning aggiunto:  
     [![](remote-notifications-in-ios-images/image13new.png "Questo screenshot mostra un esempio della libreria con il profilo di provisioning aggiunto")](remote-notifications-in-ios-images/image13new.png#lightbox)

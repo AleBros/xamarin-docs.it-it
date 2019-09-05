@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: dea7337702e37895d1e8dec55bd433d8ac4d64c0
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 6bc2990ef82e1bccd4f9e530eb67265eeae528a9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065607"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292149"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi di Novell. Mac
 
@@ -48,7 +48,7 @@ Nella maggior parte dei casi, il debugger in Visual Studio per Mac catturerà ec
 Il debug di questi programmi può essere frustrante, in quanto la ricerca delle informazioni necessarie può essere difficile. Ecco alcuni approcci che possono essere utili:
 
 - Verificare che la versione macOS elencata nel file **info. plist** sia la stessa della versione di MacOS attualmente installata nel computer.
-- Controllare l'output dell'applicazione Visual Studio per Mac (**visualizzare** -> l'**output dell'applicazione**dei rilievi -> ) per le tracce dello stack o l'output in rosso da Cocoa che può descrivere l'output.
+- Controllare l'output dell'applicazione Visual Studio per Mac (**visualizzare** -> l'**output dell'applicazione**dei**rilievi** -> ) per le tracce dello stack o l'output in rosso da Cocoa che può descrivere l'output.
 - Eseguire l'applicazione dalla riga di comando ed esaminare l'output (nell'app **Terminal** ) usando:
 
   `MyApp.app/Contents/MacOS/MyApp`(dove `MyApp` è il nome dell'applicazione)

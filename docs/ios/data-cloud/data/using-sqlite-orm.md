@@ -4,15 +4,15 @@ description: La libreria NuGet SQLite.NET PCL fornisce un semplice meccanismo di
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 0416aed671c9675e7c2c990eb59a7a4d8cab7888
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199618"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289832"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso di SQLite.NET con Novell. iOS
 
@@ -196,9 +196,9 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Uso di SQLite.NET con più thread
 
-SQLite supporta tre diverse modalità di threading: A *thread singolo*,multithreading e *serializzato*. Se si desidera accedere al database da più thread senza alcuna restrizione, è possibile configurare SQLite per l'utilizzo della modalità di threading serializzata. È importante impostare questa modalità all'inizio dell'applicazione (ad esempio, all'inizio del `OnCreate` metodo).
+SQLite supporta tre diverse modalità di threading: A *thread singolo*, *multithreading*e *serializzato*. Se si desidera accedere al database da più thread senza alcuna restrizione, è possibile configurare SQLite per l'utilizzo della modalità di threading **serializzata** . È importante impostare questa modalità all'inizio dell'applicazione (ad esempio, all'inizio del `OnCreate` metodo).
 
-Per modificare la modalità di threading, `SqliteConnection.SetConfig` chiamare che si trova `Mono.Data.Sqlite` nello spazio dei nomi. Questa riga di codice, ad esempio, configura SQLite per la modalità serializzata:
+Per modificare la modalità di threading, `SqliteConnection.SetConfig` chiamare che si trova `Mono.Data.Sqlite` nello spazio dei nomi. Questa riga di codice, ad esempio, configura SQLite per la modalità **serializzata** :
 
 ```csharp
 using Mono.Data.Sqlite;

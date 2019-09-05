@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso di finestre di dialogo e finestre mo
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 03fad33d49f1454700c118ad44c8582453a75eee
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 723f751b93af304c7d70fb1250dbda2f0220e77e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645659"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292209"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in Novell. Mac
 
@@ -99,7 +99,7 @@ La finestra di dialogo Salva **minima** può essere visualizzata anche come fogl
 
 [![](dialog-images/save03.png "Un foglio di salvataggio minimo")](dialog-images/save03.png#lightbox)
 
-Come è possibile la finestra di dialogo Salva espansa:
+Come è possibile la finestra di dialogo Salva **espansa** :
 
 [![](dialog-images/save04.png "Un foglio di salvataggio espanso")](dialog-images/save04.png#lightbox)
 

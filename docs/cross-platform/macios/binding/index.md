@@ -1,57 +1,57 @@
 ---
 title: Binding di Objective-C
-description: Questo documento vengono forniti collegamenti alle varie guide che descrivono come creare C# binding a codice Objective-C, consentendo agli sviluppatori di utilizzare librerie disponibili sul mercato in applicazioni Xamarin.
+description: In questo documento vengono forniti i collegamenti a diverse guide che descrivono come creare C# binding per il codice Objective-C, consentendo agli sviluppatori di utilizzare librerie fuori programma nelle applicazioni Novell.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 923ec41443feff67d851a0c2f3cba1b948aed580
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 8975bb899127d0761359bec695cd084f89c12972
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864404"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290565"
 ---
 # <a name="binding-objective-c"></a>Binding di Objective-C
 
-In questa sezione include una vasta gamma di documenti che illustrano la creazione di associazioni alle librerie Objective-C, in modo che possono essere chiamati da C# le applicazioni create con xamarin. IOS o xamarin. Mac.
+Questa sezione include una serie di documenti che coprono la creazione di binding per le librerie Objective-C, in modo che possano C# essere chiamati da applicazioni create con Novell. iOS o Novell. Mac.
 
 ## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Panoramica](~/cross-platform/macios/binding/overview.md)
 
-Questo documento è riportati alcuni dei componenti interni del modo in cui un'associazione viene eseguita. È un documento con alcune informazioni tecniche avanzato.
+Questo documento contiene alcuni elementi interni della modalità di associazione di un'associazione. Si tratta di un documento avanzato con alcune informazioni tecniche.
 
 ## <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
-Questo documento descrive il processo usato per creare C# binding di Objective-C API e il mapping tra i linguaggi in Objective-C e gli idiomi usati in .NET.
-Se si esegue il binding solo le API C, si deve usare il meccanismo di .NET standard per questa operazione, il framework di P/Invoke.
+In questo documento viene descritto il processo utilizzato C# per creare associazioni di API Objective-c e il modo in cui viene eseguito il mapping degli idiomi in Objective-c agli idiomi utilizzati in .NET.
+Se si stanno associando solo le API C, è necessario usare il meccanismo .NET standard per questo, il Framework P/Invoke.
 
-## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guida di riferimento di definizione di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
+## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guida di riferimento per la definizione dell'associazione](~/cross-platform/macios/binding/binding-types-reference.md)
 
-Si tratta della Guida di riferimento che descrive tutti gli attributi disponibili per gli autori delle associazioni per guidare il processo di generazione dell'associazione.
+Questa è la Guida di riferimento che descrive tutti gli attributi disponibili per l'associazione degli autori al processo di generazione del binding.
 
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
-Obiettivo Sharpie è uno strumento da riga di comando per eseguire il bootstrap del primo passaggio di un'associazione. Funziona analizzando i file di intestazione di una libreria nativa per eseguire il mapping dell'API pubblica nel [definizione di associazione](~/cross-platform/macios/binding/objective-c-libraries.md) (un processo che può essere eseguito anche manualmente).
+Objective Sharpie è uno strumento da riga di comando che consente di avviare il primo passaggio di un'associazione. Funziona analizzando i file di intestazione di una libreria nativa per eseguire il mapping dell'API pubblica nella [definizione di binding](~/cross-platform/macios/binding/objective-c-libraries.md) (un processo che può essere eseguito anche manualmente).
 
 ## <a name="ios"></a>iOS
 
-Il [pagina binding iOS](~/ios/platform/binding-objective-c/index.md) tornare a queste risorse comuni di associazione, anche per gli esempi seguenti.
+La [pagina Binding iOS](~/ios/platform/binding-objective-c/index.md) collega a queste risorse di associazione comuni, oltre agli esempi seguenti.
 
 ### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Procedura dettagliata: Associazione di una libreria Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
-Questo articolo fornisce una procedura dettagliata di creazione di un progetto di associazione tramite open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) progetto Objective-C come esempio. La libreria InfColorPicker fornisce un controller di visualizzazione riutilizzabili che consentono all'utente di selezionare un colore di base nella relativa rappresentazione HSB, rendendo più semplice la selezione del colore. Obiettivo Sharpie verrà utilizzato per semplificare il processo di associazione.
+Questo articolo fornisce una procedura dettagliata per la creazione di un progetto di associazione usando il progetto open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-C come esempio. La libreria InfColorPicker offre un controller di visualizzazione riutilizzabile che consente all'utente di selezionare un colore in base alla rappresentazione HSB, rendendo la selezione di colore più intuitiva. L'obiettivo Sharpie verrà usato per semplificare il processo di associazione.
 
-### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Esempi di associazioni](https://github.com/mono/monotouch-bindings)
+### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Esempi di associazione](https://github.com/mono/monotouch-bindings)
 
-Una raccolta di associazioni di terze parti che può essere utilizzato come riferimento durante la creazione di nuovi progetti di Binding.
+Raccolta di associazioni di terze parti che possono essere utilizzate come riferimento durante la creazione di nuovi progetti di associazione.
 
 ## <a name="mac"></a>Mac
 
-In passato [associazione Mac](~/mac/platform/binding.md) è stato un processo molto arduo. Attualmente non è disponibile un' [preview scaricabile](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) del supporto per il progetto di Binding Mac per una versione futura di Visual Studio per Mac.
+Storicamente, l' [associazione Mac](~/mac/platform/binding.md) è stata un processo molto manuale. È attualmente disponibile un' [Anteprima scaricabile](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) del supporto del progetto di binding Mac per una versione futura di Visual Studio per Mac.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [iOS associazione](~/ios/platform/binding-objective-c/index.md)
-- [Associazione di Mac](~/mac/platform/binding.md)
+- [Binding iOS](~/ios/platform/binding-objective-c/index.md)
+- [Binding Mac](~/mac/platform/binding.md)

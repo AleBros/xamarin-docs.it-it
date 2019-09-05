@@ -4,22 +4,22 @@ description: Questo documento descrive come usare le funzionalità di accessibil
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6d53cda17864a6afa8f8af187df7c4a07e9f8cbe
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e92887dc54acc33e6d433aafe39ae7df9ea8ac71
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198630"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291657"
 ---
 # <a name="accessibility-on-macos"></a>Accessibilità in macOS
 
-Questa pagina descrive come usare le API di accessibilità macOS per creare app in base all' [elenco di controllo](~/cross-platform/app-fundamentals/accessibility.md)di accessibilità.
+Questa pagina descrive come usare le API di accessibilità macOS per creare app in base all' [elenco di controllo di accessibilità](~/cross-platform/app-fundamentals/accessibility.md).
 Vedere le pagine relative all'accessibilità di [Android](~/android/app-fundamentals/accessibility.md) e all' [accessibilità iOS](~/ios/app-fundamentals/accessibility.md) per altre API della piattaforma.
 
-Per comprendere il funzionamento delle API di accessibilità in macOS (in precedenza noto come OS X), esaminare prima di tutto il modello di accessibilità di [OS x](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXmodel.html).
+Per comprendere il funzionamento delle API di accessibilità in macOS (in precedenza noto come OS X), esaminare prima di tutto il [modello di accessibilità di OS x](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXmodel.html).
 
 ## <a name="describing-ui-elements"></a>Descrizione degli elementi dell'interfaccia utente
 
@@ -60,7 +60,7 @@ La `AccessibilityHelp` proprietà è per una spiegazione del funzionamento del c
 Alcuni elementi dell'interfaccia utente non sono rilevanti per l'accesso accessibile, ad esempio un'etichetta accanto a un input con una propria etichetta di accessibilità e la relativa guida.
 In questi casi, impostare `AccessibilityElement = false` in modo che questi controlli o viste vengano ignorati dalle utilità per la lettura dello schermo o da altri strumenti di accessibilità.
 
-Apple fornisce [linee guida](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/EnhancingtheAccessibilityofStandardAppKitControls.html) per l'accessibilità che illustrano le procedure consigliate per le etichette e il testo della guida.
+Apple fornisce [linee guida per l'accessibilità](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/EnhancingtheAccessibilityofStandardAppKitControls.html) che illustrano le procedure consigliate per le etichette e il testo della guida.
 
 ## <a name="custom-controls"></a>Controlli personalizzati
 
@@ -68,15 +68,15 @@ Per informazioni dettagliate sui passaggi aggiuntivi necessari, vedere le [linee
 
 ## <a name="testing-accessibility"></a>Test dell'accessibilità
 
-macOS fornisce un **controllo** di accessibilità che consente di testare la funzionalità di accessibilità. Il controllo è incluso in Xcode.
+macOS fornisce un **controllo di accessibilità** che consente di testare la funzionalità di accessibilità. Il controllo è incluso in Xcode.
 
 Alla prima avvio, il controllo di **accessibilità** richiederà l'autorizzazione per controllare il computer tramite accessibilità:
 
 ![Controllo di accessibilità che richiede l'autorizzazione per l'esecuzione](accessibility-images/accessibility-inspector-1.png "Controllo di accessibilità che richiede l'autorizzazione per l'esecuzione")
 
-Sbloccare la schermata delle impostazioni (se necessario, in basso a sinistra) e selezionare **controllo**di accessibilità:
+Sbloccare la schermata delle impostazioni (se necessario, in basso a sinistra) e selezionare **controllo di accessibilità**:
 
-![Schermata delle impostazioni per abilitare il controllo] dell'accessibilità (accessibility-images/accessibility-inspector-2.png "Schermata delle impostazioni per abilitare il controllo") dell'accessibilità
+![Schermata delle impostazioni per abilitare il controllo dell'accessibilità](accessibility-images/accessibility-inspector-2.png "Schermata delle impostazioni per abilitare il controllo dell'accessibilità")
 
 Una volta abilitato, il controllo viene visualizzato come una finestra mobile che può essere spostata intorno allo schermo. La schermata seguente mostra il controllo in esecuzione accanto a un'app Mac di esempio. Quando il cursore viene spostato sulla finestra, il controllo Visualizza tutte le proprietà accessibili di ogni controllo:
 

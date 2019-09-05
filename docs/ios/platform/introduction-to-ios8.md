@@ -4,15 +4,15 @@ description: Con iOS 8, Apple ha fornito una vasta gamma di nuovi Framework e AP
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 592eff29e7c12741975dda0d602f5850071c1f45
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b3c1af480db2c5642ef0b16aed795d2bb43290f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644807"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292399"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
@@ -99,7 +99,7 @@ Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'a
 
 Selezione documenti funziona con un'unità iCloud utenti per consentire all'utente di aprire i file che sono stati creati in un'altra app, importarli e modificarli ed esportarli nuovamente. In questo modo viene creato un flusso di lavoro intuitivo e, di conseguenza, un'esperienza molto migliore per gli utenti. la sincronizzazione di iCloud riprende questo passaggio. tutte le modifiche apportate in un'applicazione verranno inoltre riflesse in modo coerente in tutti i dispositivi.
 
-Per informazioni più dettagliate sulla selezione dei documenti e per informazioni su come integrarla in un'applicazione Novell. iOS, vedere la Guida introduttiva [alla selezione dei documenti](~/ios/platform/document-picker.md) .
+Per informazioni più dettagliate sulla selezione dei documenti e per informazioni su come integrarla in un'applicazione Novell. iOS, vedere la Guida [introduttiva alla selezione dei documenti](~/ios/platform/document-picker.md) .
 
 ### <a name="handoff"></a>Handoff
 

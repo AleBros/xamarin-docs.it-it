@@ -4,15 +4,15 @@ description: Questo documento descrive iCloud e il relativo uso nelle applicazio
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 364775ae8e8874d87022b5e45bd23ea29e82382d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527574"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292417"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con Novell. iOS
 
@@ -41,7 +41,7 @@ Questo documento illustra i primi due tipi, ovvero coppie chiave-valore e sottoc
 
 ## <a name="preparing-for-icloud-development"></a>Preparazione per lo sviluppo iCloud
 
-Le applicazioni devono essere configurate per usare iCloud sia nel portale di provisioning [Apple](https://developer.apple.com/account/ios/overview.action) che nel progetto stesso. Prima di sviluppare per iCloud (o provare gli esempi), seguire questa procedura.
+Le applicazioni devono essere configurate per usare iCloud sia nel [portale di provisioning Apple](https://developer.apple.com/account/ios/overview.action) che nel progetto stesso. Prima di sviluppare per iCloud (o provare gli esempi), seguire questa procedura.
 
 Per configurare correttamente un'applicazione per accedere a iCloud:
 
@@ -51,11 +51,11 @@ Per configurare correttamente un'applicazione per accedere a iCloud:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Controllare iCloud come servizio consentito")](introduction-to-icloud-images/icloud.png#lightbox)
 
-- **Creare un nuovo profilo** di provisioning: per creare un profilo di provisioning, seguire i passaggi descritti nella Guida al provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
+- **Creare un nuovo profilo di provisioning** : per creare un profilo di provisioning, seguire i passaggi descritti nella Guida al provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
 - **Aggiungere l'identificatore del contenitore a titles. plist.** il formato dell'identificatore del `TeamID.BundleID`contenitore è. Per ulteriori informazioni, vedere la guida sull' [utilizzo dei diritti](~/ios/deploy-test/provisioning/entitlements.md) .
 
-- **Configurare le proprietà del progetto** : nel file INFO. plist verificare che l' **identificatore del bundle** corrisponda all' **ID bundle** impostato durante la [creazione di un ID app](~/ios/deploy-test/provisioning/capabilities/index.md). La firma del bundle iOS usa un **profilo** di provisioning che contiene un ID app con il servizio app iCloud e il file dei **diritti personalizzati** selezionato. Questa operazione può essere eseguita in Visual Studio nel riquadro Proprietà progetto.
+- **Configurare le proprietà del progetto** : nel file INFO. plist verificare che l' **identificatore del bundle** corrisponda all' **ID bundle** impostato durante la [creazione di un ID app](~/ios/deploy-test/provisioning/capabilities/index.md). La firma del bundle iOS usa un **profilo di provisioning** che contiene un ID app con il servizio app iCloud e il file dei **diritti personalizzati** selezionato. Questa operazione può essere eseguita in Visual Studio nel riquadro Proprietà progetto.
 
 - **Abilitare iCloud sul dispositivo** : passare a **Impostazioni > iCloud** e assicurarsi che il dispositivo sia connesso.
 Selezionare e attivare l'opzione **documents & data** .

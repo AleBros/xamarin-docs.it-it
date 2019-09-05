@@ -4,15 +4,15 @@ description: Questo articolo descrive come usare i movimenti di tocco 3D introdo
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 784638e2796f12cb338fb3583b62a376e16dcf60
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 46db28dab32f14fa476b9fbb42b788feb669aa74
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199726"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291858"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduzione a 3D touch in Novell. iOS
 
@@ -105,7 +105,7 @@ Questo metodo può essere chiamato prima *o dopo* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>Gestione di Peek e pop
 
-In un dispositivo iOS in grado di gestire il tocco 3D, è possibile usare un'istanza `UIViewControllerPreviewingDelegate` della classe per gestire la visualizzazione dei dettagli dell'elemento di visualizzazione e **pop** . Se, ad esempio, si dispone di un controller di `MasterViewController` visualizzazione tabella denominato, è possibile utilizzare il codice seguente per supportare la **visualizzazione** e il **pop**:
+In un dispositivo iOS in grado di gestire il tocco 3D, è possibile usare un'istanza `UIViewControllerPreviewingDelegate` della classe per gestire la visualizzazione **dei dettagli dell'elemento di visualizzazione** e **pop** . Se, ad esempio, si dispone di un controller di `MasterViewController` visualizzazione tabella denominato, è possibile utilizzare il codice seguente per supportare la **visualizzazione** e il **pop**:
 
 ```csharp
 using System;
@@ -173,9 +173,9 @@ namespace DTouch
 }
 ```
 
-Il `GetViewControllerForPreview` metodo viene utilizzato per eseguire l'operazione di **visualizzazione** . Ottiene l'accesso alla cella della tabella e al backup dei dati, quindi carica l' `DetailViewController` oggetto dallo storyboard corrente. Impostando `PreferredContentSize` su (0, 0) viene richiesta la dimensione della visualizzazione di visualizzazione predefinita. Infine, viene offuscato tutto tranne la cella visualizzata con `previewingContext.SourceRect = cell.Frame` e viene restituita la nuova visualizzazione per la visualizzazione.
+Il `GetViewControllerForPreview` metodo viene utilizzato per eseguire l'operazione di **visualizzazione** . Ottiene l'accesso alla cella della tabella e al backup dei dati, quindi carica l' `DetailViewController` oggetto dallo storyboard corrente. Impostando `PreferredContentSize` su (0, 0) viene richiesta la dimensione **della visualizzazione di visualizzazione predefinita.** Infine, viene offuscato tutto tranne la cella visualizzata con `previewingContext.SourceRect = cell.Frame` e viene restituita la nuova visualizzazione per la visualizzazione.
 
-Il `CommitViewController` riutilizza la visualizzazione creata nella visualizzazione per la visualizzazione **pop** quando l'utente preme più difficile.
+Il `CommitViewController` riutilizza la visualizzazione creata nella **visualizzazione per la** visualizzazione **pop** quando l'utente preme più difficile.
 
 ### <a name="registering-for-peek-and-pop"></a>Registrazione per PEEK e pop
 

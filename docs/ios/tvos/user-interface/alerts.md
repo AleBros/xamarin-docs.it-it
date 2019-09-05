@@ -4,15 +4,15 @@ description: Questo documento descrive come usare gli avvisi di tvOS in Novell. 
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227270"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291117"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Uso degli avvisi tvOS in Novell
 

@@ -4,30 +4,30 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 929A0080-B126-4744-BF88-A4A1EFBB6CC2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: fc4c143d6b5f7c211d24e6e3ed2ed3bb8d264410
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 68c87355a2a6a081e0fff741ffe8a4466abb540a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421970"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292608"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>Errore di iOS Designer con RegisterServicePort
 
 ## <a name="sample-error"></a>Errore di esempio
-> System.AggregateException: Si è verificato uno o più errori---> System. SystemException: RegisterServicePort(com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel restituito: -308 (-308): server (ipc/saldatrice) è stata interrotta
+> System.AggregateException: Si sono verificati uno o più errori---> System. SystemException: RegisterServicePort (com. Novell. MTHosting. 2a0b1, com. Apple. PowerManagement. Control): Kernel restituito:-308 (-308): (IPC/MIG) Server è morto
 
-## <a name="explanation"></a>Descrizione
-Gli errori con `RegisterServicePort` e messaggi di errore simile come in precedenza sono in genere un problema con spyware/malware nel computer. Prendere in considerazione la [commento su questo report sui bug](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) per altre informazioni, insieme al collegamento per il [Apple forum di discussione](https://discussions.apple.com/thread/5596008) su come rimuovere un'infezione dovuta a possibili. 
+## <a name="explanation"></a>Spiegazione
+Gli errori `RegisterServicePort` con e messaggi di errore simili, come sopra, rappresentano in genere un problema con spyware/malware nel computer. Per ulteriori informazioni, prendere in considerazione il [commento sul report sui bug](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) , insieme al collegamento alla [discussione sul forum Apple](https://discussions.apple.com/thread/5596008) su come rimuovere una possibile infezione. 
 
-Per facilitare la diagnosi del problema, aprire l'applicazione di macOS **Console** ed eliminare tutti i file all'interno di **i report di diagnostica utente** sezione [ http://screencast.com/t/y9i3NKcuMy ](http://screencast.com/t/y9i3NKcuMy). Quindi avviare Visual Studio per Mac e provare a usare la finestra di progettazione. Se eventuali nuovi file di log visualizzato in questa sezione dopo che la finestra di progettazione non è riuscito a inizializzare, per salvare queste informazioni a Microsoft per analizzare.  
+Per facilitare la diagnosi del problema, aprire la **console** dell'applicazione MacOS ed eliminare tutti i file nella [http://screencast.com/t/y9i3NKcuMy](http://screencast.com/t/y9i3NKcuMy)sezione **report di diagnostica utente** . Quindi avviare Visual Studio per Mac e provare a usare la finestra di progettazione. Se in questa sezione sono presenti nuovi file di log che non sono stati inizializzati dalla finestra di progettazione, salvarli per l'analisi.  
 
-Tenere presente questo file è più importante per verificare la presenza di: 
+Si noti che la cosa più importante da verificare è questo file: 
 > /usr/lib/libimckit.dylib
 
-Indipendentemente dai risultati sopra riportati, se il file esiste, il problema di malware/spyware menzionati in precedenza è presente nel computer.  
+Indipendentemente dai risultati precedenti, se il file esiste, il problema relativo a spyware/malware è presente nel computer.  
 
-Il collegamento seguente include i passaggi per rimuovere malware/spyware. [http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
+Il collegamento seguente include i passaggi per rimuovere questo spyware/malware:[http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
 

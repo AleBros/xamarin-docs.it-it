@@ -3,19 +3,19 @@ title: Gestione degli account Apple
 description: Questo documento descrive come usare le funzionalità di gestione degli account Apple in Visual Studio per Mac e Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: bb51550518c723a72a29637ad8972cb61c687c6b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118969"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290621"
 ---
 # <a name="apple-account-management"></a>Gestione degli account Apple
 
-L'interfaccia di gestione degli account Apple fornisce un modo per visualizzare tutti i team di sviluppo associati a un ID Apple. Consente inoltre di visualizzare altri dettagli su ogni team visualizzando un elenco di _identità di firma_ e di profili di provisioning installati nel computer.
+L'interfaccia di gestione degli account Apple fornisce un modo per visualizzare tutti i team di sviluppo associati a un ID Apple. Consente inoltre di visualizzare altri dettagli su ogni team visualizzando un elenco di _identità di firma_ e di profili di _provisioning_ installati nel computer.
 
 L'autenticazione dell'ID Apple viene eseguita nella riga di comando con [Fastlane](https://fastlane.tools/). per eseguire correttamente l'autenticazione, è necessario che nel computer sia installato Fastlane. Altre informazioni su Fastlane e su come installarlo sono descritte in dettaglio nelle guide di [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) .
 
@@ -27,15 +27,15 @@ La finestra di dialogo account Apple consente di eseguire le operazioni seguenti
 Informazioni su come eseguire questa operazione sono descritte in questa guida.
 
 > [!NOTE]
-> Gli strumenti di Novell per la gestione degli account Apple visualizzano solo le informazioni sugli account per sviluppatori Apple a pagamento. Per informazioni su come testare un'app in un dispositivo senza un account per sviluppatore Apple a pagamento, vedere la guida relativa al provisioning [gratuito per le app Novell. iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
+> Gli strumenti di Novell per la gestione degli account Apple visualizzano solo le informazioni sugli account per sviluppatori Apple a pagamento. Per informazioni su come testare un'app in un dispositivo senza un account per sviluppatore Apple a pagamento, vedere la Guida [relativa al provisioning gratuito per le app Novell. iOS](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
-È anche possibile usare gli strumenti di provisioning automatico di iOS per creare e gestire automaticamente le identità di firma, gli ID app e i profili di provisioning. Per altre informazioni sull'uso di queste funzionalità, vedere la guida al provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
+È anche possibile usare gli strumenti di provisioning automatico di iOS per creare e gestire automaticamente le identità di firma, gli ID app e i profili di provisioning. Per altre informazioni sull'uso di queste funzionalità, vedere la guida al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
 
 ## <a name="requirements"></a>Requisiti
 
 La gestione degli account Apple è disponibile in Visual Studio per Mac, Visual Studio 2019 e Visual Studio 2017 (versione 15,7 e successive).
 
-Per usare questa funzionalità, è necessario disporre di un account per sviluppatore Apple. Altre informazioni sugli account per sviluppatori Apple sono disponibili nella Guida al provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
+Per usare questa funzionalità, è necessario disporre di un account per sviluppatore Apple. Altre informazioni sugli account per sviluppatori Apple sono disponibili nella Guida al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
 
 - Assicurarsi di essere connessi a Internet. Questo perché Fastlane comunica direttamente con il portale Apple Developer.
 - Assicurarsi che siano [installati gli strumenti di Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
@@ -135,7 +135,7 @@ La finestra di dialogo Dettagli team Visualizza anche un elenco di tutti i profi
 
 ## <a name="ios-bundle-signing"></a>Firma bundle iOS
 
-Per informazioni sulla distribuzione dell'app in un dispositivo, vedere la guida al provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
+Per informazioni sulla distribuzione dell'app in un dispositivo, vedere la guida al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 

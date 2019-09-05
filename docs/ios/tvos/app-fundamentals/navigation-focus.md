@@ -4,15 +4,15 @@ description: Questo articolo illustra il concetto di messa a fuoco e il modo in 
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 96b35764da1922ae1810a78e760e8ed39a8a8a3b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fdf675e37bec07ef03576313befbaa9309ab9349
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199633"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291580"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
 
@@ -71,10 +71,10 @@ Apple presenta i suggerimenti seguenti per lavorare con lo stato attivo e la sel
 - **Usare i controlli dell'interfaccia utente incorporati per gli effetti** di `UIKit` movimento: usando e l'API messa a fuoco nell'interfaccia utente, il modello di messa a fuoco applica automaticamente gli effetti visivi e di movimento predefiniti agli elementi dell'interfaccia utente. In questo modo l'app si rende nativa e familiare agli utenti della piattaforma Apple TV e consente un movimento fluido e intuitivo tra gli elementi attivabili.
 - **Spostare lo stato attivo nelle direzioni previste** : su Apple TV, quasi ogni elemento usa la manipolazione indiretta. Ad esempio, l'utente usa Siri Remote per spostare lo stato attivo e il sistema scorre automaticamente l'interfaccia per rendere visibile l'elemento attualmente attivo. Se l'app implementa questo tipo di interazione, assicurarsi che lo stato attivo si sposti nella direzione del movimento dell'utente. Quindi, se l'utente scorre a destra sullo stato attivo Siri, si sposta a destra (che potrebbe far scorrere lo schermo a sinistra). L'unica eccezione a questa regola è costituita dagli elementi a schermo intero che usano la manipolazione diretta, in cui lo scorrimento verso l'alto sposta l'elemento verso l'alto.
 - **Verificare che l'elemento con lo stato attivo sia ovvio** , perché gli utenti interagiscono con gli elementi dell'interfaccia utente da Afar, è fondamentale che l'elemento attualmente attivo si trovi. Questa operazione viene in genere gestita automaticamente da `UIKit` elementi predefiniti. Per i controlli personalizzati, usare funzionalità come la dimensione dell'elemento o l'ombreggiatura per mostrare lo stato attivo.
-- **Usare Parallax per fare in modo che gli elementi mirati** rispondano a piccoli movimenti circolari su Siri Remote result in un movimento leggero e in tempo reale dell'elemento con lo stato attivo. Questo [effetto di parallasse](#Focus-and-Parallax) è incorporato `UIKit` in _immagini sovrapposte_ per fornire all'utente un senso di connessione all'elemento con lo stato attivo.
+- **Usare Parallax per fare in modo che gli elementi mirati rispondano** a piccoli movimenti circolari su Siri Remote result in un movimento leggero e in tempo reale dell'elemento con lo stato attivo. Questo [effetto di parallasse](#Focus-and-Parallax) è incorporato `UIKit` in _immagini sovrapposte_ per fornire all'utente un senso di connessione all'elemento con lo stato attivo.
 - **Crea elementi attivabili delle dimensioni appropriate** : gli elementi di grandi dimensioni con spaziatura ampia sono più semplici da selezionare e spostarsi rispetto a elementi più piccoli.
 - **Progettare l'elemento dell'interfaccia utente in modo che risulti valido o con lo stato attivo** , in genere Apple TV rappresenta l'elemento con lo stato attivo aumentando le dimensioni. Assicurarsi che gli elementi dell'interfaccia utente dell'app risultino ottimali in qualsiasi dimensione di presentazione e, se necessario, forniscano risorse per gli elementi di dimensioni maggiori.
-- **Rappresenta le modifiche** dello stato attivo: usare l'animazione per eseguire una dissolvenza uniforme tra gli elementi con stato attivo e non **attivo** per evitare che le transizioni siano stonate.
+- **Rappresenta le modifiche** dello stato attivo: usare l'animazione per eseguire una dissolvenza uniforme **tra gli elementi con stato attivo e** non **attivo** per evitare che le transizioni siano stonate.
 - **Non visualizzare un cursore** : gli utenti si aspettano di spostarsi nell'interfaccia utente dell'app usando lo stato attivo e non spostando un cursore sullo schermo. L'interfaccia utente deve sempre usare il modello di messa a fuoco per presentare un'esperienza utente coerente.
 
 <a name="Working-with-Focus" />
@@ -258,7 +258,7 @@ Se l'utente esegue un movimento lento e circolare sul Siri remoto, l'elemento co
 
 Questi effetti interagiscono tra loro per fornire una connessione mentale tra il contenuto sullo schermo TV e l'interazione dell'utente con Apple TV dal divano.
 
-In Apple TV questo effetto di parallasse viene usato in tutto il sistema per fornire un senso di profondità e dinamiche 3D a elementi concentrati. tvOS usa una serie di [Immagini](~/ios/tvos/app-fundamentals/icons-images.md#Layered-Images) trasparenti e sovrapposte che vengono spostate e ridimensionate dinamicamente per creare questo effetto.
+In Apple TV questo effetto di parallasse viene usato in tutto il sistema per fornire un senso di profondità e dinamiche 3D a elementi concentrati. tvOS usa una serie di immagini trasparenti e [sovrapposte](~/ios/tvos/app-fundamentals/icons-images.md#Layered-Images) che vengono spostate e ridimensionate dinamicamente per creare questo effetto.
 
 Le immagini sovrapposte sono necessarie per l'icona dell'app tvOS ed è supportata per il contenuto dinamico top shelf. Sebbene non sia obbligatorio, Apple consiglia vivamente di implementare immagini a più livelli in qualsiasi altro elemento attivabile nell'interfaccia utente dell'app.
 

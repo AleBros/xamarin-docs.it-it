@@ -4,15 +4,15 @@ description: Con iOS 12, è possibile raggruppare le notifiche nel centro notifi
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 3edaabe287bc2b37d2ec5a759ada9f59441c6d3a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 12d60a193385593bb3ec22186b54a4a809370e2d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652566"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291259"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notifiche raggruppate in Novell. iOS
 
@@ -132,7 +132,7 @@ L'app di esempio usa l'autore del messaggio come argomento di riepilogo. Con que
 
 ## <a name="unthreaded-notifications"></a>Notifiche non thread
 
-Ogni tocco del pulsante di promemoria **appuntamento** dell'app di esempio invia una delle varie notifiche di sollecito appuntamento. Poiché questi promemoria non sono threaded, vengono visualizzati nel gruppo di notifica a livello di applicazione nella schermata di blocco e nel centro notifiche.
+Ogni tocco del pulsante di **promemoria appuntamento** dell'app di esempio invia una delle varie notifiche di sollecito appuntamento. Poiché questi promemoria non sono threaded, vengono visualizzati nel gruppo di notifica a livello di applicazione nella schermata di blocco e nel centro notifiche.
 
 Per inviare una notifica non thread, il metodo dell'app di `ScheduleUnthreadedNotification` esempio usa codice simile a quello riportato in precedenza.
 Tuttavia, non imposta l' `ThreadIdentifier` `UNMutableNotificationContent` oggetto sull'oggetto.

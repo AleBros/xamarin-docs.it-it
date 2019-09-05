@@ -1,44 +1,44 @@
 ---
-title: Introduzione all'integrazione continua con Xamarin
-description: Questo documento include collegamenti alle guide che descrivono l'integrazione continua con Xamarin. Contenuto collegato offre una panoramica dell'integrazione continua e illustra Jenkins, TeamCity e compilazione di App Center.
+title: Introduzione all'integrazione continua con Novell
+description: Questo documento include collegamenti a guide che descrivono l'integrazione continua con Novell. Il contenuto collegato offre una panoramica dell'integrazione continua e illustra App Center Build, TeamCity e Jenkins.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/23/2018
-ms.openlocfilehash: 073fc5abace2e0cb923394a359437528f703f338
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e1d90152fa47fef0638c93777f1e7179e97e387
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371079"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292546"
 ---
-# <a name="continuous-integration-with-xamarin"></a>Integrazione continua con Xamarin
+# <a name="continuous-integration-with-xamarin"></a>Integrazione continua con Novell
 
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
 
 ## <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[Introduzione all'integrazione continua](~/tools/ci/intro-to-ci.md)
 
-Questa sezione descrive i diversi componenti coinvolti con integrazione continua e le relative relazioni. Descrive gli ambienti di integrazione continua che sono descritti nelle sezioni specifiche seguenti.
+In questa sezione vengono illustrati i diversi componenti interessati dall'integrazione continua e dalle relative relazioni. Vengono descritti gli ambienti di integrazione continua descritti nelle sezioni specifiche riportate di seguito.
 
-## <a name="devops-with-xamarintoolscidevopsmd"></a>[DevOps con Xamarin](~/tools/ci/devops.md)
+## <a name="devops-with-xamarintoolscidevopsmd"></a>[DevOps con Novell](~/tools/ci/devops.md)
 
-Questa sezione identifica le funzionalità di DevOps in Azure e Visual Studio è possibile prevedere il corretto funzionamento con un progetto Xamarin.
+Questa sezione identifica le funzionalità DevOps di Azure e Visual Studio che possono essere usate correttamente con un progetto Novell.
 
 ## <a name="working-with-continuous-integration-environments"></a>Uso di ambienti di integrazione continua
 
-### <a name="build-xamarin-apps-with-azure-pipelineshttpsdocsmicrosoftcomazuredevopspipelineslanguagesxamarin"></a>[Compilare App Xamarin con le pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
+### <a name="build-xamarin-apps-with-azure-pipelineshttpsdocsmicrosoftcomazuredevopspipelineslanguagesxamarin"></a>[Crea app Novell con Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
 
-Usare le pipeline di Azure per creare automaticamente le app Xamarin per Android e iOS.
+Usare Azure Pipelines per compilare automaticamente app Novell per Android e iOS.
 
-### <a name="build-xamarin-apps-using-app-centerhttpsdocsmicrosoftcomappcenterbuildxamarin"></a>[Compilare App Xamarin con App Center](https://docs.microsoft.com/appcenter/build/xamarin/)
+### <a name="build-xamarin-apps-using-app-centerhttpsdocsmicrosoftcomappcenterbuildxamarin"></a>[Crea app Novell usando App Center](https://docs.microsoft.com/appcenter/build/xamarin/)
 
-Crea soluzioni xamarin. IOS e xamarin. Android con App Center, direttamente da Azure DevOps, GitHub o Bitbucket.
+Crea soluzioni Novell. iOS e Novell. Android con App Center, direttamente da GitHub, Azure DevOps o bitbucket.
 
-### <a name="build-xamarin-apps-with-teamcitytoolsciteamcitymd"></a>[Compilare App Xamarin con TeamCity](~/tools/ci/teamcity.md)
+### <a name="build-xamarin-apps-with-teamcitytoolsciteamcitymd"></a>[Crea app Novell con TeamCity](~/tools/ci/teamcity.md)
 
-Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare App per dispositivi mobili e quindi inoltrarle a Test App Center.
+Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare app per dispositivi mobili e quindi inviarli a App Center test.
 
-### <a name="build-xamarin-apps-with-jenkinstoolscijenkins-walkthroughmd"></a>[Compilare App Xamarin con Jenkins](~/tools/ci/jenkins-walkthrough.md)
+### <a name="build-xamarin-apps-with-jenkinstoolscijenkins-walkthroughmd"></a>[Crea app Novell con Jenkins](~/tools/ci/jenkins-walkthrough.md)
 
-Questa guida illustra come configurare come server di integrazione continua Jenkins e automatizzare la compilazione di App per dispositivi mobili create con Xamarin. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare App xamarin. IOS e xamarin. Android quando viene eseguito il commit per il sistema di controllo della versione delle modifiche.
+Questa guida illustra come configurare Jenkins come server di integrazione continua e automatizzare la compilazione di app per dispositivi mobili create con Novell. Viene descritto come installare Jenkins in OS X, configurarlo e configurare i processi per compilare le app Novell. iOS e Novell. Android quando viene eseguito il commit delle modifiche nel sistema di controllo della versione.

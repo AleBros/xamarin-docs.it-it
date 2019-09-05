@@ -1,32 +1,32 @@
 ---
 title: Azure Active Directory
-description: Questo documento vengono descritti i passaggi che devono essere seguiti per consentire un'app per dispositivi mobili per l'autenticazione con Azure Active Directory.
+description: Questo documento descrive i passaggi da seguire per consentire a un'app per dispositivi mobili di eseguire l'autenticazione con Azure Active Directory.
 ms.prod: xamarin
 ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: ca33422817f19dbb0a04e8870800d3f5efa8af2a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f51c6af9ed38910f44db2c0886c474deafa096d7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61318298"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289985"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
 
-_Registrare un'app per usare Azure Active Directory_
+_Registrare un'app da usare Azure Active Directory_
 
-Azure Active Directory consente agli sviluppatori di proteggere le risorse, ad esempio file, collegamenti e le API Web usando lo stesso account aziendale che i dipendenti usano per accedere ai loro sistemi o controllare i messaggi di posta elettronica.
+Azure Active Directory consente agli sviluppatori di proteggere risorse quali file, collegamenti e API Web usando lo stesso account aziendale usato dai dipendenti per accedere ai propri sistemi o controllare i loro messaggi di posta elettronica.
 
-Lo sviluppo di applicazioni per dispositivi mobili che possono eseguire l'autenticazione con Azure Active Directory prevede tre passaggi.
-I primi due passaggi sono in genere lo stesso, indipendentemente dal fatto che si prevede di usare i servizi. Il terzo passaggio è diverso per ogni tipo di servizio:
+Lo sviluppo di applicazioni per dispositivi mobili in grado di eseguire l'autenticazione con Azure Active Directory prevede tre passaggi.
+I primi due passaggi sono in genere gli stessi, indipendentemente dai servizi che si prevede di usare. Il terzo passaggio è diverso per ogni tipo di servizio:
 
-  1. [La registrazione con Azure Active Directory](~/cross-platform/data-cloud/active-directory/get-started/register.md) nella *windowsazure.com* portale, quindi
+  1. Per la [registrazione con Azure Active Directory](~/cross-platform/data-cloud/active-directory/get-started/register.md) nel portale di *WindowsAzure.com* ,
   2. [Configurare i servizi](~/cross-platform/data-cloud/active-directory/get-started/configure.md).
-  3. Sviluppa App per dispositivi mobili usando i servizi.
+  3. Sviluppare app per dispositivi mobili usando i servizi.
 
-Esempi di diversi servizi a che è possibile accedere:
+Esempi di servizi diversi a cui è possibile accedere includono:
 
 - [API Graph](~/cross-platform/data-cloud/active-directory/graph.md)
 - API Web
@@ -35,10 +35,10 @@ Esempi di diversi servizi a che è possibile accedere:
 
 ## <a name="conclusion"></a>Conclusione
 
-Usando i passaggi precedenti è possibile autenticare l'App per dispositivi mobili con Azure Active Directory. Active Directory Authentication Library (ADAL) rende molto più semplice con meno righe di codice, mantenendo la maggior parte del codice stesso e semplificando pertanto essere condivise tra le piattaforme.
+Seguendo i passaggi precedenti è possibile autenticare le app per dispositivi mobili con Azure Active Directory. Il Active Directory Authentication Library (ADAL) rende molto più semplice con un minor numero di righe di codice, mantenendo la maggior parte del codice allo stesso modo, rendendolo condivisibile tra le diverse piattaforme.
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio NativeClient Microsoft](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)
+- [Esempio Microsoft NativeClient](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)

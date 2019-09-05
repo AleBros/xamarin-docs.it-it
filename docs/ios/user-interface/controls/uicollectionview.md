@@ -4,15 +4,15 @@ description: Le visualizzazioni di raccolta consentono di visualizzare il conten
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8557a3efca1336f70c0feef2ac4dc9c462eedbf5
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889886"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282854"
 ---
 # <a name="collection-views-in-xamarinios"></a>Viste di raccolta in Novell. iOS
 
@@ -494,7 +494,7 @@ Nel **riquadro delle proprietà** per _CollectionViewCell_ e impostare la **clas
 
 [![](uicollectionview-images/quick05.png "Impostare la classe su TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
-Impostare la **visualizzazione** riutilizzabile della `Cell`raccolta su:
+Impostare la **visualizzazione riutilizzabile** della `Cell`raccolta su:
 
 [![](uicollectionview-images/quick06.png "Imposta la visualizzazione riutilizzabile della raccolta sulla cella")](uicollectionview-images/quick06.png#lightbox)
 

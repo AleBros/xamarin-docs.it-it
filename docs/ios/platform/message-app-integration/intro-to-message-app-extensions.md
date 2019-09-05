@@ -4,21 +4,21 @@ description: Questo articolo illustra come includere un'estensione di app per i 
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6edb9107c3d6ae04c91ebcf874fb92a7f911b3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227489"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280045"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni fondamentali sull'estensione dell'app Message in Novell. iOS
 
 _Questo articolo illustra come includere un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
 
-Una novità di iOS 10, un'estensione di app per i messaggi si integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
+Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
 ## <a name="about-message-app-extensions"></a>Informazioni sulle estensioni dell'app messaggio
 
@@ -493,7 +493,7 @@ namespace MessageExtension
 }
 ```
 
-Il `AddStickerViewController` gestirà la visualizzazione adesiva espansa e sarà simile al seguente:
+Il `AddStickerViewController` gestirà la visualizzazione adesiva **espansa** e sarà simile al seguente:
 
 ```csharp
 using System;
@@ -706,7 +706,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo include un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente. Viene analizzato utilizzando l'estensione per inviare testo, adesivi, file multimediali e messaggi interattivi.
+Questo articolo include un'estensione di app per i messaggi in una soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente. Viene analizzato utilizzando l'estensione per inviare testo, adesivi, file multimediali e messaggi interattivi.
 
 
 

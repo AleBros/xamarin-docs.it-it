@@ -1,38 +1,37 @@
 ---
-title: Usando F# con Xamarin
-description: F# è un linguaggio di programmazione funzionale e fortemente tipizzato, progettato per essere eseguito in .NET. Questo documento fornisce una panoramica generale delle funzionalità e i collegamenti agli esempi è compilato con F#.
+title: Utilizzo F# di with Novell
+description: F# è un linguaggio di programmazione funzionale e fortemente tipizzato, progettato per essere eseguito in .NET. In questo documento viene fornita una panoramica di alto livello delle funzionalità e dei collegamenti agli esempi F#compilati con.
 ms.prod: xamarin
 ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2a6c666878c16cbb4aca6fbaa3c9f8d0c656d0bc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 7fcb04eca457ad246e68d4f2a0d5212055764ed6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036475"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280557"
 ---
-# <a name="using-f-with-xamarin"></a>Usando F# con Xamarin
+# <a name="using-f-with-xamarin"></a>Utilizzo F# di with Novell
 
-F#è un open source, multipiattaforma e funzionale-first linguaggio di programmazione per .NET.
+F#è un linguaggio di programmazione open source, multipiattaforma e funzionale per .NET.
 
-F#combina il succinctness, l'espressività e componibilità del tipo dedotto di programmazione funzionale, la sicurezza in fase di compilazione del codice fortemente tipizzata e il supporto runtime, librerie, interoperabilità, strumenti e modello a oggetti di .NET.
+F#combina la brevità, l'espressività e la componibilità della programmazione funzionale dedotta dal tipo, la protezione in fase di compilazione del codice fortemente tipizzato e il supporto, le librerie, l'interoperabilità, gli strumenti e il modello a oggetti di runtime di .NET.
 
-F#è disponibile come linguaggio di programmazione agli utenti di Xamarin in tutte le piattaforme supportate da Xamarin: Android, macOS e iOS.
+F#è disponibile come linguaggio di programmazione per Novell gli utenti in tutte le piattaforme supportate da Novell: Android, macOS e iOS.
 
 - [Guida a F#](https://docs.microsoft.com/dotnet/fsharp/)
-- [Guida introduttiva a F# e Xamarin](overview.md)
-- [F#Esempi mobili](samples.md)
+- [Introduzione con F# e Novell](overview.md)
+- [F#Esempi per dispositivi mobili](samples.md)
 
 ## <a name="f-features-in-visual-studio-for-mac"></a>F#Funzionalità di Visual Studio per Mac
 
-F#è un linguaggio supportato in Visual Studio per Mac. Funzionalità supportate includono:
+F#è un linguaggio supportato in Visual Studio per Mac. Le funzionalità supportate includono:
 
-- F#supporto 4.1
-- F#Supporto libreria di classi Portabile e .NET Standard
-- F#Supporto di progetti condivisi
+- F#supporto di 4,1
+- F#Supporto per PCL e .NET Standard
+- F#Supporto progetto condiviso
 - Esplorazione del codice
-- L'evidenziazione della sintassi F# Interactive
-- F#modelli per Android, iOS e xamarin. Forms
-- [*E altro ancora...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
+- Evidenziazione della sintassi F# in Interactive
+- F#modelli per Novell. Forms, iOS e Android

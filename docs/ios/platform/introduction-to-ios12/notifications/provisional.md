@@ -4,15 +4,15 @@ description: Questo documento descrive come usare Novell. iOS per lavorare con l
 ms.prod: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 1b4cf7f2caee274f353afff89e30c2db96009c12
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d321e8061d3091abeaa3cff6a6af9172c981cb60
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652359"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291193"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Notifiche provvisorie in Novell. iOS
 

@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso delle visualizzazioni struttura in u
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b045d18d66463a1464e446847cb5dbfd531bbf3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227876"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287248"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Strutturare le visualizzazioni in Novell. Mac
 
@@ -400,7 +400,7 @@ Se si espande un nodo nella visualizzazione struttura, l'aspetto sarà simile al
 
 ## <a name="sorting-by-column"></a>Ordinamento per colonna
 
-Consente all'utente di ordinare i dati nella struttura facendo clic su un'intestazione di colonna. In primo luogo, fare doppio `Main.storyboard` clic sul file per aprirlo per la modifica in Interface Builder. Selezionare la `Product` colonna, immettere `Title` per la **chiave**di ordinamento `compare:` , per il selettore e selezionare `Ascending` per l' **ordine**:
+Consente all'utente di ordinare i dati nella struttura facendo clic su un'intestazione di colonna. In primo luogo, fare doppio `Main.storyboard` clic sul file per aprirlo per la modifica in Interface Builder. Selezionare la `Product` colonna, immettere `Title` per la **chiave**di ordinamento `compare:` , per il **selettore** e selezionare `Ascending` per l' **ordine**:
 
 [![](outline-view-images/sort01.png "Impostazione dell'ordine della chiave di ordinamento")](outline-view-images/sort01.png#lightbox)
 
@@ -515,11 +515,11 @@ Il `GetNextTypeSelectMatch` metodo accetta l'oggetto `searchString` specificato 
 
 ## <a name="reordering-columns"></a>Riordinamento delle colonne
 
-Se si desidera consentire all'utente di trascinare le colonne riordinate nella visualizzazione struttura, fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica in Interface Builder. Selezionare la visualizzazione struttura nella **gerarchia dell'interfaccia** e selezionare la casella di controllo riordino in **attributo Inspector**:
+Se si desidera consentire all'utente di trascinare le colonne riordinate nella visualizzazione struttura, fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica in Interface Builder. Selezionare la visualizzazione struttura nella **gerarchia dell'interfaccia** e selezionare la casella di controllo **riordino** in **attributo Inspector**:
 
 [![](outline-view-images/reorder01.png "Controllo attribute")](outline-view-images/reorder01.png#lightbox)
 
-Se si assegna un valore per la proprietà autosave e si seleziona il campo **informazioni colonna** , tutte le modifiche apportate al layout della tabella verranno salvate automaticamente e ripristinate alla successiva esecuzione dell'applicazione.
+Se si assegna un valore per la proprietà **autosave** e si seleziona il campo **informazioni colonna** , tutte le modifiche apportate al layout della tabella verranno salvate automaticamente e ripristinate alla successiva esecuzione dell'applicazione.
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 

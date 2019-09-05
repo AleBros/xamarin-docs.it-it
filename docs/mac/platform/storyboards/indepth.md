@@ -4,15 +4,15 @@ description: Questo documento descrive come usare gli storyboard in Novell. Mac,
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f3bdc70928dc06719bf7cfb775bf70fae9695a4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6aca181b2942bbde854df41c8f9741106cda6776
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227874"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279305"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Uso degli storyboard in Novell. Mac
 
@@ -74,7 +74,7 @@ Sono stati aggiunti diversi nuovi metodi alla classe `NSViewController` per supp
 
 ### <a name="the-responder-chain"></a>Catena di risponditori
 
-Inoltre, `NSViewControllers` fa ora parte della _catena_di risponditori della finestra:
+Inoltre, `NSViewControllers` fa ora parte della _catena di risponditori_della finestra:
 
 [![Catena di risponditori](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
@@ -84,7 +84,7 @@ E, di conseguenza, vengono cablati per ricevere e rispondere a eventi quali le s
 
 ### <a name="containment"></a>Contenuto
 
-Negli storyboard, i controller di visualizzazione, come il controller di visualizzazione suddiviso e il controller di visualizzazione a schede, possono ora implementare il contenimento, in modo che possano "contenere" altri controller di visualizzazione secondari:
+Negli storyboard, i controller di visualizzazione, come il controller di visualizzazione suddiviso e il controller di visualizzazione a schede, possono ora implementare il _contenimento_, in modo che possano "contenere" altri controller di visualizzazione secondari:
 
 [![Esempio di contenimento del controller di visualizzazione](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 

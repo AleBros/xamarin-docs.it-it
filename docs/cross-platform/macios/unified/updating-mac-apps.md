@@ -3,15 +3,15 @@ title: Aggiornamento delle app Mac esistenti
 description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. Mac dalla API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: a6d245e60a0d163c054fd74e0fb64780225da031
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 43498c0609fdbe6dba59b9ed5926c9c58b72d4db
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197812"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280874"
 ---
 # <a name="updating-existing-mac-apps"></a>Aggiornamento delle app Mac esistenti
 
@@ -78,7 +78,7 @@ Espandere il nodo **riferimenti** del progetto di applicazione Mac. Inizialmente
 
 ![](updating-mac-apps-images/references.png "Inizialmente verrà visualizzato un riferimento XamMac rotto simile a questo screenshot")
 
-Fare clic sull' **icona** a forma di ingranaggio accanto alla voce **XamMac** e selezionare **Elimina** per rimuovere il riferimento rotto.
+Fare clic sull'icona a forma di **ingranaggio** accanto alla voce **XamMac** e selezionare **Elimina** per rimuovere il riferimento rotto.
 
 Fare quindi clic con il pulsante destro del mouse sulla cartella **riferimenti** nella **Esplora soluzioni** e scegliere **modifica riferimenti**. Scorrere fino alla fine dell'elenco di riferimenti e inserire un segno di spunta oltre a **Novell. Mac**.
 

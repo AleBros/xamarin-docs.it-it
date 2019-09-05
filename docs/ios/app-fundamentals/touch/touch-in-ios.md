@@ -4,15 +4,15 @@ description: Questo documento descrive come usare eventi di tocco, multitocco, m
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 70c46282c9eebfed45bbdae75fdb2216e7f4c889
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526610"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280089"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Eventi touch e movimenti in Novell. iOS
 
@@ -129,7 +129,7 @@ Novell. iOS fornisce la classe `UIGestureRecognizer` come classe di base per i r
 
 Il modello di base per l'uso di un riconoscimento di movimento è il seguente:
 
-1. **Creare un'istanza del** riconoscitore di movimento, creare prima `UIGestureRecognizer` di tutto un'istanza di una sottoclasse. L'oggetto di cui viene creata un'istanza verrà associato a una vista e verrà sottoposto a Garbage Collection quando la vista viene eliminata. Non è necessario creare questa vista come variabile a livello di classe.
+1. **Creare un'istanza del riconoscitore di movimento** , creare prima `UIGestureRecognizer` di tutto un'istanza di una sottoclasse. L'oggetto di cui viene creata un'istanza verrà associato a una vista e verrà sottoposto a Garbage Collection quando la vista viene eliminata. Non è necessario creare questa vista come variabile a livello di classe.
 1. **Configurare le impostazioni di movimento** : il passaggio successivo consiste nel configurare il riconoscimento del movimento. Per un elenco delle proprietà `UIGestureRecognizer` che è possibile impostare per controllare il comportamento di un' `UIGestureRecognizer` istanza, consultare la documentazione di Novell in e le relative sottoclassi.
 1. **Configurare la destinazione** : a causa del patrimonio Objective-C, Novell. iOS non genera eventi quando un riconoscimento di movimento corrisponde a un movimento.  `UIGestureRecognizer`dispone di un metodo `AddTarget` , che può accettare un delegato anonimo o un selettore Objective-C con il codice da eseguire quando il riconoscitore di movimenti crea una corrispondenza.
 1. **Abilita riconoscimento movimento** : Analogamente agli eventi tocco, i movimenti sono riconosciuti solo se le interazioni tocco sono abilitate.
@@ -158,7 +158,7 @@ I riconoscitori di movimento esistono in uno degli Stati seguenti:
 - *Possibile* : si tratta dello stato iniziale di tutti i riconoscitori di movimento. Si tratta del valore predefinito della proprietà state.
 - *Avviato* : quando viene riconosciuto per la prima volta un movimento continuo, lo stato viene impostato su avviato. In questo modo, le sottoscrizioni consentono di distinguere tra l'avvio del riconoscimento del movimento e la modifica.
 - *Modificato* : dopo l'inizio di un movimento continuo, ma non è stato completato, lo stato verrà impostato su modificato ogni volta che un tocco viene spostato o modificato, purché sia ancora compreso nei parametri previsti del movimento.
-- Annullato: questo stato verrà impostato se il riconoscimento passa da inizio a modificato, quindi i tocchi cambiano in modo che non corrispondano più al modello del movimento.
+- *Annullato* : questo stato verrà impostato se il riconoscimento passa da inizio a modificato, quindi i tocchi cambiano in modo che non corrispondano più al modello del movimento.
 - *Riconosciuta* : lo stato verrà impostato quando il riconoscimento del movimento corrisponde a un set di tocchi e indicherà al Sottoscrittore che il movimento è terminato.
 - *Terminato* : si tratta di un alias per lo stato riconosciuto.
 - *Operazione non riuscita* : quando il riconoscitore di movimento non è più in grado di corrispondere ai tocchi per cui è in ascolto, lo stato verrà modificato in non riuscito.

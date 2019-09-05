@@ -3,15 +3,15 @@ title: Errori di incorporamento .NET
 description: Questo documento descrive gli errori generati dall'incorporamento .NET. Gli errori sono elencati in base al codice ed è stata fornita una descrizione per facilitare la risoluzione dei problemi.
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: e5f998105202a4143c94748efad5faae0212acba
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: be62ba212cb92e031f760ef3f267bc3eac91c748
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198787"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282159"
 ---
 # <a name="net-embedding-errors"></a>Errori di incorporamento .NET
 

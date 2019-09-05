@@ -4,15 +4,15 @@ description: Questo documento descrive i vari controlli disponibili per l'uso ne
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/19/2016
-ms.openlocfilehash: 5b8cbfb3529af0eef81524d450bf395a07c65471
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cebacf6d845affe017e289fe4522a3b7c76d2942
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651740"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291789"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>Controlli dell'interfaccia utente watchos in Novell
 

@@ -2,15 +2,15 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: Linee guida per la portabilità delle app desktop
 description: Una semplice spiegazione di come separare le app esistenti di Windows Forms o WPF per creare app multipiattaforma da eseguire in macOS, iOS, Android e UWP/Windows 10.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: bdea1c472d95c86037056a2905679b43e12e0468
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 2a678c2b1880cb69b1bece85ed558309aa611a62
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120385"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290338"
 ---
 # <a name="desktop-app-porting-guidance"></a>Linee guida per la portabilità delle app desktop
 
@@ -28,7 +28,7 @@ Per le applicazioni Windows Forms e WPF scritte C# con (o Visual Basic.NET) una 
 
 Visual Studio 2017 e versioni successive supportano [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([download per Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) che può esaminare le applicazioni esistenti e indicare la quantità di codice che è possibile trasferire "così come sono" ad altre piattaforme. Per ulteriori informazioni, vedere questo video di [Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
-È anche possibile scaricare uno strumento da riga di comando da Portability [Analyzer su GitHub](https://github.com/Microsoft/dotnet-apiport) e usarlo per fornire gli stessi report.
+È anche possibile scaricare uno strumento da riga di comando da [Portability Analyzer su GitHub](https://github.com/Microsoft/dotnet-apiport) e usarlo per fornire gli stessi report.
 
 ## <a name="x-of-my-code-is-portable-what-next"></a>"x% del codice è portabile. Operazioni successive
 
@@ -67,7 +67,7 @@ Potrebbe anche essere necessario modificare alcune operazioni di file system, pe
 
 ## <a name="tips-for-making-code-portable"></a>Suggerimenti per rendere portabile il codice
 
-- **Inserimento** delle dipendenze: fornisce implementazioni diverse per ogni piattaforma e
+- **Inserimento delle dipendenze** : fornisce implementazioni diverse per ogni piattaforma e
 
 - **Approccio** a più livelli: se MVVM, MVC, MVP o un altro modello che consente di separare il codice portatile dal codice specifico della piattaforma.
 

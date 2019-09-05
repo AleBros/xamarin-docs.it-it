@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso dei menu in un'applicazione Novell. 
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0879fcc529e72e03df4eaba7790a534ace38856f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657349"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292428"
 ---
 # <a name="menus-in-xamarinmac"></a>Menu in Novell. Mac
 
@@ -102,7 +102,7 @@ Arrestare l'applicazione e fare doppio clic sul file **Main. Storyboard** nel **
 
 Nell' **Editor dei vincoli** aggiungere la visualizzazione di testo ai bordi della finestra e impostarla nel punto in cui si espande e si riduce con la finestra facendo clic su tutti e quattro i-Beam rossi nella parte superiore dell'editor e facendo clic sul pulsante **Aggiungi 4 vincoli** :
 
-[![Modifica dei] conformi (menu-images/appmenu06.png "Modifica dei") conformi](menu-images/appmenu06-large.png#lightbox)
+[![Modifica dei conformi](menu-images/appmenu06.png "Modifica dei conformi")](menu-images/appmenu06-large.png#lightbox)
 
 Salvare le modifiche apportate alla progettazione dell'interfaccia utente e tornare alla Visual Studio per Mac per sincronizzare le modifiche con il progetto Novell. Mac. A questo punto, avviare l'applicazione, digitare del testo nella visualizzazione di testo, selezionarla e aprire il menu **modifica** :
 

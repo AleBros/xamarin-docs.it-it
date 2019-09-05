@@ -4,15 +4,15 @@ description: Questo documento descrive come registrare un'applicazione Novell. i
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 67cc2028276b6e1415c88cb8957e2cd567fa5bae
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 044ae7e4a77abb77e766df58b9cda5938ce8fe7b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521273"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290619"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrazione delle app Novell. iOS per l'esecuzione in background
 
@@ -25,7 +25,7 @@ La registrazione di un'app segnala a iOS che l'applicazione deve disporre di pri
 Le app registrate possono rientrare in diverse categorie:
 
 - I lettori di musica **audio** e altre applicazioni che funzionano con contenuto audio possono essere registrati per continuare a riprodurre audio anche quando l'app non è più in primo piano. Se un'app in questa categoria tenta di eseguire operazioni diverse da riproduzione audio o download in background, iOS lo terminerà.
-- Le applicazioni VoIP-voice over Internet Protocol (VoIP) ottengono gli stessi privilegi concessi alle applicazioni audio per la continuazione dell'elaborazione dell'audio in background. Sono inoltre autorizzati a rispondere in base alle esigenze per i servizi VoIP che li alimentano per mantenerne attive le connessioni.
+- Le applicazioni VoIP-voice over Internet Protocol **(VoIP)** ottengono gli stessi privilegi concessi alle applicazioni audio per la continuazione dell'elaborazione dell'audio in background. Sono inoltre autorizzati a rispondere in base alle esigenze per i servizi VoIP che li alimentano per mantenerne attive le connessioni.
 - **Accessori esterni e Bluetooth** : riservati per le applicazioni che devono comunicare con dispositivi Bluetooth e altri accessori hardware esterni, la registrazione in queste categorie consente all'app di rimanere connessa all'hardware.
 - **Edicola** : un'applicazione in edicola può continuare a sincronizzare il contenuto in background.
 - **Località** : le applicazioni che usano i dati del percorso di rete o GPS possono inviare e ricevere gli aggiornamenti delle posizioni in background.

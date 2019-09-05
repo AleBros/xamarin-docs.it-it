@@ -3,15 +3,15 @@ title: Panoramica del supporto asincrono
 description: Questo documento descrive la programmazione con Async e await, i concetti C# introdotti in 5 per semplificare la scrittura di codice asincrono.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: a9297d9a19ef56d658e983c38329b1aa400ffd05
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521714"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280623"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
@@ -150,8 +150,8 @@ Note:
 
 - Il delegato anonimo ha il prefisso della parola chiave async.
 - Il metodo asincrono DownloadHomepage restituisce un'attività\<int > archiviata nella variabile sizeTask.
-- Il codice è in attesa sulla variabile sizeTask.  Si tratta della posizione in cui il metodo viene sospeso e il controllo viene restituito al codice chiamante fino al termine dell'attività asincrona nel relativo thread.
-- L'esecuzione non viene sospesa quando l'attività viene creata nella prima riga del metodo, indipendentemente dall'attività in fase di creazione. La parola chiave await indica la posizione in cui viene sospesa l'esecuzione.
+- Il codice è in attesa sulla variabile sizeTask.  *Si tratta della* posizione in cui il metodo viene sospeso e il controllo viene restituito al codice chiamante fino al termine dell'attività asincrona nel relativo thread.
+- L'esecuzione *non viene sospesa* quando l'attività viene creata nella prima riga del metodo, indipendentemente dall'attività in fase di creazione. La parola chiave await indica la posizione in cui viene sospesa l'esecuzione.
 - Al termine dell'attività asincrona, intResult viene impostato e l'esecuzione continua nel thread originale dalla riga await.
 
 
@@ -182,7 +182,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 Alcuni punti importanti:
 
 - Il metodo è contrassegnato come `async` ma restituisce `void` . Questa operazione viene in genere eseguita solo per i gestori eventi. in caso contrario `Task` , `Task<TResult>` viene restituito un oggetto o.
-- Codice `await` s `intResult` nel metodo direttamente in un'assegnazione a una variabile () a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività. `DownloadHomepage`  Si tratta della posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
+- Codice `await` s `intResult` nel metodo direttamente in un'assegnazione a una variabile () a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività. `DownloadHomepage`  *Si tratta della* posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
 - Quando il metodo asincrono viene completato e restituisce, l'esecuzione riprende in `await` , ovvero viene restituito il risultato Integer e quindi ne viene eseguito il rendering in un widget dell'interfaccia utente.
 
 

@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le eccezioni native e gestite 
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/05/2017
-ms.openlocfilehash: 16ff511a2984e98eb8a67ef33cdca25a63fff7ab
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a5dea7358e48ebb1961c1fa3253ad096d041c0cf
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200321"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279688"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Marshalling delle eccezioni in Novell. iOS
 
@@ -24,7 +24,7 @@ Tuttavia, le rispettive implementazioni sono diverse, il che significa che le li
 
 In questo documento vengono illustrati i problemi che possono verificarsi e le possibili soluzioni.
 
-Include anche un progetto di esempio, il marshalling delle [eccezioni](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling), che può essere usato per testare diversi scenari e le relative soluzioni.
+Include anche un progetto di esempio, il [marshalling delle eccezioni](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling), che può essere usato per testare diversi scenari e le relative soluzioni.
 
 ## <a name="problem"></a>Problema
 

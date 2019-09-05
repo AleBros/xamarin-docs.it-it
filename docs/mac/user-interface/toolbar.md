@@ -4,15 +4,15 @@ description: Questo articolo descrive l'uso delle barre degli strumenti in un'ap
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b2008b93f208d73af06c12fa493232fd56ddd64f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644741"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280111"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti in Novell. Mac
 
@@ -148,13 +148,13 @@ Utilizzare questa finestra di dialogo per impostare le proprietà per gli elemen
 
 ### <a name="adding-an-item-to-a-toolbar"></a>Aggiunta di un elemento a una barra degli strumenti
 
-Per aggiungere un elemento a una barra degli strumenti, selezionare la barra degli strumenti nella **gerarchia dell'interfaccia** e fare clic su uno degli elementi, facendo in modo che venga visualizzata la finestra di dialogo di personalizzazione. Trascinare quindi un nuovo elemento da **controllo libreria** all'area elementi della **barra degli strumenti** consentiti:
+Per aggiungere un elemento a una barra degli strumenti, selezionare la barra degli strumenti nella **gerarchia dell'interfaccia** e fare clic su uno degli elementi, facendo in modo che venga visualizzata la finestra di dialogo di personalizzazione. Trascinare quindi un nuovo elemento da **controllo libreria** all'area elementi della **barra degli strumenti consentiti** :
 
-Gli elementi consentiti della ![barra degli strumenti nella finestra di dialogo di personalizzazione] Gli elementi consentiti della (toolbar-images/add01.png "barra degli strumenti nella finestra di dialogo di personalizzazione")
+Gli ![elementi consentiti della barra degli strumenti nella finestra di dialogo di personalizzazione] Gli (toolbar-images/add01.png "elementi consentiti della barra degli strumenti nella finestra di dialogo di personalizzazione")
 
 Per assicurarsi che un nuovo elemento faccia parte della barra degli strumenti predefinita, trascinarlo nell'area **elementi della barra degli strumenti predefiniti** : 
 
-![Riordinamento di un elemento della barra degli strumenti mediante] trascinamento (toolbar-images/add02.png "Riordinamento di un elemento della barra degli strumenti mediante") trascinamento
+![Riordinamento di un elemento della barra degli strumenti mediante trascinamento](toolbar-images/add02.png "Riordinamento di un elemento della barra degli strumenti mediante trascinamento")
 
 Per riordinare gli elementi predefiniti della barra degli strumenti, trascinarli a sinistra o a destra.
 
@@ -166,19 +166,19 @@ Sono disponibili le proprietà seguenti:
 
 - **Nome immagine** : immagine da usare come icona per l'elemento
 - **Etichetta** -testo da visualizzare per l'elemento nella barra degli strumenti
-- **Etichetta tavolozza** -testo da visualizzare per l'elemento nell'area **elementi della barra degli strumenti** consentiti
+- **Etichetta tavolozza** -testo da visualizzare per l'elemento nell'area **elementi della barra degli strumenti consentiti**
 - **Tag** : identificatore univoco facoltativo che consente di identificare l'elemento nel codice.
 - **Identificatore** : definisce il tipo di elemento della barra degli strumenti. Per selezionare un elemento della barra degli strumenti nel codice, è possibile utilizzare un valore personalizzato.
 - **Selezionabile** : se questa opzione è selezionata, l'elemento fungerà da pulsante di abilitazione/disattivazione.
 
 > [!IMPORTANT]
-> Aggiungere un elemento all'area **elementi della barra degli strumenti** consentiti, ma non alla barra degli strumenti predefinita, per fornire opzioni di personalizzazione per gli utenti. 
+> Aggiungere un elemento all'area **elementi della barra degli strumenti consentiti** , ma non alla barra degli strumenti predefinita, per fornire opzioni di personalizzazione per gli utenti. 
 
 ### <a name="adding-other-ui-controls-to-a-toolbar"></a>Aggiunta di altri controlli dell'interfaccia utente a una barra degli strumenti
 
 È anche possibile aggiungere diversi elementi dell'interfaccia utente di Cocoa, ad esempio campi di ricerca e controlli segmentati, a una barra degli strumenti.
 
-Per provare questa operazione, aprire la barra degli strumenti nella **gerarchia dell'interfaccia** e selezionare una voce della barra degli strumenti per aprire la finestra di dialogo di personalizzazione. Trascinare un **campo di ricerca** dal **controllo libreria** all'area **elementi della barra degli strumenti** consentiti:
+Per provare questa operazione, aprire la barra degli strumenti nella **gerarchia dell'interfaccia** e selezionare una voce della barra degli strumenti per aprire la finestra di dialogo di personalizzazione. Trascinare un **campo di ricerca** dal **controllo libreria** all'area **elementi della barra degli strumenti consentiti** :
 
 ![Uso della finestra di dialogo di personalizzazione della barra degli strumenti](toolbar-images/add05.png "Uso della finestra di dialogo di personalizzazione della barra degli strumenti")
 
@@ -211,21 +211,21 @@ Utilizzando un **elemento della barra degli strumenti immagine**, qualsiasi imma
 
 5. Selezionare la barra degli strumenti nella **gerarchia dell'interfaccia** e fare clic su uno degli elementi per aprire la finestra di dialogo di personalizzazione.
 
-6. Trascinare un **elemento della barra degli strumenti immagine** dal **controllo libreria** all'area **elementi della barra** degli strumenti consentiti della barra degli strumenti: 
+6. Trascinare un **elemento della barra degli strumenti immagine** dal **controllo libreria** all'area **elementi della barra degli strumenti consentiti** della barra degli strumenti: 
 
-    ![Elemento della barra degli strumenti immagine aggiunto all'area elementi della barra degli strumenti] consentiti (toolbar-images/edit14.png "Elemento della barra degli strumenti immagine aggiunto all'area elementi della barra degli strumenti") consentiti
+    ![Elemento della barra degli strumenti immagine aggiunto all'area elementi della barra degli strumenti consentiti](toolbar-images/edit14.png "Elemento della barra degli strumenti immagine aggiunto all'area elementi della barra degli strumenti consentiti")
 
 7. Nel **controllo attributi**selezionare l'immagine appena aggiunta in Visual Studio per Mac: 
 
     ![Impostazione di un'immagine personalizzata per un elemento della barra degli strumenti](toolbar-images/edit15.png "Impostazione di un'immagine personalizzata per un elemento della barra degli strumenti")
 
-8. Impostare l' **etichetta** su "Cestino" e l' **etichetta** della tavolozza su "Cancella documento": 
+8. Impostare l' **etichetta** su "Cestino" e l' **etichetta della tavolozza** su "Cancella documento": 
 
     ![Impostazione dell'etichetta dell'elemento della barra degli strumenti e dell'etichetta tavolozza](toolbar-images/edit16.png "Impostazione dell'etichetta dell'elemento della barra degli strumenti e dell'etichetta tavolozza")
 
-9. Trascinare un **elemento della barra degli strumenti separatore** dal **controllo libreria** all'area **elementi della barra** degli strumenti consentiti della barra degli strumenti: 
+9. Trascinare un **elemento della barra degli strumenti separatore** dal **controllo libreria** all'area elementi della barra degli strumenti **consentiti** della barra degli strumenti: 
 
-    [![Elemento barra degli strumenti separatore aggiunto all'area elementi della barra degli strumenti] consentiti (toolbar-images/edit17.png "Elemento barra degli strumenti separatore aggiunto all'area elementi della barra degli strumenti") consentiti](toolbar-images/edit17-large.png#lightbox)
+    [![Elemento barra degli strumenti separatore aggiunto all'area elementi della barra degli strumenti consentiti](toolbar-images/edit17.png "Elemento barra degli strumenti separatore aggiunto all'area elementi della barra degli strumenti consentiti")](toolbar-images/edit17-large.png#lightbox)
 
 10. Trascinare l'elemento separatore e l'elemento "Cestino" sull'area **elementi della barra degli strumenti predefinita** e impostare l'ordine degli elementi della barra degli strumenti da sinistra a destra, come indicato di seguito (colori, tipi di carattere, separatore, cestino, spazio flessibile, stampa): 
 

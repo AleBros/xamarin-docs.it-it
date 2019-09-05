@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6f9fd193bda16e3b5e048faf5ec7c5eb09b58bcf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199140"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282693"
 ---
 # <a name="stack-views-in-xamarinios"></a>Visualizzazioni dello stack in Novell. iOS
 
@@ -52,7 +52,7 @@ In **attribute Inspector**impostare le opzioni seguenti:
 
 Dove:
 
-- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste orizzontalmente o verticalmente.
+- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste **orizzontalmente** o **verticalmente**.
 - **Alignment** : controlla il modo in cui le visualizzazioni sono allineate nella visualizzazione stack.
 - **Distribution** : controlla il modo in cui le visualizzazioni vengono ridimensionate all'interno della visualizzazione stack.
 - **Spaziatura** : controlla lo spazio minimo tra le singole visualizzazioni nella visualizzazione stack.
@@ -134,7 +134,7 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 
 Verranno ora esaminati in dettaglio alcune parti di questo codice. In primo luogo, vengono `if` usate istruzioni per verificare che non siano presenti più di cinque "stelle" o minori di zero.
 
-Per aggiungere una nuova "stella", caricare la relativa immagine e impostarne la **modalità di contenuto** per la scalabilità dell' **aspetto**:
+Per aggiungere una nuova "stella", caricare la relativa immagine e impostarne la **modalità di contenuto** per la **scalabilità dell'aspetto**:
 
 ```csharp
 var icon = new UIImageView (new UIImage("icon.png"));
@@ -226,11 +226,11 @@ Sono disponibili diversi tipi di layout che funzionano bene con i controlli di v
 
 Sono disponibili diverse proprietà che consentono di controllare il modo in cui una visualizzazione stack organizzerà la raccolta di visualizzazioni.
 
-- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste orizzontalmente o verticalmente.
+- **Axis** : determina se la visualizzazione dello stack dispone le sottoviste **orizzontalmente** o **verticalmente**.
 - **Alignment** : controlla il modo in cui le visualizzazioni sono allineate nella visualizzazione stack.
 - **Distribution** : controlla il modo in cui le visualizzazioni vengono ridimensionate all'interno della visualizzazione stack.
 - **Spaziatura** : controlla lo spazio minimo tra le singole visualizzazioni nella visualizzazione stack.
-- **Relativa** alla baseline: `true`se, la spaziatura verticale di ogni sottovista sarà derivata dalla relativa Baseline.
+- **Relativa alla baseline** : `true`se, la spaziatura verticale di ogni sottovista sarà derivata dalla relativa Baseline.
 - **Layout margini relativi** : inserisce le visualizzazioni subordinate rispetto ai margini di layout standard.
 
 In genere si utilizzerà una visualizzazione stack per disporre un numero ridotto di visualizzazioni. È possibile creare interfacce utente più complesse annidando una o più visualizzazioni dello stack l'una all'altra (come è stato fatto nella [Guida introduttiva di UIStackView](#uistackview-quickstart) precedente).

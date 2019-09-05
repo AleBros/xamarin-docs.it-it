@@ -4,21 +4,21 @@ description: Questo documento descrive la relazione tra un'app iOS, un'app Watch
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 9108f83d76e07d12d70b400075142d9c73519716
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 72a1fe3541eb4ece67dd137ebcd33f8e81ae9553
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065600"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292259"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Riferimenti del progetto watchos in Novell
 
 _Spiegazione della relazione tra l'app iOS, l'app Watch e l'estensione Watch._
 
-I tre progetti in una soluzione watchos vengono *automaticamente* configurati per fare riferimento reciprocamente in modo specifico per la compilazione e il raggruppamento delle app watchos 3. Questi riferimenti al progetto e le impostazioni dell'identificatore del bundle sono descritti di seguito per riferimento.
+I tre progetti in una soluzione watchos vengono *automaticamente configurati* per fare riferimento reciprocamente in modo specifico per la compilazione e il raggruppamento delle app watchos 3. Questi riferimenti al progetto e le impostazioni dell'identificatore del bundle sono descritti di seguito per riferimento.
 
 ## <a name="project-references"></a>Riferimenti al progetto
 
@@ -41,7 +41,7 @@ Per visualizzare i riferimenti, fare doppio clic sui nodi riferimenti per ogni p
 
 ## <a name="bundle-identifiers"></a>Identificatori bundle
 
-È anche necessario assicurarsi che gli identificatori del **bundle** siano corretti.
+È anche necessario assicurarsi che gli **identificatori del bundle** siano corretti.
 Tutti e tre i progetti devono avere lo *stesso* prefisso identificatore, con i due progetti Watch con estensioni predefinite `watchkitextension` di `watchkitapp`e, come indicato di seguito (per l'esempio **WatchKitCatalog** ):
 
 - Progetto unificato Novell. iOS-`com.xamarin.WatchKitCatalog`

@@ -3,15 +3,15 @@ title: Aggiornamento delle app Novell. Forms esistenti
 description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. Forms dal API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1820dfa1fb756ede6076fb61ad5eb4f6c9926fe8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199216"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280715"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Aggiornamento delle app Novell. Forms esistenti
 
@@ -53,7 +53,7 @@ Fare clic sul progetto iOS in modo che sia selezionato, quindi scegliere **proge
 Questa operazione verrà automaticamente:
 
 - Modificare il tipo di progetto per supportare l'API Unified a 64 bit.
-- Modificare il riferimento al Framework in **Novell. iOS** (sostituendo il vecchio riferimento MonoTouch).
+- Modificare il riferimento al Framework in **Novell. iOS** (sostituendo il vecchio riferimento **MonoTouch** ).
 - Modificare i riferimenti allo spazio dei nomi nel codice per `MonoTouch` rimuovere il prefisso.
 - Aggiornare il file **csproj** per usare le destinazioni di compilazione corrette per la API unificata.
 

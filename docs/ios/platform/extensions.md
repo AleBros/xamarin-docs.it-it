@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621087"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290598"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni iOS in Novell. iOS
 
@@ -93,7 +93,7 @@ Il progetto dell'estensione, inoltre, presenta i requisiti seguenti:
 
   ![](extensions-images/bundleidentifiers.png) 
 - `NSExtensionPointIdentifier`Deve definire la chiave, con un valore appropriato, `com.apple.widget-extension` ad esempio per un widget del centro `Info.plist` notifiche di oggi, nel file.
-- Deve anche definire la `NSExtensionMainStoryboard` chiave o `Info.plist` la `NSExtensionPrincipalClass` chiave nel file con un valore appropriato:
+- Deve *anche definire la* `NSExtensionMainStoryboard` chiave o `Info.plist` la `NSExtensionPrincipalClass` chiave nel file con un valore appropriato:
   - Usare la `NSExtensionMainStoryboard` chiave per specificare il nome dello storyboard che presenta l'interfaccia utente principale per l'estensione (meno `.storyboard`). Ad esempio, `Main` per il `Main.storyboard` file.
   - Usare la `NSExtensionPrincipalClass` chiave per specificare la classe che verrà inizializzata quando viene avviata l'estensione. Il valore deve corrispondere al valore del **Registro** del `UIViewController`: 
 
@@ -264,7 +264,7 @@ Il nuovo widget verrà aggiunto alla visualizzazione **Today** e i risultati ver
 
 ## <a name="communicating-with-the-host-app"></a>Comunicazione con l'app host
 
-L'estensione Today di esempio creata in precedenza non comunica con la relativa app host ( la schermata odierna). In caso affermativo, utilizzerebbe la proprietà [ExtensionContext](xref:Foundation.NSExtensionContext) delle `TodayViewController` classi o `CodeBasedViewController` . 
+L'estensione Today di esempio creata in precedenza non comunica con la relativa app host (la schermata **odierna** ). In caso affermativo, utilizzerebbe la proprietà [ExtensionContext](xref:Foundation.NSExtensionContext) delle `TodayViewController` classi o `CodeBasedViewController` . 
 
 Per le estensioni che riceveranno i dati dalle app host, i dati sono sotto forma di matrice di oggetti [NSExtensionItem](xref:Foundation.NSExtensionItem) archiviati nella proprietà [InputItems](xref:Foundation.NSExtensionContext.InputItems) di [ExtensionContext](xref:Foundation.NSExtensionContext) dell'estensione `UIViewController`.
 

@@ -4,15 +4,15 @@ description: "iOS 6 introduce due modifiche all'API del kit di archiviazione: la
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 818d5c734e8e662c271e20c26347e5e941ddad3e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4197dfb38ac6118d20da2b87d0c686558d77b0f6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281567"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Modifiche di StoreKit in iOS 6
 
@@ -39,7 +39,7 @@ In precedenza le applicazioni avrebbero dovuto attivare iTunes, l'App Store o il
 Di seguito sono riportati alcuni esempi di come è possibile utilizzare:
 
 - **Incoraggiare gli utenti a valutare l'app** : è possibile aprire la pagina dell'app Store in modo che l'utente possa valutare ed esaminare l'app senza lasciarla.
-- **Promozione** incrociata delle app: consente all'utente di visualizzare altre app pubblicate, con la possibilità di acquistare/scaricare immediatamente.
+- **Promozione incrociata delle app** : consente all'utente di visualizzare altre app pubblicate, con la possibilità di acquistare/scaricare immediatamente.
 - **Aiutare gli utenti a trovare e scaricare il contenuto** : consentire agli utenti di acquistare contenuti che l'app trova, gestisce o aggrega (ad esempio, un'app relativa alla musica può fornire una playlist di canzoni e consentire l'acquisto di ogni brano dall'interno dell'app.
 
 `SKStoreProductViewController` Una volta visualizzato, l'utente può interagire con le informazioni sul prodotto come se si trovasse in iTunes, in App Store o in da iBookstore. L'utente può:
@@ -190,7 +190,7 @@ In iOS 6 Apple offre una variante dei prodotti distribuiti dal server: i file di
 L'uso dell'app Store per fornire l'acquisto in-app *con contenuto ospitato* richiede l'installazione e la configurazione seguenti:
 
 - **iTunes Connect** : è *necessario* avere fornito le informazioni bancarie e fiscali ad Apple per poter rimettere i fondi raccolti per conto dell'utente. È quindi possibile configurare i prodotti da vendere e configurare gli account utente sandbox per testare l'acquisto.  _È inoltre necessario configurare il contenuto ospitato per i prodotti non utilizzabili che si desidera ospitare con Apple_.
-- **portale** di provisioning iOS: creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app, come per qualsiasi applicazione che supporta l'acquisto in-app.
+- **portale di provisioning iOS** : creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app, come per qualsiasi applicazione che supporta l'acquisto in-app.
 - **Store Kit** : aggiunta di codice all'app per la visualizzazione di prodotti, acquisto di prodotti e ripristino di transazioni.  _In iOS 6 Store Kit gestisce anche il download del contenuto del prodotto, in background, con aggiornamenti sullo stato di avanzamento._
 - **Codice personalizzato** : per tenere traccia degli acquisti effettuati dai clienti e fornire i prodotti o i servizi acquistati. Usare nuove classi del kit di archiviazione iOS 6 `SKDownload` come per recuperare il contenuto ospitato da Apple.
 

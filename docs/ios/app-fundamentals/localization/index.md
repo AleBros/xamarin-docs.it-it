@@ -4,15 +4,15 @@ description: Questo documento descrive le funzionalità di localizzazione di iOS
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/28/2017
-ms.openlocfilehash: 70e9f403e40cff8e1af536acf3a5efc3d12ad20b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e394b5487b240f98310ab223371466d62a3bdf23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121396"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278878"
 ---
 # <a name="localization-in-xamarinios"></a>Localizzazione in Novell. iOS
 
@@ -123,8 +123,8 @@ Il `NSBundle.MainBundle.GetLocalizedString` metodo cerca il testo localizzato ch
 #### <a name="strings-file-locations"></a>percorsi file. Strings
 
 - **Base. lproj** è la directory che contiene le risorse per la lingua predefinita.
-  Si trova spesso nella radice del progetto (ma può anche essere inserito nella cartella Resources).
-- **&lt;le&gt;directory Language. lproj** vengono create per ogni lingua supportata, in genere nella cartella Resources.
+  Si trova spesso nella radice del progetto (ma può anche essere inserito nella cartella **Resources** ).
+- **&lt;le&gt;directory Language. lproj** vengono create per ogni lingua supportata, in genere nella cartella **Resources** .
 
 In ogni directory della lingua può essere presente un numero di file con **estensione stringhe** diversi:
 

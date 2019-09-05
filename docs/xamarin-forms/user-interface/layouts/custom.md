@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526960"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292579"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Creare un layout personalizzato in Novell. Forms
 
@@ -74,8 +74,8 @@ Il processo per la creazione di un layout personalizzato è come segue:
 1. Eseguire l'override di [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) metodo da richiamare il [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) metodo su elementi figlio del layout e restituire una dimensione richiesta per il layout. Per altre informazioni, vedere [override del metodo OnMeasure](#onmeasure).
 1. Eseguire l'override di [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) metodo da richiamare il [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) metodo nell'elemento figlio del layout. Impossibilità di richiamare il [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) metodo su ogni elemento figlio in un layout comporterà l'elemento figlio mai la ricezione di una dimensione appropriata o una posizione, e pertanto l'elemento figlio non diventerà visibile nella pagina. Per altre informazioni, vedere [override del metodo LayoutChildren](#layoutchildren).
 
-  > [!NOTE]
->  Durante l'enumerazione di elementi figlio nel [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) e [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) sostituzioni, ignorare qualsiasi figlio il cui [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) è impostata su `false`. Ciò garantisce che il layout personalizzato non lascia spazio per gli elementi figlio invisibili.
+    > [!NOTE]
+    > Durante l'enumerazione di elementi figlio nel [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) e [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) sostituzioni, ignorare qualsiasi figlio il cui [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) è impostata su `false`. Ciò garantisce che il layout personalizzato non lascia spazio per gli elementi figlio invisibili.
 
 1. [*facoltativi*] eseguire l'Override di [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) metodo ricevere una notifica quando gli elementi figlio vengono aggiunti o rimossi dal layout. Per altre informazioni, vedere [override del metodo InvalidateLayout](#invalidatelayout).
 1. [*facoltativi*] eseguire l'Override di [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) metodo per ricevere una notifica quando viene modificato uno degli elementi figlio del layout delle dimensioni. Per altre informazioni, vedere [override del metodo OnChildMeasureInvalidated](#onchildmeasureinvalidated).

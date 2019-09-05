@@ -4,15 +4,15 @@ description: Questo documento descrive i prodotti non utilizzabili in Novell. iO
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: e09d8511dc74bdf9368497ff8fe39bd87b62565c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: aa478636b4ab94ab000fd98860646bfa300e9fab
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528299"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291318"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti non utilizzabili in Novell. iOS
 
@@ -20,7 +20,7 @@ I prodotti non consumabili sono di proprietà del cliente. Si prevede che l'uten
 
 ## <a name="non-consumable-products-sample"></a>Esempio di prodotti non utilizzabili
 
-Il [codice InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un progetto denominatonon consumabile. Nell'esempio di codice viene illustrato come implementare prodotti non utilizzabili utilizzando come esempio i filtri foto. Una volta acquistato un filtro, è possibile applicarlo alla foto più volte. Non è mai necessario riacquistarlo.   
+Il [codice InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contiene un progetto denominato non *consumabile*. Nell'esempio di codice viene illustrato come implementare prodotti non utilizzabili utilizzando come esempio i filtri foto. Una volta acquistato un filtro, è possibile applicarlo alla foto più volte. Non è mai necessario riacquistarlo.   
    
    
    

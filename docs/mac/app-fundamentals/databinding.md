@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso della codifica chiave-valore e l'oss
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227264"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290155"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data Binding e codifica chiave-valore in Novell. Mac
 
@@ -482,7 +482,7 @@ Per associare i dati al modulo `PersonModel` esposto tramite la `Person` chiave,
 7. Selezionare l'etichetta **numero di dipendenti gestiti** , espandere la couvertura **nascosta** e selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere `self.Person.isManager` quindi il **percorso della chiave**:
 
     [![Immissione del percorso della chiave](databinding-images/simple07.png "Immissione del percorso della chiave")](databinding-images/simple07-large.png#lightbox)
-8. Selezionare `NSNegateBoolean` dall'elenco a discesa del trasformatore del **valore** :
+8. Selezionare `NSNegateBoolean` dall'elenco a discesa del **trasformatore del valore** :
 
     ![Selezione della trasformazione chiave NSNegateBoolean](databinding-images/simple08.png "Selezione della trasformazione chiave NSNegateBoolean")
 9. Indica data binding che l'etichetta sarà nascosta se il valore della `isManager` proprietà è. `false`

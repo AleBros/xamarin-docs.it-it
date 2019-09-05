@@ -4,15 +4,15 @@ description: Questo documento introduce l'editor grafico e avanzato delle propri
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ca3622e01d6c7b616dc115b89ffcccf64022b1a1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527135"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286797"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Uso degli elenchi di proprietà in Novell. iOS
 
@@ -67,7 +67,7 @@ Le sezioni informazioni sulla **distribuzione** del dispositivo vengono visualiz
 
 ### <a name="supported-device-orientations"></a>Orientamenti dei dispositivi supportati
 
- Gli orientamenti dei **dispositivi supportati** controllano il modo in cui l'app risponde alla rotazione del dispositivo. Per le app iPhone/iPad è molto comune supportare solo il formato **verticale**o tutto tranne. In genere, tutte le applicazioni iPad tranne i giochi devono supportare tutti gli orientamenti.
+ Gli **orientamenti dei dispositivi supportati** controllano il modo in cui l'app risponde alla rotazione del dispositivo. Per le app iPhone/iPad è molto comune supportare solo il formato **verticale**o **tutto tranne.** In genere, tutte le applicazioni iPad tranne i giochi devono supportare tutti gli orientamenti.
 
 ### <a name="status-bar-styles"></a>Stili della barra di stato
 
@@ -118,7 +118,7 @@ A volte un'applicazione deve supportare l'apertura di un tipo di file personaliz
 
  [![](property-lists-images/uti.png "Editor uti")](property-lists-images/uti.png#lightbox)
 
-Proprio come il tipo esportato uti specifica uti personalizzati specifici per l'app, il tipo `UIImportedTypeDeclarations` importato *uti* (chiave) specifica i tipi personalizzati supportati ma non di proprietà dell'applicazione.
+Proprio come il tipo esportato uti specifica uti personalizzati specifici per l'app, il *tipo importato uti* ( `UIImportedTypeDeclarations` chiave) specifica i tipi personalizzati supportati ma non di proprietà dell'applicazione.
 
 Per altre informazioni sull'uso di uti personalizzati, vedere la pagina relativa alla procedura di [registrazione dei tipi di file](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_declare/understand_utis_declare.html#//apple_ref/doc/uid/TP40001319-CH204-SW1) di Apple nell'app.
 

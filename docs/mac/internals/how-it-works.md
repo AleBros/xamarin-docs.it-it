@@ -1,30 +1,30 @@
 ---
 title: Come funziona Xamarin.Mac
-description: Questo documento descrive i meccanismi interni di xamarin. Mac. In particolare, analizza i costruttori, gestione della memoria, in anticipo rispetto alla compilazione e il programma di registrazione.
+description: Questo documento descrive i meccanismi interni di Novell. Mac. In particolare, vengono esaminati i costruttori, la gestione della memoria, la compilazione anticipata del tempo e il registrar.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/25/2017
-ms.openlocfilehash: 0635e110cb2aa7bc00234d3d06df57e0fd6f966e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3a2ba8f56604dcf42604c2cb653931d0397a0d82
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61033845"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287725"
 ---
 # <a name="how-xamarinmac-works"></a>Come funziona Xamarin.Mac
 
-La maggior parte dei casi lo sviluppatore non sarà mai necessario preoccuparsi di interno "magic" di xamarin. Mac, tuttavia, avere una conoscenza approssimativa del modo in cui funziona cose dietro le quinte fornirà assistenza nell'entrambi interpretazione documentazione esistente con un C# obiettivo e il debug problemi quando si verificano.
+Nella maggior parte dei casi lo sviluppatore non dovrà mai preoccuparsi della "magia" interna di Novell. Mac, tuttavia, avendo una conoscenza approssimativa del modo in cui le cose funzionano dietro le quinte sarà utile per interpretare la documentazione C# esistente con un obiettivo e il debug problemi quando si verificano.
 
-In xamarin. Mac, un'applicazione bridge tra due mondi: Non è presente il runtime di Objective-C basata contenente istanze di classi native (`NSString`, `NSApplication`e così via) ed è presente il C# runtime che contiene le istanze di classi gestite (`System.String`, `HttpClient`e così via). Tra questi due mondi, xamarin. Mac consente di creare un bridge bidirezionali in modo che un'app può chiamare metodi (selettori) in Objective-C (ad esempio `NSApplication.Init`) e Objective-C possono chiamare l'app C# eseguire il backup di metodi (ad esempio, i metodi in un delegato dell'app). In generale, le chiamate in Objective-C vengono gestite in modo trasparente attraverso **P/Invoke** e codice runtime Xamarin offre.
+In Novell. Mac un'applicazione Bridge due mondi: È presente il runtime di Objective-C che contiene le istanze delle classi`NSString`Native `NSApplication`(, e così via) ed C# è presente il runtime che contiene le`System.String`istanze `HttpClient`delle classi gestite (, e così via). Tra questi due mondi, Novell. Mac crea un Bridge bidirezionale, in modo che un'app possa chiamare metodi (selettori) in Objective-c `NSApplication.Init`(ad esempio) e Objective-c può chiamare C# i metodi dell'app indietro (come i metodi in un delegato dell'app). In generale, le chiamate in Objective-C vengono gestite in modo trasparente tramite **P/Invoke** e il codice di runtime fornito da Novell.
 
 <a name="exposing-classes" />
 
-## <a name="exposing-c-classes--methods-to-objective-c"></a>Esposizione di C# classi o metodi di Objective-c
+## <a name="exposing-c-classes--methods-to-objective-c"></a>Esposizione di C# classi/metodi a Objective-C
 
-Tuttavia, per Objective-C richiamare in un'app C# oggetti, devono essere esposte in modo da Objective-C possono comprendere. Questa operazione viene eseguita tramite il `Register` e `Export` attributi. Vedere l'esempio seguente:
+Tuttavia, per fare in modo che Objective-C richiami negli C# oggetti di un'app, è necessario esporli in modo che Objective-c possa comprendere. Questa operazione viene eseguita tramite `Register` gli `Export` attributi e. Vedere l'esempio seguente:
 
 ```csharp
 [Register ("MyClass")]
@@ -42,13 +42,13 @@ public class MyClass : NSObject
 }
 ```
 
-In questo esempio, il runtime di Objective-C saprà ora su una classe denominata `MyClass` con i selettori chiamati `init` e `run`.
+In questo esempio, il runtime di Objective-C ora è in grado di conoscere `MyClass` una classe denominata con `init` i `run`selettori denominati e.
 
-Nella maggior parte dei casi, questo è un dettaglio di implementazione che lo sviluppatore può ignorare, poiché la maggior parte dei callback di un'app riceve saranno tramite metodi sottoposti a override nel `base` classi (ad esempio `AppDelegate`, `Delegates`, `DataSources`) o scegliere  **Azioni** passato alle API. In tutti questi casi `Export` gli attributi non sono necessari nella C# codice.
+Nella maggior parte dei casi, si tratta di un dettaglio di implementazione che lo sviluppatore può ignorare, in quanto la maggior parte delle richiamate ricevute `base` da un'app sarà tramite metodi `DataSources`sottoposti a override sulle classi ( `AppDelegate`ad esempio, `Delegates`,) o sulle **azioni** passato alle API. In tutti questi casi, `Export` gli attributi non sono necessari nel C# codice.
 
 ## <a name="constructor-runthrough"></a>Costruttore runthrough
 
-In molti casi, lo sviluppatore deve esporre l'app C# costruzione di classi API per il runtime di Objective-C in modo che è possibile creare istanze da diverse posizioni, ad esempio quando chiamato in XIB dello Storyboard o del file. Ecco i cinque costruttori più comuni usati nelle App xamarin. Mac:
+In molti casi, lo sviluppatore deve esporre l'API di costruzione delle C# classi dell'app al runtime di Objective-C, in modo che sia possibile crearne un'istanza da posizioni quali, ad esempio, quando vengono chiamate in file storyboard o XIB. Ecco i cinque costruttori più comuni usati nelle app Novell. Mac:
 
 ```csharp
 // Called when created from unmanaged code
@@ -81,83 +81,83 @@ public CustomView () : base (NSObjectFlag.Empty)
 }
 ```
 
-In generale, lo sviluppatore è consigliabile lasciare il `IntPtr` e `NSCoder` costruttori generati durante la creazione di alcuni tipi, ad esempio custom `NSViews` da solo. Se xamarin. Mac è necessario chiamare uno di questi costruttori in risposta a una richiesta di runtime di Objective-C ed è stato rimosso, l'app si arresterà in codice nativo e potrebbe essere difficile individuare esattamente il problema.
+In generale, lo sviluppatore deve lasciare i `IntPtr` costruttori `NSCoder` e generati durante la creazione di alcuni tipi, ad esempio Custom `NSViews` alone. Se Novell. Mac deve chiamare uno di questi costruttori in risposta a una richiesta di runtime di Objective-C ed è stata rimossa, l'app si arresterà in modo anomalo all'interno del codice nativo e potrebbe essere difficile determinare esattamente il problema.
 
-## <a name="memory-management-and-cycles"></a>Cicli e gestione della memoria
+## <a name="memory-management-and-cycles"></a>Gestione della memoria e cicli
 
-Gestione della memoria in xamarin. Mac è per molti aspetti molto simili a xamarin. IOS. È anche un argomento complesso, uno esula dall'ambito di questo documento. Leggi i [consigliate per le prestazioni e memoria](~/cross-platform/deploy-test/memory-perf-best-practices.md).
+La gestione della memoria in Novell. Mac è molto simile a Novell. iOS. È anche un argomento complesso, che esula dall'ambito di questo documento. Leggere le procedure consigliate per la [memoria e le prestazioni](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-## <a name="ahead-of-time-compilation"></a>-Ahead della fase di compilazione
+## <a name="ahead-of-time-compilation"></a>Compilazione anticipata
 
-In genere, le applicazioni .NET non compilare fino al codice macchina quando vengono compilati, ma vengono compilate a livello intermedio denominato codice linguaggio intermedio che ottiene _Just-In-Time_ (JIT) compilate in codice macchina quando l'app viene avviata.
+In genere, le applicazioni .NET non vengono compilate nel codice del computer quando vengono compilate, ma vengono compilate in un livello intermedio denominato codice IL che ottiene la compilazione JIT ( _just-in-Time_ ) compilata nel codice macchina quando viene avviata l'app.
 
-Il tempo necessario il runtime di mono per la compilazione JIT questo codice macchina rallentando l'avvio di un'app xamarin. Mac fino al 20%, perché richiede tempo per il codice necessario macchina deve essere generato.
+Il tempo impiegato dal runtime di mono per la compilazione JIT del codice macchina può rallentare l'avvio di un'app Novell. Mac fino al 20%, perché richiede tempo per la generazione del codice macchina necessario.
 
-A causa delle limitazioni imposte da Apple iOS, la compilazione JIT del codice di linguaggio intermedio non è disponibile per xamarin. IOS. Di conseguenza, tutte le app xamarin. IOS sono pieni _Ahead Of Time_ (AOT) compilate in codice macchina durante il ciclo di compilazione.
+A causa delle limitazioni imposte da Apple in iOS, la compilazione JIT del codice IL non è disponibile per Novell. iOS. Di conseguenza, tutte le app Novell. iOS sono compilate in modo completo (AOT) nel codice del computer durante il ciclo _di_ compilazione.
 
-Nuovo a xamarin. Mac è la capacità di AOT IL codice durante il ciclo di compilazione di app, proprio come xamarin. IOS possono. Xamarin. Mac Usa una _ibrida_ approccio AOT che compila la maggior parte del codice macchina necessaria, ma consente al runtime per la compilazione trampolines necessari e la flessibilità necessaria per continuare a supportare Reflection. Emit (e altri usi casi che attualmente funziona con xamarin. Mac).
+Una novità di Novell. Mac è la possibilità di AOT il codice IL durante il ciclo di compilazione dell'app, proprio come Novell. iOS. Novell. Mac usa un approccio AOT _ibrido_ che compila la maggior parte del codice computer necessario, ma consente al runtime di compilare i tappeti elastici necessari e la flessibilità di continuare a supportare Reflection. Emit (e altri casi d'uso attualmente disponibili Novell. Mac).
 
-Esistono due aree principali in cui AOT consentono di un'app xamarin. Mac:
+L'AOT può aiutare un'app Novell. Mac in due aree principali:
 
-- **Meglio i log di arresto anomalo del sistema "nativa"** : se un'applicazione xamarin. Mac si blocca nel codice nativo, ovvero problema comune quando si effettuano chiamate non è valide nelle API Cocoa (ad esempio l'invio un `null` in un metodo che non lo accetta) nativa di log con JIT di arresto anomalo frame sono difficili da analizzare. Poiché i frame JIT non dispongono di informazioni di debug, vi saranno più righe con gli offset esadecimale e senza alcuna indicazione di cosa stava accadendo. AOT genera frame denominati "real" e le tracce sono molto più facili da leggere. Questo significa anche app xamarin. Mac interagisce meglio con gli strumenti nativi, ad esempio **lldb** e **Instruments**.
-- **Avviare migliori prestazioni in fase di** : per le applicazioni di grandi dimensioni di xamarin. Mac, con un più secondo tempo di avvio, tutto il codice di compilazione JIT possono richiedere una quantità significativa di tempo. AOT esegue queste operazioni fin dall'inizio.
+- **Migliori log di arresto anomalo** del sistema: se un'applicazione Novell. Mac si arresta in modo anomalo nel codice nativo, situazione comune quando si effettuano chiamate non valide `null` nelle API Cocoa (ad esempio l'invio di un oggetto in un metodo che non lo accetta), log di arresto anomalo nativo con frame JIT sono difficili da analizzare. Poiché i frame JIT non dispongono di informazioni di debug, saranno presenti più righe con offset esadecimali e nessun indizio sul comportamento. AOT genera frame denominati "reali" e le tracce sono molto più facili da leggere. Questo significa anche che l'app Novell. Mac interagisce meglio con strumenti nativi come **LLDB** e **Instruments**.
+- **Prestazioni migliori in fase di avvio** : per applicazioni Novell. Mac di grandi dimensioni, con un tempo di avvio di più secondi, la compilazione JIT di tutto il codice può richiedere una quantità di tempo significativa. AOT funziona in primo piano.
 
-### <a name="enabling-aot-compilation"></a>Abilitare la compilazione AOT
+### <a name="enabling-aot-compilation"></a>Abilitazione della compilazione AOT
 
-AOT è abilitata in xamarin. Mac facendo doppio clic il **nome progetto** nel **Esplora soluzioni**, il passaggio a **compilazione Mac** e l'aggiunta di `--aot:[options]` al  **Argomenti aggiuntivi di mmp:** campo (dove `[options]` corrisponde a uno o più opzioni per controllare il tipo AOT, vedere di seguito). Ad esempio:
+AOT è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** nella **Esplora soluzioni**, passando a **compilazione Mac** e `--aot:[options]` aggiungendo ad **altri argomenti MMP:** Field (dove `[options]` è uno o più opzioni per controllare il tipo AOT, vedere di seguito. Ad esempio:
 
-![Aggiunta di AOT agli argomenti aggiuntivi di mmp](how-it-works-images/aot01.png "AOT aggiunta agli argomenti aggiuntivi di mmp")
+![Aggiunta di AOT ad argomenti aggiuntivi di MMP](how-it-works-images/aot01.png "Aggiunta di AOT ad argomenti aggiuntivi di MMP")
 
 > [!IMPORTANT]
-> Abilita AOT compilazione aumenta notevolmente il tempo di compilazione, a volte fino a qualche minuto, ma può migliorare i tempi di avvio dell'app da una media pari al 20%. Di conseguenza, la compilazione AOT deve essere abilitata solo nei **rilascio** le compilazioni di un'app xamarin. Mac.
+> L'abilitazione della compilazione AOT comporta un aumento significativo del tempo di compilazione, a volte fino a diversi minuti, ma può migliorare i tempi di avvio delle app in base a una media del 20%. Di conseguenza, la compilazione AOT dovrebbe essere abilitata solo nelle build di **versione** di un'app Novell. Mac.
 
 ### <a name="aot-compilation-options"></a>Opzioni di compilazione AOT
 
-Esistono diverse opzioni che possono essere modificate quando si abilita la compilazione AOT in un'app xamarin. Mac:
+Sono disponibili diverse opzioni che possono essere modificate quando si Abilita la compilazione AOT in un'app Novell. Mac:
 
-- `none` -Nessuna compilazione AOT. Questa è l'impostazione predefinita.
-- `all` -AOT compila ogni assembly nel MonoBundle.
-- `core` -Compilazione AOT i `Xamarin.Mac`, `System` e `mscorlib` assembly.
-- `sdk` -AOT viene compilato il `Xamarin.Mac` e gli assembly di librerie di classi Base (BCL).
-- `|hybrid` -Aggiunta a una delle opzioni precedenti in questo modo ibrido AOT che consente la rimozione dei livello di integrità, ma verrà comporterà tempi di compilazione più.
-- `+` -Include un singolo file per la compilazione AOT.
-- `-` -Rimuove un singolo file dalla compilazione AOT.
+- `none`-Nessuna compilazione AOT. Questa è l'impostazione predefinita.
+- `all`-AOT compila ogni assembly nel monobundle.
+- `core`-AOT compila gli `Xamarin.Mac`assembly, `System` e. `mscorlib`
+- `sdk`-AOT compila gli assembly `Xamarin.Mac` della libreria di classi di base e.
+- `|hybrid`-L'aggiunta di questa opzione a una delle opzioni precedenti consente l'AOT ibrido che consente la rimozione del, ma comporterà tempi di compilazione più lunghi.
+- `+`: Include un singolo file per la compilazione AOT.
+- `-`-Rimuove un singolo file dalla compilazione AOT.
 
-Ad esempio, `--aot:all,-MyAssembly.dll` avrebbero consentito la compilazione AOT in tutti gli assembly di MonoBundle _tranne_ `MyAssembly.dll` e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` consentirebbe ibrida, includere codice AOT il `MyOtherAssembly.dll` ed esclusione di `mscorlib.dll`.
+Ad esempio, `--aot:all,-MyAssembly.dll` consente di abilitare la compilazione AOT su tutti gli assembly nel monobundle, _ad eccezione_ `MyAssembly.dll` di e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` di `mscorlib.dll`abilitare Hybrid, il `MyOtherAssembly.dll` codice AOT include ed escludendo.
 
-## <a name="partial-static-registrar"></a>Programma di registrazione statico parziale
+## <a name="partial-static-registrar"></a>Registrar statico parziale
 
-Quando si sviluppa un'app xamarin. Mac, riducendo al minimo il tempo tra il completamento di una modifica e il relativo test diventa importante per lo sviluppo scadenze. Le strategie, ad esempio la modularizzazione della codebase e gli unit test possono contribuire a ridurre i tempi di compilazione, poiché riducono il numero di volte che un'app richiede una ricompilazione completa costosa.
+Quando si sviluppa un'app Novell. Mac, ridurre al minimo il tempo che intercorre tra il completamento di una modifica e il testing può diventare importante per soddisfare le scadenze di sviluppo. Strategie come la modulazione di codebase e unit test possono contribuire a ridurre i tempi di compilazione, poiché riducono il numero di volte in cui un'app richiede una ricompilazione completa costosa.
 
-Inoltre e familiarità con xamarin. Mac, _Registrar statico parziali_ (come introdotti da xamarin. IOS) può ridurre notevolmente i tempi di avvio di un'app xamarin. Mac nel **Debug** configurazione. Comprendere come è possibile usando il programma di registrazione statico parziale viene compresso un quasi un miglioramento di 5 volte nell'avvio del debug richiederà un po' di sfondo su che cos'è il registrar, che cos'è la differenza tra statico e dinamico e del funzionamento di questa versione di "statica parziale".
+Inoltre, ed è una novità di Novell. Mac, un _registrar statico parziale_ (come pioniere di Novell. iOS) può ridurre notevolmente i tempi di avvio di un'app Novell. Mac nella configurazione di **debug** . Per comprendere in che modo l'uso del registrar statico parziale può comportare un miglioramento di quasi un 5x nell'avvio del debug, sarà necessaria una parte di background su ciò che è il registrar, qual è la differenza tra statico e dinamico e la versione "statica parziale".
 
-### <a name="about-the-registrar"></a>Sulle registrar
+### <a name="about-the-registrar"></a>Informazioni sul registrar
 
-Dietro le quinte di qualsiasi xamarin. Mac applicazione si trova il framework di Cocoa da Apple e il runtime di Objective-C. Creazione di un bridge tra questo mondo"nativo" e "mondo gestito" di C# è il principale responsabile di xamarin. Mac. Parte di questa attività viene gestita dal programma di registrazione, che viene eseguito all'interno di `NSApplication.Init ()` (metodo). Si tratta di uno dei motivi che qualsiasi uso di API Cocoa in xamarin. Mac richiede `NSApplication.Init` per essere chiamato per primo.
+Dietro le quinte di qualsiasi applicazione Novell. Mac si trova il framework Cocoa di Apple e il runtime di Objective-C. La creazione di un bridge tra questo "mondo nativo" e il "mondo gestito C# " di è la responsabilità principale di Novell. Mac. Parte di questa attività viene gestita dal registrar, che viene eseguita all' `NSApplication.Init ()` interno del metodo. Questo è un motivo per cui è necessario `NSApplication.Init` chiamare prima qualsiasi uso delle API Cocoa in Novell. Mac.
 
-Processo del registrar consiste nell'informare il runtime di Objective-C dell'esistenza dell'app C# le classi che derivano da classi, ad esempio `NSApplicationDelegate`, `NSView`, `NSWindow`, e `NSObject`. Ciò richiede un'analisi di tutti i tipi nell'app per determinare ciò che richiede la registrazione e gli elementi in ogni tipo di report.
+Il processo del C# registrar è informare il runtime di Objective-C dell'esistenza delle classi dell'app che derivano da classi quali `NSApplicationDelegate`, `NSView` `NSWindow`, e `NSObject`. Questa operazione richiede un'analisi di tutti i tipi nell'app per determinare quali elementi devono essere registrati e quali elementi per ogni tipo di report.
 
-Questa analisi può avvenire **dinamicamente**, all'avvio dell'applicazione con la reflection, o **staticamente**, come passaggio di tempo di compilazione. Durante la selezione di un tipo di registrazione, lo sviluppatore deve essere tenere presente quanto segue:
+Questa analisi può essere eseguita in **modo dinamico**, all'avvio dell'applicazione con reflection o in modo **statico**come passaggio della fase di compilazione. Quando si sceglie un tipo di registrazione, lo sviluppatore deve tenere presente quanto segue:
 
-- Registrazione statica può ridurre drasticamente i tempi di avvio, ma può rallentare a volte le compilazioni significativamente (in genere più del doppio fase di compilazione di debug). Questo sarà il valore predefinito per **rilascio** compila configurazione.
-- Registrazione dinamica Ritarda questo lavoro fino a quando l'applicazione avvia e ignora la generazione di codice, ma questo lavoro aggiuntivo può creare una pausa evidente (almeno due secondi) nell'avvio dell'applicazione. Ciò è particolarmente evidente nelle build di configurazione di debug, la cui impostazione predefinita per la registrazione dinamica e la cui la reflection è più lenta.
+- La registrazione statica può ridurre drasticamente i tempi di avvio, ma può rallentare in modo significativo le compilazioni (in genere più del doppio tempo di compilazione di debug). Si tratta dell'impostazione predefinita per le compilazioni di configurazione di **rilascio** .
+- La registrazione dinamica ritarda questo lavoro fino a quando l'applicazione non viene avviata e non ignora la generazione del codice, ma questo lavoro aggiuntivo può creare una pausa percettibile (almeno due secondi) all'avvio dell'applicazione. Questo è particolarmente evidente nelle compilazioni di configurazione di debug, che per impostazione predefinita è la registrazione dinamica e la cui Reflection è più lenta.
 
-Parziali delle registrazioni statico, introdotti inizialmente in xamarin. IOS 8.13, offre agli sviluppatori il meglio di entrambe le opzioni. Pre-elaborando le informazioni di registrazione di ogni elemento `Xamarin.Mac.dll` e spedizione queste informazioni con xamarin. Mac in una libreria statica (che deve solo essere collegato a in fase di compilazione), Microsoft ha rimosso la maggior parte dei casi la reflection di dinamica Registrar durante senza influire sulla fase di compilazione.
+La registrazione statica parziale, introdotta per la prima volta in Novell. iOS 8,13, offre allo sviluppatore il meglio di entrambe le opzioni. Precalcolando le informazioni di registrazione di ogni elemento in `Xamarin.Mac.dll` e spedendo queste informazioni con Novell. Mac in una libreria statica (che deve essere collegata solo in fase di compilazione), Microsoft ha rimosso la maggior parte del tempo di reflection della dinamica registrar senza effetti sul tempo di compilazione.
 
-### <a name="enabling-the-partial-static-registrar"></a>Abilitare il programma di registrazione statico parziale
+### <a name="enabling-the-partial-static-registrar"></a>Abilitazione del registrar statico parziale
 
-Il programma di registrazione statico parziale è abilitata in xamarin. Mac facendo doppio clic il **nome progetto** nel **Esplora soluzioni**, il passaggio a **di compilazione Mac** e l'aggiunta di `--registrar:static` per il **argomenti aggiuntivi di mmp:** campo. Ad esempio:
+Il registrar statico parziale è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** nella **Esplora soluzioni**, passando a **compilazione Mac** e aggiungendo `--registrar:static` al campo **argomenti MMP aggiuntivi:** . Ad esempio:
 
-![Aggiungendo le registrar statico parziale di argomenti aggiuntivi di mmp](how-it-works-images/psr01.png "aggiungendo le registrar statico parziale di argomenti aggiuntivi di mmp")
+![Aggiunta del registrar statico parziale ad argomenti MMP aggiuntivi](how-it-works-images/psr01.png "Aggiunta del registrar statico parziale ad argomenti MMP aggiuntivi")
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Ecco alcune spiegazioni più dettagliate su come funziona internamente:
+Di seguito sono riportate alcune spiegazioni più dettagliate sul funzionamento interno:
 
 - [Selettori Objective-C](~/ios/internals/objective-c-selectors.md)
 - [Registrar](~/ios/internals/registrar.md)
-- [API unificata di Xamarin per iOS e OS X](~/cross-platform/macios/unified/index.md)
+- [API unificata Novell per iOS e OS X](~/cross-platform/macios/unified/index.md)
 - [Nozioni fondamentali su Theading](~/ios/app-fundamentals/threading.md)
-- [I delegati, protocolli e gli eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md)
-- [Su `newrefcount`](~/ios/internals/newrefcount.md)
+- [Delegati, protocolli ed eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md)
+- [Su`newrefcount`](~/ios/internals/newrefcount.md)
 

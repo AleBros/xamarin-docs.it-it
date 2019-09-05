@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: d13246ddae3f505d04db2a866f785a9f60ce3979
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652034"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292682"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Eseguire ricerche nei dati con ricerca di Azure e Novell. Forms
 
@@ -60,7 +60,7 @@ var searchClient =
 Il `SearchServiceClient` overload del costruttore accetta un nome di servizio di ricerca e una `SearchCredentials` dell'oggetto come argomenti, con la `SearchCredentials` ritorno a capo oggetto il *chiave amministratore* per il servizio di ricerca di Azure. Il *chiave di amministrazione* è necessaria per creare un indice.
 
 > [!NOTE]
->  Un singolo `SearchServiceClient` istanza deve essere usata in un'applicazione per evitare l'apertura di un numero eccessivo di connessioni a ricerca di Azure.
+> Un singolo `SearchServiceClient` istanza deve essere usata in un'applicazione per evitare l'apertura di un numero eccessivo di connessioni a ricerca di Azure.
 
 Un indice è definito dal `Index` dell'oggetto, come illustrato nell'esempio di codice seguente:
 

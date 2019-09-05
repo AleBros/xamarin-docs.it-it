@@ -4,15 +4,15 @@ description: Questo documento descrive come usare Touch ID, la tecnologia di aut
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cb71fc75b01621ed381f42b41df68fc80309f22c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: bc797d250b4b66ebfd06bad76c3f43759a65e7c3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121294"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292509"
 ---
 # <a name="touch-id-in-xamarinios"></a>Touch ID in Novell. iOS
 
@@ -33,7 +33,7 @@ Ogni elemento keychain è protetto dal codice utente e da un segreto del disposi
 
 ### <a name="secure-enclave"></a>Enclave sicura
 
-Il keychain non può decrittografare l'elemento Keychain autonomamente; viene invece eseguita nell'enclave *protetta*. L'enclave protetta è un coprocessore all'interno del chip A7 responsabile della determinazione di una corrispondenza corretta dai dati delle impronte digitali dal sensore Touch ID rispetto a una stampa registrata. Viene quindi decrittografato l'elemento keychain e viene restituito il segreto decrittografato nel keychain.
+Il keychain non può decrittografare l'elemento Keychain autonomamente; viene invece eseguita nell' *enclave protetta*. L'enclave protetta è un coprocessore all'interno del chip A7 responsabile della determinazione di una corrispondenza corretta dai dati delle impronte digitali dal sensore Touch ID rispetto a una stampa registrata. Viene quindi decrittografato l'elemento keychain e viene restituito il segreto decrittografato nel keychain.
 
 ### <a name="working-with-keychain"></a>Uso del keychain
 

@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c3f0130e96ae61838b9a7abcd68ccd219a327d4d
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198478"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280153"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitasking per iPad in Novell. iOS
 
@@ -33,7 +33,7 @@ Esistono diversi aspetti da considerare quando si [supporta il multitasking nell
 - [Tasti di scelta rapida personalizzati hardware](#Custom-Hardware-Keyboard-Shortcuts)
 - [Gestione delle risorse](#Resource-Management-Considerations)
 
-Gli sviluppatori di app possono anche [rifiutare esplicitamente](#Opting-Out-of-Multitasking)il multitasking, inclusa [la disabilitazione della riproduzione video PIP](#Disabling-PIP-Video-Playback).
+Gli sviluppatori di app possono anche [rifiutare esplicitamente il multitasking](#Opting-Out-of-Multitasking), inclusa [la disabilitazione della riproduzione video PIP](#Disabling-PIP-Video-Playback).
 
 Questo articolo illustra i passaggi necessari per assicurarsi che l'app Novell. iOS venga eseguita correttamente in un ambiente a più attività o come rifiutare esplicitamente il multitasking, se non è una soluzione ottimale per l'app.
 
@@ -69,7 +69,7 @@ La funzionalità di scorrimento consente all'utente di selezionare una seconda a
 
 La cosa principale da ricordare è che l'utente decide quali due app verranno eseguite side-by-side e che lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, è necessario eseguire alcune operazioni per assicurarsi che l'app Novell. iOS venga eseguita correttamente in un pannello di scorrimento:
 
-- **Usare le classi di layout e** di ridimensionamento automatico: poiché è ora possibile eseguire l'app Novell. iOS nel pannello laterale della diapositiva, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+- **Usare le classi di layout e di ridimensionamento** automatico: poiché è ora possibile eseguire l'app Novell. iOS nel pannello laterale della diapositiva, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 - **Usare le risorse in modo efficiente** : poiché l'app può ora condividere il sistema con un'altra app in esecuzione, è fondamentale che l'app usi le risorse di sistema in modo efficiente. Quando la memoria diventa di tipo sparse, il sistema interrompe automaticamente l'app che sta consumando la maggior parte della memoria. Per altri dettagli, vedere la [Guida all'efficienza energetica Apple per le app iOS](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) .
 
 La funzionalità di scorrimento è disponibile solo in un iPad Pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 o iPad Mini 4. Per altre informazioni sulla preparazione dell'app per la diapositiva, vedere la pagina relativa all' [adozione di miglioramenti multitasking nella](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) documentazione di Apple.
@@ -84,10 +84,10 @@ Nell'hardware iPad supportato (solo iPad Air 2, iPad Mini 4 e iPad Pro), l'utent
 
 Analogamente alla diapositiva, l'utente decide quali due app verranno eseguite side-by-side e di nuovo, lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, la visualizzazione divisa pone requisiti simili in un'app Novell. iOS:
 
-- **Usare le classi di layout e** di ridimensionamento automatico: poiché l'app Novell. iOS può ora essere eseguita in modalità a schermo intero a dimensione specificata dall'utente, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+- **Usare le classi di layout e di ridimensionamento** automatico: poiché l'app Novell. iOS può ora essere eseguita in modalità a schermo intero a dimensione specificata dall'utente, non è più possibile fare affidamento sul dispositivo, sulle dimensioni dello schermo o sull'orientamento per il layout dell'interfaccia utente. Per assicurarsi che l'app venga ridimensionata correttamente, è necessario usare il layout automatico e le classi di dimensioni. Per ulteriori informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 - **Usare le risorse in modo efficiente** : poiché l'app può ora condividere il sistema con un'altra app in esecuzione, è fondamentale che l'app usi le risorse di sistema in modo efficiente. Quando la memoria diventa di tipo sparse, il sistema interrompe automaticamente l'app che sta consumando la maggior parte della memoria. Per altri dettagli, vedere la [Guida all'efficienza energetica Apple per le app iOS](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) .
 
-Per altre informazioni sulla preparazione dell'app per la visualizzazione divisa, vedere l'articolo relativo ai miglioramenti del multitasking nella documentazione per [iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) .
+Per altre informazioni sulla preparazione dell'app per la visualizzazione divisa, vedere l'articolo relativo ai [miglioramenti del multitasking nella](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) documentazione per iPad.
 
 <a name="Picture-in-Picture" />
 
@@ -197,7 +197,7 @@ Se si esegue l'app in un iPad con una tastiera hardware collegata e l'utente dig
 
 [![](multitasking-images/keyboard03.png "Popup dei tasti di scelta rapida")](multitasking-images/keyboard03.png#lightbox)
 
-Per un'implementazione di esempio, vedere l' [app](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) multitasking di esempio.
+Per un'implementazione di esempio, vedere l' [app multitasking](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) di esempio.
 
 <a name="Resource-Management-Considerations" />
 

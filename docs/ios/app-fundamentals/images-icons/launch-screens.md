@@ -4,15 +4,15 @@ description: Questo articolo illustra come creare una schermata di avvio dell'ap
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2018
-ms.openlocfilehash: 43c9ee599fe96c107bf10996834d9bcf60847603
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: d0d5452c2b79fb674e473efd50aaf587d64c4544
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200111"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290244"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Novell. iOS
 
@@ -120,11 +120,11 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
 
 5. Aggiungere un'immagine a un catalogo asset nel progetto in modo che sia disponibile per l'uso nella schermata di avvio:
 
-    - Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse su **cataloghi asset** e scegliere **Aggiungi catalogo asset**. Assegnare un nome al nuovoasset del catalogo asset:
+    - Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse su **cataloghi asset** e scegliere **Aggiungi catalogo asset**. Assegnare un nome al nuovo **asset del catalogo asset**:
 
     ![Finestra Aggiungi nuovo elemento con catalogo asset selezionato](launch-screens-images/launch05.w157.png)
 
-    - Aggiungere un nuovo set di immagini al Catalogo asset asset, come descritto nella sezione [aggiunta di immagini a un set di immagini del catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md) di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
+    - Aggiungere un nuovo set di **Immagini al catalogo asset asset** , come descritto nella sezione [aggiunta di immagini a un set di immagini del catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md) di [visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
 
 6. Aprire **LaunchScreen. Storyboard** per la modifica facendo doppio clic su di esso nel **Esplora soluzioni**.
 
@@ -147,7 +147,7 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
 10. Aggiungere una **visualizzazione immagine** alla schermata di avvio e impostare l' **immagine**di origine:
 
     - Trascinare una **visualizzazione immagine** dalla **casella degli strumenti** al centro della visualizzazione.
-    - Con la **visualizzazione immagini** ancora selezionata, nella sezione **widget** della **finestra Proprietà** impostare la proprietà **immagine** sul set di immagini già aggiunto al catalogo asset asset . Riposizionare e ridimensionare la **visualizzazione immagine** come richiesto:
+    - Con la **visualizzazione immagini** ancora selezionata, nella sezione **widget** della **finestra Proprietà** impostare la proprietà **immagine** sul set di immagini già **aggiunto al catalogo asset asset** . Riposizionare e ridimensionare la **visualizzazione immagine** come richiesto:
     
     ![Visualizzazione immagine con la relativa proprietà Image impostata](launch-screens-images/launch10-vs.png)
 
@@ -183,7 +183,7 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
 > [!NOTE]
 > Uno storyboard usato come schermata di avvio _deve_ includere solo elementi dell'interfaccia utente incorporati semplici e **non può** eseguire calcoli o derivare da una classe personalizzata.
 
-Per ulteriori informazioni sulla creazione di una schermata di avvio con uno storyboard unificato, vedere la sezione schermate di [avvio dinamico](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) della Guida per gli [storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+Per ulteriori informazioni sulla creazione di una schermata di avvio con uno storyboard unificato, vedere la sezione [schermate di avvio dinamico](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) della Guida per gli [storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>Migrazione agli storyboard della schermata di avvio
 

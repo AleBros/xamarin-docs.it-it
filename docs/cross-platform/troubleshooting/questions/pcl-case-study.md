@@ -4,14 +4,14 @@ description: 'Case study per librerie PCL: come è possibile risolvere i problem
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
-author: asb3993
-ms.author: amburns
-ms.openlocfilehash: 09aef14efdce93e28326deb78292da98f1969ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: e3ced3c989a88c6e759a5bc497147128b0a79868
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521558"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288199"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Case study per librerie PCL: come è possibile risolvere i problemi correlati a System.Diagnostics.Tracing per il pacchetto NuGet Microsoft TPL Dataflow?
 
@@ -112,7 +112,7 @@ No, questa operazione non può essere utile.
 
 - Per Novell. iOS 9,0 o una versione recente di Novell. Android in Windows, questa soluzione alternativa è strettamente ridondante e potrebbe causare errori di compilazione simili a "System. Diagnostics. Tracing ' con la stessa identità è già stato importato".
 
-- Per Novell. iOS 8,10 o versioni precedenti o per Novell. Android in Mac, questa soluzione alternativa può essere utile, ma _solo_ per il problema dell'assembly mancante di "livello 1". Non risolverà gli errori del linker "livello 2", quindi non si tratta di una soluzione completa.
+- Per Novell. iOS 8,10 o versioni precedenti o per Novell. Android in Mac, questa soluzione alternativa può essere utile, ma _solo_ per il problema dell'assembly mancante di "livello 1". _Non risolverà_ gli errori del linker "livello 2", quindi non si tratta di una soluzione completa.
 
 ### <a name="can-i-use-the-systemdiagnosticstracing-nuget-packagehttpswwwnugetorgpackagessystemdiagnosticstracing-to-solve-the-problem"></a>È possibile usare il [pacchetto NuGet System. Diagnostics. Tracing](https://www.nuget.org/packages/System.Diagnostics.Tracing/) per risolvere il problema?
 

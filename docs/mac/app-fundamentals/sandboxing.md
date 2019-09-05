@@ -4,15 +4,15 @@ description: Questo articolo illustra il sandboxing di un'applicazione Novell. M
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227246"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290310"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing di un'app Novell. Mac
 
@@ -117,11 +117,11 @@ Consente di eseguire le operazioni seguenti:
     [![Selezione di certificati, identificatori e profili](sandboxing-images/sign02.png "Selezione di certificati, identificatori e profili")](sandboxing-images/sign02-large.png#lightbox)
 3. In **app Mac**selezionare **identificatori**:
 
-    [![Selezione] degli identificatori (sandboxing-images/sign03.png "Selezione") degli identificatori](sandboxing-images/sign03-large.png#lightbox)
+    [![Selezione degli identificatori](sandboxing-images/sign03.png "Selezione degli identificatori")](sandboxing-images/sign03-large.png#lightbox)
 4. Creare un nuovo ID per l'applicazione:
 
     [![Creazione di un nuovo ID app](sandboxing-images/sign04.png "Creazione di un nuovo ID app")](sandboxing-images/sign04-large.png#lightbox)
-5. In **profili**di provisioning selezionare **sviluppo**:
+5. In **profili di provisioning**selezionare **sviluppo**:
 
     [![Selezione dello sviluppo](sandboxing-images/sign05.png "Selezione dello sviluppo")](sandboxing-images/sign05-large.png#lightbox)
 6. Crea un nuovo profilo e seleziona **sviluppo di app Mac**:
@@ -135,7 +135,7 @@ Consente di eseguire le operazioni seguenti:
     [![Aggiunta di sviluppatori](sandboxing-images/sign08.png "Aggiunta di sviluppatori")](sandboxing-images/sign08-large.png#lightbox)
 9. Selezionare i computer per questo profilo:
 
-    [![Selezione dei computer] consentiti (sandboxing-images/sign09.png "Selezione dei computer") consentiti](sandboxing-images/sign09-large.png#lightbox)
+    [![Selezione dei computer consentiti](sandboxing-images/sign09.png "Selezione dei computer consentiti")](sandboxing-images/sign09-large.png#lightbox)
 10. Assegnare un nome al profilo:
 
     [![Assegnazione di un nome al profilo](sandboxing-images/sign10.png "Assegnazione di un nome al profilo")](sandboxing-images/sign10-large.png#lightbox)
@@ -168,9 +168,9 @@ Successivamente, è necessario selezionare il nuovo ID app e il profilo di provi
 5. Nella **riquadro della soluzione**fare doppio clic sul file di progetto per aprirne le opzioni per la modifica:
 
     ![Editign le opzioni della soluzione](sandboxing-images/sign14.png "Editign le opzioni della soluzione")
-6. Selezionare **firma Mac**, quindi selezionare firma **il bundle dell'applicazione** e **firmare il pacchetto del programma di installazione**. In **profilo**di provisioning selezionare quello creato in precedenza:
+6. Selezionare **firma Mac**, quindi selezionare firma **il bundle dell'applicazione** e **firmare il pacchetto del programma di installazione**. In **profilo di provisioning**selezionare quello creato in precedenza:
 
-    ![Impostazione del profilo di] provisioning (sandboxing-images/sign15.png "Impostazione del profilo di") provisioning
+    ![Impostazione del profilo di provisioning](sandboxing-images/sign15.png "Impostazione del profilo di provisioning")
 7. Fai clic sul pulsante **Fine**.
 
 > [!IMPORTANT]
@@ -419,7 +419,7 @@ Un segnalibro con ambito documento può essere risolto da qualsiasi applicazione
 
 Per usare uno dei due tipi di segnalibro con ambito di protezione, è necessario eseguire i passaggi seguenti:
 
-1. **Impostare i diritti appropriati nell'app Novell. Mac che deve usare** i segnalibri con ambito di sicurezza. per i segnalibri con ambito app, impostare la `com.apple.security.files.bookmarks.app-scope` chiave relativa al `true`diritto. Per i segnalibri con ambito documento, impostare la `com.apple.security.files.bookmarks.document-scope` chiave relativa al `true`diritto su.
+1. **Impostare i diritti appropriati nell'app Novell. Mac che deve usare i segnalibri con ambito di sicurezza** . per i segnalibri con ambito app, impostare la `com.apple.security.files.bookmarks.app-scope` chiave relativa al `true`diritto. Per i segnalibri con ambito documento, impostare la `com.apple.security.files.bookmarks.document-scope` chiave relativa al `true`diritto su.
 2. **Creare un segnalibro con ambito di sicurezza** : questa operazione viene eseguita per qualsiasi file o cartella a cui l'utente ha concesso l'accesso `NSOpenPanel` (ad esempio, tramite), che l'app dovrà avere accesso permanente a. Usare il `public virtual NSData CreateBookmarkData (NSUrlBookmarkCreationOptions options, string[] resourceValues, NSUrl relativeUrl, out NSError error)` metodo `NSUrl` della classe per creare il segnalibro.
 3. **Risolvere il segnalibro con ambito di sicurezza** : quando l'app deve accedere di nuovo alla risorsa, ad esempio dopo il riavvio, sarà necessario risolvere il segnalibro in un URL con ambito di sicurezza. Per risolvere `public static NSUrl FromBookmarkData (NSData data, NSUrlBookmarkResolutionOptions options, NSUrl relativeToUrl, out bool isStale, out NSError error)` il segnalibro `NSUrl` , usare il metodo della classe.
 4. **Notificare in modo esplicito al sistema che si vuole accedere al file dall'URL con ambito di sicurezza** . questo passaggio deve essere eseguito immediatamente dopo aver ottenuto l'URL con ambito di sicurezza precedente o, quando si vuole riottenere l'accesso alla risorsa dopo avere rinunciare all'accesso. Chiamare il `StartAccessingSecurityScopedResource ()` metodo `NSUrl` della classe per iniziare ad accedere a un URL con ambito di sicurezza.
@@ -510,8 +510,8 @@ La maggior parte delle app Novell. Mac è completamente compatibile con l'app sa
 Se l'app richiede uno dei comportamenti seguenti, non è compatibile con l'app sandbox:
 
 - **Servizi di autorizzazione** : con l'app sandbox non è possibile usare le funzioni descritte in informazioni di [riferimento su servizi di autorizzazione C](https://developer.apple.com/library/prerelease/mac/documentation/Security/Reference/authorization_ref/index.html#//apple_ref/doc/uid/TP30000826).
-- **API** di accessibilità: non è possibile eseguire la sandbox di app assistive quali utilità per la lettura dello schermo o app che controllano altre applicazioni.
-- **Inviare eventi Apple a** app arbitrarie: se l'app richiede l'invio di eventi Apple a un'app arbitraria sconosciuta, non è possibile eseguire la sandbox. Per un elenco noto di App denominate, l'app può comunque essere creata tramite sandbox e i diritti dovranno includere l'elenco delle app chiamate.
+- **API di accessibilità** : non è possibile eseguire la sandbox di app assistive quali utilità per la lettura dello schermo o app che controllano altre applicazioni.
+- **Inviare eventi Apple a app arbitrarie** : se l'app richiede l'invio di eventi Apple a un'app arbitraria sconosciuta, non è possibile eseguire la sandbox. Per un elenco noto di App denominate, l'app può comunque essere creata tramite sandbox e i diritti dovranno includere l'elenco delle app chiamate.
 - **Inviare dizionari di informazioni utente in notifiche distribuite ad altre attività** : con l'app sandbox, non è `userInfo` possibile includere un dizionario per `NSDistributedNotificationCenter` la pubblicazione in un oggetto per la messaggistica di altre attività.
 - **Caricare le estensioni del kernel** : il caricamento delle estensioni del kernel non è consentito dalla sandbox dell'app.
 - **Simulare l'input dell'utente nelle finestre di dialogo di apertura e salvataggio** : la modifica a livello di codice delle finestre di dialogo Apri o Salva per simulare o modificare l'input dell'utente non è consentita dalla sandbox dell'app.

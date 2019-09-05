@@ -3,15 +3,15 @@ title: App Xamarin Live Player
 description: Questo documento descrive l'app Xamarin Live Player, che è possibile usare per visualizzare in anteprima le modifiche del codice in tempo reale nel dispositivo. Vengono illustrati l'installazione, gli esempi, i log, le impostazioni, la gestione dei dispositivi e altro ancora.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2019
-ms.openlocfilehash: b09ea4e8ec09db5e9bf443476cd3a67e16f02d19
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d725cb0687cce85f10dbf6915e4eeec785c0ae54
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651220"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290217"
 ---
 # <a name="xamarin-live-player-app"></a>App Xamarin Live Player
 
@@ -31,7 +31,7 @@ Quando si preme **associa a Visual Studio**, usare la fotocamera per analizzare 
 
 ![Screenshot dello scanner di codice a barre Android](player-images/scan-android-sml.png)
 
-Se la connessione ha esito positivo, il codice deve essere eseguito quasi immediatamente nel dispositivo (ad esempio, l' [esempio](https://github.com/xamarin/mobile-samples/tree/master/LivePlayer/BasicCalculator)di calcolatrice:
+Se la connessione ha esito positivo, il codice deve essere eseguito quasi immediatamente nel dispositivo (ad esempio, l' [esempio di calcolatrice](https://github.com/xamarin/mobile-samples/tree/master/LivePlayer/BasicCalculator):
 
 ![App di calcolo di esempio in esecuzione nel dispositivo](player-images/basic-calculator-sml.png)
 

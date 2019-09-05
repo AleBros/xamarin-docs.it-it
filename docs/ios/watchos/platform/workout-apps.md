@@ -4,15 +4,15 @@ description: Questo articolo descrive i miglioramenti apportati da Apple alle ap
 ms.prod: xamarin
 ms.assetid: F1D19635-A738-43E5-9873-1FC1BA44EEDF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9a8c047305d4e91ac588f503eaa98d8bddb4a8a8
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 57aab95e29911722fc3ad4a56c5486218e07242d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620745"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292846"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>App di allenamento watchos in Novell
 
@@ -99,7 +99,7 @@ Seguire questa procedura:
 
     [![](workout-apps-images/auth01.png "Selezionare Abilita HealthKit")](workout-apps-images/auth01.png#lightbox)
 3. Salvare le modifiche apportate al file.
-4. Seguire le istruzioni riportate nell'articolo relativo all' [ID app esplicito e al profilo](~/ios/platform/healthkit.md) di provisioning e [associando l'ID app e il profilo di provisioning all'app Novell. iOS](~/ios/platform/healthkit.md) dell'articolo [Introduzione a HealthKit](~/ios/platform/healthkit.md) per eseguire correttamente il provisioning dell'app.
+4. Seguire le istruzioni riportate nell'articolo relativo all' [ID app esplicito e al profilo di provisioning](~/ios/platform/healthkit.md) e [associando l'ID app e il profilo di provisioning all'app Novell. iOS](~/ios/platform/healthkit.md) dell'articolo [Introduzione a HealthKit](~/ios/platform/healthkit.md) per eseguire correttamente il provisioning dell'app.
 5. Infine, usare le istruzioni disponibili in [Programming Health Kit](~/ios/platform/healthkit.md) e [richiedere l'autorizzazione dalle sezioni utente](~/ios/platform/healthkit.md) dell'articolo [Introduzione a HealthKit](~/ios/platform/healthkit.md) per richiedere l'autorizzazione per l'accesso all'archivio dati HealthKit dell'utente.
 
 ### <a name="setting-the-workout-configuration"></a>Impostazione della configurazione di allenamento

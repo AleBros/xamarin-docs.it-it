@@ -4,15 +4,15 @@ description: Con iOS 12, un'estensione per il contenuto delle notifiche può agg
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 1a4380e321035b8948f9b40bdce052161025d5f3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5be233e9b07069dc7c9842a3ddd00e7d46d9c22f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652591"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291278"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Pulsanti di azione di notifica dinamica in Novell. iOS
 
@@ -23,7 +23,7 @@ In iOS 12, le notifiche possono aggiungere, rimuovere e aggiornare in modo dinam
 I frammenti di codice in questa guida provengono dall'app di esempio [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , che illustra come usare Novell. iOS per lavorare con i pulsanti di azione di notifica in iOS 12.
 
 Questa app di esempio invia due tipi di notifiche locali: rosso e verde.
-Dopo che l'app ha inviato una notifica, usare 3D Touch per visualizzare l'interfaccia utente personalizzata. Usare quindi i pulsanti di azione della notifica per ruotare l'immagine visualizzata. Quando l'immagine ruota, viene visualizzato un pulsante di **rotazione** della reimpostazione e scompare se necessario.
+Dopo che l'app ha inviato una notifica, usare 3D Touch per visualizzare l'interfaccia utente personalizzata. Usare quindi i pulsanti di azione della notifica per ruotare l'immagine visualizzata. Quando l'immagine ruota, viene visualizzato un pulsante di **rotazione della reimpostazione** e scompare se necessario.
 
 I frammenti di codice in questa guida provengono da questa applicazione di esempio.
 
@@ -141,7 +141,7 @@ Nell'app di esempio, il controller di visualizzazione dell'estensione del conten
 > - `DismissAndForwardAction`indica che l'interfaccia di notifica deve essere rilasciata e che l'app principale deve anche gestire il tocco del pulsante.
 > - `DoNotDismiss`indica che l'interfaccia di notifica non deve essere rilasciata e che l'app principale non deve gestire il tocco del pulsante.
 
-Il metodo dell'estensione `DidReceiveNotificationResponse` di contenuto determina quale pulsante di azione è stato toccato, ruota l'immagine nell'interfaccia della notifica e visualizza o nasconde un pulsante di azione di reimpostazione:
+Il metodo dell'estensione `DidReceiveNotificationResponse` di contenuto determina quale pulsante di azione è stato toccato, ruota l'immagine nell'interfaccia della notifica e visualizza o nasconde un pulsante di azione di **reimpostazione** :
 
 ```csharp
 [Export("didReceiveNotificationResponse:completionHandler:")]

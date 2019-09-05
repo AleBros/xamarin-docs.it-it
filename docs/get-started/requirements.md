@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2019
-ms.openlocfilehash: 33a121c97df435d3423e3e0f525e6a3d32c780ad
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a79f22fa96c4c34d2a9704e9aa3be3825895a15b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197463"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291589"
 ---
 # <a name="xamarinforms-requirements"></a>Requisiti di Xamarin.Forms
 
@@ -72,7 +72,7 @@ La versione di destinazione/compilazione per i progetti Android **deve** inoltre
 È possibile usare Visual Studio per Mac per sviluppare app Novell. Forms in macOS High Sierra (10,13) o versione successiva. Per sviluppare app iOS, si consiglia di installare almeno iOS 10 SDK e Xcode 9.
 
 > [!NOTE]
->  Non è possibile sviluppare app di Windows in macOS.
+> Non è possibile sviluppare app di Windows in macOS.
 
 ## <a name="windows-system-requirements"></a>Requisiti di sistema Windows
 

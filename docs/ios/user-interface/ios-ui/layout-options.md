@@ -4,15 +4,15 @@ description: In questo documento vengono descritti i diversi modi per disporre l
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 06d7ef896a560040f2e2820945264b92d9cf2ada
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528495"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287034"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opzioni di layout in Novell. iOS
 
@@ -27,7 +27,7 @@ Quando un utente ridimensiona una finestra, ad esempio quando il dispositivo vie
 
  [![](layout-options-images/image41.png "Finestra di progettazione Visual Studio per Mac")](layout-options-images/image41.png#lightbox)
 
-Quando si seleziona un controllo, questo consente di specificare manualmente la posizione e le dimensioni del controllo, nonché di scegliere il comportamento di ridimensionamento automatico. Come illustrato nello screenshot seguente, è possibile usare le molle e i puntone nel controllo di ridimensionamento automatico per definire la relazione della visualizzazione selezionata con l'elemento padre:
+Quando si seleziona un controllo, questo consente di specificare manualmente la posizione e le dimensioni del controllo, nonché di scegliere il comportamento di **ridimensionamento** automatico. Come illustrato nello screenshot seguente, è possibile usare le molle e i puntone nel controllo di ridimensionamento automatico per definire la relazione della visualizzazione selezionata con l'elemento padre:
 
  [![](layout-options-images/image42.png "Finestra di progettazione Visual Studio per Mac")](layout-options-images/image42.png#lightbox)
 
@@ -41,7 +41,7 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 ```
 
 
-Per testare le impostazioni di ridimensionamento automatico, abilitare diversi orientamenti dei **dispositivi supportati** nelle opzioni del progetto:
+Per testare le impostazioni di ridimensionamento automatico, abilitare diversi **orientamenti dei dispositivi supportati** nelle opzioni del progetto:
 
  [![](layout-options-images/image43a.png "Impostazioni di ridimensionamento automatico")](layout-options-images/image43a.png#lightbox)
 

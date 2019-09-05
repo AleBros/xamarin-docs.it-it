@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: e2cab7191bb4877deacb3f3f3235a3a4d5c65612
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6df393d59207cea9c316189059f8d0e08a5e5137
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656370"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290074"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Risoluzione delle dipendenze in xamarin. Forms
 
@@ -29,9 +29,9 @@ Controllare la creazione e della durata dei tipi nei progetti di piattaforma è 
 
 ## <a name="injecting-a-dependency-resolution-method"></a>Inserimento di un metodo di risoluzione delle dipendenze
 
-Il [ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) classe offre la possibilità di inserire un metodo di risoluzione delle dipendenze in xamarin. Forms, utilizzando le [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) (metodo). Quindi, quando xamarin. Forms è un'istanza di un determinato tipo, il metodo di risoluzione delle dipendenze viene data la possibilità per fornire l'istanza. Se restituisce il metodo di risoluzione delle dipendenze `null` per un tipo di richiesto, xamarin. Forms opta per provare a creare il tipo di istanza stesso tramite il `Activator.CreateInstance` (metodo).
+Il [ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) classe offre la possibilità di inserire un metodo di risoluzione delle dipendenze in xamarin. Forms, utilizzando le [ `ResolveUsing` ](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) (metodo). Quindi, quando xamarin. Forms è un'istanza di un determinato tipo, il metodo di risoluzione delle dipendenze viene data la possibilità per fornire l'istanza. Se restituisce il metodo di risoluzione delle dipendenze `null` per un tipo di richiesto, xamarin. Forms opta per provare a creare il tipo di istanza stesso tramite il `Activator.CreateInstance` (metodo).
 
-Nell'esempio seguente viene illustrato come impostare il metodo di risoluzione delle dipendenze con il [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) metodo:
+Nell'esempio seguente viene illustrato come impostare il metodo di risoluzione delle dipendenze con il [ `ResolveUsing` ](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) metodo:
 
 ```csharp
 using Autofac;

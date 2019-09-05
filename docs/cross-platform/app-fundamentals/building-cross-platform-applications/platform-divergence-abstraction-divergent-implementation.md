@@ -3,15 +3,15 @@ title: Parte 4 - Gestione di più piattaforme
 description: Questo documento descrive come gestire la divergenza dell'applicazione in base alla piattaforma o alla funzionalità. Illustra le dimensioni dello schermo, le metafore di navigazione, il tocco e i movimenti, le notifiche push e i paradigmi di interfaccia, ad esempio elenchi e tabulazioni.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 993a455ff0d376f213c403a55df71b3ac52d0d4b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887665"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288889"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - Gestione di più piattaforme
 

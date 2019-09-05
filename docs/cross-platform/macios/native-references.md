@@ -3,15 +3,15 @@ title: Riferimenti nativi progetti iOS, Mac e bindings
 description: I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Novell. iOS, Novell. Mac o di binding.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e5e232ffa8a41f7adbffae595b85341a10d8667a
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065265"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287546"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Riferimenti nativi nei progetti iOS, Mac e bindings
 

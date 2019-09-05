@@ -1,117 +1,117 @@
 ---
-title: Introduzione all'integrazione continua con Xamarin
-description: Questo documento descrive l'integrazione continua con Xamarin. Illustra vari ambienti di integrazione continua e il controllo della versione.
+title: Introduzione all'integrazione continua con Novell
+description: Questo documento descrive l'integrazione continua con Novell. Vengono illustrati il controllo della versione e diversi ambienti di integrazione continua.
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/19/2017
-ms.openlocfilehash: 48dd2e1f2f5dd9ffdad0b726c5066a9a968d2396
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: d335a107d1520db3c76ee602d38adcb129f122b0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650544"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293103"
 ---
-# <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Xamarin
+# <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduzione all'integrazione continua con Novell
 
-_Integrazione continua è una pratica di ingegneria del software in cui una compilazione automatizzata, compila e verifica facoltativamente un'app quando il codice viene aggiunto o modificato dagli sviluppatori nel repository di controllo della versione del progetto. Questo articolo illustra i concetti generali di Continuous Integration e alcune delle opzioni disponibili per l'integrazione continua con i progetti Xamarin._
+_L'integrazione continua è una procedura di progettazione software in cui una compilazione automatizzata compila ed eventualmente testa un'app quando il codice viene aggiunto o modificato dagli sviluppatori nel repository del controllo della versione del progetto. In questo articolo verranno illustrati i concetti generali dell'integrazione continua e alcune delle opzioni disponibili per l'integrazione continua con i progetti Novell._
 
-È comune a progetti software gli sviluppatori possono operare in parallelo. A un certo punto, è necessario integrare tutti questi flussi paralleli di lavoro in una codebase che costituisce il prodotto finale. Le radici dello sviluppo software, questa integrazione è stata eseguita alla fine di un progetto, che è stato un processo difficile e a rischio.
+Per gli sviluppatori è frequente lavorare in parallelo con i progetti software. A un certo punto, è necessario integrare tutti questi flussi di lavoro paralleli in un'unica codebase che costituisce il prodotto finale. Nei primi giorni dello sviluppo del software, questa integrazione è stata eseguita alla fine di un progetto, che era un processo difficile e rischioso.
 
-Integrazione continua (CI) per evitare tale complessità, uniscono le modifiche di ogni sviluppatore nella codebase comune in modo continuo, in genere ogni volta che tutti gli sviluppatori di archiviare le modifiche apportate al progetto condiviso repository di codice. Ogni controllo aggiuntivo attiva una compilazione automatizzata ed esegue test automatizzati per verificare che il codice esistente non interrompe con il codice appena introdotto.  In questo modo, CI evidenziano gli errori e problemi immediatamente e assicura che tutti i membri del team per rimanere sempre aggiornati con i reciproci lavori. Ciò comporta una codebase stabile e coesiva.
+L'integrazione continua (CI) evita tali complessità unendo continuamente le modifiche di ogni sviluppatore nella codebase comune, in genere ogni volta che gli sviluppatori archiviano le modifiche nel repository del codice condiviso del progetto. Ogni archiviazione attiva una compilazione automatizzata ed esegue test automatizzati per verificare che il codice appena introdotto non interrompa il codice esistente.  In questo modo, CI si riferisce immediatamente a errori e problemi e si assicura che tutti i membri del team siano sempre aggiornati. In questo modo si ottiene una codebase coesa e stabile.
 
-Sistemi di integrazione continua hanno due parti principali:
+I sistemi di integrazione continua sono due parti principali:
 
-- **Controllo della versione** – versione controllo (VC), definito anche come controllo del codice sorgente o gestione del codice sorgente, tutto il codice del progetto consente di consolidare in un unico repository condiviso e mantiene una cronologia completa di tutte le modifiche a tutti i file. Questo repository, noto anche come il *mainline* oppure *master* ramo, contiene il codice sorgente che verrà usato per compilare l'ambiente di produzione o di rilascio versione dell'app. Sono disponibili molti prodotti commerciali per questa attività, che in genere consentono ai team o singoli utenti di creare il fork una copia del codice in rami secondari dove possono apportare modifiche estese o effettuare esperimenti senza rischi per il ramo master e open source. Dopo che le modifiche in un ramo secondario vengono convalidate, possono quindi essere tutti insieme riuniti nel ramo master.
-- **Continuous Integration Server** : il Server di integrazione continua è responsabile per la raccolta di tutti gli elementi di un progetto (codice sorgente, immagini, video, i database, i test automatizzati, e così via), la compilazione dell'app e l'esecuzione dei test automatizzati. Anche in questo caso, sono disponibili molti strumenti di server CI commerciali e open source.
+- **Controllo della versione** : controllo della versione (VC), denominato anche controllo del codice sorgente o gestione del codice sorgente, consolida tutto il codice di un progetto in un unico repository condiviso e mantiene una cronologia completa di ogni modifica apportata a ogni file. Questo repository, spesso indicato come *principale* o ramo *principale* , contiene il codice sorgente che verrà usato per compilare la versione di produzione o di rilascio dell'app. Per questa attività sono disponibili molti prodotti open source e commerciali, che in genere consentono a team o singoli utenti di creare un fork di una copia del codice in Branch secondari in cui è possibile apportare modifiche estese o condurre esperimenti senza rischi per il ramo master. Una volta convalidate le modifiche apportate a un ramo secondario, possono essere riunite nuovamente nel ramo master.
+- **Continuous Integration Server** : il server di integrazione continua è responsabile della raccolta di tutti gli elementi di un progetto (codice sorgente, immagini, video, database, test automatizzati e così via), compilazione dell'app ed esecuzione dei test automatizzati. Anche in questo caso, sono disponibili molti strumenti server CI open source e commerciali.
 
-Gli sviluppatori devono in genere una copia di uno o più rami di lavoro sulle proprie workstation, in cui inizialmente lavoro. Dopo aver completato un set appropriato di lavoro, le modifiche sono "selezionate in" o "commit" per il ramo appropriato, che li propaga alle copie di lavoro di altri sviluppatori. Si tratta come un team assicura che tutti lavorano sullo stesso codice.
+Gli sviluppatori in genere dispongono di una copia funzionante di uno o più Branch sulle rispettive workstation, in cui il lavoro viene inizialmente eseguito. Una volta completato il set di lavoro appropriato, le modifiche vengono "archiviate" o "salvate" nel ramo appropriato, che le propaga alle copie di lavoro di altri sviluppatori. Questo è il modo in cui un team garantisce che stiano lavorando sullo stesso codice.
 
-Anche in questo caso, con l'integrazione continua, l'atto di commit delle modifiche, il server di integrazione continua compilare il progetto ed eseguire test automatizzati per verificare la correttezza del codice sorgente. Se sono presenti errori di compilazione o errori di test, un server CI informa lo sviluppatore responsabile (tramite posta elettronica, messaggistica immediata, Twitter, Growl, e così via) in modo che tale persona può risolvere il problema. (Server CI può anche rifiutare il commit se sono presenti errori, che viene chiamato un "archiviazione gestita".)
+Anche in questo caso, con l'integrazione continua, l'azione di commit delle modifiche determina la compilazione del progetto da parte del server CI e l'esecuzione di test automatizzati per verificare la correttezza del codice sorgente. Se si verificano errori di compilazione o errori di test, un server CI informa lo sviluppatore responsabile (tramite posta elettronica, messaggistica immediata, Twitter, ringhio e così via) in modo che possa risolvere il problema. I server CI possono anche rifiutare il commit in caso di errori, denominato "archiviazione gestita".
 
 Il diagramma seguente illustra questo processo:
 
-[![](intro-to-ci-images/intro01-small.png "Questo diagramma viene illustrato questo processo")](intro-to-ci-images/intro01.png#lightbox)
+[![](intro-to-ci-images/intro01-small.png "Questo diagramma illustra questo processo")](intro-to-ci-images/intro01.png#lightbox)
 
-App per dispositivi mobili presentano difficoltà specifiche per l'integrazione continua. Le app possono richiedere sensori, ad esempio il GPS o della fotocamera che sono disponibili solo in dispositivi fisici. Inoltre, emulatori o simulatori sono solo un'approssimazione dell'hardware e potrebbero nascondere o nascondere i problemi. Al termine, è necessario testare un'app per dispositivi mobili sulll'hardware effettivo per essere sicuri che è effettivamente pronta.
+Le app per dispositivi mobili introducono problemi univoci per l'integrazione continua. Le app possono richiedere sensori quali il GPS o la fotocamera disponibili solo nei dispositivi fisici. Inoltre, i simulatori o gli emulatori sono solo un'approssimazione dell'hardware e possono celare o nascondere problemi. Alla fine, è necessario testare un'app per dispositivi mobili su hardware reale per avere la certezza che sia effettivamente pronta per i clienti.
 
-Il [Test App Center](https://docs.microsoft.com/appcenter/test-cloud) risolve questo problema specifico eseguendo il test delle App direttamente su centinaia di dispositivi fisici. Gli sviluppatori di scrivono i test di accettazione automatici, che consentono di test dell'interfaccia utente potenti. Una volta che questi test vengono caricati in App Center, il server CI possibile eseguirli automaticamente come parte di un processo di integrazione continua come illustrato nel diagramma seguente:
+Il [test di App Center](https://docs.microsoft.com/appcenter/test-cloud) risolve questo particolare problema verificando le app direttamente su centinaia di dispositivi fisici. Gli sviluppatori scrivono test di accettazione automatici che consentono di eseguire potenti test dell'interfaccia utente. Una volta caricati i test in App Center, il server CI potrà eseguirli automaticamente come parte di un processo CI come illustrato nel diagramma seguente:
 
-[![](intro-to-ci-images/intro02-small.png "Una volta che questi test vengono caricati in App Center, il server CI possibile eseguirli automaticamente come parte di un processo di integrazione continua come illustrato nella figura seguente")](intro-to-ci-images/intro02.png#lightbox)
+[![](intro-to-ci-images/intro02-small.png "Una volta caricati i test in App Center, il server CI può eseguirli automaticamente come parte di un processo CI come illustrato in questo diagramma")](intro-to-ci-images/intro02.png#lightbox)
 
-## <a name="components-of-continuous-integration"></a>Componenti di integrazione continua
+## <a name="components-of-continuous-integration"></a>Componenti dell'integrazione continua
 
-È presente un esteso ecosistema di strumenti commerciali e open source progettata per supportare CI. Questa sezione illustra alcune delle cause più comuni.
+È disponibile un vasto ecosistema di strumenti commerciali e open source progettati per supportare CI. In questa sezione vengono illustrate alcune delle più comuni.
 
 ### <a name="version-control"></a>Controllo della versione
 
 #### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps e Team Foundation Server
 
-[Azure DevOps](https://azure.microsoft.com/services/devops/) e [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) sono strumenti di collaborazione di Microsoft per l'integrazione continua di compilazione servizi, attività di rilevamento, agile planning e gli strumenti e il controllo della versione di reporting. Il controllo della versione, Azure DevOps e TFS possono lavorare con il proprio sistema (controllo della versione di Team Foundation o TFVC) o con i progetti ospitati in GitHub.
+[Azure DevOps](https://azure.microsoft.com/services/devops/) e [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) sono gli strumenti di collaborazione Microsoft per i servizi di compilazione di integrazione continua, il monitoraggio delle attività, la pianificazione agile e gli strumenti per la creazione di report e il controllo della versione. Con il controllo della versione, Azure DevOps e TFS possono funzionare con il proprio sistema (controllo della versione di Team Foundation o TFVC) o con progetti ospitati in GitHub.
 
-- DevOps di Azure fornisce servizi tramite il cloud. Il vantaggio principale è che non richiede hardware dedicato o dell'infrastruttura e sono accessibili da ovunque tramite web browser e strumenti di sviluppo più diffusi, ad esempio Visual Studio, rendendo più interessante per i team distribuiti geograficamente . È gratuito per i team di cinque sviluppatori o meno, dopo il quale licenze aggiuntive possono essere acquistate per soddisfare un team in costante crescita.
-- TFS è progettato per i server Windows locali e si accede tramite una rete locale o una connessione VPN alla rete. Il vantaggio principale è che completamente il controllo della configurazione dei server di compilazione e possono installare qualsiasi altro software o i servizi sono necessari. TFS ha una Express edition livello base gratuito per piccoli team.
+- Azure DevOps offre servizi tramite il cloud. Il suo vantaggio principale è che non richiede alcun hardware o infrastruttura dedicata ed è possibile accedervi da qualsiasi luogo attraverso i Web browser e tramite gli strumenti di sviluppo più diffusi, ad esempio Visual Studio, rendendoli accattivanti per i team distribuiti geograficamente . È gratuito per team di cinque sviluppatori o meno, dopo i quali è possibile acquistare licenze aggiuntive per ospitare un team in continua crescita.
+- TFS è progettato per i server Windows locali ed è accessibile tramite una rete locale o una connessione VPN alla rete. Il suo vantaggio principale è il controllo completo della configurazione dei server di compilazione e l'installazione di qualsiasi altro software o servizio necessario. TFS offre un'edizione gratuita Express a livello di voce per piccoli team.
 
-TFS e DevOps di Azure sono strettamente integrati con Visual Studio e consentono agli sviluppatori di eseguire molti controllo della versione e le attività di integrazione continua da in tutta comodità un unico IDE. È disponibile anche il Team Explorer Everywhere plug-in per Eclipse (vedere sotto). Visual Studio per Mac offre [un'anteprima di TFVC disponibili](/visualstudio/mac/tf-version-control/).
+Sia TFS che Azure DevOps sono strettamente integrati con Visual Studio e consentono agli sviluppatori di eseguire molte attività di controllo della versione e CI dalla comodità di un singolo IDE. È disponibile anche il plug-in Team Explorer Everywhere per Eclipse (vedere di seguito). Visual Studio per Mac è [disponibile un'anteprima di TFVC](/visualstudio/mac/tf-version-control/).
 
-[Azure DevOps pipeline](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) include il supporto diretto per i progetti Xamarin, entro il quale creare una definizione di compilazione per ogni piattaforma da specificare come destinazione (Android, iOS e Windows). Per ogni definizione di compilazione è necessaria la licenza Xamarin appropriata. È anche possibile connettersi a una variabile locale, in grado di supportare Xamarin TFS build server per Azure DevOps per questo scopo. Con questa configurazione, le compilazioni accodate a DevOps di Azure verranno delegate al server locale. Per informazioni dettagliate, consultare [Build e release Agent](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). In alternativa, è possibile usare un altro strumento di compilazione, ad esempio Team città o Jenkins.
+Le [pipeline di Azure DevOps](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/) hanno il supporto diretto per i progetti Novell, in cui è possibile creare una definizione di compilazione per ogni piattaforma a cui si vuole fare riferimento (Android, iOS e Windows). Per ogni definizione di compilazione è necessaria la licenza Novell appropriata. A questo scopo, è anche possibile connettere un server di compilazione TFS che supporta Novell locale a Azure DevOps. Con questa configurazione, le compilazioni accodate ad Azure DevOps verranno delegate al server locale. Per informazioni dettagliate, fare riferimento agli [agenti di compilazione e rilascio](https://docs.microsoft.com/azure/devops/pipelines/agents/agents). In alternativa, è possibile usare un altro strumento di compilazione, ad esempio Jenkins o team City.
 
-Un riepilogo completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Azure DevOps e Team Foundation Server, vedere [DevOps con le app Xamarin](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
+Un riepilogo completo di tutte le funzionalità di Application Lifecycle Management (ALM) di Visual Studio, Azure DevOps e Team Foundation Server, vedere [DevOps con le app Novell](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps).
 
 #### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
-[Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) estende le potenzialità di Team Foundation Server e Azure DevOps per team che sviluppano soluzioni esternamente a Visual Studio. Consente agli sviluppatori di connettersi ai progetti team in locale o nel cloud da Eclipse o il client della riga di comando multipiattaforma per OS X e Linux. Accedere al controllo della versione (incluso Git), gli elementi di lavoro di Team Explorer Everywhere offre completo e funzionalità di compilazione per piattaforme non Windows.
+[Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) offre la potenza di Team Foundation Server e Azure DevOps ai team che sviluppano all'esterno di Visual Studio. Consente agli sviluppatori di connettersi ai progetti team in locale o nel cloud da Eclipse o il client da riga di comando multipiattaforma per OS X e Linux. Team Explorer Everywhere fornisce accesso completo al controllo della versione (inclusi git), agli elementi di lavoro e alle funzionalità di compilazione per le piattaforme non Windows.
 
 #### <a name="git"></a>Git
 
-[GIT](http://git-scm.com) è una soluzione di controllo di versione open source molto diffuso che è stato originariamente sviluppata per gestire il codice sorgente per il kernel Linux. È un sistema molto veloce e flessibile che è comune con i progetti software di qualsiasi dimensione. Lo Ridimensiona facilmente dal singoli sviluppatore con accesso a Internet scadente al team di grandi dimensioni che si estendono su tutto il mondo. GIT consente anche di creazione di rami molto semplice, che a sua volta possono incoraggiare flussi paralleli di sviluppo al minimo i rischi.
+[Git](http://git-scm.com) è una diffusa soluzione open source di controllo della versione sviluppata originariamente per gestire il codice sorgente per il kernel Linux. Si tratta di un sistema molto veloce e flessibile, molto diffuso con progetti software di tutte le dimensioni. Si adatta facilmente a singoli sviluppatori con accesso a Internet scarso a team di grandi dimensioni che si estendono a tutto il mondo. Git rende molto semplice la diramazione, che a sua volta può incoraggiare flussi paralleli di sviluppo con rischi minimi.
 
-GIT possono operare interamente tramite web browser, oppure [client GUI](http://git-scm.com/downloads/guis) in esecuzione su Linux, Mac OSX e Windows. È gratuito per i repository pubblici; repository privati richiedono una [piano a pagamento](https://github.com/pricing).
+Git può funzionare interamente tramite Web browser o [client GUI](http://git-scm.com/downloads/guis) eseguiti in Linux, Mac OSX e Windows. È gratuito per i repository pubblici; per i repository privati è necessario un [piano a pagamento](https://github.com/pricing).
 
-Le versioni correnti di Visual Studio per Windows e Mac offrono supporto nativo per Git. Microsoft fornisce una [estensione scaricabile per Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) per le versioni precedenti di Visual Studio. Come indicato in precedenza, Azure DevOps e TFS possono usare Git per il controllo della versione anziché TFVC.
+Le versioni correnti di Visual Studio per Windows e Mac forniscono il supporto nativo per git. Microsoft fornisce un' [estensione scaricabile per git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) per le versioni precedenti di Visual Studio. Come indicato in precedenza, Azure DevOps e TFS possono usare git per il controllo della versione invece di TFVC.
 
 #### <a name="subversion"></a>Subversion
 
-[Subversion](http://subversion.apache.org) (SVN) è un sistema di controllo di versione open source molto diffuso che è stata utilizzata dal 2000. SVN viene eseguito su tutte le versioni moderne di OS X, Windows, FreeBSD, Linux e Unix. Visual Studio per Mac offre supporto nativo per SVN. Sono disponibili estensioni di terze parti che offrono supporto SVN a Visual Studio.
+[Subversion](http://subversion.apache.org) (SVN) è un sistema di controllo della versione open source molto diffuso che è stato usato a partire da 2000. SVN viene eseguito in tutte le versioni moderne di OS X, Windows, FreeBSD, Linux e UNIX. Visual Studio per Mac dispone del supporto nativo per SVN. Sono disponibili estensioni di terze parti che portano il supporto SVN a Visual Studio.
 
 ### <a name="continuous-integration-environments"></a>Ambienti di integrazione continua
 
-Configurazione di un ambiente di integrazione continuata si intende la combinazione di un sistema di controllo della versione con un servizio di compilazione.  Nel secondo caso, le due cause più comuni sono:
+La configurazione di un ambiente di integrazione continua significa combinare un sistema di controllo della versione con un servizio di compilazione.  Per questi ultimi, i due più comuni sono:
 
-- [Le pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/) è il sistema di compilazione di TFS e la metodologia DevOps di Azure. È altamente integrato con Visual Studio, rendendo è utile per gli sviluppatori attivare compilazioni, automaticamente eseguire i test e visualizzare i risultati.
-- Jenkins è un server di integrazione continua open source con un ampio ecosistema di plug-in per supportare tutti i tipi di sviluppo del software. Viene eseguito in Windows e Mac OS X. Jenkins non è integrata con qualsiasi IDE specifico. Al contrario, viene configurato e gestito tramite un'interfaccia web. Integrazione Continuata Jenkins è anche facile da installare e configurare che rende interessante per i piccoli team.
+- [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) è il sistema di compilazione di Azure DEVOPS e TFS. È strettamente integrato con Visual Studio, che rende più semplice per gli sviluppatori attivare le compilazioni, eseguire automaticamente i test e visualizzare i risultati.
+- Jenkins è un server CI open source con un ampio ecosistema di plug-in per supportare tutti i tipi di sviluppo del software. Viene eseguito in Windows e Mac OS X. Jenkins non è integrato con alcun IDE specifico. Viene invece configurato e gestito tramite un'interfaccia Web. Jenkins CI è anche facile da installare e configurare, rendendolo più interessante per i team di piccole dimensioni.
 
-È possibile usare TFS, Azure DevOps autonomamente oppure è possibile usare Jenkins in combinazione con Git o TFS, Azure DevOps, come descritto nelle sezioni seguenti.
+È possibile usare il DevOps TFS/Azure autonomamente oppure è possibile usare Jenkins insieme a TFS/Azure DevOps o Git come descritto nelle sezioni seguenti.
 
 #### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps e Team Foundation Server
 
-Come illustrato, Azure DevOps e Team Foundation Server fornisce le versioni di controllo e creazione di servizi. Servizi di compilazione richiedono sempre una licenza di Xamarin Business o Enterprise per ogni piattaforma di destinazione.
+Come illustrato, Azure DevOps e Team Foundation Server fornisce servizi di controllo della versione e di compilazione. I servizi di compilazione richiedono sempre una licenza Novell Business o Enterprise per ogni piattaforma di destinazione.
 
-Con la metodologia DevOps di Azure, creare una definizione di compilazione separata per ogni piattaforma di destinazione e immettere la licenza appropriata non esiste. Una volta configurato, Azure DevOps verrà run compilare e testare nel cloud. Visualizzare [pipeline di Azure](https://docs.microsoft.com/azure/devops/pipelines/) per altri dettagli.
+Con Azure DevOps è possibile creare una definizione di compilazione separata per ogni piattaforma di destinazione e immettere la licenza appropriata. Una volta configurata, Azure DevOps eseguirà le compilazioni e i test nel cloud. Per ulteriori informazioni, vedere [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/) .
 
-Con Team Foundation Server, si configura un computer di compilazione come indicato di seguito per le piattaforme di destinazione specifico:
+Con Team Foundation Server, configurare un computer di compilazione come indicato di seguito per piattaforme di destinazione specifiche:
 
-- **Android e Windows:** Installare Visual Studio e gli strumenti di Xamarin (per Android e Windows entrambe) e configurare con le licenze Xamarin. È anche necessario spostare il Android SDK in un percorso condiviso sul server dell'agente di compilazione TFS in cui è possibile trovarlo. Per informazioni dettagliate, vedere [TFVC configurazione](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
-- **iOS e Xamarin:** Installare Visual Studio e gli strumenti Xamarin nel server di Windows con la licenza appropriata. Quindi, installare Visual Studio per Mac in un computer Mac OS X accessibile dalla rete, che fungono da un host di compilazione e creare il pacchetto di applicazione finale (IPA per APP per OS X, iOS).
+- **Android e Windows:** Installare Visual Studio e gli strumenti Novell (per Android e Windows) e configurarli con le licenze di Novell. È anche necessario spostare il Android SDK in un percorso condiviso sul server in cui è possibile trovare l'agente di compilazione TFS. Per informazioni dettagliate, vedere [configurazione di TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
+- **iOS e Novell:** Installare Visual Studio e gli strumenti di Novell in Windows Server con la licenza appropriata. Installare quindi Visual Studio per Mac in una macchina Mac OS X accessibile alla rete, che fungerà da host di compilazione e creerà il pacchetto dell'app finale (IPA per iOS, APP per OS X).
 
-Il diagramma seguente illustra la topografia di:
+Il diagramma seguente illustra questa topografia:
 
-[![](intro-to-ci-images/intro03-small.png "Questa figura illustra la topografia di")](intro-to-ci-images/intro03.png#lightbox)
+[![](intro-to-ci-images/intro03-small.png "Questo diagramma illustra questa topografia")](intro-to-ci-images/intro03.png#lightbox)
 
-È anche possibile collegare un server TFS locale a un progetto DevOps di Azure in modo che le compilazioni di DevOps di Azure vengono delegate al server locale. Per informazioni dettagliate, vedere [Build e release Agent](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
+È anche possibile collegare un server TFS locale a un progetto DevOps di Azure in modo che le compilazioni di Azure DevOps siano delegate al server locale. Per informazioni dettagliate, vedere [Build and release Agents](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
 
-#### <a name="azure-devops-and-jenkins"></a>Jenkins e azure DevOps
+#### <a name="azure-devops-and-jenkins"></a>Azure DevOps e Jenkins
 
-Se si userà Jenkins per compilare le app, è possibile archiviare il codice in DevOps di Azure o in Team Foundation Server e continuare a usare Jenkins per le compilazioni di integrazione continua. Quando si effettua il push di codice al repository Git del progetto team o quando si archivia codice in TFVC, è possibile attivare una compilazione di Jenkins. Per informazioni dettagliate, vedere [Jenkins con Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
+Se si usa Jenkins per compilare le app, è possibile archiviare il codice in Azure DevOps o Team Foundation Server e continuare a usare Jenkins per le compilazioni CI. È possibile attivare una compilazione di Jenkins quando si effettua il push del codice nel repository git del progetto team o quando si archivia il codice in TFVC. Per informazioni dettagliate, vedere [Jenkins con Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
 
-[![](intro-to-ci-images/intro04-small.png "Se si userà Jenkins per compilare le app, è possibile archiviare il codice in DevOps di Azure o in Team Foundation Server e continuare a usare Jenkins per le compilazioni di integrazione continua")](intro-to-ci-images/intro04.png#lightbox)
+[![](intro-to-ci-images/intro04-small.png "Se si usa Jenkins per compilare le app, è possibile archiviare il codice in Azure DevOps o Team Foundation Server e continuare a usare Jenkins per le compilazioni CI")](intro-to-ci-images/intro04.png#lightbox)
 
-#### <a name="git-and-jenkins"></a>GIT e Jenkins
+#### <a name="git-and-jenkins"></a>Git e Jenkins
 
-Un altro ambiente CI comune può essere completamente OS X in base. Questo scenario prevede l'uso di Git per controllo del codice sorgente e Jenkins per il server di compilazione. Entrambi sono in esecuzione in un singolo computer Mac OS X con Visual Studio per Mac installati. Ciò è molto simile a DevOps di Azure + ambiente Jenkins illustrate nella sezione precedente:
+Un altro ambiente CI comune può essere basato interamente su OS X. Questo scenario prevede l'uso di Git per il controllo del codice sorgente e di Jenkins per il server di compilazione. Entrambi sono in esecuzione in un singolo computer Mac OS X con Visual Studio per Mac installato. Questa operazione è molto simile all'ambiente Azure DevOps + Jenkins illustrato nella sezione precedente:
 
-[![](intro-to-ci-images/intro05-small.png "Ciò è molto simile a DevOps di Azure + ambiente Jenkins illustrate nella sezione precedente")](intro-to-ci-images/intro05.png#lightbox)
+[![](intro-to-ci-images/intro05-small.png "Questo è molto simile all'ambiente Azure DevOps + Jenkins illustrato nella sezione precedente")](intro-to-ci-images/intro05.png#lightbox)
 
 > [!IMPORTANT]
-> **Jenkins è [non è supportato da Microsoft](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**
+> **Jenkins [non è supportato da Microsoft](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**

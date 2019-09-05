@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le visualizzazioni di raccolta
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 616b20872a01b4df6c3f27c636ce7b8ee912414e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200348"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280214"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Uso delle viste di raccolta tvOS in Novell
 

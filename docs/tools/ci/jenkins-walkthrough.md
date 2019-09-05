@@ -3,15 +3,15 @@ title: Uso di Jenkins con Xamarin
 description: Questo documento descrive come usare Jenkins per l'integrazione continua con le applicazioni Novell. Viene illustrato come installare, configurare e usare Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d44e7232529386b7cb6b3db5fbb8bc4a285972fb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 40f3443fb7c6fc6240e016106d9b6bbe0e0b666d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529128"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290828"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso di Jenkins con Xamarin
 

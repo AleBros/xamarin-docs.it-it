@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso delle visualizzazioni tabella in un'
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120836"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291615"
 ---
 # <a name="table-views-in-xamarinmac"></a>Viste tabella in Novell. Mac
 
@@ -339,11 +339,11 @@ Se si esegue l'applicazione, viene visualizzato quanto segue:
 
 ## <a name="sorting-by-column"></a>Ordinamento per colonna
 
-Consente all'utente di ordinare i dati della tabella facendo clic su un'intestazione di colonna. In primo luogo, fare doppio `Main.storyboard` clic sul file per aprirlo per la modifica in Interface Builder. Selezionare la `Product` colonna, immettere `Title` per la **chiave**di ordinamento `compare:` , per il selettore e selezionare `Ascending` per l' **ordine**:
+Consente all'utente di ordinare i dati della tabella facendo clic su un'intestazione di colonna. In primo luogo, fare doppio `Main.storyboard` clic sul file per aprirlo per la modifica in Interface Builder. Selezionare la `Product` colonna, immettere `Title` per la **chiave**di ordinamento `compare:` , per il **selettore** e selezionare `Ascending` per l' **ordine**:
 
 [![](table-view-images/sort01.png "Impostazione della chiave di ordinamento")](table-view-images/sort01.png#lightbox)
 
-Selezionare la `Details` colonna, immettere `Description` per la **chiave**di ordinamento `compare:` , per il selettore e selezionare `Ascending` per l' **ordine**:
+Selezionare la `Details` colonna, immettere `Description` per la **chiave**di ordinamento `compare:` , per il **selettore** e selezionare `Ascending` per l' **ordine**:
 
 [![](table-view-images/sort02.png "Impostazione della chiave di ordinamento")](table-view-images/sort02.png#lightbox)
 
@@ -498,11 +498,11 @@ Se si esegue l'applicazione e si digita un carattere, viene selezionata una riga
 
 ## <a name="reordering-columns"></a>Riordinamento delle colonne
 
-Se si desidera consentire all'utente di trascinare le colonne riordinate nella visualizzazione tabella, fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica in Interface Builder. Selezionare la visualizzazione tabella nella **gerarchia dell'interfaccia** e selezionare la casella di controllo riordino in **attributo Inspector**:
+Se si desidera consentire all'utente di trascinare le colonne riordinate nella visualizzazione tabella, fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica in Interface Builder. Selezionare la visualizzazione tabella nella **gerarchia dell'interfaccia** e selezionare la casella di controllo **riordino** in **attributo Inspector**:
 
 [![](table-view-images/reorder01.png "Controllo attribute")](table-view-images/reorder01.png#lightbox)
 
-Se si assegna un valore per la proprietà autosave e si seleziona il campo **informazioni colonna** , tutte le modifiche apportate al layout della tabella verranno salvate automaticamente e ripristinate alla successiva esecuzione dell'applicazione.
+Se si assegna un valore per la proprietà **autosave** e si seleziona il campo **informazioni colonna** , tutte le modifiche apportate al layout della tabella verranno salvate automaticamente e ripristinate alla successiva esecuzione dell'applicazione.
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -815,7 +815,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 }
 ```
 
-Esaminiamo più dettagliatamente alcune sezioni del codice. Prima di tutto, se `NSTableViewCell` viene eseguita un'azione nuova creata in base al nome della colonna. Per le prime due colonne (**Product** eDetails), `ConfigureTextField` viene chiamato il nuovo metodo.
+Esaminiamo più dettagliatamente alcune sezioni del codice. Prima di tutto, se `NSTableViewCell` viene eseguita un'azione nuova creata in base al nome della colonna. Per le prime due colonne (**Product** e **Details**), `ConfigureTextField` viene chiamato il nuovo metodo.
 
 Per la colonna **azione** , viene creato `NSButton` un nuovo oggetto che viene aggiunto alla cella come vista secondaria:
 

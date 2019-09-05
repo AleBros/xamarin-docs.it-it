@@ -4,15 +4,15 @@ description: Nelle sezioni precedenti è stato illustrato lo sviluppo con le tab
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528682"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291387"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo delle tabelle in iOS Designer
 
@@ -42,7 +42,7 @@ L'esempio StoryboardTable contiene una semplice app Master-Detail che usa entram
 
  [![Schermate di esempio](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
-L'interfaccia utente verrà compilata con uno storyboard ed entrambe le schermate utilizzeranno un UITableView. Nella schermata principale viene utilizzato il *contenuto* del prototipo per il layout della riga e nella schermata dei dettagli viene utilizzato il *contenuto statico* per creare un form di immissione dati utilizzando layout di celle personalizzati.
+L'interfaccia utente verrà compilata con uno storyboard ed entrambe le schermate utilizzeranno un UITableView. Nella schermata principale viene utilizzato il *contenuto del prototipo* per il layout della riga e nella schermata dei dettagli viene utilizzato il *contenuto statico* per creare un form di immissione dati utilizzando layout di celle personalizzati.
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 

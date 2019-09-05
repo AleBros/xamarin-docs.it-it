@@ -3,15 +3,15 @@ title: Cronologia delle versioni di Objective Sharpe
 description: Questo documento descrive la cronologia delle versioni di Objective Sharpie, lo strumento usato per automatizzare la creazione C# di associazioni nel codice Objective-C.
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: 86c9f46064b66dc31f805e830309cb061a78a2c8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509644"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290864"
 ---
 # <a name="objective-sharpie-release-history"></a>Cronologia delle versioni di Objective Sharpe
 
@@ -29,7 +29,7 @@ ms.locfileid: "68509644"
 
 * Supporto per Xcode 8 Beta 4, iOS 10, macOS 10,12, tvOS 10 e watchos 3.
 * Aggiornamento alla build Master Clang più recente (2016-08-02)
-* [Mantieni le opzioni di invio](https://twitter.com/Symbiatch/status/760373403878559744) di `sharpie pod bind` dati di telemetria da a. `sharpie bind`
+* Mantieni le opzioni di invio di `sharpie pod bind` dati `sharpie bind`di [telemetria](https://twitter.com/Symbiatch/status/760373403878559744) da a.
 
 ## <a name="32-june-14-2016"></a>3,2 (14 giugno 2016)
 
@@ -103,7 +103,7 @@ Objective Sharpie 2,0 si basa su 3.6.1 Clang.
 
 Si noterà spesso che i binding prodotti da Objective Sharpie verranno ora annotati con l' `[Verify]` attributo. Questi attributi indicano che è necessario _verificare_ che l'obiettivo Sharpie abbia fatto la corretta operazione confrontando l'associazione con la dichiarazione c/Objective-c originale (che verrà fornita in un commento sopra la dichiarazione associata).
 
-La verifica  è consigliata per tutte le dichiarazioni associate, ma è probabilmente _necessaria_ per le dichiarazioni annotate `[Verify]` con l'attributo. Questo è dovuto al fatto che in molte situazioni i metadati non sono sufficienti nel codice sorgente nativo originale per dedurre il modo migliore per produrre un'associazione. Potrebbe essere necessario fare riferimento a documenti o commenti di codice all'interno dei file di intestazione per ottenere la migliore decisione di associazione.
+La verifica è _consigliata_ per tutte le dichiarazioni associate, ma è probabilmente _necessaria_ per le dichiarazioni annotate `[Verify]` con l'attributo. Questo è dovuto al fatto che in molte situazioni i metadati non sono sufficienti nel codice sorgente nativo originale per dedurre il modo migliore per produrre un'associazione. Potrebbe essere necessario fare riferimento a documenti o commenti di codice all'interno dei file di intestazione per ottenere la migliore decisione di associazione.
 
 Per ulteriori informazioni, vedere la documentazione relativa alla [Verifica degli attributi](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) .
 

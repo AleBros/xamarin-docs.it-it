@@ -4,15 +4,15 @@ description: Questo documento descrive i miglioramenti apportati da Apple ai wid
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 71c58baee5e98efcfb38b75ffed2b85c90f8a131
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 47055ca61e0be9b5b54e8f5ff23719b64f1101cd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227356"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291701"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Miglioramenti ai widget della schermata iniziale e di ricerca in iOS 10
 
@@ -42,7 +42,7 @@ Idealmente, lo sviluppatore deve sempre provare e progettare i widget che l'uten
 - **Non personalizzare lo sfondo del widget. i** widget vengono visualizzati su uno sfondo chiaro e sfocato fornito dal sistema. Questa operazione viene eseguita per promuovere la coerenza tra i widget e migliorare la leggibilità del contenuto. Evitare di usare un'immagine come sfondo del widget perché potrebbe scontrarsi con le immagini di blocco e della schermata iniziale dell'utente.
 - **Usare il tipo di carattere del sistema in grigio nero o scuro** : quando si Visualizza il testo in un widget, il tipo di carattere del sistema funziona meglio. Il tipo di carattere deve trovarsi in un colore grigio nero o scuro per distinguersi dallo sfondo del widget chiaro e sfocato.
 - **Fornire l'accesso alle app quando appropriato** . i widget devono funzionare sempre separatamente dalla loro app. Tuttavia, se è necessaria una funzionalità più approfondita, il widget dovrebbe essere in grado di avviare l'app per visualizzare o modificare informazioni specifiche. Non includere mai un pulsante "Apri app", semplicemente consentire all'utente di toccare il contenuto e non aprire mai un'app di terze parti.
-- **Selezionare un nome di widget chiaro** e conciso. l'icona dell'app e il nome del widget vengono sempre visualizzati sul contenuto del widget. Apple suggerisce di usare il nome dell'app per il widget principale e un nome chiaro e conciso per tutti gli altri. Quando si specifica un titolo personalizzato per il widget, è preferibile usare il nome dell'app, ad esempio le mappe vicine, i ristoranti Maps e così via.
+- **Selezionare un nome di widget chiaro e conciso** . l'icona dell'app e il nome del widget vengono sempre visualizzati sul contenuto del widget. Apple suggerisce di usare il nome dell'app per il widget principale e un nome chiaro e conciso per tutti gli altri. Quando si specifica un titolo personalizzato per il widget, è preferibile usare il nome dell'app, ad esempio le mappe vicine, i ristoranti Maps e così via.
 - **Informa quando l'autenticazione aggiunge valore** : se sono disponibili funzionalità o informazioni aggiuntive solo quando l'utente è autenticato e connesso, presentarlo all'utente. Ad esempio, un'app ride sharing può indicare "accedi a book ride".
 - **Selezionare un widget Elenco azioni rapide** : se l'app fornisce più di un widget, lo sviluppatore deve scegliere quello da presentare quando l'utente Visualizza l'elenco di azioni rapide applicando la pressione all'icona dell'app usando il tocco 3D.
 

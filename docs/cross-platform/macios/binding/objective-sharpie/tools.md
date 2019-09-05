@@ -3,15 +3,15 @@ title: Comandi & per gli strumenti di Sharpie
 description: Questo documento fornisce una panoramica degli strumenti inclusi con Objective Sharpie e gli argomenti della riga di comando da usare con essi.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2015
-ms.openlocfilehash: ddfe0f99991808214a6006c9504d267179adf2ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 13f3000315e91cec7ff2422cff3b520997ba26fd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521865"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280915"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Comandi & per gli strumenti di Sharpie
 
@@ -51,7 +51,7 @@ Available Tools:
 
 L'obiettivo Sharpie fornisce gli strumenti seguenti:
 
-|Strumento|Descrizione|
+|Strumento|DESCRIZIONE|
 |--- |--- |
 |**xcode**|Fornisce informazioni sull'installazione corrente di Xcode e sulle versioni di iOS e Mac SDK disponibili. Queste informazioni verranno usate in un secondo momento durante la generazione dei binding.|
 |**pod**|Consente di cercare, configurare, installare (in una directory locale) e di associare le librerie [CocoaPod](https://cocoapods.org/) di Objective-C disponibili dal repository delle specifiche master. Questo strumento valuta la CocoaPod installata per dedurre automaticamente l'input corretto da passare allo `bind` strumento riportato di seguito. Novità in 3,0!|

@@ -4,15 +4,15 @@ description: Questo documento descrive come vendere prodotti e servizi digitali 
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 2e429002923d4bfdd2cf5ded4ef1508f8ebf20b8
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 63530595d9892ed99b7eace3d248e1bc0d0b37d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121505"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288410"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
 
@@ -50,7 +50,7 @@ Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione
 
 Questo articolo ha introdotto il concetto di acquisto in-app, descritto come configurare l'applicazione per sfruttarne i vantaggi ed esempi presentati con Novell. iOS. È stato analizzato:
 
-- **portale** di provisioning iOS: linee guida per abilitare la funzionalità di acquisto in-app.
+- **portale di provisioning iOS** : linee guida per abilitare la funzionalità di acquisto in-app.
 - **iTunes Connect** : configurazione dei prodotti da vendere nell'app.
 - **Store Kit** : spiegazione delle classi usate per compilare le funzionalità di acquisto in-app.
 - **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Novell. iOS.

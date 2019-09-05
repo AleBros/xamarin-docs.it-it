@@ -3,15 +3,15 @@ title: 'Parte 1: informazioni sulla piattaforma Novell mobile'
 description: Questo documento descrive la piattaforma Novell a un livello elevato, esaminando il processo di compilazione, l'accesso Platform SDK, la condivisione del codice, la creazione dell'interfaccia utente, le finestre di progettazione visiva e altro ancora.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e3a9afa2780f9cf5816427d282644fb2ac3c8dde
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5398d99a64e7f6b75c8b9e418da252852aff1322
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526764"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288682"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: informazioni sulla piattaforma Novell mobile
 

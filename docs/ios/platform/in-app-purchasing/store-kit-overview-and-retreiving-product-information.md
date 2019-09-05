@@ -4,15 +4,15 @@ description: Questo documento fornisce una panoramica di StoreKit. Descrive le c
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4a68526187271c00332548764850783531391c73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527795"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292181"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Panoramica di StoreKit e recupero di informazioni sul prodotto in Novell. iOS
 
@@ -201,7 +201,7 @@ public void RequestProductData (List<string> productIds)
 }
 ```
 
-iOS effettuerà automaticamente il routing della richiesta alla versione "sandbox" o "produzione" dell'app Store a seconda del profilo di provisioning con cui viene eseguita l'applicazione. in questo modo, quando si sviluppa o si testa l'app, la richiesta avrà accesso a ogni prodotto configurato in iTunes Connect (anche quelli che non sono ancora stati inviati o approvati da Apple). Quando l'applicazione è in produzione, le richieste StoreKit restituiranno solo informazioni per i prodotti approvati.   
+iOS effettuerà automaticamente il routing della richiesta alla versione "sandbox" o "produzione" dell'app Store a seconda del profilo di provisioning con cui viene eseguita l'applicazione. in questo modo, quando si sviluppa o si testa l'app, la richiesta avrà accesso a ogni prodotto configurato in iTunes Connect (anche quelli che non sono ancora stati inviati o approvati da Apple). Quando l'applicazione è in produzione, le richieste StoreKit restituiranno solo informazioni per i prodotti **approvati** .   
    
    
    
@@ -244,13 +244,13 @@ Un `SKProductsRequest` oggetto può anche restituire un elenco di ID prodotto no
    
    
    
- **ID prodotto** non tipizzato. sono accettati solo ID prodotto validi.   
+ **ID prodotto non tipizzato** . sono accettati solo ID prodotto validi.   
    
  Il **prodotto non è stato approvato** : durante i test, tutti i prodotti cancellati per la vendita devono essere `SKProductsRequest`restituiti da un oggetto. Tuttavia, in produzione vengono restituiti solo i prodotti approvati.   
    
  **ID App non è esplicito** – Wildcard App IDs (con un asterisco non consentono acquisti in-app.   
    
- **Profilo** di provisioning errato: se si apportano modifiche alla configurazione dell'applicazione nel portale di provisioning, ad esempio l'abilitazione degli acquisti in-app, ricordarsi di rigenerare e usare il profilo di provisioning corretto quando si compila l'app.   
+ **Profilo di provisioning errato** : se si apportano modifiche alla configurazione dell'applicazione nel portale di provisioning, ad esempio l'abilitazione degli acquisti in-app, ricordarsi di rigenerare e usare il profilo di provisioning corretto quando si compila l'app.   
    
  il **contratto per le applicazioni a pagamento iOS non è** disponibile: le funzionalità di StoreKit non funzioneranno a meno che non sia presente un contratto valido per l'account sviluppatore Apple.   
    
@@ -305,5 +305,5 @@ L'uso di due account di test di iTunes diversi (uno per l'archivio americano e u
    
    
    
- Ricordare che per usare un account di test di archivio diverso è necessario disconnettersi nelle **Impostazioni > iTunes e App Store** e riavviare l'applicazione per accedere con un account diverso. Per modificare la lingua del dispositivo, passare a **impostazioni > generale > lingua > internazionale**.
+ Ricordare che per usare un account di test di archivio diverso è necessario **disconnettersi** nelle **Impostazioni > iTunes e App Store** e riavviare l'applicazione per accedere con un account diverso. Per modificare la lingua del dispositivo, passare a **impostazioni > generale > lingua > internazionale**.
 

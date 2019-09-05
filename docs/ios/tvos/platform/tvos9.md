@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: be59ee3f51801c67277aac1a3ec274e81997ff3b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657332"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290713"
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 
@@ -102,7 +102,7 @@ Proprio come lo sviluppo per iOS, la nuova tvOS richiederà il profilo di provis
 
 Il provisioning appropriato è necessario anche per accedere alle funzionalità di tvOS, ad esempio gli archivi dati iCloud KVS o CloudKit. Per informazioni sul supporto di iCloud nelle app Novell. tvOS, vedere le [risorse e l'archivio dati](~/ios/tvos/app-fundamentals/resources-data-storage.md) .
 
-I profili di provisioning vengono creati e installati nello stesso modo in cui funzionano con le app Novell. iOS. Per ulteriori informazioni, vedere la documentazione relativa al provisioning dei [dispositivi](~/ios/get-started/installation/device-provisioning/index.md) iOS.
+I profili di provisioning vengono creati e installati nello stesso modo in cui funzionano con le app Novell. iOS. Per ulteriori informazioni, vedere la documentazione relativa al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) iOS.
 
 <a name="Apple-TV-Apps" />
 
@@ -126,7 +126,7 @@ Vedere il [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md)
 
 Oltre alle app tradizionali installate, Apple TV semplifica la creazione di app di streaming multimediale client-server basate sul Web usando le tecnologie Web (HTTPS, XML e JavaScript). L'interfaccia utente viene progettata usando il linguaggio di markup TVML di Apple e viene usato JavaScript per definire i comportamenti dell'app usando TVMLKit.
 
-Per altre informazioni, vedere le informazioni di riferimento sul [linguaggio di markup Apple TV](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064), informazioni di riferimento sul [Framework di TVJS](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLJS/Reference/TVJSFrameworkReference/index.html#//apple_ref/doc/uid/TP40016076), informazioni di [riferimento sul framework TVMLKit](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLKit/Reference/TVMLKit_Collection/index.html#//apple_ref/doc/uid/TP40016429), [informazioni sulle http live streaming](https://developer.apple.com/library/prerelease/tvos/referencelibrary/GettingStarted/AboutHTTPLiveStreaming/about/about.html#//apple_ref/doc/uid/TP40013978) e [la specifica di authoring HLS per Apple TV](https://developer.apple.com/services-account/download?path=/Documentation/HLS_Authoring_Specification_for_Apple_TV/HLS_Authoring_Specification_for_Apple_TV.pdf) documentazione.
+Per altre informazioni, vedere le informazioni di riferimento sul [linguaggio di markup Apple TV](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064), informazioni di riferimento sul [Framework di TVJS](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLJS/Reference/TVJSFrameworkReference/index.html#//apple_ref/doc/uid/TP40016076), informazioni di riferimento sul [framework TVMLKit](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLKit/Reference/TVMLKit_Collection/index.html#//apple_ref/doc/uid/TP40016429), [informazioni sulle http live streaming](https://developer.apple.com/library/prerelease/tvos/referencelibrary/GettingStarted/AboutHTTPLiveStreaming/about/about.html#//apple_ref/doc/uid/TP40013978) e [la specifica di authoring HLS per Apple TV](https://developer.apple.com/services-account/download?path=/Documentation/HLS_Authoring_Specification_for_Apple_TV/HLS_Authoring_Specification_for_Apple_TV.pdf) documentazione.
 
 <a name="User-Interface-Challenges" />
 

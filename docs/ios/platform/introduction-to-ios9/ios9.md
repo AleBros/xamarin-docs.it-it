@@ -1,68 +1,68 @@
 ---
 title: Compatibilità di iOS 9
-description: Anche se non si intende aggiungere immediatamente le funzionalità di iOS 9 all'app, è necessario ricompilare le tue App con la versione più recente di Xamarin.
+description: Anche se non si prevede di aggiungere le funzionalità di iOS 9 all'app immediatamente, è necessario ricompilare le app con la versione più recente di Novell.
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 6ade1c05c8e1cc64a4d24df1284d86175083ab80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f46b60a0567a5486a5c22a6ff36561e976d07b47
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293645"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292897"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilità di iOS 9
 
-_Anche se non si intende aggiungere immediatamente le funzionalità di iOS 9 all'app, è necessario ricompilare le tue App con la versione più recente di Xamarin._
+_Anche se non si prevede di aggiungere le funzionalità di iOS 9 all'app immediatamente, è necessario ricompilare le app con la versione più recente di Novell._
 
 > [!IMPORTANT]
-> Le informazioni in questa pagina sono per i clienti con le app già in Store le App destinate a iOS 8 o versioni precedenti, che non hanno già inviato gli aggiornamenti per la compatibilità di iOS 9. Se si usa già le versioni più recenti - Xcode 7 e 9 di xamarin. ios: per lo sviluppo di app, visitare il [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
+> Le informazioni contenute in questa pagina sono destinate ai clienti con app già presenti nell'App Store destinate a iOS 8 o versioni precedenti, che non hanno già inviato aggiornamenti per la compatibilità con iOS 9. Se si usano già le versioni più recenti-Xcode 7 e Novell. iOS 9 per lo sviluppo di app, vedere l' [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
-Quando è stata visualizzata le prima versioni di iOS 9 beta, è stato rilevato due problemi con le versioni precedenti di Xamarin che si manifesta come le applicazioni meno recenti sia in grado di avviare in iOS 9.
+Quando sono state apportate le prime versioni beta di iOS 9, sono stati identificati due problemi con le versioni precedenti di Novell che si manifestavano come app meno recenti che non possono essere avviate in iOS 9.
 
-Questi due problemi (come [dettagliate nei nostri forum](http://forums.xamarin.com/discussion/comment/131529/#Comment_131529)) sono stati:
+Questi due problemi (come [descritto nei forum](http://forums.xamarin.com/discussion/comment/131529/#Comment_131529)):
 
-- Compilare App per iOS 8 o versioni precedenti non riesca a avviare su dispositivi a 32 bit (incluse le app compilate con la [API unificata](~/cross-platform/macios/unified/index.md)).
-- P/Invoke ha esito negativo con il percorso completo non è specificato.
+- Le app compilate per iOS 8 o versioni precedenti non possono essere avviate su dispositivi a 32 bit (incluse le app compilate con il [API unificata](~/cross-platform/macios/unified/index.md)).
+- Non è stato specificato alcun errore P/Invoke con percorso completo.
 
-Aggiornamento di un'installazione di Xamarin per l'ultimo rilascio del canale Stable e quindi ricompilare e ridistribuire le app, consente di correggere questi due problemi.
+Se si aggiorna l'installazione di Novell all'ultima versione stabile del canale e quindi si ricompilano e ridistribuiscono le app, questi due problemi vengono risolti.
 
-_Anche se non si intende aggiornare immediatamente l'app con funzionalità di iOS 9, è consigliabile compilare nuovamente con la versione più recente di Xamarin e inviare di nuovo per l'App Store_.
-
-
-
-Ciò garantisce che verrà eseguita l'app in iOS 9 dopo l'aggiornamento.
-È possibile continuare a supporto di iOS 8: ricompilare con la versione più recente non influisce sulla versione di destinazione dell'applicazione.
-
-Se si dispone di altri problemi durante il test delle App esistenti in iOS 9, vedere la [miglioramento della compatibilità](#compat) sezione riportata di seguito.
+_Anche se non si prevede di aggiornare immediatamente l'app con le funzionalità di iOS 9, è consigliabile ricompilare con la versione più recente di Novell ed eseguire di nuovo l'invio all'App Store_.
 
 
-### <a name="updating-with-visual-studio"></a>L'aggiornamento con Visual Studio
 
-È consigliabile in modo esplicito verificare che Visual Studio sia aggiornato alla versione stabile più recente.
+In questo modo l'app verrà eseguita in iOS 9 dopo l'aggiornamento dei clienti.
+È possibile continuare a supportare iOS 8: la ricompilazione con la versione più recente non influisce sulla versione di destinazione dell'applicazione.
 
-## <a name="what-about-components-nugets-and-other-libraries"></a>Per quanto riguarda i componenti, pacchetti NuGet e altre librerie?
+Se sono presenti altri problemi durante il test delle app esistenti in iOS 9, vedere la sezione [miglioramento della compatibilità](#compat) riportata di seguito.
 
-È effettuare **non** necessario attendere per nuove versioni di tutti i componenti o i pacchetti NuGet in uso per risolvere i problemi di due indicato in precedenza.
-Risolto questi problemi semplicemente creando nuovamente l'app con la versione stabile più recente di xamarin. IOS.
 
-Analogamente, i produttori di componenti e gli autori di Nuget sono **non** richiesto di inviare nuove build solo per risolvere due problemi menzionati in precedenza. Tuttavia, se presente un componente o Nuget Usa `UICollectionView` o viste da caricare **Xib** file, un aggiornamento *potrebbe* essere necessarie per risolvere i problemi di compatibilità di iOS 9 indicati di seguito.
+### <a name="updating-with-visual-studio"></a>Aggiornamento con Visual Studio
+
+Si consiglia di verificare in modo esplicito che Visual Studio sia aggiornato alla versione stabile più recente.
+
+## <a name="what-about-components-nugets-and-other-libraries"></a>Quali componenti, NuGet e altre librerie?
+
+**Non** è necessario attendere le nuove versioni di componenti o NuGet utilizzati per risolvere i due problemi menzionati in precedenza.
+Questi problemi sono corretti semplicemente ricompilando l'app con la versione stabile più recente di Novell. iOS.
+
+Analogamente, i fornitori di componenti e gli autori NuGet **non** devono inviare nuove compilazioni solo per correggere i due problemi menzionati in precedenza. Tuttavia, se un componente o NuGet USA `UICollectionView` o carica visualizzazioni da file **XIB** , *potrebbe* essere necessario un aggiornamento per risolvere i problemi di compatibilità con iOS 9 indicati di seguito.
 
 
 <a name="compat" />
 
-## <a name="improving-compatibility-in-your-code"></a>Miglioramento della compatibilità del codice
+## <a name="improving-compatibility-in-your-code"></a>Miglioramento della compatibilità nel codice
 
-Ecco alcuni casi di codice i modelli che *utilizzato* a funzionare nelle versioni precedenti di iOS di rilievo in iOS 9. Ecco alcuni dei problemi possibili (e le relative soluzioni) che possono verificarsi durante il test in iOS 9:
+Ci sono alcuni casi di modelli di codice *usati* per lavorare nelle versioni precedenti di iOS che si infrangono in iOS 9. Di seguito sono riportati alcuni possibili problemi (e le relative soluzioni) che possono verificarsi durante i test in iOS 9:
 
-### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView è null nei costruttori
+### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell. ContentView è null nei costruttori
 
-**Motivo:** In iOS 9 il `initWithFrame:` costruttore è ora obbligatorio, a causa di modifiche del comportamento in iOS 9, come i [gli stati di documentazione UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se una classe per l'identificatore specificato è stato registrato e deve essere creata una nuova cella, la cella a questo punto viene inizializzata chiamando il `initWithFrame:` (metodo).
+**Motivo** In iOS 9 il `initWithFrame:` costruttore è ora necessario, a causa delle modifiche del comportamento in iOS 9 come [Stati della documentazione UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se è stata registrata una classe per l'identificatore specificato ed è necessario creare una nuova cella, la cella viene ora inizializzata chiamando `initWithFrame:` il relativo metodo.
 
-**Fix:** Aggiungere il `initWithFrame:` costruttore analogo al seguente:
+**Difficoltà** Aggiungere il `initWithFrame:` costruttore come segue:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -76,11 +76,11 @@ Esempi correlati: [MotionGraph](https://github.com/xamarin/monotouch-samples/com
 
 
 
-### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView non riesce a init con programmatore durante il caricamento di una vista da un file Xib/Nib
+### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView non riesce a inizializzare con coder durante il caricamento di una visualizzazione da un XIB/pennino
 
-**Motivo:** Il `initWithCoder:` costruttore è quella chiamata durante il caricamento di una vista da un file Xib di Interface Builder. Se questo costruttore non viene esportato il codice non gestito non è possibile chiamare la versione gestita di esso. In precedenza (ad es. in iOS 8) di `IntPtr` costruttore è stato richiamato per inizializzare visualizzazione.
+**Motivo** Il `initWithCoder:` costruttore è quello chiamato durante il caricamento di una visualizzazione da un file di Interface Builder XIB. Se questo costruttore non viene esportato, il codice non gestito non può chiamare la versione gestita. In precedenza (ad esempio in iOS 8) il `IntPtr` costruttore è stato richiamato per inizializzare la visualizzazione.
 
-**Fix:** Creare ed esportare il `initWithCoder:` costruttore analogo al seguente:
+**Difficoltà** Creare ed esportare il `initWithCoder:` costruttore come segue:
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -93,23 +93,23 @@ public YourClassName (NSCoder coder) : base (coder)
 Esempio correlato: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
 
 
-### <a name="dyld-message-no-cache-image-with-name"></a>Messaggio Dyld: Nessuna cache immagine con nome...
+### <a name="dyld-message-no-cache-image-with-name"></a>Messaggio dyld: nessuna immagine della cache con nome...
 
-Potrebbe verificarsi un arresto anomalo del sistema con le informazioni seguenti nel registro:
+È possibile che si verifichi un arresto anomalo con le informazioni seguenti nel log:
 
 ```csharp
 Dyld Error Message:
 Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**Motivo:** Si tratta di un bug nel linker nativo di Apple, cosa che accade quando effettuano una struttura di private pubblico (JavaScriptCore è stato reso pubblico in iOS 7, prima che fosse una struttura di private), e la destinazione di distribuzione dell'app è una versione iOS quando il framework è stato privato. In questo caso si collegherà linker di Apple con la versione di framework anziché la versione pubblica privata.
+**Motivo** Si tratta di un bug nel linker nativo di Apple, che si verifica quando rende pubblico un Framework privato (JavaScriptCore è stato reso pubblico in iOS 7, prima che fosse un Framework privato) e la destinazione di distribuzione dell'app è per una versione di iOS quando il Framework era privato. In questo caso il linker di Apple verrà collegato con la versione privata del Framework invece che con la versione pubblica.
 
-**Fix:** Questo problema verrà risolto per iOS 9, ma non esiste una soluzione semplice è possibile applicare manualmente nel frattempo: semplicemente come destinazione una versione iOS successiva nel progetto (è possibile provare in questo caso iOS 7). Altri Framework possono presentare problemi simili, ad esempio il framework di WebKit è stato reso pubblico in iOS 8 e destinate a iOS 7 causerà questo errore, si deve avere come destinazione iOS 8 per usare WebKit nell'app.
+**Difficoltà** Questo problema verrà risolto per iOS 9, ma esiste una semplice soluzione alternativa che è possibile applicare nel frattempo: è sufficiente fare riferimento a una versione successiva di iOS nel progetto (in questo caso, è possibile provare iOS 7). Altri Framework possono presentare problemi simili. ad esempio, il Framework WebKit è stato reso pubblico in iOS 8 (e pertanto la destinazione di iOS 7 comporterà l'errore. è consigliabile usare iOS 8 per usare WebKit nell'app).
 
 
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [informazioni sul rilascio compatibilità di iOS 9](https://releases.xamarin.com/ios-hotfix-for-ios-9-preview-xcode-6/)
+- [informazioni sulla versione per la compatibilità con iOS 9](https://releases.xamarin.com/ios-hotfix-for-ios-9-preview-xcode-6/)
 - [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)
-- [L'aggiornamento delle App xamarin. IOS per iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)
+- [Aggiornamento delle app Novell. iOS in iOS9 (video)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

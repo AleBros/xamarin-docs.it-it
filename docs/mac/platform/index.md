@@ -1,26 +1,26 @@
 ---
-title: Funzionalità della piattaforma di macOS
-description: 'Questo documento include collegamenti alle guide che descrivono le funzionalità della piattaforma xamarin. Mac e macOS importanti: OpenTK, storyboard, estensioni e altro ancora.'
+title: Funzionalità della piattaforma macOS
+description: 'Questo documento include collegamenti a guide che descrivono le principali funzionalità della piattaforma macOS e Novell. Mac: OpenTK, storyboard, estensioni e altro ancora.'
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 7e91645fb92814c88c3711645ea294ac701b67ac
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9587548becf840a06c0cbf198c0afe716a7156a2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032553"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284461"
 ---
 # <a name="macos-platform-features"></a>funzionalità della piattaforma macOS
 
-I documenti in questa sezione riguardano funzionante con le funzionalità chiave, specifica della piattaforma di macOS in un'applicazione xamarin. Mac.
+I documenti in questa sezione illustrano l'uso delle funzionalità chiave specifiche della piattaforma macOS in un'applicazione Novell. Mac.
 
 ## <a name="introduction-to-macos-mojavemacplatformintroduction-to-macos-mojaveindexmd"></a>[Introduzione a macOS Mojave](~/mac/platform/introduction-to-macos-mojave/index.md)
 
-Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate in macOS Mojave che possono essere utilizzati durante la compilazione di applicazioni xamarin. Mac.
+Questo documento fornisce una panoramica generale delle funzionalità nuove e aggiornate di macOS Mojave che è possibile usare per la compilazione di applicazioni Novell. Mac.
 
 ## <a name="introduction-to-macos-high-sierramacplatformintroduction-to-macos-high-sierraindexmd"></a>[Introduzione a macOS High Sierra](~/mac/platform/introduction-to-macos-high-sierra/index.md)
 
@@ -28,24 +28,24 @@ Questo documento descrive le funzionalità nuove e migliorate in macOS High Sier
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introduzione a macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 
-macOS Sierra è la più recente evoluzione del sistema operativo desktop di Apple per Mac. Questo documento illustra le modifiche da Mac OS X El Capitan e come implementarli in un'app xamarin. Mac.
+macOS Sierra è l'ultima incarnazione del sistema operativo desktop di Apple per Mac. Questo documento illustra le modifiche apportate da Mac OS X El Capitan e come implementarle in un'app Novell. Mac.
 
 ## <a name="binding-objective-c-libraries-for-macbindingmd"></a>[Binding di librerie Objective-C per Mac](binding.md)
 
-Informazioni su come eseguire l'associazione di raccolte Mac di Objective-C per l'uso nei progetti xamarin. Mac.
-Vedere le [pagina risoluzione dei problemi](~/cross-platform/macios/binding/troubleshooting.md) per risolvere eventuali problemi.
+Informazioni su come associare le librerie Mac Objective-C per l'uso nei progetti Novell. Mac.
+Per risolvere eventuali problemi, vedere la pagina relativa alla [risoluzione dei](~/cross-platform/macios/binding/troubleshooting.md) problemi.
 
 ## <a name="introduction-to-opentkmacplatformopentkmd"></a>[Introduzione a OpenTK](~/mac/platform/opentk.md)
 
-OpenTK (il Toolkit Open) è un'avanzato di basso livello libreria c# che semplifica l'uso di OpenGL e OpenCL OpenAL. OpenTK utilizzabile per giochi, applicazioni scientifiche o altri progetti che richiedono la grafica 3D, funzionalità audio o di calcolo. Questo articolo fornisce una breve introduzione all'uso OpenTK in un'app xamarin. Mac.
+OpenTK (The Open Toolkit) è una libreria avanzata di basso livello C# che rende più semplice l'uso di OpenGL, OpenCL e OpenAL. OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo. Questo articolo fornisce una breve introduzione all'uso di OpenTK in un'app Novell. Mac.
 
 ## <a name="introduction-to-storyboardsmacplatformstoryboardsindexmd"></a>[Introduzione agli storyboard](~/mac/platform/storyboards/index.md)
 
-Gli storyboard consentono inoltre di sviluppare un'interfaccia utente per l'app xamarin. Mac che include non solo i controlli e le definizioni di finestra, ma contiene anche i collegamenti tra finestre diverse (tramite gli elementi segue) e visualizzare gli stati. Questo articolo offre un'introduzione all'uso degli storyboard in un'app xamarin. Mac.
+Gli storyboard consentono di sviluppare un'interfaccia utente per l'app Novell. Mac che non include solo le definizioni e i controlli della finestra, ma contiene anche i collegamenti tra le diverse finestre (tramite gli elementi segue) e gli Stati di visualizzazione. Questo articolo fornisce un'introduzione all'uso degli storyboard in un'app Novell. Mac.
 
-## <a name="xamarinmac-extension-supportmacplatformextensionsmd"></a>[Supporto delle estensioni xamarin. Mac](~/mac/platform/extensions.md)
+## <a name="xamarinmac-extension-supportmacplatformextensionsmd"></a>[Supporto dell'estensione Novell. Mac](~/mac/platform/extensions.md)
 
-In fase di anteprima di xamarin. Mac 2.10 è stato aggiunto il supporto per più punti di estensione macOS:
+In Novell. Mac 2,10 è stato aggiunto il supporto anteprima per più punti di estensione macOS:
 
 - Finder
 - Condividi
@@ -53,4 +53,4 @@ In fase di anteprima di xamarin. Mac 2.10 è stato aggiunto il supporto per più
 
 ## <a name="target-frameworksmacplatformtarget-frameworkmd"></a>[Framework di destinazione](~/mac/platform/target-framework.md)
 
-Questo articolo illustra i tipi di Framework di destinazione (librerie di classi di Base) che sono disponibili in xamarin. Mac e le implicazioni della selezione di una destinazione specifica per l'applicazione xamarin. Mac.
+Questo articolo illustra i tipi di Framework di destinazione (librerie di classi base) disponibili in Novell. Mac e le implicazioni della selezione di una destinazione specifica per l'applicazione Novell. Mac.

@@ -4,15 +4,15 @@ description: L'app Wallet consente agli utenti iOS di archiviare i pass digitali
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119178"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70277865"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit in Novell. iOS
 
@@ -225,7 +225,7 @@ Per creare un ID di tipo pass, eseguire le operazioni seguenti.
 
 Il primo passaggio consiste nell'impostare un ID del tipo di passaggio per ogni _tipo_ di passaggio da supportare. Il pass ID (o identificatore di tipo pass) crea un identificatore univoco per il passaggio. Questo ID verrà usato per collegare il pass con l'account sviluppatore usando un certificato.
 
-1. Nella [sezione certificati, identificatori e profili del portale di provisioning iOS](https://developer.apple.com/account/overview.action)passare a identificatori e selezionare **passa ID tipo** . Quindi selezionare il **+** pulsante per creare un nuovo tipo di pass: [![](passkit-images/passid.png "Crea un nuovo tipo di passaggio")](passkit-images/passid.png#lightbox)
+1. Nella [sezione certificati, identificatori e profili del portale di provisioning iOS](https://developer.apple.com/account/overview.action)passare a **identificatori** e selezionare **passa ID tipo** . Quindi selezionare il **+** pulsante per creare un nuovo tipo di pass: [![](passkit-images/passid.png "Crea un nuovo tipo di passaggio")](passkit-images/passid.png#lightbox)
 
 2. Specificare una **Descrizione** (nome) e un **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID di tipo pass devono iniziare `pass.` con la stringa in questo `pass.com.xamarin.coupon.banana` esempio: [![](passkit-images/register.png "Specificare una descrizione e un identificatore")](passkit-images/register.png#lightbox)
 
@@ -293,7 +293,7 @@ Successivamente, è necessario generare una firma per questo file usando il cert
 
 #### <a name="signing-on-a-mac"></a>Accesso a un Mac
 
-Scaricare i **materiali di supporto** per il seeding del portafogli dal sito di [Apple Downloads](https://developer.apple.com/downloads/index.action?name=Passbook) . Usare lo `signpass` strumento per trasformare la cartella in un passaggio (in questo modo vengono calcolati anche gli hash SHA1 e viene eseguito il CAP dell'output in un file con estensione pkpass).
+Scaricare i **materiali di supporto per il seeding del portafogli** dal sito di [Apple Downloads](https://developer.apple.com/downloads/index.action?name=Passbook) . Usare lo `signpass` strumento per trasformare la cartella in un passaggio (in questo modo vengono calcolati anche gli hash SHA1 e viene eseguito il CAP dell'output in un file con estensione pkpass).
 
 #### <a name="testing"></a>Test
 
@@ -339,7 +339,7 @@ Le applicazioni Conduit sono app intermedie che potrebbero ricevere i pass per c
 - **Altre app personalizzate** : qualsiasi app che riceve allegati o collegamenti aperti (client di social media, lettori di posta elettronica e così via).
 
 
-Questo screenshot mostra come la **posta elettronica** in iOS 6 riconosca un allegato pass e, quando viene toccato, consente di aggiungerlo al portafogli.
+Questo screenshot mostra come la **posta elettronica** in iOS 6 riconosca un allegato pass e, quando viene toccato, consente di **aggiungerlo** al portafogli.
 
  [![](passkit-images/image22.png "Questo screenshot mostra come la posta in iOS 6 riconosca un allegato pass")](passkit-images/image22.png#lightbox)
 
@@ -405,7 +405,7 @@ Dove `pass.$(CFBundleIdentifier)` è l'ID di passaggio creato in [precedenza](~/
 
 ### <a name="debugging"></a>Debug
 
-In caso di problemi durante la distribuzione dell'applicazione, controllare che si stia usando il **profilo** di provisioning corretto `Entitlements.plist` e che sia selezionato come file dei **diritti personalizzati** nelle opzioni di **firma del bundle iPhone** .
+In caso di problemi durante la distribuzione dell'applicazione, controllare che si stia usando il **profilo di provisioning** corretto `Entitlements.plist` e che sia selezionato come file dei **diritti personalizzati** nelle opzioni di **firma del bundle iPhone** .
 
 Se si verifica questo errore durante la distribuzione di:
 
@@ -413,7 +413,7 @@ Se si verifica questo errore durante la distribuzione di:
 Installation failed: Your code signing/provisioning profiles are not correctly configured (error: 0xe8008016)
 ```
 
-la matrice `pass-type-identifiers` dei diritti non è corretta (o non corrisponde al **profilo**di provisioning). Verificare che gli ID del tipo di passaggio e l'ID del team siano corretti.
+la matrice `pass-type-identifiers` dei diritti non è corretta (o non corrisponde al profilo di **provisioning**). Verificare che gli ID del tipo di passaggio e l'ID del team siano corretti.
 
 ## <a name="classes"></a>Classi
 

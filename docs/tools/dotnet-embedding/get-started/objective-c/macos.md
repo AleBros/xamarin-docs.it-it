@@ -3,15 +3,15 @@ title: Introduzione a macOS
 description: Questo documento descrive come iniziare a usare l'incorporamento di .NET con macOS. Vengono illustrati i requisiti e viene presentata un'applicazione di esempio per illustrare come associare l'assembly gestito e utilizzare l'output generato in un progetto Xcode.
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: ee40a5ef3504e5d274a34ec2d9569026e5d40551
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e7f1bac95e9e812c0e47b55b85f72f34ba76e68e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199867"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290261"
 ---
 # <a name="getting-started-with-macos"></a>Introduzione a macOS
 

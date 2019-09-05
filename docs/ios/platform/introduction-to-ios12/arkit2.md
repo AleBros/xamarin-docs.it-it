@@ -4,15 +4,15 @@ description: Questo documento descrive gli aggiornamenti di ARKit in iOS 12. Si 
 ms.prod: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/22/2018
-ms.openlocfilehash: 4af5e7ea9c1d744cd3b5ea5444312ba68bfcea11
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 17995f61d92856a88769e2cd7ac8ed7445cf9782
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120446"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281131"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Novell. iOS
 

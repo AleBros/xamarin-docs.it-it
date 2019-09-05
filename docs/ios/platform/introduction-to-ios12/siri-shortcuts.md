@@ -4,15 +4,15 @@ description: Questo documento descrive come usare i collegamenti Siri in iOS 12.
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/08/2018
-ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: a2ae80946cb94b6c81b87a88c91cd9bf1706186f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226574"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291768"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Collegamenti Siri in Novell. iOS
 
@@ -32,7 +32,7 @@ Per comprendere meglio i collegamenti Siri, vedere l'app di esempio [Soup chef](
 > Prima di testare Soup chef in un simulatore o dispositivo iOS 12, abilitare le due impostazioni seguenti, utili per il debug dei collegamenti:
 >
 > - Nell'app **Impostazioni** abilitare **Developer > visualizzare i collegamenti recenti**.
-> - Nell'app **Impostazioni** abilitare **Developer > visualizzare**le donazioni nella schermata di blocco.
+> - Nell'app **Impostazioni** abilitare **Developer > visualizzare le donazioni nella schermata di blocco**.
 >
 > Queste impostazioni di debug semplificano la ricerca di collegamenti creati di recente (anziché stimati) nella schermata di blocco e nella schermata di ricerca di iOS.
 
@@ -198,7 +198,7 @@ Se si richiama Siri e si usa questa frase, Soup chef verrà aperto nella scherma
 
 Per fornire un collegamento che consenta a un utente di completare rapidamente un'attività specifica relativa all'app, creare una finalità personalizzata. Una finalità personalizzata rappresenta un'attività che un utente può desiderare di completare, i parametri rilevanti per tale attività e le potenziali risposte risultanti dall'esecuzione dell'attività. A seconda di come viene definito uno scopo personalizzato, richiamarlo può aprire l'app o eseguire un'attività in background.
 
-Usare Xcode 10 per creare Intent personalizzati. Nel [repository SoupChef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), lo scopo personalizzato è definito in **OrderSoupIntentCodeGen**, un progetto Objective-C. Aprire il progetto e selezionare il file Intents **. intentdefinition** in **Project Navigator** per visualizzare lo scopo di **OrderSoup** .
+Usare Xcode 10 per creare Intent personalizzati. Nel [repository SoupChef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), lo scopo personalizzato è definito in **OrderSoupIntentCodeGen**, un progetto Objective-C. Aprire il progetto e selezionare il file **Intents. intentdefinition** in **Project Navigator** per visualizzare lo scopo di **OrderSoup** .
 
 Tenere presente quanto segue:
 
@@ -309,7 +309,7 @@ Si noti che il progetto **SoupChef** contiene un riferimento a **OrderSoupIntent
 
 ### <a name="adding-the-intentdefinition-file-to-your-solution"></a>Aggiunta del file con estensione intentdefinition alla soluzione
 
-Nella soluzione SoupChef il progetto **SoupKit** contiene codice condiviso tra l'app e le relative estensioni. C# Il **file Intent. intentdefinition** è stato inserito nella directory **base. lproj** di **SoupKit**e ha un' **azione di compilazione** del **contenuto**. Il processo di compilazione copia il file nel bundle dell'app Soup chef, dove è necessario per il corretto funzionamento dell'app.
+Nella soluzione SoupChef il progetto **SoupKit** contiene codice condiviso tra l'app e le relative estensioni. C# Il file **Intent. intentdefinition** è stato inserito nella directory **base. lproj** di **SoupKit**e ha un' **azione di compilazione** del **contenuto**. Il processo di compilazione copia il file nel bundle dell'app Soup chef, dove è necessario per il corretto funzionamento dell'app.
 
 ### <a name="donating-an-intent"></a>Donazione di un preventivo
 
@@ -641,7 +641,7 @@ Per eseguire Soup chef in un dispositivo, seguire le istruzioni riportate di seg
 
 ### <a name="app-group-app-ids-provisioning-profiles"></a>Gruppo di app, ID app, profili di provisioning
 
-Nella sezione **Certificates, IDs &** profiles del [portale Apple Developer](https://developer.apple.com/)eseguire le operazioni seguenti:
+Nella sezione **Certificates, IDs & Profiles** del [portale Apple Developer](https://developer.apple.com/)eseguire le operazioni seguenti:
 
 - Creare un gruppo di app per condividere i dati tra l'app Soup chef e le relative estensioni. Ad esempio: **Group. com. NomeSocietà. SoupChef**
 
@@ -685,17 +685,17 @@ In Visual Studio per Mac o Visual Studio 2017 eseguire le operazioni seguenti:
 
 In Visual Studio per Mac o Visual Studio 2017:
 
-- Aprire le opzioni/proprietà per il progetto **SoupChef** . Nella scheda **firma bundle iOS** impostare Identity di **firma** su automatico e **profilo** di provisioning sul nuovo profilo di provisioning specifico dell'app creato in precedenza.
+- Aprire le opzioni/proprietà per il progetto **SoupChef** . Nella scheda **firma bundle iOS** impostare Identity di **firma** su automatico e **profilo di provisioning** sul nuovo profilo di provisioning specifico dell'app creato in precedenza.
 
-- Aprire le opzioni/proprietà per il progetto **SoupChefIntents** . Nella scheda **firma bundle iOS** impostare Identity di **firma** su automatico e **profilo** di provisioning sul nuovo profilo di provisioning specifico dell'estensione Intents creato in precedenza.
+- Aprire le opzioni/proprietà per il progetto **SoupChefIntents** . Nella scheda **firma bundle iOS** impostare Identity di **firma** su automatico e **profilo di provisioning** sul nuovo profilo di provisioning specifico dell'estensione Intents creato in precedenza.
 
-- Aprire le opzioni/proprietà per il progetto **SoupChefIntentsUI** . Nella scheda **firma bundle iOS** impostare Identity di **firma** su automatico e **profilo** di provisioning sul nuovo profilo di provisioning specifico dell'estensione dell'interfaccia utente creato in precedenza.
+- Aprire le opzioni/proprietà per il progetto **SoupChefIntentsUI** . Nella scheda **firma bundle iOS** impostare Identity di **firma** su automatico e **profilo di provisioning** sul nuovo profilo di provisioning specifico dell'estensione dell'interfaccia utente creato in precedenza.
 
 Con queste modifiche, l'app viene eseguita in un dispositivo iOS.
 
 ### <a name="automatic-provisioning"></a>Provisioning automatico
 
-Si noti che è possibile usare il provisioning [automatico](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) per eseguire molte di queste attività di provisioning direttamente nell'IDE.
+Si noti che è possibile usare il [provisioning automatico](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) per eseguire molte di queste attività di provisioning direttamente nell'IDE.
 Tuttavia, il provisioning automatico non configura gruppi di app. È necessario configurare manualmente i file **. plist dei diritti** con il nome del gruppo di app che si vuole usare, visitare il portale Apple Developer per creare il gruppo di app, assegnare il gruppo di app a ogni ID app creato dal provisioning automatico, rigenerare i profili di provisioning (app, estensione per Intent, estensione per interfaccia utente Intent) per includere il gruppo di app appena creato e scaricarli e installarli.
 
 ## <a name="related-links"></a>Collegamenti correlati

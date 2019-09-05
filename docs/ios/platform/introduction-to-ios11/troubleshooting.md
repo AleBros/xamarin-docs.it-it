@@ -1,29 +1,29 @@
 ---
-title: Suggerimenti per iOS 11 e xamarin. IOS
-description: Questo articolo descrive le risorse che possono essere utilizzate per la risoluzione dei problemi relativi durante lo sviluppo di applicazioni xamarin. IOS. Vengono illustrati segnalazione dei bug, note sulla versione, blog, le versioni di Xamarin e opzioni di supporto.
+title: Suggerimenti per la risoluzione dei problemi per iOS 11 e Novell. iOS
+description: Questo articolo descrive le risorse che possono essere usate per la risoluzione dei problemi durante lo sviluppo di applicazioni Novell. iOS. Viene illustrata la segnalazione dei bug, le note sulla versione, il Blog sulle versioni di Novell e le opzioni di supporto.
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/31/2017
-ms.openlocfilehash: f7fbd6f19820b8cbefe1a75c148ca1d9ba1395f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 570fd554b375c4911028faf412c3c20bac1881aa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399261"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286527"
 ---
-# <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Suggerimenti per iOS 11 e xamarin. IOS
+# <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per iOS 11 e Novell. iOS
 
-Usare le risorse seguenti per risolvere i problemi quando si usa Xamarin IOS 11:
+Usare le risorse seguenti per risolvere i problemi durante l'uso di Novell con iOS 11:
 
 ## <a name="known-issues-and-troubleshooting"></a>Problemi noti e risoluzione dei problemi
 
-Se si verificano problemi creare App iOS 11 con Xamarin, controllare la [note sulla versione](https://docs.microsoft.com/xamarin/ios/release-notes/), [forum di xamarin. IOS](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), e [ GitHub](https://github.com/xamarin/xamarin-macios/issues) per problemi esistenti.
+Se si verificano problemi durante la creazione di app iOS 11 con Novell, vedere le [Note sulla versione](https://docs.microsoft.com/xamarin/ios/release-notes/), i [forum Novell. iOS](https://forums.xamarin.com/categories/ios), [Novell Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS)e [GitHub](https://github.com/xamarin/xamarin-macios/issues) per i problemi esistenti.
 
-Se si ritiene di aver trovato un bug in xamarin. IOS, segnalare il problema [su GitHub](https://github.com/xamarin/xamarin-macios/issues).
+Se si ritiene che sia stato rilevato un bug in Novell. iOS, segnalare il problema [in GitHub](https://github.com/xamarin/xamarin-macios/issues).
 
 ## <a name="forums-and-stackoverflow"></a>Forum e StackOverflow
 
-Per ottenere risposte a domande specifiche sull'utilizzo o l'implementazione di una funzionalità specifica iOS 11 in xamarin. IOS, di Xamarin [iOS Forum](http://forums.xamarin.com/categories/ios) offre un'ampia gamma di informazioni. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) è un'altra buona fonte di informazioni agli utenti-aiutare gli utenti.
+Per risposte a domande specifiche sull'uso o sull'implementazione di una funzionalità specifica di iOS 11 in Novell. iOS, il forum Novell per [iOS](http://forums.xamarin.com/categories/ios) fornisce un'ampia gamma di informazioni. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) è un'altra fonte di informazioni utili per gli utenti.

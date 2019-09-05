@@ -4,15 +4,15 @@ description: Questo articolo fornisce un'introduzione all'uso degli storyboard i
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: afaba327299461af6b71846a39eb6c455125feae
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 722e09cc292bad682a49ee0cba4ff0ca0f39a844
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620378"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291636"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduzione agli storyboard in Novell. Mac
 
@@ -81,7 +81,7 @@ In fase di progettazione (quando si crea il layout dell'interfaccia utente nel I
 - **Scene** , che sono costituite da:
   - **Controller di visualizzazione** : che definiscono le relazioni tra le visualizzazioni e i dati che li supportano.
   - **Visualizzazioni e sottoviste** : gli elementi effettivi che costituiscono l'interfaccia utente.
-  - **Gli elementi segue** di contenimento che definiscono le relazioni padre-figlio tra le scene.
+  - **Gli elementi segue di contenimento** che definiscono le relazioni padre-figlio tra le scene.
 - **Gli elementi segue di presentazione** : definiscono le singole modalità di presentazione. 
 
 Definendo ogni elemento in questo modo, consente il caricamento lazy di ogni elemento solo quando è necessario in fase di esecuzione. In macOS, l'intero processo è stato progettato in modo da consentire allo sviluppatore di creare interfacce utente complesse e flessibili che richiedono un minimo di codice di supporto per poterle lavorare, il tutto con la massima efficienza delle risorse di sistema.

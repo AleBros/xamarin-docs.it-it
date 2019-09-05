@@ -1,74 +1,74 @@
 ---
-title: È possibile aggiungere file a o rimuovere i file da un file IPA dopo la compilazione in Visual Studio?
+title: È possibile aggiungere o rimuovere file da un file IPA dopo averli compilati in Visual Studio?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 047ee06522d4b2c07937e0e1bd9985248a164f01
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: d1546b83304d8c66f7433bd77c5ebecc9dc95aaa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865023"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278475"
 ---
-# <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>È possibile aggiungere file a o rimuovere i file da un file IPA dopo la compilazione in Visual Studio?
+# <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>È possibile aggiungere o rimuovere file da un file IPA dopo averli compilati in Visual Studio?
 
-Sì, è possibile, ma in genere è necessario firmare nuovamente il `.app` bundle dopo aver apportato la modifica.
+Sì, è possibile, ma in genere è necessario firmare di nuovo il `.app` bundle dopo aver apportato la modifica.
 
-Si noti che la modifica di `.ipa` file non è necessario nell'utilizzo normale. Questo articolo viene fornito esclusivamente per scopi informativi.
+Si noti che la `.ipa` modifica del file non è necessaria nel normale utilizzo. Questo articolo viene fornito esclusivamente a scopo informativo.
 
-## <a name="example-removing-a-file-from-a-ipa-archive"></a>Esempio: rimozione di un file da un `.ipa` archive
+## <a name="example-removing-a-file-from-a-ipa-archive"></a>Esempio: rimozione di un file da `.ipa` un archivio
 
-Questo esempio presuppone che il nome del progetto xamarin. IOS sia `iPhoneApp1` e il `generated session id` è `cc530d20d6b19da63f6f1c6f67a0a254`
+Per questo esempio si presuppone che il nome del progetto Novell. iOS sia `iPhoneApp1` `generated session id` e che sia`cc530d20d6b19da63f6f1c6f67a0a254`
 
-1. Compilare il `.ipa` file normalmente da Visual Studio.
+1. Compilare il `.ipa` file come di consueto da Visual Studio.
 
-2. Passare all'host di compilazione Mac.
+2. Passa all'host di compilazione Mac.
 
-3. Trovare la compilazione nel `~/Library/Caches/Xamarin/mtbs/builds` cartella. È possibile incollare in questo percorso **Finder > Vai > passare alla cartella** per passare alla cartella in Finder. Cercare la cartella che corrisponde al nome del progetto. All'interno di tale cartella, cercare la cartella che corrisponde il `generated session id` della compilazione. Si tratterà molto probabilmente la sottocartella che include l'ora di modifica più recente.
+3. Trovare la compilazione nella `~/Library/Caches/Xamarin/mtbs/builds` cartella. È possibile incollare questo percorso in **Finder > vai > Vai alla cartella** per esplorare la cartella in Finder. Cercare la cartella corrispondente al nome del progetto. All'interno di tale cartella, cercare la cartella corrispondente alla `generated session id` della compilazione. Probabilmente si tratta della sottocartella con l'ora di modifica più recente.
 
 4. Aprire una nuova `Terminal.app` finestra.
 
-5. Tipo `cd` nella finestra del terminal e quindi trascina selezione il `generated session id` nella cartella di `Terminal.app` finestra:
+5. Digitare `cd` nella finestra terminal. app, quindi trascinare & rilasciare la `generated session id` cartella nella `Terminal.app` finestra:
 
-    ![](modify-ipa-images/session-id-folder.png "Individuare la cartella con l'id sessione generato in Finder")
+    ![](modify-ipa-images/session-id-folder.png "Individuazione della cartella di ID sessione generata in Finder")
 
-6. Digitare il tasto INVIO per modificare la directory nel `generated session id` cartella.
+6. Digitare il tasto INVIO per cambiare directory nella `generated session id` cartella.
 
-7. Decomprimere il `.ipa` file in una variabile temporanea `old/` cartella usando il comando seguente. Modificare il `Ad-Hoc` e `iPhoneApp1` nomi in base alle esigenze per un particolare progetto.
+7. Decomprimere il `.ipa` file in `old/` una cartella temporanea usando il comando seguente. Modificare i `Ad-Hoc` nomi `iPhoneApp1` e in base alle esigenze per il progetto specifico.
 
-    > -xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa precedente di punteggiatura /
+    > Ditto-XK bin/iPhone/Ad-Hoc/iPhoneApp1-1.0. ipa vecchio/
 
-8. Mantenere il `Terminal.app` finestra aperta.
+8. Lasciare aperta `Terminal.app` la finestra.
 
-9. Eliminare i file desiderati dal `.ipa`. È possibile spostarli nel Cestino mediante il Finder oppure eliminarle nella riga di comando tramite `Terminal.app`. Per visualizzare il contenuto del `Payload/iPhone` file in Finder, tenendo premuto CTRL e selezionare **Mostra contenuti pacchetto**.
+9. Eliminare i file desiderati da `.ipa`. È possibile spostarli nel cestino usando Finder o eliminarli dalla riga di comando usando `Terminal.app`. Per visualizzare il contenuto del `Payload/iPhone` file in Finder, fare clic con il pulsante destro del mouse sul file e scegliere **Mostra contenuto pacchetto**.
 
-10. Usando lo stesso approccio generale come indicato nel passaggio 3, individuare il file di log nella `~/Library/Logs/Xamarin/MonoTouchVS/` che contiene sia il nome del progetto e il `generated session id` nel nome: ![](modify-ipa-images/build-log.png "Individuare il log di compilazione progetto in Finder")
+10. Utilizzando lo stesso approccio generale del passaggio 3, trovare il file di log con `~/Library/Logs/Xamarin/MonoTouchVS/` il nome del progetto e il `generated session id` nel nome: ![](modify-ipa-images/build-log.png "Individuare il log di compilazione del progetto in Finder")
 
-11. Aprire il log di compilazione nel passaggio 10, ad esempio facendovi doppio clic.
+11. Aprire il log di compilazione dal passaggio 10, ad esempio facendo doppio clic su di esso.
 
 12. Trovare la riga che include `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13. Tipo `/usr/bin/codesign` nella finestra terminal dal passaggio 8.
+13. Digitare `/usr/bin/codesign` nella finestra terminal. app del passaggio 8.
 
-14. Copiare tutti gli argomenti a partire da `-v` dalla riga di nel passaggio 12 e incollarli nella finestra terminal.
+14. Copiare tutti gli argomenti a partire `-v` da dalla riga nel passaggio 12 e incollarli nella finestra terminal. app.
 
-15. Modificare l'ultimo argomento sia la `.app` bundle che si trova all'interno di `old/Payload/` cartella e quindi eseguire il comando.
+15. Modificare l'ultimo argomento in modo che `.app` sia il bundle che `old/Payload/` si trova all'interno della cartella, quindi eseguire il comando.
 
     ```bash
     /usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
     ```
 
-16. Passare il `old/` directory nel terminale:
+16. Passare alla `old/` directory nel terminale:
 
     ```bash
     cd old
     ```
 
-17. Comprimere i contenuti della directory in una nuova `.ipa` file utilizzando il `zip` comando. È possibile modificare il `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` argomento per restituire il `.ipa` file ogni volta che si vuole:
+17. Comprimere il contenuto della directory in un nuovo `.ipa` file usando il `zip` comando. È possibile modificare l' `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` argomento per l'output `.ipa` del file in qualsiasi posizione:
 
     ```bash
     zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
@@ -76,9 +76,9 @@ Questo esempio presuppone che il nome del progetto xamarin. IOS sia `iPhoneApp1`
 
 ## <a name="common-error-messages"></a>Messaggi di errore comuni
 
-Se viene visualizzato `Invalid Signature. A sealed resource is missing or invalid.`, che in genere significa che qualcosa è stato modificato all'interno di `.app` bundle e che il `.app` bundle non è stato correttamente nuovamente firmato in un secondo momento. Si noti anche che se si vuole creare un `.ipa` con un profilo di distribuzione, si _necessario_ compilazione originale `.ipa` con un profilo di distribuzione. In caso contrario il `Entitlements.xcent` non saranno corrette.
+Se viene visualizzato `Invalid Signature. A sealed resource is missing or invalid.`, significa che in genere qualcosa è stato modificato all' `.app` interno dell'aggregazione e `.app` che il bundle non è stato firmato di nuovo in seguito. Si noti inoltre che se si desidera creare un `.ipa` con un profilo di distribuzione, è _necessario_ compilare l' `.ipa` originale con un profilo di distribuzione. In caso `Entitlements.xcent` contrario, l'oggetto non sarà corretto.
 
-Per fornire un esempio concreto di cui può verificarsi questo errore, se si esegue la seguente `codesign --verify` comando nella finestra del terminale dopo il passaggio 9, verrà visualizzato l'errore e la causa precisa dell'errore:
+Per fornire un esempio concreto di come può verificarsi questo errore, se si esegue il `codesign --verify` comando seguente nella finestra del terminale dopo il passaggio 9, verrà visualizzato l'errore, insieme alla relativa ragione precisa dell'errore:
 
 ```bash
 $ codesign -dvvv --no-strict --verify old/Payload/iPhoneApp1.app
@@ -86,6 +86,6 @@ old/Payload/iPhoneApp1.app: a sealed resource is missing or invalid
 file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530d20d6b19da63f6f1c6f67a0a254/old/Payload/iPhoneApp1.app/MyFile.png
 ```
 
-E il processo di verifica App Store segnalerà un messaggio di errore simile:
+E il processo di verifica dell'app Store segnalerà un messaggio di errore simile al seguente:
 
-> ERROR ITMS-90035: "Firma non valida. Una risorsa sealed è mancante o non valido. Il file binario nel percorso [iPhoneApp1.app/iPhoneApp1] contiene una firma non valida. Assicurarsi di che aver effettuato l'accesso all'applicazione con un certificato di distribuzione, non un certificato ad hoc o un certificato di sviluppo. Verificare che le impostazioni di firma codice in Xcode siano corrette a livello di destinazione (che esegue l'override di tutti i valori a livello di progetto). Inoltre, assicurarsi che il bundle di cui che si sta caricando è stato creato usando una destinazione di rilascio in Xcode, non una destinazione simulatore. Se si è certi che le impostazioni di firma codice siano corrette, scegliere "Pulisci tutto" in Xcode, eliminare la directory "build" nel Finder e ricompilare la destinazione di rilascio. Per altre informazioni, consultare [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: "Firma non valida. Una risorsa sealed manca o non è valida. Il file binario nel percorso [iPhoneApp1. app/iPhoneApp1] contiene una firma non valida. Assicurarsi di aver firmato l'applicazione con un certificato di distribuzione, non un certificato ad hoc o un certificato di sviluppo. Verificare che le impostazioni di firma del codice in Xcode siano corrette a livello di destinazione (che eseguono l'override di tutti i valori a livello di progetto). Assicurarsi inoltre che il bundle che si sta caricando sia stato compilato usando una destinazione di rilascio in Xcode, non un simulatore di destinazione. Se si è certi che le impostazioni di firma del codice siano corrette, scegliere "Pulisci tutto" in Xcode, eliminare la directory "Build" nel Finder e ricompilare la destinazione di rilascio. Per ulteriori informazioni, consultare [https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

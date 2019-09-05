@@ -4,21 +4,21 @@ description: Questo documento descrive EventKit e come usarlo in Novell. iOS. Ve
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528048"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291529"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit in Novell. iOS
 
 iOS include due applicazioni correlate al calendario: l'applicazione calendario e l'applicazione promemoria. È abbastanza semplice per comprendere in che modo l'applicazione Calendar gestisce i dati del calendario, ma l'applicazione promemoria è meno ovvia. I promemoria possono effettivamente avere date associate in termini di quando sono dovuti, quando vengono completati e così via. In questo modo, iOS archivia tutti i dati del calendario, sia che si tratti di eventi del calendario o promemoria, in un'unica posizione, denominato *database del calendario*.
 
-EventKit Framework fornisce un modo per accedere ai *calendari*, *agli eventi del calendario*e ai promemoria dei dati archiviati nel database Calendar. L'accesso ai calendari e agli eventi di calendario è stato disponibile a partire da iOS 4, ma l'accesso ai promemoria è una novità di iOS 6.
+EventKit Framework fornisce un modo per accedere ai *calendari*, *agli eventi del calendario*e ai *promemoria* dei dati archiviati nel database Calendar. L'accesso ai calendari e agli eventi di calendario è stato disponibile a partire da iOS 4, ma l'accesso ai promemoria è una novità di iOS 6.
 
 In questa guida verranno illustrate le operazioni seguenti:
 
@@ -375,7 +375,7 @@ App.Current.EventStore.FetchReminders (
 
 ## <a name="summary"></a>Riepilogo
 
-Questo documento ha fornito una panoramica dei componenti importanti del Framework EventKit e di alcune delle attività più comuni. Tuttavia, il Framework EventKit è molto grande e potente e include funzionalità che non sono state introdotte in questo argomento, ad esempio aggiornamenti batch, configurazione degli allarmi, configurazione della ricorrenza sugli eventi, registrazione e ascolto delle modifiche nel database Calendar, impostazione di geobarriere e altro ancora.  Per ulteriori informazioni, vedere la [Guida alla programmazione del calendario e](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)dei promemoria di Apple.
+Questo documento ha fornito una panoramica dei componenti importanti del Framework EventKit e di alcune delle attività più comuni. Tuttavia, il Framework EventKit è molto grande e potente e include funzionalità che non sono state introdotte in questo argomento, ad esempio aggiornamenti batch, configurazione degli allarmi, configurazione della ricorrenza sugli eventi, registrazione e ascolto delle modifiche nel database Calendar, impostazione di geobarriere e altro ancora.  Per ulteriori informazioni, vedere la [Guida alla programmazione del calendario e dei promemoria](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)di Apple.
 
 
 ## <a name="related-links"></a>Collegamenti correlati

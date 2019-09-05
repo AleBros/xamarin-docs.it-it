@@ -3,15 +3,15 @@ title: Rappresentazioni in Xamarin Workbooks
 description: Questo documento descrive la pipeline di rappresentazione Xamarin Workbooks, che consente il rendering di risultati avanzati per qualsiasi codice che restituisce un valore.
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: b61452fc21d81f427249825decee4f119c50abf0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dde4e6b9c4903ccb0f23d8df82f39ff68030850e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511506"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292829"
 ---
 # <a name="representations-in-xamarin-workbooks"></a>Rappresentazioni in Xamarin Workbooks
 
@@ -71,7 +71,7 @@ public sealed class Person : ISerializableObject
 
 I renderer sono implementati in JavaScript e avranno accesso a una versione JavaScript dell'oggetto rappresentato tramite `ISerializableObject`. La copia JavaScript disporrà anche di `$type` una proprietà stringa che indica il nome del tipo .NET.
 
-Si consiglia di usare TypeScript per il codice di integrazione client, che naturalmente si compila a Vanilla JavaScript. In entrambi i casi, l'SDK fornisce [tipi][typings] di digitazioni a cui è possibile fare riferimento direttamente da typescript o semplicemente a cui viene fatto riferimento manualmente se si preferisce scrivere la vaniglia JavaScript.
+Si consiglia di usare TypeScript per il codice di integrazione client, che naturalmente si compila a Vanilla JavaScript. In entrambi i casi, l'SDK fornisce [tipi di digitazioni][typings] a cui è possibile fare riferimento direttamente da typescript o semplicemente a cui viene fatto riferimento manualmente se si preferisce scrivere la vaniglia JavaScript.
 
 Il punto di integrazione principale per il `xamarin.interactive.RendererRegistry`rendering è:
 

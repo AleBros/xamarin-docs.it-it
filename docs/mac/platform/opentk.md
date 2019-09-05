@@ -4,15 +4,15 @@ description: Questo articolo fornisce un'introduzione all'uso di OpenTK in un'ap
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 806f58ae6a79f935916008e93deed0136920951a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 908ed187d8d3d341f8d65e3a3d417588492f325f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227812"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292972"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introduzione a OpenTK in Novell. Mac
 
@@ -35,7 +35,7 @@ Come indicato in precedenza, OpenTK (The Open Toolkit) è una libreria avanzata 
 - **Licenza permissive** : OpenTK è distribuito con le licenze MIT/X11 ed è completamente gratuito.
 - **Binding indipendenti dai tipi avanzati** : OpenTK supporta le versioni più recenti di OpenGL, OpenGL | ES, OpenAL e OpenCL con il caricamento automatico delle estensioni, il controllo degli errori e la documentazione inline.
 - **Opzioni GUI flessibili** : OpenTK fornisce la finestra di gioco nativa a prestazioni elevate progettata specificamente per i giochi e Novell. Mac.
-- **Codice completamente gestito** e conforme a CLS: OpenTK supporta le versioni a 32 bit e a 64 bit di MacOS senza librerie non gestite.
+- **Codice completamente gestito e conforme a CLS** : OpenTK supporta le versioni a 32 bit e a 64 bit di MacOS senza librerie non gestite.
 - **Toolkit per Math 3D** OpenTK fornisce `Vector`gli `Matrix`struct `Quaternion` , e`Bezier` tramite il suo 3D Math Toolkit.
 
 OpenTK può essere usato per giochi, applicazioni scientifiche o altri progetti che richiedono grafica 3D, audio o funzionalità di calcolo.
@@ -52,7 +52,7 @@ Come introduzione rapida all'uso di OpenTK in un'app Novell. Mac, verrà creata 
 
 ### <a name="starting-a-new-project"></a>Avvio di un nuovo progetto
 
-Avviare Visual Studio per Mac e creare una nuova soluzione Novell. Mac. Selezionare app **Mac** > app > **Cocoa** **generale**: > 
+Avviare Visual Studio per Mac e creare una nuova soluzione Novell. Mac. Selezionare > **app**Macapp > **Cocoa** **generale**: > 
 
 [![](opentk-images/sample01.png "Aggiunta di una nuova app Cocoa")](opentk-images/sample01.png#lightbox)
 

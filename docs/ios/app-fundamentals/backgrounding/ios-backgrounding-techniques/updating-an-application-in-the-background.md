@@ -4,15 +4,15 @@ description: Questo documento descrive i vari modi per aggiornare un'app Novell.
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 68200d5cde78628e23e6bdb5c4adf7a16b646bf0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2e0bb4fc0468f938e7a4403513fe101db2282561
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521305"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286982"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Novell. iOS in background
 

@@ -4,15 +4,15 @@ description: Questo documento descrive come usare i pulsanti in un'app tvOS comp
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: c53344d2e2e9458585439fd90a1f71a4869026be
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200191"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291104"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Novell
 

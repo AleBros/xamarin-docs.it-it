@@ -3,15 +3,15 @@ title: Tipi nativi per iOS e macOS
 description: In questo documento viene descritto come il API unificata di Novell esegue il mapping dei tipi .NET ai tipi nativi a 32 bit e a 64 bit, in base alle esigenze, in base all'architettura di destinazione della compilazione.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f370bc816fa72f94af8dae32ac295448f858dbb8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199399"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290801"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipi nativi per iOS e macOS
 
@@ -59,7 +59,7 @@ I tipi di dati Point, Size e Rectangle usati con CoreGraphics usano 32 o 64 bit 
 
 Quando si passa a **Unified**, sarà necessario sostituire le istanze di `System.Drawing` con le relative `CoreGraphics` controparti, come illustrato nella tabella seguente:
 
-|Vecchio tipo in System. Drawing|Nuovo tipo di dati CoreGraphics|Descrizione|
+|Vecchio tipo in System. Drawing|Nuovo tipo di dati CoreGraphics|DESCRIZIONE|
 |--- |--- |--- |
 |`RectangleF`|`CGRect`|Include informazioni sul rettangolo a virgola mobile.|
 |`SizeF`|`CGSize`|Include informazioni sulle dimensioni a virgola mobile (larghezza, altezza)|

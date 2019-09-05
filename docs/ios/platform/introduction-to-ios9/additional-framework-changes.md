@@ -4,15 +4,15 @@ description: Questo documento descrive le modifiche aggiuntive del Framework int
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c3f140affe3d539eb07d06f50a031cd7ef469728
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197743"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292411"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche aggiuntive ai Framework iOS 9
 
@@ -145,7 +145,7 @@ Sono state apportate le modifiche seguenti alla classe [LAContext](xref:LocalAut
 - **MaxBiometryFailures** -è stato ammortizzato in iOS 9.
 - **TouchIdAuthenticationAllowableReuseDuration** Ottiene o imposta la quantità di tempo per cui è possibile riutilizzare l'autenticazione con ID tocco.
 - **EvaluateAccessControl** : valuta in modo asincrono i criteri di autenticazione.
-- Invalidate: invalida un'autenticazione con ID tocco specificata.
+- **Invalidate** : invalida un'autenticazione con ID tocco specificata.
 - Set di **credenziali** : restituisce `true` se le credenziali sono attualmente impostate.
 - **SetCredentialType** Imposta il tipo di credenziale specificato.
 

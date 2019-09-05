@@ -4,15 +4,15 @@ description: Questo documento descrive i passaggi necessari per implementare il 
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 78d39b080a136f66c81b48d6cceb5fbdd9d24c11
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654932"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290644"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in Novell. iOS
 
@@ -45,7 +45,7 @@ Come illustrato nella Guida [Understanding SiriKit Concepts](~/ios/platform/siri
 
 Sono inclusi:
 
-1. **Estensione** per Intent: verifica le risposte degli utenti, conferma che l'app è in grado di gestire la richiesta ed esegue effettivamente l'attività per soddisfare la richiesta dell'utente.
+1. **Estensione per Intent** : verifica le risposte degli utenti, conferma che l'app è in grado di gestire la richiesta ed esegue effettivamente l'attività per soddisfare la richiesta dell'utente.
 2. **Estensione per interfaccia utente Intent**facoltativa, fornisce un'interfaccia utente personalizzata alle risposte nell'ambiente Siri e può portare l'interfaccia utente e la personalizzazione delle app in Siri per arricchire l'esperienza dell'utente. - 
 3. **App** : fornisce l'app con vocabolari specifici dell'utente per facilitare l'uso di Siri. 
 
@@ -84,7 +84,7 @@ Seguire questa procedura:
 
     [![](implementing-sirikit-images/prep05.png "Controllare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05.png#lightbox)
 6. Nel **Esplora soluzioni**trascinare il codice condiviso comune dall'app principale alla libreria nativa.
-7. Nel caso di MonkeyChat, trascinare le cartelle datamodes e **Processor** dall'app principale nella libreria nativa: 
+7. Nel caso di MonkeyChat, trascinare le cartelle **Datamodes** e **Processor** dall'app principale nella libreria nativa: 
 
     [![](implementing-sirikit-images/prep06.png "Le cartelle datamodes e Processor nella Esplora soluzioni")](implementing-sirikit-images/prep06.png#lightbox)
 
@@ -92,7 +92,7 @@ Seguire questa procedura:
 
 1. Avviare Visual Studio e aprire l'app MonkeyChat.
 2. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e scegliere **Aggiungi** > **nuovo progetto**.
-3.  > Selezionare **progetto condiviso** **visuale C#** e fare clic sul pulsante **Avanti** : 
+3. Selezionare **progetto condiviso**  >  **visuale C#** e fare clic sul pulsante **Avanti** : 
 
     [![](implementing-sirikit-images/prep02.w157-sml.png "Seleziona libreria di classi")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. Immettere `MonkeyChatCommon` come **nome** e fare clic sul pulsante **Crea** .
@@ -100,7 +100,7 @@ Seguire questa procedura:
 
     [![](implementing-sirikit-images/prep05w.png "Controllare il progetto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png#lightbox)
 6. Nel **Esplora soluzioni**trascinare il codice condiviso comune dall'app principale al progetto condiviso.
-7. Nel caso di MonkeyChat, trascinare le cartelle datamodes e **Processor** dall'app principale nella libreria nativa.
+7. Nel caso di MonkeyChat, trascinare le cartelle **Datamodes** e **Processor** dall'app principale nella libreria nativa.
 
 -----
 
@@ -211,14 +211,14 @@ Nel Mac eseguire le operazioni seguenti:
 
 1. In un Web browser passare a [https://developer.apple.com](https://developer.apple.com) e accedere al proprio account.
 2. Fare clic su **certificati**, **identificatori** e **profili**.
-3. Selezionare **profili** di provisioning e selezionare **ID app**, quindi fare **+** clic sul pulsante.
+3. Selezionare **profili di provisioning** e selezionare **ID app**, quindi fare **+** clic sul pulsante.
 4. Immettere un **nome** per il nuovo profilo.
 5. Immettere un **ID bundle** che segue la raccomandazione di denominazione di Apple.
 6. Scorrere verso il basso fino alla sezione **Servizi app** , selezionare **SiriKit** e fare clic sul pulsante **continue (continua** ): 
 
     [![](implementing-sirikit-images/setup03.png "Seleziona SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
 7. Verificare tutte le impostazioni, quindi **inviare** l'ID app.
-8. Selezionare > lo**sviluppo**di profili di provisioning **+** , fare clic sul pulsante, selezionare l' **ID Apple**, quindi fare clic su **continua**.
+8. Selezionare lo**sviluppo**di **+** profili > di **provisioning**, fare clic sul pulsante, selezionare l' **ID Apple**, quindi fare clic su **continua**.
 9. Fare clic su Seleziona **tutto**e quindi su **continua**.
 10. Fare di nuovo clic su **Seleziona tutto** e quindi su **continua**.
 11. Immettere un **nome di profilo** usando i suggerimenti per la denominazione di Apple, quindi fare clic su **continua**.
@@ -230,7 +230,7 @@ Nel Mac eseguire le operazioni seguenti:
 15. Fare clic sul pulsante **Scarica tutti i profili** nell'angolo in basso a sinistra: 
 
     [![](implementing-sirikit-images/setup05.png "Scarica tutti i profili")](implementing-sirikit-images/setup05.png#lightbox)
-16. Verificare che il **profilo** di provisioning creato in precedenza sia stato installato in Xcode.
+16. Verificare che il **profilo di provisioning** creato in precedenza sia stato installato in Xcode.
 17. Aprire il progetto per aggiungere il supporto SiriKit a in Visual Studio per Mac.
 18. Fare doppio clic sul `Info.plist` file nella **Esplora soluzioni**.
 19. Verificare che l' **identificatore del bundle** corrisponda a quello creato nel portale per sviluppatori di Apple sopra: 
@@ -238,7 +238,7 @@ Nel Mac eseguire le operazioni seguenti:
     [![](implementing-sirikit-images/setup06.png "Identificatore del bundle")](implementing-sirikit-images/setup06.png#lightbox)
 20. Nella **Esplora soluzioni**selezionare il **progetto**.
 21. Fare clic con il pulsante destro del mouse sul progetto e scegliere **Opzioni**.
-22. Selezionare **firma del bundle iOS**, selezionare l' **identità di firma** e il profilo di provisioning creato in precedenza: 
+22. Selezionare **firma del bundle iOS**, selezionare l' **identità di firma** e il profilo di **provisioning** creato in precedenza: 
 
     [![](implementing-sirikit-images/setup07.png "Selezionare l'identità di firma e il profilo di provisioning")](implementing-sirikit-images/setup07.png#lightbox)
 23. Fare clic su **OK** per salvare le modifiche.
@@ -432,7 +432,7 @@ namespace MonkeyChat
 > [!IMPORTANT]
 > Siri considera il vocabolario personalizzato come hint e incorpora la maggior parte della terminologia possibile. Tuttavia, lo spazio per il vocabolario personalizzato è limitato rendendo importante la registrazione _solo_ della terminologia che potrebbe creare confusione, mantenendo al minimo il numero totale di condizioni registrate.
 
-Per altre informazioni, vedere il [riferimento al vocabolario specifico dell'utente](~/ios/platform/sirikit/understanding-sirikit.md) e Apple specificando il [riferimento al vocabolario personalizzato](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
+Per altre informazioni, vedere il [riferimento al vocabolario specifico dell'utente](~/ios/platform/sirikit/understanding-sirikit.md) e Apple [specificando il riferimento al vocabolario personalizzato](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
 ### <a name="adding-app-specific-vocabulary"></a>Aggiunta del vocabolario specifico dell'app
 
@@ -450,7 +450,7 @@ Il file del vocabolario specifico dell'app contiene due chiavi a livello radice:
 
 Ogni voce in `ParameterVocabularies` deve specificare una stringa ID, un termine e l'intento a cui si applica il termine. Inoltre, un singolo termine può essere applicato a più Intent.
 
-Per un elenco completo dei valori accettabili e della struttura dei file necessari, vedere le informazioni di [riferimento sul formato di file](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1)per il vocabolario delle app Apple.
+Per un elenco completo dei valori accettabili e della struttura dei file necessari, vedere le informazioni di riferimento sul formato di file per il [vocabolario delle app](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1)Apple.
 
 Per aggiungere un `AppIntentVocabulary.plist` file al progetto dell'app, eseguire le operazioni seguenti:
 
@@ -588,7 +588,7 @@ Per aggiungere un `AppIntentVocabulary.plist` file al progetto dell'app, eseguir
 > [!IMPORTANT]
 > Il `AppIntentVocabulary.plist` verrà registrato con Siri nei dispositivi di test durante lo sviluppo e potrebbe essere necessario un po' di tempo prima che Siri includa il vocabolario personalizzato. Di conseguenza, il tester dovrà attendere alcuni minuti prima di provare a testare il vocabolario specifico dell'app quando è stato aggiornato.
 
-Per altre informazioni, vedere il [riferimento al vocabolario specifico dell'app](~/ios/platform/sirikit/understanding-sirikit.md) e Apple specificando il riferimento al vocabolario [personalizzato](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
+Per altre informazioni, vedere il [riferimento al vocabolario specifico dell'app](~/ios/platform/sirikit/understanding-sirikit.md) e Apple [specificando il riferimento al vocabolario personalizzato](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
 ## <a name="adding-an-intents-extension"></a>Aggiunta di un'estensione per Intent
 
@@ -600,7 +600,7 @@ Per ogni estensione per Intent è necessario eseguire le operazioni seguenti:
 - Configurare il file di estensione `Info.plist` per Intent.
 - Modificare la classe principale dell'estensione per Intent.
 
-Per altre informazioni, vedere le informazioni di [riferimento sull'estensione](~/ios/platform/sirikit/understanding-sirikit.md) per Intent e la pagina relativa alla [creazione del riferimento all'estensione](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1)per Intent.
+Per altre informazioni, vedere le informazioni di [riferimento sull'estensione per Intent](~/ios/platform/sirikit/understanding-sirikit.md) e la pagina relativa alla [creazione del riferimento all'estensione per Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CreatingtheIntentsExtension.html#//apple_ref/doc/uid/TP40016875-CH4-SW1).
 
 ### <a name="creating-the-extension"></a>Creazione dell'estensione
 
@@ -786,7 +786,7 @@ public void ResolveContent (INSendMessageIntent intent, Action<INStringResolutio
 }
 ```
 
-Per altre informazioni, vedere la Guida di riferimento per [la fase di risoluzione e la risoluzione dei](~/ios/platform/sirikit/understanding-sirikit.md) [problemi di gestione](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ResolvingandHandlingIntents.html#//apple_ref/doc/uid/TP40016875-CH5-SW1)degli Intent in Apple.
+Per altre informazioni, vedere la Guida di riferimento per [la fase di risoluzione e la risoluzione dei](~/ios/platform/sirikit/understanding-sirikit.md) [problemi di gestione degli Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/ResolvingandHandlingIntents.html#//apple_ref/doc/uid/TP40016875-CH5-SW1)in Apple.
 
 ### <a name="handling-the-confirm-stage"></a>Gestione della fase di conferma
 

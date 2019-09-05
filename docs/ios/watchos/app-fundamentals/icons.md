@@ -4,15 +4,15 @@ description: Questo documento descrive le varie icone necessarie per un'applicaz
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/26/2018
-ms.openlocfilehash: f65d4faa0e006517366ab6aacf3f596b18385ccb
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b3968f211ff5445e8b704bbd7897f4c46ecc2be9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120510"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292585"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Uso delle icone watchos in Novell
 

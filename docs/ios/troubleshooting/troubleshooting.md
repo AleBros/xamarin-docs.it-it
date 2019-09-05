@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 06283987e1d70659653729b4f3d5a00e1877aa5f
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: a888c29a6409fc803b8a0d06bcc6f8a668e64f5e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887377"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292062"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Novell. iOS 
 
@@ -369,7 +369,7 @@ Per risolvere il problema usando l'SDK 4,0, passare a **Project Options-> Build-
 La versione dell'SDK non va confusa con l'impostazione "versione minima del sistema operativo".
 Questo valore non deve corrispondere al valore della versione dell'SDK. influiscono sulla versione minima del sistema operativo in cui verrà installata l'app, che può essere precedente all'SDK, purché si usino solo le API presenti nel sistema operativo precedente o si protegga l'uso delle funzionalità più recenti con la versione del sistema operativo di runtime chec KS. È consigliabile impostarla sulla versione del sistema operativo meno recente in cui si testa l'app.
 
-Si noti anche che è possibile usare il menu > di destinazione del simulatore di **progetto > iPhone**per selezionare il simulatore usato per impostazione predefinita durante l'esecuzione/debug di un progetto. Inoltre, è possibile usare il menu Esegui **> con**> per selezionare un simulatore specifico con cui eseguire
+Si noti anche che è possibile usare il menu > di **destinazione del simulatore di progetto > iPhone**per selezionare il simulatore usato per impostazione predefinita durante l'esecuzione/debug di un progetto. Inoltre, è possibile usare il menu Esegui **> con**> per selezionare un simulatore specifico con cui eseguire
 
 ## <a name="ibtool-returns-error-133"></a>ibtool restituisce l'errore 133
 

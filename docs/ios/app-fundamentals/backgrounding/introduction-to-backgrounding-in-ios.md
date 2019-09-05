@@ -4,15 +4,15 @@ description: "Questo documento descrive in background in iOS: Stati dell'applica
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 1899ee225d0ea285a38ba7b4d341e5d3a4452639
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fe508d5b0f8d15a26f02b110763cc8e3f4a2e25
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521397"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292138"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introduzione all'elaborazione in background in iOS
 
@@ -39,7 +39,7 @@ Il ciclo di vita dell'applicazione iOS è una raccolta di Stati dell'applicazion
 - **Torna a non in esecuzione/terminazione (rara)** . occasionalmente, il processo dell'applicazione viene eliminato definitivamente e l'applicazione torna allo stato *non in esecuzione* . Questo problema si verifica in situazioni di memoria insufficiente o se l'utente termina manualmente l'applicazione.
 
 
-Dall'introduzione del supporto multitasking, iOS raramente termina le applicazioni inattive e mantiene i processi sospesi in memoria. Mantenere attivo il processo di un'applicazione garantisce che l'applicazione si avvii rapidamente al successivo avvio dell'utente. Significa anche che le applicazioni possono spostarsi liberamente dallo stato di *sospensione* allo stato in *background* senza eseguire il disegno delle risorse di sistema. iOS 7 sfrutta questa funzionalità con le nuove API che consentono alle applicazioni di sospendere le attività in background quando il dispositivo passa alla modalità di sospensione, aggiorna il contenuto direttamente dallo sfondo senza interazione dell'utente e altro ancora. Si tratteranno le nuove API nelle [tecniche di background di iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
+Dall'introduzione del supporto multitasking, iOS raramente termina le applicazioni inattive e mantiene i processi *sospesi* in memoria. Mantenere attivo il processo di un'applicazione garantisce che l'applicazione si avvii rapidamente al successivo avvio dell'utente. Significa anche che le applicazioni possono spostarsi liberamente dallo stato di *sospensione* allo stato in *background* senza eseguire il disegno delle risorse di sistema. iOS 7 sfrutta questa funzionalità con le nuove API che consentono alle applicazioni di sospendere le attività in background quando il dispositivo passa alla modalità di sospensione, aggiorna il contenuto direttamente dallo sfondo senza interazione dell'utente e altro ancora. Si tratteranno le nuove API nelle [tecniche di background di iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
 
 ## <a name="application-lifecycle-methods"></a>Metodi del ciclo di vita dell'applicazione
 

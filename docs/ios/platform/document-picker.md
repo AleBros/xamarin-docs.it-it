@@ -4,15 +4,15 @@ description: Questo documento descrive la selezione dei documenti iOS e illustra
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 6982f02860db2e89f83b4002d6acb5b28bae906b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 67ee8f1ef7f254eb77cfb186a478993b6fd3847c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200373"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280030"
 ---
 # <a name="document-picker-in-xamarinios"></a>Selezione documenti in Novell. iOS
 
@@ -450,7 +450,7 @@ La procedura seguente illustra il processo di provisioning per iCloud.
 2. Creare un ID app che contenga il servizio app iCloud.
 3. Creare un profilo di provisioning che includa questo ID app.
 
-La Guida [uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) illustra i primi due passaggi. Per creare un profilo di provisioning, seguire la procedura descritta nella guida del [profilo](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) di provisioning.
+La Guida [uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) illustra i primi due passaggi. Per creare un profilo di provisioning, seguire la procedura descritta nella guida del [profilo di provisioning](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
 
 
@@ -461,7 +461,7 @@ Seguire questa procedura:
 1. Aprire il progetto in Visual Studio per Mac o Visual Studio.
 2. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere Opzioni.
 3. Nella finestra di dialogo Opzioni selezionare **applicazione iOS**, assicurarsi che l' **identificatore del bundle** corrisponda a quello definito nell' **ID app** creato in precedenza per l'applicazione. 
-4. Selezionare **firma del bundle iOS**, selezionare l' **identità dello sviluppatore** e il **profilo** di provisioning creato in precedenza.
+4. Selezionare **firma del bundle iOS**, selezionare l' **identità dello sviluppatore** e il **profilo di provisioning** creato in precedenza.
 5. Fare clic sul pulsante **OK** per salvare le modifiche e chiudere la finestra di dialogo.
 6. Fare clic con il `Entitlements.plist` pulsante destro del mouse sul **Esplora soluzioni** per aprirlo nell'editor.
 

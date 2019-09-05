@@ -4,15 +4,15 @@ description: Questo documento descrive le varie parti di un UITableView in iOS. 
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: edc5ec51499116fc2fabeb03327b32a689dc0c49
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528599"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279333"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Parti e funzionalità della tabella in Novell. iOS
 

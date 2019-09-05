@@ -1,150 +1,150 @@
 ---
 title: Panoramica delle funzionalità della piattaforma iOS
-description: Questo documento include collegamenti alle varie guide che descrivono le funzionalità introdotte nelle varie versioni di iOS e altre funzionalità della piattaforma iOS.
+description: Questo documento contiene collegamenti a diverse guide che descrivono le funzionalità introdotte in diverse versioni di iOS e altre funzionalità della piattaforma iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 6703e922a628504e0afdcf56533d74741131581a
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: d88832dd4fd69019f9905fb779c5572ba9a689eb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540149"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281028"
 ---
 # <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
-Questa pagina Elenca versioni iOS di recente, nonché l'evidenziazione alcuni dei framework Apple per accedere con xamarin. IOS.
+Questa pagina elenca le versioni recenti di iOS, oltre ad evidenziare alcuni dei framework Apple a cui è possibile accedere con Novell. iOS.
 
 ## <a name="ios-releases"></a>versioni di iOS
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introduzione a iOS 13 anteprima](~/ios/platform/ios13/index.md) | Questo documento descrive anteprima 13 xamarin. IOS.|
-| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive iOS 12 servizi disponibili per l'uso durante la compilazione di applicazioni xamarin. IOS.|
-| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento e rilascio, MapKit, PDFKit, SiriKit e visione artificiale. Collega alle guide che descrivono come usare queste funzionalità con xamarin. IOS. |
-| [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include diverse nuove API e servizi che consentono di sviluppare App con nuove caratteristiche e funzionalità. Con iOS 10, le app hanno nuove funzionalità come l'estensione di mappe, i messaggi, telefono e Siri. Questa sezione illustra dettagliate necessarie sfruttare i vantaggi di queste funzionalità in un'app xamarin. IOS. |
-| [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | Questa sezione definisce le modifiche apportate in iOS 9 durante l'aggiornamento da iOS 8 e su come usare queste funzionalità in un'app xamarin. IOS. |
-| [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)         | iOS 8 eseguita un numero elevato di modifiche al sistema operativo dal iOS 7. Di seguito viene illustrato che cosa sono e come usarli. |
-| [Introduzione a iOS 7](~/ios/platform/introduction-to-ios7/index.md)   | Sulle principali nuove API introdotte in iOS 7, tra cui i Controller di visualizzazione esegue la transizione, i miglioramenti per le animazioni UIView UIKit Dynamics e testo Kit. |
-| [Introduzione a iOS 6](~/ios/platform/introduction-to-ios6/index.md)   | Spiegazioni delle funzionalità introdotte in iOS 6, tra cui le visualizzazioni di raccolta, passare Kit, Kit di eventi e i Framework basati su social network. |
+| [Introduzione a iOS 13 Preview](~/ios/platform/ios13/index.md) | Questo documento descrive Novell. iOS 13 Preview.|
+| [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive le funzionalità di iOS 12 disponibili per la compilazione di applicazioni Novell. iOS.|
+| [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento della selezione, MapKit, PDFKit, SiriKit e visione. Sono disponibili collegamenti a guide che descrivono come usare queste funzionalità con Novell. iOS. |
+| [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include numerose nuove API e servizi che consentono di sviluppare app con nuove funzionalità e funzionalità. Con iOS 10, le app hanno nuove funzionalità, ad esempio l'estensione di mappe, messaggi, telefono e Siri. Questa sezione illustra come sfruttare i vantaggi di queste funzionalità in un'app Novell. iOS. |
+| [Introduzione a iOS 9](~/ios/platform/introduction-to-ios9/index.md)   | Questa sezione definisce le modifiche apportate in iOS 9 quando si esegue l'aggiornamento da iOS 8 e come usare queste funzionalità in un'app Novell. iOS. |
+| [Introduzione a iOS 8](~/ios/platform/introduction-to-ios8.md)         | iOS 8 ha apportato un numero elevato di modifiche al sistema operativo da iOS 7. Qui vengono illustrati gli elementi e le modalità d'uso. |
+| [Introduzione a iOS 7](~/ios/platform/introduction-to-ios7/index.md)   | Informazioni sulle nuove API principali introdotte in iOS 7, incluse le transizioni del controller di visualizzazione, i miglioramenti apportati alle animazioni UIView, UIKit Dynamics e Text Kit. |
+| [Introduzione a iOS 6](~/ios/platform/introduction-to-ios6/index.md)   | Spiegazioni delle funzionalità introdotte in iOS 6, incluse le visualizzazioni di raccolta, il kit di pass, il kit di eventi e il Framework di social networking. |
 
 ## <a name="apple-payiosplatformapple-paymd"></a>[Apple Pay](~/ios/platform/apple-pay.md)
 
-Apple Pay è stata introdotta con iOS 8, consentendo agli utenti di pagare beni, ad esempio food, svago e le appartenenze tramite i propri dispositivi iOS. È disponibile su iPhone 6 e iPhone 6 più (+) e può anche essere abbinato l'Apple Watch per gli acquisti in negozio. Quando usato in un iPhone, Usa ID tocco come un modo per confermare e autorizzare le transazioni per una carta di debito o credito dell'utente.
+Apple Pay è stato introdotto insieme a iOS 8, consentendo agli utenti di pagare beni fisici, ad esempio cibo, intrattenimento e appartenenze tramite i dispositivi iOS. È disponibile in iPhone 6 e iPhone 6 Plus e può anche essere abbinato al Apple Watch per gli acquisti in-Store. Quando viene usato in un iPhone, USA Touch ID per confermare e autorizzare le transazioni sulla carta di credito o debito di un utente.
 
 ## <a name="callkitiosplatformcallkitmd"></a>[CallKit](~/ios/platform/callkit.md)
 
-La nuova API CallKit in iOS 10 fornisce un modo per le app VOIP da integrare con l'interfaccia utente di iPhone e fornire un'interfaccia familiare ed esperienze per l'utente finale. Con questa API utenti di visualizzare e interagire con le chiamate VOIP dalla schermata di blocco del dispositivo iOS e gestire i contatti usando l'app telefono **Preferiti** e **recenti** viste.
+La nuova API CallKit in iOS 10 consente alle app VOIP di integrarsi con l'interfaccia utente di iPhone e fornire all'utente finale un'interfaccia familiare ed esperienza. Con questa API gli utenti possono visualizzare e interagire con le chiamate VOIP dalla schermata di blocco del dispositivo iOS e gestire i contatti usando le visualizzazioni **Preferiti** e **recenti** dell'app per telefoni.
 
 ## <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Contacts e ContactsUI](~/ios/platform/contacts.md)
 
-Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, tale sostituzione l'esistente Rubrica e Framework dell'interfaccia utente della Rubrica indirizzi usati da iOS 8 e versioni precedenti.
+Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, che sostituiscono i Framework dell'interfaccia utente di Rubrica e rubrica esistenti usati da iOS 8 e versioni precedenti.
 
 ## <a name="document-pickeriosplatformdocument-pickermd"></a>[Selezione documenti](~/ios/platform/document-picker.md)
 
-La selezione di documenti consente i documenti devono essere condivisi tra app. Questi documenti possono essere archiviati in iCloud o nella directory dell'app diverse. I documenti sono condivisi tramite il set di [le estensioni di Provider documento](~/ios/platform/extensions.md) l'utente ha installato sul proprio dispositivo.
+Il selettore documenti consente la condivisione dei documenti tra le app. Questi documenti possono essere archiviati in iCloud o in una directory di un'altra app. I documenti vengono condivisi tramite il set di [estensioni del provider di documenti](~/ios/platform/extensions.md) installato dall'utente sul dispositivo.
 
 ## <a name="eventkitiosplatformeventkitmd"></a>[EventKit](~/ios/platform/eventkit.md)
 
-iOS è incorporate due applicazioni relativi al calendario: l'applicazione di calendario e l'applicazione di promemoria. È abbastanza semplice comprendere come l'applicazione di calendario gestisce i dati del calendario, ma l'applicazione dei promemoria è meno ovvia. Promemoria possono verificarsi una associate date in termini di quando si trovano a causa, quando vengono completate, e così via. Di conseguenza, iOS archivia tutti i dati di calendario, che si tratti di eventi del calendario o promemoria, in un'unica posizione, denominato il *calendario Database*.
+iOS include due applicazioni correlate al calendario: l'applicazione calendario e l'applicazione promemoria. È abbastanza semplice per comprendere in che modo l'applicazione Calendar gestisce i dati del calendario, ma l'applicazione promemoria è meno ovvia. I promemoria possono effettivamente avere date associate in termini di quando sono dovuti, quando vengono completati e così via. In questo modo, iOS archivia tutti i dati del calendario, sia che si tratti di eventi del calendario o promemoria, in un'unica posizione, denominato *database del calendario*.
 
 ## <a name="ios-extensionsiosplatformextensionsmd"></a>[estensioni iOS](~/ios/platform/extensions.md)
 
-Le estensioni, come introdotto in iOS 8, sono specializzate `UIViewControllers` che vengono presentati da iOS all'interno di contesti standard, ad esempio all'interno di **centro notifiche**, come richiesti dall'utente per eseguire i tipi di tastiera personalizzata specializzata input o altri contesti, come la modifica di una foto in cui l'estensione può fornire filtri effetto speciale.
+Le estensioni, come introdotte in iOS 8, sono `UIViewControllers` specializzate presentate da iOS all'interno di contesti standard, ad esempio all'interno del **Centro notifiche**, come tipi di tastiera personalizzati richiesti dall'utente per eseguire l'input specializzato o altri contesti Analogamente alla modifica di una foto in cui l'estensione può fornire filtri per effetti speciali.
 
 ## <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[Grafica e animazione in iOS](~/ios/platform/graphics-animation-ios/index.md)
 
-Grafica e animazione in iOS illustra concetti di grafica in iOS, ad esempio CoreImage, Core Graphics e animazione di base.
+Grafica e animazione in iOS illustra i concetti di base della grafica in iOS, ad esempio CoreImage, Core Graphics e Core Animation.
 
 ## <a name="handoffiosplatformhandoffmd"></a>[Handoff](~/ios/platform/handoff.md)
 
-Apple ha introdotto Handoff in iOS 8 e OS X Yosemite (10.10) per fornire un meccanismo per l'utente da trasferire le attività di avvio in uno dei propri dispositivi, comune a un altro dispositivo che esegue la stessa app o un'altra app che supporta la stessa attività.
+Apple ha introdotto la consegna in iOS 8 e OS X Yosemite (10,10) per fornire un meccanismo comune per l'utente per trasferire le attività avviate in uno dei loro dispositivi, a un altro dispositivo che esegue la stessa app o un'altra app che supporta la stessa attività.
 
 ## <a name="healthkitiosplatformhealthkitmd"></a>[HealthKit](~/ios/platform/healthkit.md)
 
-Kit di integrità fornisce un archivio dati sicuro per informazioni correlate all'integrità dell'utente. Integrità Kit App può, con l'autorizzazione esplicita dell'utente, leggere e scrivere in questo archivio dati e ricevere notifiche quando vengono aggiunti dati pertinenti. Le app possono presentare i dati o dell'utente è possibile usare app integrità specificato di Apple per visualizzare un dashboard di tutti i dati.
+Il kit di integrità fornisce un archivio dati protetto per le informazioni relative all'integrità dell'utente. Le app del kit di integrità possono, con l'autorizzazione esplicita dell'utente, leggere e scrivere in questo archivio dati e ricevere notifiche quando vengono aggiunti dati pertinenti. Le app possono presentare i dati oppure l'utente può usare l'app per l'integrità fornita da Apple per visualizzare un dashboard di tutti i relativi dati.
 
 ## <a name="homekitiosplatformhomekitmd"></a>[HomeKit](~/ios/platform/homekit.md)
 
-Apple ha introdotto HomeKit in iOS 8 per offrire un framework comune per l'individuazione e comunicazione con i dispositivi di domotica nella home page dell'utente. HomeKit fornisce una piattaforma comune per i dispositivi e la configurazione di azioni di controllo degli stessi.
+Apple ha introdotto HomeKit in iOS 8 per fornire un Framework comune per l'individuazione e la comunicazione con i dispositivi di automazione domestica nella Home page di un utente. HomeKit fornisce una piattaforma comune per la configurazione dei dispositivi e la configurazione delle azioni per controllarli.
 
-## <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Acquisti in-app](~/ios/platform/in-app-purchasing/index.md)
+## <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Acquisto in-app](~/ios/platform/in-app-purchasing/index.md)
 
-le applicazioni iOS è possono vendere prodotti digitali o servizi che usano StoreKit: un set di API fornite da iOS che comunicano con i server Apple per condurre transazioni finanziarie con l'utente tramite rispettivi ID Apple. APIs StoreKit sono principalmente interessati con il recupero di informazioni sui prodotti e condurre transazioni: nessun componente dell'interfaccia utente. Le applicazioni che implementano acquisti in-app è necessario compilare la propria interfaccia utente e tenere traccia di elementi acquistati con codice personalizzato per fornire all'utente i prodotti necessari o i servizi.
+le applicazioni iOS possono vendere prodotti o servizi digitali usando StoreKit, un set di API fornite da iOS che comunicano con i server Apple per condurre transazioni finanziarie con l'utente tramite il proprio ID Apple. Le API StoreKit riguardano principalmente il recupero delle informazioni sul prodotto e l'esecuzione di transazioni. non esiste alcun componente dell'interfaccia utente. Le applicazioni che implementano l'acquisto in-app devono compilare la propria interfaccia utente e tenere traccia degli elementi acquistati con codice personalizzato per fornire all'utente i prodotti o i servizi richiesti.
 
-## <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[le API i giochi iOS](~/ios/platform/gaming/index.md)
+## <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[API per giochi iOS](~/ios/platform/gaming/index.md)
 
-Apple ha apportato diversi miglioramenti tecnologici per i giochi le API in iOS 9 che rendono più semplice implementare grafiche di gioco e audio in un'app xamarin. IOS. Questi includono sia facilità di sviluppo tramite Framework di alto livello e sfruttare la potenza di GPU del dispositivo iOS per la maggiore velocità e dalla capacità di grafica.
+Apple ha apportato diversi miglioramenti tecnologici alle API di gioco in iOS 9 che semplificano l'implementazione di grafica e audio di giochi in un'app Novell. iOS. Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche.
 
-## <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integrazione dell'app messaggi](~/ios/platform/message-app-integration/index.md)
+## <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integrazione dell'app Message](~/ios/platform/message-app-integration/index.md)
 
-Nuovo ai dispositivi iOS 10, un'estensione dell'App messaggi si integra con il **messaggi** app e presenta nuove funzionalità per l'utente. L'estensione può inviare testo, le etichette, i file multimediali e i messaggi interattivi.
+Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[Multitasking per iPad](~/ios/platform/multitasking.md)
 
-Aggiunge il supporto di multitasking per l'esecuzione di due App nello stesso momento su iPad specifiche hardware per iOS 9. Multitasking per iPad è supportato tramite le funzionalità seguenti: Diapositiva di failover, la doppia visualizzazione e Picture in Picture.
+iOS 9 aggiunge il supporto multitasking per l'esecuzione di due app allo stesso tempo su hardware iPad specifico. Il multitasking per iPad è supportato tramite le funzionalità seguenti: Scorrere, suddividere la visualizzazione & immagine in figura.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 
-Passbook è un'app per iPhone e iPod tocca con iOS 6. Archivia e visualizza un codice a barre e altre informazioni per collegare le transazioni dei clienti sul telefono con il mondo reale. Passa è generato da commercianti e inviato al cliente tramite posta elettronica, URL o dall'interno un'app di iOS dell'azienda. Passbook archivia organizza tutti i passaggi in un telefono e consente di visualizzare i promemoria Pass nella schermata di blocco in base alla data e ora o alla posizione del dispositivo.
+Passbook è un'app per iPhone e iPod touch con iOS 6. Archivia e Visualizza i codici a barre e altre informazioni per collegare le transazioni dei clienti sul telefono con il "mondo reale". Le sessioni vengono generate dai commercianti e inviate al cliente tramite posta elettronica, URL o dall'interno di un'app iOS. Passbook archivia e organizza tutti i passaggi in un telefono e Visualizza i promemoria di pass per la schermata di blocco, a seconda della data/ora o della posizione del dispositivo.
 
-Questo documento introduce Passbook, usando l'API di Kit passare con xamarin. IOS e illustra come implementare i passaggi nel server.
+Questo documento introduce Passbook, usando l'API pass kit con Novell. iOS e illustra come implementare i passaggi nel server.
 
 ## <a name="photokitiosplatformphotokitmd"></a>[PhotoKit](~/ios/platform/photokit.md)
 
-Foto Kit è un framework nuovo che consente alle applicazioni di eseguire una query nella raccolta di immagini di sistema e creare interfacce utente personalizzate per visualizzare e modificare il relativo contenuto. Include una serie di classi che rappresentano gli asset video e immagine, nonché le raccolte di risorse, ad esempio gli album e cartelle.
+Photo kit è un nuovo Framework che consente alle applicazioni di eseguire query nella libreria di immagini del sistema e creare interfacce utente personalizzate per visualizzarne e modificarne il contenuto. Include varie classi che rappresentano asset di immagini e video, nonché raccolte di asset come album e cartelle.
 
-## <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Richiesta di revisione dell'app](~/ios/platform/request-app-review.md)
+## <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Richiedi Revisione app](~/ios/platform/request-app-review.md)
 
-Novità di iOS 10.3, il `RequestReview()` metodo consente a un'app iOS chiedere all'utente valutare o esaminarlo. Quando questo metodo viene chiamato in un'app di spedizione che l'utente ha installato dall'App Store, iOS 10 gestirà la classificazione intera e processo di revisione per gli sviluppatori. Poiché questo processo è regolato dai criteri di App Store, un avviso o potrebbe non essere visualizzato.
+Una novità di iOS 10,3, `RequestReview()` il metodo consente a un'app per iOS di richiedere all'utente di valutarla o esaminarla. Quando questo metodo viene chiamato in un'app di spedizione che l'utente ha installato dall'App Store, iOS 10 gestirà l'intero processo di valutazione e revisione per lo sviluppatore. Poiché questo processo è regolato dai criteri dell'app Store, è possibile che venga visualizzato un avviso.
 
 ## <a name="search-apisiosplatformsearchindexmd"></a>[API per la ricerca](~/ios/platform/search/index.md)
 
-Ricerca è stata estesa in iOS 9 per offrire eccezionali nuovi modi per accedere alle informazioni e funzionalità all'interno di un'app xamarin. IOS. Usa le nuove API di ricerca di App, app contenuto venga reso disponibili per la ricerca tramite Spotlight e Safari risultati della ricerca, passaggio di consegne e Siri promemoria e suggerimenti. Ciò consente agli utenti di accedere rapidamente alle attività e le informazioni complete all'interno dell'app.
+La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni e alle funzionalità all'interno di un'app Novell. iOS. Usando le nuove API di ricerca per le app, il contenuto delle app viene reso ricercabile attraverso i risultati della ricerca in evidenza e Safari, i promemoria e i suggerimenti per la consegna e Siri. Ciò consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
 
 ## <a name="sirikitiosplatformsirikitindexmd"></a>[SiriKit](~/ios/platform/sirikit/index.md)
 
-Nuovo ai dispositivi iOS 10, SiriKit consente a un'app per iOS fornire servizi accessibili all'utente tramite Siri e all'app mappe su un dispositivo iOS mediante le estensioni App e le nuove **Intent** e **dell'interfaccia utente Intent** Framework.
+Una novità di iOS 10, SiriKit consente a un'app per iOS di fornire servizi accessibili all'utente usando Siri e l'app Maps in un dispositivo iOS usando le estensioni delle app e **i nuovi Framework** **dell'interfaccia utente** Intent e Intent.
 
-## <a name="social-frameworkiosplatformsocial-frameworkmd"></a>[Framework basati su social network](~/ios/platform/social-framework.md)
+## <a name="social-frameworkiosplatformsocial-frameworkmd"></a>[Social Framework](~/ios/platform/social-framework.md)
 
-Il Framework basati su social network fornisce un'API unificata per l'interazione con i social network compresi _Twitter_ e _Facebook_, nonché _SinaWeibo_ per gli utenti in Cina.
+Il Framework di social networking fornisce un'API unificata per interagire con i social network, inclusi _Twitter_ e _Facebook_, oltre a _SinaWeibo_ per gli utenti in Cina.
 
 ## <a name="speech-recognitioniosplatformspeechmd"></a>[Riconoscimento vocale](~/ios/platform/speech.md)
 
-iOS 10 include una nuova API di riconoscimento vocale che consente all'app supportare continua riconoscimento vocale e trascrizione vocale (dal vivi o registrati flussi audio) nel testo.
+iOS 10 include un nuovo Speech API che consente all'app di supportare il riconoscimento vocale continuo e la traduzione vocale (da flussi audio in tempo reale o registrato).
 
 ## <a name="textkitiosplatformtextkitmd"></a>[TextKit](~/ios/platform/textkit.md)
 
-Testo Kit è una nuova API che offre funzionalità di layout e rendering del testo completa. Si basa su un livello basso Text Core framework, ma è molto più facile da usare rispetto al testo di base.
+Il kit di testo è una nuova API che offre funzionalità avanzate per il layout e il rendering del testo. Si basa sul Framework di testo principale di basso livello, ma è molto più semplice da usare rispetto al testo principale.
 
 ## <a name="3d-touchiosplatform3d-touchmd"></a>[3D Touch](~/ios/platform/3d-touch.md)
 
-Questo articolo fornisce e Introduzione all'uso di nuove API Touch 3D per aggiungere i movimenti di pressione sensibili per le app xamarin. IOS in esecuzione nel nuovo iPhone 6s e iPhone 6s Plus dispositivi.
+Questo articolo fornisce e introduce l'uso delle nuove API Touch 3D per aggiungere movimenti sensibili alla pressione alle app Novell. iOS in esecuzione nei nuovi dispositivi iPhone 6s e iPhone 6s Plus.
 
 ## <a name="touch-idiosplatformtouchidmd"></a>[ID tocco](~/ios/platform/touchid.md)
 
-Touch ID è stato introdotto in iOS 7 come mezzo per autenticare l'utente, simile a un passcode. Tuttavia, era limitato a sbloccare il dispositivo, tramite l'App Store, usando iTunes e l'autenticazione solo il keychain iCloud.
+Touch ID è stato introdotto in iOS 7 come mezzo per l'autenticazione dell'utente, simile a un codice di accesso. Tuttavia, era limitato allo sblocco del dispositivo, usando l'App Store, usando iTunes e autenticando solo il keychain di iCloud.
 
 ## <a name="user-notificationsiosplatformuser-notificationsindexmd"></a>[Notifiche utente](~/ios/platform/user-notifications/index.md)
 
-Novità di iOS 10, la notifica all'utente consente a framework per il recapito e la gestione delle notifiche locali e remote. Uso di questo framework, l'app o l'estensione dell'App può pianificare il recapito di notifiche locali specificando un set di condizioni, ad esempio posizione o l'ora del giorno.
+Una novità di iOS 10, il Framework di notifica utente consente la distribuzione e la gestione di notifiche locali e remote. Con questo Framework, l'estensione app o app può pianificare il recapito delle notifiche locali specificando un set di condizioni, ad esempio la posizione o l'ora del giorno.
 
 ## <a name="wide-coloriosplatformwide-colormd"></a>[Wide Color](~/ios/platform/wide-color.md)
 
-iOS 10 e macOS Sierra migliora il supporto per formati pixel intervalli estesi e gli spazi colore a livello di gamma in tutto il sistema, tra cui Framework quali Core Graphics, immagine di base, bare Metal e AVFoundation. Supporto per i dispositivi dotati di schermi di ampia gamma di colori viene diminuito ulteriormente fornendo questo comportamento in tutto lo stack di grafica intero.
+iOS 10 e macOS Sierra migliorano il supporto per i formati pixel estesi e gli spazi dei colori a gamma ampia in tutto il sistema, inclusi i Framework come la grafica principale, le immagini di base, i metal e AVFoundation. Il supporto per i dispositivi con schermi Wide Color è ulteriormente facilitato fornendo questo comportamento nell'intero stack di grafica.
 
 ## <a name="binding-objective-cbinding-objective-cindexmd"></a>[Binding di Objective-C](binding-objective-c/index.md)
 
-Quando si lavora in iOS, potrebbero verificarsi casi in cui si vuole usare una libreria Objective-C di terze parti. In questi casi, è possibile utilizzare progetti di Binding di MonoTouch per creare un'associazione al codice c# per le librerie native di Objective-C. Il progetto usa gli stessi strumenti che utilizziamo per portare l'API di iOS per C#. Questo documento descrive come associare le API Objective-C.
+Quando si utilizza iOS, è possibile che si verifichino casi in cui si desidera utilizzare una libreria Objective-C di terze parti. In questi casi, è possibile usare i progetti di binding MonoTouch per creare C# un'associazione alle librerie Objective-C native. Il progetto usa gli stessi strumenti usati per portare le API iOS a C#. Questo documento descrive come associare le API Objective-C.
 
-## <a name="referencing-native-librariesnative-interopmd"></a>[Riferimenti alle librerie native](native-interop.md)
+## <a name="referencing-native-librariesnative-interopmd"></a>[Riferimento a librerie native](native-interop.md)
 
-Xamarin. IOS supporta il collegamento con le librerie C native e librerie Objective-C. Questo documento illustra come collegare le librerie C native con il progetto xamarin. IOS.
+Novell. iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Novell. iOS.
 
 ## <a name="embedded-frameworksembedded-frameworksmd"></a>[Framework incorporati](embedded-frameworks.md)
 
-Viene illustrato come incorporare i framework utente Objective-C nelle App xamarin. IOS.
+Viene illustrato come incorporare i Framework utente Objective-C nelle app Novell. iOS.

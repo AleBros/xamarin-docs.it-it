@@ -4,15 +4,15 @@ description: Questo articolo illustra come usare i suggerimenti proattivi in un'
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 95e0eb77719a9bcc642dfb1385d7371652943155
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198813"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281280"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Suggerimenti proattivi di watchos in Novell
 
@@ -81,7 +81,7 @@ Per altre informazioni sulla consegna e la ricerca in evidenza, vedere le [guide
 
 ### <a name="creating-an-activity"></a>Creazione di un'attività
 
-Prima di creare un'attività, sarà necessario creare un identificatore del tipo di attività per identificarlo. L'identificatore del tipo di attività è una stringa breve aggiunta `NSUserActivityTypes` alla matrice del `Info.plist` file dell'app usata per identificare in modo univoco un determinato tipo di attività utente. Nella matrice sarà presente una voce per ogni attività supportata dall'app ed esposta alla ricerca di app. Per ulteriori informazioni, vedere il riferimento per la creazione di identificatori del [tipo di attività](~/ios/platform/search/nsuseractivity.md) .
+Prima di creare un'attività, sarà necessario creare un identificatore del tipo di attività per identificarlo. L'identificatore del tipo di attività è una stringa breve aggiunta `NSUserActivityTypes` alla matrice del `Info.plist` file dell'app usata per identificare in modo univoco un determinato tipo di attività utente. Nella matrice sarà presente una voce per ogni attività supportata dall'app ed esposta alla ricerca di app. Per ulteriori informazioni, vedere il riferimento per la [creazione di identificatori del tipo di attività](~/ios/platform/search/nsuseractivity.md) .
 
 Esaminare un esempio di un'attività:
 

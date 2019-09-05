@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 84bb6815c19bcacb4a9d1bddc44d340d51199c32
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4a8e3827deadd5c5d183c61c53cbe8346949759b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421983"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290495"
 ---
 # <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Errore di runtime: Impossibile trovare o caricare l'assembly mscorlib.dll
 
@@ -22,5 +22,5 @@ ms.locfileid: "61421983"
 <Warning>: Service exited with abnormal code: 1
 ```
 
-Questo problema si verifica quando la *nascosto* `.monotouch-32` e `.monotouch-64` cartelle non sono presenti il `.xcarchive` per la firma / creazione pacchetto IPA, ha attivato l'errore di runtime.
+Questo problema si verifica quando le cartelle `.monotouch-64` *nascoste* `.monotouch-32` e non sono presenti `.xcarchive` nella per la creazione della firma/IPA, che attiva l'errore di Runtime.
 

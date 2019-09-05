@@ -4,15 +4,15 @@ description: Questo documento fornisce una panoramica su come creare un'interfac
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: cfbd722726357b0adc9fa14ce2c9a13f8de1bb87
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: a153c6115605ca2a58df233186fa45d200d8b99f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620927"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287302"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in Novell. iOS
 
@@ -54,7 +54,7 @@ Quando si seleziona un controllo nell'area di progettazione, il **riquadro delle
 
  [![](creating-ui-objects-images/image3b.png "Riquadro widget proprietà")](creating-ui-objects-images/image3b.png#lightbox)
 
-Per approfondire l'uso di iOS designer, vedere la Guida introduttiva alla [finestra di progettazione iOS](~/ios/user-interface/designer/introduction.md) .
+Per approfondire l'uso di iOS designer, vedere la Guida [introduttiva alla finestra di progettazione iOS](~/ios/user-interface/designer/introduction.md) .
 
 ## <a name="using-xcode-interface-builder"></a>Uso di Xcode Interface Builder
 
@@ -80,7 +80,7 @@ Quando si progetta l'interfaccia utente con Interface Builder è necessario crea
 
  [![](creating-ui-objects-images/image6a.png "Pulsante Editor Assistente")](creating-ui-objects-images/image6a.png#lightbox)
 
-Fare clic su un oggetto dell'interfaccia utente; quindi **controllare** il trascinamento nel file con estensione h. Per **controllare**il trascinamento, tener premuto il tasto CTRL e quindi fare clic sull'oggetto dell'interfaccia utente per cui si sta creando la presa (o azione). Tenere premuto il tasto CTRL mentre si trascina il file di intestazione. Terminare il trascinamento `@interface` sotto la definizione. Dovrebbe essere visualizzata una linea blu con una raccolta didascalia Insert Outlet o Outlet, come illustrato nella schermata seguente.
+Fare clic su un oggetto dell'interfaccia utente; quindi **controllare il trascinamento** nel file con estensione h. Per **controllare il trascinamento**, tener premuto il tasto CTRL e quindi fare clic sull'oggetto dell'interfaccia utente per cui si sta creando la presa (o azione). Tenere premuto il tasto CTRL mentre si trascina il file di intestazione. Terminare il trascinamento `@interface` sotto la definizione. Dovrebbe essere visualizzata una linea blu con una raccolta didascalia Insert Outlet o Outlet, come illustrato nella schermata seguente.
 
 Quando si rilascia il clic, verrà richiesto di specificare un nome per l'Outlet, che verrà usato per creare una C# proprietà a cui è possibile fare riferimento nel codice:
 

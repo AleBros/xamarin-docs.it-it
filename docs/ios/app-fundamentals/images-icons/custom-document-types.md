@@ -4,15 +4,15 @@ description: Questo articolo illustra l'inclusione e la gestione di un asset imm
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 1125b0c420d6dbd23c5539a2183d531bc0d6089f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643010"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282525"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate del documento in Novell. iOS
 
@@ -44,7 +44,7 @@ Fare clic sul pulsante **Aggiungi tipo di documento** e compilare i campi obblig
 -----
 
 
-Per altre informazioni sui tipi di documento, vedere gli argomenti di riferimento sugli identificatori di [tipo uniforme](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) di Apple e [la programmazione dell'interazione tra documenti per iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Per altre informazioni sui tipi di documento, vedere gli argomenti di [riferimento sugli identificatori di tipo uniforme](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) di Apple e [la programmazione dell'interazione tra documenti per iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Collegamenti correlati

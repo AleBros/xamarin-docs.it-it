@@ -4,15 +4,15 @@ description: Questo documento fornisce un'introduzione introduttiva alla creazio
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b93cc584a58d864e6dc7477dc7f76d4f59844d48
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 498f73d6e5942fe305dc19effc83b9d976d86ac5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652403"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291909"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboard in Novell. Mac-Avvio rapido
 
@@ -64,7 +64,7 @@ Poiché si utilizzerà il lato destro della visualizzazione divisa come area di 
 
 [![](quickstart-images/qs11.png "Impostazione della larghezza")](quickstart-images/qs11.png#lightbox)
 
-Selezionare quindi l'elemento diviso che rappresenta il lato destro, impostare una **priorità** di contenimento superiore e fare clic sulla casella di controllo l' **utente può** comprimere:
+Selezionare quindi l'elemento diviso che rappresenta il lato destro, impostare una **priorità di contenimento** superiore e fare clic sulla casella di controllo l' **utente può comprimere** :
 
 [![](quickstart-images/qs12.png "Modifica della priorità di contenimento")](quickstart-images/qs12.png#lightbox)
 
@@ -82,7 +82,7 @@ Al Area di progettazione verrà aggiunto un pulsante per il controllo e un contr
 
 [![](quickstart-images/qs14.png "Trascinamento per creare un nuovo segue")](quickstart-images/qs14.png#lightbox)
 
-Nel menu di scelta rapida selezionare popover: 
+Nel menu di scelta rapida selezionare **popover**: 
 
 [![](quickstart-images/qs15.png "Selezione del tipo di segue")](quickstart-images/qs15.png#lightbox)
 

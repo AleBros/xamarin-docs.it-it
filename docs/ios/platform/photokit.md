@@ -4,15 +4,15 @@ description: Questo documento descrive PhotoKit, illustrando gli oggetti del mod
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 3920445c234344fe7f2a1cdd93ed7f4f6405727d
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 433e50632ce7334f7a815fb8952dda2dfc110578
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226587"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290518"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit in Novell. iOS
 

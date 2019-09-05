@@ -1,44 +1,44 @@
 ---
-title: Panoramica dei binding di Objective-C
-description: Questo documento viene fornita una panoramica dei diversi modi per creare C# associazioni per il codice Objective-C, tra cui le associazioni della riga di comando e progetti di binding Sharpie obiettivo. Viene inoltre descritto il funzionamento dell'associazione.
+title: Cenni preliminari sui binding Objective-C
+description: In questo documento viene fornita una panoramica dei diversi modi C# per creare binding per il codice Objective-C, incluse le associazioni della riga di comando, i progetti di binding e l'obiettivo Sharpie. Viene inoltre illustrato il funzionamento dell'associazione.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 93f90d2dad140f021c7e575afed44da1c5351eda
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 3b0e5d12f47ffb46ad009530bcc9c0b373496f63
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830508"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279786"
 ---
-# <a name="overview-of-objective-c-bindings"></a>Panoramica dei binding di Objective-C
+# <a name="overview-of-objective-c-bindings"></a>Cenni preliminari sui binding Objective-C
 
-_Dettagli di come funziona il processo di associazione_
+_Informazioni sul funzionamento del processo di associazione_
 
-Associazione di una libreria Objective-C per l'uso con Xamarin richiede tre passaggi:
+Il binding di una libreria Objective-C per l'uso con Novell richiede tre passaggi:
 
-1. Scrivere un C# "Definizione API" per descrivere come l'API nativa viene esposta in .NET e modo in cui viene eseguito il mapping sottostante Objective-C. Questa operazione viene eseguita usando standard di C# costrutti come `interface` e l'associazione di vari **gli attributi** (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Scrivere una C# "definizione API" per descrivere il modo in cui l'API nativa viene esposta in .NET e il modo in cui viene mappata all'oggetto sottostante Objective-C. Questa operazione viene eseguita usando C# costrutti standard `interface` come e diversi **attributi** di associazione (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
-2. Dopo aver scritto la definizione dell'API"" in C#, si compila in modo da produrre un assembly "associazione". Questa operazione può essere eseguita sul [ **della riga di comando** ](#commandline) o mediante un [ **progetto di associazione** ](#bindingproject) in Visual Studio per Mac o Visual Studio.
+2. Una volta scritta la "definizione API" in C#, la si compila per produrre un assembly "binding". Questa operazione può essere eseguita dalla [**riga di comando**](#commandline) o tramite un [**progetto di binding**](#bindingproject) in Visual Studio per Mac o Visual Studio.
 
-3. Assembly "binding" viene quindi aggiunto al progetto di applicazione di Xamarin, pertanto è possibile accedere alla funzionalità native usando l'API è definito.
-   Il progetto di associazione è completamente separato dai progetti di applicazione.
+3. L'assembly "binding" viene quindi aggiunto al progetto dell'applicazione Novell, in modo che sia possibile accedere alle funzionalità native usando l'API definita.
+   Il progetto di associazione è completamente separato dai progetti dell'applicazione.
 
    > [!NOTE]
-   > Passaggio 1 può essere automatizzato con l'assistenza degli [ **obiettivo Sharpie**](#objectivesharpie). Esamina le API Objective-C e genera una proposta C# "Definizione API". È possibile personalizzare i file creati da Sharpie obiettivo e usarli in un progetto di associazione (o nella riga di comando) per creare l'assembly di binding. Obiettivo Sharpie non crea associazioni di per sé, ma è semplicemente una parte facoltativa del più ampio del processo.
+   > Il passaggio 1 può essere automatizzato con l'assistenza dell' [**obiettivo Sharpie**](#objectivesharpie). Esamina l'API Objective-C e genera una proposta C# "definizione API". È possibile personalizzare i file creati da Objective Sharpie e usarli in un progetto di binding (o nella riga di comando) per creare l'assembly di associazione. L'obiettivo Sharpie non crea associazioni da solo, ma è semplicemente una parte facoltativa del processo più grande.
 
-È anche possibile leggere informazioni tecniche più dettagliate dei [funzionamento](#howitworks), che consente di scrivere le associazioni.
+È anche possibile leggere ulteriori dettagli tecnici sul [funzionamento, che](#howitworks)consentiranno di scrivere le associazioni.
 
 <a name="Command_Line_Bindings" /><a name="commandline" />
 
-## <a name="command-line-bindings"></a>Associazioni di riga di comando
+## <a name="command-line-bindings"></a>Associazioni della riga di comando
 
-È possibile usare la `btouch-native` per xamarin. IOS (o `bmac-native` se si usa xamarin. Mac) per compilare direttamente le associazioni. Può essere utilizzato per il passaggio di C# API definizioni creati manualmente (o utilizzando Sharpie Objective) per lo strumento da riga di comando (`btouch-native` per iOS o `bmac-native` per Mac).
+È possibile usare per `btouch-native` Novell. iOS (o `bmac-native` se si usa Novell. Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native` per iOS o `bmac-native` per Mac).
 
 
-La sintassi generale per il richiamo di questi strumenti è:
+La sintassi generale per richiamare questi strumenti è la seguente:
 
 ```csharp
 # Use this for Xamarin.iOS:
@@ -50,34 +50,34 @@ bash$ /Developer/MonoTouch/usr/bin/btouch-native -e cocos2d.cs -s:enums.cs -x:ex
 bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
-Il comando precedente genererà il file `cocos2d.dll` nella directory corrente, e conterrà la libreria completamente associata che è possibile usare nel progetto. Questo è lo strumento che Visual Studio per Mac Usa per creare le associazioni se si usa un progetto di associazione (descritto [seguito](#bindingproject)).
+Il comando precedente genererà il file `cocos2d.dll` nella directory corrente e conterrà la libreria con binding completo che è possibile usare nel progetto. Questo è lo strumento che Visual Studio per Mac usa per creare i binding se si usa un progetto di associazione (descritto di [seguito](#bindingproject)).
 
 
 <a name="bindingproject" />
 
-## <a name="binding-project"></a>Progetto di associazione
+## <a name="binding-project"></a>Progetto di binding
 
-Un progetto di associazione possa essere creato in Visual Studio per Mac o Visual Studio (Visual Studio supporta solo le associazioni di iOS) e rende più semplice modificare e compilare le definizioni delle API per l'associazione (confronto usando la riga di comando).
+È possibile creare un progetto di binding in Visual Studio per Mac o in Visual Studio (Visual Studio supporta solo le associazioni iOS) e semplifica la modifica e la compilazione delle definizioni API per l'associazione (rispetto all'uso della riga di comando).
 
-Seguire questo [Guida introduttiva](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started) per informazioni su come creare e usare un progetto di associazione per produrre un'associazione.
+Seguire questa [Guida introduttiva](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started) per vedere come creare e usare un progetto di associazione per produrre un'associazione.
 
 <a name="objectivesharpie" />
 
 ## <a name="objective-sharpie"></a>Objective Sharpie
 
-Obiettivo Sharpie è separato, un altro strumento riga di comando che consente con le fasi iniziali della creazione di un'associazione. Non viene creata un'associazione di per sé, piuttosto che consente di automatizzare il passaggio iniziale della generazione di una definizione dell'API per la libreria nativa di destinazione.
+Objective Sharpie è un altro strumento da riga di comando separato che consente di creare un'associazione con le fasi iniziali. Non crea un'associazione autonomamente, ma consente di automatizzare il passaggio iniziale della generazione di una definizione API per la libreria nativa di destinazione.
 
-Leggere il [docs Sharpie obiettivo](~/cross-platform/macios/binding/objective-sharpie/index.md) per informazioni su come analizzare le librerie native, Framework nativi e CocoaPods in definizioni di API che possono essere compilato in associazioni.
+Per informazioni su come analizzare le librerie native, i framework nativi e CocoaPods in definizioni API che possono essere incorporati in binding, vedere l'articolo relativo a [Objective Sharpie docs](~/cross-platform/macios/binding/objective-sharpie/index.md) .
 
 <a name="howitworks" />
 
 ## <a name="how-binding-works"></a>Funzionamento dell'associazione
 
-È possibile usare la [[registrare]](xref:Foundation.RegisterAttribute) attributo [[esportare]](xref:Foundation.ExportAttribute) attributo, e [chiamata selettori Objective-C manuale](~/ios/internals/objective-c-selectors.md) interagiscono per associare manualmente nuove (in precedenza tipi di Objective-C non associati).
+È possibile utilizzare l'attributo [[Register]](xref:Foundation.RegisterAttribute) , l'attributo [[Export]](xref:Foundation.ExportAttribute) e la [chiamata manuale del selettore Objective-c](~/ios/internals/objective-c-selectors.md) per associare manualmente i tipi Objective-c nuovi (precedentemente non associati).
 
-Prima di tutto, trovare un tipo che si desidera associare. Per scopi discussione (e alla semplicità), eseguiremo l'associazione di [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) tipo (che è già stato associato [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è sufficiente, ad esempio a scopo).
+Per prima cosa, trovare un tipo che si vuole associare. Ai fini della discussione (e semplicità), verrà associato il tipo [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (che è già stato associato a [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è solo per scopi di esempio).
 
-In secondo luogo, è necessario creare il C# tipo. È probabile che si desideri inserire tale impostazione in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare il `[Register]` attributo da cambiare il nome del tipo che xamarin. IOS verranno registrati con il runtime di Objective-C. Il C# tipo deve anche ereditare [Foundation.NSObject](xref:Foundation.NSObject):
+In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-c non supporta gli spazi dei nomi, è necessario usare l' `[Register]` attributo per modificare il nome del tipo che Novell. iOS registrerà con il runtime di Objective-c. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {
@@ -89,7 +89,7 @@ namespace Example.Binding {
 }
 ```
 
-In terzo luogo, consultare la documentazione di Objective-C e creare [ObjCRuntime.Selector](xref:ObjCRuntime.Selector) istanze per ogni selettore si vuole usare. Posizionati all'interno del corpo della classe:
+In terzo luogo, esaminare la documentazione di Objective-C e creare istanze di [ObjCRuntime. Selector](xref:ObjCRuntime.Selector) per ogni selettore che si desidera utilizzare. Inserire i seguenti all'interno del corpo della classe:
 
 ```csharp
 static Selector selInit       = new Selector("init");
@@ -97,7 +97,7 @@ static Selector selAllObjects = new Selector("allObjects");
 static Selector selNextObject = new Selector("nextObject");
 ```
 
-Quarto, il tipo dovrà fornire costruttori. Si *necessario* concatenare la chiamata del costruttore del costruttore di classe di base. Il `[Export]` attributi consentono di chiamare i costruttori con il nome del selettore specificata codice Objective-C:
+Quarto, il tipo dovrà fornire costruttori. È *necessario* concatenare la chiamata del costruttore al costruttore della classe base. Gli `[Export]` attributi consentono al codice Objective-C di chiamare i costruttori con il nome del selettore specificato:
 
 ```csharp
 [Export("init")]
@@ -117,7 +117,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-Successivamente, fornire i metodi per ognuno dei selettori dichiarato nel passaggio 3. Questi useranno `objc_msgSend()` per richiamare il selettore sull'oggetto nativo. Si noti l'uso del [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*) per convertire un' `IntPtr` in tipizzato in modo adeguato `NSObject` (sub) tipo. Se si desidera che il metodo possa essere chiamata dal codice Objective-C, il membro *devono* essere **virtuale**.
+Quinto, fornire i metodi per ognuno dei selettori dichiarati nel passaggio 3. `objc_msgSend()` Che utilizzeranno per richiamare il selettore sull'oggetto nativo. Si noti l'uso di [Runtime. GetNSObject ()](xref:ObjCRuntime.Runtime.GetNSObject*) per convertire `IntPtr` un oggetto in un tipo `NSObject` (Sub-) tipizzato in modo appropriato. Se si desidera che il metodo sia chiamabile dal codice Objective-C, il membro *deve* essere **virtuale**.
 
 ```csharp
 [Export("nextObject")]
@@ -139,7 +139,7 @@ public virtual NSArray AllObjects {
 }
 ```
 
-Riassumendo:
+Riunendoli:
 
 ```csharp
 using System;
