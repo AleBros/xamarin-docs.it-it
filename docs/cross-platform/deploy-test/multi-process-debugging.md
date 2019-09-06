@@ -3,15 +3,15 @@ title: Debug a più processori
 description: Questo documento descrive come usare Visual Studio per Mac per il debug di più processi in esecuzione nello stesso momento. Ad esempio, questa funzionalità potrebbe essere usata per eseguire il debug di un progetto di applicazione per dispositivi mobili e di servizio Web contemporaneamente.
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: d20e6e0fd567d0aa0febe21bfe12a5237049b22a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
-ms.translationtype: HT
+ms.openlocfilehash: db5d2dfcf96cdc1a89c0ecb2192b86f564e584ed
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781852"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290446"
 ---
 # <a name="multi-process-debugging"></a>Debug a più processori
 
@@ -56,7 +56,7 @@ Quando viene avviata la configurazione di più soluzioni, vengono visualizzati p
 
 ![](multi-process-debugging-images/mpd05-xs.png "Riquadro di output per una configurazione delle soluzioni")
 
-### <a name="multiple-processes-and-the-active-thread"></a>Più processi e _Thread attivo_
+### <a name="multiple-processes-and-the-_active-thread_"></a>Più processi e _Thread attivo_
 
 Quando viene rilevato un punto di interruzione in un processo, tale processo sospende l'esecuzione, mentre gli altri processi continuano a essere eseguiti. In uno scenario con un unico processo, Visual Studio per Mac può visualizzare agevolmente informazioni quali thread, variabili locali, output dell'applicazione in un unico set di riquadri. Tuttavia, quando sono presenti più processi con più punti di interruzione e potenzialmente più thread, può rivelarsi impegnativo per gli sviluppatori gestire le informazioni provenienti da una sessione di debug che sta tentando di visualizzare tutte le informazioni di tutti i thread (e processi) contemporaneamente.
 

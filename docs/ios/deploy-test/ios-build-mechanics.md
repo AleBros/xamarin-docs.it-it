@@ -4,15 +4,15 @@ description: Questa guida esplora come temporizzare le app e usare metodi che pe
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: dbf8f85192f9052041fc65367eb2f6c57603b440
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
-ms.translationtype: HT
+ms.openlocfilehash: ec510d46bf1b46cf8fd70c8f4d43b3108f46a010
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831430"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284779"
 ---
 # <a name="ios-build-mechanics"></a>Meccanismi di compilazione per iOS
 
@@ -113,7 +113,7 @@ Sono disponibili diverse configurazioni di compilazione per la distribuzione di 
 
 - Debug
   - Questa è la configurazione principale da usare quando un'app è in fase di sviluppo e, di conseguenza, la velocità deve essere maggiore possibile.
-- Versione
+- Release
   - Le compilazioni di rilascio sono quelle fornite agli utenti e in cui le prestazioni sono un aspetto essenziale. Quando si usa la configurazione di rilascio, potrebbe essere utile usare il compilatore ottimizzatore LLVM e ottimizzare i file PNG.
 
  
