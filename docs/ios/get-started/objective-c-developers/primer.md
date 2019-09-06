@@ -4,15 +4,15 @@ description: Questo documento descrive C# per sviluppatori Objective-C. Mette a 
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
-ms.translationtype: HT
+ms.openlocfilehash: a55d1d9848d3f1378ccbc4a24e1748eb146a6a35
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669817"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291992"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Introduzione a C# per sviluppatori Objective-C
 
@@ -94,7 +94,7 @@ namespace MyAppNamespace
 
 Inoltre, la parola chiave namespace nel codice precedente imposta lo spazio dei nomi usato per il file di implementazione. Se più file di implementazione condividono lo stesso spazio dei nomi, non è necessario includere lo spazio dei nomi in una direttiva using, perché è implicita.
 
-### <a name="properties"></a>Proprietà
+### <a name="properties"></a>Properties
 
 Sia Objective-C che C# prevedono il concetto di proprietà per fornire un'astrazione di alto livello per i metodi delle funzioni di accesso. In Objective-C viene usata la direttiva del compilatore @property per generare in modo efficace i metodi delle funzioni di accesso. Al contrario, C# include il supporto per le proprietà all'interno del linguaggio stesso. Una proprietà C# può essere implementata usando un stile più lungo che accede a un campo sottostante oppure tramite una sintassi automatica più breve per le proprietà, come illustrato negli esempi seguenti:
 

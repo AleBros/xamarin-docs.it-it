@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 989d0fe1d8fffd74ea5f64ae7bd5a13487d25c0e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 200ee3fdee3274063becec19fbc6d1504e132a88
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525731"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226646"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gestione di dispositivi virtuali con Android Device Manager
 
@@ -47,10 +47,10 @@ Per usare Android Device Manager sono necessari i componenti seguenti:
   Verificare di installare Android SDK nel percorso predefinito (se non è già installato): **C:\\Programmi (x86)\\Android\\android-sdk**.
 
 - I pacchetti seguenti devono essere installati usando [Android SDK Manager](~/android/get-started/installation/android-sdk.md): 
-    - **Android SDK Tools 26.1.1** o versione successiva
-    - **Android SDK Platform-Tools 27.0.1** o versione successiva
-    - **Android SDK Build-Tools 27.0.3** o versione successiva 
-    - **Emulatore Android 27.2.7** o versione successiva. 
+  - **Android SDK Tools 26.1.1** o versione successiva
+  - **Android SDK Platform-Tools 27.0.1** o versione successiva
+  - **Android SDK Build-Tools 27.0.3** o versione successiva 
+  - **Emulatore Android 27.2.7** o versione successiva. 
 
   Questi pacchetti devono essere visualizzati con lo stato **Installato** come illustrato nello screenshot seguente:
 
@@ -217,9 +217,9 @@ Per usare Android Device Manager sono necessari i componenti seguenti:
 - Deve essere installato Android SDK (vedere [Configurazione di Android SDK per Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
 - I pacchetti seguenti devono essere installati usando [Android SDK Manager](~/android/get-started/installation/android-sdk.md): 
-    - **SDK Tools 26.1.1** o versione successiva
-    - **Android SDK Platform-Tools 28.0.1** o versione successiva 
-    - **Android SDK Build-Tools 26.0.3** o versione successiva
+  - **SDK Tools 26.1.1** o versione successiva
+  - **Android SDK Platform-Tools 28.0.1** o versione successiva 
+  - **Android SDK Build-Tools 26.0.3** o versione successiva
 
   Questi pacchetti devono essere visualizzati con lo stato **Installato** come illustrato nello screenshot seguente:
 

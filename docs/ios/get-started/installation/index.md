@@ -4,19 +4,19 @@ description: Questo documento contiene i collegamenti alle guide che descrivono 
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 92081ceed9df0525f49005b636298a8142162a31
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 8b73ec7e3429f3c4ddf53be6196772c51df888e1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120930"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289648"
 ---
 # <a name="xamarinios-installation"></a>Installazione di Xamarin.iOS
 
-## <a name="required-components"></a>Componenti richiesti
+## <a name="required-components"></a>Componenti obbligatori
 
 Per compilare per Xamarin.iOS, sono necessari i componenti seguenti:
 

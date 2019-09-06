@@ -4,15 +4,15 @@ description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ul
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 20aa1da478916bf4c8949103a5ce7fbf1f5d8f93
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: cf79f586e5b0ff71c109ea9664d3cb7a6aa91a02
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70064831"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292369"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Funzionalità Gruppo di app in Xamarin.iOS
 
@@ -28,7 +28,7 @@ Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle rela
 
 Il percorso condiviso viene configurato usando un [Gruppo di app](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19) configurato nella sezione **Certificates, Identifiers & Profiles** (Certificati, identificatori e profili) del [centro sviluppatori Apple](https://developer.apple.com/account/). È necessario fare riferimento a questo valore anche nel file Entitlements.plist di ogni progetto.
 
-Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il . Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
+Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il prefisso group. Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
 
 Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
@@ -45,7 +45,7 @@ Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
 Dopo aver creato il Gruppo di app, configurare gli ID delle app in modo che le app possano usarlo.
 
-Eseguire le operazioni seguenti:
+Seguire questa procedura:
 
 1. Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple e accedere con un account sviluppatore Apple.
 2. Nel menu **Program Resources** (Risorse del programma) selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).
@@ -72,7 +72,7 @@ Eseguire le operazioni seguenti:
 11. Fare clic sul pulsante **Assign** (Assegna) e quindi sul pulsante **Done** (Chiudi) per tornare all'elenco degli ID app registrati.
 12. Ripetere questi passaggi per tutte le app o le estensioni che useranno il Gruppo di app.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
  
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 

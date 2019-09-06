@@ -1,22 +1,22 @@
 ---
-title: 'Xamarin.Essentials: Magnetometer'
+title: 'Xamarin.Essentials: Magnetometro'
 description: La classe Magnetometer in Xamarin.Essentials consente di monitorare il magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della Terra.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: bfc4916c40b47b715357692308d6b5dfa9db57bf
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
-ms.translationtype: HT
+ms.openlocfilehash: 7682afd26bc09e467c5badbea25c9d478c7bb842
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898716"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226808"
 ---
-# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetometer
+# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetometro
 
 La classe **Magnetometer** consente di monitorare il magnetometro del dispositivo, che indica l'orientamento del dispositivo rispetto al campo magnetico della Terra.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -28,7 +28,7 @@ Aggiungere un riferimento a Xamarin.Essentials nella classe:
 using Xamarin.Essentials;
 ```
 
-La funzionalità Magnetometer opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi del magnetometro. Le eventuali modifiche vengono inviate tramite l'evento `ReadingChanged`. Utilizzo di esempio:
+La funzionalità Magnetometer opera chiamando i metodi `Start` e `Stop` per attivare l'ascolto dei cambi del magnetometro. Eventuali modifiche vengono inviate attraverso l'evento `ReadingChanged`. Utilizzo di esempio:
 
 ```csharp
 
@@ -71,7 +71,7 @@ public class MagnetometerTest
 }
 ```
 
-Tutti i dati sono espressi in µ (microtesla).
+Tutti i dati vengono restituiti in μT (microtesla).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

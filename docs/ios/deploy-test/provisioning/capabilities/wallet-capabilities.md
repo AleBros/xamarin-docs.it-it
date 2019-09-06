@@ -4,15 +4,15 @@ description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ul
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 8cb5d1cb29f5668194d15102c0b2fb4118388e94
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 8afe9e703d357c246ec46756a87a7337859d5888
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065466"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287020"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Funzionalità Portafoglio in Xamarin.iOS
 
@@ -59,7 +59,7 @@ Per altre informazioni sull'uso di Portafoglio, vedere le guide seguenti:
 
 * [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit)
  
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
  
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 

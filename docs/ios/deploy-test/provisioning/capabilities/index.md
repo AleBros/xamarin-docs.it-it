@@ -4,15 +4,15 @@ description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ul
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 7bb4e142a8b7bd0cf0691da381729dc226028193
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 6014bb0889c84c35edc991011bae46065d4ff8d7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121364"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287107"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -152,7 +152,7 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
 
 ### <a name="creating-a-provisioning-profile"></a>Creazione di un profilo di provisioning
 
-Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passaggi indicati di seguito:
+Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi riportati di seguito.
 
 1. Nel centro sviluppatori Apple passare a **Provisioning Profiles > All** (Profili di provisioning > Tutti):
 
@@ -192,7 +192,7 @@ Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passa
 
 <a name="nextsteps" />
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie ancora alcune operazioni per consentire all'app di usarla. Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 
@@ -214,6 +214,6 @@ Il seguente è un elenco dettagliato di alcuni dei problemi più comuni che poss
 
 <a name="summary" />
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato le funzionalità, ovvero i _servizi app_, e ha descritto come possono essere abilitate in Visual Studio e nel centro sviluppatori Apple. Ha anche spiegato in dettaglio come configurare servizi più complessi, ad esempio Wallet, iCloud, Apple Pay e Gruppi di app. Ha infine illustrato i passaggi successivi per ottenere le opzioni per la configurazione e la risoluzione di problemi semplici.

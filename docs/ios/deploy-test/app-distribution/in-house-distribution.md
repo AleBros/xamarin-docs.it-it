@@ -4,15 +4,15 @@ description: Questo documento offre una breve panoramica della distribuzione int
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
-ms.translationtype: HT
+ms.openlocfilehash: f81e5a24957d4af1cd2ce27b39d1f398797cce73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865524"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289880"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuzione interna per le app Xamarin.iOS
 
@@ -22,7 +22,7 @@ Dopo che l'app Xamarin.iOS è stata sviluppata, il passaggio successivo del cicl
 
 - Non è necessario inviare l'applicazione ad Apple per la revisione.
 - Non sono previsti limiti al numero di dispositivi in cui è possibile distribuire un'applicazione
-    - È importante ricordare che Apple afferma chiaramente che le applicazioni interne sono solo per uso interno.
+  - È importante ricordare che Apple afferma chiaramente che le applicazioni interne sono solo per uso interno.
 
 È anche importante tenere presente che il programma Enterprise:
 

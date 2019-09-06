@@ -4,15 +4,15 @@ description: Questo documento descrive come configurare, compilare e pubblicare 
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: c81c84b8b32bdde6949918f3a31f171983007f39
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
-ms.translationtype: HT
+ms.openlocfilehash: 51e802b1e142955fb3988432f9d9c7393f2ee0ea
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675214"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292326"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
 
@@ -187,11 +187,11 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
     > Per impostazione predefinita la visualizzazione **Archivi** mostra solo gli archivi per la soluzione aperta. Per visualizzare tutte le soluzioni con archivi, selezionare la casella di controllo **Mostra tutti gli archivi**. È consigliabile conservare gli archivi precedenti per poter usare le informazioni sul debug in essi contenute per aggiungere, se necessario, simboli di debug nei report relativi agli arresti anomali del sistema.
 
 4. Fare clic su **Firma e distribuisci...** per aprire la procedura guidata di pubblicazione.
-5. Selezionare il canale di distribuzione **App Store**. Scegliere **Avanti**.
+5. Selezionare il canale di distribuzione **App Store**. Fare clic su **Avanti**.
 
     ![Selezione del canale di distribuzione](publishing-to-the-app-store-images/distChannel-m157.png "Selezione del canale di distribuzione")
 
-6. Nella finestra **Profilo di provisioning** selezionare l'identità di firma, l'app e il profilo di provisioning. Scegliere **Avanti**.
+6. Nella finestra **Profilo di provisioning** selezionare l'identità di firma, l'app e il profilo di provisioning. Fare clic su **Avanti**.
 
     ![Selezione del profilo di provisioning](publishing-to-the-app-store-images/provProfileSelect-m157.png "Selezione del profilo di provisioning")
 

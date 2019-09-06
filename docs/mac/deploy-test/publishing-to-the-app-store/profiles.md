@@ -4,15 +4,15 @@ description: Questa guida descrive come creare i profili di provisioning necessa
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: 2b5c6ed77d7bf1c60b9424a138786dafb7a86706
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: c0a4766abf8ded591bf348f2c2a7ba2283cdde00
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290239"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Xamarin.Mac
 
@@ -33,31 +33,31 @@ Seguire questa procedura:
 
 1. Selezionare il tipo di profilo di provisioning che occorre creare e fare clic sul pulsante **Continue** (Continua): 
 
-     [![](profiles-images/certif14.png "Selezione del tipo di profilo")](profiles-images/certif14.png#lightbox)
+    [![](profiles-images/certif14.png "Selezione del tipo di profilo")](profiles-images/certif14.png#lightbox)
 2. Selezionare l'ID dell'applicazione per cui creare il profilo e fare clic sul pulsante **Continue** (Continua): 
 
-     [![](profiles-images/certif15.png "Selezione dell'ID app")](profiles-images/certif15.png#lightbox)
+    [![](profiles-images/certif15.png "Selezione dell'ID app")](profiles-images/certif15.png#lightbox)
 3. Selezionare l'ID sviluppatore usato per firmare il profilo e fare clic su **Continue** (Continua): 
 
-     [![](profiles-images/certif16.png "Selezione dell'ID sviluppatore")](profiles-images/certif16.png#lightbox)
+    [![](profiles-images/certif16.png "Selezione dell'ID sviluppatore")](profiles-images/certif16.png#lightbox)
 4. Selezionare i computer in cui può essere usato il profilo e fare clic su **Continue** (Continua): 
 
-     [![](profiles-images/certif17.png "Selezione dei computer consentiti")](profiles-images/certif17.png#lightbox)
+    [![](profiles-images/certif17.png "Selezione dei computer consentiti")](profiles-images/certif17.png#lightbox)
 5. A questo punto, immettere un nome in **Profile Name** (Nome profilo) e fare clic sul pulsante **Generate** (Genera): 
 
-     [![](profiles-images/certif18.png "Generazione del profilo")](profiles-images/certif18.png#lightbox)
+    [![](profiles-images/certif18.png "Generazione del profilo")](profiles-images/certif18.png#lightbox)
 6. Fare clic sul pulsante **Download** per scaricare il nuovo profilo: 
 
-     [![](profiles-images/certif19.png "Download del profilo")](profiles-images/certif19.png#lightbox)
+    [![](profiles-images/certif19.png "Download del profilo")](profiles-images/certif19.png#lightbox)
 7. I profili di provisioning di sviluppo sono installati nel riquadro Profiles Preferences (Preferenze profilo) dell'applicazione Mac **Preferenze di sistema**: 
 
-     [![](profiles-images/certif20.png "Installazione del profilo")](profiles-images/certif20.png#lightbox)
+    [![](profiles-images/certif20.png "Installazione del profilo")](profiles-images/certif20.png#lightbox)
 8. Nel riquadro Profiles Preferences (Preferenze profilo) saranno visualizzati tutti i profili installati: 
 
-     [![](profiles-images/image47.png "Visualizzazione di tutti i profili installati")](profiles-images/image47.png#lightbox)
+    [![](profiles-images/image47.png "Visualizzazione di tutti i profili installati")](profiles-images/image47.png#lightbox)
 9. Il profilo verrà visualizzato anche nell'**utilità del certificato dello sviluppatore** nel caso in cui debba essere scaricato nuovamente: 
 
-     [![](profiles-images/image48.png "Utilità del certificato dello sviluppatore")](profiles-images/image48.png#lightbox)
+    [![](profiles-images/image48.png "Utilità del certificato dello sviluppatore")](profiles-images/image48.png#lightbox)
 
 Sarà necessario creare un nuovo profilo di provisioning di sviluppo per ogni nuova app o quando viene aggiunto un nuovo computer in cui eseguire il test.
 
@@ -99,5 +99,5 @@ Se lo sviluppatore decide di cambiare le funzionalità usate da un ID app (ad es
 - [Installazione](~//mac/get-started/installation.md)
 - [Esempio Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [Guida degli strumenti: Firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)

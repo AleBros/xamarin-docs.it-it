@@ -4,15 +4,15 @@ description: In questo articolo vengono illustrati i passaggi necessari per conf
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
-ms.translationtype: HT
+ms.openlocfilehash: 910f91478eeb6894e11748c929cc94bc2c0dbe64
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865600"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283583"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configurazione di un'app in iTunes Connect
 
@@ -136,7 +136,7 @@ Per la scelta del nome di un'applicazione, attenersi alle linee guida seguenti s
 - Verificare che sia adatto alle funzionalità dell'applicazione.
 - Localizzare i nomi per i mercati esteri quando opportuno.
 
-### <a name="description"></a>DESCRIZIONE
+### <a name="description"></a>Descrizione
 
 Scrivere una descrizione chiara, concisa e informativa dell'applicazione e delle sue funzionalità. Le prime righe sono le più importanti, devono dare una buona impressione e attirare l'utente. Descrivere ciò che rende speciale l'applicazione e la distingue da altre app simili.
 
@@ -200,7 +200,7 @@ In questa sezione del record applicazione di iTunes Connect è contenuto l'ID un
 ### <a name="app-icon"></a>Icona dell'app
 
 > [!IMPORTANT]
->  Le icone dell'app non vengono più inviate tramite iTunes Connect. Devono essere inviate tramite il set di immagini **AppIcon** che si trova nel file **Assets.xcassets** del progetto. Per altre informazioni, vedere la guida [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icona App Store).
+> Le icone dell'app non vengono più inviate tramite iTunes Connect. Devono essere inviate tramite il set di immagini **AppIcon** che si trova nel file **Assets.xcassets** del progetto. Per altre informazioni, vedere la guida [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icona App Store).
 
 L'icona dell'app rappresenta il volto dell'applicazione. Deve essere quindi facile da tenere in mente e ben visualizzabile in piccole dimensioni. Sono facilmente ricordabili le icone basiche, semplici e immediatamente riconoscibili.
 

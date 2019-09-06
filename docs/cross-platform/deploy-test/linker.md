@@ -3,15 +3,15 @@ title: Configurazione personalizzata del linker
 description: Questo documento descrive un file XML che può essere usato per configurare il linker, garantendo in modo esplicito che il codice necessario non venga eliminato dall'applicazione collegata.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: bf934d50c90efaba266cbfac00aa5140ea92009b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526681"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284837"
 ---
 # <a name="custom-linker-configuration"></a>Configurazione personalizzata del linker
 

@@ -4,15 +4,15 @@ description: Gli entitlement sono funzionalità speciali delle app e autorizzazi
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/13/2018
-ms.openlocfilehash: bbc01416fe49b361b163808f3502533db8e39d8c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 381cddcef826d00b09f9928746bb4f60ce78a7e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121318"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284809"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
 
@@ -96,14 +96,14 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 - **Descrizione**: conosciuta comunemente come Passbook, Wallet è un'app per l'archiviazione e la gestione dei pass. Questi pass possono essere carte di credito, carte cliente, carte d'imbarco o biglietti.
 
-    - **Identificatore tipo di pass**
-        - **Chiavi**: com.apple.developer.pass-type-identifiers
-        - **Stringa**: `$(TeamIdentifierPrefix)*`
+  - **Identificatore tipo di pass**
+    - **Chiavi**: com.apple.developer.pass-type-identifiers
+    - **Stringa**: `$(TeamIdentifierPrefix)*`
 
 - **Note**:
-    - Permetterà all'app di consentire tutti i tipi di pass. Per limitare l'app e consentire solo un subset di tipi di pass per il team, impostare il valore della stringa su: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
+  - Permetterà all'app di consentire tutti i tipi di pass. Per limitare l'app e consentire solo un subset di tipi di pass per il team, impostare il valore della stringa su: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
-    Dove pass.$(CFBundleIdentifier) è l'ID del pass creato [sopra](~/ios/platform/passkit.md)
+  Dove pass.$(CFBundleIdentifier) è l'ID del pass creato [sopra](~/ios/platform/passkit.md)
 
 <a name="icloud" />
 
@@ -111,17 +111,17 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 - **Descrizione**: iCloud offre agli utenti iOS un modo semplice e pratico per archiviare contenuti e condividerli tra i dispositivi. Gli sviluppatori possono usare iCloud in quattro modi per offrire ai propri utenti un mezzo di archiviazione: archiviazione chiave-valore, archiviazione UIDocument, CoreData e uso diretto di CloudKit per l'archiviazione di singoli file e directory. Per altre informazioni su questi argomenti, vedere la guida introduttiva a iCloud.
 
-    - **Documenti iCloud e CloudKit**
-        - **Chiavi**: com.apple.developer.ubiquity-container-identifiers
-        - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
-    - **Archiviazione chiave-valore iCloud**
-        - **Chiave**: com.apple.developer.ubiquity-kvstore-identifier
-        - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+  - **Documenti iCloud e CloudKit**
+    - **Chiavi**: com.apple.developer.ubiquity-container-identifiers
+    - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+  - **Archiviazione chiave-valore iCloud**
+    - **Chiave**: com.apple.developer.ubiquity-kvstore-identifier
+    - **Stringa**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
 - **Note**:
-    - Per individuare la stringa `$(TeamIdentifierPrefix)`, accedere a developer.apple.com e visitare **Member Center > Account utente > Developer Account Summary (Riepilogo account per sviluppatore)** per ottenere l'ID del team (o l'ID individuale per i singoli sviluppatori). Sarà una stringa di 10 caratteri (ad esempio, A93A5CM278).
-    - La stringa `$(CFBundleIdentifier)` inizia con `iCloud` e viene impostata quando il contenitore iCloud viene creato seguendo i passaggi della guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md).
-    - Si possono usare i segnaposto $`(TeamIdentifierPrefix)` e `$(CFBundleIdentifier)` che verranno sostituiti con i valori corretti in fase di compilazione.
+  - Per individuare la stringa `$(TeamIdentifierPrefix)`, accedere a developer.apple.com e visitare **Member Center > Account utente > Developer Account Summary (Riepilogo account per sviluppatore)** per ottenere l'ID del team (o l'ID individuale per i singoli sviluppatori). Sarà una stringa di 10 caratteri (ad esempio, A93A5CM278).
+  - La stringa `$(CFBundleIdentifier)` inizia con `iCloud` e viene impostata quando il contenitore iCloud viene creato seguendo i passaggi della guida [Uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md).
+  - Si possono usare i segnaposto $`(TeamIdentifierPrefix)` e `$(CFBundleIdentifier)` che verranno sostituiti con i valori corretti in fase di compilazione.
 
 > [!IMPORTANT]
 > Apple [fornisce strumenti](https://developer.apple.com/support/allowing-users-to-manage-data/) per aiutare gli sviluppatori a gestire correttamente il Regolamento generale sulla protezione dei dati (GDPR) dell'Unione Europea.
@@ -130,16 +130,16 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 
 - **Descrizione**: Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso.
 
-    - **Chiave**: com.apple.security.application-groups
-    - **Stringa**: group.$(CFBundleIdentifier)
+  - **Chiave**: com.apple.security.application-groups
+  - **Stringa**: group.$(CFBundleIdentifier)
 
 <a name="apple-pay" />
 
 ### <a name="apple-pay"></a>Apple Pay
 
 - **Descrizione**: Apple Pay consente agli utenti di pagare beni tramite il dispositivo iOS.
-    - **Chiave**: com.apple.developer.in-app-payments
-    - **Stringa**: merchant.your.mechantid
+  - **Chiave**: com.apple.developer.in-app-payments
+  - **Stringa**: merchant.your.mechantid
 
 ### <a name="push-notifications"></a>Notifiche push
 
@@ -149,7 +149,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 ### <a name="siri"></a>Siri
 
 - **Descrizione**: SiriKit consente a un'app iOS di offrire servizi accessibili a Siri e all'app Mappe in un dispositivo iOS usando le estensioni app e i nuovi framework Intent e Interfaccia utente Intent. Per altre informazioni, vedere la guida introduttiva a SiriKit.
-    - **Chiave**: com.apple.developer.siri
+  - **Chiave**: com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN personale
 
@@ -159,51 +159,51 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 ### <a name="keychain-sharing"></a>Condivisione del keychain
 
 - **Descrizione**: la condivisione del keychain consente agli sviluppatori di app di condividere le password archiviate nel keychain di un dispositivo con altre app sviluppate dallo stesso team. L'accesso può essere limitato passando un identificatore di gruppo di accesso keychain nella stringa.
-    - **Chiave**: keychain-access-groups
-    - **Stringa**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
+  - **Chiave**: keychain-access-groups
+  - **Stringa**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
 
 ### <a name="inter-app-audio"></a>Audio Inter-App
 
 - **Descrizione**: Audio Inter-App consente agli sviluppatori di trasmettere l'audio tra le app.
-    - **Chiave**: inter-app-audio
-    - **Valore booleano**: YES
+  - **Chiave**: inter-app-audio
+  - **Valore booleano**: YES
 
 ### <a name="associated-domains"></a>Domini associati
 
 - **Descrizione**: i domini associati che devono essere gestiti come collegamenti universali devono essere passati con questo entitlement. I collegamenti universali possono essere implementati per consentire il deep linking tra l'app e il sito Web. È consigliabile specificare una voce per ogni dominio supportato dall'app e ogni voce deve iniziare con `applinks:`
-    - **Chiave**: com.apple.developer.associated-domains
-    - **Stringa**: webcredentials:example.com
+  - **Chiave**: com.apple.developer.associated-domains
+  - **Stringa**: webcredentials:example.com
 
 ### <a name="data-protection"></a>Protezione dati
 
 - **Descrizione**: l'abilitazione della protezione dati usa l'hardware di crittografia predefinito per archiviare i dati sensibili usati nell'app in un formato crittografato. Per impostazione predefinita, il livello di protezione viene impostato sulla protezione completa, in cui i file sono accessibili solo quando il dispositivo è sbloccato.
-    - **Chiave**: com.apple.developer.default-data-protection
-    - **Stringa**: NSFileProtectionComplete
+  - **Chiave**: com.apple.developer.default-data-protection
+  - **Stringa**: NSFileProtectionComplete
 
 ### <a name="homekit"></a>HomeKit
 
 - **Descrizione**: il framework HomeKit offre una piattaforma per l'installazione, la configurazione e la gestione dei dispositivi di domotica supportati, tutto da un dispositivo iOS. Per altre informazioni sull'uso di HomeKit, vedere la guida introduttiva a HomeKit.
-    - **Chiave**: com.apple.developer.homekit
-    - **Valore booleano**: YES
+  - **Chiave**: com.apple.developer.homekit
+  - **Valore booleano**: YES
 
 ### <a name="healthkit"></a>HealthKit
 
 - **Descrizione**: HealthKit è un framework introdotto in iOS 8 che offre un archivio dati centralizzato, coordinato e sicuro per le informazioni sanitarie. Per altre informazioni sull'uso di HealthKit, vedere la guida introduttiva a HealthKit.
-    - **Chiave**: com.apple.developer.healthkit
-    - **Valore booleano**: YES
+  - **Chiave**: com.apple.developer.healthkit
+  - **Valore booleano**: YES
 
 ### <a name="wireless-accessory-configuration"></a>Configurazione accessori wireless
 
 - **Descrizione**: l'uso della Configurazione accessori wireless consente all'app di configurare gli accessori Wi-Fi MFi
-    - **Chiave**: com.apple.external-accessory.wireless-configuration
-    - **Valore booleano**: YES
+  - **Chiave**: com.apple.external-accessory.wireless-configuration
+  - **Valore booleano**: YES
 
 ### <a name="classkit"></a>ClassKit
 
 - **Descrizione**: ClassKit consente ai docenti di visualizzare nell'app i progressi degli studenti nelle attività assegnate.
-    - **Key**: com.apple.developer.ClassKit-environment
-    - **Stringa**: `development` oppure `production`
+  - **Key**: com.apple.developer.ClassKit-environment
+  - **Stringa**: `development` oppure `production`
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato gli entitlement e come usarli in Visual Studio per Mac e in Visual Studio. Ha anche fornito informazioni di riferimento sulle coppie chiave/valore per ogni funzionalità.

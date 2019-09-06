@@ -4,15 +4,15 @@ description: Questa guida descrive come usare Associa a Mac per connettere Visua
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
-ms.translationtype: HT
+ms.openlocfilehash: 5889859543deaecccb72740fccbc2b3343a8297f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978331"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292120"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
@@ -39,12 +39,12 @@ Associa a Mac consente il flusso di lavoro di sviluppo seguente:
 - È possibile usare la riga di comando di Windows per compilare le applicazioni iOS.
 
 > [!NOTE]
-> 
+>
 > Prima di seguire le istruzioni riportate in questa guida, completare i passaggi seguenti:
-> 
+>
 > - In un computer Windows [installare Visual Studio 2019](~/get-started/installation/windows.md)
 > - In un Mac [installare Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) e [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation)
->    - _È necessario aprire manualmente Xcode dopo l'installazione_ per poter aggiungere componenti aggiuntivi.
+>   - _È necessario aprire manualmente Xcode dopo l'installazione_ per poter aggiungere componenti aggiuntivi.
 >
 > Se si preferisce non installare Visual Studio per Mac, Visual Studio 2019 può configurare automaticamente l'host di compilazione Mac con Xamarin.iOS e Mono.
 > È comunque necessario installare ed eseguire Xcode.
@@ -74,28 +74,28 @@ Ora che l'accesso remoto è abilitato, connettere Visual Studio 2019 al Mac.
 
 1. In Visual Studio 2019 aprire un progetto iOS esistente o crearne uno nuovo scegliendo **File > Nuovo > Progetto** e quindi selezionando un modello di progetto iOS.
 
-2. Aprire la finestra di dialogo **Associa a Mac**. 
+2. Aprire la finestra di dialogo **Associa a Mac**.
 
     - Usare il pulsante **Associa a Mac** nella barra degli strumenti iOS:
 
-        ![Barra degli strumenti iOS, con il pulsante Associa a Mac evidenziato](images/ios-toolbar.png "Barra degli strumenti iOS, con il pulsante Associa a Mac evidenziato")
+      ![Barra degli strumenti iOS, con il pulsante Associa a Mac evidenziato](images/ios-toolbar.png "Barra degli strumenti iOS, con il pulsante Associa a Mac evidenziato")
 
     - In alternativa, selezionare **Strumenti > iOS > Associa a Mac**.
 
     - La finestra di dialogo **Associa a Mac** visualizza un elenco di tutti gli host di compilazione Mac connessi in precedenza e attualmente disponibili:
 
-        ![Finestra di dialogo Associa a Mac](images/pairtomac.png "Finestra di dialogo Associa a Mac")
+      ![Finestra di dialogo Associa a Mac](images/pairtomac.png "Finestra di dialogo Associa a Mac")
 
-3. Selezionare un Mac dall'elenco. Fare clic su **Connetti**. 
+3. Selezionare un Mac dall'elenco. Fare clic su **Connetti**.
 
 4. Immettere il nome utente e la password.
 
     - La prima volta che ci si connette a uno specifico Mac, viene chiesto di immettere il nome utente e la password per tale macchina:
 
-        ![Immissione di nome utente e password per il Mac](images/auth.png "Immissione di nome utente e password per il Mac")
+      ![Immissione di nome utente e password per il Mac](images/auth.png "Immissione di nome utente e password per il Mac")
 
-        > [!TIP]
-        > Durante l'accesso, usare il nome utente di sistema anziché nome e cognome.
+      > [!TIP]
+      > Durante l'accesso, usare il nome utente di sistema anziché nome e cognome.
 
     - Associa a Mac userà queste credenziali per creare una nuova connessione SSH al Mac. Se l'operazione ha esito positivo, viene aggiunta una chiave al file **authorized_keys** nel Mac. L'accesso per le successive connessioni allo stesso Mac sarà automatico.
 
@@ -107,12 +107,12 @@ Ora che l'accesso remoto è abilitato, connettere Visual Studio 2019 al Mac.
 
     - Quando Visual Studio 2019 è connesso a un Mac, la voce relativa al Mac nella finestra di dialogo **Associa al Mac** è contrassegnata da un'icona indicante che il Mac è attualmente connesso:
 
-        ![Mac connesso](images/connected.png "Mac connesso")
+      ![Mac connesso](images/connected.png "Mac connesso")
 
       È possibile connettere un solo Mac alla volta.
 
       > [!TIP]
-      > Facendo clic con il pulsante destro del mouse su un Mac qualsiasi nell'elenco **Associa a Mac**, viene visualizzato un menu di scelta rapida in cui è possibile scegliere **Connetti...**, **Rimuovi questo Mac** oppure **Disconnetti**:
+      > Facendo clic con il pulsante destro del mouse su un Mac qualsiasi nell'elenco **Associa a Mac**, viene visualizzato un menu di scelta rapida in cui è possibile scegliere **Connetti...** , **Rimuovi questo Mac** oppure **Disconnetti**:
       >
       > ![Menu di scelta rapida di Associa a Mac](images/contextmenu.png "Menu di scelta rapida di Associa a Mac")
       >
@@ -126,18 +126,18 @@ Se l'associazione al Mac non è riuscita, provare ad [aggiungere manualmente un 
 
 Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un particolare Mac, è possibile aggiungerlo manualmente:
 
-1. Individuare l'indirizzo IP del Mac. 
+1. Individuare l'indirizzo IP del Mac.
 
     - Aprire **Preferenze di Sistema > Condivisione > Login remoto** nel Mac:
 
-        [![Indirizzo IP del Mac in Preferenze di Sistema > Condivisione](images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di Sistema > Condivisione")](images/sharing.png#lightbox)
+      [![Indirizzo IP del Mac in Preferenze di Sistema > Condivisione](images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di Sistema > Condivisione")](images/sharing.png#lightbox)
 
-    - In alternativa, usare la riga di comando. Nel terminale eseguire questo comando: 
+    - In alternativa, usare la riga di comando. Nel terminale eseguire questo comando:
 
-        ```bash
-        $ ipconfig getifaddr en0
-        196.168.1.8
-        ```
+      ```bash
+      $ ipconfig getifaddr en0
+      196.168.1.8
+      ```
 
       A seconda della configurazione di rete, potrebbe essere necessario usare un nome di interfaccia diverso da `en0`, ad esempio `en1`, `en2` e così via.
 
@@ -171,7 +171,7 @@ Associa a Mac esegue le installazioni e gli aggiornamenti software necessari dur
 
 ### <a name="mono"></a>Mono
 
-Associa a Mac verificherà che Mono sia installato. Se non è installato, Associa a Mac scaricherà e installerà l'ultima versione stabile di Mono nel Mac. 
+Associa a Mac verificherà che Mono sia installato. Se non è installato, Associa a Mac scaricherà e installerà l'ultima versione stabile di Mono nel Mac.
 
 Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle schermate seguenti (fare clic per ingrandire):
 

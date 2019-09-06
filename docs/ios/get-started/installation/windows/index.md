@@ -5,15 +5,15 @@ zone_pivot_groups: platform-win
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/16/2018
-ms.openlocfilehash: 2f580571e7b871e724ca1a760060a238098e4f44
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 53f244521e4b916078bdcbaa02f1a79a919be0c4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526506"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291298"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Installazione di Xamarin.iOS in Windows
 
@@ -52,11 +52,12 @@ Per impostare la configurazione per lo sviluppo con Xamarin.iOS in Visual Studio
 
     Per compilare, eseguire il debug e firmare le applicazioni iOS per la distribuzione, Visual Studio 2017 deve avere accesso tramite rete a un host di compilazione Mac configurato con gli strumenti di sviluppo Apple (Xcode) e Xamarin.iOS.
 
-    - [Scaricare e installare Xcode da Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12). 
+    - [Scaricare e installare Xcode da Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
     - [Installare Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation), che installa anche Xamarin.iOS.
 
     > [!NOTE]
-    > Se si preferisce non installare Visual Studio per Mac, Visual Studio 2019 può [configurare automaticamente](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning) l'host di compilazione Mac con il software necessario per compilare applicazioni Xamarin.iOS. Per altre informazioni, vedere [Provisioning automatico del Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning).
+    > Se si preferisce non installare Visual Studio per Mac, Visual Studio 2019 può [configurare automaticamente](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning) l'host di compilazione Mac con il software necessario per compilare applicazioni Xamarin.iOS.
+    > Per altre informazioni, vedere [Provisioning automatico del Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning).
 
 3. Eseguire l'associazione al Mac (connettere Visual Studio 2019 al Mac)
 
@@ -72,10 +73,10 @@ Per impostare la configurazione per lo sviluppo con Xamarin.iOS in Visual Studio
 Per compilare le app Xamarin.iOS con Visual Studio 2017 in Windows, è necessario quanto segue:
 
 - Un computer Windows con Visual Studio 2017 installato. Può trattarsi di un computer fisico o di una macchina virtuale.
-    - [Requisiti di sistema Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
-    
-- Un Mac accessibile dalla rete configurato con strumenti di compilazione Apple e Xamarin.iOS. Visual Studio 2017 accede a questa macchina tramite una connessione di rete per usare gli strumenti di compilazione Apple, necessari per la compilazione di applicazioni iOS native. 
-    - [Requisiti di sistema Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
+  - [Requisiti di sistema Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
+
+- Un Mac accessibile dalla rete configurato con strumenti di compilazione Apple e Xamarin.iOS. Visual Studio 2017 accede a questa macchina tramite una connessione di rete per usare gli strumenti di compilazione Apple, necessari per la compilazione di applicazioni iOS native.
+  - [Requisiti di sistema Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
 
 ## <a name="setup"></a>Configurazione
 
@@ -84,14 +85,14 @@ Per predisporre la configurazione per lo sviluppo con Xamarin.iOS in Visual Stud
 1. Configurare Windows (Installare Visual Studio 2017)
 
     Xamarin.iOS può essere usato con Visual Studio 2017 Community, Professional ed Enterprise Edition, in un computer autonomo o una macchina virtuale.
-    
+
     - [Installare Visual Studio 2017](~/get-started/installation/windows.md).
 
 2. Configurare il Mac (Installare Xcode e Visual Studio per Mac)
 
     Per compilare, eseguire il debug e firmare le applicazioni iOS per la distribuzione, Visual Studio 2017 deve avere accesso tramite rete a un host di compilazione Mac configurato con gli strumenti di sviluppo Apple (Xcode) e Xamarin.iOS.
 
-    - [Scaricare e installare Xcode da Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12). 
+    - [Scaricare e installare Xcode da Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
     - [Installare Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/installation), che installa anche Xamarin.iOS.
 
     > [!NOTE]

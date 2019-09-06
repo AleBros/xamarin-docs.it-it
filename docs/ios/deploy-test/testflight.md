@@ -4,15 +4,15 @@ description: TestFlight ora è di proprietà di Apple ed è lo strumento princip
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 5729c32ca671a4fcc309d235a34929dcba6a3d03
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
-ms.translationtype: HT
+ms.openlocfilehash: 2080961e2741ea0d0f0316918c55f3c2a194a00a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621107"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289971"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
@@ -129,7 +129,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
- Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Questi sono:
+ Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Si tratta di:
 
 1. Caricare un pacchetto IPA creato con il comando di compilazione del pacchetto ad-hoc.
 1. Caricare un bundle `.app` compresso.

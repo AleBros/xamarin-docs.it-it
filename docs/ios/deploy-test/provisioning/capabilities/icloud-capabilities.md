@@ -4,15 +4,15 @@ description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ul
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: ef36e79254a6d07ae6d23de7e86f6a43b2140b09
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 0972b7c6fa686f40ca548f8267f8e514e9244f05
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065527"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286144"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Funzionalità iCloud in Xamarin.iOS
 
@@ -27,7 +27,7 @@ L'aggiunta della funzionalità iCloud a un'applicazione è leggermente più comp
 
 <a name="icloud-developer-center" />
 
-## <a name="developer-center"></a>Centro per sviluppatori
+## <a name="developer-center"></a>Centro sviluppatori
 
 Durante il provisioning di una nuova app tramite il centro sviluppatori è necessario eseguire due passaggi:
 
@@ -101,7 +101,7 @@ Per altre informazioni sull'uso di iCloud, vedere le guide seguenti:
 * [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) (Introduzione a CloudKit)
 * [Introduction to Document Picker](~/ios/platform/document-picker.md) (Introduzione a Selezione documento)
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
  
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 

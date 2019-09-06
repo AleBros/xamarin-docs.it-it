@@ -4,15 +4,15 @@ description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ul
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 856ed31cd2ee8fdc657cd1437f21052e1d7a79f2
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 78270ee181f56f4b82637ed74a10a916d8fa4a77
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065491"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285456"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Funzionalità Apple Pay in Xamarin.iOS
 
@@ -148,7 +148,7 @@ Per altre informazioni sull'uso di Apple Pay, vedere la guida seguente:
 
 * [Introduction to Apple Pay](~/ios/platform/apple-pay.md) (Introduzione ad Apple Pay)
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
  
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 

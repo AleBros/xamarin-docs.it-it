@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 6f5a5512cef6ad870f60bca397404df450775de3
-ms.sourcegitcommit: ec99e64ee346adc3c338db13e93100bafee75460
-ms.translationtype: HT
+ms.openlocfilehash: 230c72539388028aaf8f05d200d8779105102644
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331883"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225630"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Accelerazione hardware per le prestazioni dell'emulatore (Hyper-V e HAXM)
 
@@ -31,14 +31,14 @@ Le tecnologie di virtualizzazione seguenti sono disponibili per l'accelerazione 
 1. **Microsoft Hyper-V e piattaforma Hypervisor**.
    [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/) è una funzionalità di virtualizzazione di Windows che consente l'esecuzione di sistemi di computer virtualizzati in un computer host fisico.
 
-2. **Intel Hardware Accelerated Execution Manager (HAXM)**.
+2. **Intel Hardware Accelerated Execution Manager (HAXM)** .
    HAXM è un motore di virtualizzazione per i computer che eseguono CPU Intel.
 
 Per ottenere prestazioni ottimali, è consigliabile l'uso di Hyper-V per accelerare l'emulatore Android. Se Hyper-V non è disponibile nel computer in uso, è possibile usare HAXM. L'emulatore Android usa automaticamente l'accelerazione hardware se vengono soddisfatti i criteri seguenti:
 
 - L'accelerazione hardware è disponibile e abilitata nel computer di sviluppo.
 
-- L'emulatore esegue un'immagine del sistema creata per un dispositivo virtuale basato su **x86**.
+- L'emulatore sta eseguendo un'immagine di sistema creata per un dispositivo virtuale basato su **x86**.
 
 > [!IMPORTANT]
 > Non è possibile eseguire un emulatore con accelerazione della macchina virtuale all'interno di un'altra macchina virtuale, ad esempio una macchina ospitata da VirtualBox, VMWare o Docker. È necessario eseguire l'emulatore Android [direttamente nell'hardware del sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
@@ -58,23 +58,23 @@ Hyper-V viene eseguito nella piattaforma Windows Hypervisor. Per usare l'emulato
 
 - L'hardware del computer deve soddisfare i requisiti seguenti:
 
-    - CPU Intel o AMD Ryzen a 64 bit con Second Level Address Translation (SLAT).
-    - Supporto di CPU per estensione della modalità di monitoraggio VM (VT-c nelle CPU Intel).
-    - Almeno 4 GB di memoria.
+  - CPU Intel o AMD Ryzen a 64 bit con Second Level Address Translation (SLAT).
+  - Supporto di CPU per estensione della modalità di monitoraggio VM (VT-c nelle CPU Intel).
+  - Almeno 4 GB di memoria.
 
 - Nel BIOS del computer è necessario abilitare gli elementi seguenti:
 
-    - Tecnologia di virtualizzazione (potrebbe avere un'etichetta diversa a seconda del produttore della scheda madre).
-    - Protezione esecuzione programmi basata su hardware.
+  - Tecnologia di virtualizzazione (potrebbe avere un'etichetta diversa a seconda del produttore della scheda madre).
+  - Protezione esecuzione programmi basata su hardware.
 
-- Il computer deve disporre dell'Aggiornamento di Windows 10 - aprile 2018 (build 1803) o versione successiva. È possibile verificare se la versione di Windows è aggiornata usando la procedura seguente: 
+- Il computer deve disporre dell'Aggiornamento di Windows 10 - aprile 2018 (build 1803) o versione successiva. È possibile verificare se la versione di Windows è aggiornata usando la procedura seguente:
 
-    1. Nella casella di ricerca Windows digitare **informazioni**. 
-    2. Nei risultati della ricerca selezionare **Informazioni sul PC**. 
-    3. Scorrere verso il basso la finestra **Informazioni su** fino a visualizzare la sezione **Specifiche Windows**. 
-    4. Verificare che la **versione** sia almeno 1803:
+  1. Nella casella di ricerca Windows digitare **informazioni**.
+  2. Nei risultati della ricerca selezionare **Informazioni sul PC**.
+  3. Scorrere verso il basso la finestra **Informazioni su** fino a visualizzare la sezione **Specifiche Windows**.
+  4. Verificare che la **versione** sia almeno 1803:
 
-        [![Specifiche Windows](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
+      [![Specifiche Windows](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
 
 Per verificare che l'hardware e il software del computer siano compatibili con Hyper-V, aprire un prompt dei comandi e digitare il comando seguente:
 
@@ -97,7 +97,7 @@ Se il computer soddisfa i criteri sopra riportati, seguire questa procedura per 
 
    Dopo aver apportato queste modifiche, riavviare il computer.
 
-2. **Installare [Visual Studio 15.8 o versioni successive](https://visualstudio.microsoft.com/vs/)**. Questa versione di Visual Studio offre il supporto IDE per l'esecuzione dell'emulatore Android con Hyper-V.
+2. **Installare [Visual Studio 15.8 o versioni successive](https://visualstudio.microsoft.com/vs/)** . Questa versione di Visual Studio offre il supporto IDE per l'esecuzione dell'emulatore Android con Hyper-V.
 
 3. **Installare il pacchetto dell'emulatore Android 27.2.7 o versione successiva**. Per installare questo pacchetto, passare a **Strumenti > Android > Android SDK Manager** in Visual Studio. Selezionare la scheda **Strumenti** e verificare che la versione dell'emulatore Android non sia inferiore alla 27.2.7. Verificare anche che la versione di Android SDK Tools corrisponda alla 26.1.1 o versione successiva:
 
@@ -159,17 +159,17 @@ Le tecnologie di virtualizzazione seguenti sono disponibili per l'accelerazione 
 1. **Framework di Hypervisor di Apple**.
    [Hypervisor](https://developer.apple.com/documentation/hypervisor) è una funzionalità di macOS 10.10 e versioni successive che consente di eseguire macchine virtuali in un computer Mac.
 
-2. **Intel Hardware Accelerated Execution Manager (HAXM)**. 
+2. **Intel Hardware Accelerated Execution Manager (HAXM)** .
    [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm) è un motore di virtualizzazione per i computer che eseguono CPU Intel.
 
 Per ottenere prestazioni ottimali, è consigliabile l'uso del framework Hypervisor per accelerare l'emulatore Android. Se il framework Hypervisor non è disponibile nel computer Mac, è possibile usare HAXM. L'emulatore Android usa automaticamente l'accelerazione hardware se vengono soddisfatti i criteri seguenti:
 
 - L'accelerazione hardware è disponibile e abilitata nel computer di sviluppo.
 
-- L'emulatore esegue un'immagine del sistema creata per un dispositivo virtuale basato su **x86**.
+- L'emulatore sta eseguendo un'immagine di sistema creata per un dispositivo virtuale basato su **x86**.
 
 > [!IMPORTANT]
-> 
+>
 > Non è possibile eseguire un emulatore con accelerazione della macchina virtuale all'interno di un'altra macchina virtuale, ad esempio una macchina ospitata da VirtualBox, VMware o Docker. È necessario eseguire l'emulatore Android [direttamente nell'hardware del sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 Per informazioni sull'avvio e sul debug con l'emulatore Android, vedere [Debug nell'emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md).

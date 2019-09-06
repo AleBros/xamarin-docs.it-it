@@ -4,16 +4,16 @@ description: Questo documento descrive come distribuire in modalità wireless un
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: ac4ae1d8b247a709307841be1ffa1fee2afbf68f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: afa87cf98a2f9caee49c510674fe774a46e81107
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121484"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284346"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -89,7 +89,7 @@ Per eseguire la distribuzione in un dispositivo iOS o tvOS, attenersi alla proce
 
 Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless, pertanto è possibile usare i punti di interruzione impostati precedentemente e continuare il flusso di lavoro di debug come di consueto.
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 1. Verificare sempre che il dispositivo iOS o Apple TV sia connesso alla stessa rete del Mac.
 

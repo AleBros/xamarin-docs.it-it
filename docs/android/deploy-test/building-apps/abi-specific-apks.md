@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4a3ba970f8ca32f0bfa2e5297e8052f3eb572ed0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525723"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225761"
 ---
 # <a name="building-abi-specific-apks"></a>Compilazione di APK specifici di ABI
 
@@ -26,7 +26,7 @@ In alcune situazioni può risultare utile per un'applicazione avere più APK. Og
 
 - **Ridurre le dimensioni dell'APK**: Google Play impone un limite di 100 MB per le dimensioni dei file APK. Creando APK specifici dei dispositivi, è possibile ridurre le dimensioni del file APK perché è necessario specificare solo un subset di asset e risorse per l'applicazione.
 
-- **Supportare architetture CPU diverse**: se l'applicazione ha librerie condivise per CPU specifiche, è possibile distribuire solo le librerie condivise per tali CPU.
+- **Supportare architetture CPU diverse**: se l'applicazione ha librerie condivise per CPU specifiche, è possibile distribuire solo le librerie condivise una determinata CPU.
 
 
 Più APK possono complicare la distribuzione, ma questo problema viene risolto da Google Play. Google Play verificherà che a un dispositivo venga distribuito l'APK corretto in base al codice della versione dell'applicazione e ad altri metadati contenuti in **AndroidManifest.XML**. Per informazioni dettagliate specifiche e per conoscere le restrizioni al supporto di più APK per un'applicazione in Google Play, vedere la [documentazione di Google sul supporto di più APK](https://developer.android.com/google/play/publishing/multiple-apks.html).
@@ -49,17 +49,17 @@ Google consiglia un particolare algoritmo che usa un codice versione a sette cif
 Espandendo a otto cifre questo schema del codice versione, è possibile includere nel codice versione alcune informazioni sull'ABI che garantiranno che Google Play distribuisca il file APK corretto in un dispositivo. L'elenco seguente illustra questo formato del codice versione a otto cifre (indicizzato da sinistra a destra):
 
 - **Indice 0** (in rosso nel diagramma sotto): intero per l'ABI:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **Indice 1-2** (in arancione nel diagramma sotto): livello API minimo supportato dall'applicazione.
 
 - **Indice 3-4** (in blu nel diagramma sotto): dimensioni della schermata supportate:
-    - 1: piccole
-    - 2: normali
-    - 3: grandi
-    - 4: molto grandi
+  - 1: piccole
+  - 2: normali
+  - 3: grandi
+  - 4: molto grandi
 
 - **Indice 5-7** (in verde nel diagramma sotto): numero univoco per il codice versione. 
     È impostato dallo sviluppatore. Deve aumentare per ogni versione pubblica dell'applicazione.

@@ -4,15 +4,15 @@ description: Questo documento descrive come firmare un'app Xamarin.Mac con un ID
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 9294080f361d280bcb61ea162320da57f44a2a95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 9272c522383251a54aff5093c20e4b6b6131e2b2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117668"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293039"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma delle app Xamarin.Mac con un ID sviluppatore
 
@@ -48,5 +48,5 @@ Dopo aver compilato l'applicazione, lo sviluppatore può fare clic con il pulsan
 - [Installazione](~//mac/get-started/installation.md)
 - [Esempio Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [Guida degli strumenti: Firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)
