@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 3ff6bc9c603360232b22a36dadb42b6caf31cada
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0d5cde38c9bb9ef4771ec17ef34ebf7e1b8cf74c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522386"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755508"
 ---
 # <a name="local-notifications-on-android"></a>Notifiche locali in Android
 
@@ -84,7 +84,6 @@ Android include il supporto per i metadati delle notifiche, in modo che le notif
 > [!NOTE]
 > La **visibilità** e la **categoria** sono state introdotte in Android 5,0 e non sono disponibili nelle versioni precedenti di Android. A partire da Android 8,0, i [canali di notifica](#notif-chan) vengono usati per controllare il modo in cui le notifiche vengono presentate all'utente.
 
-
 ### <a name="expanded-layouts"></a>Layout espansi
 
 A partire da Android 4,1, le notifiche possono essere configurate con stili di layout espansi che consentono all'utente di espandere l'altezza della notifica per visualizzare altri contenuti. Ad esempio, nell'esempio seguente viene illustrata una notifica di layout espansa in modalità contratta:
@@ -121,7 +120,7 @@ Ognuna di queste categorie corrisponde a un canale di notifica. L'app YouTube im
 
 In questa schermata, l'utente può modificare il comportamento del canale notifiche di **download** eseguendo le operazioni seguenti:
 
-- Impostare il livello di importanzasu urgente, **High**, **medium**o **low**, che configura il livello di interrupt audio e visivo.
+- Impostare il livello di importanza su **urgente**, **High**, **medium**o **low**, che configura il livello di interrupt audio e visivo.
 
 - Attivare o disattivare il punto di notifica.
 
@@ -129,7 +128,7 @@ In questa schermata, l'utente può modificare il comportamento del canale notifi
 
 - Mostrare o nascondere le notifiche nella schermata di blocco.
 
-- Eseguire l' override dell'impostazione non disturbare.
+- Eseguire l'override dell'impostazione non **disturbare** .
 
 Il canale **notifiche generale** presenta impostazioni simili:
 
@@ -237,7 +236,7 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-In questo esempio viene creata un' `NotificationCompat.Builder` istanza di `builder` un nuovo oggetto denominato, insieme all'ID del canale di notifica da usare. Il titolo e il testo della notifica vengono impostati e l'icona di notifica viene caricata da Resources **/ic_notification. png**. La chiamata al `Build` metodo del generatore di notifiche crea un oggetto notifica con queste impostazioni. Il passaggio successivo consiste nel chiamare il `Notify` metodo di Notification Manager. Per individuare Notification Manager, chiamare `GetSystemService`, come illustrato in precedenza.
+In questo esempio viene creata un' `NotificationCompat.Builder` istanza di `builder` un nuovo oggetto denominato, insieme all'ID del canale di notifica da usare. Il titolo e il testo della notifica vengono impostati e l'icona di notifica viene caricata da **Resources/ic_notification. png**. La chiamata al `Build` metodo del generatore di notifiche crea un oggetto notifica con queste impostazioni. Il passaggio successivo consiste nel chiamare il `Notify` metodo di Notification Manager. Per individuare Notification Manager, chiamare `GetSystemService`, come illustrato in precedenza.
 
 Il `Notify` metodo accetta due parametri: l'identificatore della notifica e l'oggetto notifica. L'identificatore di notifica è un intero univoco che identifica la notifica per l'applicazione. In questo esempio l'identificatore di notifica è impostato su zero (0); Tuttavia, in un'applicazione di produzione, è consigliabile assegnare a ogni notifica un identificatore univoco. Il riutilizzo del valore dell'identificatore precedente in una `Notify` chiamata a comporta la sovrascrittura dell'ultima notifica.
 
@@ -329,7 +328,6 @@ Una notifica rimane visibile fino a quando non si verifica una delle tre situazi
 
 Per altre informazioni sull'aggiornamento delle notifiche Android, vedere [modificare una notifica](https://developer.android.com/training/notify-user/managing.html#Updating).
 
-
 ### <a name="starting-an-activity-from-a-notification"></a>Avvio di un'attività da una notifica
 
 In Android è normale che una notifica sia associata a un' *azione* &ndash; un'attività che viene avviata quando l'utente tocca la notifica. Questa attività può trovarsi in un'altra applicazione o anche in un'altra attività. Per aggiungere un'azione a una notifica, creare un oggetto [PendingIntent](xref:Android.App.PendingIntent) e associarlo `PendingIntent` alla notifica. Un `PendingIntent` è un tipo speciale di finalità che consente all'applicazione destinatario di eseguire una parte di codice predefinita con le autorizzazioni dell'applicazione mittente. Quando l'utente tocca la notifica, Android avvia l'attività specificata da `PendingIntent`.
@@ -373,7 +371,7 @@ Se si tocca questa notifica, l'utente torna all'attività di origine.
 In un'app di produzione l'app deve gestire lo *stack indietro* quando l'utente preme il pulsante **indietro** nell'attività di notifica. se non si ha familiarità con le attività di Android e lo stack indietro, vedere [attività e stack back](https://developer.android.com/guide/components/tasks-and-back-stack.html).
 Nella maggior parte dei casi, la navigazione all'indietro dall'attività di notifica deve restituire l'utente dall'app e tornare alla schermata iniziale. Per gestire lo stack indietro, l'app usa la classe [TaskStackBuilder](xref:Android.App.TaskStackBuilder) per creare un `PendingIntent` oggetto con uno stack indietro.
 
-Un'altra considerazione reale è che l'attività di origine potrebbe dover inviare dati all'attività di notifica. Ad esempio, la notifica può indicare che è arrivato un messaggio di testo e l'attività di notifica (una schermata di visualizzazione dei messaggi) richiede l'ID del messaggio per visualizzare il messaggio all'utente. L'attività che crea l' `PendingIntent` oggetto può utilizzare il metodo Intent [. PutExtra](xref:Android.Content.Intent.PutExtra*) per aggiungere dati, ad esempio una stringa, allo scopo, in modo che questi dati vengano passati all'attività di notifica.
+Un'altra considerazione reale è che l'attività di origine potrebbe dover inviare dati all'attività di notifica. Ad esempio, la notifica può indicare che è arrivato un messaggio di testo e l'attività di notifica (una schermata di visualizzazione dei messaggi) richiede l'ID del messaggio per visualizzare il messaggio all'utente. L'attività che crea l' `PendingIntent` oggetto può utilizzare il metodo [Intent. PutExtra](xref:Android.Content.Intent.PutExtra*) per aggiungere dati, ad esempio una stringa, allo scopo, in modo che questi dati vengano passati all'attività di notifica.
 
 Nell'esempio di codice seguente viene illustrato come utilizzare `TaskStackBuilder` per gestire lo stack indietro e viene incluso un esempio di invio di una singola stringa di messaggio a un'attività di notifica denominata `SecondActivity`:
 
@@ -462,7 +460,7 @@ Per usare un'immagine come icona di grandi dimensioni in una notifica, chiamare 
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-Questo codice di esempio apre il file di immagine in Resources **/monkey_icon. png**, lo converte in una bitmap e passa la bitmap risultante a `NotificationCompat.Builder`. In genere, la risoluzione dell'immagine di origine è più grande &ndash; dell'icona piccola ma non molto più grande. Un'immagine troppo grande potrebbe causare operazioni di ridimensionamento non necessarie che potrebbero ritardare l'invio della notifica.
+Questo codice di esempio apre il file di immagine in **Resources/monkey_icon. png**, lo converte in una bitmap e passa la bitmap risultante a `NotificationCompat.Builder`. In genere, la risoluzione dell'immagine di origine è più grande &ndash; dell'icona piccola ma non molto più grande. Un'immagine troppo grande potrebbe causare operazioni di ridimensionamento non necessarie che potrebbero ritardare l'invio della notifica.
 
 ### <a name="big-text-style"></a>Stile testo grande
 
@@ -531,7 +529,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-Analogamente al metodo `SetLargeIcon` di `NotificationCompat.Builder`, il metodo [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) di `BigPictureStyle` richiede una bitmap dell'immagine che si desidera visualizzare nel corpo della notifica. In questo esempio, il metodo [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) di `BitmapFactory` legge il file di immagine che si trova in Resources **/assortable/x_bldg. png** e lo converte in una bitmap.
+Analogamente al metodo `SetLargeIcon` di `NotificationCompat.Builder`, il metodo [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) di `BigPictureStyle` richiede una bitmap dell'immagine che si desidera visualizzare nel corpo della notifica. In questo esempio, il metodo [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) di `BitmapFactory` legge il file di immagine che si trova in **Resources/assortable/x_bldg. png** e lo converte in una bitmap.
 
 È anche possibile visualizzare immagini che non sono in pacchetto come risorsa. Ad esempio, il codice di esempio seguente carica un'immagine dalla scheda SD locale e la Visualizza in una notifica *immagine* :
 
@@ -705,11 +703,11 @@ Quando le notifiche sono ordinate, la priorità della notifica ha la precedenza 
 builder.SetCategory (Notification.CategoryCall);
 ```
 
-La funzionalità non disturbare (novità di Android 5,0) filtra le notifiche in base alle categorie. Ad esempio, la schermata *non disturbare* in **Impostazioni** consente all'utente di esentare le notifiche per le chiamate telefoniche e i messaggi:
+La funzionalità non *disturbare* (novità di Android 5,0) filtra le notifiche in base alle categorie. Ad esempio, la schermata *non disturbare* in **Impostazioni** consente all'utente di esentare le notifiche per le chiamate telefoniche e i messaggi:
 
 ![Non disturbare le opzioni dello schermo](local-notifications-images/26-do-not-disturb.png)
 
-Quando l'utente configura non *disturbare* il blocco di tutti gli interrupt ad eccezione delle chiamate telefoniche (come illustrato nello screenshot precedente), Android consente di presentare notifiche con un' `Notification.CategoryCall` impostazione di categoria di da presentare mentre il dispositivo è in nonmodalità di disturbo. Si noti `Notification.CategoryAlarm` che le notifiche non vengono mai bloccate in modalità *non di disturbo* .
+Quando l'utente configura non *disturbare* il blocco di tutti gli interrupt ad eccezione delle chiamate telefoniche (come illustrato nello screenshot precedente), Android consente di presentare notifiche con un' `Notification.CategoryCall` impostazione di categoria di da presentare mentre il dispositivo *è in non* modalità di disturbo. Si noti `Notification.CategoryAlarm` che le notifiche non vengono mai bloccate in modalità *non di disturbo* .
 
 Nell'esempio [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) viene illustrato come utilizzare `NotificationCompat.Builder` per avviare una seconda attività da una notifica. Questo codice di esempio è illustrato nella procedura dettagliata [uso delle notifiche locali in Novell. Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
 

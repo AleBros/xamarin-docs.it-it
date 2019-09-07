@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: e92887dc54acc33e6d433aafe39ae7df9ea8ac71
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291657"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769942"
 ---
 # <a name="accessibility-on-macos"></a>Accessibilità in macOS
 
@@ -83,8 +83,6 @@ Una volta abilitato, il controllo viene visualizzato come una finestra mobile ch
 [![Esempio di controllo di accessibilità in esecuzione](accessibility-images/accessibility-example.png "Esempio di controllo di accessibilità in esecuzione")](accessibility-images/accessibility-example-large.png#lightbox)
 
 Per altre informazioni, vedere la [Guida test di accessibilità per OS X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

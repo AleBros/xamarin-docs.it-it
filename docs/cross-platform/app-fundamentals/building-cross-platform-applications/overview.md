@@ -6,12 +6,12 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288380"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758105"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Panoramica sulla compilazione di applicazioni multipiattaforma
 
@@ -45,11 +45,9 @@ Per aumentare la quantità di riutilizzo del codice, è possibile adottare compo
 1. [Pacchetti NuGet](https://nuget.org) compatibili con i progetti Novell, ad esempio [JSON.NET](https://www.nuget.org/packages/Newtonsoft.Json/),
 1. Uso delle funzionalità di .NET Framework per la rete, i servizi Web, i/o e altro ancora.
 
-
 Alcuni di questi componenti sono implementati nella case study *Tasky* .
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
-
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>Separare il codice riutilizzabile in una libreria principale
 
@@ -58,7 +56,6 @@ Seguendo il principio di separazione delle responsabilità attraverso l'architet
  ![](overview-images/layers2.png "Seguendo il principio di separazione delle responsabilità attraverso la suddivisione in livelli dell'architettura dell'applicazione e quindi spostando la funzionalità di base indipendente dalla piattaforma in una libreria principale riutilizzabile, è possibile ottimizzare la condivisione del codice tra le piattaforme")
 
  <a name="Case_Studies" />
-
 
 ## <a name="case-studies"></a>Case Study
 

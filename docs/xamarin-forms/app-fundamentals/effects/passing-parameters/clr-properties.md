@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c5271aab5342f065694e598bd5c2892ef1f18aeb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 04d96dad455cbcf8360f12ee97a0540e7e746d62
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656668"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771464"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passaggio dei parametri di un effetto come proprietà Common Language Runtime
 
@@ -237,7 +237,6 @@ La piattaforma UWP non include un effetto di ombreggiatura, pertanto l'implement
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato l'uso delle proprietà CLR per passare parametri a un effetto. Le proprietà CLR possono essere usate per definire i parametri dell'effetto che non rispondono a modifiche delle proprietà in fase di esecuzione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

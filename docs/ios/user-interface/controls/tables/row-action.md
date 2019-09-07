@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: aabbbb706d4b6fcd022e30f726696b5d4f46167f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f15d586a0ca209fec088fc48ca975efae4ab8fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279508"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768355"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Uso di azioni di riga in Novell. iOS
 
@@ -26,7 +26,6 @@ iOS offre due modi per eseguire azioni su una tabella: `UISwipeActionsConfigurat
 
 La `UITableViewRowAction` classe viene utilizzata per definire un'azione che verrà eseguita quando l'utente scorre orizzontalmente su una riga in una visualizzazione tabella.
 Quando, ad esempio, si modifica una tabella, per impostazione predefinita viene visualizzato un pulsante **Elimina** per scorrere a sinistra di una riga. Connettendo più istanze della `UITableViewRowAction` classe a un oggetto `UITableView`, è possibile definire più azioni personalizzate, ciascuna con testo, formattazione e comportamento propri.
-
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
@@ -43,7 +42,6 @@ Queste informazioni sono descritte più dettagliatamente nelle sezioni seguenti.
 `UITableViewController`(e anche `UITableViewSource` e `UITableViewDelegate`) contengono due metodi: `GetLeadingSwipeActionsConfiguration` e `GetTrailingSwipeActionsConfiguration`, usati per implementare un set di azioni di scorrimento in una riga di visualizzazione tabella. L'azione di scorrimento iniziali fa riferimento a un swipe dal lato sinistro dello schermo in una lingua da sinistra a destra e dal lato destro dello schermo in una lingua da destra a sinistra.
 
 Nell'esempio seguente, dall'esempio [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) , viene illustrata l'implementazione della configurazione swipe principale. Vengono create due azioni dalle azioni contestuali, descritte di [seguito](#create-uicontextualaction). Queste azioni vengono quindi passate a un oggetto appena inizializzato [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations), che viene usato come valore restituito.
-
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -180,8 +178,6 @@ Quando viene eseguito il codice precedente e l'utente scorre a sinistra in una r
 [![](row-action-images/action01.png "Pulsante Hi visualizzato al posto del pulsante Elimina")](row-action-images/action01.png#lightbox)
 
 Se l'utente tocca il pulsante **Hi** , `Hello World!` viene scritto nella console di Visual Studio per Mac o Visual Studio quando l'applicazione viene eseguita in modalità di debug.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

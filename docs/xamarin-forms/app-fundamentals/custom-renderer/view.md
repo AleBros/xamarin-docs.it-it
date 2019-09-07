@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: e8070894bab89ab2e38772518c94482409e4d17f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: c93feb9527892b7b4c60c9d213361d19d3bc4b93
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650430"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771724"
 ---
 # <a name="implementing-a-view"></a>Implementazione di una vista
 
@@ -331,7 +331,6 @@ A condizione che la proprietà `Control` sia `null`, viene creata un'istanza di 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come creare un renderer personalizzato per un controllo personalizzato di Xamarin.Forms usato per visualizzare un flusso video di anteprima dalla fotocamera del dispositivo. I controlli dell'interfaccia utente personalizzata di Xamarin.Forms devono derivare dalla classe [`View`](xref:Xamarin.Forms.View), che viene usata per posizionare layout e controlli sullo schermo.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

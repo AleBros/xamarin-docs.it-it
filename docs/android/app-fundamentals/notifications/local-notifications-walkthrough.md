@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 61dedca1b89237bdd4669a63173b1c6e4fde072b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: caef124228ab4ec4356b10c0559d2abe33d1531f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644302"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755270"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Procedura dettagliata: uso delle notifiche locali in Novell. Android
 
 _Questa procedura dettagliata illustra come usare le notifiche locali nelle applicazioni Novell. Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica locale. Quando l'utente fa clic sulla notifica nell'area di notifica, avvia una seconda attività._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -35,7 +34,6 @@ Gli screenshot seguenti illustrano alcuni esempi di questa applicazione:
 Per iniziare, creare un nuovo progetto Android usando il modello di **app Android** . Chiameremo questo progetto **LocalNotifications**. Se non si ha familiarità con la creazione di progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
 Modificare il file di risorse **values/Strings. XML** in modo che contenga due risorse di stringa aggiuntive che verranno usate quando è il momento di creare il canale di notifica:
-
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,7 +102,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 ### <a name="define-the-notification-id"></a>Definire l'ID notifica
 
 È necessario un ID univoco per il canale di notifica e notifica. Modificare **MainActivity.cs** e aggiungere la variabile di istanza statica seguente alla `MainActivity` classe:
@@ -117,7 +114,7 @@ internal static readonly string COUNT_KEY = "count";
 
 ### <a name="add-code-to-generate-the-notification"></a>Aggiungere codice per generare la notifica
 
-Successivamente, è necessario creare un nuovo gestore eventi per l'evento Button `Click` . Aggiungere il seguente metodo a `MainActivity`:
+Successivamente, è necessario creare un nuovo gestore eventi per l'evento Button `Click` . Aggiungere il metodo seguente a `MainActivity`:
 
 ```csharp
 void ButtonOnClick(object sender, EventArgs eventArgs)
@@ -173,7 +170,6 @@ protected override void OnCreate(Bundle bundle)
     button.Click += ButtonOnClick;
 }
 ```
-
 
 ### <a name="create-a-second-activity"></a>Creare una seconda attività
 
@@ -231,11 +227,9 @@ namespace LocalNotifications
 </LinearLayout>
 ```
 
-
 ### <a name="add-a-notification-icon"></a>Aggiungere un'icona di notifica
 
-Aggiungere infine un'icona di piccole dimensioni che verrà visualizzata nell'area di notifica quando viene avviata la notifica. È possibile copiare [questa icona](local-notifications-walkthrough-images/ic-stat-button-click.png) nel progetto o creare un'icona personalizzata. Denominare il file di icona **\_IC stat\_\_Button click. png** e copiarlo nella cartella Resources/di cui è possibile eseguire l' **estrazione** . Ricordarsi di usare **aggiungi > elemento esistente...** per includere il file icona nel progetto.
-
+Aggiungere infine un'icona di piccole dimensioni che verrà visualizzata nell'area di notifica quando viene avviata la notifica. È possibile copiare [questa icona](local-notifications-walkthrough-images/ic-stat-button-click.png) nel progetto o creare un'icona personalizzata. Denominare il file di icona **IC\_stat\_Button\_click. png** e copiarlo nella cartella **Resources/** di cui è possibile eseguire l'estrazione. Ricordarsi di usare **aggiungi > elemento esistente...** per includere il file icona nel progetto.
 
 ### <a name="run-the-application"></a>Esecuzione dell'applicazione
 
@@ -255,13 +249,11 @@ Quando si fa clic sulla notifica, questa dovrebbe scomparire e l'altra attività
 
 [![Schermata seconda attività](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-Congratulazioni! A questo punto è stata completata la procedura dettagliata per la notifica locale Android ed è presente un esempio funzionante a cui è possibile fare riferimento. Le notifiche sono molto più diverse da quelle illustrate qui. Se si desiderano altre informazioni, vedere la [documentazione di Google relativa alle notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
-
+La procedura è stata completata. A questo punto è stata completata la procedura dettagliata per la notifica locale Android ed è presente un esempio funzionante a cui è possibile fare riferimento. Le notifiche sono molto più diverse da quelle illustrate qui. Se si desiderano altre informazioni, vedere la [documentazione di Google relativa alle notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 ## <a name="summary"></a>Riepilogo
 
 Questa procedura dettagliata `NotificationCompat.Builder` è stata usata per creare e visualizzare le notifiche. È stato illustrato un esempio di base su come avviare una seconda attività come metodo per rispondere all'interazione dell'utente con la notifica e ha dimostrato il trasferimento dei dati dalla prima attività alla seconda attività.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

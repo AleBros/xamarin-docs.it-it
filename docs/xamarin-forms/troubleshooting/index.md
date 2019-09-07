@@ -1,6 +1,6 @@
 ---
 title: Risoluzione dei problemi
-description: Condizioni di errore comuni e come risolverli
+description: Condizioni di errore comuni e come risolverle
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8
@@ -8,20 +8,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: fbe4fb6fce52636b59a9637ee0150c4c19fcc9da
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 93cab36b21e2fe73a0e6890140b5ebaeb32f7951
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60850440"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760027"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 
-_Condizioni di errore comuni e come risolverli_
+_Condizioni di errore comuni e come risolverle_
 
-## <a name="error-unable-to-find-a-version-of-xamarinforms-compatible-with"></a>Errore: "Impossibile trovare una versione di xamarin. Forms compatibile con..."
+## <a name="error-unable-to-find-a-version-of-xamarinforms-compatible-with"></a>Errore: "Impossibile trovare una versione di Novell. Forms compatibile con..."
 
-Gli errori seguenti possono essere visualizzati nei **Console pacchetti** finestra durante l'aggiornamento di tutti i pacchetti Nuget in una soluzione xamarin. Forms o in un progetto di app Android di xamarin. Forms:
+Gli errori seguenti possono essere visualizzati nella finestra della **console del pacchetto** quando si aggiornano tutti i pacchetti NuGet in una soluzione Novell. Forms o in un progetto di app Android Novell. Forms:
 
 ```csharp
 Attempting to resolve dependency 'Xamarin.Android.Support.v7.AppCompat (= 23.3.0.0)'.
@@ -32,30 +32,28 @@ Updating 'Xamarin.Android.Support.v7.MediaRouter 23.3.0.0' to 'Xamarin.Android.S
 Unable to find a version of 'Xamarin.Forms' that is compatible with 'Xamarin.Android.Support.v7.MediaRouter 23.3.0.0'.
 ```
 
-### <a name="what-causes-this-error"></a>Che cosa causa l'errore?
+### <a name="what-causes-this-error"></a>Causa dell'errore
 
-Visual Studio per Mac (o Visual Studio) può indicare che gli aggiornamenti disponibili per il pacchetto Nuget di xamarin. Forms *e tutte le relative dipendenze*. In Xamarin Studio, la soluzione **pacchetti** nodo potrebbe essere simile al seguente (i numeri di versione potrebbero essere diversi):
+Visual Studio per Mac (o Visual Studio) può indicare che sono disponibili aggiornamenti per Novell. Forms NuGet packge *e tutte le relative dipendenze*. In Xamarin Studio il nodo **pacchetti** della soluzione potrebbe avere un aspetto simile al seguente (i numeri di versione potrebbero essere diversi):
 
-![](images/updates-available.png "Cartella dei pacchetti di progetto Android")
+![](images/updates-available.png "Cartella Pacchetti di progetto Android")
 
 Questo errore può verificarsi se si tenta di aggiornare _tutti_ i pacchetti.
 
-Questo avviene perché con Android progetti impostato su una versione di destinazione/compilazione di Android 6.0 (API 23) o di seguito, xamarin. Forms ha una dipendenza rigida *specifici* versioni di Android che supportano i pacchetti. Anche se le versioni aggiornate di questi pacchetti possono essere disponibili, xamarin. Forms non è necessariamente compatibile con loro.
+Questo perché con i progetti Android impostati su una versione di destinazione/compilazione di Android 6,0 (API 23) o di seguito, Novell. Forms ha una dipendenza rigida da versioni *specifiche* dei pacchetti di supporto per Android. Sebbene le versioni aggiornate di questi pacchetti siano disponibili, Novell. Forms non è necessariamente compatibile con essi.
 
-In questo caso è necessario aggiornare _soltanto_ le **xamarin. Forms** del pacchetto, per assicurare che le dipendenze rimangono nelle versioni compatibili. Altri pacchetti che sono stati aggiunti al progetto possono anche essere aggiornati singolarmente, purché non causano i pacchetti di supporto per Android da aggiornare.
-
+In questo caso è necessario aggiornare _solo_ il pacchetto **Novell. Forms** in quanto in questo modo si garantisce che le dipendenze rimangano in versioni compatibili. Gli altri pacchetti aggiunti al progetto possono anche essere aggiornati singolarmente purché non causino l'aggiornamento dei pacchetti di supporto per Android.
 
 > [!NOTE]
-> Se si usa xamarin. Forms 2.3.4 o versione successiva **e** versione di destinazione/compilazione del progetto Android è impostata su Android 7.0 (API 24) o superiore, quindi le dipendenze rigide indicato in precedenza non saranno più applicano e puoi aggiornare il supporto pacchetti indipendentemente dal pacchetto di xamarin. Forms.
+> Se si usa Novell. Forms 2.3.4 o versione successiva **e** la versione di destinazione/compilazione del progetto Android è impostata su Android 7,0 (API 24) o versione successiva, le dipendenze rigide indicate in precedenza non sono più valide ed è possibile aggiornare i pacchetti di supporto indipendentemente da il pacchetto Novell. Forms.
 
+### <a name="fix-remove-all-packages-and-re-add-xamarinforms"></a>Difficoltà Rimuovere tutti i pacchetti e aggiungere nuovamente Novell. Forms
 
-### <a name="fix-remove-all-packages-and-re-add-xamarinforms"></a>Fix: Rimuovere tutti i pacchetti, quindi aggiungere nuovamente xamarin. Forms
+Se i pacchetti **Novell. Android. support** sono stati aggiornati a versioni incompatibili, la correzione più semplice consiste nell'eseguire le operazioni seguenti:
 
-Se il **deselezionati** i pacchetti sono stati aggiornati per le versioni incompatibili, risolvere il problema più semplice:
+1. Eliminare manualmente tutti i pacchetti NuGet nel progetto Android, quindi
+2. Aggiungere nuovamente il pacchetto **Novell. Forms** .
 
-1. Eliminare manualmente tutti i pacchetti Nuget nel progetto Android, quindi
-2. Aggiungere nuovamente il **xamarin. Forms** pacchetto.
+Verranno automaticamente scaricate le versioni *corrette* degli altri pacchetti.
 
-Questo scaricherà automaticamente la *corretto* versioni di altri pacchetti.
-
-Per visualizzare un video di questo processo, fare riferimento a questo [post di forum](https://forums.xamarin.com/discussion/comment/170012/#Comment_170012).
+Per visualizzare un video di questo processo, fare riferimento a questo [post sui forum](https://forums.xamarin.com/discussion/comment/170012/#Comment_170012).

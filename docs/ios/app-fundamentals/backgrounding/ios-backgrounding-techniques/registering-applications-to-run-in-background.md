@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 044ae7e4a77abb77e766df58b9cda5938ce8fe7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6466d4c7edf6fde38fd3e9e8a6aaa48c2e5f9b4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290619"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757698"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrazione delle app Novell. iOS per l'esecuzione in background
 
@@ -31,7 +31,6 @@ Le app registrate possono rientrare in diverse categorie:
 - **Località** : le applicazioni che usano i dati del percorso di rete o GPS possono inviare e ricevere gli aggiornamenti delle posizioni in background.
 - **Fetch (iOS 7 +)** : un'applicazione registrata per i privilegi di recupero in background può verificare un provider per il nuovo contenuto a intervalli regolari, presentando all'utente il contenuto aggiornato quando torna all'applicazione.
 - **Notifiche remote (iOS 7 +)** : le applicazioni possono registrarsi per ricevere notifiche da un provider e utilizzare la notifica per avviare un aggiornamento prima che l'applicazione venga aperta dall'utente. Le notifiche possono essere disponibili sotto forma di notifiche push o scegliere di riattivare l'applicazione in modo invisibile all'utente.
-
 
 Le applicazioni possono essere registrate impostando la proprietà **modalità in background richiesta** nel file *info. plist*dell'applicazione. Un'applicazione può registrarsi nel numero di categorie necessario:
 

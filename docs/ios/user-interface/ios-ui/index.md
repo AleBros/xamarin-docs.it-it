@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 106cadc6fef43c06597cf1e3b846bd48cecb6fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 954e3b8f612fd710dd178cfc296889c9da372183
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287058"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768312"
 ---
 # <a name="user-interfaces-in-ios"></a>Interfacce utente in iOS
 
@@ -35,7 +35,3 @@ Questo articolo illustra i nuovi tipi di feedback tattili disponibili in iOS 10 
 ## <a name="working-with-the-ui-threadiosuser-interfaceios-uiui-threadmd"></a>[Utilizzo del thread dell'interfaccia utente](~/ios/user-interface/ios-ui/ui-thread.md)
 
 Il codice deve apportare modifiche solo ai controlli dell'interfaccia utente dal thread principale (o interfaccia utente). Eventuali aggiornamenti dell'interfaccia utente che si verificano in un thread diverso (ad esempio un callback o un thread in background) potrebbero non essere visualizzati sullo schermo o addirittura causare un arresto anomalo del sistema.
-
-
-
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9ad1c63dae312546315406d40858ce24802c6a58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769315"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
@@ -489,7 +489,6 @@ Se si verificano problemi durante l'uso di Novell. tvOS, vedere la documentazion
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo fornisce una guida introduttiva allo sviluppo di app per tvOS con Visual Studio per Mac creando una semplice app Hello, tvOS. Sono state trattate le nozioni di base del provisioning dei dispositivi tvOS, della creazione di interfacce, della codifica per tvOS e dei test nel simulatore tvOS.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

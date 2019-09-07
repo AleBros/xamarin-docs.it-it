@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bde76891b4b01800384ee0579e3fbe14987c5420
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282693"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768393"
 ---
 # <a name="stack-views-in-xamarinios"></a>Visualizzazioni dello stack in Novell. iOS
 
@@ -270,8 +270,6 @@ Molte delle proprietà della visualizzazione stack possono essere specificate ut
 
 Questo articolo ha trattato il nuovo `UIStackView` controllo (per iOS 9) per gestire un set di visualizzazioni in uno stack disposto orizzontalmente o verticalmente in un'app Novell. iOS.
 Inizia con un semplice esempio di utilizzo delle visualizzazioni dello stack per creare un'interfaccia utente e completata con un aspetto più dettagliato delle visualizzazioni dello stack e delle relative proprietà e funzionalità.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

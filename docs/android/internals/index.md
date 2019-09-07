@@ -1,39 +1,33 @@
 ---
 title: Concetti avanzati e meccanismi interni
-description: Architettura sottostante dietro la progettazione delle API xamarin. Android e le relative.
+description: Architettura sottostante dietro Novell. Android e la progettazione dell'API.
 ms.prod: xamarin
 ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/21/2018
-ms.openlocfilehash: ba804e9757fb1354c39177e6f7cb9c97ea1b8188
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 4f860d493c5709e2f6c7f89e6f3a50981cf62dc3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864126"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757818"
 ---
 # <a name="advanced-concepts-and-internals"></a>Concetti avanzati e meccanismi interni
 
-_In questa sezione contiene argomenti che illustrano l'architettura, progettazione di API e le limitazioni di xamarin. Android. Inoltre, sono inclusi argomenti che illustrano l'implementazione di garbage collection e gli assembly che sono disponibili in xamarin. Android. Perché è di xamarin. Android [open source](https://github.com/xamarin/xamarin-android), è anche possibile comprendere i meccanismi interni di xamarin. Android esaminando il codice sorgente._
-
+_Questa sezione contiene argomenti che illustrano l'architettura, la progettazione di API e le limitazioni di Novell. Android. Sono inoltre inclusi argomenti che illustrano l'implementazione di Garbage Collection e gli assembly disponibili in Novell. Android. Poiché Novell. Android è [Open Source](https://github.com/xamarin/xamarin-android), è anche possibile comprendere il funzionamento interno di Novell. Android esaminando il codice sorgente._
 
 ## <a name="architectureandroidinternalsarchitecturemd"></a>[Architettura](~/android/internals/architecture.md)
 
-Questo articolo illustra l'architettura sottostante alla base di un'applicazione xamarin. Android. Illustra come le applicazioni xamarin. Android vengono eseguite all'interno di un ambiente di esecuzione Mono insieme con il runtime di Android macchina virtuale e illustra questi concetti chiave come Android Callable Wrapper e gestiti Callable Wrapper. 
-
-
+Questo articolo illustra l'architettura sottostante dietro un'applicazione Novell. Android. Viene illustrato il modo in cui le applicazioni Novell. Android vengono eseguite all'interno di un ambiente di esecuzione mono insieme alla macchina virtuale di runtime di Android e spiegano questi concetti chiave come Android Callable Wrapper e Managed wrappers richiamabili. 
 
 ## <a name="api-designandroidinternalsapi-designmd"></a>[Progettazione dell'API](~/android/internals/api-design.md)
 
-Oltre ai core di librerie di classi di Base che fanno parte di Mono, xamarin. Android viene fornito con le associazioni per varie API Android consente agli sviluppatori di creare applicazioni Android native con Mono.
+Oltre alle librerie di classi base core che fanno parte di mono, Novell. Android viene fornito con binding per varie API Android per consentire agli sviluppatori di creare applicazioni Android Native con mono.
 
-Alla base di xamarin. Android si è un motore di interoperabilità questo mondo Bridge c# con il mondo di Java e offre agli sviluppatori l'accesso alle API Java da c# o altri linguaggi .NET.
-
-
+Alla base di Novell. Android è disponibile un motore di interoperabilità che C# colma il mondo con Java World e fornisce agli sviluppatori l'accesso alle API Java C# da o altri linguaggi .NET.
 
 ## <a name="assembliescross-platforminternalsavailable-assembliesmd"></a>[Assembly](~/cross-platform/internals/available-assemblies.md)
 
-Xamarin. Android viene fornito con molti assembly. Esattamente come Silverlight che rappresenta un sottoinsieme degli assembly di desktop .NET, xamarin. Android è anche un subset esteso di diversi Silverlight e desktop assembly .NET. 
-
+Novell. Android viene fornito con diversi assembly. Proprio come Silverlight è un subset esteso degli assembly .NET desktop, Novell. Android è anche un subset esteso di diversi assembly .NET per Silverlight e desktop. 

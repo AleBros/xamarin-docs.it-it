@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31c3c629686d6c7be03b95d7bfe0740599228bbd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290583"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769402"
 ---
 # <a name="push-notifications-in-ios"></a>Notifiche push in iOS
 
@@ -35,7 +35,6 @@ La notifica push deve osservare le regole seguenti che sono determinate dall'arc
 - **limite di messaggi di 256 byte** : le dimensioni dell'intero messaggio della notifica non devono superare 256 byte.
 - **Nessuna conferma di ricezione** : APNS non fornisce al mittente alcuna notifica che un messaggio lo ha fatto al destinatario previsto. Se il dispositivo non è raggiungibile e vengono inviate più notifiche sequenziali, verranno perse tutte le notifiche tranne quelle più recenti. Solo la notifica più recente verrà recapitata al dispositivo.
 - **Ogni applicazione richiede un certificato sicuro: la** comunicazione con APNs deve essere eseguita tramite SSL.
-
 
 ## <a name="creating-and-using-certificates"></a>Creazione e utilizzo di certificati
 
@@ -174,7 +173,6 @@ Inoltre, una nuova `timestamp` chiave di dati JSON sarà nel corpo della rispost
 ## <a name="summary"></a>Riepilogo
 
 Questa sezione presenta i concetti chiave che riguardano le notifiche push in iOS. Ha illustrato il ruolo del servizio gateway di notifica push di Apple (APNS). Ha quindi trattato la creazione e l'uso dei certificati di sicurezza essenziali per APNS. Infine, questo documento ha completato una discussione sul modo in cui i server applicazioni possono usare i *servizi di feedback* per arrestare il rilevamento dei token di dispositivo scaduti.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

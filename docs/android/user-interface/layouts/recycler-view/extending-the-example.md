@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2fc2eabb26a9635b569cc6d3a51195fb554ca950
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522501"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758603"
 ---
 # <a name="extending-the-recyclerview-example"></a>Estensione dell'esempio RecyclerView
 
-
 L'app di base descritta in [un esempio di RecyclerView di base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) in &ndash; realtà non esegue molto semplicemente lo scorrimento e visualizza un elenco fisso di elementi della foto per facilitare l'esplorazione. Nelle applicazioni reali, gli utenti si aspettano di poter interagire con l'app toccando gli elementi visualizzati. Inoltre, l'origine dati sottostante può cambiare (o essere modificata dall'app) e il contenuto della visualizzazione deve rimanere coerente con queste modifiche. Nelle sezioni seguenti si apprenderà come gestire gli eventi di clic sull'elemento e aggiornare `RecyclerView` quando viene modificata l'origine dati sottostante.
-
 
 ### <a name="handling-item-click-events"></a>Gestione degli eventi Click di elemento
 
@@ -164,7 +162,6 @@ A questo punto, quando viene toccato il pulsante di **selezione casuale** , `Rec
 [![Prima schermata prima dello scambio, seconda schermata dopo lo scambio](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 Naturalmente, `NotifyDataSetChanged` potrebbe essere stato chiamato anziché eseguire le due chiamate a `NotifyItemChanged`, ma in questo modo si impone `RecyclerView` di aggiornare l'intera raccolta anche se sono stati modificati solo due elementi della raccolta. La `NotifyItemChanged` chiamata a è significativamente più efficiente `NotifyDataSetChanged`rispetto alla chiamata a.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

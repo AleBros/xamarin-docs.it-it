@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ea2c733a9c85662b9286f8e8631b601248dc11de
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292682"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770833"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Eseguire ricerche nei dati con ricerca di Azure e Novell. Forms
 
@@ -275,7 +275,6 @@ Si noti che nell'applicazione di esempio, il `SuggestAsync` metodo viene richiam
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo viene illustrato come utilizzare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione xamarin. Forms. Ricerca di Azure è un servizio cloud che offre funzionalità per i dati caricati di query e indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca tradizionalmente associate all'implementazione di funzionalità di ricerca in un'applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

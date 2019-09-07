@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 44bed11e4d2ccf7baa39734a1b20e49b9ecf5f10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525576"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753984"
 ---
 # <a name="profiling-android-apps"></a>Profilatura delle app Android
 
@@ -24,14 +24,13 @@ Prima di distribuire l'app in un app store, è importante identificare e risolve
 
 Questa guida presenta Xamarin Profiler e fornisce informazioni dettagliate per iniziare a usare Android Profiler.
 
- 
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
 Xamarin Profiler è un'applicazione autonoma integrata con Visual Studio e Visual Studio per Mac per la profilatura di app Xamarin dall'interno dell'ambiente di sviluppo integrato (IDE). Per altre informazioni sull'uso di Xamarin Profiler, vedere [Xamarin Profiler](~/tools/profiler/index.md).
 
 > [!NOTE]
 > È necessario disporre di una sottoscrizione per [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) per sbloccare la funzionalità Xamarin Profiler in Visual Studio Enterprise in Windows o in Visual Studio per Mac.
- 
+
 ## <a name="android-studio-profiler"></a>Android Studio Profiler
 
 Android Studio 3.0 e versione successiva include lo strumento Android Profiler. È possibile usare Android Profiler per misurare le prestazioni di un'app Xamarin Android compilata con Visual Studio, senza dover disporre di una licenza di Visual Studio Enterprise. Tuttavia, a differenza di Xamarin Profiler, Android Profiler non è integrato con Visual Studio e può essere usato solo per profilare un pacchetto dell'applicazione Android (APK) compilato in precedenza e importato in Android Profiler.
@@ -100,7 +99,6 @@ I passaggi seguenti illustrano come avviare un'applicazione Xamarin Android nell
 15. Se si tocca il pulsante per la **scelta in modo casuale** in **XamagonXuzzle** (che determina la scelta casuale dei riquadri), verrà visualizzato l'aumento dell'utilizzo della CPU durante l'intervallo di scelta casuale dell'app:
 
     [![Utilizzo della CPU quando si tocca il pulsante per la scelta in modo casuale](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
-
 
 ### <a name="using-the-android-profiler"></a>Uso di Android Profiler
 

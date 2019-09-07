@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 0e8e8a119d619faee25a44b0462df4ac08e909b2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ebdbbfd0e8195f35755cb849129452fe40f82950
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291608"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769163"
 ---
 # <a name="getting-started-with-tvos-in-xamarin"></a>Introduzione con tvOS in Novell
 
@@ -25,7 +25,6 @@ Per compilare app tvOS con Novell, installare la versione stabile più recente d
 ## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[Guida introduttiva alla creazione della prima app tvOS](~/ios/tvos/get-started/hello-tvos.md)
 
 Questo articolo fornisce una guida introduttiva allo sviluppo di app per tvOS creando una semplice app "Hello, tvOS". Vengono illustrati i concetti di base del provisioning dei dispositivi tvOS, la creazione di interfacce, la codifica per tvOS e il testing sia sul simulatore tvOS che su hardware tvOS reale.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

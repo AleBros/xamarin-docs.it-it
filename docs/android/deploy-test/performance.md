@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d7d6bf128d3814917633bdd69e3c9c54c8d6a20c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197512"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753812"
 ---
 # <a name="xamarinandroid-performance"></a>Prestazioni di Xamarin.Android
 
@@ -34,7 +34,6 @@ Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percep
 - [Eliminare le risorse immagine inutilizzate](#disposeimages)
 - [Evitare calcoli aritmetici a virgola mobile](#avoidfloats)
 - [Chiudere le finestre di dialogo](#dismissdialogs)
-
 
 > [!NOTE]
 > Prima di leggere questo articolo, è consigliabile vedere [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), che illustra le tecniche non specifiche di una piattaforma che consentono di migliorare l'utilizzo della memoria e le prestazioni delle applicazioni compilate con la piattaforma Xamarin.
@@ -246,7 +245,6 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 Per altre informazioni sul rilascio delle risorse eliminabili, vedere [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable) (Rilasciare risorse IDisposable).  
 
-
 <a name="avoidfloats" />
 
 ## <a name="avoid-floating-point-arithmetic"></a>Evitare calcoli aritmetici a virgola mobile
@@ -265,7 +263,6 @@ Quando si usa la classe [`ProgressDialog`](xref:Android.App.ProgressDialog) (o q
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

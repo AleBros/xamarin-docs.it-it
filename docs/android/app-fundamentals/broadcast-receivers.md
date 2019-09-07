@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 8f7dd6f0a2e6db2580982a877cab2137cf28fab2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9266d8c4e1723adfb7e5e55dce7ede6d47f6f116
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508707"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755485"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Ricevitori broadcast in Novell. Android
 
@@ -27,7 +27,7 @@ Android identifica due tipi di trasmissioni:
 - **Trasmissione esplicita** &ndash; Questi tipi di broadcast sono destinati a un'applicazione specifica. L'uso più comune di una trasmissione esplicita è l'avvio di un'attività. Un esempio di trasmissione esplicita quando un'app deve comporre un numero di telefono. invierà una finalità destinata all'app per il telefono in Android e passerà il numero di telefono per la connessione. Android instraderà quindi l'intento all'app per telefoni.
 - **Trasmissione implicita** &ndash; Queste trasmissioni vengono inviate a tutte le app nel dispositivo. Un esempio di trasmissione implicita è l' `ACTION_POWER_CONNECTED` intento. Questa finalità viene pubblicata ogni volta che Android rileva che la batteria sul dispositivo sta per essere caricata. Android instraderà questa finalità a tutte le app che si sono registrate per questo evento.
 
-Il ricevitore di trasmissione è una sottoclasse `BroadcastReceiver` del tipo ed è necessario che [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) esegua l'override del metodo. Android verrà eseguito `OnReceive` sul thread principale, quindi questo metodo deve essere progettato per l'esecuzione rapida. È necessario prestare attenzione durante la generazione di thread `OnReceive` in perché Android può terminare il processo quando il metodo termina. Se un ricevitore di trasmissione deve eseguire operazioni a esecuzione prolungata, è consigliabile  pianificare un processo `JobScheduler` utilizzando il o il _dispatcher del processo Firebase_. La pianificazione del lavoro con un processo verrà descritta in una guida separata.
+Il ricevitore di trasmissione è una sottoclasse `BroadcastReceiver` del tipo ed è necessario che [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) esegua l'override del metodo. Android verrà eseguito `OnReceive` sul thread principale, quindi questo metodo deve essere progettato per l'esecuzione rapida. È necessario prestare attenzione durante la generazione di thread `OnReceive` in perché Android può terminare il processo quando il metodo termina. Se un ricevitore di trasmissione deve eseguire operazioni a esecuzione prolungata, è consigliabile pianificare un processo `JobScheduler` utilizzando il o il _dispatcher del processo Firebase_. La pianificazione del lavoro con un processo verrà descritta in una guida separata.
 
 Un _filtro preventivo_ viene usato per registrare un ricevitore di trasmissione in modo che Android possa indirizzare correttamente i messaggi. Il filtro preventivo può essere specificato in fase di esecuzione (a volte viene definito _ricevitore registrato dal contesto_ o come _registrazione dinamica_) oppure può essere definito in modo statico nel manifesto Android ( _ricevitore registrato_da un manifesto). Novell. Android fornisce un C# attributo, `IntentFilterAttribute`, che registrerà in modo statico il filtro preventivo (questo verrà descritto più dettagliatamente più avanti in questa guida). A partire da Android 8,0, non è possibile che un'applicazione si registri in modo statico per una trasmissione implicita.
 
@@ -62,7 +62,7 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 Quando Novell. Android compila la classe, verrà aggiornato anche il file AndroidManifest con i metadati necessari per registrare il ricevitore. Per un ricevitore di broadcast registrato in `Enabled` modo statico, deve essere impostato correttamente su `true`, in caso contrario Android non sarà in grado di creare un'istanza del destinatario.
- 
+
 La `Exported` proprietà controlla se il ricevitore di trasmissione può ricevere messaggi dall'esterno dell'applicazione. Se la proprietà non è impostata in modo esplicito, il valore predefinito della proprietà viene determinato da Android in base a se sono presenti filtri per finalità associate al ricevitore di trasmissione. Se è presente almeno un filtro preventivo per il ricevitore di trasmissione, Android presuppone che la `Exported` proprietà sia. `true` Se al ricevitore di trasmissione non sono associati filtri per finalità, Android presuppone che il valore sia `false`. 
 
 Il `OnReceive` metodo riceve un riferimento `Intent` a che è stato inviato al ricevitore di trasmissione. Questo rende possibile al mittente della finalità di passare i valori al ricevitore di trasmissione.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 00fa1a65d2a73220675d8142e70ac904a93e3042
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eca8a1bdc3c60ae4dbaabf022a9dbe91f7e30402
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281976"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767030"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Rilevamento del dito multitocco in Novell. iOS
 
@@ -41,7 +41,6 @@ class FingerPaintPolyline
 ```
 
 Ogni polilinea ha un colore, una larghezza del tratto e un oggetto [`CGPath`](xref:CoreGraphics.CGPath) graphics iOS per accumulare ed eseguire il rendering di più punti della linea mentre viene disegnata.
-
 
 Tutto il resto del codice riportato di seguito è contenuto in una `UIView` derivata denominata `FingerPaintCanvasView`. Tale classe mantiene un dizionario di oggetti di tipo `FingerPaintPolyline` durante il tempo in cui vengono tracciati attivamente da una o più dita:
 
@@ -187,8 +186,6 @@ Nel complesso, questa elaborazione consente al programma [FingerPaint](https://d
 [![](touch-tracking-images/image01.png "Tenere traccia delle singole dita e disegnare i risultati sullo schermo")](touch-tracking-images/image01.png#lightbox)
 
 A questo punto si è appreso come è possibile tenere traccia delle singole dita sullo schermo e distinguerle tra loro.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

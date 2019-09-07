@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645365"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771489"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passare parametri a un effetto come proprietà associate
 
@@ -432,7 +432,6 @@ Il metodo `OnElementPropertyChanged` aggiorna il colore o l'offset dell'ombreggi
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha spiegato come usare le proprietà associate per passare i parametri a un effetto e come modificare un parametro in fase di esecuzione. Le proprietà associate possono essere usate per definire i parametri di effetto che rispondono a modifiche delle proprietà in fase di esecuzione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

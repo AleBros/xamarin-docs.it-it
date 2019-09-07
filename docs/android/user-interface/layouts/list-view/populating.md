@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e934dd0f35b7c734228d637fe646d0e2c20e9dad
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522536"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758631"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Popolamento di un controllo ListView Novell. Android con dati
 
@@ -37,7 +37,6 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-
 ### <a name="handling-row-clicks"></a>Gestione dei clic di riga
 
 In genere `ListView` un oggetto consente inoltre all'utente di toccare una riga per eseguire un'azione, ad esempio la riproduzione di un brano o la chiamata di un contatto o la visualizzazione di un'altra schermata. Per rispondere ai tocchi degli utenti, è necessario disporre di un altro metodo implementato `ListActivity` in &ndash; `OnListItemClick` &ndash; questo esempio:
@@ -55,7 +54,6 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 Ora l'utente può toccare una riga e verrà `Toast` visualizzato un avviso:
 
 [![Screenshot del popup visualizzato quando viene toccata una riga](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
-
 
 ## <a name="implementing-a-listadapter"></a>Implementazione di un ListAdapter
 
@@ -102,7 +100,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
 ### <a name="using-a-custom-adapter"></a>Utilizzo di un adapter personalizzato
 
 L'utilizzo dell'adapter personalizzato è simile a quello incorporato `ArrayAdapter`, passando un oggetto `context` e l'oggetto `string[]` di valori da visualizzare:
@@ -112,7 +109,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 ```
 
 Poiché in questo esempio viene utilizzato lo stesso layout`SimpleListItem1`di riga (), l'applicazione risultante sarà identica all'esempio precedente.
-
 
 ### <a name="row-view-re-use"></a>Riutilizzo della visualizzazione righe
 
@@ -137,7 +133,6 @@ Le implementazioni degli adapter personalizzati devono *sempre* riutilizzare `co
 
 Alcune implementazioni di adapter (ad esempio `CursorAdapter`) non dispongono di `GetView` un metodo, ma richiedono due metodi `NewView` diversi e `BindView` che applicano il riutilizzo delle righe separando le `GetView` responsabilità di in due Metodi. Di seguito è `CursorAdapter` riportato un esempio del documento.
 
-
 ## <a name="enabling-fast-scrolling"></a>Abilitazione dello scorrimento rapido
 
 Lo scorrimento rapido consente all'utente di scorrere gli elenchi lunghi fornendo un'handle ' aggiuntivo che funge da barra di scorrimento per accedere direttamente a una parte dell'elenco. Questa schermata mostra il quadratino di scorrimento rapido:
@@ -150,7 +145,6 @@ La visualizzazione dell'handle di scorrimento rapido è semplice come impostare 
 ListView.FastScrollEnabled = true;
 ```
 
-
 ### <a name="adding-a-section-index"></a>Aggiunta di un indice di sezione
 
 Un indice di sezione fornisce commenti e suggerimenti aggiuntivi per gli utenti quando eseguono lo scorrimento rapido in un &ndash; lungo elenco che mostra a quale "sezione" è stato eseguito lo scorrimento. Per far sì che l'indice della sezione venga visualizzato, la sottoclasse dell'adattatore deve implementare l' `ISectionIndexer` interfaccia per fornire il testo dell'indice a seconda delle righe visualizzate:
@@ -159,12 +153,11 @@ Un indice di sezione fornisce commenti e suggerimenti aggiuntivi per gli utenti 
 
 Per implementare `ISectionIndexer` è necessario aggiungere tre metodi a un adapter:
 
-- GetSections &ndash; Fornisce l'elenco completo dei titoli degli indici di sezione che possono essere visualizzati. Questo metodo richiede una matrice di oggetti Java in modo che il codice debba creare `Java.Lang.Object[]` un oggetto da una raccolta .NET. Nell'esempio viene restituito un elenco dei caratteri iniziali nell'elenco come `Java.Lang.String` .
+- **GetSections** &ndash; Fornisce l'elenco completo dei titoli degli indici di sezione che possono essere visualizzati. Questo metodo richiede una matrice di oggetti Java in modo che il codice debba creare `Java.Lang.Object[]` un oggetto da una raccolta .NET. Nell'esempio viene restituito un elenco dei caratteri iniziali nell'elenco come `Java.Lang.String` .
 
 - **GetPositionForSection** &ndash; Restituisce la prima posizione di riga per un indice di sezione specificato.
 
 - **GetSectionForPosition** &ndash; Restituisce l'indice della sezione da visualizzare per una determinata riga.
-
 
 Il file `SectionIndex/HomeScreenAdapter.cs` di esempio implementa tali metodi e il codice aggiuntivo nel costruttore. Il costruttore compila l'indice della sezione eseguendo il ciclo di ogni riga ed estraendo il primo carattere del titolo (gli elementi devono essere già ordinati affinché questo funzioni).
 
@@ -213,8 +206,6 @@ public int GetSectionForPosition(int position)
 
 I titoli degli indici di sezione non devono eseguire il mapping di 1:1 alle sezioni effettive. Questo è il motivo `GetPositionForSection` per cui esiste il metodo.
 `GetPositionForSection`offre la possibilità di eseguire il mapping di tutti gli indici presenti nell'elenco di indici a tutte le sezioni presenti nella visualizzazione elenco. Ad esempio, è possibile che nell'indice sia presente una "z", ma è possibile che non si disponga di una sezione di tabella per ogni lettera, quindi invece di "z" mapping a 26, è possibile eseguire il mapping a 25 o 24 o a qualsiasi indice di sezione "z" a cui eseguire il mapping.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

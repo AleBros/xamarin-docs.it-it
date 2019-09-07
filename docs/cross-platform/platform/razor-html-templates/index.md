@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284925"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765340"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Creazione di visualizzazioni HTML con i modelli Razor
 
@@ -198,7 +198,6 @@ In questa sezione sono state introdotte le funzionalità dei controlli visualizz
 - Possibilità di intercettare le richieste di C# navigazione nel codice,
 - Possibilità di chiamare JavaScript dal C# codice.
 
-
 Nella sezione successiva viene introdotto Razor, che consente di creare facilmente il codice HTML da usare nelle app ibride.
 
 ## <a name="what-is-razor"></a>Che cos'è Razor?
@@ -235,7 +234,6 @@ Si notino le differenze seguenti rispetto a un normale file HTML:
 - L'IDE genererà automaticamente una classe parziale per i modelli (file con estensione **cshtml** ). È possibile visualizzare questo codice, ma non deve essere modificato.
  ![RazorView. cshtml](images/image6_125x34.png) la classe parziale è denominata RazorView in modo che corrisponda al nome del file modello. cshtml. Si tratta del nome utilizzato per fare riferimento al modello nel C# codice.
 - `@using`è anche possibile includere le istruzioni all'inizio di un modello Razor per includere spazi dei nomi aggiuntivi.
-
 
 L'output HTML finale può quindi essere generato con il codice C# seguente. Si noti che il modello viene specificato come stringa "Hello World" che verrà incorporato nell'output del modello sottoposto a rendering.
 
@@ -379,8 +377,6 @@ Questa sezione illustra come usare la creazione di un'applicazione ibrida person
 - **App > iOS > applicazione WebView**
 - **Progetto MVC ASP.NET**
 
-
-
 La **nuova** finestra della soluzione ha un aspetto simile al seguente per i progetti iPhone e Android: la descrizione della soluzione a destra evidenzia il supporto per il motore di creazione modello Razor.
 
  ![Creazione di soluzioni iPhone e Android](images/image13_1139x959.png)
@@ -399,7 +395,6 @@ Di seguito sono riportate le parti importanti della soluzione:
 - File modello Razor. cshtml come **RazorView. cshtml** .
 - Classi del modello a cui viene fatto riferimento nei modelli Razor, ad esempio **ExampleModel.cs** .
 - Classe specifica della piattaforma che crea la visualizzazione Web ed esegue il rendering del modello, ad esempio `MainActivity` in Android `iPhoneHybridViewController` e in iOS.
-
 
 Nella sezione seguente viene illustrato il funzionamento dei progetti.
 
@@ -494,7 +489,6 @@ Il repository [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/
 - **RazorTodo** -app completamente basata su HTML con i modelli Razor.
 - **RazorNativeTodo** : USA i controlli di visualizzazione elenco nativi per iOS e Android, ma Visualizza la schermata di modifica con HTML e Razor.
 
-
 Queste app Novell vengono eseguite su iOS e Android, usando le librerie di classi portabili (classi portabili) per condividere codice comune, ad esempio le classi del database e del modello. I modelli Razor **. cshtml** possono anche essere inclusi nella libreria di classi portabile, in modo che siano facilmente condivisi tra le piattaforme.
 
 Entrambe le app di esempio includono la condivisione di Twitter e le API sintesi vocale dalla piattaforma nativa, dimostrando che le applicazioni ibride con Novell hanno ancora accesso a tutte le funzionalità sottostanti dalle visualizzazioni basate su modelli Razor HTML.
@@ -507,7 +501,6 @@ L'app **RazorNativeTodo** usa un modello Razor HTML per la visualizzazione di mo
 
 - Prestazioni: i controlli di scorrimento nativi usano la virtualizzazione per garantire lo scorrimento veloce e uniforme anche con elenchi di dati molto lunghi.
 - Esperienza nativa: gli elementi dell'interfaccia utente specifici della piattaforma sono facilmente abilitati, ad esempio il supporto per gli indici a scorrimento rapido in iOS e Android.
-
 
 Un vantaggio fondamentale della creazione di app ibride con Novell è che è possibile iniziare con un'interfaccia utente completamente basata su HTML, ad esempio il primo esempio, e quindi aggiungere funzionalità specifiche della piattaforma quando necessario (come illustrato nel secondo esempio). Di seguito sono illustrate le schermate degli elenchi nativi e le schermate di modifica di Razor HTML in iOS e Android.
 

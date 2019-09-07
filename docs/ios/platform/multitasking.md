@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280153"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769641"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitasking per iPad in Novell. iOS
 
@@ -40,7 +40,6 @@ Questo articolo illustra i passaggi necessari per assicurarsi che l'app Novell. 
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
 **Multitasking per video iPad**
-
 
 <a name="Multitasking-QuickStart" />
 
@@ -251,8 +250,6 @@ Per rifiutare esplicitamente la riproduzione video PIP, eseguire le operazioni s
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato i passaggi necessari per assicurarsi che un'app Novell. iOS venga eseguita e si comporti correttamente nella nuova funzionalità multitasking di iOS 9 per gli iPad. Inoltre, ha trattato la rinuncia al multitasking per le app in cui non è una scelta ottimale.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,45 +1,44 @@
 ---
-title: Creazione dell'interfaccia utente con xamarin. Android
-description: Creazione di interfacce utente per le app xamarin. Android
+title: Creazione dell'interfaccia utente con Novell. Android
+description: Creazione di interfacce utente per le app Novell. Android
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: af94fa5b771d875a17d203a429484acfa1082b17
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 405fb0e30881ee64514d3984842ac820d5663382
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61309925"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764480"
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
-Le sezioni seguenti illustrano i diversi strumenti e i blocchi predefiniti che consentono di creare interfacce utente nelle App xamarin. Android.
+Le sezioni seguenti illustrano i diversi strumenti e i blocchi predefiniti usati per comporre le interfacce utente nelle app Novell. Android.
 
 ## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 
-Questa sezione illustra come usare la finestra di progettazione Android il layout dei controlli visivamente e modificare le proprietà. Viene inoltre spiegato come usare la finestra di progettazione per usare risorse e le interfacce utente in diverse configurazioni, ad esempio i temi, linguaggi e le configurazioni dei dispositivi, nonché come progettare per le visualizzazioni alternative, ad esempio verticale e orizzontale.
+In questa sezione viene illustrato come utilizzare il Android Designer per disporre i controlli in modo visivo e modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per lavorare con le interfacce utente e le risorse in diverse configurazioni, ad esempio temi, linguaggi e configurazioni dei dispositivi, nonché come progettare per visualizzazioni alternative quali orizzontale e verticale.
 
 ## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[Tema Material](~/android/user-interface/material-theme.md)
 
-*Tema Material* è lo stile dell'interfaccia utente che determina l'aspetto delle visualizzazioni e le attività in Android. Tema Material viene compilata in Android, quindi viene usato dal sistema dell'interfaccia utente e con le applicazioni. Questa guida vengono presentati i principi di progettazione di materiale e spiega come tema un'app usando i temi materiale incorporato o un tema personalizzato.
+Il *tema materiale* è lo stile dell'interfaccia utente che determina l'aspetto delle visualizzazioni e delle attività in Android. Il tema materiale è integrato in Android, quindi viene usato dall'interfaccia utente del sistema e dalle applicazioni. In questa guida vengono presentati i principi di progettazione del materiale e viene illustrato come creare un tema per un'app utilizzando temi materiali incorporati o un tema personalizzato.
 
 ## <a name="user-profileandroiduser-interfaceuser-profilemd"></a>[Profilo utente](~/android/user-interface/user-profile.md)
 
-Questa guida illustra come accedere al profilo personale per il proprietario di un dispositivo, inclusi i dati di contatto, ad esempio il numero di telefono e nome del proprietario del dispositivo.
+Questa guida illustra come accedere al profilo personale per il proprietario di un dispositivo, inclusi i dati di contatto, ad esempio il nome e il numero di telefono del proprietario del dispositivo.
 
 ## <a name="splash-screenandroiduser-interfacesplash-screenmd"></a>[Schermata iniziale](~/android/user-interface/splash-screen.md)
 
-Un'app per Android richiede tempo per l'avvio, soprattutto quando l'app viene avviata prima di tutto in un dispositivo. La schermata iniziale potrebbe visualizzare start up lo stato di avanzamento all'utente. Questa guida illustra come creare una schermata iniziale per l'app.
+L'avvio di un'app Android richiede tempo, soprattutto quando l'app viene avviata per la prima volta in un dispositivo. Una schermata iniziale può visualizzare lo stato di avanzamento dell'avvio dell'utente. Questa guida illustra come creare una schermata iniziale per l'app.
 
 ## <a name="layoutsandroiduser-interfacelayoutsindexmd"></a>[Layout](~/android/user-interface/layouts/index.md)
 
-Layout vengono usate per definire la struttura visiva di un'interfaccia utente.
-Layout, ad esempio `ListView` e `RecyclerView` sono i principali blocchi predefiniti di applicazioni Android. In genere, un layout utilizzerà un `Adapter` di agire come un collegamento tra il layout e i dati sottostanti che viene usati per popolare gli elementi di dati nel layout. Questa sezione illustra come usare i layout, ad esempio `LinearLayout`, `RelativeLayout`, `TableLayout`, `RecyclerView`, e `GridView`.
+I layout vengono usati per definire la struttura visiva per un'interfaccia utente.
+I layout come `ListView` e `RecyclerView` sono i blocchi predefiniti più basilari delle applicazioni Android. In genere, un layout utilizzerà `Adapter` un oggetto per fungere da Bridge dal layout ai dati sottostanti utilizzati per popolare gli elementi di dati nel layout. In questa sezione viene illustrato `LinearLayout`come utilizzare i layout come `TableLayout`, `RelativeLayout`,, `RecyclerView`e `GridView`.
 
 ## <a name="controlsandroiduser-interfacecontrolsindexmd"></a>[Controlli](~/android/user-interface/controls/index.md)
 
-Controlli Android (chiamato anche *widget*) sono gli elementi dell'interfaccia utente che consente di compilare un'interfaccia utente. Questa sezione illustra come usare i controlli quali pulsanti, barre degli strumenti, controlli selezione data/ora, calendari, caselle di selezione, commutatori, i menu a comparsa, cercapersone di visualizzazione e visualizzazioni web.
-
+I controlli Android (detti anche *widget*) sono gli elementi dell'interfaccia utente usati per creare un'interfaccia utente. In questa sezione viene illustrato come utilizzare controlli quali pulsanti, barre degli strumenti, selezionatori di data/ora, calendari, Spinner, commutatori, menu popup, visualizzatori di pagine e visualizzazioni Web.

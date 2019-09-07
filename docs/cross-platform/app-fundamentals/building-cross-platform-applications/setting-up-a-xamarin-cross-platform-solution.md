@@ -6,30 +6,26 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: f8b8f13f323f404554ca73c3e75c23713e0fbe35
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288842"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758147"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-configurazione di una soluzione multipiattaforma Novell
 
 Indipendentemente dalle piattaforme utilizzate, i progetti Novell utilizzano lo stesso formato di file di soluzione (il formato di file con estensione **sln** di Visual Studio). Le soluzioni possono essere condivise tra ambienti di sviluppo, anche quando non è possibile caricare singoli progetti, ad esempio un progetto Windows in Visual Studio per Mac.
 
-
-
 Quando si crea una nuova applicazione multipiattaforma, il primo passaggio consiste nel creare una soluzione vuota. Questa sezione spiega cosa accade successivamente: configurazione dei progetti per la creazione di app per dispositivi mobili multipiattaforma.
 
  <a name="Sharing_Code" />
-
 
 ## <a name="sharing-code"></a>Condivisione del codice
 
 Per una descrizione dettagliata dell'implementazione della condivisione del codice tra le piattaforme, vedere il documento relativo alle [Opzioni di condivisione del codice](~/cross-platform/app-fundamentals/code-sharing.md) .
 
  <a name="Shared_Asset_Projects" />
-
 
 ### <a name="shared-projects"></a>Progetti condivisi
 
@@ -39,7 +35,6 @@ Questo metodo consente di condividere lo stesso codice tra diversi progetti di p
 
  <a name="Portable_Class_Libraries" />
 
-
 ### <a name="portable-class-libraries-pcl"></a>Librerie di classi portabili
 
 In passato, un file di progetto .NET (e l'assembly risultante) è stato indirizzato a una versione specifica del Framework. In questo modo si impedisce che il progetto o l'assembly venga condiviso da Framework diversi.
@@ -48,17 +43,13 @@ Una libreria di classi portabile (PCL) è un tipo speciale di progetto che può 
 
 Altre informazioni sul supporto di Novell [per le librerie di classi](~/cross-platform/app-fundamentals/pcl.md) portabili e seguire le istruzioni per vedere come funziona l'esempio di [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) .
 
-
 ### <a name="net-standard"></a>.NET Standard
 
 Introdotta in 2016, [.NET standard](~/cross-platform/app-fundamentals/net-standard.md) progetti forniscono un modo semplice per condividere il codice tra piattaforme, producendo assembly che possono essere usati in Windows, piattaforme Novell (iOS, Android, Mac) e Linux.
 
 È possibile creare librerie di .NET Standard e usarle come classi portabili, ad eccezione del fatto che le API disponibili in ogni versione (da 1,0 a 1,6) sono più facilmente individuate e ogni versione è compatibile con i numeri di versione inferiori.
 
-
-
  <a name="Populating_the_Solution" />
-
 
 ## <a name="populating-the-solution"></a>Popolamento della soluzione
 
@@ -68,9 +59,7 @@ L'approccio Novell consiste nel raggruppare il codice in due tipi di progetto:
 - **Progetto di base** : scrivere codice riutilizzabile in un'unica posizione, da condividere tra piattaforme diverse. Usare i principi di incapsulamento per nascondere i dettagli di implementazione laddove possibile.
 - **Progetti di applicazioni specifiche della piattaforma** : utilizzare il codice riutilizzabile con il minor accoppiamento possibile. A questo livello sono state aggiunte funzionalità specifiche della piattaforma, basate sui componenti esposti nel progetto di base.
 
-
  <a name="Core_Project" />
-
 
 ### <a name="core-project"></a>Progetto di base
 
@@ -83,9 +72,7 @@ I progetti condivisi devono implementare la maggior parte delle funzionalità no
 - **Livello di accesso al servizio** : un livello facoltativo per fornire servizi cloud all'applicazione. Contiene codice che accede a risorse di rete remote (servizi Web, download di immagini e così via) e possibilmente caching dei risultati.
 - **Livello business** : definizione delle classi del modello e delle classi di facciata o Manager che espongono la funzionalità alle applicazioni specifiche della piattaforma.
 
-
  <a name="Platform-Specific_Application_Projects" />
-
 
 ### <a name="platform-specific-application-projects"></a>Progetti di applicazioni specifiche della piattaforma
 
@@ -96,9 +83,7 @@ I progetti specifici della piattaforma devono implementare:
 - **Livello dell'applicazione** : funzionalità specifiche della piattaforma e associazione/conversione tra gli oggetti livello business e l'interfaccia utente.
 - **Livello interfaccia utente** : schermate, controlli dell'interfaccia utente personalizzati, presentazione della logica di convalida.
 
-
 <a name="Example" />
-
 
 ### <a name="example"></a>Esempio
 
@@ -110,9 +95,7 @@ Questo screenshot mostra la configurazione di una soluzione con i progetti di ap
 
  ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "Il progetto condiviso contiene codice correlato a ognuno dei livelli architetturali (codice aziendale, servizio, dati e accesso ai dati)")
 
-
  <a name="Project_References" />
-
 
 ## <a name="project-references"></a>Riferimenti al progetto
 
@@ -123,16 +106,13 @@ L'applicazione proietta ogni progetto condiviso di riferimento e contiene il cod
 
 ![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "L'applicazione progetti ogni riferimento a progetto condiviso") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "l'applicazione progetti ogni riferimento a progetto condiviso")
 
-
 Esempi specifici del modo in cui i progetti devono essere strutturati vengono forniti nei case study.
 
  <a name="Adding_Files" />
 
-
 ## <a name="adding-files"></a>Aggiunta di file
 
  <a name="Build_Action" />
-
 
 ### <a name="build-action"></a>Azione di compilazione
 
@@ -145,11 +125,9 @@ Esempi specifici del modo in cui i progetti devono essere strutturati vengono fo
 - **File XAML nei progetti Windows** -azione di compilazione: Pagina
 - **File XAML Novell. Forms** -azione di compilazione: EmbeddedResource
 
-
 L'IDE rileva in genere il tipo di file e suggerisce l'azione di compilazione corretta.
 
  <a name="Case_Sensitivity" />
-
 
 ### <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole
 

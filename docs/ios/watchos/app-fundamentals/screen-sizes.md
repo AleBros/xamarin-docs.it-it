@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: f0caa2dd2c2b675fe85000a73e5d58ce7e277488
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e9c87b76dc6845962450b8cb6fab921ea1748832
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281474"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768321"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Uso delle dimensioni dello schermo watchos in Novell
 
@@ -39,7 +39,6 @@ Usare il menu dimensioni per modificare e visualizzare in anteprima lo storyboar
 Le dimensioni dello schermo più grandi a volte comporteranno il rendering del contenuto che verrebbe troncato/nascosto nella schermata più piccola.
 Assicurarsi di eseguire il test su entrambe le dimensioni.
 
-
 ### <a name="interface-design"></a>Progettazione di interfacce
 
 L'app deve visualizzare lo stesso contenuto sullo schermo, indipendentemente dalle dimensioni, e deve espandere o comprimere gli elementi in base alle esigenze. Nella finestra di progettazione di Visual Studio per Mac, nel controllo attributi, è necessario utilizzare **relativo a contenitore** o **dimensione per adattare il contenuto** in base alle dimensioni fisse.
@@ -48,13 +47,11 @@ L'app deve visualizzare lo stesso contenuto sullo schermo, indipendentemente dal
 
 Poiché la schermata di controllo è racchiusa da una lunetta nera, non è consigliabile fornire spaziatura intorno all'interfaccia. Lasciare gli elementi inattivi rispetto al bordo dello schermo e lasciare che la lunetta formi un bordo naturale intorno all'app.
 
-
 ## <a name="watchos-simulator"></a>Simulatore watchos
 
 Quando si esegue il test sul simulatore, è possibile passare facilmente tra le due dimensioni dello schermo usando il menu **Hardware > dispositivo** .
 
 ![](screen-sizes-images/simulator.png "Il simulatore può spostarsi tra le due dimensioni dello schermo usando il menu dispositivo hardware")
-
 
 ## <a name="image-resources"></a>Risorse immagine
 
@@ -80,8 +77,6 @@ using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 ```
 
 Altre informazioni sull'uso del [controllo immagine](~/ios/watchos/user-interface/image.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

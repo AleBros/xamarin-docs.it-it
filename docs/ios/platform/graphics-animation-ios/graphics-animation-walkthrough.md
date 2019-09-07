@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 919eff45e11f60db51109904269addeec1038558
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286114"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752882"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso della grafica principale e dell'animazione principale in Novell. iOS
 
@@ -25,7 +25,6 @@ La schermata seguente illustra l'applicazione completata:
 Prima di iniziare, scaricare l'esempio *GraphicsDemo* che accompagna questa guida. È possibile scaricarlo [qui](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) e si trova all'interno della directory **GraphicsWalkthrough** avviare il progetto denominato **GraphicsDemo_starter** facendo doppio clic su di esso e aprendo la `DemoView` classe.
 
 ## <a name="drawing-a-path"></a>Disegno di un tracciato
-
 
 1. In `DemoView` aggiungere una `CGPath` variabile alla classe e crearne un'istanza nel costruttore. Dichiarare inoltre due `CGPoint` variabili, `initialPoint` e `latestPoint`, che si utilizzeranno per acquisire il punto di tocco da cui si costruisce il percorso:
 
@@ -179,7 +178,6 @@ Ora che è stato implementato il codice per consentire agli utenti di disegnare 
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato un esempio in cui sono stati associati i concetti grafici e di animazione. In primo luogo, è stato illustrato come usare la grafica di base per tracciare un percorso in un `UIView` in risposta al tocco utente. È stato quindi illustrato come usare l'animazione di base per fare in modo che un'immagine viaggi lungo tale percorso.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

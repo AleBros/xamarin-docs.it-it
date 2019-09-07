@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 14b92bb576679dee3408c5805c6b698addd9bd8a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f9964d68e33e84dff789a4ad34443782f22ea821
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657449"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759157"
 ---
 # <a name="skiasharp-lines-and-paths"></a>I percorsi e le linee di SkiaSharp
 
@@ -49,7 +49,6 @@ Master le complicazioni del disegno di linee con tratteggiate o in SkiaSharp.
 ## <a name="finger-paintingfinger-paintmd"></a>[Disegno con le dita](finger-paint.md)
 
 Usare le dita per disegnare nell'area di disegno.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

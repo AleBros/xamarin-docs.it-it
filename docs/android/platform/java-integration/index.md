@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524082"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761421"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integrazione Java con Novell. Android
 
@@ -38,12 +38,9 @@ La seconda tecnica, che usa JNI, funziona a un livello molto inferiore, ma può 
 
 La terza tecnica è radicalmente diversa dalle due precedenti: porting del codice da Java a C#. Il porting del codice da un linguaggio a un altro può essere un processo molto laborioso, ma è possibile ridurre tale impegno con l'ausilio di uno strumento denominato *affila*. Sharp è uno strumento open source che è un Java aC# Converter. 
 
-
-
 ## <a name="summary"></a>Riepilogo
 
 Questo documento fornisce una panoramica di alto livello di alcuni dei diversi modi in cui le librerie di Java possono essere riutilizzate in un'applicazione Novell. Android. Sono stati introdotti i concetti relativi alle associazioni e ai wrapper richiamabili gestiti e sono state illustrate le C#opzioni per il porting di codice Java a. 
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

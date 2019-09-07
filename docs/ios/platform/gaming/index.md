@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: fa78a596495b22ebb2c8b148aadb76261845ccdc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b1fa8cd69a2255d462066be88ad7ef695b71076e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281255"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753113"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>API per giochi iOS in Novell. iOS
 
@@ -191,7 +191,6 @@ namespace FieldBehaviorExplorer
         static GKBehavior flockingBehavior;
         static GKGoal seekGoal;
 
-
         public FlockingScene (CGSize size) : base (size)
         {
             AddRandomBoids (20);
@@ -226,7 +225,6 @@ namespace FieldBehaviorExplorer
             var loc = touch.LocationInNode (this);
             trackingAgent.Position = new Vector2((float) loc.X, (float) loc.Y);
         }
-
 
         private void AddRandomBoids (int count)
         {
@@ -468,8 +466,6 @@ Per ulteriori informazioni, vedere la [documentazione di SpriteKit documentazion
 
 Questo articolo ha illustrato le nuove funzionalità di gioco fornite da iOS 9 per le app Novell. iOS.
 Ha introdotto GameplayKit e I/O del modello; i principali miglioramenti apportati al metal; e le nuove funzionalità di SceneKit e SpriteKit.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

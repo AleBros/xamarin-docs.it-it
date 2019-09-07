@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 5446f8e7bbdf2a5f625852bb61637be392bc6bc2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 897daef3aba1166018a0ac796e9c7956c5f0c711
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523205"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761895"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Modifiche agli strumenti di Android SDK
 
@@ -65,7 +65,6 @@ In alternativa, è possibile usare gli strumenti dell'interfaccia della riga di 
 ### <a name="using-the-old-gui"></a>Uso della GUI precedente
 
 È comunque possibile usare l'interfaccia utente grafica originale eseguendo il programma **Android** all'interno della cartella **degli strumenti** , purché si sia **Android SDK Tools** versione **25.2.5** o precedente.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

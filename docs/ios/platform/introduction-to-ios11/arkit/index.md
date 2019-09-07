@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/30/2017
-ms.openlocfilehash: 9e6b5c763d620bf5ef17e4fdb613d4bed9c00279
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b05991be60e34cad6b7bfc5af15fe521e1ff6dd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290908"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752594"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Introduzione a ARKit in Novell. iOS
 
@@ -36,7 +36,6 @@ Per iniziare a usare la realtà aumentata, le istruzioni seguenti illustrano in 
 Gli asset devono essere aggiunti al progetto con l'azione di compilazione **SceneKitAsset** .
 
 ![Asset SceneKit in un progetto](images/scene-assets.png)
-
 
 ### <a name="2-configure-the-view"></a>2. Configurare la visualizzazione
 
@@ -109,7 +108,6 @@ SceneView.Session.Pause();
 Il codice precedente genera una semplice applicazione ARKit. Esempi più complessi si aspettano che il controller di visualizzazione che ospita la sessione di `IARSCNViewDelegate`realtà aumentata implementi e che vengano implementati altri metodi.
 
 ARKit offre numerose funzionalità più sofisticate, ad esempio il rilevamento della superficie e l'interazione dell'utente. Vedere la [demo UrhoSharp](urhosharp.md) per un esempio di combinazione del rilevamento ARKit con UrhoSharp.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: conceptdev
 ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 8975bb899127d0761359bec695cd084f89c12972
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290565"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765762"
 ---
 # <a name="binding-objective-c"></a>Binding di Objective-C
 
@@ -29,7 +29,6 @@ Se si stanno associando solo le API C, è necessario usare il meccanismo .NET st
 ## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guida di riferimento per la definizione dell'associazione](~/cross-platform/macios/binding/binding-types-reference.md)
 
 Questa è la Guida di riferimento che descrive tutti gli attributi disponibili per l'associazione degli autori al processo di generazione del binding.
-
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

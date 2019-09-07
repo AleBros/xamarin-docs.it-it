@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 6cada2c7426cc50723321d77e21852a92fe64d63
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112461"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755789"
 ---
 # <a name="finding-your-keystores-signature"></a>Individuazione della firma dell'archivio chiavi
 
@@ -59,13 +59,11 @@ Certificate fingerprints:
          Version: 3
 ```
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Individuare il file **debug.keystore** Xamarin usato per firmare l'app. Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Xamarin.Android è reperibile nella posizione seguente:
 
 **~/.local/share/Xamarin/Mono for Android/debug.keystore**
-
 
 Le informazioni su un archivio chiavi si ottengono eseguendo il comando **keytool** dal JDK. Questo strumento si trova in genere nel percorso seguente:
 
@@ -126,7 +124,6 @@ Se, ad esempio, è stata seguita la procedura descritta in [Create a New Certifi
 
 Per altre informazioni sulla firma di un'app Xamarin.Android, vedere [Signing the Android Application Package](~/android/deploy-test/signing/index.md) (Firma del pacchetto dell'applicazione Android).
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Quando viene usata la procedura guidata **Firma e distribuisci** di Visual Studio per Mac per firmare l'app, l'archivio chiavi risultante si trova nel percorso seguente:
@@ -138,6 +135,5 @@ Se, ad esempio, è stata seguita la procedura descritta in [Create a New Certifi
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
 Per altre informazioni sulla firma di un'app Xamarin.Android, vedere [Signing the Android Application Package](~/android/deploy-test/signing/index.md) (Firma del pacchetto dell'applicazione Android).
-
 
 -----

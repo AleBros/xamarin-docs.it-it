@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d988be9163c0a6e12735425a139c03d9641fa95c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656779"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772756"
 ---
 # <a name="device-orientation"></a>Orientamento del dispositivo
 
@@ -225,7 +225,6 @@ Tenere presente quanto segue:
 
 - `outerStack` viene regolata per presentare l'immagine e i controlli come uno stack orizzontale o verticale a seconda di orientamento, per sfruttare al meglio lo spazio disponibile.
 
-
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 Si consideri la seguente applicazione, visualizzata in verticale:
@@ -277,7 +276,6 @@ Tenere presente quanto segue:
 
 - A causa della modalità che è stato disposto la pagina, non è necessario per il codice procedurale per introdurre la velocità di risposta.
 - Il `ScrollView` viene usato per consentire l'etichetta sia visibile anche quando l'altezza dello schermo è inferiore alla somma delle altezze fisse dei pulsanti e l'immagine.
-
 
 ### <a name="relativelayout"></a>RelativeLayout
 
@@ -471,7 +469,6 @@ protected override void OnSizeAllocated (double width, double height){
 Tenere presente quanto segue:
 
 - A causa della modalità che è stato disposto la pagina, è disponibile un metodo per modificare il posizionamento nella griglia dei controlli.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

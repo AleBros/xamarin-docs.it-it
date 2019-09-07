@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290713"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769113"
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 
@@ -175,11 +175,6 @@ L'immagine in primo piano può essere specificata come un singolo file `.png` o 
 Invece di visualizzare un'immagine in primo piano statica, può contenere una riga dinamica o elementi attivabili o un set dinamico di banner di scorrimento. Entrambi questi stili dinamici consentono di evidenziare il contenuto fornito dall'app o di passare alle funzionalità più usate.
 
 Per altre informazioni, vedere la documentazione relativa all' [uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) e informazioni di [riferimento su TVServices Framework](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) di Apple per altre informazioni sull'aggiunta di un'estensione di scaffale principale all'app per fornire contenuti dinamici di primo piano.
-
-
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

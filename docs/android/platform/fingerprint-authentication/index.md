@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a58242e89033d6cd2652495f9466379f63f498f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761243"
 ---
 # <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
 _Questa guida illustra come aggiungere l'autenticazione con impronta digitale, introdotta in Android 6,0, a un'applicazione Novell. Android._
-
 
 ## <a name="fingerprint-authentication-overview"></a>Panoramica dell'autenticazione con impronta digitale
 
@@ -51,11 +50,6 @@ Questa guida illustra come usare le `FingerprintManager` API per migliorare un'a
 Per l'autenticazione con impronta digitale è necessario Android 6,0 (livello API 23) o superiore e un dispositivo con scanner di impronta digitale. 
 
 È necessario che un'impronta digitale sia già registrata con il dispositivo per ogni utente che deve essere autenticato. Questa operazione comporta l'impostazione di un blocco dello schermo che usa una password, un PIN, un modello di scorrimento o un riconoscimento facciale. È possibile simulare alcune funzionalità di autenticazione con impronta digitale in un emulatore Android.  Per altre informazioni su questi due argomenti, vedere la sezione [registrazione di un'impronta digitale](enrolling-fingerprint.md) . 
-
-
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

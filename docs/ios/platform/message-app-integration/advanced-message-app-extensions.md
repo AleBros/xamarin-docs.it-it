@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bf6853ef94ff0be5382bab02192070a20884c31e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290950"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769689"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Estensioni avanzate dell'app per i messaggi in Novell. iOS
 
 _Questo articolo illustra le tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app Messages e presenta nuove funzionalità all'utente._
-
 
 Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'app Messages e presenta nuove funzionalità all'utente. L'estensione può inviare testo, adesivi, file multimediali e messaggi interattivi.
 
@@ -55,7 +54,6 @@ I messaggi interattivi presentano una bolla di messaggio personalizzata e sono f
 L'utente ricevente può rispondere a un messaggio interattivo toccando la bolla dei messaggi nella cronologia dei messaggi per caricare l'estensione dell'app del messaggio che l'ha creata. L'estensione verrà avviata a schermo intero e consentirà all'utente di comporre una risposta e di inviarla di nuovo all'utente di origine.
 
 [![](advanced-message-app-extensions-images/interactive02.png "Estensione avviata a schermo intero")](advanced-message-app-extensions-images/interactive02.png#lightbox)
-
 
 Gli argomenti seguenti verranno trattati in dettaglio di seguito:
 
@@ -427,7 +425,6 @@ using Foundation;
 using Messages;
 using UIKit;
 
-
 namespace MessageExtension
 {
     public partial class MessagesViewController : MSMessagesAppViewController
@@ -605,7 +602,6 @@ Verranno recapitati in un formato di fallback come due messaggi distinti:
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato tecniche avanzate per l'uso delle estensioni dell'app per i messaggi in una soluzione Novell. iOS che si integra con l'app **messages** e presenta nuove funzionalità all'utente.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

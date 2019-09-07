@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650924"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772017"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizzazione di un elemento ContentPage
 
@@ -253,7 +253,6 @@ Quando si implementa un renderer personalizzato che deriva da `PageRenderer` in 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come creare un renderer personalizzato per la pagina [`ContentPage`](xref:Xamarin.Forms.ContentPage) che consente agli sviluppatori di eseguire l'override del rendering nativo predefinito usando una personalizzazione specifica della piattaforma. `ContentPage` è un elemento visivo con visualizzazione singola che occupa la maggior parte dello schermo.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fb5c696e830710e6ad99140477eedcbfe0e8823
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522872"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764682"
 ---
 # <a name="adding-a-second-toolbar"></a>Aggiunta di una seconda barra degli strumenti
-
 
 ## <a name="overview"></a>Panoramica 
 
 Il `Toolbar` può eseguire più di sostituire la barra &ndash; delle azioni che può essere usata più volte all'interno di un'attività, può essere personalizzata per la selezione host in qualsiasi posizione sullo schermo e può essere configurata in modo da estendersi solo a una larghezza parziale dello schermo. Gli esempi seguenti illustrano come creare un secondo `Toolbar` e posizionarlo nella parte inferiore della schermata. Implementa le voci di menu **copia**, **taglia**e **Incolla.** `Toolbar` 
-
 
 ## <a name="define-the-second-toolbar"></a>Definire la seconda barra degli strumenti 
 
@@ -66,7 +64,7 @@ Il colore di sfondo di `Toolbar` questo oggetto è impostato su un colore d'acce
 android:background="?android:attr/colorAccent
 ```
 
-Si noti che `Toolbar` questo si basa su un tema diverso (**ThemeOverlay. Material. Dark. ActionBar**) rispetto a `Toolbar` quello usato dal creato in sostituendo [il barra delle azioni](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash; non è associato alla decorazione della finestra dell'attività o a tema utilizzato nella prima `Toolbar`.
+Si noti che `Toolbar` questo si basa su un tema diverso (**ThemeOverlay. Material. Dark. ActionBar**) rispetto a `Toolbar` quello usato dal creato in [sostituendo il barra delle azioni](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash; non è associato alla decorazione della finestra dell'attività o a tema utilizzato nella prima `Toolbar`.
 
 Modificare **Resources/values. XML** e aggiungere il colore dell'accento seguente alla definizione dello stile: 
 
@@ -78,8 +76,6 @@ In questo modo la barra degli strumenti inferiore restituisce un colore ambra sc
 
 [![Screenshot dell'app con la seconda barra degli strumenti gialla nella parte inferiore della schermata](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
-
- 
 ## <a name="add-edit-menu-items"></a>Aggiungi voci di menu modifica 
 
 In questa sezione viene illustrato come aggiungere voci di menu modifica in `Toolbar`basso. 
@@ -96,11 +92,9 @@ Per aggiungere voci di menu a un `Toolbar`database secondario:
 
 Le sezioni seguenti illustrano questo processo in modo dettagliato: Le voci di menu **taglia**, **copia**e **Incolla** vengono aggiunte alla fine `Toolbar`. 
 
-
-
 ### <a name="define-the-edit-menu-resource"></a>Definire la risorsa menu modifica
 
-Nella sottodirectory Resources **/menu** creare un nuovo file XML denominato **edit_menus. XML** e sostituire il contenuto con il codice XML seguente:
+Nella sottodirectory **Resources/menu** creare un nuovo file XML denominato **edit_menus. XML** e sostituire il contenuto con il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -124,8 +118,6 @@ Nella sottodirectory Resources **/menu** creare un nuovo file XML denominato **e
 ```
 
 Questo codice XML crea le voci di menu **taglia**, **copia**e **Incolla** (usando le icone aggiunte alle `mipmap-` cartelle in [sostituzione del barra delle azioni](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
-
-
 
 ### <a name="inflate-the-menus"></a>Ingrandire i menu
 
@@ -153,8 +145,6 @@ Se si tocca l'icona del menu **taglia** , verrà visualizzato il seguente avviso
 Toccando le voci di menu su una delle barre degli strumenti vengono visualizzati i toast risultanti: 
 
 [![Screenshot dei popup per le voci di menu Salva, copia e incolla da toccare](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
-
-
 
 ## <a name="the-up-button"></a>Pulsante su 
 
@@ -184,8 +174,6 @@ Quando l'utente passa `MainActivity` da a `DetailActivity`, `DetailActivity` Vis
 [![Schermata di esempio di una freccia su a sinistra della barra degli strumenti](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 Toccando questo pulsante **in alto** , l'app tornerà a `MainActivity`. In un'app più complessa con più livelli di gerarchia, toccando questo pulsante, l'utente verrà restituito al livello più alto successivo nell'app anziché alla schermata precedente. 
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

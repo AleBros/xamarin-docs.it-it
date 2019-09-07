@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 63f815cc974315735220a99fd4cce2af408a8c2f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4cec06287963fb607ba2f523c6f47e56c08e655f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119052"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754900"
 ---
 # <a name="creating-a-service"></a>Creazione di un servizio
 
@@ -38,7 +38,7 @@ In fase di compilazione, Novell. Android registrerà il servizio inserendo l'ele
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
 ```
 
-È possibile condividere un servizio con altre applicazioni Android esportandolo . Questa operazione viene eseguita impostando `Exported` la proprietà nell' `ServiceAttribute`oggetto. Quando si esporta un servizio, `ServiceAttribute.Name` la proprietà deve essere impostata anche per fornire un nome pubblico significativo per il servizio. Questo frammento di codice illustra come esportare e denominare un servizio:
+È possibile condividere un servizio con altre applicazioni Android _esportandolo_ . Questa operazione viene eseguita impostando `Exported` la proprietà nell' `ServiceAttribute`oggetto. Quando si esporta un servizio, `ServiceAttribute.Name` la proprietà deve essere impostata anche per fornire un nome pubblico significativo per il servizio. Questo frammento di codice illustra come esportare e denominare un servizio:
 
 ```csharp
 [Service(Exported=true, Name="com.xamarin.example.DemoService")]
@@ -75,7 +75,7 @@ Il passaggio successivo consiste nell'esaminare come avviare un servizio e quind
 
 Il modo più semplice per avviare un servizio in Android è inviare un oggetto `Intent` che contiene i metadati per identificare il servizio da avviare. Per avviare un servizio, è possibile usare due stili diversi di Intent:
 
-- **Finalità esplicita** Una finalità esplicita identificherà esattamente il servizio da usare per completare una determinata azione. &ndash; Una finalità esplicita può essere considerata come una lettera con un indirizzo specifico. Android instraderà l'intento al servizio identificato in modo esplicito. Questo frammento di codice è un esempio dell'uso di un'intenzione esplicita `DownloadService`per avviare un servizio denominato:
+- **Finalità esplicita** Una _finalità esplicita_ identificherà esattamente il servizio da usare per completare una determinata azione. &ndash; Una finalità esplicita può essere considerata come una lettera con un indirizzo specifico. Android instraderà l'intento al servizio identificato in modo esplicito. Questo frammento di codice è un esempio dell'uso di un'intenzione esplicita `DownloadService`per avviare un servizio denominato:
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -104,7 +104,6 @@ Laddove possibile, le applicazioni devono usare gli Intent espliciti per avviare
 
 Il modo in cui viene inviato lo scopo dipende dal tipo di servizio e verrà illustrato in dettaglio più avanti nelle guide specifiche per ogni tipo di servizio.
 
-
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>Creazione di un filtro preventivo per gli Intent impliciti
 
 Per associare un servizio a uno scopo implicito, un'app Android deve fornire alcuni metadati per identificare le funzionalità del servizio. Questi metadati sono forniti dai filtri per _finalità_. I filtri per finalità contengono alcune informazioni, ad esempio un'azione o un tipo di dati, che devono essere presenti nello scopo di avviare un servizio. In Novell. Android il filtro preventivo è registrato in **file AndroidManifest. XML** , decorando un servizio con [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute). Il codice seguente, ad esempio, aggiunge un filtro preventivo con un'azione associata `com.xamarin.DemoService`di:
@@ -128,7 +127,6 @@ In questo modo viene inclusa una voce nel &ndash; file **file AndroidManifest. X
 ```
 
 Con le nozioni di base di un servizio Novell. Android, esaminiamo i diversi sottotipi di servizi in modo più dettagliato.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

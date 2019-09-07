@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4dface536504b0a79d376ab0979443a5ed19e901
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282711"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769240"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in Apple TV App Store
 
@@ -24,7 +24,6 @@ Il processo di invio di un'applicazione all'App Store di Apple TV implica:
 2. Creazione di un *profilo di provisioning di distribuzione*.
 3. Usare questo profilo per compilare l'app.
 4. Invio dell'app tramite *iTunes Connect*.
-
 
 In questo articolo vengono illustrati tutti i passaggi necessari per eseguire il provisioning, compilare e inviare un'app per la distribuzione dell'app Store di Apple TV.
 
@@ -39,7 +38,6 @@ Di seguito sono specificati un paio di aspetti da verificare prima di inviare un
 
 1. Verificare che la descrizione dell'app corrisponda alla funzionalità inclusa nell'app.
 2. Verificare che nell'app non si verifichino arresti anomali in condizioni di normale utilizzo, Questo include l'utilizzo in ogni dispositivo Apple TV supportato.
-
 
 Apple gestisce anche un elenco di suggerimenti per l'invio di App Store di Apple TV. disponibili nella pagina relativa alla [distribuzione nell'pp Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
@@ -121,7 +119,6 @@ Il provisioning richiede questa procedura che prevede l'uso del portale di provi
 
 Per istruzioni dettagliate, vedere [Creating a Distribution Profile](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) (Creazione di un profilo di distribuzione) e [Selecting a Distribution Profile in a Xamarin.iOS Project](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile) (Selezione di un profilo di distribuzione in un progetto Xamarin.iOS). Anche in questo caso, entrambi i documenti sono specifici per iOS, ma la stessa tecnica viene usata per le app tvOS.
 
-
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>Impostazione della configurazione della build per l'applicazione
@@ -137,7 +134,6 @@ Seguire questa procedura:
 5. Apple ha inoltre richiesto che le app tvOS usino bitcode. Nuovamente sotto la configurazione della **versione** , `--bitcode=asmonly` aggiungere alla casella **argomenti aggiuntivi di mTouch** .
 6. È necessario selezionare la casella di controllo **Ottimizza file di immagine PNG per iOS** per ridurre ulteriormente le dimensioni del risultato finale dell'app.
 7. Il debug *non* deve essere abilitato perché renderà la compilazione inutilmente più grande.
-
 
 <a name="Building_and_Submitting_the_Distributable" />
 
@@ -189,7 +185,6 @@ Dopo aver creato e archiviato la compilazione di distribuzione, è possibile inv
 
 Dopo aver completato la compilazione di distribuzione, è possibile inviare l'applicazione iOS ad Apple per la revisione e il rilascio nell'App Store.
 
-
 Il flusso di lavoro di archiviazione in Visual Studio per Mac aprirà automaticamente il caricatore applicazione, dopo `.ipa`aver salvato il:
 
 1. Selezionare *Deliver Your App* (Invia l'app) e fare clic sul pulsante *Choose* (Scegli):
@@ -225,7 +220,6 @@ Se si verificano problemi durante l'invio dell'app Novell. tvOS all'App Store di
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato una guida dettagliata alla configurazione, compilazione e invio di un'app per la pubblicazione di App Store di Apple TV. Prima sono stati trattati i passaggi necessari per creare e installare un profilo di provisioning di distribuzione. Viene quindi illustrato come usare Visual Studio per Mac per creare una compilazione di distribuzione. Infine, è stato illustrato come usare iTunes Connect e lo strumento di archiviazione Xcode per inviare un'applicazione all'App Store di Apple TV.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

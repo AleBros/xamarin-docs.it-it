@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: a888c29a6409fc803b8a0d06bcc6f8a668e64f5e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e6a1b6f4d35a6b8774901ed5a505b5333511c848
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292062"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769701"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per Novell. iOS 
 
@@ -26,7 +26,6 @@ Questo errore si verifica a causa di un'incompatibilità con Visual Studio.
 - **Visual Studio 2017 Update 2** (la versione 15,2 o successive) è compatibile solo con il **sistema. ValueTuple NuGet 4.3.1** o versione successiva.
 
 Scegliere il pacchetto NuGet System. ValueTuple corretto che corrisponde all'installazione di Visual Studio 2017.
-
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>Ricezione del messaggio di errore ' errore durante il recupero delle informazioni sull'aggiornamento '
 
@@ -143,7 +142,6 @@ Questo problema si verifica quando si eseguono tutte le operazioni seguenti:
 1. Usare Mac OS X Leopard (10,5)
 1. Eseguire l'app all'interno del simulatore.
 
-
 Il problema è che mono sta raccogliendo il sistema operativo `libsqlite3.dylib`X, non il `libsqlite3.dylib` file del iPhoneSimulator. L'app funzionerà sul dispositivo, ma non solo il simulatore.
 
 ## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>La distribuzione nel dispositivo non riesce con System. Exception: AMDeviceInstallApplication ha restituito 3892346901
@@ -209,8 +207,6 @@ Questo problema è molto raro ed estremamente difficile da riprodurre. non è in
 1. Disabilitare "Beam Sync" utilizzando lo strumento di sviluppo "Quartz debug" (che è possibile trovare tramite Spotlight) e verificare se le prestazioni dell'editor di origine vengono ripristinate al normale.
 1. Provare a ripetere il passaggio (1) con la sincronizzazione del Beam ancora disabilitata.
 1. Se l'editor si blocca per più di pochi secondi, provare a eseguire "killall-QUIT [Visual Studio per Mac]" in un terminale mentre è bloccato. Potrebbe essere difficile eseguire il comando Kill mentre l'editor è bloccato, ma è essenziale per farlo, perché il comando forza mono a scrivere tracce dello stack di tutti i thread nel log MD, che è possibile usare per individuare lo stato in cui si trovano i thread mentre la XS è bloccata.
-
-
 
 Alleghi i log XS, **~/Library/Logs/XamarinStudio-{Version}/IDE-{timestamp}.log**, **ANDROIDTOOLS-{timestamp}. log**e i **componenti-{timestamp}. log** (nelle versioni precedenti di XS/MonoDevelop, basta inviare **~/Library/Logs /MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
 
@@ -293,7 +289,6 @@ Durante il caricamento di un'app nel dispositivo, è possibile che venga visuali
 La versione corrente di Novell. iOS e Visual Studio per Mac ha esito negativo quando il nome del progetto o la directory in cui è archiviata la soluzione o il progetto contengono spazi.
 Per risolvere il problema:
 
-
 - Assicurarsi che né il progetto o la directory in cui è archiviato contenga uno spazio.
 - Nel progetto "impostazioni principali" assicurarsi che il nome del progetto non contenga spazi.
 
@@ -324,11 +319,9 @@ A tale scopo, seguire questa procedura:
 
 Questa eccezione è causata da uno dei tre elementi seguenti:
 
-
 1. È stato fornito un selettore al runtime di Objective-C senza applicare l'attributo [Export] corrispondente a un metodo
 1. È stato abilitato il collegamento completo e non è stato applicato l'attributo [Preserve] al metodo [Export] ed.
 1. L'attributo [Export] è stato applicato a un metodo privato in un tipo ereditato.
-
 
 ## <a name="mainwindowxibdesignercs-file-is-not-updated"></a>Il file MainWindow.xib.designer.cs non è stato aggiornato
 
@@ -414,7 +407,6 @@ Quando si tenta di aggiornare il software e questo messaggio di errore viene vis
 Questo problema può manifestarsi in diverse forme e non sempre genera un errore coerente. Se l'applicazione contiene un. xib, verificare che l'azione di **compilazione** su. xib sia impostata su **InterfaceDefinition**. Si tratta dell'azione di compilazione predefinita per. xib.
 
 Per controllare l'azione di compilazione, fare clic con il pulsante destro del mouse sul file con estensione XIB e scegliere **azione di compilazione**.
-
 
 ## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: Non sono disponibili dati per la codifica 437
 

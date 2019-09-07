@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6979b4d3e0d750ee962346a94dd832c86c92d995
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: f8f2fc489c10d404b5864ea13c438e3e5508eabe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652943"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771367"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Pagina a schede di Xamarin.Forms
 
@@ -257,7 +257,6 @@ Per altre informazioni sulla [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), vede
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato l'uso di una classe TabbedPage per spostarsi in una raccolta di pagine. [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) di Xamarin.Forms è costituita da un elenco di schede e un'area dei dettagli più grande con ogni scheda che carica il contenuto nell'area dei dettagli.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

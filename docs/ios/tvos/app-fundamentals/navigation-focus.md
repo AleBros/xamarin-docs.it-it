@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: fdf675e37bec07ef03576313befbaa9309ab9349
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b84150c8fdca04a9b21c28d126d221d2a9bc5a3f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291580"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769258"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Uso della navigazione tvOS e messa a fuoco in Novell
 
 _Questo articolo illustra il concetto di messa a fuoco e il modo in cui viene usato per presentare e gestire la navigazione all'interno di un'app Novell. tvOS._
-
 
 Questo articolo illustra il concetto di [messa a fuoco](#Focus-and-Selection) e il modo in cui viene usato per gestire la [navigazione](#Navigation) nell'interfaccia utente di un'app Novell. tvOS. Si esaminerà il modo in cui i controlli di navigazione tvOS incorporati usano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione dell'interfaccia utente dell'app Novell. tvOS.
 
@@ -125,9 +124,6 @@ Per richiedere che lo stato attivo venga spostato di nuovo sull' `PreferredFocus
 > [!IMPORTANT]
 > La `SetNeedsUpdateFocus` chiamata a ha effetto solo se il controller di visualizzazione in cui viene chiamato contiene la vista che attualmente ha lo stato attivo.
 
-
-
-
 <a name="Working-with-Focus-Guides" />
 
 ### <a name="working-with-focus-guides"></a>Utilizzo delle guide per lo stato attivo
@@ -139,7 +135,7 @@ Tuttavia, in alcuni casi, a causa della necessità della progettazione dell'inte
 Per un esempio, adottare il layout dell'interfaccia utente seguente:
 
  [![](navigation-focus-images/guide01.png "Esempio di utilizzo delle guide di messa a fuoco")](navigation-focus-images/guide01.png#lightbox)
- 
+
 Poiché il pulsante **altre informazioni** non rientra in una griglia orizzontale e verticale con il pulsante **Acquista** , l'utente non sarà accessibile. Tuttavia, questa operazione può essere facilmente corretta utilizzando una _guida messa a fuoco_ per fornire suggerimenti di spostamento al motore di messa a fuoco. 
 
 Una guida messa a`UIFocusGuide`fuoco () espone un'area non visibile della visualizzazione come attivabile per il motore attivo, consentendo così il reindirizzamento dello stato attivo a un'altra visualizzazione.
@@ -277,9 +273,6 @@ Se questa proprietà è impostata `true`su, la visualizzazione immagine otterrà
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato il concetto di messa a fuoco e il modo in cui viene usato per gestire la navigazione nell'interfaccia utente di un'app Novell. tvOS. Viene esaminato il modo in cui i controlli di navigazione tvOS incorporati utilizzano lo stato attivo, l'evidenziazione e la selezione per fornire la navigazione. Successivamente, è stato esaminato il modo in cui è possibile utilizzare lo stato attivo con Parallax e le immagini sovrapposte per fornire agli utenti finali indizi visivi per lo stato di navigazione corrente. Infine, ha esaminato il lavoro con lo stato attivo, gli aggiornamenti, lo stato attivo nelle raccolte e l'abilitazione di parallasse.
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

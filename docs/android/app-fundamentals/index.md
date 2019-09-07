@@ -1,106 +1,83 @@
 ---
-title: Xamarin.Android Application Fundamentals
-description: Concetti di base dell'applicazione
+title: Nozioni fondamentali sull'applicazione Novell. Android
+description: Concetti di base sulle applicazioni
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3ed616340dbb6dd64d85998d84e340ec381f6b54
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: af7ba83b9026a91028f4ffa9894d564d5ff13eb8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864081"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755296"
 ---
-# <a name="xamarinandroid-application-fundamentals"></a>Xamarin.Android Application Fundamentals
+# <a name="xamarinandroid-application-fundamentals"></a>Nozioni fondamentali sull'applicazione Novell. Android
 
-In questa sezione fornisce una Guida su alcune delle più comuni attività di cose o concetti che gli sviluppatori devono tenere presenti quando si sviluppano applicazioni Android.
+Questa sezione fornisce una guida su alcune delle attività più comuni o sui concetti che gli sviluppatori devono tenere presenti durante lo sviluppo di applicazioni Android.
 
 ## <a name="accessibilityandroidapp-fundamentalsaccessibilitymd"></a>[Accessibilità](~/android/app-fundamentals/accessibility.md)
 
-Questa pagina descrive come usare le API di accessibilità di Android per compilare le App in base al [elenco di controllo di accesso facilitato](~/cross-platform/app-fundamentals/accessibility.md).
+Questa pagina descrive come usare le API di accessibilità Android per creare app in base all' [elenco di controllo di accessibilità](~/cross-platform/app-fundamentals/accessibility.md).
 
-## <a name="understanding-android-api-levelsandroidapp-fundamentalsandroid-api-levelsmd"></a>[Informazioni sui livelli API Android](~/android/app-fundamentals/android-api-levels.md)
+## <a name="understanding-android-api-levelsandroidapp-fundamentalsandroid-api-levelsmd"></a>[Informazioni sui livelli dell'API Android](~/android/app-fundamentals/android-api-levels.md)
 
-Questa guida viene descritto come Android Usa i livelli di API per gestire la compatibilità delle app tra versioni diverse di Android e viene descritto come configurare le impostazioni di progetto xamarin. Android per distribuire questi livelli di API nell'app. Inoltre, questa guida illustra come scrivere il codice di runtime che interagisce con diversi livelli di API e fornisce un elenco di riferimento di tutti i livelli API Android, i numeri di versione (ad esempio Android 8.0), nomi di codice Android (ad esempio Oreo) e codici versione build.
-
-
+Questa guida descrive come Android usa i livelli API per gestire la compatibilità delle app in versioni diverse di Android e spiega come configurare le impostazioni del progetto Novell. Android per distribuire questi livelli API nell'app. Questa guida illustra anche come scrivere codice di runtime che gestisce i diversi livelli API e fornisce un elenco di riferimento di tutti i livelli di API Android, i numeri di versione (ad esempio Android 8,0), i nomi di codice Android (ad esempio, Oreo) e i codici di versione di compilazione.
 
 ## <a name="resources-in-androidandroidapp-fundamentalsresources-in-androidindexmd"></a>[Risorse in Android](~/android/app-fundamentals/resources-in-android/index.md)
 
-Questo articolo introduce il concetto di risorse Android nei documenti di xamarin. Android e come usarli. Viene illustrato come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi tra cui densità e dimensioni dello schermo diverse.
-
-
-
+In questo articolo viene introdotto il concetto di risorse Android in Novell. Android e viene illustrato come usarle. Illustra come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, incluse dimensioni e densità dello schermo diverse.
 
 ## <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[Ciclo di vita dell'attività](~/android/app-fundamentals/activity-lifecycle/index.md)
 
-Le attività sono un blocco predefinito fondamentale di applicazioni Android e possono essere presenti in un numero di stati diversi. Il ciclo di vita di attività inizia con la creazione di istanze e termina con la distruzione e include molti stati intermedi. Quando un'attività Cambia stato, viene chiamato il metodo di eventi del ciclo di vita appropriata, notificando l'attività dell'imminente modifica dello stato e in modo che possa eseguire il codice per adattarsi a tale modifica. Questo articolo esamina il ciclo di vita delle attività e spiega le responsabilità che un'attività ha durante ognuna di queste modifiche di stato da parte di un'applicazione affidabile, ben progettata.
+Le attività sono un blocco predefinito fondamentale di applicazioni Android e possono esistere in diversi Stati. Il ciclo di vita dell'attività inizia con la creazione di un'istanza e termina con la distruzione e include molti Stati. Quando un'attività modifica lo stato, viene chiamato il metodo di evento del ciclo di vita appropriato, che notifica l'attività della modifica dello stato imminente e consente di eseguire il codice per adattarsi a tale modifica. In questo articolo viene esaminato il ciclo di vita delle attività e viene illustrata la responsabilità di un'attività nel corso di ognuna di queste modifiche allo stato in modo che faccia parte di un'applicazione affidabile e ben comportata.
 
 ## <a name="localizationandroidapp-fundamentalslocalizationmd"></a>[Localizzazione](~/android/app-fundamentals/localization.md)
 
-Questo articolo illustra come localizzare xamarin. Android in altre lingue mediante la traduzione di stringhe e fornire immagini alternative.
+Questo articolo illustra come localizzare un Novell. Android in altre lingue traducendo le stringhe e fornendo immagini alternative.
 
 ## <a name="servicesandroidapp-fundamentalsservicesindexmd"></a>[Servizi](~/android/app-fundamentals/services/index.md)
 
-Questo articolo illustra i servizi Android, che sono componenti di Android che consentono di lavorare da eseguire in background. Illustra i diversi scenari appropriati per i servizi e viene illustrato come implementarli sia per eseguire le attività in background a esecuzione prolungata, nonché per fornire un'interfaccia per le chiamate di procedura remota.
+Questo articolo illustra i servizi Android, che sono componenti Android che consentono di eseguire il lavoro in background. Vengono illustrati i diversi scenari per cui sono adatti i servizi e viene illustrato come implementarli sia per eseguire attività in background con esecuzione prolungata che per fornire un'interfaccia per le chiamate di procedure remote.
 
 ## <a name="broadcast-receiversandroidapp-fundamentalsbroadcast-receiversmd"></a>[Ricevitori di trasmissione](~/android/app-fundamentals/broadcast-receivers.md)
 
-Questa guida illustra come creare e usare ricevitori di trasmissioni, un componente di Android che risponde a trasmissioni a livello di sistema, in xamarin. Android.
-
-
+Questa guida illustra come creare e usare i ricevitori di trasmissioni, un componente Android che risponde alle trasmissioni a livello di sistema, in Novell. Android.
 
 ## <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[Autorizzazioni](~/android/app-fundamentals/permissions.md)
 
-È possibile usare il supporto di strumenti integrato in Visual Studio per Mac o Visual Studio per creare e aggiungere le autorizzazioni per il manifesto Android. Questo documento descrive come aggiungere autorizzazioni in Visual Studio e Xamarin Studio.
-
-
+È possibile usare il supporto per gli strumenti integrato in Visual Studio per Mac o Visual Studio per creare e aggiungere autorizzazioni al manifesto Android. Questo documento descrive come aggiungere autorizzazioni in Visual Studio e Xamarin Studio.
 
 ## <a name="graphics-and-animationandroidapp-fundamentalsgraphics-and-animationmd"></a>[Grafica e animazione](~/android/app-fundamentals/graphics-and-animation.md)
 
-Android fornisce un framework molto avanzato e diverse per supportare le animazioni ed elementi grafici 2D. Questo documento introduce questi Framework e illustra come creare le animazioni e grafica personalizzata e usarli in un'applicazione xamarin. Android.
-
+Android offre un framework molto ricco e diversificato per supportare la grafica e le animazioni 2D. Questo documento introduce questi Framework e illustra come creare grafica e animazioni personalizzate e usarle in un'applicazione Novell. Android.
 
 ## <a name="cpu-architecturesandroidapp-fundamentalscpu-architecturesmd"></a>[Architetture CPU](~/android/app-fundamentals/cpu-architectures.md)
 
-Xamarin. Android supporta diverse architetture della CPU, inclusi i dispositivi a 32 e 64 bit. Questo articolo illustra come specificare come destinazione di un'app a uno o più architetture della CPU Android è supportata.
-
-
-
+Novell. Android supporta diverse architetture della CPU, inclusi i dispositivi a 32 bit e a 64 bit. Questo articolo illustra come indirizzare un'app a una o più architetture CPU supportate da Android.
 
 ## <a name="handling-rotationandroidapp-fundamentalshandling-rotationmd"></a>[Gestione della rotazione](~/android/app-fundamentals/handling-rotation.md)
 
-Questo articolo descrive come gestire le modifiche apportate orientamento di dispositivo in xamarin. Android. Viene illustrato come lavorare con il sistema risorse Android per caricare automaticamente le risorse per un orientamento del dispositivo specifico nonché come gestire a livello di codice l'orientamento viene modificato. Quindi vengono descritte le tecniche per mantenere lo stato quando un dispositivo viene ruotato.
+Questo articolo descrive come gestire le modifiche dell'orientamento del dispositivo in Novell. Android. Viene illustrato come usare il sistema di risorse Android per caricare automaticamente le risorse per un particolare orientamento del dispositivo e come gestire a livello di codice le modifiche dell'orientamento. Descrive quindi le tecniche per mantenere lo stato quando un dispositivo viene ruotato.
 
+## <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Audio Android](~/android/app-fundamentals/android-audio.md)
 
-
-## <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android Audio](~/android/app-fundamentals/android-audio.md)
-
-Il sistema operativo Android offre ampio supporto per funzionalità multimediali, che comprende sia audio e video. Questa guida è incentrata sul audio in Android e la riproduzione e la registrazione tramite il lettore audio predefinito e le classi di registrazione, nonché l'API di basso livello audio dell'audio. Utilizzo degli eventi Audio broadcast da altre applicazioni, vengono inoltre descritti in modo che gli sviluppatori possono compilare applicazioni ben progettate.
-
-
-
+Il sistema operativo Android offre un supporto completo per i contenuti multimediali, che comprendono audio e video. Questa guida è incentrata sull'audio in Android e descrive la riproduzione e la registrazione di audio con le classi di registratore audio e registratore audio predefinite, nonché l'API audio di basso livello. Illustra anche l'uso di eventi audio trasmessi da altre applicazioni, in modo che gli sviluppatori possano compilare applicazioni ben funzionanti.
 
 ## <a name="notificationsandroidapp-fundamentalsnotificationsindexmd"></a>[Notifiche](~/android/app-fundamentals/notifications/index.md)
 
-Questa sezione viene illustrato come implementare le notifiche locali e remote in xamarin. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica di Android e descrive l'API di coinvolti con la creazione e visualizzazione di una notifica. Per le notifiche remote, vengono illustrati entrambi Google Cloud Messaging e Firebase Cloud Messaging. Sono inclusi esempi dettagliati, procedure dettagliate e il codice.
-
-
+Questa sezione illustra come implementare le notifiche locali e remote in Novell. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica Android e viene illustrata la creazione e la visualizzazione di una notifica da parte dell'API. Per le notifiche remote, vengono illustrate sia Google Cloud Messaging che la messaggistica cloud Firebase. Sono incluse procedure dettagliate ed esempi di codice.
 
 ## <a name="touchandroidapp-fundamentalstouchindexmd"></a>[Tocco](~/android/app-fundamentals/touch/index.md)
 
-Questa sezione illustra che i concetti e i dettagli dell'implementazione di movimenti di tocco in Android. API di tocco sono introdotte e spiegate seguite da un'analisi di riconoscitori di movimento.
-
-
+Questa sezione illustra i concetti e i dettagli relativi all'implementazione dei movimenti tocco in Android. Le API Touch vengono introdotte e spiegate seguito da un'esplorazione dei riconoscitori di movimento.
 
 ## <a name="httpclient-stack-and-ssltlsandroidapp-fundamentalshttp-stackmd"></a>[Stack HttpClient e SSL/TLS](~/android/app-fundamentals/http-stack.md)
 
-In questa sezione vengono illustrati i selettori di HttpClient Stack e implementazione di SSL/TLS per Android. Queste impostazioni determinano l'implementazione di HttpClient e SSL/TLS che verrà usato dalle App xamarin. Android.
-
+Questa sezione illustra i selettori di implementazione di HttpClient stack e SSL/TLS per Android. Queste impostazioni determinano l'implementazione di HttpClient e SSL/TLS che verrà usata dalle app Novell. Android.
 
 ## <a name="writing-responsive-applicationswriting-responsive-appsmd"></a>[Scrittura di applicazioni reattive](writing-responsive-apps.md)
 
-Questo articolo illustra come usare il threading per mantenere reattiva un'applicazione xamarin. Android spostando le attività a esecuzione prolungata in un thread in background.
+Questo articolo illustra come usare il threading per rendere la risposta di un'applicazione Novell. Android spostando attività a esecuzione prolungata in un thread in background.

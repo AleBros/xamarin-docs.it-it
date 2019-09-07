@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b05ab7ee835a97f13af618332baec7a5ebf404ec
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522182"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764092"
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
 _L'avvio di un'app Android richiede tempo, soprattutto quando l'app viene avviata per la prima volta in un dispositivo. Una schermata iniziale può visualizzare lo stato di avanzamento dell'avvio per l'utente o per indicare la personalizzazione._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -33,20 +32,17 @@ Questa guida illustra una tecnica per implementare una schermata iniziale in un'
 
 [![Schermata iniziale del logo Novell di esempio seguita dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
 ## <a name="requirements"></a>Requisiti
 
 Questa guida presuppone che l'applicazione sia destinata a Android API level 15 (Android 4.0.3) o versione successiva. L'applicazione deve avere anche i pacchetti NuGet **Novell. Android. support. v4** e **Novell. Android. support. V7. AppCompat** aggiunti al progetto.
 
 Tutto il codice e il codice XML in questa guida sono disponibili nel progetto di esempio [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) per questa guida.
 
-
 ## <a name="implementing-a-splash-screen"></a>Implementazione di una schermata iniziale
 
 Il modo più rapido per eseguire il rendering e la visualizzazione della schermata iniziale consiste nel creare un tema personalizzato e applicarlo a un'attività che espone la schermata iniziale. Quando l'attività viene sottoposta a rendering, carica il tema e applica la risorsa disegnabile (a cui fa riferimento il tema) allo sfondo dell'attività. Questo approccio evita la necessità di creare un file di layout.
 
 La schermata iniziale viene implementata come un'attività che Visualizza l'oggetto disegnato, esegue tutte le inizializzazioni e avvia tutte le attività. Una volta che l'app è stata avviata, l'attività schermata iniziale avvia l'attività principale e viene rimossa dallo stack di backup dell'applicazione.
-
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>Creazione di un oggetto disegnato per la schermata iniziale
 
@@ -69,10 +65,9 @@ In questa guida viene usato un [elenco di livelli](https://developer.android.com
 </layer-list>
 ```
 
-Questa `layer-list` operazione concentrerà l'immagine iniziale **Splash. png** sullo `@color/splash_background` sfondo specificato dalla risorsa. Inserire questo file XML nella cartella **Resources/** di cui è stato disegnato (ad esempio, Resources/ **splash_screen. XML**).
+Questa `layer-list` operazione concentrerà l'immagine iniziale **Splash. png** sullo `@color/splash_background` sfondo specificato dalla risorsa. Inserire questo file XML nella cartella **Resources/** di cui è stato disegnato (ad esempio, **Resources/splash_screen. XML**).
 
 Al termine della creazione della schermata iniziale, il passaggio successivo consiste nel creare un tema per la schermata iniziale.
-
 
 ### <a name="implementing-a-theme"></a>Implementazione di un tema
 
@@ -95,7 +90,6 @@ Per creare un tema personalizzato per l'attività della schermata iniziale, modi
 ```
 
 My **. Splash** è molto spartano &ndash; dichiara lo sfondo della finestra, rimuove in modo esplicito la barra del titolo dalla finestra e dichiara che è a schermo intero. Se si vuole creare una schermata iniziale che emula l'interfaccia utente dell'app prima che l'attività ingrandisca il primo layout, è possibile usare `windowContentOverlay` `windowBackground` anziché nella definizione dello stile. In questo caso, è necessario modificare anche **splash_screen. XML** disegnatore in modo da visualizzare un'emulazione dell'interfaccia utente.
-
 
 ### <a name="create-a-splash-activity"></a>Creare un'attività Splash
 
@@ -178,7 +172,7 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
     </layer-list>
     ```
 
-3. Creare la cartella Resources **/values-Land** se non esiste già.
+3. Creare la cartella **Resources/values-Land** se non esiste già.
 
 4. Aggiungere i file **Colors. XML** e **Style. XML** a **values-Land** , che possono essere copiati e modificati dai file **values/Colors. XML** e **values/Style. XML** esistenti.
 
@@ -217,14 +211,11 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
 
     [![Rotazione della schermata iniziale in modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
-
 Si noti che l'uso di una schermata iniziale in modalità orizzontale non fornisce sempre un'esperienza semplice. Per impostazione predefinita, Android avvia l'app in modalità verticale e la passa alla modalità orizzontale anche se il dispositivo è già in modalità orizzontale. Di conseguenza, se l'app viene avviata mentre il dispositivo è in modalità orizzontale, il dispositivo presenta brevemente la schermata iniziale verticale e quindi aggiunge un'animazione alla rotazione dal ritratto alla schermata iniziale orizzontale. Sfortunatamente, questa transizione da verticale a orizzontale viene effettuata anche quando `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` viene specificato nei flag dell'attività Splash. Il modo migliore per aggirare questa limitazione consiste nel creare una singola immagine della schermata iniziale che esegue correttamente il rendering in modalità verticale e orizzontale.
-
 
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato un modo per implementare una schermata iniziale in un'applicazione Novell. Android; in particolare, applicare un tema personalizzato all'attività di avvio.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

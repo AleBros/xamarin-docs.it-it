@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: c684efe9bcb292869eb25b36067fcaa42b546a04
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 65c8466e2649c6d48cf5651f25d14c073dbcf5e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525927"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754424"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso di SQLite.NET con Android
 
@@ -61,7 +61,6 @@ Una volta disponibile la libreria SQLite.NET, attenersi ai tre passaggi seguenti
 ## <a name="basic-data-access-sample"></a>Esempio di accesso ai dati di base
 
 Il codice di esempio *DataAccess_Basic* per questo documento è simile al seguente quando viene eseguito in Android. Il codice illustra come eseguire semplici operazioni SQLite.NET e Mostra i risultati in come testo nella finestra principale dell'applicazione.
-
 
 **Android**
 
@@ -140,7 +139,6 @@ Gli attributi comuni che è possibile applicare alle classi per controllare il m
 
 - **[Univoco]** &ndash; Garantisce che i valori nella colonna del database sottostante siano univoci.
 
-
 La maggior parte di questi attributi è facoltativa, SQLite utilizzerà i valori predefiniti per i nomi di tabelle e colonne. È sempre necessario specificare una chiave primaria Integer in modo che le query di selezione ed eliminazione possano essere eseguite in modo efficiente sui dati.
 
 ## <a name="more-complex-queries"></a>Query più complesse
@@ -158,7 +156,6 @@ Per eseguire altre operazioni `SQLiteConnection` sui dati, è possibile usare i 
 - **Query&lt;T&gt;esegueuna query SQL** cherestituisceunnumerodirighe(comeoggetti).&ndash;
 
 - **Esegui** Utilizzare questo metodo (e non `Query`) quando non si prevede che le righe vengano restituite da SQL, ad esempio istruzioni INSERT, Update e DELETE. &ndash;
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Recupero di un oggetto in base alla chiave primaria
 
@@ -205,9 +202,9 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Uso di SQLite.NET con più thread
 
-SQLite supporta tre diverse modalità di threading: A *thread singolo*,multithreading e *serializzato*. Se si desidera accedere al database da più thread senza alcuna restrizione, è possibile configurare SQLite per l'utilizzo della modalità di threading serializzata. È importante impostare questa modalità all'inizio dell'applicazione (ad esempio, all'inizio del `OnCreate` metodo).
+SQLite supporta tre diverse modalità di threading: A *thread singolo*, *multithreading*e *serializzato*. Se si desidera accedere al database da più thread senza alcuna restrizione, è possibile configurare SQLite per l'utilizzo della modalità di threading **serializzata** . È importante impostare questa modalità all'inizio dell'applicazione (ad esempio, all'inizio del `OnCreate` metodo).
 
-Per modificare la modalità di threading, `SqliteConnection.SetConfig`chiamare. Questa riga di codice, ad esempio, configura SQLite per la modalità serializzata:
+Per modificare la modalità di threading, `SqliteConnection.SetConfig`chiamare. Questa riga di codice, ad esempio, configura SQLite per la modalità **serializzata** :
 
 ```csharp
 using using Mono.Data.Sqlite;

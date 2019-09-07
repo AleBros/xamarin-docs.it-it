@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290644"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769792"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in Novell. iOS
 
@@ -50,7 +50,6 @@ Sono inclusi:
 3. **App** : fornisce l'app con vocabolari specifici dell'utente per facilitare l'uso di Siri. 
 
 Tutti questi elementi e i passaggi per includerli nell'app verranno descritti in dettaglio nelle sezioni riportate di seguito.
-
 
 ## <a name="preparing-the-app"></a>Preparazione dell'app
 
@@ -156,7 +155,6 @@ Se si sceglie di creare un'estensione per finalità separate per ogni finalità,
 Per facilitare la scelta tra le due opzioni, vedere se una qualsiasi delle finalità appartiene naturalmente insieme. Ad esempio, un'app che ha eseguito chiamate audio e video potrebbe voler includere entrambi gli Intent in una singola estensione per finalità che gestiscono attività simili e potrebbe fornire il riutilizzo del codice.
 
 Per finalità o gruppi di Intent che non rientrano in un gruppo esistente, creare una nuova estensione per le finalità nella soluzione dell'app per contenerli.
-
 
 ### <a name="setting-the-required-entitlements"></a>Impostazione dei diritti obbligatori
 
@@ -266,7 +264,6 @@ Modificare il `Info.plist` file dell'app e aggiungere la `NSSiriUsageDescription
 
 Chiamare il `RequestSiriAuthorization` metodo `INPreferences` della classe quando l'app viene avviata per la prima volta. Modificare la `AppDelegate.cs` classe e fare in `FinishedLaunching` modo che il metodo sia simile al seguente:
 
-
 ```csharp
 using Intents;
 ...
@@ -288,7 +285,6 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
             break;
         }
     });
-
 
     return true;
 }
@@ -684,7 +680,6 @@ Se l'app richiede facoltativamente che l'utente sia connesso al dispositivo per 
 
 -----
 
-
 Per un elenco completo dei domini per finalità disponibili, vedere le informazioni di [riferimento sui domini Intent](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)di Apple.
 
 ### <a name="configuring-the-main-class"></a>Configurazione della classe principale
@@ -743,7 +738,6 @@ Nel caso dell'app MonkeyChat di esempio, l'estensione per finalità richiederà 
 Inoltre, MonkeyChat richiede contenuto per il corpo del messaggio. Se l'utente non lo ha specificato, Siri deve richiedere all'utente il contenuto.
 
 L'estensione per finalità dovrà gestire correttamente ognuno di questi casi.
-
 
 ```csharp
 [Export ("resolveRecipientsForSearchForMessages:withCompletion:")]
@@ -810,7 +804,6 @@ Per ulteriori informazioni, vedere la Guida di [riferimento per la fase di confe
 ### <a name="processing-the-intent"></a>Elaborazione della finalità
 
 Questo è il punto in cui l'estensione finalità esegue effettivamente l'attività per soddisfare la richiesta dell'utente e passa i risultati a Siri in modo che l'utente possa essere informato.
-
 
 ```csharp
 public void HandleSendMessage (INSendMessageIntent intent, Action<INSendMessageIntentResponse> completion)
@@ -1064,9 +1057,6 @@ Apple suggerisce che lo sviluppatore prende in considerazione le considerazioni 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato SiriKit e come può essere aggiunto alle app Novell. iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

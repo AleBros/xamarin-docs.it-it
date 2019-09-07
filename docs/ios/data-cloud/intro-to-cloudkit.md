@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/11/2016
-ms.openlocfilehash: 09275517a1d081073ab471d1e8c993dc232a4385
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 240b3c1547231ebbea568f4d5d10407ec560390b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292451"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763405"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit in Novell. iOS
 
@@ -48,7 +48,6 @@ CloudKit supporta sia i dati strutturati che quelli in blocco. È in grado di ge
 
 Al momento della stesura di questo articolo, Apple fornisce inizialmente CloudKit con un limite massimo per la larghezza di banda e la capacità di archiviazione. Per progetti di grandi dimensioni o applicazioni con una base di utenti di grandi dimensioni, Apple ha suggerito che verrà fornita una scala di prezzo conveniente.
 
-
 ## <a name="enabling-cloudkit-in-a-xamarin-application"></a>Abilitazione di CloudKit in un'applicazione Novell
 
 Prima che un'applicazione Novell possa usare il Framework CloudKit, è necessario eseguire correttamente il provisioning dell'applicazione come illustrato in dettaglio nelle guide [utilizzo delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) e [utilizzo dei diritti](~/ios/deploy-test/provisioning/entitlements.md)
@@ -67,7 +66,6 @@ Prima che un'applicazione Novell possa usare il Framework CloudKit, è necessari
 7. Verificare che il **contenitore di connettività** esista per l'applicazione, come creato in precedenza. Esempio: `iCloud.com.your-company.CloudKitAtlas`
 8. Salvare le modifiche apportate al file.
 
-
 Con queste impostazioni, l'applicazione è ora pronta per accedere alle API del Framework CloudKit.
 
 ## <a name="cloudkit-api-overview"></a>Panoramica dell'API CloudKit
@@ -82,7 +80,6 @@ Prima di implementare CloudKit in un'applicazione Novell iOS, in questo articolo
 6. **Riferimento** : fornire relazioni padre-figlio tra i record correlati all'interno di un determinato database.
 7. **Asset** : consente il caricamento di file di grandi dimensioni, non strutturati in iCloud e associati a un record specificato.
 
-
 ### <a name="containers"></a>Contenitori
 
 Una determinata applicazione in esecuzione su un dispositivo iOS è sempre in esecuzione accanto ad altre applicazioni e servizi su tale dispositivo. Sul dispositivo client, l'applicazione verrà sottoposto a silo o in modalità sandbox. In alcuni casi, si tratta di un sandbox letterale e, in altri, l'applicazione è semplicemente in esecuzione nello spazio di memoria.
@@ -92,7 +89,6 @@ Il concetto di acquisizione di un'applicazione client e di esecuzione separato d
 1. **Sicurezza** : un'applicazione non può interferire con altre app client o il sistema operativo stesso.
 1. **Stabilità** : se l'applicazione client si arresta in modo anomalo, non può estrarre altre app del sistema operativo.
 1. **Privacy** : ogni applicazione client ha accesso limitato alle informazioni personali archiviate nel dispositivo.
-
 
 CloudKit è stato progettato per fornire gli stessi vantaggi indicati in precedenza e applicarli all'uso delle informazioni basate sul cloud:
 
@@ -179,7 +175,6 @@ Come indicato in precedenza `CKRecords` , eseguire il wrapping delle coppie chia
 1. `CKReferences`
 1. `CKAssets`
 
-
 Oltre ai tipi valore singolo, un record può contenere una matrice omogenea di uno qualsiasi dei tipi elencati in precedenza.
 
 Il codice seguente può essere usato per creare un nuovo record e archiviarlo in un database:
@@ -215,7 +210,6 @@ Gli identificatori di record sono rappresentati come tupla, che contiene sia il 
 - Vengono creati dall'applicazione client.
 - Sono completamente normalizzate e rappresentano la posizione specifica del record.
 - Assegnando l'ID univoco di un record in un database esterno al nome del record, è possibile usare per eseguire il bridging dei database locali che non sono archiviati all'interno di CloudKit.
-
 
 Quando gli sviluppatori creano nuovi record, possono scegliere di passare un identificatore di record. Se non si specifica un identificatore di record, viene creato automaticamente un UUID che verrà assegnato al record.
 
@@ -285,13 +279,11 @@ Apple offre due diversi set di API per l'uso di CloudKit:
 - **API operativa** : offre ogni singola funzionalità di CloudKit. Per le applicazioni più complesse, questa API offre un controllo granulare sui CloudKit.
 - **API pratici** : offre un subset comune preconfigurato di funzionalità CloudKit. Offre una soluzione comoda e facile da accedere per includere la funzionalità CloudKit in un'applicazione iOS.
 
-
 L'API convenienza è in genere la scelta migliore per la maggior parte delle applicazioni iOS e Apple suggerisce di iniziare. Nella parte restante di questa sezione vengono illustrati gli argomenti pratici dell'API seguenti:
 
 - Salvataggio di un record.
 - Recupero di un record.
 - Aggiornamento di un record.
-
 
 ### <a name="common-setup-code"></a>Codice di installazione comune
 
@@ -394,7 +386,6 @@ Tre aspetti da considerare sul codice sopra riportato:
 1. La chiamata è asincrona e fornisce una routine di callback al completamento della chiamata, in caso di esito positivo o negativo. Se la chiamata ha esito negativo, verrà visualizzato un messaggio di errore.
 1. CloudKit non fornisce archiviazione/persistenza locale; si tratta solo di un supporto di trasferimento. Quindi, quando viene effettuata una richiesta di salvataggio di un record, quest'operazione viene inviata immediatamente ai server iCloud.
 
-
 > [!NOTE]
 > A causa della natura "lossale" delle comunicazioni di rete mobile, in cui le connessioni vengono costantemente eliminate o interrotte, una delle prime considerazioni che lo sviluppatore deve apportare quando si lavora con CloudKit è la gestione degli errori.
 
@@ -458,7 +449,6 @@ Maggiore è la popolarità di un'applicazione, maggiore è il numero di dati nel
 - Le **visualizzazioni client possono cambiare** : poiché ogni utente dispone di preferenze diverse, la sezione dei dati visualizzati può variare da utente a utente e la visualizzazione singola di una determinata sezione può essere diversa.
 - **Il client usa le query per concentrare il punto di vista** : le query consentono all'utente di visualizzare un piccolo subset di un set di dati più grande esistente all'interno del cloud.
 
-
 ### <a name="queries"></a>Query
 
 Come indicato in precedenza, le query consentono allo sviluppatore di selezionare un piccolo subset del set di dati più grande esistente nel cloud. Le query vengono esposte nel Framework CloudKit `CKQuery` tramite la classe.
@@ -468,7 +458,6 @@ Una query combina tre elementi diversi: un tipo di record `RecordType`(), un pre
 #### <a name="supported-predicates"></a>Predicati supportati
 
 CloudKit supporta i tipi seguenti di `NSPredicates` quando si utilizzano le query:
-
 
 1. Record corrispondenti in cui il nome è uguale a un valore archiviato in una variabile:
 
@@ -506,8 +495,6 @@ CloudKit supporta i tipi seguenti di `NSPredicates` quando si utilizzano le quer
     ```csharp
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
-
-
 
 #### <a name="creating-queries"></a>Creazione di query
 
@@ -551,7 +538,6 @@ Il modo in cui si pensa alle query è che si tratta di polling e sono molto inte
 - Non sono valide per il traffico di rete.
 - L'esperienza utente non è valida perché le informazioni visualizzate sono limitate dalla frequenza con cui l'applicazione esegue il polling del database. Attualmente gli utenti prevedono notifiche push quando qualcosa viene modificato.
 
-
 ### <a name="subscriptions"></a>Sottoscrizioni
 
 Quando si gestiscono set di impostazioni di grandi dimensioni, per la maggior parte statici, la query non deve essere eseguita sul dispositivo client, ma deve essere eseguita sul server per conto del client. La query deve essere eseguita in background e deve essere eseguita dopo il salvataggio di ogni singolo record, indipendentemente dal fatto che il dispositivo corrente o un altro dispositivo tocchi lo stesso database.
@@ -576,7 +562,6 @@ Il grafico precedente Mostra il processo di sottoscrizione tipico come segue:
 3. Un secondo dispositivo crea un nuovo record e lo salva nel database.
 4. Il database esegue la ricerca nell'elenco di sottoscrizioni per verificare se il nuovo record corrisponde a una delle condizioni.
 5. Se viene rilevata una corrispondenza, la notifica push viene inviata al dispositivo che ha registrato la sottoscrizione con le informazioni sul record che ne ha causato l'attivazione.
-
 
 Con queste informazioni, verrà ora esaminata la creazione di sottoscrizioni in un'applicazione Novell iOS 8.
 
@@ -662,7 +647,6 @@ CloudKit fornisce le informazioni utente seguenti allo sviluppatore:
 - **Metadati** : la possibilità di salvare e recuperare informazioni sugli utenti.
 - **Privacy** : tutte le informazioni sono gestite in una residenza privata consapevole. Nessun elemento viene esposto, a meno che l'utente non lo abbia accettato.
 - **Individuazione** : consente agli utenti di individuare i propri amici che usano la stessa applicazione.
-
 
 Successivamente, questi argomenti vengono esaminati in dettaglio.
 
@@ -755,12 +739,10 @@ Per riepilogare, sono disponibili tre tipi diversi di input per l'individuazione
 - **Indirizzo di posta elettronica dell'utente** : l'utente può specificare un indirizzo di posta elettronica e può essere usato per l'individuazione.
 - **Contact Book** : la rubrica dell'utente può essere usata per individuare gli utenti dell'applicazione che hanno lo stesso indirizzo di posta elettronica elencato nei contatti.
 
-
 L'individuazione utente restituirà le informazioni seguenti:
 
 - **ID record utente** : ID univoco di un utente nel database pubblico.
 - **Nome e cognome** : archiviati nel database pubblico.
-
 
 Queste informazioni verranno restituite solo per gli utenti che hanno optato per l'individuazione.
 
@@ -812,7 +794,6 @@ Prima di distribuire l'applicazione, lo sviluppatore può eseguire la migrazione
 
 > [!NOTE]
 > Il simulatore iOS funziona solo con l' **ambiente di sviluppo**. Quando lo sviluppatore è pronto per testare un'applicazione in un **ambiente di produzione**, è necessario un dispositivo iOS fisico.
-
 
 ## <a name="shipping-a-cloudkit-enabled-app"></a>Spedizione di un'app abilitata per CloudKit
 
@@ -873,7 +854,6 @@ I casi d'uso seguenti dovrebbero aiutare gli sviluppatori a decidere quando usar
 - **unità iCloud** : basata sulle API dei documenti iCloud esistenti e fornisce un'API semplice per sincronizzare i dati non strutturati dal file System. Fornisce una cache offline completa su Mac OS X ed è ideale per le applicazioni incentrate sui documenti.
 - **iCloud Core Data** : consente la replica dei dati tra tutti i dispositivi dell'utente. I dati sono un utente singolo ed è ideale per mantenere sincronizzati i dati strutturati e privati.
 - **CloudKit** : fornisce dati pubblici sia struttura che bulk ed è in grado di gestire sia set di dati di grandi dimensioni che file non strutturati di grandi dimensioni. Il relativo oggetto è associato all'account iCloud dell'utente e fornisce il trasferimento dati diretto del client.
-
 
 Tenendo presenti questi casi d'uso, lo sviluppatore deve scegliere la tecnologia iCloud corretta per fornire la funzionalità dell'applicazione richiesta corrente e garantire una scalabilità adeguata per la crescita futura.
 

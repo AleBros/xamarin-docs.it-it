@@ -7,31 +7,30 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: 65f7c6d8a573501ffec4aa1b8eaf28ff1e6479e8
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: c175c533e437736849eac6be1f4a90a783123812
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864229"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757141"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Il file Android Resource.designer.cs non verrà aggiornato
 
 > [!NOTE]
-> Questo problema è stato risolto in Xamarin Studio 5.1.4 e versioni successive. Tuttavia, se il problema si verifica in Visual Studio per Mac, inviare un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) il completo controllo delle versioni delle informazioni e full output del log di compilazione.
+> Questo problema è stato risolto in Xamarin Studio 5.1.4 e versioni successive. Tuttavia, se il problema si verifica in Visual Studio per Mac, inviare un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
 
-Un bug nella versione 5.1 di xamarin Studio in precedenza danneggiato file con estensione csproj, completamente o parzialmente eliminando il codice xml nel file con estensione csproj. Questa situazione provocherebbe importante sistema (ad esempio, l'aggiornamento di Android Resource.designer.cs) di compilazione di parti di Android per avere esito negativo. Al momento della stesura di 5.1.4 stabile versione 15 luglio, questo bug è stato risolto; ma in molti casi è necessario ripristinare manualmente, come illustrato di seguito il file di progetto.
+Un bug in Novell. Studio 5,1 danneggiava in precedenza i file. csproj eliminando parzialmente o completamente il codice XML nel file con estensione csproj. In questo modo, le parti importanti del sistema di compilazione Android, ad esempio l'aggiornamento di Android Resource.designer.cs, avranno esito negativo. A partire dalla versione stabile di 5.1.4 il 15 luglio, questo bug è stato risolto. in molti casi, tuttavia, il file di progetto deve essere ripristinato manualmente, come descritto di seguito.
 
+## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Due possibili approcci per la correzione del file di progetto
 
-## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Due possibili approcci per correggere il file di progetto
+**Uno**
 
-**Entrambi:**
-
-1. Creare un nuovo progetto di applicazione xamarin. Android, è possibile impostare tutte le proprietà di progetto in modo che corrisponda il progetto precedente e aggiungere tutte le risorse, eseguire il file di origine e così via nel progetto.
+1. Creare un nuovo progetto di applicazione Novell. Android, impostare tutte le proprietà del progetto in modo che corrispondano al progetto precedente e aggiungere tutte le risorse, i file di origine e così via nel progetto.
 
    **OPPURE**
 
-2. Creare una copia di backup di file con estensione csproj del progetto originale, quindi aprirlo in un editor di testo e aggiungere di nuovo gli elementi mancanti da un file con estensione csproj normalmente generato.
+2. Eseguire una copia di backup del file con estensione csproj del progetto originale, aprirlo in un editor di testo e aggiungere di nuovo gli elementi mancanti da un file con estensione csproj generato in modo corretto.
 
-### <a name="if-this-does-not-solve-the-problem"></a>Se non viene risolto il problema
+### <a name="if-this-does-not-solve-the-problem"></a>Se il problema persiste,
 
-Dopo qualche esperimento con questi elementi, è possibile notare che dopo l'aggiunta nuovamente gli elementi e ricompilare il progetto, il file Resource.designer.cs aggiornerebbero, quindi potrebbe ancora essere necessario chiudere e riaprire la soluzione per ottenere il completamento del codice per riconoscere i nuovi tipi di contenuto in Resource.designer.cs. 
+Dopo aver sperimentato questi elementi, è possibile notare che dopo l'aggiunta degli elementi e la ricompilazione del progetto, il file Resource.designer.cs viene aggiornato, ma potrebbe essere comunque necessario chiudere e riaprire la soluzione per ottenere il completamento del codice da riconoscere nuovi tipi contenuti in Resource.designer.cs. 

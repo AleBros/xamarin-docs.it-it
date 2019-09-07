@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118918"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751926"
 ---
-# <a name="contributing"></a>Contributo
+# <a name="contributing"></a>Contributi al codice
 
 Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione di Xamarin.
 
@@ -32,10 +32,8 @@ Per applicare correzioni e aggiornamenti minori, è possibile fare clic sul puls
 
 6. Dopo aver applicato il feedback e se le modifiche sono corrette, i responsabili eseguiranno il merge della richiesta pull. La richiesta verrà visualizzata in docs.microsoft.com poco dopo.
 
-
 > [!NOTE]
 > Se la richiesta pull tratta un problema esistente, aggiungere la parola chiave `Fixes #Issue_Number` al messaggio di commit o alla descrizione della richiesta pull, in modo che il problema possa essere automaticamente chiuso quando viene eseguito il merge della richiesta pull. Per altre informazioni vedere l'argomento relativo alla [chiusura di problemi tramite i messaggi di commit](https://help.github.com/articles/closing-issues-via-commit-messages/).
-
 
 ### <a name="big-changes-or-new-content"></a>Modifiche importanti o nuovi contenuti
 
@@ -80,5 +78,3 @@ Di seguito è riportato un breve elenco di regole che è necessario tenere prese
 
 > [!NOTE]
 > Si potrebbe notare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](contributing-guidelines/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito. 
-
-

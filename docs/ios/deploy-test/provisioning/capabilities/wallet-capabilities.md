@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 8afe9e703d357c246ec46756a87a7337859d5888
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1844136bb62930341cf00ec871fdd2ff8ff8fe1f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287020"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762732"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Funzionalità Portafoglio in Xamarin.iOS
 
@@ -54,13 +54,12 @@ Questo ID app può ora essere usato per generare o rigenerare un nuovo profilo d
 
 ![Uso del nuovo ID app per creare un profilo di provisioning](wallet-capabilities-images/image20.png)
 
-
 Per altre informazioni sull'uso di Portafoglio, vedere le guide seguenti:
 
 * [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit)
- 
+
 ## <a name="next-steps"></a>Fasi successive
- 
+
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 
 * Usare lo spazio dei nomi del framework nell'app.

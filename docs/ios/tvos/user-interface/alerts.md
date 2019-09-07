@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2578272dcd38399f23f2aac67503ea4e1b09a027
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291117"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769070"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Uso degli avvisi tvOS in Novell
 
@@ -361,14 +361,11 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 #endregion
 ```
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha spiegato come usare `UIAlertController` per visualizzare un messaggio di avviso all'utente in Novell. tvOS. In primo luogo, è stato illustrato come visualizzare un semplice avviso e aggiungere pulsanti. Successivamente, è stato illustrato come aggiungere campi di testo a un avviso. Infine, è stato illustrato come utilizzare una classe helper per ridurre la quantità di codice ripetitivo necessario per visualizzare un avviso.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

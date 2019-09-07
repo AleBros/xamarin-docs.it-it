@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: 77cd5ac86a24769947eefb6941229c56efc3297b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fa1fb0656384455322a2d0a3562fc0ee3ca52397
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757606"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Denominazione di parametri con javadoc
 
 _Questo articolo illustra come ripristinare i nomi dei parametri in un progetto di associazione Java usando Javadoc generato dal progetto Java._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -35,12 +34,9 @@ L'integrazione di javadoc HTML in un progetto di associazione Java è un process
 
 Al termine di questa operazione, i nomi di parametro Java originali dovrebbero essere presenti nelle API vincolate da un progetto di associazione Java. 
 
-
 > [!NOTE]
 > L'output di JavaDoc presenta una grande quantità di varianza. Il. La regola di associazione JAR non supporta tutte le possibili permutazioni e di conseguenza è possibile che alcuni parametri non siano denominati correttamente.
-
 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come usare Javadoc in un progetto di associazione Java per fornire nomi di parametro significativi per le API di associazione. 
-

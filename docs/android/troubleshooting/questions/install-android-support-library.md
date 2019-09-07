@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: a43a2ed4498be76a99ab4b6b54d3048f2f80af5c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 107fcd39a64ef1d7758d211ab47a07e1ece52f4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887650"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757233"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Come si possono installare manualmente le librerie di supporto Android necessarie per i pacchetti Xamarin.Android.Support?
 
@@ -127,7 +127,6 @@ Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non
 
 -----
 
-
 ## <a name="additional-references"></a>Altri riferimenti
 
 - [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) – non accurato "download non riuscito. Scaricarlo {0} e inserirlo {1} nella directory ". e "installare il pacchetto:'{0}' disponibile nel programma di installazione dell'SDK" messaggi di errore correlati a Novell. Android. Support Packages
@@ -137,4 +136,3 @@ Il numero di versione per la sottodirectory (**23.4.0.0** in questo esempio) non
 In questo documento viene illustrato il comportamento corrente a partire dal 2016 agosto. La tecnica descritta in questo documento non fa parte del gruppo di test stabili per Novell, quindi potrebbe interrompersi in futuro.
 
 Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario .
-

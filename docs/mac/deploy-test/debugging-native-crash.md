@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: bb33d9f85dfc1215e91caa20fab3800645e13111
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282179"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769876"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Debug di un arresto anomalo nativo in un app Xamarin.Mac
 
@@ -251,4 +251,3 @@ Non è mai consigliabile consentire a un'eccezione C# di "eludere" il codice ges
 Senza perdersi nei motivi tecnici, la configurazione dell'infrastruttura per intercettare le eccezioni gestite in ogni limite gestito/nativo è piuttosto costosa e in molte operazioni comuni è presente un _numero elevato_ di transizioni. Molte operazioni, in particolare quelle che coinvolgono il thread dell'interfaccia utente devono terminare rapidamente per evitare lo stuttering dell'app e livelli di prestazioni inaccettabili. Molti di tali callback eseguono operazioni molto semplici che di rado possono generare eccezioni, quindi questo sovraccarico sarebbe costoso e inutile in tali casi.
 
 Tali istruzioni try/catch non sono quindi state configurate. Nei casi in cui il codice esegue operazioni non semplici (più complesse, ad esempio, della restituzione di un valore booleano o di una semplice operazione matematica), è possibile inserire manualmente un'istruzione try catch. 
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4f1f1333c35a72e7243e892e7aac8d98603c973
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287248"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772593"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Strutturare le visualizzazioni in Novell. Mac
 
@@ -447,7 +447,6 @@ Se si desidera consentire all'utente di selezionare una singola riga, fare doppi
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-
 Modificare quindi il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
 
 ```csharp
@@ -469,7 +468,6 @@ Se si desidera consentire all'utente di selezionare più righe, fare doppio clic
 [![](outline-view-images/select02.png "Controllo attribute")](outline-view-images/select02.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
-
 
 Modificare quindi il `ProductOutlineDelegate.cs` file e aggiungere il metodo seguente:
 

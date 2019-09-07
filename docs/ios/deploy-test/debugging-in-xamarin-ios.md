@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a307641b466eae680c8eb43c1b8fff7623195cde
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8a1a110bf1ff021c3280e19dea777180d71dba1a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283087"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763366"
 ---
 # <a name="debugging-xamarinios-apps"></a>Debug di app Xamarin.iOS
 
 _È possibile eseguire il debug delle applicazioni Xamarin.iOS con il debugger predefinito in Visual Studio per Mac o in Visual Studio._
 
 Usare il supporto di debug nativo di Visual Studio per Mac per eseguire il debug del codice C# e di altri linguaggi gestiti e usare [LLDB](http://lldb.llvm.org/tutorial.html) quando è necessario eseguire il debug di codice C, C++ o Objective C che potrebbe venire collegato al progetto Xamarin.iOS.
-
 
 > [!NOTE]
 > Quando si compilano applicazioni in modalità di debug, Xamarin.iOS genererà applicazioni più lente e di dimensioni di gran lunga superiori perché ogni riga di codice deve essere instrumentata. Prima del rilascio, assicurarsi di creare una compilazione di rilascio.
@@ -49,13 +48,13 @@ Quando si è pronti per avviare il debug dell'applicazione, il primo passaggio d
 [![](debugging-in-xamarin-ios-images/image0a.png "Riquadro Punti di interruzione")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  Se il riquadro Punti di interruzione non viene visualizzato automaticamente, è possibile renderlo visibile selezionando _Visualizza > Debug Windows (Finestre di debug) > Punti di interruzione_
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/image0.png "Riquadro Punti di interruzione")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  Se il riquadro Punti di interruzione non viene visualizzato automaticamente, è possibile renderlo visibile selezionando _Debug > Finestre > Punti di interruzione_
- 
+
 -----
 
 Prima di iniziare il debug di un'applicazione, assicurarsi sempre che la configurazione sia impostata su **Debug**, perché contiene un utile set di strumenti per supportare il debug, ad esempio i punti di interruzione, l'uso dei visualizzatori di dati e la visualizzazione dello stack di chiamate:
@@ -85,8 +84,6 @@ Per avviare il debug, selezionare il dispositivo di destinazione o un altro stru
 
 -----
 
-
-
 Distribuire quindi l'applicazione premendo il pulsante **Esegui**.
 
 Quando si raggiunge un punto di interruzione, il codice viene evidenziato in giallo:
@@ -105,7 +102,6 @@ A questo punto, è possibile usare strumenti di debug, ad esempio per esaminare 
 
 Per impostare un punto di interruzione condizionale, accedere alla **finestra Proprietà punto di interruzione** in uno dei due modi seguenti:
 
-
 - Per aggiungere un nuovo punto di interruzione condizionale, fare clic con il pulsante destro del mouse sul margine dell'editor, a sinistra del numero di riga per il codice in cui si vuole impostare il punto di interruzione, e quindi scegliere Nuovo punto di interruzione:
 
   [![](debugging-in-xamarin-ios-images/image4.png "Selezionare Nuovo punto di interruzione")](debugging-in-xamarin-ios-images/image4.png#lightbox)
@@ -113,7 +109,6 @@ Per impostare un punto di interruzione condizionale, accedere alla **finestra Pr
 - Per aggiungere una condizione a un punto di interruzione, fare clic con il pulsante destro del mouse sul punto di interruzione e scegliere **Proprietà punto di interruzione** o selezionare il pulsante Proprietà, mostrato di seguito, nel **riquadro Punti di interruzione**:
 
   [![](debugging-in-xamarin-ios-images/image5.png "Riquadro Punti di interruzione")](debugging-in-xamarin-ios-images/image5.png#lightbox)
-
 
 È quindi possibile immettere la condizione in base alla quale deve essere aggiunto il punto di interruzione:
 
@@ -199,7 +194,6 @@ Questo debugger soft richiede uno schema di debug cooperativo quando è in esecu
 
 <a name="Accessing_the_Console" />
 
-
 ## <a name="accessing-the-console"></a>Accesso alla console
 
 I log di arresto anomalo del sistema e l'output della classe Console verranno inviati alla console dell'iPhone. È possibile accedere a questa console con Xcode usando l'"Organizer" e selezionando il dispositivo dall'organizer.
@@ -212,7 +206,6 @@ Per gli utenti di Visual Studio, sono disponibili alcuni log nella finestra Outp
 
 <a name="Debugging_Mono's_Class_Libraries" />
 
-
 ## <a name="debugging-monos-class-libraries"></a>Debug di librerie di classi di Mono
 
 Xamarin.iOS viene fornito con il codice sorgente per le librerie di classi di Mono, che può essere usato per eseguire istruzioni passo a passo dal debugger e visualizzare il funzionamento sottostante.
@@ -220,7 +213,6 @@ Xamarin.iOS viene fornito con il codice sorgente per le librerie di classi di Mo
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Poiché questa funzionalità usa più memoria durante il debug, è disattivata per impostazione predefinita.
-
 
 Per abilitare questa funzionalità, verificare che l'opzione **Esegui solo il debug del codice del progetto senza eseguire l'istruzione nel codice del framework** sia deselezionata nel menu _Visual Studio per Mac > Preferenze > Debugger_, come illustrato sotto:
 
@@ -235,7 +227,6 @@ Per eseguire il debug delle librerie di classi in Visual Studio, è necessario d
 -----
 
 Dopo avere eseguito questa operazione, è possibile avviare l'applicazione ed eseguire le istruzioni una alla volta di una delle librerie di classi principali di Mono.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

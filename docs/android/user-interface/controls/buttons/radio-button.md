@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c1dabfcd481dccf50075c02c54019ee27499769f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510360"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758818"
 ---
 # <a name="radiobutton"></a>RadioButton
 
@@ -19,8 +19,7 @@ In questa sezione verranno creati due pulsanti di opzione a esclusione reciproca
 e[`RadioButton`](xref:Android.Widget.RadioButton)
 widget. Quando viene premuto uno di questi pulsanti, viene visualizzato un messaggio di avviso popup.
 
-
-Aprire il file resources **/layout/Main. aXML** e [`RadioButton`](xref:Android.Widget.RadioButton)aggiungere due oggetti, nidificati in [`LinearLayout`](xref:Android.Widget.LinearLayout)un [`RadioGroup`](xref:Android.Widget.RadioGroup) (all'interno di):
+Aprire il file **Resources/layout/Main. aXML** e [`RadioButton`](xref:Android.Widget.RadioButton)aggiungere due oggetti, nidificati in [`LinearLayout`](xref:Android.Widget.LinearLayout)un [`RadioGroup`](xref:Android.Widget.RadioGroup) (all'interno di):
 
 ```xml
 <RadioGroup

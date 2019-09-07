@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283323"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770150"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-progettazione dell'interfaccia utente in Novell. Mac
 
@@ -45,7 +45,6 @@ Per passare a una finestra Xibless per un'applicazione, eseguire le operazioni s
 A questo punto è necessario modificare il file **MainWindow.cs** per definire il layout della finestra e modificare il file **ViewController.cs** o **MainWindowController.cs** per `MainWindow` creare un'istanza della classe poiché non si sta più usando. storyboard o file XIB.
 
 Le app Novell. Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**Aggiungi** > **nuovo file...** Classe vuotaGenerale > ) e denominarla come il file mancante.  > 
-
 
 ### <a name="defining-the-window-in-code"></a>Definizione della finestra nel codice
 
@@ -178,7 +177,6 @@ Poiché MacOS non dispone di un elemento dell'interfaccia utente di _etichetta_ 
 
 Anche `NSTextField` in questo `ContentView.AddSubview (ClickMeLabel)` caso, il metodo aggiunge alla visualizzazione contenuto in modo che venga visualizzato sullo schermo quando viene eseguita l'applicazione e la finestra viene aperta.
 
-
 ### <a name="adjusting-the-window-controller"></a>Regolazione del controller della finestra
 
 Poiché la progettazione del `MainWindow` non viene più caricata da un file con estensione storyboard o XIB, è necessario apportare alcune modifiche al controller della finestra. Modificare il file **MainWindowController.cs** e renderlo simile al seguente:
@@ -268,7 +266,6 @@ Window.AwakeFromNib ();
 
 Ciò consentirà di eseguire il codice in base alla finestra come una finestra standard caricata da un file con estensione storyboard o XIB.
 
-
 ### <a name="displaying-the-window"></a>Visualizzazione della finestra
 
 Se il file con estensione storyboard o XIB è stato rimosso e i file **MainWindow.cs** e **MainWindowController.cs** sono stati modificati, si userà la finestra Analogamente a qualsiasi finestra normale che era stata creata nel Interface Builder di Xcode con un file con estensione XIB.
@@ -287,7 +284,6 @@ A questo punto, se l'applicazione viene eseguita e il pulsante ha fatto clic su 
 
 ![Esecuzione di un'app di esempio](xibless-ui-images/run01.png "Esecuzione di un'app di esempio")
 
-
 ## <a name="adding-a-code-only-window"></a>Aggiunta di una finestra solo codice
 
 Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Novell. Mac esistente, fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi** > **nuovo file.** Nella finestra di dialogo **nuovo file** scegliere **Novell. Mac** > **Cocoa con controller**, come illustrato di seguito:
@@ -295,7 +291,6 @@ Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Novell
 ![Aggiunta di un nuovo controller di finestra](xibless-ui-images/add01.png "Aggiunta di un nuovo controller di finestra")
 
 Esattamente come in precedenza, il file default. Storyboard o. xib verrà eliminato dal progetto (in questo caso **SecondWindow. xib**) e seguirà i passaggi nella sezione [passaggio a una finestra per utilizzare il codice](#Switching_a_Window_to_use_Code) precedente per coprire la definizione della finestra nel codice.
-
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>Aggiunta di un elemento dell'interfaccia utente a una finestra nel codice
 
@@ -309,7 +304,6 @@ MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
 Il codice precedente crea un nuovo `NSButton` oggetto e lo aggiunge all' `MyWindow` istanza della finestra per la visualizzazione. In pratica, qualsiasi elemento dell'interfaccia utente che può essere definito in Interface Builder di Xcode in un file con estensione storyboard o XIB può essere creato nel codice e visualizzato in una finestra.
-
 
 ## <a name="defining-the-menu-bar-in-code"></a>Definizione della barra dei menu nel codice
 
@@ -359,12 +353,9 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Il codice precedente crea un menu della barra di stato dal codice e lo Visualizza quando viene avviata l'applicazione. Per ulteriori informazioni sull'utilizzo dei menu, consultare la documentazione relativa ai [menu](~/mac/user-interface/menu.md) .
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato in modo dettagliato la creazione di un'interfaccia utente dell'applicazione Novell. Mac C# nel codice anziché l'uso di Interface Builder di Xcode con i file. Storyboard o. xib.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

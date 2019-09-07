@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 76733d4efd4ce292da2781c97aef963fb68e3974
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287865"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768185"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilizzo del thread dell'interfaccia utente in Novell. iOS
 
@@ -40,7 +40,6 @@ Durante il debug delle applicazioni Novell. iOS, viene generato un errore se il 
 
  <a name="Background_Thread_Example" />
 
-
 ## <a name="background-thread-example"></a>Esempio di thread in background
 
 Di seguito è riportato un esempio che tenta di accedere a un controllo dell' `UILabel`interfaccia utente (a) da un thread in background utilizzando un semplice thread:
@@ -64,7 +63,6 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 Non è necessario usarlo per il resto degli esempi in questo documento, ma è importante ricordare quando l'app esegue richieste di rete, usa il centro notifiche o altri metodi che richiedono un gestore di completamento che verrà eseguito su un altro thread.
 
  <a name="Async_Await_Example" />
-
 
 ## <a name="asyncawait-example"></a>Esempio di async/await
 
@@ -92,7 +90,6 @@ async partial void button2_TouchUpInside (UIButton sender)
 ```
 
 Se un metodo asincrono viene chiamato da un thread in background (non dal thread principale dell'interfaccia `InvokeOnMainThread` utente), sarà comunque necessario.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

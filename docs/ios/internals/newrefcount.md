@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 8b1b82a1707a4aa58ef1e3dadbaeb79ada1ad6a1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291877"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753350"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Nuovo sistema di conteggio dei riferimenti in Novell. iOS
 
@@ -46,10 +46,8 @@ Si noti che queste opzioni sono state rimosse nelle versioni più recenti di Vis
 
  La nuova estensione per il conteggio dei riferimenti è obbligatoria per l'API unificata e deve essere abilitata per impostazione predefinita. Le versioni precedenti dell'IDE potrebbero non avere questo valore selezionato automaticamente e potrebbe essere necessario effettuare un controllo manualmente.
 
-
 > [!IMPORTANT]
 > Una versione precedente di questa funzionalità è stata aggirata rispetto a MonoTouch 5,2 ma era disponibile solo per **SGen** come anteprima sperimentale. Questa nuova versione migliorata è ora disponibile anche per la Garbage Collector di **Boehm** .
-
 
 Storicamente sono presenti due tipi di oggetti gestiti da Novell. iOS: quelli che sono semplicemente un wrapper per un oggetto nativo (oggetti peer) e quelli che hanno esteso o incorporato nuove funzionalità (oggetti derivati), in genere mantenendo lo stato in memoria aggiuntivo. In precedenza era possibile che venisse migliorato un oggetto peer con lo stato (ad esempio aggiungendo un C# gestore eventi), ma che si lascia che l'oggetto venga senza riferimenti e quindi raccolto. Questo potrebbe causare un arresto anomalo in un secondo momento, ad esempio se il runtime di Objective-C ha richiamato l'oggetto gestito.
 

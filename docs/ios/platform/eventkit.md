@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 960be485f6997ed8c861d47181fa89397cff9c0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291529"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753155"
 ---
 # <a name="eventkit-in-xamarinios"></a>EventKit in Novell. iOS
 
@@ -24,7 +24,6 @@ In questa guida verranno illustrate le operazioni seguenti:
 
 - **Nozioni di base su EventKit** : in questo modo si introdurranno le parti fondamentali di EventKit tramite le classi principali e ne viene fornita una conoscenza sul loro utilizzo. Questa sezione è obbligatoria per la lettura prima di affrontare la parte successiva del documento. 
 - **Attività comuni** : la sezione attività comuni è concepita come riferimento rapido su come eseguire operazioni comuni, ad esempio. l'enumerazione dei calendari, la creazione, il salvataggio e il recupero di eventi e promemoria del calendario, nonché l'utilizzo dei controller predefiniti per la creazione e la modifica di eventi del calendario. Questa sezione non deve essere letta in primo piano perché è concepita come riferimento per determinate attività. 
-
 
 Tutte le attività di questa guida sono disponibili nell'applicazione di esempio complementare:
 
@@ -376,7 +375,6 @@ App.Current.EventStore.FetchReminders (
 ## <a name="summary"></a>Riepilogo
 
 Questo documento ha fornito una panoramica dei componenti importanti del Framework EventKit e di alcune delle attività più comuni. Tuttavia, il Framework EventKit è molto grande e potente e include funzionalità che non sono state introdotte in questo argomento, ad esempio aggiornamenti batch, configurazione degli allarmi, configurazione della ricorrenza sugli eventi, registrazione e ascolto delle modifiche nel database Calendar, impostazione di geobarriere e altro ancora.  Per ulteriori informazioni, vedere la [Guida alla programmazione del calendario e dei promemoria](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)di Apple.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

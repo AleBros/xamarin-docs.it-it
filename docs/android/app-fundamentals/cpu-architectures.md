@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 16e805488969aadb0d0b8aa5c892248b7fa403c9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59047b8564db6415ea3c47d7dcb72b5d0c66d1dd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521214"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755582"
 ---
 # <a name="cpu-architectures"></a>Architetture CPU
 
@@ -22,7 +22,6 @@ _Novell. Android supporta diverse architetture della CPU, inclusi i dispositivi 
 
 Quando si prepara l'app per il rilascio, è necessario specificare le architetture CPU della piattaforma supportate dall'app. Un singolo APK può contenere codice macchina per supportare più architetture diverse. Ogni raccolta di codice specifico per l'architettura è associata a un'interfaccia ABI ( *Application Binary Interface* ). Ogni ABI definisce il modo in cui il codice macchina dovrebbe interagire con Android in fase di esecuzione.
 Per altre informazioni sul funzionamento, vedere [dispositivi &amp; multicore Novell. Android](~/android/deploy-test/multicore-devices.md).
-
 
 ## <a name="how-to-specify-supported-architectures"></a>Come specificare le architetture supportate
 
@@ -43,7 +42,6 @@ In Visual Studio per Mac individuare il progetto nel riquadro della **soluzione*
 [![Selezione di ARMEABI e ARMEABI-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 Xamarin.Android supporta le architetture seguenti:
 

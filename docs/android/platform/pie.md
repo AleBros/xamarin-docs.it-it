@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 52141141ab525c7407fa2f3ff2dca749473b39c1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: 6475cd0f27e41321902b57dd28f59bfb250e0c8f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511446"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757455"
 ---
 # <a name="android-pie-features"></a>Funzionalità a torta Android
 
@@ -69,7 +69,7 @@ Per creare un progetto con Novell. Android 9,0, è necessario prima di tutto usa
 
     [![Impostazione del repository su Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
-3. Installare i pacchetti **Android Pie** SDK, elencati come **Android SDK Platform 28** nella scheda Platforms (per altre informazioni sull'uso di SDK Manager, vedere [Android SDK installazione](~/android/get-started/installation/android-sdk.md)):
+3. Installare i pacchetti **Android Pie** SDK, elencati come **Android SDK Platform 28** nella scheda **Platforms** (per altre informazioni sull'uso di SDK Manager, vedere [Android SDK installazione](~/android/get-started/installation/android-sdk.md)):
 
     [![Installazione dei pacchetti di torta Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
@@ -81,7 +81,6 @@ Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo svilu
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 9,0 o versione successiva. Ad esempio, per fare riferimento al progetto per la torta Android, è necessario configurare il livello API Android di destinazione del progetto su **android 9,0** (API 28). Si consiglia inoltre di impostare il livello di Framework di destinazione sull'API 28 o versione successiva. Per altre informazioni sulla configurazione dei livelli API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
-
 ### <a name="configure-a-device-or-emulator"></a>Configurare un dispositivo o un emulatore
 
 Se si usa un dispositivo fisico, ad esempio un Nexus o un pixel, è possibile aggiornare il dispositivo alla torta Android seguendo le istruzioni in [Immagini Factory per i dispositivi Nexus e pixel](https://developers.google.com/android/images).
@@ -89,37 +88,34 @@ Se si usa un dispositivo fisico, ad esempio un Nexus o un pixel, è possibile ag
 Se si usa un emulatore, creare un dispositivo virtuale per il livello API 28 e selezionare un'immagine basata su x86. Per informazioni sull'utilizzo del Android Device Manager per creare e gestire i dispositivi virtuali, vedere [gestione di dispositivi virtuali con il Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Per informazioni sull'uso dell'emulatore Android per il test e il debug, vedere [debug nella emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-
-
 ## <a name="new-features"></a>Nuove funzionalità
 
 Android Pie introduce un'ampia gamma di nuove funzionalità. Alcune di queste nuove funzionalità sono destinate a sfruttare le nuove funzionalità hardware offerte dai dispositivi Android più recenti, mentre altre sono progettate per migliorare ulteriormente l'esperienza utente di Android:
 
--   **Visualizza supporto ritaglio** Fornisce le API per trovare la posizione e la forma del ritaglio nella parte superiore dello schermo nei dispositivi Android più recenti. &ndash;
+- **Visualizza supporto ritaglio** Fornisce le API per trovare la posizione e la forma del ritaglio nella parte superiore dello schermo nei dispositivi Android più recenti. &ndash;
 
--   **Miglioramenti delle notifiche** I messaggi di notifica possono ora visualizzare immagini e una `Person` nuova classe viene utilizzata per semplificare i partecipanti alla conversazione. &ndash;
+- **Miglioramenti delle notifiche** I messaggi di notifica possono ora visualizzare immagini e una `Person` nuova classe viene utilizzata per semplificare i partecipanti alla conversazione. &ndash;
 
--   **Posizionamento interno** &ndash; Supporto della piattaforma per il protocollo di round trip Wi-Fi, che consente alle app di usare i dispositivi Wi-Fi per la navigazione nelle impostazioni interne.
+- **Posizionamento interno** &ndash; Supporto della piattaforma per il protocollo di round trip Wi-Fi, che consente alle app di usare i dispositivi Wi-Fi per la navigazione nelle impostazioni interne.
 
--   **Supporto di più fotocamere** &ndash; Offre la possibilità di accedere ai flussi simultaneamente da più fotocamere fisiche, ad esempio fotocamere Dual-front e Dual-back.
-
+- **Supporto di più fotocamere** &ndash; Offre la possibilità di accedere ai flussi simultaneamente da più fotocamere fisiche, ad esempio fotocamere Dual-front e Dual-back.
 
 Le sezioni seguenti evidenziano queste funzionalità e forniscono brevi esempi di codice che consentono di iniziare a usarle nell'app.
 
 ### <a name="display-cutout-support"></a>Visualizza supporto ritaglio
 
-Molti dispositivi Android più recenti con schermi Edge-to-Edge hanno un ritaglio di *visualizzazione* (o "Notch") nella parte superiore dello schermo per la fotocamera e il relatore.
+Molti dispositivi Android più recenti con schermi Edge-to-Edge hanno un *ritaglio di visualizzazione* (o "Notch") nella parte superiore dello schermo per la fotocamera e il relatore.
 Lo screenshot seguente fornisce un esempio di un emulatore di ritaglio:
 
 [![Emulatore Android che simula un ritaglio](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Per gestire il modo in cui la finestra dell'app Visualizza il contenuto nei dispositivi con un ritaglio di visualizzazione, Android Pie ha aggiunto un nuovo attributo di layout della finestra [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) . Questo attributo può essere impostato su uno dei valori seguenti:
 
--   [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; La finestra non può mai sovrapporsi all'area di ritaglio.
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; La finestra non può mai sovrapporsi all'area di ritaglio.
 
--   [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; È possibile estendere la finestra nell'area di ritaglio ma solo sui bordi corti dello schermo. 
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; È possibile estendere la finestra nell'area di ritaglio ma solo sui bordi corti dello schermo. 
 
--   [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; Se il ritaglio è contenuto all'interno di una barra di sistema, è possibile estendere la finestra nell'area di ritaglio.
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; Se il ritaglio è contenuto all'interno di una barra di sistema, è possibile estendere la finestra nell'area di ritaglio.
 
 Ad esempio, per impedire che la finestra dell'app si sovrappongano con l'area di ritaglio, impostare la modalità di ritaglio del layout su *mai*: 
 
@@ -137,21 +133,19 @@ Si noti che lo sfondo bianco dell'app non può estendersi all'area ritaglio visu
 
 Se sono necessarie informazioni più dettagliate sull'area di ritaglio sul dispositivo, è possibile usare la nuova classe [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout`rappresenta l'area della visualizzazione che non può essere utilizzata per visualizzare il contenuto. È possibile usare queste informazioni per recuperare la posizione e la forma del ritaglio in modo che l'app non tenti di visualizzare il contenuto in questa area non funzionale.
 
-Per altre informazioni sulle nuove funzionalità di ritaglio in Android P, vedere [visualizzare il supporto](https://developer.android.com/about/versions/pie/android-9.0#cutout)del ritaglio.
-
-
+Per altre informazioni sulle nuove funzionalità di ritaglio in Android P, vedere [visualizzare il supporto del ritaglio](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 ### <a name="notifications-enhancements"></a>Miglioramenti delle notifiche
 
 Android Pie introduce i miglioramenti seguenti per migliorare l'esperienza di messaggistica:
 
--   I canali di notifica (introdotti in [Android Oreo](~/android/platform/oreo.md)) ora supportano il blocco dei gruppi di canali.
+- I canali di notifica (introdotti in [Android Oreo](~/android/platform/oreo.md)) ora supportano il blocco dei gruppi di canali.
 
--   Il sistema di notifica ha tre nuove categorie non di disturbo, ovvero la definizione delle priorità per gli avvisi, i suoni di sistema e le origini multimediali. Sono inoltre disponibili sette nuove modalità non di disturbo che possono essere utilizzate per disattivare le interruzioni visive, ad esempio le notifiche, le luci di notifica, gli aspetti della barra di stato e l'avvio di attività a schermo intero.
+- Il sistema di notifica ha tre nuove categorie non di disturbo, ovvero la definizione delle priorità per gli avvisi, i suoni di sistema e le origini multimediali. Sono inoltre disponibili sette nuove modalità non di disturbo che possono essere utilizzate per disattivare le interruzioni visive, ad esempio le notifiche, le luci di notifica, gli aspetti della barra di stato e l'avvio di attività a schermo intero.
 
--   È stata aggiunta una nuova classe [Person](https://developer.android.com/reference/android/app/Person.html) per rappresentare il mittente di un messaggio. L'uso di questa classe consente di ottimizzare il rendering di ogni notifica identificando gli utenti interessati da una conversazione (inclusi i relativi avatar e URI).
+- È stata aggiunta una nuova classe [Person](https://developer.android.com/reference/android/app/Person.html) per rappresentare il mittente di un messaggio. L'uso di questa classe consente di ottimizzare il rendering di ogni notifica identificando gli utenti interessati da una conversazione (inclusi i relativi avatar e URI).
 
--   Le notifiche ora possono visualizzare le immagini. 
+- Le notifiche ora possono visualizzare le immagini. 
 
 Nell'esempio seguente viene illustrato come utilizzare le nuove API per generare una notifica che contiene un'immagine. Negli screenshot seguenti viene inviata una notifica di testo che è seguita da una notifica con un'immagine incorporata. Quando le notifiche vengono espanse (come visualizzato a destra), viene visualizzato il testo della prima notifica e l'immagine incorporata nella seconda notifica viene ingrandita:
 
@@ -206,7 +200,6 @@ Nell'esempio seguente viene illustrato come includere un'immagine in una notific
 
 Per ulteriori informazioni sulla creazione di notifiche, vedere [Local notifications](~/android/app-fundamentals/notifications/local-notifications.md).
 
-
 ### <a name="indoor-positioning"></a>Posizionamento interno
 
 Android Pie fornisce supporto per IEEE 802.11 MC (noto anche come _tempo di round trip WiFi_ o _RTT WiFi_), che consente alle app di rilevare la distanza da uno o più punti di accesso Wi-Fi. Usando queste informazioni, è possibile che l'app possa sfruttare i vantaggi del *posizionamento interno* con un'accuratezza di uno o due contatori. Nei dispositivi Android che forniscono supporto hardware per IEEE 801.11 MC, l'app può offrire funzionalità di navigazione, ad esempio il controllo basato sulla posizione di Smart Appliance o istruzioni turn-by-turn tramite un negozio:
@@ -215,55 +208,49 @@ Android Pie fornisce supporto per IEEE 802.11 MC (noto anche come _tempo di roun
 
 La nuova classe [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) e diverse classi helper forniscono i mezzi per misurare la distanza ai dispositivi Wi-Fi. Per altre informazioni sulle API di posizionamento interno introdotte in Android P, vedere [Android .NET. WiFi. RTT](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
-
 ### <a name="multi-camera-support"></a>Supporto di più fotocamere
 
-Molti dispositivi Android più recenti hanno fotocamere Dual-front e/o Dual-back utili per le funzionalità come la visione stereo, gli effetti visivi avanzati e la funzionalità di zoom migliorata. Android P introduce una nuova API per più [fotocamere](https://developer.android.com/about/versions/pie/android-9.0#camera) che consente all'app di usare una *fotocamera logica* (o una multifotocamera *logica*) supportata da due o più fotocamere fisiche.
+Molti dispositivi Android più recenti hanno fotocamere Dual-front e/o Dual-back utili per le funzionalità come la visione stereo, gli effetti visivi avanzati e la funzionalità di zoom migliorata. Android P introduce una nuova API per più [fotocamere](https://developer.android.com/about/versions/pie/android-9.0#camera) che consente all'app di usare una *fotocamera logica* (o una *multifotocamera logica*) supportata da due o più fotocamere fisiche.
 Per determinare se il dispositivo supporta una macchina a più telecamere logica, è possibile esaminare le funzionalità di ogni fotocamera sul dispositivo per verificare se supporta [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
 Android Pie include anche una nuova classe [SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) che può essere usata per ridurre i ritardi durante l'acquisizione iniziale ed eliminare la necessità di avviare e avviare il flusso della fotocamera.
 
 Per altre informazioni sul supporto di più fotocamere in Android P, vedere [supporto per più fotocamere e aggiornamenti della fotocamera](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
-
 ### <a name="other-features"></a>Altre funzionalità
 
 Android Pie supporta inoltre diverse altre nuove funzionalità:
 
--   Nuova classe [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , che può essere usata per disegnare e visualizzare immagini animate.
+- Nuova classe [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , che può essere usata per disegnare e visualizzare immagini animate.
 
--   Nuova classe [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) che sostituisce `BitmapFactory`. `ImageDecoder`può essere usato per decodificare `AnimatedImageDrawable`un.
+- Nuova classe [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) che sostituisce `BitmapFactory`. `ImageDecoder`può essere usato per decodificare `AnimatedImageDrawable`un.
 
--   Supporto per le immagini HDR (High Dynamic Range) e HEIF (High Efficiency Image File Format).
+- Supporto per le immagini HDR (High Dynamic Range) e HEIF (High Efficiency Image File Format).
 
--   Il [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) è stato migliorato per gestire in modo più intelligente i processi correlati alla rete. Il nuovo metodo [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) della classe [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) restituisce la rete migliore per l'esecuzione di qualsiasi richiesta di rete per un determinato processo.
+- Il [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) è stato migliorato per gestire in modo più intelligente i processi correlati alla rete. Il nuovo metodo [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) della classe [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) restituisce la rete migliore per l'esecuzione di qualsiasi richiesta di rete per un determinato processo.
 
 Per altre informazioni sulle funzionalità di torta Android più recenti, vedere le [funzionalità e le API di Android 9](https://developer.android.com/about/versions/pie/android-9.0).
-
 
 ## <a name="behavior-changes"></a>Modifiche del comportamento
 
 Quando la versione di Android di destinazione è impostata sul livello API 28, esistono diverse modifiche alla piattaforma che possono influire sul comportamento dell'app anche se non si implementano le nuove funzionalità descritte in precedenza. Il seguente elenco è un breve riepilogo delle modifiche:
 
--  Le app devono ora richiedere l'autorizzazione Foreground prima di usare i servizi in primo piano.
+- Le app devono ora richiedere l'autorizzazione Foreground prima di usare i servizi in primo piano.
 
--  Se l'app ha più di un processo, non è possibile condividere una singola directory di dati [WebView](xref:Android.Webkit.WebView) nei processi.
+- Se l'app ha più di un processo, non è possibile condividere una singola directory di dati [WebView](xref:Android.Webkit.WebView) nei processi.
 
--  L'accesso diretto alla directory dei dati di un'altra app in base al percorso non è più consentito.
+- L'accesso diretto alla directory dei dati di un'altra app in base al percorso non è più consentito.
 
 Per altre informazioni sulle modifiche del comportamento per le app destinate a Android P, vedere [modifiche del comportamento](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
-
 
 ## <a name="sample-code"></a>Codice di esempio
 
 [AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) è un'app di esempio Novell. Android per la torta Android che illustra come impostare le modalità di ritaglio dello schermo, `Person` come usare la nuova classe e come inviare una notifica che include un'immagine.
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato Android Pie ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android con la torta Android. Fornisce una panoramica delle funzionalità principali disponibili in Android Pie, con esempi di codice sorgente per alcune di queste funzionalità.
 Sono inclusi collegamenti alla documentazione API e agli argomenti per sviluppatori Android che consentono di iniziare a creare app per la torta Android. Ha evidenziato anche le modifiche più importanti del comportamento della torta Android che potrebbero influito sulle app esistenti.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

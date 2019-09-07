@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 93e6797f2b00df32b8d3ae361f40fd487b7adac3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647722"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758322"
 ---
 # <a name="working-with-screen-sizes"></a>Utilizzo delle dimensioni dello schermo
 
@@ -45,13 +45,11 @@ La soluzione contiene layout diversi per ogni stile che verrà selezionato in fa
 
 ![File visualizzati in risorse/layout](screen-sizes-images/solution.png)
 
-
 ### <a name="boxinsetlayout"></a>BoxInsetLayout
 
 Anziché creare layout diversi per ogni tipo di schermata, è anche possibile creare una singola visualizzazione che si adatta a schermi rettangolari o rotondi.
 
 Questo [esempio di Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) illustra come usare `BoxInsetLayout` per usare lo stesso layout sia per gli schermi rettangolari che per quelli rotondi.
-
 
 ## <a name="wear-ui-designer"></a>Indossare la finestra di progettazione interfaccia utente
 
@@ -66,7 +64,6 @@ L'area di progettazione in stile rettangolare è illustrata di seguito:
 L'area di progettazione nello stile arrotondato è illustrata di seguito:
 
 ![Area di progettazione con stile arrotondato](screen-sizes-images/design-round.png)
-
 
 ## <a name="wear-simulator"></a>Simulatore di usura
 
@@ -85,4 +82,3 @@ Il rendering sarà simile al seguente per una schermata rotonda:
 ## <a name="video"></a>Video
 
 [App fullscreen per Android Wear](https://www.youtube.com/watch?v=naf_WbtFAlY) da [Developers.Google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
-

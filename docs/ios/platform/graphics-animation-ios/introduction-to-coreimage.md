@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a537926ab28bc355af5c5c4993ccff4a736b15aa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ffaa6553830a64589818c991e8f729ff7232e367
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752839"
 ---
 # <a name="core-image-in-xamarinios"></a>Immagine di base in Novell. iOS
 
@@ -25,7 +25,6 @@ Questo documento contiene esempi semplici di:
 - Rilevamento viso.
 - Applicazione di filtri a un'immagine
 - Elenco dei filtri disponibili.
-
 
 Questi esempi sono utili per iniziare a incorporare le funzionalità di base delle immagini nelle applicazioni Novell. iOS.
 
@@ -55,7 +54,6 @@ La matrice delle funzionalità verrà popolata `CIFaceFeature` con gli oggetti (
 - MouthPosition: coordinate della bocca per questa faccia.
 - LeftEyePosition: le coordinate dell'occhio sinistro per questa faccia.
 - RightEyePosition: coordinate dell'occhio destro per questa faccia.
-
 
 Le coordinate per tutte queste proprietà hanno origine in basso a sinistra, a differenza di UIKit che usa la parte superiore sinistra dell'origine. Quando `CIFaceFeature` si usano le coordinate, assicurarsi di "capovolgerle". Questa visualizzazione di immagini personalizzate di base in CoreImage\CoreImageViewController.cs illustra come creare triangoli dell'indicatore del volto sull'immagine (si noti il `FlipForBottomOrigin` metodo):
 

@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 8fc4ca3063e88f17fc1e22ad35667b2086e63e89
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2437a26ae0f9187d3042ef6e6064ddafa808804c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280467"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766004"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Installazione di NUnit 2.6.4 tramite NuGet
 
@@ -39,7 +39,6 @@ In questa guida si presuppone che sia disponibile una soluzione esistente con un
 
 Nei passaggi seguenti viene descritto come installare NUnit 2.6.4.
 
-
 1. **Aprire Gestione pacchetti**, fare clic con il pulsante destro del mouse su **Pacchetti** e selezionare **Aggiungi pacchetti** dal menu popup:
 
     [![](installing-nunit-using-nuget-images/add-packages-xs.png "Fare clic con il pulsante destro del mouse su Pacchetti e selezionare Aggiungi pacchetti dal menu popup")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
@@ -47,7 +46,6 @@ Nei passaggi seguenti viene descritto come installare NUnit 2.6.4.
 1. **Cercare `NUnit version:2.6.4`** , Visual Studio per Mac disinstallerà NUnit 3.0, se necessario, quindi scaricare e installare NUnit 2.6.4. Nella finestra di dialogo **Aggiungi pacchetti** immettere il testo `nunit version:2.6.4` nel campo di **ricerca** nell'angolo superiore destro. Selezionare **NUnit** dai risultati della ricerca e fare clic sul pulsante **Aggiungi pacchetto**:
 
     [![](installing-nunit-using-nuget-images/nunit-search-xs.png "Selezionare NUnit dai risultati della ricerca e fare clic sul pulsante Aggiungi pacchetto")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
-
 
 È possibile verificare che NUnit 2.6.4 sia stato installato controllando il numero di versione del pacchetto NUnit nel riquadro della soluzione:
 
@@ -57,13 +55,11 @@ Nei passaggi seguenti viene descritto come installare NUnit 2.6.4.
 
 In questa guida è stato illustrato come effettuare il downgrade di NUnit 3.0 a NUnit 2.6.4 in Visual Studio per Mac tramite la console di Gestione pacchetti.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>Installazione di NUnit 2.6.4 in Visual Studio
 
 In questa sezione l'accento verrà posto sull'uso della _console di Gestione pacchetti NuGet_ in Visual Studio 2015 o versioni successive per disinstallare NUnit 3.0 e installare NUnit 2.6.4.
-
 
 1. **Avviare la console di Gestione pacchetti NuGet**, selezionare **Strumenti > Gestione pacchetti NuGet > Console di Gestione pacchetti**:
 

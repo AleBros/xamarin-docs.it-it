@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 723f751b93af304c7d70fb1250dbda2f0220e77e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 555ee8131c4d18988a7f208154d358a61a9773c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292209"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770601"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Finestre di dialogo in Novell. Mac
 
@@ -63,7 +63,6 @@ Una finestra di preferenze è una finestra di dialogo non modale che contiene le
 La finestra di dialogo Apri fornisce agli utenti un modo coerente per trovare e aprire un elemento in un'applicazione:
 
 [![](dialog-images/dialog03.png "Finestra di dialogo Apri")](dialog-images/dialog03.png#lightbox)
-
 
 ### <a name="print-and-page-setup-dialogs"></a>Finestre di dialogo di stampa e impostazione pagina
 

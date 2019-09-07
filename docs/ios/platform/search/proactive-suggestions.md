@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b79f64f154dbd7dde623d13385f111d3d5a5d3f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291733"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769541"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduzione ai suggerimenti proattivi in Novell. iOS
 
@@ -534,7 +534,6 @@ In questa sezione verranno esaminati i suggerimenti per la posizione di utilizzo
 
 Quando l'app viene avviata con un `MKDirectionsRequest` oggetto MapKit, deve iniziare automaticamente a fornire le istruzioni per l'utente al percorso richiesto oppure presentare un'interfaccia utente che consente all'utente di iniziare a ottenere le indicazioni in modo semplice. Ad esempio:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -607,7 +606,6 @@ Per le app che gestiscono supporti, iOS supporta i comportamenti seguenti:
   - Dopo l'arrivo a casa o in ufficio. 
 
 Includendo una semplice chiamata API in iOS 10, lo sviluppatore può creare un'esperienza di blocco più accattivante per gli utenti dell'app multimediale. Usando la `MPPlayableContentManager` classe per gestire la riproduzione multimediale, i controlli multimediali completi (come quelli presentati dall'app Music) verranno visualizzati nella schermata di blocco dell'app.
-
 
 ```csharp
 using System;
@@ -682,8 +680,6 @@ namespace MonkeyPlayer
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato suggerimenti proattivi e ha illustrato come lo sviluppatore può usarle per indirizzare il traffico all'app Novell. iOS. È stato illustrato il passaggio per implementare i suggerimenti proattivi e le linee guida per l'utilizzo.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

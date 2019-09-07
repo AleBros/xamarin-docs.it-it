@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/14/2016
-ms.openlocfilehash: c5527db543a0b0d5218c37f0d75e22afcd59297a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 292734c0622ab35d5e48eec47593c3ffe4dc27e6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293151"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768683"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchos-procedura dettagliata
 
@@ -42,7 +42,6 @@ Dovrebbe essere possibile eseguire l'app Watch adesso, ma poiché il file dello 
 
 Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per avviare Novell iOS designer. Se si è in un Mac, è anche possibile fare clic con il pulsante destro del mouse e **aprire con > Xcode Interface Builder**)
 
-
 1. Verificare che i rilievi della **casella degli strumenti** e delle **Proprietà** siano visibili,
 1. Fare clic per selezionare il controller di interfaccia,
 1. Impostare l'identificatore e il titolo del controller di interfaccia su **interfaceController** e **Hi Watch**,
@@ -62,7 +61,6 @@ Fare doppio clic sull'interfaccia. Storyboard nell'app Watch per modificare con 
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Impostare l'identificatore e il titolo del controller di interfaccia su interfaceController e Hi Watch")
 
 -----
-
 
 Creare l'interfaccia utente:
 
@@ -154,7 +152,6 @@ Quando viene avviato il simulatore, premere il pulsante per incrementare l'etich
 Congratulazioni, è disponibile un'app Watch.
 
 ![](hello-watch-images/running.png "L'app in esecuzione nel simulatore")
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

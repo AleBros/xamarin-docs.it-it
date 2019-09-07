@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 4b1e232259d7b1816e64298b5c0b8853d8385c20
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6d3756f4215174e17ec45518f430dc38270e3289
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283862"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768694"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Test sui dispositivi Apple Watch
 
@@ -64,7 +64,6 @@ L'elenco **profilo di provisioning** mostrerà tutti i profili corrispondenti. v
 
 ![](device-images/options-selectprofile.png "Elenco del profilo di provisioning")
 
-
 <a name="testing" />
 
 ## <a name="testing-on-a-watch-device"></a>Test su un dispositivo di controllo
@@ -88,7 +87,6 @@ Dopo aver configurato il dispositivo, gli ID app e i profili di provisioning, si
 
 8. Se l'app Watch viene installata correttamente, l'icona rimarrà visualizzata nella schermata di controllo per iniziare a testare l'app.
 
-
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Se si verifica un errore durante la distribuzione, usare la **vista > i rilievi > log del dispositivo** per visualizzare altre informazioni sull'errore. Di seguito sono elencati alcuni errori e le relative cause:
@@ -103,11 +101,9 @@ Per risolvere *temporaneamente* questo problema, disabilitare le **compilazioni 
 
 Questo problema verrà risolto in una versione futura, dopo le quali è possibile abilitare nuovamente le compilazioni incrementali per sfruttare i tempi di compilazione più rapidi.
 
-
 ### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Non è possibile avviare l'app Watch durante il debug nel dispositivo
 
 Quando si tenta di eseguire il debug di un'app Watch in un dispositivo fisico, viene visualizzata solo l'icona & il caricamento della casella di selezione e infine il timeout. Questa operazione verrà risolta in una versione futura. una soluzione alternativa consiste nell'eseguire una build di rilascio, che non consente il debug.
-
 
 ### <a name="invalid-application-executable-or-application-verification-failed"></a>Verifica dell'applicazione o dell'eseguibile dell'applicazione non valido
 
@@ -131,8 +127,6 @@ Se questi messaggi vengono visualizzati *nella schermata di controllo* dopo che 
 
 - L' **ID app** dell'app Watch non dispone correttamente di un diritto abilitato, ad esempio gruppi di app, in Dev Center.
 
-
-
 ### <a name="install-never-finished"></a>Installazione non completata
 
 ```csharp
@@ -142,7 +136,6 @@ SPErrorGizmoInstallNeverFinishedErrorMessage
 Questo errore potrebbe indicare chiavi non necessarie (e non valide) nel file **info. plist** dell'app Watch. Non includere chiavi significative per l'app iOS o l'estensione Watch nell'app Watch.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
-
 
 ### <a name="waiting-for-debugger-to-connect"></a>"in attesa della connessione del debugger"
 
@@ -156,4 +149,3 @@ controllare se i NuGet inclusi nel progetto hanno una dipendenza da **Microsoft.
 
 Il file **Microsoft. BCL. Build. targets** aggiunto al file con **estensione csproj** può interferire con la creazione di pacchetti di estensioni iOS durante la distribuzione. È possibile tenere traccia del [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Una possibile soluzione alternativa consiste nel modificare il file con estensione csproj e spostare manualmente **Microsoft. BCL. Build. targets** in modo che sia l'ultimo elemento.
-

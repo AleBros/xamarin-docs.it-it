@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9714d78419754413ae5f1d0e5015a418fa8ab884
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291761"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769551"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Eseguire una ricerca con NSUserActivity in Novell. iOS
 
@@ -165,8 +165,6 @@ Adottando la ricerca di app `NSUserActivity` tramite nell'app, si ottengono anch
 - Consegna **: poiché** la ricerca di app sta esponendo contenuto, navigazione e/o funzionalità con lo stesso meccanismo`NSUserActivity`di consegna (), è possibile consentire agli utenti dell'app di avviare un'attività in un dispositivo e continuare a usarla in un altro dispositivo.
 - **Siri suggerimenti** : insieme ai suggerimenti standard che Siri suggerisce di solito, gli attivi dall'app possono essere suggeriti automaticamente.
 - **Siri Smart promemoria** : gli utenti potranno chiedere a Siri di ricordare le attività dell'app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

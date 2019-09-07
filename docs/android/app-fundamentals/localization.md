@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15f5705fcf625d7c9aa6901cc919cea399f252e9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 08d12a58b4a0d8a8f757df965bd9dfb73f1639b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197707"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755378"
 ---
 # <a name="android-localization"></a>Localizzazione Android
 
@@ -202,7 +202,6 @@ In questa schermata, le quattro immagini vengono salvate nella directory di cui 
 
 ![Screenshot di più cartelle che contengono uno o più file con estensione png localizzati](localization-images/drawable.png)
 
-
 #### <a name="other-resource-types"></a>Altri tipi di risorse
 
 È anche possibile fornire altri tipi di risorse alternative specifiche del linguaggio, tra cui layout, animazioni e file non elaborati. Ciò significa che è possibile fornire un layout di schermata specifico per una o più lingue di destinazione, ad esempio è possibile creare un layout specifico per il tedesco che consente etichette di testo molto lunghe.
@@ -210,7 +209,6 @@ In questa schermata, le quattro immagini vengono salvate nella directory di cui 
 Android 4,2 ha introdotto il supporto per le [lingue da destra a sinistra (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se si `android:supportsRtl="true"`imposta l'impostazione dell'applicazione. Il qualificatore `"ldrtl"` di risorsa può essere incluso in un nome di directory per contenere layout personalizzati progettati per la visualizzazione RTL.
 
 Per altre informazioni sulla denominazione e sul fallback delle directory delle risorse, vedere la documentazione di Android per [fornire risorse alternative](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
-
 
 ### <a name="app-name"></a>Nome app
 
@@ -256,12 +254,9 @@ Per eseguire il test in un dispositivo, modificare la lingua nell'app **Impostaz
 > [!TIP]
 > Prendere nota delle icone e della posizione delle voci di menu in modo da poter ripristinare l'impostazione originale della lingua.
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo illustra le nozioni di base della localizzazione di applicazioni Android usando la gestione delle risorse incorporata. Sono disponibili altre informazioni su i18n e l10n per le app iOS, Android e multipiattaforma (incluse Novell. Forms) in [questa guida multipiattaforma](~/cross-platform/app-fundamentals/localization.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

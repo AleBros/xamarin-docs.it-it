@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 094f980922762ff33c19af6c9210e2e533bf5196
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: ab39c79c59855c9f78184614176b1658ee0e29b2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651022"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772106"
 ---
 # <a name="attached-behaviors"></a>Comportamenti associati
 
@@ -128,7 +128,6 @@ In fase di esecuzione, il metodo `OnAttachBehaviorChanged` sarà eseguito quando
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come creare e usare i comportamenti associati. I comportamenti associati sono classi `static` con una o più proprietà associate.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

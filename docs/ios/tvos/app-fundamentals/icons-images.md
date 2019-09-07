@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f3a0525a42a59edfe08e5b478bf6af801008ef05
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7eca637e546324f9282aedcac48dacffa72bf246
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277858"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769265"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Uso delle icone e delle immagini di tvOS in Novell
 
@@ -79,9 +79,6 @@ Le immagini sovrapposte contengono da due (2) a cinque (5) livelli distinti comb
 > [!IMPORTANT]
 > Le immagini sovrapposte sono necessarie per le icone dell'app e sono facoltative per altri [elementi attivabili](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (ad esempio, l'immagine in primo piano). Tuttavia, Apple suggerisce di usare immagini sovrapposte per qualsiasi immagine che può ottenere lo stato attivo nell'app.
 
-
-
-
 Apple apporta i suggerimenti seguenti per progettare le immagini a più livelli:
 
 - **Rendere opaco il livello di sfondo** : il livello di sfondo (livello 1) **deve** essere opaco o verrà ricevuto un errore quando si tenta di usare l'immagine sovrapposta in Apple TV. Tutti gli altri livelli possono contenere più livelli di trasparenza per migliorare l'effetto 3D.
@@ -145,9 +142,6 @@ Ogni app deve fornire una versione di piccole e grandi dimensioni dell'icona del
 
 > [!IMPORTANT]
 > Le icone dell'app devono essere fornite come **immagini sovrapposte**. Per altri dettagli, vedere la sezione relativa all' [immagine sovrapposta](#Layered-Images) sopra.
-
-
-
 
 Apple fornisce i suggerimenti seguenti per la creazione delle icone dell'app:
 

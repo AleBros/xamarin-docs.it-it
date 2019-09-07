@@ -7,20 +7,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: e29432504f3b8554c387d277004d3cc779aade95
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524636"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756634"
 ---
 # <a name="customizing-bindings"></a>Personalizzazione delle associazioni
 
 _È possibile personalizzare un'associazione Novell. Android modificando i metadati che controllano il processo di associazione. Queste modifiche manuali sono spesso necessarie per la risoluzione degli errori di compilazione e per il data shaping dell'API risultante, in modo che C#sia più coerente con/.NET. Queste guide illustrano la struttura di questi metadati, come modificare i metadati e come usare JavaDoc per recuperare i nomi dei parametri del metodo._
 
-
 ## <a name="overview"></a>Panoramica
- 
+
 Novell. Android automatizza gran parte del processo di associazione. Tuttavia, in alcuni casi è necessaria una modifica manuale per risolvere i problemi seguenti:
 
 - Risoluzione degli errori di compilazione causati da tipi mancanti, tipi offuscati, nomi duplicati, problemi di visibilità delle classi e altre situazioni che non possono essere risolti dagli strumenti Novell. Android. 
@@ -33,7 +32,6 @@ Novell. Android automatizza gran parte del processo di associazione. Tuttavia, i
 
 È possibile apportare alcune o tutte queste modifiche modificando i metadati che controllano il processo di associazione.
 
-
 ## <a name="guides"></a>Guide
 
 Le guide seguenti descrivono i metadati che controllano il processo di associazione e spiegano come modificare i metadati per risolvere questi problemi:
@@ -42,7 +40,3 @@ Le guide seguenti descrivono i metadati che controllano il processo di associazi
     Vengono descritti i vari passaggi manuali talvolta necessari per completare una libreria di associazione Java e viene illustrato come creare un'API esposta da un'associazione per seguire più da vicino le linee guida per la progettazione di .NET.
 
 - I [parametri di denominazione con javadoc](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md) illustrano come recuperare i nomi dei parametri in un progetto di associazione Java usando Javadoc prodotto dal progetto Java associato.
-
-
- 
-

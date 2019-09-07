@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 577bc7af34c463aec65148bd97dc5dd49262d699
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280089"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767090"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Eventi touch e movimenti in Novell. iOS
 
@@ -41,7 +41,6 @@ Ci sono tre fasi di tocco che si verificano quando l'utente tocca lo schermo, sp
 - `TouchesBegan`: Questo metodo viene chiamato quando lo schermo viene toccato per la prima volta.
 - `TouchesMoved`: Questo metodo viene chiamato quando viene modificata la posizione del tocco quando l'utente scorre le dita intorno allo schermo.
 - `TouchesEnded`o `TouchesCancelled` :`TouchesEnded` viene chiamato quando le dita dell'utente vengono sollevate dallo schermo.  `TouchesCancelled`viene chiamato se iOS Annulla il tocco, ad esempio se un utente scorre il dito da un pulsante per annullare una pressione.
-
 
 Gli eventi Touch passano in modo ricorsivo attraverso lo stack di UIViews, per verificare se l'evento Touch si trova all'interno dei limiti di un oggetto visualizzazione. Questa operazione viene spesso denominata _hit testing_. Verranno prima chiamati `UIView` in primo piano o `UIViewController` , quindi `UIView` verranno chiamati su e `UIViewControllers` sotto di essi nella gerarchia di visualizzazione.
 
@@ -126,7 +125,6 @@ Novell. iOS fornisce la classe `UIGestureRecognizer` come classe di base per i r
 - *UIRotationGestureRecognizer* : rotazione di due dita in un movimento in senso orario o antiorario.
 - *UILongPressGestureRecognizer* : premere e tenere premuto, a volte a volte con un lungo clic.
 
-
 Il modello di base per l'uso di un riconoscimento di movimento è il seguente:
 
 1. **Creare un'istanza del riconoscitore di movimento** , creare prima `UIGestureRecognizer` di tutto un'istanza di una sottoclasse. L'oggetto di cui viene creata un'istanza verrà associato a una vista e verrà sottoposto a Garbage Collection quando la vista viene eliminata. Non è necessario creare questa vista come variabile a livello di classe.
@@ -152,7 +150,6 @@ I movimenti possono essere riepilogati come uno dei due tipi seguenti:
 1. *Discreto* : questi movimenti vengono generati solo la prima volta che vengono riconosciuti.
 1. *Continuo* : questi movimenti continuano a essere attivati fino a quando vengono riconosciuti.
 
-
 I riconoscitori di movimento esistono in uno degli Stati seguenti:
 
 - *Possibile* : si tratta dello stato iniziale di tutti i riconoscitori di movimento. Si tratta del valore predefinito della proprietà state.
@@ -162,7 +159,6 @@ I riconoscitori di movimento esistono in uno degli Stati seguenti:
 - *Riconosciuta* : lo stato verrà impostato quando il riconoscimento del movimento corrisponde a un set di tocchi e indicherà al Sottoscrittore che il movimento è terminato.
 - *Terminato* : si tratta di un alias per lo stato riconosciuto.
 - *Operazione non riuscita* : quando il riconoscitore di movimento non è più in grado di corrispondere ai tocchi per cui è in ascolto, lo stato verrà modificato in non riuscito.
-
 
 Novell. iOS rappresenta questi valori nell' `UIGestureRecognizerState` enumerazione.
 
@@ -178,7 +174,6 @@ gesture.ShouldRecognizeSimultaneously += (UIGestureRecognizer r) => { return tru
 
 1. *ShouldReceiveTouch* : questo delegato viene chiamato immediatamente prima che il riconoscitore di movimento venga passato a un evento Touch e offra la possibilità di esaminare i tocchi e decidere quali tocchi verranno gestiti dal riconoscimento di movimento.
 1. *ShouldBegin* : viene chiamato quando un riconoscimento tenta di cambiare lo stato da possibile a un altro stato. Se si restituisce false, lo stato del riconoscimento del movimento verrà forzato a non riuscire.
-
 
 È possibile eseguire l'override di questi metodi con `UIGestureRecognizerDelegate`un delegato fortemente tipizzato, debole o associato tramite la sintassi del gestore dell'evento, come illustrato nel frammento di codice seguente:
 
@@ -199,6 +194,5 @@ Sebbene iOS fornisca alcuni riconoscitori di movimento predefiniti, potrebbe ess
 1. Sottoclasse `UIGestureRecognizer` .
 1. Eseguire l'override dei metodi dell'evento Touch appropriati.
 1. Propagazione dello stato di riconoscimento tramite la proprietà di stato della classe base.
-
 
 Un esempio pratico sarà illustrato nella procedura dettagliata [using touch in iOS](ios-touch-walkthrough.md) .

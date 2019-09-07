@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 283a057723ae399ead65c0c3e40347dbbd1e189e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 129ba01a41f9e5f58802c4d4da65d1662a103adc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281178"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770114"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Creazione di bundle per Mac App Store
 
@@ -42,7 +42,6 @@ Prima della compilazione, assicurarsi che sia stata selezionata la configurazion
 Dopo aver compilato l'applicazione, lo sviluppatore può fare clic con il pulsante destro del mouse sul progetto e scegliere **Apri cartella superiore** per trovare il file del pacchetto. Nell'esempio illustrato sotto si tratta della directory `bin/x86/AppStore`.  Il file del pacchetto include un programma di installazione per l'app che può essere inviata a Apple per l'inclusione nel Mac App Store.
 
  ![Selezione del pacchetto di compilazione in Finder](bundling-images/image64.png "Selezione del pacchetto di compilazione in Finder")
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

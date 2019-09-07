@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 52ee92eca5fa0b3108b2ef96ef81bfb939e61a6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290763"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752912"
 ---
 # <a name="handoff-in-xamarinios"></a>Continuità in Novell. iOS
 
@@ -626,8 +626,6 @@ Quando l'attività dell'utente è stata inviata correttamente a un altro disposi
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha fornito un'introduzione al Framework di continuità usato per continuare l'attività di un utente tra più dispositivi Apple dell'utente. Successivamente, è stato illustrato come abilitare e implementare la consegna in un'app Novell. iOS. Infine, sono stati illustrati i diversi tipi di continuazioni di continuità disponibili e le procedure consigliate per la continuità.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

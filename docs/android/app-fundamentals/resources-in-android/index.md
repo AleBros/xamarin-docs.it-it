@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d23b29b7e49c210dc44163e41735fa96b55d12f2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526324"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755019"
 ---
 # <a name="android-resources"></a>Risorse Android
 
 _In questo articolo viene introdotto il concetto di risorse Android in Novell. Android e viene documentato come utilizzarle. Illustra come usare le risorse nell'applicazione Android per supportare la localizzazione dell'applicazione e più dispositivi, incluse dimensioni e densità dello schermo diverse._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -40,16 +39,16 @@ Quando viene avviato un nuovo progetto Novell. Android, viene creata una directo
 ![Contenuto e cartella delle risorse](images/resources-folder-vs.png)
 
 Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base al relativo tipo in queste sottodirectory: le immagini vengono inserite nella directory di cui è possibile eseguire l' **estrazione** . le visualizzazioni vengono inserite nella sottodirectory di **layout** e così via.
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ![Contenuto e cartella delle risorse](images/resources-folder-xs.png)
 
 Nell'immagine precedente, le risorse dell'applicazione sono organizzate in base al relativo tipo nelle sottodirectory: le immagini verranno inserite nella directory **mipmap** le visualizzazioni vengono inserite nella sottodirectory di **layout** e così via.
- 
+
 -----
 
-Esistono due modi per accedere a queste risorse in un'applicazione Novell. Android: a *livello* di codice nel codice e in *modo* dichiarativo in XML usando una sintassi XML speciale.
+Esistono due modi per accedere a queste risorse in un'applicazione Novell. Android: a *livello* di codice nel codice e in *modo dichiarativo* in XML usando una sintassi XML speciale.
 
 Queste risorse sono denominate *risorse predefinite* e vengono usate da tutti i dispositivi a meno che non venga specificata una corrispondenza più specifica. Inoltre, ogni tipo di risorsa può facoltativamente avere *risorse alternative* che possono essere usate da Android per dispositivi specifici. Ad esempio, è possibile fornire le risorse per specificare le impostazioni locali dell'utente, le dimensioni dello schermo o se il dispositivo viene ruotato di 90 gradi da verticale a orizzontale e così via. In ognuno di questi casi, Android caricherà le risorse per l'uso da parte dell'applicazione senza alcuna ulteriore operazione di codifica da parte dello sviluppatore.
 
@@ -66,7 +65,6 @@ Questo articolo illustra in maniera completa l'uso delle risorse e illustra gli 
 - **Configurazioni specifiche del dispositivo** &ndash; Supporto delle diverse risoluzioni dello schermo e densità di un'applicazione.
 
 - **Localizzazione** &ndash; Utilizzo delle risorse per supportare le diverse aree in cui è possibile utilizzare un'applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 2ce4b0366e85580b6d9d816bd91f9ced93997b63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2ccf6966e85eddaa10b5651e1b0b48dec9203b28
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291481"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772208"
 ---
 # <a name="inspecting-live-applications"></a>Ispezione delle applicazioni in tempo reale
 
@@ -52,4 +52,3 @@ Anche l'albero elementi visivi attivi è molto utile. Rappresenta lo snapshot co
 - La modifica della griglia delle proprietà non è disponibile per Mac e in Windows è limitata a alcuni tipi di dati. Usare REPL per apportare modifiche più potenti.
 - Fino a quando l'estensione o il componente aggiuntivo di Inspector viene installato e abilitato nell'IDE, il codice viene inserito nell'app ogni volta che viene avviato in modalità di debug. Se si nota un comportamento anomalo nell'app, provare a disabilitare o disinstallare l'estensione o il componente aggiuntivo per il controllo, riavviare l'IDE e ricontrollarlo. E inviare i [bug](~/tools/inspector/install.md#reporting-bugs) per segnalarli.
 - Se il controllo di un elemento dell'interfaccia utente ne comporta la modifica in qualsiasi [momento, è](~/tools/inspector/install.md#reporting-bugs)possibile segnalarlo, perché questo potrebbe indicare un bug.
-

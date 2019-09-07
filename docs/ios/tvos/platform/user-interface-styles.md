@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4df67221c367386cddd485fcd1853523d77158e0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 89756d5b897b39dd0cf45074474189a4a0a8ada8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290677"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769980"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Stili dell'interfaccia utente di tvOS in Novell
 
@@ -101,9 +101,6 @@ Inoltre, le raccolte di tratti hanno le funzionalità seguenti in tvOS 10:
 
 > [!IMPORTANT]
 > L'anteprima di Novell. tvOS per tvOS 10 non è ancora `UIUserInterfaceStyle` supportata `UITraitCollection` in modo completo. Il supporto completo verrà aggiunto in una versione futura.
-
-
-
 
 <a name="Customizing-Appearance-Based-on-Theme" />
 
@@ -209,8 +206,6 @@ Inoltre, il simulatore tvOS dispone ora di un tasto di scelta rapida che consent
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato i temi di interfaccia utente chiaro e scuro che Apple ha aggiunto a tvOS 10 e come implementarli in un'app Novell. tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

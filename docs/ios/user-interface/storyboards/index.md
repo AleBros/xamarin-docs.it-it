@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 145c616cc0af8156f10b9db1d3fa36264cecd18b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284322"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768884"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Novell. iOS
 
@@ -21,7 +21,6 @@ In questa guida verrà illustrato lo storyboard ed esaminando alcuni componenti 
 Prima che il formato del file di storyboard venisse introdotto da Apple come rappresentazione visiva dell'interfaccia utente di un'applicazione iOS, gli sviluppatori creavano i file XIB per ogni controller di visualizzazione e programmavano manualmente la navigazione tra ciascuna visualizzazione.  L'uso di uno storyboard consente allo sviluppatore di definire sia i controller di visualizzazione che la navigazione tra di essi in un'area di progettazione e offre la modifica WYSIWYG dell'interfaccia utente dell'applicazione.
 
 È possibile creare, aprire e modificare uno storyboard con Novell iOS designer. In questa guida verrà inoltre illustrato come utilizzare la finestra di progettazione per creare gli storyboard durante C# l'utilizzo di per programmare la navigazione.
-
 
 ## <a name="requirements"></a>Requisiti
 
@@ -77,7 +76,7 @@ Sono disponibili diversi tipi di transizioni, ognuna delle quali fornisce il con
 ### <a name="adaptive-segue-types"></a>Tipi di segue adattivi
 
  iOS 8 ha introdotto [le classi di dimensioni](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) per consentire a un file storyboard iOS di funzionare con tutte le dimensioni dello schermo disponibili, consentendo agli sviluppatori di creare un'interfaccia utente per tutti i dispositivi iOS. Per impostazione predefinita, tutte le nuove applicazioni Novell. iOS utilizzeranno le classi di dimensioni. Per utilizzare le classi di dimensioni di un progetto precedente, fare riferimento alla guida [introduttiva agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) . 
- 
+
 Qualsiasi applicazione che utilizza le classi di dimensioni utilizzerà anche il nuovo [*gli elementi segue adattivo*](~/ios/user-interface/storyboards/unified-storyboards.md). Quando si usano le classi di dimensioni, tenere presente che non viene specificato direttamente il modo in cui si usa un iPhone o iPad. In altre parole, si crea un'interfaccia utente che avrà sempre lo stesso aspetto, indipendentemente dalla quantità di spazio reale con cui lavorare. Il gli elementi segue adattivo funziona a giudizio dell'ambiente e determina il modo migliore per presentare il contenuto. I gli elementi segue adattivi sono illustrati di seguito: 
 
 [![](images/adaptivesegue.png "Elenco a discesa gli elementi segue adattivo")](images/adaptivesegue.png#lightbox)
@@ -92,7 +91,6 @@ Qualsiasi applicazione che utilizza le classi di dimensioni utilizzerà anche il
 ### <a name="transferring-data-with-segues"></a>Trasferimento dei dati con gli elementi segue
 
 I vantaggi di un segue non terminano con le transizioni. Possono anche essere usati per gestire il trasferimento dei dati tra i controller di visualizzazione. Questa operazione viene eseguita eseguendo l'override `PrepareForSegue` del metodo sul controller di visualizzazione iniziale e gestendo i dati stessi. Quando viene attivato il segue, ad esempio con un pulsante premere, l'applicazione chiamerà questo metodo, offrendo la possibilità di preparare il nuovo controller di visualizzazione *prima* che si verifichi la navigazione. Nel codice riportato di seguito, dall'esempio [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) , viene illustrato quanto segue: 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -252,7 +250,6 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-
 Quando si crea uno storyboard usando la finestra di progettazione, l'IDE aggiunge automaticamente l'attributo [[Register]](xref:Foundation.RegisterAttribute) all'inizio della `designer.cs` classe e passa un identificatore di stringa, che è identico all'ID dello storyboard specificato nel passaggio precedente. In questo modo verrà C# collegato alla scena pertinente nello storyboard.
 
 A un certo punto potrebbe essere necessario aggiungere una classe esistente che **non** è stata creata nella finestra di progettazione. In questo caso, è necessario registrare questa classe come di consueto:
@@ -340,7 +337,6 @@ Prima di iniziare, seguire i passaggi da 1 a 8 precedenti. In questi passaggi vi
 3. Fare clic su segue e assegnargli l' *identificatore* `SegueToPink`:
 
     [![](images/namesegue.png "Fare clic su segue e assegnargli l'identificatore SegueToPink")](images/namesegue.png#lightbox)  
-    
 
 4. Aggiungere infine il metodo ShouldPerformSegue seguente alla `MainViewController` classe:
 
@@ -489,8 +485,6 @@ Quando l'app viene eseguita e l'utente fa clic sull'elemento dell'interfaccia ut
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo viene introdotto il concetto di storyboard e il modo in cui possono essere utili per lo sviluppo di applicazioni iOS. Vengono illustrate le scene, i controller di visualizzazione, le visualizzazioni e le gerarchie di visualizzazione e il modo in cui le scene sono collegate con tipi diversi di gli elementi segue.  Esplora inoltre la creazione manuale di un'istanza dei controller di visualizzazione da uno storyboard e la creazione di gli elementi segue condizionali.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290455"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769748"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procedura dettagliata: uso delle notifiche locali in Novell. iOS
 
@@ -24,7 +24,6 @@ _Questa sezione illustra come usare le notifiche locali in un'applicazione Novel
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 Consente di creare un'applicazione semplice che visualizzerà le notifiche locali in azione. Questa applicazione avrà un solo pulsante. Quando si fa clic sul pulsante, viene creata una notifica locale. Una volta trascorso il periodo di tempo specificato, verrà visualizzata la notifica.
-
 
 1. In Visual Studio per Mac creare una nuova soluzione iOS di visualizzazione singola e chiamarla `Notifications`.
 1. Aprire il `Main.storyboard` file e trascinare un pulsante nella visualizzazione. Assegnare un nome al **pulsante**e assegnargli il titolo **Aggiungi notifica**. A questo punto, è anche possibile impostare alcuni [vincoli](~/ios/user-interface/designer/designer-auto-layout.md) sul pulsante: 
@@ -88,7 +87,6 @@ Consente di creare un'applicazione semplice che visualizzerà le notifiche local
 
 1. È necessario gestire il caso in cui la notifica è stata avviata a causa di una notifica locale. Modificare il metodo `FinishedLaunching` `AppDelegate` in per includere il frammento di codice seguente:
 
-
     ```csharp
     // check for a notification
 
@@ -119,7 +117,6 @@ Consente di creare un'applicazione semplice che visualizzerà le notifiche local
 ## <a name="summary"></a>Riepilogo
 
 Questa procedura dettagliata ha illustrato come usare le varie API per la creazione e la pubblicazione di notifiche in iOS. È stato inoltre illustrato come aggiornare l'icona dell'applicazione con una notifica per fornire all'utente alcuni commenti specifici dell'applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

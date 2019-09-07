@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: efa21d3547167996e1a7dcc533caa00e0b1262e6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2872cc7b54e26d07b388f08d650048e8d3861930
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529039"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759973"
 ---
 # <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>Perché il progetto Novell. Forms. Maps Android ha esito negativo con un errore di livello superiore imprevisto COMPILETODALVIK?
 
@@ -37,4 +37,3 @@ Questo problema viene risolto in genere aumentando le dimensioni dell'heap Java 
 4. Ricompilare il progetto.  
 
 ![Screenshot delle opzioni del progetto Visual Studio per Mac](maps-compiletodalvik-error-images/xsjavaheap.png "Opzioni di compilazione Android in Visual Studio per Mac")
-

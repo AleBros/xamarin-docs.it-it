@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/18/2016
-ms.openlocfilehash: 4a04f0ed4cbb336e331528c3d8265efb31388328
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766746"
 ---
 # <a name="accessibility-on-ios"></a>Accessibilità in iOS
 
@@ -74,7 +74,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## <a name="accessibility-and-localization"></a>Accessibilità e localizzazione
 
 Le proprietà di accessibilità come l'etichetta e l'hint possono essere localizzate proprio come altro testo nell'interfaccia utente.
@@ -122,7 +121,6 @@ Nella schermata di **accessibilità** sono inoltre disponibili impostazioni per 
 
 Seguire queste [istruzioni VoiceOver](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) per testare l'accessibilità nei dispositivi iOS.
 
-
 ## <a name="simulator-testing"></a>Test del simulatore
 
 Quando si esegue il test nel simulatore, il **controllo di accessibilità** è disponibile per facilitare la verifica delle proprietà di accessibilità ed eventi configurati correttamente. Accendere il controllo nell'app **Impostazioni** passando a **Generale > Accessibilità > controllo di accessibilità**:
@@ -135,8 +133,6 @@ Di seguito è riportato un esempio di output quando viene selezionata una riga d
 ![](accessibility-images/tableview-a11y-sml.png "Uso di controllo di accessibilità")
 
 Quando il controllo è visibile, usare l'icona "X" nella parte superiore sinistra per visualizzare e nascondere temporaneamente la sovrimpressione e abilitare/disabilitare le impostazioni di accessibilità.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

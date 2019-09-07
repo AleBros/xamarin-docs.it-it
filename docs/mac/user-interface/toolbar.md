@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772716"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti in Novell. Mac
 
@@ -357,7 +357,6 @@ Eseguire l'applicazione e notare che l'elemento del **Cestino** è ora disabilit
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio l'uso delle barre degli strumenti e degli elementi della barra degli strumenti in un'applicazione Novell. Mac. Viene descritto come creare e gestire le barre degli strumenti in Interface Builder di Xcode, come alcuni controlli dell'interfaccia utente funzionano automaticamente con gli elementi della barra degli strumenti, C# come usare le barre degli strumenti nel codice e come abilitare e disabilitare gli elementi della barra degli strumenti.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

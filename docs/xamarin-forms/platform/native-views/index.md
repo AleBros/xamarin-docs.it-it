@@ -1,31 +1,30 @@
 ---
-title: Visualizzazioni native in xamarin. Forms
-description: Visualizzazioni native da iOS, Android e Universal Windows Platform (UWP) possono fare riferimento direttamente da xamarin. Forms e possono interagire con le visualizzazioni di xamarin. Forms.
+title: Viste native in Novell. Forms
+description: È possibile fare riferimento direttamente alle viste native di iOS, Android e del piattaforma UWP (Universal Windows Platform) (UWP) da Novell. Forms e interagire con le visualizzazioni Novell. Forms.
 ms.prod: xamarin
 ms.assetid: 2294a023-d763-41de-a9da-c2bfc239a132
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: b2ce371767b5f22af421ab99cdb291b2dbcf1143
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c49d6633e3fb78aa026cbd16cb2c6092a1c463f1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290531"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760009"
 ---
-# <a name="native-views-in-xamarinforms"></a>Visualizzazioni native in xamarin. Forms
+# <a name="native-views-in-xamarinforms"></a>Viste native in Novell. Forms
 
-_Visualizzazioni native da iOS, Android e Universal Windows Platform (UWP) possono essere fatto riferimento diretto da xamarin. Forms. Le proprietà e gestori di eventi possono essere impostati su visualizzazioni native e possono interagire con le visualizzazioni di xamarin. Forms._
+_È possibile fare riferimento direttamente alle viste native di iOS, Android e del piattaforma UWP (Universal Windows Platform) (UWP) da Novell. Forms. Le proprietà e i gestori di eventi possono essere impostati sulle visualizzazioni native e possono interagire con le visualizzazioni Novell. Forms._
 
 ## <a name="native-views-in-xamlxamlmd"></a>[Visualizzazioni native in XAML](xaml.md)
 
-Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di xamarin. Forms create tramite XAML.
+È possibile fare riferimento direttamente alle visualizzazioni native di iOS, Android e UWP dalle pagine Novell. Forms create con XAML.
 
 ## <a name="native-views-in-ccodemd"></a>[Visualizzazioni native in C#](code.md)
 
 Visualizzazioni native da iOS, Android e UWP possono farvi direttamente dalle pagine di xamarin. Forms create utilizzando c#.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

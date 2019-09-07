@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: f8d9841deff485a67919aea9fede75044541ba5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524193"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761467"
 ---
 # <a name="ice-cream-sandwich-features"></a>Funzionalità di Ice Cream Sandwich
 
@@ -27,7 +27,6 @@ Il sistema operativo Android versione 4,0 (livello API 14) rappresenta una maggi
 - **Nuove API di dati** : è disponibile un nuovo accesso ai dati che non erano precedentemente accessibili ufficialmente, ad esempio i dati del calendario e il profilo utente del proprietario del dispositivo. 
 - **Condivisione dei dati delle app** : la condivisione di dati tra applicazioni e dispositivi è ora più semplice che mai `ShareActionProvider` tramite tecnologie come, che semplificano la creazione di un'azione di condivisione da un barra delle azioni e *Android Beam* per il *campo near Communications (NFC)* , che lo rende uno snap per condividere i dati tra i dispositivi in prossimità. 
 
-
 In questo articolo verranno esaminate queste funzionalità e altre modifiche apportate all'API Android 4,0 e verrà illustrato come usare ogni funzionalità con Novell. Android.
 
 ## <a name="user-interface-features"></a>Funzionalità dell'interfaccia utente
@@ -38,7 +37,6 @@ Con Android 4 sono disponibili diverse nuove tecnologie dell'interfaccia utente,
 - **[Switch Widget](~/android/user-interface/controls/switch.md)** : consente di attivare o disattivare la selezione. 
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** : Abilita il contenuto video e OpenGL in una visualizzazione. 
 - **[Barra di spostamento](~/android/user-interface/controls/navigation-bar.md)** : contiene i pulsanti virtuali per back, Home e multitasking. 
-
 
 Sono stati inoltre migliorati gli altri elementi dell'interfaccia utente, `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`ad esempio, che ora è più facile da usare e le schede, che hanno un aspetto più lucido.
 
@@ -59,8 +57,6 @@ ICS non supporta ancora lo sviluppo con un emulatore x86. gli emulatori x86 sono
 
 Questo articolo ha trattato una serie di nuove tecnologie disponibili con Android 4. Sono state rivedute le nuove funzionalità dell'interfaccia utente, ad esempio *GridLayout*, *PopupMenu*e *Switch* widget. È stato anche esaminato un nuovo supporto per il controllo dell'interfaccia utente del sistema, oltre a come usare *TextureView*. È stata quindi discussa una serie di nuove tecnologie di condivisione. È stato illustrato il modo in cui *Android Beam* consente di condividere le informazioni tra i dispositivi che usano *NFC*, ha illustrato la nuova *API Calendar*e illustrato come usare il *ShareActionProvider*incorporato.
 Infine, è stato esaminato come utilizzare il provider *ContactsContract* per accedere ai dati del profilo utente.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

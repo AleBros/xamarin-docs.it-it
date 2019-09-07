@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: d9d90e371199c8587d61199240523cf0a23f5efd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 45fe5c783e737fb913730082841e0dfafc555684
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013267"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755126"
 ---
 # <a name="application-localization-and-string-resources"></a>Localizzazione delle applicazioni e risorse di tipo stringa
 
-Localizzazione delle applicazioni è l'atto di offrire risorse alternative per un'area specifica o le impostazioni locali di destinazione. Ad esempio, è possibile fornire le stringhe localizzate per paesi diversi, oppure è possibile modificare i colori o il layout per la corrispondenza le impostazioni cultura specifiche. Android caricherà e usare le risorse appropriate per le impostazioni locali del dispositivo in fase di runtime senza apportare modifiche al codice sorgente.
+La localizzazione delle applicazioni è l'azione di fornire risorse alternative per la destinazione di un'area o di impostazioni locali specifiche. È ad esempio possibile fornire stringhe di lingua localizzate per diversi paesi oppure modificare i colori o il layout in base alle impostazioni cultura specifiche. Android caricherà e userà le risorse appropriate per le impostazioni locali del dispositivo in fase di runtime senza alcuna modifica al codice sorgente.
 
-Ad esempio, l'immagine seguente mostra la stessa applicazione in esecuzione in tre impostazioni locali di dispositivi diversi, ma il testo visualizzato in tutti i pulsanti è specifico per le impostazioni locali che ogni dispositivo viene impostato su:
+Ad esempio, l'immagine seguente mostra la stessa applicazione in esecuzione in tre diverse impostazioni locali del dispositivo, ma il testo visualizzato in ogni pulsante è specifico per le impostazioni locali in base alle quali ogni dispositivo è impostato su:
 
-[![Esempi di tre diverse impostazioni locali](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
+[![Esempi di tre impostazioni locali diverse](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
-In questo esempio, il contenuto di un file di layout **Main. axml** simile al seguente:
+In questo esempio, il contenuto di un file di layout, **Main. aXML** , ha un aspetto simile al seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -43,23 +43,21 @@ Nell'esempio precedente, la stringa per il pulsante è stata caricata dalle riso
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Stringhe di risorsa per tre lingue](application-localization-images/02-resource-strings-vs.png)
- 
+![Stringhe di risorse per tre lingue](application-localization-images/02-resource-strings-vs.png)
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![Stringhe di risorsa per tre lingue](application-localization-images/02-resource-strings-xs.png)
- 
+![Stringhe di risorse per tre lingue](application-localization-images/02-resource-strings-xs.png)
+
 -----
- 
-## <a name="localizing-android-apps"></a>Localizzazione delle App Android
 
-Leggere il [Introduzione alla localizzazione](~/cross-platform/app-fundamentals/localization.md) per suggerimenti e linee guida sulla localizzazione delle App per dispositivi mobili.
+## <a name="localizing-android-apps"></a>Localizzazione di app Android
 
-Il [localizzazione di applicazioni Android](~/android/app-fundamentals/localization.md) Guida contiene esempi più specifici su come convertire le stringhe e localizzare le immagini usando xamarin. Android.
+Leggere l' [Introduzione alla localizzazione](~/cross-platform/app-fundamentals/localization.md) per suggerimenti e istruzioni sulla localizzazione di app per dispositivi mobili.
 
-
+La Guida [localizzazione di app Android](~/android/app-fundamentals/localization.md) contiene esempi più specifici su come tradurre le stringhe e localizzare immagini con Novell. Android.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Localizzazione delle App Android](~/android/app-fundamentals/localization.md)
-- [Panoramica sulla localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)
+- [Localizzazione di app Android](~/android/app-fundamentals/localization.md)
+- [Panoramica della localizzazione multipiattaforma](~/cross-platform/app-fundamentals/localization.md)

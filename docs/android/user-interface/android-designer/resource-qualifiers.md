@@ -7,23 +7,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 750cf801d8ae9dfe63f9b2259d4a3f6a386a4404
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523241"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762613"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificatori delle risorse e opzioni di visualizzazione
 
 _In questo argomento viene illustrato come definire le risorse che verranno utilizzate solo quando vengono confrontati alcuni valori di qualificatore. Un semplice esempio è una risorsa di stringa qualificata per il linguaggio. È possibile definire una risorsa di stringa come predefinita, con altre risorse alternative definite da usare per lingue aggiuntive. Tutti i tipi di risorse possono essere qualificati, incluso il layout stesso._
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="resource-qualifier-options"></a>Opzioni qualificatore risorse
 
-È possibile accedere alle opzioni del qualificatore di **risorsa** facendo clic sull'icona con i puntini di sospensione a destra del pulsante della modalità **orizzontale** :
+È possibile accedere alle **Opzioni del qualificatore di risorsa** facendo clic sull'icona con i puntini di sospensione a destra del pulsante della modalità **orizzontale** :
 
 [![Opzioni qualificatore risorse](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
@@ -53,13 +52,12 @@ Si noti che se si aggiunge una nuova lingua, ma non si creano nuove risorse, la 
 
 ### <a name="ui-mode"></a>Modalità interfaccia utente
 
-Quando si fa clic sul menu a discesa **modalità interfaccia utente** , viene visualizzato un elenco di modalità, ad **esempio normale**, **docking auto**, docking **desk**, **televisione**, **dispositivo**ed espressione di **controllo**:
-
+Quando si fa clic sul menu a discesa **modalità interfaccia utente** , viene visualizzato un elenco di modalità, ad esempio **normale**, **docking auto**, **docking desk**, **televisione**, **dispositivo**ed espressione di **controllo**:
 
 [![Menu modalità interfaccia utente](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Sotto questo elenco sono disponibili le modalità notturne **non notturne** e **notturne**, seguite dalle direzioni di layout da **sinistra a** destra e da **destra a sinistra** . per informazioni sulle opzioni da **sinistra a destra** e **da destra a sinistra** , vedere [ LayoutDirection](xref:Android.Util.LayoutDirection)).
-Gli ultimi elementi della finestra di dialogo **Opzioni qualificatore risorse** sono le **schermate rotonde** (per l'uso con Android Wear) o non le schermate **rotonde**.
+Gli ultimi elementi della finestra di dialogo **Opzioni qualificatore risorse** sono le **schermate rotonde** (per l'uso con Android Wear) o **non le schermate rotonde**.
 Per informazioni sulle schermate rotonde e non arrotondate, vedere [layout](https://developer.android.com/training/wearables/ui/layouts.html).
 Per ulteriori informazioni sulle modalità di interfaccia utente di Android, vedere [UiModeManager](xref:Android.App.UiModeManager).
 
@@ -99,13 +97,11 @@ Il set di widget disponibili nella casella degli strumenti è determinato dalla 
 
 Per altre informazioni sui tipi di risorse, vedere [risorse Android](~/android/app-fundamentals/resources-in-android/index.md).
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="resource-qualifier-options"></a>Opzioni qualificatore risorse
 
-È possibile accedere alle opzioni del qualificatore di **risorsa** facendo clic sull'icona con i puntini di sospensione a destra del pulsante della modalità **orizzontale** :
+È possibile accedere alle **Opzioni del qualificatore di risorsa** facendo clic sull'icona con i puntini di sospensione a destra del pulsante della modalità **orizzontale** :
 
 [![Opzioni qualificatore risorse](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
@@ -135,15 +131,14 @@ Si noti che se si aggiunge una nuova lingua, ma non si creano nuove risorse, la 
 
 ### <a name="ui-mode"></a>Modalità interfaccia utente
 
-Quando si fa clic sul menu a discesa **modalità interfaccia utente** , viene visualizzato un elenco di modalità, ad **esempio normale**, **docking auto**, docking **desk**, **televisione**, **dispositivo**ed espressione di **controllo**:
+Quando si fa clic sul menu a discesa **modalità interfaccia utente** , viene visualizzato un elenco di modalità, ad esempio **normale**, **docking auto**, **docking desk**, **televisione**, **dispositivo**ed espressione di **controllo**:
 
 [![Menu modalità interfaccia utente](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
-Sotto questo elenco sono disponibili le modalità notturne **non notturne** e **notturne**, seguite dalle direzioni di layout da **sinistra a destra** e da **destra a sinistra**. L'ultima coppia di opzioni consente di selezionare schermate **rotonde** o **schermate rettangolari** (utili per i dispositivi Android Wear).
+Sotto questo elenco sono disponibili le modalità notturne **non notturne** e **notturne**, seguite dalle direzioni di layout da **sinistra a destra** e da **destra a sinistra**. L'ultima coppia di opzioni consente di selezionare **schermate rotonde** o **schermate rettangolari** (utili per i dispositivi Android Wear).
 
 Per ulteriori informazioni sulle modalità di interfaccia utente di Android, vedere [UiModeManager](xref:Android.App.UiModeManager).
 Per informazioni sulle opzioni **da sinistra a destra** e **da destra a sinistra** , vedere [LayoutDirection](xref:Android.Util.LayoutDirection).
-
 
 ## <a name="action-bar-settings"></a>Impostazioni Barra delle azioni
 

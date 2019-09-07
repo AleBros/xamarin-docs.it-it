@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 9beff615c39fc34b5a58a93d309bb20543cad77f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650410"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771753"
 ---
 # <a name="playing-a-web-video"></a>Riproduzione di un video Web
 
@@ -518,10 +518,6 @@ Per fare riferimento a uno di questi altri video, è possibile sostituire l'URL 
 ```
 
 In alternativa, è possibile impostare la proprietà `Source` da un file video in un oggetto `ListView`, come descritto nel prossimo articolo [Associazione di origini video al lettore](source-bindings.md).
-
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

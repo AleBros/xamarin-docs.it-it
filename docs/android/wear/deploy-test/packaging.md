@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198386"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763970"
 ---
 # <a name="packaging-wear-apps"></a>Creazione di pacchetti di app Wear
 
@@ -47,7 +47,6 @@ A partire da Novell Android 5,0, l'app Wear viene automaticamente assemblata com
 
 -----
 
-
 Si noti che si riceverà un errore **XA5211** se il nome del pacchetto dell'app Wear non corrisponde al nome del pacchetto dell'app Handheld. Ad esempio:
 
 ```shell
@@ -74,8 +73,7 @@ L'assembly generato dal progetto di app Wear non viene usato come riferimento a 
     </ProjectReference>
     ```
 
-- Aggiunge l'app Wear come risorsa non elaborata al progetto Handheld. 
-
+- Aggiunge l'app Wear come risorsa non **elaborata** al progetto Handheld. 
 
 ## <a name="manual-packaging"></a>Creazione manuale del pacchetto
 
@@ -105,4 +103,3 @@ L'assembly generato dal progetto di app Wear non viene usato come riferimento a 
     ```
 
 Vedere anche le [istruzioni packging manuali](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)del sito per sviluppatori Android.
-

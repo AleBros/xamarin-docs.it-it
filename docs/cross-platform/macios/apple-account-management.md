@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290621"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766127"
 ---
 # <a name="apple-account-management"></a>Gestione degli account Apple
 
@@ -55,7 +55,7 @@ Per usare questa funzionalità, è necessario disporre di un account per svilupp
     ![finestra di dialogo Fastlane.](apple-account-management-images/image2.png)
 
 3. Immettere l'ID Apple e la password e fare clic sul pulsante **Accedi** . In questo modo, le credenziali vengono salvate nel Keychain sicuro del computer. [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) viene usato per gestire le credenziali in modo sicuro e passarle al portale per sviluppatori di Apple.
- 
+
 4. Selezionare **Consenti sempre** nella finestra di dialogo di avviso per consentire a Visual Studio di usare le credenziali:
 
     ![Consenti sempre la finestra di dialogo di avviso](apple-account-management-images/image4.png)
@@ -81,13 +81,12 @@ Per usare questa funzionalità, è necessario disporre di un account per svilupp
     ![finestra di dialogo nome utente e password](apple-account-management-images/prov1a.png)
 
 1. Una volta che l'account è stato aggiunto, verranno visualizzati l'ID Apple e i team di cui fa parte l'ID Apple.
- 
+
 1. Selezionare un team e fare clic su **Visualizza dettagli...** immagini (...). Verrà visualizzato un elenco di tutte le identità di firma e i profili di provisioning installati nel computer:
 
     ![finestra di dialogo nome utente e password](apple-account-management-images/prov2.png)
 
 -----
-
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>Gestione delle identità di firma e dei profili di provisioning
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 7e3f871d9d5992429c6f6619b2f5ff7059558045
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 69d5222bb6c50870d0c42bea6ff71236e3d1580c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525955"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754559"
 ---
 # <a name="introduction"></a>Introduzione
 
@@ -38,7 +38,6 @@ L'uso di un database SQL nell'app per dispositivi mobili presenta diversi vantag
 - Gli sviluppatori con competenze di database esistenti possono utilizzare le proprie conoscenze per progettare il database e il codice di accesso ai dati.
 - Il modello di dati dal componente server di un'applicazione connessa può essere riutilizzato (interamente o in parte) nell'applicazione per dispositivi mobili.
 
-
 ## <a name="sqlite-database-engine"></a>motore di database SQLite
 
 SQLite è un motore di database open source che è stato adottato da Google per la piattaforma per dispositivi mobili. Il motore di database SQLite è integrato in entrambi i sistemi operativi, pertanto non è necessario alcun lavoro aggiuntivo da parte degli sviluppatori. SQLite è particolarmente adatto per lo sviluppo di app per dispositivi mobili multipiattaforma perché:
@@ -48,13 +47,11 @@ SQLite è un motore di database open source che è stato adottato da Google per 
 - Il formato del file è facile da usare tra le piattaforme: se 32 o 64 bit e i sistemi Big o little-endian.
 - Implementa la maggior parte dello standard SQL92.
 
-
 Poiché SQLite è progettato per essere piccolo e veloce, esistono alcune avvertenze sull'uso:
 
 - La sintassi di OUTER join non è supportata.
 - Sono supportate solo le ridenominazioni di tabelle e ADDCOLUMN. Non è possibile apportare altre modifiche allo schema.
 - Le visualizzazioni sono di sola lettura.
-
 
 Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](http://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è stato supportato in Android a partire da Android 2.
 Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'uso in applicazioni Windows Phone e Windows.
@@ -63,7 +60,6 @@ Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'u
 
 SQLite può essere usato anche nelle piattaforme Windows, anche se queste piattaforme non sono descritte in questo documento.
 Per altre informazioni, vedere la pagina relativa ai case study di [attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [attività professionali](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e consultare [il Blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bf50bdee9243141d1f266a88f82770d9503969
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529095"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760229"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
 
@@ -37,7 +37,7 @@ Un rimedio efficace per queste difficoltà consiste nel partizionare un'app in c
 Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. Sono inclusi:
 
 - Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un'app aziendale Novell. Forms consiste nel decidere se inserire la logica di business nei file code-behind o se creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere più semplice l'app gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
-- Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)delle dipendenze.
+- Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 - La scelta tra la piattaforma fornita dagli eventi e la comunicazione basata su messaggi a regime di controllo libero tra i componenti che risultano poco pratici per il collegamento in base a riferimenti a oggetti e tipi. Per altre informazioni, vedere Introduzione alla [comunicazione tra componenti](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)a regime di controllo libero.
 - Decidere come spostarsi tra le pagine, inclusa la modalità di richiamo dello spostamento e la posizione in cui deve risiedere la logica di navigazione. Per altre informazioni, vedere [Navigazione](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 - Determinazione della modalità di convalida dell'input dell'utente per la correttezza. La decisione deve includere come convalidare l'input dell'utente e come inviare una notifica all'utente sugli errori di convalida. Per ulteriori informazioni, vedere [convalida](~/xamarin-forms/enterprise-application-patterns/validation.md).
@@ -81,7 +81,7 @@ L'applicazione di esempio include i servizi back-end seguenti:
 - Un microservizio degli ordini, ovvero un servizio basato su dominio che usa modelli di progettazione basati su dominio.
 - Un microservizio basket, ovvero un servizio CRUD basato sui dati che usa la cache Redis.
 
-Questi servizi back-end vengono implementati come microservizi usando ASP.NET Core MVC e vengono distribuiti come contenitori univoci all'interno di un singolo host docker. Complessivamente, questi servizi back-end vengono definiti applicazione di riferimento eShopOnContainers. Le app client comunicano con i servizi back-end tramite un'interfaccia Web REST (Representational State Transfer). Per altre informazioni sui microservizi e Docker, vedere microservizi in [contenitori](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
+Questi servizi back-end vengono implementati come microservizi usando ASP.NET Core MVC e vengono distribuiti come contenitori univoci all'interno di un singolo host docker. Complessivamente, questi servizi back-end vengono definiti applicazione di riferimento eShopOnContainers. Le app client comunicano con i servizi back-end tramite un'interfaccia Web REST (Representational State Transfer). Per altre informazioni sui microservizi e Docker, vedere [microservizi in contenitori](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
 Per informazioni sull'implementazione dei servizi back-end, vedere [microservizi .NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
 
@@ -119,7 +119,7 @@ Vengono inoltre forniti unit test per alcune delle classi nell'app per dispositi
 
 La soluzione app per dispositivi mobili eShopOnContainers organizza il codice sorgente e altre risorse nei progetti. Tutti i progetti utilizzano le cartelle per organizzare il codice sorgente e altre risorse in categorie. La tabella seguente descrive i progetti che compongono l'app per dispositivi mobili eShopOnContainers:
 
-|Progetto|DESCRIZIONE|
+|Progetto|Descrizione|
 |--- |--- |
 |eShopOnContainers.Core|Questo progetto è il progetto libreria di classi portabile (PCL) che contiene il codice condiviso e l'interfaccia utente condivisa.|
 |eShopOnContainers.Droid|Questo progetto include codice specifico per Android ed è il punto di ingresso per l'app Android.|
@@ -136,7 +136,7 @@ Le classi dall'app per dispositivi mobili eShopOnContainers possono essere riuti
 
 Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 
-|Cartella|DESCRIZIONE|
+|Cartella|Descrizione|
 |--- |--- |
 |Animations|Contiene classi che consentono l'utilizzo delle animazioni in XAML.|
 |comportamenti|Contiene i comportamenti esposti alle classi di visualizzazione.|
@@ -163,7 +163,6 @@ I progetti della piattaforma contengono implementazioni degli effetti, implement
 Gli strumenti e le piattaforme per lo sviluppo di app per dispositivi mobili multipiattaforma di Novell offrono una soluzione completa per le app client per dispositivi mobili B2E, B2B e B2C, che offrono la possibilità di condividere codice tra tutte le piattaforme di destinazione (iOS, Android e Windows) e di ridurre il costo totale di proprietà. Le app possono condividere l'interfaccia utente e il codice della logica dell'app, mantenendo al tempo stesso l'aspetto della piattaforma nativa.
 
 Gli sviluppatori di app aziendali affrontano diverse esigenze che possono alterare l'architettura dell'app durante lo sviluppo. È quindi importante compilare un'app in modo che possa essere modificata o estesa nel tempo. La progettazione di tale adattamento può essere difficile, ma in genere comporta il partizionamento di un'app in componenti discreti, a regime di controllo libero, che possono essere facilmente integrati in un'app.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

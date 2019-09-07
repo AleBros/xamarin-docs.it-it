@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 94a10213f8ae42d6e8f3407b18051021d92be5bc
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
-ms.translationtype: HT
+ms.openlocfilehash: 5fda0b78a80a25d122fbc58ef61fbeab22a547a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978555"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771350"
 ---
 # <a name="invoking-events-from-effects"></a>Richiamo di eventi da effetti
 
@@ -803,7 +803,6 @@ Se si scorre rapidamente il dito sui tasti, si può vedere dal lieve cambiamento
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come chiamare eventi in un effetto e come scrivere e usare un effetto che implementi l'elaborazione multitouch di basso livello.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

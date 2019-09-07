@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: d3face5db37e22fe7acceaa975c3327bb02b78ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8107a26e090aa920d71146d5f2af8b8365697d6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523327"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757217"
 ---
 # <a name="resolving-library-installation-errors"></a>Risoluzione degli errori di installazione di librerie
 
@@ -23,8 +23,6 @@ _In alcuni casi, è possibile che si verifichino errori durante l'installazione 
 
 Durante la compilazione di un progetto di app Novell. Android, è possibile che vengano generati errori di compilazione quando Visual Studio o Visual Studio per Mac tentano di scaricare e installare le librerie di dipendenze. Molti di questi errori sono causati da problemi di connettività di rete, danneggiamento dei file o problemi di controllo delle versioni. Questa guida descrive gli errori più comuni di installazione della libreria di supporto e fornisce i passaggi per risolvere questi problemi e ricreare il progetto dell'app. 
 
- 
- 
 ## <a name="errors-while-downloading-m2repository"></a>Errori durante il download di m2Repository
 
 È possibile che vengano visualizzati errori **m2repository** quando si fa riferimento a un pacchetto NuGet delle librerie di supporto Android o dei servizi Google Play. Il messaggio di errore è simile al seguente:
@@ -34,8 +32,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 ```
 
 Questo esempio è per **Android\_m2repository\_R16**, ma è possibile che venga visualizzato lo stesso messaggio di errore per una versione diversa, ad esempio **\_Android m2repository\_R18** o **\_ Android R25\_m2repository**. 
-
-
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>Ripristino automatico da errori di m2repository 
 
@@ -60,8 +56,6 @@ Spesso questo problema può essere risolto eliminando la libreria problematica e
 4. Ricompilare il &ndash; progetto in modo da fare in modo che il processo di compilazione scarichi nuovamente la libreria mancante.
 
 Nella maggior parte dei casi, questa procedura consente di risolvere l'errore di compilazione e di continuare. Se l'eliminazione di questa libreria non risolve l'errore di compilazione, è necessario scaricare e installare manualmente il file **Android\_m2repository\_r_nn_. zip** , come descritto nella sezione successiva. 
-
-
 
 ### <a name="manually-downloading-m2repository"></a>Download manuale di m2repository
 
@@ -111,7 +105,7 @@ Se si è provato a usare i passaggi di ripristino automatico precedenti e sono a
 
 3. Copiare il file nella cartella Novell **zip** : 
 
-    - In Windows questa cartella si trova in **C\\: Users\\***nomeutente***\\AppData\\Local\\Novell\\zip**. 
+    - In Windows questa cartella si trova in **C:\\Users\\***nomeutente***\\AppData\\Local\\Novell\\zip**. 
 
     - In Mac OS X, questa cartella si trova in **/utenti/***nomeutente***/.local/share/Xamarin/Zips**. 
 
@@ -119,9 +113,7 @@ Se si è provato a usare i passaggi di ripristino automatico precedenti e sono a
 
     [![Esempio del repository R16. zip che viene rinominato in 0595E577D19D31708195A83087881EE6. zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
-
 Se questa procedura non risolve l'errore di compilazione, è necessario scaricare manualmente il **file\_Android\_m2repository r_nn_. zip** , decomprimerlo e installarne il contenuto, come descritto nella sezione successiva. 
-
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>Download e installazione manuale dei file m2repository
 
@@ -133,7 +125,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 Per scaricare **m2repository** e installarne il contenuto, attenersi alla procedura seguente:
 
-1. Elimina il contenuto della cartella della libreria corrispondente al messaggio di errore. Ad esempio, nel messaggio di errore precedente si elimina il contenuto di **\\C: Users\\***nomeutente***\\AppData\\Local\\Novell\\Android. support. v423.1.1.0\\** . 
+1. Elimina il contenuto della cartella della libreria corrispondente al messaggio di errore. Ad esempio, nel messaggio di errore precedente si elimina il contenuto di **C:\\Users\\***nomeutente***\\AppData\\Local\\Novell\\Android. support. v423.1.1.0\\** . 
     Come descritto in precedenza, è necessario eliminare l'intero contenuto della directory:
 
     [![Eliminazione di cartelle di contenuto, incorporate e android_m2repository dalla cartella 23.1.1.0](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
@@ -144,7 +136,7 @@ Per scaricare **m2repository** e installarne il contenuto, attenersi alla proced
 
     [![cartella m2repository trovata nell'archivio zip Estratto](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
-4. Nella directory della libreria con versione eliminata nel passaggio 1, ricreare il **contenuto** e le sottodirectory incorporate. Ad esempio, nella schermata seguente vengono illustrati il **contenuto** e le sottodirectory incorporate create nella cartella **23.1.1.0** per **Android\_\_m2repository R25. zip**: 
+4. Nella directory della libreria con versione eliminata nel passaggio 1, ricreare il **contenuto** e le sottodirectory **incorporate** . Ad esempio, nella schermata seguente vengono illustrati il **contenuto** e le sottodirectory **incorporate** create nella cartella **23.1.1.0** per **\_Android\_m2repository R25. zip**: 
 
     [![Creare contenuto e cartelle incorporate nella cartella 23.1.1.0](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
@@ -160,14 +152,12 @@ Per scaricare **m2repository** e installarne il contenuto, attenersi alla proced
 
     [![Esempio di file copiati nella cartella 23.1.1.0/Embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
-8. Verificare che tutti i file vengano copiati. La directory Embedded dovrebbe ora contenere file come **. jar**, **. AAR**e **. POM**.
+8. Verificare che tutti i file vengano copiati. La directory **Embedded** dovrebbe ora contenere file come **. jar**, **. AAR**e **. POM**.
 
 9. Decomprimere il contenuto di tutti i file con **estensione AAR** estratti nella directory **incorporata** . In Windows aggiungere un'estensione **zip** al file **. AAR** , aprirla e copiare il contenuto nella directory **incorporata** .
     In macOS, decomprimere il file con **estensione AAR** usando il comando **unzip** nel terminale (ad esempio, **unzip file. AAR**).
 
 A questo punto, sono stati installati manualmente i componenti mancanti e il progetto dovrebbe essere compilato senza errori. In caso contrario, verificare di aver scaricato la versione dell'archivio **m2repository** **. zip** che corrisponde esattamente alla versione nel messaggio di errore e verificare di aver installato il contenuto nei percorsi corretti, come descritto nei passaggi precedenti. 
-
-
 
 ## <a name="summary"></a>Riepilogo 
 

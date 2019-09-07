@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291699"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766959"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controlli tabella watchos in Novell
 
@@ -39,9 +39,6 @@ Per impostare la **classe** per il controller di riga, selezionare la riga nella
 
 Una volta impostata la classe per il controller della riga, l'IDE creerà un file corrispondente C# nel progetto. Trascinare i controlli (ad esempio le etichette) nella riga e assegnare loro i nomi in modo che possano essere definiti nel codice.
 
-
-
-
 ## <a name="create-and-populate-rows"></a>Creazione e popolamento di righe
 
 `SetNumberOfRows`Crea le classi del controller di riga per ogni riga, `Identifier` utilizzando per selezionare quella corretta. Se è stato assegnato il controller di riga `Identifier`a un oggetto personalizzato, modificare il **valore predefinito** nel frammento di codice riportato di seguito nell'identificatore usato. Per ogni *riga* viene creato quando `SetNumberOfRows` viene chiamato il metodo e la tabella viene visualizzata. `RowController`
@@ -65,7 +62,6 @@ for (var i = 0; i < rows.Count; i++) {
 
 > [!IMPORTANT]
 > Se `SetNumberOfRows` si usa e quindi si esegue `GetRowController` il ciclo usando, l'intera tabella viene inviata all'espressione di controllo. Nelle visualizzazioni successive della tabella, se è necessario aggiungere o rimuovere righe specifiche, utilizzare `InsertRowsAt` e `RemoveRowsAt` per ottenere prestazioni migliori.
-
 
 ## <a name="respond-to-taps"></a>Rispondi ai rubinetti
 
@@ -142,7 +138,6 @@ for (var i = 0; i < rows.Count; i++) {
 }
 ```
 
-
 ## <a name="vertical-detail-paging"></a>Paging dettagli verticali
 
 watchos 3 ha introdotto una nuova funzionalità per le tabelle: la possibilità di scorrere le pagine dei dettagli relative a ogni riga, senza dover tornare alla tabella e scegliere un'altra riga. È possibile scorrere le schermate dei dettagli scorrendo verso l'alto e verso il basso o usando il Digital Crown.
@@ -210,8 +205,6 @@ namespace WatchTables.OnWatchExtension
 ```
 
 È possibile fare riferimento agli Outlet e alle azioni dichiarati nel codice. Tuttavia, il file con **estensione designer.cs** non deve essere modificato direttamente.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

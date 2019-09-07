@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f8a542b58fa891b63f43d1c87dea911b83e01949
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e3b7ccf74773e5a391b8f133ccc241ca0e18bfcb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755163"
 ---
 # <a name="using-android-assets"></a>Uso di asset Android
 
@@ -19,7 +19,6 @@ Gli _Asset_ forniscono un modo per includere file arbitrari come testo, XML, car
 
 Gli asset aggiunti al progetto vengono visualizzati come un file system in grado di leggere dall'applicazione usando [AssetManager](xref:Android.Content.Res.AssetManager).
 In questa semplice demo, verrà aggiunto un asset di file di testo al progetto, verrà letto usando `AssetManager`e visualizzato in un oggetto TextView.
-
 
 ## <a name="add-asset-to-project"></a>Aggiungi asset al progetto
 
@@ -40,7 +39,6 @@ Visual Studio per Mac necessario impostare l' **azione di compilazione** per que
 -----
 
 Selezionando il **BuildAction** corretto si garantisce che il file venga incluso nel file apk in fase di compilazione.
-
 
 ## <a name="reading-assets"></a>Lettura degli asset
 
@@ -69,13 +67,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-
 ## <a name="running-the-application"></a>Esecuzione dell'applicazione
 
 Eseguire l'applicazione e dovrebbe essere visualizzato quanto segue:
 
 ![Schermata di esempio](android-assets-images/screenshot.png)
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

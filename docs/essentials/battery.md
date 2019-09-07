@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d5408894a9eda6b782f1f790ed8f1d0bb138a2f3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120147"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756927"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batteria
 
@@ -25,7 +25,7 @@ Per accedere alla funzionalità **Battery**, è necessaria la configurazione seg
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L'autorizzazione `Battery` è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla nei modi seguenti:
+L'autorizzazione `Battery` è obbligatoria e deve essere configurata nel progetto Android. È possibile aggiungerla seguendo uno dei metodi seguenti:
 
 Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 
@@ -33,9 +33,9 @@ Aprire il file **AssemblyInfo.cs** nella cartella **Proprietà** e aggiungere:
 [assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
-OPPURE aggiornare il manifesto di Android:
+In alternativa, è possibile aggiornare il Manifesto Android:
 
-Aprire il file **AndroidManifest.xml** nella cartella **Proprietà** e aggiungere quanto segue all'interno del nodo **manifest**.
+Aprire il file **androidmanifest. XML** nella cartella **Proprietà** e aggiungere il codice seguente nel nodo del **manifesto**.
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -161,7 +161,6 @@ public class EnergySaverTest
 ```
 
 Se lo stato di risparmio energia diventa `On`, l'applicazione deve interrompere l'elaborazione in background. Se lo stato diventa `Unknown` o `Off`, l'applicazione può riprendere l'elaborazione in background.
-
 
 ## <a name="platform-differences"></a>Differenze tra le piattaforme
 

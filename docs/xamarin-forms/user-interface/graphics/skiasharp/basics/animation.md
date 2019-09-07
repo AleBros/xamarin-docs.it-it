@@ -7,12 +7,12 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648737"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759743"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animazione di base in SkiaSharp
 
@@ -245,7 +245,6 @@ public class ExpandingCirclesPage : ContentPage
 Il risultato è che l'immagine di ricerca stesso when `t` è uguale a 0 come quando `t` è uguale a 1 e sembrano continuare a espandere per sempre i cerchi:
 
 [![](animation-images/expandingcircles-small.png "Tripla screenshot della pagina di espansione cerchi")](animation-images/expandingcircles-large.png#lightbox "tripla screenshot della pagina di espansione cerchi")
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

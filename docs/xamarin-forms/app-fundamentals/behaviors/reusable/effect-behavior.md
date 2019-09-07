@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 38ecd765b1c6bc81054b2c42426b6c15bb99b9d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650980"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771990"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior riusabili
 
@@ -164,7 +164,6 @@ Il vantaggio dell'uso di questo comportamento per aggiungere e rimuovere effetti
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato l'uso di un comportamento per aggiungere un effetto a un controllo. La classe `EffectBehavior` è un comportamento personalizzato Xamarin.Forms riutilizzabile che consente di aggiungere un'istanza di [`Effect`](xref:Xamarin.Forms.Effect) a un controllo quando il comportamento viene associato al controllo e rimuove l'istanza `Effect` quando il comportamento viene scollegato dal controllo.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

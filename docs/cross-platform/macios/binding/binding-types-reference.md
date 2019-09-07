@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 52c4f6b45a44eaa9df253e9d049d1016de4a6e30
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ef94c90cec11c374b24ddfb159674adb468e72de
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199359"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765782"
 ---
 # <a name="binding-types-reference-guide"></a>Guida di riferimento ai tipi di binding
 
@@ -52,7 +52,6 @@ interface UITextField : UITextInput {
 ```
 
 È possibile controllare molti altri aspetti della generazione di codice applicando altri attributi all'interfaccia e configurando l' [`[BaseType]`](#BaseTypeAttribute) attributo.
-
 
 ### <a name="generating-events"></a>Generazione di eventi
 
@@ -207,7 +206,6 @@ public interface UIAccelerometer {
 public interface UIAccelerometerDelegate {
 }
 ```
-
 
 #### <a name="basetypekeeprefuntil"></a>BaseType.KeepRefUntil
 
@@ -538,7 +536,6 @@ Espone quindi quanto segue nella `UIImagePickerController` classe:
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
 ```
 
-
 ### <a name="eventnameattribute"></a>EventNameAttribute
 
 Questo attributo viene usato per consentire al generatore di modificare il nome di un evento o di una proprietà generata nella classe. A volte è utile quando il nome del metodo della classe del modello ha senso per la classe del modello, ma potrebbe sembrare strano nella classe di origine come un evento o una proprietà.
@@ -706,11 +703,9 @@ interface Robot : SpeakProtocol {
 }
 ```
 
-
 ## <a name="member-definitions"></a>Definizioni dei membri
 
 Gli attributi in questa sezione vengono applicati a singoli membri di un tipo: proprietà e dichiarazioni di metodo.
-
 
 ### <a name="alignattribute"></a>AlignAttribute
 
@@ -724,7 +719,6 @@ public interface GLKBaseEffect {
     Vector4 ConstantColor { [Align (16)] get; set;  }
 }
 ```
-
 
 ### <a name="appearanceattribute"></a>AppearanceAttribute
 
@@ -1105,7 +1099,7 @@ Le proprietà contrassegnate con l'attributo field possono essere dei tipi segue
 * `System.IntPtr`
 * Enumerazioni
 
-I setter non sono supportati per le enumerazioni supportate [dalle costanti NSString](#enum-attributes), ma possono essere associate manualmente, se necessario.
+I setter non sono supportati per le [enumerazioni supportate dalle costanti NSString](#enum-attributes), ma possono essere associate manualmente, se necessario.
 
 Esempio:
 
@@ -1162,7 +1156,6 @@ Questo attributo renderà un metodo che supporta le eccezioni native (Objective-
 Invece di chiamare `objc_msgSend` direttamente, la chiamata passa attraverso un trampolino personalizzato che intercetta le eccezioni ObjectiveC e ne esegue il marshalling in eccezioni gestite.
 
 Attualmente sono supportate solo `objc_msgSend` alcune firme (è possibile scoprire se una firma non è supportata quando il collegamento nativo di un'app che usa l'associazione ha esito negativo con un simbolo monotouch_ *_objc_msgSend* mancante), ma è possibile aggiungere altro alla richiesta.
-
 
 ### <a name="newattribute"></a>NewAttribute
 
@@ -1405,7 +1398,6 @@ NSObject GetAndRetainObject ();
 
 Questo attributo viene inoltre propagato al codice generato, in modo che il runtime di Novell. iOS sappia che deve mantenere l'oggetto quando viene restituito a Objective-C da tale funzione.
 
-
 ### <a name="sealedattribute"></a>SealedAttribute
 
 Indica al generatore di contrassegnare il metodo generato come sealed. Se questo attributo non viene specificato, l'impostazione predefinita consiste nel generare un metodo virtuale, ovvero un metodo virtuale, un metodo astratto o una sostituzione, a seconda della modalità di utilizzo di altri attributi.
@@ -1415,7 +1407,6 @@ Indica al generatore di contrassegnare il metodo generato come sealed. Se questo
 ### <a name="staticattribute"></a>StaticAttribute
 
 Quando l' `[Static]` attributo viene applicato a un metodo o a una proprietà, viene generato un metodo o una proprietà statica. Se questo attributo non viene specificato, il generatore produce un metodo di istanza o una proprietà.
-
 
 ### <a name="transientattribute"></a>TransientAttribute
 
@@ -1634,7 +1625,6 @@ public class RetainAttribute {
 }
 ```
 
-
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
 Indica al generatore di memorizzare un riferimento gestito al parametro o di rimuovere un riferimento interno al parametro. Viene usato per evitare che venga fatto riferimento a oggetti.
@@ -1651,7 +1641,6 @@ Se il valore di `doAdd` è true, il parametro viene aggiunto `__mt_{0}_var List<
 
 Per un esempio, vedere [Foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) e [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
-
 ### <a name="transientattribute"></a>TransientAttribute
 
 Questo attributo viene applicato ai parametri e viene usato solo quando si esegue la transizione da Objective- C#C a.  Durante tali transizioni, i vari parametri Objective `NSObject` -C vengono racchiusi in una rappresentazione gestita dell'oggetto.
@@ -1665,7 +1654,6 @@ Questo attributo informa il runtime che si desidera che l'oggetto venga eliminat
 La regola è semplice: se il runtime ha dovuto creare una nuova rappresentazione gestita dall'oggetto nativo, alla fine della funzione, il numero di conservazioni per l'oggetto nativo verrà eliminato e la proprietà handle dell'oggetto gestito verrà cancellata.   Ciò significa che se si conserva un riferimento all'oggetto gestito, tale riferimento diventerà inutile (la chiamata di metodi su di essa genererà un'eccezione).
 
 Se l'oggetto passato non è stato creato o se è già presente una rappresentazione gestita in attesa dell'oggetto, l'eliminazione forzata non viene eseguita. 
-
 
 ## <a name="property-attributes"></a>Attributi proprietà
 

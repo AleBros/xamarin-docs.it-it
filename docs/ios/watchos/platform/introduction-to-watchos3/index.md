@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/07/2017
-ms.openlocfilehash: 50278eaa6d3518b8de85685c1faf64eabac4531d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b167ddca86148818c534b7a9b0e338f8a4406b15
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292195"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767759"
 ---
 # <a name="introduction-to-watchos-3"></a>Introduzione a watchOS 3
 
@@ -187,7 +187,6 @@ Le API seguenti sono state deprecate in watchos 3:
 - La `UILocalNotification` classe di UIKit è stata deprecata e deve essere sostituita con il Framework di notifica utente.
 
 Per un elenco completo di deprecazioni e modifiche, vedere la documentazione relativa [alle differenze tra le API watchos 2,2 di Apple watchos 3,0](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) .
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

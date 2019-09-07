@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6b7868475426b7e8536030ce9e35812db828b175
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a96bfedfbffc02bc7df48f4cb116925bc6c5b2f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288698"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768515"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controlli manuali della fotocamera in Novell. iOS
 
@@ -36,7 +36,6 @@ Usando le nuove API fornite da iOS 8, l'applicazione può assumere il controllo 
 - **Esposizione manuale** : grazie al controllo manuale sull'esposizione, un'applicazione può offrire maggiore libertà agli utenti e consentire loro di ottenere un aspetto stilizzato.
 - **Bilanciamento bianco manuale** : il bilanciamento bianco viene usato per modificare il colore in un'immagine, spesso per renderlo realistico. Diverse fonti di luce hanno temperature di colore diverse e le impostazioni della fotocamera usate per acquisire un'immagine vengono modificate per compensare tali differenze. Anche in questo caso, consentendo al controllo utente sul bilanciamento del bianco, gli utenti possono apportare modifiche che non possono essere eseguite automaticamente.
 
-
 iOS 8 fornisce estensioni e miglioramenti alle API iOS esistenti per fornire questo controllo con granularità fine sul processo di acquisizione delle immagini.
 
 ## <a name="bracketed-capture"></a>Acquisizione tra parentesi quadre
@@ -52,7 +51,6 @@ Per completare i passaggi illustrati in questo articolo, sono necessari gli elem
 - **Xcode 7 + e iOS 8 o versioni successive** : è necessario installare e configurare le API di Apple Xcode 7 e iOS 8 o versioni successive nel computer dello sviluppatore.
 - **Visual Studio per Mac** : la versione più recente di Visual Studio per Mac deve essere installata e configurata nel dispositivo utente.
 - **dispositivo iOS 8** : un dispositivo iOS che esegue la versione più recente di iOS 8. Non è possibile testare le funzionalità della fotocamera nel simulatore iOS.
-
 
 ## <a name="general-av-capture-setup"></a>Configurazione di acquisizione AV generale
 
@@ -169,7 +167,6 @@ La sessione di acquisizione AV viene usata per controllare la registrazione di v
 
 Per modificare l'applicazione `AppDelegate` e aggiungere il codice necessario, eseguire le operazioni seguenti:
 
-
 1. Fare doppio clic sul `AppDelegate.cs` file nella Esplora soluzioni per aprirlo per la modifica.
 1. Aggiungere le istruzioni using seguenti all'inizio del file:
 
@@ -269,7 +266,6 @@ Per modificare l'applicazione `AppDelegate` e aggiungere il codice necessario, e
 
 1. Salvare le modifiche apportate al file.
 
-
 Con questo codice, i controlli della fotocamera manuale possono essere implementati facilmente per la sperimentazione e il test.
 
 ## <a name="manual-focus"></a>Stato attivo manuale
@@ -306,7 +302,6 @@ Quando si ha a che fare con lo stato attivo, è necessario che lo sviluppatore a
 - **Distanza iperfocale** : si tratta del punto nello spettro di interesse in cui l'oggetto più lontano nel frame è solo alla fine dello stato attivo. In altre parole, si tratta della posizione focale che massimizza la profondità del campo.
 - **Posizione della lente** : questa è la regola che controlla tutti gli altri termini precedenti. Si tratta della distanza dell'obiettivo dal sensore e quindi del controller dello stato attivo.
 
-
 Con questi termini e conoscenze, i nuovi controlli di messa a fuoco manuali possono essere implementati correttamente in un'applicazione iOS 8.
 
 ### <a name="existing-focus-controls"></a>Controlli di stato attivo esistenti
@@ -317,14 +312,12 @@ iOS 7 e versioni precedenti forniscono i controlli di stato attivo esistenti `Fo
 - `AVCaptureFocusModeAutoFocus`-La fotocamera consente di spazzare l'obiettivo attraverso tutti i punti focali fino a quando non trova lo stato attivo e quindi rimane in tale posizione.
 - `AVCaptureFocusModeContinuousAutoFocus`: La fotocamera viene riattivata ogni volta che viene rilevata una condizione di sfocatura.
 
-
 I controlli esistenti forniscono anche un punto di interesse impostabile tramite`FocusPointOfInterest` la proprietà, in modo che l'utente possa toccare per concentrarsi su un'area specifica. L'applicazione può anche tenere traccia dello spostamento dell'obiettivo monitorando la `IsAdjustingFocus` proprietà.
 
 Inoltre, la `AutoFocusRangeRestriction` restrizione di intervallo è stata fornita dalla proprietà come:
 
 - `AVCaptureAutoFocusRangeRestrictionNear`: Limita lo stato attivo alla profondità vicina. Utile in situazioni come la scansione di un codice a matrice o codice a barre.
 - `AVCaptureAutoFocusRangeRestrictionFar`: Limita la messa a fuoco automatica a profondità distanti. Utile nelle situazioni in cui gli oggetti noti come irrilevanti sono nel campo di visualizzazione, ad esempio una cornice della finestra.
-
 
 Infine, è presente `SmoothAutoFocus` la proprietà che rallenta l'algoritmo di messa a fuoco automatica e ne esegue il passaggio in incrementi minori per evitare di spostare gli artefatti durante la registrazione del video.
 
@@ -334,7 +327,6 @@ Oltre alle funzionalità già fornite da iOS 7 e versioni successive, sono ora d
 
 - Controllo manuale completo della posizione dell'obiettivo quando si blocca lo stato attivo.
 - Osservazione chiave-valore della posizione della lente in qualsiasi modalità messa a fuoco.
-
 
 Per implementare le funzionalità sopra indicate, `AVCaptureDevice` la classe è stata modificata in modo da includere una `LensPosition` proprietà di sola lettura usata per ottenere la posizione corrente dell'obiettivo della fotocamera.
 
@@ -364,9 +356,7 @@ La vista contiene gli elementi principali seguenti:
 - Oggetto `UISegmentedControl` che consente di modificare la modalità messa a fuoco da automatica a bloccata.
 - Oggetto `UISlider` che visualizzerà e aggiornerà la posizione corrente dell'obiettivo.
 
-
 Eseguire le operazioni seguenti per collegare il controller di visualizzazione per il controllo dello stato attivo manuale:
-
 
 1. Aggiungere le istruzioni using seguenti:
 
@@ -495,7 +485,6 @@ Eseguire le operazioni seguenti per collegare il controller di visualizzazione p
     [![](intro-to-manual-camera-controls-images/image7.png "Regolazione manuale della posizione dell'obiettivo")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Arrestare l'applicazione.
 
-
 Il codice precedente ha illustrato come monitorare la posizione dell'obiettivo quando la fotocamera è in modalità automatica o usare un dispositivo di scorrimento per controllare la posizione dell'obiettivo quando è in modalità di blocco.
 
 ## <a name="manual-exposure"></a>Esposizione manuale
@@ -520,7 +509,6 @@ I tre elementi di base che si uniscono per controllare l'esposizione sono:
 - **Mapping ISO** : si tratta di un termine preso in prestito dalla fotografia del film e si riferisce alla sensibilità delle sostanze chimiche nel film alla luce. I valori ISO bassi nella pellicola hanno una riproduzione a colori meno granulare e più fine; i valori ISO bassi sui sensori digitali hanno meno rumore del sensore ma meno luminosità. Maggiore è il valore ISO, più luminoso è l'immagine, ma con maggiore rumore del sensore. "ISO" su un sensore digitale è una misura del [guadagno elettronico](https://en.wikipedia.org/wiki/Gain), non una funzionalità fisica.
 - **Apertura** della lente: questa è la dimensione dell'apertura dell'obiettivo. In tutti i dispositivi iOS l'apertura della lente è fissa, quindi gli unici due valori che è possibile usare per regolare l'esposizione sono la velocità dell'otturatore e l'ISO.
 
-
 ### <a name="how-continuous-auto-exposure-works"></a>Funzionamento dell'esposizione automatica continua
 
 Prima di apprendere come funziona l'esposizione manuale, è consigliabile comprendere il funzionamento dell'esposizione automatica continua in un dispositivo iOS.
@@ -544,7 +532,6 @@ iOS 7 e versioni successive forniscono i controlli di esposizione esistenti segu
 - `AVCaptureExposureModeLocked`: Esegue il campionamento della scena una volta e usa tali valori in tutta la scena.
 - `AVCaptureExposureModeContinuousAutoExposure`: Esegue il campionamento continuo della scena per assicurarsi che sia ben illuminata.
 
-
 Può essere usato per toccare per esporre la scena selezionando un oggetto di destinazione su cui esporre il e l'applicazione può monitorare la `AdjustingExposure` proprietà per vedere quando è in corso la regolazione dell'esposizione. `ExposurePointOfInterest`
 
 ### <a name="new-exposure-controls-in-ios-8"></a>Nuovi controlli di esposizione in iOS 8
@@ -553,7 +540,6 @@ Oltre alle funzionalità già fornite da iOS 7 e versioni successive, sono ora d
 
 - Esposizione personalizzata completamente manuale.
 - Get, set e Key-Value osservino IOS e la velocità dell'otturatore (durata).
-
 
 Per implementare le funzionalità sopra riportate `AVCaptureExposureModeCustom` , è stata aggiunta una nuova modalità. Quando la fotocamera in è la modalità personalizzata, è possibile usare il codice seguente per modificare la durata dell'esposizione e l'ISO:
 
@@ -580,7 +566,6 @@ Gli intervalli di impostazioni minime e massime dipendono dal dispositivo in cui
 - `CaptureDevice.ActiveFormat.MinExposureDuration`
 - `CaptureDevice.ActiveFormat.MaxExposureDuration`
 
-
 Come illustrato nel codice precedente, il dispositivo di acquisizione deve essere bloccato per la configurazione prima che possa essere apportata una modifica all'esposizione.
 
 ### <a name="manual-exposure-example"></a>Esempio di esposizione manuale
@@ -595,9 +580,7 @@ La vista contiene gli elementi principali seguenti:
 - Oggetto `UISegmentedControl` che consente di modificare la modalità messa a fuoco da automatica a bloccata.
 - Quattro `UISlider` controlli che visualizzano e aggiornano offset, durata, ISO e bias.
 
-
 Per collegare il controller di visualizzazione per il controllo dell'esposizione manuale, eseguire le operazioni seguenti:
-
 
 1. Aggiungere le istruzioni using seguenti:
 
@@ -798,7 +781,6 @@ Per collegare il controller di visualizzazione per il controllo dell'esposizione
     [![](intro-to-manual-camera-controls-images/image15.png "Trascinare i dispositivi di scorrimento durata e ISO per controllare manualmente l'esposizione")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Arrestare l'applicazione.
 
-
 Il codice precedente ha illustrato come monitorare le impostazioni di esposizione quando la fotocamera è in modalità automatica e come usare i dispositivi di scorrimento per controllare l'esposizione quando è in modalità bloccata o personalizzata.
 
 ## <a name="manual-white-balance"></a>Bilanciamento bianco manuale
@@ -838,7 +820,6 @@ iOS 7 e versioni successive hanno fornito i controlli di bilanciamento del `Whit
 - `AVCapture WhiteBalance ModeLocked`: Esegue il campionamento della scena una volta e usando tali valori in tutta la scena.
 - `AVCapture WhiteBalance ModeContinuousAutoExposure`: Campiona la scena in modo continuo per assicurarsi che sia ben bilanciata.
 
-
 E l'applicazione può monitorare la `AdjustingWhiteBalance` proprietà per vedere quando viene regolata l'esposizione.
 
 ### <a name="new-white-balance-controls-in-ios-8"></a>Nuovi controlli di bilanciamento del bianco in iOS 8
@@ -850,13 +831,11 @@ Oltre alle funzionalità già fornite da iOS 7 e versioni successive, sono ora d
 - Supporto per il bilanciamento del bianco utilizzando una scheda grigia.
 - Routine di conversione da e verso spazi dei colori indipendenti dal dispositivo.
 
-
 Per implementare le funzionalità sopra riportate, la `AVCaptureWhiteBalanceGain` struttura è stata aggiunta con i membri seguenti:
 
 - `RedGain`
 - `GreenGain`
 - `BlueGain`
-
 
 Il guadagno massimo del saldo bianco è attualmente quattro (4) e può essere pronto dalla `MaxWhiteBalanceGain` proprietà. Quindi, l'intervallo valido è compreso tra 1 (1 `MaxWhiteBalanceGain` ) e (4).
 
@@ -869,20 +848,15 @@ Le routine di conversione sono state aggiunte ad iOS 8 per semplificare la conve
 - `X`-è un valore compreso tra 0 e 1.
 - `Y`-è un valore compreso tra 0 e 1.
 
-
 È `AVCaptureWhiteBalanceTemperatureAndTintValues` stata aggiunta anche una struttura con i membri seguenti:
 
 - `Temperature`-è un valore a virgola mobile in gradi Kelvin.
 - `Tint`-è un offset da verde o magenta compreso tra 0 e 150 con valori positivi verso la direzione verde e negativo verso il magenta.
 
-
 Usare i `CaptureDevice.GetTemperatureAndTintValues`metodi e `CaptureDevice.GetDeviceWhiteBalanceGains`per eseguire la conversione tra la temperatura e la tinta, la cromaticità e gli spazi colore di guadagno RGB.
 
 > [!NOTE]
 > Le routine di conversione sono più accurate e il valore da convertire è più vicino al locus planckiano.
-
-
-
 
 #### <a name="gray-card-support"></a>Supporto della scheda grigio
 
@@ -907,9 +881,7 @@ La vista contiene gli elementi principali seguenti:
 - Due `UISlider` controlli che visualizzano e aggiornano la temperatura e la tinta.
 - Oggetto `UIButton` utilizzato per campionare uno spazio grigio di una scheda grigia e impostare il bilanciamento bianco utilizzando tali valori.
 
-
 Eseguire le operazioni seguenti per collegare il controller di visualizzazione per il controllo di bilanciamento del bianco manuale:
-
 
 1. Aggiungere le istruzioni using seguenti:
 
@@ -1138,7 +1110,6 @@ Anche in questo caso, l'acquisizione tra parentesi quadre è un impeto di immagi
 - **Parentesi di esposizione manuale** , in cui tutte le immagini hanno una velocità di apertura variabile (durata) e un importo ISO.
 - **Parentesi graffa semplice** : serie di immagini ancora acquisite in rapida successione.
 
-
 ### <a name="new-bracketed-capture-controls-in-ios-8"></a>Nuovi controlli di acquisizione racchiusi tra parentesi quadre in iOS 8
 
 Tutti i comandi di acquisizione racchiusi tra parentesi `AVCaptureStillImageOutput` sono implementati nella classe. Usare il `CaptureStillImageBracket`metodo per ottenere una serie di immagini con la matrice di impostazioni specificata.
@@ -1147,7 +1118,6 @@ Per gestire le impostazioni sono state implementate due nuove classi:
 
 - `AVCaptureAutoExposureBracketedStillImageSettings`: Ha una proprietà, `ExposureTargetBias`, usata per impostare la distorsione per una parentesi di esposizione automatica.
 - `AVCaptureManual`  `ExposureBracketedStillImageSettings`: Dispone di due proprietà, `ExposureDuration` e `ISO`, utilizzate per impostare la velocità dell'otturatore e l'ISO per una parentesi di esposizione manuale.
-
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>I controlli di acquisizione tra parentesi fanno e non
 
@@ -1159,14 +1129,12 @@ Di seguito è riportato un elenco di operazioni da eseguire quando si usano i co
 - Si supponga che i buffer di esempio provengano dallo stesso pool condiviso.
 - Per rilasciare la memoria allocata da una chiamata di preparazione precedente, chiamare `PrepareToCaptureStillImageBracket` di nuovo e inviargli una matrice di un oggetto.
 
-
 #### <a name="donts"></a>Non consentite
 
 Di seguito è riportato un elenco di elementi che non devono essere eseguiti quando si usano i controlli di acquisizione racchiusi tra parentesi quadre in iOS 8:
 
 - Non combinare i tipi di impostazioni di acquisizione tra parentesi quadre in un'unica acquisizione.
 - Non richiedere più di `MaxBracketedCaptureStillImageCount` immagini in una singola acquisizione.
-
 
 ### <a name="bracketed-capture-details"></a>Dettagli acquisizione tra parentesi quadre
 
@@ -1177,7 +1145,6 @@ Quando si lavora con l'acquisizione tra parentesi quadre in iOS 8, è necessario
 - Tutte le immagini devono usare lo stesso formato di output (JPEG, PNG e così via)
 - L'anteprima video può rilasciare frame.
 - L'acquisizione tra parentesi è supportata in tutti i dispositivi compatibili con iOS 8.
-
 
 Tenendo conto di queste informazioni, verrà ora esaminato un esempio di uso dell'acquisizione tra parentesi quadre in iOS 8.
 
@@ -1194,9 +1161,7 @@ La vista contiene gli elementi principali seguenti:
 - Oggetto `UIScrollView` che ospita il feed video e le visualizzazioni dei risultati.
 - Oggetto `UIButton` utilizzato per eseguire un'acquisizione tra parentesi quadre con alcune impostazioni predefinite.
 
-
 Eseguire le operazioni seguenti per collegare il controller di visualizzazione per la cattura tra parentesi:
-
 
 1. Aggiungere le istruzioni using seguenti:
 
@@ -1321,7 +1286,6 @@ Eseguire le operazioni seguenti per collegare il controller di visualizzazione p
     }
     ```
 
-
 1. Eseguire l' `ViewDidAppear` override del metodo e aggiungere il codice seguente:
 
     ```csharp
@@ -1348,7 +1312,6 @@ Eseguire le operazioni seguenti per collegare il controller di visualizzazione p
 
     [![](intro-to-manual-camera-controls-images/image25.png "Scorrere rapidamente verso sinistra per visualizzare le tre immagini acquisite dall'acquisizione tra parentesi quadre")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Arrestare l'applicazione.
-
 
 Il codice precedente ha illustrato come configurare e acquisire un'acquisizione automatica tra parentesi in iOS 8.
 

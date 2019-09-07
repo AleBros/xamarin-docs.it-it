@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 82755a6a87ec0a47c10aac7078beeab6e14c218d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228252"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759388"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effetti per il tracciato in SkiaSharp
 
@@ -943,7 +943,6 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 L'argomento finale è un valore di inizializzazione utilizzato per generare la sequenza pseudocasuale utilizzata per l'effetto. L'effetto di instabilità avrà un aspetto leggermente diverso per diversi valori di inizializzazione. L'argomento ha un valore predefinito pari a zero, il che significa che l'effetto è lo stesso ogni volta che si esegue il programma. Se si desidera instabilità diverso ogni volta che lo schermo viene aggiornato, è possibile impostare il valore di inizializzazione il `Millisecond` proprietà di un `DataTime.Now` valore (ad esempio).
 
-
 Il **instabilità sperimentare** pagina consente di sperimentare più valori in un rettangolo di traccia:
 
 [![Schermata tripla della pagina JitterExperiment](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
@@ -1412,8 +1411,6 @@ Come già stato individuato, le linee tratteggiate non sono con precisione limit
 [![Schermata tripla della pagina delle linee tratteggiate tratteggiate](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Ora che si sono visto gli effetti di percorso che spaziano da semplici punti e trattini per combinazioni di strano, usare la tua immaginazione e vedere cosa è possibile creare.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

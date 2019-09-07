@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0b11f5c290f07debb61d511bdd27ad1a7ad0b0b0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526087"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754710"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in Novell. Android
 
@@ -39,8 +39,6 @@ Questa guida segue un formato simile per ogni sistema operativo: prima di tutto,
 ## <a name="summary"></a>Riepilogo
 
 In questa guida è stato esaminato il tocco in Android. Per entrambi i sistemi operativi è stato illustrato come abilitare il tocco e come rispondere agli eventi di tocco. A questo punto, sono stati appresi i movimenti e alcuni dei riconoscitori di movimento che sia Android che iOS forniscono per gestire alcuni degli scenari più comuni. È stato esaminato come creare movimenti personalizzati e come implementarli nelle applicazioni. Una procedura dettagliata ha illustrato i concetti e le API per ogni sistema operativo in azione ed è stato anche illustrato come tenere traccia delle singole dita.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

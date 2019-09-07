@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 35596d5231f7e485cf8217e35a5641277dcab11d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ca524e9ff3c1d3c938905093f55a6482ea085963
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285591"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763200"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribuzione ad hoc per le app Xamarin.iOS
 
@@ -44,7 +44,6 @@ La sezione successiva illustra come eseguire la configurazione con un certificat
 <a name="createcertificate" />
 
 ## <a name="create-a-distribution-certificate"></a>Creare un certificato di distribuzione
-
 
 1. Passare alla sezione *Certificates, Identifiers & Profiles* (Certificati, identificatori e profili) di Apple Developer Member Center.
 2. In *Certificates* (Certificati) selezionare **Production** (Produzione).
@@ -79,7 +78,6 @@ In alternativa, è possibile richiedere un certificato tramite la finestra di di
 
 ### <a name="create-an-app-id"></a>Creare un ID app
 Come per qualsiasi altro profilo di provisioning creato, sarà necessario un ID app per identificare l'app che verrà distribuita nel dispositivo dell'utente. Se non è già stato creato, seguire questa procedura per crearne uno:
-
 
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
 2. Fare clic sul pulsante **+** e specificare un **nome** lo identificherà nel portale.
@@ -179,7 +177,6 @@ Per altre informazioni sulla creazione di un file IPA, vedere [Supporto IPA](~/i
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato i meccanismi di distribuzione ad hoc, necessari per il test delle applicazioni Xamarin.iOS.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

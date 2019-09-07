@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 94ab5ca9fa34487457b93758dfac0ab514e702c8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2091e710352b25167b740e409955787ffec99e1c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286280"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768954"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Annotazioni e sovrimpressioni in Novell. iOS
 
@@ -25,7 +25,6 @@ L'applicazione che verrà compilata in questa procedura dettagliata è illustrat
 Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. Per iniziare, aggiungere il codice al controller di visualizzazione per visualizzare il MapView e quindi creare nuove classi per il MapDelegate e le annotazioni personalizzate. A questo scopo, seguire questa procedura:
 
 ## <a name="viewcontroller"></a>ViewController
-
 
 1. Aggiungere gli spazi dei nomi seguenti a `ViewController`:
 
@@ -108,11 +107,9 @@ Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. 
 
     e stringa:
 
-    `Maps Walkthrough Docs Sample`.
-
+    [https://login.microsoftonline.com/common/](`Maps Walkthrough Docs Sample`).
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs: classe per le annotazioni personalizzate
-
 
 1. Verrà usata una classe personalizzata per l'annotazione denominata `ConferenceAnnotation`. Aggiungere la classe seguente al progetto:
 
@@ -180,7 +177,6 @@ Si inizia creando un nuovo **progetto iOS vuoto**e dandogli un nome pertinente. 
     ```
 
 Questa operazione completa il codice in `ViewDidLoad`. A questo punto è necessario implementare `MapDelegate` la classe per gestire la creazione delle visualizzazioni di annotazione e sovrapposizione rispettivamente.
-
 
 ## <a name="mapdelegate"></a>MapDelegate
 
@@ -287,7 +283,6 @@ Eseguire l'applicazione. È ora disponibile una mappa interattiva con un'annotaz
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato come aggiungere un'annotazione a una mappa e come aggiungere una sovrapposizione per un poligono specificato. È stato inoltre illustrato come aggiungere il supporto tocco all'annotazione per animare un'immagine su una mappa.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

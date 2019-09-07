@@ -7,12 +7,12 @@ ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 985510caa78733d1a53aceb41371839f544daa73
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd4014fa4db4e90596c100d454cf0467512240a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511646"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760497"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Riepilogo del capitolo 27. Renderer personalizzati
 
@@ -113,8 +113,6 @@ I renderer di tre sono:
 I renderer di rilevare le modifiche apportate al controllo nativo e quindi chiamare `SetValueFromRenderer`, che fa riferimento a una proprietà associabile definita nel `StepSlider`, una modifica che causa il `StepSlider` attivano un `ValueChanged` evento.
 
 Il [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) esempio viene illustrato questo nuovo dispositivo di scorrimento.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

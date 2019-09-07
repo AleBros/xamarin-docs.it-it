@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e9c27233e0905435e14505195b7b0e4d3283790b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b50ba09488f1f052f3e41302a42c691089727ff
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283819"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769643"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Risorse e archiviazione dei dati di tvOS in Novell
 
@@ -36,9 +36,6 @@ Di conseguenza, l'app non può fare affidamento sul contenuto scaricato in prece
 
 > [!IMPORTANT]
 > Sebbene sia possibile scaricare altri asset e risorse in base alle esigenze, Apple avverte di non consumare tutto lo spazio disponibile nella cache dell'app, in quanto può causare risultati imprevedibili.
-
-
-
 
 <a name="Managing-Resources" />
 
@@ -75,16 +72,11 @@ Usare Xcode per creare bundle di contenuto correlato (ad esempio, tutti gli asse
 > [!IMPORTANT]
 > È necessario prestare attenzione per trovare il giusto equilibrio tra il numero di volte in cui l'app deve scaricare le risorse su richiesta e le dimensioni dei singoli download. L'utente potrebbe essere frustrato con l'app se il gioco viene interrotto costantemente per scaricare nuovo contenuto o se un singolo download richiede troppo tempo.
 
-
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato le limitazioni relative alle dimensioni, alle risorse e all'archiviazione dei dati inserite in un'app Novell. tvOS dal sistema tvOS. Sono state presentate opzioni per ovviare a queste limitazioni e suggerimenti per creare un'esperienza utente ottimale per l'app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

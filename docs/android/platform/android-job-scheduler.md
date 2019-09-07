@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 95d4194e0ed1a1da435a233e40a74f506c49b539
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2bfc64626d658cbcb22ba5f2ebd1f1ff069ec19
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119870"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757755"
 ---
 # <a name="android-job-scheduler"></a>Utilità di pianificazione di processo Android
 
 _Questa guida illustra come pianificare il lavoro in background usando l'API dell'utilità di pianificazione dei processi Android, disponibile nei dispositivi Android che eseguono Android 5,0 (livello API 21) e versioni successive._
-
 
 ## <a name="overview"></a>Panoramica 
 
@@ -78,7 +77,6 @@ Tutto il lavoro eseguito dalla libreria dell'utilità di pianificazione dei proc
 4. Eseguire l' `OnStartJob` override del metodo, aggiungendo il codice per eseguire il lavoro. Android richiamerà questo metodo sul thread principale dell'applicazione per eseguire il processo. Per evitare di bloccare l'applicazione, è necessario eseguire un lavoro che comporterà più tempo.
 5. Al termine del lavoro, `JobService` deve chiamare il `JobFinished` metodo. Questo metodo indica il `JobService` modo in `JobScheduler` cui il lavoro viene eseguito. La mancata `JobFinished` chiamata comporta l' `JobService` inserimento di richieste inutili sul dispositivo, riducendo la durata della batteria. 
 6. È consigliabile anche eseguire l'override del `OnStopJob` metodo. Questo metodo viene chiamato da Android quando il processo viene arrestato prima del completamento e fornisce all'oggetto la `JobService` possibilità di eliminare correttamente le risorse. Questo metodo deve restituire `true` se è necessario ripianificare il processo o `false` se non è auspicabile eseguire di nuovo il processo.
-   
 
 Il codice seguente è un esempio del più semplice `JobService` per un'applicazione, usando TPL per eseguire in modo asincrono alcune operazioni:
 
@@ -115,7 +113,6 @@ Le applicazioni Novell. Android non creano un' `JobService` istanza diretta di, 
 
 - **JobID** si tratta di `int` un valore utilizzato per `JobScheduler`identificare un processo in. &ndash; Il riutilizzo di questo valore aggiornerà eventuali processi esistenti. Il valore deve essere univoco per l'applicazione. 
 - **JobService** Questo parametro è un `ComponentName` oggetto che `JobScheduler` identifica in modo esplicito il tipo che deve essere utilizzato da per eseguire un processo. &ndash; 
-  
 
 Questo metodo di estensione illustra come creare un `JobInfo.Builder` con Android `Context`, ad esempio un'attività:
 
@@ -138,8 +135,7 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 Una potente funzionalità dell'utilità di pianificazione dei processi Android è la possibilità di controllare quando viene eseguito un processo o in quali condizioni può essere eseguito un processo. Nella tabella seguente vengono descritti alcuni dei metodi `JobInfo.Builder` di che consentono a un'applicazione di influenzare quando è possibile eseguire un processo:  
 
-
-|  Metodo | Descrizione   |
+|  Metodo | DESCRIZIONE   |
 |---|---|
 | `SetMinimumLatency`  | Specifica che deve essere osservato un ritardo (in millisecondi) prima dell'esecuzione di un processo. |
 | `SetOverridingDeadline`  | Dichiara che il processo deve essere eseguito prima della scadenza (in millisecondi). |
@@ -149,7 +145,6 @@ Una potente funzionalità dell'utilità di pianificazione dei processi Android �
 | `SetDeviceIdle` | Il processo verrà eseguito quando il dispositivo è occupato. |
 | `SetPeriodic` | Specifica che il processo deve essere eseguito regolarmente. |
 | `SetPersisted` | Il processo deve essere perisist tra i riavvii del dispositivo. | 
-
 
 Fornisce alcune indicazioni sulla durata dell' `JobScheduler` attesa prima di tentare di eseguire nuovamente un processo. `SetBackoffCriteria` Sono disponibili due parti per i criteri backoff: un ritardo in millisecondi (valore predefinito di 30 secondi) e il tipo di back off da usare (a volte definito _criterio backoff_ o i _criteri di ripetizione dei tentativi_). I due criteri sono incapsulati nell' `Android.App.Job.BackoffPolicy` enumerazione:
 
@@ -206,7 +201,7 @@ else
     snackBar.Show();
 }
 ```
- 
+
 ### <a name="cancelling-a-job"></a>Annullamento di un processo
 
 È possibile annullare tutti i processi pianificati o solo un singolo processo usando il `JobsScheduler.CancelAll()` metodo o il `JobScheduler.Cancel(jobId)` metodo:

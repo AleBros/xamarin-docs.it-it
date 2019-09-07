@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f33e3f4f27afe7e0b98c4a1f71d77c4a1c7195ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73474aaeb138d52536dd8ad5a7dca9be566475af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289074"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769095"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Novell
 
@@ -48,9 +48,7 @@ Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS c
     [![](navigation-bars-images/navbar05.png "Azione elemento pulsante A barre")](navigation-bars-images/navbar05.png#lightbox)
 1. Salvare le modifiche.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. Nella **Esplora soluzioni**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
@@ -66,7 +64,6 @@ Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS c
 
     [![](navigation-bars-images/navbar05-vs.png "Azioni di elementi di un pulsante A barre")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Salvare le modifiche.
-
 
 -----
 
@@ -133,8 +130,6 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha spiegato come progettare e usare le barre di navigazione all'interno di un'app Novell. tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

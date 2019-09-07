@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ec4b99fd1c8ec28f6b4bbb30695613da6c40d60c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8bb517eaa549567ae92695fbad300d055f42771f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288956"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769056"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Uso dei controlli pagina di tvOS in Novell
 
@@ -35,7 +35,6 @@ Il modo più semplice per usare i controlli pagina in un'app Novell. tvOS consis
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **controllo pagina** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione:
 
@@ -49,9 +48,7 @@ Il modo più semplice per usare i controlli pagina in un'app Novell. tvOS consis
     [![](page-controls-images/page04.png "Assegnare un nome al controllo")](page-controls-images/page04.png#lightbox)
 1. Salvare le modifiche.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **controllo pagina** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione:
@@ -65,7 +62,6 @@ Il modo più semplice per usare i controlli pagina in un'app Novell. tvOS consis
 
     [![](page-controls-images/page04-vs.png "Assegnare un nome al controllo")](page-controls-images/page04-vs.png#lightbox)
 1. Salvare le modifiche.
-
 
 -----
 
@@ -167,8 +163,6 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato la progettazione e l'uso del controllo pagina all'interno di un'app Novell. tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

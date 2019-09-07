@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279996"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768408"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con il Xamarin Designer per iOS
 
@@ -47,7 +47,6 @@ Per la configurazione predefinita di iOS designer è abilitata la modalità vinc
 
     ![](designer-auto-layout-images/image01.png "Casella di controllo Usa layout automatico nel pannello Proprietà")
 
-
 Per impostazione predefinita, non viene creato alcun vincolo né visibile sulla superficie. Vengono invece dedotti automaticamente dalle informazioni sul frame in fase di compilazione. Per aggiungere vincoli, è necessario selezionare un elemento nell'area di progettazione e aggiungervi vincoli. Questa operazione può essere eseguita tramite la **barra degli strumenti del vincolo**.
 
 ## <a name="constraints-toolbar"></a>Barra degli strumenti vincoli
@@ -63,7 +62,6 @@ La barra degli strumenti vincoli è stata aggiornata e ora è costituita da due 
 - **Pulsante "Aggiorna vincoli":** È importante notare che le modifiche variano in base alla modalità di modifica dei vincoli.
   - In modalità di modifica vincoli questo pulsante regola i vincoli in modo che corrispondano al frame dell'elemento.
   - In modalità di modifica frame questo pulsante regola il frame dell'elemento in modo che corrisponda alla posizione di definizione dei vincoli.
-
 
 ## <a name="surface-based-constraint-editing"></a>Modifica di vincoli basati sulla superficie
 
@@ -87,8 +85,6 @@ Prendere nota delle tre linee verdi tratteggiate tra gli altri due pulsanti. Le 
 
 > [!IMPORTANT]
 > Le guide di layout sono tipi speciali di destinazioni di vincolo che consentono di creare vincoli Top e Bottom che prendono in considerazione la presenza di barre di sistema, ad esempio barre di stato o barre degli strumenti. Uno degli usi principali consiste nel disporre di un'app compatibile tra iOS 6 e iOS 7 Poiché la versione più recente ha la visualizzazione del contenitore che si estende sotto la barra di stato. Per ulteriori informazioni sulla guida di layout superiore, consultare la [documentazione di Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
-
-
 
 Nelle tre sezioni successive viene descritto l'utilizzo di diversi tipi di vincoli.
 
@@ -129,7 +125,6 @@ Quando si usano i vincoli possono verificarsi diversi tipi di problemi:
 - **Vincoli in conflitto** : si verifica quando più vincoli forzano l'elemento a avere valori in conflitto per un attributo e il motore di vincoli non è in grado di riconciliarli.
 - **Elementi sottovincolati** : le proprietà di un elemento (posizione + dimensioni) devono essere interamente coperte dal set di vincoli e dalle dimensioni intrinseche per i vincoli validi. Se questi valori sono ambigui, l'elemento viene definito Sottovincolato.
 - **Spostamento del frame** : questo errore si verifica quando il frame di un elemento e il relativo set di vincoli definiscono due rettangoli risultanti diversi.
-
 
 In questa sezione vengono illustrati i tre problemi elencati sopra e vengono fornite informazioni dettagliate su come gestirli.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1aa4e6dcf5137d12647fb2a5531218839b6db9a1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6f3df1c7c4664f4138e0f399419ac95e15231916
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225806"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757523"
 ---
 # <a name="kitkat-features"></a>Funzionalità di KitKat
 
@@ -29,7 +29,6 @@ Android 4,4 (API level 19), noto anche come "KitKat", è stato rilasciato alla f
 - [Hardware](#hardware) Trasforma qualsiasi app in una scheda NFC con l' `SensorManager` emulazione di schede basata su host NFC; Esegui sensori a basso consumo con. &ndash;
 
 - [Strumenti di sviluppo](#developer_tools) &ndash; Screencast sulle applicazioni in azione con il client di Android Debug Bridge, disponibile come parte del Android SDK.
-
 
 Questa guida fornisce indicazioni per la migrazione di un'applicazione Novell. Android esistente a KitKat, oltre a una panoramica di alto livello di KitKat per sviluppatori Novell. Android.
 
@@ -92,7 +91,7 @@ L'archiviazione esterna è ora divisa in due tipi, ovvero archiviazione univoca 
 
 ### <a name="sms-consolidation"></a>Consolidamento SMS
 
-KitKat semplifica la messaggistica per l'utente aggregando tutto il contenuto SMS in un'applicazione predefinita selezionata dall'utente. Lo sviluppatore ha la responsabilità di rendere l'app selezionabile come applicazione di messaggistica predefinita e si comporta in modo appropriato nel codice e in vita se l'applicazione non è selezionata. Per altre informazioni sulla transizione dell'app SMS a KitKat, vedere la Guida introduttiva alle [app per SMS pronta per KitKat](http://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html) da Google.
+KitKat semplifica la messaggistica per l'utente aggregando tutto il contenuto SMS in un'applicazione predefinita selezionata dall'utente. Lo sviluppatore ha la responsabilità di rendere l'app selezionabile come applicazione di messaggistica predefinita e si comporta in modo appropriato nel codice e in vita se l'applicazione non è selezionata. Per altre informazioni sulla transizione dell'app SMS a KitKat, vedere la Guida [introduttiva alle app per SMS pronta per KitKat](http://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html) da Google.
 
 ### <a name="webview-apps"></a>App WebView
 
@@ -248,10 +247,8 @@ La schermata seguente illustra la scena dopo l'animazione:
 
 [![Screenshot dell'app dopo il completamento dell'animazione](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
-
 > [!NOTE]
 > È presente un [bug noto](https://code.google.com/p/android/issues/detail?id=62450) nella libreria delle transizioni Android che fa sì che le `GetSceneForLayout` scene create con si interrompano quando un utente passa attraverso un'attività la seconda volta. Una soluzione alternativa Java è descritta [qui](http://www.doubleencore.com/2013/11/new-transitions-framework/).
-
 
 ##### <a name="custom-transitions-in-scenes"></a>Transizioni personalizzate in scenari
 
@@ -289,7 +286,6 @@ KitKat offre un maggiore controllo sulla gestione delle app con lo stato e le ba
 - `windowTranslucentNavigation`-Se impostato su true, la barra di spostamento inferiore diventa trasparente.
 
 - `fitsSystemWindows`-Se si imposta la barra superiore o inferiore su transcluent, per impostazione predefinita il contenuto viene spostato sotto gli elementi trasparenti dell'interfaccia utente. L'impostazione di questa `true` proprietà su è un modo semplice per impedire la sovrapposizione di contenuto con gli elementi dell'interfaccia utente di sistema traslucidi.
-
 
 Il codice seguente definisce un tema con lo stato e le barre di navigazione trasparenti:
 
@@ -405,11 +401,8 @@ La maggior parte dei dispositivi forniti con KitKat Scarica automaticamente Goog
 
 [![Schermata di esempio della schermata impostazioni di stampa](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
-
 > [!NOTE]
 > Sebbene le API di stampa siano configurate per l'uso con Google Cloud Print per impostazione predefinita, Android consente agli sviluppatori di preparare il contenuto di stampa usando le nuove API e di inviarlo ad altre applicazioni per gestire la stampa.
-
-
 
 #### <a name="printing-html-content"></a>Stampa di contenuto HTML
 
@@ -425,7 +418,6 @@ L'opzione Print viene in genere visualizzata nel menu delle [Opzioni](https://de
 Il menu opzioni consente agli utenti di eseguire azioni su un'attività. Si trova nell'angolo superiore destro dello schermo e ha un aspetto simile al seguente:
 
 [![Schermata di esempio della voce di menu Stampa visualizzata nell'angolo superiore destro della schermata](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
-
 
 È possibile definire altre voci di menu nella directory *menu*sotto *risorse*. Il codice seguente definisce una voce di menu di esempio denominata [Print](xref:Android.Print.PrintManager):
 
@@ -541,7 +533,6 @@ Per funzionare, HCE deve poter essere eseguito in background e deve essere avvia
 
 - *OnDeactivated* : il `HostAdpuService` viene disattivato quando il servizio HCE non comunica più con il lettore NFC.
 
-
 Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l' `Service` attributo. per altre informazioni sugli attributi, vedere la guida del manifesto Novell [Working with Android](~/android/platform/android-manifest.md) :
 
 ```csharp
@@ -645,10 +636,8 @@ protected override void OnPause()
 
 Il riavvio del dispositivo Reimposta il numero di passaggi su 0. L'app richiede codice aggiuntivo per assicurarsi che venga segnalato un conteggio accurato per l'applicazione, indipendentemente dalle altre applicazioni che usano il sensore o lo stato del dispositivo.
 
-
 > [!NOTE]
 > Mentre l'API per il rilevamento dei passaggi e il conteggio viene fornita con KitKat, non tutti i telefoni sono dotati del sensore. È possibile verificare se il sensore è disponibile `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`eseguendo oppure verificare che il valore restituito di `GetDefaultSensor` non sia `null`.
-
 
 <a name="developer_tools" />
 
@@ -672,7 +661,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 ```
 
 È possibile trovare il video nel dispositivo che verrà visualizzato nella raccolta al termine della registrazione.
-
 
 ## <a name="other-kitkat-additions"></a>Altre aggiunte KitKat
 
@@ -705,11 +693,9 @@ Oltre alle modifiche descritte in precedenza, KitKat consente di:
 
 Per altre informazioni sulle modifiche apportate all'API, vedere la panoramica delle API di Google [Android 4,4](https://developer.android.com/about/versions/android-4.4.html) .
 
-
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo sono state introdotte alcune delle nuove API disponibili in Android 4,4 (API level 19) e sono state descritte le procedure consigliate per la transizione di un'applicazione a KitKat. Sono state descritte le modifiche apportate alle API che influiscono sull'esperienza utente, tra cui il *Framework di transizione* e le nuove opzioni per il *tema*. Successivamente, è stata introdotta la classe e `DocumentsProvider` il Framework di accesso alla risorsa di *archiviazione* , nonché le nuove API di *stampa*. Ha esplorato l'emulazione delle *schede basata su host NFC* e come usare i *sensori a basso consumo*, inclusi due nuovi sensori per tenere traccia dei passaggi dell'utente. Infine, è stato illustrato come acquisire demo in tempo reale delle applicazioni con la *registrazione dello schermo*e fornito un elenco dettagliato delle modifiche e delle aggiunte dell'API KitKat.
-
+In questo articolo sono state introdotte alcune delle nuove API disponibili in Android 4,4 (API level 19) e sono state descritte le procedure consigliate per la transizione di un'applicazione a KitKat. Sono state descritte le modifiche apportate alle API che influiscono sull'esperienza utente, tra cui il *Framework di transizione* e le nuove opzioni per il *tema*. Successivamente, è stata introdotta la classe e `DocumentsProvider` il Framework di accesso alla risorsa di *archiviazione* , nonché le nuove API di *stampa*. Ha esplorato l' *emulazione delle schede basata su host NFC* e come usare i *sensori a basso consumo*, inclusi due nuovi sensori per tenere traccia dei passaggi dell'utente. Infine, è stato illustrato come acquisire demo in tempo reale delle applicazioni con la *registrazione dello schermo*e fornito un elenco dettagliato delle modifiche e delle aggiunte dell'API KitKat.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

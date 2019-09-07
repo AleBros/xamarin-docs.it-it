@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 32ededcda1fdfc463269c7e4a2db444edab51d22
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 315cb8e58b0b9f29c06e4d0af2b8cf9adffb06e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119769"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758518"
 ---
 # <a name="windows-installation"></a>Installazione di Windows
 
 _Questa guida descrive le operazioni necessarie per l'installazione di Xamarin.Android per Visual Studio in Windows e illustra come configurare Xamarin.Android per compilare la prima applicazione Xamarin.Android._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -38,7 +37,6 @@ Al completamento di questa guida, sarà stata messa in funzione un'installazione
 
 Per informazioni dettagliate sull'installazione di Xamarin per l'uso con Visual Studio in Windows, vedere la guida per l'[installazione di Windows](~/get-started/installation/windows.md).
 
-
 ## <a name="configuration"></a>Configurazione
 
 Xamarin.Android usa Java Development Kit (JDK) e Android SDK per compilare le app. Durante l'installazione, il programma di installazione di Visual Studio inserisce questi strumenti nei percorsi predefiniti e configura l'ambiente di sviluppo con la configurazione del percorso appropriata. È possibile visualizzare e modificare questi percorsi facendo clic su **Strumenti > Opzioni > Xamarin > Impostazioni Android**:
@@ -51,7 +49,6 @@ Xamarin.Android usa [JDK 8](https://www.oracle.com/technetwork/java/javase/downl
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
-
 
 ### <a name="android-sdk-manager"></a>Android SDK Manager
 
@@ -88,13 +85,11 @@ Per altre informazioni sull'emulatore Android, Hyper-V e HAXM, vedere la guida [
 > [!NOTE]
 > Nelle versioni di Windows precedenti all'aggiornamento di aprile 2018 di Windows 10, HAXM non è compatibile con Hyper-V. In questo scenario è necessario [disabilitare Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) oppure usare le immagini dell'emulatore più lente non ottimizzate per x86.
 
-
 <a name="device" />
 
 ### <a name="android-device"></a>Dispositivo Android
 
 Se si dispone di un dispositivo Android fisico da usare per il test, è il momento di configurarlo per il processo di sviluppo. Vedere [Configurare il dispositivo per lo sviluppo](~/android/get-started/installation/set-up-device-for-development.md) per configurare il dispositivo Android per lo sviluppo e quindi connetterlo al computer per l'esecuzione e il debug di applicazioni Xamarin.Android.
-
 
 ## <a name="create-an-application"></a>Creare un'applicazione
 
@@ -106,19 +101,17 @@ Nella finestra di dialogo **Nuovo progetto** selezionare **Android** in **Modell
 
 [![Finestra di dialogo Nuovo progetto per la creazione di un'app Android vuota](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
-L'operazione è terminata. A questo punto si è pronti per usare Xamarin.Android per creare applicazioni Android.
+La procedura è terminata. A questo punto si è pronti per usare Xamarin.Android per creare applicazioni Android.
 
-
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questo articolo si è appreso come configurare e installare la piattaforma Xamarin.Android in Windows, come configurare Visual Studio con percorsi di installazione personalizzati per Java JDK e Android SDK (facoltativo), come avviare SDK Manager per installare altri componenti Android SDK, come configurare un dispositivo Android o un emulatore e come iniziare a creare la prima applicazione.
 
 Il passaggio successivo consiste nel seguire le esercitazioni [Hello, Android](~/android/get-started/hello-android/index.md) per imparare a creare un'app Xamarin.Android funzionante.
 
-
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Scaricare Visual Studio](https://visualstudio.microsoft.com/vs/)
+- [Download di Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [Installazione degli strumenti di Visual Studio per Xamarin](~/get-started/installation/windows.md)
 - [Requisiti di sistema](~/cross-platform/get-started/requirements.md)
 - [Installazione di Android SDK](~/android/get-started/installation/android-sdk.md)

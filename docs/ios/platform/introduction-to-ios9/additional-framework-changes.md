@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb16ad3889453f866f3dc9e66f5bcc8860bd094a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292411"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751988"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche aggiuntive ai Framework iOS 9
 
@@ -55,9 +55,6 @@ Il nuovo Framework _dei servizi Web di CloudKit_ fornisce una libreria JavaScrip
 
 > [!IMPORTANT]
 > Prima di poter accedere, presentare o aggiornare il contenuto da un database CloudKit usando CloudKit JS, è necessario aver definito in precedenza lo schema del database.
-
-
-
 
 Per ulteriori informazioni, consultare i documenti seguenti:
 
@@ -261,8 +258,6 @@ Per correggere questa situazione, utilizzare le classi layout automatico e dimen
 ### <a name="new-uitextinputassistantitem-class"></a>Nuova classe UITextInputAssistantItem
 
 Utilizzare la nuova `UITextInputAssistantItem` classe per i gruppi di pulsanti della barra di layout in una _barra di scelta rapida_. La barra dei collegamenti è una nuova area disponibile nella tastiera morbida per fornire collegamenti di tipizzazione.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

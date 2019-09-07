@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: e36a8e25c5924ac82356c0f1c3110d1596f81cbf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 194f82757b0b4cb5e148e06d4303dc0d22afb9b3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523892"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761714"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con Novell. Android
 
@@ -28,7 +28,6 @@ Le tecnologie di mapping sono un complemento universale ai dispositivi mobili. I
 
 Negli argomenti di questa sezione viene illustrata un'ampia gamma di funzionalità di mapping.
 In primo luogo, spiegano come sfruttare le mappe predefinite di Android e come visualizzare una vista panoramica di una posizione. Viene quindi illustrato come usare l'API Maps per incorporare le funzionalità di mapping direttamente all'interno di un'applicazione, coprendo sia come controllare la posizione che la visualizzazione di una mappa, sia come aggiungere sovrapposizioni grafiche.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

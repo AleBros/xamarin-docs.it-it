@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8fb0b5136cc75463fc35ced2336e0ea321e8aecd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9d8710b3b88b59871b88a1d42ec4f4bb3e515ff5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524426"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756512"
 ---
 # <a name="how-content-providers-work"></a>Come funzionano i provider di contenuti
 
@@ -23,12 +23,9 @@ Esistono due classi che coinvolgono un' `ContentProvider` interazione:
 
 Un provider di contenuti è in genere supportato da un database SQLite, ma l'API significa che l'utilizzo di codice non richiede informazioni sull'SQL sottostante. Le query vengono eseguite tramite un URI usando costanti per fare riferimento ai nomi delle colonne (per ridurre le dipendenze dalla struttura di dati `ICursor` sottostante) e viene restituito un oggetto per l'iterazione del codice di consumo.
 
-
 ## <a name="consuming-a-contentprovider"></a>Utilizzo di un ContentProvider
 
 `ContentProviders`esporre la funzionalità tramite un URI registrato in **file AndroidManifest. XML** dell'applicazione che pubblica i dati. Esiste una convenzione in cui l'URI e le colonne di dati esposte devono essere disponibili come costanti per semplificare l'associazione ai dati. `ContentProviders` Le funzionalità predefinite di Android forniscono classi di praticità con costanti che fanno riferimento alla struttura dei dati [`Android.Providers`](xref:Android.Provider) nello spazio dei nomi.
-
-
 
 ### <a name="built-in-providers"></a>Provider predefiniti
 
@@ -47,8 +44,6 @@ Android consente di accedere a un'ampia gamma di dati di sistema e `ContentProvi
 - *UserDictionary* &ndash; contenuto del dizionario definito dall'utente utilizzato per l'input di testo predittivo.
 
 - *Messaggio vocale* &ndash; cronologia dei messaggi della segreteria telefonica.
-
-
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 
@@ -79,4 +74,3 @@ L' `ContentProvider` API consente ai consumer di eseguire una serie di operazion
 - Eliminare i record.
 
 Questo documento contiene un esempio che usa un sistema fornito `ContentProvider`, oltre a un semplice esempio di sola lettura che implementa un oggetto personalizzato. `ContentProvider`
-

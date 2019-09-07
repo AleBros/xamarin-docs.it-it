@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18ce7eb4dcd68596027f739579fd5a4b70497829
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292239"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772701"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controlli standard in Novell. Mac
 
@@ -215,7 +215,6 @@ Selezionare il tipo di esposizione da creare e assegnare un **nome**all' **Outle
 
 [![](standard-controls-images/edit13.png "Configurazione dell'outlet o dell'azione")](standard-controls-images/edit13.png#lightbox)
 
-
 Per altre informazioni sull'uso di **Outlet** e **azioni**, vedere la sezione [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) dell' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentazione.
 
 <a name="Synchronizing_Changes_with_Xcode" />
@@ -324,7 +323,6 @@ Quando l'app viene eseguita e la finestra con il pulsante è la chiave e lo stat
 AppKit offre diversi tipi di caselle di controllo e gruppi di pulsanti di opzione che possono essere usati nella progettazione dell'interfaccia utente. Per altre informazioni, vedere la sezione [pulsanti](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) delle [linee guida per l'interfaccia umana di Apple OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
 [![](standard-controls-images/buttons02.png "Esempio dei tipi di casella di controllo disponibili")](standard-controls-images/buttons02.png#lightbox)
-
 
 Le caselle di controllo e i pulsanti di opzione (esposti via **Outlet**) hanno uno stato ( **ad** esempio, on e **off**). lo stato può `State` essere selezionato o `NSCellStateValue` impostato con la proprietà sull'enumerazione. Ad esempio:
 
@@ -637,7 +635,6 @@ Usando le tecniche di codifica e data binding nell'applicazione Novell. Mac, è 
 Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza`get/set`o metodi di funzione di accesso (). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, è possibile accedere ad altre funzionalità di macOS, ad esempio osservazione chiave-valore (KVO), data binding, dati principali, associazioni Cocoa e script.
 
 Per altre informazioni, vedere la sezione [Data Binding semplice](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) del data binding e la documentazione relativa al [codice chiave-valore](~/mac/app-fundamentals/databinding.md) .
-
 
 <a name="Summary" />
 

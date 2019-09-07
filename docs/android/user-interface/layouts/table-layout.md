@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 1c477f030dc69394ba601b31d71a772f5037af48
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522304"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758390"
 ---
 # <a name="xamarinandroid-tablelayout"></a>Novell. Android TableLayout
 
@@ -21,7 +21,7 @@ elementi in righe e colonne.
 
 Avviare un nuovo progetto denominato **HelloTableLayout**.
 
-Aprire il file resources **/layout/Main. aXML** e inserire quanto segue:
+Aprire il file **Resources/layout/Main. aXML** e inserire quanto segue:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -118,13 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-Il [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)metodo) carica il file di layout per [`Activity`](xref:Android.App.Activity)l'oggetto, specificato dall'ID &mdash; `Resource.Layout.Main` risorsa, che fa riferimento al file di layout Resources **/layout/Main. aXML** .
+Il [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)metodo) carica il file di layout per [`Activity`](xref:Android.App.Activity)l'oggetto, specificato dall'ID &mdash; `Resource.Layout.Main` risorsa, che fa riferimento al file di layout **Resources/layout/Main. aXML** .
 
 Eseguire l'applicazione. Verrà visualizzato quanto segue:
 
 [![Schermata di esempio dell'app TableLayout che Visualizza più righe di tabella](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
-
-
 
 ## <a name="references"></a>Riferimenti
 

@@ -6,17 +6,16 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: conceptdev
 ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 273b7f2eb40f1fa8495e0a0e8e18fa947241f389
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290842"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765406"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Utilizzo di tipi nativi nelle app multipiattaforma
 
 _Questo articolo illustra l'uso dei nuovi tipi nativi iOS API unificata (nint, nuint, nFloat) in un'applicazione multipiattaforma in cui il codice viene condiviso con dispositivi non iOS, ad esempio Android o Windows Phone sistemi operativi._
-
 
 I tipi nativi di 64 tipi funzionano con le API iOS e Mac. Se si scrive codice condiviso eseguito anche in Android o Windows, sarà necessario gestire la conversione dei tipi unificati in tipi .NET normali che è possibile condividere.
 
@@ -211,7 +210,6 @@ Si noti che in questo caso è `CalculateArea` stato modificato il metodo `nfloat
 
 Se il codice viene compilato ed eseguito in un dispositivo non `using nfloat = global::System.Single;` API unificata, `nfloat` esegue il mapping di a `Single` un oggetto che verrà convertito in modo `float` implicito in un oggetto che consente all'applicazione front- `CalculateArea` end che utilizza il metodo di chiamare il metodo senza modifica.
 
-
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Uso delle conversioni di tipi nell'app front-end
 
 Nel caso in cui le applicazioni front-end eseguano solo un numero limitato di chiamate alla libreria di codice condivisa, un'altra soluzione potrebbe essere lasciare invariata la libreria e eseguire il cast del tipo nell'applicazione Novell. iOS o Novell. Mac quando si chiama la routine esistente. Ad esempio:
@@ -228,7 +226,6 @@ Se l'applicazione consumer effettua centinaia di chiamate alla libreria di codic
 
 In base all'architettura dell'applicazione, potrebbe essere necessario usare una o più delle soluzioni precedenti per supportare i tipi di dati nativi (dove necessario) nel codice multipiattaforma.
 
-
 ## <a name="xamarinforms-applications"></a>Applicazioni Novell. Forms
 
 Per usare Novell. Forms per le interfacce utente multipiattaforma che saranno condivise anche con un'applicazione API unificata, è necessario quanto segue:
@@ -243,8 +240,6 @@ Per altri dettagli, vedere la documentazione relativa all' [aggiornamento delle 
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato quando utilizzare i tipi di dati nativi in un'applicazione API unificata e le relative implicazioni multipiattaforma. Sono state presentate diverse soluzioni che possono essere usate nelle situazioni in cui è necessario usare i nuovi tipi di dati nativi nelle librerie multipiattaforma. È stata anche illustrata una guida rapida per supportare le API unificate nelle applicazioni multipiattaforma Novell. Forms.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

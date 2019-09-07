@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 57e6ed2c01e382d7daee2933ac49c8282199a3fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119594"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758856"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Risposta ai callback di autenticazione
 
@@ -24,7 +24,6 @@ Lo scanner di impronte digitali viene eseguito in background sul proprio thread 
 
 Se è `CryptoObject` stato usato un oggetto `Authenticate`durante la chiamata a, è `Cipher.DoFinal` consigliabile `OnAuthenticationSuccessful`chiamare in.
 `DoFinal`genererà un'eccezione se la crittografia è stata manomessa o inizializzata in modo errato, a indicare che il risultato dello scanner di impronta digitale potrebbe essere stato manomesso all'esterno dell'applicazione.
-
 
 > [!NOTE]
 > È consigliabile lasciare la classe di callback relativamente leggero e priva di logica specifica dell'applicazione. I callback devono fungere da "Traffic Cop" tra l'applicazione Android e i risultati dello scanner di impronte digitali.
@@ -103,55 +102,29 @@ Si noti `OnAuthenticationError` che verrà richiamato quando l'analisi dell'impr
 
 È possibile trovare un elenco e una descrizione dei codici di errore e dei codici della guida nella [documentazione di Android SDK](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) per la classe FingerprintManager. Novell. Android rappresenta questi valori con `Android.Hardware.Fingerprints.FingerprintState` enum:
 
-
 - **`AcquiredGood`** &ndash; (valore 0) l'immagine acquisita è stata corretta.
-
 
 - **`AcquiredImagerDirty`** &ndash; (valore 3) l'immagine dell'impronta digitale è troppo rumorosa a causa di una sporcizia sospetta o rilevata nel sensore. Ad esempio, è ragionevole restituire questo risultato dopo che è `AcquiredInsufficient` stato rilevato più di sporcizia sul sensore (pixel bloccati, fasce e così via). L'utente deve intervenire per pulire il sensore quando viene restituito.
 
-
 - **`AcquiredInsufficient`** (valore 2) l'immagine dell'impronta digitale è troppo rumorosa per l'elaborazione a causa di una condizione rilevata (ad esempio, di un'interfaccia a secco) o di un sensore eventualmente modificato (vedere `AcquiredImagerDirty`. &ndash;
-
-
 
 - **`AcquiredPartial`** &ndash; (valore 1) è stata rilevata solo un'immagine di impronta digitale parziale. Durante la registrazione, l'utente deve essere informato sulle operazioni da eseguire per risolvere il problema, ad esempio, &ldquo;premere con decisione sul sensore.&rdquo;
 
-
-
 - **`AcquiredTooFast`** &ndash; (valore 5) l'immagine dell'impronta digitale è incompleta a causa del movimento rapido. Sebbene sia particolarmente appropriato per i sensori di matrici lineari, questo problema può verificarsi anche se il dito è stato spostato durante l'acquisizione. All'utente deve essere richiesto di spostare il dito più lentamente (lineare) o lasciare il dito sul sensore più a lungo.
-
-
-
 
 - **`AcquiredToSlow`** &ndash; (valore 4) l'immagine dell'impronta digitale è stata illeggibile a causa della mancanza di movimento. Questa operazione è più appropriata per i sensori di matrici lineari che richiedono un movimento di scorrimento.
 
-
-
 - **`ErrorCanceled`** &ndash; (valore 5) l'operazione è stata annullata perché il sensore di impronta digitale non è disponibile. Ad esempio, questo problema può verificarsi quando l'utente è cambiato, il dispositivo è bloccato o un'altra operazione in sospeso ne impedisce o Disabilita.
-
-
 
 - **`ErrorHwUnavailable`** &ndash; (valore 1) l'hardware non è disponibile. Riprovare.
 
-
-
-
 - **`ErrorLockout`** &ndash; (valore 7) l'operazione è stata annullata perché l'API è bloccata a causa di un numero eccessivo di tentativi.
-
-
-
 
 - **`ErrorNoSpace`** &ndash; (valore 4) lo stato di errore è stato restituito per operazioni come la registrazione. non è possibile completare l'operazione perché non è disponibile spazio di archiviazione sufficiente per completare l'operazione.
 
-
-
 - **`ErrorTimeout`** &ndash; (valore 3) stato di errore restituito quando la richiesta corrente è stata eseguita troppo a lungo. Questa operazione è destinata a impedire che i programmi attendano il sensore di impronte digitali a tempo indefinito. Il timeout è specifico della piattaforma e del sensore, ma in genere è di circa 30 secondi.
 
-
-
 - **`ErrorUnableToProcess`** &ndash; (valore 2) stato di errore restituito quando il sensore non è stato in grado di elaborare l'immagine corrente.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

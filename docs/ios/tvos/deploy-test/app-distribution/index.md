@@ -7,23 +7,20 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 0ea96eb3808daeb9f8764695d1b4b3d432727ff2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f47d4228fc1d3ec1b3b428b917f3c774103577d7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292489"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769193"
 ---
 # <a name="tvos-app-distribution-overview"></a>Panoramica della distribuzione di app tvOS
 
 _Questo documento offre una panoramica delle tecniche di distribuzione disponibili per l'app Novell. tvOS e funge da puntatore a documenti più dettagliati sull'argomento._
 
-
 Dopo che l'app Novell. tvOS è stata sviluppata, il passaggio successivo del ciclo di vita dello sviluppo del software consiste nel distribuire l'app agli utenti, come illustrato nella sezione evidenziata del diagramma seguente:
 
-
 [![Panoramica del ciclo di vita dello sviluppo software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
-
 
 Apple fornisce i modi seguenti per distribuire un'app tvOS, supportata da Novell. tvOS:
 
@@ -83,8 +80,6 @@ Per ulteriori informazioni sulla configurazione e su come distribuire l'app inte
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha fornito una breve panoramica dei meccanismi di distribuzione disponibili per le app Novell. tvOS. Ha introdotto l'App Store di Apple TV, ad hoc e la distribuzione interna e fornito collegamenti a informazioni più dettagliate.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

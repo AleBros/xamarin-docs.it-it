@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fee63906d30f68d397b60a465a87bd96d4106d14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119726"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757427"
 ---
 # <a name="an-introduction-to-renderscript"></a>Introduzione a renderScript
 
@@ -63,7 +63,6 @@ Il motore renderScript eseguirà un controllo del runtime per assicurarsi che gl
 
 Tutti i kernel renderScript verranno inclusi in un tipo discendente del[`Android.Renderscripts.Script`](xref:Android.Renderscripts.Script)
 . La `Script` classe viene utilizzata per impostare i parametri per un renderScript, impostare l' `Allocations`oggetto appropriato ed eseguire renderScript. Nel Android SDK sono `Script` presenti due sottoclassi:
-
 
 - **`Android.Renderscripts.ScriptIntrinsic`** Alcune delle attività renderScript più comuni sono aggregate nel Android SDK e sono accessibili da una sottoclasse della classe [ScriptIntrinsic.](xref:Android.Renderscripts.ScriptIntrinsic) &ndash; Non è necessario che uno sviluppatore prenda ulteriori passaggi per usare questi script nell'applicazione, perché sono già disponibili.
 
@@ -116,7 +115,7 @@ la classe è un wrapper gestito intorno al contesto renderScript, che controller
 Android.Renderscripts.RenderScript renderScript = RenderScript.Create(this);
 ```
 
-**Creazione** di allocazioni A seconda dello script intrinseco, potrebbe essere necessario crearne uno o due `Allocation`. &ndash; Il[`Android.Renderscripts.Allocation`](xref:Android.Renderscripts.Allocation)
+**Creazione di allocazioni** A seconda dello script intrinseco, potrebbe essere necessario crearne uno o due `Allocation`. &ndash; Il[`Android.Renderscripts.Allocation`](xref:Android.Renderscripts.Allocation)
 la classe dispone di diversi metodi factory per semplificare la creazione di un'allocazione per un intrinseco. Ad esempio, il frammento di codice seguente illustra come creare l'allocazione per le bitmap.
 
 ```csharp
@@ -153,8 +152,6 @@ blurScript.ForEach(outputAllocation);
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha presentato renderScript e come usarla in un'applicazione Novell. Android. Viene brevemente descritto il renderScript e il funzionamento in un'applicazione Android. Sono stati descritti alcuni componenti chiave di renderScript e la differenza tra gli _script utente_ e gli _script intrinseche_. Infine, in questa guida sono stati illustrati i passaggi per l'uso di uno script intrinseco in un'applicazione Novell. Android.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

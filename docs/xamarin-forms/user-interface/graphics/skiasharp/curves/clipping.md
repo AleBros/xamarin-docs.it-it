@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1daf4822dd7debe98aabd58d42cb6ed29f95b90d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228262"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759351"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Ritaglio con tracciati e aree
 
@@ -56,7 +56,6 @@ public class MonkeyThroughKeyholePage : ContentPage
 ```
 
 Sebbene il `keyholePath` oggetto descrive la struttura di un microchirurgia, le coordinate sono completamente arbitrari e riflettano ciò che è stato utile quando i dati del percorso è stati concepiti. Per questo motivo, il `PaintSurface` gestore ottiene i limiti di questo percorso e le chiamate `Translate` e `Scale` per spostare il percorso al centro dello schermo e per renderlo quasi la stessa altezza schermo:
-
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -510,7 +509,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 Davvero non sembra un – quattro sono ora disponibili, ma è un'immagine che altrimenti sarebbero difficile da eseguire il rendering senza ritaglio:
 
 [![Schermata tripla della pagina del trifoglio a quattro foglie](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

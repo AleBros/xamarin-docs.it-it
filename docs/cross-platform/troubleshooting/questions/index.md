@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 3b940199a1384540bcc9f7134dabf8b69ac3767e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de70eda2898f29a1e7afed9440d5f5fae496e069
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285005"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765107"
 ---
 # <a name="general-frequently-asked-questions"></a>Domande frequenti generali
 
@@ -42,7 +42,6 @@ Sono stati usati diversi componenti Google Play Services e pacchetti NuGet, ma p
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[In quale posizione sono archiviati i componenti nel computer?](component-storage.md)
 Ogni volta che si installa un componente Novell in un progetto di app, questo viene inserito nelle due posizioni elencate in questa guida.
 
-
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Dove si possono trovare informazioni sulla versione e i log?](version-logs.md)
 Questa guida descrive in dettaglio dove trovare le informazioni di diagnostica che possono essere usate per risolvere i problemi relativi a Novell.
@@ -55,4 +54,3 @@ Jenkins è una suite CI open source, a causa di questo problema, i problemi caus
 
 ### <a name="what-project-settings-are-required-for-the-debuggerdebugger-settingsmd"></a>[Quali impostazioni di progetto sono richieste per il debugger?](debugger-settings.md)
 Affinché il debugger funzioni come previsto (hit punti di interruzione, Visualizza log di debug e così via), è necessario abilitare entrambi gli strumenti per la visualizzazione di informazioni di debug e strumentazione per sviluppatori. Questa guida illustra come trovare e attivare queste impostazioni.
-

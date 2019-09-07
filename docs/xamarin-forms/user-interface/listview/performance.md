@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dabbd21a2ad2ef3c77017ea92704ccdf69f7b36c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f92a338b58dfb82ff5d442ed856e246f4a8a5a8f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228205"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761848"
 ---
 # <a name="listview-performance"></a>Prestazioni di ListView
 
@@ -181,7 +181,6 @@ Sono disponibili molte tecniche per migliorare le prestazioni di un `ListView`:
 `AbsoluteLayout` è in grado di eseguire i layout senza una chiamata di singola misura. Questo rende molto potente per le prestazioni. Se `AbsoluteLayout` non può essere usato, prendere in considerazione [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout). Se si usa `RelativeLayout`, passando direttamente i vincoli saranno notevolmente più veloce rispetto all'uso dell'API di espressione. Ciò avviene perché l'espressione API Usa JIT e in iOS è illustrata la struttura deve essere interpretato, che è più lento. L'espressione API è adatto per layout di pagina in cui richiesto solo su layout iniziale e la rotazione, ma in `ListView`, in cui viene eseguito continuamente durante lo scorrimento, influisce negativamente sulle prestazioni.
 
 Creazione di un renderer personalizzato per un [ `ListView` ](xref:Xamarin.Forms.ListView) o le relative celle è un approccio per ridurre l'effetto di calcoli di layout su prestazioni di scorrimento. Per altre informazioni, vedere [personalizzazione di un ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) e [personalizzazione di un elemento ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df623efcc1da617ac6b700b42d3ac058dea817ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291541"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772646"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in Novell. Mac
 
@@ -747,7 +747,6 @@ Nel **controllo attributi**sono disponibili le seguenti opzioni specifiche per i
 - **Stile** : consente di modificare lo stile del pannello da: Pannello normale (simile a una finestra standard), il pannello utilità (ha una barra del titolo inferiore), il pannello HUD (è traslucido e la barra del titolo fa parte dello sfondo).
 - **Non attivato** : determina che nel pannello diventa la finestra principale.
 - Modale **del documento:** se il documento è modale, il pannello verrà spostato sopra le finestre dell'applicazione; in caso contrario, viene eseguito il float.
-
 
 Per aggiungere un nuovo pannello, procedere come segue:
 

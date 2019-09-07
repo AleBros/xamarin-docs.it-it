@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: f1f886f0e4c14f2da29342a2a651f91ed510fd25
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 838f8bdcf3bd82a31bf0d033eee628bd19ad1c30
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524259"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757543"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Compatibilità con le versioni precedenti del pacchetto del supporto Android
 
@@ -19,7 +19,6 @@ L'utilità dei frammenti sarà limitata senza la compatibilità con le versioni 
 
 > [!NOTE]
 > `ListFragment` Solo`DialogFragment` e sono disponibili tramite il pacchetto del supporto Android. Nessuna delle altre sottoclassi di frammenti, ad esempio `PreferenceFragment,` , è supportata nel pacchetto del supporto Android. Non funzioneranno nelle applicazioni pre-Android 3,0. 
-
 
 ## <a name="adding-the-support-package"></a>Aggiunta del pacchetto per il supporto
 
@@ -47,7 +46,6 @@ fragmentTx.Commit();
 ```
 
 Con queste modifiche, sarà possibile eseguire un'applicazione basata su frammenti in Android 1,6 o 2. x, oltre che in Honeycomb e Ice Cream Sandwich. 
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

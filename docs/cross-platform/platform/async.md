@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b88d6c33671f36d2d4106f45a267322320639c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280623"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765331"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
@@ -124,7 +124,6 @@ Si notino i seguenti punti:
 - Il tipo restituito è `Task<int>` quindi il codice chiamante può accedere `int` al valore calcolato in questo metodo.
 - L'istruzione return è `return exampleInt;` un oggetto Integer, il fatto che il metodo restituisce `Task<int>` una parte dei miglioramenti del linguaggio.
 
-
 ### <a name="calling-an-async-method-1"></a>Chiamata di un metodo asincrono 1
 
 Questo gestore dell'evento click del pulsante si trova nell'applicazione di esempio Android per chiamare il metodo descritto in precedenza:
@@ -153,7 +152,6 @@ Note:
 - Il codice è in attesa sulla variabile sizeTask.  *Si tratta della* posizione in cui il metodo viene sospeso e il controllo viene restituito al codice chiamante fino al termine dell'attività asincrona nel relativo thread.
 - L'esecuzione *non viene sospesa* quando l'attività viene creata nella prima riga del metodo, indipendentemente dall'attività in fase di creazione. La parola chiave await indica la posizione in cui viene sospesa l'esecuzione.
 - Al termine dell'attività asincrona, intResult viene impostato e l'esecuzione continua nel thread originale dalla riga await.
-
 
 ### <a name="calling-an-async-method-2"></a>Chiamata a un metodo asincrono 2
 
@@ -185,14 +183,11 @@ Alcuni punti importanti:
 - Codice `await` s `intResult` nel metodo direttamente in un'assegnazione a una variabile () a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività. `DownloadHomepage`  *Si tratta della* posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
 - Quando il metodo asincrono viene completato e restituisce, l'esecuzione riprende in `await` , ovvero viene restituito il risultato Integer e quindi ne viene eseguito il rendering in un widget dell'interfaccia utente.
 
-
 ## <a name="summary"></a>Riepilogo
 
 L'utilizzo di Async e await semplifica notevolmente il codice necessario per generare operazioni con esecuzione prolungata sui thread in background senza bloccare il thread principale. Consentono inoltre di accedere facilmente ai risultati al termine dell'attività.
 
 In questo documento è stata fornita una panoramica delle parole chiave e degli esempi del nuovo linguaggio per Novell. iOS e Novell. Android.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
