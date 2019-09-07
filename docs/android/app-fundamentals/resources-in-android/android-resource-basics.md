@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 1df10c4b8eaa30ce417feb2abae7f52b2494edf6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c248949024d0e13a24863368e88aa559fa496806
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526372"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755251"
 ---
 # <a name="android-resource-basics"></a>Nozioni di base sulle risorse Android
 
@@ -20,11 +20,11 @@ Quasi tutte le applicazioni Android avranno un certo tipo di risorse. come minim
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![File di risorse](android-resource-basics-images/01-resource-files-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ![File di risorse](android-resource-basics-images/01-resource-files-xs.png)
- 
+
 -----
 
 I cinque file che costituiscono le risorse predefinite sono stati creati nella cartella Resources:
@@ -39,7 +39,6 @@ I cinque file che costituiscono le risorse predefinite sono stati creati nella c
 
 - Resource.designer.cs&ndash; questo file viene generato e gestito automaticamente da Novell. Android e mantiene l'ID univoco assegnato a ogni risorsa. Questa operazione è molto simile e identica allo scopo del file R. Java che un'applicazione Android è stata scritta in Java. Viene creata automaticamente dagli strumenti Novell. Android e verrà rigenerata di tanto in tanto.
 
-
 ## <a name="creating-and-accessing-resources"></a>Creazione e accesso alle risorse
 
 La creazione di risorse è semplice quanto l'aggiunta di file alla directory per il tipo di risorsa in questione. Lo screenshot seguente mostra le risorse di stringa per le impostazioni locali tedesche aggiunte a un progetto. Quando **Strings. XML** è stato aggiunto al file, l' **azione di compilazione** è stata impostata automaticamente su **AndroidResource** dagli strumenti di Novell. Android:
@@ -47,20 +46,18 @@ La creazione di risorse è semplice quanto l'aggiunta di file alla directory per
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Azione di compilazione per Strings. XML impostata su AndroidResource](android-resource-basics-images/02-build-action-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ![Azione di compilazione per Strings. XML impostata su AndroidResource](android-resource-basics-images/02-build-action-xs.png)
- 
+
 -----
- 
 
 Ciò consente agli strumenti Novell. Android di compilare e incorporare correttamente le risorse nel file APK. Se per qualche motivo l' **azione di compilazione** non è impostata su **risorsa Android**, i file verranno esclusi dall'apk e qualsiasi tentativo di caricare o accedere alle risorse comporterà un errore di run-time e l'applicazione si arresterà in modo anomalo.
 
 Inoltre, è importante notare che, mentre Android supporta solo nomi file minuscoli per gli elementi di risorsa, Novell. Android è un po' più indulgente; supporta i nomi file sia maiuscoli che minuscoli. La convenzione per i nomi delle immagini prevede l'uso di caratteri minuscoli con caratteri di sottolineatura come separatori (ad esempio, **My\_Image\_Name. png**). Si noti che i nomi di risorse non possono essere elaborati se vengono usati trattini o spazi come separatori.
 
 Una volta aggiunte le risorse a un progetto, esistono due modi per usarle in un'applicazione &ndash; a livello di codice (all'interno del codice) o da file XML.
-
 
 ## <a name="referencing-resources-programmatically"></a>Riferimento a risorse a livello di codice
 
@@ -105,7 +102,6 @@ Quando si fa riferimento alle risorse a livello di codice (nel codice), è possi
 - **ResourceType** &ndash; Questo è il tipo di risorsa annidata all'interno della classe di risorse descritta in precedenza.
 
 - **Nome risorsa** &ndash; questo è il nome del file della risorsa (senza estensione) o il valore dell'attributo Android: Name per le risorse presenti in un elemento XML.
-
 
 ## <a name="referencing-resources-from-xml"></a>Riferimento a risorse da XML
 

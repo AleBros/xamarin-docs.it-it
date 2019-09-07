@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: d78363bf7d38f19a14f689c2825ea9c9934653e4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 022602c50386017b178672e20e3e352345feec0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280258"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767199"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Procedura dettagliata: Uso di touch in Novell. iOS
 
@@ -35,11 +35,9 @@ Seguire le istruzioni riportate di seguito per aggiungere codice allo storyboard
 
 In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il codice necessario per implementare gli eventi Touch, attenersi alla procedura seguente:
 
-
 1. Aprire il progetto **Touch_Start**. Eseguire prima il progetto per verificare che tutto sia corretto e toccare il pulsante di **esempio touch** . Verrà visualizzata una schermata simile alla seguente (anche se nessuno dei pulsanti funzionerà):
 
     [![](ios-touch-walkthrough-images/image4.png "App di esempio eseguita con pulsanti non funzionanti")](ios-touch-walkthrough-images/image4.png#lightbox)
-
 
 1. Modificare il file **TouchViewController.cs** e aggiungere le due variabili di istanza seguenti alla classe `TouchViewController`:
 
@@ -49,7 +47,6 @@ In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il 
     private bool touchStartedInside;
     #endregion
     ```
-
 
 1. Implementare il `TouchesBegan` metodo, come illustrato nel codice seguente:
 
@@ -172,7 +169,6 @@ In questo esempio, vengono illustrate alcune delle API Touch. Per aggiungere il 
     [![](ios-touch-walkthrough-images/image4.png "Schermata iniziale dell'app")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "Schermata dopo che l'utente trascina un pulsante")](ios-touch-walkthrough-images/image5.png#lightbox)
- 
 
 <a name="Gesture_Recognizer_Samples" />
 
@@ -189,7 +185,6 @@ Se si esegue il [codice di esempio iniziale](https://docs.microsoft.com/samples/
  [![](ios-touch-walkthrough-images/image6.png "Facendo clic sul pulsante esempi di riconoscimento movimento viene visualizzata questa schermata")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Per implementare i riconoscitori di movimento, attenersi alla procedura seguente:
-
 
 1. Modificare il file **GestureViewController.cs** e aggiungere la variabile di istanza seguente:
 
@@ -248,7 +243,6 @@ Si noti che viene assegnata una destinazione al gesto sotto forma di metodo `Han
 
     Il codice precedente verificherà innanzitutto lo stato del sistema di riconoscimento del movimento, quindi sposterà l'immagine intorno allo schermo. Con questo codice, il controller è ora in grado di supportare il trascinamento di un'immagine intorno allo schermo.
 
-
 1. Aggiungere un `UITapGestureRecognizer` che cambierà l'immagine visualizzata in DoubleTouchImage. Aggiungere il metodo seguente al `GestureViewController` controller:
 
     ```csharp
@@ -304,13 +298,10 @@ Si noti che viene assegnata una destinazione al gesto sotto forma di metodo `Han
 
     Si noti anche che viene inizializzato il valore `originalImageFrame`di.
 
-
 1. Eseguire l'applicazione e interagire con le due immagini.
 Lo screenshot seguente è un esempio di queste interazioni:
     
     [![](ios-touch-walkthrough-images/image7.png "Questa schermata mostra un'interazione di trascinamento")](ios-touch-walkthrough-images/image7.png#lightbox)
-
-
 
 <a name="Custom_Gesture_Recognizer"/>
 
@@ -321,7 +312,6 @@ In questa sezione verranno applicati i concetti delle sezioni precedenti per cre
  [![](ios-touch-walkthrough-images/image8.png "L'app rileverà quando l'utente disegna una \"V\" sullo schermo")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Seguire questa procedura per creare un riconoscimento di movimento personalizzato:
-
 
 1. Aggiungere una nuova classe al progetto denominato `CheckmarkGestureRecognizer`e renderla simile al codice seguente:
 
@@ -441,8 +431,6 @@ Seguire questa procedura per creare un riconoscimento di movimento personalizzat
     Il metodo Reset viene chiamato quando la `State` proprietà viene modificata `Recognized` in o `Ended`. Si tratta del momento in cui reimpostare lo stato interno impostato nel riconoscimento di movimento personalizzato.
 A questo punto la classe può essere avviata la volta successiva che l'utente interagisce con l'applicazione ed è pronto per ritentare il riconoscimento del movimento.
 
-
-
 1. Ora che è stato definito un riconoscimento di movimento personalizzato (`CheckmarkGestureRecognizer`), modificare il file **CustomGestureViewController.cs** e aggiungere le due variabili di istanza seguenti:
 
     ```csharp
@@ -499,11 +487,7 @@ A questo punto la classe può essere avviata la volta successiva che l'utente in
     
     [![](ios-touch-walkthrough-images/image10.png "Pulsante deselezionato")](ios-touch-walkthrough-images/image10.png#lightbox)
 
-
-
 Nelle tre sezioni precedenti sono stati illustrati diversi modi per rispondere agli eventi di tocco in iOS: usando gli eventi Touch, i riconoscitori di movimento predefiniti o con un riconoscimento di movimento personalizzato.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

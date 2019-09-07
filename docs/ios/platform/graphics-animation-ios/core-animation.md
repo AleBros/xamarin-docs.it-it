@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 366932e32443a7284f15f51a7a9a437d4b177438
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 730359824ec5a51a53261fbfc9519ac8560a77f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286247"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753066"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animazione principale in Novell. iOS
 
@@ -44,7 +44,6 @@ Questa sezione illustra le funzionalità di animazione UIKit, tra cui:
 - Transizioni tra viste
 - Visualizza animazione proprietà
 
-
 ### <a name="view-controller-transitions"></a>Transizioni dei controller di visualizzazione
 
  `UIViewController`fornisce supporto incorporato per la transizione tra i controller di visualizzazione tramite il `PresentViewController` metodo. Quando si `PresentViewController`USA, la transizione al secondo controller può essere facoltativamente animata.
@@ -62,7 +61,6 @@ In questo caso viene `PartialCurl` usata un'animazione, sebbene siano disponibil
 - `CoverVertical`: Scorre verso l'alto dalla parte inferiore dello schermo
 - `CrossDissolve`-La visualizzazione precedente si dissolve & la nuova visualizzazione si dissolve in
 - `FlipHorizontal`-Un flip orizzontale da destra a sinistra. In fase di chiusura la transizione viene invertita da sinistra a destra.
-
 
 Per aggiungere un'animazione alla transizione, `true` passare come secondo argomento a `PresentViewController`:
 
@@ -106,7 +104,6 @@ UIKit supporta l' `UIView` animazione gratuita di un'ampia gamma di proprietà n
 - Alfa
 - Transform
 - Colore
-
 
 Queste animazioni si verificano in modo implicito specificando `NSAction` le modifiche alle proprietà in `UIView.Animate` un delegato passato al metodo statico. Il codice seguente, ad esempio, anima il punto centrale di un `UIImageView`oggetto:
 
@@ -233,7 +230,7 @@ Questo codice modifica la `Position` del livello creando un percorso che viene q
 Gli screenshot seguenti mostrano il livello contenente l'animazione dell'immagine nel percorso specificato:
 
  ![](core-animation-images/12-explicit-animation.png "Questa schermata mostra il livello che contiene l'immagine che aggiunge l'animazione al percorso specificato")
- 
+
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo sono state esaminate le funzionalità di animazione fornite tramite i Framework di *animazione di base* . È stata esaminata l'animazione principale, che mostra sia il modo in cui le animazioni in UIKit e come può essere utilizzata direttamente per il controllo di animazione di basso livello.

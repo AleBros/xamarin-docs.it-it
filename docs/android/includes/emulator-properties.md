@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: c81cc7ff176ab4863498a03169a2c6a3711a0ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: b505f4a4f7a8f50a6044d01a327eef76a7b1ce3b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525083"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758033"
 ---
-|Proprietà|DESCRIZIONE|Opzioni|
+|Proprietà|Descrizione|Opzioni|
 |--- |--- |--- |
 |`abi.type`|**Tipo ABI** &ndash; Specifica il tipo di interfaccia ABI (Application Binary Interface) del dispositivo emulato. L'opzione **x86** è usata per il set di istruzioni comunemente denominato "x86" o "IA-32". L'opzione **x86_64** è usata per il set di istruzioni x86 a 64 bit. L'opzione **armeabi-v7a** è usata per il set di istruzioni ARM con le estensioni ARM v7-a. L'opzione **arm64 v8a** è usata per il set di istruzioni ARM che supporta AArch64.|x86, x86_64, armeabi-v7a, arm64-v8a|
 |`disk.cachePartition`|**Partizione cache** &ndash; Determina se il dispositivo emulato userà una partizione **/cache** nel dispositivo. La partizione **/cache** (inizialmente vuota) è il percorso in cui Android archivia i dati e i componenti dell'app usati di frequente. Se impostato su **no**, l'emulatore non userà una partizione **/cache** e le altre impostazioni `disk.cache` verranno ignorate.|yes, no|
@@ -57,12 +57,11 @@ ms.locfileid: "69525083"
 |`hw.sensors.temperature`|**Sensore di temperatura** &ndash; Determina se il dispositivo emulato supporta un sensore di temperatura. Questo sensore misura la temperatura del dispositivo in gradi Celsius (&deg;C).|yes, no|
 |`hw.touchScreen`|**Supporto del touchscreen** &ndash; Determina se il dispositivo emulato supporta un touchscreen. Il touchscreen viene usato per la modifica diretta degli oggetti sullo schermo.|yes, no|
 |`hw.trackBall`|**Supporto della trackball** &ndash; Determina se il dispositivo emulato supporta una trackball.|yes, no|
-|`hw.useext4`|**Supporto del file system EXT4** &ndash; Determina se il dispositivo emulato usa il file system Linux EXT4 per le partizioni. Poiché il tipo di file system ora viene rilevato automaticamente, questa opzione è deprecata e viene ignorata.|No|
+|`hw.useext4`|**Supporto del file system EXT4** &ndash; Determina se il dispositivo emulato usa il file system Linux EXT4 per le partizioni. Poiché il tipo di file system ora viene rilevato automaticamente, questa opzione è deprecata e viene ignorata.|no|
 |`kernel.newDeviceNaming`|**Nuova denominazione del dispositivo per il kernel** &ndash; Usato per specificare se il kernel richiede un nuovo schema di denominazione del dispositivo. In genere viene usato con i kernel Linux 3.10 e versioni successive. Se impostato su **autodetect**, l'emulatore rileverà automaticamente se il kernel richiede un nuovo schema di denominazione del dispositivo.|autodetect, yes, no|
 |`kernel.parameters`|**Parametri del kernel** &ndash; Specifica la stringa di parametri di avvio del kernel Linux. Per impostazione predefinita, questa impostazione è vuota.||
 |`kernel.path`|**Percorso del kernel** &ndash; Specifica il percorso del kernel Linux. Se questo percorso non è specificato, l'emulatore esegue una ricerca di kernel-ranchu nella directory di sistema dell'emulatore.||
 |`kernel.supportsYaffs2`|**Supporto delle partizioni YAFFS2** &ndash; Determina se il kernel supporta le partizioni YAFFS2 (Yet Another Flash File System 2). In genere, si applica solo ai kernel precedenti a Linux 3.10. Se impostato su **autodetect**, l'emulatore rileverà automaticamente se il kernel può eseguire il montaggio di file system YAFFS2.|autodetect, yes, no|
 |`skin.name`|**Nome dell'interfaccia** &ndash; Nome di un'interfaccia dell'emulatore Android. Un'interfaccia è una raccolta di file che definisce gli elementi visivi e di controllo di una visualizzazione dell'emulatore. Descrive l'aspetto della finestra del dispositivo virtuale Android nel computer di sviluppo. Un'interfaccia descrive le dimensioni dello schermo, i pulsanti e la struttura complessiva, ma non influisce sulle operazioni dell'app.||
 |`skin.path`|**Percorso dell'interfaccia** &ndash; Percorso della directory che contiene i file di interfaccia dell'emulatore specificati in skin.name. Questa directory contiene i file di layout hardware.ini e i file di immagine per gli elementi di visualizzazione dell'interfaccia.||
-|`skin.dynamic`|**Interfaccia dinamica** &ndash; Determina se l'interfaccia è dinamica o meno. L'interfaccia dell'emulatore è un'interfaccia dinamica se l'emulatore deve creare un'interfaccia di una determinata dimensione in base a una larghezza e un'altezza specificate.|No|
-
+|`skin.dynamic`|**Interfaccia dinamica** &ndash; Determina se l'interfaccia è dinamica o meno. L'interfaccia dell'emulatore è un'interfaccia dinamica se l'emulatore deve creare un'interfaccia di una determinata dimensione in base a una larghezza e un'altezza specificate.|no|

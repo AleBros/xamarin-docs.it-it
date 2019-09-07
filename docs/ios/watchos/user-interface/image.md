@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 18e7873eede87e9bb81c1c0b304bfc87c317c27a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291506"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769966"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Controlli immagine watchos in Novell
 
@@ -32,7 +32,6 @@ Solo **@2x** versioni sono obbligatorie, poiché tutti guardare i dispositivi ha
 
 ![](image-images/asset-watch-sml.png "È possibile usare il kit Watch size 38 mm e 42 millimetri in un'immagine del catalogo asset per specificare immagini diverse per ogni dimensione di visualizzazione")
 
-
 ## <a name="images-on-the-watch"></a>Immagini nell'orologio
 
 Il modo più efficiente per visualizzare le immagini consiste *nell'includerli nel progetto Watch app* e visualizzarli usando il `SetImage(string imageName)` metodo.
@@ -51,7 +50,6 @@ myOtherImageControl.SetImage("Worry");
 ### <a name="background-images"></a>Immagini di sfondo
 
 La stessa logica si applica per `SetBackgroundImage (string imageName)` le `Button`classi, `Group`e `InterfaceController` . Per ottenere prestazioni ottimali, archiviare le immagini nell'app Watch.
-
 
 ## <a name="images-in-the-watch-extension"></a>Immagini nell'estensione Watch
 
@@ -74,7 +72,6 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 }
 ```
 
-
 ## <a name="animations"></a>Animations
 
 Per animare un set di immagini, è necessario che tutti comincino con lo stesso prefisso e abbiano un suffisso numerico.
@@ -95,7 +92,6 @@ Chiamare `StopAnimating` sul controllo immagine per arrestare il ciclo di animaz
 ```csharp
 animatedImage.StopAnimating ();
 ```
-
 
 <a name="cache" />
 
@@ -122,12 +118,9 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 È possibile eseguire una query sul contenuto della cache immagini nel codice `WKInterfaceDevice.CurrentDevice.WeakCachedImages`usando.
 
-
 ### <a name="managing-the-cache"></a>Gestione della cache
 
 La cache di circa 20 MB di dimensioni. Viene mantenuta tra i riavvii dell'app e, quando si riempie, è responsabilità dell'utente cancellare i file `RemoveCachedImage` usando `RemoveAllCachedImages` i `WKInterfaceDevice.CurrentDevice` metodi o nell'oggetto.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

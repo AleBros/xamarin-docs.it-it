@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 005f858408ec4d10563e3d945cadb0f1af65a407
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dd9d93572ac10622345b1dff4145b737baf8aaae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292974"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769006"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barre schede e controller di barra schede in xamarin. IOS
 
@@ -28,7 +28,6 @@ Il `UITabBarController` supporta lo sviluppo di applicazioni a schede dalle cond
 
 - Che consente più controller da aggiungere ad esso.
 - Fornisce un'interfaccia utente a schede, tramite il `UITabBar` (classe), per consentire all'utente di spostarsi tra i controller e le visualizzazioni. 
-
 
 Controller vengono aggiunti al `UITabBarController` tramite il `ViewControllers` proprietà, ovvero un `UIViewController` matrice. Il `UITabBarController` stesso gestisce il caricamento del controller corretto e presentare la visualizzazione in base al scheda selezionata.
 
@@ -46,7 +45,6 @@ Sebbene non esista già un modello di App a schede disponibili in Visual Studio 
 
  <a name="Creating_the_Application" />
 
-
 ### <a name="creating-the-application"></a>Creare l'applicazione
 
 Iniziamo creando una nuova applicazione.
@@ -56,8 +54,6 @@ Selezionare il **File > New > soluzione** voce di menu in Visual Studio per Mac 
 [![](creating-tabbed-applications-images/newsolution1.png "Selezionare il modello di progetto vuoto")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
 [![](creating-tabbed-applications-images/newsolution2.png "Denominare il progetto TabbedApplication")](creating-tabbed-applications-images/newsolution2.png#lightbox)
-
-
 
 ### <a name="adding-the-uitabbarcontroller"></a>Aggiunta di UITabBarController
 
@@ -72,7 +68,6 @@ Per implementare il `UITabBarController` dobbiamo eseguire le operazioni seguent
 1. Impostare la classe di base di `TabController` a `UITabBarController` . 
 1. Creare `UIViewController` istanze da aggiungere al `TabController` . 
 1. Aggiungere il `UIViewController` istanze in una matrice assegnata per il `ViewControllers` proprietà del `TabController` . 
-
 
 Aggiungere il codice seguente per il `TabController` classe per ottenere questi passaggi:
 
@@ -146,13 +141,11 @@ Se si esegue l'applicazione a questo punto, il `UITabBarController` verrà caric
 
  <a name="Modifying_TabBarItems" />
 
-
 ### <a name="modifying-tabbaritems"></a>Modifica TabBarItems
 
 Ora che abbiamo un in esecuzione sulla scheda dell'applicazione, è possibile modificare il `TabBarItem` per modificare l'immagine e testo che viene visualizzato, nonché per aggiungere un badge a una delle schede.
 
  <a name="Setting_a_System_Item" />
-
 
 #### <a name="setting-a-system-item"></a>L'impostazione di un elemento di sistema
 
@@ -167,7 +160,6 @@ Quando si crea il `UITabBarItem` usando un `UITabBarSystemItem`, il titolo e l'i
  ![](creating-tabbed-applications-images/04a-tabimage.png "La prima scheda con un'icona a stella")
 
  <a name="Setting_the_Title_and_Image" />
-
 
 #### <a name="setting-the-title-and-image"></a>Impostare il titolo e l'immagine
 
@@ -201,7 +193,6 @@ Quando si esegue l'applicazione a questo punto, la seconda scheda Mostra il tito
 
  <a name="Setting_the_Badge_Value" />
 
-
 #### <a name="setting-the-badge-value"></a>Impostazione del valore di Badge
 
 Una scheda è inoltre possibile visualizzare una notifica. Ad esempio, aggiungere la seguente riga di codice per impostare una notifica utente visuale nella terza scheda:
@@ -222,13 +213,11 @@ tab3.TabBarItem.BadgeValue = null;
 
  <a name="Tabs_in_Non-RootViewController_Scenarios" />
 
-
 ## <a name="tabs-in-non-rootviewcontroller-scenarios"></a>Schede in scenari Non RootViewController
 
 Nell'esempio precedente, è stato illustrato come lavorare con un `UITabBarController` quando è il `RootViewController` della finestra. In questo esempio verrà esaminato come utilizzare un `UITabBarController` quando non è il `RootViewController` e Mostra come viene creato usare gli storyboard.
 
  <a name="Initial_Screen_Example" />
-
 
 ### <a name="initial-screen-example"></a>Esempio di schermata iniziale
 
@@ -237,7 +226,6 @@ Per questo scenario, la schermata iniziale viene caricata da un controller che n
 [![](creating-tabbed-applications-images/inital-screen-application.png "Questo screenshot Mostra il flusso dell'applicazione")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 È possibile avviare una nuova applicazione per questo esempio. Anche in questo caso si userà il **iPhone > App > progetto vuoto (C#)** modello, questa volta il progetto di denominazione `InitialScreenDemo`.
-
 
 In questo esempio è necessario uno Storyboard per contenere il controller di visualizzazione. Per aggiungere uno Storyboard:
 
@@ -251,7 +239,6 @@ In questo esempio è necessario uno Storyboard per contenere il controller di vi
 
 Esistono alcuni passaggi importanti da tenere presente quando si aggiunge uno Storyboard a un file, in precedenza non storyboard che sono illustrati nella [Introduzione agli storyboard](~/ios/user-interface/storyboards/index.md) Guida. Questi sono:
 
- 
 1. Aggiungere il nome di uno Storyboard per il **interfaccia principale** sezione del `Info.plist`:
 
     [![](creating-tabbed-applications-images/project-options.png "Impostare l'interfaccia principale per MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
@@ -276,7 +263,6 @@ Visual Studio per Mac genera automaticamente le classi e i file della finestra d
 
  <a name="Creating_the_UI" />
 
-
 #### <a name="creating-the-ui"></a>Creare l'interfaccia utente
 
 Successivamente, si creerà una semplice interfaccia utente per ognuna delle visualizzazioni di ViewController, uso di Xamarin iOS Designer.
@@ -285,7 +271,6 @@ Si vuole trascinare un `Label` e una `Button` in ViewController1 dal **della cas
 
 - **Etichetta** : `Text` = **Uno**
 - **Pulsante** : `Title` = **L'utente esegue un'azione iniziale**
-
 
 Si verrà controllata la visibilità del pulsante in un `TouchUpInside` evento ed è necessario fare riferimento a esso nel code-behind. È possibile identificare con il **Name** `aButton` nel riquadro delle proprietà, come illustrato nello screenshot seguente:
 
@@ -329,7 +314,7 @@ Eliminare questi nuovi controller di visualizzazione selezionando la barra nera 
 Nel nostro Storyboard, è possibile usare segue per gestire le transizioni tra il TabBarController e ai controller di visualizzazione. Dopo l'interazione con la visualizzazione iniziale, si vuole caricarli nel TabBarController presentati all'utente. È possibile impostarlo nella finestra di progettazione.
 
 **CTRL + clic** e **trascinamento** dal pulsante per la TabBarController. Nel rilascio del mouse, verrà visualizzato un menu di scelta rapida. Si vuole usare un elemento segue modale. 
- 
+
 Per configurare ognuno dei nostri schede **Ctrl + clic** dal TabBarController a ognuno dei nostri i controller di visualizzazione in ordine da uno a tre e selezionare la relazione **scheda** dal menu di scelta rapida, come illustrato di seguito:
 
 [![](creating-tabbed-applications-images/context-menu.png "Selezionare la scheda relazione")](creating-tabbed-applications-images/context-menu.png#lightbox)
@@ -366,7 +351,6 @@ Quando l'esecuzione dell'applicazione e l'utente tocca il pulsante nella prima s
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come utilizzare un `UITabBarController` in un'applicazione. È stato illustrato come caricare i controller in ogni scheda e come impostare le proprietà delle schede tale titolo, immagine e badge. Abbiamo quindi esaminato, usando gli storyboard, come caricare un `UITabBarController` in fase di esecuzione quando non è il `RootViewController` della finestra.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

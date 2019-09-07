@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 0619dd9a81c40633c7c61f23ef9e8f3ef92c2e6a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e9810eed3affb15f581b95aec1aff9ae560ff63c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197628"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754748"
 ---
 # <a name="touch-in-android"></a>Tocco in Android
 
@@ -22,7 +22,6 @@ Analogamente a iOS, Android crea un oggetto che include i dati sull'interazione 
 - Set di valori dell'asse che descrivono la posizione di `MotionEvent` e altre proprietà di spostamento, ad esempio il punto in cui si verifica il tocco, il momento in cui si è verificato il tocco e la quantità di pressione utilizzata.
    I valori dell'asse possono essere diversi a seconda del dispositivo, quindi l'elenco precedente non descrive tutti i valori dell'asse.
 
-
 L' `MotionEvent` oggetto verrà passato a un metodo appropriato in un'applicazione. È possibile che un'applicazione Novell. Android risponda a un evento Touch in tre modi:
 
 - *Assegnare un gestore eventi a `View.Touch`*  : la `Android.Views.View` classe dispone di `EventHandler<View.TouchEventArgs>` un oggetto a cui le applicazioni possono assegnare un gestore. Si tratta di un comportamento tipico di .NET.
@@ -30,7 +29,6 @@ L' `MotionEvent` oggetto verrà passato a un metodo appropriato in un'applicazio
 - *Implementazione`View.IOnTouchListener`* : le istanze di questa interfaccia possono essere assegnate a un oggetto visualizzazione utilizzando la vista. `SetOnListener`Metodo. Dal `View.Touch` punto di vista funzionale equivale all'assegnazione di un gestore eventi all'evento. Se è presente una logica comune o condivisa che molte visualizzazioni diverse potrebbero avere bisogno quando vengono modificate, sarà più efficiente creare una classe e implementare questo metodo anziché assegnare a ogni visualizzazione il proprio gestore eventi.
 
 - *Esegue `View.OnTouchEvent` l'override* di tutte le viste `Android.Views.View`nella sottoclasse Android. Quando viene toccata una visualizzazione, Android `OnTouchEvent` chiamerà e passa un `MotionEvent` oggetto come parametro.
-
 
 > [!NOTE]
 > Non tutti i dispositivi Android supportano le schermate touch. 
@@ -78,7 +76,6 @@ Questa interfaccia fornisce sei metodi per i diversi movimenti:
 - *OnShowPress* : viene chiamato dopo che si è verificato un ondown e non è stato eseguito un evento di spostamento o di discesa.
 
 - *OnSingleTapUp* : viene chiamato quando si verifica un solo tocco.
-
 
 In molti casi le applicazioni possono essere interessate solo a un subset di movimenti. In questo caso, le applicazioni devono estendere la classe GestureDetector. SimpleOnGestureListener ed eseguire l'override dei metodi che corrispondono agli eventi a cui sono interessati.
 
@@ -164,8 +161,6 @@ private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayV
 ```
 
 A questo proposito, è necessario comprendere come usare il tocco e i movimenti in un'applicazione Novell. Android. Passare ora a una procedura dettagliata e visualizzare tutti i concetti in un'applicazione di esempio funzionante.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

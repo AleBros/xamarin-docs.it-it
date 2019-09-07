@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286579"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752320"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Modifiche all'App Store in iOS 11
 
@@ -33,7 +33,6 @@ L'App Store riprogettata include le sezioni seguenti:
 Le icone dello Store (o le icone di marketing) non sono più gestite in iTunes Connect e devono invece essere contenute come [Catalogo asset](~/ios/app-fundamentals/images-icons/app-icons.md) nel file binario dell'app, in modo analogo alle icone dell'app. Per inviare correttamente le app iOS 11, è necessario includere in un catalogo asset un'icona di archivio 1024 x 1024 in formato PNG.
 
 Il DILUENTE delle app assicura che questo catalogo asset aggiuntivo non aumenti le dimensioni dell'app.
-
 
 ## <a name="in-app-purchases-promoted-in-the-app-store"></a>Acquisti in-app promossi nell'App Store
 
@@ -96,7 +95,6 @@ Le versioni in più fasi sono abilitate in iTunes Connect. Fare clic sull'app ne
 ![Opzione che mostra la versione in più fasi per gli aggiornamenti automatici](app-store-changes-images/image6.png)
 
 L'aggiornamento è immediatamente disponibile per il download nella scheda aggiornamenti dell'app Store. Le versioni in più fasi sono disponibili solo per gli utenti che hanno selezionato download automatici.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

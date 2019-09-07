@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 335c385b5be77736f0e19852eb71f2a2329eb9a2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287034"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768253"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opzioni di layout in Novell. iOS
 
@@ -40,7 +40,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 Per testare le impostazioni di ridimensionamento automatico, abilitare diversi **orientamenti dei dispositivi supportati** nelle opzioni del progetto:
 
  [![](layout-options-images/image43a.png "Impostazioni di ridimensionamento automatico")](layout-options-images/image43a.png#lightbox)
@@ -53,7 +52,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 È anche possibile modificare i controlli usando la finestra di progettazione. Se si selezionano i puntone come mostrato di seguito, l'immagine resterà allineata a destra senza essere ritagliata nella parte inferiore della visualizzazione:
 
  [![](layout-options-images/autoresize.png "Autorotazione")](layout-options-images/autoresize.png#lightbox)
@@ -63,10 +61,6 @@ Queste schermate mostrano il ridimensionamento o il riposizionamento dei control
  [![](layout-options-images/image44a.png "Autorotazione")](layout-options-images/image44a.png#lightbox)
 
 Si noti che la visualizzazione di testo e il campo di testo si estendono entrambi per mantenere gli stessi margini `FlexibleWidth` sinistro e destro, a causa dell'impostazione. L'immagine ha il margine superiore e sinistro flessibile, ovvero mantiene i margini inferiore e destro, mantenendo l'immagine in visualizzazione quando viene ruotata la schermata. I layout complessi richiedono in genere una combinazione di queste impostazioni in ogni controllo visibile per assicurare la coerenza dell'interfaccia utente e impedire la sovrapposizione dei controlli quando i limiti della visualizzazione cambiano (a causa della rotazione o di un altro evento di ridimensionamento).
-
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

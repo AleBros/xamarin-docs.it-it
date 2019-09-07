@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e593a594bbf0fd6398c277d531258f6fded515f1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bc97f14066456a07ee7ce62131985194bbe83811
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282553"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768380"
 ---
 # <a name="web-views-in-xamarinios"></a>Visualizzazioni Web in Novell. iOS
 
@@ -27,9 +27,9 @@ iOS 11 ha introdotto nuove modifiche sia `WKWebView` in `SFSafariViewController`
 `UIWebView`è il modo legacy di Apple di fornire contenuto Web nell'app. È stata rilasciata in iOS 2,0 ed è stata deprecata a partire da 8,0.
 
 Se si prevede di supportare le versioni di iOS precedenti alla 8,0, sarà necessario usare `UIWebView`. A causa del fatto che `UIWebView` è meno ottimizzato per le prestazioni rispetto alle alternative, è consigliabile controllare la versione di iOS dell'utente. Se 8,0 o versione successiva, l'utilizzo di una delle opzioni descritte di seguito creerà un'esperienza utente migliore.
- 
+
 Per aggiungere un UIWebView all'app Novell. iOS, usare il codice seguente:
- 
+
 ```
 webView = new UIWebView (View.Bounds);
 View.AddSubview(webView);
@@ -43,7 +43,6 @@ Viene prodotta la seguente visualizzazione Web:
 [![](uiwebview-images/webview.png "Effetto di ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo `UIWebView`di, vedere le seguenti ricette:
-
 
 - [Caricare una pagina Web](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
 - [Carica contenuto locale](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
@@ -79,11 +78,11 @@ La ricetta relativa alla [gestione degli avvisi di JavaScript](https://github.co
 <a name="safariviewcontroller" />
 
 ## <a name="sfsafariviewcontroller"></a>SFSafariViewController
- 
+
  `SFSafariViewController`è il modo più recente per fornire contenuto Web dall'app ed è disponibile in iOS 9 e versioni successive. Diversamente `UIWebView` da o `WKWebView`, `SFSafariViewController` è un controller di visualizzazione e pertanto non può essere utilizzato con altre visualizzazioni. È consigliabile presentare `SFSafariViewController` un nuovo controller di visualizzazione, nello stesso modo in cui si presenta qualsiasi controller di visualizzazione.
- 
+
  `SFSafariViewController`è essenzialmente un'mini safari ' che può essere incorporato nell'app. Analogamente a WKWebView, USA lo stesso motore di Nitro JavaScript, ma offre anche una gamma di funzionalità Safari aggiuntive, come il riempimento automatico, il lettore e la possibilità di condividere cookie e dati con Safari per dispositivi mobili. L'interazione tra l'utente e `SFSafariViewController` non è accessibile all'app. L'app non avrà accesso a nessuna delle funzionalità predefinite di Safari.
- 
+
 Inoltre, per impostazione predefinita, implementa un pulsante **Fatto**, che consente all'utente di tornare facilmente alla tua app e di inoltrare e tornare indietro pulsanti di navigazione, consentendo all'utente di navigare attraverso una pila di pagine web. Inoltre, fornisce all'utente una barra degli indirizzi, per consentirgli di ricordare che si trovano nella pagina Web prevista. La barra degli indirizzi non consente all'utente di modificare l'URL. 
 
 Queste implementazioni non possono essere modificate, `SFSafariViewController` quindi è ideale usare come browser predefinito se l'app vuole presentare una pagina Web senza alcuna personalizzazione.

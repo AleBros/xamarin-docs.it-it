@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/09/2018
-ms.openlocfilehash: 1d0341af35d3c580141c5bfc76e9f170cd7ff4c5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4d91ba7b71f2eb61d003700269675c785cbfb0c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119097"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755034"
 ---
 # <a name="fonts"></a>Tipi di carattere
 
@@ -60,7 +60,7 @@ Questa guida illustra prima di tutto come usare i tipi di carattere come risorsa
 
 ## <a name="fonts-as-a-resource"></a>Tipi di carattere come risorsa
 
-La creazione del pacchetto di un tipo di carattere in un APK Android garantisce che sia sempre disponibile per l'applicazione. Un file del tipo di carattere, ovvero. TTF o. Il file OTF) viene aggiunto a un'applicazione Novell. Android esattamente come qualsiasi altra risorsa, copiando i file in una sottodirectory nella cartella Resources di un progetto Novell. Android. Le risorse dei tipi di carattere vengono mantenute in una sottodirectory del **tipo di carattere** della cartella **risorse** del progetto.
+La creazione del pacchetto di un tipo di carattere in un APK Android garantisce che sia sempre disponibile per l'applicazione. Un file del tipo di carattere, ovvero. TTF o. Il file OTF) viene aggiunto a un'applicazione Novell. Android esattamente come qualsiasi altra risorsa, copiando i file in una sottodirectory nella cartella **Resources** di un progetto Novell. Android. Le risorse dei tipi di carattere vengono mantenute in una sottodirectory del **tipo di carattere** della cartella **risorse** del progetto.
 
 > [!NOTE]
 > I tipi di carattere devono avere un' **azione di compilazione** di **AndroidResource** o non verranno inclusi nel file apk finale. L'azione di compilazione deve essere impostata automaticamente dall'IDE.
@@ -71,11 +71,11 @@ Quando sono presenti molti file del tipo di carattere simili, ad esempio lo stes
 
 ### <a name="font-families"></a>Gruppi di caratteri
 
-Una famiglia di caratteri è un set di tipi di carattere con pesi e stili diversi. È ad esempio possibile che siano presenti file di tipi di carattere distinti per i tipi di carattere grassetto o corsivo. La famiglia di caratteri è definita `font` dagli elementi di un file XML conservati nella directory Resources **/font** . Ogni famiglia di caratteri deve avere il proprio file XML.
+Una famiglia di caratteri è un set di tipi di carattere con pesi e stili diversi. È ad esempio possibile che siano presenti file di tipi di carattere distinti per i tipi di carattere grassetto o corsivo. La famiglia di caratteri è definita `font` dagli elementi di un file XML conservati nella directory **Resources/font** . Ogni famiglia di caratteri deve avere il proprio file XML.
 
-Per creare una famiglia di caratteri, aggiungere prima tutti i tipi di carattere alla cartella Resources **/font** . Quindi, creare un nuovo file XML nella cartella font per la famiglia di caratteri. Il nome del file XML non presenta affinità o relazione con i tipi di carattere a cui viene fatto riferimento; il file di risorse può essere qualsiasi nome di file di risorse Android valido. Questo file XML avrà un elemento radice `font-family` che contiene uno o più `font` elementi. Ogni `font` elemento dichiara gli attributi di un tipo di carattere.
+Per creare una famiglia di caratteri, aggiungere prima tutti i tipi di carattere alla cartella **Resources/font** . Quindi, creare un nuovo file XML nella cartella font per la famiglia di caratteri. Il nome del file XML non presenta affinità o relazione con i tipi di carattere a cui viene fatto riferimento; il file di risorse può essere qualsiasi nome di file di risorse Android valido. Questo file XML avrà un elemento radice `font-family` che contiene uno o più `font` elementi. Ogni `font` elemento dichiara gli attributi di un tipo di carattere.
 
-Il codice XML seguente è un esempio di una famiglia di caratteri per il tipo di carattere di _origini Sans Pro_ che definisce molti pesi del tipo di carattere diversi. Viene salvato come file nella cartella Resources **/font** denominata **sourcesanspro. XML**:
+Il codice XML seguente è un esempio di una famiglia di caratteri per il tipo di carattere di _origini Sans Pro_ che definisce molti pesi del tipo di carattere diversi. Viene salvato come file nella cartella **Resources/font** denominata **sourcesanspro. XML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -114,9 +114,9 @@ L' `fontWeight` attributo corrisponde all'attributo CSS `font-weight` e fa rifer
 - **Chiaro** &ndash; 300
 - **Normale** &ndash; 400
 - **Media** &ndash; 500
-- **Semi** -grassetto &ndash; 600
-- In grassetto &ndash; 700
-- In grassetto &ndash; 800
+- **Semi-grassetto** &ndash; 600
+- In **grassetto** &ndash; 700
+- In **grassetto** &ndash; 800
 - **Nero** &ndash; 900
 
 Una volta definita, una famiglia di caratteri può essere usata in modo dichiarativo impostando gli `fontFamily`attributi `fontWeight` , `textStyle`e nel file di layout.  Il frammento XML seguente, ad esempio, imposta un tipo di carattere 600 peso (normale) e uno stile di testo in corsivo:
@@ -166,7 +166,7 @@ Android 8,0 supporta il download di tipi di carattere in due modi diversi:
 1. **Dichiarare i tipi di carattere scaricabili come risorsa** &ndash; Un'app può dichiarare i tipi di carattere scaricabili in Android tramite file di risorse XML. Questi file conterranno tutti i metadati che Android deve scaricare in modo asincrono quando l'app viene avviata e memorizzata nella cache nel dispositivo.
 2. **A livello di codice** &ndash; Le API nell'API Android Level 26 consentono a un'applicazione di scaricare i tipi di carattere a livello di codice, mentre l'applicazione è in esecuzione. `FontRequest` Le`FontsContract` app creeranno un oggetto per un tipo di carattere specificato e passeranno questo oggetto alla classe. Accetta e recupera il tipo di carattere da un _provider di tipi di carattere._ `FontsContract` `FontRequest` Android scaricherà il tipo di carattere in modo sincrono. Un esempio di creazione di `FontRequest` un oggetto verrà illustrato più avanti in questa guida.
 
-Indipendentemente dall'approccio usato, i file di risorse che devono essere aggiunti all'applicazione Novell. Android prima di poter scaricare i tipi di carattere. In primo luogo, i tipi di carattere devono essere dichiarati in un file XML nella directory Resources **/font** come parte di una famiglia di caratteri. Questo frammento di codice è un esempio di come scaricare i tipi di carattere dalla [raccolta di Google Fonts Open Source](https://fonts.google.com) usando il provider di tipi di carattere predefinito disponibile in Android 8,0 (o la libreria di supporto V26):
+Indipendentemente dall'approccio usato, i file di risorse che devono essere aggiunti all'applicazione Novell. Android prima di poter scaricare i tipi di carattere. In primo luogo, i tipi di carattere devono essere dichiarati in un file XML nella directory **Resources/font** come parte di una famiglia di caratteri. Questo frammento di codice è un esempio di come scaricare i tipi di carattere dalla [raccolta di Google Fonts Open Source](https://fonts.google.com) usando il provider di tipi di carattere predefinito disponibile in Android 8,0 (o la libreria di supporto V26):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -195,9 +195,9 @@ Una volta definiti i tipi di carattere, potrebbe essere necessario fornire infor
 
 ### <a name="font-certificates"></a>Certificati del tipo di carattere
 
-Se il provider di tipi di carattere non è preinstallato nel dispositivo o se l'app usa la `Xamarin.Android.Support.Compat` libreria, Android richiede i certificati di sicurezza del provider di tipi di carattere. Questi certificati verranno elencati in un file di risorse array mantenuto nella directory Resources **/values** .
+Se il provider di tipi di carattere non è preinstallato nel dispositivo o se l'app usa la `Xamarin.Android.Support.Compat` libreria, Android richiede i certificati di sicurezza del provider di tipi di carattere. Questi certificati verranno elencati in un file di risorse array mantenuto nella directory **Resources/values** .
 
-Il codice XML seguente, ad esempio, è denominato Resources **/values/fonts_cert. XML** e archivia i certificati per il provider di tipi di carattere Google:
+Il codice XML seguente, ad esempio, è denominato **Resources/values/fonts_cert. XML** e archivia i certificati per il provider di tipi di carattere Google:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,7 +234,7 @@ Elencando i tipi di carattere scaricabili in **file AndroidManifest. XML**, i ti
 </resources>
 ```
 
-Per scaricare questi tipi di carattere, è necessario dichiararli in **file AndroidManifest. XML** aggiungendo `meta-data` come figlio dell' `application` elemento. Se, ad esempio, i tipi di carattere scaricabili sono dichiarati in un file di risorse in Resources **/values/downloadable_fonts. XML**, il frammento di codice deve essere aggiunto al manifesto:
+Per scaricare questi tipi di carattere, è necessario dichiararli in **file AndroidManifest. XML** aggiungendo `meta-data` come figlio dell' `application` elemento. Se, ad esempio, i tipi di carattere scaricabili sono dichiarati in un file di risorse in **Resources/values/downloadable_fonts. XML**, il frammento di codice deve essere aggiunto al manifesto:
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
@@ -278,7 +278,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     {
         // just an empty delegate to avoid null reference exceptions.  
     };
-
 
     public void DownloadFonts(Context context)
     {

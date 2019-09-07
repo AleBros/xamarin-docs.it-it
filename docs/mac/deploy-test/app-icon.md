@@ -7,17 +7,16 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6a4ea3950b9657e4e04c6465cc0a64ac3c1d266c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291566"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770148"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Icona dell'applicazione per le app Xamarin.Mac
 
 _Questo articolo illustra la creazione delle immagini necessarie per l'icona di un'applicazione Xamarin.Mac, l'aggregazione delle immagini in un file con estensione icns e l'inclusione dell'icona nel progetto Xamarin.Mac._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -27,11 +26,9 @@ Un'icona efficace dovrebbe comunicare lo scopo principale dell'app Xamarin.Mac e
 
 ![Editor AppIcon.appiconset](app-icon-images/intro01.png "Editor AppIcon.appiconset")
 
-
 ## <a name="application-icon"></a>Icona dell'applicazione
 
 Un'icona efficace dovrebbe comunicare lo scopo principale di un'app Xamarin.Mac e suggerire l'esperienza che l'utente dovrebbe aspettarsi dall'uso di un'app. Ogni app macOS deve includere diverse dimensioni della propria icona da visualizzare nel Finder, nel Dock, nel Launchpad e in altre posizioni nel computer.
-
 
 ## <a name="designing-the-icon"></a>Progettazione dell'icona
 
@@ -48,7 +45,6 @@ Quando si vuole progettare l'icona di un'applicazione, seguire questi suggerimen
 - Non usare repliche di icone Apple nelle icone.
 
 Leggere le sezioni [App Icon Gallery](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Gallery.html#//apple_ref/doc/uid/20000957-CH88-SW1) (Raccolta di icone delle app) e [Designing App Icons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Designing.html#//apple_ref/doc/uid/20000957-CH87-SW1) (Progettazione di icone delle app) di [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Linee guida dell'interfaccia umana OS X) di Apple prima di progettare l'icona di un'app Xamarin.Mac.
-
 
 ## <a name="required-image-sizes-and-filenames"></a>Dimensioni delle immagini necessarie e nomi file
 
@@ -76,7 +72,6 @@ Per assicurarsi che l'icona abbia un aspetto ottimale in tutte le posizioni in c
 
 Per altre informazioni, vedere la documentazione di Apple [Provide High-Resolution Versions of All App Graphics Resources](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3) (Fornire versioni ad alta risoluzione per tutte le risorse grafiche delle app).
 
-
 ## <a name="packaging-the-icon-resources"></a>Creazione di pacchetti di risorse delle icone
 
 Se l'icona è progettata e salvata con i nomi e le dimensioni del file corretti, Visual Studio per Mac può assegnarli facilmente agli asset di immagini da usare in Xamarin.Mac.
@@ -90,7 +85,6 @@ Seguire questa procedura:
 
     [![Selezione di un'immagine di un'icona](app-icon-images/intro02.png "Selezione di un'immagine di un'icona")](app-icon-images/intro02-large.png#lightbox)
 3. Salvare le modifiche.
-
 
 ## <a name="using-the-icon"></a>Uso dell'icona
 
@@ -108,11 +102,9 @@ Quando l'app viene eseguita, la nuova icona viene visualizzata nel dock:
 
 ![Esempio di icona di app nel dock macOS](app-icon-images/icon04.png "Esempio di icona di app nel dock macOS")
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato in modo dettagliato la creazione delle immagini necessarie per l'icona di un'app macOS, la creazione di un pacchetto di risorse dell'icona e l'inclusione dell'icona in un progetto Xamarin.Mac.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

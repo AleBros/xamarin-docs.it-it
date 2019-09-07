@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 161fda52002e8bb757db23c9b2a20a6befd132f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5afb87eb3f84e00427072ef6c4e2c19b46de0186
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289346"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766578"
 ---
 # <a name="backgrounding-in-xamarinios"></a>In background in Novell. iOS
 
@@ -35,8 +35,6 @@ In questa guida vengono descritte le procedure dettagliate per eseguire le attiv
 ## <a name="summary"></a>Riepilogo
 
 In questa guida sono stati introdotti i diversi modi di eseguire l'elaborazione in background in iOS. Sono stati analizzati gli Stati delle applicazioni iOS ed è stato esaminato il ruolo in background del ciclo di vita dell'applicazione iOS. Si è inoltre appreso come è possibile registrare singole attività o intere applicazioni per operare in background in iOS. Infine, abbiamo rafforzato la conoscenza del background su iOS creando applicazioni che eseguono aggiornamenti in background.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

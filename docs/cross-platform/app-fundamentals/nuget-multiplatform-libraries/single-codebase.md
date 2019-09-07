@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 966d7a21da0112383c08e862a357c3c1d4fb9c22
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fb30b07e958bddfcf0e0545ae17b925d7163c38a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289729"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766457"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Creazione di una nuova libreria multipiattaforma per NuGet
 
@@ -50,7 +50,6 @@ Se successivamente si necessita di funzionalità specifiche della piattaforma, �
 
    ![](single-codebase-images/create-nuget-package.png "Il file del pacchetto NuGet verrà salvato nella cartella bin debug o release, a seconda della configurazione")
 
-
 ## <a name="verifying-the-output"></a>Verifica dell'output
 
 I pacchetti NuGet sono anche file ZIP, quindi è possibile controllare la struttura interna del pacchetto generato.
@@ -75,7 +74,6 @@ Se è necessario espandere un progetto PCL o un progetto .NET Standard esistente
 
 Dopo la conversione in un progetto condiviso, visitare la[sezione](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) **Opzioni progetto > pacchetto NuGet > assembly**
 di riferimento e assicurarsi che siano selezionati tutti i profili necessari, in modo che NuGet continui a essere compatibile con i progetti in precedenza era usato in).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

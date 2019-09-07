@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 6cbcd6612323acc8619004d56fff82461e005e9e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 72ffa4508f2c8f050f505313a28ce8278f2570b4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529143"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760271"
 ---
 # <a name="dependency-injection"></a>Inserimento di dipendenze
 
@@ -41,7 +41,7 @@ public class ProfileViewModel : ViewModelBase
 }
 ```
 
-Il `ProfileViewModel` costruttore riceve un' `IOrderService` istanza come argomento, inserita da un'altra classe. L'unica dipendenza nella `ProfileViewModel` classe è sul tipo di interfaccia. Pertanto, la `ProfileViewModel` classe non ha alcuna conoscenza della classe responsabile della creazione di un'istanza dell' `IOrderService` oggetto. La classe responsabile della creazione di un'istanza dell' `IOrderService` oggetto e dell'inserimento `ProfileViewModel` nella classe è nota come *contenitore di inserimento*delle dipendenze.
+Il `ProfileViewModel` costruttore riceve un' `IOrderService` istanza come argomento, inserita da un'altra classe. L'unica dipendenza nella `ProfileViewModel` classe è sul tipo di interfaccia. Pertanto, la `ProfileViewModel` classe non ha alcuna conoscenza della classe responsabile della creazione di un'istanza dell' `IOrderService` oggetto. La classe responsabile della creazione di un'istanza dell' `IOrderService` oggetto e dell'inserimento `ProfileViewModel` nella classe è nota come *contenitore di inserimento delle dipendenze*.
 
 I contenitori di inserimento delle dipendenze riducono l'accoppiamento tra oggetti fornendo una struttura per creare istanze di classi e gestirne la durata in base alla configurazione del contenitore. Durante la creazione degli oggetti, il contenitore inserisce tutte le dipendenze necessarie per l'oggetto. Se tali dipendenze non sono ancora state create, il contenitore crea e risolve prima le dipendenze.
 
@@ -140,7 +140,7 @@ _container = builder.Build();
 La chiamata al `Build` metodo `ContainerBuilder` sull'istanza compila un nuovo contenitore di inserimento delle dipendenze che contiene le registrazioni effettuate.
 
 > [!TIP]
-> Si consideri un oggetto `IContainer` come non modificabile. Sebbene Autofac fornisca un `Update` metodo per aggiornare le registrazioni in un contenitore esistente, la chiamata a questo metodo deve essere evitata laddove possibile. Esistono rischi per la modifica di un contenitore dopo che è stato compilato, in particolare se è stato usato il contenitore. Per altre informazioni, vedere [considerare un contenitore come](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) non modificabile in ReadTheDocs.io.
+> Si consideri un oggetto `IContainer` come non modificabile. Sebbene Autofac fornisca un `Update` metodo per aggiornare le registrazioni in un contenitore esistente, la chiamata a questo metodo deve essere evitata laddove possibile. Esistono rischi per la modifica di un contenitore dopo che è stato compilato, in particolare se è stato usato il contenitore. Per altre informazioni, vedere [considerare un contenitore come non modificabile](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) in ReadTheDocs.io.
 
 <a name="resolution" />
 
@@ -197,7 +197,6 @@ Autofac include ambiti di istanza aggiuntivi. Per altre informazioni, vedere [am
 L'inserimento di dipendenze consente di separare i tipi concreti dal codice che dipende da questi tipi. USA in genere un contenitore che include un elenco di registrazioni e mapping tra interfacce e tipi astratti e i tipi concreti che implementano o estendono questi tipi.
 
 Autofac semplifica la creazione di app a regime di controllo libero e fornisce tutte le funzionalità comunemente presenti nei contenitori di inserimento delle dipendenze, inclusi i metodi per registrare i mapping dei tipi e le istanze degli oggetti, risolvere oggetti, gestire la durata degli oggetti e inserire oggetti dipendenti nei costruttori di oggetti risolti.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

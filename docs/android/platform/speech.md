@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 2a6de91772b1b6135a5b3567f691b8cd3522a924
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14cce06399b804ba8fd982a40347fb3146b281c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643247"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757421"
 ---
 # <a name="android-speech"></a>Sintesi vocale Android
 
@@ -206,7 +206,6 @@ Ad esempio, l'utente potrebbe selezionare il francese e fare clic sull'icona di 
 
 L'installazione di questi dati avviene automaticamente al termine del download.
 
-
 ### <a name="step-5---the-ioninitlistener"></a>Passaggio 5: IOnInitListener
 
 Affinché un'attività sia in grado di convertire il testo in sintesi vocale, è necessario `OnInit` implementare il metodo di interfaccia (questo è il secondo parametro specificato per la creazione `TextToSpeech` di un'istanza della classe). Viene inizializzato il listener e viene verificato il risultato.
@@ -229,8 +228,6 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 ## <a name="summary"></a>Riepilogo
 
 In questa guida sono state esaminate le nozioni di base per la conversione di testo in sintesi vocale e vocale e i possibili metodi di inclusione nelle app. Sebbene non coprano ogni particolare caso, è ora necessario avere una conoscenza di base del modo in cui viene interpretato il riconoscimento vocale, come installare nuove lingue e come aumentare il inclusione delle app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

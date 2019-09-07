@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a6dfab949eb19708f69d838a7c792f2e7bbd76b3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522247"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758509"
 ---
 # <a name="creating-a-watch-face"></a>Creazione di una watch face
 
@@ -41,7 +41,6 @@ Per implementare un servizio di controllo del viso, è necessario quanto segue:
 
 Sebbene Android 5,0 sia il livello API minimo per l'implementazione di un servizio Watch Face, è consigliabile Android 5,1 o versione successiva. I dispositivi Android Wear che eseguono Android 5,1 (API 22) o versioni successive consentono di usare app per il controllo di ciò che viene visualizzato sullo schermo quando il dispositivo è in modalità di *ambiente* a basso consumo. Quando il dispositivo lascia la modalità di *ambiente* a basso consumo, è in modalità *interattiva* . Per altre informazioni su queste modalità, vedere [mantenere visibile l'app](https://developer.android.com/training/wearables/apps/always-on.html).
 
-
 ## <a name="start-an-app-project"></a>Avviare un progetto di app
 
 Creare un nuovo progetto Android Wear 1,0 denominato **WatchFace** (per altre informazioni sulla creazione di nuovi progetti Novell. Android, vedere [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
@@ -55,7 +54,6 @@ Creare un nuovo progetto Android Wear 1,0 denominato **WatchFace** (per altre in
 [![Finestra di dialogo nuovo progetto](creating-a-watchface-images/03-wear-project-xs-sml.png "Selezionare Wear app nella finestra di dialogo nuovo progetto")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
-
 
 Impostare il nome del pacchetto `com.xamarin.watchface`su:
 
@@ -86,7 +84,6 @@ Abilitare inoltre le autorizzazioni **Internet** e **Wakelock** :
 
 Scaricare quindi [Preview. png](creating-a-watchface-images/preview.png) &ndash; , che verrà aggiunto alla cartella **drawables** più avanti in questa procedura dettagliata.
 
-
 ## <a name="add-the-xamarinandroid-wear-package"></a>Aggiungere il pacchetto di Novell. Android Wear
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -107,13 +104,11 @@ Avviare Gestione pacchetti NuGet (in Visual Studio per Mac, fare clic con il pul
 
 -----
 
-
 Compilare ed eseguire l'app in un dispositivo o in un emulatore Wear (per altre informazioni su come eseguire questa operazione, vedere la Guida [Introduzione](~/android/wear/get-started/index.md) ). Nel dispositivo Wear dovrebbe essere visualizzata la schermata dell'app seguente:
 
 [![Screenshot dell'app](creating-a-watchface-images/08-app-screen.png "Schermata dell'app sul dispositivo Wear")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 A questo punto, l'App Basic Wear non ha una funzionalità di controllo del viso perché non fornisce ancora un'implementazione del servizio Watch Face. Questo servizio verrà aggiunto successivamente.
-
 
 ## <a name="canvaswatchfaceservice"></a>CanvasWatchFaceService
 
@@ -135,14 +130,13 @@ Nelle sezioni seguenti viene creato un servizio di controllo del viso personaliz
 
 4. In `MyWatchFaceEngine`implementare il `OnCreate` metodo per creare lo stile del quadrante dell'espressione di controllo ed eseguire altre attività di inizializzazione.
 
-5. Implementare il `OnDraw` metodo di `MyWatchFaceEngine`. Questo metodo viene chiamato ogni volta che è necessario ricreare il quadrante dell'orologio (ovveroinvalidato). `OnDraw`è il metodo che disegna (e ridisegna) gli elementi del quadrante dell'orologio, ad esempio hour, minute e second hands.
+5. Implementare il `OnDraw` metodo di `MyWatchFaceEngine`. Questo metodo viene chiamato ogni volta che è necessario ricreare il quadrante dell'orologio (ovvero *invalidato*). `OnDraw`è il metodo che disegna (e ridisegna) gli elementi del quadrante dell'orologio, ad esempio hour, minute e second hands.
 
 6. Implementare il `OnTimeTick` metodo di `MyWatchFaceEngine`.
     `OnTimeTick`viene chiamato almeno una volta al minuto (in modalità ambiente e interattivo) o quando la data/ora è cambiata.
 
 Per altre informazioni su `CanvasWatchFaceService`, vedere la documentazione dell'API [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) per Android.
 Analogamente, [CanvasWatchFaceService. Engine](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) illustra l'implementazione effettiva del quadrante dell'orologio.
-
 
 ### <a name="add-the-canvaswatchfaceservice"></a>Aggiungere CanvasWatchFaceService
 
@@ -190,7 +184,6 @@ namespace WatchFace
 
 `MyWatchFaceEngine`è l'implementazione &ndash; effettiva del quadrante di controllo che contiene il codice che disegna il quadrante dell'orologio. Gestisce anche gli eventi di sistema, ad esempio le modifiche dello schermo (modalità ambiente/interattiva, spegnimento dello schermo e così via).
 
-
 ### <a name="implement-the-engine-oncreate-method"></a>Implementare il metodo OnCreate del motore
 
 Il `OnCreate` metodo inizializza il quadrante dell'orologio. Aggiungere il campo seguente a `MyWatchFaceEngine`:
@@ -232,7 +225,6 @@ Per ulteriori informazioni su queste e altre opzioni relative allo stile del qua
 
 Al termine dell' operazione `SetWatchFaceStyle`, `OnCreate` crea un'istanza dell'oggetto `Paint` (`hoursPaint`) e ne imposta il colore su bianco e le dimensioni del testo su 48 pixel ([TextSize](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) deve essere specificato in pixel).
 
-
 ### <a name="implement-the-engine-ondraw-method"></a>Implementare il metodo onpare del motore
 
 Il `OnDraw` metodo è forse il metodo più `CanvasWatchFaceService.Engine` &ndash; importante che è il metodo che disegna effettivamente gli elementi del quadrante di controllo, ad esempio cifre e lancetta del clock.
@@ -253,7 +245,6 @@ Quando viene chiamato `OnDraw`da Android, viene passata `Canvas` un'istanza di e
 
 Per ulteriori informazioni sul metodo `OnDraw`, vedere la documentazione relativa all'API [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) di Android.
 
-
 ### <a name="implement-the-engine-ontimetick-method"></a>Implementare il metodo OnTimeTick del motore
 
 Android chiama periodicamente il `OnTimeTick` metodo per aggiornare l'ora visualizzata dal quadrante dell'orologio. Viene chiamato almeno una volta al minuto (sia in modalità ambiente che interattiva) oppure quando la data/ora o il fuso orario è stato modificato. Aggiungere il metodo seguente a `MyWatchFaceEngine`:
@@ -268,7 +259,6 @@ public override void OnTimeTick()
 Questa implementazione di `OnTimeTick` chiama `Invalidate`semplicemente. Il `Invalidate` metodo`OnDraw` pianifica per ricreare il quadrante dell'orologio.
 
 Per ulteriori informazioni sul `OnTimeTick` metodo, vedere la documentazione dell'API [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) per Android.
-
 
 ## <a name="register-the-canvaswatchfaceservice"></a>Registrare il CanvasWatchFaceService
 
@@ -306,10 +296,9 @@ Questo codice XML esegue le operazioni seguenti:
 
 Che completa il codice per l'esempio di `WatchFace` base. Il passaggio successivo consiste nell'aggiungere le risorse necessarie.
 
-
 ## <a name="add-resource-files"></a>Aggiungi file di risorse
 
-Prima di poter eseguire il servizio Watch, è necessario aggiungere la risorsa **watch_face** e l'immagine di anteprima. Per prima cosa, creare un nuovo file XML in Resources **/XML/watch_face. XML** e sostituirne il contenuto con il codice XML seguente:
+Prima di poter eseguire il servizio Watch, è necessario aggiungere la risorsa **watch_face** e l'immagine di anteprima. Per prima cosa, creare un nuovo file XML in **Resources/XML/watch_face. XML** e sostituirne il contenuto con il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -331,8 +320,7 @@ Impostare l'azione di compilazione del file su **AndroidResource**:
 Questo file di risorse definisce un `wallpaper` elemento semplice che verrà usato per il quadrante dell'orologio.
 
 Se non è ancora stato fatto, scaricare [Preview. png](creating-a-watchface-images/preview.png).
-Installarlo in **Resources/disegnator/Preview. png**. Assicurarsi di aggiungere questo file al `WatchFace` progetto. Questa immagine di anteprima viene visualizzata all'utente nella selezione del quadrante dell'orologio sul dispositivo Wear. Per creare un'immagine di anteprima per il proprio quadrante, è possibile scattare una schermata del quadrante dell'orologio mentre è in esecuzione. Per altre informazioni su come ottenere schermate dai dispositivi Wear, vedere [acquisizione](~/android/wear/deploy-test/debug-on-device.md#screenshots)di schermate.
-
+Installarlo in **Resources/disegnator/Preview. png**. Assicurarsi di aggiungere questo file al `WatchFace` progetto. Questa immagine di anteprima viene visualizzata all'utente nella selezione del quadrante dell'orologio sul dispositivo Wear. Per creare un'immagine di anteprima per il proprio quadrante, è possibile scattare una schermata del quadrante dell'orologio mentre è in esecuzione. Per altre informazioni su come ottenere schermate dai dispositivi Wear, vedere [acquisizione di schermate](~/android/wear/deploy-test/debug-on-device.md#screenshots).
 
 ## <a name="try-it"></a>Prova!
 
@@ -359,7 +347,6 @@ Tuttavia, implementa la funzionalità bare-Bones necessaria per creare un quadra
 
 Nella sezione successiva questa espressione di controllo verrà aggiornata a un'implementazione più sofisticata.
 
-
 ## <a name="upgrading-the-watch-face"></a>Aggiornamento del quadrante dell'orologio
 
 Nella parte restante di questa procedura `MyWatchFaceService` dettagliata, viene aggiornato per visualizzare un quadrante di espressione di controllo analogo ed è esteso per supportare più funzionalità. Verranno aggiunte le funzionalità seguenti per creare il quadrante dell'orologio aggiornato:
@@ -374,8 +361,7 @@ Nella parte restante di questa procedura `MyWatchFaceService` dettagliata, viene
 
 5. Aggiorna automaticamente l'ora in cui viene apportata una modifica del fuso orario.
 
-Prima di implementare le modifiche al codice seguenti, scaricare il file con [estensione zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), decomprimerlo e spostare i file con estensione png decompressi in Resources **/disegnator** (sovrascrivere il file **Preview. png**precedente). Aggiungere i nuovi file con estensione png al `WatchFace` progetto.
-
+Prima di implementare le modifiche al codice seguenti, scaricare il file con [estensione zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), decomprimerlo e spostare i file con estensione png decompressi in **Resources/disegnator** (sovrascrivere il file **Preview. png**precedente). Aggiungere i nuovi file con estensione png al `WatchFace` progetto.
 
 ### <a name="update-engine-features"></a>Funzionalità del motore di aggiornamento
 
@@ -385,9 +371,9 @@ Questa versione di **MyWatchFaceService.cs** aggiunge altro codice ai metodi esi
 
 #### <a name="oncreate"></a>OnCreate
 
-Il metodo oncreat aggiornato configura lo stile del quadrante dell'espressione di controllo come prima, ma include alcuni passaggi aggiuntivi:
+Il metodo **Oncreat** aggiornato configura lo stile del quadrante dell'espressione di controllo come prima, ma include alcuni passaggi aggiuntivi:
 
-1. Imposta l'immagine di sfondo sulla risorsa **xamarin_background** che risiede in Resources **/drawable-HDPI/xamarin_background. png**.
+1. Imposta l'immagine di sfondo sulla risorsa **xamarin_background** che risiede in **Resources/drawable-HDPI/xamarin_background. png**.
 
 2. Inizializza `Paint` gli oggetti per disegnare la lancetta dell'ora, la lancetta dei minuti e la seconda mano.
 
@@ -413,13 +399,11 @@ Il metodo **OnDraw** aggiornato disegna un tipo di espressione di controllo anal
 
 6. Disegna ogni mano sull'area di controllo. Si noti che la seconda mano non viene disegnata se l'espressione di controllo è in modalità ambiente.
 
-
 #### <a name="onpropertieschanged"></a>OnPropertiesChanged
 
 Questo metodo viene chiamato per fornire `MyWatchFaceEngine` informazioni sulle proprietà del dispositivo Wear, ad esempio la modalità ambiente a basso bit e la protezione dell'ustione. In `MyWatchFaceEngine`, questo metodo verifica solo la modalità di ambiente a basso bit (in modalità ambiente a basso bit, la schermata supporta un minor numero di bit per ogni colore).
 
 Per altre informazioni su questo metodo, vedere la documentazione dell'API [onPropertiesChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29) di Android.
-
 
 #### <a name="onambientmodechanged"></a>OnAmbientModeChanged
 
@@ -427,13 +411,11 @@ Questo metodo viene chiamato quando il dispositivo Wear entra o esce dalla modal
 
 Per altre informazioni su questo metodo, vedere la documentazione dell'API [onAmbientModeChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) di Android.
 
-
 #### <a name="onvisibilitychanged"></a>OnVisibilityChanged
 
 Questo metodo viene chiamato ogni volta che l'espressione di controllo diventa visibile o nascosta. In `MyWatchFaceEngine`questo metodo registra/Annulla la registrazione del ricevitore del fuso orario (descritto di seguito) in base allo stato di visibilità.
 
 Per altre informazioni su questo metodo, vedere la documentazione dell'API [onVisibilityChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29) di Android.
-
 
 ### <a name="time-zone-feature"></a>Funzionalità del fuso orario
 
@@ -485,11 +467,9 @@ Compilare e distribuire di nuovo l'app nel dispositivo Wear. Selezionare il quad
 
 In questa schermata la seconda mano si muove una volta al secondo. Quando si esegue questo codice in un dispositivo Wear, la seconda parte scompare quando l'espressione di controllo entra in modalità ambiente.
 
-
 ## <a name="summary"></a>Riepilogo
 
 In questa procedura dettagliata è stato implementato e testato un Watchface Android Wear 1,0 personalizzato. Sono `CanvasWatchFaceService` state `CanvasWatchFaceService.Engine` introdotte le classi e e i metodi essenziali della classe Engine sono stati implementati per creare un semplice quadrante dell'orologio digitale. Questa implementazione è stata aggiornata con altre funzionalità per la creazione di un quadrante analogo ed è stata implementata una maggiore quantità di metodi per gestire le modifiche alla visibilità, alla modalità ambiente e alle differenze nelle proprietà del dispositivo. Infine, è stato implementato un ricevitore di broadcast di fuso orario in modo che l'espressione di controllo aggiorni automaticamente l'ora in cui viene attraversato un fuso orario.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

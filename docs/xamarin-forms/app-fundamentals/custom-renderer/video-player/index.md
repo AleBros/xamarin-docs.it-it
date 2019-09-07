@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8e6f37fb607f4b0bc0ddfd41ad86dfe7ecbc03df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650534"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771815"
 ---
 # <a name="implementing-a-video-player"></a>Implementazione di un lettore video
 
@@ -65,10 +65,6 @@ Anche se i lettori video in ogni piattaforma includono i propri controlli del tr
 ## <a name="custom-video-positioningcustom-positioningmd"></a>[Posizionamento del video personalizzato](custom-positioning.md)
 
 I lettori video per le diverse piattaforme dispongono di una barra di posizionamento, che visualizza l'avanzamento del video e consente di spostarsi avanti e indietro in una posizione specifica. Questo articolo illustra come sostituire la barra di posizionamento con un controllo personalizzato.
-
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

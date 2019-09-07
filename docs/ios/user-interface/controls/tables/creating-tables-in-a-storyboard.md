@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4d6144ad48b9e2f263137fb2474bc9eb278d93f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291387"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768978"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilizzo delle tabelle in iOS Designer
 
@@ -28,13 +28,11 @@ Un `UITableView` oggetto con contenuto del prototipo viene in genere progettato 
 
  <a name="Static_Content" />
 
-
 ## <a name="static-content"></a>Contenuto statico
 
 `UITableView`i con contenuto statico consentono di progettare le tabelle direttamente nell'area di progettazione. È possibile trascinare le celle nella tabella e personalizzarle modificando le proprietà e aggiungendo i controlli.
 
  <a name="Creating_a_Storyboard-driven_app" />
-
 
 ## <a name="creating-a-storyboard-driven-app"></a>Creazione di un'app basata su storyboard
 
@@ -62,7 +60,6 @@ Lo storyboard verrà modificato in tre passaggi:
 - In secondo luogo, creare l'interfaccia utente trascinando e rilasciando gli oggetti nella visualizzazione
 - Infine, aggiungere la classe UIKit necessaria a ogni visualizzazione e assegnare a vari controlli un nome in modo che sia possibile farvi riferimento nel codice.
 
-
 Una volta completato lo storyboard, è possibile aggiungere il codice per eseguire tutto il lavoro.
 
 <a name="Layout_The_View_Controllers" />
@@ -85,7 +82,6 @@ La prima modifica allo storyboard è l'eliminazione della visualizzazione dei de
 
 7. Modificare il nuovo **UITableViewController** in modo **che sia contenuto: Celle**statiche. 
 
-
 8. Il nuovo UITableViewController deve avere il nome della classe e l'identificatore impostati. Selezionare il controller di visualizzazione e digitare _TaskDetailViewController_ per la **classe** nel **riquadro delle proprietà** : verrà creato un nuovo `TaskDetailViewController.cs` file nel riquadro della soluzione. Immettere il **StoryboardID** come _dettaglio_, come illustrato nell'esempio riportato di seguito. Verrà usato in un secondo momento per caricare questa visualizzazione C# nel codice:  
 
     [![Impostazione dell'ID storyboard](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
@@ -93,8 +89,6 @@ La prima modifica allo storyboard è l'eliminazione della visualizzazione dei de
 9. L'area di progettazione dello storyboard dovrebbe ora essere simile alla seguente (il titolo dell'elemento di navigazione del controller visualizzazione radice è stato modificato in "lavagna di lavoro"):
 
     [![Area di progettazione](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
-
-
 
 <a name="Create_the_UI" />
 
@@ -118,7 +112,6 @@ Seguire questa procedura:
 - Nel **riquadro delle proprietà**, in **elemento pulsante della barra** Selezionare **identificatore: Aggiungere** (per *+* impostarlo come pulsante più). 
 - Assegnare un nome in modo che possa essere identificato nel codice in una fase successiva. Si noti che sarà necessario assegnare al controller di visualizzazione radice un nome di classe, ad esempio **ItemViewController**, per consentire di impostare il nome dell'elemento del pulsante a barre.
 
-
 #### <a name="taskdetail-view-controller"></a>Controller di visualizzazione TaskDetail
 
 La visualizzazione dettagli richiede molto altro lavoro. Le celle di visualizzazione tabella devono essere trascinate nella vista e quindi compilate con etichette, visualizzazioni di testo e pulsanti. La schermata seguente mostra l'interfaccia utente finita con due sezioni. Una sezione ha tre celle, tre etichette, due campi di testo e un'opzione, mentre la seconda sezione ha una cella con due pulsanti:
@@ -136,7 +129,6 @@ Selezionare la visualizzazione tabella e aprire il **riquadro delle proprietà**
 
 Selezionare la sezione superiore e nella **sezione proprietà > tabella vista** modificare le **righe** in _3_, come illustrato di seguito:
 
-
  [![impostazione della sezione superiore su tre righe](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Per ogni cella aprire il **riquadro delle proprietà** e impostare:
@@ -144,7 +136,6 @@ Per ogni cella aprire il **riquadro delle proprietà** e impostare:
 - **Stile**:  _Impostazione personalizzata_
 - **Identificatore**: Scegliere un identificatore univoco per ogni cella, ad esempio "_title_", "_Notes_", "_done_").
 - Trascinare i controlli necessari per produrre il layout visualizzato nello screenshot (posizionare **UILabel**, **UITextField** e **UISwitch** nelle celle corrette e impostare le etichette in modo appropriato, ad esempio. Titolo, note ed operazione eseguita).
-
 
 Nella seconda sezione impostare le **righe** su _1_ e il quadratino di ridimensionamento inferiore della cella per renderla più alta.
 
@@ -165,7 +156,6 @@ Ci sono alcuni passaggi finali della creazione dello storyboard. Per prima cosa 
 - **UISwitch** : _DoneSwitch_
 - **Elimina UIButton** : _DeleteButton_
 - **Salva UIButton** : _PulsanteSalva_
-
 
 <a name="Adding_Code" />
 
@@ -350,8 +340,6 @@ Nell'esempio viene illustrato quanto segue:
 - Creazione di una tabella con contenuto statico per compilare un modulo di input. Inclusa la modifica dello stile della tabella e l'aggiunta di sezioni, celle e controlli dell'interfaccia utente. 
 - Come creare un segue ed eseguire l'override `PrepareForSegue` del metodo per inviare una notifica alla visualizzazione di destinazione di tutti i parametri richiesti. 
 - Caricamento delle visualizzazioni Storyboard direttamente con `Storyboard.InstantiateViewController` il metodo.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

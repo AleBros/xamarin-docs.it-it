@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: b436ea4f5d8c70f0ca641bea72d1230fc07c5086
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b950326eb5a124d5040caa0044309630a2a53d38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523789"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761666"
 ---
 # <a name="launching-the-maps-application"></a>Avvio dell'applicazione Maps
 
@@ -21,7 +21,6 @@ Il modo più semplice per lavorare con le mappe in Novell. Android consiste nell
 [![Screenshot di esempio dell'app Google Maps predefinita](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 Quando si usa l'applicazione Maps, la mappa non sarà inclusa nell'applicazione. All'applicazione viene invece avviata l'applicazione Maps e viene caricata esternamente la mappa. La sezione successiva esamina come usare Novell. Android per avviare mappe come quella precedente.
-
 
 ## <a name="creating-the-intent"></a>Creazione della finalità
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Questo codice è tutto ciò che serve per avviare la mappa mostrata nello screenshot precedente. Oltre a specificare la latitudine e la longitudine, lo schema URI per Maps supporta diverse altre opzioni.
 
-
 ## <a name="geo-uri-scheme"></a>Schema URI geografico
 
 Il codice precedente usava lo schema geografico per creare un URI. Questo schema URI supporta diversi formati, come indicato di seguito:
@@ -48,15 +46,11 @@ Il codice precedente usava lo schema geografico per creare un URI. Questo schema
 
 - `geo:0,0?q=business+near+city`&ndash; Apre l'applicazione Maps e Visualizza i risultati della ricerca con annotazioni. 
 
-
 Le versioni dell'URI che accettano una query (ovvero l'indirizzo via o i termini di ricerca) usano il servizio geocodificatore di Google per recuperare il percorso che viene quindi visualizzato sulla mappa. Ad esempio, l'URI `geo:0,0?q=coop+Cambridge` restituisce la mappa mostrata di seguito:
 
 [![Schermata di esempio che Mostra Google Maps con un termine di ricerca](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
-
-
 Per ulteriori informazioni sugli schemi URI Geo, vedere [la pagina relativa alla visualizzazione di un percorso su una mappa](https://developer.android.com/guide/components/intents-common.html#Maps).
-
 
 ## <a name="street-view"></a>Visualizzazione via
 
@@ -92,6 +86,5 @@ Come si può notare, sono supportati diversi parametri, come indicato di seguito
 - `zoom`&ndash; Moltiplicatore zoom per la visualizzazione via, dove 1,0 = zoom normale, 2,0 = zoom avanti, 3,0 = 4 volte zoom e così via.
 
 - `mz`&ndash; Livello di zoom della mappa che verrà usato quando si passa all'applicazione Maps dalla visualizzazione via.
-
 
 L'uso dell'applicazione Maps predefinita o della visualizzazione via è un modo semplice per aggiungere rapidamente il supporto per il mapping. Tuttavia, l'API Maps di Android offre un controllo più preciso sull'esperienza di mapping.

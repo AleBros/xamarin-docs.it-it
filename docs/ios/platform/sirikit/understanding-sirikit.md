@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3b99e4485bfb621b32fa001a49d75038b2072775
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292558"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769471"
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti di SiriKit
 
 _Questo articolo illustra i concetti chiave che saranno necessari per l'uso di SiriKit in un'app Novell. iOS._
-
 
 Una novità di iOS 10, SiriKit consente a un'app Novell. iOS di fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS. Questa funzionalità è disponibile in una o più estensioni di app usando i nuovi framework **dell'interfaccia utente** **Intent** e Intent.
 
@@ -461,9 +460,6 @@ Sforzarsi di fare in modo che le conversazioni con Siri (per conto dell'app) sia
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato i concetti chiave necessari per usare SiriKit e può interagire con le app Novell. iOS per fornire servizi accessibili all'utente tramite Siri e l'app Maps in un dispositivo iOS.
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

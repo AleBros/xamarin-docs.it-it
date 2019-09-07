@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7d153491802a74ff06b3a5cd63e585b7fd18ff03
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 57c77b5d8d6a4763dc7b5c7a62a51ffe3137827d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644323"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755371"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notifiche in Novell. Android
 
@@ -22,7 +22,7 @@ Questa sezione illustra come implementare le notifiche in Novell. Android. Vengo
 Questa sezione illustra come implementare le notifiche locali in Novell. Android. Vengono descritti i vari elementi dell'interfaccia utente di una notifica Android e vengono illustrate le API necessarie per la creazione e la visualizzazione di una notifica.
 
 ## <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Procedura dettagliata: uso delle notifiche locali in Novell. Android](local-notifications-walkthrough.md)  
- 
+
 Questa procedura dettagliata illustra come usare le notifiche locali in un'applicazione Novell. Android. Vengono illustrati i concetti di base per la creazione e la pubblicazione di una notifica. Quando l'utente fa clic sulla notifica nel cassetto delle notifiche, avvia una seconda attività. 
 
 ## <a name="further-reading"></a>Ulteriori informazioni

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/19/2016
-ms.openlocfilehash: cebacf6d845affe017e289fe4522a3b7c76d2942
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7ac96bce706d42d4334004e62762ff21231f0162
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291789"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766872"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>Controlli dell'interfaccia utente watchos in Novell
 
@@ -39,7 +39,6 @@ I nomi a livello di codice di tutti i controlli sono `WKInterface` preceduti da 
 |Input di testo|Usare `PresentTextInputController` e l' `WKTextInputMode` enumerazione.<br />[Documentazione di input di testo](~/ios/watchos/user-interface/text-input.md)<br />[Codice catalogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Digital Crown|Il Digital Crown può essere usato per guidare una selezione o la rotazione può essere rilevata nel codice.<br />[Codice catalogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
 |Movimenti|Sono disponibili quattro tipi di riconoscimento dei movimenti che è possibile aggiungere a una scena: Toccare, scorrere rapidamente, Pan e LongPress.<br />[Codice catalogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108431"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771874"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduzione ai renderer personalizzati
 
@@ -92,7 +92,6 @@ Ciò consente di creare un riferimento al tipo `ClassInPCL`, che indica che è n
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha offerto un'introduzione ai renderer personalizzati e illustrato la procedura di creazione di un renderer personalizzato. I renderer personalizzati offrono un approccio efficace alla personalizzazione dell'aspetto e del comportamento dei controlli di Xamarin.Forms. Possono essere usati per apportare piccole modifiche allo stile o per la personalizzazione di layout e comportamenti sofisticati specifici di una piattaforma.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

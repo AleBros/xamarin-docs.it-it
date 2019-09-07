@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 26dfc4f9327f12d6854d72349dc46e0b4427fa72
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6dd3bf848d38f0211dcda100994f6f7ec8831fce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643925"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754684"
 ---
 # <a name="multi-touch-finger-tracking"></a>Rilevamento del dito multitocco
 
@@ -196,7 +196,6 @@ Questo tipo di elaborazione consente al programma [FingerPaint](https://docs.mic
 [![Schermata di esempio dell'esempio FingerPaint](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 A questo punto si è appreso come è possibile tenere traccia delle singole dita sullo schermo e distinguerle tra loro.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

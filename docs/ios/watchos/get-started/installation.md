@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/05/2017
-ms.openlocfilehash: 1bc7ba07676c66c411357b5ad043258fea611d71
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 790e32131822e83f092b352b91b4461392150657
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293118"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768050"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Installazione e uso watchOS in Xamarin
 
@@ -47,7 +47,6 @@ Il [esempio Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-sa
 
 Scaricare ed eseguire la [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) esempio per iniziare.
 Le schermate dell'esempio sono reperibile nella [controlli](~/ios/watchos/user-interface/index.md) pagina.
-
 
 ## <a name="creating-a-new-project"></a>Creazione di un nuovo progetto
 
@@ -103,7 +102,6 @@ Fare doppio clic su dell'app watch **Interface.storyboard** modificare usando iO
 
 Creare gli elementi segue dalla **Ctrl + trascinare** da un controller di pulsante, tabella o dell'interfaccia in un altro controller di interfaccia.
 
-
 ### <a name="using-xcode-on-the-mac"></a>Uso di Xcode nel Mac
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
@@ -123,7 +121,6 @@ Se si usa Xcode, è consigliabile seguire gli stessi passaggi per le app watch a
 
 Quando si salva lo storyboard di Interface Builder di Xcode verranno automaticamente aggiunti la Outlet e azioni per cui si crea il C# **. designer.cs** file del progetto di estensione di espressioni di controllo.
 
-
 ### <a name="adding-additional-screens-in-xcode"></a>L'aggiunta di altre schermate in Xcode
 
 Quando si aggiungono schermate aggiuntive (oltre che cosa è incluso nel modello per impostazione predefinita) allo storyboard usando Interface Builder di Xcode **è necessario aggiungere manualmente il C# file di codice** per ogni nuovo controller di interfaccia.
@@ -132,11 +129,9 @@ Vedere le [Advanced istruzioni su come aggiungere nuovi controller di interfacci
 
 *Xamarin iOS Designer esegue questa operazione automaticamente, richiedere passaggi manuali non sono necessari.*
 
-
 ## <a name="building"></a>Compilazione
 
 Un progetto che include un'app viene compilato come altri progetti iOS. Il processo di compilazione comporterà un'applicazione iPhone (App) che contiene un'estensione di espressioni di controllo (.appex), che a sua volta contiene l'applicazione di espressioni di controllo senza codice (. app).
-
 
 ## <a name="launching"></a>L'avvio
 
@@ -167,7 +162,6 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 Fare riferimento a [forum di Apple](https://forums.developer.apple.com/thread/7783) per istruzioni su come configurare i simulatori, se le impostazioni predefinite non funzionano.
 
-
 <a name="xcode6" />
 
 ### <a name="xcode-6-and-watchos-1"></a>Xcode 6 e watchOS 1
@@ -188,23 +182,15 @@ Quando si usa Xcode 6, solo l'iPhone 5, 5S iPhone, iPhone 6 e iPhone 6 Plus poss
 
 Vedere le [pagina notifiche](~/ios/watchos/platform/notifications.md) per informazioni come gestire le notifiche nel codice.
 
-
 Visual Studio per Mac puoi avviare l'app watch con una notifica _modalità di avvio_ per le notifiche:
-
-
 
 Pulsante destro del mouse sul progetto di app di espressioni di controllo e scegliere **eseguire con > configurazione personalizzata...** :
 
-
 [![](installation-images/runwith-customparams-sml.png "Esecuzione di una configurazione personalizzata")](installation-images/runwith-customparams.png#lightbox)
-
 
 Verrà visualizzata la **parametri personalizzati** finestra in cui è possibile selezionare **notifica** e fornire un payload JSON, quindi premere **eseguire** per avviare l'app watch nel simulatore:
 
-
 [![](installation-images/runwith-execargs-sml.png "Impostazione di notifica e un Payload")](installation-images/runwith-execargs.png#lightbox)
-
-
 
 ## <a name="debugging"></a>Debug
 
@@ -227,8 +213,6 @@ To test the functionality in your  and
 -->
 
 I file di modello watchOS (ad esempio `InterfaceController`, `ExtensionDelegate`, `NotificationController`, e `ComplicationController`) forniti con i relativi metodi del ciclo di vita necessari già implementati. Aggiungere `Console.WriteLine` chiamate e leggere il **Output applicazione** per comprendere meglio il ciclo di vita di eventi.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

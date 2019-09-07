@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fc76a642c27b7a2c7f3483911be596f8d6cdd1ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288581"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752865"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Nozioni di base e configurazione di acquisto in-app in Novell. iOS
 
@@ -26,7 +26,6 @@ L'uso dell'app Store per fornire l'acquisto in-app richiede l'installazione e la
 - **portale di provisioning iOS** : creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app.
 - **Store Kit** -aggiunta di codice all'app per la visualizzazione di prodotti, l'acquisto di prodotti e il ripristino di transazioni.
 - **Codice personalizzato** : per tenere traccia degli acquisti effettuati dai clienti e fornire i prodotti o i servizi acquistati. Potrebbe anche essere necessario implementare un processo sul lato server per convalidare le ricevute se i prodotti sono costituiti da contenuto scaricato da un server, ad esempio problemi relativi a libri e riviste.
-
 
 Ci sono due "ambienti server" del kit di archiviazione:
 
@@ -54,7 +53,6 @@ Questi tre passaggi devono essere completati prima di scrivere il codice:
 - **portale di provisioning di iOS** : assicurarsi che l'app abbia un ID app valido (non un carattere jolly con un asterisco *) e che sia abilitato per l'acquisto di app.
 - **gestione delle applicazioni di iTunes Connect** : aggiungere i prodotti all'applicazione.
 
-
 ### <a name="apple-developer-account"></a>Account per sviluppatore Apple
 
 Per la compilazione e la distribuzione di app gratuite è richiesta una configurazione minima in [iTunes Connect](https://itunesconnect.apple.com). Tuttavia, per vendere app a pagamento o acquisti in-app, è necessario fornire Apple con informazioni fiscali e bancarie. Fare clic su **agreements, Tax and Banking** dal menu principale riportato di seguito:
@@ -70,7 +68,6 @@ Non sarà possibile testare le funzionalità di StoreKit fino a quando non si di
 ### <a name="ios-provisioning-portal"></a>Portale di provisioning iOS
 
 Le nuove applicazioni vengono configurate nella sezione **ID app** del **portale di provisioning iOS**. Per creare un nuovo ID app, passare al [centro membri del portale di provisioning iOS](https://developer.apple.com/membercenter/index.action), passare alla sezione **certificati, identificatori e profili** del portale e fare clic su **identificatori** in *app iOS*. Quindi, fare clic su "+" in alto a destra per generare un nuovo ID app.
-
 
 Il modulo per la creazione di nuovi **ID app**
 
@@ -114,7 +111,6 @@ Il processo per aggiungere nuovi prodotti è costituito da due passaggi:
 
 I campi necessari per ogni prodotto di acquisto in-app sono descritti di seguito:
 
-
 ### <a name="reference-name"></a>Nome riferimento
 
 Il nome di riferimento non viene visualizzato agli utenti; è per uso interno e viene visualizzato solo in iTunes Connect.
@@ -148,7 +144,6 @@ Sono disponibili cinque tipi di prodotto di acquisto in-app che è possibile off
 1. **Sottoscrizione gratuita** : può essere offerta solo nelle app abilitate per l'edicola e consente al cliente di accedere al contenuto della sottoscrizione su tutti i dispositivi. Le sottoscrizioni gratuite non scadono mai.
 1. **Sottoscrizione senza rinnovo** : è consigliabile usare per vendere un accesso limitato al tempo al contenuto statico, ad esempio l'accesso di un mese a un archivio foto.
 
-
  *Questo documento include attualmente solo i primi due tipi di prodotto (utilizzabili e non utilizzabili).*
 
  <a name="Price_Tiers" />
@@ -176,10 +171,8 @@ Sebbene Apple abbia fornito una speciale opzione di sottoscrizione gratuita per 
 In iTunes Connect è possibile immettere un nome e un testo di descrizione diversi per qualsiasi numero di lingue supportate. Ogni lingua può essere aggiunta/modificata tramite un popup:
 
  [![](in-app-purchase-basics-and-configuration-images/image12.png "Ogni lingua può essere aggiunta/modificata tramite un popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
-   
-   
-   
- Quando si visualizzano le informazioni sul prodotto nell'app, il testo localizzato è disponibile per la visualizzazione tramite StoreKit. La visualizzazione della valuta deve essere localizzata anche per mostrare il simbolo e la formattazione decimali corretti. questa formattazione è illustrata più avanti nel documento.
+
+Quando si visualizzano le informazioni sul prodotto nell'app, il testo localizzato è disponibile per la visualizzazione tramite StoreKit. La visualizzazione della valuta deve essere localizzata anche per mostrare il simbolo e la formattazione decimali corretti. questa formattazione è illustrata più avanti nel documento.
 
 ### <a name="app-store-review"></a>Revisione dell'app Store
 
@@ -188,10 +181,8 @@ Uguale alle app: ogni prodotto viene rivisto da Apple prima di essere autorizzat
 La prima volta che un'app viene inviata con l'acquisto in-app abilitata (se si tratta di una nuova app o se la funzionalità è stata aggiunta a una esistente), è necessario anche scegliere alcuni prodotti da inviare. Il portale di iTunes Connect richiederà di eseguire questa operazione, come illustrato in questo screenshot:
 
  [![](in-app-purchase-basics-and-configuration-images/image13.png "Il portale di iTunes Connect richiederà di inviare anche alcuni prodotti")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
-   
-   
-   
- L'applicazione e gli acquisti in-app verranno esaminati insieme, in modo che tutti i dati vengano approvati in una sola volta (in modo che l'app non possa entrare nello Store senza alcun prodotto approvato).
+
+L'applicazione e gli acquisti in-app verranno esaminati insieme, in modo che tutti i dati vengano approvati in una sola volta (in modo che l'app non possa entrare nello Store senza alcun prodotto approvato).
 
 Dopo che la prima versione con la funzionalità di acquisto in-app è stata approvata, è possibile aggiungere altri prodotti e inviarli per la revisione in qualsiasi momento. È anche possibile scegliere di inviare una nuova versione insieme a specifici prodotti di acquisto in-app, usando la pagina dei **Dettagli della versione** come suggerito dal prompt.
 

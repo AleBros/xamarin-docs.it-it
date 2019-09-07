@@ -7,28 +7,25 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9d589af6249063add3dc9b085463fde9edd8e449
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: aa2f52be4e485fb55a949a0327161bd1c301334c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278428"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769707"
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Perché la compilazione iOS non riesce con l'errore: nessuna chiave di firma del codice iPhone valida trovata nel keychain?
 
 ## <a name="cause-of-the-error"></a>Motivo dell'errore
 Questo messaggio di errore viene visualizzato quando il progetto in questione cerca le credenziali di firma codice valide ma non le trova. La firma del codice è necessaria per i test e le distribuzioni nei dispositivi iOS fisici. così come le compilazioni di & App Store ad hoc. 
 
-
 ### <a name="provisioning-devices"></a>Provisioning dei dispositivi
 Se non è stato effettuato il provisioning di un dispositivo iOS in precedenza, nella Guida seguente viene illustrato il processo dettagliato: [Guida al provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md)
-
 
 ## <a name="bug-when-using-ios-simulator"></a>Bug quando si usa il simulatore iOS
 
 > [!NOTE]
 > Questo problema è stato risolto nelle versioni recenti di Novell per Visual Studio. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
-
 
 Si è verificato un bug in Novell. Visual Studio 3,11 che ha causato il progetto iOS in un modello Novell. Forms per aggiungere i diritti di coprogettazione. plist alle compilazioni del simulatore; blocco efficace del test tramite il simulatore.
 

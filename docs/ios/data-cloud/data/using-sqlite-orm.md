@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 45205859a55974414ee865b2141d2bb127e85bcc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289832"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763137"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso di SQLite.NET con Novell. iOS
 
@@ -136,7 +136,6 @@ Gli attributi comuni che è possibile applicare alle classi per controllare il m
 - **[Ignore]** : fa in modo che SQLite.NET ignori questa proprietà. Questa operazione è particolarmente utile per le proprietà che dispongono di un tipo che non può essere archiviato nel database o che le proprietà che non possono essere risolte automaticamente nelle raccolte di modelli siano SQLite.
 - **[Unique]** : assicura che i valori nella colonna del database sottostante siano univoci.
 
-
 La maggior parte di questi attributi è facoltativa, SQLite utilizzerà i valori predefiniti per i nomi di tabelle e colonne. È sempre necessario specificare una chiave primaria Integer in modo che le query di selezione ed eliminazione possano essere eseguite in modo efficiente sui dati.
 
 ## <a name="more-complex-queries"></a>Query più complesse
@@ -149,7 +148,6 @@ Per eseguire altre operazioni `SQLiteConnection` sui dati, è possibile usare i 
 - **Elimina** : consente di eliminare un oggetto utilizzando la relativa chiave primaria.
 - **Query\<T >** -eseguire una query SQL che restituisce un numero di righe (come oggetti).
 - **Execute** : usare questo metodo (e non `Query` ) quando non si prevede che le righe vengano restituite da SQL, ad esempio istruzioni INSERT, Update e DELETE.
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Recupero di un oggetto in base alla chiave primaria
 

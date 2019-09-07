@@ -7,12 +7,12 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 846b7fa3c905b208771a110a013283bd77214b72
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c0b60a5064bbcf605f66a7b9dcce5da1f84a015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511694"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770890"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Riepilogo dei capitoli 28. Posizione e mappe
 
@@ -234,8 +234,6 @@ Il programma viene inoltre illustrato come limitare in modo dinamico il numero d
 Il [ **verifica** ](xref:Xamarin.Forms.Maps) assembly contiene anche una [ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder) classe con un [ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) metodo che esegue la conversione un indirizzo di testo in zero o più posizioni geografiche e un altro metodo [ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) che converte in altra direzione.
 
 Il [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) file e [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) file code-behind illustrare questa funzionalità.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

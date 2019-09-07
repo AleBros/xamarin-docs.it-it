@@ -8,23 +8,22 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: 36069bc20a5341b87d55b60f83466e89f263b2ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: ff5c7cb36305780d12b5fd69b7cbadec0eaef551
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646122"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771552"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indicizzazione e deep linking delle applicazioni
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _L'indicizzazione delle applicazioni consente di mantenere rilevanti, visualizzandole nei risultati della ricerca, le applicazioni che verrebbero altrimenti dimenticate dopo pochi usi. Il deep linking consente alle applicazioni di rispondere a un risultato di ricerca che contiene dati dell'applicazione, in genere passando a una pagina a cui fa riferimento un collegamento diretto. Questo articolo illustra come usare indicizzazione e deep linking delle applicazioni per rendere disponibile per la ricerca il contenuto di applicazioni Xamarin.Forms in dispositivi iOS e Android._
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
 **Deep Linking with Xamarin.Forms and Azure video** (Deep linking con Xamarin.Forms e Azure - video)
-
 
 L'indicizzazione e il deep linking delle applicazioni Xamarin.Forms rendono disponibile un'API per pubblicare metadati per l'indicizzazione delle applicazioni man mano che gli utenti si spostano tra le applicazioni. Il contenuto indicizzato può quindi essere cercato nella ricerca Spotlight, in Google Search o in una ricerca Web. Quando si tocca un risultato di ricerca che contiene un collegamento diretto verrà generato un evento che può essere gestito da un'applicazione e viene generalmente usato per passare alla pagina a cui fa riferimento il collegamento diretto.
 

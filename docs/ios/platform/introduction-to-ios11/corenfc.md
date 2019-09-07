@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: 6da32e22fbdb3b5b7d96d7ee93c2f25bba84cd78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286621"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752423"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC di base in Novell. iOS
 
@@ -141,7 +141,6 @@ I parametri per il `NFCNdefReaderSession` Costruttore sono i seguenti:
 - `queue`: Coda su cui vengono gestiti i callback. Può essere `null`, nel qual caso assicurarsi di usare quando si aggiornano i `DispatchQueue.MainQueue` controlli dell'interfaccia utente, come illustrato nell'esempio.
 - `invalidateAfterFirstRead`: Quando `true`, l'analisi viene arrestata dopo la prima analisi riuscita `false` . quando l'analisi continua e vengono restituiti più risultati fino a quando l'analisi non viene annullata o viene raggiunto il timeout di 60 secondi.
 
-
 ### <a name="3-cancel-the-scanning-session"></a>3. Annulla la sessione di analisi
 
 L'utente può annullare la sessione di analisi tramite un pulsante fornito dal sistema nell'interfaccia utente:
@@ -159,7 +158,6 @@ In entrambi i casi, verrà chiamato `DidInvalidate` il metodo del delegato.
 ## <a name="summary"></a>Riepilogo
 
 CoreNFC consente all'app di leggere i dati dai tag NFC. Supporta la lettura di un'ampia gamma di formati di tag (tipi NDEF da 1 a 5), ma non supporta la scrittura o la formattazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

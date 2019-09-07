@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 45eda150b0cff9462cfe5f09be4b04ea64ec391d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5508636905acbb513aec4c6e065e9296293310d3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284554"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768669"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - Guida introduttiva
 
@@ -329,7 +329,6 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 
     ![](hello-ios-quickstart-images/vs-image14.png "Regolare la larghezza in modo che il Pulsante sia largo come il Campo di testo e l'Etichetta")
 
-
 1. Dopo aver selezionato il **Pulsante** nell'area di progettazione, modificare la proprietà **Nome** nella sezione **Identità** di **Proprietà** in `TranslateButton`. Modificare la proprietà **Titolo** in "Translate" (Converti):
 
     ![](hello-ios-quickstart-images/vs-image15.png "Modificare la proprietà Titolo in Translate (Converti)")
@@ -424,7 +423,6 @@ Questa procedura dettagliata descrive come creare un'applicazione, Phoneword, ch
 1. Fare doppio clic su **ViewController.cs** in **Esplora soluzioni** per aprirlo e aggiungere la logica per la gestione delle interazioni con i pulsanti:
 
     ![](hello-ios-quickstart-images/vs-image20.png "Logica aggiunta per gestire le interazioni con i pulsanti")
-
 
 1. Iniziare associando `TranslateButton`. Nella classe **ViewController** trovare il metodo `ViewDidLoad`. Aggiungere il codice seguente per il pulsante all'interno di `ViewDidLoad`, sotto la chiamata a `base.ViewDidLoad()`:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 9272c522383251a54aff5093c20e4b6b6131e2b2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 925a110025092ce6efa4e4d5f8e80b640b7f3dd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293039"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770093"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma delle app Xamarin.Mac con un ID sviluppatore
 
@@ -25,7 +25,6 @@ Per altre informazioni, vedere [ID sviluppatore e GateKeeper](https://developer.
 Per compilare un'app per la distribuzione diretta agli utenti, non tramite Mac App Store, impostare le **impostazioni di firma** per usare l'**ID sviluppatore**. Assicurarsi di modificare la configurazione **Release** (Rilascio).
 
  [![](signing-images/config02.png "Opzioni della firma Mac")](signing-images/config02.png#lightbox)
-
 
 ## <a name="build"></a>Compilazione
 

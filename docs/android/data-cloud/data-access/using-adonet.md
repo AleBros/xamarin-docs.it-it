@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 76a66b4dbde65a3fc44d3490e0147ff66b088466
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ff29b51cec6f612f4dac497e75eddba4dbd4c1e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525975"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754474"
 ---
 # <a name="using-adonet-with-android"></a>Uso di ADO.NET con Android
 
@@ -30,7 +30,6 @@ Per usare l'accesso a SQLite tramite ADO.NET, `System.Data` è `Mono.Data.Sqlite
 ![Riferimenti Android in Visual Studio per Mac](using-adonet-images/image5.png "Riferimenti Android in Visual Studio per Mac") 
 
 -----
-
 
 Fare clic con il pulsante destro del mouse su **riferimenti > modifica riferimenti...** quindi fare clic per selezionare gli assembly necessari.
 
@@ -151,7 +150,6 @@ Poiché SQLite consente l'esecuzione di comandi SQL arbitrari sui dati, è possi
 
 - **ExecuteScalar** &ndash; Recupera un singolo valore (ad esempio un'aggregazione).
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 `INSERT`le `UPDATE`istruzioni, `DELETE` e restituiranno il numero di righe interessate. Tutte le altre istruzioni SQL restituiranno-1.
@@ -199,7 +197,6 @@ Il metodo `ExecuteReader` restituisce un oggetto `SqliteDataReader`. Oltre al `R
 
 - **HasRows** &ndash; Indica se sono state restituite righe.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 Usare questa istruzione `SELECT` per le istruzioni che restituiscono un singolo valore, ad esempio un'aggregazione.
@@ -212,8 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 Il `ExecuteScalar` tipo restituito del metodo è `object` &ndash; è necessario eseguire il cast del risultato a seconda della query del database. Il risultato può essere un numero intero di `COUNT` una query o una stringa da una query `SELECT` a colonna singola. Si noti che questa operazione è diversa `Execute` dagli altri metodi che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

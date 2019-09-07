@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 8c4050f439f3499289063c286afd255241bf0343
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6e2e4cd854e60f6147104b6b1361d0ab7b234370
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521450"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755813"
 ---
 # <a name="understanding-android-api-levels"></a>Understanding Android API Levels (Informazioni sui livelli API Android)
 
 _Novell. Android presenta diverse impostazioni a livello di API Android che determinano la compatibilità dell'app con più versioni di Android. Questa guida illustra le implicazioni di queste impostazioni, le modalità di configurazione e l'effetto che hanno sull'app in fase di esecuzione._
-
 
 ## <a name="quick-start"></a>Avvio rapido
 
@@ -67,15 +66,11 @@ Ad esempio, la configurazione seguente supporta le versioni di Android come prim
 
 -----
 
-
 Se l'app supporta più versioni di Android, il codice deve includere i controlli di runtime per assicurarsi che l'app funzioni con l'impostazione minima della versione Android (vedere i [controlli di runtime per le versioni di Android](#runtimechecks) più avanti per informazioni dettagliate). Se si utilizza o si crea una libreria, vedere le [librerie e i livelli API](#libraries) seguenti per le procedure consigliate per la configurazione delle impostazioni a livello di API per le librerie.
-
-
 
 ## <a name="android-versions-and-api-levels"></a>Versioni di Android e livelli API
 
 Man mano che la piattaforma Android evolve e vengono rilasciate nuove versioni di Android, a ogni versione di Android viene assegnato un identificatore intero univoco, denominato *livello API*. Ogni versione di Android corrisponde quindi a un singolo livello API Android. Poiché gli utenti installano le app in versioni precedenti e le versioni più recenti di Android, le app Android reali devono essere progettate per funzionare con più livelli di API Android.
-
 
 ### <a name="android-versions"></a>Versioni di Android
 
@@ -93,7 +88,6 @@ Inoltre, Novell. Android definisce i *codici della versione di compilazione* che
 
 Come indicato nella tabella, le nuove versioni di Android vengono &ndash; rilasciate spesso a volte più di una versione all'anno. Di conseguenza, l'universo di dispositivi Android che potrebbero eseguire l'app include una vasta gamma di versioni di Android precedenti e più recenti. Come è possibile garantire che l'app venga eseguita in modo coerente e affidabile in un numero così elevato di versioni diverse di Android? I livelli API di Android possono aiutare a gestire questo problema.
 
-
 ### <a name="android-api-levels"></a>Livelli API Android
 
 Ogni dispositivo Android viene eseguito esattamente a *un* livello &ndash; API. questo livello API è sicuramente univoco per ogni versione della piattaforma Android. Il livello API identifica con precisione la versione del set di API che può essere chiamata dall'app; identifica la combinazione di elementi manifesto, autorizzazioni e così via con cui si esegue il codice come sviluppatore. Il sistema dei livelli API di Android aiuta Android a determinare se un'applicazione è compatibile con un'immagine del sistema Android prima di installare l'applicazione in un dispositivo.
@@ -106,11 +100,9 @@ Quando viene compilata un'applicazione, contiene le informazioni sul livello API
 
 Queste impostazioni vengono usate per assicurarsi che la funzionalità necessaria per eseguire correttamente l'app sia disponibile nel dispositivo Android al momento dell'installazione. In caso contrario, l'esecuzione dell'app è bloccata nel dispositivo. Ad esempio, se il livello API di un dispositivo Android è inferiore al livello API minimo specificato per l'app, il dispositivo Android impedisce all'utente di installare l'app.
 
-
 ## <a name="project-api-level-settings"></a>Impostazioni livello API progetto
 
 Le sezioni seguenti illustrano come usare SDK Manager per preparare l'ambiente di sviluppo per i livelli di API a cui si vuole fare riferimento, seguito da spiegazioni dettagliate su come configurare il *Framework di destinazione*, la *versione minima di Android*eImpostazioni della versione di Android di destinazione in Novell. Android.
-
 
 ### <a name="android-sdk-platforms"></a>Piattaforme Android SDK
 
@@ -144,7 +136,6 @@ Impostare il Framework di destinazione selezionando un livello API nel menu a di
 
 -----
 
-
 <a name="minimum" />
 
 ### <a name="minimum-android-version"></a>Versione minima di Android
@@ -153,7 +144,6 @@ La *versione minima di Android* (nota anche `minSdkVersion`come) è la versione 
 
 Sebbene l'app possa essere compilata e installata correttamente in questa gamma di piattaforme, questo non garantisce che venga *eseguito* correttamente su tutte queste piattaforme. Se, ad esempio, l'app è installata in **android 5,0 (Lollipop)** e il codice chiama un'API disponibile solo in **Android 7,1 (torrone)** e versioni successive, l'app riceverà un errore di runtime e potrebbe arrestarsi in modo anomalo. Il codice deve quindi assicurarsi &ndash; in fase di esecuzione &ndash; che chiami solo le API supportate dal dispositivo Android su cui è in esecuzione. In altre parole, il codice deve includere controlli di runtime espliciti per assicurarsi che l'app usi le API più recenti solo nei dispositivi abbastanza recenti per supportarli.
 I [controlli di runtime per le versioni di Android](#runtimechecks), più avanti in questa guida, spiegano come aggiungere questi controlli di runtime al codice.
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -173,7 +163,6 @@ Usando il menu a discesa a destra della **versione minima di Android**, è possi
 Se si seleziona l'opzione **Usa la versione del Framework di destinazione automatica &ndash;** , la versione minima di Android sarà identica a quella dell'impostazione del Framework di destinazione.
 
 -----
-
 
 <a name="target" />
 
@@ -206,7 +195,6 @@ In generale, la versione di Android di destinazione deve essere limitata dalla v
 **Versione minima di Android < = versione di Android di destinazione < = Framework di destinazione**
 
 Per ulteriori informazioni sui livelli SDK, vedere la documentazione relativa all' [utilizzo](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html) di SDK per sviluppatori Android.
-
 
 <a name="runtimechecks" />
 
@@ -261,7 +249,7 @@ Ciò è dovuto al fatto che non esiste alcuna pagina di **compilazione > applica
 
 -----
 
-Le impostazioni minime per la versione di Android e la versione di Android di destinazione non sono disponibili perché la libreria risultante &ndash; non è un'app autonoma che la libreria può essere eseguita in qualsiasi versione di Android, a seconda dell'app con cui viene incluso nel pacchetto. È possibile specificare il modo in cui la libreriadeve essere compilata, ma non è possibile prevedere il livello API della piattaforma in cui verrà eseguita la libreria. Tenendo presente questo aspetto, è opportuno osservare le procedure consigliate seguenti quando si utilizzano o si creano librerie:
+Le impostazioni minime per la versione di Android e la versione di Android di destinazione non sono disponibili perché la libreria risultante &ndash; non è un'app autonoma che la libreria può essere eseguita in qualsiasi versione di Android, a seconda dell'app con cui viene incluso nel pacchetto. È possibile specificare il modo in cui la libreria deve essere *compilata*, ma non è possibile prevedere il livello API della piattaforma in cui verrà eseguita la libreria. Tenendo presente questo aspetto, è opportuno osservare le procedure consigliate seguenti quando si utilizzano o si creano librerie:
 
 - **Quando si usa una libreria Android** Se si utilizza una libreria Android nell'applicazione, assicurarsi di impostare l'impostazione del Framework di destinazione dell'applicazione su un livello API almeno quanto l'impostazione del Framework di destinazione della libreria. &ndash;
 
@@ -269,11 +257,9 @@ Le impostazioni minime per la versione di Android e la versione di Android di de
 
 Queste procedure consigliate sono consigliate per evitare la situazione in cui una libreria tenta di chiamare un'API che non è disponibile in fase di esecuzione (che può causare l'arresto anomalo dell'app). Se si è uno sviluppatore di librerie, è consigliabile limitare l'utilizzo delle chiamate API a un subset piccolo e ben stabilito della superficie di attacco dell'API totale. Questa operazione consente di garantire che la libreria possa essere usata in modo sicuro in una gamma più ampia di versioni di Android.
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato come vengono usati i livelli di API Android per gestire la compatibilità delle app in versioni diverse di Android. Sono stati forniti i passaggi dettagliati per configurare il *Framework di destinazione*Novell. Android, la *versione minima di Android*e le impostazioni di progetto della *versione di Android di destinazione* . Sono state fornite istruzioni per l'uso di gestione Android SDK per installare i pacchetti SDK, inclusi esempi di come scrivere codice per gestire diversi livelli API in fase di esecuzione e come gestire i livelli di API durante la creazione o l'utilizzo di librerie Android. È stato inoltre fornito un elenco completo che mette in correlazione i livelli API ai numeri di versione di Android, ad esempio Android 4,4, i nomi delle versioni Android (ad esempio KitKat) e i codici della versione di build Novell. Android.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

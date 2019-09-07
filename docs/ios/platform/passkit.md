@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 150a4e3c1deafbabea892d5adb786374c3d97d12
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277865"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769583"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit in Novell. iOS
 
@@ -74,7 +74,6 @@ Attualmente cinque tipi supportati, che possono essere distinti nell'app Wallet 
 - **Scheda dello Store** : arrotondato in alto, ad esempio una carta di credito o di debito.
 - **Cedole** : perforato lungo la parte superiore.
 - **Generico** : uguale alla scheda dello Store, arrotondato in alto.
-
 
 In questa schermata vengono mostrati i cinque tipi di pass (in ordine: cedola, generico, scheda dello Store, carta di imbarco e ticket di evento):
 
@@ -204,10 +203,8 @@ Le sessioni sono firmate con un certificato privato generato nel portale di prov
 1. Utilizzare il certificato per firmare il `manifest.json` file e scrivere il risultato in un file denominato `signature` .
 1. Comprimere tutti gli elementi e assegnare al file `.pkpass` risultante un'estensione di file.
 
-
 Poiché la chiave privata è necessaria per firmare il passaggio, questo processo deve essere eseguito solo su un server protetto controllato dall'utente. NON distribuire le chiavi per provare a generare i passaggi in un'applicazione.
 
- 
 ## <a name="configuration-and-setup"></a>Configurazione e configurazione
 
 Questa sezione contiene istruzioni per la configurazione dei dettagli del provisioning e la creazione del primo passaggio.
@@ -229,7 +226,6 @@ Il primo passaggio consiste nell'impostare un ID del tipo di passaggio per ogni 
 
 2. Specificare una **Descrizione** (nome) e un **identificatore** (stringa univoca) per il passaggio. Si noti che tutti gli ID di tipo pass devono iniziare `pass.` con la stringa in questo `pass.com.xamarin.coupon.banana` esempio: [![](passkit-images/register.png "Specificare una descrizione e un identificatore")](passkit-images/register.png#lightbox)
 
-
 3. Confermare il pass ID premendo il pulsante **Register (registra** ).
 
 #### <a name="generate-a-certificate"></a>Generare un certificato
@@ -242,13 +238,11 @@ Per creare un nuovo certificato per questo ID tipo di pass, procedere come segue
 
     [![](passkit-images/cert-dist.png "Selezionare Crea certificato")](passkit-images/cert-dist.png#lightbox)
 
-
 2. Seguire i passaggi per creare una richiesta di firma del certificato (CSR).
   
 3. Premere il pulsante **continue (continua** ) nel portale per sviluppatori e caricare il certificato CSR per generare il certificato.
 
 4. Scaricare il certificato e fare doppio clic su di esso per installarlo nel keychain.
-
 
 Ora che è stato creato un certificato per questo ID tipo di pass, nella sezione successiva viene descritto come compilare manualmente un pass.
 
@@ -264,7 +258,6 @@ Ora che è stato creato il tipo di passaggio, è possibile creare manualmente un
 - Calcolare gli hash SHA1 per ogni file nella cartella e scrivere in manifest. JSON.
 - Firmare manifest. JSON con il file Certificate. P12 scaricato.
 - Comprimere il contenuto della directory e rinominare con l'estensione PKPASS.
-
 
 Nel [codice di esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) per questo articolo sono presenti alcuni file di origine che possono essere usati per generare un pass. Usare i file nella `CouponBanana.raw` directory della directory CreateAPassManually. Sono presenti i file seguenti:
 
@@ -338,7 +331,6 @@ Le applicazioni Conduit sono app intermedie che potrebbero ricevere i pass per c
 - **Safari** : riconosce il passaggio Content-Type quando si fa clic su un collegamento pass URL.
 - **Altre app personalizzate** : qualsiasi app che riceve allegati o collegamenti aperti (client di social media, lettori di posta elettronica e così via).
 
-
 Questo screenshot mostra come la **posta elettronica** in iOS 6 riconosca un allegato pass e, quando viene toccato, consente di **aggiungerlo** al portafogli.
 
  [![](passkit-images/image22.png "Questo screenshot mostra come la posta in iOS 6 riconosca un allegato pass")](passkit-images/image22.png#lightbox)
@@ -350,7 +342,6 @@ Se si compila un'app che potrebbe essere un canale per i passaggi, possono esser
 - **Estensione di file** :. pkpass
 - **Tipo MIME** -application/vnd. Apple. pkpass
 - **Uti** – com. Apple. pkpass
-
 
 Il funzionamento di base di un'applicazione Conduit consiste nel recuperare il file pass e chiamare PassKit `PKAddPassesViewController` per fornire all'utente la possibilità di aggiungere il pass al portafogli. L'implementazione di questo controller di visualizzazione viene trattata nella sezione successiva sulle **applicazioni complementari**.
 
@@ -383,7 +374,6 @@ Fare doppio clic sul file **titles. plist** nel riquadro della soluzione per apr
 Nella sezione portafogli selezionare l'opzione **Abilita portafogli**
 
 ![](passkit-images/image32.png "Abilita diritti portafogli")
-
 
 L'opzione predefinita prevede che l'app consenta tutti i tipi di pass. Tuttavia, è possibile limitare l'app e consentire solo un subset di tipi di pass del team. Per abilitare questa impostazione, selezionare **Consenti subset di tipi di pass del team** e immettere l'identificatore del tipo di pass del subset che si desidera consentire.
 

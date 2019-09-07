@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 3b0e5d12f47ffb46ad009530bcc9c0b373496f63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279786"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765590"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Cenni preliminari sui binding Objective-C
 
@@ -37,7 +37,6 @@ Il binding di una libreria Objective-C per l'uso con Novell richiede tre passagg
 
 È possibile usare per `btouch-native` Novell. iOS (o `bmac-native` se si usa Novell. Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native` per iOS o `bmac-native` per Mac).
 
-
 La sintassi generale per richiamare questi strumenti è la seguente:
 
 ```csharp
@@ -51,7 +50,6 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
 Il comando precedente genererà il file `cocos2d.dll` nella directory corrente e conterrà la libreria con binding completo che è possibile usare nel progetto. Questo è lo strumento che Visual Studio per Mac usa per creare i binding se si usa un progetto di associazione (descritto di [seguito](#bindingproject)).
-
 
 <a name="bindingproject" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3ca06ae6fb26fce87f14b9cdb34a700ef49655e1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0f523c7149366cff85164f26f3f47b87801002cb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528380"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770754"
 ---
 # <a name="enterprise-app-navigation"></a>Esplorazione di app aziendali
 
@@ -227,7 +227,7 @@ public Task InitializeAsync()
 
 `MainView` Viene passato a se l'app dispone di un token di accesso memorizzato nella cache, che viene usato per l'autenticazione. In caso contrario `LoginView` , l'oggetto viene spostato a.
 
-Per altre informazioni sul contenitore di inserimento delle dipendenze di Autofac, vedere [Introduzione all'inserimento](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)delle dipendenze.
+Per altre informazioni sul contenitore di inserimento delle dipendenze di Autofac, vedere [Introduzione all'inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
 <a name="passing_parameters_during_navigation" />
 
@@ -305,7 +305,6 @@ Un'app potrebbe dover interagire con l'utente durante un'operazione di navigazio
 Novell. Forms include il supporto per la navigazione tra le pagine, che in genere risulta dall'interazione dell'utente con l'interfaccia utente o dall'app stessa, in seguito a modifiche dello stato guidate dalla logica interna. Tuttavia, la navigazione può essere complessa da implementare nelle app che usano il modello MVVM.
 
 In questo capitolo è `NavigationService` stata presentata una classe, che viene utilizzata per eseguire l'esplorazione del primo modello di visualizzazione dai modelli di visualizzazione. L'inserimento della logica di navigazione nelle classi del modello di visualizzazione significa che la logica può essere esercitata tramite test automatizzati. Inoltre, il modello di visualizzazione può implementare la logica per controllare la navigazione per assicurarsi che vengano applicate determinate regole business.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

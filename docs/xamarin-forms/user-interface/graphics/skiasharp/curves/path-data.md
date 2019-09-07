@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647398"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770565"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dati del tracciato SVG in SkiaSharp
 
@@ -428,7 +428,6 @@ public class PrettyAnalogClockPage : ContentPage
 Un'operazione particolare operazione viene eseguita con l'icona della mano, secondo tuttavia. Perché l'orologio viene aggiornato ogni 16 millisecondi, il `Millisecond` proprietà del `DateTime` valore potenzialmente può essere utilizzato per aggiungere un'animazione in secondo luogo manualmente uno sweep anziché uno che consente di spostare in collegamenti discreti da secondo a secondo. Ma questo codice consente lo spostamento da smooth. In alternativa, Usa xamarin. Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) e [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) funzioni per un tipo diverso di spostamento di interpolazione di animazione. Queste funzioni di interpolazione causare della seconda lancetta spostare in modo più a scatti &mdash; ritirare un po' prima di spostarla, e quindi leggermente aumenti la destinazione, e un effetto che sfortunatamente non può essere riprodotta nelle schermate illustrate static:
 
 [![](path-data-images/prettyanalogclock-small.png "Tripla screenshot della pagina piuttosto orologio analogico")](path-data-images/prettyanalogclock-large.png#lightbox "tripla screenshot della pagina piuttosto orologio analogico")
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

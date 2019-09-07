@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 3fb479321686e4b956fc6ffee90dd5b0b2c16d9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291187"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769098"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS compilate con Novell
 
@@ -146,7 +146,6 @@ I controller dei giochi possono essere usati per migliorare la giocabilità e fo
 
 Se si sta inviando un'app Novell. tvOS con il supporto del controller di gioco all'App Store di Apple TV e si sta ricevendo un messaggio di errore nel formato seguente:
 
-
 _Sono stati individuati uno o più problemi con il recapito recente per "nome app". Il recapito ha avuto esito positivo, ma è possibile risolvere i problemi seguenti durante la distribuzione successiva:_
 
 _Bundle non valido: un'app che supporta i controller di gioco deve supportare anche la modalità remota di Apple TV._
@@ -200,8 +199,6 @@ Nel percorso seguente:
 Si noti che il numero di profilo nel percorso deve corrispondere al numero di profilo della libreria di classi portabile (PCL).
 
 Con questo file, dovrebbe essere possibile aggiungere correttamente il file PCL al progetto Novell. tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

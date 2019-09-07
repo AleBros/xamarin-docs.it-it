@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/28/2016
-ms.openlocfilehash: 75180152c3ed7056102038b9019f8017183c17ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279939"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769565"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Riferimento a librerie native in Novell. iOS
 
@@ -56,7 +56,6 @@ lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a lib
 
 In questo `libMyLibrary.a` modo verrà creata una libreria universale (FAT) che sarà idonea per l'utilizzo per tutte le destinazioni di sviluppo iOS.
 
-
 ### <a name="missing-required-architecture-i386"></a>Manca l'architettura necessaria i386
 
 Se si sta ricevendo un `does not implement methodSignatureForSelector` messaggio `does not implement doesNotRecognizeSelector` o nell'output di runtime quando si tenta di usare una libreria Objective-C nel simulatore iOS, la libreria probabilmente non è stata compilata per l'architettura i386 (vedere la pagina relativa alla [compilazione di Universal Native ](#building_native)Sezione delle librerie precedente).
@@ -80,7 +79,6 @@ Se si desidera collegare in modo statico la libreria "libMyLibrary. a" ottenuta 
 - Portare la libreria nel progetto
 - Configurare Novell. iOS per collegare la libreria
 - Accedere ai metodi dalla libreria.
-
 
 Per **portare la libreria nel progetto**, selezionare il progetto in Esplora soluzioni e premere **comando + opzione + a**. Passare a libMyLibrary. a e aggiungerlo al progetto. Quando richiesto, indicare a Visual Studio per Mac o a Visual Studio di copiarlo nel progetto. Dopo averlo aggiunto, trovare libFoo. a nel progetto, fare clic con il pulsante destro del mouse su di esso e impostare l' **azione di compilazione** su **nessuno**.
 
@@ -113,7 +111,6 @@ Sono disponibili due tipi di librerie native in iOS:
 - Librerie condivise che fanno parte del sistema operativo.
 
 - Librerie statiche fornite con l'applicazione.
-
 
 Per accedere ai metodi definiti in uno di questi casi, si usa la [funzionalità P/Invoke di mono](https://www.mono-project.com/docs/advanced/pinvoke/) , che è la stessa tecnologia che si utilizzerebbe in .NET, che è approssimativamente:
 
@@ -174,4 +171,3 @@ public static extern double AnimalLibraryVersion();
 Poiché è possibile usare solo librerie statiche in iOS, non esiste alcuna libreria condivisa esterna con cui eseguire il collegamento, quindi il parametro Path nell'attributo DllImport deve usare il nome `__Internal` speciale (si notino i due caratteri di sottolineatura all'inizio del nome) anziché nome del percorso.
 
 Questa operazione impone a DllImport di cercare il simbolo del metodo a cui si fa riferimento nel programma corrente, anziché tentare di caricarlo da una libreria condivisa.
-

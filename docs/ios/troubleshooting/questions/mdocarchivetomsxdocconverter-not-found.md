@@ -7,18 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d8c0c958a6aaad2603f6571a3531b7338d8cdab0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1e359d510b1ff92299dc4b9792a2911d5583e66a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291001"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769721"
 ---
 # <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequest"></a>MDocArchiveToMsxDocConverter.exe non trovato rver.BaseCommand.OnRequest
 
 > [!IMPORTANT]
 > Questo problema è stato risolto nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
-
 
 ## <a name="error-message"></a>Messaggio di errore
 

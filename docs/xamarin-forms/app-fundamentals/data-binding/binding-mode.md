@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 20a6dab34f290c6e5f170d861183dabbfe382970
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 1991be6961cbc296501a1df92fe3c89dda01d190
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650213"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771685"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modalità di binding di Xamarin.Forms
 
@@ -680,7 +680,6 @@ La schermata iOS a sinistra visualizza il programma alla prima esecuzione. Il co
 Gli altri due screenshot mostrano le impostazioni modificate. Quando si eseguono prove con questa pagina, ricordare di impostare il programma in sospensione o di terminarlo nel dispositivo o nell'emulatore in esecuzione. La terminazione del programma nel debugger di Visual Studio non genererà la chiamata della sostituzione `OnSleep` nella classe `App`.
 
 L'articolo successivo illustra come specificare la [**Formattazione delle stringhe** ](string-formatting.md) dei data binding impostate sulla proprietà `Text` di `Label`.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

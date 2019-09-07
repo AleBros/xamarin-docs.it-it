@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 5272921cade2b9dadd24a4c917e6251ac591e178
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f9f8981325785d69d36ccd9d4de1cd69956a155
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292315"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768756"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Utilizzo di watchOS Layout di Xamarin
 
@@ -34,7 +34,6 @@ Il punto chiave è: apportare all'interfaccia utente facilmente leggibile e faci
 
 - Usare la [ `Menu` controllo](~/ios/watchos/user-interface/menu.md) alla funzionalità espongono meno usato per mantenere la progettazione di app chiara e concisa.
 
-
 ## <a name="implementation"></a>Implementazione
 
 Guarda il che Kit comprende i seguenti controlli per la compilazione di espressioni di controllo interessante layout dell'app:
@@ -55,7 +54,6 @@ Quando la dimensione è impostata su **relativo al contenitore** è possibile fo
 
 ![](layout-images/button-attributes.png "Fornire un valore proporzionale e una regolazione dell'offset")
 
-
 ### <a name="group"></a>Raggruppa
 
 `WKInterfaceGroup` è un contenitore di layout semplice che può essere configurato per stack controlla orizzontalmente o verticalmente. Include la spaziatura tra ogni controllo per impostazione predefinita, ma è possibile modificare la spaziatura (e Inset) nei **attributi** inspector.
@@ -65,7 +63,6 @@ Quando la dimensione è impostata su **relativo al contenitore** è possibile fo
 I gruppi possono stessi dimensionati e posizionati in relazione i controlli attorno a esse e i gruppi possono essere nidificati per creare layout complessi.
 
 ![](layout-images/group-scene.png "I gruppi possono essere nidificati per creare layout complessi")
-
 
 ### <a name="separator"></a>Separatore
 
@@ -79,8 +76,6 @@ Si noti il blu e verde il separatore che non usano l'intera larghezza dello sche
 
 Nessun layout sarebbe incompleta senza il `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`, e [altri controlli](~/ios/watchos/user-interface/index.md).
 Questi possono essere posizionati nei layout usando **gruppi** o le impostazioni di dimensioni e posizione su ogni controllo.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 114d00b0d79b497201b3185a1443b8c8f9699c31
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8c338f8a5b2f1d41b1ea0f61778a1c14eb84ce08
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283553"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769149"
 ---
 # <a name="introduction-to-tvos-10"></a>Introduzione a tvOS 10
 
@@ -83,8 +83,6 @@ Per ulteriori informazioni, vedere la Guida alle [modifiche aggiuntive del Frame
 ## <a name="deprecated-apis"></a>API deprecate
 
 Nessuna API o Framework è stato deprecato da tvOS 10. Per un elenco completo delle modifiche alle API, vedere la documentazione sulle [differenze delle API tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) di Apple.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

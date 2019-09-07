@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8a83fd7fca15214711dd90dcbf80eb0d56a3df34
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 3dfdb83f99e7b15866abcc4980473ddf075dff69
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650448"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771777"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Associazione di origini video al lettore
 
@@ -138,7 +138,6 @@ namespace VideoPlayerDemos
 La proprietà `Source` di `VideoPlayer` è associata a `ListView`. Il `Path` del binding è specificato come `SelectedItem.VideoSource`, ovvero un percorso composto costituito da due proprietà: `SelectedItem` è una proprietà di `ListView`. L'elemento selezionato è di tipo `VideoInfo`, che ha una proprietà `VideoSource`.
 
 Come con la prima pagina **Select Web Video**, inizialmente non è selezionato alcun elemento da `ListView`, pertanto è necessario selezionare uno dei video prima di iniziare la riproduzione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291895"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753332"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di Novell. iOS
 
@@ -21,7 +21,6 @@ Poiché le applicazioni che usano Novell. iOS vengono compilate in codice static
 Queste sono le limitazioni di Novell. iOS rispetto al desktop mono:
 
  <a name="Limited_Generics_Support" />
-
 
 ## <a name="limited-generics-support"></a>Supporto per generics limitato
 
@@ -32,7 +31,6 @@ La tecnologia [AOT completa](https://www.mono-project.com/docs/advanced/aot/#ful
 Di seguito sono riportati alcuni dei problemi comuni eseguiti dagli sviluppatori:
 
  <a name="Generic_Subclasses_of_NSObjects_are_limited" />
-
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Le sottoclassi generiche di NSObjects sono limitate
 
@@ -47,9 +45,7 @@ class Foo<T> : UIView {
 > [!NOTE]
 > Sebbene le sottoclassi generiche di NSObjects siano possibili, esistono alcune limitazioni. Per ulteriori informazioni, leggere le [sottoclassi generiche del documento NSObject](~/ios/internals/api-design/nsobject-generics.md)
 
-
  <a name="No_Dynamic_Code_Generation" />
-
 
 ## <a name="no-dynamic-code-generation"></a>Nessuna generazione di codice dinamico
 
@@ -60,10 +56,7 @@ Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico i
 - Nessun supporto per la creazione dinamica dei tipi (nessun tipo. GetType ("MyType" 1 ")), sebbene la ricerca dei tipi esistenti (Type. GetType (" System. String "), ad esempio, funzioni correttamente.
 - I callback inversi devono essere registrati con il runtime in fase di compilazione.
 
-
-
  <a name="System.Reflection.Emit" />
-
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -72,7 +65,6 @@ La mancanza di System. Reflection. **Emit** significa che il codice che dipende 
 - Dynamic Language Runtime.
 - Qualsiasi linguaggio basato su Dynamic Language Runtime.
 - TransparentProxy di comunicazione remota o qualsiasi altro elemento che comporterebbe la generazione dinamica del codice da parte del runtime.
-
 
   > [!IMPORTANT]
   > Non confondere **Reflection. Emit** con **Reflection**. Reflection. Emit riguarda la generazione dinamica del codice e la compilazione del codice JIT e la compilazione in codice nativo. A causa delle limitazioni di iOS (nessuna compilazione JIT), questo non è supportato.
@@ -94,7 +86,6 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
  <a name="Reverse_Callbacks" />
 
-
 ### <a name="reverse-callbacks"></a>Callback inversi
 
 In mono standard è possibile passare C# le istanze delegate al codice non gestito invece di un puntatore a funzione. Il runtime trasforma in genere i puntatori a funzione in un piccolo thunk che consente al codice non gestito di richiamare il codice gestito.
@@ -110,9 +101,7 @@ In mono questi Bridge vengono implementati dal compilatore just-in-time. Quando 
 
 Lo stack di comunicazione remota non è disponibile in Novell. iOS.
 
-
  <a name="Runtime_Disabled_Features" />
-
 
 ## <a name="runtime-disabled-features"></a>Funzionalità disabilitate in fase di esecuzione
 
@@ -125,14 +114,10 @@ Le funzionalità seguenti sono state disabilitate nel runtime iOS di mono:
 - Motore JIT
 - Verifier dei metadati (poiché non esiste alcun JIT)
 
-
  <a name=".NET_API_Limitations" />
-
 
 ## <a name="net-api-limitations"></a>Limitazioni dell'API .NET
 
 L'API .NET esposta è un subset del Framework completo, in quanto non tutti gli elementi sono disponibili in iOS. Per un [elenco degli assembly attualmente supportati](~/cross-platform/internals/available-assemblies.md), vedere le domande frequenti.
-
-
 
 In particolare, il profilo API usato da Novell. iOS non include System. Configuration, pertanto non è possibile usare file XML esterni per configurare il comportamento del runtime.

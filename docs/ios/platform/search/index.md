@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: eb88f7c1de12eee59ea4c2a271079e6b96c29b09
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e64ae5e04fbdd5b4c69a0b00c2bbc087b7cdf62a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286593"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769494"
 ---
 # <a name="search-apis-in-xamarinios"></a>API di ricerca in Novell. iOS
 
@@ -89,8 +89,6 @@ Per ulteriori informazioni, vedere la guida ai [suggerimenti proattivi](~/ios/pl
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato le nuove funzionalità dell'API di ricerca disponibili in iOS 9 per le app Novell. iOS. Sono stati analizzati i metodi [NSUserActivity](nsuseractivity.md), [Spotlight principale](corespotlight.md) e [markup web](web-markup.md) per l'indicizzazione del contenuto. Questa operazione è stata completata con una breve discussione su quando è necessario usare un approccio di ricerca specifico e sui tipi di contenuto da indicizzare.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 4763e73f0eafa24cc4a2fc42a6d69b457d863b8d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d4ed362fdd5587eabc028949b82682922adead0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529158"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760301"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicazioni tra componenti ad accoppiamento debole
 
@@ -123,7 +123,6 @@ In questo esempio, la [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubsc
 ## <a name="summary"></a>Riepilogo
 
 La classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) di Xamarin.Forms implementa il modello di pubblicazione-sottoscrizione, consentendo la comunicazione basata su messaggi tra componenti che non è pratico collegare con riferimenti a oggetti e tipi. Questo meccanismo consente agli editori e ai sottoscrittori di comunicare senza avere un riferimento reciproco, contribuendo a ridurre le dipendenze tra i componenti, consentendo allo stesso tempo di sviluppare e testare i componenti in modo indipendente.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

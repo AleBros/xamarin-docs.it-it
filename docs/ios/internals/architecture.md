@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d59a295961c25ecfcc99bb54fdc188c957cf3ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b0cece7f553d0169c311e6614428ed37c5c77813
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291949"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768526"
 ---
 # <a name="ios-app-architecture"></a>Architettura app iOS
 
@@ -93,7 +93,6 @@ L'attributo `[Export]` required contiene una stringa, ovvero il selettore usato 
 
 Esistono due tipi di registrar usati in Novell. iOS, dinamici e statici:
 
-
 - **Registrar dinamici** : il registrar dinamico esegue la registrazione di tutti i tipi nell'assembly in fase di esecuzione. Questa operazione viene eseguita usando le funzioni fornite dall' [API di runtime di Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Il registrar dinamico ha pertanto un avvio più lento, ma un tempo di compilazione più rapido. Questo è il valore predefinito per il simulatore iOS. Le funzioni native, in genere in C, denominate trampolini, vengono usate come implementazioni del metodo quando si usano i registrar dinamici. Variano a seconda delle diverse architetture.
 
 - **Registrar statici** : il registrar statico genera codice Objective-C durante la compilazione, che viene quindi compilato in una libreria statica e collegato all'eseguibile. Questo consente un avvio più rapido, ma richiede più tempo durante la fase di compilazione. Viene usato per impostazione predefinita per le compilazioni di dispositivi. Il registrar statico può essere usato anche con il simulatore iOS `--registrar:static` passando `mtouch` come attributo nelle opzioni di compilazione del progetto, come illustrato di seguito:
@@ -114,7 +113,6 @@ A seconda del tipo di progetto, vengono eseguite le operazioni seguenti:
 Tutta questa sequenza di avvio viene compilata in una libreria statica, che viene quindi collegata all'eseguibile finale in modo che l'app sappia come uscire da zero.
 
 A questo punto l'app è stata avviata, mono è in esecuzione, il codice è gestito ed è noto come chiamare il codice nativo e richiamarlo. L'operazione successiva consiste nell'iniziare ad aggiungere controlli e rendere l'app interattiva.
-
 
 ## <a name="generator"></a>Generator
 
@@ -165,7 +163,6 @@ A un livello elevato, ottiene questo risultato eseguendo le attività seguenti:
 - Se è abilitato il collegamento, eseguire il linker gestito per ottimizzare gli assembly mediante l'estrazione di parti inutilizzate.
 - Compilazione AOT.
 - Creare un eseguibile nativo, che restituisce una serie di librerie statiche, una per ogni assembly, collegate all'eseguibile nativo, in modo che il file eseguibile nativo sia costituito dal codice dell'utilità di avvio, dal codice del registrar (se statico) e da tutti gli output dell'AOT compilatore
-
 
 Per informazioni più dettagliate sul linker e su come viene usato, vedere la guida del [linker](~/ios/deploy-test/linker.md) .
 

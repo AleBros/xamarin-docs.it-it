@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
-ms.translationtype: HT
+ms.openlocfilehash: ff2b481fda34bc7a75c88c72a5e30f00c4b70d9d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864217"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754018"
 ---
 # <a name="deployment-and-testing"></a>Distribuzione e test
 
 Questa sezione include guide che illustrano come testare un'applicazione, ottimizzarne le prestazioni, prepararla per il rilascio, firmarla con un certificato e pubblicarla in un app store.
-
 
 ## <a name="application-package-sizesapp-package-sizemd"></a>[Dimensioni del pacchetto dell'applicazione](app-package-size.md)
 
@@ -62,7 +61,6 @@ Esistono varie tecniche per incrementare le prestazioni delle applicazioni compi
 ## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Profilatura delle app Android](~/android/deploy-test/profiling.md)
 
 Questa guida spiega come usare gli strumenti del profiler per esaminare le prestazioni e l'utilizzo della memoria di un'app Android.
-
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[Preparazione di un'applicazione per il rilascio](~/android/deploy-test/release-prep/index.md)
 

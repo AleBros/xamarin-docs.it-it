@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 25. Tipi di pagina
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 25. Tipi di pagina'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 25. Tipi di pagina'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db6c329c029f52180fe508f277a1cf4834ab493a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b86f2d7216a6344b14fc4d8c538ea68871eda5ae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331811"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760539"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Riepilogo del capitolo 25. Tipi di pagina
 
@@ -111,8 +111,6 @@ Il [ **StudentNotes** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 Il [ **MultiTabbedColor** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MultiTabbedColors) nell'esempio il [ `NamedColor` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) classe la [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) libreria. Il [MultiTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/MultiTabbedColors/MultiTabbedColors/MultiTabbedColors/MultiTabbedColorsPage.xaml) file imposta il `DataTemplate` proprietà della `TabbedPage` a un struttura ad albero visuale a partire `ContentPage` che contiene le associazioni alle proprietà di `NamedColor` (tra cui un'associazione per il `Title` proprietà).
 
 Si tratta tuttavia causare problemi con iOS. Possono essere visualizzati solo alcuni degli elementi e non vi è alcuna tecnica efficace per concedere loro le icone.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

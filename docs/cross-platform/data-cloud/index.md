@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: conceptdev
 ms.author: crdun
 ms.date: 10/09/2017
-ms.openlocfilehash: 0979a0b65cc3d5b4944dadaf67aaa14cf1b3cf73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287594"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766095"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e Novell
 
@@ -40,7 +40,6 @@ Le app possono quindi accedere a servizi aggiuntivi come Office 365.
 L'API Web di Microsoft espone un'interfaccia simile a REST che può essere facilmente utilizzata dalle applicazioni Novell.
 Puoi creare facilmente un [sito Web di Azure](https://trywebsites.azurewebsites.net/) e creare un'app basata su WebAPI per la connessione alle app Novell.
 
-
 ### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introduzione ai servizi Web](~/cross-platform/data-cloud/web-services/index.md)
 
 Questa esercitazione illustra come integrare le tecnologie REST, WCF e servizi Web SOAP con le applicazioni per dispositivi mobili Novell. Esamina diverse implementazioni del servizio, valuta gli strumenti e le librerie disponibili per integrarli e fornisce modelli di esempio per l'utilizzo dei dati del servizio. Infine, viene fornita una panoramica di base della creazione di un servizio Web RESTful per l'utilizzo con un'applicazione per dispositivi mobili Novell.
@@ -56,7 +55,6 @@ Oltre agli esempi di [documentazione](https://github.com/xamarin/mobile-samples/
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) : esempio per la [serie di architetture](https://www.microsoft.com/net/learn/architecture) di eBook.
 - [Dedriving](https://azure.microsoft.com/campaigns/mydriving/) : esempio di Azure + sacco dalla Build 2016.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: b014c84a7bb23e723fbfbb7ead5e8dc9d9fdc549
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281698"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770330"
 ---
 # <a name="images-in-xamarinmac"></a>Immagini in Novell. Mac
 
@@ -36,7 +36,6 @@ MacOS fornisce inoltre un set di immagini predefinite che possono essere usate i
 [![Esempio di esecuzione dell'app](image-images/intro01.png "Esempio di esecuzione dell'app")](image-images/intro01-large.png#lightbox)
 
 In questo articolo verranno illustrate le nozioni di base per l'uso di immagini e icone in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
-
 
 ## <a name="adding-images-to-a-xamarinmac-project"></a>Aggiunta di immagini a un progetto Novell. Mac
 
@@ -101,7 +100,6 @@ Per aggiungere un nuovo catalogo asset al progetto:
 
 Da qui è possibile usare la raccolta in modo analogo alla raccolta **assets. xcassets** predefinita inclusa automaticamente nel progetto.
 
-
 ### <a name="adding-images-to-resources"></a>Aggiunta di immagini alle risorse
 
 > [!IMPORTANT]
@@ -132,7 +130,6 @@ Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# c
 
 Qualsiasi asset grafico aggiunto a un'applicazione Novell. Mac (icone, controlli personalizzati, cursori personalizzati, immagini personalizzate e così via) deve disporre di versioni ad alta risoluzione, oltre alle versioni di risoluzione standard. Questa operazione è necessaria in modo che l'applicazione abbia un aspetto ottimale quando viene eseguita in un computer Mac dotato di display retina.
 
-
 ### <a name="adopt-the-2x-naming-convention"></a>Adottare la @2x convenzione di denominazione
 
 > [!IMPORTANT]
@@ -150,7 +147,6 @@ Quando vengono aggiunti a un progetto, vengono visualizzati nel modo seguente:
 Quando un'immagine viene assegnata a un elemento dell'interfaccia utente in Interface Builder, è sufficiente selezionare il file in _ImageName_ **.** _nome file-formato estensione_ (esempio: **Tags. png**). Per usare un'immagine nel C# codice, è necessario scegliere il file in _ImageName_ **.** _nome file-formato estensione_ .
 
 Quando l'applicazione Novell. Mac viene eseguita in un Mac, _ImageName_ **.** _nome file:_ l'immagine del formato dell'estensione verrà usata per le visualizzazioni **ImageName@2x.filename-extension** di risoluzione standard. l'immagine verrà selezionata automaticamente nei computer Mac di base della retina.
-
 
 ## <a name="using-images-in-interface-builder"></a>Uso di immagini in Interface Builder
 
@@ -444,12 +440,9 @@ Output di esempio:
 
 Per ulteriori informazioni sull'utilizzo delle visualizzazioni struttura, consultare la documentazione relativa alle [visualizzazioni struttura](~/mac/user-interface/outline-view.md) .
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio l'uso di immagini e icone in un'applicazione Novell. Mac. Abbiamo visto i diversi tipi e usi delle immagini, come usare immagini e icone nei Interface Builder di Xcode e come lavorare con immagini e icone nel C# codice.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

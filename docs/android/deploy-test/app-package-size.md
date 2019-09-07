@@ -7,22 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 6d391bd804e1c59d06d78dd7cffe3f11f9276468
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525788"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754643"
 ---
 # <a name="application-package-size"></a>Dimensioni del pacchetto dell'applicazione
 
 _Questo articolo esamina le parti costituenti di un pacchetto dell'applicazione Xamarin.Android e le strategie associate che possono essere usate per una distribuzione efficiente del pacchetto durante le fasi di debug e rilascio dello sviluppo._
 
-
 ## <a name="overview"></a>Panoramica
 
 Xamarin.Android usa svariati meccanismi per ridurre al minimo le dimensioni del pacchetto, mantenendo al contempo l'efficienza del processo di distribuzione di debug e rilascio. In questo articolo viene esaminato il flusso di lavoro di distribuzione di rilascio e debug e viene illustrato come la piattaforma Xamarin.Android assicura che vengano compilati e rilasciati pacchetti dell'applicazione di piccole dimensioni.
-
 
 ## <a name="release-packages"></a>Rilasciare i pacchetti
 
@@ -41,7 +39,6 @@ Come si può vedere, viene rimossa una quantità significativa di librerie di cl
 ![Dimensioni del pacchetto ApiDemo dopo il collegamento](app-package-size-images/api-demo-package-size-after-linker.png)
 
 Come illustrato qui, le dimensioni del pacchetto dell'applicazione saranno in genere maggiori di circa 2,9 MB rispetto a quelle dell'applicazione e delle dipendenze.
-
 
 ## <a name="debug-packages"></a>Eseguire il debug dei pacchetti
 
@@ -75,11 +72,9 @@ Per abilitare *Distribuzione rapida di assembly*, seguire questa procedura:
 
 4. Fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo Opzioni progetto.
 
-
 La prossima volta che l'applicazione verrà compilata per il debug, gli assembly verranno installati direttamente nel dispositivo (se non lo sono già) e un pacchetto dell'applicazione di dimensioni inferiori (che non include gli assembly) verrà installato nel dispositivo. In questo modo le modifiche apportate all'applicazione saranno operative per il test più velocemente.
 
 Anche se la prima distribuzione del runtime condiviso e della piattaforma condivisa richiede tempo, ogni volta che si apporta una modifica all'applicazione, è possibile distribuire la nuova versione rapidamente e senza problemi e poter quindi avere un ciclo veloce di modifica/distribuzione/esecuzione.
-
 
 ## <a name="summary"></a>Riepilogo
 

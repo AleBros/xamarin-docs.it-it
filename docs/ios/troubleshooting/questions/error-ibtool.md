@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 695410937e82b885e31827d02f5fefd138497523
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39b522af5bdc3587e3d5aa1451ed4879c6af65f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290281"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769330"
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Errore IBTool: Non è stato possibile completare l'operazione.
 
@@ -63,4 +63,3 @@ Dopo questa modifica, sarà necessario aggiornare lo storyboard e `.xib` i file 
 ### <a name="next-steps"></a>Fasi successive
 
 Per ulteriore assistenza, per contattarci o se il problema persiste anche dopo aver utilizzato le informazioni sopra riportate, vedere [quali sono le opzioni di supporto disponibili per Novell?](~/cross-platform/troubleshooting/support-options.md) per informazioni sulle opzioni di contatto, suggerimenti, nonché su come archiviare un nuovo bug se necessario . 
-

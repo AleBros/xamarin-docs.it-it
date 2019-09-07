@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: db666fc6a547e3fa089475ba5912774c1af3be0d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 551dea5455ffd060d808aa11e8996c5984745fda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650753"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771903"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Evidenziazione di un'area circolare su una mappa
 
@@ -305,7 +305,6 @@ Questo metodo esegue le operazioni seguenti, a condizione che il renderer person
 - Il cerchio viene creato creando un'istanza di un oggetto `MapPolygon`. La classe `MapPolygon` viene usata per visualizzare una forma multipunto sulla mappa mediante l'impostazione della relativa proprietà `Path` su un oggetto `Geopath` che contiene le coordinate della forma.
 - Viene eseguito il rendering del poligono sulla mappa aggiungendolo alla raccolta `MapControl.MapElements`.
 
-
 ```
 List<Position> GenerateCircleCoordinates(Position position, double radius)
 {
@@ -331,7 +330,6 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato come aggiungere una sovrimpressione circolare a una mappa per evidenziare un'area circolare della mappa stessa.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: e5b23973d7784a9116d4c82ef6d892aacbf584a1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0784fe5fe42fc82d7067c976bdda6f0436e140b5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524467"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757569"
 ---
 # <a name="using-the-contacts-contentprovider"></a>Uso del ContentProvider Contacts
 
@@ -30,7 +30,6 @@ Esistono tre modi per creare un cursore dall'URI:
 1. **CursorLoader (). LoadInBackground ()** &ndash; introdotto in Android 3,0 (livello API 11), `CursorLoader` è ora il modo migliore per utilizzare un `ContentProvider` . `CursorLoader`esegue una query su un thread in background in modo che l'interfaccia utente non sia bloccata. `ContentResolver`
    È possibile accedere a questa classe nelle versioni precedenti di Android usando la libreria di compatibilità V4.
 
-
 Ognuno di questi metodi ha lo stesso set di input di base:
 
 - **URI** di Nome completo dell'oggetto `ContentProvider`. &ndash;
@@ -38,8 +37,6 @@ Ognuno di questi metodi ha lo stesso set di input di base:
 - **Selezione** di Simile a una clausola `WHERE`SQL. &ndash;
 - **SelectionArgs** &ndash; Parametri da sostituire nella selezione.
 - **SortOrder** &ndash; Colonne in base alle quali eseguire l'ordinamento.
-
-
 
 ## <a name="creating-inputs-for-a-query"></a>Creazione di input per una query
 
@@ -58,13 +55,9 @@ string[] projection = {
 
 Per questo esempio `selection`,, `selectionArgs` e `sortOrder` verranno ignorati impostando tali elementi su `null`.
 
-
-
 ## <a name="creating-a-cursor-from-a-content-provider-uri"></a>Creazione di un cursore da un URI del provider di contenuti
 
 Una volta creati gli oggetti Parameter, è possibile utilizzarli in uno dei tre modi seguenti:
-
-
 
 ### <a name="using-a-managed-query"></a>Utilizzo di una query gestita
 
@@ -75,8 +68,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 ```
 
 Questo cursore verrà gestito da Android, quindi non è necessario chiuderlo.
-
-
 
 ### <a name="using-contentresolver"></a>Uso di ContentResolver
 
@@ -95,8 +86,6 @@ cursor.Close();
 
 In alternativa, è possibile chiamare `StartManagingCursor()` e `StopManagingCursor()` per gestire il cursore. I cursori gestiti vengono automaticamente disattivati e nuovamente sottoposti a query quando le attività vengono arrestate e riavviate.
 
-
-
 ### <a name="using-cursorloader"></a>Uso di CursorLoader
 
 Le applicazioni compilate per Android 3,0 (livello API 11) o versione successiva devono usare questo metodo:
@@ -109,8 +98,6 @@ var cursor = (ICursor)loader.LoadInBackground();
 Garantisce `CursorLoader` che tutte le operazioni del cursore vengano eseguite in un thread in background e possano riutilizzare in modo intelligente un cursore esistente tra le istanze dell'attività quando un'attività viene riavviata (ad esempio, a causa di una modifica della configurazione), anziché ricaricare nuovamente i dati.
 
 Le versioni precedenti di Android possono anche `CursorLoader` usare la classe usando le [librerie di supporto V4](https://developer.android.com/tools/support-library/index.html).
-
-
 
 ## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>Visualizzazione dei dati del cursore con un adapter personalizzato
 
@@ -188,8 +175,6 @@ L'immagine viene visualizzata (se esistente) usando l'URI del file di immagine n
 Usando un modello di codice simile, l'applicazione può accedere a un'ampia gamma di dati di sistema, tra cui foto, video e musica dell'utente.
 Alcuni tipi di dati richiedono autorizzazioni speciali da richiedere nel **file file AndroidManifest. XML**del progetto.
 
-
-
 ## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>Visualizzazione dei dati del cursore con un SimpleCursorAdapter
 
 Il cursore può essere visualizzato anche con un `SimpleCursorAdapter` (anche se verrà visualizzato solo il nome, non la foto). Questo codice illustra come usare un oggetto `ContentProvider` con `SimpleCursorAdapter` (questo codice non viene visualizzato nell'esempio):
@@ -209,7 +194,6 @@ listView.Adapter = adapter;
 ```
 
 Per ulteriori informazioni sull'implementazione `SimpleCursorAdapter`di, vedere gli [Adapter e ListView](~/android/user-interface/layouts/list-view/index.md) .
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

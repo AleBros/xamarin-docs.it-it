@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 3be55c2149aa58bf6d8462e5c1ff24166078355f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525016"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755896"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manuale del file APK
-
 
 Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzione, il file APK deve essere firmato, in modo che possa essere eseguito in un dispositivo Android. Questo processo viene gestito in genere con l'ambiente IDE. In alcune situazioni, tuttavia, è necessario firmare il file APK manualmente dalla riga di comando. La firma di un file APK prevede i passaggi seguenti:
 
@@ -27,15 +26,11 @@ Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzio
 
 L'ordine dei passaggi è importante e dipende dallo strumento usato per firmare il file APK. Quando si usa **apksigner**, è importante prima eseguire **Zipalign** per l'applicazione e quindi firmare quest'ultima con **apksigner**.  Se per firmare il file APK è necessario usare **jarsigner**, è importante prima firmare il file APK e quindi eseguire **Zipalign**. 
 
-
-
 ## <a name="prerequisites"></a>Prerequisiti
 
 Questa guida descrive principalmente l'uso dell'utilità **apksigner** presente negli strumenti di compilazione di Android SDK versione 24.0.3 o successiva. La guida presuppone che sia già stato compilato un file APK.
 
 Le applicazioni compilate con una versione precedente degli strumenti di compilazione di Android SDK devono usare **jarsigner** come descritto in [Firmare il file APK con jarsigner](#Sign_the_APK_with_jarsigner) più avanti.
-
-
 
 ## <a name="create-a-private-keystore"></a>Creare un archivio chiavi privato
 
@@ -48,8 +43,6 @@ Per questo motivo, per la firma delle applicazioni è necessario creare e usare 
 
 È importante proteggere l'archivio chiavi. In caso di smarrimento, non sarà possibile pubblicare gli aggiornamenti dell'applicazione con Google Play.
 L'unica soluzione al problema causato dallo smarrimento dell'archivio chiavi è la creazione di un nuovo archivio chiavi che consenta di firmare nuovamente il file APK con una nuova chiave. Sarà quindi necessario inviare una nuova applicazione. La vecchia applicazione dovrà essere rimossa da Google Play. Analogamente, se il nuovo archivio chiavi viene compromesso o distribuito pubblicamente, è possibile che vengano distribuite versioni non ufficiali o dannose di un'applicazione.
-
-
 
 ### <a name="create-a-new-keystore"></a>Creare un nuovo archivio chiavi
 
@@ -95,7 +88,6 @@ Per elencare le chiavi archiviate in un archivio chiavi, usare **keytool** con l
 $ keytool -list -keystore xample.keystore
 ```
 
-
 ## <a name="zipalign-the-apk"></a>Eseguire Zipalign per il file APK
 
 Prima di firmare un file APK con **apksigner**, è importante ottimizzare il file usando lo strumento **zipalign** di Android SDK. **zipalign** ristruttura le risorse in un file APK secondo limiti di 4 byte. Questo allineamento consente ad Android di caricare rapidamente le risorse dal file APK, aumentando le prestazioni dell'applicazione e riducendo potenzialmente l'uso di memoria. Xamarin.Android esegue un controllo in runtime per determinare se il file APK è stato sottoposto a Zipalign. In caso negativo, l'applicazione non viene eseguita.
@@ -105,7 +97,6 @@ Il comando seguente usa il file APK firmato e genera l'APK **helloworld.apk** fi
 ```shell
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
-
 
 ## <a name="sign-the-apk"></a>Firmare il pacchetto APK
 
@@ -129,7 +120,6 @@ Vedere la [documentazione di Google](https://developer.android.com/studio/comman
 > [!NOTE]
 > In base al [problema Google 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** risulta "mancante" da Android SDK. La soluzione alternativa per questo problema consiste nell'installare gli strumenti di compilazione di Android SDK versione 25.0.3 e usare la versione di **apksigner** corrispondente.  
 
-
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### <a name="sign-the-apk-with-jarsigner"></a>Firmare il file APK con jarsigner
@@ -147,8 +137,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 
 > [!NOTE]
 > Quando si usa **jarsigner**, è importante _prima di tutto_ firmare il file APK e quindi usare **zipalign**.  
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

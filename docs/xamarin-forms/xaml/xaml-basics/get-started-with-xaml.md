@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 14f7692c88f5047f1250707940e3871371aecc8b
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fde0a5145f82e75fd6d75280c1cd2230f35a4c29
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227963"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772807"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introduzione a XAML
 
@@ -448,8 +448,6 @@ Dopo aver `InitializeComponent` restituisce il controllo torna al costruttore, g
 ## <a name="summary"></a>Riepilogo
 
 Con questa introduzione, si è visto come un file XAML e un file di codice contribuiscono a una definizione di classe e come interagiscono i file XAML e codice. Ma XAML ha anche univoca sintattiche diverse funzionalità che consentono di poter essere utilizzato in modo molto flessibile. È possibile iniziare a esplorare questi elementi nel [parte 2. Sintassi XAML essenziale](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

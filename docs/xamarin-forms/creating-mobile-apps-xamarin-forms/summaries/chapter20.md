@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 20. / O asincrono e file
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 20. / O asincrono e file'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 20. / O asincrono e file'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 283273e6ee28cc5cd1a61169f38bfcd1dd1726d8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650456"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771043"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Riepilogo del capitolo 20. / O asincrono e file
 
@@ -166,8 +166,6 @@ Il [ **MandelbrotXF** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 ## <a name="back-to-the-web"></a>Tornare al web
 
 Il [ `WebRequest` ](xref:System.Net.WebRequest) usato in alcuni esempi di classe utilizza un vecchio protocollo asincrono denominato modello di programmazione asincrona o Application Performance Monitoring. È possibile convertire tale classe al protocollo TAP moderne usando uno dei `FromAsync` metodi nel [ `TaskFactory` ](xref:System.Threading.Tasks.TaskFactory`1) classe. Il [ **ApmToTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap) esempio viene illustrata questa.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d3f756b1a551c7b6bcbe48129235d537312edff6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73f44acad3e30e4301a69e5f2422cd4dd1a3dbf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282143"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766568"
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Creazione di nuovi progetti di libreria specifici per la piattaforma per NuGet
 
@@ -55,7 +55,6 @@ Vengono creati più assembly e incorporati in un singolo pacchetto NuGet. Gli st
 
     ![](platform-specific-images/create-nuget-package.png "Il file del pacchetto NuGet verrà salvato nella cartella bin debug o release, a seconda della configurazione")
 
-
 ## <a name="verifying-the-output"></a>Verifica dell'output
 
 I pacchetti NuGet sono anche file ZIP, quindi è possibile controllare la struttura interna del pacchetto generato.
@@ -63,7 +62,6 @@ I pacchetti NuGet sono anche file ZIP, quindi è possibile controllare la strutt
 Questa schermata mostra il contenuto di un NuGet specifico della piattaforma che supporta iOS e Android ed è stato selezionato due assembly di riferimento:
 
 ![](platform-specific-images/nuget-output.png "File contenuti nel pacchetto NuGet")
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android Multiscreen: Guida rapida'
+title: 'Hello, Android Multiscreen: Guida introduttiva'
 description: Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643969"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755842"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Guida rapida
+# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Guida introduttiva
 
 _Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android._
 
@@ -215,7 +215,6 @@ Aggiungere il nome e il valore della stringa `translationHistory` al file **Stri
 Il testo del pulsante **Translation History** (Cronologia delle conversioni) dovrebbe aggiornarsi per riflettere il nuovo valore della stringa:
 
 [![Il pulsante riflette il nuovo valore della stringa](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
-
 
 Dopo aver selezionato il pulsante **Translation History** (Cronologia delle conversioni) nell'area di progettazione, aprire la scheda **Comportamento** nel **riquadro delle proprietà** e fare doppio clic sulla casella di controllo **Abilitato**  per disabilitare il pulsante. Il pulsante diventerà più scuro all'interno dell'area di progettazione:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 66bea7d2a9660018c7cec9b7bafeadafd5029ed9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292531"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769430"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in Novell. iOS
 
@@ -128,9 +128,6 @@ Per fornire la chiave `NSSpeechRecognitionUsageDescription` necessaria `Info.pli
 
 > [!IMPORTANT]
 > Se non si riesce a fornire una `Info.plist` delle chiavi`NSSpeechRecognitionUsageDescription` precedenti `NSMicrophoneUsageDescription`(o), l'app potrebbe non riuscire senza preavviso quando si tenta di accedere al riconoscimento vocale o al microfono per l'audio Live.
-
-
-
 
 ### <a name="requesting-authorization"></a>Richiesta dell'autorizzazione
 
@@ -398,8 +395,6 @@ Apple presenta il suggerimento seguente per essere trasparente e rispettando la 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato il nuovo Speech API e ha illustrato come implementarlo in un'app Novell. iOS per supportare il riconoscimento vocale continuo e la trascrizione vocale (da flussi audio in tempo reale o registrato) in testo. 
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

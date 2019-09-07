@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 06/17/2016
-ms.openlocfilehash: 188bc8a04b62c97e9d6f80669fe50da1bf4d9340
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b4934fa82d862ad2e8ab53579137873ed9e4bcca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289543"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770170"
 ---
 # <a name="common-patterns-and-idioms-in-xamarinmac"></a>Modelli comuni e idiomi in Novell. Mac
 
@@ -54,8 +54,6 @@ Per altre informazioni sull'uso delle visualizzazioni tabella in un'applicazione
 I protocolli in Objective-C possono essere confrontati C#con le interfacce in e in molti casi vengono usati in situazioni analoghe. Ad esempio, `NSTableView` l'esempio precedente, sia il delegato che l'origine dati sono in realtà protocolli. Novell. Mac espone tali classi come classi base con i metodi virtuali di cui è possibile eseguire l'override. La differenza principale tra C# le interfacce e i protocolli Objective-C è che alcuni metodi in un protocollo possono essere facoltativi per l'implementazione. Sarà necessario esaminare la documentazione e/o la definizione di un'API per determinare cosa è facoltativo.
 
 Per ulteriori informazioni, vedere la documentazione relativa [a delegati, protocolli ed eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md) .
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

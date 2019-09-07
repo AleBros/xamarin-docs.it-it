@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/06/2016
-ms.openlocfilehash: 7d4ad4ca7f15e20bed3cd9bb4050c5a0a9cba63a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d888cbc779cbb4fcaf8312b87627f1bd18fe719
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284172"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768397"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilizzo di tabelle e celle in Novell. iOS
 
@@ -36,11 +36,11 @@ In questi articoli verranno esaminati in maniera completa l'utilizzo delle tabel
  [Personalizzazione dell'aspetto di una tabella](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [Modifica](~/ios/user-interface/controls/tables/editing.md)
- 
+
  [Azioni riga](~/ios/user-interface/controls/tables/row-action.md)
 
  [Creazione di tabelle in uno storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
- 
+
  [Ridimensionamento automatico dell'altezza delle righe](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 ## <a name="related-links"></a>Collegamenti correlati

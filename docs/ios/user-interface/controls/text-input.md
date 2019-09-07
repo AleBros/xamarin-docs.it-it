@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: ef9067f3a0694c66d21d6614277e8543aebbc299
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f47ebdd8c1ba220229c6e652af99e8fa3ae2960
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279347"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768821"
 ---
 # <a name="text-input-in-xamarinios"></a>Input di testo in Novell. iOS
 
@@ -27,7 +27,6 @@ Gli screenshot seguenti illustrano le icone per questi controlli, che si trovano
 Dopo aver denominato l'Outlet e salvato il file storyboard, Visual Studio per Mac aggiornerà la `.designer.cs` classe parziale ed è possibile aggiungere C# il codice che fa riferimento al controllo al file di classe. Ogni controllo dispone di proprietà ed eventi univoci a cui è possibile accedere nel C# codice.
 
  <a name="UITextField" />
-
 
 ## <a name="uitextfield"></a>UITextField
 
@@ -46,7 +45,6 @@ Questi controlli sono illustrati di seguito:
 - **Aspetto** : controlla lo stile di aspetto della tastiera e sarà scuro o chiaro.
 - **Chiave restituita** : modificare l'etichetta della chiave restituita in modo da riflettere meglio l'azione che verrà eseguita. I valori supportati includono go, join, Next, Route, done e search.
 - **Secure** : indica se l'input è mascherato, ad esempio per un input di password.
-
 
 Se un UITextField chiamato `textfield1` è stato aggiunto a una schermata con la finestra di progettazione, è possibile impostare o modificare le C# proprietà in come indicato di seguito:
 
@@ -72,7 +70,6 @@ View.Add(textfield1);
 
  <a name="UITextView" />
 
-
 ## <a name="uitextview"></a>UITextView
 
 Il `UITextView` controllo può essere usato per visualizzare il testo di sola lettura o per accettare l'input di testo su più righe. Dispone di molte delle stesse opzioni `UITextField` di (ad esempio, maiuscole e minuscole, correzione e così via).
@@ -84,7 +81,6 @@ Le proprietà specifiche includono:
 - **Comportamento** : indica se il testo è modificabile o di sola lettura.
 - **Rilevamento** : rileva e converte i dati inseriti in elementi selezionabili, ad esempio numeri di telefono che possono attivare una chiamata, indirizzi che diventano collegamenti a mappe, URL aperti in Safari o date e ore che diventano eventi nel calendario.
 
-
 Se un UITextView è stato aggiunto a una schermata con la finestra di progettazione, è possibile impostare o modificare le proprietà come segue:
 
 ```csharp
@@ -92,8 +88,6 @@ textview1.Text = "Lorem ipsum..."; // lots of text can go here
 textview1.Editable = true;
 textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorType.Link;
 ```
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

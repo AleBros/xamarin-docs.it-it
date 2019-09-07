@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 92f028a632a32392a349c06c0b7ab8e15b308b9f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ef3d25974f61bb1ac763831ab9a1f6b62d11abbe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279527"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769673"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurare l'app tvOS in iTunes Connect
 
 _Questo articolo fornisce una Guida aggiuntiva a iOS configurare l'app in iTunes Connect per le configurazioni specifiche di tvOS._
-
 
 Oltre alle configurazioni e alle impostazioni che è necessario eseguire seguendo la Guida [configurare l'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) per iOS, questo documento illustra le configurazioni specifiche che saranno necessarie per rilasciare un'app Novell. TvOS nell'app Apple TV Negozio.
 
@@ -78,8 +77,6 @@ Quando si è pronti per inviare l'app Novell. tvOS all'App Store di Apple TV per
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha fornito una panoramica dell'impostazione specifica tvOS necessaria in iTunes Connect per rilasciare un'app tvOS all'App Store di Apple TV.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

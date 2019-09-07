@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 67ee8f1ef7f254eb77cfb186a478993b6fd3847c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11c022298cbac60b86f4ef549e30cef3aa4d4660
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280030"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753412"
 ---
 # <a name="document-picker-in-xamarinios"></a>Selezione documenti in Novell. iOS
 
@@ -202,7 +202,6 @@ Nel diagramma precedente:
 1. L'applicazione crea un nuovo file nel contenitore dell'applicazione.
 1. Si verifica un ritardo prima `NSMetadataQuery` che venga visualizzata la modifica al contenitore dell'applicazione e viene `NSMetadata` creato il record necessario.
 
-
 A causa del ritardo nella creazione del `NSMetadata` record, l'applicazione deve avere due origini dati aperte: una per le modifiche ai file locali e una per le modifiche basate sul cloud.
 
 ### <a name="stitching"></a>Unione
@@ -218,14 +217,10 @@ Utilizzando l'Unione nel diagramma precedente:
 1. Un hook nel contenitore dell'applicazione Visualizza la modifica e chiama `NSMetadataQuery` per creare il record `NSMetadata` necessario.
 1. Il `NSMetadata` record viene creato direttamente dopo il file e reso disponibile per l'applicazione.
 
-
 Tramite l'Unione dell'applicazione non è più necessario aprire un'origine dati per monitorare le modifiche ai file locali e basati sul cloud. A questo punto l'applicazione può `NSMetadataQuery` basarsi direttamente su.
 
 > [!IMPORTANT]
 > Il ricamo funziona solo se l'applicazione usa il coordinamento dei file, come illustrato nella sezione precedente. Se il coordinamento dei file non viene usato, le API usano per impostazione predefinita il comportamento pre iOS 8 esistente.
-
-
-
 
 ### <a name="new-ios-8-metadata-features"></a>Nuove funzionalità dei metadati di iOS 8
 
@@ -236,12 +231,10 @@ Le nuove funzionalità seguenti sono state aggiunte a `NSMetadataQuery` in iOS 8
 - È disponibile una nuova `NSUrl_PromisedItems` API che consente di accedere agli attributi dei file che possono o meno disporre di contenuto localmente.
 - Utilizzare il `GetPromisedItemResourceValue` metodo per ottenere informazioni su un determinato file o utilizzare il `GetPromisedItemResourceValues` metodo per ottenere informazioni su più file alla volta.
 
-
 Per la gestione dei metadati sono stati aggiunti due nuovi flag di coordinamento dei file:
 
 - `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
 - `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
-
 
 Con i flag precedenti, non è necessario che il contenuto del file del documento sia disponibile localmente perché venga usato.
 
@@ -256,7 +249,6 @@ using Foundation;
 using UIKit;
 using ObjCRuntime;
 using System.IO;
-
 
 #region Static Properties
 public const string TestFilename = "test.txt"; 
@@ -439,7 +431,6 @@ Il modo più semplice per salvare un'anteprima consiste nell' `UIDocument`usare.
 
 Con le nozioni di base sull'uso dei documenti basati su iCloud, insieme alle modifiche apportate all'API esistente, è possibile implementare il controller di visualizzazione selezione documento in un'applicazione Novell iOS 8 per dispositivi mobili.
 
-
 ## <a name="enabling-icloud-in-xamarin"></a>Abilitazione di iCloud in Novell
 
 Prima di poter usare la selezione documenti in un'applicazione Novell. iOS, è necessario abilitare il supporto iCloud nell'applicazione e tramite Apple. 
@@ -451,8 +442,6 @@ La procedura seguente illustra il processo di provisioning per iCloud.
 3. Creare un profilo di provisioning che includa questo ID app.
 
 La Guida [uso delle funzionalità](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) illustra i primi due passaggi. Per creare un profilo di provisioning, seguire la procedura descritta nella guida del [profilo di provisioning](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
-
-
 
 La procedura seguente illustra il processo di configurazione dell'applicazione per iCloud:
 
@@ -539,7 +528,6 @@ namespace DocPicker
             Query.StartQuery ();
             Console.WriteLine ("Querying: {0}", Query.IsGathering);
         }
-
 
         [Export("queryDidFinishGathering:")]
         public void DidFinishGathering (NSNotification notification) {
@@ -833,7 +821,6 @@ Diamo un'occhiata all'accesso a un documento esterno prima di iOS 8:
 1. Il documento è selezionato e `UIDocumentInteractionController` viene usato per inviare il documento alla nuova applicazione.
 1. Infine, una copia del documento originale viene inserita nel contenitore della nuova applicazione.
 
-
 Da qui è disponibile il documento per l'apertura e la modifica della seconda applicazione.
 
 ### <a name="discovering-documents-outside-of-an-apps-container"></a>Individuazione di documenti all'esterno del contenitore di un'app
@@ -910,20 +897,19 @@ if (presentationPopover!=null) {
 Di seguito è riportato un esempio di come il codice precedente visualizzi una selezione documenti quando viene eseguita su un dispositivo iPhone:
 
 1. L'utente avvia l'applicazione e viene visualizzata l'interfaccia principale:   
- 
+
     [![](document-picker-images/image33.png "Viene visualizzata l'interfaccia principale")](document-picker-images/image33.png#lightbox)
 1. L'utente tocca il pulsante di **azione** nella parte superiore della schermata e viene richiesto di selezionare un **provider di documenti** dall'elenco dei provider disponibili:   
- 
+
     [![](document-picker-images/image34.png "Selezionare un provider di documenti dall'elenco dei provider disponibili")](document-picker-images/image34.png#lightbox)
 1. Il **controller di visualizzazione selezione documento** viene visualizzato per il **provider di documenti**selezionato:   
- 
+
     [![](document-picker-images/image35.png "Viene visualizzato il controller di visualizzazione selezione documento")](document-picker-images/image35.png#lightbox)
 1. L'utente tocca una **cartella del documento** per visualizzarne il contenuto:   
- 
+
     [![](document-picker-images/image36.png "Contenuto della cartella del documento")](document-picker-images/image36.png#lightbox)
 1. L'utente seleziona un **documento** e la **selezione del documento** viene chiusa.
 1. L'interfaccia principale viene visualizzata nuovamente, il **documento** viene caricato dal contenitore esterno e ne viene visualizzato il contenuto.
-
 
 La visualizzazione effettiva del controller di visualizzazione selezione documento dipende dai provider di documenti installati dall'utente sul dispositivo e dalla modalità di selezione dei documenti implementata. Nell'esempio precedente viene usata la modalità di apertura. gli altri tipi di modalità verranno descritti in dettaglio di seguito.
 
@@ -1021,13 +1007,12 @@ if (Bookmark != null) {
 Il controller di visualizzazione selezione documento presenta due modalità operative diverse:
 
 1. **Modalità di apertura** : in questa modalità, quando l'utente seleziona un documento esterno, il selettore dei documenti creerà un segnalibro con ambito di protezione nel contenitore dell'applicazione.   
- 
+
     [![](document-picker-images/image37.png "Segnalibro con ambito di protezione nel contenitore di applicazioni")](document-picker-images/image37.png#lightbox)
 1. **Modalità di importazione** : in questa modalità, quando l'utente seleziona un documento esterno, il selettore del documento non creerà un segnalibro, ma copierà il file in un percorso temporaneo e fornirà l'accesso all'applicazione al documento in questo percorso:   
- 
+
     [![](document-picker-images/image38.png "Il selettore documenti copierà il file in un percorso temporaneo e fornirà l'accesso all'applicazione al documento in questa posizione")](document-picker-images/image38.png#lightbox)   
  Una volta terminata l'applicazione per qualsiasi motivo, il percorso temporaneo viene svuotato e il file viene rimosso. Se l'applicazione deve mantenere l'accesso al file, deve creare una copia e inserirla nel contenitore dell'applicazione.
-
 
 La modalità di apertura è utile quando l'applicazione vuole collaborare con un'altra applicazione e condividere le modifiche apportate al documento con tale applicazione. La modalità di importazione viene usata quando l'applicazione non vuole condividere le modifiche apportate a un documento con altre applicazioni.
 
@@ -1042,7 +1027,6 @@ Per spostare un documento in una posizione esterna, procedere come segue:
 1. Aprire un nuovo controller di visualizzazione selezione documento e passarlo `NSUrl` con la `MoveToService` modalità. 
 1. Una volta che l'utente sceglie una nuova posizione, il documento verrà spostato dalla posizione corrente alla nuova posizione.
 1. Un documento di riferimento verrà scritto nel contenitore dell'applicazione dell'app in modo che l'accesso al file possa essere ancora eseguito dall'applicazione di creazione.
-
 
 Il codice seguente può essere usato per spostare un documento in una posizione esterna:`var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
 
@@ -1067,7 +1051,6 @@ Questa operazione viene implementata usando due estensioni diverse:
 - **Estensione di selezione documento** : fornisce `UIViewController` una sottoclasse che fornisce un'interfaccia grafica per l'utente per scegliere un documento da un percorso di archiviazione alternativo. Questa sottoclasse verrà visualizzata come parte del controller di visualizzazione selezione documento.
 - **Estensione** per la fornitura di file: si tratta di un'estensione non dell'interfaccia utente che gestisce effettivamente il contenuto dei file. Queste estensioni vengono fornite tramite il coordinamento dei `NSFileCoordinator` file (). Questo è un altro caso importante in cui è necessario il coordinamento dei file.
 
-
 Nel diagramma seguente viene illustrato il flusso di dati tipico quando si utilizzano le estensioni del provider di documenti:
 
  [![](document-picker-images/image39.png "Questo diagramma mostra il flusso di dati tipico quando si utilizzano le estensioni del provider di documenti")](document-picker-images/image39.png#lightbox)
@@ -1082,7 +1065,6 @@ Si verifica il seguente processo:
 1. Il coordinatore file chiama l'estensione del provider di file personalizzata per recuperare il file.
 1. Il contenuto del file viene restituito al coordinatore di file.
 1. Il contenuto del file viene restituito all'applicazione.
-
 
 ### <a name="security-and-bookmarks"></a>Sicurezza e segnalibri
 
@@ -1108,7 +1090,6 @@ Si verifica il seguente processo:
 1. `NSUrl`chiama l'estensione del provider di file con l'URL del file.
 1. Il provider di estensione di file accede al file e restituisce il percorso del file a `NSUrl` .
 1. Il percorso del file viene aggregato con le informazioni di sicurezza e restituito all'applicazione.
-
 
 Da qui, l'applicazione può accedere al file e usarlo come di consueto.
 

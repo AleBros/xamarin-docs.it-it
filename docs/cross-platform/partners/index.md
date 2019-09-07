@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 9fbbcab3da0ee09260b56263460d7f7cef4b039b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1cb4080be2bcb421db1e9db08a18b49ad95c4fb7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521771"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765308"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Partner di consulenza certificati per offrire soluzioni per dispositivi mobili
 
@@ -212,14 +212,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Xoriant Corporation](http://www.xoriant.com)|Sunnyvale, CA|Che tu sia una società di tecnologia o un'azienda, un avvio o una fortuna 100, sfrutta il nostro pedigree di progettazione dei prodotti e le competenze tecniche di prossima generazione per innovare le soluzioni che ti consentono di garantirti la competitività.|
 |[Gruppo di tecnologie Yocum](http://ytg.io/)|Distribuito tra gli Stati Uniti|Una società di consulenza completa specializzata in sviluppo di app per dispositivi mobili multipiattaforma, sviluppo Web, progettazione e sviluppo di database e sviluppo di sistemi aziendali.|
 
-
-
 ## <a name="argentina"></a>Argentina
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[D-Genix](http://d-genix.com/)|Rosario, Argentina|DGenix è una società di sviluppo software altamente specializzata dedicata alla fornitura di soluzioni complete e di alta qualità ai nostri clienti dislocati in tutto il mondo|
-
 
 ## <a name="australia"></a>Australia
 
@@ -240,7 +237,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Soluzioni pure](http://www.puresolutions-online.com/Home)|Sydney NSW, Australia|Team impegnato di esperti nei rispettivi campi, appassionato della creazione di soluzioni ottimali attraverso la fusione di business e tecnologia.|
 |[Readify](http://readify.net)|Docklands, VIC 3008 Australia|Readify ha ottenuto il riconoscimento globale per la loro capacità di aiutare i clienti a creare software che guida la collaborazione, la produttività, la crescita aziendale e la redditività. La loro capacità di aiutare i clienti è il risultato diretto dell'applicazione dei processi di sviluppo software per le procedure consigliate e dell'utilizzo di sviluppatori Elite. Consentono di eseguire questa operazione tramite un processo di selezione rigoroso e basato su peer e di continuare a investire nello sviluppo di persone, assicurando che le loro competenze rimangano in primo piano nella Knowledge base del settore.|
 
-
 ## <a name="belgium"></a>Belgio
 
 | Partner | Percorsi | Descrizione |
@@ -253,14 +249,12 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Levelapp](http://www.levelapp.be)|Hoeilaart, Belgio|Levelapp un'agenzia per dispositivi mobili completa. Stiamo agendo come sviluppatori di software. Creiamo applicazioni multipiattaforma che si adattano e spingono alla tua visione strategica. Offriamo valore per clienti, partner e dipendenti. |
 |[RealDolmen](http://www.realdolmen.com/)|Huizingen, Belgio; Kontich, Belgio; Lummen, Belgio; Gand, Belgio; Harelbeke, Belgio; Namur, Belgio; Mons, Belgio|Mobile è il nuovo standard. Quasi tutte le aziende necessitano di servizi mobili o applicazioni per restare competitivi. Tuttavia, una strategia per dispositivi mobili non è sufficiente. tutti gli elementi devono essere completamente integrati nell'infrastruttura ICT generale, tra cui Cloud, sicurezza, ERP e così via. In RealDolmen viene chiamata un'azienda connessa.|
 
-
 ## <a name="brazil"></a>Brasile
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Grupo Viceri](http://www.viceri.com.br)|Jundiaí, Brazil|Sono disponibili servizi Web, sviluppo di app per dispositivi mobili e business intelligence|
 |[Soluzioni superattive](http://www.superactive.com.br/)|Brasile|A superactive é uma empresa especializada em Desenvolvimento de Soluções Tecnológicas inovadoras com Foco na TI estratégica, otimizando processos, de forma a fornecer resultados Rápidos e Seguros para os seus client. |
-
 
 ## <a name="canada"></a>Canada
 
@@ -279,20 +273,17 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[SDA Software Associates Inc.](http://www.sda.com)|Vancouver, BC|Siamo un consulente web e per dispositivi mobili, appassionato di creazione di software utile e affidabile. Microsoft aiuta i nostri clienti ad aumentare la consapevolezza e la lealtà del marchio fornendo esperienze Web e per dispositivi mobili accattivanti e pertinenti.|
 |[Webility Solutions Inc.](http://webility.ca)|Hamilton, in Canada|Soluzioni Web, per dispositivi mobili e Web semi-personalizzate per ottimizzare la tua attività. Il team di sviluppatori esperti di Webility crea soluzioni software personalizzate rapide per il mercato, per ottenere risultati più rapidi.|
 
-
 ## <a name="chile"></a>Cile
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Birdie](http://www.birdie.cl)|Santiago, Cile|Birdie è una società di sviluppo di app|
 
-
 ## <a name="china"></a>Cina
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Software per visualizzazione elevata](http://www.highviewsoft.com)|Pechino, Cina|Il software per la visualizzazione elevata si concentra sulla creazione di applicazioni multipiattaforma e sulla progettazione, sviluppo, implementazione, formazione tecnica e altri servizi di consulenza basati sul cloud.|
-
 
 ## <a name="colombia"></a>Colombia
 
@@ -301,13 +292,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[IDlink](http://www.idlink.co)|Medellín, Colombia|IDlink è una società di consulenza e sviluppo di software specializzata per la progettazione e lo sviluppo di soluzioni di acquisizione automatica e identificazione dei dati (AIDC) basate su RFID e sulla tecnologia del codice a barre|
 |[WorkApps](http://www.workapps.com.co/)|Bogotà, Colombia|WorkApps è una società colombiana fondata dal laureato Sistemista (National University of Colombia). Il servizio genera innovazione nei prodotti sviluppati.|
 
-
 ## <a name="costa-rica"></a>Costa Rica
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Apptividad](http://apptividad.com/)|San Jose, Costa Rica|Apptividad può offrire una maggiore visibilità per la tua azienda o il tuo marchio tramite i canali web, le applicazioni AR e per dispositivi mobili; USA anche la potente integrazione API per i sistemi interni e i partner commerciali.|
-
 
 ## <a name="cyprus"></a>Cipro
 
@@ -315,13 +304,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 | --- | --- | --- |
 |[Informatica di Datatech Soluzioni LTD](http://www.datatech.com.cy)|Cipro|Informatica di Datatech Solutions Ltd è un fornitore leader di soluzioni tecnologiche nei campi di gestione dei contenuti aziendali, gestione della supply chain e soluzioni per dispositivi mobili|
 
-
 ## <a name="czech-republic"></a>Repubblica Ceca
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[DevMasters](http://www.devmasters.cz/)|Praga, Repubblica Ceca|DevMasters è una società IT Ceca incentrata sullo sviluppo di soluzioni e applicazioni|
-
 
 ## <a name="denmark"></a>Danimarca
 
@@ -333,7 +320,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[CommentR DK](http://commentor.dk)|Aalborg, Danimarca|Il commentatore ha fornito da 2000 le applicazioni cruciali per le aziende più grandi in Danimarca|
 |[Miracolo](https://miracle.dk/)|Ballerup, Danimarca|Per miracolo, l'obiettivo è di contribuire alla digitalizzazione della Danimarca. A questo scopo, offriamo soluzioni IT con la massima qualità per le aziende private e pubbliche dalle 3 posizioni in Danimarca|
 
-
 ## <a name="dominican-republic"></a>Repubblica Dominicana
 
 | Partner | Percorsi | Descrizione |
@@ -341,14 +327,12 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Maven S.R.L.](http://www.maven.do)|Repubblica Dominicana|Maven è una piccola azienda con grandi sogni. È stata fondata nel 2012 come metodo per offrire soluzioni software fresche, di qualità superiore e diversificate nella Repubblica Dominicana. Microsoft mira a fornire ai nostri clienti la qualità garantita dello sviluppo di software e, in questo modo, di favorire una relazione di trust e responsabilità verso le proprie esigenze.|
 |[Dominicana Solvex](http://www.solvex.com.do)||Esperienza professionale per i valori Solvex. La società, stabilita nel 2014, dispone ora di 200 ingegneri software di cui oltre il 80% hanno 5 o più anni di esperienza nella distribuzione di software. |
 
-
 ## <a name="egypt"></a>Egitto
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[ITWorx](http://www.itworx.com)|Cairo, Egitto|ITWORX è un'azienda globale di servizi IT che offre soluzioni basate sul cloud e locali alle organizzazioni leader del mondo con particolare attenzione all'analisi avanzata, alla mobilità aziendale, alla gestione delle prestazioni e al CRM.|
 |[Sviluppo Jios](https://www.jiosdev.com/)|Egitto|Lo sviluppo Jios è una società in rapida crescita stabile che fornisce servizi di consulenza e esternalizzazione della tecnologia specializzati in sviluppo di applicazioni personalizzate, servizi cloud e applicazioni per dispositivi mobili. |
-
 
 ## <a name="france"></a>Francia
 
@@ -372,7 +356,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[SFEIR](http://www.sfeir.com)|Neuilly-sur-Seine, Francia; Strasburgo, Francia; Lille, Francia; Leudelange, Lussemburgo|SFEIR est une communauté façonnée par et pour des développeurs talentueux. Nous créons des applications de Pointe et relevons avec nn clients leurs défis Techniques Les Plus Ambitieux.|
 |[SOAT](http://www.soat.fr)|Parigi, Francia|Negli ultimi 15 anni, SOAT ha sviluppato una community di consulenti ed esperti su tecnologie quali Java-JEE, Microsoft, Web e mobile in ambienti Agile. Supportano i clienti nella loro scelta di tecnologia, la progettazione dell'architettura, l'implementazione e l'evoluzione delle informazioni, nonché le aree di competenza, ad esempio la strategia Web o per dispositivi mobili, la migrazione a cloud computing o il realizzazione di oggetti connessi.|
 |[Consulenza Xiomega](http://www.xiomegaconsulting.com/)|Lione, Francia|Stabilito nel 2014, Xiomega Consulting è una società di consulenza dedicata alla consulenza, alla gestione dei progetti e altro ancora.|
-
 
 ## <a name="germany"></a>Germania
 
@@ -399,13 +382,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[XITASO GmbH](http://www.xitaso.com)|Augsburg, Germania|XITASO fornisce servizi di consulenza ai clienti B2B, identifica i potenziali di digitalizzazione, ottimizza i processi aziendali, crea strategie digitali e sviluppa soluzioni software innovative.|
 |[Z √ º hlke](http://www.zuehlke.com/ch/en/)|Zurigo, Svizzera; Francoforte, Germania; Amburgo, Germania; Hannover, Germania; Monaco di Baviera, Germania; Stoccarda, Germania; Vienna, Austria|Si sviluppano prodotti, servizi e modelli aziendali con successo finanziario, dall'idea all'implementazione, disegnando l'esperienza di 1.000 esperti interni e più di 10.000 progetti riusciti.|
 
-
 ## <a name="greece"></a>Grecia
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[SA Entersoft](https://www.entersoft.eu)|Kallithea, Grecia|Entersoft è un fornitore leader di software e servizi per le aziende entreprise che offre servizi e supporto di alta qualità innovativi e completi per garantire l'efficienza ottimizzata per i clienti|
-
 
 ## <a name="hong-kong"></a>Hong Kong
 
@@ -413,13 +394,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 | --- | --- | --- |
 |[Unissoft Technology Co. Ltd.](http://www.inas.online/en/Index.php)|Hong Kong|La nostra tecnologia principale alla base, il software di gestione degli archivi di Tsing Hua (o TH-AMS™ in breve), è stato il prodotto consigliato dell'amministrazione degli archivi di stato della Cina per un lungo periodo di tempo, quindi è anche ampiamente usato dal governo, diversi settori, tra cui petrolio e chimica; in varie aziende, ad esempio impianti di irrigazione, metallurgia, telecomunicazioni e---immobiliari, tramite il modello di licenza locale tradizionale. |
 
-
 ## <a name="hungary"></a>Ungheria
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Soluzioni uva](http://grape.hu/)|Budapest, Ungheria|Uva Solutions è una società di sviluppo software dinamica stabilita in 2006. Principalmente si sviluppano applicazioni aziendali personalizzate per i clienti locali e internazionali. |
-
 
 ## <a name="india"></a>India
 
@@ -437,13 +416,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Servizi di consulenza sugli alberi a piedi](http://www.walkingtree.in/)|Hyderabad, India|Walking Tree è un fornitore di software e di servizi IT riconosciuto per la propria passione per la tecnologia. Svolgono la funzione di team di sviluppo del prodotto o team di progettazione back-end per i clienti in tutto il mondo.|
 |[Web Spider](http://www.webspiders.com)|New York, NY; Londra, Regno Unito; Singapore India|Web Spiders (WS) è una società di software aziendale che sviluppa i prodotti per il marketing e le risorse umane per promuovere il "coinvolgimento degli utenti" con i bot basati su intelligenza artificiale e mobilità.|
 
-
 ## <a name="ireland"></a>Irlanda
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Tecnologia Verdone](https://greenfinch.ie/)|Dublino, Irlanda|Società di ingegneria del software incentrata sull'innovazione & qualità. Microsoft fornisce ai nostri clienti un progetto, una soluzione & gestire il servizio per aiutare gli utenti a soddisfare le proprie esigenze aziendali nel mondo in rapida evoluzione|
-
 
 ## <a name="italy"></a>Italia
 
@@ -461,13 +438,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[PS Mobile srl](http://www.psmobile.it)|Bologna, Italia|La filosofia di PS Mobile è basata sul dialogo; ascolto del cliente e definizione di una strategia. Per eseguire questa operazione, è fondamentale riconciliare le esigenze degli utenti, gli obiettivi aziendali e le possibilità offerte dalle piattaforme. Il team di sviluppo fornisce ottime prestazioni in termini di grafica, tecnologia ed esperienza utente e prende in considerazione gli aspetti specifici della piattaforma scelta.|
 |[SOFOS SNC](http://www.sofos.it )|Bologna, città metropolitana di Bologna, Italia||
 
-
 ## <a name="japan"></a>Giappone
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Fenrir Inc.](http://www.fenrir-inc.com/)|Osaka, Giappone; Tokyo, Giappone; Nagoya, Giappone|Fenrir sviluppa app Web e per dispositivi mobili per iOS, Android e Windows |
-
 
 ## <a name="latvia"></a>Lettonia
 
@@ -475,13 +450,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 | --- | --- | --- |
 |[Aziende di diatom](http://www.diatomenterprises.com/)|Riga, Lettonia|Si sviluppano singoli sistemi Web, per dispositivi mobili e desktop che sfruttano i vantaggi dell'individualità aziendale dei clienti|
 
-
 ## <a name="liechtenstein"></a>Liechtenstein
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Soluzioni di bit & Consulting Services GmbH](https://www.bitsolutions.ch)|Balzers, Liechtenstein|Soluzioni di bit & servizi di consulenza sviluppa singole applicazioni Web, per dispositivi mobili e desktop|
-
 
 ## <a name="luxembourg"></a>Lussemburgo
 
@@ -489,13 +462,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 | --- | --- | --- |
 |[AGILUX](https://agilux.lu)|Pommerloch, Lussemburgo|Agilux è una società di consulenza specializzata nell'integrazione delle soluzioni IT per la gestione commerciale e l'accounting delle PMI, lo sviluppo di siti Web, e-commerce e applicazioni per dispositivi mobili|
 
-
 ## <a name="macedonia"></a>Macedonia del Nord
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Chimica del codice](http://www.codechem.com)|Macedonia del Nord, Skopje|La chimica del codice fornisce servizi di sviluppo software, gestione dei progetti e consulenza. |
-
 
 ## <a name="mexico"></a>Messico
 
@@ -510,7 +481,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[TotalTech SA de CV](http://www.totaltech.com.mx)||Omos expertos en Desarrollo de APPs para iOS, Android y Windows Phone. |
 |[Xherstone](http://www.xherstone.com)|Naucalpan de Juárez, Mexico|Xherstone è una società di sviluppo software, Web e per dispositivi mobili che lavora sull'avanguardia della tecnologia, da Open Source a personalizzazione. Combiniamo la conoscenza aziendale e l'esperienza tecnologica.|
 
-
 ## <a name="middle-east"></a>Medio Oriente
 
 | Partner | Percorsi | Descrizione |
@@ -520,7 +490,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[DCube](http://www.dcube.me/)|Riyadh, Arabia Saudita|DCube è specializzata nello sviluppo di supporti elettronici e pubblicità con una missione per fornire al mondo arabo Internet la migliore esperienza di produzione e utilizzo del contenuto elettronico|
 |[DigiPresence](http://www.digipresence.net)|Dubai, Emirati Arabi Uniti|La presenza di Digi fornisce, installa e fornisce servizi di supporto tecnico e di manutenzione alla direzione generale degli esteri della residenza, ovvero Dubai e i suoi centri stranieri.|
 |[TechSource LLC](http://www.techsource.ae/)|Dubai-Emirati Arabi Uniti|I nostri servizi sono disponibili per lo sviluppo e la manutenzione di applicazioni, le soluzioni di integrazione, i servizi di consulenza ERP, CRM e funzionale. Negli ultimi anni, sono stati introdotti miglioramenti significativi delle prestazioni per i leader di mercato nel Medio Oriente.|
-
 
 ## <a name="netherlands"></a>Paesi Bassi
 
@@ -552,7 +521,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Xablu](http://www.xablu.com/)|Amsterdam, Paesi Bassi|Potenzia il tuo team di sviluppo di app con soluzioni di sviluppo di app Novell, dall'assemblaggio di team di sviluppo e co-sourcing alla creazione di ambienti di sviluppo standard del settore.|
 |[Xpirit Nederland B.V.](https://xpirit.com)|Hilversum, Paesi Bassi|Professionisti tecnologici appassionati, disposti e in grado di eseguire le operazioni in modo diverso. Xpirit sono innovatori, abilitatori della trasformazione e early adopter che adottano modifiche. Esperti nella nuova tecnologia Microsoft.|
 
-
 ## <a name="new-zealand"></a>Nuova Zelanda
 
 | Partner | Percorsi | Descrizione |
@@ -562,20 +530,17 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Soluzioni di magnetismo Ltd](https://www.magnetismsolutions.com/)|Auckland, Nuova Zelanda; Christchurch, Nuova Zelanda|Si ottiene un'uscita da ogni implementazione di CRM fornita ai clienti. Con l'avvio di più di 1500, siamo orgogliosi del nostro portfolio diversificato ed esteso. La nostra esperienza nell'implementazione di CRM a livello internazionale significa che siamo pronti per fornire la tua soluzione CRM. |
 |[Incrocio zebrato](http://zebracrossing.co.nz/)|Taranaki, Nuova Zelanda|Usiamo la tecnologia per l'innovazione aziendale. Partner con un utente che ti saprà ascoltare, scoprire gli obiettivi e fornire gli elementi che ti servono.|
 
-
 ## <a name="oman"></a>Oman
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Tecnologia dei sistemi avanzati](http://www.astechoman.com/)|Moscato, Oman|AstechOman è un provider di soluzioni IT. |
 
-
 ## <a name="philippines"></a>Filippine
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Gruppo Haiyan Inc.](http://www.haiyan.com.ph)|Manila, Filippine|Haiyan Group Inc. sviluppa app Web e per dispositivi mobili per iOS e Android|
-
 
 ## <a name="poland"></a>Polonia
 
@@ -588,7 +553,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[NETBULLS SP. z o.o.](http://www.netbulls.io)|Bialystok, Polonia|Ottieni le tue idee sul mercato in modo sapiente. Senza sprecare £ $ €, tempo o scuse. |
 |[Sii](http://www.sii.pl/en)|Varsavia, Polonia; Parigi, Francia; Madrid, Spagna; Berlino, Germania; Amsterdam, Paesi Bassi; Bruxelles, Belgio; Lussemburgo (città), Lussemburgo; Ginevra, Svizzera; Marrakesh, Marocco; Praga, Cechia; Bucarest, Romania; Toronto, in, Canada; Santiago, Santiago Metropolitan Region, Chile; Buenos Aires, città autonoma di Buenos Aires, Argentina; Bogotá, Bogotà, Colombia; Delhi, India|Sii è la società di servizi IT leader in Polonia che supporta i programmi di trasformazione digitale dalla propria concezione al recapito al successo e oltre. Offriamo competenze per la distribuzione di app aziendali e consumer, che consentono la comunicazione tra dispositivi, Big Data la gestione e offline.|
 
-
 ## <a name="portugal"></a>Portogallo
 
 | Partner | Percorsi | Descrizione |
@@ -597,7 +561,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Carbonio per GRASSetto](http://www.carbonbybold.com/)|Lisbona, Portogallo|Carbon by BOLD è un marchio dedicato ai servizi di consulenza mobile, che consente alle aziende di integrare i dispositivi mobili nelle proprie strategie aziendali. |
 |[PARRUCCA](http://www.wig.pt)|Lisbona, Portogallo|La PARRUCCa ha un atteggiamento positivo, organico e personalizzato. I clienti vedono i clienti come partner e i loro problemi vengono vissuti come se fossero nostri. Il risultato è sempre positivo, flessibile, reale e pragmatico.|
 
-
 ## <a name="russia"></a>Russia
 
 | Partner | Percorsi | Descrizione |
@@ -605,13 +568,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Binwell Ltd.](https://www.binwell.com)|San Pietroburgo, Russia|Binwell progetta e compila software personalizzato, distribuendo soluzioni ben progettate. Iniziamo dalle esigenze aziendali e conosciamo l'esatto "valore" che portiamo al client in ogni passaggio|
 |[Notissimus](http://notissimus.com)|San Pietroburgo, Russia|L'azienda lavora a vendite o servizi? Si è arrivati al posto giusto. I nuovi progetti sono sempre benvenuti. |
 
-
 ## <a name="serbia"></a>Serbia
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[INSSIO](http://inssio.com)|Belgrado, Serbia e Montenegro (ex)|Dalla concezione del progetto alla distribuzione delle applicazioni, INSSIO converte le idee aziendali nel software che guida la tua azienda|
-
 
 ## <a name="singapore"></a>Singapore
 
@@ -620,13 +581,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[CyanSYS](http://www.cyansys.com)|Singapore Kuala Lumpur, Malesia; Makati, Filippine; Hong Kong; Kota Kinabalu, Sabah, Malaysia; Jakarta, Indonesia|CyanSYS si impegna a offrire soluzioni di qualità & scalabile a aziende di piccole e medie dimensioni, consentendo loro di competere & crescere attraverso le tecnologie it|
 |[Xamariners](http://xamariners.com/)|Singapore|Microsoft compila le applicazioni che vengono eseguite in modo nativo in iOS, Android, Windows e Mac con una singola codebase, oltre a bot intuitivi e app per la realtà aumentata.|
 
-
 ## <a name="slovakia"></a>Slovacchia
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Logamic](https://www.logamic.com/)|Bratislava, Slovacchia|Se si desidera aggiungere uno sviluppatore Novell dedicato al team o si desidera eseguire l'intero processo di sviluppo per l'utente o se si desidera solo consultare lo sviluppo per dispositivi mobili di Novell, contattare Microsoft. |
-
 
 ## <a name="south-africa"></a>Sud Africa
 
@@ -641,7 +600,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Consulenza Sabersoft](https://www.sabersoft.co.za/)|Sud Africa|Le aziende possono ora sfruttare i vantaggi delle app per dispositivi mobili per raggiungere nuovi mercati, acquisire consapevolezza, migliorare la distribuzione dei servizi e infine aumentare i ricavi.|
 |[Soluzioni IT tangenti](http://tangentsolutions.co.za/)|Sud Africa |La soluzione tangente è stata fondata nel 2010 ed è una casa di consulenza per lo sviluppo di una trasformazione digitale. Ci siamo concentrati su Open Source e ti invitiamo a partecipare a un ecosistema tecnologico rapido e in continua evoluzione. Il primo è il cloud, DevOps prima e per dispositivi mobili. |
 
-
 ## <a name="spain"></a>Spagna
 
 | Partner | Percorsi | Descrizione |
@@ -652,7 +610,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[TalentoMobile](http://www.talentomobile.com/)|Spagna |Siamo nativi digitali. I processi aziendali e la connessione con i clienti vengono digitalizzati, sia con le soluzioni che i prodotti.|
 |[Vass Consultoria de Sistemas](http://www.vass.es/en)|Madrid, Spagna; Barcellona, Spagna|VASS è una società di consulenza IT, fondata in 1999, altamente specializzata in nuove tecnologie e prodotti e servizi integrati con una conoscenza approfondita della tecnologia. Si tratta di una società con un impegno preciso per l'espansione internazionale con una presenza in diversi paesi in Europa e America. VASS è una società impegnata nella società, che spende il 2% del profitto per le azioni sociali.|
 
-
 ## <a name="sweden"></a>Svezia
 
 | Partner | Percorsi | Descrizione |
@@ -660,7 +617,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[BITZEAL](http://www.bitzeal.se)|Göteborg, Svezia|Bitzeal rende le applicazioni basate sul Web, le app telefoniche e dekstop e il firmware|
 |[Conevo IT Consulting AB](http://www.conevo.se)|Stoccolma, Svezia|Conevo è una società di consulenza IT che, attraverso la grande velocità di risposta all'azienda dei clienti, crea le soluzioni IT migliori e più sostenibili in modo efficiente e umile|
 |[Creazione di Wave](http://www.makingwaves.com)|Stoccolma, Svezia|La creazione di Wave applica i servizi di strategia, progettazione e tecnologia per aiutare le aziende in grassetto a trasformare in aziende digitali con successo. Con più di 300 professionisti esperti e entusiasti, si tratta di un partner di innovazione che offre tutto ciò che ti serve per diventare un vincitore digitale.|
-
 
 ## <a name="switzerland"></a>Svizzera
 
@@ -672,7 +628,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Synapsis-gruppo SPRL](http://www.synapsis-group.com)|Bruxelles |Il team di sviluppo del software ha un lungo periodo di tracking degli sviluppi corretti e a prezzo fisso per le aziende di piccole e grandi dimensioni. Che si tratti di piattaforme desktop, Web o per dispositivi mobili (iOS/Android/Win8), sono disponibili tutte le risorse necessarie per andare avanti con il progetto.|
 |[TechTalk](http://www.techtalk.at)|Vienna, Austria; Zurigo, Svizzera|Ti offriamo la soluzione migliore per lo sviluppo di software, risparmiando tempo e denaro garantendo al tempo stesso la qualità. |
 
-
 ## <a name="taiwan"></a>Taiwan
 
 | Partner | Percorsi | Descrizione |
@@ -680,14 +635,12 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Società creen](http://www.iscreen.com)|Taipei, Taiwan|si basa su una tecnologia solida, con particolare attenzione alle attività di consulenza, progettazione e creazione di app per piattaforme mobili e Web|
 |[JetFusion Information Co., Ltd.](http://www.jetfusion.com.tw/)|Taipei|Offriamo servizi per lo sviluppo di software e la costruzione di sistemi, in tempo reale e altamente flessibili, oltre a offrire soluzioni complete per il sistema informativo aziendale.|
 
-
 ## <a name="turkey"></a>Turchia
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Ologramma LTD](http://hologramsoft.com/)|Istanbul, Turchia|Olografico LTD è una casa di sviluppo software versatile, che lavora sia nello spazio aziendale che nel gioco, concentrandosi su più piattaforme|
 |[Sistemleri bilisio](http://www.mobilist.com.tr)|Istanbul, Turchia|Abbiamo raccolto soluzioni di progettazione e Smart Design di alta qualità per visualizzare soluzioni innovative.|
-
 
 ## <a name="uk"></a>UK
 
@@ -734,7 +687,6 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[YARG limitato](http://www.yarg.com)|Londra, Regno Unito|YARG sviluppa app per dispositivi mobili multipiattaforma per iPhone, iPad, Android e Windows Phone. Sono orgogliosi di fornire valore, qualità del prodotto e livelli elevati di servizi personali.|
 |[Sistemi Zepto limitati](http://www.zeptosystems.com )|Londra, Regno Unito|Trasformazione di outsourcing e offshoring in Smart sourcing. Aumenta la capacità interna e le competenze con i dipendenti remoti per risparmiare tempo, costi (fino a 60%), assunzione e conservazione.|
 
-
 ## <a name="ukraine"></a>Ucraina
 
 | Partner | Percorsi | Descrizione |
@@ -743,15 +695,11 @@ _Elencati in base alla posizione primaria, molti partner forniscono servizi tra 
 |[Innovazioni GUI limitate](http://www.gui-innovations.com)|Kiev, Ucraina|Offriamo soluzioni software per un mondo mobile. Per la progettazione, lo sviluppo e il supporto del software per molte piattaforme sono disponibili competenze senza alcuna rivalità|
 |[Neadevis](http://neadevis.com/)|Lviv, Ucraina|La soddisfazione del cliente e le soluzioni di qualità elevata sono le nozioni fondamentali della nostra azienda. I nostri clienti a lavoro ci offrono punteggi di feedback stellari. Scopri di più su cosa dicono i clienti.|
 
-
 ## <a name="uruguay"></a>Uruguay
 
 | Partner | Percorsi | Descrizione |
 | --- | --- | --- |
 |[Nareia](http://nareia.com.uy)|Uruguay|Siamo appassionati del mondo dei dispositivi mobili, amiamo la creazione di app straordinarie per iOS e Android e abbiamo una grande esperienza nello sviluppo di app per dispositivi mobili con Novell.  |
-
-
-
 
 ## <a name="vietnam"></a>Vietnam
 

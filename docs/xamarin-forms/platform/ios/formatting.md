@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: be353c6274dcf69946740e2d195b9e4d64208313
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 24d86c54ea4b346e1c165b28c6b62f5a98390d64
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760132"
 ---
 # <a name="adding-ios-specific-formatting"></a>Aggiunta della formattazione specifica di iOS
 
@@ -118,8 +118,6 @@ Queste due acquisizioni di schermata mostrano il controllo `UISwitch` predefinit
 ### <a name="other-controls"></a>Altri controlli
 
 Molti controlli dell'interfaccia utente iOS possono avere colori predefiniti e altri attributi impostati usando l' [ `UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

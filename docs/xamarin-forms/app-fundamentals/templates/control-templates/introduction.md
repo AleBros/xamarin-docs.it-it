@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 676523e461737d7820278ca8c319794d3347088d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289798"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771260"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introduzione ai modelli del controllo Xamarin.Forms
 
@@ -51,7 +51,6 @@ La scelta della posizione in cui definire un'istanza [`ControlTemplate`](xref:Xa
 - Le istanze [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) definite a livello di applicazione possono essere applicate alle pagine in tutta l'applicazione.
 
 I modelli del controllo inferiori nella gerarchia di visualizzazione hanno la precedenza rispetto a quelli definiti a livello superiore. Ad esempio, un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) denominato `DarkTheme` definito a livello di pagina avrà la precedenza su un modello con nome identico definito a livello di applicazione. Un modello del controllo che definisce un tema da applicare a ogni pagina in un'applicazione deve perciò essere definito a livello di applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

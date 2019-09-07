@@ -7,28 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 85045967f5c63eb39c45f917b957d2a393a3a068
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8be3f1b8803aa7e052ebc89af51dad3b659f95f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945562"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757323"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Quali driver USB sono necessari per il debug di Android in Windows?
 
-## <a name="finding-usb-drivers"></a>Come trovare i driver USB
+## <a name="finding-usb-drivers"></a>Ricerca di driver USB
 
-Per eseguire il debug in un dispositivo Android quando si sviluppa in Windows; è necessario installare un driver USB compatibile. Android SDK Manager include il "Driver USB Google" per impostazione predefinita, che aggiunge il supporto per i dispositivi Nexus come descritto di seguito: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
+Per eseguire il debug su un dispositivo Android durante lo sviluppo in Windows; è necessario installare un driver USB compatibile. Per impostazione predefinita, il gestore Android SDK include "Google USB driver", che aggiunge il supporto per i dispositivi Nexus, come descritto di seguito:[https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
-Altri dispositivi hanno bisogno di driver USB pubblicati appositamente dal produttore del dispositivo. In questa guida sono inclusi alcuni collegamenti per i produttori più comuni: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
+Altri dispositivi richiedono driver USB pubblicati in modo specifico dal produttore del dispositivo. In questa guida sono inclusi alcuni collegamenti per i produttori più comuni:[https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>Alternative
 
-A seconda fabbricante, può essere difficile tenere i driver USB esatti Necessito. Alcune alternative per testare App Android sviluppata in Windows, tra cui usando un emulatore Android o uso di servizi di test esterni. tra cui:
+A seconda del manfacturer, può essere difficile individuare il driver USB esatto necessario. Alcune alternative per testare le app Android sviluppate in Windows, tra cui l'uso di un emulatore Android o l'uso di servizi di test esterni. tra cui:
 
-- [Test App Center](https://docs.microsoft.com/appcenter/test-cloud/) : test vengono eseguiti su centinaia di dispositivi Android reali i servizi Cloud.
+- [App Center](https://docs.microsoft.com/appcenter/test-cloud/) i servizi test-cloud testing vengono eseguiti su centinaia di dispositivi Android reali.
 
 - [Visual Studio Emulator for Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 
 - [Debug nell'emulatore Android](~/android/deploy-test/debugging/debug-on-emulator.md)
-

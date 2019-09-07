@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 6d35827b00a4ccc9bbe3e71444536425e4e1c3b1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1b078b8cb4d1129127997e9fabdd0b128e09c90f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288116"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769360"
 ---
 # <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studio"></a>È possibile creare un archivio con estensione xcarchive da Visual Studio?
 
@@ -39,4 +39,3 @@ Tuttavia, è importante notare che non è necessario un `.xcarchive` da inviare 
 Infatti, è anche possibile semplicemente comprimere il `.app` Bundle (firmato con un profilo di distribuzione dell'app Store) e `.zip` inviare il file all'App Store.
 
 In entrambi i casi, è possibile usare l'app del caricatore di applicazioni per inviare l'app, anziché Xcode.
-

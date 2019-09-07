@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: dac059576b8821d218cca44ae1c049010e364cfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.openlocfilehash: 71e509d87dc2a2947821084aea5668055f6f4678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771499"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Selezione di una foto dalla Raccolta immagini
 
@@ -214,7 +214,6 @@ Questo metodo accede alla classe `MainActivity` per vari scopi: per la propriet�
 ## <a name="uwp-implementation"></a>Implementazione UWP
 
 A differenza delle implementazioni per iOS e Android, l'implementazione del selettore foto per la piattaforma UWP (Universal Windows Platform) non richiede la classe `TaskCompletionSource`. La classe [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.UWP/Services/PhotoPickerService.cs) usa la classe [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) per l'accesso alla raccolta di foto. Dato che il metodo `PickSingleFileAsync` di `FileOpenPicker` è asincrono, il metodo `GetImageStreamAsync` può usare semplicemente `await` con tale metodo (e con altri metodi) e restituire un oggetto `Stream`:
-
 
 ```csharp
 [assembly: Dependency(typeof(PhotoPickerService))]

@@ -7,12 +7,12 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: f526be2156c4d74cf695b6b11706e3bbb7f355bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642995"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772771"
 ---
 # <a name="non-affine-transforms"></a>Trasformazioni non affini
 
@@ -468,7 +468,6 @@ L e rappresentano la larghezza e altezza della bitmap. La prima trasformazione `
 Il `a` e `b` valori vengono calcolati in modo che il terzo file di trasformazione è affine o meno. Il codice ottiene l'inverso di trasformazione affine e che quindi viene utilizzato per eseguire il mapping nell'angolo in basso a destra. Che rappresenta il punto (a, b).
 
 Un altro utilizzo delle trasformazioni non affini consiste nel simulare grafica tridimensionale. Nell'articolo successivo [ **rotazioni 3D** ](3d-rotation.md) vedrai come ruotare un grafico bidimensionale nello spazio 3D.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

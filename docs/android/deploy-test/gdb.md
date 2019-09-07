@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: bc2c1c26bcb3dcf99a5598b6dccb6aad02513a28
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 0599b2374addf461e59948a1926de06e6e1e746a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197566"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754050"
 ---
 # <a name="gdb"></a>GDB
 
@@ -27,7 +27,6 @@ In Xamarin.Android 4.10 è stato introdotto il supporto parziale per l'uso di `g
 1. [Build di debug con Fast Deployment abilitato](#Debug_Builds_with_Fast_Deployment).
 1. [Build di debug con Fast Deployment disabilitato](#Debug_Builds_without_Fast_Deployment).
 1. [Build di rilascio](#Release_Builds).
-
 
 Se si verificano problemi, vedere la sezione [Risoluzione dei problemi](#Troubleshooting).
 
@@ -56,7 +55,6 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 La destinazione `_Gdb` avvierà un'attività dell'utilità di avvio arbitraria dichiarata nel file `AndroidManifest.xml`. Per specificare in modo esplicito l'attività da eseguire, usare la proprietà MSBuild `RunActivity`. L'avvio di servizi e altri costrutti Android non è attualmente supportato.
 
 La destinazione `_Gdb` creerà una directory `gdb-symbols` in cui copierà i contenuti delle directory `/system/lib` e `$APPDIR/lib` della destinazione.
-
 
 > [!NOTE]
 > I contenuti della directory `gdb-symbols` sono collegati alla destinazione Android in cui si esegue la distribuzione e non verranno sostituiti automaticamente qualora si cambiasse la destinazione. Si tratta di un bug. Se si cambiano i dispositivi di destinazione Android, sarà necessario eliminare manualmente questa directory.
@@ -107,7 +105,6 @@ GNU gdb (GDB) 7.3.1-gg2
 ...
 (gdb) c
 ```
-
 
 ### <a name="including-gdbserver-in-your-app"></a>Inclusione di `gdbserver` nell'app
 

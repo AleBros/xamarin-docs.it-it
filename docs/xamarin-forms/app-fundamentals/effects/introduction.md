@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 8fae741f308a8269facef5ca84d34adb48868aec
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
-ms.translationtype: HT
+ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68486020"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771457"
 ---
 # <a name="introduction-to-effects"></a>Introduzione agli effetti
 
@@ -58,7 +58,6 @@ Ogni classe `PlatformEffect` specifica della piattaforma espone i metodi seguent
 - [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached): viene chiamato quando un effetto è scollegato da un controllo Xamarin.Forms. La pulizia dell'effetto, ad esempio l'annullamento della registrazione di un gestore eventi, avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma.
 
 `PlatformEffect` espone anche il metodo [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)), che può essere anch'esso sottoposto a override. Questo metodo viene chiamato quando una proprietà dell'elemento è stata modificata. La risposta alle modifiche delle proprietà associabili nel controllo Xamarin.Forms avviene in una versione sottoposta a override del metodo, in ogni classe dell'effetto specifico della piattaforma. Deve sempre essere eseguito un controllo della proprietà modificata, dal momento che l'override può essere chiamato più volte.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

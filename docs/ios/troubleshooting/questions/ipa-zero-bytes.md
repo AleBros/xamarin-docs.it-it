@@ -7,19 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 10fc13124a1c97cc7534d8cf14b7717b2ddc4fa1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ba86567213fe76847459df3df9b4450881e0651e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769238"
 ---
 # <a name="ipa-file-is-0-bytes"></a>Il file IPA è di 0 byte
 
 > [!IMPORTANT]
 > Questo problema è stato risolto nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
-
-
 
 Si sono verificati alcuni problemi noti nelle versioni precedenti di Novell che potevano causare 0 byte per il file IPA in Windows. 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292428"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770980"
 ---
 # <a name="menus-in-xamarinmac"></a>Menu in Novell. Mac
 
@@ -1071,7 +1071,6 @@ A questo punto, se si esegue l'applicazione e si seleziona un elemento dal popup
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio l'uso di menu e voci di menu in un'applicazione Novell. Mac. Per prima cosa è stata esaminata la barra dei menu dell'applicazione, quindi è stato esaminato come creare menu contestuali, quindi sono stati esaminati i menu della barra di stato e i menu dock personalizzato. Infine, abbiamo analizzato i menu a comparsa e gli elenchi a discesa.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

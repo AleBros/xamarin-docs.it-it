@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 2533ad80571e2c8fe94cb4a2dcb0ec0ff0dd68cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3dd321840c4be0729b843897ad51cf5bd2b61196
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643591"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758908"
 ---
 # <a name="intro-to-contentproviders"></a>Introduzione a ContentProviders
 
 _Il sistema operativo Android usa i provider di contenuti per facilitare l'accesso ai dati condivisi, ad esempio i file multimediali, i contatti e le informazioni sul calendario. In questo articolo viene presentata la classe ContentProvider e vengono forniti due esempi di utilizzo._
-
 
 ## <a name="content-providers-overview"></a>Panoramica sui provider di contenuti
 
@@ -27,7 +26,7 @@ Un *ContentProvider* incapsula un repository di dati e fornisce un'API per acced
 
 La struttura di questa sezione è la seguente:
 
-- Funzionamento &ndash; Panoramica della`ContentProvider` progettazione e del funzionamento di.
+- **Funzionamento** &ndash; Panoramica della`ContentProvider` progettazione e del funzionamento di.
 
 - **Utilizzo di un provider di contenuti** &ndash; Esempio di accesso all'elenco contatti.
 
@@ -40,8 +39,6 @@ La struttura di questa sezione è la seguente:
 Custom `ContentProviders` è un modo pratico per comprimere i dati da usare all'interno dell'app o per l'uso da parte di altre applicazioni (inclusi gli usi speciali come la ricerca personalizzata e la copia e incolla).
 
 Negli argomenti di questa sezione vengono forniti alcuni semplici esempi di utilizzo e scrittura `ContentProvider` del codice.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

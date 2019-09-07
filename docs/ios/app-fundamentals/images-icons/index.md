@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: af7dbad29c156964f154053dac00255b1b32e4ff
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6940e07c51dbc19615454e0c51188152db22c63f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289088"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767221"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Immagini e icone in Novell. iOS
 
@@ -33,7 +33,6 @@ Sono disponibili diversi modi per usare le risorse dell'immagine all'interno di 
 
 Quando si creano asset immagine per un'app iOS, è necessario tenere presenti diverse considerazioni, oltre a diverse posizioni in cui verranno usate tali asset. Ognuno di questi ha un effetto su non solo sul numero di asset immagine necessari, ma sulla modalità di creazione degli asset. Gli argomenti seguenti illustrano i tipi di asset di immagini che saranno necessari, il modo in cui tali asset vengono inclusi nel bundle dell'applicazione e il modo in cui vengono utilizzate le risorse dell'immagine per fornire le funzionalità necessarie:
 
-
 ## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Visualizzazione di un'immagine](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
 Questo articolo illustra l'inclusione di un asset immagine in un'app Novell. iOS e la visualizzazione dell' C# immagine usando il codice o assegnando il codice a un controllo in iOS designer.
@@ -51,7 +50,6 @@ Apple ha aggiunto diversi miglioramenti a iOS 10,3 che consentono a un'app di ge
 - `AlternateIconName`: Restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si utilizza l'icona primaria.
 - `SetAlternameIconName`-Usare questo metodo per impostare l'icona dell'app sull'icona alternativa specificata.
 
-
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Schermate di avvio](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 Questo articolo illustra l'uso di un tipo speciale di storyboard per fornire una schermata di avvio universale per ogni dimensione e risoluzione del dispositivo iOS.
@@ -59,8 +57,6 @@ Questo articolo illustra l'uso di un tipo speciale di storyboard per fornire una
 ## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipi di documento personalizzati](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
 Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'app Novell. iOS da usare come icona di tipo di documento personalizzato.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

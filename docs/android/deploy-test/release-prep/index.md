@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119622"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756124"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparazione di un'applicazione per il rilascio
 
@@ -92,7 +92,6 @@ Questi valori possono essere impostati usando la sezione **Compila > Applicazion
 ## <a name="shrink-the-apk"></a>Compattare il file APK
 
 Le dimensioni dei file APK di Xamarin.Android possono essere ridotte usando una combinazione del linker di Xamarin.Android, che rimuove il codice *gestito* non necessario, con lo strumento *ProGuard* dell'SDK di Android, che rimuove il *bytecode Java* non in uso. Il processo di compilazione usa in primo luogo il linker di Xamarin.Android per ottimizzare l'app a livello di codice gestito (C#) e in un secondo momento usa ProGuard, se è abilitato, per ottimizzare l'APK a livello di bytecode Java.
-
 
 ### <a name="configure-the-linker"></a>Configurare il linker
 
@@ -229,7 +228,6 @@ L'opzione **Compilazione AOT** richiede una licenza Enterprise o superiore. L'op
 
 Il _Compilatore ottimizzatore LLVM_  crea codice compilato più rapido e di dimensioni minori e converte gli assembly compilati con AOT in codice nativo, ma a scapito di tempi di compilazione più lunghi. Il compilatore LLVM è disabilitato per impostazione predefinita. Per usare il compilatore LLVM, è necessario per prima cosa abilitare l'opzione **Compilazione AOT** nella pagina [Proprietà per creazione pacchetto](#Set_Packaging_Properties).
 
-
 > [!NOTE]
 > L'opzione **Compilatore ottimizzatore LLVM** richiede una licenza Enterprise.  
 
@@ -271,7 +269,7 @@ Per altre informazioni su multidex, vedere [Configurare le app con più di 64.00
 
 <a name="Compile" />
 
-## <a name="compile"></a>Compilazione
+## <a name="compile"></a>Compile
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -364,7 +362,6 @@ In questo esempio **Gestione archivi** elenca solo un'applicazione archiviata, *
 Da qui è possibile selezionare il canale di distribuzione:
 
 - **Ad hoc**: salva su disco un pacchetto dell'applicazione Android firmato in modo che possa essere trasferito localmente ai dispositivi Android. Passare alla sezione relativa alla [firma del pacchetto dell'app](~/android/deploy-test/signing/index.md) per sapere come creare un'identità di firma di Android, creare un nuovo certificato di firma per le applicazioni Android e pubblicare una versione &ldquo;ad hoc&rdquo; nel disco. Questo è un buon metodo per creare un file APK per il test.
-
 
 - **Google Play** &ndash; Pubblica un file APK firmato in Google Play.
     Vedere la sezione relativa alla [pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) per informazioni su come firmare e pubblicare un file APK in Google Play Store.

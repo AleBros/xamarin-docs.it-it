@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a004ea539bab264f6a1418826be451ffb7d43d47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292719"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753040"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit in Novell. iOS
 
@@ -266,7 +266,6 @@ Se la Home page è stata creata correttamente, è necessario chiamare `UpdatePri
 
 > [!IMPORTANT]
 > Il `AlertView.PresentOKAlert` metodo usato nel codice di esempio precedente è una classe helper nell'applicazione HomeKitIntro che semplifica l'uso degli avvisi iOS.
-
 
 ## <a name="finding-new-accessories"></a>Ricerca di nuovi accessori
 
@@ -667,7 +666,7 @@ Deve modificare lo stato della luce nel simulatore di accessori HomeKit. Se il v
 Questo articolo ha trattato le funzionalità di base necessarie per l'uso di accessori HomeKit in un'app Novell. iOS. Esistono tuttavia diverse funzionalità avanzate di HomeKit che non sono descritte in questa introduzione:
 
 - **Rooms** : gli accessori abilitati per HomeKit possono essere organizzati facoltativamente in chat room dall'utente finale. Questo consente a HomeKit di presentare gli accessori in modo da semplificare la comprensione e l'utilizzo da parte dell'utente. Per altre informazioni sulla creazione e sulla gestione delle chat, vedere la documentazione di Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) .
-- **Zones** : le camere possono essere organizzate facoltativamente in zone dall'utente finale. Una zona fa riferimento a una raccolta di chat che l'utente può considerare come una singola unità. Ad esempio:  Al piano superiore, in basso o in seminterrato. Anche in questo caso, questo consente a HomeKit di presentare e usare gli accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e la gestione delle zone, vedere la documentazione di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) .
+- **Zones** : le camere possono essere organizzate facoltativamente in zone dall'utente finale. Una zona fa riferimento a una raccolta di chat che l'utente può considerare come una singola unità. Ad esempio: Al piano superiore, in basso o in seminterrato. Anche in questo caso, questo consente a HomeKit di presentare e usare gli accessori in modo significativo per l'utente finale. Per altre informazioni sulla creazione e la gestione delle zone, vedere la documentazione di Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) .
 - **Azioni e set** di azioni: le azioni modificano le caratteristiche del servizio accessorio e possono essere raggruppate in set. I set di azioni fungono da script per controllare un gruppo di accessori e coordinare le azioni. Uno script "Watch TV", ad esempio, potrebbe chiudere i bui, abbassare le luci e accendere la televisione e il suo sistema audio. Per altre informazioni sulla creazione e sulla gestione di azioni e set di azioni, vedere la documentazione di Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) e [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) .
 - **Trigger** : un trigger consente di attivare uno o più set di azioni quando un determinato set di condizioni è stato soddisfatto. Ad esempio, accendere la luce portch e bloccare tutte le porte esterne quando si trova all'esterno. Per altre informazioni sulla creazione e sulla gestione dei trigger, vedere la documentazione di Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) .
 
@@ -705,8 +704,6 @@ Per altre informazioni sulle nuove funzionalità di HomeKit in iOS 9, vedere l' 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha introdotto il Framework di automazione HomeKit Home di Apple. È stato illustrato come configurare e configurare i dispositivi di test usando il simulatore di accessori HomeKit e come creare una semplice app Novell. iOS per individuare, comunicare e controllare i dispositivi di automazione domestica usando HomeKit.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

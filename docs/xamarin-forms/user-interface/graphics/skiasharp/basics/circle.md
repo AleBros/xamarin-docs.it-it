@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 876379a1d515517054d9e0fa2657e8bc10dc749f
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888524"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759536"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Disegnare un cerchio semplice in SkiaSharp
 
@@ -157,7 +157,6 @@ Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle
 Anche se la larghezza del contorno del cerchio viene specificata come 25 &mdash; pixel o un trimestre del raggio del cerchio &mdash; , risulta più sottile ed esiste un motivo valido: Metà della lunghezza della linea è nascosta dal cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
 
 Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 62dadffbc4b8a5629969203938e4fa0130971664
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a2197a1ff9c37546fd97eb5a2459764ec05d4412
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283335"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768921"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicatori di stato e attività in Novell. iOS
 
@@ -46,7 +46,6 @@ Usare i `StartAnimating()` metodi `StopAnimating()` e per avviare e arrestare l'
 
 Impostare la `HidesWhenStopped` proprietà su `true` per rendere l'indicatore di attività scomparire dopo che `StopAnimating()` è stato chiamato. Questa impostazione è impostata `true` su per impostazione predefinita. In qualsiasi momento è possibile verificare se l'indicatore di attività sta eseguendo l'animazione rotante controllando la `IsAnimating` proprietà. 
 
-
 ### <a name="managing-activity-indicator-appearances"></a>Gestione dell'aspetto degli indicatori di attività
 
 L' `UIActivityIndicatorViewStyle` enumerazione può essere passata come parametro quando si crea un'istanza dell'indicatore di attività. È possibile utilizzare questa impostazione per impostare lo stile di `Gray`visualizzazione `White`su, `WhiteLarge`o, ad esempio:
@@ -77,7 +76,6 @@ Un indicatore di stato viene creato creando un'istanza di[`UIProgressView`](xref
 Nel riquadro delle proprietà è possibile modificare le proprietà seguenti:
 
 ![riquadro delle proprietà](progress-activity-indicator-images/progress-indicator3.png)
-
 
 ### <a name="managing-progress-bar-behavior"></a>Gestione del comportamento dell'indicatore di stato
 
@@ -110,6 +108,3 @@ progressBar = new UIProgressView(UIProgressViewStyle.Default)
                 TrackTintColor = UIColor.Magenta
             }; 
 ```
-
-
-

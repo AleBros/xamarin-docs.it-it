@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525426"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753847"
 ---
 # <a name="linking-on-android"></a>Collegamento in Android
 
@@ -25,8 +25,6 @@ Considerando l'esempio [Hello, Android](https://docs.microsoft.com/samples/xamar
 |Rilascio con collegamento:|4,2 MB|2,9 MB|
 
 Il collegamento restituisce un pacchetto con dimensioni inferiori del 30% rispetto al pacchetto (non collegato) originale nella versione 1.2.0 e con dimensioni inferiori del 18% rispetto al pacchetto non collegato nella versione 4.0.1.
-
-
 
 ## <a name="control"></a>Control
 
@@ -50,7 +48,6 @@ public class MyActivity {
 }
 ```
 
-
 ### <a name="linker-behavior"></a>Comportamento del linker
 
 Il meccanismo principale per controllare il linker è l'elenco a discesa **Comportamento del linker** (*Collegamento* in Visual Studio) all'interno della finestra di dialogo **Opzioni progetto**. Sono disponibili tre opzioni:
@@ -58,7 +55,6 @@ Il meccanismo principale per controllare il linker è l'elenco a discesa **Compo
 1. **Non collegare** (*Nessuno* in Visual Studio)
 1. **Collega solo assembly SDK** (*Solo assembly SDK*)
 1. **Collega tutti gli assembly** (*Assembly SDK e utente*)
-
 
 L'opzione **Non collegare** disattiva il linker. L'esempio delle dimensioni dell'applicazione con configurazione "Rilascio senza collegamento" mostrato sopra usa questo comportamento. Si tratta di un'opzione utile per la risoluzione di problemi causati da errori di runtime, per determinare se è responsabile il linker. Questa impostazione è in genere sconsigliata per le compilazioni di produzione.
 
@@ -86,7 +82,6 @@ E/mono    (17755):   at LinkerScratch2.Activity1.OnCreate (Android.OS.Bundle bun
 E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_savedInstanceState) [0x00000] in <filename unknown>:0
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
-
 
 ### <a name="preserving-code"></a>Mantenimento del codice
 
@@ -149,8 +144,6 @@ namespace Android.Runtime
 
 Negli esempi precedenti, l'attributo `Preserve` è dichiarato nello spazio dei nomi `Android.Runtime`; di fatto è possibile usare l'attributo `Preserve` in qualsiasi spazio dei nomi, perché il linker cerca questo attributo in base al nome del tipo.
 
-
-
 ### <a name="falseflag"></a>falseflag
 
 Se l'attributo [Preserve] non può essere usato, è spesso utile fornire un blocco di codice in modo che il linker rilevi che il tipo viene usato, impedendo l'esecuzione del blocco di codice al runtime. Per usare questa tecnica, è possibile procedere in questo modo:
@@ -173,8 +166,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### <a name="linkskip"></a>linkskip
 
 È possibile specificare che un set di assembly forniti dall'utente non venga collegato del tutto, permettendo di ignorare altri assembly utente con il comportamento *Collega solo assembly SDK* usando la [proprietà di MSBuild AndroidLinkSkip](~/android/deploy-test/building-apps/build-process.md):
@@ -185,14 +176,11 @@ class MyActivity {
 </PropertyGroup>
 ```
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 L'**azione di compilazione** [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
  può essere usata nei file che possono contenere un [file di configurazione personalizzato del linker](~/cross-platform/deploy-test/linker.md).
 edmx. I file di configurazione personalizzati del linker possono essere necessari per mantenere membri `internal` o `private` che devono essere conservati.
-
-
 
 ### <a name="custom-attributes"></a>Attributi personalizzati
 
@@ -207,7 +195,6 @@ Quando un assembly viene collegato, vengono rimossi i tipi di attributo personal
 - System.MonoTODOAttribute
 - System.Xml.MonoFIXAttribute
 
-
 Quando un assembly viene collegato, vengono rimossi i tipi di attributo personalizzati seguenti da tutti i membri nelle compilazioni di rilascio:
 
 - System.Diagnostics.DebuggableAttribute
@@ -219,7 +206,6 @@ Quando un assembly viene collegato, vengono rimossi i tipi di attributo personal
 - System.Diagnostics.DebuggerStepThroughAttribute
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

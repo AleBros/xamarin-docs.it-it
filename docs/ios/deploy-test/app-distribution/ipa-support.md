@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 58621701d832660b125d7589762cc033811eb69b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9982f9102166aa6892be0819615f329a65fffbb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281851"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756433"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Supporto IPA in Xamarin.iOS
 
@@ -66,7 +66,6 @@ Prima di iniziare a creare un file IPA per una soluzione multipiattaforma, assic
 
 Per compilare un file IPA, è necessario creare un _archivio_ di una compilazione di rilascio dell'applicazione. Questo archivio contiene l'app e ne identifica le informazioni.
 
-
 1. Selezionare la configurazione **Rilascio | Dispositivo** in Visual Studio per Mac:
 
     ![](ipa-support-images/buildxs01new.png "Selezionare la configurazione Rilascio | Dispositivo")
@@ -79,7 +78,6 @@ Per compilare un file IPA, è necessario creare un _archivio_ di una compilazion
 
     ![](ipa-support-images/buildxs03new.png "Sarà visualizzata la vista Archivi")
 
-
 ### <a name="sign-and-distribute-your-app"></a>Firmare e distribuire l'app
 
 Ogni volta in cui l'applicazione viene compilata per l'archivio, si aprirà automaticamente la **vista Archivi**, in cui saranno visualizzati tutti i progetti archiviati, raggruppati per soluzione. Per impostazione predefinita, in questa vista viene visualizzata soltanto la soluzione attualmente aperta. Per visualizzare tutte le soluzioni con archivi, fare clic sull'opzione **Mostra tutti gli archivi**.
@@ -89,7 +87,6 @@ Ogni volta in cui l'applicazione viene compilata per l'archivio, si aprirà auto
 Se noti che per le compilazioni non App Store il file **iTunesMetadata.plist** e il set di illustrazioni di iTunes verranno automaticamente inclusi nel file IPA se vengono trovati nell'archivio.
 
 Per firmare l'app e prepararla per la distribuzione:
-
 
 1. Selezionare il pulsante **Firma e distribuisci**, come illustrato di seguito:
 
@@ -111,11 +108,9 @@ Per firmare l'app e prepararla per la distribuzione:
 
     ![](ipa-support-images/distribute04.png "Salvare il file IPA nel computer")
 
-
 ### <a name="building-via-the-command-line-on-mac"></a>Compilazione tramite la riga di comando (su Mac)
 
 In alcuni casi, ad esempio in un ambiente di integrazione continua, può essere necessario compilare il file IPA tramite la riga di comando. A questo scopo, seguire questa procedura:
-
 
 1. Assicurarsi che **Opzioni progetto > Opzioni IPA iOS > Includi immagini per iTunes Artwork e iTunesMetadata.plist** sia selezionato e che **Compila pacchetto ad-hoc/enterprise (IPA)** sia selezionato:
 
@@ -251,7 +246,6 @@ L'utente ora può sincronizzare iTunes con il dispositivo per installare la nuov
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato la configurazione necessaria per preparare un'applicazione Xamarin.iOS per una compilazione senza App Store. Ha spiegato come creare un pacchetto IPA e come installare l'applicazione iOS risultante nel dispositivo iOS dell'utente finale per il test o la distribuzione interna.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

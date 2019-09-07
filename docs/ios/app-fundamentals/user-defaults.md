@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 6ff697964cbc057b4a3f905394d147d7c132d79b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4db5718394c3835861f3dfa8b99a4bac70e26981
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281946"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767009"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Uso delle impostazioni predefinite dell'utente in Novell. iOS
 
 _Questo articolo illustra l'uso di NSUserDefault per salvare le impostazioni predefinite in un'estensione o un'app Novell. iOS._
-
 
 La `NSUserDefaults` classe fornisce un modo per le app e le estensioni iOS per interagire a livello di codice con il sistema predefinito a livello di sistema. Usando il sistema predefinito, l'utente può configurare il comportamento o lo stile di un'app per soddisfare le preferenze (in base alla progettazione dell'app). Ad esempio, per presentare i dati nelle misure metrica rispetto a quelle imperiali oppure selezionare un tema dell'interfaccia utente specifico.
 
@@ -129,14 +128,11 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > Quando l'app viene eseguita per la `NSUserDefaults` prima volta, legge le chiavi e i valori del database predefinito dell'utente dell'app e li memorizza nella cache per evitare l'apertura e la lettura del database ogni volta che è necessario un valore.
 
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato la `NSUserDefaults` classe e come può essere usata per fornire un set di opzioni che l'utente finale può usare per configurare l'app Novell. iOS. Inoltre, è stato analizzato usando i gruppi di app per comunicare tra un'estensione e la relativa app padre o tra app in un gruppo.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

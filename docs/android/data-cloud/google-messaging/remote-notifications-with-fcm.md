@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: a7276b6a3269c012ad57e13510b6479266c43209
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c76b22c84851c8952dc4e9181966632cf6e38041
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119791"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754672"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 
@@ -35,7 +35,6 @@ Verranno analizzate le aree degli argomenti seguenti:
 Durante questa procedura dettagliata, si aggiungeranno in modo incrementale la funzionalità a **FCMClient** ed eseguirla in un dispositivo o in un emulatore per comprenderne l'interazione con FCM. Si userà la registrazione per verificare le transazioni Live dell'app con i server FCM e si osserverà come vengono generate le notifiche da messaggi FCM immessi nell'interfaccia utente grafica delle notifiche di Firebase console.
 
 ## <a name="requirements"></a>Requisiti
-
 
 Sarà utile acquisire familiarità con i [diversi tipi di messaggi](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) che possono essere inviati da Firebase Cloud Messaging. Il payload del messaggio determinerà il modo in cui un'app client riceverà ed elaborerà il messaggio.
 
@@ -192,7 +191,6 @@ Il passaggio successivo consiste nell'aggiungere il file **Google-Services. JSON
 
 Quando **Google-Services. JSON** viene aggiunto al progetto (e viene impostata l'azione di compilazione **GoogleServicesJson** ), il processo di compilazione estrae l'ID client e la [chiave API](./firebase-cloud-messaging.md#fcm-in-action-api-key) e quindi aggiunge le credenziali all'oggetto Unito/generato  **File AndroidManifest. XML** che risiede in **obj/debug/Android/file AndroidManifest. XML**. Questo processo di merge aggiunge automaticamente eventuali autorizzazioni e altri elementi FCM necessari per la connessione ai server FCM.
 
-
 ## <a name="check-for-google-play-services-and-create-a-notification-channel"></a>Verificare la presenza di Google Play Services e creare un canale di notifica
 
 Google suggerisce che le app Android verificano la presenza del Google Play Services APK prima di accedere alle funzionalità di Google Play Services (per altre informazioni, vedere Verificare la presenza di [servizi di Google Play](https://firebase.google.com/docs/cloud-messaging/android/client#sample-play)).
@@ -218,7 +216,6 @@ Verrà creato per primo un layout iniziale per l'interfaccia utente dell'app. Mo
 
 `TextView` Verrà utilizzato per visualizzare i messaggi che indicano se Google Play Services è installato. Salvare le modifiche apportate a **Main. aXML**.
 
-
 Modificare **MainActivity.cs** e aggiungere le variabili di istanza seguenti alla `MainActivity` classe:
 
 ```csharp
@@ -233,7 +230,6 @@ public class MainActivity : AppCompatActivity
 ```
 
 Le variabili `CHANNEL_ID` e `NOTIFICATION_ID` verranno usate nel metodo [`CreateNotificationChannel`](#create-notification-channel-code) che verrà aggiunto a `MainActivity` più avanti in questa procedura dettagliata.
-
 
 Nell'esempio seguente il `OnCreate` metodo verificherà che Google Play Services è disponibile prima che l'app tenti di usare i servizi FCM.
 Aggiungere il metodo seguente alla `MainActivity` classe:
@@ -310,7 +306,6 @@ protected override void OnCreate (Bundle bundle)
 
 Se non si ottiene questo risultato, verificare che il Google Play Services APK sia installato nel dispositivo (per altre informazioni, vedere [configurazione Google Play Services](https://developers.google.com/android/guides/setup)).
 Verificare anche di aver aggiunto il pacchetto **Novell. Google. Play. Services. base** al progetto **FCMClient** , come illustrato in precedenza.
-
 
 ## <a name="add-the-instance-id-receiver"></a>Aggiungere il ricevitore dell'ID istanza
 
@@ -463,7 +458,6 @@ if (Intent.Extras != null)
 
 L'utilità di avvio `Intent` dell'app viene generata quando l'utente tocca il messaggio di notifica, quindi questo codice registrerà tutti i dati `Intent` associati nella finestra di output. Se deve essere `Intent` generato un diverso, il `click_action` campo del messaggio di notifica deve essere impostato su tale `Intent` valore (l' `Intent` utilità di avvio viene `click_action` utilizzata quando non è specificato alcun parametro).
 
-
 ## <a name="background-notifications"></a>Notifiche in background
 
 Compilare ed eseguire l'app **FCMClient** . Viene visualizzato il pulsante del **token di log** :
@@ -512,7 +506,6 @@ Toccare l'icona di notifica per avviare l'app **FCMClient** . Le `Intent` funzio
 In questo esempio la chiave **from** è impostata sul numero di progetto Firebase dell'app (in questo esempio `41590732`) e **collapse_key** è impostato sul nome del pacchetto (**com. Novell. fcmexample**).
 Se non si riceve un messaggio, provare a eliminare l'app **FCMClient** nel dispositivo o nell'emulatore e ripetere i passaggi precedenti.
 
-
 > [!NOTE]
 > Se si forza la chiusura dell'app, FCM smetterà di recapito delle notifiche. Android impedisce la trasmissione di servizi in background da inavvertitamente o inutilmente l'avvio di componenti di applicazioni interrotte. Per ulteriori informazioni su questo comportamento, vedere [avviare i controlli sulle applicazioni arrestate](https://developer.android.com/about/versions/android-3.1.html#launchcontrols). Per questo motivo, è necessario disinstallare manualmente l'app ogni volta che viene eseguita e arrestarla da una sessione &ndash; di debug che impone a FCM di generare un nuovo token in modo che i messaggi continueranno a essere ricevuti.
 
@@ -520,7 +513,7 @@ Se non si riceve un messaggio, provare a eliminare l'app **FCMClient** nel dispo
 
 Nell'esempio precedente, l'icona di notifica è impostata sull'icona dell'applicazione. Nel codice XML seguente viene configurata un'icona predefinita personalizzata per le notifiche. Android Visualizza questa icona predefinita personalizzata per tutti i messaggi di notifica in cui l'icona di notifica non è impostata in modo esplicito.
 
-Per aggiungere un'icona di notifica predefinita personalizzata, aggiungere l'icona alla directory Resources **/** di cui è possibile eseguire la modifica **file AndroidManifest. XML**e inserire l' `<application>` elemento seguente `<meta-data>` nella sezione:
+Per aggiungere un'icona di notifica predefinita personalizzata, aggiungere l'icona alla directory **Resources/** di cui è possibile eseguire la modifica **file AndroidManifest. XML**e inserire l' `<application>` elemento seguente `<meta-data>` nella sezione:
 
 ```xml
 <meta-data
@@ -528,7 +521,7 @@ Per aggiungere un'icona di notifica predefinita personalizzata, aggiungere l'ico
     android:resource="@drawable/ic_stat_ic_notification" />
 ```
 
-In questo esempio, l'icona di notifica che risiede in Resources **/disegnator/\_IC\_stat\_IC Notification. png** verrà usata come icona di notifica predefinita personalizzata. Se un'icona personalizzata predefinita non è configurata in **file AndroidManifest. XML** e non è impostata alcuna icona nel payload delle notifiche, Android usa l'icona dell'applicazione come icona di notifica, come illustrato nella schermata dell'icona di notifica riportata sopra.
+In questo esempio, l'icona di notifica che risiede in **Resources/disegnator/\_IC\_stat\_IC Notification. png** verrà usata come icona di notifica predefinita personalizzata. Se un'icona personalizzata predefinita non è configurata in **file AndroidManifest. XML** e non è impostata alcuna icona nel payload delle notifiche, Android usa l'icona dell'applicazione come icona di notifica, come illustrato nella schermata dell'icona di notifica riportata sopra.
 
 ## <a name="handle-topic-messages"></a>Gestisci messaggi argomento
 
@@ -559,7 +552,7 @@ subscribeButton.Click += delegate {
 };
 ```
 
-Questo codice individua il pulsante **Sottoscrivi notifica** nel layout e assegna il relativo gestore clic al codice che chiama `FirebaseMessaging.Instance.SubscribeToTopic`, passando l'argomento sottoscritto, _News_. Quando l'utente tocca il pulsante Sottoscrivi, l'app sottoscrive l'argomento delle _notizie_ . Nella sezione seguente verrà inviato un messaggio di argomento di _notizie_ dall'interfaccia utente grafica delle notifiche di Firebase console.
+Questo codice individua il pulsante **Sottoscrivi notifica** nel layout e assegna il relativo gestore clic al codice che chiama `FirebaseMessaging.Instance.SubscribeToTopic`, passando l'argomento sottoscritto, _News_. Quando l'utente tocca il pulsante **Sottoscrivi** , l'app sottoscrive l'argomento delle _notizie_ . Nella sezione seguente verrà inviato un messaggio di argomento di _notizie_ dall'interfaccia utente grafica delle notifiche di Firebase console.
 
 ### <a name="send-a-topic-message"></a>Invia un messaggio di argomento
 
@@ -648,7 +641,6 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 > [!NOTE]
 > Se si impostano punti `FirebaseMessagingService`di interruzione in, la sessione di debug può o meno raggiungere questi punti di interruzione a causa del modo in cui FCM recapita i messaggi.
 
-
 ### <a name="send-another-message"></a>Invia un altro messaggio
 
 Disinstallare l'app, ricompilarla, eseguirla di nuovo e seguire questa procedura per inviare un altro messaggio:
@@ -668,7 +660,6 @@ Disinstallare l'app, ricompilarla, eseguirla di nuovo e seguire questa procedura
 6. Il messaggio in arrivo viene registrato nella finestra di output dell'IDE:
 
     [![Corpo del messaggio stampato nella finestra di output](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
-
 
 ### <a name="add-a-local-notification-sender"></a>Aggiungere un mittente di notifica locale
 
@@ -759,7 +750,6 @@ Quando si apre la notifica, dovrebbe essere visualizzato l'ultimo messaggio invi
 
 [![Notifica in primo piano visualizzata con icona in primo piano](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
 
-
 ## <a name="disconnecting-from-fcm"></a>Disconnessione da FCM
 
 Per annullare la sottoscrizione a un argomento, chiamare il metodo [UnsubscribeFromTopic](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging.html#unsubscribeFromTopic%28java.lang.String%29) nella classe [FirebaseMessaging](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging) . Ad esempio, per annullare la sottoscrizione dell'argomento di _notizie_ sottoscritto in precedenza, è possibile aggiungere al layout un pulsante **Annulla sottoscrizione** con il seguente codice del gestore:
@@ -780,7 +770,6 @@ FirebaseInstanceId.Instance.DeleteInstanceId();
 
 Questa chiamata al metodo elimina l'ID dell'istanza e i dati ad esso associati. Di conseguenza, l'invio periodico di dati FCM al dispositivo viene interrotto.
 
-
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Di seguito vengono descritti i problemi e le soluzioni alternative che possono verificarsi quando si usa la messaggistica cloud Firebase con Novell. Android.
@@ -799,7 +788,6 @@ Si tratta di un problema noto che è possibile risolvere con la pulizia della so
 ## <a name="summary"></a>Riepilogo
 
 Questa procedura dettagliata illustra i passaggi per l'implementazione delle notifiche remote di Firebase Cloud Messaging in un'applicazione Novell. Android. Viene descritto come installare i pacchetti necessari per le comunicazioni FCM e viene illustrato come configurare il manifesto Android per l'accesso ai server FCM. Viene fornito codice di esempio che illustra come verificare la presenza di Google Play Services. È stato illustrato come implementare un servizio listener ID istanza che negozia con FCM per un token di registrazione e spiega come questo codice crei notifiche in background mentre l'app è in background. In questo articolo è stato illustrato come sottoscrivere i messaggi dell'argomento e viene fornita un'implementazione di esempio di un servizio di listener di messaggi utilizzato per ricevere e visualizzare le notifiche remote mentre l'applicazione è in esecuzione in primo piano.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

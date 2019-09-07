@@ -6,19 +6,19 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765495"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Riferimenti nativi nei progetti iOS, Mac e bindings
 
 _I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Novell. iOS o Novell. Mac o in un progetto di associazione._
 
 Poiché iOS 8,0 è stato possibile creare un Framework incorporato per condividere il codice tra le estensioni dell'app e l'app principale in Xcode. Utilizzando la funzionalità di riferimento nativo, sarà possibile utilizzare questi Framework incorporati (creati con Xcode) in Novell. iOS.
- 
+
 > [!IMPORTANT]
 > Non sarà possibile creare Framework incorporati da qualsiasi tipo di progetto Novell. iOS o Novell. Mac, i riferimenti nativi consentono solo il consumo di framework nativi (Objective-C) esistenti.
 
@@ -98,4 +98,3 @@ App che non dispongono di estensioni e app destinate a iOS
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in modo dettagliato l'incorporamento di un Framework nativo in un'applicazione Novell. iOS o Novell. Mac.
-

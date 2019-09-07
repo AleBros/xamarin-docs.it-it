@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f66764fef5c54563ffd03274b1f86a8c0bcc637
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3b74acee34c367814fbd2a948fe490f4225aee00
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522149"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755386"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Stack HttpClient e selettore di implementazione SSL/TLS per Android
 
@@ -32,7 +32,6 @@ La configurazione di Novell. Android HttpClient è in **Opzioni progetto > opzio
 Queste sono le impostazioni consigliate per il supporto di TLS 1,2:
 
 [![Opzioni di Visual Studio per Android](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -75,8 +74,6 @@ Managed handler è il gestore HttpClient completamente gestito che è stato forn
 - È in genere molto più lento, ad esempio crittografia) rispetto all'API nativa.
 - Richiede codice più gestito, creazione di applicazioni di dimensioni maggiori.
 
-
-
 ### <a name="choosing-a-handler"></a>Scelta di un gestore
 
 La scelta tra `AndroidClientHandler` e `HttpClientHandler` dipende dalle esigenze dell'applicazione. `AndroidClientHandler`è consigliato per il supporto di sicurezza più aggiornato, ad esempio.
@@ -98,7 +95,6 @@ Lo svantaggio dell'uso di SSL noioso come provider TLS sottostante è la possibi
 
 A partire da Novell. Android 8,3, il provider TLS predefinito è noioso SSL`btls`(). Se non si vuole usare la crittografia SSL noiosa, è possibile ripristinare l'implementazione SSL gestita cronologicamente impostando `$(AndroidTlsProvider)` la proprietà `legacy` su. per ulteriori informazioni sull'impostazione delle proprietà di compilazione, vedere [processo di compilazione](~/android/deploy-test/building-apps/build-process.md).
 
-
 ### <a name="programatically-using-androidclienthandler"></a>A livello con`AndroidClientHandler`
 
 `Xamarin.Android.Net.AndroidClientHandler` È un'`HttpMessageHandler` implementazione specifica per Novell. Android.
@@ -113,7 +109,6 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 > [!NOTE]
 > Il dispositivo Android sottostante deve supportare TLS 1,2 (IE. Android 4,1 e versioni successive. Si noti che il supporto ufficiale per TLS 1,2 è in Android 5.0 +. Tuttavia alcuni dispositivi supportano TLS 1,2 in Android 4.1 +.
-
 
 ## <a name="ssltls-implementation-build-option"></a>Opzione di compilazione implementazione SSL/TLS
 
@@ -135,7 +130,7 @@ Ad esempio:
 var client = new HttpClient();
 ```
 
-Se l'implementazione di HttpClient è stata impostata su Managed e l'implementazione di TLS è stata impostata sulla modalità **nativa TLS 1.2 +** , l' `client` oggetto `HttpClientHandler` utilizzerà automaticamente il protocollo gestito e TLS 1,2 (fornito dalla libreria BoringSSL) per il relativo Richieste HTTP.
+Se l'implementazione di HttpClient è stata impostata su **Managed** e l'implementazione di TLS è stata impostata sulla modalità **nativa TLS 1.2 +** , l' `client` oggetto `HttpClientHandler` utilizzerà automaticamente il protocollo gestito e TLS 1,2 (fornito dalla libreria BoringSSL) per il relativo Richieste HTTP.
 
 Tuttavia, se l' **implementazione di HttpClient** è impostata `AndroidHttpClient`su, tutti `HttpClient` gli oggetti utilizzeranno la classe `java.net.URLConnection` Java sottostante e non saranno interessati dal valore di **implementazione di TLS/SSL** . `WebRequest`gli oggetti useranno la libreria BoringSSL.
 
@@ -180,7 +175,6 @@ Questa variabile di ambiente viene impostata aggiungendo un _file di ambiente_ a
 -----
 
 Per altre informazioni sulle variabili di ambiente e su Novell. Android, vedere la guida dell' [ambiente Novell. Android](~/android/deploy-test/environment.md) .
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

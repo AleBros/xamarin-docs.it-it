@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/22/2018
-ms.openlocfilehash: 17995f61d92856a88769e2cd7ac8ed7445cf9782
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 36779446a132dc696f28903c3f0b27329bcd4aaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281131"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752110"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Novell. iOS
 
@@ -319,7 +319,6 @@ var configuration = new ARWorldTrackingConfiguration
 ```
 
 Sebbene la trama perfettamente riflettente illustrata nel frammento di codice precedente sia divertente in un esempio, la texturing ambientale è probabilmente meglio usata con la funzione destraint per evitare che venga attivata una risposta "inquietante Valley" (la trama è solo una stima basata sulla fotocamera registrato).
-
 
 ### <a name="shared-and-persistent-ar-experiences"></a>Esperienze AR condivise e persistenti
 

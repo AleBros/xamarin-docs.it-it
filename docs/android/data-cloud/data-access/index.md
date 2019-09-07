@@ -1,52 +1,51 @@
 ---
-title: Xamarin.Android Data Access
-description: La maggior parte delle applicazioni hanno alcuni requisiti per salvare i dati nel dispositivo in locale. A meno che la quantità di dati non sarebbero incredibilmente piccola, ciò richiede in genere un database e un livello di dati nell'applicazione per gestire l'accesso al database.  Android ha il motore di database SQLite 'predefinito' e l'accesso per archiviare e recuperare i dati è semplificato della piattaforma Xamarin. Questo documento viene illustrato come accedere a un database SQLite in modo lo sviluppo multipiattaforma.
+title: Accesso ai dati di Novell. Android
+description: Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database.  Android dispone del motore di database SQLite "built in" e l'accesso per archiviare e recuperare i dati è semplificato dalla piattaforma Novell. Questo documento illustra come accedere a un database SQLite in modo multipiattaforma.
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 6858e290d93007d6054ba0ef63dce86e6e2e53e3
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 2343603199661ea39b1f0af172ce0ccf48a2cd66
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649625"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754579"
 ---
-# <a name="xamarinandroid-data-access"></a>Xamarin.Android Data Access
+# <a name="xamarinandroid-data-access"></a>Accesso ai dati di Novell. Android
 
-_La maggior parte delle applicazioni hanno alcuni requisiti per salvare i dati nel dispositivo in locale. A meno che la quantità di dati non sarebbero incredibilmente piccola, ciò richiede in genere un database e un livello di dati nell'applicazione per gestire l'accesso al database.  Android ha il motore di database SQLite 'predefinito' e l'accesso per archiviare e recuperare i dati è semplificato della piattaforma Xamarin. Questo documento viene illustrato come accedere a un database SQLite in modo lo sviluppo multipiattaforma._
+_Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database.  Android dispone del motore di database SQLite "built in" e l'accesso per archiviare e recuperare i dati è semplificato dalla piattaforma Novell. Questo documento illustra come accedere a un database SQLite in modo multipiattaforma._
 
-## <a name="data-access-overview"></a>Panoramica di accesso dati
+## <a name="data-access-overview"></a>Panoramica dell'accesso ai dati
 
-La maggior parte delle applicazioni hanno alcuni requisiti per salvare i dati nel dispositivo in locale. A meno che la quantità di dati non sarebbero incredibilmente piccola, ciò richiede in genere un database e un livello di dati nell'applicazione per gestire l'accesso al database. Android entrambe con il motore di database SQLite "incorporato" e accedere ai dati è semplificato della piattaforma Xamarin, fornito con il Provider di dati di SQLite.
+Per la maggior parte delle applicazioni è necessario salvare i dati sul dispositivo localmente. A meno che la quantità di dati non sia leggermente ridotta, questo in genere richiede un database e un livello dati nell'applicazione per gestire l'accesso al database. Android dispone del motore di database SQLite "built in" e l'accesso ai dati viene semplificato dalla piattaforma Novell, che viene fornita con la provider di dati SQLite.
 
-Xamarin. Android supporta API di accesso ai database, ad esempio:
+Novell. Android supporta le API di accesso al database, ad esempio:
 
-- Framework di ADO.NET.
-- Libreria di terze parti 3rd SQLite-NET.
+- ADO.NET Framework.
+- Libreria di terze parti SQLite-NET.
 
-La maggior parte del codice in questa sezione è completamente lo sviluppo multipiattaforma e verrà eseguite senza modifica su iOS o Android. Esistono due app di esempio illustrata:
+La maggior parte del codice in questa sezione è completamente multipiattaforma e verrà eseguita in iOS o Android senza modifiche. Sono illustrate due app di esempio:
 
-- [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; operazioni semplici dati scrive i risultati in un testo vengono visualizzati controllo.
+- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; Operazioni dati semplici scrive i risultati in un controllo di visualizzazione del testo;
 
-- [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; integra le operazioni sui dati in una piccola applicazione funzionante che elenca e modifica di una struttura di dati semplici.
+- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; Integra le operazioni dati in una piccola applicazione funzionante che elenca e modifica una struttura di dati semplice.
 
-Entrambe le soluzioni di esempio contengono progetti di applicazione di esempio di Android e iOS.
+Entrambe le soluzioni di esempio contengono progetti di applicazioni di esempio iOS e Android.
 
-Per le applicazioni xamarin. Forms, leggere [funziona con i database](~/xamarin-forms/data-cloud/data/databases.md) che illustra come operare con SQLite in una libreria di classi Portabile con xamarin. Forms.
+Per le applicazioni Novell. Forms, vedere [uso dei database](~/xamarin-forms/data-cloud/data/databases.md) che spiega come usare SQLite in una libreria PCL con Novell. Forms.
 
-Gli argomenti in questa sezione descrivono l'accesso ai dati in xamarin. Android usando SQLite come il motore di database. Il database è accessibile "direttamente" usando la sintassi ADO.NET oppure è possibile includere SQLite.NET ORM ed eseguire operazioni sui dati nel linguaggio c#.
+Gli argomenti di questa sezione illustrano l'accesso ai dati in Novell. Android usando SQLite come motore di database. È possibile accedere direttamente al database usando la sintassi ADO.NET oppure è possibile includere l'ORM SQLite.NET ed eseguire operazioni sui dati in C#.
 
-Vengono esaminati due esempi: uno che contiene codice di accesso ai dati molto semplice che gli output in un campo di testo e un'applicazione semplice che include creazione, lettura, aggiornamento ed eliminazione di funzionalità. Viene descritta anche threading e su come eseguire il seeding dell'applicazione con un database SQLite prepopolato.
+Vengono esaminati due esempi: uno contenente codice di accesso ai dati molto semplice che restituisce un campo di testo e una semplice applicazione che include funzionalità di creazione, lettura, aggiornamento ed eliminazione. Viene anche illustrato il threading e come inizializzare l'applicazione con un database SQLite pre-popolato.
 
-Per altri esempi di accesso ai dati di multi-piattaforma, vedere la [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) case study.
-
+Per altri esempi di accesso ai dati multipiattaforma, vedere la pagina relativa a Microsoft [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) case study.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [DataAccess Basic (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avanzate (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Ricette dei dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Accesso ai dati di xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (esempio)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Ricette per i dati Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
+- [Accesso ai dati di Novell. Forms](~/xamarin-forms/data-cloud/data/databases.md)

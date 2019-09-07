@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286751"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768601"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Tecniche di interazione rapida per watchos 3 in Novell
 
@@ -98,7 +98,7 @@ Quando si utilizzano i riconoscitori di movimento in watchos 3, Apple suggerisce
 - Alcuni movimenti hanno la precedenza su altri tipi di movimento, ad esempio:
   - Scorrimento
   - Force Touch
- 
+
 ### <a name="digital-crown-rotation"></a>Rotazione Digital Crown
 
 Implementando il supporto Digital Crown nelle app watchos 3, uno sviluppatore può garantire una maggiore velocità di navigazione e interazioni di precisione per gli utenti.
@@ -169,7 +169,6 @@ Apple ha lasciato lo sviluppatore per determinare il modo in cui i conteggi dell
 Il segno (`+/-`) del Delta rotazionale indica la direzione in cui l'utente sta trasformando la Digital Crown:
 
 [![](quick-interaction-techniques-images/quick03.png "Il segno del Delta rotazionale indica la direzione in cui l'utente sta trasformando il Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 Se l'utente sta scorrendo verso l'alto, WatchKit restituirà Delta positivi e, in caso di scorrimento verso il basso, verranno restituiti Delta negativi, a prescindere dall'orientamento che l'utente sta indossando.
 

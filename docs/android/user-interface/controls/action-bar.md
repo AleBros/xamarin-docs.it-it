@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f472f19429f21c659e28ba1c7a8d2670e22ea6a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643048"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758948"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>ActionBar per Novell. Android
 
 Quando si `TabActivity`USA, il codice per creare le icone di tabulazione non ha alcun effetto quando viene eseguito sul Framework Android 4,0. Anche se funziona come nelle versioni di Android precedenti alla 2,3, la `TabActivity` classe stessa è stata deprecata in 4,0. È stato introdotto un nuovo modo per creare un'interfaccia a schede che usa il Barra delle azioni, che verrà illustrato di seguito.
-
 
 ## <a name="action-bar-tabs"></a>Schede Barra delle azioni
 
@@ -56,7 +55,6 @@ class SampleTabFragment: Fragment
             view.FindViewById<TextView> (Resource.Id.sampleTextView);            
         sampleTextView.Text = "sample fragment text";
 
-
         return view;
     }
 }
@@ -79,11 +77,9 @@ this.ActionBar.AddTab (tab);
 
 Per l'esempio completo, vedere il progetto *HelloTabsICS* nel codice di esempio per questo documento.
 
-
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
 La `ShareActionProvider` classe consente di eseguire un'azione di condivisione da un barra delle azioni. Si occupa della creazione di una visualizzazione azione con un elenco di app in grado di gestire uno scopo di condivisione e mantiene una cronologia delle applicazioni utilizzate in precedenza per facilitarne l'accesso in un secondo momento dalla Barra delle azioni. Questo consente alle applicazioni di condividere i dati attraverso un'esperienza utente coerente in Android.
-
 
 ### <a name="image-sharing-example"></a>Esempio di condivisione immagini
 
@@ -91,11 +87,9 @@ Ad esempio, di seguito è riportata una schermata di un Barra delle azioni con u
 
 [![Screenshot dell'icona dell'applicazione di messaggistica nell'Barra delle azioni](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
-
 Quando l'utente fa clic sull'elemento nel Barra delle azioni, viene avviata l'app di messaggistica che contiene l'immagine condivisa, come illustrato di seguito:
 
 [![Screenshot dell'app di messaggistica che Visualizza l'immagine Monkey](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
-
 
 ### <a name="specifying-the-action-provider-class"></a>Specifica della classe del provider di azioni
 
@@ -110,7 +104,6 @@ Per utilizzare `ShareActionProvider`, impostare l' `android:actionProviderClass`
       android:actionProviderClass="android.widget.ShareActionProvider" />
 </menu>
 ```
-
 
 ### <a name="inflating-the-menu"></a>Gonfiaggio del menu
 
@@ -128,7 +121,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-
 ### <a name="creating-the-intent"></a>Creazione della finalità
 
 Utilizzerà lo scopo, passato `SetShareIntent` al metodo nel codice precedente, per avviare l'attività appropriata. `ShareActionProvider` In questo caso viene creata una finalità per inviare un'immagine usando il codice seguente:
@@ -145,8 +137,6 @@ Intent CreateIntent ()
 ```
 
 L'immagine nell'esempio di codice precedente viene inclusa come asset con l'applicazione e copiata in una posizione accessibile pubblicamente quando viene creata l'attività, quindi sarà accessibile ad altre applicazioni, ad esempio l'app di messaggistica. Il codice di esempio che accompagna questo articolo contiene l'origine completa di questo esempio, ne illustra l'uso.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646743"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771650"
 ---
 # <a name="xamarinforms-binding-path"></a>Percorso di binding di Xamarin.Forms
 
@@ -162,8 +162,6 @@ Il tipo della proprietà `Content` è ora noto ed è `Xamarin.Forms.StackLayout`
 Dato che Xamarin.Forms elabora il percorso di binding, installa un gestore `PropertyChanged` per qualsiasi oggetto nel percorso che implementa l'interfaccia `INotifyPropertyChanged`. Ad esempio, il binding finale reagisce a una modifica nella prima `Label` perché cambia la proprietà `Text`.
 
 Se una proprietà nel percorso di binding non implementa `INotifyPropertyChanged`, eventuali modifiche a tale proprietà verranno ignorate. Alcune modifiche potrebbero invalidare del tutto il percorso di binding, quindi è consigliabile usare questa tecnica solo quando la stringa di proprietà e proprietà secondarie non diventa mai non valida.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

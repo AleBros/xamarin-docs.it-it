@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0067a9e576e695a308e4326955b540be2ff46f61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b073e0233fb9c5511593ed80313f402c888c811
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657220"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771006"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticare gli utenti con un database di documenti Azure Cosmos DB e Novell. Forms
 
@@ -267,7 +267,6 @@ Per altre informazioni sull'eliminazione di un documento da una raccolta di docu
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come combinare il controllo di accesso con le raccolte partizionate, in modo che un utente può accedere solo ai propri documenti di database di documenti in un'applicazione xamarin. Forms. Specifica l'identità dell'utente come chiave di partizione assicura che una raccolta partizionata possa archiviare solo i documenti per tale utente.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

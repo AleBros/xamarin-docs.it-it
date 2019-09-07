@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 42284ded0bbb5dab36470b7d2f291df64c6df264
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281280"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767782"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Suggerimenti proattivi di watchos in Novell
 
 _Questo articolo illustra come usare i suggerimenti proattivi in un'app watchos 3 per guidare l'engagement consentendo al sistema di presentare in modo proattivo le informazioni utili automaticamente all'utente._
 
-
 Una novità di watchos 3, i suggerimenti proattivi presentano nuove modalità per consentire agli utenti di interagire con un'app Novell. iOS inviando in modo proattivo informazioni utili automaticamente all'utente in momenti appropriati.
-
 
 ## <a name="about-proactive-suggestions"></a>Informazioni sui suggerimenti proattivi
 
@@ -300,7 +298,6 @@ In questa sezione verranno esaminati i suggerimenti per la posizione di utilizzo
 
 Quando l'app viene avviata con un `MKDirectionsRequest` oggetto MapKit, deve iniziare automaticamente a fornire le istruzioni per l'utente al percorso richiesto oppure presentare un'interfaccia utente che consente all'utente di iniziare a ottenere le indicazioni in modo semplice. Ad esempio:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -362,7 +359,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato suggerimenti proattivi e ha illustrato come lo sviluppatore può usarle per indirizzare il traffico a un'app Novell. iOS per watchos. È stato illustrato il passaggio per implementare i suggerimenti proattivi e le linee guida per l'utilizzo.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

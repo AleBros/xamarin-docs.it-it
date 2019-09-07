@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 5fc5e6c1df911963ab765f5d49016eace8e2733f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d9174e9b2d6c056c94b405033a25eeb787c92f9f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284138"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768761"
 ---
 # <a name="monotouchdialog-json-markup"></a>Markup JSON per MonoTouch.Dialog
 
@@ -91,7 +91,6 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="Root_Element_Syntax" />
 
-
 ## <a name="root-element-syntax"></a>Sintassi degli elementi radice
 
 L'elemento radice contiene i valori seguenti:
@@ -99,11 +98,9 @@ L'elemento radice contiene i valori seguenti:
 - `title`
 - `sections` (facoltativo)
 
-
 L'elemento radice può essere visualizzato all'interno di una sezione come elemento per creare un controller annidato. In tal caso, è necessario impostare `"type"` la proprietà extra su`"root"`
 
  <a name="url" />
-
 
 ### <a name="url"></a>url
 
@@ -111,13 +108,11 @@ Se la `"url"` proprietà è impostata, se l'utente tocca questo elemento RootEle
 
  <a name="group" />
 
-
 ### <a name="group"></a>raggruppamento
 
 Se impostata, imposta il GroupName per l'elemento radice. I nomi dei gruppi vengono usati per selezionare un riepilogo visualizzato come valore dell'elemento radice da uno degli elementi annidati nell'elemento. Si tratta del valore di una casella di controllo o del valore di un pulsante di opzione.
 
  <a name="radioselected" />
-
 
 ### <a name="radioselected"></a>radioselezione
 
@@ -125,13 +120,11 @@ Identifica l'elemento radio selezionato negli elementi annidati
 
  <a name="title" />
 
-
 ### <a name="title"></a>title
 
 Se presente, sarà il titolo usato per RootElement
 
  <a name="type" />
-
 
 ### <a name="type"></a>type
 
@@ -139,13 +132,11 @@ Deve essere impostato su `"root"` quando viene visualizzato in una sezione (util
 
  <a name="sections" />
 
-
 ### <a name="sections"></a>sezioni
 
 Si tratta di una matrice JSON con singole sezioni
 
  <a name="Section_Syntax" />
-
 
 ## <a name="section-syntax"></a>Sintassi della sezione
 
@@ -155,9 +146,7 @@ La sezione contiene:
 - `footer` (facoltativo)
 - Matrice `elements`
 
-
  <a name="header" />
-
 
 ### <a name="header"></a>intestazione
 
@@ -165,13 +154,11 @@ Se presente, il testo dell'intestazione viene visualizzato come didascalia della
 
  <a name="footer" />
 
-
 ### <a name="footer"></a>piè
 
 Se presente, il piè di pagina viene visualizzato nella parte inferiore della sezione.
 
  <a name="elements" />
-
 
 ### <a name="elements"></a>elementi
 
@@ -182,11 +169,9 @@ Alcuni degli elementi condividono alcune proprietà comuni, ad `"caption"` esemp
 - `entry`righe (Regular o password)
 - `boolean`valori (mediante opzioni o immagini)
 
-
 Gli elementi stringa possono essere usati come pulsanti fornendo un metodo da richiamare quando l'utente tocca la cella o l'accessorio.
 
  <a name="Rendering_Elements" />
-
 
 ## <a name="rendering-elements"></a>Elementi di rendering
 
@@ -230,7 +215,6 @@ Gli elementi di rendering possono visualizzare due stringhe contemporaneamente, 
 
  <a name="accessory" />
 
-
 ### <a name="accessory"></a>accessorio
 
 Determina il tipo di accessorio da visualizzare nell'elemento di rendering. i valori possibili sono:
@@ -239,11 +223,9 @@ Determina il tipo di accessorio da visualizzare nell'elemento di rendering. i va
 - `detail-disclosure`
 - `disclosure-indicator`
 
-
 Se il valore non è presente, non viene visualizzato alcun accessorio
 
  <a name="background" />
-
 
 ### <a name="background"></a>sfondo
 
@@ -251,20 +233,17 @@ La proprietà background imposta il colore di sfondo per la cella. Il valore è 
 
  <a name="caption" />
 
-
 ### <a name="caption"></a>didascalia
 
 Stringa principale da visualizzare nell'elemento di rendering. Il tipo di carattere e il colore possono essere personalizzati `"textcolor"` impostando le proprietà e `"font"` . Lo stile di rendering è determinato dalla `"style"` proprietà.
 
  <a name="color_and_detailcolor" />
 
-
 ### <a name="color-and-detailcolor"></a>Color e detailcolor
 
 Il colore da utilizzare per il testo principale o il testo dettagliato.
 
  <a name="detailfont_and_font" />
-
 
 ### <a name="detailfont-and-font"></a>DetailFont e font
 
@@ -274,9 +253,7 @@ Di seguito sono indicate specifiche valide per i tipi di carattere:
 - Helvetica
 - "Helvetica-14"
 
-
  <a name="linebreak" />
-
 
 ### <a name="linebreak"></a>linebreak
 
@@ -289,11 +266,9 @@ Determina la modalità di interruzione delle righe. I valori possibili sono:
 - `tail-truncation`
 - `word-wrap`
 
-
 Sia `character-wrap` che `word-wrap` possono`"lines"` essere utilizzati insieme alla proprietà impostata su zero per trasformare l'elemento di rendering in un elemento a più righe.
 
  <a name="ontap_and_onaccessorytap" />
-
 
 ### <a name="ontap-and-onaccessorytap"></a>ONTAP e onaccessorytap
 
@@ -316,13 +291,11 @@ class Foo {
 
  <a name="lines" />
 
-
 ### <a name="lines"></a>linee
 
 Se è impostato su zero, l'elemento verrà ridimensionato automaticamente in base al contenuto delle stringhe contenute. Per eseguire questa operazione, è necessario impostare anche la `"linebreak"` proprietà su `"character-wrap"` o `"word-wrap"`.
 
  <a name="style" />
-
 
 ### <a name="style"></a>style
 
@@ -334,9 +307,7 @@ I valori possibili sono:
 - `"value2"`
 - `"subtitle"`: testo con un sottotitolo.
 
-
  <a name="subtitle" />
-
 
 ### <a name="subtitle"></a>sottotitolo
 
@@ -345,20 +316,17 @@ Questa operazione viene eseguita con una singola voce.
 
  <a name="textcolor" />
 
-
 ### <a name="textcolor"></a>TextColor
 
 Colore da utilizzare per il testo.
 
  <a name="value" />
 
-
 ### <a name="value"></a>value
 
 Valore secondario da visualizzare nell'elemento di rendering. Il layout di questo oggetto è influenzato dall' `"style"` impostazione. Il tipo di `"detailfont"` carattere e il colore possono essere personalizzati impostando e `"detailcolor"`.
 
  <a name="Boolean_Elements" />
-
 
 ## <a name="boolean-elements"></a>Elementi booleani
 
@@ -382,13 +350,11 @@ Gli elementi booleani devono impostare il tipo `"bool"`su, può contenere `"capt
 
  <a name="type" />
 
-
 ### <a name="type"></a>type
 
 Il tipo può essere impostato su `"boolean"` o `"checkbox"`su. Se impostato su booleano, utilizzerà un UISlider o immagini (se `"on"` e `"off"` sono impostati). Se la casella di controllo è impostata su, verrà utilizzata una casella di controllo. La `"group"` proprietà può essere utilizzata per contrassegnare un elemento booleano come appartenente a un particolare gruppo. Questa operazione è utile se la radice contenitore dispone anche `"group"` di una proprietà perché la radice riepiloga i risultati con un conteggio di tutti i valori booleani (o caselle di controllo) che appartengono allo stesso gruppo.
 
  <a name="Entry_Elements" />
-
 
 ## <a name="entry-elements"></a>Elementi entry
 
@@ -423,13 +389,11 @@ Usare gli elementi entry per consentire all'utente di immettere i dati. Il tipo 
 
  <a name="autocorrect" />
 
-
 ### <a name="autocorrect"></a>correzione automatica
 
 Determina lo stile di correzione automatica da usare per la voce. I valori possibili sono true o false (o le stringhe `"yes"` e `"no"`).
 
  <a name="capitalization" />
-
 
 ### <a name="capitalization"></a>uso di maiuscole e minuscole
 
@@ -440,16 +404,13 @@ Stile di maiuscole da usare per la voce. I valori possibili sono:
 - `sentences`
 - `words`
 
-
  <a name="caption" />
-
 
 ### <a name="caption"></a>didascalia
 
 Didascalia da usare per la voce
 
  <a name="keyboard" />
-
 
 ### <a name="keyboard"></a>tastiera
 
@@ -465,16 +426,13 @@ Tipo di tastiera da usare per l'immissione di dati. I valori possibili sono:
 - `twitter`
 - `url`
 
-
  <a name="placeholder" />
-
 
 ### <a name="placeholder"></a>segnaposto
 
 Testo del suggerimento visualizzato quando la voce ha un valore vuoto.
 
  <a name="return-key" />
-
 
 ### <a name="return-key"></a>chiave di ritorno
 
@@ -492,9 +450,7 @@ Etichetta utilizzata per la chiave restituita. I valori possibili sono:
 - `send`
 - `yahoo`
 
-
  <a name="value" />
-
 
 ### <a name="value"></a>value
 
@@ -502,14 +458,12 @@ Valore iniziale per la voce
 
  <a name="Radio_Elements" />
 
-
 ## <a name="radio-elements"></a>Elementi radio
 
 Gli elementi radio hanno `"radio"`il tipo. L'elemento selezionato viene selezionato dalla `radioselected` proprietà sull'elemento radice che lo contiene.
 Se, inoltre, viene impostato un valore per `"group"` la proprietà, questo pulsante di opzione appartiene a tale gruppo.
 
  <a name="Date_and_Time_Elements" />
-
 
 ## <a name="date-and-time-elements"></a>Elementi data e ora
 
@@ -535,7 +489,6 @@ I tipi `"datetime"` `"time"` di elemento `"date"` e vengono utilizzati per il re
 ```
 
  <a name="Html/Web_Element" />
-
 
 ## <a name="htmlweb-element"></a>Elemento HTML/Web
 

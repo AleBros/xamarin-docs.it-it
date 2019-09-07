@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: d409787661491a6922434a12157c494851644412
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d180345c36531b58c13eebbd97dc4f7555b8f13c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291623"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768864"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Popolamento di una tabella con i dati in Novell. iOS
 
@@ -25,7 +25,6 @@ Questa guida illustra:
 - Aggiunta di un indice
 - Aggiunta di intestazioni e piè di pagina
 
-
 <a name="Subclassing_UITableViewSource" />
 
 ## <a name="subclassing-uitableviewsource"></a>Sottoclasse UITableViewSource
@@ -36,7 +35,6 @@ Per fare in modo che una tabella visualizzi i dati, sono necessari solo due meto
 
 - **RowsInSection** : restituisce un [`nint`](~/cross-platform/macios/nativetypes.md) conteggio del numero totale di righe di dati che devono essere visualizzate nella tabella.
 - **GetCell** : restituisce un `UITableCellView` oggetto popolato con i dati per l'indice di riga corrispondente passato al metodo.
-
 
 Il file di esempio BasicTable **TableSource.cs** include l'implementazione più semplice possibile `UITableViewSource`di. Nel frammento di codice riportato di seguito viene accettata una matrice di stringhe da visualizzare nella tabella e viene restituito uno stile di cella predefinito contenente ogni stringa:
 
@@ -139,13 +137,9 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-
 Ora l'utente può toccare una riga e verrà visualizzato un avviso:
 
-
-
  [![](populating-a-table-with-data-images/image4.png "Avviso di riga selezionato")](populating-a-table-with-data-images/image4.png#lightbox)
-
 
 ## <a name="cell-reuse"></a>Riutilizzo celle
 
@@ -246,7 +240,6 @@ Per usare la `Dictionary<>` sottoclasseèquindinecessarioaggiungereomodificareim
 - **RowsInSection** : restituisce il numero di righe in una sezione specificata.
 - **SectionIndexTitles** : restituisce la matrice di stringhe che verrà utilizzata per visualizzare l'indice. Il codice di esempio restituisce una matrice di lettere.
 
-
 I metodi aggiornati nel file di esempio **BasicTableIndex/TableSource. cs** hanno un aspetto simile al seguente:
 
 ```csharp
@@ -266,7 +259,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Gli indici vengono in genere utilizzati solo con lo stile di tabella normale.
 
-
 <a name="Adding_Headers_and_Footers" />
 
 ## <a name="adding-headers-and-footers"></a>Aggiunta di intestazioni e piè di pagina
@@ -280,7 +272,6 @@ Per visualizzare le intestazioni e i piè `UITableViewSource` di pagina, la sott
 
 - **TitleForHeader** : restituisce il testo da utilizzare come intestazione
 - **TitleForFooter** : restituisce il testo da utilizzare come piè di pagina.
-
 
 I metodi aggiornati nel file di esempio **BasicTableHeaderFooter/code/TableSource. cs** hanno un aspetto simile al seguente:
 
@@ -296,7 +287,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 ```
 
 È possibile personalizzare ulteriormente l'aspetto dell'intestazione e del piè di pagina con un oggetto visualizzazione, usando `GetViewForHeader` gli `GetViewForFooter` override del metodo `UITableViewSource`e su.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

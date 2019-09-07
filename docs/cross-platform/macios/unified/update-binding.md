@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: da877cc10829c4067596263b2a3676413103282d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287371"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765418"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Eseguire la migrazione di un binding all'API unificata
 
@@ -134,7 +134,6 @@ Dopo aver apportato tutte le modifiche al codice, è necessario modificare il pr
 
 Come passaggio finale per l'aggiornamento del progetto di binding per l'uso delle API unificate, è necessario modificare il `MakeFile` che verrà usato per compilare il progetto o il tipo di progetto Novell (se si sta eseguendo il binding dall'interno di Visual Studio per Mac) e impostare _btouch_ per l'associazione rispetto alle API unificate invece di quelle classiche.
 
-
 ### <a name="updating-a-makefile"></a>Aggiornamento di un MakeFile
 
 Se si usa un makefile per compilare il progetto di binding in un Novell. DLL, sarà necessario includere l'opzione della `--new-style` riga di `btouch`comando e chiamare `btouch-native` anziché.
@@ -149,7 +148,6 @@ PROJECT_ROOT=XMBindingLibrarySample
 PROJECT=$(PROJECT_ROOT)/XMBindingLibrarySample.xcodeproj
 TARGET=XMBindingLibrarySample
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
 
 all: XMBindingLibrary.dll
 
@@ -214,8 +212,6 @@ Con tutte queste modifiche, è possibile compilare la nuova versione di 64 bit d
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo sono state illustrate le modifiche che devono essere apportate a un progetto di associazione Novell esistente per supportare le nuove API unificate e i dispositivi a 64 bit e i passaggi necessari per compilare la nuova versione compatibile con 64 bit di un'API.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

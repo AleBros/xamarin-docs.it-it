@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1f2fce14f1839e3d9aff4c68dc0dffc0e8059e6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766808"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Disegno di immagini 3D con vertici in monogame
 
@@ -117,7 +117,6 @@ Ora che sono state definite le posizioni per la geometria, è possibile scrivere
 
 Prima di tutto, è necessario definire un' `BasicEffect` istanza che conterrà i parametri per il rendering, ad esempio posizione e illuminazione. A tale scopo, aggiungere un `BasicEffect` membro `Game1` alla classe di seguito in cui `floorVerts` è definito il campo:
 
-
 ```csharp
 ...
 VertexPositionTexture[] floorVerts;
@@ -168,7 +167,6 @@ void DrawGround()
 
     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
     foreach (var pass in effect.CurrentTechnique.Passes)
     {
@@ -233,7 +231,7 @@ Infine, viene specificato il numero di triangoli di cui eseguire il rendering. L
 
 A questo punto, l'app esegue il rendering di un piano bianco (in prospettiva). Si aggiungerà quindi una trama al progetto da usare quando si esegue il rendering del piano.
 
-Per semplificare l'attività, aggiungeremo il. png direttamente al progetto anziché usare lo strumento della pipeline monogame. A tale scopo, scaricare il [file con estensione png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) nel computer. Al termine del download, fare clic con il pulsante destro del mouse sulla cartella **contenuto** nel riquadro della soluzione e scegliere **Aggiungi > Aggiungi file.** Se si usa Android, questa cartella si trova nella cartella assets del progetto specifico per Android. Se si utilizza iOS, la cartella si troverà nella radice del progetto iOS. Passare al percorso in cui è stato salvato il file **scacchi. png** e selezionare il file. Selezionare per copiare il file nella directory.
+Per semplificare l'attività, aggiungeremo il. png direttamente al progetto anziché usare lo strumento della pipeline monogame. A tale scopo, scaricare il [file con estensione png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) nel computer. Al termine del download, fare clic con il pulsante destro del mouse sulla cartella **contenuto** nel riquadro della soluzione e scegliere **Aggiungi > Aggiungi file.** Se si usa Android, questa cartella si trova nella cartella **assets** del progetto specifico per Android. Se si utilizza iOS, la cartella si troverà nella radice del progetto iOS. Passare al percorso in cui è stato salvato il file **scacchi. png** e selezionare il file. Selezionare per copiare il file nella directory.
 
 Successivamente, verrà aggiunto il codice per creare `Texture2D` l'istanza. `Texture2D` Per prima cosa, aggiungere come membro di `Game1` sotto l' `BasicEffect` istanza:
 
@@ -245,7 +243,6 @@ Texture2D checkerboardTexture;
 ```
 
 Modificare `Game1.LoadContent` come segue:
-
 
 ```csharp
 protected override void LoadContent()
@@ -306,7 +303,6 @@ void DrawGround()
 
 Infine, è necessario modificare il metodo `Game1.Initialize` in modo da assegnare anche le coordinate di trama sui vertici:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -349,7 +345,6 @@ Le coordinate di trama normalizzate consentono il ridimensionamento della trama 
 
 È possibile modificare l'assegnazione delle coordinate di trama per usare una singola variabile per il numero di ripetizioni:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -382,7 +377,6 @@ protected override void Initialize ()
 In questo modo la trama viene ripetuta 20 volte:
 
 ![](part2-images/image10.png "In questo modo la trama viene ripetuta 20 volte")
-
 
 ## <a name="rendering-vertices-with-models"></a>Rendering dei vertici con i modelli
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 60bf25d7d88a1772e8b742a336a5faaebdf964fa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1a91b92cc3e82bad02d630dde8ced1d1ba63e3fd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290806"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768481"
 ---
 # <a name="maps-in-xamarinios"></a>Mappe in Novell. iOS
 
@@ -52,7 +52,6 @@ Lo screenshot seguente mostra i diversi stili di mappa disponibili:
 
 - Zoom tramite un movimento di pizzico
 - Panoramica tramite un movimento di Pan
-
 
 Queste funzionalità possono essere abilitate o disabilitate semplicemente impostando `ScrollEnabled` le `ZoomEnabled` proprietà e `MKMapView` dell'istanza, in cui il valore predefinito è true per entrambi. Per visualizzare, ad esempio, una mappa statica, è sufficiente impostare le proprietà appropriate su false:
 
@@ -100,7 +99,6 @@ Un'annotazione è costituita da due parti:
 
 - `MKAnnotation` Oggetto che include i dati del modello relativi all'annotazione, ad esempio il titolo e la posizione dell'annotazione.
 - Oggetto `MKAnnotationView` che contiene l'immagine da visualizzare e, facoltativamente, un callout visualizzato quando l'utente tocca l'annotazione.
-
 
 Map Kit usa il modello di delega iOS per aggiungere annotazioni a una mappa, `Delegate` in cui la `MKMapView` proprietà di è impostata su un'istanza `MKMapViewDelegate`di un oggetto. Si tratta dell'implementazione di questo delegato responsabile della restituzione dell' `MKAnnotationView` oggetto per un'annotazione.
 
@@ -183,7 +181,6 @@ Un altro modo per eseguire il livello di grafica su una mappa consiste nell'usar
 - Polilinee: spesso visualizzate quando si mostra una route.
 - Cerchi, usati per evidenziare un'area circolare di una mappa.
 
-
 Inoltre, è possibile creare sovrapposizioni personalizzate per mostrare geometrie arbitrarie con codice di disegno granulare e personalizzato. Ad esempio, il radar meteorologico è un buon candidato per una sovrapposizione personalizzata.
 
 #### <a name="adding-an-overlay"></a>Aggiunta di una sovrapposizione
@@ -192,7 +189,6 @@ Analogamente alle annotazioni, l'aggiunta di una sovrapposizione implica due par
 
 - Creazione di un oggetto modello per la sovrimpressione e aggiunta a `MKMapView` .
 - Creazione di una vista per la sovrimpressione `MKMapViewDelegate` in.
-
 
 Il modello per la sovrimpressione può essere `MKShape` qualsiasi sottoclasse. Novell. iOS include `MKShape` sottoclassi per poligoni, polilinee e cerchi, rispettivamente tramite le `MKPolygon`classi, `MKPolyline` e `MKCircle` .
 
@@ -231,7 +227,6 @@ Per eseguire una ricerca locale, un'applicazione deve attenersi alla seguente pr
 1. Creare un `MKLocalSearch` oggetto `MKLocalSearchRequest` da.
 1. Chiamare il `Start` metodo `MKLocalSearch` sull'oggetto.
 1. Recuperare l' `MKLocalSearchResponse` oggetto in un callback.
-
 
 L'API di ricerca locale non fornisce alcuna interfaccia utente. Non richiede neanche una mappa da usare. Tuttavia, per utilizzare in modo pratico la ricerca locale, un'applicazione deve fornire un modo per specificare una query di ricerca e visualizzare i risultati. Inoltre, poiché i risultati conterranno i dati relativi alla posizione, sarà spesso utile visualizzarli su una mappa.
 
@@ -279,8 +274,6 @@ Si esaminerà come implementare il `searchResultsController` e il `searchResults
 Ciò comporta la visualizzazione di una barra di ricerca sulla mappa, come illustrato di seguito:
 
  ![](images/07-searchbar.png "Barra di ricerca visualizzata sulla mappa")
-
-
 
 ### <a name="displaying-the-search-results"></a>Visualizzazione dei risultati della ricerca
 
@@ -351,7 +344,6 @@ public class SearchResultsViewController : UITableViewController
             }
         });
 
-
     }
 }
 ```
@@ -382,7 +374,6 @@ public void Search (string forSearchString)
         }
     });
 
-
 }
 ```
 
@@ -406,8 +397,6 @@ L'implementazione precedente aggiunge un'annotazione alla mappa quando viene sel
 
 > [!IMPORTANT]
 > `UISearchController`è stato implementato in iOS 8. Se si desidera supportare i dispositivi prima di questo, sarà necessario utilizzare `UISearchDisplayController`.
-
-
 
 ## <a name="summary"></a>Riepilogo
 

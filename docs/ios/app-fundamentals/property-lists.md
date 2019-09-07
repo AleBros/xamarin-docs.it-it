@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 35c35e702b7f992e0661630783edd4f00abce5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286797"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767368"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Uso degli elenchi di proprietà in Novell. iOS
 
@@ -32,7 +32,6 @@ Ogni pannello Controlla proprietà diverse, come descritto di seguito:
 - **Pannello avanzato** : il pannello Advanced è la posizione in cui specificare i tipi di documento, uti e i tipi di URL supportati.
 - **Pannello di origine** : il pannello di origine controlla le proprietà meno comuni, nonché le proprietà personalizzate per l'applicazione.
 
-
 Nelle tre sezioni successive vengono esaminate le funzionalità di ogni pannello in modo più dettagliato.
 
 ## <a name="application-panel"></a>Pannello applicazione
@@ -46,11 +45,9 @@ Visual Studio per Mac offre un'interfaccia grafica per la modifica `Info.plist` 
 1. Icone e schermate di avvio
 1. Mappe e modalità in background
 
-
 Queste informazioni sono descritte più dettagliatamente nelle sezioni successive.
 
  <a name="iOS_Application_Target" />
-
 
 ### <a name="ios-application-target"></a>Destinazione applicazione iOS
 
@@ -77,13 +74,9 @@ La sezione **stili barra di stato** è un'interfaccia grafica per la modifica di
 
  <a name="Icons" />
 
-
 ### <a name="icons-launch-images-and-itunes-artwork"></a>Icone, immagini di avvio e illustrazioni di iTunes
 
 Per informazioni sull'uso di icone, immagini e illustrazioni nel file INFO. plist, vedere la Guida [uso delle immagini](~/ios/app-fundamentals/images-icons/index.md) .
-
-
-
 
 ### <a name="maps-integration-and-background-modes"></a>Modalità di integrazione e background di Maps
 
@@ -104,7 +97,6 @@ Il pannello Advanced controlla i tipi di documento e gli schemi URL supportati d
  [![](property-lists-images/image34.png "Pannello avanzato")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
-
 
 ## <a name="document-types"></a>Tipi di documento
 
@@ -127,8 +119,6 @@ Per altre informazioni sull'uso di uti personalizzati, vedere la pagina relativa
 Un nome di schema URL (detto anche protocollo) è la prima parte dell'URL. Ad esempio, `http://` e `https://` sono schemi URL comuni. È possibile creare uno schema URL personalizzato per l'applicazione. Gli schemi URL personalizzati vengono utilizzati per comunicare e inviare dati da e verso altre applicazioni. Lo screenshot seguente illustra la creazione di un nuovo schema URL personalizzato `monkeys://`denominato:
 
  [![](property-lists-images/url.png "URL personalizzati")](property-lists-images/url.png#lightbox)
-
-
 
 Per ulteriori informazioni sull'implementazione degli schemi URL personalizzati, vedere [la sezione relativa all'implementazione degli schemi URL personalizzati di Apple in questa guida](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 
@@ -153,7 +143,6 @@ Per ulteriori informazioni sulle proprietà facoltative, vedere i collegamenti [
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato l'uso degli editor grafici e avanzati con estensione plist per modificare le configurazioni comuni delle app, nonché per specificare le icone e le immagini di avvio. Introduce anche per l' `Entitlements.plist` aggiunta e la gestione delle funzionalità delle app.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

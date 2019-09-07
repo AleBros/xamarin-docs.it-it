@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290179"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765940"
 ---
 # <a name="cross-platform-performance"></a>Prestazioni multipiattaforma
 
@@ -173,7 +173,6 @@ Il campo `handler` mantiene il riferimento al metodo anonimo e viene usato per l
 
 Per rinviare la creazione di un oggetto fino al momento in cui viene usato per la prima volta, è possibile usare l'inizializzazione differita. Questa tecnica viene usata in particolare per migliorare le prestazioni, evitare calcoli e ridurre i requisiti di memoria.
 
-
 È consigliabile considerare l'uso dell'inizializzazione differita per gli oggetti la cui creazione comporta un costo elevato nei due scenari seguenti:
 
 - L'oggetto potrebbe non venire usato dall'applicazione.
@@ -246,8 +245,6 @@ Le operazioni a esecuzione prolungata devono anche supportare l'annullamento. La
 
 > [!IMPORTANT]
 > Poiché la classe `CancellationTokenSource` implementa l'interfaccia `IDisposable`, il metodo `CancellationTokenSource.Dispose` deve essere richiamato al termine dell'istanza `CancellationTokenSource`.
-
-
 
 Per altre informazioni, vedere [Panoramica del supporto asincrono](~/cross-platform/platform/async.md).
 

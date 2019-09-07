@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 194f1a260adc49083a8d4365a310447acbcc96f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287981"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769029"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Uso di viste in pila tvOS in Novell
 
@@ -74,9 +74,6 @@ Se la `BaselineRelativeArrangement` proprietà è `true`, le visualizzazioni sub
 
 > [!IMPORTANT]
 > L'allineamento della linea di base non funziona sulle dimensioni delle sottoviste estese o compresse perché la linea di base verrà calcolata in una posizione errata. Per l'allineamento della linea di base, assicurarsi che l' **altezza** della Sottovisualizzazione corrisponda all' **Altezza**della visualizzazione contenuto intrinseca.
-
-
-
 
 <a name="Common-Stack-View-Uses" />
 
@@ -309,8 +306,6 @@ Molte delle proprietà della visualizzazione stack possono essere specificate ut
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stata illustrata la progettazione e l'utilizzo di una vista in pila all'interno di un'app Novell. tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

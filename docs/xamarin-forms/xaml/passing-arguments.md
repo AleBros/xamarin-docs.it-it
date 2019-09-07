@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 065c7284970ececacbdb298d773b19f654280513
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 80f332e45d6c46ad49543923e85cbb2eceadb378
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228084"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767589"
 ---
 # <a name="passing-arguments-in-xaml"></a>Passaggio di argomenti in XAML
 
@@ -168,7 +168,6 @@ Il [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe è una classe generi
 ## <a name="summary"></a>Riepilogo
 
 L'articolo descrive gli attributi XAML può essere usato per passare argomenti per i costruttori non predefiniti, per chiamare i metodi factory e per specificare il tipo di argomento generico.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

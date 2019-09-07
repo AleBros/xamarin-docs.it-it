@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 25b4e5a564c8dabf4cb44881c25e0a10ade47350
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767732"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate del documento in Novell. iOS
 
@@ -30,7 +30,7 @@ Le icone possono essere fornite per diverse dimensioni, ottimizzate per le varie
 Per assegnare questi valori in Visual Studio per Mac, usare la sezione **tipi di documento** nella `Info.plist` scheda avanzate dell'editor per aggiungere il tipo di documento e assegnarvi le icone di immagine. Ecco ad esempio una schermata che mostra la registrazione per il supporto PDF:
 
  [![](custom-document-types-images/18.png "La sezione relativa ai tipi di documento nella scheda avanzate dell'Editor ' info. plist '")](custom-document-types-images/18.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Per assegnare questi valori in Visual Studio, usare la sezione **tipi di documento** nella `Info.plist`scheda Avanzate della:
@@ -43,9 +43,7 @@ Fare clic sul pulsante **Aggiungi tipo di documento** e compilare i campi obblig
 
 -----
 
-
 Per altre informazioni sui tipi di documento, vedere gli argomenti di [riferimento sugli identificatori di tipo uniforme](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) di Apple e [la programmazione dell'interazione tra documenti per iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

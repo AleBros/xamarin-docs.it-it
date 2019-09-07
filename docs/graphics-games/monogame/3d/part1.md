@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 013e169770fa2e52f89915d1b74c7292a049f87e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197826"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766827"
 ---
 # <a name="using-the-model-class"></a>Uso della classe Model
 
@@ -39,7 +39,6 @@ Prima di procedere, è necessario verificare che il progetto venga aperto e dist
 
 ![Schermata del gioco blu vuota](part1-images/image2.png)
 
-
 ## <a name="including-the-xnbs-in-the-game-project"></a>Inclusione di XNBs nel progetto di gioco
 
 Il formato del file. xnb è un'estensione standard per il contenuto compilato (contenuto creato dallo [strumento Pipeline monogame](http://www.monogame.net/documentation/?page=Pipeline)). Tutti i contenuti compilati hanno un file di origine (un file con estensione FBX nel caso del modello) e un file di destinazione (un file con estensione xnb). Il formato FBX è un formato di modello 3D comune che può essere creato da applicazioni come [Maya](http://www.autodesk.com/products/maya/overview) e [Blender](http://www.blender.org/). 
@@ -48,7 +47,7 @@ La `Model` classe può essere costruita caricando un file con estensione xnb da 
 
 Per questa guida si ignorerà l'uso dello strumento Pipeline monogame e verrà usato il. File XNB inclusi qui. Si noti che. I file XNB sono diversi per ogni piattaforma. Assicurarsi quindi di usare il set corretto di file XNB per qualsiasi piattaforma utilizzata.
 
-Il [file content. zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) verrà decompresso per poter usare i file xnb contenuti nel gioco. Se si sta lavorando a un progetto Android, fare clic con il pulsante destro del mouse sulla cartella assets nel progetto **WalkingGame. Android** . Se si sta lavorando a un progetto iOS, fare clic con il pulsante destro del mouse sul progetto **WalkingGame. iOS** . Selezionare **Add-> Aggiungi file...** e selezionare entrambi i file con estensione xnb nella cartella della piattaforma su cui si sta lavorando.
+Il [file content. zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) verrà decompresso per poter usare i file xnb contenuti nel gioco. Se si sta lavorando a un progetto Android, fare clic con il pulsante destro del mouse sulla cartella **assets** nel progetto **WalkingGame. Android** . Se si sta lavorando a un progetto iOS, fare clic con il pulsante destro del mouse sul progetto **WalkingGame. iOS** . Selezionare **Add-> Aggiungi file...** e selezionare entrambi i file con estensione xnb nella cartella della piattaforma su cui si sta lavorando.
 
 I due file devono far parte del progetto ora:
 
@@ -210,7 +209,6 @@ Si noterà che la fotocamera è stata spostata di nuovo, con `Model` conseguente
 ## <a name="rendering-multiple-models"></a>Rendering di più modelli
 
 Come indicato in precedenza, un `Model` singolo può essere disegnato più volte. Per semplificare questa operazione, il `Model` codice di disegno verrà spostato in un proprio metodo che accetta la posizione desiderata `Model` come parametro. Al termine, i `Draw` metodi `DrawModel` e appariranno come segue:
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)

@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 35de496d0684473fe3f6bc4ebadddc471b6b0cfe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ac50c665955f9bf234c46b3d4082fb628b61a33d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292886"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770020"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Messaggi di errore di Novell. Mac (MMP)
 
@@ -616,7 +616,7 @@ Una possibile soluzione alternativa consiste nel disabilitare l' `register-proto
 <a name="MM8026" />
 
 #### <a name="mm8026--is-not-supported-when-the-dynamic-registrar-has-been-linked-away"></a>MM8026: * non è supportato quando il registrar dinamico è stato collegato.
- 
+
 Questo indica in genere un bug in Novell. Mac, perché il registrar dinamico non deve essere collegato se necessario. Inviare un bug all'indirizzo [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
- 
+
 È possibile forzare il linker a lasciare il registrar dinamico aggiungendo `--optimize=-remove-dynamic-registrar` gli argomenti MMP aggiuntivi nelle opzioni di compilazione Mac del progetto.

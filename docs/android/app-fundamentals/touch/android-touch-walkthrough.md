@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: d9c8fb7e1045d35fa23c85c689cb0e1f9461d8dd
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fc3fb6e7c3391092b33ce1d162a60ce6528e0ab0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225818"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754859"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procedura dettagliata-uso del tocco in Android
 
@@ -68,7 +68,6 @@ Ogni volta che l'utente tocca `ImageView`, viene `Touch` generato l'evento e il 
 Fino a quando l'utente sta toccando `ImageView`il, il **tocco** verrà visualizzato in `TextView`. Quando l'utente non tocca `ImageView`più, il **tocco** del messaggio viene visualizzato nella `TextView`, come illustrato nello screenshot seguente:
 
 [![Screenshot dell'attività con le estremità del tocco](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
-
 
 ## <a name="gesture-recognizer-activity"></a>Attività del riconoscitore di movimento
 
@@ -248,7 +247,7 @@ La schermata finale in questa procedura dettagliata utilizzerà movimenti person
 
 Ai fini di questa procedura dettagliata, la libreria movimenti è già stata creata usando lo strumento movimento e aggiunta al progetto nelle **risorse file/RAW/gestures**. Con questo tipo di manutenzione, è possibile iniziare con l'attività finale nella procedura dettagliata.
 
-- Aggiungere un file di layout **denominato\_Custom\_gesture layout. aXML** al progetto con il contenuto seguente. Il progetto contiene già tutte le immagini nella cartella Resources:
+- Aggiungere un file di layout **denominato\_Custom\_gesture layout. aXML** al progetto con il contenuto seguente. Il progetto contiene già tutte le immagini nella cartella **Resources** :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -352,7 +351,6 @@ Ai fini di questa procedura dettagliata, la libreria movimenti è già stata cre
   [![Scribble sullo schermo, viene visualizzata l'immagine originale](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 È ora possibile comprendere come integrare il tocco e i movimenti in un'applicazione Android con Novell. Android.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

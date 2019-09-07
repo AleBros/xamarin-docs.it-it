@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 16. Associazione dati
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 16. Associazione dati'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 16. Associazione dati'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334202"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771095"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Riepilogo del capitolo 16. Associazione dati
 
@@ -138,8 +138,6 @@ Il tipo generico [ `BoolToObjectConverter` ](https://github.com/xamarin/xamarin-
 Invece di [ `NewCheckBox.cs.xaml` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NewCheckBox.xaml) file contiene tutto il markup per gli oggetti visivi del controllo tramite le associazioni dati sul `Label` elementi basano sulle proprietà definite nel file code-behind.
 
 Il [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) esempio viene illustrato il `NewCheckBox` controllo personalizzato.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

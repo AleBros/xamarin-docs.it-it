@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c153e653cc57d35f125ef58ebc8df0013f77e7c1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dba65eb11b6ae22a51610804e3a6a73549f4565b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283018"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769770"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit in Novell. iOS
 
@@ -31,7 +31,6 @@ TextKit fornisce un'architettura a più livelli che separa l'archiviazione di te
 - `NSTextContainer`: Fornisce il sistema di coordinate e la geometria usati per il layout del testo.
 - `NSLayoutManager`: Consente di disporre il testo trasformando il testo in glifi.
 - `NSTextStorage`: Include i dati di testo e gestisce gli aggiornamenti delle proprietà del testo del batch. Eventuali aggiornamenti batch vengono passati a gestione layout per l'effettiva elaborazione delle modifiche, ad esempio il ricalcolo del layout e il ridisegno del testo.
-
 
 Queste tre classi vengono applicate a una visualizzazione che esegue il rendering del testo. Le visualizzazioni di gestione del testo predefinite, ad esempio `UITextView`, `UITextField`e `UILabel` sono già impostate, ma è possibile crearle e applicarle anche a qualsiasi `UIView` istanza.
 
@@ -144,8 +143,6 @@ Questo codice aggiunge il supporto per il disegno nella visualizzazione di testo
 > [!IMPORTANT]
 > Questo esempio `UITextView` di sottoclassi per aggiungere il supporto per il disegno tocco. La sottoclasse `UITextView` non è necessaria per ottenere le funzionalità di TextKit.
 
-
-
 Dopo che l'utente ha disegnato la visualizzazione di testo, `CGPath` l'oggetto disegnato viene `UIBezierPath` applicato a un'istanza `UIBezierPath.CGPath` di impostando la proprietà:
 
 ```csharp
@@ -164,7 +161,6 @@ Lo screenshot seguente illustra il modo in cui il layout del testo cambia per sc
 ![](textkit-images/exclusionpath2.png "In questa schermata viene illustrato il modo in cui il layout del testo cambia per scorrere il tracciato disegnato")
 
 Si noti che in questo caso `AllowsNonContiguousLayout` la proprietà del gestore del layout è impostata su false. Questo fa sì che il layout venga ricalcolato per tutti i casi in cui il testo viene modificato. L'impostazione di questa opzione su true può trarre vantaggio dalle prestazioni evitando un aggiornamento del layout completo, soprattutto nel caso di documenti di grandi dimensioni. Tuttavia, se `AllowsNonContiguousLayout` si imposta su true, il percorso di esclusione non può aggiornare il layout in alcune circostanze, ad esempio se il testo viene inserito in fase di esecuzione senza un ritorno a capo finale prima dell'impostazione del percorso.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

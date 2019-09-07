@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87037c8c3797c7c305ce2689172bda1babbc26bd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 52da0cfcab56c0acd339f4f0a0f2456a66d002a8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291725"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769485"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Eseguire ricerche con markup Web in Novell. iOS
 
@@ -202,8 +202,6 @@ Infine, il codice HTML seguente aggiunge un'azione per ottenere le direzioni dai
 ```
 
 Per altre informazioni, vedere il sito per [sviluppatori di ricerca app](https://developer.apple.com/ios/search/)di Apple.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

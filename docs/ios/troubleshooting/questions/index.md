@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 57908027c6e9215504f410c0f9c989d6fbe3adad
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a8549e03c96a5e21f7a235064ebd72fc671cf2b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290513"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769287"
 ---
 # <a name="ios-frequently-asked-questions"></a>Domande frequenti su iOS
 
@@ -35,7 +35,6 @@ Questa guida descrive come modificare info. plist per abilitare la posizione ute
 
 ### <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logssymbolicate-ios-crashmd"></a>[Dove si può trovare il file dSYM per aggiungere simboli di debug ai log di arresto anomalo iOS?](symbolicate-ios-crash.md)
 Questa guida descrive i passaggi di base per i log di arresto anomalo di symbolicating iOS per semplificare la diagnosi degli arresti anomali. Sono inoltre disponibili collegamenti a risorse aggiuntive per tecniche di simbolizzazione più avanzate & informazioni sull'interpretazione dei log di arresto anomalo di iOS.
-
 
 ### <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studioxs-mono-runtimemd"></a>[Come si impostano le variabili di ambiente di runtime Mono per i progetti iOS in Xamarin Studio?](xs-mono-runtime.md)
 Se è necessario impostare le variabili di ambiente di runtime per mono, è possibile impostarle nelle **Opzioni del progetto > eseguire > pagina generale** .
@@ -61,7 +60,6 @@ A partire da Novell 4, è ora possibile creare un oggetto `.xcarchive` da Window
 ### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Perché l'invio app non riesce con l'errore: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." (Percorsi non consentiti ( "iTunesMetadata.plist" ) rilevati in...)?](itunesmetadata-disallowed-paths.md)
 Questo errore è il risultato di una modifica nel processo di verifica dell'app Store di Apple. Questo errore specifico _non_ è correlato alla versione specifica di Novell installata, quindi il downgrade _non_ sarà utile. Questa guida include collegamenti a ulteriori informazioni su come risolvere il problema.
 
-
 ## <a name="diagnosing-specific-error-messages"></a>Diagnosi di messaggi di errore specifici
 
 ### <a name="ios-designer-error-with-registerserviceporterror-registerserviceportmd"></a>[Errore di iOS Designer con RegisterServicePort](error-registerserviceport.md)
@@ -83,8 +81,6 @@ Questo problema si verifica quando si compila per le architetture a 32 bit, ad e
 
 > [!IMPORTANT]
 > Gli articoli seguenti si applicano ai problemi risolti nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
-
-
 
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[Il file IPA è di 0 byte](ipa-zero-bytes.md)
 Si sono verificati alcuni problemi noti nelle versioni precedenti di Novell che potevano causare 0 byte per il file IPA in Windows.

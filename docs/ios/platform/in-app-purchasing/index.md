@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 63530595d9892ed99b7eace3d248e1bc0d0b37d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288410"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752631"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
 
@@ -55,7 +55,6 @@ Questo articolo ha introdotto il concetto di acquisto in-app, descritto come con
 - **Store Kit** : spiegazione delle classi usate per compilare le funzionalità di acquisto in-app.
 - **Codifica dell'app per l'acquisto** : esempi di come creare un acquisto in-app in un'app Novell. iOS.
 - **Creazione di report** : Panoramica delle statistiche disponibili tramite iTunes Connect.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

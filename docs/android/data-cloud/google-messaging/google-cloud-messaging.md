@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: b583dd9b683febbc672e6cd42a1a4a2196cd1dc3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fef12ab6dc2c42f97e5a2725f58ba4392c21762f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525987"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754491"
 ---
 # <a name="google-cloud-messaging"></a>Google Cloud Messaging
 
@@ -37,8 +37,6 @@ Usando GCM, i server app possono inviare messaggi a un singolo dispositivo, a un
 
 Per informazioni sull'implementazione di un server app per GCM, vedere [informazioni sul server di connessione GCM](https://developers.google.com/cloud-messaging/server).
 
-
-
 ## <a name="google-cloud-messaging-in-action"></a>Google Cloud Messaging in azione
 
 Quando i messaggi downstream vengono inviati da un server app a un'app client, il server app invia il messaggio a un *server di connessione di GCM*. il server di connessione GCM, a sua volta, trasmette il messaggio a un dispositivo che esegue l'app client. I messaggi possono essere inviati tramite HTTP o [XMPP](https://developers.google.com/cloud-messaging/ccs) (Extensible Messaging and Presence Protocol). Poiché le app client non sono sempre connesse o in esecuzione, il server di connessione GCM Accoda e archivia i messaggi, inviarli alle app client quando si riconnettono e diventano disponibili. Analogamente, GCM accoda i messaggi upstream dall'app client al server app se il server app non è disponibile.
@@ -59,8 +57,6 @@ GCM usa le credenziali seguenti per identificare il server app e l'app client e 
 
 Le sezioni seguenti illustrano come usare queste credenziali quando le app client comunicano con i server applicazioni tramite GCM.
 
-
-
 ### <a name="registration-with-gcm"></a>Registrazione con GCM
 
 Prima di eseguire la messaggistica, è necessario che un'app client installata in un dispositivo si registri prima con GCM. L'app client deve completare la procedura di registrazione illustrata nel diagramma seguente:
@@ -80,8 +76,6 @@ Se l'app client viene disinstallata da un dispositivo, GCM lo rileva e invia aut
 
 Google sta [registrando le app client](https://developers.google.com/cloud-messaging/registration) illustra il processo di registrazione in modo più dettagliato. viene illustrata l'annullamento della registrazione e l'annullamento della sottoscrizione e viene descritto il processo di annullamento della registrazione quando viene disinstallata un'app client.
 
-
-
 ### <a name="downstream-messaging"></a>Messaggistica downstream
 
 Quando il server applicazioni Invia un messaggio downstream all'app client, segue i passaggi illustrati nel diagramma seguente:
@@ -100,17 +94,13 @@ In questo scenario di messaggistica (dove il server app invia un messaggio a una
 
 Per informazioni dettagliate (inclusi esempi di codice) sulla ricezione di messaggi GCM downstream in Android, vedere [notifiche remote](~/android/data-cloud/google-messaging/remote-notifications-with-gcm.md).
 
-
 #### <a name="topic-messaging"></a>Messaggistica degli argomenti
 
 La *messaggistica degli argomenti* è un tipo di messaggistica downstream in cui il server applicazioni Invia un singolo messaggio a più dispositivi dell'app client che sottoscrivono un argomento, ad esempio una previsione meteorologica. I messaggi di argomento possono avere una lunghezza fino a 2 KB e la messaggistica degli argomenti supporta fino a 1 milione sottoscrizioni per app. Se GCM viene usato solo per la messaggistica degli argomenti, l'app client non è necessaria per inviare un token di registrazione al server app. La [messaggistica dell'argomento di implementazione](https://developers.google.com/cloud-messaging/topic-messaging) di Google spiega come inviare messaggi da un server app a più dispositivi che sottoscrivono un argomento specifico.
 
-
-
 #### <a name="group-messaging"></a>Messaggistica del gruppo
 
 La *messaggistica del gruppo* è un tipo di messaggistica downstream in cui il server app invia un singolo messaggio a più dispositivi dell'app client che appartengono a un gruppo (ad esempio, un gruppo di dispositivi che appartengono a un singolo utente). I messaggi di gruppo possono avere una lunghezza fino a 2 KB per i dispositivi iOS e fino a 4KB di lunghezza per i dispositivi Android. Un gruppo è limitato a un massimo di 20 membri. La [messaggistica del gruppo di dispositivi](https://developers.google.com/cloud-messaging/notifications) di Google spiega in che modo i server app possono inviare un singolo messaggio a più istanze di app client in esecuzione su dispositivi appartenenti a un gruppo.
-
 
 ### <a name="upstream-messaging"></a>Messaggistica upstream
 
@@ -130,14 +120,11 @@ Se l'app client si connette a un server che supporta [XMPP](https://developers.g
 
 [I messaggi upstream](https://developers.google.com/cloud-messaging/ccs#upstream) di Google spiegano come strutturare i messaggi con codifica JSON e come inviarli ai server app che eseguono il server di connessione cloud basato su XMPP di Google.
 
-
 <a name="settingup" />
 
 ## <a name="setting-up-google-cloud-messaging"></a>Configurazione di Google Cloud Messaging
 
 Prima di poter usare i servizi GCM nell'app, è prima necessario acquisire le credenziali per l'accesso ai server GCM di Google. Le sezioni seguenti descrivono i passaggi necessari per completare il processo:
-
-
 
 ### <a name="enable-google-services-for-your-app"></a>Abilitare i servizi Google per l'app
 
@@ -166,8 +153,6 @@ Prima di poter usare i servizi GCM nell'app, è prima necessario acquisire le cr
     Proteggere la chiave &ndash; API non è destinata all'uso pubblico. Se la chiave API è compromessa, i server non autorizzati possono pubblicare messaggi nelle applicazioni client.
     Le [procedure consigliate per l'uso sicuro delle chiavi API](https://support.google.com/cloud/answer/6310037?hl=en) offrono linee guida utili per la protezione della chiave API.
 
-
-
 ### <a name="view-your-project-settings"></a>Visualizzare le impostazioni del progetto
 
 È possibile visualizzare le impostazioni del progetto in qualsiasi momento accedendo a [Google Cloud console](https://console.cloud.google.com/) e selezionando il progetto. Ad esempio, è possibile visualizzare l' **ID mittente** selezionando il progetto nel menu a discesa nella parte superiore della pagina (in questo esempio, il progetto è denominato **XamarinGCM**). L'ID mittente è il numero del progetto, come illustrato in questa schermata (l'ID mittente è **9349932736**):
@@ -178,20 +163,15 @@ Per visualizzare la **chiave API**, fare clic su **gestione API** e quindi fare 
 
 [![Visualizzazione della chiave API](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
-
-
 ## <a name="for-further-reading"></a>Ulteriori informazioni
 
 - Google [registra le app client](https://developers.google.com/cloud-messaging/registration) descrive il processo di registrazione client in modo più dettagliato e fornisce informazioni sulla configurazione del nuovo tentativo automatico e sulla sincronizzazione dello stato di registrazione.
 
 - [Rfc 6120](https://tools.ietf.org/html/rfc6120) e [RFC 6121](https://tools.ietf.org/html/rfc6121) spiegano e definiscono il protocollo XMPP (Extensible Messaging and Presence Protocol).
 
-
-
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stata fornita una panoramica di Google Cloud Messaging (GCM). Sono state illustrate le varie credenziali usate per identificare e autorizzare la messaggistica tra i server applicazioni e le app client. Vengono illustrati gli scenari di messaggistica più comuni e vengono descritti in dettaglio i passaggi per la registrazione dell'app con GCM per l'uso dei servizi di GCM.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

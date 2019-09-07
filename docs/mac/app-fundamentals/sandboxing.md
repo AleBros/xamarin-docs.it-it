@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770296"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing di un'app Novell. Mac
 
@@ -562,8 +562,6 @@ Se si sta rilasciando una nuova versione di un'applicazione Novell. Mac in modal
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio la sandboxing di un'applicazione Novell. Mac. In primo luogo, è stata creata un'app Novell. Mac semplicemente per visualizzare le nozioni di base della sandbox dell'app. Successivamente, è stato illustrato come risolvere le violazioni della sandbox. È stata quindi esaminata in dettaglio l'app sandbox e infine è stata esaminata la progettazione di un'app Novell. Mac per il sandbox dell'app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

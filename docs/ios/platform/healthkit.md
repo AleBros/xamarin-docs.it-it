@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 7e8230af1e9d4eef43b4142834afc0e90973c768
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eb944b062f75ceec8ca8dbe22cde64b0fdd15625
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288663"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752948"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit in Novell. iOS
 
@@ -43,9 +43,6 @@ Per completare i passaggi illustrati in questo articolo, sono necessari gli elem
 > [!IMPORTANT]
 > Il kit di integrità è stato introdotto in iOS 8. Attualmente, il kit di integrità non è disponibile nel simulatore iOS e il debug richiede la connessione a un dispositivo iOS fisico.
 
-
-
-
 ## <a name="creating-and-provisioning-a-health-kit-app"></a>Creazione e provisioning di un'app del kit di integrità
 Prima che un'applicazione Novell iOS 8 possa usare l'API HealthKit, deve essere configurata correttamente e sottoposta a provisioning. In questa sezione vengono illustrati i passaggi necessari per configurare correttamente l'applicazione Novell.
 
@@ -66,16 +63,14 @@ Per altre informazioni sul provisioning di un'app per iOS, l'articolo sul [provi
 La creazione di un **ID app** esplicito e di un **profilo di provisioning** appropriato viene eseguita nel centro per [sviluppatori iOS](https://developer.apple.com/devcenter/ios/index.action)di Apple. 
 
 Gli **ID app** correnti sono elencati nella sezione [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) del Dev Center. In questo elenco vengono spesso visualizzati i valori ID `*`di, a indicare che il**nome** dell' **ID** - app può essere utilizzato con un numero qualsiasi di suffissi. Questi *ID app con caratteri jolly* non possono essere usati con Health Kit.
- 
-Per creare un **ID app**esplicito, fare **+** clic sul pulsante in alto a destra per passare alla pagina **registra ID app iOS** :
 
+Per creare un **ID app**esplicito, fare **+** clic sul pulsante in alto a destra per passare alla pagina **registra ID app iOS** :
 
 [![](healthkit-images/image02.png "Registrazione di un'app nel portale per sviluppatori Apple")](healthkit-images/image02.png#lightbox)
 
 Come illustrato nell'immagine precedente, dopo aver creato una descrizione dell'app, usare la sezione **ID app esplicita** per creare un ID per l'applicazione. Nella sezione **Servizi app** , controllare il **Kit di integrità** nella sezione **abilitare i servizi** .
 
 Al termine, fare clic sul pulsante **continue (continua** ) per registrare l' **ID app** nell'account. Verrà visualizzata di nuovo la pagina **certificati, identificatori e profili** . Fare clic su **profili di provisioning** per passare all'elenco dei profili di provisioning correnti, quindi fare **+** clic sul pulsante nell'angolo in alto a destra per passare alla pagina **Aggiungi profilo di provisioning iOS** . Selezionare l'opzione **sviluppo app iOS** e fare clic su **continua** per passare alla pagina **Seleziona ID app** . Qui, selezionare l' **ID app** esplicito specificato in precedenza:
-
 
 [![](healthkit-images/image03.png "Selezionare l'ID app esplicito")](healthkit-images/image03.png#lightbox)
 
@@ -171,7 +166,6 @@ Poiché le informazioni sull'integrità sono estremamente riservate, gli svilupp
 ### <a name="permissions-walkthrough"></a>Procedura dettagliata per le autorizzazioni
 
 Nel progetto con provisioning del kit di integrità aprire il `AppDelegate.cs` file. Si noti l'istruzione `HealthKit`che usa; nella parte superiore del file.
-
 
 Il codice seguente si riferisce alle autorizzazioni del kit di integrità:
 
@@ -410,11 +404,9 @@ Alleghi al sistema un dispositivo di sviluppo iOS 8 con provisioning corretto. S
 
 Supponendo che le disposizioni siano state impostate correttamente, l'applicazione verrà avviata. Quando raggiunge il metodo `OnActivated` , richiede l'autorizzazione del kit di integrità. La prima volta che viene rilevata dal sistema operativo, l'utente verrà visualizzato con la finestra di dialogo seguente:
 
-
 [![](healthkit-images/image12.png "L'utente verrà visualizzato con questa finestra di dialogo")](healthkit-images/image12.png#lightbox)
 
 Abilitare l'app per aggiornare i dati della frequenza cardiaca e l'app verrà visualizzata nuovamente. Il `ReactToHealthCarePermissions` callback verrà attivato in modo asincrono. Questa operazione causerà `HeartRateModel’s` la modifica della `Enabled` proprietà, che genererà `EnabledChanged` l'evento, che causerà `HKPermissionsViewController.OnEnabledChanged()` l'esecuzione del gestore dell'evento, che `StoreData` consente di abilitare il pulsante. Il diagramma seguente illustra la sequenza:
-
 
 [![](healthkit-images/image13.png "Questo diagramma mostra la sequenza di eventi")](healthkit-images/image13.png#lightbox)
 

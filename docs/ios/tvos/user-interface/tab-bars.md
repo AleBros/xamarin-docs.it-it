@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df19dcf542bd3a62a696c0d7d533b4e14390336e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283974"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769002"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Uso dei controller della barra schede tvOS in Novell
 
@@ -121,7 +121,6 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 
 Utilizzare la `Items` proprietà `UITabBar` di per accedere alla raccolta di `UITabBarItems` che contiene come matrice indicizzata zero (0). La `SelectedItem` proprietà restituirà la scheda attualmente selezionata (categoria) `UITabBarItem`come.
 
-
 <a name="Working-with-Tab-Bar-Items" />
 
 ## <a name="working-with-tab-bar-items"></a>Utilizzo degli elementi della barra schede
@@ -144,9 +143,6 @@ Utilizzare la `Title` proprietà dell'oggetto `UITabBarItem` per modificare il t
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato la progettazione e l'uso del controller della barra schede all'interno di un'app Novell. tvOS.
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

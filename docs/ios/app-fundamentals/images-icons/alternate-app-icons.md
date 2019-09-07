@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b15b39460b40bc2c9f993b3b0d9bca3275ac7644
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d391c57c2c63cd4e371bd97ba455962aa053f9ed
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286810"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767342"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Icone alternative per le app in Novell. iOS
 
@@ -169,8 +169,6 @@ Se l'utente torna all'icona principale, verrà visualizzato un avviso simile al 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato l'aggiunta di icone di app alternative a un progetto Novell. iOS e l'uso all'interno dell'app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

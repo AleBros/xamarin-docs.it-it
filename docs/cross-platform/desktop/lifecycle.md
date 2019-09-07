@@ -5,12 +5,12 @@ description: In questo documento vengono confrontate le analogie e le differenze
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 8c009c079842a6a110212693a56489ca2ad5d263
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d1c207672baf37c91d39fca1d9f628d85971577
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290382"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765899"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Confronto tra WPF e Ciclo di vita delle app Xamarin.Forms
 
@@ -87,7 +87,6 @@ Novell. Forms è orientato principalmente agli scenari per dispositivi mobili. D
 |Sospendere/perdere lo stato attivo|Window.OnDeactivated|Pagina. onsleep|
 |Attivato/ottenuto lo stato attivo|Window.OnActivated|Page.OnResume|
 |Chiuso|Finestra. OnClosing + Window. OnClosed|n/d|
-
 
 Entrambi supportano anche l'occultamento/visualizzazione dei controlli figlio, in WPF si tratta di una proprietà `IsVisible` a tre stati (visibile, nascosta e compressa). In Novell. Forms, è semplicemente visibile o nascosto tramite la `IsVisible` proprietà.
 

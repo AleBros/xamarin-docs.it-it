@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9492c90274e28f14dee0e8cbcb2aaa1a55de2420
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 866ebd2a66557cda5372c5bc3d7a909e18c762d7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282738"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756096"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Profilatura delle applicazioni Xamarin.iOS con Instruments
 
@@ -32,7 +32,6 @@ Selezionare il dispositivo ed eseguire l'app Instruments:
 3. Connettere un dispositivo iOS al computer.
 4. Nel menu **Esegui** selezionare **Carica nel dispositivo** . L'applicazione viene compilata e caricata nel dispositivo.
 5. Nel menu **Strumenti** selezionare **Launch Instruments** (Avvia Instruments).
-
 
 L'app Instruments viene aperta e visualizza la finestra di dialogo seguente:
 

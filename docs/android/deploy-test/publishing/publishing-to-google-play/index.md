@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119815"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755957"
 ---
 # <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
 
 Esistono vari mercati di app per la distribuzione di applicazioni, ma Google Play è probabilmente il più grande e il più visitato del mondo per le app per Android. Google Play offre una piattaforma unica per la distribuzione, la pubblicità, la vendita e l'analisi delle vendite di un'app per Android.
 
 Questa sezione illustra argomenti specifici per Google Play, ad esempio la registrazione per diventare un editore, la raccolta di risorse che aiutano Google Play a promuovere e pubblicizzare l'applicazione, le linee guida per la valutazione dell'applicazione in Google Play e l'uso di filtri per limitare la distribuzione di un'applicazione a dispositivi specifici.
-
 
 ## <a name="requirements"></a>Requisiti
 
@@ -29,8 +28,6 @@ Tutte le applicazioni devono essere firmate con una chiave di crittografia che s
 Un APK pubblicato in Google Play può avere dimensioni massime di 100 MB. Se un'applicazione supera tali dimensioni, Google Play consente la pubblicazione di risorse aggiuntive tramite i *file di espansione APK*. I file di espansione Android consentono due file aggiuntivi per l'APK, ognuno con dimensioni massime pari a 2 GB. Google Play archivia e distribuisce questi file gratuitamente. I file di espansione vengono descritti in un'altra sezione.
 
 Google Play non è disponibile a livello globale. È possibile che la distribuzione di applicazioni non sia supportata in determinate località.
-
-
 
 ## <a name="becoming-a-publisher"></a>Come diventare un editore
 
@@ -43,20 +40,15 @@ Per pubblicare applicazioni in Google Play è necessario avere un account editor
 1. Confermare la verifica tramite posta elettronica.
 1. Dopo aver creato l'account è possibile pubblicare applicazioni con Google Play.
 
-
 Google Play non supporta tutti i paesi del mondo. Gli elenchi di paesi più aggiornati sono disponibili nei collegamenti seguenti:
 
 1. [Paesi in cui è supportata la registrazione come sviluppatore e commerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324): questo elenco include tutti i paesi in cui gli sviluppatori possono registrarsi come commercianti e vendere applicazioni.
 
 1. [Paesi in cui è supportata la distribuzione per gli utenti Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294): questo elenco include tutti i paesi nei quali è possibile distribuire le applicazioni.
 
-
-
 ### <a name="preparing-promotional-assets"></a>Preparazione di asset promozionali
 
 Per una promozione efficace dell'applicazione in Google Play, Google consente agli sviluppatori di includere asset promozionali come screenshot, elementi grafici e video. Google Play usa queste risorse per pubblicizzare e promuovere l'applicazione.
-
-
 
 #### <a name="launcher-icons"></a>Icone launcher
 
@@ -66,7 +58,6 @@ Un'*icona launcher* è un elemento grafico che rappresenta un'applicazione. Ogni
 - **mdpi** (160 dpi) &ndash; 48 x 48 pixel
 - **hdpi** (240 dpi) &ndash; 72 x 72 pixel
 - **xhdpi** (320 dpi) &ndash; 96 x 96 pixel
-
 
 Le icone launcher sono il primo elemento dell'applicazione visualizzato dall'utente in Google Play, pertanto devono essere significative e visivamente accattivanti.
 
@@ -78,8 +69,6 @@ Suggerimenti per le icone launcher:
 
 1. **Usare il canale alfa**&ndash; È importante che le icone facciano uso del canale alfa e non siano immagini full-framed.
 
-
-
 #### <a name="high-resolution-application-icons"></a>Icone dell'applicazione ad alta risoluzione
 
 Per le applicazioni in Google Play deve essere disponibile una versione ad alta risoluzione dell'icona dell'applicazione. Questa versione viene usata solo da Google Play e non sostituisce l'icona launcher dell'applicazione. Le specifiche per l'icona ad alta risoluzione sono:
@@ -90,8 +79,6 @@ Per le applicazioni in Google Play deve essere disponibile una versione ad alta 
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) è uno strumento utile per creare icone launcher e l'icona dell'applicazione ad alta risoluzione.
 
-
-
 #### <a name="screen-shots"></a>Screenshot
 
 Google Play richiede un minimo di due e un massimo di otto screenshot per un'applicazione. Gli screenshot vengono visualizzati nella pagina dei dettagli dell'applicazione in Google Play.
@@ -101,16 +88,12 @@ Le specifiche per gli screenshot sono le seguenti:
 1. File con estensione png o jpg a 24 bit senza canale alfa
 1. Larghezza x altezza: 320 x 480 o 480 x 800 o 480 x 854. Le immagini con orientamento orizzontale vengono ritagliate.
 
-
-
 #### <a name="promotional-graphic"></a>Immagine promozionale
 
 Questa immagine facoltativa viene usata da Google Play:
 
 1. È un file con estensione png o jpg a 24 bit con larghezza 180 e altezza 120, senza canale alfa.
 1. Nessun bordo.
-
-
 
 #### <a name="feature-graphic"></a>Immagine in primo piano
 
@@ -120,13 +103,9 @@ Usata nella sezione App in primo piano di Google Play. Questa immagine può esse
 1. Tutto il contenuto importante va incluso in un frame da 924 x 500. I pixel esterni a questo frame potrebbero essere ritagliati per esigenze grafiche.
 1. Questa immagine potrebbe essere ridotta in scala: usare testo grande e grafica semplice.
 
-
-
 #### <a name="video-link"></a>Collegamento video
 
 URL di riferimento a un video di YouTube che presenta l'applicazione. Il video può durare da 30 secondi a 2 minuti e visualizza le funzionalità più importanti dell'applicazione.
-
-
 
 ### <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
 
@@ -186,14 +165,13 @@ La sezione successiva spiega come creare un nuovo progetto API Google e come gen
 
 -----
 
-
 #### <a name="create-a-google-api-project"></a>Creare un progetto di API di Google
 
 In primo luogo accedere all'[account per sviluppatore di Google Play](https://play.google.com/apps/publish).
 Se non si dispone di un account per sviluppatore di Google Play, vedere [Get Started with Publishing](https://developer.android.com/distribute/googleplay/start.html) (Introduzione alla pubblicazione).
 Anche la [Guida introduttiva](https://developers.google.com/android-publisher/getting_started) dell'API descrive come usare l'API Google Play Developer. Dopo aver effettuato l'accesso a Google Play Developer Console, fare clic su **Settings** (Impostazioni):
 
-[![Icona Impostazioni](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)
+[![Icona Settings (Impostazioni)](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)
 
 Nella pagina **SETTINGS** (Impostazioni) selezionare **API access** (Accesso all'API) e fare clic sul pulsante **Create new project** (Crea nuovo progetto):
 
@@ -223,7 +201,6 @@ Fare clic su **Save** (Salva) per salvare le modifiche. Viene nuovamente visuali
 [![Icona Download JSON (Scarica JSON)](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
 Il file JSON contiene l'ID client e il Segreto client che possono essere incollati nella finestra di dialogo **Firma e distribuisci** nel passaggio successivo.
-
 
 #### <a name="register-google-api-access"></a>Registrare l'accesso API a Google
 
@@ -270,8 +247,7 @@ Al termine del caricamento, un messaggio nell'angolo inferiore sinistro della fi
 
 [![Messaggio di completamento della pubblicazione del progetto](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
 
-
-### <a name="troubleshooting"></a>risoluzione dei problemi
+### <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Si noti che per il funzionamento corretto di **Pubblica in Google Play** è necessario che almeno un pacchetto APK sia già stato inoltrato a Google Play Store. Se in precedenza non è stato caricato nessun pacchetto APK, la procedura di pubblicazione guidata visualizza il seguente messaggio di errore nel riquadro **Errori**:
 

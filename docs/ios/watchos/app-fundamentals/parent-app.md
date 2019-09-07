@@ -7,18 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 0049d69caabce545b2813dbd2b3905fe96f28fed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f3e56ab90d5205318539994bae7f4db153bb163
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292732"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768085"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilizzo di watchOS padre Application in Xamarin
 
 > [!IMPORTANT]
 > L'accesso all'applicazione padre usando solo gli esempi seguenti funziona nelle App watch watchOS 1.
-
 
 Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene abbinato a:
 
@@ -30,7 +29,6 @@ Esistono diversi modi per la comunicazione tra l'app e l'app per iOS che viene a
 
 L'App padre viene talvolta anche detto l'App contenitore.
 
-
 <a name="code" />
 
 ## <a name="run-code"></a>Eseguire il codice
@@ -39,8 +37,6 @@ La comunicazione tra un'estensione di espressioni di controllo e l'app iPhone pa
 L'estensione di espressioni di controllo può richiedere l'app per iOS padre per eseguire alcune operazioni di elaborazione nel relativo per conto dell'utente mediante il `OpenParentApplication` (metodo).
 
 Ciò è particolarmente utile per le attività in corso (tra cui le richieste di rete) - solo l'elemento padre app iOS possono sfruttare i vantaggi dell'elaborazione in background per completare queste attività e salvare i dati recuperati in una posizione accessibile per l'estensione di espressioni di controllo.
-
-
 
 ### <a name="watch-kit-app-extension"></a>Estensione dell'App Watch Kit
 
@@ -57,12 +53,10 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 });
 ```
 
-
 ### <a name="ios-app"></a>App iOS
 
 Tutte le chiamate da un'estensione dell'app watch vengono indirizzate tramite l'app iPhone `HandleWatchKitExtensionRequest` (metodo).
 Se si stanno apportando diverse richieste in app watch, questo metodo sarà necessario eseguire una query di `userInfo` dizionario utilizzato per determinare la modalità di elaborazione della richiesta.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -81,7 +75,6 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 }
 ```
-
 
 <a name="storage" />
 
@@ -142,8 +135,6 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
 Scaricare il C# versione [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

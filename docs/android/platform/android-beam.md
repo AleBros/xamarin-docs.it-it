@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4d294b7aee9d4a6c2118a5ff12968a7f95fb981c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524730"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757864"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -27,9 +27,7 @@ Android supporta due modalità di impostazione dei messaggi con il raggio Androi
 
 - `SetNdefPushMessageCallback`-Quando viene avviato un fascio Android, un'applicazione può gestire un callback per creare un NdefMessage. Questo meccanismo consente il ritardo della creazione dei messaggi fino a quando i dispositivi non rientrano nell'intervallo. Supporta scenari in cui il messaggio può variare in base a ciò che avviene nell'applicazione.
 
-
 In entrambi i casi, per inviare dati con Android Beam, un'applicazione invia `NdefMessage`un oggetto, assemblando i `NdefRecords`dati in diversi. Diamo uno sguardo ai punti chiave che devono essere risolti prima di poter attivare il fascio Android. In primo luogo, si userà lo stile di callback per la `NdefMessage`creazione di un oggetto.
-
 
 ## <a name="creating-a-message"></a>Creazione di un messaggio
 
@@ -65,7 +63,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## <a name="receiving-a-message"></a>Ricezione di un messaggio
 
 Sul lato ricevente, il sistema richiama una finalità con l' `ActionNdefDiscovered` azione, da cui è possibile estrarre il NdefMessage come segue:
@@ -78,8 +75,6 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 Per un esempio di codice completo in cui viene usato Android Beam, illustrato nella schermata seguente, vedere la [demo di Android Beam](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) nella raccolta di esempi.
 
 [![Schermate di esempio dalla demo per Android Beam](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

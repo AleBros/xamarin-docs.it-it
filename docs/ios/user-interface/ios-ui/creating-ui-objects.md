@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: a153c6115605ca2a58df233186fa45d200d8b99f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c1e7d6cbb2598f64a331257c9b14ecfa119193f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287302"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768787"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creazione di oggetti dell'interfaccia utente in Novell. iOS
 
@@ -43,11 +43,11 @@ Per iniziare a creare l'interfaccia utente in iOS designer, fare doppio clic su 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
  [![](creating-ui-objects-images/image2b.png "Riquadro Casella degli strumenti")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  [![](creating-ui-objects-images/image2b-vs.png "Riquadro Casella degli strumenti-Visual Studio")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 -----
 
 Quando si seleziona un controllo nell'area di progettazione, il **riquadro delle proprietà** visualizzerà gli attributi per il controllo. Il campo **Widget > Identity > Name** , che viene popolato nella schermata seguente, viene usato come nome di *uscita* . Questo è il modo in cui è possibile fare C#riferimento al controllo in:
@@ -65,7 +65,7 @@ Per aprire uno storyboard in Xcode, fare clic con il pulsante destro del mouse p
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
  [![](creating-ui-objects-images/imagexcode.png "Menu di scelta rapida storyboard-Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](creating-ui-objects-images/imagexcode-vs.png "Menu di scelta rapida storyboard-Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
@@ -168,8 +168,6 @@ Questi elementi della classe parziale consentono al codice di fare riferimento a
 Il `designer.cs` file non deve essere modificato manualmente. l'IDE (Visual Studio per Mac o Visual Studio) è responsabile di mantenerlo sincronizzato con lo storyboard.
 
 Quando gli oggetti dell'interfaccia utente vengono aggiunti a livello `View` di `ViewController`codice a un oggetto o, si creano e si gestiscono i riferimenti agli oggetti manualmente e pertanto non è necessario alcun file di progettazione.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

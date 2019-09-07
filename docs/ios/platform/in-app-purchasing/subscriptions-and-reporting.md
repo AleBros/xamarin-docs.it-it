@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 7f455d2164573d68db0a9c764f2b2cef5cc6d739
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284036"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752680"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Novell. iOS
 
@@ -28,7 +28,6 @@ Differenze principali tra sottoscrizioni non di rinnovo e altri tipi di prodotto
 - Panoramica dell'implementazione
 - Le sottoscrizioni che non si rinnovano in genere devono essere implementate tramite il flusso di lavoro distribuito dal server e gestite come prodotti utilizzabili. 
 
-
 ## <a name="about-free-subscriptions"></a>Informazioni sulle sottoscrizioni gratuite
 
 Le sottoscrizioni gratuite consentono agli sviluppatori di inserire contenuti gratuiti nelle app in edicola (non possono essere usati nelle app non in edicola). Una volta avviata, una sottoscrizione gratuita sarà disponibile su tutti i dispositivi dell'utente. Le sottoscrizioni gratuite non scadono mai; terminano solo quando viene disinstallata l'applicazione.
@@ -36,7 +35,6 @@ Le sottoscrizioni gratuite consentono agli sviluppatori di inserire contenuti gr
 ### <a name="implementation-overview"></a>Panoramica dell'implementazione
 
 Le sottoscrizioni gratuite si comportano come le sottoscrizioni rinnovabili automaticamente. L'applicazione deve disporre di un prodotto di sottoscrizione gratuita disponibile per l'acquisto in iTunes Connect. Quando viene acquistato dall'utente, l'acquisto di sottoscrizioni gratuite deve essere convalidato come prodotto di sottoscrizione rinnovata automaticamente. È possibile ripristinare le transazioni di sottoscrizione gratuite.
-
 
 ## <a name="about-auto-renewable-subscriptions"></a>Informazioni sulle sottoscrizioni rinnovate automaticamente
 
@@ -53,7 +51,7 @@ Il segreto condiviso di acquisto in-app deve essere usato nella richiesta JSON q
 Dal home page iTunes Connect selezionare **app personali**:   
    
  [![](subscriptions-and-reporting-images/image2.png "Selezionare le app personali")](subscriptions-and-reporting-images/image2.png#lightbox)  
- 
+
 Selezionare un'applicazione e fare clic sulla scheda **acquisti in-app** :
 
 [![](subscriptions-and-reporting-images/image6.png "Fare clic sulla scheda acquisti in-app")](subscriptions-and-reporting-images/image6.png#lightbox)
@@ -63,10 +61,8 @@ Nella parte inferiore della pagina selezionare **Visualizza o genera un segreto 
  [![](subscriptions-and-reporting-images/image40.png "Selezionare Visualizza o genera un segreto condiviso")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Genera un segreto condiviso")](subscriptions-and-reporting-images/image41.png#lightbox)   
-   
-   
-   
- Per usare il segreto condiviso, includerlo nel payload JSON che viene inviato ai server Apple quando si convalida una ricevuta di acquisto in-app per una sottoscrizione rinnovabile automaticamente, come indicato di seguito:
+
+Per usare il segreto condiviso, includerlo nel payload JSON che viene inviato ai server Apple quando si convalida una ricevuta di acquisto in-app per una sottoscrizione rinnovabile automaticamente, come indicato di seguito:
 
 ```csharp
 {
@@ -95,10 +91,8 @@ Se lo stato è zero, la sottoscrizione è ancora valida e gli altri campi conten
 #### <a name="restoring-auto-renewable-subscriptions"></a>Ripristino di sottoscrizioni rinnovate automaticamente
 
 Si otterranno più transazioni: la transazione di acquisto originale più una transazione separata per ogni periodo di tempo in cui la sottoscrizione è stata rinnovata. È necessario tenere traccia delle date e dei termini di inizio per comprendere il periodo di validità.   
-   
-   
-   
- L'oggetto SKPaymentTransaction non include il periodo di validità della sottoscrizione. è necessario utilizzare un ID prodotto diverso per ogni termine e scrivere codice in grado di estrapolare il periodo di sottoscrizione dalla data di acquisto della transazione.
+
+L'oggetto SKPaymentTransaction non include il periodo di validità della sottoscrizione. è necessario utilizzare un ID prodotto diverso per ogni termine e scrivere codice in grado di estrapolare il periodo di sottoscrizione dalla data di acquisto della transazione.
 
 #### <a name="testing-auto-renewal"></a>Test del rinnovo automatico
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 531d0b2b6141cc0e1f4014f1d3422af3c6f8643a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 136efbd936bc39563c419a87ed48f6fc5436efa9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291985"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768537"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sottoclassi generiche di NSObject in Novell. iOS
 
@@ -220,4 +220,3 @@ class Generic<T> : NSObject where T : NSObject
 ## <a name="performance"></a>Prestazioni
 
 Il registrar statico non riesce a risolvere un membro esportato in un tipo generico in fase di compilazione, come in genere, deve essere ricercato in fase di esecuzione. Ciò significa che richiamare un metodo di questo tipo da Objective-C è leggermente più lento rispetto alla chiamata di membri da classi non generiche.
-

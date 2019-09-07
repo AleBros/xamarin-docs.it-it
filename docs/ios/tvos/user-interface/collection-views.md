@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280214"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769124"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Uso delle viste di raccolta tvOS in Novell
 
@@ -96,7 +96,6 @@ Eseguire le operazioni seguenti:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-    
 1. Avviare una nuova **app tvOS di visualizzazione singola** in Visual Studio per Mac.
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo in iOS designer.
 1. Aggiungere una visualizzazione immagine, un'etichetta e un pulsante alla visualizzazione esistente e configurarli in modo che abbiano un aspetto simile al seguente: 
@@ -132,11 +131,9 @@ Eseguire le operazioni seguenti:
 
     [![](collection-views-images/collection11.png "Impostare l'identità su CityCell")](collection-views-images/collection11.png#lightbox)
 1. Salvare le modifiche.
-    
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
 1. Avviare una nuova **app tvOS di visualizzazione singola** in Visual Studio.
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo in iOS designer.
 1. Aggiungere una visualizzazione immagine, un'etichetta e un pulsante alla visualizzazione esistente e configurarli in modo che abbiano un aspetto simile al seguente: 
@@ -170,7 +167,6 @@ Eseguire le operazioni seguenti:
 
     [![](collection-views-images/collection11vs.png "Impostare l'identità su CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Salvare le modifiche.
-    
 
 -----
 
@@ -286,7 +282,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 Per ulteriori informazioni sull'esplorazione e lo stato attivo, vedere la documentazione relativa all' [utilizzo dello spostamento e dello stato attivo](~/ios/tvos/app-fundamentals/navigation-focus.md) e di [Siri remote e Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -469,7 +464,6 @@ Definisce la proprietà e imposta la città predefinita che verrà visualizzata 
 ### <a name="the-collection-view-delegate"></a>Delegato della visualizzazione raccolta
 
 Successivamente, aggiungere una nuova `CityViewDelegate` classe al progetto e renderla simile alla seguente:
-
 
 ```csharp
 using System;
@@ -684,7 +678,6 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Si imposta la trasparenza dell'elemento precedente che perde lo stato attivo a zero (0) e la trasparenza dell'elemento successivo ottiene lo stato attivo al 100%. Anche queste transizioni vengono animate.
 
-
 ## <a name="configuring-the-collection-view-controller"></a>Configurazione del controller di visualizzazione raccolta
 
 A questo punto è necessario eseguire la configurazione finale nella visualizzazione raccolta e consentire al controller di impostare la proprietà definita in modo che la visualizzazione raccolta possa essere chiusa dopo che l'utente effettua una selezione.
@@ -824,14 +817,11 @@ Una delle funzionalità principali dell'utilizzo di una visualizzazione di racco
 
 Aggiunto di recente alle visualizzazioni di raccolta per iOS 9 è stata la possibilità di consentire facilmente il riordinamento degli elementi nella raccolta. Anche in questo caso, poiché tvOS 9 è un subset di iOS 9, questa operazione viene eseguita nello stesso modo. Per altri dettagli, vedere il documento relativo alle [modifiche della visualizzazione raccolta](~/ios/user-interface/controls/uicollectionview.md) .
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stata illustrata la progettazione e l'uso delle visualizzazioni di raccolta all'interno di un'app Novell. tvOS. In primo luogo, sono stati discussi tutti gli elementi che costituiscono la visualizzazione di raccolta. Successivamente, è stato illustrato come progettare e implementare una visualizzazione di raccolta utilizzando uno storyboard. Infine, vengono forniti collegamenti alle informazioni sulla creazione di layout personalizzati e sul riordinamento degli elementi.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

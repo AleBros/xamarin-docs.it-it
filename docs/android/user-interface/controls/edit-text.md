@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: a937de27fc032b0d88dfdf717339b47e0df8e58d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e8ffe337e1f5c74bc348b9600a466f1232f40b0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644624"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758838"
 ---
 # <a name="xamarinandroid-edit-text"></a>Testo di modifica di Novell. Android
 
@@ -58,14 +58,13 @@ Aggiungere inoltre l'istruzione seguente `using` all'inizio di **MainActivity.cs
 using Android.Views;
 ```
 
-Questo esempio di codice consente di ingrandire l'elemento [EDITTEXT](xref:Android.Widget.EditText) dal layout e di aggiungere un gestore [KeyPress](xref:Android.Views.View.KeyPress) che definisce l'azione da effettuare quando si preme un tasto mentre il widget ha lo stato attivo. In questo caso, il metodo viene definito per restare in attesa del tasto **invio** (quando viene toccato) e quindi [visualizzare un messaggio](xref:Android.Widget.Toast) popup con il testo immesso. Si noti che la proprietà [Handled](xref:Android.Views.View.KeyEventArgs.Handled) deve essere sempre `true` se l'evento è stato gestito. Questa operazione è necessaria per impedire che l'evento venga bubbling (che comporterebbe un ritorno a capo nel campo di testo).
+Questo esempio di codice consente di ingrandire l'elemento [EDITTEXT](xref:Android.Widget.EditText) dal layout e di aggiungere un gestore [KeyPress](xref:Android.Views.View.KeyPress) che definisce l'azione da effettuare quando si preme un tasto mentre il widget ha lo stato attivo. In questo caso, il metodo viene definito per restare in attesa del tasto **invio** (quando viene toccato) e quindi [visualizzare un messaggio popup con](xref:Android.Widget.Toast) il testo immesso. Si noti che la proprietà [Handled](xref:Android.Views.View.KeyEventArgs.Handled) deve essere sempre `true` se l'evento è stato gestito. Questa operazione è necessaria per impedire che l'evento venga bubbling (che comporterebbe un ritorno a capo nel campo di testo).
 
 Eseguire l'applicazione e immettere testo nel campo di testo. Quando si preme il tasto **invio** , il popup verrà visualizzato come mostrato a destra:
 
 [![Esempi di immissione di testo in EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
 *Parti di questa pagina sono modifiche basate sul lavoro creato e* [*condiviso dal progetto open source Android*](http://code.google.com/policies.html) *e usati in base alle condizioni descritte nel* [*Licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione è basata sull'esercitazione* relativa ai [*moduli Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: b95f60676a1c58463fc6e384ea3738122a1c76fe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f4708b56b8cf8a243785816440c63b743059cf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286820"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756269"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata-percorso in background in Novell. iOS
 
@@ -21,7 +21,6 @@ In questo esempio verrà compilata un'applicazione location iOS che stampa le in
 Questa procedura dettagliata illustra alcuni concetti chiave in background, inclusa la registrazione di un'app come applicazione in background necessaria, la sospensione degli aggiornamenti dell'interfaccia utente quando l'app è in background e `WillEnterBackground` l' `WillEnterForeground` uso dei metodi e `AppDelegate` .
 
 ## <a name="application-set-up"></a>Configurazione dell'applicazione
-
 
 1. Per prima cosa, creare una nuova **App > iOS > applicazione visualizzazioneC#singola ()** . Chiamarla _e assicurarsi_ che sia stato selezionato iPad e iPhone.
 
@@ -84,7 +83,6 @@ Questa procedura dettagliata illustra alcuni concetti chiave in background, incl
 1. Aggiungere una chiave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` una stringa che verrà visualizzata all'utente nell'avviso che richiede l'accesso ai dati della località.
 
 1. iOS 9 richiede che quando si `AllowsBackgroundLocationUpdates` usa il file **info. plist** includa la `UIBackgroundModes` chiave `location`con il valore. Se è stato completato il passaggio 2 di questa procedura dettagliata, questo dovrebbe essere già presente nel file INFO. plist.
-
 
 1. All'interno `LocationManager` della classe, creare un metodo `StartLocationUpdates` denominato con il codice seguente. Questo codice Mostra come iniziare a ricevere gli aggiornamenti del percorso dal `CLLocationManager`:
 
@@ -202,7 +200,6 @@ public override void ViewDidLoad ()
 }
 ```
 
-
 A questo punto, quando viene eseguita l'applicazione, il risultato sarà simile al seguente:
 
 [![](location-walkthrough-images/image5.png "Esecuzione di un'app di esempio")](location-walkthrough-images/image5.png#lightbox)
@@ -278,7 +275,6 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 Ora l'interfaccia utente inizierà ad aggiornare quando l'applicazione viene avviata per la prima volta e riprende l'aggiornamento ogni volta che l'app torna in primo piano.
 
 In questa procedura dettagliata è stata compilata un'applicazione iOS in grado di riconoscere in background, che stampa i dati relativi alla posizione sia sullo schermo che sulla finestra di output dell'applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

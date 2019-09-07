@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 4ae8834427580c387de7a38a69d711207b04821e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a612c2c23ceff13ea1d602465573514547628e55
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290893"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769798"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Framework di destinazione per Novell. Mac
 
@@ -53,7 +53,6 @@ Per passare al tipo di Framework di destinazione per un progetto Novell. Mac, pr
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha brevemente trattato i diversi tipi di Framework di destinazione (librerie di classi base) disponibili per un'applicazione Novell. Mac e quando deve essere usato ogni tipo di Framework.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

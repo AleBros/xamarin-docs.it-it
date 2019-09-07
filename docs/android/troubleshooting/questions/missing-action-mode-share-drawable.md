@@ -7,30 +7,29 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ff2a586773e33a1f4cf78657c3c69c22e79ed047
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b8961c9e58d4336a952649ce8181ca6ebdfe3165
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153373"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757227"
 ---
 # <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat - Nessuna risorsa trovata corrispondente al nome specificato: attr 'android:actionModeShareDrawable'
 
-1. Assicurarsi di che scaricare l'ultime funzionalità aggiuntive, nonché di Android 5.0 (API 21) SDK tramite Android SDK Manager.
+1. Assicurarsi di scaricare gli aggiornamenti più recenti e Android 5,0 (API 21) SDK tramite gestione Android SDK.
 
-2. Assicurarsi che si esegue la compilazione dell'applicazione con compileSdkVersion impostata su 21. È facoltativamente possibile impostare il targetSdkVersion a 21 anche.
+2. Assicurarsi di compilare l'applicazione con compileSdkVersion impostato su 21. Facoltativamente, è anche possibile impostare targetSdkVersion su 21.
 
-3. Se è necessaria una versione precedente, ad esempio API 19, scaricare la versione corrispondente trovata nella pagina di Nuget:
+3. Se è necessaria una versione precedente, ad esempio l'API 19, scaricare la rispettiva versione disponibile nella pagina NuGet:
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
-*Nota*: Se si installa manualmente questo mediante la Console di gestione pacchetti, assicurarsi di che installare anche la stessa versione di Xamarin.Android.Support.v4
+*Nota*: Se questa operazione viene installata manualmente tramite la console di gestione pacchetti, assicurarsi di installare anche la stessa versione di Novell. Android. support. v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 
-Riferimento di Overflow dello stack: [https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
+Riferimento Stack Overflow:[https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Quali pacchetti di Android SDK è necessario installare?](~/android/troubleshooting/questions/install-android-sdk-packages.md)
-

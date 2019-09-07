@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6dbd0b3e7d14307a3b9e7de552e2d59e0fbbcaa4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292505"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768552"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
 
@@ -781,8 +781,6 @@ In qualsiasi momento, l'utente può spostare lo stato attivo su un elemento nei 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha spiegato come progettare e usare i campi di testo e di ricerca all'interno di un'app Novell. tvOS. È stato illustrato come creare il testo e il contenuto della raccolta di ricerca in Interface Designer, mostrando due modi diversi per presentare un campo di ricerca all'utente in tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 191d037d12d27e2c6ab475467853023f440c71d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 255f308078c892605b9ce20b17fd737c5582eaed
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291371"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768984"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con Novell. iOS
 
@@ -50,7 +50,6 @@ I file inseriti nella directory **delle risorse** vengono trattati in modo diver
 
 - Archiviazione delle immagini configurate nelle proprietà dell'applicazione, ad esempio le immagini di avvio predefinite e le icone dell'applicazione.
 - L'archiviazione di altre immagini e file separatamente dal codice, in modo che siano più facili da gestire (le sottodirectory vengono mantenute quando viene copiato il contenuto della directory delle risorse).
-
 
 La directory **Resources** è particolarmente utile in un progetto di libreria, poiché il codice può presumere che tali immagini verranno copiate nella radice dell'applicazione consumer, semplificando la scrittura di librerie di codice condiviso che richiedono immagine, audio, video, XML o altri file.
 

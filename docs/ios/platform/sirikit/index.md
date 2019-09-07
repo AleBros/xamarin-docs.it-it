@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e3ef6dd857760d722fe84f98250b8db9e398ea2e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 802cf60f88f80ce7d67cd9fd8ec85ca343fd2916
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287177"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769382"
 ---
 # <a name="sirikit-in-xamarinios"></a>SiriKit in Novell. iOS
 
@@ -38,10 +38,6 @@ Questo articolo illustra i concetti chiave che saranno necessari per l'uso di Si
 ## <a name="implementing-sirikitiosplatformsirikitimplementing-sirikitmd"></a>[Implementazione di SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
 Questo articolo illustra i passaggi necessari per implementare il supporto SiriKit in un'app Novell. iOS. Lo sviluppatore dovrebbe leggere la guida ai concetti di SiriKit precedente prima di provare ad aggiungere il supporto SiriKit a un'app, in quanto vengono trattati i concetti chiave che saranno necessari per un'implementazione corretta.
-
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

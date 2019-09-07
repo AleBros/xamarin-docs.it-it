@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529079"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770679"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Unit test di app aziendali
 
@@ -225,7 +225,6 @@ Una unit test accetta una piccola unità dell'app, in genere un metodo, la isola
 Il comportamento di un oggetto sottoposto a test può essere isolato sostituendo gli oggetti dipendenti con oggetti fittizi che simulano il comportamento degli oggetti dipendenti. In questo modo è possibile eseguire unit test senza richiedere risorse ingombranti, ad esempio servizi Web o database.
 
 Il testing di modelli e modelli di visualizzazione da applicazioni MVVM è identico a quello di altre classi ed è possibile usare gli stessi strumenti e tecniche.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

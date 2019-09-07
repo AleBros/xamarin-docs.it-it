@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 47055ca61e0be9b5b54e8f5ff23719b64f1101cd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 969d7fc78af9dd10f7ad57f58a6f4f619d0a201a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291701"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769448"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Miglioramenti ai widget della schermata iniziale e di ricerca in iOS 10
 
@@ -191,8 +191,6 @@ Oltre a impostare la dimensione richiesta per ogni stato (compresso o espanso), 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha descritto i miglioramenti apportati da Apple al sistema widget in iOS 10 e ha illustrato come implementarli in Novell. iOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

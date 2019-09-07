@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ccdf1e3fc0c42f8af8f9219a8b472827048a90dc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: e542336cfd3bf1eac50c343a3edfeb0efa414d0c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525223"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753615"
 ---
 # <a name="apk-expansion-files"></a>File di espansione APK
 
@@ -29,10 +29,8 @@ I file di espansione sono considerati come *BLOB binari opachi (OBB, Opaque Bina
 - **Espansione principale**: questo è il file di espansione principale per le risorse e gli asset che non rientrano nei limiti di dimensioni dell'APK. Il file di espansione principale deve contenere gli asset principali richiesti da un'applicazione e dovrebbe essere aggiornato raramente.
 - **Espansione patch**: questo file è destinato a piccoli aggiornamenti del file di espansione principale. Questo file non può essere aggiornato. È responsabilità dell'applicazione eseguire eventuali patch o aggiornamenti necessari da questo file.
 
-
 I file di espansione devono essere caricati insieme all'APK.
 Google Play non consente il caricamento di un file di espansione in un APK esistente o per APK esistenti da aggiornare. Se è necessario aggiornare un file di espansione, è necessario caricare un nuovo APK con il valore `versionCode` aggiornato.
-
 
 ## <a name="expansion-file-storage"></a>Archiviazione dei file di espansione
 
@@ -41,7 +39,6 @@ Quando i file vengono scaricati in un dispositivo, verranno archiviati in **_arc
 - **_archivio-condiviso_** : questa è la directory specificata da `Android.OS.Environment.ExternalStorageDirectory`.
 - **_nome-pacchetto_** : questo è il nome del pacchetto in stile Java dell'applicazione.
 
-
 Dopo il download, i file di espansione non devono essere spostati, modificati, rinominati o eliminati dal relativo percorso nel dispositivo. In caso contrario, i file di espansione verranno scaricati di nuovo e i file precedenti eliminati. La directory dei file di espansione, inoltre, deve contenere solo i file del pacchetto di espansione.
 
 I file di espansione non offrono alcuna misura di sicurezza o protezione per il contenuto, quindi altri utenti o applicazioni possono accedere ai file salvati nello spazio di archiviazione condiviso.
@@ -49,7 +46,6 @@ I file di espansione non offrono alcuna misura di sicurezza o protezione per il 
 Se è necessario decomprimere un file di espansione, i file decompressi devono essere archiviati in una directory distinta, ad esempio una in `Android.OS.Environment.ExternalStorageDirectory`.
 
 Un'alternativa all'estrazione dei file da un file di espansione è la lettura di asset o risorse direttamente dal file di espansione. Il file di espansione è semplicemente un file ZIP che può essere usato con un `ContentProvider` appropriato. [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) contiene un assembly, [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip), che include un `ContentProvider` che consente l'accesso diretto ai file per alcuni file multimediali. Se i file multimediali sono compressi in un file ZIP, le chiamate per la riproduzione di elementi multimediali potrebbero usare direttamente i file nel file ZIP senza doverlo decomprimere. I file multimediali non devono essere compressi quando vengono aggiunti al file ZIP. 
-
 
 ### <a name="filename-format"></a>Formato del nome di file
 
@@ -65,9 +61,7 @@ I tre componenti di questo schema sono:
 - `<expansion-version>`: intero corrispondente al valore `versionCode` dell'APK a cui è stato inizialmente associato il file.
 - `<package-name>`: questo è il nome del pacchetto in stile Java dell'applicazione.
 
-
 Ad esempio, se la versione dell'APK è 21 e il nome del pacchetto è `mono.samples.helloworld`, il file di espansione principale sarà denominato **main.21.mono.samples.helloworld**.
-
 
 ## <a name="download-process"></a>Processo di download
 
@@ -81,7 +75,6 @@ All'avvio, un'applicazione deve controllare se i file di espansione appropriati 
 - **Nomi di file**: si tratta del nome di file (nel dispositivo corrente) in cui devono essere salvati i pacchetti di espansione.
 - **URL per il download**: URL che deve essere usato per scaricare i pacchetti di espansione. Questo URL è univoco per ogni download e ha scadenza a breve.
 
-
 Dopo aver eseguito il controllo LVL, l'applicazione deve scaricare i file di espansione, prendendo in considerazione i punti seguenti come parte del download:
 
 - Il dispositivo potrebbe non avere spazio sufficiente per archiviare i file di espansione.
@@ -89,8 +82,6 @@ Dopo aver eseguito il controllo LVL, l'applicazione deve scaricare i file di esp
 - I file di espansione vengono scaricati in background per evitare di bloccare le interazioni dell'utente.
 - Mentre è in corso il download in background, deve essere visualizzato un indicatore di stato.
 - Gli errori che si verificano durante il download devono essere gestiti in modo regolare e ripristinabili.
-
-
 
 ## <a name="architectural-overview"></a>Panoramica dell'architettura
 
@@ -103,6 +94,5 @@ Per semplificare le operazioni richieste per l'integrazione dei file di espansio
 - **Downloader Library**: si tratta di una libreria che riduce l'impegno necessario per integrare i file di espansione in un'applicazione. La libreria scarica i file di espansione in un servizio in background, visualizza le notifiche utente, gestisce i problemi di connettività di rete, riprende i download e così via.
 - **License Verification Library (LVL)** : libreria per effettuare ed elaborare le chiamate ai servizi di licenza per le applicazioni. Può anche essere usata per eseguire controlli delle licenze, per determinare se l'uso dell'applicazione nel dispositivo è autorizzato.
 - **APK Expansion Zip Library (facoltativa)** : se i file di espansione sono inclusi in un file ZIP, questa libreria funge da provider di contenuto e consente a un'applicazione di leggere risorse e asset direttamente dal file ZIP senza doverlo espandere.
-
 
 Queste librerie sono state convertite per C# e sono disponibili con la licenza di Apache 2.0. Per integrare rapidamente i file di espansione in un'applicazione esistente, è possibile aggiungere queste librerie a un'applicazione Xamarin.Android esistente. Il codice è disponibile in [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) su GitHub.

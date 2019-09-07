@@ -6,22 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 550883de571951bb05f0634632fd6b7688e1ab8c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119147"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755289"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorizzazioni in Novell. Android
-
 
 ## <a name="overview"></a>Panoramica
 
 Le applicazioni Android vengono eseguite nella propria sandbox e, per motivi di sicurezza, non hanno accesso a determinate risorse di sistema o hardware nel dispositivo. L'utente deve concedere in modo esplicito l'autorizzazione all'app prima di poter usare queste risorse. Ad esempio, un'applicazione non può accedere al GPS su un dispositivo senza autorizzazione esplicita da parte dell'utente. Android genererà un' `Java.Lang.SecurityException` operazione se un'app tenta di accedere a una risorsa protetta senza autorizzazione.
 
 Le autorizzazioni vengono dichiarate in **file AndroidManifest. XML** dallo sviluppatore dell'applicazione quando l'app viene sviluppata. Android dispone di due flussi di lavoro diversi per ottenere il consenso dell'utente per le autorizzazioni seguenti:
- 
+
 - Per le app destinate a Android 5,1 (livello API 22) o inferiore, la richiesta di autorizzazione si è verificata durante l'installazione dell'app. Se l'utente non ha concesso le autorizzazioni, l'app non verrà installata. Una volta installata l'app, non è possibile revocare le autorizzazioni ad eccezione della disinstallazione dell'app.
 - A partire da Android 6,0 (API level 23), gli utenti hanno avuto maggiore controllo sulle autorizzazioni. possono concedere o revocare le autorizzazioni fino a quando l'app viene installata nel dispositivo. Questa schermata mostra le impostazioni di autorizzazione per l'app Google Contacts. Elenca le varie autorizzazioni e consente all'utente di abilitare o disabilitare le autorizzazioni:
 
@@ -47,17 +46,14 @@ La libreria di supporto Android consente di eseguire il backporting di alcune de
 
 Questo documento illustra come aggiungere autorizzazioni a un'applicazione Novell. Android e in che modo le app destinate a Android 6,0 (API level 23) o versione successiva devono eseguire un controllo delle autorizzazioni di Runtime.
 
-
 > [!NOTE]
 > È possibile che le autorizzazioni per l'hardware possano influenzare il modo in cui l'app viene filtrata in base Google Play. Ad esempio, se l'app richiede l'autorizzazione per la fotocamera, Google Play non visualizzerà l'app nella Google Play Store su un dispositivo in cui non è installata una fotocamera.
-
 
 <a name="requirements" />
 
 ## <a name="requirements"></a>Requisiti
 
 Si consiglia vivamente che i progetti Novell. Android includano il pacchetto NuGet [Novell. Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Questo pacchetto backporting le API specifiche per le versioni precedenti di Android, offrendo un'interfaccia comune senza la necessità di verificare costantemente la versione di Android su cui è in esecuzione l'app.
-
 
 ## <a name="requesting-system-permissions"></a>Richiesta delle autorizzazioni di sistema
 
@@ -67,7 +63,6 @@ Le app destinate a Android 6,0 o versione successiva non possono presupporre che
 
 > [!NOTE]
 > Le applicazioni devono richiedere solo le autorizzazioni necessarie.
-
 
 ### <a name="declaring-permissions-in-the-manifest"></a>Dichiarazione delle autorizzazioni nel manifesto
 
@@ -115,7 +110,6 @@ Le autorizzazioni vengono aggiunte a **file AndroidManifest. XML** con l' `uses-
 Novell. Android aggiungerà automaticamente alcune autorizzazioni in fase di compilazione per eseguire il debug delle build. Questo renderà più semplice il debug dell'applicazione. In particolare, due autorizzazioni rilevanti sono `INTERNET` e `READ_EXTERNAL_STORAGE`. Queste autorizzazioni di impostazione automatica non verranno visualizzate nell'elenco **delle autorizzazioni necessarie** . Le build di rilascio, tuttavia, usano solo le autorizzazioni impostate in modo esplicito nell'elenco di **autorizzazioni necessarie** . 
 
 Per le app destinate a Android 5.1 (livello API 22) o inferiore, non è necessario eseguire altre operazioni. Le app che verranno eseguite in Android 6,0 (API 23 Level 23) o versioni successive dovrebbero passare alla sezione successiva su come eseguire i controlli delle autorizzazioni in fase di esecuzione. 
-
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Controlli delle autorizzazioni di runtime in Android 6,0
 
@@ -209,11 +203,9 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato come aggiungere e verificare le autorizzazioni in un dispositivo Android. Le differenze nella modalità di funzionamento delle autorizzazioni tra le app Android precedenti (livello API < 23) e le nuove app Android (livello API > 22). È stato illustrato come eseguire i controlli delle autorizzazioni di run-time in Android 6,0.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

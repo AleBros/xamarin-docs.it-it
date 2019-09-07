@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524766"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757778"
 ---
 # <a name="limitations"></a>Limitazioni
 
@@ -84,11 +84,9 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### <a name="generic-c-classes"></a>Classi C# generiche
 
 Le C# classi generiche sono supportate solo parzialmente. Esistono le limitazioni seguenti:
-
 
 - I tipi generici non `[Export]` possono `[ExportField`utilizzare o]. Il tentativo di eseguire questa operazione genererà `XA4207` un errore.
 

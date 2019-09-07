@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752002"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
@@ -67,7 +67,6 @@ Questi nuovi Framework orientati a oggetti forniscono gli elementi seguenti:
 
 Per ulteriori informazioni, vedere la documentazione [dell'interfaccia utente contatti e contatti](~/ios/platform/contacts.md) .
 
-
 ## <a name="new-search-apis"></a>Nuove API di ricerca
 
 La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle informazioni all'interno dell'app Novell. iOS. Usando le nuove API di ricerca, è possibile eseguire ricerche nel contenuto dell'app tramite i risultati della ricerca di Spotlight e Safari, i promemoria e i suggerimenti per la consegna e la Siri. Questo consente agli utenti di accedere rapidamente alle attività e alle informazioni in modo approfondito nell'app.
@@ -83,7 +82,6 @@ Il controllo di visualizzazione dello stack ([UIStackView](xref:UIKit.UIStackVie
 Con il controllo di visualizzazione stack, la quantità di lavoro necessaria per il layout di un'interfaccia utente è notevolmente ridotta. Il layout di tutte le sottoviste associate a una visualizzazione stack viene gestito automaticamente in base alle proprietà definite dallo sviluppatore, ad esempio asse, distribuzione, allineamento e spaziatura.
 
 Per ulteriori informazioni, vedere la documentazione [introduttiva di visualizzazione stack](~/ios/user-interface/controls/uistackview.md) .
-
 
 ## <a name="collection-view-changes"></a>Modifiche della visualizzazione raccolta
 
@@ -145,7 +143,6 @@ In iOS 9, Apple ha migliorato il keychain per fornire un nuovo tipo di chiave di
 
 Per ulteriori informazioni, vedere la documentazione [introduttiva a Touch ID](~/ios/platform/touchid.md) .
 
-
 ## <a name="right-to-left-language-support"></a>Supporto per le lingue da destra a sinistra
 
 In iOS 9, Apple ha reso più semplice che mai l'interfaccia utente capovolta offrendo supporto completo per le lingue da destra a sinistra. Sono inclusi gli elementi seguenti:
@@ -155,8 +152,6 @@ In iOS 9, Apple ha reso più semplice che mai l'interfaccia utente capovolta off
 - Possibilità di capovolgere un'immagine a livello di codice usando la proprietà [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) della classe [UIImage](xref:UIKit.UIImage) .
 
 Per ulteriori informazioni, vedere la documentazione di [supporto per le lingue da destra a sinistra](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) di Apple.
-
-
 
 ## <a name="additional-framework-changes"></a>Modifiche aggiuntive del Framework
 
@@ -205,8 +200,6 @@ Vedere anche le parti di questi esempi per iOS (le versioni Mac OS X complementa
 
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

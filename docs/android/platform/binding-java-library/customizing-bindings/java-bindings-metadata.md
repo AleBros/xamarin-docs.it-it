@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 046c392709f2c94664120e9fac3f4198e9f50dbf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119848"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756598"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
 _C#il codice in Novell. Android chiama le librerie Java tramite binding, un meccanismo che astrae i dettagli di basso livello specificati in Java Native Interface (JNI). Novell. Android offre uno strumento che genera queste associazioni. Questo strumento consente allo sviluppatore di controllare il modo in cui viene creata un'associazione usando i metadati, che consente procedure come la modifica degli spazi dei nomi e la ridenominazione dei membri. In questo documento viene illustrato il funzionamento dei metadati, vengono riepilogati gli attributi supportati dai metadati e viene illustrato come risolvere i problemi di associazione modificando questi metadati._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -53,7 +52,7 @@ In molti casi, l'assistenza umana è necessaria per rendere l'API Java più ".NE
 Queste modifiche non vengono realizzate modificando direttamente il **file API. XML** .
 Al contrario, le modifiche vengono registrate in file XML speciali forniti dal modello libreria di associazione Java. Quando si compila l'assembly di binding Novell. Android, il generatore di binding sarà influenzato da questi file di mapping quando si crea l'assembly di associazione
 
-Questi file di mapping XML possono essere trovati nella cartella Transforms del progetto:
+Questi file di mapping XML possono essere trovati nella cartella **transforms** del progetto:
 
 - **Metadata. XML** &ndash; consente di apportare modifiche all'API finale, ad esempio la modifica dello spazio dei nomi dell'associazione generata. 
 
@@ -72,7 +71,6 @@ Il file **Metadata. XML** è la maggior parte dell'importazione di questi file p
 - L'aggiunta di altre classi di supporto per la progettazione dell'associazione segue i criteri di .NET Framework. 
 
 Consente di passare al documento **Metadata. XML** in modo più dettagliato.
-
 
 ## <a name="metadataxml-transform-file"></a>File di trasformazione Metadata. XML
 
@@ -111,8 +109,6 @@ Di seguito sono elencati alcuni degli elementi XPath usati più di frequente per
 
 - `parameter`&ndash; Identificare un parametro per un metodo. e.g.`/parameter[@name='p0']`
 
-
-
 ### <a name="adding-types"></a>Aggiunta di tipi
 
 L' `add-node` elemento indica al progetto di binding Novell. Android di aggiungere una nuova classe wrapper a **API. XML**. Il frammento di codice seguente, ad esempio, consente di indirizzare il generatore di associazione per creare una classe con un costruttore e un singolo campo:
@@ -125,7 +121,6 @@ L' `add-node` elemento indica al progetto di binding Novell. Android di aggiunge
     </class>
 </add-node>
 ```
-
 
 ### <a name="removing-types"></a>Rimozione di tipi
 
@@ -180,7 +175,7 @@ NavigationManager.2DSignNextManueverEventArgs
 ```
 
 Non si tratta di un C# nome di classe valido. Per risolvere il problema, l'autore del binding deve usare `argsType` l'attributo e fornire un C# nome valido per `EventArgs` la sottoclasse:
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
@@ -188,15 +183,13 @@ Non si tratta di un C# nome di classe valido. Per risolvere il problema, l'autor
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
 
- 
-
 ## <a name="supported-attributes"></a>Attributi supportati
 
 Le sezioni seguenti descrivono alcuni degli attributi per la trasformazione delle API Java.
 
 ### <a name="argstype"></a>argsType
 
-Questo attributo viene inserito nei metodi setter per assegnare un `EventArg` nome alla sottoclasse che verrà generata per supportare i listener Java. Questa procedura viene descritta più dettagliatamente nella sezione ridenominazione delle [classi wrapper di EventArg](#Renaming_EventArg_Wrapper_Classes) più avanti in questa guida.
+Questo attributo viene inserito nei metodi setter per assegnare un `EventArg` nome alla sottoclasse che verrà generata per supportare i listener Java. Questa procedura viene descritta più dettagliatamente nella sezione [ridenominazione delle classi wrapper di EventArg](#Renaming_EventArg_Wrapper_Classes) più avanti in questa guida.
 
 ### <a name="eventname"></a>eventName
 
@@ -339,12 +332,9 @@ Con tutte queste modifiche, è possibile usare il codice seguente in Novell. And
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come Novell. Android usa i metadati per trasformare una definizione dell'API dal formato *Google* *AOSP*. Una volta incluse le modifiche possibili utilizzando *Metadata. XML*, sono state esaminate le limitazioni rilevate durante la ridenominazione dei membri e viene visualizzato l'elenco degli attributi XML supportati, che descrive quando ogni attributo deve essere utilizzato.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

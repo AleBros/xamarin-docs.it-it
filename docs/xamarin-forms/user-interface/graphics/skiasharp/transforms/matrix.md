@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: e44dfd85d9d4480d56ac75d61fd379b04fb8fb12
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6e78e3930ec731bc970ef39ddb7fe7051d62f63a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648615"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770435"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Trasformazioni con matrice in SkiaSharp
 
@@ -649,7 +649,6 @@ Il `SKMatrix` struttura in SkiaSharp definisce le proprietà per la terza riga:
 </pre>
 
 I valori di diverso da zero `Persp0` e `Persp1` comportare trasformazioni che si spostano oggetti disattivato il piano bidimensionale in cui Z è uguale a 1. Cosa succede quando gli oggetti vengono spostati indietro che il piano è descritto nell'articolo sul [ **trasformazioni Non affini**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

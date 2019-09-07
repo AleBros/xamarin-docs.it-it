@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 651df247e3b5616a3baa38e85159c6a6d5247807
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287318"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768797"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Uso di controlli personalizzati con iOS Designer
 
@@ -26,7 +26,6 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
 
 > [!IMPORTANT]
 > A partire da Novell. Studio 5,5, il modo in cui vengono creati i controlli personalizzati è leggermente diverso rispetto alle versioni precedenti. Per creare un controllo personalizzato, è necessario `IComponent` che l'interfaccia sia obbligatoria (con i metodi di implementazione associati) oppure che la classe possa `[DesignTimeVisible(true)]`essere annotata con. Il secondo metodo viene usato nell'esempio di procedura dettagliata seguente.
-
 
 1. Creare una nuova soluzione dall' **app iOS > > > C# modello di applicazione di visualizzazione singola** `ScratchTicket`, denominarla e continuare con la creazione guidata nuovo progetto:
 
@@ -157,23 +156,19 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
     }
     ```
 
-
 1. Aggiungere i `FillTexture.png`file `FillTexture2.png` , `Monkey.png` e (disponibili [da GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) alla cartella **Resources** .
 
 1. Fare doppio clic sul `Main.storyboard` file per aprirlo nella finestra di progettazione:
 
     [![](ios-designable-controls-walkthrough-images/03new.png "IOS designer")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
-
 1. Trascinare o rilasciare una **visualizzazione immagine** dalla **casella degli strumenti** alla visualizzazione nello storyboard.
 
     [![](ios-designable-controls-walkthrough-images/04new.png "Visualizzazione immagine aggiunta al layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
-
 1. Selezionare la **visualizzazione immagine** e impostare la relativa proprietà Image `Monkey.png`su.
 
     [![](ios-designable-controls-walkthrough-images/05new.png "Impostazione della proprietà immagine visualizzazione immagine su Monkey. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
-
 
 1. Quando si usano le classi di dimensioni, è necessario vincolare questa visualizzazione immagine. Fare clic due volte sull'immagine per inserirla in modalità vincolo. È possibile vincolarlo al centro facendo clic sul punto di blocco centrale e allinearlo verticalmente e orizzontalmente:
 
@@ -183,16 +178,13 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
 
     [![](ios-designable-controls-walkthrough-images/07new.png "Aggiunta di vincoli")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
-
 1. Aggiornare il frame in base ai vincoli facendo clic sul pulsante Aggiorna sulla barra degli strumenti:
 
     [![](ios-designable-controls-walkthrough-images/08new.png "Barra degli strumenti vincoli")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
-
 1. Successivamente, compilare il progetto in modo che la **visualizzazione del ticket Scratch** venga visualizzata in **componenti personalizzati** nella casella degli strumenti:
 
     [![](ios-designable-controls-walkthrough-images/09new.png "Casella degli strumenti componenti personalizzati")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
-
 
 1. Trascinare e rilasciare una **visualizzazione del ticket Scratch** in modo che venga visualizzata sull'immagine scimmia. Modificare i quadratini di trascinamento in modo che la visualizzazione del ticket Scratch copra completamente la scimmia, come illustrato di seguito:
 
@@ -201,7 +193,6 @@ Questa guida presuppone una certa familiarità con i contenuti trattati nelle [g
 1. Vincolare la visualizzazione del ticket Scratch alla visualizzazione immagine disegnando un rettangolo di delimitazione per selezionare entrambe le visualizzazioni. Selezionare le opzioni per vincolarla ai frame larghezza, altezza, centrale e centrale e aggiorna in base ai vincoli, come illustrato di seguito:
 
     [![](ios-designable-controls-walkthrough-images/11new.png "Centramento e aggiunta di vincoli")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
-
 
 1. Eseguire l'applicazione e "Scratch" nell'immagine per rivelare la scimmia.
 
@@ -272,8 +263,6 @@ L'inclusione di `BrowsableAttribute` `true` e con l'argomento impostato su compo
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato illustrato come creare un controllo personalizzato e come utilizzarlo in un'applicazione iOS tramite iOS designer. Abbiamo visto come creare e compilare il controllo per renderlo disponibile a un'applicazione nella **casella degli strumenti**della finestra di progettazione. È stato inoltre illustrato come implementare il controllo in modo che venga eseguito correttamente in fase di progettazione e in fase di esecuzione, nonché come esporre le proprietà di un controllo personalizzato nella finestra di progettazione.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

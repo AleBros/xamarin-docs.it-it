@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3526ee254a3986e1ff59288adeb95a49129b8b60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a9df85a405bc086f86dae73fea615581bf9d28d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290960"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767380"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Novell. iOS
 
@@ -37,7 +37,6 @@ Fare clic con il pulsante destro del mouse su **riferimenti > modifica riferimen
 ## <a name="about-monodatasqlite"></a>Informazioni su mono. Data. sqlite
 
 Verrà utilizzata la `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di database vuoto e quindi per creare `SqliteCommand` un'istanza degli oggetti che è possibile utilizzare per eseguire istruzioni SQL sul database.
-
 
 1. **Creazione di un database vuoto** : chiamare `CreateFile` il metodo con un percorso di file valido (IE. Writeable). È necessario verificare se il file esiste già prima di chiamare questo metodo. in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore del vecchio e i dati nel file precedente andranno perduti:
 
@@ -153,7 +152,6 @@ Poiché SQLite consente l'esecuzione di comandi SQL arbitrari sui dati, è possi
 - **ExecuteReader** : usato quando una raccolta di righe deve essere restituita come `SqlDataReader` .
 - **ExecuteScalar** : Recupera un singolo valore (ad esempio un'aggregazione).
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 Le istruzioni INSERT, UPDATE e DELETE restituiranno il numero di righe interessate. Tutte le altre istruzioni SQL restituiranno-1.
@@ -199,7 +197,6 @@ Il metodo ExecuteReader restituisce un oggetto SqliteDataReader. Oltre al metodo
 - **RowsAffected** : numero di righe interessate dalla query.
 - **HasRows** : indica se sono state restituite righe.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 Usare questa istruzione per istruzioni SELECT che restituiscono un singolo valore, ad esempio un'aggregazione.
@@ -212,7 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 Il `ExecuteScalar` tipo restituito del metodo è `object` : è necessario eseguire il cast del risultato in base alla query di database. Il risultato può essere un numero intero da una query COUNT o una stringa da una singola colonna SELECT query. Si noti che questa operazione è diversa dagli altri metodi Execute che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

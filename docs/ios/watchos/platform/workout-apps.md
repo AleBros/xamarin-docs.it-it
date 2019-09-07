@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 57aab95e29911722fc3ad4a56c5486218e07242d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f5a2b17491b026e08abf2262a998576cbb4356c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292846"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767823"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>App di allenamento watchos in Novell
 
 _Questo articolo descrive i miglioramenti apportati da Apple alle app di allenamento in watchos 3 e come implementarli in Novell._
-
 
 Una novità di watchos 3, le app correlate all'allenamento hanno la possibilità di essere eseguite in background nell'Apple Watch e di accedere ai dati HealthKit. L'app basata su iOS 10 padre ha anche la possibilità di avviare l'app watchos 3 basata senza l'intervento dell'utente.
 
@@ -188,7 +187,6 @@ namespace MonkeyWorkout.MWWatchExtension
     {
       if (this.Failed != null) this.Failed ();
     }
-
 
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
@@ -614,7 +612,6 @@ public HKHealthStore HealthStore { get; private set; }
 public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
 ...
 
-
 private void SaveWorkoutSamples (HKWorkout workout)
 {
   // Add samples to saved workout
@@ -715,7 +712,6 @@ public OutdoorRunDelegate RunDelegate { get; set; }
 #endregion
 ...
 
-
 public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
 {
   // Create workout session
@@ -765,8 +761,6 @@ Prendendo in considerazione tutte le informazioni presentate in questo documento
 
 > [!IMPORTANT]
 > Il codice illustrato nelle sezioni seguenti include solo le parti necessarie per implementare le nuove funzionalità migliorate disponibili per le app di allenamento in watchos 3. Tutto il codice di supporto e il codice per presentare e aggiornare l'interfaccia utente non sono inclusi ma possono essere creati facilmente seguendo la documentazione di watchos.<p/>
-
-
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
@@ -1209,7 +1203,6 @@ namespace MonkeyWorkout.MWWatchExtension
       if (this.Failed != null) this.Failed ();
     }
 
-
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
     {
@@ -1257,8 +1250,6 @@ Apple suggerisce di usare le seguenti procedure consigliate per la progettazione
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato i miglioramenti apportati da Apple per l'allenamento delle app in watchos 3 e come implementarli in Novell.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

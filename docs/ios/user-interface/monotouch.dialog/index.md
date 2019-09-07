@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: cfa82ccec8149acfc7ddd69bff2f68e0e11894d1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cbe1b374b97f64e0c28b2f89ca9f6d510511b74d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282435"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768847"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a MonoTouch. dialog per Novell. iOS
 
@@ -57,7 +57,6 @@ Mt. D semplifica l'incapsulamento di tutto il codice in un'API generica per la c
 - **API elementi di basso livello** : l' *API elementi* è basata sulla creazione di un albero gerarchico di elementi che rappresentano le schermate e i relativi componenti. L'API degli elementi offre agli sviluppatori la massima flessibilità e il controllo per la creazione di interfacce utente. Inoltre, l'API degli elementi ha un supporto avanzato per la definizione dichiarativa tramite JSON, che consente la dichiarazione incredibilmente veloce, nonché la generazione dinamica dell'interfaccia utente da un server. 
 - **Ad alto livello API di Reflection** , noto anche come i *associazione* *API* , in cui le classi vengono annotate con hint dell'interfaccia utente e quindi MT. D automaticamente consente di creare schermate basate sugli oggetti e fornisce un'associazione tra ciò che viene visualizzata (e facoltativamente modificata) nella schermata e l'oggetto sottostante il backup. Nell'esempio precedente è stato illustrato l'uso dell'API di Reflection. Questa API non fornisce il controllo granulare svolto dall'API degli elementi, ma riduce ulteriormente la complessità grazie alla creazione automatica della gerarchia di elementi in base agli attributi della classe. 
 
-
 Mt. D è dotato di un ampio set di elementi dell'interfaccia utente incorporati per la creazione dello schermo, ma riconosce anche la necessità di elementi personalizzati e layout avanzati dello schermo. Di conseguenza, l'estendibilità è un primo livello in primo piano nell'API. Gli sviluppatori possono estendere gli elementi esistenti o crearne di nuovi e quindi integrarsi facilmente.
 
 Inoltre, MT. D include una serie di funzionalità comuni di app UX per iOS, come il supporto per il pull all'aggiornamento, il caricamento asincrono delle immagini e il supporto per la ricerca.
@@ -82,7 +81,6 @@ Mt. D compila le schermate usando le quattro parti seguenti:
 - **RootElement**
 - **Sezione**
 - **Elemento**
-
 
 ### <a name="dialogviewcontroller"></a>DialogViewController
 
@@ -249,7 +247,6 @@ Viene inizializzata con tre valori:
 - Testo segnaposto (questo è il testo in grigio che fornisce un suggerimento all'utente). 
 - Valore del testo.
 
-
 Il segnaposto e il valore possono essere null. Tuttavia, la didascalia è obbligatoria.
 
 In qualsiasi momento, l'accesso alla proprietà Value può recuperare il valore di `EntryElement`.
@@ -260,7 +257,6 @@ Inoltre, `KeyboardType` la proprietà può essere impostata in fase di creazione
 - Phone
 - URL
 - Email
-
 
 ### <a name="boolean-element"></a>Elemento Boolean
 
@@ -427,7 +423,6 @@ La ricerca modificherà il contenuto della visualizzazione come tipi di utente. 
 - `FinishSearch`
 - `PerformFilter`
 
-
 Il sistema è estensibile, pertanto è possibile modificare questo comportamento se lo si desidera.
 
 ### <a name="background-image-loading"></a>Caricamento dell'immagine di sfondo
@@ -575,7 +570,6 @@ La modalità di notifica all'utente di un errore è specifica dell'applicazione.
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato numerose informazioni su MonoTouch. dialog. Sono state illustrate le nozioni di base della MT. D funziona e copre i vari componenti che comprendono MT. D. È stata inoltre mostrata la vasta gamma di elementi e le personalizzazioni di tabella supportate da MT. D e illustrato come MT. D può essere esteso con gli elementi personalizzati. È stato inoltre descritto il supporto JSON in MT. D che consente la creazione dinamica di elementi da JSON.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

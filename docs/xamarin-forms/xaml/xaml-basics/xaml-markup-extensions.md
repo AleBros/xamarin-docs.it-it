@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 620a986ea9c5a6792d321b0c89dae936ffa256da
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3eb02dbc4e77fcd8b237b85e21e577d0c4566794
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227915"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772734"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Estensioni di Markup XAML
 
@@ -556,8 +556,6 @@ Ecco il programma in esecuzione:
 ## <a name="summary"></a>Riepilogo
 
 Le estensioni di markup XAML illustrate di seguito forniscono supporto importante per i file XAML. Ma è probabilmente l'estensione di markup XAML più preziosa `Binding`, illustrata nella sezione successiva di questa serie, [parte 4. Data Binding nozioni di base](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

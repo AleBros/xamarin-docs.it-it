@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0a9921706acc4da076e98b1c42c0624c7f56e62f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ea713b2b56f18c435f3ec676b42d0aa4802abc6a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521202"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755424"
 ---
 # <a name="android-graphics-and-animation"></a>Grafica e animazione Android
 
@@ -43,11 +43,9 @@ Oltre a queste tecniche grafiche 2D, Android offre anche diversi modi per creare
 
 - **Animazioni delle proprietà** Android 3,0 ha introdotto un nuovo set di API di animazione note come *animazioni di proprietà*. &ndash; Queste nuove API hanno introdotto un sistema estensibile e flessibile che può essere usato per animare le proprietà di qualsiasi oggetto, non solo per gli oggetti di visualizzazione. Questa flessibilità consente di incapsulare le animazioni in classi distinte che semplificano la condivisione del codice.
 
-
 Le animazioni di visualizzazione sono più adatte per le applicazioni che devono supportare le API precedenti Android 3,0 (livello API 11). In caso contrario, le applicazioni devono utilizzare le API di animazione delle proprietà più recenti per i motivi citati in precedenza.
 
 Tutti questi Framework sono opzioni valide, tuttavia laddove possibile, è consigliabile assegnare una preferenza alle animazioni delle proprietà, poiché si tratta di un'API più flessibile da usare. Le animazioni di proprietà consentono di incapsulare la logica di animazione in classi distinte che facilitano la condivisione del codice e semplificano la manutenzione del codice.
-
 
 ## <a name="accessibility"></a>Accessibilità
 
@@ -58,8 +56,6 @@ In queste situazioni, le app sono più utilizzabili se sono state progettate con
 
 Per altre informazioni su come usare le API di accessibilità di Android, vedere la [Guida all'accesso facilitato di Google](https://developer.android.com/guide/topics/ui/accessibility/) .
 
-
-
 ## <a name="2d-graphics"></a>Grafica 2D
 
 Le risorse di estrazione sono una tecnica molto diffusa nelle applicazioni Android. Come per le altre risorse, le risorse che possono &ndash; essere dichiarate sono dichiarative sono definite nei file XML. Questo approccio consente una netta separazione del codice dalle risorse. Questo può semplificare lo sviluppo e la manutenzione, perché non è necessario modificare il codice per aggiornare o modificare la grafica in un'applicazione Android. Tuttavia, mentre le risorse disegnabili sono utili per molti requisiti grafici semplici e comuni, non dispongono della potenza e del controllo dell'API Canvas.
@@ -67,7 +63,6 @@ Le risorse di estrazione sono una tecnica molto diffusa nelle applicazioni Andro
 L'altra tecnica, usando l'oggetto [Canvas](xref:Android.Graphics.Canvas) , è molto simile ad altri Framework API tradizionali, ad esempio System. Drawing o il disegno principale di iOS. L'uso dell'oggetto Canvas fornisce il massimo controllo sulla modalità di creazione della grafica 2D. È appropriato per le situazioni in cui una risorsa che può essere disegnato non funziona o sarà difficile da usare. Ad esempio, potrebbe essere necessario creare un controllo dispositivo di scorrimento personalizzato il cui aspetto cambierà in base ai calcoli correlati al valore del dispositivo di scorrimento.
 
 Esaminiamo prima di tutto le risorse disegnatori. Sono più semplici e coprono i casi di disegno personalizzati più comuni.
-
 
 ### <a name="drawable-resources"></a>Risorse disegnatore
 
@@ -148,7 +143,6 @@ Per visualizzare l'aspetto di questa operazione, eseguire il progetto *Animation
 
 Per altri dettagli sugli elementi XML e sulla sintassi delle risorse di cui è disponibile il progetto, vedere la [documentazione di Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
-
 ### <a name="using-the-canvas-drawing-api"></a>Uso dell'API di disegno Canvas
 
 Drawables sono potenti ma hanno limitazioni. Alcune operazioni non sono possibili o molto complesse (ad esempio, l'applicazione di un filtro a un'immagine eseguita da una fotocamera sul dispositivo). Sarebbe molto difficile applicare la riduzione degli occhi rossi usando una risorsa che è possibile creare.
@@ -209,7 +203,6 @@ Il codice precedente crea prima di tutto una vernice rossa e un oggetto di color
 
 ![Schermata con oggetti di colore rosso e colore verde](graphics-and-animation-images/image3.png)
 
-
 ## <a name="animation"></a>Animazione
 
 Utenti come elementi che si spostano nelle proprie applicazioni. Le animazioni sono un ottimo modo per migliorare l'esperienza utente di un'applicazione e aiutarla a distinguersi. Le animazioni migliori sono quelle che gli utenti non sono in grado di notare perché si sentono naturali. Android offre le tre API seguenti per le animazioni:
@@ -222,11 +215,10 @@ Utenti come elementi che si spostano nelle proprie applicazioni. Le animazioni s
 
 In generale, l'animazione delle proprietà è il sistema preferito da usare perché è più flessibile e offre altre funzionalità.
 
-
 ### <a name="view-animations"></a>Visualizza animazioni
 
 Le animazioni di visualizzazione sono limitate alle viste e possono eseguire animazioni solo su valori quali punti di inizio e di fine, dimensioni, rotazione e trasparenza.
-Questi tipi di animazioni vengono in genere definiti *animazioni*di interpolazione. Le animazioni di visualizzazione possono essere definite &ndash; in due modi a livello di codice o tramite file XML. I file XML rappresentano il modo migliore per dichiarare le animazioni di visualizzazione, perché sono più leggibili e più semplici da gestire.
+Questi tipi di animazioni vengono in genere definiti *animazioni di interpolazione*. Le animazioni di visualizzazione possono essere definite &ndash; in due modi a livello di codice o tramite file XML. I file XML rappresentano il modo migliore per dichiarare le animazioni di visualizzazione, perché sono più leggibili e più semplici da gestire.
 
 I file XML di animazione verranno archiviati nella `/Resources/anim` directory di un progetto Novell. Android. Questo file deve avere uno degli elementi seguenti come elemento radice:
 
@@ -242,14 +234,13 @@ I file XML di animazione verranno archiviati nella `/Resources/anim` directory d
 
 Per impostazione predefinita, tutte le animazioni in un file XML verranno applicate simultaneamente. Per rendere le animazioni sequenziali, impostare l' `android:startOffset` attributo su uno degli elementi definiti in precedenza.
 
-È possibile influire sulla frequenza di modifica in un'animazione utilizzando un interpolatore. Un interpolatore rende possibile l'accelerazione, la ripetizione o la decelerazione degli effetti dell'animazione. Il Framework Android offre più interpolatori predefiniti, ad esempio (ma non limitati):
+È possibile influire sulla frequenza di modifica in un'animazione utilizzando un *interpolatore*. Un interpolatore rende possibile l'accelerazione, la ripetizione o la decelerazione degli effetti dell'animazione. Il Framework Android offre più interpolatori predefiniti, ad esempio (ma non limitati):
 
 - `AccelerateInterpolator`/questiinterpolatori aumentano o diminuiscono il tasso di modifica in un'animazione. `DecelerateInterpolator` &ndash;
 
 - `BounceInterpolator`&ndash; la modifica viene rimbalzata alla fine.
 
 - `LinearInterpolator`&ndash; la frequenza delle modifiche è costante.
-
 
 Nel codice XML seguente viene illustrato un esempio di file di animazione che combina alcuni di questi elementi:
 
@@ -308,7 +299,6 @@ myImage.StartAnimation(myAnimation);
 
 Ora che sono state apprese le nozioni di base sul funzionamento delle animazioni di visualizzazione, è possibile passare alle animazioni delle proprietà.
 
-
 ### <a name="property-animations"></a>Animazioni delle proprietà
 
 Gli animatori di proprietà sono una nuova API introdotta in Android 3,0.
@@ -322,8 +312,7 @@ Tutte le animazioni di proprietà vengono create dalle istanze della sottoclasse
 
 - [Animazioni](xref:Android.Animation.AnimatorSet) &ndash; Questa classe è responsabile dell'orchestrazione dell'esecuzione delle animazioni in relazione tra loro. Le animazioni possono essere eseguite contemporaneamente, in sequenza o con un ritardo specificato tra di essi.
 
-
-Gli analizzatori sono classi speciali utilizzate dagli animatori per calcolare i nuovi valori durante un'animazione. Android fornisce gli analizzatori seguenti:
+Gli *analizzatori* sono classi speciali utilizzate dagli animatori per calcolare i nuovi valori durante un'animazione. Android fornisce gli analizzatori seguenti:
 
 - [IntEvaluator](xref:Android.Animation.IntEvaluator) &ndash; Calcola i valori per le proprietà Integer.
 
@@ -385,7 +374,6 @@ animator.Start();
 
 Come si può notare dal frammento di codice precedente `ObjectAnimator` , può ridurre e semplificare il codice necessario per animare un oggetto.
 
-
 ### <a name="drawable-animations"></a>Animazioni disegnatori
 
 L'API di animazione finale è l'API di animazione che può essere disegnato. Le animazioni disegnatori caricano una serie di risorse che è possibile creare una dopo l'altra e le visualizzano in sequenza, in modo analogo a un fumetto Flip-it.
@@ -429,12 +417,9 @@ protected override void OnCreate(Bundle bundle)
 
 A questo punto sono state analizzate le fondamenta delle API di animazione disponibili in un'applicazione Android.
 
-
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo sono stati introdotti numerosi nuovi concetti e API che consentono di aggiungere alcuni elementi grafici a un'applicazione Android. In primo luogo, sono state illustrate le diverse API grafiche 2D e viene illustrato come Android consente alle applicazioni di creare direttamente sullo schermo usando un oggetto Canvas. Sono state inoltre illustrate alcune tecniche alternative che consentono la creazione dichiarativa di elementi grafici tramite file XML. È stato quindi illustrato il vecchio e il nuovo API per la creazione di animazioni in Android.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

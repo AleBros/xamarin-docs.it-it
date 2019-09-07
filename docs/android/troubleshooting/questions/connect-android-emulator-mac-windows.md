@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 8537e075c4ac1dba8362ec9ce5fc77ee0935503c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: af32f4af3951eff3b8b5412908e35c4cdef09ae4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523297"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757265"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>È possibile connettersi a emulatori Android in esecuzione in un Mac da una macchina virtuale Windows?
 
@@ -104,4 +104,3 @@ Questo documento illustra il comportamento attuale a partire da marzo 2016. La t
 
 Se si nota che la tecnica non funziona più o se si notano altri errori nel documento, è possibile aggiungere la discussione sul seguente thread del forum: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Grazie
-

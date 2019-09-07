@@ -7,12 +7,12 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b4fae33f7de8c6022b2298c462ea510ec8ed623f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6e108852b2978903fb74686ad60cf419bbe4e3c0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772957"
 ---
 # <a name="the-translate-transform"></a>Trasformazione di traslazione
 
@@ -302,7 +302,6 @@ Il `PaintSurface` chiamate del gestore di `Translate` metodo due volte, prima di
 [![](translate-images/hendecagramanimation-small.png "Tripla screenshot della pagina di animazione Hendecagram")](translate-images/hendecagramanimation-large.png#lightbox "tripla screenshot della pagina di animazione Hendecagram")
 
 Si noti che la stella manterrà l'orientamento stesso mentre ruota intorno al centro della pagina. Non è possibile ruotare affatto. Questo è un processo per una trasformazione di rotazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 7455e9b8f8e164dd5733b44db4aaac8a93133a05
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 87d99c62f20e6cfd23605d1917a577ac0d95038f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121593"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772466"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout per le app tablet e desktop
 
@@ -39,7 +39,7 @@ Il modello Novell. Forms include automaticamente il supporto per iPad configuran
 
 Per offrire un'esperienza di avvio piacevole e garantire che la risoluzione a schermo intero venga usata in tutti i dispositivi, è necessario assicurarsi che venga fornita una [schermata di avvio specifica dell'iPad](~/ios/app-fundamentals/images-icons/launch-screens.md) (usando uno storyboard). In questo modo l'app viene sottoposta a rendering corretta nei dispositivi iPad mini, iPad e iPad Pro.
 
-Prima di iOS 9 tutte le app occupavano l'intero schermo del dispositivo, ma alcuni iPad ora possono eseguire il multitasking a [schermo diviso](~/ios/platform/multitasking.md).
+Prima di iOS 9 tutte le app occupavano l'intero schermo del dispositivo, ma alcuni iPad ora possono eseguire il [multitasking a schermo diviso](~/ios/platform/multitasking.md).
 Ciò significa che l'app potrebbe occupare solo una colonna sottile sul lato dello schermo, il 50% della larghezza dello schermo o l'intero schermo.
 
 [esempio di schermata Split iPad ![(tablet-images/ipad-sml.png " ")]] (tablet-images/ipad.png#lightbox "esempio di schermata Split iPad")
@@ -61,13 +61,11 @@ Le app in esecuzione su tablet e desktop di Windows possono essere ridimensionat
 
 Esempio Windows Split Screen [ ![(tablet-images/splitscreen-sml.png " ")]] (tablet-images/splitscreen.png#lightbox "Esempio Windows Split Screen")
 
-
 <a name="optimize" />
 
 ## <a name="optimizing-for-tablet-and-desktop"></a>Ottimizzazione per tablet e desktop
 
 È possibile modificare l'interfaccia utente di Novell. Forms a seconda che sia in uso un telefono o un tablet/dispositivo desktop. Ciò significa che è possibile ottimizzare l'esperienza utente per i dispositivi a schermo intero, ad esempio tablet e computer desktop.
-
 
 ### <a name="deviceidiom"></a>Device.Idiom
 
@@ -89,8 +87,6 @@ Questo approccio può essere espanso per apportare modifiche significative ai si
 È ideale per schermi di dimensioni maggiori, soprattutto sull'iPad in cui [`UISplitViewController`](xref:UIKit.UISplitViewController) USA per offrire un'esperienza iOS nativa. [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
 
 Vedere [questo post di Blog di Novell](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) per informazioni su come adattare l'interfaccia utente in modo che i telefoni usino un layout e schermi più grandi possano usarlo con un altro (con `MasterDetailPage`).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

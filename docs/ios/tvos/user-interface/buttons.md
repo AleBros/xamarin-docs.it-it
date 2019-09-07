@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 869e2e5c3b074c928f3c49ca87c1c1801154df91
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291104"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769971"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Uso dei pulsanti tvOS in Novell
 
@@ -63,7 +63,6 @@ Il modo più semplice per usare i pulsanti in un'app Novell. tvOS consiste nell'
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare un **pulsante** dalla **libreria** e rilasciarlo nella visualizzazione: 
 
@@ -82,7 +81,6 @@ Il modo più semplice per usare i pulsanti in un'app Novell. tvOS consiste nell'
     [![](buttons-images/storyboard05.png "Editor di codice")](buttons-images/storyboard05.png#lightbox)
 1. Salvare le modifiche apportate a tutti i file.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
@@ -97,10 +95,7 @@ Il modo più semplice per usare i pulsanti in un'app Novell. tvOS consiste nell'
     [![](buttons-images/storyboard03vs.png "Scheda eventi")](buttons-images/storyboard03vs.png#lightbox)
 1. Salvare le modifiche apportate a tutti i file.
 
-
-
 Modificare il file del controller di `ViewController.cs`visualizzazione (esempio) e aggiungere il codice seguente per gestire il pulsante selezionato:
-
 
 ```
 
@@ -128,9 +123,6 @@ Fino a quando la `Enabled` proprietà di un pulsante è `true` e non è coperta 
 
 > [!IMPORTANT]
 > Sebbene sia possibile assegnare azioni come `TouchUpInside` a un `UIButton` in iOS designer durante la creazione di un **gestore eventi**, non verrà mai chiamato perché Apple TV non dispone di un touch screen o supporta gli eventi di tocco. Quando si creano **azioni** per gli elementi dell'interfaccia utente di tvOS, è consigliabile usare sempre il **tipo di azione** predefinito.
-
-
-
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -189,9 +181,6 @@ View.AddSubview (button);
 
 > [!IMPORTANT]
 > Sebbene sia possibile assegnare azioni come `TouchUpInside` a un `UIButton`, non verrà mai chiamato perché Apple TV non ha un touch screen o supporta gli eventi di tocco. È consigliabile usare sempre eventi come **AllEvents** o **PrimaryActionTriggered**.
-
-
-
 
 <a name="Styling-a-Button" />
 
@@ -262,8 +251,6 @@ Utilizzare la `TintColor` proprietà per impostare una tinta del colore applicat
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato la progettazione e l'uso di pulsanti all'interno di un'app Novell. tvOS. È stato illustrato come usare i pulsanti in iOS designer e come creare i pulsanti nel C# codice. Infine, ha illustrato come modificare il titolo di un pulsante e modificarne lo stile e l'aspetto.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

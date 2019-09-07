@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 474e8ba772773f437bc30a07a34f6bfbb286cd82
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291826"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768493"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Generazione del codice XIB in Novell. iOS
 
@@ -72,7 +72,6 @@ Le classi della finestra di progettazione contengono metodi parziali corrisponde
 
 1. Se si digita `partial` il corpo della classe della parte della classe non della finestra di progettazione, Visual Studio per Mac offrirà il completamento automatico delle firme di tutti i metodi parziali non implementati.
 2. Alle firme dei metodi parziali è applicato un attributo che li espone all'ambiente Objective-C, in modo che possano essere gestiti come azione corrispondente.
-
 
 Se si desidera, è possibile ignorare il metodo parziale e implementare l'azione applicando l'attributo a un metodo diverso oppure lasciarlo passare a una classe di base.
 

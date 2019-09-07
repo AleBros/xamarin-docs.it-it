@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2d02e79ff51468572250d1a7ce7c6d3da103c03a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643014"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770522"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Punti e trattini in SkiaSharp
 
@@ -165,7 +165,6 @@ Limitare il Mostra schermata UWP che da punti e linee tratteggiate line per un t
 Finora non è diventato alcun accenno del secondo parametro per il `SKPathEffect.CreateDash` (metodo). Questo parametro è denominato `phase` e fa riferimento a un offset all'interno del criterio trattino e punto per l'inizio della riga. Ad esempio, se la matrice dash è {10, 10} che `phase` è 10, quindi la riga inizia con uno spazio vuoto anziché a un punto.
 
 Un'interessante applicazione dei `phase` parametro è un'animazione. Il **animato spirale** pagina è simile al **Archimedean spirale** pagina con la differenza che il [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) classe aggiunge un'animazione il `phase` parametro usando il Xamarin. Forms `Device.Timer` metodo:
-
 
 ```csharp
 public class AnimatedSpiralPage : ContentPage

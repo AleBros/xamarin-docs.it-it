@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b34c769eaa3aef5bf47a9bfa891859289b195f03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283776"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769211"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Riproduzione di suoni in tvOS con AVAudioPlayer in Novell
 
@@ -33,8 +33,6 @@ Viene `AVAudioPlayer` utilizzato per riprodurre dati audio da una o più memoria
 ## <a name="playing-sounds-in-tvos"></a>Riproduzione di suoni in tvOS
 
 Poiché tvOS supporta le stesse classi della casella degli strumenti audio di iOS, vedere la documentazione di iOS per la [riproduzione di suoni con AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) per informazioni dettagliate sulla riproduzione di audio in un'app Novell. tvOS.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

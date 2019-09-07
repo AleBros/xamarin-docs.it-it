@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a6cdd5ccec0d2c60eba18418327fd786201f11b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 41a5a30cdd5017046415f1d678abf1d44e83e678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285638"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753676"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
@@ -25,11 +25,9 @@ _Questa guida presenta una procedura di risoluzione dei problemi che possono ver
 
 È possibile individuare i file di log passando a **? &gt; Xamarin &gt; Comprimi log** in Visual Studio.
 
-
 ## <a name="wheres-the-xamarin-build-host-app"></a>Dov'è l'app host di compilazione Xamarin?
 
 L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è più necessario. Visual Studio ora distribuisce automaticamente l'agente tramite Login remoto e lo esegue in background. Non ci sono app aggiuntive da eseguire nei computer Mac o Windows.
-
 
 ## <a name="troubleshooting-remote-login"></a>Risoluzione dei problemi di Login remoto
 
@@ -64,7 +62,6 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
     Usando come esempio lo screenshot riportato di seguito, il nome dell'account è **amyb** e non **Amy Burns**:
 
     [![](troubleshooting-images/troubleshooting-image5a.png "Ottenere il nome dell'account dall'app terminale")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
-
 
 6. Controllare che l'indirizzo IP in uso per il Mac sia corretto. È possibile trovare l'indirizzo IP in **Preferenze di Sistema > Condivisione > Login remoto** nel Mac.
 
@@ -373,7 +370,6 @@ Se durante la risoluzione di un problema di compilazione ci si vuole assicurare 
 2. Premere CTRL+clic sulla cartella **mtbs** e selezionare **Sposta nel Cestino**:
 
     [![](troubleshooting-images/troubleshooting-image9.png "Spostare la cartella mtbs nel Cestino")](troubleshooting-images/troubleshooting-image9.png#lightbox)
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

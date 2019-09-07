@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bc2990ef82e1bccd4f9e530eb67265eeae528a9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6fd6484e547f22f1dc7f27578834b5292d6d2d2a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292149"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770014"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi di Novell. Mac
 
@@ -32,7 +32,6 @@ Con una qualsiasi di queste risorse, è possibile eseguire alcune operazioni di 
 - Se possibile, fornire un piccolo programma di esempio che mostra il problema. L'analisi delle pagine del codice sorgente che cercano il problema richiede più tempo e lavoro.
 
 - Conoscere le modifiche apportate all'applicazione per fare in modo che venga visualizzato un problema può limitare rapidamente l'origine del problema. Se sono state aggiornate di recente versioni di Novell. Mac, è possibile ritagliare le sezioni dell'applicazione per trovare la parte che causa il problema oppure testare le compilazioni precedenti per trovare la modifica introdotta. il problema può essere molto utile.
-
 
 ### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>Cosa fare quando l'app si arresta in modo anomalo senza output
 

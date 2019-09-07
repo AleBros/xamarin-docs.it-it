@@ -5,12 +5,12 @@ ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: conceptdev
 ms.author: crdun
 ms.date: 06/15/2018
-ms.openlocfilehash: 734c2181f1981ed4f342f78e705f23b0385b3eff
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292287"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772213"
 ---
 # <a name="net-embedding-on-android"></a>Incorporamento .NET in Android
 
@@ -27,7 +27,6 @@ Per usare Novell. Android con l'incorporamento di .NET, è necessario quanto seg
 - **Android Studio** È necessario installare [Android Studio 3. x](https://developer.android.com/studio/) o versione successiva. &ndash;
 
 - **Java Developer Kit** È necessario che sia installato [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva. &ndash;
-
 
 ## <a name="using-embeddinator-4000"></a>Uso di Embeddinator-4000
 
@@ -51,7 +50,6 @@ Per utilizzare una libreria .NET in un progetto Android nativo, attenersi alla p
 
 5. Usare il file AAR generato in un progetto Java in Android Studio.
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="xamarinandroid-requirements"></a>Requisiti di Novell. Android
@@ -65,7 +63,6 @@ Per usare Novell. Android con l'incorporamento di .NET, è necessario quanto seg
 - **Java Developer Kit** È necessario che sia installato [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva. &ndash;
 
 - **Mono** È necessario installare [Mono 5,0](https://www.mono-project.com/download/) o versione successiva (mono viene installato con Visual Studio per Mac). &ndash;
-
 
 ## <a name="using-embeddinator-4000"></a>Uso di Embeddinator-4000
 
@@ -93,7 +90,6 @@ Per utilizzare una libreria .NET in un progetto Android nativo, attenersi alla p
 -----
 
 Le opzioni di utilizzo e della riga di comando sono descritte nella documentazione di [Embeddinator-4000](https://github.com/mono/Embeddinator-4000/blob/master/Usage.md#java--c) .
-
 
 ## <a name="callbacks"></a>Callback
 

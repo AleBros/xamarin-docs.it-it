@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 7502998e8e8da5e011ef1ec0ab7dcc6e3d892d3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286047"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768729"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Utilizzo di watchOS navigazione in Xamarin
 
@@ -97,7 +97,6 @@ Interfacce basate su pagina scorrere rapidamente verso sinistra a destra, simile
 
 ![](navigation-images/paged-1.png "Prima pagina di esempio") ![](navigation-images/paged-2.png "seconda pagina di esempio") ![](navigation-images/paged-5.png "quinta pagina di esempio")
 
-
 Per rendere un'interfaccia basata su pagina l'interfaccia utente principale per l'app watch, usare `ReloadRootControllers` con una matrice di controller di interfaccia e contesti:
 
 ```csharp
@@ -113,8 +112,6 @@ var controllerNames = new [] { "pageController", "pageController", "pageControll
 var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 PresentController (controllerNames, contexts);
 ```
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa2e287775e6669bd8bdf2728d9c676c451af69b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278544"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753290"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatti e ContactsUI in Novell. iOS
 
@@ -31,9 +31,6 @@ I due nuovi Framework contengono le funzionalità seguenti:
 
 > [!IMPORTANT]
 > I Framework `AddressBook` esistenti `AddressBookUI` e usati da iOS 8 (e versioni precedenti) sono stati deprecati in iOS 9 e devono essere sostituiti con i `Contacts` nuovi `ContactsUI` Framework e il prima possibile per qualsiasi app Novell. iOS esistente. Le nuove app devono essere scritte in base ai nuovi Framework.
-
-
-
 
 Nelle sezioni seguenti verranno esaminati questi nuovi Framework e come implementarli in un'app Novell. iOS.
 
@@ -359,7 +356,6 @@ PresentViewController(view, true, null);
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato in dettaglio come usare i Framework di contatto e contatto dell'interfaccia utente in un'applicazione Novell. iOS. In primo luogo, sono stati illustrati i diversi tipi di oggetti offerti dal framework del contatto e il modo in cui vengono usati per creare nuovi contatti esistenti o accedervi. È stato inoltre esaminato il Framework Contact UI per selezionare i contatti esistenti e visualizzare le informazioni di contatto.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

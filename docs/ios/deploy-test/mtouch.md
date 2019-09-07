@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 437db399d1a8cafb19dbc57d7f2ea4141900d8db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9b2cb44dff7712953454a9add71f092956e3c759
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762779"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso di mtouch per creare un bundle di app Xamarin.iOS
 
@@ -49,7 +49,6 @@ Il comando `mtouch` può compilare il codice in tre modi diversi:
 - Compilare il codice per la distribuzione del dispositivo.
 - Distribuire l'eseguibile nel dispositivo.
 
-
 ### <a name="building-for-the-simulator"></a>Compilazione per il simulatore
 
 Quando si inizia, lo scenario usato più spesso consiste nel provare l'applicazione nel simulatore, quindi nell'usare `mtouch -sim` per compilare il codice in un pacchetto del simulatore. Ecco come:
@@ -70,9 +69,7 @@ In questo caso specifico viene usato il certificato "iPhone Developer: Miguel de
 
  <a name="Running_your_Application" />
 
-
 ## <a name="running-your-application"></a>Esecuzione dell'applicazione
-
 
 ### <a name="launching-on-the-simulator"></a>Avvio nel simulatore
 
@@ -95,8 +92,6 @@ PID: 98460
 Press enter to terminate the application
 ```
 
-
-
 È consigliabile mantenere un log dei file di output standard e dei file di errore standard per semplificare il debug. L'output di `Console.WriteLine` passa a `stdout`, mentre l'output di `Console.Error.WriteLine` e qualsiasi messaggio di errore di runtime passano a `stderr`.
 
 A questo scopo, usare i flag `--stdout` e `--stderr`:
@@ -106,7 +101,6 @@ A questo scopo, usare i flag `--stdout` e `--stderr`:
 ```
 
 Se l'applicazione non riesce, è possibile visualizzare l'output e l'errore per diagnosticare il problema.
-
 
 ### <a name="deploying-to-a-device"></a>Distribuzione a un dispositivo
 
@@ -125,8 +119,6 @@ Questi passaggi vengono in genere eseguiti da Visual Studio per Mac.
 ## <a name="reference"></a>Riferimenti
 
 Per informazioni dettagliate su altre opzioni della riga di comando, vedere la pagina del manuale di [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 71a1b4df1d57d489efd7f3171a8c36aac1017cca
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281713"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767024"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introduzione all'archiviazione dei dati nelle app Novell. iOS
 
@@ -25,7 +25,6 @@ Mentre le funzionalità di archiviazione ed elaborazione dei dispositivi mobili 
 - **File di dati serializzati** : gli oggetti possono essere salvati in modo permanente come XML o JSON nel file System. In .NET Framework sono incluse librerie che semplificano la serializzazione e la deserializzazione di oggetti. Usare i nomi appropriati per organizzare i file di dati.
 - **Database** : il motore di database SQLite è disponibile per iOS ed è utile per archiviare i dati strutturati necessari per eseguire query, ordinare o modificare in altro modo. L'archiviazione del database è adatta agli elenchi di dati con molte proprietà.
 - **File di immagine** : Sebbene sia possibile archiviare dati binari nel database di un dispositivo mobile, è consigliabile archiviarli direttamente nel file System. Se necessario, è possibile archiviare i nomi di file in un database per associare l'immagine ad altri dati. Quando si gestiscono immagini di grandi dimensioni o molte immagini, è consigliabile pianificare una strategia di memorizzazione nella cache che elimini i file che non sono più necessari per evitare l'utilizzo dello spazio di archiviazione dell'utente.
-
 
 Se un database è il meccanismo di archiviazione corretto per l'app, nella parte restante di questo documento viene illustrato come usare SQLite nella piattaforma Novell.
 
@@ -40,7 +39,6 @@ L'uso di un database SQL nell'app per dispositivi mobili presenta diversi vantag
 - Gli sviluppatori con competenze di database esistenti possono utilizzare le proprie conoscenze per progettare il database e il codice di accesso ai dati.
 - Il modello di dati dal componente server di un'applicazione connessa può essere riutilizzato (interamente o in parte) nell'applicazione per dispositivi mobili.
 
-
 ## <a name="sqlite-database-engine"></a>motore di database SQLite
 
 SQLite è un motore di database open source che è stato adottato da Apple per la piattaforma per dispositivi mobili. Il motore di database SQLite è integrato in iOS, quindi non sono previsti altri lavori per gli sviluppatori. SQLite è particolarmente adatto per lo sviluppo di app per dispositivi mobili multipiattaforma perché:
@@ -50,13 +48,11 @@ SQLite è un motore di database open source che è stato adottato da Apple per l
 - Il formato del file è facile da usare tra le piattaforme: se 32 o 64 bit e i sistemi Big o little-endian.
 - Implementa la maggior parte dello standard SQL92.
 
-
 Poiché SQLite è progettato per essere piccolo e veloce, esistono alcune avvertenze sull'uso:
 
 - La sintassi di OUTER join non è supportata.
 - Sono supportate solo le ridenominazioni di tabelle e ADDCOLUMN. Non è possibile apportare altre modifiche allo schema.
 - Le visualizzazioni sono di sola lettura.
-
 
 Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](http://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è integrato in tutte le versioni di iOS.
 Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'uso in applicazioni Windows Phone e Windows.
@@ -65,8 +61,6 @@ Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'u
 
 SQLite può essere usato anche nelle piattaforme Windows, anche se queste piattaforme non sono descritte in questo documento.
 Per altre informazioni, vedere la pagina relativa ai case study di [attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [attività professionali](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) e consultare [il Blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

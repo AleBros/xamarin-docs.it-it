@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 6aa9367495ba00138a38816ffab51c1ab43eec94
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9a9e7e9c5d189527d4fbdcc2001d6f003fa63dd7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524814"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757868"
 ---
 # <a name="binding-a-jar"></a>Associazione di un file JAR
 
@@ -33,7 +33,6 @@ Il codice MCW generato USA JNI (Java Native Interface) per inviare le chiamate A
 In questa guida verranno illustrate le nozioni di base per la creazione di una libreria di binding per un singolo. File JAR. Verrà illustrato un esempio in cui tutto va bene &ndash; , in cui non è richiesta alcuna personalizzazione o debug delle associazioni. 
 La [creazione di associazioni usando i metadati](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) offre un esempio di scenario più avanzato in cui il processo di associazione non è completamente automatico e è necessaria una certa quantità di intervento manuale. Per una panoramica dell'associazione di librerie Java in generale (con un esempio di codice di base), vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md). 
 
- 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 Nella procedura dettagliata seguente verrà creata una libreria di binding per [Picasso](http://square.github.io/picasso/), un dispositivo Android molto diffuso. JAR che fornisce funzionalità di caricamento di immagini e memorizzazione nella cache. Usare i passaggi seguenti per associare **Picasso-2. x.x. x. jar** per creare un nuovo assembly .NET che è possibile usare in un progetto Novell. Android: 
@@ -74,7 +73,6 @@ Picasso.With (this)
 
 ```
 
-
 ### <a name="creating-the-bindings-library"></a>Creazione della libreria bindings
 
 Prima di iniziare con la procedura seguente, scaricare [Picasso-2. x.x. x. jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
@@ -113,10 +111,7 @@ Impostare il livello API di destinazione per la libreria dei binding (in questo 
 
 [![Livello API di destinazione impostato su API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
-
 Infine, compilare la libreria Bindings. Sebbene sia possibile visualizzare alcuni messaggi di avviso, il progetto di libreria di associazioni dovrebbe compilarsi correttamente e produrre un output. DLL nel percorso seguente: **JarBinding/bin/Debug/JarBinding.dll**
-    
-
 
 ### <a name="using-the-bindings-library"></a>Uso della libreria bindings
 
@@ -191,13 +186,10 @@ Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e dopo 
 [![Screenshot di BindingTest in esecuzione](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 La procedura è stata completata. La libreria Java è stata associata correttamente. JAR e usarlo nell'app Novell. Android.
- 
- 
+
 ## <a name="summary"></a>Riepilogo
 
 In questa procedura dettagliata è stata creata una libreria Bindings per un di terze parti. File JAR, è stata aggiunta la libreria bindings a un'app di test minima e quindi l'app è stata eseguita C# per verificare che il codice sia in grado di chiamare il codice Java che risiede in. File JAR. 
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

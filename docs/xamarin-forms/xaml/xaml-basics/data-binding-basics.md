@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 7b34e7658ad38f80cffa22d99eea42901a905a38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227938"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767621"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Nozioni fondamentali sull'associazione dati
 
@@ -405,8 +405,6 @@ Se le proprietà degli elementi stessi cambiano in fase di esecuzione, quindi gl
 ## <a name="summary"></a>Riepilogo
 
 Le associazioni dati forniscono un meccanismo potente per il collegamento tra due oggetti all'interno di una pagina o tra gli oggetti visivi di proprietà e i dati sottostanti. Ma quando l'applicazione diventa operativa con origini dati, un modello di architettura diffuso dell'applicazione inizia a emergere come un utile paradigma. Questo argomento viene trattato [parte 5. Da Data Binding a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

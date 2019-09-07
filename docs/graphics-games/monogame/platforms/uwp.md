@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 367f44104b0d6049b8d65ab6e3b3f38c703cdb3f
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa43513154499a39c27f5ad35fce9584ce7827f8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198720"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763534"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Creazione di un progetto MonoGame UWP
 
@@ -56,7 +56,6 @@ Una volta che Visual Studio ha completato la creazione del modello, è possibile
 ![](uwp-images/image3.png "Dopo che Visual Studio ha completato la creazione del modello, eseguirlo per visualizzare il progetto vuoto in esecuzione")
 
 I numeri negli angoli forniscono informazioni di diagnostica. Queste informazioni possono essere rimosse eliminando il codice `App.xaml.cs` in `DEBUG` nel blocco nel `OnLaunched` metodo:
-
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)

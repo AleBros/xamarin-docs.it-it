@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 6fd952fc929fc11d19d8ceb0153aa8d7702a21a7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889233"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771700"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un elemento ViewCell
 
@@ -573,7 +573,6 @@ Il metodo `GetTemplate` viene chiamato per restituire la cella da sottoporre a r
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come si crea un renderer personalizzato per un oggetto [`ViewCell`](xref:Xamarin.Forms.ViewCell) ospitato all'interno di un controllo [`ListView`](xref:Xamarin.Forms.ListView) di Xamarin.Forms. Questo impedisce che i calcoli di layout di Xamarin.Forms vengano ripetutamente chiamati durante lo scorrimento di `ListView`.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

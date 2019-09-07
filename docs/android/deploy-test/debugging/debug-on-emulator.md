@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 133550bab03c4d2e3826ea59cf231ac3d85f29cc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 761b1a8b2c3fd97ca3f1560b79b042e0fd89da92
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525661"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754177"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Debug nell'emulatore Android
 
@@ -21,7 +21,6 @@ _Questa guida contiene informazioni su come avviare un dispositivo virtuale nell
 ## <a name="overview"></a>Panoramica
 
 L'emulatore Android (installato con il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**) può essere eseguito in diverse configurazioni per simulare dispositivi Android differenti. Ognuna di queste configurazioni viene creata come _dispositivo virtuale_. In questa guida viene illustrato come avviare l'emulatore da Visual Studio ed eseguire l'app in un dispositivo virtuale. Per informazioni sulla configurazione dell'emulatore Android e la creazione di nuovi dispositivi virtuali, vedere [Configurazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md).
-
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Uso di un dispositivo virtuale preconfigurato
 
@@ -65,7 +64,6 @@ Per le attività di test e debug di un'app per telefono, viene in genere selezio
 ## <a name="editing-virtual-devices"></a>Modifica di dispositivi virtuali
 
 Per modificare i dispositivi virtuali (o crearne di nuovi), occorre usare [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
 
 <a name="launching" />
 
@@ -113,11 +111,9 @@ Gli avvii successivi del dispositivo virtuale sono molto più veloci perché l'e
 
 ![Caricamento dello stato in fase di riavvio](debug-on-emulator-images/loading-state.png)
 
-
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Per suggerimenti e soluzioni alternative per i problemi comuni dell'emulatore, vedere [Risoluzione dei problemi di configurazione dell'emulatore](~/android/get-started/installation/android-emulator/troubleshooting.md).
-
 
 ## <a name="summary"></a>Riepilogo
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3e27cffa9e2605c3697536f226fe87fbbf1bfbbd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 47a07959bcfabc0980ccb90f2ae7a489e5e71223
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286885"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756241"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Trasferimento in background e NSURLSession in Novell. iOS
 
@@ -56,12 +56,10 @@ Per verificare lo stato del trasferimento, fornisceimetodidibaseseguenti:`NSUrlS
 - *DidReceiveChallenge* : chiamato per richiedere le credenziali quando è richiesta l'autorizzazione.
 - *DidBecomeInvalidWithError* : viene chiamato se `NSURLSession` l'oggetto viene invalidato.
 
-
 Per le sessioni in background sono necessari delegati più specializzati a seconda dei tipi di attività in esecuzione. Le sessioni in background sono limitate a due tipi di attività:
 
 - *Attività di caricamento* : le `NSUrlSessionTaskDelegate` attività `NSUrlSessionUploadTask` di tipo usano, che eredita `NSUrlSessionDelegate` da. Questo delegato fornisce metodi aggiuntivi per tenere traccia dello stato di avanzamento del caricamento, gestire il reindirizzamento HTTP e altro ancora.
 - *Attività di download* : le `NSUrlSessionDownloadDelegate` attività `NSUrlSessionDownloadTask` di tipo usano, che eredita `NSUrlSessionTaskDelegate` da. Questo delegato fornisce tutti i metodi per caricare le attività, nonché metodi specifici del download per tenere traccia dello stato di avanzamento del download e determinare quando un'attività di download è stata ripresa o completata.
-
 
 Il codice seguente definisce un'attività che può essere usata per scaricare un'immagine da un URL. L'attività viene avviata chiamando `CreateDownloadTask` la sessione in background e passando la richiesta dell'URL:
 
@@ -96,7 +94,6 @@ L'API del delegato della sessione fornisce un ampio Toolkit per interagire con l
 
 > [!IMPORTANT]
 > Le sessioni in background vengono avviate in un thread in background, pertanto tutte le chiamate per aggiornare l'interfaccia utente devono essere eseguite in modo `InvokeOnMainThread` esplicito nel thread UI chiamando per evitare che iOS interrompa l'app. 
-
 
 ## <a name="handling-transfer-completion"></a>Gestione del completamento del trasferimento
 
@@ -141,8 +138,6 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 ```
 
 In questa procedura dettagliata sono stati descritti i passaggi di base per implementare il servizio di trasferimento in background in iOS 7.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

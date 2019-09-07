@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: e2d3a3590e8006c745d28026f3a359350f7ce940
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: a759569f9faf7c8e13768a68b203a8221d3b31cb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621070"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770721"
 ---
 # <a name="native-views-in-c"></a>Viste native in C\#
 
@@ -319,7 +319,6 @@ Questo metodo Usa la larghezza fornita dal `CustomControl.ArrangeOverride` (meto
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come aggiungere le visualizzazioni native in un layout di xamarin. Forms creato utilizzando c# e come eseguire l'override di layout di visualizzazioni personalizzate per correggere le unità di misura all'utilizzo dell'API.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

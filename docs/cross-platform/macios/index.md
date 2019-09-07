@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10ab9b379344ab6c514eba84f1ef3fd9c7400b73
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290841"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765542"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Piattaforma Apple (iOS e Mac)
 
@@ -31,7 +31,6 @@ Il API unificata per i progetti iOS e Mac usa gli stessi spazi dei nomi per i Fr
 > **Deprecazione del profilo classico:** Man mano che vengono aggiunte nuove piattaforme in Novell. iOS, viene avviata la deprecazione graduale delle funzionalità del profilo classico (MonoTouch. dll). Ad esempio, l'opzione non-NRC (New-ref-Count) è stata rimossa. NRC è sempre stato abilitato per tutte le applicazioni unificate, ovvero non è mai stata un'opzione, ma non ha problemi noti. Nelle versioni future viene rimossa l'opzione di utilizzo di Boehm come Garbage Collector. Questa era anche un'opzione non disponibile per le applicazioni unificate. La rimozione completa del supporto classico è prevista per il calo 2016 con la versione di Novell. iOS 10,0.
 
 Le API originali (non unificate) Novell. iOS e Novell. Mac hanno reso più difficile la condivisione del codice perché i Framework `MonoTouch.` nativi contengono prefissi di spazio dei nomi o. `MonoMac.`  Sono stati forniti alcuni spazi dei nomi vuoti che consentono agli sviluppatori di condividere `using` il codice aggiungendo istruzioni che fanno riferimento a spazi dei nomi MonoMac e MonoTouch nello stesso file, ma si tratta di un po' brutto. Il API classica deve continuare a essere usato solo nelle app legacy distribuite internamente (è consigliabile eseguire l'aggiornamento al API unificata).
-
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>Aggiornamento dal modello classico al API unificata
 

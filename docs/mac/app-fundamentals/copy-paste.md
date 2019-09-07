@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291228"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769929"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copia e incolla in Novell. Mac
 
@@ -603,7 +603,7 @@ namespace MacCopyPaste
 Anche in questo caso, si ottiene la finestra in primo piano corrente `ImageDocument` e si usa la relativa istanza di classe per verificare se sono presenti i dati di immagine richiesti. Viene quindi usato il `MenuWillHighlightItem` metodo per abilitare o disabilitare ogni elemento in base a questo stato.
 
 Modificare il file **AppDelegate.cs** e fare in `DidFinishLaunching` modo che il metodo sia simile al seguente:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
@@ -1275,8 +1275,6 @@ if (ok) {
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio l'uso del tavolo di montaggio in un'applicazione Novell. Mac per supportare le operazioni di copia e incolla. In primo luogo, è stato introdotto un semplice esempio per acquisire familiarità con le operazioni Pasteboards standard. Successivamente, è stata esaminata dettagliatamente il cartone e viene illustrato come leggere e scrivere i dati. Infine, è stato esaminato l'uso di un tipo di dati personalizzato per supportare la copia e incolla di tipi di dati complessi all'interno di un'app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

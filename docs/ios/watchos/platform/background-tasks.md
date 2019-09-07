@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2017
-ms.openlocfilehash: b01fbbe813b778d3c2e1cabeba620ed48a46ecac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e0336e65532c4487e3ec8c1984b132544b5b547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287162"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768655"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Attività in background di watchos in Novell
 
@@ -109,7 +109,6 @@ Queste attività verranno descritte in dettaglio nelle sezioni riportate di segu
 
 All'interno del runtime dell'attività, l'app può eseguire qualsiasi tipo di elaborazione locale, ad esempio aggiornare una sequenza temporale complicata o recuperare alcuni dati necessari `NSUrlSession`con un.
 
-
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>WKURLSessionRefreshBackgroundTask
@@ -142,9 +141,6 @@ Quando l'app contrassegna il `WKSnapshotRefreshBackgroundTask` completamento, il
 
 > [!IMPORTANT]
 > È importante pianificare sempre un `WKSnapshotRefreshBackgroundTask` dopo che l'app ha ricevuto nuovi dati e aggiornato la relativa interfaccia utente oppure l'utente non visualizzerà le informazioni modificate.
-
-
-
 
 Inoltre, quando l'utente riceve una notifica dall'app e la tocca per portare l'app in primo piano, lo snapshot deve essere aggiornato perché funge anche da schermata di avvio:
 
@@ -700,8 +696,6 @@ Apple presenta i suggerimenti seguenti:
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato i miglioramenti apportati da Apple a watchos e come è possibile usarli per tenere aggiornata l'app Watch. In primo luogo, è stata analizzata tutta la nuova attività in background aggiunta da Apple in watchos 3. È stato quindi trattato il ciclo di vita dell'API in background e come implementare le attività in background in un'app Novell watchos. Infine, ha illustrato il funzionamento della pianificazione e alcune procedure consigliate.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

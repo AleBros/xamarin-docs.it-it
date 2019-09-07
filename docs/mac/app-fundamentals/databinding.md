@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290155"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769998"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data Binding e codifica chiave-valore in Novell. Mac
 
@@ -888,7 +888,6 @@ Questa riga indica che la chiave `Title` non esiste nell'oggetto a cui si sta as
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore in un'applicazione Novell. Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Infine, ha mostrato data binding complesse usando **controller di array** e **controller di albero**.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

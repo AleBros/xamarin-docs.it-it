@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 6287dca8660c1147455beb22304b7f8637ac7fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ba3be4fea9999698c5a81faf5b07bec99fb1aa46
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292778"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753234"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Framework incorporati in Novell. iOS
 
@@ -74,4 +74,3 @@ Questo comportamento può essere sostituito dallo sviluppatore di app, aggiungen
 - `--mono:framework`: Collegamenti con il runtime di mono come Framework.
 
 Uno scenario per il collegamento con il runtime di mono come Framework anche per le app senza estensioni consiste nel ridurre le dimensioni del file eseguibile, in modo da superare le limitazioni di dimensione imposte da Apple sull'eseguibile. Per riferimento, il runtime di mono aggiunge approssimativamente 1.7 MB per architettura (a partire da Novell. iOS 8,12, ma varia tra le versioni e anche tra le app). Mono Framework aggiunge circa 2,3 MB per architettura, il che significa che per un'app con una singola architettura senza estensioni, il collegamento dell'app con il runtime di mono come Framework ridurrà il file eseguibile di ~ 1.7 MB, ma aggiungerà un Framework ~ 2,3 MB, risultante in una complessivamente di ~ 0.6 MB di app di dimensioni maggiori.
-

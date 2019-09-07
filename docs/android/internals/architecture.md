@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 06817c563f12425e5c339cb8f2560f37f9ace0b5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524844"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756687"
 ---
 # <a name="architecture"></a>Architettura
 
@@ -28,7 +28,6 @@ Gli sviluppatori Novell. Android accedono alle varie funzionalità del sistema o
 
 Per altre informazioni sul modo in cui le classi Android comunicano con le classi di runtime di Android, vedere il documento di [progettazione dell'API](~/android/internals/api-design.md) .
 
-
 ## <a name="application-packages"></a>Pacchetti dell'applicazione
 
 I pacchetti di applicazioni Android sono contenitori ZIP con estensione *apk* . I pacchetti dell'applicazione Novell. Android hanno la stessa struttura e il layout dei normali pacchetti Android, con le aggiunte seguenti:
@@ -36,18 +35,13 @@ I pacchetti di applicazioni Android sono contenitori ZIP con estensione *apk* . 
 - Gli assembly dell'applicazione (contenenti IL) vengono *archiviati* non compressi nella cartella degli *assembly* . Durante l'avvio del processo nelle build di rilascio, il file con *estensione APK* è *mmap ()* ed è nel processo e gli assembly vengono caricati dalla memoria. Questo consente un avvio più veloce delle app, perché non è necessario estrarre gli assembly prima dell'esecuzione.  
 - *Nota:* Informazioni sul percorso degli assembly, ad esempio [assembly. location](xref:System.Reflection.Assembly.Location) e [assembly.](xref:System.Reflection.Assembly.CodeBase) *non è possibile fare affidamento su* codebase nelle build di rilascio. Non esistono come voci di file System distinte e non hanno un percorso utilizzabile.
 
-
 - Le librerie native che contengono il runtime di mono sono presenti nel file con *estensione APK* . Un'applicazione Novell. Android deve contenere librerie native per le architetture Android desiderate/di destinazione, ad esempio *ARMEABI* , *ARMEABI-v7a* , *x86* . Le applicazioni Novell. Android non possono essere eseguite su una piattaforma a meno che non contenga le librerie di runtime appropriate.
 
-
 Le applicazioni Novell. Android contengono anche i *wrapper richiamabili Android* per consentire a Android di effettuare chiamate nel codice gestito.
-
-
 
 ## <a name="android-callable-wrappers"></a>Android Callable Wrapper
 
 - **Android Callable Wrapper** è un Bridge [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) che viene usato ogni volta che il runtime di Android deve richiamare il codice gestito. Android Callable Wrapper è il modo in cui è possibile eseguire l'override di metodi virtuali e le interfacce Java possono essere implementate. Per ulteriori informazioni, vedere il documento [Panoramica dell'integrazione Java](~/android/platform/java-integration/index.md) .
-
 
 <a name="Managed_Callable_Wrappers" />
 
@@ -64,15 +58,12 @@ I riferimenti globali possono essere liberati in modo esplicito chiamando [java.
 
 È necessario prestare attenzione quando si eliminano i wrapper richiamabili gestiti se l'istanza può essere condivisa inavvertitamente tra i thread, poiché l'eliminazione dell'istanza influirà sui riferimenti da altri thread. Per garantire la massima sicurezza `Dispose()` , solo le istanze che sono state `new` allocate tramite *o* da metodi che si *conoscono* sempre allocano nuove istanze e non istanze memorizzate nella cache che possono causare una condivisione accidentale delle istanze tra thread.
 
-
-
 ## <a name="managed-callable-wrapper-subclasses"></a>Sottoclassi gestite Callable Wrapper
 
 Le sottoclassi di wrapper richiamabili gestite sono in cui è possibile che sia presente tutta la logica specifica dell'applicazione "interessante". Sono incluse le sottoclassi [Android. app. Activity](xref:Android.App.Activity) personalizzate, ad esempio il tipo [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) nel modello di progetto predefinito. In particolare, si tratta di sottoclassi *java. lang. Object* che *non* contengono un attributo personalizzato [RegisterAttribute](xref:Android.Runtime.RegisterAttribute) o [RegisterAttribute. DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) è *false*, che corrisponde all'impostazione predefinita.
 
 Analogamente ai wrapper richiamabili gestiti, le sottoclassi gestite Callable Wrapper contengono anche un riferimento globale, accessibile tramite la proprietà [java. lang. Object. handle](xref:Java.Lang.Object.Handle) . Analogamente ai wrapper richiamabili gestiti, i riferimenti globali possono essere liberati in modo esplicito chiamando [java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose).
 A differenza dei wrapper richiamabili gestiti, è necessario prestare particolare *attenzione* prima di eliminare tali istanze, in quanto *Dispose ()* -l'operazione interromperà il mapping tra l'istanza Java (un'istanza di un wrapper richiamabile Android) e l'oggetto gestito istanza.
-
 
 ### <a name="java-activation"></a>Attivazione Java
 
@@ -99,9 +90,9 @@ Ordine degli eventi:
 
 3. Il costruttore *monodroid. apidemo. LogTextBox* esegue il costruttore [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
 
-4. Il Costruttore TextView richiama *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
+4. Il costruttore *TextView* richiama *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
 
-5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* richiama *LogTextBox. n_getDefaultMovementMethod ()* , che richiama TextView *. n_getDefaultMovementMethod ()* , che richiama [java. lang. Object. GetObject&lt; &gt; TextView (handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* richiama *LogTextBox. n_getDefaultMovementMethod ()* , che richiama *TextView. n_getDefaultMovementMethod ()* , che richiama [java. lang. Object. GetObject&lt; &gt; TextView (handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
 
 6. *Java. lang. Object. GetObject&lt;TextView&gt;()* verifica se esiste già un'istanza corrispondente C# per *handle* . In caso contrario, viene restituito. In questo scenario non è presente, quindi *Object. GetObject&lt;t&gt;()* deve crearne uno.
 
@@ -171,8 +162,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 ```
 
 Solo *Dispose ()* di sottoclassi di wrapper gestite chiamabili quando si è certi che l'oggetto Java non verrà più usato o che la sottoclasse non contiene dati dell'istanza e è stato fornito un costruttore *(IntPtr, JniHandleOwnership)* .
-
-
 
 ## <a name="application-startup"></a>Avvio dell'applicazione
 

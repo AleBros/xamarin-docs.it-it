@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 5a6f950ec7c9af0422beeb2d1af2be602fcaf947
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 9ef13816dc1bc11eab0105ec223c2ef98366e4e5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113807"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753995"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Installazione di Xamarin.Android come app di sistema
 
@@ -26,7 +26,7 @@ Le app di sistema vengono installate nella cartella **/system/app/** (una direct
 
 Le app di sistema si comportano esattamente come le app utente, ma con le importanti eccezioni seguenti:
 
-- Le app di sistema possono essere aggiornate come una normale _app utente_, ma, poiché esiste sempre una copia dell'app in **/system/app/**, è sempre possibile eseguire il rollback dell'applicazione alla versione originale.
+- Le app di sistema possono essere aggiornate come una normale _app utente_, ma, poiché esiste sempre una copia dell'app in **/system/app/** , è sempre possibile eseguire il rollback dell'applicazione alla versione originale.
 
 - Alle app di sistema possono essere concesse alcune autorizzazioni solo di sistema non disponibili per un'app utente. Un esempio di autorizzazione solo di sistema è [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED), che consente di associare le applicazioni ai dispositivi Bluetooth senza interazione dell'utente.
 
@@ -44,7 +44,7 @@ I passaggi seguenti illustrano come installare un'app Xamarin.Android come app d
 
 1. **Creare un pacchetto della versione finale di un APK dell'app Xamarin.Android**: questo passaggio è illustrato più dettagliatamente nella guida [Pubblicazione di un'applicazione](~/android/deploy-test/publishing/index.md).
 
-2. **Estrarre le librerie condivise dall'APK**: usando un'utilità ZIP, aprire il file APK ed esaminare il contenuto della cartella **/lib/**. Questa cartella avrà una sottodirectory per ogni _interfaccia binaria dell'applicazione_ (ABI) supportata dall'applicazione. Il contenuto di questa cartella includerà tutte le librerie condivise richieste dall'app in una particolare ABI:
+2. **Estrarre le librerie condivise dall'APK**: usando un'utilità ZIP, aprire il file APK ed esaminare il contenuto della cartella **/lib/** . Questa cartella avrà una sottodirectory per ogni _interfaccia binaria dell'applicazione_ (ABI) supportata dall'applicazione. Il contenuto di questa cartella includerà tutte le librerie condivise richieste dall'app in una particolare ABI:
 
     ![Screenshot dei file SO nella cartella armeabi-v7a di taskypro.zip](install-system-app-images/install-system-app-01.png)
 
@@ -54,12 +54,9 @@ I passaggi seguenti illustrano come installare un'app Xamarin.Android come app d
 
 4. **Copiare il file APK in /system/app** &ndash;: nel passaggio finale si copia il file APK nella cartella **/system/app** della ROM.
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato la differenza tra un'_app di sistema_ e un'_app utente_ e ha spiegato come installare un'applicazione Xamarin.Android come app di sistema.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: 79183963e59a7ca167ffbc3c0cc4b3628595389e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522658"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764467"
 ---
 # <a name="xamarinandroid-layouts"></a>Layout di Novell. Android
 
@@ -49,4 +49,3 @@ I layout vengono usati per disporre gli elementi che costituiscono l'interfaccia
 - I [layout a schede](~/android/user-interface/layouts/tab-layout/index.md) sono uno dei più diffusi modelli di interfaccia utente nelle applicazioni per dispositivi mobili, grazie alla semplicità e all'usabilità. Forniscono un modo semplice e coerente per spostarsi tra le varie schermate in un'applicazione.
 
     ![Layout a schede di esempio](images/tabbed-layout.png)
- 

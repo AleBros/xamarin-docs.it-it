@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 845257bc11d24865a01a992e99d39ad6c578b42c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 00a973e670ff5100a44ba158fe50f134781a97e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291464"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769500"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Eseguire una ricerca con core Spotlight in Novell. iOS
 
@@ -132,8 +132,6 @@ In Spotlight principale sono disponibili le seguenti funzionalità che consenton
 - **Supporto per aggiornamenti batch** : se l'app deve creare o modificare contemporaneamente un gruppo di indici di grandi dimensioni, l'intero batch può essere inviato al `Index` metodo della `CSSearchableIndex` classe in un'unica chiamata.
 - **Rispondere alle modifiche dell'indice** : l' `CSSearchableIndexDelegate` uso dell'app può rispondere alle modifiche e alle notifiche dall'indice ricercabile.
 - **Applicare la protezione dei dati** : usando le classi di protezione dei dati, è possibile implementare la sicurezza per gli elementi aggiunti all'indice in cui è possibile eseguire ricerche usando Core Spotlight.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

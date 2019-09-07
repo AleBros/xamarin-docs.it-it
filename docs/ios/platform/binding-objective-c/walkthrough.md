@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1cf22f070864492e14e1865c1cbbf8cf32e0df29
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285771"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753908"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procedura dettagliata: Binding di una libreria Objective-C in iOS
 
@@ -56,15 +56,11 @@ Questo articolo presuppone che l'utente abbia familiarità con Xcode e il lingua
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 Come indicato in precedenza, verranno utilizzati gli strumenti da riga di comando Xcode `make` ( `lipo`in particolare e) in questa procedura dettagliata. Il `make` comando è un'utilità UNIX molto comune che consente di automatizzare la compilazione di librerie e programmi eseguibili usando un _makefile_ che specifica come deve essere compilato il programma. Il `lipo` comando è un'utilità della riga di comando di OS X per la creazione di file con più architetture `.a` , combinando più file in un unico file che può essere usato da tutte le architetture hardware.
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 Come indicato in precedenza, si utilizzeranno gli strumenti da riga di comando Xcode nell' **host di compilazione Mac** (in particolare `make` e `lipo`) in questa procedura dettagliata. Il `make` comando è un'utilità UNIX molto comune che consente di automatizzare la compilazione di librerie e programmi eseguibili usando un _makefile_ per specificare come compilare il programma. Il `lipo` comando è un'utilità della riga di comando di OS X per la creazione di file con più architetture `.a` , combinando più file in un unico file che può essere usato da tutte le architetture hardware.
-
 
 -----
 
@@ -272,9 +268,7 @@ Verrà creata la soluzione e verranno inclusi due file predefiniti:
 
 ![](walkthrough-images/bind03.png "Struttura della soluzione nel Esplora soluzioni")
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. Avviare Visual Studio.
 
@@ -336,7 +330,6 @@ Per aggiungere la libreria, attenersi alla procedura seguente:
 
 Quando viene aggiunto **un** file al progetto, Novell. iOS imposta automaticamente l' **azione di compilazione** del file su **ObjcBindingNativeLibrary**e crea un file speciale denominato `libInfColorPickerSDK.linkwith.cs`.
 
-
 Questo file contiene l' `LinkWith` attributo che indica a Novell. iOS come gestire la libreria statica appena aggiunta. Il contenuto di questo file è illustrato nel frammento di codice seguente:
 
 ```csharp
@@ -347,7 +340,6 @@ using ObjCRuntime;
 
 L' `LinkWith` attributo identifica la libreria statica per il progetto e alcuni importanti flag del linker.
 
-
 L'operazione successiva consiste nel creare le definizioni API per il progetto InfColorPicker. Ai fini di questa procedura dettagliata, si userà Objectivey per generare il file **ApiDefinition.cs**.
 
 <a name="Using_Objective_Sharpie"/>
@@ -356,15 +348,11 @@ L'operazione successiva consiste nel creare le definizioni API per il progetto I
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 Objective Sharpie è uno strumento da riga di comando (fornito da Novell) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivey per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 Objective Sharpie è uno strumento da riga di comando (fornito da Novell) che può semplificare la creazione delle definizioni necessarie per associare una libreria Objective-C di C#terze parti a. In questa sezione si userà Objectivee Objectivey nell'host di **compilazione Mac** per creare il **ApiDefinition.cs** iniziale per il progetto InfColorPicker.
-
 
 -----
 
@@ -466,17 +454,13 @@ E i file **InfColorPicker.enums.cs** e **InfColorPicker.cs** verranno creati nel
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 Aprire entrambi i file nel progetto di Binding creato in precedenza. Copiare il contenuto del file **InfColorPicker.cs** e incollarlo nel file **ApiDefinition.cs** , sostituendo il blocco di `namespace ...` codice esistente con il contenuto del file **InfColorPicker.cs** (lasciando le `using` istruzioni intatto):
 
 ![](walkthrough-images/os07.png "File InfColorPickerControllerDelegate")
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 Aprire entrambi i file nel progetto di Binding creato in precedenza. Copiare il contenuto del file **InfColorPicker.cs** (dall'host di **compilazione Mac**) e incollarlo nel file **ApiDefinition.cs** , sostituendo il blocco di `namespace ...` codice esistente con il contenuto del file **InfColorPicker.cs** ( lasciando intatte `using` le istruzioni).
-
 
 -----
 
@@ -503,17 +487,13 @@ A questo punto, viene eseguita la stessa operazione con il contenuto `InfColorPi
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 A questo punto, il progetto di associazione deve essere completo e pronto per la compilazione. Si creerà il progetto di binding e si assicurerà che non si siano verificati errori:
 
 [Compilare il progetto di associazione e verificare che non siano presenti errori](walkthrough-images/os12.png)
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 A questo punto, il progetto di associazione deve essere completo e pronto per la compilazione. Si creerà il progetto di binding e si assicurerà che non si siano verificati errori.
-
 
 -----
 
@@ -702,7 +682,6 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
 ```
 
 **Aggiornare ViewDidLoad** : è necessario modificare `ViewDidLoad` in modo che usi il gestore eventi appena creato. Modificare `ViewController` e modificare `ViewDidLoad` in modo simile al frammento di codice seguente:
-
 
 ```csharp
 public override void ViewDidLoad ()

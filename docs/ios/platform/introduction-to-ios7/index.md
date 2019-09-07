@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d3a3c28e30e38562035b4d0c7c05366865157dd5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292019"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752067"
 ---
 # <a name="introduction-to-ios-7"></a>Introduzione a iOS 7
 
@@ -30,7 +30,6 @@ iOS 7 aumenta il supporto dell'animazione in UIKit, consentendo alle applicazion
 
 - `springWithDampingRatio`: Valore compreso tra 0 e 1, in cui l'oscillazione aumenta per un valore inferiore.
 - `initialSpringVelocity`: La velocità iniziale della molla come percentuale della distanza di animazione totale al secondo.
-
 
 Il codice seguente produce un effetto primaverile quando il centro della visualizzazione immagine cambia:
 
@@ -104,13 +103,11 @@ Sono disponibili diversi comportamenti primitivi per attivare interazioni comple
 - `UIPushBehavior`: Applica Force a un elemento dinamico.
 - `UISnapBehavior`: Consente a un elemento dinamico di bloccarsi in una posizione con effetto elastico.
 
-
 Sebbene esistano molte primitive, il processo generale per l'aggiunta di interazioni basate su fisica a una vista con UIKit Dynamics è coerente nei comportamenti:
 
 1. Creare un animatore dinamico.
 1. Crea comportamenti.
 1. Consente di aggiungere comportamenti a Dynamic Animator.
-
 
 ### <a name="dynamics-example"></a>Esempio di Dynamics
 
@@ -233,7 +230,6 @@ iOS 7 cambia quando e come viene eseguito il lavoro in background. Il completame
 - Recupero in background: consente alle applicazioni di aggiornare il contenuto in background a intervalli regolari.
 - Notifiche remote: consente alle applicazioni di aggiornare il contenuto quando riceve una notifica push. Le notifiche possono essere in modalità invisibile all'utente o visualizzare un banner nella schermata di blocco.
 - Servizio trasferimento in background: consente il caricamento e il download di dati, ad esempio file di grandi dimensioni, senza un limite di tempo fisso.
-
 
 Per ulteriori informazioni sulle nuove funzionalità multitasking, vedere le sezioni iOS della [Guida in background](~/ios/app-fundamentals/backgrounding/index.md)Novell.
 
