@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
-ms.openlocfilehash: 06b4764570205a39734d38e3e118b7dc1fa35d18
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2da2af2a57fb0ec737927024d497530c2a3aac5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888739"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759876"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
 
@@ -783,7 +783,6 @@ La seconda mano viene trattata in modo leggermente diverso: Viene applicata una 
 ## <a name="conclusion"></a>Conclusione
 
 Il `BoxView` può sembrare semplice alla prima di tutto, ma come si è visto, può essere piuttosto versatile e possono riprodurre quasi oggetti visivi che sono in genere possibili solo con la grafica vettoriale. Per gli elementi grafici più sofisticati, consultare [uso di SkiaSharp in xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

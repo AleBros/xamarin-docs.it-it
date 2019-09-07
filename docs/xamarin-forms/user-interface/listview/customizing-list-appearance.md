@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fc0664ff32e63af5d0c80f69ff69f4992ad0c708
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121642"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770314"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizzazione dell'aspetto di ListView
 
@@ -294,12 +294,10 @@ XAML:
 
 ![](customizing-list-appearance-images/height-custom.png "ListView con l'altezza di riga fisso")
 
-
 ### <a name="uneven-rows"></a>Righe non uniformi
 
 Se si desidera singole righe affinché altezza diversa, è possibile impostare il `HasUnevenRows` proprietà `true`.
 Si noti che non devono essere impostato manualmente una volta altezze `HasUnevenRows` è stata impostata su `true`, poiché l'altezza verrà automaticamente calcolato da xamarin. Forms.
-
 
 C#:
 
@@ -337,8 +335,6 @@ Il `OnImageTapped` gestore eventi viene eseguito in risposta a un [ `Image` ](xr
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView con ridimensionamento di righe di Runtime")
 
 Si noti che esiste una forte possibilità di riduzione delle prestazioni se questa funzionalità è eccessivo.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

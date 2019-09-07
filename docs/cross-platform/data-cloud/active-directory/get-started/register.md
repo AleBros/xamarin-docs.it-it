@@ -6,12 +6,12 @@ ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2811297e24aac726ae3c91e5354675499d4b9ddb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f93b741f5f091410a7f045a8e2a8538b3340208e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290082"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766339"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>Passaggio 1. Registrare un'app da usare Azure Active Directory
 
@@ -37,8 +37,6 @@ ms.locfileid: "70290082"
 6. Una volta creata l'app, passare alla scheda **Configura** . Prendere nota dell' **ID client** che verrà usato nell'applicazione in un secondo momento. Inoltre, in questa schermata è possibile concedere l'accesso dell'applicazione per dispositivi mobili a Active Directory o aggiungere un'altra applicazione, ad esempio API Web o Office365, che può essere usata dall'applicazione mobile una volta completata l'autenticazione.
 
    ![](register-images/05.-configure.jpg "Inoltre, in questa schermata è possibile concedere l'accesso dell'applicazione per dispositivi mobili a Active Directory o aggiungere un'altra applicazione come API Web o Office365")
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,15 +6,14 @@ ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c8fa3e6f9e941e0c48570f5d691e7ef83eeffae8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 271d66ef952718654a2e45eb0d3901e2962ae31b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287642"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766263"
 ---
 # <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
-
 
 Azure Active Directory consente agli sviluppatori di proteggere risorse quali file, collegamenti e API Web, Office 365 e altro ancora usando lo stesso account aziendale usato dai dipendenti per accedere ai propri sistemi o controllare i loro messaggi di posta elettronica.
 
@@ -33,4 +32,3 @@ Dopo aver aggiunto Active Directory autenticazione a un'app, è anche possibile 
 ## <a name="graph-api"></a>API Graph
 
 Informazioni su come accedere al [API Graph](~/cross-platform/data-cloud/active-directory/graph.md) usando Novell (incluso anche nel [Blog](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
-

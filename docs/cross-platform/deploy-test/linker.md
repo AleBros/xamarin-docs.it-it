@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284837"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765934"
 ---
 # <a name="custom-linker-configuration"></a>Configurazione personalizzata del linker
 
@@ -26,7 +26,6 @@ Quando questo file di descrizione del linker è disponibile, aggiungerlo al prog
 
 - **Per Android**: impostare **Azione di compilazione** su **LinkDescription**
 - **Per iOS**: impostare **Azione di compilazione** su **LinkDescription**
-
 
 L'esempio seguente mostra che aspetto avrà il file XML:
 
@@ -60,8 +59,6 @@ Si noti che è necessario usare i nomi dei metodi getter e/o setter, perché il 
 La seconda sezione, per `My.Own.Assembly.dll`, fa sì che il tipo `Foo` mantenga tutti i campi, ovvero l'attributo `preserve="fields"`, e tutti i costruttori, ovvero tutti i metodi denominati `.ctor` in IL. Il tipo `Bar` manterrà firme specifiche (non i nomi) per un costruttore (che accetta un solo parametro stringa) e per un campo stringa `_blah` specifico.
 Lo spazio dei nomi `My.Own.Namespace` manterrà tutti i tipi che contiene.
 Infine, qualsiasi tipo il cui nome completo (incluso lo spazio dei nomi) corrisponde al modello con carattere jolly "My.Other\*" manterrà tutti i campi e i metodi. Il carattere jolly `*` può essere incluso più volte all'interno di un modello "type fullname".
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

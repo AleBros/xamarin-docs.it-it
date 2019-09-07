@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 200ee3fdee3274063becec19fbc6d1504e132a88
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 60dcbd6f59e622fe5a1272bd2d61540b03e510e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226646"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758434"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gestione di dispositivi virtuali con Android Device Manager
 
@@ -56,7 +56,6 @@ Per usare Android Device Manager sono necessari i componenti seguenti:
 
   [![Installazione di Android SDK Tools](device-manager-images/win/02-sdk-tools-sml.png)](device-manager-images/win/02-sdk-tools.png#lightbox)
 
-
 ## <a name="launching-the-device-manager"></a>Avvio di Gestione dispositivi
 
 Avviare Android Device Manager dal menu **Strumenti** facendo clic su **Strumenti > Android > Android Device Manager**:
@@ -66,7 +65,6 @@ Avviare Android Device Manager dal menu **Strumenti** facendo clic su **Strument
 Se all'avvio viene visualizzato il messaggio di errore seguente, vedere la sezione [Risoluzione dei problemi](#troubleshooting) per informazioni sulle soluzioni alternative:
 
 ![Messaggio di errore di istanza di Android SDK](device-manager-images/win/04-sdk-error.png)
-
 
 ## <a name="main-screen"></a>Schermata principale
 
@@ -145,7 +143,6 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
     [![Dispositivo appena creato pronto per l'avvio](device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
 
-
 ### <a name="edit-device"></a>Modificare il dispositivo
 
 Per modificare un dispositivo virtuale esistente, selezionare il dispositivo e fare clic sul pulsante **Modifica** nell'angolo superiore destro dello schermo:
@@ -165,7 +162,6 @@ Ad esempio, nello screenshot seguente il valore della proprietà `hw.lcd.density
 
 Dopo aver apportato le modifiche di configurazione necessarie, fare clic sul pulsante **Salva**.
 Per altre informazioni sulla modifica delle proprietà del dispositivo virtuale, vedere [Modifica delle proprietà del dispositivo virtuale Android](~/android/get-started/installation/android-emulator/device-properties.md).
-
 
 ### <a name="additional-options"></a>Opzioni aggiuntive
 
@@ -190,7 +186,6 @@ Il menu delle opzioni aggiuntive contiene le voci seguenti:
 - **Elimina**: elimina definitivamente il dispositivo virtuale selezionato. Un messaggio ricorda che l'eliminazione di un dispositivo non può essere annullata. Fare clic su **Elimina** se si è certi di voler eliminare il dispositivo.
 
   ![Finestra di dialogo Elimina dispositivo](device-manager-images/win/28-delete-device-w158.png)
-
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -225,7 +220,6 @@ Per usare Android Device Manager sono necessari i componenti seguenti:
 
   [![Installazione di Android SDK Tools](device-manager-images/mac/02-sdk-tools-sml.png)](device-manager-images/mac/02-sdk-tools.png#lightbox)
 
-
 ## <a name="launching-the-device-manager"></a>Avvio di Gestione dispositivi
 
 Avviare Android Device Manager facendo clic su **Strumenti > Device Manager**:
@@ -235,7 +229,6 @@ Avviare Android Device Manager facendo clic su **Strumenti > Device Manager**:
 Se all'avvio viene visualizzato il messaggio di errore seguente, vedere la sezione [Risoluzione dei problemi](#troubleshooting) per informazioni sulle soluzioni alternative:
 
 ![Messaggio di errore di istanza di Android SDK](device-manager-images/mac/04-sdk-instance-error.png)
-
 
 ## <a name="main-screen"></a>Schermata principale
 
@@ -316,7 +309,6 @@ Per configurare un nuovo dispositivo nella schermata **New Device** (Nuovo dispo
 
     [![Dispositivo appena creato pronto per l'avvio](device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
 
-
 ### <a name="edit-device"></a>Modificare il dispositivo
 
 Per modificare un dispositivo virtuale esistente, selezionare il menu a discesa **Opzioni aggiuntive** (icona a forma di ingranaggio) e selezionare **Modifica**:
@@ -336,7 +328,6 @@ Ad esempio, nello screenshot seguente il valore della proprietà `hw.lcd.density
 
 Dopo aver apportato le modifiche di configurazione necessarie, fare clic sul pulsante **Salva**.
 Per altre informazioni sulla modifica delle proprietà del dispositivo virtuale, vedere [Modifica delle proprietà del dispositivo virtuale Android](~/android/get-started/installation/android-emulator/device-properties.md).
-
 
 ### <a name="additional-options"></a>Opzioni aggiuntive
 
@@ -365,7 +356,6 @@ Il menu delle opzioni aggiuntive contiene le voci seguenti:
   ![Finestra di dialogo Elimina dispositivo](device-manager-images/mac/28-delete-device-m76.png)
 
 -----
-
 
 <a name="troubleshooting" />
 
@@ -405,7 +395,6 @@ Per risolvere il problema, effettuare i passaggi seguenti:
 
 Dopo aver modificato in questo modo **user.config**, è possibile avviare Android Device Manager.
 
-
 ### <a name="wrong-version-of-android-sdk-tools"></a>Versione errata di Android SDK Tools
 
 Se non è installato Android SDK Tools 26.1.1 o versione successiva, all'avvio potrebbe essere visualizzato il messaggio di errore seguente:
@@ -417,7 +406,6 @@ Se viene visualizzato questo messaggio di errore, fare clic su **Apri SDK Manage
 - **Android SDK Tools 26.1.1** o versione successiva
 - **Android SDK Platform-Tools 27.0.1** o versione successiva
 - **Android SDK Build-Tools 27.0.3** o versione successiva
-
 
 ### <a name="snapshot-disables-wifi-on-android-oreo"></a>Uno snapshot disabilita l'accesso Wi-Fi in Android Oreo
 
@@ -438,7 +426,6 @@ Per risolvere il problema:
 5. Riavviare l'AVD.
 
 Dopo aver apportato queste modifiche, l'AVD verrà riavviato in uno stato che consente di nuovo il funzionamento dell'accesso Wi-Fi.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -484,7 +471,6 @@ Se si rileva un problema in Android Device Manager che non può essere risolto c
 
 [![Voce di menu per l'inoltro di un report sui bug](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Se si rileva un problema in Android Device Manager che non può essere risolto con i suggerimenti sopra elencati, inoltrare un report sui bug facendo clic su **Help > Report a Problem** (Aiuto > Segnala un problema):
@@ -496,7 +482,6 @@ Se si rileva un problema in Android Device Manager che non può essere risolto c
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha presentato Android Device Manager, disponibile in Strumenti di Visual Studio per Xamarin e Visual Studio per Mac. Sono state presentate funzionalità essenziali come l'avvio e l'arresto dell'emulatore Android, la selezione di un dispositivo virtuale Android (AVD) per l'esecuzione, la creazione di nuovi dispositivi virtuali e la modifica di un dispositivo virtuale. È stato illustrato come modificare le proprietà di profilo hardware per un'ulteriore personalizzazione e sono stati offerti suggerimenti per la risoluzione dei problemi comuni.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

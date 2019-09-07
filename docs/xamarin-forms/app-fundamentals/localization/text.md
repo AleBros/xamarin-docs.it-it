@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 54a1f32d4e2102654a6111dc1fb27bc1ba9aabcc
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119109"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760989"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -77,7 +77,6 @@ Per impostazione predefinita, quando vengono generati i riferimenti alle stringh
 
 Selezionare il file **AppResources.resx** e visualizzare il riquadro **Proprietà** per visualizzare dove viene configurato lo strumento di compilazione. Lo screenshot seguente mostra **Strumento personalizzato: ResXFileCodeGenerator**.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-internal-sml.png "Finestra Proprietà per AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
@@ -90,7 +89,6 @@ Selezionare il file **AppResources.resx** e visualizzare il riquadro **Propriet�
 
 Per rendere le proprietà delle stringhe fortemente tipizzate `public`, è necessario modificare manualmente la configurazione in **Strumento personalizzato: PublicResXFileCodeGenerator**, come illustrato nello screenshot seguente:
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-public-sml.png "Finestra Proprietà per AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
@@ -98,7 +96,6 @@ Per rendere le proprietà delle stringhe fortemente tipizzate `public`, è neces
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "Riquadro Proprietà per AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
-
 
 [![](text-images/xs-resx-public-sml.png "Riquadro Proprietà per AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
@@ -211,7 +208,7 @@ L'interfaccia utente in iOS, Android e nella piattaforma UWP viene visualizzata 
 
 ![](text-images/simple-example-english.png "Interfacce utente multipiattaforma prima della traduzione")
 
-### <a name="troubleshooting"></a>risoluzione dei problemi
+### <a name="troubleshooting"></a>Risoluzione dei problemi
 
 #### <a name="testing-a-specific-language"></a>Test in una lingua specifica
 
@@ -691,7 +688,7 @@ Anche la sintassi seguente, più dettagliata, è valida per l'estensione di mark
 
 Anche se è possibile gestire la traduzione dell'interfaccia utente nel codice Xamarin.Forms, vi sono alcuni elementi che devono essere localizzati in ogni singolo progetto specifico della piattaforma. In questa sezione viene illustrato come localizzare gli elementi seguenti:
 
-- Nome dell'applicazione
+- Nome applicazione
 - Immagini
 
 Il progetto di esempio include un'immagine localizzata denominata **flag.png**, cui viene fatto riferimento in C# come indicato di seguito:
@@ -797,7 +794,7 @@ Le immagini possono essere localizzate inserendole in una cartella specifica del
 
 In fase di esecuzione l'infrastruttura di risorse di Windows seleziona l'immagine appropriata in base alle impostazioni locali.
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 Le applicazioni Xamarin.Forms possono essere localizzate mediante i file RESX e le classi di globalizzazione .NET. Fatto salvo per una piccola quantità di codice specifico della piattaforma che consente di rilevare la lingua preferita dall'utente, la maggior parte della localizzazione viene scritta nel codice comune.
 

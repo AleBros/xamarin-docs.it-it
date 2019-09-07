@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d3046479282ef1535677f6712e487ab80bbf9d1b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71972f13f991bc5ad3ddf3c1c631fa7413290204
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656800"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759897"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animazioni semplici in xamarin. Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _La classe ViewExtensions fornisce metodi di estensione che possono essere utilizzati per costruire semplici animazioni. Questo articolo illustra la creazione e l'annullamento di animazioni tramite la classe ViewExtensions._
-
 
 Il [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) classe fornisce i seguenti metodi di estensione che possono essere utilizzati per creare animazioni semplici:
 
@@ -229,7 +228,6 @@ Verrà immediatamente annullata tutte le animazioni che attualmente eseguono il 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo sono state illustrate la creazione e l'annullamento di animazioni tramite le [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) classe. Questa classe fornisce metodi di estensione che possono essere utilizzati per costruire semplici animazioni per ruotano, ridimensionano, traducono e dissolvenza [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) istanze.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

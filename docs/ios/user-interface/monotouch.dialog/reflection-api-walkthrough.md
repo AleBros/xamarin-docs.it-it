@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 27f025d80b3259da32581811ae6c900358a07e4e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7acd43597d033b4c6daac59016a9bdf41ade6f68
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278506"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768135"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Creazione di un'applicazione Novell. iOS tramite l'API Reflection
 
@@ -29,7 +29,6 @@ L'uso dell'API di Reflection è semplice quanto segue:
 1. Creazione di una classe decorata con MT. Attributi D.
 1. Creazione di `BindingContext` un'istanza di, passaggio di un'istanza della classe precedente. 
 1. Creazione di `DialogViewController` un oggetto, passandogli. `BindingContext’s` `RootElement` 
-
 
 Viene ora esaminato un esempio per illustrare come usare l'API di Reflection. In questo esempio verrà creata una schermata di immissione dati semplice, come illustrato di seguito:
 
@@ -138,11 +137,9 @@ Selezionando la riga, l'applicazione passa a una nuova schermata con righe corri
 
  <a name="Summary" />
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato una procedura dettagliata dell'API Reflection. È stato illustrato come aggiungere attributi a una classe per controllare ciò che viene visualizzato. È stato inoltre illustrato come utilizzare un `BindingContext` oggetto per associare i dati di una classe alla gerarchia di elementi creata, nonché come utilizzare mt. D con `UINavigationController`.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

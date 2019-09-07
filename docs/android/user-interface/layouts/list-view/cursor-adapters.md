@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
-ms.openlocfilehash: ce2f62869057fc83b04b58af37d6ffffd5ad7fb8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 084e1e9a4af8d7e27bee955ff4f27af28f9db08a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646481"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758678"
 ---
 # <a name="using-cursoradapters-with-xamarinandroid"></a>Uso di CursorAdapter con Novell. Android
 
@@ -22,7 +22,6 @@ Android fornisce classi di adapter specifiche per visualizzare i dati da una que
  **CursorAdapter** : classe di base da cui è possibile ereditare quando è necessario un maggiore controllo sull'associazione dei valori dei dati ai controlli di layout (ad esempio, nascondere o visualizzare i controlli o modificarne le proprietà).
 
 Gli adattatori di cursore offrono una modalità a prestazioni elevate per scorrere lunghi elenchi di dati archiviati in SQLite. Il codice consumer deve definire una query SQL in un `Cursor` oggetto e quindi descrivere come creare e popolare le visualizzazioni per ogni riga.
-
 
 ## <a name="creating-an-sqlite-database"></a>Creazione di un database SQLite
 
@@ -58,7 +57,6 @@ Verrà `VegetableDatabase` creata un'istanza della classe `OnCreate` nel metodo 
 
 Per `_id` ilfunzionamentodellaquerydelcursoreènecessariochesiapresenteunacolonnaditipo`CursorAdapter` Integer. Se la tabella sottostante non dispone di una colonna integer denominata `_id` , utilizzare un alias di colonna per un altro Integer univoco `RawQuery` nell'oggetto che costituisce il cursore. Per ulteriori informazioni, vedere la [documentazione di Android](xref:Android.Widget.CursorAdapter) .
 
-
 ### <a name="creating-the-cursor"></a>Creazione del cursore
 
 Negli esempi viene usato `RawQuery` un oggetto per trasformare una query SQL `Cursor` in un oggetto. L'elenco di colonne restituito dal cursore definisce le colonne di dati disponibili per la visualizzazione nell'adattatore del cursore. Il codice che crea il database nel metodo **SimpleCursorTableAdapter/homescreen. cs** `OnCreate` è illustrato di seguito:
@@ -78,7 +76,6 @@ cursor.Close();
 ```
 
 Quando un'applicazione dispone di un database SQLite disponibile e ha creato un oggetto cursore come illustrato, può usare una `SimpleCursorAdapter` sottoclasse o una sottoclasse di `CusorAdapter` per visualizzare le righe `ListView`in un oggetto.
-
 
 ## <a name="using-simplecursoradapter"></a>Uso di SimpleCursorAdapter
 
@@ -112,7 +109,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 
 `SimpleCursorAdapter`è un modo rapido e semplice per visualizzare i dati SQLite in `ListView`un. La limitazione principale è che è possibile associare solo i valori di colonna per visualizzare i controlli, ma non consente di modificare altri aspetti del layout di riga (ad esempio, mostrare/nascondere i controlli o modificare le proprietà).
 
-
 ## <a name="subclassing-cursoradapter"></a>Sottoclasse CursorAdapter
 
 Una `CursorAdapter` sottoclasse presenta gli stessi vantaggi in merito `SimpleCursorAdapter` alle prestazioni di per la visualizzazione dei dati da SQLite, ma offre anche il controllo completo sulla creazione e il layout di ogni visualizzazione riga. L' `CursorAdapter` implementazione è molto diversa dalla creazione di `BaseAdapter` sottoclassi perché non esegue l' `GetView`override `GetItemId`di `Count` , `this[]` o indicizzatore.
@@ -124,7 +120,6 @@ Dato un database SQLite funzionante, è sufficiente eseguire l'override di due m
 - **NewView** : viene chiamato quando `ListView` richiede una nuova visualizzazione da visualizzare. Si occuperà del riciclo delle visualizzazioni (a differenza del `GetView` metodo sugli adattatori normali). `CursorAdapter`
 
 Le sottoclassi dell'adapter negli esempi precedenti hanno metodi per restituire il numero di righe e per recuperare l'elemento `CursorAdapter` corrente. non richiede questi metodi perché tali informazioni possono essere raccolte dal cursore stesso. Suddividendo la creazione e il popolamento di ogni visualizzazione in questi due metodi, la `CursorAdapter` visualizzazione impone il riutilizzo. Questo è contrario a un adapter normale in cui è possibile ignorare il `convertView` parametro `BaseAdapter.GetView` del metodo.
-
 
 ### <a name="implementing-the-cursoradapter"></a>Implementazione di CursorAdapter
 
@@ -150,7 +145,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-
 ### <a name="assigning-the-cursoradapter"></a>Assegnazione del CursorAdapter
 
 In che visualizzerà, creare il cursore e `CursorAdapter` assegnarlo alla visualizzazione elenco. `ListView` `Activity`
@@ -168,8 +162,6 @@ listView.Adapter = (IListAdapter)new HomeScreenCursorAdapter(this, cursor, false
 ```
 
 Il `OnDestroy` metodo contiene la `StopManagingCursor` chiamata al metodo descritta in precedenza.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 1948c700827f1cc235de5857cde9a2a149af8412
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f7dd62af7cfa37f136b4c72c7c34907ad8ebf36f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524374"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761184"
 ---
 # <a name="creating-a-fragment"></a>Creazione di un frammento
 
@@ -26,7 +26,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 
 Il codice precedente consente `Resource.Layout.Example_Fragment` `ViewGroup` di ingrandire la visualizzazione e di aggiungerla come visualizzazione figlio al contenitore.
 
-
 > [!NOTE]
 > Le sottoclassi del frammento devono avere un costruttore di nessun argomento predefinito pubblico.
 
@@ -34,7 +33,7 @@ Il codice precedente consente `Resource.Layout.Example_Fragment` `ViewGroup` di 
 
 È possibile che un frammento sia ospitato all'interno di un'attività in due modi:
 
-- In **modo** dichiarativo I frammenti possono essere usati in modo dichiarativo all'interno `.axml` dei `<Fragment>` file di layout usando il tag. &ndash;
+- In **modo dichiarativo** I frammenti possono essere usati in modo dichiarativo all'interno `.axml` dei `<Fragment>` file di layout usando il tag. &ndash;
 
 - **A livello di codice** È anche possibile creare istanze dei frammenti in modo dinamico usando l' `FragmentManager` API della classe. &ndash;
 
@@ -102,14 +101,12 @@ Oppure
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-
 ## <a name="fragment-lifecycle"></a>Ciclo di vita del frammento
 
 Il ciclo di vita dei frammenti è indipendente dal ciclo di vita [dell'attività di hosting](~/android/app-fundamentals/activity-lifecycle/index.md).
 Ad esempio, quando un'attività viene sospesa, tutti i frammenti associati vengono sospesi. Il diagramma seguente illustra il ciclo di vita del frammento.
 
 [![Diagramma di flusso che illustra il ciclo di vita del frammento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
-
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Metodi del ciclo di vita della creazione di frammenti
 
@@ -123,15 +120,14 @@ L'elenco seguente illustra il flusso dei diversi callback nel ciclo di vita di u
     Questa alternativa verrà descritta in dettaglio più avanti.
 
 - **`OnCreateView()`** &ndash; Crea la visualizzazione per il frammento.
-    Questo metodo viene chiamato dopo il completamento del metodo OnCreate **()** dell'attività. A questo punto, è possibile interagire in modo sicuro con la gerarchia di visualizzazione dell'attività. Questo metodo deve restituire la vista che verrà usata dal frammento.
+    Questo metodo viene chiamato dopo il completamento del metodo **OnCreate ()** dell'attività. A questo punto, è possibile interagire in modo sicuro con la gerarchia di visualizzazione dell'attività. Questo metodo deve restituire la vista che verrà usata dal frammento.
 
-- **`OnActivityCreated()`** Chiamato dopo che **Activity.** OnCreate è stato completato dall'attività host. &ndash;
+- **`OnActivityCreated()`** Chiamato dopo che **Activity. OnCreate** è stato completato dall'attività host. &ndash;
     Le modifiche finali apportate all'interfaccia utente devono essere eseguite in questo momento.
 
-- **`OnStart()`** &ndash; Chiamato dopo che l'attività contenitore è stata ripresa. In questo modo, il frammento viene reso visibile all'utente. In molti casi, il frammento conterrà codice che altrimenti sarebbe presente nel metodo OnStart **()** di un'attività.
+- **`OnStart()`** &ndash; Chiamato dopo che l'attività contenitore è stata ripresa. In questo modo, il frammento viene reso visibile all'utente. In molti casi, il frammento conterrà codice che altrimenti sarebbe presente nel metodo **OnStart ()** di un'attività.
 
 - **`OnResume()`** &ndash; Si tratta dell'ultimo metodo chiamato prima che l'utente possa interagire con il frammento. Un esempio del tipo di codice che deve essere eseguito in questo metodo è l'abilitazione di funzionalità di un dispositivo con cui l'utente può interagire, ad esempio la fotocamera che i servizi di posizione. I servizi come questi possono causare un esaurimento della batteria, tuttavia, e un'applicazione dovrebbe ridurre al minimo l'uso per preservare la durata della batteria.
-
 
 ### <a name="fragment-destruction-lifecycle-methods"></a>Metodi ciclo di vita distruzione frammenti
 
@@ -147,11 +143,9 @@ Nell'elenco seguente vengono illustrati i metodi del ciclo di vita che vengono c
 
 - **`OnDetach()`** &ndash; Questo metodo viene chiamato immediatamente prima che il frammento non sia più associato all'attività. La gerarchia di visualizzazione del frammento non esiste più e tutte le risorse usate dal frammento devono essere rilasciate a questo punto.
 
-
 ### <a name="using-setretaininstance"></a>Uso di SetRetainInstance
 
 È possibile che un frammento specifichi che non deve essere completamente distrutto se l'attività viene ricreata. La `Fragment` classe fornisce il metodo `SetRetainInstance` a questo scopo. Se `true` viene passato a questo metodo, quando l'attività viene riavviata, verrà utilizzata la stessa istanza del frammento. In tal caso, verranno richiamati tutti i metodi di callback `OnCreate` eccetto `OnDestroy` i callback del ciclo di vita e. Questo processo è illustrato nel diagramma del ciclo di vita illustrato sopra (dalle linee tratteggiate verdi).
-
 
 ## <a name="fragment-state-management"></a>Gestione dello stato dei frammenti
 
@@ -189,7 +183,6 @@ L'override `OnSaveInstanceState` di è un meccanismo appropriato per salvare i d
 
 Poiché il `EditText` controllo ha un `id` assegnato, il frammento Salva automaticamente i dati nel widget quando `OnSaveInstanceState` viene chiamato.
 
-
 ### <a name="bundle-limitations"></a>Limitazioni del bundle
 
 Sebbene l' `OnSaveInstanceState` utilizzo di consenta di salvare facilmente i dati temporanei, l'utilizzo di questo metodo presenta alcune limitazioni:
@@ -197,7 +190,6 @@ Sebbene l' `OnSaveInstanceState` utilizzo di consenta di salvare facilmente i da
 - Se il frammento non viene aggiunto allo stack indietro, il suo stato non verrà ripristinato quando l'utente preme il pulsante **indietro** .
 
 - Quando si usa il bundle per salvare i dati, i dati vengono serializzati. Questo può causare ritardi di elaborazione.
-
 
 ## <a name="contributing-to-the-menu"></a>Aggiunta come contributo al menu
 

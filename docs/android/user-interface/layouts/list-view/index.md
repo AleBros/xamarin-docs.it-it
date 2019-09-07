@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: c40d21a95db564d0fdcbea5772a88e94446c07ce
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 5c9a11073a7e65d90e0776d0b43c9e3bd100a10d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887532"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758647"
 ---
 # <a name="xamarinandroid-listview"></a>ListView Novell. Android
 
@@ -159,7 +159,7 @@ Eseguire l'applicazione. È possibile scorrere l'elenco o digitare per filtrarlo
 [![Schermata di esempio di ListView con i nomi dei paesi](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
 Si noti che l'uso di una matrice di stringhe hardcoded non è la procedura consigliata. Uno viene usato in questa esercitazione per semplificare la dimostrazione del[`ListView`](xref:Android.Widget.ListView)
-widget. La procedura migliore consiste nel fare riferimento a una matrice di stringhe definita da una risorsa esterna, ad `string-array` esempio con una risorsa nel file resources **/values/Strings. XML** del progetto. Ad esempio:
+widget. La procedura migliore consiste nel fare riferimento a una matrice di stringhe definita da una risorsa esterna, ad `string-array` esempio con una risorsa nel file **Resources/values/Strings. XML** del progetto. Ad esempio:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -214,11 +214,9 @@ La discussione, suddivisa in sei parti, inizia con una panoramica della `ListVie
 - [Uso di un ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
 - [ListView e ciclo di vita delle attività](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-
 ## <a name="summary"></a>Riepilogo
 
 In questo set di argomenti `ListView` sono stati introdotti alcuni esempi di utilizzo delle funzionalità predefinite `ListActivity`di. Sono state illustrate le implementazioni personalizzate di `ListView` che consentivano la creazione di layout colorati e l'uso di un database SQLite e si è accennato brevemente alla pertinenza del ciclo di vita delle attività `ListView` nell'implementazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

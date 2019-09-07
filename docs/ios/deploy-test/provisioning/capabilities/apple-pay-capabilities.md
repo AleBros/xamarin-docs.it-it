@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 78270ee181f56f4b82637ed74a10a916d8fa4a77
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9d0ffbd0da99134dfae3e42fe8baf4111c80935f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285456"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762997"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Funzionalità Apple Pay in Xamarin.iOS
 
@@ -35,7 +35,7 @@ I passaggi seguenti consentono di creare gli elementi elencati sopra:
 Un ID esercente viene usato per comunicare ad Apple Pay che è possibile accettare pagamenti e viene passato al metodo `PaymentRequest` di PassKit e usato nell'entitlement Apple Pay:
 
 1. Aprire il [centro sviluppatori Apple](https://developer.apple.com/account/) e passare alla sezione Certificates, Identifiers, and Profiles (Certificati, identificatori e profili): 
- 
+
     ![Selezione dell'ID esercente nel centro sviluppatori](apple-pay-capabilities-images/image57.png)
 
 2. In **Identifiers** (Identificatori) selezionare **ID esercente** e quindi selezionare **+** per creare un nuovo ID esercente:  
@@ -149,7 +149,7 @@ Per altre informazioni sull'uso di Apple Pay, vedere la guida seguente:
 * [Introduction to Apple Pay](~/ios/platform/apple-pay.md) (Introduzione ad Apple Pay)
 
 ## <a name="next-steps"></a>Fasi successive
- 
+
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 
 * Usare lo spazio dei nomi del framework nell'app.

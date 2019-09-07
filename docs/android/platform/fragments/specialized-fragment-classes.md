@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: e49f12dd656d5e07feccd34e231a00124d81048a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8d4dcedae6298d9a56ba52d4da3d081d4d69afe1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524283"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757565"
 ---
 # <a name="specialized-fragment-classes"></a>Classi di frammenti specializzate
 
@@ -23,14 +23,11 @@ L'API Fragments fornisce altre sottoclassi che incapsulano alcune delle funziona
 
 - **PreferenceFragment** &ndash; Questo frammento viene utilizzato per mostrare gli oggetti preferenza come elenchi.
 
-
-
 ## <a name="the-listfragment"></a>ListFragment
 
 È molto simile ai concetti e `ListActivity`alle funzionalità di. si tratta di un wrapper che ospita un `ListView` oggetto in un frammento. `ListFragment` L'immagine seguente mostra un `ListFragment` in esecuzione su un tablet e un telefono:
 
 [![Screenshot di ListFragment su un tablet e su un telefono](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png#lightbox)
-
 
 ### <a name="binding-data-with-the-listadapter"></a>Associazione di dati a ListAdapter
 
@@ -48,8 +45,6 @@ public override void OnActivityCreated(Bundle savedInstanceState)
 ```
 
 Quando si imposta `ListAdapter`, è importante usare la `ListFragment.ListAdapter` proprietà e non la `ListView.ListAdapter` proprietà. L' `ListView.ListAdapter` uso di provocherà l'omissione di un codice di inizializzazione importante.
-
-
 
 ### <a name="responding-to-user-selection"></a>Risposta alla selezione dell'utente
 
@@ -81,8 +76,6 @@ public override void OnListItemClick(ListView l, View v, int index, long id)
 
 Nel codice precedente, quando l'utente seleziona un elemento in `ListFragment`, viene visualizzato un nuovo frammento nell'attività host, che Mostra ulteriori dettagli sull'elemento selezionato.
 
-
-
 ## <a name="dialogfragment"></a>DialogFragment
 
 *DialogFragment* è un frammento utilizzato per visualizzare un oggetto finestra di dialogo all'interno di un frammento che verrà spostato nella parte superiore della finestra dell'attività. Ha lo scopo di sostituire le API della finestra di dialogo gestita (a partire da Android 3,0). Lo screenshot seguente mostra un esempio di `DialogFragment`:
@@ -100,8 +93,6 @@ Per creare un `DialogFragment`oggetto, una classe eredita `Android.App.DialogFra
 - **OnCreateView** &ndash; Viene creata e restituita una visualizzazione.
 
 - **OnCreateDialog** &ndash; Viene creata una finestra di dialogo personalizzata. Viene in genere usato per visualizzare un *AlertDialog*. Quando si esegue l'override di questo metodo, non è necessario `OnCreateView` eseguire l'override di.
-
-
 
 ### <a name="a-simple-dialogfragment"></a>DialogFragment semplice
 
@@ -140,7 +131,6 @@ public class MyDialogFragment : DialogFragment
 }
 ```
 
-
 ### <a name="displaying-a-fragment"></a>Visualizzazione di un frammento
 
 Come tutti i frammenti, un `DialogFragment` oggetto viene visualizzato nel contesto di un `FragmentTransaction`oggetto.
@@ -158,12 +148,10 @@ public void ShowDialog()
 }
 ```
 
-
 ### <a name="dismissing-a-fragment"></a>Chiusura di un frammento
 
 La `Dismiss()` chiamata a su un'istanza `DialogFragment` di un oggetto comporta la rimozione di un frammento dall'attività e il commit della transazione.
 Verranno chiamati i metodi del ciclo di vita dei frammenti standard interessati dalla distruzione di un frammento.
-
 
 ### <a name="alert-dialog"></a>Finestra di dialogo di avviso
 
@@ -187,15 +175,12 @@ public class AlertDialogFragment : DialogFragment
 }
 ```
 
-
-
 ## <a name="preferencefragment"></a>PreferenceFragment
 
 Per semplificare la gestione delle preferenze, l'API dei frammenti `PreferenceFragment` fornisce la sottoclasse. È simile a [PreferenceActivity](xref:Android.Preferences.PreferenceActivity) &ndash; , in cui verrà visualizzata una gerarchia di preferenze per l'utente in un frammento. `PreferenceFragment` Quando l'utente interagisce con le preferenze, viene salvato automaticamente in [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html).
 In applicazioni Android 3,0 o versioni successive, usare `PreferenceFragment` per gestire le preferenze nelle applicazioni. Nell'immagine seguente viene illustrato un esempio di `PreferenceFragment`:
 
 [![Esempio di PreferencesFragment con preferenze inline, Dialog e Launch](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
-
 
 ### <a name="create-a-preference-fragment-from-a-resource"></a>Creazione di un frammento di preferenza da una risorsa
 
@@ -266,8 +251,6 @@ public class PrefFragment : PreferenceFragment
     }
 }
 ```
-
-
 
 ### <a name="querying-activities-to-create-a-preference-fragment"></a>Esecuzione di query sulle attività per creare un frammento di preferenza
 

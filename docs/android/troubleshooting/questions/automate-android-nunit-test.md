@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 53dce7cc6cc614cde252aa34248fa299c89fafa3
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: e96f9a0ce4d1eec9bf853faceeb85a2acb4840af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761015"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Come si può automatizzare un progetto di test Android NUnit?
 
@@ -91,10 +91,8 @@ I passaggi seguenti illustrano questo processo:
 
 Per altre informazioni sull'uso del `adb shell am instrument` comando per l'esecuzione di unit test, vedere l'argomento relativo agli sviluppatori Android [che eseguono test con ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
-
 > [!NOTE]
 > Con la versione [Novell. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , i nomi di pacchetto predefiniti per Android Callable Wrapper saranno basati sull'md5sum del nome qualificato dall'assembly del tipo esportato. In questo modo è possibile fornire lo stesso nome completo da due assembly diversi e non ottenere un errore di creazione del pacchetto. Assicurarsi quindi di usare la `Name` proprietà `Instrumentation` nell'attributo per generare un nome di classe o ACW leggibile.
 
 _Il nome di ACW deve essere usato nel `adb` comando riportato sopra_.
 Per ridenominare/effettuare il C# refactoring della classe, `RunTests` è necessario modificare il comando in modo da usare il nome di ACW corretto.
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: dfda8b1ec3e7cfbdec3fe313d305d78422487f08
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d2466de4891c289f4686c37bc9fe73c24a5a48ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753056"
 ---
 # <a name="spritekit-in-xamarinios"></a>SpriteKit in Novell. iOS
 
@@ -26,7 +26,7 @@ SpriteKit include un'API di fisica del corpo rigida 2D. A ogni sprite è associa
 SpriteKit supporta ora la derivazione del corpo fisico di uno sprite dalla relativa trama. In questo modo è più semplice implementare collisioni che sembrano più naturali.
 
 Si noti, ad esempio, il modo in cui la banana e la scimmia si scontrano quasi alla superficie di ogni immagine:
- 
+
 ![](spritekit-images/image13.png "Banana e Monkey si scontrano quasi alla superficie di ogni immagine")
 
 SpriteKit rende possibile la creazione di questo corpo fisico con una sola riga di codice. È sufficiente `SKPhysicsBody.Create` chiamare con la trama e le dimensioni: Sprite. PhysicsBody = SKPhysicsBody. Create (sprite. Trama, sprite. Dimensioni);
@@ -44,7 +44,7 @@ sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
 L'effetto della modifica della soglia alfa, come questa, ottimizza la collisione precedente, in modo che la scimmia cada in collisione con la banana:
 
 ![](spritekit-images/image14.png "La scimmia cade in collisione con la banana")
- 
+
 ## <a name="physics-fields"></a>Campi di fisica
 
 Un altro aspetto importante di SpriteKit è il nuovo supporto per i campi di fisica. Che consentono di aggiungere elementi come i campi Vortex, i campi di gravità radiale e i campi Spring per citarne solo alcuni.
@@ -86,7 +86,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 In questo modo le banane oscillano come una molla intorno al nodo del campo:
 
 ![](spritekit-images/image15.png "Le banane oscillano come una molla intorno al nodo del campo")
- 
+
 ## <a name="radial-gravity-field"></a>Campo gravità radiale
 
 L'aggiunta di un campo diverso è simile. Ad esempio, il codice seguente crea un campo di gravità radiale:

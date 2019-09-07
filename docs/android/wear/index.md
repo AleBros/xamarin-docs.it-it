@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 13a9a02984828781cc6402e982a4b5151c077c52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648337"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758324"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -42,8 +42,6 @@ Viene illustrato come distribuire l'app Android Wear in un dispositivo Android W
 
 Il sito per sviluppatori Android fornisce informazioni dettagliate sulle API di utilizzo chiave, ad esempio [attività indossabili](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [Intent](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [autenticazione](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [complicazioni](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [rendering delle complicazioni](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notifiche](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Viste](https://developer.android.com/reference/android/support/wearable/view/package-summary.html) e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
-
-
 ## <a name="samples"></a>Esempi
 
 È possibile trovare alcuni [esempi](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) di uso di Android Wear (oppure passare direttamente a [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
@@ -57,7 +55,6 @@ Il sito per sviluppatori Android fornisce informazioni dettagliate sulle API di 
 |[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implementa il modello di navigazione 2D, in cui l'utente scorre verticalmente e quindi orizzontalmente per spostarsi tra le opzioni e il contenuto.|![Screenshot di GridViewPager](images/gridviewpager.png)|
 |[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace è un quadrante di orologio personalizzato con ore, minuti e secondi in stile analogico. In questo esempio viene illustrato come creare un servizio espressione di controllo che consente di disegnare l'ora corrente e gestire la modalità di ambiente e gli eventi di modifica della visibilità. Include un ricevitore di trasmissione che rimane in ascolto delle modifiche del fuso orario e aggiorna automaticamente l'ora di conseguenza.|![Screenshot di WatchFace](images/gridviewpager.png)|
 
-
 ## <a name="videos"></a>Video
 
 Vedere questi collegamenti video che illustrano Novell. Android con supporto di utilizzo:
@@ -67,7 +64,6 @@ Vedere questi collegamenti video che illustrano Novell. Android con supporto di 
 |[Android L e molto altro ancora](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android L Developer Preview ha introdotto una pletora di nuove API che consentono agli sviluppatori di sfruttare i vantaggi offerti da, ad esempio la progettazione di materiali, le notifiche e le nuove animazioni, per citarne alcune.|![Screenshot video della presentazione](images/video-android-l.png)|
 |[C#è a mio occhio: Google Glass e Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; wearable computing potrebbero sembrare qualcosa del futuro (o un episodio di Inspector Gadget), ma molte persone hanno già adottato il futuro. C#gli sviluppatori conoscono questo e hanno già gli strumenti e le competenze per sfruttare la potenza dei dispositivi indossabili (dall'evoluzione 2014).|![Screenshot video della presentazione](images/video-eyes-ears.png)|
 |[Novità di Novell. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android auto, Material Design e Art; che cosa si intende per gli sviluppatori Novell? di evolve 2014.|![Screenshot video della presentazione](Images/video-whats-new.png)|
-
 
 <!--
 

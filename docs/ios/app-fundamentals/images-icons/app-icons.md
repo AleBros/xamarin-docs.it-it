@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2017
-ms.openlocfilehash: a44f0921b959c6b8fd6f076fd119ea52345f821f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a0c5821b91c6394b8bae4a090899fa81eb4756e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282648"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763758"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icone dell'applicazione in Novell. iOS
 
@@ -98,7 +98,7 @@ Per supportare tutti i tipi di icona richiesti da un'app Novell. iOS destinata a
  4. Usa le stesse immagini e dimensioni dell'icona in primo piano.
  5. Usa le stesse icone di dimensioni dell'iPhone.
  6. Supportato solo con set di immagini del catalogo asset.
- 
+
  Per altre informazioni sulle icone, vedere la documentazione relativa alle [dimensioni delle immagini e](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) delle icone di Apple.
 
 <a name="managing" />

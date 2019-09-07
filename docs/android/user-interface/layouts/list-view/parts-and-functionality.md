@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: 3ab7a923dabd6b98c509870abaa51b12fb63c8d2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4566ee5d203b5d098133aebe2c32dbaec712e17a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510129"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764216"
 ---
 # <a name="xamarinandroid-listview-parts-and-functionality"></a>Parti e funzionalità di ListView di Novell. Android
 
@@ -31,26 +31,21 @@ Queste schermate utilizzano un controllo `ListView` di base per mostrare il rend
 
 Gli elementi che costituiscono un oggetto `ListView` sono descritti in dettaglio di seguito:
 
-
 ## <a name="rows"></a>Righe
 
 Ogni riga ha un proprio `View`. La vista può essere una delle viste predefinite definite in `Android.Resources`o una visualizzazione personalizzata. Ogni riga può utilizzare lo stesso layout di visualizzazione oppure può essere diversa. In questo documento vengono illustrati alcuni esempi di utilizzo di layout predefiniti e altri che spiegano come definire layout personalizzati.
-
 
 ## <a name="adapter"></a>Adattatore
 
 Il `ListView` controllo richiede un `Adapter` oggetto per fornire il `View` formattato per ogni riga. Android include schede e visualizzazioni predefinite che possono essere usate oppure è possibile creare classi personalizzate.
 
-
 ## <a name="fast-scrolling"></a>Scorrimento rapido
 
 Quando una `ListView` contiene molte righe di scorrimento rapido dei dati può essere abilitata per consentire all'utente di passare a qualsiasi parte dell'elenco. La barra di scorrimento a scorrimento rapido può essere abilitata facoltativamente e personalizzata nel livello API 11 e versioni successive.
 
-
 ## <a name="section-index"></a>Indice della sezione
 
 Durante lo scorrimento degli elenchi lunghi, l'indice della sezione facoltativa fornisce all'utente commenti e suggerimenti sulla parte dell'elenco attualmente visualizzata. È appropriato solo per gli elenchi lunghi, in genere in combinazione con lo scorrimento rapido.
-
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 
@@ -71,4 +66,3 @@ Lo scopo di ogni classe è descritto di seguito:
 - **CursorAdapter** &ndash; Usare oper`SimpleCursorAdapter` visualizzare i dati in base a una query SQLite. `CursorAdapter`
 
 Questo documento contiene semplici esempi che usano un `ArrayAdapter` insieme ad esempi più complessi che richiedono implementazioni personalizzate di `BaseAdapter` o `CursorAdapter`.
-

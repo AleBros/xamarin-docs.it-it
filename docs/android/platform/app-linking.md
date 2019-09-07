@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119699"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757736"
 ---
 # <a name="app-linking-in-android"></a>Collegamento di app in Android
 
@@ -22,7 +22,7 @@ _Questa guida illustra in che modo Android 6,0 supporta il collegamento di app, 
 
 Le applicazioni per dispositivi mobili non sono più &ndash; disponibili in un silo in molti casi sono componenti importanti delle loro attività, insieme al relativo sito Web. È auspicabile che le aziende connettano senza difficoltà la propria presenza Web e le applicazioni per dispositivi mobili, con collegamenti in un sito Web che avvia applicazioni per dispositivi mobili e visualizzando contenuto pertinente nell'app per dispositivi mobili. *Collegamento di app* (noto anche come *deep linking*) è una tecnica che consente a un dispositivo mobile di rispondere a un URI e avviare un'applicazione per dispositivi mobili che corrisponde a tale URI.
 
-Android gestisce il collegamento delle app tramite il *sistema* &ndash; Intent quando l'utente fa clic su un collegamento in un browser per dispositivi mobili, il browser per dispositivi mobili invierà a un'applicazione registrata una finalità che Android delegherà. Se ad esempio si fa clic su un collegamento in un sito Web di cucina, si aprirà un'app per dispositivi mobili associata al sito Web e si visualizzerà una ricetta specifica per l'utente. Se è presente più di un'applicazione registrata per gestire tale finalità, Android genererà una *finestra di dialogo* di risoluzione dell'ambiguità che chiederà a un utente quale applicazione selezionare l'applicazione che deve gestire lo scopo, ad esempio:
+Android gestisce il collegamento delle app tramite &ndash; il *sistema Intent* quando l'utente fa clic su un collegamento in un browser per dispositivi mobili, il browser per dispositivi mobili invierà a un'applicazione registrata una finalità che Android delegherà. Se ad esempio si fa clic su un collegamento in un sito Web di cucina, si aprirà un'app per dispositivi mobili associata al sito Web e si visualizzerà una ricetta specifica per l'utente. Se è presente più di un'applicazione registrata per gestire tale finalità, Android genererà una finestra di dialogo di risoluzione dell' *ambiguità* che chiederà a un utente quale applicazione selezionare l'applicazione che deve gestire lo scopo, ad esempio:
 
 ![Schermata di esempio di una finestra di dialogo di risoluzione dell'ambiguità](app-linking-images/01-disambiguation-dialog.png)
 
@@ -40,7 +40,7 @@ Questa guida illustra come configurare un'applicazione Android 6,0 e come creare
 
 Questa guida richiede Novell. Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
 
-Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet](https://www.nuget.org/packages/Rivets/) dei rivetti dall'archivio componenti di Novell. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
+Il collegamento di app è possibile nelle versioni precedenti di Android usando il [pacchetto NuGet dei rivetti](https://www.nuget.org/packages/Rivets/) dall'archivio componenti di Novell. Il pacchetto dei rivetti non è compatibile con il collegamento di app in Android 6,0; non supporta il collegamento di app Android 6,0.
 
 ## <a name="configuring-app-linking-in-android-60"></a>Configurazione del collegamento di app in Android 6,0
 
@@ -191,7 +191,6 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato come funziona il collegamento di app in Android 6,0. È stato quindi illustrato come configurare un'applicazione Android 6,0 per supportare e rispondere ai collegamenti all'app. È stato anche illustrato come testare il collegamento di app in un'applicazione Android.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

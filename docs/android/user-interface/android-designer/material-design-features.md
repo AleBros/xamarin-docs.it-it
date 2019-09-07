@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 77b0bc28bc4156092cb2b12d0c8b234d3f021239
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67755baf18ad5277e7c2fe8be705522a9b668ff3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523445"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756816"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Novell. Android Designer funzionalità di progettazione materiali
 
@@ -57,7 +57,6 @@ Questi elementi possono essere visualizzati nella schermata precedente. Ognuno d
 Per aggiungere una nuova riga di tasto, immettere un nuovo valore di offset nella casella **offset** , selezionare un percorso (a**sinistra**, in **alto**, a **destra**o in **basso**) e fare clic sull'icona + per aggiungere la nuova riga di tasto. Analogamente, per aggiungere una nuova spaziatura, immettere rispettivamente le dimensioni e l'offset (in DP) nelle caselle **dimensioni** e **offset** . Selezionare un percorso (a**sinistra**, in **alto**, a **destra**o in **basso**) e fare clic sull'icona + per aggiungere la nuova spaziatura.
 
 Quando si modificano questi valori di configurazione, questi vengono salvati nel file XML di layout e riusati quando si apre di nuovo il layout.
-
 
 ## <a name="theme-editor"></a>Editor tema
 
@@ -118,7 +117,7 @@ L'uso della scheda **risorse** vincola le scelte a questo elenco di colori. Tene
 
 ### <a name="material-palette"></a>Tavolozza materiali
 
-La scheda **tavolozza materiale** apre la tavolozza dei **colori di progettazione materiali**. La scelta di un valore di colore da questa tavolozza vincola la scelta del colore in modo che sia coerente con le linee guida di progettazione del materiale:
+La scheda **tavolozza materiale** apre la **tavolozza dei colori di progettazione materiali**. La scelta di un valore di colore da questa tavolozza vincola la scelta del colore in modo che sia coerente con le linee guida di progettazione del materiale:
 
 [![Tavolozza materiali](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
 
@@ -131,7 +130,7 @@ Quando si seleziona una tonalità, il colore della proprietà viene impostato su
 
 [![Tonalità sfondo modificata](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
 
-Per ulteriori informazioni sulla tavolozza dei colori di progettazione materiale, vedere la pagina relativa alla guida della tavolozza dei [colori](https://material.io/design/color/)di progettazione materiali.
+Per ulteriori informazioni sulla tavolozza dei colori di progettazione materiale, vedere la pagina relativa alla [Guida della tavolozza dei colori](https://material.io/design/color/)di progettazione materiali.
 
 ### <a name="creating-a-new-theme"></a>Creazione di un nuovo tema
 
@@ -157,9 +156,6 @@ Nell'esempio seguente è stato premuto <kbd>CTRL + S</kbd> , in modo che le modi
 
 Questo argomento descrive le funzionalità di progettazione dei materiali disponibili in Novell. Android Designer. È stato illustrato come abilitare e configurare la griglia di progettazione del materiale e come usare l'editor di temi per creare nuovi temi personalizzati conformi alle linee guida per la progettazione di materiali.
 Per ulteriori informazioni sul supporto di Novell. Android per la progettazione di materiali, vedere [Material Theme](~/android/user-interface/material-theme.md).
-
-
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -220,7 +216,7 @@ Quando si seleziona una tonalità, il colore della proprietà viene impostato su
 
 [![Modifiche tonalità sfondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
-Per ulteriori informazioni sulla tavolozza dei colori di progettazione materiale, vedere la pagina relativa alla guida della tavolozza dei [colori](https://material.io/design/color/)di progettazione materiali.
+Per ulteriori informazioni sulla tavolozza dei colori di progettazione materiale, vedere la pagina relativa alla [Guida della tavolozza dei colori](https://material.io/design/color/)di progettazione materiali.
 
 ## <a name="typographic-scale"></a>Scala tipografica
 
@@ -228,7 +224,7 @@ Nella sezione **aspetto testo** della scheda **stile** del riquadro **Proprietà
 
 [![Scheda stile](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
-Quando si fa clic su questa icona, viene aperta la finestra di dialogo relativa alla **scala** dei tipografia, che presenta un elenco di stili di testo preconfigurati tra cui è possibile scegliere:
+Quando si fa clic su questa icona, viene aperta la finestra di dialogo relativa alla **scala dei tipografia** , che presenta un elenco di stili di testo preconfigurati tra cui è possibile scegliere:
 
 [![Selezione stile testo](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
@@ -279,7 +275,6 @@ Lo screenshot seguente illustra la **selezione colori**:
 
 [![Selezione colori](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
-
 In questo esempio, il colore di **sfondo** può essere modificato in qualsiasi valore tramite vari modi:
 
 - Facendo clic direttamente su un colore.
@@ -300,7 +295,7 @@ L'uso della scheda **risorse** vincola le scelte a questo elenco di colori. Tene
 
 ### <a name="material-palette"></a>Tavolozza materiali
 
-La scheda **tavolozza materiale** apre la tavolozza dei **colori di progettazione materiale** descritta in [precedenza](#material-design-color-palette). La scelta di un valore di colore da questa tavolozza vincola la scelta del colore in modo che sia coerente con le linee guida di progettazione del materiale.
+La scheda **tavolozza materiale** apre la **tavolozza dei colori di progettazione materiale** descritta in [precedenza](#material-design-color-palette). La scelta di un valore di colore da questa tavolozza vincola la scelta del colore in modo che sia coerente con le linee guida di progettazione del materiale.
 
 [![Tavolozza materiali](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
@@ -320,13 +315,11 @@ La modifica del colore nella finestra di progettazione è stata apportata, ma qu
 
 - Premere  **&#8984; + S** per salvare le modifiche apportate a un nuovo tema denominato **Custom**.
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo argomento descrive le funzionalità di progettazione dei materiali disponibili in Novell. Android Designer. È stato illustrato come abilitare e configurare la griglia di progettazione materiale, come utilizzare la tavolozza dei colori di progettazione materiale per modificare le proprietà dei colori e come utilizzare il selettore di scala tipografico per configurare le proprietà di testo. È stato inoltre illustrato come utilizzare l'editor del tema per creare nuovi temi personalizzati conformi alle linee guida per la progettazione di materiali. Per ulteriori informazioni sul supporto di Novell. Android per la progettazione di materiali, vedere [Material Theme](~/android/user-interface/material-theme.md).
 
 -----
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

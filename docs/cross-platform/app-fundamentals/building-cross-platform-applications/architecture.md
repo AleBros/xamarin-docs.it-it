@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 7657985ce14633140adb0e63a9817ddd0e48841d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284576"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762111"
 ---
 # <a name="part-2---architecture"></a>Parte 2 - Architettura
 
@@ -21,11 +21,9 @@ Un principio fondamentale della creazione di app multipiattaforma consiste nel c
 - **Separazione delle responsabilità** : assicurarsi che ogni componente (a livello di architettura e di classe) abbia uno scopo chiaro e ben definito. Ogni componente deve eseguire solo le proprie attività definite ed esporre tale funzionalità tramite un'API accessibile alle altre classi che devono utilizzarlo.
 - **Polimorfismo** : la programmazione in un'interfaccia (o classe astratta) che supporta più implementazioni significa che il codice di base può essere scritto e condiviso tra le diverse piattaforme, continuando comunque a interagire con le funzionalità specifiche della piattaforma.
 
-
 Il risultato naturale è un'applicazione modellata dopo il mondo reale o le entità astratte con livelli logici distinti. La separazione del codice in livelli facilita la comprensione, il test e la gestione delle applicazioni. È consigliabile che il codice in ogni livello sia fisicamente separato (nelle directory o persino in progetti distinti per le applicazioni di grandi dimensioni), oltre che per separare logicamente (usando gli spazi dei nomi).
 
  <a name="Typical_Application_Layers" />
-
 
 ## <a name="typical-application-layers"></a>Livelli di applicazione tipici
 
@@ -38,11 +36,9 @@ In questo documento e nei case study si fa riferimento ai sei livelli di applica
 - **Livello dell'applicazione** : codice generalmente specifico della piattaforma (non condiviso in genere tra piattaforme) o codice specifico dell'applicazione (non in genere riutilizzabile). Un valido test che indica se inserire il codice nel livello dell'applicazione rispetto al livello dell'interfaccia utente è (a) per determinare se la classe dispone di controlli di visualizzazione effettivi o (b) se può essere condivisa tra più schermate o dispositivi (ad esempio, iPhone e iPad.
 - **Livello dell'interfaccia utente** : il livello per l'utente, contiene schermate, widget e controller che li gestiscono.
 
-
 Un'applicazione potrebbe non contenere necessariamente tutti i livelli, ad esempio il livello di accesso al servizio non esiste in un'applicazione che non accede alle risorse di rete. Un'applicazione molto semplice può unire il livello dati e il livello di accesso ai dati perché le operazioni sono estremamente semplici.
 
  <a name="Common_Mobile_Software_Patterns" />
-
 
 ## <a name="common-mobile-software-patterns"></a>Modelli comuni di software per dispositivi mobili
 
@@ -54,6 +50,5 @@ I modelli sono un modo consolidato per acquisire soluzioni ricorrenti ai problem
 - **Singleton** : il modello singleton fornisce una modalità in cui può esistere una sola istanza di un oggetto specifico. Ad esempio, quando si usa SQLite nelle applicazioni per dispositivi mobili, si vuole solo un'istanza del database. L'uso del modello singleton è un modo semplice per garantire questo problema.
 - **Provider** : modello coniato da Microsoft (probabilmente simile a strategia o inserimento di dipendenze di base) per incoraggiare il riutilizzo del codice tra le applicazioni Silverlight, WPF e Windows Form. Il codice condiviso può essere scritto in base a un'interfaccia o a una classe astratta e le implementazioni concrete specifiche della piattaforma vengono scritte e passate quando viene usato il codice.
 - **Async** : da non confondere con la parola chiave async, il modello asincrono viene usato quando è necessario eseguire un lavoro a esecuzione prolungata senza mantenere l'interfaccia utente o l'elaborazione corrente. Nella sua forma più semplice, il modello asincrono descrive semplicemente che le attività a esecuzione prolungata devono essere avviate in un altro thread (o un'astrazione di thread simile, ad esempio un'attività) mentre il thread corrente continua a elaborare ed è in attesa di una risposta dal processo in background , quindi aggiorna l'interfaccia utente quando vengono restituiti i dati e o lo stato.
-
 
 Ogni modello verrà esaminato in modo più dettagliato, in quanto l'uso pratico viene illustrato nel case study. Wikipedia offre descrizioni più dettagliate dei modelli [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [Facade](https://en.wikipedia.org/wiki/Facade_pattern), [singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [strategia](https://en.wikipedia.org/wiki/Strategy_pattern) e [provider](https://en.wikipedia.org/wiki/Provider_model) (e di [modelli di progettazione](https://en.wikipedia.org/wiki/Design_Patterns) in genere).

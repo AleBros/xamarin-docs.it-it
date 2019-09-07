@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5f67ec30ce04993701634387f7c2023a0f92004f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762186"
 ---
 # <a name="tabbed-layouts"></a>Layout a schede
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -29,8 +28,6 @@ Le schede sono uno dei più diffusi modelli di interfaccia utente nelle applicaz
 - **Barra degli strumenti** è un componente della barra delle azioni più recente e flessibile `ActionBar`che sostituisce. &ndash; `Toolbar` `Toolbar`è disponibile in Android 5,0 Lollipop o versioni successive ed è disponibile anche per le versioni precedenti di Android tramite il pacchetto NuGet della [libreria di supporto Android V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
     `Toolbar`è attualmente il componente della barra delle azioni consigliato da usare nelle app per Android.
     Per ulteriori informazioni, vedere [barra degli strumenti](~/android/user-interface/controls/tool-bar/index.md). 
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

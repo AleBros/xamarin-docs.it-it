@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: c0a35414cce6ff9981ad7825c8158a2f6f707585
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cb7e8aaca13405aedd422288421d497653ddbfe8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119499"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761197"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase Job Dispatcher
 
 _Questa guida illustra come pianificare il lavoro in background usando la libreria del dispatcher di processi di Firebase da Google._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -66,7 +65,6 @@ Per iniziare a usare il dispatcher del processo Firebase, aggiungere prima il [p
 
 Dopo aver aggiunto la libreria del dispatcher dei processi Firebase `JobService` , creare una classe e quindi pianificarne l'esecuzione con un' `FirebaseJobDispatcher`istanza del.
 
-
 ### <a name="creating-a-jobservice"></a>Creazione di un JobService
 
 Tutte le operazioni eseguite dalla libreria del dispatcher dei processi Firebase devono essere eseguite in un tipo che `Firebase.JobDispatcher.JobService` estende la classe astratta. La creazione `JobService` di un oggetto è molto simile `Service` alla creazione di una con il Framework Android: 
@@ -108,7 +106,7 @@ public class DemoJob : JobService
 ### <a name="creating-a-firebasejobdispatcher"></a>Creazione di un FirebaseJobDispatcher
 
 Prima di poter pianificare qualsiasi lavoro, è necessario creare un `Firebase.JobDispatcher.FirebaseJobDispatcher` oggetto. È responsabile della pianificazione di un oggetto `JobService`. `FirebaseJobDispatcher` Il frammento di codice seguente è un modo per creare un'istanza `FirebaseJobDispatcher`di: 
- 
+
  ```csharp
 // This is the "Java" way to create a FirebaseJobDispatcher object
 IDriver driver = new GooglePlayDriver(context);
@@ -163,7 +161,7 @@ Il valore restituito da `FirebaseJobDispatcher.Schedule` sarà uno dei valori in
 - `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable`È stato `IDriver` usato un oggetto non `IDriver` valido o è stato non disponibile. &ndash; 
 - `FirebaseJobDispatcher.ScheduleResultUnsupportedTrigger`L' oggetto`Trigger` non è supportato. &ndash;
 - `FirebaseJobDispatcher.ScheduleResultBadService`&ndash; Il servizio non è configurato correttamente o non è disponibile.
- 
+
 ### <a name="configuring-a-job"></a>Configurazione di un processo
 
 È possibile personalizzare un processo. Di seguito sono riportati alcuni esempi di come è possibile personalizzare un processo:
@@ -242,11 +240,11 @@ L'impostazione `JobTrigger` predefinita per un processo è rappresentata dal `Tr
 
 #### <a name="setting-a-retrystrategy"></a>Impostazione di un RetryStrategy
 
-`Firebase.JobDispatcher.RetryStrategy` Viene usato per specificare la quantità di ritardo che un dispositivo deve usare prima di provare a eseguire nuovamente un processo non riuscito. Un `RetryStrategy` oggetto dispone di un _criterio_che definisce l'algoritmo di base temporale che verrà utilizzato per ripianificare il processo non riuscito e una finestra di esecuzione che specifica una finestra in cui il processo deve essere pianificato. Questa _finestra_ di ripianificazione è definita da due valori. Il primo valore è il numero di secondi di attesa prima di ripianificare il processo (il valore _iniziale di backoff_ ) e il secondo numero è il numero massimo di secondi prima che il processo venga eseguito (il valore _backoff massimo_ ). 
- 
+`Firebase.JobDispatcher.RetryStrategy` Viene usato per specificare la quantità di ritardo che un dispositivo deve usare prima di provare a eseguire nuovamente un processo non riuscito. Un `RetryStrategy` oggetto dispone di un _criterio_che definisce l'algoritmo di base temporale che verrà utilizzato per ripianificare il processo non riuscito e una finestra di esecuzione che specifica una finestra in cui il processo deve essere pianificato. Questa _finestra di ripianificazione_ è definita da due valori. Il primo valore è il numero di secondi di attesa prima di ripianificare il processo (il valore _iniziale di backoff_ ) e il secondo numero è il numero massimo di secondi prima che il processo venga eseguito (il valore _backoff massimo_ ). 
+
 I due tipi di criteri di ripetizione sono identificati da questi valori int:
 
-- `RetryStrategy.RetryPolicyExponential`Un criterio backoff esponenziale aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. &ndash; La prima volta che si verifica un errore di un processo, la libreria attenderà l'intervallo di _initial specificato prima di &ndash; ripianificare l'esempio di processo 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Il valore `RetryStrategy` predefinito per la libreria del dispatcher del processo Firebase è `RetryStrategy.DefaultExponential` rappresentato dall'oggetto. Ha una backoff iniziale di 30 secondi e un backoff massimo di 3600 secondi.
+- `RetryStrategy.RetryPolicyExponential`Un criterio _backoff esponenziale_ aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. &ndash; La prima volta che si verifica un errore di un processo, la libreria attenderà l'intervallo di _initial specificato prima di &ndash; ripianificare l'esempio di processo 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Il valore `RetryStrategy` predefinito per la libreria del dispatcher del processo Firebase è `RetryStrategy.DefaultExponential` rappresentato dall'oggetto. Ha una backoff iniziale di 30 secondi e un backoff massimo di 3600 secondi.
 - `RetryStrategy.RetryPolicyLinear`Questa strategia è un _backoff lineare_ che il processo deve essere ripianificato per l'esecuzione a intervalli prestabiliti (fino a quando non riesce). &ndash; Il backoff lineare è più adatto per il lavoro che deve essere completato il prima possibile o per i problemi che si risolveranno rapidamente. La libreria del dispatcher del processo Firebase `RetryStrategy.DefaultLinear` definisce un che ha una finestra di ripianificazione di almeno 30 secondi e fino a 3600 secondi.
 
 È possibile definire un oggetto personalizzato `RetryStrategy` con il `FirebaseJobDispatcher.NewRetryStrategy` metodo. Sono necessari tre parametri:
@@ -286,7 +284,6 @@ Entrambi i metodi restituiranno un valore integer:
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha illustrato come usare il dispatcher del processo Firebase per eseguire in modo intelligente il lavoro in background. Viene illustrato come incapsulare il lavoro `JobService` da eseguire come e come `FirebaseJobDispatcher` utilizzare per pianificare il lavoro, specificando i criteri con un oggetto `JobTrigger` e la modalità di gestione degli errori con un oggetto `RetryStrategy`.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

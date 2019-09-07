@@ -7,12 +7,12 @@ ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4f09f4ca97dcf50891aa0a0415e47d474297c411
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a8dc27574dc9959cc375a98fc0d7a18aac8bd6b7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282774"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756960"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Perché Jenkins non è supportato da Microsoft?
 
@@ -36,13 +36,10 @@ Il messaggio di errore per questo problema è simile al seguente:
 
 Le opzioni per l'impostazione del percorso dell'SDK possono variare a seconda dell'esatto plug-in di Jenkins Android in uso; una posizione ideale per cercare come impostare questa impostazione è nella Guida ai plug-in. Ad esempio: il [plug](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) -in emulatore Android cerca automaticamente l'SDK, ma se non riesce a trovarlo; il percorso può essere impostato anche tramite la pagina di configurazione del sistema Jenkins per il plug-in. 
 
-
 ## <a name="deprecated-errors"></a>Errori deprecati
 
 > [!IMPORTANT]
 > Questo problema è stato risolto nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
-
-
 
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins segnala una licenza Novell non valida
 I messaggi di errore relativi a questo problema sono in genere simili a

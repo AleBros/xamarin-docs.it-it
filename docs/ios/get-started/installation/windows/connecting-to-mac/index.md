@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: 5889859543deaecccb72740fccbc2b3343a8297f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 00245b7b4b0db73f66d88474be2052f311499e7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292120"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753762"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
@@ -30,7 +30,7 @@ Associa a Mac consente il flusso di lavoro di sviluppo seguente:
 
 - Visual Studio 2019 apre una connessione di rete con un host di compilazione Mac e usa gli strumenti di compilazione su tale macchina per compilare e firmare l'app iOS.
 
-- Non è necessario eseguire un'applicazione distinta nel Mac: Visual Studio 2017 richiama in modo sicuro le compilazioni Mac tramite SSH.
+- Non è necessario eseguire un'applicazione separata nel Mac: Visual Studio 2019 richiama le compilazioni Mac in modo sicuro tramite SSH.
 
 - Visual Studio 2019 riceve una notifica non appena si verificano cambiamenti. Ad esempio, quando un dispositivo iOS viene collegato al Mac o diventa disponibile in rete, la barra degli strumenti iOS si aggiorna immediatamente.
 

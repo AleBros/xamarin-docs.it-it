@@ -7,23 +7,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523710"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761413"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Nozioni di base su Novell. Android Designer
 
 _In questo argomento vengono presentate le funzionalità di Novell. Android Designer, viene illustrato come avviare la finestra di progettazione, vengono descritte le Area di progettazione e viene illustrato in dettaglio come utilizzare il riquadro proprietà per modificare le proprietà del widget._
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="launching-the-designer"></a>Avvio della finestra di progettazione
 
-La finestra di progettazione viene avviata automaticamente quando viene creato un layout oppure può essere avviata facendo doppio clic su un file di layout esistente. Ad esempio, facendo doppio clic su **activity_main. aXML** nella cartella resources **> layout** verrà caricata la finestra di progettazione, come illustrato in questo screenshot:
+La finestra di progettazione viene avviata automaticamente quando viene creato un layout oppure può essere avviata facendo doppio clic su un file di layout esistente. Ad esempio, facendo doppio clic su **activity_main. aXML** nella cartella **resources > layout** verrà caricata la finestra di progettazione, come illustrato in questo screenshot:
 
 [![Schermata della finestra di progettazione in Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
@@ -74,11 +73,11 @@ La **barra degli strumenti della finestra di progettazione** (posizionata sopra 
 
 La **barra degli strumenti di progettazione** consente di accedere alle funzionalità seguenti:
 
-- Selettore di **layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
+- **Selettore di layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
 
 - **Selettore dispositivi** &ndash; Definisce un set di qualificatori, ad esempio le dimensioni dello schermo, la risoluzione e la disponibilità della tastiera, associati a un dispositivo specifico. È anche possibile aggiungere ed eliminare nuovi dispositivi.
 
-- Selettore di **versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
+- **Selettore di versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
 
 - **Selettore tema** &ndash; Consente di selezionare il tema dell'interfaccia utente per il layout.
 
@@ -94,9 +93,9 @@ La **barra degli strumenti di progettazione** consente di accedere alle funziona
 
 Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomenti seguenti:
 
-- [I qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul selettore di **dispositivo**, il selettore di **versione di Android**, il selettore del **tema**, il selettore  **Opzioni**e **barra delle azioni Impostazioni**.
+- I [qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul **selettore di dispositivo**, il selettore di versione di **Android**, il **selettore del tema**, il **selettore**  **Opzioni**e **barra delle azioni Impostazioni**.
 
-- [In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il selettore di **layout alternativo**.
+- [In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il **selettore di layout alternativo**.
 
 - [Novell. Android designer le funzionalità di progettazione del materiale](~/android/user-interface/android-designer/material-design-features.md) forniscono una panoramica completa dell' **Editor del tema** e della griglia di **progettazione del materiale**.
 
@@ -111,7 +110,6 @@ In questo esempio, facendo clic con il `TextView` pulsante destro del mouse su u
 - **LinearLayout** apre un sottomenu per la modifica `LinearLayout` dell'elemento padre `TextView`di. &ndash;
 
 - **Elimina**, **copia**e **taglia** &ndash; le operazioni `TextView`che si applicano al pulsante destro del mouse.
-
 
 ### <a name="zoom-controls"></a>Controlli zoom
 
@@ -149,7 +147,7 @@ Questi pulsanti eseguono le operazioni seguenti:
 
 - **Divisione verticale** Questo pulsante, simile a una barra verticale, Visualizza i riquadri di **progettazione** e di origine affiancati. &ndash; Questa è la disposizione predefinita.
 
-- **Suddivisione orizzontale** Questo pulsante, simile a una barra orizzontale, Visualizza il riquadro di **progettazione** sopra il riquadro di **origine.** &ndash; È possibile fare clic sui riquadri di **scambio** per posizionare il riquadro di **origine** sopra il riquadro di **progettazione** .
+- **Suddivisione orizzontale** Questo pulsante, simile a una barra orizzontale, Visualizza il riquadro di **progettazione** sopra il riquadro di **origine.** &ndash; È possibile fare clic sui **riquadri di scambio** per posizionare il riquadro di **origine** sopra il riquadro di **progettazione** .
 
 - **Comprimi riquadro** Questo pulsante, che è simile a due parentesi angolari a destra, "comprime" la visualizzazione a doppio riquadro della progettazione e dell' **origine** in una singola visualizzazione di uno di questi riquadri. &ndash;
     Questo pulsante diventa il pulsante **Espandi riquadro** (che somiglia a due parentesi angolari a sinistra), su cui è possibile fare clic per tornare alla modalità di visualizzazione dual-pane (**progettazione** e **origine**).
@@ -165,7 +163,6 @@ Il riquadro **origine** Visualizza l'origine XML sottostante la progettazione mo
 Le modifiche apportate all'origine XML vengono immediatamente visualizzate nel **area di progettazione**; le modifiche apportate alla **area di progettazione** causano l'aggiornamento dell'origine XML visualizzata nel riquadro di **origine** di conseguenza. Quando si apportano modifiche a XML nel riquadro di **origine** , le funzionalità di completamento automatico e IntelliSense sono disponibili per velocizzare lo sviluppo dell'interfaccia utente basata su XML, come illustrato di seguito.
 
 Per una maggiore facilità di spostamento quando si lavora con file XML lunghi, il riquadro di **origine** supporta la barra di scorrimento di Visual Studio, come illustrato a destra nello screenshot precedente. Per ulteriori informazioni sulla barra di scorrimento, vedere [come tenere traccia del codice personalizzando la barra di scorrimento](https://msdn.microsoft.com/library/dn237345.aspx).
-
 
 ### <a name="autocompletion"></a>Completamento automatico
 
@@ -183,8 +180,6 @@ Dopo aver immesso un nuovo attributo per un widget e aver iniziato ad assegnargl
 
 Nella parte inferiore di questa finestra popup sono presenti due pulsanti, come descritto in rosso nello screenshot precedente. Facendo clic sul pulsante **Risorse progetto** a sinistra, l'elenco viene limitato a risorse che fanno parte del progetto di app, mentre facendo clic sul pulsante **risorse del Framework** a destra viene limitato l'elenco per visualizzare le risorse disponibili dal Framework.
 Attivare o disattivare questi pulsanti: è possibile fare clic di nuovo per disabilitare l'azione di filtro fornita da ciascuno di essi.
-
-
 
 ## <a name="properties-pane"></a>Riquadro proprietà
 
@@ -216,7 +211,6 @@ Da questo elenco è possibile selezionare una risorsa di testo da usare per il w
 [![Icona di listato del selettore risorse per un ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 Facendo clic sul quadrato vuoto a destra della `Src` proprietà, viene visualizzata la finestra di dialogo **Seleziona risorsa** con un elenco di risorse che vanno dai colori (come illustrato in precedenza) a drawables.
-
 
 ### <a name="boolean-property-references"></a>Riferimenti a proprietà booleane
 
@@ -266,7 +260,7 @@ Quando il valore delle dimensioni è impostato su a **capo contenuto**, nella fi
 
 ![Associa handle padre](designer-basics-images/vs/18-match-parent.png)
 
-Facendo clic sull'handle di **corrispondenza padre** , le dimensioni della dimensione vengono ripristinate in modo che corrispondano al widget padre.
+Facendo clic sull'handle di corrispondenza padre, le dimensioni della dimensione vengono ripristinate in modo che **corrispondano** al widget padre.
 
 È anche possibile trascinare il quadratino di ridimensionamento circolare (come illustrato nelle schermate precedenti) per ridimensionare il widget a un `dp` valore arbitrario. Quando si esegue questa operazione, vengono presentati sia il **contenuto a capo** che la corrispondenza degli handle **padre** per la dimensione seguente:
 
@@ -275,7 +269,6 @@ Facendo clic sull'handle di **corrispondenza padre** , le dimensioni della dimen
 Non tutti i contenitori consentono di `Size` modificare il di un widget. Si noti, ad esempio, che nella schermata seguente con `LinearLayout` l'oggetto selezionato non vengono visualizzati gli handle di ridimensionamento:
 
 ![Nessun handle di ridimensionamento](designer-basics-images/vs/20-no-resize-handles.png)
-
 
 ## <a name="document-outline"></a>Struttura documento
 
@@ -288,14 +281,11 @@ Il contorno del widget selezionato (in questo caso, a `LinearLayout`) viene evid
 
 La **struttura del documento** supporta copia e incolla oppure è possibile usare il trascinamento della selezione. Il trascinamento della selezione è supportato dalla **struttura del documento** alla **Area di progettazione** e dal **area di progettazione** alla struttura del **documento**. Inoltre, facendo clic con il pulsante destro del mouse su un elemento nella **struttura del documento** viene visualizzato il menu di scelta rapida per l'elemento (lo stesso menu di scelta rapida visualizzato quando si fa clic con il pulsante destro del mouse sullo stesso widget nella **area di progettazione**).
 
-
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="launching-the-designer"></a>Avvio della finestra di progettazione
 
-La finestra di progettazione viene avviata automaticamente quando viene creato un layout oppure può essere avviata facendo doppio clic su un file con estensione aXML esistente. Ad esempio, facendo doppio clic su **Main. aXML** nella cartella resources **> layout** verrà caricata la finestra di progettazione, come illustrato di seguito:
+La finestra di progettazione viene avviata automaticamente quando viene creato un layout oppure può essere avviata facendo doppio clic su un file con estensione aXML esistente. Ad esempio, facendo doppio clic su **Main. aXML** nella cartella **resources > layout** verrà caricata la finestra di progettazione, come illustrato di seguito:
 
 [![Schermata della finestra di progettazione in Visual Studio per Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
@@ -336,11 +326,11 @@ La barra degli strumenti (posizionata sopra la Area di progettazione) presenta i
 
 La barra degli strumenti consente di accedere alle funzionalità seguenti:
 
-- Selettore di **layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
+- **Selettore di layout alternativo** &ndash; Consente di scegliere tra diverse versioni del layout.
 
 - **Selettore dispositivi** &ndash; Definisce un set di qualificatori associati a un dispositivo specifico, ad esempio le dimensioni dello schermo, la risoluzione e la disponibilità della tastiera. È anche possibile aggiungere ed eliminare nuovi dispositivi.
 
-- Selettore di **versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
+- **Selettore di versione Android** &ndash; Versione di Android di destinazione del layout. La finestra di progettazione eseguirà il rendering del layout in base alla versione di Android selezionata.
 
 - **Selettore tema** &ndash; Consente di selezionare il tema dell'interfaccia utente per il layout.
 
@@ -356,9 +346,9 @@ La barra degli strumenti consente di accedere alle funzionalità seguenti:
 
 Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomenti seguenti:
 
-[I qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul selettore di **dispositivo**, il selettore di **versione di Android**, il selettore del **tema**, il selettore  **Opzioni**e **barra delle azioni Impostazioni**.
+I [qualificatori di risorse e le opzioni di visualizzazione](~/android/user-interface/android-designer/resource-qualifiers.md) forniscono informazioni dettagliate sul **selettore di dispositivo**, il selettore di versione di **Android**, il **selettore del tema**, il **selettore**  **Opzioni**e **barra delle azioni Impostazioni**.
 
-[In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il selettore di **layout alternativo**.
+[In visualizzazioni di layout alternative](~/android/user-interface/android-designer/alternative-layout-views.md) viene illustrato come utilizzare il **selettore di layout alternativo**.
 
 Le [funzionalità di progettazione del materiale](~/android/user-interface/android-designer/material-design-features.md) forniscono una panoramica completa dell'editor del **tema** e della **griglia di progettazione materiale**.
 
@@ -446,7 +436,6 @@ Le proprietà *booleane* vengono in genere visualizzate come una casella di cont
 
 [![Esempio di impostazione di proprietà booleane](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
-
 ## <a name="grouped-properties"></a>Proprietà raggruppate
 
 Alcuni widget hanno proprietà multivalore raggruppate insieme `Padding`, ad esempio, ad esempio. Questi valori di proprietà sono elencati nel **riquadro delle proprietà** in un'unica riga espandibile. Alcune di queste proprietà possono essere modificate direttamente nella riga raggruppata, ad esempio la `Padding` proprietà illustrata di seguito:
@@ -495,7 +484,7 @@ Quando il valore delle dimensioni è impostato su a **capo contenuto**, nella fi
 
 [![Associa handle padre](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
-Facendo clic sull'handle di **corrispondenza padre** , le dimensioni della dimensione vengono ripristinate in modo che corrispondano al widget padre.
+Facendo clic sull'handle di corrispondenza padre, le dimensioni della dimensione vengono ripristinate in modo che **corrispondano** al widget padre.
 
 È anche possibile trascinare il quadratino di ridimensionamento circolare (come illustrato nelle schermate precedenti) per ridimensionare il widget a un `dp` valore arbitrario. Quando si esegue questa operazione, vengono presentati sia il **contenuto a capo** che la corrispondenza degli handle **padre** per la dimensione seguente:
 

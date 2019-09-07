@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 07a61eb9d0c16f82d6c367cefc9e3050ca8dfc25
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280856"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768823"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboard unificati in Novell. iOS
 
@@ -31,7 +31,6 @@ I dispositivi sono definiti da classi di dimensioni, sia in assi verticali che o
 - **Normale** : si tratta di una dimensione dello schermo grande (ad esempio un iPad) o di un gadget che offre un'impressione di grandi dimensioni, ad esempio`UIScrollView`
 - **Compatta** : si tratta di dispositivi più piccoli, ad esempio un iPhone. Questa dimensione prende in considerazione l'orientamento del dispositivo.
 
-
 Se i due concetti vengono usati insieme, il risultato è una griglia 2 x 2 che definisce le diverse dimensioni possibili che possono essere usate in entrambi gli orientamenti diversi, come illustrato nel diagramma seguente:
 
  [![](unified-storyboards-images/sizeclassgrid.png "Griglia 2 x 2 che definisce le diverse dimensioni possibili che possono essere usate negli orientamenti normali e compatti")](unified-storyboards-images/sizeclassgrid.png#lightbox)
@@ -43,7 +42,6 @@ Lo sviluppatore può creare un controller di visualizzazione che usa una delle q
 L'iPad, a causa delle dimensioni, ha una **normale** dimensione della classe per entrambi gli orientamenti.
 
  [![](unified-storyboards-images/image1.png "Classi di dimensioni iPad")](unified-storyboards-images/image1.png#lightbox)
-
 
 ### <a name="iphone-size-classes"></a>Classi di dimensioni iPhone
 
@@ -98,7 +96,6 @@ Gli ambienti del tratto sono una nuova interfaccia in iOS 8 e possono restituire
 - Viste ( `UIView` ).
 - Controller di presentazione `UIPresentationController` ().
 
-
 Lo sviluppatore usa la raccolta di tratti restituita da un ambiente di tratti per determinare la disposizione di un'interfaccia utente.
 
 Tutti gli ambienti del tratto costituiscono una gerarchia, come illustrato nel diagramma seguente:
@@ -126,7 +123,7 @@ Il set precedente rappresenterebbe una raccolta di tratti completa, in quanto di
 
 È anche possibile disporre di una raccolta di tratti in cui mancano alcuni dei relativi valori (a cui Apple fa riferimento come non *specificato*):
 
-|Proprietà|Valore|
+|Proprietà|Value|
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Non specificata|
@@ -234,14 +231,12 @@ Si esaminerà ora cosa accade quando un controller di visualizzazione suddiviso 
 - Per impostazione predefinita, il controller di visualizzazione divisa utilizzerà il controller di visualizzazione principale come vista dopo la compressione. Lo sviluppatore può eseguire l'override di questo comportamento eseguendo `GetPrimaryViewControllerForCollapsingSplitViewController` l'override del `UISplitViewControllerDelegate` metodo di e fornendo qualsiasi controller di visualizzazione che desidera visualizzare nello stato compresso.
 - Il controller di visualizzazione secondario deve essere unito al controller di visualizzazione principale. Generalmente lo sviluppatore non dovrà eseguire alcuna azione per questo passaggio. il controller Split View include la gestione automatica di questa fase in base al dispositivo hardware. Tuttavia, potrebbero esserci alcuni casi speciali in cui lo sviluppatore vuole interagire con questa modifica. La chiamata `CollapseSecondViewController` al metodo dell' `UISplitViewControllerDelegate` oggetto consente di visualizzare il controller di visualizzazione master quando si verifica il collasso anziché la visualizzazione dettagli.
 
-
 ### <a name="expanding-the-split-view-controller"></a>Espansione del controller di visualizzazione divisa
 
 Esaminiamo ora cosa accade quando un controller di visualizzazione suddiviso viene espanso da uno stato compresso. Ancora una volta, è necessario eseguire due fasi:
 
 - Definire innanzitutto il nuovo controller di visualizzazione principale. Per impostazione predefinita, il controller di visualizzazione divisa utilizzerà automaticamente il controller di visualizzazione principale dalla vista compressa. Anche in questo caso, lo sviluppatore può eseguire l' `GetPrimaryViewControllerForExpandingSplitViewController` override `UISplitViewControllerDelegate` di questo comportamento usando il metodo di.
 - Una volta scelto il controller di visualizzazione principale, è necessario ricreare il controller di visualizzazione secondaria. Anche in questo caso, il controller di visualizzazione suddiviso include la gestione automatica di questa fase in base al dispositivo hardware. Lo sviluppatore può eseguire l'override di questo comportamento `SeparateSecondaryViewController` chiamando il metodo `UISplitViewControllerDelegate` di.
-
 
 In un controller di visualizzazione suddiviso, il controller di visualizzazione principale svolge una parte dell'espansione e della compressione delle visualizzazioni implementando i `CollapseSecondViewController` metodi `SeparateSecondaryViewController` e di `UISplitViewControllerDelegate`. `UINavigationController`implementa questi metodi per effettuare automaticamente il push e il pop del controller di visualizzazione secondaria.
 
@@ -253,7 +248,6 @@ Questo ha presentato un accoppiamento molto stretto tra il controller di spostam
 
 - `ShowViewController`: Adatta per visualizzare il nuovo controller di visualizzazione in base al relativo ambiente. Ad esempio, in un `UINavigationController` è sufficiente inserire la nuova visualizzazione nello stack. In un controller di visualizzazione divisa, il nuovo controller di visualizzazione viene visualizzato sul lato sinistro come nuovo controller di visualizzazione principale. Se non è presente alcun controller di visualizzazione del contenitore, la nuova vista verrà visualizzata come controller di visualizzazione modale.
 - `ShowDetailViewController`– Funziona in modo simile a `ShowViewController`, ma viene implementato in un controller di visualizzazione suddiviso per sostituire la visualizzazione dettagli con il nuovo controller di visualizzazione passato. Se il controller di visualizzazione suddiviso è compresso (come potrebbe essere visualizzato in un'applicazione iPhone), la chiamata verrà reindirizzata `ShowViewController` al metodo e la nuova visualizzazione verrà visualizzata come controller di visualizzazione principale. Anche in questo caso, se non è presente alcun controller di visualizzazione del contenitore, la nuova vista verrà visualizzata come controller di visualizzazione modale.
-
 
 Questi metodi funzionano iniziando dal controller di visualizzazione foglia e analizzano la gerarchia di visualizzazione finché non trovano il controller di visualizzazione del contenitore appropriato per gestire la visualizzazione della nuova visualizzazione.
 
@@ -269,7 +263,6 @@ Questo metodo percorre la catena della gerarchia finché non viene trovato il co
 
 1. Se viene `ShowViewController` chiamato un metodo, il primo controller di visualizzazione nella catena che implementa questo metodo è il controller di spostamento, quindi viene utilizzato come elemento padre della nuova visualizzazione.
 1. Se invece `ShowDetailViewController` è stato chiamato un metodo, il controller di visualizzazione divisa è il primo controller di visualizzazione per implementarlo, quindi viene usato come padre.
-
 
 Il `GetTargetForAction` metodo funziona individuando un controller di visualizzazione che implementa una determinata azione e quindi richiedendo a tale controller di visualizzazione se desidera ricevere l'azione. Poiché questo metodo è pubblico, gli sviluppatori possono creare metodi personalizzati che funzionano esattamente come i metodi incorporati `ShowViewController` e `ShowDetailViewController` .
 
@@ -690,7 +683,6 @@ Il file della schermata di avvio viene visualizzato come schermata iniziale ment
 Il factoring nei nuovi dispositivi iPhone 6 e iPhone 6 Plus (e il prossimo Apple Watch) con tutti i dispositivi iPhone e iPad esistenti, rappresenta un'ampia gamma di dimensioni variabili, orientamenti e risoluzioni delle risorse `Default.png` dell'immagine della schermata iniziale che devono essere creato e mantenuto. Inoltre, questi file possono avere dimensioni molto elevate e comportano il "gonfiore" del bundle di applicazioni finali, aumentando la quantità di tempo necessaria per scaricare l'applicazione dall'iTunes App Store (probabilmente impedendone la recapito in una rete cellulare) e aumentando la quantità di spazio di archiviazione necessario sul dispositivo dell'utente finale.
 
 Una novità di iOS 8, lo sviluppatore può creare un singolo file `.xib` atomico in Xcode che usa le classi di layout e dimensioni automatiche per creare una *schermata di avvio dinamico* che funzionerà per ogni dispositivo, risoluzione e orientamento. Questo non solo riduce la quantità di lavoro richiesto allo sviluppatore per creare e gestire tutte le risorse di immagine necessarie, ma riduce notevolmente le dimensioni del bundle installato dell'applicazione.
-
 
 Le schermate di avvio dinamico presentano le limitazioni e le considerazioni seguenti:
 

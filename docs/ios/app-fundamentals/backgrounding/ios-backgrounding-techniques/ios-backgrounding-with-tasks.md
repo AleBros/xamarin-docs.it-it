@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d001c39b2111785911d678bdeb2e83d761fba11
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7596f79119f28997cbcda6e7057e682edfd760b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287006"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756354"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>Elaborazione in background in iOS con le attività
 
@@ -23,7 +23,6 @@ Le attività in background possono essere suddivise in tre categorie:
 1. **Attività in background-Safe** : chiamate in qualsiasi punto dell'applicazione in cui è presente un'attività che non si vuole interrompere se l'applicazione entra in background.
 1. **Attività DidEnterBackground** : chiamate durante il `DidEnterBackground` metodo del ciclo di vita dell'applicazione per semplificare la pulizia e il salvataggio dello stato.
 1. **Trasferimenti in background (iOS 7 +)** : tipo speciale di attività in background usato per eseguire i trasferimenti di rete in iOS 7. Diversamente dalle normali attività, i trasferimenti in background non hanno un limite di tempo predeterminato.
-
 
 Le attività in background `DidEnterBackground` e sicure sono sicure da usare in iOS 6 e iOS 7, con alcune piccole differenze. Esaminiamo questi due tipi di attività in modo più dettagliato.
 
@@ -47,7 +46,6 @@ Il processo di registrazione associa un'attività a un identificatore univoco `t
 > [!IMPORTANT]
 > Le attività in background possono essere eseguite sul thread principale o su un thread in background, a seconda delle esigenze dell'applicazione.
 
-
 ## <a name="performing-tasks-during-didenterbackground"></a>Esecuzione di attività durante DidEnterBackground
 
 Oltre a rendere un'attività a esecuzione prolungata sicura, la registrazione può essere usata per avviare le attività quando un'applicazione viene messa in background. iOS fornisce un metodo di evento nella classe *AppDelegate* chiamata `DidEnterBackground` che può essere usata per salvare lo stato dell'applicazione, salvare i dati utente e crittografare il contenuto sensibile prima che un'applicazione entri in background. Un'applicazione ha circa cinque secondi per restituire da questo metodo o verrà terminata. Pertanto, le attività di pulizia che potrebbero richiedere più di cinque secondi per il completamento possono essere chiamate `DidEnterBackground` dall'interno del metodo. Queste attività devono essere richiamate in un thread separato.
@@ -68,7 +66,6 @@ Si inizia eseguendo l'override del `DidEnterBackground` metodo `AppDelegate`in, 
 
 > [!IMPORTANT]
 > iOS usa un [meccanismo watchdog](https://developer.apple.com/library/ios/qa/qa1693/_index.html) per garantire che l'interfaccia utente di un'applicazione rimanga reattiva. Un'applicazione che trascorre troppo tempo in `DidEnterBackground` non risponderà nell'interfaccia utente. Avviare le attività per l'esecuzione in background consente `DidEnterBackground` un ritorno tempestivo, mantenendo la risposta dell'interfaccia utente e impedendo al watchdog di terminare l'applicazione.
-
 
 ## <a name="handling-background-task-time-limits"></a>Gestione dei limiti temporali delle attività in background
 
@@ -133,7 +130,6 @@ Il backbone dei trasferimenti in background in iOS 7 è la `NSURLSession` nuova 
 1. Trasferire il contenuto attraverso le interruzioni della rete e dei dispositivi.
 1. Caricare e scaricare file di grandi dimensioni ( *servizio trasferimento in background* ).
 
-
 Esaminiamo in dettaglio il funzionamento.
 
 ### <a name="nsurlsession-api"></a>API NSURLSession
@@ -157,7 +153,6 @@ else {
 > [!IMPORTANT]
 > Evitare di effettuare chiamate per aggiornare l'interfaccia utente dallo sfondo del codice conforme a iOS 6, perché iOS 6 non supporta gli aggiornamenti dell'interfaccia utente in background e interromperà l'applicazione.
 
-
 L' `NSURLSession` API include un set completo di funzionalità per gestire l'autenticazione, gestire i trasferimenti non riusciti e segnalare gli errori sul lato client, ma non sul lato server. Consente di colmare le interruzioni nel tempo di esecuzione delle attività introdotte in iOS 7 e fornisce anche il supporto per trasferire file di grandi dimensioni in modo rapido e affidabile. Nella sezione successiva viene esaminata questa seconda funzionalità.
 
 ### <a name="background-transfer-service"></a>Servizio trasferimento in background
@@ -167,4 +162,3 @@ Prima di iOS 7, il caricamento o il download di file in background non era affid
 I trasferimenti avviati tramite il servizio trasferimento in background vengono gestiti dal sistema operativo e forniscono API per gestire l'autenticazione e gli errori. Poiché i trasferimenti non sono associati da un limite di tempo arbitrario, possono essere usati per caricare o scaricare file di grandi dimensioni, aggiornare automaticamente il contenuto in background e altro ancora. Per informazioni dettagliate su come implementare il servizio, vedere la [procedura dettagliata](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) relativa al trasferimento in background.
 
 Il servizio trasferimento in background è spesso associato a recupero in background o a notifiche remote per consentire alle applicazioni di aggiornare il contenuto in background. Nelle due sezioni successive viene introdotto il concetto di registrazione di intere applicazioni per l'esecuzione in background in iOS 6 e iOS 7.
-

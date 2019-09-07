@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: cf57142f0896b42c5c8ba726db723527e0e61452
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522929"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762382"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra di spostamento Novell. Android
 
@@ -25,7 +25,6 @@ Sono disponibili diversi nuovi flag che controllano la visibilità della barra d
 - `SystemUiFlagVisible`&ndash; Rende visibile la barra di navigazione. 
 - `SystemUiFlagLowProfile`&ndash; Offusca i controlli nella barra di spostamento. 
 - `SystemUiFlagHideNavigation`&ndash; Nasconde la barra di navigazione. 
-
 
 Questi flag possono essere applicati a qualsiasi visualizzazione nella gerarchia di visualizzazione impostando la `SystemUiVisibility` proprietà. Se questa proprietà è impostata su più visualizzazioni, il sistema le combina con un'operazione o e le applica purché la finestra in cui sono impostati i flag mantenga lo stato attivo. Quando si rimuove una vista, verranno rimossi anche tutti i flag impostati.
 
@@ -64,8 +63,6 @@ tv.SystemUiVisibilityChange +=
         tv.Text = String.Format ("Visibility = {0}", e.Visibility);
   };
 ```
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

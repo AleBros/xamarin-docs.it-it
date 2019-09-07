@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 49e0de909e2255d850211e51596efdaa43f293ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509374"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755050"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Creazione di risorse per schermate diverse
 
 Android viene eseguito in molti dispositivi diversi, ognuno con una vasta gamma di risoluzioni, dimensioni dello schermo e densità dello schermo. Android eseguirà il ridimensionamento e il ridimensionamento per far funzionare l'applicazione su questi dispositivi, ma ciò può comportare un'esperienza utente non ottimale. Ad esempio, le immagini possono apparire sfocate o posizionate come previsto in una vista.
-
 
 ## <a name="concepts"></a>Concetti
 
@@ -38,7 +37,6 @@ Si noti che i primi tre di questi concetti sono correlati &ndash; all'aumento de
 
 Per gestire questa complessità, il Framework Android preferisce usare i *pixel indipendenti dalla densità (DP)* per i layout dello schermo. Usando i pixel indipendenti dalla densità, gli elementi dell'interfaccia utente vengono visualizzati all'utente per avere le stesse dimensioni fisiche sulle schermate con densità diverse.
 
-
 ## <a name="supporting-various-screen-sizes-and-densities"></a>Supporto di diverse dimensioni e densità dello schermo
 
 Android gestisce la maggior parte del lavoro per il rendering corretto dei layout per ogni configurazione dello schermo. Tuttavia, esistono alcune azioni che possono essere intraprese per facilitare il sistema.
@@ -46,7 +44,6 @@ Android gestisce la maggior parte del lavoro per il rendering corretto dei layou
 L'uso di pixel indipendenti dalla densità anziché dei pixel effettivi nei layout è sufficiente nella maggior parte dei casi per garantire l'indipendenza della densità.
 Android eseguirà il ridimensionamento di drawables in fase di esecuzione fino alle dimensioni appropriate.
 Tuttavia, è possibile che la scalabilità provochi la sfocatura delle bitmap. Per ovviare a questo problema, fornire risorse alternative per le diverse densità. Quando si progettano dispositivi per più risoluzioni e densità dello schermo, risulta più semplice iniziare con le immagini di risoluzione o densità più elevate e quindi ridurle.
-
 
 ### <a name="declare-the-supported-screen-size"></a>Dichiarare le dimensioni dello schermo supportate
 
@@ -87,7 +84,6 @@ Modificare **file AndroidManifest. XML** in modo da includere le [schermate supp
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>Fornire layout alternativi per diverse dimensioni dello schermo
 
-
 I layout alternativi consentono di personalizzare una visualizzazione per le dimensioni dello schermo specifico, modificando il posizionamento o le dimensioni degli elementi dell'interfaccia utente del componente.
 
 A partire da API Level 13 (Android 3,2), le dimensioni dello schermo sono deprecate a favore dell'uso del qualificatore SW*N*DP. Questo nuovo qualificatore dichiara la quantità di spazio necessaria per un determinato layout. Si consiglia di usare questi qualificatori più recenti per le applicazioni che devono essere eseguite in Android 3,2 o versioni successive.
@@ -103,7 +99,6 @@ Se, ad esempio, un layout richiede almeno 700 DP della larghezza dello schermo, 
 ![Cartella layout per la larghezza dello schermo 700 DP](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
 -----
-
 
 Come riferimento, di seguito sono riportati alcuni numeri per i diversi dispositivi:
 
@@ -150,8 +145,6 @@ Per le applicazioni che estendono il vecchio e il nuovo livello API, potrebbe es
 
 -----
 
-
-
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>Fornire diverse bitmap per diverse densità dello schermo
 
 Anche se Android ridimensiona le bitmap in modo necessario per un dispositivo, le bitmap stesse potrebbero non essere ridimensionate in modo elegante: possono diventare fuzzy o sfocate. La creazione di bitmap appropriate per la densità dello schermo consente di attenuare il problema.
@@ -164,7 +157,6 @@ Confrontare questo valore con un layout progettato con risorse specifiche della 
 
 ![Screenshot con risorse specifiche della densità](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>Creare risorse di densità variabili con Android asset Studio
 
 La creazione di queste bitmap di diverse densità può essere un po' noioso. In questo modo, Google ha creato un'utilità online che può ridurre alcuni dei tedio necessari per la creazione di queste bitmap, denominato [**Android asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
@@ -172,7 +164,6 @@ La creazione di queste bitmap di diverse densità può essere un po' noioso. In 
 [![Android asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 Questo sito Web consente di creare bitmap destinate a quattro densità di schermate comuni fornendo un'unica immagine. Android asset Studio creerà quindi le bitmap con alcune personalizzazioni e quindi le consentirà di scaricarle come file zip.
-
 
 ## <a name="tips-for-multiple-screens"></a>Suggerimenti per più schermate
 
@@ -185,10 +176,9 @@ Android viene eseguito su un numero sconcertante di dispositivi e la combinazion
 - **Evitare** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) 
    **Laddove** possibile ,&ndash; è deprecata in API Level 3 (Android 1,5) e comporterà un layout fragile. Non deve essere usato. Provare invece a usare widget di layout più flessibili, ad esempio [**LinearLayout**](xref:Android.Widget.LinearLayout), [**sul relativelayout**](xref:Android.Widget.RelativeLayout)o il nuovo [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Selezionare un orientamento del layout come predefinito**    Ad esempio, anziché fornire le risorse alternative layout-Land e layout-Port, inserire le risorse per l'orizzontale nel layout e le risorse per il verticale in layout-Port. &ndash;
+- **Selezionare un orientamento del layout come predefinito**Ad esempio, anziché fornire le risorse alternative layout-Land e layout-Port, inserire le risorse per l'orizzontale nel layout e le risorse per il verticale in layout-Port. &ndash;
 
 - **Usare LayoutParams per l'altezza e la larghezza** : quando si definiscono gli elementi dell'interfaccia utente in un file di layout XML, un'applicazione Android che usa i valori **wrap_content** e **fill_parent** avrà maggiore successo garantendo un aspetto corretto tra dispositivi diversi rispetto a uso di unità in pixel o con densità indipendenti. Questi valori di dimensione fanno sì che Android ridimensiona le risorse bitmap nel modo appropriato. Per questo stesso motivo, le unità indipendenti dalla densità sono particolarmente riservate quando si specificano i margini e la spaziatura interna degli elementi dell'interfaccia utente.
-
 
 ## <a name="testing-multiple-screens"></a>Test di più schermate
 

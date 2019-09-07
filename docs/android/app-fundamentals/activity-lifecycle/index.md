@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 91e49c387818ca4d7472325efa665a5c2bfd9e64
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8ebc52936dfdcb6b5262424eba5652de0b8908e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522035"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755602"
 ---
 # <a name="activity-lifecycle"></a>Ciclo di vita dell'attività
 
@@ -32,7 +32,6 @@ In questo capitolo viene esaminato in dettaglio il ciclo di vita delle attività
 - Stati di attività
 - Metodi del ciclo di vita
 - Conservazione dello stato di un'applicazione
-
 
 Questa sezione include anche una [procedura dettagliata](~/android/app-fundamentals/activity-lifecycle/saving-state.md) che fornisce esempi pratici su come salvare lo stato in modo efficiente durante il ciclo di vita dell'attività. Alla fine di questo capitolo è necessario conoscere il ciclo di vita delle attività e come supportarlo in un'applicazione Android.
 
@@ -55,8 +54,7 @@ Questi Stati possono essere suddivisi in 4 gruppi principali, come indicato di s
 1. *Arrestato/in background* &ndash; Le attività completamente nascoste da un'altra attività vengono considerate interrotte o in background.
     Le attività interrotte continuano a mantenere le informazioni sullo stato e sui membri per il periodo di tempo più lungo possibile, ma le attività interrotte sono considerate la priorità più bassa dei tre Stati e, di conseguenza, il sistema operativo eliminerà prima le attività in questo stato per soddisfare la risorsa requisiti delle attività con priorità più elevata.
 
-1. Riavviato &ndash; È possibile che un'attività che si trova in una posizione qualsiasi da sospesa a arrestata nel ciclo di vita venga rimossa dalla memoria da Android. Se l'utente torna all'attività, deve essere riavviato, ripristinato nello stato salvato in precedenza e quindi visualizzato all'utente.
-
+1. *Riavviato* &ndash; È possibile che un'attività che si trova in una posizione qualsiasi da sospesa a arrestata nel ciclo di vita venga rimossa dalla memoria da Android. Se l'utente torna all'attività, deve essere riavviato, ripristinato nello stato salvato in precedenza e quindi visualizzato all'utente.
 
 ### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Ricreazione dell'attività in risposta alle modifiche alla configurazione
 
@@ -122,7 +120,6 @@ Le attività devono eseguire l'override di questo metodo per eseguire attività 
 - Visualizzare eventuali avvisi o finestre di dialogo rilevanti
 - Collegare i gestori eventi esterni
 
-
 Come esempio, il frammento di codice seguente mostra come inizializzare la fotocamera:
 
 ```csharp
@@ -174,7 +171,6 @@ Esistono due possibili metodi del ciclo di vita che verranno chiamati `OnPause`d
 1. `OnResume`verrà chiamato se l'attività deve essere restituita in primo piano.
 1. `OnStop`verrà chiamato se l'attività viene posizionata in background.
 
-
 #### <a name="onstop"></a>OnStop
 
 [OnStop](xref:Android.App.Activity.OnStop) viene chiamato quando l'attività non è più visibile all'utente. Ciò si verifica quando si verifica una delle condizioni seguenti:
@@ -182,7 +178,6 @@ Esistono due possibili metodi del ciclo di vita che verranno chiamati `OnPause`d
 - Viene avviata una nuova attività che copre questa attività.
 - Un'attività esistente viene portata in primo piano.
 - L'attività viene eliminata definitivamente.
-
 
 `OnStop`potrebbe non essere sempre chiamato in situazioni di memoria insufficiente, ad esempio quando Android è affamato di risorse e non è in grado di eseguire correttamente il background dell'attività. Per questo motivo, è consigliabile non fare affidamento sulla `OnStop` chiamata quando si prepara un'attività per la distruzione. I successivi metodi del ciclo di vita che possono essere chiamati dopo questa `OnDestroy` operazione saranno se l'attività è in uscita `OnRestart` o se l'attività viene nuovamente intervenuta per interagire con l'utente.
 
@@ -325,7 +320,6 @@ Questo metodo esiste per offrire una certa flessibilità quando lo stato deve es
 
 Per un esempio di salvataggio dello stato usando `Bundle`un, vedere la [procedura dettagliata: salvataggio dello stato dell'attività](saving-state.md).
 
-
 #### <a name="bundle-limitations"></a>Limitazioni del bundle
 
 Sebbene `OnSaveInstanceState` consenta di salvare facilmente i dati temporanei, presenta alcune limitazioni:
@@ -337,7 +331,6 @@ Sebbene `OnSaveInstanceState` consenta di salvare facilmente i dati temporanei, 
 - I dati salvati usando il bundle vengono serializzati, il che può causare ritardi.
 
 Lo stato del bundle è utile per i dati semplici che non utilizzano molta memoria, mentre *i dati dell'istanza non di configurazione* sono utili per dati più complessi o per dati costosi da recuperare, ad esempio da una chiamata al servizio Web o da una query di database complessa. I dati dell'istanza non di configurazione vengono salvati in un oggetto in base alle esigenze. Nella sezione successiva viene `OnRetainNonConfigurationInstance` introdotto come metodo per mantenere i tipi di dati più complessi tramite le modifiche alla configurazione.
-
 
 ### <a name="persisting-complex-data"></a>Salvataggio permanente dei dati complessi
 
@@ -477,7 +470,6 @@ In questa sezione è stato illustrato come mantenere i `Bundle`dati di stato sem
 ## <a name="summary"></a>Riepilogo
 
 Il ciclo di vita dell'attività Android fornisce un Framework potente per la gestione dello stato delle attività all'interno di un'applicazione, ma può essere difficile da comprendere e implementare. In questo capitolo sono stati introdotti i diversi Stati che un'attività può attraversare durante la sua durata, oltre ai metodi del ciclo di vita associati a tali Stati. Successivamente, è stato fornito materiale sussidiario per il tipo di logica da eseguire in ognuno di questi metodi.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

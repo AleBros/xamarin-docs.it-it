@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2018
-ms.openlocfilehash: d0d5452c2b79fb674e473efd50aaf587d64c4544
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18d33dfcef109fd29f32969b9bdd15b8a2dc475a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290244"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764044"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Schermate di avvio per le app Novell. iOS
 
@@ -131,7 +131,7 @@ In iOS 8 (e versioni successive) lo sviluppatore può creare uno speciale storyb
     - Per modificare un file storyboard, Visual Studio richiede una connessione attiva a un host di compilazione Mac. Per informazioni dettagliate, vedere la Guida [connessione al Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) .
 
 7. Scegliere un dispositivo e un orientamento per visualizzare l'anteprima dello storyboard della schermata di avvio in iOS designer. Aprire il pannello di selezione del dispositivo sulla barra degli strumenti in basso e selezionare **iPhone 4S** e **verticale**: 
- 
+
     ![Barra degli strumenti selezione dispositivo](launch-screens-images/launch07-vs.png)
 
     - Si noti che la selezione di un dispositivo e l'orientamento cambiano solo il modo in cui iOS designer Visualizza l'anteprima della progettazione. Indipendentemente dalla selezione effettuata, i vincoli appena aggiunti vengono applicati a tutti i dispositivi e gli orientamenti, a meno che non sia stato usato il pulsante **modifica tratti** per specificare diversamente. 
@@ -196,7 +196,6 @@ Quando si aggiorna un'app esistente per usare gli storyboard per le schermate di
 Fare quindi doppio clic sul `Info.plist` file nella **Esplora soluzioni** per aprirlo per la modifica. In **schermata di avvio**selezionare il nuovo file storyboard creato in precedenza.
 
 ![](launch-screens-images/storyboard09.png "Selezionare il nuovo file storyboard creato in precedenza")
-
 
 Per usare il nuovo storyboard come schermata di avvio, seguire questa procedura:
 

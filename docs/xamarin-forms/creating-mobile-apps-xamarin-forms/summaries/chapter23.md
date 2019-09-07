@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 23. I trigger e comportamenti
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 23. I trigger e comportamenti'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 23. I trigger e comportamenti'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a1274a8447f49ce39f9c92703bbaec9e875b9e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61332095"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760585"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Riepilogo del capitolo 23. I trigger e comportamenti
 
@@ -183,8 +183,6 @@ Il [ **TraditionalRadios** ](https://github.com/xamarin/xamarin-forms-book-sampl
 L'esempio finale [ **MultiColorSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) consente di passare tra tre visualizzazioni di selezione di colore diverso mediante pulsanti di opzione. Le tre viste dissolvenza in entrata e in uscita tramite un [ `FadeEnableAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) nel [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) libreria.
 
 Il programma risponde anche alle modifiche apportate orientamento verticale e orizzontale usando un [ `GridOrientationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) nel **Xamarin.FormsBook.Toolkit** libreria.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

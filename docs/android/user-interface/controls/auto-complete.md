@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523083"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762432"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Completamento automatico per Novell. Android
 
@@ -48,12 +48,11 @@ widget che fornisce suggerimenti per un nome di paese.
 [`TextView`](xref:Android.Widget.TextView) È un'etichetta che introduce[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
 
-
 ## <a name="tutorial"></a>Esercitazione
 
 Avviare un nuovo progetto denominato *HelloAutoComplete*.
 
-Creare un file XML denominato `list_item.xml` e salvarlo nella cartella Resources **/layout** . Impostare l'azione di compilazione del file su `AndroidResource`. Modificare il file in modo che abbia un aspetto simile al seguente:
+Creare un file XML denominato `list_item.xml` e salvarlo nella cartella **Resources/layout** . Impostare l'azione di compilazione del file su `AndroidResource`. Modificare il file in modo che abbia un aspetto simile al seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -166,8 +165,6 @@ Eseguire l'applicazione. Durante la digitazione, dovrebbe essere visualizzata un
 
 [![Schermata di completamento automatico di esempio che elenca i nomi che contengono "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## <a name="more-information"></a>Altre informazioni
 
 Si noti che l'uso di una matrice di stringhe hardcoded non è una procedura di progettazione consigliata, perché il codice dell'applicazione deve concentrarsi sul comportamento, non sul contenuto. Il contenuto dell'applicazione, ad esempio le stringhe, deve essere esternalizzato dal codice per apportare modifiche al contenuto e semplificare la localizzazione del contenuto. Le stringhe hardcoded vengono usate in questa esercitazione solo per semplificare e concentrarsi sui[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
@@ -195,7 +192,6 @@ linea del costruttore con quanto segue:
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
-
 
 ### <a name="references"></a>Riferimenti
 

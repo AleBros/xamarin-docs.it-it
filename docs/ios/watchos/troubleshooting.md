@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: efd120e785e55bfa3806cd193bd5f155f35a5e18
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292843"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767719"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -80,14 +80,12 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. L'immagine dell'icona dovrebbe ora passare i controlli di convalida di Apple.
 
-
 <a name="add" />
 
 ## <a name="manually-adding-interface-controller-files"></a>Aggiunta manuale di file del controller di interfaccia
 
 > [!IMPORTANT]
 > Il supporto WatchKit di Novell include la progettazione degli storyboard Watch in iOS designer (sia in Visual Studio per Mac che in Visual Studio), che non richiede i passaggi descritti di seguito. È sufficiente assegnare al controller di interfaccia un nome di classe nel riquadro delle proprietà C# Visual Studio per Mac e i file di codice verranno creati automaticamente.
-
 
 *Se* si usa Xcode Interface Builder, seguire questa procedura per creare nuovi controller di interfaccia per l'app Watch e abilitare la sincronizzazione con Xcode in modo che gli Outlet e le azioni C#siano disponibili in:
 
@@ -168,7 +166,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Interface Builder")
 
-8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. [https://login.microsoftonline.com/consumers/](`MyInterfaceController`).
+8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`.
     Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
 
     ![](troubleshooting-images/add-4.png "Impostazione di una classe personalizzata")
@@ -210,14 +208,12 @@ with an alpha channel. Icons should not have an alpha channel.
 
 È ora possibile fare riferimento al controllo (o implementare l'azione) C#in.
 
-
 <a name="command_line" />
 
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Avvio dell'app Watch dalla riga di comando
 
 > [!IMPORTANT]
 > Per impostazione predefinita, è possibile avviare l'app Watch in modalità app normale e anche in modalità **Glance** o di **notifica** usando [parametri di esecuzione personalizzati](~/ios/watchos/get-started/installation.md#custommodes) in Visual Studio per Mac e Visual Studio.
-
 
 È anche possibile usare la riga di comando per controllare il simulatore iOS. Lo strumento da riga di comando usato per avviare le app Watch è **mTouch**.
 
@@ -243,7 +239,6 @@ Esempio:
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-
 ## <a name="notification-mode"></a>Modalità di notifica
 
 Per testare la modalità di [ **notifica** ](~/ios/watchos/platform/notifications.md)dell'app, impostare `watchlaunchmode` il parametro `Notification` su e fornire un percorso a un file JSON contenente un payload di notifica di prova.
@@ -255,7 +250,6 @@ Aggiungere ad esempio gli argomenti seguenti al comando mTouch:
 ```bash
 --watchlaunchmode=Notification --watchnotificationpayload=/path/to/file.json
 ```
-
 
 ## <a name="other-arguments"></a>Altri argomenti
 
@@ -296,8 +290,6 @@ Esempio:
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

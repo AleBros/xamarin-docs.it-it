@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e829c953278d8edeb697d27da8e3707ee1c91784
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119637"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757591"
 ---
 # <a name="binding-a-java-library"></a>Associazione di una libreria Java
 
@@ -28,7 +28,7 @@ L'ecosistema di librerie di terze parti per Android è molto grande. Per questo 
 
 Questa guida illustra la prima opzione: come creare una *libreria di binding* che esegue il wrapping di una o più librerie Java esistenti in un assembly a cui è possibile collegarsi nell'applicazione. Per altre informazioni sull'uso di JNI, vedere [uso di JNI](~/android/platform/java-integration/working-with-jni.md).
 
-Novell. Android implementa associazioni usando Managed *wrappers* (*MCW*). MCW è un Bridge JNI usato quando il codice gestito deve richiamare codice Java. I wrapper richiamabili gestiti forniscono anche il supporto per la sottoclasse di tipi Java e per l'override di metodi virtuali su tipi Java. Analogamente, ogni volta che il codice di Android Runtime (ART) desidera richiamare il codice gestito, lo esegue tramite un altro Bridge JNI noto come Android Callable Wrapper (ACW). Questa [architettura](~/android/internals/architecture.md) è illustrata nel diagramma seguente:
+Novell. Android implementa associazioni usando *Managed wrappers* (*MCW*). MCW è un Bridge JNI usato quando il codice gestito deve richiamare codice Java. I wrapper richiamabili gestiti forniscono anche il supporto per la sottoclasse di tipi Java e per l'override di metodi virtuali su tipi Java. Analogamente, ogni volta che il codice di Android Runtime (ART) desidera richiamare il codice gestito, lo esegue tramite un altro Bridge JNI noto come Android Callable Wrapper (ACW). Questa [architettura](~/android/internals/architecture.md) è illustrata nel diagramma seguente:
 
 [![Architettura del Bridge Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
@@ -65,7 +65,6 @@ Quindi, inserire la seguente `using` istruzione all'inizio dei file di C# origin
 using Com.Company.Package;
 ```
 
-
 Quando si associa una libreria Android esistente, è necessario tenere presente quanto segue:
 
 - **Sono presenti dipendenze esterne per la libreria?** &ndash;Tutte le dipendenze Java richieste dalla libreria Android devono essere incluse nel progetto Novell. Android come **ReferenceJar** o come **EmbeddedReferenceJar**. Tutti gli assembly nativi devono essere aggiunti al progetto di associazione come **EmbeddedNativeLibrary**.  
@@ -73,7 +72,6 @@ Quando si associa una libreria Android esistente, è necessario tenere presente 
 - **Quale versione dell'API Android è la destinazione della libreria Android?** &ndash;Non è possibile effettuare il "downgrade" del livello API Android; Verificare che il progetto di binding Novell. Android abbia come destinazione lo stesso livello API (o versione successiva) della libreria Android.
 
 - **Quale versione del JDK è stata usata per compilare la libreria?** &ndash;È possibile che si verifichino errori di binding se la libreria Android è stata compilata con una versione di JDK diversa da quella usata da Novell. Android. Se possibile, ricompilare la libreria Android usando la stessa versione del JDK usata dall'installazione di Novell. Android.
-
 
 ## <a name="build-actions"></a>Azioni di compilazione
 
@@ -85,7 +83,7 @@ Quando si crea una libreria di binding, si impostano le *azioni di compilazione*
 
 - `LibraryProjectZip`&ndash; Incorpora un oggetto. File AAR nella libreria dei binding risultante. DLL. Questa operazione è simile a EmbeddedJar, ad eccezione del fatto che è possibile accedere alle risorse (oltre al codice) nell'associazione. File AAR. Utilizzare questa opzione se si desidera incorporare un. AAR nella libreria dei binding.
 
-- `ReferenceJar`Specifica un file di riferimento. jar: un file di riferimento. jar è un file con estensione jar. &ndash; I file AAR dipendono da. Questo riferimento **. jar** viene usato solo per soddisfare le dipendenze in fase di compilazione. Quando si usa questa azione di compilazione C# , le associazioni non vengono create per il file Reference **. jar** e non sono incorporate nella libreria dei binding risultante. DLL. Usare questa opzione quando si renderà una libreria di binding per il file di riferimento **. jar** ma non ancora eseguita. Questa azione di compilazione è utile per la creazione di pacchetti di più file con **estensione jar**(e/o. AARs) in più librerie di binding interdipendenti.
+- `ReferenceJar` Specifica un file di riferimento. jar: un file di riferimento. jar è un file con estensione jar. &ndash; I file AAR dipendono da. Questo riferimento **. jar** viene usato solo per soddisfare le dipendenze in fase di compilazione. Quando si usa questa azione di compilazione C# , le associazioni non vengono create per il file Reference **. jar** e non sono incorporate nella libreria dei binding risultante. DLL. Usare questa opzione quando si renderà una libreria di binding per il file di riferimento **. jar** ma non ancora eseguita. Questa azione di compilazione è utile per la creazione di pacchetti di più file con **estensione jar**(e/o. AARs) in più librerie di binding interdipendenti.
 
 - `EmbeddedReferenceJar`Incorpora un file Reference **. jar** nella libreria dei binding risultante. &ndash; DLL. Utilizzare questa azione di compilazione quando si desidera creare C# binding per il file di input **. jar** (o. AAR) e tutti i relativi file di riferimento **. jar**nella libreria dei binding.
 
@@ -125,8 +123,6 @@ Il generatore di binding Novell. Android cambierà alcuni idiomi e modelli Java 
 
 - Una _classe interna_ in Java è una _classe annidata_ con un costruttore di C#istanza in.
 
-
-
 ## <a name="binding-scenarios"></a>Scenari di associazione
 
 Le guide dello scenario di associazione seguenti consentono di associare una libreria o librerie Java per l'integrazione nell'app:
@@ -140,7 +136,6 @@ Le guide dello scenario di associazione seguenti consentono di associare una lib
 - La [personalizzazione delle associazioni](~/android/platform/binding-java-library/customizing-bindings/index.md) spiega come apportare modifiche manuali al binding per risolvere gli errori di compilazione e definire l'API risultante in modo che sia più "C#simile".
 
 - Le associazioni per la [risoluzione dei problemi](~/android/platform/binding-java-library/troubleshooting-bindings.md) elencano gli scenari di errore di associazione comuni, spiega le possibili cause e offre suggerimenti per la risoluzione di questi errori.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ac23ae6fe094b8049ac1b3460d327716e4ece
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291682"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766796"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controllo menu watchos (Force Touch) in Novell
 
@@ -28,7 +28,6 @@ Se una `Menu` è stata implementata per un controller di interfaccia, quando un 
 I tocchi di forza non sono associati a un particolare elemento sullo schermo; è possibile collegare un solo menu a un controller di interfaccia, che verrà visualizzato indipendentemente dal punto in cui si verifica la Force Touch premere sullo schermo.
 
 È possibile presentare tra una e quattro opzioni di menu.
-
 
 ## <a name="adding-a-menu"></a>Aggiunta di un menu
 
@@ -56,7 +55,6 @@ partial void MenuItemTapped ()
 Analogamente alle immagini di schede in iOS, le immagini delle voci di menu richiedono un modello opaco con un canale alfa che consente di visualizzare lo sfondo.
 
 Per ottenere prestazioni ottimali, è necessario aggiungere le immagini usate per il menu al progetto Watch app (non il progetto di estensione Watch app).
-
 
 ## <a name="changing-the-menu-items"></a>Modifica delle voci di menu
 
@@ -90,8 +88,6 @@ void MenuItemTapped ()
 È `ClearAllMenuItems` possibile chiamare il metodo per rimuovere tutte le voci di menu *aggiunte a livello di codice* .
 
 Non è possibile cancellare le voci di menu configurate nello storyboard.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

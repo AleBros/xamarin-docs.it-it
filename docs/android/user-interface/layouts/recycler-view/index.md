@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
-ms.openlocfilehash: 7c98686a1aa99e250b3fd1d0fcc6ae64d625a11f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e6c5f6e19599624899f74b99dcaaae734d098b3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522400"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764200"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -29,10 +29,9 @@ Molte app devono visualizzare le raccolte dello stesso tipo (ad esempio messaggi
 
 - Dispone di un'architettura flessibile che consente di modificarne il comportamento tramite l'inserimento di componenti preferiti.
 
-- È efficiente con le raccolte di grandi dimensioni perché riutilizza le visualizzazioni di elementi e richiede l'uso di titolari di *visualizzazione* per memorizzare nella cache i riferimenti alla visualizzazione.
+- È efficiente con le raccolte di grandi dimensioni perché riutilizza le visualizzazioni di elementi e richiede l'uso di *titolari di visualizzazione* per memorizzare nella cache i riferimenti alla visualizzazione.
 
 Questa guida illustra come usare `RecyclerView` nelle applicazioni Novell. Android. viene illustrato come aggiungere il `RecyclerView` pacchetto al progetto Novell. Android e viene descritto come `RecyclerView` funzioni in un'applicazione tipica. Sono disponibili esempi di codice reali che illustrano come integrare `RecyclerView` nell'applicazione, come implementare la visualizzazione di elementi e come aggiornarli `RecyclerView` quando cambiano i dati sottostanti. Questa guida presuppone che l'utente abbia familiarità con lo sviluppo di Novell. Android.
-
 
 ### <a name="requirements"></a>Requisiti
 
@@ -41,7 +40,6 @@ Sebbene `RecyclerView` sia spesso associato al Lollipop di Android 5,0, viene of
 - **Novell. Android** &ndash; Novell. Android 4,20 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
 - Il progetto dell'app deve includere il pacchetto **Novell. Android. support. V7. RecyclerView** . Per ulteriori informazioni sull'installazione di pacchetti NuGet, [vedere Procedura dettagliata: Inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
-
 
 ### <a name="overview"></a>Panoramica
 
@@ -60,7 +58,6 @@ Sebbene `RecyclerView` sia spesso associato al Lollipop di Android 5,0, viene of
 
 - `RecyclerView`include animazioni predefinite per l'aggiunta e la rimozione di elementi. `ListView`le animazioni richiedono alcuni sforzi aggiuntivi da parte dello sviluppatore di app.
 
-
 ### <a name="sections"></a>Sezioni
 
 #### <a name="recyclerview-parts-and-functionalityandroiduser-interfacelayoutsrecycler-viewparts-and-functionalitymd"></a>[Parti e funzionalità di RecyclerView](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
@@ -76,13 +73,11 @@ Questo argomento si basa sulle informazioni fornite nelle [parti e funzionalità
 
 Questo argomento aggiunge codice aggiuntivo all'app di esempio presentata in [un esempio di RecyclerView di base](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) per illustrare come gestire gli eventi Click- `RecyclerView` through e aggiornarli quando viene modificata l'origine dati sottostante.
 
-
 ### <a name="summary"></a>Riepilogo
 
 In questa guida è stato `RecyclerView` introdotto il widget Android. è stato illustrato `RecyclerView` come aggiungere la libreria di supporto ai progetti Novell `RecyclerView` . Android, come riciclare le visualizzazioni, come applicare il modello del supporto di visualizzazione per l'efficienza e come i vari classi helper che compongono la `RecyclerView` collaborazione per la visualizzazione delle raccolte. Il codice di esempio per illustrare `RecyclerView` come è integrato in un'applicazione ha illustrato come personalizzare `RecyclerView`i criteri di layout inserendo in diversi gestori di layout e descritto come gestire gli eventi click degli elementi e inviare notifiche `RecyclerView`delle modifiche all'origine dati.
 
 Per ulteriori informazioni su `RecyclerView`, vedere la pagina relativa al [riferimento alla classe RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 5b829b1c38007bbb070b643a355d70bffaef01a5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f5baf8b46571c9b528fcc666a3f1f4530f18ee07
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761498"
 ---
 # <a name="managing-fragments"></a>Gestione dei frammenti
 
@@ -59,7 +59,6 @@ fragmentTx.AddToBackStack(null);
 fragmentTx.Commit();
 ```
 
-
 ## <a name="communicating-with-fragments"></a>Comunicazione con frammenti
 
 *FragmentManager* conosce tutti i frammenti collegati a un'attività e fornisce due metodi che consentono di trovare i frammenti seguenti:
@@ -76,7 +75,6 @@ Sia i frammenti che le `FragmentManager`attività fanno riferimento a, quindi le
 var emailList = FragmentManager.FindFragmentById<EmailListFragment>(Resource.Id.email_list_fragment);
 emailList.SomeCustomMethod(parameter1, parameter2);
 ```
-
 
 ### <a name="communicating-with-the-activity"></a>Comunicazione con l'attività
 

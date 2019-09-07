@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3bcf52d33ebfaba6117a2089419673e0152cbe88
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289114"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769903"
 ---
 # <a name="databases-in-xamarinmac"></a>Database in Novell. Mac
 
@@ -2221,8 +2221,6 @@ Prima di tutto, si ottiene l'accesso al database SQLite.NET, che viene creato e 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha esaminato in dettaglio l'uso di data binding e la codifica chiave-valore con i database SQLite in un'applicazione Novell. Mac. In primo luogo, è stata esaminata C# l'esposizione di una classe a Objective-C utilizzando la codifica chiave-valore (KVC) e l'osservazione chiave-valore (KVO). Successivamente, è stato illustrato come usare una classe conforme a KVO e i dati lo associano agli elementi dell'interfaccia utente nel Interface Builder di Xcode. Questo articolo illustra anche l'uso di dati SQLite tramite SQLite.NET ORM e la visualizzazione di tali dati in una vista tabella.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7cc7eeabebbfbcd4b264202235307638b88842d8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a14ac0be141a473855dd2e9e19a57fd2d01649bb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524206"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761925"
 ---
 # <a name="lollipop-features"></a>Funzioni Lollipop
 
@@ -28,7 +28,7 @@ Il *tema materiale* è l'incarnazione di questi principi di progettazione dell'i
 
 - **Visualizza ombre ed elevazione** Le visualizzazioni dispongono ora `elevation` di una proprietà. &ndash;   le visualizzazioni con `elevation` valori più elevati hanno il cast di ombre più grandi sullo sfondo.
 
-- **Funzionalità colore** La colorazione disegnatore consente di riutilizzare gli asset delle immagini modificando il colore e l' *estrazione dei colori prominente* consente di eseguire dinamicamente il tema dell'app in base ai colori di un'immagine. &ndash;
+- **Funzionalità colore** La colorazione *disegnatore* consente di riutilizzare gli asset delle immagini modificando il colore e l' *estrazione dei colori prominente* consente di eseguire dinamicamente il tema dell'app in base ai colori di un'immagine. &ndash;
 
 Molte funzionalità dei temi materiali sono già integrate nell'esperienza dell'interfaccia utente di Android 5,0, mentre altre devono essere aggiunte in modo esplicito alle app. Ad esempio, alcune visualizzazioni standard, ad esempio i pulsanti, includono già animazioni di feedback tocco, mentre le app devono abilitare la maggior parte delle ombreggiature di visualizzazione.
 
@@ -39,7 +39,6 @@ Oltre ai miglioramenti apportati all'interfaccia utente per quanto riguarda il t
 - **Nuovi widget dell'interfaccia utente** Il nuovo `RecyclerView` widget rende più semplice per le app fornire set di dati di grandi dimensioni e informazioni complesse e `CardView` il nuovo widget fornisce un formato di presentazione di tipo scheda semplificato per la visualizzazione di testo e immagini. &ndash;
 
 - **Nuove API** &ndash; Android 5,0 aggiunge nuove API per il supporto di più reti, connettività Bluetooth migliorata, gestione dell'archiviazione più semplice e controllo più flessibile dei lettori multimediali e dei dispositivi della fotocamera. È disponibile una nuova funzionalità di pianificazione del processo per eseguire le attività in modo asincrono ai tempi pianificati. Questa funzionalità consente di migliorare la durata della batteria, ad esempio pianificando le attività da eseguire quando il dispositivo viene collegato e caricato.
-
 
 ## <a name="requirements"></a>Requisiti
 
@@ -52,7 +51,6 @@ Per usare le nuove funzionalità di Android 5,0 nelle app basate su Novell, è n
 - **Java Developer Kit** Novell. Android richiede [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o superiore (JDK 1,8 supporta anche i livelli API precedenti a 24, incluso il simbolo). &ndash; La versione a 64 bit di JDK 1,8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti.
-
 
 ## <a name="setting-up-an-android-50-project"></a>Configurazione di un progetto Android 5,0
 
@@ -101,7 +99,6 @@ Android 5,0 usa il nuovo runtime di Android (ART) come runtime predefinito anzic
 
 Le app esistenti dovrebbero funzionare senza modifiche in &ndash; arte, ad eccezione delle app che sfruttano le tecniche univoche del precedente Runtime Dalvik, che potrebbe non funzionare in arte. Per altre informazioni su queste modifiche, vedere [Verifica del comportamento delle app in Android Runtime (Art)](https://developer.android.com/guide/practices/verifying-apps-art.html).
 
-
 ### <a name="notification-changes"></a>Modifiche delle notifiche
 
 Le notifiche sono state modificate in modo significativo in Android 5,0:
@@ -122,7 +119,7 @@ Nella maggior parte dei casi, la funzionalità di notifica delle app esistente a
 
 3. Decidere quale visibilità deve avere le notifiche quando vengono presentate in lockscreen. Se una notifica non è pubblica, quale contenuto dovrebbe essere visualizzato in lockscreen?
 
-4. Impostare la categoria delle notifiche in modo che vengano gestite correttamente nella nuova modalità Android 5,0 non disturbare.
+4. Impostare la categoria delle notifiche in modo che vengano gestite correttamente nella nuova modalità Android 5,0 non *disturbare* .
 
 Se le notifiche presentano controlli di trasporto, visualizzare lo stato della riproduzione `RemoteControlClient`multimediale, usare `ActivityManager.GetRecentTasks`o chiamare, vedere [modifiche di comportamento importanti](https://developer.android.com/preview/api-overview.html#Behaviors) per altre informazioni sull'aggiornamento delle notifiche per Android 5,0.
 
@@ -142,11 +139,9 @@ Il tema materiale include tre versioni predefinite che è possibile usare nell'a
 
 Per altre informazioni sull'uso delle funzionalità del tema materiale nelle app Novell. Android, vedere [tema del materiale](~/android/user-interface/material-theme.md).
 
-
 ## <a name="animations"></a>Animations
 
 Android 5,0 fornisce animazioni di feedback tocco, animazioni di transizione delle attività e animazioni di transizione dello stato di visualizzazione per rendere più intuitive le interfacce delle app. Inoltre, le app Android 5,0 possono usare le animazioni per *rivelare gli effetti* per nascondere o rivelare le visualizzazioni. È possibile usare le impostazioni di *movimento curvo* per configurare la modalità di rendering delle animazioni in modo rapido o lento.
-
 
 ### <a name="touch-feedback-animations"></a>Animazioni feedback tocco
 
@@ -157,7 +152,6 @@ Le animazioni con feedback tocco consentono agli utenti di ricevere commenti e s
 Il contatto iniziale con il pulsante si trova nella prima immagine a sinistra, mentre la sequenza rimanente, da sinistra a destra, illustra il modo in cui l'effetto Ripple viene distribuito al bordo del pulsante. Quando l'animazione Ripple termina, la visualizzazione torna all'aspetto originale. L'animazione Ripple predefinita viene svolta in una frazione di secondo, ma la lunghezza dell'animazione può essere personalizzata per lunghezze di tempo più lunghe o più brevi.
 
 Per altre informazioni sulle animazioni di feedback tocco in Android 5,0, vedere [personalizzare il feedback del tocco](https://developer.android.com/training/material/animations.html#Touch).
-
 
 ### <a name="activity-transition-animations"></a>Animazioni di transizione attività
 
@@ -205,8 +199,7 @@ Le transizioni di elementi condivisi supportano più tipi di animazioni, ad esem
 
 - Modifica delle dimensioni e del tipo di scala per una visualizzazione.
 
-Per altre informazioni sulle animazioni di transizione delle attività in Android 5,0, vedere Personalizzare le transizioni di [attività](https://developer.android.com/training/material/animations.html#Transitions).
-
+Per altre informazioni sulle animazioni di transizione delle attività in Android 5,0, vedere [personalizzare le transizioni di attività](https://developer.android.com/training/material/animations.html#Transitions).
 
 ### <a name="view-state-transition-animations"></a>Animazioni di transizione dello stato di visualizzazione
 
@@ -217,7 +210,6 @@ Android 5,0 rende possibile l'esecuzione delle animazioni quando cambia lo stato
 - Definire la funzionalità di animazione che viene eseguita quando cambia lo stato di una vista. La nuova `StateListAnimator` classe consente di definire un animatore che viene eseguito quando lo stato di una visualizzazione viene modificato.
 
 Per altre informazioni sulle animazioni di transizione dello stato di visualizzazione in Android 5,0, vedere [animazione delle modifiche allo stato di visualizzazione](https://developer.android.com/training/material/animations.html#ViewState).
-
 
 ### <a name="reveal-effect"></a>Rivela effetto
 
@@ -233,7 +225,6 @@ Le animazioni Reveal possono essere annullate. ovvero, il cerchio di ritaglio pu
 
 Per altre informazioni sull'effetto di rivelamento di Android 5,0 in, vedere [usare l'effetto Reveal](https://developer.android.com/training/material/animations.html#Reveal).
 
-
 ### <a name="curved-motion"></a>Movimento curvo
 
 Oltre a queste funzionalità di animazione, Android 5,0 fornisce anche nuove API che consentono di specificare le curve temporali e di movimento delle animazioni. Android 5,0 usa queste curve per interpolare lo spostamento temporale e spaziale durante le animazioni. In Android 5,0 sono definite tre curve:
@@ -246,7 +237,6 @@ Oltre a queste funzionalità di animazione, Android 5,0 fornisce anche nuove API
 
 È possibile utilizzare la nuova `PathInterpolator` classe per specificare come avviene l'interpolazione di movimento. `PathInterpolator`è un interpolatore che attraversa i percorsi di animazione in base ai punti di controllo e alle curve di movimento specificati. Per altre informazioni su come specificare le impostazioni di movimento curvo in Android 5,0, vedere [usare un movimento curvo](https://developer.android.com/training/material/animations.html#CurvedMotion).
 
-
 ## <a name="view-shadows--elevation"></a>Visualizzare le ombreggiature & elevazione
 
 In Android 5,0 è possibile specificare l' *elevazione* di una vista impostando una nuova `Z` proprietà. Un valore `Z` maggiore determina il cast di un'ombreggiatura maggiore sullo sfondo, rendendo la visualizzazione più alta rispetto allo sfondo. È possibile impostare l'elevazione iniziale di una visualizzazione configurando il relativo `elevation` attributo nel layout.
@@ -257,8 +247,7 @@ Nell'esempio seguente vengono illustrate le ombre sottoposte `TextView` a cast d
 
 Le impostazioni dell'ombreggiatura di visualizzazione possono essere statiche (come illustrato in precedenza) oppure possono essere usate nelle animazioni per far sembrare che una visualizzazione si alzi temporaneamente al di sopra dello sfondo della visualizzazione. È possibile utilizzare la `ViewPropertyAnimator` classe per animare l'elevazione di una visualizzazione. L'elevazione di una vista è la somma della relativa `elevation` impostazione di layout `translationZ` più una proprietà che è possibile impostare `ViewPropertyAnimator` tramite una chiamata al metodo.
 
-Per altre informazioni su come visualizzare le ombreggiature in Android 5,0, vedere [definizione di ombreggiature e visualizzazioni](https://developer.android.com/training/material/shadows-clipping.html)di ritaglio.
-
+Per altre informazioni su come visualizzare le ombreggiature in Android 5,0, vedere [definizione di ombreggiature e visualizzazioni di ritaglio](https://developer.android.com/training/material/shadows-clipping.html).
 
 ## <a name="color-features"></a>Funzionalità colore
 
@@ -267,7 +256,6 @@ Android 5,0 fornisce due nuove funzionalità per la gestione dei colori nelle ap
 - La *colorazione disegnatore* consente di modificare i colori delle risorse dell'immagine modificando un attributo di layout.
 
 - L' *estrazione dei colori prominente* consente di personalizzare dinamicamente il tema colori dell'app per coordinarsi con la tavolozza dei colori di un'immagine visualizzata.
-
 
 ### <a name="drawable-tinting"></a>Colorazione ricavabile
 
@@ -281,8 +269,7 @@ Questo logo viene visualizzato sopra uno sfondo circolare blu, come illustrato n
 
 ![Esempi del logo precedente con impostazioni di tinta diverse](lollipop-images/drawable-tinting.png)
 
-Per altre informazioni sulla colorazione delineabile in Android 5,0, vedere la pagina relativa alla [colorazione](https://developer.android.com/training/material/drawables.html#DrawableTint)ricavabile.
-
+Per altre informazioni sulla colorazione delineabile in Android 5,0, vedere la pagina relativa alla [colorazione ricavabile](https://developer.android.com/training/material/drawables.html#DrawableTint).
 
 ### <a name="prominent-color-extraction"></a>Estrazione di colori prominente
 
@@ -308,7 +295,6 @@ Nelle schermate precedenti la barra delle azioni è impostata sul colore "vivace
 
 Per altre informazioni sull'estrazione dei colori in Android 5,0, vedere [estrazione di colori prominenti da un'immagine](https://developer.android.com/training/material/drawables.html#ColorExtract).
 
-
 ## <a name="new-ui-widgets"></a>Nuovi widget dell'interfaccia utente
 
 Android 5,0 introduce due nuovi widget dell'interfaccia utente:
@@ -322,7 +308,6 @@ Entrambi i widget includono il supporto cotto per le funzionalità del tema Mate
 [![Screenshot delle app compilate con RecyclerView](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 La schermata a sinistra è un esempio di `RecyclerView` come usato in un'app di posta elettronica e la schermata a destra è un esempio di `CardView` come usato in un'app di prenotazione viaggi.
-
 
 ### <a name="recyclerview"></a>RecyclerView
 
@@ -342,7 +327,6 @@ Gli screenshot seguenti illustrano un `RecyclerView` oggetto che contiene 100 el
 
 Per ulteriori informazioni `RecyclerView`su, vedere [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
-
 ### <a name="cardview"></a>CardView
 
 `CardView`è una visualizzazione semplice che simula una scheda Mobile con angoli arrotondati. Poiché `CardView` dispone di ombre di visualizzazione predefinite, fornisce un modo semplice per aggiungere profondità visiva all'app. Gli screenshot seguenti illustrano tre esempi orientati al testo `CardView`di:
@@ -352,7 +336,6 @@ Per ulteriori informazioni `RecyclerView`su, vedere [RecyclerView](~/android/use
 Ognuna delle schede nell'esempio precedente contiene un oggetto `TextView`, il colore di sfondo viene impostato tramite l' `cardBackgroundColor` attributo.
 
 Per ulteriori informazioni `CardView`su, vedere [CardView](~/android/user-interface/controls/card-view.md).
-
 
 ## <a name="enhanced-notifications"></a>Notifiche avanzate
 
@@ -389,7 +372,6 @@ In Android 5,0 è possibile fornire i metadati delle notifiche per aiutare Andro
 Le categorie di notifiche vengono usate per filtrare le notifiche che possono essere presentate quando il dispositivo è in modalità *non disturbare* .
 
 Per informazioni dettagliate sulla creazione e l'avvio di notifiche con le funzionalità più recenti di Android 5,0, vedere [notifiche locali](~/android/app-fundamentals/notifications/local-notifications.md).
-
 
 ## <a name="new-apis"></a>Nuove API
 
@@ -451,7 +433,7 @@ Per altre informazioni sulle nuove API di archiviazione in Android 5,0, vedere [
 
 Android 5,0 aggiunge i miglioramenti apportati alle API seguenti per la connettività e wireless:
 
-- Nuove API multirete che consentono alle app di individuare e selezionare le reti con funzionalità specifiche prima di stabilire una connessione.
+- Nuove API *multirete* che consentono alle app di individuare e selezionare le reti con funzionalità specifiche prima di stabilire una connessione.
 
 - Funzionalità di broadcast Bluetooth che consente a un dispositivo Android 5,0 di agire come periferica Bluetooth a basso consumo.
 
@@ -485,8 +467,6 @@ Questo articolo fornisce una panoramica delle nuove funzionalità importanti di 
 
 Se non si ha familiarità con lo sviluppo di Novell Android, vedere [installazione e installazione](~/android/get-started/installation/index.md) per iniziare a usare Novell. Android.
 [Hello, Android](~/android/get-started/hello-android/index.md) è un'ottima introduzione per imparare a creare progetti Android.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

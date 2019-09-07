@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bb1f7024f3518e0e547563d1bd611b2a37d474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529170"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760399"
 ---
 # <a name="containerized-microservices"></a>Microservizi in contenitori
 
-Lo sviluppo di applicazioni client-server ha determinato la creazione di applicazioni a più livelli che usano tecnologie specifiche in ogni livello. Tali applicazioni sono spesso denominate applicazioni monolitiche e vengono assemblate in un pacchetto hardware pre-ridimensionato per i picchi di carico. Gli svantaggi principali di questo approccio di sviluppo sono l'accoppiamento stretto tra i componenti all'interno di ogni livello, che i singoli componenti non possono essere facilmente ridimensionati e il costo dei test. Un semplice aggiornamento può avere effetti imprevisti sul resto del livello e pertanto una modifica a un componente dell'applicazione richiede che l'intero livello venga ritestato e ridistribuito.
+Lo sviluppo di applicazioni client-server ha determinato la creazione di applicazioni a più livelli che usano tecnologie specifiche in ogni livello. Tali applicazioni sono spesso denominate applicazioni *monolitiche* e vengono assemblate in un pacchetto hardware pre-ridimensionato per i picchi di carico. Gli svantaggi principali di questo approccio di sviluppo sono l'accoppiamento stretto tra i componenti all'interno di ogni livello, che i singoli componenti non possono essere facilmente ridimensionati e il costo dei test. Un semplice aggiornamento può avere effetti imprevisti sul resto del livello e pertanto una modifica a un componente dell'applicazione richiede che l'intero livello venga ritestato e ridistribuito.
 
 In particolare per quanto riguarda l'età del cloud, i singoli componenti non possono essere facilmente ridimensionati. Un'applicazione monolitica contiene funzionalità specifiche del dominio ed è in genere divisa per i livelli funzionali, ad esempio front-end, la logica di business e l'archiviazione di dati. Un'applicazione monolitica viene ridimensionata clonando l'intera applicazione su più computer, come illustrato nella figura 8-1.
 
@@ -149,7 +149,6 @@ Per informazioni sull'implementazione del bus di eventi, [vedere microservizi .N
 I microservizi offrono un approccio per lo sviluppo e la distribuzione di applicazioni, adatti ai requisiti di agilità, scalabilità e affidabilità delle applicazioni cloud moderne. Uno dei vantaggi principali dei microservizi è che è possibile scalare orizzontalmente in modo indipendente, il che significa che è possibile ridimensionare un'area funzionale specifica che richiede una maggiore potenza di elaborazione o larghezza di banda di rete per supportare la richiesta, senza inutilmente ridimensionare le aree di applicazione che non sta riscontrando un aumento della domanda.
 
 Un contenitore è un ambiente operativo isolato, controllato dalle risorse e portabile, in cui un'applicazione può essere eseguita senza toccare le risorse di altri contenitori o l'host. Le aziende stanno sempre adottando contenitori quando implementano applicazioni basate su microservizi e Docker è diventato l'implementazione standard del contenitore che è stata adottata dalla maggior parte delle piattaforme software e dai fornitori di cloud.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

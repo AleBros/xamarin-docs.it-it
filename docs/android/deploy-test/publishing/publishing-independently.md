@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d324d1faa045dcfbb2b3e6dcc3000a67b5f9e10
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: bd505e97ce4fcca2197f6c7da2de8411931900ab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525385"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753782"
 ---
 # <a name="publishing-independently"></a>Pubblicazione indipendente
 
@@ -29,18 +29,14 @@ Sono disponibili diverse licenze per lo sviluppo, l'implementazione e la distrib
 
 Visitare il sito [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) per scaricare l'edizione Community o per altre informazioni sull'acquisto delle edizioni Professional ed Enterprise.
 
-
 ## <a name="allow-installation-from-unknown-sources"></a>Consentire l'installazione da origini sconosciute
 
 Per impostazione predefinita, Android impedisce agli utenti di scaricare e installare applicazioni da posizioni diverse da Google Play. Per consentire l'installazione da origini non marketplace, è necessario abilitare l'impostazione *Origini sconosciute* in un dispositivo prima di installare un'applicazione. Questa opzione è disponibile in **Impostazioni > Sicurezza**, come illustrato nello screenshot seguente:
 
 [![Schermata delle impostazioni Sicurezza](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
-
 > [!IMPORTANT]
 > Alcuni provider di rete potrebbero impedire l'installazione di applicazioni da origini sconosciute, indipendentemente da questa impostazione.
-
-
 
 ## <a name="publishing-by-e-mail"></a>Pubblicazione tramite posta elettronica
 
@@ -50,11 +46,9 @@ Allegare la versione finale dell'APK a un messaggio di posta elettronica è un m
 
 Anche se la distribuzione tramite posta elettronica è semplice, offre poche protezioni da atti di pirateria informatica o dalla distribuzione non autorizzata. È consigliabile riservarla ai casi in cui i destinatari dell'applicazione sono pochi e ci si può fidare che non distribuiscano l'applicazione.
 
-
 ## <a name="publishing-by-web"></a>Pubblicazione tramite Web
 
 È possibile distribuire un'applicazione da un server Web. Per eseguire questa operazione è sufficiente caricare l'applicazione nel server Web e quindi fornire un collegamento di download agli utenti. Quando un dispositivo Android visita un collegamento e quindi scarica l'applicazione, tale applicazione verrà installata automaticamente al termine del download.
-
 
 ## <a name="manually-installing-an-apk"></a>Installazione manuale di un pacchetto APK
 

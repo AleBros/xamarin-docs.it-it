@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 21. Trasformazioni
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 21. Trasformazioni'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 21. Trasformazioni'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 313348952b87d94db63d1682f8e1b9413d56714d
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513012"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760573"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Riepilogo del capitolo 21. Trasformazioni
 
@@ -122,8 +122,6 @@ Il `AnchorX` proprietà influisce `RotationY` ma non `RotationX`. Il `AnchorY` p
 Il sistema di coordinate 3D in cui è inclusa per xamarin. Forms è da sinistra. Se si punta l'indice della propria mano a sinistra nella direzione di incremento X coordina (a destra) e coordina il dito intermedio nella direzione y crescente (inattivo), quindi i punti di controllo thumb nella direzione crescente le coordinate Z (su schermo).
 
 Inoltre, per uno dei tre assi, se si posiziona il cursore a sinistra nella direzione di aumentare i valori, quindi la curva delle dita indica la direzione di rotazione per gli angoli di rotazione positivi.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

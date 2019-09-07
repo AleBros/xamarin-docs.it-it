@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: b04ecf0685e78b73346ea5af815ed46f98b5da0f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f25c587f6a51a6b196f201c1b5060ff401f8cad2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761867"
 ---
 # <a name="fragments"></a>Frammenti
 
@@ -46,7 +46,6 @@ Questa guida contiene una copertura completa su come usare i frammenti, tra cui:
 - **Gestione dei frammenti e transazioni** : come modificare i frammenti in fase di esecuzione.
 - **Pacchetto di supporto Android** : come usare le librerie che consentono di usare i frammenti nelle versioni precedenti di Android.
 
-
 ## <a name="requirements"></a>Requisiti
 
 I frammenti sono disponibili nell'Android SDK a partire dal livello API 11 (Android 3,0), come illustrato nello screenshot seguente:
@@ -58,7 +57,6 @@ I frammenti sono disponibili in Novell. Android 4,0 e versioni successive. Per p
 [![Impostazione del livello API del Framework di destinazione nelle opzioni del progetto](images/03-sml.png)](images/03.png#lightbox)
 
 È possibile usare i frammenti nelle versioni precedenti di Android usando il pacchetto del supporto Android e Novell. Android 4,2 o versione successiva. Questa operazione viene illustrata più dettagliatamente nei documenti di questa sezione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

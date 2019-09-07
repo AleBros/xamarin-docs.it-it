@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523659"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761449"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Uso di Novell. Android Designer
 
 _Questo articolo è una procedura dettagliata di Novell. Android Designer. Viene illustrato come creare un'interfaccia utente per un'app per browser a colori piccoli; Questa interfaccia utente viene creata interamente nella finestra di progettazione._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -33,7 +32,6 @@ Questo articolo illustra come usare Novell. Android Designer per creare visivame
 
 L'obiettivo di questa procedura dettagliata consiste nell'usare la Android Designer per creare un'interfaccia utente per un'app del browser colori di esempio. L'app color browser visualizza un elenco di colori, i relativi nomi e i rispettivi valori RGB. Si apprenderà come aggiungere widget alla **area di progettazione** e come disporre visivamente questi widget. Successivamente, si apprenderà come modificare i widget in modo interattivo nel **area di progettazione** o tramite il riquadro **Proprietà** della finestra di progettazione. Infine, si vedrà come appare la progettazione quando l'app viene eseguita in un dispositivo o in un emulatore.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="creating-a-new-project"></a>Crea un nuovo progetto
@@ -46,7 +44,6 @@ Assegnare alla nuova app il nome **DesignerWalkthrough** e fare clic su **OK**.
 Nella finestra di dialogo **nuova app Android** scegliere **app vuota** e fare clic su **OK**:
 
 [![Selezione del modello app vuota Android](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
-
 
 ### <a name="adding-a-layout"></a>Aggiunta di un layout
 
@@ -100,7 +97,6 @@ A questo punto, l'area di progettazione dovrebbe somigliare allo screenshot segu
 
 Se i due `textView` widget non si trovano all' `linearLayout1`interno di `linearLayout1` , è possibile trascinarli nella **struttura del documento** e posizionarli in modo che vengano visualizzati `linearLayout1`come mostrato nella schermata precedente (rientrato in).
 
-
 ### <a name="arranging-the-user-interface"></a>Disposizione dell'interfaccia utente
 
 Il passaggio successivo consiste nel modificare l'interfaccia utente per visualizzare `ImageView` l'oggetto a sinistra, con i `TextView` due widget `ImageView`in pila a destra di.
@@ -140,7 +136,7 @@ Nel riquadro **Proprietà** immettere `padding` nella casella di ricerca e immet
 
 [![Imposta spaziatura interna](designer-walkthrough-images/vs/19-padding-widths-w158-sml.png)](designer-walkthrough-images/vs/19-padding-widths-w158.png#lightbox)
 
-Le impostazioni di riempimento inferiore, sinistro, destro e superiore possono essere impostate in modo indipendente inserendo i valori nei campi riempimento **inferiore**, a **sinistra**, a **destra**e spaziatura interna, rispettivamente.
+Le impostazioni di riempimento inferiore, sinistro, destro e superiore possono essere impostate in modo indipendente inserendo i valori nei campi riempimento **inferiore**, a **sinistra**, a **destra**e **spaziatura interna,** rispettivamente.
 Ad esempio, impostare il campo di **riempimento** a `5dp` sinistra su e i campi **riempimento inferiore**, **riempimento a destra**e **riempimento superiore** per `10dp`:
 
 [![Impostazioni di riempimento personalizzate](designer-walkthrough-images/vs/20-custom-padding-w158-sml.png)](designer-walkthrough-images/vs/20-custom-padding-w158.png#lightbox)
@@ -283,8 +279,6 @@ Compilare ed eseguire l'applicazione. Lo screenshot seguente è un esempio di co
 
 [![Schermata finale](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ### <a name="creating-a-new-project"></a>Crea un nuovo progetto
@@ -352,7 +346,6 @@ Successivamente, aggiungere un `Text (Small)` widget sotto il `Text (Large)` wid
 
 Se i due `textView` widget non si trovano all' `linearLayout1`interno di `linearLayout1` , è possibile trascinarli nella **struttura del documento** e posizionarli in modo che vengano visualizzati `linearLayout1`come mostrato nella schermata precedente (rientrato in).
 
-
 ### <a name="arranging-the-user-interface"></a>Disposizione dell'interfaccia utente
 
 Il passaggio successivo consiste nel modificare l'interfaccia utente per visualizzare `ImageView` l'oggetto a sinistra, con i `TextView` due widget `ImageView`in pila a destra di.
@@ -376,7 +369,6 @@ Se si fa nuovamente clic sul `Width` triangolo, `match_parent`l'impostazione vie
 Con la radice `LinearLayout` selezionata, tornare alla scheda **proprietà** e fare clic su **widget**. Modificare l' `Orientation` impostazione in `horizontal` come illustrato di seguito. A questo punto, la **area di progettazione** dovrebbe essere simile alla schermata seguente. Si noti che `TextView` i widget sono stati spostati a destra `ImageView`del:
 
 [![Seleziona orientamento orizzontale](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
-
 
 ### <a name="modifying-the-spacing"></a>Modifica della spaziatura
 
@@ -528,7 +520,6 @@ Compilare ed eseguire l'applicazione. Lo screenshot seguente è un esempio di co
 [![Schermata finale](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 -----
-
 
 ## <a name="summary"></a>Riepilogo
 

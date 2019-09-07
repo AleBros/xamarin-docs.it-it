@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/20/2017
-ms.openlocfilehash: 47b9d76cb0b7b2fc48fe83d291479f7d1ed00eb8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 934cc5124c71f631def0d534420cf75a12ee4079
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525211"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753591"
 ---
 # <a name="google-licensing-services"></a>Servizi Google Licensing
 
@@ -35,7 +35,6 @@ Il diagramma precedente illustra questo flusso di lavoro:
 - Google Play fornisce informazioni quali l'account Google e il dispositivo stesso, ad esempio il numero IMSI. 
 
 Il servizio Google Licensing è anche un componente chiave dei file di espansione APK, descritti più avanti in questo documento. I file di espansione APK usano i servizi Google Licensing per ottenere gli URL dei file di espansione che verranno scaricati.
-
 
 ## <a name="requirements"></a>Requisiti
 

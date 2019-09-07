@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: edc5ec51499116fc2fabeb03327b32a689dc0c49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279333"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768350"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Parti e funzionalità della tabella in Novell. iOS
 
@@ -67,7 +67,6 @@ Sono disponibili un paio di funzionalità di modifica diverse:
 - Inserimento di nuove celle (con animazione).
 
 Nella parte restante di questo documento viene illustrato come implementare tutte queste funzionalità di UITableView con Novell. iOS.
-
 
 ## <a name="classes-overview"></a>Cenni preliminari sulle classi
 

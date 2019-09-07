@@ -7,12 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: 10b61a7279964e8e1fb76a88be4f253e96b59908
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f93f0462d476daaaa551833391b1be1865795476
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199194"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770545"
 ---
 # <a name="skiasharp-image-filters"></a>Filtri immagini di SkiaSharp
 
@@ -76,7 +76,6 @@ Il **immagine Blur sperimentare** nella pagina il [ **SkiaSharpFormsDemos** ](ht
 ```
 
 Il file code-behind usa due `Slider` i valori per chiamare `SKImageFilter.CreateBlur` per il `SKPaint` oggetto utilizzato per visualizzare il testo e una mappa di bit:
-
 
 ```csharp
 public partial class ImageBlurExperimentPage : ContentPage

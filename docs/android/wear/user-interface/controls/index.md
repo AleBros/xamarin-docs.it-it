@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: db240fa91c7eb99bd628fbb04c7c9352fb615e83
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9f03d9b16a9035a792623dd5571ac1cde8c9f313
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119954"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758194"
 ---
 # <a name="android-wear-controls"></a>Controlli di usura Android
 
@@ -34,7 +34,6 @@ Altri importanti controlli per le app Wear includono:
 - `CardScrollView`(vedere la pagina relativa alla [creazione di schede Android](https://developer.android.com/training/wearables/ui/cards.html))
 
 - `WearableListView`vedere gli [elenchi di creazione di Android](https://developer.android.com/training/wearables/ui/lists.html).
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

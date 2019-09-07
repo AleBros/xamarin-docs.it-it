@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: ae1e8332f1d62a4690863a97f63c0c1bef1ee127
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 584f523446584192cfa882697c0f76865ce78a10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119093"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754921"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servizi associati in Novell. Android
 
@@ -285,7 +285,6 @@ Questo particolare esempio consente a un'attività di richiamare metodi sul serv
 // In this example the Activity is only talking to a friend, i.e. the IGetTimestamp interface provided by the Binder.
 string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 ```
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

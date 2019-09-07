@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: ee29f54ac68f370cb9499d315116a030247f6044
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 291547f7d0fa77edf77b29762576494de0b1abb4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225724"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757804"
 ---
 # <a name="binding-an-aar"></a>Associazione di un file AAR
 
 _Questa procedura dettagliata include istruzioni dettagliate per la creazione di una libreria di binding Java Novell. Android da un dispositivo Android. File AAR._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -31,10 +30,8 @@ Un. Il file AAR è un. Archivio ZIP che contiene gli elementi seguenti:
 
 In questa guida verranno illustrate le nozioni di base per la creazione di una libreria di binding per un singolo. File AAR. Per una panoramica dell'associazione di librerie Java in generale (con un esempio di codice di base), vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md).
 
-
 > [!IMPORTANT]
 > Un progetto di associazione può includerne solo uno. File AAR. Se il. Dipendenze AAR su altro. AAR, le dipendenze devono essere contenute nel proprio progetto di binding e quindi farvi riferimento. Vedere il [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
-
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
@@ -75,8 +72,6 @@ Questa app di esempio, inoltre, recupererà e visualizzerà una risorsa immagine
 
 Questa risorsa immagine si trova in **res/disegnatore/Monkey. png** in **textanalyzer. AAR**.
 
-
-
 ### <a name="creating-the-bindings-library"></a>Creazione della libreria bindings
 
 Prima di iniziare con la procedura seguente, scaricare il file di archivio Android [textanalyzer. AAR](https://github.com/xamarin/monodroid-samples/blob/master/JavaIntegration/AarBinding/Resources/textanalyzer.aar?raw=true) di esempio:
@@ -89,11 +84,9 @@ Prima di iniziare con la procedura seguente, scaricare il file di archivio Andro
 
     [![Aggiungi elemento esistente](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
-
 3. Passare al file **textanalyzer. AAR** scaricato in precedenza, selezionarlo e fare clic su **Aggiungi**:
 
     [![Aggiungere textanalayzer. AAR](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
-
 
 4. Verificare che il file **textanalyzer. AAR** sia stato aggiunto correttamente al progetto:
 
@@ -110,8 +103,6 @@ Prima di iniziare con la procedura seguente, scaricare il file di archivio Andro
     [![Impostazione del livello di destinazione su API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
 7. Compilare la libreria dei binding. Il progetto di libreria Bindings deve essere compilato correttamente e produrre un output. DLL nel percorso seguente: **AarBinding/bin/Debug/AarBinding.dll**
-
-
 
 ### <a name="using-the-bindings-library"></a>Uso della libreria bindings
 
@@ -133,14 +124,11 @@ Per utilizzare questo. DLL nell'app Novell. Android, è necessario innanzitutto 
 
     [![AarBinding è elencato sotto References](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
-
 Se si desidera visualizzare il contenuto del progetto libreria di binding, è possibile fare doppio clic sul riferimento per aprirlo nella **Visualizzatore oggetti**. È possibile visualizzare il contenuto mappato dello `Com.Xamarin.Textcounter` spazio dei nomi (mappato `com.xamarin.textanalyzezr` dal pacchetto Java) ed è possibile `TextCounter` visualizzare i membri della classe:
 
 [![Visualizzazione della Visualizzatore oggetti](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png#lightbox)
 
 Lo screenshot precedente evidenzia i due `TextAnalyzer` metodi che l'app di esempio chiamerà: `NumConsonants` (che esegue il wrapping del metodo `numConsonants` Java sottostante) e `NumVowels` (che esegue il wrapping del metodo `numVowels` Java sottostante).
-
-
 
 ### <a name="accessing-aar-types"></a>Accesso. Tipi AAR
 
@@ -262,9 +250,7 @@ Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e prese
 
 [![Screenshot dell'esecuzione di BindingTest](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png#lightbox)
 
-Provare a toccare il pulsante per il **conteggio** delle consonanti. Inoltre, è possibile modificare la riga di testo e toccare di nuovo questi pulsanti per verificare la presenza di diversi conteggi vocali e consonanti.
-
-
+Provare a toccare il pulsante per il **conteggio delle consonanti** . Inoltre, è possibile modificare la riga di testo e toccare di nuovo questi pulsanti per verificare la presenza di diversi conteggi vocali e consonanti.
 
 ### <a name="accessing-aar-resources"></a>Accesso. Risorse AAR
 
@@ -298,20 +284,16 @@ Modificare il layout di **BindingTest** (**Main. aXML**) e aggiungere `ImageView
 </LinearLayout>
 ```
 
-Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e presenterà la schermata a &ndash; sinistra quando si tocca il **conteggio**delle consonanti, i risultati vengono visualizzati come mostrato a destra:
+Compilare ed eseguire il progetto **BindingTest** . L'app verrà avviata e presenterà la schermata a &ndash; sinistra quando si tocca il **conteggio delle consonanti**, i risultati vengono visualizzati come mostrato a destra:
 
 [![BindingTest che Visualizza il conteggio delle consonanti](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
-
 La procedura è stata completata. La libreria Java è stata associata correttamente. Aar!
-
-
 
 ## <a name="summary"></a>Riepilogo
 
 In questa procedura dettagliata è stata creata una libreria Bindings per un. Il file AAR ha aggiunto la libreria bindings a un'app di test minima ed è stata eseguita l'app per C# verificare che il codice possa chiamare il codice Java che risiede in. File AAR.
 Inoltre, l'app è stata estesa per accedere e visualizzare una risorsa immagine che risiede in. File AAR.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

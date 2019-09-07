@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 2137ff95e65c6841b3e525f0c9755e013310c7e0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dfbcb1a6f502d6d7a5b03dc03278fc21e57806bf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225590"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756618"
 ---
 # <a name="troubleshooting-bindings"></a>Risoluzione dei problemi delle associazioni
 
 _In questo articolo vengono riepilogati gli errori comuni del server che possono verificarsi durante la generazione di binding, nonché le possibili cause e le modalità consigliate per risolverli._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -36,7 +35,6 @@ Il primo passaggio per la risoluzione dei problemi relativi all'associazione di 
 Dopo aver abilitato l'output di diagnostica, ricompilare il progetto di binding Novell. Android ed esaminare il log di compilazione per individuare gli indizi sulla causa del problema.
 
 Può inoltre risultare utile decompilare la libreria Android ed esaminare i tipi e i metodi che Novell. Android sta tentando di associare. Questo aspetto viene trattato in modo più dettagliato più avanti in questa guida.
-
 
 ## <a name="decompiling-an-android-library"></a>Decompilazione di una libreria Android
 
@@ -59,7 +57,6 @@ Dopo aver decompilato la libreria Android, esaminare il codice sorgente. In gene
 > [!NOTE]
 > La decompilazione di una libreria Java potrebbe essere vietata o soggetta a restrizioni legali basate sulle leggi locali o sulla licenza con cui è stata pubblicata la libreria Java. Se necessario, integrare i servizi di un professionista legale prima di provare a decompilare una libreria Java ed esaminare il codice sorgente.
 
-
 ## <a name="inspect-apixml"></a>Controllare l'API. XML
 
 Come parte della compilazione di un progetto di binding, Novell. Android genererà un nome file XML **obj/debug/API. XML**:
@@ -68,16 +65,13 @@ Come parte della compilazione di un progetto di binding, Novell. Android generer
 
 Questo file fornisce un elenco di tutte le API Java che Novell. Android sta tentando di associare. Il contenuto di questo file può aiutare a identificare i tipi o i metodi mancanti, ovvero l'associazione duplicata. Sebbene l'ispezione di questo file sia noiosa e dispendiosa in termini di tempo, può fornire indizi su cosa potrebbe causare problemi di binding. Ad esempio, il **file API. XML** potrebbe rivelare che una proprietà restituisce un tipo non appropriato o che esistono due tipi che condividono lo stesso nome gestito.
 
-
 ## <a name="known-issues"></a>Problemi noti
 
 In questa sezione sono elencati alcuni dei messaggi di errore comuni che si verificano quando si tenta di associare una libreria Android.
 
-
 ### <a name="problem-java-version-mismatch"></a>Problema: Versione Java non corrispondente
 
 A volte i tipi non vengono generati o possono verificarsi arresti imprevisti perché si utilizza una versione più recente o precedente di Java rispetto a quella con cui la libreria è stata compilata. Ricompilare la libreria Android con la stessa versione del JDK usato dal progetto Novell. Android.
-
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>Problema: Almeno una libreria Java è obbligatoria
 
@@ -87,7 +81,6 @@ Viene visualizzato l'errore "almeno una libreria Java è obbligatoria", anche se
 
 Verificare che l'azione di compilazione sia impostata `EmbeddedJar`su. Poiché sono presenti più azioni di compilazione per. File jar, ad esempio `InputJar` `ReferenceJar` , `EmbeddedJar`e `EmbeddedReferenceJar`, il generatore di associazioni non può indovinare automaticamente quale usare per impostazione predefinita. Per ulteriori informazioni sulle azioni di compilazione, vedere [azioni di compilazione](~/android/platform/binding-java-library/index.md).
 
-
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Gli strumenti di associazione non possono caricare. Libreria JAR
 
 Il generatore di librerie di binding non è in grado di caricare. Libreria JAR.
@@ -95,8 +88,6 @@ Il generatore di librerie di binding non è in grado di caricare. Libreria JAR.
 #### <a name="possible-causes"></a>Possibili cause
 
 Alcuni. Le librerie JAR che usano l'offuscamento del codice (tramite strumenti come Proguard) non possono essere caricate dagli strumenti Java. Poiché lo strumento usa la reflection Java e la libreria di progettazione del codice di byte ASM, questi strumenti dipendenti possono rifiutare le librerie offuscate, mentre gli strumenti di runtime di Android potrebbero essere superati. Per risolvere questo problema, è necessario associare manualmente queste librerie anziché utilizzare il generatore di associazioni.
-
-
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>Problema: Tipi C# mancanti nell'output generato.
 
@@ -134,7 +125,7 @@ L'origine C# generata non viene compilata. I tipi di parametro del metodo sottop
 
 #### <a name="possible-causes"></a>Possibili cause:
 
-Novell. Android include un'ampia gamma di campi Java mappati alle enumerazioni nelle C# associazioni. Questi possono causare incompatibilità dei tipi nelle associazioni generate. Per risolvere questo problema, è necessario modificare le firme del metodo create dal generatore di binding per usare le enumerazioni. Per altre informazioni, vedere [correzione](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md)delle enumerazioni.
+Novell. Android include un'ampia gamma di campi Java mappati alle enumerazioni nelle C# associazioni. Questi possono causare incompatibilità dei tipi nelle associazioni generate. Per risolvere questo problema, è necessario modificare le firme del metodo create dal generatore di binding per usare le enumerazioni. Per altre informazioni, vedere [correzione delle enumerazioni](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md).
 
 ### <a name="problem-noclassdeffounderror-in-packaging"></a>Problema: NoClassDefFoundError nel pacchetto
 
@@ -249,7 +240,6 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo sono stati elencati i problemi comuni di risoluzione dei problemi associati ai binding Java e viene spiegato come risolverli.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

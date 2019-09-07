@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: ef3ba27b9056e1de92aabb87f86416b2985d6e1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525705"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754215"
 ---
 # <a name="android-debug-log"></a>Log di debug Android
 
@@ -29,7 +29,6 @@ Lo strumento **Log di debug** fornisce un modo per visualizzare l'output del log
 > Lo strumento **Log di debug** non funziona con Xamarin Live Player.
 
 **Log di Debug** non visualizza i messaggi di log generati durante l'esecuzione dell'app autonoma nel dispositivo, ovvero mentre è disconnessa da Visual Studio.
-
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Accesso al log di debug da Visual Studio
 
@@ -60,13 +59,11 @@ Lo screenshot seguente mostra le varie parti della finestra dello **strumento di
 
 - **Casella di ricerca** &ndash; Consente di immettere stringhe di ricerca per filtrare le voci di log e visualizzarne un subset.
 
-
 Quando la finestra dello strumento **Log di debug** è visualizzata, usare il menu a discesa dei dispositivi per scegliere il dispositivo Android da monitorare:
 
 [![Posizione del selettore di dispositivo](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 Dopo aver selezionato il dispositivo, lo strumento **Log del dispositivo** aggiunge automaticamente le voci di log da un'app &ndash; in esecuzione. Queste voci di log vengono visualizzate nella tabella delle voci di log. Il passaggio da un dispositivo all'altro arresta e avvia la registrazione per il dispositivo. Si noti che è necessario caricare un progetto Android prima che vengano visualizzati tutti i dispositivi nel selettore di dispositivo. Se il dispositivo non compare nel selettore di dispositivo, verificare che sia disponibile nel menu a discesa dei dispositivi di Visual Studio accanto al pulsante **Start**.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -104,7 +101,6 @@ Dopo aver selezionato il dispositivo, lo strumento **Log del dispositivo** aggiu
 
 -----
 
-
 ## <a name="accessing-from-the-command-line"></a>Accesso dalla riga di comando
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -129,11 +125,9 @@ $ ./adb logcat
 
 -----
 
-
 Se sono collegati più dispositivi, è necessario identificare in modo esplicito il dispositivo. **adb -d logcat**, ad esempio, consente di visualizzare il log dell'unico dispositivo fisico connesso, mentre **adb -e logcat** mostra il log dell'unico emulatore in esecuzione.
 
 Per informazioni sugli altri comandi disponibili, immettere **adb** e leggere i messaggi della Guida.
-
 
 ## <a name="writing-to-the-debug-log"></a>Scrittura nel log di debug
 

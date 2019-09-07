@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2a0c21f5a985e7a0bbe5b2afac1520280a0bd5e8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9596ff34352337d892fc22df5651b2f78f8c33f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522137"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762168"
 ---
 # <a name="debug-on-a-wear-device"></a>Eseguire il debug in un dispositivo Wear
 
 _Questo articolo illustra come eseguire il debug di un'applicazione Novell. Android Wear in un dispositivo Wear._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -37,11 +36,9 @@ Per abilitare il debug nel dispositivo Android Wear, attenersi alla procedura se
 
 5. Confermare che il **debug ADB** è abilitato.
 
-
 ## <a name="debugging-over-usb"></a>Debug su USB
 
 Se il dispositivo Wear ha una porta USB, è possibile connettere il dispositivo Wear al computer, distribuirlo ed eseguire/eseguire il debug dell'app come si usa un telefono Android (per altre informazioni, vedere [debug in un dispositivo](~/android/deploy-test/debugging/debug-on-device.md)).
-
 
 ## <a name="debugging-over-bluetooth"></a>Debug su Bluetooth
 
@@ -121,7 +118,6 @@ Eliminare lo screenshot del dispositivo immettendo il comando seguente:
 adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 ```
 
-
 ### <a name="uninstalling-an-app"></a>Disinstallazione di un'app
 
 È possibile disinstallare un'app dal dispositivo Wear immettendo il comando seguente:
@@ -138,7 +134,6 @@ adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 
 Per altre informazioni sul debug di dispositivi Android Wear tramite Bluetooth, vedere [debug su Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
 
-
 ## <a name="debugging-a-wear-app-with-a-companion-phone-app"></a>Debug di un'app Wear con un'app per telefono complementare
 
 Le app Android Wear sono assemblate con un'app per telefoni Android complementare per la distribuzione nel Google Play (per altre informazioni, vedere uso della creazione di [pacchetti](~/android/wear/deploy-test/packaging.md)). Tuttavia, è comunque possibile sviluppare l'app Wear e la relativa app complementare separatamente. Quando si rilascia l'app tramite il Google Play Store, l'app Wear verrà assemblata con l'app complementare e installata automaticamente, se possibile.
@@ -153,7 +148,6 @@ Per eseguire il debug dell'app Wear con un'app complementare:
 
 4. Eseguire ed eseguire il debug dell'app Wear sul dispositivo.
 
- 
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato come configurare un dispositivo Android Wear per l'uso del debug da Visual Studio tramite Bluetooth e come eseguire il debug di un'app Wear con un'app per telefono complementare. Sono stati inoltre forniti suggerimenti comuni per il debug di un'app Wear tramite Bluetooth.

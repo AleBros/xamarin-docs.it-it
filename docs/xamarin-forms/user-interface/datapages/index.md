@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9dc34f412549c4be6099b373ddae7cbd2e8d21c8
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980781"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759676"
 ---
 # <a name="xamarinforms-datapages"></a>Pagine Web di Novell. Forms
 
@@ -45,7 +45,6 @@ L'anteprima include alcune origini dati predefinite disponibili per l'uso:
 
 Vedere la [Guida introduttiva](get-started.md) per un esempio di utilizzo `JsonDataSource`di.
 
-
 ### <a name="pages--controls"></a>Pagine & controlli
 
 Le pagine e i controlli seguenti sono inclusi per consentire un facile binding alle origini dati fornite:
@@ -58,9 +57,7 @@ Le pagine e i controlli seguenti sono inclusi per consentire un facile binding a
 * **HeroImage** : visualizzazione del rendering di un'immagine.
 * **ListItem** : una visualizzazione predefinita con un layout simile agli elementi di elenco nativi iOS e Android.
 
-Per esempi, vedere la Guida di [riferimento ai controlli](controls.md) DataPages.
-
-
+Per esempi, vedere la Guida di [riferimento ai controlli DataPages](controls.md) .
 
 ### <a name="under-the-hood"></a>Dietro le quinte
 

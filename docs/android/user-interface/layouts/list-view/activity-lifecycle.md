@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7c6e395a353dcfd737ad244df9d169edc5b08f1c
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1c093d3d67ace3b0f9186fca8226d4ef631d9af0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510303"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762313"
 ---
 # <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>Novell. Android ListView e ciclo di vita delle attività
 
@@ -24,7 +24,6 @@ Tuttavia, se i dati cambiano di frequente o usano una grande quantità di memori
 
 Se l'adapter usa risorse come la memoria o un cursore gestito, ricordarsi di rilasciare tali risorse nel metodo complementare per la posizione in cui sono state create istanze, ad esempio gli oggetti creati `OnStart` in possono essere eliminati in `OnStop`).
 
-
 ## <a name="configuration-changes"></a>Modifiche di configurazione
 
 È importante ricordare che le modifiche &ndash; alla configurazione, in particolare la rotazione dello schermo e la visibilità &ndash; della tastiera, possono causare la distruzione e la ricreazione dell'attività corrente, a `ConfigurationChanges` meno che non si specifichi diversamente usando il attributo). Ciò significa che, in condizioni normali, la rotazione di un dispositivo `ListView` comporterà la ricreazione di un oggetto e `Adapter` la ricreazione e, `OnPause` a `OnResume`meno che non sia stato scritto codice in e, la posizione di scorrimento e gli Stati di selezione delle righe andranno persi.
@@ -36,4 +35,3 @@ L'attributo seguente impedisce che un'attività venga distrutta e ricreata in se
 ```
 
 L'attività deve quindi eseguire `OnConfigurationChanged` l'override di per rispondere alle modifiche in modo appropriato. Per ulteriori informazioni su come gestire le modifiche di configurazione, vedere la documentazione di.
-

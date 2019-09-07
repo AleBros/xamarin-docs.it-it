@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/23/2016
-ms.openlocfilehash: 15afd5b1812e0423097e889cd8c2558ca01a8074
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4ead912b55790caf3e2e1f22e149f5682e6bb697
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119748"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761210"
 ---
 # <a name="scanning-for-fingerprints"></a>Analisi delle impronte digitali
 
@@ -59,9 +59,6 @@ Si esamineranno ognuno di questi parametri nel `Authenticate` metodo in modo pi�
 Potrebbe essere necessario che l'utente (o l'applicazione) cancelli l'analisi delle impronte digitali dopo che è stata avviata. In questa situazione, richiamare il [`IsCancelled`](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) metodo sull'oggetto [`CancellationSignal`](https://developer.android.com/reference/android/os/CancellationSignal.html) fornito a `FingerprintManager.Authenticate` quando è stato richiamato per avviare l'analisi dell'impronta digitale.
 
 Ora che abbiamo visto il `Authenticate` metodo, esaminiamo alcuni dei parametri più importanti in modo più dettagliato. In primo luogo, si esaminerà la [risposta ai callback di autenticazione](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), in cui verrà illustrato come sottoporre a sottoclasse [FingerprintManager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), consentendo a un'applicazione Android di rispondere ai risultati forniti dallo scanner di impronte digitali.
-
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

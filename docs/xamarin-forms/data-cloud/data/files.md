@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 0d4e32b7bf98758f12dc038e0b61ffa0132f234d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529233"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760571"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestione di file in Xamarin.Forms
 
@@ -118,7 +118,6 @@ Nei progetti condivisi questo problema ha due soluzioni:
 - **Sincronizzare i progetti**: modificare le proprietà del progetto per ogni piattaforma in modo da usare lo **stesso** nome di assembly e spazio dei nomi predefinito. Questo valore può quindi essere impostato come "hardcoded" e usato come prefisso per gli ID della risorsa incorporata nel progetto condiviso.
 - **Direttive #if del compilatore**: usare le direttive del compilatore per impostare il prefisso di ID risorsa corretto e usare questo valore per costruire in modo dinamico l'ID risorsa corretto.
 
-
 Il codice che illustra la seconda opzione è riportato di seguito. Le direttive del compilatore vengono usate per selezionare il prefisso hardcoded della risorsa che in genere corrisponde allo spazio dei nomi predefinito per il progetto di riferimento. Viene quindi usata la variabile `resourcePrefix` per creare un ID risorsa valido concatenandolo con il nome file della risorsa incorporata.
 
 ```csharp
@@ -169,4 +168,3 @@ Questo articolo ha illustrato semplici operazioni su file per il salvataggio e i
 - [Esempio di file](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Esempi di Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md) (Uso del file system in Xamarin.iOS)
-

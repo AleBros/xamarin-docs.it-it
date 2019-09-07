@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 4. Scorrimento dello stack
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 4. Scorrimento dello stack'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 4. Scorrimento dello stack'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66e4f52e87a4398dd2e09d2d128f43de9a71a665
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334599"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760834"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Riepilogo del capitolo 4. Scorrimento dello stack
 
@@ -110,8 +110,6 @@ Inserimento di un `StackLayout` in un `ScrollView` è comune, ma l'inserimento u
 Lo stratagemma consiste nell'assegnare il `ScrollView` figlio il `StackLayout` una `VerticalOptions` impostazione di `FillAndExpand`. Questa funzionalità viene illustrata la [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) esempio.
 
 Il **BlackCat** esempio viene inoltre illustrato come definire e accedere alle risorse di programma che sono incorporate nella libreria condivisa. Ciò può anche essere ottenuto con progetti di Asset condivisi (SAPs) ma il processo è un po' più complicato, come le [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) esempio viene illustrato.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 6a5c06d64a06d8b1a7bcbf32e99905494cd06180
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b750dd4eebb4e181e3a1d3a33c6505bb58b3848b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225488"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757075"
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
-
 
 ## <a name="getting-diagnostic-information"></a>Recupero delle informazioni di diagnostica
 
@@ -25,7 +24,6 @@ Sono inclusi:
 1. Output di MSBuild di diagnostica.
 2. Log di distribuzione del dispositivo.
 3. Output del log di debug Android.
-
 
 <a name="Diagnostic_MSBuild_Output" />
 
@@ -42,7 +40,6 @@ Per abilitare l'output di MSBuild di diagnostica in Visual Studio:
 5. Pulire e ricompilare il pacchetto.
 6. L'output di diagnostica è visibile all'interno del pannello di output.
 
-
 Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS X:
 
 1. Fare clic su **Visual Studio per Mac > preferenze...**
@@ -53,9 +50,6 @@ Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS 
 6. Pulire e ricompilare il pacchetto.
 7. L'output di diagnostica è visibile all'interno del riquadro errori (**visualizzare > rilievi > errori** ) facendo clic sul pulsante output compilazione.
 
-
-
-
 ## <a name="device-deployment-logs"></a>Log di distribuzione del dispositivo
 
 Per abilitare la registrazione della distribuzione dei dispositivi in Visual Studio:
@@ -65,27 +59,21 @@ Per abilitare la registrazione della distribuzione dei dispositivi in Visual Stu
 3. Nel pannello a destra abilitare la casella di controllo [X] **Extension Debug Logging (scrive monodroid. log nel desktop)** .
 4. I messaggi di log vengono scritti nel file monodroid. log sul desktop.
 
-
 Visual Studio per Mac scrive sempre i log di distribuzione del dispositivo. Trovarli è leggermente più difficile; viene creato un file di log *AndroidUtils* per ogni giorno + tempo in cui si verifica una distribuzione, ad esempio: **AndroidTools-2012-10-24_12-35-45.log**.
 
 - In Windows, i file di log vengono `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`scritti in.
 - In OS X, i file di log vengono `$HOME/Library/Logs/XamarinStudio-{VERSION}`scritti in.
 
-
-
-
 ## <a name="android-debug-log-output"></a>Output del log di debug Android
 
 Android scriverà molti messaggi nel [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md).
-Novell. Android usa le proprietà di sistema di Android per controllare la generazione di altri messaggi nel log di debug Android. Le proprietà di sistema di Android possono essere impostate tramite il comando seprop all'interno del [Android Debug Bridge (ADB)](https://developer.android.com/guide/developing/tools/adb.html):
+Novell. Android usa le proprietà di sistema di Android per controllare la generazione di altri messaggi nel log di debug Android. Le proprietà di sistema di Android possono essere impostate tramite il comando *seprop* all'interno del [Android Debug Bridge (ADB)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 ```
 
 Le proprietà di sistema vengono lette durante l'avvio del processo e devono pertanto essere impostate prima che l'applicazione venga avviata o riavviata dopo la modifica delle proprietà di sistema.
-
-
 
 ### <a name="xamarinandroid-system-properties"></a>Proprietà di sistema di Xamarin.Android
 
@@ -146,7 +134,6 @@ Questo errore si verifica a causa di un'incompatibilità con Visual Studio.
 
 Scegliere il pacchetto NuGet System. ValueTuple corretto che corrisponde all'installazione di Visual Studio 2017.
 
-
 ## <a name="gc-messages"></a>Messaggi GC
 
 È possibile visualizzare i messaggi del componente GC impostando la proprietà di sistema debug. mono. log su un valore che contiene GC.
@@ -176,8 +163,6 @@ D/Mono ( 2073): GC_MAJOR: (user request) pause 2.17ms, total 2.47ms, bridge 28.7
 `GC_MAJOR` Neimessaggi`total` eè`bridge` l'intervallo di tempo durante il quale il mondo è sospeso (nessun thread è in esecuzione), mentre è la quantità di tempo impiegato nel codice di elaborazione del Bridge (che gestisce la VM Java). `GC_MINOR` Il mondo *non* viene sospeso mentre viene eseguita l'elaborazione del Bridge.
 
  *In generale*, maggiore è il valore di `num_hash_entries`, `bridge` maggiore `total` sarà il tempo necessario per le raccolte e maggiore sarà il tempo impiegato per la raccolta.
-
-
 
 ## <a name="global-reference-messages"></a>Messaggi di riferimento globali
 
@@ -220,8 +205,7 @@ Ci sono quattro messaggi di conseguenza:
 - Creazione di riferimento globale debole: queste sono le righe che iniziano con *+ w +* .
 - Distruzione di riferimento globale debole: si tratta di righe che iniziano con *-w-* .
 
-
-In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Novell. Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Novell. Android. Il valore handle *o obj-handle* è il valore dell'handle JNI e il carattere dopo ' */* ' è il tipo di valore handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per i riferimenti globali vulnerabili.
+In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Novell. Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Novell. Android. Il valore handle *o obj-handle* *è il valore* dell'handle JNI e il carattere dopo ' */* ' è il tipo di valore handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per i riferimenti globali vulnerabili.
 
 Come parte del processo GC, i riferimenti globali (+ g +) vengono convertiti in riferimenti globali vulnerabili (causando + w + e-g-), viene attivato un GC sul lato Java, quindi viene eseguito il controllo del riferimento globale debole per verificare se è stato raccolto. Se è ancora attivo, viene creato un nuovo Gref intorno al Ref debole (+ g +,-w-); in caso contrario, il riferimento debole viene eliminato (-w).
 
@@ -268,13 +252,9 @@ Android 4,0, tuttavia, ha un agente di raccolta in fase di esecuzione e non invi
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount`-Conteggio riferimenti deboli
 
-
-
 ## <a name="android-debug-logs"></a>Log di debug Android
 
 I [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md) possono fornire un contesto aggiuntivo relativo a eventuali errori di runtime che vengono visualizzati.
-
-
 
 ## <a name="floating-point-performance-is-terrible"></a>Le prestazioni a virgola mobile sono terribili.
 
@@ -290,16 +270,12 @@ Le compilazioni di versione includeranno solo l'oggetto ABIs selezionato nella s
 
 Se l'app richiede prestazioni a virgola mobile decenti, ad esempio giochi, è necessario abilitare l'Abi *ARMEABI-v7a* . È possibile che si voglia supportare solo il runtime *ARMEABI-v7a* , anche se ciò significa che i dispositivi meno recenti che supportano solo *ARMEABI* non saranno in grado di eseguire l'app.
 
-
-
 ## <a name="could-not-locate-android-sdk"></a>Non è stato possibile individuare Android SDK
 
 Sono disponibili 2 download da Google per la Android SDK per Windows.
 Se si sceglie il programma di installazione con estensione exe, vengono scritte le chiavi del registro di sistema che indicano a Novell. Android dove è stato installato. Se si sceglie il file con estensione zip e lo si decomprime autonomamente, Novell. Android non sa dove cercare l'SDK. È possibile indicare a Novell. Android il percorso dell'SDK in Visual Studio passando a **strumenti > opzioni > novell > Android Settings**:
 
 [![Percorso Android SDK nelle impostazioni di Novell Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
-
-
 
 ## <a name="ide-does-not-display-target-device"></a>IDE non Visualizza il dispositivo di destinazione
 
@@ -320,11 +296,9 @@ adb start-server
 
 Il software HTC Sync potrebbe impedire il corretto funzionamento di **ADB Start-Server** . Se il comando **ADB Start-Server** non stampa la porta da cui sta iniziando, uscire dal software HTC Sync e provare a riavviare il server ADB.
 
-
 ## <a name="the-specified-task-executable-keytool-could-not-be-run"></a>Non è stato possibile eseguire l'eseguibile dell'attività specificato "strumento".
 
 Questo significa che il percorso non contiene la directory in cui si trova la directory bin di Java SDK. Verificare di aver seguito i passaggi della Guida all' [installazione](~/android/get-started/installation/index.md) .
-
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid. exe o aresgen. exe terminato con il codice 1
 
@@ -342,7 +316,6 @@ emulator -partition-size 512 -avd MonoDroid
 
 Assicurarsi di usare il nome corretto del simulatore, ovvero [il nome usato durante la configurazione del simulatore](~/android/get-started/installation/windows.md#device).
 
-
 ## <a name="install_failed_invalid_apk-when-installing-a-package"></a>Installazione\_dell'\_apk\_non valida non riuscita durante l'installazione di un pacchetto
 
 I nomi dei pacchetti Android *devono* contenere un punto (' *.* '). Modificare il nome del pacchetto in modo che contenga un punto.
@@ -357,9 +330,6 @@ I nomi dei pacchetti Android *devono* contenere un punto (' *.* '). Modificare i
   - Passare alla sezione relativa all'applicazione Build/Android.
   - Modificare il campo del nome del pacchetto in modo che contenga ".".
 
-
-
-
 ## <a name="install_failed_missing_shared_library-when-installing-a-package"></a>Installazione\_libreria\_condivisamancante\_non riuscita durante l'installazione di un pacchetto\_
 
 Una "libreria condivisa" in questo contesto *non* è un file di libreria condivisa nativa (*libfoo.so*). si tratta invece di una libreria che deve essere installata separatamente sul dispositivo di destinazione, ad esempio Google Maps.
@@ -370,8 +340,6 @@ Per determinare quali librerie condivise sono necessarie, visualizzare il file**
 (ad esempio **,\\obj\\debug\\Android file AndroidManifest. XML**) e cercare il `<uses-library/>` elementi. `<uses-library/>`gli elementi possono essere aggiunti manualmente nel file **file AndroidManifest.\\XML delle proprietà** del progetto e tramite l' [attributo personalizzato UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute).
 
 Ad esempio, se si aggiunge un riferimento a un assembly *mono. Android. GoogleMaps. dll* , si `<uses-library/>` aggiunge in modo implicito un oggetto per la libreria condivisa di Google Maps.
-
-
 
 ## <a name="install_failed_update_incompatible-when-installing-a-package"></a>Installazione\_dell'\_aggiornamento\_non riuscito non compatibile durante l'installazione di un pacchetto
 
@@ -387,7 +355,6 @@ Si supponga quindi che questo scenario:
 2. Si modifica la chiave di firma, ad esempio per usarla come app per la versione (o perché la chiave di firma del debug specificata dal valore predefinito)
 3. Si installa l'app senza rimuoverla prima, ad esempio debug > Avvia senza eseguire debug in Visual Studio
 
-
 Quando si verifica questa situazione, l'installazione del pacchetto avrà\_esito\_negativo con un errore di installazione dell'aggiornamento non compatibile, perché il nome del pacchetto non è\_stato modificato durante la chiave di firma. Il [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md) conterrà anche un messaggio simile a:
 
 ```shell
@@ -395,7 +362,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 ```
 
 Per correggere l'errore, rimuovere completamente l'applicazione dal dispositivo prima di reinstallare.
-
 
 ## <a name="install_failed_uid_changed-when-installing-a-package"></a>Installazione\_di\_UID\_non riuscita modificata durante l'installazione di un pacchetto
 
@@ -417,9 +383,7 @@ Per risolvere questo problema, *disinstallare completamente* il pacchetto Androi
 $ adb uninstall @PACKAGE_NAME@
 ```
 
-non **usare** , poiché questo conserverà i dati dell'applicazione e quindi manterrà l'UID in conflitto sul dispositivo di destinazione. `adb uninstall -k`
-
-
+non **usare** , poiché questo conserverà i dati *dell'applicazione e* quindi manterrà l'UID in conflitto sul dispositivo di destinazione. `adb uninstall -k`
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>Non è possibile avviare le app della versione nel dispositivo
 
@@ -467,7 +431,6 @@ Riavviare Visual Studio o Visual Studio per Mac e provare a ricompilare. Gli ele
 
 Novell. Android 4. x non esegue correttamente il marshalling di tipi generici annidati. Si consideri ad esempio il\# seguente codice C con [SimpleExpandableListAdapter](xref:Android.Widget.SimpleExpandableListAdapter):
 
-
 ```csharp
 // BAD CODE; DO NOT USE
 var groupData = new List<IDictionary<string, object>> () {
@@ -496,7 +459,6 @@ mAdapter = new SimpleExpandableListAdapter (
         new int[] { Android.Resource.Id.Text1, Android.Resource.Id.Text2 }
 );
 ```
-
 
 Il problema è che Novell. Android esegue erroneamente il marshalling dei tipi generici annidati. `List<IDictionary<string, object>>` viene sottoposto a marshalling a un oggetto [java.lang.ArrrayList](xref:Java.Util.ArrayList), ma `ArrayList` contiene le istanze `mono.android.runtime.JavaObject` (che fanno riferimento alle istanze `Dictionary<string, object>`) anziché un elemento che implementa [java.util.Map](xref:Java.Util.IMap), con l'eccezione seguente:
 
@@ -547,7 +509,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [Questo problema verrà risolto in una versione futura](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
-
 ## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceException impreviste
 
 Occasionalmente, il [logdidebugAndroid](~/android/deploy-test/debugging/android-debug-log.md)menzioneràleeccezioniNullReferenceExceptionche&ldquo;nonpossonoverificarsi&rdquo;oprovengonodalcodicediruntimedimonoperAndroidpocoprimachel'app muoia:
@@ -577,7 +538,6 @@ Per verificare se questo è il caso, controllare il log di debug Android per un 
 ```shell
 E/dalvikvm(  123): VM aborting
 ```
-
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>Interrompi a causa dell'esaurimento del riferimento globale
 
@@ -661,13 +621,11 @@ E/dalvikvm(  602): Excessive JNI global references (2001)
 E/dalvikvm(  602): VM aborting
 ```
 
-
 Nell'esempio precedente, che, incidentalmente, deriva dal [bug 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215), il problema è dovuto al fatto che sono state create troppe istanze di Android. graphics. Point. per un elenco di correzioni per questo particolare bug, vedere il [Commento \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) .
 
 In genere, una soluzione utile è trovare il tipo a cui sono state allocate &ndash; troppe istanze di Android. graphics. puntare nel dump &ndash; precedente, quindi trovare la posizione in cui vengono creati nel codice sorgente ed eliminarli in modo appropriato, in modo che i relativi La durata dell'oggetto Java è stata abbreviata. Questa operazione non è sempre appropriata\#(685215 è multithreading, quindi la soluzione Trivial evita la chiamata a Dispose), ma è la prima cosa da considerare.
 
 È possibile abilitare la [registrazione Gref](~/android/troubleshooting/index.md) per vedere quando vengono creati GREFs e il numero di exist.
-
 
 ## <a name="abort-due-to-jni-type-mismatch"></a>Interruzione a causa di mancata corrispondenza del tipo JNI
 
@@ -693,7 +651,6 @@ Per usare la\# dinamica C nell'applicazione o nella libreria, è necessario aggi
   - Tenere presente che il codice dinamico costi sempre. Se è necessario codice efficiente, provare a non usare il codice dinamico.
 
 - Nella prima anteprima questi assembly sono stati esclusi a meno che i tipi in ogni assembly non vengano usati in modo esplicito dal codice dell'applicazione. Per una soluzione alternativa, vedere quanto segue:[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
-
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>Progetti compilati con AOT + LLVM arresti anomali sui dispositivi x86
 

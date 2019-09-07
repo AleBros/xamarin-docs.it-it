@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 1163f264fc54a461d8d95854524439589cdc81f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 399f411acd497b9d55ca81f670556430fe5f5503
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646976"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771293"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Creazione di un DataTemplate in Xamarin.Forms
 
@@ -288,7 +288,6 @@ Il [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) viene aggiunto all'elemento
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha descritto come creare modelli di dati inline da un tipo personalizzato o in un elemento [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). Usare un modello inline se non è necessario usare di nuovo il modello di dati altrove. In alternativa, è possibile riusare un modello di dati definendolo come tipo personalizzato o come risorsa a livello di controllo, a livello di pagina o a livello di applicazione.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

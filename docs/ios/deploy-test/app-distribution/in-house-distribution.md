@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f81e5a24957d4af1cd2ce27b39d1f398797cce73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289880"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763058"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuzione interna per le app Xamarin.iOS
 
@@ -94,7 +94,6 @@ In alternativa, è possibile richiedere un certificato tramite la finestra di di
 
 Come per qualsiasi altro profilo di provisioning creato, sarà necessario un ID app per identificare l'app che si distribuirà nel dispositivo dell'utente. Se non è già stato creato, seguire questa procedura per crearne uno:
 
-
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
 2. Fare clic sul pulsante **+** e specificare un **nome** lo identificherà nel portale.
 3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **CarattereJolly**:com.[NomeDominio].*
@@ -150,13 +149,11 @@ Nel programma Apple Developer Enterprise, il licenziatario è la persona respons
 
 Per distribuire l'app in uno di questi modi, è prima necessario creare un file IPA, come illustrato nella sezione successiva.
 
-
 ### <a name="creating-an-ipa-for-in-house-deployment"></a>Creazione di un file IPA per la distribuzione interna
 
 Dopo il provisioning, le applicazioni possono essere compresse in un file noto come *IPA*. Si tratta di un file ZIP contenente l'applicazione, con le icone e i metadati aggiuntivi. Il file IPA viene usato per aggiungere un'applicazione in locale in iTunes in modo che possa essere sincronizzata direttamente con un dispositivo incluso nel profilo di provisioning.
 
 Per altre informazioni sulla creazione di un file IPA, vedere [Supporto IPA](~/ios/deploy-test/app-distribution/ipa-support.md).
-
 
 ## <a name="summary"></a>Riepilogo
 

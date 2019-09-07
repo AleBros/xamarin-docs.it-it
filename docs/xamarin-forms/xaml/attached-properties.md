@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: c8be9220f17a0f0f046f09ff61ae76d1fed7e15f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b5d1ddc4cf3a6817851d22aba920abb29d9f746f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644780"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767640"
 ---
 # <a name="attached-properties"></a>Proprietà associate
 
@@ -141,7 +141,6 @@ Durante la creazione di una proprietà associata, esistono una serie di parametr
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato le proprietà associate ed è stato illustrato come creare e il loro uso. Una proprietà associata è un tipo speciale di proprietà associabile, definita in una classe ma collegato ad altri oggetti e che sia riconoscibile in XAML come attributi che contengono una classe e un nome di proprietà separati da un punto.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: fa0a3a75a4cc2cfd04b607f17206faa822af0474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fad17bdda9566eeabcbe173c19c4d951bed630a7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523638"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761286"
 ---
 # <a name="using-native-libraries"></a>Uso di librerie native
 
@@ -27,7 +27,6 @@ Esistono due modi per farlo:
 1. Percorso "sniffing"
 1. Utilizzando un `AndroidNativeLibrary/Abi` elemento nel file di progetto
 
-
 Con l'analisi del percorso, il nome della directory padre della libreria nativa viene usato per specificare l'ABI di destinazione della libreria. Quindi, se si aggiunge `lib/armeabi/libfoo.so` al progetto, l'Abi verrà "sniffata" come. `armeabi`
 
 In alternativa, è possibile modificare il file di progetto per specificare in modo esplicito l'ABI da usare:
@@ -40,7 +39,7 @@ In alternativa, è possibile modificare il file di progetto per specificare in m
 </ItemGroup>
 ```
 
-Per ulteriori informazioni sull'utilizzo delle librerie native, vedere interoperabilità [con librerie native](https://www.mono-project.com/docs/advanced/pinvoke/).
+Per ulteriori informazioni sull'utilizzo delle librerie native, vedere [interoperabilità con librerie native](https://www.mono-project.com/docs/advanced/pinvoke/).
 
 ## <a name="debugging-native-code-with-visual-studio"></a>Debug del codice nativo con Visual Studio
 
@@ -54,8 +53,6 @@ Per eseguire il C++ debug del codice nativo nel progetto, attenersi alla procedu
 3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Novell)** .
 
 Gli sviluppatori C++ di Visual Studio possono vedere l'esempio [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) per C++ provare a eseguire il debug da visual studio 2019 o Visual Studio 2017 con Novell; Per ulteriori informazioni, vedere il [post di Blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61532eb1e31db6a862275180394b2b5ba9b05f8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280601"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761721"
 ---
 # <a name="location-services-on-android"></a>Servizi di posizione in Android
 
@@ -75,11 +75,10 @@ else
 
 Le app devono essere a tolleranza dello scenario in cui l'utente non concede l'autorizzazione (o ha revocato l'autorizzazione) ed è in grado di gestire la situazione in modo normale. Per ulteriori informazioni sull'implementazione dei controlli delle autorizzazioni di runtime in Novell. Android, vedere la [Guida alle autorizzazioni](~/android/app-fundamentals/permissions.md) .
 
-
 ## <a name="using-the-fused-location-provider"></a>Uso del provider di percorsi con fusibile
 
 Il provider di percorsi con fusibile è il modo preferito per le applicazioni Android per la ricezione degli aggiornamenti del percorso dal dispositivo, in quanto consente di selezionare in modo efficiente il provider di località in fase di esecuzione per fornire le informazioni sulla posizione ottimale in modo efficiente per la batteria. Ad esempio, un utente che cammina intorno all'esterno ottiene la posizione migliore per la lettura con GPS. Se l'utente passa a un punto di ingresso, in cui il GPS funziona in modo non corretto (se disponibile), il provider del percorso con fusibile può passare automaticamente al Wi-Fi, che funziona in modo ottimale.
- 
+
 L'API del provider di percorsi con fusibile fornisce un'ampia gamma di altri strumenti per potenziare le applicazioni in grado di riconoscere la posizione, tra cui il monitoraggio delle attività e geoschermate In questa sezione verranno illustrate le nozioni di base per la configurazione `LocationClient`di, la definizione dei provider e la posizione dell'utente.
 
 Il provider del percorso fuso fa parte di [Google Play Services](https://developer.android.com/google/play-services/index.html).

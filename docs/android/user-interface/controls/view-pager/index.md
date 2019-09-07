@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: eca0f82fd967c28bffc8f20bcc9e2ec6bb3ba737
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: d42940c466dbde7c8528d31f395e3f86e39d7c1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227694"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762356"
 ---
 # <a name="viewpager"></a>ViewPager
 
 _ViewPager è un gestore di layout che consente di implementare la navigazione gestuale. La navigazione gestuale consente all'utente di scorrere verso sinistra e destra per scorrere le pagine di dati. Questa guida illustra come implementare la navigazione gestuale con ViewPager, con e senza frammenti. Viene inoltre descritto come aggiungere indicatori di pagina utilizzando PagerTitleStrip e PagerTabStrip._
 
- 
 ## <a name="overview"></a>Panoramica
 
 Uno scenario comune nello sviluppo di app è la necessità di fornire agli utenti la navigazione gestuale tra le visualizzazioni di pari livello. Con questo approccio, l'utente scorre verso sinistra o verso destra per accedere alle pagine di contenuto (ad esempio, in una procedura guidata di installazione o di presentazione). È possibile creare queste visualizzazioni swipe usando il `ViewPager` widget, disponibile nella libreria di [supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). `ViewPager` È un widget di layout composto da più visualizzazioni figlio in cui ogni visualizzazione figlio costituisce una pagina nel layout: 
@@ -36,12 +35,10 @@ In questa guida vengono illustrati entrambi gli approcci:
 
 - In [viewpager con frammenti](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), è stata sviluppata un'app [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) leggermente più complessa per dimostrare come usare `ViewPager` con `Fragment`i per creare un'app che presenta problemi matematici come schede flash e risponde all'input dell'utente. 
 
-
 ## <a name="requirements"></a>Requisiti
 
 Per usare `ViewPager` nel progetto dell'app, è necessario installare il pacchetto della [libreria di supporto Android V4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Per ulteriori informazioni sull'installazione di pacchetti NuGet, [vedere Procedura dettagliata: Inclusione di NuGet nel progetto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
- 
 ## <a name="architecture"></a>Architettura
 
 Vengono usati tre componenti per implementare la navigazione gestuale `ViewPager`con:
@@ -52,14 +49,11 @@ Vengono usati tre componenti per implementare la navigazione gestuale `ViewPager
 
 Ognuno di questi componenti è riepilogato di seguito.
 
-
-
 ### <a name="viewpager"></a>ViewPager
 
 `ViewPager`è un gestore di layout che visualizza una raccolta `View`di uno alla volta. Il processo consiste nel rilevare il gesto di scorrimento dell'utente e passare alla visualizzazione successiva o precedente, in base alle esigenze. Ad esempio, nella schermata seguente viene illustrato `ViewPager` un passaggio da un'immagine a quella successiva in risposta a un gesto utente: 
 
 [![Primo piano dell'app TreePager che visualizza una transizione tra le visualizzazioni](images/02-transition-sml.png)](images/02-transition.png#lightbox)
-
 
 ### <a name="adapter"></a>Adattatore
 
@@ -68,8 +62,6 @@ Ognuno di questi componenti è riepilogato di seguito.
 [![Diagramma che illustra il modo in cui l'adapter connette le immagini e i nomi a ViewPager](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
 
 In questo particolare esempio, ogni `View` oggetto viene costruito da un'immagine di struttura ad albero e da un nome `ViewPager`di albero prima che venga passato a. 
-
-
 
 ### <a name="pager-indicator"></a>Indicatore cercapersone
 
@@ -80,8 +72,6 @@ Sono disponibili due visualizzazioni che possono produrre le informazioni di nav
 [![Screenshot dell'app TreePager con PagerTitleStrip e PagerTabStrip](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
 
 Questa guida illustra come immplement `ViewPager`, adapter e indicatore dei componenti dell'app e per integrarli per supportare la navigazione gestuale. 
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

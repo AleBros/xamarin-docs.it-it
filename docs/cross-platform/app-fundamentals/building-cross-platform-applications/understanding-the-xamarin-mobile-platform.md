@@ -6,12 +6,12 @@ ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 5398d99a64e7f6b75c8b9e418da252852aff1322
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: af2b8cd39d5fb1b0ce6c12f7d6ad87e245b9a594
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288682"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761964"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: informazioni sulla piattaforma Novell mobile
 
@@ -36,7 +36,6 @@ Il C# codice sorgente è in grado di accedere a un'app nativa in modi molto dive
 - **Android** : C# viene compilato in il e incluso in un pacchetto con MonoVM + JIT'ing. Le classi inutilizzate nel Framework vengono rimosse durante il collegamento. L'applicazione viene eseguita side-by-side con Java/ART (runtime di Android) e interagisce con i tipi nativi tramite JNI (vedere [limitazioni di Novell. Android](~/android/internals/limitations.md) ).
 - **Windows** : C# viene compilato in il e viene eseguito dal runtime predefinito e non richiede gli strumenti Novell. La progettazione di applicazioni Windows in base alle linee guida di Novell rende più semplice riusare il codice in iOS e Android.
   Si noti che il piattaforma UWP (Universal Windows Platform) dispone anche di un'opzione di **.NET native** che si comporta in modo analogo alla compilazione AOT di Novell. iOS.
-
 
 La documentazione del linker per [Novell. iOS](~/ios/deploy-test/linker.md) e [Novell. Android](~/android/deploy-test/linker.md) fornisce ulteriori informazioni su questa parte del processo di compilazione.
 

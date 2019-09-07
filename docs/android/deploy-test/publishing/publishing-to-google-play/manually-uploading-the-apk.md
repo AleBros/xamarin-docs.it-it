@@ -6,18 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3852e2a1460cb5659cf5a00dcc17fb9a6e9c26a8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525303"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756062"
 ---
 # <a name="manually-uploading-the-apk"></a>Caricamento manuale dell'APK
 
-
 La prima volta che si invia un file APK a Google Play o se si usa una versione precedente di Xamarin.Android), l'APK deve essere caricato manualmente usando [Google Play Developer Console](https://play.google.com/apps/publish). Questa guida illustra i passaggi necessari per questo processo. 
-
 
 ## <a name="google-play-developer-console"></a>Google Play Developer Console
 
@@ -54,13 +52,11 @@ Per altre informazioni sui test dell'app, vedere la guida alla [configurazione d
 
 Al termine del caricamento l'APK viene salvato come bozza. Non può essere pubblicato finché non si specificano altre informazioni in Google Play come descritto di seguito.
 
-
 ## <a name="store-listing"></a>Presentazione nello store
 
 Fare clic su **Scheda dello store** in **Google Play Developer Console** per immettere le informazioni che verranno visualizzate da Google Play ai potenziali utenti dell'applicazione: 
 
 [![Finestra di dialogo Scheda dello store](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
-
 
 ### <a name="graphics-assets"></a>Risorse grafiche
 
@@ -70,7 +66,6 @@ Scorrere verso il basso fino alla sezione **RISORSE GRAFICHE** della pagina di *
 
 Tutti gli asset promozionali preparati in precedenza vengono caricati in questa sezione. Vengono visualizzate indicazioni relative agli asset che devono essere specificati e al formato in cui devono essere specificati.
 
-
 ### <a name="categorization"></a>Classificazione
 
 Dopo la sezione **RISORSE GRAFICHE** appare la sezione **CLASSIFICAZIONE** in cui si possono selezionare il tipo e la categoria dell'applicazione:
@@ -79,7 +74,6 @@ Dopo la sezione **RISORSE GRAFICHE** appare la sezione **CLASSIFICAZIONE** in cu
 
 La classificazione del contenuto viene illustrata dopo la sezione successiva.
 
-
 ### <a name="contact-details"></a>Dettagli del contatto
 
 La sezione finale di questa pagina è **INFORMAZIONI DI CONTATTO**. Questa sezione viene usata per raccogliere informazioni di contatto sullo sviluppatore dell'applicazione:
@@ -87,7 +81,6 @@ La sezione finale di questa pagina è **INFORMAZIONI DI CONTATTO**. Questa sezio
 [![Sezione dei dati di contatto](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 È possibile specificare un URL per l'informativa sulla privacy dell'app nella sezione **NORME SULLA PRIVACY**, come indicato in precedenza.
-
 
 ## <a name="content-rating"></a>Classificazione dei contenuti
 
@@ -111,7 +104,6 @@ Di seguito sono elencati i quattro livelli del sistema di classificazione di Goo
 
 Le voci dell'elenco Maturità media sono soggettive, di conseguenza è possibile che una situazione che rientra nella tipologia Maturità media sia tale da poter essere classificata al livello Maturità alta. 
 
-
 ## <a name="pricing-amp-distribution"></a>Prezzi &amp; distribuzione
 
 Fare clic su **Prezzi e distribuzione** in **Google Play Developer Console**. Impostare un prezzo in questa pagina se l'app è a pagamento.
@@ -122,13 +114,11 @@ Per pubblicare un'app a pagamento è necessario un account commerciante. A tale 
 
 [![Finestra di dialogo Prezzi e distribuzione](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-
 ### <a name="manage-countries"></a>Gestire i paesi
 
 La sezione successiva consente di **gestire i paesi**, ovvero stabilire in quali paesi si può distribuire un'app:
 
 [![Finestra di dialogo di gestione dei paesi](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
-
 
 ### <a name="other-information"></a>Altre informazioni
 
@@ -137,7 +127,6 @@ Scorrere ancora verso il basso per specificare se l'app contiene annunci. Inoltr
 [![Contiene una sezione di annunci](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
 Dopo questa sezione è possibile selezionare opzioni aggiuntive, ad esempio scegliere **Per la famiglia** e distribuire l'app in Google Play for Education.
-
 
 ### <a name="consent"></a>Consenso
 
@@ -148,8 +137,6 @@ La sezione è obbligatoria e viene usata per dichiarare che l'applicazione soddi
 
 Esistono molti altri argomenti relativi alla pubblicazione di un'app Xamarin.Android che non sono trattati in questa guida.
 Per altre informazioni sulla pubblicazione dell'app in Google Play, vedere [Benvenuto nel Centro assistenza di Google Play Console](https://support.google.com/googleplay/android-developer#topic=3450769).
-
-
 
 ## <a name="google-play-filters"></a>Filtri di Google Play
 

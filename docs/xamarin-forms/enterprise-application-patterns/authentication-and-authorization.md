@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 45008e127286d14ef62c5212976bfd3a8aac651f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667de4d579f43558d9a811c386e355433f526077
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529173"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760467"
 ---
 # <a name="authentication-and-authorization"></a>Autenticazione e autorizzazione
 
@@ -414,7 +414,7 @@ IdentityServer possono essere integrate nel flusso di lavoro di autorizzazione i
 
 **Figura 9-5:** Autorizzazione per token di accesso
 
-L'app per dispositivi mobili eShopOnContainers comunica con il microservizio di identità e richiede un token di accesso come parte del processo di autenticazione. Il token di accesso viene quindi inviato alle API esposte dai microservizi ordering e basket come parte delle richieste di accesso. I token di accesso contengono informazioni sul client e sull'utente. Le API usano quindi tali informazioni per autorizzare l'accesso ai propri dati. Per informazioni su come configurare IdentityServer per proteggere le API, vedere [Configuring API](#configuring-api-resources)resources.
+L'app per dispositivi mobili eShopOnContainers comunica con il microservizio di identità e richiede un token di accesso come parte del processo di autenticazione. Il token di accesso viene quindi inviato alle API esposte dai microservizi ordering e basket come parte delle richieste di accesso. I token di accesso contengono informazioni sul client e sull'utente. Le API usano quindi tali informazioni per autorizzare l'accesso ai propri dati. Per informazioni su come configurare IdentityServer per proteggere le API, vedere [Configuring API Resources](#configuring-api-resources).
 
 ### <a name="configuring-identityserver-to-perform-authorization"></a>Configurazione di IdentityServer per l'esecuzione dell'autorizzazione
 
@@ -477,7 +477,6 @@ Per altre informazioni sul modo in cui l'app per dispositivi mobili eShopOnConta
 Sono disponibili molti approcci per l'integrazione di autenticazione e autorizzazione in un'app Novell. Forms che comunica con un'applicazione Web MVC ASP.NET. L'app per dispositivi mobili eShopOnContainers esegue l'autenticazione e l'autorizzazione con un microservizio di identità in contenitori che usa IdentityServer 4. IdentityServer è un framework open source di OpenID Connect e OAuth 2,0 per ASP.NET Core che si integra con ASP.NET Core identità per eseguire bearer token l'autenticazione.
 
 L'app per dispositivi mobili richiede token di sicurezza da IdentityServer per l'autenticazione di un utente o per l'accesso a una risorsa. Quando si accede a una risorsa, un token di accesso deve essere incluso nella richiesta alle API che richiedono l'autorizzazione. Il middleware di IdentityServer consente di convalidare i token di accesso in ingresso per assicurarsi che vengano inviati da un'autorità emittente attendibile e che siano validi per l'uso con l'API che li riceve.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

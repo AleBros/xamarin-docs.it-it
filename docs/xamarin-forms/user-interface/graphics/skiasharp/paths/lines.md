@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759211"
 ---
 # <a name="lines-and-stroke-caps"></a>Linee ed estremità dei tratti
 
@@ -237,7 +237,6 @@ Quando si usa invece `SKPointMode.Lines`, come illustrato nella schermata Androi
 La schermata UWP Mostra il risultato del `SKPointMode.Polygon` valore. Viene tracciata una linea tra i punti consecutivi nella matrice, ma se si osserva attentamente, si noterà che le righe seguenti non sono connessi. Ognuna di queste righe separate inizia e termina con la terminazione di riga specificato. Se si seleziona il `Round` BLOC MAIUSC, le righe potrebbero sembrare siano connessi, ma davvero non sono connesse.
 
 Se le righe sono connesso o non connesso è un aspetto fondamentale di utilizzo dei percorsi di elementi grafici.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

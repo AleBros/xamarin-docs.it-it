@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 00d5d5cf9cda38fbfc09fcfe8b4dcb56d00dee5b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b538df5e8e615f8594bd38cb13d9b45b0961dac
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291418"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770130"
 ---
 # <a name="xamarinmac-linker-options"></a>Opzioni del linker Xamarin.Mac
 
@@ -53,7 +53,6 @@ Per passare alla configurazione del linker per un progetto Xamarin.Mac, eseguire
 
 4. Il collegamento della piattaforma per framework di destinazione completi non viene visualizzato nell'IDE fino a un aggiornamento successivo. Fino a quel momento, aggiungere invece `--linkplatform` in **Argomenti aggiuntivi di mmp**.
 5. Fare clic sul pulsante **OK** per salvare le modifiche.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

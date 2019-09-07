@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 2e4fa5f1fb96077b0237dbeac9074006e761bc09
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 63c8cb285c51d7c10e2109c9d0b7cffbd0fb0898
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655297"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770340"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Opzioni di layout in xamarin. Forms
 
@@ -155,8 +155,6 @@ Ciascuna [ `Label` ](xref:Xamarin.Forms.Label) occupa la stessa quantità di spa
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato l'effetto che ogni [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) ha valore struttura in allineamento e l'espansione di una vista, rispetto al padre. Il `Start`, `Center`, `End`, e `Fill` campi vengono usati per definire l'allineamento della visualizzazione all'interno del layout, padre e il `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, e `FillAndExpand` campi vengono usati per definire la preferenza di allineamento e per determinare se la vista occupano più spazio, se disponibile, all'interno di un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 94f5dd206fb4794d1cdd71792418a2b4a2278c80
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 176037db501c2577775bdfb817fea01f16a02242
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523151"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761648"
 ---
 # <a name="xamarinandroid-designer"></a>Xamarin.Android Designer
 
 _Questo articolo descrive le funzionalità di Novell. Android Designer. Illustra le nozioni di base di progettazione, mostrando come usare la finestra di progettazione per disporre i widget in modo visivo e modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per lavorare con le interfacce utente e le risorse in diverse configurazioni, ad esempio temi, linguaggi e configurazioni dei dispositivi, nonché come progettare per visualizzazioni alternative quali orizzontale e verticale._
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -36,8 +35,6 @@ Questo articolo esamina le numerose funzionalità di Novell. Android Designer. V
 8. Come gestire i conflitti che possono verificarsi quando si utilizzano visualizzazioni alternative. 
 9. Come usare gli strumenti di progettazione del materiale per creare app compatibili con la progettazione di materiali.
 
-
-
 ## <a name="sections"></a>Sezioni
 
  [Uso di Android Designer](~/android/user-interface/android-designer/designer-walkthrough.md)
@@ -50,14 +47,10 @@ Questo articolo esamina le numerose funzionalità di Novell. Android Designer. V
 
  [Funzionalità di Material Design](~/android/user-interface/android-designer/material-design-features.md)
 
-
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha illustrato il set di funzionalità di Novell. Android Designer.
 Viene illustrato come iniziare a usare la finestra di progettazione e sono state illustrate le varie parti. Viene descritto come caricare un layout, nonché come aggiungere e modificare i widget, usando sia l' **area di progettazione** che la visualizzazione **origine** . È stato inoltre illustrato come usare varie risorse e configurazioni di dispositivi. Infine, è stato esaminato come utilizzare la finestra di progettazione per sviluppare interfacce utente compilate in modo specifico per visualizzazioni alternative, come orizzontale e verticale, e come risolvere i conflitti che possono verificarsi tra tali visualizzazioni.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

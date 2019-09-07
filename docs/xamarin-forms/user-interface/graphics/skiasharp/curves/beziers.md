@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228275"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759424"
 ---
 # <a name="three-types-of-bzier-curves"></a>Tre tipi di curve di Bézier
 
@@ -552,7 +552,6 @@ Come si può notare, non vi è alcuna differenza tra visual il `ConicTo` percors
 Ma impostare l'angolo di 180 gradi e il matematica hanno esito negativo.
 
 Rappresenta un problema in questo caso che `ConicTo` nepodporuje pesi negativi, poiché in teoria (basato su equazioni parametriche), è possibile eseguire il cerchio con un'altra chiamata a `ConicTo` con gli stessi punti, ma un valore negativo del peso. In tal modo la creazione di un cerchio intero con appena due `ConicTo` curve basato su qualsiasi angolatura tra (ma non inclusa) zero gradi e 180 gradi.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

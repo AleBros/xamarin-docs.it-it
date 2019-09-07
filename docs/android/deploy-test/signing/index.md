@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
-ms.translationtype: HT
+ms.openlocfilehash: 0a60031481f16a3a600cca090d39ec47cbb8ca9a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58506993"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756051"
 ---
 # <a name="signing-the-android-application-package"></a>Firma del pacchetto dell'applicazione Android
 
@@ -85,7 +85,6 @@ I passaggi precedenti, ad esempio, consentono di creare una nuova chiave di firm
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
-
 > [!NOTE]
 > Assicurarsi di eseguire il backup del file dell'archivio chiavi risultante e della password in un luogo sicuro &ndash; non è incluso nella soluzione. Se si perde il file dell'archivio chiavi, ad esempio a causa dello spostamento in un altro computer o della reinstallazione di macOS, non sarà possibile firmare l'app con lo stesso certificato delle versioni precedenti.
 
@@ -121,7 +120,6 @@ Lo screenshot seguente illustra un esempio di app pronta per la pubblicazione, *
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-
 Come si è visto, all'archivio chiavi è stato aggiunto un nuovo certificato. Per pubblicare un'app in Google Play, fare clic su **Annulla** e passare a [Pubblicazione in Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 In alternativa, fare clic su **Avanti** per pubblicare l'app *ad hoc* (per la distribuzione indipendente), come illustrato in questo esempio:
 
@@ -131,7 +129,7 @@ La finestra di dialogo **Pubblica come ad hoc** visualizza un riepilogo dell'app
 
 [![Pubblica come ad hoc](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
-La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Salva**.
+La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Save**.
 
 ![Finestra di dialogo File APK di output](images/xs/06-output-apk-file.png)
 
@@ -151,8 +149,6 @@ Finder si aprirà in corrispondenza del percorso del file APK firmato:
 
 -----
 
-
-
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 Dopo che il pacchetto dell'applicazione è stato firmato per il rilascio, deve essere pubblicato. Le sezioni seguenti descrivono diversi modi per pubblicare un'applicazione.

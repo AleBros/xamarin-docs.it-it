@@ -5,12 +5,12 @@ description: Visual Studio per Mac può essere usato per compilare e integrare C
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: a6c5e172fa9fe41e210f332d351adc307d0c7df3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 685d4f5de197c6b3664d63306fa206bea17409e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648187"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766354"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usare C/C++ librerie con Novell
 
@@ -18,7 +18,7 @@ ms.locfileid: "68648187"
 
 Novell consente agli sviluppatori di creare app per dispositivi mobili native multipiattaforma con Visual Studio. In genere C# , le associazioni vengono utilizzate per esporre i componenti della piattaforma esistenti agli sviluppatori. In alcuni casi, tuttavia, le app Novell devono usare basi di codice esistenti. A volte i team non hanno il tempo, il budget o le risorse per trasferire una codebase di C#grandi dimensioni, ben collaudata e altamente ottimizzata.
 
-[Visual C++ per lo sviluppo di app per dispositivi mobili](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) multipiattaformaC++ consente di compilare il codice C/e C# come parte della stessa soluzione, offrendo molti vantaggi, tra cui un'esperienza di debug unificata. Microsoft ha usato C/C++ e Novell in questo modo per fornire app come la fotocamera con [dispositivi mobili iperscaduti](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [pix](https://www.microsoft.com/microsoftpix).
+[Visual C++ per lo sviluppo di app per dispositivi mobili multipiattaforma](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) consente C# di compilare il codice C/C++ e come parte della stessa soluzione, offrendo molti vantaggi, tra cui un'esperienza di debug unificata. Microsoft ha usato C/C++ e Novell in questo modo per fornire app come la fotocamera con [dispositivi mobili iperscaduti](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e [pix](https://www.microsoft.com/microsoftpix).
 
 Tuttavia, in alcuni casi è preferibile (o requisito) che i processi C/C++ strumenti e i processi esistenti vengano mantenuti e che il codice di libreria venga separato dall'applicazione, considerando la libreria come se fosse simile a un componente di terze parti. In queste situazioni, la sfida non solo espone i membri rilevanti a C# ma gestisce la libreria come dipendenza. E, naturalmente, automatizzare il maggior parte del processo possibile.  
 
@@ -33,7 +33,7 @@ Infine, il codice deve essere compilato ed eseguito correttamente in tutte le pi
 ## <a name="high-level-approach"></a>Approccio di alto livello
 
 La figura seguente rappresenta l'approccio in quattro fasi usato per trasformare il codiceC++ C/sorgente in una libreria Novell multipiattaforma condivisa tramite NuGet e quindi viene utilizzata in un'app Novell. Forms.
- 
+
 ![Approccio di alto livello per l'utilizzo diC++ C/con Novell](images/cpp-steps.jpg)
 
 Le quattro fasi sono:
@@ -132,7 +132,7 @@ Si tratta di funzioni wrapper utilizzate sul lato [Novell](https://visualstudio.
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Wrapping della libreria nativa (fase 2)
 
-Questa fase richiede le [librerie](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) precompilate descritte nella [sezione precedente](##creating-the-native-libraries-stage-1).
+Questa fase richiede le [librerie precompilate](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritte nella [sezione precedente](##creating-the-native-libraries-stage-1).
 
 ### <a name="creating-the-visual-studio-solution"></a>Creazione della soluzione Visual Studio
 

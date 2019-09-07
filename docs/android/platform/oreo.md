@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 798819176c741d8afc07f9cd097a61d753debbc9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0387cd91bd24080417a5e9763410d68b6e688555
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523766"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757500"
 ---
 # <a name="oreo-features"></a>Funzionalità di Oreo
 
@@ -25,7 +25,6 @@ _Come iniziare a usare Novell. Android per sviluppare app per la versione più r
 
 Questo articolo è strutturato per iniziare a sviluppare app Novell. Android per Android 8,0 Oreo. Viene illustrato come installare gli aggiornamenti necessari, configurare l'SDK e creare un emulatore (o dispositivo) per il test. Fornisce inoltre una descrizione delle nuove funzionalità di Android 8,0 Oreo, con collegamenti a app di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Novell. Android.
 
-
 ## <a name="requirements"></a>Requisiti
 
 Per usare le funzionalità di Android Oreo nelle app basate su Novell, è necessario quanto segue:
@@ -35,8 +34,6 @@ Per usare le funzionalità di Android Oreo nelle app basate su Novell, è necess
 - **Novell. Android** &ndash; Novell. Android 8,0 o versione successiva deve essere installato e configurato con Visual Studio.
 
 - **Android SDK** &ndash; Android SDK 8,0 (API 26) o versione successiva deve essere installato tramite gestione Android SDK.
-
-
 
 ## <a name="getting-started"></a>Introduzione
 
@@ -74,8 +71,6 @@ Per aggiungere il supporto di Android Oreo a Visual Studio, eseguire le operazio
 
 Per altre informazioni sul supporto di Novell per Android Oreo, vedere le [Note sulla versione di Novell. Android 8,0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
-
-
 ### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
 Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usare Novell Android SDK Manager per installare la piattaforma SDK per **Android 8,0-Oreo** o versione successiva. È necessario installare anche Android SDK Tools 26,0 o versione successiva.
@@ -106,14 +101,11 @@ Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usa
 
 -----
 
-
-
 ### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
 
 Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 8,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 8,0, è necessario configurare il livello API Android di destinazione del progetto su **android 8,0 (API 26)** . Si consiglia inoltre di impostare il livello di Framework di destinazione su API 26 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o un dispositivo
 
@@ -133,7 +125,6 @@ Questo messaggio viene visualizzato perché Google non fornisce più un Manager 
 
 Per usare la Android Device Manager per creare e gestire i dispositivi virtuali, vedere [gestione di dispositivi virtuali con il Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Per creare dispositivi virtuali senza il Android Device Manager, attenersi alla procedura descritta nella sezione successiva.
-
 
 #### <a name="creating-virtual-devices-using-avdmanager"></a>Creazione di dispositivi virtuali con avdmanager
 
@@ -192,13 +183,9 @@ Per ulteriori informazioni sulla configurazione di un emulatore Android per il t
 
 Se si usa un dispositivo fisico, ad esempio un Nexus o un pixel, è possibile aggiornare il dispositivo tramite gli aggiornamenti automatici tramite aria (OTA) o scaricare un'immagine di sistema e lampeggiare direttamente il dispositivo. Per ulteriori informazioni sull'aggiornamento manuale del dispositivo ad Android Oreo, vedere [Factory images for Nexus and pixel Devices](https://developers.google.com/android/images).
 
-
-
 ## <a name="new-features"></a>Nuove funzionalità
 
 Android Oreo introduce un'ampia gamma di nuove caratteristiche e funzionalità, ad esempio i canali di notifica, le notifiche di notifica, i tipi di carattere personalizzati in XML, i tipi di carattere scaricabili, il riempimento automatico e l'immagine in immagini. Le sezioni seguenti evidenziano queste funzionalità e forniscono collegamenti che consentono di iniziare a usarle nell'app.
-
-
 
 ### <a name="notification-channels"></a>Canali di notifica
 
@@ -206,8 +193,6 @@ I *canali di notifica* sono categorie definite dall'app per le notifiche.
 È possibile creare un canale di notifica per ogni tipo di notifica che è necessario inviare ed è possibile creare canali di notifica per riflettere le scelte effettuate dagli utenti dell'app. La nuova funzionalità canali di notifica consente di fornire agli utenti un controllo con granularità fine su diversi tipi di notifiche. Se, ad esempio, si implementa un'app di messaggistica, è possibile creare canali di notifica distinti per ogni gruppo di conversazioni creato da un utente.
 
 I [canali di notifica](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) spiegano come creare un canale di notifica e usarlo per la pubblicazione di notifiche locali. Per un esempio di codice reale, vedere l'esempio [canali](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels) . Questa app di esempio gestisce due canali e imposta altre opzioni di notifica.
-
-
 
 ### <a name="notification-badges"></a>Notifiche di notifica
 
@@ -219,13 +204,11 @@ Questi punti indicano che sono presenti nuove notifiche per uno o più canali di
 
 Per ulteriori informazioni sulle notifiche di notifica, vedere l'argomento [notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges) per sviluppatori Android.
 
-
-
 ### <a name="custom-fonts-in-xml"></a>Tipi di carattere personalizzati in XML
 
 Android Oreo introduce i *tipi di carattere in XML*, che consente di incorporare i tipi di carattere personalizzati come risorse. Sono supportati i formati OpenType ( **. otf**) e i tipi di carattere TrueType ( **. ttf**). Per aggiungere tipi di carattere come risorse, procedere come segue:
 
-1. Creare una cartella Resources **/font** .
+1. Creare una cartella **Resources/font** .
 
 2. Copiare i file dei tipi di carattere, ad esempio file con **estensione ttf** e **OTF** , in **risorse/tipo di carattere**. 
 
@@ -242,7 +225,6 @@ Android Oreo introduce i *tipi di carattere in XML*, che consente di incorporare
    ```
 
 È anche possibile creare un file XML della famiglia di caratteri che descriva più tipi di carattere, oltre a dettagli relativi allo stile e al peso. Per ulteriori informazioni, vedere l'argomento Android Developer [Fonts in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html) .
-
 
 ### <a name="downloadable-fonts"></a>Tipi di carattere scaricabili
 
@@ -266,8 +248,6 @@ L'esempio di [tipi di carattere scaricabili](https://docs.microsoft.com/samples/
 
 Per altre informazioni sul download di tipi di carattere, vedere l'argomento relativo ai [tipi di carattere scaricabili](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) per sviluppatori Android.
 
-
-
 ### <a name="autofill"></a>Autofill
 
 Il nuovo Framework di _riempimento automatico_ in Android Oreo rende più semplice per gli utenti gestire attività ripetitive, ad esempio account di accesso, creazione di account e transazioni con carta di credito. Gli utenti dedicano meno tempo alla ridigitazione delle informazioni (che possono causare errori di input). Prima che l'app possa funzionare con il Framework di riempimento automatico, è necessario abilitare un servizio di riempimento automatico nelle impostazioni di sistema (gli utenti possono abilitare o disabilitare il riempimento automatico).
@@ -275,8 +255,6 @@ Il nuovo Framework di _riempimento automatico_ in Android Oreo rende più sempli
 L'esempio [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework) illustra l'uso del Framework di riempimento automatico. Sono incluse le implementazioni delle attività client con le visualizzazioni che devono essere riempite automaticamente e un servizio in grado di fornire dati di riempimento automatico alle attività del client.
 
 Per altre informazioni sulla nuova funzionalità di riempimento automatico e su come ottimizzare l'app per il riempimento automatico, vedere l'argomento relativo al Framework per la [compilazione automatica](https://developer.android.com/guide/topics/text/autofill.html) per sviluppatori Android.
-
-
 
 ### <a name="picture-in-picture-pip"></a>Immagine in immagine (PIP)
 
@@ -296,29 +274,23 @@ Per specificare il comportamento dell'attività in modalità PIP, utilizzare il 
 
 L'esempio [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) illustra l'uso di base della modalità PIP (immagine in immagine) per i dispositivi palmari introdotti in Oreo. Nell'esempio viene riprodotto un video che continua senza interruzioni durante lo spostamento tra le modalità di visualizzazione o altre attività.
 
-
-
 ### <a name="other-features"></a>Altre funzionalità
 
 Android Oreo contiene molte altre nuove funzionalità, ad esempio la libreria di supporto emoji, l'API location, i limiti di sfondo, il colore Wide-Gamut per le app, i nuovi codec audio, i miglioramenti di WebView, il supporto migliorato per la navigazione da tastiera e una nuova API AAudio (Pro audio) per audio a bassa latenza e prestazioni elevate. per altre informazioni su queste funzionalità, vedere l'argomento relativo alle [funzionalità e alle API](https://developer.android.com/about/versions/oreo/android-8.0.html) per Android Developer Android Oreo.
-
-
 
 ## <a name="behavior-changes"></a>Modifiche del comportamento
 
 Android Oreo include diverse modifiche del comportamento di sistema e API che possono avere un effetto sulla funzionalità delle app esistenti. Queste modifiche sono descritte di seguito.
 
-
 ### <a name="background-execution-limits"></a>Limiti di esecuzione in background
 
 Per migliorare l'esperienza utente, Android Oreo impone limitazioni sulle app che possono essere eseguite in background. Ad esempio, se l'utente guarda un video o gioca una partita, un'app in esecuzione in background può compromettere le prestazioni di un'app a elevato utilizzo di video in esecuzione in primo piano. Di conseguenza, Android Oreo pone le restrizioni seguenti per le app che non interagiscono direttamente con l'utente:
 
-1. **Limitazioni del servizio in background** &ndash; Quando un'app viene eseguita in background, presenta una finestra di diversi minuti in cui è ancora possibile creare e usare i servizi. Alla fine di tale finestra, Android arresta il servizio in background dell'app e lo considera inattivo.
+1. **Limitazioni del servizio in background** &ndash; Quando un'app viene eseguita in background, presenta una finestra di diversi minuti in cui è ancora possibile creare e usare i servizi. Alla fine di tale finestra, Android arresta il servizio in background dell'app e lo considera _inattivo_.
 
 2. **Limitazioni broadcast** &ndash; Android 7,0 (API 25) ha inserito limitazioni sulle trasmissioni che un'app registra per ricevere. Android Oreo rende più rigorose queste limitazioni. Ad esempio, le app Android Oreo non possono più registrare ricevitori broadcast per trasmissioni implicite nei propri manifesti.
 
 Per ulteriori informazioni sui nuovi limiti di esecuzione in background, vedere l'argomento relativo ai [limiti di esecuzione in background](https://developer.android.com/about/versions/oreo/background.html) per sviluppatori Android.
-
 
 ### <a name="breaking-changes"></a>Modifiche di interruzione
 
@@ -327,7 +299,6 @@ Le app destinate a Android Oreo o versioni successive devono modificare le propr
 - Android Oreo depreca la possibilità di impostare la priorità delle singole notifiche. Si imposta invece un livello di importanza consigliato durante la creazione di un canale di notifica. Il livello di importanza assegnato a un canale di notifica si applica a tutti i messaggi di notifica inviati.
 
 - Per le app destinate a Android `PendingIntent.GetService()` Oreo, non funziona a causa dei nuovi limiti posti sui servizi avviati in background. Se la destinazione è Android Oreo, usare invece [PendingIntent. getbroadcast](xref:Android.App.PendingIntent.GetBroadcast*) .  
-
 
 ## <a name="sample-code"></a>Codice di esempio
 
@@ -347,18 +318,15 @@ Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare
 
 - [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) illustra come usare l'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo usando un servizio in primo piano associato e avviato.
 
-
 ## <a name="video"></a>Video
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
 **Sviluppo di Android 8,0 Oreo conC#**
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato Android Oreo e spiega come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android in Android Oreo. Fornisce una panoramica delle funzionalità principali disponibili in Android Oreo, con collegamenti ad esempi di codice sorgente per alcune nuove funzionalità. Sono inclusi collegamenti alla documentazione API e agli argomenti per sviluppatori Android che consentono di iniziare a creare app per Android Oreo. Sono state inoltre evidenziate le modifiche più importanti del comportamento di Android Oreo che potrebbero influito sulle app esistenti.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

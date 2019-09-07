@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 2bd704b17f5aff1b4d3f2da1813d1eb19ef29e59
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: d6c9b74c9abc1a2c493c31699b52969a7d129429
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620688"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760205"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Modello Model-View-ViewModel
 
@@ -116,7 +116,7 @@ public LoginView()
 }
 ```
 
-La costruzione e l'assegnazione a livello di codice del modello di visualizzazione all'interno del code-behind della vista hanno il vantaggio di essere semplice. Tuttavia, lo svantaggio principale di questo approccio è che la visualizzazione deve fornire il modello di visualizzazione con tutte le dipendenze necessarie. L'utilizzo di un contenitore di inserimento di dipendenze consente di mantenere un accoppiamento libero tra la vista e il modello di visualizzazione. Per altre informazioni, vedere [inserimento](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)delle dipendenze.
+La costruzione e l'assegnazione a livello di codice del modello di visualizzazione all'interno del code-behind della vista hanno il vantaggio di essere semplice. Tuttavia, lo svantaggio principale di questo approccio è che la visualizzazione deve fornire il modello di visualizzazione con tutte le dipendenze necessarie. L'utilizzo di un contenitore di inserimento di dipendenze consente di mantenere un accoppiamento libero tra la vista e il modello di visualizzazione. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
 ### <a name="creating-a-view-defined-as-a-data-template"></a>Creazione di una vista definita come modello di dati
 
@@ -363,7 +363,6 @@ Per ulteriori informazioni sui comportamenti, vedere [comportamenti](~/xamarin-f
 Il modello MVC (Model-View-ViewModel) consente di separare nettamente la logica di business e di presentazione di un'applicazione dalla relativa interfaccia utente (UI). Il mantenimento di una netta separazione tra la logica dell'applicazione e l'interfaccia utente consente di risolvere numerosi problemi di sviluppo e può semplificare la verifica, la manutenzione e l'evoluzione di un'applicazione. Può anche migliorare significativamente le opportunità di riutilizzo del codice e consente agli sviluppatori e ai progettisti di interfaccia utente di collaborare più facilmente durante lo sviluppo delle rispettive parti di un'app.
 
 Usando il modello MVVM, l'interfaccia utente dell'app e la presentazione sottostante e la logica di business sono separate in tre classi separate: la vista, che incapsula l'interfaccia utente e la logica dell'interfaccia utente. modello di visualizzazione che incapsula la logica di presentazione e lo stato; e il modello, che incapsula la logica di business e i dati dell'app.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644133"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755064"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Avvio dei servizi con Novell. Android
 
@@ -42,7 +42,7 @@ Il primo parametro è un `Intent` oggetto che contiene i metadati relativi al la
 
 - `StartCommandFlag.Redelivery`Ciò significa che è un nuovo recapito di un precedente `Intent`. `Intent` &ndash; Questo valore viene fornito quando il servizio ha restituito `StartCommandResult.RedeliverIntent` ma è stato interrotto prima di essere arrestato correttamente.
 -`StartCommandFlag.Retry`Questo valore viene ricevuto quando una chiamata `OnStartCommand` precedente non è riuscita e Android sta provando ad avviare di nuovo il servizio con la stessa finalità del precedente tentativo non riuscito. &dash;
- 
+
 Infine, il terzo parametro è un valore intero univoco per l'applicazione che identifica la richiesta. È possibile che più chiamanti possano richiamare lo stesso oggetto servizio. Questo valore viene utilizzato per associare una richiesta di arresto di un servizio con una determinata richiesta di avvio di un servizio. Questo argomento verrà discusso più dettagliatamente nella sezione [arresto del servizio](#Stopping_the_Service). 
 
 Il valore `StartCommandResult` viene restituito dal servizio come suggerimento per Android sulle operazioni da eseguire se il servizio viene terminato a causa di vincoli di risorse. Esistono tre possibili valori per `StartCommandResult`:

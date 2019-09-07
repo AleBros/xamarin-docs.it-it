@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 2e0bb4fc0468f938e7a4403513fe101db2282561
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d5a227f4acdba319eefc91b4991dead5a036eb9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756321"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Aggiornamento di un'app Novell. iOS in background
 
@@ -22,7 +22,6 @@ L'aggiornamento in background è il processo di riattivazione di un'applicazione
 1. *Recupero in background (iOS 7 +)* : approccio temporale per l'aggiornamento di contenuti *non critici* che vengono aggiornati di *frequente* .
 1. *Notifiche remote (iOS 7 +)* : le applicazioni che ricevono notifiche push possono usare le notifiche per attivare gli aggiornamenti del contenuto in background. Questo metodo può essere utilizzato per aggiornare con un contenuto *importante e sensibile al tempo* che si aggiorna *sporadicamente* .
 
-
 Le sezioni seguenti illustrano le nozioni di base di queste opzioni.
 
 ## <a name="region-monitoring-and-significant-location-changes"></a>Monitoraggio delle aree e modifiche significative della località
@@ -31,7 +30,6 @@ iOS fornisce due API in grado di riconoscere la posizione con funzionalità in b
 
 1. Il *monitoraggio dell'area* è il processo di configurazione delle aree con limiti e la riattivazione del dispositivo quando l'utente immette o esce da un'area. Le aree sono circolari e possono avere dimensioni variabili. Quando l'utente supera il limite di un'area, il dispositivo viene riattivato per gestire l'evento, in genere inviando una notifica o avviando un'attività. Il monitoraggio dell'area richiede il GPS e aumenta la batteria e l'utilizzo dei dati.
 1. Il *servizio di modifica della posizione significativa* è un'opzione più semplice e di risparmio energia disponibile per i dispositivi con radiotelefonia. Un'applicazione in ascolto di modifiche di posizione significative riceverà una notifica quando il dispositivo passa alla cella. Questo servizio può essere utilizzato per riattivare un'applicazione sospesa o terminata e offre l'opportunità di verificare la presenza di nuovi contenuti in background. L'attività in background è limitata a circa 10 secondi, a meno che non sia associata a un' [attività in background](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md) .
-
 
 Per un'applicazione non è necessaria la `UIBackgroundMode` posizione per usare queste API in grado di riconoscere la posizione. Poiché iOS non tiene traccia dei tipi di attività che è possibile eseguire quando il dispositivo viene riattivato dalle modifiche nella posizione dell'utente, queste API forniscono una soluzione per l'aggiornamento del contenuto in background in iOS 6. *Tenere presente che l'attivazione degli aggiornamenti in background con le API basate sulla posizione trarrà sulle risorse del dispositivo e può confondere gli utenti che non sono in grado di comprendere il motivo per cui un'applicazione richiede l'accesso alla propria posizione*. Usare la discrezione durante l'implementazione del monitoraggio dell'area o modifiche significative per l'elaborazione in background nelle applicazioni che non usano già le API location.
 
@@ -76,12 +74,10 @@ Al termine dell'aggiornamento del contenuto, il sistema operativo viene chiamato
 1. `UIBackgroundFetchResult.NoData`: Viene chiamato quando l'operazione di recupero per il nuovo contenuto è stata eseguita, ma non è disponibile alcun contenuto.
 1. `UIBackgroundFetchResult.Failed`-Utile per la gestione degli errori, questo metodo viene chiamato quando il recupero non è riuscito a passare attraverso.
 
-
 Le applicazioni che usano il recupero in background possono effettuare chiamate per aggiornare l'interfaccia utente in background. Quando l'utente apre l'app, l'interfaccia utente sarà aggiornata e visualizzerà il nuovo contenuto. Questa operazione aggiornerà anche lo snapshot dello strumento di selezione delle app dell'applicazione, in modo che l'utente possa vedere quando l'applicazione ha nuovo contenuto.
 
 > [!IMPORTANT]
 > Una `PerformFetch` volta chiamato, l'applicazione ha circa 30 secondi per avviare il download del nuovo contenuto e chiamare il blocco del gestore di completamento. Se questa operazione richiede troppo tempo, l'app verrà terminata. Si consiglia di utilizzare il recupero in background con il _servizio di trasferimento in background_ durante il download di file multimediali o di altri file di
-
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
 
@@ -91,13 +87,11 @@ Nel codice di esempio precedente si consente al sistema operativo di decidere co
 1. `BackgroundFetchIntervalMinimum`-Consentire al sistema di decidere la frequenza di recupero in base ai modelli utente, alla durata della batteria, all'utilizzo dei dati e alle esigenze di altre applicazioni.
 1. `BackgroundFetchIntervalCustom`-Se si conosce la frequenza con cui viene aggiornato il contenuto di un'applicazione, è possibile specificare un intervallo di "sospensione" dopo ogni operazione di recupero, durante la quale all'applicazione verrà impedito di recuperare nuovo contenuto. Una volta che l'intervallo è attivo, il sistema determinerà quando recuperare il contenuto.
 
-
 Sia `BackgroundFetchIntervalMinimum` che`BackgroundFetchIntervalCustom` si basano sul sistema per pianificare i recuperi. Questo intervallo è dinamico, adattando le esigenze del dispositivo e le abitudini dei singoli utenti. Se, ad esempio, un utente controlla un'applicazione ogni mattina e un altro controllo ogni ora, iOS garantisce che il contenuto sia aggiornato per entrambi gli utenti ogni volta che aprono l'applicazione.
 
 Il recupero in background deve essere usato per le applicazioni che vengono aggiornate di frequente con contenuto non critico. Per le applicazioni con aggiornamenti critici, è necessario usare le notifiche remote. Le notifiche remote sono basate sul recupero in background e condividono lo stesso gestore di completamento. Verranno illustrate le notifiche remote successive.
 
  <a name="remote_notifications" />
-
 
 ## <a name="remote-notifications-ios-7-and-greater"></a>Notifiche remote (iOS 7 e versioni successive)
 
@@ -135,7 +129,6 @@ Le notifiche remote devono essere usate per aggiornamenti non frequenti con cont
 > [!IMPORTANT]
 > Poiché il meccanismo di aggiornamento nelle notifiche remote è basato sul recupero in background, l'applicazione deve avviare il download del nuovo contenuto e chiamare il blocco del gestore di completamento entro 30 secondi dalla ricezione della notifica oppure iOS terminerà l'applicazione. È consigliabile associare notifiche remote con il _servizio di trasferimento in background_ durante il download di file multimediali o di altri file di grandi dimensioni in background.
 
-
 ### <a name="silent-remote-notifications"></a>Notifiche remote invisibile all'utente
 
 Le notifiche remote sono un modo semplice per notificare le applicazioni degli aggiornamenti e avviare il recupero del nuovo contenuto, ma in alcuni casi non è necessario notificare all'utente che qualcosa è cambiato. Se, ad esempio, un utente contrassegna un file per la sincronizzazione, non è necessario notificarlo ogni volta che il file viene aggiornato. La sincronizzazione dei file non è un evento sorprendente, né richiede l'attenzione immediata dell'utente. Gli utenti si aspettano semplicemente che il file sia aggiornato all'apertura.
@@ -158,7 +151,6 @@ Tuttavia, APNs consente di inviare notifiche invisibili a "Piggyback" insieme a 
 
 > [!IMPORTANT]
 > Apple invita gli sviluppatori a inviare notifiche push in modalità invisibile all'utente ogni volta che l'applicazione richiede e consentire al APNs di pianificare il recapito.
-
 
 In questa sezione sono state illustrate le diverse opzioni per aggiornare il contenuto in background per eseguire attività che non rientrano in una categoria di background necessaria. Verranno ora visualizzate alcune di queste API in azione.
 

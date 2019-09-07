@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 9cd93a94361c11ecaa454a804e58180a33ec08fe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290933"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766850"
 ---
 # <a name="using-data-in-an-ios-app"></a>Uso dei dati in un'app iOS
 
@@ -37,7 +37,6 @@ Nell'esempio sono presenti due operazioni di lettura:
 
 - Lettura dell'elenco
 - Lettura di singoli record
-
 
 I due metodi `StockDatabase` della classe sono:
 
@@ -77,8 +76,6 @@ public int SaveStock (Stock item)
 }
 ```
 
-
-
 Le applicazioni reali richiederanno in genere una convalida, ad esempio campi obbligatori, lunghezze minime o altre regole business.
 Le applicazioni multipiattaforma valide implementano la maggior parte del possibile di convalida nel codice condiviso, passando gli errori di convalida all'interfaccia utente per la visualizzazione in base alle funzionalità della piattaforma.
 
@@ -104,7 +101,6 @@ Per eseguire questa operazione nell'applicazione per dispositivi mobili, è poss
 - **Estensione per Firefox di gestione SQLite** : funziona su Mac e Windows e produce file compatibili con iOS e Android.
 - **Riga di comando** : vedere [www.sqlite.org/SQLite.html](http://www.sqlite.org/sqlite.html) .
 
-
 Quando si crea un file di database per la distribuzione con l'app, prestare attenzione alla denominazione di tabelle e colonne per assicurarsi che corrispondano a quanto previsto dal codice, specialmente se si usa SQLite.NET, che prevede che i nomi C# corrispondano alle classi e alle proprietà ( o gli attributi personalizzati associati).
 
 Per iOS, includere il file SQLite nell'applicazione e assicurarsi che sia contrassegnato con **l'azione di compilazione: Contenuto**. Inserire il codice in `FinishedLaunching` per copiare il file in una directory scrivibile *prima* di chiamare qualsiasi metodo di dati. Nel codice seguente viene copiato un database esistente denominato **Data. sqlite**, solo se non esiste già.
@@ -120,7 +116,6 @@ if (!File.Exists (Database.DatabaseFilePath))
 ```
 
 Qualsiasi codice di accesso ai dati (se ADO.NET o SQLite.NET) che viene eseguito dopo che questa operazione è stata completata avrà accesso ai dati precompilati.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

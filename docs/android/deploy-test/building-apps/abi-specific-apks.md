@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0c3bb547a21457a1666db5fe84560e10e3bb8eb1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225761"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754268"
 ---
 # <a name="building-abi-specific-apks"></a>Compilazione di APK specifici di ABI
 
 _Questo documento illustra come compilare un file APK destinato a un singolo ABI usando Xamarin.Android._
-
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -27,7 +25,6 @@ In alcune situazioni può risultare utile per un'applicazione avere più APK. Og
 - **Ridurre le dimensioni dell'APK**: Google Play impone un limite di 100 MB per le dimensioni dei file APK. Creando APK specifici dei dispositivi, è possibile ridurre le dimensioni del file APK perché è necessario specificare solo un subset di asset e risorse per l'applicazione.
 
 - **Supportare architetture CPU diverse**: se l'applicazione ha librerie condivise per CPU specifiche, è possibile distribuire solo le librerie condivise una determinata CPU.
-
 
 Più APK possono complicare la distribuzione, ma questo problema viene risolto da Google Play. Google Play verificherà che a un dispositivo venga distribuito l'APK corretto in base al codice della versione dell'applicazione e ad altri metadati contenuti in **AndroidManifest.XML**. Per informazioni dettagliate specifiche e per conoscere le restrizioni al supporto di più APK per un'applicazione in Google Play, vedere la [documentazione di Google sul supporto di più APK](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
@@ -38,10 +35,7 @@ Questa guida illustra come creare lo script di compilazione di più APK per un'a
 1. Compilare l'applicazione usando il file **AndroidManifest.XML** del passaggio precedente.
 1. Preparare l'APK per il rilascio firmandolo e allineandolo con zipalign.
 
-
 Alla fine di questa guida è disponibile una procedura dettagliata che illustra come creare lo script di questi passaggi usando [Rake](http://martinfowler.com/articles/rake.html).
-
-
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Creazione del codice versione per l'APK
 
@@ -68,7 +62,6 @@ Il diagramma seguente illustra la posizione di ogni codice descritto nell'elenco
 
 [![Diagramma del formato del codice versione a otto cifre, codificato in base al colore](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
-
 Google Play verificherà che al dispositivo venga distribuito l'APK corretto in base a `versionCode` e alla configurazione dell'APK. Il file APK con il codice versione più alto verrà distribuito al dispositivo. Ad esempio, un'applicazione può includere tre APK con i codici versione seguenti:
 
 - 11413456: l'ABI è `armeabi`, la destinazione è il livello API 14, le dimensioni della schermata sono da piccole a grandi, il numero di versione è 456.
@@ -83,18 +76,14 @@ Si supponga ora che la versione x86 riceva alcuni aggiornamenti o correzioni des
 - 21423457: l'ABI è `armeabi-v7a`, la destinazione è il livello API 14, le dimensioni della schermata sono normali e grandi, il nome della versione è 457.
 - 61923500: l'ABI è `x86`, la destinazione è il livello API 19, le dimensioni della schermata sono normali e grandi, il nome della versione è 500.
 
-
 La gestione manuale di questi codici versione può comportare un carico notevole per lo sviluppatore. Il processo per calcolare l'elemento `android:versionCode` corretto e quindi compilare gli APK dovrebbe essere automatizzato.
 Un esempio di come eseguire questa operazione verrà descritto nella procedura dettagliata alla fine di questo documento.
-
 
 ### <a name="create-a-temporary-androidmanifestxml"></a>Creare un file AndroidManifest.XML temporaneo
 
 Anche se non strettamente necessaria, la creazione di un file **AndroidManifest.XML** temporaneo per ogni ABI consente di evitare problemi che potrebbero verificarsi con le informazioni che passano da un APK all'altro. È ad esempio fondamentale che l'attributo `android:versionCode` sia univoco per ogni APK.
 
 La procedura dipende dal sistema di scripting coinvolto, ma in genere è necessario aprire una copia del manifesto Android usata durante lo sviluppo, modificarla e quindi usare tale manifesto modificato durante il processo di compilazione.
-
-
 
 ### <a name="compiling-the-apk"></a>Compilazione dell'APK
 
@@ -120,8 +109,6 @@ L'elenco seguente descrive ogni parametro della riga di comando:
 
 - `<CS_PROJ FILE>`: percorso del file `.csproj` per il progetto Xamarin.Android.
 
-
-
 ### <a name="sign-and-zipalign-the-apk"></a>Firmare ed eseguire Zipalign per il file APK
 
 È necessario firmare il file APK prima che possa essere distribuito tramite Google Play. A questo scopo, è possibile usare l'applicazione `jarsigner` che fa parte del kit dello sviluppatore Java. La riga di comando seguente illustra come usare `jarsigner` nella riga di comando:
@@ -136,7 +123,6 @@ Tutte le applicazioni Xamarin.Android devono essere allineate con zipaling prima
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-
 ## <a name="automating-apk-creation-with-rake"></a>Automazione della creazione di file APK con Rake
 
 Il progetto di esempio [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK) è un semplice progetto Android che illustra come calcolare un numero di versione specifico di un ABI e compilare tre APK distinti per ognuno degli ABI seguenti:
@@ -144,7 +130,6 @@ Il progetto di esempio [OneABIPerAPK](https://github.com/xamarin/monodroid-sampl
 - armeabi
 - armeabi-v7a
 - x86
-
 
 Il [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb) nel progetto di esempio esegue ogni passaggio descritto nelle sezioni precedenti:
 
@@ -157,7 +142,6 @@ Il [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPer
 1. [Firmare l'APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) con un archivio chiavi di produzione.
 
 1. [Eseguire Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) per il file APK.
-
 
 Per compilare tutti gli APK per l'applicazione, eseguire l'attività di Rake `build` dalla riga di comando:
 
@@ -172,16 +156,12 @@ Al termine dell'attività di Rake, saranno disponibili tre cartelle `bin` con il
 
 [![Posizioni delle cartelle specifiche della piattaforma contenenti xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
-
 > [!NOTE]
 > Il processo di compilazione illustrato in questa guida può essere implementato in uno dei numerosi sistemi di compilazione. Anche se non è disponibile un esempio già scritto, dovrebbe essere possibile eseguirlo anche con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
-
 
 ## <a name="summary"></a>Riepilogo
 
 Questa guida ha fornito alcuni suggerimenti su come creare APK Android per un ABI specifico. Ha anche illustrato un possibile schema per la creazione di `android:versionCodes` che identificheranno l'architettura CPU a cui è destinato l'APK. Nella procedura dettagliata è stato incluso un progetto per la compilazione del quale è stato creato uno script con Rake.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

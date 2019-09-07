@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 17. Il controllo della griglia
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 17. Il controllo della griglia'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 17. Il controllo della griglia'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333738"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760632"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Riepilogo del capitolo 17. Il controllo della griglia
 
@@ -101,8 +101,6 @@ Il [ **KeypadGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree
 Il `Grid` consentono di strutturare un programma per rispondere alle modifiche apportate orientamento. Il [ **GridRgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) esempio viene illustrata una tecnica che consente di spostare un elemento tra una seconda riga di un telefono e orientati alle verticale e la seconda colonna di un telefono con orientamento orizzontale.
 
 Inizializza il programma `Slider` elementi a un intervallo di 0 e 255 e Usa le associazioni dati per visualizzare il valore di scorrimento in formato esadecimale. Perché il `Slider` i valori sono a virgola mobile e .NET formattazione stringa da esadecimale funziona solo con numeri interi, un [ `DoubleToIntConvert` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) classe la [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) libreria aiuta.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

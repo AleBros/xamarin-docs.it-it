@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 22. Animazione
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 22. Animazione'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 22. Animazione'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 935be5bd6696600644463eb4ec26410b546f42a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333101"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771004"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Riepilogo del capitolo 22. Animazione
 
@@ -197,8 +197,6 @@ Il [ **ColorAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples
 ## <a name="structuring-your-animations"></a>Strutturazione di animazioni
 
 È talvolta utile esprimere le animazioni in XAML e usarle in combinazione con MVVM. Questa attività viene descritta nel capitolo successivo [ **capitolo 23. I trigger e comportamenti**](chapter23.md).
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

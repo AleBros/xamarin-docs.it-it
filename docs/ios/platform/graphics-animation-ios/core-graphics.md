@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 72c233dc492fe1c93546121bc9103e666c2127ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65ccbe397093833e3af58d1165bc1dad8287ba5d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286255"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752935"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Grafica principale in Novell. iOS
 
@@ -28,7 +28,6 @@ La grafica principale supporta il disegno in diversi scenari, tra cui:
 - [Disegno di immagini in memoria o sullo schermo](#Drawing_Images_and_Text).
 - Creazione e disegno in un file PDF.
 - Lettura e creazione di un file PDF esistente.
-
 
 ## <a name="geometric-space"></a>Spazio geometrico
 
@@ -276,7 +275,6 @@ Oltre a creare il contesto grafico di una visualizzazione, la grafica principale
 - Recupero dell'immagine dal contesto
 - Rimozione del contesto
 
-
 A differenza del `Draw` metodo, in cui il contesto viene fornito dalla vista, in questo caso il contesto viene creato in uno dei due modi seguenti:
 
 1. Chiamando `UIGraphics.BeginImageContext` (o `BeginImageContextWithOptions`)
@@ -422,7 +420,6 @@ UIGraphics.EndPDFContent ();
 ```
 
 Il testo risultante viene disegnato in formato PDF, che è quindi contenuto in un `NSData` oggetto che può essere salvato, caricato, inviato tramite posta elettronica e così via.
-
 
 ## <a name="summary"></a>Riepilogo
 

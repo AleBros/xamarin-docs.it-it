@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 2abc4b9b39fa90e525c3562a27ffd5d8c67f0078
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 128982abdee7a0fea8df79f7b7b9ecd6a290775a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523801"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761251"
 ---
 # <a name="nougat-features"></a>Funzionalità torrone
 
 _Come iniziare a usare Novell. Android per sviluppare app per Android torrone._
 
 Questo articolo fornisce una descrizione delle funzionalità introdotte in Android torrone, spiega come preparare Novell. Android for Android torrone Development e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità torrone di Android in App Novell. Android.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -42,7 +41,6 @@ Android torrone, inoltre, apporta molti altri miglioramenti di interesse per gli
 
 Questo articolo illustra come iniziare a creare app con il torrone Android per provare le nuove funzionalità e pianificare la migrazione o il lavoro delle funzionalità per la nuova piattaforma per i torrone Android.
 
-
 ## <a name="requirements"></a>Requisiti
 
 Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità del torrone Android nelle app basate su Novell:
@@ -60,8 +58,6 @@ Di seguito sono riportate le funzionalità necessarie per usare le nuove funzion
 
 Si noti che le app devono essere ricompilate con Novell C6SR4 o versione successiva per funzionare in modo affidabile con il torrone Android. Dal momento che Android torrone può collegarsi solo a [librerie native fornite da NDK](https://developer.android.com/about/versions/nougat/android-7.0-changes.html), le app esistenti che usano librerie come **mono. Data. sqlite. dll** potrebbero arrestarsi in modo anomalo quando vengono eseguite su un sistema operativo Android se non vengono ricompilate correttamente.
 
-
-
 ## <a name="getting-started"></a>Introduzione
 
 Per iniziare a usare il torrone Android con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android torrone:
@@ -76,12 +72,9 @@ Per iniziare a usare il torrone Android con Novell. Android, è necessario scari
 
 Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
-
 ### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Novell
 
 Per aggiungere il supporto Novell per il torrone Android, modificare il canale degli aggiornamenti in Visual Studio o Visual Studio per Mac nel canale stabile e applicare gli aggiornamenti più recenti. Se sono necessarie anche funzionalità attualmente disponibili solo nel canale Alpha o beta, è possibile passare al canale alfa o beta (i canali alpha e beta forniscono anche il supporto per Android 7. x). Per informazioni su come modificare il canale degli aggiornamenti (versioni), vedere [modifica del canale degli aggiornamenti](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
-
-
 
 ### <a name="install-the-android-sdk"></a>Installare il Android SDK
 
@@ -105,19 +98,14 @@ Per creare un progetto con Novell Android 7,0, è necessario prima di tutto usar
 
     Per visualizzare questa impostazione in Visual Studio, fare clic su **strumenti > opzioni > novell > Android Settings**. In Visual Studio per Mac fare clic su **preferenze > progetti > percorsi SDK > Android**.
 
-
-
 ### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
 
 Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 7,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 7,0, è necessario configurare il livello API Android di destinazione del progetto su **android 7,0 (API 24-torrone)** . Si consiglia di impostare il livello di Framework di destinazione su API 24 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
-
 > [!NOTE]
 > Attualmente è necessario impostare la **versione minima di Android** su **Android 7,0 (API 24-torrone)** per distribuire l'app in dispositivi o emulatori torrone Android.
-
-
 
 ### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o un dispositivo
 
@@ -135,13 +123,9 @@ Se si usa un dispositivo fisico, ad esempio un Nexus 5X, 6 o 9, è possibile agg
 
 Si noti che i dispositivi Nexus 5 non sono supportati da torrone per Android.
 
-
-
 ## <a name="new-features"></a>Nuove funzionalità
 
 Il torrone Android introduce un'ampia gamma di nuove caratteristiche e funzionalità, ad esempio il supporto per più finestre, i miglioramenti delle notifiche e il risparmio di dati. Le sezioni seguenti evidenziano queste funzionalità e forniscono collegamenti che consentono di iniziare a usarle nell'app.
-
-
 
 ### <a name="multi-window-mode"></a>Modalità multifinestra
 
@@ -164,12 +148,9 @@ L'app di esempio [MultiWindowPlayground](https://docs.microsoft.com/samples/xama
 
 Per ulteriori informazioni sulla modalità a più finestre, vedere Supporto di più [finestre](https://developer.android.com/guide/topics/ui/multi-window.html).
 
-
-
 ### <a name="enhanced-notifications"></a>Notifiche avanzate
 
 Android torrone introduce un sistema di notifica riprogettato. Include una nuova funzionalità di risposta diretta che consente agli utenti di rispondere rapidamente alle notifiche per i messaggi di testo in arrivo direttamente nell'interfaccia utente di notifica. A partire da Android 7,0, i messaggi di notifica possono essere raggruppati come un singolo gruppo quando viene ricevuto più di un messaggio. Inoltre, gli sviluppatori possono personalizzare le visualizzazioni delle notifiche, sfruttare le decorazioni di sistema nelle notifiche e sfruttare i nuovi modelli di notifica per la generazione di notifiche.
-
 
 #### <a name="direct-reply"></a>Risposta diretta
 
@@ -212,7 +193,6 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
 
 L'app di esempio del [servizio di messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) include C# codice che illustra come estendere le `RemoteInput` notifiche con un oggetto. Per altre informazioni sull'aggiunta di azioni di risposta inline all'app per Android 7,0 o versione successiva, vedere l'argomento [risposta alle notifiche per](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) Android.
 
-
 #### <a name="bundled-notifications"></a>Notifiche in bundle
 
 Il torrone Android può raggruppare i messaggi di notifica (ad esempio, per argomento del messaggio) e visualizzare il gruppo anziché ogni messaggio separato.
@@ -222,20 +202,15 @@ Questa funzionalità per le *notifiche in bundle* consente agli utenti di ignora
 
 Per supportare le notifiche in bundle, l'app può usare il metodo [Builder. segroup](xref:Android.App.Notification.Builder.SetGroup*) per raggruppare le notifiche simili. Per ulteriori informazioni sui gruppi di notifiche in bundle in Android N, vedere l'argomento relativo alle [notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle) per la creazione di bundle Android.
 
-
 #### <a name="custom-views"></a>Viste personalizzate
 
 Il torrone Android consente di creare visualizzazioni di notifiche personalizzate con le intestazioni, le azioni e i layout espandibili delle notifiche di sistema. Per altre informazioni sulle visualizzazioni di notifiche personalizzate in Android torrone, vedere l'argomento [miglioramenti delle notifiche](https://developer.android.com/about/versions/nougat/android-7.0.html#notification_enhancements) per Android.
-
-
 
 ### <a name="data-saver"></a>Salva dati
 
 A partire da Android torrone, gli utenti possono abilitare una nuova impostazione di *risparmio di dati* che blocca l'utilizzo dei dati in background. Questa impostazione segnala anche all'app di usare un minor numero di dati in primo piano, laddove possibile. Il [ConnectivityManager](xref:Android.Net.ConnectivityManager) è stato esteso in Android torrone, in modo che l'app possa controllare se l'utente ha abilitato il risparmio di dati, in modo che l'app possa impegnarsi per limitare l'utilizzo dei dati quando è abilitato il risparmio di dati.
 
 Per altre informazioni sulla nuova funzionalità di data saver in Android torrone, vedere l'argomento relativo all' [utilizzo dei dati di rete](https://developer.android.com/training/basics/network-ops/data-saver.html) per l'ottimizzazione di Android.
-
-
 
 ### <a name="app-shortcuts"></a>Collegamenti alle app
 
@@ -247,7 +222,6 @@ Se si rilascia la pressione, il menu rimarrà:
 
 Questa funzionalità è disponibile solo per il livello API 25 o superiore.
 Per altre informazioni sulla nuova funzionalità di collegamenti alle app in Android 7,1, vedere l'argomento [tasti di scelta rapida](https://developer.android.com/guide/topics/ui/shortcuts.html) per le app Android.
-
 
 ### <a name="sample-code"></a>Codice di esempio
 
@@ -263,11 +237,9 @@ Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare
 
 - [Avvio diretto](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) Viene illustrato come archiviare i dati in una risorsa di archiviazione crittografata dal dispositivo, che è sempre disponibile quando il dispositivo viene avviato sia prima che dopo l'immissione delle credenziali utente (PIN/criterio/password).
 
-
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo è stato introdotto il torrone Android ed è stato illustrato come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android nel torrone Android. Fornisce inoltre una panoramica delle funzionalità principali disponibili in Android torrone, con collegamenti ad esempi di codice sorgente che consentono di iniziare a creare app per il torrone Android.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

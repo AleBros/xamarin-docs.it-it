@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: 3171a89678e88a924198c3921d197c0f0378d29b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14e9b352a309de94a374b52141e3fd61715d8f75
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522621"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764387"
 ---
 # <a name="xamarinandroid-linearlayout"></a>Novell. Android LinearLayout
 
@@ -120,7 +120,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-Il [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)metodo) carica il file di layout per [`Activity`](xref:Android.App.Activity)l'oggetto, specificato dall'ID &ndash; `Resources.Layout.Main` risorsa, che fa riferimento al file di layout Resources **/layout/Main. aXML** .
+Il [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)metodo) carica il file di layout per [`Activity`](xref:Android.App.Activity)l'oggetto, specificato dall'ID &ndash; `Resources.Layout.Main` risorsa, che fa riferimento al file di layout **Resources/layout/Main. aXML** .
 
 Eseguire l'applicazione. Verrà visualizzato quanto segue:
 
@@ -128,7 +128,6 @@ Eseguire l'applicazione. Verrà visualizzato quanto segue:
 
 Si noti come gli attributi XML definiscono il comportamento di ogni visualizzazione. Provare a sperimentare con valori diversi per `android:layout_weight` vedere come viene distribuita la proprietà dello schermo in base al peso di ogni elemento. Per ulteriori informazioni, vedere il documento [oggetti di layout comuni](https://developer.android.com/guide/topics/ui/declaring-layout.html)[`LinearLayout`](xref:Android.Widget.LinearLayout)
 gestisce l' `android:layout_weight` attributo.
-
 
 ## <a name="references"></a>Riferimenti
 

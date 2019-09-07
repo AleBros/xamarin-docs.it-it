@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: f37905f483ad31d05276383718a3295d4a288f28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285872"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768929"
 ---
 # <a name="ios-designer-basics"></a>Nozioni fondamentali su iOS designer
 
@@ -194,7 +194,7 @@ IOS designer è costituito da sei sezioni principali:
 Per aggiungere un controllo a un'interfaccia, trascinarlo dalla **casella degli strumenti** e rilasciarlo nell'area di progettazione. Quando si aggiunge o si posiziona un controllo, le linee guida verticali e orizzontali evidenziano le posizioni di layout usate di frequente, ad esempio il centro verticale, il centro orizzontale e i margini:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
- 
+
 Nell' ![area di progettazione le linee guida evidenziano le posizioni di layout usate di frequente] Nell' (introduction-images/9-layoutguides-vsmac.png "area di progettazione le linee guida evidenziano le posizioni di layout usate di frequente")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -220,7 +220,7 @@ La linea blu punteggiata nell'esempio precedente fornisce una linea guida per l'
 ### <a name="constraints-toolbar"></a>Barra degli strumenti vincoli
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
- 
+
 [![Barra degli strumenti dei conformatori](introduction-images/11-constraintstoolbar-vsmac.png "Barra degli strumenti vincoli")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -316,7 +316,7 @@ Quando le [classi di dimensioni](~/ios/user-interface/storyboards/unified-storyb
 L'area di progettazione supporta lo zoom tramite diversi controlli:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
- 
+
 ![Controlli zoom nella barra degli strumenti inferiore](introduction-images/16-zoomcontrols-vsmac.png "Controlli zoom nella barra degli strumenti inferiore")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)

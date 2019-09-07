@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ec63162a21333d0ff831ded1ab17a3d8bb0efaa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290577"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769380"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notifiche utente migliorate in Novell. iOS
 
@@ -360,7 +360,6 @@ UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 
 Per aggiornare una notifica esistente, è sufficiente creare una nuova notifica con i parametri desiderati modificati, ad esempio una nuova ora di attivazione, e aggiungerla al sistema con lo stesso identificatore di richiesta della notifica che deve essere modificata. Esempio:
 
-
 ```csharp
 using UserNotifications;
 ...
@@ -664,8 +663,6 @@ Questo codice `encrypted-content` decrittografa il contenuto crittografato dalla
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha trattato tutti i modi in cui la notifica degli utenti è stata migliorata da iOS 10. Viene presentato il nuovo Framework di notifica utente e viene illustrato come usarlo in un'app Novell. iOS o in un'estensione di app.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

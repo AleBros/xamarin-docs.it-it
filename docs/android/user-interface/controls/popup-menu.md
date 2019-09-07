@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 9b3e4177d6be5854e80952d091aa78787d9645bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8a808e6ea49338de5b6bd1618fc2227e6cf5f0b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644928"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764891"
 ---
 # <a name="xamarinandroid-popup-menu"></a>Menu di scelta rapida Novell. Android
 
@@ -20,10 +20,9 @@ Il [PopupMenu](xref:Android.Widget.PopupMenu) , detto anche _menu di scelta rapi
 
 [![Esempio di un'app con un pulsante e un menu a comparsa a tre elementi](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
-
 ## <a name="creating-a-popup-menu"></a>Creazione di un menu popup
 
-Il primo passaggio consiste nel creare un file di risorse di menu per il menu e inserirlo in **risorse/menu**. Il codice XML seguente, ad esempio, è il codice per il menu di tre elementi visualizzato nella schermata precedente, Resources **/menu/popup_menu. XML**:
+Il primo passaggio consiste nel creare un file di risorse di menu per il menu e inserirlo in **risorse/menu**. Il codice XML seguente, ad esempio, è il codice per il menu di tre elementi visualizzato nella schermata precedente, **Resources/menu/popup_menu. XML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -57,7 +56,6 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-
 ## <a name="handling-menu-events"></a>Gestione degli eventi di menu
 
 Quando l'utente seleziona una voce di menu, viene generato l'evento Click [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) e il menu viene eliminato. Toccare un punto qualsiasi all'esterno del menu lo chiuderà semplicemente. In entrambi i casi, quando il menu viene eliminato, viene generato il relativo [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) . Il codice seguente aggiunge i gestori eventi per gli `MenuItemClick` eventi e: `DismissEvent`
@@ -77,8 +75,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 88039da5faf911386232d2b189b27a2921f8144c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 99ee654b260a3a89b58578d352dd066a41753295
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769144"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Modifiche aggiuntive per i Framework tvOS 10
 
@@ -194,8 +194,6 @@ Per il Framework UIKit in tvOS 10 sono stati apportati i miglioramenti seguenti:
 - Il `OpenURL` metodo`UIApplication` della classe viene chiamato in modo asincrono ora supporta un gestore di completamento che viene chiamato al termine dell'apertura.
 - Avviare la condivisione di CloudKit e modificarne le proprietà usando `UICloudSharingController` le `UICloudSharingControllerDelegate` nuove classi e.
 - Sfruttare le celle prelette per migliorare l'esperienza di scorrimento di `UICollectionViews` con il nuovo `UICollectionViewDataSourcePrefetching` delegato.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 6cb001a42f0cc98d0054523dffa0772b29188d73
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523817"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757541"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Ottenere una chiave API Google Maps
 
@@ -23,7 +23,6 @@ Il recupero di una chiave dell'API di Maps v2 prevede i passaggi seguenti:
 1. Recuperare l'impronta digitale SHA-1 dell'archivio chiavi usato per firmare l'applicazione.
 2. Creare un progetto nella console di Google APIs.
 3. Ottenere la chiave API.
-
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>Acquisizione dell'impronta digitale della chiave di firma
 
@@ -52,7 +51,6 @@ Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool
 
 -----
 
-
 Eseguire lo strumento con il comando seguente (usando i percorsi di file illustrati in precedenza):
 
 ```shell
@@ -76,7 +74,6 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 ```
 
 -----
-
 
 ### <a name="production-keys"></a>Chiavi di produzione
 
@@ -132,7 +129,7 @@ A questo punto è stato creato il progetto API e l'API di Google Maps Android V2
 
 Dopo aver creato il progetto API della **console Google Developer** , è necessario creare una chiave API Android. Le applicazioni Novell. Android devono avere una chiave API prima di concedere l'accesso all'API della mappa Android V2.
 
-1. Nella pagina **Maps SDK per Android** visualizzata (dopo aver fatto clic su **Abilita** nel passaggio precedente) andare alla scheda Credentials ( **credenziali** ) e fare clic sul pulsante **create Credentials (crea credenziali** ):
+1. Nella pagina **Maps SDK per Android** visualizzata (dopo aver fatto clic su **Abilita** nel passaggio precedente) andare alla scheda **Credentials (credenziali** ) e fare clic sul pulsante **create Credentials (crea credenziali** ):
 
    [![Maps SDK per il messaggio di credenziali Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 

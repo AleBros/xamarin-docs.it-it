@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 00df2edc1acc45c0302ecc793f4670eafa1dd91c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7d5f8d2e80a6583cf49af883db8f2f33e6496e09
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523739"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757469"
 ---
 # <a name="marshmallow-features"></a>Funzionalità marshmallow
 
 _Questo articolo è utile per iniziare a usare Novell. Android per sviluppare app per Android 6,0 marshmallow._
 
 Questo articolo fornisce una descrizione delle nuove funzionalità di Android 6,0 marshmallow, spiega come preparare Novell. Android per lo sviluppo di marshmallow Android e fornisce collegamenti ad applicazioni di esempio che illustrano come usare il nuovo Android marshmallow funzionalità delle app Novell. Android. 
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -70,7 +69,6 @@ Di seguito sono riportate le funzionalità necessarie per usare le nuove funzion
 
 È possibile continuare a usare [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se si sta sviluppando in modo specifico per il livello API 23 o versioni precedenti. 
 
-
 ## <a name="getting-started"></a>Introduzione
 
 Per iniziare a usare Android marshmallow con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare un progetto Android marshmallow: 
@@ -85,11 +83,9 @@ Per iniziare a usare Android marshmallow con Novell. Android, è necessario scar
 
 Ognuno di questi passaggi è descritto nelle sezioni seguenti:
 
-
 ### <a name="install-xamarin-updates"></a>Installare gli aggiornamenti di Novell
 
 Per aggiornare Novell in modo che includa il supporto per Android 6,0 marshmallow, modificare il canale di aggiornamento in **stabile** e installare tutti gli aggiornamenti. Per ulteriori informazioni sull'installazione degli aggiornamenti dal canale degli aggiornamenti, vedere [Change the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
-
 
 ### <a name="install-the-android-60-sdk"></a>Installare Android 6,0 SDK
 
@@ -106,15 +102,11 @@ Per creare un progetto Novell. Android per marshmallow Android, è necessario pr
 È necessario installare Android SDK Tools revisione 24.3.4 o versione successiva.
 Per ulteriori informazioni sull'utilizzo di gestione Android SDK per installare Android 6,0 SDK, vedere [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
-
-
 ### <a name="start-a-xamarinandroid-project"></a>Avviare un progetto Novell. Android
 
 Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo per Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Android. 
 
 Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione di Android 6,0 MarshMallow. Per fare riferimento al progetto per marshmallow, è necessario configurare il progetto per il **livello API 23 (supporto per Novell. Android v 6.0)** . Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
-
-
 
 ### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o un dispositivo
 
@@ -130,13 +122,9 @@ Ad esempio, questo dispositivo virtuale è configurato per emulare un Nexus 5:
 
 Se si usa un dispositivo fisico, ad esempio Nexus 5, 6 o 9, è possibile installare un'immagine di anteprima di Android marshmallow. Per ulteriori informazioni sull'aggiornamento del dispositivo ad Android marshmallow, vedere [hardware System images](https://developer.android.com/preview/download.html#images).
 
-
-
 ## <a name="new-features"></a>Nuove funzionalità
 
 Molte delle modifiche introdotte in Android marshmallow si concentrano sul miglioramento dell'esperienza utente Android, sull'aumento delle prestazioni e sulla correzione dei bug. Tuttavia, in marshmallow sono state introdotte anche alcune modifiche apportate alle nozioni di base della piattaforma Android. Le sezioni seguenti evidenziano questi miglioramenti e forniscono collegamenti che consentono di iniziare a usare le nuove funzionalità di Android marshmallow nell'app. 
-
-
 
 ### <a name="runtime-permissions"></a>Autorizzazioni di runtime
 
@@ -157,8 +145,6 @@ Per usare questa app di esempio:
 
 Per ulteriori informazioni sulle nuove funzionalità per le autorizzazioni di runtime in Android marshmallow, vedere [utilizzo delle autorizzazioni di sistema](https://developer.android.com/preview/features/runtime-permissions.html).
 
-
-
 ### <a name="authentication-enhancements"></a>Miglioramenti dell'autenticazione
 
 Android marshmallow include due miglioramenti dell'autenticazione che consentono di eliminare la necessità di password:
@@ -168,7 +154,6 @@ Android marshmallow include due miglioramenti dell'autenticazione che consentono
 - **Conferma credenziali** &ndash; Autentica gli utenti in base al tempo di sblocco del dispositivo.
 
 I collegamenti e le app di esempio descritte di seguito possono essere utili per acquisire familiarità con le nuove funzionalità.
-
 
 #### <a name="fingerprint-authentication"></a>Autenticazione con impronta digitale
 
@@ -185,16 +170,12 @@ Per usare questa app di esempio:
 Si noti che questa app di esempio richiede un dispositivo con un lettore di impronte digitali.
 Questa app non archivia l'impronta digitale (o la password).
 
-
-
 #### <a name="voice-interactions"></a>Interazioni vocali
 
 La nuova funzionalità di interazione vocale introdotta in Android marshmallow consente agli utenti dell'app di usare la propria voce per confermare le azioni e selezionare da un elenco di opzioni. Per altre informazioni sulle interazioni vocali, vedere [Panoramica dell'API di interazione vocale](https://developers.google.com/voice-actions/interaction/). 
 
 Vedere [aggiungere una conversazione all'app Android con interazioni vocali](https://blog.xamarin.com/add-a-conversation-to-your-android-app-with-voice-interactions/) per altri dettagli, inclusi esempi di codice, sull'implementazione di interazioni vocali nelle app Novell. Android.
 È disponibile un'app di esempio che illustra come usare l'API di interazione vocale in un'app Novell. Android: [Interazioni vocali](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
-
-
 
 #### <a name="confirm-credential"></a>Conferma credenziali
 
@@ -207,8 +188,6 @@ Per usare questa app di esempio:
 
 1. Configurare una schermata di blocco sicura nel dispositivo (**secure > Security > ScreenLock**).
 2. Toccare il pulsante **Acquista** e confermare le credenziali della schermata di blocco sicura.
-
-
 
 ### <a name="chrome-custom-tabs"></a>Schede personalizzate Chrome
 
@@ -226,8 +205,6 @@ Le *schede personalizzate Chrome* consentono di visualizzare in modo semplice ed
 
 Per sfruttare i vantaggi di questa funzionalità nell'app Novell. Android, scaricare e installare la [libreria di schede personalizzate del supporto Android](https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/).
 Per altre informazioni su questa funzionalità, vedere [schede personalizzate Chrome](https://developer.chrome.com/multidevice/android/customtabs).
-
-
 
 ### <a name="material-design-support-library"></a>Libreria di supporto della progettazione materiale
 
@@ -253,7 +230,6 @@ Per altri dettagli (inclusi esempi di codice) sull'uso della libreria di support
 Novell fornisce un'app di esempio che illustra la nuova libreria di progettazione Android in Novell &ndash; . Android [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
 In questo esempio vengono illustrate le seguenti funzionalità della libreria di progettazione:
 
-
 - Barra degli strumenti con compressione
 - Pulsante azione mobile
 - Visualizzazione ancoraggio
@@ -261,7 +237,6 @@ In questo esempio vengono illustrate le seguenti funzionalità della libreria di
 - Snackbar
 
 Per ulteriori informazioni sulla libreria di progettazione, vedere la pagina relativa alla [libreria di supporto della progettazione Android](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html) nel Blog per sviluppatori Android.
-
 
 ### <a name="additional-library-updates"></a>Aggiornamenti aggiuntivi della libreria
 
@@ -273,11 +248,9 @@ Oltre ad Android marshmallow, Google ha annunciato aggiornamenti correlati a div
 
 - [Libreria indossabile Android](https://www.nuget.org/packages/Xamarin.Android.Wear) &ndash; questo NuGet include Google Play Services associazioni. La versione più recente della libreria indossabile offre nuove funzionalità, inclusa la navigazione più semplice per le app personalizzate, alla piattaforma Android Wear. 
 
-
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo ha presentato Android marshmallow e spiega come installare e configurare gli strumenti e i pacchetti più recenti per lo sviluppo di Novell. Android in marshmallow. Viene inoltre fornita una panoramica delle nuove funzionalità più interessanti di Android marshmallow per lo sviluppo di Novell. Android.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

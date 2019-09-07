@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 193f9f92f112608908d2feb50f815a670d48b39c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d3f4c602f7e581cab74b61072e248a22eede9a22
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762024"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Come si aggiorna la versione di Java Development Kit (JDK)?
 
@@ -60,4 +60,3 @@ Mac OS imposterà automaticamente la nuova versione JDK come impostazione predef
 [![Impostazione del percorso JDK nella scheda percorsi Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 370fec5b9323187f6345d3e6bf9d3e38145cedff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eee338461593ad131f679d32cadf63fe3b1a4c40
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652776"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759338"
 ---
 # <a name="path-basics-in-skiasharp"></a>Nozioni di base di percorso in SkiaSharp
 
@@ -194,7 +194,6 @@ Ecco il programma in esecuzione:
 [![](paths-images/strokejoins-small.png "Tripla screenshot della pagina di tratto unisce")](paths-images/strokejoins-large.png#lightbox "tripla screenshot della pagina viene aggiunto tratto")
 
 La giunzione è costituito da un punto ben strutturato di cui si connettono le righe. Quando due righe vengono aggiunti a un angolo di piccole dimensioni, la giunzione può diventare piuttosto lunga. Per evitare join acuto eccessivamente lunga, la lunghezza del join acuto è limitata dal valore della [ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter) proprietà della `SKPaint`. Una giunzione che supera la lunghezza viene troncata per diventare un angolo smussato.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

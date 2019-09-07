@@ -1,18 +1,18 @@
 ---
 title: Riepilogo del capitolo 24. Navigazione tra le pagine
-description: 'Creazione di App per dispositivi mobili con xamarin. Forms: Riepilogo del capitolo 24. Navigazione tra le pagine'
+description: 'Creazione di app per dispositivi mobili con Novell. Forms: Riepilogo del capitolo 24. Navigazione tra le pagine'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ce56c30cd631e87d39c9c5bda101b67252a0762a
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 340aa8c7327ba75986b960d5e0f6bda66c116fc5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926902"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770921"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Riepilogo del capitolo 24. Navigazione tra le pagine
 
@@ -170,8 +170,6 @@ Il [ **StackRestoreDemo** ](https://github.com/xamarin/xamarin-forms-book-sample
 ### <a name="something-like-a-real-life-app"></a>È simile a un'app reale
 
 Il [ **NoteTaker** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) esempio Usa anche `MultiPageRestorableApp` e consente l'immissione e la modifica delle note che vengono salvate nel `Properties` dizionario.
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

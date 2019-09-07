@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: b195e63bcc88c4d1c659216f99ab698773f73e9e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 86fac9dd0c2f9281a0c828ace68fbf77679dce5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656815"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759833"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Animazioni personalizzate in xamarin. Forms
 
 [![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _La classe di animazione è il blocco predefinito di tutte le animazioni di xamarin. Forms, con i metodi di estensione nella classe ViewExtensions la creazione di uno o più oggetti di animazione. Questo articolo illustra come usare la classe di animazione per creare e annullare le animazioni, sincronizzare le animazioni più e creare animazioni personalizzate per animare le proprietà che non sono animate da metodi di animazione esistenti._
-
 
 Un numero di parametri deve essere specificato durante la creazione di un `Animation` oggetto, inclusi i valori di inizio e fine della proprietà animata e un callback che cambia il valore della proprietà. Un `Animation` oggetto inoltre possibile mantenere una raccolta di animazioni figlio che possono essere eseguiti e sincronizzate. Per altre informazioni, vedere [animazioni figlio](#child).
 
@@ -180,7 +179,6 @@ In questo esempio di codice, il `ColorTo` metodo aggiunge un'animazione il [ `Te
 ## <a name="summary"></a>Riepilogo
 
 Questo articolo è stato illustrato come usare il [ `Animation` ](xref:Xamarin.Forms.Animation) classe per creare e annullare le animazioni e sincronizzare le animazioni più creare animazioni personalizzate per animare le proprietà che non vengono animate dall'animazione esistente metodi. Il `Animation` classe è il blocco predefinito di tutte le animazioni di xamarin. Forms.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 

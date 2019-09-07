@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 8ecc0cf0ed1fe77f55044d44ecdfc43d6cb6b448
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b7dfeee92020be2fb40cfdfc5eb1b97d065b97e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289107"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758168"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -44,7 +44,6 @@ Quando si progetta e si compila un'applicazione, è possibile che in precedenza 
 - Ordinamento dei dati.
 
 Indipendentemente dalle piattaforme mobili per cui l'app è destinata a questi suggerimenti, sarà possibile creare un'app localizzata di alta qualità.
-
 
 ## <a name="design-considerations"></a>Considerazioni di progettazione
 
@@ -85,7 +84,6 @@ Tuttavia, alcune risorse hanno senso localizzare, ad esempio:
 - Icone: alcune iconografiche possono essere specifiche delle impostazioni cultura ed è possibile semplificare l'uso dell'app localizzando le immagini in modo da riflettere le informazioni locali.
 - Colori: alcune impostazioni cultura comprendono colori diversi. il rosso potrebbe significare un avviso in un'area, ma buona fortuna in un altro. Verificare con gli speaker nativi quando si progetta l'app per determinare se è necessario creare un meccanismo per localizzare i colori.
 
-
 ### <a name="videos-and-sound"></a>Video e audio
 
 I video e i suoni presentano problematiche particolari durante la localizzazione di un'applicazione, poiché mentre è relativamente semplice ottenere stringhe tradotte, la registrazione di più tracce di VoiceOver o clip video può essere costosa e difficile.
@@ -93,7 +91,6 @@ I video e i suoni presentano problematiche particolari durante la localizzazione
 Più copie dei file audio e video possono anche aumentare significativamente le dimensioni dell'applicazione, soprattutto se si sta localizzando in un numero elevato di lingue o se sono presenti molti file multimediali. Si consiglia di scaricare solo le risorse della lingua richieste dopo che l'utente ha installato l'app, ma ciò può anche comportare un'esperienza utente insufficiente in reti lente.
 
 Ci sono spesso diversi modi per risolvere i problemi di localizzazione. la cosa più importante è considerarli in primo piano e assicurarsi che l'applicazione sia progettata per gestirli.
-
 
 ### <a name="dates-times-numbers-and-currency"></a>Date, ore, numeri e valuta
 
@@ -144,7 +141,6 @@ Assicurarsi di scrivere e testare l'algoritmo di ricerca tenendo presenti più l
 - Stemming: se la ricerca è stata compilata per la ricerca di parole simili, radici di parole e altre ottimizzazioni di ricerca, queste ottimizzazioni sono compilate per tutti i linguaggi supportati?
 - Ordinamento: assicurarsi che i risultati siano ordinati correttamente (vedere sopra).
 
-
 ### <a name="data-from-external-sources"></a>Dati da origini esterne
 
 Molte applicazioni scaricano i dati da origini esterne, da Twitter e feed RSS a Meteo, notizie o prezzi azionari. Quando viene visualizzato a un utente, è necessario considerare la possibilità che venga visualizzata una schermata di informazioni irrilevanti o illeggibili.
@@ -157,7 +153,6 @@ Esistono alcune strategie che è possibile usare per provare a verificare che l'
 
 Questo può anche influire sui collegamenti esterni a tracce audio o video: quando si progetta l'applicazione, assicurarsi di pianificare in anticipo il contenuto tradotto per l'approvvigionamento o garantire che gli utenti siano informati adeguatamente dall'interfaccia utente quando il contenuto non verrà presentato nei linguaggio.
 
-
 ### <a name="dont-over-translate"></a>Non superare la traduzione
 
 È possibile che alcune stringhe nell'app non debbano essere trascinate o che debbano almeno richiedere particolare attenzione da parte del traduttore. Gli esempi possono includere:
@@ -169,20 +164,15 @@ Questo può anche influire sui collegamenti esterni a tracce audio o video: quan
 
 Infine, assicurarsi di includere istruzioni dettagliate per il traduttore se determinate stringhe richiedono un trattamento speciale.
 
-
 ### <a name="formatted-text"></a>Testo formattato
 
 In genere non è un problema con le app per dispositivi mobili perché le stringhe non sono in genere formattate. Tuttavia, se nell'app è necessario un testo RTF, ad esempio la formattazione in grassetto o in corsivo, assicurarsi che il traduttore sappia come inserire la formattazione, i file di stringhe lo archivino correttamente e formattati correttamente prima di essere visualizzati all'utente (ad esempio, non consentire accidentalmente i codici di formattazione vengono presentati all'utente.
-
-
 
 ## <a name="translation-tips"></a>Suggerimenti per la traduzione
 
 La conversione delle stringhe utilizzate da un'applicazione viene considerata parte del processo di localizzazione. Questa attività viene in genere esternalizzata a un servizio di traduzione ed eseguita da un personale multilingue che potrebbe non essere a conoscenza dell'applicazione o dell'azienda.
 
 I suggerimenti seguenti consentono di produrre stringhe più facili da tradurre in modo accurato e pertanto di migliorare la qualità delle app localizzate.
-
-
 
 ### <a name="localize-complete-strings-not-words"></a>Localizzare stringhe complete e non parole
 
@@ -208,7 +198,6 @@ Non **valido**:
 
 **Questa operazione è sconsigliata** perché non funzionerà necessariamente per tutti i linguaggi e sarà difficile per il traduttore comprendere il contesto di ogni segmento breve. Comporta anche il riutilizzo delle stringhe tradotte, che possono causare problemi in un secondo momento se vengono usate in contesti diversi (e quindi vengono aggiornate).
 
-
 ### <a name="allow-for-parameter-re-ordering"></a>Consenti nuovo ordinamento dei parametri
 
 Alcuni linguaggi di programmazione richiedono sintassi aggiuntiva per specificare l'ordine dei parametri in una stringa, tuttavia .NET supporta già il concetto di segnaposto numerati.
@@ -227,7 +216,6 @@ potrebbe essere tradotto quanto segue (dove la posizione e l'ordine dei segnapos
 
 e i token verranno ordinati come destinazione del traduttore. Assicurarsi di includere una spiegazione del contenuto di ogni segnaposto quando si invia la stringa a un convertitore.
 
-
 ### <a name="use-multiple-strings-for-cardinality"></a>Usare più stringhe per la cardinalità
 
 Evitare stringhe come `"You have {0} message/s."` usare stringhe specifiche per ogni stato per offrire una migliore esperienza utente:
@@ -242,7 +230,6 @@ Evitare stringhe come `"You have {0} message/s."` usare stringhe specifiche per 
 ```
 
 Sarà necessario scrivere il codice nell'app per valutare il numero visualizzato e scegliere la stringa appropriata. Alcune piattaforme, tra cui iOS e Android, includono funzionalità predefinite per scegliere automaticamente la stringa plurale più appropriata in base alle preferenze per la lingua o le impostazioni locali correnti.
-
 
 ### <a name="allowing-for-gender"></a>Consentire il sesso
 
@@ -294,7 +281,6 @@ Ci sono anche servizi di traduzione professionale che porteranno le tue stringhe
 
 Uno dei servizi più noti è [Lionbridge](http://www.lionbridge.com/). La maggior parte dei servizi professionali supporta tutti i tipi di file comuni, tra cui stringhe, XML, RESX e POT/PO.
 
-
 ## <a name="summary"></a>Riepilogo
 
 In questo articolo sono stati introdotti alcuni dei concetti che è necessario conoscere prima di internazionalizzazione l'app e quindi la localizzazione delle risorse e viene anche illustrato come modificare le preferenze della lingua per ogni piattaforma.
@@ -306,8 +292,6 @@ Continua a leggere i dettagli tecnici per la piattaforma a cui sei interessato:
 - Localizzazione multipiattaforma [Novell. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) con i file resx.
 - Localizzazione della piattaforma nativa [Novell. iOS](~/ios/app-fundamentals/localization/index.md) .
 - Localizzazione della piattaforma nativa [Novell. Android](~/android/app-fundamentals/localization.md) .
-
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
