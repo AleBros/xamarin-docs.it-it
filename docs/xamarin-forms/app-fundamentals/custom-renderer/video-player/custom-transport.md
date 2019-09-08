@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771822"
 ---
 # <a name="custom-video-transport-controls"></a>Controlli di trasporto video personalizzati
 
@@ -522,7 +522,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>Pulsanti Play, Pause e Stop
 
-L'uso di caratteri Unicode per le immagini simboliche di **Play**, **Pause** e **Stop** è complesso. La sezione [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) (Informazioni tecniche varie) dello standard Unicode definisce tre caratteri simbolo adeguati a questo scopo. Questi sono:
+L'uso di caratteri Unicode per le immagini simboliche di **Play**, **Pause** e **Stop** è complesso. La sezione [Miscellaneous Technical](https://unicode-table.com/en/blocks/miscellaneous-technical/) (Informazioni tecniche varie) dello standard Unicode definisce tre caratteri simbolo adeguati a questo scopo. Si tratta di:
 
 - 0x23F5 (triangolo nero medio rivolto verso destra) oppure &#x23F5; per **Play**
 - 0x23F8 (due barre verticali) oppure &#x23F8; per **Pause**
@@ -656,7 +656,6 @@ Tuttavia, in Android e UWP il pulsante **Play** ha un aspetto molto diverso quan
 [![Trasporto personalizzato in pausa](custom-transport-images/customtransportpaused-small.png "Trasporto personalizzato in pausa")](custom-transport-images/customtransportpaused-large.png#lightbox "Trasporto personalizzato in pausa")
 
 In un'applicazione di produzione è probabile che si desideri usare le proprie immagini bitmap per i pulsanti per ottenere uniformità visiva.
-
 
 ## <a name="related-links"></a>Collegamenti correlati
 
