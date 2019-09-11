@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/10/2019
-ms.openlocfilehash: de93927728271e9f0d9d2ef850b70eeeee249c84
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: 0694439f5e363399e0442c9883426c0f0bf5d989
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658104"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887436"
 ---
 # <a name="xamarinforms-activityindicator"></a>Novell. Forms ActivityIndicator
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
-Il controllo Novell.[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms Visualizza un'animazione per indicare che l'applicazione è impegnata in un'attività di lunga durata. Diversamente da [`ProgressBar`](xref:Xamarin.Forms.ProgressBar), l'oggetto `ActivityIndicator` non indica lo stato di avanzamento. `ActivityIndicator` Eredita [da`View`](xref:Xamarin.Forms.View).
+Il controllo Novell. [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) Forms Visualizza un'animazione per indicare che l'applicazione è impegnata in un'attività di lunga durata. Diversamente da [`ProgressBar`](xref:Xamarin.Forms.ProgressBar), l'oggetto `ActivityIndicator` non indica lo stato di avanzamento. `ActivityIndicator` Eredita [da`View`](xref:Xamarin.Forms.View).
 
 Gli screenshot seguenti mostrano un `ActivityIndicator` controllo su iOS e Android:
 

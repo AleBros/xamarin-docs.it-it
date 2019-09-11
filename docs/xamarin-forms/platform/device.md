@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: eb1358f039cc5d5a200f929fcc7dfa71ca863d2a
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 77cc414cd9b15f99f95d4a54f7af5ce6f028c41a
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121307"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887449"
 ---
 # <a name="xamarinforms-device-class"></a>Classe di dispositivi di xamarin. Forms
 
@@ -114,7 +114,7 @@ In alternativa, il `OnIdiom` estensione di markup è utilizzabile in XAML per pe
 Il [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valore recupera una [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valore di enumerazione che rappresenta la direzione del flusso corrente utilizzata dal dispositivo. La direzione del flusso è la direzione in cui gli elementi dell'interfaccia utente della pagina vengono analizzati dall'occhio del lettore. I valori dell'enumerazione sono:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 In XAML, il [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valore può essere recuperato tramite il `x:Static` estensione di markup:
@@ -195,7 +195,7 @@ La `Device` classe include i metodi `static` seguenti che possono essere usati p
 | `InvokeOnMainThreadAsync` | `Action` | `Task` | Richiama un oggetto `Action` sul thread principale e ne attende il completamento. |
 | `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Richiama un oggetto `Func<Task<T>>` sul thread principale e ne attende il completamento. |
 | `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Richiama un oggetto `Func<Task>` sul thread principale e ne attende il completamento. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Restituisce l' `SynchronizationContext` oggetto per il thread principale. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Restituisce l'oggetto `SynchronizationContext` per il thread principale. |
 
 Il codice seguente illustra un esempio di utilizzo del `BeginInvokeOnMainThread` metodo:
 
