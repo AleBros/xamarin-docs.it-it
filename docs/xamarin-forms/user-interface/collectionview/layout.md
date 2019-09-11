@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
-ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 376e35c8b82973ea1343966fad814db2d3a5e673
+ms.sourcegitcommit: e83035c746f165ee6d03f2e9fd0066ee4f20a9fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976580"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70906457"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Layout di Novell. Forms CollectionView
 
@@ -528,7 +528,7 @@ CollectionView collectionView = new CollectionView
 
 Questo codice restituisce una griglia verticale a due colonne, con una spaziatura verticale di 20 intorno a ogni elemento e una spaziatura orizzontale di 30 intorno a ogni elemento:
 
-[ ![Screenshot di un CollectionView con spaziatura degli elementi, nella spaziatura degli elementi di iOS e Android](layout-images/vertical-grid-spacing.png "CollectionView") ] (layout-images/vertical-grid-spacing-large.png#lightbox "Spaziatura elemento CollectionView")
+[ ![Screenshot di un CollectionView con spaziatura degli elementi, nella](layout-images/vertical-grid-spacing.png "spaziatura degli elementi") di Android CollectionView] (layout-images/vertical-grid-spacing-large.png#lightbox "Spaziatura elemento CollectionView")
 
 ## <a name="item-sizing"></a>Ridimensionamento elementi
 
