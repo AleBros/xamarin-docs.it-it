@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: dfd6c9d6419f663b1ef474066f7918859d42b3c5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f4c8c8b19d7738478cdc2c8f83c6fc8d1f361466
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757289"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985665"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 
@@ -210,7 +210,7 @@ Per altre informazioni sulle definizioni di classe C#, vedere gli argomenti [Cla
 
 <a name="properties" />
 
-### <a name="properties"></a>Properties
+### <a name="properties"></a>Proprietà
 
 In Java i metodi mutatori (setter) e i metodi di controllo (getter) vengono spesso usati per controllare come vengono apportate modifiche ai membri delle classi, nascondendo e proteggendo tali membri dal codice esterno. La classe `TextView` Android, ad esempio, fornisce i metodi `getText` e `setText`. C# fornisce un meccanismo simile ma più diretto, noto come *proprietà*.
 Gli utenti di una classe C# possono accedere a una proprietà nello stesso modo in cui accedono a un campo, ma ogni accesso comporta una chiamata a un metodo trasparente al chiamante. Questo metodo "invisibile" può provocare effetti collaterali, ad esempio l'impostazione di altri valori, l'esecuzione di conversioni o la modifica dello stato degli oggetti.
@@ -240,7 +240,7 @@ Per chiamare un costruttore di una classe di base in C# si usano i due punti (`:
 public class PictureLayout : ViewGroup
 {
     ...
-    public class PictureLayout (Context context)
+    public PictureLayout (Context context)
            : base (context)
     {
         ...
@@ -409,7 +409,7 @@ Per altre informazioni sul supporto delle funzionalità di programmazione asincr
 
 Numerose parole chiave del linguaggio usate in Java sono usate anche in C#. Ci sono anche molte parole chiave Java che hanno una controparte in C# equivalente ma con un nome diverso, come elencato in questa tabella:
 
-|Java|C#|Descrizione|
+|Java|C#|DESCRIZIONE|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Usata per dichiarare i valori booleani true e false.|
 |`extends`|`:`|Precede la classe e le interfacce da cui ereditare.|
@@ -425,7 +425,7 @@ Numerose parole chiave del linguaggio usate in Java sono usate anche in C#. Ci s
 
 Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una controparte in Java. Il codice Xamarin.Android usa spesso le parole chiave C# seguenti (questa tabella è utile come riferimento quando si legge il [codice di esempio](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) Xamarin.Android):
 
-|C#|Descrizione|
+|C#|DESCRIZIONE|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Esegue conversioni tra tipi riferimento compatibili o tipi nullable.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Specifica che un'espressione lambda o un metodo è asincrono.|

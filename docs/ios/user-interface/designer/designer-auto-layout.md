@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a2f637677620f9bfb2bd26a5af55fb9fb56a7af9
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768408"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985680"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automatico con il Xamarin Designer per iOS
 
@@ -63,9 +63,23 @@ La barra degli strumenti vincoli è stata aggiornata e ora è costituita da due 
   - In modalità di modifica vincoli questo pulsante regola i vincoli in modo che corrispondano al frame dell'elemento.
   - In modalità di modifica frame questo pulsante regola il frame dell'elemento in modo che corrisponda alla posizione di definizione dei vincoli.
 
+## <a name="constraints-editing-popover"></a>Vincoli per la modifica di popover
+
+La finestra popup Editor vincoli consente di aggiungere e aggiornare contemporaneamente più vincoli per una visualizzazione Select. È possibile creare più vincoli di spaziatura, proporzioni e allineamento, ad esempio allineare una visualizzazione ai bordi sinistro di due visualizzazioni.
+
+Per la modifica dei vincoli sulla visualizzazione selezionata, fare clic sui puntini di sospensione per ![visualizzare il popopov di modifica dei vincoli.](designer-auto-layout-images/constraints-popup.png)
+
+Quando si apre il programma Constraints, vengono visualizzati tutti i vincoli preimpostati nella vista. È possibile impostare tutti i vincoli di spaziatura selezionando **tutti i lati** della casella combinata nell'angolo superiore destro e selezionare **Cancella tutto** per rimuoverli. 
+
+La funzione **W** imposterà Width e **H** imposterà il vincolo Height. Quando si controllano le **proporzioni**, l'altezza e la larghezza delle visualizzazioni saranno controllate su diverse dimensioni dello schermo, la larghezza della visualizzazione viene utilizzata come numeratore per la razione e l'altezza come denominatore.
+
+![spaziatura vincoli](designer-auto-layout-images/constraints-spacing.png)
+
+Quattro caselle combinate per vincoli di spaziatura elenca le visualizzazioni adiacenti per ancorare il vincolo
+
 ## <a name="surface-based-constraint-editing"></a>Modifica di vincoli basati sulla superficie
 
-Nella sezione precedente è stato illustrato come aggiungere vincoli predefiniti e rimuovere i vincoli usando la barra degli strumenti vincoli. Per una modifica più accurata dei vincoli, è possibile interagire con i vincoli direttamente nell'area di progettazione. Questa sezione presenta le nozioni di base sulla modifica di vincoli basati sulla superficie, inclusi i controlli di spaziatura dei pin, le aree di rilascio e l'utilizzo di diversi tipi di vincoli.
+Per una modifica più accurata dei vincoli, è possibile interagire con i vincoli direttamente nell'area di progettazione. Questa sezione presenta le nozioni di base sulla modifica di vincoli basati sulla superficie, inclusi i controlli di spaziatura dei pin, le aree di rilascio e l'utilizzo di diversi tipi di vincoli.
 
 ### <a name="creating-constraints"></a>Creazione di vincoli
 

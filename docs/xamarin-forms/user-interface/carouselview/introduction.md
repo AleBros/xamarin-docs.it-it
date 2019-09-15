@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: pauldipietro
 ms.author: padipi
 ms.date: 09/09/2019
-ms.openlocfilehash: 244582d579780a962dfcb25c1a081d768b42acd3
-ms.sourcegitcommit: e83035c746f165ee6d03f2e9fd0066ee4f20a9fb
+ms.openlocfilehash: 7979f6ed362c580d9cf80f19b3bc0ea7550ca70c
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908289"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985966"
 ---
 # <a name="xamarinforms-carouselview-introduction"></a>Introduzione a Novell. Forms CarouselView
 
 ![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)è una vista per la presentazione di informazioni in un modo simile a un carosello.
-
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)è disponibile in Novell. Forms 4,3. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la seguente riga di codice alla `AppDelegate` classe in iOS o `MainActivity` alla classe in Android, prima di chiamare `Forms.Init`:
 
