@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771700"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998052"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizzazione di un elemento ViewCell
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _Un elemento ViewCell di Xamarin.Forms è una cella che può essere aggiunta a un elemento ListView o TableView che contiene una vista definita dallo sviluppatore. Questo articolo illustra come creare un renderer personalizzato per un elemento ViewCell ospitato all'interno di un controllo ListView di Xamarin.Forms. Questo impedisce che i calcoli di layout di Xamarin.Forms vengano ripetutamente chiamati durante lo scorrimento di ListView._
 
@@ -146,7 +146,7 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Viene usato un controllo [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms per visualizzare un elenco di dati, che viene popolato usando la proprietà [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource). La strategia di memorizzazione nella cache di [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) tenta di ridurre al minimo il footprint di memoria `ListView` e la velocità di esecuzione riciclando le celle dell'elenco. Per altre informazioni, vedere [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) (Strategia di memorizzazione nella cache).
+Viene usato un controllo [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms per visualizzare un elenco di dati, che viene popolato usando la proprietà [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource). La strategia di memorizzazione nella cache di [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) tenta di ridurre al minimo il footprint di memoria `ListView` e la velocità di esecuzione riciclando le celle dell'elenco. Per altre informazioni, vedere [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy) (Strategia di memorizzazione nella cache).
 
 Ogni riga dell'elenco contiene tre elementi di dati: un nome, una categoria e un nome di file di immagine. Il layout di ogni riga nell'elenco è definito dall'elemento `DataTemplate` a cui viene fatto riferimento attraverso la proprietà [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) associabile. `DataTemplate` stabilisce che ogni riga di dati dell'elenco sia un elemento `NativeCell` che visualizza le relative proprietà `Name`, `Category` e `ImageFilename` usando il data binding. Per altre informazioni sul controllo `ListView`, vedere [ListView](~/xamarin-forms/user-interface/listview/index.md).
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/04/2019
-ms.openlocfilehash: 5d09d76a44a6322285a143230173d244848ba4a6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9d7dd98b98c7722d6fcdcb49c10e326732fa9f0b
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770202"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70997989"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 
 [`ListView`](xref:Xamarin.Forms.ListView)è una visualizzazione per la presentazione di elenchi di dati, in particolare gli elenchi lunghi che richiedono lo scorrimento.
 
@@ -36,6 +36,7 @@ La `ListView` classe non supporta la definizione di elementi elenco in XAML, è 
 Per ulteriori informazioni sull'associazione di dati a `ListView` un'istanza di, vedere [ListView Data Sources](~/xamarin-forms/user-interface/listview/data-and-databinding.md).
 
 ## <a name="components"></a>Componenti
+
 Il `ListView` controllo dispone di un numero di componenti disponibili per esercitare le funzionalità native di ogni piattaforma. Questi componenti sono definiti nelle sezioni seguenti.
 
 ### <a name="headers-and-footerscustomizing-list-appearancemdheaders-and-footers"></a>[Intestazioni e piè di pagina](customizing-list-appearance.md#headers-and-footers)
@@ -55,7 +56,7 @@ Gli elementi di dati `ListView` in un oggetto sono detti celle. Ogni cella corri
 - Le [celle predefinite](customizing-cell-appearance.md#built-in-cells), ad esempio `TextCell` e `ImageCell`, corrispondono ai controlli nativi e sono particolarmente performanti.
   - Un [`TextCell`](customizing-cell-appearance.md#textcell) oggetto Visualizza una stringa di testo, facoltativamente con il testo del dettaglio. Testo dei dettagli viene visualizzato come una seconda riga in un carattere più piccolo con un colore.
   - Un [`ImageCell`](customizing-cell-appearance.md#imagecell) oggetto Visualizza un'immagine con testo. Viene visualizzato come `TextCell` con un'immagine a sinistra.
-- [Le celle personalizzate](customizing-cell-appearance.md#customcells) vengono usate per presentare dati complessi. Ad esempio, è possibile usare una cella personalizzata per presentare un elenco di canzoni che includono album e artista.
+- [Le celle personalizzate](customizing-cell-appearance.md#custom-cells) vengono usate per presentare dati complessi. Ad esempio, è possibile usare una cella personalizzata per presentare un elenco di canzoni che includono album e artista.
 
 La schermata seguente mostra un `ListView` elemento con ImageCell:
 
@@ -64,11 +65,12 @@ La schermata seguente mostra un `ListView` elemento con ImageCell:
 Per ulteriori informazioni sulla personalizzazione delle celle in un `ListView`, vedere [personalizzazione dell'aspetto delle celle di ListView](customizing-cell-appearance.md).
 
 ## <a name="functionality"></a>Funzionalità
+
 La `ListView` classe supporta diversi stili di interazione.
 
 - Il [pull a Refresh](interactivity.md#pull-to-refresh) consente all'utente di eseguire il `ListView` pull per aggiornare il contenuto.
 - Le [azioni di contesto](interactivity.md#context-actions) consentono allo sviluppatore di specificare azioni personalizzate sui singoli elementi dell'elenco. Ad esempio, è possibile implementare scorrere all'azione in iOS o azioni in Android toccare a lungo.
-- [Selezione](interactivity.md#selectiontaps) consente allo sviluppatore di aggiungere la funzionalità agli eventi di selezione e deselezione negli elementi dell'elenco.
+- [Selezione](interactivity.md#selection-and-taps) consente allo sviluppatore di aggiungere la funzionalità agli eventi di selezione e deselezione negli elementi dell'elenco.
 
 La schermata seguente mostra un `ListView` oggetto con azioni di contesto:
 
