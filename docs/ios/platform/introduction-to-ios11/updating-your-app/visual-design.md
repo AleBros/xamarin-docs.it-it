@@ -1,83 +1,84 @@
 ---
-title: Aggiornamenti di progettazione visivi in iOS 11
-description: Questo documento descrive la progettazione visiva aggiornamenti introdotto in iOS 11. Vengono illustrate le modifiche apportate a barre di navigazione, ricerca controller, i margini, contenuto a schermo intero e le visualizzazioni di tabelle.
+title: Aggiornamenti della progettazione visiva in iOS 11
+description: Questo documento descrive gli aggiornamenti della progettazione visiva introdotti in iOS 11. Viene illustrato come modificare le barre di navigazione, i controller di ricerca, i margini, il contenuto a schermo intero e le visualizzazioni di tabella.
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: c6351f2c25f8e31181c761aea1b471315a8a05e8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bd3adf5d01be0cdb709c752e1ace131b8b3e8d83
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61400204"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752263"
 ---
-# <a name="visual-design-updates-in-ios-11"></a>Aggiornamenti di progettazione visivi in iOS 11
+# <a name="visual-design-updates-in-ios-11"></a>Aggiornamenti della progettazione visiva in iOS 11
 
-In iOS 11, Apple ha introdotto nuove modifiche visive tra cui gli aggiornamenti per la barra di spostamento, barra di ricerca e le visualizzazioni di tabelle. Inoltre, sono stati apportati miglioramenti per consentire una maggiore flessibilità su margini e il contenuto a schermo intero. Queste modifiche sono descritte in questa Guida. 
+In iOS 11 Apple ha introdotto nuove modifiche visive, inclusi gli aggiornamenti alla barra di spostamento, alla barra di ricerca e alle visualizzazioni di tabella. Sono stati inoltre apportati miglioramenti per consentire una maggiore flessibilità rispetto ai margini e al contenuto a schermo intero. Queste modifiche sono descritte in questa guida. 
 
-Per informazioni in particolare sulla progettazione per iPhone X, Apple, guardare [progetta per iPhone X](https://developer.apple.com/videos/play/fall2017/801/) video.
+Per informazioni specifiche sulla progettazione di iPhone X, guardare il video [relativo alla progettazione di Apple per iPhone x](https://developer.apple.com/videos/play/fall2017/801/) .
 
 ## <a name="uikit"></a>UIKit
 
-Le barre UIKit, sono state modificate in iOS 11 per renderli più accessibili per gli utenti finali.
+Le barre UIKit sono state adattate in iOS 11 per renderle più accessibili per gli utenti finali.
 
-Tale modifica è una nuova visualizzazione HUD che viene visualizzata quando un utente prolungata-pressioni su una barra elemento. A tale scopo, impostare il `largeContentSizeImage` proprietà sul `UIBarItem` e aggiungere un'immagine di dimensioni maggiori tramite un' [catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md):
+Una modifica di questo tipo è una nuova visualizzazione HUD visualizzata quando un utente preme lungo un elemento a barre. Per abilitare questa impostazione, impostare `largeContentSizeImage` la proprietà `UIBarItem` su e aggiungere un'immagine più grande tramite un [Catalogo asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md):
 
 ```csharp
 barItem.LargeContentSizeImage = UIImage.FromBundle("AccessibleImage");
 ```
 
 ### <a name="navigation-bar"></a>Barra di spostamento
-iOS 11 ha introdotto nuove funzionalità per rendere più facile da leggere i titoli di barra di navigazione. Le app possono visualizzare questo titolo più grande mediante l'assegnazione di `PrefersLargeTitles` proprietà su true:
+iOS 11 introduce nuove funzionalità per semplificare la lettura dei titoli della barra di navigazione. Le app possono visualizzare questo titolo più grande assegnando `PrefersLargeTitles` la proprietà a true:
 
 ```csharp
 NavigationController.NavigationBar.PrefersLargeTitles = true;
 ```
 
-I titoli più grandi di impostazione nell'app rende _tutti_ titoli di barre di navigazione tra le app visualizzati più grandi, come illustrato nello screenshot seguente:
+L'impostazione di titoli più grandi nell'app consente di visualizzare _tutti i_ titoli delle barre di spostamento nell'app, come illustrato nello screenshot seguente:
 
-![Titolo di spostamento di grandi dimensioni](visual-design-images/image7.png)
+![Titolo di navigazione grande](visual-design-images/image7.png)
 
-Per controllare quando viene visualizzato un grande titolo in una barra di spostamento, impostare il `LargeTitleDisplayMode` nell'elemento di navigazione per `Always`, `Never`, o `Automatic`.
+Per controllare quando un titolo grande viene visualizzato su una barra di navigazione, impostare `LargeTitleDisplayMode` sull'elemento di `Always`navigazione su, `Never`o `Automatic`.
 
 ### <a name="search-controller"></a>Controller di ricerca
 
-iOS 11 ha semplificato aggiungere un controller di ricerca direttamente alla barra di navigazione. Dopo aver creato un controller di ricerca, aggiungerlo alla barra di spostamento con la `SearchController` proprietà:
+iOS 11 ha semplificato l'aggiunta di un controller di ricerca direttamente alla barra di spostamento. Dopo aver creato un controller di ricerca, aggiungerlo alla barra di spostamento con la `SearchController` proprietà:
 
 ```csharp
 NavigationItem.SearchController = searchController;
 ```
 
-[![Titolo di spostamento di grandi dimensioni con barra di ricerca](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
+[![Titolo di navigazione grande con barra di ricerca](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
-A seconda della funzionalità dell'app, è possibile o non opportuno la barra di ricerca deve essere nascosto quando un utente scorre un elenco. È possibile apportare delle modifiche usando il `HidesSearchBarWhenScrolling` proprietà.
+A seconda della funzionalità dell'app, è possibile che la barra di ricerca non venga nascosta quando un utente scorre un elenco. È possibile modificare questa impostazione usando `HidesSearchBarWhenScrolling` la proprietà.
 
 ## <a name="margins"></a>Margini
 
-Apple ha creato una nuova proprietà, ovvero `directionalLayoutMargins` – che può essere utilizzato per impostare lo spazio tra le visualizzazioni e le visualizzazioni secondarie. Uso `directionalLayoutMargins` con `leading` o `trailing` Inset. Indipendentemente dal fatto che il sistema è un linguaggio da sinistra a destra o da destra a sinistra, è impostata in modo appropriato la spaziatura nell'app per iOS.
+Apple ha creato una nuova proprietà, `directionalLayoutMargins` che può essere usata per impostare lo spazio tra le viste e le visualizzazioni. Usare `directionalLayoutMargins` con `leading` le `trailing` impostazioni o. Indipendentemente dal fatto che il sistema sia una lingua da sinistra a destra o da destra a sinistra, la spaziatura nell'app viene impostata in modo appropriato da iOS.
 
-In iOS 10 e prima di, tutte le visualizzazioni avevano una dimensione del margine minimo in cui allinearli. iOS 11 introdotta la possibilità di eseguire l'override utilizzando `ViewRespectsSystemMinimumLayoutMargins`. Impostando questa proprietà su false consente, ad esempio, è possibile modificare i margini di edge su zero:
+In iOS 10 e precedenti, tutte le visualizzazioni hanno una dimensione del margine minima a cui si allineano. iOS 11 ha introdotto la possibilità di eseguire l' `ViewRespectsSystemMinimumLayoutMargins`override di questo usando. Se, ad esempio, si imposta questa proprietà su false, è possibile modificare gli indici di bordo su zero:
 
 ```csharp
 ViewRespectsSystemMinimumLayoutMargins = false;
 View.LayoutMargins = UIEdgeInsets.Zero;
 ```
-![Margine dell'immagine che mostra con zero inset in ios 11](visual-design-images/image9.png)
+
+![Immagine che mostra il margine con incasso zero in iOS 11](visual-design-images/image9.png)
 
 <a name="fullscreen" />
 
 ## <a name="full-screen-content"></a>Contenuto a schermo intero
 
-iOS 7 [introdotti](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` e `bottomLayoutGuide` allo scopo di vincolare le visualizzazioni in modo che possano non sono nascoste da UIKit barre e in un'area visibile dello schermo. Queste sono state deprecate in iOS 11 in favore del _area sicura_.
+iOS 7 [ha introdotto](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` e `bottomLayoutGuide` come metodo per vincolare le visualizzazioni in modo che non siano nascoste dalle barre UIKit e si trovino in un'area visibile dello schermo. Questi elementi sono stati deprecati in iOS 11 a favore dell' _area sicura_.
 
-Area di sicurezza è un nuovo modo di concepire il spazio visibile dell'applicazione e come si aggiungono vincoli tra una vista e una visualizzazione con privilegi avanzata. Ad esempio, prendere in considerazione l'immagine seguente:
+L'area Safe è un nuovo modo per considerare lo spazio visibile dell'applicazione e la modalità di aggiunta dei vincoli tra una vista e una visualizzazione Super. Si consideri, ad esempio, l'immagine seguente:
 
-[![Visual Studio area sicura Top e la Guida layout in basso](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
+[![Guida al layout dell'area sicura rispetto alla parte superiore e inferiore](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-In precedenza, se è stata aggiunta una visualizzazione e desiderava che siano visibili nell'area di colore verde precedente, è consigliabile vincolare per il _inferiore_ del `TopLayoutGuide` e il _superiore_ del `BottomLayoutGuide`. In iOS 11, è invece consigliabile vincolare per il _superiore_ e il _inferiore_ dell'Area di sicurezza. Vedere l'esempio seguente:
+In precedenza, se è stata aggiunta una visualizzazione e si desidera che sia visibile nell'area verde precedente, è necessario vincolarla alla _fine_ `TopLayoutGuide` di e `BottomLayoutGuide`all' _inizio_ di. In iOS 11 è invece necessario vincolarlo alla _parte superiore_ e _inferiore_ dell'area sicura. Vedere l'esempio seguente:
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;
@@ -87,11 +88,11 @@ safeGuide.BottomAnchor.ConstraintEqualTo(imageView.BottomAnchor).Active = true;
 
 ## <a name="table-view"></a>Visualizzazione tabella
 
-Il UITableView ha un numero di modifiche, piccole ma significative, in iOS 11.
+Il UITableView ha avuto una serie di modifiche ridotte, ma significative, in iOS 11.
 
-Per impostazione predefinita, le intestazioni, piè di pagina e le celle vengono ora automaticamente ridimensionate in base al contenuto. Per rifiutare esplicitamente questo set di comportamento di ridimensionamento automatico la `EstimatedRowHeight`, `EstimatedSectionHeaderHeight`, o `EstimatedSectionFooterHeight` su zero.
+Per impostazione predefinita, le intestazioni, i piè di pagina e le celle vengono ora ridimensionati automaticamente in base al relativo contenuto. Per rifiutare esplicitamente questo comportamento di ridimensionamento automatico `EstimatedRowHeight`, impostare, `EstimatedSectionHeaderHeight`o `EstimatedSectionFooterHeight` su zero.
 
-Tuttavia, in alcuni casi (ad esempio quando aggiunta UITableViewController in iOS Designer o quando si usa Storboards esistente in Interface Builder) potrebbe essere necessario abilitare manualmente le celle il ridimensionamento automatico. A tale scopo, verificare di avere impostato le proprietà seguenti nella visualizzazione della tabella per le celle delle intestazioni e piè di pagina, rispettivamente:
+Tuttavia, in alcune circostanze, ad esempio quando si aggiungono UITableViewController in iOS designer o quando si usa Storboards esistenti in Interface Builder, potrebbe essere necessario abilitare manualmente le celle a ridimensionamento automatico. A tale scopo, assicurarsi di avere impostato le proprietà seguenti nella visualizzazione tabella per le celle, le intestazioni e i piè di pagina, rispettivamente:
 
 ```csharp
 // Cells
@@ -108,15 +109,13 @@ TableView.EstimatedSectionFooterHeight = 40f;
 
 ```
 
-iOS 11 ha esteso le funzionalità delle azioni di riga. `UISwipeActionsConfiguration` è stato introdotto per definire un set di azioni che dovrà essere eseguita quando l'utente passa in entrambe le direzioni di una riga in una visualizzazione tabella. Questo comportamento è simile a quella del Mail.app nativo. Per altre informazioni, vedere la [azioni riga](~/ios/user-interface/controls/tables/row-action.md) Guida.
+iOS 11 ha espanso la funzionalità delle azioni di riga. `UISwipeActionsConfiguration`è stato introdotto per definire un set di azioni che devono essere eseguite quando l'utente scorre in una delle due direzioni su una riga di una vista tabella. Questo comportamento è simile a quello di Native mail. app. Per ulteriori informazioni, vedere la Guida alle [azioni sulle righe](~/ios/user-interface/controls/tables/row-action.md) .
 
-Viste delle tabelle dispongono del supporto per trascinamento della selezione in iOS 11. Per altre informazioni, vedere la [trascinare e rilasciare](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) Guida.
-
+Le visualizzazioni di tabella dispongono del supporto per il trascinamento della selezione in iOS 11. Per ulteriori informazioni, vedere la Guida di [trascinamento della selezione](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) .
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [What ' s New in iOS 11 (Apple)](https://developer.apple.com/ios/)
-- [Pagina del prodotto aggiornato App Store (Apple)](https://developer.apple.com/app-store/product-page/)
+- [Novità di iOS 11 (Apple)](https://developer.apple.com/ios/)
+- [Pagina del prodotto App Store aggiornata (Apple)](https://developer.apple.com/app-store/product-page/)
 - [Progettazione per iPhone X (Apple) (video)](https://developer.apple.com/videos/play/fall2017/801/)
-- [Aggiornamento dell'App per iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)
-
+- [Aggiornamento dell'app per iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)

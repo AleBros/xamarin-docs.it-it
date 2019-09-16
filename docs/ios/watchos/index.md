@@ -1,46 +1,46 @@
 ---
-title: Compilazione watchOS App con Xamarin
-description: Questo documento include collegamenti alle varie guide che descrivono come compilare App watchOS con Xamarin. Le guide collegate discutere Introduzione a watchOS controlli dell'interfaccia utente, funzionalità watchOS, distribuzione e test e risoluzione dei problemi
+title: Creazione di app watchos con Novell
+description: Questo documento contiene collegamenti a diverse guide che descrivono come creare app watchos con Novell. Le guide collegate illustrano le attività iniziali, i controlli dell'interfaccia utente watchos, le funzionalità di watchos, la distribuzione e il testing e la risoluzione dei problemi
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 29f7480845dc4e8e608477e1eeb7f2e35d8f5490
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 36e3bec3c616f9aa3efcc5bec25647d7e5ef3162
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61361793"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292254"
 ---
-# <a name="building-watchos-apps-with-xamarin"></a>Compilazione watchOS App con Xamarin
+# <a name="building-watchos-apps-with-xamarin"></a>Creazione di app watchos con Novell
 
-![Interfaccia di selezione di Apple Watch](images/watch1.png) ![Pulsanti di Apple Watch](images/watch2.png) ![Interfaccia di mapping di Apple Watch](images/watch3.png)
+![Interfaccia selezione Apple Watch](images/watch1.png) ![Pulsanti Apple Watch](images/watch2.png) ![Interfaccia mappa Apple Watch](images/watch3.png)
 
 <!-- watch images courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="getting-startedioswatchosget-startedindexmd"></a>[Introduzione](~/ios/watchos/get-started/index.md)
 
-* [Introduzione a watchOS](~/ios/watchos/get-started/intro-to-watchos.md).
+* [Introduzione a watchos](~/ios/watchos/get-started/intro-to-watchos.md).
 * [Informazioni sull'installazione](~/ios/watchos/get-started/installation.md).
-* Compilare i [prima app watchOS](~/ios/watchos/get-started/hello-watch.md) usando Xamarin.
+* Crea la tua [prima app watchos](~/ios/watchos/get-started/hello-watch.md) con Novell.
 
 ## <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Interfaccia utente](~/ios/watchos/user-interface/index.md)
 
-Breve panoramica dei controlli inclusi nell'app di esempio Watch Kit catalogo, inclusi i [immagine](~/ios/watchos/user-interface/image.md), [tabella](~/ios/watchos/user-interface/menu.md) [menu](~/ios/watchos/user-interface/menu.md), e [input di testo](~/ios/watchos/user-interface/text-input.md) controlli.
+Breve panoramica dei controlli inclusi nell'app di esempio Watch Kit Catalog, inclusi i controlli [immagine](~/ios/watchos/user-interface/image.md), [tabella](~/ios/watchos/user-interface/menu.md) [menu](~/ios/watchos/user-interface/menu.md) e [input di testo](~/ios/watchos/user-interface/text-input.md) .
 
 ## <a name="platform-featuresplatformindexmd"></a>[Funzionalità della piattaforma](platform/index.md)
 
-Come includere le funzionalità specifiche di watchOS come [notifiche](~/ios/watchos/platform/notifications.md) e [complicazioni](~/ios/watchos/platform/complications.md) in App per le espressioni di controllo.
+Come includere le funzionalità specifiche di watchos come le [notifiche](~/ios/watchos/platform/notifications.md) e le [complicazioni](~/ios/watchos/platform/complications.md) nelle app Watch.
 
 ## <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Nozioni fondamentali sulle app](~/ios/watchos/app-fundamentals/index.md)
 
-Utilizzo di diversi aspetti dell'API, watchOS tra cui il [padre application](~/ios/watchos/app-fundamentals/parent-app.md), [icone](~/ios/watchos/app-fundamentals/icons.md), [layout](~/ios/watchos/app-fundamentals/layout.md), [navigazione](~/ios/watchos/app-fundamentals/navigation.md), [dimensioni di schermi](~/ios/watchos/app-fundamentals/screen-sizes.md), e [impostazioni](~/ios/watchos/app-fundamentals/settings.md).
+Uso di diversi aspetti dell'API watchos, tra cui l' [applicazione padre](~/ios/watchos/app-fundamentals/parent-app.md), le [Icone](~/ios/watchos/app-fundamentals/icons.md), il [layout](~/ios/watchos/app-fundamentals/layout.md), la [navigazione](~/ios/watchos/app-fundamentals/navigation.md), le [dimensioni dello schermo](~/ios/watchos/app-fundamentals/screen-sizes.md)e [le impostazioni](~/ios/watchos/app-fundamentals/settings.md).
 
 ## <a name="deployment-and-testingioswatchosdeploy-testindexmd"></a>[Distribuzione e test](~/ios/watchos/deploy-test/index.md)
 
-Elenco di controllo e le istruzioni per distribuire le app Apple Watch dispositivi, test e per l'App Store.
+Elenco di controllo e istruzioni per la distribuzione di dispositivi di test Apple Watch app e per l'App Store.
 
 ## <a name="troubleshootingioswatchostroubleshootingmd"></a>[Risoluzione dei problemi](~/ios/watchos/troubleshooting.md)
 
@@ -48,4 +48,4 @@ Problemi noti e soluzioni alternative.
 
 ## <a name="api-documentationxrefwatchkit"></a>[Documentazione delle API](xref:WatchKit)
 
-Copertura di classe e metodo dell'API Kit espressioni di controllo.
+Copertura delle classi e dei metodi dell'API del kit Watch.

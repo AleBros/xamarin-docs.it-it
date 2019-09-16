@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 82ca106f29eb28672abcbd282b60841bfdb4da8c
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 294b538b0e73344ffe9109a1e1091bc9b7591f63
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980821"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976480"
 ---
 # <a name="xamarinforms-layouts"></a>Layout di xamarin. Forms
 
@@ -36,7 +36,7 @@ Tali classi derivano da [`Layout`](xref:Xamarin.Forms.Layout), che definisce [`P
 
 |     |     |
 | --- | --- |
-| [`ContentView`](xref:Xamarin.Forms.ContentView) contiene un singolo elemento figlio che viene impostato con il [ `Content` ](xref:Xamarin.Forms.ContentView.Content) proprietà. Il `Content` proprietà può essere impostata su qualsiasi `View` derivati, inclusi altri `Layout` derivati. `ContentView` viene principalmente utilizzato come un elemento strutturale e funge da classe base per [ `Frame` ](#frame).<br /><br />[Documentazione delle API](xref:Xamarin.Forms.ContentView) | [![Esempio ContentView](layouts-images/ContentView.png "esempio ContentView")](layouts-images/ContentView-Large.png#lightbox "ContentView esempio")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+| [`ContentView`](xref:Xamarin.Forms.ContentView) contiene un singolo elemento figlio che viene impostato con il [ `Content` ](xref:Xamarin.Forms.ContentView.Content) proprietà. Il `Content` proprietà può essere impostata su qualsiasi `View` derivati, inclusi altri `Layout` derivati. `ContentView` viene principalmente utilizzato come un elemento strutturale e funge da classe base per [ `Frame` ](#frame).<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.ContentView) / [Guida](~/xamarin-forms/user-interface/layouts/contentview.md) /[esempio] (https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/ | [![Esempio ContentView](layouts-images/ContentView.png "esempio ContentView")](layouts-images/ContentView-Large.png#lightbox "ContentView esempio")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
 <a named="frame" />
@@ -45,7 +45,7 @@ Tali classi derivano da [`Layout`](xref:Xamarin.Forms.Layout), che definisce [`P
 
 |     |     |
 | --- | --- |
-| La [`Frame`](xref:Xamarin.Forms.Frame) classe deriva da [`ContentView`](#contentView) e visualizza un bordo, o frame, intorno al relativo elemento figlio. La `Frame` classe ha un valore [`Padding`](xref:Xamarin.Forms.Layout.Padding) predefinito di 20 e definisce [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)anche le proprietà [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius), e [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) .<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Frame) / [Guida](~/xamarin-forms/user-interface/layouts/frame.md) / [esempio](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![Esempio di frame](layouts-images/Frame.png "Frame riportato")](layouts-images/Frame-Large.png#lightbox "Frame esempio")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| La [`Frame`](xref:Xamarin.Forms.Frame) classe deriva da [`ContentView`](#contentView) e visualizza un bordo, o frame, intorno al relativo elemento figlio. La `Frame` classe ha un valore [`Padding`](xref:Xamarin.Forms.Layout.Padding) predefinito di 20 e definisce [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)anche le proprietà [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius), e [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) .<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Frame) / [Guida](~/xamarin-forms/user-interface/layouts/frame.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![Esempio di frame](layouts-images/Frame.png "Frame riportato")](layouts-images/Frame-Large.png#lightbox "Frame esempio")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
 
 <a name="scrollView" />

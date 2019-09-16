@@ -1,52 +1,51 @@
 ---
-title: Creazione di associazioni con Sharpie obiettivo
-description: In questa sezione viene fornita un'introduzione a Sharpie obiettivo, lo strumento della riga di comando di Xamarin consente di automatizzare il processo di creazione di un'associazione a una libreria Objective-C
+title: Creazione di associazioni con Objective Sharpie
+description: Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Novell usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: c298d3dc772929a123b6b65b0efe929f023a6563
-ms.sourcegitcommit: 7dbfac5f68c55f40dd726aa1b03cff62082fe711
+ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866364"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765704"
 ---
-# <a name="creating-bindings-with-objective-sharpie"></a>Creazione di associazioni con Sharpie obiettivo
+# <a name="creating-bindings-with-objective-sharpie"></a>Creazione di associazioni con Objective Sharpie
 
-_In questa sezione viene fornita un'introduzione a Sharpie obiettivo, lo strumento della riga di comando di Xamarin consente di automatizzare il processo di creazione di un'associazione a una libreria Objective-C_
+_Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Novell usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C._
 
-- [Cenni preliminari sulla](#overview) & [cronologia](#history)
+- [Panoramica](#overview) & [Cronologia](#history)
 - [Introduzione](get-started.md)
 - [Strumenti e comandi](tools.md)
 - [Funzionalità](platform/index.md)
-- [Esempi](examples/index.md)
+- [esempi](examples/index.md)
 - [Procedura dettagliata completa](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Cronologia delle versioni](releases.md)
 
 ## <a name="overview"></a>Panoramica
 
-Obiettivo Sharpie è uno strumento da riga di comando per eseguire il bootstrap del primo passaggio di un'associazione.
-Funziona analizzando i file di intestazione di una libreria nativa per eseguire il mapping dell'API pubblica nel [definizione di associazione](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (un processo che in precedenza è stato apportato manualmente).
+Objective Sharpie è uno strumento da riga di comando che consente di avviare il primo passaggio di un'associazione.
+Funziona analizzando i file di intestazione di una libreria nativa per eseguire il mapping dell'API pubblica nella [definizione di binding](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (un processo precedentemente eseguito manualmente).
 
-Obiettivo Sharpie Usa file di intestazione Clang analisi, in modo che l'associazione sia come esatta e più completa possibile. Ciò può ridurre notevolmente il tempo e impegno che necessario per produrre un'associazione di qualità.
+Objective Sharpie usa i file di intestazione di analisi Clang, quindi il binding è il più esatto e completo possibile. Questo può ridurre notevolmente il tempo e il lavoro richiesto per produrre un'associazione di qualità.
 
 > [!IMPORTANT]
-> Obiettivo Sharpie è uno strumento per gli sviluppatori esperti di Xamarin con conoscenza approfondita di Objective-C (e di conseguenza, C). Prima di provare a eseguire l'associazione di una libreria Objective-C è solido delle conoscenze necessarie per compilare la libreria nativa nella riga di comando (e una buona conoscenza del funzionamento della libreria nativa).
+> Objective Sharpie è uno strumento per gli sviluppatori esperti di Novell con una conoscenza avanzata di Objective-C (e per estensione, C). Prima di tentare di associare una libreria Objective-C, è necessario avere una conoscenza approfondita di come compilare la libreria nativa dalla riga di comando (e una buona conoscenza del funzionamento della libreria nativa).
 
 ## <a name="history"></a>Cronologia
 
-Abbiamo stato in continua evoluzione e usando il Sharpie obiettivo internamente presso Xamarin negli ultimi tre anni. Come testimonia la potenza di Sharpie obiettivo, API introdotte in xamarin. IOS e xamarin. Mac dalla versione iOS 8, Mac OS X 10.10, e watchOS 2.0 sono state avviato automaticamente interamente con Sharpie obiettivo. Xamarin è basato soprattutto sulle obiettivo Sharpie internamente per creare i propri prodotti.
+È in corso l'evoluzione e l'uso dell'obiettivo Sharpie internamente in Novell negli ultimi tre anni. Per quanto riguarda la potenza dell'obiettivo Sharpie, le API introdotte in Novell. iOS e Novell. Mac da iOS 8, Mac OS X 10,10 e watchos 2,0 sono state avviate interamente con Objective Sharpe. Novell si basa principalmente sull'obiettivo Sharpie per la creazione di propri prodotti.
 
-Tuttavia, Sharpie obiettivo è uno strumento molto avanzato che richiede una conoscenza avanzata di Objective-C e C, come usare il compiler clang nella riga di comando e le librerie native in genere come sono fatte. A causa di questa barra elevata, abbiamo ritenuto che un'interfaccia utente grafica di un procedura guidata imposta le aspettative errate e di conseguenza, Sharpie obiettivo è attualmente disponibile solo come uno strumento da riga di comando.
+Tuttavia, Objective è uno strumento molto avanzato che richiede una conoscenza avanzata di Objective-C e C, come usare il compilatore Clang nella riga di comando e in genere come vengono combinate le librerie native. A causa di questa alta barra, abbiamo pensato che la creazione guidata di GUI consentisse di impostare le aspettative errate e, di conseguenza, l'obiettivo Sharpie è attualmente disponibile solo come strumento da riga di comando.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Download Sharpie obiettivo](https://aka.ms/objective-sharpie)
+- [Download dell'obiettivo Sharpie](https://aka.ms/objective-sharpie)
 - [Procedura dettagliata: Associazione di una libreria Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Informazioni dettagliate sull'associazione](~/cross-platform/macios/binding/overview.md)
-- [Guida di riferimento per i tipi di associazione](~/cross-platform/macios/binding/binding-types-reference.md)
+- [Dettagli associazione](~/cross-platform/macios/binding/overview.md)
+- [Guida di riferimento ai tipi di binding](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin per sviluppatori Objective-C](~/ios/get-started/objective-c-developers/index.md)
-
