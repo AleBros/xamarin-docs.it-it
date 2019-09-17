@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037559"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004147"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -43,7 +43,7 @@ ms.locfileid: "61037559"
 
     Impostare punti di interruzione nei due gestori eventi e toccare voci nell'elemento [`ListView`](xref:Xamarin.Forms.ListView). Si noti che l'evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) è attivato solo quando una nuova voce viene selezionata nell'elemento [`ListView`](xref:Xamarin.Forms.ListView), mentre l'evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) viene generato ogni volta che una voce viene toccata.
 
-    Per altre informazioni sulla selezione e il tocco di voci, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) (Selezione e tocco) nella guida [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) (Interattività di ListView).
+    Per altre informazioni sulla selezione e il tocco di voci, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) (Selezione e tocco) nella guida [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) (Interattività di ListView).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -82,4 +82,4 @@ ms.locfileid: "61037559"
 
     Impostare punti di interruzione nei due gestori eventi e toccare voci nell'elemento [`ListView`](xref:Xamarin.Forms.ListView). Si noti che l'evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) è attivato solo quando una nuova voce viene selezionata nell'elemento [`ListView`](xref:Xamarin.Forms.ListView), mentre l'evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) viene generato ogni volta che una voce viene toccata.
 
-    Per altre informazioni sulla selezione e il tocco di voci, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) (Selezione e tocco) nella guida [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) (Interattività di ListView).
+    Per altre informazioni sulla selezione e il tocco di voci, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
