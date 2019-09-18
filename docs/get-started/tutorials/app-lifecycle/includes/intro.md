@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9143b65b2e7cb9b85195e3c20695e3034295b2d2
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cae1ec70880fe694584e14b732608725bcbb1d91
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277282"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059696"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
 
@@ -15,6 +15,7 @@ Prima di provare questa esercitazione è necessario avere completato correttamen
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Rispondere a un'applicazione in fase di avvio, sospensione o ripristino.
 > - Rendere permanenti i dati fra le modifiche di stato del ciclo di vita.
 
