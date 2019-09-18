@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: f1cc2f4685354687390866c0922a802591c7c054
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d65f0c8e717e8e8c995209f7dda1e8a44ee621c
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757699"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021115"
 ---
 # <a name="working-with-the-android-manifest"></a>Uso del manifesto Android
 
@@ -72,7 +72,8 @@ Questo esempio produce il frammento XML seguente:
 <activity android:name="awesome.demo.activity" />
 ```
 
-*Nota*: è consigliabile usare la `Name` proprietà solo per motivi di compatibilità con le versioni precedenti, in quanto tale ridenominazione può rallentare la ricerca dei tipi in fase di esecuzione. Se si dispone di codice legacy che prevede che il nome del tipo predefinito dell'attività sia basato sullo spazio dei nomi in minuscolo e sul nome della classe, vedere la pagina relativa alla [denominazione di Android Callable Wrapper](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) per suggerimenti sulla gestione della compatibilità. 
+> [!NOTE]
+> È consigliabile utilizzare la `Name` proprietà solo per motivi di compatibilità con le versioni precedenti, in quanto tale ridenominazione può rallentare la ricerca dei tipi in fase di esecuzione. Se si dispone di codice legacy che prevede che il nome del tipo predefinito dell'attività sia basato sullo spazio dei nomi in minuscolo e sul nome della classe, vedere la pagina relativa alla [denominazione di Android Callable Wrapper](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) per suggerimenti sulla gestione della compatibilità. 
 
 ### <a name="activity-title-bar"></a>Barra del titolo attività
 

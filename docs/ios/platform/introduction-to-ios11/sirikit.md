@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 8983ac0c860dafb3a3a0e4c90bd82bdf87c4c4f8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27adc8aa2ed0fec09fe38b9ea31834ea6e75f845
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752389"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033091"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Aggiornamenti di SiriKit in iOS 11
 
@@ -147,6 +147,7 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 La classe deve ereditare `INExtension`da e, poiché l'esempio sta per gestire gli elenchi e le note Intent, implementa `IINNotebookDomainHandling`anche.
 
 > [!NOTE]
+>
 > - In .NET esiste una convenzione che prevede che le interfacce siano precedute da `I`un capitale, a cui Novell aderisce quando si associano protocolli da iOS SDK.
 > - Novell conserva anche i nomi dei tipi da iOS e Apple usa i primi due caratteri nei nomi dei tipi per riflettere il Framework a cui appartiene un tipo.
 > - Per il `Intents` Framework, i tipi sono preceduti `IN*` da (ad esempio, `INExtension`) ma queste _non_ sono interfacce.

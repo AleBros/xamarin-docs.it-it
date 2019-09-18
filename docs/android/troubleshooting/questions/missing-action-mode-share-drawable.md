@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: b8961c9e58d4336a952649ce8181ca6ebdfe3165
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3bce50169919df83ba1ab76c29d1ecc5c1da0bd6
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757227"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021129"
 ---
 # <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat - Nessuna risorsa trovata corrispondente al nome specificato: attr 'android:actionModeShareDrawable'
 
@@ -24,7 +24,8 @@ ms.locfileid: "70757227"
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
-*Nota*: Se questa operazione viene installata manualmente tramite la console di gestione pacchetti, assicurarsi di installare anche la stessa versione di Novell. Android. support. v4
+> [!NOTE]
+> Se questa operazione viene installata manualmente tramite la console di gestione pacchetti, assicurarsi di installare anche la stessa versione di Novell. Android. support. v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 80e338319e4eeddcb3df287f86bcf89397d423f1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 076e6bfd1155c0eba4045af59a599a34b0fca1d5
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754034"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021170"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente Xamarin.Android
 
@@ -93,10 +93,11 @@ Si tratta di una stringa delimitata da virgole (`,`), contenente uno dei valori 
 - `assembly`: visualizza il file `.apk` e i messaggi di analisi dell'assembly.
 - `gc`: visualizza i messaggi relativi a GC.
 - `gref`: visualizza i messaggi di riferimento globale JNI.
-- `lref`: visualizza i messaggi di riferimento locale JNI.  
-    *Nota*: si tratta *effettivamente* di `adb logcat` di posta indesiderata.  
-    In Xamarin.Android 5.1 verrà anche creato un file `.__override__/lrefs.txt`, che può assumere dimensioni *enormi*.  
-    Da evitare.
+- `lref`: visualizza i messaggi di riferimento locale JNI.
+  > [!NOTE]
+  > si tratta `adb logcat`effettivamente* di  di posta indesiderata.
+  > In Xamarin.Android 5.1 verrà anche creato un file `.__override__/lrefs.txt`, che può assumere dimensioni *enormi*.
+  > Da evitare.
 - `timing`: visualizza alcune informazioni sugli intervalli dei metodi. Verranno anche creati i file `.__override__/methods.txt` e `.__override__/counters.txt`.
 
 ### `debug.mono.max_grefc`
@@ -130,7 +131,7 @@ Tuttavia *a volte* consente di eseguire ulteriori indagini.
 La proprietà di sistema `debug.mono.wref` consente l'override del meccanismo di riferimento debole JNI rilevato predefinito. I valori supportati sono due:
 
 - `jni`: usa i riferimenti deboli JNI, creati da `JNIEnv::NewWeakGlobalRef()` ed eliminati definitivamente da `JNIEnv::DeleteWeakGlobalREf()`.
-- `java`: usa i riferimenti globali JNI che fanno riferimento alle istanze di `java.lang.WeakReference`.
+- `java`: Usare i riferimenti globali JNI che `java.lang.WeakReference` fanno riferimento a istanze.
 
 Per impostazione predefinita, `java` viene usato fino all'API 7 e nell'API 19 (Kit Kat) con ART abilitato. Nell'API 8 sono stati aggiunti i riferimenti `jni` e in ART sono stati *interrotti* i riferimenti `jni`.
 

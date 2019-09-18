@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: ae4cccc900396c7ebd6e737160e38c5e9dcdc74e
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986058"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021392"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Accedere con Apple in Novell. iOS
 
@@ -25,10 +25,11 @@ Questo documento illustra come è possibile aggiungere l'accesso con Apple alle 
 ## <a name="requirements"></a>Requisiti
 
 Questa funzionalità richiede:
+
 * iOS 13
 * Novell. iOS 12,99
-* Visual Studio 2019 o Visual Studio 2019 per Mac con supporto per Xcode 11. 
- 
+* Visual Studio 2019 o Visual Studio 2019 per Mac con supporto per Xcode 11.
+
 Per ulteriori informazioni, vedere l' [Introduzione](get-started.md) .
 
 ## <a name="apple-developer-setup"></a>Installazione di Apple Developer
@@ -218,7 +219,7 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha introdotto l'accesso con Apple per iOS. 
+Questo articolo ha introdotto l'accesso con Apple per iOS.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

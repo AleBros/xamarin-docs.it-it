@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: b750dd4eebb4e181e3a1d3a33c6505bb58b3848b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a80410ecc3557f00755ebb60ab48781740fa928d
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757075"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021145"
 ---
 # <a name="troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi
 
@@ -83,15 +83,17 @@ Novell. Android supporta le proprietà di sistema seguenti:
 
 - *debug.mono.env*: Elenco di variabili di ambiente separate *|* da pipe ('') da esportare durante l'avvio dell'applicazione, *prima* dell'inizializzazione di mono. Ciò consente di impostare le variabili di ambiente che controllano la registrazione mono.
 
-  - *Nota*: Poiché il valore è' *|* ', separato, il valore deve avere un ulteriore livello di quota, perché il \`comando *ADB shell* \` rimuoverà un set di virgolette.
+  > [!NOTE]
+  > Poiché il valore è' *|* ', separato, il valore deve avere un ulteriore livello di quota, perché il \`comando *ADB shell* \` rimuoverà un set di virgolette.
 
-  - *Nota*: I valori delle proprietà di sistema Android possono avere una lunghezza non superiore a 92 caratteri.
+  > [!NOTE]
+  > I valori delle proprietà di sistema Android possono avere una lunghezza non superiore a 92 caratteri.
 
-  - Esempio:
+  Esempio:
 
-    ```
-    adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
-    ```
+  ```
+  adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+  ```
 
 - *debug.mono.log*: Elenco di componenti separati da virgole (' *,* ') che devono stampare messaggi aggiuntivi nel log di debug Android. Per impostazione predefinita, non viene impostato alcun elemento. I componenti includono:
 
@@ -100,7 +102,8 @@ Novell. Android supporta le proprietà di sistema seguenti:
   - *gref*: Stampa (vulnerabile, globale) messaggi di allocazione e deallocazione di riferimento.
   - *lref*: Stampa i messaggi di allocazione e deallocazione dei riferimenti locali.
 
-  *Nota*: si tratta di un livello *estremamente* dettagliato. Non abilitare, a meno che non sia effettivamente necessario.
+  > [!NOTE]
+  > Si tratta di un livello *estremamente* dettagliato. Non abilitare, a meno che non sia effettivamente necessario.
 
 - *debug.mono.trace*: Consente di impostare l'impostazione [mono--Trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` .
 
@@ -176,7 +179,8 @@ Novell. Android usa i riferimenti globali Android per fornire i mapping tra le i
 
 Sfortunatamente, gli emulatori Android consentono di esistere solo riferimenti globali 2000 alla volta. L'hardware ha un limite di 52000 riferimenti globali molto più elevato. Il limite inferiore può essere problematico durante l'esecuzione di applicazioni nell'emulatore, quindi sapere da *dove* proviene l'istanza può essere molto utile.
 
- *Nota*: il conteggio dei riferimenti globali è interno a Novell. Android e non (e non può) includere riferimenti globali estratte da altre librerie native caricate nel processo. Utilizzare il conteggio dei riferimenti globale come una stima.
+> [!NOTE]
+> Il conteggio dei riferimenti globali è interno a Novell. Android e non (e non può) includere riferimenti globali estratte da altre librerie native caricate nel processo. Utilizzare il conteggio dei riferimenti globale come una stima.
 
 ```shell
 I/monodroid-gref(12405): +g+ grefc 108 gwrefc 0 obj-handle 0x40517468/L -> new-handle 0x40517468/L from    at Java.Lang.Object.RegisterInstance(IJavaObject instance, IntPtr value, JniHandleOwnership transfer)
