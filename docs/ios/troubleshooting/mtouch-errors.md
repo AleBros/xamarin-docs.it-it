@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: e001f22759ac70bbf81a10bf5e56790497dab767
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985952"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105982"
 ---
 # <a name="xamarinios-errors"></a>Errori di Novell. iOS
 
@@ -1598,6 +1598,7 @@ Non è stato possibile caricare l'assembly radice. Verificare che il percorso ne
 Si è verificato un errore imprevisto durante il tentativo di ottimizzare il codice di associazione generato. Il nome dell'elemento che causa il problema è indicato nel messaggio di errore. Per risolvere questo problema, è necessario che l'assembly denominato (o che contiene il tipo o il metodo denominato) venga fornito in un nuovo problema in [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) insieme a un log di compilazione completo con il livello `-v -v -v -v` di dettaglio abilitato (ad esempio negli **argomenti mTouch aggiuntivi**).
 
 L'ultima cifra `x` sarà:
+
 - `0`per un nome di assembly;
 - `1`per un nome di tipo;
 - `3`per il nome di un metodo;

@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6d40555c70072a4c057739b39cc24a4f885f2dc9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e9bd54523fa46625e9a9e6e46247b92987f3d427
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765288"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106069"
 ---
 # <a name="updating-component-references-to-nuget"></a>Aggiornamento di riferimenti ai componenti in NuGet
 
@@ -202,6 +202,7 @@ Ciò significa che se si apre la soluzione in un nuovo computer, il componente n
 Molti fornitori di componenti continuano a lavorare per eseguire la migrazione a NuGet e altri (inclusi i prodotti commercialmente disponibili) potrebbero esaminare opzioni di recapito alternative.
 
 ## <a name="related-links"></a>Collegamenti correlati
+
 - [Elenco dei plug-in e delle librerie Novell più diffusi](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Installare e usare un pacchetto NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Inclusione di un pacchetto NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

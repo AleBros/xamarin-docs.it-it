@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: d8267d4def0f7c24c660dfb4d301c111a92bb0b9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d3f00f3abd13d2edf8b827a881768fbd54d6379
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767147"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106017"
 ---
 # <a name="threading-in-xamarinios"></a>Threading in Novell. iOS
 
 Il runtime di Novell. iOS consente agli sviluppatori di accedere alle API di Threading .NET, in modo esplicito`System.Threading.Thread, System.Threading.ThreadPool`quando si usano i thread () e in modo implicito quando si usano i modelli delegati asincroni o i metodi BeginXxx, nonché l'intera gamma di API che supportano il Task Parallel Library.
 
 Novell consiglia vivamente di usare la [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) per la creazione di applicazioni per alcuni motivi:
+
 - L'utilità di pianificazione TPL predefinita delegherà l'esecuzione dell'attività al pool di thread, che a sua volta aumenterà in modo dinamico il numero di thread necessari durante l'esecuzione del processo, evitando uno scenario in cui un numero eccessivo di thread si trova in competizione per il tempo di CPU. 
 - È più facile pensare alle operazioni in termini di attività TPL. È possibile modificarli facilmente, pianificarli, serializzare l'esecuzione o avviare molti in parallelo con un set completo di API. 
 - Si tratta della base per la programmazione con le C# nuove estensioni del linguaggio asincrono. 

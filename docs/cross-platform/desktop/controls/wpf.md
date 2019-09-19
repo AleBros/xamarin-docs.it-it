@@ -5,12 +5,12 @@ description: Questo documento consente di confrontare e contrapporre WPF a Novel
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: d23b449382183b0385eac38c0b9205e48dbe0a34
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290403"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106039"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Confronto tra WPF e Novell. Forms: Analogie & differenze
 
@@ -65,6 +65,7 @@ Uno dei concetti di base trasportati è un'infrastruttura data binding per conne
 ### <a name="defining-bindable-properties"></a>La definizione di proprietà associabili
 
 La definizione di una proprietà associabile in Novell. Forms è identica a quella di WPF:
+
 1. L'oggetto deve derivare `BindableObject`da.
 2. Deve essere presente un campo statico pubblico di tipo `BindableProperty` dichiarato per definire la chiave di archiviazione di supporto per la proprietà.
 3. Deve essere presente un wrapper della proprietà di istanza pubblica `GetValue` che `SetValue` utilizza e per recuperare e modificare il valore delle proprietà.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 19cc24c3937921f4f4d95584e1cd656c37b4155f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228153"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105969"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di xamarin. Forms
 
@@ -230,6 +230,7 @@ Le schermate seguenti illustrano il risultato dell'impostazione di `FormattedStr
 L'altezza verticale di un [`Label`](xref:Xamarin.Forms.Label) e un [`Span`](xref:Xamarin.Forms.Span) può essere personalizzato tramite l'impostazione di [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) proprietà o [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) a un `double` valore. In iOS e Android tali valori sono i moltiplicatori dell'altezza della riga originale e in Universal Windows Platform (UWP) il `Label.LineHeight` valore della proprietà è un moltiplicatore delle dimensioni del carattere etichetta.
 
 > [!NOTE]
+>
 > - In iOS, il [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) e [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà modificare l'altezza della riga di testo che rientra in una singola riga e che esegue il wrapping su più righe.
 > - In Android, il [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) e [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà solo modificare l'altezza della riga di testo che esegue il wrapping su più righe.
 > - Nella piattaforma UWP, il [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) proprietà viene modificata l'altezza della riga di testo che esegue il wrapping su più righe, e il [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) proprietà non ha alcun effetto.
@@ -305,7 +306,7 @@ Il testo visualizzato dalle [`Label`](xref:Xamarin.Forms.Label) istanze [`Span`]
 1. Definire l' `ICommand` oggetto che verrà eseguito [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)da.
 1. Scrivere il codice che verrà eseguito da `ICommand`.
 
-L'esempio di codice seguente, tratto dall'esempio demos di [collegamento ipertestuale](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , Mostra un oggetto il [`Span`](xref:Xamarin.Forms.Span) [`Label`](xref:Xamarin.Forms.Label) cui contenuto è impostato da più istanze:
+L'esempio di codice seguente, tratto dall'esempio [demos di collegamento ipertestuale](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , Mostra un oggetto [`Label`](xref:Xamarin.Forms.Label) il [`Span`](xref:Xamarin.Forms.Span) cui contenuto è impostato da più istanze:
 
 ```xaml
 <Label>
@@ -358,7 +359,7 @@ Esegue il `OpenBrowser` metodo passando il valore della [`TapGestureRecognizer.C
 
 L'approccio precedente alla creazione di un collegamento ipertestuale richiede la scrittura di codice ripetitivo ogni volta che è necessario un collegamento ipertestuale nell'applicazione. Tuttavia, entrambe le [`Label`](xref:Xamarin.Forms.Label) classi [`Span`](xref:Xamarin.Forms.Span) e possono essere sottoclassate per creare `HyperlinkLabel` classi `HyperlinkSpan` e, con il riconoscimento del movimento e il codice di formattazione del testo aggiunto.
 
-L'esempio di codice seguente, tratto dall'esempio demos di [collegamento ipertestuale](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , Mostra una `HyperlinkSpan` classe:
+L'esempio di codice seguente, tratto dall'esempio [demos di collegamento ipertestuale](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , Mostra una `HyperlinkSpan` classe:
 
 ```csharp
 public class HyperlinkSpan : Span

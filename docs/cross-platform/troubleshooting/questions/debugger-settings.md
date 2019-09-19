@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 343f8d37d77726d2cdc06a74c44e476af00dde27
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3677117e30538c4df8c9b797acce0be602c3b59
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765151"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106084"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>Quali impostazioni di progetto sono richieste per il debugger?
 
@@ -20,6 +20,7 @@ Affinché il debugger funzioni come previsto (hit punti di interruzione, Visuali
 Per verificare le impostazioni dell'ambiente, attenersi alla procedura seguente:
 
 ## <a name="visual-studio"></a>Visual Studio
+
 1. Aprire le opzioni del progetto
 2. Vai a **compilazione > avanzate...** Impostare le informazioni di debug su **full**
 3. Impostazioni per ogni piattaforma:
@@ -27,6 +28,7 @@ Per verificare le impostazioni dell'ambiente, attenersi alla procedura seguente:
    - Passare a **debug iOS > debug & strumentazione**. Seleziona la casella **Abilita debug** .
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
+
 1. Aprire le opzioni del progetto
 2. Passare a **compila > compilatore > opzioni generali**. Impostare le informazioni di debug su **full**
 3. Impostazioni per ogni piattaforma:

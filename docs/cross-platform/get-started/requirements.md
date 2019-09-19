@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: aea82b5946d12bc75aef18953d61cd88e5329329
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: adedb10f3baf7faa97260ebbc94e3d1802b7d847
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511379"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105942"
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
 
@@ -57,6 +57,7 @@ Il programma di installazione di Visual Studio 2019 e Visual Studio 2017 include
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
+>
 > - Xamarin per Visual Studio supporta qualsiasi edizione di Visual Studio 2019 o Visual Studio 2017 (Community, Professional ed Enterprise).
 > - Lo sviluppo di app Xamarin.Forms per la piattaforma UWP (Universal Windows Platform) richiede Windows 10 con Visual Studio 2017. È consigliato Visual Studio 2019.
 

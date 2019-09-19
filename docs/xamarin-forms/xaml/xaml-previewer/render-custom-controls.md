@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 5b87c631574f159230e1dc23285b9087bcc94255
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 57c0fd540ef42c18462b4f989b21bac5ed05dc04
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767324"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105989"
 ---
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Eseguire il rendering di controlli personalizzati nel Visualizzatore anteprima XAML
 
@@ -51,6 +51,7 @@ Verificare che sia installato almeno Novell. Forms 3,6. È possibile aggiornare 
 
 ### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>Anche con `[DesignTimeVisible(true)]`, il controllo personalizzato non esegue correttamente il rendering.
 I controlli personalizzati che si basano molto sui dati di code-behind o back-end non funzionano sempre nel Visualizzatore anteprime XAML. È possibile provare:
+
 * Il controllo viene spostato in modo che non venga inizializzato se [è abilitata la modalità progettazione](index.md#detect-design-mode)
 * Impostazione [dei dati della fase di progettazione](design-time-data.md) per visualizzare i dati falsi dal back-end
 

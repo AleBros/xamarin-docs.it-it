@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 7123d7d491bb32a8a506b308cac5ecb6458a1add
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 042878fa8d30acb55de68f63e3491aacb5dbdfb5
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754876"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105880"
 ---
 # <a name="creating-android-services"></a>Creazione di servizi Android
 
@@ -66,6 +66,7 @@ A partire da Android 8,0 (API level 26), un'applicazione Android non è più in 
 * Un'altra app è in primo piano e usa i componenti di un'app che altrimenti sarebbero in background. Un esempio è se l'applicazione A, che è in primo piano, è associata a un servizio fornito dall'applicazione B. l'applicazione B verrebbe quindi considerata in primo piano e non terminata da Android per essere in background.
 
 In alcuni casi, anche se un'app è in background, Android riattiverà l'app e rilasserà le restrizioni per alcuni minuti, consentendo all'app di eseguire alcune operazioni:
+
 * L'app riceve un messaggio di Firebase cloud a priorità alta.
 * L'app riceve una trasmissione. 
 * L'applicazione riceve ed esegue un oggetto `PendingIntent` in risposta a una notifica.

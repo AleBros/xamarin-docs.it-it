@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 40fa2d93b7fd756c284727566e8043f5084bd483
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
+ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757481"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119228"
 ---
 # <a name="platform-features"></a>Funzionalità della piattaforma
 
@@ -41,6 +41,10 @@ Android 3,0 ha introdotto frammenti, che illustrano come supportare soluzioni pi
 ## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Collegamento di app](~/android/platform/app-linking.md)
 
 Questa guida illustra in che modo Android 6,0 supporta il _collegamento di app_, una tecnica che consente alle app per dispositivi mobili di rispondere agli URL nei siti Web. Verrà illustrato come implementare il collegamento di app in un'applicazione Android 6,0 e come configurare un sito Web per concedere le autorizzazioni all'app per dispositivi mobili per gestire i collegamenti all'app per il dominio.
+
+## <a name="android-10androidplatformandroid-10md"></a>[Android 10](~/android/platform/android-10.md)
+
+Questo articolo fornisce una descrizione delle nuove funzionalità di Android 10, spiega come preparare lo sviluppo di Novell. Android per Android 10 e fornisce collegamenti ad applicazioni di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Novell. Android.
 
 ## <a name="android-9-pieandroidplatformpiemd"></a>[Torta Android 9](~/android/platform/pie.md)
 

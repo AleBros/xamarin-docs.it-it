@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: df91699e0880bfae780b69f4b30be6667e8d64d9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f2bc6ce6c709f99c744554d80b065e34961904ac
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763117"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105847"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso di iCloud con Novell. iOS
 
@@ -339,8 +339,7 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 ### <a name="displaying-icloud-documents"></a>Visualizzazione di documenti iCloud
 
-La visualizzazione di un UIDocument non deve essere diversa da qualsiasi altra classe del modello
-- le proprietà vengono visualizzate nei controlli dell'interfaccia utente, eventualmente modificati dall'utente e quindi riscritti nel modello.
+La visualizzazione di un UIDocument non deve essere diversa da qualsiasi altra classe del modello: le proprietà vengono visualizzate nei controlli dell'interfaccia utente, eventualmente modificate dall'utente e quindi riscritte nel modello.
 
 Nell'esempio **iCloudUIDoc\MonkeyDocumentViewController.cs** Visualizza il testo MonkeyDocument in un oggetto `UITextView`. `ViewDidLoad`Ascolta la notifica inviata nel `MonkeyDocument.LoadFromContents` metodo. `LoadFromContents`viene chiamato quando iCloud dispone di nuovi dati per il file, in modo che la notifica indichi che il documento è stato aggiornato.
 
