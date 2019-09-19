@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 666632ce879440fd05269e86ed05c2813a2d96af
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: ff3a0477c6b8a2bf30693ff05a4a992ad053d2b9
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277280"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107265"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
 
@@ -14,6 +14,7 @@ Prima di provare questa esercitazione è necessario avere completato correttamen
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Creare un elemento [`Label`](xref:Xamarin.Forms.Label) di Xamarin.Forms in XAML.
 > - Modificare l'aspetto di `Label`.
 > - Presentare testo, in una singola classe `Label`, con più formati.

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 004d7df72103ef332f802bd0019d2a99c6cc11a2
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 8f379e8639846d9a6424c4aaadf83ff89d7a8684
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277291"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107266"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
 
@@ -17,6 +17,7 @@ Prima di provare questa esercitazione è necessario avere completato correttamen
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Usare Gestione pacchetti NuGet per aggiungere SQLite.NET a un progetto Xamarin.Forms.
 > - Creare classi di accesso ai dati.
 > - Usare le classi di accesso ai dati.

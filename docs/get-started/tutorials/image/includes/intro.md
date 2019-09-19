@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9bda76a477973bb06eb018abbf4ad53dc3e8c1e7
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 85404d5aceb525a77c98bf2d86ebc4b464f5796f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277277"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107259"
 ---
 Prima di provare questa esercitazione è necessario avere completato correttamente:
 
@@ -14,6 +14,7 @@ Prima di provare questa esercitazione è necessario avere completato correttamen
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Creare un elemento [`Image`](xref:Xamarin.Forms.Image) di Xamarin.Forms in XAML.
 > - Personalizzare l'aspetto dell'elemento `Image`.
 > - Visualizzare un file di immagine locale da ogni progetto di piattaforma.
