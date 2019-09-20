@@ -149,11 +149,11 @@ Si tratta di errori di generazione del codice.
 |XA5203|Non è stato possibile generare i simboli di debug (directory dSYM). Verificare il log di compilazione.|
 |XA5204|Non è stato possibile rimuovere il file binario finale. Verificare il log di compilazione.|
 |XA5205|Manca lo strumento ' AAPT '. Installare il pacchetto di Android SDK build-Tools.|
-|XA5206|[https://login.microsoftonline.com/consumers/]({0}). La directory {1} delle risorse Android non esiste.|
-|XA5207|[https://login.microsoftonline.com/consumers/]({0}). Il file {1} della libreria Java non esiste.|
+|XA5206|{0}. La directory {1} delle risorse Android non esiste.|
+|XA5207|{0}. Il file {1} della libreria Java non esiste.|
 |XA5208|Download non riuscito. Scaricarlo {0} e inserirlo {1} nella directory.|
 |XA5209|Decompressione non riuscita. Scaricarlo {0} ed estrarlo {1} nella directory.|
-|XA5210|[https://login.microsoftonline.com/common/]({0}). Il file {1} della libreria nativa non esiste.|
+|XA5210|{0}. Il file {1} della libreria nativa non esiste.|
 
 ### <a name="xa6xxx-errors"></a>Errori XA6xxx
 
