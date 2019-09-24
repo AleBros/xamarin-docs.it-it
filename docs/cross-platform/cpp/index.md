@@ -5,12 +5,12 @@ description: Visual Studio per Mac può essere usato per compilare e integrare C
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: 685d4f5de197c6b3664d63306fa206bea17409e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a10d63e8ed152fae3c9e87cbae7bacb25a0d019c
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766354"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206382"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usare C/C++ librerie con Novell
 
@@ -132,7 +132,7 @@ Si tratta di funzioni wrapper utilizzate sul lato [Novell](https://visualstudio.
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Wrapping della libreria nativa (fase 2)
 
-Questa fase richiede le [librerie precompilate](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritte nella [sezione precedente](##creating-the-native-libraries-stage-1).
+Questa fase richiede le [librerie precompilate](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritte nella [sezione precedente](#creating-the-native-libraries-stage-1).
 
 ### <a name="creating-the-visual-studio-solution"></a>Creazione della soluzione Visual Studio
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: f264f210a9228fd213f0c041abb5b26023c796f4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1d9a65ab34cb0c02368f53679d38f1d07ec1f257
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753261"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198551"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay in Novell. iOS
 
@@ -43,8 +43,7 @@ Con Apple Pay, Apple [dichiara](https://developer.apple.com/apple-pay/Getting-St
 
 ## <a name="using-a-payment-processor-platform"></a>Utilizzo di una piattaforma di elaborazione pagamenti
 
-Uno dei componenti fondamentali di Apple Pay è l'elaborazione dei pagamenti. Sebbene sia possibile eseguire questa operazione, è necessaria una conoscenza significativa della crittografia
-- come descritto in dettaglio nella [Guida all'elaborazione dei pagamenti](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html)di Apple.
+Uno dei componenti fondamentali di Apple Pay è l'elaborazione dei pagamenti. Sebbene sia possibile eseguire questa operazione, è necessaria una conoscenza significativa della crittografia, come illustrato in dettaglio nella Guida all' [elaborazione dei pagamenti](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html)di Apple.
 Le piattaforme di elaborazione dei pagamenti, d'altra parte, gestiscono queste operazioni per l'utente, consentendo di concentrarsi sulla creazione dell'app.
 
 Sono disponibili due opzioni:

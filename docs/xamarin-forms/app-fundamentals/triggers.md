@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 31dfcc26121b0683db476b0c4be9a420efe5b66f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771241"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198570"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
@@ -144,7 +144,7 @@ L'implementazione di un'azione trigger deve eseguire le operazioni seguenti:
 
 - Eseguire l'override del metodo `Invoke`. Viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
 
-- In alternativa, esporre le proprietà che possono essere impostata in XAML quando viene dichiarato il trigger. Nell'esempio sono `Anchor`, `Scale` e `Length`.
+- Facoltativamente, esporre le proprietà che possono essere impostate in XAML quando il trigger viene dichiarato. Per un esempio, vedere la `VisualElementPopTriggerAction` classe nell'applicazione di esempio associata.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -158,7 +158,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-Le proprietà esposte dall'azione trigger possono essere impostate nella dichiarazione XAML nel modo seguente:
+Il trigger di evento può quindi essere utilizzato da XAML:
 
 ```xaml
 <EventTrigger Event="TextChanged">

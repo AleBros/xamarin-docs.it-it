@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: 3c729517c687e3d81fc3cc17938c96762c7b9252
-ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
+ms.openlocfilehash: 293fc8e3f8965e3109a0a549897dd23c34c46917
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119400"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198470"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 con Novell
 
@@ -33,7 +33,7 @@ L'elenco seguente è necessario per usare le funzionalità di Android 10 nelle a
 - **Java Developer Kit** : lo sviluppo di Novell. Android 10,0 richiede JDK 8. La distribuzione di Microsoft OpenJDK viene installata automaticamente come parte di Visual Studio.
 - **Android SDK** Android SDK API 29 deve essere installata tramite il gestore Android SDK.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 Per iniziare a sviluppare app Android 10 con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare il primo progetto Android 10:
 
@@ -62,11 +62,11 @@ Per creare un progetto con Novell. Android 10,0, è necessario prima di tutto us
 1. Avviare SDK Manager. In Visual Studio fare clic su **strumenti > Android > Android SDK Manager.** In Visual Studio per Mac fare clic su **strumenti > SDK Manager.**
 2. Nell'angolo in basso a destra fare clic sull'icona a forma di ingranaggio e selezionare **Repository > Google (non supportato):**
 
-![Selezione repository di Android SDK Manager](~/android/platform/android-10-images/sdkrepository.png)
+    ![Selezione repository di Android SDK Manager](~/android/platform/android-10-images/sdkrepository.png)
 
 3. Installare i pacchetti della **piattaforma Android 10 SDK** , elencati come **Android SDK piattaforma 29** nella scheda **Platforms** (per ulteriori informazioni sull'utilizzo di SDK Manager, vedere [Android SDK installazione](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk)):
 
-![Scheda della piattaforma di Android SDK Manager](~/android/platform/android-10-images/sdkplatforms.png)
+    ![Scheda della piattaforma di Android SDK Manager](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### <a name="create-a-xamarinandroid-project"></a>Creare un progetto Novell. Android
 

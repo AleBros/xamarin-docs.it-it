@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: d88832dd4fd69019f9905fb779c5572ba9a689eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c6385ff193c54fdab8f252c757cad810751b3f08
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281028"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206294"
 ---
 # <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
@@ -22,7 +22,7 @@ Questa pagina elenca le versioni recenti di iOS, oltre ad evidenziare alcuni dei
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introduzione a iOS 13 Preview](~/ios/platform/ios13/index.md) | Questo documento descrive Novell. iOS 13 Preview.|
+| [Introduzione a iOS 13](~/ios/platform/ios13/index.md) | Questo documento descrive Novell. iOS 13.|
 | [Introduzione a iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Questo documento descrive le funzionalità di iOS 12 disponibili per la compilazione di applicazioni Novell. iOS.|
 | [Introduzione a iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Questo documento descrive le funzionalità nuove e aggiornate in iOS 11 e Xcode 9, ad esempio ARKit, Core ML, Core NFC, trascinamento della selezione, MapKit, PDFKit, SiriKit e visione. Sono disponibili collegamenti a guide che descrivono come usare queste funzionalità con Novell. iOS. |
 | [Introduzione a iOS 10](~/ios/platform/introduction-to-ios10/index.md) | iOS 10 include numerose nuove API e servizi che consentono di sviluppare app con nuove funzionalità e funzionalità. Con iOS 10, le app hanno nuove funzionalità, ad esempio l'estensione di mappe, messaggi, telefono e Siri. Questa sezione illustra come sfruttare i vantaggi di queste funzionalità in un'app Novell. iOS. |

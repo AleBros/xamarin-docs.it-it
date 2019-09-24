@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b2918dde7524a02aa318164933063a5546db031a
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529311"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198484"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in xamarin. Forms
 
@@ -155,7 +155,7 @@ Di seguito sono illustrati i passaggi necessari per ogni piattaforma. Se i file 
 ### <a name="ios"></a>iOS
 
 È possibile visualizzare un tipo di carattere personalizzato prima di tutto verificare che sia stata caricata, quindi facendovi riferimento per nome usando xamarin. Forms `Font` metodi.
-Seguire le istruzioni in [questo post di blog](https://blog.xamarin.com/custom-fonts-in-ios/):
+Seguire le istruzioni in [questo post di blog](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
 
 1. Aggiungere il file del tipo **di carattere con l'azione di compilazione: BundleResource**e
 2. Aggiorna il **Info. plist** file (**tipi di carattere forniti dall'applicazione**, o `UIAppFonts`, key), quindi
@@ -171,7 +171,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Xamarin. Forms per Android può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Aggiungere innanzitutto il file del tipo di carattere alla cartella assets del progetto dell' *applicazione e impostare l'azione di compilazione: AndroidAsset*. Quindi usare il percorso completo e *nome del tipo di carattere* separati da un cancelletto (#) come nome del tipo di carattere in xamarin. Forms, come illustrato di seguito il frammento di codice riportato di seguito:
+Xamarin. Forms per Android può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Aggiungere innanzitutto il file del tipo di carattere alla cartella **assets** del progetto dell' *applicazione e impostare l'azione di compilazione: AndroidAsset*. Quindi usare il percorso completo e *nome del tipo di carattere* separati da un cancelletto (#) come nome del tipo di carattere in xamarin. Forms, come illustrato di seguito il frammento di codice riportato di seguito:
 
 ```csharp
 new Label
@@ -200,7 +200,7 @@ Il codice comune per l'applicazione è ora completo. Il codice di composizione t
 
 ### <a name="xaml"></a>XAML
 
-È anche possibile usare [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) in XAML per il rendering di un tipo di carattere personalizzato:
+È anche possibile usare [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) in XAML per il rendering di un tipo di carattere personalizzato:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -240,7 +240,7 @@ Nell'esempio di codice XAML seguente viene visualizzata una sola icona del tipo 
 </Image>
 ```
 
-Questo codice Visualizza un'icona Xbox, dalla famiglia di caratteri Ionicons, in una [`Image`](xref:Xamarin.Forms.Image) vista. Si noti che, mentre il carattere Unicode per questa `\uf30c`icona è, deve essere preceduto da un carattere di escape `&#xf30c;`in XAML e quindi diventa. Il codice C# equivalente è:
+Questo codice Visualizza un'icona Xbox, dalla famiglia di caratteri Ionicons, in una [`Image`](xref:Xamarin.Forms.Image) vista. Si noti che, mentre il carattere Unicode per questa `\uf30c`icona è, deve essere preceduto da un carattere di escape `&#xf30c;`in XAML e quindi diventa. Il codice C# equivalente è il seguente:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

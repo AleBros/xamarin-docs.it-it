@@ -7,16 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019
-ms.openlocfilehash: d21afcc7d7b130528e9cceac47840acd49b91f59
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be487ab839e2fb4d21b85719a56dc34303317a5f
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70129973"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206396"
 ---
 # <a name="dark-mode-in-xamarinios"></a>Modalità scura in Novell. iOS
-
-![Questa API è attualmente in anteprima](~/media/shared/preview.png)
 
 La modalità scura è un'opzione a livello di sistema per i temi chiaro e scuro. Gli utenti iOS possono ora scegliere il tema o consentire a iOS di modificare l'aspetto in modo dinamico in base all'ambiente e all'ora del giorno.
 

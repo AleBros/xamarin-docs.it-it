@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761988"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198426"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - Test e approvazioni per App Store
 
@@ -100,7 +100,7 @@ L'elenco seguente è un valido punto di partenza per verificare i casi di Edge c
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>Le linee guida sono più di una semplice ' guida '
 
-Apple è famoso per essere rigoroso rispetto alle linee guida dell'interfaccia umana, in quanto uno dei principali punti di forza della loro piattaforma è la coerenza e l'incremento percepibile di usabilità. Microsoft ha adottato un approccio simile a quello delle applicazioni Windows che implementano l'interfaccia utente in stile Metro. Il processo di approvazione per entrambe le piattaforme comporterà la valutazione dell'applicazione per la relativa adesione alla filosofia di progettazione pertinente.
+Apple è famoso per essere rigoroso rispetto alle linee guida dell'interfaccia umana, in quanto uno dei principali punti di forza della loro piattaforma è la coerenza e l'incremento percepibile di usabilità. Microsoft ha adottato un approccio simile a quello delle applicazioni Windows che implementano il [sistema di progettazione Fluent](https://microsoft.com/design/fluent). Il processo di approvazione per entrambe le piattaforme comporterà la valutazione dell'applicazione per la relativa adesione alla filosofia di progettazione pertinente.
 
 Questo non significa che l'innovazione dell'interfaccia utente non è supportata o non è consigliata, ma ci sono alcuni aspetti da evitare o l'app verrà rifiutata.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 6c529c8df7ef1e4372285a157f489941d795d7f6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655227"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198490"
 ---
 # <a name="xamarinforms-material-visual"></a>Oggetti visivi del materiale Novell. Forms
 
@@ -53,18 +53,18 @@ A livello funzionale, il renderer materiale non sono diversi per i renderer pred
 
 Dopo l'installazione del pacchetto NuGet [Novell. Forms. Visual. Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) , i renderer di materiali devono essere inizializzati in ogni progetto di piattaforma.
 
-In iOS questo dovrebbe verificarsi in **AppDelegate.cs** richiamando il `FormsMaterial.Init` metodo *dopo* il `Xamarin.Forms.Forms.Init` metodo:
+In iOS questo dovrebbe verificarsi in **AppDelegate.cs** richiamando il `Xamarin.Forms.FormsMaterial.Init` metodo *dopo* il `Xamarin.Forms.Forms.Init` metodo:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
-FormsMaterial.Init();
+global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-In Android questa operazione dovrebbe essere eseguita in **MainActivity.cs** richiamando `FormsMaterial.Init` il metodo *dopo* il `Xamarin.Forms.Forms.Init` metodo:
+In Android questa operazione dovrebbe essere eseguita in **MainActivity.cs** richiamando `Xamarin.Forms.FormsMaterial.Init` il metodo *dopo* il `Xamarin.Forms.Forms.Init` metodo:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-FormsMaterial.Init(this, savedInstanceState);
+global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
 ## <a name="consume-material-renderers"></a>Utilizzare renderer di materiali
@@ -78,7 +78,7 @@ Le applicazioni possono acconsentire esplicitamente all'uso dei renderer di [`Vi
 </ContentPage>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 ContentPage contentPage = new ContentPage();

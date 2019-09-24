@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c852a80136c8aae3a4da0fd3d8a8fa259e08aa4d
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021156"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206518"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usare l'accesso con Apple in Novell. Forms
 
-![Questa API è attualmente in anteprima](~/media/shared/preview.png)
-
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
 
 L'accesso con Apple è per tutte le nuove applicazioni in iOS 13 che usano servizi di autenticazione di terze parti. I dettagli di implementazione tra iOS e Android sono piuttosto diversi. Questa guida illustra come è possibile eseguire questa operazione oggi in Novell. Forms.
 
@@ -65,7 +63,7 @@ Quando si usano funzioni di Azure, è necessario configurare diverse impostazion
 - `APPLE_SIGNIN_REDIRECT_URI`: *URL di reindirizzamento* configurato durante la creazione dell' *ID Servizi* nella sezione *di* configurazione dell'accesso ad Apple.  Per eseguire il test, potrebbe avere un aspetto simile al seguente:`http://local.test:7071/api/applesignin_callback`
 - `APPLE_SIGNIN_P8_KEY`: Il contenuto di testo del `.p8` file, con tutte le `\n` nuove righe rimosse, quindi è una stringa lunga
 
-### <a name="security-considerations"></a>Considerazioni relative alla sicurezza
+### <a name="security-considerations"></a>Considerazioni sulla sicurezza
 
 **Non archiviare mai** la chiave P8 all'interno del codice dell'applicazione. Il codice dell'applicazione è facile da scaricare e disassemblare. 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: 00245b7b4b0db73f66d88474be2052f311499e7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9296fa60a454fe83f9ec9b383067576b67e5f037
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753762"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198538"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
@@ -163,6 +163,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 A partire da [Visual Studio 2019 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Associa a Mac esegue automaticamente il provisioning in un computer Mac del software necessario per la compilazione di applicazioni Xamarin.iOS: Mono, Xamarin.iOS (il framework del software, non l'IDE di Visual Studio per Mac) e i vari strumenti relativi a Xcode (ma non l'ambiente Xcode).
 
 > [!IMPORTANT]
+>
 > - Associa a Mac non può installare Xcode; è necessario installarlo manualmente nell'host di compilazione Mac perché è richiesto per lo sviluppo con Xamarin.iOS.
 > - Per il provisioning automatico del Mac è necessario che l'accesso remoto sia abilitato nel Mac e il Mac deve essere accessibile al computer Windows tramite la rete. Vedere [Abilitare l'accesso remoto nel Mac](#enable-remote-login-on-the-mac) per maggiori dettagli.
 > - Il provisioning automatico del Mac richiede 3 GB di spazio libero nel Mac per l'installazione di Xamarin.iOS.
@@ -185,6 +186,7 @@ Associa a Mac aggiorna Xamarin.iOS nel Mac in modo che corrisponda alla versione
 
 > [!IMPORTANT]
 > Associa a Mac non effettuerà il downgrade di Xamarin.iOS nel Mac dalla versione alfa/beta alla versione stabile. Se Visual Studio per Mac è installato, impostare il [canale della versione](https://docs.microsoft.com/visualstudio/mac/update) come indicato di seguito:
+>
 > - Se si usa Visual Studio 2019, selezionare il canale aggiornamenti **Stabile** in Visual Studio per Mac.
 > - Se si usa Visual Studio 2019 Preview, selezionare il canale aggiornamenti **Alfa** in Visual Studio per Mac.
 

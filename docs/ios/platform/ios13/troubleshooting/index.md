@@ -7,16 +7,14 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2019
-ms.openlocfilehash: d2a2146a0b7345475e2eb93d52fb02387c833224
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9a12163b0300a8d523632ad38e1b66a8c44b7aaf
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200042"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206311"
 ---
 # <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per iOS 13 e Novell. iOS
-
-![Funzionalità di anteprima](~/media/shared/preview.png)
 
 ## <a name="updating-to-xcode-11-stops-the-simulator-from-launching"></a>L'aggiornamento a Xcode 11 interrompe l'avvio del simulatore
 
@@ -32,6 +30,7 @@ Fino a quando non si verifica una [correzione](https://github.com/xamarin/xamari
 
 > [!NOTE]
 > Questi passaggi presuppongono che siano disponibili due applicazioni Xcode:
+>
 > - **Xcode11-beta1. app** : versione beta che non funziona con simulatori e Visual Studio per Mac.
 > - **Xcode102. app** : versione stabile di Xcode 10. Potrebbe anche essere chiamato **Xcode. app**.
 >
