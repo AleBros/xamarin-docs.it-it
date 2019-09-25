@@ -9,8 +9,6 @@
         - name: Requisiti
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Che cos'è Xamarin?
-          href: get-started/introduction-to-mobile-development.md
         - name: Ciclo di vita di sviluppo del software per dispositivi mobili
           href: get-started/introduction-to-mobile-sdlc.md
         - name: 'Procedura dettagliata: Creazione di un''app multipiattaforma'
