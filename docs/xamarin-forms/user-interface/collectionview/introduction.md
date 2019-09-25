@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2019
 ms.openlocfilehash: 14abf2e7eff64d2e3e9656bf1ca76f4cee615408
-ms.sourcegitcommit: 5ef92b44f0d10c58013d3c3dd6283509f1499587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69986086"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introduzione a Novell. Forms di CollectionView
@@ -22,7 +22,7 @@ ms.locfileid: "69986086"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) è una vista per presentare elenchi di dati usando specifiche di layout diverse. Mira a offrire un'alternativa più flessibile ed efficiente a [`ListView`](xref:Xamarin.Forms.ListView). Ad esempio, le schermate seguenti mostrano un `CollectionView` che usa una griglia verticale a due colonne e che consente la selezione multipla:
 
-[ ![Screenshot di un layout di griglia verticale di CollectionView, nel layout della griglia verticale di iOS e Android](introduction-images/verticalgrid-multipleselection.png "CollectionView con selezione multipla") ] (introduction-images/verticalgrid-multipleselection-large.png#lightbox "Layout griglia verticale di CollectionView con selezione multipla")
+[![Screenshot di un layout di griglia verticale di CollectionView, in iOS e Android](introduction-images/verticalgrid-multipleselection.png "Layout griglia verticale di CollectionView con selezione multipla")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "Layout griglia verticale di CollectionView con selezione multipla")
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)è disponibile in Novell. Forms 4,0. Tuttavia, è attualmente sperimentale e può essere usata solo aggiungendo la seguente riga di codice alla `AppDelegate` classe in iOS o `MainActivity` alla classe in Android, prima di chiamare `Forms.Init`:
 
@@ -50,7 +50,7 @@ Sebbene le [`CollectionView`](xref:Xamarin.Forms.CollectionView) API [`ListView`
 
 | Concetto | API ListView | CollectionView |
 |---|---|---|
-| Data | `ItemsSource` | Un [`CollectionView`](xref:Xamarin.Forms.CollectionView) oggetto viene popolato con i dati `ItemsSource` impostando la proprietà. Per altre informazioni, vedere [popolare un oggetto CollectionView con i dati](populate-data.md#populate-a-collectionview-with-data). |
+| Dati | `ItemsSource` | Un [`CollectionView`](xref:Xamarin.Forms.CollectionView) oggetto viene popolato con i dati `ItemsSource` impostando la proprietà. Per altre informazioni, vedere [popolare un oggetto CollectionView con i dati](populate-data.md#populate-a-collectionview-with-data). |
 | Aspetto elemento | `ItemTemplate` | L'aspetto di ogni elemento in un [`CollectionView`](xref:Xamarin.Forms.CollectionView) oggetto può essere definito impostando `ItemTemplate` la proprietà su [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)un oggetto. Per altre informazioni, vedere [definire l'aspetto dell'elemento](populate-data.md#define-item-appearance). |
 | Celle | `TextCell`, `ImageCell`, `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)non ha un concetto di celle. Viene invece utilizzato un modello di dati per definire l'aspetto di ogni elemento di dati nell'elenco. |
 | Separatori di riga | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)non include separatori predefiniti. Se necessario, è possibile fornire tali elementi nel modello di elemento. |

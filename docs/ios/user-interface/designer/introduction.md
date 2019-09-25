@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768929"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250146"
 ---
 # <a name="ios-designer-basics"></a>Nozioni fondamentali su iOS designer
 
@@ -35,6 +35,8 @@ Questa sezione descrive come la finestra di progettazione iOS semplifica la crea
 IOS Designer consente agli sviluppatori di progettare visivamente l'interfaccia utente di un'applicazione. Come descritto nella Guida [introduttiva agli storyboard](~/ios/user-interface/storyboards/index.md) , uno storyboard descrive le schermate (controller di visualizzazione) che costituiscono un'app, gli elementi dell'interfaccia (visualizzazioni) posizionati su tali controller e il flusso di navigazione generale dell'app. 
 
 Un controller di visualizzazione è costituito da due parti: una rappresentazione visiva in iOS designer C# e una classe associata:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

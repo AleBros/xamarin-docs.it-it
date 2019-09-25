@@ -9,10 +9,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
 ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70290598"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>estensioni iOS in Novell. iOS
@@ -27,13 +27,13 @@ Tutte le estensioni vengono installate insieme a un'app contenitore (con entramb
 
 ## <a name="extension-points"></a>Punti di estensione
 
-|Type|Descrizione|Punto di estensione|App host|
+|Tipo|Descrizione|Punto di estensione|App host|
 |--- |--- |--- |--- |
-|Azione|Editor o Visualizzatore specializzato per un tipo di supporto specifico|`com.apple.ui-services`|Any|
+|Operazione|Editor o Visualizzatore specializzato per un tipo di supporto specifico|`com.apple.ui-services`|Qualsiasi|
 |Provider di documenti|Consente all'app di usare un archivio documenti remoto|`com.apple.fileprovider-ui`|App che usano un [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
-|Tastiera|Tastiere alternativi|`com.apple.keyboard-service`|Any|
+|Tastiera|Tastiere alternativi|`com.apple.keyboard-service`|Qualsiasi|
 |Modifica foto|Manipolazione e modifica di foto|`com.apple.photo-editing`|Photos. Editor app|
-|Condividi|Condivide i dati con i social network, i servizi di messaggistica e così via.|`com.apple.share-services`|Any|
+|Condividi|Condivide i dati con i social network, i servizi di messaggistica e così via.|`com.apple.share-services`|Qualsiasi|
 |Oggi|"Widget" visualizzati nella schermata di oggi o nel centro notifiche|`com.apple.widget-extensions`|Oggi e centro notifiche|
 
 Sono stati aggiunti [altri punti di estensione](~/ios/platform/introduction-to-ios10/index.md#app-extensions) in iOS 10.

@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 798dd1b5df2ea05eb428c9465e996d606c22009b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 246ee002404fdf6fe1120c19701aceb3c2dee7db
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281203"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249779"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Case study sull'app multipiattaforma: Tasky
 
@@ -475,7 +475,7 @@ Le applicazioni risultanti hanno un aspetto simile al seguente in ogni piattafor
 
  <a name="iOS" />
 
-#### <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 L'applicazione usa la progettazione dell'interfaccia utente standard iOS, ad esempio il pulsante "Aggiungi" posizionato nella barra di spostamento e usando l'icona **più (+)** incorporata. USA inoltre il comportamento predefinito `UINavigationController` del pulsante "indietro" e supporta "Swipe-to-delete" nella tabella.
 
@@ -483,7 +483,7 @@ L'applicazione usa la progettazione dell'interfaccia utente standard iOS, ad ese
 
  <a name="Android" />
 
-#### <a name="android"></a>Android
+### <a name="android"></a>Android
 
 L'app Android usa controlli incorporati, incluso il layout predefinito per le righe che richiedono la visualizzazione di un segno di "segno". Il comportamento hardware/System Back è supportato in aggiunta a un pulsante indietro sullo schermo.
 
@@ -491,7 +491,7 @@ L'app Android usa controlli incorporati, incluso il layout predefinito per le ri
 
  <a name="Windows_Phone" />
 
-#### <a name="windows-phone"></a>Windows Phone
+### <a name="windows-phone"></a>Windows Phone
 
 L'app Windows Phone usa il layout standard, popolando la barra dell'app nella parte inferiore della schermata anziché una barra di navigazione nella parte superiore.
 

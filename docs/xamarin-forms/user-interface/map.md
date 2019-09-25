@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 242673efb38931eb678432a28f24db0ad9b8cb7d
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228226"
 ---
 # <a name="xamarinforms-map"></a>Mappa di xamarin. Forms
@@ -25,7 +25,7 @@ Una volta configurato, il `Map` controllo funziona esattamente come qualsiasi al
 
 Il controllo mappa è stata invece utilizzato la [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) esempio mostrata di seguito.
 
- [![Esegue il mapping dell'esempio MobileCRM](map-images/maps-zoom-sml.png "esempio di controllo mappa")](map-images/maps-zoom.png#lightbox "esempio controllo mappa")
+ [![Mappe nell'esempio mobileCRM](map-images/maps-zoom-sml.png "Esempio di controllo mappa")](map-images/maps-zoom.png#lightbox "Esempio di controllo mappa")
 
 La funzionalità mappa può essere migliorata ulteriormente mediante la creazione di un [eseguire il mapping di renderer personalizzato](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -201,7 +201,7 @@ slider.ValueChanged += (sender, e) =>
 };
 ```
 
-[![Le mappe con zoom](map-images/maps-zoom-sml.png "mappa controllo Zoom")](map-images/maps-zoom.png#lightbox "mappa controllo Zoom")
+[![Mappe con zoom](map-images/maps-zoom-sml.png "Zoom controllo mappa")](map-images/maps-zoom.png#lightbox "Zoom controllo mappa")
 
 Inoltre, la [`Map`](xref:Xamarin.Forms.Maps.Map) classe dispone di una `MoveToLastRegionOnLayoutChange` proprietà di tipo `bool`, supportata da una proprietà associabile. Per impostazione predefinita, questa `true`proprietà è, che indica che l'area mappa visualizzata verrà spostata dall'area corrente all'area impostata in precedenza quando si verifica una modifica del layout, ad esempio la rotazione del dispositivo. Quando questa proprietà è impostata su `false`, l'area mappa visualizzata rimarrà centrata quando si verifica una modifica del layout. Nell'esempio seguente viene illustrata l'impostazione di questa proprietà:
 
@@ -324,7 +324,7 @@ L' `IEnumerable` aspetto di ogni elemento della raccolta viene definito impostan
 
 Gli screenshot seguenti mostrano una [`Map`](xref:Xamarin.Forms.Maps.Map) visualizzazione di una [`Pin`](xref:Xamarin.Forms.Maps.Pin) raccolta usando Data Binding:
 
-[ ![Screenshot della mappa con i pin associati ai dati, sulla mappa iOS e Android](map-images/pins-itemssource.png "con i pin associati ai dati") ] (map-images/pins-itemssource-large.png#lightbox "Mappa con pin associati a dati")
+[![Screenshot della mappa con i pin associati ai dati, in iOS e Android](map-images/pins-itemssource.png "Mappa con pin associati a dati")](map-images/pins-itemssource-large.png#lightbox "Mappa con pin associati a dati")
 
 ### <a name="choose-item-appearance-at-runtime"></a>Scegli aspetto elemento in fase di esecuzione
 

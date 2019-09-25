@@ -1,74 +1,74 @@
 ---
 title: Introduzione a UrhoSharp
-description: Questo documento descrive la struttura di base di un'applicazione di UrhoSharp e collegamenti alle varie guide e applicazioni di esempio viene illustrato l'uso di UrhoSharp.
+description: Questo documento descrive la struttura di base di un'applicazione UrhoSharp e i collegamenti a diverse guide e applicazioni di esempio che illustrano come usare UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "67832538"
 ---
 # <a name="introduction-to-urhosharp"></a>Introduzione a UrhoSharp
 
 ![Logo di UrhoSharp](introduction-images/urhosharp-icon.png)
 
-UrhoSharp è un potente motore di gioco 3D per gli sviluppatori di Xamarin e .NET.  È simile come spirito al SceneKit e SpriteKit Apple e includere la fisica, navigazione, rete e molto più mentre ancora in fase di cross-platform.
+UrhoSharp è un potente motore di gioco 3D per gli sviluppatori Novell e .NET.  Si tratta di uno spirito simile a SceneKit e SpriteKit di Apple e includono la fisica, la navigazione, la rete e molto altro ancora.
 
-È un'associazione di .NET per le [Urho3D](http://urho3d.github.io/) del motore e consente agli sviluppatori di scrivere codice multipiattaforma destinate ad Android, iOS, Windows e Mac con lo stesso codebase e può eseguire il rendering OpenGL sia Direct3D sistemi.
+Si tratta di un binding .NET al motore [Urho3D](http://urho3d.github.io/) e consente agli sviluppatori di scrivere codice multipiattaforma che può essere destinato a Android, iOS, Windows e Mac con la stessa codebase ed è in grado di eseguire il rendering nei sistemi OpenGL e Direct3D.
 
 UrhoSharp è un motore di gioco con numerose funzionalità predefinite:
 
-- Potente di rendering della grafica 3D
-- Simulazione di effetti fisici (usando la libreria di punto elenco)
-- Gestione di scena
-- Supporto di Await/Async
-- Azioni descrittive API
-- Integrazione 2D in scene 3D
-- Per il rendering del tipo di carattere con FreeType
-- Client e server, funzionalità di rete
-- Importare un'ampia gamma di asset (con Apri la libreria di asset)
-- Rete mesh di navigazione e pathfinding (tramite rifondere in un nuovo/deviazione)
-- Generazione della struttura convessa per il rilevamento dei conflitti (usando StanHull)
+- Potente rendering grafica 3D
+- Simulazione fisica (usando la libreria Bullet)
+- Gestione della scena
+- Supporto di await/Async
+- API friendly actions
+- integrazione 2D in scene 3D
+- Rendering dei tipi di carattere con FreeType
+- Funzionalità di rete client e server
+- Importare un'ampia gamma di asset (con la libreria open assets)
+- Mesh di navigazione e pathfinding (usando il ricast/deviazione)
+- Generazione di gusci convessi per il rilevamento di collisioni (tramite StanHull)
 - Riproduzione audio (con **libvorbis**)
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
-UrhoSharp per praticità viene distribuito come un [mobileengagement](https://www.nuget.org/) e può essere aggiunto al C# o F# progetti destinati a Windows, Mac, Android o iOS.  NuGet include sia le librerie necessarie per eseguire il programma, nonché gli asset di base (CoreData) utilizzati dal motore.
+UrhoSharp è comodamente distribuito come [pacchetto NuGet](https://www.nuget.org/) e può essere aggiunto ai progetti C# o F# destinati a Windows, Mac, Android o iOS.  NuGet include entrambe le librerie necessarie per eseguire il programma, nonché gli asset di base (CoreData) usati dal motore.
 
 ### <a name="urho-as-a-portable-class-library"></a>Urho come libreria di classi portabile
 
-Il pacchetto Urho può essere utilizzato da un progetto specifico della piattaforma o da un progetto libreria di classi portabile, consentendo di riutilizzare tutto il codice tra tutte le piattaforme.  Ciò significa che è necessario eseguire in ogni piattaforma è sufficiente scrivere il punto di ingresso specifico della piattaforma e quindi trasferire il controllo al codice condiviso del gioco.
+Il pacchetto Urho può essere utilizzato da un progetto specifico della piattaforma o da un progetto libreria di classi portabile, consentendo di riutilizzare tutto il codice in tutte le piattaforme.  Ciò significa che tutto ciò che è necessario fare in ogni piattaforma è scrivere il punto di ingresso specifico della piattaforma e quindi trasferire il controllo al codice del gioco condiviso.
 
 ### <a name="samples"></a>Esempi
 
-È possibile ottenere un'idea delle funzionalità dei Urho aprendo in Visual Studio per Mac o Visual Studio della soluzione di esempio in:
+È possibile ottenere un buon gusto per le funzionalità di Urho aprendo in Visual Studio per Mac o Visual Studio la soluzione di esempio da:
 
 [https://github.com/xamarin/urho-samples](https://github.com/xamarin/urho-samples)
 
-La soluzione predefinita contiene i progetti per Android, iOS, Windows e Mac.  È stata strutturata tale soluzione in modo che abbiamo un'utilità di avvio specifiche della piattaforma di piccole dimensioni e tutti i codice di esempio e il codice del gioco si trova in una libreria di classi portabile, che illustra come ottimizzare il riutilizzo del codice tra tutte le piattaforme.
+La soluzione predefinita contiene progetti per Android, iOS, Windows e Mac.  Questa soluzione è stata strutturata in modo da avere un piccolo avvio specifico della piattaforma e tutto il codice di esempio e il codice del gioco si trovano in una libreria di classi portabile, illustrando come ottimizzare il riutilizzo del codice in tutte le piattaforme.
 
-Consultare il [Urho e piattaforma Your](~/graphics-games/urhosharp/platform/index.md) pagina per altre informazioni su come creare le proprie soluzioni.
+Per altre informazioni su come creare soluzioni personalizzate, vedere la pagina [Urho e la piattaforma](~/graphics-games/urhosharp/platform/index.md) .
 
-Poiché tutti gli esempi condividono un set comune di elementi dell'interfaccia utente, gli esempi di eseguire l'astrazione la configurazione di base in questo file:
+Poiché tutti gli esempi condividono un insieme comune di elementi dell'interfaccia utente, gli esempi hanno astratte la configurazione di base in questo file:
 
 [https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/Core/Sample.cs](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/Core/Sample.cs)
 
-Ciò fornisce una classe di base di esempio che gestisce alcune sequenze di tasti base e una fotocamera eventi, configurazioni di tocco, fornisce gli elementi dell'interfaccia utente di base e ciò consente a ogni esempio di concentrarsi sulle funzionalità specifiche che viene viene presentato.
+Fornisce una classe base di esempio che gestisce alcune sequenze di tasti di base ed eventi di tocco, configura una fotocamera, fornisce elementi di base dell'interfaccia utente e consente a ogni esempio di concentrarsi sulle funzionalità specifiche presentate.
 
-L'esempio seguente viene illustrato ciò che il motore è in grado di procedere:
+Nell'esempio seguente viene illustrato ciò che il motore è in grado di eseguire:
 
-- [Giochi samply](https://github.com/xamarin/urho-samples/tree/master/SamplyGame) un clone di ShootySkies semplice.
+- [Samply Gioca](https://github.com/xamarin/urho-samples/tree/master/SamplyGame) un clone semplice di ShootySkies.
 
 Mentre gli altri esempi mostrano le singole proprietà di ogni esempio.
 
 ## <a name="basic-structure"></a>Struttura di base
 
-Il tuo gioco deve essere una sottoclasse di `Application` (classe), si tratta in cui si installerà il tuo gioco (sul `Setup` (metodo)) e avvia il tuo gioco (nel `Start` (metodo)).  Quindi è costruire l'interfaccia utente principale.  Verrà illustrato un esempio di piccole dimensioni che mostra le API per impostare una scena 3D, alcuni elementi dell'interfaccia utente e la connessione di un comportamento semplice all'applicazione.
+Il gioco deve creare una `Application` sottoclasse della classe, in cui verrà configurato il gioco ( `Setup` nel metodo) e verrà avviato `Start` il gioco (nel metodo).  Quindi si costruisce l'interfaccia utente principale.  Verrà esaminato un piccolo esempio che mostra le API per configurare una scena 3D, alcuni elementi dell'interfaccia utente e un semplice comportamento.
 
 ```csharp
 class MySample : Application {
@@ -125,21 +125,21 @@ class MySample : Application {
 }
 ```
 
-Se si esegue questa applicazione, si scoprirà presto che la fase di esecuzione del reclamo gli asset non sono presenti.  Che cosa è necessario eseguire è creare una gerarchia del progetto che inizia con il nome della directory speciali "Dati" e all'interno di questa operazione, è possibile inserire l'asset di cui viene fatto riferimento nel programma.  È quindi necessario impostare nelle proprietà dell'elemento per ogni asset "Copia di Directory di Output" per "Copia se più recente", che garantisce che i dati siano presenti.
+Se si esegue questa applicazione, si noterà rapidamente che il Runtime sta comunicando che gli asset non sono presenti.  È necessario creare una gerarchia nel progetto che inizia con il nome di directory speciale "data" e, in questo caso, inserire gli asset a cui si fa riferimento nel programma.  È quindi necessario impostare le proprietà dell'elemento per ogni asset "copia nella directory di output" su "copia se più recente", in modo da garantire che i dati siano presenti.
 
-Verrà ora illustrato che cosa succede.
+Verrà illustrato il funzionamento di questo articolo.
 
-Per avviare l'applicazione si chiama la funzione di inizializzazione del motore, seguita dalla creazione di una nuova istanza della classe dell'applicazione, simile al seguente:
+Per avviare l'applicazione, chiamare la funzione di inizializzazione del motore, quindi creare una nuova istanza della classe dell'applicazione, come segue:
 
 ```csharp
 new MySample().Run();
 ```
 
-Il runtime richiama il `Setup` e `Start` metodi per l'utente.  Se esegue l'override `Setup` è possibile configurare i parametri del motore (non illustrato in questo esempio).
+Il runtime richiamerà `Setup` i `Start` metodi e.  Se si esegue `Setup` l'override di, è possibile configurare i parametri del motore (non mostrati in questo esempio).
 
-È necessario eseguire l'override `Start` come verrà avviato il tuo gioco.  In questo metodo si caricherà gli asset, connettere i gestori eventi, la scena di installazione e avviare tutte le azioni che si desiderano.  Nel nostro esempio, entrambi creiamo un po' di interfaccia utente per visualizzare l'utente, nonché impostazione di una scena 3D.
+È necessario eseguire `Start` l'override di in quanto verrà avviato il gioco.  In questo metodo si caricherà gli asset, si connettono i gestori eventi, si configura la scena e si avviano le azioni desiderate.  Nel nostro esempio, creiamo un po' di interfaccia utente per visualizzare l'utente, oltre a configurare una scena 3D.
 
-Il seguente frammento di codice Usa il framework dell'interfaccia utente per creare un elemento di testo e aggiungerlo alla propria applicazione:
+Il frammento di codice seguente usa il Framework dell'interfaccia utente per creare un elemento di testo e aggiungerlo all'applicazione:
 
 ```csharp
 // UI text
@@ -156,36 +156,36 @@ helloText.SetFont(
 UI.Root.AddChild(helloText);
 ```
 
-Il framework dell'interfaccia utente è presente per fornire un'interfaccia utente all'interno del gioco molto semplice e funziona mediante l'aggiunta di nuovi nodi per il `UI.Root` nodo.
+Il Framework dell'interfaccia utente è disponibile per fornire un'interfaccia utente molto semplice del gioco, che funziona aggiungendo nuovi nodi al `UI.Root` nodo.
 
-La seconda parte del nostro configurazioni di esempio della scena principale.  Ciò comporta una serie di passaggi, la creazione di una scena 3D, la creazione di una casella 3D nella schermata di aggiunta di una luce, una videocamera e un riquadro di visualizzazione.  Questi vengono presi in esame in modo più dettagliato nella sezione [scena, nodi, i componenti e fotocamere](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
+La seconda parte dell'esempio configura la scena principale.  Ciò implica una serie di passaggi, la creazione di una scena 3D, la creazione di una finestra 3D nella schermata, l'aggiunta di una luce, una fotocamera e un viewport.  Queste informazioni vengono esaminate più dettagliatamente nella sezione [scena, nodi, componenti e fotocamere](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
-La terza parte del nostro esempio attiva un paio di azioni.  Le azioni sono ricette che descrivono un effetto specifico e dopo la creazione possono essere eseguiti da un nodo su richiesta chiamando il `RunActionAsync` metodo su un `Node`.
+La terza parte dell'esempio attiva alcune azioni.  Le azioni sono ricette che descrivono un particolare effetto e, una volta create, possono essere eseguite da un nodo su richiesta `RunActionAsync` chiamando il metodo `Node`su un oggetto.
 
-La prima azione ridimensiona la finestra con un effetto di rimbalzo e il secondo ruota la casella per sempre:
+La prima azione Ridimensiona la casella con un effetto di rimbalzo e la seconda ruota la casella per sempre:
 
 ```csharp
 await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-Il codice precedente viene illustrato come viene la prima azione che viene creato un `ScaleTo` azione, si tratta semplicemente una ricetta che indica che si desidera scalare per un secondo verso il valore uno la proprietà di scalabilità di un nodo.  Questa azione, a sua volta viene eseguito il wrapping intorno a un'azione di interpolazione, il `EaseBounceOut` azione.  Le azioni di interpolazione distorcono l'esecuzione di un'azione lineare e applicano un effetto, in questo caso fornisce l'effetto di Rimbalzo orizzontale.
-In modo nostra ricetta può essere scritta come:
+Il precedente Mostra come la prima azione creata è un' `ScaleTo` azione, si tratta semplicemente di una ricetta che indica che si vuole ridimensionare un secondo verso il valore una proprietà scale di un nodo.  Questa azione viene a sua volta racchiusa tra un'azione di `EaseBounceOut` interpolazione, l'azione.  Le azioni di interpolazione comportano la distorsione dell'esecuzione lineare di un'azione e l'applicazione di un effetto, in questo caso fornisce l'effetto di rimbalzo.
+Quindi, la ricetta può essere scritta come segue:
 
 ```csharp
 var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
 ```
 
-Dopo aver creato il file recipe, eseguiamo il file recipe:
+Una volta creata la ricetta, viene eseguita la ricetta:
 
 ```csharp
 await boxNode.RunActionsAsync (recipe)
 ```
 
-Await indica che il dovranno riprendere l'esecuzione al termine di questa riga al termine dell'operazione.  Una volta completata l'azione è attiva la seconda animazione.
+Await indica che la funzionerà per riprendere l'esecuzione dopo questa riga al termine dell'azione.  Al termine dell'azione, viene attivata la seconda animazione.
 
-Il [uso di UrhoSharp](~/graphics-games/urhosharp/using.md) documento esamina in modo più approfondito i concetti alla base Urho e su come strutturare il codice per creare un gioco.
+Il documento [using UrhoSharp](~/graphics-games/urhosharp/using.md) Esplora in modo più approfondito i concetti alla base di Urho e come strutturare il codice per la creazione di un gioco.
 
 ## <a name="copyrights"></a>Copyright
 
-Questa documentazione vengono forniti contenuti originale da Xamarin Inc, ma traccia ampiamente dalla documentazione open source per il progetto Urho3D e è riportate le schermate dal progetto Cocos2D.
+Questa documentazione contiene contenuti originali di Novell Inc, ma viene disegnata in maniera estensiva dalla documentazione Open Source per il progetto Urho3D e contiene screenshot del progetto Cocos2D.

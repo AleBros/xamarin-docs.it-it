@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739171"
 ---
 # <a name="xamarinforms-local-databases"></a>Database locali Xamarin.Forms
@@ -26,7 +26,7 @@ Le applicazioni Xamarin.Forms possono usare il pacchetto [SQLite.NET PCL NuGet](
 
 L'[applicazione di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) associata è una semplice applicazione per elenchi di attività. Gli screenshot seguenti illustrano come viene visualizzato l'esempio in ogni piattaforma:
 
-[![Screenshot dell'esempio di database Xamarin.Forms](databases-images/todo-list-sml.png "Screenshot della prima pagina di TodoList")](databases-images/todo-list.png#lightbox "Screenshot della prima pagina di TodoList") [![Screenshot dell'esempio di database Xamarin.Forms](databases-images/todo-list-sml.png "Screenshot della prima pagina di TodoList")](databases-images/todo-list.png#lightbox "Screenshot della prima pagina di TodoList")
+[![Schermate di esempio del database Novell. Forms](databases-images/todo-list-sml.png "Schermate delle prime pagine di todo") ](databases-images/todo-list.png#lightbox "Schermate delle prime pagine di todo") [ ![Screenshot di esempio di database Novell. Forms]screenshot delle(databases-images/todo-list-sml.png "prime pagine") ](databases-images/todo-list.png#lightbox "Schermate delle prime pagine di todo") dell'attività
 
 <a name="Using_SQLite_with_PCL" />
 

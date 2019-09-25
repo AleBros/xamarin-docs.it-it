@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8267c49302a755dcc433345b6a53aa9f2e2c71e6
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756216"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250167"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Uso di TestFlight per distribuire app Xamarin.iOS
 
@@ -91,6 +91,8 @@ Dopo aver creato il record iTunes Connect, è possibile caricare le nuove compil
 
 Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) nell'IDE, quindi [inviare l'app ad Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) tramite Application Loader o la funzione di archiviazione in Xcode.
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ### <a name="create-an-archive"></a>Creare un archivio
@@ -121,7 +123,7 @@ Prima compilare il [file distribuibile finale](~/ios/deploy-test/app-distributio
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>Compilazione del file distribuibile finale
- Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Si tratta di:
+ Il plug-in di Xamarin per Visual Studio non supporta l'archiviazione di app Xamarin.iOS per la pubblicazione nell'App Store. Esistono però due opzioni per pubblicare un'applicazione iOS da Visual Studio. Questi sono:
 
 1. Caricare un pacchetto IPA creato con il comando di compilazione del pacchetto ad-hoc.
 1. Caricare un bundle `.app` compresso.

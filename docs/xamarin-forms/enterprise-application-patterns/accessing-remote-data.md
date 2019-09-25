@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770809"
 ---
 # <a name="accessing-remote-data"></a>Accesso ai dati remoti
@@ -53,7 +53,7 @@ La `CatalogService` classe viene usata per gestire il processo di recupero dei d
 
 La figura 10-1 illustra l'interazione delle classi che leggono i dati del catalogo dal microservizio Catalog per la `CatalogView`visualizzazione da parte di.
 
-[Recupero di dati dal microservizio Catalog ![(accessing-remote-data-images/catalogdata.png " ")]] (accessing-remote-data-images/catalogdata-large.png#lightbox "Recupero di dati dal microservizio Catalog")
+[![](accessing-remote-data-images/catalogdata.png "Recupero di dati dal microservizio Catalog")](accessing-remote-data-images/catalogdata-large.png#lightbox "Recupero di dati dal microservizio Catalog")
 
 **Figura 10-1**: Recupero di dati dal microservizio Catalog
 
@@ -158,7 +158,7 @@ La `BasketService` classe viene usata per gestire il processo di recupero e aggi
 
 La figura 10-2 illustra l'interazione delle classi che inviano i dati di basket `BasketView`visualizzati da al microservizio basket.
 
-[Invio di dati al microservizio basket ![(accessing-remote-data-images/basketdata.png " ")]] (accessing-remote-data-images/basketdata-large.png#lightbox "Invio di dati al microservizio basket")
+[![](accessing-remote-data-images/basketdata.png "Invio di dati al microservizio basket")](accessing-remote-data-images/basketdata-large.png#lightbox "Invio di dati al microservizio basket")
 
 **Figura 10-2**: Invio di dati al microservizio basket
 

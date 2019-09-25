@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888644"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Novell. Forms (scorrimento)
@@ -28,9 +28,9 @@ Inoltre, [`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce un `Scr
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)definisce inoltre una `ItemsUpdatingScrollMode` proprietà che rappresenta il comportamento `CollectionView` di scorrimento di quando vengono aggiunti nuovi elementi. Per altre informazioni su questa proprietà, vedere [controllare la posizione di scorrimento quando vengono aggiunti nuovi elementi](#control-scroll-position-when-new-items-are-added).
 
-Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto. Per altre informazioni, vedere [punti](#snap-points)di aggancio.
+Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto. Per altre informazioni, vedere [punti di aggancio](#snap-points).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)consente inoltre di caricare i dati in modo incrementale quando l'utente scorre. Per altre informazioni, vedere [caricare dati](populate-data.md#load-data-incrementally)in modo incrementale.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)consente inoltre di caricare i dati in modo incrementale quando l'utente scorre. Per altre informazioni, vedere [caricare dati in modo incrementale](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Rileva scorrimento
 
@@ -42,7 +42,7 @@ Quando un utente scorre il dito per avviare uno scorrimento, è possibile contro
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -115,7 +115,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 Questo codice di esempio genera lo scorrimento minimo necessario per scorrere l'elemento nella visualizzazione:
 
-[ ![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato, in iOS e Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView elenco verticale con elemento a scorrimento") ] (scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
+[![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato in visualizzazione, in iOS e Android](scrolling-images/scrolltoposition-makevisible.png "Elenco verticale di CollectionView con elemento a scorrimento")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
 
 > [!NOTE]
 > Il [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro viene usato per impostazione predefinita, se `position` l'argomento non viene specificato quando si `ScrollTo` chiama il metodo.
@@ -130,7 +130,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Questo esempio di codice comporta lo scorrimento dell'elemento all'inizio della visualizzazione:
 
-[ ![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato, in iOS e Android](scrolling-images/scrolltoposition-start.png "CollectionView elenco verticale con elemento a scorrimento") ] (scrolling-images/scrolltoposition-start-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
+[![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato in visualizzazione, in iOS e Android](scrolling-images/scrolltoposition-start.png "Elenco verticale di CollectionView con elemento a scorrimento")](scrolling-images/scrolltoposition-start-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
 
 ### <a name="center"></a>Center
 
@@ -142,7 +142,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Questo esempio di codice comporta lo scorrimento dell'elemento al centro della visualizzazione:
 
-[ ![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato, in iOS e Android](scrolling-images/scrolltoposition-center.png "CollectionView elenco verticale con elemento a scorrimento") ] (scrolling-images/scrolltoposition-center-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
+[![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato in visualizzazione, in iOS e Android](scrolling-images/scrolltoposition-center.png "Elenco verticale di CollectionView con elemento a scorrimento")](scrolling-images/scrolltoposition-center-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
 
 ### <a name="end"></a>Fine
 
@@ -154,7 +154,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Questo esempio di codice comporta lo scorrimento dell'elemento alla fine della visualizzazione:
 
-[ ![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato, in iOS e Android](scrolling-images/scrolltoposition-end.png "CollectionView elenco verticale con elemento a scorrimento") ] (scrolling-images/scrolltoposition-end-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
+[![Screenshot di un elenco di ritrovi verticali con un elemento visualizzato in visualizzazione, in iOS e Android](scrolling-images/scrolltoposition-end.png "Elenco verticale di CollectionView con elemento a scorrimento")](scrolling-images/scrolltoposition-end-large.png#lightbox "Elenco verticale di CollectionView con elemento a scorrimento")
 
 ## <a name="disable-scroll-animation"></a>Disabilita animazione Scroll
 
@@ -180,7 +180,7 @@ Il valore predefinito della `ItemsUpdatingScrollMode` proprietà è. `KeepItemsI
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -211,7 +211,7 @@ L' [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumerazione definisce 
 
 Per impostazione predefinita, [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) la proprietà è impostata `SnapPointsType.None`su, che garantisce che lo scorrimento non riagganci gli elementi, come illustrato nelle schermate seguenti:
 
-[ ![Screenshot di un elenco di ritrovi verticali senza punti di aggancio, in iOS e Android](scrolling-images/snappoints-none.png "CollectionView elenco verticale senza punti") di aggancio] (scrolling-images/snappoints-none-large.png#lightbox "Elenco verticale di CollectionView senza punti") di aggancio
+[![Screenshot di un elenco di ritrovi verticali senza punti di aggancio, in iOS e Android](scrolling-images/snappoints-none.png "Elenco verticale di CollectionView senza punti di aggancio")](scrolling-images/snappoints-none-large.png#lightbox "Elenco verticale di CollectionView senza punti di aggancio")
 
 ### <a name="snap-points-alignment"></a>Allineamento punti di aggancio
 
@@ -220,7 +220,7 @@ L' [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumerazione 
 > [!IMPORTANT]
 > Il valore della [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) proprietà viene rispettato solo quando la [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) proprietà è impostata su `Mandatory`, o `MandatorySingle`.
 
-#### <a name="start"></a>Start
+#### <a name="start"></a>Inizia
 
 Il `SnapPointsAlignment.Start` membro indica che i punti di allineamento sono allineati al bordo di elementi iniziali.
 
@@ -245,7 +245,7 @@ Per impostazione predefinita, [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLa
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -264,7 +264,7 @@ CollectionView collectionView = new CollectionView
 
 Quando un utente scorre il dito per avviare uno scorrimento, l'elemento superiore verrà allineato alla parte superiore della visualizzazione:
 
-[ ![Screenshot di un elenco di riepilogo verticale con punti di aggancio iniziali, in iOS e Android](scrolling-images/snappoints-start.png "CollectionView elenco verticale con punti di aggancio iniziali") ] (scrolling-images/snappoints-start-large.png#lightbox "Elenco verticale di CollectionView con punti di aggancio iniziali")
+[![Screenshot di un elenco verticale di CollectionView con punti di aggancio iniziali, in iOS e Android](scrolling-images/snappoints-start.png "Elenco verticale di CollectionView con punti di aggancio iniziali")](scrolling-images/snappoints-start-large.png#lightbox "Elenco verticale di CollectionView con punti di aggancio iniziali")
 
 #### <a name="center"></a>Center
 
@@ -289,7 +289,7 @@ Il `SnapPointsAlignment.Center` membro indica che i punti di allineamento sono a
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -308,7 +308,7 @@ CollectionView collectionView = new CollectionView
 
 Quando un utente scorre il dito per avviare uno scorrimento, l'elemento superiore verrà allineato al centro nella parte superiore della visualizzazione:
 
-[ ![Screenshot di un elenco verticale di CollectionView con punti di allineamento al centro, in iOS e Android](scrolling-images/snappoints-center.png "CollectionView elenco verticale con punti di allineamento al centro") ] (scrolling-images/snappoints-center-large.png#lightbox "Elenco verticale di CollectionView con punti di allineamento al centro")
+[![Screenshot di un elenco di ritrovi verticali con punti di allineamento al centro, in iOS e Android](scrolling-images/snappoints-center.png "Elenco verticale di CollectionView con punti di allineamento al centro")](scrolling-images/snappoints-center-large.png#lightbox "Elenco verticale di CollectionView con punti di allineamento al centro")
 
 #### <a name="end"></a>Fine
 
@@ -333,7 +333,7 @@ Il `SnapPointsAlignment.End` membro indica che i punti di allineamento sono alli
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -352,7 +352,7 @@ CollectionView collectionView = new CollectionView
 
 Quando un utente scorre il dito per avviare uno scorrimento, l'elemento inferiore verrà allineato alla parte inferiore della visualizzazione:
 
-[ ![Screenshot di un elenco di ritrovi verticali con punti di aggancio finali, in iOS e Android](scrolling-images/snappoints-end.png "CollectionView elenco verticale con punti di allineamento finali") ] (scrolling-images/snappoints-end-large.png#lightbox "Elenco verticale di CollectionView con punti di aggancio finali")
+[![Screenshot di un elenco di ritrovi verticali con punti di aggancio finali, in iOS e Android](scrolling-images/snappoints-end.png "Elenco verticale di CollectionView con punti di aggancio finali")](scrolling-images/snappoints-end-large.png#lightbox "Elenco verticale di CollectionView con punti di aggancio finali")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

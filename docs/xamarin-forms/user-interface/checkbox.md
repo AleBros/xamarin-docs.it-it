@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
 ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739151"
 ---
 # <a name="xamarinforms-checkbox"></a>Casella di controllo Novell. Forms
@@ -108,7 +108,7 @@ In questo esempio, [`Label`](xref:Xamarin.Forms.Label) usa un'espressione di ass
 
 Negli screenshot seguenti lo screenshot iOS Mostra [`Label`](xref:Xamarin.Forms.Label) la formattazione `CheckBox` quando è vuoto, mentre lo screenshot di Android Mostra la `Label` formattazione quando è selezionata l' `CheckBox` opzione:
 
-[ ![Screenshot della casella di controllo Data Binding, nella casella di]controllo(checkbox-images/checkbox-databinding.png "Data Binding") iOS e Android] (checkbox-images/checkbox-databinding-large.png#lightbox "Casella di controllo Data Binding")
+[![Screenshot della casella di controllo Data Binding in iOS e Android](checkbox-images/checkbox-databinding.png "Casella di controllo Data Binding")](checkbox-images/checkbox-databinding-large.png#lightbox "Casella di controllo Data Binding")
 
 Per ulteriori informazioni sui trigger, vedere [trigger Novell. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 

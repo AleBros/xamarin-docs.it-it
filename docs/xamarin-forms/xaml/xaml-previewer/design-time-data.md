@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887845"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
@@ -52,7 +52,7 @@ In questo esempio, il pulsante viene visualizzato solo in fase di progettazione.
 
 ## <a name="preview-images-at-design-time"></a>Anteprima immagini in fase di progettazione
 
-È possibile impostare un'origine della fase di progettazione per le immagini associate alla pagina o caricate in modo dinamico. Nel progetto Android aggiungere l'immagine che si vuole visualizzare nel Visualizzatore anteprima XAML per le **risorse >** cartella che è possibile creare. Nel progetto iOS aggiungere l'immagine alla cartella Resources. È quindi possibile visualizzare l'immagine nel Visualizzatore anteprime XAML in fase di progettazione:
+È possibile impostare un'origine della fase di progettazione per le immagini associate alla pagina o caricate in modo dinamico. Nel progetto Android aggiungere l'immagine che si vuole visualizzare nel Visualizzatore anteprima XAML per le **risorse >** cartella che è possibile creare. Nel progetto iOS aggiungere l'immagine alla cartella **Resources** . È quindi possibile visualizzare l'immagine nel Visualizzatore anteprime XAML in fase di progettazione:
 
 ```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />

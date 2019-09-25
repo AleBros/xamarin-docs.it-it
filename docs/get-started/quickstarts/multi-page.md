@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68653789"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Eseguire lo spostamento in un'applicazione Novell. Forms a più pagine
@@ -28,8 +28,8 @@ In questa Guida introduttiva si apprenderà come:
 
 Questa Guida introduttiva illustra come trasformare un'applicazione Novell. Forms multipiattaforma a pagina singola, in grado di archiviare una singola nota, in un'applicazione a più pagine, in grado di archiviare più note. Il risultato è riportato di seguito:
 
-[ ![(multi-page-images/screenshots1-sml.png " ")]Pagina note] (multi-page-images/screenshots1.png#lightbox "Pagina note") Nota pagina immissione(multi-page-images/screenshots2.png#lightbox "Nota pagina voce") [ ![(multi-page-images/screenshots2-sml.png " ")]] 
-
+[![](multi-page-images/screenshots1-sml.png "")](multi-page-images/screenshots1.png#lightbox "Pagina note")
+[![](multi-page-images/screenshots2-sml.png "Pagina di immissione della nota") della pagina note](multi-page-images/screenshots2.png#lightbox "Pagina di immissione della nota")
 
 ### <a name="prerequisites"></a>Prerequisiti
 

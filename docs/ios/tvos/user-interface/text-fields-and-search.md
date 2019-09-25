@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dbd0b3e7d14307a3b9e7de552e2d59e0fbbcaa4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 71efb000b3f78283863193e0cc1db5dc45100c0a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768552"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250153"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Uso del testo e dei campi di ricerca di tvOS in Novell
 
@@ -95,6 +95,8 @@ Per ulteriori informazioni, vedere la pagina relativa al [riferimento alla class
 Il modo più semplice per lavorare con i campi di testo in un'app Novell. tvOS consiste nell'aggiungerli alla progettazione dell'interfaccia utente usando iOS designer.
 
 Seguire questa procedura:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

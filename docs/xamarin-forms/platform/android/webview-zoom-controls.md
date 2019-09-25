@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: 2142882add91d613263d11fa4c1e6d7ad142c7c7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655986"
 ---
 # <a name="webview-zoom-on-android"></a>Zoom di WebView in Android
@@ -47,7 +47,7 @@ Il `WebView.On<Android>` metodo consente di specificare che questo specifico del
 
 Il risultato è che il pinch-to-zoom può essere abilitato in [`WebView`](xref:Xamarin.Forms.WebView)un oggetto e i controlli zoom possono essere sovrapposti `WebView`a:
 
-[ ![Screenshot della visualizzazione WebView con zoom in Android](webview-zoom-controls-images/webview-zoom.png "") ] (webview-zoom-controls-images/webview-zoom-large.png#lightbox "Visualizzazione WebView con zoom")
+[![Screenshot di WebView con zoom in Android](webview-zoom-controls-images/webview-zoom.png "Visualizzazione WebView con zoom")](webview-zoom-controls-images/webview-zoom-large.png#lightbox "Visualizzazione WebView con zoom")
 
 > [!IMPORTANT]
 > I controlli zoom devono essere abilitati e visualizzati, tramite le proprietà o i metodi associabili corrispondenti, per essere [`WebView`](xref:Xamarin.Forms.WebView)sovrapposti a un.

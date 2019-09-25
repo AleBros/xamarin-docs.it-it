@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ff07af00e1e647255ac56318c0685552823f510c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653513"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249674"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Archiviare i dati in un database SQLite.NET locale
 
@@ -27,10 +27,10 @@ In questa Guida introduttiva si apprenderà come:
 
 La Guida introduttiva illustra come archiviare i dati in un database SQLite.NET locale. Il risultato è riportato di seguito:
 
-[ ![(database-images/screenshots1-sml.png " ")]Pagina note] (database-images/screenshots1.png#lightbox "Pagina note") Nota pagina immissione(database-images/screenshots2.png#lightbox "Nota pagina voce") [ ![(database-images/screenshots2-sml.png " ")]] 
+[![](database-images/screenshots1-sml.png "")](database-images/screenshots1.png#lightbox "Pagina note")
+[![](database-images/screenshots2-sml.png "Pagina di immissione della nota") della pagina note](database-images/screenshots2.png#lightbox "Pagina di immissione della nota")
 
-
-### <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di provare questa Guida introduttiva, è necessario completare correttamente la [Guida introduttiva precedente](multi-page.md) . In alternativa, scaricare l' [esempio di Guida introduttiva precedente](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) e usarlo come punto di partenza per questa Guida introduttiva.
 
@@ -275,7 +275,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
 
     Il pacchetto verrà usato per integrare le operazioni di database nell'applicazione.
 
-4. Nel **riquadro della soluzione**, nel progetto **note** , aprire **note.cs** nella cartella Models e sostituire il codice esistente con il codice seguente:
+4. Nel **riquadro della soluzione**, nel progetto **note** , aprire **note.cs** nella cartella **Models** e sostituire il codice esistente con il codice seguente:
 
     ```csharp
     using System;

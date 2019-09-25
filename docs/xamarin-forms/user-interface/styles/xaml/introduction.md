@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 35f8dad3590c07ceb3c93aa735b8c02d75098498
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228167"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Introduzione agli stili di Novell. Forms
@@ -107,10 +107,10 @@ Ogni [`Style`](xref:Xamarin.Forms.Style) istanza contiene una raccolta di uno o 
 
 Ogni [`Style`](xref:Xamarin.Forms.Style) istanza può essere *esplicita*o *implicita*:
 
-- Un' [`Style`](xref:Xamarin.Forms.Style) istanza esplicita viene definita specificando [`TargetType`](xref:Xamarin.Forms.Style.TargetType) un oggetto `x:Key` e un valore `x:Key` e impostando la [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà dell'elemento di destinazione sul riferimento. Per ulteriori informazioni sugli stili espliciti, vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md).
-- Un' [`Style`](xref:Xamarin.Forms.Style) istanza implicita viene definita specificando solo [`TargetType`](xref:Xamarin.Forms.Style.TargetType)un. L' `Style` istanza verrà quindi applicata automaticamente a tutti gli elementi di quel tipo. Si noti che le `TargetType` `Style` sottoclassi di non hanno automaticamente applicato. Per ulteriori informazioni sugli stili impliciti, vedere [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
+- Un'istanza *esplicita* [`Style`](xref:Xamarin.Forms.Style) viene definita specificando [`TargetType`](xref:Xamarin.Forms.Style.TargetType) un oggetto `x:Key` e un valore `x:Key` e impostando la [`Style`](xref:Xamarin.Forms.NavigableElement.Style) proprietà dell'elemento di destinazione sul riferimento. Per ulteriori informazioni sugli stili *espliciti* , vedere [stili espliciti](~/xamarin-forms/user-interface/styles/explicit.md).
+- Un'istanza *implicita* [`Style`](xref:Xamarin.Forms.Style) viene definita specificando solo [`TargetType`](xref:Xamarin.Forms.Style.TargetType)un. L' `Style` istanza verrà quindi applicata automaticamente a tutti gli elementi di quel tipo. Si noti che le `TargetType` `Style` sottoclassi di non hanno automaticamente applicato. Per ulteriori informazioni sugli stili *impliciti* , vedere [stili impliciti](~/xamarin-forms/user-interface/styles/implicit.md).
 
-Quando si crea [`Style`](xref:Xamarin.Forms.Style)un oggetto [`TargetType`](xref:Xamarin.Forms.Style.TargetType) , la proprietà è sempre obbligatoria. Nell'esempio di codice riportato di seguito viene illustrato uno stile `x:Key`esplicito (si noti il) creato in XAML:
+Quando si crea [`Style`](xref:Xamarin.Forms.Style)un oggetto [`TargetType`](xref:Xamarin.Forms.Style.TargetType) , la proprietà è sempre obbligatoria. Nell'esempio di codice riportato di seguito viene illustrato uno stile `x:Key` *esplicito* (si noti il) creato in XAML:
 
 ```xaml
 <Style x:Key="labelStyle" TargetType="Label">
@@ -126,7 +126,7 @@ Per applicare un `Style`oggetto, l'oggetto di destinazione deve [`VisualElement`
 <Label Text="Demonstrating an explicit style" Style="{StaticResource labelStyle}" />
 ```
 
-Stili di livello inferiori nella gerarchia di visualizzazione hanno la precedenza rispetto a quelli definiti più backup. Ad esempio, impostando un [`Style`](xref:Xamarin.Forms.Style) che consente di scegliere [`Label.TextColor`](xref:Xamarin.Forms.Label.TextColor) a `Red` nell'applicazione livello eseguirà l'override di uno stile a livello di pagina che imposta `Label.TextColor` a `Green`. Analogamente, uno stile a livello di pagina verrà sostituito da uno stile a livello di controllo. Inoltre, se `Label.TextColor` è impostato direttamente su una proprietà del controllo, ha la precedenza su qualsiasi stile.
+Stili di livello inferiori nella gerarchia di visualizzazione hanno la precedenza rispetto a quelli definiti più backup. Ad esempio, impostando un [ `Style` ](xref:Xamarin.Forms.Style) che consente di scegliere [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) a `Red` nell'applicazione livello eseguirà l'override di uno stile a livello di pagina che imposta `Label.TextColor` a `Green`. Analogamente, uno stile a livello di pagina verrà sostituito da uno stile a livello di controllo. Inoltre, se `Label.TextColor` è impostato direttamente su una proprietà del controllo, ha la precedenza su qualsiasi stile.
 
 Gli articoli di questa sezione illustrano come creare e applicare stili *espliciti* e *impliciti* , come creare stili globali, ereditarietà dello stile, come rispondere alle modifiche di stile in fase di esecuzione e come usare gli stili incorporati inclusi in Novell. Forms.
 

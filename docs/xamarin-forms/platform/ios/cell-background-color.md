@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68651382"
 ---
 # <a name="cell-background-color-on-ios"></a>Colore di sfondo della cella in iOS
@@ -41,7 +41,7 @@ Questa specifica della piattaforma iOS imposta il colore di sfondo predefinito [
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -56,7 +56,7 @@ Il `ListView.On<iOS>` metodo consente di specificare che questo specifico della 
 
 Il risultato è che il colore di sfondo di [`Cell`](xref:Xamarin.Forms.Cell) un oggetto può essere impostato su [`Color`](xref:Xamarin.Forms.Color)uno specifico:
 
-[ ![Screenshot delle celle di intestazione del gruppo verde acqua, nel](cell-background-color-images/group-header-cell-color.png "controllo ListView iOS con celle di intestazione del gruppo verde") ] acqua (cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celle di intestazione del gruppo verde") acqua
+[![Screenshot delle celle di intestazione del gruppo alzavola in iOS](cell-background-color-images/group-header-cell-color.png "ListView con celle di intestazione del gruppo verde") acqua](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celle di intestazione del gruppo verde acqua")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

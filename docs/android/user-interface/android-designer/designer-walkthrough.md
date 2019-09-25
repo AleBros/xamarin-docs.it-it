@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f696e8159d929bf41596c4dc9498e682e361f412
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761449"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249993"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Uso di Novell. Android Designer
 
@@ -31,6 +31,8 @@ Questo articolo illustra come usare Novell. Android Designer per creare visivame
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 L'obiettivo di questa procedura dettagliata consiste nell'usare la Android Designer per creare un'interfaccia utente per un'app del browser colori di esempio. L'app color browser visualizza un elenco di colori, i relativi nomi e i rispettivi valori RGB. Si apprenderà come aggiungere widget alla **area di progettazione** e come disporre visivamente questi widget. Successivamente, si apprenderà come modificare i widget in modo interattivo nel **area di progettazione** o tramite il riquadro **Proprietà** della finestra di progettazione. Infine, si vedrà come appare la progettazione quando l'app viene eseguita in un dispositivo o in un emulatore.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

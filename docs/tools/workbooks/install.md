@@ -6,18 +6,20 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 4638d599d72ea2a6375aa2afff5974ef8c09308d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6fc204e8524d53820407b2efd3ab0de6af28c669
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772128"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249915"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Installazione e requisiti per le cartelle di lavoro
 
 <a name="install" />
 
 ## <a name="download-and-install"></a>Scaricare e installare
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -110,9 +112,9 @@ Se si verificano problemi durante la connessione della cartella di lavoro di iOS
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>Disinstallare
+## <a name="uninstall"></a>Disinstalla
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>WINDOWS
 
 A seconda del modo in cui sono state acquisite le cartelle di lavoro, potrebbe essere necessario eseguire due procedure di disinstallazione. Controllare entrambi per disinstallare completamente il software.
 

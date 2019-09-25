@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b17a1177abafe4e605263664038842863302ac3b
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760989"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249695"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -60,7 +60,7 @@ Il file di risorse di base (con estensione resx) contiene le stringhe della ling
 
 Scegliere un nome significativo, ad esempio **AppResources**, e premere **OK**.
 
-[![Aggiungere un file di risorse](text-images/resx-new-file-sml.png "Finestra di dialogo Nuovo File")](text-images/resx-new-file.png#lightbox "Finestra di dialogo Nuovo File")
+[![Aggiungi file di risorse](text-images/resx-new-file-sml.png "Finestra di dialogo nuovo file")](text-images/resx-new-file.png#lightbox "Finestra di dialogo nuovo file")
 
 Vengono aggiunti due file al progetto:
 
@@ -76,6 +76,8 @@ Nell'albero della soluzione vengono visualizzati i file correlati. Il file RESX 
 Per impostazione predefinita, quando vengono generati i riferimenti alle stringhe fortemente tipizzate, saranno `internal` all'assembly. Questo accade perché lo strumento di compilazione predefinito per i file RESX genera il file **.designer.cs** con le proprietà `internal`.
 
 Selezionare il file **AppResources.resx** e visualizzare il riquadro **Proprietà** per visualizzare dove viene configurato lo strumento di compilazione. Lo screenshot seguente mostra **Strumento personalizzato: ResXFileCodeGenerator**.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

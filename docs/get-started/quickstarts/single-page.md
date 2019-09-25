@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655000"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Novell. Forms a pagina singola
@@ -28,7 +28,7 @@ In questa Guida introduttiva si apprenderà come:
 
 Questa Guida introduttiva illustra come creare un'applicazione Novell. Forms multipiattaforma, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo. Il risultato è riportato di seguito:
 
-[![](single-page-images/screenshots-sml.png "Applicazione Notes")](single-page-images/screenshots.png#lightbox "Applicazione Notes")
+[![](single-page-images/screenshots-sml.png "Applicazione Note")](single-page-images/screenshots.png#lightbox "Applicazione Note")
 
 ::: zone pivot="windows"
 
@@ -177,7 +177,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     ![](single-page-images/vs/ios-start.png "Barra degli strumenti di Visual Studio iOS")
 
-    Note nel simulatore iOS [ ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Note nel simulatore iOS")
+    [![](single-page-images/vs/notes-ios.png "Note nel simulatore iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Note nel simulatore iOS")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -327,7 +327,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
     ![](single-page-images/vs/ios-start.png "Barra degli strumenti di Visual Studio iOS")
 
-    Note nel simulatore iOS [ ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Note nel simulatore iOS")
+    [![](single-page-images/vs/notes-ios.png "Note nel simulatore iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Note nel simulatore iOS")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -468,7 +468,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
       ![](single-page-images/vsmac/start.png "Barra degli strumenti di Visual Studio per Mac")
 
-      Note nel simulatore iOS [ ![(single-page-images/vsmac/notes-ios.png " ")]] (single-page-images/vsmac/notes-ios-large.png#lightbox "Note nel simulatore iOS")
+      [![](single-page-images/vsmac/notes-ios.png "Note nel simulatore iOS")](single-page-images/vsmac/notes-ios-large.png#lightbox "Note nel simulatore iOS")
 
     Immettere una nota e premere il pulsante **Salva**.
 

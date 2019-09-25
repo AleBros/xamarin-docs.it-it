@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2019
 ms.openlocfilehash: f08146d4439ff1fc22edea71ab1cbb337f64c037
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68984393"
 ---
 # <a name="xamarinforms-controls-class-hierarchy"></a>Gerarchia di classi di controlli Novell. Forms
@@ -22,7 +22,7 @@ Questi tipi possono essere divisi in pagine, layout, visualizzazioni e celle. Un
 
 Il diagramma classi seguente mostra la gerarchia dei tipi che vengono in genere usati per compilare un'interfaccia utente in Novell. Forms:
 
-[ ![Novell. Forms controlla il diagramma classi](class-hierarchy-images/class-diagram.png "Novell. Forms controlla il diagramma classi") ] (class-hierarchy-images/class-diagram-large.png#lightbox "Diagramma classi di controlli Novell. Forms")
+[![Diagramma classi di controlli Novell. Forms](class-hierarchy-images/class-diagram.png "Diagramma classi di controlli Novell. Forms")](class-hierarchy-images/class-diagram-large.png#lightbox "Diagramma classi di controlli Novell. Forms")
 
 > [!NOTE]
 > È possibile scaricare una versione ad alta risoluzione del diagramma classi da [qui](class-hierarchy-images/class-diagram-high-resolution.png). Si noti tuttavia che il diagramma non mostra attualmente i `CarouselView` tipi e. `CollectionView` Questi verranno aggiunti quando i controlli non sono in anteprima. Inoltre, il diagramma mostra solo un singolo tipo di Shell.

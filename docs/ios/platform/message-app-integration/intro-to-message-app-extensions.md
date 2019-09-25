@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ca782e57964adadd85412030db2247f0de690a6b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 37f2942c97f7604fbd72a6dd38de518d3668ee9e
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769659"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250129"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Nozioni fondamentali sull'estensione dell'app Message in Novell. iOS
 
@@ -114,6 +114,8 @@ Quali sono i vantaggi della creazione di un'esperienza adesiva personalizzata?
 5. Consente acquisti in-app, in modo che l'utente possa acquistare altri adesivi dall'interno dell'app.
 
 Per creare un'esperienza adesiva personalizzata, seguire questa procedura:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

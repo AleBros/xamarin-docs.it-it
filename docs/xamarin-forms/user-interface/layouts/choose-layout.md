@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69893998"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Scegliere un layout di Novell. Forms
@@ -22,7 +22,7 @@ Le classi di layout Novell. Forms consentono di disporre e raggruppare i control
 
 Nell'immagine seguente vengono illustrati i layout tipici che è possibile ottenere con le classi di layout Novell. Forms principali:
 
-[ ![Classi di layout principali nelle classi di layout Novell. Forms](images/layouts.png "Novell. Forms") ] (images/layouts-large.png#lightbox "Classi di layout Novell. Forms")
+[![Classi di layout principali in Novell. Forms](images/layouts.png "Classi di layout Novell. Forms")](images/layouts-large.png#lightbox "Classi di layout Novell. Forms")
 
 ## <a name="stacklayout"></a>StackLayout
 

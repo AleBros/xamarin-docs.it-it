@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
 ms.openlocfilehash: dd1dc9b679a46dc082de1fe9b3c5f10b6757c0d8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739278"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introduzione alla shell Xamarin.Forms
@@ -34,22 +34,22 @@ Le applicazioni shell consentono inoltre una velocità di rendering maggiore e u
 
 La shell offre una solida esperienza di navigazione, basata su riquadri a comparsa e schede. Il livello principale per lo spostamento in un'applicazione shell è un riquadro a comparsa o una barra di schede inferiore, a seconda dei requisiti dell'applicazione per gli spostamenti. L'esempio seguente illustra un'applicazione in cui il livello principale per lo spostamento è un riquadro a comparsa:
 
-[![Screenshot di un riquadro a comparsa della shell, in iOS e Android](introduction-images/flyout.png "Riquadro a comparsa della shell")](introduction-images/flyout-large.png#lightbox "Riquadro a comparsa della shell")
+[![Screenshot di un riquadro a comparsa della shell, in iOS e Android](introduction-images/flyout.png "Riquadro a comparsa Shell")](introduction-images/flyout-large.png#lightbox "Riquadro a comparsa Shell")
 
 Selezionando un elemento del riquadro a comparsa, la scheda inferiore che rappresenta l'elemento viene selezionata e visualizzata:
 
-[![Screenshot delle schede inferiori della shell, in iOS e Android](introduction-images/monkeys.png "Schede inferiori della shell")](introduction-images/monkeys-large.png#lightbox "Schede inferiori della shell")
+[![Screenshot delle schede in basso della shell, in iOS e Android](introduction-images/monkeys.png "Schede in basso Shell")](introduction-images/monkeys-large.png#lightbox "Schede in basso Shell")
 
 > [!NOTE]
 > Quando il riquadro a comparsa non è aperto, la barra delle schede inferiore può essere considerata il livello di spostamento principale nell'applicazione.
 
 Ogni scheda visualizza un oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage). Se tuttavia una scheda inferiore contiene più di una pagina, è possibile spostarsi tra le pagine tramite la barra delle schede superiore:
 
-[![Screenshot delle schede superiori della shell, in iOS e Android](introduction-images/cats.png "Schede superiori della shell")](introduction-images/cats-large.png#lightbox "Schede superiori della shell")
+[![Screenshot delle schede principali della shell, in iOS e Android](introduction-images/cats.png "Schede principali della shell")](introduction-images/cats-large.png#lightbox "Schede principali della shell")
 
 All'interno di ogni scheda, è possibile spostarsi ad altri oggetti [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-[![Screenshot della navigazione tra pagine della shell, in iOS e Android](introduction-images/cat-details.png "Navigazione nell'app shell")](introduction-images/cat-details-large.png#lightbox "Navigazione nell'app shell")
+[![Screenshot della navigazione delle pagine della shell, in iOS e Android](introduction-images/cat-details.png "Esplorazione delle app shell")](introduction-images/cat-details-large.png#lightbox "Esplorazione delle app shell")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

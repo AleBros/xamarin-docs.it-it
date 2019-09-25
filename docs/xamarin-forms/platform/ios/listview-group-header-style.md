@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: f40737799f63c6e0c61fcc6f4f59584222a49d6d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68648315"
 ---
 # <a name="listview-group-header-style-on-ios"></a>Stile intestazione gruppo ListView in iOS
@@ -31,7 +31,7 @@ Questa specifica della piattaforma iOS controlla se [`ListView`](xref:Xamarin.Fo
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice C# che utilizza l'API fluent:
+In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -50,7 +50,7 @@ Inoltre, il `ListView.GetGroupHeaderStyle` metodo può essere utilizzato per res
 
 Il risultato è che un valore `GroupHeaderStyle` specificato viene applicato [`ListView`](xref:Xamarin.Forms.ListView)a, che controlla se le celle di intestazione fluttuano durante lo scorrimento:
 
-[ ![Screenshot delle celle di intestazione ListView mobili e non mobili, nel](listview-group-header-style-images/group-header-styles.png "controllo ListView iOS con celle di intestazione mobili e non") ] mobili (listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView con celle di intestazione mobili e non mobili")
+[![Screenshot delle celle di intestazione ListView mobili e non mobili, in iOS](listview-group-header-style-images/group-header-styles.png "ListView con celle di intestazione mobili e non mobili")](listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView con celle di intestazione mobili e non mobili")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

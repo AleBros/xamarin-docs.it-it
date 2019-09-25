@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755957"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250019"
 ---
 # <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
 
@@ -108,6 +108,8 @@ Usata nella sezione App in primo piano di Google Play. Questa immagine può esse
 URL di riferimento a un video di YouTube che presenta l'applicazione. Il video può durare da 30 secondi a 2 minuti e visualizza le funzionalità più importanti dell'applicazione.
 
 ### <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

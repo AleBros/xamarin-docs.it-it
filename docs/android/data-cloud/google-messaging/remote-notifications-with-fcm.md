@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: c76b22c84851c8952dc4e9181966632cf6e38041
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ece503ee305fc1319e766ee5ad52ad86cee122bc
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754672"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249935"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifiche remote con Firebase Cloud Messaging
 
@@ -51,6 +51,8 @@ Dopo aver creato la nuova app, il passaggio successivo consiste nell'impostare i
 ### <a name="set-the-package-name"></a>Imposta il nome del pacchetto
 
 In [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)è stato specificato un nome di pacchetto per l'app abilitata per FCM. Il nome del pacchetto funge anche da [*ID applicazione*](./firebase-cloud-messaging.md#fcm-in-action-app-id) associato alla [chiave API](firebase-cloud-messaging.md#fcm-in-action-api-key). Configurare l'app per l'uso del nome del pacchetto:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

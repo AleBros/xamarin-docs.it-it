@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70761413"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Nozioni di base su Novell. Android Designer
@@ -222,7 +222,7 @@ Le proprietà *booleane* vengono in genere selezionate come segni di spunta acca
 
 Il Android Designer supporta la modifica diretta di determinate proprietà nell' **area di progettazione** (pertanto non è necessario cercare tali proprietà nell'elenco delle proprietà). Le proprietà che possono essere modificate direttamente includono testo, margine e dimensioni.
 
-### <a name="text"></a>Text
+### <a name="text"></a>Testo
 
 Le proprietà di testo di alcuni widget (ad esempio `Button` e `TextView`) possono essere modificate direttamente sul **area di progettazione**. Se si fa doppio clic su un widget, questo viene inserito nella modalità di modifica, come illustrato di seguito:
 
@@ -446,7 +446,7 @@ Alcuni widget hanno proprietà multivalore raggruppate insieme `Padding`, ad ese
 
 Il Android Designer supporta la modifica diretta di determinate proprietà nell'Area di progettazione (pertanto non è necessario cercare tali proprietà nell'elenco delle proprietà). Le proprietà che possono essere modificate direttamente includono testo, margine e dimensioni.
 
-### <a name="text"></a>Text
+### <a name="text"></a>Testo
 
 Le proprietà di testo di alcuni widget (ad esempio `Button` e `TextView`) possono essere modificate direttamente sul area di progettazione. Se si fa doppio clic su un widget, questo viene inserito nella modalità di modifica, come illustrato di seguito:
 

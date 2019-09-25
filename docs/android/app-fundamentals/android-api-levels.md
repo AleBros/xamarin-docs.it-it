@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 6e2e4cd854e60f6147104b6b1361d0ab7b234370
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fba49e21ac75ec1ebb00614f3891bebaa57a3ed5
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755813"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249759"
 ---
 # <a name="understanding-android-api-levels"></a>Understanding Android API Levels (Informazioni sui livelli API Android)
 
@@ -33,6 +33,8 @@ Prima di poter configurare un livello API per il progetto, è necessario install
 > [!NOTE]
 > A partire dall'agosto 2018, la console di Google Play richiederà che le nuove app siano destinate a livello API 26 (Android 8,0) o versione successiva.
 Le app esistenti saranno necessarie per il livello API di destinazione 26 o superiore a partire dal 2018 novembre. Per ulteriori informazioni, vedere [migliorare la sicurezza delle app e le prestazioni in Google Play per anni](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

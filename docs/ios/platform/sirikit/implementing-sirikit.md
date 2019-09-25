@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27bf22403c9411d300e67bfdaef4aa4dfe74f6e0
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769792"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250190"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementazione di SiriKit in Novell. iOS
 
@@ -66,6 +66,8 @@ Spostando questo codice comune in un progetto condiviso, in una libreria di clas
 Nel caso dell'app di esempio MonkeyChat, i modelli di dati e il codice di elaborazione, ad esempio l'accesso alla rete e al database, verranno spostati in una libreria nativa.
 
 Seguire questa procedura:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

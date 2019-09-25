@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
 ms.openlocfilehash: d42263733c7fa793713738be4b389eaa4850f38b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68649363"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventi, protocolli e delegati in Novell. iOS
@@ -25,12 +25,12 @@ In questo articolo vengono fornite informazioni su tutti questi argomenti, che o
 
 - **Eventi** : utilizzo di eventi .NET con controlli UIKit.
 - **Protocolli** : informazioni sui protocolli e sul modo in cui vengono usati e sulla creazione di un esempio che fornisce i dati per un'annotazione della mappa.
-- Delegati: informazioni sui delegati Objective-C estendendo l'esempio di mappa per gestire l'interazione dell'utente che include un'annotazione, quindi apprendere la differenza tra i delegati forti e deboli e quando usarli.
+- **Delegati** : informazioni sui delegati Objective-C estendendo l'esempio di mappa per gestire l'interazione dell'utente che include un'annotazione, quindi apprendere la differenza tra i delegati forti e deboli e quando usarli.
 
 Per illustrare i protocolli e i delegati, verrà compilata una semplice applicazione map che aggiunge un'annotazione a una mappa, come illustrato di seguito:
 
 [![](delegates-protocols-and-events-images/01-map-sml.png "Esempio di applicazione mappa semplice che aggiunge un'annotazione a una mappa")](delegates-protocols-and-events-images/01-map.png#lightbox)
-[![]di un'annotazione di(delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "esempio aggiunta a una mappa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+[![]di(delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "un'annotazione di esempio aggiunta a una mappa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Prima di affrontare questa app, è necessario iniziare esaminando gli eventi .NET in UIKit.
 
@@ -56,7 +56,7 @@ Il codice precedente viene cablato nel `ViewDidLoad` metodo di UIViewController.
 
 [![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "Un pulsante aggiunto in iOS designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
-Novell. iOS supporta anche lo stile di azione di destinazione della connessione del codice a un'interazione che si verifica con un controllo. Per creare un'azione di destinazione per il pulsante Hello, fare doppio clic su di essa nella finestra di progettazione iOS. Verrà visualizzato il file code-behind di UIViewController e allo sviluppatore verrà richiesto di selezionare un percorso per inserire il metodo di connessione:
+Novell. iOS supporta anche lo stile di azione di destinazione della connessione del codice a un'interazione che si verifica con un controllo. Per creare un'azione di destinazione per il pulsante **Hello** , fare doppio clic su di essa nella finestra di progettazione iOS. Verrà visualizzato il file code-behind di UIViewController e allo sviluppatore verrà richiesto di selezionare un percorso per inserire il metodo di connessione:
 
 [![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "File code-behind UIViewControllers")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
@@ -66,7 +66,7 @@ Dopo aver selezionato una località, viene creato un nuovo metodo che viene cabl
 
 Per altri dettagli sul modello di azione di destinazione iOS, vedere la sezione relativa all'azione di destinazione delle [competenze di base dell'applicazione per iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) nella libreria degli sviluppatori iOS di Apple.
 
-Per ulteriori informazioni su come utilizzare iOS designer con Novell. iOS, vedere la documentazione introduttiva di [iOS designer](~/ios/user-interface/designer/index.md) .
+Per ulteriori informazioni su come utilizzare iOS designer con Novell. iOS, vedere la documentazione [introduttiva di iOS designer](~/ios/user-interface/designer/index.md) .
 
 ## <a name="events"></a>Eventi
 
@@ -152,7 +152,7 @@ In questo modo, il `MKAnnotation` protocollo viene usato per fornire dati pertin
 
  [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "Testo di esempio per il callout quando l'utente tocca l'annotazione")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
-Come descritto nella sezione successiva, approfondimenti sui [protocolli](#protocols-deep-dive), Novell. iOS associa i protocolli alle classi astratte. Per il `MKAnnotation` protocollo, la classe C# associata è denominata `MKAnnotation` per simulare il nome del protocollo ed è una sottoclasse di `NSObject`, la classe di base radice per CocoaTouch. Il protocollo richiede l'implementazione di un getter e un setter per la coordinata. Tuttavia, un titolo e un sottotitolo sono facoltativi. `MKAnnotation` Quindi, nella classe, la `Coordinate` proprietà è *astratta*, richiedendo che venga implementata e le `Title` proprietà e `Subtitle` sono contrassegnate come *virtuali*, rendendole facoltative, come illustrato di seguito:
+Come descritto nella sezione successiva, [approfondimenti sui protocolli](#protocols-deep-dive), Novell. iOS associa i protocolli alle classi astratte. Per il `MKAnnotation` protocollo, la classe C# associata è denominata `MKAnnotation` per simulare il nome del protocollo ed è una sottoclasse di `NSObject`, la classe di base radice per CocoaTouch. Il protocollo richiede l'implementazione di un getter e un setter per la coordinata. Tuttavia, un titolo e un sottotitolo sono facoltativi. `MKAnnotation` Quindi, nella classe, la `Coordinate` proprietà è *astratta*, richiedendo che venga implementata e le `Title` proprietà e `Subtitle` sono contrassegnate come *virtuali*, rendendole facoltative, come illustrato di seguito:
 
 ```csharp
 [Register ("MKAnnotation"), Model ]
@@ -249,7 +249,7 @@ public abstract class UITableViewDataSource : NSObject
 Si noti che la classe è astratta. Novell. iOS rende la classe astratta per supportare i metodi facoltativi o obbligatori nei protocolli.
 Tuttavia, a differenza dei protocolli Objective-C, o C# delle interfacce, C# le classi non supportano l'ereditarietà multipla. Ciò influisca sulla progettazione C# del codice che usa i protocolli e in genere conduce a classi annidate. Ulteriori informazioni su questo problema sono descritte più avanti in questo documento, nella sezione delegati.
 
- `GetCell(…)`è un metodo astratto, associato al selettore Objective-C `tableView:cellForRowAtIndexPath:`,, che è un metodo `UITableViewDataSource` obbligatorio del protocollo. Selector è il termine Objective-C per il nome del metodo. Per applicare il metodo come richiesto, Novell. iOS lo dichiara come abstract. L'altro metodo, `NumberOfSections(…)`, è associato a `numberOfSectionsInTableview:`. Questo metodo è facoltativo nel protocollo, quindi Novell. iOS lo dichiara come virtuale, rendendolo facoltativo per l'override in C#.
+ `GetCell(…)`è un metodo astratto, associato al *selettore*Objective-C `tableView:cellForRowAtIndexPath:`,, che è un metodo `UITableViewDataSource` obbligatorio del protocollo. Selector è il termine Objective-C per il nome del metodo. Per applicare il metodo come richiesto, Novell. iOS lo dichiara come abstract. L'altro metodo, `NumberOfSections(…)`, è associato a `numberOfSectionsInTableview:`. Questo metodo è facoltativo nel protocollo, quindi Novell. iOS lo dichiara come virtuale, rendendolo facoltativo per l'override in C#.
 
 Novell. iOS gestisce automaticamente tutte le associazioni iOS. Tuttavia, se è sempre necessario associare un protocollo da Objective-C manualmente, è possibile farlo decorando una classe con `ExportAttribute`. Si tratta dello stesso metodo utilizzato da Novell. iOS.
 

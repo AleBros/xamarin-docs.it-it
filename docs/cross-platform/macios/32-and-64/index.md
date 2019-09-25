@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f41d65c8981d4ef6ffcf1b812fbbbb7e72e7719
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509741"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249797"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni sulla piattaforma a 32/64 bit
 
@@ -33,6 +33,8 @@ API classica di Novell (`XamMac.dll` e `monotouch.dll`) supportano solo applicaz
 > Questa sezione è inclusa per motivi cronologici e consente di spostare i progetti Novell. iOS meno recenti nel API unificata e supportare 64 bit. Per impostazione predefinita, tutti i nuovi progetti Novell. iOS utilizzeranno il API unificata e la destinazione 64 bit.
 
 Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unificata, gli sviluppatori devono aggiornare manualmente le impostazioni di compilazione per la destinazione 64 bit:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 

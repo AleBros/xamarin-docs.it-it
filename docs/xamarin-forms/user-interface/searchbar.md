@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658030"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Novell. Forms
@@ -20,7 +20,7 @@ ms.locfileid: "69658030"
 
 Novell. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) è un controllo di input utente usato per avviare una ricerca. Il `SearchBar` controllo supporta testo segnaposto, input query, esecuzione ricerca e annullamento. Lo screenshot seguente mostra una `SearchBar` query con i risultati visualizzati in `ListView`un:
 
-[ ![Screenshot di Searchbar in iOS e Android](searchbar-images/device-searchbars-cropped.png "Searchbar in iOS e Android") ] (searchbar-images/device-searchbars.png#lightbox "Searchbar in iOS e Android")
+[![Screenshot di Searchbar in iOS e Android](searchbar-images/device-searchbars-cropped.png "Searchbar in iOS e Android")](searchbar-images/device-searchbars.png#lightbox "SearchBar in iOS e Android")
 
 La `SearchBar` classe definisce le proprietà seguenti:
 
@@ -82,7 +82,7 @@ SearchBar searchBar = new SearchBar
 
 La schermata seguente mostra il controllo `SearchBar` risultante:
 
-[ ![Screenshot della barra di Searchbar personalizzata in iOS e Android](searchbar-images/device-searchbars-styled-cropped.png "personalizzata Searchbar in iOS e Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Searchbar personalizzato in iOS e Android")
+[![Screenshot di Searchbar personalizzato in iOS e Android](searchbar-images/device-searchbars-styled-cropped.png "Searchbar personalizzato in iOS e Android")](searchbar-images/device-searchbars-styled.png#lightbox "SearchBar personalizzato in iOS e Android")
 
 ## <a name="perform-a-search-with-event-handlers"></a>Eseguire una ricerca con i gestori eventi
 

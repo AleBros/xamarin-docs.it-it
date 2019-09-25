@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: f1a3e8bb8959588e64339f70268370440f356be9
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68738965"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Selezione di Novell. Forms CollectionView
@@ -55,7 +55,7 @@ Nell'esempio di codice XAML riportato [`CollectionView`](xref:Xamarin.Forms.Coll
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -82,7 +82,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 Gli screenshot seguenti mostrano la selezione di un singolo elemento [`CollectionView`](xref:Xamarin.Forms.CollectionView)in un:
 
-[ ![Screenshot di un elenco di riepilogo verticale con selezione singola, in iOS e Android](selection-images/single-selection.png "CollectionView elenco verticale con selezione singola") ] (selection-images/single-selection-large.png#lightbox "Elenco verticale di CollectionView con selezione singola")
+[![Screenshot di un elenco di ritrovi verticali con selezione singola, in iOS e Android](selection-images/single-selection.png "Elenco verticale di CollectionView con selezione singola")](selection-images/single-selection-large.png#lightbox "Elenco verticale di CollectionView con selezione singola")
 
 ## <a name="multiple-selection"></a>Selezione multipla
 
@@ -98,7 +98,7 @@ Nell'esempio di codice XAML riportato [`CollectionView`](xref:Xamarin.Forms.Coll
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -125,7 +125,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 Gli screenshot seguenti mostrano la selezione di più elementi in [`CollectionView`](xref:Xamarin.Forms.CollectionView)un:
 
-[ ![Screenshot di un elenco di ritrovi verticali con selezione multipla, in iOS e Android](selection-images/multiple-selection.png "CollectionView elenco verticale con selezione multipla") ] (selection-images/multiple-selection-large.png#lightbox "Elenco verticale di CollectionView con selezione multipla")
+[![Screenshot di un elenco di ritrovi verticali con selezione multipla, in iOS e Android](selection-images/multiple-selection.png "Elenco verticale di CollectionView con selezione multipla")](selection-images/multiple-selection-large.png#lightbox "Elenco verticale di CollectionView con selezione multipla")
 
 ## <a name="single-pre-selection"></a>Selezione singola
 
@@ -139,7 +139,7 @@ Quando la [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -153,7 +153,7 @@ collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMon
 > [!NOTE]
 > La [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) proprietà dispone di una modalità di `TwoWay`associazione predefinita.
 
-Il [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) esegue l'associazione dati di proprietà per il `SelectedMonkey` proprietà del modello di visualizzazione connessa, che è di tipo `Monkey`. Per impostazione predefinita, `TwoWay` viene utilizzata un'associazione in modo che, se l'utente modifica l'elemento selezionato, il `SelectedMonkey` valore della proprietà verrà impostato sull'oggetto `Monkey` selezionato. La `SelectedMonkey` proprietà è definita `MonkeysViewModel` nella classe e viene impostata sul quarto elemento della `Monkeys` raccolta:
+Il [ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) esegue l'associazione dati di proprietà per il `SelectedMonkey` proprietà del modello di visualizzazione connessa, che è di tipo `Monkey`. Per impostazione predefinita, `TwoWay` viene utilizzata un'associazione in modo che, se l'utente modifica l'elemento selezionato, il `SelectedMonkey` valore della proprietà verrà impostato sull'oggetto `Monkey` selezionato. La `SelectedMonkey` proprietà è definita `MonkeysViewModel` nella classe e viene impostata sul quarto elemento della `Monkeys` raccolta:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -188,7 +188,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 Pertanto, quando [`CollectionView`](xref:Xamarin.Forms.CollectionView) viene visualizzato, il quarto elemento dell'elenco è preselezionato:
 
-[ ![Screenshot di un elenco di ritrovi verticali con selezione singola, in iOS e Android](selection-images/single-pre-selection.png "CollectionView elenco verticale con selezione singola") ] (selection-images/single-pre-selection-large.png#lightbox "Elenco verticale di CollectionView con selezione preliminare singola")
+[![Screenshot di un elenco di ritrovi verticali con una singola pre-selezione, in iOS e Android](selection-images/single-pre-selection.png "Elenco verticale di CollectionView con selezione preliminare singola")](selection-images/single-pre-selection-large.png#lightbox "Elenco verticale di CollectionView con selezione preliminare singola")
 
 ## <a name="multiple-pre-selection"></a>Pre-selezione multipla
 
@@ -203,7 +203,7 @@ Quando la [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -217,7 +217,7 @@ collectionView.SetBinding(SelectableItemsView.SelectedItemsProperty, "SelectedMo
 > [!NOTE]
 > La [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) proprietà dispone di una modalità di `OneWay`associazione predefinita.
 
-Il [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) esegue l'associazione dati di proprietà per il `SelectedMonkeys` proprietà del modello di visualizzazione connessa, che è di tipo `ObservableCollection<object>`. La `SelectedMonkeys` proprietà è definita `MonkeysViewModel` nella classe e viene impostata sul secondo, il quarto `Monkeys` e il quinto elemento della raccolta:
+Il [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) esegue l'associazione dati di proprietà per il `SelectedMonkeys` proprietà del modello di visualizzazione connessa, che è di tipo `ObservableCollection<object>`. La `SelectedMonkeys` proprietà è definita `MonkeysViewModel` nella classe e viene impostata sul secondo, il quarto `Monkeys` e il quinto elemento della raccolta:
 
 ```csharp
 namespace CollectionViewDemos.ViewModels
@@ -256,7 +256,7 @@ namespace CollectionViewDemos.ViewModels
 
 Pertanto, quando viene [`CollectionView`](xref:Xamarin.Forms.CollectionView) visualizzato, il secondo, il quarto e il quinto elemento dell'elenco sono pre-selezionati:
 
-[ ![Screenshot di un elenco di riepilogo verticale con più selezioni preliminari, in iOS e Android](selection-images/multiple-pre-selection.png "CollectionView elenco verticale con più pre-selezione") ] (selection-images/multiple-pre-selection-large.png#lightbox "Elenco verticale di CollectionView con più pre-selezione")
+[![Screenshot di un elenco di ritrovi verticali con più selezioni preliminari in iOS e Android](selection-images/multiple-pre-selection.png "Elenco verticale di CollectionView con più pre-selezione")](selection-images/multiple-pre-selection-large.png#lightbox "Elenco verticale di CollectionView con più pre-selezione")
 
 ## <a name="clearing-selections"></a>Cancellazione delle selezioni
 
@@ -305,7 +305,7 @@ Le [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) proprie
 
 In questo esempio, il [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) valore della proprietà è impostato `Grid` su perché [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) l'elemento radice di è un [`Grid`](xref:Xamarin.Forms.Grid)oggetto. `Selected` [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) Specifica che, `LightSkyBlue`quando viene selezionato un elemento in, l'oggetto dell'elemento verrà impostato su: [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`VisualState`](xref:Xamarin.Forms.VisualState)
 
-[ ![Screenshot di un elenco di ritrovi verticali con un colore di selezione singola personalizzato, in iOS e Android](selection-images/single-selection-color.png "CollectionView elenco verticale con un colore di selezione singola personalizzato") ] (selection-images/single-selection-color-large.png#lightbox "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")
+[![Screenshot di un elenco di ritrovi verticali con un colore di selezione singola personalizzato, in iOS e Android](selection-images/single-selection-color.png "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")](selection-images/single-selection-color-large.png#lightbox "Elenco verticale di CollectionView con un colore di selezione singola personalizzato")
 
 Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
@@ -318,7 +318,7 @@ Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual Stat
                 SelectionMode="None" />
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView

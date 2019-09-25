@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6db927409e07b97ef5b7b1e7f54b6bcbdc60e115
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755050"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249667"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Creazione di risorse per schermate diverse
 
@@ -50,6 +50,8 @@ Tuttavia, è possibile che la scalabilità provochi la sfocatura delle bitmap. P
 Dichiarando le dimensioni dello schermo si garantisce che solo i dispositivi supportati possano scaricare l'applicazione. Questa operazione viene eseguita impostando l'elemento [Supports-screens](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) nel file **file AndroidManifest. XML** . Questo elemento viene utilizzato per specificare le dimensioni dello schermo supportate dall'applicazione. Una schermata specificata viene considerata supportata se l'applicazione può inserire correttamente i layout per la schermata di riempimento. Utilizzando questo elemento manifesto, l'applicazione non verrà visualizzata in [*Google Play*](https://play.google.com/) per i dispositivi che non soddisfano le specifiche dello schermo. Tuttavia, l'applicazione verrà comunque eseguita nei dispositivi con schermate non supportate, ma i layout possono apparire sfocate e pixel.
 
 Le sei schermate supportate sono dichiarate nel file **Proprietà/file AndroidManifest. XML** della soluzione:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

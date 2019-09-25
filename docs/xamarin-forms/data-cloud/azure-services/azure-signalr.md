@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
 ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739219"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Novell. Forms
@@ -25,14 +25,14 @@ Questo articolo ed esempio illustra come combinare il servizio Azure SignalR e f
 
 L'applicazione di esempio è costituita da tre componenti principali: un hub del servizio Azure SignalR, un'istanza di funzioni di Azure con due funzioni e un'applicazione per dispositivi mobili che può inviare e ricevere messaggi. Questi componenti interagiscono nel modo seguente:
 
-1. L'applicazione per dispositivi mobili richiama una funzione di Azure Negotiate per ottenere informazioni sull'hub SignalR.
+1. L'applicazione per dispositivi mobili richiama una funzione di Azure **Negotiate** per ottenere informazioni sull'hub SignalR.
 1. L'applicazione per dispositivi mobili usa le informazioni di negoziazione per la registrazione con l'hub SignalR e costituisce una connessione.
 1. Dopo la registrazione, l'applicazione per dispositivi mobili invia messaggi alla funzione di Azure **Talk** .
 1. La funzione **Talk** passa il messaggio in arrivo all'hub SignalR.
 1. L'hub SignalR trasmette il messaggio a tutte le istanze dell'applicazione mobile connesse, incluso il mittente originale.
 
 > [!NOTE]
-> Le funzioni Negotiate e **Talk** nell'applicazione di esempio possono essere eseguite localmente con Visual Studio 2019 e gli strumenti di runtime di Azure. Il servizio Azure SignalR, tuttavia, non può essere emulato localmente ed è difficile esporre funzioni di Azure ospitate localmente a dispositivi fisici o virtuali per il test. Si consiglia di distribuire le funzioni di Azure in un'istanza di app di funzioni di Azure, in quanto consente il testing multipiattaforma. Per informazioni dettagliate sulla distribuzione, vedere [distribuire funzioni di Azure con Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
+> Le funzioni **Negotiate** e **Talk** nell'applicazione di esempio possono essere eseguite localmente con Visual Studio 2019 e gli strumenti di runtime di Azure. Il servizio Azure SignalR, tuttavia, non può essere emulato localmente ed è difficile esporre funzioni di Azure ospitate localmente a dispositivi fisici o virtuali per il test. Si consiglia di distribuire le funzioni di Azure in un'istanza di app di funzioni di Azure, in quanto consente il testing multipiattaforma. Per informazioni dettagliate sulla distribuzione, vedere [distribuire funzioni di Azure con Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
 
 ### <a name="create-an-azure-signalr-service"></a>Creare un servizio Azure SignalR
 
@@ -130,7 +130,7 @@ Dopo aver eseguito l'accesso alla account Microsoft, è possibile individuare e 
 
 ![App funzioni di Azure nella finestra di dialogo di pubblicazione di Visual Studio 2019](azure-signalr-images/vs-app-selection.png "Finestra di dialogo di pubblicazione di app funzioni di Azure in Visual Studio 2019")
 
-Dopo aver selezionato un'istanza dell'app funzioni di Azure, vengono visualizzati l'URL del sito, la configurazione e altre informazioni sull'app funzioni di Azure di destinazione. Scegliere **Modifica impostazioni del servizio app Azure** e immettere la stringa di connessione nel campo **remoto** . La stringa di connessione viene usata dalle funzioni Negotiate e **Talk** per connettersi al servizio Azure SignalR ed è disponibile nella sezione **chiavi** del servizio Azure SignalR nel portale di Azure. Per altre informazioni sulla stringa di connessione, vedere [creare un servizio Azure SignalR](#create-an-azure-signalr-service).
+Dopo aver selezionato un'istanza dell'app funzioni di Azure, vengono visualizzati l'URL del sito, la configurazione e altre informazioni sull'app funzioni di Azure di destinazione. Scegliere **Modifica impostazioni del servizio app Azure** e immettere la stringa di connessione nel campo **remoto** . La stringa di connessione viene usata dalle funzioni **Negotiate** e **Talk** per connettersi al servizio Azure SignalR ed è disponibile nella sezione **chiavi** del servizio Azure SignalR nel portale di Azure. Per altre informazioni sulla stringa di connessione, vedere [creare un servizio Azure SignalR](#create-an-azure-signalr-service).
 
 Dopo aver immesso la stringa di connessione, è possibile fare clic su **pubblica** per distribuire le funzioni nell'app funzioni di Azure. Al termine, le funzioni verranno elencate nell'app funzioni di Azure nell'portale di Azure. Lo screenshot seguente mostra le funzioni pubblicate nel portale di Azure:
 
@@ -189,7 +189,7 @@ public async Task SendMessageAsync(string username, string message)
 }
 ```
 
-Il `ConnectAsync` metodo`SignalRService` nella classe esegue una richiesta HTTP Get alla funzione **Negotiate** ospitata nell'app funzioni di Azure. La funzione Negotiate restituisce JSON che viene deserializzato in un'istanza della `NegotiateInfo` classe. Una volta `NegotiateInfo` recuperato, l'oggetto viene usato per eseguire la registrazione direttamente con il servizio Azure SignalR usando un'istanza `HubConnection` della classe.
+Il `ConnectAsync` metodo`SignalRService` nella classe esegue una richiesta HTTP Get alla funzione **Negotiate** ospitata nell'app funzioni di Azure. La funzione **Negotiate** restituisce JSON che viene deserializzato in un'istanza della `NegotiateInfo` classe. Una volta `NegotiateInfo` recuperato, l'oggetto viene usato per eseguire la registrazione direttamente con il servizio Azure SignalR usando un'istanza `HubConnection` della classe.
 
 ASP.NET Core SignalR converte i dati in ingresso dalla connessione aperta ai messaggi e consente agli sviluppatori di definire i tipi di messaggio e di associare i gestori eventi ai messaggi in ingresso per tipo. Il `ConnectAsync` metodo registra un gestore eventi per il nome del messaggio definito nel file **Constants.cs** dell'applicazione di esempio, che per impostazione predefinita è "newMessage".
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 4c3c0e51348d2435ce5042485b214e6e5fe159b2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ce82f10fdb8159d2007d490747329c1a3b5aeecd
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758415"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250063"
 ---
 # <a name="hello-wear"></a>Prima app per Wear
 
@@ -27,6 +27,8 @@ Per creare la prima app Novell. Android Wear, seguire questa procedura:
 ### <a name="1-create-a-new-android-project"></a>1. Creare un nuovo progetto Android
 
 Creare una nuova **applicazione Android Wear**:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -163,7 +165,7 @@ Toccare l' **opzione fare clic su me.** pulsante sulla faccia del dispositivo We
 
 [![Screenshot dell'app Wear dopo 3 clic](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Vedere gli [esempi di usura](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) , incluse le app Android Wear con app per telefono complementari.
 

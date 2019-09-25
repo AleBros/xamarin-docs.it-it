@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887899"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di Markup XAML
@@ -37,15 +37,15 @@ Altre estensioni di markup XAML in passato sono supportate nelle altre implement
 - `Binding` &ndash; stabilire un collegamento tra le proprietà di due oggetti, come descritto nell'articolo [ **Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 - `TemplateBinding` &ndash; esegue l'associazione dati da un modello di controllo, come descritto nell'articolo [ **l'associazione da un modello di controllo**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
 
-Il [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout Usa l'estensione di markup personalizzata [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). Questa estensione di markup è descritto nell'articolo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+Il [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) layout Usa l'estensione di markup personalizzata [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Questa estensione di markup è descritto nell'articolo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
 ## <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
 
-Il `x:Static` estensione di markup è supportato per il [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) classe. La classe dispone di una singola proprietà denominata [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) typu `string` che è impostato sul nome di una costante pubblica, proprietà statica, campo statico o membro di enumerazione.
+Il `x:Static` estensione di markup è supportato per il [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) classe. La classe dispone di una singola proprietà denominata [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) typu `string` che è impostato sul nome di una costante pubblica, proprietà statica, campo statico o membro di enumerazione.
 
-Un modo comune per utilizzare `x:Static` consiste nel definire innanzitutto una classe con alcune costanti o variabili statiche, ad esempio questo piccolo `AppConstants` classe la [**MarkupExtensions**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) programma:
+Un modo comune per utilizzare `x:Static` consiste nel definire innanzitutto una classe con alcune costanti o variabili statiche, ad esempio questo piccolo `AppConstants` classe la [ **MarkupExtensions** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) programma:
 
 ```csharp
 static class AppConstants
@@ -143,15 +143,15 @@ L'esempio finale visualizza il `Device.RuntimePlatform` valore. Il `Environment.
 
 Ecco il codice di esempio in esecuzione:
 
-[![Demo X:Static](consuming-images/staticdemo-small.png "X:Static Demo")](consuming-images/staticdemo-large.png#lightbox "X:Static Demo")
+[![demo di x:static](consuming-images/staticdemo-small.png "demo di x:static")](consuming-images/staticdemo-large.png#lightbox "Demo di x:Static")
 
 <a name="reference" />
 
 ## <a name="xreference-markup-extension"></a>estensione di markup x:Reference
 
-Il `x:Reference` estensione di markup è supportato per il [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) classe. La classe dispone di una singola proprietà denominata [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) typu `string` che è impostato sul nome di un elemento nella pagina in cui è stato assegnato un nome con `x:Name`. Ciò `Name` è la proprietà di contenuto `ReferenceExtension`, quindi `Name=` non è obbligatorio quando `x:Reference` viene visualizzato tra parentesi graffe.
+Il `x:Reference` estensione di markup è supportato per il [ `ReferenceExtension` ](xref:Xamarin.Forms.Xaml.ReferenceExtension) classe. La classe dispone di una singola proprietà denominata [ `Name` ](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) typu `string` che è impostato sul nome di un elemento nella pagina in cui è stato assegnato un nome con `x:Name`. Ciò `Name` è la proprietà di contenuto `ReferenceExtension`, quindi `Name=` non è obbligatorio quando `x:Reference` viene visualizzato tra parentesi graffe.
 
-Il `x:Reference` estensione di markup viene utilizzato esclusivamente con le associazioni di dati, che sono descritte più dettagliatamente nell'articolo [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Il `x:Reference` estensione di markup viene utilizzato esclusivamente con le associazioni di dati, che sono descritte più dettagliatamente nell'articolo [ **Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 Il **X:Reference Demo** pagina mostra due usi di `x:Reference` con le associazioni dati, il primo in cui viene usato per impostare il `Source` proprietà del `Binding` oggetto, mentre la seconda di dove viene usata per impostare il `BindingContext` proprietà per le associazioni due dati:
 
@@ -187,15 +187,15 @@ Il **X:Reference Demo** pagina mostra due usi di `x:Reference` con le associazio
 
 Entrambe `x:Reference` espressioni di usano la versione abbreviata del `ReferenceExtension` nome della classe ed eliminare il `Name=` fa parte dell'espressione. Nel primo esempio, il `x:Reference` estensione di markup è incorporato nel `Binding` estensione di markup. Si noti che il `Source` e `StringFormat` impostazioni sono separate da virgole. Ecco il programma in esecuzione:
 
-[![Demo X:Reference](consuming-images/referencedemo-small.png "X:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "X:Reference Demo")
+[![demo di x:Reference](consuming-images/referencedemo-small.png "demo di x:Reference")](consuming-images/referencedemo-large.png#lightbox "Demo di x:Reference")
 
 <a name="type" />
 
 ## <a name="xtype-markup-extension"></a>Estensione del markup x:Type
 
-Il `x:Type` estensione di markup è l'equivalente XAML del linguaggio C# [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) (parola chiave). È supportato dal [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), che definisce una proprietà denominata [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) typu `string` che è impostato su un nome di classe o struttura. Il `x:Type` markup estensione restituisce il [`System.Type`](xref:System.Type) oggetto di tale classe o struttura. `TypeName` è la proprietà content del `TypeExtension`, pertanto `TypeName=` non è obbligatorio quando `x:Type` viene visualizzato tra parentesi graffe.
+Il `x:Type` estensione di markup è l'equivalente XAML del linguaggio c# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) (parola chiave). È supportato dal [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), che definisce una proprietà denominata [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) typu `string` che è impostato su un nome di classe o struttura. Il `x:Type` markup estensione restituisce il [ `System.Type` ](xref:System.Type) oggetto di tale classe o struttura. `TypeName` è la proprietà content del `TypeExtension`, pertanto `TypeName=` non è obbligatorio quando `x:Type` viene visualizzato tra parentesi graffe.
 
-All'interno di xamarin. Forms, esistono diverse proprietà che hanno argomenti di tipo `Type`. Gli esempi includono la [`TargetType`](xref:Xamarin.Forms.Style.TargetType) proprietà della `Style`e il [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attributo utilizzato per specificare gli argomenti in classi generiche. Tuttavia, il parser XAML consente di eseguire la `typeof` operazione automaticamente e il `x:Type` estensione di markup non viene usato in questi casi.
+All'interno di xamarin. Forms, esistono diverse proprietà che hanno argomenti di tipo `Type`. Gli esempi includono la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) proprietà della `Style`e il [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attributo utilizzato per specificare gli argomenti in classi generiche. Tuttavia, il parser XAML consente di eseguire la `typeof` operazione automaticamente e il `x:Type` estensione di markup non viene usato in questi casi.
 
 Un'unica posizione in cui `x:Type` *viene* obbligatorio è con il `x:Array` estensione di markup, che è descritti il [nella sezione successiva](#array).
 
@@ -242,7 +242,7 @@ Si tratta di come menu di navigazione di `MainPage` nella **le estensioni di Mar
 
 Ecco la pagina principale di apertura **estensioni di Markup**:
 
-[![Main pagina](consuming-images/mainpage-small.png "Main pagina")](consuming-images/mainpage-large.png#lightbox "Main pagina")
+[![Pagina principale](consuming-images/mainpage-small.png "Pagina principale")](consuming-images/mainpage-large.png#lightbox "Pagina principale")
 
 Ciascuna `CommandParameter` è impostata su un `x:Type` estensione di markup che fa riferimento a una delle altre pagine. Il `Command` proprietà è associata a una proprietà denominata `NavigateCommand`. Questa proprietà è definita nel `MainPage` file code-behind:
 
@@ -266,7 +266,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Il `NavigateCommand` proprietà è una `Command` oggetto che implementa un comando execute con un argomento di tipo `Type` &mdash; hodnotou `CommandParameter`. Il metodo Usa `Activator.CreateInstance` per creare un'istanza della pagina e quindi si passa a esso. Il costruttore termina impostando il `BindingContext` della pagina a se stessa, che consente la `Binding` su `Command` a funzionare. Vedere le [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md) articolo e in particolare il [**Commanding**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) per altre informazioni su questo tipo di codice.
+Il `NavigateCommand` proprietà è una `Command` oggetto che implementa un comando execute con un argomento di tipo `Type` &mdash; hodnotou `CommandParameter`. Il metodo Usa `Activator.CreateInstance` per creare un'istanza della pagina e quindi si passa a esso. Il costruttore termina impostando il `BindingContext` della pagina a se stessa, che consente la `Binding` su `Command` a funzionare. Vedere le [ **Data Binding** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) articolo e in particolare il [ **Commanding** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) per altre informazioni su questo tipo di codice.
 
 Il **X:Type Demo** pagina Usa una tecnica simile per creare istanze di elementi di xamarin. Forms e aggiungerli a un `StackLayout`. Il file XAML inizialmente costituito da tre `Button` elementi con loro `Command` impostate su un `Binding` e il `CommandParameter` impostate sui tipi di tre visualizzazioni di xamarin. Forms:
 
@@ -325,13 +325,13 @@ public partial class TypeDemoPage : ContentPage
 
 Il metodo che viene eseguita quando un `Button` viene premuto crea una nuova istanza dell'argomento, imposta relativi `VerticalOptions` proprietà e lo aggiunge al `StackLayout`. I tre `Button` elementi condividano quindi la pagina con le viste create in modo dinamico:
 
-[![Demo X:Type](consuming-images/typedemo-small.png "X:Type Demo")](consuming-images/typedemo-large.png#lightbox "X:Type Demo")
+[![demo di x:Type](consuming-images/typedemo-small.png "demo di x:Type")](consuming-images/typedemo-large.png#lightbox "Demo di x:Type")
 
 <a name="array" />
 
 ## <a name="xarray-markup-extension"></a>Estensione del markup x:Array
 
-Il `x:Array` estensione di markup consente di definire una matrice nel markup. È supportato per il [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) (classe), che definisce due proprietà:
+Il `x:Array` estensione di markup consente di definire una matrice nel markup. È supportato per il [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) (classe), che definisce due proprietà:
 
 - `Type` di tipo `Type`, che indica il tipo degli elementi nella matrice.
 - `Items` di tipo `IList`, che è una raccolta di elementi stessi. Questa è la proprietà content del `ArrayExtension`.
@@ -382,7 +382,7 @@ Il **X:Array Demo** pagina viene illustrato come utilizzare `x:Array` per aggiun
 
 Il `ViewCell` consente di creare una semplice `BoxView` per ogni voce di colore:
 
-[![Demo X:Array](consuming-images/arraydemo-small.png "X:Array Demo")](consuming-images/arraydemo-large.png#lightbox "X:Array Demo")
+[![demo di x:Array](consuming-images/arraydemo-small.png "demo di x:Array")](consuming-images/arraydemo-large.png#lightbox "Demo di x:Array")
 
 Esistono diversi modi per specificare i singoli `Color` elementi nella matrice. È possibile usare un `x:Static` estensione di markup:
 
@@ -402,13 +402,13 @@ Verso la fine di questo articolo, si noterà un'estensione di markup XAML person
 <local:HslColor H="0.5" S="1.0" L="0.5" />
 ```
 
-Quando si definiscono le matrici di tipi comuni, ad esempio stringhe o numeri, utilizzare i tag elencati nella [**passando gli argomenti del costruttore**](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) articolo per delimitare i valori.
+Quando si definiscono le matrici di tipi comuni, ad esempio stringhe o numeri, utilizzare i tag elencati nella [ **passando gli argomenti del costruttore** ](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) articolo per delimitare i valori.
 
 <a name="null" />
 
 ## <a name="xnull-markup-extension"></a>Estensione del markup x:Null
 
-Il `x:Null` estensione di markup è supportato per il [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) classe. Il non dispone di proprietà ed è semplicemente l'equivalente XAML del linguaggio C# [`null`](/dotnet/csharp/language-reference/keywords/null/) (parola chiave).
+Il `x:Null` estensione di markup è supportato per il [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Il non dispone di proprietà ed è semplicemente l'equivalente XAML del linguaggio c# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) (parola chiave).
 
 Il `x:Null` estensione di markup viene raramente richiesti e usati raramente, ma se si trova una necessità per tale, sarà valeva che è presente.
 
@@ -455,7 +455,7 @@ Quindi si scopre che per uno dei `Label` elementi, si desidera che tutte le impo
 
 Ecco il programma in esecuzione:
 
-[![Demo X:null](consuming-images/nulldemo-small.png "X:null Demo")](consuming-images/nulldemo-large.png#lightbox "Demo x: Null")
+[![demo di x:null](consuming-images/nulldemo-small.png "demo di x:null")](consuming-images/nulldemo-large.png#lightbox "Demo di x:Null")
 
 Si noti che quattro del `Label` elementi hanno un tipo di carattere serif, ma il centro `Label` ha il tipo di carattere sans-serif predefinito.
 
@@ -463,9 +463,9 @@ Si noti che quattro del `Label` elementi hanno un tipo di carattere serif, ma il
 
 ## <a name="onplatform-markup-extension"></a>Estensione di Markup OnPlatform
 
-Il `OnPlatform` estensione di markup consente di personalizzare l'aspetto dell'interfaccia utente in base a ogni piattaforma. Fornisce la stessa funzionalità di [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) e [`On`](xref:Xamarin.Forms.On) classi, ma con una rappresentazione più concisa.
+Il `OnPlatform` estensione di markup consente di personalizzare l'aspetto dell'interfaccia utente in base a ogni piattaforma. Fornisce la stessa funzionalità di [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) classi, ma con una rappresentazione più concisa.
 
-Il `OnPlatform` estensione di markup è supportato per il [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe che definisce le proprietà seguenti:
+Il `OnPlatform` estensione di markup è supportato per il [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe che definisce le proprietà seguenti:
 
 - `Default` di tipo `object`, che è impostato su un valore predefinito da applicare alle proprietà che rappresentano le piattaforme.
 - `Android` di tipo `object`, che è impostato su un valore da applicare in Android.
@@ -479,7 +479,7 @@ Il `OnPlatform` estensione di markup è supportato per il [`OnPlatformExtension`
 - `ConverterParameter` typu `object`, che è impostato su un valore da passare al `IValueConverter` implementazione.
 
 > [!NOTE]
-> Il parser XAML consente le [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe deve essere abbreviato come `OnPlatform`.
+> Il parser XAML consente le [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe deve essere abbreviato come `OnPlatform`.
 
 Il `Default` è la proprietà content di `OnPlatformExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare il `Default=` fa parte dell'espressione di condizione che si tratta del primo argomento.
 
@@ -495,17 +495,17 @@ Il **OnPlatform Demo** pagina viene illustrato come utilizzare il `OnPlatform` e
          HorizontalOptions="Center" />
 ```
 
-In questo esempio, tutte e tre `OnPlatform` espressioni di usano la versione abbreviata del `OnPlatformExtension` nome della classe. I tre `OnPlatform` set di estensioni di markup il [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest), e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà del [`BoxView`](xref:Xamarin.Forms.BoxView) su valori diversi per iOS, Android e UWP. Le estensioni di markup anche forniscono valori predefiniti per queste proprietà sulle piattaforme che non sono specificate, eliminando la `Default=` fa parte dell'espressione. Si noti che le proprietà di estensione di markup che vengono impostate sono separate da virgole.
+In questo esempio, tutte e tre `OnPlatform` espressioni di usano la versione abbreviata del `OnPlatformExtension` nome della classe. I tre `OnPlatform` set di estensioni di markup il [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà del [ `BoxView` ](xref:Xamarin.Forms.BoxView) su valori diversi per iOS, Android e UWP. Le estensioni di markup anche forniscono valori predefiniti per queste proprietà sulle piattaforme che non sono specificate, eliminando la `Default=` fa parte dell'espressione. Si noti che le proprietà di estensione di markup che vengono impostate sono separate da virgole.
 
 Ecco il programma in esecuzione:
 
-[![Demo OnPlatform](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
+[![Demo su piattaforma](consuming-images/onplatformdemo-small.png "Demo su piattaforma")](consuming-images/onplatformdemo-large.png#lightbox "Demo su piattaforma")
 
 <a name="onidiom" />
 
 ## <a name="onidiom-markup-extension"></a>Estensione di Markup OnIdiom
 
-L' `OnIdiom` estensione di markup consente di personalizzare l'aspetto dell'interfaccia utente in base all'idioma del dispositivo in cui è in esecuzione l'applicazione. È supportato per il [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe che definisce le proprietà seguenti:
+L' `OnIdiom` estensione di markup consente di personalizzare l'aspetto dell'interfaccia utente in base all'idioma del dispositivo in cui è in esecuzione l'applicazione. È supportato per il [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe che definisce le proprietà seguenti:
 
 - `Default` di tipo `object`, che è impostato su un valore predefinito da applicare alle proprietà che rappresentano idiomi di dispositivo.
 - `Phone` di tipo `object`, che è impostato su un valore da applicare nei telefoni.
@@ -517,7 +517,7 @@ L' `OnIdiom` estensione di markup consente di personalizzare l'aspetto dell'inte
 - `ConverterParameter` typu `object`, che è impostato su un valore da passare al `IValueConverter` implementazione.
 
 > [!NOTE]
-> Il parser XAML consente le [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe deve essere abbreviato come `OnIdiom`.
+> Il parser XAML consente le [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe deve essere abbreviato come `OnIdiom`.
 
 Il `Default` è la proprietà content di `OnIdiomExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare il `Default=` fa parte dell'espressione di condizione che si tratta del primo argomento.
 
@@ -533,11 +533,11 @@ Il **OnIdiom Demo** pagina viene illustrato come utilizzare il `OnIdiom` estensi
          HorizontalOptions="Center" />
 ```
 
-In questo esempio, tutte e tre `OnIdiom` espressioni di usano la versione abbreviata del `OnIdiomExtension` nome della classe. I tre `OnIdiom` set di estensioni di markup il [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest), e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà del [`BoxView`](xref:Xamarin.Forms.BoxView) su valori diversi per il telefono, tablet e desktop idiomi. Le estensioni di markup anche forniscono valori predefiniti per queste proprietà in termini che non sono specificati, eliminando la `Default=` fa parte dell'espressione. Si noti che le proprietà di estensione di markup che vengono impostate sono separate da virgole.
+In questo esempio, tutte e tre `OnIdiom` espressioni di usano la versione abbreviata del `OnIdiomExtension` nome della classe. I tre `OnIdiom` set di estensioni di markup il [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) proprietà del [ `BoxView` ](xref:Xamarin.Forms.BoxView) su valori diversi per il telefono, tablet e desktop idiomi. Le estensioni di markup anche forniscono valori predefiniti per queste proprietà in termini che non sono specificati, eliminando la `Default=` fa parte dell'espressione. Si noti che le proprietà di estensione di markup che vengono impostate sono separate da virgole.
 
 Ecco il programma in esecuzione:
 
-[![Demo OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
+[![Demo Onidioma](consuming-images/onidiomdemo-small.png "Demo Onidioma")](consuming-images/onidiomdemo-large.png#lightbox "Demo onidioma")
 
 ## <a name="datatemplate-markup-extension"></a>Estensione di markup DataTemplate
 
@@ -585,7 +585,7 @@ In questo esempio, la versione abbreviata del `FontImageExtension` nome della cl
 
 Ecco il programma in esecuzione:
 
-[Screenshot della(consuming-images/fontimagedemo.png "demo FontImage") ![di FontImage Markup Extension]] (consuming-images/fontimagedemo-large.png#lightbox "Demo di FontImage")
+[![Screenshot dell'estensione di markup FontImage](consuming-images/fontimagedemo.png "Demo di FontImage")](consuming-images/fontimagedemo-large.png#lightbox "Demo di FontImage")
 
 Per informazioni sulla visualizzazione delle icone dei tipi di carattere specificando i dati `FontImageSource` dell'icona del tipo di carattere in un oggetto, vedere [visualizzare le icone del carattere](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
