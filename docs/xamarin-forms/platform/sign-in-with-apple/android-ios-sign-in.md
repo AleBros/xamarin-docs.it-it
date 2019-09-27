@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: df011a6eb72b6eb30af0a197d4be48b0f2494384
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206518"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319514"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Usare l'accesso con Apple in Novell. Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 L'accesso con Apple è per tutte le nuove applicazioni in iOS 13 che usano servizi di autenticazione di terze parti. I dettagli di implementazione tra iOS e Android sono piuttosto diversi. Questa guida illustra come è possibile eseguire questa operazione oggi in Novell. Forms.
 
@@ -63,7 +63,7 @@ Quando si usano funzioni di Azure, è necessario configurare diverse impostazion
 - `APPLE_SIGNIN_REDIRECT_URI`: *URL di reindirizzamento* configurato durante la creazione dell' *ID Servizi* nella sezione *di* configurazione dell'accesso ad Apple.  Per eseguire il test, potrebbe avere un aspetto simile al seguente:`http://local.test:7071/api/applesignin_callback`
 - `APPLE_SIGNIN_P8_KEY`: Il contenuto di testo del `.p8` file, con tutte le `\n` nuove righe rimosse, quindi è una stringa lunga
 
-### <a name="security-considerations"></a>Considerazioni sulla sicurezza
+### <a name="security-considerations"></a>Considerazioni relative alla sicurezza
 
 **Non archiviare mai** la chiave P8 all'interno del codice dell'applicazione. Il codice dell'applicazione è facile da scaricare e disassemblare. 
 
