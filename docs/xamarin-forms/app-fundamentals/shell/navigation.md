@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
+ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888963"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71674572"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navigazione nella shell Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 La shell Xamarin.Forms include un'esperienza di navigazione basata su URI che usa le route per il passaggio a qualsiasi pagina nell'applicazione, senza dover seguire una gerarchia di navigazione specifica. Offre inoltre la possibilità di navigare all'indietro senza dover visitare tutte le pagine dello stack di navigazione.
 
@@ -156,7 +156,7 @@ Questo esempio consente di passare alla pagina per la route `monkeydetails`.
 
 Sono inoltre supportati i seguenti formati di route relative:
 
-| Formato | DESCRIZIONE |
+| Formato | Descrizione |
 | --- | --- |
 | //*route* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso l'alto a partire dalla route attualmente visualizzata. |
 | ///*route* | Verrà eseguita una ricerca della route specificata nella gerarchia di route, verso il basso a partire dalla route attualmente visualizzata. |
@@ -178,7 +178,7 @@ Quando è visualizzata la pagina registrata per la route `monkeys`, se si passa 
 
 I formati di route seguenti non sono validi:
 
-| Formato | Descrizione |
+| Formato | Spiegazione |
 | --- | --- |
 | *route* o /*route* | Non è possibile eseguire il push delle route nella gerarchia visiva nello stack di navigazione. |
 | //*page* o ///*page* | Le route globali attualmente non possono essere l'unica pagina nello stack di navigazione. Il routing assoluto per le route globali non è quindi supportato. |
@@ -211,7 +211,7 @@ La classe `Tab` definisce una proprietà `Stack`, di tipo `IReadOnlyList<Page>`,
 
 La classe `Shell` definisce un evento `Navigating`, che viene generato quando sta per essere eseguita la navigazione, a livello di codice o in seguito all'interazione dell'utente. L'oggetto `ShellNavigatingEventArgs` che accompagna l'evento `Navigating` fornisce le proprietà seguenti:
 
-| Proprietà | Tipo | DESCRIZIONE |
+| Proprietà | Type | Descrizione |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI della pagina corrente. |
 | `Source` | `ShellNavigationSource` | Tipo di navigazione eseguita. |
@@ -226,7 +226,7 @@ La classe `ShellNavigatingEventArgs` fornisce anche un metodo `Cancel` che è po
 
 La classe `Shell` definisce anche un evento `Navigated`, che viene generato al completamento della navigazione. L'oggetto `ShellNavigatedEventArgs` che accompagna l'evento `Navigating` fornisce le proprietà seguenti:
 
-| Proprietà | Tipo | DESCRIZIONE |
+| Proprietà | Type | Descrizione |
 |---|---|---|
 | `Current` | `ShellNavigationState` | URI della pagina corrente. |
 | `Previous`| `ShellNavigationState` | URI della pagina precedente. |
@@ -302,7 +302,7 @@ La classe `BackButtonBehavior` definisce le proprietà seguenti che controllano 
 
 - `Command`, di tipo `ICommand`. Questo oggetto viene eseguito quando si preme sul pulsante Indietro.
 - `CommandParameter`, di tipo `object`, ovvero il parametro passato a `Command`.
-- `IconOveride`, di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), ovvero l'icona usata per il pulsante Indietro.
+- `IconOverride`, di tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), ovvero l'icona usata per il pulsante Indietro.
 - `IsEnabled`, di tipo `boolean`, che indica se il pulsante Indietro è abilitato. Il valore predefinito è `true`.
 - `TextOverride`, di tipo `string`, ovvero il testo usato per il pulsante Indietro.
 
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 La proprietà `Command` è impostata su un oggetto `ICommand` da eseguire quando si preme il pulsante Indietro, mentre la proprietà `IconOverride` è impostata sull'icona usata per il pulsante Indietro:
 
-[![Screenshot dell'override dell'icona del pulsante Indietro della shell, in iOS e Android](navigation-images/back-button.png "Override dell'icona del pulsante Indietro della shell")](navigation-images/back-button-large.png#lightbox "Override dell'icona del pulsante Indietro della shell")
+[![Screenshot dell'icona del pulsante indietro della shell override, sull'](navigation-images/back-button.png "icona del pulsante indietro della shell") iOS e Android](navigation-images/back-button-large.png#lightbox "Icona del pulsante indietro della shell override")
 
 ## <a name="related-links"></a>Collegamenti correlati
 
