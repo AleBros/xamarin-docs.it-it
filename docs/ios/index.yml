@@ -56,23 +56,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/ios/get-started/index.md
             title: Introduzione
-          - href: ~/ios/app-fundamentals/
+          - href: ~/ios/app-fundamentals/index.md
             html: 'Tutto quello che serve sapere per creare app iOS, come l''utilizzo di file, immagini, database e altri elementi.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/ios/app-fundamentals/
+              href: ~/ios/app-fundamentals/index.md
             title: Nozioni fondamentali sulle applicazioni
-          - href: ~/ios/user-interface
+          - href: ~/ios/user-interface/index.md
             html: Informazioni sul set completo di controlli dell'interfaccia utente disponibili per iOS in UIKit.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/ios/user-interface/
+              href: ~/ios/user-interface/index.md
             title: Interfaccia utente
-          - href: ~/ios/platform/
+          - href: ~/ios/platform/index.md
             html: 'Utilizzo delle funzionalità della piattaforma iOS, ad esempio ARKit e CoreML e delle altre nuove funzionalità in iOS 11.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/ios/platform/
+              href: ~/ios/platform/index.md
             title: Funzionalità della piattaforma
           - href: ~/essentials/index.md?context=xamarin/ios
             html: API multipiattaforma per applicazioni per dispositivi mobili.
@@ -80,35 +80,35 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/ios
             title: Xamarin.Essentials
-          - href: ~/ios/data-cloud/
+          - href: ~/ios/data-cloud/index.md
             html: Archiviazione e recupero di dati locali e remoti e altri servizi basati sul cloud.
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/ios/data-cloud/
+              href: ~/ios/data-cloud/index.md
             title: Dati e servizi cloud
-          - href: ~/ios/deploy-test/
+          - href: ~/ios/deploy-test/index.md
             html: Istruzioni per la compilazione e distribuzione delle app in App Store e suggerimenti per i test.
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/ios/deploy-test/
+              href: ~/ios/deploy-test/index.md
             title: Distribuzione e test
-          - href: ~/ios/internals/
+          - href: ~/ios/internals/index.md
             html: Informazioni dettagliate sul funzionamento di Xamarin.iOS.
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/ios/internals/
+              href: ~/ios/internals/index.md
             title: Concetti avanzati e meccanismi interni
-          - href: ~/ios/watchos/
+          - href: ~/ios/watchos/index.md
             html: Creare app per Apple Watch.
             image:
               src: ~/media/icons/i_watchos.svg
-              href: ~/ios/watchos/
+              href: ~/ios/watchos/index.md
             title: watchOS
-          - href: ~/ios/tvos/
+          - href: ~/ios/tvos/index.md
             html: Creare app per Apple TV.
             image:
               src: ~/media/icons/i_tvos.svg
-              href: ~/ios/tvos/
+              href: ~/ios/tvos/index.md
             title: tvOS
   - title: Riferimenti
     items:

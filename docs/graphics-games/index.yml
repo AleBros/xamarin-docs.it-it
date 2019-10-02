@@ -45,8 +45,8 @@ sections:
         className: cardsD
         items:
           - title: Xamarin.Forms
-            href: ~/xamarin-forms/index.md
-            html: <p><a href="~/get-started/quickstarts/index.md">Introduzione</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interfaccia utente</a><br /><a href="~/xamarin-forms/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Dati e Servizi cloud di Azure</a><br /><a href="~/xamarin-forms/internals/index.yml">Concetti avanzati e meccanismi interni</a></p>
+            href: ~/xamarin-forms/index.yml
+            html: <p><a href="~/get-started/quickstarts/index.yml">Introduzione</a><br /><a href="~/xamarin-forms/app-fundamentals/index.yml">Nozioni fondamentali sulle app</a><br /><a href="~/xamarin-forms/user-interface/index.yml">Interfaccia utente</a><br /><a href="~/xamarin-forms/platform/index.yml">Funzionalità della piattaforma</a><br /><a href="~/xamarin-forms/deploy-test/index.yml">Distribuzione e test</a><br /><a href="~/xamarin-forms/xaml/index.yml">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.yml">Dati e Servizi cloud di Azure</a><br /><a href="~/xamarin-forms/internals/index.yml">Concetti avanzati e meccanismi interni</a></p>
           - title: Android
             href: ~/android/index.md
             html: <p><a href="~/android/get-started/index.md">Introduzione</a><br /><a href="~/android/app-fundamentals/index.md">Nozioni fondamentali sulle app</a><br /><a href="~/android/user-interface/index.md">Interfaccia utente</a><br /><a href="~/android/platform/index.md">Funzionalità della piattaforma</a><br /><a href="~/android/deploy-test/index.md">Distribuzione e test</a><br /><a href="~/android/data-cloud/index.md">Dati e servizi cloud</a><br /><a href="~/android/internals/index.md">Concetti avanzati e meccanismi interni</a></p>
