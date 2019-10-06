@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: ba29e57008bfea420562d88ab1612c09f4460e85
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 4bca8de32ec0dfa6a273b784333e99c5bbfe968d
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651069"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975860"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accessibilità tramite tastiera in Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 Gli utenti che usano utilità per la lettura dello schermo o con problemi di mobilità possono avere difficoltà nell'usare le applicazioni che non forniscono un accesso tramite tastiera appropriato. Nelle applicazioni Xamarin.Forms è possibile specificare un ordine di tabulazione previsto per migliorare usabilità e accessibilità. Specificare un ordine di tabulazione per i controlli consente gli spostamenti tramite tastiera, prepara le pagine dell'applicazione per ricevere l'input in un ordine particolare e consente alle utilità per la lettura dello schermo di leggere gli elementi su cui è possibile spostare lo stato attivo per gli utenti.
 
@@ -121,7 +121,7 @@ In questo caso l'ordine di tabulazione è basato su colonna. Di conseguenza, pre
 
 Oltre a impostare l'ordine di tabulazione dei controlli, potrebbe essere necessario escludere i controlli dall'ordine di tabulazione. Un modo per eseguire questa operazione consiste nell'impostare la proprietà [`IsEnabled`](xref:Xamarin.Forms.VisualElement) dei controlli su `false`, in quanto i controlli disabilitati vengono esclusi dall'ordine di tabulazione.
 
-Tuttavia, potrebbe essere necessario escludere i controlli dall'ordine di tabulazione anche quando non son disabilitati. È possibile ottenere questo risultato con la proprietà `VisualElement.IsTapStop`, che indica se un [`VisualElement`](xref:Xamarin.Forms.VisualElement) è incluso negli spostamenti tramite TAB. Il valore predefinito è `true` e quando questo valore è `false` il controllo viene ignorato dall'infrastruttura di spostamento tramite TAB, indipendentemente dall'impostazione di `TabIndex`.
+Tuttavia, potrebbe essere necessario escludere i controlli dall'ordine di tabulazione anche quando non son disabilitati. È possibile ottenere questo risultato con la proprietà `VisualElement.IsTabStop`, che indica se un [`VisualElement`](xref:Xamarin.Forms.VisualElement) è incluso negli spostamenti tramite TAB. Il valore predefinito è `true` e quando questo valore è `false` il controllo viene ignorato dall'infrastruttura di spostamento tramite TAB, indipendentemente dall'impostazione di `TabIndex`.
 
 ## <a name="supported-controls"></a>Controlli supportati
 

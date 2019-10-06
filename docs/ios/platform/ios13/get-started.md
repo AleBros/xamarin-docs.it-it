@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: 1f190ef2f99e71c8cf21680f9902caccf3454450
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ed9eb5dc80935c8401f5bd8c9be1c301af3480f5
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206330"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975756"
 ---
 # <a name="get-started-with-ios-13"></a>Introduzione a iOS 13
 
@@ -22,9 +22,9 @@ Questo documento illustra come iniziare a creare app Novell che chiamano le API 
 
 1. **Installare Xcode 11** : gli sviluppatori Apple registrati possono scaricare e installare la versione più recente di Xcode 11 dal [portale Apple Developer](https://developer.apple.com/download/) o dall' **App Store**.
 
-2. **Eseguire Xcode 11** -eseguire Xcode 11 prima di aggiornare ed eseguire Visual Studio per Mac, perché installa alcuni strumenti richiesti da Novell.
+2. **Eseguire Xcode 11** -eseguire Xcode 11 prima di aggiornare ed eseguire Visual Studio per Mac o Visual Studio 2019, perché installa alcuni strumenti richiesti da Novell.
 
-3. In Visual Studio per Mac selezionare **Visual Studio > Verifica disponibilità aggiornamenti...** , selezionare il canale **stabile** e installare gli aggiornamenti disponibili.
+3. **Aggiornare Visual Studio per Mac e Visual Studio 2019** : assicurarsi di avere la versione stabile più recente di Novell.
 
 4. Opzionale **Installare iOS 13 nei dispositivi iOS** : per i test dei dispositivi delle app che usano le API introdotte con Xcode 11, gli sviluppatori Apple registrati possono [scaricare](https://developer.apple.com/download) e installare il sistema operativo nei dispositivi. 
 
