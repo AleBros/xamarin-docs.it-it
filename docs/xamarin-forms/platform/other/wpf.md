@@ -8,18 +8,21 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: 8fcad4799cd53892106b3e221cff0dfbc737e10d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 38d9b42b3a29ea46d05a1d1cc4e38641d2445786
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70760046"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997180"
 ---
 # <a name="wpf-platform-setup"></a>Configurazione della piattaforma WPF
 
 ![Anteprima](~/media/shared/preview.png)
 
 In Novell. Forms è ora disponibile il supporto in anteprima per il Windows Presentation Foundation (WPF). Questo articolo illustra come aggiungere un progetto WPF a una soluzione Novell. Forms.
+
+> [!IMPORTANT]
+> Il supporto di Novell. Forms per WPF viene fornito dalla community. Per ulteriori informazioni, vedere [supporto della piattaforma Novell. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
 Prima di iniziare, creare una nuova soluzione Novell. Forms in Visual Studio 2019 oppure usare una soluzione Novell. Forms esistente, ad esempio [**BoxViewClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). È possibile aggiungere app WPF solo a una soluzione Novell. Forms in Windows.
 
@@ -35,17 +38,17 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 1. In Visual Studio 2019, fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e scegliere **Aggiungi > nuovo progetto.**
 
-2. Nella finestra **nuovo progetto** , a sinistra, selezionare **Visual C#**  e **desktop classico di Windows**. Nell'elenco dei tipi di progetto scegliere **app WPF (.NET Framework)** . 
+2. Nella finestra **nuovo progetto** , a sinistra, selezionare **Visual C#**  e **desktop classico di Windows**. Nell'elenco dei tipi di progetto scegliere **app WPF (.NET Framework)** .
 
 3. Digitare un nome per il progetto con un'estensione **WPF** , ad esempio **BoxViewClock. WPF**. Fare clic sul pulsante **Sfoglia** , selezionare la cartella **BoxViewClock** e quindi **selezionare cartella**. Il progetto WPF verrà inserito nella stessa directory degli altri progetti della soluzione.
 
-    ![Aggiungere un nuovo progetto WPF](wpf-images/add-new-project.png "Aggiungere un nuovo progetto WPF")
+    ![Aggiungere un nuovo progetto WPF](wpf-images/add-new-project.png "aggiungere un nuovo progetto WPF")
 
     Fare clic su OK per creare il progetto.
 
 4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto **BoxViewClock. WPF** e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** , fare clic sulla casella di controllo **Includi versione preliminare** e cercare **Novell. Forms**.
 
-    ![Selezionare il pacchetto NuGet](wpf-images/select-nuget-package.png "Selezionare il pacchetto NuGet")
+    ![Selezionare il pacchetto NuGet](wpf-images/select-nuget-package.png "selezionare il pacchetto NuGet")
 
     Selezionare il pacchetto e fare clic sul pulsante **Installa** .
 
@@ -53,19 +56,19 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 6. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e selezionare **Gestisci pacchetti NuGet per la soluzione**. Selezionare la scheda **aggiornamento** e il pacchetto **Novell. Forms** . Selezionare tutti i progetti e aggiornarli alla stessa versione di Novell. Forms:
 
-    ![Aggiornare il pacchetto NuGet](wpf-images/update-nuget-package.png "Aggiornare il pacchetto NuGet") 
+    ![Aggiornare]il pacchetto NuGet(wpf-images/update-nuget-package.png "aggiornare il pacchetto NuGet")
 
 7. Nel progetto WPF, fare clic con il pulsante destro del mouse su **riferimenti**. Nella finestra di dialogo **Gestione riferimenti** selezionare **progetti** a sinistra e selezionare la casella di controllo accanto al progetto **BoxViewClock** :
 
-    ![Fare riferimento al progetto condiviso](wpf-images/reference-shared-project.png "Fare riferimento al progetto condiviso")
+    ![Riferimento al progetto condiviso](wpf-images/reference-shared-project.png "fare riferimento al progetto condiviso")
 
-8. Modificare il file **MainWindow. XAML** del progetto WPF. Nel tag aggiungere una dichiarazione dello spazio dei nomi XML per l'assembly **Novell. Forms. Platform. WPF** e lo spazio dei nomi: `Window`
+8. Modificare il file **MainWindow. XAML** del progetto WPF. Nel tag `Window` aggiungere una dichiarazione dello spazio dei nomi XML per l'assembly **Novell. Forms. Platform. WPF** e lo spazio dei nomi:
 
     ```xaml
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    A questo punto `Window` , modificare `wpf:FormsApplicationPage`il tag in. Modificare l' `Title` impostazione impostando il nome dell'applicazione, ad esempio **BoxViewClock**. Il file XAML completato dovrebbe essere simile al seguente:
+    Modificare ora il tag `Window` in `wpf:FormsApplicationPage`. Modificare l'impostazione `Title` con il nome dell'applicazione, ad esempio **BoxViewClock**. Il file XAML completato dovrebbe essere simile al seguente:
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"
@@ -78,26 +81,26 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
             mc:Ignorable="d"
             Title="BoxViewClock" Height="450" Width="800">
         <Grid>
-        
+
         </Grid>
     </wpf:FormsApplicationPage>
     ```
 
-9. Modificare il file **MainWindow.XAML.cs** del progetto WPF. Aggiungere due nuove `using` direttive:
+9. Modificare il file **MainWindow.XAML.cs** del progetto WPF. Aggiungere due nuove direttive `using`:
 
     ```csharp
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.WPF;
     ```
 
-    Modificare la classe di base `MainWindow` di `Window` da `FormsApplicationPage`a. Dopo la `InitializeComponent` chiamata, aggiungere le due istruzioni seguenti:
+    Modificare la classe di base di `MainWindow` da `Window` a `FormsApplicationPage`. Dopo la chiamata `InitializeComponent` aggiungere le due istruzioni seguenti:
 
     ```csharp
     Forms.Init();
     LoadApplication(new BoxViewClock.App());
     ```
-    
-    Fatta eccezione per i commenti e `using` le direttive inutilizzate, il file **MainWindows.XAML.cs** completo dovrebbe essere simile al seguente:
+
+    Ad eccezione dei commenti e delle direttive `using` inutilizzate, il file **MainWindows.XAML.cs** completo dovrebbe essere simile al seguente:
 
     ```csharp
     using Xamarin.Forms;
@@ -120,15 +123,15 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 10. Fare clic con il pulsante destro del mouse sul progetto WPF nel **Esplora soluzioni** e selezionare **Imposta come progetto di avvio**. Premere F5 per eseguire il programma con il debugger di Visual Studio sul desktop di Windows:
 
-    ![Clock BoxView WPF] (wpf-images/wpf-boxviewclock.png "Clock BoxView WPF" )
+    ![](wpf-images/wpf-boxviewclock.png "Clock WPF BoxView" ) BoxView per WPF
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 ### <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
-È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Novell. Forms da codice o XAML. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in WPF. Nel codice confrontare il valore di `Device.RuntimePlatform` con la `Device.WPF` costante (che corrisponde alla stringa "WPF"). Se esiste una corrispondenza, l'applicazione è in esecuzione in WPF.
+È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Novell. Forms da codice o XAML. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in WPF. Nel codice confrontare il valore di `Device.RuntimePlatform` con la costante `Device.WPF` (che corrisponde alla stringa "WPF"). Se esiste una corrispondenza, l'applicazione è in esecuzione in WPF.
 
-In XAML è possibile usare il `OnPlatform` tag per selezionare un valore della proprietà specifico per la piattaforma:
+In XAML è possibile usare il tag `OnPlatform` per selezionare un valore della proprietà specifico per la piattaforma:
 
 ```xaml
 <Button.TextColor>

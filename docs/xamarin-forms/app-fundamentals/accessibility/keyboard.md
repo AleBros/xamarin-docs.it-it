@@ -1,18 +1,18 @@
 ---
 title: Accessibilità tramite tastiera
-description: Anziché usare la sequenza di tabulazione predefinita, è talvolta necessario ottimizzare l'accessibilità dell'interfaccia utente specificando la sequenza di tabulazione con una combinazione delle proprietà TabIndex e IsTabStop.
+description: Invece di usare la sequenza di tabulazione predefinita, a volte è necessario ottimizzare l'accessibilità dell'interfaccia utente specificando la sequenza di tabulazione con una combinazione delle proprietà TabIndex e IsTabStop.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 4bca8de32ec0dfa6a273b784333e99c5bbfe968d
-ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
+ms.openlocfilehash: b8c6ed9e803b8dec05b2279ed93f956ed11a1c07
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71975860"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997116"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accessibilità tramite tastiera in Xamarin.Forms
 
@@ -125,7 +125,7 @@ Tuttavia, potrebbe essere necessario escludere i controlli dall'ordine di tabula
 
 ## <a name="supported-controls"></a>Controlli supportati
 
-Le proprietà `TabIndex` e `IsTapStop` sono supportate per i controlli seguenti, che accettano input da tastiera in una o più piattaforme:
+Le proprietà `TabIndex` e `IsTabStop` sono supportate per i controlli seguenti, che accettano input da tastiera in una o più piattaforme:
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)

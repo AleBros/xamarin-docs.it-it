@@ -7,18 +7,21 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 56075949a5b5c01873af3ff79a4cf8f6cefcb142
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: d20e27fdbb1f62c2aebb7122d7f0c042b3ac9085
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68644548"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997183"
 ---
 # <a name="gtk-platform-setup"></a>Installazione della piattaforma GTK #
 
 ![Anteprima](~/media/shared/preview.png)
 
 Novell. Forms ora include il supporto in anteprima per le app GTK #. GTK # è un toolkit di interfaccia utente grafica che collega il toolkit GTK + e un'ampia gamma di librerie GNOME, consentendo lo sviluppo di app grafiche GNOME completamente native usando Mono e .NET. Questo articolo illustra come aggiungere un progetto GTK # a una soluzione Novell. Forms.
+
+> [!IMPORTANT]
+> Il supporto di Novell. Forms per GTK # è fornito dalla community. Per ulteriori informazioni, vedere [supporto della piattaforma Novell. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
 Prima di iniziare, creare una nuova soluzione Novell. Forms oppure usare una soluzione Novell. Forms esistente, ad esempio [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
@@ -39,19 +42,19 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
 
 3. Digitare un nome per il progetto con un'estensione **GTK** , ad esempio **GameOfLife. GTK**. Fare clic sul pulsante **Sfoglia** , selezionare la cartella contenente gli altri progetti della piattaforma e premere **Seleziona cartella**. Il progetto GTK verrà inserito nella stessa directory degli altri progetti della soluzione.
 
-    ![Aggiungere un nuovo progetto GTK](gtk-images/win/add-new-project.png "Aggiungere un nuovo progetto GTK")
+    ![Aggiungere un nuovo progetto GTK](gtk-images/win/add-new-project.png "aggiungere un nuovo progetto GTK")
 
     Premere il pulsante **OK** per creare il progetto.
 
 4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto GTK e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** e cercare **Novell. Forms** 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms](gtk-images/win/select-forms-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms")
+    ![Selezionare il pacchetto NuGet Novell. Forms](gtk-images/win/select-forms-nuget-package.png "selezionare il pacchetto NuGet Novell. Forms")
 
     Selezionare il pacchetto e fare clic sul pulsante **Installa** .
 
 5. A questo punto, cercare il pacchetto **Novell. Forms. Platform. GTK** 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK](gtk-images/win/select-forms-platform-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK")
+    ![Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK](gtk-images/win/select-forms-platform-nuget-package.png "selezionare il pacchetto NuGet Novell. Forms. Platform. GTK")
 
     Selezionare il pacchetto e fare clic sul pulsante **Installa** .
 
@@ -59,11 +62,11 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
 
 7. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse su **riferimenti** nel progetto GTK. Nella finestra di dialogo **Gestione riferimenti** selezionare **progetti** a sinistra e selezionare la casella di controllo accanto al progetto .NET standard o condiviso:
 
-    ![Fare riferimento al progetto condiviso](gtk-images/win/reference-shared-project.png "Fare riferimento al progetto condiviso")
+    ![Riferimento al progetto condiviso](gtk-images/win/reference-shared-project.png "fare riferimento al progetto condiviso")
 
 8. Nella finestra di dialogo **Gestione riferimenti** premere il pulsante **Sfoglia** e passare alla cartella **c:\Programmi (x86) \GtkSharp\2.12\lib** e selezionare **ATK-Sharp. dll**, **gdk-sharp. dll**, **Glade-Sharp. dll**,  **file GLib-Sharp.** dll, **gtk-dotnet. dll**, **GTK-Sharp. dll** .
 
-    ![Riferimenti alle librerie GTK #](gtk-images/win/reference-gtk-libraries.png "Riferimenti alle librerie GTK #")
+    Informazioni ![di riferimento sulle librerie GTK #](gtk-images/win/reference-gtk-libraries.png "fanno riferimento alle librerie GTK #")
 
     Premere il pulsante **OK** per aggiungere i riferimenti.
 
@@ -104,11 +107,11 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita nel des
 
 12. Nella finestra **Proprietà** selezionare la scheda **applicazione** e modificare l'elenco a discesa **tipo di output** in **applicazione Windows**.
 
-    ![Modificare il tipo di output del progetto](gtk-images/win/change-project-output-type.png "Modificare il tipo di output del progetto")
+    ![Modificare il tipo di output del progetto](gtk-images/win/change-project-output-type.png "modificare il tipo di output del progetto")
 
 13. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto GTK e selezionare **Imposta come progetto di avvio**. Premere F5 per eseguire il programma con il debugger di Visual Studio sul desktop di Windows:
 
-    ![Gioco della vita in GTK #](gtk-images/win/gtk-gameoflife.png "Gioco della vita in GTK #")
+    ![GTK # gioco di vita](gtk-images/win/gtk-gameoflife.png "GTK # gioco di vita")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -122,17 +125,17 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita sul des
 
 4. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti..** . per il progetto GTK e aggiungere il pacchetto NuGet novell. Forms 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms](gtk-images/mac/select-forms-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms")
+    ![Selezionare il pacchetto NuGet Novell. Forms](gtk-images/mac/select-forms-nuget-package.png "selezionare il pacchetto NuGet Novell. Forms")
 
 5. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **pacchetti > Aggiungi pacchetti..** . per il progetto GTK e aggiungere il pacchetto NuGet Novell. Forms. Platform. GTK 3,0 o versione successiva.
 
-    ![Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK](gtk-images/mac/select-forms-platform-nuget-package.png "Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK")
+    ![Selezionare il pacchetto NuGet Novell. Forms. Platform. GTK](gtk-images/mac/select-forms-platform-nuget-package.png "selezionare il pacchetto NuGet Novell. Forms. Platform. GTK")
 
 6. Aggiornare gli altri progetti della piattaforma in modo che usino la stessa versione di Novell. Forms usata dal progetto GTK.
 
 7. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse su **References > Edit References...** per il progetto GTK e aggiungere un riferimento al progetto Novell. Forms (.NET standard o progetto condiviso).
 
-    ![Fare riferimento al progetto condiviso](gtk-images/mac/reference-shared-project.png "Fare riferimento al progetto condiviso")
+    ![Riferimento al progetto condiviso](gtk-images/mac/reference-shared-project.png "fare riferimento al progetto condiviso")
 
 8. Modificare il file **Program.cs** del progetto GTK in modo che sia simile al codice seguente:
 
@@ -169,7 +172,7 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita sul des
 
 10. Nella barra degli strumenti Visual Studio per Mac fare clic sul pulsante **Avvia** (il pulsante triangolare simile a un pulsante Riproduci) per avviare l'app.
 
-    ![Gioco della vita in GTK #](gtk-images/mac/gtk-gameoflife.png "Gioco della vita in GTK #")
+    ![GTK # gioco di vita](gtk-images/mac/gtk-gameoflife.png "GTK # gioco di vita")
 
 -----
 
@@ -177,9 +180,9 @@ Seguire queste istruzioni per aggiungere un'app GTK # che viene eseguita sul des
 
 ### <a name="platform-specifics"></a>Funzionalità specifiche della piattaforma
 
-È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Novell. Forms da XAML o dal codice. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in GTK #. Nel codice confrontare il valore di `Device.RuntimePlatform` con la `Device.GTK` costante (che corrisponde alla stringa "GTK"). Se esiste una corrispondenza, l'applicazione è in esecuzione in GTK #.
+È possibile determinare la piattaforma in cui è in esecuzione l'applicazione Novell. Forms da XAML o dal codice. In questo modo è possibile modificare le caratteristiche del programma quando viene eseguito in GTK #. Nel codice confrontare il valore di `Device.RuntimePlatform` con la costante `Device.GTK` (che corrisponde alla stringa "GTK"). Se esiste una corrispondenza, l'applicazione è in esecuzione in GTK #.
 
-In XAML è possibile usare il `OnPlatform` tag per selezionare un valore della proprietà specifico per la piattaforma:
+In XAML è possibile usare il tag `OnPlatform` per selezionare un valore della proprietà specifico per la piattaforma:
 
 ```xaml
 <Button.TextColor>
@@ -211,7 +214,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>Form nativi
 
-I moduli nativi consentono di utilizzare [`ContentPage`](xref:Xamarin.Forms.ContentPage)le pagine derivate da Novell. Forms da progetti nativi, inclusi i progetti GTK #. Questa operazione può essere eseguita creando un'istanza della [`ContentPage`](xref:Xamarin.Forms.ContentPage)pagina derivata da e trasformandola nel tipo GTK # nativo usando il `CreateContainer` metodo di estensione:
+I form nativi consentono di utilizzare le pagine derivate [`ContentPage`](xref:Xamarin.Forms.ContentPage)di Novell. Forms da progetti nativi, inclusi i progetti GTK #. Questa operazione può essere eseguita creando un'istanza della pagina derivata da [`ContentPage`](xref:Xamarin.Forms.ContentPage)e trasformandola nel tipo GTK # nativo usando il metodo di estensione `CreateContainer`:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

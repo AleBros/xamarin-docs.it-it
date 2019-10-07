@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198570"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997147"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
 
@@ -144,7 +144,7 @@ L'implementazione di un'azione trigger deve eseguire le operazioni seguenti:
 
 - Eseguire l'override del metodo `Invoke`. Viene chiamato ogni volta che vengono soddisfatti i criteri di trigger.
 
-- Facoltativamente, esporre le proprietà che possono essere impostate in XAML quando il trigger viene dichiarato. Per un esempio, vedere la `VisualElementPopTriggerAction` classe nell'applicazione di esempio associata.
+- Facoltativamente, esporre le proprietà che possono essere impostate in XAML quando il trigger viene dichiarato. Per un esempio, vedere la classe `VisualElementPopTriggerAction` nell'applicazione di esempio associata.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -278,7 +278,12 @@ Nella parte inferiore delle schermate il pulsante **Login** (Accesso) rimane ina
 
 Un altro modo per implementare le modifiche quando si verifica un trigger consiste nell'aggiungere le raccolte `EnterActions` e `ExitActions` e specificare le implementazioni `TriggerAction<T>`.
 
-In un trigger è possibile specificare *sia* `EnterActions` che `ExitActions` ma anche gli elementi `Setter`. Si consideri tuttavia che gli elementi `Setter` vengono chiamati immediatamente, non attendono che `EnterAction` o `ExitAction` siano completate. In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
+La raccolta [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) viene usata per definire una `IList` di oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) che verranno richiamati quando viene soddisfatta la condizione del trigger. La raccolta [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) viene usata per definire una `IList` di oggetti `TriggerAction` che verranno richiamati dopo che la condizione di trigger non viene più soddisfatta.
+
+> [!NOTE]
+> Gli oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definiti nelle raccolte `EnterActions` e `ExitActions` vengono ignorati dalla classe [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) .    
+
+È possibile specificare *sia* `EnterActions` sia `ExitActions`, nonché `Setter` in un trigger, ma tenere presente che i `Setter`S vengono chiamati immediatamente (non attendono il completamento di `EnterAction` o `ExitAction`). In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -292,7 +297,7 @@ In un trigger è possibile specificare *sia* `EnterActions` che `ExitActions` ma
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -327,8 +332,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
-
-Nota: `EnterActions` e `ExitActions` vengono ignorate nei  **trigger di evento**.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

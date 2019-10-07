@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760571"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997163"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestione di file in Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _In Xamarin.Forms è possibile gestire i file usando il codice disponibile in una libreria .NET Standard o usando le risorse incorporate._
 
@@ -58,7 +58,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 Queste operazioni sono illustrate nell'app di esempio che include una pagina che salva e carica il testo:
 
-[![Salvataggio e caricamento di testo](files-images/saveandload-sml.png "Salvataggio e caricamento di file nell'app")](files-images/saveandload.png#lightbox "Salvataggio e caricamento di file nell'app")
+[![Salvataggio e caricamento di testo](files-images/saveandload-sml.png "salvataggio e caricamento di file nell'app")](files-images/saveandload.png#lightbox "Salvataggio e caricamento di file nell'app")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
@@ -68,34 +68,35 @@ Per incorporare un file in un assembly **.NET Standard**, creare o aggiungere un
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Configurazione azione di compilazione risorsa incorporata](files-images/vs-embeddedresource-sml.png "Impostazione azione di compilazione risorsa incorporata")](files-images/vs-embeddedresource.png#lightbox "Impostazione azione di compilazione risorsa incorporata")
+[![Configurazione dell'azione di compilazione risorse incorporata](files-images/vs-embeddedresource-sml.png "impostazione EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Impostazione di EmbeddedResource BuildAction")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![File di testo incorporato nella libreria di classi portabile, configurazione azione di compilazione risorsa incorporata](files-images/xs-embeddedresource-sml.png "Impostazione azione di compilazione risorsa incorporata")](files-images/xs-embeddedresource.png#lightbox "Impostazione azione di compilazione risorsa incorporata")
+[![File di testo incorporato nella libreria .NET standard, configurazione dell'azione di compilazione risorse incorporata](files-images/xs-embeddedresource-sml.png "impostazione EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Impostazione di EmbeddedResource BuildAction")
 
 -----
 
-`GetManifestResourceStream` viene usato per accedere al file incorporato usando il relativo **ID risorsa**. Per impostazione predefinita, l'ID della risorsa è il nome del file preceduto dallo spazio dei nomi predefinito per il progetto in cui è incorporato. In questo caso, l'assembly è **WorkingWithFiles** e il nome del file è **PCLTextResource.txt**, quindi l'ID della risorsa è `WorkingWithFiles.PCLTextResource.txt`.
+`GetManifestResourceStream` viene usato per accedere al file incorporato usando il relativo **ID risorsa**. Per impostazione predefinita, l'ID risorsa è il nome file preceduto dallo spazio dei nomi predefinito per il progetto in cui è incorporato, in questo caso l'assembly è **WorkingWithFiles** e il nome file è **LibTextResource. txt**, quindi l'ID risorsa è `WorkingWithFiles.LibTextResource.txt`.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibTextResource.txt");
 string text = "";
-using (var reader = new System.IO.StreamReader (stream)) {
+using (var reader = new System.IO.StreamReader (stream))
+{  
     text = reader.ReadToEnd ();
 }
 ```
 
 La variabile `text` può quindi essere usata per visualizzare il testo oppure è possibile usarla nel codice. Questo screenshot dell'[app di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) illustra il testo visualizzabile in un controllo `Label`.
 
- [![File di testo incorporato nella libreria di classi portabile](files-images/pcltext-sml.png "File di testo incorporato nella libreria di classi portabile visualizzato nell'app")](files-images/pcltext.png#lightbox "File di testo incorporato nella libreria di classi portabile visualizzato nell'app")
+ [![File di testo incorporato nel]file di testo incorporato della libreria .NET standard(files-images/pcltext-sml.png "nella libreria .NET standard visualizzata nell'app")](files-images/pcltext.png#lightbox "File di testo incorporato nella libreria .NET Standard visualizzata nell'app")
 
 Il caricamento e la deserializzazione di un file XML è ugualmente semplice. Il codice seguente illustra un file XML che viene caricato e deserializzato da una risorsa e quindi associato a un elemento `ListView` per la visualizzazione. Il file XML contiene una matrice di oggetti `Monkey` (la classe è definita nel codice di esempio).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
     var serializer = new XmlSerializer(typeof(List<Monkey>));
@@ -105,7 +106,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![File XML incorporato nella libreria di classi portabile, visualizzato in ListView](files-images/pclxml-sml.png "File XML incorporato nella libreria di classi portabile visualizzato in ListView")](files-images/pclxml.png#lightbox "File XML incorporato nella libreria di classi portabile visualizzato in ListView")
+ [![File XML incorporato nella libreria .NET standard, visualizzato nel](files-images/pclxml-sml.png "file XML incorporato ListView nella libreria .NET standard visualizzata in ListView")](files-images/pclxml.png#lightbox "File XML incorporato nella libreria .NET standard visualizzato in ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -139,9 +140,9 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Organizzazione delle risorse
 
-Negli esempi precedenti si presuppone che il file sia incorporato nella radice del progetto libreria .NET Standard. In questo caso, il formato dell'ID risorsa è **Namespace.Filename.Extension**, ad esempio `WorkingWithFiles.PCLTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
+Negli esempi precedenti si presuppone che il file sia incorporato nella radice del progetto libreria .NET Standard. In questo caso, il formato dell'ID risorsa è **Namespace.Filename.Extension**, ad esempio `WorkingWithFiles.LibTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
-È possibile organizzare le risorse incorporate in cartelle. Quando una risorsa incorporata viene inserita in una cartella, il nome di quest'ultima diventa parte dell'ID della risorsa (separato da punti), in modo tale che il formato dell'ID della risorsa diventa **Namespace.Folder.Filename.Extension**. Se si inseriscono i file usati nell'app di esempio in una cartella **MyFolder**, gli ID risorsa corrispondenti saranno `WorkingWithFiles.MyFolder.PCLTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
+È possibile organizzare le risorse incorporate in cartelle. Quando una risorsa incorporata viene inserita in una cartella, il nome di quest'ultima diventa parte dell'ID della risorsa (separato da punti), in modo tale che il formato dell'ID della risorsa diventa **Namespace.Folder.Filename.Extension**. Se si inseriscono i file usati nell'app di esempio in una cartella **MyFolder**, gli ID risorsa corrispondenti saranno `WorkingWithFiles.MyFolder.LibTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
 <a name="Debugging_Embedded_Resources" />
 

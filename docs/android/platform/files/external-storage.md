@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5992be5963c315c4f93fc4e03c24e3776087d418
-ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
+ms.openlocfilehash: c67f58a4b1886d3f89f7bd1639e1cd687d329869
+ms.sourcegitcommit: 4ff181101d76f048b949c9613b2c72cf02618f8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71975802"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994811"
 ---
 # <a name="external-storage"></a>Archiviazione esterna
 
@@ -78,7 +78,7 @@ I file pubblici sono file presenti in una risorsa di archiviazione esterna che n
 
 Questo documento si riferisce alla directory di archiviazione per i file pubblici nell'archiviazione esterna come _public @ no__t-1EXTERNAL @ no__t-2STORAGE_.
 
-Android supporta inoltre il concetto di directory dell'applicazione in _public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Queste directory corrispondono esattamente alle directory dell'applicazione per `_PRIVATE\_EXTERNAL\_STORAGE_` e sono descritte nella tabella della sezione precedente. Il metodo `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` restituirà un oggetto `Java.IO.File` che corrisponde a una directory dell'applicazione pubblica. Il parametro `directoryType` è un parametro obbligatorio e non può essere `null`.
+Android supporta inoltre il concetto di directory dell'applicazione in _public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Queste directory corrispondono esattamente alle directory dell'applicazione per `PRIVATE_EXTERNAL_STORAGE` e sono descritte nella tabella della sezione precedente. Il metodo `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` restituirà un oggetto `Java.IO.File` che corrisponde a una directory dell'applicazione pubblica. Il parametro `directoryType` è un parametro obbligatorio e non può essere `null`.
 
 Se ad esempio si chiama `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`, viene restituita una stringa simile alla seguente:
 
