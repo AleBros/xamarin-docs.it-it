@@ -6,14 +6,18 @@ ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: b94bae8fb1b7c990c5b2478a0da143960a0bcc55
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d39615f20cdd52bb862d9ee998e9a45bbb6834e
+ms.sourcegitcommit: d116fdcad9f5f0587ce64749cd8d791eee87f8aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765968"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72246533"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>App per dispositivi mobili Microsoft Azure
+
+> [!NOTE]
+> Visual Studio App Center supporta end-to-end e servizi integrati centrali per lo sviluppo di app per dispositivi mobili. Gli sviluppatori possono utilizzare i servizi di **compilazione**, **test** e **distribuzione** per configurare una pipeline di integrazione e recapito continua. Una volta distribuita l'app, gli sviluppatori possono monitorare lo stato e l'utilizzo dell'app usando i servizi di **analisi** e **diagnostica** e coinvolgere gli utenti che usano il servizio di **push** . Gli sviluppatori possono inoltre sfruttare l' **autenticazione** per autenticare gli utenti e il servizio **dati** per salvare in modo permanente e sincronizzare i dati delle app nel cloud.
+> Se si intende integrare servizi cloud nell'applicazione per dispositivi mobili, iscriversi con [App Center](https://appcenter.ms/signup?utm_source=XamarinDocs&utm_medium=Azure&utm_campaign=docs) oggi.
 
 _Esempi e download di codice per la documentazione portale di Azure._
 

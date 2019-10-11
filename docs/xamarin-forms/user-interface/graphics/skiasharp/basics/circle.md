@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759536"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032578"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Disegnare un cerchio semplice in SkiaSharp
 
@@ -26,7 +26,7 @@ Il [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamari
 
 ![](circle-images/circleexample.png "Un cerchio blu evidenziato in rosso")
 
-Il [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva dalla classe di pagina `ContentPage` e contiene due `using` le direttive per gli spazi dei nomi di SkiaSharp:
+Il [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva dalla classe di pagina `ContentPage` e contiene due `using` le direttive per gli spazi dei nomi di SkiaSharp:
 
 ```csharp
 using SkiaSharp;
@@ -143,7 +143,7 @@ Questa volta, il `DrawCircle` chiamata riempie il cerchio usando le proprietà d
 
 Ecco il programma in esecuzione in iOS, Android e la piattaforma Windows universale:
 
-[![](circle-images/simplecircle-small.png "Tripla screenshot della pagina del cerchio semplice")](circle-images/simplecircle-large.png#lightbox "tripla screenshot della pagina del cerchio semplice")
+[![](circle-images/simplecircle-small.png "Schermata tripla della pagina del cerchio semplice")](circle-images/simplecircle-large.png#lightbox "Schermata tripla della pagina del cerchio semplice")
 
 Quando si esegue il programma, è possibile attivare il telefono o il simulatore lateralmente per visualizzare come l'elemento grafico viene ridisegnato. Ogni volta che l'immagine deve essere ridisegnata, il `PaintSurface` gestore eventi viene chiamato nuovamente.
 
@@ -154,7 +154,7 @@ Un `SKPaint` oggetto è poco più di una raccolta di proprietà di disegno delle
 > [!NOTE]
 > Il `SKPaint` classe definisce un [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) per abilitare l'anti-aliasing per il rendering degli elementi grafici. Anti-aliasing comporta in genere archi visivamente più uniforme, pertanto è opportuno impostare questa proprietà su `true` nella maggior parte dei `SKPaint` oggetti. Per motivi di semplicità, questa proprietà è _non_ impostare nella maggior parte delle pagine di esempio.
 
-Anche se la larghezza del contorno del cerchio viene specificata come 25 &mdash; pixel o un trimestre del raggio del cerchio &mdash; , risulta più sottile ed esiste un motivo valido: Metà della lunghezza della linea è nascosta dal cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
+Anche se la larghezza del contorno del cerchio viene specificata come 25 pixel &mdash; o un trimestre del raggio del cerchio &mdash; sembra essere più sottile ed esiste un motivo valido: Metà della lunghezza della linea è nascosta dal cerchio blu. Gli argomenti per il `DrawCircle` metodo definirà le coordinate geometriche astratte di un cerchio. L'interno blu viene ridimensionato su tale dimensione per il pixel più vicino, ma la struttura di larghezza di 25 pixel attraversa il cerchio geometrico &mdash; metà su interno e il metà all'esterno.
 
 Nell'esempio successivo nel [l'integrazione con xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) articolo viene illustrata questa visivamente.
 

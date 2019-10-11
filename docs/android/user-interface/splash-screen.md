@@ -6,17 +6,19 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/06/2018
-ms.openlocfilehash: b05ab7ee835a97f13af618332baec7a5ebf404ec
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 10/02/2019
+ms.openlocfilehash: 4633811b2c0b001ab220f5fedaf116b1b269344a
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764092"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032557"
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
-_L'avvio di un'app Android richiede tempo, soprattutto quando l'app viene avviata per la prima volta in un dispositivo. Una schermata iniziale può visualizzare lo stato di avanzamento dell'avvio per l'utente o per indicare la personalizzazione._
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+
+l'avvio dell'app _An per Android richiede tempo, soprattutto quando l'app viene avviata per la prima volta in un dispositivo. Una schermata iniziale può visualizzare lo stato di avanzamento dell'avvio per l'utente o per indicare la personalizzazione._
 
 ## <a name="overview"></a>Panoramica
 
@@ -30,11 +32,11 @@ Questa guida illustra una tecnica per implementare una schermata iniziale in un'
 
 3. Aggiunta di una nuova attività all'applicazione che verrà usata come schermata iniziale definita dal tema creato nel passaggio precedente.
 
-[![Schermata iniziale del logo Novell di esempio seguita dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[schermata iniziale del logo ![Example Novell seguita dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## <a name="requirements"></a>Requisiti
 
-Questa guida presuppone che l'applicazione sia destinata a Android API level 15 (Android 4.0.3) o versione successiva. L'applicazione deve avere anche i pacchetti NuGet **Novell. Android. support. v4** e **Novell. Android. support. V7. AppCompat** aggiunti al progetto.
+Questa guida presuppone che l'applicazione abbia come destinazione l'API Android livello 21 o versione successiva. L'applicazione deve avere anche i pacchetti NuGet **Novell. Android. support. v4** e **Novell. Android. support. V7. AppCompat** aggiunti al progetto.
 
 Tutto il codice e il codice XML in questa guida sono disponibili nel progetto di esempio [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) per questa guida.
 
@@ -48,7 +50,7 @@ La schermata iniziale viene implementata come un'attività che Visualizza l'ogge
 
 Nella schermata iniziale viene visualizzato un XML disegnatore in background dell'attività della schermata iniziale. È necessario usare un'immagine bitmap, ad esempio un PNG o JPG, per l'immagine da visualizzare.
 
-In questa guida viene usato un [elenco di livelli](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) per centrare l'immagine della schermata iniziale nell'applicazione. Il frammento di codice seguente è un `drawable` esempio di risorsa `layer-list`che usa:
+L'applicazione di esempio definisce un oggetto disegnato denominato **splash_screen. XML**. Questo oggetto disegnatore utilizza un [elenco di livelli](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) per centrare l'immagine della schermata iniziale nell'applicazione, come illustrato nel codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -58,38 +60,48 @@ In questa guida viene usato un [elenco di livelli](https://developer.android.com
   </item>
   <item>
     <bitmap
-        android:src="@drawable/splash"
+        android:src="@drawable/splash_logo"
         android:tileMode="disabled"
         android:gravity="center"/>
   </item>
 </layer-list>
 ```
 
-Questa `layer-list` operazione concentrerà l'immagine iniziale **Splash. png** sullo `@color/splash_background` sfondo specificato dalla risorsa. Inserire questo file XML nella cartella **Resources/** di cui è stato disegnato (ad esempio, **Resources/splash_screen. XML**).
+Questo `layer-list` centra l'immagine iniziale su un colore di sfondo specificato dalla risorsa `@color/splash_background`. L'applicazione di esempio definisce questo colore nel file **Resources/values/color. XML** :
 
-Al termine della creazione della schermata iniziale, il passaggio successivo consiste nel creare un tema per la schermata iniziale.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  ...
+  <color name="splash_background">#FFFFFF</color>
+</resources>
+```
+
+Per ulteriori informazioni sugli oggetti `Drawable`, vedere la [documentazione di Google su Android](https://developer.android.com/reference/android/graphics/drawable/Drawable).
 
 ### <a name="implementing-a-theme"></a>Implementazione di un tema
 
-Per creare un tema personalizzato per l'attività della schermata iniziale, modificare o aggiungere il file **values/styles. XML** e creare un `style` nuovo elemento per la schermata iniziale. Di seguito è riportato un file di esempio **values/Style. XML** con un `style` nome **. Splash**:
+Per creare un tema personalizzato per l'attività della schermata iniziale, modificare (o aggiungere) il file **values/styles. XML** e creare un nuovo elemento `style` per la schermata iniziale. Di seguito è riportato un file di esempio **values/Style. XML** con un `style` denominato "My **. Splash**":
 
 ```xml
 <resources>
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-  <style name="MyTheme" parent="MyTheme.Base">
+    <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/splash_screen</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowFullscreen">true</item>  
+    <item name="android:windowContentOverlay">@null</item>  
+    <item name="android:windowActionBar">true</item>  
   </style>
 </resources>
 ```
 
-My **. Splash** è molto spartano &ndash; dichiara lo sfondo della finestra, rimuove in modo esplicito la barra del titolo dalla finestra e dichiara che è a schermo intero. Se si vuole creare una schermata iniziale che emula l'interfaccia utente dell'app prima che l'attività ingrandisca il primo layout, è possibile usare `windowContentOverlay` `windowBackground` anziché nella definizione dello stile. In questo caso, è necessario modificare anche **splash_screen. XML** disegnatore in modo da visualizzare un'emulazione dell'interfaccia utente.
+My **. Splash** è molto spartano &ndash; dichiara lo sfondo della finestra, rimuove in modo esplicito la barra del titolo dalla finestra e dichiara che è a schermo intero. Se si vuole creare una schermata iniziale che emula l'interfaccia utente dell'app prima che l'attività ingrandisca il primo layout, è possibile usare `windowContentOverlay` anziché `windowBackground` nella definizione dello stile. In questo caso, è necessario modificare anche **splash_screen. XML** disegnatore in modo da visualizzare un'emulazione dell'interfaccia utente.
 
 ### <a name="create-a-splash-activity"></a>Creare un'attività Splash
 
@@ -126,18 +138,18 @@ public class SplashActivity : AppCompatActivity
 }
 ```
 
-`SplashActivity`USA in modo esplicito il tema creato nella sezione precedente, eseguendo l'override del tema predefinito dell'applicazione.
+`SplashActivity` USA in modo esplicito il tema creato nella sezione precedente, eseguendo l'override del tema predefinito dell'applicazione.
 Non è necessario caricare un layout in `OnCreate` perché il tema dichiara un oggetto disegnatore come sfondo.
 
-È importante impostare l' `NoHistory=true` attributo in modo che l'attività venga rimossa dallo stack indietro. Per impedire al pulsante indietro di annullare il processo di avvio, è anche possibile eseguire `OnBackPressed` l'override di e non eseguire alcuna operazione:
+È importante impostare l'attributo `NoHistory=true` in modo che l'attività venga rimossa dallo stack indietro. Per impedire al pulsante indietro di annullare il processo di avvio, è anche possibile eseguire l'override di `OnBackPressed` e non eseguire alcuna operazione:
 
 ```csharp
 public override void OnBackPressed() { }
 ```
 
-Il lavoro di avvio viene eseguito in modo `OnResume`asincrono in. Questa operazione è necessaria in modo che il lavoro di avvio non rallenti o ritardi l'aspetto della schermata di avvio. Quando il lavoro è stato completato `SplashActivity` , viene `MainActivity` avviato e l'utente può iniziare a interagire con l'app.
+Il lavoro di avvio viene eseguito in modo asincrono in `OnResume`. Questa operazione è necessaria in modo che il lavoro di avvio non rallenti o ritardi l'aspetto della schermata di avvio. Al termine del lavoro, `SplashActivity` avvierà `MainActivity` e l'utente potrà iniziare a interagire con l'app.
 
-Questo nuovo `SplashActivity` viene impostato come attività dell'utilità di avvio per l'applicazione impostando l' `true` `MainLauncher` attributo su. Poiché `SplashActivity` è ora l'attività di avvio, è necessario `MainActivity.cs`modificare e rimuovere l' `MainLauncher` attributo da `MainActivity`:
+Questo nuovo `SplashActivity` viene impostato come attività dell'utilità di avvio per l'applicazione impostando l'attributo `MainLauncher` su `true`. Poiché `SplashActivity` è ora l'attività dell'utilità di avvio, è necessario modificare `MainActivity.cs` e rimuovere l'attributo `MainLauncher` da `MainActivity`:
 
 ```csharp
 [Activity(Label = "@string/ApplicationName")]
@@ -155,7 +167,7 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
 
 1. Nella cartella **risorse/disegnatore** aggiungere la versione orizzontale dell'immagine della schermata iniziale che si vuole usare. In questo esempio, **splash_logo_land. png** è la versione orizzontale del logo usato negli esempi precedenti, che usa la lettera bianca anziché il blu.
 
-2. Nella cartella **risorse/disegnatore** creare una versione orizzontale dell'oggetto `layer-list` disegnatore definito in precedenza (ad esempio, **splash_screen_land. XML**). In questo file, impostare il percorso bitmap della versione orizzontale dell'immagine della schermata iniziale. Nell'esempio seguente **splash_screen_land. XML** USA **splash_logo_land. png**:
+2. Nella cartella **risorse/disegnatore** creare una versione orizzontale di `layer-list` disegnatore definita in precedenza (ad esempio, **splash_screen_land. XML**). In questo file, impostare il percorso bitmap della versione orizzontale dell'immagine della schermata iniziale. Nell'esempio seguente **splash_screen_land. XML** USA **splash_logo_land. png**:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -209,9 +221,9 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
 
 7. Compilare ed eseguire nuovamente l'app. Ruotare il dispositivo in modalità orizzontale mentre è ancora visualizzata la schermata iniziale. La schermata iniziale passa alla versione orizzontale:
 
-    [![Rotazione della schermata iniziale in modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [@no__t 1Rotation della schermata iniziale alla modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
-Si noti che l'uso di una schermata iniziale in modalità orizzontale non fornisce sempre un'esperienza semplice. Per impostazione predefinita, Android avvia l'app in modalità verticale e la passa alla modalità orizzontale anche se il dispositivo è già in modalità orizzontale. Di conseguenza, se l'app viene avviata mentre il dispositivo è in modalità orizzontale, il dispositivo presenta brevemente la schermata iniziale verticale e quindi aggiunge un'animazione alla rotazione dal ritratto alla schermata iniziale orizzontale. Sfortunatamente, questa transizione da verticale a orizzontale viene effettuata anche quando `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` viene specificato nei flag dell'attività Splash. Il modo migliore per aggirare questa limitazione consiste nel creare una singola immagine della schermata iniziale che esegue correttamente il rendering in modalità verticale e orizzontale.
+Si noti che l'uso di una schermata iniziale in modalità orizzontale non fornisce sempre un'esperienza semplice. Per impostazione predefinita, Android avvia l'app in modalità verticale e la passa alla modalità orizzontale anche se il dispositivo è già in modalità orizzontale. Di conseguenza, se l'app viene avviata mentre il dispositivo è in modalità orizzontale, il dispositivo presenta brevemente la schermata iniziale verticale e quindi aggiunge un'animazione alla rotazione dal ritratto alla schermata iniziale orizzontale. Sfortunatamente, questa transizione da verticale a orizzontale viene effettuata anche quando si specifica `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` nei flag dell'attività iniziale. Il modo migliore per aggirare questa limitazione consiste nel creare una singola immagine della schermata iniziale che esegue correttamente il rendering in modalità verticale e orizzontale.
 
 ## <a name="summary"></a>Riepilogo
 

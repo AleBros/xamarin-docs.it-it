@@ -200,6 +200,7 @@
 ### [ProgressBar](user-interface/progressbar.md)
 ### [SearchBar](user-interface/searchbar.md)
 ### [Dispositivo di scorrimento](user-interface/slider.md)
+### [Schermata iniziale](user-interface/splashscreen.md)
 ### [Gestore di istruzioni](user-interface/stepper.md)
 ### [Stili](user-interface/styles/index.md)
 #### [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](user-interface/styles/xaml/index.md)
@@ -363,7 +364,7 @@
 #### [ASMX](data-cloud/web-services/asmx.md)
 #### [WCF](data-cloud/web-services/wcf.md)
 #### [REST](data-cloud/web-services/rest.md)
-### Autenticazione
+### Authentication
 #### [Panoramica dell'autenticazione](data-cloud/authentication/index.md)
 #### [REST](data-cloud/authentication/rest.md)
 #### [OAuth](data-cloud/authentication/oauth.md)

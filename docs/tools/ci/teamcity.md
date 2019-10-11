@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70293131"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273122"
 ---
 # <a name="using-team-city-with-xamarin"></a>Uso del team City con Novell
 
@@ -134,7 +134,7 @@ Si noti che per compilare l'applicazione Novell Android **xbuild** usa il proget
 
 #### <a name="submitting-xamarinuitests-to-test-cloud"></a>Invio di Novell. UITests a Test Cloud
 
-UITests vengono inviati usando l' `test-cloud.exe` applicazione, come illustrato nel frammento di codice seguente:
+UITests vengono inviati utilizzando l'applicazione `test-cloud.exe`, come illustrato nel frammento di codice seguente:
 
 ```bash
 test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <device-selection-id> --assembly-dir <path-to-tests-containing-test-assemblies> --nunit-xml report.xml --user <email>
@@ -142,11 +142,11 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 Quando si esegue il test, i risultati del test verranno restituiti sotto forma di file XML di tipo NUnit denominato **report. XML**. TeamCity visualizzerà le informazioni nel log di compilazione.
 
-Per ulteriori informazioni su come inviare UITests a Test Cloud, vedere la guida alla [preparazione di Novell. UITests per il caricamento](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest/).
+Per altre informazioni su come inviare UITests a Test Cloud, vedere Preparazione delle app [Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) o [preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Invio di test di Calabash a Test Cloud
 
-I test Calabash vengono inviati usando `test-cloud` il Gem, come illustrato nel frammento di codice seguente:
+I test di Calabash vengono inviati usando la gemma `test-cloud`, come illustrato nel frammento di codice seguente:
 
 ```bash
 test-cloud submit /path/to/APK-or-IPA <test-cloud-team-api-key> --devices <device-id> --user <email>
@@ -167,35 +167,35 @@ Una volta installato TeamCity e Visual Studio per Mac possibile compilare il pro
 
 1. Per iniziare, accedere a TeamCity tramite il Web browser. Passare al progetto radice:
 
-    ![Passare al progetto radice](teamcity-images/image2.png "Passare al progetto radice") Sotto il progetto radice creare un nuovo progetto secondario:
+    ![Passare al progetto radice](teamcity-images/image2.png "passare al progetto radice") sotto il progetto radice e creare un nuovo progetto secondario:
 
-    ![Passare al progetto radice sotto il progetto radice e creare un nuovo sottoprogetto](teamcity-images/image3.png "Passare al progetto radice sotto il progetto radice e creare un nuovo sottoprogetto")
+    ![Passare al progetto radice sotto il progetto radice, creare un nuovo progetto secondario](teamcity-images/image3.png "passare al progetto radice sotto il progetto radice e creare un nuovo sottoprogetto")
 2. Una volta creato il sottoprogetto, aggiungere una nuova configurazione di compilazione:
 
-    ![Una volta creato il sottoprogetto, aggiungere una nuova configurazione di compilazione](teamcity-images/image5.png "Una volta creato il sottoprogetto, aggiungere una nuova configurazione di compilazione")
+    ![Una volta creato il sottoprogetto, aggiungere una nuova configurazione della build](teamcity-images/image5.png "dopo che è stato creato il sottoprogetto, aggiungere una nuova configurazione di compilazione")
 3. Alleghi un progetto VCS alla configurazione della build. Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione:
 
-    ![Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione](teamcity-images/image6.png "Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione")
+    ![Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione].(teamcity-images/image6.png "questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione")
 
     Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice VCS mostrata di seguito:
 
-    ![Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice di VCS](teamcity-images/image7.png "Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice di VCS")
+    ![Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice VCS](teamcity-images/image7.png "se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice VCS")
 
     Una volta collegata la radice VCS, TeamCity estrae il progetto e tenta di rilevare automaticamente le istruzioni di compilazione. Se si ha familiarità con TeamCity, è possibile selezionare uno dei passaggi di compilazione rilevati. Per il momento è possibile ignorare i passaggi di compilazione rilevati.
 
 4. Configurare quindi un trigger di compilazione. In questo modo verrà accodata una compilazione quando vengono soddisfatte determinate condizioni, ad esempio quando un utente esegue il commit del codice nel repository. Lo screenshot seguente mostra come aggiungere un trigger di compilazione:
 
-    ![Questa schermata mostra come aggiungere un trigger di compilazione](teamcity-images/image8.png "Questa schermata mostra come aggiungere un trigger di compilazione") Un esempio di configurazione di un trigger di compilazione può essere illustrato nello screenshot seguente:
+    ![Questa schermata mostra come aggiungere un trigger di compilazione](teamcity-images/image8.png "questa schermata mostra come aggiungere un") trigger di compilazione un esempio di configurazione di un trigger di compilazione può essere visualizzato nella schermata seguente:
 
-    ![Un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata](teamcity-images/image9.png "Un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata")
+    Un ![esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata].(teamcity-images/image9.png "un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata")
 
 5. La sezione precedente, parametrizzazione lo script di compilazione, suggerisce di archiviare alcuni valori come variabili di ambiente. Queste variabili possono essere aggiunte alla configurazione della build tramite la schermata parametri. Aggiungere le variabili per la chiave API Test Cloud, l'ID dispositivo iOS e l'ID dispositivo Android, come illustrato nella schermata seguente:
 
-    ![Aggiungere le variabili per la chiave API test cloud, l'ID dispositivo iOS e l'ID dispositivo Android](teamcity-images/image11.png "Aggiungere le variabili per la chiave API test cloud, l'ID dispositivo iOS e l'ID dispositivo Android")
+    ![Aggiungere le variabili per la chiave api test cloud, l'ID dispositivo iOS e l'ID dispositivo Android](teamcity-images/image11.png "aggiungere le variabili per la chiave API test cloud, l'ID dispositivo iOS e l'ID dispositivo Android")
 
 6. Il passaggio finale consiste nell'aggiungere un'istruzione di compilazione che richiama lo script di compilazione per compilare l'applicazione e accodare l'applicazione per Test Cloud. Lo screenshot seguente è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione:
 
-    ![Questa schermata è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione](teamcity-images/image12.png "Questa schermata è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione")
+    ![Questa schermata è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione].(teamcity-images/image12.png "questo screenshot è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione")
 
 7. A questo punto, la configurazione della build è stata completata. È consigliabile attivare una compilazione per verificare che il progetto sia configurato correttamente. Un modo efficace per eseguire questa operazione consiste nell'eseguire il commit di una piccola modifica irrilevante nel repository. TeamCity deve rilevare il commit e avviare una compilazione.
 
@@ -209,5 +209,6 @@ Questa guida ha illustrato come usare TeamCity per compilare applicazioni per di
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Preparazione del caricamento di Novell. UITests ad](/appcenter/test-cloud/preparing-for-upload/uitest/)
+- [Preparazione delle app Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
+- [Preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Installazione e configurazione di TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

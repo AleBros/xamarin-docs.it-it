@@ -6,19 +6,21 @@ ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2019
-ms.openlocfilehash: a4d246419c7449c2395759cf5a8b04469e7a2309
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
-ms.translationtype: HT
+ms.date: 10/08/2019
+ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
+ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820993"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72170973"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter di Xamarin.Forms
 
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 Il modello di pubblicazione-sottoscrizione è un modello di messaggistica in cui i server di pubblicazione inviano messaggi senza conoscere i ricevitori, noti come sottoscrittori. In modo analogo, i sottoscrittori sono in ascolto di messaggi specifici, senza conoscere i server di pubblicazione.
+
+Gli eventi in .NET implementano il modello di pubblicazione-sottoscrizione e sono l'approccio più semplice e diretto per un livello di comunicazione tra i componenti se non è necessario un accoppiamento libero, ad esempio un controllo e la pagina che lo contiene. Tuttavia, le durate del server di pubblicazione e del Sottoscrittore sono abbinate a riferimenti a oggetti e il tipo di Sottoscrittore deve disporre di un riferimento al tipo di server di pubblicazione. Questo può creare problemi di gestione della memoria, soprattutto quando sono presenti oggetti di breve durata che sottoscrivono un evento di un oggetto statico o di lunga durata. Se il gestore eventi non viene rimosso, il Sottoscrittore verrà mantenuto attivo dal riferimento a esso nel server di pubblicazione e ciò impedirà o ritarderà il Garbage Collection del Sottoscrittore.
 
 La classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) di Xamarin.Forms implementa il modello di pubblicazione-sottoscrizione, consentendo la comunicazione basata su messaggi tra componenti che non è pratico collegare con riferimenti a oggetti e tipi. Questo meccanismo consente ai server di pubblicazione e ai sottoscrittori di comunicare senza avere un riferimento reciproco, contribuendo a ridurre le dipendenze tra di essi.
 
@@ -101,4 +103,4 @@ In questo esempio il metodo [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.U
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di MessagingCenter](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+- [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

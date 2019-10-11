@@ -145,6 +145,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: slider.md
             title: Slider
+          - href: splashscreen.md
+            html: Informazioni su come creare schermate iniziali per le applicazioni Xamarin.Forms.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: splashscreen.md
+            title: Schermata iniziale
           - href: stepper.md
             html: Informazioni su come consentire a un utente di selezionare un valore numerico da un intervallo di valori con il controllo Stepper.
             image:
