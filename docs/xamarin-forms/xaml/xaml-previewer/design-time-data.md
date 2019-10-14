@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
+ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69887845"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72303250"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usare i dati della fase di progettazione con il Visualizzatore anteprima XAML
 
-_Alcuni layout sono difficili da visualizzare senza dati. Usare questi suggerimenti per sfruttare al meglio l'anteprima delle pagine con dati intensivi nel Visualizzatore anteprime XAML._
+i layout _Some sono difficili da visualizzare senza dati. Usare questi suggerimenti per sfruttare al meglio l'anteprima delle pagine con dati intensivi nel Visualizzatore anteprime XAML._
 
 ## <a name="design-time-data-basics"></a>Nozioni fondamentali sui dati in fase di progettazione
 
@@ -28,7 +28,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-Dopo aver aggiunto gli spazi dei nomi, è `d:` possibile posizionarli davanti a qualsiasi attributo o controllo per visualizzarli nel Visualizzatore anteprime XAML. Gli elementi `d:` con non vengono visualizzati in fase di esecuzione.
+Dopo aver aggiunto gli spazi dei nomi, è possibile inserire `d:` davanti a qualsiasi attributo o controllo per visualizzarlo nel Visualizzatore anteprime XAML. Gli elementi con `d:` non vengono visualizzati in fase di esecuzione.
 
 Ad esempio, è possibile aggiungere testo a un'etichetta che in genere contiene dati associati.
 
@@ -36,17 +36,17 @@ Ad esempio, è possibile aggiungere testo a un'etichetta che in genere contiene 
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![Progettare dati in fase di progettazione con testo in un'etichetta](xaml-previewer-images/designtimedata-label-sm.png "Dati della fase di progettazione con un'etichetta di testo")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Progettare dati in fase di progettazione con testo in un'etichetta dati della](xaml-previewer-images/designtimedata-label-sm.png "fase di progettazione con testo un'etichetta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
 In questo esempio, senza `d:Text`, il Visualizzatore anteprima XAML non visualizzerà nulla per l'etichetta. Viene invece visualizzato "nome!" dove l'etichetta avrà dati reali in fase di esecuzione.
 
-È possibile utilizzare `d:` con qualsiasi attributo per un controllo Novell. Forms, ad esempio i colori, le dimensioni del carattere e la spaziatura. È anche possibile aggiungerlo al controllo stesso:
+È possibile usare `d:` con qualsiasi attributo per un controllo Novell. Forms, ad esempio colori, dimensioni del carattere e spaziatura. È anche possibile aggiungerlo al controllo stesso:
 
 ```xaml
 <d:Button Text="Design Time Button" />
 ```
 
-[![Dati della fase di progettazione con un controllo Button](xaml-previewer-images/designtimedata-controls-sm.png "Dati della fase di progettazione con un controllo Button")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[Dati della ![fase di progettazione con un controllo Button](xaml-previewer-images/designtimedata-controls-sm.png "dati della fase di progettazione con un controllo Button")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 In questo esempio, il pulsante viene visualizzato solo in fase di progettazione. Utilizzare questo metodo per inserire un segnaposto in per un [controllo personalizzato non supportato dal Visualizzatore anteprima XAML](render-custom-controls.md).
 
@@ -58,7 +58,7 @@ In questo esempio, il pulsante viene visualizzato solo in fase di progettazione.
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 
-[![Dati della fase di progettazione con immagini](xaml-previewer-images/designtimedata-image-sm.png "Dati della fase di progettazione con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Progettare dati in fase di progettazione con immagini]della(xaml-previewer-images/designtimedata-image-sm.png "fase di progettazione con iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Dati della fase di progettazione per ListView
 
@@ -84,15 +84,54 @@ I ListView sono un modo comune per visualizzare i dati in un'app per dispositivi
 </StackLayout>
 ```
 
-[![Dati della fase di progettazione con ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Dati della fase di progettazione con ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Progettare i dati in fase di progettazione con](xaml-previewer-images/designtimedata-itemssource-sm.png "i dati della fase di progettazione di ListView con ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
-In questo esempio viene mostrato un ListView di tre TextCells nel Visualizzatore anteprima XAML. È possibile passare `x:String` a un modello di dati esistente nel progetto.
+In questo esempio viene mostrato un ListView di tre TextCells nel Visualizzatore anteprima XAML. È possibile modificare `x:String` in un modello di dati esistente nel progetto.
 
-Per un esempio più complesso, vedere l' [app hansels. Forms di James Montemagno su](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) .
+È inoltre possibile creare una matrice di oggetti dati. Ad esempio, le proprietà pubbliche di un oggetto dati `Monkey` possono essere costruite come dati della fase di progettazione:
+
+```csharp
+namespace Monkeys.Models
+{
+    public class Monkey
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+    }
+}
+```
+
+Per usare la classe in XAML, è necessario importare lo spazio dei nomi nel nodo radice:
+
+```xaml
+xmlns:models="clr-namespace:Monkeys.Models"
+```
+
+```xaml
+<StackLayout>
+    <ListView ItemsSource="{Binding Items}">
+        <d:ListView.ItemsSource>
+            <x:Array Type="{x:Type models:Monkey}">
+                <models:Monkey Name="Baboon" Location="Africa and Asia"/>
+                <models:Monkey Name="Capuchin Monkey" Location="Central and South America"/>
+                <models:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
+            </x:Array>
+        </d:ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:Monkey">
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Location}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>
+```
+
+Il vantaggio è che è possibile eseguire l'associazione al modello effettivo che si prevede di usare.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternativa Impostare come hardcoded un ViewModel statico
 
-Se non si desidera aggiungere i dati della fase di progettazione ai singoli controlli, è possibile configurare un archivio dati fittizio da associare alla pagina. Vedere il post di Blog di James Montemagno su [sull'aggiunta di dati in fase di progettazione](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) per vedere come eseguire l'associazione a un ViewModel statico in XAML.
+Se non si desidera aggiungere i dati della fase di progettazione ai singoli controlli, è possibile configurare un archivio dati fittizio da associare alla pagina. Vedere il post di Blog di James Montemagno su [sull'aggiunta di dati in fase di progettazione](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/) per vedere come eseguire l'associazione a un ViewModel statico in XAML.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
