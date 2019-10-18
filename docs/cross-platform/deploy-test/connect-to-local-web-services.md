@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/22/2019
-ms.openlocfilehash: 1318d8e1563239d5215d8cfc03c971be8b2cff35
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.date: 10/16/2019
+ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
+ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647648"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526815"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Connettersi a servizi Web locali da simulatori iOS ed emulatori Android
 
@@ -27,7 +27,7 @@ Le applicazioni per dispositivi mobili in esecuzione nel simulatore iOS o nell'e
 Sono necessari tuttavia altri interventi, affinché un'applicazione in esecuzione nel simulatore iOS o nell'emulatore Android possa utilizzare un servizio Web locale esposto tramite HTTPS. Per questo scenario, il processo è il seguente:
 
 1. Creare un certificato di sviluppo autofirmato nel computer. Per altre informazioni, vedere [Creare un certificato di sviluppo](#create-a-development-certificate).
-1. Configurare il progetto per usare lo stack di rete `HttpClient` gestito per la build di debug. Per altre informazioni, vedere [Configurare il progetto](#configure-your-project).
+1. Configurare il progetto in modo che usi lo stack di rete `HttpClient` appropriato per la compilazione di debug. Per altre informazioni, vedere [Configurare il progetto](#configure-your-project).
 1. Specificare l'indirizzo del computer locale. Per altre informazioni, vedere [Specificare l'indirizzo del computer locale](#specify-the-local-machine-address).
 1. Evitare il controllo di sicurezza del certificato di sviluppo locale. Per altre informazioni, vedere [Evitare il controllo di sicurezza del certificato](#bypass-the-certificate-security-check).
 
@@ -66,9 +66,7 @@ Tuttavia, quando un'applicazione deve connettersi a un servizio Web protetto in 
 
 ### <a name="android"></a>Android
 
-Le applicazioni Xamarin in esecuzione in Android possono usare lo stack di rete gestito `HttpClientHandler` oppure lo stack di rete `AndroidClientHandler` nativo. Per impostazione predefinita, i nuovi progetti per la piattaforma Android usano lo stack di rete `AndroidClientHandler` per supportare TLS 1.2 e usano le API native per migliorare le prestazioni e ottenere dimensioni dei file eseguibili più piccole.
-
-Tuttavia, quando un'applicazione deve connettersi a un servizio Web protetto in esecuzione in locale, per test di sviluppo, è più facile usare lo stack di rete gestito. Di conseguenza, è consigliabile impostare profili del simulatore per build di debug per usare lo stack di rete gestito e profili per build di versione per usare lo stack di rete nativo. Ogni stack di rete può essere impostato a livello di codice o tramite un selettore nelle opzioni del progetto. Per altre informazioni, vedere [Stack HttpClient e selettore dell'implementazione di SSL/TLS per Android](~/android/app-fundamentals/http-stack.md).
+Le applicazioni Xamarin in esecuzione in Android possono usare lo stack di rete gestito `HttpClient` oppure lo stack di rete `AndroidClientHandler` nativo. Per impostazione predefinita, i nuovi progetti per la piattaforma Android usano lo stack di rete `AndroidClientHandler` per supportare TLS 1.2 e usano le API native per migliorare le prestazioni e ottenere dimensioni dei file eseguibili più piccole. Per altre informazioni sugli stack di rete Android, vedere [HttpClient stack e SSL/TLS implementation Selector for Android](~/android/app-fundamentals/http-stack.md).
 
 ## <a name="specify-the-local-machine-address"></a>Specificare l'indirizzo del computer locale
 
@@ -101,7 +99,11 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 Il tentativo di richiamare un servizio Web sicuro locale da un'applicazione in esecuzione nel simulatore iOS o nell'emulatore Android comporterà la generazione di una `HttpRequestException`, anche quando si usa lo stack di rete gestito in ogni piattaforma. Questo avviene perché il certificato di sviluppo HTTPS locale è autofirmato e i certificati autofirmati non sono considerati attendibili da iOS o Android.
 
-Pertanto, è necessario ignorare gli errori SSL quando un'applicazione utilizza un servizio Web sicuro locale. A tale scopo, quando si usa lo stack di rete gestito, impostare la proprietà `ServicePointManager.ServerCertificateValidationCallback` su un callback che ignora il risultato del controllo del certificato di sicurezza per il certificato di sviluppo locale HTTPS:
+Pertanto, è necessario ignorare gli errori SSL quando un'applicazione utilizza un servizio Web sicuro locale. Il meccanismo per eseguire questa operazione è attualmente diverso in iOS e Android.
+
+### <a name="ios"></a>iOS
+
+Gli errori SSL possono essere ignorati in iOS per i servizi Web protetti locali, quando si usa lo stack di rete gestito, impostando la proprietà `ServicePointManager.ServerCertificateValidationCallback` su un callback che ignora il risultato del controllo di sicurezza del certificato per il certificato di sviluppo HTTPS locale:
 
 ```csharp
 #if DEBUG
@@ -114,10 +116,30 @@ Pertanto, è necessario ignorare gli errori SSL quando un'applicazione utilizza 
 #endif
 ```
 
-In questo esempio di codice, viene restituito il risultato della convalida del certificato server quando il certificato sottoposto a convalida non è il certificato `localhost`. Per questo certificato, il risultato della convalida viene ignorato e viene restituito il valore `true`, che indica che il certificato è valido. È consigliabile aggiungere questo codice al metodo `AppDelegate.FinishedLaunching` in iOS e al metodo `MainActivity.OnCreate` in Android, prima della chiamata del metodo `LoadApplication(new App())`.
+In questo esempio di codice, viene restituito il risultato della convalida del certificato server quando il certificato sottoposto a convalida non è il certificato `localhost`. Per questo certificato, il risultato della convalida viene ignorato e viene restituito il valore `true`, che indica che il certificato è valido. Questo codice deve essere aggiunto al metodo `AppDelegate.FinishedLaunching` in iOS, prima della chiamata al metodo `LoadApplication(new App())`.
 
 > [!NOTE]
-> Gli stack di rete nativi in iOS e Android non si connettono a `ServerCertificateValidationCallback`.
+> Gli stack di rete nativi in iOS non si collegano al `ServerCertificateValidationCallback`.
+
+### <a name="android"></a>Android
+
+Gli errori SSL possono essere ignorati in Android per i servizi Web protetti locali, quando si usano gli stack di rete `AndroidClientHandler` gestiti e nativi, impostando la proprietà `ServerCertificateCustomValidationCallback` su un oggetto `HttpClientHandler` su un callback che ignora il risultato del controllo di sicurezza del certificato per il certificato di sviluppo HTTPS locale:
+
+```csharp
+public HttpClientHandler GetInsecureHandler()
+{
+    var handler = new HttpClientHandler();
+    handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
+    {
+        if (cert.Issuer.Equals("CN=localhost"))
+            return true;
+        return errors == System.Net.Security.SslPolicyErrors.None;
+    };
+    return handler;
+}
+```
+
+In questo esempio di codice, viene restituito il risultato della convalida del certificato server quando il certificato sottoposto a convalida non è il certificato `localhost`. Per questo certificato, il risultato della convalida viene ignorato e viene restituito il valore `true`, che indica che il certificato è valido. L'oggetto `HttpClientHandler` risultante deve essere passato come argomento al costruttore di `HttpClient`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
