@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
 ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70283354"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barre di ricerca in Novell. iOS
@@ -57,7 +57,7 @@ Impostazione delle proprietà nella barra di ricerca:
 
 ![Proprietà barra di ricerca](searchbar-images/image6.png)
 
-Genera l' `SearchButtonClicked` evento quando viene premuto il pulsante Cerca. Verrà chiamata la logica di ricerca:
+Genera l'evento `SearchButtonClicked` quando viene premuto il pulsante Cerca. Verrà chiamata la logica di ricerca:
 
 ```csharp
 searchBar.SearchButtonClicked += (sender, e) => {
@@ -88,7 +88,7 @@ Queste proprietà sono illustrate di seguito:
   - Pulsante Cerca risultati/segnalibri-Mostra i risultati della ricerca o l'icona dei segnalibri nella barra di ricerca
   - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile selezionare questa opzione.
   - Mostra la barra dell'ambito: consente agli utenti di limitare l'ambito della ricerca. Ad esempio, quando si esegue la ricerca nell'app Music, l'utente può selezionare se desidera eseguire la ricerca Apple Music o la relativa libreria per un brano o un artista specifico. Per visualizzare varie opzioni, aggiungere una matrice di titoli alla proprietà **ScopeBarTitles** .
-  ![Titoli ambito barra di ricerca](searchbar-images/image4.png)
+  titoli dell'ambito della barra ![Search ](searchbar-images/image4.png)
 
 - **Comportamento del testo** : queste opzioni vengono usate per risolvere il modo in cui l'input dell'utente viene formattato durante la digitazione. Con l'uso di maiuscole, l'inizio di ogni parola o frase viene impostata in lettere maiuscole o ogni carattere. Correzione e controllo ortografico con la richiesta all'utente di ortografia suggerite delle parole durante la digitazione.
 - **Tastiera** : controlla lo stile della tastiera visualizzato per l'input e quindi le chiavi disponibili sulla tastiera. Sono inclusi il tastierino numerico, il tastierino telefonico, la posta elettronica e l'URL insieme ad altre opzioni.

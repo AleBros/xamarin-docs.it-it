@@ -7,15 +7,15 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/28/2016
 ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70288049"
 ---
 # <a name="building-cross-platform-applications"></a>Creazione di applicazioni multipiattaforma
 
-Sono disponibili due opzioni per la condivisione di codice tra applicazioni per dispositivi mobili multipiattaforma: Progetti di asset condivisi e librerie di classi portabili. Queste opzioni sono [illustrate di seguito](~/cross-platform/app-fundamentals/code-sharing.md). sono inoltre disponibili altre informazioni sulle [librerie di classi](~/cross-platform/app-fundamentals/pcl.md) portabili e sui [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md) .
+Sono disponibili due opzioni per la condivisione di codice tra applicazioni per dispositivi mobili multipiattaforma: progetti di asset condivisi e librerie di classi portabili. Queste opzioni sono [illustrate di seguito](~/cross-platform/app-fundamentals/code-sharing.md). sono inoltre disponibili altre informazioni sulle [librerie di classi](~/cross-platform/app-fundamentals/pcl.md) portabili e sui [progetti condivisi](~/cross-platform/app-fundamentals/shared-projects.md) .
 
 <a name="Sections" />
 
@@ -46,7 +46,7 @@ I principi illustrati in questo documento sono pratici per le *attività*dell'ap
 Tasky è una semplice applicazione to-do list per iOS, Android e Windows Phone.
 Vengono illustrati i concetti di base della creazione di un'applicazione multipiattaforma con Novell e viene utilizzato un database SQLite locale.
 
- Elenco attività elenco attività [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ elenco [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) elenco [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Leggere il [Case Study di attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
@@ -63,8 +63,8 @@ Infine, viene brevemente illustrato il testing e vengono forniti riferimenti a u
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Opzioni di condivisione del codice](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Case Study: Relativo Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Case Study: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [App di esempio Tasky (GitHub)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Sviluppo di applicazioni per dispositivi mobili Novell: Nozioni fondamentali C# su multipiattaforma e Novell. Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Sviluppo di applicazioni per dispositivi mobili Novell: C# nozioni fondamentali su più piattaforme e Novell. Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Sviluppo di applicazioni C# per dispositivi mobili con di Greg manette (Reilly)](http://shop.oreilly.com/product/0636920024002.do)
 - [Sviluppo di app per dispositivi mobili multipiattaforma professionali in C# di Scott Olson, John Hunter, ben Horgen, Kenny frequentatori (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

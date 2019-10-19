@@ -8,45 +8,45 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69658030"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-Novell. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) è un controllo di input utente usato per avviare una ricerca. Il `SearchBar` controllo supporta testo segnaposto, input query, esecuzione ricerca e annullamento. Lo screenshot seguente mostra una `SearchBar` query con i risultati visualizzati in `ListView`un:
+Il [`SearchBar`](xref:Xamarin.Forms.SearchBar) Novell. Forms è un controllo di input utente usato per avviare una ricerca. Il controllo `SearchBar` supporta testo segnaposto, input query, esecuzione ricerca e annullamento. Lo screenshot seguente mostra una query di `SearchBar` con i risultati visualizzati in una `ListView`:
 
-[![Screenshot di Searchbar in iOS e Android](searchbar-images/device-searchbars-cropped.png "Searchbar in iOS e Android")](searchbar-images/device-searchbars.png#lightbox "SearchBar in iOS e Android")
+[![Screenshot di SearchBar in iOS e Android](searchbar-images/device-searchbars-cropped.png "SearchBar in iOS e Android")](searchbar-images/device-searchbars.png#lightbox "SearchBar in iOS e Android")
 
-La `SearchBar` classe definisce le proprietà seguenti:
+La classe `SearchBar` definisce le proprietà seguenti:
 
-* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)è un `Color` oggetto che definisce il colore del pulsante Annulla.
-* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)è un `FontAttributes` valore di enumerazione che determina se `SearchBar` il tipo di carattere è grassetto, corsivo o nessuno dei due.
-* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily)è un `string` oggetto che determina la famiglia `SearchBar`di caratteri utilizzata da.
-* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize)può essere un `NamedSize` valore enum o un `double` valore che rappresenta dimensioni specifiche dei tipi di carattere nelle diverse piattaforme.
-* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment)è un `TextAlignment` valore enum che definisce l'allineamento orizzontale del testo della query.
-* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder)è un `string` oggetto che definisce il testo segnaposto, ad esempio "search...".
-* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor)è un `Color` oggetto che definisce il colore del testo segnaposto.
-* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand)è un `ICommand` oggetto che consente di associare le azioni dell'utente, ad esempio le manopole o i clic, ai comandi definiti in un elemento ViewModel.
-* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)è un `object` oggetto che specifica il parametro che deve essere passato `SearchCommand`a.
-* [`Text`](xref:Xamarin.Forms.SearchBar.Text)è un `string` oggetto che contiene il testo della `SearchBar`query in.
-* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor)è un `Color` oggetto che definisce il colore del testo della query.
+* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) è un `Color` che definisce il colore del pulsante Annulla.
+* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) è un valore `FontAttributes` enum che determina se il tipo di carattere del `SearchBar` è grassetto, corsivo o nessuno dei due.
+* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) è un `string` che determina la famiglia di caratteri utilizzata dal `SearchBar`.
+* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) può essere un valore `NamedSize` enum o un valore `double` che rappresenta dimensioni specifiche dei tipi di carattere nelle diverse piattaforme.
+* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) è un valore `TextAlignment` enum che definisce l'allineamento orizzontale del testo della query.
+* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) è un `string` che definisce il testo segnaposto, ad esempio "search...".
+* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) è un `Color` che definisce il colore del testo segnaposto.
+* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) è un `ICommand` che consente di associare le azioni dell'utente, ad esempio le manopole o i clic, ai comandi definiti in un ViewModel.
+* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) è un `object` che specifica il parametro che deve essere passato al `SearchCommand`.
+* [`Text`](xref:Xamarin.Forms.SearchBar.Text) è un `string` contenente il testo della query nella `SearchBar`.
+* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor) è un `Color` che definisce il colore del testo della query.
 
-Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il `SearchBar` che significa che può essere personalizzato ed essere la destinazione delle associazioni dati. La specifica delle proprietà dei `SearchBar` tipi di carattere in è coerente con la personalizzazione del testo in altri [controlli testo Novell. Forms](~/xamarin-forms/user-interface/text/index.md). Per altre informazioni, vedere [tipi di carattere in Novell. Forms](~/xamarin-forms/user-interface/text/fonts.md).
+Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che l'`SearchBar` può essere personalizzata ed essere la destinazione delle associazioni dati. La specifica delle proprietà dei tipi di carattere nel `SearchBar` è coerente con la personalizzazione del testo in altri [controlli testo Novell. Forms](~/xamarin-forms/user-interface/text/index.md). Per altre informazioni, vedere [tipi di carattere in Novell. Forms](~/xamarin-forms/user-interface/text/fonts.md).
 
 ## <a name="create-a-searchbar"></a>Creare una SearchBar
 
-È `SearchBar` possibile creare un'istanza di un oggetto in XAML. La proprietà `Placeholder` facoltativa può essere impostata in modo da definire il testo del suggerimento nella casella di input della query. Il valore predefinito per `Placeholder` è una stringa vuota. se non è impostato, non verrà visualizzato alcun segnaposto. Nell'esempio seguente viene illustrato come creare un'istanza `SearchBar` di in XAML con il `Placeholder` set di proprietà facoltativo:
+È possibile creare un'istanza di un `SearchBar` in XAML. È possibile impostare la proprietà facoltativa `Placeholder` per definire il testo del suggerimento nella casella di input della query. Il valore predefinito per il `Placeholder` è una stringa vuota. se non è impostato, non verrà visualizzato alcun segnaposto. Nell'esempio seguente viene illustrato come creare un'istanza di un `SearchBar` in XAML con il set di proprietà `Placeholder` facoltativo:
 
 ```xaml
 <SearchBar Placeholder="Search items..." />
 ```
 
-Un `SearchBar` oggetto può essere creato anche nel codice:
+Nel codice è anche possibile creare un `SearchBar`:
 
 ```csharp
 SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
@@ -54,7 +54,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
 
 ### <a name="searchbar-appearance-properties"></a>Proprietà aspetto di SearchBar
 
-Il `SearchBar` controllo definisce molte proprietà che personalizzano l'aspetto del controllo. Nell'esempio seguente viene illustrato come creare un'istanza `SearchBar` di in XAML con più proprietà specificate:
+Il controllo `SearchBar` definisce molte proprietà che personalizzano l'aspetto del controllo. Nell'esempio seguente viene illustrato come creare un'istanza di un `SearchBar` in XAML con più proprietà specificate:
 
 ```xaml
 <SearchBar Placeholder="Search items..."
@@ -66,7 +66,7 @@ Il `SearchBar` controllo definisce molte proprietà che personalizzano l'aspetto
            FontAttributes="Italic" />
 ```
 
-È possibile specificare queste proprietà anche quando si crea `SearchBar` un oggetto nel codice:
+È possibile specificare queste proprietà anche quando si crea un oggetto `SearchBar` nel codice:
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,32 +80,32 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-La schermata seguente mostra il controllo `SearchBar` risultante:
+Lo screenshot seguente mostra il controllo `SearchBar` risultante:
 
-[![Screenshot di Searchbar personalizzato in iOS e Android](searchbar-images/device-searchbars-styled-cropped.png "Searchbar personalizzato in iOS e Android")](searchbar-images/device-searchbars-styled.png#lightbox "SearchBar personalizzato in iOS e Android")
+[![Screenshot di SearchBar personalizzato in iOS e Android](searchbar-images/device-searchbars-styled-cropped.png "SearchBar personalizzato in iOS e Android")](searchbar-images/device-searchbars-styled.png#lightbox "SearchBar personalizzato in iOS e Android")
 
 ## <a name="perform-a-search-with-event-handlers"></a>Eseguire una ricerca con i gestori eventi
 
-Una ricerca può essere eseguita usando il `SearchBar` controllo connettendo un gestore eventi a uno degli eventi seguenti:
+Una ricerca può essere eseguita usando il controllo `SearchBar` connettendo un gestore eventi a uno degli eventi seguenti:
 
-* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed)viene chiamato quando l'utente fa clic sul pulsante di ricerca o preme il tasto INVIO.
-* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged)viene chiamato ogni volta che il testo nella casella della query viene modificato.
+* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) viene chiamato quando l'utente fa clic sul pulsante di ricerca o preme il tasto INVIO.
+* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged) viene chiamato ogni volta che il testo nella casella della query viene modificato.
 
-Nell'esempio seguente viene illustrato un gestore eventi associato all' `TextChanged` evento in XAML e viene utilizzato `ListView` un oggetto per visualizzare i risultati della ricerca:
+Nell'esempio seguente viene illustrato un gestore eventi associato all'evento `TextChanged` in XAML e viene utilizzato un `ListView` per visualizzare i risultati della ricerca:
 
 ```xaml
 <SearchBar TextChanged="OnTextChanged" />
 <ListView x:Name="searchResults" >
 ```
 
-Un gestore eventi può essere collegato anche a un `SearchBar` oggetto creato nel codice:
+Un gestore eventi può essere associato anche a un `SearchBar` creato nel codice:
 
 ```csharp
 SearchBar searchBar = new SearchBar {/*...*/};
 searchBar.TextChanged += OnTextChanged;
 ```
 
-Il `TextChanged` gestore eventi nel file code-behind è lo stesso, `SearchBar` indipendentemente dal fatto che venga creato tramite XAML o codice:
+Il gestore dell'evento `TextChanged` nel file code-behind è lo stesso, indipendentemente dal fatto che il `SearchBar` venga creato tramite XAML o il codice:
 
 ```csharp
 void OnTextChanged(object sender, EventArgs e)
@@ -115,13 +115,13 @@ void OnTextChanged(object sender, EventArgs e)
 }
 ```
 
-Nell'esempio precedente viene implicata l'esistenza `DataService` di una classe `GetSearchResults` con un metodo in grado di restituire elementi che corrispondono a una query. Il `SearchBar` `Text` `ListView` valoredella`ItemsSource` proprietà del controllo viene passato al metodoeilrisultatovieneusatoperaggiornarelaproprietàdelcontrollo.`GetSearchResults` L'effetto complessivo è che i risultati della ricerca vengono visualizzati `ListView` nel controllo.
+Nell'esempio precedente viene implicata l'esistenza di una classe `DataService` con un `GetSearchResults` metodo in grado di restituire elementi che corrispondono a una query. Il valore della proprietà `Text` del controllo `SearchBar` viene passato al metodo `GetSearchResults` e il risultato viene utilizzato per aggiornare la proprietà `ItemsSource` del controllo `ListView`. L'effetto complessivo è che i risultati della ricerca vengono visualizzati nel controllo `ListView`.
 
-L'applicazione di esempio fornisce `DataService` un'implementazione della classe che può essere utilizzata per testare la funzionalità di ricerca.
+L'applicazione di esempio fornisce un'implementazione della classe `DataService` che può essere usata per testare la funzionalità di ricerca.
 
 ## <a name="perform-a-search-using-a-viewmodel"></a>Eseguire una ricerca usando un ViewModel
 
-Una ricerca può essere eseguita senza gestori eventi associando le `SearchCommand` proprietà e `SearchCommandParameter` alle `ICommand` implementazioni. Il progetto di esempio illustra queste implementazioni usando il modello Model-View-ViewModel (MVVM). Per altre informazioni sui data binding con MVVM, vedere [data bindings with MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
+Una ricerca può essere eseguita senza gestori eventi associando le proprietà `SearchCommand` e `SearchCommandParameter` a `ICommand` implementazioni. Il progetto di esempio illustra queste implementazioni usando il modello Model-View-ViewModel (MVVM). Per altre informazioni sui data binding con MVVM, vedere [data bindings with MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 Il ViewModel nell'applicazione di esempio contiene il codice seguente:
 
@@ -157,9 +157,9 @@ public class SearchViewModel : INotifyPropertyChanged
 ```
 
 > [!NOTE]
-> Il ViewModel presuppone l'esistenza di una `DataService` classe in grado di eseguire ricerche. La `DataService` classe, inclusi i dati di esempio, è disponibile nell'applicazione di esempio.
+> Il ViewModel presuppone l'esistenza di una classe `DataService` in grado di eseguire ricerche. La classe `DataService`, inclusi i dati di esempio, è disponibile nell'applicazione di esempio.
 
-Il codice XAML seguente mostra come associare un `SearchBar` oggetto al ViewModel di esempio, con `ListView` un controllo che Visualizza i risultati della ricerca:
+Il codice XAML seguente mostra come associare un `SearchBar` al ViewModel di esempio, con un controllo `ListView` che Visualizza i risultati della ricerca:
 
 ```xaml
 <ContentPage ...>
@@ -178,9 +178,9 @@ Il codice XAML seguente mostra come associare un `SearchBar` oggetto al ViewMode
 </ContentPage>
 ```
 
-In questo esempio l' `BindingContext` oggetto viene impostato su un'istanza `SearchViewModel` della classe. Associa `SearchCommand` la `SearchCommandParameter` proprietà `PerformSearch` `SearchBar` a nell'elemento ViewModel e associa la `Text` proprietà alla proprietà. `ICommand` La `ListView.ItemsSource` proprietà è associata `SearchResults` alla proprietà dell'elemento ViewModel.
+Questo esempio imposta il `BindingContext` come un'istanza della classe `SearchViewModel`. Associa la proprietà `SearchCommand` al `PerformSearch` `ICommand` nell'elemento ViewModel e associa la proprietà di `Text` `SearchBar` alla proprietà `SearchCommandParameter`. La proprietà `ListView.ItemsSource` è associata alla proprietà `SearchResults` dell'elemento ViewModel.
 
-Per ulteriori informazioni sull' `ICommand` interfaccia e sulle associazioni, vedere [Novell. Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md) e [l'interfaccia ICommand](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+Per ulteriori informazioni sull'interfaccia `ICommand` e sulle associazioni, vedere [Novell. forms data binding](~/xamarin-forms/app-fundamentals/data-binding/index.md) e [ICommand Interface](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

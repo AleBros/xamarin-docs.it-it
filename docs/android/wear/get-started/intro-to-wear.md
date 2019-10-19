@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70758503"
 ---
 # <a name="introduction-to-android-wear"></a>Introduzione ad Android Wear
@@ -36,7 +36,7 @@ La prima versione di Android Wear è stata incentrata principalmente sull'estens
 
 #### <a name="wearable-notifications"></a>Notifiche indossabili
 
-Il modo più semplice per supportare Android Wear consiste nel sfruttare la natura condivisa delle notifiche tra il palmare e il dispositivo indossabile. Usando l'API di notifica del supporto V4 e `WearableExtender` la classe (disponibile nella [libreria di supporto per Novell Android](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), è possibile sfruttare le funzionalità native della piattaforma, ad esempio le schede di stile della posta in arrivo o l'input vocale. L'esempio [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) fornisce un codice di esempio che illustra come inviare un elenco di notifiche a un dispositivo Android Wear. 
+Il modo più semplice per supportare Android Wear consiste nel sfruttare la natura condivisa delle notifiche tra il palmare e il dispositivo indossabile. Usando l'API di notifica del supporto V4 e la classe `WearableExtender` (disponibile nella [libreria di supporto per Novell Android](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), è possibile sfruttare le funzionalità native della piattaforma, ad esempio le schede di stile della posta in arrivo o l'input vocale. L'esempio [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) fornisce un codice di esempio che illustra come inviare un elenco di notifiche a un dispositivo Android Wear. 
 
 #### <a name="companion-applications"></a>Applicazioni complementari
 
@@ -44,22 +44,22 @@ Un'altra strategia consiste nel creare un'applicazione completa che viene esegui
 
 ### <a name="user-interface"></a>Interfaccia utente
 
-Il modello di navigazione principale per l'usura è costituito da una serie di schede disposte verticalmente. Ognuna di queste schede può disporre di azioni associate sovrapposte nella stessa riga. Questa `GridViewPager` funzionalità è fornita dalla classe, che è conforme allo stesso `ListView`concetto di adattatore di. In genere si associa `GridViewPager` l'oggetto `FragmentGridPagerAdaptor` a un `GridPagerAdaptor`oggetto (o) che consente di `Fragment`rappresentare ogni cella di riga e colonna come: 
+Il modello di navigazione principale per l'usura è costituito da una serie di schede disposte verticalmente. Ognuna di queste schede può disporre di azioni associate sovrapposte nella stessa riga. Questa funzionalità è fornita dalla classe `GridViewPager`. si attiene allo stesso concetto di adapter `ListView`. In genere, il `GridViewPager` viene associato a una `FragmentGridPagerAdaptor` (o `GridPagerAdaptor`) che consente di rappresentare le celle di ogni riga e colonna come `Fragment`: 
 
 [![Navigazione con usura](intro-to-wear-images/2d-picker-sml.png "Navigazione con usura")](intro-to-wear-images/2d-picker.png#lightbox)
 
 Wear USA anche pulsanti di azione che sono costituiti da un cerchio grande colorato con testo di descrizione piccolo sotto di esso, come illustrato in precedenza.  L'esempio [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) illustra come usare `GridViewPager` e `GridPagerAdapter` in un'app Wear.
 
-Android Wear 2,0 aggiunge un cassetto di navigazione, un cassetto delle azioni e pulsanti di azione inline all'interfaccia utente Wear. Per altre informazioni sugli elementi dell'interfaccia utente di Android Wear 2.0, vedere l'argomento relativo all'[anatomia](https://www.google.com/design/spec-wear/system-overview/anatomy.html) Android. 
+Android Wear 2,0 aggiunge un cassetto di navigazione, un cassetto delle azioni e pulsanti di azione inline all'interfaccia utente Wear. Per altre informazioni sugli elementi dell'interfaccia utente di Android Wear 2,0, vedere l'argomento relativo all' [anatomia](https://www.google.com/design/spec-wear/system-overview/anatomy.html) Android. 
 
 ### <a name="communications"></a>Comunicazioni
 
 Android Wear offre due diverse API di comunicazione per facilitare le comunicazioni tra app indossabili e app palmari complementari: 
 
-**API dati** &ndash; Questa API è simile a un archivio dati sincronizzato tra il dispositivo indossabile e il dispositivo palmare. Android si occupa della propagazione delle modifiche tra indossabili e palmari quando è ottimale. Quando il Wearable non è compreso nell'intervallo, Accoda la sincronizzazione per un momento successivo. Il punto di ingresso principale per questa API `WearableClass.DataApi`è. Per altre informazioni su questa API, vedere l'argomento Android [syncing data items](https://developer.android.com/training/wearables/data-layer/data-items.html) . 
+**API dati** &ndash; questa API è simile a un archivio dati sincronizzato tra il dispositivo indossabile e il dispositivo palmare. Android si occupa della propagazione delle modifiche tra indossabili e palmari quando è ottimale. Quando il Wearable non è compreso nell'intervallo, Accoda la sincronizzazione per un momento successivo. Il punto di ingresso principale per questa API è `WearableClass.DataApi`. Per altre informazioni su questa API, vedere l'argomento Android [syncing data items](https://developer.android.com/training/wearables/data-layer/data-items.html) . 
 
-**API messaggio** &ndash; Questa API consente di usare un percorso di comunicazione di livello inferiore: un payload ridotto viene inviato unidirezionale senza sincronizzazione tra le app palmari e indossabili.
-Il punto di ingresso principale per questa API `WearableClass.MessageApi`è.
+**API messaggi** &ndash; questa API consente di usare un percorso di comunicazione di livello inferiore: un payload ridotto viene inviato unidirezionale senza sincronizzazione tra le app palmari e indossabili.
+Il punto di ingresso principale per questa API è `WearableClass.MessageApi`.
 Per altre informazioni su questa API, vedere l'argomento [invio e ricezione dei messaggi](https://developer.android.com/training/wearables/data-layer/messages.html) Android.
 
 È possibile scegliere di registrare i callback per la ricezione dei messaggi tramite ciascuna interfaccia del listener API o, in alternativa, implementare un servizio nell'app che deriva da `WearableListenerService`.
@@ -126,11 +126,11 @@ Per ulteriori informazioni su questi due nuovi cassetti interattivi, vedere l'ar
 
 #### <a name="curved-layouts"></a>Layout curvi 
 
-Wear 2,0 introduce nuove funzionalità per la visualizzazione di layout curvi nei dispositivi round Wear. In particolare, la `WearableRecyclerView` nuova classe è ottimizzata per la visualizzazione di un elenco di elementi verticali nelle visualizzazioni round: 
+Wear 2,0 introduce nuove funzionalità per la visualizzazione di layout curvi nei dispositivi round Wear. In particolare, la nuova classe `WearableRecyclerView` è ottimizzata per la visualizzazione di un elenco di elementi verticali nelle visualizzazioni round: 
 
 ![Esempio di layout curvo](intro-to-wear-images/curved-layout.png "Esempio di layout curvo")
 
-`WearableRecyclerView`estende la `RecyclerView` classe per supportare layout curvi e movimenti di scorrimento circolari. Per altre informazioni, vedere la documentazione dell'API [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) per Android. 
+`WearableRecyclerView` estende la classe `RecyclerView` per supportare layout curvi e movimenti di scorrimento circolari. Per altre informazioni, vedere la documentazione dell'API [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) per Android. 
 
 #### <a name="standalone-apps"></a>App autonome 
 
@@ -138,7 +138,7 @@ Le app Android Wear 2,0 possono funzionare indipendentemente dalle app palmari. 
 
 #### <a name="wrist-gestures"></a>Movimenti del polso 
 
-I movimenti dei polsi consentono agli utenti di interagire con l'app senza usare il touchscreen &ndash; . gli utenti possono rispondere all'app con una sola mano. Sono supportati due movimenti del polso: 
+I movimenti dei polsi consentono agli utenti di interagire con l'app senza usare il touchscreen &ndash; gli utenti possono rispondere all'app con una sola mano. Sono supportati due movimenti del polso: 
 
 - Scorrimenti rapidi
 - Scorri il polso
