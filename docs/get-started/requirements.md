@@ -6,13 +6,13 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/01/2019
-ms.openlocfilehash: e4584867e457661b2dfaa43fcbde7b1adcabeb85
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.date: 10/16/2019
+ms.openlocfilehash: 46a72534fba7a45323a82ad121e5844410472812
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273096"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584341"
 ---
 # <a name="xamarinforms-requirements"></a>Requisiti di Xamarin.Forms
 
@@ -71,14 +71,16 @@ La versione di destinazione/compilazione per i progetti Android **deve** inoltre
 
 ## <a name="mac-system-requirements"></a>Requisiti di sistema Mac
 
-È possibile usare Visual Studio per Mac per sviluppare app Novell. Forms in macOS High Sierra (10,13) o versione successiva. Per sviluppare app iOS, si consiglia di installare almeno iOS 10 SDK e Xcode 9.
+È possibile usare Visual Studio per Mac per sviluppare app Novell. Forms in macOS High Sierra (10,13) o versione successiva. Per sviluppare app iOS, è consigliabile usare la versione più recente di Xcode, iOS e macOS. Per i requisiti di versione specifici, vedere le note sulla versione più recenti di [Novell. iOS](/xamarin/ios/release-notes/).
 
 > [!NOTE]
 > Non è possibile sviluppare app di Windows in macOS.
 
 ## <a name="windows-system-requirements"></a>Requisiti di sistema Windows
 
-È possibile compilare app Xamarin.Forms per iOS e Android in qualsiasi installazione di Windows che supporti lo sviluppo con Xamarin. È richiesto Visual Studio 2017 o versione successiva in esecuzione in Windows 7 o versione successiva. Per lo sviluppo di app iOS è necessario un Mac connesso in rete.
+È possibile compilare app Xamarin.Forms per iOS e Android in qualsiasi installazione di Windows che supporti lo sviluppo con Xamarin. Per il supporto completo delle funzionalità della piattaforma corrente, usare la versione più recente di Visual Studio. 
+
+Per lo sviluppo di iOS è necessario un Mac in rete con la versione più recente di Xcode e la versione minima di macOS specificata da Apple.
 
 <a name="windows10" />
 
@@ -88,7 +90,7 @@ Lo sviluppo di app Xamarin.Forms per la piattaforma UWP richiede:
 
 - Windows 10 (ultima versione consigliata, Fall Creators Update minimum)
 
-- Visual Studio 2019 consigliato (Visual Studio 2017 versione 15,8 minima)
+- Visual Studio 2019 consigliato
 
 - [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
