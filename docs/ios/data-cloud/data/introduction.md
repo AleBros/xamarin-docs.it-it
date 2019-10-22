@@ -8,17 +8,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
 ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70767024"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introduzione all'archiviazione dei dati nelle app Novell. iOS
 
 ## <a name="when-to-use-a-database"></a>Quando utilizzare un database
 
-Mentre le funzionalità di archiviazione ed elaborazione dei dispositivi mobili aumentano, i telefoni e i tablet continuano a &amp; rimanere dietro le controparti del portatile desktop. Per questo motivo è opportuno prendere tempo per pianificare l'architettura di archiviazione dei dati per l'app piuttosto che solo supponendo che un database sia la risposta giusta sempre. Sono disponibili diverse opzioni che soddisfano requisiti diversi, ad esempio:
+Anche se le funzionalità di archiviazione e di elaborazione dei dispositivi mobili aumentano, i telefoni e i tablet restano in ritardo dietro le controparti desktop &amp; portatile. Per questo motivo è opportuno prendere tempo per pianificare l'architettura di archiviazione dei dati per l'app piuttosto che solo supponendo che un database sia la risposta giusta sempre. Sono disponibili diverse opzioni che soddisfano requisiti diversi, ad esempio:
 
 - **Preferenze** : iOS offre un meccanismo incorporato per l'archiviazione di semplici coppie chiave-valore di dati. Se si archiviano semplici impostazioni utente o piccole parti di dati (ad esempio informazioni sulla personalizzazione), utilizzare le funzionalità native della piattaforma per archiviare questo tipo di informazioni. Per iOS è inoltre possibile sfruttare la sincronizzazione di iCloud per questi dati, sia per il backup che per la sincronizzazione per gli utenti con più dispositivi.
 - **File di testo** : input utente o cache del contenuto scaricato, ad esempio HTML) può essere archiviato direttamente nel file System. Usare una convenzione di denominazione dei file appropriata per organizzare i file e trovare i dati.

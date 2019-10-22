@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771457"
 ---
 # <a name="introduction-to-effects"></a>Introduzione agli effetti
 
-_Gli effetti consentono di personalizzare i controlli nativi di ogni piattaforma e in genere vengono usati per apportare piccole modifiche allo stile. Questo articolo offre un'introduzione agli effetti, delinea il limite tra gli effetti e i renderer personalizzati e descrive la classe PlatformEffect._
+_Gli effetti consentono la personalizzazione dei controlli nativi in ogni piattaforma e vengono in genere utilizzati per piccole modifiche dello stile. Questo articolo fornisce un'introduzione agli effetti, delinea il confine tra gli effetti e i renderer personalizzati e descrive la classe PlatformEffect._
 
 Le [pagine, i layout e i controlli](~/xamarin-forms/user-interface/controls/index.md) Xamarin.Forms presentano un'API comune per descrivere le interfacce utente per dispositivi mobili multipiattaforma. Il rendering di ogni pagina, layout e controllo viene eseguito in modo diverso su ogni piattaforma usando una classe `Renderer`, che a sua volta crea un controllo nativo (corrispondente alla rappresentazione Xamarin.Forms), lo dispone sullo schermo e aggiunge il comportamento specificato nel codice condiviso.
 
@@ -41,7 +41,7 @@ La tabella seguente elenca lo spazio dei nomi per la classe `PlatformEffect` su 
 |Piattaforma|Spazio dei nomi|Contenitore|Control|
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
-|Android|Xamarin.Forms.Platform.Android|ViewGroup|Visualizza|
+|Android|Xamarin.Forms.Platform.Android|ViewGroup|Visualizzazione|
 |Piattaforma UWP (Universal Windows Platform)|Xamarin.Forms.Platform.UWP|FrameworkElement|FrameworkElement|
 
 Ogni classe `PlatformEffect` specifica della piattaforma espone le proprietà seguenti:

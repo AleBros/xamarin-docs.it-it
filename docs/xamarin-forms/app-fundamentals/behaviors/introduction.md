@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: d62ba6b025b2fe9865df8279a5e98eba254bb5a2
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70772056"
 ---
 # <a name="introduction-to-behaviors"></a>Introduzione ai comportamenti
 
-_I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza sottoclassarli. La funzionalità viene invece implementata in una classe di comportamento e associata al controllo come se fosse parte del controllo stesso. Questo articolo offre un'introduzione ai comportamenti._
+_I comportamenti consentono di aggiungere funzionalità ai controlli dell'interfaccia utente senza dover sottometterle in sottoclasse. Al contrario, la funzionalità viene implementata in una classe di comportamento e collegata al controllo come se facesse parte del controllo stesso. Questo articolo fornisce un'introduzione ai comportamenti._
 
 I comportamenti consentono di implementare il codice che normalmente dovrebbe essere scritto come code-behind, poiché interagisce direttamente con l'API del controllo in modo tale da poter essere associato concisamente al controllo e inserito nel pacchetto per essere riutilizzato in più di un'applicazione. Possono essere usati per offrire un'ampia gamma di funzionalità ai controlli, ad esempio:
 
