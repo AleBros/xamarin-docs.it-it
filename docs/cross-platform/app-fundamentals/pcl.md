@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: a4ee81f7d59c9fb680dfd371a7aaba7660fb3343
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68681066"
 ---
 # <a name="portable-class-libraries-pcl"></a>Librerie di classi portabili
@@ -64,7 +64,7 @@ Per altre informazioni sulle funzionalità dei diversi profili, vedere il [sito 
 
 **Svantaggi**
 
-1. Poiché la stessa libreria di classi portabile è condivisa tra più applicazioni, non è possibile fare riferimento alle librerie specifiche della piattaforma, ad esempio Community.CsharpSqlite.WP7).
+1. Poiché la stessa libreria di classi portabile è condivisa tra più applicazioni, non è possibile fare riferimento alle librerie specifiche della piattaforma, ad esempio Community. CsharpSqlite. WP7).
 2. Il subset della libreria di classi portabile non può includere classi che altrimenti sarebbero disponibili sia in MonoTouch che in mono per Android, ad esempio DllImport o System. IO. file.
 
 > [!NOTE]
@@ -74,7 +74,7 @@ In alcuni casi è possibile aggirare entrambi gli svantaggi usando il modello di
 
 Questo diagramma illustra l'architettura di un'applicazione multipiattaforma che usa una libreria di classi portabile per condividere il codice, ma anche l'uso dell'inserimento delle dipendenze per passare le funzionalità dipendenti dalla piattaforma:
 
-[![](pcl-images/image1.png "Questo diagramma illustra l'architettura di un'applicazione multipiattaforma che usa una libreria di classi portabile per condividere il codice, ma anche l'uso dell'inserimento delle dipendenze per passare le funzionalità dipendenti dalla piattaforma")](pcl-images/image1.png#lightbox)
+[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -100,7 +100,7 @@ Il PCL è ora pronto per l'aggiunta del codice. È anche possibile farvi riferim
 
 Per visualizzare e modificare le impostazioni di PCL per questo progetto, fare clic con il pulsante destro del mouse sul progetto e scegliere **opzioni > compila > generale** per visualizzare la schermata riportata di seguito:
 
-[![Opzioni del progetto PCL per impostare il profilo](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
+[![PCL le opzioni del progetto per impostare il profilo](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
 
 Fare clic su **Cambia..** . per modificare il profilo di destinazione per la libreria di classi portabile.
 
@@ -110,11 +110,11 @@ Se il profilo viene modificato dopo che il codice è già stato aggiunto alla PC
 
 Quando il codice viene scritto in una libreria di librerie di classi portabili, l'editor di Visual Studio per Mac rileverà le limitazioni del profilo selezionato e modificherà di conseguenza le opzioni di completamento automatico. Questo screenshot, ad esempio, Mostra le opzioni di completamento automatico per System.IO usando il profilo predefinito (Profile136) usato nella Visual Studio per Mac: si noti la barra di scorrimento che indica circa la metà delle classi disponibili. in effetti, sono presenti solo 14 classi disponibili).
 
-[![Elenco IntelliSense di 14 classi nella classe System.IO di una libreria PCL](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
+[![Intellisense elenco di 14 classi nella classe System.IO di una libreria di classi portabile](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
 
-Confrontare con il completamento automatico System.io in un progetto Novell. iOS o Novell. Android. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
+Confrontare con il completamento automatico di System.IO in un progetto Novell. iOS o Novell. Android. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
 
-[![Elenco IntelliSense di classi 40 nello spazio dei nomi .NET Framework System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
+[![Intellisense elenco di classi 40 nello spazio dei nomi .NET Framework System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
 
 Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibilità di condividere il codice senza interruzioni in molte piattaforme significa che alcune API non sono disponibili perché non hanno implementazioni confrontabili in tutte le piattaforme possibili.
 
@@ -122,11 +122,11 @@ Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibi
 
 Una volta creato un progetto di libreria di classi portabile, è possibile aggiungere un riferimento a esso da qualsiasi applicazione o progetto di libreria compatibile nello stesso modo in cui si aggiungono in genere i riferimenti. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul nodo riferimenti e scegliere **modifica riferimenti...** quindi passare alla scheda **progetti** come illustrato:
 
-[![Aggiungere un riferimento a una libreria di classi portabile tramite l'opzione modifica riferimenti](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
+[![Add un riferimento a una libreria di classi portabile tramite l'opzione modifica riferimenti](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
 
 Lo screenshot seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Novell. iOS.
 
-[![Soluzione di esempio TaskyPortable che mostra il progetto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
+[![TaskyPortable soluzione di esempio che mostra il progetto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
 
 L'output di una libreria di classi portabile (ad esempio, la DLL di assembly risultante) può essere aggiunto anche come riferimento alla maggior parte dei progetti. Questo rende la libreria di classi portabile una soluzione ideale per la distribuzione di componenti e librerie multipiattaforma.
 
@@ -142,14 +142,14 @@ L'aggiunta di una libreria di classi portabile alla soluzione in Visual Studio �
 
 1. Nella schermata **Aggiungi nuovo progetto** selezionare l'opzione **libreria di classi (portabile legacy)** . Si noti che la descrizione a destra informa che questo tipo di progetto è stato deprecato.
 
-    [![Finestra nuovo progetto per creare una libreria di classi] portabile (pcl-images/image10-sml.png "Libreria di classi") portabile](pcl-images/image10.png#lightbox)
+    [![Finestra nuovo progetto per creare una libreria di classi portabile](pcl-images/image10-sml.png "Libreria di classi portabile")](pcl-images/image10.png#lightbox)
 
 2. In Visual Studio verrà immediatamente visualizzata la finestra di dialogo seguente in modo che sia possibile configurare il profilo.
  Selezionare le piattaforme che è necessario supportare e fare clic su OK.
 
     [![Selezionare le piattaforme di destinazione per la libreria](pcl-images/image11-sml.png "Selezionare le piattaforme che è necessario supportare e premere OK")](pcl-images/image11.png#lightbox)
 
-3. Il progetto PCL verrà visualizzato come illustrato nella Esplora soluzioni &ndash; il testo (portabile) accanto al nome del progetto per indicare che si tratta di una libreria di classi portabile (PCL **)** :
+3. Il progetto PCL verrà visualizzato come illustrato nella Esplora soluzioni &ndash; viene visualizzato il testo (portabile) accanto al nome del progetto per indicare che si tratta di una libreria di classi portabile **(PCL)** :
 
     ![NET Framework definito dal profilo PCL](pcl-images/image12.png "NET Framework definito dal profilo PCL")
 
@@ -159,7 +159,7 @@ Il PCL è ora pronto per l'aggiunta del codice. È anche possibile farvi riferim
 
 Le impostazioni di PCL possono essere visualizzate e modificate facendo clic con il pulsante destro del mouse sul progetto e scegliendo **proprietà > libreria** , come illustrato nello screenshot seguente:
 
-[![Modificare le destinazioni della piattaforma](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
+[![Edit le destinazioni della piattaforma](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
 
 Se il profilo viene modificato dopo che il codice è già stato aggiunto alla PCL, è possibile che la libreria non venga più compilata se il codice fa riferimento a funzionalità che non fanno parte del profilo appena selezionato.
 
@@ -170,11 +170,11 @@ Se il profilo viene modificato dopo che il codice è già stato aggiunto alla PC
 
 Quando il codice viene scritto in una libreria PCL, Visual Studio riconosce le limitazioni del profilo selezionato e modifica di conseguenza le opzioni di IntelliSense. Questo screenshot, ad esempio, Mostra le opzioni di completamento automatico per System.IO usando il profilo predefinito (Profile136). si noti la barra di scorrimento che indica circa la metà delle classi disponibili. in realtà, sono disponibili solo 14 classi.
 
-[![Ridotto numero di classi IO disponibili in una libreria di classi portabile](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
+[![Reduced numero di classi IO disponibili in una libreria di classi portabile](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
 
-Confrontare con il completamento automatico di System.io in un progetto normale. sono disponibili 40 classi, tra cui classi di uso comune `File` come `Directory` e che non si trovano in alcun profilo PCL.
+Confrontare con il completamento automatico di System.IO in un progetto normale. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
 
-[![Molte altre classi di i/o disponibili nell'.NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
+[![Many più classi di i/o disponibili nell'.NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
 
 Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibilità di condividere il codice senza interruzioni in molte piattaforme significa che alcune API non sono disponibili perché non hanno implementazioni confrontabili in tutte le piattaforme possibili.
 
@@ -183,13 +183,13 @@ Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibi
 
 ### <a name="using-pcl"></a>Uso di PCL
 
-Una volta creato un progetto di libreria di classi portabile, è possibile aggiungere un riferimento a esso da qualsiasi applicazione o progetto di libreria compatibile nello stesso modo in cui si aggiungono in genere i riferimenti. In Visual Studio fare clic con il pulsante destro del mouse sul nodo `Add Reference...` riferimenti, quindi scegliere passa alla scheda **progetti > soluzione** come illustrato:
+Una volta creato un progetto di libreria di classi portabile, è possibile aggiungere un riferimento a esso da qualsiasi applicazione o progetto di libreria compatibile nello stesso modo in cui si aggiungono in genere i riferimenti. In Visual Studio fare clic con il pulsante destro del mouse sul nodo riferimenti e scegliere `Add Reference...` quindi passare alla scheda **progetti > soluzione** , come illustrato di seguito:
 
-[![Aggiungere un riferimento a una libreria di classi portabile tramite la scheda Aggiungi progetti di riferimento](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
+[![Add un riferimento a una libreria di classi portabile tramite la scheda Aggiungi progetti di riferimento](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
 
 La schermata seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Novell. iOS.
 
-[![Soluzione di esempio TaskyPortable che mostra una libreria PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
+[![TaskyPortable soluzione di esempio che mostra una libreria PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
 
 L'output di una libreria di classi portabile (ad esempio, la DLL di assembly risultante) può essere aggiunto anche come riferimento alla maggior parte dei progetti.
 Questo rende la libreria di classi portabile una soluzione ideale per la distribuzione di componenti e librerie multipiattaforma.
@@ -201,19 +201,19 @@ Questo rende la libreria di classi portabile una soluzione ideale per la distrib
 L'applicazione di esempio [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) illustra come è possibile usare una libreria di classi portabile con Novell.
 Ecco alcune schermate delle app risultanti eseguite in iOS e Android:
 
-[![](pcl-images/image18.png "Ecco alcune schermate delle app risultanti eseguite in iOS, Android e Windows Phone")](pcl-images/image18.png#lightbox)
+[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)
 
 Condivide una serie di dati e classi di logica che sono codice puramente portabile, oltre a illustrare come incorporare i requisiti specifici della piattaforma usando l'inserimento di dipendenze per l'implementazione del database SQLite.
 
 La struttura della soluzione è illustrata di seguito (in Visual Studio per Mac e in Visual Studio rispettivamente):
 
-[![](pcl-images/image19.png "La struttura della soluzione è illustrata in Visual Studio per Mac e Visual Studio rispettivamente")](pcl-images/image19.png#lightbox)
+[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png#lightbox)
 
 Poiché il codice SQLite-NET presenta parti specifiche della piattaforma (per lavorare con le implementazioni di SQLite in ogni sistema operativo diverso) a scopo dimostrativo, è stato eseguito il refactoring in una classe astratta che può essere compilata in una libreria di classi portabile e il codice effettivo implementato come sottoclassi nei progetti iOS e Android.
 
 ### <a name="taskyportablelibrary"></a>TaskyPortableLibrary
 
-La libreria di classi portabile è limitata nelle funzionalità .NET che può supportare. Poiché è compilato per l'esecuzione su più piattaforme, non può usare le `[DllImport]` funzionalità usate in SQLite-NET. SQLite-NET viene invece implementato come una classe astratta e quindi vi viene fatto riferimento tramite il resto del codice condiviso. Di seguito è riportato un estratto dell'API astratta:
+La libreria di classi portabile è limitata nelle funzionalità .NET che può supportare. Poiché è compilato per l'esecuzione su più piattaforme, non può usare la funzionalità `[DllImport]` usata in SQLite-NET. SQLite-NET viene invece implementato come una classe astratta e quindi vi viene fatto riferimento tramite il resto del codice condiviso. Di seguito è riportato un estratto dell'API astratta:
 
 ```csharp
 public abstract class SQLiteConnection : IDisposable {
@@ -254,7 +254,7 @@ Il resto del codice condiviso usa la classe astratta per "archiviare" e "recuper
 
 I progetti di applicazioni iOS e Android contengono l'interfaccia utente e altri codici specifici della piattaforma usati per collegare il codice condiviso nella libreria di classi portabile (PCL).
 
-Questi progetti contengono anche un'implementazione dell'API di database astratta che funziona su tale piattaforma. In iOS e Android il motore di database SQLite è incorporato nel sistema operativo, pertanto l'implementazione può usare `[DllImport]` come illustrato per fornire l'implementazione concreta della connettività del database. Di seguito è riportato un estratto del codice di implementazione specifico della piattaforma:
+Questi progetti contengono anche un'implementazione dell'API di database astratta che funziona su tale piattaforma. In iOS e Android il motore di database SQLite è incorporato nel sistema operativo, pertanto l'implementazione può utilizzare `[DllImport]` come illustrato per fornire l'implementazione concreta della connettività del database. Di seguito è riportato un estratto del codice di implementazione specifico della piattaforma:
 
 ```csharp
 [DllImport("sqlite3", EntryPoint = "sqlite3_open")]

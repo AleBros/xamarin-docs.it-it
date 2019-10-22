@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
 ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273120"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout per le app tablet e desktop
@@ -42,7 +42,7 @@ Per offrire un'esperienza di avvio piacevole e garantire che la risoluzione a sc
 Prima di iOS 9 tutte le app occupavano l'intero schermo del dispositivo, ma alcuni iPad ora possono eseguire il [multitasking a schermo diviso](~/ios/platform/multitasking.md).
 Ciò significa che l'app potrebbe occupare solo una colonna sottile sul lato dello schermo, il 50% della larghezza dello schermo o l'intero schermo.
 
-[![](tablet-images/ipad-sml.png "Esempio di schermata Split iPad")](tablet-images/ipad.png#lightbox "Esempio di schermata Split iPad")
+[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 La funzionalità Split Screen significa che è consigliabile progettare l'applicazione in modo che funzioni bene con un minimo di 320 pixel di larghezza o fino a 1366 pixel di larghezza.
 
@@ -59,7 +59,7 @@ Per supportare tablet e computer desktop che eseguono Windows, è necessario usa
 
 Le app in esecuzione su tablet e desktop di Windows possono essere ridimensionate in dimensioni arbitrarie, oltre all'esecuzione a schermo intero.
 
-[![](tablet-images/splitscreen-sml.png "Esempio Windows Split screen")](tablet-images/splitscreen.png#lightbox "Esempio Windows Split screen")
+[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
 <a name="optimize" />
 
@@ -67,7 +67,7 @@ Le app in esecuzione su tablet e desktop di Windows possono essere ridimensionat
 
 È possibile modificare l'interfaccia utente di Novell. Forms a seconda che sia in uso un telefono o un tablet/dispositivo desktop. Ciò significa che è possibile ottimizzare l'esperienza utente per i dispositivi a schermo intero, ad esempio tablet e computer desktop.
 
-### <a name="deviceidiom"></a>Device.Idiom
+### <a name="deviceidiom"></a>Device. Idiom
 
 È possibile usare la classe [`Device`](~/xamarin-forms/platform/device.md) per modificare il comportamento dell'app o dell'interfaccia utente. Utilizzando l'enumerazione `Device.Idiom` è possibile
 
@@ -84,9 +84,9 @@ Questo approccio può essere espanso per apportare modifiche significative ai si
 
 ### <a name="leveraging-masterdetailpage"></a>Uso di MasterDetailPage
 
-Il [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) è ideale per schermi di dimensioni maggiori, specialmente nell'iPad in cui usa il [`UISplitViewController`](xref:UIKit.UISplitViewController) per offrire un'esperienza iOS nativa.
+Il [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) è ideale per schermi di dimensioni maggiori, soprattutto sull'iPad in cui usa il [`UISplitViewController`](xref:UIKit.UISplitViewController) per offrire un'esperienza iOS nativa.
 
-Vedere [questo post di Blog di Novell](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) per informazioni su come adattare l'interfaccia utente in modo che i telefoni usino un layout e schermi più grandi possano usarlo con un altro (con il `MasterDetailPage`).
+Vedere [questo post di Blog di Novell](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) per informazioni su come adattare l'interfaccia utente in modo che i telefoni usino un layout e schermi più grandi possano usarlo con un altro (`MasterDetailPage`).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

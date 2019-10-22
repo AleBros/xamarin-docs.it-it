@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: 38d9b42b3a29ea46d05a1d1cc4e38641d2445786
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71997180"
 ---
 # <a name="wpf-platform-setup"></a>Configurazione della piattaforma WPF
@@ -42,13 +42,13 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 3. Digitare un nome per il progetto con un'estensione **WPF** , ad esempio **BoxViewClock. WPF**. Fare clic sul pulsante **Sfoglia** , selezionare la cartella **BoxViewClock** e quindi **selezionare cartella**. Il progetto WPF verrà inserito nella stessa directory degli altri progetti della soluzione.
 
-    ![Aggiungere un nuovo progetto WPF](wpf-images/add-new-project.png "aggiungere un nuovo progetto WPF")
+    ![Aggiungere un nuovo progetto WPF](wpf-images/add-new-project.png "Aggiungere un nuovo progetto WPF")
 
     Fare clic su OK per creare il progetto.
 
 4. Nel **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nuovo progetto **BoxViewClock. WPF** e scegliere **Gestisci pacchetti NuGet**. Selezionare la scheda **Sfoglia** , fare clic sulla casella di controllo **Includi versione preliminare** e cercare **Novell. Forms**.
 
-    ![Selezionare il pacchetto NuGet](wpf-images/select-nuget-package.png "selezionare il pacchetto NuGet")
+    ![Selezionare il pacchetto NuGet](wpf-images/select-nuget-package.png "Selezionare il pacchetto NuGet")
 
     Selezionare il pacchetto e fare clic sul pulsante **Installa** .
 
@@ -56,11 +56,11 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 6. Fare clic con il pulsante destro del mouse sul nome della soluzione nel **Esplora soluzioni** e selezionare **Gestisci pacchetti NuGet per la soluzione**. Selezionare la scheda **aggiornamento** e il pacchetto **Novell. Forms** . Selezionare tutti i progetti e aggiornarli alla stessa versione di Novell. Forms:
 
-    ![Aggiornare]il pacchetto NuGet(wpf-images/update-nuget-package.png "aggiornare il pacchetto NuGet")
+    ![Aggiornare il pacchetto NuGet](wpf-images/update-nuget-package.png "Aggiornare il pacchetto NuGet")
 
 7. Nel progetto WPF, fare clic con il pulsante destro del mouse su **riferimenti**. Nella finestra di dialogo **Gestione riferimenti** selezionare **progetti** a sinistra e selezionare la casella di controllo accanto al progetto **BoxViewClock** :
 
-    ![Riferimento al progetto condiviso](wpf-images/reference-shared-project.png "fare riferimento al progetto condiviso")
+    ![Fare riferimento al progetto condiviso](wpf-images/reference-shared-project.png "Fare riferimento al progetto condiviso")
 
 8. Modificare il file **MainWindow. XAML** del progetto WPF. Nel tag `Window` aggiungere una dichiarazione dello spazio dei nomi XML per l'assembly **Novell. Forms. Platform. WPF** e lo spazio dei nomi:
 
@@ -68,7 +68,7 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    Modificare ora il tag `Window` in `wpf:FormsApplicationPage`. Modificare l'impostazione `Title` con il nome dell'applicazione, ad esempio **BoxViewClock**. Il file XAML completato dovrebbe essere simile al seguente:
+    Modificare ora il tag `Window` in `wpf:FormsApplicationPage`. Modificare l'impostazione di `Title` con il nome dell'applicazione, ad esempio **BoxViewClock**. Il file XAML completato dovrebbe essere simile al seguente:
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"
@@ -123,7 +123,7 @@ Seguire queste istruzioni per aggiungere un'app WPF che viene eseguita su Window
 
 10. Fare clic con il pulsante destro del mouse sul progetto WPF nel **Esplora soluzioni** e selezionare **Imposta come progetto di avvio**. Premere F5 per eseguire il programma con il debugger di Visual Studio sul desktop di Windows:
 
-    ![](wpf-images/wpf-boxviewclock.png "Clock WPF BoxView" ) BoxView per WPF
+    ![Clock BoxView WPF](wpf-images/wpf-boxviewclock.png "Clock BoxView WPF" )
 
 ## <a name="next-steps"></a>Passaggi successivi
 

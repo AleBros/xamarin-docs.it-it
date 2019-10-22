@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
 ms.openlocfilehash: 584f523446584192cfa882697c0f76865ce78a10
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70754921"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servizi associati in Novell. Android
@@ -20,21 +20,21 @@ _I servizi associati sono servizi Android che forniscono un'interfaccia client-s
 
 ## <a name="bound-services-overview"></a>Panoramica dei servizi associati
 
-I servizi che forniscono un'interfaccia client-server che consente ai client di interagire direttamente con il servizio sono detti _servizi associati_.  È possibile che più client siano connessi a una singola istanza di un servizio nello stesso momento. Il servizio associato e il client sono isolati l'uno dall'altro. Android fornisce invece una serie di oggetti intermedi che gestiscono lo stato della connessione tra i due. Questo stato viene gestito da un oggetto che implementa l' [`Android.Content.IServiceConnection`](xref:Android.Content.IServiceConnection) interfaccia.  Questo oggetto viene creato dal client e passato come parametro al [`BindService`](xref:Android.Content.Context.BindService*) metodo. È disponibile per qualsiasi [`Android.Content.Context`](xref:Android.Content.Context) oggetto, ad esempio un'attività. `BindService` Si tratta di una richiesta al sistema operativo Android per avviare il servizio e associarvi un client. Un client può eseguire l'associazione a un servizio tramite il `BindService` metodo in tre modi:
+I servizi che forniscono un'interfaccia client-server che consente ai client di interagire direttamente con il servizio sono detti _servizi associati_.  È possibile che più client siano connessi a una singola istanza di un servizio nello stesso momento. Il servizio associato e il client sono isolati l'uno dall'altro. Android fornisce invece una serie di oggetti intermedi che gestiscono lo stato della connessione tra i due. Questo stato viene gestito da un oggetto che implementa l'interfaccia [`Android.Content.IServiceConnection`](xref:Android.Content.IServiceConnection) .  Questo oggetto viene creato dal client e passato come parametro al metodo [`BindService`](xref:Android.Content.Context.BindService*) . Il `BindService` è disponibile per qualsiasi oggetto [`Android.Content.Context`](xref:Android.Content.Context) , ad esempio un'attività. Si tratta di una richiesta al sistema operativo Android per avviare il servizio e associarvi un client. È possibile eseguire l'associazione di un client a un servizio in tre modi utilizzando il metodo `BindService`:
 
-- **Gestore di associazione del servizio** Uno strumento di associazione di servizi è una classe [`Android.OS.IBinder`](xref:Android.OS.IBinder) che implementa l'interfaccia. &ndash; La maggior parte delle applicazioni non implementerà direttamente questa interfaccia, bensì estenderà la [`Android.OS.Binder`](xref:Android.OS.Binder) classe. Si tratta dell'approccio più comune ed è adatto quando il servizio e il client esistono nello stesso processo.
-- **Uso di un Messenger** &ndash; Questa tecnica è adatta quando il servizio può esistere in un processo separato. Al contrario, le richieste di servizio vengono sottoposte a marshalling [`Android.OS.Messenger`](xref:Android.OS.Messenger)tra il client e il servizio tramite un. Viene [`Android.OS.Handler`](xref:Android.OS.Handler) creato un oggetto nel servizio che gestirà le `Messenger` richieste. Questo verrà trattato in un'altra guida.
+- **Uno** strumento di associazione di servizi &ndash; uno strumento di associazione di servizi è una classe che implementa l'interfaccia [`Android.OS.IBinder`](xref:Android.OS.IBinder) . La maggior parte delle applicazioni non implementerà direttamente questa interfaccia, bensì estenderà la classe [`Android.OS.Binder`](xref:Android.OS.Binder) . Si tratta dell'approccio più comune ed è adatto quando il servizio e il client esistono nello stesso processo.
+- L' **uso di un Messenger** &ndash; questa tecnica è adatto quando il servizio può esistere in un processo separato. Al contrario, le richieste di servizio vengono sottoposte a marshalling tra il client e il servizio tramite un [`Android.OS.Messenger`](xref:Android.OS.Messenger). Nel servizio viene creata un' [`Android.OS.Handler`](xref:Android.OS.Handler) che gestirà le richieste di `Messenger`. Questo verrà trattato in un'altra guida.
 - **Uso di Android Interface Definition Language (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) è una tecnica avanzata che non verrà descritta in questa guida.
 
-Una volta che un client è stato associato a un servizio, la comunicazione tra le due `Android.OS.IBinder` si verifica tramite oggetto.  Questo oggetto è responsabile dell'interfaccia che consentirà al client di interagire con il servizio. Non è necessario che ogni applicazione Novell. Android implementi questa interfaccia da zero, il Android SDK fornisce la [`Android.OS.Binder`](xref:Android.OS.Binder) classe che si occupa della maggior parte del codice necessario per il marshalling dell'oggetto tra il client e il servizio.
+Una volta che un client è stato associato a un servizio, la comunicazione tra le due si verifica tramite `Android.OS.IBinder` oggetto.  Questo oggetto è responsabile dell'interfaccia che consentirà al client di interagire con il servizio. Non è necessario che ogni applicazione Novell. Android implementi questa interfaccia da zero, il Android SDK fornisce la classe [`Android.OS.Binder`](xref:Android.OS.Binder) che occupa la maggior parte del codice necessario per il marshalling dell'oggetto tra il client e il servizio.
 
-Quando un client viene eseguito con il servizio, è necessario annullare l'associazione chiamando il `UnbindService` metodo. Quando l'ultimo client non è associato a un servizio, Android arresterà ed eliminerà il servizio associato.
+Quando un client viene eseguito con il servizio, è necessario annullare l'associazione chiamando il metodo `UnbindService`. Quando l'ultimo client non è associato a un servizio, Android arresterà ed eliminerà il servizio associato.
 
 Questo diagramma illustra il modo in cui l'attività, la connessione del servizio, il Binder e il servizio sono correlati tra loro:
 
 ![Diagramma che mostra la relazione tra i componenti del servizio](bound-services-images/bound-services-02.png "Diagramma che mostra la relazione tra i componenti del servizio.")
 
-In questa guida viene illustrato come estendere la `Service` classe per implementare un servizio associato. Inoltre, verrà trattata `IServiceConnection` l'implementazione `Binder` e l'estensione per consentire a un client di comunicare con il servizio. Un'app di esempio accompagna questa guida, che contiene una soluzione con un singolo progetto Novell. Android denominato **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Si tratta di un'applicazione molto semplice che illustra come implementare un servizio e come associarvi un'attività. Il servizio associato ha un'API molto semplice con un solo metodo, `GetFormattedTimestamp`, che restituisce una stringa che indica all'utente quando il servizio è stato avviato e il tempo di esecuzione. L'app consente inoltre all'utente di annullare manualmente il binding e il binding al servizio.
+In questa guida viene illustrato come estendere la classe `Service` per implementare un servizio associato. Verrà inoltre trattata l'implementazione di `IServiceConnection` ed estensione `Binder` per consentire a un client di comunicare con il servizio. Un'app di esempio accompagna questa guida, che contiene una soluzione con un singolo progetto Novell. Android denominato **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Si tratta di un'applicazione molto semplice che illustra come implementare un servizio e come associarvi un'attività. Il servizio associato ha un'API molto semplice con un solo metodo, `GetFormattedTimestamp`, che restituisce una stringa che indica all'utente quando il servizio è stato avviato e il tempo di esecuzione. L'app consente inoltre all'utente di annullare manualmente il binding e il binding al servizio.
 
 [![Screenshot dell'applicazione in esecuzione su un telefono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
@@ -42,25 +42,25 @@ In questa guida viene illustrato come estendere la `Service` classe per implemen
 
 Per consentire a un'applicazione Android di utilizzare un servizio associato, è necessario implementare tre componenti:
 
-1. **Estendere la `Service` classe e implementare i metodi** &ndash; di callback del ciclo di vita questa classe conterrà il codice che eseguirà il lavoro che verrà richiesto dal servizio. Questa operazione verrà illustrata in dettaglio di seguito.
-2. **Creare una classe che implementa `IServiceConnection`**  &ndash; questa interfaccia fornisce metodi di callback richiamati da Android per notificare al client quando la connessione al servizio è stata modificata, ovvero il client si è connesso o disconnesso al servizio. La connessione al servizio fornirà inoltre un riferimento a un oggetto che il client può utilizzare per interagire direttamente con il servizio. Questo riferimento è noto come _Binder_.
-3. **Creare una classe che implementa `IBinder`**  &ndash; un'implementazione del _Binder_ fornisce l'API utilizzata da un client per comunicare con il servizio. Il Binder può fornire un riferimento al servizio associato, consentendo la chiamata diretta dei metodi o il Binder può fornire un'API client che incapsula e nasconde il servizio associato dall'applicazione. Un `IBinder` oggetto deve fornire il codice necessario per le chiamate di procedure remote. Non è necessario (o consigliato) implementare direttamente l' `IBinder` interfaccia. Le applicazioni devono invece estendere `Binder` il tipo che fornisce la maggior parte delle funzionalità di base `IBinder`richieste da un oggetto.
-4. **Avvio e associazione a un servizio** &ndash; Una volta creati la connessione al servizio, il Binder e il servizio, l'applicazione Android è responsabile dell'avvio del servizio e dell'associazione al servizio.
+1. **Estendere la classe `Service` e implementare i metodi di callback del ciclo** di vita &ndash; questa classe conterrà il codice che eseguirà il lavoro che verrà richiesto dal servizio. Questa operazione verrà illustrata in dettaglio di seguito.
+2. **Creare una classe che implementi `IServiceConnection`** &ndash; questa interfaccia fornisce metodi di callback richiamati da Android per notificare al client quando la connessione al servizio è stata modificata, ovvero se il client si è connesso o disconnesso al servizio. La connessione al servizio fornirà inoltre un riferimento a un oggetto che il client può utilizzare per interagire direttamente con il servizio. Questo riferimento è noto come _Binder_.
+3. **Creare una classe che implementi `IBinder`** &ndash; un'implementazione del _Binder_ fornisce l'API utilizzata da un client per comunicare con il servizio. Il Binder può fornire un riferimento al servizio associato, consentendo la chiamata diretta dei metodi o il Binder può fornire un'API client che incapsula e nasconde il servizio associato dall'applicazione. Un `IBinder` deve fornire il codice necessario per le chiamate di procedure remote. Non è necessario (o consigliato) implementare direttamente l'interfaccia `IBinder`. Le applicazioni devono invece estendere il tipo di `Binder` che fornisce la maggior parte delle funzionalità di base richieste da un `IBinder`.
+4. L' **avvio e il binding a un servizio** &ndash; una volta creati la connessione al servizio, il Binder e il servizio, l'applicazione Android è responsabile dell'avvio del servizio e dell'associazione al servizio.
 
 Ognuno di questi passaggi verrà descritto più dettagliatamente nelle sezioni seguenti.
 
-### <a name="extend-the-service-class"></a>Estendi la `Service` classe
+### <a name="extend-the-service-class"></a>Estendere la classe `Service`
 
-Per creare un servizio con Novell. Android, è necessario sottoclassare `Service` e decorare la classe [`ServiceAttribute`](xref:Android.App.ServiceAttribute)con. L'attributo viene usato dagli strumenti di compilazione Novell. Android per registrare correttamente il servizio nel file **file AndroidManifest. XML** dell'app, in modo analogo a un'attività, un servizio associato ha il ciclo di vita e i metodi di callback associati agli eventi significativi in il ciclo di vita. L'elenco seguente è un esempio di alcuni dei metodi di callback più comuni che verrà implementato da un servizio:
+Per creare un servizio con Novell. Android, è necessario sottoclassare `Service` e decorare la classe con l' [`ServiceAttribute`](xref:Android.App.ServiceAttribute). L'attributo viene usato dagli strumenti di compilazione Novell. Android per registrare correttamente il servizio nel file **file AndroidManifest. XML** dell'app, in modo analogo a un'attività, un servizio associato ha il ciclo di vita e i metodi di callback associati agli eventi significativi in il ciclo di vita. L'elenco seguente è un esempio di alcuni dei metodi di callback più comuni che verrà implementato da un servizio:
 
-- `OnCreate`&ndash; Questo metodo viene richiamato da Android quando crea un'istanza del servizio. Viene usato per inizializzare eventuali variabili o oggetti richiesti dal servizio durante la relativa durata. È facoltativo.
-- `OnBind`&ndash; Questo metodo deve essere implementato da tutti i servizi associati. Viene richiamato quando il primo client tenta di connettersi al servizio. Verrà restituita un'istanza di `IBinder` in modo che il client possa interagire con il servizio. Fino a quando il servizio è in esecuzione, `IBinder` l'oggetto verrà usato per soddisfare le richieste client future da associare al servizio.
-- `OnUnbind`&ndash; Questo metodo viene chiamato quando tutti i client associati hanno Unbound. Restituendo `true` da questo metodo, il servizio chiamerà `OnRebind` successivamente con lo scopo passato a `OnUnbind` quando vengono associati nuovi client. Questa operazione viene eseguita quando un servizio continua l'esecuzione dopo che è stato annullato. Questo problema si verifica se il servizio di recente non associato era anche un servizio avviato `StopService` e `StopSelf` o non è stato chiamato. In uno scenario di questo `OnRebind` tipo, consente di recuperare l'intento. Il valore predefinito `false` restituisce, che non esegue alcuna operazione. facoltativo.
-- `OnDestroy`&ndash; Questo metodo viene chiamato quando Android sta eliminando il servizio. Tutte le operazioni di pulizia necessarie, ad esempio il rilascio di risorse, devono essere eseguite in questo metodo. facoltativo.
+- `OnCreate` &ndash; questo metodo viene richiamato da Android poiché crea un'istanza del servizio. Viene usato per inizializzare eventuali variabili o oggetti richiesti dal servizio durante la relativa durata. È facoltativo.
+- `OnBind` &ndash; questo metodo deve essere implementato da tutti i servizi associati. Viene richiamato quando il primo client tenta di connettersi al servizio. Verrà restituita un'istanza di `IBinder` in modo che il client possa interagire con il servizio. Fino a quando il servizio è in esecuzione, l'oggetto `IBinder` verrà usato per soddisfare le richieste client future da associare al servizio.
+- `OnUnbind` &ndash; questo metodo viene chiamato quando tutti i client associati hanno un binding non associato. Restituendo `true` da questo metodo, il servizio chiamerà successivamente `OnRebind` con lo scopo passato a `OnUnbind` quando vengono associati nuovi client. Questa operazione viene eseguita quando un servizio continua l'esecuzione dopo che è stato annullato. Questo problema si verifica se il servizio di recente non associato era anche un servizio avviato e `StopService` o `StopSelf` non venivano chiamati. In uno scenario di questo tipo, `OnRebind` consente il recupero dello scopo. Il valore predefinito restituisce `false`, che non esegue alcuna operazione. Parametro facoltativo.
+- `OnDestroy` &ndash; questo metodo viene chiamato quando Android sta eliminando il servizio. Tutte le operazioni di pulizia necessarie, ad esempio il rilascio di risorse, devono essere eseguite in questo metodo. Parametro facoltativo.
 
 In questo diagramma vengono illustrati gli eventi del ciclo di vita delle chiavi di un servizio associato:
 
-![Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di] vita (bound-services-images/bound-services-01.png "Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita.")
+![Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita](bound-services-images/bound-services-01.png "Diagramma che mostra l'ordine in cui vengono chiamati i metodi del ciclo di vita.")
 
 Il frammento di codice seguente, dall'applicazione complementare che accompagna questa guida, Mostra come implementare un servizio associato in Novell. Android:
 
@@ -124,11 +124,11 @@ namespace BoundServiceDemo
 }
 ```
 
-Nell'esempio, il `OnCreate` metodo inizializza un oggetto che include la logica per il recupero e la formattazione di un timestamp che verrebbe richiesto da un client. Quando il primo client tenta di eseguire l'associazione al servizio, Android richiamerà il `OnBind` metodo. Questo servizio creerà un'istanza di `TimestampBinder` un oggetto che consentirà ai client di accedere a questa istanza del servizio in esecuzione. La `TimestampBinder` classe verrà illustrata nella sezione successiva.
+Nell'esempio, il metodo `OnCreate` Inizializza un oggetto che include la logica per il recupero e la formattazione di un timestamp che verrebbe richiesto da un client. Quando il primo client tenta di eseguire l'associazione al servizio, Android richiamerà il metodo `OnBind`. Questo servizio creerà un'istanza di un oggetto `TimestampBinder` che consentirà ai client di accedere a questa istanza del servizio in esecuzione. La classe `TimestampBinder` viene illustrata nella sezione successiva.
 
 ### <a name="implementing-ibinder"></a>Implementazione di IBinder
 
-Come indicato in precedenza `IBinder` , un oggetto fornisce il canale di comunicazione tra un client e un servizio. Le applicazioni Android non devono implementare `IBinder` l'interfaccia [`Android.OS.Binder`](xref:Android.OS.Binder) . deve essere esteso. La `Binder` classe fornisce gran parte dell'infrastruttura necessaria che è necessario effettuare il marshalling dell'oggetto Binder dal servizio, che può essere eseguito in un processo separato, al client. Nella maggior parte dei casi `Binder` , la sottoclasse è solo poche righe di codice ed esegue il wrapping di un riferimento al servizio. In questo esempio, `TimestampBinder` ha una proprietà che `TimestampService` espone al client:
+Come indicato, un oggetto `IBinder` fornisce il canale di comunicazione tra un client e un servizio. Le applicazioni Android non devono implementare l'interfaccia `IBinder`, il [`Android.OS.Binder`](xref:Android.OS.Binder) deve essere esteso. La classe `Binder` fornisce gran parte dell'infrastruttura necessaria che è necessario effettuare il marshalling dell'oggetto Binder dal servizio, che può essere eseguito in un processo separato, al client. Nella maggior parte dei casi, la sottoclasse `Binder` è solo poche righe di codice ed esegue il wrapping di un riferimento al servizio. In questo esempio `TimestampBinder` dispone di una proprietà che espone l'`TimestampService` al client:
 
 ```csharp
 public class TimestampBinder : Binder
@@ -142,19 +142,19 @@ public class TimestampBinder : Binder
 }
 ```
 
-In `Binder` questo modo è possibile richiamare i metodi pubblici nel servizio, ad esempio:
+Questa `Binder` rende possibile richiamare i metodi pubblici nel servizio; Per esempio:
 
 ```csharp
 string currentTimestamp = serviceConnection.Binder.Service.GetFormattedTimestamp()
 ```
 
-Una `Binder` volta che è stato esteso, è necessario implementare `IServiceConnection` per connettere tutti gli elementi.
+Una volta che `Binder` è stato esteso, è necessario implementare `IServiceConnection` per connettere tutti gli elementi.
 
 ### <a name="creating-the-service-connection"></a>Creazione della connessione del servizio
 
-La `IServiceConnection` funzione presenterà | introducte | Expose | `Binder` connette l'oggetto al client. Oltre all'implementazione dell' `IServiceConnection` interfaccia, la classe deve estendere. `Java.Lang.Object` La connessione al servizio deve inoltre fornire un modo per consentire al client di `Binder` accedere a (e quindi comunicare con il servizio associato).
+Il `IServiceConnection` presenterà | introduce | Expose | connette l'oggetto `Binder` al client. Oltre all'implementazione dell'interfaccia `IServiceConnection`, è necessario che la classe estenda `Java.Lang.Object`. La connessione al servizio deve inoltre fornire un modo per consentire al client di accedere al `Binder` (e quindi comunicare con il servizio associato).
 
-Il codice del progetto di esempio associato è un modo possibile per implementare `IServiceConnection`:
+Questo codice del progetto di esempio associato è un modo possibile per implementare `IServiceConnection`:
 
 ```csharp
 using Android.Util;
@@ -224,17 +224,17 @@ namespace BoundServiceDemo
 
 ```
 
-Come parte del processo di associazione, Android richiamerà il `OnServiceConnected` metodo, fornendo l' `name` oggetto del servizio che `binder` viene associato e che include un riferimento al servizio stesso. In questo esempio, la connessione al servizio dispone di due proprietà, una che contiene un riferimento al gestore di associazione e un flag booleano per se il client è connesso al servizio o no.
+Come parte del processo di associazione, Android richiama il metodo `OnServiceConnected`, fornendo la `name` del servizio associato e il `binder` che include un riferimento al servizio stesso. In questo esempio, la connessione al servizio dispone di due proprietà, una che contiene un riferimento al gestore di associazione e un flag booleano per se il client è connesso al servizio o no.
 
-Il `OnServiceDisconnected` metodo viene richiamato solo quando la connessione tra un client e un servizio viene persa in modo imprevisto o viene interrotta. Questo metodo consente al client di rispondere all'interruzione del servizio.  
+Il metodo `OnServiceDisconnected` viene richiamato solo quando la connessione tra un client e un servizio viene persa in modo imprevisto o viene interrotta. Questo metodo consente al client di rispondere all'interruzione del servizio.  
 
 ## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Avvio e associazione a un servizio con finalità esplicite
 
-Per usare un servizio associato, un client, ad esempio un'attività, deve creare un'istanza di un oggetto `Android.Content.IServiceConnection` che implementa e `BindService` richiama il metodo. `BindService`restituirà `true` se il servizio è associato a, `false` in caso contrario. Il metodo `BindService` accetta tre parametri:
+Per usare un servizio associato, un client, ad esempio un'attività, deve creare un'istanza di un oggetto che implementa `Android.Content.IServiceConnection` e richiamare il metodo `BindService`. `BindService` restituirà `true` se il servizio è associato a, `false` in caso contrario. Il metodo `BindService` accetta tre parametri:
 
-- **Un `Intent` oggetto** intenzionaledeveidentificareinmodoesplicitoilservizioacuiconnettersi.&ndash;
-- **Oggetto`IServiceConnection`**  questooggettoèunintermediariocheforniscemetodidicallbackpernotificarealclientquandoilservizio&ndash; associato viene avviato e arrestato.
-- enum questo parametro è un set di flag usati dal sistema per l'associazione dell'oggetto. **[`Android.Content.Bind`](xref:Android.Content.Bind)** &ndash; Il valore usato più di frequente [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate)è, che avvierà automaticamente il servizio se non è già in esecuzione.
+- **Un `Intent`** &ndash; lo scopo deve identificare in modo esplicito il servizio a cui connettersi.
+- **Un oggetto `IServiceConnection`** &ndash; questo oggetto è un intermediario che fornisce metodi di callback per notificare al client quando il servizio associato viene avviato e arrestato.
+- **[`Android.Content.Bind`](xref:Android.Content.Bind) enum** &ndash; questo parametro è un set di flag utilizzati dal sistema per l'associazione dell'oggetto. Il valore usato più di frequente è [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate), che avvierà automaticamente il servizio se non è già in esecuzione.
 
 Il frammento di codice seguente è un esempio di come avviare un servizio associato in un'attività usando un preventivo esplicito:
 
@@ -259,9 +259,9 @@ protected override void OnStart ()
 
 ## <a name="architectural-notes-about-the-service-connection-and-the-binder"></a>Note sull'architettura relative alla connessione al servizio e al Binder.
 
-Alcuni puristi di OOP possono disapprovare l'implementazione precedente della `TimestampBinder` classe poiché si tratta di una violazione della [legge di Demetra](https://en.wikipedia.org/wiki/Law_of_Demeter) , che negli Stati di forma più semplici "non parla con estranei; parla solo con gli amici. Questa implementazione specifica espone la classe `TimestampService` concreta a tutti i client.
+Alcuni puristi di OOP possono disapprovare l'implementazione precedente della classe `TimestampBinder` perché si tratta di una violazione della [legge di Demetra](https://en.wikipedia.org/wiki/Law_of_Demeter) , che negli Stati di forma più semplici "non parla con estranei; parla solo con gli amici. Questa implementazione specifica espone la classe `TimestampService` concreta a tutti i client.
 
-In modo rigoroso, non è necessario che il client sia a conoscenza `TimestampService` di e che l'esposizione di una classe concreta ai client possa rendere un'applicazione più fragile e più difficile da gestire per tutta la sua durata. Un approccio alternativo consiste nell'usare un'interfaccia che espone il `GetFormattedTimestamp()` metodo e le chiamate proxy al servizio `Binder` tramite (o possibile la classe di connessione del servizio):  
+In modo rigoroso, non è necessario che il client riconosca il `TimestampService` e l'esposizione di tale classe concreta ai client possa rendere un'applicazione più fragile e più difficile da gestire per tutta la sua durata. Un approccio alternativo consiste nell'usare un'interfaccia che espone il metodo `GetFormattedTimestamp()` e le chiamate proxy al servizio tramite l'`Binder` (o possibile la classe di connessione del servizio):  
 
 ```csharp
 public class TimestampBinder : Binder, IGetTimestamp
@@ -288,10 +288,10 @@ string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android.App.Service](xref:Android.App.Service)
-- [Android.Content.Bind](xref:Android.Content.Bind)
-- [Android.Content.Context](xref:Android.Content.Context)
-- [Android.Content.IServiceConnection](xref:Android.Content.IServiceConnection)
-- [Android.OS.Binder](xref:Android.OS.Binder)
-- [Android.OS.IBinder](xref:Android.OS.IBinder)
-- [BoundServiceDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-boundservicedemo)
+- [Android. app. Service](xref:Android.App.Service)
+- [Android. Content. Bind](xref:Android.Content.Bind)
+- [Android. Content. Context](xref:Android.Content.Context)
+- [Android. Content. IServiceConnection](xref:Android.Content.IServiceConnection)
+- [Android. OS. Binder](xref:Android.OS.Binder)
+- [Android. OS. IBinder](xref:Android.OS.IBinder)
+- [BoundServiceDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-boundservicedemo)

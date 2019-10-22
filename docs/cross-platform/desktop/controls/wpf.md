@@ -1,24 +1,24 @@
 ---
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
-title: 'Confronto tra WPF e Novell. Forms: Analogie & differenze'
+title: 'WPF rispetto a Novell. Forms: analogie & differenze'
 description: Questo documento consente di confrontare e contrapporre WPF a Novell. Forms. Vengono illustrati i modelli di controllo, XAML, l'infrastruttura di binding, i modelli di dati, ItemsControl, UserControl, la navigazione e l'esplorazione URL.
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
 ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71106039"
 ---
-# <a name="wpf-vs-xamarinforms-similarities--differences"></a>Confronto tra WPF e Novell. Forms: Analogie & differenze
+# <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF rispetto a Novell. Forms: analogie & differenze
 
 ## <a name="control-templates"></a>Modelli di controllo
 
-WPF supporta il concetto di *modelli di controllo* che forniscono le istruzioni di visualizzazione per un controllo`Button`( `ListBox`, e così via). Come indicato in precedenza, Novell. Forms usa classi di _rendering_ concrete per questo che interagiscono con la piattaforma nativa (iOS, Android e così via) per visualizzare il controllo.
+WPF supporta il concetto di *modelli di controllo* che forniscono le istruzioni di visualizzazione per un controllo (`Button`, `ListBox` e così via). Come indicato in precedenza, Novell. Forms usa classi di _rendering_ concrete per questo che interagiscono con la piattaforma nativa (iOS, Android e così via) per visualizzare il controllo.
 
-Tuttavia, Novell _. Forms ha_ un `ControlTemplate` tipo, che viene `Page` usato per gli oggetti di tema. Fornisce una definizione per un oggetto `Page` che fornisce contenuto coerente, ma consente all'utente della pagina di modificare i colori, i tipi di carattere e così via e persino di aggiungere elementi per renderli univoci per l'applicazione.
+Tuttavia, Novell _. Forms ha un_ tipo di `ControlTemplate`, che viene usato per i `Page` oggetti. Fornisce una definizione per una `Page` che fornisce contenuto coerente, ma consente all'utente della pagina di modificare i colori, i tipi di carattere e così via e persino di aggiungere elementi per renderli univoci per l'applicazione.
 
 Gli utilizzi comuni per questa operazione sono, ad esempio, le finestre di dialogo di autenticazione, le richieste e fornire un aspetto standardizzato, ma a tema, che può essere personalizzato all'interno dell'app. Come parte di questo supporto, vengono usati molti controlli noti con nome WPF:
 
@@ -33,7 +33,7 @@ Gli utilizzi comuni per questa operazione sono, ad esempio, le finestre di dialo
 
 XAML viene utilizzato come linguaggio di markup dichiarativo per WPF e Novell. Forms. Nella maggior parte dei casi, la sintassi è identica. la differenza principale è rappresentata dagli oggetti definiti/creati dai grafici XAML.
 
-- Novell. Forms supporta la [specifica XAML 2009](/dotnet/framework/xaml-services/xaml-2009-language-features/); Questo semplifica la definizione di dati quali `string`s, `int`s e così via, nonché la definizione di tipi generici e il passaggio di argomenti ai costruttori.
+- Novell. Forms supporta la [specifica XAML 2009](/dotnet/framework/xaml-services/xaml-2009-language-features/); Questo semplifica la definizione dei dati, ad esempio `string`s, `int`s e così via, nonché la definizione di tipi generici e il passaggio di argomenti ai costruttori.
 
 - Attualmente non è possibile caricare in modo dinamico XAML come WPF con `XamlReader`. Tuttavia, è possibile ottenere le stesse funzionalità di base con un [pacchetto NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) .
 
@@ -49,26 +49,26 @@ Novell. Forms supporta l'estensione di XAML tramite estensioni di markup, molto 
 6. `{StaticResource}`
 7. `{x:Type}`
 
-Include `{x:Reference}` inoltre dalla specifica XAML 2009 e da un' `{TemplateBinding}` estensione di markup utilizzata per la versione specializzata di `ControlTemplate` supportata da Novell. Forms.
+Include inoltre `{x:Reference}` dalla specifica XAML 2009 e un'estensione di markup `{TemplateBinding}` utilizzata per la versione specializzata di `ControlTemplate` supportata da Novell. Forms.
 
 > [!WARNING]
-> Il `ControlTemplate` supporto non è lo stesso, anche se ha lo stesso nome.
+> Il supporto `ControlTemplate` non è lo stesso, anche se ha lo stesso nome.
 
-Novell. Forms supporta anche le estensioni di markup personalizzate, ma l'implementazione è leggermente diversa. In WPF è necessario derivare da `MarkupExtension` una classe base astratta. In Novell. Forms, che viene sostituito con un' `IMarkupExtension` interfaccia `IMarkupExtension<T>` o più flessibile.
+Novell. Forms supporta anche le estensioni di markup personalizzate, ma l'implementazione è leggermente diversa. In WPF è necessario derivare da `MarkupExtension` una classe base astratta. In Novell. Forms, che viene sostituito con un'interfaccia `IMarkupExtension` o `IMarkupExtension<T>` più flessibile.
 
-Proprio come WPF, il singolo metodo richiesto è un `ProvideValue` metodo per restituire il valore dall'estensione di markup.
+Proprio come WPF, il singolo metodo richiesto è un metodo di `ProvideValue` per restituire il valore dall'estensione di markup.
 
 ## <a name="binding-infrastructure"></a>Infrastruttura di binding
 
 Uno dei concetti di base trasportati è un'infrastruttura data binding per connettere le proprietà visive alle proprietà dei dati .NET. Questo consente modelli di architettura come MVVM. La progettazione di base è identica. si dispone di una classe di base associabile [bindableObject](xref:Xamarin.Forms.BindableObject), in WPF è la classe [DependencyObject](xref:System.Windows.DependencyObject) . Questa classe di base viene usata come predecessore radice per tutti gli oggetti che parteciperanno come destinazioni in data binding. Le classi derivate espongono quindi gli oggetti [BindableProperty](xref:Xamarin.Forms.BindableProperty) che fungono da archiviazione di backup per i valori delle proprietà (definiti come oggetti [DependencyProperty](xref:System.Windows.DependencyProperty) in WPF).
 
-### <a name="defining-bindable-properties"></a>La definizione di proprietà associabili
+### <a name="defining-bindable-properties"></a>Definizione di proprietà associabili
 
 La definizione di una proprietà associabile in Novell. Forms è identica a quella di WPF:
 
-1. L'oggetto deve derivare `BindableObject`da.
+1. L'oggetto deve derivare da `BindableObject`.
 2. Deve essere presente un campo statico pubblico di tipo `BindableProperty` dichiarato per definire la chiave di archiviazione di supporto per la proprietà.
-3. Deve essere presente un wrapper della proprietà di istanza pubblica `GetValue` che `SetValue` utilizza e per recuperare e modificare il valore delle proprietà.
+3. Deve essere presente un wrapper della proprietà di istanza pubblica che usa `GetValue` e `SetValue` per recuperare e modificare il valore delle proprietà.
 
 Per un esempio completo, vedere [proprietà associabili in Novell. Forms](~/xamarin-forms/xaml/bindable-properties.md).
 
@@ -78,9 +78,9 @@ Le proprietà associate sono un subset della proprietà associabile e funzionano
 
 ### <a name="using-the-binding-engine"></a>Uso del motore di associazione
 
-Il processo di utilizzo del motore di binding è identico a quello di WPF. Può essere utilizzato nel code-behind creando un `Binding` oggetto associato a un oggetto di origine (qualsiasi tipo .NET) e un valore della proprietà facoltativa (se omesso, considera l'oggetto di origine come la proprietà stessa, proprio come WPF). È quindi possibile usare `SetBinding` su Any `BindableObject` per associare l'associazione a un `BindableProperty`oggetto.
+Il processo di utilizzo del motore di binding è identico a quello di WPF. Può essere utilizzato nel code-behind creando un oggetto `Binding` associato a un oggetto di origine (qualsiasi tipo .NET) e un valore di proprietà facoltativo (se omesso, considera l'oggetto di origine come la proprietà stessa, proprio come WPF). È quindi possibile utilizzare `SetBinding` su qualsiasi `BindableObject` per associare l'associazione a un `BindableProperty`.
 
-In alternativa, è possibile definire la relazione di associazione in XAML usando `BindingExtension`. Ha gli stessi valori di base dell'estensione in WPF.
+In alternativa, è possibile definire la relazione di binding in XAML usando il `BindingExtension`. Ha gli stessi valori di base dell'estensione in WPF.
 
 Il motore e il supporto dell'associazione sono molto simili all'implementazione di Silverlight rispetto a WPF. Esistono diverse funzionalità mancanti che non sono state implementate in Novell. Forms:
 
@@ -102,7 +102,7 @@ Il motore e il supporto dell'associazione sono molto simili all'implementazione 
 
 #### <a name="relativesource"></a>RelativeSource
 
-Non è disponibile alcun supporto `RelativeSource` per le associazioni. In WPF, questi consentono di eseguire il binding ad altri elementi visivi definiti in XAML. In Novell. Forms è possibile ottenere questa stessa funzionalità usando l' `{x:Reference}` estensione di markup. Ad esempio, supponendo che sia presente un controllo con il nome "otherControl" con una proprietà Text, è possibile associarlo come segue:
+Non è disponibile alcun supporto per i binding `RelativeSource`. In WPF, questi consentono di eseguire il binding ad altri elementi visivi definiti in XAML. In Novell. Forms è possibile ottenere questa stessa funzionalità usando l'estensione di markup `{x:Reference}`. Ad esempio, supponendo che sia presente un controllo con il nome "otherControl" con una proprietà Text, è possibile associarlo come segue:
 
 **WPF**
 
@@ -116,54 +116,54 @@ Text={Binding RelativeSource={RelativeSource otherControl}, Path=Text}
 Text={Binding Source={x:Reference otherControl}, Path=Text}
 ```
 
-La stessa funzionalità può essere usata per la `{RelativeSource Self}` funzionalità. Tuttavia, non è disponibile alcun supporto per l'individuazione di predecessori`{RelativeSource FindAncestor}`per tipo ().
+La stessa funzionalità può essere utilizzata per la funzionalità `{RelativeSource Self}`. Non è tuttavia disponibile alcun supporto per l'individuazione di predecessori in base al tipo (`{RelativeSource FindAncestor}`).
 
 #### <a name="binding-context"></a>Contesto di associazione
 
-In WPF è possibile definire un `DataContext` valore di proprietà che reprents l'origine di associazione predefinita. Se l'origine per un'associazione non è definita, viene utilizzato questo valore della proprietà. Il valore viene ereditato dalla struttura ad albero visuale, consentendo la definizione a un livello superiore e quindi utilizzata dagli elementi figlio.
+In WPF è possibile definire un valore di proprietà `DataContext` che reprents l'origine di associazione predefinita. Se l'origine per un'associazione non è definita, viene utilizzato questo valore della proprietà. Il valore viene ereditato dalla struttura ad albero visuale, consentendo la definizione a un livello superiore e quindi utilizzata dagli elementi figlio.
 
-In Novell. Forms, questa stessa funzionalità è disponibili, ma il nome della `BindingContext`proprietà è.
+In Novell. Forms, questa stessa funzionalità è disponibili, ma il nome della proprietà è `BindingContext`.
 
 #### <a name="value-converters"></a>Convertitori di valori
 
-I convertitori di valori sono completamente supportati in Novell. Forms, proprio come WPF. Viene utilizzata la stessa forma di interfaccia, ma in Novell. Forms è definita l' `Xamarin.Forms` interfaccia nello spazio dei nomi.
+I convertitori di valori sono completamente supportati in Novell. Forms, proprio come WPF. Viene utilizzata la stessa forma di interfaccia, ma in Novell. Forms è definita l'interfaccia nello spazio dei nomi `Xamarin.Forms`.
 
 ### <a name="model-view-viewmodel"></a>Model-View-ViewModel
 
 MVVM è completamente supportato da WPF e Novell. Forms.
 
-WPF include un oggetto incorporato `RoutedCommand` , a volte usato; Novell. Forms non dispone del supporto incorporato per i comandi oltre `ICommand` la definizione dell'interfaccia. È possibile includere un'ampia gamma di framework MVVM per aggiungere le classi di base necessarie per implementare MVVM.
+WPF include un `RoutedCommand` incorporato a volte usato; Novell. Forms non dispone di supporto incorporato per i comandi oltre la definizione dell'interfaccia `ICommand`. È possibile includere un'ampia gamma di framework MVVM per aggiungere le classi di base necessarie per implementare MVVM.
 
 #### <a name="inotifypropertychanged-and-inotifycollectionchanged"></a>INotifyPropertyChanged e INotifyCollectionChanged
 
 Entrambe le interfacce sono completamente supportate nelle associazioni Novell. Forms. A differenza di molti Framework basati su XAML, le notifiche di modifica delle proprietà possono essere generate sui thread in background in Novell. Forms (proprio come WPF) e il motore di binding eseguirà correttamente la transizione al thread dell'interfaccia utente.
 
-Inoltre, entrambi gli ambienti supportano `SynchronziationContext` e `async` / `await` per eseguire il marshalling di thread appropriato. WPF include la `Dispatcher` classe su tutti gli elementi visivi, Novell. Forms ha `Device.BeginInvokeOnMainThread` un metodo statico che può essere usato `SynchronizationContext` anche (sebbene sia preferibile per la codifica multipiattaforma).
+Inoltre, entrambi gli ambienti supportano `SynchronziationContext` e `async` / `await` per eseguire il marshalling del thread appropriato. WPF include la classe `Dispatcher` su tutti gli elementi visivi, Novell. Forms ha un metodo statico `Device.BeginInvokeOnMainThread` che può essere usato anche, anche se `SynchronizationContext` è preferibile per la codifica multipiattaforma.
 
-- Novell. Forms include `ObservableCollection<T>` un che supporta le notifiche di modifica della raccolta.
+- Novell. Forms include un `ObservableCollection<T>` che supporta le notifiche di modifica della raccolta.
 - È possibile usare `BindingBase.EnableCollectionSynchronization` per abilitare gli aggiornamenti tra thread per una raccolta. L'API è leggermente diversa dalla variante WPF. [per informazioni dettagliate sull'utilizzo, vedere la documentazione](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*).
 
 ## <a name="data-templates"></a>Modelli di dati
 
-I modelli di dati sono supportati in Novell. Forms per personalizzare il `ListView` rendering di una riga (cella). Diversamente da WPF che può utilizzare `DataTemplate`per qualsiasi controllo orientato al contenuto, Novell. Forms attualmente li utilizza solo per. `ListView` È possibile definire la definizione del modello inline (assegnata `ItemTemplate` alla proprietà) o come risorsa in un oggetto `ResourceDictionary`.
+I modelli di dati sono supportati in Novell. Forms per personalizzare il rendering di una riga di `ListView` (cella). Diversamente da WPF che può utilizzare `DataTemplate`s per qualsiasi controllo orientato al contenuto, Novell. Forms attualmente li utilizza solo per `ListView`. È possibile definire la definizione del modello inline (assegnata alla proprietà `ItemTemplate`) o come risorsa in una `ResourceDictionary`.
 
 Inoltre, non sono altrettanto flessibili della loro controparte WPF.
 
-1. L'elemento radice di `DataTemplate` deve _sempre_ essere un `ViewCell` oggetto.
-2. I trigger di dati sono completamente supportati in un modello di dati, ma `DataType` devono includere una proprietà che indica il tipo della proprietà a cui è associato il trigger.
-3. `DataTemplateSelector`è supportato anche, ma deriva da `DataTemplate` e viene quindi semplicemente assegnato direttamente `ItemTemplate` alla proprietà (vs. `ItemTemplateSelector` in WPF).
+1. L'elemento radice del `DataTemplate` deve essere _sempre_ un oggetto `ViewCell`.
+2. I trigger di dati sono completamente supportati in un modello di dati, ma devono includere una `DataType` proprietà che indica il tipo della proprietà a cui è associato il trigger.
+3. `DataTemplateSelector` è inoltre supportato, ma deriva da `DataTemplate` e viene quindi semplicemente assegnato direttamente alla proprietà `ItemTemplate` (vs.  `ItemTemplateSelector` in WPF).
 
 ## <a name="itemscontrol"></a>ItemsControl
 
-Non esiste un equivalente incorporato a `ItemsControl` in Novell. Forms, ma è presente un oggetto [personalizzato per Novell. Forms disponibile qui](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
+Non esiste alcun equivalente incorporato a un `ItemsControl` in Novell. Forms; Tuttavia, esiste un oggetto [personalizzato per Novell. Forms disponibile qui](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs).
 
 ## <a name="user-controls"></a>Controlli utente
 
-In WPF, `UserControl`i vengono usati per fornire una sezione dell'interfaccia utente che ha un comportamento associato. In Novell. Forms, `ContentView` usiamo per lo stesso scopo. Supportano sia l'associazione che l'inclusione in XAML.
+In WPF, `UserControl`s vengono utilizzati per fornire una sezione dell'interfaccia utente che ha un comportamento associato. In Novell. Forms, usiamo la `ContentView` per lo stesso scopo. Supportano sia l'associazione che l'inclusione in XAML.
 
 ## <a name="navigation"></a>Navigazione
 
-WPF include un oggetto raramente `NavigationService` utilizzato che può essere utilizzato per fornire una funzionalità di navigazione "simile a un browser". Tuttavia, la maggior parte delle app non ha avuto alcun `Window` problema con questa operazione, ma usava invece elementi diversi o sezioni diverse della finestra per visualizzare i dati.
+WPF include una `NavigationService` utilizzata raramente, che può essere utilizzata per fornire una funzionalità di navigazione "simile a un browser". Tuttavia, la maggior parte delle app non ha avuto alcun problema con questa operazione, ma usava invece elementi `Window` diversi o sezioni diverse della finestra per visualizzare i dati.
 
 Nei dispositivi telefonici, diverse _schermate_ sono spesso la soluzione, quindi Novell. Forms include il supporto per diverse forme di navigazione:
 
@@ -174,7 +174,7 @@ Nei dispositivi telefonici, diverse _schermate_ sono spesso la soluzione, quindi
 |Schede|TabbedPage|
 |Scorri a sinistra/a destra|CarouselView|
 
-È l'approccio più comune e ogni pagina dispone di una `Navigation` proprietà che può essere utilizzata per eseguire il push o il pop di pagine nello stack di navigazione. `NavigationPage` Si tratta dell'equivalente più vicino a `NavigationService` trovato in WPF.
+Il `NavigationPage` è l'approccio più comune e ogni pagina dispone di una proprietà `Navigation` che può essere usata per eseguire il push o il pop di pagine nello stack di navigazione. Si tratta dell'equivalente più vicino al `NavigationService` trovato in WPF.
 
 ### <a name="url-navigation"></a>Esplorazione URL
 

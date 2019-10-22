@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769942"
 ---
 # <a name="accessibility-on-macos"></a>Accessibilità in macOS
@@ -23,7 +23,7 @@ Per comprendere il funzionamento delle API di accessibilità in macOS (in preced
 
 ## <a name="describing-ui-elements"></a>Descrizione degli elementi dell'interfaccia utente
 
-AppKit usa il `NSAccessibility` protocollo per esporre le API che consentono di rendere accessibile l'interfaccia utente. Questo include un comportamento predefinito che tenta di impostare valori significativi per le proprietà di accessibilità, ad esempio l' `AccessibilityLabel`impostazione di un pulsante. L'etichetta è in genere una singola parola o breve frase che descrive il controllo o la visualizzazione.
+AppKit usa il protocollo `NSAccessibility` per esporre le API che consentono di rendere accessibile l'interfaccia utente. Questo include un comportamento predefinito che tenta di impostare valori significativi per le proprietà di accessibilità, ad esempio l'impostazione del `AccessibilityLabel` di un pulsante. L'etichetta è in genere una singola parola o breve frase che descrive il controllo o la visualizzazione.
 
 ### <a name="storyboard-files"></a>File storyboard
 
@@ -34,7 +34,7 @@ Le informazioni di accessibilità possono essere modificate in **Identity Inspec
 
 ### <a name="code"></a>Codice
 
-Novell. Mac non è attualmente esposto come `AccessibilityLabel` Setter.  Aggiungere il seguente metodo helper per impostare l'etichetta di accessibilità:
+Novell. Mac non è attualmente esposto come Setter `AccessibilityLabel`.  Aggiungere il seguente metodo helper per impostare l'etichetta di accessibilità:
 
 ```csharp
 public static class AccessibilityHelper
@@ -55,7 +55,7 @@ Questo metodo può quindi essere utilizzato nel codice come illustrato di seguit
 AccessibilityHelper.SetAccessibilityLabel (someButton, "New Accessible Description");
 ```
 
-La `AccessibilityHelp` proprietà è per una spiegazione del funzionamento del controllo o della vista e deve essere aggiunta solo quando l'etichetta potrebbe non fornire informazioni sufficienti. Il testo della guida deve comunque essere mantenuto il più breve possibile, ad esempio "Elimina il documento".
+La proprietà `AccessibilityHelp` è per una spiegazione del funzionamento del controllo o della vista e deve essere aggiunta solo quando l'etichetta non fornisce informazioni sufficienti. Il testo della guida deve comunque essere mantenuto il più breve possibile, ad esempio "Elimina il documento".
 
 Alcuni elementi dell'interfaccia utente non sono rilevanti per l'accesso accessibile, ad esempio un'etichetta accanto a un input con una propria etichetta di accessibilità e la relativa guida.
 In questi casi, impostare `AccessibilityElement = false` in modo che questi controlli o viste vengano ignorati dalle utilità per la lettura dello schermo o da altri strumenti di accessibilità.

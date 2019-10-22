@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: d72c428bb4b8c88365180c5c3c50b107eed2b21d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68978450"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: creazione di un monogame multipiattaforma
@@ -28,11 +28,11 @@ Al termine, il progetto ha la struttura corretta per eseguire la logica di aggio
 > [!IMPORTANT]
 > Monogame non è installato per impostazione predefinita in Visual Studio 2019 o Visual Studio per Mac.
 >
-> È necessario scaricare e installare manualmente la versione più recente http://www.monogame.net/downloads/ di, quindi eseguire il programma di installazione. Potrebbe essere necessario riavviare Visual Studio per visualizzare i modelli.
+> È necessario scaricare e installare manualmente la versione più recente da http://www.monogame.net/downloads/ quindi eseguire il programma di installazione. Potrebbe essere necessario riavviare Visual Studio per visualizzare i modelli.
 >
 > La sezione **sviluppo del gioco** dovrebbe quindi essere visualizzata nella **Gestione componenti**aggiuntivi.
 
-Per abilitare il componente aggiuntivo monogame per Visual Studio per Mac, selezionare **Visual Studio per Mac** > **Gestione componenti aggiuntivi...** . Per Visual Studio 2019 in Windows, selezionare **strumenti** > **Gestione componenti aggiuntivi...** . Selezionare la scheda **raccolta** , espandere la categoria **sviluppo gioco** e selezionare **componente aggiuntivo monogame**, quindi fare clic su **Installa...** :
+Per abilitare il componente aggiuntivo monogame per Visual Studio per Mac, selezionare **Visual Studio per Mac**  > **Gestione componenti aggiuntivi...** . Per Visual Studio 2019 in Windows, selezionare **strumenti**  > **Gestione componenti aggiuntivi...** . Selezionare la scheda **raccolta** , espandere la categoria **sviluppo gioco** e selezionare **componente aggiuntivo monogame**, quindi fare clic su **Installa...** :
 
 ![Raccolta di estensioni Visual Studio per Mac selezione di monogame](part1-images/image2.png)
 
@@ -54,7 +54,7 @@ Il progetto verrà ora eseguito esattamente come qualsiasi altro progetto iOS o 
 
 ## <a name="fixing-android-compile-errors"></a>Correzione degli errori di compilazione di Android
 
-La versione corrente dei modelli monogame include alcuni errori di sintassi nel `Activity1.cs` file di Android. Per risolvere questi problemi, sostituire la `OnCreate` funzione con il codice seguente:
+La versione corrente dei modelli monogame include alcuni errori di sintassi nel file di `Activity1.cs` di Android. Per risolvere questi problemi, sostituire la funzione `OnCreate` con quanto segue:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)

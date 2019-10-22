@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770150"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-progettazione dell'interfaccia utente in Novell. Mac
@@ -34,7 +34,7 @@ Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predef
 
 Per passare a una finestra Xibless per un'applicazione, eseguire le operazioni seguenti:
 
-1. Aprire l'applicazione che si desidera arrestare utilizzando `.storyboard` i file o XIB per definire l'interfaccia utente in Visual Studio per Mac.
+1. Aprire l'applicazione che si desidera arrestare utilizzando i file `.storyboard` o XIB per definire l'interfaccia utente in Visual Studio per Mac.
 2. Nel **riquadro della soluzione**fare clic con il pulsante destro del mouse sul file **Main. Storyboard** o **MainWindow. xib** e selezionare **Rimuovi**:
 
     ![Rimozione dello storyboard o della finestra principale](xibless-ui-images/switch01.png "Rimozione dello storyboard o della finestra principale")
@@ -42,9 +42,9 @@ Per passare a una finestra Xibless per un'applicazione, eseguire le operazioni s
 
     ![Conferma dell'eliminazione](xibless-ui-images/switch02.png "Conferma dell'eliminazione")
 
-A questo punto è necessario modificare il file **MainWindow.cs** per definire il layout della finestra e modificare il file **ViewController.cs** o **MainWindowController.cs** per `MainWindow` creare un'istanza della classe poiché non si sta più usando. storyboard o file XIB.
+A questo punto è necessario modificare il file **MainWindow.cs** per definire il layout della finestra e modificare il file **ViewController.cs** o **MainWindowController.cs** per creare un'istanza della classe `MainWindow` perché non è più in uso lo storyboard o file con estensione XIB.
 
-Le app Novell. Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**Aggiungi** > **nuovo file...** Classe vuotaGenerale > ) e denominarla come il file mancante.  > 
+Le app Novell. Mac moderne che usano gli storyboard per la loro interfaccia utente potrebbero non includere automaticamente i file **MainWindow.cs**, **ViewController.cs** o **MainWindowController.cs** . Se necessario, aggiungere semplicemente una nuova classe C# vuota al progetto (**aggiungere**  > **nuovo file...**  > **generale**  > **classe vuota**) e denominarla come il file mancante.
 
 ### <a name="defining-the-window-in-code"></a>Definizione della finestra nel codice
 
@@ -130,7 +130,7 @@ public NSButton ClickMeButton { get; set;}
 public NSTextField ClickMeLabel { get ; set;}
 ```
 
-Questi forniranno l'accesso agli elementi dell'interfaccia utente che verranno visualizzati nella finestra. Poiché la finestra non viene ingrandita da un file con estensione storyboard o XIB, è necessario un modo per crearne un'istanza (come si vedrà più avanti nella `MainWindowController` classe). Ecco come funziona questo nuovo metodo del costruttore:
+Questi forniranno l'accesso agli elementi dell'interfaccia utente che verranno visualizzati nella finestra. Poiché la finestra non viene ingrandita da un file con estensione storyboard o XIB, è necessario un modo per crearne un'istanza (come si vedrà più avanti nella classe `MainWindowController`). Ecco come funziona questo nuovo metodo del costruttore:
 
 ```csharp
 public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
@@ -144,7 +144,7 @@ Questa è la posizione in cui verrà progettato il layout della finestra e tutti
 ContentView = new NSView (Frame);
 ```
 
-Verrà creata una visualizzazione contenuto che compilerà la finestra. A questo punto, viene aggiunto il primo elemento `NSButton`dell'interfaccia utente, un oggetto, alla finestra:
+Verrà creata una visualizzazione contenuto che compilerà la finestra. A questo punto si aggiunge il primo elemento dell'interfaccia utente, un `NSButton`, alla finestra:
 
 ```csharp
 ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
@@ -153,13 +153,13 @@ ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
 ContentView.AddSubview (ClickMeButton);
 ```
 
-Il primo aspetto da notare è che, a differenza di iOS, macOS usa la notazione matematica per definire il sistema di coordinate della finestra. Quindi il punto di origine si trova nell'angolo in basso a sinistra della finestra, con valori che aumentano verso destra e verso l'angolo superiore destro della finestra. Quando si crea il nuovo `NSButton`oggetto, questo viene preso in considerazione durante la definizione della posizione e della dimensione sullo schermo.
+Il primo aspetto da notare è che, a differenza di iOS, macOS usa la notazione matematica per definire il sistema di coordinate della finestra. Quindi il punto di origine si trova nell'angolo in basso a sinistra della finestra, con valori che aumentano verso destra e verso l'angolo superiore destro della finestra. Quando si crea il nuovo `NSButton`, questo viene preso in considerazione durante la definizione della posizione e della dimensione sullo schermo.
 
-La `AutoresizingMask = NSViewResizingMask.MinYMargin` proprietà indica al pulsante che deve rimanere nella stessa posizione dalla parte superiore della finestra quando la finestra viene ridimensionata verticalmente. Questa operazione è necessaria perché (0,0) si trova nella parte inferiore sinistra della finestra.
+La proprietà `AutoresizingMask = NSViewResizingMask.MinYMargin` indica al pulsante che si desidera che venga mantenuta nella stessa posizione dalla parte superiore della finestra quando la finestra viene ridimensionata verticalmente. Questa operazione è necessaria perché (0,0) si trova nella parte inferiore sinistra della finestra.
 
-Infine, il `ContentView.AddSubview (ClickMeButton)` metodo `NSButton` aggiunge alla visualizzazione contenuto in modo che venga visualizzato sullo schermo quando l'applicazione viene eseguita e viene visualizzata la finestra.
+Infine, il metodo `ContentView.AddSubview (ClickMeButton)` aggiunge il `NSButton` alla visualizzazione contenuto in modo che venga visualizzato sullo schermo quando viene eseguita l'applicazione e la finestra visualizzata.
 
-Viene quindi aggiunta un'etichetta alla finestra che visualizzerà il numero di volte in cui `NSButton` è stato fatto clic sul pulsante:
+Viene quindi aggiunta un'etichetta alla finestra che visualizzerà il numero di volte in cui è stato fatto clic sull'`NSButton`:
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -173,9 +173,9 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
 ContentView.AddSubview (ClickMeLabel);
 ```
 
-Poiché MacOS non dispone di un elemento dell'interfaccia utente di _etichetta_ specifico, è stato aggiunto un oggetto con stile `NSTextField` , non modificabile, che funge da etichetta. Analogamente al pulsante precedente, la dimensione e la posizione prendono in considerazione che (0,0) si trova nella parte inferiore sinistra della finestra. La `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` proprietà usa l'operatore **or** per combinare due `NSViewResizingMask` funzionalità. In questo modo l'etichetta viene mantenuta nella stessa posizione dalla parte superiore della finestra quando la finestra viene ridimensionata verticalmente e viene compattata e aumentata a larghezza quando la finestra viene ridimensionata orizzontalmente.
+Poiché macOS non dispone di un elemento _Label_ specifico dell'interfaccia utente, è stato aggiunto un `NSTextField` di stile non modificabile in modo particolare per fungere da etichetta. Analogamente al pulsante precedente, la dimensione e la posizione prendono in considerazione che (0,0) si trova nella parte inferiore sinistra della finestra. La proprietà `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` usa l'operatore **or** per combinare due funzionalità di `NSViewResizingMask`. In questo modo l'etichetta viene mantenuta nella stessa posizione dalla parte superiore della finestra quando la finestra viene ridimensionata verticalmente e viene compattata e aumentata a larghezza quando la finestra viene ridimensionata orizzontalmente.
 
-Anche `NSTextField` in questo `ContentView.AddSubview (ClickMeLabel)` caso, il metodo aggiunge alla visualizzazione contenuto in modo che venga visualizzato sullo schermo quando viene eseguita l'applicazione e la finestra viene aperta.
+Anche in questo caso, il metodo `ContentView.AddSubview (ClickMeLabel)` aggiunge il `NSTextField` alla visualizzazione contenuto in modo che venga visualizzato sullo schermo quando viene eseguita l'applicazione e la finestra viene aperta.
 
 ### <a name="adjusting-the-window-controller"></a>Regolazione del controller della finestra
 
@@ -226,20 +226,20 @@ namespace MacXibless
 
 Si esamineranno gli elementi chiave di questa modifica.
 
-In primo luogo, si definisce una nuova istanza `MainWindow` della classe e la si assegna alla `Window` proprietà del controller della finestra di base:
+In primo luogo, si definisce una nuova istanza della classe `MainWindow` e la si assegna alla proprietà `Window` del controller della finestra di base:
 
 ```csharp
 CGRect contentRect = new CGRect (0, 0, 1000, 500);
 base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
 ```
 
-Si definisce la posizione della finestra dello schermo con un `CGRect`. Proprio come il sistema di coordinate della finestra, la schermata definisce (0,0) come angolo in basso a sinistra. Si definisce quindi lo stile della finestra usando l'operatore **or** per combinare due o più `NSWindowStyle` funzionalità:
+Si definisce la posizione della finestra dello schermo con un `CGRect`. Proprio come il sistema di coordinate della finestra, la schermata definisce (0,0) come angolo in basso a sinistra. Viene quindi definito lo stile della finestra usando l'operatore **or** per combinare due o più `NSWindowStyle` funzionalità:
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
 ```
 
-Sono disponibili `NSWindowStyle` le seguenti funzionalità:
+Sono disponibili le seguenti funzionalità di `NSWindowStyle`:
 
 - Senza **bordi** : la finestra non avrà alcun bordo.
 - **Titolo** : la finestra avrà una barra del titolo.
@@ -258,7 +258,7 @@ Sono disponibili `NSWindowStyle` le seguenti funzionalità:
 
 Le ultime due proprietà definiscono il _tipo di buffering_ per la finestra e se il disegno della finestra verrà posticipato. Per ulteriori informazioni su `NSWindows`, vedere l' [introduzione di Apple alla](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) documentazione di Windows.
 
-Infine, poiché la finestra non viene ingrandita da un file con estensione storyboard o XIB, è necessario simularla nel **MainWindowController.cs** chiamando il metodo Windows `AwakeFromNib` :
+Infine, poiché la finestra non viene ingrandita da un file con estensione storyboard o XIB, è necessario simularla nel **MainWindowController.cs** chiamando il metodo Windows `AwakeFromNib`:
 
 ```csharp
 Window.AwakeFromNib ();
@@ -286,7 +286,7 @@ A questo punto, se l'applicazione viene eseguita e il pulsante ha fatto clic su 
 
 ## <a name="adding-a-code-only-window"></a>Aggiunta di una finestra solo codice
 
-Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Novell. Mac esistente, fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi** > **nuovo file.** Nella finestra di dialogo **nuovo file** scegliere **Novell. Mac** > **Cocoa con controller**, come illustrato di seguito:
+Se si vuole aggiungere un solo codice, finestra xibless a un'applicazione Novell. Mac esistente, fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi**  > **nuovo file..** . Nella finestra di dialogo **nuovo file** scegliere **novell. Mac**  > **finestra Cocoa con controller**, come illustrato di seguito:
 
 ![Aggiunta di un nuovo controller di finestra](xibless-ui-images/add01.png "Aggiunta di un nuovo controller di finestra")
 
@@ -294,7 +294,7 @@ Esattamente come in precedenza, il file default. Storyboard o. xib verrà elimin
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>Aggiunta di un elemento dell'interfaccia utente a una finestra nel codice
 
-Se una finestra è stata creata nel codice o è stata caricata da un file con estensione storyboard o XIB, potrebbe essere necessario aggiungere un elemento dell'interfaccia utente a una finestra dal codice. Ad esempio:
+Se una finestra è stata creata nel codice o è stata caricata da un file con estensione storyboard o XIB, potrebbe essere necessario aggiungere un elemento dell'interfaccia utente a una finestra dal codice. Esempio:
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -303,13 +303,13 @@ var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
 MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
-Il codice precedente crea un nuovo `NSButton` oggetto e lo aggiunge all' `MyWindow` istanza della finestra per la visualizzazione. In pratica, qualsiasi elemento dell'interfaccia utente che può essere definito in Interface Builder di Xcode in un file con estensione storyboard o XIB può essere creato nel codice e visualizzato in una finestra.
+Il codice precedente crea una nuova `NSButton` e la aggiunge all'istanza della finestra `MyWindow` per la visualizzazione. In pratica, qualsiasi elemento dell'interfaccia utente che può essere definito in Interface Builder di Xcode in un file con estensione storyboard o XIB può essere creato nel codice e visualizzato in una finestra.
 
 ## <a name="defining-the-menu-bar-in-code"></a>Definizione della barra dei menu nel codice
 
-A causa delle limitazioni correnti in Novell. Mac, non è consigliabile creare la barra`NSMenuBar`dei menu dell'applicazione Novell. Mac, ovvero nel codice, ma continuare a usare il file **Main. Storyboard** o **MainMenu. xib** per definirlo. Detto ciò, è possibile aggiungere e rimuovere menu e voci di menu C# nel codice.
+A causa delle limitazioni correnti in Novell. Mac, non è consigliabile creare la barra dei menu dell'applicazione Novell. Mac, `NSMenuBar`, nel codice, ma continuare a usare il file **Main. Storyboard** o **MainMenu. xib** per definirlo. Detto ciò, è possibile aggiungere e rimuovere menu e voci di menu C# nel codice.
 
-Modificare ad esempio il file **AppDelegate.cs** e fare in modo `DidFinishLaunching` che il metodo sia simile al seguente:
+Modificare ad esempio il file **AppDelegate.cs** e fare in modo che il metodo `DidFinishLaunching` sia simile al seguente:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)

@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
 ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766850"
 ---
 # <a name="using-data-in-an-ios-app"></a>Uso dei dati in un'app iOS
@@ -20,13 +20,13 @@ L'esempio **DataAccess_Adv** Mostra un'applicazione funzionante che consente l'i
 
 Dopo l'aggiunta di alcuni dati, le schermate dell'applicazione hanno un aspetto simile al seguente in iOS:
 
- ![](using-data-in-an-app-images/image9.png "elenco di esempio iOS")
+ ![](using-data-in-an-app-images/image9.png "iOS sample list")
 
- ![](using-data-in-an-app-images/image10.png "dettagli dell'esempio iOS")
+ ![](using-data-in-an-app-images/image10.png "iOS sample detail")
 
 Il progetto iOS è illustrato di seguito. il codice illustrato in questa sezione è contenuto nella directory **ORM** :
 
- ![](using-data-in-an-app-images/image13.png "albero del progetto iOS")
+ ![](using-data-in-an-app-images/image13.png "iOS project tree")
 
 Il codice dell'interfaccia utente nativa per ViewControllers in iOS non rientra nell'ambito di questo documento.
 Per altre informazioni sui controlli dell'interfaccia utente, vedere la Guida [uso di tabelle e celle per iOS](~/ios/user-interface/controls/tables/index.md) .
@@ -38,7 +38,7 @@ Nell'esempio sono presenti due operazioni di lettura:
 - Lettura dell'elenco
 - Lettura di singoli record
 
-I due metodi `StockDatabase` della classe sono:
+I due metodi della classe `StockDatabase` sono:
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -55,11 +55,11 @@ public Stock GetStock (int id)
 }
 ```
 
-iOS esegue il rendering dei dati in modo `UITableView`diverso come.
+iOS esegue il rendering dei dati in modo diverso come `UITableView`.
 
 ## <a name="create-and-update"></a>Creazione e aggiornamento
 
-Per semplificare il codice dell'applicazione, viene fornito un singolo metodo Save che esegue un inserimento o un aggiornamento a seconda che sia stato impostato PrimaryKey. Poiché la `Id` proprietà è contrassegnata con `[PrimaryKey]` un attributo, non è consigliabile impostarla nel codice.
+Per semplificare il codice dell'applicazione, viene fornito un singolo metodo Save che esegue un inserimento o un aggiornamento a seconda che sia stato impostato PrimaryKey. Poiché la proprietà `Id` è contrassegnata con un attributo `[PrimaryKey]` non è necessario impostarla nel codice.
 Questo metodo consente di rilevare se il valore è stato salvato in precedenza (controllando la proprietà della chiave primaria) e inserire o aggiornare l'oggetto di conseguenza:
 
 ```csharp
@@ -79,10 +79,10 @@ public int SaveStock (Stock item)
 Le applicazioni reali richiederanno in genere una convalida, ad esempio campi obbligatori, lunghezze minime o altre regole business.
 Le applicazioni multipiattaforma valide implementano la maggior parte del possibile di convalida nel codice condiviso, passando gli errori di convalida all'interfaccia utente per la visualizzazione in base alle funzionalità della piattaforma.
 
-## <a name="delete"></a>Eliminare
+## <a name="delete"></a>Eliminazione
 
-A differenza dei `Insert` metodi `Update` e, il `Delete<T>` metodo può accettare solo il valore di chiave primaria anziché un oggetto `Stock` completo.
-In questo esempio un `Stock` oggetto viene passato al metodo, ma solo la proprietà ID viene passata `Delete<T>` al metodo.
+A differenza dei metodi `Insert` e `Update`, il metodo `Delete<T>` può accettare solo il valore della chiave primaria invece di un oggetto `Stock` completo.
+In questo esempio un oggetto `Stock` viene passato al metodo, ma solo la proprietà ID viene passata al metodo `Delete<T>`.
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -103,7 +103,7 @@ Per eseguire questa operazione nell'applicazione per dispositivi mobili, è poss
 
 Quando si crea un file di database per la distribuzione con l'app, prestare attenzione alla denominazione di tabelle e colonne per assicurarsi che corrispondano a quanto previsto dal codice, specialmente se si usa SQLite.NET, che prevede che i nomi C# corrispondano alle classi e alle proprietà ( o gli attributi personalizzati associati).
 
-Per iOS, includere il file SQLite nell'applicazione e assicurarsi che sia contrassegnato con **l'azione di compilazione: Contenuto**. Inserire il codice in `FinishedLaunching` per copiare il file in una directory scrivibile *prima* di chiamare qualsiasi metodo di dati. Nel codice seguente viene copiato un database esistente denominato **Data. sqlite**, solo se non esiste già.
+Per iOS, includere il file SQLite nell'applicazione e assicurarsi che sia contrassegnato con **azione di compilazione: contenuto**. Inserire il codice nel `FinishedLaunching` per copiare il file in una directory scrivibile *prima* di chiamare qualsiasi metodo di dati. Nel codice seguente viene copiato un database esistente denominato **Data. sqlite**, solo se non esiste già.
 
 ```csharp
 // Copy the database across (if it doesn't exist)

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70760159"
 ---
 # <a name="validation-in-enterprise-apps"></a>Convalida nelle app aziendali
@@ -20,17 +20,17 @@ Tutte le app che accettano input dagli utenti devono assicurarsi che l'input sia
 
 Nel contesto del modello MVC (Model-View-ViewModel), sarà spesso necessario un modello di visualizzazione o un modello per eseguire la convalida dei dati e segnalare eventuali errori di convalida alla visualizzazione in modo che l'utente possa correggerli. L'app per dispositivi mobili eShopOnContainers esegue la convalida sincrona sul lato client delle proprietà del modello di visualizzazione e notifica all'utente eventuali errori di convalida evidenziando il controllo che contiene i dati non validi e visualizzando i messaggi di errore che informano l'utente dei motivi per cui i dati non sono validi. La figura 6-1 illustra le classi necessarie per l'esecuzione della convalida nell'app per dispositivi mobili eShopOnContainers.
 
-[Classi di convalida nell'app per dispositivi mobili eShopOnContainers ![(validation-images/validation.png " ")]] (validation-images/validation-large.png#lightbox "Classi di convalida nell'app per dispositivi mobili eShopOnContainers")
+[![](validation-images/validation.png "Validation classes in the eShopOnContainers mobile app")](validation-images/validation-large.png#lightbox "Validation classes in the eShopOnContainers mobile app")
 
-**Figura 6-1**: Classi di convalida nell'app per dispositivi mobili eShopOnContainers
+**Figura 6-1**: classi di convalida nell'app per dispositivi mobili eShopOnContainers
 
-Le proprietà del modello di visualizzazione che richiedono la `ValidatableObject<T>`convalida sono di `ValidatableObject<T>` tipo e per ogni istanza sono state `Validations` aggiunte regole di convalida alla relativa proprietà. La convalida viene richiamata dal modello di visualizzazione chiamando `Validate` il metodo `ValidatableObject<T>` dell'istanza, che consente di recuperare le regole di convalida e di `ValidatableObject<T>` `Value` eseguirle sulla proprietà. Eventuali errori di convalida vengono inseriti nella `Errors` proprietà `ValidatableObject<T>` dell'istanza di `ValidatableObject<T>` e la proprietà `IsValid` dell'istanza viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
+Le proprietà del modello di visualizzazione che richiedono la convalida sono di tipo `ValidatableObject<T>` e ogni istanza di `ValidatableObject<T>` dispone di regole di convalida aggiunte alla relativa proprietà `Validations`. La convalida viene richiamata dal modello di vista chiamando il metodo di `Validate` dell'istanza di `ValidatableObject<T>`, che recupera le regole di convalida e le esegue con la proprietà di `Value` `ValidatableObject<T>`. Gli eventuali errori di convalida vengono inseriti nella proprietà `Errors` dell'istanza di `ValidatableObject<T>` e la proprietà `IsValid` dell'istanza `ValidatableObject<T>` viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
 
-La `ExtendedBindableObject` notifica delle modifiche alle proprietà viene fornita dalla classe, pertanto [`Entry`](xref:Xamarin.Forms.Entry) un `IsValid` controllo può essere associato alla proprietà `ValidatableObject<T>` dell'istanza nella classe del modello di visualizzazione per ricevere una notifica che indica se i dati immessi sono validi o meno.
+La notifica delle modifiche alle proprietà viene fornita dalla classe `ExtendedBindableObject`, quindi un controllo [`Entry`](xref:Xamarin.Forms.Entry) può essere associato alla proprietà `IsValid` dell'istanza di `ValidatableObject<T>` nella classe del modello di visualizzazione per ricevere una notifica che indica se i dati immessi sono validi o meno.
 
 ## <a name="specifying-validation-rules"></a>Specifica delle regole di convalida
 
-Le regole di convalida vengono specificate creando una classe che deriva dall' `IValidationRule<T>` interfaccia, come illustrato nell'esempio di codice seguente:
+Le regole di convalida vengono specificate creando una classe che deriva dall'interfaccia `IValidationRule<T>`, illustrata nell'esempio di codice seguente:
 
 ```csharp
 public interface IValidationRule<T>  
@@ -40,9 +40,9 @@ public interface IValidationRule<T>
 }
 ```
 
-Questa interfaccia specifica che una classe della regola di convalida deve `boolean` fornire un `Check` metodo utilizzato per eseguire la convalida richiesta e una `ValidationMessage` proprietà il cui valore è il messaggio di errore di convalida che verrà visualizzato se convalida non riuscita.
+Questa interfaccia specifica che una classe della regola di convalida deve fornire un `boolean` `Check` metodo utilizzato per eseguire la convalida richiesta e una proprietà `ValidationMessage` il cui valore è il messaggio di errore di convalida che verrà visualizzato in caso di esito negativo della convalida.
 
-L'esempio di codice seguente illustra `IsNotNullOrEmptyRule<T>` la regola di convalida, che viene usata per eseguire la convalida del nome utente e della password immessi `LoginView` dall'utente nel quando si usano i servizi fittizi nell'app per dispositivi mobili eShopOnContainers:
+L'esempio di codice seguente illustra la regola di convalida `IsNotNullOrEmptyRule<T>`, che viene usata per eseguire la convalida del nome utente e della password immessi dall'utente nell'`LoginView` quando si usano i servizi fittizi nell'app per dispositivi mobili eShopOnContainers:
 
 ```csharp
 public class IsNotNullOrEmptyRule<T> : IValidationRule<T>  
@@ -62,7 +62,7 @@ public class IsNotNullOrEmptyRule<T> : IValidationRule<T>
 }
 ```
 
-Il `Check` metodo restituisce un `boolean` valore che indica se l'argomento `null`value è, Empty o è costituito solo da spazi vuoti.
+Il metodo `Check` restituisce un `boolean` che indica se l'argomento value è `null`, Empty o è costituito solo da spazi vuoti.
 
 Sebbene non venga usato dall'app per dispositivi mobili eShopOnContainers, l'esempio di codice seguente mostra una regola di convalida per la convalida degli indirizzi di posta elettronica:
 
@@ -87,14 +87,14 @@ public class EmailRule<T> : IValidationRule<T>
 }
 ```
 
-Il `Check` metodo restituisce un `boolean` valore che indica se l'argomento value è un indirizzo di posta elettronica valido. Questa operazione viene eseguita eseguendo una ricerca nell'argomento value per la prima occorrenza del criterio di espressione regolare `Regex` specificato nel costruttore. Se il modello di espressione regolare è stato trovato nella stringa di input può essere determinato controllando il valore della `Match` `Success` proprietà dell'oggetto.
+Il metodo `Check` restituisce un `boolean` che indica se l'argomento value è un indirizzo di posta elettronica valido. Questa operazione viene eseguita eseguendo una ricerca nell'argomento value per la prima occorrenza del criterio di espressione regolare specificato nel costruttore `Regex`. Se il modello di espressione regolare è stato trovato nella stringa di input può essere determinato controllando il valore della proprietà `Success` dell'oggetto `Match`.
 
 > [!NOTE]
 > La convalida delle proprietà può talvolta includere proprietà dipendenti. Un esempio di proprietà dipendenti è quando il set di valori validi per la proprietà A dipende dal valore specifico impostato nella proprietà B. Per verificare che il valore della proprietà A sia uno dei valori consentiti comporterebbe il recupero del valore della proprietà B. Inoltre, quando viene modificato il valore della proprietà B, è necessario riconvalidare la proprietà A.
 
 ## <a name="adding-validation-rules-to-a-property"></a>Aggiunta di regole di convalida a una proprietà
 
-Nell'app eShopOnContainers per dispositivi mobili, visualizzare le proprietà del modello che richiedono la convalida sono dichiarate `T` di tipo `ValidatableObject<T>`, dove è il tipo di dati da convalidare. Nell'esempio di codice seguente viene illustrato un esempio di due proprietà di questo tipo:
+Nell'app eShopOnContainers per dispositivi mobili, visualizzare le proprietà del modello che richiedono la convalida sono dichiarate di tipo `ValidatableObject<T>`, dove `T` è il tipo di dati da convalidare. Nell'esempio di codice seguente viene illustrato un esempio di due proprietà di questo tipo:
 
 ```csharp
 public ValidatableObject<string> UserName  
@@ -124,7 +124,7 @@ public ValidatableObject<string> Password
 }
 ```
 
-Per eseguire la convalida, è necessario aggiungere le regole di convalida `Validations` alla raccolta di `ValidatableObject<T>` ogni istanza, come illustrato nell'esempio di codice seguente:
+Per eseguire la convalida, è necessario aggiungere le regole di convalida alla raccolta `Validations` di ogni istanza di `ValidatableObject<T>`, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 private void AddValidations()  
@@ -140,7 +140,7 @@ private void AddValidations()
 }
 ```
 
-Questo metodo aggiunge la `IsNotNullOrEmptyRule<T>` regola di convalida `Validations` alla raccolta di ogni `ValidatableObject<T>` istanza `ValidationMessage` , specificando i valori per la proprietà della regola di convalida, che specifica il messaggio di errore di convalida che verrà visualizzato se convalida non riuscita.
+Questo metodo aggiunge la regola di convalida `IsNotNullOrEmptyRule<T>` alla raccolta `Validations` di ogni istanza di `ValidatableObject<T>`, specificando i valori per la proprietà `ValidationMessage` della regola di convalida, che specifica il messaggio di errore di convalida che verrà visualizzato in caso di esito negativo della convalida.
 
 ## <a name="triggering-validation"></a>Attivazione della convalida
 
@@ -148,7 +148,7 @@ L'approccio di convalida usato nell'app per dispositivi mobili eShopOnContainers
 
 ### <a name="triggering-validation-manually"></a>Attivazione manuale della convalida
 
-La convalida può essere attivata manualmente per una proprietà del modello di visualizzazione. Questa situazione si verifica ad esempio nell'app per dispositivi mobili eShopOnContainers quando l'utente tocca il pulsante di `LoginView`accesso nella, quando si usano i servizi fittizi. Il delegato Command chiama il `MockSignInAsync` metodo nell'oggetto `LoginViewModel`, che richiama la convalida eseguendo il `Validate` metodo, illustrato nell'esempio di codice seguente:
+La convalida può essere attivata manualmente per una proprietà del modello di visualizzazione. Questa situazione si verifica ad esempio nell'app per dispositivi mobili eShopOnContainers quando l'utente tocca il pulsante di **accesso** nella `LoginView` quando si usano i servizi fittizi. Il delegato Command chiama il metodo `MockSignInAsync` nel `LoginViewModel`, che richiama la convalida eseguendo il metodo `Validate`, illustrato nell'esempio di codice seguente:
 
 ```csharp
 private bool Validate()  
@@ -169,7 +169,7 @@ private bool ValidatePassword()
 }
 ```
 
-Il `Validate` metodo esegue la convalida del nome utente e della password immessi dall'utente `LoginView`in, richiamando il metodo Validate in `ValidatableObject<T>` ogni istanza. Nell'esempio di `ValidatableObject<T>` codice seguente viene illustrato il metodo Validate della classe:
+Il metodo `Validate` esegue la convalida del nome utente e della password immessi dall'utente sul `LoginView`, richiamando il metodo Validate in ogni istanza di `ValidatableObject<T>`. Nell'esempio di codice seguente viene illustrato il metodo Validate della classe `ValidatableObject<T>`:
 
 ```csharp
 public bool Validate()  
@@ -187,11 +187,11 @@ public bool Validate()
 }
 ```
 
-Questo metodo cancella la `Errors` raccolta, quindi recupera tutte le regole di convalida aggiunte alla `Validations` raccolta dell'oggetto. Viene `Check` eseguito il metodo per ogni regola di convalida recuperata e `ValidationMessage` il valore della proprietà per qualsiasi regola di convalida che non riesce a convalidare `Errors` i dati viene `ValidatableObject<T>` aggiunto alla raccolta dell'istanza. Infine, la `IsValid` proprietà viene impostata e il relativo valore viene restituito al metodo chiamante, che indica se la convalida ha avuto esito positivo o negativo.
+Questo metodo cancella l'insieme di `Errors` e recupera tutte le regole di convalida aggiunte alla raccolta di `Validations` dell'oggetto. Viene eseguito il metodo `Check` per ogni regola di convalida recuperata e il valore della proprietà `ValidationMessage` per qualsiasi regola di convalida che non riesce a convalidare i dati viene aggiunto alla raccolta `Errors` dell'istanza di `ValidatableObject<T>`. Infine, viene impostata la proprietà `IsValid` e il relativo valore viene restituito al metodo chiamante, che indica se la convalida ha avuto esito positivo o negativo.
 
 ### <a name="triggering-validation-when-properties-change"></a>Attivazione della convalida quando le proprietà cambiano
 
-La convalida può anche essere attivata ogni volta che una proprietà associata viene modificata. Ad esempio, quando un'associazione bidirezionale in `LoginView` imposta la proprietà o `UserName` `Password` , viene attivata la convalida. Nell'esempio di codice seguente viene illustrata questa situazione:
+La convalida può anche essere attivata ogni volta che una proprietà associata viene modificata. Ad esempio, quando un'associazione bidirezionale nel `LoginView` imposta la proprietà `UserName` o `Password`, viene attivata la convalida. Nell'esempio di codice seguente viene illustrata questa situazione:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
@@ -204,7 +204,7 @@ La convalida può anche essere attivata ogni volta che una proprietà associata 
 </Entry>
 ```
 
-Il [`Entry`](xref:Xamarin.Forms.Entry) controllo viene associato `UserName.Value` alla proprietà dell' `ValidatableObject<T>` istanza e alla `Behaviors` raccolta del controllo è stata aggiunta un' `EventToCommandBehavior` istanza. Questo comportamento esegue l'oggetto `ValidateUserNameCommand` in risposta alla generazione dell'`TextChanged`evento [] sull'oggetto `Entry`, `Entry` che viene generato quando il testo in viene modificato. Il `ValidateUserNameCommand` delegato esegue a sua volta il `ValidateUserName` metodo, che esegue il `Validate` metodo sull' `ValidatableObject<T>` istanza. Pertanto, ogni volta che l'utente immette un carattere nel `Entry` controllo per il nome utente, viene eseguita la convalida dei dati immessi.
+Il controllo [`Entry`](xref:Xamarin.Forms.Entry) viene associato alla proprietà `UserName.Value` dell'istanza di `ValidatableObject<T>` e alla raccolta `Behaviors` del controllo è stata aggiunta un'istanza di `EventToCommandBehavior`. Questo comportamento esegue l'`ValidateUserNameCommand` in risposta all'attivazione dell'evento [`TextChanged`] sul `Entry`, che viene generato quando il testo nel `Entry` viene modificato. Il delegato `ValidateUserNameCommand` esegue a sua volta il metodo `ValidateUserName`, che esegue il metodo `Validate` sull'istanza di `ValidatableObject<T>`. Pertanto, ogni volta che l'utente immette un carattere nel controllo `Entry` per il nome utente, viene eseguita la convalida dei dati immessi.
 
 Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
 
@@ -214,13 +214,13 @@ Per ulteriori informazioni sui comportamenti, vedere [implementazione dei compor
 
 L'app per dispositivi mobili eShopOnContainers invia una notifica all'utente di eventuali errori di convalida evidenziando il controllo che contiene i dati non validi con una linea rossa e visualizzando un messaggio di errore che informa l'utente del motivo per cui i dati non sono validi sotto il controllo contenente il dati non validi. Quando i dati non validi vengono corretti, la riga diventa nera e il messaggio di errore viene rimosso. La figura 6-2 illustra l'oggetto LoginView nell'app per dispositivi mobili eShopOnContainers quando sono presenti errori di convalida.
 
-![](validation-images/validation-login.png "Visualizzazione degli errori di convalida durante l'accesso")
+![](validation-images/validation-login.png "Displaying validation errors during login")
 
 **Figura 6-2:** Visualizzazione degli errori di convalida durante l'accesso
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>Evidenziazione di un controllo che contiene dati non validi
 
-Il `LineColorBehavior` comportamento associato viene usato per evidenziare [`Entry`](xref:Xamarin.Forms.Entry) i controlli in cui si sono verificati errori di convalida. Nell'esempio di codice seguente viene illustrato `LineColorBehavior` il modo in cui il comportamento `Entry` associato è associato a un controllo:
+Il `LineColorBehavior` comportamento associato viene usato per evidenziare [`Entry`](xref:Xamarin.Forms.Entry) controlli in cui si sono verificati errori di convalida. Nell'esempio di codice seguente viene illustrato il modo in cui il `LineColorBehavior` comportamento associato è associato a un controllo `Entry`:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">
@@ -234,7 +234,7 @@ Il `LineColorBehavior` comportamento associato viene usato per evidenziare [`Ent
 </Entry>
 ```
 
-Il [`Entry`](xref:Xamarin.Forms.Entry) controllo utilizza uno stile esplicito, illustrato nell'esempio di codice seguente:
+Il controllo [`Entry`](xref:Xamarin.Forms.Entry) utilizza uno stile esplicito, illustrato nell'esempio di codice seguente:
 
 ```xaml
 <Style x:Key="EntryStyle"  
@@ -248,9 +248,9 @@ Il [`Entry`](xref:Xamarin.Forms.Entry) controllo utilizza uno stile esplicito, i
 </Style>
 ```
 
-Questo stile imposta le `ApplyLineColor` proprietà `LineColor` associate e del `LineColorBehavior` comportamento associato sul [`Entry`](xref:Xamarin.Forms.Entry) controllo. Per altre informazioni sugli stili, vedere [Stili](~/xamarin-forms/user-interface/styles/index.md).
+Questo stile imposta la `ApplyLineColor` e `LineColor` le proprietà associate del `LineColorBehavior` comportamento associato sul controllo [`Entry`](xref:Xamarin.Forms.Entry) . Per altre informazioni sugli stili, vedere [Stili](~/xamarin-forms/user-interface/styles/index.md).
 
-Quando viene impostato il valore `ApplyLineColor` della proprietà associata, o viene modificato, il `LineColorBehavior` comportamento associato esegue il `OnApplyLineColorChanged` metodo, illustrato nell'esempio di codice seguente:
+Quando il valore della proprietà associata `ApplyLineColor` viene impostato, o viene modificato, il `LineColorBehavior` comportamento collegato esegue il metodo `OnApplyLineColorChanged`, illustrato nell'esempio di codice seguente:
 
 ```csharp
 public static class LineColorBehavior  
@@ -283,9 +283,9 @@ public static class LineColorBehavior
 }
 ```
 
-I parametri per questo metodo forniscono l'istanza del controllo a cui è collegato il comportamento e i valori precedenti e nuovi della `ApplyLineColor` proprietà associata. La `EntryLineColorEffect` classe viene aggiunta alla [`Effects`](xref:Xamarin.Forms.Element.Effects) raccolta del controllo se la `ApplyLineColor` proprietà associata è `true`, in caso contrario viene rimossa dalla `Effects` raccolta del controllo. Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+I parametri per questo metodo forniscono l'istanza del controllo a cui è collegato il comportamento e i valori precedenti e nuovi della proprietà associata `ApplyLineColor`. La classe `EntryLineColorEffect` viene aggiunta alla raccolta di [`Effects`](xref:Xamarin.Forms.Element.Effects) del controllo se la proprietà associata `ApplyLineColor` è `true`; in caso contrario, viene rimossa dalla raccolta di `Effects` del controllo. Per ulteriori informazioni sui comportamenti, vedere [implementazione dei comportamenti](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
 
-Le `EntryLineColorEffect` sottoclassi della [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) classe e vengono mostrate nell'esempio di codice seguente:
+Il `EntryLineColorEffect` sottoclassi della classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) e viene illustrato nell'esempio di codice seguente:
 
 ```csharp
 public class EntryLineColorEffect : RoutingEffect  
@@ -296,9 +296,9 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-La [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) classe rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno specifico della piattaforma. Ciò semplifica il processo di rimozione dell'effetto, poiché non è previsto l'accesso alle informazioni sul tipo in fase di compilazione per un effetto specifico della piattaforma. `EntryLineColorEffect` Chiama il costruttore della classe base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e dall'ID univoco specificato in ogni classe di effetti specifici della piattaforma.
+La classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) rappresenta un effetto indipendente dalla piattaforma che esegue il wrapping di un effetto interno specifico della piattaforma. Ciò semplifica il processo di rimozione dell'effetto, poiché non è previsto l'accesso alle informazioni sul tipo in fase di compilazione per un effetto specifico della piattaforma. Il `EntryLineColorEffect` chiama il costruttore della classe base, passando un parametro costituito da una concatenazione del nome del gruppo di risoluzione e dall'ID univoco specificato in ogni classe di effetti specifici della piattaforma.
 
-Nell'esempio di codice seguente viene `eShopOnContainers.EntryLineColorEffect` illustrata l'implementazione di per iOS:
+Nell'esempio di codice seguente viene illustrata l'implementazione di `eShopOnContainers.EntryLineColorEffect` per iOS:
 
 ```csharp
 [assembly: ResolutionGroupName("eShopOnContainers")]  
@@ -374,15 +374,15 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-Il `OnAttached` metodo recupera il controllo nativo per il controllo Novell. [`Entry`](xref:Xamarin.Forms.Entry) Forms e aggiorna il colore della linea chiamando il `UpdateLineColor` metodo. L' `OnElementPropertyChanged` override risponde alle modifiche delle proprietà associabili `Entry` sul controllo aggiornando il colore della linea se la `LineColor` `Entry` proprietà associata viene modificata o [`Height`](xref:Xamarin.Forms.VisualElement.Height) la proprietà delle modifiche. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
+Il metodo `OnAttached` Recupera il controllo nativo per il controllo [`Entry`](xref:Xamarin.Forms.Entry) Novell. Forms e aggiorna il colore della linea chiamando il metodo `UpdateLineColor`. L'override del `OnElementPropertyChanged` risponde alle modifiche delle proprietà associabili sul controllo `Entry` aggiornando il colore della linea se la proprietà `LineColor` associata viene modificata o se la proprietà [`Height`](xref:Xamarin.Forms.VisualElement.Height) del `Entry` viene modificata. Per altre informazioni sugli effetti, vedere [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md).
 
-Quando vengono immessi dati validi nel [`Entry`](xref:Xamarin.Forms.Entry) controllo, viene applicata una linea nera nella parte inferiore del controllo per indicare che non è presente alcun errore di convalida. La figura 6-3 illustra un esempio di questo.
+Quando vengono immessi dati validi nel controllo [`Entry`](xref:Xamarin.Forms.Entry) , viene applicata una linea nera nella parte inferiore del controllo per indicare che non è presente alcun errore di convalida. La figura 6-3 illustra un esempio di questo.
 
-![](validation-images/validation-blackline.png "Linea nera che indica l'assenza di errori di convalida")
+![](validation-images/validation-blackline.png "Black line indicating no validation error")
 
-**Figura 6-3**: Linea nera che indica l'assenza di errori di convalida
+**Figura 6-3**: riga nera che indica l'assenza di errori di convalida
 
-Il [`Entry`](xref:Xamarin.Forms.Entry) controllo dispone anche di [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) un oggetto aggiunto [`Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) alla relativa raccolta. Nell'esempio di codice seguente viene `DataTrigger`illustrato quanto segue:
+Il controllo [`Entry`](xref:Xamarin.Forms.Entry) dispone anche di un [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) aggiunto alla raccolta di [`Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) . Nell'esempio di codice seguente viene illustrata la `DataTrigger`:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
@@ -399,34 +399,34 @@ Il [`Entry`](xref:Xamarin.Forms.Entry) controllo dispone anche di [`DataTrigger`
 </Entry>
 ```
 
-[`Setter`](xref:Xamarin.Forms.Setter) `false` `LineColor` `LineColorBehavior` Viene monitorata la `UserName.IsValid` proprietà e, se il valore diventa, viene eseguita la proprietà, che modifica la proprietà associata del comportamento associato in rosso. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) La figura 6-4 illustra un esempio di questo.
+Questo [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) monitora la proprietà `UserName.IsValid` e, se il valore diventa `false`, esegue il [`Setter`](xref:Xamarin.Forms.Setter), che modifica la proprietà associata `LineColor` del comportamento `LineColorBehavior` associato in rosso. La figura 6-4 illustra un esempio di questo.
 
-![](validation-images/validation-redline.png "Linea rossa che indica un errore di convalida")
+![](validation-images/validation-redline.png "Red line indicating validation error")
 
-**Figura 6-4**: Linea rossa che indica un errore di convalida
+**Figura 6-4**: riga rossa che indica un errore di convalida
 
-La riga nel [`Entry`](xref:Xamarin.Forms.Entry) controllo rimarrà rossa mentre i dati immessi non sono validi; in caso contrario, cambierà in nero per indicare che i dati immessi sono validi.
+La riga nel controllo [`Entry`](xref:Xamarin.Forms.Entry) rimarrà rossa mentre i dati immessi non sono validi; in caso contrario, cambierà in nero per indicare che i dati immessi sono validi.
 
 Per ulteriori informazioni sui trigger, vedere [trigger](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ### <a name="displaying-error-messages"></a>Visualizzazione di messaggi di errore
 
-L'interfaccia utente Visualizza i messaggi di errore di convalida nei controlli etichetta sotto ogni controllo i cui dati non sono stati convalidati. Nell'esempio di codice seguente viene [`Label`](xref:Xamarin.Forms.Label) illustrato il che visualizza un messaggio di errore di convalida se l'utente non ha immesso un nome utente valido:
+L'interfaccia utente Visualizza i messaggi di errore di convalida nei controlli etichetta sotto ogni controllo i cui dati non sono stati convalidati. Nell'esempio di codice seguente viene illustrata la [`Label`](xref:Xamarin.Forms.Label) che visualizza un messaggio di errore di convalida se l'utente non ha immesso un nome utente valido:
 
 ```xaml
 <Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
-Ogni [`Label`](xref:Xamarin.Forms.Label) viene associato `Errors` alla proprietà dell'oggetto modello di visualizzazione da convalidare. La `Errors` proprietà viene fornita `ValidatableObject<T>` dalla classe ed è di tipo `List<string>`. Poiché la `Errors` proprietà può contenere più errori di convalida, `FirstValidationErrorConverter` l'istanza viene utilizzata per recuperare il primo errore dalla raccolta per la visualizzazione.
+Ogni [`Label`](xref:Xamarin.Forms.Label) viene associato alla proprietà `Errors` dell'oggetto modello di visualizzazione da convalidare. La proprietà `Errors` viene fornita dalla classe `ValidatableObject<T>` ed è di tipo `List<string>`. Poiché la proprietà `Errors` può contenere più errori di convalida, viene utilizzata l'istanza `FirstValidationErrorConverter` per recuperare il primo errore dalla raccolta per la visualizzazione.
 
 ## <a name="summary"></a>Riepilogo
 
 L'app per dispositivi mobili eShopOnContainers esegue la convalida sincrona sul lato client delle proprietà del modello di visualizzazione e notifica all'utente eventuali errori di convalida evidenziando il controllo che contiene i dati non validi e visualizzando i messaggi di errore che informano l'utente perché i dati non sono validi.
 
-Le proprietà del modello di visualizzazione che richiedono la `ValidatableObject<T>`convalida sono di `ValidatableObject<T>` tipo e per ogni istanza sono state `Validations` aggiunte regole di convalida alla relativa proprietà. La convalida viene richiamata dal modello di visualizzazione chiamando `Validate` il metodo `ValidatableObject<T>` dell'istanza, che consente di recuperare le regole di convalida e di `ValidatableObject<T>` `Value` eseguirle sulla proprietà. Eventuali errori di convalida vengono inseriti nella `Errors` proprietà `ValidatableObject<T>`dell'istanza di `ValidatableObject<T>` e la proprietà `IsValid` dell'istanza viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
+Le proprietà del modello di visualizzazione che richiedono la convalida sono di tipo `ValidatableObject<T>` e ogni istanza di `ValidatableObject<T>` dispone di regole di convalida aggiunte alla relativa proprietà `Validations`. La convalida viene richiamata dal modello di vista chiamando il metodo di `Validate` dell'istanza di `ValidatableObject<T>`, che recupera le regole di convalida e le esegue con la proprietà di `Value` `ValidatableObject<T>`. Gli eventuali errori di convalida vengono inseriti nella proprietà `Errors` della `ValidatableObject<T>`instance e la proprietà `IsValid` dell'istanza di `ValidatableObject<T>` viene aggiornata per indicare se la convalida ha avuto esito positivo o negativo.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Scarica eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (esempio)](https://github.com/dotnet-architecture/eShopOnContainers)

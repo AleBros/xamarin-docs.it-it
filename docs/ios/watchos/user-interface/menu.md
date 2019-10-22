@@ -8,17 +8,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766796"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controllo menu watchos (Force Touch) in Novell
 
 Il kit Watch fornisce un movimento Force Touch che attiva un menu quando viene implementato in una schermata dell'app Watch.
 
-![](menu-images/menu.png "Apple Watch visualizzazione di un menu")
+![](menu-images/menu.png "Apple Watch showing a menu")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="responding-to-force-touch"></a>Risposta a Force Touch
@@ -31,17 +31,17 @@ I tocchi di forza non sono associati a un particolare elemento sullo schermo; è
 
 ## <a name="adding-a-menu"></a>Aggiunta di un menu
 
-Un `Menu` oggetto deve essere aggiunto a `InterfaceController` un oggetto nello storyboard in fase di progettazione. Quando un controllo menu viene trascinato su un controller di interfaccia, non è presente alcuna indicazione visiva nell'anteprima dello storyboard, ma il **menu** viene visualizzato nel riquadro **struttura documento** :
+È necessario aggiungere un `Menu` a un `InterfaceController` nello storyboard in fase di progettazione. Quando un controllo menu viene trascinato su un controller di interfaccia, non è presente alcuna indicazione visiva nell'anteprima dello storyboard, ma il **menu** viene visualizzato nel riquadro **struttura documento** :
 
-![](menu-images/menu-action.png "Modifica di un menu in fase di progettazione")
+![](menu-images/menu-action.png "Editing a menu at design time")
 
 Al controllo menu è possibile aggiungere fino a quattro voci di menu. Possono essere configurate nel riquadro **Proprietà** . È possibile impostare gli attributi seguenti:
 
 - Titolo e
 - Immagine personalizzata o
-- Un'immagine di sistema: Accetta, Aggiungi, blocca, rifiuta, info, forse, più, disattiva, Sospendi, gioca, Ripeti, Riprendi, Condividi, shuffle, speaker, cestino.
+- Un'immagine di sistema: accetta, Aggiungi, blocca, rifiuta, info, forse, più, mute, Sospendi, gioca, Ripeti, riprende, Condividi, shuffle, speaker, Trash.
 
-Creare un `Action` oggetto selezionando la sezione **eventi** del riquadro **Proprietà** e digitando il nome per il metodo di azione. Nel codice verrà creato un metodo parziale, che può essere implementato nella classe controller di interfaccia, come indicato di seguito:
+Creare una `Action` selezionando la sezione **eventi** del riquadro **Proprietà** e digitando il nome per il metodo di azione. Nel codice verrà creato un metodo parziale, che può essere implementato nella classe controller di interfaccia, come indicato di seguito:
 
 ```csharp
 partial void MenuItemTapped ()
@@ -66,14 +66,14 @@ Menu items added the storyboard can be shown and hidden programmatically.
 
 ### <a name="adding-at-runtime"></a>Aggiunta in fase di esecuzione
 
-Non è possibile fare `Menu` in modo che un oggetto venga aggiunto a un controller di interfaccia in fase `MenuItem`di esecuzione, anche se la raccolta di oggetti *può* essere modificata a livello di codice.
-Usare il `AddMenuItem` metodo come illustrato:
+Non è possibile fare in modo che un `Menu` venga aggiunto a un controller di interfaccia in fase di esecuzione, anche se la raccolta di `MenuItem`s *può* essere modificata a livello di codice.
+Usare il metodo `AddMenuItem` come illustrato:
 
 ```csharp
 AddMenuItem (WKMenuItemIcon.Accept, "Yes", new ObjCRuntime.Selector ("tapped"));
 ```
 
-L'API del kit di controllo Novell. iOS richiede `selector` attualmente un `AdMenuItem` oggetto per il metodo, che deve essere dichiarato come segue:
+L'API del kit di controllo Novell. iOS richiede attualmente una `selector` per il metodo `AdMenuItem`, che deve essere dichiarata come segue:
 
 ```csharp
 [Export("tapped")]
@@ -85,7 +85,7 @@ void MenuItemTapped ()
 
 ### <a name="removing-at-runtime"></a>Rimozione in fase di esecuzione
 
-È `ClearAllMenuItems` possibile chiamare il metodo per rimuovere tutte le voci di menu *aggiunte a livello di codice* .
+È possibile chiamare il metodo `ClearAllMenuItems` per rimuovere tutte le voci di menu *aggiunte a livello di codice* .
 
 Non è possibile cancellare le voci di menu configurate nello storyboard.
 

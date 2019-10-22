@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70760229"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introduzione allo sviluppo di app aziendali
@@ -34,7 +34,7 @@ Un rimedio efficace per queste difficoltà consiste nel partizionare un'app in c
 - Promuove il riutilizzo e una netta separazione dei problemi tra le funzionalità orizzontali dell'app, ad esempio l'autenticazione e l'accesso ai dati, e le funzionalità verticali, ad esempio funzionalità aziendali specifiche dell'app. Ciò consente di gestire più facilmente le dipendenze e le interazioni tra i componenti dell'app.
 - Consente di mantenere la separazione dei ruoli consentendo a singoli utenti, o team, di concentrarsi su un'attività specifica o una parte delle funzionalità in base alle proprie competenze. In particolare, fornisce una separazione più pulita tra l'interfaccia utente e la logica di business dell'app.
 
-Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. Sono inclusi:
+Tuttavia, esistono molti problemi che devono essere risolti durante il partizionamento di un'app in componenti discreti, a regime di controllo libero. tra cui:
 
 - Decidere come fornire una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica. Una delle decisioni più importanti per la creazione di un'app aziendale Novell. Forms consiste nel decidere se inserire la logica di business nei file code-behind o se creare una netta separazione dei problemi tra i controlli dell'interfaccia utente e la relativa logica, per rendere più semplice l'app gestibile e testabile. Per altre informazioni, vedere [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinare se usare un contenitore di inserimento delle dipendenze. I contenitori di inserimento delle dipendenze riducono l'accoppiamento delle dipendenze tra gli oggetti fornendo una struttura per costruire istanze di classi con le relative dipendenze inserite e gestirne la durata in base alla configurazione del contenitore. Per altre informazioni, vedere [inserimento delle dipendenze](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
@@ -62,7 +62,7 @@ Questa guida include un'applicazione di esempio, eShopOnContainers, che è un ne
 
 La figura 1-1 fornisce una panoramica di alto livello dell'architettura dell'applicazione di esempio.
 
-![](introduction-images/architecture.png "architettura di alto livello di eShopOnContainers")
+![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
 
 **Figura 1-1**: architettura di alto livello di eShopOnContainers
 
@@ -83,15 +83,15 @@ L'applicazione di esempio include i servizi back-end seguenti:
 
 Questi servizi back-end vengono implementati come microservizi usando ASP.NET Core MVC e vengono distribuiti come contenitori univoci all'interno di un singolo host docker. Complessivamente, questi servizi back-end vengono definiti applicazione di riferimento eShopOnContainers. Le app client comunicano con i servizi back-end tramite un'interfaccia Web REST (Representational State Transfer). Per altre informazioni sui microservizi e Docker, vedere [microservizi in contenitori](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
-Per informazioni sull'implementazione dei servizi back-end, vedere [microservizi .NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
+Per informazioni sull'implementazione dei servizi back-end, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
 
 ### <a name="mobile-app"></a>App per dispositivi mobili
 
 Questa guida è incentrata sulla creazione di app aziendali multipiattaforma con Novell. Forms e usa l'app per dispositivi mobili eShopOnContainers come esempio. La figura 1-2 Mostra le pagine dell'app per dispositivi mobili eShopOnContainers che forniscono la funzionalità descritta in precedenza.
 
-[![](introduction-images/screenshots.png "App per dispositivi mobili eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "App per dispositivi mobili eShopOnContainers")
+[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
-**Figura 1-2**: App per dispositivi mobili eShopOnContainers
+**Figura 1-2**: app per dispositivi mobili eShopOnContainers
 
 L'app per dispositivi mobili usa i servizi back-end forniti dall'applicazione di riferimento eShopOnContainers. Tuttavia, può essere configurato per utilizzare i dati di servizi fittizi per coloro che desiderano evitare di distribuire i servizi back-end.
 
@@ -103,9 +103,9 @@ L'app per dispositivi mobili eShopOnContainers esercita la seguente funzionalit�
 - Convertitori
 - Stili
 - Animations
-- Comandi:
+- Comandi
 - comportamenti
-- Trigger
+- trigger
 - Effetti
 - Renderer personalizzati
 - MessagingCenter
@@ -121,18 +121,18 @@ La soluzione app per dispositivi mobili eShopOnContainers organizza il codice so
 
 |Progetto|Descrizione|
 |--- |--- |
-|eShopOnContainers.Core|Questo progetto è il progetto libreria di classi portabile (PCL) che contiene il codice condiviso e l'interfaccia utente condivisa.|
-|eShopOnContainers.Droid|Questo progetto include codice specifico per Android ed è il punto di ingresso per l'app Android.|
-|eShopOnContainers.iOS|Questo progetto include il codice specifico di iOS ed è il punto di ingresso per l'app iOS.|
-|eShopOnContainers.UWP|Questo progetto include piattaforma UWP (Universal Windows Platform) codice specifico (UWP) ed è il punto di ingresso per l'app di Windows.|
-|eShopOnContainers.TestRunner.Droid|Questo progetto è Android Test Runner per il progetto eShopOnContainers. UnitTests.|
-|eShopOnContainers.TestRunner.iOS|Questo progetto è il test runner iOS per il progetto eShopOnContainers. UnitTests.|
-|eShopOnContainers.TestRunner.Windows|Questo progetto è il piattaforma UWP (Universal Windows Platform) Test Runner per il progetto eShopOnContainers. UnitTests.|
-|eShopOnContainers.UnitTests|Questo progetto contiene unit test per il progetto eShopOnContainers. Core.|
+|eShopOnContainers. Core|Questo progetto è il progetto libreria di classi portabile (PCL) che contiene il codice condiviso e l'interfaccia utente condivisa.|
+|eShopOnContainers. Droid|Questo progetto include codice specifico per Android ed è il punto di ingresso per l'app Android.|
+|eShopOnContainers. iOS|Questo progetto include il codice specifico di iOS ed è il punto di ingresso per l'app iOS.|
+|eShopOnContainers. UWP|Questo progetto include piattaforma UWP (Universal Windows Platform) codice specifico (UWP) ed è il punto di ingresso per l'app di Windows.|
+|eShopOnContainers. TestRunner. Droid|Questo progetto è Android Test Runner per il progetto eShopOnContainers. UnitTests.|
+|eShopOnContainers. TestRunner. iOS|Questo progetto è il test runner iOS per il progetto eShopOnContainers. UnitTests.|
+|eShopOnContainers. TestRunner. Windows|Questo progetto è il piattaforma UWP (Universal Windows Platform) Test Runner per il progetto eShopOnContainers. UnitTests.|
+|eShopOnContainers. UnitTests|Questo progetto contiene unit test per il progetto eShopOnContainers. Core.|
 
 Le classi dall'app per dispositivi mobili eShopOnContainers possono essere riutilizzate in qualsiasi app Novell. Forms con modifiche minime o nulle.
 
-##### <a name="eshoponcontainerscore-project"></a>eShopOnContainers.Core Project
+##### <a name="eshoponcontainerscore-project"></a>Progetto eShopOnContainers. Core
 
 Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 
@@ -142,14 +142,14 @@ Il progetto PCL eShopOnContainers. core contiene le cartelle seguenti:
 |comportamenti|Contiene i comportamenti esposti alle classi di visualizzazione.|
 |Controlli|Contiene i controlli personalizzati usati dall'app.|
 |Convertitori|Contiene convertitori di valori che applicano la logica personalizzata a un'associazione.|
-|Effetti|Contiene la `EntryLineColorEffect` classe, utilizzata per modificare il colore del bordo di controlli specifici `Entry` .|
-|Eccezioni|Contiene l'oggetto `ServiceAuthenticationException`personalizzato.|
-|Estensioni|Contiene metodi di estensione per `VisualElement` le `IEnumerable` classi e.|
+|Effetti|Contiene la classe `EntryLineColorEffect` utilizzata per modificare il colore del bordo di controlli `Entry` specifici.|
+|Eccezioni|Contiene la `ServiceAuthenticationException` personalizzata.|
+|Estensioni|Contiene metodi di estensione per le classi `VisualElement` e `IEnumerable`.|
 |Aiutanti|Contiene le classi helper per l'app.|
 |Modelli|Contiene le classi del modello per l'app.|
 |Proprietà|Contiene `AssemblyInfo.cs`, un file di metadati dell'assembly .NET.|
 |Servizi|Contiene le interfacce e le classi che implementano i servizi forniti all'app.|
-|Trigger|Contiene il `BeginAnimation` trigger, utilizzato per richiamare un'animazione in XAML.|
+|trigger|Contiene il trigger `BeginAnimation`, utilizzato per richiamare un'animazione in XAML.|
 |Convalide|Contiene le classi necessarie per la convalida dell'input dei dati.|
 |ViewModel|Contiene la logica dell'applicazione esposta alle pagine.|
 |Visualizzazioni|Contiene le pagine per l'app.|
@@ -167,4 +167,4 @@ Gli sviluppatori di app aziendali affrontano diverse esigenze che possono altera
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Scarica eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (esempio)](https://github.com/dotnet-architecture/eShopOnContainers)

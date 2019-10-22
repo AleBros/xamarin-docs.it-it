@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769998"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data Binding e codifica chiave-valore in Novell. Mac
@@ -28,13 +28,13 @@ Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applica
 
 In questo articolo verranno illustrate le nozioni di base sull'uso della codifica chiave-valore e data binding in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando `Register` gli attributi e `Export` usati per collegare le C# classi a Oggetti Objective-C ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="What_is_Key-Value_Coding" />
 
 ## <a name="what-is-key-value-coding"></a>Che cos'è la codifica chiave-valore
 
-Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza`get/set`o metodi di funzione di accesso (). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, si ottiene l'accesso ad altre funzionalità di macOS (precedentemente note come OS X), ad esempio KVO (Key-Value osservating), data binding, core data, associazioni Cocoa e script.
+Il codice chiave-valore (KVC) è un meccanismo per accedere indirettamente alle proprietà di un oggetto, usando chiavi (stringhe formattate in modo particolare) per identificare le proprietà anziché accedervi tramite variabili di istanza o metodi di funzione di accesso (`get/set`). Implementando le funzioni di accesso conformi al codice chiave-valore nell'applicazione Novell. Mac, si ottiene l'accesso ad altre funzionalità di macOS (precedentemente note come OS X), ad esempio KVO (Key-Value osservating), data binding, core data, associazioni Cocoa e script.
 
 Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
 
@@ -68,9 +68,9 @@ namespace MacDatabinding
 }
 ```
 
-In primo luogo `[Register("PersonModel")]` , l'attributo registra la classe e la espone a Objective-C. Quindi, la classe deve ereditare da `NSObject` o da una sottoclasse che eredita `NSObject`da. in questo modo viene aggiunto un metodo di base che consente alla classe di essere conforme a KVC. Successivamente, l' `[Export("Name")]` attributo espone la `Name` proprietà e definisce il valore della chiave che verrà usato in un secondo momento per accedere alla proprietà tramite le tecniche KVC e KVO.
+In primo luogo, l'attributo `[Register("PersonModel")]` registra la classe e la espone a Objective-C. Quindi, la classe deve ereditare da `NSObject` (o da una sottoclasse che eredita da `NSObject`), aggiunge diversi metodi di base che consentono alla classe di essere conformi a KVC. Successivamente, l'attributo `[Export("Name")]` espone la proprietà `Name` e definisce il valore della chiave che verrà usato in un secondo momento per accedere alla proprietà tramite le tecniche KVC e KVO.
 
-Infine, per poter essere in grado di modificare il valore della proprietà in base al valore della proprietà, è necessario che la funzione di accesso `WillChangeValue` incapsulare le modifiche apportate al relativo `Export` valore nelle chiamate al metodo e `DidChangeValue` (specificando la stessa chiave dell'attributo).  Ad esempio:
+Infine, per poter essere in grado di modificare il valore della proprietà in base al valore della proprietà, è necessario che la funzione di accesso incapsulare le modifiche apportate al valore `WillChangeValue` e `DidChangeValue` chiamate al metodo (specificando la stessa chiave dell'attributo `Export`).  Esempio:
 
 ```csharp
 set {
@@ -86,11 +86,11 @@ Per ulteriori informazioni, vedere la guida alla [programmazione per il codice c
 
 ### <a name="keys-and-key-paths"></a>Chiavi e percorsi delle chiavi
 
-Una _chiave_ è una stringa che identifica una proprietà specifica di un oggetto. In genere, una chiave corrisponde al nome di un metodo della funzione di accesso in un oggetto conforme al codice chiave-valore. Le chiavi devono usare la codifica ASCII, in genere iniziano con una lettera minuscola e non possono contenere spazi vuoti. Quindi, in base all'esempio `Name` precedente, sarebbe un valore chiave `Name` della proprietà della `PersonModel` classe. La chiave e il nome della proprietà che espongono non devono necessariamente essere uguali, ma nella maggior parte dei casi sono.
+Una _chiave_ è una stringa che identifica una proprietà specifica di un oggetto. In genere, una chiave corrisponde al nome di un metodo della funzione di accesso in un oggetto conforme al codice chiave-valore. Le chiavi devono usare la codifica ASCII, in genere iniziano con una lettera minuscola e non possono contenere spazi vuoti. Quindi, in base all'esempio precedente, `Name` sarebbe un valore chiave della proprietà `Name` della classe `PersonModel`. La chiave e il nome della proprietà che espongono non devono necessariamente essere uguali, ma nella maggior parte dei casi sono.
 
 Un _percorso della chiave_ è una stringa di chiavi separate da punti, utilizzate per specificare una gerarchia di proprietà dell'oggetto da attraversare. La proprietà della prima chiave nella sequenza è relativa al ricevitore e ogni chiave successiva viene valutata in relazione al valore della proprietà precedente. Nello stesso modo in cui si usa la notazione del punto per attraversare un oggetto e le relative C# proprietà in una classe.
 
-Ad esempio, se la classe è `PersonModel` stata espansa `Child` e la proprietà è stata aggiunta:
+Se ad esempio è stata espansa la classe `PersonModel` e aggiunta `Child` proprietà:
 
 ```csharp
 using System;
@@ -131,35 +131,35 @@ namespace MacDatabinding
 }
 ```
 
-Il percorso della chiave per il nome del figlio sarebbe `self.Child.Name` o semplicemente `Child.Name` (in base alla modalità di utilizzo del valore della chiave).
+Il percorso della chiave per il nome del figlio verrà `self.Child.Name` o semplicemente `Child.Name` (in base alla modalità di utilizzo del valore della chiave).
 
 ### <a name="getting-values-using-key-value-coding"></a>Recupero di valori tramite codice chiave-valore
 
-Il `ValueForKey` metodo restituisce il valore per la chiave specificata ( `NSString`come), relativo all'istanza della classe KVC che riceve la richiesta. Se `Person` , ad esempio, è un'istanza `PersonModel` della classe definita in precedenza:
+Il metodo `ValueForKey` restituisce il valore per la chiave specificata (come `NSString`), relativo all'istanza della classe KVC che riceve la richiesta. Se ad esempio `Person` è un'istanza della classe `PersonModel` definita in precedenza:
 
 ```csharp
 // Read value
 var name = Person.ValueForKey (new NSString("Name"));
 ```
 
-Viene restituito il valore della `Name` proprietà per l'istanza di. `PersonModel`
+Viene restituito il valore della proprietà `Name` per l'istanza di `PersonModel`.
 
 ### <a name="setting-values-using-key-value-coding"></a>Impostazione dei valori con la codifica chiave-valore
 
-Analogamente, `SetValueForKey` imposta il valore per la chiave specificata ( `NSString`come) rispetto all'istanza della classe KVC che riceve la richiesta. Di nuovo, usando un'istanza della `PersonModel` classe, come illustrato di seguito:
+Analogamente, il `SetValueForKey` impostare il valore per la chiave specificata (come `NSString`), relativo all'istanza della classe KVC che riceve la richiesta. Di nuovo, usando un'istanza della classe `PersonModel`, come illustrato di seguito:
 
 ```csharp
 // Write value
 Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 ```
 
-Modificare il valore della `Name` proprietà in. `Jane Doe`
+Modificare il valore della proprietà `Name` in `Jane Doe`.
 
 <a name="Observing_Value_Changes" />
 
 ### <a name="observing-value-changes"></a>Osservazione delle modifiche ai valori
 
-Utilizzando l'osservazione chiave-valore (KVO), è possibile aggiungere un Observer a una chiave specifica di una classe conforme a KVC e ricevere una notifica ogni volta che il valore della chiave viene modificato (utilizzando tecniche KVC o accedendo direttamente alla proprietà specificata nel C# codice). Ad esempio:
+Utilizzando l'osservazione chiave-valore (KVO), è possibile aggiungere un Observer a una chiave specifica di una classe conforme a KVC e ricevere una notifica ogni volta che il valore della chiave viene modificato (utilizzando tecniche KVC o accedendo direttamente alla proprietà specificata nel C# codice). Esempio:
 
 ```csharp
 // Watch for the name value changing
@@ -169,7 +169,7 @@ Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
 });
 ```
 
-A questo punto, ogni `Name` volta che viene `Person` modificata la proprietà `PersonModel` dell'istanza della classe, il nuovo valore viene scritto nella console.
+A questo punto, ogni volta che viene modificata la proprietà `Name` dell'istanza `Person` della classe `PersonModel`, il nuovo valore viene scritto nella console.
 
 Per ulteriori informazioni, vedere l' [introduzione di Apple alla guida alla programmazione per l'osservazione di chiave-valore](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i).
 
@@ -319,7 +319,7 @@ namespace MacDatabinding
 
 La maggior parte delle funzionalità di questa classe è stata descritta nella sezione informazioni sulla [codifica chiave-valore](#What_is_Key-Value_Coding) precedente. Tuttavia, verranno esaminati alcuni elementi specifici e alcune aggiunte apportate per consentire a questa classe di agire come modello di dati per i **controller di array** e i **controller di albero** (che verranno utilizzati in un secondo momento per le **visualizzazioni ad albero**di associazione dati, le **visualizzazioni struttura** e **visualizzazioni della raccolta**).
 
-Innanzitutto, poiché un dipendente potrebbe essere un responsabile, abbiamo usato un `NSArray` (in particolare un oggetto `NSMutableArray` , in modo che i valori possano essere modificati) per consentire ai dipendenti di essere collegati:
+Innanzitutto, poiché un dipendente potrebbe essere un responsabile, abbiamo usato una `NSArray` (in particolare un `NSMutableArray`, in modo che i valori possano essere modificati) per consentire ai dipendenti di essere collegati:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -333,8 +333,8 @@ public NSArray People {
 
 Ecco due punti da considerare:
 
-1. È stato usato `NSMutableArray` un anziché una matrice C# o una raccolta standard, perché questo è un requisito per l'associazione dei dati ai controlli AppKit, ad esempio le **visualizzazioni tabella**, le **visualizzazioni struttura** e le **raccolte**.
-2. È stata esposta la matrice di dipendenti eseguendone il cast `NSArray` a un oggetto per data binding e C# il nome formattato è stato modificato, `People`, in uno che data binding prevede, `personModelArray` nel formato **{class_name} array** (si noti che il primo il carattere è stato in lettere minuscole).
+1. È stato usato un `NSMutableArray` anziché una matrice C# o una raccolta standard, perché si tratta di un requisito per l'associazione dei dati ai controlli AppKit, ad esempio le **visualizzazioni tabella**, le **visualizzazioni struttura** e le **raccolte**.
+2. È stata esposta la matrice di dipendenti eseguendone il cast a un `NSArray` per scopi data binding e C# il nome formattato, `People`, è stato impostato su uno che data binding previsto, `personModelArray` nel formato **{class_name} array** (si noti che il primo carattere è stato creato minuscole).
 
 Successivamente, è necessario aggiungere alcuni metodi pubblici con nome specifico per supportare i **controller array** e i **controller di albero**:
 
@@ -369,16 +369,16 @@ public void SetPeople(NSMutableArray array) {
 }
 ```
 
-Che consentono ai controller di richiedere e modificare i dati visualizzati. Analogamente a `NSArray` quanto esposto in precedenza, si tratta di una convenzione di denominazione molto specifica (che C# differisce dalle convenzioni di denominazione tipiche):
+Che consentono ai controller di richiedere e modificare i dati visualizzati. Come il `NSArray` esposto sopra, questi hanno una convenzione di denominazione molto specifica (che differisce dalle convenzioni di denominazione tipiche C# ):
 
-- `addObject:`: Aggiunge un oggetto alla matrice.
-- `insertObject:in{class_name}ArrayAtIndex:`-Dove `{class_name}` è il nome della classe. Questo metodo inserisce un oggetto nella matrice in corrispondenza di un indice specificato.
-- `removeObjectFrom{class_name}ArrayAtIndex:`-Dove `{class_name}` è il nome della classe. Questo metodo rimuove l'oggetto nella matrice in corrispondenza di un indice specificato.
-- `set{class_name}Array:`-Dove `{class_name}` è il nome della classe. Questo metodo consente di sostituire il valore di Carry esistente con uno nuovo.
+- `addObject:`: aggiunge un oggetto alla matrice.
+- `insertObject:in{class_name}ArrayAtIndex:`, dove `{class_name}` è il nome della classe. Questo metodo inserisce un oggetto nella matrice in corrispondenza di un indice specificato.
+- `removeObjectFrom{class_name}ArrayAtIndex:`, dove `{class_name}` è il nome della classe. Questo metodo rimuove l'oggetto nella matrice in corrispondenza di un indice specificato.
+- `set{class_name}Array:`, dove `{class_name}` è il nome della classe. Questo metodo consente di sostituire il valore di Carry esistente con uno nuovo.
 
-All'interno di questi metodi sono state incapsulate le modifiche apportate alla matrice in `WillChangeValue` e `DidChangeValue` i messaggi per la conformità KVO.
+All'interno di questi metodi sono state incapsulate le modifiche apportate alla matrice in `WillChangeValue` e `DidChangeValue` messaggi per la conformità KVO.
 
-Infine, poiché la `Icon` proprietà si basa sul valore `isManager` della `isManager` proprietà, le modifiche apportate alla proprietà potrebbero non essere riflesse nell'oggetto `Icon` per gli elementi dell'interfaccia utente associati ai dati (durante KVO):
+Infine, poiché la proprietà `Icon` si basa sul valore della proprietà `isManager`, le modifiche apportate alla proprietà `isManager` potrebbero non essere riflesse nell'`Icon` per gli elementi dell'interfaccia utente associati ai dati (durante KVO):
 
 ```csharp
 [Export("Icon")]
@@ -409,21 +409,21 @@ public bool isManager {
 }
 ```
 
-Si noti che, oltre alla propria chiave, la `isManager` funzione di accesso invia anche `WillChangeValue` i `DidChangeValue` messaggi e per `Icon` la chiave, in modo che venga visualizzata anche la modifica.
+Si noti che, oltre alla propria chiave, la funzione di accesso `isManager` invia anche i messaggi di `WillChangeValue` e `DidChangeValue` per la chiave `Icon` in modo da visualizzare anche la modifica.
 
-Il `PersonModel` modello di dati verrà usato nel resto di questo articolo.
+Nel resto di questo articolo verrà usato il modello di dati `PersonModel`.
 
 <a name="Simple_Data_Binding" />
 
 ### <a name="simple-data-binding"></a>Data binding semplice
 
-Con il modello di dati definito, viene ora esaminato un semplice esempio di data binding nella Interface Builder di Xcode. Ad esempio, aggiungere un modulo all'applicazione Novell. Mac che può essere usata per modificare l'oggetto `PersonModel` definito in precedenza. Verranno aggiunti alcuni campi di testo e una casella di controllo per visualizzare e modificare le proprietà del modello.
+Con il modello di dati definito, viene ora esaminato un semplice esempio di data binding nella Interface Builder di Xcode. Si consentirà ad esempio di aggiungere un modulo all'applicazione Novell. Mac che può essere usata per modificare la `PersonModel` definita in precedenza. Verranno aggiunti alcuni campi di testo e una casella di controllo per visualizzare e modificare le proprietà del modello.
 
-Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare `SimpleViewController`la relativa classe:
+Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare la classe `SimpleViewController`:
 
 [![Aggiunta di un nuovo controller di visualizzazione](databinding-images/simple01.png "Aggiunta di un nuovo controller di visualizzazione")](databinding-images/simple01-large.png#lightbox)
 
-Tornare quindi a Visual Studio per Mac, modificare il file **SimpleViewController.cs** , che è stato aggiunto automaticamente al progetto, ed esporre un'istanza del `PersonModel` in cui verrà data binding il modulo. Aggiungere il codice seguente:
+Tornare quindi a Visual Studio per Mac, modificare il file **SimpleViewController.cs** , che è stato aggiunto automaticamente al progetto, ed esporre un'istanza del `PersonModel` a cui verrà data binding il modulo. Aggiungere il codice seguente:
 
 ```csharp
 private PersonModel _person = new PersonModel();
@@ -440,7 +440,7 @@ public PersonModel Person {
 }
 ```
 
-A questo punto, quando viene caricata la vista, creare un'istanza `PersonModel` del e popolarla con il codice seguente:
+A questo punto, quando viene caricata la vista, creare un'istanza del `PersonModel` e popolarla con il codice seguente:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -463,37 +463,37 @@ A questo punto è necessario creare il form, fare doppio clic sul file **Main. S
 
 [![Modifica dello storyboard in Xcode](databinding-images/simple02.png "Modifica dello storyboard in Xcode")](databinding-images/simple02-large.png#lightbox)
 
-Per associare i dati al modulo `PersonModel` esposto tramite la `Person` chiave, eseguire le operazioni seguenti:
+Per associare il modulo al `PersonModel` esposto tramite la chiave di `Person`, eseguire le operazioni seguenti:
 
 1. Selezionare il campo di testo **nome dipendente** e passare al **controllo Binding**.
-2. Selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere `self.Person.Name` quindi il **percorso della chiave**:
+2. Selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere quindi `self.Person.Name` per il **percorso della chiave**:
 
     [![Immissione del percorso della chiave](databinding-images/simple03.png "Immissione del percorso della chiave")](databinding-images/simple03-large.png#lightbox)
-3. Selezionare il campo di testo **occupazione** , selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere `self.Person.Occupation` quindi il **percorso della chiave**:
+3. Selezionare il campo di testo **occupazione** , selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere quindi `self.Person.Occupation` per il **percorso della chiave**:
 
     [![Immissione del percorso della chiave](databinding-images/simple04.png "Immissione del percorso della chiave")](databinding-images/simple04-large.png#lightbox)
-4. Selezionare la casella di controllo **Employee è a Manager** e selezionare la casella **Bind to** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere `self.Person.isManager` quindi il **percorso della chiave**:
+4. Selezionare la casella di controllo **Employee è a Manager** e selezionare la casella **Bind to** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere quindi `self.Person.isManager` per il **percorso della chiave**:
 
     [![Immissione del percorso della chiave](databinding-images/simple05.png "Immissione del percorso della chiave")](databinding-images/simple05-large.png#lightbox)
-5. Selezionare il campo **numero di dipendenti gestiti** del testo e selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere `self.Person.NumberOfEmployees` quindi il **percorso della chiave**:
+5. Selezionare il campo **numero di dipendenti gestiti** del testo e selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere quindi `self.Person.NumberOfEmployees` per il **percorso della chiave**:
 
     [![Immissione del percorso della chiave](databinding-images/simple06.png "Immissione del percorso della chiave")](databinding-images/simple06-large.png#lightbox)
 6. Se il dipendente non è un responsabile, si vuole nascondere il numero di dipendenti etichetta gestita e campo di testo.
-7. Selezionare l'etichetta **numero di dipendenti gestiti** , espandere la couvertura **nascosta** e selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere `self.Person.isManager` quindi il **percorso della chiave**:
+7. Selezionare l'etichetta **numero di dipendenti gestiti** , espandere la couvertura **nascosta** e selezionare la casella **associa a** e selezionare **Simple View Controller** nell'elenco a discesa. Immettere quindi `self.Person.isManager` per il **percorso della chiave**:
 
     [![Immissione del percorso della chiave](databinding-images/simple07.png "Immissione del percorso della chiave")](databinding-images/simple07-large.png#lightbox)
 8. Selezionare `NSNegateBoolean` dall'elenco a discesa del **trasformatore del valore** :
 
     ![Selezione della trasformazione chiave NSNegateBoolean](databinding-images/simple08.png "Selezione della trasformazione chiave NSNegateBoolean")
-9. Indica data binding che l'etichetta sarà nascosta se il valore della `isManager` proprietà è. `false`
+9. Indica data binding che l'etichetta sarà nascosta se il valore della proprietà `isManager` è `false`.
 10. Ripetere i passaggi 7 e 8 per il campo **numero di dipendenti del testo gestito** .
 11. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Se si esegue l'applicazione, i valori `Person` della proprietà compileranno automaticamente il modulo:
+Se si esegue l'applicazione, i valori della proprietà `Person` compileranno automaticamente il modulo:
 
 [![Visualizzazione di un form popolato automaticamente](databinding-images/simple09.png "Visualizzazione di un form popolato automaticamente")](databinding-images/simple09-large.png#lightbox)
 
-Tutte le modifiche apportate dagli utenti al modulo verranno riscritte `Person` nella proprietà del controller di visualizzazione. Ad esempio, la deselezione di **Employee è un gestore** `PersonModel` che `Person` aggiorna l'istanza di e il campo di testo e l'etichetta **gestita dei dipendenti** vengono nascosti automaticamente (tramite Data Binding):
+Tutte le modifiche apportate dagli utenti al modulo verranno riscritte nella proprietà `Person` del controller di visualizzazione. Ad esempio, la deselezione del **dipendente è un gestore** che aggiorna l'istanza `Person` della `PersonModel` e il campo di testo e l'etichetta **gestita del numero di dipendenti** vengono nascosti automaticamente (tramite Data Binding):
 
 [![Nascondere il numero di dipendenti per i non responsabili](databinding-images/simple10.png "Nascondere il numero di dipendenti per i non responsabili")](databinding-images/simple10-large.png#lightbox)
 
@@ -503,11 +503,11 @@ Tutte le modifiche apportate dagli utenti al modulo verranno riscritte `Person` 
 
 Ora che sono state apportate le nozioni di base di data binding, è possibile esaminare un'attività data binding più complessa usando un _controller array_ e data binding a una visualizzazione tabella. Per ulteriori informazioni sull'utilizzo delle visualizzazioni tabella, vedere la documentazione relativa alle [visualizzazioni di tabella](~/mac/user-interface/table-view.md) .
 
-Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare `TableViewController`la relativa classe:
+Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare la classe `TableViewController`:
 
 [![Aggiunta di un nuovo controller di visualizzazione](databinding-images/table01.png "Aggiunta di un nuovo controller di visualizzazione")](databinding-images/table01-large.png#lightbox)
 
-Modificare quindi il file **TableViewController.cs** , che è stato aggiunto automaticamente al progetto, ed esporre un Array (`NSArray`) di `PersonModel` classi a cui verrà data binding il modulo. Aggiungere il codice seguente:
+Modificare quindi il file **TableViewController.cs** , che è stato aggiunto automaticamente al progetto, ed esporre un array (`NSArray`) di classi `PersonModel` a cui verrà data binding il modulo. Aggiungere il codice seguente:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -548,7 +548,7 @@ public void SetPeople(NSMutableArray array) {
 }
 ```
 
-Come per la `PersonModel` classe precedente nella sezione [definizione del modello di dati](#Defining_your_Data_Model) , abbiamo esposto quattro metodi pubblici appositamente denominati in modo che il controller dell'array e leggano e scrivano i dati dalla `PersonModels`raccolta di.
+Come per la classe `PersonModel` precedente nella sezione [definizione del modello di dati](#Defining_your_Data_Model) , abbiamo esposto quattro metodi pubblici appositamente denominati in modo che il controller di array e leggano e scrivano i dati dalla raccolta di `PersonModels`.
 
 A questo punto, quando viene caricata la vista, è necessario popolare la matrice con il codice seguente:
 
@@ -582,14 +582,14 @@ A questo punto è necessario creare la visualizzazione tabella, fare doppio clic
 2. Selezionare **controller di matrice** nella **gerarchia dell'interfaccia** e passare al controllo **attributi**:
 
     [![Selezione del controllo attributi](databinding-images/table04.png "Selezione del controllo attributi")](databinding-images/table04-large.png#lightbox)
-3. Immettere `PersonModel` per il **nome della classe**, fare clic sul pulsante con il **segno più** e aggiungere tre chiavi. Assegnare loro `Name` `Occupation` un nome e: `isManager`
+3. Immettere `PersonModel` per il **nome della classe**, fare clic sul pulsante con il **segno più** e aggiungere tre chiavi. Assegnare loro un nome `Name`, `Occupation` e `isManager`:
 
     ![Aggiunta dei percorsi chiave richiesti](databinding-images/table05.png "Aggiunta dei percorsi chiave richiesti")
 4. In questo modo si indica al controller dell'array che cosa gestisce una matrice di e quali proprietà deve esporre (tramite chiavi).
-5. Passare al controllo **Binding** e in matrice di **contenuto** Selezionare **associa a** e **controller di visualizzazione tabella**. Immettere il **percorso** di una chiave `self.personModelArray`del modello:
+5. Passare al controllo **Binding** e in matrice di **contenuto** Selezionare **associa a** e **controller di visualizzazione tabella**. Immettere un **percorso chiave del modello** di `self.personModelArray`:
 
     ![Immissione di un percorso della chiave](databinding-images/table06.png "Immissione di un percorso della chiave")
-6. In questo modo il controller di array viene associato `PersonModels` alla matrice di esposta sul controller di visualizzazione.
+6. In questo modo il controller di array viene associato alla matrice di `PersonModels` esposta sul controller di visualizzazione.
 
 A questo punto è necessario associare la visualizzazione tabella al controller Array, procedere come segue:
 
@@ -602,7 +602,7 @@ A questo punto è necessario associare la visualizzazione tabella al controller 
 3. Selezionare la **cella di visualizzazione tabella** nella colonna **Employee** . Nel **controllo delle associazioni** sotto il **valore** di couvertura selezionare **associa a** e **visualizzazione celle tabella**. Immettere `objectValue.Name` per il **percorso della chiave del modello**:
 
     [![Impostazione del percorso della chiave del modello](databinding-images/table09.png "Impostazione del percorso della chiave del modello")](databinding-images/table09-large.png#lightbox)
-4. `objectValue`è l'oggetto `PersonModel` corrente nella matrice gestita dal controller dell'array.
+4. `objectValue` è l'`PersonModel` corrente nella matrice gestita dal controller dell'array.
 5. Selezionare la **cella di visualizzazione tabella** nella colonna **occupazione** . Nel **controllo delle associazioni** sotto il **valore** di couvertura selezionare **associa a** e **visualizzazione celle tabella**. Immettere `objectValue.Occupation` per il **percorso della chiave del modello**:
 
     [![Impostazione del percorso della chiave del modello](databinding-images/table10.png "Impostazione del percorso della chiave del modello")](databinding-images/table10-large.png#lightbox)
@@ -618,11 +618,11 @@ Se si esegue l'applicazione, la tabella verrà popolata con la matrice di `Perso
 
 data binding rispetto a una visualizzazione struttura è molto simile all'associazione rispetto a una visualizzazione tabella. La differenza principale consiste nel fatto che si utilizzerà un **controller di struttura ad albero** anziché un controller di **Array** per fornire i dati associati alla visualizzazione struttura. Per ulteriori informazioni sull'utilizzo delle visualizzazioni struttura, consultare la documentazione relativa alle [visualizzazioni struttura](~/mac/user-interface/outline-view.md) .
 
-Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare `OutlineViewController`la relativa classe:
+Prima di tutto, aggiungere un nuovo **controller di visualizzazione** al file **Main. Storyboard** nel Interface Builder e denominare la classe `OutlineViewController`:
 
 [![Aggiunta di un nuovo controller di visualizzazione](databinding-images/outline01.png "Aggiunta di un nuovo controller di visualizzazione")](databinding-images/outline01-large.png#lightbox)
 
-Modificare quindi il file **OutlineViewController.cs** , che è stato aggiunto automaticamente al progetto, ed esporre un Array (`NSArray`) di `PersonModel` classi a cui verrà data binding il modulo. Aggiungere il codice seguente:
+Modificare quindi il file **OutlineViewController.cs** , che è stato aggiunto automaticamente al progetto, ed esporre un array (`NSArray`) di classi `PersonModel` a cui verrà data binding il modulo. Aggiungere il codice seguente:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -663,7 +663,7 @@ public void SetPeople(NSMutableArray array) {
 }
 ```
 
-Come per la `PersonModel` classe precedente nella sezione [definizione del modello di dati](#Defining_your_Data_Model) , abbiamo esposto quattro metodi pubblici appositamente denominati in modo che il controller dell'albero e leggano e scrivano i dati dalla `PersonModels`raccolta di.
+Come per la classe `PersonModel` precedente nella sezione [definizione del modello di dati](#Defining_your_Data_Model) , abbiamo esposto quattro metodi pubblici appositamente denominati in modo che il controller dell'albero e leggano e scrivano i dati dalla raccolta di `PersonModels`.
 
 A questo punto, quando viene caricata la vista, è necessario popolare la matrice con il codice seguente:
 
@@ -700,18 +700,18 @@ A questo punto è necessario creare la visualizzazione struttura, fare doppio cl
 2. Selezionare **controller albero** nella **gerarchia dell'interfaccia** e passare al controllo **attributi**:
 
     [![Selezione dell'attributo Inspector](databinding-images/outline04.png "Selezione dell'attributo Inspector")](databinding-images/outline04-large.png#lightbox)
-3. Immettere `PersonModel` per il **nome della classe**, fare clic sul pulsante con il **segno più** e aggiungere tre chiavi. Assegnare loro `Name` `Occupation` un nome e: `isManager`
+3. Immettere `PersonModel` per il **nome della classe**, fare clic sul pulsante con il **segno più** e aggiungere tre chiavi. Assegnare loro un nome `Name`, `Occupation` e `isManager`:
 
     ![Aggiunta dei percorsi chiave richiesti](databinding-images/outline05.png "Aggiunta dei percorsi chiave richiesti")
 4. Indica al controller dell'albero che cosa gestisce una matrice di e quali proprietà deve esporre (tramite chiavi).
-5. Nella sezione **controller albero** `personModelArray` immettere per **elementi figlio**, `NumberOfEmployees` immettere sotto il **conteggio** e immettere `isEmployee` in **foglia**:
+5. Nella sezione **controller albero** immettere `personModelArray` per gli **elementi figlio**, immettere `NumberOfEmployees` sotto il **conteggio** e immettere `isEmployee` sotto **foglia**:
 
     ![Impostazione dei percorsi delle chiavi del controller dell'albero](databinding-images/outline05.png "Impostazione dei percorsi delle chiavi del controller dell'albero")
 6. Indica al controller dell'albero dove trovare i nodi figlio, il numero di nodi figlio presenti e se il nodo corrente ha nodi figlio.
-7. Passare al **controllo Binding** e in matrice di **contenuto** Selezionare **associa a** e **proprietario del file**. Immettere il **percorso** di una chiave `self.personModelArray`del modello:
+7. Passare al **controllo Binding** e in matrice di **contenuto** Selezionare **associa a** e **proprietario del file**. Immettere un **percorso chiave del modello** di `self.personModelArray`:
 
     ![Modifica del percorso della chiave](databinding-images/outline06.png "Modifica del percorso della chiave")
-8. In questo modo il controller dell'albero viene associato `PersonModels` alla matrice di esposta sul controller di visualizzazione.
+8. In questo modo il controller dell'albero viene associato alla matrice di `PersonModels` esposta sul controller di visualizzazione.
 
 A questo punto è necessario associare la visualizzazione struttura al controller dell'albero, procedere come segue:
 
@@ -724,13 +724,13 @@ A questo punto è necessario associare la visualizzazione struttura al controlle
 3. Selezionare la **cella di visualizzazione tabella** nella colonna **Employee** . Nel **controllo delle associazioni** sotto il **valore** di couvertura selezionare **associa a** e **visualizzazione celle tabella**. Immettere `objectValue.Name` per il **percorso della chiave del modello**:
 
     [![Immissione del percorso della chiave del modello](databinding-images/outline09.png "Immissione del percorso della chiave del modello")](databinding-images/outline09-large.png#lightbox)
-4. `objectValue`è l'oggetto `PersonModel` corrente nella matrice gestita dal controller dell'albero.
+4. `objectValue` è l'`PersonModel` corrente nella matrice gestita dal controller dell'albero.
 5. Selezionare la **cella di visualizzazione tabella** nella colonna **occupazione** . Nel **controllo delle associazioni** sotto il **valore** di couvertura selezionare **associa a** e **visualizzazione celle tabella**. Immettere `objectValue.Occupation` per il **percorso della chiave del modello**:
 
     [![Immissione del percorso della chiave del modello](databinding-images/outline10.png "Immissione del percorso della chiave del modello")](databinding-images/outline10-large.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Se si esegue l'applicazione, il contorno verrà popolato con la matrice `PersonModels`di:
+Se si esegue l'applicazione, il contorno verrà popolato con la matrice di `PersonModels`:
 
 [![Esecuzione dell'applicazione](databinding-images/outline11.png "Esecuzione dell'applicazione")](databinding-images/outline11-large.png#lightbox)
 
@@ -858,24 +858,24 @@ For more information on working with Collection Views, please see our [Collectio
 
 ## <a name="debugging-native-crashes"></a>Debug di arresti anomali nativi
 
-La creazione di un errore nelle associazioni dati può causare un _arresto anomalo nativo_ del codice non gestito e causare un `SIGABRT` errore dell'applicazione Novell. Mac:
+La creazione di un errore nelle associazioni dati può causare un _arresto anomalo nativo_ del codice non gestito e causare un errore di `SIGABRT` dell'applicazione Novell. Mac:
 
 [![Esempio di una finestra di dialogo di arresto anomalo nativo](databinding-images/debug01.png "Esempio di una finestra di dialogo di arresto anomalo nativo")](databinding-images/debug01-large.png#lightbox)
 
 Esistono in genere quattro cause principali per arresti anomali nativi durante data binding:
 
-1. Il modello di dati non eredita da `NSObject` o da una sottoclasse di. `NSObject`
-2. La proprietà non è stata esposta a Objective-C utilizzando l' `[Export("key-name")]` attributo.
-3. Non è stato eseguito il wrapping delle modifiche al valore della `WillChangeValue` funzione `DidChangeValue` di accesso in e le chiamate al metodo ( `Export` specificando la stessa chiave dell'attributo).
+1. Il modello di dati non eredita da `NSObject` o da una sottoclasse di `NSObject`.
+2. La proprietà non è stata esposta a Objective-C utilizzando l'attributo `[Export("key-name")]`.
+3. Non è stato eseguito il wrapping delle modifiche al valore della funzione di accesso in `WillChangeValue` e `DidChangeValue` chiamate al metodo (specificando la stessa chiave dell'attributo `Export`).
 4. Nel **controllo Binding** è presente una chiave errata o digitata in Interface Builder.
 
 ### <a name="decoding-a-crash"></a>Decodifica di un arresto anomalo
 
-Si verificherà un arresto anomalo nativo del data binding per illustrare come individuare e risolvere il problema. In Interface Builder modificare il binding della prima etichetta nell'esempio di visualizzazione della raccolta da `Name` a: `Title`
+Si verificherà un arresto anomalo nativo del data binding per illustrare come individuare e risolvere il problema. In Interface Builder modificare il binding della prima etichetta nell'esempio di visualizzazione della raccolta da `Name` a `Title`:
 
 [![Modifica della chiave di associazione](databinding-images/debug02.png "Modifica della chiave di associazione")](databinding-images/debug02-large.png#lightbox)
 
-Salvare la modifica, tornare a Visual Studio per Mac per sincronizzarla con Xcode ed eseguire l'applicazione. Quando viene visualizzata la visualizzazione raccolta, l'applicazione si arresterà temporaneamente in `SIGABRT` modo anomalo con un errore (come illustrato nell' **output dell'applicazione** in `PersonModel` Visual Studio per Mac) perché non espone una proprietà `Title`con la chiave:
+Salvare la modifica, tornare a Visual Studio per Mac per sincronizzarla con Xcode ed eseguire l'applicazione. Quando viene visualizzata la visualizzazione raccolta, l'applicazione si arresterà temporaneamente in modo anomalo con un errore di `SIGABRT` (come illustrato nell' **output dell'applicazione** in Visual Studio per Mac) perché la `PersonModel` non espone una proprietà con la chiave `Title`:
 
 [![Esempio di errore di binding](databinding-images/debug03.png "Esempio di errore di binding")](databinding-images/debug03-large.png#lightbox)
 
@@ -883,7 +883,7 @@ Se scorriamo fino alla parte superiore dell'errore nell'output dell' **applicazi
 
 [![Individuazione del problema nel log degli errori](databinding-images/debug04.png "Individuazione del problema nel log degli errori")](databinding-images/debug04-large.png#lightbox)
 
-Questa riga indica che la chiave `Title` non esiste nell'oggetto a cui si sta associando. Se si modifica il binding `Name` in Interface Builder, Salva, sincronizza, ricompila ed Esegui, l'applicazione viene eseguita come previsto senza problema.
+Questa riga indica che la chiave `Title` non esiste nell'oggetto a cui si sta associando. Se si modifica il binding in `Name` Interface Builder, Salva, sincronizza, ricompila ed Esegui, l'applicazione viene eseguita come previsto senza problema.
 
 ## <a name="summary"></a>Riepilogo
 

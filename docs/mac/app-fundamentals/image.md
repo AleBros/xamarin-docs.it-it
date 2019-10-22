@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
 ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770330"
 ---
 # <a name="images-in-xamarinmac"></a>Immagini in Novell. Mac
@@ -24,12 +24,12 @@ Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile acce
 
 Sono disponibili diversi modi per usare le risorse dell'immagine in un'applicazione macOS (nota in precedenza come Mac OS X). Dalla semplice visualizzazione di un'immagine come parte dell'interfaccia utente dell'applicazione a, assegnarla a un controllo dell'interfaccia utente, ad esempio una barra degli strumenti o un elemento dell'elenco di origine, per fornire le icone, Novell. Mac consente di aggiungere in modo semplice un'ottima grafica alle applicazioni macOS nei modi seguenti: : 
 
-- **Elementi dell'interfaccia utente** : le immagini possono essere visualizzate come sfondi o come parte dell'applicazione in una visualizzazione`NSImageView`immagine ().
-- **Button** : le immagini possono essere visualizzate nei pulsanti`NSButton`().
-- **Cella immagine** : come parte di un controllo basato su tabella`NSTableView` ( `NSOutlineView`o), le immagini possono essere utilizzate in una cella`NSImageCell`immagine ().
-- **Elemento della barra degli strumenti** -le immagini possono essere aggiunte`NSToolbar`a una barra degli strumenti ()`NSToolbarItem`come elemento della barra degli strumenti immagine ().
-- **Icona dell'elenco di origine** : come parte di un elenco di origine ( `NSOutlineView`formattato in modo specifico).
-- **Icona dell'app** : è possibile raggruppare una serie di immagini in un `.icns` set e usarle come icona dell'applicazione. Per ulteriori informazioni, vedere la documentazione [sull'icona dell'applicazione](~/mac/deploy-test/app-icon.md) .
+- **Elementi dell'interfaccia utente** : le immagini possono essere visualizzate come sfondi o come parte dell'applicazione in una visualizzazione immagine (`NSImageView`).
+- **Button** : le immagini possono essere visualizzate in pulsanti (`NSButton`).
+- **Cella immagine** : come parte di un controllo basato su tabella (`NSTableView` o `NSOutlineView`), le immagini possono essere utilizzate in una cella immagine (`NSImageCell`).
+- **Elemento della barra degli strumenti** -le immagini possono essere aggiunte a una barra degli strumenti (`NSToolbar`) come elemento della barra degli strumenti immagine (`NSToolbarItem`).
+- **Icona dell'elenco di origine** : come parte di un elenco di origine (un `NSOutlineView` formattato in modo specifico).
+- **Icona dell'app** : è possibile raggruppare una serie di immagini in un set di `.icns` e usarle come icona dell'applicazione. Per ulteriori informazioni, vedere la documentazione [sull'icona dell'applicazione](~/mac/deploy-test/app-icon.md) .
 
 MacOS fornisce inoltre un set di immagini predefinite che possono essere usate in tutta l'applicazione.
 
@@ -43,7 +43,7 @@ Quando si aggiunge un'immagine da usare in un'applicazione Novell. Mac, esistono
 
 - **Albero del progetto principale [deprecato]** -le immagini possono essere aggiunte direttamente all'albero dei progetti. Quando si chiamano le immagini archiviate nell'albero del progetto principale dal codice, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Cartella Resources [deprecato]** -la cartella **delle risorse** speciali è per qualsiasi file che diventerà parte del bundle dell'applicazione, ad esempio icona, schermata di avvio o immagini generali (o qualsiasi altra immagine o file che lo sviluppatore desidera aggiungere). Quando si chiamano le immagini archiviate nella cartella **Resources** dal codice, proprio come le immagini archiviate nell'albero del progetto principale, non viene specificato alcun percorso di cartella. Ad esempio: `NSImage.ImageNamed("tags.png")`.
-- **Cartella personalizzata o sottocartella [deprecato]** -lo sviluppatore può aggiungere una cartella personalizzata all'albero di origine dei progetti e archiviarvi le immagini. Il percorso in cui viene aggiunto il file può essere annidato in una sottocartella per facilitare l'organizzazione del progetto. Se, ad esempio, lo sviluppatore ha `Card` aggiunto una cartella al progetto e una sottocartella `Hearts` di a tale cartella, archiviare un'immagine **Jack. png** nella `Hearts` cartella, `NSImage.ImageNamed("Card/Hearts/Jack.png")` caricherà l'immagine in fase di esecuzione.
+- **Cartella personalizzata o sottocartella [deprecato]** -lo sviluppatore può aggiungere una cartella personalizzata all'albero di origine dei progetti e archiviarvi le immagini. Il percorso in cui viene aggiunto il file può essere annidato in una sottocartella per facilitare l'organizzazione del progetto. Ad esempio, se lo sviluppatore ha aggiunto una cartella `Card` al progetto e una sottocartella di `Hearts` a tale cartella, archiviare un'immagine **Jack. png** nella cartella `Hearts`, `NSImage.ImageNamed("Card/Hearts/Jack.png")` caricherà l'immagine in fase di esecuzione.
 - **Asset Catalog Image Set [preferito]** -aggiunto in OS X El Capitan, i **set di immagini di asset Catalogs** contengono tutte le versioni o rappresentazioni di un'immagine che sono necessarie per supportare i vari dispositivi e i fattori di scalabilità per l'applicazione. Anziché basarsi sul nome file delle risorse immagine ( **@1x** , **@2x** ).
 
 <a name="asset-catalogs" />
@@ -66,11 +66,11 @@ Come indicato in precedenza, i **set di immagini di cataloghi asset** contengono
 
     [![Modifica del nome del set di immagini](image-images/imageset04.png "Modifica del nome del set di immagini")](image-images/imageset04-large.png#lightbox)
     
-Una classe **vector** speciale aggiunta ai set di **Immagini** che ci permette di includere un'immagine vettoriale formattata in _formato PDF_ nel set di dati, che include invece singoli file bitmap con le diverse risoluzioni. Utilizzando questo metodo, è necessario fornire un singolo file vettoriale per **@1x** la risoluzione (formattato come file PDF vettoriale) e **@2x** le **@3x** versioni e del file verranno generate in fase di compilazione e incluse nel bundle dell'applicazione.
+Una classe **vector** speciale aggiunta ai set di **Immagini** che ci permette di includere un'immagine vettoriale formattata in _formato PDF_ nel set di dati, che include invece singoli file bitmap con le diverse risoluzioni. Utilizzando questo metodo, è necessario fornire un singolo file Vector per la risoluzione del **@1x** (formattato come file PDF vettoriale) e le versioni **@2x** e **@3x** del file verranno generate in fase di compilazione e incluse nel bundle dell'applicazione .
 
 [![Interfaccia dell'editor del set di immagini](image-images/imageset05.png "Interfaccia dell'editor del set di immagini")](image-images/imageset05-large.png#lightbox)
 
-Se, ad esempio, si include `MonkeyIcon.pdf` un file come vettore di un catalogo asset con una risoluzione di 150px x 150px, le risorse bitmap seguenti verranno incluse nel bundle dell'app finale al momento della compilazione:
+Se, ad esempio, si include un file di `MonkeyIcon.pdf` come vettore di un catalogo asset con una risoluzione di 150px x 150px, le risorse bitmap seguenti verranno incluse nel bundle dell'app finale al momento della compilazione:
 
 1. **MonkeyIcon@1x.png** -150px x 150px risoluzione.
 2. **MonkeyIcon@2x.png** -300px x 300px risoluzione.
@@ -93,8 +93,8 @@ Quando si lavora con le immagini nei cataloghi di asset, a volte può essere nec
 
 Per aggiungere un nuovo catalogo asset al progetto:
 
-1. Fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi** > **nuovo file...**
-2. Selezionare **Mac** > **Asset Catalog**, immettere un **nome** per la raccolta e fare clic sul pulsante **nuovo** : 
+1. Fare clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliere **Aggiungi**  > **nuovo file...**
+2. Selezionare **Mac**  > **Asset Catalog**, immettere un **nome** per la raccolta e fare clic sul pulsante **nuovo** : 
 
     ![Aggiunta di un nuovo catalogo asset](image-images/asset01.png "Aggiunta di un nuovo catalogo asset")
 
@@ -107,7 +107,7 @@ Da qui è possibile usare la raccolta in modo analogo alla raccolta **assets. xc
 
 Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# codice o da Interface Builder), è necessario che sia incluso nella cartella **Resources** del progetto come **risorsa bundle**. Per aggiungere un file a un progetto, procedere come segue:
 
-1. Fare clic con il pulsante destro del mouse sulla cartella **risorse** del progetto nella **riquadro della soluzione** e scegliere **Aggiungi** > **Aggiungi file...** : 
+1. Fare clic con il pulsante destro del mouse sulla cartella **risorse** del progetto nella **riquadro della soluzione** e scegliere **Aggiungi**  > **Aggiungi file...** : 
 
     ![Aggiunta di un file](image-images/add01.png "Aggiunta di un file")
 2. Nella finestra di dialogo **Aggiungi file** selezionare i file di immagine da aggiungere al progetto, selezionare `BundleResource` per l' **azione Sostituisci compilazione** e fare clic sul pulsante **Apri** :
@@ -124,21 +124,21 @@ Prima di poter usare un file di immagine nell'applicazione Novell. Mac (nel C# c
 È possibile usare qualsiasi file PNG, jpg o PDF come immagine di origine nell'applicazione Novell. Mac. Nella sezione successiva si esamineranno le versioni ad alta risoluzione delle immagini e delle icone per supportare i Mac basati su retina.
 
 > [!IMPORTANT]
-> Se si aggiungono immagini alla cartella **Resources** , è possibile lasciare l' **azione Sostituisci compilazione** impostata su **predefinito**. L'azione di compilazione predefinita per questa cartella `BundleResource`è.
+> Se si aggiungono immagini alla cartella **Resources** , è possibile lasciare l' **azione Sostituisci compilazione** impostata su **predefinito**. L'azione di compilazione predefinita per questa cartella è `BundleResource`.
 
 ## <a name="provide-high-resolution-versions-of-all-app-graphics-resources"></a>Fornire versioni ad alta risoluzione di tutte le risorse grafiche di app
 
 Qualsiasi asset grafico aggiunto a un'applicazione Novell. Mac (icone, controlli personalizzati, cursori personalizzati, immagini personalizzate e così via) deve disporre di versioni ad alta risoluzione, oltre alle versioni di risoluzione standard. Questa operazione è necessaria in modo che l'applicazione abbia un aspetto ottimale quando viene eseguita in un computer Mac dotato di display retina.
 
-### <a name="adopt-the-2x-naming-convention"></a>Adottare la @2x convenzione di denominazione
+### <a name="adopt-the-2x-naming-convention"></a>Adottare la convenzione di denominazione @2x
 
 > [!IMPORTANT]
 > Questo metodo di uso delle immagini in un'app macOS è stato deprecato da Apple. È consigliabile usare i [set di immagini del catalogo asset](#asset-catalogs) per dirigere le immagini dell'app.
 
 Quando si creano le versioni standard e ad alta risoluzione di un'immagine, seguire questa convenzione di denominazione per la coppia di immagini quando vengono incluse nel progetto Novell. Mac:
 
-- **Standard-risoluzione**  - **ImageName. filename-extension** (esempio: **Tags. png**)
-- **Alta risoluzione**   -  **tags@2x.png** (**esempio:)ImageName@2x.filename-extension**
+- **Risoluzione Standard**   - **ImageName. filename-extension** (esempio: **Tags. png**)
+- **@No__t_3** **di   -  ad alta risoluzione** (ad esempio: **tags@2x.png** )
 
 Quando vengono aggiunti a un progetto, vengono visualizzati nel modo seguente:
 
@@ -146,7 +146,7 @@ Quando vengono aggiunti a un progetto, vengono visualizzati nel modo seguente:
 
 Quando un'immagine viene assegnata a un elemento dell'interfaccia utente in Interface Builder, è sufficiente selezionare il file in _ImageName_ **.** _nome file-formato estensione_ (esempio: **Tags. png**). Per usare un'immagine nel C# codice, è necessario scegliere il file in _ImageName_ **.** _nome file-formato estensione_ .
 
-Quando l'applicazione Novell. Mac viene eseguita in un Mac, _ImageName_ **.** _nome file:_ l'immagine del formato dell'estensione verrà usata per le visualizzazioni **ImageName@2x.filename-extension** di risoluzione standard. l'immagine verrà selezionata automaticamente nei computer Mac di base della retina.
+Quando l'applicazione Novell. Mac viene eseguita in un Mac, _ImageName_ **.** _nome file:_ l'immagine del formato dell'estensione verrà usata con le visualizzazioni di risoluzione standard, l'immagine del **ImageName@2x.filename-extension** verrà selezionata automaticamente nei computer Mac di base della retina.
 
 ## <a name="using-images-in-interface-builder"></a>Uso di immagini in Interface Builder
 
@@ -154,7 +154,7 @@ Tutte le risorse immagine aggiunte alla cartella **Resources** nel progetto Nove
 
 Per usare un'immagine in Interface Builder, seguire questa procedura:
 
-1. Aggiungere un'immagine alla cartella **Resources** con un' **azione** di `BundleResource`compilazione: 
+1. Aggiungere un'immagine alla cartella **Resources** con un' **azione di compilazione** di `BundleResource`: 
 
      ![Risorsa immagine nel riquadro della soluzione](image-images/ib00.png "Risorsa immagine nel riquadro della soluzione")
 2. Fare doppio clic sul file **Main. Storyboard** per aprirlo per la modifica in Interface Builder: 
@@ -171,20 +171,20 @@ Per usare un'immagine in Interface Builder, seguire questa procedura:
      ![Immagine visualizzata nell'editor della barra degli strumenti](image-images/ib04.png "Immagine visualizzata nell'editor della barra degli strumenti")
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-I passaggi precedenti funzionano per qualsiasi elemento dell'interfaccia utente che consente di impostare la relativa proprietà Image nel **controllo attributo**. Anche in questo caso, se è **@2x** stata inclusa una versione del file di immagine, questa verrà usata automaticamente nei computer Mac basati su display retina.
+I passaggi precedenti funzionano per qualsiasi elemento dell'interfaccia utente che consente di impostare la relativa proprietà Image nel **controllo attributo**. Anche in questo caso, se è stata inclusa una versione **@2x** del file di immagine, questa verrà usata automaticamente nei computer Mac basati su display retina.
 
 > [!IMPORTANT]
-> Se l'immagine non è disponibile nell'elenco a discesa **nome immagine** , chiudere il progetto. Storyboard in Xcode e riaprirlo dalla Visual Studio per Mac. Se l'immagine non è ancora disponibile, assicurarsi che l'azione di `BundleResource` **compilazione** sia e che l'immagine sia stata aggiunta alla cartella **risorse** .
+> Se l'immagine non è disponibile nell'elenco a discesa **nome immagine** , chiudere il progetto. Storyboard in Xcode e riaprirlo dalla Visual Studio per Mac. Se l'immagine non è ancora disponibile, assicurarsi che l' **azione di compilazione** sia `BundleResource` e che l'immagine sia stata aggiunta alla cartella **risorse** .
 
 ## <a name="using-images-in-c-code"></a>Uso delle immagini C# nel codice
 
-Quando si carica un'immagine in memoria C# usando il codice nell'applicazione Novell. Mac, l'immagine verrà archiviata in `NSImage` un oggetto. Se il file di immagine è stato incluso nel bundle di applicazioni Novell. Mac (incluso nelle risorse), usare il codice seguente per caricare l'immagine:
+Quando si carica un'immagine in memoria C# usando il codice nell'applicazione Novell. Mac, l'immagine verrà archiviata in un oggetto `NSImage`. Se il file di immagine è stato incluso nel bundle di applicazioni Novell. Mac (incluso nelle risorse), usare il codice seguente per caricare l'immagine:
 
 ```csharp
 NSImage image = NSImage.ImageNamed("tags.png");
 ```
 
-Il codice precedente usa il metodo `ImageNamed("...")` statico `NSImage` della classe per caricare l'immagine specificata in memoria dalla cartella **delle risorse** , se non è possibile trovare l'immagine, `null` verrà restituito. Analogamente alle immagini assegnate in Interface Builder, se è stata **@2x** inclusa una versione del file di immagine, questa verrà usata automaticamente nei computer Mac basati su display retina.
+Il codice precedente usa il metodo statico `ImageNamed("...")` della classe `NSImage` per caricare l'immagine specificata in memoria dalla cartella **Resources** . se non è possibile trovare l'immagine, verrà restituito `null`. Analogamente alle immagini assegnate in Interface Builder, se è stata inclusa una versione **@2x** del file di immagine, questa verrà usata automaticamente nei computer Mac basati su display retina.
 
 Per caricare immagini all'esterno del bundle dell'applicazione (dal file system Mac), usare il codice seguente:
 
@@ -229,9 +229,9 @@ public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
 ```
 
 > [!IMPORTANT]
-> In particolare, con l'avvento della modalità scura in MacOS Mojave, è importante evitare `LockFocus` l'API quando si Reating oggetti `NSImage` con rendering personalizzato. Tali immagini diventano statiche e non verranno aggiornate automaticamente per tenere conto delle modifiche apportate alla densità dell'aspetto o della visualizzazione.
+> In particolare, con l'avvento della modalità scura in macOS Mojave, è importante evitare l'API `LockFocus` quando si Reating `NSImage` oggetti con rendering personalizzato. Tali immagini diventano statiche e non verranno aggiornate automaticamente per tenere conto delle modifiche apportate alla densità dell'aspetto o della visualizzazione.
 >
-> Utilizzando il meccanismo basato sul gestore precedente, il nuovo rendering per le condizioni dinamiche si verificherà automaticamente quando `NSImage` viene ospitato, ad esempio, in un oggetto. `NSImageView`
+> Utilizzando il meccanismo basato sul gestore precedente, il nuovo rendering per le condizioni dinamiche si verificherà automaticamente quando il `NSImage` viene ospitato, ad esempio, in un `NSImageView`.
 
 Infine, per tingere un'immagine modello, chiamare questa funzione sull'immagine per colorarla:
 
@@ -243,7 +243,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>Utilizzo di immagini con visualizzazioni di tabella
 
-Per includere un'immagine come parte `NSTableView`della cella di un, è necessario modificare il modo in cui i dati vengono restituiti dal `GetViewForItem` metodo della `NSTableViewDelegate's` visualizzazione tabella per utilizzare un `NSTableCellView` anziché il tipico `NSTextField`. Ad esempio:
+Per includere un'immagine come parte della cella in una `NSTableView`, è necessario modificare il modo in cui i dati vengono restituiti dal `NSTableViewDelegate's` `GetViewForItem` metodo della visualizzazione tabella per utilizzare un `NSTableCellView` anziché il `NSTextField` tipico. Esempio:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -302,7 +302,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 }
 ```
 
-Qui sono disponibili alcune righe di interesse. In primo luogo, per le colonne che si desidera includere un'immagine, viene creato `NSImageView` un nuovo della dimensione e della posizione richieste, viene anche creato `NSTextField` un nuovo e viene posizionata la posizione predefinita a seconda che si usi o meno un'immagine:
+Qui sono disponibili alcune righe di interesse. In primo luogo, per le colonne che si desidera includere un'immagine, viene creato un nuovo `NSImageView` della dimensione e della posizione richieste, viene anche creato un nuovo `NSTextField` e viene posizionata la relativa posizione predefinita in base alla possibilità di utilizzare o meno un'immagine :
 
 ```csharp
 if (tableColumn.Title == "Product") {
@@ -314,7 +314,7 @@ if (tableColumn.Title == "Product") {
 }
 ```
 
-In secondo luogo, è necessario includere la nuova visualizzazione immagine e il campo di testo nell' `NSTableCellView`elemento padre:
+In secondo luogo, è necessario includere la nuova visualizzazione immagine e il campo di testo nel `NSTableCellView` padre:
 
 ```csharp
 view.AddSubview (view.ImageView);
@@ -341,7 +341,7 @@ Per ulteriori informazioni sull'utilizzo delle visualizzazioni tabella, vedere l
 
 ## <a name="using-images-with-outline-views"></a>Utilizzo di immagini con visualizzazioni struttura
 
-Per includere un'immagine come parte `NSOutlineView`della cella di un, è necessario modificare il modo in cui i dati vengono restituiti dal `GetView` metodo della `NSTableViewDelegate's` visualizzazione struttura per usare un `NSTableCellView` anziché il tipico `NSTextField`. Ad esempio:
+Per includere un'immagine come parte della cella in una `NSOutlineView`, è necessario modificare il modo in cui i dati vengono restituiti dal `NSTableViewDelegate's` `GetView` metodo della visualizzazione struttura per usare un `NSTableCellView` anziché il `NSTextField` tipico. Esempio:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -405,7 +405,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-Qui sono disponibili alcune righe di interesse. In primo luogo, per le colonne che si desidera includere un'immagine, viene creato `NSImageView` un nuovo della dimensione e della posizione richieste, viene anche creato `NSTextField` un nuovo e viene posizionata la posizione predefinita a seconda che si usi o meno un'immagine:
+Qui sono disponibili alcune righe di interesse. In primo luogo, per le colonne che si desidera includere un'immagine, viene creato un nuovo `NSImageView` della dimensione e della posizione richieste, viene anche creato un nuovo `NSTextField` e viene posizionata la relativa posizione predefinita in base alla possibilità di utilizzare o meno un'immagine :
 
 ```csharp
 if (tableColumn.Title == "Product") {
@@ -417,7 +417,7 @@ if (tableColumn.Title == "Product") {
 }
 ```
 
-In secondo luogo, è necessario includere la nuova visualizzazione immagine e il campo di testo nell' `NSTableCellView`elemento padre:
+In secondo luogo, è necessario includere la nuova visualizzazione immagine e il campo di testo nel `NSTableCellView` padre:
 
 ```csharp
 view.AddSubview (view.ImageView);

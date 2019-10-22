@@ -8,24 +8,24 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2018
 ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289428"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Demo del ciclo di vita delle applicazioni per Novell. iOS
 
-Questo articolo e il [codice di esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) illustrano i quattro Stati dell'applicazione in iOS e il `AppDelegate` ruolo dei metodi per notificare all'applicazione quando gli Stati vengono modificati. L'applicazione visualizzerà gli aggiornamenti alla console ogni volta che lo stato dell'app cambia:
+Questo articolo e il [codice di esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) illustrano i quattro Stati dell'applicazione in iOS e il ruolo dei `AppDelegate` metodi per notificare all'applicazione quando gli Stati vengono modificati. L'applicazione visualizzerà gli aggiornamenti alla console ogni volta che lo stato dell'app cambia:
 
-[![](application-lifecycle-demo-images/image3-sml.png "App di esempio")](application-lifecycle-demo-images/image3.png#lightbox)
+[![](application-lifecycle-demo-images/image3-sml.png "The sample app")](application-lifecycle-demo-images/image3.png#lightbox)
 
-[![](application-lifecycle-demo-images/image4.png "L'app stampa gli aggiornamenti alla console ogni volta che lo stato dell'app viene modificato")](application-lifecycle-demo-images/image4.png#lightbox)
+[![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
 1. Aprire il progetto **Lifecycle** nella soluzione **LifecycleDemo** .
-1. Aprire la `AppDelegate` classe. La registrazione è stata aggiunta ai metodi del ciclo di vita per indicare la modifica dello stato dell'applicazione:
+1. Aprire la classe `AppDelegate`. La registrazione è stata aggiunta ai metodi del ciclo di vita per indicare la modifica dello stato dell'applicazione:
 
     ```csharp
     public override void OnActivated(UIApplication application)
@@ -51,11 +51,11 @@ Questo articolo e il [codice di esempio](https://docs.microsoft.com/samples/xama
     }
     ```
 
-1. Avviare l'applicazione nel simulatore o nel dispositivo. `OnActivated`verrà chiamato all'avvio dell'app. L'applicazione è ora nello stato _attivo_ .
-1. Premere il pulsante Home sul simulatore o sul dispositivo per portare l'applicazione in background. `OnResignActivation`e `DidEnterBackground` verranno chiamati durante le transizioni dell'app da `Active` a `Inactive` e nello `Backgrounded` stato. Poiché il codice dell'applicazione non è impostato per l'esecuzione in background, l'applicazione viene considerata _sospesa_ in memoria.
-1. Tornare all'app per ripristinarlo in primo piano. `WillEnterForeground``OnActivated` verranno entrambi chiamati:
+1. Avviare l'applicazione nel simulatore o nel dispositivo. `OnActivated` verrà chiamato all'avvio dell'app. L'applicazione è ora nello stato _attivo_ .
+1. Premere il pulsante Home sul simulatore o sul dispositivo per portare l'applicazione in background. `OnResignActivation` e `DidEnterBackground` verranno chiamati come transizioni dell'app da `Active` a `Inactive` e nello stato `Backgrounded`. Poiché il codice dell'applicazione non è impostato per l'esecuzione in background, l'applicazione viene considerata _sospesa_ in memoria.
+1. Tornare all'app per ripristinarlo in primo piano. verranno chiamati entrambi `WillEnterForeground` e `OnActivated`:
 
-    ![](application-lifecycle-demo-images/image4.png "Modifiche di stato stampate nella console")
+    ![](application-lifecycle-demo-images/image4.png "State changes printed to the console")
 
     La seguente riga di codice nel controller di visualizzazione viene eseguita quando l'applicazione è passata in primo piano dallo sfondo e modifica il testo visualizzato sullo schermo:
 
@@ -67,13 +67,13 @@ Questo articolo e il [codice di esempio](https://docs.microsoft.com/samples/xama
 
 1. Premere il pulsante **Home** per inserire l'applicazione in background. Quindi, toccare il pulsante **Home** per visualizzare il selettore di applicazione. In iPhone X scorrere rapidamente verso l'alto dalla parte inferiore della schermata:
 
-    [Selezione ![applicazione] Selezione (application-lifecycle-demo-images/app-switcher-sml.png "applicazione")](application-lifecycle-demo-images/app-switcher.png#lightbox)
+    [![Selezione applicazione](application-lifecycle-demo-images/app-switcher-sml.png "Selezione applicazione")](application-lifecycle-demo-images/app-switcher.png#lightbox)
   
 1. Individuare l'applicazione nello strumento di selezione dell'app e scorrere verso l'alto per rimuoverla (in iOS 11, premere lungo finché le icone rosse non vengono visualizzate nell'angolo):
 
     [![Scorrere rapidamente verso l'alto per rimuovere un'app in esecuzione](application-lifecycle-demo-images/app-switcher-swipe-sml.png "Scorrere rapidamente verso l'alto per rimuovere un'app in esecuzione")](application-lifecycle-demo-images/app-switcher-swipe.png#lightbox)
 
-iOS terminerà l'applicazione. Si noti `WillTerminate` che non viene chiamato perché l'applicazione è già _sospesa_ in background.
+iOS terminerà l'applicazione. Si noti che `WillTerminate` non viene chiamata perché l'applicazione è già _sospesa_ in background.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

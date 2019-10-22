@@ -7,17 +7,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766827"
 ---
 # <a name="using-the-model-class"></a>Uso della classe Model
 
 _La classe modello semplifica notevolmente il rendering di oggetti 3D complessi rispetto al metodo tradizionale di rendering della grafica 3D. Gli oggetti modello vengono creati da file di contenuto, consentendo una facile integrazione del contenuto senza codice personalizzato._
 
-L'API monogame include una `Model` classe che può essere usata per archiviare i dati caricati da un file di contenuto e per eseguire il rendering. I file di modello possono essere molto semplici, ad esempio un triangolo a tinta unita, oppure possono includere informazioni per il rendering complesso, tra cui texturing e illuminazione.
+L'API monogame include una classe `Model` che può essere usata per archiviare i dati caricati da un file di contenuto e per eseguire il rendering. I file di modello possono essere molto semplici, ad esempio un triangolo a tinta unita, oppure possono includere informazioni per il rendering complesso, tra cui texturing e illuminazione.
 
 In questa procedura dettagliata viene utilizzato [un modello 3D di un robot](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) e vengono illustrate le operazioni seguenti:
 
@@ -43,7 +43,7 @@ Prima di procedere, è necessario verificare che il progetto venga aperto e dist
 
 Il formato del file. xnb è un'estensione standard per il contenuto compilato (contenuto creato dallo [strumento Pipeline monogame](http://www.monogame.net/documentation/?page=Pipeline)). Tutti i contenuti compilati hanno un file di origine (un file con estensione FBX nel caso del modello) e un file di destinazione (un file con estensione xnb). Il formato FBX è un formato di modello 3D comune che può essere creato da applicazioni come [Maya](http://www.autodesk.com/products/maya/overview) e [Blender](http://www.blender.org/). 
 
-La `Model` classe può essere costruita caricando un file con estensione xnb da un disco che contiene dati geometrici 3D.   Il file con estensione xnb viene creato tramite un progetto di contenuto. I modelli monogame includono automaticamente un progetto di contenuto (con estensione MGCP) nella cartella del contenuto. Per una descrizione dettagliata dello strumento Pipeline monogame, vedere la [Guida alla pipeline di contenuti](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
+La classe `Model` può essere costruita caricando un file con estensione xnb da un disco che contiene dati geometrici 3D.   Il file con estensione xnb viene creato tramite un progetto di contenuto. I modelli monogame includono automaticamente un progetto di contenuto (con estensione MGCP) nella cartella del contenuto. Per una descrizione dettagliata dello strumento Pipeline monogame, vedere la [Guida alla pipeline di contenuti](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 Per questa guida si ignorerà l'uso dello strumento Pipeline monogame e verrà usato il. File XNB inclusi qui. Si noti che. I file XNB sono diversi per ogni piattaforma. Assicurarsi quindi di usare il set corretto di file XNB per qualsiasi piattaforma utilizzata.
 
@@ -59,11 +59,11 @@ Visual Studio per Mac possibile non impostare automaticamente l'azione di compil
 
 L'ultimo passaggio necessario per visualizzare il modello sullo schermo consiste nell'aggiungere il codice di caricamento e di disegno. In particolare, verranno svolte le operazioni seguenti:
 
-- Definizione di `Model` un'istanza `Game1` nella classe
-- Caricamento dell' `Model` istanza in`Game1.LoadContent`
-- Disegno dell' `Model` istanza in`Game1.Draw`
+- Definizione di un'istanza di `Model` nella classe `Game1`
+- Caricamento dell'istanza di `Model` in `Game1.LoadContent`
+- Creazione dell'istanza di `Model` in `Game1.Draw`
 
-Sostituire il `Game1.cs` file di codice (che si trova nella libreria di classi portabile **WalkingGame** ) con quanto segue:
+Sostituire il file di codice `Game1.cs` (che si trova nella libreria di classi portabile **WalkingGame** ) con quanto segue:
 
 ```csharp
 public class Game1 : Game
@@ -167,15 +167,15 @@ Se eseguiamo questo codice, il modello verrà visualizzato sullo schermo:
 
 ### <a name="model-class"></a>Classe modello
 
-La `Model` classe è la classe principale per l'esecuzione del rendering 3D dai file di contenuto, ad esempio i file con estensione FBX. Contiene tutte le informazioni necessarie per il rendering, tra cui la geometria 3D, i riferimenti alla trama e `BasicEffect` le istanze che controllano i valori di posizionamento, illuminazione e fotocamera.
+La classe `Model` è la classe principale per l'esecuzione del rendering 3D dai file di contenuto, ad esempio i file con estensione FBX. Contiene tutte le informazioni necessarie per il rendering, tra cui la geometria 3D, i riferimenti alla trama e le istanze `BasicEffect` che controllano i valori di posizionamento, illuminazione e fotocamera.
 
-La `Model` classe stessa non dispone direttamente di variabili per il posizionamento poiché è possibile eseguire il rendering di una singola istanza del modello in più posizioni, come verrà illustrato più avanti in questa guida.
+La classe `Model` non dispone direttamente di variabili per il posizionamento poiché è possibile eseguire il rendering di una singola istanza del modello in più posizioni, come verrà illustrato più avanti in questa guida.
 
-Ogni `Model` è costituito da una o `ModelMesh` più istanze, che vengono esposte tramite la `Meshes` proprietà. Sebbene sia possibile considerare `Model` come un unico oggetto gioco, ad esempio un robot o un'automobile, ognuno `ModelMesh` di essi può essere disegnato con valori `BasicEffect` diversi. Ad esempio, singole parti mesh possono rappresentare le gambe di un robot o delle ruote in un'auto ed è possibile assegnare i `BasicEffect` valori per far ruotare le ruote o spostare le gambe. 
+Ogni `Model` è costituita da una o più istanze `ModelMesh`, che vengono esposte tramite la proprietà `Meshes`. Sebbene sia possibile considerare un `Model` come un unico oggetto gioco, ad esempio un robot o un'automobile, ogni `ModelMesh` può essere disegnata con valori `BasicEffect` diversi. Ad esempio, singole parti mesh possono rappresentare le gambe di un robot o delle ruote in un'auto ed è possibile assegnare i valori `BasicEffect` per far ruotare le ruote o spostare le gambe. 
 
 ### <a name="basiceffect-class"></a>Classe BasicEffect
 
-La `BasicEffect` classe fornisce le proprietà per controllare le opzioni di rendering. La prima modifica apportata a `BasicEffect` consiste nel chiamare il `EnableDefaultLighting` metodo. Come suggerisce il nome, questo consente l'illuminazione predefinita, che è molto utile per verificare che un `Model` venga visualizzato nel gioco come previsto. Se si imposta come commento `EnableDefaultLighting` la chiamata, il modello verrà visualizzato solo con la relativa trama, ma senza bagliore ombreggiatura o speculare:
+La classe `BasicEffect` fornisce le proprietà per controllare le opzioni di rendering. La prima modifica apportata al `BasicEffect` consiste nel chiamare il metodo `EnableDefaultLighting`. Come suggerisce il nome, questo consente l'illuminazione predefinita, che è molto utile per verificare che un `Model` venga visualizzato nel gioco come previsto. Se si imposta come commento la chiamata di `EnableDefaultLighting`, il modello verrà visualizzato solo con la trama, ma senza bagliore ombreggiato o speculare:
 
 ```csharp
 //effect.EnableDefaultLighting ();
@@ -183,7 +183,7 @@ La `BasicEffect` classe fornisce le proprietà per controllare le opzioni di ren
 
 ![Il modello di cui è stato eseguito il rendering con solo la trama, ma senza ombreggiatura o bagliore speculare](part1-images/image9.png "Il modello di cui è stato eseguito il rendering con solo la trama, ma senza ombreggiatura o bagliore speculare")
 
-La `World` proprietà può essere utilizzata per modificare la posizione, la rotazione e la scala del modello. Il codice precedente usa il `Matrix.Identity` valore, il che significa che `Model` l'oggetto eseguirà il rendering nel gioco esattamente come specificato nel file con estensione FBX. Le matrici e le coordinate 3D verranno illustrate in modo più dettagliato nella [parte 3](~/graphics-games/monogame/3d/part3.md), ma, come esempio, è possibile modificare la `Model` posizione del modificando la `World` proprietà nel modo seguente:
+È possibile utilizzare la proprietà `World` per modificare la posizione, la rotazione e la scala del modello. Il codice precedente usa il valore `Matrix.Identity`, il che significa che il `Model` eseguirà il rendering nel gioco esattamente come specificato nel file con estensione FBX. Le matrici e le coordinate 3D verranno illustrate in modo più dettagliato nella [parte 3](~/graphics-games/monogame/3d/part3.md), ma, come esempio, è possibile modificare la posizione del `Model` modificando la proprietà `World` come segue:
 
 ```csharp
 // Z is up, so changing Z to 3 moves the object up 3 units:
@@ -195,20 +195,20 @@ Questo codice comporta lo spostamento dell'oggetto in base a 3 unità internazio
 
 ![Questo codice genera l'oggetto spostato di 3 unità internazionali](part1-images/image10.png "Questo codice genera l'oggetto spostato di 3 unità internazionali")
 
-Le due proprietà finali assegnate in `BasicEffect` sono `View` e `Projection`. Verranno illustrate le fotocamere 3D nella [parte 3](~/graphics-games/monogame/3d/part3.md), ma, ad esempio, è possibile modificare la posizione della fotocamera cambiando la variabile locale `cameraPosition` :
+Le due proprietà finali assegnate nel `BasicEffect` sono `View` e `Projection`. Verranno illustrate le fotocamere 3D nella [parte 3](~/graphics-games/monogame/3d/part3.md), ma, ad esempio, è possibile modificare la posizione della fotocamera cambiando la variabile di `cameraPosition` locale:
 
 ```csharp
 // The 8 has been changed to a 30 to move the Camera further back
 var cameraPosition = new Vector3 (0, 30, 0);
 ```
 
-Si noterà che la fotocamera è stata spostata di nuovo, con `Model` conseguente riduzione della visualizzazione a causa della prospettiva:
+Si noterà che la fotocamera è stata spostata di nuovo, di conseguenza la `Model` risulta più piccola a causa della prospettiva:
 
 ![La fotocamera è stata spostata di nuovo, di conseguenza il modello risulta più piccolo a causa della prospettiva](part1-images/image11.png "La fotocamera è stata spostata di nuovo, di conseguenza il modello risulta più piccolo a causa della prospettiva")
 
 ## <a name="rendering-multiple-models"></a>Rendering di più modelli
 
-Come indicato in precedenza, un `Model` singolo può essere disegnato più volte. Per semplificare questa operazione, il `Model` codice di disegno verrà spostato in un proprio metodo che accetta la posizione desiderata `Model` come parametro. Al termine, i `Draw` metodi `DrawModel` e appariranno come segue:
+Come indicato in precedenza, è possibile disegnare più volte un singolo `Model`. Per semplificare questa operazione, il `Model` il codice di disegno verrà spostato nel proprio metodo che accetta la posizione `Model` desiderata come parametro. Al termine, i metodi `Draw` e `DrawModel` risulteranno simili ai seguenti:
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -257,10 +257,10 @@ In questo modo il modello di robot viene disegnato sei volte:
 
 ## <a name="summary"></a>Riepilogo
 
-In questa procedura dettagliata è stata `Model` introdotta la classe monogame. Viene illustrata la conversione di un file con estensione FBX in un file con estensione xnb, che può essere `Model` caricato a sua volta in una classe. Viene inoltre illustrato in che modo le `BasicEffect` modifiche apportate a un'istanza possono influisca `Model` sul disegno
+In questa procedura dettagliata è stata introdotta la classe di `Model` monogame. Viene illustrata la conversione di un file con estensione FBX in un file con estensione xnb, che può essere caricato a sua volta in una classe `Model`. Viene inoltre illustrato come le modifiche a un'istanza di `BasicEffect` possono avere un effetto sul disegno `Model`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Riferimento al modello monogame](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Graphics_Model)
-- [Content.zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)
+- [Contenuto. zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)
 - [Progetto completato (esempio)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/)

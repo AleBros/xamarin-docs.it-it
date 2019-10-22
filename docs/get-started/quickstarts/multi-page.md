@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68653789"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Eseguire lo spostamento in un'applicazione Novell. Forms a più pagine
@@ -28,10 +28,10 @@ In questa Guida introduttiva si apprenderà come:
 
 Questa Guida introduttiva illustra come trasformare un'applicazione Novell. Forms multipiattaforma a pagina singola, in grado di archiviare una singola nota, in un'applicazione a più pagine, in grado di archiviare più note. Il risultato è riportato di seguito:
 
-[![](multi-page-images/screenshots1-sml.png "")](multi-page-images/screenshots1.png#lightbox "Pagina note")
-[![](multi-page-images/screenshots2-sml.png "Pagina di immissione della nota") della pagina note](multi-page-images/screenshots2.png#lightbox "Pagina di immissione della nota")
+[![](multi-page-images/screenshots1-sml.png "Notes Page")](multi-page-images/screenshots1.png#lightbox "Notes Page")
+[![](multi-page-images/screenshots2-sml.png "Note Entry Page")](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 Prima di provare questa Guida introduttiva, è necessario completare correttamente la [Guida introduttiva precedente](single-page.md) . In alternativa, scaricare l' [esempio di Guida introduttiva precedente](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) e usarlo come punto di partenza per questa Guida introduttiva.
 
@@ -41,23 +41,23 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
 
 1. Avviare Visual Studio. Nella finestra di avvio fare clic sulla soluzione **Note** nell'elenco progetti/soluzioni recenti oppure fare clic su **Apri un progetto o una soluzione**e nella finestra di dialogo **Apri progetto/soluzione** selezionare il file di soluzione per il progetto note:
 
-    ![](multi-page-images/vs/open-solution.png "Aprire il progetto")
+    ![](multi-page-images/vs/open-solution.png "Open Project")
 
 2. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **Notes** e scegliere **Aggiungi > nuova cartella**:
 
-    ![](multi-page-images/vs/add-new-item.png "Aggiungere un nuovo elemento")
+    ![](multi-page-images/vs/add-new-item.png "Add New Item")
 
 3. In **Esplora soluzioni**assegnare un nome ai nuovi **modelli**di cartella:
 
-    ![](multi-page-images/vs/name-folder.png "Cartella modelli")
+    ![](multi-page-images/vs/name-folder.png "Models Folder")
 
 4. In **Esplora soluzioni**selezionare la cartella **modelli** , fare clic con il pulsante destro del mouse e scegliere **Aggiungi > nuovo elemento...** :
 
-    ![](multi-page-images/vs/add-new-models-file.png "Aggiungere un nuovo file")
+    ![](multi-page-images/vs/add-new-models-file.png "Add New File")
 
 5. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **elementi C# visivi > classe**, assegnare un nome alla **Nota**del nuovo file, quindi fare clic sul pulsante **Aggiungi** :
 
-    ![](multi-page-images/vs/add-note-class.png "Aggiungi classe nota")
+    ![](multi-page-images/vs/add-note-class.png "Add Note Class")
 
     Verrà aggiunta una classe denominata **Nota** alla cartella **Models** del progetto **Notes** .
 
@@ -77,13 +77,13 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     }
     ```
 
-    Questa classe definisce un `Note` modello in cui vengono archiviati i dati relativi a ogni nota nell'applicazione.    
+    Questa classe definisce un modello di `Note` che archivia i dati relativi a ciascuna nota nell'applicazione.    
 
     Salvare le modifiche apportate a **note.cs** premendo **CTRL + S**e chiudere il file.
 
 7. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **Notes** e scegliere **Aggiungi > nuovo elemento..** . Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **elementi C# visivi > pagina contenuto > Novell. Forms**, assegnare al nuovo file il nome **NoteEntryPage**e fare clic sul pulsante **Aggiungi** :
 
-    ![](multi-page-images/vs/add-note-entry-page.png "Aggiungere Novell. Forms ContentPage")
+    ![](multi-page-images/vs/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
     Verrà aggiunta una nuova pagina denominata **NoteEntryPage** alla cartella radice del progetto. Questa pagina sarà la seconda pagina dell'applicazione.
 
@@ -114,7 +114,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
       </ContentPage>
       ```
 
-      Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`Editor`](xref:Xamarin.Forms.Editor) è costituita da un oggetto [`Button`](xref:Xamarin.Forms.Button) per l'input di testo e da due istanze che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due `Button` istanze sono disposte orizzontalmente in [`Grid`](xref:Xamarin.Forms.Grid)un oggetto, `Editor` con `Grid` l'oggetto e viene disposto verticalmente [`StackLayout`](xref:Xamarin.Forms.StackLayout)in un oggetto. Inoltre, `Editor` utilizza Data Binding per eseguire l'associazione `Text` alla proprietà del `Note` modello. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+      Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e da due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze `Button` sono disposte orizzontalmente in un [`Grid`](xref:Xamarin.Forms.Grid), con la `Editor` e la `Grid` disposti verticalmente in un [`StackLayout`](xref:Xamarin.Forms.StackLayout). Inoltre, il `Editor` utilizza data binding per eseguire il binding alla proprietà `Text` del modello `Note`. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
       Salvare le modifiche apportate a **NoteEntryPage. XAML** premendo **CTRL + S**e chiudere il file.
 
@@ -169,7 +169,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
       }
       ```
 
-      Questo codice archivia un' `Note` istanza di, che rappresenta una singola nota, nell' [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) oggetto della pagina. Quando viene [`Button`](xref:Xamarin.Forms.Button) premuto il pulsante Salva `OnSaveButtonClicked` , viene eseguito il gestore eventi, il `Editor` quale salva il contenuto di in un nuovo file con un nome file generato in modo casuale o in un file esistente se viene aggiornata una nota. In entrambi i casi, il file è archiviato nella cartella dei dati dell'applicazione locale per l'applicazione. Il metodo torna quindi alla pagina precedente. Quando viene `Button` premuto il pulsante Elimina `OnDeleteButtonClicked` , viene eseguito il gestore dell'evento, che elimina il file, purché esista, e torna alla pagina precedente. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+      Questo codice archivia un'istanza di `Note`, che rappresenta una singola nota, nella [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina. Quando viene premuto il [`Button`](xref:Xamarin.Forms.Button) **Salva** , viene eseguito il gestore dell'evento `OnSaveButtonClicked`, che salva il contenuto del `Editor` in un nuovo file con un nome file generato in modo casuale o in un file esistente se è in corso l'aggiornamento di una nota. In entrambi i casi, il file è archiviato nella cartella dei dati dell'applicazione locale per l'applicazione. Il metodo torna quindi alla pagina precedente. Quando viene premuto il `Button` **Delete** , viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, che elimina il file, purché esista, e torna alla pagina precedente. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
       Salvare le modifiche apportate a **NoteEntryPage.XAML.cs** premendo **CTRL + S**e chiudere il file.
 
@@ -205,7 +205,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`ListView`](xref:Xamarin.Forms.ListView) è costituita da un oggetto e un oggetto. [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Il `ListView` USA Data Binding per visualizzare eventuali note recuperate dall'applicazione e la `NoteEntryPage` selezione di una nota passerà alla posizione in cui è possibile modificare la nota. In alternativa, è possibile creare una nuova nota premendo il `ToolbarItem`. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da una [`ListView`](xref:Xamarin.Forms.ListView) e una [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). Il `ListView` utilizza data binding per visualizzare eventuali note recuperate dall'applicazione e la selezione di una nota passerà al `NoteEntryPage` in cui è possibile modificare la nota. In alternativa, è possibile creare una nuova nota premendo il `ToolbarItem`. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NotesPage. XAML** premendo **CTRL + S**e chiudere il file.
 
@@ -272,7 +272,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     }
     ```    
 
-    Questo codice definisce la funzionalità per l' `NotesPage`oggetto. Quando viene visualizzata la pagina, `OnAppearing` viene eseguito il metodo, che consente [`ListView`](xref:Xamarin.Forms.ListView) di popolare con le eventuali note recuperate dalla cartella dati applicazione locale. Quando viene premuto, il `OnNoteAddedClicked` gestore eventi viene eseguito. [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Questo metodo passa `NoteEntryPage`a, impostando l'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di `NoteEntryPage` su una nuova `Note` istanza di. Quando `ListView` viene selezionato un elemento in, viene `OnListViewItemSelected` eseguito il gestore eventi. Questo metodo consente di passare a `NoteEntryPage`, impostando [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) il valore `NoteEntryPage` di sull'istanza `Note` di selezionata. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce la funzionalità per la `NotesPage`. Quando viene visualizzata la pagina, viene eseguito il metodo `OnAppearing`, che popola il [`ListView`](xref:Xamarin.Forms.ListView) con le eventuali note recuperate dalla cartella dati dell'applicazione locale. Quando viene premuto il [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) `OnNoteAddedClicked` viene eseguito il gestore eventi. Questo metodo passa alla `NoteEntryPage`, impostando la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del `NoteEntryPage` su una nuova istanza di `Note`. Quando viene selezionato un elemento nella `ListView`, viene eseguito `OnListViewItemSelected` gestore eventi. Questo metodo consente di passare alla `NoteEntryPage`, impostando il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della `NoteEntryPage` sull'istanza di `Note` selezionata. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NotesPage.XAML.cs** premendo **CTRL + S**e chiudere il file.
 
@@ -303,7 +303,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     }
     ```
 
-    Questo codice aggiunge una dichiarazione dello spazio dei `System.IO` nomi per lo spazio dei nomi e aggiunge una `FolderPath` dichiarazione per una `string`proprietà statica di tipo. La `FolderPath` proprietà viene usata per archiviare il percorso nel dispositivo in cui verranno archiviati i dati di nota. Inoltre, il codice inizializza la `FolderPath` proprietà `App` nel costruttore e inizializza la [`MainPage`](xref:Xamarin.Forms.Application.MainPage) proprietà in modo [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) che ospiti un'istanza di `NotesPage`. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice aggiunge una dichiarazione dello spazio dei nomi per lo spazio dei nomi `System.IO` e aggiunge una dichiarazione per una proprietà `FolderPath` statica di tipo `string`. La proprietà `FolderPath` viene utilizzata per archiviare il percorso nel dispositivo in cui verranno archiviati i dati di nota. Inoltre, il codice inizializza la proprietà `FolderPath` nel costruttore `App` e inizializza la proprietà [`MainPage`](xref:Xamarin.Forms.Application.MainPage) come [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) che ospita un'istanza di `NotesPage`. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **App.xaml.cs** premendo **CTRL+S** e chiudere il file.
 
@@ -313,7 +313,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
 
 15. Compilare ed eseguire il progetto in ogni piattaforma. Per ulteriori informazioni, vedere [la pagina relativa alla compilazione della Guida introduttiva](single-page.md#building-the-quickstart).
 
-    In **NotesPage** premere il **+** pulsante per passare al **NoteEntryPage** e immettere una nota. Dopo aver salvato la nota, l'applicazione tornerà a **NotesPage**.
+    In **NotesPage** premere il pulsante **+** per passare al **NoteEntryPage** e immettere una nota. Dopo aver salvato la nota, l'applicazione tornerà a **NotesPage**.
 
     Immettere un numero di note, di lunghezza variabile, per osservare il comportamento dell'applicazione.
 
@@ -324,23 +324,23 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
 
 1. Avviare Visual Studio per Mac. Nella finestra di avvio fare clic su **Apri**e nella finestra di dialogo selezionare il file della soluzione per il progetto note:
 
-    ![](multi-page-images/vsmac/open-solution.png "Aprire la soluzione")
+    ![](multi-page-images/vsmac/open-solution.png "Open Solution")
 
 2. Nella **riquadro della soluzione**selezionare il progetto **note** , fare clic con il pulsante destro del mouse e scegliere **Aggiungi > nuova cartella**:
 
-    ![](multi-page-images/vsmac/add-new-folder.png "Aggiungi nuova cartella")
+    ![](multi-page-images/vsmac/add-new-folder.png "Add New Folder")
 
 3. Nella **riquadro della soluzione**assegnare un nome ai nuovi **modelli**di cartella:
 
-    ![](multi-page-images/vsmac/name-folder.png "Cartella modelli")
+    ![](multi-page-images/vsmac/name-folder.png "Models Folder")
 
 4. Nella **riquadro della soluzione**selezionare la cartella **modelli** , fare clic con il pulsante destro del mouse e scegliere **Aggiungi > nuovo file...** :
 
-    ![](multi-page-images/vsmac/add-new-models-file.png "Aggiungere un nuovo file")
+    ![](multi-page-images/vsmac/add-new-models-file.png "Add New File")
 
 5. Nella finestra di dialogo **nuovo file** selezionare **Generale > classe vuota**, denominare il nuovo file **Nota**e fare clic sul pulsante **nuovo** :
 
-    ![](multi-page-images/vsmac/add-note-class.png "Aggiungi classe nota")
+    ![](multi-page-images/vsmac/add-note-class.png "Add Note Class")
 
     Verrà aggiunta una classe denominata **Nota** alla cartella **Models** del progetto **Notes** .
 
@@ -360,13 +360,13 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     }
     ```
 
-    Questa classe definisce un `Note` modello in cui vengono archiviati i dati relativi a ogni nota nell'applicazione.
+    Questa classe definisce un modello di `Note` che archivia i dati relativi a ciascuna nota nell'applicazione.
 
     Salvare le modifiche apportate a **note.cs** scegliendo **file > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
 7. Nella **riquadro della soluzione**selezionare il progetto **note** , fare clic con il pulsante destro del mouse e scegliere **Aggiungi > nuovo file.** Nella finestra di dialogo **nuovo file** selezionare **Forms > Forms ContentPage XAML**, assegnare al nuovo file il nome **NoteEntryPage**e fare clic sul pulsante **nuovo** :
 
-    ![](multi-page-images/vsmac/add-note-entry-page.png "Aggiungere Novell. Forms ContentPage")
+    ![](multi-page-images/vsmac/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
     Verrà aggiunta una nuova pagina denominata **NoteEntryPage** alla cartella radice del progetto. Questa pagina sarà la seconda pagina dell'applicazione.
 
@@ -397,7 +397,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
       </ContentPage>
       ```
 
-      Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`Editor`](xref:Xamarin.Forms.Editor) è costituita da un oggetto [`Button`](xref:Xamarin.Forms.Button) per l'input di testo e da due istanze che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due `Button` istanze sono disposte orizzontalmente in [`Grid`](xref:Xamarin.Forms.Grid)un oggetto, `Editor` con `Grid` l'oggetto e viene disposto verticalmente [`StackLayout`](xref:Xamarin.Forms.StackLayout)in un oggetto. Inoltre, `Editor` utilizza Data Binding per eseguire l'associazione `Text` alla proprietà del `Note` modello. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+      Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e da due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze `Button` sono disposte orizzontalmente in un [`Grid`](xref:Xamarin.Forms.Grid), con la `Editor` e la `Grid` disposti verticalmente in un [`StackLayout`](xref:Xamarin.Forms.StackLayout). Inoltre, il `Editor` utilizza data binding per eseguire il binding alla proprietà `Text` del modello `Note`. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
       Salvare le modifiche apportate a **NoteEntryPage. XAML** scegliendo **file > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
@@ -452,7 +452,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
       }
       ```
 
-      Questo codice archivia un' `Note` istanza di, che rappresenta una singola nota, nell' [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) oggetto della pagina. Quando viene [`Button`](xref:Xamarin.Forms.Button) premuto il pulsante Salva `OnSaveButtonClicked` , viene eseguito il gestore eventi, il `Editor` quale salva il contenuto di in un nuovo file con un nome file generato in modo casuale o in un file esistente se viene aggiornata una nota. In entrambi i casi, il file è archiviato nella cartella dei dati dell'applicazione locale per l'applicazione. Il metodo torna quindi alla pagina precedente. Quando viene `Button` premuto il pulsante Elimina `OnDeleteButtonClicked` , viene eseguito il gestore dell'evento, che elimina il file, purché esista, e torna alla pagina precedente. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+      Questo codice archivia un'istanza di `Note`, che rappresenta una singola nota, nella [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della pagina. Quando viene premuto il [`Button`](xref:Xamarin.Forms.Button) **Salva** , viene eseguito il gestore dell'evento `OnSaveButtonClicked`, che salva il contenuto del `Editor` in un nuovo file con un nome file generato in modo casuale o in un file esistente se è in corso l'aggiornamento di una nota. In entrambi i casi, il file è archiviato nella cartella dei dati dell'applicazione locale per l'applicazione. Il metodo torna quindi alla pagina precedente. Quando viene premuto il `Button` **Delete** , viene eseguito il gestore dell'evento `OnDeleteButtonClicked`, che elimina il file, purché esista, e torna alla pagina precedente. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
       Salvare le modifiche apportate a **NoteEntryPage.XAML.cs** scegliendo **file > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
@@ -488,7 +488,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`ListView`](xref:Xamarin.Forms.ListView) è costituita da un oggetto e un oggetto. [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Il `ListView` USA Data Binding per visualizzare eventuali note recuperate dall'applicazione e la `NoteEntryPage` selezione di una nota passerà alla posizione in cui è possibile modificare la nota. In alternativa, è possibile creare una nuova nota premendo il `ToolbarItem`. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da una [`ListView`](xref:Xamarin.Forms.ListView) e una [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). Il `ListView` utilizza data binding per visualizzare eventuali note recuperate dall'applicazione e la selezione di una nota passerà al `NoteEntryPage` in cui è possibile modificare la nota. In alternativa, è possibile creare una nuova nota premendo il `ToolbarItem`. Per ulteriori informazioni su data binding, vedere [Data Binding](deepdive.md#data-binding) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NotesPage. XAML** scegliendo **file > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
@@ -555,7 +555,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     }
     ```    
 
-    Questo codice definisce la funzionalità per l' `NotesPage`oggetto. Quando viene visualizzata la pagina, `OnAppearing` viene eseguito il metodo, che consente [`ListView`](xref:Xamarin.Forms.ListView) di popolare con le eventuali note recuperate dalla cartella dati applicazione locale. Quando viene premuto, il `OnNoteAddedClicked` gestore eventi viene eseguito. [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Questo metodo passa `NoteEntryPage`a, impostando l'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di `NoteEntryPage` su una nuova `Note` istanza di. Quando `ListView` viene selezionato un elemento in, viene `OnListViewItemSelected` eseguito il gestore eventi. Questo metodo consente di passare a `NoteEntryPage`, impostando [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) il valore `NoteEntryPage` di sull'istanza `Note` di selezionata. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce la funzionalità per la `NotesPage`. Quando viene visualizzata la pagina, viene eseguito il metodo `OnAppearing`, che popola il [`ListView`](xref:Xamarin.Forms.ListView) con le eventuali note recuperate dalla cartella dati dell'applicazione locale. Quando viene premuto il [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) `OnNoteAddedClicked` viene eseguito il gestore eventi. Questo metodo passa alla `NoteEntryPage`, impostando la [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del `NoteEntryPage` su una nuova istanza di `Note`. Quando viene selezionato un elemento nella `ListView`, viene eseguito `OnListViewItemSelected` gestore eventi. Questo metodo consente di passare alla `NoteEntryPage`, impostando il [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) della `NoteEntryPage` sull'istanza di `Note` selezionata. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **NotesPage.XAML.cs** scegliendo **file > Salva** (o premendo  **&#8984; + S**) e chiudere il file.
 
@@ -586,7 +586,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
     }
     ```
 
-    Questo codice aggiunge una dichiarazione dello spazio dei `System.IO` nomi per lo spazio dei nomi e aggiunge una `FolderPath` dichiarazione per una `string`proprietà statica di tipo. La `FolderPath` proprietà viene usata per archiviare il percorso nel dispositivo in cui verranno archiviati i dati di nota. Inoltre, il codice inizializza la `FolderPath` proprietà `App` nel costruttore e inizializza la [`MainPage`](xref:Xamarin.Forms.Application.MainPage) proprietà in modo [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) che ospiti un'istanza di `NotesPage`. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice aggiunge una dichiarazione dello spazio dei nomi per lo spazio dei nomi `System.IO` e aggiunge una dichiarazione per una proprietà `FolderPath` statica di tipo `string`. La proprietà `FolderPath` viene utilizzata per archiviare il percorso nel dispositivo in cui verranno archiviati i dati di nota. Inoltre, il codice inizializza la proprietà `FolderPath` nel costruttore `App` e inizializza la proprietà [`MainPage`](xref:Xamarin.Forms.Application.MainPage) come [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) che ospita un'istanza di `NotesPage`. Per altre informazioni sulla navigazione, vedere [navigazione](deepdive.md#navigation) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
     Salvare le modifiche apportate a **App.xaml.cs** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
@@ -596,7 +596,7 @@ Prima di provare questa Guida introduttiva, è necessario completare correttamen
 
 15. Compilare ed eseguire il progetto in ogni piattaforma. Per ulteriori informazioni, vedere [la pagina relativa alla compilazione della Guida introduttiva](single-page.md#building-the-quickstart).
 
-    In **NotesPage** premere il **+** pulsante per passare al **NoteEntryPage** e immettere una nota. Dopo aver salvato la nota, l'applicazione tornerà a **NotesPage**.
+    In **NotesPage** premere il pulsante **+** per passare al **NoteEntryPage** e immettere una nota. Dopo aver salvato la nota, l'applicazione tornerà a **NotesPage**.
 
     Immettere un numero di note, di lunghezza variabile, per osservare il comportamento dell'applicazione.
 

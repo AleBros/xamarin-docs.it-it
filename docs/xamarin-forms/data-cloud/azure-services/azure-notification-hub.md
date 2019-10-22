@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
 ms.openlocfilehash: c4237e9315ccc095abc72fdec24d58ffe1faebdf
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739233"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Inviare e ricevere notifiche push con hub di notifica di Azure e Novell. Forms

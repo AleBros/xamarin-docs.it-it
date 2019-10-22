@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: bb6a103de620386187a08151a4cdc29a4dc53a10
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71679989"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Creare un'applicazione Novell. Forms a pagina singola
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 In questa Guida introduttiva si apprenderà come:
 
@@ -28,11 +28,11 @@ In questa Guida introduttiva si apprenderà come:
 
 Questa Guida introduttiva illustra come creare un'applicazione Novell. Forms multipiattaforma, che consente di immettere una nota e di renderla permanente nell'archiviazione del dispositivo. Il risultato è riportato di seguito:
 
-[![](single-page-images/screenshots-sml.png "Applicazione Note")](single-page-images/screenshots.png#lightbox "Applicazione Note")
+[![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2019 (versione più recente) con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** installato.
 - Conoscenza di C#.
@@ -44,28 +44,28 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 1. Avviare Visual Studio 2019 e nella finestra di avvio fare clic su **Crea un nuovo progetto** per creare un nuovo progetto:
 
-    ![](single-page-images/vs/new-solution-2019.png "Nuovo progetto")
+    ![](single-page-images/vs/new-solution-2019.png "New Project")
 
 2. Nella finestra **Crea un nuovo progetto** selezionare **mobile** nell'elenco a discesa **tipo di progetto** , selezionare il modello **app per dispositivi mobili (Novell. Forms)** e fare clic sul pulsante **Avanti** :
 
-    ![](single-page-images/vs/new-project-2019.png "Modelli di progetto multipiattaforma")
+    ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
 3. Nella finestra **Configura nuovo progetto** impostare il **nome del progetto** su **Note**, scegliere un percorso appropriato per il progetto e fare clic sul pulsante **Crea** :
 
-    ![](single-page-images/vs/configure-project.png "Configurare il progetto")
+    ![](single-page-images/vs/configure-project.png "Configure your Project")
 
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa guida introduttiva richiedono che la soluzione sia denominata **Notes**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa guida introduttiva alla soluzione.
 
 4. Nella finestra di dialogo **nuova app multipiattaforma** fare clic su **app vuota**, quindi fare clic sul pulsante **OK** :
 
-    ![](single-page-images/vs/new-app-2019.png "Nuova app multipiattaforma")
+    ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
-    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Aprire MainPage.xaml")
+    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Open MainPage.xaml")
 
 6. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -96,13 +96,13 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`Label`](xref:Xamarin.Forms.Label) è costituita da un [`Editor`](xref:Xamarin.Forms.Editor) oggetto per visualizzare il testo, [`Button`](xref:Xamarin.Forms.Button) un oggetto per l'input di testo e due istanze che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S** e chiudere il file.
 
 7. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
-    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Aprire MainPage.xaml.cs")
+    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Open MainPage.xaml.cs")
 
 8. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -152,15 +152,15 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 1. In Visual Studio selezionare la voce di menu **Compila > Compila soluzione** o premere F6. La soluzione viene compilata e nella barra di stato di Visual Studio viene visualizzato un messaggio di operazione completata:
 
-      ![](single-page-images/vs/build-succeeded.png "Compilazione completata")
+      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
 
     In caso di errori, ripetere i passaggi precedenti e correggere gli errori fino a quando la soluzione non viene compilata correttamente.
 
 2. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione in un emulatore Android:
 
-    ![](single-page-images/vs/android-start.png "Barra degli strumenti di Visual Studio Android")
+    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
 
-    [![](single-page-images/vs/notes-android.png "Note nella emulatore Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -171,13 +171,13 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 3. Nella barra degli strumenti di Visual Studio fare clic con il pulsante destro del mouse sul progetto **Notes.iOS** e selezionare **Imposta come progetto di avvio**.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Impostare iOS come progetto di avvio")
+      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
 
 4. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione nel [simulatore iOS remoto](~/tools/ios-simulator/index.md):
 
-    ![](single-page-images/vs/ios-start.png "Barra degli strumenti di Visual Studio iOS")
+    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
 
-    [![](single-page-images/vs/notes-ios.png "Note nel simulatore iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Note nel simulatore iOS")
+    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -186,7 +186,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017, con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** installato.
 - Conoscenza di C#.
@@ -198,24 +198,24 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 1. Avviare Visual Studio 2017 e nella pagina iniziale fare clic su **Crea nuovo progetto** per creare un nuovo progetto:
 
-    ![](single-page-images/vs/new-solution.png "Nuovo progetto")
+    ![](single-page-images/vs/new-solution.png "New Project")
 
 2. Nella finestra di dialogo **Nuovo progetto** fare clic su **Multipiattaforma**, selezionare il modello **App per dispositivi mobili (Xamarin.Forms)** , impostare il nome su **Notes**, scegliere un percorso adatto per il progetto e fare clic sul pulsante **OK**:
 
-    ![](single-page-images/vs/new-project.png "Modelli di progetto multipiattaforma")
+    ![](single-page-images/vs/new-project.png "Cross-Platform Project Templates")
 
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa guida introduttiva richiedono che la soluzione sia denominata **Notes**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa guida introduttiva alla soluzione.
 
 3. Nella finestra di dialogo **Nuova app multipiattaforma**, fare clic su **App vuota**, selezionare **.NET Standard** come strategia di condivisione del codice e fare clic sul pulsante **OK**:
 
-    ![](single-page-images/vs/new-app.png "Nuova app multipiattaforma")
+    ![](single-page-images/vs/new-app.png "New Cross-Platform App")
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
 
 4. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** in **Esplora soluzioni** per aprire il file:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Aprire MainPage.xaml")
+    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
 
 5. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -246,13 +246,13 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`Label`](xref:Xamarin.Forms.Label) è costituita da un [`Editor`](xref:Xamarin.Forms.Editor) oggetto per visualizzare il testo, [`Button`](xref:Xamarin.Forms.Button) un oggetto per l'input di testo e due istanze che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** premendo **CTRL+S** e chiudere il file.
 
 6. In **Esplora soluzioni** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Aprire MainPage.xaml.cs")
+    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
 
 7. In **MainPage.xaml.cs** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -302,15 +302,15 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 1. In Visual Studio selezionare la voce di menu **Compila > Compila soluzione** o premere F6. La soluzione viene compilata e nella barra di stato di Visual Studio viene visualizzato un messaggio di operazione completata:
 
-      ![](single-page-images/vs/build-succeeded.png "Compilazione completata")
+      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
 
     In caso di errori, ripetere i passaggi precedenti e correggere gli errori fino a quando la soluzione non viene compilata correttamente.
 
 2. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione in un emulatore Android:
 
-    ![](single-page-images/vs/android-start.png "Barra degli strumenti di Visual Studio Android")
+    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
 
-    [![](single-page-images/vs/notes-android.png "Note nella emulatore Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -321,13 +321,13 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 3. Nella barra degli strumenti di Visual Studio fare clic con il pulsante destro del mouse sul progetto **Notes.iOS** e selezionare **Imposta come progetto di avvio**.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Impostare iOS come progetto di avvio")
+      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
 
 4. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione nel [simulatore iOS remoto](~/tools/ios-simulator/index.md):
 
-    ![](single-page-images/vs/ios-start.png "Barra degli strumenti di Visual Studio iOS")
+    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
 
-    [![](single-page-images/vs/notes-ios.png "Note nel simulatore iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Note nel simulatore iOS")
+    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -336,7 +336,7 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio per Mac (versione più recente) con supporto della piattaforma iOS e Android installato.
 - Xcode (versione più recente).
@@ -348,24 +348,24 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 1. Avviare Visual Studio per Mac e nella finestra di avvio fare clic su **nuovo** per creare un nuovo progetto:
 
-    ![](single-page-images/vsmac/new-project.png "Nuova soluzione")
+    ![](single-page-images/vsmac/new-project.png "New Solution")
 
 2. Nella finestra di dialogo, **Scegli un modello per il nuovo progetto** fare clic su **Multipiattaforma > App**, selezionare il modello **App Forms vuota** e fare clic sul pulsante **Avanti**:
 
-    ![](single-page-images/vsmac/choose-template.png "Scelta di un modello")
+    ![](single-page-images/vsmac/choose-template.png "Choose a Template")
 
 3. Nella finestra di dialogo **Configura l'app Forms vuota** denominare la nuova app **Notes**, verificare che sia selezionato il pulsante di opzione **Usa .NET Standard** e fare clic sul pulsante **Avanti**:    
 
-    ![](single-page-images/vsmac/configure-app.png "Configurare l'applicazione Forms")
+    ![](single-page-images/vsmac/configure-app.png "Configure the Forms Application")
 
 4. Nella finestra di dialogo **Configura l'app Forms vuota** lasciare i nomi di soluzione e progetto impostati su **Notes**, scegliere un percorso appropriato per il progetto e fare clic sul pulsante **Crea** per creare il progetto:
 
-    ![](single-page-images/vsmac/configure-project.png "Configurare il progetto Forms")
+    ![](single-page-images/vsmac/configure-project.png "Configure the Forms Project")
 
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML in questa guida introduttiva richiedono che sia la soluzione che il progetto siano denominati **Notes**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa guida introduttiva al progetto.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomia di un'applicazione Xamarin.Forms](deepdive.md#anatomy-of-a-xamarinforms-application) in [Approfondimenti per le guide di avvio rapido di Xamarin.Forms](deepdive.md).
 
 5. Fare doppio clic su **MainPage.xaml** nel progetto **Notes** nel **riquadro della soluzione** per aprire il file:
 
@@ -400,9 +400,9 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che [`Label`](xref:Xamarin.Forms.Label) è costituita da un [`Editor`](xref:Xamarin.Forms.Editor) oggetto per visualizzare il testo, [`Button`](xref:Xamarin.Forms.Button) un oggetto per l'input di testo e due istanze che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina, che è costituita da un [`Label`](xref:Xamarin.Forms.Label) per visualizzare il testo, un [`Editor`](xref:Xamarin.Forms.Editor) per l'input di testo e due istanze di [`Button`](xref:Xamarin.Forms.Button) che indirizzano l'applicazione al salvataggio o all'eliminazione di un file. Le due istanze di `Button` sono disposte orizzontalmente in un oggetto [`Grid`](xref:Xamarin.Forms.Grid), con `Label`, `Editor` e `Grid` disposti verticalmente in un oggetto [`StackLayout`](xref:Xamarin.Forms.StackLayout). Per ulteriori informazioni sulla creazione dell'interfaccia utente, vedere [interfaccia utente](deepdive.md#user-interface) nella [Guida introduttiva a Novell. Forms](deepdive.md).
 
-    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S**, e chiudere il file.
+    Salvare le modifiche apportate a **MainPage.xaml** scegliendo **File > Salva** o premendo **&#8984; + S** e chiudere il file.
 
 7. Nel **riquadro della soluzione** espandere **MainPage.xaml** nel progetto **Notes** e fare doppio clic su **MainPage.xaml.cs** per aprirlo:
 
@@ -456,19 +456,19 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 1. In Visual Studio per Mac, selezionare la voce di menu **Compila > Compila tutto** o premere **&#8984; + B**. I progetti vengono compilati e viene visualizzato un messaggio di operazione completata nella barra degli strumenti di Visual Studio per Mac.
 
-      ![](single-page-images/vsmac/build-successful.png "Compilazione completata")
+      ![](single-page-images/vsmac/build-successful.png "Build Successful")
 
     In caso di errori, ripetere i passaggi precedenti e correggere gli errori finché i progetti non vengono compilati correttamente.
 
 2. Nella **riquadro della soluzione**selezionare il progetto **Notes. iOS** , fare clic con il pulsante destro del mouse e selezionare **Imposta come progetto di avvio**:
 
-      ![](single-page-images/vsmac/set-startup-project-ios.png "Impostare iOS come progetto di avvio")
+      ![](single-page-images/vsmac/set-startup-project-ios.png "Set iOS as Startup Project")
 
 3. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS prescelto:
 
-      ![](single-page-images/vsmac/start.png "Barra degli strumenti di Visual Studio per Mac")
+      ![](single-page-images/vsmac/start.png "Visual Studio for Mac Toolbar")
 
-      [![](single-page-images/vsmac/notes-ios.png "Note nel simulatore iOS")](single-page-images/vsmac/notes-ios-large.png#lightbox "Note nel simulatore iOS")
+      [![](single-page-images/vsmac/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vsmac/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
 
     Immettere una nota e premere il pulsante **Salva**.
 
@@ -476,11 +476,11 @@ Per ulteriori informazioni su questi prerequisiti, vedere installazione di [Nove
 
 4. Nella **riquadro della soluzione**selezionare il progetto **Notes. Droid** , fare clic con il pulsante destro del mouse e selezionare **Imposta come progetto di avvio**:
 
-      ![](single-page-images/vsmac/set-startup-project-android.png "Impostare Android come progetto di avvio")
+      ![](single-page-images/vsmac/set-startup-project-android.png "Set Android as Startup Project")
 
 5. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno dell'emulatore Android prescelto:
 
-      [![](single-page-images/vsmac/notes-android.png "Note nella emulatore Android")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![](single-page-images/vsmac/notes-android.png "Notes in the Android Emulator")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Immettere una nota e premere il pulsante **Salva**.
 

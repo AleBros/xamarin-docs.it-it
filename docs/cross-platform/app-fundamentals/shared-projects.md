@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739065"
 ---
 # <a name="shared-projects-code-sharing"></a>Condivisione del codice di progetti condivisi
@@ -27,7 +27,7 @@ Se è stato usato il collegamento di file in passato per condividere il codice t
 
 A differenza della maggior parte degli altri tipi di progetto, un progetto condiviso non ha alcun output (in formato DLL), ma il codice viene compilato in ogni progetto che vi fa riferimento. Come illustrato nel diagramma seguente, concettualmente l'intero contenuto del progetto condiviso viene copiato in ogni progetto di riferimento e compilato come se facesse parte di essi.
 
-![](shared-projects-images/sharedassetproject.png "Architettura del progetto condiviso")
+![](shared-projects-images/sharedassetproject.png "Shared Project architecture")
 
 Il codice in un progetto condiviso può contenere direttive del compilatore che consentono di abilitare o disabilitare le sezioni di codice a seconda del progetto di applicazione che usa il codice, suggerito dalle caselle colorate della piattaforma nel diagramma.
 
@@ -43,7 +43,7 @@ Questa sezione illustra come creare e usare un progetto condiviso usando Visual 
 
 ## <a name="creating-a-shared-project"></a>Creazione di un progetto condiviso
 
-Per creare un nuovo progetto condiviso, passare a **File > nuova soluzione...** (oppure fare clic con il pulsante destro del mouse su una soluzione esistente e scegliere **aggiungi > Aggiungi nuovo progetto...** ):
+Per creare un nuovo progetto condiviso, passare a **File > nuova soluzione** oppure fare clic con il pulsante destro del mouse su una soluzione esistente e scegliere **Aggiungi > Aggiungi nuovo progetto...** ):
 
 [![Nuovo progetto condiviso](shared-projects-images/xs-newsolution-sml.png "Nuova soluzione")](shared-projects-images/xs-newsolution.png#lightbox)
 
@@ -57,7 +57,7 @@ Affinché un progetto condiviso possa essere utile, è necessario fare riferimen
 
 L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Novell. iOS che fa riferimento a un progetto condiviso.
 
-![](shared-projects-images/xs-reference.png "Riferimento al progetto condiviso")
+![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
 
 Una volta che al progetto condiviso viene fatto riferimento da un'altra libreria o da un'altra applicazione, è possibile compilare la soluzione e visualizzare eventuali errori nel codice. Quando si fa riferimento al progetto condiviso da _due o più_ progetti, viene visualizzato un menu nella parte superiore sinistra dell'editor del codice sorgente che Mostra come scegliere i progetti che fanno riferimento a questo file.
 
@@ -67,7 +67,7 @@ Quando si fa clic con il pulsante destro del mouse su un progetto condiviso e si
 
 La schermata **Opzioni** è mostrata di seguito: il **nome** del progetto e lo **spazio dei nomi predefinito** sono le uniche due impostazioni che in genere verranno modificate.
 
-![](shared-projects-images/xs-sharedprojectoptions.png "Opzioni progetto condiviso")
+![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -77,7 +77,7 @@ Questa sezione illustra come creare e usare un progetto condiviso con Visual Stu
 
 ### <a name="creating-a-shared-project"></a>Creazione di un progetto condiviso
 
-Per creare un nuovo progetto condiviso, passare a **file** > **nuovo** > **progetto**.
+Per creare un nuovo progetto condiviso, passare a **File**  > **nuovo**  > **progetto**.
 
 In Visual Studio 2019 immettere **Shared** nella casella di ricerca della pagina **creare un nuovo progetto** . Selezionare il modello di **progetto condiviso** e quindi fare clic su **Avanti**. Immettere un nome per il progetto e quindi selezionare **Crea**.
 
@@ -87,13 +87,13 @@ In Visual Studio 2017 selezionare il modello di **progetto condiviso** , quindi 
 
 È anche possibile aggiungere un nuovo progetto condiviso a una soluzione esistente facendo clic con il pulsante destro del mouse sul file della soluzione e scegliendo **aggiungi > nuovo progetto**. Un nuovo progetto condiviso appare come illustrato di seguito (dopo l'aggiunta di un file di classe). Si noti che non sono presenti riferimenti o nodi componente; questi non sono supportati per i progetti condivisi.
 
-![](shared-projects-images/vs-empty.png "Progetto condiviso vuoto")
+![](shared-projects-images/vs-empty.png "Empty Shared Project")
 
 Affinché un progetto condiviso possa essere utile, è necessario fare riferimento a esso da almeno un progetto di compilazione (ad esempio, un'applicazione o una libreria iOS o Android o un progetto PCL). Un progetto condiviso non viene compilato quando non vi è alcun riferimento, quindi gli errori di sintassi (o qualsiasi altro) non verranno evidenziati fino a quando non vi viene fatto riferimento da altri elementi.
 
 L'aggiunta di un riferimento a un progetto condiviso viene eseguita nello stesso modo in cui si fa riferimento a un normale progetto di libreria. Questa schermata mostra un progetto Novell. iOS che fa riferimento a un progetto condiviso.
 
-![](shared-projects-images/vs-reference.png "Riferimento al progetto condiviso")
+![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
 
 Una volta che al progetto condiviso viene fatto riferimento da un'altra libreria o da un'altra applicazione, è possibile compilare la soluzione e visualizzare eventuali errori nel codice. Quando si fa riferimento al progetto condiviso da _due o più_ progetti, viene visualizzato un menu nella parte superiore sinistra dell'editor del codice sorgente per vedere quali progetti fanno riferimento al file di codice corrente.
 
@@ -103,7 +103,7 @@ Quando si seleziona un progetto condiviso, il pannello Proprietà presenta un mi
 
 Il pannello **Proprietà** è illustrato di seguito. lo **spazio dei nomi radice** è l'unica impostazione che è possibile modificare.
 
-![](shared-projects-images/vs-sharedprojectproperties.png "Proprietà progetto condiviso")
+![](shared-projects-images/vs-sharedprojectproperties.png "Shared Project Properties")
 
 -----
 
@@ -111,17 +111,17 @@ Il pannello **Proprietà** è illustrato di seguito. lo **spazio dei nomi radice
 
 ## <a name="shared-project-example"></a>Esempio di progetto condiviso
 
-L'esempio di [attività](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa un progetto condiviso per contenere il codice comune usato dalle applicazioni iOS, Android e Windows Phone. Entrambi i `SQLite.cs` file `TaskRepository.cs` di codice sorgente e utilizzano le direttive del compilatore, ad esempio `#if __ANDROID__`) per produrre output diverso per ognuna delle applicazioni che vi fanno riferimento.
+L'esempio di [attività](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa un progetto condiviso per contenere il codice comune usato dalle applicazioni iOS, Android e Windows Phone. Entrambi i file di codice sorgente `SQLite.cs` e `TaskRepository.cs` utilizzano le direttive del compilatore, ad esempio `#if __ANDROID__`) per produrre output diverso per ognuna delle applicazioni che vi fanno riferimento.
 
 La struttura completa della soluzione è illustrata di seguito (rispettivamente in Visual Studio per Mac e Visual Studio):
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![](shared-projects-images/xs-examplesolution.png "Soluzione Visual Studio per Mac")
+![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](shared-projects-images/vs-examplesolution.png "Soluzione Visual Studio")
+![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
 
 -----
 
@@ -129,7 +129,7 @@ Il progetto Windows Phone può essere esplorato dall'interno di Visual Studio pe
 
 Le applicazioni in esecuzione sono illustrate di seguito:
 
-![](shared-projects-images/example.png "esempi di iOS, Android ed Windows Phone")
+![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
 
 ## <a name="summary"></a>Riepilogo
 

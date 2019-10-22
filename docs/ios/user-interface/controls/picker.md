@@ -8,26 +8,26 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/14/2018
 ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70286392"
 ---
 # <a name="picker-control-in-xamarinios"></a>Controllo selezione in Novell. iOS
 
-Un [`UIPickerView`](xref:UIKit.UIPickerView) oggetto consente di selezionare un valore da un elenco scorrendo i singoli componenti di un'interfaccia simile a una rotellina.
+Un [`UIPickerView`](xref:UIKit.UIPickerView) consente di selezionare un valore da un elenco scorrendo i singoli componenti di un'interfaccia simile a una rotellina.
 
-I selezionatori vengono spesso utilizzati per selezionare una data e un'ora. Apple fornisce il[`UIDatePicker`](xref:UIKit.UIDatePicker)
+I selezionatori vengono spesso utilizzati per selezionare una data e un'ora. Apple fornisce il [`UIDatePicker`](xref:UIKit.UIDatePicker)
 classe a questo scopo.
 
-Questo articolo descrive come implementare e usare i `UIPickerView` controlli e. `UIDatePicker`
+Questo articolo descrive come implementare e usare i controlli `UIPickerView` e `UIDatePicker`.
 
 ## <a name="uipickerview"></a>UIPickerView
 
 ### <a name="implementing-a-picker"></a>Implementazione di una selezione
 
-Implementare una selezione creando un'istanza di un `UIPickerView`nuovo:
+Implementare una selezione creando un'istanza di un nuovo `UIPickerView`:
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(
@@ -59,7 +59,7 @@ public override void ViewDidLoad()
 }
 ```
 
-La [`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) classe base implementa due interfacce,[`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
+La classe di base [`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) implementa due interfacce, [`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
 e [`IUIPickerViewDelegate`](xref:UIKit.IUIPickerViewDelegate), che dichiarano diversi metodi che specificano i dati di un selettore e il modo in cui gestisce l'interazione:
 
 ```csharp
@@ -126,19 +126,19 @@ Una selezione può contenere più colonne o _componenti_. I componenti partizion
 
 ![Selezione con due componenti](picker-images/image3.png "Selezione con due componenti")
 
-Per specificare il numero di componenti in una selezione, utilizzare il[`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
+Per specificare il numero di componenti in una selezione, utilizzare il [`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
 ProcessOnStatus.
 
 ### <a name="customizing-a-pickers-appearance"></a>Personalizzazione dell'aspetto di un selettore
 
-Per personalizzare l'aspetto di una selezione, usare il[`UIPickerView.UIPickerViewAppearance`](xref:UIKit.UIPickerView.UIPickerViewAppearance)
-classe oppure eseguire l' [`GetView`](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) override [`GetRowHeight`](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) dei metodi e `UIPickerViewModel`in.
+Per personalizzare l'aspetto di una selezione, utilizzare il [`UIPickerView.UIPickerViewAppearance`](xref:UIKit.UIPickerView.UIPickerViewAppearance)
+classe oppure eseguire l'override dei metodi [`GetView`](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) e [`GetRowHeight`](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) nel `UIPickerViewModel`.
 
 ## <a name="uidatepicker"></a>UIDatePicker
 
 ### <a name="implementing-a-date-picker"></a>Implementazione di una selezione data
 
-Implementare una selezione data creando un'istanza `UIDatePicker`di:
+Implementare una selezione data creando un'istanza di un `UIDatePicker`:
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(
@@ -161,7 +161,7 @@ Per creare una selezione data in **iOS designer**, trascinare una **selezione da
 
 #### <a name="minimum-and-maximum-date"></a>Data minima e massima
 
-[`MinimumDate`](xref:UIKit.UIDatePicker.MinimumDate)e [`MaximumDate`](xref:UIKit.UIDatePicker.MaximumDate) limitano l'intervallo di date disponibili nella selezione data. Il codice seguente, ad esempio, vincola una selezione data agli anni 60 che portano all'ora attuale:
+[`MinimumDate`](xref:UIKit.UIDatePicker.MinimumDate) e [`MaximumDate`](xref:UIKit.UIDatePicker.MaximumDate) limitano l'intervallo di date disponibili nella selezione data. Il codice seguente, ad esempio, vincola una selezione data agli anni 60 che portano all'ora attuale:
 
 ```csharp
 var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -174,7 +174,7 @@ datePickerView.MaximumDate = NSDate.Now;
 ```
 
 > [!TIP]
-> È possibile eseguire il cast esplicito di `DateTime` un oggetto `NSDate`a un oggetto:
+> È possibile eseguire il cast esplicito di un `DateTime` a un `NSDate`:
 >
 > ```csharp
 > DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
@@ -183,7 +183,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 #### <a name="minute-interval"></a>Intervallo minuti
 
-La [`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) proprietà consente di impostare l'intervallo di visualizzazione dei minuti da parte della selezione:
+La proprietà [`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) imposta l'intervallo di visualizzazione dei minuti da parte della selezione:
 
 ```csharp
 datePickerView.MinuteInterval = 10;
@@ -193,19 +193,19 @@ datePickerView.MinuteInterval = 10;
 
 I selezionatori Data supportano quattro [modalità](xref:UIKit.UIDatePickerMode), descritte di seguito:
 
-##### <a name="uidatepickermodetime"></a>UIDatePickerMode.Time
+##### <a name="uidatepickermodetime"></a>UIDatePickerMode. Time
 
-`UIDatePickerMode.Time`Visualizza l'ora con un selettore di ora e minuti e una designazione AM o PM facoltativa:
+`UIDatePickerMode.Time` Visualizza l'ora con un selettore di ora e minuti e una designazione AM o PM facoltativa:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Time;
 ```
 
-![UIDatePickerMode.Time](picker-images/image8.png "UIDatePickerMode.Time")
+![UIDatePickerMode. Time](picker-images/image8.png "UIDatePickerMode. Time")
 
-##### <a name="uidatepickermodedate"></a>UIDatePickerMode.Date
+##### <a name="uidatepickermodedate"></a>UIDatePickerMode. date
 
-`UIDatePickerMode.Date`Visualizza la data con selettore mese, giorno e anno:
+`UIDatePickerMode.Date` Visualizza la data con selettore mese, giorno e anno:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Date;
@@ -213,32 +213,32 @@ datePickerView.Mode = UIDatePickerMode.Date;
 
 ![UIDatePickerMode. date](picker-images/image7.png "UIDatePickerMode. date")
 
-L'ordine dei selettori dipende dalle impostazioni locali della selezione data, che per impostazione predefinita usa le impostazioni locali del sistema. L'immagine precedente Mostra il layout dei selettori nelle `en_US` impostazioni locali, ma il seguente modifica l'ordine in Day | Mese | Anno
+L'ordine dei selettori dipende dalle impostazioni locali della selezione data, che per impostazione predefinita usa le impostazioni locali del sistema. L'immagine precedente Mostra il layout dei selettori nelle impostazioni locali `en_US`, ma il seguente modifica l'ordine in Day | Mese | Anno
 
 ```csharp
 datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 ```
 
-![Giorno | Mese | ](picker-images/image9.png "Giorno dell'anno | Mese | Anno")
+![Giorno | Mese | Anno](picker-images/image9.png "Giorno | Mese | Anno")
 
-##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode.DateAndTime
+##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode. DateAndTime
 
-`UIDatePickerMode.DateAndTime`Visualizza una vista abbreviata della data, l'ora in ore e minuti e una designazione AM o PM facoltativa (a seconda che venga usato un clock di 12 o 24 ore):
+`UIDatePickerMode.DateAndTime` Visualizza una vista abbreviata della data, l'ora in ore e minuti e una designazione AM o PM facoltativa (a seconda che venga usato un clock di 12 o 24 ore):
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
 ```
 
-![UIDatePickerMode.DateAndTime](picker-images/image6.png "UIDatePickerMode.DateAndTime")
+![UIDatePickerMode. DateAndTime](picker-images/image6.png "UIDatePickerMode. DateAndTime")
 
-Come per [`UIDatePickerMode.Date`](#uidatepickermodedate), l'ordine dei selettori e l'utilizzo di un clock di 12 o 24 ore dipendono dalle impostazioni locali della selezione data.
+Come con [`UIDatePickerMode.Date`](#uidatepickermodedate), l'ordine dei selettori e l'utilizzo di un clock di 12 o 24 ore dipendono dalle impostazioni locali della selezione data.
 
 > [!TIP]
-> Utilizzare la `Date` proprietà per acquisire il valore di un selettore di `UIDatePickerMode.Time`data `UIDatePickerMode.Date`in modalità `UIDatePickerMode.DateAndTime`, o. Questo valore viene archiviato come `NSDate`.
+> Utilizzare la proprietà `Date` per acquisire il valore di un selettore di data in modalità `UIDatePickerMode.Time`, `UIDatePickerMode.Date` o `UIDatePickerMode.DateAndTime`. Questo valore viene archiviato come `NSDate`.
 
 ##### <a name="uidatepickermodecountdowntimer"></a>UIDatePickerMode.CountDownTimer
 
-`UIDatePickerMode.CountDownTimer`Visualizza i valori di ora e minuto:
+`UIDatePickerMode.CountDownTimer` Visualizza i valori di ora e minuto:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;
@@ -246,7 +246,7 @@ datePickerView.Mode = UIDatePickerMode.CountDownTimer;
 
 !["UIDatePickerMode.CountDownTimer"](picker-images/image5.png "UIDatePickerMode.CountDownTimer")
 
-La `CountDownDuration` proprietà acquisisce il valore di un selettore `UIDatePickerMode.CountDownTimer` di data in modalità. Ad esempio, per aggiungere il valore del conto alla rovescia alla data corrente:
+La proprietà `CountDownDuration` acquisisce il valore di una selezione data in modalità `UIDatePickerMode.CountDownTimer`. Ad esempio, per aggiungere il valore del conto alla rovescia alla data corrente:
 
 ```csharp
 var currentTime = NSDate.Now;
@@ -258,9 +258,9 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 #### <a name="nsdateformatter"></a>NSDateFormatter
 
-Per formattare un `NSDate`oggetto, usare [`NSDateFormatter`](xref:Foundation.NSDateFormatter)un oggetto.
+Per formattare una `NSDate`, utilizzare una [`NSDateFormatter`](xref:Foundation.NSDateFormatter).
 
-Per usare un `NSDateFormatter`oggetto, chiamare [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) il relativo metodo. Ad esempio:
+Per usare un `NSDateFormatter`, chiamare il relativo metodo [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) . Esempio:
 
 ```csharp
 var date = NSDate.Now;
@@ -273,7 +273,7 @@ var formattedDate = formatter.ToString(d);
 
 ##### <a name="dateformat"></a>DateFormat
 
-La [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat) proprietà (una stringa) di un `NSDateFormatter` oggetto consente una specifica di formato di data personalizzabile:
+La proprietà [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat) (una stringa) di un `NSDateFormatter` consente una specifica di formato di data personalizzabile:
 
 ```csharp
 NSDateFormatter dateFormat = new NSDateFormatter();
@@ -282,38 +282,38 @@ dateFormat.DateFormat = "yyyy-MM-dd";
 
 ##### <a name="timestyle"></a>TimeStyle
 
-La [`TimeStyle`](xref:Foundation.NSDateFormatter.TimeStyle) proprietà (un [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle) di un `NSDateFormatter` oggetto specifica la formattazione dell'ora basata sugli stili predeterminati:
+La proprietà [`TimeStyle`](xref:Foundation.NSDateFormatter.TimeStyle) ( [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle) di un `NSDateFormatter` specifica la formattazione dell'ora basata su stili predeterminati:
 
 ```csharp
 NSDateFormatter timeFormat = new NSDateFormatter();
 timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 ```
 
-I `NSDateFormatterStyle` vari valori visualizzano gli orari seguenti:
+Diversi valori `NSDateFormatterStyle` visualizzano le ore come indicato di seguito:
 
-- `NSDateFormatterStyle.Full`: 7:46:00 PM ora legale orientale
-- `NSDateFormatterStyle.Long`: 7:47:00 PM EDT
-- `NSDateFormatterStyle.Medium`: 7:47:00 PM
-- `NSDateFormatterSytle.Short`: 7:47 PM
+- `NSDateFormatterStyle.Full`:7:46:00 PM ora legale orientale
+- `NSDateFormatterStyle.Long`:7:47:00 PM EDT
+- `NSDateFormatterStyle.Medium`:7:47:00 PM
+- `NSDateFormatterSytle.Short`:7:47 PM
 
 ##### <a name="datestyle"></a>DateStyle
 
-La [`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle) proprietà `NSDateFormatterStyle`(a) di un `NSDateFormatter` oggetto specifica la formattazione della data in base agli stili predeterminati:
+La proprietà [`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle) (un `NSDateFormatterStyle`) di un `NSDateFormatter` specifica la formattazione della data in base agli stili predeterminati:
 
 ```csharp
 NSDateFormatter dateTimeformat = new NSDateFormatter();
 dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 ```
 
-I `NSDateFormatterStyle` vari valori visualizzano le date come segue:
+Vari valori `NSDateFormatterStyle` visualizzano le date come segue:
 
-- `NSDateFormatterStyle.Full`: Mercoledì, 2 agosto 2017 alle 7:48 PM
-- `NSDateFormatterStyle.Long`: 2 agosto 2017 alle 7:49 PM
-- `NSDateFormatterStyle.Medium`: 2 agosto 2017, 7:49 PM
-- `NSDateFormatterStyle.Short`: 8/2/17, 7:50 PM
+- `NSDateFormatterStyle.Full`: mercoledì 2 agosto 2017 alle 7:48 PM
+- `NSDateFormatterStyle.Long`:2 agosto 2017 alle 7:49 PM
+- `NSDateFormatterStyle.Medium`:2 agosto, 2017, 7:49 PM
+- `NSDateFormatterStyle.Short`:8/2/17, 7:50 PM
 
 > [!NOTE]
-> `DateFormat`e `DateStyle` forniscono modi diversi per / `TimeStyle` specificare la formattazione di data e ora. Le proprietà impostate più di recente determinano l'output del formattatore di data.
+> `DateFormat` e `DateStyle` / `TimeStyle` forniscono modi diversi per specificare la formattazione di data e ora. Le proprietà impostate più di recente determinano l'output del formattatore di data.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771272"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introduzione ai modelli di dati Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
-_I modelli di dati Xamarin.Forms consentono di definire la presentazione dei dati nei controlli supportati. Questo articolo offre un'introduzione ai modelli di dati e spiega perché sono necessari._
+_I modelli di dati Novell. Forms offrono la possibilità di definire la presentazione dei dati nei controlli supportati. Questo articolo fornisce un'introduzione ai modelli di dati, esaminando il motivo per cui sono necessari._
 
 Si consideri un [`ListView`](xref:Xamarin.Forms.ListView) in cui viene visualizzata una raccolta di oggetti `Person`. L'esempio di codice seguente illustra la definizione della classe `Person`:
 
@@ -90,7 +90,7 @@ public WithoutDataTemplatePageCS()
 
 L'elemento [`ListView`](xref:Xamarin.Forms.ListView) chiama `ToString` durante la visualizzazione degli oggetti nella raccolta. Poiché non esiste alcuna sostituzione di `Person.ToString`, `ToString` restituisce il nome del tipo di ogni oggetto, come illustrato negli screenshot seguenti:
 
-![](introduction-images/no-data-template.png "ListView senza un modello di dati")
+![](introduction-images/no-data-template.png "ListView without a Data Template")
 
 L'oggetto `Person` può eseguire l'override del metodo `ToString` per visualizzare dati significativi, come illustrato nell'esempio di codice seguente:
 
@@ -107,7 +107,7 @@ public class Person
 
 Il risultato è l'elemento [`ListView`](xref:Xamarin.Forms.ListView) che visualizza il valore della proprietà `Person.Name` per ogni oggetto nella raccolta, come illustrato negli screenshot seguenti:
 
-![](introduction-images/override-tostring.png "ListView con un modello di dati")
+![](introduction-images/override-tostring.png "ListView with a Data Template")
 
 La sostituzione di `Person.ToString` potrebbe restituire una stringa formattata costituita dalle proprietà `Name`, `Age` e `Location`. Questo approccio offre tuttavia solo un controllo limitato sull'aspetto di ogni elemento di dati. Per una maggiore flessibilità, è possibile creare un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che definisce l'aspetto dei dati.
 

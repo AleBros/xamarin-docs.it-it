@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70772716"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barre degli strumenti in Novell. Mac
@@ -26,7 +26,7 @@ Questo articolo illustra le nozioni di base sull'uso delle barre degli strumenti
 
 Prima di continuare, leggere l'articolo relativo ad [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) le sezioni relative a Interface Builder, [Outlet e azioni](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti e le tecniche principali che verranno usati in questa guida.
 
-Vedere anche la sezione [esporre C# classi/metodi a Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) . Vengono illustrati `Register` gli `Export` attributi e usati per C# connettere le classi alle classi Objective-C.
+Vedere anche la sezione [esporre C# classi/metodi a Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) . Vengono illustrati gli attributi `Register` e `Export` utilizzati per C# connettere le classi alle classi Objective-C.
 
 ## <a name="introduction-to-toolbars"></a>Introduzione alle barre degli strumenti
 
@@ -150,7 +150,7 @@ Utilizzare questa finestra di dialogo per impostare le proprietà per gli elemen
 
 Per aggiungere un elemento a una barra degli strumenti, selezionare la barra degli strumenti nella **gerarchia dell'interfaccia** e fare clic su uno degli elementi, facendo in modo che venga visualizzata la finestra di dialogo di personalizzazione. Trascinare quindi un nuovo elemento da **controllo libreria** all'area elementi della **barra degli strumenti consentiti** :
 
-Gli ![elementi consentiti della barra degli strumenti nella finestra di dialogo di personalizzazione] Gli (toolbar-images/add01.png "elementi consentiti della barra degli strumenti nella finestra di dialogo di personalizzazione")
+![Gli elementi consentiti della barra degli strumenti nella finestra di dialogo di personalizzazione](toolbar-images/add01.png "Gli elementi consentiti della barra degli strumenti nella finestra di dialogo di personalizzazione")
 
 Per assicurarsi che un nuovo elemento faccia parte della barra degli strumenti predefinita, trascinarlo nell'area **elementi della barra degli strumenti predefiniti** : 
 
@@ -198,7 +198,7 @@ Salvare il documento, tornare a Visual Studio per Mac per sincronizzarlo con Xco
 
 Utilizzando un **elemento della barra degli strumenti immagine**, qualsiasi immagine bitmap aggiunta alla cartella **risorse** (e in base a un'azione di compilazione della **risorsa bundle**) può essere visualizzata sulla barra degli strumenti come icona:
 
-1. In Visual Studio per Mac, nella **riquadro della soluzione**, fare clic con il pulsante destro del mouse sulla cartella **risorse** e scegliere **Aggiungi** > **Aggiungi file**.
+1. In Visual Studio per Mac, nella **riquadro della soluzione**, fare clic con il pulsante destro del mouse sulla cartella **risorse** e scegliere **Aggiungi**  > **Aggiungi file**.
 2. Nella finestra di dialogo **Aggiungi file** individuare le immagini desiderate, selezionarle e fare clic sul pulsante **Apri** : 
 
     [![Selezione di immagini da aggiungere](toolbar-images/edit11.png "Selezione di immagini da aggiungere")](toolbar-images/edit11-large.png#lightbox)
@@ -269,7 +269,7 @@ public void EraseDocument() {
 }
 ```
 
-Modificare quindi il file **WindowController.cs** e aggiungere il codice seguente alla fine della `WindowController` classe:
+Modificare quindi il file **WindowController.cs** e aggiungere il codice seguente alla fine della classe `WindowController`:
 
 ```csharp
 [Export ("trashDocument:")]
@@ -288,9 +288,9 @@ Si noti che è ora possibile usare l'elemento della barra degli strumenti del **
 
 ## <a name="disabling-toolbar-items"></a>Disabilitazione degli elementi della barra degli strumenti
 
-Per disabilitare un elemento su una barra degli strumenti, creare `NSToolbarItem` una classe personalizzata ed `Validate` eseguire l'override del metodo. Quindi, in Interface Builder assegnare il tipo personalizzato all'elemento che si desidera abilitare o disabilitare.
+Per disabilitare un elemento su una barra degli strumenti, creare una classe di `NSToolbarItem` personalizzata ed eseguire l'override del metodo `Validate`. Quindi, in Interface Builder assegnare il tipo personalizzato all'elemento che si desidera abilitare o disabilitare.
 
-Per creare una classe `NSToolbarItem` personalizzata, fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file.** Selezionare**classe vuota** **generale** > , immettere "ActivatableItem" come **nome**e fare clic sul pulsante **nuovo** : 
+Per creare una classe di `NSToolbarItem` personalizzata, fare clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi**  > **nuovo file.** Selezionare **generale**  > **classe vuota**, immettere "ActivatableItem" come **nome**e fare clic sul pulsante **nuovo** : 
 
 ![Aggiunta di una classe vuota in Visual Studio per Mac](toolbar-images/custom01.png "Aggiunta di una classe vuota in Visual Studio per Mac")
 
@@ -338,7 +338,7 @@ Fare doppio clic su **Main. Storyboard** per aprirlo in Xcode. Selezionare l'ele
 
 ![Impostazione di una classe personalizzata per un elemento della barra degli strumenti](toolbar-images/custom02.png "Impostazione di una classe personalizzata per un elemento della barra degli strumenti")
 
-Creare un Outlet denominato `trashItem` per l'elemento della barra degli strumenti del **Cestino** . Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode. Infine, aprire **MainWindow.cs** e aggiornare il `AwakeFromNib` metodo per la lettura come indicato di seguito:
+Creare un Outlet denominato `trashItem` per l'elemento della barra degli strumenti del **Cestino** . Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode. Infine, aprire **MainWindow.cs** e aggiornare il metodo `AwakeFromNib` per leggere come indicato di seguito:
 
 ```csharp
 public override void AwakeFromNib ()

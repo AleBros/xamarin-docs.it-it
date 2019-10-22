@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739171"
 ---
 # <a name="xamarinforms-local-databases"></a>Database locali Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-_Xamarin.Forms supporta applicazioni basate su database con il motore di database SQLite, che consente di caricare e salvare gli oggetti nel codice condiviso. Questo articolo descrive come le applicazioni Xamarin.Forms possono leggere e scrivere dati in un database SQLite locale usando SQLite.Net._
+_Novell. Forms supporta applicazioni basate su database che usano il motore di database SQLite, che consente di caricare e salvare oggetti nel codice condiviso. Questo articolo descrive come le applicazioni Novell. Forms possono leggere e scrivere dati in un database SQLite locale usando SQLite.Net._
 
 ## <a name="overview"></a>Panoramica
 
@@ -26,7 +26,7 @@ Le applicazioni Xamarin.Forms possono usare il pacchetto [SQLite.NET PCL NuGet](
 
 L'[applicazione di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) associata è una semplice applicazione per elenchi di attività. Gli screenshot seguenti illustrano come viene visualizzato l'esempio in ogni piattaforma:
 
-[![Schermate di esempio del database Novell. Forms](databases-images/todo-list-sml.png "Schermate delle prime pagine di todo") ](databases-images/todo-list.png#lightbox "Schermate delle prime pagine di todo") [ ![Screenshot di esempio di database Novell. Forms]screenshot delle(databases-images/todo-list-sml.png "prime pagine") ](databases-images/todo-list.png#lightbox "Schermate delle prime pagine di todo") dell'attività
+[![Esempi di database Novell. Forms screenshots](databases-images/todo-list-sml.png "Schermate delle prime pagine di todo")](databases-images/todo-list.png#lightbox "Schermate delle prime pagine di todo") di [ ![esempio di database Novell. Forms](databases-images/todo-list-sml.png "Schermate delle prime pagine di todo")](databases-images/todo-list.png#lightbox "Schermate delle prime pagine di todo")
 
 <a name="Using_SQLite_with_PCL" />
 
@@ -34,7 +34,7 @@ L'[applicazione di esempio](https://docs.microsoft.com/samples/xamarin/xamarin-f
 
 Per aggiungere il supporto di SQLite in una libreria .NET Standard di Xamarin.Forms, usare la funzione di ricerca di NuGet per trovare **sqlite-net-pcl** e installare il pacchetto più recente:
 
-![Aggiungere il pacchetto NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-pcl-nuget.png "Aggiungere il pacchetto NuGet SQLite.NET PCL")
+![Aggiungi pacchetto PCL SQLite.NET NuGet](databases-images/vs2017-sqlite-pcl-nuget.png "Aggiungi pacchetto PCL SQLite.NET NuGet")
 
 Sono disponibili vari pacchetti NuGet con nomi simili. Il pacchetto corretto ha questi attributi:
 

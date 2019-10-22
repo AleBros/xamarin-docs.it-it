@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: be737dfb92cf2ce90dc64dd527f908d52cf2c580
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770344"
 ---
 # <a name="xib-files-in-xamarinmac"></a>file con estensione XIB in Novell. Mac
@@ -31,7 +31,7 @@ Un file con estensione XIB viene usato da macOS per definire gli elementi dell'i
 
 In questo articolo verranno illustrate le nozioni di base sull'uso dei file con estensione XIB in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , che illustra i concetti chiave e le tecniche che verranno usati in questo articolo.
 
-Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando `Register` gli attributi e `Export` usati per collegare le C# classi a Oggetti Objective-C ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Introduzione a Xcode e Interface Builder
 
@@ -95,18 +95,18 @@ Il metodo preferito per la creazione dell'interfaccia utente di un'app Novell. M
 Per passare all'utilizzo di un'interfaccia utente basata su XIB, eseguire le operazioni seguenti:
 
 1. Aprire Visual Studio per Mac e avviare un nuovo progetto Novell. Mac.
-2. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...**
-3. Selezionare il**controller Windows** **Mac** > :
+2. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**  > **nuovo file...**
+3. Selezionare **Mac**  > **controller Windows**:
 
     ![Aggiunta di un nuovo controller di finestra](xib-images/setup00.png "Aggiunta di un nuovo controller di finestra")
-4. Immettere `MainWindow` come nome e fare clic sul pulsante **nuovo** :
+4. Immettere `MainWindow` per il nome e fare clic sul pulsante **nuovo** :
 
     ![Aggiunta di una nuova finestra principale](xib-images/setup01.png "Aggiunta di una nuova finestra principale")
-5. Fare di nuovo clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file...**
-6. Selezionare il**menu principale** **Mac** > :
+5. Fare di nuovo clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi**  > **nuovo file...**
+6. Selezionare **Mac**  > **menu principale**:
 
     ![Aggiunta di un nuovo menu principale](xib-images/setup02.png "Aggiunta di un nuovo menu principale")
-7. Lasciare invariato `MainMenu` il nome e fare clic sul pulsante **nuovo** .
+7. Lasciare il nome `MainMenu` e fare clic sul pulsante **nuovo** .
 8. Nella **riquadro della soluzione** selezionare il file **Main. Storyboard** , fare clic con il pulsante destro del mouse e scegliere **Rimuovi**:
 
     ![Selezione dello storyboard principale](xib-images/setup03.png "Selezione dello storyboard principale")
@@ -114,7 +114,7 @@ Per passare all'utilizzo di un'interfaccia utente basata su XIB, eseguire le ope
 
     ![Conferma dell'eliminazione](xib-images/setup04.png "Conferma dell'eliminazione")
 10. Nel **riquadro della soluzione**fare doppio clic sul file **info. plist** per aprirlo per la modifica.
-11. Selezionare `MainMenu` dal menu a discesa **interfaccia principale** :
+11. Selezionare `MainMenu` dall'elenco a discesa dell' **interfaccia principale** :
 
     [![Impostazione del menu principale](xib-images/setup05.png "Impostazione del menu principale")](xib-images/setup05-large.png#lightbox)
 12. Nella **riquadro della soluzione**fare doppio clic sul file **MainMenu. xib** per aprirlo per la modifica nella Interface Builder di Xcode.
@@ -124,12 +124,12 @@ Per passare all'utilizzo di un'interfaccia utente basata su XIB, eseguire le ope
 14. In **Identity Inspector**immettere `AppDelegate` per la **classe**:
 
     [![Selezione del delegato dell'app](xib-images/setup07.png "Selezione del delegato dell'app")](xib-images/setup07-large.png#lightbox)
-15. Selezionare **il proprietario del file** dalla **gerarchia dell'interfaccia**, passare al **controllo della connessione** e trascinare una riga `AppDelegate` dal delegato all' **oggetto** appena aggiunto al progetto:
+15. Selezionare **il proprietario del file** dalla **gerarchia dell'interfaccia**, passare al **controllo della connessione** e trascinare una riga dal delegato all' **oggetto** `AppDelegate` appena aggiunto al progetto:
 
     [![Connessione del delegato dell'app](xib-images/setup08.png "Connessione del delegato dell'app")](xib-images/setup08-large.png#lightbox)
 16. Salvare le modifiche e tornare a Visual Studio per Mac.
 
-Con tutte queste modifiche sul posto, modificare il **AppDelegate.cs** file e renderlo simile al seguente:
+Con tutte queste modifiche apportate, modificare il file **AppDelegate.cs** e renderlo simile al seguente:
 
 ```csharp
 using AppKit;
@@ -217,7 +217,7 @@ Di seguito è riportato un esempio:
     ![Selezione del controllo dimensioni](xib-images/xcode13.png "Selezione del controllo dimensioni")
 8. Nella **casella ridimensionamento** automatico fare clic sulla **parentesi quadra di colore rossa** a destra e sulla **freccia orizzontale in rosso** al centro:
 
-    ![Modifica delle proprietà di ridimensionamento] automatico (xib-images/xcode14.png "Modifica delle proprietà di ridimensionamento") automatico
+    ![Modifica delle proprietà di ridimensionamento automatico](xib-images/xcode14.png "Modifica delle proprietà di ridimensionamento automatico")
 9. In questo modo si garantisce che l'etichetta si estenderà per espandersi e compattarla quando la finestra viene ridimensionata nell'applicazione in esecuzione. Le **parentesi quadre rosse** e la parte superiore e sinistra della casella della **casella di ridimensionamento** automatico indicano che l'etichetta deve essere bloccata nelle posizioni X e Y specificate.
 10. Salvare le modifiche apportate all'interfaccia utente
 
@@ -239,10 +239,10 @@ Una volta terminato di definire l'aspetto dell'interfaccia utente in Interface B
 
 Per poter creare Outlet e azioni per esporre gli elementi dell'interfaccia utente C# al codice, l'app Novell. Mac dovrà usare un controller di finestra personalizzato.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Aprire lo storyboard dell'app nella Interface Builder di Xcode.
-2. Selezionare la `NSWindowController` nella area di progettazione.
+2. Selezionare il `NSWindowController` nel Area di progettazione.
 3. Passare alla visualizzazione **Identity Inspector** e immettere `WindowController` come nome della **classe**:
 
     [![Modifica del nome della classe](xib-images/windowcontroller01.png "Modifica del nome della classe")](xib-images/windowcontroller01-large.png#lightbox)
@@ -268,13 +268,13 @@ Per gli sviluppatori Novell. Mac, ciò significa che si trascinano i file stub d
 
 [![Esempio di un file con estensione h in Xcode](xib-images/xcode16.png "Esempio di un file con estensione h in Xcode")](xib-images/xcode16-large.png#lightbox)
 
-Questo file stub. h rispecchia il **MainWindow.designer.cs** che viene aggiunto automaticamente a un progetto Novell. Mac quando viene creato `NSWindow` un nuovo. Questo file verrà usato per sincronizzare le modifiche apportate da Interface Builder ed è il punto in cui verranno creati gli Outlet e le azioni in modo che C# gli elementi dell'interfaccia utente vengano esposti al codice.
+Questo file stub. h rispecchia il **MainWindow.designer.cs** che viene aggiunto automaticamente a un progetto Novell. Mac quando viene creata una nuova `NSWindow`. Questo file verrà usato per sincronizzare le modifiche apportate da Interface Builder ed è il punto in cui verranno creati gli Outlet e le azioni in modo che C# gli elementi dell'interfaccia utente vengano esposti al codice.
 
 #### <a name="adding-an-outlet"></a>Aggiunta di un Outlet
 
 Con una conoscenza di base degli Outlet e delle azioni, verrà ora esaminata la creazione di un outlet per esporre un elemento dell' C# interfaccia utente al codice.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. In Xcode nell'angolo superiore destro della schermata fare clic sul pulsante **Double Circle** (Doppio cerchio) per aprire **Assistant Editor** (Editor assistente):
 
@@ -288,7 +288,7 @@ Seguire questa procedura:
 
     [![Il file selezionato è corretto](xib-images/outlet03.png "Il file selezionato è corretto")](xib-images/outlet03-large.png#lightbox)
 6. **L'ultimo passaggio è molto importante.** Se non è stato selezionato il file corretto, non sarà possibile creare Outlet e azioni oppure verranno esposti alla classe errata in C#.
-7. Nell' **Editor dell'interfaccia**, tener premuto il tasto **CTRL** sulla tastiera e fare clic e trascinare l'etichetta creata in precedenza nell'editor di codice appena sotto il `@interface MainWindow : NSWindow { }` codice:
+7. Nell' **editor di interfacce**mantenere premuto il tasto **CTRL** sulla tastiera e fare clic su trascinare l'etichetta creata sopra nell'editor di codice sotto il codice `@interface MainWindow : NSWindow { }`:
 
     [![Trascinamento per creare una nuova uscita](xib-images/outlet04.png "Trascinamento per creare una nuova uscita")](xib-images/outlet04-large.png#lightbox)
 8. Viene visualizzata una finestra di dialogo. Lasciare la **connessione** impostata su Outlet e immettere `ClickedLabel` per il **nome**:
@@ -303,10 +303,10 @@ Seguire questa procedura:
 
 Verrà ora esaminata la creazione di un'azione per esporre un'interazione dell'utente con l' C# elemento dell'interfaccia utente al codice.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Assicurarsi di essere ancora nell'editor di **Assistente** e che il file **MainWindow. h** sia visibile nell' **editor di codice**.
-2. Nell' **editor di interfaccia**, tener premuto il tasto **CTRL** sulla tastiera e fare clic su trascinare il pulsante creato in precedenza nell'editor di codice sotto il `@property (assign) IBOutlet NSTextField *ClickedLabel;` codice:
+2. Nell' **editor di interfacce**mantenere premuto il tasto **CTRL** sulla tastiera e fare clic su trascinare il pulsante creato in precedenza nell'editor di codice sotto il codice `@property (assign) IBOutlet NSTextField *ClickedLabel;`:
 
     [![Trascinamento per creare un'azione](xib-images/action01.png "Trascinamento per creare un'azione")](xib-images/action01-large.png#lightbox)
 3. Modificare il tipo di **connessione** in azione:
@@ -328,7 +328,7 @@ Dopo aver creato l'interfaccia utente e i relativi elementi dell'interfaccia ute
 
 [![File MainWindow.cs](xib-images/code01.png "File MainWindow.cs")](xib-images/code01-large.png#lightbox)
 
-Aggiungere quindi il codice seguente alla `MainWindow` classe per usare l'Outlet di esempio creato in precedenza:
+Aggiungere quindi il codice seguente alla classe `MainWindow` per lavorare con l'Outlet di esempio creato in precedenza:
 
 ```csharp
 private int numberOfTimesClicked = 0;
@@ -343,12 +343,12 @@ public override void AwakeFromNib ()
 }
 ```
 
-Si noti che `NSLabel` l'accesso a C# viene eseguito dal nome diretto assegnato in Xcode quando è stato creato il relativo Outlet in Xcode, in questo caso viene chiamato `ClickedLabel`. È possibile accedere a qualsiasi metodo o proprietà dell'oggetto esposto nello stesso modo in cui si esegue C# una classe normale.
+Si noti che il `NSLabel` è accessibile C# dal nome diretto assegnato in Xcode quando è stato creato il relativo Outlet in Xcode, in questo caso, viene chiamato `ClickedLabel`. È possibile accedere a qualsiasi metodo o proprietà dell'oggetto esposto nello stesso modo in cui si esegue C# una classe normale.
 
 > [!IMPORTANT]
-> È necessario usare `AwakeFromNib`, anziché un altro metodo `Initialize`, ad esempio, perché `AwakeFromNib` viene chiamato _dopo che_ il sistema operativo ha caricato e creato un'istanza dell'interfaccia utente dal file. xib. Se si è tentato di accedere al controllo Label prima che il file con estensione XIB sia stato completamente caricato e ne venga creata un' `NullReferenceException` istanza, verrà generato un errore perché il controllo Label non verrà ancora creato.
+> È necessario usare `AwakeFromNib`, anziché un altro metodo, ad esempio `Initialize`, perché `AwakeFromNib` viene chiamato _dopo che_ il sistema operativo ha caricato e creato un'istanza dell'interfaccia utente dal file. xib. Se si è tentato di accedere al controllo Label prima che il file con estensione XIB sia stato completamente caricato e ne venga creata un'istanza, verrà generato un errore `NullReferenceException` perché il controllo Label non è ancora stato creato.
 
-Aggiungere quindi la classe parziale seguente alla `MainWindow` classe:
+Successivamente, aggiungere la classe parziale seguente alla classe `MainWindow`:
 
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {
@@ -360,7 +360,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 Questo codice si connette all'azione creata in Xcode e Interface Builder e verrà chiamata ogni volta che l'utente fa clic sul pulsante.
 
-Alcuni elementi dell'interfaccia utente hanno automaticamente le azioni predefinite, ad esempio gli elementi nella barra dei menu predefinita, ad esempio la voce di menu **Apri..** . (`openDocument:`). Nel **riquadro della soluzione**fare doppio clic sul file **AppDelegate.cs** per aprirlo per la modifica e aggiungere il codice seguente sotto il `DidFinishLaunching` metodo:
+Alcuni elementi dell'interfaccia utente hanno automaticamente le azioni predefinite, ad esempio gli elementi nella barra dei menu predefinita, ad esempio la voce di menu **Apri..** . (`openDocument:`). Nel **riquadro della soluzione**fare doppio clic sul file **AppDelegate.cs** per aprirlo per la modifica e aggiungere il codice seguente sotto il metodo `DidFinishLaunching`:
 
 ```csharp
 [Export ("openDocument:")]
@@ -381,7 +381,7 @@ void OpenDialog (NSObject sender)
 }
 ```
 
-La riga `[Export ("openDocument:")]` `NSMenu` chiave indica che il **AppDelegate** dispone di `void OpenDialog (NSObject sender)` `openDocument:` un metodo che risponde all'azione.
+La riga chiave è `[Export ("openDocument:")]`, indica `NSMenu` che la **AppDelegate** dispone di un metodo `void OpenDialog (NSObject sender)` che risponde all'azione `openDocument:`.
 
 Per ulteriori informazioni sull'utilizzo dei menu, consultare la documentazione relativa ai [menu](~/mac/user-interface/menu.md) .
 
@@ -423,8 +423,8 @@ A parte la finestra del documento principale, un'applicazione Novell. Mac potreb
 
 Per aggiungere una nuova finestra, procedere come segue:
 
-1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file.** ..
-2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac** > **Cocoa con controller**:
+1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**  > **nuovo file..** .
+2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac**  > **finestra Cocoa con controller**:
 
     ![Aggiunta di un nuovo controller di finestra](xib-images/new01.png "Aggiunta di un nuovo controller di finestra")
 3. Immettere `PreferencesWindow` in **Nome** e fare clic sul pulsante **Nuovo**.
@@ -436,7 +436,7 @@ Per aggiungere una nuova finestra, procedere come segue:
     [![Progettazione del layout di Windows](xib-images/new03.png "Progettazione del layout di Windows")](xib-images/new03-large.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
-Aggiungere il seguente codice al **AppDelegate.cs** per visualizzare la nuova finestra:
+Aggiungere il codice seguente a **AppDelegate.cs** per visualizzare la nuova finestra:
 
 ```csharp
 [Export("applicationPreferences:")]
@@ -447,7 +447,7 @@ void ShowPreferences (NSObject sender)
 }
 ```
 
-La `var preferences = new PreferencesWindowController ();` riga crea una nuova istanza del controller della finestra che carica la finestra dal file con estensione XIB e la gonfia. La `preferences.Window.MakeKeyAndOrderFront (this);` riga Visualizza la nuova finestra all'utente.
+La riga di `var preferences = new PreferencesWindowController ();` crea una nuova istanza del controller della finestra che carica la finestra dal file con estensione XIB e la gonfia. La riga `preferences.Window.MakeKeyAndOrderFront (this);` Visualizza la nuova finestra per l'utente.
 
 Se si esegue il codice e si selezionano le **Preferenze...** dal **menu applicazione**, verrà visualizzata la finestra:
 
@@ -463,8 +463,8 @@ Quando si aggiunge una nuova visualizzazione al progetto, è consigliabile usare
 
 Per aggiungere una nuova vista, procedere come segue:
 
-1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file.** ..
-2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac** > **Cocoa View con controller**:
+1. Nella **riquadro della soluzione**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi**  > **nuovo file..** .
+2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac**  > **visualizzazione Cocoa con controller**:
 
     ![Aggiunta di una nuova visualizzazione](xib-images/view01.png "Aggiunta di una nuova visualizzazione")
 3. Immettere `SubviewTable` in **Nome** e fare clic sul pulsante **Nuovo**.
@@ -509,7 +509,7 @@ public enum SubviewType
 }
 ```
 
-Modificare il file con estensione XIB della finestra che utilizzerà la visualizzazione e la visualizzerà. Aggiungere una **visualizzazione personalizzata** che fungerà da contenitore per la vista dopo che è stata caricata in memoria C# dal codice ed esponerla a un `ViewContainer`Outlet denominato:
+Modificare il file con estensione XIB della finestra che utilizzerà la visualizzazione e la visualizzerà. Aggiungere una **visualizzazione personalizzata** che fungerà da contenitore per la vista dopo che è stata caricata in memoria C# dal codice ed esporla a un Outlet chiamato `ViewContainer`:
 
 [![Creazione dell'Outlet necessario](xib-images/view03.png "Creazione dell'Outlet necessario")](xib-images/view03-large.png#lightbox)
 
@@ -557,7 +557,7 @@ Per visualizzare una nuova visualizzazione, usare il codice seguente:
 DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 ```
 
-In questo modo viene creata una nuova istanza del controller di visualizzazione per la nuova vista da visualizzare, viene impostato il tipo (come specificato dall'enum aggiunto al progetto) e viene `DisplaySubview` utilizzato il metodo aggiunto alla classe della finestra per visualizzare effettivamente la visualizzazione. Ad esempio:
+In questo modo viene creata una nuova istanza del controller di visualizzazione per la nuova vista da visualizzare, viene impostato il tipo (come specificato dall'enum aggiunto al progetto) e viene utilizzato il metodo `DisplaySubview` aggiunto alla classe della finestra per visualizzare effettivamente la visualizzazione. Esempio:
 
 [![Esecuzione dell'app di esempio](xib-images/view04.png "Esecuzione dell'app di esempio")](xib-images/view04-large.png#lightbox)
 

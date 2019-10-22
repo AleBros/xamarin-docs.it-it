@@ -8,33 +8,33 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
-ms.translationtype: MT
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "69888540"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Novell. Forms-dati CollectionView
 
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)definisce le proprietà seguenti che definiscono i dati da visualizzare e il relativo aspetto:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce le proprietà seguenti che definiscono i dati da visualizzare e il relativo aspetto:
 
-- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), di tipo `IEnumerable`, specifica la raccolta di elementi da visualizzare e il cui `null`valore predefinito è.
+- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), di tipo `IEnumerable`, specifica la raccolta di elementi da visualizzare e ha un valore predefinito di `null`.
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), specifica il modello da applicare a ogni elemento nella raccolta di elementi da visualizzare.
 
-Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
+Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di associazioni dati.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)definisce una `ItemsUpdatingScrollMode` proprietà che rappresenta il comportamento `CollectionView` di scorrimento di quando vengono aggiunti nuovi elementi. Per altre informazioni su questa proprietà, vedere [controllare la posizione di scorrimento quando vengono aggiunti nuovi elementi](scrolling.md#control-scroll-position-when-new-items-are-added).
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce una proprietà `ItemsUpdatingScrollMode` che rappresenta il comportamento di scorrimento del `CollectionView` quando vengono aggiunti nuovi elementi. Per altre informazioni su questa proprietà, vedere [controllare la posizione di scorrimento quando vengono aggiunti nuovi elementi](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)consente inoltre di caricare i dati in modo incrementale quando l'utente scorre. Per altre informazioni, vedere [caricare dati in modo incrementale](#load-data-incrementally).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) inoltre possibile caricare i dati in modo incrementale mentre l'utente scorre. Per altre informazioni, vedere [caricare dati in modo incrementale](#load-data-incrementally).
 
 ## <a name="populate-a-collectionview-with-data"></a>Popola un oggetto CollectionView con i dati
 
-Un [`CollectionView`](xref:Xamarin.Forms.CollectionView) oggetto viene popolato con i dati [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) impostando la relativa proprietà su `IEnumerable`qualsiasi raccolta che implementa. È possibile aggiungere elementi in XAML inizializzando la `ItemsSource` proprietà da una matrice di stringhe:
+Una [`CollectionView`](xref:Xamarin.Forms.CollectionView) viene popolata con i dati impostando la relativa proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) su qualsiasi raccolta che implementi `IEnumerable`. È possibile aggiungere elementi in XAML inizializzando la proprietà `ItemsSource` da una matrice di stringhe:
 
 ```xaml
 <CollectionView>
@@ -72,17 +72,17 @@ collectionView.ItemsSource = new string[]
 ```
 
 > [!IMPORTANT]
-> Se è necessario aggiornare quando gli elementi vengono aggiunti, rimossi o modificati nell'insieme sottostante, la raccolta sottostante deve essere una `IEnumerable` raccolta che invia notifiche di `ObservableCollection`modifica della proprietà, ad esempio. [`CollectionView`](xref:Xamarin.Forms.CollectionView)
+> Se il [`CollectionView`](xref:Xamarin.Forms.CollectionView) è necessario per l'aggiornamento quando gli elementi vengono aggiunti, rimossi o modificati nella raccolta sottostante, la raccolta sottostante deve essere una raccolta di `IEnumerable` che invia le notifiche di modifica delle proprietà, ad esempio `ObservableCollection`.
 
-Per impostazione predefinita [`CollectionView`](xref:Xamarin.Forms.CollectionView) , Visualizza gli elementi in un elenco verticale, come illustrato nelle schermate seguenti:
+Per impostazione predefinita, [`CollectionView`](xref:Xamarin.Forms.CollectionView) Visualizza gli elementi in un elenco verticale, come illustrato nelle schermate seguenti:
 
 [![Screenshot di CollectionView contenente gli elementi di testo in iOS e Android](populate-data-images/text.png "Elementi di testo in un oggetto CollectionView")](populate-data-images/text-large.png#lightbox "Elementi di testo in un oggetto CollectionView")
 
-Per informazioni su come modificare il [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, vedere [specificare un layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento in `CollectionView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
+Per informazioni su come modificare il layout di [`CollectionView`](xref:Xamarin.Forms.CollectionView) , vedere [specificare un layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CollectionView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Associazione dati
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)può essere popolato con i dati usando data binding per associare [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) la relativa proprietà `IEnumerable` a una raccolta. In XAML, questa operazione viene eseguita con `Binding` l'estensione di markup:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) possono essere popolati con i dati utilizzando data binding per associare la relativa proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) a una raccolta `IEnumerable`. In XAML, questa operazione viene eseguita con l'estensione di markup `Binding`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}" />
@@ -95,7 +95,7 @@ CollectionView collectionView = new CollectionView();
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-In questo esempio, i [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) dati della proprietà vengono associati `Monkeys` alla proprietà dell'elemento ViewModel connesso.
+In questo esempio, i dati della proprietà [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) vengono associati alla proprietà `Monkeys` dell'elemento ViewModel connesso.
 
 > [!NOTE]
 > Le associazioni compilate possono essere abilitate per migliorare le prestazioni di data binding nelle applicazioni Novell. Forms. Per altre informazioni, vedere [Binding compilati](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
@@ -104,7 +104,7 @@ Per altre informazioni sul data binding, vedere [Data binding di Xamarin.Forms](
 
 ## <a name="define-item-appearance"></a>Definisci aspetto elemento
 
-L'aspetto di ogni elemento in [`CollectionView`](xref:Xamarin.Forms.CollectionView) può essere definito impostando la [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) proprietà su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+È possibile definire l'aspetto di ogni elemento nell' [`CollectionView`](xref:Xamarin.Forms.CollectionView) impostando la proprietà [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -172,7 +172,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 });
 ```
 
-Gli elementi specificati in [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definiscono l'aspetto di ogni elemento nell'elenco. Nell'esempio, il layout all'interno `DataTemplate` di è gestito da [`Grid`](xref:Xamarin.Forms.Grid)un oggetto. Contiene `Grid` un [`Image`](xref:Xamarin.Forms.Image) oggetto e due [`Label`](xref:Xamarin.Forms.Label) oggetti `Monkey` , che tutti sono associati alle proprietà della classe:
+Gli elementi specificati nel [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definiscono l'aspetto di ogni elemento nell'elenco. Nell'esempio, il layout all'interno del `DataTemplate` è gestito da una [`Grid`](xref:Xamarin.Forms.Grid). Il `Grid` contiene un oggetto [`Image`](xref:Xamarin.Forms.Image) e due oggetti [`Label`](xref:Xamarin.Forms.Label) , che tutti vengono associati alle proprietà della classe `Monkey`:
 
 ```csharp
 public class Monkey
@@ -192,7 +192,7 @@ Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Form
 
 ## <a name="choose-item-appearance-at-runtime"></a>Scegli aspetto elemento in fase di esecuzione
 
-È [`CollectionView`](xref:Xamarin.Forms.CollectionView) possibile scegliere l'aspetto di ogni elemento in in fase di esecuzione, in base al valore dell'elemento, impostando la [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) proprietà [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) su un oggetto:
+È possibile scegliere l'aspetto di ogni elemento nell' [`CollectionView`](xref:Xamarin.Forms.CollectionView) in fase di esecuzione, in base al valore dell'elemento, impostando la proprietà [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) su un oggetto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) :
 
 ```xaml
 <ContentPage ...
@@ -226,7 +226,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-La [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) proprietà è impostata su un `MonkeyDataTemplateSelector` oggetto. Nell'esempio seguente viene illustrata la `MonkeyDataTemplateSelector` classe:
+La proprietà [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) è impostata su un oggetto `MonkeyDataTemplateSelector`. Nell'esempio seguente viene illustrata la classe `MonkeyDataTemplateSelector`:
 
 ```csharp
 public class MonkeyDataTemplateSelector : DataTemplateSelector
@@ -241,33 +241,33 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-La `MonkeyDataTemplateSelector` classe definisce `AmericanMonkey` le `OtherMonkey` proprietà [e`DataTemplate`](xref:Xamarin.Forms.DataTemplate) impostate su modelli di dati diversi. L' `OnSelectTemplate` override restituisce il `AmericanMonkey` modello, che Visualizza il nome e la posizione della scimmia in verde acqua, quando il nome della scimmia contiene "America". Quando il nome della scimmia non contiene "America", `OnSelectTemplate` l'override restituisce `OtherMonkey` il modello, che Visualizza il nome e la posizione della scimmia in argento:
+La classe `MonkeyDataTemplateSelector` definisce `AmericanMonkey` e `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) proprietà impostate su modelli di dati diversi. L'override del `OnSelectTemplate` restituisce il modello di `AmericanMonkey`, che Visualizza il nome e la posizione della scimmia in verde acqua, quando il nome della scimmia contiene "America". Quando il nome della scimmia non contiene "America", l'override del `OnSelectTemplate` restituisce il modello di `OtherMonkey`, che Visualizza il nome e la posizione della scimmia in argento:
 
 [![Screenshot della selezione del modello di elemento di runtime di CollectionView, in iOS e Android](populate-data-images/datatemplateselector.png "Selezione del modello di elemento di runtime in un CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Selezione del modello di elemento di runtime in un CollectionView")
 
 Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a Novell. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 > [!IMPORTANT]
-> Quando si [`CollectionView`](xref:Xamarin.Forms.CollectionView)USA, non impostare mai l'elemento radice [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) degli oggetti su `ViewCell`un oggetto. Questo comporterà la generazione di un'eccezione `CollectionView` perché non ha un concetto di celle.
+> Quando si usa [`CollectionView`](xref:Xamarin.Forms.CollectionView), non impostare mai l'elemento radice degli oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) su un `ViewCell`. Questa operazione comporterà la generazione di un'eccezione in quanto `CollectionView` non ha alcun concetto di celle.
 
 ## <a name="load-data-incrementally"></a>Caricare i dati in modo incrementale
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)supporta il caricamento incrementale dei dati quando gli utenti scorrono gli elementi. Questo consente scenari come il caricamento asincrono di una pagina di dati da un servizio Web, quando l'utente scorre. Inoltre, il punto in cui vengono caricati più dati è configurabile, in modo che gli utenti non visualizzino spazio vuoto o siano interrotti dallo scorrimento.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) supporta il caricamento incrementale dei dati quando gli utenti scorrono gli elementi. Questo consente scenari come il caricamento asincrono di una pagina di dati da un servizio Web, quando l'utente scorre. Inoltre, il punto in cui vengono caricati più dati è configurabile, in modo che gli utenti non visualizzino spazio vuoto o siano interrotti dallo scorrimento.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)definisce le proprietà seguenti per controllare il caricamento incrementale dei dati:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce le proprietà seguenti per controllare il caricamento incrementale dei dati:
 
-- `RemainingItemsThreshold`, di tipo `int`, la soglia di elementi non ancora visibili nell'elenco in cui verrà generato `RemainingItemsThresholdReached` l'evento.
-- `RemainingItemsThresholdReachedCommand`, di tipo `ICommand`, che viene eseguito `RemainingItemsThreshold` quando viene raggiunto.
+- `RemainingItemsThreshold`, di tipo `int`, la soglia di elementi non ancora visibili nell'elenco in cui verrà generato l'evento di `RemainingItemsThresholdReached`.
+- `RemainingItemsThresholdReachedCommand`, di tipo `ICommand`, che viene eseguito quando viene raggiunto il `RemainingItemsThreshold`.
 - `RemainingItemsThresholdReachedCommandParameter`, di tipo `object`, ovvero il parametro passato a `RemainingItemsThresholdReachedCommand`.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)definisce inoltre un `RemainingItemsThresholdReached` evento che viene generato quando viene `CollectionView` eseguito lo scorrimento a un numero `RemainingItemsThreshold` molto lungo di elementi che non sono stati visualizzati. Questo evento può essere gestito per caricare altri elementi. Inoltre, quando viene generato `RemainingItemsThresholdReached` l'evento, viene eseguito `RemainingItemsThresholdReachedCommand` l'oggetto, consentendo il caricamento incrementale dei dati in un elemento ViewModel.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) definisce anche un evento di `RemainingItemsThresholdReached` che viene generato quando viene eseguito lo scorrimento della `CollectionView` a un numero molto lungo che `RemainingItemsThreshold` elementi non sono stati visualizzati. Questo evento può essere gestito per caricare altri elementi. Inoltre, quando viene generato l'evento `RemainingItemsThresholdReached`, viene eseguito il `RemainingItemsThresholdReachedCommand`, consentendo il caricamento incrementale dei dati in un elemento ViewModel.
 
-Il valore predefinito della `RemainingItemsThreshold` proprietà è-1, che indica che l' `RemainingItemsThresholdReached` evento non verrà mai attivato. Quando il valore della proprietà è 0, `RemainingItemsThresholdReached` l'evento viene generato quando [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) viene visualizzato l'elemento finale in. Per i valori maggiori di 0, `RemainingItemsThresholdReached` l'evento verrà generato quando contiene `ItemsSource` il numero di elementi non ancora sottoposto a scorrimento.
+Il valore predefinito della proprietà `RemainingItemsThreshold` è-1, che indica che l'evento `RemainingItemsThresholdReached` non verrà mai generato. Quando il valore della proprietà è 0, l'evento `RemainingItemsThresholdReached` viene generato quando viene visualizzato l'elemento finale nel [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) . Per i valori maggiori di 0, l'evento `RemainingItemsThresholdReached` viene generato quando il `ItemsSource` contiene il numero di elementi non ancora a scorrimento.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)convalida la `RemainingItemsThreshold` proprietà in modo che il relativo valore sia sempre maggiore o uguale a-1.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) convalida la proprietà `RemainingItemsThreshold` in modo che il relativo valore sia sempre maggiore o uguale a-1.
 
-Nell'esempio di codice XAML seguente [`CollectionView`](xref:Xamarin.Forms.CollectionView) viene illustrato un che carica i dati in modo incrementale:
+Nell'esempio di codice XAML seguente viene illustrato un [`CollectionView`](xref:Xamarin.Forms.CollectionView) che carica i dati in modo incrementale:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -288,7 +288,7 @@ collectionView.RemainingItemsThresholdReached += OnCollectionViewRemainingItemsT
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
 ```
 
-In questo esempio di codice, `RemainingItemsThresholdReached` l'evento viene generato quando sono presenti 5 elementi non ancora sottoposte a scorrimento e in risposta `OnCollectionViewRemainingItemsThresholdReached` viene eseguito il gestore eventi:
+In questo esempio di codice, l'evento `RemainingItemsThresholdReached` viene generato quando sono presenti 5 elementi non ancora sottoposte a scorrimento e in risposta viene eseguito il gestore dell'evento `OnCollectionViewRemainingItemsThresholdReached`:
 
 ```csharp
 void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
@@ -298,7 +298,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> I dati possono anche essere caricati in modo incrementale `RemainingItemsThresholdReachedCommand` associando `ICommand` a un'implementazione nell'elemento ViewModel.
+> I dati possono anche essere caricati in modo incrementale associando il `RemainingItemsThresholdReachedCommand` a un'implementazione di `ICommand` nell'elemento ViewModel.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

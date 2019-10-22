@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2019
 ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289700"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulatore iOS remoto per Windows
@@ -19,7 +19,7 @@ Il simulatore iOS remoto per Windows consente di testare le app in un simulatore
 
 [![simulatore iOS in esecuzione in Windows](images/hero-sml.png "simulatore iOS in esecuzione in Windows")](images/hero.png#lightbox)
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Per iniziare
 
 Il simulatore iOS remoto per Windows viene installato automaticamente come parte di Novell in Visual Studio 2019 e Visual Studio 2017. Per usarlo, seguire questa procedura:
 
@@ -34,7 +34,7 @@ La barra degli strumenti nella parte superiore della finestra del simulatore con
 
 - **Home** : simula il pulsante Home in un dispositivo iOS.
 - **Lock** : blocca il simulatore (scorrere rapidamente).
-- **Screenshot** : Salva una schermata del simulatore (archiviata nel **simulatore\\Pictures\Xamarin\iOS**).
+- **Screenshot** : Salva una schermata del simulatore (archiviata in **Pictures\Xamarin\iOS Simulator \\** ).
 - [**Impostazioni**](#settings) : Visualizza la tastiera, la posizione e altre impostazioni.
 - [**Altre opzioni**](#other-options) : Visualizza varie opzioni del simulatore, ad esempio rotazione, movimenti di agitazione e ID tocco.
 
@@ -52,7 +52,7 @@ Queste impostazioni consentono di abilitare la tastiera hardware, scegliere una 
 
 Il pulsante con i puntini di sospensione della barra degli strumenti rivela altre opzioni, ad esempio rotazione, movimenti di agitazione e riavvio. Queste stesse opzioni possono essere visualizzate come un elenco facendo clic con il pulsante destro del mouse in un punto qualsiasi della finestra del simulatore:
 
-[![Impostazioni aggiuntive del simulatore iOS](images/more-sml.png "Impostazioni aggiuntive del simulatore iOS")](images/more.png#lightbox)
+[![impostazioni aggiuntive del simulatore iOS](images/more-sml.png "impostazioni aggiuntive del simulatore iOS")](images/more.png#lightbox)
 
 ## <a name="touchscreen-support"></a>Supporto per touchscreen
 

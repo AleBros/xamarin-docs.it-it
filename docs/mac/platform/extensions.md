@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770033"
 ---
 # <a name="xamarinmac-extension-support"></a>Supporto delle estensioni Xamarin.Mac
@@ -38,13 +38,13 @@ Di seguito sono riportate le limitazioni e i problemi che possono verificarsi du
 
 I suggerimenti seguenti possono essere utili quando si utilizzano le estensioni in Novell. Mac:
 
-- Poiché Novell. Mac attualmente non supporta le estensioni di debug, l'esperienza di debug dipende principalmente dall'esecuzione `printf` e dalle istruzioni like. Tuttavia, le estensioni vengono eseguite in un processo sandbox `Console.WriteLine` , pertanto non funzionerà come in altre applicazioni Novell. Mac. Se si richiama [ direttamente,imessaggididebugvengonorestituitinelregistrodisistema.`NSLog` ](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554)
-- Eventuali eccezioni non rilevate arresteranno in modo anomalo il processo di estensione, fornendo solo una piccola quantità di informazioni utili nel **Registro di sistema**. Il wrapping di codice fastidioso `try/catch` in un blocco (eccezione `NSLog`) che precede il rigenerazione può risultare utile.
-- È possibile accedere al **Registro di sistema** dall'app **console** in**utilità** **applicazioni** > :
+- Poiché Novell. Mac attualmente non supporta le estensioni di debug, l'esperienza di debug dipende principalmente dall'esecuzione e `printf` istruzioni like. Tuttavia, le estensioni vengono eseguite in un processo sandbox, quindi `Console.WriteLine` non funzionerà come in altre applicazioni Novell. Mac. Richiamando [`NSLog` direttamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) i messaggi di debug vengono restituiti nel registro di sistema.
+- Eventuali eccezioni non rilevate arresteranno in modo anomalo il processo di estensione, fornendo solo una piccola quantità di informazioni utili nel **Registro di sistema**. Il wrapping di codice problematico in un blocco `try/catch` (eccezione) che `NSLog` prima della rigenerazione può essere utile.
+- È possibile accedere al **Registro di sistema** dall'app **Console** in **applicazioni**  > **utilità**:
 
-    [![](extensions-images/extension02.png "Registro di sistema")](extensions-images/extension02.png#lightbox)
+    [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
 - Come indicato in precedenza, l'esecuzione dell'applicazione host di estensione la registrerà nel sistema. Eliminazione del bundle dell'applicazione con l'annullamento della registrazione. 
-- Se vengono registrate le versioni "randagi" delle estensioni di un'app, usare il comando seguente per individuarle (in modo che possano essere eliminate):`plugin kit -mv`
+- Se vengono registrate le versioni "randagi" delle estensioni di un'app, usare il comando seguente per individuarle (in modo che possano essere eliminate): `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App" />
 

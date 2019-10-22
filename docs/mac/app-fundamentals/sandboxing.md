@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770296"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing di un'app Novell. Mac
@@ -26,7 +26,7 @@ Quando si lavora C# con e .NET in un'applicazione Novell. Mac, si ha la stessa c
 
 In questo articolo verranno illustrate le nozioni di base per l'uso della sandbox in un'applicazione Novell. Mac e di tutti gli elementi che vengono inseriti in sandbox: directory del contenitore, diritti, autorizzazioni definite dall'utente, separazione dei privilegi e imposizione del kernel. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando `Register` gli attributi e `Export` usati per collegare le C# classi a Oggetti Objective-C ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando gli attributi `Register` e `Export` usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 ## <a name="about-the-app-sandbox"></a>Informazioni sulla sandbox dell'app
 
@@ -68,10 +68,10 @@ Si verificherà che l'applicazione sia effettivamente sandbox e si apprenderà c
 Per creare il progetto di esempio, eseguire le operazioni seguenti:
 
 1. Avviare Visual Studio per Mac e fare clic sulla **nuova soluzione.** account".
-2. Nella finestra di dialogo **nuovo progetto** selezionare app **Mac** > **app** > **Cocoa**:
+2. Nella finestra di dialogo **nuovo progetto** selezionare **Mac**  > **app**  > **Cocoa app**:
 
     [![Creazione di una nuova app Cocoa](sandboxing-images/sample01.png "Creazione di una nuova app Cocoa")](sandboxing-images/sample01-large.png#lightbox)
-3. Fare clic sul pulsante **Avanti** , `MacSandbox` immettere come nome del progetto e fare clic sul pulsante **Crea** :
+3. Fare clic sul pulsante **Avanti** , immettere `MacSandbox` per il nome del progetto e fare clic sul pulsante **Crea** :
 
     [![Immissione del nome dell'app](sandboxing-images/sample02.png "Immissione del nome dell'app")](sandboxing-images/sample02-large.png#lightbox)
 4. Nella **riquadro della soluzione**fare doppio clic sul file **Main. Storyboard** per aprirlo per la modifica in Xcode:
@@ -84,8 +84,8 @@ Per creare il progetto di esempio, eseguire le operazioni seguenti:
 
     [![Creazione di un nuovo outlet](sandboxing-images/sample05.png "Creazione di un nuovo outlet")](sandboxing-images/sample05-large.png#lightbox)
 7. Tornare a Visual Studio per Mac e fare doppio clic sul file **ViewController.cs** nel **riquadro della soluzione** per aprirlo per la modifica.
-8. Aggiungere la seguente istruzione using:`using WebKit;`
-9. Fare in `ViewDidLoad` modo che il metodo sia simile al seguente:
+8. Aggiungere la seguente istruzione using: `using WebKit;`
+9. Rendere il `ViewDidLoad` metodo simile al seguente:
 
     ```csharp
     public override void AwakeFromNib ()
@@ -114,7 +114,7 @@ Consente di eseguire le operazioni seguenti:
     [![Accesso al portale per sviluppatori Apple](sandboxing-images/sign01.png "Accesso al portale per sviluppatori Apple")](sandboxing-images/sign01-large.png#lightbox)
 2. Selezionare **certificati, identificatori & profili**:
 
-    [![Selezione di certificati, identificatori e profili](sandboxing-images/sign02.png "Selezione di certificati, identificatori e profili")](sandboxing-images/sign02-large.png#lightbox)
+    [![Selezione di certificati, identificatori & profili](sandboxing-images/sign02.png "Selezione di certificati, identificatori & profili")](sandboxing-images/sign02-large.png#lightbox)
 3. In **app Mac**selezionare **identificatori**:
 
     [![Selezione degli identificatori](sandboxing-images/sign03.png "Selezione degli identificatori")](sandboxing-images/sign03-large.png#lightbox)
@@ -139,7 +139,7 @@ Consente di eseguire le operazioni seguenti:
 10. Assegnare un nome al profilo:
 
     [![Assegnazione di un nome al profilo](sandboxing-images/sign10.png "Assegnazione di un nome al profilo")](sandboxing-images/sign10-large.png#lightbox)
-11. Fai clic sul pulsante **Fine**.
+11. Fare clic sul pulsante **fine** .
 
 > [!IMPORTANT]
 > In alcuni casi potrebbe essere necessario scaricare direttamente il nuovo profilo di provisioning dal portale per sviluppatori di Apple e fare doppio clic su di esso per installarlo. Potrebbe anche essere necessario arrestare e riavviare Visual Studio per Mac prima che possa accedere al nuovo profilo.
@@ -153,15 +153,15 @@ Successivamente, è necessario caricare il nuovo ID app e il profilo nel compute
 
     ![Clic sul pulsante Visualizza dettagli](sandboxing-images/sign12.png "Clic sul pulsante Visualizza dettagli")
 3. Fare clic sul pulsante di **aggiornamento** nell'angolo in basso a sinistra.
-4. Fai clic sul pulsante **Fine**.
+4. Fare clic sul pulsante **fine** .
 
 Successivamente, è necessario selezionare il nuovo ID app e il profilo di provisioning nel progetto Novell. Mac. Eseguire le operazioni seguenti:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **info. plist** per aprirlo per la modifica.
-2. Verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza ( `com.appracatappra.MacSandbox`ad esempio:):
+2. Verificare che l' **identificatore del bundle** corrisponda all'ID app creato in precedenza (ad esempio: `com.appracatappra.MacSandbox`):
 
     [![Modifica dell'identificatore del bundle](sandboxing-images/sign13.png "Modifica dell'identificatore del bundle")](sandboxing-images/sign13-large.png#lightbox)
-3. Fare quindi doppio clic sul file **titles. plist** e assicurarsi che l' **Archivio chiave-valore di iCloud** e i **contenitori iCloud** corrispondano tutti all'ID app creato in precedenza (ad `com.appracatappra.MacSandbox`esempio:):
+3. Fare quindi doppio clic sul file **titles. plist** e assicurarsi che l' **Archivio chiave-valore di iCloud** e i **contenitori iCloud** corrispondano tutti all'ID app creato in precedenza (ad esempio: `com.appracatappra.MacSandbox`):
 
     [![Modifica del file con estensione plist dei diritti](sandboxing-images/sign17.png "Modifica del file con estensione plist dei diritti")](sandboxing-images/sign17-large.png#lightbox)
 4. Salvare le modifiche.
@@ -171,7 +171,7 @@ Successivamente, è necessario selezionare il nuovo ID app e il profilo di provi
 6. Selezionare **firma Mac**, quindi selezionare firma **il bundle dell'applicazione** e **firmare il pacchetto del programma di installazione**. In **profilo di provisioning**selezionare quello creato in precedenza:
 
     ![Impostazione del profilo di provisioning](sandboxing-images/sign15.png "Impostazione del profilo di provisioning")
-7. Fai clic sul pulsante **Fine**.
+7. Fare clic sul pulsante **fine** .
 
 > [!IMPORTANT]
 > Potrebbe essere necessario chiudere e riavviare Visual Studio per Mac per fare in modo che riconosca il nuovo ID app e il profilo di provisioning installato da Xcode.
@@ -192,7 +192,7 @@ Nel caso di un problema, correggere il problema nel portale Apple Developer, agg
 
 ### <a name="enable-the-app-sandbox"></a>Abilitare sandbox app
 
-Per abilitare la sandbox dell'app, selezionare una casella di controllo nelle opzioni dei progetti. Seguire questa procedura:
+Per abilitare la sandbox dell'app, selezionare una casella di controllo nelle opzioni dei progetti. Procedere come descritto di seguito:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **titles. plist** per aprirlo per la modifica.
 2. Selezionare **Abilita diritti** e **Abilita sandboxing app**:
@@ -208,18 +208,18 @@ A questo punto, l'app sandbox è stata abilitata, ma non è stato fornito l'acce
 
 A parte il comportamento di blocco delle risorse, esistono tre modi principali per stabilire se un'applicazione Novell. Mac è stata creata in modalità sandbox:
 
-1. In Finder verificare il contenuto della `~/Library/Containers/` cartella: se l'app è in modalità sandbox, sarà presente una cartella denominata come l'identificatore del bundle dell'app, ad esempio: `com.appracatappra.MacSandbox`
+1. In Finder verificare il contenuto della cartella `~/Library/Containers/`: se l'app è in modalità sandbox, sarà presente una cartella denominata come l'identificatore del bundle dell'app, ad esempio: `com.appracatappra.MacSandbox`:
 
     [![Apertura del bundle dell'app](sandboxing-images/sample09.png "Apertura del bundle dell'app")](sandboxing-images/sample09-large.png#lightbox)
 2. Il sistema Visualizza l'app in modalità sandbox in Monitoraggio attività:
     - Avviare Monitoraggio attività (in `/Applications/Utilities`).
-    - Scegliere **Visualizza** > **colonne** e verificare che la voce di menu **sandbox** sia selezionata.
-    - Assicurarsi che la colonna sandbox legga `Yes` per l'applicazione:
+    - Scegliere **Visualizza** **colonne**  >  e verificare che la voce di menu **sandbox** sia selezionata.
+    - Verificare che la colonna sandbox legga `Yes` per l'applicazione:
 
     [![Controllo dell'app in Monitoraggio attività](sandboxing-images/sample10.png "Controllo dell'app in Monitoraggio attività")](sandboxing-images/sample10-large.png#lightbox)
 3. Verificare che il file binario dell'app sia in modalità sandbox:
     - Avviare l'app Terminal.
-    - Passare alla directory delle `bin` applicazioni.
+    - Passare alla directory `bin` applicazioni.
     - Eseguire questo comando: `codesign -dvvv --entitlements :- executable_path` (dove `executable_path` è il percorso dell'applicazione):
 
     [![Verifica dell'app dalla riga di comando](sandboxing-images/sample11.png "Verifica dell'app dalla riga di comando")](sandboxing-images/sample11-large.png#lightbox)
@@ -230,7 +230,7 @@ Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, 
 
 [![Impostazione delle opzioni obbligatorie](sandboxing-images/debug01.png "Impostazione delle opzioni obbligatorie")](sandboxing-images/debug01-large.png#lightbox)
 
-L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella necessaria per il debugger. questa operazione consente di eseguire il debug in modo normale. Poiché non è possibile eseguire il debug senza di esso, `CompileEntitlements` è stata `msbuild` aggiornata la destinazione per per aggiungere automaticamente tale autorizzazione ai diritti per qualsiasi app creata in modalità sandbox solo per le compilazioni di debug. Le build di rilascio devono usare i diritti specificati nel file dei diritti, senza modifiche.
+L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella necessaria per il debugger. questa operazione consente di eseguire il debug in modo normale. Poiché non è possibile eseguire il debug senza di esso, è stata aggiornata la destinazione `CompileEntitlements` per `msbuild` per aggiungere automaticamente tale autorizzazione ai diritti per qualsiasi app creata in modalità sandbox solo per le compilazioni di debug. Le build di rilascio devono usare i diritti specificati nel file dei diritti, senza modifiche.
 
 ### <a name="resolving-an-app-sandbox-violation"></a>Risoluzione della violazione di una sandbox dell'app
 
@@ -242,21 +242,21 @@ L'origine più comune delle violazioni sandbox dell'app si verifica quando le im
 
 Se si sospetta che si verifichi una violazione della sandbox dell'app nell'applicazione Novell. Mac, il modo più rapido per individuare il problema consiste nell'usare l'app **console** .
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Compilare l'app in questione ed eseguirla da Visual Studio per Mac.
 2. Aprire l'applicazione **console** (da `/Applications/Utilties/`).
-3. Selezionare **tutti i messaggi** nella barra laterale e `sandbox` immettere nella ricerca:
+3. Selezionare **tutti i messaggi** nella barra laterale e immettere `sandbox` nella ricerca:
 
     [![Esempio di un problema di sandboxing nella console](sandboxing-images/resolve01.png "Esempio di un problema di sandboxing nella console")](sandboxing-images/resolve01-large.png#lightbox)
 
-Per l'app di esempio precedente, è possibile notare che kernal blocca il `network-outbound` traffico a causa della sandbox dell'app, perché non è stato richiesto.
+Per l'app di esempio precedente, è possibile notare che kernal blocca il traffico `network-outbound` a causa della sandbox dell'app, perché non è stato richiesto.
 
 #### <a name="fixing-app-sandbox-violations-with-entitlements"></a>Correzione delle violazioni sandbox dell'app con diritti
 
 Ora che abbiamo visto come trovare le violazioni di sandboxing delle app, vediamo come risolverle regolando i diritti dell'applicazione.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Nel **riquadro della soluzione**fare doppio clic sul file **titles. plist** per aprirlo per la modifica.
 2. Nella sezione **diritti** selezionare la casella di controllo **Consenti connessioni di rete in uscita (client)** :
@@ -293,22 +293,22 @@ Quando l'applicazione Novell. Mac adotta la sandbox dell'app, può accedere ai p
 - **Directory del contenitore dell'app** : alla prima esecuzione, il sistema operativo crea una directory speciale del _contenitore_ in cui tutte le relative risorse sono disponibili, a cui solo può accedere. L'app avrà accesso completo in lettura/scrittura alla directory.
 - **Directory del contenitore del gruppo di app** : è possibile concedere all'app l'accesso a uno o più _contenitori di gruppi_ condivisi tra le app nello stesso gruppo.
 - **File specificati dall'utente** : l'applicazione ottiene automaticamente l'accesso ai file che vengono aperti o trascinati in modo esplicito e rilasciati nell'applicazione dall'utente.
-- **Elementi correlati** : con i diritti appropriati, l'applicazione può accedere a un file con lo stesso nome ma con un'estensione diversa. Ad esempio, un documento che è stato salvato sia `.txt` come file `.pdf`che come.
+- **Elementi correlati** : con i diritti appropriati, l'applicazione può accedere a un file con lo stesso nome ma con un'estensione diversa. Ad esempio, un documento che è stato salvato come file di `.txt` e `.pdf`.
 - **Directory temporanee, directory degli strumenti da riga di comando e posizioni specifiche leggibili in tutto il mondo** : l'app dispone di diversi livelli di accesso ai file in altri percorsi ben definiti, come specificato dal sistema.
 
 #### <a name="the-app-container-directory"></a>Directory del contenitore di app
 
 Una directory del contenitore dell'applicazione Novell. Mac presenta le caratteristiche seguenti:
 
-- Si trova in una posizione nascosta nella home directory dell'utente (in genere `~Library/Containers`) ed è possibile accedervi con `NSHomeDirectory` la funzione (vedere di seguito) all'interno dell'applicazione. Poiché si trova nella Home Directory, ogni utente otterrà il proprio contenitore per l'app.
+- Si trova in una posizione nascosta nella home directory dell'utente (in genere `~Library/Containers`) ed è possibile accedervi con la funzione `NSHomeDirectory` (vedere di seguito) all'interno dell'applicazione. Poiché si trova nella Home Directory, ogni utente otterrà il proprio contenitore per l'app.
 - L'app dispone di accesso in lettura/scrittura illimitato alla directory del contenitore e a tutte le relative sottodirectory e file al suo interno.
-- La maggior parte delle API di ricerca dei percorsi di macOS sono relative al contenitore dell'app. Ad esempio, il contenitore avrà la propria **libreria** (a cui si `NSLibraryDirectory`accede tramite), il **supporto dell'applicazione** e le sottodirectory delle **Preferenze** .
+- La maggior parte delle API di ricerca dei percorsi di macOS sono relative al contenitore dell'app. Ad esempio, il contenitore avrà la propria **libreria** (a cui si accede tramite `NSLibraryDirectory`), il **supporto dell'applicazione** e le sottodirectory delle **Preferenze** .
 - macOS stabilisce e impone la connessione tra l'app e il relativo contenitore tramite la firma del codice. Anche se un'altra app prova a eseguire lo spoofing dell'app usando l' **identificatore del bundle**, non sarà in grado di accedere al contenitore a causa della firma del codice.
 - Il contenitore non è per i file generati dall'utente. È invece per i file usati dall'applicazione, ad esempio database, cache o altri tipi specifici di dati.
 - Per i tipi di app da _scarpe_ (ad esempio, app Foto di Apple), il contenuto dell'utente viene inserito nel contenitore.
 
 > [!IMPORTANT]
-> Sfortunatamente, Novell. Mac non dispone ancora della copertura API del 100% (a differenza di Novell. iOS), di conseguenza `NSHomeDirectory` non è stato eseguito il mapping dell'API nella versione corrente di Novell. Mac.
+> Sfortunatamente, Novell. Mac non dispone ancora della copertura API del 100% (a differenza di Novell. iOS), di conseguenza non è stato eseguito il mapping dell'API `NSHomeDirectory` nella versione corrente di Novell. Mac.
 
 Come soluzione temporanea, è possibile usare il codice seguente:
 
@@ -325,7 +325,7 @@ public static string ContainerDirectory {
 
 #### <a name="the-app-group-container-directory"></a>Directory del contenitore del gruppo di app
 
-A partire da Mac MacOS 10.7.5 (e versioni successive), un'applicazione può `com.apple.security.application-groups` usare il diritto di accesso a un contenitore condiviso comune a tutte le applicazioni del gruppo. È possibile usare questo contenitore condiviso per contenuti non utente, ad esempio database o altri tipi di file di supporto, ad esempio le cache.
+A partire da Mac macOS 10.7.5 (e versioni successive), un'applicazione può usare il diritto `com.apple.security.application-groups` per accedere a un contenitore condiviso comune a tutte le applicazioni del gruppo. È possibile usare questo contenitore condiviso per contenuti non utente, ad esempio database o altri tipi di file di supporto, ad esempio le cache.
 
 I contenitori di gruppo vengono aggiunti automaticamente al contenitore sandbox di ogni app, se fanno parte di un gruppo, e vengono archiviati in `~/Library/Group Containers/<application-group-id>`. L'ID del gruppo _deve_ iniziare con l'ID del team di sviluppo e un punto, ad esempio:
 
@@ -340,10 +340,10 @@ Per ulteriori informazioni, vedere la pagina relativa all' [aggiunta di un'appli
 Un'applicazione Novell. Mac in modalità sandbox può accedere a posizioni file system all'esterno del relativo contenitore nei modi seguenti:
 
 - Alla direzione specifica dell'utente (tramite finestre di dialogo Apri e Salva o altri metodi, ad esempio il trascinamento della selezione).
-- Utilizzando i diritti per percorsi di file System specifici, ad esempio `/bin` o. `/usr/lib`
+- Utilizzando i diritti per percorsi di file system specifici, ad esempio `/bin` o `/usr/lib`.
 - Quando il file system percorso si trova in alcune directory che sono leggibili in tutto il mondo, ad esempio la condivisione.
 
-_PowerBox_ è la tecnologia di sicurezza MacOS che interagisce con l'utente per espandere i diritti di accesso ai file dell'app Novell. Mac in modalità sandbox. Powerbox non dispone di API, ma viene attivato in modo trasparente quando l'app chiama `NSOpenPanel` un `NSSavePanel`o. L'accesso PowerBox viene abilitato tramite i diritti impostati per l'applicazione Novell. Mac.
+_PowerBox_ è la tecnologia di sicurezza MacOS che interagisce con l'utente per espandere i diritti di accesso ai file dell'app Novell. Mac in modalità sandbox. Powerbox non dispone di API, ma viene attivato in modo trasparente quando l'app chiama un `NSOpenPanel` o `NSSavePanel`. L'accesso PowerBox viene abilitato tramite i diritti impostati per l'applicazione Novell. Mac.
 
 Quando un'app in modalità sandbox Visualizza una finestra di dialogo Apri o Salva, la finestra viene presentata da PowerBox (e non da AppKit) e pertanto ha accesso a qualsiasi file o directory a cui l'utente ha accesso.
 
@@ -371,25 +371,25 @@ Per rendere persistente i file che si trovano all'esterno del contenitore di un'
 
 #### <a name="related-items"></a>Elementi correlati
 
-Il sandbox dell'app consente a un'app di accedere a elementi correlati con lo stesso nome file, ma estensioni diverse. La funzionalità è costituita da due parti: a) un elenco di estensioni correlate nel `Info.plst` codice del file dell'app, b) per indicare alla sandbox cosa verrà eseguita dall'app con questi file.
+Il sandbox dell'app consente a un'app di accedere a elementi correlati con lo stesso nome file, ma estensioni diverse. La funzionalità è costituita da due parti: a) un elenco di estensioni correlate nel codice del file di `Info.plst` dell'app, b) per indicare alla sandbox cosa verrà eseguita dall'app con questi file.
 
 Esistono due scenari in cui è opportuno:
 
-1. L'app deve essere in grado di salvare una versione diversa del file (con una nuova estensione). Ad esempio, l'esportazione `.txt` di un file `.pdf` in un file. Per gestire questa situazione, è necessario usare un `NSFileCoordinator` per accedere al file. Per prima cosa si `WillMove(fromURL, toURL)` chiamerà il metodo, si sposta il file nella nuova estensione e quindi `ItemMoved(fromURL, toURL)`si chiama.
-2. L'app deve aprire un file principale con un'estensione e diversi file di supporto con estensioni diverse. Ad esempio, un filmato e un file di sottotitoli. Utilizzare un `NSFilePresenter` oggetto per accedere al file secondario. Fornire il file principale alla `PrimaryPresentedItemURL` proprietà e il file secondario `PresentedItemURL` alla proprietà. Quando viene aperto il file principale, chiamare il `AddFilePresenter` metodo `NSFileCoordinator` della classe per registrare il file secondario.
+1. L'app deve essere in grado di salvare una versione diversa del file (con una nuova estensione). Ad esempio, l'esportazione di un file di `.txt` in un file di `.pdf`. Per gestire questa situazione, è necessario usare un `NSFileCoordinator` per accedere al file. Per prima cosa si chiamerà il metodo `WillMove(fromURL, toURL)`, si sposta il file nella nuova estensione e quindi si chiama `ItemMoved(fromURL, toURL)`.
+2. L'app deve aprire un file principale con un'estensione e diversi file di supporto con estensioni diverse. Ad esempio, un filmato e un file di sottotitoli. Usare un `NSFilePresenter` per accedere al file secondario. Fornire il file principale alla proprietà `PrimaryPresentedItemURL` e il file secondario alla proprietà `PresentedItemURL`. Quando viene aperto il file principale, chiamare il metodo `AddFilePresenter` della classe `NSFileCoordinator` per registrare il file secondario.
 
-In entrambi gli scenari, il file **info. plist** dell'app deve dichiarare i tipi di documento che possono essere aperti dall'app. Per qualsiasi tipo di file, aggiungere `NSIsRelatedItemType` (con un valore di `YES`) `CFBundleDocumentTypes` alla relativa voce nella matrice.
+In entrambi gli scenari, il file **info. plist** dell'app deve dichiarare i tipi di documento che possono essere aperti dall'app. Per qualsiasi tipo di file, aggiungere la `NSIsRelatedItemType` (con un valore di `YES`) alla relativa voce nella matrice di `CFBundleDocumentTypes`.
 
 #### <a name="open-and-save-dialog-behavior-with-sandboxed-apps"></a>Comportamento della finestra di dialogo Apri e Salva con le app create mediante sandbox
 
-I limiti seguenti vengono inseriti in `NSOpenPanel` e `NSSavePanel` quando vengono chiamati da un'app Novell. Mac in modalità sandbox:
+I limiti seguenti vengono inseriti nel `NSOpenPanel` e `NSSavePanel` quando vengono chiamati da un'app Novell. Mac in modalità sandbox:
 
 - Non è possibile richiamare il pulsante **OK** a livello di codice.
-- Non è possibile modificare a livello di codice la selezione di `NSOpenSavePanelDelegate`un utente in un oggetto.
+- Non è possibile modificare a livello di codice la selezione di un utente in un `NSOpenSavePanelDelegate`.
 
 Sono inoltre disponibili le seguenti modifiche di ereditarietà:
 
-- App -  noninsandbox`NSOpenPanel``NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
+- **App non in modalità sandbox**  -  `NSOpenPanel` `NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
 
 ### <a name="security-scoped-bookmarks-and-persistent-resource-access"></a>Segnalibri con ambito di sicurezza e accesso alle risorse persistente
 
@@ -403,7 +403,7 @@ Quando si usano segnalibri con ambito di sicurezza e l'accesso alle risorse pers
 
 - **Un segnalibro con ambito di app fornisce accesso permanente a una cartella o a un file specificato dall'utente.**
 
-    Ad esempio, se l'applicazione Novell. Mac in modalità sandbox consente a di aprire un documento esterno per la modifica (usando `NSOpenPanel`), l'app può creare un segnalibro con ambito di app in modo da poter accedere nuovamente allo stesso file in futuro.
+    Ad esempio, se l'applicazione Novell. Mac in modalità sandbox consente a di aprire un documento esterno per la modifica (usando un `NSOpenPanel`), l'app può creare un segnalibro con ambito di app in modo da poter accedere nuovamente allo stesso file in futuro.
 - **Un segnalibro con ambito documento fornisce un documento specifico accesso permanente a un file secondario.**
 
 Ad esempio, un'applicazione di modifica video che consente di creare un file di progetto che ha accesso alle singole immagini, clip video e file audio che verranno combinati in un unico film.
@@ -413,17 +413,17 @@ Quando l'utente importa un file di risorse nel progetto (tramite un `NSOpenPanel
 Un segnalibro con ambito documento può essere risolto da qualsiasi applicazione in grado di aprire i dati del segnalibro e il documento stesso. Questo supporta la portabilità, consentendo all'utente di inviare i file di progetto a un altro utente e di usare anche tutti i segnalibri.
 
 > [!IMPORTANT]
-> Un segnalibro con ambito documento può puntare _solo_ a un singolo file e non a una cartella e tale file non può trovarsi in un percorso utilizzato dal sistema, `/private` ad `/Library`esempio o.
+> Un segnalibro con ambito documento può puntare _solo_ a un singolo file e non a una cartella e tale file non può trovarsi in un percorso utilizzato dal sistema, ad esempio `/private` o `/Library`.
 
 #### <a name="using-security-scoped-bookmarks"></a>Uso di segnalibri con ambito di sicurezza
 
 Per usare uno dei due tipi di segnalibro con ambito di protezione, è necessario eseguire i passaggi seguenti:
 
-1. **Impostare i diritti appropriati nell'app Novell. Mac che deve usare i segnalibri con ambito di sicurezza** . per i segnalibri con ambito app, impostare la `com.apple.security.files.bookmarks.app-scope` chiave relativa al `true`diritto. Per i segnalibri con ambito documento, impostare la `com.apple.security.files.bookmarks.document-scope` chiave relativa al `true`diritto su.
-2. **Creare un segnalibro con ambito di sicurezza** : questa operazione viene eseguita per qualsiasi file o cartella a cui l'utente ha concesso l'accesso `NSOpenPanel` (ad esempio, tramite), che l'app dovrà avere accesso permanente a. Usare il `public virtual NSData CreateBookmarkData (NSUrlBookmarkCreationOptions options, string[] resourceValues, NSUrl relativeUrl, out NSError error)` metodo `NSUrl` della classe per creare il segnalibro.
-3. **Risolvere il segnalibro con ambito di sicurezza** : quando l'app deve accedere di nuovo alla risorsa, ad esempio dopo il riavvio, sarà necessario risolvere il segnalibro in un URL con ambito di sicurezza. Per risolvere `public static NSUrl FromBookmarkData (NSData data, NSUrlBookmarkResolutionOptions options, NSUrl relativeToUrl, out bool isStale, out NSError error)` il segnalibro `NSUrl` , usare il metodo della classe.
-4. **Notificare in modo esplicito al sistema che si vuole accedere al file dall'URL con ambito di sicurezza** . questo passaggio deve essere eseguito immediatamente dopo aver ottenuto l'URL con ambito di sicurezza precedente o, quando si vuole riottenere l'accesso alla risorsa dopo avere rinunciare all'accesso. Chiamare il `StartAccessingSecurityScopedResource ()` metodo `NSUrl` della classe per iniziare ad accedere a un URL con ambito di sicurezza.
-5. **Notificare in modo esplicito al sistema che l'utente ha eseguito l'accesso al file dall'URL con ambito di protezione** : appena possibile, è necessario informare il sistema quando l'app non necessita più dell'accesso al file, ad esempio se l'utente la chiude. Chiamare il `StopAccessingSecurityScopedResource ()` metodo `NSUrl` della classe per arrestare l'accesso a un URL con ambito di sicurezza.
+1. **Impostare i diritti appropriati nell'app Novell. Mac che deve usare i segnalibri con ambito di sicurezza** . per i segnalibri con ambito di app, impostare la chiave di diritti `com.apple.security.files.bookmarks.app-scope` su `true`. Per i segnalibri con ambito documento, impostare la chiave di autorizzazione `com.apple.security.files.bookmarks.document-scope` su `true`.
+2. **Creare un segnalibro con ambito di sicurezza** : questa operazione viene eseguita per qualsiasi file o cartella a cui l'utente ha concesso l'accesso (ad esempio, tramite `NSOpenPanel`), che l'app dovrà avere accesso permanente a. Usare il metodo `public virtual NSData CreateBookmarkData (NSUrlBookmarkCreationOptions options, string[] resourceValues, NSUrl relativeUrl, out NSError error)` della classe `NSUrl` per creare il segnalibro.
+3. **Risolvere il segnalibro con ambito di sicurezza** : quando l'app deve accedere di nuovo alla risorsa, ad esempio dopo il riavvio, sarà necessario risolvere il segnalibro in un URL con ambito di sicurezza. Usare il metodo `public static NSUrl FromBookmarkData (NSData data, NSUrlBookmarkResolutionOptions options, NSUrl relativeToUrl, out bool isStale, out NSError error)` della classe `NSUrl` per risolvere il segnalibro.
+4. **Notificare in modo esplicito al sistema che si vuole accedere al file dall'URL con ambito di sicurezza** . questo passaggio deve essere eseguito immediatamente dopo aver ottenuto l'URL con ambito di sicurezza precedente o, quando si vuole riottenere l'accesso alla risorsa dopo avere rinunciare all'accesso. Chiamare il metodo `StartAccessingSecurityScopedResource ()` della classe `NSUrl` per iniziare ad accedere a un URL con ambito di sicurezza.
+5. **Notificare in modo esplicito al sistema che l'utente ha eseguito l'accesso al file dall'URL con ambito di protezione** : appena possibile, è necessario informare il sistema quando l'app non necessita più dell'accesso al file, ad esempio se l'utente la chiude. Chiamare il metodo `StopAccessingSecurityScopedResource ()` della classe `NSUrl` per arrestare l'accesso a un URL con ambito di sicurezza.
 
 Dopo aver ceduto l'accesso a una risorsa, è necessario tornare al passaggio 4 per ristabilire l'accesso. Se l'app Novell. Mac viene riavviata, è necessario tornare al passaggio 3 e risolvere di nuovo il segnalibro.
 
@@ -475,7 +475,7 @@ L'elenco di controllo di accesso del contenitore contiene ora i requisiti di cod
 2. Digitare `asctl container acl list -bundle <container-name>`.
 3. Premere **invio** per eseguire il comando.
 
-`<container-name>` È in genere l'identificatore del bundle per l'applicazione Novell. Mac.
+Il `<container-name>` è in genere l'identificatore del bundle per l'applicazione Novell. Mac.
 
 ## <a name="designing-a-xamarinmac-app-for-the-app-sandbox"></a>Progettazione di un'app Novell. Mac per l'app sandbox
 
@@ -512,12 +512,12 @@ Se l'app richiede uno dei comportamenti seguenti, non è compatibile con l'app s
 - **Servizi di autorizzazione** : con l'app sandbox non è possibile usare le funzioni descritte in informazioni di [riferimento su servizi di autorizzazione C](https://developer.apple.com/library/prerelease/mac/documentation/Security/Reference/authorization_ref/index.html#//apple_ref/doc/uid/TP30000826).
 - **API di accessibilità** : non è possibile eseguire la sandbox di app assistive quali utilità per la lettura dello schermo o app che controllano altre applicazioni.
 - **Inviare eventi Apple a app arbitrarie** : se l'app richiede l'invio di eventi Apple a un'app arbitraria sconosciuta, non è possibile eseguire la sandbox. Per un elenco noto di App denominate, l'app può comunque essere creata tramite sandbox e i diritti dovranno includere l'elenco delle app chiamate.
-- **Inviare dizionari di informazioni utente in notifiche distribuite ad altre attività** : con l'app sandbox, non è `userInfo` possibile includere un dizionario per `NSDistributedNotificationCenter` la pubblicazione in un oggetto per la messaggistica di altre attività.
+- **Inviare dizionari di informazioni utente in notifiche distribuite ad altre attività** : con l'app sandbox non è possibile includere un dizionario `userInfo` durante la pubblicazione in un oggetto `NSDistributedNotificationCenter` per la messaggistica di altre attività.
 - **Caricare le estensioni del kernel** : il caricamento delle estensioni del kernel non è consentito dalla sandbox dell'app.
 - **Simulare l'input dell'utente nelle finestre di dialogo di apertura e salvataggio** : la modifica a livello di codice delle finestre di dialogo Apri o Salva per simulare o modificare l'input dell'utente non è consentita dalla sandbox dell'app.
 - **Accesso o impostazione delle preferenze in altre app** : la modifica delle impostazioni di altre app non è consentita dalla sandbox dell'app.
 - **Configurazione delle impostazioni di rete** : la modifica delle impostazioni di rete non è consentita dalla sandbox dell'app.
-- **Terminazione di altre app** : la sandbox dell'app impedisce `NSRunningApplication` l'uso di per terminare altre app.
+- **Terminazione di altre app** : la sandbox dell'app impedisce l'uso di `NSRunningApplication` per terminare altre app.
 
 ### <a name="resolving-api-incompatibilities"></a>Risoluzione delle incompatibilità API
 
@@ -525,10 +525,10 @@ Quando si progetta un'app Novell. Mac per la sandbox dell'app, è possibile che 
 
 Di seguito sono riportati alcuni problemi comuni che è possibile eseguire per risolverli:
 
-- **Apertura, salvataggio e rilevamento dei documenti** : se si gestiscono documenti con una tecnologia diversa `NSDocument`da, è necessario passare a esso a causa del supporto incorporato per la sandbox dell'app. `NSDocument`funziona automaticamente con PowerBox e fornisce il supporto per mantenere i documenti all'interno della sandbox se vengono spostati dall'utente in Finder.
+- **Apertura, salvataggio e rilevamento dei documenti** : se si gestiscono documenti con qualsiasi tecnologia diversa da `NSDocument`, è necessario passare a tale documento a causa del supporto incorporato per la sandbox dell'app. `NSDocument` funziona automaticamente con PowerBox e fornisce il supporto per mantenere i documenti all'interno della sandbox se vengono spostati dall'utente in Finder.
 - **Mantenere l'accesso alle risorse del file System** : se l'app Novell. Mac dipende dall'accesso permanente alle risorse esterne al contenitore, usare i segnalibri con ambito di sicurezza per mantenere l'accesso.
-- **Creare un elemento di accesso per un'app** : con l'app sandbox, non è possibile creare un elemento `LSSharedFileList` di accesso usando né modificare lo stato dei servizi di `LSRegisterURL`avvio usando. Usare la `SMLoginItemSetEnabled` funzione come descritto in mele [aggiunta di elementi di accesso tramite la documentazione del Framework di gestione dei servizi](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
-- **Accesso ai dati utente** : se si usano funzioni POSIX come `getpwuid` per ottenere la home directory dell'utente dai servizi directory, provare a usare i simboli Cocoa o Core `NSHomeDirectory`Foundation, ad esempio.
+- **Creare un elemento di accesso per un'app** : con l'app sandbox, non è possibile creare un elemento di accesso usando `LSSharedFileList` né modificare lo stato dei servizi di avvio usando `LSRegisterURL`. Usare la funzione `SMLoginItemSetEnabled` come descritto in mele [aggiunta di elementi di accesso tramite la documentazione del Framework di gestione dei servizi](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
+- **Accesso ai dati utente** : se si usano funzioni POSIX come `getpwuid` per ottenere la home directory dell'utente dai servizi directory, provare a usare i simboli Cocoa o Core Foundation, ad esempio `NSHomeDirectory`.
 - **Accesso alle preferenze di altre app** : poiché la sandbox dell'app indirizza le API di ricerca del percorso al contenitore dell'app, la modifica delle preferenze viene eseguita all'interno del contenitore e l'accesso alle preferenze di un'altra app non è consentito.
 - **Uso del video HTML5 embedded in visualizzazioni Web** : se l'app Novell. Mac usa WebKit per riprodurre video HTML5 incorporati, è necessario collegare l'app anche a AV Foundation Framework. Il sandbox dell'app impedisce a CoreMedia di riprodurre questi video in caso contrario.
 
@@ -542,10 +542,10 @@ Per determinare i diritti richiesti da un'app Novell. Mac, seguire questa proced
 
 1. Abilitare l'app sandbox ed eseguire l'app Novell. Mac.
 2. Eseguire le funzionalità dell'app.
-3. Aprire l'app console (disponibile in `/Applications/Utilities`) e `sandboxd` cercare le violazioni nel registro **tutti i messaggi** .
-4. Per ogni `sandboxd` violazione, risolvere il problema usando il contenitore dell'app anziché altri percorsi di file System o applicare diritti sandbox per l'app per consentire l'accesso alle funzionalità limitate del sistema operativo.
+3. Aprire l'app console (disponibile in `/Applications/Utilities`) e cercare `sandboxd` violazioni nel registro **tutti i messaggi** .
+4. Per ogni violazione di `sandboxd`, risolvere il problema usando il contenitore dell'app anziché altri percorsi di file system o applicare diritti sandbox per l'app per consentire l'accesso alle funzionalità limitate del sistema operativo.
 5. Eseguire nuovamente e testare di nuovo tutte le funzionalità dell'app Novell. Mac.
-6. Ripetere fino a `sandboxd` quando non vengono risolte tutte le violazioni.
+6. Ripetere fino a quando non sono state risolte tutte le violazioni del `sandboxd`.
 
 ### <a name="add-privilege-separation-using-xpc"></a>Aggiungere la separazione dei privilegi con XPC
 

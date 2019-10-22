@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "67832538"
 ---
 # <a name="introduction-to-urhosharp"></a>Introduzione a UrhoSharp
@@ -68,7 +68,7 @@ Mentre gli altri esempi mostrano le singole proprietà di ogni esempio.
 
 ## <a name="basic-structure"></a>Struttura di base
 
-Il gioco deve creare una `Application` sottoclasse della classe, in cui verrà configurato il gioco ( `Setup` nel metodo) e verrà avviato `Start` il gioco (nel metodo).  Quindi si costruisce l'interfaccia utente principale.  Verrà esaminato un piccolo esempio che mostra le API per configurare una scena 3D, alcuni elementi dell'interfaccia utente e un semplice comportamento.
+Il gioco deve sottocreare una sottoclasse della classe `Application`, in cui verrà configurato il gioco (nel metodo `Setup`) e verrà avviato il gioco (nel metodo `Start`).  Quindi si costruisce l'interfaccia utente principale.  Verrà esaminato un piccolo esempio che mostra le API per configurare una scena 3D, alcuni elementi dell'interfaccia utente e un semplice comportamento.
 
 ```csharp
 class MySample : Application {
@@ -135,9 +135,9 @@ Per avviare l'applicazione, chiamare la funzione di inizializzazione del motore,
 new MySample().Run();
 ```
 
-Il runtime richiamerà `Setup` i `Start` metodi e.  Se si esegue `Setup` l'override di, è possibile configurare i parametri del motore (non mostrati in questo esempio).
+Il runtime richiamerà i metodi `Setup` e `Start`.  Se si esegue l'override di `Setup` è possibile configurare i parametri del motore (non mostrati in questo esempio).
 
-È necessario eseguire `Start` l'override di in quanto verrà avviato il gioco.  In questo metodo si caricherà gli asset, si connettono i gestori eventi, si configura la scena e si avviano le azioni desiderate.  Nel nostro esempio, creiamo un po' di interfaccia utente per visualizzare l'utente, oltre a configurare una scena 3D.
+È necessario eseguire l'override di `Start` perché verrà avviato il gioco.  In questo metodo si caricherà gli asset, si connettono i gestori eventi, si configura la scena e si avviano le azioni desiderate.  Nel nostro esempio, creiamo un po' di interfaccia utente per visualizzare l'utente, oltre a configurare una scena 3D.
 
 Il frammento di codice seguente usa il Framework dell'interfaccia utente per creare un elemento di testo e aggiungerlo all'applicazione:
 
@@ -156,11 +156,11 @@ helloText.SetFont(
 UI.Root.AddChild(helloText);
 ```
 
-Il Framework dell'interfaccia utente è disponibile per fornire un'interfaccia utente molto semplice del gioco, che funziona aggiungendo nuovi nodi al `UI.Root` nodo.
+Il Framework dell'interfaccia utente è disponibile per fornire un'interfaccia utente molto semplice del gioco, che funziona aggiungendo nuovi nodi al nodo `UI.Root`.
 
 La seconda parte dell'esempio configura la scena principale.  Ciò implica una serie di passaggi, la creazione di una scena 3D, la creazione di una finestra 3D nella schermata, l'aggiunta di una luce, una fotocamera e un viewport.  Queste informazioni vengono esaminate più dettagliatamente nella sezione [scena, nodi, componenti e fotocamere](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
-La terza parte dell'esempio attiva alcune azioni.  Le azioni sono ricette che descrivono un particolare effetto e, una volta create, possono essere eseguite da un nodo su richiesta `RunActionAsync` chiamando il metodo `Node`su un oggetto.
+La terza parte dell'esempio attiva alcune azioni.  Le azioni sono ricette che descrivono un particolare effetto e, una volta create, possono essere eseguite da un nodo su richiesta chiamando il metodo `RunActionAsync` su una `Node`.
 
 La prima azione Ridimensiona la casella con un effetto di rimbalzo e la seconda ruota la casella per sempre:
 
@@ -169,7 +169,7 @@ await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-Il precedente Mostra come la prima azione creata è un' `ScaleTo` azione, si tratta semplicemente di una ricetta che indica che si vuole ridimensionare un secondo verso il valore una proprietà scale di un nodo.  Questa azione viene a sua volta racchiusa tra un'azione di `EaseBounceOut` interpolazione, l'azione.  Le azioni di interpolazione comportano la distorsione dell'esecuzione lineare di un'azione e l'applicazione di un effetto, in questo caso fornisce l'effetto di rimbalzo.
+Il precedente Mostra come la prima azione creata è un'azione `ScaleTo`, si tratta semplicemente di una ricetta che indica che si vuole ridimensionare un secondo verso il valore una proprietà scale di un nodo.  Questa azione viene a sua volta racchiusa tra un'azione di interpolazione, l'azione `EaseBounceOut`.  Le azioni di interpolazione comportano la distorsione dell'esecuzione lineare di un'azione e l'applicazione di un effetto, in questo caso fornisce l'effetto di rimbalzo.
 Quindi, la ricetta può essere scritta come segue:
 
 ```csharp

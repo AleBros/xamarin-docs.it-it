@@ -8,24 +8,24 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2019
 ms.openlocfilehash: f08146d4439ff1fc22edea71ab1cbb337f64c037
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68984393"
 ---
 # <a name="xamarinforms-controls-class-hierarchy"></a>Gerarchia di classi di controlli Novell. Forms
 
-Novell. Forms è costituito da centinaia di tipi, in più spazi dei nomi. Gli sviluppatori dovrebbero avere familiarità con la gerarchia dei tipi utilizzati per creare l'interfaccia utente di un'applicazione Novell. Forms, che si trova `Xamarin.Forms` nello spazio dei nomi.
+Novell. Forms è costituito da centinaia di tipi, in più spazi dei nomi. Gli sviluppatori dovrebbero avere familiarità con la gerarchia dei tipi usati per creare l'interfaccia utente di un'applicazione Novell. Forms, che si trova nello spazio dei nomi `Xamarin.Forms`.
 
-Questi tipi possono essere divisi in pagine, layout, visualizzazioni e celle. Una pagina Novell. Forms occupa in genere l'intera schermata e tutti i tipi di pagina derivano dalla [`Page`](xref:Xamarin.Forms.Page) classe. Le pagine contengono in genere un layout e tutti i tipi di layout derivano dalla [`Layout`](xref:Xamarin.Forms.Layout) classe. Un layout contiene in genere viste e possibilmente altri layout e tutti i tipi di vista derivano [`View`](xref:Xamarin.Forms.View) dalla classe. Infine, le celle sono controlli specializzati usati per la [`TableView`](xref:Xamarin.Forms.TableView) visualizzazione dei dati nei controlli e. [`ListView`](xref:Xamarin.Forms.ListView) Pagine, layout, visualizzazioni e celle sono tutti derivati dalla [`Element`](xref:Xamarin.Forms.Element) classe.
+Questi tipi possono essere divisi in pagine, layout, visualizzazioni e celle. Una pagina Novell. Forms occupa in genere l'intera schermata e tutti i tipi di pagina derivano dalla classe [`Page`](xref:Xamarin.Forms.Page) . Le pagine contengono in genere un layout e tutti i tipi di layout derivano dalla classe [`Layout`](xref:Xamarin.Forms.Layout) . Un layout contiene in genere viste e possibilmente altri layout e tutti i tipi di vista derivano dalla classe [`View`](xref:Xamarin.Forms.View) . Infine, le celle sono controlli specializzati usati per la visualizzazione dei dati nei controlli [`TableView`](xref:Xamarin.Forms.TableView) e [`ListView`](xref:Xamarin.Forms.ListView) . Pagine, layout, visualizzazioni e celle sono tutti derivati dalla classe [`Element`](xref:Xamarin.Forms.Element) .
 
 Il diagramma classi seguente mostra la gerarchia dei tipi che vengono in genere usati per compilare un'interfaccia utente in Novell. Forms:
 
 [![Diagramma classi di controlli Novell. Forms](class-hierarchy-images/class-diagram.png "Diagramma classi di controlli Novell. Forms")](class-hierarchy-images/class-diagram-large.png#lightbox "Diagramma classi di controlli Novell. Forms")
 
 > [!NOTE]
-> È possibile scaricare una versione ad alta risoluzione del diagramma classi da [qui](class-hierarchy-images/class-diagram-high-resolution.png). Si noti tuttavia che il diagramma non mostra attualmente i `CarouselView` tipi e. `CollectionView` Questi verranno aggiunti quando i controlli non sono in anteprima. Inoltre, il diagramma mostra solo un singolo tipo di Shell.
+> È possibile scaricare una versione ad alta risoluzione del diagramma classi da [qui](class-hierarchy-images/class-diagram-high-resolution.png). Si noti tuttavia che il diagramma non mostra attualmente i tipi di `CarouselView` e di `CollectionView`. Questi verranno aggiunti quando i controlli non sono in anteprima. Inoltre, il diagramma mostra solo un singolo tipo di Shell.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

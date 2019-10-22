@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 78288680a1a522b2c6c413e1f8a2cec2a07835d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: a6eb3167fd0880984a74245c4653642ea3979354
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656974"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678833"
 ---
 # <a name="right-to-left-localization"></a>Localizzazione da destra a sinistra
 
@@ -72,7 +72,7 @@ Le impostazioni locali necessarie per la direzione da destra a sinistra devono e
 </array>
 ```
 
-![Lingue supportate da Info.plist](rtl-images/ios-locales.png "Lingue supportate da Info.plist")
+![Lingue supportate di info. plist](rtl-images/ios-locales.png "Lingue supportate di info. plist")
 
 Per altre informazioni, vedere [Nozioni fondamentali di localizzazione in iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
 
@@ -145,6 +145,46 @@ La localizzazione da destra a sinistra di Xamarin.Forms presenta attualmente alc
 - L'allineamento del testo di [`Editor`](xref:Xamarin.Forms.Editor) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 - La proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) non viene ereditata dagli elementi figlio di [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage).
 - L'allineamento del testo di [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) è controllato dalle impostazioni locali del dispositivo, anziché dalla proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+
+## <a name="force-right-to-left-layout"></a>Forza layout da destra a sinistra
+
+Le applicazioni Novell. iOS e Novell. Android possono essere forzate a usare sempre un layout da destra a sinistra, indipendentemente dalle impostazioni del dispositivo, modificando i rispettivi progetti di piattaforma.
+
+### <a name="ios"></a>iOS
+
+Le applicazioni Novell. iOS possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **AppDelegate** come indicato di seguito:
+
+1. Dichiarare la funzione `IntPtr_objc_msgSend` come prima riga nella classe `AppDelegate`:
+
+   ```csharp
+   [System.Runtime.InteropServices.DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
+   internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
+   ```
+
+1. Chiamare la funzione `IntPtr_objc_msgSend` dal metodo `FinishedLaunching`, prima di restituire dal metodo `FinshedLaunching`:
+
+   ```csharp
+   bool result = base.FinishedLaunching(app, options);
+
+   ObjCRuntime.Selector selector = new ObjCRuntime.Selector("setSemanticContentAttribute:");
+   IntPtr_objc_msgSend(UIView.Appearance.Handle, selector.Handle, UISemanticContentAttribute.ForceRightToLeft);
+
+   return result;
+   ```
+
+Questo approccio è utile per le applicazioni che richiedono sempre un layout da destra a sinistra e rimuove il requisito per impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) .
+
+Per ulteriori informazioni sul metodo `IntrPtr_objc_msgSend`, vedere [selettori Objective-C in Novell. iOS](~/ios/internals/objective-c-selectors.md).
+
+### <a name="android"></a>Android
+
+Le applicazioni Novell. Android possono essere forzate a usare sempre un layout da destra a sinistra modificando la classe **MainActivity** in modo da includere la riga seguente:
+
+```csharp
+Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
+```
+
+Questo approccio è utile per le applicazioni che richiedono sempre un layout da destra a sinistra e rimuove il requisito per impostare la proprietà [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) .
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Supporto delle lingue da destra a sinistra con Xamarin.University
 

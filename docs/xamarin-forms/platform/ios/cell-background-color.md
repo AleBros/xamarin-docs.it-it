@@ -1,6 +1,6 @@
 ---
 title: Colore di sfondo della cella in iOS
-description: Funzionalità specifiche della piattaforma consentono di utilizzare funzionalità che è disponibile solo in una piattaforma specifica, senza implementare renderer personalizzati o gli effetti. Questo articolo illustra come usare la specifica della piattaforma iOS che imposta il colore di sfondo predefinito delle celle in iOS.
+description: Le specifiche della piattaforma consentono di utilizzare funzionalità disponibili solo su una piattaforma specifica, senza implementare Renderer o effetti personalizzati. Questo articolo illustra come usare la specifica della piattaforma iOS che imposta il colore di sfondo predefinito delle celle in iOS.
 ms.prod: xamarin
 ms.assetid: 2A3FDACF-5AE2-40DE-8488-6FE41733712F
 ms.technology: xamarin-forms
@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68651382"
 ---
 # <a name="cell-background-color-on-ios"></a>Colore di sfondo della cella in iOS
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Questa specifica della piattaforma iOS imposta il colore di sfondo predefinito [`Cell`](xref:Xamarin.Forms.Cell) delle istanze. Viene utilizzato in XAML impostando la `Cell.DefaultBackgroundColor` proprietà associabile su un oggetto: [`Color`](xref:Xamarin.Forms.Color)
+Questo specifico della piattaforma iOS imposta il colore di sfondo predefinito di [`Cell`](xref:Xamarin.Forms.Cell) istanze. Viene utilizzato in XAML impostando la proprietà `Cell.DefaultBackgroundColor` associabile su un [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...
@@ -41,7 +41,7 @@ Questa specifica della piattaforma iOS imposta il colore di sfondo predefinito [
 </ContentPage>
 ```
 
-In alternativa, può essere usato dal codice c# che utilizza l'API fluent:
+In alternativa, è possibile C# usare l'API Fluent:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -52,11 +52,11 @@ var viewCell = new ViewCell { View = ... };
 viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 ```
 
-Il `ListView.On<iOS>` metodo consente di specificare che questo specifico della piattaforma verrà eseguito solo in iOS. Il `Cell.SetDefaultBackgroundColor` metodo, [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) nello spazio dei nomi, imposta il colore di sfondo della cella [`Color`](xref:Xamarin.Forms.Color)su un oggetto specificato. Inoltre, il `Cell.DefaultBackgroundColor` metodo può essere utilizzato per recuperare il colore di sfondo della cella corrente.
+Il metodo `ListView.On<iOS>` specifica che questa specifica della piattaforma verrà eseguita solo in iOS. Il metodo `Cell.SetDefaultBackgroundColor`, nello spazio dei nomi [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) , imposta il colore di sfondo della cella su un [`Color`](xref:Xamarin.Forms.Color)specificato. Inoltre, è possibile utilizzare il metodo `Cell.DefaultBackgroundColor` per recuperare il colore di sfondo della cella corrente.
 
-Il risultato è che il colore di sfondo di [`Cell`](xref:Xamarin.Forms.Cell) un oggetto può essere impostato su [`Color`](xref:Xamarin.Forms.Color)uno specifico:
+Il risultato è che il colore di sfondo in un [`Cell`](xref:Xamarin.Forms.Cell) può essere impostato su uno specifico [`Color`](xref:Xamarin.Forms.Color):
 
-[![Screenshot delle celle di intestazione del gruppo alzavola in iOS](cell-background-color-images/group-header-cell-color.png "ListView con celle di intestazione del gruppo verde") acqua](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celle di intestazione del gruppo verde acqua")
+[![Screenshot delle celle di intestazione del gruppo alzavola in iOS](cell-background-color-images/group-header-cell-color.png "ListView con celle di intestazione del gruppo verde acqua")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView con celle di intestazione del gruppo verde acqua")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

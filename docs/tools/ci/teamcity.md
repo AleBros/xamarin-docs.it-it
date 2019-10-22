@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
 ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273122"
 ---
 # <a name="using-team-city-with-xamarin"></a>Uso del team City con Novell
@@ -61,12 +61,12 @@ Un passaggio cruciale per la configurazione di un server di compilazione consist
 3. **Xcode** : Xcode è necessario per compilare e firmare le applicazioni iOS.
 4. **Strumenti da riga di comando Xcode** : questa procedura è descritta nel passaggio 1 della sezione relativa all'installazione della Guida relativa all' [aggiornamento di Ruby con rbenv](https://github.com/calabash/calabash-ios/wiki) .
 5. **Firma di identità & profili di provisioning** : importare i certificati e il profilo di provisioning tramite Xcode. Per altri dettagli, vedere la Guida di Apple sull' [esportazione di identità di firma e profili di provisioning](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) .
-6. **Keystore Android** : copiare gli archivi chiavi Android necessari in una directory a cui l'utente TeamCity può accedere, ad esempio `~/Documents/keystores/MyAndroidApp1`.
+6. **Keystore Android** : copiare gli archivi chiavi Android necessari in una directory a cui l'utente TeamCity può accedere, ad esempio  `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** : si tratta di un passaggio facoltativo se l'applicazione include test scritti con Calabash. Per ulteriori informazioni, vedere la Guida [installazione di Calabash in OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) e la guida sull' [aggiornamento di Ruby con rbenv](https://github.com/calabash/calabash-ios/wiki) .
 
 Il diagramma seguente illustra tutti questi componenti:
 
-![](teamcity-images/image1.png "Questo diagramma illustra tutti questi componenti")
+![](teamcity-images/image1.png "This diagram illustrates all of these components")
 
 Una volta installato tutto il software, accedere all'account utente e verificare che tutto il software sia stato installato correttamente e funzionante. Questa operazione dovrebbe comportare la compilazione della soluzione e l'invio dell'applicazione a Test Cloud. Questo può essere molto semplificato eseguendo lo script di compilazione, come descritto nella sezione successiva.
 
@@ -85,7 +85,7 @@ Lo script di compilazione può essere semplice come un file di PowerShell (in Wi
 
 - [**psake**](https://github.com/psake/psake) : si tratta di una libreria di Windows PowerShell per la creazione di software
 
-- [Fake](http://fsharp.github.io/FAKE/) : si tratta di un linguaggio DSL F# basato su, che consente di utilizzare le librerie .NET esistenti, se necessario.
+- [**Fake**](http://fsharp.github.io/FAKE/) : si tratta di un linguaggio DSL F# basato su, che consente di utilizzare le librerie .NET esistenti, se necessario.
 
 Il linguaggio di scripting utilizzato dipende dalle preferenze e dai requisiti. L'esempio [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contiene un esempio di uso di rake come [script di compilazione](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
 
@@ -146,7 +146,7 @@ Per altre informazioni su come inviare UITests a Test Cloud, vedere Preparazione
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Invio di test di Calabash a Test Cloud
 
-I test di Calabash vengono inviati usando la gemma `test-cloud`, come illustrato nel frammento di codice seguente:
+I test Calabash vengono inviati usando il `test-cloud` Gem, come illustrato nel frammento di codice seguente:
 
 ```bash
 test-cloud submit /path/to/APK-or-IPA <test-cloud-team-api-key> --devices <device-id> --user <email>
@@ -167,35 +167,35 @@ Una volta installato TeamCity e Visual Studio per Mac possibile compilare il pro
 
 1. Per iniziare, accedere a TeamCity tramite il Web browser. Passare al progetto radice:
 
-    ![Passare al progetto radice](teamcity-images/image2.png "passare al progetto radice") sotto il progetto radice e creare un nuovo progetto secondario:
+    ![Passare al progetto radice](teamcity-images/image2.png "Passare al progetto radice") Sotto il progetto radice creare un nuovo progetto secondario:
 
-    ![Passare al progetto radice sotto il progetto radice, creare un nuovo progetto secondario](teamcity-images/image3.png "passare al progetto radice sotto il progetto radice e creare un nuovo sottoprogetto")
+    ![Passare al progetto radice sotto il progetto radice e creare un nuovo sottoprogetto](teamcity-images/image3.png "Passare al progetto radice sotto il progetto radice e creare un nuovo sottoprogetto")
 2. Una volta creato il sottoprogetto, aggiungere una nuova configurazione di compilazione:
 
-    ![Una volta creato il sottoprogetto, aggiungere una nuova configurazione della build](teamcity-images/image5.png "dopo che è stato creato il sottoprogetto, aggiungere una nuova configurazione di compilazione")
+    ![Una volta creato il sottoprogetto, aggiungere una nuova configurazione di compilazione](teamcity-images/image5.png "Una volta creato il sottoprogetto, aggiungere una nuova configurazione di compilazione")
 3. Alleghi un progetto VCS alla configurazione della build. Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione:
 
-    ![Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione].(teamcity-images/image6.png "questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione")
+    ![Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione](teamcity-images/image6.png "Questa operazione viene eseguita tramite la schermata di impostazione del controllo della versione")
 
     Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice VCS mostrata di seguito:
 
-    ![Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice VCS](teamcity-images/image7.png "se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice VCS")
+    ![Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice di VCS](teamcity-images/image7.png "Se non è stato creato alcun progetto VCS, è possibile crearne uno dalla nuova pagina radice di VCS")
 
     Una volta collegata la radice VCS, TeamCity estrae il progetto e tenta di rilevare automaticamente le istruzioni di compilazione. Se si ha familiarità con TeamCity, è possibile selezionare uno dei passaggi di compilazione rilevati. Per il momento è possibile ignorare i passaggi di compilazione rilevati.
 
 4. Configurare quindi un trigger di compilazione. In questo modo verrà accodata una compilazione quando vengono soddisfatte determinate condizioni, ad esempio quando un utente esegue il commit del codice nel repository. Lo screenshot seguente mostra come aggiungere un trigger di compilazione:
 
-    ![Questa schermata mostra come aggiungere un trigger di compilazione](teamcity-images/image8.png "questa schermata mostra come aggiungere un") trigger di compilazione un esempio di configurazione di un trigger di compilazione può essere visualizzato nella schermata seguente:
+    ![Questa schermata mostra come aggiungere un trigger di compilazione](teamcity-images/image8.png "Questa schermata mostra come aggiungere un trigger di compilazione") Un esempio di configurazione di un trigger di compilazione può essere illustrato nello screenshot seguente:
 
-    Un ![esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata].(teamcity-images/image9.png "un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata")
+    ![Un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata](teamcity-images/image9.png "Un esempio di configurazione di un trigger di compilazione può essere visualizzato in questa schermata")
 
 5. La sezione precedente, parametrizzazione lo script di compilazione, suggerisce di archiviare alcuni valori come variabili di ambiente. Queste variabili possono essere aggiunte alla configurazione della build tramite la schermata parametri. Aggiungere le variabili per la chiave API Test Cloud, l'ID dispositivo iOS e l'ID dispositivo Android, come illustrato nella schermata seguente:
 
-    ![Aggiungere le variabili per la chiave api test cloud, l'ID dispositivo iOS e l'ID dispositivo Android](teamcity-images/image11.png "aggiungere le variabili per la chiave API test cloud, l'ID dispositivo iOS e l'ID dispositivo Android")
+    ![Aggiungere le variabili per la chiave API Test Cloud, l'ID dispositivo iOS e l'ID dispositivo Android](teamcity-images/image11.png "Aggiungere le variabili per la chiave API Test Cloud, l'ID dispositivo iOS e l'ID dispositivo Android")
 
 6. Il passaggio finale consiste nell'aggiungere un'istruzione di compilazione che richiama lo script di compilazione per compilare l'applicazione e accodare l'applicazione per Test Cloud. Lo screenshot seguente è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione:
 
-    ![Questa schermata è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione].(teamcity-images/image12.png "questo screenshot è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione")
+    ![Questa schermata è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione](teamcity-images/image12.png "Questa schermata è un esempio di un'istruzione di compilazione che usa un Rakefile per compilare un'applicazione")
 
 7. A questo punto, la configurazione della build è stata completata. È consigliabile attivare una compilazione per verificare che il progetto sia configurato correttamente. Un modo efficace per eseguire questa operazione consiste nell'eseguire il commit di una piccola modifica irrilevante nel repository. TeamCity deve rilevare il commit e avviare una compilazione.
 

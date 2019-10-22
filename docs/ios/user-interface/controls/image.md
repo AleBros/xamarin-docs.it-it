@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
 ms.openlocfilehash: 255f308078c892605b9ce20b17fd737c5582eaed
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70768984"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Visualizzazione di immagini con Novell. iOS
@@ -26,7 +26,7 @@ Visual Studio per Mac supporta anche una directory speciale denominata **risorse
 
 Questa schermata mostra le opzioni di **azione di compilazione** visualizzate quando si fa clic con il pulsante destro del mouse su un file:
 
- [![](image-images/image30a.png "Menu azione di compilazione")](image-images/image30a.png#lightbox)
+ [![](image-images/image30a.png "Build Action menu")](image-images/image30a.png#lightbox)
 
 Visual Studio per Mac in genere scelgono automaticamente l' **azione di compilazione** corretta, ma è necessario tenere presente queste impostazioni, soprattutto se si spostano i file nel progetto.
 
@@ -34,15 +34,15 @@ Visual Studio per Mac in genere scelgono automaticamente l' **azione di compilaz
 
 Per aggiungere un file di immagine al progetto, fare prima clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi file.**
 
- [![](image-images/image31a.png "Aggiungi file... menu")](image-images/image31a.png#lightbox)
+ [![](image-images/image31a.png "Add Files... menu")](image-images/image31a.png#lightbox)
 
 Selezionare l'immagine o le immagini che si desidera includere nella finestra di dialogo file standard. L'azione di compilazione predefinita per le immagini sarà **BundleResource** : non eseguire l'override di questo valore a meno che non esista un motivo specifico.
 
- [![](image-images/image32a.png "Finestra di dialogo Aggiungi file")](image-images/image32a.png#lightbox)
+ [![](image-images/image32a.png "Add Files dialog")](image-images/image32a.png#lightbox)
 
 L'immagine verrà aggiunta al progetto e sarà disponibile per essere caricata e visualizzata nel codice. Questa schermata mostra un'immagine aggiunta a un progetto di applicazione iOS:
 
- [![](image-images/image33a.png "Immagine nel progetto")](image-images/image33a.png#lightbox)
+ [![](image-images/image33a.png "Image in project")](image-images/image33a.png#lightbox)
 
 ### <a name="what-is-the-resources-directory"></a>Che cos'è la directory delle risorse?
 
@@ -59,11 +59,11 @@ La directory **Resources** deve essere denominata e tutti i file devono avere l'
 
 In iOS designer usare una **visualizzazione immagine** per visualizzare un'immagine o una serie animata di immagini. L'icona **visualizzazione immagine** dalla casella degli strumenti è illustrata di seguito:
 
- [![](image-images/image35a.png "ImageView nella casella degli strumenti")](image-images/image35.png#lightbox)
+ [![](image-images/image35a.png "ImageView in Toolbox")](image-images/image35.png#lightbox)
 
 Trascinare la **visualizzazione immagine** dalla **casella degli strumenti** sul controller di visualizzazione. Quindi, in **visualizzazione immagine > immagine** l'elenco a discesa fornirà un elenco di tutti i file di immagine disponibili nel progetto. Selezionare uno di questi per aggiungerlo alla visualizzazione immagine.
 
- [![](image-images/image36a.png "ImageView nella casella degli strumenti")](image-images/image36.png#lightbox)
+ [![](image-images/image36a.png "ImageView in Toolbox")](image-images/image36.png#lightbox)
 
 ### <a name="displaying-the-image-programmatically"></a>Visualizzazione dell'immagine a livello di codice
 

@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70762613"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificatori delle risorse e opzioni di visualizzazione
@@ -24,21 +24,21 @@ _In questo argomento viene illustrato come definire le risorse che verranno util
 
 È possibile accedere alle **Opzioni del qualificatore di risorsa** facendo clic sull'icona con i puntini di sospensione a destra del pulsante della modalità **orizzontale** :
 
-[![Opzioni qualificatore risorse](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[Opzioni del qualificatore ![Resource](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 Questa finestra di dialogo presenta i menu a discesa per i qualificatori di risorse seguenti:
 
-- **Lingua** di &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per l'aggiunta di nuove risorse di lingua/area geografica.
+- **Lingua** &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per aggiungere nuove risorse di lingua/area geografica.
 
-- **Modalità interfaccia utente** Elenca le modalità di visualizzazione (ad esempio, docking auto e **Dock desk**), nonché le direzioni di layout. &ndash;
+- La **modalità interfaccia utente** &ndash; elenca le modalità di visualizzazione (ad esempio, docking **auto** e **Dock desk**), nonché le direzioni di layout.
 
 Ognuno di questi menu a discesa apre nuove finestre di dialogo in cui è possibile selezionare e configurare i qualificatori delle risorse (come illustrato di seguito).
 
-### <a name="language"></a>Linguaggio
+### <a name="language"></a>Language
 
 Nel menu a discesa **lingua** sono elencate solo le lingue per le quali sono definite risorse (o **tutte le lingue**, che è l'impostazione predefinita). Tuttavia, è disponibile anche un'opzione **Aggiungi lingua/area geografica** che consente di aggiungere un nuovo linguaggio all'elenco:
 
-[![Aggiungi lingua/area geografica](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[lingua ![Add/area geografica](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 Quando si fa clic su **Aggiungi lingua/area geografica...** , viene visualizzata la finestra di dialogo **Seleziona lingua** per visualizzare gli elenchi a discesa delle lingue e delle aree disponibili:
 
@@ -54,7 +54,7 @@ Si noti che se si aggiunge una nuova lingua, ma non si creano nuove risorse, la 
 
 Quando si fa clic sul menu a discesa **modalità interfaccia utente** , viene visualizzato un elenco di modalità, ad esempio **normale**, **docking auto**, **docking desk**, **televisione**, **dispositivo**ed espressione di **controllo**:
 
-[![Menu modalità interfaccia utente](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
+[menu modalità ![UI](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Sotto questo elenco sono disponibili le modalità notturne **non notturne** e **notturne**, seguite dalle direzioni di layout da **sinistra a** destra e da **destra a sinistra** . per informazioni sulle opzioni da **sinistra a destra** e **da destra a sinistra** , vedere [ LayoutDirection](xref:Android.Util.LayoutDirection)).
 Gli ultimi elementi della finestra di dialogo **Opzioni qualificatore risorse** sono le **schermate rotonde** (per l'uso con Android Wear) o **non le schermate rotonde**.
@@ -65,15 +65,15 @@ Per ulteriori informazioni sulle modalità di interfaccia utente di Android, ved
 
 L'icona **delle impostazioni della barra delle azioni** è disponibile a sinistra dell'icona del pennello (editor del tema):
 
-![Impostazioni barra delle azioni](resource-qualifiers-images/vs/14-action-bar.png "Impostazioni barra delle azioni")
+![Impostazioni Barra delle azioni](resource-qualifiers-images/vs/14-action-bar.png "Impostazioni Barra delle azioni")
 
 Questa icona consente di aprire una finestra di dialogo in cui è possibile selezionare una delle tre modalità Barra delle azioni:
 
-- **Standard** &ndash; È costituito da un logo o da un'icona e da un testo del titolo con un sottotitolo facoltativo.
+- @No__t_1 **standard** è costituito da un logo o da un'icona e da un testo del titolo con un sottotitolo facoltativo.
 
-- **Elenco** di &ndash; Modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
+- **Elenca** &ndash; modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
 
-- **Schede** di &ndash; Modalità di spostamento a schede. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
+- **Schede** &ndash; modalità di navigazione della scheda. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
 
 ## <a name="themes"></a>Themes
 
@@ -83,7 +83,7 @@ Il menu a discesa **tema** Visualizza tutti i temi definiti nel progetto. Selezi
 
 Quando viene selezionato un tema, il Area di progettazione viene aggiornato per mostrare l'effetto del nuovo tema. Si noti che questa modifica viene resa permanente solo se si fa clic sul pulsante **OK** nella finestra di dialogo del **tema** . Una volta selezionato, un tema verrà incluso nel menu a discesa del **tema** come illustrato di seguito:
 
-Il ![tema chiaro è ora disponibile] Il (resource-qualifiers-images/vs/16-light-theme.png "tema chiaro è ora disponibile")
+![Il tema chiaro è ora disponibile](resource-qualifiers-images/vs/16-light-theme.png "Il tema chiaro è ora disponibile")
 
 ## <a name="android-version"></a>Versione di Android
 
@@ -93,7 +93,7 @@ Il selettore di **versione** di Android imposta la versione di Android usata per
 
 La versione del Framework di destinazione può essere impostata nelle impostazioni del progetto in **proprietà > applicazione > compilare usando la versione di Android**. Per altre informazioni sulla versione del Framework di destinazione, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
-Il set di widget disponibili nella casella degli strumenti è determinato dalla versione del Framework di destinazione del progetto. Questo vale anche per le proprietà disponibili nella **finestra Proprietà**. L'elenco dei widget disponibili *non* è determinato dal valore selezionato nel selettore di **versione** della barra degli strumenti. Ad esempio, se si imposta la versione di destinazione del progetto su Android 4,4, è comunque possibile selezionare Android 6,0 nel selettore di versione della barra degli strumenti per vedere il progetto simile in Android 6,0, ma non sarà possibile aggiungere widget specifici per Android 6,0 &ndash;  verranno comunque limitati i widget disponibili in Android 4,4.
+Il set di widget disponibili nella casella degli strumenti è determinato dalla versione del Framework di destinazione del progetto. Questo vale anche per le proprietà disponibili nella **finestra Proprietà**. L'elenco dei widget disponibili *non* è determinato dal valore selezionato nel selettore di **versione** della barra degli strumenti. Ad esempio, se si imposta la versione di destinazione del progetto su Android 4,4, è comunque possibile selezionare Android 6,0 nel selettore di versione della barra degli strumenti per vedere il progetto simile in Android 6,0, ma non sarà possibile aggiungere widget specifici per Android 6,0 &ndash; l'utente w i widget disponibili in Android 4,4 sono comunque limitati.
 
 Per altre informazioni sui tipi di risorse, vedere [risorse Android](~/android/app-fundamentals/resources-in-android/index.md).
 
@@ -103,29 +103,29 @@ Per altre informazioni sui tipi di risorse, vedere [risorse Android](~/android/a
 
 È possibile accedere alle **Opzioni del qualificatore di risorsa** facendo clic sull'icona con i puntini di sospensione a destra del pulsante della modalità **orizzontale** :
 
-[![Opzioni qualificatore risorse](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[opzioni del qualificatore ![Resource](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 Questa finestra di dialogo presenta i menu a discesa per i qualificatori di risorse seguenti:
 
-- **Lingua** di &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per l'aggiunta di nuove risorse di lingua/area geografica.
+- **Lingua** &ndash; Visualizza le risorse della lingua disponibili e offre un'opzione per aggiungere nuove risorse di lingua/area geografica.
 
-- **Modalità interfaccia utente** Elenca le modalità di visualizzazione (ad esempio, docking auto e **Dock desk**), nonché le direzioni di layout. &ndash;
+- La **modalità interfaccia utente** &ndash; elenca le modalità di visualizzazione (ad esempio, docking **auto** e **Dock desk**), nonché le direzioni di layout.
 
 Ognuno di questi menu a discesa apre nuove finestre di dialogo in cui è possibile selezionare e configurare i qualificatori delle risorse (come illustrato di seguito).
 
-### <a name="language"></a>Linguaggio
+### <a name="language"></a>Language
 
 Nel menu a discesa **lingua** sono elencate solo le lingue per le quali sono definite risorse (o **tutte le lingue**, che è l'impostazione predefinita). Tuttavia, è disponibile anche un'opzione **Aggiungi lingua/area geografica** che consente di aggiungere un nuovo linguaggio all'elenco:
 
-[![Aggiungi lingua/area geografica](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[lingua ![Add/area geografica](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 Quando si fa clic su **Aggiungi lingua/area geografica...** , viene visualizzata la finestra di dialogo **Seleziona lingua** per visualizzare gli elenchi a discesa delle lingue e delle aree disponibili:
 
-[![Elenco di lingue](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[![List di lingue](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 In questo esempio abbiamo scelto **fr (French)** per la lingua e **be** (Belgium) per il dialetto regionale del francese. Si noti che il campo **Region** è facoltativo perché è possibile specificare molte lingue senza considerare aree specifiche. Quando il menu a discesa della **lingua** viene nuovamente aperto, viene visualizzata la risorsa lingua/area appena aggiunta:
 
-[![Lingua e area scelta](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[![Language e area scelta](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 Si noti che se si aggiunge una nuova lingua, ma non si creano nuove risorse, la lingua aggiunta non verrà più visualizzata alla successiva apertura del progetto.
 
@@ -133,7 +133,7 @@ Si noti che se si aggiunge una nuova lingua, ma non si creano nuove risorse, la 
 
 Quando si fa clic sul menu a discesa **modalità interfaccia utente** , viene visualizzato un elenco di modalità, ad esempio **normale**, **docking auto**, **docking desk**, **televisione**, **dispositivo**ed espressione di **controllo**:
 
-[![Menu modalità interfaccia utente](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
+[menu modalità ![UI](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
 Sotto questo elenco sono disponibili le modalità notturne **non notturne** e **notturne**, seguite dalle direzioni di layout da **sinistra a destra** e da **destra a sinistra**. L'ultima coppia di opzioni consente di selezionare **schermate rotonde** o **schermate rettangolari** (utili per i dispositivi Android Wear).
 
@@ -144,35 +144,35 @@ Per informazioni sulle opzioni **da sinistra a destra** e **da destra a sinistra
 
 L'icona **delle impostazioni della barra delle azioni** è disponibile a sinistra dell'icona del pennello (editor del tema):
 
-[![Impostazioni Barra delle azioni](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[impostazioni della barra ![Action](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 Questa icona consente di aprire una finestra di dialogo in cui è possibile selezionare una delle tre modalità Barra delle azioni:
 
-- **Standard** &ndash; È costituito da un logo o da un'icona e un testo del titolo con un sottotitolo facoltativo.
+- @No__t_1 **standard** è costituito da un logo o da un'icona e da un testo del titolo con un sottotitolo facoltativo.
 
-- **Elenco** di &ndash; Modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
+- **Elenca** &ndash; modalità di navigazione elenco. Anziché il testo del titolo statico, in questa modalità viene visualizzato un menu di elenco per la navigazione all'interno dell'attività, ovvero può essere presentato all'utente come elenco a discesa.
 
-- **Schede** di &ndash; Modalità di spostamento a schede. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
+- **Schede** &ndash; modalità di navigazione della scheda. Anziché il testo del titolo statico, questa modalità presenta una serie di schede per la navigazione all'interno dell'attività.
 
 ## <a name="themes"></a>Themes
 
 Il menu a discesa **tema** Visualizza tutti i temi definiti nel progetto. Selezionando **altri temi** viene aperta una finestra di dialogo con un elenco di tutti i temi disponibili dal Android SDK installato, come illustrato di seguito:
 
-[![Elenco di altri temi](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[elenco temi ![More](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 Quando viene selezionato un tema, il Area di progettazione viene aggiornato per mostrare l'effetto del nuovo tema. Si noti che questa modifica viene resa permanente solo se si fa clic sul pulsante **OK** nella finestra di dialogo del **tema** . Una volta selezionato, un tema verrà incluso nel menu a discesa del **tema** come illustrato di seguito:
 
-[![Il tema chiaro è ora disponibile](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[![Light tema è ora disponibile](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## <a name="android-version"></a>Versione di Android
 
 Il selettore di **versione** di Android imposta la versione di Android usata per il rendering del layout nella finestra di progettazione. Il selettore Visualizza tutte le versioni compatibili con la versione del Framework di destinazione del progetto:
 
-[![Elenco delle versioni di Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[![List di versioni di Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 È possibile impostare la versione del Framework di destinazione nelle impostazioni del progetto nella sezione **Opzioni progetto > compila > generale** . Per altre informazioni sulla versione del Framework di destinazione, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
-Il set di widget disponibili nella casella degli strumenti è determinato dalla versione del Framework di destinazione del progetto. Questo vale anche per le proprietà disponibili nel **riquadro Proprietà**. L'elenco dei widget disponibili *non* è determinato dal valore selezionato nel selettore di **versione** della barra degli strumenti. Ad esempio, se si imposta la versione di destinazione del progetto su Android 4,4, è comunque possibile selezionare Android 6,0 nel selettore di versione della barra degli strumenti per vedere il progetto simile in Android 6,0, ma non sarà possibile aggiungere widget specifici per Android 6,0 &ndash;  verranno comunque limitati i widget disponibili in Android 4,4.
+Il set di widget disponibili nella casella degli strumenti è determinato dalla versione del Framework di destinazione del progetto. Questo vale anche per le proprietà disponibili nel **riquadro Proprietà**. L'elenco dei widget disponibili *non* è determinato dal valore selezionato nel selettore di **versione** della barra degli strumenti. Ad esempio, se si imposta la versione di destinazione del progetto su Android 4,4, è comunque possibile selezionare Android 6,0 nel selettore di versione della barra degli strumenti per vedere il progetto simile in Android 6,0, ma non sarà possibile aggiungere widget specifici per Android 6,0 &ndash; l'utente w i widget disponibili in Android 4,4 sono comunque limitati.
 
 Per altre informazioni sui tipi di risorse, vedere [risorse Android](~/android/app-fundamentals/resources-in-android/index.md).
 

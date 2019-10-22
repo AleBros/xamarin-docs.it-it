@@ -7,19 +7,19 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
 ms.openlocfilehash: 6f3427641ba4ace3b640fcc970fd33f55087a9c8
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68644103"
 ---
 # <a name="foreground-services"></a>Servizi in primo piano
 
-Un servizio in primo piano è un tipo speciale di servizio associato o un servizio avviato. Occasionalmente i servizi eseguiranno le attività che gli utenti devono conoscere attivamente, questi servizi sono noti come _Servizi in primo piano_. Un esempio di servizio in primo piano è costituito da un'app che fornisce all'utente le istruzioni per la guida o l'esplorazione. Anche se l'app è in background, è ancora importante che il servizio disponga di risorse sufficienti per funzionare correttamente e che l'utente disponga di un modo rapido e pratico per accedere all'app. Per un'app Android, questo significa che un servizio in primo piano deve ricevere una priorità più alta rispetto a un servizio "normale" e un `Notification` servizio in primo piano deve fornire un che verrà visualizzato da Android fino a quando il servizio è in esecuzione.
+Un servizio in primo piano è un tipo speciale di servizio associato o un servizio avviato. Occasionalmente i servizi eseguiranno le attività che gli utenti devono conoscere attivamente, questi servizi sono noti come _Servizi in primo piano_. Un esempio di servizio in primo piano è costituito da un'app che fornisce all'utente le istruzioni per la guida o l'esplorazione. Anche se l'app è in background, è ancora importante che il servizio disponga di risorse sufficienti per funzionare correttamente e che l'utente disponga di un modo rapido e pratico per accedere all'app. Per un'app Android, questo significa che un servizio in primo piano deve ricevere una priorità più alta rispetto a un servizio "normale" e un servizio in primo piano deve fornire un `Notification` che verrà visualizzato da Android fino a quando il servizio è in esecuzione.
 
-Per avviare un servizio in primo piano, l'app deve inviare una finalità che indica ad Android di avviare il servizio. Il servizio deve quindi registrarsi come servizio in primo piano con Android. Le app in esecuzione in Android 8,0 (o versioni successive) devono usare `Context.StartForegroundService` il metodo per avviare il servizio, mentre le app in esecuzione su dispositivi con una versione precedente di Android devono usare`Context.StartService`
+Per avviare un servizio in primo piano, l'app deve inviare una finalità che indica ad Android di avviare il servizio. Il servizio deve quindi registrarsi come servizio in primo piano con Android. Le app in esecuzione in Android 8,0 (o versioni successive) devono usare il metodo `Context.StartForegroundService` per avviare il servizio, mentre le app in esecuzione su dispositivi con una versione precedente di Android devono usare `Context.StartService`
 
-Questo C# metodo di estensione è un esempio di come avviare un servizio in primo piano. In Android 8,0 e versioni successive userà il `StartForegroundService` metodo; in caso contrario, verrà usato il metodo precedente. `StartService`
+Questo C# metodo di estensione è un esempio di come avviare un servizio in primo piano. In Android 8,0 e versioni successive utilizzerà il metodo `StartForegroundService`. in caso contrario, verrà usato il metodo di `StartService` precedente.
 
 ```csharp
 public static void StartForegroundServiceCompat<T>(this Context context, Bundle args = null) where T : Service
@@ -43,14 +43,14 @@ public static void StartForegroundServiceCompat<T>(this Context context, Bundle 
 
 ## <a name="registering-as-a-foreground-service"></a>Registrazione come servizio in primo piano
 
-Dopo l' [`StartForeground`](xref:Android.App.Service.StartForeground*)avvio di un servizio in primo piano, è necessario registrarsi con Android richiamando. Se il servizio viene avviato con il `Service.StartForegroundService` metodo ma non registra se stesso, Android arresterà il servizio e contrassegnerà l'app come non reattiva.
+Dopo l'avvio di un servizio in primo piano, è necessario registrarsi con Android richiamando il [`StartForeground`](xref:Android.App.Service.StartForeground*). Se il servizio viene avviato con il metodo `Service.StartForegroundService` ma non registra se stesso, Android arresterà il servizio e contrassegnerà l'app come non reattiva.
 
-`StartForeground`accetta due parametri, entrambi obbligatori:
+`StartForeground` accetta due parametri, entrambi obbligatori:
 
 - Valore integer univoco all'interno dell'applicazione per identificare il servizio.
-- `Notification` Oggetto che verrà visualizzato da Android nella barra di stato per tutto il tempo in cui il servizio è in esecuzione.
+- Un `Notification` oggetto che verrà visualizzato da Android nella barra di stato per tutto il tempo in cui il servizio è in esecuzione.
 
-Android visualizzerà la notifica sulla barra di stato per tutto il tempo in cui il servizio è in esecuzione. La notifica, come minimo, fornirà un segnale visivo all'utente che il servizio è in esecuzione. Idealmente, la notifica deve fornire all'utente un collegamento all'applicazione o forse alcuni pulsanti di azione per controllare l'applicazione. Un esempio è un lettore &ndash; musicale che la notifica visualizzata potrebbe avere pulsanti per sospendere/riprodurre la musica, per tornare al brano precedente o per passare al brano successivo. 
+Android visualizzerà la notifica sulla barra di stato per tutto il tempo in cui il servizio è in esecuzione. La notifica, come minimo, fornirà un segnale visivo all'utente che il servizio è in esecuzione. Idealmente, la notifica deve fornire all'utente un collegamento all'applicazione o forse alcuni pulsanti di azione per controllare l'applicazione. Un esempio è un lettore musicale &ndash; la notifica visualizzata potrebbe avere pulsanti per sospendere/riprodurre la musica, per tornare al brano precedente o per passare al brano successivo. 
 
 Questo frammento di codice è un esempio di registrazione di un servizio come servizio in primo piano:   
 
@@ -90,7 +90,7 @@ Altre informazioni sulle notifiche sono disponibili nella sezione [notifiche loc
 
 ## <a name="unregistering-as-a-foreground-service"></a>Annullamento della registrazione come servizio in primo piano
 
-Un servizio può deelencare se stesso come servizio in primo piano chiamando il `StopForeground`metodo. `StopForeground`non arresterà il servizio, ma rimuoverà l'icona di notifica e segnalerà a Android che questo servizio può essere arrestato se necessario.
+Un servizio può deelencare se stesso come servizio in primo piano chiamando il metodo `StopForeground`. `StopForeground` non arresterà il servizio, ma rimuoverà l'icona di notifica e segnalerà a Android che questo servizio può essere arrestato se necessario.
 
 La notifica della barra di stato visualizzata può essere rimossa anche passando `true` al metodo: 
 
@@ -98,11 +98,11 @@ La notifica della barra di stato visualizzata può essere rimossa anche passando
 StopForeground(true);
 ```
 
-Se il servizio viene interrotto con una chiamata a o `StopSelf` `StopService`, la notifica della barra di stato verrà rimossa.
+Se il servizio viene interrotto con una chiamata a `StopSelf` o `StopService`, la notifica della barra di stato verrà rimossa.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android.App.Service](xref:Android.App.Service)
-- [Android.App.Service.StartForeground](xref:Android.App.Service.StartForeground*)
+- [Android. app. Service](xref:Android.App.Service)
+- [Android. app. Service. StartForeground](xref:Android.App.Service.StartForeground*)
 - [Notifiche locali](~/android/app-fundamentals/notifications/local-notifications.md)
-- [ForegroundServiceDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-foregroundservicedemo)
+- [ForegroundServiceDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-foregroundservicedemo)

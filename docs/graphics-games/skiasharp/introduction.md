@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
 ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "64749931"
 ---
 # <a name="skiasharp-platform-independent-examples"></a>Esempi indipendenti dalla piattaforma SkiaSharp
@@ -22,7 +22,7 @@ SkiaSharp offre un'API grafica 2D avanzata e potente che può essere usata per e
 
 La libreria è attualmente disponibile come [pacchetto NuGet](https://www.nuget.org/packages/SkiaSharp)multipiattaforma. è possibile aggiungerlo al progetto aggiungendo il riferimento a NuGet.
 
-Per disegnare, il codice creerà un oggetto `SkCanvas` che descrive la superficie in cui verranno eseguite le operazioni di disegno.
+Per disegnare, il codice creerà un `SkCanvas` che descrive la superficie in cui verranno eseguite le operazioni di disegno.
 
 ## <a name="obtaining-an-skcanvas"></a>Ottenere un SKCanvas
 
@@ -36,7 +36,7 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 
 ## <a name="drawing-on-skcanvas"></a>Disegno su SKCanvas
 
-`SKCanvas` Usa un modello di disegno simile a uno spirito per altri modelli di disegno con cui si ha familiarità, USA i colori con un canale di trasparenza facoltativo e può disegnare linee, archi, testo e immagini.
+Il `SKCanvas` utilizza un modello di disegno simile allo spirito per altri modelli di disegno con cui si ha familiarità, utilizza colori con un canale di trasparenza facoltativo e può disegnare linee, archi, testo e immagini.
 
 Di seguito sono riportate solo alcune delle numerose operazioni che è possibile eseguire con SkiaSharp.  Negli esempi seguenti la variabile `canvas` è di tipo SKCanvas.
 

@@ -1,13 +1,13 @@
 ---
 ms.openlocfilehash: 31c8d1b781648f2d9c69062c52e71478fc7a496b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "69529107"
 ---
 
-La riga di comando seguente consente di specificare una build di rilascio della soluzione **SOLUTION_FILE. sln** per iPhone. È possibile impostare la posizione dell'IPA specificando la `IpaPackageDir` proprietà nella riga di comando:
+La riga di comando seguente consente di specificare una build di rilascio della soluzione **SOLUTION_FILE. sln** per iPhone. È possibile impostare la posizione dell'IPA specificando la proprietà `IpaPackageDir` nella riga di comando:
 
 - Sul Mac, usando **xbuild**:
 
@@ -30,6 +30,6 @@ Il comando **xbuild** si trova in genere nella directory **/Library/Frameworks/m
           /t:Build MyProject.sln
   ```
 
-**MSBuild** non espanderà `$( )` automaticamente le espressioni passate dalla riga di comando. Per questo motivo è consigliabile usare un percorso completo quando si imposta la dalla `IpaPackageDir` riga di comando.
+**MSBuild** non espanderà automaticamente `$( )` espressioni passate dalla riga di comando. Per questo motivo è consigliabile usare un percorso completo quando si imposta il `IpaPackageDir` dalla riga di comando.
 
-Vedere le [Note sulla versione per iOS 9,8](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_9/xamarin.ios_9.8.md#new-msbuild-property-ipapackagedir-to-customize-ipa-output-location) per ulteriori informazioni sulla `IpaPackageDir` proprietà.
+Vedere le [Note sulla versione per iOS 9,8](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_9/xamarin.ios_9.8.md#new-msbuild-property-ipapackagedir-to-customize-ipa-output-location) per altri dettagli sulla proprietà `IpaPackageDir`.

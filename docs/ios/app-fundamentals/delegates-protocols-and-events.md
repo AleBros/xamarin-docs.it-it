@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
 ms.openlocfilehash: d42263733c7fa793713738be4b389eaa4850f38b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68649363"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventi, protocolli e delegati in Novell. iOS
@@ -29,8 +29,8 @@ In questo articolo vengono fornite informazioni su tutti questi argomenti, che o
 
 Per illustrare i protocolli e i delegati, verrà compilata una semplice applicazione map che aggiunge un'annotazione a una mappa, come illustrato di seguito:
 
-[![](delegates-protocols-and-events-images/01-map-sml.png "Esempio di applicazione mappa semplice che aggiunge un'annotazione a una mappa")](delegates-protocols-and-events-images/01-map.png#lightbox)
-[![]di(delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "un'annotazione di esempio aggiunta a una mappa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+[![](delegates-protocols-and-events-images/01-map-sml.png "An example of a simple map application that adds an annotation to a map")](delegates-protocols-and-events-images/01-map.png#lightbox)
+[![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "An example annotation added to a map")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Prima di affrontare questa app, è necessario iniziare esaminando gli eventi .NET in UIKit.
 
@@ -52,23 +52,23 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-Il codice precedente viene cablato nel `ViewDidLoad` metodo di UIViewController. La `aButton` variabile fa riferimento a un pulsante, che può essere aggiunto in iOS designer o con il codice. La figura seguente mostra un pulsante che è stato aggiunto in iOS designer:
+Il codice precedente viene cablato nel `ViewDidLoad` metodo di UIViewController. La variabile `aButton` fa riferimento a un pulsante, che può essere aggiunto in iOS designer o con il codice. La figura seguente mostra un pulsante che è stato aggiunto in iOS designer:
 
-[![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "Un pulsante aggiunto in iOS designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
+[![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "A button added in iOS Designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
 Novell. iOS supporta anche lo stile di azione di destinazione della connessione del codice a un'interazione che si verifica con un controllo. Per creare un'azione di destinazione per il pulsante **Hello** , fare doppio clic su di essa nella finestra di progettazione iOS. Verrà visualizzato il file code-behind di UIViewController e allo sviluppatore verrà richiesto di selezionare un percorso per inserire il metodo di connessione:
 
-[![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "File code-behind UIViewControllers")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
+[![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "The UIViewControllers code-behind file")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
 Dopo aver selezionato una località, viene creato un nuovo metodo che viene cablato al controllo. Nell'esempio seguente viene scritto un messaggio nella console quando si fa clic sul pulsante:
 
-[![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "Quando si fa clic sul pulsante, viene scritto un messaggio nella console.")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
+[![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "A message will be written to the console when the button is clicked")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
 Per altri dettagli sul modello di azione di destinazione iOS, vedere la sezione relativa all'azione di destinazione delle [competenze di base dell'applicazione per iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) nella libreria degli sviluppatori iOS di Apple.
 
 Per ulteriori informazioni su come utilizzare iOS designer con Novell. iOS, vedere la documentazione [introduttiva di iOS designer](~/ios/user-interface/designer/index.md) .
 
-## <a name="events"></a>Eventi
+## <a name="events"></a>eventi
 
 Se si vuole intercettare gli eventi da UIControl, è possibile scegliere tra l' C# uso delle espressioni lambda e delle funzioni delegate per l'uso delle API Objective-C di basso livello.
 
@@ -110,7 +110,7 @@ button2.TouchDown += handler;
 
 ## <a name="monitoring-more-than-one-kind-of-event"></a>Monitoraggio di più di un tipo di evento
 
-Gli C# eventi per i flag UIControlEvent hanno un mapping uno-a-uno ai singoli flag. Quando si desidera che lo stesso frammento di codice gestisca due o più eventi, utilizzare `UIControl.AddTarget` il metodo:
+Gli C# eventi per i flag UIControlEvent hanno un mapping uno-a-uno ai singoli flag. Quando si vuole che lo stesso frammento di codice gestisca due o più eventi, usare il metodo `UIControl.AddTarget`:
 
 ```csharp
 button.AddTarget (handler, UIControlEvent.TouchDown | UIControlEvent.TouchCancel);
@@ -142,17 +142,17 @@ Si noti che, se si implementa il metodo di istanza in una classe di base eredita
 
 Un protocollo è una funzionalità del linguaggio Objective-C che fornisce un elenco di dichiarazioni di metodi. Ha uno scopo analogo a un'interfaccia in C#, la principale differenza consiste nel fatto che un protocollo può avere metodi facoltativi. I metodi facoltativi non vengono chiamati se la classe che adotta un protocollo non li implementa. Inoltre, una singola classe in Objective-C può implementare più protocolli, così come una C# classe può implementare più interfacce.
 
-Apple usa protocolli in iOS per definire i contratti per le classi da adottare, astraendondo la classe di implementazione dal chiamante, operando così come C# un'interfaccia. I protocolli vengono utilizzati sia negli scenari non delegati (ad esempio `MKAnnotation` con l'esempio illustrato di seguito), sia con i delegati (come presentato più avanti in questo documento, nella sezione delegati).
+Apple usa protocolli in iOS per definire i contratti per le classi da adottare, astraendondo la classe di implementazione dal chiamante, operando così come C# un'interfaccia. I protocolli vengono utilizzati sia negli scenari non delegati (ad esempio con il `MKAnnotation` esempio illustrato di seguito), sia con i delegati, come illustrato più avanti in questo documento, nella sezione delegati.
 
 ### <a name="protocols-with-xamarinios"></a>Protocolli con Novell. iOS
 
-Di seguito è riportato un esempio di utilizzo di un protocollo Objective-C di Novell. iOS. Per questo esempio, verrà usato il `MKAnnotation` protocollo, che fa parte `MapKit` del Framework. `MKAnnotation`è un protocollo che consente a qualsiasi oggetto che lo adotta di fornire informazioni su un'annotazione che può essere aggiunta a una mappa. Ad esempio, un oggetto che `MKAnnotation` implementa fornisce la posizione dell'annotazione e il titolo ad esso associato.
+Di seguito è riportato un esempio di utilizzo di un protocollo Objective-C di Novell. iOS. Per questo esempio verrà usato il protocollo `MKAnnotation`, che fa parte del Framework di `MapKit`. `MKAnnotation` è un protocollo che consente a qualsiasi oggetto che lo adotta di fornire informazioni su un'annotazione che può essere aggiunta a una mappa. Ad esempio, un oggetto che implementa `MKAnnotation` fornisce la posizione dell'annotazione e il titolo associato.
 
-In questo modo, il `MKAnnotation` protocollo viene usato per fornire dati pertinenti che accompagnano un'annotazione. La visualizzazione effettiva per l'annotazione è compilata dai dati nell'oggetto che adotta il `MKAnnotation` protocollo. Ad esempio, il testo del callout visualizzato quando l'utente tocca l'annotazione, come illustrato nella schermata riportata di seguito, deriva dalla `Title` proprietà della classe che implementa il protocollo:
+In questo modo, il protocollo `MKAnnotation` viene usato per fornire dati pertinenti che accompagnano un'annotazione. La visualizzazione effettiva per l'annotazione è compilata dai dati nell'oggetto che adotta il protocollo `MKAnnotation`. Ad esempio, il testo del callout visualizzato quando l'utente tocca l'annotazione, come illustrato nella schermata seguente, deriva dalla proprietà `Title` nella classe che implementa il protocollo:
 
- [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "Testo di esempio per il callout quando l'utente tocca l'annotazione")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "Example text for the callout when the user taps on the annotation")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
-Come descritto nella sezione successiva, [approfondimenti sui protocolli](#protocols-deep-dive), Novell. iOS associa i protocolli alle classi astratte. Per il `MKAnnotation` protocollo, la classe C# associata è denominata `MKAnnotation` per simulare il nome del protocollo ed è una sottoclasse di `NSObject`, la classe di base radice per CocoaTouch. Il protocollo richiede l'implementazione di un getter e un setter per la coordinata. Tuttavia, un titolo e un sottotitolo sono facoltativi. `MKAnnotation` Quindi, nella classe, la `Coordinate` proprietà è *astratta*, richiedendo che venga implementata e le `Title` proprietà e `Subtitle` sono contrassegnate come *virtuali*, rendendole facoltative, come illustrato di seguito:
+Come descritto nella sezione successiva, [approfondimenti sui protocolli](#protocols-deep-dive), Novell. iOS associa i protocolli alle classi astratte. Per il protocollo `MKAnnotation`, la classe C# associata è denominata `MKAnnotation` per simulare il nome del protocollo ed è una sottoclasse di `NSObject`, la classe di base radice per CocoaTouch. Il protocollo richiede l'implementazione di un getter e un setter per la coordinata. Tuttavia, un titolo e un sottotitolo sono facoltativi. Quindi, nella classe `MKAnnotation` la proprietà `Coordinate` è *astratta*, richiedendo che venga implementata e le proprietà `Title` e `Subtitle` siano contrassegnate come *virtuali*, rendendole facoltative, come illustrato di seguito:
 
 ```csharp
 [Register ("MKAnnotation"), Model ]
@@ -187,7 +187,7 @@ public abstract class MKAnnotation : NSObject
 }
 ```
 
-Qualsiasi classe può fornire dati di annotazione semplicemente derivando da `MKAnnotation`, purché venga implementata almeno la `Coordinate` proprietà. Ecco, ad esempio, una classe di esempio che accetta la coordinata nel costruttore e restituisce una stringa per il titolo:
+Qualsiasi classe può fornire dati di annotazione semplicemente derivando da `MKAnnotation`, purché venga implementata almeno la proprietà `Coordinate`. Ecco, ad esempio, una classe di esempio che accetta la coordinata nel costruttore e restituisce una stringa per il titolo:
 
 ```csharp
 /// <summary>
@@ -214,7 +214,7 @@ public class SampleMapAnnotation : MKAnnotation
 }
 ```
 
-Tramite il protocollo a cui è associato, tutte le classi che sottoclassi `MKAnnotation` possono fornire i dati rilevanti che verranno usati dalla mappa quando crea la visualizzazione dell'annotazione. Per aggiungere un'annotazione a una mappa, è `AddAnnotation` sufficiente chiamare il `MKMapView` metodo di un'istanza, come illustrato nel codice seguente:
+Tramite il protocollo a cui è associato, tutte le classi sottoclassi `MKAnnotation` possono fornire i dati rilevanti che verranno usati dalla mappa quando crea la visualizzazione dell'annotazione. Per aggiungere un'annotazione a una mappa, è sufficiente chiamare il metodo `AddAnnotation` di un'istanza di `MKMapView`, come illustrato nel codice seguente:
 
 ```csharp
 //an arbitrary coordinate used for demonstration here
@@ -225,15 +225,15 @@ var sampleCoordinate =
 map.AddAnnotation (new SampleMapAnnotation (sampleCoordinate));
 ```
 
-La variabile map qui è un'istanza di `MKMapView`, ovvero la classe che rappresenta la mappa stessa. Utilizzerà i `Coordinate` dati derivati dall' `SampleMapAnnotation` istanza di per posizionare la visualizzazione delle annotazioni sulla mappa. `MKMapView`
+La variabile map qui è un'istanza di un `MKMapView`, ovvero la classe che rappresenta la mappa stessa. Il `MKMapView` utilizzerà i dati `Coordinate` derivati dall'istanza di `SampleMapAnnotation` per posizionare la visualizzazione delle annotazioni sulla mappa.
 
-Il `MKAnnotation` protocollo fornisce un set noto di funzionalità per tutti gli oggetti che lo implementano, senza che il consumer (la mappa in questo caso) debba conoscere i dettagli di implementazione. In questo modo si semplifica l'aggiunta di un'ampia gamma di possibili annotazioni a una mappa.
+Il protocollo `MKAnnotation` fornisce un set noto di funzionalità per tutti gli oggetti che lo implementano, senza il consumer (in questo caso la mappa) che deve conoscere i dettagli di implementazione. In questo modo si semplifica l'aggiunta di un'ampia gamma di possibili annotazioni a una mappa.
 
 ### <a name="protocols-deep-dive"></a>Approfondimento sui protocolli
 
 Poiché C# le interfacce non supportano metodi facoltativi, Novell. iOS esegue il mapping di protocolli a classi astratte. L'adozione di un protocollo in Objective-C viene pertanto eseguita in Novell. iOS derivando dalla classe astratta associata al protocollo e implementando i metodi richiesti. Questi metodi verranno esposti come metodi astratti nella classe. I metodi facoltativi del protocollo verranno associati a metodi virtuali della C# classe.
 
-Ad esempio, ecco una parte del `UITableViewDataSource` protocollo come associato in Novell. iOS:
+Ecco ad esempio una parte del protocollo `UITableViewDataSource` come associato in Novell. iOS:
 
 ```csharp
 public abstract class UITableViewDataSource : NSObject
@@ -249,9 +249,9 @@ public abstract class UITableViewDataSource : NSObject
 Si noti che la classe è astratta. Novell. iOS rende la classe astratta per supportare i metodi facoltativi o obbligatori nei protocolli.
 Tuttavia, a differenza dei protocolli Objective-C, o C# delle interfacce, C# le classi non supportano l'ereditarietà multipla. Ciò influisca sulla progettazione C# del codice che usa i protocolli e in genere conduce a classi annidate. Ulteriori informazioni su questo problema sono descritte più avanti in questo documento, nella sezione delegati.
 
- `GetCell(…)`è un metodo astratto, associato al *selettore*Objective-C `tableView:cellForRowAtIndexPath:`,, che è un metodo `UITableViewDataSource` obbligatorio del protocollo. Selector è il termine Objective-C per il nome del metodo. Per applicare il metodo come richiesto, Novell. iOS lo dichiara come abstract. L'altro metodo, `NumberOfSections(…)`, è associato a `numberOfSectionsInTableview:`. Questo metodo è facoltativo nel protocollo, quindi Novell. iOS lo dichiara come virtuale, rendendolo facoltativo per l'override in C#.
+ `GetCell(…)` è un metodo astratto, associato al *selettore*Objective-C, `tableView:cellForRowAtIndexPath:`, che è un metodo obbligatorio del protocollo di `UITableViewDataSource`. Selector è il termine Objective-C per il nome del metodo. Per applicare il metodo come richiesto, Novell. iOS lo dichiara come abstract. L'altro metodo, `NumberOfSections(…)`, è associato a `numberOfSectionsInTableview:`. Questo metodo è facoltativo nel protocollo, quindi Novell. iOS lo dichiara come virtuale, rendendolo facoltativo per l'override in C#.
 
-Novell. iOS gestisce automaticamente tutte le associazioni iOS. Tuttavia, se è sempre necessario associare un protocollo da Objective-C manualmente, è possibile farlo decorando una classe con `ExportAttribute`. Si tratta dello stesso metodo utilizzato da Novell. iOS.
+Novell. iOS gestisce automaticamente tutte le associazioni iOS. Tuttavia, se è necessario associare manualmente un protocollo da Objective-C, è possibile farlo decorando una classe con la `ExportAttribute`. Si tratta dello stesso metodo utilizzato da Novell. iOS.
 
 Per ulteriori informazioni su come associare tipi Objective-C in Novell. iOS, vedere l'articolo [associazione di tipi Objective-c](~/ios/platform/binding-objective-c/index.md).
 
@@ -261,7 +261,7 @@ Tuttavia, non è possibile usare i protocolli. Vengono usati anche in iOS come b
 
 iOS usa i delegati Objective-C per implementare il modello di delega, in cui un oggetto passa il lavoro a un altro. L'oggetto che esegue il lavoro è il delegato del primo oggetto. Un oggetto indica al delegato di svolgere il proprio lavoro inviando messaggi dopo che si verificano determinate operazioni. L'invio di un messaggio come questo in Objective-C equivale dal punto di vista funzionale alla C#chiamata a un metodo in. Un delegato implementa i metodi in risposta a queste chiamate, quindi fornisce le funzionalità per l'applicazione.
 
-I delegati consentono di estendere il comportamento delle classi senza la necessità di creare sottoclassi. Le applicazioni in iOS spesso usano delegati quando una classe esegue una nuova chiamata a un'altra in seguito a un'azione importante. Ad esempio, la `MKMapView` classe richiama il delegato quando l'utente tocca un'annotazione su una mappa, concedendo all'autore della classe delegata la possibilità di rispondere all'interno dell'applicazione. È possibile utilizzare un esempio di questo tipo di utilizzo dei delegati più avanti in questo articolo, ad esempio utilizzando un delegato con Novell. iOS.
+I delegati consentono di estendere il comportamento delle classi senza la necessità di creare sottoclassi. Le applicazioni in iOS spesso usano delegati quando una classe esegue una nuova chiamata a un'altra in seguito a un'azione importante. Ad esempio, la classe `MKMapView` chiama di nuovo al delegato quando l'utente tocca un'annotazione su una mappa, concedendo all'autore della classe Delegate la possibilità di rispondere all'interno dell'applicazione. È possibile utilizzare un esempio di questo tipo di utilizzo dei delegati più avanti in questo articolo, ad esempio utilizzando un delegato con Novell. iOS.
 
 A questo punto, è possibile chiedersi come una classe determini quali metodi chiamare sul delegato. Si tratta di un'altra posizione in cui si usano i protocolli. In genere, i metodi disponibili per un delegato provengono dai protocolli che adottano.
 
@@ -270,20 +270,20 @@ A questo punto, è possibile chiedersi come una classe determini quali metodi ch
 Abbiamo visto in precedenza come vengono usati i protocolli per supportare l'aggiunta di annotazioni a una mappa.
 I protocolli vengono utilizzati anche per fornire un set noto di metodi per le classi da chiamare dopo che si verificano determinati eventi, ad esempio dopo che l'utente tocca un'annotazione su una mappa o seleziona una cella in una tabella. Le classi che implementano questi metodi sono note come delegati delle classi che le chiamano.
 
-Le classi che supportano la delega eseguono questa operazione esponendo una proprietà del delegato, a cui viene assegnata una classe che implementa il delegato. I metodi implementati per il delegato dipendono dal protocollo adottato dal delegato specifico. Per il `UITableView` metodo, si implementa il `UITableViewDelegate` protocollo, per il `UIAccelerometer` metodo, si implementa `UIAccelerometerDelegate`e così via per qualsiasi altra classe in iOS per cui si vuole esporre un delegato.
+Le classi che supportano la delega eseguono questa operazione esponendo una proprietà del delegato, a cui viene assegnata una classe che implementa il delegato. I metodi implementati per il delegato dipendono dal protocollo adottato dal delegato specifico. Per il metodo di `UITableView`, si implementa il protocollo di `UITableViewDelegate`, per il metodo `UIAccelerometer`, è necessario implementare `UIAccelerometerDelegate` e così via per qualsiasi altra classe in iOS per cui si vuole esporre un delegato.
 
-La `MKMapView` classe illustrata nell'esempio precedente dispone anche di una proprietà denominata Delegate, che verrà chiamata dopo che si verificano vari eventi. Il delegato per `MKMapView` è di tipo `MKMapViewDelegate`.
+La classe `MKMapView` illustrata nell'esempio precedente dispone anche di una proprietà denominata Delegate, che verrà chiamata dopo che si verificano vari eventi. Il delegato per `MKMapView` è di tipo `MKMapViewDelegate`.
 Questa operazione verrà usata a breve in un esempio per rispondere all'annotazione dopo che è stata selezionata, ma per prima cosa si esaminerà la differenza tra i delegati forte e debole.
 
-### <a name="strong-delegates-vs-weak-delegates"></a>Delegati forti rispetto a Delegati vulnerabili
+### <a name="strong-delegates-vs-weak-delegates"></a>Delegati forti rispetto a delegati deboli
 
 I delegati che abbiamo esaminato finora sono delegati forti, ovvero sono fortemente tipizzati. Le associazioni Novell. iOS sono fornite con una classe fortemente tipizzata per ogni protocollo delegato in iOS. Tuttavia, iOS ha anche il concetto di un delegato debole. Anziché sottoclassare una classe associata al protocollo Objective-C per un determinato delegato, iOS consente inoltre di scegliere di associare i metodi di protocollo manualmente in qualsiasi classe che deriva da NSObject, decorando i metodi con ExportAttribute e quindi Specifica dei selettori appropriati.
 Quando si accetta questo approccio, si assegna un'istanza della classe alla proprietà WeakDelegate anziché alla proprietà delegate. Un delegato debole offre la flessibilità necessaria per portare la classe Delegate a una gerarchia di ereditarietà diversa. Si osservi un esempio di Novell. iOS in cui vengono usati delegati sia forti che vulnerabili.
 
 ### <a name="example-using-a-delegate-with-xamarinios"></a>Esempio di utilizzo di un delegato con Novell. iOS
 
-Per eseguire il codice in risposta all'utente che tocca l'annotazione nell'esempio, è possibile `MKMapViewDelegate` sottoscrivere una sottoclasse e `MKMapView`assegnare `Delegate` un'istanza alla proprietà di. Il `MKMapViewDelegate` protocollo contiene solo metodi facoltativi.
-Pertanto, tutti i metodi sono virtuali associati a questo protocollo nella classe Novell. iOS `MKMapViewDelegate` . Quando l'utente seleziona un'annotazione `MKMapView` , l'istanza invierà il `mapView:didSelectAnnotationView:` messaggio al relativo delegato. Per gestire questa operazione in Novell. iOS, è necessario eseguire l' `DidSelectAnnotationView (MKMapView mapView, MKAnnotationView annotationView)` override del metodo nella sottoclasse MKMapViewDelegate come indicato di seguito:
+Per eseguire il codice in risposta all'utente che tocca l'annotazione nell'esempio, è possibile sottoclassare `MKMapViewDelegate` e assegnare un'istanza alla proprietà `Delegate` di `MKMapView`. Il protocollo `MKMapViewDelegate` contiene solo metodi facoltativi.
+Pertanto, tutti i metodi sono virtuali associati a questo protocollo nella classe `MKMapViewDelegate` Novell. iOS. Quando l'utente seleziona un'annotazione, l'istanza di `MKMapView` invierà il messaggio di `mapView:didSelectAnnotationView:` al relativo delegato. Per gestire questa operazione in Novell. iOS, è necessario eseguire l'override del metodo `DidSelectAnnotationView (MKMapView mapView, MKAnnotationView annotationView)` nella sottoclasse MKMapViewDelegate come indicato di seguito:
 
 ```csharp
 public class SampleMapDelegate : MKMapViewDelegate
@@ -308,9 +308,9 @@ public class SampleMapDelegate : MKMapViewDelegate
 }
 ```
 
-La classe SampleMapDelegate illustrata in precedenza viene implementata come classe annidata nel controller che `MKMapView` contiene l'istanza. In Objective-C si noterà spesso che il controller adotterà più protocolli direttamente all'interno della classe. Tuttavia, poiché i protocolli sono associati alle classi in Novell. iOS, le classi che implementano delegati fortemente tipizzati vengono in genere incluse come classi annidate.
+La classe SampleMapDelegate illustrata in precedenza viene implementata come classe annidata nel controller che contiene l'istanza di `MKMapView`. In Objective-C si noterà spesso che il controller adotterà più protocolli direttamente all'interno della classe. Tuttavia, poiché i protocolli sono associati alle classi in Novell. iOS, le classi che implementano delegati fortemente tipizzati vengono in genere incluse come classi annidate.
 
-Con l'implementazione della classe delegata sul posto, è sufficiente creare un'istanza del delegato nel controller e assegnarla alla `MKMapView`proprietà di `Delegate` , come illustrato di seguito:
+Con l'implementazione della classe delegata sul posto, è sufficiente creare un'istanza del delegato nel controller e assegnarla alla proprietà `Delegate` del `MKMapView` come illustrato di seguito:
 
 ```csharp
 public partial class Protocols_Delegates_EventsViewController : UIViewController
@@ -333,7 +333,7 @@ public partial class Protocols_Delegates_EventsViewController : UIViewController
 }
 ```
 
-Per usare un delegato debole per eseguire la stessa operazione, è necessario associare il metodo manualmente in qualsiasi classe che derivi da `NSObject` e assegnarla `WeakDelegate` alla proprietà di `MKMapView`. Poiché la `UIViewController` classe deriva infine da `NSObject` (come ogni classe Objective-C in CocoaTouch), è possibile implementare semplicemente un metodo associato a `mapView:didSelectAnnotationView:` direttamente nel controller e assegnare il controller a `MKMapView` `WeakDelegate`, evitando la necessità della classe annidata aggiuntiva. Il codice seguente illustra questo approccio:
+Per usare un delegato debole per eseguire la stessa operazione, è necessario associare il metodo manualmente in qualsiasi classe che derivi da `NSObject` e assegnarla alla proprietà `WeakDelegate` dell'`MKMapView`. Poiché la classe `UIViewController` deriva infine da `NSObject` (ad esempio ogni classe Objective-C in CocoaTouch), è possibile implementare semplicemente un metodo associato a `mapView:didSelectAnnotationView:` direttamente nel controller e assegnare il controller alla `WeakDelegate` di `MKMapView`, evitando la necessità di un'ulteriore classe annidata. Il codice seguente illustra questo approccio:
 
 ```csharp
 public partial class Protocols_Delegates_EventsViewController : UIViewController
@@ -355,13 +355,13 @@ public partial class Protocols_Delegates_EventsViewController : UIViewController
 }
 ```
 
-Quando si esegue questo codice, l'applicazione si comporta esattamente come se eseguisse la versione del delegato fortemente tipizzata. Il vantaggio di questo codice è che il delegato debole non richiede la creazione della classe aggiuntiva che è stata creata quando è stato usato il delegato fortemente tipizzato. Tuttavia, questo problema si verifica a scapito dell'indipendenza dai tipi. Se si commette un errore nel selettore passato a `ExportAttribute`, non si scoprirebbe fino alla fase di esecuzione.
+Quando si esegue questo codice, l'applicazione si comporta esattamente come se eseguisse la versione del delegato fortemente tipizzata. Il vantaggio di questo codice è che il delegato debole non richiede la creazione della classe aggiuntiva che è stata creata quando è stato usato il delegato fortemente tipizzato. Tuttavia, questo problema si verifica a scapito dell'indipendenza dai tipi. Se si commette un errore nel selettore passato al `ExportAttribute`, non si scoprirà fino al runtime.
 
 ### <a name="events-and-delegates"></a>Eventi e delegati
 
 I delegati vengono usati per i callback in iOS in modo analogo al modo in cui .NET usa gli eventi. Per rendere le API iOS e il modo in cui usano i delegati Objective-C sembrano più simili a .NET, Novell. iOS espone gli eventi .NET in molte posizioni in cui i delegati vengono usati in iOS.
 
-Ad esempio, l'implementazione precedente in cui `MKMapViewDelegate` l'oggetto ha risposto a un'annotazione selezionata può essere implementata anche in Novell. iOS tramite un evento .NET. In tal caso, l'evento verrebbe definito in `MKMapView` e chiamato. `DidSelectAnnotationView` Avrebbe una `EventArgs` sottoclasse di tipo `MKMapViewAnnotationEventsArgs`. La `View` proprietà di `MKMapViewAnnotationEventsArgs` darebbe un riferimento alla visualizzazione dell'annotazione, da cui è possibile procedere con la stessa implementazione precedente, come illustrato di seguito:
+Ad esempio, l'implementazione precedente in cui il `MKMapViewDelegate` ha risposto a un'annotazione selezionata può essere implementata anche in Novell. iOS tramite un evento .NET. In tal caso, l'evento verrebbe definito in `MKMapView` e chiamato `DidSelectAnnotationView`. Avrebbe una sottoclasse `EventArgs` di tipo `MKMapViewAnnotationEventsArgs`. La proprietà `View` di `MKMapViewAnnotationEventsArgs` darebbe un riferimento alla visualizzazione dell'annotazione, da cui è possibile procedere con la stessa implementazione precedente, come illustrato di seguito:
 
 ```csharp
 map.DidSelectAnnotationView += (s,e) => {
