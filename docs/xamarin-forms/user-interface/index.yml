@@ -115,11 +115,11 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: listview/index.md
             title: ListView
-          - href: map.md
+          - href: map/index.md
             html: 'Informazioni su come usare il controllo Map, inclusa la configurazione della piattaforma richiesta e come popolare la mappa con segnaposti.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: map.md
+              href: map/index.md
             title: Mappe
           - href: menuitem.md
             html: Informazioni su come usare la classe MenuItem per aggiungere voci al menu di scelta rapida delle celle di ListView.
