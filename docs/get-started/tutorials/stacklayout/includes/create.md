@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ea10a3cc4eca0708d1de1aee68bed74c960cbc2
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.openlocfilehash: 80688c0796a112bcb444a15cd96a6b176b8c16e0
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67560001"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72715237"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -15,7 +15,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     > [!IMPORTANT]
     > I frammenti di codice C# e XAML di questa esercitazione richiedono che la soluzione sia denominata **StackLayoutTutorial**. Se si usa un nome diverso, si verificheranno errori di compilazione quando si copia il codice da questa esercitazione alla soluzione.
 
-    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/first-app/index.md) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/first-app/index.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
+    Per altre informazioni sulla libreria .NET Standard che viene creata, vedere [Anatomy of a Xamarin.Forms application](~/get-started/quickstarts/deepdive.md#anatomy-of-a-xamarinforms-application) (Anatomia di un'applicazione Xamarin.Forms) in [Xamarin.Forms Quickstart Deep Dive](~/get-started/quickstarts/deepdive.md) (Approfondimenti per l'avvio rapido di Xamarin.Forms).
 
 1. In **Esplora soluzioni**, nel progetto **StackLayoutTutorial**, fare doppio clic su **MainPage.xaml** per aprire il file. In **MainPage.xaml** rimuovere tutto il codice del modello e sostituirlo con il codice seguente:
 
@@ -39,7 +39,7 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot delle viste figlio in un elemento StackLayout in iOS e Android](../images/create-stacklayout.png "Elemento StackLayout contenente istanze di Label")](../images/create-stacklayout-large.png#lightbox "Elemento StackLayout contenente istanze di Label")
+    [![Screenshot delle viste figlio in un controllo StackLayout, in iOS e Android](../images/create-stacklayout.png "StackLayout contenente istanze di etichette")](../images/create-stacklayout-large.png#lightbox "StackLayout contenente istanze di etichette")
 
     Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md) (StackLayout di Xamarin.Forms).
 
@@ -76,7 +76,7 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot delle viste figlio in un elemento StackLayout in iOS e Android](../images/create-stacklayout.png "Elemento StackLayout contenente istanze di Label")](../images/create-stacklayout-large.png#lightbox "Elemento StackLayout contenente istanze di Label")
+    [![Screenshot delle viste figlio in un controllo StackLayout, in iOS e Android](../images/create-stacklayout.png "StackLayout contenente istanze di etichette")](../images/create-stacklayout-large.png#lightbox "StackLayout contenente istanze di etichette")
 
     Per altre informazioni su [`StackLayout`](xref:Xamarin.Forms.StackLayout), vedere [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md) (StackLayout di Xamarin.Forms).
 

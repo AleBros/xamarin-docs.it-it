@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 807f0b7b2969d9f1039beb1a7ec7d535be5c84dc
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277287"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678723"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -33,11 +33,11 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`Grid`](xref:Xamarin.Forms.Grid). Per impostazione predefinita, `Grid` posiziona le relative visualizzazioni figlio in un'unica posizione. Pertanto, un `Grid` che contiene più elementi figlio deve specificare colonne e righe, che verranno trattate nel prossimo esercizio. Inoltre la proprietà [`Margin`](xref:Xamarin.Forms.View.Margin) indica la posizione di rendering di `Grid` all'interno di [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
     > [!NOTE]
-    > Oltre alla proprietà [`Margin`](xref:Xamarin.Forms.View.Margin), anche la proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) può essere impostata su un [`Grid`](xref:Xamarin.Forms.Grid). Il valore della proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) specifica la distanza tra le visualizzazioni in `Grid`. Per altre informazioni, vedere l'articolo sulle proprietà [Margin e Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+    > Oltre alla proprietà [`Margin`](xref:Xamarin.Forms.View.Margin), anche la proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) può essere impostata su un [`Grid`](xref:Xamarin.Forms.Grid). Il valore della proprietà [`Padding`](xref:Xamarin.Forms.Layout.Padding) specifica la distanza tra i limiti del controllo `Grid` e i relativi elementi figlio. Per altre informazioni, vedere l'articolo sulle proprietà [Margin e Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore remoto iOS o dell'emulatore Android prescelto:
 
-    [![Schermata di un'etichetta in una griglia, in iOS e Android](../images/create-grid.png "Griglia che contiene un'etichetta")](../images/create-grid-large.png#lightbox "Griglia che contiene un'etichettas")
+    [![Screenshot di un'etichetta in un controllo Grid, in iOS e Android](../images/create-grid.png "Controllo Grid contenente un'etichetta")](../images/create-grid-large.png#lightbox "Controllo Grid contenente un'etichettas")
 
     Per altre informazioni su [`Grid`](xref:Xamarin.Forms.Grid), vedere [Griglia di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -72,6 +72,6 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Schermata di un'etichetta in una griglia, in iOS e Android](../images/create-grid.png "Griglia che contiene un'etichetta")](../images/create-grid-large.png#lightbox "Griglia che contiene un'etichettas")
+    [![Screenshot di un'etichetta in un controllo Grid, in iOS e Android](../images/create-grid.png "Controllo Grid contenente un'etichetta")](../images/create-grid-large.png#lightbox "Controllo Grid contenente un'etichettas")
 
     Per altre informazioni su [`Grid`](xref:Xamarin.Forms.Grid), vedere [Griglia di Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

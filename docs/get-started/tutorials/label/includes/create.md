@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ec74a049adaa72010bf0566691e4d1f066058d4a
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277283"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678722"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,11 +31,11 @@ Per completare questa esercitazione è necessario Visual Studio 2019 (la version
     </ContentPage>
     ```
 
-    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Label.Text`](xref:Xamarin.Forms.Button.Text) specifica il testo visualizzato e la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) consente di specificare che il testo verrà centrato in senso orizzontale.
+    Questo codice definisce in modo dichiarativo l'interfaccia utente per la pagina costituita da un elemento [`Label`](xref:Xamarin.Forms.Label) in un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). La proprietà [`Label.Text`](xref:Xamarin.Forms.Button.Text) specifica il testo visualizzato e la proprietà [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) consente di specificare che il controllo `Label` verrà centrato in senso orizzontale.
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Schermata di un elemento Label centrato in iOS e Android](../images/create-label.png "Un elemento Label centrato")](../images/create-label-large.png#lightbox "Un elemento Label centrato")
+    [![Screenshot di un controllo Label centrato in iOS e Android](../images/create-label.png "Etichetta centrata")](../images/create-label-large.png#lightbox "Etichetta centrata")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -66,4 +66,4 @@ Per completare questa esercitazione è necessario Visual Studio per Mac, la vers
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Schermata di un elemento Label centrato in iOS e Android](../images/create-label.png "Un elemento Label centrato")](../images/create-label-large.png#lightbox "Un elemento Label centrato")
+    [![Screenshot di un controllo Label centrato in iOS e Android](../images/create-label.png "Etichetta centrata")](../images/create-label-large.png#lightbox "Etichetta centrata")

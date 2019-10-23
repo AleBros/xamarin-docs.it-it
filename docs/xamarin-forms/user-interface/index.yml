@@ -43,6 +43,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: button.md
             title: Button
+          - href: carouselview/index.md
+            html: Informazioni su come usare un controllo CarouselView per presentare i dati in un layout carousel lineare.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: collectionview/index.md
+            title: CarouselView
           - href: checkbox.md
             html: Informazioni su come impostare un valore booleano usando un controllo CheckBox.
             image:
@@ -74,7 +80,7 @@ sections:
               href: datepicker.md
             title: DatePicker
           - href: pop-ups.md
-            html: Informazioni su come visualizzare le finestre di dialogo che consentono di porre domande semplici agli utenti e guidare gli utenti per l’esecuzione di attività.
+            html: 'Informazioni su come visualizzare finestre di dialogo che consentono di porre domande semplici agli utenti, guidare gli utenti per l''esecuzione di attività e visualizzare richieste.'
             image:
               src: ~/media/icons/i_user-interface.svg
               href: pop-ups.md
@@ -133,6 +139,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: progressbar.md
             title: ProgressBar
+          - href: refreshview.md
+            html: 'Informazioni su come usare un controllo RefreshView, per fornire la funzionalità di pull per l''aggiornamento del contenuto scorrevole.'
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: refreshview.md
+            title: RefreshView
           - href: searchbar.md
             html: Informazioni su come avviare una ricerca usando il controllo SearchBar.
             image:
