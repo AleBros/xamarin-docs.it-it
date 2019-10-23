@@ -1,53 +1,54 @@
 ---
-title: Xamarin.Forms Picker
-description: La selezione di xamarin. Forms consente di visualizzare un breve elenco di elementi, da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe di selezione per selezionare un elemento di testo da un elenco di dati.
+title: Selezione Novell. Forms
+description: Il selettore Novell. Forms Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. Questo articolo illustra come usare la classe Picker per selezionare un elemento di testo da un elenco di dati.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: dc39fd9c129fb63fa4a3a73b15aea4204a38cdbd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c8246f8316a2a579bc890935dc4f9beecccb8dcc
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61231039"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695994"
 ---
-# <a name="xamarinforms-picker"></a>Xamarin.Forms Picker
+# <a name="xamarinforms-picker"></a>Selezione Novell. Forms
 
-_La visualizzazione di selezione è un controllo per la selezione di un elemento di testo da un elenco di dati._
+_La visualizzazione selezione è un controllo per la selezione di un elemento di testo da un elenco di dati._
 
-Xamarin. Forms [ `Picker` ](xref:Xamarin.Forms.Picker) Visualizza un breve elenco di elementi, da cui l'utente può selezionare un elemento. `Picker` definisce le proprietà seguenti:
+Il [`Picker`](xref:Xamarin.Forms.Picker) Novell. Forms Visualizza un breve elenco di elementi da cui l'utente può selezionare un elemento. `Picker` definisce le proprietà seguenti:
 
-- [`Title`](xref:Xamarin.Forms.Picker.Title) typu `string`, che per impostazione predefinita `null`.
-- `TitleColor` typu [ `Color` ](xref:Xamarin.Forms.Color), il colore utilizzato per visualizzare il `Title` testo.
-- [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) typu `IList`, l'elenco di origine degli elementi da visualizzare, che per impostazione predefinita `null`.
-- [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) di tipo `int`, l'indice dell'elemento selezionato, impostazione predefinita è -1.
-- [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) typu `object`, l'elemento selezionato, che per impostazione predefinita `null`.
-- [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) typu [ `Color` ](xref:Xamarin.Forms.Color), il colore utilizzato per visualizzare il testo, che per impostazione predefinita [ `Color.Default` ](xref:Xamarin.Forms.Color.Default).
-- [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes) typu [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes), che per impostazione predefinita [ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None).
-- [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily) typu `string`, che per impostazione predefinita `null`.
-- [`FontSize`](xref:Xamarin.Forms.Picker.FontSize) di tipo `double`, che per impostazione predefinita -1,0.
+- [`Title`](xref:Xamarin.Forms.Picker.Title) di tipo `string`, il cui valore predefinito è `null`.
+- `TitleColor` di tipo [`Color`](xref:Xamarin.Forms.Color), il colore utilizzato per visualizzare il testo `Title`.
+- [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) di tipo `IList`, l'elenco di origine di elementi da visualizzare, che per impostazione predefinita è `null`.
+- [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) di tipo `int`, l'indice dell'elemento selezionato, il cui valore predefinito è-1.
+- [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) di tipo `object`, l'elemento selezionato, che per impostazione predefinita è `null`.
+- [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) di tipo [`Color`](xref:Xamarin.Forms.Color), il colore utilizzato per visualizzare il testo, che per impostazione predefinita è [`Color.Default`](xref:Xamarin.Forms.Color.Default).
+- [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes) di tipo [`FontAttributes`](xref:Xamarin.Forms.FontAttributes), il cui valore predefinito è [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None).
+- [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily) di tipo `string`, il cui valore predefinito è `null`.
+- [`FontSize`](xref:Xamarin.Forms.Picker.FontSize) di tipo `double`, il cui valore predefinito è-1,0.
+- `CharacterSpacing`, di tipo `double`, è la spaziatura tra i caratteri dell'elemento visualizzato dal `Picker`.
 
-Tutte le proprietà sono supportate da [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) oggetti, che indica che essi possono essere personalizzati con stili e le proprietà possono essere destinazioni di associazioni dati. Il [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) e [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) proprietà hanno una modalità di associazione predefinita [ `BindingMode.TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay), il che significa che possono essere destinazioni di associazioni dati in un'applicazione che usa il [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architettura. Per informazioni sull'impostazione delle proprietà del tipo di carattere, vedere [tipi di carattere](~/xamarin-forms/user-interface/text/fonts.md).
+Tutte le proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che è possibile applicare uno stile e le proprietà possono essere destinazioni di associazioni dati. Le proprietà [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) e [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) hanno una modalità di associazione predefinita [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), il che significa che possono essere destinazioni di associazioni dati in un'applicazione che usa l'architettura [MVC (Model-View-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) . Per informazioni sull'impostazione delle proprietà dei tipi di carattere, vedere [caratteri](~/xamarin-forms/user-interface/text/fonts.md).
 
-Oggetto [ `Picker` ](xref:Xamarin.Forms.Picker) non Mostra tutti i dati quando viene innanzitutto visualizzato. Al contrario, il valore del relativo [ `Title` ](xref:Xamarin.Forms.Picker.Title) proprietà viene visualizzata come segnaposto nelle piattaforme Android e iOS:
+Un [`Picker`](xref:Xamarin.Forms.Picker) non Visualizza i dati quando viene visualizzato per la prima volta. Il valore della proprietà [`Title`](xref:Xamarin.Forms.Picker.Title) viene invece visualizzato come segnaposto nelle piattaforme iOS e Android:
 
-[![](images/picker-initial.png "Iniziale selettore Display")](images/picker-initial-large.png#lightbox "iniziale Selezione visualizzazione")
+[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display")
 
-Quando la [ `Picker` ](xref:Xamarin.Forms.Picker) riceve lo stato attivo, i dati viene visualizzato e l'utente può selezionare un elemento:
+Quando il [`Picker`](xref:Xamarin.Forms.Picker) ottiene lo stato attivo, i relativi dati vengono visualizzati e l'utente può selezionare un elemento:
 
-[![](images/picker-selection.png "Selezione di un elemento di selezione")](images/picker-selection-large.png#lightbox "selezione selezionando un elemento")
+[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item")
 
-Il [ `Picker` ](xref:Xamarin.Forms.Picker) viene attivato un [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento quando l'utente seleziona un elemento. Dopo la selezione, l'elemento selezionato viene visualizzato per il `Picker`:
+Il [`Picker`](xref:Xamarin.Forms.Picker) genera un evento di [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) quando l'utente seleziona un elemento. Dopo la selezione, l'elemento selezionato viene visualizzato dal `Picker`:
 
-![](images/picker-after-selection.png "Selezione dopo la selezione")
+![](images/picker-after-selection.png "Picker after Selection")
 
-Esistono due tecniche per l'inserimento in una [ `Picker` ](xref:Xamarin.Forms.Picker) con i dati:
+Esistono due tecniche per popolare un [`Picker`](xref:Xamarin.Forms.Picker) con i dati:
 
-- Impostando il [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) proprietà ai dati da visualizzare. Questa è la tecnica consigliata. Per altre informazioni, vedere [impostazione proprietà ItemsSource del controllo di selezione](populating-itemssource.md).
-- Aggiunta di dati da visualizzare per il [ `Items` ](xref:Xamarin.Forms.Picker.Items) raccolta. Questa tecnica era il processo originale per l'inserimento in una [ `Picker` ](xref:Xamarin.Forms.Picker) con i dati. Per altre informazioni, vedere [aggiunta di dati alla raccolta di elementi del controllo di selezione](populating-items.md).
+- Impostazione della proprietà [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) sui dati da visualizzare. Questa è la tecnica consigliata. Per ulteriori informazioni, vedere [impostazione della proprietà ItemsSource di un selettore](populating-itemssource.md).
+- Aggiunta dei dati da visualizzare nella raccolta di [`Items`](xref:Xamarin.Forms.Picker.Items) . Questa tecnica è stata il processo originale per popolare un [`Picker`](xref:Xamarin.Forms.Picker) con i dati. Per ulteriori informazioni, vedere [aggiunta di dati a una raccolta di elementi di selezione](populating-items.md).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

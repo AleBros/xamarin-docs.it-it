@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 202ce8d674a39b06fd1b07460dff4bf573062592
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70291407"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Uso degli indicatori di stato tvOS in Novell
@@ -77,8 +77,8 @@ Il modo più semplice per usare un indicatore di stato in un'app Novell. tvOS co
 
 2. Trascinare un **indicatore di attività** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    ![Indicatore di attività]unindicatoredi(progress-indicators-images/activity01-vs.png
-    "attività")
+    ![Indicatore di attività](progress-indicators-images/activity01-vs.png
+    "Indicatore di attività")
 
 3. Nella scheda **widget** di **Esplora proprietà**è possibile modificare diverse proprietà dell'indicatore di attività, ad esempio **lo stile**, il **comportamento**e il **nome**: 
 
@@ -106,7 +106,7 @@ Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida intr
 
 Come indicato in precedenza, gli indicatori di attività devono essere visualizzati quando l'app esegue un lungo processo di lunghezza indeterminata.
 
-In qualsiasi momento, è possibile verificare se un indicatore di attività sta aggiungendo un'animazione controllando la relativa `IsAnimating` proprietà. Se la `HidesWhenStopped` proprietà è `true`, l'indicatore di attività verrà nascosto automaticamente quando viene arrestata l'animazione.
+In qualsiasi momento, è possibile verificare se un indicatore di attività sta aggiungendo un'animazione controllando la relativa proprietà `IsAnimating`. Se la proprietà `HidesWhenStopped` è `true`, l'indicatore di attività verrà nascosto automaticamente quando viene arrestata l'animazione.
 
 Per avviare l'animazione, è possibile usare il codice seguente: 
 
@@ -127,7 +127,7 @@ ActivityIndicator.StopAnimating();
 
 Anche in questo caso, è consigliabile usare un indicatore di stato ogni volta che l'applicazione esegue un'attività a esecuzione prolungata di una durata nota. 
 
-La `Progress` proprietà viene utilizzata per impostare la quantità di attività completata da 0% a 100% (da 0,0 a 1,0). Utilizzare la `ProgressTintColor` proprietà per impostare il colore della barra di completamento della quantità e `TrackTintColor` la proprietà per impostare il colore di sfondo (quantità non completata).
+La proprietà `Progress` viene utilizzata per impostare la quantità di attività completata da 0% a 100% (da 0,0 a 1,0). Utilizzare la proprietà `ProgressTintColor` per impostare il colore della barra di completamento della quantità e la proprietà `TrackTintColor` per impostare il colore di sfondo (importo non completato).
 
 ## <a name="summary"></a>Riepilogo
 

@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.date: 09/25/2019
+ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739256"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695927"
 ---
 # <a name="xamarinforms-shell-search"></a>Ricerca nella shell Xamarin.Forms
 
@@ -20,11 +20,11 @@ ms.locfileid: "68739256"
 
 La shell Xamarin.Forms include una funzionalità di ricerca integrata fornita dalla classe `SearchHandler`. La funzionalità di ricerca può essere aggiunta a una pagina impostando la proprietà associata `Shell.SearchHandler` a un oggetto `SearchHandler` sottoclassato. Come conseguenza, viene aggiunta una casella di ricerca nella parte superiore della pagina:
 
-[![Screenshot di un oggetto SearchHandler della shell, in iOS e Android](search-images/searchhandler.png "Oggetto SearchHandler della shell")](search-images/searchhandler-large.png#lightbox "Oggetto SearchHandler della shell")
+[![Screenshot di un SearchHandler della shell, in iOS e Android](search-images/searchhandler.png "SearchHandler Shell")](search-images/searchhandler-large.png#lightbox "SearchHandler Shell")
 
 Quando viene immessa una query nella casella di ricerca, la proprietà `Query` viene aggiornata e a ogni aggiornamento viene eseguito il metodo `OnQueryChanged`. È possibile eseguire l'override di questo metodo per popolare l'area dei suggerimenti di ricerca con dati:
 
-[![Screenshot dei risultati della ricerca in un oggetto SearchHandler della shell, in iOS e Android](search-images/search-suggestions.png "Risultati della ricerca in un oggetto SearchHandler della shell")](search-images/search-suggestions-large.png#lightbox "Risultati della ricerca in un oggetto SearchHandler della shell")
+[![Screenshot dei risultati della ricerca in una shell SearchHandler, in iOS e Android](search-images/search-suggestions.png "Risultati della ricerca SearchHandler della shell")](search-images/search-suggestions-large.png#lightbox "Risultati della ricerca SearchHandler della shell")
 
 Quando viene selezionato un risultato nell'area dei suggerimenti di ricerca, viene quindi eseguito il metodo `OnItemSelected`. È possibile eseguire l'override di questo metodo per rispondere in modo appropriato, ad esempio passando a una pagina di dettagli.
 
@@ -99,15 +99,15 @@ Il metodo `MonkeySearchHandler.OnQueryChanged` restituisce un oggetto `List` con
 
 La proprietà `ShowsResults` è impostata su `true`, quindi quando l'utente immette una query di ricerca vengono visualizzati i suggerimenti per la ricerca:
 
-[![Screenshot dei risultati della ricerca in un oggetto SearchHandler della shell, in iOS e Android](search-images/search-results.png "Risultati della ricerca in un oggetto SearchHandler della shell")](search-images/search-results-large.png#lightbox "Risultati della ricerca in un oggetto SearchHandler della shell")
+[![Screenshot dei risultati della ricerca in un SearchHandler della shell, in iOS e Android](search-images/search-results.png "Risultati della ricerca SearchHandler della shell")](search-images/search-results-large.png#lightbox "Risultati della ricerca SearchHandler della shell")
 
 Quando la query di ricerca cambia, l'area dei suggerimenti per la ricerca viene aggiornata:
 
-[![Screenshot dei risultati della ricerca in un oggetto SearchHandler della shell, in iOS e Android](search-images/search-results-change.png "Risultati della ricerca in un oggetto SearchHandler della shell")](search-images/search-results-change-large.png#lightbox "Risultati della ricerca in un oggetto SearchHandler della shell")
+[![Screenshot dei risultati della ricerca in un SearchHandler della shell, in iOS e Android](search-images/search-results-change.png "Risultati della ricerca SearchHandler della shell")](search-images/search-results-change-large.png#lightbox "Risultati della ricerca SearchHandler della shell")
 
 Quando viene selezionato un risultato della ricerca, si passa a `MonkeyDetailPage` e vengono visualizzati i dati sulla scimmia selezionata:
 
-[![Screenshot dei dettagli relativi alla scimmia, in iOS e Android](search-images/detailpage.png "Dettagli relativi alla scimmia")](search-images/detailpage-large.png#lightbox "Dettagli relativi alla scimmia")
+[![Screenshot dei dettagli scimmia, in iOS e Android](search-images/detailpage.png "Dettagli scimmia")](search-images/detailpage-large.png#lightbox "Dettagli scimmia")
 
 ## <a name="define-search-results-item-appearance"></a>Definire l'aspetto degli elementi dei risultati della ricerca
 
@@ -172,7 +172,7 @@ Gli elementi specificati in [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) de
 
 Gli screenshot seguenti mostrano il risultato dell'applicazione di un modello per ogni elemento nell'area dei suggerimenti:
 
-[![Screenshot dei risultati della ricerca basati su un modello in un oggetto SearchHandler della shell, in iOS e Android](search-images/search-results-template.png "Risultati della ricerca basati su un modello in un oggetto SearchHandler della shell")](search-images/search-results-template-large.png#lightbox "Risultati della ricerca basati su un modello in un oggetto SearchHandler della shell")
+[![Screenshot dei risultati della ricerca basata su modelli in un SearchHandler della shell, in iOS e Android](search-images/search-results-template.png "Risultati della ricerca basati su modelli della shell SearchHandler")](search-images/search-results-template-large.png#lightbox "Risultati della ricerca basati su modelli della shell SearchHandler")
 
 Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -211,12 +211,14 @@ La classe `SearchHandler` definisce le proprietà seguenti che ne controllano l'
 
 - `BackgroundColor`, di tipo `Color`, corrisponde al colore di sfondo per il testo della casella di ricerca.
 - `CancelButtonColor`, di tipo `Color`, corrisponde al colore del pulsante Annulla.
+- `CharacterSpacing`, di tipo `double`, è la spaziatura tra i caratteri del testo `SearchHandler`.
 - `FontAttributes`, di tipo `FontAttributes`, indica se il testo della casella di ricerca è in grassetto o corsivo.
 - `FontFamily`, di tipo `string`, corrisponde alla famiglia di caratteri usato per il testo della casella di ricerca.
 - `FontSize`, di tipo `double`, corrisponde alla dimensione del testo della casella di ricerca.
 - `HorizontalTextAlignment`, di tipo `TextAlignment`, corrisponde all'allineamento orizzontale del testo della casella di ricerca.
 - `PlaceholderColor`, di tipo `Color`, corrisponde al colore del testo segnaposto della casella di ricerca.
 - `TextColor`, di tipo `Color`, corrisponde al colore del testo della casella di ricerca.
+- `VerticalTextAlignment`, di tipo `TextAlignment`, è l'allineamento verticale del testo della casella di ricerca.
 
 ## <a name="searchhandler-keyboard"></a>Tastiera per SearchHandler
 

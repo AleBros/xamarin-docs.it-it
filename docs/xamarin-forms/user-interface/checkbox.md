@@ -8,28 +8,28 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
 ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739151"
 ---
 # <a name="xamarinforms-checkbox"></a>Casella di controllo Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
-Novell. Forms `CheckBox` è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
+Il `CheckBox` Novell. Forms è un tipo di pulsante che può essere selezionato o vuoto. Quando una casella di controllo è selezionata, viene considerata attivata. Quando una casella di controllo è vuota, viene considerata disattivata.
 
-`CheckBox`definisce una `bool` proprietà denominata `IsChecked`, che indica se l' `CheckBox` oggetto è selezionato. Questa proprietà è supportata anche da un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetto, il che significa che è possibile applicare uno stile e essere la destinazione delle associazioni dati.
+`CheckBox` definisce una proprietà di `bool` denominata `IsChecked`, che indica se il `CheckBox` è selezionato. Questa proprietà è supportata anche da un oggetto [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che è possibile applicare uno stile e essere la destinazione delle associazioni dati.
 
 > [!NOTE]
-> La `IsChecked` proprietà associabile ha una modalità di [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay)associazione predefinita.
+> Il `IsChecked` proprietà associabile ha una modalità di associazione predefinita di [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay).
 
-`CheckBox`definisce un `CheckedChanged` evento generato quando la `IsChecked` proprietà viene modificata, tramite la manipolazione dell'utente o quando un'applicazione imposta la `IsChecked` proprietà. L' `CheckedChangedEventArgs` oggetto che accompagna l' `CheckedChanged` evento ha una singola proprietà denominata `Value`, di tipo `bool`. Quando viene generato l'evento, il valore della `Value` proprietà viene impostato sul nuovo valore `IsChecked` della proprietà.
+`CheckBox` definisce un evento `CheckedChanged` generato quando la proprietà `IsChecked` viene modificata, tramite la manipolazione dell'utente o quando un'applicazione imposta la proprietà `IsChecked`. L'oggetto `CheckedChangedEventArgs` che accompagna l'evento `CheckedChanged` dispone di una singola proprietà denominata `Value`, di tipo `bool`. Quando viene generato l'evento, il valore della proprietà `Value` viene impostato sul nuovo valore della proprietà `IsChecked`.
 
 ## <a name="create-a-checkbox"></a>Crea una casella di controllo
 
-Nell'esempio seguente viene mostrato come creare un `CheckBox` in XAML:
+Nell'esempio seguente viene illustrato come creare un'istanza di un `CheckBox` in XAML:
 
 ```xaml
 <CheckBox />
@@ -37,9 +37,9 @@ Nell'esempio seguente viene mostrato come creare un `CheckBox` in XAML:
 
 Questo codice XAML genera l'aspetto illustrato nelle schermate seguenti:
 
-![Screenshot di una casella di controllo vuota, in iOS e Android](checkbox-images/checkbox-empty.png "Casella") di controllo vuota
+![Screenshot di una casella di controllo vuota, in iOS e Android](checkbox-images/checkbox-empty.png "Casella di controllo vuota")
 
-Per impostazione predefinita, `CheckBox` è vuoto. L' `CheckBox` oggetto può essere controllato dalla manipolazione dell'utente oppure impostando `IsChecked` la proprietà `true`su:
+Per impostazione predefinita, il `CheckBox` è vuoto. Il `CheckBox` può essere controllato dalla manipolazione dell'utente oppure impostando la proprietà `IsChecked` su `true`:
 
 ```xaml
 <CheckBox IsChecked="true" />
@@ -49,7 +49,7 @@ Questo codice XAML genera l'aspetto illustrato nelle schermate seguenti:
 
 ![Screenshot di una casella di controllo selezionata, in iOS e Android](checkbox-images/checkbox-checked.png "Casella di controllo selezionata")
 
-In alternativa, è `CheckBox` possibile creare un oggetto nel codice:
+In alternativa, è possibile creare un `CheckBox` nel codice:
 
 ```csharp
 CheckBox checkBox = new CheckBox { IsChecked = true };
@@ -57,13 +57,13 @@ CheckBox checkBox = new CheckBox { IsChecked = true };
 
 ## <a name="respond-to-a-checkbox-changing-state"></a>Rispondi a una casella di controllo modifica stato
 
-Quando la `IsChecked` proprietà viene modificata, tramite la manipolazione dell'utente o quando un'applicazione `IsChecked` imposta la proprietà `CheckedChanged` , viene generato l'evento. Un gestore eventi per questo evento può essere registrato per rispondere alla modifica:
+Quando la proprietà `IsChecked` viene modificata, tramite la manipolazione dell'utente o quando un'applicazione imposta la proprietà `IsChecked`, viene generato l'evento `CheckedChanged`. Un gestore eventi per questo evento può essere registrato per rispondere alla modifica:
 
 ```xaml
 <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
 ```
 
-Il file code-behind contiene il gestore per il `CheckedChanged` evento:
+Il file code-behind contiene il gestore per l'evento `CheckedChanged`:
 
 ```csharp
 void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -72,9 +72,9 @@ void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
 }
 ```
 
-Il `sender` argomento è il `CheckBox` responsabile di questo evento. Ciò consente di accedere il `CheckBox` oggetto, o per distinguere tra più `CheckBox` gli oggetti che condividono lo stesso `CheckedChanged` evento.
+L'argomento `sender` è il `CheckBox` responsabile di questo evento. È possibile usarlo per accedere all'oggetto `CheckBox` o per distinguere tra più oggetti `CheckBox` che condividono lo stesso evento di `CheckedChanged`.
 
-In alternativa, un gestore eventi per l' `CheckedChanged` evento può essere registrato nel codice:
+In alternativa, è possibile registrare un gestore eventi per l'evento `CheckedChanged` nel codice:
 
 ```csharp
 CheckBox checkBox = new CheckBox { ... };
@@ -86,7 +86,7 @@ checkBox.CheckedChanged += (sender, e) =>
 
 ## <a name="data-bind-a-checkbox"></a>Casella di controllo Associa dati
 
-Il `CheckedChanged` gestore eventi può essere eliminato utilizzando Data Binding e trigger per rispondere a un `CheckBox` oggetto che viene verificato o vuoto:
+Il gestore dell'evento `CheckedChanged` può essere eliminato utilizzando data binding e trigger per rispondere a una `CheckBox` controllata o vuota:
 
 ```xaml
 <CheckBox x:Name="checkBox" />
@@ -104,9 +104,9 @@ Il `CheckedChanged` gestore eventi può essere eliminato utilizzando Data Bindin
 </Label>
 ```
 
-In questo esempio, [`Label`](xref:Xamarin.Forms.Label) usa un'espressione di associazione in un trigger di dati per monitorare la `IsChecked` proprietà dell' `CheckBox`oggetto. Quando questa proprietà diventa `true`, le `FontAttributes` proprietà `FontSize` e della `Label` modifica. Quando la `IsChecked` `false`proprietà restituisce, le `FontAttributes` proprietà e `FontSize` dell'oggetto `Label` vengono reimpostate sullo stato iniziale.
+In questo esempio, il [`Label`](xref:Xamarin.Forms.Label) utilizza un'espressione di associazione in un trigger di dati per monitorare la proprietà `IsChecked` dell'`CheckBox`. Quando questa proprietà diventa `true`, le proprietà `FontAttributes` e `FontSize` della `Label` cambiano. Quando la proprietà `IsChecked` restituisce `false`, le proprietà `FontAttributes` e `FontSize` del `Label` vengono reimpostate sullo stato iniziale.
 
-Negli screenshot seguenti lo screenshot iOS Mostra [`Label`](xref:Xamarin.Forms.Label) la formattazione `CheckBox` quando è vuoto, mentre lo screenshot di Android Mostra la `Label` formattazione quando è selezionata l' `CheckBox` opzione:
+Negli screenshot seguenti lo screenshot iOS Mostra la formattazione [`Label`](xref:Xamarin.Forms.Label) quando il `CheckBox` è vuoto, mentre lo screenshot di Android Mostra la formattazione `Label` quando viene controllata la `CheckBox`:
 
 [![Screenshot della casella di controllo Data Binding in iOS e Android](checkbox-images/checkbox-databinding.png "Casella di controllo Data Binding")](checkbox-images/checkbox-databinding-large.png#lightbox "Casella di controllo Data Binding")
 
@@ -114,25 +114,25 @@ Per ulteriori informazioni sui trigger, vedere [trigger Novell. Forms](~/xamarin
 
 ## <a name="disable-a-checkbox"></a>Disabilitare una casella di controllo
 
-A volte un'applicazione entra in uno stato `CheckBox` in cui un controllo non è un'operazione valida. In questi casi, `CheckBox` può essere disabilitato impostando la relativa `IsEnabled` proprietà `false`su.
+A volte un'applicazione entra in uno stato in cui un `CheckBox` sottoposto a verifica non è un'operazione valida. In questi casi, è possibile disabilitare il `CheckBox` impostando la relativa proprietà `IsEnabled` su `false`.
 
 ## <a name="checkbox-appearance"></a>Aspetto casella di controllo
 
-Oltre alle proprietà che `CheckBox` ereditano [`View`](xref:Xamarin.Forms.View) dalla classe, `CheckBox` definisce anche una `Color` proprietà che ne imposta il colore su un oggetto [`Color`](xref:Xamarin.Forms.Color):
+Oltre alle proprietà che `CheckBox` eredita dalla classe [`View`](xref:Xamarin.Forms.View) , `CheckBox` definisce anche una proprietà `Color` che ne imposta il colore su un [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <CheckBox Color="Red" />
 ```
 
-Gli screenshot seguenti mostrano una serie di oggetti controllati `CheckBox` , in cui ogni oggetto ha la `Color` proprietà impostata su un valore [`Color`](xref:Xamarin.Forms.Color)diverso:
+Gli screenshot seguenti mostrano una serie di oggetti `CheckBox` controllati, in cui ogni oggetto ha la relativa proprietà `Color` impostata su un [`Color`](xref:Xamarin.Forms.Color)diverso:
 
-![Screenshot delle caselle di controllo colorate, in iOS e Android](checkbox-images/checkbox-colors.png "Casella") di controllo colorato
+![Screenshot delle caselle di controllo colorate, in iOS e Android](checkbox-images/checkbox-colors.png "Casella di controllo colorato")
 
 ## <a name="checkbox-visual-states"></a>Stati di visualizzazione casella di controllo
 
-`CheckBox`dispone di `IsChecked` un oggetto [`VisualState`](xref:Xamarin.Forms.VisualState) che può essere utilizzato per avviare `CheckBox` una modifica visiva a quando viene controllata.
+`CheckBox` dispone di un [`VisualState`](xref:Xamarin.Forms.VisualState) `IsChecked` che può essere utilizzato per avviare una modifica visiva del `CheckBox` quando viene controllata.
 
-Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizzazione per il `IsChecked` stato:
+Nell'esempio di codice XAML riportato di seguito viene illustrato come definire uno stato di visualizzazione per lo stato `IsChecked`:
 
 ```xaml
 <CheckBox ...>
@@ -156,7 +156,7 @@ Nell'esempio XAML seguente viene illustrato come definire uno stato di visualizz
 </CheckBox>
 ```
 
-`IsChecked` In questo esempio, [`VisualState`](xref:Xamarin.Forms.VisualState) specifica che quando `CheckBox` è selezionato, `Color` la proprietà verrà impostata su verde. Specifica che quando`CheckBox` è in uno stato normale, la relativa `Color` proprietà sarà impostata su rosso. `Normal` `VisualState` Pertanto, l'effetto complessivo è che il `CheckBox` è rosso quando è vuoto e verde quando è selezionato.
+In questo esempio, il `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) specifica che, quando il `CheckBox` è selezionato, la relativa proprietà `Color` verrà impostata su verde. Il `Normal` `VisualState` specifica che quando il `CheckBox` è in uno stato normale, la relativa proprietà `Color` verrà impostata su rosso. Pertanto, l'effetto complessivo è che la `CheckBox` è rossa quando è vuota e verde quando viene controllata.
 
 Per ulteriori informazioni sugli stati visivi, vedere [Novell. Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 

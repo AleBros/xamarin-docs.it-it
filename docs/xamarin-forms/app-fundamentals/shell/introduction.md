@@ -6,13 +6,13 @@ ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: dd1dc9b679a46dc082de1fe9b3c5f10b6757c0d8
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.date: 09/20/2019
+ms.openlocfilehash: 3e63a580bbdb1c220d44b100725cdc8ce387b405
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739278"
+ms.locfileid: "72696523"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introduzione alla shell Xamarin.Forms
 
@@ -28,7 +28,15 @@ La shell Xamarin.Forms riduce la complessità dello sviluppo di applicazioni per
 Le applicazioni shell consentono inoltre una velocità di rendering maggiore e un consumo di memoria ridotto.
 
 > [!IMPORTANT]
-> La shell Xamarin.Forms è disponibile solo in iOS e Android. Le applicazioni Android e iOS esistenti possono adottare Shell usufruendo immediatamente dei miglioramenti in termini di navigazione, prestazioni ed estendibilità.
+> Le applicazioni esistenti possono adottare la shell e trarre vantaggio immediatamente dai miglioramenti per la navigazione, le prestazioni e l'estensibilità.
+
+## <a name="platform-support"></a>Supporto per piattaforme
+
+La shell di Novell. Forms è completamente disponibile in iOS e Android, ma solo parzialmente disponibile nel piattaforma UWP (Universal Windows Platform) (UWP). Inoltre, la shell è attualmente sperimentale in UWP e può essere usata solo aggiungendo la riga di codice seguente alla classe `App` nel progetto UWP, prima di chiamare `Forms.Init`:
+
+```csharp
+global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
+```
 
 ## <a name="shell-navigation-experience"></a>Esperienza di navigazione nella shell
 

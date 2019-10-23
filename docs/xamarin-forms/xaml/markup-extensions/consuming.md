@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/18/2019
-ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.date: 09/27/2019
+ms.openlocfilehash: a8698975d2609599e1404fbb9c87c617a54f23d7
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69887899"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696351"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilizzo di estensioni di markup XAML
 
@@ -32,16 +32,17 @@ Le estensioni di markup XAML consentono di migliorare la potenza e la flessibili
 
 Le estensioni di markup XAML aggiuntive sono state supportate in passato da altre implementazioni XAML e sono supportate anche da Novell. Forms. Queste informazioni sono descritte in modo più completo negli altri articoli:
 
-- `StaticResource` &ndash; oggetti di riferimento da un dizionario risorse, come descritto nell'articolo [**dizionari risorse**](~/xamarin-forms/xaml/resource-dictionaries.md).
-- `DynamicResource` &ndash; rispondono alle modifiche apportate agli oggetti in un dizionario risorse, come descritto nell'articolo [**stili dinamici**](~/xamarin-forms/user-interface/styles/dynamic.md).
-- `Binding` &ndash; stabilire un collegamento tra le proprietà di due oggetti, come descritto nell'articolo [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; esegue data binding da un modello di controllo, come illustrato nell'articolo relativo all' [**associazione da un modello di controllo**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `StaticResource` fare riferimento a oggetti da un dizionario risorse, come descritto nell'articolo [**dizionari risorse**](~/xamarin-forms/xaml/resource-dictionaries.md).
+- `DynamicResource`: rispondere alle modifiche apportate agli oggetti in un dizionario risorse, come descritto nell'articolo [**stili dinamici**](~/xamarin-forms/user-interface/styles/dynamic.md).
+- `Binding`-stabilire un collegamento tra le proprietà di due oggetti, come descritto nell'articolo [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- `TemplateBinding`: esegue data binding da un modello di controllo, come illustrato nell'articolo sull' [**associazione da un modello di controllo**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `RelativeSource`: imposta l'origine dell'associazione in relazione alla posizione della destinazione del binding, come illustrato nell'articolo [associazioni relative](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 Il layout [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) usa l'estensione di markup personalizzata [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). Questa estensione di markup è descritta nell'articolo [**sul relativelayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
-## <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
+## <a name="xstatic-markup-extension"></a>estensione di markup x:Static
 
 L'estensione di markup `x:Static` è supportata dalla classe [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) . La classe dispone di una singola proprietà denominata [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) di tipo `string` impostato sul nome di una costante pubblica, di una proprietà statica, di un campo statico o di un membro di enumerazione.
 
@@ -191,7 +192,7 @@ Entrambe le espressioni `x:Reference` utilizzano la versione abbreviata del nome
 
 <a name="type" />
 
-## <a name="xtype-markup-extension"></a>Estensione del markup x:Type
+## <a name="xtype-markup-extension"></a>x:Type (estensione di markup)
 
 L'estensione di markup `x:Type` è l'equivalente XAML della C# parola chiave [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) . È supportato dalla classe [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) , che definisce una proprietà denominata [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) di tipo `string` che è impostata su un nome di classe o di struttura. L'estensione di markup `x:Type` restituisce l'oggetto [`System.Type`](xref:System.Type) della classe o della struttura. `TypeName` è la proprietà Content di `TypeExtension`, pertanto `TypeName=` non è obbligatorio quando `x:Type` viene visualizzato con parentesi graffe.
 
@@ -329,7 +330,7 @@ Il metodo eseguito quando viene premuto un `Button` crea una nuova istanza dell'
 
 <a name="array" />
 
-## <a name="xarray-markup-extension"></a>Estensione del markup x:Array
+## <a name="xarray-markup-extension"></a>x:Array (estensione di markup)
 
 L'estensione di markup `x:Array` consente di definire una matrice nel markup. È supportato dalla classe [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) , che definisce due proprietà:
 
@@ -406,7 +407,7 @@ Quando si definiscono matrici di tipi comuni come stringhe o numeri, usare i tag
 
 <a name="null" />
 
-## <a name="xnull-markup-extension"></a>Estensione del markup x:Null
+## <a name="xnull-markup-extension"></a>estensione di markup x:Null
 
 L'estensione di markup `x:Null` è supportata dalla classe [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) . Non dispone di proprietà ed è semplicemente l'equivalente XAML della C# parola chiave [`null`](/dotnet/csharp/language-reference/keywords/null/) .
 
@@ -481,7 +482,7 @@ L'estensione di markup `OnPlatform` è supportata dalla classe [`OnPlatformExten
 > [!NOTE]
 > Il parser XAML consente di abbreviare la classe [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) come `OnPlatform`.
 
-La proprietà `Default` è la proprietà Content di `OnPlatformExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare la `Default=` parte dell'espressione purché sia il primo argomento.
+La proprietà `Default` è la proprietà Content di `OnPlatformExtension`. Pertanto, per le espressioni di markup XAML espresse con parentesi graffe, è possibile eliminare la `Default=` parte dell'espressione purché sia il primo argomento. Se la proprietà `Default` non è impostata, verrà utilizzato per impostazione predefinita il valore della proprietà [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) , purché l'estensione di markup sia destinata a un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 
 > [!IMPORTANT]
 > Il parser XAML prevede che i valori del tipo corretto verranno forniti alle proprietà che utilizzano l'estensione di markup `OnPlatform`. Se è necessaria la conversione del tipo, l'estensione di markup `OnPlatform` tenterà di eseguirla usando i convertitori predefiniti forniti da Novell. Forms. Tuttavia, esistono alcune conversioni di tipi che non possono essere eseguite dai convertitori predefiniti e in questi casi è necessario impostare la proprietà `Converter` su un'implementazione di `IValueConverter`.

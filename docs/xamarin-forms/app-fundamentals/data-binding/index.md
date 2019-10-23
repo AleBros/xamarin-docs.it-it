@@ -6,19 +6,19 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
-ms.openlocfilehash: ace1129397251c02c5ffb682344ff2308a24c62a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.date: 09/27/2019
+ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653359"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697136"
 ---
 # <a name="xamarinforms-data-binding"></a>Data binding di Xamarin.Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-_Il data binding è la tecnica che consente di collegare le proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano automaticamente riflesse nell'altra proprietà. Il data binding è parte integrante dell'architettura dell'applicazione Model-View-ViewModel (MVVM)._
+_Il data binding è la tecnica di collegamento delle proprietà di due oggetti in modo che le modifiche apportate a una proprietà vengano riflesse automaticamente nell'altra proprietà. Il data binding è parte integrante dell'architettura delle applicazioni MVC (Model-View-ViewModel)._
 
 ## <a name="the-data-linking-problem"></a>Il problema del collegamento dei dati
 
@@ -28,14 +28,14 @@ Per gestire correttamente il processo, è necessario segnalare al programma le m
 
 ## <a name="the-data-binding-solution"></a>La soluzione offerta dal data binding
 
-Il data binding consente di automatizzare questo processo ed elimina la necessità di usare gestori degli eventi. Gli eventi tuttavia continuano a essere necessari, perché vengono usati dall'infrastruttura di data binding. I data binding possono essere implementati nel codice o in XAML, ma sono molto più comuni in XAML dove contribuiscono alla riduzione delle dimensioni del file code-behind. Sostituendo il codice procedurale nei gestori degli eventi con codice dichiarativo o markup, l'applicazione diventa più semplice e chiara.
+Il data binding consente di automatizzare questo processo ed elimina la necessità di usare gestori degli eventi. Gli eventi sono comunque necessari, tuttavia, poiché l'infrastruttura di data binding li utilizza. Le associazioni dati possono essere implementate nel codice o in XAML, ma sono molto più comuni in XAML in cui consentono di ridurre le dimensioni del file code-behind. Sostituendo il codice procedurale nei gestori degli eventi con codice dichiarativo o markup, l'applicazione diventa più semplice e chiara.
 
 Uno dei due oggetti coinvolti in un data binding è quasi sempre un elemento che deriva da `View` e fa parte dell'interfaccia visiva di una pagina. L'altro oggetto può essere:
 
 - Un altro oggetto `View` derivato, in genere nella stessa pagina.
 - Un oggetto in un file di codice.
 
-Nei programmi di dimostrazione, ad esempio quelli dell'esempio [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), i data binding tra due `View` derivati vengono spesso visualizzati per motivi di semplicità e chiarezza. Tuttavia, gli stessi principi possono essere applicati ai data binding tra un oggetto `View` e altri oggetti. Se un'applicazione viene compilata usando l'architettura Model-View-ViewModel (MVVM), la classe con dati sottostanti è spesso definita ViewModel.
+Nei programmi di dimostrazione, ad esempio quelli dell'esempio [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), i data binding tra due `View` derivati vengono spesso visualizzati per motivi di semplicità e chiarezza. Tuttavia, gli stessi principi possono essere applicati ai data binding tra un oggetto `View` e altri oggetti. Quando un'applicazione viene compilata usando l'architettura MVC (Model-View-ViewModel), la classe con i dati sottostanti viene spesso definita ViewModel.
 
 I data binding sono illustrati nelle seguenti serie di articoli:
 
@@ -58,6 +58,10 @@ Informazioni dettagliate sulla proprietà `Path` del data binding per l'accesso 
 ## <a name="binding-value-convertersconvertersmd"></a>[Convertitori di valori per i binding](converters.md)
 
 Usare i convertitori di valori dei binding per modificare i valori all'interno del data binding.
+
+## <a name="relative-bindingsrelative-bindingsmd"></a>[Associazioni relative](relative-bindings.md)
+
+Utilizzare le associazioni relative per impostare l'origine dell'associazione in relazione alla posizione della destinazione del binding.
 
 ## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Fallback di binding](binding-fallbacks.md)
 

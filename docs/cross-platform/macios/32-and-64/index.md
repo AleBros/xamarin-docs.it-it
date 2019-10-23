@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71249797"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni sulla piattaforma a 32/64 bit
@@ -21,7 +21,7 @@ A partire da iOS 11, le app a 32 bit non vengono più avviate e [tutti gli invii
 
 A partire dal 2018 gennaio, [le nuove app inviate a Mac App Store devono supportare 64 bit e le](https://developer.apple.com/news/?id=06282017a)app esistenti devono essere aggiornate entro il 2018 giugno.
 
-API classica di Novell (`XamMac.dll` e `monotouch.dll`) supportano solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Novell. iOS e Novell. Mac usano [la API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
+Il API classica di Novell (`XamMac.dll` e `monotouch.dll`) supporta solo applicazioni a 32 bit. Tuttavia, le nuove applicazioni Novell. iOS e Novell. Mac usano la [API unificata](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) per impostazione predefinita e possono quindi essere destinate a 32 e 64 bit, in base alle esigenze.
 
 ## <a name="ios"></a>iOS
 
@@ -40,13 +40,13 @@ Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unific
 
 1. Nella **riquadro della soluzione**fare doppio clic sul progetto dell'app per aprire la finestra **Opzioni progetto** .
 2. Selezionare **compilazione iOS**.
-3. Per il simulatore iPhone, nell'elenco a discesa **architetture supportate** selezionare **x86\_64** o **I386 + x86\_64**:
+3. Per il simulatore iPhone, nell'elenco a discesa **architetture supportate** selezionare **x86 \_64** o **I386 + x86 \_64**:
 
-   [![Impostazione delle architetture supportate su x86\_64 o I386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Impostazione delle architetture supportate su x86 \_64 o I386 + x86 \_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. Per i dispositivi fisici, selezionare una delle combinazioni di **arm64** disponibili:
 
-   [![Impostazione delle architetture supportate su una delle combinazioni arm64](Images/Image02.png "Impostazione delle architetture supportate su una delle combinazioni arm64")](Images/Image02-large.png#lightbox)
+   [![Impostazione delle architetture supportate su una delle combinazioni ARM64](Images/Image02.png "Impostazione delle architetture supportate su una delle combinazioni ARM64")](Images/Image02-large.png#lightbox)
 
 5. Fare clic su **OK**.
 6. Eseguire una compilazione pulita.
@@ -55,13 +55,13 @@ Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unific
 
 1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto dell'app e selezionare **Proprietà**.
 2. Selezionare **compilazione iOS**.
-3. Per il simulatore iPhone, impostare le **architetture supportate** su **x86\_64** o **I386 + x86\_64**: 
+3. Per il simulatore iPhone, impostare le **architetture supportate** su **x86 \_64** o **I386 + x86 \_64**: 
 
-   [![Impostazione delle architetture supportate su x86_64 o I386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Impostazione delle architetture supportate su x86_64 o I386 + x86 \_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. Per i dispositivi fisici, selezionare una delle combinazioni di **arm64** disponibili:
     
-   [![Impostazione delle architetture supportate su una delle combinazioni arm64](Images/VS01.png "Impostazione delle architetture supportate su una delle combinazioni arm64")](Images/VS01-large.png#lightbox)
+   [![Impostazione delle architetture supportate su una delle combinazioni ARM64](Images/VS01.png "Impostazione delle architetture supportate su una delle combinazioni ARM64")](Images/VS01-large.png#lightbox)
 
 5. Salvare le modifiche.
 6. Eseguire una compilazione pulita.
@@ -81,7 +81,7 @@ Durante la transizione di Apple da 32 a 64 bit, le app iOS dovranno essere esegu
 La definizione delle architetture a 32 bit e a 64 bit aumenterà significativamente le dimensioni di un'applicazione. Questa operazione consentirà tuttavia ai dispositivi più recenti di eseguire codice ottimizzato, supportando al tempo stesso i dispositivi meno recenti.
 
 > [!IMPORTANT]
-> Se viene visualizzato il messaggio seguente quando si invia un'applicazione iOS ad iTunes App Store, _"Warning itms-9000: Manca il supporto a 64 bit. A partire dal 1 ° febbraio 2015, le nuove app iOS caricate nell'App Store devono includere il supporto a 64 bit e possono essere compilate con iOS 8 SDK, incluso in Xcode 6 o versione successiva. Per abilitare 64 bit nel progetto, è consigliabile usare l'impostazione di compilazione Xcode predefinita "architetture standard" per creare un singolo file binario con codice sia a 32 bit che a 64 bit._ È necessario passare le architetture supportate a una delle combinazioni di **arm64** disponibili (come illustrato in precedenza), ricompilare e inviare nuovamente.
+> Se viene visualizzato il messaggio seguente quando si invia un'applicazione iOS all'iTunes App Store _", avviso itms-9000: manca il supporto per 64 bit. A partire dal 1 ° febbraio 2015, le nuove app iOS caricate nell'App Store devono includere il supporto a 64 bit e possono essere compilate con iOS 8 SDK, incluso in Xcode 6 o versione successiva. Per abilitare 64 bit nel progetto, è consigliabile usare l'impostazione di compilazione Xcode predefinita "architetture standard" per creare un singolo file binario con codice sia a 32 bit che a 64 bit._ È necessario passare le architetture supportate a una delle combinazioni di **arm64** disponibili (come illustrato in precedenza), ricompilare e inviare nuovamente.
 
 ## <a name="mac"></a>Mac
 

@@ -7,13 +7,13 @@ ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2019
-ms.openlocfilehash: f146fc25af5b5c62acece5c736522773e6dc455d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.date: 10/11/2019
+ms.openlocfilehash: f73de44cbae0281d56cc6fd7ab21f8aa60264ed4
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/21/2019
-ms.locfileid: "69976524"
+ms.locfileid: "72696114"
 ---
 # <a name="xaml-controls"></a>Controlli XAML
 
@@ -30,7 +30,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 | <h3>BoxView</h3>Visualizza un rettangolo di un colore specifico.<p align="center">![Screenshot di un BoxView](xaml-controls-images/BoxView.png "BoxView")</p>[Guida](~/xamarin-forms/user-interface/boxview.md)  /  [API](xref:Xamarin.Forms.BoxView) | <pre valign="center">&lt;BoxView Color="Accent"<br />         WidthRequest="150"<br />         HeightRequest="150"<br />         HorizontalOptions="Center"&gt;</pre></p> |
 | <h3>Immagine</h3>Visualizza una bitmap.<p align="center">![Screenshot di un'immagine](xaml-controls-images/Image.png "Immagine")</p>[Guida](~/xamarin-forms/user-interface/images.md)  /  [API](xref:Xamarin.Forms.Image) | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
 | <h3>Label</h3>Consente di visualizzare una o più righe di testo.<p align="center">![Screenshot di un'etichetta](xaml-controls-images/Label.png "Label")</p>[Guida](~/xamarin-forms/user-interface/text/label.md)  /  [API](xref:Xamarin.Forms.Label) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
-| <h3>Mappa</h3>Visualizza una mappa.<p align="center">![Screenshot di una mappa](xaml-controls-images/Map.png "Mappa")</p>[Guida](~/xamarin-forms/user-interface/map.md)  /  [API](xref:Xamarin.Forms.Maps.Map) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
+| <h3>Mappa</h3>Visualizza una mappa.<p align="center">![Screenshot di una mappa](xaml-controls-images/Map.png "Mappa")</p>[Guida](~/xamarin-forms/user-interface/map/index.md)  /  [API](xref:Xamarin.Forms.Maps.Map) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
 | <h3>WebView</h3>Visualizza le pagine Web o il contenuto HTML.<p align="center">![Screenshot di una WebView](xaml-controls-images/WebView.png "WebView")</p>[Guida](~/xamarin-forms/user-interface/webview.md)  /  [API](xref:Xamarin.Forms.WebView) | <p valign="center"><pre>&lt;WebView Source="https://docs.microsoft.com/xamarin/"<br/>         VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
 
@@ -40,8 +40,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 | --- | --- |
 | <h3>Button</h3>Visualizza il testo in un oggetto rettangolare.<p align="center">![Screenshot di un pulsante](xaml-controls-images/Button.png "Button")</p>[Guida](~/xamarin-forms/user-interface/button.md)  /  [API](xref:Xamarin.Forms.Button) | <p valign="center"><pre>&lt;Button Text="Click Me!"<br />        Font="Large"<br />        BorderWidth="1"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand"<br />        Clicked="OnButtonClicked" /&gt;</pre></p> |
 | <h3>ImageButton</h3>Visualizza un'immagine in un oggetto rettangolare.<p align="center">![Screenshot di un ImageButton](xaml-controls-images/ImageButton.png "ImageButton")</p>[Guida](~/xamarin-forms/user-interface/imagebutton.md)  /  [API](xref:Xamarin.Forms.ImageButton) | <p valign="center"><pre>&lt;ImageButton Source="XamarinLogo.png"<br />             HorizontalOptions="Center"<br />             VerticalOptions="CenterAndExpand"<br />             Clicked="OnImageButtonClicked" /&gt;</pre></p> |
-| <h3>SearchBar</h3>Consente di visualizzare una barra di ricerca per l'esecuzione di una ricerca.<p align="center">![Screenshot di un oggetto SearchBar](xaml-controls-images/SearchBar.png "SearchBar")</p>[Guida](~/xamarin-forms/user-interface/searchbar.md)  /  [API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
-|     |     |
+| <h3>RefreshView</h3>Fornisce funzionalità pull-to-refresh per il contenuto scorrevole.<p align="center">![Screenshot di un RefreshView](xaml-controls-images/RefreshView.png "RefreshView")</p>[Guida](~/xamarin-forms/user-interface/refreshview.md) | <p valign="center"><pre>&lt;RefreshView IsRefreshing="{Binding IsRefreshing}"<br />             Command="{Binding RefreshCommand}" &gt;<br />    &lt;!-- Scrollable control goes here --&gt;<br />&lt;/RefreshView&gt;</pre></p> |
 
 ## <a name="views-for-setting-values"></a>Visualizzazioni per l'impostazione di valori
 
@@ -75,6 +74,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio etichette, p
 
 |     |     |
 | --- | --- |
+| <h3>CarouselView</h3>Consente di visualizzare un elenco scorrevole di elementi di dati.<p align="center">![Screenshot di un CarouselView](xaml-controls-images/CarouselView.png "CarouselView")</p>[Guida](~/xamarin-forms/user-interface/carouselview/index.md) | <p valign="center"><pre>&lt;CarouselView ItemsSource="{Binding Monkeys}"&gt;<br/>              ItemTemplate="{StaticResource MonkeyTemplate}" /&gt;</pre></p>|
 | <h3>CollectionView</h3>Consente di visualizzare un elenco scorrevole di elementi di dati selezionabili, utilizzando specifiche del layout diverse.<p align="center">![Screenshot di un CollectionView](xaml-controls-images/CollectionView.png "CollectionView")</p>[Guida](~/xamarin-forms/user-interface/collectionview/index.md) | <p valign="center"><pre>&lt;CollectionView ItemsSource="{Binding Monkeys}"&gt;<br/>                ItemTemplate="{StaticResource MonkeyTemplate}"<br />    &lt;CollectionView.ItemsLayout&gt;<br />       &lt;GridItemsLayout Orientation="Vertical"<br />                        Span="2" /&gt;<br />    &lt;/CollectionView.ItemsLayout&gt;<br />&lt;/CollectionView/&gt;</pre></p> |
 | <h3>ListView</h3>Consente di visualizzare un elenco scorrevole di elementi di dati selezionabili.<p align="center">![Screenshot di un controllo ListView](xaml-controls-images/ListView.png "ListView")</p>[Guida](~/xamarin-forms/user-interface/listview/index.md)  /  [API](xref:Xamarin.Forms.ListView) | <p valign="center"><pre>&lt;ListView ItemsSource="{Binding Monkeys}"&gt;<br />          ItemTemplate="{StaticResource MonkeyTemplate}" /&gt;</pre></p> |
 | <h3>Selezione</h3>Visualizza un elemento SELECT da un elenco di stringhe di testo.<p align="center">![Screenshot di un selettore](xaml-controls-images/Picker.png "Selezione")</p>[Guida](~/xamarin-forms/user-interface/picker/index.md)  /  [API](xref:Xamarin.Forms.Picker) | <p valign="center"><pre>&lt;Picker Title="Select a monkey"<br />        TitleColor="Red"&gt;<br />  &lt;Picker.ItemsSource&lt;<br />    &lt;x:Array Type="{x:Type x:String}"&gt;<br />      &lt;x:String&gt;Baboon&lt;/x:String&gt;<br />      &lt;x:String&gt;Capuchin Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Blue Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Squirrel Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Golden Lion Tamarin&lt;/x:String&gt;<br />      &lt;x:String&gt;Howler Monkey&lt;/x:String&gt;<br />      &lt;x:String&gt;Japanese Macaque&lt;/x:String&gt;<br />    &lt;/x:Array&gt;<br />  &lt;/Picker.ItemsSource&gt;<br />&lt;/Picker&gt;</pre></p> |

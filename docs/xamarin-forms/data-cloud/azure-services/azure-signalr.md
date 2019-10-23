@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
 ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739219"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Novell. Forms
@@ -60,7 +60,7 @@ Funzioni di Azure può essere distribuito in un'istanza di app di funzioni di Az
 
 L'applicazione di esempio contiene una libreria di classi denominata **ChatServer**, che include due funzioni di Azure senza server nei file denominati **Negotiate.cs** e **Talk.cs**.
 
-La `Negotiate` funzione risponde alle richieste Web con un `SignalRConnectionInfo` oggetto che contiene `AccessToken` una proprietà e una `Url` proprietà. L'applicazione per dispositivi mobili usa questi valori per registrarsi con l'hub SignalR. Il codice seguente illustra la `Negotiate` funzione:
+La funzione `Negotiate` risponde alle richieste Web con un oggetto `SignalRConnectionInfo` contenente una proprietà `AccessToken` e una proprietà `Url`. L'applicazione per dispositivi mobili usa questi valori per registrarsi con l'hub SignalR. Il codice seguente illustra la funzione `Negotiate`:
 
 ```csharp
 [FunctionName("Negotiate")]
@@ -74,7 +74,7 @@ public static SignalRConnectionInfo GetSignalRInfo(
 }
 ```
 
-La `Talk` funzione risponde alle richieste HTTP post che forniscono un oggetto messaggio nel corpo del post. Il corpo del post viene trasformato in un oggetto `SignalRMessage` e inoltrato all'hub SignalR. Il codice seguente illustra la `Talk` funzione:
+La funzione `Talk` risponde alle richieste HTTP POST che forniscono un oggetto messaggio nel corpo del POST. Il corpo del POST viene trasformato in un `SignalRMessage` e inoltrato all'hub SignalR. Il codice seguente illustra la funzione `Talk`:
 
 ```csharp
 [FunctionName("Talk")]
@@ -138,9 +138,9 @@ Dopo aver immesso la stringa di connessione, è possibile fare clic su **pubblic
 
 ## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Integrare il servizio Azure SignalR con Novell. Forms
 
-L'integrazione tra il servizio Azure SignalR e l'applicazione Novell. Forms è una classe del servizio SignalR di cui viene `MainPage` creata un'istanza nella classe con i gestori eventi assegnati a tre eventi. Per altre informazioni su questi gestori eventi, vedere [usare la classe del servizio SignalR in Novell. Forms](#use-the-signalr-service-class-in-xamarinforms).
+L'integrazione tra il servizio Azure SignalR e l'applicazione Novell. Forms è una classe del servizio SignalR di cui viene creata un'istanza nella classe `MainPage` con i gestori eventi assegnati a tre eventi. Per altre informazioni su questi gestori eventi, vedere [usare la classe del servizio SignalR in Novell. Forms](#use-the-signalr-service-class-in-xamarinforms).
 
-L'applicazione di esempio include una classe **Constants.cs** che deve essere personalizzata con l'endpoint URL dell'app funzioni di Azure. Impostare il valore della proprietà `HostName` sull'indirizzo dell'app funzioni di Azure. Il codice seguente mostra le proprietà **Constants.cs** con un valore `HostName` di esempio:
+L'applicazione di esempio include una classe **Constants.cs** che deve essere personalizzata con l'endpoint URL dell'app funzioni di Azure. Impostare il valore della proprietà `HostName` sull'indirizzo dell'app funzioni di Azure. Nel codice seguente vengono illustrate le proprietà **Constants.cs** con un valore `HostName` di esempio:
 
 ```csharp
 public static class Constants
@@ -162,13 +162,13 @@ public static class Constants
 ```
 
 > [!NOTE]
-> La `Username` proprietà nel file **Constants.cs** dell'applicazione di esempio `RuntimePlatform` usa il valore del dispositivo come nome utente. Questo consente di testare facilmente i dispositivi multipiattaforma e identificare il dispositivo che invia il messaggio. In un'applicazione reale, questo valore sarebbe probabilmente un nome utente univoco, raccolto durante un processo di iscrizione o accesso.
+> La proprietà `Username` nel file **Constants.cs** dell'applicazione di esempio usa il valore di `RuntimePlatform` del dispositivo come nome utente. Questo consente di testare facilmente i dispositivi multipiattaforma e identificare il dispositivo che invia il messaggio. In un'applicazione reale, questo valore sarebbe probabilmente un nome utente univoco, raccolto durante un processo di iscrizione o accesso.
 
 ### <a name="the-signalr-service-class"></a>Classe del servizio SignalR
 
-La `SignalRService` classe nel progetto **chatclient** nell'applicazione di esempio illustra un'implementazione che richiama le funzioni in un'app funzioni di Azure per connettersi a un servizio Azure SignalR.
+La classe `SignalRService` nel progetto **chatclient** nell'applicazione di esempio illustra un'implementazione che richiama le funzioni in un'app funzioni di Azure per connettersi a un servizio Azure SignalR.
 
-Il `SendMessageAsync` metodo`SignalRService` nella classe viene usato per inviare messaggi ai client connessi al servizio Azure SignalR. Questo metodo esegue una richiesta HTTP post alla funzione **Talk** ospitata nell'app funzioni di Azure, incluso un `Message` oggetto serializzato JSON come payload post. La funzione **Talk** passa il messaggio al servizio Azure SignalR per la trasmissione a tutti i client connessi. Nel codice seguente viene illustrato il metodo `SendMessageAsync`.
+Il metodo `SendMessageAsync` nella classe `SignalRService` viene usato per inviare messaggi ai client connessi al servizio Azure SignalR. Questo metodo esegue una richiesta HTTP POST alla funzione **Talk** ospitata nell'app funzioni di Azure, incluso un oggetto `Message` serializzato in JSON come payload post. La funzione **Talk** passa il messaggio al servizio Azure SignalR per la trasmissione a tutti i client connessi. Nel codice seguente viene illustrato il metodo `SendMessageAsync`.
 
 ```csharp
 public async Task SendMessageAsync(string username, string message)
@@ -189,9 +189,9 @@ public async Task SendMessageAsync(string username, string message)
 }
 ```
 
-Il `ConnectAsync` metodo`SignalRService` nella classe esegue una richiesta HTTP Get alla funzione **Negotiate** ospitata nell'app funzioni di Azure. La funzione **Negotiate** restituisce JSON che viene deserializzato in un'istanza della `NegotiateInfo` classe. Una volta `NegotiateInfo` recuperato, l'oggetto viene usato per eseguire la registrazione direttamente con il servizio Azure SignalR usando un'istanza `HubConnection` della classe.
+Il metodo `ConnectAsync` nella classe `SignalRService` esegue una richiesta HTTP GET alla funzione **Negotiate** ospitata nell'app funzioni di Azure. La funzione **Negotiate** restituisce JSON deserializzato in un'istanza della classe `NegotiateInfo`. Una volta recuperato l'oggetto `NegotiateInfo`, questo viene usato per la registrazione diretta con il servizio Azure SignalR usando un'istanza della classe `HubConnection`.
 
-ASP.NET Core SignalR converte i dati in ingresso dalla connessione aperta ai messaggi e consente agli sviluppatori di definire i tipi di messaggio e di associare i gestori eventi ai messaggi in ingresso per tipo. Il `ConnectAsync` metodo registra un gestore eventi per il nome del messaggio definito nel file **Constants.cs** dell'applicazione di esempio, che per impostazione predefinita è "newMessage".
+ASP.NET Core SignalR converte i dati in ingresso dalla connessione aperta ai messaggi e consente agli sviluppatori di definire i tipi di messaggio e di associare i gestori eventi ai messaggi in ingresso per tipo. Il metodo `ConnectAsync` registra un gestore eventi per il nome del messaggio definito nel file **Constants.cs** dell'applicazione di esempio, che per impostazione predefinita è "newMessage".
 
 Nel codice seguente viene illustrato il metodo `ConnectAsync`.
 
@@ -226,7 +226,7 @@ public async Task ConnectAsync()
 }
 ```
 
-Il `AddNewMessage` metodo viene associato come gestore eventi `ConnectAsync` nel messaggio, come illustrato nel codice precedente. Quando viene ricevuto un messaggio, il `AddNewMessage` metodo viene chiamato con i dati del messaggio forniti `JObject`come. Il `AddNewMessage` metodo `NewMessageReceived` converte `JObject` inun'istanzadellaclasseequindirichiamailgestore`Message` per se ne è stato associato uno. Nel codice seguente viene illustrato il metodo `AddNewMessage`.
+Il metodo `AddNewMessage` viene associato come gestore eventi nel messaggio di `ConnectAsync`, come illustrato nel codice precedente. Quando viene ricevuto un messaggio, viene chiamato il metodo `AddNewMessage` con i dati del messaggio forniti come `JObject`. Il metodo `AddNewMessage` converte la `JObject` in un'istanza della classe `Message` e quindi richiama il gestore per `NewMessageReceived` se ne è stato associato uno. Nel codice seguente viene illustrato il metodo `AddNewMessage`.
 
 ```csharp
 public void AddNewMessage(JObject message)
@@ -244,9 +244,9 @@ public void AddNewMessage(JObject message)
 
 ### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Usare la classe del servizio SignalR in Novell. Forms
 
-L'uso della classe del servizio SignalR in Novell. Forms viene eseguito associando gli `SignalRService` eventi della classe `MainPage` nella classe code-behind.
+L'uso della classe del servizio SignalR in Novell. Forms viene eseguito associando gli eventi della classe `SignalRService` nella classe code-behind `MainPage`.
 
-L' `Connected` evento`SignalRService` nella classe viene generato quando una connessione SignalR viene completata correttamente. L' `ConnectionFailed` evento`SignalRService` nella classe viene generato in caso di errore di una connessione SignalR. Il `SignalR_ConnectionChanged` metodo del gestore eventi è associato a entrambi gli eventi `MainPage` del costruttore. Questo gestore eventi aggiorna gli Stati dei pulsanti Connetti e invia in base all' `success` argomento di connessione e aggiunge il messaggio fornito dall'evento alla coda della chat usando il `AddMessage` metodo. Il codice seguente illustra il `SignalR_ConnectionChanged` metodo del gestore eventi:
+L'evento `Connected` nella classe `SignalRService` viene generato quando una connessione SignalR viene completata correttamente. L'evento `ConnectionFailed` nella classe `SignalRService` viene generato in caso di errore di una connessione SignalR. Il metodo del gestore eventi `SignalR_ConnectionChanged` è associato a entrambi gli eventi nel costruttore di `MainPage`. Questo gestore eventi aggiorna gli Stati dei pulsanti Connetti e invia in base all'argomento `success` di connessione e aggiunge il messaggio fornito dall'evento alla coda della chat utilizzando il metodo `AddMessage`. Il codice seguente illustra il metodo del gestore dell'evento `SignalR_ConnectionChanged`:
 
 ```csharp
 void SignalR_ConnectionChanged(object sender, bool success, string message)
@@ -259,7 +259,7 @@ void SignalR_ConnectionChanged(object sender, bool success, string message)
 }
 ```
 
-L' `NewMessageReceived` evento`SignalRService` nella classe viene generato quando viene ricevuto un nuovo messaggio dal servizio Azure SignalR. Il `SignalR_NewMessageReceived` metodo del gestore eventi è associato `NewMessageReceived` all'evento nel `MainPage` costruttore. Questo gestore eventi converte l'oggetto in `Message` ingresso in una stringa e lo aggiunge alla coda di chat usando il `AddMessage` metodo. Il codice seguente illustra il `SignalR_NewMessageReceived` metodo del gestore eventi:
+L'evento `NewMessageReceived` nella classe `SignalRService` viene generato quando viene ricevuto un nuovo messaggio dal servizio Azure SignalR. Il metodo del gestore eventi `SignalR_NewMessageReceived` è associato all'evento `NewMessageReceived` nel costruttore `MainPage`. Questo gestore eventi converte l'oggetto `Message` in ingresso in una stringa e lo aggiunge alla coda della chat usando il metodo `AddMessage`. Il codice seguente illustra il metodo del gestore dell'evento `SignalR_NewMessageReceived`:
 
 ```csharp
 void SignalR_NewMessageReceived(object sender, Model.Message message)
@@ -269,7 +269,7 @@ void SignalR_NewMessageReceived(object sender, Model.Message message)
 }
 ```
 
-Il `AddMessage` metodo aggiunge un nuovo messaggio `Label` come oggetto alla coda di chat. Il `AddMessage` metodo viene spesso chiamato dai gestori eventi dall'esterno del thread principale dell'interfaccia utente, quindi forza gli aggiornamenti dell'interfaccia utente nel thread principale per impedire le eccezioni. Nel codice seguente viene illustrato il metodo `AddMessage`.
+Il metodo `AddMessage` aggiunge un nuovo messaggio come oggetto `Label` alla coda della chat. Il metodo `AddMessage` viene spesso chiamato dai gestori eventi dall'esterno del thread principale dell'interfaccia utente, quindi forza gli aggiornamenti dell'interfaccia utente nel thread principale per impedire le eccezioni. Nel codice seguente viene illustrato il metodo `AddMessage`.
 
 ```csharp
 void AddMessage(string message)

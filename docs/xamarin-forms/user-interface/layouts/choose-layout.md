@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "69893998"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Scegliere un layout di Novell. Forms
@@ -26,9 +26,9 @@ Nell'immagine seguente vengono illustrati i layout tipici che è possibile otten
 
 ## <a name="stacklayout"></a>StackLayout
 
-Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) oggetto organizza gli elementi in uno stack unidimensionale, orizzontalmente o verticalmente. La [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) proprietà specifica la direzione degli elementi e l'orientamento predefinito è [`Vertical`](xref:Xamarin.Forms.StackOrientation). `StackLayout`viene in genere usato per disporre una sottosezione dell'interfaccia utente in una pagina.
+Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) organizza gli elementi in uno stack unidimensionale, orizzontalmente o verticalmente. La proprietà [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) specifica la direzione degli elementi e l'orientamento predefinito è [`Vertical`](xref:Xamarin.Forms.StackOrientation). `StackLayout` viene in genere usato per disporre una sottosezione dell'interfaccia utente in una pagina.
 
-Nel codice XAML seguente viene illustrato come creare un [`StackLayout`](xref:Xamarin.Forms.StackLayout) oggetto verticale [`Label`](xref:Xamarin.Forms.Label) contenente tre oggetti:
+Nel codice XAML seguente viene illustrato come creare un [`StackLayout`](xref:Xamarin.Forms.StackLayout) verticale contenente tre oggetti [`Label`](xref:Xamarin.Forms.Label) :
 
 ```xaml
 <StackLayout Margin="20,35,20,25">
@@ -38,9 +38,9 @@ Nel codice XAML seguente viene illustrato come creare un [`StackLayout`](xref:Xa
 </StackLayout>
 ```
 
-In un [`StackLayout`](xref:Xamarin.Forms.StackLayout), se la dimensione di un elemento non è impostata in modo esplicito, si espande per riempire la larghezza disponibile oppure l'altezza [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) se la proprietà è [`Horizontal`](xref:Xamarin.Forms.StackOrientation)impostata su.
+In una [`StackLayout`](xref:Xamarin.Forms.StackLayout), se la dimensione di un elemento non è impostata in modo esplicito, si espande per riempire la larghezza disponibile o l'altezza se la proprietà [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) è impostata su [`Horizontal`](xref:Xamarin.Forms.StackOrientation).
 
-Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) oggetto viene spesso usato come layout padre, che contiene altri layout figlio. Tuttavia, non `StackLayout` è consigliabile utilizzare un oggetto per riprodurre un [`Grid`](xref:Xamarin.Forms.Grid) layout utilizzando una combinazione di `StackLayout` oggetti. Il codice seguente illustra un esempio di questa procedura non valida:
+Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) viene spesso usato come layout padre, che contiene altri layout figlio. Tuttavia, non è consigliabile utilizzare un `StackLayout` per riprodurre un layout di [`Grid`](xref:Xamarin.Forms.Grid) utilizzando una combinazione di oggetti di `StackLayout`. Il codice seguente illustra un esempio di questa procedura non valida:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -68,23 +68,23 @@ Un [`StackLayout`](xref:Xamarin.Forms.StackLayout) oggetto viene spesso usato co
 </ContentPage>
 ```
 
-L'operazione risulta dispendiosa poiché vengono eseguiti calcoli di layout non necessari. Al contrario, è possibile ottenere il layout desiderato utilizzando un oggetto [`Grid`](xref:Xamarin.Forms.Grid).
+L'operazione risulta dispendiosa poiché vengono eseguiti calcoli di layout non necessari. Al contrario, è possibile ottenere il layout desiderato utilizzando un [`Grid`](xref:Xamarin.Forms.Grid).
 
 > [!TIP]
-> Quando si usa [`StackLayout`](xref:Xamarin.Forms.StackLayout)un oggetto, verificare che solo un elemento figlio sia [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands)impostato su. Questa proprietà garantisce che l'elemento figlio specificato occupi lo spazio più ampio che `StackLayout` è in grado di assegnare ed è dispendioso eseguire questi calcoli più di una volta.
+> Quando si usa un [`StackLayout`](xref:Xamarin.Forms.StackLayout), assicurarsi che sia impostato un solo elemento figlio su [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands). Questa proprietà garantisce che l'elemento figlio specificato occupi lo spazio più ampio che `StackLayout` è in grado di assegnare ed è dispendioso eseguire questi calcoli più di una volta.
 
 Per altre informazioni, vedere [Novell. Forms StackLayout](stack-layout.md).
 
 ## <a name="grid"></a>Grid
 
-Un [`Grid`](xref:Xamarin.Forms.Grid) oggetto viene utilizzato per la visualizzazione di elementi in righe e colonne, che possono avere dimensioni proporzionali o assolute. Le righe e le colonne di una griglia vengono specificate [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) con [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) le proprietà e.
+Una [`Grid`](xref:Xamarin.Forms.Grid) viene utilizzata per la visualizzazione di elementi in righe e colonne, che possono avere dimensioni proporzionali o assolute. Le righe e le colonne di una griglia vengono specificate con le proprietà [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) e [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) .
 
-Per posizionare gli elementi in [`Grid`](xref:Xamarin.Forms.Grid) celle specifiche, utilizzare [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) le [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) proprietà associate e. Per fare in modo che gli elementi si estendano su [`Grid.RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) più [`Grid.ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) righe e colonne, utilizzare le proprietà associate e.
+Per posizionare gli elementi in celle [`Grid`](xref:Xamarin.Forms.Grid) specifiche, utilizzare le proprietà [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) e [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) associate. Per fare in modo che gli elementi si estendano su più righe e colonne, utilizzare il [`Grid.RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) e [`Grid.ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) proprietà associate.
 
 > [!NOTE]
-> Un [`Grid`](xref:Xamarin.Forms.Grid) layout non deve essere confuso con le tabelle e non è destinato a presentare dati tabulari. A differenza delle tabelle HTML, `Grid` un è progettato per il layout del contenuto. Per la visualizzazione dei dati tabulari, è consigliabile usare [ListView](~/xamarin-forms/user-interface/listview/index.md), [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)o [TableView](~/xamarin-forms/user-interface/tableview.md).
+> Un layout di [`Grid`](xref:Xamarin.Forms.Grid) non deve essere confuso con le tabelle e non è destinato a presentare dati tabulari. Diversamente dalle tabelle HTML, una `Grid` è destinata al layout del contenuto. Per la visualizzazione dei dati tabulari, è consigliabile usare [ListView](~/xamarin-forms/user-interface/listview/index.md), [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)o [TableView](~/xamarin-forms/user-interface/tableview.md).
 
-Nel codice XAML seguente viene illustrato come creare [`Grid`](xref:Xamarin.Forms.Grid) un oggetto con due righe e due colonne:
+Nel codice XAML seguente viene illustrato come creare un [`Grid`](xref:Xamarin.Forms.Grid) con due righe e due colonne:
 
 ```xaml
 <Grid>
@@ -113,18 +113,18 @@ In questo esempio, il dimensionamento funziona nel modo seguente:
 - Ogni riga ha un'altezza esplicita di 50 unità indipendenti dal dispositivo.
 - La larghezza della prima colonna è impostata su [`Auto`](xref:Xamarin.Forms.GridLength.Auto)ed è quindi il più ampio necessario per i relativi elementi figlio. In questo caso, si tratta di 200 unità indipendenti dal dispositivo per adattarsi alla larghezza della prima [`Label`](xref:Xamarin.Forms.Label).
 
-Lo spazio può essere distribuito all'interno di una colonna o di una riga usando il ridimensionamento automatico, che consente alle dimensioni delle colonne e delle righe di adattarsi al contenuto. Questa operazione viene eseguita impostando l'altezza di [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)un oggetto o la larghezza di [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition)un oggetto [`Auto`](xref:Xamarin.Forms.GridLength.Auto)su. Il dimensionamento proporzionale può essere utilizzato anche per distribuire lo spazio disponibile tra le righe e le colonne della griglia in base alle proporzioni ponderate. Questa operazione viene eseguita impostando l'altezza di `RowDefinition`un oggetto o la larghezza di `ColumnDefinition`un oggetto su un valore che utilizza `*` l'operatore.
+Lo spazio può essere distribuito all'interno di una colonna o di una riga usando il ridimensionamento automatico, che consente alle dimensioni delle colonne e delle righe di adattarsi al contenuto. Questa operazione viene eseguita impostando l'altezza di un [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)o la larghezza di un [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) [`Auto`](xref:Xamarin.Forms.GridLength.Auto). Il dimensionamento proporzionale può essere utilizzato anche per distribuire lo spazio disponibile tra le righe e le colonne della griglia in base alle proporzioni ponderate. Questa operazione viene eseguita impostando l'altezza di un `RowDefinition` o la larghezza di un `ColumnDefinition` su un valore che utilizza l'operatore `*`.
 
 > [!CAUTION]
-> Provare a verificare che il minor numero di righe e colonne possibile sia impostato [`Auto`](xref:Xamarin.Forms.GridLength.Auto) su dimensioni. Ogni riga o colonna ridimensionata automaticamente causerà l'esecuzione di ulteriori calcoli di layout da parte del motore di layout. Usare invece righe e colonne con dimensioni fisse, se possibile. In alternativa, impostare righe e colonne in modo da occupare una quantità proporzionale di [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) spazio con il valore di enumerazione.
+> Provare a verificare che il minor numero possibile di righe e colonne sia impostato su [`Auto`](xref:Xamarin.Forms.GridLength.Auto) dimensioni. Ogni riga o colonna ridimensionata automaticamente causerà l'esecuzione di ulteriori calcoli di layout da parte del motore di layout. Usare invece righe e colonne con dimensioni fisse, se possibile. In alternativa, impostare righe e colonne in modo da occupare una quantità proporzionale di spazio con il valore di enumerazione [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) .
 
 Per ulteriori informazioni, vedere [Novell. Forms Grid](grid.md).
 
 ## <a name="flexlayout"></a>FlexLayout
 
-Un [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) oggetto è simile a [`StackLayout`](xref:Xamarin.Forms.StackLayout) un oggetto in quanto Visualizza gli elementi figlio orizzontalmente o verticalmente in uno stack. Tuttavia, un `FlexLayout` oggetto può anche eseguire il wrapping dei relativi elementi figlio se sono presenti troppi per adattarsi a una singola riga o colonna e consente inoltre un controllo più granulare delle dimensioni, dell'orientamento e dell'allineamento degli elementi figlio.
+Una [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) è simile a una [`StackLayout`](xref:Xamarin.Forms.StackLayout) perché Visualizza gli elementi figlio orizzontalmente o verticalmente in uno stack. Tuttavia, un `FlexLayout` può anche eseguire il wrapping dei relativi elementi figlio se sono presenti troppi per adattarsi a una singola riga o colonna e consente inoltre un controllo più granulare delle dimensioni, dell'orientamento e dell'allineamento degli elementi figlio.
 
-Nel codice XAML seguente viene illustrato come creare [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) un oggetto che visualizza le visualizzazioni in una singola colonna:
+Nel codice XAML seguente viene illustrato come creare un [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) che visualizza le visualizzazioni in una singola colonna:
 
 ```xaml
 <FlexLayout Direction="Column"
@@ -138,22 +138,22 @@ Nel codice XAML seguente viene illustrato come creare [`FlexLayout`](xref:Xamari
 
 In questo esempio il layout funziona nel modo seguente:
 
-- La [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction) proprietà è impostata su `Column`, che fa sì che gli elementi `FlexLayout` figlio dell'oggetto vengano disposti in una singola colonna di elementi.
-- La [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) proprietà è impostata su `Center`, che fa sì che ogni elemento sia centrato orizzontalmente.
-- La [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) proprietà è impostata su `SpaceEvenly`, che alloca tutto lo spazio verticale rimanente equamente tra tutti gli elementi e sopra il primo elemento e sotto l'ultimo elemento.
+- La proprietà [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction) è impostata su `Column`, che fa sì che gli elementi figlio del `FlexLayout` siano disposti in una singola colonna di elementi.
+- La proprietà [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) è impostata su `Center`, che fa sì che ogni elemento sia centrato orizzontalmente.
+- La proprietà [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent) è impostata su `SpaceEvenly`, che alloca tutti gli spazi verticali rimanenti equamente tra tutti gli elementi e sopra il primo elemento e sotto l'ultimo elemento.
 
 Per altre informazioni, vedere [Novell. Forms FlexLayout](flex-layout.md).
 
 ## <a name="relativelayout"></a>RelativeLayout
 
-[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) Viene utilizzato per posizionare e ridimensionare elementi relativi alle proprietà del layout o degli elementi di pari livello. Per impostazione predefinita, un elemento viene posizionato nell'angolo superiore sinistro del layout. Un `RelativeLayout` oggetto può essere usato per creare interfacce utente che si ridimensionano proporzionalmente tra le dimensioni dei dispositivi.
+Una [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) viene utilizzata per posizionare e ridimensionare gli elementi relativi alle proprietà del layout o degli elementi di pari livello. Per impostazione predefinita, un elemento viene posizionato nell'angolo superiore sinistro del layout. Un `RelativeLayout` può essere usato per creare interfacce utente che si ridimensionano proporzionalmente tra le dimensioni dei dispositivi.
 
-All'interno [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)di un, le posizioni e le dimensioni vengono specificate come vincoli. I vincoli [`Factor`](xref:Xamarin.Forms.ConstraintExpression.Factor) hanno [`Constant`](xref:Xamarin.Forms.ConstraintExpression.Constant) proprietà e, che possono essere usate per definire posizioni e dimensioni come multipli (o frazioni) di proprietà di altri oggetti, più una costante. Inoltre, le costanti possono essere negative.
+All'interno di un [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout), le posizioni e le dimensioni vengono specificate come vincoli. I vincoli hanno proprietà [`Factor`](xref:Xamarin.Forms.ConstraintExpression.Factor) e [`Constant`](xref:Xamarin.Forms.ConstraintExpression.Constant) , che possono essere usate per definire posizioni e dimensioni come multipli (o frazioni) delle proprietà di altri oggetti, più una costante. Inoltre, le costanti possono essere negative.
 
 > [!NOTE]
-> Un [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) oggetto supporta il posizionamento di elementi all'esterno dei propri limiti.
+> Un [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) supporta il posizionamento di elementi all'esterno dei propri limiti.
 
-Nel codice XAML seguente viene illustrato come disporre gli elementi [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)in un oggetto:
+Il codice XAML seguente illustra come disporre gli elementi in un [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout):
 
 ```xaml
 <RelativeLayout>
@@ -183,28 +183,28 @@ Nel codice XAML seguente viene illustrato come disporre gli elementi [`RelativeL
 
 In questo esempio il layout funziona nel modo seguente:
 
-- Al blu [`BoxView`](xref:Xamarin.Forms.BoxView) viene assegnata una dimensione esplicita delle unità 50x50 indipendenti dal dispositivo. Si trova nell'angolo superiore sinistro del layout, ovvero la posizione predefinita.
-- Al rosso [`BoxView`](xref:Xamarin.Forms.BoxView) viene assegnata una dimensione esplicita delle unità 50x50 indipendenti dal dispositivo. Viene posizionata nell'angolo superiore destro del layout.
-- Al grigio [`BoxView`](xref:Xamarin.Forms.BoxView) viene assegnata una larghezza esplicita di 15 unità indipendenti dal dispositivo e l'altezza è impostata su 75% dell'altezza del padre.
-- Al verde [`BoxView`](xref:Xamarin.Forms.BoxView) non viene assegnata una dimensione esplicita. La relativa posizione viene impostata in relazione `BoxView` all' `pole`oggetto denominato.
+- Alla [`BoxView`](xref:Xamarin.Forms.BoxView) blu viene assegnata una dimensione esplicita delle unità 50x50 indipendenti dal dispositivo. Si trova nell'angolo superiore sinistro del layout, ovvero la posizione predefinita.
+- Al [`BoxView`](xref:Xamarin.Forms.BoxView) rosso viene assegnata una dimensione esplicita delle unità 50x50 indipendenti dal dispositivo. Viene posizionata nell'angolo superiore destro del layout.
+- Al [`BoxView`](xref:Xamarin.Forms.BoxView) grigio viene assegnata una larghezza esplicita di 15 unità indipendenti dal dispositivo e l'altezza è impostata su 75% dell'altezza del padre.
+- Al [`BoxView`](xref:Xamarin.Forms.BoxView) verde non viene assegnata una dimensione esplicita. La relativa posizione viene impostata in relazione all'`BoxView` `pole` denominata.
 
 > [!WARNING]
-> Evitare di utilizzare `RelativeLayout` un quando possibile. Causa un notevole aumento del lavoro per la CPU.
+> Evitare di utilizzare un `RelativeLayout` quando possibile. Causa un notevole aumento del lavoro per la CPU.
 
 Per altre informazioni, vedere [Novell. Forms sul relativelayout](relative-layout.md).
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
-Un [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) oggetto viene usato per posizionare e ridimensionare gli elementi usando valori espliciti o i valori relativi alle dimensioni del layout. La posizione viene specificata dall'angolo superiore sinistro del figlio rispetto all'angolo superiore sinistro dell'oggetto `AbsoluteLayout`.
+Un [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) viene usato per posizionare e ridimensionare gli elementi usando valori espliciti o i valori relativi alle dimensioni del layout. La posizione viene specificata dall'angolo superiore sinistro del figlio rispetto all'angolo superiore sinistro del `AbsoluteLayout`.
 
-Un [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) deve essere considerato come un layout per scopi specifici da usare solo quando è possibile imporre una dimensione agli elementi figlio o quando le dimensioni dell'elemento non influiscono sul posizionamento degli altri elementi figlio. Un uso standard di questo layout consiste nel creare una sovrapposizione, che copre la pagina con altri controlli, forse per impedire all'utente di interagire con i normali controlli della pagina.
+Un [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) deve essere considerato come un layout per scopi specifici da usare solo quando è possibile imporre una dimensione agli elementi figlio o quando le dimensioni dell'elemento non influiscono sul posizionamento di altri elementi figlio. Un uso standard di questo layout consiste nel creare una sovrapposizione, che copre la pagina con altri controlli, forse per impedire all'utente di interagire con i normali controlli della pagina.
 
 > [!IMPORTANT]
-> Il `HorizontalOptions` e `VerticalOptions` delle proprietà non hanno effetto sugli elementi figlio di un `AbsoluteLayout`.
+> Le proprietà `HorizontalOptions` e `VerticalOptions` non hanno effetto sugli elementi figlio di un `AbsoluteLayout`.
 
-All'interno [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)di un [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) oggetto, la proprietà associata viene utilizzata per specificare la posizione orizzontale, la posizione verticale, la larghezza e l'altezza di un elemento. Inoltre, la [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) proprietà associata specifica come verranno interpretati i limiti del layout.
+All'interno di un [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)la proprietà associata [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) viene utilizzata per specificare la posizione orizzontale, la posizione verticale, la larghezza e l'altezza di un elemento. Inoltre, la proprietà [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) associata specifica il modo in cui verranno interpretati i limiti del layout.
 
-Nel codice XAML seguente viene illustrato come disporre gli elementi [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)in un oggetto:
+Il codice XAML seguente illustra come disporre gli elementi in un [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout):
 
 ```xaml
 <AbsoluteLayout Margin="40">
@@ -224,20 +224,20 @@ Nel codice XAML seguente viene illustrato come disporre gli elementi [`AbsoluteL
 
 In questo esempio il layout funziona nel modo seguente:
 
-- A [`BoxView`](xref:Xamarin.Forms.BoxView) ciascuna viene assegnata una dimensione esplicita 100x100 e viene visualizzata nella stessa posizione, centrata orizzontalmente.
-- Il rosso [`BoxView`](xref:Xamarin.Forms.BoxView) viene ruotato di 30 gradi e il verde `BoxView` viene ruotato di 60 gradi.
-- In ogni [`BoxView`](xref:Xamarin.Forms.BoxView), la [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) proprietà `PositionProportional`associata è impostata su, a indicare che la posizione è proporzionale allo spazio rimanente dopo che è stata contabilizzata la larghezza e l'altezza.
+- A ogni [`BoxView`](xref:Xamarin.Forms.BoxView) viene assegnata una dimensione esplicita 100x100 e viene visualizzata nella stessa posizione, centrata orizzontalmente.
+- Il [`BoxView`](xref:Xamarin.Forms.BoxView) rosso viene ruotato di 30 gradi e il `BoxView` verde viene ruotato di 60 gradi.
+- In ogni [`BoxView`](xref:Xamarin.Forms.BoxView)la proprietà associata [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) è impostata su `PositionProportional`, a indicare che la posizione è proporzionale allo spazio rimanente dopo che è stata contabilizzata la larghezza e l'altezza.
 
 > [!CAUTION]
-> Evitare di utilizzare [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) la proprietà quando possibile, perché il motore di layout eseguirà calcoli di layout aggiuntivi.
+> Evitare di utilizzare la proprietà [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) quando possibile, perché il motore di layout eseguirà calcoli di layout aggiuntivi.
 
 Per altre informazioni, vedere [Novell. Forms AbsoluteLayout](absolute-layout.md).
 
 ## <a name="input-transparency"></a>Trasparenza input
 
-Ogni elemento visivo ha una [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) proprietà usata per definire se l'elemento riceve input. Il valore predefinito è `false`, assicurando che l'elemento riceve l'input.
+Ogni elemento visivo dispone di una proprietà [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) utilizzata per definire se l'elemento riceve input. Il valore predefinito è `false`, assicurando che l'elemento riceva input.
 
-Quando questa proprietà viene impostata su una classe layout, il relativo valore viene trasferito agli elementi figlio. Se pertanto si imposta [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) la `true` proprietà su in una classe layout, tutti gli elementi all'interno del layout non riceveranno input.
+Quando questa proprietà viene impostata su una classe layout, il relativo valore viene trasferito agli elementi figlio. Pertanto, se si imposta la proprietà [`InputTransparent`](xref:Xamarin.Forms.VisualElement.InputTransparent) su `true` in una classe layout, tutti gli elementi all'interno del layout non riceveranno input.
 
 ## <a name="layout-performance"></a>Prestazioni del layout
 
