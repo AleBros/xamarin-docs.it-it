@@ -6,52 +6,51 @@ ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/24/2019
-ms.openlocfilehash: 8fd37999428c2813bbf96de3bcbd6ebd1fe0879d
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 09/17/2019
+ms.openlocfilehash: 3a0fe7159e6af24d58e49dea4166d012605c9985
+ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69894028"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749799"
 ---
 # <a name="xamarinforms-collectionview-grouping"></a>Raggruppamento Novell. Forms di CollectionView
 
-![](~/media/shared/preview.png "Quest'API è attualmente in versione non definitiva")
-
-[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 I set di dati di grandi dimensioni possono spesso diventare difficoltosi quando vengono presentati in un elenco a scorrimento continuo. In questo scenario l'organizzazione dei dati in gruppi può migliorare l'esperienza utente semplificando l'esplorazione dei dati.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)supporta la visualizzazione di dati raggruppati e definisce le proprietà seguenti che controllano la modalità di presentazione:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) supporta la visualizzazione di dati raggruppati e definisce le proprietà seguenti che controllano la modalità di presentazione:
 
 - `IsGrouped`, di tipo `bool`, indica se i dati sottostanti devono essere visualizzati in gruppi. Il valore predefinito di questa proprietà è `false`.
 - `GroupHeaderTemplate`, di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), il modello da utilizzare per l'intestazione di ogni gruppo.
-- `GroupFooterTemplate`, di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), il modello da usare per il piè di pagina di ogni gruppo.
+- `GroupFooterTemplate`, di tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), il modello da utilizzare per il piè di pagina di ogni gruppo.
 
-Queste proprietà sono supportate da [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) oggetti, il che significa che le proprietà possono essere destinazioni di associazioni dati.
+Queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , il che significa che le proprietà possono essere destinazioni di associazioni dati.
+
+Gli screenshot seguenti mostrano un [`CollectionView`](xref:Xamarin.Forms.CollectionView) la visualizzazione dei dati raggruppati:
+
+[![Screenshot di dati raggruppati in un oggetto CollectionView, in iOS e Android](grouping-images/grouped-data.png "CollectionView con dati raggruppati")](grouping-images/grouped-data-large.png#lightbox "CollectionView con dati raggruppati")
 
 Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
-> [!IMPORTANT]
-> Il raggruppamento dei dati [`CollectionView`](xref:Xamarin.Forms.CollectionView) con è attualmente supportato solo in iOS.
-
 ## <a name="group-data"></a>Raggruppa dati
 
-Prima di poter visualizzare i dati, è necessario raggrupparli. Questa operazione può essere eseguita creando un elenco di gruppi, in cui ogni gruppo è un elenco di elementi. L'elenco dei gruppi deve essere una `IEnumerable<T>` raccolta, dove `T` definisce due tipi di dati:
+Prima di poter visualizzare i dati, è necessario raggrupparli. Questa operazione può essere eseguita creando un elenco di gruppi, in cui ogni gruppo è un elenco di elementi. L'elenco dei gruppi deve essere una raccolta `IEnumerable<T>`, in cui `T` definisce due tipi di dati:
 
 - Nome del gruppo.
-- `IEnumerable` Raccolta che definisce gli elementi appartenenti al gruppo.
+- Raccolta di `IEnumerable` che definisce gli elementi appartenenti al gruppo.
 
 Il processo di raggruppamento dei dati, pertanto, consiste nel:
 
 - Creare un tipo che modella un singolo elemento.
 - Creare un tipo che modella un singolo gruppo di elementi.
-- Creare una `IEnumerable<T>` raccolta, dove `T` è il tipo che modella un singolo gruppo di elementi. Questa raccolta è quindi una raccolta di gruppi che archivia i dati raggruppati.
-- Aggiungere i dati alla `IEnumerable<T>` raccolta.
+- Creare una raccolta di `IEnumerable<T>`, dove `T` è il tipo che modella un singolo gruppo di elementi. Questa raccolta è quindi una raccolta di gruppi che archivia i dati raggruppati.
+- Aggiungere i dati alla raccolta di `IEnumerable<T>`.
 
 ### <a name="example"></a>Esempio
 
-Quando si raggruppano i dati, il primo passaggio consiste nel creare un tipo che modella un singolo elemento. Nell'esempio seguente viene illustrata la `Animal` classe dell'applicazione di esempio:
+Quando si raggruppano i dati, il primo passaggio consiste nel creare un tipo che modella un singolo elemento. Nell'esempio seguente viene illustrata la classe `Animal` dall'applicazione di esempio:
 
 ```csharp
 public class Animal
@@ -63,7 +62,7 @@ public class Animal
 }
 ```
 
-La `Animal` classe modella un singolo elemento. È quindi possibile creare un tipo che modella un gruppo di elementi. Nell'esempio seguente viene illustrata la `AnimalGroup` classe dell'applicazione di esempio:
+La classe `Animal` modella un singolo elemento. È quindi possibile creare un tipo che modella un gruppo di elementi. Nell'esempio seguente viene illustrata la classe `AnimalGroup` dall'applicazione di esempio:
 
 ```csharp
 public class AnimalGroup : List<Animal>
@@ -77,17 +76,17 @@ public class AnimalGroup : List<Animal>
 }
 ```
 
-La `AnimalGroup` classe eredita `List<T>` dalla classe e aggiunge una `Name` proprietà che rappresenta il nome del gruppo.
+La classe `AnimalGroup` eredita dalla classe `List<T>` e aggiunge una proprietà `Name` che rappresenta il nome del gruppo.
 
-È `IEnumerable<T>` quindi possibile creare una raccolta di gruppi:
+È quindi possibile creare una raccolta `IEnumerable<T>` di gruppi:
 
 ```csharp
 public List<AnimalGroup> Animals { get; private set; } = new List<AnimalGroup>();
 ```
 
-Questo codice definisce una raccolta denominata `Animals`, in cui ogni elemento della raccolta è un `AnimalGroup` oggetto. Ogni `AnimalGroup` oggetto è costituito da un nome `List<Animal>` e da una raccolta `Animal` che definisce gli oggetti nel gruppo.
+Questo codice definisce una raccolta denominata `Animals`, in cui ogni elemento della raccolta è un oggetto `AnimalGroup`. Ogni oggetto `AnimalGroup` è costituito da un nome e da una raccolta `List<Animal>` che definisce gli oggetti `Animal` nel gruppo.
 
-I `Animals` dati raggruppati possono quindi essere aggiunti alla raccolta:
+I dati raggruppati possono quindi essere aggiunti alla raccolta `Animals`:
 
 ```csharp
 Animals.Add(new AnimalGroup("Bears", new List<Animal>
@@ -136,11 +135,11 @@ Animals.Add(new AnimalGroup("Monkeys", new List<Animal>
 }));
 ```
 
-Questo codice crea due gruppi nella `Animals` raccolta. Il primo `AnimalGroup` è denominato `Bears`e contiene una `List<Animal>` raccolta di dettagli dell'orso. Il secondo `AnimalGroup` è denominato `Monkeys`e contiene una `List<Animal>` raccolta di dettagli scimmia.
+Questo codice crea due gruppi nella raccolta `Animals`. Il primo `AnimalGroup` è denominato `Bears` e contiene una raccolta di `List<Animal>` di dettagli dell'orso. Il secondo `AnimalGroup` è denominato `Monkeys` e contiene una raccolta `List<Animal>` di dettagli scimmia.
 
 ## <a name="display-grouped-data"></a>Visualizza dati raggruppati
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)visualizzerà i dati raggruppati, a condizione che i dati siano stati raggruppati correttamente, impostando `IsGrouped` la `true`proprietà su:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) visualizzerà i dati raggruppati, a condizione che i dati siano stati raggruppati correttamente, impostando la proprietà `IsGrouped` su `true`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -168,7 +167,7 @@ Questo codice crea due gruppi nella `Animals` raccolta. Il primo `AnimalGroup` �
 </CollectionView>
 ```
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -179,14 +178,14 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
 // ...
 ```
 
-L'aspetto di ogni elemento in [`CollectionView`](xref:Xamarin.Forms.CollectionView) viene definito impostando la [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) proprietà su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Per altre informazioni, vedere [definire l'aspetto dell'elemento](~/xamarin-forms/user-interface/collectionview/populate-data.md#define-item-appearance).
+L'aspetto di ogni elemento nel [`CollectionView`](xref:Xamarin.Forms.CollectionView) viene definito impostando la proprietà [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Per altre informazioni, vedere [definire l'aspetto dell'elemento](~/xamarin-forms/user-interface/collectionview/populate-data.md#define-item-appearance).
 
 > [!NOTE]
-> Per impostazione predefinita [`CollectionView`](xref:Xamarin.Forms.CollectionView) , visualizzerà il nome del gruppo nell'intestazione e nel piè di pagina del gruppo. Questo comportamento può essere modificato personalizzando l'intestazione di gruppo e il piè di pagina del gruppo.
+> Per impostazione predefinita, [`CollectionView`](xref:Xamarin.Forms.CollectionView) visualizzerà il nome del gruppo nell'intestazione e nel piè di pagina del gruppo. Questo comportamento può essere modificato personalizzando l'intestazione di gruppo e il piè di pagina del gruppo.
 
 ## <a name="customize-the-group-header"></a>Personalizzare l'intestazione del gruppo
 
-L'aspetto di ogni intestazione di gruppo può essere personalizzato impostando `CollectionView.GroupHeaderTemplate` la proprietà [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)su:
+È possibile personalizzare l'aspetto di ogni intestazione di gruppo impostando la proprietà `CollectionView.GroupHeaderTemplate` su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -203,11 +202,13 @@ L'aspetto di ogni intestazione di gruppo può essere personalizzato impostando `
 </CollectionView>
 ```
 
-In questo esempio, ogni intestazione di gruppo è impostata su [`Label`](xref:Xamarin.Forms.Label) un oggetto che Visualizza il nome del gruppo e con altre proprietà di aspetto impostate.
+In questo esempio, ogni intestazione di gruppo è impostata su un [`Label`](xref:Xamarin.Forms.Label) che Visualizza il nome del gruppo e con altre proprietà di aspetto impostate. Gli screenshot seguenti mostrano l'intestazione di gruppo personalizzata:
+
+[![Screenshot di un'intestazione di gruppo personalizzata in un CollectionView, in iOS e Android](grouping-images/customized-header.png "CollectionView con intestazione di gruppo personalizzata")](grouping-images/customized-header-large.png#lightbox "CollectionView con intestazione di gruppo personalizzata")
 
 ## <a name="customize-the-group-footer"></a>Personalizzare il piè di pagina del gruppo
 
-È possibile personalizzare l'aspetto di ogni piè di pagina del gruppo impostando la `CollectionView.GroupFooterTemplate` proprietà [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)su:
+È possibile personalizzare l'aspetto di ogni piè di pagina del gruppo impostando la proprietà `CollectionView.GroupFooterTemplate` su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -222,27 +223,31 @@ In questo esempio, ogni intestazione di gruppo è impostata su [`Label`](xref:Xa
 </CollectionView>
 ```
 
-In questo esempio, ogni piè di pagina del gruppo è impostato [`Label`](xref:Xamarin.Forms.Label) su un oggetto che Visualizza il numero di elementi nel gruppo.
+In questo esempio, ogni piè di pagina del gruppo è impostato su un [`Label`](xref:Xamarin.Forms.Label) che Visualizza il numero di elementi nel gruppo. Gli screenshot seguenti mostrano il piè di pagina di gruppo personalizzato:
+
+[![Screenshot di un piè di pagina di gruppo personalizzato in un CollectionView, in iOS e Android](grouping-images/customized-footer.png "CollectionView con piè di pagina gruppo personalizzato")](grouping-images/customized-footer-large.png#lightbox "CollectionView con piè di pagina gruppo personalizzato")
 
 ## <a name="empty-groups"></a>Gruppi vuoti
 
-Quando un [`CollectionView`](xref:Xamarin.Forms.CollectionView) oggetto Visualizza i dati raggruppati, verranno visualizzati tutti i gruppi vuoti. Tali gruppi verranno visualizzati con un'intestazione e un piè di pagina di gruppo, a indicare che il gruppo è vuoto.
+Quando un [`CollectionView`](xref:Xamarin.Forms.CollectionView) Visualizza i dati raggruppati, verranno visualizzati tutti i gruppi vuoti. Tali gruppi verranno visualizzati con un'intestazione e un piè di pagina di gruppo, a indicare che il gruppo è vuoto. Gli screenshot seguenti mostrano un gruppo vuoto:
+
+[![Screenshot di un gruppo vuoto in un oggetto CollectionView, in iOS e Android](grouping-images/empty-group.png "CollectionView con un gruppo vuoto")](grouping-images/empty-group-large.png#lightbox "CollectionView con un gruppo vuoto")
 
 > [!NOTE]
-> In iOS 10 e versioni precedenti le intestazioni di gruppo e i piè di pagina per i gruppi vuoti possono essere tutti visualizzati `CollectionView`nella parte superiore del.
+> In iOS 10 e versioni precedenti le intestazioni di gruppo e i piè di pagina per i gruppi vuoti possono essere tutti visualizzati nella parte superiore del `CollectionView`.
 
 ## <a name="group-without-templates"></a>Gruppo senza modelli
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)consente di visualizzare i dati raggruppati correttamente senza [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) impostare la proprietà [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)su un oggetto:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) possibile visualizzare i dati raggruppati correttamente senza impostare la proprietà [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) su un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
                 IsGrouped="true" />
 ```
 
-In questo scenario è possibile visualizzare dati significativi eseguendo l'override del `ToString` metodo nel tipo che modella un singolo elemento e il tipo che modella un singolo gruppo di elementi.
+In questo scenario è possibile visualizzare dati significativi eseguendo l'override del metodo `ToString` nel tipo che modella un singolo elemento e il tipo che modella un singolo gruppo di elementi.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [CollectionView (esempio)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+- [CollectionView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

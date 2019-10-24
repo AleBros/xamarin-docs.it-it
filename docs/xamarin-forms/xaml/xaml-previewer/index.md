@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68757259"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizzatore anteprima XAML per Novell. Forms
@@ -23,7 +23,7 @@ _Visualizza i layout di Novell. Forms sottoposti a rendering durante la digitazi
 
 Il Visualizzatore anteprima XAML Mostra come verrà visualizzata la pagina XAML di Novell. Forms in iOS e Android. Quando si apportano modifiche a XAML, verranno visualizzate in anteprima immediatamente insieme al codice. Il Visualizzatore anteprima XAML è disponibile in Visual Studio e Visual Studio per Mac.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Per iniziare
 
 ::: zone pivot="windows"
 
@@ -52,7 +52,7 @@ Scegliere se si desidera visualizzare il codice, il Visualizzatore anteprima XAM
 
 Il pulsante **Anteprima** viene visualizzato nell'editor quando si apre una pagina XAML. Mostrare o nascondere il Visualizzatore anteprime premendo i pulsanti **Anteprima** o **Dividi** nella parte inferiore sinistra di una finestra del documento XAML:
 
-[![Visualizzatore anteprima Novell. Forms abilitato con il pulsante anteprima o Split](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[Visualizzatore anteprima ![Xamarin. Forms abilitato con il pulsante di anteprima o di divisione](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > Nelle versioni precedenti di Visual Studio per Mac, il pulsante **Anteprima** si trovava in alto a destra nella finestra.
@@ -64,7 +64,7 @@ Il pulsante **Anteprima** viene visualizzato nell'editor quando si apre una pagi
 Le opzioni nella parte superiore del riquadro di anteprima sono:
 
 * **Android** : Mostra la versione di Android dello schermo
-* **iOS** : Mostra la versione iOS dello schermo (*Nota: Se si usa Visual Studio in Windows, è necessario associarlo [a un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) per usare questa modalità*.
+* **iOS** : Mostra la versione iOS dello schermo.*Nota: se si usa Visual Studio in Windows, è necessario [associarlo a un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) per usare questa modalità.*
 * **Dispositivo** : elenco a discesa di dispositivi Android o iOS, incluse la risoluzione e le dimensioni dello schermo
 * **Verticale (icona)** : usa l'orientamento verticale per l'anteprima
 * **Orizzontale (icona)** : usa l'orientamento orizzontale per l'anteprima
@@ -87,7 +87,7 @@ if (!DesignMode.IsDesignModeEnabled)
 
 Questa proprietà è utile se si Inizializza una libreria nel costruttore della pagina che non viene eseguita in fase di progettazione.
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Controllare i problemi riportati di seguito e i [Forum di Novell](https://forums.xamarin.com/categories/xamarin-forms), se il Visualizzatore anteprima non funziona.
 
@@ -95,10 +95,10 @@ Controllare i problemi riportati di seguito e i [Forum di Novell](https://forums
 
 * L'avvio del Visualizzatore anteprime potrebbe richiedere del tempo. verrà visualizzato il "inizializzazione del rendering" fino a quando non è pronto.
 * Provare a chiudere e riaprire il file XAML.
-* Verificare che la `App` classe disponga di un costruttore senza parametri.
+* Verificare che la classe `App` disponga di un costruttore senza parametri.
 * Verificare la versione di Novell. Forms. deve essere almeno Novell. Forms 3,6. È possibile eseguire l'aggiornamento alla versione più recente di Novell. Forms tramite NuGet.
 * Controllare l'installazione di JDK: l'anteprima di Android richiede almeno [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
-* Provare a eseguire il wrapping di tutte le classi C# inizializzate nel `if (!DesignMode.IsDesignModeEnabled)`code-behind della pagina in.
+* Provare a eseguire il wrapping di tutte le classi C# inizializzate nel code-behind della pagina in `if (!DesignMode.IsDesignModeEnabled)`.
 
 ### <a name="custom-controls-arent-rendering"></a>Non è in esecuzione il rendering di controlli personalizzati
 

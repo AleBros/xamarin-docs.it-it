@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69658030"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696428"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Novell. Forms
 
@@ -25,10 +25,12 @@ Il [`SearchBar`](xref:Xamarin.Forms.SearchBar) Novell. Forms è un controllo di 
 La classe `SearchBar` definisce le proprietà seguenti:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) è un `Color` che definisce il colore del pulsante Annulla.
+* `CharacterSpacing`, di tipo `double`, è la spaziatura tra i caratteri del testo `SearchBar`.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) è un valore `FontAttributes` enum che determina se il tipo di carattere del `SearchBar` è grassetto, corsivo o nessuno dei due.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) è un `string` che determina la famiglia di caratteri utilizzata dal `SearchBar`.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) può essere un valore `NamedSize` enum o un valore `double` che rappresenta dimensioni specifiche dei tipi di carattere nelle diverse piattaforme.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) è un valore `TextAlignment` enum che definisce l'allineamento orizzontale del testo della query.
+* `VerticalTextAlignment` è un valore `TextAlignment` enum che definisce l'allineamento verticale del testo della query.
 * [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) è un `string` che definisce il testo segnaposto, ad esempio "search...".
 * [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) è un `Color` che definisce il colore del testo segnaposto.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) è un `ICommand` che consente di associare le azioni dell'utente, ad esempio le manopole o i clic, ai comandi definiti in un ViewModel.
