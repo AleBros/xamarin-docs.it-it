@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 5c6eb6e49c7c8a4071591e46a5afc02a6ff6b4e6
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 6060f7c7e31c52a122c5ccb7a7e7be8dfe58051a
+ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105901"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810549"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Accelerazione hardware per le prestazioni dell'emulatore (Hyper-V e HAXM)
 
@@ -24,7 +24,7 @@ Tuttavia, l'emulatore Android viene eseguito troppo lentamente se nel computer c
 
 | Scenario    | HAXM        | WHPX       | Hypervisor. Framework |
 | ----------- | ----------- | -----------| ----------- |
-| Si dispone di un processore Intel | X | X | X |
+| Si dispone di un processore Intel | x | x | x |
 | Si dispone di un processore AMD   |   | x |   |
 | Si vuole supportare Hyper-V |   | x |   |
 | Si vuole supportare la virtualizzazione nidificata |   | Limitato |   |
@@ -57,7 +57,6 @@ Per informazioni sull'avvio e sul debug con l'emulatore Android, vedere [Debug n
 
 ## <a name="accelerating-with-hyper-v"></a>Accelerazione con Hyper-V
 
-Hyper-V è la scelta consigliata per accelerare l'emulatore di Android.
 Prima di abilitare Hyper-V, leggere la sezione seguente per verificare che il computer supporti Hyper-V.
 
 ### <a name="verifying-support-for-hyper-v"></a>Verifica del supporto per Hyper-V
@@ -90,7 +89,7 @@ Per verificare che l'hardware e il software del computer siano compatibili con H
 systeminfo
 ```
 
-Se tutti i requisiti di Hyper-V elencati hanno un valore **Yes**, i computer possono supportare Hyper-V. Ad esempio:
+Se tutti i requisiti di Hyper-V elencati hanno un valore **Yes**, i computer possono supportare Hyper-V. Esempio:
 
 [![Output di systeminfo di esempio](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
@@ -127,7 +126,7 @@ Se l'hardware supporta HAXM, è possibile controllare se HAXM è già installato
     sc query intelhaxm
     ```
 
-2. Esaminare l'output per vedere se il processo HAXM è in esecuzione. In caso affermativo, lo stato di `intelhaxm` verrà visualizzato come `RUNNING`. Ad esempio:
+2. Esaminare l'output per vedere se il processo HAXM è in esecuzione. In caso affermativo, lo stato di `intelhaxm` verrà visualizzato come `RUNNING`. Esempio:
 
     ![Output del comando sc query se HAXM è disponibile](hardware-acceleration-images/win/05-sc_query-w158.png)
 
@@ -149,7 +148,7 @@ I pacchetti di installazione di HAXM per Windows sono disponibili nella pagina [
 
 Quando si crea un dispositivo virtuale (vedere [Gestione di dispositivi virtuali con Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), assicurarsi di selezionare un'immagine del sistema basata su **x86**. Se si usa un'immagine del sistema basata su ARM, il dispositivo virtuale non verrà accelerato e verrà eseguito lentamente.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Per informazioni su come risolvere i problemi di accelerazione hardware, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#accel-issues-win) dell'emulatore Android.
 
@@ -238,7 +237,7 @@ I pacchetti di installazione di HAXM per macOS sono disponibili nella pagina [In
 
    [![Finestra di installazione di Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Per informazioni su come risolvere i problemi di accelerazione hardware, vedere la guida alla [risoluzione dei problemi](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#accel-issues-mac) dell'emulatore Android.
 
