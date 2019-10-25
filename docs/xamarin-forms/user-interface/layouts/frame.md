@@ -22,7 +22,7 @@ La classe [`Frame`](xref:Xamarin.Forms.Frame) Novell. Forms è un layout utilizz
 
 Lo screenshot seguente mostra `Frame` controlli in iOS e Android:
 
-[![ "esempi di frame in iOS e Android"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Esempi di frame in iOS e Android")
+[![esempi di frame in iOS e Android](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Esempi di frame in iOS e Android")
 
 La classe `Frame` definisce le proprietà seguenti:
 
@@ -84,7 +84,7 @@ La classe `Frame` eredita da `ContentView`, ovvero può contenere qualsiasi tipo
 
 La combinazione di un oggetto `Frame` con un oggetto `Layout`, ad esempio un oggetto `StackLayout`, consente la creazione di interfacce utente più complesse. Lo screenshot seguente mostra una scheda di esempio, creata usando un oggetto `Frame`:
 
-[![ "screenshot di una scheda creata con un frame"](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Screenshot di una scheda creata con un frame")
+[![screenshot di una scheda creata con un frame](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Screenshot di una scheda creata con un frame")
 
 Il codice XAML seguente mostra come creare una scheda con la classe `Frame`:
 
