@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
-ms.openlocfilehash: 6ea8195d422da3c64175b164c5fbf2885eb234ab
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 10/28/2019
+ms.openlocfilehash: d51ecc728ef6d22391f1cbc682aa204a3ce44b8a
+ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696377"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72971222"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di Novell. Forms
 
@@ -69,32 +69,6 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 ```
 
 Il risultato è che i caratteri nel testo visualizzato dal [`Label`](xref:Xamarin.Forms.Label) sono spaziati `CharacterSpacing` unità indipendenti dal dispositivo.
-
-## <a name="padding"></a>Spaziatura interna
-
-La spaziatura interna rappresenta lo spazio tra un elemento e i relativi elementi figlio e viene utilizzato per separare l'elemento dal relativo contenuto. La spaziatura interna può essere applicata alle istanze di [`Label`](xref:Xamarin.Forms.Label) impostando la proprietà `Label.Padding` su un valore [`Thickness`](xref:Xamarin.Forms.Thickness) :
-
-```xaml
-<Label Text="Padded text"
-       Padding="20" />
-```
-
-Il codice C# equivalente è il seguente:
-
-```csharp
-Label label = new Label
-{
-    Text = "Padded text",
-    Padding = new Thickness(20)
-};
-```
-
-> [!IMPORTANT]
-> In iOS, quando viene creata una [`Label`](xref:Xamarin.Forms.Label) che imposta la proprietà `Padding`, viene applicata la spaziatura interna e il valore di riempimento può essere aggiornato in un secondo momento. Tuttavia, quando viene creata una `Label` che non imposta la proprietà `Padding`, il tentativo di impostarlo in un secondo momento non avrà alcun effetto.
->
-> In Android e in piattaforma UWP (Universal Windows Platform), è possibile specificare il valore della proprietà `Padding` quando viene creato il `Label` o versione successiva.
-
-Per ulteriori informazioni sulla spaziatura interna, vedere [margini e spaziatura interna](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## <a name="colors"></a>Colori
 
@@ -390,6 +364,48 @@ var label = new Label
 Gli screenshot seguenti mostrano il risultato dell'impostazione della proprietà [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) su 1,8:
 
 ![Esempio di span LineHeight](label-images/span-lineheight.png)
+
+## <a name="padding"></a>Spaziatura interna
+
+La spaziatura interna rappresenta lo spazio tra un elemento e i relativi elementi figlio e viene utilizzato per separare l'elemento dal relativo contenuto. La spaziatura interna può essere applicata alle istanze di [`Label`](xref:Xamarin.Forms.Label) impostando la proprietà `Label.Padding` su un valore [`Thickness`](xref:Xamarin.Forms.Thickness) :
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+Il codice C# equivalente è il seguente:
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> In iOS, quando viene creata una [`Label`](xref:Xamarin.Forms.Label) che imposta la proprietà `Padding`, viene applicata la spaziatura interna e il valore di riempimento può essere aggiornato in un secondo momento. Tuttavia, quando viene creata una `Label` che non imposta la proprietà `Padding`, il tentativo di impostarlo in un secondo momento non avrà alcun effetto.
+>
+> In Android e in piattaforma UWP (Universal Windows Platform), è possibile specificare il valore della proprietà `Padding` quando viene creato il `Label` o versione successiva.
+
+Per ulteriori informazioni sulla spaziatura interna, vedere [margini e spaziatura interna](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
 
 ## <a name="hyperlinks"></a>Collegamenti ipertestuali
 
