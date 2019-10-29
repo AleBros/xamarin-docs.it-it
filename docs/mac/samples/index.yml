@@ -3,8 +3,8 @@ documentType: LandingData
 title: Esempi di Xamarin.Mac
 metadata:
   description: App di esempio multipiattaforma Xamarin.Mac per gli sviluppatori per dispositivi mobili.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 07/30/2019
   ms.topic: sample
 abstract:

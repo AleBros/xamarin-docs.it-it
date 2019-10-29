@@ -3,8 +3,8 @@ documentType: LandingData
 title: Linee guida per lo sviluppo multipiattaforma
 metadata:
   description: Linee guida per lo sviluppo multipiattaforma per gli sviluppatori per dispositivi mobili.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 04/25/2018
   ms.topic: landing-page
 abstract:
