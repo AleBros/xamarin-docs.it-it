@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 08/20/2019
 ms.openlocfilehash: 9109e7bff4cfe60479e711240d290d77b60a9af6
 ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/27/2019
 ms.locfileid: "70060113"
@@ -96,7 +96,7 @@ _Tuttavia, questo controllo non è necessario._ Le implementazioni della piattaf
 
 ## <a name="additional-methods"></a>Altri metodi
 
-La classe `MainThread` include i metodi aggiuntivi seguenti `static` che possono essere usati per interagire con gli elementi dell'interfaccia utente dai thread di background:
+La classe `MainThread` include i metodi `static` aggiuntivi seguenti che possono essere usati per interagire con gli elementi dell'interfaccia utente dai thread di background:
 
 | Metodo | Argomenti | Restituisce | Scopo |
 |---|---|---|---|

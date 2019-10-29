@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/01/2019
 ms.openlocfilehash: 0841cb0cbe97644f3bb53105887f3adadf9bf6c5
 ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/06/2019
 ms.locfileid: "68820939"
@@ -160,7 +160,7 @@ Per ottenere le migliori prestazioni possibili del layout, attenersi alle seguen
 
 ## <a name="choose-a-dependency-injection-container-carefully"></a>Scegliere con attenzione un contenitore di inserimento delle dipendenze
 
-I contenitori di inserimento delle dipendenze introducono nelle applicazioni per dispositivi mobili ulteriori vincoli relativi alle prestazioni. La registrazione e la risoluzione dei tipi con un contenitore comportano un costo in termini di prestazioni a causa dell'uso della reflection da parte del contenitore per la creazione di ogni tipo, soprattutto se le dipendenze vengono ricostruite per la navigazione di ogni pagina nell'app. Se le dipendenze presenti sono numerose o complete, il costo della creazione può aumentare in modo significativo. Inoltre, la registrazione dei tipi, che in genere viene eseguita durante l'avvio dell'applicazione, può avere un notevole effetto sul tempo di avvio, a seconda del contenitore usato.
+I contenitori di inserimento delle dipendenze introducono nelle applicazioni per dispositivi mobili ulteriori vincoli relativi alle prestazioni. La registrazione e la risoluzione dei tipi con un contenitore comportano un costo in termini di prestazioni perché il contenitore usa la reflection per la creazione di ogni tipo, soprattutto se le dipendenze vengono ricostruite per la navigazione di ogni pagina nell'app. Se le dipendenze presenti sono numerose o complete, il costo della creazione può aumentare in modo significativo. Inoltre, la registrazione dei tipi, che in genere viene eseguita durante l'avvio dell'applicazione, può avere un notevole effetto sul tempo di avvio, a seconda del contenitore usato.
 
 In alternativa, l'inserimento delle dipendenze può essere reso più efficiente implementandolo manualmente tramite factory.
 
@@ -264,7 +264,7 @@ Per altre informazioni sulle risorse dell'applicazione, vedere [Stili XAML](~/xa
 
 ## <a name="use-the-custom-renderer-pattern"></a>Usare il modello di renderer personalizzato
 
-La maggior parte delle classi renderer di XAmarin.Forms espone il metodo `OnElementChanged`, che viene chiamato quando si crea un controllo personalizzato di Xamarin.Forms per il rendering del controllo nativo corrispondente. Personalizzare le classi renderer per ogni progetto della piattaforma, quindi eseguire l'override di questo metodo per creare un'istanza del controllo nativo e personalizzare il controllo. Il metodo `SetNativeControl` viene usato per creare un'istanza del controllo nativo e assegna anche il riferimento a controllo alla proprietà `Control`.
+La maggior parte delle classi renderer di Xamarin.Forms espone il metodo `OnElementChanged`, che viene chiamato quando si crea un controllo personalizzato di Xamarin.Forms per il rendering del controllo nativo corrispondente. Personalizzare le classi renderer per ogni progetto della piattaforma, quindi eseguire l'override di questo metodo per creare un'istanza del controllo nativo e personalizzare il controllo. Il metodo `SetNativeControl` viene usato per creare un'istanza del controllo nativo e assegna anche il riferimento a controllo alla proprietà `Control`.
 
 Tuttavia, in alcune circostanze il metodo `OnElementChanged` può essere chiamato più volte. Di conseguenza, per evitare perdite di memoria, che possono avere un impatto sulle prestazioni, prestare attenzione quando si crea un'istanza di un nuovo controllo nativo. L'approccio da usare quando si crea un'istanza di un nuovo controllo nativo in un renderer personalizzato è illustrato nell'esempio di codice seguente:
 
