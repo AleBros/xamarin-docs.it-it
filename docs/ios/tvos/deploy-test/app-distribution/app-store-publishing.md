@@ -4,15 +4,15 @@ description: Questo documento descrive come pubblicare un'app nell'App Store di 
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 4dface536504b0a79d376ab0979443a5ed19e901
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f49fa08e5d9b2ad76fc069b415d6ea5b899b2bf7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769240"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030781"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in Apple TV App Store
 
@@ -47,7 +47,7 @@ Apple gestisce anche un elenco di suggerimenti per l'invio di App Store di Apple
 
 [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa) è una suite di strumenti basati sul Web per, tra le altre cose, la gestione delle app TvOS nell'App Store di Apple TV. È necessario configurare e configurare correttamente l'app Novell. tvOS in iTunes Connect prima di poterla inviare ad Apple per la revisione e, infine, essere rilasciata per la vendita o come app gratuita nell'App Store di Apple TV.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Verificare che esistano i contratti appropriati e che siano aggiornati nella sezione **Agreements, Tax, and Banking** (Contratti, imposte e banche) di iTunes Connect per poter rilasciare un'applicazione iOS gratuita o in vendita.
 2. Creare un nuovo **record di iTunes Connect** per l'applicazione e specificare il relativo **nome visualizzato** , come visualizzato nell'App Store di Apple TV.
@@ -69,18 +69,18 @@ Per pubblicare un'app nell'App Store di Apple TV, è prima necessario compilarla
 
 <a name="Provisioning_for_Application_Services" />
 
-### <a name="provisioning-for-application-services"></a>Provisioning dei servizi per le applicazioni
+### <a name="provisioning-for-application-services"></a>Povisioning per i servizi per le applicazioni
 
 Apple offre una selezione di Servizi per le applicazioni speciali, denominati anche diritti, che possono essere attivati per l'app tvOS quando si crea un ID univoco. Indipendentemente dal fatto che si utilizzino diritti personalizzati, sarà comunque necessario creare un ID univoco per l'app Novell. tvOS prima di poterlo pubblicare nell'App Store di Apple TV.
 
 Per creare un ID app e facoltativamente selezionare gli entitlement è necessario seguire questa procedura che prevede l'uso del portale di provisioning iOS basato sul Web di Apple:
 
-1. Selezionare**lo sviluppo**per il **provisioning** > .
+1. Selezionare **provisioning** > **sviluppo**.
 2. Fare clic sul pulsante **+** e specificare **Nome** (Nome) e **Bundle ID** (ID bundle) per la nuova applicazione.
 3. Scorrere fino alla fine della schermata e selezionare tutti i **Servizi app** che saranno richiesti dall'app Novell. tvOS.
 4. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate per creare un nuovo ID app.
 
-Oltre a selezionare e configurare la servizi per le applicazioni obbligatoria quando si definisce l'ID app, è necessario configurare anche l'ID e i diritti dell'app nel progetto Novell. tvOS modificando i `Info.plist` file e. `Entitlements.plist`
+Oltre a selezionare e configurare la Servizi per le applicazioni obbligatoria quando si definisce l'ID app, è necessario configurare anche l'ID e i diritti dell'app nel progetto Novell. tvOS modificando i file di `Info.plist` e di `Entitlements.plist`.
 
 In Visual Studio per Mac eseguire le operazioni seguenti:
 
@@ -97,7 +97,7 @@ Per istruzioni dettagliate, vedere la documentazione [Provisioning dei servizi a
 
 ### <a name="setting-the-apps-icons-launch-image-and-top-shelf-image"></a>Impostazione delle icone delle app, dell'immagine di avvio e dell'immagine in primo piano
 
-Per consentire a un'app tvOS di essere accettata da Apple per l'inclusione nell'App Store di Apple TV, sono necessarie icone, lanci e immagini top shelf per tutti i dispositivi Apple TV su cui verrà eseguita. È necessario aggiungere gli asset immagine richiesti che verranno compilati in un `Assets.car` file e inclusi nel bundle dell'app Novell. tvOS prima che venga caricato in iTunes Connect.
+Per consentire a un'app tvOS di essere accettata da Apple per l'inclusione nell'App Store di Apple TV, sono necessarie icone, lanci e immagini top shelf per tutti i dispositivi Apple TV su cui verrà eseguita. È necessario aggiungere gli asset immagine richiesti che verranno compilati in un file di `Assets.car` e inclusi nel bundle dell'app Novell. tvOS prima che venga caricato in iTunes Connect.
 
 Per istruzioni dettagliate, vedere la documentazione sull' [uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) .
 
@@ -110,7 +110,7 @@ tvOS usa i *profili di provisioning* per controllare come può essere distribuit
 Il provisioning richiede questa procedura che prevede l'uso del portale di provisioning iOS basato sul Web di Apple:
 
 1. Selezionare **Provisioning** (Provisioning)  > **Distribution** (Distribuzione).
-2. Fare clic **+** sul pulsante e selezionare il tipo di profilo di distribuzione che si vuole creare come **Apple TV App Store**.
+2. Fare clic sul pulsante **+** e selezionare il tipo di profilo di distribuzione che si vuole creare come **Apple TV App Store**.
 3. Selezionare un **ID App** nell'elenco a discesa per il quale si vuole creare un profilo di distribuzione.
 4. Selezionare il certificato necessario per firmare l'applicazione.
 5. Immettere un **Name** (Nome) per il nuovo **Distribution Profile** (Profilo di distribuzione) e generare il profilo.
@@ -125,13 +125,13 @@ Per istruzioni dettagliate, vedere [Creating a Distribution Profile](~/ios/deplo
 
 Per impostazione predefinita, quando si crea una nuova app Novell. tvOS, le _configurazioni di compilazione_ vengono create automaticamente per la distribuzione di **debug** e di **rilascio** . Prima di eseguire la build finale dell'app che verrà inviata ad Apple, è necessario apportare alcune modifiche alla configurazione della **versione** di base.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e selezionare **Opzioni** per aprirle per la modifica.
-2. Se la destinazione è una versione specifica di tvOS, selezionarla in **tvOS Build** > **iOS SDK Version**. Per la versione di anteprima del supporto tvOS, lasciare questo valore impostato su **predefinito**.
+2. Se la destinazione è una versione specifica di tvOS, selezionarla in **TvOS Build** > **iOS SDK Version**. Per la versione di anteprima del supporto tvOS, lasciare questo valore impostato su **predefinito**.
 3. Il collegamento riduce le dimensioni complessive dell'app distribuibile rimuovendo i metodi, le proprietà, le classi e così via. nella maggior parte dei casi, è consigliabile lasciare il valore predefinito di **link Framework SDK**. In alcune situazioni, ad esempio quando si usano alcune librerie di terze parti specifiche, potrebbe essere necessario impostare questo valore su **non collegare** per evitare la rimozione dell'elemento necessario.
 4. Per distribuire un'app Novell. tvOS, è necessario usare il compilatore di ottimizzazione LLVM. Assicurarsi che la casella di controllo **Usa il compilatore di ottimizzazione di LLVM** sia selezionata sotto la configurazione di **rilascio** .
-5. Apple ha inoltre richiesto che le app tvOS usino bitcode. Nuovamente sotto la configurazione della **versione** , `--bitcode=asmonly` aggiungere alla casella **argomenti aggiuntivi di mTouch** .
+5. Apple ha inoltre richiesto che le app tvOS usino bitcode. Nuovamente sotto la configurazione della **versione** , aggiungere `--bitcode=asmonly` alla casella **argomenti aggiuntivi di mTouch** .
 6. È necessario selezionare la casella di controllo **Ottimizza file di immagine PNG per iOS** per ridurre ulteriormente le dimensioni del risultato finale dell'app.
 7. Il debug *non* deve essere abilitato perché renderà la compilazione inutilmente più grande.
 
@@ -145,17 +145,17 @@ Con l'app Novell. tvOS configurata correttamente, è ora possibile eseguire la b
 
 1. Selezionare la configurazione **Rilascio | Dispositivo** in Visual Studio per Mac:
 
-    ![](app-store-publishing-images/buildxs01new.png "Selezionare la configurazione della versione")
+    ![](app-store-publishing-images/buildxs01new.png "Select the Release configuration")
 2. Scegliere **Archivia per la pubblicazione** dal menu **Compila**:
 
-    [![](app-store-publishing-images/buildxs02new.png "Selezionare Archivia per la pubblicazione")](app-store-publishing-images/buildxs02new.png#lightbox)
+    [![](app-store-publishing-images/buildxs02new.png "Select Archive for Publishing")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Dopo aver creato l'archivio, sarà visualizzata la visualizzazione **Archivi**:
 
-    [![](app-store-publishing-images/buildxs03new.png "Visualizzazione archivi")](app-store-publishing-images/buildxs03new.png#lightbox)
+    [![](app-store-publishing-images/buildxs03new.png "The Archives view")](app-store-publishing-images/buildxs03new.png#lightbox)
 
 ### <a name="sign-and-distribute-your-app"></a>Firmare e distribuire l'app
 
-Ogni volta in cui l'applicazione viene compilata per l'archivio, si apre automaticamente la *visualizzazione Archivi*, in cui vengono visualizzati tutti i progetti archiviati, raggruppati per tipo di soluzione. Per impostazione predefinita, questa visualizzazione contiene soltanto la soluzione attualmente aperta. Per visualizzare tutte le soluzioni con archivi, fare clic sull'opzione **Mostra tutti gli archivi**.
+Ogni volta in cui l'applicazione viene compilata per l'archivio, si aprirà automaticamente la *vista Archivi*, in cui saranno visualizzati tutti i progetti archiviati, raggruppati per soluzione. Per impostazione predefinita, questa visualizzazione contiene soltanto la soluzione attualmente aperta. Per visualizzare tutte le soluzioni con archivi, fare clic sull'opzione **Mostra tutti gli archivi**.
 
 È consigliabile mantenere gli archivi distribuiti ai clienti (distribuzione tramite App Store o Enterprise), in modo che le informazioni di debug generate possano essere rappresentate in futuro.
 
@@ -163,19 +163,19 @@ Per firmare l'app e prepararla per la distribuzione:
 
 1. Selezionare **firma e Distribuisci...** , illustrato di seguito:
 
-    [![](app-store-publishing-images/buildxs04new.png ", Selezionare theSign e Distribuisci...")](app-store-publishing-images/buildxs04new.png#lightbox)
+    [![](app-store-publishing-images/buildxs04new.png ", Select theSign and Distribute...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. Si aprirà la pubblicazione guidata. Selezionare il canale di distribuzione **App Store** per creare un pacchetto e aprire Application Loader:
 
-    [![](app-store-publishing-images/distribute01.png "Selezionare il canale di distribuzione dell'app Store")](app-store-publishing-images/distribute01.png#lightbox)
+    [![](app-store-publishing-images/distribute01.png "Select the App Store distribution channel")](app-store-publishing-images/distribute01.png#lightbox)
 3. Nella schermata Profilo di provisioning selezionare l'identità di firma e il profilo di provisioning corrispondente oppure ripetere la firma con un'altra identità:
 
-    [![](app-store-publishing-images/distribute02.png "Selezionare l'identità di firma e il profilo di provisioning corrispondente")](app-store-publishing-images/distribute02.png#lightbox)
+    [![](app-store-publishing-images/distribute02.png "Select the signing identity and corresponding provisioning profile")](app-store-publishing-images/distribute02.png#lightbox)
 4. Verificare i dettagli del pacchetto e fare clic su **Pubblica** per salvare il pacchetto `.ipa`:
 
-    [![](app-store-publishing-images/distribute03.png "Verificare i dettagli del pacchetto")](app-store-publishing-images/distribute03.png#lightbox)
+    [![](app-store-publishing-images/distribute03.png "Verify the details of the package")](app-store-publishing-images/distribute03.png#lightbox)
 5. Dopo aver salvato il pacchetto `.ipa`, l'app è pronta per essere caricata in iTunes Connect tramite Application Loader:
 
-    [![](app-store-publishing-images/distribute04.png "Caricato in iTunes Connect tramite il caricatore di applicazioni")](app-store-publishing-images/distribute04.png#lightbox)
+    [![](app-store-publishing-images/distribute04.png "Uploaded to iTunes Connect via the Application Loader")](app-store-publishing-images/distribute04.png#lightbox)
 
 Dopo aver creato e archiviato la compilazione di distribuzione, è possibile inviare l'applicazione a iTunes Connect.
 
@@ -185,19 +185,19 @@ Dopo aver creato e archiviato la compilazione di distribuzione, è possibile inv
 
 Dopo aver completato la compilazione di distribuzione, è possibile inviare l'applicazione iOS ad Apple per la revisione e il rilascio nell'App Store.
 
-Il flusso di lavoro di archiviazione in Visual Studio per Mac aprirà automaticamente il caricatore applicazione, dopo `.ipa`aver salvato il:
+Il flusso di lavoro di archiviazione in Visual Studio per Mac aprirà automaticamente il caricatore applicazione, dopo aver salvato il `.ipa`:
 
 1. Selezionare *Deliver Your App* (Invia l'app) e fare clic sul pulsante *Choose* (Scegli):
 
-    [![](app-store-publishing-images/publishvs01.png "Selezionare l'invio dell'app")](app-store-publishing-images/publishvs01.png#lightbox)
+    [![](app-store-publishing-images/publishvs01.png "Select Deliver Your App")](app-store-publishing-images/publishvs01.png#lightbox)
 
 2. Selezionare il file ZIP o il file IPA creato in precedenza e fare clic sul pulsante **OK**.
 3. Application Loader convaliderà il file:
 
-    [![](app-store-publishing-images/publishvs02.png "Schermata di convalida del caricatore dell'applicazione")](app-store-publishing-images/publishvs02.png#lightbox)
+    [![](app-store-publishing-images/publishvs02.png "The Application Loader validation screen")](app-store-publishing-images/publishvs02.png#lightbox)
 4. Fare clic sul pulsante *Next* (Avanti). L'applicazione sarà convalidati per l'App Store:
 
-    [![](app-store-publishing-images/publishvs03.png "Applicazione convalidata rispetto all'App Store")](app-store-publishing-images/publishvs03.png#lightbox)
+    [![](app-store-publishing-images/publishvs03.png "The application being validated against the App Store")](app-store-publishing-images/publishvs03.png#lightbox)
 5. Fare clic sul pulsante **Send** (Invia) per inviare l'applicazione ad Apple per la revisione.
 6. Application Loader indicherà quando il file è stato caricato.
 
@@ -207,11 +207,11 @@ Il flusso di lavoro di archiviazione in Visual Studio per Mac aprirà automatica
 
 Se si accede di nuovo a iTunes Connect e si seleziona l'app nell'elenco delle app disponibili, lo stato in iTunes Connect dovrebbe ora indicare che è **in attesa di revisione** (è possibile che la lettura del caricamento venga temporaneamente **ricevuta** durante l'elaborazione):
 
-[![](app-store-publishing-images/image21.png "Stato in iTunes Connect che mostra in attesa di Revisione")](app-store-publishing-images/image21.png#lightbox)
+[![](app-store-publishing-images/image21.png "The status in iTunes Connect showing Waiting for Review")](app-store-publishing-images/image21.png#lightbox)
 
 <a name="Troubleshooting" />
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Se si verificano problemi durante l'invio dell'app Novell. tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Novell. tvOS.
 

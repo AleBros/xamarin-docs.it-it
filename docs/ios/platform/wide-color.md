@@ -4,15 +4,15 @@ description: Questo documento illustra il colore di grandi dimensioni e il modo 
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: a1f5301d0c5c0674e162b3d7689c83bbb4f6ae90
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e7240a271de1f0199c2c9fc045f5c95745eb98c5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290538"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031252"
 ---
 # <a name="wide-color-in-xamarinios"></a>Colore Wide in Novell. iOS
 
@@ -50,7 +50,7 @@ Gli elementi seguenti si verificheranno quando lo sviluppatore Invia un'app all'
 
 - Quando l'app viene distribuita all'utente finale, il sezionamento delle app garantirà che solo la variante di contenuto appropriata venga recapitata al dispositivo dell'utente.
 - Sul dispositivo che non supporta un colore di grandi dimensioni, non è previsto alcun costo del payload per l'inclusione di contenuto a colori Wide, perché non viene mai spedito al dispositivo.
-- `NSImage`in macOS Sierra (e versioni successive) selezionerà automaticamente la rappresentazione del contenuto migliore per la visualizzazione dell'hardware.
+- `NSImage` in macOS Sierra (e versioni successive) selezionerà automaticamente la rappresentazione del contenuto migliore per la visualizzazione dell'hardware.
 - Il contenuto visualizzato verrà aggiornato automaticamente quando o se le caratteristiche di visualizzazione dell'hardware dei dispositivi cambiano.
 
 ### <a name="asset-catalog-storage"></a>Archiviazione del catalogo asset
@@ -84,7 +84,7 @@ public UIImage DrawWideColorImage ()
     }
 ```
 
-Si verificano problemi con il codice standard che dovranno essere risolti _prima_ di poter essere usati per creare un'immagine a colori Wide. Il `UIGraphics.BeginImageContext (size)` metodo usato per avviare il disegno di immagini iOS presenta le limitazioni seguenti:
+Si verificano problemi con il codice standard che dovranno essere risolti _prima_ di poter essere usati per creare un'immagine a colori Wide. Il metodo `UIGraphics.BeginImageContext (size)` usato per avviare il disegno di immagini iOS presenta le limitazioni seguenti:
 
 - Non è possibile creare contesti di immagine con più di 8 bit per canale di colore.
 - Non può rappresentare i colori nello spazio dei colori di sRGB con intervallo esteso.
@@ -118,22 +118,22 @@ public UIImage DrawWideColorImage ()
 }
 ```
 
-La nuova `UIGraphicsImageRenderer` classe crea un nuovo contesto di immagine in grado di gestire lo spazio colore sRGB esteso nell'intervallo e presenta le funzionalità seguenti:
+La nuova classe `UIGraphicsImageRenderer` crea un nuovo contesto di immagine in grado di gestire lo spazio colore sRGB esteso nell'intervallo e presenta le funzionalità seguenti:
 
 - Per impostazione predefinita, il colore è completamente gestito.
 - Per impostazione predefinita, supporta lo spazio dei colori sRGB di intervallo esteso.
 - Stabilisce in modo intelligente se deve essere eseguito il rendering nello spazio di colore sRGB o nell'intervallo esteso sRGB, in base alle funzionalità del dispositivo iOS in cui è in esecuzione l'app.
-- Gestisce completamente e automaticamente la durata del contesto dell'`CGContext`immagine () in modo che lo sviluppatore non debba preoccuparsi di chiamare i comandi di contesto Begin e end.
-- È compatibile con il `UIGraphics.GetCurrentContext()` metodo.
+- Gestisce completamente e automaticamente la durata del contesto immagine (`CGContext`), in modo che lo sviluppatore non debba preoccuparsi di chiamare i comandi di contesto Begin e end.
+- È compatibile con il metodo `UIGraphics.GetCurrentContext()`.
 
-Il `CreateImage` metodo`UIGraphicsImageRenderer` della classe viene chiamato per creare un'immagine a colori Wide e passa un gestore di completamento con il contesto dell'immagine in cui eseguire il progetto. Tutto il disegno viene eseguito all'interno di questo gestore di completamento come indicato di seguito:
+Viene chiamato il metodo `CreateImage` della classe `UIGraphicsImageRenderer` per creare un'immagine a colori Wide e viene passato un gestore di completamento con il contesto dell'immagine in cui eseguire il progetto. Tutto il disegno viene eseguito all'interno di questo gestore di completamento come indicato di seguito:
 
-- Il `UIColor.FromDisplayP3` metodo crea un nuovo colore rosso completamente saturo nella gamma ampia che visualizza lo spazio colore P3 e viene usato per creare la prima metà del rettangolo. 
+- Il metodo `UIColor.FromDisplayP3` crea un nuovo colore rosso completamente saturo nella gamma ampia che visualizza lo spazio colore P3 e viene usato per creare la prima metà del rettangolo. 
 - La seconda metà del rettangolo viene disegnata nei normali colori rossi completamente saturi per il confronto.
 
 ### <a name="drawing-wide-color-in-macos"></a>Disegno di un colore Wide in macOS
 
-La `NSImage` classe è stata espansa in MacOS Sierra per supportare il disegno di immagini a colori Wide. Ad esempio:
+La classe `NSImage` è stata espansa in macOS Sierra per supportare il disegno di immagini a colori Wide. Esempio:
 
 ```csharp
 var size = CGSize(250,250);
@@ -157,7 +157,7 @@ Per eseguire il rendering di immagini a colori Wide sullo schermo, il processo f
 
 ### <a name="rendering-on-screen-in-ios"></a>Rendering sullo schermo in iOS
 
-Quando l'app deve eseguire il rendering di un'immagine in un colore Wide sullo schermo in iOS, `Draw` eseguire l'override `UIView` del metodo di in questione come di consueto. Ad esempio:
+Quando l'app deve eseguire il rendering di un'immagine in un colore Wide sullo schermo in iOS, eseguire l'override del metodo `Draw` del `UIView` in questione come di consueto. Esempio:
 
 ```csharp
 using System;
@@ -183,15 +183,15 @@ namespace MonkeyTalk
 }
 ```
 
-Con l'uso di iOS 10 `UIGraphicsImageRenderer` con la classe illustrata sopra, viene deciso in modo intelligente se deve essere eseguito il rendering nello spazio di colore sRGB o nell'intervallo esteso sRGB in base alle funzionalità del dispositivo iOS in cui `Draw` viene eseguita l'app quando viene chiamato il metodo. Inoltre, il `UIImageView` colore è stato gestito anche dopo iOS 9,3.
+Con l'uso di iOS 10 con la classe `UIGraphicsImageRenderer` illustrata in precedenza, decide in modo intelligente se eseguire il rendering nello spazio di colore sRGB o nell'intervallo esteso sRGB in base alle funzionalità del dispositivo iOS in cui viene eseguita l'app quando viene chiamato il metodo `Draw`. Inoltre, il `UIImageView` è stato gestito dal colore anche in iOS 9,3.
 
-Se l'app deve essere in grado di eseguire il rendering su un `UIView` o `UIViewController`, può controllare `UITraitCollection` la nuova `DisplayGamut` proprietà della classe. Questo valore sarà un' `UIDisplayGamut` enumerazione dei seguenti elementi:
+Se l'app deve essere in grado di eseguire il rendering in un `UIView` o `UIViewController`, può controllare la nuova proprietà `DisplayGamut` della classe `UITraitCollection`. Questo valore sarà un `UIDisplayGamut` enum dei seguenti elementi:
 
 - P3
 - SRGB
-- Non specificata
+- Non specificato
 
-Se l'app vuole controllare lo spazio dei colori usato per creare un'immagine, può usare una nuova `ContentsFormat` proprietà `CALayer` di per specificare lo spazio dei colori desiderato. Questo valore può essere un' `CAContentsFormat` enumerazione dei seguenti elementi:
+Se l'app vuole controllare lo spazio dei colori usato per creare un'immagine, può usare una nuova proprietà `ContentsFormat` della `CALayer` per specificare lo spazio dei colori desiderato. Questo valore può essere un `CAContentsFormat` enum dei seguenti elementi:
 
 - Gray8Uint
 - Rgba16Float
@@ -199,7 +199,7 @@ Se l'app vuole controllare lo spazio dei colori usato per creare un'immagine, pu
 
 ### <a name="rendering-on-screen-in-macos"></a>Rendering sullo schermo in macOS
 
-Quando l'app deve eseguire il rendering di un'immagine in un colore Wide sullo schermo in MacOS, `DrawRect` eseguire l'override `NSView` del metodo di in questione come di consueto. Ad esempio:
+Quando l'app deve eseguire il rendering di un'immagine in un colore Wide sullo schermo in macOS, eseguire l'override del metodo `DrawRect` del `NSView` in questione come di consueto. Esempio:
 
 ```csharp
 using System;
@@ -226,9 +226,9 @@ namespace MonkeyTalkMac
 }
 ```
 
-Anche in questo caso, decide in modo intelligente se eseguire il rendering nello spazio di colore sRGB o nell'intervallo esteso sRGB in base alle funzionalità dell'hardware Mac su cui è in esecuzione `DrawRect` l'app quando viene chiamato il metodo.
+Anche in questo caso, decide in modo intelligente se eseguire il rendering nello spazio di colore sRGB o nell'intervallo esteso sRGB in base alle funzionalità dell'hardware Mac su cui è in esecuzione l'app quando viene chiamato il metodo `DrawRect`.
 
-Se l'app vuole controllare quale spazio colore viene usato per creare un'immagine, può usare una nuova `DepthLimit` proprietà `NSWindow` della classe per specificare lo spazio dei colori desiderato. Questo valore può essere un' `NSWindowDepth` enumerazione dei seguenti elementi:
+Se l'app vuole controllare lo spazio dei colori usato per creare un'immagine, può usare una nuova proprietà `DepthLimit` della classe `NSWindow` per specificare lo spazio dei colori desiderato. Questo valore può essere un `NSWindowDepth` enum dei seguenti elementi:
 
 - OneHundredTwentyEightBitRgb
 - SixtyfourBitRgb

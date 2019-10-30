@@ -4,15 +4,15 @@ description: Con iOS 12, un'estensione per il contenuto delle notifiche può agg
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 5be233e9b07069dc7c9842a3ddd00e7d46d9c22f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb38d222cecd1a6c5bb65b0fb376888770dd0e49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291278"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031965"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Pulsanti di azione di notifica dinamica in Novell. iOS
 
@@ -32,12 +32,12 @@ I frammenti di codice in questa guida provengono da questa applicazione di esemp
 La categoria di una notifica determina i pulsanti di azione predefiniti.
 
 Consente di creare e registrare le categorie di notifiche durante l'avvio di un'applicazione.
-Ad esempio, nell' [app di esempio](#sample-app-redgreennotifications), il `FinishedLaunching` metodo di `AppDelegate` esegue le operazioni seguenti:
+Nell' [app di esempio](#sample-app-redgreennotifications), ad esempio, il `FinishedLaunching` metodo di `AppDelegate` esegue le operazioni seguenti:
 
 - Definisce una categoria per le notifiche rosse e un'altra per le notifiche verdi
-- Registra queste categorie chiamando il[`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
-Metodo di`UNUserNotificationCenter`
-- Connette un singolo oggetto[`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
+- Registra queste categorie chiamando il [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
+Metodo di `UNUserNotificationCenter`
+- Connette un singolo [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 per ogni categoria
 
 Il codice di esempio seguente illustra come funziona:
@@ -74,14 +74,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-In base a questo codice, qualsiasi notifica il cui[`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
+In base a questo codice, qualsiasi notifica il cui [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 è "Red-Category" o "Green-Category", per impostazione predefinita, viene visualizzato un pulsante di azione **ruota 20 °** .
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>Gestione in-app dei pulsanti di azione di notifica
 
-`UNUserNotificationCenter`ha una `Delegate` proprietà di tipo [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
+`UNUserNotificationCenter` dispone di una proprietà `Delegate` di tipo [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
-Nell'app di esempio, `AppDelegate` imposta se stesso come delegato del centro notifiche utente in `FinishedLaunching`:
+Nell'app di esempio `AppDelegate` si imposta come delegato del centro notifiche utente in `FinishedLaunching`:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-`AppDelegate` Implementa quindi[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
+Quindi, `AppDelegate` implementa [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 per gestire i rubinetti del pulsante di azione:
 
 ```csharp
@@ -125,23 +125,23 @@ Questa implementazione di `DidReceiveNotificationResponse` non gestisce il pulsa
 
 Un'estensione per il contenuto delle notifiche contiene un controller di visualizzazione che definisce l'interfaccia personalizzata per una notifica.
 
-Questo controller di visualizzazione può usare `GetNotificationActions` i `SetNotificationActions` metodi e nel relativo[`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
+Il controller di visualizzazione può utilizzare i metodi `GetNotificationActions` e `SetNotificationActions` sul [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 per accedere e modificare i pulsanti di azione della notifica.
 
 Nell'app di esempio, il controller di visualizzazione dell'estensione del contenuto della notifica modifica i pulsanti di azione solo quando risponde a un tocco in un pulsante di azione già esistente.
 
 > [!NOTE]
-> Un'estensione per il contenuto delle notifiche può rispondere al tocco di un pulsante di azione [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) nel metodo del controller di visualizzazione, dichiarato come parte di [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
+> Un'estensione per il contenuto delle notifiche può rispondere al tocco di un pulsante di azione nel metodo [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) del controller di visualizzazione, dichiarato come parte di [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
-> Sebbene condivida un nome con il `DidReceiveNotificationResponse` metodo descritto in [precedenza](#in-app-handling-of-notification-action-buttons), si tratta di un metodo diverso.
+> Anche se condivide un nome con il metodo `DidReceiveNotificationResponse` [descritto in precedenza](#in-app-handling-of-notification-action-buttons), si tratta di un metodo diverso.
 >
 > Al termine dell'elaborazione di un tocco di un pulsante, un'estensione del contenuto della notifica può scegliere se indicare all'applicazione principale di gestire lo stesso tocco del pulsante. A tale scopo, deve passare un valore appropriato di [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) al gestore di completamento:
 >
-> - `Dismiss`indica che l'interfaccia di notifica deve essere rilasciata e che l'app principale non deve gestire il tocco del pulsante.
-> - `DismissAndForwardAction`indica che l'interfaccia di notifica deve essere rilasciata e che l'app principale deve anche gestire il tocco del pulsante.
-> - `DoNotDismiss`indica che l'interfaccia di notifica non deve essere rilasciata e che l'app principale non deve gestire il tocco del pulsante.
+> - `Dismiss` indica che l'interfaccia di notifica deve essere rilasciata e che l'app principale non deve gestire il tocco del pulsante.
+> - `DismissAndForwardAction` indica che l'interfaccia di notifica deve essere rilasciata e che l'app principale deve anche gestire il tocco del pulsante.
+> - `DoNotDismiss` indica che l'interfaccia di notifica non deve essere rilasciata e che l'app principale non deve gestire il tocco del pulsante.
 
-Il metodo dell'estensione `DidReceiveNotificationResponse` di contenuto determina quale pulsante di azione è stato toccato, ruota l'immagine nell'interfaccia della notifica e visualizza o nasconde un pulsante di azione di **reimpostazione** :
+Il metodo di `DidReceiveNotificationResponse` dell'estensione di contenuto determina quale pulsante di azione è stato toccato, ruota l'immagine nell'interfaccia della notifica e visualizza o nasconde un pulsante di azione di **reimpostazione** :
 
 ```csharp
 [Export("didReceiveNotificationResponse:completionHandler:")]

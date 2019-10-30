@@ -3,23 +3,23 @@ title: Uso di ADO.NET con Android
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
-ms.openlocfilehash: ff29b51cec6f612f4dac497e75eddba4dbd4c1e2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6592bd6d5cf7b78918fa2d020be723d662625e06
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754474"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023765"
 ---
 # <a name="using-adonet-with-android"></a>Uso di ADO.NET con Android
 
-Novell include il supporto predefinito per il database SQLite disponibile in Android e può essere esposto usando una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad `CREATE TABLE`esempio `INSERT` le `SELECT` istruzioni e.
+Novell include il supporto predefinito per il database SQLite disponibile in Android e può essere esposto usando una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
 
 ## <a name="assembly-references"></a>Riferimenti dell'assembly
 
-Per usare l'accesso a SQLite tramite ADO.NET, `System.Data` è `Mono.Data.Sqlite` necessario aggiungere i riferimenti al progetto Android, come illustrato di seguito:
+Per usare l'accesso a SQLite tramite ADO.NET, è necessario aggiungere `System.Data` e `Mono.Data.Sqlite` riferimenti al progetto Android, come illustrato di seguito:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows) 
 
@@ -35,12 +35,12 @@ Fare clic con il pulsante destro del mouse su **riferimenti > modifica riferimen
 
 ## <a name="about-monodatasqlite"></a>Informazioni su mono. Data. sqlite
 
-Verrà utilizzata la `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di database vuoto e quindi per creare `SqliteCommand` un'istanza degli oggetti che è possibile utilizzare per eseguire istruzioni SQL sul database.
+Si utilizzerà la classe `Mono.Data.Sqlite.SqliteConnection` per creare un file di database vuoto e quindi creare un'istanza di `SqliteCommand` oggetti che è possibile utilizzare per eseguire istruzioni SQL sul database.
 
-**Creazione di un database vuoto** &ndash; Chiamare il`CreateFile` metodo con un percorso di file valido, ad esempio scrivibile. È necessario verificare se il file esiste già prima di chiamare questo metodo. in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore del vecchio e i dati nel file precedente andranno persi.
-`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`La `dbPath` variabile deve essere determinata in base alle regole descritte in precedenza in questo documento.
+**Creazione di un database vuoto** &ndash; chiamare il metodo `CreateFile` con un percorso di file valido (ovvero scrivibile). È necessario verificare se il file esiste già prima di chiamare questo metodo. in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore del vecchio e i dati nel file precedente andranno persi.
+`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` è necessario determinare la variabile `dbPath` in base alle regole descritte in precedenza in questo documento.
 
-**Creazione di una connessione al database** &ndash; Dopo aver creato il file di database SQLite, è possibile creare un oggetto connessione per accedere ai dati. La connessione viene costruita con una stringa di connessione che assume la forma `Data Source=file_path`di, come illustrato di seguito:
+La **creazione di una connessione di database** &ndash; dopo che è stato creato il file di database SQLite è possibile creare un oggetto connessione per accedere ai dati. La connessione viene costruita con una stringa di connessione che assume la forma di `Data Source=file_path`, come illustrato di seguito:
 
 ```csharp
 var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -51,7 +51,7 @@ connection.Close();
 
 Come indicato in precedenza, una connessione non deve mai essere riutilizzata tra thread diversi. In caso di dubbi, creare la connessione come richiesto e chiuderla al termine dell'operazione. Tuttavia, tenere presente questo problema più spesso del necessario.
 
-**Creazione ed esecuzione di un comando di database** &ndash; Quando si dispone di una connessione, è possibile eseguire comandi SQL arbitrari su di essa. Nel codice riportato di seguito `CREATE TABLE` viene illustrata l'esecuzione di un'istruzione.
+**La creazione e l'esecuzione di un comando di Database** &ndash; una volta che è presente una connessione a cui è possibile eseguire comandi SQL arbitrari. Nel codice riportato di seguito viene illustrata un'istruzione `CREATE TABLE` eseguita.
 
 ```csharp
 using (var command = connection.CreateCommand ()) {
@@ -60,7 +60,7 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-Quando si esegue SQL direttamente sul database, è consigliabile evitare di eseguire richieste non valide, ad esempio il tentativo di creare una tabella già esistente. Tenere traccia della struttura del database in modo che non si verifichi un `SqliteException` errore, ad esempio la tabella degli **errori SQLite [Items] esiste già**.
+Quando si esegue SQL direttamente sul database, è consigliabile evitare di eseguire richieste non valide, ad esempio il tentativo di creare una tabella già esistente. Tenere traccia della struttura del database in modo da non causare un `SqliteException` come la tabella degli **errori SQLite [Items] esiste già**.
 
 ## <a name="basic-data-access"></a>Accesso ai dati di base
 
@@ -142,17 +142,17 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>Query più complesse
 
-Poiché SQLite consente l'esecuzione di comandi SQL arbitrari sui dati, è possibile `CREATE`eseguire qualsiasi `INSERT` `UPDATE` `DELETE`istruzione,,, o `SELECT` che si desidera. Per informazioni sui comandi SQL supportati da SQLite, vedere il sito Web SQLite. Le istruzioni SQL vengono eseguite utilizzando uno dei tre metodi su un `SqliteCommand` oggetto:
+Poiché SQLite consente l'esecuzione di comandi SQL arbitrari sui dati, è possibile eseguire qualsiasi operazione `CREATE`, `INSERT`, `UPDATE`, `DELETE`o `SELECT` istruzioni desiderate. Per informazioni sui comandi SQL supportati da SQLite, vedere il sito Web SQLite. Le istruzioni SQL vengono eseguite utilizzando uno dei tre metodi su un oggetto `SqliteCommand`:
 
-- **ExecuteNonQuery** &ndash; Usato in genere per la creazione di tabelle o l'inserimento di dati. Il valore restituito per alcune operazioni è il numero di righe interessate; in caso contrario, è-1.
+- **ExecuteNonQuery** &ndash; in genere utilizzato per la creazione della tabella o l'inserimento di dati. Il valore restituito per alcune operazioni è il numero di righe interessate; in caso contrario, è-1.
 
-- **ExecuteReader** Utilizzato quando una raccolta di righe deve essere restituita `SqlDataReader`come. &ndash;
+- **ExecuteReader** &ndash; usato quando una raccolta di righe deve essere restituita come `SqlDataReader`.
 
-- **ExecuteScalar** &ndash; Recupera un singolo valore (ad esempio un'aggregazione).
+- **ExecuteScalar** &ndash; recupera un singolo valore, ad esempio un'aggregazione.
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
-`INSERT`le `UPDATE`istruzioni, `DELETE` e restituiranno il numero di righe interessate. Tutte le altre istruzioni SQL restituiranno-1.
+le istruzioni `INSERT`, `UPDATE`e `DELETE` restituiranno il numero di righe interessate. Tutte le altre istruzioni SQL restituiranno-1.
 
 ```csharp
 using (var c = connection.CreateCommand ()) {
@@ -163,7 +163,7 @@ using (var c = connection.CreateCommand ()) {
 
 ### <a name="executereader"></a>EXECUTEREADER
 
-Il metodo seguente mostra una `WHERE` clausola `SELECT` nell'istruzione.
+Il metodo seguente mostra una clausola `WHERE` nell'istruzione `SELECT`.
 Poiché il codice sta creando un'istruzione SQL completa, è necessario eseguire l'escape dei caratteri riservati, ad esempio le virgolette (') intorno alle stringhe.
 
 ```csharp
@@ -191,15 +191,15 @@ public static string MoreComplexQuery ()
 }
 ```
 
-Il metodo `ExecuteReader` restituisce un oggetto `SqliteDataReader`. Oltre al `Read` metodo illustrato nell'esempio, altre proprietà utili includono:
+Il metodo `ExecuteReader` restituisce un oggetto `SqliteDataReader`. Oltre al metodo `Read` illustrato nell'esempio, altre proprietà utili includono:
 
-- **RowsAffected** &ndash; Conteggio delle righe interessate dalla query.
+- **RowsAffected** &ndash; conteggio delle righe interessate dalla query.
 
-- **HasRows** &ndash; Indica se sono state restituite righe.
+- **HasRows** &ndash; se sono state restituite righe.
 
 ### <a name="executescalar"></a>EXECUTESCALAR
 
-Usare questa istruzione `SELECT` per le istruzioni che restituiscono un singolo valore, ad esempio un'aggregazione.
+Utilizzare questo oggetto per `SELECT` istruzioni che restituiscono un singolo valore, ad esempio un'aggregazione.
 
 ```csharp
 using (var contents = connection.CreateCommand ()) {
@@ -208,7 +208,7 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-Il `ExecuteScalar` tipo restituito del metodo è `object` &ndash; è necessario eseguire il cast del risultato a seconda della query del database. Il risultato può essere un numero intero di `COUNT` una query o una stringa da una query `SELECT` a colonna singola. Si noti che questa operazione è diversa `Execute` dagli altri metodi che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
+Il tipo restituito del metodo `ExecuteScalar` è `object` &ndash; è necessario eseguire il cast del risultato a seconda della query del database. Il risultato può essere un numero intero da una query `COUNT` o una stringa da una singola colonna `SELECT` query. Si noti che questa operazione è diversa dagli altri metodi di `Execute` che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

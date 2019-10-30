@@ -3,15 +3,15 @@ title: Xamarin Profiler
 description: Questa guida esamina le funzionalità principali del Xamarin Profiler. Esamina i profiler, la profilatura e quando devono essere usati e in un flusso di lavoro standard per la profilatura delle applicazioni Novell.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: b567985fcfd9e133587c5c285e17d21465fda659
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 330d41ea795754388402fbb7c660ba8d77f1aa4b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250084"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019404"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -55,11 +55,11 @@ Il Xamarin Profiler fornisce agli sviluppatori un modo per profilare le applicaz
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Novell. iOS, Novell. Android e Novell. Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione `.mlpd` exe e creati da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Attualmente, il Xamarin Profiler può essere usato per testare le applicazioni Novell. iOS, Novell. Android e Novell. Mac in Mac (tramite Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio per Mac, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione `.mlpd` exe e creati da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Attualmente, il Xamarin Profiler può essere usato per testare le app Novell. Android in Windows (tramite Visual Studio e Visual Studio per Mac). Il profiler è un processo separato dall'IDE, quindi, oltre a essere avviato da Visual Studio, può essere usato come applicazione autonoma per esaminare i file con estensione exe e `.mlpd` prodotti da [mono log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 -----
 
@@ -96,7 +96,7 @@ Questa sezione introduce le parti del Xamarin Profiler e ne illustra le funziona
 
 Prima di poter profilare correttamente l'app, è necessario consentire la profilatura nelle opzioni del progetto dell'app.
 
-- iOS:
+- iOS
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -112,7 +112,7 @@ Prima di poter profilare correttamente l'app, è necessario consentire la profil
 
 -----
 
-- Android:
+- Android
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -186,11 +186,11 @@ Il Xamarin Profiler è costituito da cinque sezioni, come illustrato di seguito:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Sezioni del profiler in Visual Studio per Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
+[sezioni di![Profiler in Visual Studio per Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Sezioni del profiler in Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
+[sezioni di![Profiler in Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -198,7 +198,7 @@ Il Xamarin Profiler è costituito da cinque sezioni, come illustrato di seguito:
 - **Instrument list** : elenca tutti gli strumenti caricati per la sessione di profilatura.
 - **Grafico dei tracciati** : questi grafici sono correlati orizzontalmente agli strumenti pertinenti nell'elenco di strumenti. Per modificare la scala, è possibile usare un dispositivo di scorrimento (visualizzato sotto Profiler temporale).
 - **Area dei dettagli dello strumento** : contiene i dati visualizzati dalla visualizzazione selezionata dello strumento corrente. Queste visualizzazioni vengono esaminate più dettagliatamente nella sezione seguente.
-- **Visualizzazione Inspector** : contiene le sezioni che possono essere selezionate dal controllo segmentato. Le sezioni dipendono dallo strumento selezionato e includono: Impostazioni di configurazione, statistiche, informazioni di analisi dello stack e percorso delle radici.
+- **Visualizzazione Inspector** : contiene le sezioni che possono essere selezionate dal controllo segmentato. Le sezioni dipendono dallo strumento selezionato e includono le impostazioni di configurazione, le statistiche, le informazioni di analisi dello stack e il percorso delle radici.
 
 ### <a name="allocations"></a>Allocazioni
 
@@ -208,11 +208,11 @@ Nella parte superiore del profiler è disponibile il grafico allocazioni, che co
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Instrumentation (allocazioni)](images/allocations1.png)](images/allocations1.png#lightbox) 
+[Strumento allocazioni![](images/allocations1.png)](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Instrumentation (allocazioni)](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
+[Strumento allocazioni![](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -222,11 +222,11 @@ Sono disponibili diverse visualizzazioni dati nello strumento allocazioni, che c
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![Scheda allocazioni](images/allocations3.png)](images/allocations3.png#lightbox) 
+  [Scheda allocazioni![](images/allocations3.png)](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![Scheda allocazioni](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
+  [Scheda allocazioni![](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -238,11 +238,11 @@ La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![Scheda albero delle chiamate](images/allocations2.png)](images/allocations2.png#lightbox) 
+  [Scheda albero delle chiamate![](images/allocations2.png)](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![Scheda albero delle chiamate](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
+  [Scheda albero delle chiamate![](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -250,11 +250,11 @@ La visualizzazione Inspector per le allocazioni fornisce opzioni per filtrare e 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![Scheda snapshot](images/allocations4.png)](images/allocations4.png#lightbox) 
+  [Scheda snapshot![](images/allocations4.png)](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![Scheda snapshot](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
+  [Scheda snapshot![](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -266,15 +266,15 @@ Il grafico dei tracciati, come illustrato nella schermata seguente, Visualizza i
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Strumento Profiler tempo](images/time1.png)](images/time1.png#lightbox) 
+[Strumento Profiler![Time](images/time1.png)](images/time1.png#lightbox) 
 
-[![Strumento Profiler tempo – elenco di esempi](images/time3.png)](images/time3.png#lightbox) 
+[Strumento![Time Profiler-elenco di esempi](images/time3.png)](images/time3.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Strumento Profiler tempo](images/time1-vs.png)](images/time1-vs.png#lightbox) 
+[Strumento Profiler![Time](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
-[![Strumento Profiler tempo – elenco di esempi](images/time3-vs.png)](images/time3-vs.png#lightbox) 
+[Strumento![Time Profiler-elenco di esempi](images/time3-vs.png)](images/time3-vs.png#lightbox) 
 
 -----
 
@@ -282,11 +282,11 @@ Il grafico dei tracciati, come illustrato nella schermata seguente, Visualizza i
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-  [![Strumento Profiler tempo-albero delle chiamate](images/time2.png)](images/time2.png#lightbox) 
+  [Strumento Profiler tempo![-albero delle chiamate](images/time2.png)](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![Strumento Profiler tempo-albero delle chiamate](images/time2-vs.png)](images/time2-vs.png#lightbox) 
+  [Strumento Profiler tempo![-albero delle chiamate](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -296,11 +296,11 @@ Tramite l'utilizzo di C# e F# del codice gestito, può essere abbastanza comune 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Instruments (cicli)](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+[Strumentazione cicli![](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Instruments (cicli)](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
+[Strumentazione cicli![](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
 -----
 
@@ -312,11 +312,11 @@ Se si profila un'app con qualsiasi altra configurazione, verrà visualizzata la 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Finestra di dialogo di errore di profilatura](images/image001.png)](images/image001.png#lightbox) 
+[![finestra di dialogo di errore di profilatura](images/image001.png)](images/image001.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Finestra di dialogo di errore di profilatura](images/image1vs.png)](images/image1vs.png#lightbox) 
+[![finestra di dialogo di errore di profilatura](images/image1vs.png)](images/image1vs.png#lightbox) 
 
 -----
 

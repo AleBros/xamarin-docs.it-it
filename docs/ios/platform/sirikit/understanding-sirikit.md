@@ -4,15 +4,15 @@ description: Questo documento descrive i concetti chiave necessari per l'uso di 
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 3b99e4485bfb621b32fa001a49d75038b2072775
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 45dd1a47712de559ddf62ed92347619438b08f9b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769471"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031497"
 ---
 # <a name="understanding-sirikit-concepts"></a>Informazioni sui concetti di SiriKit
 
@@ -56,7 +56,7 @@ Siri e Maps gestiscono tutte le interazioni dell'utente e visualizzano i risulta
 
 Questa sezione presenta una panoramica del modo in cui SiriKit consente all'utente di interagire con l'app usando Siri. Ai fini di questo esempio, si userà l'app Fake MonkeyChat:
 
-[![](understanding-sirikit-images/monkeychat01.png "Icona MonkeyChat")](understanding-sirikit-images/monkeychat01.png#lightbox)
+[![](understanding-sirikit-images/monkeychat01.png "The MonkeyChat icon")](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat mantiene il proprio libro di contatto degli amici dell'utente, ognuno associato a un nome di schermata (ad esempio, Bobo) e consente all'utente di inviare chat di testo a ogni amico con il nome dello schermo.
 
@@ -64,33 +64,33 @@ Ci sono molti modi in cui l'utente può avviare un'interazione con l'app, perch�
 
 Ad esempio, se l'utente vuole inviare un messaggio al proprio amico Bobo, potrebbe avere la conversazione seguente con Siri:
 
-_Utente Hey Siri, invia un messaggio MonkeyChat._<br />
-_Siri A chi?_<br />
-_Utente Bobo._<br />
-_Siri Che cosa si vuole dire a Bobo?_<br />
-_Utente Invia altre banane._<br />
+_Utente: Hey Siri, invia un messaggio MonkeyChat._<br />
+_Siri: a chi?_<br />
+_Utente: Bobo._<br />
+_Siri: cosa si vuole dire a Bobo?_<br />
+_Utente: inviare altre banane._<br />
 
 Un altro utente potrebbe effettuare la stessa richiesta con una conversazione diversa:
 
-_Utente Inviare un messaggio a Bobo in MonkeyChat._<br />
-_Siri Che cosa si vuole dire a Bobo?_<br />
-_Utente Invia altre banane._<br />
+_Utente: inviare un messaggio a Bobo in MonkeyChat._<br />
+_Siri: cosa si vuole dire a Bobo?_<br />
+_Utente: inviare altre banane._<br />
 
 Un altro utente potrebbe effettuare una richiesta ancora più breve:
 
-_Utente MonkeyChat Bobo invia altre banane._<br />
-_Siri Ok, l'invio di un messaggio invia altre banane a Bobo in Monkeychat._<br />
+_Utente: MonkeyChat Bobo invia altre banane._<br />
+_Siri: OK, l'invio di un messaggio invia altre banane a Bobo in Monkeychat._<br />
 
 O anche effettuare la stessa richiesta in una lingua diversa:
 
-_Utente MonkeyChat Bobo s'vous plaît emissario Plus de banane._<br />
-_Siri Oui, envoi message s'vous plaît inviator Plus de bananes à Bobo sur Monkeychat._<br />
+_Utente: MonkeyChat Bobo s'vous plaît emissario Plus de banane._<br />
+_Siri: Oui, envoi message s'vous plaît emissario Plus de bananes à Bobo sur Monkeychat._<br />
 
 Tuttavia, un altro utente potrebbe essere molto dettagliato nella conversazione:
 
-_Utente Salve Siri, è possibile fare un favore e avviare l'app MonkeyChat per inviare un SMS con il messaggio. si consiglia di inviare altre banane._<br />
-_Siri A chi?_<br />
-_Utente Il mio migliore amico Bobo._<br />
+_Utente: Hey Siri, è possibile fare un favore e avviare l'app MonkeyChat per inviare un SMS con il messaggio. inviare altre banane._<br />
+_Siri: a chi?_<br />
+_Utente: My Best Pal Bobo._<br />
 
 Inoltre, è possibile che Siri risponda a una richiesta, altre in base al modo in cui è stata effettuata la richiesta:
 
@@ -103,7 +103,7 @@ Indipendentemente da come viene effettuata una richiesta o dal modo in cui Siri 
 
 Quando l'utente effettua una richiesta verbale di Siri, questi sono i passaggi che Siri seguiranno:
 
-[![](understanding-sirikit-images/monkeychat02.png "Passaggi che Siri seguiranno")](understanding-sirikit-images/monkeychat02.png#lightbox)
+[![](understanding-sirikit-images/monkeychat02.png "The steps that Siri will follow")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. Per prima cosa, Siri prende l'audio della **voce** dell'utente e lo converte in testo.
 2. Successivamente, il testo viene convertito in un **Intent**, una rappresentazione strutturata della richiesta dell'utente.
@@ -112,7 +112,7 @@ Quando l'utente effettua una richiesta verbale di Siri, questi sono i passaggi c
 
 Esistono tre modi principali in cui l'app può partecipare alla conversazione dell'utente con Siri:
 
-[![](understanding-sirikit-images/monkeychat03.png "I tre modi principali in cui l'app può partecipare alla conversazione degli utenti con Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
+[![](understanding-sirikit-images/monkeychat03.png "The three main ways that the app can take part in the users conversation with Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **Vocabolario** : questo è il modo in cui l'app indica a Siri le parole che devono sapere per interagire con esso.
 2. **Logica dell'app** : queste sono le azioni e le risposte che l'app prenderà in base a determinati Intent.
@@ -122,27 +122,27 @@ Esistono tre modi principali in cui l'app può partecipare alla conversazione de
 
 Date le informazioni sopra riportate, esaminare il modo in cui la conversazione seguente interagirà con l'app MonkeyChat:
 
-_Utente Hey Siri, inviare un messaggio a Bobo in MonkeyChat._<br />
-_Siri Che cosa si vuole dire a Bobo?_<br />
-_Utente Invia altre banane._<br />
+_Utente: Hey Siri, invia un messaggio a Bobo in MonkeyChat._<br />
+_Siri: cosa si vuole dire a Bobo?_<br />
+_Utente: inviare altre banane._<br />
 
 Il primo ruolo che l'app prende in discussione consiste nel consentire a Siri di comprendere la voce dell'utente:
 
-[![](understanding-sirikit-images/monkeychat04.png "Aiutare Siri a comprendere il discorso degli utenti")](understanding-sirikit-images/monkeychat04.png#lightbox)
+[![](understanding-sirikit-images/monkeychat04.png "Helping Siri understand the users speech")](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri non ha il nome "Bobo" nel database, ma l'app esegue e condivide queste informazioni con Siri tramite il vocabolario. L'app aiuta anche Siri a riconoscere che Bobo è un destinatario, perché lo ha specificato in Siri come *contatto*.
 
-Siri sa che è necessario più di inviare un messaggio rispetto a un solo destinatario, quindi verificherà rapidamente con l'estensione dell'app per verificare se un messaggio richiede contenuto. Poiché MonkeyChat lo fa, Siri risponderà all'utente con la domanda: *"Cosa vuoi dire a Bobo?"*
+Siri sa che è necessario più di inviare un messaggio rispetto a un solo destinatario, quindi verificherà rapidamente con l'estensione dell'app per verificare se un messaggio richiede contenuto. Poiché MonkeyChat lo fa, Siri risponderà all'utente con la domanda: *"cosa si vuole dire a Bobo?"*
 
 Nell'esempio precedente l'utente ha risposto: *"inviare più banane"* , che Siri includerà un **intento**strutturato:
 
-[![](understanding-sirikit-images/monkeychat05.png "Siri raggruppa la risposta dell'utente in un intento strutturato")](understanding-sirikit-images/monkeychat05.png#lightbox)
+[![](understanding-sirikit-images/monkeychat05.png "Siri will bundle the user's response into a structured Intent")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 L'intento strutturato conterrà le informazioni seguenti:
 
-- **Dominio** Messages
+- **Dominio:** Messaggi
 - **Finalità:** SendMessage
-- **Destinatario** Bobo
+- **Destinatario:** Bobo
 - **Contenuto:** Invia altre banane
 
 Ogni dominio dispone di un set di *azioni* che possono essere eseguite all'interno di esse e in base al dominio e all'azione. i parametri da zero a molti potrebbero essere inclusi nell'intento inviato all'app.
@@ -151,13 +151,13 @@ Lo scopo viene quindi inviato all'estensione dell'app per l'elaborazione. In seg
 
 Ogni IntentResponse includerà anche un **codice di risposta** che indica a Siri se l'app è stata in grado di completare la richiesta. Alcuni domini presentano anche codici di risposta di errore molto specifici che possono essere inviati.
 
-Infine, IntentResponse includerà un ( `NSUserActivity` come quelle usate per supportare la consegna). `NSUserActivity` Verrà usato per avviare l'app se la risposta richiede che lasci l'ambiente Siri e immetta l'app per il completamento.
+Infine, IntentResponse includerà un `NSUserActivity`, ad esempio quelli usati per supportare la consegna. Il `NSUserActivity` verrà usato per avviare l'app se per la risposta è necessario lasciare l'ambiente Siri e immettere l'app per completarla.
 
-Siri compilerà automaticamente un `NSUserActivity` appropriato per avviare l'app e il pickup da cui l'utente ha lasciato l'ambiente Siri. Tuttavia, l'app può fornire le proprie `NSUserActivity` informazioni personalizzate, se necessario.
+Siri compilerà automaticamente un `NSUserActivity` appropriato per avviare l'app e il pickup da cui l'utente ha lasciato l'ambiente Siri. Tuttavia, l'app può fornire la propria `NSUserActivity` con informazioni personalizzate, se necessario.
 
 Dopo che l'app ha elaborato lo scopo e ha restituito una risposta a Siri, presenta i risultati all'utente (sia verbalmente che visivamente):
 
-[![](understanding-sirikit-images/monkeychat06.png "I risultati presentati all'utente in modo verbale e visivo")](understanding-sirikit-images/monkeychat06.png#lightbox)
+[![](understanding-sirikit-images/monkeychat06.png "The results presented to the user both verbally and visually")](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri include diverse interfacce utente di risposta predefinite per ognuno dei domini disponibili per l'app. Tuttavia, poiché MonkeyChat ha fornito un'estensione facoltativa dell'interfaccia utente Intent, viene usata per presentare i risultati della conversazione all'utente nell'esempio precedente.
 
@@ -165,7 +165,7 @@ Siri include diverse interfacce utente di risposta predefinite per ognuno dei do
 
 Ci sono tre attività principali che l'estensione dell'app deve eseguire quando si gestiscono gli Intent:
 
-[![](understanding-sirikit-images/monkeychat07.png "Ciclo di vita preventivo")](understanding-sirikit-images/monkeychat07.png#lightbox)
+[![](understanding-sirikit-images/monkeychat07.png "The Intent Lifecycle")](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. L'app deve **risolvere** ogni parametro in un evento. Di conseguenza, l'app chiamerà Resolve più volte (una volta per ogni parametro) e talvolta più volte sullo stesso parametro fino a quando l'app e l'utente non concordano sugli elementi richiesti.
 2. L'app deve **verificare** che sia in grado di gestire la finalità richiesta e indicare a Siri il risultato previsto.
@@ -238,7 +238,7 @@ Con SiriKit in iOS 10, Apple ha creato due nuovi punti di estensione:
 
 L'estensione per Intent è responsabile della gestione delle interazioni principali tra l'app e Siri come indicato di seguito:
 
-[![](understanding-sirikit-images/intents01.png "Estensione per Intent")](understanding-sirikit-images/intents01.png#lightbox)
+[![](understanding-sirikit-images/intents01.png "The Intents Extension")](understanding-sirikit-images/intents01.png#lightbox)
 
 L'estensione per finalità può supportare uno o più Intent, spetta allo sviluppatore decidere come implementare SiriKit nell'app. Lo sviluppatore può anche aggiungere un'estensione per finalità separate per ogni finalità che deve essere gestita.  Detto questo, Apple richiede che lo sviluppatore limiti il numero di estensioni per finalità in modo che Siri non abbia più processi aperti sull'app, che richiedono più memoria e tempo per gestire.
 
@@ -248,7 +248,7 @@ Lo sviluppatore deve inoltre tenere presente che l'estensione dello scopo verrà
 
 Apple ha adottato misure eccezionali per assicurarsi che le informazioni private di un utente siano sicure quando si lavora con Siri e, di conseguenza, esistono diverse interazioni che richiedono che l'utente sia connesso al dispositivo iOS. Ad esempio, quando si richiede una corsa o si effettua un pagamento.
 
-Inoltre, esistono comportamenti specifici che l'app potrebbe voler limitare all'utente che ha eseguito l'accesso al dispositivo. Per queste situazioni, l'app può richiedere la **limitazione quando** il comportamento è bloccato. Questa operazione viene eseguita tramite un'impostazione nel `Info.plist` file.
+Inoltre, esistono comportamenti specifici che l'app potrebbe voler limitare all'utente che ha eseguito l'accesso al dispositivo. Per queste situazioni, l'app può richiedere la **limitazione quando** il comportamento è bloccato. Questa operazione viene eseguita tramite un'impostazione nel file di `Info.plist`.
 
 Il Framework di autenticazione locale è disponibile per l'estensione Intent, in modo che l'app possa chiedere all'utente informazioni aggiuntive sull'autenticazione, anche se il dispositivo è già sbloccato.
 
@@ -264,16 +264,16 @@ Una delle cose comuni che gli utenti faranno è "verbify" il nome dell'app, in a
 
 L'estensione per interfaccia utente Intent presenta la possibilità di portare l'interfaccia utente e la personalizzazione dell'app nell'esperienza Siri e di fare in modo che gli utenti si sentano connessi all'app. Con questa estensione, l'app può portare il marchio, nonché informazioni visive e altre informazioni nella trascrizione.
 
-[![](understanding-sirikit-images/intents02.png "Output dell'estensione dell'interfaccia utente di esempio")](understanding-sirikit-images/intents02.png#lightbox)
+[![](understanding-sirikit-images/intents02.png "Example Intents UI Extension output")](understanding-sirikit-images/intents02.png#lightbox)
 
-L'estensione dell'interfaccia utente Intent restituirà sempre `UIViewController` un oggetto e l'app può aggiungere qualsiasi elemento che mi piace all'interno del controller di visualizzazione, ad esempio la visualizzazione di informazioni aggiuntive che vanno oltre la risposta iniziale. L'interfaccia utente di Intent può anche aggiornare l'utente con lo stato di un evento a esecuzione prolungata, ad esempio il tempo necessario per l'esecuzione di un'automobile di condivisione della corsa per raggiungere la loro posizione.
+L'estensione dell'interfaccia utente Intent restituirà sempre un `UIViewController` e l'app potrà aggiungere qualsiasi elemento che mi piace all'interno del controller di visualizzazione, ad esempio mostrando informazioni aggiuntive che vanno oltre la risposta iniziale. L'interfaccia utente di Intent può anche aggiornare l'utente con lo stato di un evento a esecuzione prolungata, ad esempio il tempo necessario per l'esecuzione di un'automobile di condivisione della corsa per raggiungere la loro posizione.
 
 L'estensione dell'interfaccia utente Intent verrà sempre visualizzata insieme ad altri contenuti Siri, ad esempio l'icona e il nome dell'app nella parte superiore dell'interfaccia utente o, in base allo scopo, i pulsanti (ad esempio Send o Cancel) potrebbero essere visualizzati in basso.
 
 Esistono alcuni casi in cui l'app può sostituire le informazioni che Siri Visualizza all'utente per impostazione predefinita, ad esempio la messaggistica o le mappe in cui l'app può sostituire l'esperienza predefinita con una personalizzata per l'app.
 
 > [!IMPORTANT]
-> Sebbene sia possibile aggiungere elementi interattivi `UIButtons` `UIViewController`, ad esempio o `UITextFields` , all'estensione dell'interfaccia utente Intent, questi sono rigorosamente proibiti come l'interfaccia utente Intent in non interattivo e l'utente non sarà in grado di interagire con essi.
+> Sebbene sia possibile aggiungere elementi interattivi, ad esempio `UIButtons` o `UITextFields` al `UIViewController`dell'estensione dell'interfaccia utente Intent, questi sono strettamente proibiti come l'interfaccia utente Intent in non interattivo e l'utente non sarà in grado di interagire con essi.
 
 È assolutamente facoltativo per l'app fornire un'estensione dell'interfaccia utente Intent perché Siri contiene un set predefinito di interfaccia utente per ogni tipo di Intent. Inoltre, le interfacce dell'interfaccia utente Intent sono disponibili solo per determinati Intent che Apple ha ritenuto utile all'utente.
 
@@ -285,11 +285,11 @@ Per questo motivo, Siri richiede l'assistenza dell'app per comprendere le parole
 
 ### <a name="app-specific-vocabulary"></a>Vocabolario specifico dell'app
 
-Il vocabolario specifico dell'app definisce le parole e le frasi specifiche che saranno note a tutti gli utenti dell'app, ad esempio i tipi di veicolo o i nomi degli allenamenti. Poiché queste sono parte dell'applicazione, sono definite in un `AppIntentVocabulary.plist` file come parte del bundle principale dell'app. Inoltre, le parole e le frasi devono essere localizzate.
+Il vocabolario specifico dell'app definisce le parole e le frasi specifiche che saranno note a tutti gli utenti dell'app, ad esempio i tipi di veicolo o i nomi degli allenamenti. Poiché queste sono parte dell'applicazione, sono definite in un file di `AppIntentVocabulary.plist` come parte del bundle dell'app principale. Inoltre, le parole e le frasi devono essere localizzate.
 
-Sono disponibili diverse parti per un file `AppIntentVocabulary.plist` di vocabolario:
+Sono disponibili diverse parti per un vocabolario `AppIntentVocabulary.plist` file:
 
-- **Esempi** di utilizzo dell'app: questi forniscono un set di casi d'uso comuni per le richieste che l'utente può creare dell'app. Ad esempio:  *"Avviare un allenamento con MonkeyFit".*
+- **Esempi** di utilizzo dell'app: questi forniscono un set di casi d'uso comuni per le richieste che l'utente può creare dell'app. Ad esempio: *"avviare un allenamento con MonkeyFit".*
 - **Parameters** : forniscono un set di tipi di parametro non standard specifici dell'app. Ad esempio, i nomi degli allenamenti per l'app MonkeyFit. Sono costituiti da:
   - **Frase** : consente all'app di definire termini univoci per l'app. Ad esempio, il tipo di allenamento "Bananarific" per l'app MonkeyFit.
   - **Pronuncia** : fornisce gli hint di pronuncia a Siri come semplice ortografia fonetica per una frase specifica. Ad esempio, "BA Nana ri FIC".
@@ -402,7 +402,7 @@ Questa situazione può essere gestita dall'app in diversi modi:
 
 Quando l'app viene visualizzata con un solo valore in questione, il modo migliore per gestire questa operazione è fare in modo che Siri chieda conferma all'utente. Ad esempio, *"si intendeva Bobo The Great?"* , a cui è possibile rispondere con una semplice risposta affermativa o no.
 
-Quando si verifica una situazione in cui più scelte possibili potrebbero essere corrette per un singolo valore, la risoluzione dell'ambiguità è il metodo di gestione preferito. In questa situazione Siri può richiedere all'utente fino a dieci possibili opzioni tra cui scegliere. Ad esempio:
+Quando si verifica una situazione in cui più scelte possibili potrebbero essere corrette per un singolo valore, la risoluzione dell'ambiguità è il metodo di gestione preferito. In questa situazione Siri può richiedere all'utente fino a dieci possibili opzioni tra cui scegliere. Esempio:
 
 ```csharp
 Who do you want to send the message to?
@@ -438,7 +438,7 @@ Potrebbero esserci situazioni in cui Siri avvierà l'app per soddisfare la richi
 
 Sono disponibili diversi passaggi che Apple suggerisce di lucidare per la progettazione delle interfacce di conversazione. In primo luogo, consiste nel fornire esempi di vocabolario chiaro, conciso e casi d'uso a Siri.
 
-Uno dei modi in cui un utente individua l'app è avviando una conversazione con Siri e chiedendo *"cosa è possibile fare?"* Siri mostrerà diverse operazioni, tra cui l'app dello sviluppatore e i casi d'uso del Hero di esempio forniti tramite il relativo `plist` file.
+Uno dei modi in cui un utente individua l'app è avviando una conversazione con Siri e chiedendo *"cosa è possibile fare?"* Siri mostrerà diverse operazioni, tra cui l'app dello sviluppatore e i casi d'uso del Hero di esempio forniti tramite il file di `plist`.
 
 Come scrivere casi d'uso di esempio validi:
 

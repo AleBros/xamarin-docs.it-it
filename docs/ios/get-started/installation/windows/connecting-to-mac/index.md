@@ -4,19 +4,19 @@ description: Questa guida descrive come usare Associa a Mac per connettere Visua
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 9296fa60a454fe83f9ec9b383067576b67e5f037
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198538"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022488"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
-_Questa guida descrive come usare Associa a Mac per connettere Visual Studio 2019 a un host di compilazione Mac. Le stesse istruzioni sono valide per Visual Studio 2017._
+_Questa guida descrive come usare associa a Mac per connettere Visual Studio 2019 a un host di compilazione Mac. Le stesse istruzioni si applicano a Visual Studio 2017._
 
 ## <a name="overview"></a>Panoramica
 
@@ -58,7 +58,7 @@ Per configurare l'host di compilazione Mac, abilitare per prima cosa l'accesso r
 
 2. Selezionare **Login remoto** nell'elenco **Servizio**.
 
-    ![Abilitazione dell'accesso remoto](images/sharing.png "Abilitazione dell'accesso remoto")
+    ![Abilitazione di Login remoto](images/sharing.png "Abilitazione di Login remoto")
 
     Assicurarsi che l'opzione sia configurata in modo da consentire l'accesso a **Tutti gli utenti** oppure che il nome utente o il gruppo Mac sia incluso nell'elenco di utenti consentiti sulla destra.
 
@@ -78,7 +78,7 @@ Ora che l'accesso remoto è abilitato, connettere Visual Studio 2019 al Mac.
 
     - Usare il pulsante **Associa a Mac** nella barra degli strumenti iOS:
 
-      ![Barra degli strumenti iOS, con il pulsante Associa a Mac evidenziato](images/ios-toolbar.png "Barra degli strumenti iOS, con il pulsante Associa a Mac evidenziato")
+      ![Barra degli strumenti iOS, con il pulsante associa a Mac evidenziato](images/ios-toolbar.png "Barra degli strumenti iOS, con il pulsante associa a Mac evidenziato")
 
     - In alternativa, selezionare **Strumenti > iOS > Associa a Mac**.
 
@@ -92,7 +92,7 @@ Ora che l'accesso remoto è abilitato, connettere Visual Studio 2019 al Mac.
 
     - La prima volta che ci si connette a uno specifico Mac, viene chiesto di immettere il nome utente e la password per tale macchina:
 
-      ![Immissione di nome utente e password per il Mac](images/auth.png "Immissione di nome utente e password per il Mac")
+      ![Immissione di un nome utente e una password per il Mac](images/auth.png "Immissione di un nome utente e una password per il Mac")
 
       > [!TIP]
       > Durante l'accesso, usare il nome utente di sistema anziché nome e cognome.
@@ -107,14 +107,14 @@ Ora che l'accesso remoto è abilitato, connettere Visual Studio 2019 al Mac.
 
     - Quando Visual Studio 2019 è connesso a un Mac, la voce relativa al Mac nella finestra di dialogo **Associa al Mac** è contrassegnata da un'icona indicante che il Mac è attualmente connesso:
 
-      ![Mac connesso](images/connected.png "Mac connesso")
+      ![Un Mac connesso](images/connected.png "Un Mac connesso")
 
       È possibile connettere un solo Mac alla volta.
 
       > [!TIP]
       > Facendo clic con il pulsante destro del mouse su un Mac qualsiasi nell'elenco **Associa a Mac**, viene visualizzato un menu di scelta rapida in cui è possibile scegliere **Connetti...** , **Rimuovi questo Mac** oppure **Disconnetti**:
       >
-      > ![Menu di scelta rapida di Associa a Mac](images/contextmenu.png "Menu di scelta rapida di Associa a Mac")
+      > ![Menu di scelta rapida associa a Mac](images/contextmenu.png "Menu di scelta rapida associa a Mac")
       >
       > Se si sceglie **Rimuovi questo Mac**, le credenziali per il Mac selezionato verranno rimosse. Per riconnettersi a tale Mac, sarà necessario immettere di nuovo il nome utente e la password.
 
@@ -130,7 +130,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
     - Aprire **Preferenze di Sistema > Condivisione > Login remoto** nel Mac:
 
-      [![Indirizzo IP del Mac in Preferenze di Sistema > Condivisione](images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di Sistema > Condivisione")](images/sharing.png#lightbox)
+      [![Indirizzo IP del Mac in Preferenze di sistema > condivisione](images/sharing-ipaddress.png "Indirizzo IP del Mac in Preferenze di sistema > condivisione")](images/sharing.png#lightbox)
 
     - In alternativa, usare la riga di comando. Nel terminale eseguire questo comando:
 
@@ -151,7 +151,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
 4. Immettere il nome utente e la password per il Mac:
 
-    ![Immissione di nome utente e password](images/auth.png "Immissione di nome utente e password")
+    ![Immettere un nome utente e una password](images/auth.png "Immissione di un nome utente e una password")
 
    > [!TIP]
    > Durante l'accesso, usare il nome utente di sistema anziché nome e cognome.
@@ -160,7 +160,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
 ## <a name="automatic-mac-provisioning"></a>Provisioning automatico del Mac
 
-A partire da [Visual Studio 2019 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Associa a Mac esegue automaticamente il provisioning in un computer Mac del software necessario per la compilazione di applicazioni Xamarin.iOS: Mono, Xamarin.iOS (il framework del software, non l'IDE di Visual Studio per Mac) e i vari strumenti relativi a Xcode (ma non l'ambiente Xcode).
+A partire da [Visual Studio 2019 versione 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), associa a Mac effettua automaticamente il provisioning di un Mac con software necessario per la compilazione di applicazioni Novell. iOS: mono, Novell. iOS (il Framework software, non l'IDE Visual Studio per Mac) e varie Strumenti correlati a Xcode (ma non Xcode).
 
 > [!IMPORTANT]
 >
@@ -178,7 +178,7 @@ Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle scherm
 
 ||Verifica dell'installazione|Download|Installazione di
 |---|---|---|---|
-|Mono|[![Installazione di Mono mancante](images/mono-missing.png "Installazione di Mono mancante")](images/mono-missing-large.png#lightbox)|[![Download di Mono](images/mono-downloading.png "Download di Mono")](images/mono-downloading-large.png#lightbox)|[![Installazione di Mono](images/mono-installing.png "Installazione di Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Installazione di mono mancante](images/mono-missing.png "Installazione di mono mancante")](images/mono-missing-large.png#lightbox)|[![Download di mono](images/mono-downloading.png "Download di mono")](images/mono-downloading-large.png#lightbox)|[![Installazione di mono](images/mono-installing.png "Installazione di mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -194,7 +194,7 @@ Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle scherm
 
 ||Verifica dell'installazione|Download|Installazione di
 |---|---|---|---|
-|Xamarin.iOS|[![Installazione di Xamarin.iOS mancante](images/xamios-missing.png "Installazione di Xamarin.iOS mancante")](images/xamios-missing-large.png#lightbox)|[![Download di Xamarin.iOS](images/xamios-downloading.png "Download di Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installazione di Xamarin.iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Installazione di Novell. iOS mancante](images/xamios-missing.png "Installazione di Novell. iOS mancante")](images/xamios-missing-large.png#lightbox)|[![Download di Novell. iOS](images/xamios-downloading.png "Download di Novell. iOS")](images/xamios-downloading-large.png#lightbox)|[![Installazione di Novell. iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Strumenti e licenza Xcode
 
@@ -202,9 +202,9 @@ Associa a Mac verificherà inoltre se Xcode è stato installato e la relativa li
 
 ||Verifica dell'installazione|Accettazione della licenza|
 |---|---|---|
-|Xcode|[![Installazione di Xcode mancante](images/xcode-missing.png "Installazione di Xcode mancante")](images/xcode-missing-large.png#lightbox)|[![Licenza Xcode](images/xcode-license.png "Licenza Xcode")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![Installazione di Xcode mancante](images/xcode-missing.png "Installazione di Xcode mancante")](images/xcode-missing-large.png#lightbox)|[![Licenza di Xcode](images/xcode-license.png "Licenza di Xcode")](images/xcode-license-large.png#lightbox)|
 
-Inoltre, Associa a Mac installerà o aggiornerà i diversi pacchetti distribuiti con Xcode. Ad esempio:
+Inoltre, Associa a Mac installerà o aggiornerà i diversi pacchetti distribuiti con Xcode. Esempio:
 
 - **MobileDeviceDevelopment.pkg**
 - **XcodeExtensionSupport.pkg**
@@ -222,7 +222,7 @@ In caso di problemi con il provisioning automatico del Mac esaminare i log dell'
 
 ## <a name="build-ios-apps-from-the-windows-command-line"></a>Compilare app iOS dalla riga di comando di Windows
 
-Associa a Mac supporta la compilazione di applicazioni Xamarin.iOS dalla riga di comando. Ad esempio:
+Associa a Mac supporta la compilazione di applicazioni Xamarin.iOS dalla riga di comando. Esempio:
 
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
@@ -236,7 +236,7 @@ I parametri passati a `msbuild` nell'esempio precedente sono:
 - `ServerPassword`: password da usare durante l'accesso all'host di compilazione Mac.
 
 > [!NOTE]
-> Visual Studio 2019 archivia `msbuild` nella directory seguente: **C:\Programmi (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2019 archivia `msbuild` nella seguente directory: **c:\Programmi (x86) \Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
 
 La prima volta che Associa a Mac accede a uno specifico host di compilazione Mac da Visual Studio 2019 o dalla riga di comando, imposta le chiavi SSH. Con queste chiavi, gli accessi futuri non richiederanno nome utente o password. Le chiavi appena create vengono archiviate in **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

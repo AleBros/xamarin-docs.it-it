@@ -3,15 +3,15 @@ title: Introduzione ai servizi Web
 description: In questa guida viene illustrato come utilizzare tecnologie di servizi Web diverse. Gli argomenti trattati includono la comunicazione con i servizi REST, i servizi SOAP e i servizi Windows Communication Foundation.
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: f914a158135d34b59fa3d1b95972c988a44dd36b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 50302b0b9cf96d211c704ab9e68d1c61d11e807a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765978"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016580"
 ---
 # <a name="introduction-to-web-services"></a>Introduzione ai servizi Web
 
@@ -23,27 +23,27 @@ Per i clienti che usano Novell. Forms, sono disponibili esempi completi che usan
 
 > [!IMPORTANT]
 > In iOS 9, la sicurezza del trasporto app (ATS) applica connessioni sicure tra le risorse Internet (ad esempio il server back-end dell'app) e l'app, impedendo in tal modo la divulgazione accidentale di informazioni riservate.
-> Poiché ATS è abilitata per impostazione predefinita nelle App per iOS 9, tutte le connessioni saranno soggetti a requisiti di sicurezza ATS. Se le connessioni non soddisfano questi requisiti, si avrà esito negativo con un'eccezione.
+> Poiché ATS è abilitato per impostazione predefinita nelle app compilate per iOS 9, tutte le connessioni saranno soggette ai requisiti di sicurezza di ATS. Se le connessioni non soddisfano questi requisiti, avranno esito negativo con un'eccezione.
 
-È possibile rifiutare esplicitamente ATS se non è possibile usare il protocollo e la `HTTPS` comunicazione protetta per le risorse Internet. Questo scopo, l'aggiornamento dell'app **Info. plist** file. Per altre informazioni, vedere [App Transport Security](~/ios/app-fundamentals/ats.md).
+È possibile rifiutare esplicitamente ATS se non è possibile usare il protocollo `HTTPS` e proteggere le comunicazioni per le risorse Internet. Questa operazione può essere eseguita aggiornando il file **info. plist** dell'app. Per altre informazioni, vedere [sicurezza del trasporto delle app](~/ios/app-fundamentals/ats.md).
 
 ## <a name="rest"></a>REST
 
-Representational State Transfer (REST) è uno stile architetturale per la creazione di servizi web. Richieste REST vengono effettuate tramite HTTP utilizzando gli stessi verbi HTTP che utilizzano i web browser per recuperare le pagine web e per inviare dati ai server. I verbi sono:
+REST (Representational State Transfer) è uno stile di architettura per la creazione di servizi Web. Le richieste REST vengono effettuate tramite HTTP usando gli stessi verbi HTTP usati dai Web browser per recuperare le pagine Web e inviare dati ai server. I verbi sono:
 
-- **OTTENERE** : questa operazione viene usata per recuperare i dati dal servizio web.
-- **POST** : questa operazione viene usata per creare un nuovo elemento di dati nel servizio web.
-- **INSERIRE** : questa operazione viene usata per aggiornare un elemento di dati nel servizio web.
-- **PATCH** : questa operazione viene usata per aggiornare un elemento di dati nel servizio web mediante la descrizione di un set di istruzioni sul modo in cui l'elemento deve essere modificato. Questo verbo non viene utilizzato nell'applicazione di esempio.
-- **Elimina** : questa operazione viene usata per eliminare un elemento di dati nel servizio web.
+- **Get** : questa operazione viene usata per recuperare i dati dal servizio Web.
+- **Post** : questa operazione viene usata per creare un nuovo elemento di dati nel servizio Web.
+- **Put** : questa operazione viene usata per aggiornare un elemento di dati nel servizio Web.
+- **Patch** : questa operazione viene usata per aggiornare un elemento di dati nel servizio Web descrivendo una serie di istruzioni su come modificare l'elemento. Questo verbo non viene utilizzato nell'applicazione di esempio.
+- **Delete** : questa operazione viene usata per eliminare un elemento di dati nel servizio Web.
 
-Le API che rispettano REST del servizio Web vengono chiamate le API RESTful e vengono definiti utilizzando:
+Le API del servizio Web che rispettano REST sono denominate API RESTful e vengono definite usando:
 
-- Un URI di base.
+- URI di base.
 - Metodi HTTP, ad esempio GET, POST, PUT, PATCH o DELETE.
-- Un tipo di supporto per i dati, ad esempio JavaScript Object Notation (JSON).
+- Tipo di supporto per i dati, ad esempio JavaScript Object Notation (JSON).
 
-La semplicità di REST ci ha aiutati a renderlo il principale metodo per l'accesso ai servizi web nelle applicazioni per dispositivi mobili.
+La semplicità di REST ha aiutato a renderlo il metodo principale per accedere ai servizi Web nelle applicazioni per dispositivi mobili.
 
 ## <a name="consuming-rest-services"></a>Utilizzo dei servizi REST
 
@@ -51,28 +51,28 @@ Sono disponibili numerose librerie e classi che possono essere utilizzate per ut
 
 ### <a name="httpclient"></a>HttpClient
 
-Le [librerie client HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) forniscono la `HttpClient` classe, utilizzata per inviare e ricevere richieste tramite http. Fornisce funzionalità per l'invio di richieste HTTP e la ricezione di risposte HTTP da una risorsa identificata dall'URI. Ogni richiesta viene inviata come operazione asincrona. Per altre informazioni sulle operazioni asincrone, vedere [Panoramica del supporto asincrono](~/cross-platform/platform/async.md).
+Le [librerie client HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) forniscono la classe `HttpClient`, che viene usata per inviare e ricevere richieste tramite http. Fornisce funzionalità per l'invio di richieste HTTP e la ricezione di risposte HTTP da una risorsa identificata dall'URI. Ogni richiesta viene inviata come operazione asincrona. Per ulteriori informazioni sulle operazioni asincrone, vedere [Cenni preliminari sul supporto](~/cross-platform/platform/async.md)asincrono.
 
-Il `HttpResponseMessage` classe rappresenta un messaggio di risposta HTTP ricevuto dal servizio web dopo aver effettuata una richiesta HTTP. Contiene informazioni sulla risposta, tra cui il codice di stato, le intestazioni e il corpo. Il `HttpContent` classe rappresenta il corpo HTTP e le intestazioni del contenuto, ad esempio `Content-Type` e `Content-Encoding`. Il contenuto può essere letto utilizzando uno qualsiasi dei `ReadAs` metodi, ad esempio `ReadAsStringAsync` e `ReadAsByteArrayAsync`, in base al formato dei dati.
+La classe `HttpResponseMessage` rappresenta un messaggio di risposta HTTP ricevuto dal servizio Web dopo che è stata effettuata una richiesta HTTP. Contiene informazioni sulla risposta, tra cui il codice di stato, le intestazioni e il corpo. La classe `HttpContent` rappresenta le intestazioni di contenuto e del corpo HTTP, ad esempio `Content-Type` e `Content-Encoding`. Il contenuto può essere letto usando uno dei metodi di `ReadAs`, ad esempio `ReadAsStringAsync` e `ReadAsByteArrayAsync`, in base al formato dei dati.
 
-Per ulteriori informazioni sulla `HttpClient` classe, vedere [creazione dell'oggetto HTTPClient](~/xamarin-forms/data-cloud/web-services/rest.md).
+Per ulteriori informazioni sulla classe `HttpClient`, vedere [creazione dell'oggetto HTTPClient](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 <a name="Using_HTTPWebRequest" />
 
 ### <a name="httpwebrequest"></a>HTTPWebRequest
 
-La chiamata ai servizi `HTTPWebRequest` Web con comporta:
+La chiamata di servizi Web con `HTTPWebRequest` comporta:
 
 - Creazione dell'istanza della richiesta per un URI specifico.
 - Impostazione di varie proprietà HTTP nell'istanza della richiesta.
-- Recupero di un `HttpWebResponse` oggetto dalla richiesta.
+- Recupero di un `HttpWebResponse` dalla richiesta.
 - Lettura dei dati dalla risposta.
 
-Il codice seguente, ad esempio, consente di recuperare i dati dagli Stati Uniti National Library of Medicine Web Service:
+Il codice seguente, ad esempio, recupera i dati dalla libreria nazionale statunitense del servizio Web di medicine:
 
 ```csharp
 var rxcui = "198440";
-var request = HttpWebRequest.Create(string.Format(@"http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
+var request = HttpWebRequest.Create(string.Format(@"https://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
 request.ContentType = "application/json";
 request.Method = "GET";
 
@@ -95,13 +95,13 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 }
 ```
 
-Nell'esempio precedente viene creato `HttpWebRequest` un oggetto che restituirà i dati formattati come JSON. I dati vengono restituiti in un `HttpWebResponse`oggetto, da cui `StreamReader` è possibile ottenere un oggetto per leggere i dati.
+Nell'esempio precedente viene creato un `HttpWebRequest` che restituirà i dati formattati come JSON. I dati vengono restituiti in un `HttpWebResponse`, da cui è possibile ottenere un `StreamReader` per leggere i dati.
 
 <a name="Using_RESTSHARP" />
 
 ### <a name="restsharp"></a>RestSharp
 
-Un altro approccio all'utilizzo dei servizi REST consiste nell'utilizzare la libreria [RestSharp](http://restsharp.org/) . RestSharp incapsula le richieste HTTP, incluso il supporto per il recupero dei risultati come contenuto della stringa non elaborata o come C# oggetto deserializzato. Il codice seguente, ad esempio, effettua una richiesta al National Library of Medicine Web Service e recupera i risultati sotto forma di stringa in formato JSON:
+Un altro approccio all'utilizzo dei servizi REST consiste nell'utilizzare la libreria [RestSharp](http://restsharp.org/) . RestSharp incapsula le richieste HTTP, incluso il supporto per il recupero dei risultati come contenuto della stringa non elaborata o come C# oggetto deserializzato. Il codice seguente, ad esempio, effettua una richiesta alla libreria nazionale degli Stati Uniti del servizio Web di medicine e recupera i risultati come stringa in formato JSON:
 
 ```csharp
 var request = new RestRequest(string.Format("{0}/allinfo", rxcui));
@@ -113,19 +113,19 @@ if(string.IsNullOrWhiteSpace(response.Content) || response.StatusCode != System.
 rxTerm = DeserializeRxTerm(response.Content);
 ```
 
-`DeserializeRxTerm`è un metodo che prenderà la stringa JSON non elaborata `RestSharp.RestResponse.Content` dalla proprietà e la convertirà C# in un oggetto. La deserializzazione dei dati restituiti dai servizi Web viene discussa più avanti in questo articolo.
+`DeserializeRxTerm` è un metodo che prenderà la stringa JSON non elaborata dalla proprietà `RestSharp.RestResponse.Content` e la convertirà C# in un oggetto. La deserializzazione dei dati restituiti dai servizi Web viene discussa più avanti in questo articolo.
 
 <a name="Using_NSUrlconnection" />
 
 ### <a name="nsurlconnection"></a>NSUrlConnection
 
-Oltre alle classi disponibili nella libreria di classi base mono (BCL), ad esempio `HttpWebRequest`, e le librerie di terze parti C# , ad esempio RestSharp, sono disponibili anche classi specifiche della piattaforma per l'utilizzo di servizi Web. In iOS, ad esempio, è `NSUrlConnection` possibile `NSMutableUrlRequest` usare le classi e.
+Oltre alle classi disponibili nella libreria di classi base (BCL) mono, ad esempio `HttpWebRequest`e librerie di terze C# parti, ad esempio RestSharp, sono disponibili anche classi specifiche della piattaforma per l'utilizzo di servizi Web. In iOS, ad esempio, è possibile usare le classi `NSUrlConnection` e `NSMutableUrlRequest`.
 
-Nell'esempio di codice seguente viene illustrato come chiamare il metodo US Libreria nazionale di servizi Web di medicina con le classi iOS:
+Nell'esempio di codice seguente viene illustrato come chiamare la libreria nazionale statunitense del servizio Web di medicine usando le classi iOS:
 
 ```csharp
 var rxcui = "198440";
-var request = new NSMutableUrlRequest(new NSUrl(string.Format("http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui)),
+var request = new NSMutableUrlRequest(new NSUrl(string.Format("https://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui)),
        NSUrlRequestCachePolicy.ReloadRevalidatingCacheData, 20);
 request["Accept"] = "application/json";
 
@@ -165,7 +165,7 @@ In genere, le classi specifiche della piattaforma per l'utilizzo di servizi Web 
 
 ### <a name="servicestack"></a>ServiceStack
 
-Un'altra opzione per chiamare i servizi Web è la libreria [dello stack dei servizi](http://www.servicestack.net/) . Ad esempio, nel codice seguente viene illustrato come utilizzare il `IServiceClient.GetAsync` metodo dello stack di servizi per emettere una richiesta di servizio:
+Un'altra opzione per chiamare i servizi Web è la libreria [dello stack dei servizi](https://www.servicestack.net/) . Ad esempio, il codice seguente illustra come usare il metodo `IServiceClient.GetAsync` dello stack di servizi per emettere una richiesta di servizio:
 
 ```csharp
 client.GetAsync<CustomersResponse>("",
@@ -186,13 +186,13 @@ client.GetAsync<CustomersResponse>("",
 
 ## <a name="consuming-restful-data"></a>Utilizzo di dati RESTful
 
-Servizi web rESTful utilizzano in genere i messaggi JSON per restituire dati al client. JSON è un formato di interscambio dei dati basato su testo che genera payload Compact, con conseguente riduzione dei requisiti di larghezza di banda quando si inviano dati. In questa sezione vengono esaminati i meccanismi per l'utilizzo delle risposte RESTful in JSON e di POX (Plain-Old-XML).
+I servizi Web RESTful usano in genere i messaggi JSON per restituire i dati al client. JSON è un formato di interscambio dei dati basato su testo che genera payload Compact, con conseguente riduzione dei requisiti di larghezza di banda quando si inviano dati. In questa sezione vengono esaminati i meccanismi per l'utilizzo delle risposte RESTful in JSON e di POX (Plain-Old-XML).
 
 <a name="Using_System.JSON" />
 
-### <a name="systemjson"></a>System.JSON
+### <a name="systemjson"></a>System. JSON
 
-La piattaforma Novell viene fornita con il supporto per JSON predefinito. Usando un `JsonObject`, i risultati possono essere recuperati come illustrato nell'esempio di codice seguente:
+La piattaforma Novell viene fornita con il supporto per JSON predefinito. Utilizzando una `JsonObject`, è possibile recuperare i risultati come illustrato nell'esempio di codice seguente:
 
 ```csharp
 var obj = JsonObject.Parse(json);
@@ -205,13 +205,13 @@ term.FullGenericName = properties["fullGenericName"];
 term.Strength = properties["strength"];
 ```
 
-Tuttavia, è importante tenere presente che `System.Json` gli strumenti di caricano interamente i dati in memoria.
+È tuttavia importante tenere presente che gli strumenti di `System.Json` caricano interamente i dati in memoria.
 
 <a name="Using_JSON.NET" />
 
 ### <a name="jsonnet"></a>JSON.NET
 
-La [libreria JSON.NET di NewtonSoft](http://www.newtonsoft.com/json) è una libreria ampiamente utilizzata per la serializzazione e la deserializzazione dei messaggi JSON. L'esempio di codice seguente illustra come usare JSON.NET per deserializzare un messaggio JSON in un C# oggetto:
+La [libreria JSON.NET di NewtonSoft](https://www.newtonsoft.com/json) è una libreria ampiamente utilizzata per la serializzazione e la deserializzazione dei messaggi JSON. L'esempio di codice seguente illustra come usare JSON.NET per deserializzare un messaggio JSON in un C# oggetto:
 
 ```csharp
 var term = new RxTerm();
@@ -227,9 +227,9 @@ term.RxCUI = properties["rxcui"].Value<string>();
 
 <a name="Using_ServiceStack.Text" />
 
-### <a name="servicestacktext"></a>ServiceStack.Text
+### <a name="servicestacktext"></a>ServiceStack. Text
 
-ServiceStack. Text è una libreria di serializzazione JSON progettata per funzionare con la libreria ServiceStack. Nell'esempio di codice seguente viene illustrato come analizzare JSON utilizzando `ServiceStack.Text.JsonObject`:
+ServiceStack. Text è una libreria di serializzazione JSON progettata per funzionare con la libreria ServiceStack. Nell'esempio di codice seguente viene illustrato come analizzare JSON utilizzando un `ServiceStack.Text.JsonObject`:
 
 ```csharp
 var result = JsonObject.Parse(json).Object("rxtermsProperties")
@@ -272,28 +272,28 @@ var result = doc.Root.Descendants("rxtermsProperties")
 
 ## <a name="aspnet-web-service-asmx"></a>Servizio Web ASP.NET (ASMX)
 
-ASMX consente di compilare servizi Web che inviano messaggi utilizzando il Simple Object Access Protocol (SOAP). SOAP è un protocollo indipendente dalla piattaforma e indipendenti dal linguaggio per la creazione e accesso ai servizi web. I consumer di un servizio ASMX non sono necessario conoscere il linguaggio sul modello a oggetti, piattaforma o linguaggio di programmazione usato per implementare il servizio. Devono solo per informazioni su come inviare e ricevere messaggi SOAP.
+ASMX consente di compilare servizi Web che inviano messaggi utilizzando il Simple Object Access Protocol (SOAP). SOAP è un protocollo indipendente dalla piattaforma e indipendente dalla lingua per la creazione e l'accesso ai servizi Web. I consumer di un servizio ASMX non devono conoscere alcuna piattaforma, modello a oggetti o linguaggio di programmazione utilizzato per implementare il servizio. È sufficiente comprendere come inviare e ricevere messaggi SOAP.
 
-Un messaggio SOAP è un documento XML che contiene gli elementi seguenti:
+Un messaggio SOAP è un documento XML contenente gli elementi seguenti:
 
-- Un elemento radice denominato *busta* che identifica il documento XML come messaggio SOAP.
-- Facoltativo *intestazione* elemento che contiene informazioni specifiche dell'applicazione, ad esempio i dati di autenticazione. Se il *intestazione* è presente l'elemento deve essere il primo elemento figlio delle *busta* elemento.
-- Un necessaria *corpo* elemento che contiene il messaggio SOAP deve essere il destinatario.
-- Facoltativo *Fault* elemento che viene usato per indicare i messaggi di errore. Se il *Fault* l'elemento è presente, deve essere un elemento figlio delle *corpo* elemento.
+- Elemento radice denominato *Envelope* che identifica il documento XML come messaggio SOAP.
+- Elemento *intestazione* facoltativo che contiene informazioni specifiche dell'applicazione, ad esempio i dati di autenticazione. Se l'elemento dell' *intestazione* è presente, deve essere il primo elemento figlio dell'elemento *Envelope* .
+- Elemento del *corpo* obbligatorio che contiene il messaggio SOAP destinato al destinatario.
+- Elemento *fault* facoltativo utilizzato per indicare i messaggi di errore. Se l'elemento *fault* è presente, deve essere un elemento figlio dell'elemento *Body* .
 
-SOAP possono agire su molti protocolli di trasporto, tra cui HTTP, SMTP, TCP e UDP. Tuttavia, un servizio ASMX può essere utilizzato solo su HTTP. La piattaforma Xamarin supporta implementazioni SOAP 1.1 standard su HTTP e include il supporto per molte delle configurazioni del servizio ASMX standard.
+SOAP può utilizzare molti protocolli di trasporto, tra cui HTTP, SMTP, TCP e UDP. Tuttavia, un servizio ASMX può funzionare solo tramite HTTP. La piattaforma Novell supporta le implementazioni standard di SOAP 1,1 su HTTP e include il supporto per molte delle configurazioni del servizio ASMX standard.
 
 ### <a name="generating-a-proxy"></a>Generazione di un proxy
 
-È necessario generare un *proxy* per utilizzare un servizio ASMX, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito dall'utilizzo dei metadati del servizio che definisce i metodi e la configurazione del servizio associato. Questi metadati vengono esposti come documento di Web Services Description Language (WSDL) generato dal servizio Web. Il proxy viene compilato usando Visual Studio per Mac o Visual Studio per aggiungere un riferimento Web per il servizio Web ai progetti specifici della piattaforma.
+È necessario generare un *proxy* per utilizzare un servizio ASMX, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito mediante l'utilizzo di metadati del servizio che definiscono i metodi e la configurazione del servizio associata. Questi metadati vengono esposti come documento di Web Services Description Language (WSDL) generato dal servizio Web. Il proxy viene compilato usando Visual Studio per Mac o Visual Studio per aggiungere un riferimento Web per il servizio Web ai progetti specifici della piattaforma.
 
-L'URL del servizio Web può essere un'origine remota ospitata o una risorsa file system locale accessibile `file:///` tramite il prefisso del percorso, ad esempio:
+L'URL del servizio Web può essere un'origine remota ospitata o una risorsa file system locale accessibile tramite il prefisso del percorso `file:///`, ad esempio:
 
 ```csharp
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[![](images/add-webreference-dialog.png "L'URL del servizio Web può essere un'origine remota ospitata o una risorsa di file system locale accessibile tramite il prefisso del percorso del file")](images/add-webreference-dialog.png#lightbox)
+[![](images/add-webreference-dialog.png "The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix")](images/add-webreference-dialog.png#lightbox)
 
 Viene generato il proxy nella cartella riferimenti Web o del servizio del progetto. Poiché il codice generato da un proxy non deve essere modificato.
 
@@ -305,11 +305,11 @@ Se si dispone di un proxy esistente che è stato generato con strumenti compatib
 
 ### <a name="consuming-the-proxy"></a>Utilizzo del proxy
 
-Le classi proxy generate forniscono metodi per l'utilizzo del servizio web che usano il modello di progettazione modello di programmazione asincrono (APM). In questo modello di un'operazione asincrona viene implementata come due metodi denominati *Beginnomeoperazione* e *Endnomeoperazione*, che avviano e terminano l'operazione asincrona.
+Le classi proxy generate forniscono metodi per l'utilizzo del servizio Web che utilizza il modello di progettazione APM (Asynchronous Programming Model). In questo modello un'operazione asincrona viene implementata come due metodi denominati *BeginOperationName* e *EndOperationName*, che iniziano e terminano l'operazione asincrona.
 
-Il *Beginnomeoperazione* metodo avvia l'operazione asincrona e restituisce un oggetto che implementa il `IAsyncResult` interfaccia. Dopo avere chiamato *Beginnomeoperazione*, un'applicazione può continuare a eseguire istruzioni sul thread chiamante, mentre l'operazione asincrona viene eseguita in un pool di thread.
+Il metodo *BeginOperationName* avvia l'operazione asincrona e restituisce un oggetto che implementa l'interfaccia `IAsyncResult`. Dopo la chiamata a *BeginOperationName*, un'applicazione può continuare a eseguire le istruzioni sul thread chiamante, mentre l'operazione asincrona viene eseguita in un thread del pool di thread.
 
-Per ogni chiamata a *Beginnomeoperazione*, l'applicazione deve anche chiamare *Endnomeoperazione* per ottenere i risultati dell'operazione. Il valore restituito di *Endnomeoperazione* è dello stesso tipo restituito dal metodo del servizio web sincrono. Il codice seguente ne è un esempio:
+Per ogni chiamata a *BeginOperationName*, l'applicazione deve anche chiamare *EndOperationName* per ottenere i risultati dell'operazione. Il valore restituito di *EndOperationName* è dello stesso tipo restituito dal metodo di servizio Web sincrono. Il codice seguente ne è un esempio:
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -324,7 +324,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-Task Parallel Library (TPL) può semplificare il processo di uso di una coppia di metodi begin/end APM incapsulando le operazioni asincrone nella stessa `Task` oggetto. Questo tipo di incapsulamento è fornito da più overload del `Task.Factory.FromAsync` (metodo). Questo metodo crea un `Task` oggetto che esegue il `TodoService.EndGetTodoItems` metodo una volta `TodoService.BeginGetTodoItems` completato il metodo, con il `null` parametro che indica che non è stato passato `BeginGetTodoItems` alcun dato al delegato. Infine, il valore della `TaskCreationOptions` enumerazione specifica che deve essere utilizzato il comportamento predefinito per la creazione ed esecuzione di attività.
+Il Task Parallel Library (TPL) può semplificare il processo di utilizzo di una coppia di metodi Begin/End APM incapsulando le operazioni asincrone nello stesso oggetto `Task`. Questo incapsulamento viene fornito da più overload del metodo `Task.Factory.FromAsync`. Questo metodo crea un `Task` che esegue il metodo `TodoService.EndGetTodoItems` una volta completato il metodo `TodoService.BeginGetTodoItems`, con il parametro `null` che indica che non è stato passato alcun dato al delegato `BeginGetTodoItems`. Infine, il valore dell'enumerazione `TaskCreationOptions` specifica che deve essere utilizzato il comportamento predefinito per la creazione e l'esecuzione delle attività.
 
 Per ulteriori informazioni su APM, vedere il [modello di programmazione asincrona](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [TPL e la tradizionale .NET Framework la programmazione asincrona](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) su MSDN.
 
@@ -334,31 +334,31 @@ Per ulteriori informazioni sull'utilizzo di un servizio ASMX, vedere la pagina r
 
 ## <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-WCF è il Framework unificato di Microsoft per la creazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare applicazioni distribuite sicure, affidabili, transazionali e interoperabile.
+WCF è il Framework unificato di Microsoft per la creazione di applicazioni orientate ai servizi. Consente agli sviluppatori di creare applicazioni distribuite sicure, affidabili, transazionali e interoperabili.
 
-WCF descrive un servizio con un'ampia gamma di contratti diversi che includono i seguenti:
+WCF descrive un servizio con un'ampia gamma di contratti diversi, tra cui:
 
-- **I contratti dati** : definire le strutture di dati che costituiscono la base per il contenuto all'interno di un messaggio.
-- **Contratti di messaggio** : comporre i messaggi da contratti dati esistenti.
-- **I contratti di errore** -Consenti errori SOAP personalizzati essere specificato.
-- **I contratti di servizio** : specificare le operazioni che supportano servizi e i messaggi necessari per l'interazione con ogni operazione. Specificano anche eventuali comportamenti di errore personalizzato che possono essere associato a operazioni su ogni servizio.
+- **Contratti dati** : definiscono le strutture di dati che costituiscono la base per il contenuto in un messaggio.
+- **Contratti di messaggio** : comporre messaggi da contratti dati esistenti.
+- **Contratti di errore** : consente di specificare errori SOAP personalizzati.
+- **Contratti di servizio** : specificare le operazioni supportate dai servizi e i messaggi necessari per interagire con ogni operazione. Specificano anche eventuali comportamenti di errore personalizzati che possono essere associati a operazioni su ogni servizio.
 
-Esistono differenze tra servizi Web ASP.NET (ASMX) e WCF, ma è importante comprendere che WCF supporta le stesse funzionalità offerte da ASMX: messaggi SOAP su HTTP.
+Esistono differenze tra i servizi Web ASP.NET (ASMX) e WCF, ma è importante comprendere che WCF supporta le stesse funzionalità fornite da ASMX, ovvero messaggi SOAP su HTTP.
 
 > [!IMPORTANT]
-> Il supporto della piattaforma Novell per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS mediante la `BasicHttpBinding` classe. Inoltre, il supporto WCF richiede l'uso degli strumenti disponibili solo in un ambiente di Windows per generare il proxy.
+> Il supporto della piattaforma Novell per WCF è limitato ai messaggi SOAP con codifica testo tramite HTTP/HTTPS usando la classe `BasicHttpBinding`. Inoltre, il supporto WCF richiede l'utilizzo di strumenti disponibili solo in un ambiente Windows per generare il proxy.
 
 ### <a name="generating-a-proxy"></a>Generazione di un proxy
 
-Oggetto *proxy* deve essere generato per l'utilizzo di un servizio WCF, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito dall'utilizzo dei metadati del servizio che definiscono i metodi e la configurazione del servizio associato. Questi metadati viene esposta sotto forma di un documento di servizi Web (WSDL, Web Services Description Language) generato dal servizio web. Il proxy può essere compilato usando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 per aggiungere un riferimento al servizio per il servizio Web a una libreria di .NET Standard.
+È necessario generare un *proxy* per utilizzare un servizio WCF, che consente all'applicazione di connettersi al servizio. Il proxy viene costruito mediante l'utilizzo di metadati del servizio che definiscono i metodi e la configurazione del servizio associata. Questi metadati vengono esposti sotto forma di documento di Web Services Description Language (WSDL) generato dal servizio Web. Il proxy può essere compilato usando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 per aggiungere un riferimento al servizio per il servizio Web a una libreria di .NET Standard.
 
-Un'alternativa alla creazione del proxy utilizzando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 è usare la strumento ServiceModel Metadata Utility Tool (svcutil.exe). Per altre informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+Un'alternativa alla creazione del proxy utilizzando il Microsoft WCF Web Service Reference Provider in Visual Studio 2017 consiste nell'utilizzare lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe). Per ulteriori informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
 ### <a name="configuring-the-proxy"></a>Configurazione del proxy
 
-La configurazione del proxy generato in genere accetta due argomenti di configurazione (a seconda di SOAP 1.1/asmx o WCF) durante l' `EndpointAddress` inizializzazione: e/o le informazioni di binding associate, come illustrato nell'esempio seguente:
+La configurazione del proxy generato in genere accetta due argomenti di configurazione (a seconda di SOAP 1.1/ASMX o WCF) durante l'inizializzazione: il `EndpointAddress` e/o le informazioni di binding associate, come illustrato nell'esempio seguente:
 
 ```csharp
 var binding = new BasicHttpBinding () {
@@ -379,15 +379,15 @@ binding.ReceiveTimeout = timeout;
 client = new Service1Client (binding, new EndpointAddress ("http://192.168.1.100/Service1.svc"));
 ```
 
-Viene utilizzata un'associazione per specificare il trasporto, codifica e i dettagli di protocollo necessari per le applicazioni e servizi comunicare tra loro. Il `BasicHttpBinding` specifica che verranno inviati i messaggi SOAP con codifica del testo tramite il protocollo di trasporto HTTP. Specifica un indirizzo endpoint consente all'applicazione di connettersi alle diverse istanze del servizio WCF, condizione che sono presenti più istanze pubblicate.
+Un'associazione viene utilizzata per specificare i dettagli di trasporto, codifica e protocollo necessari per la comunicazione tra le applicazioni e i servizi. Il `BasicHttpBinding` specifica che i messaggi SOAP con codifica testo verranno inviati tramite il protocollo di trasporto HTTP. La specifica di un indirizzo endpoint consente all'applicazione di connettersi a istanze diverse del servizio WCF, purché siano presenti più istanze pubblicate.
 
 ### <a name="consuming-the-proxy"></a>Utilizzo del proxy
 
-Le classi proxy generate forniscono metodi per l'uso dei servizi web che usano il modello di progettazione modello di programmazione asincrono (APM). In questo modello, un'operazione asincrona viene implementata come due metodi denominati *Beginnomeoperazione* e *Endnomeoperazione*, che avviano e terminano l'operazione asincrona.
+Le classi proxy generate forniscono metodi per l'utilizzo dei servizi Web che utilizzano il modello di progettazione APM (Asynchronous Programming Model). In questo modello, un'operazione asincrona viene implementata come due metodi denominati *BeginOperationName* e *EndOperationName*, che iniziano e terminano l'operazione asincrona.
 
-Il *Beginnomeoperazione* metodo avvia l'operazione asincrona e restituisce un oggetto che implementa il `IAsyncResult` interfaccia. Dopo avere chiamato *Beginnomeoperazione*, un'applicazione può continuare a eseguire istruzioni sul thread chiamante, mentre l'operazione asincrona viene eseguita in un pool di thread.
+Il metodo *BeginOperationName* avvia l'operazione asincrona e restituisce un oggetto che implementa l'interfaccia `IAsyncResult`. Dopo la chiamata a *BeginOperationName*, un'applicazione può continuare a eseguire le istruzioni sul thread chiamante, mentre l'operazione asincrona viene eseguita in un thread del pool di thread.
 
-Per ogni chiamata a *Beginnomeoperazione*, l'applicazione deve anche chiamare *Endnomeoperazione* per ottenere i risultati dell'operazione. Il valore restituito di *Endnomeoperazione* è dello stesso tipo restituito dal metodo del servizio web sincrono. Il codice seguente ne è un esempio:
+Per ogni chiamata a *BeginOperationName*, l'applicazione deve anche chiamare *EndOperationName* per ottenere i risultati dell'operazione. Il valore restituito di *EndOperationName* è dello stesso tipo restituito dal metodo di servizio Web sincrono. Il codice seguente ne è un esempio:
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -402,7 +402,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-Task Parallel Library (TPL) può semplificare il processo di uso di una coppia di metodi begin/end APM incapsulando le operazioni asincrone nella stessa `Task` oggetto. Questo tipo di incapsulamento è fornito da più overload del `Task.Factory.FromAsync` (metodo). Questo metodo crea un `Task` oggetto che esegue il `TodoServiceClient.EndGetTodoItems` metodo una volta `TodoServiceClient.BeginGetTodoItems` completato il metodo, con il `null` parametro che indica che non è stato passato `BeginGetTodoItems` alcun dato al delegato. Infine, il valore della `TaskCreationOptions` enumerazione specifica che deve essere utilizzato il comportamento predefinito per la creazione ed esecuzione di attività.
+Il Task Parallel Library (TPL) può semplificare il processo di utilizzo di una coppia di metodi Begin/End APM incapsulando le operazioni asincrone nello stesso oggetto `Task`. Questo incapsulamento viene fornito da più overload del metodo `Task.Factory.FromAsync`. Questo metodo crea un `Task` che esegue il metodo `TodoServiceClient.EndGetTodoItems` una volta completato il metodo `TodoServiceClient.BeginGetTodoItems`, con il parametro `null` che indica che non è stato passato alcun dato al delegato `BeginGetTodoItems`. Infine, il valore dell'enumerazione `TaskCreationOptions` specifica che deve essere utilizzato il comportamento predefinito per la creazione e l'esecuzione delle attività.
 
 Per ulteriori informazioni su APM, vedere il [modello di programmazione asincrona](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [TPL e la tradizionale .NET Framework la programmazione asincrona](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) su MSDN.
 
@@ -412,7 +412,7 @@ Per ulteriori informazioni sull'utilizzo di un servizio WCF, vedere [utilizzare 
 
 #### <a name="using-transport-security"></a>Uso della sicurezza del trasporto
 
-I servizi WCF possono utilizzare la sicurezza a livello di trasporto per impedire l'intercettazione di messaggi. La piattaforma Novell supporta le associazioni che utilizzano la sicurezza a livello di trasporto tramite SSL. In alcuni casi, tuttavia, potrebbe essere necessario che lo stack convalidi il certificato, il che comporta un comportamento imprevisto. La convalida può essere sottoposta a override registrando un `ServerCertificateValidationCallback` delegato prima di richiamare il servizio, come illustrato nell'esempio di codice seguente:
+I servizi WCF possono utilizzare la sicurezza a livello di trasporto per impedire l'intercettazione di messaggi. La piattaforma Novell supporta le associazioni che utilizzano la sicurezza a livello di trasporto tramite SSL. In alcuni casi, tuttavia, potrebbe essere necessario che lo stack convalidi il certificato, il che comporta un comportamento imprevisto. La convalida può essere sottoposta a override registrando un delegato `ServerCertificateValidationCallback` prima di richiamare il servizio, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 System.Net.ServicePointManager.ServerCertificateValidationCallback +=
@@ -425,7 +425,7 @@ Questa operazione mantiene la crittografia del trasporto ignorando la convalida 
 
 #### <a name="using-client-credential-security"></a>Uso della sicurezza delle credenziali client
 
-I servizi WCF possono anche richiedere ai client del servizio di eseguire l'autenticazione utilizzando le credenziali. La piattaforma Novell non supporta il protocollo WS-Security, che consente ai client di inviare le credenziali all'interno della busta dei messaggi SOAP. Tuttavia, la piattaforma Novell supporta la possibilità di inviare le credenziali di autenticazione di base HTTP al server specificando l' `ClientCredentialType`oggetto appropriato:
+I servizi WCF possono anche richiedere ai client del servizio di eseguire l'autenticazione utilizzando le credenziali. La piattaforma Novell non supporta il protocollo WS-Security, che consente ai client di inviare le credenziali all'interno della busta dei messaggi SOAP. Tuttavia, la piattaforma Novell supporta la possibilità di inviare le credenziali di autenticazione di base HTTP al server specificando i `ClientCredentialType`appropriati:
 
 ```csharp
 basicHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
@@ -438,7 +438,7 @@ client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
 
-Nell'esempio precedente, se si riceve il messaggio "esaurito i trampolini di tipo 0", è possibile aumentare il numero di elastici di tipo 0 aggiungendo l' `–aot “trampolines={number of trampolines}”` argomento alla compilazione. Per altre informazioni, vedere [Risoluzione dei problemi](~/ios/troubleshooting/troubleshooting.md#trampolines).
+Nell'esempio precedente, se si riceve il messaggio "esaurito i trampolini di tipo 0", è possibile aumentare il numero di elastici di tipo 0 aggiungendo l'argomento `–aot “trampolines={number of trampolines}”` alla compilazione. Per altre informazioni, vedere [Risoluzione dei problemi](~/ios/troubleshooting/troubleshooting.md#trampolines).
 
 Per ulteriori informazioni sull'autenticazione di base HTTP, anche se nel contesto di un servizio Web REST, vedere [autenticazione di un servizio Web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md).
 

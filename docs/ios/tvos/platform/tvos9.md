@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 34f332eb712f479f9f9565a3894212e3cdd5aaf6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030540"
 ---
 # <a name="introduction-to-tvos-9"></a>Introduzione a tvOS 9
 
@@ -75,7 +75,7 @@ Il nuovo Apple TV presenta le specifiche hardware seguenti:
 
 ### <a name="siri-remote"></a>Siri remoto
 
-In base all'area, il controllo remoto Apple TV disponibile verrà fornito in una delle due configurazioni seguenti: Siri remoto o Apple TV remoto.
+In base all'area, il controllo remoto Apple TV disponibile verrà fornito in una delle due configurazioni: Siri remote o Apple TV Remote.
 
 Siri Remote è attualmente disponibile nei paesi seguenti:
 
@@ -90,7 +90,7 @@ Siri Remote è attualmente disponibile nei paesi seguenti:
 
 Tutti gli altri paesi riceveranno il telecomando Apple TV che sostituisce il pulsante Siri con un pulsante di ricerca che visualizza la schermata di ricerca predefinita con input di testo per la ricerca:
 
-[![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png#lightbox)
+[![](tvos9-images/remote02.png "Siri Remote")](tvos9-images/remote02.png#lightbox)
 
 Per ulteriori informazioni, vedere la documentazione di [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -154,7 +154,7 @@ Per altre informazioni, vedere l' [argomento relativo all'uso di navigazione e m
 
 La schermata iniziale di Apple TV Mostra tutte le app installate e fornisce un modo per accedere alle preferenze dell'utente:
 
-[![](tvos9-images/home01.png "Schermata iniziale")](tvos9-images/home01.png#lightbox)
+[![](tvos9-images/home01.png "The Home Screen")](tvos9-images/home01.png#lightbox)
 
 L'utente Esplora una griglia di icone dell'app usando i movimenti tocco sulla finestra remota Siri con lo stato attivo per selezionare un'app e avviarla. L'icona dell'app è la prima possibilità di creare una grande impressione sul potenziale utente e deve comunicare a colpo d'occhio lo scopo dell'app.
 
@@ -168,9 +168,9 @@ Per ulteriori informazioni, vedere la documentazione relativa [all'utilizzo di i
 
 Se l'utente ha inserito l'app Novell. tvOS nella parte superiore della schermata iniziale di Apple TV, viene visualizzata un'immagine di grandi dimensioni superiore quando l'utente seleziona l'app. Questa immagine dovrebbe evidenziare le funzionalità dell'app o fornire collegamenti diretti al relativo contenuto.
 
-[![](tvos9-images/topshelf01.png "Scaffale superiore")](tvos9-images/topshelf01.png#lightbox)
+[![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
 
-L'immagine in primo piano può essere specificata come un singolo file `.png` o `.lsr` statico oppure può essere creata dinamicamente in fase di esecuzione come una singola riga di elementi attivabili.
+L'immagine in primo piano può essere fornita come singolo `.png` statico o file `.lsr` oppure può essere creata dinamicamente in fase di esecuzione come una singola riga di elementi attivabili.
 
 Invece di visualizzare un'immagine in primo piano statica, può contenere una riga dinamica o elementi attivabili o un set dinamico di banner di scorrimento. Entrambi questi stili dinamici consentono di evidenziare il contenuto fornito dall'app o di passare alle funzionalità più usate.
 

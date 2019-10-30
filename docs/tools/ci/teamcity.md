@@ -3,21 +3,21 @@ title: Uso del team City con Novell
 description: Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare applicazioni per dispositivi mobili e quindi inviarli a Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72273122"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029795"
 ---
 # <a name="using-team-city-with-xamarin"></a>Uso del team City con Novell
 
 _Questa guida illustra i passaggi necessari per l'uso di TeamCity per compilare applicazioni per dispositivi mobili e quindi inviarli a Xamarin Test Cloud._
 
-Come illustrato nella Guida [introduttiva all'integrazione continua](~/tools/ci/intro-to-ci.md) , l'integrazione continua (ci) è una procedura utile per lo sviluppo di applicazioni per dispositivi mobili di qualità. Sono disponibili numerose opzioni valide per il software server di integrazione continua; Questa guida si concentra su [TeamCity](http://www.jetbrains.com/teamcity/) di JetBrains.
+Come illustrato nella Guida [introduttiva all'integrazione continua](~/tools/ci/intro-to-ci.md) , l'integrazione continua (ci) è una procedura utile per lo sviluppo di applicazioni per dispositivi mobili di qualità. Sono disponibili numerose opzioni valide per il software server di integrazione continua; Questa guida si concentra su [TeamCity](https://www.jetbrains.com/teamcity/) di JetBrains.
 
 Sono disponibili diverse permutazioni di un'installazione TeamCity. Di seguito è riportato un elenco di alcuni di questi:
 
@@ -31,7 +31,7 @@ Negli scenari precedenti, l'esecuzione di TeamCity con un account utente in OS X
 
 Per la configurazione di TeamCity sono necessari diversi passaggi:
 
-- **Installazione di TeamCity** : l'installazione di TeamCity non è illustrata in questa guida. Questa guida presuppone che TeamCity sia installato e in esecuzione con un account utente. Le istruzioni per [l'installazione di TeamCity](http://confluence.jetbrains.com/display/TCD8/Installation) sono disponibili nella [documentazione di TeamCity 8](http://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) di JetBrains.
+- **Installazione di TeamCity** : l'installazione di TeamCity non è illustrata in questa guida. Questa guida presuppone che TeamCity sia installato e in esecuzione con un account utente. Le istruzioni per [l'installazione di TeamCity](https://confluence.jetbrains.com/display/TCD8/Installation) sono disponibili nella [documentazione di TeamCity 8](https://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) di JetBrains.
 
 - **Preparazione del server di compilazione** : questo passaggio prevede l'installazione del software, degli strumenti e dei certificati necessari per creare applicazioni per dispositivi mobili e prepararle per la distribuzione.
 
@@ -85,7 +85,7 @@ Lo script di compilazione può essere semplice come un file di PowerShell (in Wi
 
 - [**psake**](https://github.com/psake/psake) : si tratta di una libreria di Windows PowerShell per la creazione di software
 
-- [**Fake**](http://fsharp.github.io/FAKE/) : si tratta di un linguaggio DSL F# basato su, che consente di utilizzare le librerie .NET esistenti, se necessario.
+- [**Fake**](https://fsharp.github.io/FAKE/) : si tratta di un linguaggio DSL F# basato su, che consente di utilizzare le librerie .NET esistenti, se necessario.
 
 Il linguaggio di scripting utilizzato dipende dalle preferenze e dai requisiti. L'esempio [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contiene un esempio di uso di rake come [script di compilazione](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
 
@@ -211,4 +211,4 @@ Questa guida ha illustrato come usare TeamCity per compilare applicazioni per di
 
 - [Preparazione delle app Novell. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
 - [Preparazione delle app Novell. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [Installazione e configurazione di TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)
+- [Installazione e configurazione di TeamCity](https://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

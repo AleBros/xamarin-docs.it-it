@@ -4,19 +4,19 @@ description: ProGuard di Xamarin.Android è uno strumento di classe Java che con
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: b85289d9dbd60d5ee0238540e67773ed9085b672
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 854287ec22fb89ec2f0a55f8c3854dc0106fb11a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249960"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021172"
 ---
 # <a name="proguard"></a>ProGuard
 
-_ProGuard di Xamarin.Android è uno strumento di classe Java che consente di compattare, ottimizzare ed eseguire una verifica preliminare dei file. ProGuard rileva e rimuove eventuale codice non usato e analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di ProGuard e spiega come abilitare questo strumento nel progetto e come configurarlo, presentando anche alcuni esempi di configurazione._
+_Novell. Android Proguard è un compattatore di file di classe Java, Optimizer e pre-Verifier. Rileva e rimuove il codice inutilizzato, analizza e ottimizza il bytecode. Questa guida illustra il funzionamento di Proguard, come abilitarlo nel progetto e come configurarlo. Sono inoltre disponibili diversi esempi di configurazioni Proguard._
 
 ## <a name="overview"></a>Panoramica
 
@@ -302,7 +302,7 @@ Il prossimo esempio illustra un comando ProGuard tipico eseguito nell'ambiente I
 C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sdk\tools\proguard\lib\proguard.jar -include obj\Release\proguard\proguard_xamarin.cfg -include obj\Release\proguard\proguard_project_references.cfg -include obj\Release\proguard\proguard_project_primary.cfg "-injars 'obj\Release\proguard\__proguard_input__.jar';'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.0\mono.android.jar'" "-libraryjars 'C:\Android\android-sdk\platforms\android-25\android.jar'" -outjars "obj\Release\proguard\__proguard_output__.jar" -optimizations !code/allocation/variable
 ```
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 ### <a name="file-issues"></a>Problemi relativi ai file
 

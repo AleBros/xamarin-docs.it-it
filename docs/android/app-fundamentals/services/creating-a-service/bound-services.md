@@ -4,15 +4,15 @@ description: I servizi associati sono servizi Android che forniscono un'interfac
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/04/2018
-ms.openlocfilehash: 584f523446584192cfa882697c0f76865ce78a10
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: a3b0e8499d208f209de481163a236e5241c83ee6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754921"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024985"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servizi associati in Novell. Android
 
@@ -36,7 +36,7 @@ Questo diagramma illustra il modo in cui l'attività, la connessione del servizi
 
 In questa guida viene illustrato come estendere la classe `Service` per implementare un servizio associato. Verrà inoltre trattata l'implementazione di `IServiceConnection` ed estensione `Binder` per consentire a un client di comunicare con il servizio. Un'app di esempio accompagna questa guida, che contiene una soluzione con un singolo progetto Novell. Android denominato **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Si tratta di un'applicazione molto semplice che illustra come implementare un servizio e come associarvi un'attività. Il servizio associato ha un'API molto semplice con un solo metodo, `GetFormattedTimestamp`, che restituisce una stringa che indica all'utente quando il servizio è stato avviato e il tempo di esecuzione. L'app consente inoltre all'utente di annullare manualmente il binding e il binding al servizio.
 
-[![Screenshot dell'applicazione in esecuzione su un telefono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
+[![screenshot dell'applicazione in esecuzione su un telefono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
 ## <a name="implementing-and-consuming-a-bound-service"></a>Implementazione e utilizzo di un servizio associato
 

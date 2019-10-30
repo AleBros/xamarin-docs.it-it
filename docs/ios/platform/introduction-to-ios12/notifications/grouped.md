@@ -4,15 +4,15 @@ description: Con iOS 12, è possibile raggruppare le notifiche nel centro notifi
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 12d60a193385593bb3ec22186b54a4a809370e2d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6352de1483aea49a628cbb30d104906fde767afa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291259"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031947"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notifiche raggruppate in Novell. iOS
 
@@ -30,7 +30,7 @@ I frammenti di codice in questa guida provengono da questa applicazione di esemp
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>Richiedi autorizzazione e Consenti notifiche in primo piano
 
-Prima che un'app possa inviare notifiche locali, deve richiedere l'autorizzazione per eseguire questa operazione. Nell'app di [`AppDelegate`](xref:UIKit.UIApplicationDelegate)esempio, il metodo [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) richiede l'autorizzazione seguente:
+Prima che un'app possa inviare notifiche locali, deve richiedere l'autorizzazione per eseguire questa operazione. Nel [`AppDelegate`](xref:UIKit.UIApplicationDelegate)dell'app di esempio, il metodo [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) richiede l'autorizzazione seguente:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,7 +46,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-(Impostato sopra) per un oggetto [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) decide se un'app in primo piano deve visualizzare o meno una notifica in ingresso chiamando il gestore di completamento passato a [`WillPresentNotification`:](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})) [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate)
+Il [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (impostato sopra) per un [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) decide se un'app in primo piano deve visualizzare o meno una notifica in ingresso chiamando il gestore di completamento passato a [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
 [Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
@@ -56,7 +56,7 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 }
 ```
 
-Il [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) parametro indica che l'app deve visualizzare l'avviso ma non riprodurre un suono o aggiornare una notifica.
+Il parametro [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) indica che l'app deve visualizzare l'avviso ma non riprodurre un suono o aggiornare una notifica.
 
 ## <a name="threaded-notifications"></a>Notifiche con thread
 
@@ -80,8 +80,8 @@ void StartNewThread()
 Per inviare una notifica a thread, l'app di esempio:
 
 - Verifica se l'app dispone dell'autorizzazione per l'invio di una notifica.
-- Crea un oggetto[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-oggetto per il contenuto della notifica e imposta la relativa proprietà[`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
+- Crea una [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+oggetto per il contenuto della notifica e imposta la relativa [`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
 all'identificatore del thread creato in precedenza.
 - Crea una richiesta e pianifica la notifica:
 
@@ -122,11 +122,11 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 Tutte le notifiche della stessa app con lo stesso identificatore di thread verranno visualizzate nello stesso gruppo di notifiche.
 
 > [!NOTE]
-> Per impostare un identificatore di thread in una notifica remota, aggiungere `thread-id` la chiave al payload JSON della notifica. Per altri dettagli, vedere la pagina relativa alla generazione di un documento di [notifica remoto](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) di Apple.
+> Per impostare un identificatore di thread in una notifica remota, aggiungere la chiave di `thread-id` al payload JSON della notifica. Per altri dettagli, vedere la pagina relativa alla generazione di un documento di [notifica remoto](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) di Apple.
 
 ### <a name="summaryargument"></a>SummaryArgument
 
-`SummaryArgument`Specifica il modo in cui una notifica avrà un effetto sul testo di riepilogo visualizzato nell'angolo inferiore sinistro di un gruppo di notifica a cui appartiene la notifica. iOS aggrega il testo di riepilogo dalle notifiche nello stesso gruppo per creare una descrizione complessiva del riepilogo.
+`SummaryArgument` specifica il modo in cui una notifica avrà un effetto sul testo di riepilogo visualizzato nell'angolo inferiore sinistro di un gruppo di notifica a cui appartiene la notifica. iOS aggrega il testo di riepilogo dalle notifiche nello stesso gruppo per creare una descrizione complessiva del riepilogo.
 
 L'app di esempio usa l'autore del messaggio come argomento di riepilogo. Con questo approccio, il testo di riepilogo per un gruppo di sei notifiche con Alice potrebbe essere costituito **da altre 5 notifiche da Alice e me**.
 
@@ -134,8 +134,8 @@ L'app di esempio usa l'autore del messaggio come argomento di riepilogo. Con que
 
 Ogni tocco del pulsante di **promemoria appuntamento** dell'app di esempio invia una delle varie notifiche di sollecito appuntamento. Poiché questi promemoria non sono threaded, vengono visualizzati nel gruppo di notifica a livello di applicazione nella schermata di blocco e nel centro notifiche.
 
-Per inviare una notifica non thread, il metodo dell'app di `ScheduleUnthreadedNotification` esempio usa codice simile a quello riportato in precedenza.
-Tuttavia, non imposta l' `ThreadIdentifier` `UNMutableNotificationContent` oggetto sull'oggetto.
+Per inviare una notifica non thread, il metodo `ScheduleUnthreadedNotification` dell'app di esempio usa codice simile a quello riportato in precedenza.
+Tuttavia, non imposta la `ThreadIdentifier` sull'oggetto `UNMutableNotificationContent`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

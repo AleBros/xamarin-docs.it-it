@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2018
-ms.openlocfilehash: d3f4c602f7e581cab74b61072e248a22eede9a22
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0f7499551db7d86d7978b9c3e1f562a2f054c202
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762024"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019525"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Come si aggiorna la versione di Java Development Kit (JDK)?
 
@@ -41,7 +41,7 @@ Per eseguire l'aggiornamento a Microsoft Mobile OpenJDK, vedere [Microsoft Mobil
 
 4. Aprire Visual Studio e aggiornare il **percorso di Java Development Kit** in modo che punti al nuovo JDK in **strumenti > opzioni > Novell > Android Settings > percorso di Java Development Kit**:
 
-    [![Impostazione del percorso per il JDK nella pagina delle impostazioni di Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [impostazione del percorso di![per JDK nella pagina delle impostazioni di Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Assicurarsi di riavviare Visual Studio dopo aver aggiornato il percorso.
 
@@ -55,8 +55,8 @@ Assicurarsi di riavviare Visual Studio dopo aver aggiornato il percorso.
 
     ![Esecuzione del programma di installazione di JDK in macOS](update-jdk-images/image5.png)
 
-Mac OS imposterà automaticamente la nuova versione JDK come impostazione predefinita tramite l'aggiornamento di **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. È quindi possibile verificare che il percorso **Java SDK (JDK)** sia impostato sul valore predefinito previsto di **/usr** in **Visual Studio per Mac > Preferenze > Progetti > percorsi sdk > percorso di Android > > Java SDK (JDK)** :
+Mac OS imposterà automaticamente la nuova versione JDK come impostazione predefinita tramite l'aggiornamento di **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. È quindi possibile verificare che il percorso **Java SDK (JDK)** sia impostato sul valore predefinito previsto di **/usr** in **Visual Studio per Mac > Preferenze > Progetti > percorsi sdk > percorso di Android > > Java SDK (JDK)**:
 
-[![Impostazione del percorso JDK nella scheda percorsi Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
+[![impostazione del percorso JDK nella scheda percorsi Android](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----

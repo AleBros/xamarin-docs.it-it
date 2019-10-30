@@ -4,15 +4,15 @@ description: Questa sezione illustra come usare le notifiche locali in un'applic
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 764be6319e95b16dc043bebd2abfb27ba0696457
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769748"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031410"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procedura dettagliata: uso delle notifiche locali in Novell. iOS
 
@@ -26,10 +26,10 @@ _Questa sezione illustra come usare le notifiche locali in un'applicazione Novel
 Consente di creare un'applicazione semplice che visualizzerà le notifiche locali in azione. Questa applicazione avrà un solo pulsante. Quando si fa clic sul pulsante, viene creata una notifica locale. Una volta trascorso il periodo di tempo specificato, verrà visualizzata la notifica.
 
 1. In Visual Studio per Mac creare una nuova soluzione iOS di visualizzazione singola e chiamarla `Notifications`.
-1. Aprire il `Main.storyboard` file e trascinare un pulsante nella visualizzazione. Assegnare un nome al **pulsante**e assegnargli il titolo **Aggiungi notifica**. A questo punto, è anche possibile impostare alcuni [vincoli](~/ios/user-interface/designer/designer-auto-layout.md) sul pulsante: 
+1. Aprire il file di `Main.storyboard` e trascinare un pulsante nella visualizzazione. Assegnare un nome al **pulsante**e assegnargli il titolo **Aggiungi notifica**. A questo punto, è anche possibile impostare alcuni [vincoli](~/ios/user-interface/designer/designer-auto-layout.md) sul pulsante: 
 
-    ![](local-notifications-in-ios-walkthrough-images/image3.png "Impostazione di alcuni vincoli sul pulsante")
-1. Modificare la `ViewController` classe e aggiungere il gestore eventi seguente al metodo ViewDidLoad:
+    ![](local-notifications-in-ios-walkthrough-images/image3.png "Setting some constraints on the button")
+1. Modificare la classe `ViewController` e aggiungere il gestore eventi seguente al metodo ViewDidLoad:
 
     ```csharp
     button.TouchUpInside += (sender, e) =>
@@ -57,7 +57,7 @@ Consente di creare un'applicazione semplice che visualizzerà le notifiche local
 
     Questo codice creerà una notifica che usa un suono, imposta il valore del badge icona su 1 e visualizza un avviso per l'utente.
 
-1. Modificare quindi il file `AppDelegate.cs`aggiungendo prima `FinishedLaunching` di tutto il codice seguente al metodo. Per verificare se il dispositivo esegue iOS 8, è **necessario** chiedere all'utente l'autorizzazione per la ricezione delle notifiche:
+1. Successivamente, modificare il file `AppDelegate.cs`aggiungere il codice seguente al metodo `FinishedLaunching`. Per verificare se il dispositivo esegue iOS 8, è **necessario** chiedere all'utente l'autorizzazione per la ricezione delle notifiche:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -85,7 +85,7 @@ Consente di creare un'applicazione semplice che visualizzerà le notifiche local
     }
     ```
 
-1. È necessario gestire il caso in cui la notifica è stata avviata a causa di una notifica locale. Modificare il metodo `FinishedLaunching` `AppDelegate` in per includere il frammento di codice seguente:
+1. È necessario gestire il caso in cui la notifica è stata avviata a causa di una notifica locale. Modificare il metodo `FinishedLaunching` nel `AppDelegate` per includere il frammento di codice seguente:
 
     ```csharp
     // check for a notification
@@ -112,7 +112,8 @@ Consente di creare un'applicazione semplice che visualizzerà le notifiche local
 
 1. Infine, eseguire l'applicazione. In iOS 8 verrà richiesto di consentire le notifiche. Fare clic su **OK** , quindi fare clic sul pulsante **Aggiungi notifica** . Dopo una breve pausa dovrebbe essere visualizzata la finestra di dialogo di avviso, come illustrato nelle schermate seguenti:
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "Per confermare la possibilità di inviare notifiche") ![](local-notifications-in-ios-walkthrough-images/image1.png "pulsante di notifica aggiungere") ![](local-notifications-in-ios-walkthrough-images/image2.png "la finestra di dialogo Avviso di notifica")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "Conferma della possibilità di inviare notifiche") ![](local-notifications-in-ios-walkthrough-images/image1.png "Pulsante Aggiungi notifica")
+    ![](local-notifications-in-ios-walkthrough-images/image2.png "The notification alert dialog")
 
 ## <a name="summary"></a>Riepilogo
 

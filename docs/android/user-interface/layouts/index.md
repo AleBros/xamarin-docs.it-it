@@ -4,15 +4,15 @@ description: Definizione della struttura visiva dell'app Novell. Android
 ms.prod: xamarin
 ms.assetid: 2BA72B0E-230D-4F98-B4D5-4EFB0D479789
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/18/2017
-ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f15aeff8590cf6d82168fd3e39ba6f78d649d2ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764467"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028961"
 ---
 # <a name="xamarinandroid-layouts"></a>Layout di Novell. Android
 
@@ -34,7 +34,7 @@ I layout vengono usati per disporre gli elementi che costituiscono l'interfaccia
 
     ![Esempio di visualizzazione del riciclatore](images/recycler-view.png)
 
-- [ListView](~/android/user-interface/layouts/list-view/index.md) è un gruppo di visualizzazioni che consente di creare un elenco di elementi scorrevoli. Gli elementi dell'elenco vengono inseriti automaticamente nell'elenco utilizzando una scheda elenco. `ListView` È un importante componente dell'interfaccia utente delle applicazioni Android perché viene usato ovunque, da brevi elenchi di opzioni di menu a lunghi elenchi di contatti o Preferiti Internet. Fornisce un modo semplice per presentare un elenco di righe di scorrimento che può essere formattato con uno stile incorporato o personalizzato in modo esteso. Un'istanza ListView richiede a un adapter di inserire i dati contenuti nelle visualizzazioni di riga.
+- [ListView](~/android/user-interface/layouts/list-view/index.md) è un gruppo di visualizzazioni che consente di creare un elenco di elementi scorrevoli. Gli elementi dell'elenco vengono inseriti automaticamente nell'elenco utilizzando una scheda elenco. Il `ListView` è un importante componente dell'interfaccia utente delle applicazioni Android perché viene usato ovunque, da brevi elenchi di opzioni di menu a lunghi elenchi di contatti o Preferiti Internet. Fornisce un modo semplice per presentare un elenco di righe di scorrimento che può essere formattato con uno stile incorporato o personalizzato in modo esteso. Un'istanza ListView richiede a un adapter di inserire i dati contenuti nelle visualizzazioni di riga.
 
     ![Visualizzazione elenco di esempio](images/list-view.png)
 

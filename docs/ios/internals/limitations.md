@@ -4,15 +4,15 @@ description: Questo documento descrive le limitazioni di Novell. iOS, la discuss
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753332"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022314"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitazioni di Novell. iOS
 
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>Nessuna generazione di codice dinamico
 
-Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico il codice, Novell. iOS non supporta alcuna forma di generazione del codice dinamico. Sono inclusi:
+Poiché il kernel iOS impedisce a un'applicazione di generare in modo dinamico il codice, Novell. iOS non supporta alcuna forma di generazione del codice dinamico. tra cui:
 
 - System. Reflection. Emit non è disponibile.
 - Nessun supporto per System. Runtime. Remoting.
@@ -75,7 +75,7 @@ Tuttavia, l'intera API di reflection, incluso Type. GetType ("someClass"), elenc
 
 Per chiamare una funzione nativa tramite un C# delegato, la dichiarazione del delegato deve essere decorata con uno degli attributi seguenti:
 
-- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (scelta consigliata, poiché è multipiattaforma e compatibile con .NET Standard 1.1 +)
+- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (scelta consigliata, poiché è multipiattaforma e compatibile con .NET standard 1.1 +)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Se non si specifica uno di questi attributi, verrà generato un errore di runtime, ad esempio:

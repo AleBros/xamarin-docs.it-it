@@ -3,15 +3,15 @@ title: Introduzione a C
 description: Questo documento descrive come usare l'incorporamento .NET per incorporare il codice .NET in un'applicazione C. Viene illustrato come usare l'incorporamento .NET in Visual Studio 2019 e Visual Studio per Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/19/2018
-ms.openlocfilehash: 1dc68a709f8e1f864961bbe87af112b648b0dd2a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9660eccd3e14a6c4ecad901064650fe1e25458f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278731"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029790"
 ---
 # <a name="getting-started-with-c"></a>Introduzione a C
 
@@ -25,7 +25,7 @@ Per usare l'incorporamento .NET con C, è necessario un computer Mac o Windows c
 * Xcode 8.3.2 o versione successiva
 * [Mono](https://www.mono-project.com/download/)
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>WINDOWS
 
 * Windows 7, 8, 10 o versione successiva
 * Visual Studio 2015 o versione successiva
@@ -71,7 +71,7 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-Poiché il `--compile` flag è stato passato allo strumento, l'incorporamento di .NET deve anche compilare i file di output in una libreria condivisa, che è possibile trovare accanto ai file generati, a un file **libmanaged. dylib** in MacOS e a **managed. dll** in Windows.
+Poiché il flag di `--compile` è stato passato allo strumento, l'incorporamento di .NET deve avere compilato anche i file di output in una libreria condivisa, che è possibile trovare accanto ai file generati, un file **libmanaged. dylib** in MacOS e una **DLL gestita** in Windows.
 
 Per utilizzare la libreria condivisa, è possibile includere il file di intestazione c **gestito** , che fornisce le dichiarazioni c corrispondenti alle rispettive API della libreria gestita e il collegamento con la libreria condivisa compilata precedentemente indicata.
 

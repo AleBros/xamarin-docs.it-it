@@ -4,15 +4,15 @@ description: Una terza opzione per l'uso di Java in un'applicazione Novell. Andr
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/05/2016
-ms.openlocfilehash: c6627f585326848c5221729ca94071b00651c59e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8f96fcc4aadcd8f082d55dc568b2517f048edaf2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511178"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027198"
 ---
 # <a name="porting-java-to-c-for-xamarinandroid"></a>Porting di Java C# a per Novell. Android
 
@@ -24,11 +24,11 @@ Questo approccio può essere interessante per le organizzazioni che:
 
 Esistono due modi per trasferire il codice Java a C#. Il primo consiste nel trasferire manualmente il codice. Si tratta di sviluppatori esperti che conoscono sia .NET che Java e hanno familiarità con gli idiomi appropriati per ogni linguaggio. Questo approccio è molto utile per piccole quantità di codice o per le organizzazioni che desiderano uscire completamente da Java a C#.
 
-La seconda metodologia di porting consiste nel provare a automatizzare il processo usando un convertitore di codice, ad esempio l'[affilatura](https://github.com/mono/sharpen). [Sharp](https://github.com/mono/sharpen) è un convertitore Open Source da Versant originariamente usato per trasferire il codice per *db4o* da Java a C#. db4o è un database orientato a oggetti che è inversamente sviluppato in Java e quindi trasferito a .NET. L'uso di un convertitore di codice può essere utile per i progetti che devono esistere in entrambi i linguaggi e che richiedono una certa parità tra i due.
+La seconda metodologia di porting consiste nel provare a automatizzare il processo usando un convertitore di codice, ad esempio l' [affilatura](https://github.com/mono/sharpen). [Sharp](https://github.com/mono/sharpen) è un convertitore Open Source da Versant originariamente usato per trasferire il codice per *db4o* da Java a C#. db4o è un database orientato a oggetti che è inversamente sviluppato in Java e quindi trasferito a .NET. L'uso di un convertitore di codice può essere utile per i progetti che devono esistere in entrambi i linguaggi e che richiedono una certa parità tra i due.
 
 Un esempio di quando uno strumento di conversione automatica del codice è sensato può essere visualizzato nel progetto [Ngit](https://github.com/mono/ngit) .
-Ngit è una porta del progetto Java [le jgit](http://eclipse.org/).
-Le jgit è un'implementazione Java del sistema di gestione del codice sorgente di [git](http://git-scm.com/) . Per generare C# codice da Java, i programmatori Ngit usano un sistema automatico personalizzato per estrarre il codice Java da le jgit, applicare alcune patch per gestire il processo di conversione, quindi eseguire Sharp, che genera il C# codice. In questo modo, il progetto Ngit può trarre vantaggio dal lavoro continuo continuativo eseguito in le jgit.
+Ngit è una porta del progetto Java [le jgit](https://eclipse.org/).
+Le jgit è un'implementazione Java del sistema di gestione del codice sorgente di [git](https://git-scm.com/) . Per generare C# codice da Java, i programmatori Ngit usano un sistema automatico personalizzato per estrarre il codice Java da le jgit, applicare alcune patch per gestire il processo di conversione, quindi eseguire Sharp, che genera il C# codice. In questo modo, il progetto Ngit può trarre vantaggio dal lavoro continuo continuativo eseguito in le jgit.
 
 Spesso è necessario eseguire il bootstrap di uno strumento di conversione automatica del codice e questo potrebbe rivelarsi una barriera da usare. In molti casi, può essere più semplice e facile trasferire i Java in modo C# manuale.
 

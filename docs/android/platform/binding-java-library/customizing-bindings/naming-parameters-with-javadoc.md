@@ -4,15 +4,15 @@ description: Questo articolo illustra come ripristinare i nomi dei parametri in 
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/20/2017
-ms.openlocfilehash: fa1fb0656384455322a2d0a3562fc0ee3ca52397
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 060c4759d39bc3b8c424ce46dc615644540fe9c2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757606"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027673"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Denominazione di parametri con javadoc
 
@@ -20,7 +20,7 @@ _Questo articolo illustra come ripristinare i nomi dei parametri in un progetto 
 
 ## <a name="overview"></a>Panoramica
 
-Quando si associa una libreria Java esistente, alcuni metadati sull'API associata vengono persi. In particolare i nomi dei parametri per i metodi. I nomi dei parametri verranno `p0`visualizzati `p1`come, e così via. Questo perché i file Java `.class` non conservano i nomi dei parametri usati nel codice sorgente Java. 
+Quando si associa una libreria Java esistente, alcuni metadati sull'API associata vengono persi. In particolare i nomi dei parametri per i metodi. I nomi dei parametri verranno visualizzati come `p0`, `p1`e così via. Ciò è dovuto al fatto che i file di `.class` Java non conservano i nomi dei parametri utilizzati nel codice sorgente Java. 
 
 Un progetto di associazione Java Novell. Android può fornire i nomi dei parametri se ha accesso al codice HTML Javadoc dalla libreria originale. 
 
@@ -29,7 +29,7 @@ Un progetto di associazione Java Novell. Android può fornire i nomi dei paramet
 L'integrazione di javadoc HTML in un progetto di associazione Java è un processo manuale costituito dai passaggi seguenti: 
 
 1. Scaricare Javadoc per la libreria
-2. Modificare il `.csproj` file e aggiungere una `<JavaDocPaths>` proprietà:
+2. Modificare il file di `.csproj` e aggiungere una proprietà `<JavaDocPaths>`:
 3. Pulire e ricompilare il progetto
 
 Al termine di questa operazione, i nomi di parametro Java originali dovrebbero essere presenti nelle API vincolate da un progetto di associazione Java. 

@@ -4,19 +4,19 @@ description: Questa guida illustra le differenze tra un'app di sistema e un'app 
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 9ef13816dc1bc11eab0105ec223c2ef98366e4e5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5eff10d58ac094f3493bd60bdb621df1bcb30477
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753995"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028062"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Installazione di Xamarin.Android come app di sistema
 
-_Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Xamarin.Android come applicazione di sistema. Questa guida è rivolta agli autori di immagini ROM Android personalizzate. Non illustra come creare una ROM personalizzata._
+_Questa guida illustra le differenze tra un'app di sistema e un'app utente e spiega come installare un'applicazione Novell. Android come applicazione di sistema. Questa guida è valida per gli autori di immagini ROM Android personalizzate. Non verrà illustrato come creare una ROM personalizzata._
 
 ## <a name="system-app"></a>App di sistema
 

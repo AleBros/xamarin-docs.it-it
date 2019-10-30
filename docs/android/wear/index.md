@@ -4,15 +4,15 @@ description: Creazione di app per dispositivi Android indossabili.
 ms.prod: xamarin
 ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2018
-ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 63fb9c3b1484026cb390a8a475c711562dfd0771
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758324"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028585"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -40,7 +40,7 @@ Viene illustrato come distribuire l'app Android Wear in un dispositivo Android W
 
 ## <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Usare le API](https://developer.android.com/reference/android/support/wearable)
 
-Il sito per sviluppatori Android fornisce informazioni dettagliate sulle API di utilizzo chiave, ad esempio [attività indossabili](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [Intent](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [autenticazione](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [complicazioni](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [rendering delle complicazioni](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notifiche](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Viste](https://developer.android.com/reference/android/support/wearable/view/package-summary.html) e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
+Il sito per sviluppatori Android fornisce informazioni dettagliate sulle API di utilizzo chiave, ad esempio [attività indossabili](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [Intent](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [autenticazione](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [complicazioni](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [rendering delle complicazioni](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notifiche](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Viste](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
 ## <a name="samples"></a>Esempi
 
@@ -61,9 +61,9 @@ Vedere questi collegamenti video che illustrano Novell. Android con supporto di 
 
 |Descrizione|Schermata|
 |--- |--- |
-|[Android L e molto altro ancora](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android L Developer Preview ha introdotto una pletora di nuove API che consentono agli sviluppatori di sfruttare i vantaggi offerti da, ad esempio la progettazione di materiali, le notifiche e le nuove animazioni, per citarne alcune.|![Screenshot video della presentazione](images/video-android-l.png)|
-|[C#è a mio occhio: Google Glass e Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; wearable computing potrebbero sembrare qualcosa del futuro (o un episodio di Inspector Gadget), ma molte persone hanno già adottato il futuro. C#gli sviluppatori conoscono questo e hanno già gli strumenti e le competenze per sfruttare la potenza dei dispositivi indossabili (dall'evoluzione 2014).|![Screenshot video della presentazione](images/video-eyes-ears.png)|
-|[Novità di Novell. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android auto, Material Design e Art; che cosa si intende per gli sviluppatori Novell? di evolve 2014.|![Screenshot video della presentazione](Images/video-whats-new.png)|
+|[Android l e molto altro ancora](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android l Developer Preview ha introdotto una pletora di nuove API che consentono agli sviluppatori di sfruttare i vantaggi offerti da, tra cui progettazione di materiali, notifiche e nuove animazioni, per citarne alcuni.|![Screenshot video della presentazione](images/video-android-l.png)|
+|[è a mio occhio: Google Glass e Android Wear&ndash;l'informatica indossabile potrebbe sembrare qualcosa del futuro (o un episodio del gadget di controllo), ma molte persone hanno già adottato il futuro. C# ](https://www.youtube.com/watch?v=80H8tXByZQc) C#gli sviluppatori conoscono questo e hanno già gli strumenti e le competenze per sfruttare la potenza dei dispositivi indossabili (dall'evoluzione 2014).|![Screenshot video della presentazione](images/video-eyes-ears.png)|
+|[Novità di Novell. android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android auto, Material Design e Art; che cosa si intende per gli sviluppatori Novell? da evolve 2014.|![Screenshot video della presentazione](Images/video-whats-new.png)|
 
 <!--
 

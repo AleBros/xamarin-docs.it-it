@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: efd120e785e55bfa3806cd193bd5f155f35a5e18
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767719"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032736"
 ---
 # <a name="watchos-troubleshooting"></a>Risoluzione dei problemi di watchos
 
@@ -36,18 +36,18 @@ Questa pagina contiene informazioni aggiuntive e soluzioni alternative per i pro
 <a name="deploy" />
 
 - Le versioni precedenti di Visual Studio per Mac visualizzano erroneamente una delle icone **AppleCompanionSettings** come 88x88 pixel; Se si tenta di inviare all'App Store, viene restituito un **errore di icona mancante** .
-    Questa icona deve essere 87x87 pixel (29 unità per **@3x** le schermate retina). Non è possibile risolvere questo problema in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** (in modo che corrisponda a [questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Questa icona deve essere 87x87 pixel (29 unità per **@3x** schermate retina). Non è possibile risolvere questo problema in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** (in modo che corrisponda a [questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - Se il file **info. plist > ID bundle WKApp** del progetto di estensione Watch non è [impostato correttamente](~/ios/watchos/get-started/project-references.md) in modo da corrispondere all' **ID bundle**dell'app Watch, il debugger non riuscirà a connettersi e Visual Studio per Mac aspetterà il messaggio *"in attesa del debugger Connetti "* .
 
-- Il debug è supportato nella modalità di **notifica** , ma può essere inaffidabile. Il nuovo tentativo può a volte funzionare. Verificare che il file **info. plist** `WKCompanionAppBundleIdentifier` dell'app Watch sia impostato in modo che corrisponda all'identificatore del bundle dell'app padre/contenitore iOS, ovvero quello che viene eseguito nell'iPhone.
+- Il debug è supportato nella modalità di **notifica** , ma può essere inaffidabile. Il nuovo tentativo può a volte funzionare. Verificare che il `WKCompanionAppBundleIdentifier` **info. plist** dell'app Watch sia impostato in modo che corrisponda all'identificatore del bundle dell'app padre/contenitore iOS, ovvero quella che viene eseguita nell'iPhone.
 
 - iOS designer non Mostra le frecce EntryPoint per l'occhiata o i controller di interfaccia di notifica.
 
-- Non è possibile aggiungere `WKNotificationControllers` due a uno storyboard.
-    Soluzione alternativa: L' `notificationCategory` elemento nel codice XML dello storyboard viene sempre inserito con lo `id`stesso oggetto. Per ovviare a questo problema, è possibile aggiungere due o più controller di notifica, aprire il file storyboard in un editor di testo e quindi modificare `id` manualmente l'elemento in modo che sia univoco.
+- Non è possibile aggiungere due `WKNotificationControllers` a uno storyboard.
+    Soluzione temporanea: l'elemento `notificationCategory` nel codice XML dello storyboard viene sempre inserito con lo stesso `id`. Per ovviare a questo problema, è possibile aggiungere due o più controller di notifica, aprire il file storyboard in un editor di testo e modificare manualmente l'elemento `id` in modo che sia univoco.
 
-    [![](troubleshooting-images/duplicate-id-sml.png "Apertura del file storyboard in un editor di testo e modifica manuale dell'elemento ID in modo che sia univoco")](troubleshooting-images/duplicate-id.png#lightbox)
+    [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - È possibile che venga visualizzato l'errore "l'applicazione non è stata compilata" durante il tentativo di avviare l'app. Questo problema si verifica dopo un oggetto **pulito** quando il progetto di avvio è impostato sul progetto di estensione Watch.
     La correzione consiste nel selezionare **compila > Ricompila tutto** , quindi riavviare l'app.
@@ -74,7 +74,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 2. La finestra di dialogo visualizzata includerà una casella di controllo **Alpha** se è presente un canale alfa.
 
-    ![](troubleshooting-images/remove-alpha-sml.png "La finestra di dialogo visualizzata includerà una casella di controllo Alpha se è presente un canale alfa")
+    ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
 
 3. *Deseleziona* la casella di controllo **Alpha** e **Salva** il file nel percorso corretto.
 
@@ -91,15 +91,15 @@ with an alpha channel. Icons should not have an alpha channel.
 
 1. Aprire l'app Watch ' s **Interface. Storyboard** in **Xcode Interface Builder**.
 
-    ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Xcode Interface Builder")
+    ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
 
 2. Trascinare un nuovo `InterfaceController` nello storyboard:
 
-    ![](troubleshooting-images/add-1.png "InterfaceController")
+    ![](troubleshooting-images/add-1.png "A InterfaceController")
 
 3. È ora possibile trascinare i controlli sul controller di interfaccia (ad esempio, etichette e pulsanti, ma non è ancora possibile creare Outlet o azioni, perché non è presente alcun file di intestazione **. h** . I passaggi seguenti determineranno la creazione del file di intestazione **. h** obbligatorio.
 
-    ![](troubleshooting-images/add-2.png "Un pulsante nel layout")
+    ![](troubleshooting-images/add-2.png "A button in the layout")
 
 4. Chiudere lo storyboard e tornare a Visual Studio per Mac. Creare un nuovo C# file **MyInterfaceController.cs** (o il nome desiderato) nel progetto di **estensione Watch app** (non l'app Watch in cui si trova lo storyboard). Aggiungere il codice seguente (aggiornamento dello spazio dei nomi, NomeClasse e nome del costruttore):
 
@@ -137,7 +137,7 @@ with an alpha channel. Icons should not have an alpha channel.
     }
     ```
 
-5. Creare un altro C# nuovo file **MyInterfaceController.designer.cs** nel progetto di **estensione Watch app** e aggiungere il codice seguente. Assicurarsi di aggiornare lo spazio dei nomi, la classname `Register` e l'attributo:
+5. Creare un altro C# nuovo file **MyInterfaceController.designer.cs** nel progetto di **estensione Watch app** e aggiungere il codice seguente. Assicurarsi di aggiornare lo spazio dei nomi, il ClassName e l'attributo `Register`:
 
     ```csharp
     using Foundation;
@@ -158,34 +158,34 @@ with an alpha channel. Icons should not have an alpha channel.
     > [!TIP]
     > È possibile (facoltativamente) rendere questo file un nodo figlio del primo file trascinandolo sull'altro C# file nel riquadro della soluzione di Visual Studio per Mac. Verrà visualizzato come segue:
 
-    ![](troubleshooting-images/add-5.png "Riquadro della soluzione")
+    ![](troubleshooting-images/add-5.png "The Solution pad")
 
-6. Selezionare **Compila > Compila tutto** in modo che la sincronizzazione Xcode riconosca la nuova classe `Register` (tramite l'attributo) usata.
+6. Selezionare **compila > compila tutto** in modo che la sincronizzazione Xcode riconosca la nuova classe (tramite l'attributo `Register`) usata.
 
 7. Riaprire lo storyboard facendo clic con il pulsante destro del mouse sul file dello storyboard dell'app Watch e selezionando **Apri con > Xcode Interface Builder**:
 
-    ![](troubleshooting-images/add-6.png "Apertura dello storyboard in Interface Builder")
+    ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`.
+8. Selezionare il nuovo controller di interfaccia e assegnargli il NomeClasse definito in precedenza, ad esempio. `MyInterfaceController`
     Se tutto funziona correttamente, dovrebbe essere visualizzato automaticamente nell'elenco a discesa **classe:** ed è possibile selezionarlo da questa posizione.
 
-    ![](troubleshooting-images/add-4.png "Impostazione di una classe personalizzata")
+    ![](troubleshooting-images/add-4.png "Setting a custom class")
 
 9. Scegliere la visualizzazione dell' **editor di assistente** in Xcode (l'icona con due cerchi sovrapposti), in modo che sia possibile visualizzare lo storyboard e il codice side-by-Side:
 
-    ![](troubleshooting-images/add-7.png "Elemento della barra degli strumenti dell'editor di assistente")
+    ![](troubleshooting-images/add-7.png "The Assistant Editor toolbar item")
 
     Quando lo stato attivo si trova nel riquadro del codice, assicurarsi di esaminare il file di intestazione con **estensione h** e, in caso contrario, fare clic con il pulsante destro del mouse sulla barra di navigazione e selezionare il file corretto (**MyInterfaceController. h**)
 
-    ![](troubleshooting-images/add-8.png "Seleziona MyInterfaceController")
+    ![](troubleshooting-images/add-8.png "Select MyInterfaceController")
 
 10. È ora possibile creare Outlet e azioni premendo **Ctrl + trascina** dallo storyboard nel file di intestazione con **estensione h** .
 
-    ![](troubleshooting-images/add-9.png "Creazione di Outlet e azioni")
+    ![](troubleshooting-images/add-9.png "Creating outlets and actions")
 
     Quando si rilascia il trascinamento, verrà richiesto di scegliere se creare un outlet o un'azione e scegliere il nome:
 
-    ![](troubleshooting-images/add-a.png "L'Outlet e una finestra di dialogo di azione")
+    ![](troubleshooting-images/add-a.png "The outlet and an action dialog")
 
 11. Una volta salvate le modifiche dello storyboard e Xcode è chiuso, tornare a Visual Studio per Mac. Verranno rilevate le modifiche apportate al file di intestazione e verrà automaticamente aggiunto il codice al file con **estensione designer.cs** :
 
@@ -241,7 +241,7 @@ Esempio:
 
 ## <a name="notification-mode"></a>Modalità di notifica
 
-Per testare la modalità di [ **notifica** ](~/ios/watchos/platform/notifications.md)dell'app, impostare `watchlaunchmode` il parametro `Notification` su e fornire un percorso a un file JSON contenente un payload di notifica di prova.
+Per testare la modalità di [ **notifica** ](~/ios/watchos/platform/notifications.md)dell'app, impostare il parametro `watchlaunchmode` su `Notification` e specificare un percorso di un file JSON contenente un payload di notifica di prova.
 
 Il parametro payload è *obbligatorio* per la modalità di notifica.
 
@@ -257,7 +257,7 @@ Gli argomenti rimanenti sono illustrati di seguito:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Richiesto. Specifica il percorso di Xcode (6,2 o versione successiva).
+Obbligatorio. Specifica il percorso di Xcode (6,2 o versione successiva).
 
 Esempio:
 

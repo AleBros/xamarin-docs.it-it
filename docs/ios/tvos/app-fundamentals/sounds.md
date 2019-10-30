@@ -4,23 +4,23 @@ description: Questo articolo illustra come usare una classe helper per controlla
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4dddde8d4408df6a9b9d73c0a3efff62f563591a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769211"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030768"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Riproduzione di suoni in tvOS con AVAudioPlayer in Novell
 
 ## <a name="about-the-avaudioplayer"></a>Informazioni su AVAudioPlayer
 
-Viene `AVAudioPlayer` utilizzato per riprodurre dati audio da una o più memoria o da un file. Apple consiglia di usare questa classe per riprodurre l'audio nell'app, a meno che non si esegua lo streaming di rete o non si richieda l'I/O audio a bassa latenza.
+Il `AVAudioPlayer` viene usato per riprodurre i dati audio dalla memoria o da un file. Apple consiglia di usare questa classe per riprodurre l'audio nell'app, a meno che non si esegua lo streaming di rete o non si richieda l'I/O audio a bassa latenza.
 
-È possibile usare `AVAudioPlayer` per eseguire le operazioni seguenti:
+È possibile utilizzare il `AVAudioPlayer` per eseguire le operazioni seguenti:
 
 - Riprodurre suoni di qualsiasi durata con ciclo facoltativo.
 - Riprodurre più suoni contemporaneamente con la sincronizzazione facoltativa.
@@ -28,7 +28,7 @@ Viene `AVAudioPlayer` utilizzato per riprodurre dati audio da una o più memoria
 - Funzionalità di supporto quali l'avanzamento rapido o il riavvolgimento.
 - Ottenere i dati di misurazione del livello di riproduzione.
 
-`AVAudioPlayer`supporta i suoni in qualsiasi formato audio fornito da iOS, tvOS e OS X, `.aif`ad `.wav` esempio `.mp3`o.
+`AVAudioPlayer` supporta i suoni in qualsiasi formato audio fornito da iOS, tvOS e OS X, ad esempio `.aif`, `.wav` o `.mp3`.
 
 ## <a name="playing-sounds-in-tvos"></a>Riproduzione di suoni in tvOS
 

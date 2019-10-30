@@ -2,22 +2,22 @@
 ms.assetid: 0B45BF03-145B-43B2-AFD9-5A0EAB1E63A9
 title: Confronto tra attività comuni
 description: Questo documento illustra come eseguire diverse attività comuni in WPF e in Novell. Forms. Esamina i pulsanti, i timer, le dimensioni del carattere, l'apertura di un URI e la visualizzazione di un foglio di azione.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: fecd8ed774adbacf69e3b2db514a4698e71711d8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d1f1430d8044f94c17a19d747334b5ed8a1441cf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290323"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016425"
 ---
 # <a name="common-tasks-comparison"></a>Confronto tra attività comuni
 
 | Attività | WPF | Xamarin.Forms |
 |--- |--- |--- |
 |Visualizza un messaggio sullo schermo con i pulsanti|`MessageBox`|`Page.DisplayAlert`|
-|Creazione di un timer|Classe `DispatcherTimer`|`Device.StartTimer`Metodo statico|
-|Ottenere le dimensioni del carattere predefinite|`SystemFonts`classe statica|`Device.GetNamedSize`Metodo statico|
+|Creazione di un timer|Classe `DispatcherTimer`|Metodo statico `Device.StartTimer`|
+|Ottenere le dimensioni del carattere predefinite|classe statica `SystemFonts`|Metodo statico `Device.GetNamedSize`|
 |Apri URI/URL|`Process.Start`|`Device.OpenUri`|
-|Visualizza foglio azioni (elenco di pulsanti)|n/d|`Page.DisplayActionSheet`|
+|Visualizza foglio azioni (elenco di pulsanti)|N/D|`Page.DisplayActionSheet`|

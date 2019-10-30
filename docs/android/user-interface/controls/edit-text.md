@@ -4,21 +4,21 @@ description: Come usare il widget EditText per accettare l'input dell'utente.
 ms.prod: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: e8ffe337e1f5c74bc348b9600a466f1232f40b0b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 62859e19c533d7b200833996b44a65cb275805c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758838"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029258"
 ---
 # <a name="xamarinandroid-edit-text"></a>Testo di modifica di Novell. Android
 
 In questa sezione si userà il widget [EDITTEXT](xref:Android.Widget.EditText) per creare un campo di testo per l'input dell'utente. Una volta immesso il testo nel campo, il tasto **invio** visualizzerà il testo in un messaggio di avviso popup.
 
-Aprire **Resources/layout/activity_main. aXML** e aggiungere l'elemento [EDITTEXT](xref:Android.Widget.EditText) a un layout contenitore. Nell'esempio seguente **activity_main. aXML** è `EditText` stato aggiunto a un `LinearLayout`oggetto:
+Aprire **Resources/layout/activity_main. aXML** e aggiungere l'elemento [EDITTEXT](xref:Android.Widget.EditText) a un layout contenitore. Nell'esempio seguente **activity_main. aXML** include un `EditText` che è stato aggiunto a una `LinearLayout`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,8 +35,8 @@ Aprire **Resources/layout/activity_main. aXML** e aggiungere l'elemento [EDITTEX
 </LinearLayout>
 ```
 
-In questo esempio di codice, `EditText` l' `android:imeOptions` attributo è impostato `actionGo`su. Questa impostazione consente di modificare l'azione predefinita [eseguita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) nell'azione [go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) , in modo che il tasto **invio** attivi `KeyPress` il gestore di input.
-`actionGo` Viene in genere utilizzato in modo che il tasto **invio immetta** all'utente la destinazione di un URL digitato.
+In questo esempio di codice, l'attributo `EditText` `android:imeOptions` è impostato su `actionGo`. Questa impostazione consente di modificare l'azione predefinita [eseguita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) nell'azione [go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) , in modo che il tasto **invio** attiva il gestore di input `KeyPress`.
+In genere, `actionGo` viene utilizzato in modo che il tasto **invio immetta** all'utente la destinazione di un URL digitato in.
 
 Per gestire l'input di testo dell'utente, aggiungere il codice seguente alla fine del metodo [OnCreate](xref:Android.App.Activity.OnCreate*) in **MainActivity.cs**:
 
@@ -52,7 +52,7 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 };
 ```
 
-Aggiungere inoltre l'istruzione seguente `using` all'inizio di **MainActivity.cs** , se non è già presente:
+Aggiungere inoltre l'istruzione `using` seguente all'inizio di **MainActivity.cs** , se non è già presente:
 
 ```csharp
 using Android.Views;
@@ -62,9 +62,9 @@ Questo esempio di codice consente di ingrandire l'elemento [EDITTEXT](xref:Andro
 
 Eseguire l'applicazione e immettere testo nel campo di testo. Quando si preme il tasto **invio** , il popup verrà visualizzato come mostrato a destra:
 
-[![Esempi di immissione di testo in EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
+[![esempi di immissione di testo in EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Parti di questa pagina sono modifiche basate sul lavoro creato e* [*condiviso dal progetto open source Android*](http://code.google.com/policies.html) *e usati in base alle condizioni descritte nel* [*Licenza Creative Commons 2,5 Attribution*](http://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione è basata sull'esercitazione* relativa ai [*moduli Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Parti di questa pagina sono modifiche basate sul lavoro creato e* [*condivise dal progetto open source Android*](https://code.google.com/policies.html) *e usate in base alle condizioni descritte nella* [*licenza Creative Commons 2,5 Attribution*](https://creativecommons.org/licenses/by/2.5/) *. Questa esercitazione è basata sull'esercitazione relativa ai* [*moduli Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -4,15 +4,15 @@ description: Questo documento descrive le sottoscrizioni senza rinnovo, le sotto
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752680"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032296"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Sottoscrizioni e creazione di report in Novell. iOS
 
@@ -50,17 +50,17 @@ Il segreto condiviso di acquisto in-app deve essere usato nella richiesta JSON q
 
 Dal home page iTunes Connect selezionare **app personali**:   
    
- [![](subscriptions-and-reporting-images/image2.png "Selezionare le app personali")](subscriptions-and-reporting-images/image2.png#lightbox)  
+ [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Selezionare un'applicazione e fare clic sulla scheda **acquisti in-app** :
 
-[![](subscriptions-and-reporting-images/image6.png "Fare clic sulla scheda acquisti in-app")](subscriptions-and-reporting-images/image6.png#lightbox)
+[![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 Nella parte inferiore della pagina selezionare **Visualizza o genera un segreto condiviso**:
    
- [![](subscriptions-and-reporting-images/image40.png "Selezionare Visualizza o genera un segreto condiviso")](subscriptions-and-reporting-images/image40.png#lightbox)
+ [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "Genera un segreto condiviso")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
 
 Per usare il segreto condiviso, includerlo nel payload JSON che viene inviato ai server Apple quando si convalida una ricevuta di acquisto in-app per una sottoscrizione rinnovabile automaticamente, come indicato di seguito:
 
@@ -98,9 +98,9 @@ L'oggetto SKPaymentTransaction non include il periodo di validità della sottosc
 
 Per semplificare il test delle sottoscrizioni, le relative durate vengono compresse durante i test in sandbox. le sottoscrizioni di 1 settimana si rinnovano ogni 3 minuti, le sottoscrizioni di 1 anno si rinnovano ogni Le sottoscrizioni vengono rinnovate automaticamente per un massimo di 6 volte durante i test in sandbox.
 
-## <a name="reporting"></a>Report
+## <a name="reporting"></a>Reporting
 
-iTunes Connect ( [iTunesConnect.Apple.com](http://itunesconnect.apple.com)) fornisce:   
+iTunes Connect ( [iTunesConnect.Apple.com](https://itunesconnect.apple.com)) fornisce:   
    
  **Vendite e tendenze** : Visualizza i dettagli relativi a download di app, aggiornamenti e acquisti in-app.   
    
@@ -108,9 +108,9 @@ iTunes Connect ( [iTunesConnect.Apple.com](http://itunesconnect.apple.com)) forn
 
 Di seguito è riportato un esempio di report sulle vendite e le tendenze:   
 
- [![](subscriptions-and-reporting-images/image42.png "Report vendite e tendenze di esempio")](subscriptions-and-reporting-images/image42.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
- È disponibile anche un' [app per **dispositivi mobili iOS di ITC Connect**(collegamento iTunes)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
+ È disponibile anche un' [app per **dispositivi mobili iOS di ITC Connect**(collegamento iTunes)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
 gli screenshot di iPhone per alcune delle statistiche disponibili sono illustrati di seguito:   
    
- [![](subscriptions-and-reporting-images/image43.png "schermate di iPhone per alcune delle statistiche disponibili")](subscriptions-and-reporting-images/image43.png#lightbox)
+ [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

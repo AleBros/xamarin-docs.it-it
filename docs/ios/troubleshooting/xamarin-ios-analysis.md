@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 211bb94b595a6b4e2f4f8c05ab6a90ba200d44e5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c0f40ea6fc7d429867f90d3d3c1b49dacb63acb5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292038"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030870"
 ---
 # <a name="xamarinios-analysis-rules"></a>Regole di analisi di Novell. iOS
 
@@ -31,7 +31,7 @@ Per eseguire le regole, nel menu di Visual Studio per Mac selezionare **progetto
 ## <a name="xia0001-disabledlinkerrule"></a>XIA0001: DisabledLinkerRule
 
 - **Problema:** Il linker è disabilitato nel dispositivo per la modalità di debug.
-- **Difficoltà** È consigliabile provare a eseguire il codice con il linker per evitare eventuali sorprese.
+- **Correzione:** È consigliabile provare a eseguire il codice con il linker per evitare eventuali sorprese.
 Per configurarlo, passare a Project > iOS Build > il comportamento del linker.
 
 <a name="XIA0002" />
@@ -39,39 +39,39 @@ Per configurarlo, passare a Project > iOS Build > il comportamento del linker.
 ## <a name="xia0002-testcloudagentreleaserule"></a>XIA0002: TestCloudAgentReleaseRule
 
 - **Problema:** Le compilazioni di app che inizializzano l'agente di Test Cloud verranno rifiutate da Apple quando vengono inviate, perché usano l'API privata.
-- **Difficoltà** Aggiungere o correggere le #if e le definizioni necessarie nel codice.
+- **Correzione:** Aggiungere o correggere le #if e le definizioni necessarie nel codice.
 
 <a name="XIA0003" />
 
 ## <a name="xia0003-ipadebugbuildsrule"></a>XIA0003: IPADebugBuildsRule
 
 - **Problema:** La configurazione di debug che usa le chiavi di firma dello sviluppatore non deve generare un IPA perché è necessario solo per la distribuzione, che ora usa la pubblicazione guidata.
-- **Difficoltà** Disabilitare la compilazione IPA nelle opzioni del progetto per la configurazione di debug.
+- **Correzione:** Disabilitare la compilazione IPA nelle opzioni del progetto per la configurazione di debug.
 
 <a name="XIA0004" />
 
 ## <a name="xia0004-missing64bitsupportrule"></a>XIA0004: Missing64BitSupportRule
 
 - **Problema:** Architettura supportata per "versione | il dispositivo "non è compatibile con 64 bit, manca ARM64. Si tratta di un problema perché Apple non accetta solo app iOS a 32 bit nell'AppStore.
-- **Difficoltà** Fare doppio clic sul progetto iOS, passare a compilare > iOS compilare e modificare le architetture supportate in modo che disponga di ARM64.
+- **Correzione:** Fare doppio clic sul progetto iOS, passare a compilare > iOS compilare e modificare le architetture supportate in modo che disponga di ARM64.
 
 <a name="XIA0005" />
 
 ## <a name="xia0005-float32rule"></a>XIA0005: Float32Rule
 
 - **Problema:** Se non si usa l'opzione float32 (--AOT-Options =-O = float32), si ottengono costi elevati in termini di prestazioni, soprattutto per dispositivi mobili, in cui la matematica a precisione doppia è significativamente più lenta. Si noti che .NET usa la precisione doppia internamente, anche per float, quindi l'abilitazione di questa opzione influiscono sulla precisione e, possibilmente, sulla compatibilità.
-- **Difficoltà** Fare doppio clic sul progetto iOS, passare a Compila > compilazione iOS e deselezionare l'opzione "Esegui tutte le operazioni float a 32 bit come float a 64 bit".
+- **Correzione:** Fare doppio clic sul progetto iOS, passare a Compila > compilazione iOS e deselezionare l'opzione "Esegui tutte le operazioni float a 32 bit come float a 64 bit".
 
 <a name="XIA0006" />
 
 ## <a name="xia0006-httpclientavoidmanaged"></a>XIA0006: HttpClientAvoidManaged
 
 - **Problema:** È consigliabile utilizzare il gestore HttpClient nativo anziché quello gestito per ottenere prestazioni migliori, dimensioni eseguibili più piccole e supportare facilmente gli standard più recenti.
-- **Difficoltà** Fare doppio clic sul progetto iOS, passare a Compila > compilare iOS e modificare l'implementazione di HttpClient in NSUrlSession (iOS 7 +) o CFNetwork per supportare la versione precedente iOS 7.
+- **Correzione:** Fare doppio clic sul progetto iOS, passare a Compila > compilare iOS e modificare l'implementazione di HttpClient in NSUrlSession (iOS 7 +) o CFNetwork per supportare la versione precedente iOS 7.
 
 <a name="XIA0007" />
 
 ## <a name="xia0007-usellvmrule"></a>XIA0007: UseLLVMRule
 
 - **Problema:** Per la versione | Configurazione iPhone è consigliabile abilitare il compilatore LLVM che genera codice più veloce da eseguire a scapito del tempo di compilazione.
-- **Difficoltà** Fare doppio clic sul progetto iOS, passare a Compila > compilazione iOS e per la versione | iPhone, controllare l'opzione del compilatore LLVM Optimizing.
+- **Correzione:** Fare doppio clic sul progetto iOS, passare a Compila > compilazione iOS e per la versione | iPhone, controllare l'opzione del compilatore LLVM Optimizing.

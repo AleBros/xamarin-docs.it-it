@@ -4,15 +4,15 @@ description: Questa procedura dettagliata illustra come usare i modelli di proge
 ms.prod: xamarin
 ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 78b70ce70292e589aee4a1dbe56f3765552ece7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2ac402bf423c9f3fe136d1ba31622d915d2e2eef
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757724"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027732"
 ---
 # <a name="binding-an-eclipse-library-project"></a>Associazione di un progetto di libreria Eclipse
 
@@ -29,23 +29,23 @@ I progetti di libreria Android sono diversi dai progetti Android normali perché
 
 Per usare un progetto di libreria Android in un progetto di binding Java per Novell. Android, è necessario innanzitutto compilare il progetto di libreria Android in Eclipse. La schermata seguente mostra un esempio di un progetto di libreria Android dopo la compilazione: 
 
-[![Progetto di libreria di esempio in Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png#lightbox)
+[progetto di libreria di esempio![in Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png#lightbox)
 
 Si noti che il codice sorgente del progetto di libreria Android è stato compilato in un oggetto temporaneo. File JAR denominato **Android-mapviewballoons. jar**e che le risorse sono state copiate nella cartella **bin/res/Crunch** . 
 
 Dopo che il progetto di libreria Android è stato compilato in Eclipse, può essere associato usando un progetto di binding Java Novell. Android. Primo oggetto a. È necessario creare il file ZIP contenente le cartelle **bin** e **res** del progetto di libreria Android. È importante rimuovere la sottodirectory **Crunch** corrispondente in modo che le risorse risiedano in **bin/res**. Lo screenshot seguente mostra il contenuto di uno di questi. File ZIP: 
 
-[![Contenuto della libreria Android Project. zip](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
+[Contenuto![del file di libreria Android Project. zip](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
 
 Questo. Il file ZIP viene quindi aggiunto al progetto di binding Java Novell. Android, come illustrato nello screenshot seguente:
 
-[![Zip aggiunto al progetto di binding Java](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png#lightbox)
+[![zip aggiunto al progetto di associazione Java](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png#lightbox)
 
 Si noti che l'azione di compilazione di. Il file ZIP è stato impostato automaticamente su **LibraryProjectZip**.
 
 Se ne esiste uno. I file JAR necessari per il progetto di libreria Android devono essere aggiunti alla cartella **jar** del progetto di libreria di binding Java e all'azione di **compilazione** impostata su **ReferenceJar**. Un esempio può essere illustrato nello screenshot seguente: 
 
-[![Azione di compilazione impostata su ReferenceJar](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png#lightbox)
+[![azione di compilazione impostata su ReferenceJar](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png#lightbox)
 
 Una volta completati questi passaggi, è possibile usare il progetto di associazione Java Novell. Android, come descritto in precedenza in questo documento.
 

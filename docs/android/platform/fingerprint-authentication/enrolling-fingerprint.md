@@ -4,15 +4,15 @@ description: Come configurare un blocco dello schermo e registrare un'impronta d
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: f52be16a81f3c8047997e1f4a88e13f6b940db14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c0290dfa3b4aa301a07a589f78577899e8282158
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756412"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027586"
 ---
 # <a name="enrolling-a-fingerprint"></a>Registrazione di un'impronta digitale
 
@@ -46,7 +46,7 @@ Per configurare un blocco schermo, seguire questa procedura:
 
 4. Da qui, seguire la sequenza per aggiungere un'impronta digitale al dispositivo:
 
-    [![Sequenza di screenshot per l'aggiunta di un'impronta digitale al dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
+    [![sequenza di screenshot per l'aggiunta di un'impronta digitale al dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. Nella schermata finale viene richiesto di inserire il dito nello scanner di impronta digitale: 
 
@@ -56,13 +56,13 @@ Per configurare un blocco schermo, seguire questa procedura:
 
 ### <a name="simulating-a-fingerprint-scan-on-the-emulator"></a>Simulazione di un'analisi delle impronte digitali nell'emulatore
 
-In un emulatore Android è possibile simulare un'analisi delle impronte digitali usando il Android Debug Bridge. In OS X avviare una sessione terminal mentre in Windows avviare un prompt dei comandi o una sessione di PowerShell `adb`ed eseguire:
+In un emulatore Android è possibile simulare un'analisi delle impronte digitali usando il Android Debug Bridge. In OS X avviare una sessione terminal mentre in Windows avviare un prompt dei comandi o una sessione di PowerShell ed eseguire `adb`:
 
 ```shell
 $ adb -e emu finger touch 1
 ```
 
-Il valore **1** indica l' _\_ID_ del dito che è stato "scansionato". Si tratta di un numero intero univoco assegnato per ogni impronta digitale virtuale. In futuro, quando l'app è in esecuzione, è possibile eseguire lo stesso comando ADB ogni volta che l'emulatore richiede un'impronta digitale, è possibile `adb` eseguire il comando e passargli l' _ID del dito\__ per simulare l'analisi delle impronte digitali.
+Il valore **1** è l'ID del dito _\__ per il dito che è stato "scansionato". Si tratta di un numero intero univoco assegnato per ogni impronta digitale virtuale. In futuro, quando l'app è in esecuzione, è possibile eseguire lo stesso comando ADB ogni volta che l'emulatore richiede un'impronta digitale, è possibile eseguire il comando `adb` e passare l' _ID dito\__ per simulare l'analisi delle impronte digitali.
 
 Una volta completata l'analisi delle impronte digitali, Android invierà una notifica all'utente che l'impronta digitale è stata aggiunta:  
 

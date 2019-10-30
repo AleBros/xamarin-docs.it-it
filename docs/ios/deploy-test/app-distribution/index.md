@@ -4,15 +4,15 @@ description: Questo documento offre una panoramica delle tecniche di distribuzio
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a261d1fc86fac16cf48575616359b083daebf47
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8d4be4b06c051386afa0358856a6df49abb6653
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756549"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026475"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Panoramica della distribuzione di app Xamarin.iOS
 
@@ -20,12 +20,12 @@ _Questo documento offre una panoramica delle tecniche di distribuzione disponibi
 
 Dopo che un'app Xamarin.iOS è stata sviluppata, il passaggio successivo del ciclo di vita dello sviluppo software è la distribuzione dell'app agli utenti, come illustrato nella sezione evidenziata del diagramma seguente:
 
-[![](images/publishingdiagram.png "Dopo che l'app iOS è stata sviluppata, il passaggio successivo è la distribuzione dell'app agli utenti, come illustrato nella sezione evidenziata di questo diagramma")](images/publishingdiagram.png#lightbox)
+[![](images/publishingdiagram.png "After the iOS app has been developed, the next step is to distribute the app to users, as shown in the highlighted section of this diagram")](images/publishingdiagram.png#lightbox)
 
 Apple consente di distribuire un'applicazione iOS nei modi seguenti, supportati da Xamarin.iOS:
 
 1. [**App Store**](#App_Store_Distribution)
-2. [**In-House (Enterprise)** ](#In-House_Distribution)
+2. [**In-House (Enterprise)**](#In-House_Distribution)
 3. [**Ad hoc**](#Ad_Hoc_Distribution)
 
 In tutti questi scenari è necessario effettuare il provisioning delle applicazioni usando il *profilo di provisioning* appropriato. I profili di provisioning sono file che contengono le informazioni sulla firma del codice, oltre all'identità dell'applicazione e al meccanismo di distribuzione previsto. Per la distribuzione senza App Store contengono anche informazioni sui dispositivi in cui l'app può essere distribuita.

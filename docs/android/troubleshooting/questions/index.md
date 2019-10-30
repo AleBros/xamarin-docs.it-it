@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: c14c03d4f618644382aa80b5e0e7fc5b7a46fa9b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760883"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026973"
 ---
 # <a name="android-frequently-asked-questions"></a>Domande frequenti su Android
 
@@ -36,7 +36,7 @@ Novell. Android richiede JDK 8 o Microsoft Mobile OpenJDK. Questo articolo elenc
 
 ### <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packagesinstall-android-support-librarymd"></a>[Come si possono installare manualmente le librerie di supporto Android necessarie per i pacchetti Xamarin.Android.Support?](install-android-support-library.md)
 
-Questa guida illustra i passaggi di esempio per `Xamarin.Android.Support.v4` l'installazione della libreria di supporto in Windows & Mac.
+Questa guida illustra i passaggi di esempio per l'installazione della libreria di supporto `Xamarin.Android.Support.v4` in Windows & Mac.
 
 ### <a name="what-usb-drivers-do-i-need-to-debug-android-on-windowsandroid-drivers-debug-windowsmd"></a>[Quali driver USB sono necessari per il debug di Android in Windows?](android-drivers-debug-windows.md)
 
@@ -59,13 +59,13 @@ La causa più comune di questo problema è che l'autorizzazione **Internet** vie
 
 ### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[Miglioramenti per i pacchetti NuGet Xamarin.Android.Support v4 / v13](android-support-v4v13-libraries.md)
 
-`Support-v4`e `Support-v13` non possono essere usati insieme nella stessa app, ovvero si escludono a vicenda. Questo perché `Support-v13` contiene effettivamente tutti i tipi e l'implementazione di `Support-v4`. Se si tenta di fare riferimento a entrambi nello stesso progetto, si verificheranno errori di tipo duplicati.
+`Support-v4` e `Support-v13` non possono essere usati insieme nella stessa app, ovvero si escludono a vicenda. Questo perché `Support-v13` contiene effettivamente tutti i tipi e l'implementazione di `Support-v4`. Se si tenta di fare riferimento a entrambi nello stesso progetto, si verificheranno errori di tipo duplicati.
 
 ### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[Ricerca per categorie risolvere un errore PathTooLongException?](path-too-long-exception.md)
 
 Questo articolo illustra come risolvere un errore **PathTooLongException** che può verificarsi durante la compilazione di un progetto Novell. Android.
 
-## <a name="deprecated"></a>Funzionalità deprecate
+## <a name="deprecated"></a>Deprecato
 
 > [!NOTE]
 > Gli articoli seguenti si applicano ai problemi risolti nelle versioni recenti di Novell. Tuttavia, se il problema si verifica nella versione più recente del software, inserire un [nuovo bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con le informazioni complete sul controllo delle versioni e l'output del log di compilazione completo.
@@ -80,7 +80,7 @@ Questo errore può verificarsi nelle versioni precedenti di Novell se mancano al
 
 ### <a name="adjusting-java-memory-parameters-for-the-android-designerandroid-designer-java-memorymd"></a>[Modifica dei parametri di memoria Java per Android Designer](android-designer-java-memory.md)
 
-I parametri di memoria predefiniti usati all'avvio del `java` processo per la finestra di progettazione di Android potrebbero essere incompatibili con alcune configurazioni di sistema. A partire da Xamarin Studio 5.7.2.7 e Novell per Visual Studio 3.9.344 queste impostazioni possono essere personalizzate in base al progetto.
+I parametri di memoria predefiniti usati quando si avvia il processo di `java` per la finestra di progettazione di Android potrebbero essere incompatibili con alcune configurazioni di sistema. A partire da Xamarin Studio 5.7.2.7 e Novell per Visual Studio 3.9.344 queste impostazioni possono essere personalizzate in base al progetto.
 
 ### <a name="my-android-resourcedesignercs-file-will-not-updateresource-designer-wont-updatemd"></a>[Il file Android Resource.designer.cs non verrà aggiornato](resource-designer-wont-update.md)
 

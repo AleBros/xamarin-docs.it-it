@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso della codifica chiave-valore e l'oss
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: a22eca56dcec46e11a67633a8403b57580ed0546
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769903"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032610"
 ---
 # <a name="databases-in-xamarinmac"></a>Database in Novell. Mac
 
@@ -25,7 +25,7 @@ Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile acce
 In questo articolo verranno illustrati due modi per accedere ai dati SQLite:
 
 1. **Accesso diretto** : accedendo direttamente a un database SQLite, è possibile usare i dati del database per la codifica chiave-valore e data binding con gli elementi dell'interfaccia utente creati nell'Interface Builder di Xcode. Utilizzando la codifica chiave-valore e le tecniche di data binding nell'applicazione Novell. Mac, è possibile ridurre significativamente la quantità di codice da scrivere e gestire per popolare e utilizzare gli elementi dell'interfaccia utente. Si ha anche il vantaggio di separare ulteriormente i dati di supporto (modello di_dati_) dall'interfaccia utente front-end (_Model-View-Controller_), in modo da semplificare la gestione e la progettazione di applicazioni più flessibili.
-2. **SQLite.NET ORM** : usando il [SQLite.NET](http://www.sqlite.org) di gestione delle relazioni degli oggetti Open Source (ORM), è possibile ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati da un database SQLite. Questi dati possono quindi essere utilizzati per popolare un elemento dell'interfaccia utente, ad esempio una visualizzazione tabella.
+2. **SQLite.NET ORM** : usando il [SQLite.NET](https://www.sqlite.org) di gestione delle relazioni degli oggetti Open Source (ORM), è possibile ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati da un database SQLite. Questi dati possono quindi essere utilizzati per popolare un elemento dell'interfaccia utente, ad esempio una visualizzazione tabella.
 
 [![Esempio di app in esecuzione](databases-images/intro01.png "Esempio di app in esecuzione")](databases-images/intro01-large.png#lightbox)
 
@@ -1910,7 +1910,7 @@ Person = new PersonModel (Conn, DataSource.IDForIndex(0));
 
 ## <a name="sqlitenet-orm"></a>ORM SQLite.NET
 
-Come indicato in precedenza, usando il [SQLite.NET](http://www.sqlite.org) di gestione delle relazioni degli oggetti Open Source è possibile ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati da un database SQLite. Questo potrebbe non essere il percorso migliore da eseguire quando si associano i dati a causa di diversi requisiti che codificano e data bindingno i valori chiave per un oggetto.
+Come indicato in precedenza, usando il [SQLite.NET](https://www.sqlite.org) di gestione delle relazioni degli oggetti Open Source è possibile ridurre notevolmente la quantità di codice necessaria per leggere e scrivere dati da un database SQLite. Questo potrebbe non essere il percorso migliore da eseguire quando si associano i dati a causa di diversi requisiti che codificano e data bindingno i valori chiave per un oggetto.
 
 In base al sito Web di SQLite.Net, _"SQLite è una raccolta software che implementa un motore di database SQL transazionale, senza server, senza server, a configurazione zero. SQLite è il motore di database più ampiamente distribuito in tutto il mondo. Il codice sorgente per SQLite si trova nel dominio public "._
 

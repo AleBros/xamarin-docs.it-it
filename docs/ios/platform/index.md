@@ -4,15 +4,15 @@ description: Questo documento contiene collegamenti a diverse guide che descrivo
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: c6385ff193c54fdab8f252c757cad810751b3f08
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: f2f0d44f9c9d2df3c09d98e8d921121ff2af1571
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206294"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032271"
 ---
 # <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
@@ -41,7 +41,7 @@ La nuova API CallKit in iOS 10 consente alle app VOIP di integrarsi con l'interf
 
 ## <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Contacts e ContactsUI](~/ios/platform/contacts.md)
 
-Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, che sostituiscono i Framework dell'interfaccia utente di Rubrica e rubrica esistenti usati da iOS 8 e versioni precedenti.
+Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, che sostituiscono i Framework dell'interfaccia utente della Rubrica e della rubrica esistente usati da iOS 8 e versioni precedenti.
 
 ## <a name="document-pickeriosplatformdocument-pickermd"></a>[Selezione documenti](~/ios/platform/document-picker.md)
 
@@ -53,7 +53,7 @@ iOS include due applicazioni correlate al calendario: l'applicazione calendario 
 
 ## <a name="ios-extensionsiosplatformextensionsmd"></a>[estensioni iOS](~/ios/platform/extensions.md)
 
-Le estensioni, come introdotte in iOS 8, sono `UIViewControllers` specializzate presentate da iOS all'interno di contesti standard, ad esempio all'interno del **Centro notifiche**, come tipi di tastiera personalizzati richiesti dall'utente per eseguire l'input specializzato o altri contesti Analogamente alla modifica di una foto in cui l'estensione può fornire filtri per effetti speciali.
+Le estensioni, come introdotte in iOS 8, sono specializzate `UIViewControllers` presentate da iOS all'interno di contesti standard, ad esempio all'interno del **Centro notifiche**, come tipi di tastiera personalizzati richiesti dall'utente per eseguire un input specializzato o altri contesti come modifica di una foto in cui l'estensione può fornire filtri di effetto speciali.
 
 ## <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[Grafica e animazione in iOS](~/ios/platform/graphics-animation-ios/index.md)
 
@@ -85,7 +85,7 @@ Una novità di iOS 10, un'estensione di app per **i messaggi si** integra con l'
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[Multitasking per iPad](~/ios/platform/multitasking.md)
 
-iOS 9 aggiunge il supporto multitasking per l'esecuzione di due app allo stesso tempo su hardware iPad specifico. Il multitasking per iPad è supportato tramite le funzionalità seguenti: Scorrere, suddividere la visualizzazione & immagine in figura.
+iOS 9 aggiunge il supporto multitasking per l'esecuzione di due app allo stesso tempo su hardware iPad specifico. Il multitasking per iPad è supportato tramite le funzionalità seguenti: scorrere, suddividere la visualizzazione & immagine nell'immagine.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 
@@ -99,7 +99,7 @@ Photo kit è un nuovo Framework che consente alle applicazioni di eseguire query
 
 ## <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Richiedi Revisione app](~/ios/platform/request-app-review.md)
 
-Una novità di iOS 10,3, `RequestReview()` il metodo consente a un'app per iOS di richiedere all'utente di valutarla o esaminarla. Quando questo metodo viene chiamato in un'app di spedizione che l'utente ha installato dall'App Store, iOS 10 gestirà l'intero processo di valutazione e revisione per lo sviluppatore. Poiché questo processo è regolato dai criteri dell'app Store, è possibile che venga visualizzato un avviso.
+Una novità di iOS 10,3, il metodo `RequestReview()` consente a un'app per iOS di richiedere all'utente di valutarla o esaminarla. Quando questo metodo viene chiamato in un'app di spedizione che l'utente ha installato dall'App Store, iOS 10 gestirà l'intero processo di valutazione e revisione per lo sviluppatore. Poiché questo processo è regolato dai criteri dell'app Store, è possibile che venga visualizzato un avviso.
 
 ## <a name="search-apisiosplatformsearchindexmd"></a>[API per la ricerca](~/ios/platform/search/index.md)
 

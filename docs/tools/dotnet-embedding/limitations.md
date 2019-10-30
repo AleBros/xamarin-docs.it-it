@@ -3,15 +3,15 @@ title: Limitazioni dell'incorporamento di .NET
 description: In questo documento vengono descritte le limitazioni dell'incorporamento di .NET, lo strumento che consente di utilizzare il codice .NET in altri linguaggi di programmazione.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292702"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029752"
 ---
 # <a name="net-embedding-limitations"></a>Limitazioni dell'incorporamento di .NET
 
@@ -41,9 +41,9 @@ A seconda delle esigenze, potrebbe essere possibile aggirare le parti di questa 
 
 ### <a name="nullability"></a>Valori null
 
-In .NET non sono presenti metadati che indicano se un riferimento null è accettabile o meno per un'API. La maggior parte delle `ArgumentNullException` API genererà un'eccezione se `null` non è in grado di gestire un argomento. Questa situazione è problematica poiché la gestione delle eccezioni in Objective-C è una soluzione migliore.
+In .NET non sono presenti metadati che indicano se un riferimento null è accettabile o meno per un'API. La maggior parte delle API genererà `ArgumentNullException` se non è in grado di gestire un argomento `null`. Questa situazione è problematica poiché la gestione delle eccezioni in Objective-C è una soluzione migliore.
 
-Poiché non è possibile generare annotazioni accurate di supporto dei valori null nei file di intestazione e si desidera ridurre al minimo le eccezioni gestite,`NS_ASSUME_NONNULL_BEGIN`per impostazione predefinita gli argomenti non null () e vengono aggiunti alcuni specifici, quando la precisione è possibile, le annotazioni dei valori null.
+Poiché non è possibile generare annotazioni accurate di valori null nei file di intestazione e si desidera ridurre al minimo le eccezioni gestite, per impostazione predefinita gli argomenti non null (`NS_ASSUME_NONNULL_BEGIN`) e aggiungono alcune specifiche, quando la precisione è possibile, le annotazioni dei valori null.
 
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 

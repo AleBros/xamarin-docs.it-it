@@ -4,19 +4,19 @@ description: Questo documento descrive tecniche per migliorare le prestazioni e 
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/29/2016
-ms.openlocfilehash: b41916a65e091fb7d5198a6f06a5e91aa9d6bb81
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bfa8c2cdcdcd6305618c0cd8e9cb69bde59b4f0b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292346"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030197"
 ---
 # <a name="xamarinios-performance"></a>Prestazioni di Xamarin.iOS
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, verificando che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
 Questo documento descrive tecniche per migliorare le prestazioni e l'uso della memoria nelle applicazioni Xamarin.iOS.
 
@@ -211,11 +211,11 @@ class MyChild : UIView
 ```
 
 Per altre informazioni sul rilascio di riferimenti sicuri, vedere [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable) (Rilasciare risorse IDisposable).
-È anche disponibile una discussione interessante in questo post di blog: [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Io, Xamarin.iOS e il Garbage Collector).
+È anche disponibile una discussione interessante nel post di blog [Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me) (Xamarin.iOS, Garbage Collector e l'utente).
 
 ### <a name="more-information"></a>Altre informazioni
 
-Per altre informazioni, vedere [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Regole per evitare i cicli di conservazione) in Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (È un bug nel Garbage Collection di MonoTouch?) in StackOverflow e [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Perché il Garbage Collection di MonoTouch non riesce a terminare gli oggetti gestiti con refcount > 1?) in StackOverflow.
+Per altre informazioni, vedere [Rules to Avoid Retain Cycles](https://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Regole per evitare i cicli di conservazione) in Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (È un bug nel Garbage Collection di MonoTouch?) in StackOverflow e [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (Perché il Garbage Collection di MonoTouch non riesce a terminare gli oggetti gestiti con refcount > 1?) in StackOverflow.
 
 ## <a name="optimize-table-views"></a>Ottimizzare le visualizzazioni di tabelle
 
@@ -290,7 +290,7 @@ La generazione dinamica di codice con `System.Reflection.Emit` o *Dynamic Langua
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

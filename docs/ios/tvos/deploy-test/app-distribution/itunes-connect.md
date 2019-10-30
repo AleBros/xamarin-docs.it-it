@@ -4,15 +4,15 @@ description: Questo articolo fornisce una Guida aggiuntiva a iOS configurare l'a
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ef3d25974f61bb1ac763831ab9a1f6b62d11abbe
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769673"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030755"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurare l'app tvOS in iTunes Connect
 
@@ -38,11 +38,11 @@ Facoltativamente, potrebbe essere necessario anche:
 
 Con tutti i passaggi precedenti completati, aprire il record iTunes Connect dell'app e selezionare per aggiungere il supporto tvOS usando la barra laterale a sinistra:
 
-[![](itunes-connect-images/connect01.png "Aggiungere il supporto tvOS usando la barra laterale a sinistra")](itunes-connect-images/connect01.png#lightbox)
+[![](itunes-connect-images/connect01.png "Add tvOS support using the left hand sidebar")](itunes-connect-images/connect01.png#lightbox)
 
 Le schermate di informazioni specifiche di tvOS saranno quindi disponibili per il record iTunes Connect specificato:
 
-[![](itunes-connect-images/connect02.png "Schermata delle informazioni specifiche di tvOS")](itunes-connect-images/connect02.png#lightbox)
+[![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
@@ -50,7 +50,7 @@ Le schermate di informazioni specifiche di tvOS saranno quindi disponibili per i
 
 Dalla barra laterale a sinistra selezionare **1,0 preparare l'invio** nella sezione app tvOS:
 
-[![](itunes-connect-images/connect03.png "Informazioni sulla versione di tvOS")](itunes-connect-images/connect03.png#lightbox)
+[![](itunes-connect-images/connect03.png "tvOS Version Information")](itunes-connect-images/connect03.png#lightbox)
 
 In questa schermata sono disponibili le seguenti informazioni:
 
@@ -62,7 +62,7 @@ In questa schermata sono disponibili le seguenti informazioni:
 
 Dopo aver immesso le informazioni necessarie, fare clic sul pulsante **Salva** nell'angolo superiore destro della schermata per salvare le modifiche:
 
-[![](itunes-connect-images/connect04.png "Informazioni sulla versione di tvOS pronte per l'invio")](itunes-connect-images/connect04.png#lightbox)
+[![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
@@ -70,7 +70,7 @@ Dopo aver immesso le informazioni necessarie, fare clic sul pulsante **Salva** n
 
 Quando si è pronti per inviare l'app Novell. tvOS all'App Store di Apple TV per la revisione, tornare al record iTunes Connect dell'app e fare clic sul pulsante **Invia per la revisione** nell'angolo superiore destro della schermata:
 
-[![](itunes-connect-images/connect05.png "Invia per la revisione")](itunes-connect-images/connect05.png#lightbox)
+[![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
 <a name="Summary" />
 

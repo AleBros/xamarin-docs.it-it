@@ -4,23 +4,23 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 8be3f1b8803aa7e052ebc89af51dad3b659f95f5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 21fd8eff64d374e52e64194524a8c096cdf4d90e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757323"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027032"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Quali driver USB sono necessari per il debug di Android in Windows?
 
 ## <a name="finding-usb-drivers"></a>Ricerca di driver USB
 
-Per eseguire il debug su un dispositivo Android durante lo sviluppo in Windows; è necessario installare un driver USB compatibile. Per impostazione predefinita, il gestore Android SDK include "Google USB driver", che aggiunge il supporto per i dispositivi Nexus, come descritto di seguito:[https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
+Per eseguire il debug su un dispositivo Android durante lo sviluppo in Windows; è necessario installare un driver USB compatibile. Per impostazione predefinita, il gestore Android SDK include "Google USB driver", che aggiunge il supporto per i dispositivi Nexus, come descritto qui: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
-Altri dispositivi richiedono driver USB pubblicati in modo specifico dal produttore del dispositivo. In questa guida sono inclusi alcuni collegamenti per i produttori più comuni:[https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
+Altri dispositivi richiedono driver USB pubblicati in modo specifico dal produttore del dispositivo. In questa guida sono inclusi alcuni collegamenti per i produttori più comuni: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>Alternative
 

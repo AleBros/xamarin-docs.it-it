@@ -4,15 +4,15 @@ description: Questo documento descrive come distribuire e testare le app watchos
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: af6d32808e2847c99c4f8a2d90e7dc2d3955ae03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284668"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028345"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Distribuzione e test di app watchos con Novell
 
@@ -60,7 +60,7 @@ Sarà necessario creare un profilo di provisioning di distribuzione per ogni ID 
 
 ### <a name="wildcard-app-id"></a>ID app con caratteri jolly
 
-In alternativa, è possibile creare un **ID app** con `com.xamarin.*`caratteri jolly che corrisponde a tutti e tre i progetti, ad esempio.
+In alternativa, è possibile creare un **ID app** con caratteri jolly che corrisponde a tutti e tre i progetti, ad esempio `com.xamarin.*`.
 
 Si noti che alcune funzionalità non possono essere usate con un ID app con caratteri jolly, ad esempio le notifiche push. Se l'app richiede queste funzionalità, è necessario creare ID app espliciti.
 
@@ -78,7 +78,7 @@ Per la distribuzione, è necessario creare solo un profilo di provisioning di di
 
 ### <a name="certificates-identifiers--profiles"></a>Certificati, identificatori & profili
 
-Per usare un gruppo di app, creare una voce nella schermata **gruppi di app** . Nell'esempio seguente il gruppo viene denominato con lo stesso stile DNS inverso, comunemente usato per gli ID app, ma con il `group.` prefisso (obbligatorio):
+Per usare un gruppo di app, creare una voce nella schermata **gruppi di app** . Nell'esempio seguente il gruppo viene denominato con lo stesso stile DNS inverso, comunemente usato per gli ID app, ma con il prefisso `group.` (che è obbligatorio):
 
 ![Identificatore](images/appgroups-new-sml.png)
 

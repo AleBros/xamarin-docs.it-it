@@ -4,26 +4,26 @@ description: Questo documento include collegamenti a guide che descrivono come u
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/13/2017
-ms.openlocfilehash: 59ac5a4f9949f1e65e67b9629c43ddb4b822bf43
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c478437a9c84475e8c31484523db16336f8808e6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290056"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029924"
 ---
 # <a name="binding-mac-libraries-for-xamarinmac"></a>Binding di librerie Mac per Novell. Mac
 
 Seguire questi collegamenti per informazioni sull'associazione di librerie Objective-C in Novell. Mac:
 
-- [**Panoramica**](~/cross-platform/macios/binding/overview.md) di -
-  Viene descritto il funzionamento dell'associazione.
-- [**Binding di librerie Objective-C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Istruzioni su come associare le librerie Objective-C per l'uso nei progetti Novell.
-- [**Guida di riferimento**](~/cross-platform/macios/binding/binding-types-reference.md) per la definizione del tipo -
-  Descrive tutti gli attributi disponibili per associare gli autori al processo di generazione del binding.
+- [**Panoramica**](~/cross-platform/macios/binding/overview.md) -
+  descrive il funzionamento dell'associazione.
+- [**Binding di librerie Objective-c**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  istruzioni su come associare le librerie Objective-c per l'uso nei progetti Novell.
+- [**Guida di riferimento**](~/cross-platform/macios/binding/binding-types-reference.md) per la definizione dei tipi -
+  descrive tutti gli attributi disponibili per l'associazione tra autori e il processo di generazione del binding.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

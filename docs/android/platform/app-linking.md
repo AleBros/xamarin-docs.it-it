@@ -4,15 +4,15 @@ description: Questa guida illustra in che modo Android 6,0 supporta il collegame
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757736"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027743"
 ---
 # <a name="app-linking-in-android"></a>Collegamento di app in Android
 
@@ -20,17 +20,17 @@ _Questa guida illustra in che modo Android 6,0 supporta il collegamento di app, 
 
 ## <a name="app-linking-overview"></a>Panoramica sul collegamento di app
 
-Le applicazioni per dispositivi mobili non sono più &ndash; disponibili in un silo in molti casi sono componenti importanti delle loro attività, insieme al relativo sito Web. È auspicabile che le aziende connettano senza difficoltà la propria presenza Web e le applicazioni per dispositivi mobili, con collegamenti in un sito Web che avvia applicazioni per dispositivi mobili e visualizzando contenuto pertinente nell'app per dispositivi mobili. *Collegamento di app* (noto anche come *deep linking*) è una tecnica che consente a un dispositivo mobile di rispondere a un URI e avviare un'applicazione per dispositivi mobili che corrisponde a tale URI.
+Le applicazioni per dispositivi mobili non sono più disponibili in un silo &ndash; in molti casi sono componenti importanti delle loro attività, insieme al relativo sito Web. È auspicabile che le aziende connettano senza difficoltà la propria presenza Web e le applicazioni per dispositivi mobili, con collegamenti in un sito Web che avvia applicazioni per dispositivi mobili e visualizzando contenuto pertinente nell'app per dispositivi mobili. Il *collegamento di app* (noto anche come *deep linking*) è una tecnica che consente a un dispositivo mobile di rispondere a un URI e avviare un'applicazione per dispositivi mobili che corrisponde a tale URI.
 
-Android gestisce il collegamento delle app tramite &ndash; il *sistema Intent* quando l'utente fa clic su un collegamento in un browser per dispositivi mobili, il browser per dispositivi mobili invierà a un'applicazione registrata una finalità che Android delegherà. Se ad esempio si fa clic su un collegamento in un sito Web di cucina, si aprirà un'app per dispositivi mobili associata al sito Web e si visualizzerà una ricetta specifica per l'utente. Se è presente più di un'applicazione registrata per gestire tale finalità, Android genererà una finestra di dialogo di risoluzione dell' *ambiguità* che chiederà a un utente quale applicazione selezionare l'applicazione che deve gestire lo scopo, ad esempio:
+Android gestisce il collegamento delle app tramite il *sistema Intent* &ndash; quando l'utente fa clic su un collegamento in un browser per dispositivi mobili, il browser per dispositivi mobili invierà una finalità che Android delegherà a un'applicazione registrata. Se ad esempio si fa clic su un collegamento in un sito Web di cucina, si aprirà un'app per dispositivi mobili associata al sito Web e si visualizzerà una ricetta specifica per l'utente. Se è presente più di un'applicazione registrata per gestire tale finalità, Android genererà una finestra di dialogo di risoluzione dell' *ambiguità* che chiederà a un utente quale applicazione selezionare l'applicazione che deve gestire lo scopo, ad esempio:
 
 ![Schermata di esempio di una finestra di dialogo di risoluzione dell'ambiguità](app-linking-images/01-disambiguation-dialog.png)
 
-Android 6,0 migliora questa operazione usando la gestione automatica dei collegamenti. È possibile che Android registri automaticamente un'applicazione come gestore predefinito per un URI &ndash; . l'app verrà avviata automaticamente e passa direttamente all'attività pertinente. Il modo in cui Android 6,0 decide di gestire un URI fare clic dipende dai criteri seguenti:
+Android 6,0 migliora questa operazione usando la gestione automatica dei collegamenti. È possibile che Android registri automaticamente un'applicazione come gestore predefinito per un URI &ndash; l'app viene avviata automaticamente e passa direttamente all'attività pertinente. Il modo in cui Android 6,0 decide di gestire un URI fare clic dipende dai criteri seguenti:
 
-1. **Un'app esistente è già associata all'URI** &ndash; L'utente potrebbe avere già associato un'app esistente a un URI. In tal caso, Android continuerà a usare l'applicazione.
-2. **Nessuna app esistente è associata all'URI, ma è installata un'app di supporto** &ndash; In questo scenario l'utente non ha specificato un'app esistente, quindi Android userà l'applicazione di supporto installata per gestire la richiesta.
-3. **Nessuna app esistente è associata all'URI, ma sono installate molte app di supporto** &ndash; Poiché sono presenti più applicazioni che supportano l'URI, viene visualizzata la finestra di dialogo di risoluzione dell'ambiguità e l'utente deve selezionare l'app che gestirà l'URI.
+1. **Un'app esistente è già associata all'uri** &ndash; l'utente potrebbe avere già associato un'app esistente a un URI. In tal caso, Android continuerà a usare l'applicazione.
+2. **Non è associata alcuna app esistente all'URI, ma è installata un'app di supporto** &ndash; in questo scenario, l'utente non ha specificato un'app esistente, quindi Android userà l'applicazione di supporto installata per gestire la richiesta.
+3. **Nessuna app esistente è associata all'URI, ma molte app di supporto sono installate** &ndash; perché sono presenti più applicazioni che supportano l'URI, viene visualizzata la finestra di dialogo di risoluzione dell'ambiguità e l'utente deve selezionare l'app che gestirà l'URI.
 
 Se per l'utente non sono installate app che supportano l'URI e ne viene successivamente installata una, l'applicazione verrà impostata da Android come gestore predefinito per l'URI dopo la verifica dell'associazione con il sito Web associato all'URI.
 
@@ -46,8 +46,8 @@ Il collegamento di app è possibile nelle versioni precedenti di Android usando 
 
 La configurazione di collegamenti app in Android 6,0 prevede due passaggi principali:
 
-1. **Aggiunta di uno o più filtri per finalità per l'URI del sito Web** &ndash; la guida per i filtri per le finalità di Android in come gestire un URL fare clic in un browser per dispositivi mobili.
-2. **La pubblicazione di un file *JSON dei collegamenti asset digitali* nel sito Web** &ndash; è un file che viene caricato in un sito Web e viene usato da Android per verificare la relazione tra l'app per dispositivi mobili e il dominio del sito Web. Senza questo, Android non può installare l'app come handle predefinito per l'URI; l'utente deve eseguire questa operazione manualmente.
+1. **Aggiunta di uno o più filtri di finalità per l'URI del sito web** &ndash; la guida per i filtri Intent Android in come gestire un URL fare clic in un browser per dispositivi mobili.
+2. La **pubblicazione di un file *JSON dei collegamenti asset digitali* nel sito Web** &ndash; questo è un file che viene caricato in un sito Web e viene usato da Android per verificare la relazione tra l'app per dispositivi mobili e il dominio del sito Web. Senza questo, Android non può installare l'app come handle predefinito per l'URI; l'utente deve eseguire questa operazione manualmente.
 
 <a name="configure-intent-filter" />
 
@@ -55,12 +55,12 @@ La configurazione di collegamenti app in Android 6,0 prevede due passaggi princi
 
 È necessario configurare un filtro preventivo che esegue il mapping di un URI (o un set di URI) da un sito Web a un'attività in un'applicazione Android. In Novell. Android questa relazione viene stabilita decorando un'attività con il [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). Il filtro preventivo deve dichiarare le seguenti informazioni:
 
-- **`Intent.ActionView`** &ndash; Questa operazione registrerà il filtro preventivo per rispondere alle richieste di visualizzazione delle informazioni
-- **`Categories`** Il filtro preventivo deve registrare sia **[Intent. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** che **[Intent. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** per poter gestire correttamente l'URI Web. &ndash;
-- **`DataScheme`** Il filtro preventivo deve dichiarare `http` e/o `https`. &ndash; Questi sono gli unici due schemi validi.
-- **`DataHost`** &ndash; Si tratta del dominio da cui derivano gli URI.
-- **`DataPathPrefix`** &ndash; Si tratta di un percorso facoltativo per le risorse nel sito Web.
-- **`AutoVerify`** &ndash; L'`autoVerify` attributo indica a Android di verificare la relazione tra l'applicazione e il sito Web. Questo argomento verrà illustrato di seguito.
+- **`Intent.ActionView`** &ndash; questa operazione registrerà il filtro preventivo per rispondere alle richieste di visualizzazione delle informazioni
+- **`Categories`** &ndash; il filtro preventivo deve registrare sia Intent **[. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** che Intent **[. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** per poter gestire correttamente l'URI Web.
+- **`DataScheme`** &ndash; il filtro Intent deve dichiarare `http` e/o `https`. Questi sono gli unici due schemi validi.
+- **`DataHost`** &ndash; si tratta del dominio da cui derivano gli URI.
+- **`DataPathPrefix`** &ndash; si tratta di un percorso facoltativo per le risorse nel sito Web.
+- **`AutoVerify`** &ndash; l'attributo `autoVerify` indica a Android di verificare la relazione tra l'applicazione e il sito Web. Questo argomento verrà illustrato di seguito.
 
 Nell'esempio seguente viene illustrato come utilizzare [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) per gestire i collegamenti da `https://www.recipe-app.com/recipes` e da `http://www.recipe-app.com/recipes`:
 
@@ -84,15 +84,15 @@ Android verificherà ogni host identificato da Intent filters nel file di asset 
 Il collegamento app Android 6,0 richiede che Android verifichi l'associazione tra l'applicazione e il sito Web prima di impostare l'applicazione come gestore predefinito per l'URI. Questa verifica si verifica quando l'applicazione viene installata per la prima volta. Il file di *collegamenti di asset digitali* è un file JSON ospitato dai domini webdomain pertinenti.
 
 > [!NOTE]
-> L' `android:autoVerify` attributo deve essere impostato dal filtro &ndash; preventivo altrimenti Android non eseguirà la verifica.
+> L'attributo `android:autoVerify` deve essere impostato dal filtro preventivo &ndash; altrimenti Android non eseguirà la verifica.
 
 Il file viene inserito dal webmaster del dominio nel percorso **https://domain/.well-known/assetlinks.json** .
 
 Il file di asset digitale contiene i metadati necessari a Android per verificare l'associazione. Un file **assetlinks. JSON** presenta le coppie chiave-valore seguenti:
 
-- `namespace`&ndash; spazio dei nomi dell'applicazione Android.
-- `package_name`&ndash; nome del pacchetto dell'applicazione Android (dichiarato nel manifesto dell'applicazione).
-- `sha256_cert_fingerprints`&ndash; impronte digitali SHA256 dell'applicazione firmata. Per altre informazioni su come ottenere l'impronta digitale SHA1 di un'applicazione, vedere la Guida [trovare la firma MD5 o SHA1 dell'archivio](~/android/deploy-test/signing/keystore-signature.md) chiavi.
+- `namespace` &ndash; lo spazio dei nomi dell'applicazione Android.
+- `package_name` &ndash; il nome del pacchetto dell'applicazione Android (dichiarata nel manifesto dell'applicazione).
+- `sha256_cert_fingerprints` &ndash; le impronte digitali SHA256 dell'applicazione firmata. Per altre informazioni su come ottenere l'impronta digitale SHA1 di un'applicazione, vedere la Guida [trovare la firma MD5 o SHA1 dell'archivio](~/android/deploy-test/signing/keystore-signature.md) chiavi.
 
 Il frammento di codice seguente è un esempio di **assetlinks. JSON** con una singola applicazione elencata:
 
@@ -173,11 +173,11 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    - **`Package`** &ndash; Nome del pacchetto dell'applicazione.
-    - **`Domain`** &ndash; Domini (separati da spazi) i cui collegamenti Web verranno gestiti dall'applicazione
-    - **`Status`** &ndash; Si tratta dello stato corrente di gestione dei collegamenti per l'app. Il valore indica **sempre** che l'applicazione ha `android:autoVerify=true` dichiarato ed è stata superata la verifica del sistema. È seguito da un numero esadecimale che rappresenta il record del sistema Android della preferenza.
+    - **`Package`** &ndash; il nome del pacchetto dell'applicazione.
+    - **`Domain`** &ndash; i domini (separati da spazi) i cui collegamenti Web verranno gestiti dall'applicazione
+    - **`Status`** &ndash; questo è lo stato corrente di gestione dei collegamenti per l'app. Il valore indica **sempre** che l'applicazione ha `android:autoVerify=true` dichiarata ed è stata superata la verifica del sistema. È seguito da un numero esadecimale che rappresenta il record del sistema Android della preferenza.
 
-    Ad esempio:
+    Esempio:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -196,6 +196,6 @@ Questa guida ha illustrato come funziona il collegamento di app in Android 6,0. 
 
 - [Ricerca della firma MD5 o SHA1 dell'archivio chiavi](~/android/deploy-test/signing/keystore-signature.md)
 - [Attività e Intent](https://university.xamarin.com/classes#4)
-- [AppLinks](http://applinks.org/)
+- [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Collegamenti a Google Digital Assets](https://developers.google.com/digital-asset-links/)
 - [Generatore elenco di istruzioni e tester](https://developers.google.com/digital-asset-links/tools/generator)

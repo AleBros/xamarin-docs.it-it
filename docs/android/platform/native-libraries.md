@@ -3,15 +3,15 @@ title: Uso di librerie native
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: fad17bdda9566eeabcbe173c19c4d951bed630a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7ef9e0415d7d1e5fe75be70e0ccf6e06a5eaf332
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761286"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027066"
 ---
 # <a name="using-native-libraries"></a>Uso di librerie native
 
@@ -25,9 +25,9 @@ Si noti che poiché Android supporta più interfacce binarie dell'applicazione (
 Esistono due modi per farlo:
 
 1. Percorso "sniffing"
-1. Utilizzando un `AndroidNativeLibrary/Abi` elemento nel file di progetto
+1. Utilizzando un elemento `AndroidNativeLibrary/Abi` all'interno del file di progetto
 
-Con l'analisi del percorso, il nome della directory padre della libreria nativa viene usato per specificare l'ABI di destinazione della libreria. Quindi, se si aggiunge `lib/armeabi/libfoo.so` al progetto, l'Abi verrà "sniffata" come. `armeabi`
+Con l'analisi del percorso, il nome della directory padre della libreria nativa viene usato per specificare l'ABI di destinazione della libreria. Di conseguenza, se si aggiungono `lib/armeabi/libfoo.so` al progetto, l'ABI verrà "sniffata" come `armeabi`.
 
 In alternativa, è possibile modificare il file di progetto per specificare in modo esplicito l'ABI da usare:
 
@@ -50,7 +50,7 @@ Per eseguire il C++ debug del codice nativo nel progetto, attenersi alla procedu
 
 1. Fare doppio clic su **Proprietà** progetto e selezionare la pagina **Opzioni Android** .
 2. Scorrere verso il basso fino a **Opzioni di debug**.
-3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Novell)** .
+3. Nel menu a discesa **debugger** selezionare **C++** , anziché il valore predefinito di **.NET (Novell)**.
 
 Gli sviluppatori C++ di Visual Studio possono vedere l'esempio [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) per C++ provare a eseguire il debug da visual studio 2019 o Visual Studio 2017 con Novell; Per ulteriori informazioni, vedere il [post di Blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) .
 

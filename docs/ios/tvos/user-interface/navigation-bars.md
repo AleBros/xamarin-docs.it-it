@@ -4,21 +4,21 @@ description: Questo documento descrive come usare le barre di navigazione in un'
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 73474aaeb138d52536dd8ad5a7dca9be566475af
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aa376385b000b83a41fdcdc7a4d3c8bf1553f0a7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769095"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030473"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Uso delle barre di spostamento di tvOS in Novell
 
 È possibile aggiungere barre di spostamento nella parte superiore delle visualizzazioni per visualizzare un titolo e i pulsanti della barra di navigazione facoltativa. Vengono in genere usati quando l'utente si è spostato da una pagina principale, ad esempio una visualizzazione tabella, una raccolta o un menu a una vista secondario che mostra i dettagli dell'elemento selezionato.
 
-[![](navigation-bars-images/navbar01.png "Barra di spostamento di esempio")](navigation-bars-images/navbar01.png#lightbox)
+[![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
 
 Oltre al titolo (visualizzato al centro), le barre di navigazione possono contenere uno o più pulsanti della barra di spostamento (`UIBarButtonItem`) sui lati sinistro e destro della barra.
 
@@ -36,16 +36,16 @@ Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS c
 1. Nella **riquadro della soluzione**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
 
-    [![](navigation-bars-images/navbar02.png "Barra di spostamento")](navigation-bars-images/navbar02.png#lightbox)
+    [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
 1. Fare doppio clic sulla **barra di spostamento** per selezionare l' **elemento di navigazione**. Nella scheda **widget** del **riquadro delle proprietà**è possibile impostare il **titolo**:
 
-    [![](navigation-bars-images/navbar03.png "Imposta il titolo")](navigation-bars-images/navbar03.png#lightbox)
+    [![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
 1. Successivamente, è possibile aggiungere uno o più **elementi del pulsante della barra** a una delle estremità della barra:
 
-    [![](navigation-bars-images/navbar04.png "Elemento di un pulsante A barre")](navigation-bars-images/navbar04.png#lightbox)
+    [![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
 1. Infine, collegare gli elementi del **pulsante della barra** alle azioni nella scheda **eventi** di **Esplora proprietà**:
 
-    [![](navigation-bars-images/navbar05.png "Azione elemento pulsante A barre")](navigation-bars-images/navbar05.png#lightbox)
+    [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -53,24 +53,24 @@ Il modo più semplice per usare le barre di navigazione in un'app Novell. tvOS c
 1. Nella **Esplora soluzioni**fare doppio clic su `Main.storyboard` file e aprirlo per la modifica.
 1. Trascinare una **barra di spostamento** dalla **casella degli strumenti** e rilasciarla sulla visualizzazione nella parte superiore della schermata:
 
-    [![](navigation-bars-images/navbar02-vs.png "Barra di spostamento")](navigation-bars-images/navbar02-vs.png#lightbox)
+    [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
 1. Fare doppio clic sulla **barra di spostamento** per selezionare l' **elemento di navigazione**. Nella scheda **widget** di **Esplora proprietà**è possibile impostare il **titolo**:
 
-    [![](navigation-bars-images/navbar03-vs.png "Imposta il titolo")](navigation-bars-images/navbar03-vs.png#lightbox)
+    [![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
 1. Successivamente, è possibile aggiungere uno o più **elementi del pulsante della barra** a una delle estremità della barra:
 
-    [![](navigation-bars-images/navbar04-vs.png "Elementi di un pulsante A barre")](navigation-bars-images/navbar04-vs.png#lightbox)
+    [![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
 1. Infine, collegare gli elementi del **pulsante della barra** alle azioni nella scheda **eventi** di **Esplora proprietà**:
 
-    [![](navigation-bars-images/navbar05-vs.png "Azioni di elementi di un pulsante A barre")](navigation-bars-images/navbar05-vs.png#lightbox)
+    [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Salvare le modifiche.
 
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, questo non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta eventi di tocco. È consigliabile usare sempre l' `Primary Action` evento quando si creano gestori eventi per gli elementi dell'interfaccia utente tvOS.
+> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta gli eventi di tocco. È consigliabile usare sempre l'evento `Primary Action` durante la creazione di gestori eventi per gli elementi dell'interfaccia utente tvOS.
 
-Il codice seguente fornisce un esempio di gestori di eventi in tre BarButtonItems diversi: `ShowFirstHotel`, `ShowSecondHotel`e `ShowThirdHotel`. Quando si fa clic su ogni elemento, l'immagine `HotelImage` di sfondo viene modificata. Questa operazione viene modificata nel file view controller ( `ViewController.cs`esempio):
+Il codice seguente fornisce un esempio di gestori di eventi in tre diversi BarButtonItems: `ShowFirstHotel`, `ShowSecondHotel`e `ShowThirdHotel`. Quando si fa clic su ogni elemento, l'immagine di sfondo `HotelImage` viene modificata. Questa operazione viene modificata nel file view controller (esempio `ViewController.cs`):
 
 ```csharp
 using System;
@@ -121,7 +121,7 @@ namespace MySingleView
 }
 ```
 
-Fino a quando la `Enabled` proprietà di un pulsante è `true` e non è coperta da un altro controllo o visualizzazione, è possibile fare in modo che l'elemento attivo usi Siri remote.
+Fino a quando la proprietà `Enabled` di un pulsante è `true` e non è coperta da un altro controllo o visualizzazione, è possibile impostarla utilizzando Siri remote.
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 

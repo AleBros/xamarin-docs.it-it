@@ -4,15 +4,15 @@ description: Questo documento illustra come collegare le librerie C native in un
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/28/2016
-ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8b882430d5d7d02e444acd00cfdacfc7b29a42b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769565"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031632"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Riferimento a librerie native in Novell. iOS
 
@@ -38,7 +38,7 @@ Per compilare la versione ARM64 della libreria nativa, eseguire il comando segue
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphoneos -arch arm64 -configuration Release clean build
 ```
 
-Questa volta la libreria nativa predefinita sarà disponibile in `MyProject.xcodeproj/build/Release-iphoneos/`. Ancora una volta, copiare (o spostare) questo file in un percorso sicuro, rinominando il file come **libMyLibrary-arm64. a** in modo che non si scontri.
+Questa volta la libreria nativa predefinita si troverà in `MyProject.xcodeproj/build/Release-iphoneos/`. Ancora una volta, copiare (o spostare) questo file in un percorso sicuro, rinominando il file come **libMyLibrary-arm64. a** in modo che non si scontri.
 
 A questo punto, compilare la versione ARMv7 della libreria:
 
@@ -48,17 +48,17 @@ A questo punto, compilare la versione ARMv7 della libreria:
 
 Copiare (o spostare) il file di libreria risultante nello stesso percorso in cui sono state spostate le altre 2 versioni della libreria, rinominando il file in un elemento come **libMyLibrary-ARMv7. a**.
 
-Per creare un file binario universale, è possibile usare `lipo` lo strumento come segue:
+Per creare un file binario universale, è possibile usare lo strumento `lipo` come segue:
 
 ```bash
 lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a libMyLibrary-armv7.a
 ```
 
-In questo `libMyLibrary.a` modo verrà creata una libreria universale (FAT) che sarà idonea per l'utilizzo per tutte le destinazioni di sviluppo iOS.
+Questa operazione crea `libMyLibrary.a` che sarà una libreria universale (FAT) che sarà adatta per l'uso per tutte le destinazioni di sviluppo iOS.
 
 ### <a name="missing-required-architecture-i386"></a>Manca l'architettura necessaria i386
 
-Se si sta ricevendo un `does not implement methodSignatureForSelector` messaggio `does not implement doesNotRecognizeSelector` o nell'output di runtime quando si tenta di usare una libreria Objective-C nel simulatore iOS, la libreria probabilmente non è stata compilata per l'architettura i386 (vedere la pagina relativa alla [compilazione di Universal Native ](#building_native)Sezione delle librerie precedente).
+Se si sta ricevendo un messaggio `does not implement methodSignatureForSelector` o `does not implement doesNotRecognizeSelector` nell'output del runtime quando si tenta di usare una libreria Objective-C nel simulatore iOS, la libreria non è probabilmente stata compilata per l'architettura i386 (vedere [compilazione di librerie native native](#building_native) sezione precedente).
 
 Per controllare le architetture supportate da una libreria specifica, usare il comando seguente nel terminale:
 
@@ -66,7 +66,7 @@ Per controllare le architetture supportate da una libreria specifica, usare il c
 lipo -info /full/path/to/libraryname.a
 ```
 
-Dove `/full/path/to/` è il percorso completo della libreria utilizzata ed `libraryname.a` è il nome della libreria in questione.
+Dove `/full/path/to/` è il percorso completo della libreria utilizzata e `libraryname.a` è il nome della libreria in questione.
 
 Se si dispone dell'origine per la libreria, sarà necessario compilarla e AGGREGARLA anche per l'architettura i386, se si vuole testare l'app nel simulatore iOS.
 
@@ -119,7 +119,7 @@ Per accedere ai metodi definiti in uno di questi casi, si usa la [funzionalità 
 - Determinare la libreria in cui risiede
 - Scrivere la dichiarazione P/Invoke appropriata
 
-Quando si usa P/Invoke è necessario specificare il percorso della libreria con cui si esegue il collegamento. Quando si usano le librerie condivise iOS, è possibile impostare come hardcoded il percorso oppure è possibile usare le costanti di praticità definite in `Constants`, queste costanti dovrebbero coprire le librerie condivise iOS.
+Quando si usa P/Invoke è necessario specificare il percorso della libreria con cui si esegue il collegamento. Quando si usano le librerie condivise iOS, è possibile impostare come hardcoded il percorso oppure è possibile usare le costanti di praticità definite nella `Constants`, queste costanti dovrebbero coprire le librerie condivise iOS.
 
 Ad esempio, se si desidera richiamare il metodo UIRectFrameUsingBlendMode dalla libreria UIKit di Apple con questa firma in C:
 
@@ -140,11 +140,11 @@ Constants. UIKitLibrary è semplicemente una costante definita come "/System/Lib
 
 ### <a name="accessing-c-dylibs"></a>Accesso a C dylib
 
-Se è necessario utilizzare un dylib C nell'applicazione Novell. iOS, è necessario eseguire una configurazione aggiuntiva prima di chiamare l' `DllImport` attributo.
+Se è necessario utilizzare un dylib C nell'applicazione Novell. iOS, è necessario eseguire una configurazione aggiuntiva prima di chiamare l'attributo `DllImport`.
 
-Se, ad esempio, si dispone `Animal.dylib` di un `Animal_Version` oggetto con un metodo che verrà chiamato nell'applicazione, è necessario informare Novell. iOS del percorso della libreria prima di provare a utilizzarlo.
+Se, ad esempio, si dispone di un `Animal.dylib` con un metodo `Animal_Version` che verrà chiamato nell'applicazione, è necessario informare Novell. iOS del percorso della libreria prima di provare a utilizzarlo.
 
-A tale scopo, modificare il `Main.CS` file e renderlo simile al seguente:
+A tale scopo, modificare il file `Main.CS` e renderlo simile al seguente:
 
 ```csharp
 static void Main (string[] args)
@@ -157,7 +157,7 @@ static void Main (string[] args)
 }
 ```
 
-Dove `/full/path/to/` è il percorso completo di dylib utilizzato. Con questo codice, è possibile collegarsi al `Animal_Version` metodo come indicato di seguito:
+Dove `/full/path/to/` è il percorso completo del dylib utilizzato. Con questo codice, è possibile collegarsi al metodo `Animal_Version` come indicato di seguito:
 
 ```csharp
 [DllImport("Animal.dylib", EntryPoint="Animal_Version")]
@@ -168,6 +168,6 @@ public static extern double AnimalLibraryVersion();
 
 ### <a name="static-libraries"></a>Librerie statiche
 
-Poiché è possibile usare solo librerie statiche in iOS, non esiste alcuna libreria condivisa esterna con cui eseguire il collegamento, quindi il parametro Path nell'attributo DllImport deve usare il nome `__Internal` speciale (si notino i due caratteri di sottolineatura all'inizio del nome) anziché nome del percorso.
+Poiché è possibile usare solo librerie statiche in iOS, non esiste alcuna libreria condivisa esterna con cui eseguire il collegamento, quindi il parametro Path nell'attributo DllImport deve usare il nome speciale `__Internal` (si notino i due caratteri di sottolineatura all'inizio del nome) invece di nome del percorso.
 
 Questa operazione impone a DllImport di cercare il simbolo del metodo a cui si fa riferimento nel programma corrente, anziché tentare di caricarlo da una libreria condivisa.

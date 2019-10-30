@@ -4,64 +4,64 @@ description: Questo documento descrive come indicizzare un NSUserActivity, rende
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 9714d78419754413ae5f1d0e5015a418fa8ab884
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c6ceb6e10abc4dbd26bffecbb6fefa5835f3d630
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769551"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031549"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Eseguire una ricerca con NSUserActivity in Novell. iOS
 
-`NSUserActivity`è stato introdotto in iOS 8 e viene usato per fornire i dati per la consegna.
+`NSUserActivity` è stato introdotto in iOS 8 e viene usato per fornire i dati per la consegna.
 Consente di creare attività in parti specifiche dell'app che possono quindi essere passate a un'altra istanza dell'app in esecuzione in un dispositivo iOS diverso. Il dispositivo ricevente può quindi continuare l'attività avviata sul dispositivo precedente, selezionando la posizione in cui l'utente ha interrotto l'esecuzione. Per altre informazioni sull'uso della consegna, vedere l' [Introduzione alla](~/ios/platform/handoff.md) documentazione.
 
-Una novità di iOS 9 `NSUserActivity` , può essere indicizzata (sia pubblica che privata) ed è stata eseguita una ricerca nella ricerca in Spotlight e in Safari. Contrassegnando un `NSUserActivity` oggetto come ricercabile e aggiungendo metadati indicizzabili, l'attività può essere elencata nei risultati della ricerca nel dispositivo iOS.
+Una novità di iOS 9, `NSUserActivity` può essere indicizzata (sia pubblica che privata) ed è stata eseguita una ricerca in Spotlight Search e Safari. Contrassegnando un `NSUserActivity` come ricercabile e aggiungendo metadati indicizzabili, l'attività può essere elencata nei risultati della ricerca nel dispositivo iOS.
 
-[![](nsuseractivity-images/apphistory01.png "Panoramica della cronologia delle app")](nsuseractivity-images/apphistory01.png#lightbox)
+[![](nsuseractivity-images/apphistory01.png "The App History overview")](nsuseractivity-images/apphistory01.png#lightbox)
 
 Se l'utente seleziona un risultato di ricerca che appartiene a un'attività dall'app, l'app verrà avviata e l'attività descritta dal `NSUserActivity` verrà riavviata e presentata all'utente.
 
-Per supportare la ricerca `NSUserActivity` di app vengono usate le proprietà seguenti di:
+Per supportare la ricerca di app vengono usate le seguenti proprietà di `NSUserActivity`:
 
-- `EligibleForHandoff`: Se `true`, questa attività può essere utilizzata in un'operazione di consegna.
-- `EligibleForSearch`: Se `true`, questa attività verrà aggiunta all'indice sul dispositivo e verrà presentato nei risultati della ricerca.
-- `EligibleForPublicIndexing`-Se `true`, questa attività verrà aggiunta all'indice basato sul cloud di Apple e presentata agli utenti (tramite ricerca) che non hanno ancora installato l'app nel dispositivo iOS. Per ulteriori informazioni, vedere la sezione [indicizzazione della ricerca pubblica](#public-search-indexing) riportata di seguito.
-- `Title`: Fornisce un titolo per l'attività e viene visualizzato nei risultati della ricerca. Gli utenti possono anche cercare il testo del titolo stesso.
-- `Keywords`: È una matrice di stringhe utilizzata per descrivere l'attività che verrà indicizzata e resa ricercabile dall'utente finale.
-- `ContentAttributeSet`: Viene `CSSearchableItemAttributeSet` usato per descrivere ulteriormente l'attività in dettaglio e fornire contenuti avanzati nei risultati della ricerca.
-- `ExpirationDate`-Se si vuole che un'attività venga visualizzata solo fino a una data specifica, è possibile fornire tale data qui.
-- `WebpageURL`: Se l'attività può essere visualizzata sul Web o se l'app supporta i collegamenti profondi di Safari, è possibile impostare il collegamento per visitare qui.
+- `EligibleForHandoff`: se `true`, questa attività può essere utilizzata in un'operazione di consegna.
+- `EligibleForSearch`: se `true`, questa attività verrà aggiunta all'indice sul dispositivo e visualizzato nei risultati della ricerca.
+- `EligibleForPublicIndexing`: se `true`, questa attività verrà aggiunta all'indice basato sul cloud di Apple e presentata agli utenti (tramite ricerca) che non hanno ancora installato l'app nel dispositivo iOS. Per ulteriori informazioni, vedere la sezione [indicizzazione della ricerca pubblica](#public-search-indexing) riportata di seguito.
+- `Title`: fornisce un titolo per l'attività e viene visualizzato nei risultati della ricerca. Gli utenti possono anche cercare il testo del titolo stesso.
+- `Keywords`: è una matrice di stringhe utilizzata per descrivere l'attività che verrà indicizzata e resa ricercabile dall'utente finale.
+- `ContentAttributeSet`: è un `CSSearchableItemAttributeSet` usato per descrivere ulteriormente l'attività in dettaglio e fornire contenuti avanzati nei risultati della ricerca.
+- `ExpirationDate`: se si vuole che un'attività venga visualizzata solo fino a una data specifica, è possibile fornire tale data qui.
+- `WebpageURL`: se l'attività può essere visualizzata sul Web o se l'app supporta i collegamenti profondi di Safari, è possibile impostare il collegamento per visitare qui.
 
 ## <a name="nsuseractivity-quickstart"></a>Guida introduttiva a NSUserActivity
 
-Seguire queste istruzioni per implementare una ricercabile `NSUserActivity` nell'app:
+Seguire queste istruzioni per implementare un `NSUserActivity` ricercabile nell'app:
 
 - [Creazione di identificatori del tipo di attività](#creatingtypeid)
 - [Creazione di un'attività](#createactivity)
 - [Risposta a un'attività](#respondactivity)
 - [Indicizzazione di ricerca pubblica](#indexing)
 
-Sono disponibili alcuni [vantaggi aggiuntivi](#benefits) per l' `NSUserActivity` uso di per rendere disponibili per la ricerca il contenuto.
+Ci sono alcuni [vantaggi aggiuntivi](#benefits) per l'uso di `NSUserActivity` per rendere il contenuto disponibile per la ricerca.
 
 <a name="creatingtypeid" />
 
 ## <a name="creating-activity-type-identifiers"></a>Creazione di identificatori del tipo di attività
 
-Prima di poter creare un'attività di ricerca, è necessario creare un _identificatore del tipo di attività_ per identificarlo. L'identificatore del tipo di attività è una stringa breve aggiunta `NSUserActivityTypes` alla matrice del file **info. plist** dell'app usato per identificare in modo univoco un tipo di attività utente specifico. Nella matrice sarà presente una voce per ogni attività supportata dall'app ed esposta alla ricerca di app. 
+Prima di poter creare un'attività di ricerca, è necessario creare un _identificatore del tipo di attività_ per identificarlo. L'identificatore del tipo di attività è una stringa breve aggiunta alla matrice `NSUserActivityTypes` del file **info. plist** dell'app usato per identificare in modo univoco un tipo di attività utente specificato. Nella matrice sarà presente una voce per ogni attività supportata dall'app ed esposta alla ricerca di app. 
 
-Apple suggerisce di usare una notazione in stile DNS inverso per l'identificatore del tipo di attività per evitare conflitti. Ad esempio, `com.company-name.appname.activity` per attività specifiche basate su app `com.company-name.activity` o per attività che possono essere eseguite su più app.
+Apple suggerisce di usare una notazione in stile DNS inverso per l'identificatore del tipo di attività per evitare conflitti. Ad esempio: `com.company-name.appname.activity` per attività specifiche basate su app o `com.company-name.activity` per le attività che possono essere eseguite su più app.
 
-L'identificatore del tipo di attività viene utilizzato durante `NSUserActivity` la creazione di un'istanza di per identificare il tipo di attività. Quando un'attività viene continuata in seguito al tocco di un risultato di ricerca da parte dell'utente, il tipo di attività (insieme all'ID del team dell'app) determina quale app avviare per continuare l'attività.
+L'identificatore del tipo di attività viene utilizzato quando si crea un'istanza di `NSUserActivity` per identificare il tipo di attività. Quando un'attività viene continuata in seguito al tocco di un risultato di ricerca da parte dell'utente, il tipo di attività (insieme all'ID del team dell'app) determina quale app avviare per continuare l'attività.
 
-Per creare gli identificatori del tipo di attività necessari per supportare questo comportamento, modificare il file **info. plist** e passare alla visualizzazione di **origine** . Aggiungere una `NSUserActivityTypes` chiave e creare gli identificatori nel formato seguente:
+Per creare gli identificatori del tipo di attività necessari per supportare questo comportamento, modificare il file **info. plist** e passare alla visualizzazione di **origine** . Aggiungere una chiave di `NSUserActivityTypes` e creare gli identificatori nel formato seguente:
 
-[![](nsuseractivity-images/type01.png "La chiave NSUserActivityTypes e gli identificatori obbligatori nell'editor plist")](nsuseractivity-images/type01.png#lightbox)
+[![](nsuseractivity-images/type01.png "The NSUserActivityTypes key and required identifiers in the plist editor")](nsuseractivity-images/type01.png#lightbox)
 
-Nell'esempio precedente è stato creato un nuovo identificatore del tipo di attività per l'attività di`com.xamarin.platform`ricerca (). Quando si creano app personalizzate, sostituire il contenuto della `NSUserActivityTypes` matrice con gli identificatori del tipo di attività specifici per le attività supportate dall'app.
+Nell'esempio precedente è stato creato un nuovo identificatore del tipo di attività per l'attività di ricerca (`com.xamarin.platform`). Quando si creano app personalizzate, sostituire il contenuto della matrice di `NSUserActivityTypes` con gli identificatori del tipo di attività specifici per le attività supportate dall'app.
 
 <a name="createactivity" />
 
@@ -86,17 +86,17 @@ activity.EligibleForSearch = true;
 activity.BecomeCurrent();
 ```
 
-È possibile aggiungere ulteriori dettagli impostando la `ContentAttributeSet` proprietà `NSUserActivity` di come indicato di seguito:
+È possibile aggiungere ulteriori dettagli impostando la proprietà `ContentAttributeSet` del `NSUserActivity` come indicato di seguito:
 
-[![](nsuseractivity-images/apphistory02.png "Panoramica sull'aggiunta di dettagli di ricerca")](nsuseractivity-images/apphistory02.png#lightbox)
+[![](nsuseractivity-images/apphistory02.png "Addition Search Details overview")](nsuseractivity-images/apphistory02.png#lightbox)
 
-Utilizzando un `ContentAttributeSet` è possibile creare risultati di ricerca avanzati che consentono all'utente finale di interagire con loro.
+Utilizzando un `ContentAttributeSet` è possibile creare risultati di ricerca avanzati che consentono all'utente finale di interagire con essi.
 
 <a name="respondactivity" />
 
 ## <a name="responding-to-an-activity"></a>Risposta a un'attività
 
-Per rispondere all'utente toccando un risultato di ricerca (`NSUserActivity`) per l'app, modificare il file **AppDelegate.cs** ed eseguire l'override `ContinueUserActivity` del metodo. Ad esempio:
+Per rispondere all'utente toccando un risultato di ricerca (`NSUserActivity`) per l'app, modificare il file **AppDelegate.cs** ed eseguire l'override del metodo `ContinueUserActivity`. Esempio:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -115,7 +115,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 Si noti che si tratta dello stesso override del metodo utilizzato per rispondere alle richieste di continuità. Ora, se l'utente fa clic su un collegamento dall'app nei risultati della ricerca in evidenza, l'app verrà portata in primo piano (o avviata se non è già in esecuzione) e verrà visualizzato il contenuto, la navigazione o la funzionalità rappresentata dal collegamento seguente:
 
-[![](nsuseractivity-images/apphistory03.png "Ripristina stato precedente dalla ricerca")](nsuseractivity-images/apphistory03.png#lightbox)
+[![](nsuseractivity-images/apphistory03.png "Restore Previous State from Search")](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing" />
 
@@ -151,7 +151,7 @@ activity.EligibleForPublicIndexing = true;
 activity.BecomeCurrent();
 ```
 
-Solo perché un'attività è stata impostata per l'indicizzazione `EligibleForPublicIndexing = true`pubblica impostando, non significa che verrà aggiunta automaticamente all'indice cloud pubblico di Apple. Per prima cosa è necessario soddisfare le condizioni seguenti:
+Solo perché un'attività è stata impostata per l'indicizzazione pubblica impostando `EligibleForPublicIndexing = true`, non significa che verrà aggiunta automaticamente all'indice cloud pubblico di Apple. Per prima cosa è necessario soddisfare le condizioni seguenti:
 
 1. Deve apparire nei risultati della ricerca e essere selezionato da molti utenti. I risultati rimangono privati fino a quando non viene soddisfatta una soglia di Engagement dell'attività.
 2. Il provisioning delle app impedisce che i dati specifici dell'utente vengano indicizzati e resi pubblici.
@@ -160,9 +160,9 @@ Solo perché un'attività è stata impostata per l'indicizzazione `EligibleForPu
 
 ## <a name="additional-benefits"></a>Vantaggi aggiuntivi
 
-Adottando la ricerca di app `NSUserActivity` tramite nell'app, si ottengono anche le funzionalità seguenti:
+Adottando la ricerca di app tramite `NSUserActivity` nell'app, si ottengono anche le funzionalità seguenti:
 
-- Consegna **: poiché** la ricerca di app sta esponendo contenuto, navigazione e/o funzionalità con lo stesso meccanismo`NSUserActivity`di consegna (), è possibile consentire agli utenti dell'app di avviare un'attività in un dispositivo e continuare a usarla in un altro dispositivo.
+- Consegna **: poiché** la ricerca di app sta esponendo contenuto, navigazione e/o funzionalità con lo stesso meccanismo di consegna (`NSUserActivity`), è possibile consentire agli utenti dell'app di avviare un'attività in un dispositivo e continuare a usarla in un altro dispositivo.
 - **Siri suggerimenti** : insieme ai suggerimenti standard che Siri suggerisce di solito, gli attivi dall'app possono essere suggeriti automaticamente.
 - **Siri Smart promemoria** : gli utenti potranno chiedere a Siri di ricordare le attività dell'app.
 
@@ -170,6 +170,6 @@ Adottando la ricerca di app `NSUserActivity` tramite nell'app, si ottengono anch
 
 - [Esempi di iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guida alla programmazione di app Search](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)
 - [Post di Blog & esempio](https://blog.xamarin.com/improve-discoverability-with-search-in-ios-9/)

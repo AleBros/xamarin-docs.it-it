@@ -4,15 +4,15 @@ description: Questo documento descrive i prodotti non utilizzabili in Novell. iO
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 50b26e1b37000df3e6cd96c8a3cd2f424dd4f1f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2341d90a297d6241c47a5f03fbe8fffa89dd34b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752668"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032318"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Acquisto di prodotti non utilizzabili in Novell. iOS
 
@@ -24,13 +24,13 @@ Il [codice InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-s
 
 Il processo di acquisto è illustrato in questa serie di schermate: il pulsante **Acquista** diventa il pulsante di attivazione della funzionalità:   
 
- [![](purchasing-non-consumable-products-images/image34.png "Il processo di acquisto è illustrato in questa serie di schermate")](purchasing-non-consumable-products-images/image34.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image34.png "The purchase process is shown in this series of screenshots")](purchasing-non-consumable-products-images/image34.png#lightbox)   
 
 Il processo di acquisto è identico a quello di un prodotto utilizzabile; la differenza principale consiste nel modo in cui viene tenuta traccia dell'acquisto nel codice dell'applicazione. In questo esempio il pulsante Acquista è disponibile solo se il prodotto non è già stato acquistato. in caso contrario, il pulsante attiva la funzionalità stessa.   
 
 Il diagramma seguente illustra le interazioni tra le classi e il server dell'app Store per eseguire un acquisto di prodotto non utilizzabile:   
 
- [![](purchasing-non-consumable-products-images/image35.png "Interazioni tra le classi e il server dell'app Store per eseguire un acquisto di prodotto non utilizzabile")](purchasing-non-consumable-products-images/image35.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image35.png "The interactions between classes and the App Store server to perform a non-consumable product purchase")](purchasing-non-consumable-products-images/image35.png#lightbox)   
 
 La differenza principale rispetto all'esempio utilizzabile è che, una volta completato l'acquisto, l'interfaccia utente viene aggiornata per impedire il nuovo acquisto. In questo esempio, la notifica di una transazione riuscita aggiorna l'interfaccia utente in modo che il pulsante **Acquista** venga convertito in un pulsante che attiva la funzionalità stessa.
 
@@ -47,5 +47,5 @@ Esistono situazioni in cui un'applicazione non è in grado di stabilire se un pr
 Il percorso del codice in questo scenario è esattamente identico a quello di un acquisto regolare, ma le uniche differenze sono:
 
 - L'utente non viene addebitato nuovamente per il prodotto.
-- L' `SKPaymentTransaction` oggetto passato all'applicazione avrà una `OriginalTransaction` proprietà che fa riferimento alla transazione generata quando il prodotto è stato inizialmente acquistato. 
+- L'oggetto `SKPaymentTransaction` passato all'applicazione avrà una proprietà `OriginalTransaction` che fa riferimento alla transazione generata quando il prodotto è stato inizialmente acquistato. 
 - Le applicazioni che vendono prodotti non utilizzabili devono implementare anche la funzionalità di **ripristino** di StoreKit per consentire agli utenti di recuperare gli acquisti esistenti. 

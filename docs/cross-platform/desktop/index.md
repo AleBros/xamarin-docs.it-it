@@ -2,15 +2,15 @@
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: Cross-Platform per sviluppatori desktop
 description: Questo documento contiene collegamenti a diverse guide che descrivono Novell. Forms per sviluppatori WPF e Windows Forms. Il contenuto collegato Esplora il ciclo di vita dell'applicazione, i controlli dell'interfaccia utente, le linee guida e gli esempi di porting.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: e4c14b3f6458180c6da9f123cab5aad406091667
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dad7548ab576f03ab2e7e3fca94f0ab45918367e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290369"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016458"
 ---
 # <a name="cross-platform-for-desktop-developers"></a>Cross-Platform per sviluppatori desktop
 
@@ -34,4 +34,4 @@ Esempi di riferimento che illustrano l'architettura dell'applicazione aziendale 
 
 ## <a name="learn-more"></a>Ulteriori informazioni
 
-Creazione di app per [ dispositivimobilieBookmodellidiapplicazioniaziendali![](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) [ ![](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)
+[![creazione di app per dispositivi mobili](images/creating-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) eBook [![modelli di applicazione aziendale eBook](images/enterprise-sml.png)](~/xamarin-forms/enterprise-application-patterns/index.md)

@@ -4,15 +4,15 @@ description: Questa guida illustra i servizi di Novell. Android, che sono compon
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 042878fa8d30acb55de68f63e3491aacb5dbdfb5
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: b427bbadc72ca557a37c652e853674fdf849c2c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105880"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024563"
 ---
 # <a name="creating-android-services"></a>Creazione di servizi Android
 
@@ -22,7 +22,7 @@ _Questa guida illustra i servizi di Novell. Android, che sono componenti Android
 
 Le app per dispositivi mobili non sono come le app desktop. I desktop hanno quantità di risorse coesistenti, ad esempio la proprietà dello schermo, la memoria, lo spazio di archiviazione e un alimentatore connesso, ma non i dispositivi mobili. Questi vincoli forzano il comportamento delle app per dispositivi mobili in modo diverso. Ad esempio, la piccola schermata in un dispositivo mobile in genere significa che è visibile una sola app, ad esempio attività, alla volta. Altre attività vengono spostate in background e inserite nello stato Suspended, in cui non è possibile eseguire alcuna operazione. Tuttavia, solo perché un'applicazione Android è in background non significa che non è possibile che l'app continui a funzionare. 
 
-Le applicazioni Android sono costituite da almeno uno dei quattro componenti principali seguenti: _Attività_, _ricevitori broadcast_, _provider di contenuti_e _Servizi_. Le attività sono l'elemento fondamentale di molte ottime applicazioni Android, perché forniscono l'interfaccia utente che consente a un utente di interagire con l'applicazione. Tuttavia, quando si tratta di eseguire operazioni simultanee o in background, le attività non sono sempre la scelta migliore.
+Le applicazioni Android sono costituite da almeno uno dei quattro componenti principali seguenti: _attività_, _ricevitori broadcast_, _provider di contenuti_e _Servizi_. Le attività sono l'elemento fondamentale di molte ottime applicazioni Android, perché forniscono l'interfaccia utente che consente a un utente di interagire con l'applicazione. Tuttavia, quando si tratta di eseguire operazioni simultanee o in background, le attività non sono sempre la scelta migliore.
 
 Il meccanismo principale per il lavoro in background in Android è il _servizio_. Un servizio Android è un componente progettato per eseguire alcune operazioni senza un'interfaccia utente. Un servizio può scaricare un file, riprodurre musica o applicare un filtro a un'immagine. I servizi possono essere usati anche per la comunicazione interprocesso (_IPC_) tra le applicazioni Android. Ad esempio, un'app Android può usare il servizio Music Player che si trova in un'altra app o un'app potrebbe esporre i dati, ad esempio le informazioni di contatto di un utente, ad altre app tramite un servizio. 
 
@@ -32,26 +32,26 @@ Per risolvere questo problema, uno sviluppatore può utilizzare i thread in un'a
 
 ![Quando il dispositivo viene ruotato, l'istanza 1 viene distrutta e viene creata l'istanza 2](images/image-01.png)
 
-Si tratta di una potenziale perdita &ndash; di memoria. il thread creato dalla prima istanza dell'attività sarà ancora in esecuzione. Se il thread ha un riferimento alla prima istanza dell'attività, questo impedirà a Android di eseguire il Garbage Collection dell'oggetto. Tuttavia, la seconda istanza dell'attività viene ancora creata, che a sua volta potrebbe creare un nuovo thread. La rotazione del dispositivo più volte in rapida successione può esaurire tutta la RAM e forzare Android a terminare l'intera applicazione per recuperare memoria.
+Si tratta di una potenziale perdita di memoria &ndash; il thread creato dalla prima istanza dell'attività sarà ancora in esecuzione. Se il thread ha un riferimento alla prima istanza dell'attività, questo impedirà a Android di eseguire il Garbage Collection dell'oggetto. Tuttavia, la seconda istanza dell'attività viene ancora creata, che a sua volta potrebbe creare un nuovo thread. La rotazione del dispositivo più volte in rapida successione può esaurire tutta la RAM e forzare Android a terminare l'intera applicazione per recuperare memoria.
 
 Come regola generale, se il lavoro da eseguire dovrebbe essere in esecuzione in un'attività, è necessario creare un servizio per eseguire tale operazione. Tuttavia, se il lavoro è applicabile solo nel contesto di un'attività, la creazione di un thread per eseguire il lavoro potrebbe essere più appropriata. Ad esempio, la creazione di un'anteprima per una foto appena aggiunta a un'app della raccolta foto dovrebbe probabilmente verificarsi in un servizio. Tuttavia, un thread potrebbe essere più appropriato per riprodurre musica da ascoltare solo quando un'attività è in primo piano.
 
 Il lavoro in background può essere suddiviso in due classificazioni generali:
 
-1. **Attività a esecuzione prolungata** &ndash; Questa operazione è in corso fino a quando non viene arrestata in modo esplicito. Un esempio di _attività a esecuzione prolungata_ è un'app che trasmette musica o che deve monitorare i dati raccolti da un sensore. Queste attività devono essere eseguite anche se l'applicazione non dispone di un'interfaccia utente visibile.
-2. **Attività periodiche** (a volte definito processo) un'attività periodica è un periodo di tempo relativamente breve (diversi secondi) e viene eseguito in base a una pianificazione (ovvero una volta al giorno per una settimana o una sola volta nei prossimi 60 secondi). &ndash; Un esempio è il download di un file da Internet o la generazione di un'anteprima per un'immagine.
+1. **Attività a esecuzione Prolungata** &ndash; questa operazione è in corso fino a quando non viene arrestata in modo esplicito. Un esempio di _attività a esecuzione prolungata_ è un'app che trasmette musica o che deve monitorare i dati raccolti da un sensore. Queste attività devono essere eseguite anche se l'applicazione non dispone di un'interfaccia utente visibile.
+2. Le **attività periodiche** &ndash; (talvolta definita _processo_) un'attività periodica è un periodo di tempo relativamente breve (alcuni secondi) e viene eseguito in base a una pianificazione (ad esempio una volta al giorno per una settimana o una sola volta nei prossimi 60 secondi). Un esempio è il download di un file da Internet o la generazione di un'anteprima per un'immagine.
 
 Sono disponibili quattro tipi diversi di servizi Android:
 
-* **Servizio associato** Un _servizio associato_ è un servizio con un altro componente, in genere un'attività, associato. &ndash; Un servizio associato fornisce un'interfaccia che consente al componente associato e al servizio di interagire tra loro. Quando non ci sono altri client associati al servizio, Android arresterà il servizio. 
+* Il **servizio associato** &ndash; un _servizio associato_ è un servizio a cui è associato un altro componente (in genere un'attività). Un servizio associato fornisce un'interfaccia che consente al componente associato e al servizio di interagire tra loro. Quando non ci sono altri client associati al servizio, Android arresterà il servizio. 
 
-* **`IntentService`** Un è una sottoclasse specializzata della `Service` classe che semplifica la creazione e l'utilizzo dei servizi. _`IntentService`_ &ndash; Un `IntentService` oggetto è progettato per gestire singole chiamate autonome. A differenza di un servizio, che può gestire contemporaneamente più chiamate, un `IntentService` è più simile a un lavoro di elaborazione &ndash; della _coda di lavoro_ viene accodato e un `IntentService` elabora ogni processo uno alla volta in un singolo thread di lavoro. In genere,`IntentService` un non è associato a un'attività o a un frammento. 
+* **`IntentService`** &ndash; un _`IntentService`_ è una sottoclasse specializzata della classe `Service` che semplifica la creazione e l'utilizzo dei servizi. Un `IntentService` è progettato per gestire singole chiamate autonome. A differenza di un servizio, che può gestire contemporaneamente più chiamate, una `IntentService` è più simile a un _processore della coda di lavoro_ &ndash; il lavoro viene accodato e un `IntentService` elabora ogni processo uno alla volta in un singolo thread di lavoro. In genere, un`IntentService` non è associato a un'attività o a un frammento. 
 
-* **Servizio avviato** Un _servizio avviato_ è un servizio che è stato avviato da un altro componente Android, ad esempio un'attività, e viene eseguito in modo continuo in background fino a quando un elemento non indica esplicitamente al servizio di arrestarsi. &ndash; A differenza di un servizio associato, a un servizio avviato non è associato alcun client direttamente. Per questo motivo, è importante progettare i servizi avviati in modo che possano essere riavviati correttamente in base alle esigenze.
+* Il **servizio avviato** &ndash; un servizio _avviato_ è un servizio che è stato avviato da un altro componente Android, ad esempio un'attività, e viene eseguito in modo continuo in background fino a quando un elemento non indica esplicitamente al servizio di arrestarsi. A differenza di un servizio associato, a un servizio avviato non è associato alcun client direttamente. Per questo motivo, è importante progettare i servizi avviati in modo che possano essere riavviati correttamente in base alle esigenze.
 
-* **Servizio ibrido** Un servizio _ibrido_ è un servizio che presenta le caratteristiche di un servizio _avviato_ e di un _servizio associato._ &ndash; Un servizio ibrido può essere avviato da quando un componente viene associato ad esso oppure può essere avviato da un determinato evento. Un componente client può essere associato o meno al servizio ibrido. Un servizio ibrido continuerà a funzionare fino a quando non viene indicato in modo esplicito di arrestarsi o fino a quando non ci sono altri client associati.
+* Il servizio **ibrido** &ndash; un servizio _ibrido_ è un servizio con le caratteristiche di un servizio _avviato_ e di un _servizio associato_. Un servizio ibrido può essere avviato da quando un componente viene associato ad esso oppure può essere avviato da un determinato evento. Un componente client può essere associato o meno al servizio ibrido. Un servizio ibrido continuerà a funzionare fino a quando non viene indicato in modo esplicito di arrestarsi o fino a quando non ci sono altri client associati.
 
-Il tipo di servizio da usare dipende molto dai requisiti dell'applicazione. Come regola generale, un `IntentService` servizio o associato è sufficiente per la maggior parte delle attività che devono essere eseguite da un'applicazione Android, quindi è necessario assegnare una preferenza a uno di questi due tipi di servizi. Un `IntentService` è una scelta ottimale per le attività "monouso", ad esempio il download di un file, mentre un servizio associato è adatto quando sono necessarie interazioni frequenti con un'attività o un frammento. 
+Il tipo di servizio da usare dipende molto dai requisiti dell'applicazione. Come regola generale, una `IntentService` o un servizio associato è sufficiente per la maggior parte delle attività che devono essere eseguite da un'applicazione Android, quindi è necessario assegnare una preferenza a uno di questi due tipi di servizi. Un `IntentService` è una scelta ottimale per le attività "monouso", ad esempio il download di un file, mentre un servizio associato è adatto quando sono necessarie interazioni frequenti con un'attività o un frammento. 
 
 Mentre la maggior parte dei servizi viene eseguita in background, esiste una sottocategoria speciale nota come _servizio in primo piano_. Si tratta di un servizio a cui viene assegnata una priorità più alta (rispetto a un servizio normale) per eseguire alcune operazioni per l'utente (ad esempio la riproduzione di musica). 
 
@@ -69,14 +69,14 @@ In alcuni casi, anche se un'app è in background, Android riattiverà l'app e ri
 
 * L'app riceve un messaggio di Firebase cloud a priorità alta.
 * L'app riceve una trasmissione. 
-* L'applicazione riceve ed esegue un oggetto `PendingIntent` in risposta a una notifica.
+* L'applicazione riceve ed esegue un `PendingIntent` in risposta a una notifica.
 
 Le applicazioni Novell. Android esistenti potrebbero dover modificare il modo in cui eseguono il lavoro in background per evitare eventuali problemi che possono verificarsi in Android 8,0. Di seguito sono riportate alcune alternative pratiche a un servizio Android:
 
-* **Pianificare il lavoro da eseguire in background usando l'utilità di pianificazione dei processi Android o il [dispatcher del processo Firebase](~/android/platform/firebase-job-dispatcher.md)**  Queste due librerie forniscono un Framework che consente alle applicazioni di separare il lavoro in background nei processi, un'unità di lavoro discreta. &ndash; Le app possono quindi pianificare il processo con il sistema operativo insieme ad alcuni criteri relativi al momento in cui il processo può essere eseguito.
+* **Pianificare il lavoro da eseguire in background usando l'utilità di pianificazione dei processi Android o il [dispatcher di processi Firebase](~/android/platform/firebase-job-dispatcher.md)**  &ndash; queste due librerie forniscono un Framework per le applicazioni per separare il lavoro in background nei _processi_, un'unità di lavoro discreta. Le app possono quindi pianificare il processo con il sistema operativo insieme ad alcuni criteri relativi al momento in cui il processo può essere eseguito.
 * **Avviare il servizio in primo piano** &ndash; un servizio in primo piano è utile quando l'app deve eseguire un'attività in background e l'utente potrebbe dover interagire periodicamente con tale attività. Il servizio in primo piano visualizzerà una notifica persistente, in modo che l'utente sappia che l'app sta eseguendo un'attività in background e fornisce anche un modo per monitorare o interagire con l'attività. Un esempio è costituito da un'app di podcasting che riproduce un podcast per l'utente o forse Scarica un episodio podcast in modo che possa essere goduto in un secondo momento. 
-* **Usare un messaggio di Firebase cloud a priorità alta (FCM)** &ndash; Quando Android riceve un FCM con priorità alta per un'app, consentirà all'app di eseguire i servizi in background per un breve periodo di tempo. Si tratta di una valida alternativa alla presenza di un servizio in background che esegue il polling di un'applicazione in background. 
-* **Rinvia il lavoro per quando l'app entra in primo piano** &ndash; Se nessuna delle soluzioni precedenti è realizzabile, le app devono sviluppare il proprio modo per sospendere e riprendere il lavoro quando l'app viene visualizzata in primo piano.
+* **Usare un messaggio di Firebase cloud Message (FCM) con priorità alta** &ndash; quando Android riceve un FCM con priorità alta per un'app, consente all'app di eseguire i servizi in background per un breve periodo di tempo. Si tratta di una valida alternativa alla presenza di un servizio in background che esegue il polling di un'applicazione in background. 
+* **Rinviare il lavoro quando l'app entra in primo piano** &ndash; se nessuna delle soluzioni precedenti è realizzabile, le app devono sviluppare il proprio modo per sospendere e riprendere il lavoro quando l'app viene visualizzata in primo piano.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

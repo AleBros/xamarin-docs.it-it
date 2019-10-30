@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: e95d7a01b2743db119f7982db1f9ed34bc4d02a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e61aaa6a2071797f905bf7398576f2045a46faea
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769628"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030691"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Introduzione a tvOS in Novell
 
@@ -64,7 +64,7 @@ App tvOS di esempio compilate con Novell:
 
 Inoltre, Apple fornisce le app di esempio seguenti che possono essere transcodificate C# in per usare il supporto di Novell per le app tvOS:
 
-- [Demobos: Creazione di un gioco multipiattaforma con SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
+- [Demobos: creazione di un gioco multipiattaforma con SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
 
 ## <a name="known-issues-and-troubleshooting"></a>Problemi noti e risoluzione dei problemi
 

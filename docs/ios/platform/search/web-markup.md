@@ -4,15 +4,15 @@ description: Questo documento descrive come creare risultati di ricerca basati s
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 52da0cfcab56c0acd339f4f0a0f2456a66d002a8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3d5db2f060b59fc689bea99141342b0447ac8933
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769485"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031521"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Eseguire ricerche con markup Web in Novell. iOS
 
@@ -20,12 +20,12 @@ Per le app che forniscono accesso al contenuto tramite un sito Web (non solo dal
 
 Se l'app per iOS supporta già deep linking per dispositivi mobili e nel sito Web sono stati presentati collegamenti profondi al contenuto all'interno dell'app, il crawler Web _Applebot_ di Apple indicizza questo contenuto e lo aggiunge automaticamente all'indice cloud:
 
-[![](web-markup-images/webmarkup01.png "Panoramica sugli indici cloud")](web-markup-images/webmarkup01.png#lightbox)
+[![](web-markup-images/webmarkup01.png "Cloud Index overview")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple esporterà questi risultati nei risultati della ricerca di Spotlight e di Safari.
 Se l'utente tocca uno di questi risultati (in cui è installata l'app), questi verranno portati al contenuto nell'app:
 
-[![](web-markup-images/webmarkup02.png "Deep linking da un sito Web nei risultati della ricerca")](web-markup-images/webmarkup02.png#lightbox)
+[![](web-markup-images/webmarkup02.png "Deep linking from a website in search results")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Abilitazione dell'indicizzazione del contenuto Web
 
@@ -63,7 +63,7 @@ Una novità di iOS 9, i collegamenti universali rappresentano un'alternativa mig
 
 ## <a name="using-twitter-cards"></a>Uso di schede Twitter
 
-È possibile fornire collegamenti profondi al contenuto dell'app tramite una scheda Twitter. Ad esempio:
+È possibile fornire collegamenti profondi al contenuto dell'app tramite una scheda Twitter. Esempio:
 
 ```html
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -71,11 +71,11 @@ Una novità di iOS 9, i collegamenti universali rappresentano un'alternativa mig
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-Per ulteriori informazioni, vedere la documentazione relativa al protocollo Twitter per le [schede](http://dev.twitter.com/cards/mobile) Twitter.
+Per ulteriori informazioni, vedere la documentazione relativa al protocollo Twitter per le [schede](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) Twitter.
 
 ## <a name="using-facebook-app-links"></a>Uso di collegamenti all'app Facebook
 
-È possibile fornire collegamenti profondi al contenuto dell'app usando un collegamento all'app Facebook. Ad esempio:
+È possibile fornire collegamenti profondi al contenuto dell'app usando un collegamento all'app Facebook. Esempio:
 
 ```html
 <meta property="al:ios:app_name" content="AppName">
@@ -83,11 +83,11 @@ Per ulteriori informazioni, vedere la documentazione relativa al protocollo Twit
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-Per ulteriori informazioni, vedere la documentazione sui [collegamenti alle app](http://applinks.org) di Facebook.
+Per ulteriori informazioni, vedere la documentazione sui [collegamenti alle app](https://developers.facebook.com/docs/applinks) di Facebook.
 
 ## <a name="opening-deep-links"></a>Apertura di collegamenti profondi
 
-È necessario aggiungere il supporto per l'apertura e la visualizzazione di collegamenti profondi nell'app Novell. iOS. Modificare il file **AppDelegate.cs** ed eseguire l' `OpenURL` override del metodo per gestire il formato dell'URL personalizzato. Ad esempio:
+È necessario aggiungere il supporto per l'apertura e la visualizzazione di collegamenti profondi nell'app Novell. iOS. Modificare il file **AppDelegate.cs** ed eseguire l'override del metodo `OpenURL` per gestire il formato dell'URL personalizzato. Esempio:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,7 +113,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-Nel codice precedente, si cerca un URL che contiene `/appname` e si passa il valore di `query` (`123` in questo esempio) a un controller di visualizzazione personalizzato nell'app per visualizzare il contenuto richiesto all'utente.
+Nel codice precedente, si cerca un URL contenente `/appname` e si passa il valore di `query` (`123` in questo esempio) a un controller di visualizzazione personalizzato nell'app per visualizzare il contenuto richiesto all'utente.
 
 ## <a name="providing-rich-results-with-structured-data"></a>Offrire risultati avanzati con dati strutturati
 
@@ -121,7 +121,7 @@ Includendo il markup dei dati strutturati, è possibile fornire risultati di ric
 
 I risultati avanzati sono più accattivanti e possono contribuire a migliorare la classificazione nell'indice di ricerca basato sul cloud inducendo più utenti a interagire con loro.
 
-Un'opzione per fornire markup di dati strutturati consiste nell'usare il grafo aperto. Ad esempio:
+Un'opzione per fornire markup di dati strutturati consiste nell'usare il grafo aperto. Esempio:
 
 ```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -129,9 +129,9 @@ Un'opzione per fornire markup di dati strutturati consiste nell'usare il grafo a
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-Per ulteriori informazioni, vedere il sito Web di [Open Graph](http://ogp.me) .
+Per ulteriori informazioni, vedere il sito Web di [Open Graph](https://ogp.me) .
 
-Un altro formato comune per il markup dei dati strutturati è il formato di microdati di schema. org. Ad esempio:
+Un altro formato comune per il markup dei dati strutturati è il formato di microdati di schema. org. Esempio:
 
 ```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -152,7 +152,7 @@ Le stesse informazioni possono essere rappresentate nel formato JSON-LD di schem
 
 Di seguito viene illustrato un esempio di metadati del sito Web che forniscono risultati di ricerca avanzati all'utente finale:
 
-[![](web-markup-images/deeplink01.png "Risultati di ricerca avanzati tramite markup di dati strutturati")](web-markup-images/deeplink01.png#lightbox)
+[![](web-markup-images/deeplink01.png "Rich search results via Structured Data Markup")](web-markup-images/deeplink01.png#lightbox)
 
 Apple attualmente supporta i tipi di schema seguenti da schema.org:
 
@@ -165,7 +165,7 @@ Apple attualmente supporta i tipi di schema seguenti da schema.org:
 - Ricetta
 - SearchAction
 
-Per ulteriori informazioni su questi tipi di schema, vedere [schema.org](http://schema.org).
+Per ulteriori informazioni su questi tipi di schema, vedere [schema.org](https://schema.org).
 
 ## <a name="providing-actions-with-structured-data"></a>Fornire azioni con dati strutturati
 
@@ -207,5 +207,5 @@ Per altre informazioni, vedere il sito per [sviluppatori di ricerca app](https:/
 
 - [Esempi di iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guida alla programmazione di app Search](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

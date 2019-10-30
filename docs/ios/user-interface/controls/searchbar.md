@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le barre di ricerca in Novell.
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 8b129e0e70bf3ded787094d1b1f740e73a8cbca1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70283354"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021975"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barre di ricerca in Novell. iOS
 
@@ -88,7 +88,7 @@ Queste proprietà sono illustrate di seguito:
   - Pulsante Cerca risultati/segnalibri-Mostra i risultati della ricerca o l'icona dei segnalibri nella barra di ricerca
   - Mostra pulsante Annulla: consente agli utenti di uscire dalla funzione di ricerca. È consigliabile selezionare questa opzione.
   - Mostra la barra dell'ambito: consente agli utenti di limitare l'ambito della ricerca. Ad esempio, quando si esegue la ricerca nell'app Music, l'utente può selezionare se desidera eseguire la ricerca Apple Music o la relativa libreria per un brano o un artista specifico. Per visualizzare varie opzioni, aggiungere una matrice di titoli alla proprietà **ScopeBarTitles** .
-  titoli dell'ambito della barra ![Search ](searchbar-images/image4.png)
+  ![i titoli dell'ambito della barra di ricerca](searchbar-images/image4.png)
 
 - **Comportamento del testo** : queste opzioni vengono usate per risolvere il modo in cui l'input dell'utente viene formattato durante la digitazione. Con l'uso di maiuscole, l'inizio di ogni parola o frase viene impostata in lettere maiuscole o ogni carattere. Correzione e controllo ortografico con la richiesta all'utente di ortografia suggerite delle parole durante la digitazione.
 - **Tastiera** : controlla lo stile della tastiera visualizzato per l'input e quindi le chiavi disponibili sulla tastiera. Sono inclusi il tastierino numerico, il tastierino telefonico, la posta elettronica e l'URL insieme ad altre opzioni.

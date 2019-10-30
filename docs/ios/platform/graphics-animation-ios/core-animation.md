@@ -4,15 +4,15 @@ description: Questo articolo esamina il Framework di animazione principale, most
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 730359824ec5a51a53261fbfc9519ac8560a77f5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60bab56440fc7227e14d31875a8b6108cd1a86f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753066"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032489"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animazione principale in Novell. iOS
 
@@ -46,9 +46,9 @@ Questa sezione illustra le funzionalità di animazione UIKit, tra cui:
 
 ### <a name="view-controller-transitions"></a>Transizioni dei controller di visualizzazione
 
- `UIViewController`fornisce supporto incorporato per la transizione tra i controller di visualizzazione tramite il `PresentViewController` metodo. Quando si `PresentViewController`USA, la transizione al secondo controller può essere facoltativamente animata.
+ `UIViewController` fornisce supporto incorporato per la transizione tra i controller di visualizzazione tramite il metodo `PresentViewController`. Quando si usa `PresentViewController`, è possibile scegliere di animare la transizione al secondo controller.
 
-Si consideri, ad esempio, un'applicazione con due controller, in cui toccare un pulsante `PresentViewController` nel primo controller chiama per visualizzare un secondo controller. Per controllare quale animazione di transizione viene utilizzata per visualizzare il secondo controller, è sufficiente [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) impostare la proprietà come illustrato di seguito:
+Si consideri, ad esempio, un'applicazione con due controller, in cui toccare un pulsante nel primo controller chiama `PresentViewController` per visualizzare un secondo controller. Per controllare quale animazione di transizione viene utilizzata per visualizzare il secondo controller, è sufficiente impostare la relativa proprietà [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) come illustrato di seguito:
 
 ```csharp
 SecondViewController vc2 = new SecondViewController {
@@ -56,13 +56,13 @@ SecondViewController vc2 = new SecondViewController {
 };
 ```
 
-In questo caso viene `PartialCurl` usata un'animazione, sebbene siano disponibili diverse altre, tra cui:
+In questo caso viene usata un'animazione `PartialCurl`, sebbene siano disponibili diverse altre, tra cui:
 
-- `CoverVertical`: Scorre verso l'alto dalla parte inferiore dello schermo
-- `CrossDissolve`-La visualizzazione precedente si dissolve & la nuova visualizzazione si dissolve in
-- `FlipHorizontal`-Un flip orizzontale da destra a sinistra. In fase di chiusura la transizione viene invertita da sinistra a destra.
+- `CoverVertical`: scorre verso l'alto dalla parte inferiore dello schermo
+- `CrossDissolve`: la visualizzazione precedente si dissolve & la nuova visualizzazione si dissolve in
+- `FlipHorizontal`: un capovolgimento orizzontale da destra a sinistra. In fase di chiusura la transizione viene invertita da sinistra a destra.
 
-Per aggiungere un'animazione alla transizione, `true` passare come secondo argomento a `PresentViewController`:
+Per aggiungere un'animazione alla transizione, passare `true` come secondo argomento per `PresentViewController`:
 
 ```csharp
 PresentViewController (vc2, true, null);
@@ -70,13 +70,13 @@ PresentViewController (vc2, true, null);
 
 Lo screenshot seguente mostra l'aspetto della transizione per il `PartialCurl` caso:
 
- ![](core-animation-images/06-view-transitions.png "Questa schermata mostra la transizione PartialCurl")
+ ![](core-animation-images/06-view-transitions.png "This screenshot shows the PartialCurl transition")
 
 ### <a name="view-transitions"></a>Visualizza transizioni
 
 Oltre alle transizioni tra controller, UIKit supporta anche l'animazione delle transizioni tra le visualizzazioni per scambiare una visualizzazione per un'altra.
 
-Si immagini, ad esempio, di disporre di `UIImageView`un controller con, in cui il tocco sull'immagine dovrebbe `UIImageView`visualizzare un secondo. Per aggiungere un'animazione alla visualizzazione della visualizzazione immagine per passare alla seconda visualizzazione immagine, è sufficiente chiamare `UIView.Transition`, passandogli `toView` e `fromView` come illustrato di seguito:
+Si immagini, ad esempio, di avere un controller con `UIImageView`, in cui il tocco sull'immagine dovrebbe visualizzare un secondo `UIImageView`. Per aggiungere un'animazione alla visualizzazione della visualizzazione immagine per passare alla seconda visualizzazione immagine, è sufficiente chiamare `UIView.Transition`, passando la `toView` e `fromView` come illustrato di seguito:
 
 ```csharp
 UIView.Transition (
@@ -88,15 +88,15 @@ UIView.Transition (
   completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition`accetta anche un `duration` parametro che controlla il tempo di esecuzione dell'animazione, [`options`](xref:UIKit.UIViewAnimationOptions) oltre a specificare elementi quali l'animazione da usare e la funzione di interpolazione. Inoltre, è possibile specificare un gestore di completamento che verrà chiamato al termine dell'animazione.
+`UIView.Transition` accetta anche un parametro di `duration` che controlla il tempo di esecuzione dell'animazione, nonché [`options`](xref:UIKit.UIViewAnimationOptions) per specificare elementi quali l'animazione da usare e la funzione di interpolazione. Inoltre, è possibile specificare un gestore di completamento che verrà chiamato al termine dell'animazione.
 
-La schermata seguente mostra la transizione animata tra le visualizzazioni immagine quando `TransitionFlipFromTop` si usa:
+La schermata seguente mostra la transizione animata tra le visualizzazioni immagine quando si usa `TransitionFlipFromTop`:
 
- ![](core-animation-images/07-animated-transition.png "Questa schermata mostra la transizione animata tra le visualizzazioni immagine quando si usa TransitionFlipFromTop")
+ ![](core-animation-images/07-animated-transition.png "This screenshot shows the animated transition between the image views when TransitionFlipFromTop is used")
 
 ### <a name="view-property-animations"></a>Visualizza animazioni proprietà
 
-UIKit supporta l' `UIView` animazione gratuita di un'ampia gamma di proprietà nella classe, tra cui:
+UIKit supporta l'animazione gratuita di un'ampia gamma di proprietà nella classe `UIView`, tra cui:
 
 - Frame
 - Limiti
@@ -105,7 +105,7 @@ UIKit supporta l' `UIView` animazione gratuita di un'ampia gamma di proprietà n
 - Transform
 - Colore
 
-Queste animazioni si verificano in modo implicito specificando `NSAction` le modifiche alle proprietà in `UIView.Animate` un delegato passato al metodo statico. Il codice seguente, ad esempio, anima il punto centrale di un `UIImageView`oggetto:
+Queste animazioni si verificano in modo implicito specificando le modifiche alle proprietà in un delegato `NSAction` passato al metodo `UIView.Animate` statico. Il codice seguente, ad esempio, anima il punto centrale di un `UIImageView`:
 
 ```csharp
 pt = imgView.Center;
@@ -125,27 +125,27 @@ UIView.Animate (
 
 In questo modo si ottiene un'immagine di animazione avanti e indietro nella parte superiore della schermata, come illustrato di seguito:
 
- ![](core-animation-images/08-animate-center.png "Un'immagine che si anima avanti e indietro nella parte superiore della schermata come output")
+ ![](core-animation-images/08-animate-center.png "An image animating back and forth across the top of the screen as the output")
 
-Come nel `Transition` metodo, `Animate` consente di impostare la durata, insieme alla funzione di interpolazione. Questo esempio usa anche l' `UIViewAnimationOptions.Autoreverse` opzione, che fa in modo che l'animazione venga animata dal valore di nuovo a quella iniziale. Tuttavia, il codice imposta anche di `Center` nuovo il valore iniziale in un gestore di completamento. Mentre un'animazione esegue l'interpolazione dei valori delle proprietà nel tempo, il valore effettivo del modello della proprietà è sempre il valore finale impostato. In questo esempio, il valore è un punto vicino al lato destro della SuperView. Senza impostare l' `Center` oggetto sul punto iniziale, che è il punto in cui l'animazione viene completata `Autoreverse` a causa dell'impostazione di, l'immagine si blocca sul lato destro dopo il completamento dell'animazione, come illustrato di seguito:
+Come per il metodo `Transition`, `Animate` consente l'impostazione della durata, insieme alla funzione di interpolazione. Questo esempio usa anche l'opzione `UIViewAnimationOptions.Autoreverse`, che fa in modo che l'animazione venga animata dal valore di nuovo a quella iniziale. Tuttavia, il codice imposta anche il `Center` di nuovo sul valore iniziale in un gestore di completamento. Mentre un'animazione esegue l'interpolazione dei valori delle proprietà nel tempo, il valore effettivo del modello della proprietà è sempre il valore finale impostato. In questo esempio, il valore è un punto vicino al lato destro della SuperView. Senza impostare il `Center` sul punto iniziale, che è il punto in cui l'animazione viene completata a causa dell'impostazione del `Autoreverse`, l'immagine si blocca a destra dopo il completamento dell'animazione, come illustrato di seguito:
 
- ![](core-animation-images/09-animation-complete.png "Senza impostare il centro sul punto iniziale, l'immagine si blocca al lato destro dopo il completamento dell'animazione")
+ ![](core-animation-images/09-animation-complete.png "Without setting the Center to the initial point, the image would snap back to the right side after the animation completes")
 
 ## <a name="using-core-animation"></a>Uso dell'animazione Core
 
- `UIView`le animazioni consentono una grande quantità di funzionalità e dovrebbero essere utilizzate, se possibile, a causa della semplicità di implementazione. Come indicato in precedenza, le animazioni UIView usano il Framework di animazione principale. Tuttavia, alcune operazioni non possono essere eseguite `UIView` con animazioni, ad esempio l'animazione di proprietà aggiuntive che non possono essere animate con una visualizzazione o l'interpolazione lungo un percorso non lineare. In questi casi, in cui è necessario un controllo più preciso, è possibile usare direttamente l'animazione di base.
+ `UIView` animazioni consentono una grande quantità di funzionalità e devono essere utilizzate, se possibile, a causa della semplicità di implementazione. Come indicato in precedenza, le animazioni UIView usano il Framework di animazione principale. Tuttavia, alcune operazioni non possono essere eseguite con `UIView` animazioni, ad esempio l'animazione di proprietà aggiuntive che non possono essere animate con una visualizzazione o l'interpolazione lungo un percorso non lineare. In questi casi, in cui è necessario un controllo più preciso, è possibile usare direttamente l'animazione di base.
 
 ### <a name="layers"></a>Livelli
 
-Quando si lavora con l'animazione di base, l'animazione avviene tramite *livelli*, `CALayer`che sono di tipo. Un livello è concettualmente simile a una vista in quanto è presente una gerarchia di livelli, molto simile a una gerarchia di visualizzazione. In realtà, i livelli delle visualizzazioni, con la visualizzazione, aggiungono il supporto per l'interazione dell'utente. È possibile accedere al livello di qualsiasi visualizzazione tramite la `Layer` proprietà della visualizzazione. Infatti, il contesto utilizzato nel `Draw` metodo di `UIView` viene effettivamente creato dal livello. Internamente, il livello a cui `UIView` è associato un delegato è impostato sulla visualizzazione stessa, ovvero sulle chiamate `Draw`. Quindi, quando si disegna `UIView`in un oggetto, si sta effettivamente disegnando sul livello.
+Quando si lavora con l'animazione di base, l'animazione avviene tramite *livelli*, che sono di tipo `CALayer`. Un livello è concettualmente simile a una vista in quanto è presente una gerarchia di livelli, molto simile a una gerarchia di visualizzazione. In realtà, i livelli delle visualizzazioni, con la visualizzazione, aggiungono il supporto per l'interazione dell'utente. È possibile accedere al livello di qualsiasi visualizzazione tramite la proprietà `Layer` della visualizzazione. In realtà, il contesto utilizzato nel `Draw` metodo di `UIView` viene effettivamente creato dal livello. Internamente, il livello che supporta un `UIView` dispone del delegato impostato sulla visualizzazione stessa, ovvero sulle chiamate che `Draw`. Quindi, quando si disegna in una `UIView`, si sta effettivamente disegnando sul livello.
 
 Le animazioni livello possono essere implicite o esplicite. Le animazioni implicite sono dichiarative. È sufficiente dichiarare le proprietà del livello che devono essere modificate e l'animazione funziona semplicemente. Le animazioni esplicite d'altra parte vengono create tramite una classe di animazione aggiunta a un livello. Le animazioni esplicite consentono un controllo aggiuntivo sulla modalità di creazione di un'animazione. Le sezioni seguenti illustrano in dettaglio le animazioni implicite ed esplicite.
 
 ### <a name="implicit-animations"></a>Animazioni implicite
 
-Un modo per animare le proprietà di un livello è tramite un'animazione implicita. `UIView`animazioni creare animazioni implicite. Tuttavia, è possibile creare animazioni implicite direttamente anche su un livello.
+Un modo per animare le proprietà di un livello è tramite un'animazione implicita. `UIView` animazioni creano animazioni implicite. Tuttavia, è possibile creare animazioni implicite direttamente anche su un livello.
 
-Il codice seguente, ad esempio, imposta un livello `Contents` da un'immagine, imposta la larghezza e il colore del bordo e aggiunge il livello come sottolivello del livello della visualizzazione:
+Il codice seguente, ad esempio, imposta la `Contents` di un livello da un'immagine, imposta la larghezza e il colore del bordo e aggiunge il livello come sottolivello del livello della visualizzazione:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -164,7 +164,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Per aggiungere un'animazione implicita per il livello, è sufficiente eseguire il wrapping `CATransaction`delle modifiche alle proprietà in un oggetto. Ciò consente di animare le `BorderWidth` proprietà che non possono essere animate con un'animazione di visualizzazione, ad esempio e `BorderColor` come illustrato di seguito:
+Per aggiungere un'animazione implicita per il livello, è sufficiente eseguire il wrapping delle modifiche delle proprietà in una `CATransaction`. Ciò consente di animare le proprietà che non possono essere animate con un'animazione di visualizzazione, ad esempio il `BorderWidth` e `BorderColor`, come illustrato di seguito:
 
 ```csharp
 public override void ViewDidAppear (bool animated)
@@ -180,21 +180,21 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Questo codice aggiunge anche un'animazione al livello `Position`, ovvero la posizione del punto di ancoraggio del livello misurato dall'angolo superiore sinistro delle coordinate del superlivello. Il punto di ancoraggio di un livello è un punto normalizzato all'interno del sistema di coordinate del livello.
+Questo codice aggiunge anche un'animazione all'`Position`del livello, ovvero la posizione del punto di ancoraggio del livello misurato dall'angolo superiore sinistro delle coordinate del superlivello. Il punto di ancoraggio di un livello è un punto normalizzato all'interno del sistema di coordinate del livello.
 
 Nella figura seguente vengono illustrati la posizione e il punto di ancoraggio:
 
- ![](core-animation-images/10-postion-anchorpt.png "Questa figura mostra la posizione e il punto di ancoraggio")
+ ![](core-animation-images/10-postion-anchorpt.png "This figure shows the position and anchor point")
 
-Quando l'esempio viene eseguito, `Position` `BorderWidth` e `BorderColor` animano come illustrato nelle schermate seguenti:
+Quando si esegue l'esempio, il `Position`, `BorderWidth` e `BorderColor` un'animazione, come illustrato nelle schermate seguenti:
 
- ![](core-animation-images/11-implicit-animation.png "Quando si esegue l'esempio, la posizione, BorderWidth e BorderColor animano come illustrato")
+ ![](core-animation-images/11-implicit-animation.png "When the example is run, the Position, BorderWidth and BorderColor animate as shown")
 
 ### <a name="explicit-animations"></a>Animazioni esplicite
 
-Oltre alle animazioni implicite, l'animazione principale include un'ampia gamma di classi che `CAAnimation` ereditano da che consentono di incapsulare le animazioni che vengono aggiunte in modo esplicito a un livello. Consentono un controllo più granulare sulle animazioni, ad esempio la modifica del valore iniziale di un'animazione, il raggruppamento di animazioni e la specifica di fotogrammi chiave per consentire percorsi non lineari.
+Oltre alle animazioni implicite, l'animazione principale include un'ampia gamma di classi che ereditano da `CAAnimation` che consentono di incapsulare le animazioni che vengono aggiunte in modo esplicito a un livello. Consentono un controllo più granulare sulle animazioni, ad esempio la modifica del valore iniziale di un'animazione, il raggruppamento di animazioni e la specifica di fotogrammi chiave per consentire percorsi non lineari.
 
-Il codice seguente illustra un esempio di un'animazione esplicita che `CAKeyframeAnimation` usa un oggetto per il livello illustrato in precedenza (nella sezione Animazione implicita):
+Il codice seguente illustra un esempio di un'animazione esplicita che usa un `CAKeyframeAnimation` per il livello illustrato in precedenza (nella sezione Animazione implicita):
 
 ```csharp
 public override void ViewDidAppear (bool animated)
@@ -225,11 +225,11 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Questo codice modifica la `Position` del livello creando un percorso che viene quindi usato per definire un'animazione del fotogramma chiave. `Position` Si noti che il livello è impostato sul valore finale `Position` di dall'animazione. In caso contrario, il livello tornerà improvvisamente al relativo `Position` prima dell'animazione perché l'animazione modifica solo il valore di presentazione e non il valore effettivo del modello. Impostando il valore del modello sul valore finale dall'animazione, il livello rimane sul posto alla fine dell'animazione.
+Questo codice modifica la `Position` del livello creando un percorso che viene quindi usato per definire un'animazione del fotogramma chiave. Si noti che il `Position` del livello è impostato sul valore finale della `Position` dall'animazione. In caso contrario, il livello tornerà improvvisamente alla relativa `Position` prima dell'animazione perché l'animazione modifica solo il valore di presentazione e non il valore effettivo del modello. Impostando il valore del modello sul valore finale dall'animazione, il livello rimane sul posto alla fine dell'animazione.
 
 Gli screenshot seguenti mostrano il livello contenente l'animazione dell'immagine nel percorso specificato:
 
- ![](core-animation-images/12-explicit-animation.png "Questa schermata mostra il livello che contiene l'immagine che aggiunge l'animazione al percorso specificato")
+ ![](core-animation-images/12-explicit-animation.png "This screenshot shows the layer containing the image animating through the specified path")
 
 ## <a name="summary"></a>Riepilogo
 

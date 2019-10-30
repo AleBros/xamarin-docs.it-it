@@ -4,15 +4,15 @@ description: Questo documento fornisce una panoramica generale delle funzionalit
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: f5028fe6ae7ee726ffd94d7908a089ce3bdcb385
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287944"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030559"
 ---
 # <a name="introduction-to-tvos-12"></a>Introduzione a tvOS 12
 
@@ -26,11 +26,11 @@ tvOS 12 include TVUIKit, un set di API che consentono agli sviluppatori di tvOS 
 
 ## <a name="password-autofill"></a>Riempimento automatico password
 
-Con tvOS 12, gli utenti possono usare i propri dispositivi iOS per accedere a un'app tvOS con un solo tocco. Questa funzionalità è abilitata tramite una `UITextContentType` combinazione di utilizzo per specificare i campi nome utente e password, i domini associati per stabilire una relazione tra un'app per iOS e un'app tvOS e gli ambienti di messa a fuoco preferiti per selezionare un elemento per ricevere lo stato attivo dopo un utente fornisce un nome utente e una password.
+Con tvOS 12, gli utenti possono usare i propri dispositivi iOS per accedere a un'app tvOS con un solo tocco. Questa funzionalità è abilitata tramite una combinazione di `UITextContentType` utilizzo per specificare i campi nome utente e password, i domini associati per stabilire una relazione tra un'app per iOS e un'app tvOS e gli ambienti di messa a fuoco preferiti per selezionare un elemento per ricevere lo stato attivo dopo un utente fornisce un nome utente e una password.
 
 ## <a name="focus-engine-enhancements"></a>Miglioramenti del motore di messa a fuoco
 
-tvOS 12 consente a tutte le app, indipendentemente dalla modalità di rendering, di interagire con il motore di messa a fuoco. Attraverso le interazioni di un utente con Siri remote, il motore di messa a fuoco può essere usato con qualsiasi app per selezionare un elemento, suggerire le possibili modifiche allo stato attivo e naturalmente aggiornare lo stato attivo. Questa funzionalità è abilitata nelle applicazioni personalizzate tramite `IUIFocusItemContainer` l'interfaccia di `UIFocusMovementHint` UIKit, la `IUIFocusItemScrollableContainer` classe, l'interfaccia e altre classi e metodi correlati.
+tvOS 12 consente a tutte le app, indipendentemente dalla modalità di rendering, di interagire con il motore di messa a fuoco. Attraverso le interazioni di un utente con Siri remote, il motore di messa a fuoco può essere usato con qualsiasi app per selezionare un elemento, suggerire le possibili modifiche allo stato attivo e naturalmente aggiornare lo stato attivo. Questa funzionalità è abilitata nelle applicazioni personalizzate tramite l'interfaccia `IUIFocusItemContainer` di UIKit, la classe `UIFocusMovementHint`, l'interfaccia `IUIFocusItemScrollableContainer` e altri metodi e classi correlati.
 
 ## <a name="vision-framework"></a>Framework visione artificiale
 

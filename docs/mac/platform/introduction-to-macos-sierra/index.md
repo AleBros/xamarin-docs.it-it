@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b452d4b0a75a64349692c633a8c1bee6a8770256
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31aa4d1fb8b77b88fc6b6790147409ff8ec13145
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290928"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029843"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introduzione a macOS Sierra
 
@@ -52,7 +52,7 @@ Per altre informazioni, vedere la Guida di riferimento a [APPLEPAY JS framework]
 
 Le app macOS moderne, ad esempio il Web browser Safari di Apple, le pagine di Elaboratore di testo e dei numeri, usano molte nuove tecnologie per presentare un'interfaccia utente unificata e sensibile al contesto che si distingue dagli elementi dell'interfaccia utente tradizionali, come i pannelli mobili e più aperti Windows.
 
-[![Esempio di finestra Mac a schede](images/content08.png)](images/content08.png#lightbox)
+[![un esempio di finestra Mac a schede](images/content08.png)](images/content08.png#lightbox)
 
 La guida per la [creazione di app MacOS moderne](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) illustra diversi suggerimenti, funzionalità e tecniche che uno sviluppatore può usare per creare un'app MacOS moderna in Novell. Mac.
 
@@ -83,15 +83,15 @@ Per ulteriori informazioni, vedere la guida alla [programmazione dell'estensione
 
 Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in macOS Sierra che consentiranno all'app di migliorare la sicurezza dell'app e di garantire la privacy degli utenti finali, inclusi i seguenti:
 
-- La nuova `NSAllowsArbitraryLoadsInWebContent` chiave può essere aggiunta al `Info.plist` file dell'app e consente di caricare le pagine Web correttamente mentre la protezione di Apple Transport Security (ATS) è ancora abilitata per il resto dell'app.
+- La nuova chiave di `NSAllowsArbitraryLoadsInWebContent` può essere aggiunta al file di `Info.plist` dell'app e consentirà di caricare le pagine Web correttamente, mentre la protezione di Apple Transport Security (ATS) è ancora abilitata per il resto dell'app.
 - L'API CDSA (Common Data Security Architecture) è stata deprecata e deve essere sostituita con l'API SecKey per generare chiavi asimmetriche.
 - Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app smetta di usare la crittografia SHA-1 e 3DES il prima possibile.
 - Poiché i nuovi Appunti in iOS 10 e macOS Sierra consentono all'utente di copiare e incollare tra dispositivi, l'API è stata espansa in modo da consentire la limitazione di uno degli Appunti a un dispositivo specifico e il timestamp da cancellare automaticamente in un determinato punto. Inoltre, il nome Pasteboards non è più permanente e deve essere sostituito con i contenitori di montaggio condivisi.
-- Se l'app accede ai dati protetti (ad esempio, il calendario dell'utente), _deve_ dichiarare tale finalità con la chiave del valore stringa per finalità corrette `Info.plist` nel file`NSCalendarUsageDescription` (nel caso del calendario).
+- Se l'app accede ai dati protetti (ad esempio, il calendario dell'utente), _deve_ dichiarare tale finalità con la chiave del valore stringa per finalità corrette nel file `Info.plist` (`NSCalendarUsageDescription` nel caso del calendario).
 - Le app firmate per sviluppatori che non vengono recapitate tramite Mac App Store possono ora sfruttare i vantaggi di CloudKit, keychain, unità iCloud, notifiche push remote, MapKit e diritti VPN.
 - macOS Sierra non supporta più la distribuzione di codice o dati esterni insieme all'app code-Signer nell'archivio zip o nell'immagine disco senza segno perché il percorso di runtime non è noto prima del runtime.
 
-Inoltre, le app in esecuzione in MacOS Sierra (o versioni successive) devono dichiarare in modo statico l'intenzione di accedere a funzionalità specifiche o a informazioni utente immettendo una `Info.plist` o più chiavi specifiche per la privacy nei file che spieghino all'utente il motivo per cui l'app desidera ottenere accesso.
+Inoltre, le app in esecuzione in macOS Sierra (o versioni successive) devono dichiarare in modo statico l'intento di accedere a funzionalità specifiche o a informazioni utente immettendo una o più chiavi specifiche per la privacy nei file `Info.plist` che spieghino all'utente il motivo per cui l'app desidera ottenere l'accesso .
 
 Poiché macOS Sierra condivide tali modifiche con iOS 10, per altre informazioni vedere la guida ai miglioramenti per la [sicurezza e la privacy](~/ios/app-fundamentals/security-privacy.md) di iOS 10.
 
@@ -99,7 +99,7 @@ Poiché macOS Sierra condivide tali modifiche con iOS 10, per altre informazioni
 
 ### <a name="smart-card-driver-extension-support"></a>Supporto dell'estensione driver Smart Card
 
-Con MacOS Sierra, l'app può creare `NSExtension` driver di smart card basati che consentono l'accesso in sola lettura al contenuto da determinati tipi di smart card. Queste informazioni vengono quindi presentate all'interno del keychain di sistema (sostituendo il metodo di architettura Common Data Security deprecato).
+Con macOS Sierra, l'app può creare driver di smart card basati su `NSExtension` che consentono l'accesso in sola lettura al contenuto da determinati tipi di smart card. Queste informazioni vengono quindi presentate all'interno del keychain di sistema (sostituendo il metodo di architettura Common Data Security deprecato).
 
 Per ulteriori informazioni, vedere la Guida di [riferimento a CryptoTokenKit Framework](https://developer.apple.com/reference/cryptotokenkit)di Apple.
 
@@ -123,11 +123,11 @@ Per altre informazioni, vedere la Guida di [riferimento](https://developer.apple
 
 macOS Sierra estende il supporto per i formati di pixel estesi e gli spazi dei colori a gamma ampia in tutto il sistema, inclusi i Framework come la grafica principale, le immagini di base, i metal e AVFoundation. Il supporto per i dispositivi con schermi Wide Color è ulteriormente facilitato fornendo questo comportamento nell'intero stack di grafica.
 
-Inoltre, `AppKit` è stato modificato per funzionare nel nuovo spazio dei colori di **sRGB** esteso, semplificando la combinazione di colori in gamme di colori Wide senza perdita significativa delle prestazioni.
+Inoltre, `AppKit` è stato modificato per funzionare nel nuovo spazio dei colori di **sRGB** esteso, semplificando la combinazione di colori in gamme di colori estesi senza perdite di prestazioni significative.
 
 Apple offre le seguenti procedure consigliate per l'utilizzo di colori estesi:
 
-- `NSColor`USA ora lo spazio dei colori di sRGB e non blocca più i valori `0.0` `1.0` nell'intervallo. Se l'app si basa sul comportamento del morsetto precedente, sarà necessario modificarlo per macOS Sierra.
+- `NSColor` USA ora lo spazio dei colori di sRGB e non blocca più i valori al `0.0` per `1.0` intervallo. Se l'app si basa sul comportamento del morsetto precedente, sarà necessario modificarlo per macOS Sierra.
 - Quando si usa un'API di basso livello, ad esempio grafica di base o metal, per fornire l'elaborazione di immagini, l'app deve usare uno spazio dei colori con intervallo esteso e un formato pixel che supporti i valori a virgola mobile a 16 bit. Se necessario, l'app dovrà bloccare manualmente i valori dei componenti dei colori.
 - I componenti grafici di base, le immagini di base e gli shader con prestazioni Metal forniscono tutti i nuovi metodi per la conversione tra i due spazi dei colori.
 

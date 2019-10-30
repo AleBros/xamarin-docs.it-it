@@ -5,21 +5,21 @@ ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aeb3d01a3d0f7edbe92c9959073d859fc63486a6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769641"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031646"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitasking per iPad in Novell. iOS
 
 _iOS 9 supporta due app in esecuzione allo stesso tempo, usando la visualizzazione della diapositiva o della divisione. Supporta anche la riproduzione video in immagini._
 
-![](multitasking-images/about02-sml.png "Suddividere l'esempio di schermata") ![](multitasking-images/about03-sml.png "in PAP esempio")
+![](multitasking-images/about02-sml.png "Esempio di schermata divisa") ![](multitasking-images/about03-sml.png "Esempio di immagine in immagine")
 
 iOS 9 aggiunge il supporto multitasking per l'esecuzione di due app allo stesso tempo su hardware iPad specifico. Il multitasking per iPad è supportato tramite le funzionalità seguenti:
 
@@ -64,7 +64,7 @@ iOS 9 offre nuove funzionalità multitasking su iPad con l'introduzione di _Slid
 
 La funzionalità di scorrimento consente all'utente di selezionare una seconda app e di visualizzarla in un piccolo pannello scorrevole per offrire un'interazione rapida. Il pannello di scorrimento è temporaneo e si chiude quando l'utente torna a usare nuovamente l'app principale.
 
-[![](multitasking-images/about01.png "Pannello della diapositiva")](multitasking-images/about01.png#lightbox)
+[![](multitasking-images/about01.png "The Slide Over panel")](multitasking-images/about01.png#lightbox)
 
 La cosa principale da ricordare è che l'utente decide quali due app verranno eseguite side-by-side e che lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, è necessario eseguire alcune operazioni per assicurarsi che l'app Novell. iOS venga eseguita correttamente in un pannello di scorrimento:
 
@@ -79,7 +79,7 @@ La funzionalità di scorrimento è disponibile solo in un iPad Pro, iPad Air, iP
 
 Nell'hardware iPad supportato (solo iPad Air 2, iPad Mini 4 e iPad Pro), l'utente può selezionare una seconda app ed eseguirla side-by-side con l'app attualmente in esecuzione in modalità split screen. L'utente può controllare la percentuale della schermata principale occupata da ogni app trascinando un divisore a schermo.
 
-[![](multitasking-images/about02.png "Visualizzazione divisa")](multitasking-images/about02.png#lightbox)
+[![](multitasking-images/about02.png "The Split View")](multitasking-images/about02.png#lightbox)
 
 Analogamente alla diapositiva, l'utente decide quali due app verranno eseguite side-by-side e di nuovo, lo sviluppatore non ha alcun controllo su questo processo. Di conseguenza, la visualizzazione divisa pone requisiti simili in un'app Novell. iOS:
 
@@ -94,7 +94,7 @@ Per altre informazioni sulla preparazione dell'app per la visualizzazione divisa
 
 La nuova immagine nella funzionalità Picture (anche nota come _PIP_) consente all'utente di guardare un video in una piccola finestra mobile che l'utente può posizionare in un punto qualsiasi dello schermo sopra altre app in esecuzione.
 
-[![](multitasking-images/about03.png "Immagine di esempio nella finestra mobile immagine")](multitasking-images/about03.png#lightbox)
+[![](multitasking-images/about03.png "An example Picture in Picture floating window")](multitasking-images/about03.png#lightbox)
 
 Come per la diapositiva e la visualizzazione divisa, l'utente ha il controllo completo sull'osservazione di un video in modalità immagine. Se la funzione principale dell'app è guardare i video, sarà necessario apportare alcune modifiche per comportarsi correttamente in modalità PIP. In caso contrario, non sono necessarie modifiche per supportare PIP.
 
@@ -118,7 +118,7 @@ Per supportare il multitasking iOS 9 in qualsiasi nuova app Novell. iOS, usare d
 
 Prima di iOS 9, è possibile progettare l'app in base a dimensioni e orientamenti specifici del dispositivo. Poiché ora un'app può essere eseguita in un pannello di scorrimento o in modalità di visualizzazione divisa, può trovarsi in esecuzione in una classe di dimensioni orizzontali compatte o regolari su iPad, indipendentemente dall'orientamento fisico o dalle dimensioni dello schermo del dispositivo.
 
-[![](multitasking-images/sizeclasses01.png "Considerazioni sulle dimensioni e sull'orientamento dello schermo")](multitasking-images/sizeclasses01.png#lightbox)
+[![](multitasking-images/sizeclasses01.png "Screen Size and Orientation Considerations")](multitasking-images/sizeclasses01.png#lightbox)
 
 In un iPad un'app a schermo intero presenta classi di dimensioni orizzontali e verticali regolari. Tutti gli iPhone, ma iPhone 6 Plus e iPhone 6s Plus, hanno classi di dimensioni compatte in entrambe le direzioni in qualsiasi orientamento. IPhone 6 Plus e iPhone 6s Plus in modalità orizzontale hanno una classe di dimensioni orizzontali normale e una classe di dimensioni verticali compatte, molto simile a un iPad mini.
 
@@ -132,13 +132,13 @@ Negli iPad che supportano lo scorrimento e la visualizzazione divisa, è possibi
 
 Nell'app [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) di esempio, se viene eseguita a schermo intero su un iPad in modalità orizzontale, presenta contemporaneamente l'elenco e la visualizzazione Dettagli:
 
-[![](multitasking-images/sizeclasses03.png "Elenco e visualizzazione dettagli presentati allo stesso tempo")](multitasking-images/sizeclasses03.png#lightbox)
+[![](multitasking-images/sizeclasses03.png "The list and the detail view presented at the same time")](multitasking-images/sizeclasses03.png#lightbox)
 
 Se la stessa app viene eseguita in un pannello di scorrimento, viene definita come classe di dimensioni orizzontali compatte e visualizza solo l'elenco:
 
-[![](multitasking-images/sizeclasses04.png "Solo l'elenco visualizzato quando il dispositivo è orizzontale")](multitasking-images/sizeclasses04.png#lightbox)
+[![](multitasking-images/sizeclasses04.png "Only the list presented when the device is horizontal")](multitasking-images/sizeclasses04.png#lightbox)
 
-Per assicurarsi che l'app si comporta correttamente in queste situazioni, è consigliabile adottare raccolte di tratti insieme alle classi di dimensioni e conformi alle `IUIContentContainer` interfacce e. `IUITraitEnvironment` Per ulteriori informazioni, vedere la Guida di [riferimento alla classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) di Apple e la Guida [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
+Per assicurarsi che l'app si comportasse correttamente in queste situazioni, è necessario adottare le raccolte di tratti insieme alle classi di dimensioni e conformi alle interfacce `IUIContentContainer` e `IUITraitEnvironment`. Per ulteriori informazioni, vedere la Guida di [riferimento alla classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) di Apple e la Guida [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 Inoltre, non è più possibile fare affidamento sui limiti dello schermo dei dispositivi per definire l'area visibile dell'app, ma è necessario usare i limiti della finestra dell'app. Poiché i limiti della finestra sono completamente sotto il controllo dell'utente, non è possibile regolarli a livello di codice o impedire all'utente di modificare questi limiti.
 
@@ -154,11 +154,11 @@ Ora, con iOS 9, le app possono creare scelte rapide da tastiera personalizzate. 
 
 La **scheda comando** apre uno strumento di selezione delle app che consente all'utente di spostarsi rapidamente tra le app dalla tastiera, in modo analogo all'Mac OS:
 
-[![](multitasking-images/keyboard01.png "Switcher dell'app")](multitasking-images/keyboard01.png#lightbox)
+[![](multitasking-images/keyboard01.png "The app switcher")](multitasking-images/keyboard01.png#lightbox)
 
 Se un'app iOS 9 include tasti di scelta rapida, l'utente può mantenere il **comando**, l' **opzione** o i tasti di **controllo** per visualizzarli in un popup:
 
-[![](multitasking-images/keyboard02.png "Popup dei tasti di scelta rapida")](multitasking-images/keyboard02.png#lightbox)
+[![](multitasking-images/keyboard02.png "The keyboard shortcuts popup")](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definizione di scelte rapide da tastiera personalizzate
 
@@ -188,13 +188,13 @@ public void NewEntry() {
 #endregion
 ```
 
-In primo luogo, viene `CanBecomeFirstResponder` eseguito l'override `true` della proprietà e viene restituito in modo che il controller di visualizzazione o visualizzazione possa ricevere input da tastiera. 
+In primo luogo, si esegue l'override della proprietà `CanBecomeFirstResponder` e si restituisce `true` in modo che il controller di visualizzazione o visualizzazione possa ricevere input da tastiera. 
 
-Successivamente, si esegue l' `KeyCommands` override della proprietà e si `UIKeyCommand` crea un nuovo oggetto per la sequenza di tasti **Command-N** . Quando la sequenza di tasti è attivata, viene chiamato `NewEntry` il metodo (che viene esposto a iOS 9 usando `Export` il comando) per eseguire l'azione richiesta.
+Successivamente, si esegue l'override della proprietà `KeyCommands` e si crea una nuova `UIKeyCommand` per la sequenza di tasti **Command-N** . Quando la sequenza di tasti viene attivata, viene chiamato il metodo `NewEntry` (che viene esposto a iOS 9 usando il comando `Export`) per eseguire l'azione richiesta.
 
 Se si esegue l'app in un iPad con una tastiera hardware collegata e l'utente digita **Command-N**, viene aggiunta una nuova voce all'elenco. Se l'utente utilizza il tasto di **comando** , verrà visualizzato l'elenco dei collegamenti seguenti:
 
-[![](multitasking-images/keyboard03.png "Popup dei tasti di scelta rapida")](multitasking-images/keyboard03.png#lightbox)
+[![](multitasking-images/keyboard03.png "The keyboard shortcuts popup")](multitasking-images/keyboard03.png#lightbox)
 
 Per un'implementazione di esempio, vedere l' [app multitasking](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) di esempio.
 
@@ -228,7 +228,7 @@ Mentre Apple suggerisce che tutte le app iOS 9 supportano il multitasking, è po
 
 Per consentire all'app Novell. iOS di rifiutare esplicitamente l'esecuzione in un pannello di scorrimento o in modalità di visualizzazione divisa, modificare il file **info. plist** del progetto e selezionare **richiede schermo intero**:
 
-[![](multitasking-images/fullscreen01.png "Rifiuto esplicito del multitasking")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "Opting Out of Multitasking")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
 > Quando si rifiuta esplicitamente il multitasking, l'app non può essere eseguita in slide out o Split View, ma non impedisce l'esecuzione di un'altra app in slide out o in un'immagine nel video immagine, oltre che nell'app.
@@ -241,9 +241,9 @@ Nella maggior parte dei casi, l'app deve consentire all'utente di riprodurre qua
 
 Per rifiutare esplicitamente la riproduzione video PIP, eseguire le operazioni seguenti nell'app:
 
-- Se si utilizza un `AVPlayerViewController` per visualizzare video, impostare la `AllowsPictureInPicturePlayback` proprietà su `false`.
-- Se si usa il per `AVPlayerLayer` visualizzare il video, non creare un' `AVPictureInPictureController`istanza di.
-- Se si utilizza un `WKWebView` per visualizzare video, impostare la `AllowsPictureInPictureMediaPlayback` proprietà su `false`.
+- Se si usa un `AVPlayerViewController` per visualizzare il video, impostare la proprietà `AllowsPictureInPicturePlayback` su `false`.
+- Se si usa il `AVPlayerLayer` per visualizzare il video, non creare un'istanza di un `AVPictureInPictureController`.
+- Se si usa un `WKWebView` per visualizzare il video, impostare la proprietà `AllowsPictureInPictureMediaPlayback` su `false`.
 
 <a name="Summary" />
 
@@ -257,6 +257,6 @@ Questo articolo ha trattato i passaggi necessari per assicurarsi che un'app Nove
 - [Multitasking (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
 - [Introduzione agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Adozione di miglioramenti multitasking in iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145)
-- [Post di blog](https://blog.xamarin.com/using-auto-layouts-for-ios-9-splitview/)
+- [Post di Blog](https://blog.xamarin.com/using-auto-layouts-for-ios-9-splitview/)

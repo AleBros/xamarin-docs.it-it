@@ -4,21 +4,21 @@ description: Questo articolo illustra l'uso dei nuovi framework dell'interfaccia
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: fa2e287775e6669bd8bdf2728d9c676c451af69b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 438ed93bafa37496e6a97ea2fe98ca6a515682cf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753290"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032562"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatti e ContactsUI in Novell. iOS
 
 _Questo articolo illustra l'uso dei nuovi framework dell'interfaccia utente contatti e contatti in un'app Novell. iOS. Questi framework sostituiscono la rubrica esistente e l'interfaccia utente di Rubrica usata nelle versioni precedenti di iOS._
 
-Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, che sostituiscono i Framework dell'interfaccia utente di Rubrica e rubrica esistenti usati da iOS 8 e versioni precedenti.
+Con l'introduzione di iOS 9, Apple ha rilasciato due nuovi Framework, `Contacts` e `ContactsUI`, che sostituiscono i Framework dell'interfaccia utente della Rubrica e della rubrica esistente usati da iOS 8 e versioni precedenti.
 
 I due nuovi Framework contengono le funzionalità seguenti:
 
@@ -27,10 +27,10 @@ I due nuovi Framework contengono le funzionalità seguenti:
 
 - [**ContactsUI**](#contactsui) : fornisce gli elementi dell'interfaccia utente di Novell. iOS per visualizzare, modificare, selezionare e creare contatti nei dispositivi iOS.
 
-[![](contacts-images/add01.png "Un foglio di contatto di esempio in un dispositivo iOS")](contacts-images/add01.png#lightbox)
+[![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> I Framework `AddressBook` esistenti `AddressBookUI` e usati da iOS 8 (e versioni precedenti) sono stati deprecati in iOS 9 e devono essere sostituiti con i `Contacts` nuovi `ContactsUI` Framework e il prima possibile per qualsiasi app Novell. iOS esistente. Le nuove app devono essere scritte in base ai nuovi Framework.
+> I Framework `AddressBook` e `AddressBookUI` esistenti usati da iOS 8 (e versioni precedenti) sono stati deprecati in iOS 9 e devono essere sostituiti con i nuovi framework di `Contacts` e `ContactsUI` il prima possibile per qualsiasi app Novell. iOS esistente. Le nuove app devono essere scritte in base ai nuovi Framework.
 
 Nelle sezioni seguenti verranno esaminati questi nuovi Framework e come implementarli in un'app Novell. iOS.
 
@@ -44,13 +44,13 @@ Il Framework Contacts fornisce a Novell. iOS l'accesso alle informazioni di cont
 
 ### <a name="contact-objects"></a>Oggetti contatto
 
-La `CNContact` classe fornisce accesso thread-safe, in sola lettura alle proprietà di un contatto, ad esempio nome, indirizzo o numeri di telefono. `CNContact`funzioni come un `NSDictionary` e contengono più raccolte di sola lettura di proprietà (ad esempio indirizzi o numeri di telefono):
+La classe `CNContact` fornisce accesso thread-safe, in sola lettura alle proprietà di un contatto, ad esempio nome, indirizzo o numeri di telefono. `CNContact` funzioni come una `NSDictionary` e contiene più raccolte di proprietà di sola lettura (ad esempio, indirizzi o numeri di telefono):
 
-[![](contacts-images/contactobjects.png "Panoramica sull'oggetto contatto")](contacts-images/contactobjects.png#lightbox)
+[![](contacts-images/contactobjects.png "Contact Object overview")](contacts-images/contactobjects.png#lightbox)
 
-Per tutte le proprietà che possono avere più valori, ad esempio indirizzo di posta elettronica o numeri di telefono, verranno rappresentati come una `NSLabeledValue` matrice di oggetti. `NSLabeledValue`è una tupla thread-safe costituita da un set di sola lettura di etichette e valori in cui l'etichetta definisce il valore per l'utente (ad esempio, un indirizzo di posta elettronica di casa o di lavoro). Il Framework Contacts offre una selezione di etichette predefinite (tramite le `CNLabelKey` classi `CNLabelPhoneNumberKey` statiche e) che è possibile usare nell'app o la possibilità di definire etichette personalizzate in base alle proprie esigenze.
+Per tutte le proprietà che possono avere più valori, ad esempio indirizzo di posta elettronica o numeri di telefono, verranno rappresentati come una matrice di oggetti `NSLabeledValue`. `NSLabeledValue` è una tupla thread-safe costituita da un set di sola lettura di etichette e valori in cui l'etichetta definisce il valore per l'utente (ad esempio, posta elettronica domestica o aziendale). Il Framework Contacts fornisce una selezione di etichette predefinite (tramite il `CNLabelKey` e `CNLabelPhoneNumberKey` classi statiche) che è possibile usare nell'app oppure è possibile definire etichette personalizzate per le proprie esigenze.
 
-Per tutte le app Novell. iOS che devono modificare i valori di un contatto esistente (o crearne di nuovi), usare `NSMutableContact` la versione della classe e le relative sottoclassi, `CNMutablePostalAddress`ad esempio.
+Per tutte le app Novell. iOS che devono modificare i valori di un contatto esistente (o crearne di nuovi), usare la versione `NSMutableContact` della classe e le relative sottoclassi, ad esempio `CNMutablePostalAddress`.
 
 Il codice seguente, ad esempio, creerà un nuovo contatto e lo aggiungerà alla raccolta di contatti dell'utente:
 
@@ -108,9 +108,9 @@ else
 }
 ```
 
-Se questo codice viene eseguito in un dispositivo iOS 9, verrà aggiunto un nuovo contatto alla raccolta dell'utente. Ad esempio:
+Se questo codice viene eseguito in un dispositivo iOS 9, verrà aggiunto un nuovo contatto alla raccolta dell'utente. Esempio:
 
-[![](contacts-images/add01.png "Un nuovo contatto aggiunto alla raccolta dell'utente")](contacts-images/add01.png#lightbox)
+[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>Formattazione e localizzazione di contatti
 
@@ -121,7 +121,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-Per le etichette delle proprietà che verranno visualizzate nell'interfaccia utente dell'app, il Framework di contatto dispone anche di metodi per localizzare tali stringhe. Anche in questo caso, si basa sulle impostazioni locali correnti del dispositivo iOS in cui viene eseguita l'app. Ad esempio:
+Per le etichette delle proprietà che verranno visualizzate nell'interfaccia utente dell'app, il Framework di contatto dispone anche di metodi per localizzare tali stringhe. Anche in questo caso, si basa sulle impostazioni locali correnti del dispositivo iOS in cui viene eseguita l'app. Esempio:
 
 ```csharp
 // Localized properties
@@ -131,9 +131,9 @@ Console.WriteLine(CNLabeledValue<NSString>.LocalizeLabel(CNLabelKey.Home));
 
 ### <a name="fetching-existing-contacts"></a>Recupero di contatti esistenti
 
-Utilizzando un'istanza della `CNContactStore` classe, è possibile recuperare le informazioni di contatto dal database dei contatti dell'utente. `CNContactStore` Contiene tutti i metodi necessari per recuperare o aggiornare i contatti e i gruppi dal database. Poiché questi metodi sono sincroni, è consigliabile eseguirli in un thread in background per evitare di bloccare l'interfaccia utente.
+Utilizzando un'istanza della classe `CNContactStore`, è possibile recuperare le informazioni di contatto dal database dei contatti dell'utente. Il `CNContactStore` contiene tutti i metodi necessari per recuperare o aggiornare i contatti e i gruppi dal database. Poiché questi metodi sono sincroni, è consigliabile eseguirli in un thread in background per evitare di bloccare l'interfaccia utente.
 
-Utilizzando i predicati (compilati dalla `CNContact` classe), è possibile filtrare i risultati restituiti durante il recupero dei contatti dal database. Per recuperare solo i contatti che contengono la `Appleseed`stringa, usare il codice seguente:
+Utilizzando i predicati (compilati dalla classe `CNContact`), è possibile filtrare i risultati restituiti durante il recupero dei contatti dal database. Per recuperare solo i contatti che contengono la stringa `Appleseed`, usare il codice seguente:
 
 ```csharp
 // Create predicate to locate requested contact
@@ -163,9 +163,9 @@ Se questo codice è stato eseguito dopo l'esempio creato nella sezione **oggetto
 
 ### <a name="contact-access-privacy"></a>Privacy accesso contatto
 
-Poiché gli utenti finali possono concedere o negare l'accesso alle informazioni di contatto per ogni singola applicazione, la prima volta che si effettua una chiamata `CNContactStore`a, viene visualizzata una finestra di dialogo in cui viene chiesto di consentire l'accesso per l'app.
+Poiché gli utenti finali possono concedere o negare l'accesso alle informazioni di contatto per ogni singola applicazione, la prima volta che si effettua una chiamata al `CNContactStore`, viene visualizzata una finestra di dialogo in cui viene chiesto di consentire l'accesso per l'app.
 
-La richiesta di autorizzazione verrà presentata una sola volta, la prima volta che l'app viene eseguita e le esecuzioni successive o `CNContactStore` le chiamate a utilizzeranno l'autorizzazione selezionata dall'utente in quel momento.
+La richiesta di autorizzazione verrà presentata una sola volta, la prima volta che l'app viene eseguita e le esecuzioni successive o le chiamate all'`CNContactStore` utilizzeranno l'autorizzazione selezionata dall'utente in quel momento.
 
 È consigliabile progettare l'applicazione in modo che gestisca normalmente l'utente che nega l'accesso al database di contatto.
 
@@ -173,7 +173,7 @@ La richiesta di autorizzazione verrà presentata una sola volta, la prima volta 
 
 Un _contatto parziale_ è un contatto che solo alcune delle proprietà disponibili sono state recuperate dall'archivio contatti per. Se si tenta di accedere a una proprietà che non è stata recuperata in precedenza, viene generata un'eccezione.
 
-È possibile verificare facilmente se un determinato contatto dispone della proprietà desiderata usando i `IsKeyAvailable` metodi o `AreKeysAvailable` dell' `CNContact` istanza di. Ad esempio:
+È possibile verificare facilmente se un determinato contatto dispone della proprietà desiderata usando il `IsKeyAvailable` o `AreKeysAvailable` metodi dell'istanza di `CNContact`. Esempio:
 
 ```csharp
 // Does the contact contain the requested key?
@@ -187,19 +187,19 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> I `GetUnifiedContact` metodi `GetUnifiedContacts` e della`CNContactStore` classe restituiscono _solo_ un contatto parziale limitato alle proprietà richieste dalle chiavi di recupero fornite.
+> I metodi `GetUnifiedContact` e `GetUnifiedContacts` della classe `CNContactStore` restituiscono _solo_ un contatto parziale limitato alle proprietà richieste dalle chiavi di recupero fornite.
 
 ### <a name="unified-contacts"></a>Contatti unificati
 
 Un utente potrebbe avere diverse fonti di informazioni di contatto per una singola persona nel database di contatto, ad esempio iCloud, Facebook o Google mail. Nelle app iOS e OS X le informazioni di contatto verranno automaticamente collegate tra loro e visualizzate all'utente come singolo _contatto unificato_:
 
-[![](contacts-images/unified01.png "Cenni preliminari sui contatti unificati")](contacts-images/unified01.png#lightbox)
+[![](contacts-images/unified01.png "Unified Contacts overview")](contacts-images/unified01.png#lightbox)
 
 Questo contatto unificato è una visualizzazione temporanea, in memoria, delle informazioni di contatto dei collegamenti a cui viene assegnato il proprio identificatore univoco (che deve essere usato per recuperare il contatto, se necessario). Per impostazione predefinita, il Framework dei contatti restituirà un contatto unificato quando possibile.
 
 ### <a name="creating-and-updating-contacts"></a>Creazione e aggiornamento di contatti
 
-Come è stato illustrato nella sezione [Contact Objects](#Contact_Objects) , usare un `CNContactStore` e `CNMutableContact` un'istanza di per creare nuovi contatti che vengono quindi scritti nel database Contact dell'utente usando `CNSaveRequest`:
+Come è stato illustrato nella sezione [Contact Objects](#Contact_Objects) , è possibile usare un `CNContactStore` e un'istanza di un `CNMutableContact` per creare nuovi contatti che vengono quindi scritti nel database Contact dell'utente usando un `CNSaveRequest`:
 
 ```csharp
 // Create a new Mutable Contact (read/write)
@@ -222,9 +222,9 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 }
 ```
 
-Un `CNSaveRequest` oggetto può essere usato anche per memorizzare nella cache più modifiche di contatto e di gruppo in un'unica operazione e `CNContactStore`per eseguire il batch delle modifiche in.
+Un `CNSaveRequest` può essere usato anche per memorizzare nella cache più modifiche di contatto e di gruppo in un'unica operazione e per eseguire il batch di tali modifiche al `CNContactStore`.
 
-Per aggiornare un contatto non modificabile ottenuto da un'operazione di recupero, è necessario innanzitutto richiedere una copia modificabile che viene quindi modificata e salvata nuovamente nell'archivio contatti. Ad esempio:
+Per aggiornare un contatto non modificabile ottenuto da un'operazione di recupero, è necessario innanzitutto richiedere una copia modificabile che viene quindi modificata e salvata nuovamente nell'archivio contatti. Esempio:
 
 ```csharp
 // Get mutable copy of contact
@@ -252,17 +252,17 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 ### <a name="contact-change-notifications"></a>Notifiche di modifica contatto
 
-Ogni volta che viene modificato un contatto, l'archivio contatti `CNContactStoreDidChangeNotification` Invia un al centro notifiche predefinito. Se sono stati memorizzati nella cache o sono attualmente presenti contatti, è necessario aggiornare tali oggetti dall'archivio contatti (`CNContactStore`).
+Ogni volta che viene modificato un contatto, l'archivio contatti invia un `CNContactStoreDidChangeNotification` al centro notifiche predefinito. Se sono stati memorizzati nella cache o sono attualmente presenti contatti, è necessario aggiornare tali oggetti dall'archivio contatti (`CNContactStore`).
 
 ### <a name="containers-and-groups"></a>Contenitori e gruppi
 
 I contatti di un utente possono esistere localmente sul dispositivo dell'utente o come contatti sincronizzati con il dispositivo da uno o più account del server (ad esempio Facebook o Google). Ogni pool di contatti dispone di un proprio _contenitore_ e un determinato contatto può esistere solo in un contenitore.
 
-[![](contacts-images/containers01.png "Panoramica dei contenitori e dei gruppi")](contacts-images/containers01.png#lightbox)
+[![](contacts-images/containers01.png "Containers and Groups overview")](contacts-images/containers01.png#lightbox)
 
 Alcuni contenitori consentono la disposizione dei contatti in uno o più _gruppi_ o _sottogruppi_. Questo comportamento dipende dall'archivio di backup per un contenitore specificato. Ad esempio, iCloud ha un solo contenitore ma può avere molti gruppi, ma non sottogruppi. Microsoft Exchange, invece, non supporta i gruppi, ma può avere più contenitori (uno per ogni cartella di Exchange).
 
-[![](contacts-images/containers02.png "Sovrapposizione all'interno di contenitori e gruppi")](contacts-images/containers02.png#lightbox)
+[![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui" />
 
@@ -274,11 +274,11 @@ Usando i controlli predefiniti di Apple, non solo si riduce la quantità di codi
 
 ### <a name="the-contact-picker-view-controller"></a>Controller di visualizzazione selezione contatti
 
-Il controller di visualizzazione selezione contatti`CNContactPickerViewController`() gestisce la visualizzazione selezione contatti standard che consente all'utente di selezionare un contatto o una proprietà di contatto dal database di contatto dell'utente. L'utente può selezionare uno o più contatti (in base al relativo utilizzo) e il controller di visualizzazione selezione contatti non richiede l'autorizzazione prima di visualizzare la selezione.
+Il controller di visualizzazione selezione contatti (`CNContactPickerViewController`) gestisce la visualizzazione selezione contatti standard che consente all'utente di selezionare un contatto o una proprietà di contatto dal database di contatto dell'utente. L'utente può selezionare uno o più contatti (in base al relativo utilizzo) e il controller di visualizzazione selezione contatti non richiede l'autorizzazione prima di visualizzare la selezione.
 
-Prima di chiamare la `CNContactPickerViewController` classe, si definiscono le proprietà che l'utente può selezionare e definire predicati per controllare la visualizzazione e la selezione delle proprietà dei contatti.
+Prima di chiamare la classe `CNContactPickerViewController`, è necessario definire le proprietà che l'utente può selezionare e definire predicati per controllare la visualizzazione e la selezione delle proprietà dei contatti.
 
-Utilizzare un'istanza della classe che eredita da `CNContactPickerDelegate` per rispondere all'interazione dell'utente con la selezione. Ad esempio:
+Utilizzare un'istanza della classe che eredita da `CNContactPickerDelegate` per rispondere all'interazione dell'utente con la selezione. Esempio:
 
 ```csharp
 using System;
@@ -343,7 +343,7 @@ PresentViewController(picker,true,null);
 
 ### <a name="the-contact-view-controller"></a>Controller di visualizzazione contatto
 
-La classe Contact View Controller`CNContactViewController`() fornisce un controller per presentare una visualizzazione di contatto standard all'utente finale. Nella visualizzazione contatto è possibile visualizzare nuovi contatti nuovi, sconosciuti o esistenti ed è necessario specificare il tipo prima che la visualizzazione venga visualizzata chiamando il costruttore statico corretto`FromNewContact`( `FromUnknownContact`, `FromContact`,). Di seguito è riportato un esempio:
+La classe Contact View Controller (`CNContactViewController`) fornisce un controller per presentare una visualizzazione contatto standard all'utente finale. La visualizzazione contatto può visualizzare nuovi contatti nuovi, sconosciuti o esistenti ed è necessario specificare il tipo prima che la visualizzazione venga visualizzata chiamando il costruttore statico corretto (`FromNewContact`, `FromUnknownContact`, `FromContact`). Di seguito è riportato un esempio:
 
 ```csharp
 // Create a new contact view

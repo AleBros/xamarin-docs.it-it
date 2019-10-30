@@ -3,15 +3,15 @@ title: Simulatore iOS remoto per Windows
 description: Il simulatore iOS remoto per Windows consente di testare le app in un simulatore iOS visualizzato in Windows insieme a Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 8313af47882b1c8c47f1e82f62f0a43e4e9c704c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70289700"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029723"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulatore iOS remoto per Windows
 
@@ -34,7 +34,7 @@ La barra degli strumenti nella parte superiore della finestra del simulatore con
 
 - **Home** : simula il pulsante Home in un dispositivo iOS.
 - **Lock** : blocca il simulatore (scorrere rapidamente).
-- **Screenshot** : Salva una schermata del simulatore (archiviata in **Pictures\Xamarin\iOS Simulator \\** ).
+- **Screenshot** : Salva una schermata del simulatore (archiviata in **Pictures\Xamarin\iOS Simulator \\**).
 - [**Impostazioni**](#settings) : Visualizza la tastiera, la posizione e altre impostazioni.
 - [**Altre opzioni**](#other-options) : Visualizza varie opzioni del simulatore, ad esempio rotazione, movimenti di agitazione e ID tocco.
 

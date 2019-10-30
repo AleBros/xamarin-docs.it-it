@@ -3,15 +3,15 @@ title: Cenni preliminari sui binding Objective-C
 description: In questo documento viene fornita una panoramica dei diversi modi C# per creare binding per il codice Objective-C, incluse le associazioni della riga di comando, i progetti di binding e l'obiettivo Sharpie. Viene inoltre illustrato il funzionamento dell'associazione.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765590"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015874"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Cenni preliminari sui binding Objective-C
 
@@ -19,7 +19,7 @@ _Informazioni sul funzionamento del processo di associazione_
 
 Il binding di una libreria Objective-C per l'uso con Novell richiede tre passaggi:
 
-1. Scrivere una C# "definizione API" per descrivere il modo in cui l'API nativa viene esposta in .NET e il modo in cui viene mappata all'oggetto sottostante Objective-C. Questa operazione viene eseguita usando C# costrutti standard `interface` come e diversi **attributi** di associazione (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Scrivere una C# "definizione API" per descrivere il modo in cui l'API nativa viene esposta in .NET e il modo in cui viene mappata all'oggetto sottostante Objective-C. Questa operazione viene eseguita usando C# costrutti standard come `interface`e diversi **attributi** di associazione (vedere questo [semplice esempio](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Una volta scritta la "definizione API" in C#, la si compila per produrre un assembly "binding". Questa operazione può essere eseguita dalla [**riga di comando**](#commandline) o tramite un [**progetto di binding**](#bindingproject) in Visual Studio per Mac o Visual Studio.
 
@@ -35,7 +35,7 @@ Il binding di una libreria Objective-C per l'uso con Novell richiede tre passagg
 
 ## <a name="command-line-bindings"></a>Associazioni della riga di comando
 
-È possibile usare per `btouch-native` Novell. iOS (o `bmac-native` se si usa Novell. Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native` per iOS o `bmac-native` per Mac).
+È possibile utilizzare il `btouch-native` per Novell. iOS (o `bmac-native` se si utilizza Novell. Mac) per compilare direttamente le associazioni. Funziona passando le C# definizioni API create manualmente (o usando l'obiettivo Sharpie) allo strumento da riga di comando (`btouch-native`per iOS o`bmac-native`per Mac).
 
 La sintassi generale per richiamare questi strumenti è la seguente:
 
@@ -75,7 +75,7 @@ Per informazioni su come analizzare le librerie native, i framework nativi e Coc
 
 Per prima cosa, trovare un tipo che si vuole associare. Ai fini della discussione (e semplicità), verrà associato il tipo [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (che è già stato associato a [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); l'implementazione seguente è solo per scopi di esempio).
 
-In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-c non supporta gli spazi dei nomi, è necessario usare l' `[Register]` attributo per modificare il nome del tipo che Novell. iOS registrerà con il runtime di Objective-c. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
+In secondo luogo, è necessario creare C# il tipo. È probabile che si desideri inserire questo oggetto in uno spazio dei nomi; Poiché Objective-C non supporta gli spazi dei nomi, è necessario usare l'attributo `[Register]` per modificare il nome del tipo che Novell. iOS registrerà con il runtime di Objective-C. Il C# tipo deve anche ereditare da [Foundation. NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {
@@ -95,7 +95,7 @@ static Selector selAllObjects = new Selector("allObjects");
 static Selector selNextObject = new Selector("nextObject");
 ```
 
-Quarto, il tipo dovrà fornire costruttori. È *necessario* concatenare la chiamata del costruttore al costruttore della classe base. Gli `[Export]` attributi consentono al codice Objective-C di chiamare i costruttori con il nome del selettore specificato:
+Quarto, il tipo dovrà fornire costruttori. È *necessario* concatenare la chiamata del costruttore al costruttore della classe base. Gli attributi `[Export]` consentono al codice Objective-C di chiamare i costruttori con il nome del selettore specificato:
 
 ```csharp
 [Export("init")]
@@ -115,7 +115,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-Quinto, fornire i metodi per ognuno dei selettori dichiarati nel passaggio 3. `objc_msgSend()` Che utilizzeranno per richiamare il selettore sull'oggetto nativo. Si noti l'uso di [Runtime. GetNSObject ()](xref:ObjCRuntime.Runtime.GetNSObject*) per convertire `IntPtr` un oggetto in un tipo `NSObject` (Sub-) tipizzato in modo appropriato. Se si desidera che il metodo sia chiamabile dal codice Objective-C, il membro *deve* essere **virtuale**.
+Quinto, fornire i metodi per ognuno dei selettori dichiarati nel passaggio 3. Questi utilizzeranno `objc_msgSend()` per richiamare il selettore sull'oggetto nativo. Si noti l'uso di [Runtime. GetNSObject ()](xref:ObjCRuntime.Runtime.GetNSObject*) per convertire un `IntPtr` in un tipo di `NSObject` (Sub-) tipizzato in modo appropriato. Se si desidera che il metodo sia chiamabile dal codice Objective-C, il membro *deve* essere **virtuale**.
 
 ```csharp
 [Export("nextObject")]

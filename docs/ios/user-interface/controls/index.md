@@ -4,15 +4,15 @@ description: Questo documento contiene collegamenti a guide che descrivono i var
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2979b51c954ab891da5e452e579a650a013a7572
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fbf847ef49be83494f593291fbb0a00934bc3ced
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289529"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022040"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in Novell. iOS
 
@@ -28,7 +28,7 @@ La classe UIButton viene usata per rappresentare diversi stili di pulsante nelle
 
 ## <a name="collection-viewsuicollectionviewmd"></a>[Visualizzazioni raccolta](uicollectionview.md)
 
-Le `UICollectionView` visualizzazioni di raccolta, disponibili nella classe, sono un nuovo concetto di iOS 6 che introduce la presentazione di più elementi sullo schermo usando i layout. Gli schemi per fornire i dati a `UICollectionView` un oggetto per creare elementi e interagire con tali elementi seguono gli stessi modelli di delega e origine dati usati comunemente nello sviluppo iOS.
+Le visualizzazioni di raccolta, disponibili nella classe `UICollectionView`, sono un nuovo concetto di iOS 6 che introduce la presentazione di più elementi sullo schermo usando i layout. I modelli per fornire i dati a un `UICollectionView` per creare elementi e interagire con tali elementi seguono gli stessi modelli di delega e origine dati usati comunemente nello sviluppo iOS.
 
 ## <a name="imagesimagemd"></a>[Immagini](image.md)
 
@@ -36,7 +36,7 @@ Per aggiungere immagini all'app sono necessari due passaggi: prima di tutto, agg
 
 ## <a name="manual-camera-controlsintro-to-manual-camera-controlsmd"></a>[Controlli della fotocamera manuali](intro-to-manual-camera-controls.md)
 
-I controlli della fotocamera manuale, forniti da `AVFoundation Framework` in iOS 8, consentono a un'applicazione per dispositivi mobili di assumere il controllo completo sulla fotocamera di un dispositivo iOS. Questo livello di controllo con granularità fine può essere usato per creare applicazioni per la fotocamera a livello professionale e fornire composizioni degli artisti modificando i parametri della fotocamera durante l'acquisizione di un'immagine o un video ancora.
+I controlli della fotocamera manuale, forniti dal `AVFoundation Framework` in iOS 8, consentono a un'applicazione per dispositivi mobili di assumere il controllo completo sulla fotocamera di un dispositivo iOS. Questo livello di controllo con granularità fine può essere usato per creare applicazioni per la fotocamera a livello professionale e fornire composizioni degli artisti modificando i parametri della fotocamera durante l'acquisizione di un'immagine o un video ancora.
 
 ## <a name="mapsios-mapsindexmd"></a>[Mappe](ios-maps/index.md)
 
@@ -44,7 +44,7 @@ Le mappe sono una funzionalità comune in tutti i moderni sistemi operativi mobi
 
 ## <a name="labelslabelsmd"></a>[Etichette](labels.md)
 
-Il `UILabel` controllo viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
+Il controllo `UILabel` viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
 
 ## <a name="pickers-and-date-pickerspickermd"></a>[Selezionatori e selezionatori data](picker.md)
 
@@ -54,7 +54,7 @@ Un caso utente specifico per i selezionatori per impostare la data e/o l'ora. Pe
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Indicatori di stato e attività](progress-activity-indicator.md)
 
-iOS offre due modi principali per indicare lo stato di avanzamento nell'app: Indicatori di attività (incluso un indicatore di attività di _rete_ specifico) e barre di stato.
+iOS offre due modi principali per indicare lo stato di avanzamento nell'app: gli indicatori di attività (incluso un indicatore di attività di _rete_ specifico) e le barre di stato.
 
 ## <a name="search-barssearchbarmd"></a>[Barre di ricerca](searchbar.md)
 
@@ -62,11 +62,11 @@ UISearchBar viene usato per eseguire la ricerca in un elenco di valori.
 
 ## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Dispositivi di scorrimento, interruttori e controlli segmentati](slider-switch-segmented-controls.md)
 
-Il dispositivo di scorrimento consente di selezionare in modo semplice un valore numerico all'interno di un intervallo. iOS USA `UISwitch` come input booleano che può essere rappresentato da un pulsante di opzione su altre piattaforme. Un controllo segmentato è un modo organizzato per consentire agli utenti di interagire con un numero ridotto di opzioni.
+Il dispositivo di scorrimento consente di selezionare in modo semplice un valore numerico all'interno di un intervallo. iOS usa il `UISwitch` come input booleano che può essere rappresentato da un pulsante di opzione su altre piattaforme. Un controllo segmentato è un modo organizzato per consentire agli utenti di interagire con un numero ridotto di opzioni.
 
 ## <a name="stack-viewuistackviewmd"></a>[Visualizzazione dello stack](uistackview.md)
 
-Il controllo di visualizzazione Stack`UIStackView`() sfrutta la potenza del layout automatico e delle classi di dimensioni per gestire uno stack di visualizzazioni, orizzontalmente o verticalmente, che risponde dinamicamente all'orientamento e alle dimensioni dello schermo del dispositivo iOS.
+Il controllo di visualizzazione stack (`UIStackView`) sfrutta la potenza del layout automatico e delle classi di dimensioni per gestire uno stack di visualizzazioni, orizzontalmente o verticalmente, che risponde dinamicamente all'orientamento e alle dimensioni dello schermo del dispositivo iOS.
 
 ## <a name="tables-and-cellstablesindexmd"></a>[Tabelle e celle](tables/index.md)
 
@@ -74,7 +74,7 @@ in questa sezione vengono presentate le classi utilizzate per creare e visualizz
 
 ## <a name="text-inputtext-inputmd"></a>[Input di testo](text-input.md)
 
-L'accettazione dell'input di testo utente viene `UITextField` eseguita con il per gli input a riga singola e UITextView per il testo modificabile su più righe. È possibile trascinare uno di questi controlli su una schermata e fare doppio clic per impostare il testo iniziale.
+L'accettazione dell'input di testo utente viene eseguita con la `UITextField` per gli input a riga singola e UITextView per il testo modificabile su più righe. È possibile trascinare uno di questi controlli su una schermata e fare doppio clic per impostare il testo iniziale.
 
 ## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[Barre schede e controller di barra schede](creating-tabbed-applications.md)
 

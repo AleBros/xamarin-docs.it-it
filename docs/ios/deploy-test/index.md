@@ -4,15 +4,15 @@ description: Questo documento contiene i collegamenti a varie guide che descrivo
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8ce601bff478cfc75d209b0d3e6ec3f6a48dbeee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f3f5e27e97b7b62ade66ea2dc50a79ac03d51f90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288958"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026464"
 ---
 # <a name="deploying-and-testing-xamarinios-apps"></a>Distribuzione e test di app Xamarin.iOS
 
@@ -40,7 +40,7 @@ Questo set di guide include le informazioni di base sulla firma del codice e sul
 
 ## <a name="testflightiosdeploy-testtestflightmd"></a>[TestFlight](~/ios/deploy-test/testflight.md)
 
-TestFlight ora è di proprietà da Apple ed è lo strumento principale per il test beta delle app Xamarin.iOS. Questo articolo descrive in dettaglio tutti i passaggi del processo TestFlight, dal caricamento dell'app all'interazione con iTunes Connect.
+TestFlight ora è di proprietà di Apple ed è lo strumento principale per testare la versione beta delle app Xamarin.iOS. Questo articolo descrive in dettaglio tutti i passaggi del processo TestFlight, dal caricamento dell'app all'uso di iTunes Connect.
 
 ## <a name="debugging-in-xamariniosiosdeploy-testdebugging-in-xamarin-iosmd"></a>[Debug in Xamarin.iOS](~/ios/deploy-test/debugging-in-xamarin-ios.md)
 
@@ -59,13 +59,13 @@ Questo articolo illustra l'uso di Instruments su qualsiasi dispositivo iOS e in 
 
 Questo articolo illustra in dettaglio l'uso di Apple Instruments per diagnosticare problemi di memoria in un'applicazione iOS compilata con Xamarin. Illustra come avviare Instruments, come creare snapshot dell'heap e come analizzare la crescita della memoria. Descrive anche come usare Instruments per visualizzare ed evidenziare le righe di codice specifiche che causano il problema di memoria.
 
-## <a name="linking-on-ioslinkermd"></a>[Collegamento in iOS](linker.md)
+## <a name="linking-on-ioslinkermd"></a>[Collegamenti in iOS](linker.md)
 
 Illustra il funzionamento del linker per assicurare le dimensioni minime del pacchetto dell'applicazione e come modificarne le impostazioni e l'utilizzo.
 
 ## <a name="xamarinios-performanceperformancemd"></a>[Prestazioni di Xamarin.iOS](performance.md)
 
-Esistono varie tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Esistono varie tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.iOS. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 ## <a name="mtouchmtouchmd"></a>[mtouch](mtouch.md)
 

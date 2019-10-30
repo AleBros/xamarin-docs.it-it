@@ -4,15 +4,15 @@ description: Collegamenti ai documenti che descrivono il framework delle notific
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/01/2016
-ms.openlocfilehash: b0a9714a1231ad9565a987460e5a378f3da8655a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 85bdace802e58725195d9124af70f396a533aaee
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290552"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031233"
 ---
 # <a name="user-notifications-framework-in-xamarinios"></a>Framework delle notifiche utente in Novell. iOS
 

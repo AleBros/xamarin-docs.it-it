@@ -3,15 +3,15 @@ title: Introduzione all'archiviazione dei dati in Android
 ms.prod: xamarin
 ms.assetid: FDAC0771-4749-4758-865A-F1BD190CA54B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2017
-ms.openlocfilehash: 69d5222bb6c50870d0c42bea6ff71236e3d1580c
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 21e3421125e6fd918a379c5501a44c15620f5d94
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754559"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023784"
 ---
 # <a name="introduction"></a>Introduzione
 
@@ -53,13 +53,13 @@ Poiché SQLite è progettato per essere piccolo e veloce, esistono alcune avvert
 - Sono supportate solo le ridenominazioni di tabelle e ADDCOLUMN. Non è possibile apportare altre modifiche allo schema.
 - Le visualizzazioni sono di sola lettura.
 
-Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](http://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è stato supportato in Android a partire da Android 2.
+Per altre informazioni su SQLite, vedere il sito Web- [SQLite.org](https://SQLite.org) . Tuttavia, tutte le informazioni necessarie per usare SQLite con Novell sono contenute in questo documento ed esempi associati. Il motore di database SQLite è stato supportato in Android a partire da Android 2.
 Anche se non è trattato in questo capitolo, SQLite è disponibile anche per l'uso in applicazioni Windows Phone e Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows e Windows Phone
 
 SQLite può essere usato anche nelle piattaforme Windows, anche se queste piattaforme non sono descritte in questo documento.
-Per altre informazioni, vedere la pagina relativa ai case study di [attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [attività professionali](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e consultare [il Blog di Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+Per altre informazioni, vedere la pagina relativa ai case study di [attività](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [attività professionali](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e consultare [il Blog di Tim Heuer](https://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

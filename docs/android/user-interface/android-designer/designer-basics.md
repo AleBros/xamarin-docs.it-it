@@ -4,15 +4,15 @@ description: In questo argomento vengono presentate le funzionalità di Novell. 
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2018
-ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 2d5f20326de56bca77dd8fdd742515e003f996e1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70761413"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029508"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Nozioni di base su Novell. Android Designer
 
@@ -24,11 +24,11 @@ _In questo argomento vengono presentate le funzionalità di Novell. Android Desi
 
 La finestra di progettazione viene avviata automaticamente quando viene creato un layout oppure può essere avviata facendo doppio clic su un file di layout esistente. Ad esempio, facendo doppio clic su **activity_main. aXML** nella cartella **resources > layout** verrà caricata la finestra di progettazione, come illustrato in questo screenshot:
 
-[schermata ![Designer in Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
+[schermata di![designer in Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 Analogamente, è possibile aggiungere un nuovo layout facendo clic con il pulsante destro del mouse sulla cartella **layout** nel **Esplora soluzioni** e selezionando **Aggiungi > nuovo elemento... Layout > Android**:
 
-[finestra di dialogo ![Add nuovo elemento](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
+[![finestra di dialogo Aggiungi nuovo elemento](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 Viene creato un nuovo file di layout con **estensione aXML** che viene caricato nella finestra di progettazione.
 
@@ -41,7 +41,7 @@ Viene creato un nuovo file di layout con **estensione aXML** che viene caricato 
 
 La finestra di progettazione è costituita da diverse sezioni che supportano le varie funzionalità, come illustrato nello screenshot seguente:
 
-[![Diagram dei riquadri di progettazione](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
+[Diagramma![dei riquadri di progettazione](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 Quando si modifica un layout nella finestra di progettazione, è possibile utilizzare le funzionalità seguenti per creare e modellare la progettazione:
 
@@ -61,7 +61,7 @@ Quando si modifica un layout nella finestra di progettazione, è possibile utili
 
 La finestra di progettazione consente di trascinare e rilasciare i widget dalla casella degli strumenti nel **area di progettazione**. Quando si interagisce con i widget nella finestra di progettazione (aggiungendo nuovi widget o riposizionando quelli esistenti), vengono visualizzate linee verticali e orizzontali per contrassegnare i punti di inserimento disponibili. Nell'esempio seguente viene trascinato un nuovo `Button` widget nel **area di progettazione**:
 
-[![Example righe di inserimento in Area di progettazione](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
+[![righe di inserimento di esempio in Area di progettazione](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 Inoltre, i widget possono essere copiati: è possibile usare copia e incolla per copiare un widget oppure è possibile trascinare e rilasciare un widget esistente mentre si preme il tasto <kbd>CTRL</kbd> .
 
@@ -69,7 +69,7 @@ Inoltre, i widget possono essere copiati: è possibile usare copia e incolla per
 
 La **barra degli strumenti della finestra di progettazione** (posizionata sopra la **area di progettazione**) presenta i selettori di configurazione e i menu degli
 
-[![Diagram della barra degli strumenti della finestra di progettazione](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
+[Diagramma![della barra degli strumenti della finestra di progettazione](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 La **barra degli strumenti di progettazione** consente di accedere alle funzionalità seguenti:
 
@@ -103,7 +103,7 @@ Ognuna di queste funzionalità è illustrata più dettagliatamente negli argomen
 
 È disponibile un menu di scelta rapida nella **area di progettazione** e nella **struttura del documento**. Questo menu Visualizza i comandi disponibili per il widget selezionato e il relativo contenitore, semplificando l'esecuzione di operazioni sui contenitori, che non sono sempre facili da selezionare nella **area di progettazione**. Di seguito è riportato un esempio di menu di scelta rapida:
 
-[![Example menu di scelta rapida facendo clic con il pulsante destro del mouse sul Area di progettazione](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
+[![menu di scelta rapida di esempio facendo clic con il pulsante destro del mouse sul Area di progettazione](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 In questo esempio, facendo clic con il pulsante destro del mouse su un `TextView` viene aperto un menu di scelta rapida che fornisce diverse opzioni:
 
@@ -115,7 +115,7 @@ In questo esempio, facendo clic con il pulsante destro del mouse su un `TextView
 
 Il **area di progettazione** supporta lo zoom con diversi controlli, come illustrato:
 
-[![Diagram dei controlli Zoom Area di progettazione](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
+[Diagramma![dei controlli di Area di progettazione zoom](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 Questi controlli semplificano la visualizzazione di determinate aree dell'interfaccia utente nella finestra di progettazione:
 
@@ -135,7 +135,7 @@ Si noti che l'impostazione di zoom scelta non influisce sull'interfaccia utente 
 
 Nella striscia centrale tra i riquadri **progettazione** e **origine** sono disponibili diversi pulsanti che consentono di modificare la modalità di visualizzazione dei riquadri di **progettazione** e di **origine** :
 
-[Località del pulsante di visualizzazione ![Pane](designer-basics-images/vs/25-pane-buttons-sml.png)](designer-basics-images/vs/25-pane-buttons.png#lightbox)
+[posizione del pulsante di visualizzazione del riquadro![](designer-basics-images/vs/25-pane-buttons-sml.png)](designer-basics-images/vs/25-pane-buttons.png#lightbox)
 
 Questi pulsanti eseguono le operazioni seguenti:
 
@@ -158,7 +158,7 @@ Quando si fa clic sul **riquadro Comprimi** , viene visualizzato solo il riquadr
 
 Il riquadro **origine** Visualizza l'origine XML sottostante la progettazione mostrata nell' **area di progettazione**. Poiché entrambe le visualizzazioni sono disponibili allo stesso tempo, è possibile creare una progettazione dell'interfaccia utente passando tra una rappresentazione visiva della progettazione e l'origine XML sottostante per la progettazione:
 
-[![Example origine XML nel riquadro di origine](designer-basics-images/vs/22-source-pane-w158-sml.png)](designer-basics-images/vs/22-source-pane-w158.png#lightbox)
+[![origine XML di esempio nel riquadro di origine](designer-basics-images/vs/22-source-pane-w158-sml.png)](designer-basics-images/vs/22-source-pane-w158.png#lightbox)
 
 Le modifiche apportate all'origine XML vengono immediatamente visualizzate nel **area di progettazione**; le modifiche apportate alla **area di progettazione** causano l'aggiornamento dell'origine XML visualizzata nel riquadro di **origine** di conseguenza. Quando si apportano modifiche a XML nel riquadro di **origine** , le funzionalità di completamento automatico e IntelliSense sono disponibili per velocizzare lo sviluppo dell'interfaccia utente basata su XML, come illustrato di seguito.
 
@@ -168,7 +168,7 @@ Per una maggiore facilità di spostamento quando si lavora con file XML lunghi, 
 
 Quando si inizia a digitare il nome di un attributo per un widget, è possibile premere <kbd>CTRL + barra spaziatrice</kbd> per visualizzare un elenco di possibili completamenti. Ad esempio, dopo aver immesso `android:lay` nell'esempio seguente (seguito dalla digitazione di <kbd>CTRL + barra spaziatrice</kbd>), viene visualizzato l'elenco seguente:
 
-[![Autocompletion dell'attributo layout](designer-basics-images/vs/23-autocompletion-w158-sml.png)](designer-basics-images/vs/23-autocompletion-w158.png#lightbox)
+[![completamento automatico dell'attributo layout](designer-basics-images/vs/23-autocompletion-w158-sml.png)](designer-basics-images/vs/23-autocompletion-w158.png#lightbox)
 
 Premere <kbd>invio</kbd> per accettare il primo completamento elencato o usare i tasti di direzione per scorrere fino al completamento desiderato e premere <kbd>invio</kbd>. In alternativa, è possibile utilizzare il mouse per scorrere e fare clic sul completamento desiderato.
 
@@ -176,7 +176,7 @@ Premere <kbd>invio</kbd> per accettare il primo completamento elencato o usare i
 
 Dopo aver immesso un nuovo attributo per un widget e aver iniziato ad assegnargli un valore, IntelliSense viene visualizzato dopo la digitazione di un carattere trigger e fornisce un elenco di valori validi da usare per l'attributo. Ad esempio, dopo aver immesso le prime virgolette doppie per `android:layout_width` nell'esempio seguente, viene visualizzato un selettore di completamento automatico per fornire l'elenco di scelte valide per questa larghezza:
 
-[esempio di ![IntelliSense per la larghezza del layout](designer-basics-images/vs/24-intellisense-w158-sml.png)](designer-basics-images/vs/24-intellisense-w158.png#lightbox)
+[esempio di![IntelliSense per la larghezza del layout](designer-basics-images/vs/24-intellisense-w158-sml.png)](designer-basics-images/vs/24-intellisense-w158.png#lightbox)
 
 Nella parte inferiore di questa finestra popup sono presenti due pulsanti, come descritto in rosso nello screenshot precedente. Facendo clic sul pulsante **Risorse progetto** a sinistra, l'elenco viene limitato a risorse che fanno parte del progetto di app, mentre facendo clic sul pulsante **risorse del Framework** a destra viene limitato l'elenco per visualizzare le risorse disponibili dal Framework.
 Attivare o disattivare questi pulsanti: è possibile fare clic di nuovo per disabilitare l'azione di filtro fornita da ciascuno di essi.
@@ -200,15 +200,15 @@ Alcune proprietà possono fare riferimento a risorse definite in file diversi da
 
 Ad esempio, lo screenshot seguente mostra le opzioni disponibili quando si fa clic sul quadrato oscurato a destra del campo di testo per un `Text` widget nella finestra **Proprietà** :
 
-[![Example elenco di opzioni di testo](designer-basics-images/vs/09-text-options-sml.png)](designer-basics-images/vs/09-text-options.png#lightbox)
+[![elenco di opzioni di testo](designer-basics-images/vs/09-text-options-sml.png)](designer-basics-images/vs/09-text-options.png#lightbox)
 
 Quando si fa clic su **Resource...** , viene visualizzata la finestra di dialogo **Seleziona risorsa** :
 
-[![Example screenshot delle risorse con diverse risorse elencate](designer-basics-images/vs/09b-resources-w158-sml.png)](designer-basics-images/vs/09b-resources-w158.png#lightbox)
+[![screenshot delle risorse di esempio con diverse risorse elencate](designer-basics-images/vs/09b-resources-w158-sml.png)](designer-basics-images/vs/09b-resources-w158.png#lightbox)
 
 Da questo elenco è possibile selezionare una risorsa di testo da usare per il widget anziché impostare come hardcoded il testo nel riquadro **Proprietà** . Nell'esempio seguente viene illustrato il selettore di risorse per la proprietà `Src` di un `ImageView`:
 
-[icona di visualizzazione del selettore ![Resource risorsa per un ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
+[![la risorsa icona dell'elenco di selezione risorse per un ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 Facendo clic sul quadrato vuoto a destra della proprietà `Src` si apre la finestra di dialogo **Seleziona risorsa** con un elenco di risorse che vanno dai colori (come illustrato in precedenza) a drawables.
 
@@ -287,11 +287,11 @@ La **struttura del documento** supporta copia e incolla oppure è possibile usar
 
 La finestra di progettazione viene avviata automaticamente quando viene creato un layout oppure può essere avviata facendo doppio clic su un file con estensione aXML esistente. Ad esempio, facendo doppio clic su **Main. aXML** nella cartella **resources > layout** verrà caricata la finestra di progettazione, come illustrato di seguito:
 
-[schermata ![Designer in Visual Studio per Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
+[schermata di![designer in Visual Studio per Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 Allo stesso modo, è possibile aggiungere un nuovo layout facendo clic con il pulsante destro del mouse sulla cartella **layout** nel **riquadro della soluzione** e scegliendo **Aggiungi > nuovo file > layout Android >** :
 
-[![Add finestra di dialogo nuovo file](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
+[![finestra di dialogo Aggiungi nuovo file](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 Viene creato un nuovo file con estensione aXML che viene caricato nel Area di progettazione.
 
@@ -304,7 +304,7 @@ Viene creato un nuovo file con estensione aXML che viene caricato nel Area di pr
 
 La finestra di progettazione è costituita da diverse sezioni che supportano le varie funzionalità, come illustrato nello screenshot seguente:
 
-[![Diagram dei riquadri di progettazione](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
+[Diagramma![dei riquadri di progettazione](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 Quando si modifica un layout nella finestra di progettazione, è possibile utilizzare le funzionalità seguenti per creare e modellare la progettazione:
 
@@ -322,7 +322,7 @@ Quando si modifica un layout nella finestra di progettazione, è possibile utili
 
 La barra degli strumenti (posizionata sopra la Area di progettazione) presenta i selettori di configurazione e i menu degli strumenti:
 
-[![Diagram della barra degli strumenti della finestra di progettazione](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
+[Diagramma![della barra degli strumenti della finestra di progettazione](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 La barra degli strumenti consente di accedere alle funzionalità seguenti:
 
@@ -356,7 +356,7 @@ Le [funzionalità di progettazione del materiale](~/android/user-interface/andro
 
 La finestra di progettazione consente di trascinare e rilasciare i widget dalla casella degli strumenti nel Area di progettazione. Quando si interagisce con i widget nella finestra di progettazione (aggiungendo nuovi widget o riposizionando quelli esistenti), vengono visualizzate linee verticali e orizzontali per contrassegnare i punti di inserimento disponibili. Nell'esempio seguente viene trascinato un nuovo `Button` widget nel Area di progettazione:
 
-[![Example righe di inserimento in Area di progettazione](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
+[![righe di inserimento di esempio in Area di progettazione](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 Inoltre, i widget possono essere copiati: è possibile usare copia e incolla per copiare un widget oppure è possibile trascinare e rilasciare un widget esistente mentre si preme il tasto <kbd>CTRL</kbd> .
 
@@ -364,7 +364,7 @@ Inoltre, i widget possono essere copiati: è possibile usare copia e incolla per
 
 È disponibile un menu di scelta rapida nella Area di progettazione e nella struttura del documento. Questo menu Visualizza i comandi disponibili per il widget selezionato e il relativo contenitore, semplificando l'esecuzione di operazioni sui contenitori, che non sono sempre facili da selezionare nella Area di progettazione. Di seguito è riportato un esempio di menu di scelta rapida:
 
-[![Example menu di scelta rapida facendo clic con il pulsante destro del mouse sul Area di progettazione](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
+[![menu di scelta rapida di esempio facendo clic con il pulsante destro del mouse sul Area di progettazione](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 In questo esempio, facendo clic con il pulsante destro del mouse su un `Button` viene aperto un menu di scelta rapida che fornisce diverse opzioni:
 
@@ -376,7 +376,7 @@ In questo esempio, facendo clic con il pulsante destro del mouse su un `Button` 
 
 Il Area di progettazione supporta lo zoom con diversi controlli, come illustrato:
 
-[![Diagram dei controlli Zoom Area di progettazione](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
+[Diagramma![dei controlli di Area di progettazione zoom](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 Questi controlli semplificano la visualizzazione di determinate aree dell'interfaccia utente nella finestra di progettazione:
 
@@ -396,7 +396,7 @@ Si noti che l'impostazione di zoom scelta non influisce sull'interfaccia utente 
 
 La finestra di progettazione supporta la modifica delle proprietà del widget tramite il **riquadro delle proprietà**. Le proprietà elencate nel riquadro delle proprietà cambiano a seconda del widget selezionato nell'area di progettazione. Quando si seleziona il `Button` nell'esempio precedente, vengono visualizzate le proprietà del widget `Button`:
 
-[![Screenshot del riquadro delle proprietà](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
+[![screenshot del riquadro delle proprietà](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 ## <a name="property-pad-sections"></a>Sezioni di riempimento delle proprietà
 
@@ -424,23 +424,23 @@ Quando si fa clic su questo pulsante, viene aperto un selettore di risorse.
 
 Ad esempio, nella schermata seguente sono illustrate le risorse disponibili quando si fa clic sui puntini di sospensione a destra del campo di testo per un `Button` widget nel **riquadro delle proprietà**:
 
-[schermata di ![Example risorse con due risorse elencate](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
+[schermata delle risorse di esempio![con due risorse elencate](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 Nell'esempio seguente viene illustrato il selettore di risorse per la proprietà `Src` di un `ImageView`:
 
-[icona di visualizzazione del selettore ![Resource risorsa per un ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
+[![la risorsa icona dell'elenco di selezione risorse per un ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 ### <a name="boolean-property-references"></a>Riferimenti a proprietà booleane
 
 Le proprietà *booleane* vengono in genere visualizzate come una casella di controllo nel riquadro proprietà. Quando una proprietà `Boolean` supporta i riferimenti alle risorse, viene visualizzata una piccola casella di controllo accanto alla proprietà. Una casella di controllo selezionata indica che `true` e una casella vuota significa `false`. È anche possibile immettere direttamente un valore, ad esempio `true` o `false`. Posizionando il puntatore del mouse sull'input viene visualizzata un'icona di campo di testo di piccole dimensioni. È possibile fare clic su di esso se si desidera immettere manualmente il valore.
 
-[![Example di impostazione delle proprietà booleane](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
+[![esempio di impostazione di proprietà booleane](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
 ## <a name="grouped-properties"></a>Proprietà raggruppate
 
 Alcuni widget hanno proprietà multivalore raggruppate insieme, ad esempio `Padding`, ad esempio. Questi valori di proprietà sono elencati nel **riquadro delle proprietà** in un'unica riga espandibile. Alcune di queste proprietà possono essere modificate direttamente nella riga raggruppata, ad esempio la proprietà `Padding` illustrata di seguito:
 
-[impostazioni ![Example per la proprietà Padding](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
+[![impostazioni di esempio per la proprietà Padding](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 ## <a name="editing-properties-inline"></a>Modifica delle proprietà inline
 
@@ -450,11 +450,11 @@ Il Android Designer supporta la modifica diretta di determinate proprietà nell'
 
 Le proprietà di testo di alcuni widget, ad esempio `Button` e `TextView`, possono essere modificate direttamente nella Area di progettazione. Se si fa doppio clic su un widget, questo viene inserito nella modalità di modifica, come illustrato di seguito:
 
-[risorsa ![Text per la stringa Hello](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
+[![risorsa di testo per la stringa Hello](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 È possibile immettere un nuovo valore di testo oppure immettere una nuova stringa di risorsa. Nell'esempio seguente la risorsa `@string/hello` viene sostituita con il testo `CLICK THIS BUTTON`:
 
-[![Shift + invio per collegare automaticamente il testo a una nuova risorsa](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
+[![MAIUSC + INVIO per collegare automaticamente il testo a una nuova risorsa](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
 
 Questa modifica viene archiviata nella proprietà `text` del widget. non modifica il valore assegnato alla risorsa `@string/hello`.
 Quando si esegue la chiave in una nuova stringa di testo, è possibile premere <kbd>maiusc</kbd>  +
@@ -466,40 +466,40 @@ Quando si seleziona un widget, nella finestra di progettazione vengono visualizz
 
 Quando si fa clic su un widget per la prima volta, vengono visualizzati gli handle dei margini. Se si sposta il puntatore del mouse su uno degli handle, nella finestra di progettazione viene visualizzata la proprietà che verrà modificata dall'handle (come illustrato di seguito per la proprietà `layout_marginLeft`):
 
-[![Screenshot visualizzazione degli handle dei margini nella finestra di progettazione](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
+[![screenshot che Mostra gli handle dei margini nella finestra di progettazione](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 Se è già stato impostato un margine, vengono visualizzate linee tratteggiate che indicano lo spazio occupato dal margine:
 
-[![Example di linee tratteggiate che contrassegnano lo spazio intorno a un pulsante](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
+[![esempio di linee tratteggiate che contrassegnano lo spazio intorno a un pulsante](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 ### <a name="size"></a>Dimensioni
 
 Come indicato in precedenza, è possibile passare alla modalità di modifica delle dimensioni facendo clic su un widget mentre è già selezionato. Fare clic sul quadratino triangolare per impostare le dimensioni della dimensione indicata su `wrap_content`:
 
-[handle di contenuto e ridimensionamento ![Wrap](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
+[![a capo contenuto e ridimensionamento](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 Quando si fa clic sull'handle di **contenuto a capo** , il widget viene compattato in modo da non essere più grande del necessario per eseguire il wrapping del contenuto incluso. In questo esempio il testo del pulsante viene ridotto orizzontalmente, come illustrato nello screenshot successivo.
 
 Quando il valore Size è impostato su **Wrap content**, nella finestra di progettazione viene visualizzato un handle triangolare che punta nella direzione opposta per modificare le dimensioni in `match_parent`:
 
-[handle padre ![Match](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
+[handle padre corrispondenza![](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 Facendo clic sull'handle di corrispondenza padre, le dimensioni della dimensione vengono ripristinate in modo che **corrispondano** al widget padre.
 
 È anche possibile trascinare il quadratino di ridimensionamento circolare (come illustrato nelle schermate precedenti) per ridimensionare il widget in un valore di `dp` arbitrario. Quando si esegue questa operazione, vengono presentati sia il **contenuto a capo** che la corrispondenza degli handle **padre** per la dimensione seguente:
 
-[handle di ridimensionamento ![Circular](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
+[handle di ridimensionamento circolari![](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 Non tutti i contenitori consentono di modificare la `Size` di un widget. Si noti, ad esempio, che nella schermata riportata di seguito, con la `LinearLayout` selezionata, non vengono visualizzati gli handle di ridimensionamento:
 
-[handle di ridimensionamento ![No](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
+[![nessun handle di ridimensionamento](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 ## <a name="document-outline"></a>Struttura documento
 
 La **struttura del documento** Visualizza la gerarchia dei widget del layout.
 Nell'esempio seguente è selezionato il widget contenitore `LinearLayout`:
 
-[struttura ![Document](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
+[Struttura documento![](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 Il contorno del widget selezionato (in questo caso, un `LinearLayout`) viene evidenziato anche nel Area di progettazione. Il widget selezionato nella struttura del documento rimane sincronizzato con la controparte del Area di progettazione. Questa operazione è utile per selezionare i gruppi di visualizzazione, che non sono sempre facili da selezionare nella Area di progettazione.
 

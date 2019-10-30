@@ -4,15 +4,15 @@ description: Questo documento descrive come usare le attività in background con
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2017
-ms.openlocfilehash: 0e0336e65532c4487e3ec8c1984b132544b5b547
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b688d830ad345a347bf54b3d3bd450eb34fec7d3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768655"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028326"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Attività in background di watchos in Novell
 
@@ -28,7 +28,7 @@ Prima di illustrare tutti i modi in cui uno sviluppatore può tenere aggiornati 
 
 Vedere l'esempio seguente:
 
-[![](background-tasks-images/update00.png "Modo in cui un utente può spostarsi tra il proprio iPhone e i relativi Apple Watch durante la giornata")](background-tasks-images/update00.png#lightbox)
+[![](background-tasks-images/update00.png "How a user might move between their iPhone and their Apple Watch throughout the day")](background-tasks-images/update00.png#lightbox)
 
 1. Al mattino, in attesa di un caffè, l'utente Sfoglia le notizie correnti sul proprio iPhone per diversi minuti.
 2. Prima di uscire dalla caffetteria, i colleghi controllano rapidamente il meteo con una complicazione sul quadrante dell'orologio.
@@ -41,7 +41,7 @@ A causa della natura "Riepilogo rapido" (meno di tre secondi) del modo in cui un
 
 Con le nuove API fornite da Apple in watchos 3, l'app può pianificare un aggiornamento in _background_ e avere le informazioni desiderate pronte prima che l'utente lo richieda. Prendere l'esempio della complicazione del tempo descritta sopra:
 
-[![](background-tasks-images/update01.png "Esempio della complicazione del tempo")](background-tasks-images/update01.png#lightbox)
+[![](background-tasks-images/update01.png "An example of the Weather Complication")](background-tasks-images/update01.png#lightbox)
 
 1. Pianificazioni dell'app che devono essere riattivate dal sistema in un momento specifico. 
 2. L'app recupera le informazioni necessarie per generare l'aggiornamento.
@@ -50,11 +50,11 @@ Con le nuove API fornite da Apple in watchos 3, l'app può pianificare un aggior
 
 Come illustrato in precedenza, il sistema watchos riattiva l'app utilizzando una o più attività, di cui è disponibile un pool molto limitato:
 
-[![](background-tasks-images/update02.png "Il sistema watchos riattiva l'app utilizzando una o più attività")](background-tasks-images/update02.png#lightbox)
+[![](background-tasks-images/update02.png "The watchOS system wakes the app using one or more Tasks")](background-tasks-images/update02.png#lightbox)
 
 Apple suggerisce di sfruttare al meglio questa attività (poiché è una risorsa di questo tipo limitata per l'app) tenendola aggiornata fino a quando l'app non ha completato il processo di aggiornamento.
 
-Il sistema recapita queste attività chiamando il nuovo `HandleBackgroundTasks` metodo `WKExtensionDelegate` del delegato. Ad esempio:
+Queste attività vengono recapitate dal sistema chiamando il nuovo metodo `HandleBackgroundTasks` del delegato di `WKExtensionDelegate`. Esempio:
 
 ```csharp
 using System;
@@ -84,7 +84,7 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 Al termine dell'attività specificata, l'app la restituisce al sistema contrassegnando il completamento:
 
-[![](background-tasks-images/update03.png "L'attività ritorna al sistema contrassegnando l'operazione completata")](background-tasks-images/update03.png#lightbox)
+[![](background-tasks-images/update03.png "The Task returns to the system by marking it completed")](background-tasks-images/update03.png#lightbox)
 
 <a name="New-Background-Tasks" />
 
@@ -103,19 +103,19 @@ Queste attività verranno descritte in dettaglio nelle sezioni riportate di segu
 
 ### <a name="wkapplicationrefreshbackgroundtask"></a>WKApplicationRefreshBackgroundTask
 
-`WKApplicationRefreshBackgroundTask` È un'attività generica che può essere pianificata in modo che l'app venga riattivata in una data futura:
+Il `WKApplicationRefreshBackgroundTask` è un'attività generica che può essere pianificata in modo che l'app venga riattivata in una data futura:
 
-[![](background-tasks-images/update04.png "Un WKApplicationRefreshBackgroundTask riattivato in una data futura")](background-tasks-images/update04.png#lightbox)
+[![](background-tasks-images/update04.png "A WKApplicationRefreshBackgroundTask woken at a future date")](background-tasks-images/update04.png#lightbox)
 
-All'interno del runtime dell'attività, l'app può eseguire qualsiasi tipo di elaborazione locale, ad esempio aggiornare una sequenza temporale complicata o recuperare alcuni dati necessari `NSUrlSession`con un.
+All'interno del runtime dell'attività, l'app può eseguire qualsiasi tipo di elaborazione locale, ad esempio aggiornare una sequenza temporale complicata o recuperare alcuni dati necessari con un `NSUrlSession`.
 
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>WKURLSessionRefreshBackgroundTask
 
-Il sistema invierà un' `WKURLSessionRefreshBackgroundTask` operazione al termine del download dei dati e sarà pronta per l'elaborazione da parte dell'app:
+Il sistema invierà un `WKURLSessionRefreshBackgroundTask` al termine del download dei dati e sarà pronto per essere elaborato dall'app:
 
-[![](background-tasks-images/update05.png "WKURLSessionRefreshBackgroundTask al termine del download dei dati")](background-tasks-images/update05.png#lightbox)
+[![](background-tasks-images/update05.png "The WKURLSessionRefreshBackgroundTask when the data has finished downloading")](background-tasks-images/update05.png#lightbox)
 
 Un'app non viene lasciata in esecuzione mentre i dati vengono scaricati in background. L'app pianifica invece la richiesta di dati, quindi viene sospesa e il sistema gestisce il download dei dati, riattivando l'app solo al termine del download.
 
@@ -125,26 +125,26 @@ Un'app non viene lasciata in esecuzione mentre i dati vengono scaricati in backg
 
 In watchos 3, Apple ha aggiunto il Dock in cui gli utenti possono aggiungere le proprie app preferite e accedervi rapidamente. Quando l'utente preme il pulsante laterale nella Apple Watch, viene visualizzata una raccolta di snapshot dell'app bloccati. L'utente può scorrere rapidamente verso sinistra o verso destra per trovare l'app desiderata, quindi toccare l'app per avviarla sostituendo lo snapshot con l'interfaccia dell'app in esecuzione.
 
-[![](background-tasks-images/update06.png "Sostituzione dello snapshot con l'interfaccia delle app in esecuzione")](background-tasks-images/update06.png#lightbox)
+[![](background-tasks-images/update06.png "Replacing the Snapshot with the running apps interface")](background-tasks-images/update06.png#lightbox)
 
-Il sistema acquisisce periodicamente gli snapshot dell'interfaccia utente dell'app (inviando `WKSnapshotRefreshBackgroundTask`un oggetto) e usa tali snapshot per popolare il Dock. watchos offre all'app la possibilità di aggiornare il contenuto e l'interfaccia utente prima di eseguire lo snapshot.
+Il sistema acquisisce periodicamente gli snapshot dell'interfaccia utente dell'app (inviando una `WKSnapshotRefreshBackgroundTask`) e usa tali snapshot per popolare il Dock. watchos offre all'app la possibilità di aggiornare il contenuto e l'interfaccia utente prima di eseguire lo snapshot.
 
 Gli snapshot sono molto importanti in watchos 3 poiché funzionano sia come immagini di anteprima che di avvio per l'app. Se l'utente stabilisce un'app nel Dock, si espanderà a schermo intero, entrerà in primo piano e inizierà a funzionare, quindi è indispensabile che lo snapshot sia aggiornato:
 
-[![](background-tasks-images/update07.png "Se l'utente stabilisce un'app nel Dock, verrà espansa a schermo intero")](background-tasks-images/update07.png#lightbox)
+[![](background-tasks-images/update07.png "If the user settles on an app in the Dock, it will expand to full screen")](background-tasks-images/update07.png#lightbox)
 
-Anche in questo caso, il sistema `WKSnapshotRefreshBackgroundTask` emetterà un in modo che l'app possa preparare (aggiornando i dati e l'interfaccia utente) prima di eseguire lo snapshot:
+Anche in questo caso, il sistema emetterà un `WKSnapshotRefreshBackgroundTask` in modo che l'app possa prepararsi (aggiornando i dati e l'interfaccia utente) prima che venga eseguita la snapshot:
 
-[![](background-tasks-images/update08.png "L'app può prepararsi aggiornando i dati e l'interfaccia utente prima che venga eseguita la snapshot")](background-tasks-images/update08.png#lightbox)
+[![](background-tasks-images/update08.png "The app can prepare by updating the data and the UI before the snapshot is taken")](background-tasks-images/update08.png#lightbox)
 
-Quando l'app contrassegna il `WKSnapshotRefreshBackgroundTask` completamento, il sistema crea automaticamente uno snapshot dell'interfaccia utente dell'app.
+Quando l'app contrassegna la `WKSnapshotRefreshBackgroundTask` completata, il sistema crea automaticamente uno snapshot dell'interfaccia utente dell'app.
 
 > [!IMPORTANT]
-> È importante pianificare sempre un `WKSnapshotRefreshBackgroundTask` dopo che l'app ha ricevuto nuovi dati e aggiornato la relativa interfaccia utente oppure l'utente non visualizzerà le informazioni modificate.
+> È importante pianificare sempre un `WKSnapshotRefreshBackgroundTask` dopo la ricezione di nuovi dati da parte dell'app e l'aggiornamento dell'interfaccia utente oppure l'utente non visualizzerà le informazioni modificate.
 
 Inoltre, quando l'utente riceve una notifica dall'app e la tocca per portare l'app in primo piano, lo snapshot deve essere aggiornato perché funge anche da schermata di avvio:
 
-[![](background-tasks-images/update09.png "L'utente riceve una notifica dall'app e la tocca per portare l'app in primo piano")](background-tasks-images/update09.png#lightbox)
+[![](background-tasks-images/update09.png "The user receives a notification from the app and taps it to bring the app to the foreground")](background-tasks-images/update09.png#lightbox)
 
 Se l'utente ha avuto più di un'ora dall'interazione con un'app watchos, sarà in grado di tornare al suo stato predefinito. Lo stato predefinito può essere diverso per le diverse app e, in base alla progettazione di un'app, potrebbe non avere uno stato predefinito.
 
@@ -154,18 +154,18 @@ Se l'utente ha avuto più di un'ora dall'interazione con un'app watchos, sarà i
 
 ### <a name="wkwatchconnectivityrefreshbackgroundtask"></a>WKWatchConnectivityRefreshBackgroundTask
 
-In watchos 3, Apple ha integrato la connettività Watch con l'API di aggiornamento in background `WKWatchConnectivityRefreshBackgroundTask`tramite la nuova. Grazie a questa nuova funzionalità, un'app iPhone può fornire dati aggiornati alla controparte dell'app Watch, mentre l'app watchos viene eseguita in background:
+In watchos 3, Apple ha integrato la connettività Watch con l'API di aggiornamento in background tramite la nuova `WKWatchConnectivityRefreshBackgroundTask`. Grazie a questa nuova funzionalità, un'app iPhone può fornire dati aggiornati alla controparte dell'app Watch, mentre l'app watchos viene eseguita in background:
 
-[![](background-tasks-images/update10.png "Un'app iPhone può fornire dati aggiornati alla controparte dell'app Watch, mentre l'app watchos viene eseguita in background")](background-tasks-images/update10.png#lightbox)
+[![](background-tasks-images/update10.png "An iPhone app can deliver fresh data to its watch app counterpart, while the watchOS app is running in the background")](background-tasks-images/update10.png#lightbox)
 
 L'avvio di un push di complicazione, il contesto dell'app, l'invio di un file o l'aggiornamento delle informazioni utente dall'app iPhone riattiveranno l'app Apple Watch in background.
 
-Quando l'app Watch viene riattivata `WKWatchConnectivityRefreshBackgroundTask` tramite un, sarà necessario usare i metodi API standard per ricevere i dati dall'app iPhone.
+Quando l'app Watch viene riattivata tramite un `WKWatchConnectivityRefreshBackgroundTask` sarà necessario usare i metodi API standard per ricevere i dati dall'app iPhone.
 
-[![](background-tasks-images/update11.png "Flusso di dati WKWatchConnectivityRefreshBackgroundTask")](background-tasks-images/update11.png#lightbox)
+[![](background-tasks-images/update11.png "The WKWatchConnectivityRefreshBackgroundTask data flow")](background-tasks-images/update11.png#lightbox)
 
 1. Verificare che la sessione sia stata attivata.
-2. Monitorare la nuova `HasContentPending` proprietà purché il valore sia `true`, l'app dispone ancora di dati da elaborare. Come prima, l'app deve tenere l'attività fino a quando non termina l'elaborazione di tutti i dati.
+2. Monitorare la nuova proprietà `HasContentPending` purché il valore sia `true`, l'app dispone ancora di dati da elaborare. Come prima, l'app deve tenere l'attività fino a quando non termina l'elaborazione di tutti i dati.
 3. Quando non sono più disponibili dati da elaborare (`HasContentPending = false`), contrassegnare l'attività completata per restituirla al sistema. In caso contrario, verrà esaurito il runtime di sfondo assegnato dall'app, ottenendo una segnalazione di arresto anomalo.
 
 <a name="The-Background-API-Lifecycle" />
@@ -174,12 +174,12 @@ Quando l'app Watch viene riattivata `WKWatchConnectivityRefreshBackgroundTask` t
 
 Inserendo tutti i componenti della nuova API attività in background insieme, un set di interazioni tipico sarà simile al seguente:
 
-[![](background-tasks-images/update12.png "Ciclo di vita dell'API in background")](background-tasks-images/update12.png#lightbox)
+[![](background-tasks-images/update12.png "The Background API Lifecycle")](background-tasks-images/update12.png#lightbox)
 
 1. In primo luogo, l'app watchos pianifica un'attività in background da ridestare come un certo punto in futuro.
 2. L'app viene riattivata dal sistema e invia un'attività.
 3. L'app elabora l'attività per completare qualsiasi operazione richiesta.
-4. In seguito all'elaborazione dell'attività, è possibile che l'app debba pianificare più attività in background per completare più lavoro in futuro, ad esempio per scaricare più contenuti usando `NSUrlSession`un.
+4. In seguito all'elaborazione dell'attività, è possibile che l'app debba pianificare più attività in background per completare più lavoro in futuro, ad esempio per scaricare più contenuti usando un `NSUrlSession`.
 5. L'app contrassegna l'attività completata e la restituisce al sistema.
 
 <a name="Using-Resources-Responsibly" />
@@ -190,7 +190,7 @@ Inserendo tutti i componenti della nuova API attività in background insieme, un
 
 Esaminare lo scenario seguente:
 
-[![](background-tasks-images/update13.png "Un'app watchos limita lo svuotamento sulle risorse condivise del sistema")](background-tasks-images/update13.png#lightbox)
+[![](background-tasks-images/update13.png "A watchOS app limits its drain on the system's shared resources")](background-tasks-images/update13.png#lightbox)
 
 1. L'utente avvia un'app watchos alle ore 1:00.
 2. L'app pianifica un'attività per la riattivazione e il download di nuovo contenuto in un'ora alle 2:00 PM.
@@ -207,7 +207,7 @@ Per questo esempio, in questo documento verrà usata la falsa app MonkeySoccer S
 
 Esaminare lo scenario di utilizzo tipico seguente:
 
-[![](background-tasks-images/update14.png "Scenario di utilizzo tipico")](background-tasks-images/update14.png#lightbox)
+[![](background-tasks-images/update14.png "The typical usage scenario")](background-tasks-images/update14.png#lightbox)
 
 Il team di calcio preferito dell'utente sta giocando una grande corrispondenza tra le 7:00 e 9:00 PM, quindi l'app dovrebbe aspettarsi che l'utente verifichi regolarmente il punteggio e decida un intervallo di aggiornamento di 30 minuti.
 
@@ -246,9 +246,9 @@ private void ScheduleNextBackgroundUpdate ()
 }
 ```
 
-Crea un nuovo `NSDate` 30 minuti in futuro quando l'app vuole essere risvegliata e crea un oggetto `NSMutableDictionary` per contenere i dettagli dell'attività richiesta. Il `ScheduleBackgroundRefresh` metodo`SharedExtension` di viene utilizzato per richiedere che l'attività venga pianificata.
+Crea una nuova `NSDate` 30 minuti in futuro quando l'app vuole essere risvegliata e crea un `NSMutableDictionary` per contenere i dettagli dell'attività richiesta. Il metodo `ScheduleBackgroundRefresh` della `SharedExtension` viene utilizzato per richiedere che l'attività venga pianificata.
 
-Se non è stato possibile `NSError` pianificare l'attività richiesta, il sistema restituisce un valore.
+Il sistema restituirà un `NSError` se non è stato in grado di pianificare l'attività richiesta.
 
 <a name="Processing-the-Update" />
 
@@ -256,7 +256,7 @@ Se non è stato possibile `NSError` pianificare l'attività richiesta, il sistem
 
 A questo punto, esaminare più in dettaglio la finestra di 5 minuti che mostra i passaggi necessari per aggiornare il Punteggio:
 
-[![](background-tasks-images/update15.png "La finestra di 5 minuti che mostra i passaggi necessari per aggiornare il Punteggio")](background-tasks-images/update15.png#lightbox)
+[![](background-tasks-images/update15.png "The 5 minute window showing the steps required to update the score")](background-tasks-images/update15.png#lightbox)
 
 1. Alle 7:30:02 PM l'app viene riattivata dal sistema e data l'attività Aggiorna in background. La prima priorità è ottenere i punteggi più recenti dal server. Vedere [pianificazione di un NSUrlSession di](#Scheduling-a-NSUrlSession) seguito.
 2. Al 7:30:05 l'app completa l'attività originale, il sistema inserisce l'app in modalità sospensione e continua a scaricare i dati richiesti in background.
@@ -285,13 +285,13 @@ private void ScheduleURLUpdateSession ()
 }
 ```
 
-Configura e crea un nuovo `NSUrlSession`oggetto, quindi usa tale sessione per creare una nuova attività di download usando il `CreateDownloadTask` metodo. Viene chiamato il `Resume` metodo dell'attività di download per avviare la sessione.
+Configura e crea un nuovo `NSUrlSession`, quindi usa tale sessione per creare una nuova attività di download usando il metodo `CreateDownloadTask`. Chiama il metodo `Resume` dell'attività di download per avviare la sessione.
 
 <a name="Handling-Background-Tasks" />
 
 ## <a name="handling-background-tasks"></a>Gestione delle attività in background
 
-Eseguendo l'override del `HandleBackgroundTasks` metodo `WKExtensionDelegate`di, l'app può gestire le attività in background in ingresso:
+Eseguendo l'override del metodo `HandleBackgroundTasks` della `WKExtensionDelegate`, l'app può gestire le attività in background in ingresso:
 
 ```csharp
 using System;
@@ -347,7 +347,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
 }
 ```
 
-Il `HandleBackgroundTasks` metodo esegue il ciclo di tutte le attività che il sistema ha inviato all'app ( `backgroundTasks`in) cercando `WKUrlSessionRefreshBackgroundTask`. Se ne viene individuato uno, viene riunito la sessione e viene collegato `NSUrlSessionDownloadDelegate` un per gestire il completamento del download (vedere [gestione del download completato](#Handling-the-Download-Completing) di seguito):
+Il metodo `HandleBackgroundTasks` esegue il ciclo di tutte le attività che il sistema ha inviato all'app (in `backgroundTasks`) la ricerca di un `WKUrlSessionRefreshBackgroundTask`. Se ne viene individuato uno, viene riunito la sessione e viene collegato un `NSUrlSessionDownloadDelegate` per gestire il completamento del download (vedere [gestione del download completato](#Handling-the-Download-Completing) di seguito):
 
 ```csharp
 // Create new session
@@ -420,7 +420,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
 }
 ```
 
-Quando viene inizializzato, mantiene un handle per l' `ExtensionDelegate` oggetto e `WKRefreshBackgroundTask` l'oggetto che lo ha generato. Esegue l'override `DidFinishDownloading` del metodo per gestire il completamento del download. USA quindi il `CompleteTask` metodo `ExtensionDelegate` di per informare l'attività che è stata completata e rimuoverla dalla raccolta di attività in sospeso. Vedere [gestione delle attività in background](#Handling-Background-Tasks) sopra.
+Quando viene inizializzato, mantiene un handle sia per il `ExtensionDelegate` che per il `WKRefreshBackgroundTask` che lo ha generato. Esegue l'override del metodo `DidFinishDownloading` per gestire il completamento del download. USA quindi il metodo `CompleteTask` della `ExtensionDelegate` per informare l'attività che è stata completata e rimuoverla dalla raccolta di attività in sospeso. Vedere [gestione delle attività in background](#Handling-Background-Tasks) sopra.
 
 <a name="Scheduling-a-Snapshot-Update" />
 
@@ -451,15 +451,15 @@ private void ScheduleSnapshotUpdate ()
 }
 ```
 
-Analogamente al `NSDate` `NSMutableDictionary` metodo precedente, viene creato un nuovo oggetto per quando l'app vuole essere risvegliata e crea un oggetto per contenere i dettagli dell'attività richiesta. `ScheduleURLUpdateSession` Il `ScheduleSnapshotRefresh` metodo`SharedExtension` di viene utilizzato per richiedere che l'attività venga pianificata.
+Proprio come `ScheduleURLUpdateSession` metodo precedente, viene creato un nuovo `NSDate` per il momento in cui l'app vuole essere risvegliata e crea un `NSMutableDictionary` per contenere i dettagli dell'attività richiesta. Il metodo `ScheduleSnapshotRefresh` della `SharedExtension` viene utilizzato per richiedere che l'attività venga pianificata.
 
-Se non è stato possibile `NSError` pianificare l'attività richiesta, il sistema restituisce un valore.
+Il sistema restituirà un `NSError` se non è stato in grado di pianificare l'attività richiesta.
 
 <a name="Handling-a-Snapshot-Update" />
 
 ## <a name="handling-a-snapshot-update"></a>Gestione di un aggiornamento dello snapshot
 
-Per gestire l'attività snapshot, il `HandleBackgroundTasks` metodo (vedere [gestione delle attività in background](#Handling-Background-Tasks) precedente) viene modificato in modo analogo al seguente:
+Per gestire l'attività snapshot, il metodo `HandleBackgroundTasks` (vedere [gestione delle attività in background](#Handling-Background-Tasks) precedente) è stato modificato per essere simile al seguente:
 
 ```csharp
 public override void HandleBackgroundTasks (NSSet<WKRefreshBackgroundTask> backgroundTasks)
@@ -502,20 +502,20 @@ public override void HandleBackgroundTasks (NSSet<WKRefreshBackgroundTask> backg
 }
 ```
 
-Il metodo verifica il tipo di attività in fase di elaborazione. Se è un `WKSnapshotRefreshBackgroundTask` , ottiene l'accesso all'attività:
+Il metodo verifica il tipo di attività in fase di elaborazione. Se è un `WKSnapshotRefreshBackgroundTask` Ottiene l'accesso all'attività:
 
 ```csharp
 var snapshotTask = task as WKSnapshotRefreshBackgroundTask;
 ```
 
-Il metodo aggiorna l'interfaccia utente, quindi crea `NSDate` un oggetto per indicare al sistema quando lo snapshot sarà non aggiornato. Viene creato un `NSMutableDictionary` oggetto con le informazioni sull'utente per descrivere il nuovo snapshot e viene contrassegnata l'attività snapshot completata con queste informazioni:
+Il metodo aggiorna l'interfaccia utente, quindi crea un `NSDate` per indicare al sistema quando lo snapshot sarà non aggiornato. Viene creato un `NSMutableDictionary` con le informazioni sull'utente per descrivere il nuovo snapshot e viene contrassegnata l'attività snapshot completata con queste informazioni:
 
 ```csharp
 // Mark task complete
 snapshotTask.SetTaskCompleted (false, expirationDate, userInfo);
 ```
 
-Inoltre, indica all'attività snapshot che l'app non ritorna allo stato predefinito (nel primo parametro). Le app che non hanno un concetto di stato predefinito devono sempre impostare questa proprietà `true`su.
+Inoltre, indica all'attività snapshot che l'app non ritorna allo stato predefinito (nel primo parametro). Le app che non hanno un concetto di stato predefinito devono sempre impostare questa proprietà su `true`.
 
 <a name="Working-Efficiently" />
 
@@ -523,7 +523,7 @@ Inoltre, indica all'attività snapshot che l'app non ritorna allo stato predefin
 
 Come illustrato nell'esempio precedente della finestra di cinque minuti usata dall'app MonkeySoccer per aggiornare i punteggi, lavorando in modo efficiente e usando le nuove attività in background di watchos 3, l'app è stata attiva solo per un totale di 15 secondi: 
 
-[![](background-tasks-images/update16.png "L'app è stata attiva solo per un totale di 15 secondi")](background-tasks-images/update16.png#lightbox)
+[![](background-tasks-images/update16.png "The app was only active for a total of 15 seconds")](background-tasks-images/update16.png#lightbox)
 
 In questo modo si riduce l'incidenza dell'app sulle risorse Apple Watch disponibili e sulla durata della batteria, oltre a consentire all'app di funzionare meglio con altre app in esecuzione nell'orologio.
 
@@ -539,9 +539,9 @@ Mentre un'app è in background, il sistema impone diversi limiti:
 
 - Per completare una determinata attività, vengono forniti solo pochi secondi. Il sistema prende in considerazione non solo la quantità di tempo passata, ma anche la quantità di energia CPU che l'app sta consumando per derivare questo limite.
 - Qualsiasi app che supera i limiti verrà terminata con i codici di errore seguenti:
-  - **CPU** - 0xc51bad01
+  - **CPU** -0xc51bad01
   - **Time** -0xc51bad02
-- Il sistema imposterà limiti diversi in base al tipo di attività in background che ha richiesto all'app di eseguire. Ad esempio, `WKApplicationRefreshBackgroundTask` le `WKURLSessionRefreshBackgroundTask` attività e vengono assegnate a runtime leggermente più lunghi rispetto ad altri tipi di attività in background.
+- Il sistema imposterà limiti diversi in base al tipo di attività in background che ha richiesto all'app di eseguire. Ad esempio, le attività `WKApplicationRefreshBackgroundTask` e `WKURLSessionRefreshBackgroundTask` sono fornite Runtime leggermente più lunghi rispetto ad altri tipi di attività in background.
 
 <a name="Complications-and-App-Updates" />
 
@@ -603,7 +603,7 @@ private void UpdateComplication ()
 }
 ```
 
-Usa la `RemainingComplicationUserInfoTransfers` proprietà `WCSession` di per vedere il numero di trasferimenti con priorità alta lasciati dall'app per il giorno e quindi esegue un'azione in base a tale numero. Se l'avvio dell'app non è sufficiente, è possibile che si verifichino problemi di invio di aggiornamenti secondari e di inviare informazioni solo in caso di modifica significativa.
+Usa la proprietà `RemainingComplicationUserInfoTransfers` della `WCSession` per verificare il numero di trasferimenti con priorità alta lasciati dall'app per il giorno e quindi esegue un'azione in base a tale numero. Se l'avvio dell'app non è sufficiente, è possibile che si verifichino problemi di invio di aggiornamenti secondari e di inviare informazioni solo in caso di modifica significativa.
 
 <a name="Scheduling-and-Dock" />
 
@@ -611,7 +611,7 @@ Usa la `RemainingComplicationUserInfoTransfers` proprietà `WCSession` di per ve
 
 In watchos 3, Apple ha aggiunto il Dock in cui gli utenti possono aggiungere le proprie app preferite e accedervi rapidamente. Quando l'utente preme il pulsante laterale nella Apple Watch, viene visualizzata una raccolta di snapshot dell'app bloccati. L'utente può scorrere rapidamente verso sinistra o verso destra per trovare l'app desiderata, quindi toccare l'app per avviarla sostituendo lo snapshot con l'interfaccia dell'app in esecuzione.
 
-[![](background-tasks-images/dock01.png "Ancoraggio")](background-tasks-images/dock01.png#lightbox)
+[![](background-tasks-images/dock01.png "The Dock")](background-tasks-images/dock01.png#lightbox)
 
 Il sistema acquisisce periodicamente gli snapshot dell'interfaccia utente dell'app e usa tali snapshot per popolare i documenti. watchos offre all'app la possibilità di aggiornare il contenuto e l'interfaccia utente prima di eseguire lo snapshot.
 
@@ -649,9 +649,9 @@ Apple suggerisce le seguenti procedure consigliate per l'utilizzo delle attivit�
   - Notifiche.
   - Aggiornamenti delle complicazioni.
   - Aggiornamenti in background.
-- Usare `ScheduleBackgroundRefresh` per il runtime di background generale, ad esempio:
+- Usare `ScheduleBackgroundRefresh` per un runtime di background di uso generico, ad esempio:
   - Polling del sistema per ottenere informazioni.
-  - Pianificare future `NSURLSessions` per richiedere dati in background. 
+  - Pianificare `NSURLSessions` future per richiedere dati in background. 
   - Transizioni temporali note.
   - Attivazione degli aggiornamenti delle complicazioni.
 
@@ -670,9 +670,9 @@ Quando si lavora con gli aggiornamenti snapshot, Apple apporta i suggerimenti se
 
 Apple suggerisce quanto segue per l'uso del flusso di dati:
 
-[![](background-tasks-images/update17.png "Diagramma del flusso di dati dell'app")](background-tasks-images/update17.png#lightbox)
+[![](background-tasks-images/update17.png "App Data Flow Diagram")](background-tasks-images/update17.png#lightbox)
 
-Un evento esterno, ad esempio connettività di controllo, riattiva l'app. In questo modo l'app deve aggiornare il modello di dati (che rappresenta lo stato corrente delle app). In seguito alla modifica del modello di dati, l'app dovrà aggiornare le sue complicazioni, richiedere un nuovo snapshot, probabilmente avviare uno `NSURLSession` sfondo per estrarre più dati e pianificare altri aggiornamenti in background.
+Un evento esterno, ad esempio connettività di controllo, riattiva l'app. In questo modo l'app deve aggiornare il modello di dati (che rappresenta lo stato corrente delle app). In seguito alla modifica del modello di dati, l'app dovrà aggiornare le sue complicazioni, richiedere un nuovo snapshot, eventualmente avviare uno sfondo `NSURLSession` per estrarre più dati e pianificare altri aggiornamenti in background.
 
 <a name="The-App-Lifecycle" />
 
@@ -683,7 +683,7 @@ Grazie al Dock e alla possibilità di aggiungere app preferite, Apple ritiene ch
 Apple presenta i suggerimenti seguenti:
 
 - Assicurarsi che l'app completi tutte le attività in background non appena possibile quando si entra in primo piano.
-- Assicurarsi di completare tutte le operazioni in primo piano prima di accedere `NSProcessInfo.PerformExpiringActivity`allo sfondo chiamando.
+- Assicurarsi di completare tutte le operazioni in primo piano prima di entrare in background chiamando `NSProcessInfo.PerformExpiringActivity`.
 - Quando si esegue il test di un'app nel simulatore watchos, non verrà applicato alcun budget per le attività, in modo che un'app possa aggiornare il più necessario per testare correttamente una funzionalità.
 - Testare sempre l'hardware Apple Watch reale per assicurarsi che l'app non sia in esecuzione oltre i budget prima della pubblicazione in iTunes Connect.
 - Apple consiglia di mantenere il Apple Watch sul caricabatterie durante i test e il debug.

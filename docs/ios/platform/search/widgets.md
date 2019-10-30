@@ -4,15 +4,15 @@ description: Questo documento descrive i miglioramenti apportati da Apple ai wid
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 969d7fc78af9dd10f7ad57f58a6f4f619d0a201a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ca6ccce934b32fa0d7e48cd8f295d9acefe6e121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769448"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031504"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Miglioramenti ai widget della schermata iniziale e di ricerca in iOS 10
 
@@ -24,7 +24,7 @@ I widget (noti anche come estensioni odierne) sono un tipo speciale di estension
 
 I widget sono altamente personalizzabili e possono contenere elementi dell'interfaccia utente, ad esempio testo, immagini, pulsanti e così via. Inoltre, lo sviluppatore può personalizzare ulteriormente il layout dei widget.
 
-[![](widgets-images/widgets01.png "Widget di esempio")](widgets-images/widgets01.png#lightbox)
+[![](widgets-images/widgets01.png "Example widgets")](widgets-images/widgets01.png#lightbox)
 
 Esistono due punti principali che un utente può visualizzare e interagire con i widget di un'app:
 
@@ -50,14 +50,14 @@ Per altre informazioni sull'uso dei widget, vedere l' [Introduzione alle estensi
 
 ## <a name="working-with-vibrancy"></a>Uso di vitalità
 
-Vividity garantisce che il testo di un widget rimanga leggibile quando viene visualizzato sullo sfondo chiaro e sfocato del widget (fornito dal sistema). Prima di iOS 10, lo sviluppatore utilizzava un [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) per la vivacità del widget. Ad esempio:
+Vividity garantisce che il testo di un widget rimanga leggibile quando viene visualizzato sullo sfondo chiaro e sfocato del widget (fornito dal sistema). Prima di iOS 10, lo sviluppatore utilizzava un [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) per la vivacità del widget. Esempio:
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-Questa funzionalità è deprecata in iOS 10 e deve essere sostituita da un [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) o [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect). Ad esempio:
+Questa funzionalità è deprecata in iOS 10 e deve essere sostituita da un [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) o [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect). Esempio:
 
 ```csharp
 // Get Primary Widget Vibrancy Effect

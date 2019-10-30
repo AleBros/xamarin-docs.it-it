@@ -4,16 +4,16 @@ description: Questo documento descrive come distribuire in modalità wireless un
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: afa87cf98a2f9caee49c510674fe774a46e81107
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b0eb471bd41bb38d62ced38ed66cfa0dfee37bbf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284346"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023414"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Distribuzione wireless per app Xamarin.iOS e tvOS
 
@@ -59,7 +59,7 @@ Il processo di associazione seguente deve essere eseguito una sola volta per ogn
 
 1. Aprire Xcode e passare a **Window > Devices and Simulators** (Finestra > Dispositivi e simulatori).
 2. Collegare il dispositivo iOS al Mac tramite un cavo Lightning. Potrebbe essere necessario selezionare **Trust This Computer** (Considera attendibile il computer) sul dispositivo.
-3. Selezionare il dispositivo e quindi selezionare la casella di controllo **Connect via network** (Connetti tramite rete) per associare il dispositivo:  ![Finestra Devices and Simulators (Dispositivi e simulatori) che mostra l'opzione Connect via network (Connetti tramite rete) ](wireless-deployment-images/image2.png)
+3. Selezionare il dispositivo e quindi selezionare la casella di controllo **Connect via network** (Connetti tramite la rete) per associare il dispositivo: ![Finestra di dispositivi e simulatori con l'opzione per la connessione tramite la rete](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Associazione di una Apple TV con Xcode
 
@@ -89,7 +89,7 @@ Per eseguire la distribuzione in un dispositivo iOS o tvOS, attenersi alla proce
 
 Il debug wireless viene abilitato automaticamente dopo la distribuzione wireless, pertanto è possibile usare i punti di interruzione impostati precedentemente e continuare il flusso di lavoro di debug come di consueto.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 1. Verificare sempre che il dispositivo iOS o Apple TV sia connesso alla stessa rete del Mac.
 

@@ -3,15 +3,15 @@ title: Ambiente Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 076e6bfd1155c0eba4045af59a599a34b0fca1d5
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021170"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028065"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente Xamarin.Android
 
@@ -36,7 +36,7 @@ I commenti sono righe che iniziano con `#`. Le righe vuote vengono ignorate.
 
 Se la *chiave* inizia con una lettera maiuscola, la *chiave* viene considerata una variabile di ambiente e viene usato **setenv**(3) per impostare la variabile di ambiente sul *valore* specificato durante l'avvio del processo.
 
-Se la *chiave* inizia con una lettera minuscola, la *chiave* viene considerata come proprietà di sistema di Android e il *valore* è il *valore predefinito*: prima vengono cercate nell'archivio delle proprietà di sistema di Android le proprietà di sistema di Android che controllano il comportamento di esecuzione di Xamarin.Android e, se non sono presenti valori, viene usato il valore specificato nel file dell'ambiente. Lo scopo è quello di consentire l'uso di `adb shell setprop` per eseguire l'override dei valori ricavati dal file dell'ambiente a fini diagnostici.
+Se la *chiave* inizia con una lettera minuscola, la *chiave* viene considerata una proprietà di sistema di Android e il *valore* è il *valore predefinito*: prima vengono cercate nell'archivio delle proprietà di sistema di Android le proprietà di sistema di Android che controllano il comportamento di esecuzione di Xamarin.Android e, se non sono presenti valori, viene usato il valore specificato nel file dell'ambiente. Lo scopo è quello di consentire l'uso di `adb shell setprop` per eseguire l'override dei valori ricavati dal file dell'ambiente a fini diagnostici.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variabili di ambiente Xamarin.Android
 
@@ -95,7 +95,7 @@ Si tratta di una stringa delimitata da virgole (`,`), contenente uno dei valori 
 - `gref`: visualizza i messaggi di riferimento globale JNI.
 - `lref`: visualizza i messaggi di riferimento locale JNI.
   > [!NOTE]
-  > si tratta `adb logcat`effettivamente* di  di posta indesiderata.
+  > Si tratta di un *vero e proprio* indesiderato `adb logcat`.
   > In Xamarin.Android 5.1 verrà anche creato un file `.__override__/lrefs.txt`, che può assumere dimensioni *enormi*.
   > Da evitare.
 - `timing`: visualizza alcune informazioni sugli intervalli dei metodi. Verranno anche creati i file `.__override__/methods.txt` e `.__override__/counters.txt`.
@@ -131,7 +131,7 @@ Tuttavia *a volte* consente di eseguire ulteriori indagini.
 La proprietà di sistema `debug.mono.wref` consente l'override del meccanismo di riferimento debole JNI rilevato predefinito. I valori supportati sono due:
 
 - `jni`: usa i riferimenti deboli JNI, creati da `JNIEnv::NewWeakGlobalRef()` ed eliminati definitivamente da `JNIEnv::DeleteWeakGlobalREf()`.
-- `java`: Usare i riferimenti globali JNI che `java.lang.WeakReference` fanno riferimento a istanze.
+- `java`: usare i riferimenti globali JNI che fanno riferimento a `java.lang.WeakReference` istanze.
 
 Per impostazione predefinita, `java` viene usato fino all'API 7 e nell'API 19 (Kit Kat) con ART abilitato. Nell'API 8 sono stati aggiunti i riferimenti `jni` e in ART sono stati *interrotti* i riferimenti `jni`.
 

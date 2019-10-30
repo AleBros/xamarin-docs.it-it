@@ -4,15 +4,15 @@ description: Questo documento descrive come usare Novell. iOS per lavorare con l
 ms.prod: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: d321e8061d3091abeaa3cff6a6af9172c981cb60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7d9fe2a651d8d75d8dd9d8c0dd1225350a58373d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291193"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031892"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Notifiche provvisorie in Novell. iOS
 
@@ -26,7 +26,7 @@ Esaminare l'app di esempio [RedGreenNotifications](https://docs.microsoft.com/sa
 
 ## <a name="sending-provisional-notifications"></a>Invio di notifiche provvisorie
 
-Per inviare le notifiche provvisorie, fornire `UNAuthorizationOptions.Provisional` l'opzione[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
+Per inviare le notifiche provvisorie, fornire `UNAuthorizationOptions.Provisional` come opzione al [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
 Metodo di `UNUserNotificationCenter`:
 
 ```csharp
@@ -41,7 +41,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Se l'utente promuove le notifiche provvisorie per il recapito preminente `UNAuthorizationOptions` , i valori `RequestAuthorization` passati a determineranno le nuove impostazioni di recapito delle notifiche `UNAuthorizationOptions.Alert` ( `UNAuthorizationOptions.Sound`nel codice precedente e).
+Se l'utente promuove le notifiche provvisorie al recapito preminente, i valori `UNAuthorizationOptions` passati a `RequestAuthorization` determineranno le nuove impostazioni di recapito delle notifiche (nel codice precedente, `UNAuthorizationOptions.Alert` e `UNAuthorizationOptions.Sound`).
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -4,15 +4,15 @@ description: Questo documento descrive come usare Spotlight principale in un'app
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 00a973e670ff5100a44ba158fe50f134781a97e2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 102c0e7dbd2f4c903793e83d7551a84a52cac4fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769500"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031579"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Eseguire una ricerca con core Spotlight in Novell. iOS
 
@@ -47,11 +47,11 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 Queste informazioni sono simili alle seguenti nei risultati della ricerca:
 
-[![](corespotlight-images/corespotlight01.png "Panoramica sui risultati della ricerca principale di Spotlight")](corespotlight-images/corespotlight01.png#lightbox)
+[![](corespotlight-images/corespotlight01.png "Core Spotlight search result overview")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Ripristino di un elemento
 
-Quando l'utente tocca un elemento aggiunto al risultato della ricerca tramite i principali Spotlight per l'app, viene `AppDelegate` chiamato `ContinueUserActivity` il metodo (questo metodo viene usato anche per `NSUserActivity`). Ad esempio:
+Quando l'utente tocca un elemento aggiunto al risultato della ricerca tramite i principali Spotlight per l'app, viene chiamato il metodo `AppDelegate` `ContinueUserActivity` (questo metodo viene usato anche per `NSUserActivity`). Esempio:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -74,14 +74,14 @@ public override bool ContinueUserActivity (UIApplication application,
 }
 ```
 
-Si noti che questa volta viene verificata la presenza di un' `ActivityType` attività `CSSearchableItem.ActionType`di.
+Si noti che questa volta viene verificata l'attività con un `ActivityType` di `CSSearchableItem.ActionType`.
 
 ## <a name="updating-an-item"></a>Aggiornamento di un elemento
 
 In alcuni casi potrebbe essere necessario modificare un elemento dell'indice creato con il componente Spotlight principale, ad esempio una modifica nel titolo o nell'immagine di anteprima. Per apportare questa modifica, viene usato lo stesso metodo usato per creare inizialmente l'indice.
-Viene creato un nuovo `CSSearchableItem` usando lo stesso ID utilizzato per creare l'elemento e alleghi un nuovo `CSSearchableItemAttributeSet` oggetto contenente gli attributi modificati:
+Viene creato un nuovo `CSSearchableItem` usando lo stesso ID usato per creare l'elemento e alleghi un nuovo `CSSearchableItemAttributeSet` contenente gli attributi modificati:
 
-[![](corespotlight-images/corespotlight02.png "Panoramica sull'aggiornamento di un elemento")](corespotlight-images/corespotlight02.png#lightbox)
+[![](corespotlight-images/corespotlight02.png "Updating an Item overview")](corespotlight-images/corespotlight02.png#lightbox)
 
 Quando questo elemento viene scritto nell'indice ricercabile, l'elemento esistente viene aggiornato con le nuove informazioni.
 
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-Successivamente, è possibile eliminare un gruppo di elementi di indice in base al nome di dominio. Ad esempio:
+Successivamente, è possibile eliminare un gruppo di elementi di indice in base al nome di dominio. Esempio:
 
 ```csharp
 // Delete by Domain Name
@@ -129,13 +129,13 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 
 In Spotlight principale sono disponibili le seguenti funzionalità che consentono di garantire la correttezza e l'aggiornamento dell'indice:
 
-- **Supporto per aggiornamenti batch** : se l'app deve creare o modificare contemporaneamente un gruppo di indici di grandi dimensioni, l'intero batch può essere inviato al `Index` metodo della `CSSearchableIndex` classe in un'unica chiamata.
-- **Rispondere alle modifiche dell'indice** : l' `CSSearchableIndexDelegate` uso dell'app può rispondere alle modifiche e alle notifiche dall'indice ricercabile.
+- **Supporto per aggiornamenti batch** : se l'app deve creare o modificare contemporaneamente un gruppo di indici di grandi dimensioni, l'intero batch può essere inviato al metodo `Index` della classe `CSSearchableIndex` in un'unica chiamata.
+- **Rispondere alle modifiche dell'indice** : usando il `CSSearchableIndexDelegate` l'app può rispondere alle modifiche e alle notifiche dall'indice ricercabile.
 - **Applicare la protezione dei dati** : usando le classi di protezione dei dati, è possibile implementare la sicurezza per gli elementi aggiunti all'indice in cui è possibile eseguire ricerche usando Core Spotlight.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Esempi di iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guida alla programmazione di app Search](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

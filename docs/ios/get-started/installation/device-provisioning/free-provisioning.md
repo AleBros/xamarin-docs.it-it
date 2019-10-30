@@ -4,15 +4,15 @@ description: Questo documento descrive in che modo gli sviluppatori Xamarin.iOS 
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/16/2018
-ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 951b019a4a0bf503629b6ac63853bd5b1c818bce
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291428"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022749"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisioning gratuito per le app Xamarin.iOS
 
@@ -49,7 +49,7 @@ Eseguire la procedura seguente per testare l'app Xamarin.iOS con il provisioning
 2. Aprire Xcode e passare a **Xcode > Preferences** (Preferenze).
 3. In **Accounts** (Account) usare il pulsante **+** per aggiungere il proprio ID Apple esistente. La schermata dovrebbe essere simile alla seguente:
 
-    ![Preferenze di Xcode: account](free-provisioning-images/launchapp1.png "Preferenze di Xcode: account")
+    ![Preferenze di Xcode-account](free-provisioning-images/launchapp1.png "Preferenze di Xcode-account")
 
 4. Chiudere le preferenze di Xcode.
 5. Collegare il dispositivo iOS in cui si vuole distribuire l'app.
@@ -65,7 +65,7 @@ Eseguire la procedura seguente per testare l'app Xamarin.iOS con il provisioning
 9. Aprire le impostazioni di progetto dell'app selezionando il nodo di primo livello in **Project Navigator** (Selezione progetto) di Xcode.
 10. In **Generale > Identità** assicurarsi che **Identificatore del bundle** _corrisponda esattamente_ all'identificatore del bundle dell'app Xamarin.iOS.
 
-    ![Impostare un identificatore del bundle](free-provisioning-images/launchapp5.png "Impostare un identificatore del bundle")
+    ![Imposta un identificatore del bundle](free-provisioning-images/launchapp5.png "Imposta un identificatore del bundle")
 
     > [!IMPORTANT]
     > Xcode creerà un profilo di provisioning solo per un ID app esplicito che deve essere identico all'ID app dell'app Xamarin.iOS.
@@ -74,7 +74,7 @@ Eseguire la procedura seguente per testare l'app Xamarin.iOS con il provisioning
 11. In **Informazioni sulla distribuzione** assicurarsi che la destinazione di distribuzione corrisponda o sia inferiore alla versione di iOS installata nel dispositivo iOS connesso.
 12. In **Firma in corso** selezionare **Automatically Manage Signing** (Gestisci automaticamente la firma) e selezionare il proprio team dall'elenco a discesa:
 
-    ![Gestisci automaticamente la firma](free-provisioning-images/launchapp6.png "Gestisci automaticamente la firma")
+    ![Gestione automatica della firma](free-provisioning-images/launchapp6.png "Gestione automatica della firma")
 
     Xcode genera automaticamente un profilo di provisioning e un'identità di firma. È possibile vederlo facendo clic sull'icona delle informazioni accanto al profilo di provisioning:
 

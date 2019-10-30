@@ -3,15 +3,15 @@ title: Gestione degli account Apple
 description: Questo documento descrive come usare le funzionalità di gestione degli account Apple in Visual Studio per Mac e Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 81f161442b33eee94f32c506947ed029fd40aadb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766127"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016338"
 ---
 # <a name="apple-account-management"></a>Gestione degli account Apple
 
@@ -39,7 +39,7 @@ Per usare questa funzionalità, è necessario disporre di un account per svilupp
 
 - Assicurarsi di essere connessi a Internet. Questo perché Fastlane comunica direttamente con il portale Apple Developer.
 - Assicurarsi che siano [installati gli strumenti di Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Assicurarsi di disporre degli strumenti Fastlane più recenti [https://download.fastlane.tools](https://download.fastlane.tools)da.
+- Assicurarsi di disporre degli strumenti Fastlane più recenti da [https://download.fastlane.tools](https://download.fastlane.tools).
 - Prima di iniziare, assicurarsi di accettare eventuali contratti di licenza con l'utente nel [portale per sviluppatori](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Aggiunta di un account Apple Developer
@@ -50,7 +50,7 @@ Per usare questa funzionalità, è necessario disporre di un account per svilupp
 
     ![Opzioni dell'account sviluppatore Apple](apple-account-management-images/image1.png)
 
-2. Premere il **+** pulsante per visualizzare la finestra di dialogo di accesso, come illustrato di seguito: 
+2. Premere il pulsante **+** per visualizzare la finestra di dialogo di accesso, come illustrato di seguito: 
 
     ![finestra di dialogo Fastlane.](apple-account-management-images/image2.png)
 
@@ -132,11 +132,11 @@ La finestra di dialogo Dettagli team Visualizza anche un elenco di tutti i profi
 
 -----
 
-## <a name="ios-bundle-signing"></a>Firma bundle iOS
+## <a name="ios-bundle-signing"></a>Firma del bundle iOS
 
 Per informazioni sulla distribuzione dell'app in un dispositivo, vedere la guida al [provisioning dei dispositivi](~/ios/get-started/installation/device-provisioning/index.md) .
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 ### <a name="view-details-dialog-is-empty"></a>La finestra di dialogo Visualizza dettagli è vuota
 
@@ -144,7 +144,7 @@ Si tratta attualmente di un problema noto, relativo al [#53906](https://bugzilla
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Se si verificano problemi di registrazione nell'account, provare a eseguire le operazioni seguenti:
 
-- Aprire l'applicazione keychain e in Category selezionare *password*. `deliver.`Cercare ed eliminare tutte le voci.
+- Aprire l'applicazione keychain e in Category selezionare *password*. Cercare `deliver.`ed eliminare tutte le voci.
 
 ### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"Errore durante l'aggiunta dell'account. Accedere con una password specifica per l'app "
 

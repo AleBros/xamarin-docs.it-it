@@ -4,21 +4,21 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752002"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031787"
 ---
 # <a name="introduction-to-ios-9"></a>Introduzione a iOS 9
 
 _Questo articolo presenta tutte le API e le funzionalità nuove e modificate disponibili in iOS 9 per gli sviluppatori Novell. iOS._
 
-![](images/ios9-sml.png "Logo iOS 9")
+![](images/ios9-sml.png "The iOS 9 logo")
 
 Apple ha aggiunto diverse nuove API e servizi in iOS 9 insieme a numerosi miglioramenti apportati alle funzionalità esistenti.
 
@@ -121,7 +121,7 @@ Con iOS 9, Apple sta estendendo il supporto dell'estensione fornendo diversi nuo
 
 - **Nuovo punto di estensione unità audio** : usare questo punto di estensione per fornire effetti audio, strumenti musicali, generatori di suoni e così via, da usare in altre app host di unità audio (ad esempio, GarageBand). Questo punto di estensione consente anche di vendere _unità audio_ (plug-in audio) nell'App Store.
 - **Nuovo punto di estensione per la manutenzione degli indici** : usare questo punto di estensione per supportare la reindicizzazione dei dati dell'app senza richiedere il riavvio dell'app.
-- **Nuovi punti di estensione di rete** (è necessario disporre di un'autorizzazione speciale da Apple):
+- **Nuovi punti di estensione di rete** (che richiedono l'autorizzazione speciale da Apple):
   - **Estensione del provider del proxy applicazione** : usare questo punto di estensione per implementare un proxy di rete trasparente sul lato client personalizzato.
   - **Filtrare l'estensione del provider del controllo provider di dati/filtro** : usare questi punti di estensione per implementare il filtro del contenuto della rete dinamica sul dispositivo.
   - **Estensione del provider di tunneling di pacchetti** : usare questo punto di estensione per implementare un protocollo di tunneling VPN personalizzato sul lato client.
@@ -137,15 +137,15 @@ In iOS 9, Apple ha migliorato il keychain per fornire un nuovo tipo di chiave di
 
 - Nuovo vincolo Touch ID che invalida gli elementi Keychain quando viene modificato il database delle impronte digitali.
 - Nuovi vincoli che consentono la creazione di voci dell'elenco di controllo di accesso con ID tocco o solo codice.
-- Nuovo contesto di autenticazione che consente di richiamare l'autenticazione separatamente dalle `SecItem` chiamate.
+- Nuovo contesto di autenticazione che consente di richiamare l'autenticazione separata dalle chiamate `SecItem`.
 - Entropia dell'elenco di controllo di accesso (usando l'opzione password applicazione) per la crittografia dell'elemento Keychain fornita dall'app.
-- Supporto per la generazione e l'uso di chiavi all'interno dell'enclave protetta (tramite l' `kSecAttrTokenIDSecureEnclave` attributo).
+- Supporto per la generazione e l'uso di chiavi all'interno dell'enclave protetta (tramite l'attributo `kSecAttrTokenIDSecureEnclave`).
 
 Per ulteriori informazioni, vedere la documentazione [introduttiva a Touch ID](~/ios/platform/touchid.md) .
 
 ## <a name="right-to-left-language-support"></a>Supporto per le lingue da destra a sinistra
 
-In iOS 9, Apple ha reso più semplice che mai l'interfaccia utente capovolta offrendo supporto completo per le lingue da destra a sinistra. Sono inclusi gli elementi seguenti:
+In iOS 9, Apple ha reso più semplice che mai l'interfaccia utente capovolta offrendo supporto completo per le lingue da destra a sinistra. Il comportamento predefinito include quanto segue:
 
 - I controlli [UIKit](xref:UIKit) standard verranno automaticamente invertiti da destra a sinistra in base alle impostazioni locali e della lingua dei dispositivi iOS.
 - La classe [UIView](xref:UIKit.UIView) fornisce attributi che consentono di definire la modalità di visualizzazione di una determinata visualizzazione quando viene capovolta da destra a sinistra.
@@ -177,8 +177,8 @@ Per ulteriori informazioni, vedere la documentazione [aggiuntiva per le modifich
 Apple ha deprecato le API e le funzioni seguenti in iOS 9:
 
 - Rubrica **& interfaccia utente** di Rubrica: queste API sono state sostituite dai framework di contatto e contatto dell'interfaccia utente. Per ulteriori informazioni, vedere la documentazione [dell'interfaccia utente contatti e contatti](~/ios/platform/contacts.md) .
-- **CBCentralManager** : i `RetrievePeripherals` metodi `RetrieveConnectedPeripherals` edellaclassesonostatirimossiiniOS9.`CBCentralManager` La chiamata di questi metodi provocherà l'arresto anomalo di un'app durante l'associazione di un accessorio o l'avvio dell'app.
-- **FetchAllChanges** -la `FetchAllChanges` della `CKFetchRecordChangesOperation` classe è stata ammortizzata e verrà rimossa in iOS 9.
+- **CBCentralManager** : i metodi `RetrievePeripherals` e `RetrieveConnectedPeripherals` della classe `CBCentralManager` sono stati rimossi in iOS 9. La chiamata di questi metodi provocherà l'arresto anomalo di un'app durante l'associazione di un accessorio o l'avvio dell'app.
+- **FetchAllChanges** : la `FetchAllChanges` della classe `CKFetchRecordChangesOperation` è stata ammortizzata e verrà rimossa in iOS 9.
 - **Media Player** : il Framework Media Player è stato deprecato in iOS 9. Usare invece le API AVKit o AV Foundation.
 
 Per un elenco completo di deprecazioni API specifiche, vedere la documentazione relativa alle [differenze dell'API iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) di Apple.
@@ -191,7 +191,7 @@ Per iniziare, sono disponibili alcuni [esempi specifici di iOS 9](https://docs.m
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
 - [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
 - [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [PhotoProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
+- [Stato di avanzamento](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
 - [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
 - [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)

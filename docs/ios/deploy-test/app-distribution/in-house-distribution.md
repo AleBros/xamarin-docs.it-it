@@ -4,15 +4,15 @@ description: Questo documento offre una breve panoramica della distribuzione int
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763058"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026542"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuzione interna per le app Xamarin.iOS
 
@@ -56,33 +56,33 @@ I certificati del programma Apple Developer Enterprise saranno validi per tre an
 3. Fare clic sul pulsante **+** per creare un nuovo certificato.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (Interna e ad hoc):
 
-   [![](in-house-distribution-images/createcertmanually01.png "Selezionare In-House and Ad Hoc (Interna e ad hoc)")](in-house-distribution-images/createcertmanually01.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Fare clic su Continue (Continua) e seguire le istruzioni per creare una richiesta di firma del certificato tramite l'accesso keychain:
 
-   [![](in-house-distribution-images/createcertmanually02.png "Creare una richiesta di firma del certificato tramite l'accesso keychain")](in-house-distribution-images/createcertmanually02.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Dopo avere creato la richiesta di firma del certificato in base alle istruzioni, fare clic su Continue (Continua) e caricarla in Member Center:
 
-   [![](in-house-distribution-images/createcertmanually03.png "Caricare la richiesta di firma del certificato in Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Fare clic su Generate (Genera) per creare il certificato.
 8. Scaricare il certificato completato e fare doppio clic sul file per installarlo.
 9. A questo punto, il certificato deve essere installato nel computer, ma potrebbe essere necessario aggiornare i profili per assicurarsi che siano visibili in Xcode.
 
-In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, seguire questa procedura:
+In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, attenersi alla seguente procedura:
 
 1. Selezionare il proprio team e fare clic su *View Details...* (Visualizza dettagli):
 
-   [![](in-house-distribution-images/selectteam.png "Selezionare il team")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS):
 
-   [![](in-house-distribution-images/selectcert.png "Creare il certificato di distribuzione iOS")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
 
 3. Fare quindi clic sul pulsante con il segno **più (+)** e selezionare **iOS App Store** (App Store iOS):
 
-   [![](in-house-distribution-images/selectcert.png "Selezionare iOS App Store (App Store iOS)")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -96,7 +96,7 @@ Come per qualsiasi altro profilo di provisioning creato, sarà necessario un ID 
 
 1. Nel [centro sviluppatori Apple](https://developer.apple.com/account/overview.action) passare alla sezione *Certificate, Identifiers and Profiles* (Certificati, identificatori e profili). Selezionare **App IDs** (ID app) in **Identifiers** (Identificatori).
 2. Fare clic sul pulsante **+** e specificare un **nome** lo identificherà nel portale.
-3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **CarattereJolly**:com.[NomeDominio].*
+3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio: **Esplicito**: com.[NomeDominio].[NomeApp] **Con caratteri jolly**: com.[NomeDominio].*
 4. Selezionare il [servizio app](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) richiesto dall'app.
 5. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
 
@@ -104,23 +104,23 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 1. Tornare al portale di provisioning Apple e selezionare **Provisioning** > **Distribution** (Distribuzione):
 
-   [![](in-house-distribution-images/distribute01.png "Selezionare Provisioning > Distribution (Distribuzione)")](in-house-distribution-images/distribute01.png#lightbox)
+   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Fare clic sul pulsante **+** e selezionare il tipo di profilo di distribuzione che si vuole creare come **In-House** (Interna):
 
-   [![](in-house-distribution-images/distribute02.png "Creare un profilo di distribuzione interna")](in-house-distribution-images/distribute02.png#lightbox)
+   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Fare clic sul pulsante **Continue** (Continua) e selezionare un ID app nell'elenco a discesa per il quale si vuole creare un profilo di distribuzione:
 
-   [![](in-house-distribution-images/distribute03.png "Selezionare un ID app dall'elenco a discesa")](in-house-distribution-images/distribute03.png#lightbox)
+   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Fare clic sul pulsante **Continue** (Continua) e selezionare il certificato di distribuzione necessario per firmare l'applicazione:
 
-   [![](in-house-distribution-images/distribute04.png "Selezionare il certificato di distribuzione necessario per firmare l'applicazione")](in-house-distribution-images/distribute04.png#lightbox)
+   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
 
 5. Fare clic sul pulsante **Continue** (Continua) e immettere un **nome** per il nuovo profilo di distribuzione:
 
-   [![](in-house-distribution-images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](in-house-distribution-images/distribute06.png#lightbox)
+   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
 
 6. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 
@@ -138,7 +138,7 @@ Prima che un nuovo profilo di distribuzione sia disponibile in Visual Studio, po
 
 ## <a name="distributing-your-app-in-house"></a>Distribuzione interna dell'app
 
-Nel programma Apple Developer Enterprise, il licenziatario è la persona responsabile della distribuzione dell'applicazione e dell'adozione delle [linee guida](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf) stabilite da Apple.
+Nel programma Apple Developer Enterprise, il licenziatario è la persona responsabile della distribuzione dell'applicazione e dell'adozione delle [linee guida](https://developer.apple.com/programs/enterprise/) stabilite da Apple.
 
 È possibile distribuire l'app in modo sicuro con diversi mezzi:
 

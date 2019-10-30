@@ -3,26 +3,26 @@ title: Novell. Android TextureView
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2017
-ms.openlocfilehash: 2857033c5cd69e9696d2ce82feaf8212300da2c5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d6b1b01cf9597a1d7ae9de762eff1514b494663
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764805"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029129"
 ---
 # <a name="xamarinandroid-textureview"></a>Novell. Android TextureView
 
-La `TextureView` classe è una vista che usa il rendering 2D con accelerazione hardware per consentire la visualizzazione di un flusso di contenuto video o OpenGL. Ad esempio, lo screenshot seguente mostra la `TextureView` visualizzazione di un feed live dalla fotocamera del dispositivo:
+La classe `TextureView` è una vista che usa il rendering 2D con accelerazione hardware per consentire la visualizzazione di un flusso di contenuto video o OpenGL. Ad esempio, lo screenshot seguente mostra il `TextureView` visualizzare un feed live dalla fotocamera del dispositivo:
 
-[![Schermata di esempio di un'immagine live dalla fotocamera del dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
+[![screenshot di esempio di un'immagine live dalla fotocamera del dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
-A differenza della `SurfaceView` classe, che può essere usata anche per visualizzare il contenuto OpenGL o video, TextureView non viene sottoposto a rendering in una finestra separata.
-Pertanto, `TextureView` è in grado di supportare le trasformazioni di visualizzazione come qualsiasi altra visualizzazione. Ad esempio, la rotazione `TextureView` di un oggetto può essere eseguita semplicemente `Rotation` impostando la relativa proprietà, la `Alpha` relativa trasparenza impostando la relativa proprietà e così via.
+A differenza della classe `SurfaceView`, che può essere usata anche per visualizzare il contenuto OpenGL o video, TextureView non viene sottoposto a rendering in una finestra separata.
+Pertanto, `TextureView` è in grado di supportare le trasformazioni di visualizzazione come qualsiasi altra visualizzazione. Ad esempio, la rotazione di un `TextureView` può essere eseguita semplicemente impostando la relativa proprietà `Rotation`, la relativa trasparenza impostando la relativa proprietà `Alpha` e così via.
 
-Con il `TextureView` è quindi possibile eseguire operazioni come la visualizzazione di un flusso live dalla fotocamera e la relativa trasformazione, come illustrato nel codice seguente:
+Con il `TextureView` ora è possibile eseguire operazioni quali la visualizzazione di un flusso live dalla fotocamera e la trasformazione, come illustrato nel codice seguente:
 
 ```csharp
 public class TextureViewActivity : Activity,
@@ -65,14 +65,14 @@ public class TextureViewActivity : Activity,
 }
 ```
 
-Il codice precedente crea un' `TextureView` istanza nel `OnCreate` metodo dell'attività e `TextureView`imposta `SurfaceTextureListener`l'attività come. Per essere `SurfaceTextureListener`, l'attività implementa l' `TextureView.ISurfaceTextureListener` interfaccia. Il sistema chiamerà il `OnSurfaceTextAvailable` metodo quando è pronto per l' `SurfaceTexture` uso. In questo metodo, si accetta il `SurfaceTexture` passato e lo si imposta sulla trama di anteprima della fotocamera. È quindi possibile eseguire normali operazioni basate sulla visualizzazione, ad esempio l' `Rotation` impostazione di e `Alpha`, come nell'esempio precedente. L'applicazione risultante, in esecuzione in un dispositivo, è illustrata di seguito:
+Il codice precedente crea un'istanza di `TextureView` nel metodo `OnCreate` dell'attività e imposta l'attività come `SurfaceTextureListener`di `TextureView`. Per essere il `SurfaceTextureListener`, l'attività implementa l'interfaccia `TextureView.ISurfaceTextureListener`. Il sistema chiamerà il metodo `OnSurfaceTextAvailable` quando il `SurfaceTexture` è pronto per l'uso. In questo metodo si accetta la `SurfaceTexture` che viene passata e la si imposta sulla trama di anteprima della fotocamera. È quindi possibile eseguire normali operazioni basate sulla visualizzazione, ad esempio impostando il `Rotation` e `Alpha`, come nell'esempio precedente. L'applicazione risultante, in esecuzione in un dispositivo, è illustrata di seguito:
 
-[![Esempio di app in esecuzione in un dispositivo, che visualizza un'immagine](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
+[![esempio di app in esecuzione in un dispositivo, visualizzazione di un'immagine](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
-Per usare, `TextureView`è necessario abilitare l'accelerazione hardware, che sarà per impostazione predefinita a partire dal livello API 14. Inoltre, poiché in questo esempio viene usata la fotocamera, `android.permission.CAMERA` sia l'autorizzazione `android.hardware.camera` che la funzionalità devono essere impostate in **file AndroidManifest. XML**.
+Per usare la `TextureView`, è necessario abilitare l'accelerazione hardware, che verrà usata per impostazione predefinita a partire dal livello API 14. Inoltre, poiché in questo esempio viene utilizzata la fotocamera, sia l'autorizzazione `android.permission.CAMERA` che la funzionalità `android.hardware.camera` devono essere impostate in **file AndroidManifest. XML**.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [TextureViewDemo (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
-- [Introduzione a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Introduzione a Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
 - [Piattaforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

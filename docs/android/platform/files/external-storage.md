@@ -4,15 +4,15 @@ description: Questa guida illustra l'accesso ai file nell'archiviazione esterna 
 ms.prod: xamarin
 ms.assetid: 40da10b2-a207-4f9c-a2dd-165d9b662f33
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: c67f58a4b1886d3f89f7bd1639e1cd687d329869
-ms.sourcegitcommit: 4ff181101d76f048b949c9613b2c72cf02618f8b
+ms.openlocfilehash: 96b0d6a00c7825939b1f89ed63e3e5559ca4ef59
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71994811"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020478"
 ---
 # <a name="external-storage"></a>Archiviazione esterna
 
@@ -30,9 +30,9 @@ Questa guida illustra i concetti e le API in Android specifici per l'archiviazio
 
 Esistono due tipi diversi di file che possono essere conservati da un'app sull'archiviazione esterna:
 
-* I file **privati** &ndash; i file privati sono file specifici dell'applicazione (ma sono ancora leggibili e accessibili dal mondo). Android prevede che i file privati siano archiviati in una directory specifica in una risorsa di archiviazione esterna. Anche se i file sono denominati "privati", sono ancora visibili e accessibili da altre app nel dispositivo, non sono consentiti per la protezione speciale da Android.
+* I file **privati** &ndash; file privati sono file specifici dell'applicazione (ma sono ancora leggibili e accessibili dal mondo). Android prevede che i file privati siano archiviati in una directory specifica in una risorsa di archiviazione esterna. Anche se i file sono denominati "privati", sono ancora visibili e accessibili da altre app nel dispositivo, non sono consentiti per la protezione speciale da Android.
 
-* File **pubblici** &ndash; si tratta di file che non sono considerati specifici dell'applicazione e che devono essere condivisi liberamente.
+* I file **pubblici** &ndash; si tratta di file che non sono considerati specifici dell'applicazione e che devono essere condivisi liberamente.
 
 Le differenze tra questi file sono principalmente concettuali. I file privati sono privati nel senso che sono considerati parte dell'applicazione, mentre i file pubblici sono tutti gli altri file presenti nella risorsa di archiviazione esterna. Android offre due API diverse per la risoluzione dei percorsi di file privati e pubblici, ma in caso contrario vengono usate le stesse API .NET per leggere e scrivere in questi file. Si tratta delle stesse API illustrate nella sezione relativa alla [lettura e alla scrittura](~/android/platform/files/index.md#reading-or-writing-to-files-on-internal-storage).
 
@@ -40,28 +40,28 @@ Le differenze tra questi file sono principalmente concettuali. I file privati so
 
 I file esterni privati sono considerati specifici di un'applicazione (analogamente ai file interni), ma vengono mantenuti nella risorsa di archiviazione esterna per diversi motivi, ad esempio se sono troppo grandi per l'archiviazione interna. Analogamente ai file interni, questi file verranno eliminati quando l'app viene disinstallata dall'utente.
 
-La posizione primaria per i file esterni privati viene rilevata chiamando il metodo `Android.Content.Context.GetExternalFilesDir(string type)`. Questo metodo restituirà un oggetto `Java.IO.File` che rappresenta la directory di archiviazione esterna privata per l'app. Il passaggio di `null` a questo metodo restituirà il percorso della directory di archiviazione dell'utente per l'applicazione. Per un'applicazione con il nome del pacchetto `com.companyname.app`, ad esempio, la directory radice dei file esterni privati sarà:
+La posizione primaria per i file esterni privati viene rilevata chiamando il metodo `Android.Content.Context.GetExternalFilesDir(string type)`. Questo metodo restituirà un oggetto `Java.IO.File` che rappresenta la directory di archiviazione esterna privata per l'app. Il passaggio di `null` a questo metodo restituirà il percorso della directory di archiviazione dell'utente per l'applicazione. Per un'applicazione con il nome del pacchetto `com.companyname.app`, ad esempio, la directory radice dei file esterni privati è:
 
 ```bash
 /storage/emulated/0/Android/data/com.companyname.app/files/
 ```
 
-Questo documento si riferisce alla directory di archiviazione per i file privati nell'archiviazione esterna come _private @ no__t-1EXTERNAL @ no__t-2STORAGE_.
+In questo documento si fa riferimento alla directory di archiviazione per i file privati nell'archiviazione esterna come _privata\_\_di archiviazione esterna_.
 
 Il parametro per `GetExternalFilesDir()` è una stringa che specifica una _directory dell'applicazione_. Si tratta di una directory progettata per fornire una posizione standard per un'organizzazione logica di file. I valori stringa sono disponibili tramite costanti nella classe `Android.OS.Environment`:
 
 | `Android.OS.Environment` | Directory |
 |-|-|
-| DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
-| DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
-| DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
-| DirectoryDocuments | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/Documents** |
-| DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
-| DirectoryMusic | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/Music** |
-| DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
-| DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
-| DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
-| DirectoryPictures | **_Private @ no__t-2EXTERNAL @ no__t-3STORAGE_/Pictures** |
+| DirectoryAlarms | **/Alarms _privato\_archiviazione esterna\__** |
+| DirectoryDcim | **/DCIM _privato\_archiviazione esterna\__** |
+| DirectoryDownloads | **/Download _privato\_archiviazione esterna\__** |
+| DirectoryDocuments | **/Documents _privato\_archiviazione esterna\__** |
+| DirectoryMovies | **/Movies _privato\_archiviazione esterna\__** |
+| DirectoryMusic | **/Music _privato\_archiviazione esterna\__** |
+| DirectoryNotifications | **/Notifications _privato\_archiviazione esterna\__** |
+| DirectoryPodcasts | **/Podcasts _privato\_archiviazione esterna\__** |
+| DirectoryRingtones | **/Ringtones _privato\_archiviazione esterna\__** |
+| DirectoryPictures | **/Pictures _privato\_archiviazione esterna\__** |
 
 Per i dispositivi che dispongono di più partizioni di archiviazione esterne, ogni partizione avrà una directory destinata ai file privati. Il metodo `Android.Content.Context.GetExternalFilesDirs(string type)` restituirà una matrice di `Java.IO.Files`. Ogni oggetto rappresenterà una directory privata specifica dell'applicazione in tutti i dispositivi di archiviazione condivisi/esterni in cui l'applicazione può inserire i file di sua proprietà.
 
@@ -70,15 +70,15 @@ Per i dispositivi che dispongono di più partizioni di archiviazione esterne, og
 
 ### <a name="public-external-files"></a>File esterni pubblici
 
-I file pubblici sono file presenti in una risorsa di archiviazione esterna che non sono archiviati nella directory allocata da Android per i file privati. I file pubblici non verranno eliminati quando l'app viene disinstallata. È necessario concedere all'app Android le autorizzazioni prima di poter leggere o scrivere file pubblici. È possibile che i file pubblici esistano ovunque nella risorsa di archiviazione esterna, ma per convenzione Android prevede che i file pubblici siano presenti nella directory identificata dalla proprietà `Android.OS.Environment.ExternalStorageDirectory`. Questa proprietà restituirà un oggetto `Java.IO.File` che rappresenta la directory di archiviazione esterna primaria. Ad esempio, `Android.OS.Environment.ExternalStorageDirectory` può riferirsi alla directory seguente:
+I file pubblici sono file presenti in una risorsa di archiviazione esterna che non sono archiviati nella directory allocata da Android per i file privati. I file pubblici non verranno eliminati quando l'app viene disinstallata. È necessario concedere all'app Android le autorizzazioni prima di poter leggere o scrivere file pubblici. È possibile che i file pubblici esistano ovunque in una risorsa di archiviazione esterna, ma per convenzione Android prevede che i file pubblici siano presenti nella directory identificata dalla proprietà `Android.OS.Environment.ExternalStorageDirectory`. Questa proprietà restituirà un oggetto `Java.IO.File` che rappresenta la directory di archiviazione esterna primaria. Ad esempio, `Android.OS.Environment.ExternalStorageDirectory` possibile fare riferimento alla directory seguente:
 
 ```bash
 /storage/emulated/0/
 ```
 
-Questo documento si riferisce alla directory di archiviazione per i file pubblici nell'archiviazione esterna come _public @ no__t-1EXTERNAL @ no__t-2STORAGE_.
+Questo documento fa riferimento alla directory di archiviazione per i file pubblici nell'archiviazione esterna come _public\_archiviazione\_esterna_.
 
-Android supporta inoltre il concetto di directory dell'applicazione in _public @ no__t-1EXTERNAL @ no__t-2STORAGE_. Queste directory corrispondono esattamente alle directory dell'applicazione per `PRIVATE_EXTERNAL_STORAGE` e sono descritte nella tabella della sezione precedente. Il metodo `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` restituirà un oggetto `Java.IO.File` che corrisponde a una directory dell'applicazione pubblica. Il parametro `directoryType` è un parametro obbligatorio e non può essere `null`.
+Android supporta inoltre il concetto di directory applicative in un _\_pubblico esterno\_archiviazione_. Queste directory corrispondono esattamente alle directory dell'applicazione per `PRIVATE_EXTERNAL_STORAGE` e sono descritte nella tabella della sezione precedente. Il metodo `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` restituirà un oggetto `Java.IO.File` che corrisponde a una directory dell'applicazione pubblica. Il parametro `directoryType` è un parametro obbligatorio e non può essere `null`.
 
 Se ad esempio si chiama `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`, viene restituita una stringa simile alla seguente:
 
@@ -93,14 +93,14 @@ Se ad esempio si chiama `Environment.GetExternalStoragePublicDirectory(Environme
 
 Una volta che un'app Novell. Android ha ottenuto il percorso completo di un file, deve usare una delle API .NET standard per la creazione, la lettura, la scrittura o l'eliminazione di file. Questa operazione massimizza la quantità di codice compatibile multipiattaforma per un'app. Tuttavia, prima di tentare di accedere a un file, un'app Novell. Android deve garantire che sia possibile accedere a tale file.
 
-1. **Verificare l'archiviazione esterna** &ndash; a seconda della natura dell'archiviazione esterna, è possibile che potrebbe non essere montata e utilizzabile dall'app. Tutte le app devono controllare lo stato della risorsa di archiviazione esterna prima di provare a usarla.
+1. **Verificare &ndash; di archiviazione esterna** a seconda della natura dell'archiviazione esterna, è possibile che potrebbe non essere montata e utilizzabile dall'app. Tutte le app devono controllare lo stato della risorsa di archiviazione esterna prima di provare a usarla.
 2. **Eseguire un controllo delle autorizzazioni di runtime** &ndash; un'app Android deve richiedere l'autorizzazione all'utente per accedere all'archiviazione esterna. Ciò significa che è necessario eseguire una richiesta di autorizzazione in fase di esecuzione prima di qualsiasi accesso ai file. Le [autorizzazioni per la Guida in Novell. Android](~/android/app-fundamentals/permissions.md) contengono altre informazioni sulle autorizzazioni per Android.
 
 Ognuna di queste due attività verrà illustrata di seguito.
 
 ### <a name="verifying-that-external-storage-is-available"></a>Verifica della disponibilità dell'archiviazione esterna
 
-Il primo passaggio prima della scrittura nella risorsa di archiviazione esterna consiste nel verificare che sia leggibile o scrivibile. La proprietà `Android.OS.Environment.ExternalStorageState` include una stringa che identifica lo stato dell'archiviazione esterna. Questa proprietà restituirà una stringa che rappresenta lo stato. Questa tabella è un elenco dei valori @no__t 0 che potrebbero essere restituiti da `Environment.ExternalStorageState`:
+Il primo passaggio prima della scrittura nella risorsa di archiviazione esterna consiste nel verificare che sia leggibile o scrivibile. La proprietà `Android.OS.Environment.ExternalStorageState` include una stringa che identifica lo stato dell'archiviazione esterna. Questa proprietà restituirà una stringa che rappresenta lo stato. Questa tabella è un elenco dei valori `ExternalStorageState` che potrebbero essere restituiti da `Environment.ExternalStorageState`:
 
 | ExternalStorageState | Descrizione  |
 |----------------------|---|
@@ -147,7 +147,7 @@ Tutte le app Android devono dichiarare una delle due autorizzazioni per l'archiv
 
 È possibile aggiungere le autorizzazioni anche usando la scheda **manifesto Android** del **riquadro proprietà soluzione**:
 
-[![Solution Pad: autorizzazioni necessarie per Visual Studio per Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![riquadro della soluzione le autorizzazioni necessarie per Visual Studio per Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 

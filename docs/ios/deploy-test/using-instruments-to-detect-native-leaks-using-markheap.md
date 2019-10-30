@@ -4,15 +4,15 @@ description: Questo documento descrive come usare l'app Apple Instruments per pr
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 866ebd2a66557cda5372c5bc3d7a909e18c762d7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 66d832f624bdd942f53c5f6d890457958969b1b7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756096"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028426"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Profilatura delle applicazioni Xamarin.iOS con Instruments
 
@@ -35,13 +35,13 @@ Selezionare il dispositivo ed eseguire l'app Instruments:
 
 L'app Instruments viene aperta e visualizza la finestra di dialogo seguente:
 
- [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Scelta di un modello di profilatura")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
+ [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Fare clic per selezionare il modello **Allocazioni**. Anche gli altri modelli sono validi, ma questo articolo riguarda solo il modello di profilo **Allocazioni**.
 
 Quindi selezionare il dispositivo e l'applicazione mediante il menu nella parte superiore della finestra:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selezionare il dispositivo e l'applicazione")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Select the device and application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 Il dispositivo iOS deve essere selezionato nel menu nella parte superiore della finestra e l'applicazione da profilare deve essere selezionata nel menu contiguo (nella schermata precedente l'applicazione è **MemoryDemo**).
 
@@ -49,13 +49,13 @@ Se il dispositivo non è elencato nel menu, controllare nella **Console** di Vis
 
 Fare clic sul pulsante **Scegli** per visualizzare la schermata seguente:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Interfaccia di profilatura")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "The profiling interface")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Fare clic sul pulsante di registrazione (cerchio rosso in alto a sinistra) per avviare la profilatura.
 
 Lo screenshot seguente visualizza un esempio di profilatura mediante **Instruments**:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Esempio di profilatura mediante Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "An example of profiling using Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Riepilogo
 
@@ -64,4 +64,4 @@ Questa guida ha illustrato come avviare Xcode Instruments per monitorare un'app 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Analisi dettagliata di Instruments](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) (Garbage Collection di Xamarin.iOS - post di blog)
+- [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) (Garbage Collection di Xamarin.iOS - post di blog)

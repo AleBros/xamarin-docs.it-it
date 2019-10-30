@@ -3,23 +3,23 @@ title: Tipi nativi per iOS e macOS
 description: In questo documento viene descritto come il API unificata di Novell esegue il mapping dei tipi .NET ai tipi nativi a 32 bit e a 64 bit, in base alle esigenze, in base all'architettura di destinazione della compilazione.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: f370bc816fa72f94af8dae32ac295448f858dbb8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1168dfe0f2120e87c57b46011caba5e7a8a0c020
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290801"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015487"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipi nativi per iOS e macOS
 
 Le API Mac e iOS usano tipi di dati specifici dell'architettura che sono sempre 32 bit su piattaforme a 32 bit e 64 bit su piattaforme a 64 bit.
 
-In Objective-C, ad esempio, `NSInteger` viene eseguito il `int32_t` mapping del tipo di dati a nei `int64_t` sistemi a 32 bit e nei sistemi a 64 bit.
+Objective-C, ad esempio, esegue il mapping del tipo di dati `NSInteger` a `int32_t` su sistemi a 32 bit e `int64_t` su sistemi a 64 bit.
 
-Per trovare la corrispondenza con questo comportamento, nell'API unificata vengono sostituiti gli utilizzi precedenti `int` di (che in .NET è definito come `System.Int32`sempre) in un nuovo tipo di dati `System.nint`:. È possibile pensare a "n" come significato "native", quindi al tipo Integer nativo della piattaforma.
+Per trovare la corrispondenza con questo comportamento, nell'API unificata vengono sostituiti gli utilizzi precedenti di `int` (che in .NET è definito come sempre `System.Int32`) in un nuovo tipo di dati: `System.nint`. È possibile pensare a "n" come significato "native", quindi al tipo Integer nativo della piattaforma.
 
 Con questi nuovi tipi di dati, lo stesso codice sorgente viene compilato per le architetture a 32 bit e a 64 bit, a seconda dei flag di compilazione.
 
@@ -45,27 +45,27 @@ Gli operatori di conversioni implicite vengono forniti quando non è possibile l
 
 Gli operatori di conversioni esplicite vengono forniti quando è possibile che si verifichi una perdita di dati (il valore 64 bit viene archiviato in un percorso di archiviazione 32 o potenzialmente 32).
 
-`int`, `uint` e `float` sono `nuint` tutticonvertibili`nfloat` in modo implicito in ,mentre32bitsiadattanosemprea32o64bit.`nint`
+`int`, `uint` e `float` sono convertibili in modo implicito in `nint`, `nuint` e `nfloat` come 32 bit saranno sempre adatti a 32 o 64 bit.
 
-`nint`, `nuint` e `nfloat` sono `ulong` tutticonvertibili`double` in modo implicito in ,mentreivaloridibit32o64rientranosemprenell'archiviodibit64.`long`
+`nint`, `nuint` e `nfloat` sono convertibili in modo implicito in `long`, `ulong` e `double` come valori di bit 32 o 64 verranno sempre inseriti nell'archivio di bit 64.
 
-È necessario utilizzare le conversioni esplicite `nint`da `nuint` e `nfloat` in `int`e `uint` `float` , poiché i tipi nativi possono ospitare 64 bit di archiviazione.
+È necessario utilizzare le conversioni esplicite da `nint`, `nuint` e `nfloat` in `int`, `uint` e `float` poiché i tipi nativi potrebbero ospitare 64 bit di archiviazione.
 
-È necessario utilizzare le conversioni esplicite `long`da `ulong` e `double` in `nint`e `nuint` `nfloat` , poiché i tipi nativi possono contenere solo 32 bit di archiviazione.
+È necessario utilizzare le conversioni esplicite da `long`, `ulong` e `double` in `nint`, `nuint` e `nfloat` poiché i tipi nativi possono contenere solo 32 bit di archiviazione.
 
 ## <a name="coregraphics-types"></a>Tipi CoreGraphics
 
-I tipi di dati Point, Size e Rectangle usati con CoreGraphics usano 32 o 64 bit a seconda del dispositivo in cui sono in esecuzione.  Quando inizialmente sono state associate le API iOS e Mac, sono state usate strutture di dati esistenti che corrispondono alle dimensioni della piattaforma host (tipi di dati `System.Drawing`in).
+I tipi di dati Point, Size e Rectangle usati con CoreGraphics usano 32 o 64 bit a seconda del dispositivo in cui sono in esecuzione.  Quando inizialmente sono state associate le API iOS e Mac, sono state usate strutture di dati esistenti che corrispondono alle dimensioni della piattaforma host (tipi di dati in `System.Drawing`).
 
-Quando si passa a **Unified**, sarà necessario sostituire le istanze di `System.Drawing` con le relative `CoreGraphics` controparti, come illustrato nella tabella seguente:
+Quando si passa a **Unified**, sarà necessario sostituire le istanze di `System.Drawing` con le relative controparti `CoreGraphics`, come illustrato nella tabella seguente:
 
-|Vecchio tipo in System. Drawing|Nuovo tipo di dati CoreGraphics|DESCRIZIONE|
+|Vecchio tipo in System. Drawing|Nuovo tipo di dati CoreGraphics|Descrizione|
 |--- |--- |--- |
 |`RectangleF`|`CGRect`|Include informazioni sul rettangolo a virgola mobile.|
 |`SizeF`|`CGSize`|Include informazioni sulle dimensioni a virgola mobile (larghezza, altezza)|
 |`PointF`|`CGPoint`|Include un punto a virgola mobile, informazioni sul punto (X, Y)|
 
-I tipi di dati precedenti utilizzano float per archiviare gli elementi delle strutture di dati, mentre quello nuovo utilizza `System.nfloat`.
+I tipi di dati precedenti usavano float per archiviare gli elementi delle strutture di dati, mentre quello nuovo USA `System.nfloat`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -4,15 +4,15 @@ description: Questo articolo illustra i Framework di destinazione (librerie di c
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a612c2c23ceff13ea1d602465573514547628e55
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e07ec4fd4436d951ea4033dbceab2cef47e96218
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769798"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025923"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Framework di destinazione per Novell. Mac
 
@@ -30,11 +30,11 @@ Una delle ripercussioni più importanti di questi diversi framework di destinazi
 
 Per Novell. Mac sono disponibili tre opzioni del Framework di destinazione, ognuna con vantaggi e compromessi diversi:
 
-- **Moderna** (chiamato mobile nella documentazione precedente): un subset molto simile a quello di Powers Novell. iOS, altamente ottimizzato per le prestazioni e le dimensioni. Questo framework di destinazione è sicuro dal linker, quindi questi progetti possono avere un footprint finale drasticamente ridotto rimuovendo il codice inutilizzato.
+- **Moderno** (chiamato mobile nella documentazione precedente): un subset molto simile a quello di Powers Novell. iOS, altamente ottimizzato per le prestazioni e le dimensioni. Questo framework di destinazione è sicuro dal linker, quindi questi progetti possono avere un footprint finale drasticamente ridotto rimuovendo il codice inutilizzato.
 
-- **Completo** (chiamato XM 4,5 nella documentazione precedente): un subset molto simile alla BCL "desktop", con alcune piccole rimozioni. Poiché il Framework di destinazione è quasi identico a Net45 (e versioni successive), può utilizzare facilmente molti NuGet che non forniscono netstandard2 o compilazioni Novell. Mac specifiche. Tuttavia, a causa dell'utilizzo di System. Configuration, non è compatibile con il collegamento.
+- **Completo** (denominato XM 4,5 nella documentazione precedente): un subset molto simile alla BCL "desktop", con alcune piccole rimozioni. Poiché il Framework di destinazione è quasi identico a Net45 (e versioni successive), può utilizzare facilmente molti NuGet che non forniscono netstandard2 o compilazioni Novell. Mac specifiche. Tuttavia, a causa dell'utilizzo di System. Configuration, non è compatibile con il collegamento.
 
-- Non **supportato** (chiamato sistema nella documentazione precedente): invece di collegarsi a una BCL fornita da Novell. Mac, usare il sistema corrente installato mono. Questo fornisce il set completo di assembly, inclusi alcuni noti come problematici (System. Drawing, ad esempio). Questa opzione esiste solo con una "ultima risorsa" ed è consigliabile esaurire altre opzioni prima di usarla. Come suggerisce il nome, l'utilizzo non è supportato dai canali di supporto ufficiali.
+- Non **supportato** (denominato sistema nella documentazione precedente): invece di collegarsi a una BCL fornita da Novell. Mac, usare il sistema corrente installato mono. Questo fornisce il set completo di assembly, inclusi alcuni noti come problematici (System. Drawing, ad esempio). Questa opzione esiste solo con una "ultima risorsa" ed è consigliabile esaurire altre opzioni prima di usarla. Come suggerisce il nome, l'utilizzo non è supportato dai canali di supporto ufficiali.
 
 ## <a name="setting-the-target-framework"></a>Impostazione del Framework di destinazione
 

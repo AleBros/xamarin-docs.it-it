@@ -4,15 +4,15 @@ description: Questo documento descrive il sistema di conteggio dei riferimenti m
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8d8ad5b5f79b90fc415c9e3cdf6809a4e196056f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753350"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022295"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Nuovo sistema di conteggio dei riferimenti in Novell. iOS
 
@@ -22,13 +22,13 @@ Per impostazione predefinita, Novell. iOS 9.2.1 ha introdotto il sistema di cont
 
 A partire da Novell 9.2.1, per impostazione predefinita, il nuovo sistema di conteggio dei riferimenti è abilitato per **tutte** le applicazioni.
 
-Se si sta sviluppando un'applicazione esistente, è possibile controllare il file con estensione csproj per assicurarsi che tutte le `MtouchUseRefCounting` occorrenze di siano `true`impostate su, come indicato di seguito:
+Se si sta sviluppando un'applicazione esistente, è possibile controllare il file con estensione csproj per assicurarsi che tutte le occorrenze di `MtouchUseRefCounting` siano impostate su `true`, come indicato di seguito:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Se è impostato su `false` , l'applicazione non utilizzerà i nuovi strumenti.
+Se è impostato su `false` l'applicazione non utilizzerà i nuovi strumenti.
 
 ### <a name="using-older-versions-of-xamarin"></a>Uso di versioni precedenti di Novell
 
@@ -38,7 +38,7 @@ Novell. iOS 7.2.1 e versioni successive dispongono di un'anteprima migliorata de
 
 Per abilitare questo nuovo sistema di conteggio dei riferimenti, selezionare la casella di controllo **Usa l'estensione** per il conteggio dei riferimenti disponibile nella scheda **Avanzate** delle **Opzioni di compilazione iOS**del progetto, come illustrato di seguito: 
 
-[![](newrefcount-images/image1.png "Abilita il nuovo sistema di conteggio dei riferimenti")](newrefcount-images/image1.png#lightbox)
+[![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
 
 Si noti che queste opzioni sono state rimosse nelle versioni più recenti di Visual Studio per Mac.
 
@@ -71,7 +71,7 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Senza l'estensione del conteggio dei riferimenti, questo codice `cell` si arresterà in modo anomalo perché diventa ritirabile, quindi il `TouchDown` delegato, che verrà convertito in un puntatore a penzoloni.
+Senza l'estensione per il conteggio dei riferimenti, questo codice si arresterà in modo anomalo perché `cell` diventa ritirabile, quindi il delegato `TouchDown`, che verrà convertito in un puntatore a penzoloni.
 
 L'estensione per il conteggio dei riferimenti garantisce che l'oggetto gestito rimanga attivo e ne impedisca la raccolta, purché l'oggetto nativo venga mantenuto dal codice nativo.
 

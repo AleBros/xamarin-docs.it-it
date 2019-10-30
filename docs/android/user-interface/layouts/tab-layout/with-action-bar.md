@@ -4,15 +4,15 @@ description: Questa guida introduce e illustra come usare le API ActionBar per c
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: d37537f345a1532e38ab4d016cfbd5b26eae8b3a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 33afa963cba2e341f23326c6a7814f97f88b6870
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758540"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028777"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layout a schede con ActionBar
 
@@ -22,7 +22,7 @@ _Questa guida introduce e illustra come usare le API ActionBar per creare un'int
 
 La barra delle azioni è un modello di interfaccia utente Android usato per fornire un'interfaccia utente coerente per le funzionalità chiave, ad esempio le schede, l'identità dell'applicazione, i menu e la ricerca. In Android 3,0 (livello API 11), Google ha introdotto le API ActionBar alla piattaforma Android. Le API di ActionBar introducono temi dell'interfaccia utente per fornire un aspetto coerente e classi che consentono le interfacce utente a schede. Questa guida illustra come aggiungere Barra delle azioni schede a un'applicazione Novell. Android. Viene anche illustrato come usare la libreria di supporto Android V7 per backporting le schede ActionBar a Novell. Android destinate ad Android 2,1 ad Android 2,3. 
 
-Si noti `Toolbar` che è un componente della `ActionBar` barra delle azioni più recente e generalizzato da usare anziché (`Toolbar` è stato progettato per `ActionBar`sostituire). Per ulteriori informazioni, vedere [barra degli strumenti](~/android/user-interface/controls/tool-bar/index.md). 
+Si noti che `Toolbar` è un componente della barra delle azioni più recente e generalizzato da usare anziché `ActionBar` (`Toolbar` è stato progettato per sostituire `ActionBar`). Per ulteriori informazioni, vedere [barra degli strumenti](~/android/user-interface/controls/tool-bar/index.md). 
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,7 +48,7 @@ Ogni scheda nella barra delle azioni deve essere associata a un [*frammento*](~/
 
 - **OnTabUnselected** : questo metodo viene chiamato quando l'utente seleziona un'altra scheda. Questo callback viene utilizzato per salvare lo stato nel frammento visualizzato prima che venga visualizzato.
 
-Novell. Android esegue il `ActionBar.ITabListener` wrapping di con eventi `ActionBar.Tab` sulla classe. Le applicazioni possono assegnare i gestori eventi a uno o più di questi eventi. Ci sono tre eventi (uno per ogni metodo in `ActionBar.ITabListener`) che verrà generato da una scheda della barra delle azioni: 
+Novell. Android esegue il wrapping della `ActionBar.ITabListener` con gli eventi sulla classe `ActionBar.Tab`. Le applicazioni possono assegnare i gestori eventi a uno o più di questi eventi. Ci sono tre eventi (uno per ogni metodo in `ActionBar.ITabListener`) che verrà generato da una scheda della barra delle azioni: 
 
 - TabSelected
 - TabReselected
@@ -60,18 +60,18 @@ ActionBar è nativo per Android 3,0 (livello API 11) e versioni successive ed è
 
 I passaggi seguenti illustrano come aggiungere schede ActionBar a un'attività Android: 
 
-1. &ndash; `NavigationMode` `ActionBar.NavigationModeTabs` `ActionBar` Nel metodo di un'attività *prima dell'inizializzazione di qualsiasi widget dell'interfaccia utente* , un'applicazionedeveimpostaresucomeillustratoinquestoframmentodicodice:&ndash; `OnCreate`
+1. Nel metodo `OnCreate` di un'attività &ndash; *prima di inizializzare qualsiasi widget dell'interfaccia utente* &ndash; un'applicazione deve impostare il `NavigationMode` nel `ActionBar` su `ActionBar.NavigationModeTabs` come illustrato nel frammento di codice seguente:
 
    ```csharp
    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
    SetContentView(Resource.Layout.Main);
    ```
 
-2. Creare una nuova scheda utilizzando `ActionBar.NewTab()`.
+2. Creare una nuova scheda usando `ActionBar.NewTab()`.
 
-3. Assegnare i gestori eventi o fornire un'implementazione `ActionBar.ITabListener` personalizzata che risponderà agli eventi generati quando l'utente interagisce con le schede ActionBar.
+3. Assegnare i gestori eventi o fornire un'implementazione di `ActionBar.ITabListener` personalizzata che risponderà agli eventi generati quando l'utente interagisce con le schede ActionBar.
 
-4. Aggiungere la scheda creata nel passaggio precedente a `ActionBar`.
+4. Aggiungere la scheda creata nel passaggio precedente alla `ActionBar`.
 
 Il codice seguente è un esempio dell'uso di questi passaggi per aggiungere schede a un'applicazione che usa i gestori eventi per rispondere alle modifiche dello stato: 
 
@@ -101,22 +101,22 @@ protected override void OnCreate(Bundle bundle)
 
 #### <a name="event-handlers-vs-actionbaritablistener"></a>Gestori eventi rispetto a ActionBar. ITabListener
 
-Le applicazioni devono utilizzare i gestori eventi `ActionBar.ITabListener` e per diversi scenari. I gestori di eventi offrono una certa quantità di praticità sintattica; non è necessario creare una classe e implementare `ActionBar.ITabListener`. Questa praticità comporta un costo &ndash; Novell. Android esegue questa trasformazione per l'utente, creando una classe e implementando `ActionBar.ITabListener` automaticamente. Si tratta di un problema quando un'applicazione dispone di un numero limitato di schede. 
+Le applicazioni devono utilizzare i gestori eventi e `ActionBar.ITabListener` per diversi scenari. I gestori di eventi offrono una certa quantità di praticità sintattica; non è necessario creare una classe e implementare `ActionBar.ITabListener`. Questa praticità comporta un costo &ndash; Novell. Android esegue questa trasformazione per l'utente, creando una classe e implementando `ActionBar.ITabListener` automaticamente. Si tratta di un problema quando un'applicazione dispone di un numero limitato di schede. 
 
-Quando si gestiscono molte schede o si condividono funzionalità comuni tra le schede ActionBar, può essere più efficiente in termini di memoria e prestazioni per creare una classe personalizzata che implementa `ActionBar.ITabListener`e condivide una singola istanza della classe. Questa operazione ridurrà il numero di GREF che un'applicazione Novell. Android sta usando. 
+Quando si gestiscono molte schede o si condividono funzionalità comuni tra le schede ActionBar, può essere più efficiente in termini di memoria e prestazioni per creare una classe personalizzata che implementi `ActionBar.ITabListener`e la condivisione di una singola istanza della classe. Questa operazione ridurrà il numero di GREF che un'applicazione Novell. Android sta usando. 
 
 ### <a name="backwards-compatibility-for-older-devices"></a>Compatibilità con le versioni precedenti per i dispositivi meno recenti
 
 [Android Support Library V7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) back Ports ActionBar Tabs to Android 2,1 (API Level 7). Le schede sono accessibili in un'applicazione Novell. Android dopo che il componente è stato aggiunto al progetto.
 
-Per usare ActionBar, è necessario che un'attività `ActionBarActivity` sottoclassa e usi il tema AppCompat come illustrato nel frammento di codice seguente:
+Per usare ActionBar, un'attività deve sottoclassare `ActionBarActivity` e usare il tema AppCompat come illustrato nel frammento di codice seguente:
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true, Icon = "@drawable/ic_launcher")]
 public class MainActivity: ActionBarActivity
 ```
 
-Un'attività può ottenere un riferimento al relativo ActionBar dalla `ActionBarActivity.SupportingActionBar` proprietà. Il frammento di codice seguente illustra un esempio di configurazione di ActionBar in un'attività:
+Un'attività può ottenere un riferimento al relativo ActionBar dalla proprietà `ActionBarActivity.SupportingActionBar`. Il frammento di codice seguente illustra un esempio di configurazione di ActionBar in un'attività:
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true, Icon = "@drawable/ic_launcher")]
@@ -162,7 +162,7 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 
 ## <a name="summary"></a>Riepilogo
 
-In questa guida è stato illustrato come creare un'interfaccia utente a schede in un Novell. Android usando ActionBar. È stato illustrato come aggiungere schede a ActionBar e come un'attività può interagire con gli eventi di tabulazione `ActionBar.ITabListener` tramite l'interfaccia. È stato anche illustrato il modo in cui la libreria di supporto di Android V7 AppCompat pacchetto backports le schede ActionBar a versioni precedenti di Android. 
+In questa guida è stato illustrato come creare un'interfaccia utente a schede in un Novell. Android usando ActionBar. È stato illustrato come aggiungere schede a ActionBar e come un'attività può interagire con gli eventi di tabulazione tramite l'interfaccia `ActionBar.ITabListener`. È stato anche illustrato il modo in cui la libreria di supporto di Android V7 AppCompat pacchetto backports le schede ActionBar a versioni precedenti di Android. 
 
 ## <a name="related-links"></a>Collegamenti correlati
 

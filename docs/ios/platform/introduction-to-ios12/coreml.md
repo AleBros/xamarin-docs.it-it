@@ -4,15 +4,15 @@ description: Questo documento descrive gli aggiornamenti di core ML disponibili 
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/15/2018
-ms.openlocfilehash: 7e22a095a51c2dca749cb1b17807a061d066d0c4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6245873385caa23e37d5499daa822fa0b699ac1e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290297"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032030"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Novell. iOS
 
@@ -28,7 +28,7 @@ I frammenti di codice di questo documento provengono da questo esempio.
 
 ## <a name="generate-sample-data"></a>Generare dati di esempio
 
-In `ViewController`il metodo dell'app di `ViewDidLoad` esempio chiama `LoadMLModel`, che carica il modello di core ml incluso:
+In `ViewController`, il metodo di `ViewDidLoad` dell'app di esempio chiama `LoadMLModel`, che carica il modello di core ML incluso:
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-Quindi, l'app di esempio crea `MarsHabitatPricerInput` oggetti 100.000 da usare come input per le stime di core ml sequenziali. Ogni campione generato ha un valore casuale impostato per il numero di pannelli solari, il numero di serre e il numero di acri:
+Quindi, l'app di esempio crea 100.000 oggetti `MarsHabitatPricerInput` da usare come input per le stime di core ML sequenziali. Ogni campione generato ha un valore casuale impostato per il numero di pannelli solari, il numero di serre e il numero di acri:
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-Toccare uno dei tre pulsanti dell'app esegue due sequenze di stime: una usando un `for` ciclo e l'altra usando il nuovo metodo batch `GetPredictions` introdotto in iOS 12:
+Se si tocca uno dei tre pulsanti dell'app, vengono eseguite due sequenze di stime: una usando un ciclo `for` e l'altra usando il nuovo metodo batch `GetPredictions` introdotto in iOS 12:
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (ciclo)
 
-La `for` versione del ciclo del test esegue l'iterazione in base al numero di input specificato, [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) chiamando per ogni e ignorando il risultato. Il metodo impiega il tempo necessario per eseguire le stime:
+La versione del ciclo `for` del test esegue l'iterazione in base al numero specificato di input, chiamando [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) per ogni e ignorando il risultato. Il metodo impiega il tempo necessario per eseguire le stime:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,8 +94,8 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>Getpredictions (nuova API batch)
 
-La versione batch del test crea un `MLArrayBatchProvider` oggetto dalla matrice di input (poiché si tratta di un parametro di input obbligatorio per il `GetPredictions` metodo), crea un'[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-oggetto che impedisce che i calcoli di stima vengano limitati alla CPU e utilizza l' `GetPredictions` API per recuperare le stime, eliminando nuovamente il risultato:
+La versione batch del test crea un oggetto `MLArrayBatchProvider` dalla matrice di input (poiché si tratta di un parametro di input obbligatorio per il metodo `GetPredictions`), crea un [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+oggetto che impedisce che i calcoli di stima vengano limitati alla CPU e utilizza l'API `GetPredictions` per recuperare le stime, eliminando nuovamente il risultato:
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,7 +118,7 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>Risultati
 
-Sia per il simulatore che `GetPredictions` per il dispositivo, termina più rapidamente rispetto alle stime di core ml basate su loop.
+Sia per il simulatore sia per il dispositivo, `GetPredictions` termina più rapidamente rispetto alle stime di core ML basate su loop.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

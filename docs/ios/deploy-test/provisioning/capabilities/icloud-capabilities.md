@@ -1,18 +1,18 @@
 ---
 title: Funzionalità iCloud in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità iCloud.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità iCloud.
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 3fd3ec0207ac3ae1e5fcaa7d11d91247cd73666d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8c1a5d284e5faaffae33a724c461b6fd74cf39b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762899"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028580"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Funzionalità iCloud in Xamarin.iOS
 
@@ -101,12 +101,12 @@ Per altre informazioni sull'uso di iCloud, vedere le guide seguenti:
 * [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) (Introduzione a CloudKit)
 * [Introduction to Document Picker](~/ios/platform/document-picker.md) (Introduzione a Selezione documento)
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 
 * Usare lo spazio dei nomi del framework nell'app.
 * Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
-* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+* In  **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questo _non_ è l'impostazione predefinita per le compilazioni di debug e del simulatore iOS.
 
 In caso di problemi con i servizi app, vedere la sezione [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) (Risoluzione dei problemi) della guida principale.

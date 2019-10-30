@@ -4,15 +4,15 @@ description: Questo articolo illustra i nuovi miglioramenti dei giochi offerti d
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b1fa8cd69a2255d462066be88ad7ef695b71076e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fd79153520036ae49fd6fd9abe652e2c7459b30d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032510"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>API per giochi iOS in Novell. iOS
 
@@ -21,7 +21,7 @@ _Questo articolo illustra i nuovi miglioramenti dei giochi offerti da iOS 9 che 
 Apple ha apportato diversi miglioramenti tecnologici alle API di gioco in iOS 9 che semplificano l'implementazione di grafica e audio di giochi in un'app Novell. iOS.
 Sono inclusi sia la facilità di sviluppo che i Framework di alto livello, sfruttando la potenza della GPU del dispositivo iOS per migliorare la velocità e le funzionalità grafiche.
 
-[![](images/flocking01.png "Esempio di un'app che esegue il floccaggio")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png#lightbox)
 
 Sono inclusi GameplayKit, ReplayKit, Model I/O, MetalKit e Metal Performance shader insieme alle nuove funzionalità migliorate di Metal, SceneKit e SpriteKit.
 
@@ -56,7 +56,7 @@ Un nemico 2D, ad esempio, è in grado di trovare la strada attraverso un labirin
 
 Si consideri la mappa seguente:
 
-[![](images/gkpathfindpath.png "Mappa pathfinding di esempio")](images/gkpathfindpath.png#lightbox)
+[![](images/gkpathfindpath.png "An example pathfinding map")](images/gkpathfindpath.png#lightbox)
 
 Utilizzando pathfinding, C# questo codice può trovare una soluzione tramite la mappa:
 
@@ -145,7 +145,7 @@ protected Func<GKRuleSystem, bool> mod(int m)
 }
 ```
 
-In base a un determinato set di regole`GKRule`() e a un set di input noto, il sistema`GKRuleSystem`Expert () creerà un output stimabile (`fizzbuzz` per l'esempio precedente).
+In base a un determinato set di regole (`GKRule`) e a un set di input noto, il sistema esperto (`GKRuleSystem`) creerà un output prevedibile (`fizzbuzz` per l'esempio precedente).
 
 ### <a name="flocking"></a>Floccaggio
 
@@ -365,15 +365,15 @@ public override void ViewWillLayoutSubviews ()
 
 Quando viene eseguito, il piccolo _"boids"_ animato ricorre intorno ai tocchi del dito:
 
-[![](images/flocking01.png "Il piccolo Boids animato ricorrerà intorno ai tocchi del dito")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "The little animated Boids will flock around the finger taps")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Altri esempi di Apple
 
 Oltre agli esempi presentati in precedenza, Apple ha fornito le app di esempio seguenti che possono essere transcodificate in C# e Novell. iOS:
 
-- [FourInARow: Uso dello Strategy MinMax di GameplayKit per l'intelligenza artificiale](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [AgentsCatalog: Uso del sistema agenti in GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
-- [Demobos: Creazione di un gioco multipiattaforma con SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
+- [FourInARow: uso di GameplayKit MinMax Strategy per l'intelligenza artificiale](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
+- [AgentsCatalog: uso del sistema agenti in GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [Demobos: creazione di un gioco multipiattaforma con SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
 
@@ -406,7 +406,7 @@ Il Framework shader per le prestazioni di Metal fornisce un set di shader comuni
 
 - **Sfocatura gaussiana** (`MPSImageGaussianBlur`)
 - **Rilevamento bordo Sobel** (`MPSImageSobel`)
-- **Istogramma immagine** (`MPSImageHistogram`)
+- **Istogramma immagini** (`MPSImageHistogram`)
 
 Per ulteriori informazioni, vedere la guida alla [lingua di Apple Metal shading](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364).
 
@@ -427,7 +427,7 @@ Per ulteriori informazioni sull'I/O del modello, vedere le informazioni di [rife
 
 Il nuovo Framework ReplayKit di Apple ti permette di aggiungere facilmente la registrazione della riproduzione del gioco al gioco iOS e di consentire all'utente di modificare e condividere in modo rapido e semplice questo video dall'interno dell'app.
 
-Per altre informazioni, vedere la pagina relativa ai [social network di Apple con ReplayKit e Game Center video](https://developer.apple.com/videos/wwdc/2015/?id=605) e i rispettivi [demobos: Creazione di un gioco multipiattaforma con l'app](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) di esempio SpriteKit e GameplayKit.
+Per altre informazioni, vedere la pagina relativa ai [social network con ReplayKit e Game Center video](https://developer.apple.com/videos/wwdc/2015/?id=605) e i rispettivi [demobos di Apple: creazione di un gioco multipiattaforma con l'app di esempio SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) .
 
 ## <a name="scenekit"></a>SceneKit
 
@@ -440,10 +440,10 @@ Per ulteriori informazioni, consultare la documentazione di [SceneKit](~/ios/pla
 Apple ha aggiunto le seguenti nuove funzionalità a SceneKit per iOS 9:
 
 - Xcode offre ora un editor di scena che consente di creare rapidamente giochi e app 3D interattive modificando le scene direttamente dall'interno di Xcode.
-- Le `SCNView` classi `SCNSceneRenderer` e possono essere usate per abilitare il rendering Metal (nei dispositivi iOS supportati).
-- Le `SCNAudioPlayer` classi `SCNNode` e possono essere usate per aggiungere effetti audio spaziali che tengono automaticamente traccia di una posizione del lettore a un'app iOS.
+- È possibile usare le classi `SCNView` e `SCNSceneRenderer` per abilitare il rendering Metal (nei dispositivi iOS supportati).
+- È possibile usare le classi `SCNAudioPlayer` e `SCNNode` per aggiungere effetti audio spaziali che consentono di tenere traccia automaticamente di una posizione del lettore in un'app iOS.
 
-Per ulteriori informazioni, vedere la [documentazione di SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) e la Guida di riferimento e [Fox di Apple [SceneKit Framework](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) : Creazione di un gioco SceneKit con il progetto di](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) esempio di editor scene di Xcode.
+Per altre informazioni, vedere la documentazione di SceneKit e le informazioni di [riferimento sul Framework SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) di Apple e la pagina [relativa](~/ios/platform/introduction-to-ios8.md#scenekit) [alla creazione di un gioco SceneKit con il](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) progetto di esempio per l'editor di scena di Xcode.
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -455,12 +455,12 @@ Per ulteriori informazioni, consultare la documentazione di [SpriteKit](~/ios/pl
 
 Apple ha aggiunto le seguenti nuove funzionalità a SpriteKit per iOS 9:
 
-- Effetto audio spaziale che tiene traccia automaticamente della posizione del lettore con `SKAudioNode` la classe.
+- Effetto audio spaziale che tiene traccia automaticamente della posizione del lettore con la classe `SKAudioNode`.
 - Xcode ora include un editor di scena e un editor di azioni per semplificare la creazione di giochi e app 2D.
-- Supporto del gioco di scorrimento semplice con nuovi oggetti nodi`SKCameraNode`della fotocamera ().
+- Supporto dei giochi con scorrimento semplice con nuovi oggetti dei nodi della fotocamera (`SKCameraNode`).
 - Nei dispositivi iOS che supportano metal, SpriteKit lo userà automaticamente per il rendering, anche se si usano già shader OpenGL ES personalizzati.
 
-Per ulteriori informazioni, vedere la [documentazione di SpriteKit documentazione](~/ios/platform/introduction-to-ios8.md#spritekit) di Apple [SpriteKit Framework Reference](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) e [i relativi demobos: Creazione di un gioco multipiattaforma con l'app](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) di esempio SpriteKit e GameplayKit.
+Per ulteriori informazioni, vedere la [documentazione di SpriteKit documentazione](~/ios/platform/introduction-to-ios8.md#spritekit) di Apple [SpriteKit Framework Reference](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) e i relativi [demobos: creazione di un gioco multipiattaforma con l'app di esempio SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) .
 
 ## <a name="summary"></a>Riepilogo
 
@@ -471,4 +471,4 @@ Ha introdotto GameplayKit e I/O del modello; i principali miglioramenti apportat
 
 - [Esempi di iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

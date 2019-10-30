@@ -3,15 +3,15 @@ title: GridViewPager
 ms.prod: xamarin
 ms.assetid: A1CDD5F0-049B-4DFA-A268-8A875D26A675
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: ff054b1bd9607dd0dade874453a6ddf99ea4fd77
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 77c5eb65601e5bfdac2cbaad2e196a8ae2813981
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758218"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030315"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -31,11 +31,11 @@ Il codice XML del layout è simile al seguente:
     android:keepScreenOn="true" />
 ```
 
-Creazione di un[`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(o sottoclasse come[`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Creare una [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(o sottoclasse, ad esempio [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 per fornire le visualizzazioni da visualizzare quando l'utente si sposta.
 
-Nell' [adapter di esempio](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) viene illustrato come implementare i metodi necessari, incluse le `RowCount`sostituzioni `GetBackground`per, `GetColumnCount`, e`GetFragment`
+Nell' [adapter di esempio](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) viene illustrato come implementare i metodi necessari, incluse le sostituzioni per `RowCount`, `GetColumnCount`, `GetBackground`e `GetFragment`
 
 Collegare la scheda come illustrato:
 

@@ -4,21 +4,21 @@ description: Questo documento descrive come usare le viste Split tvOS in un'app 
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 5c147b43caf3018cde8870adb25bb73cb08f53ee
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768504"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022204"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Uso dei controller di visualizzazione Split tvOS in Novell
 
 Un controller di visualizzazione suddiviso presenta e gestisce contemporaneamente un controller di visualizzazione master e dettagli affiancato sullo schermo. I controller di visualizzazione divisa vengono usati per presentare contenuti persistenti e attivabili nella visualizzazione Master (la sezione più piccola a sinistra) e i dettagli correlati nella visualizzazione dettagli (la sezione più grande a destra).
 
-[![](split-views-images/intro01.png "Visualizzazione Split di esempio")](split-views-images/intro01.png#lightbox)
+[![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -28,7 +28,7 @@ Come indicato in precedenza, un controller di visualizzazione suddiviso gestisce
 
 Inoltre, il controller di visualizzazione master può essere nascosto o visualizzato come richiesto: 
 
-[![](split-views-images/intro02.png "Il controller di visualizzazione Master è nascosto")](split-views-images/intro02.png#lightbox)
+[![](split-views-images/intro02.png "The Master View Controller hidden")](split-views-images/intro02.png#lightbox)
 
 I controller delle visualizzazioni suddivise spesso utilizzano per presentare un elenco di contenuto filtrabile, con le categorie nella visualizzazione master e i risultati filtrati nella visualizzazione dettagli. Viene in genere visualizzato come una visualizzazione tabella a sinistra e una [visualizzazione raccolta](~/ios/tvos/user-interface/collection-views.md) a destra.
 
@@ -48,41 +48,41 @@ Il modo più semplice per lavorare con i controller Split View in un'app Novell.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Nella **riquadro della soluzione**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **controller di visualizzazione divisa** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    [![](split-views-images/activity01.png "Controller di visualizzazione divisa")](split-views-images/activity01.png#lightbox)
+    [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
 1. Per impostazione predefinita, iOS designer installerà un controller di spostamento e un controller di visualizzazione nella visualizzazione master. Se il problema non soddisfa i requisiti dell'app, è sufficiente eliminarli.
 1. Se si rimuove la visualizzazione master predefinita, trascinare un nuovo controller di visualizzazione nell'area di progettazione: 
 
-    [![](split-views-images/activity02.png "Controller di visualizzazione")](split-views-images/activity02.png#lightbox)
+    [![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
 1. Controllare: fare clic e trascinare dal controller di visualizzazione Split al nuovo controller di visualizzazione master. 
 1. Selezionare **Master** dal **menu popup**: 
 
-    [![](split-views-images/activity03.png "Selezionare Master dal menu popup")](split-views-images/activity03.png#lightbox)
+    [![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
 1. Progettare il contenuto delle visualizzazioni master e dettagli: 
 
-    [![](split-views-images/activity04.png "Layout di esempio")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
 1. Assegnare i **nomi** nella **scheda Widget** del **riquadro delle proprietà** per lavorare con i controlli dell'interfaccia utente C# nel codice.
 1. Salvare le modifiche e tornare a Visual Studio per Mac.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Nella **Esplora soluzioni**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **controller di visualizzazione divisa** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione: 
 
-    [![](split-views-images/activity01-vs.png "Controller di visualizzazione divisa")](split-views-images/activity01-vs.png#lightbox)
+    [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
 1. Per impostazione predefinita, in iOS Designer verrà aggiunto un controller di spostamento e un controller di visualizzazione nella visualizzazione master. Se il problema non soddisfa i requisiti dell'app, è sufficiente eliminarli.
 1. Se si rimuove la visualizzazione master predefinita, trascinare un nuovo controller di visualizzazione nell'area di progettazione: 
 
-    [![](split-views-images/activity02-vs.png "Controller di visualizzazione")](split-views-images/activity02-vs.png#lightbox)
+    [![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
 1. Controllare: fare clic e trascinare dal controller di visualizzazione Split al nuovo controller di visualizzazione master. 
 1. Selezionare **Master** dal **menu popup**: 
 
-    [![](split-views-images/activity03-vs.png "Selezionare Master dal menu popup")](split-views-images/activity03-vs.png#lightbox)
+    [![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
 1. Progettare il contenuto delle visualizzazioni master e dettagli: 
 
-    [![](split-views-images/activity04.png "Layout del contenuto")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
 1. Assegnare i **nomi** nella **scheda Widget** di **Esplora proprietà** per usare i controlli dell'interfaccia utente nel C# codice.
 1. Salvare le modifiche.
 
@@ -100,7 +100,7 @@ Come indicato in precedenza, un controller di visualizzazione suddiviso viene sp
 
 ### <a name="accessing-master-and-detail"></a>Accesso al master e ai dettagli
 
-Se è necessario accedere ai controller di visualizzazione master e dettagli a livello di codice, `ViewControllers` utilizzare la proprietà del controller di visualizzazione divisa. Ad esempio:
+Se è necessario accedere ai controller di visualizzazione master e dettagli a livello di codice, utilizzare la proprietà `ViewControllers` del controller di visualizzazione divisa. Esempio:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -122,7 +122,7 @@ Il modo più semplice per eseguire questa operazione consiste nell'esporre una p
 public DetailViewController DetailController { get; set;}
 ```
 
-Nel controller di visualizzazione divisa eseguire l'override `ViewDidLoad` del metodo e unire le due visualizzazioni. Ad esempio:
+Nel controller di visualizzazione divisa eseguire l'override del metodo `ViewDidLoad` e unire le due visualizzazioni. Esempio:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -146,7 +146,7 @@ public override void ViewDidLoad ()
 
 ### <a name="showing-and-hiding-master"></a>Visualizzazione e occultamento del Master
 
-Facoltativamente, è possibile mostrare e nascondere il controller di visualizzazione master utilizzando `PreferredDisplayMode` la proprietà del controller di visualizzazione divisa. Ad esempio:
+Facoltativamente, è possibile mostrare e nascondere il controller di visualizzazione master utilizzando la proprietà `PreferredDisplayMode` del controller di visualizzazione divisa. Esempio:
 
 ```csharp
 // Show hide split view
@@ -157,14 +157,14 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 }
 ```
 
-L' `UISplitViewControllerDisplayMode` enumerazione definisce il modo in cui il controller di visualizzazione master verrà presentato come uno degli elementi seguenti:
+L'enumerazione `UISplitViewControllerDisplayMode` definisce il modo in cui il controller di visualizzazione master verrà presentato come uno degli elementi seguenti:
 
 - **Automatic** -tvOS controllerà la presentazione delle visualizzazioni master e dettagli.
 - **PrimaryHidden** : nasconde il controller di visualizzazione master.
 - **AllVisible** : Visualizza i controller di visualizzazione master e dettagli affiancati. Si tratta della normale presentazione predefinita.
 - **PrimaryOverlay** : il controller di visualizzazione dettagli si estende in ed è coperto dal master.
 
-Per ottenere lo stato di presentazione corrente, usare `DisplayMode` la proprietà del controller di visualizzazione divisa.
+Per ottenere lo stato di presentazione corrente, usare la proprietà `DisplayMode` del controller di visualizzazione divisa.
 
 <a name="Summary" />
 

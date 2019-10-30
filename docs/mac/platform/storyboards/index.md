@@ -4,15 +4,15 @@ description: Questo articolo fornisce un'introduzione all'uso degli storyboard i
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ff29ac58db618d4a644bbaa5a95ac8624726827f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b27a8d65ebaca6009d8310931b9dac3a4d7e12f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770055"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026141"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduzione agli storyboard in Novell. Mac
 
@@ -20,7 +20,7 @@ _Questo articolo fornisce un'introduzione all'uso degli storyboard in un'app Nov
 
 Gli storyboard consentono di sviluppare un'interfaccia utente per l'app Novell. Mac che non include solo le definizioni e i controlli della finestra, ma contiene anche i collegamenti tra le diverse finestre (tramite gli elementi segue) e gli Stati di visualizzazione.
 
-[![](images/intro01.png "Interfaccia utente di esempio in Xcode")](images/intro01.png#lightbox)
+[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
 
 Questo articolo fornisce un'introduzione all'uso degli storyboard per definire l'interfaccia utente di un'app Novell. Mac.
 
@@ -36,11 +36,11 @@ Usando gli storyboard, è possibile definire l'interfaccia utente di un'app Nove
 
 Come indicato in precedenza, uno storyboard definisce tutta l'interfaccia utente per una determinata app suddivisa in una panoramica funzionale dei _controller di visualizzazione_. In Interface Builder di Xcode, ognuno di questi controller si trova in una propria _scena_.
 
-[![](images/intro02.png "Un controller di visualizzazione di esempio")](images/intro02.png#lightbox)
+[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
 
 Ogni scena rappresenta una coppia visualizzazione e controller di visualizzazione specificata con un set di righe (denominato gli elementi segue) che connette ogni scena nell'interfaccia utente, mostrando così le relazioni. Alcuni gli elementi segue definiscono il modo in cui un controller di visualizzazione contiene una o più visualizzazioni figlio o controller di visualizzazione. Gli altri gli elementi segue definiscono le transizioni tra il controller di visualizzazione, ad esempio la visualizzazione di una finestra di dialogo o un messaggio. 
 
-[![](images/intro03.png "Segue di esempio")](images/intro03.png#lightbox)
+[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
 
 L'aspetto più importante da notare è che ogni segue rappresenta il flusso di una forma di dati tra l'elemento specificato dell'interfaccia utente dell'app.
 
@@ -50,11 +50,11 @@ L'aspetto più importante da notare è che ogni segue rappresenta il flusso di u
 
 I controller di visualizzazione definiscono le relazioni tra una determinata visualizzazione di informazioni all'interno di un'app Mac e il modello di dati che fornisce tali informazioni. Ogni scena di primo livello nello storyboard rappresenta un controller di visualizzazione nel codice dell'app Novell. Mac.
 
-[![](images/intro04.png "Un esempio di scorrimento di un controller di visualizzazione")](images/intro04.png#lightbox)
+[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
 
 In questo modo, ogni controller di visualizzazione è un'associazione autonoma e riutilizzabile della rappresentazione visiva (visualizzazione) delle informazioni e della logica per presentare e controllare tali informazioni.
 
-All'interno di una determinata scena, è possibile eseguire tutte le operazioni normalmente gestite da singoli `.xib` file: 
+All'interno di una determinata scena, è possibile eseguire tutte le operazioni normalmente gestite da singoli file di `.xib`: 
 
 - Posizionare le sottovisualizzazioni e i controlli, ad esempio pulsanti e caselle di testo.
 - Definire le posizioni degli elementi e i vincoli di layout automatico.
@@ -70,7 +70,7 @@ In macOS la maggior parte delle app tende a raggruppare le visualizzazioni all'i
 
 Date le tendenze di macOS all'indipendenza, esistono situazioni in cui vengono usate le _gli elementi segue di presentazione_ , ad esempio le finestre modali, le visualizzazioni dei fogli e i Popov.
 
-Quando si usa Presentation gli elementi segue, è possibile eseguire `PrepareForSegue` l'override del metodo del controller di visualizzazione padre per la presentazione per inizializzare e variabili e fornire i dati al controller di visualizzazione visualizzato.
+Quando si usa Presentation gli elementi segue, è possibile eseguire l'override del metodo `PrepareForSegue` del controller di visualizzazione padre per la presentazione per inizializzare e variabili e fornire i dati al controller di visualizzazione visualizzato.
 
 <a name="Design-and-Run-Times" />
 

@@ -4,15 +4,15 @@ description: Android 4,4 (KitKat) viene caricato con una cornucopia di funzional
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 6f3df1c7c4664f4138e0f399419ac95e15231916
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757523"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027237"
 ---
 # <a name="kitkat-features"></a>Funzionalità di KitKat
 
@@ -22,13 +22,13 @@ _Android 4,4 (KitKat) viene caricato con una cornucopia di funzionalità per ute
 
 Android 4,4 (API level 19), noto anche come "KitKat", è stato rilasciato alla fine del 2013. KitKat offre un'ampia gamma di nuove funzionalità e miglioramenti, tra cui:
 
-- [Esperienza utente](#user_experience) &ndash; Animazioni semplici con il Framework di transizione, le barre di spostamento e lo stato trasparenti e la modalità immersiva a schermo intero consentono di creare un'esperienza migliore per l'utente.
+- L' [esperienza utente](#user_experience) &ndash; animazioni semplici con il Framework di transizione, le barre di spostamento e lo stato translucido e la modalità immersiva a schermo intero consentono di creare un'esperienza migliore per l'utente.
 
-- [Contenuto utente](#user_content) &ndash; Gestione file utente semplificato con il Framework di accesso all'archiviazione; la stampa di immagini, siti Web e altro contenuto è più semplice grazie alle API di stampa migliorate.
+- [Contenuto utente](#user_content) &ndash; la gestione dei file utente semplificata con il Framework di accesso all'archiviazione. la stampa di immagini, siti Web e altro contenuto è più semplice grazie alle API di stampa migliorate.
 
-- [Hardware](#hardware) Trasforma qualsiasi app in una scheda NFC con l' `SensorManager` emulazione di schede basata su host NFC; Esegui sensori a basso consumo con. &ndash;
+- L' [Hardware](#hardware) &ndash; trasformare qualsiasi app in una scheda NFC con emulazione di scheda basata su host NFC. eseguire sensori a basso consumo con la `SensorManager`.
 
-- [Strumenti di sviluppo](#developer_tools) &ndash; Screencast sulle applicazioni in azione con il client di Android Debug Bridge, disponibile come parte del Android SDK.
+- [Strumenti di sviluppo](#developer_tools) &ndash; screencast sulle applicazioni in azione con il client di Android Debug Bridge, disponibile come parte del Android SDK.
 
 Questa guida fornisce indicazioni per la migrazione di un'applicazione Novell. Android esistente a KitKat, oltre a una panoramica di alto livello di KitKat per sviluppatori Novell. Android.
 
@@ -36,7 +36,7 @@ Questa guida fornisce indicazioni per la migrazione di un'applicazione Novell. A
 
 Per sviluppare applicazioni Novell. Android con KitKat, è necessario *Novell. Android 4.11.0* o versione successiva e Android 4,4 (API level 19) installato tramite Android SDK Manager, come illustrato nello screenshot seguente:
 
-[![Selezione di Android 4,4 in gestione Android SDK](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
+[![la selezione di Android 4,4 in gestione Android SDK](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
 <a name="Migrating_Your_App_to_KitKat" />
 
@@ -57,7 +57,7 @@ if (Build.VERSION.SdkInt >= BuildVersionCodes.Kitkat) {
 ### <a name="alarm-batching"></a>Batch di allarme
 
 Android usa i servizi di allarme per riattivare un'app in background in un momento specifico. KitKat esegue ulteriormente questa operazione inviando in batch gli avvisi per mantenere l'energia. Ciò significa che, al posto di riattivare ogni app in un momento esatto, KitKat preferisce raggruppare diverse applicazioni registrate per la riattivazione durante lo stesso intervallo di tempo e riattivarle nello stesso momento.
-Per indicare ad Android di riattivare un'app durante un intervallo di `SetWindow` tempo specificato [`AlarmManager`](xref:Android.App.AlarmManager), chiamare sul, passando il tempo minimo e massimo, in millisecondi, che può trascorrere prima che l'app venga riattivata e l'operazione da eseguire al riattivazione.
+Per indicare ad Android di riattivare un'app durante un intervallo di tempo specificato, chiamare `SetWindow` sul [`AlarmManager`](xref:Android.App.AlarmManager), passando il tempo minimo e massimo, in millisecondi, che può trascorrere prima che l'app venga riattivata e l'operazione da eseguire in fase di riattivazione.
 Il codice seguente fornisce un esempio di applicazione che deve essere riattivata tra mezz'ora e un'ora dal momento in cui la finestra è impostata:
 
 ```csharp
@@ -65,37 +65,37 @@ AlarmManager alarmManager = (AlarmManager)GetSystemService(AlarmService);
 alarmManager.SetWindow (AlarmType.Rtc, AlarmManager.IntervalHalfHour, AlarmManager.IntervalHour, pendingIntent);
 ```
 
-Per continuare a riattivare un'app in un momento `SetExact`esatto, usare, passando l'ora esatta in cui l'app deve essere riattivata e l'operazione da eseguire:
+Per continuare a riattivare un'app in un momento esatto, usare `SetExact`, passando l'ora esatta in cui l'app deve essere riattivata e l'operazione da eseguire:
 
 ```csharp
 alarmManager.SetExact (AlarmType.Rtc, AlarmManager.IntervalDay, pendingIntent);
 ```
 
-KitKat non consente più di impostare un allarme ripetuto esatto. Applicazioni che usano[`SetRepeating`](xref:Android.App.AlarmManager.SetRepeating*)
+KitKat non consente più di impostare un allarme ripetuto esatto. Applicazioni che utilizzano [`SetRepeating`](xref:Android.App.AlarmManager.SetRepeating*)
 e richiedono che gli avvisi esatti funzionino a questo punto, dovranno attivare manualmente ogni avviso.
 
 ### <a name="external-storage"></a>Archiviazione esterna
 
-L'archiviazione esterna è ora divisa in due tipi, ovvero archiviazione univoca per l'applicazione e dati condivisi da più applicazioni. La lettura e la scrittura nel percorso specifico dell'app in una risorsa di archiviazione esterna non richiedono autorizzazioni speciali. L'interazione con i dati nell'archiviazione condivisa richiede ora `READ_EXTERNAL_STORAGE` l' `WRITE_EXTERNAL_STORAGE` autorizzazione o. I due tipi possono essere classificati come tali:
+L'archiviazione esterna è ora divisa in due tipi, ovvero archiviazione univoca per l'applicazione e dati condivisi da più applicazioni. La lettura e la scrittura nel percorso specifico dell'app in una risorsa di archiviazione esterna non richiedono autorizzazioni speciali. L'interazione con i dati nell'archiviazione condivisa richiede ora l'autorizzazione `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE`. I due tipi possono essere classificati come tali:
 
-- Se si sta ottenendo un percorso di file o directory chiamando un metodo su `Context` , ad esempio,[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
-  o[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
+- Se si sta ottenendo un percorso di file o directory chiamando un metodo in `Context`, ad esempio [`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
+  o [`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
   - l'app non richiede autorizzazioni aggiuntive.
 
-- Se si sta ottenendo un percorso di file o directory accedendo a una proprietà o chiamando un metodo `Environment` su, ad esempio[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
-  o[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
-  , l'app richiede l' `READ_EXTERNAL_STORAGE` autorizzazione `WRITE_EXTERNAL_STORAGE` o.
+- Se si sta ottenendo un percorso di file o directory accedendo a una proprietà o chiamando un metodo in `Environment`, ad esempio [`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
+  o [`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
+  , l'app richiede l'autorizzazione `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE`.
 
 > [!NOTE]
-> `WRITE_EXTERNAL_STORAGE`implica l' `READ_EXTERNAL_STORAGE` autorizzazione, quindi è necessario impostare solo un'autorizzazione.
+> `WRITE_EXTERNAL_STORAGE` implica l'autorizzazione `READ_EXTERNAL_STORAGE`, quindi è necessario impostare solo un'autorizzazione.
 
 ### <a name="sms-consolidation"></a>Consolidamento SMS
 
-KitKat semplifica la messaggistica per l'utente aggregando tutto il contenuto SMS in un'applicazione predefinita selezionata dall'utente. Lo sviluppatore ha la responsabilità di rendere l'app selezionabile come applicazione di messaggistica predefinita e si comporta in modo appropriato nel codice e in vita se l'applicazione non è selezionata. Per altre informazioni sulla transizione dell'app SMS a KitKat, vedere la Guida [introduttiva alle app per SMS pronta per KitKat](http://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html) da Google.
+KitKat semplifica la messaggistica per l'utente aggregando tutto il contenuto SMS in un'applicazione predefinita selezionata dall'utente. Lo sviluppatore ha la responsabilità di rendere l'app selezionabile come applicazione di messaggistica predefinita e si comporta in modo appropriato nel codice e in vita se l'applicazione non è selezionata. Per altre informazioni sulla transizione dell'app SMS a KitKat, vedere la Guida [introduttiva alle app per SMS pronta per KitKat](https://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html) da Google.
 
 ### <a name="webview-apps"></a>App WebView
 
-[WebView](xref:Android.Webkit.WebView) ha ottenuto un rifacimento in KitKat. La modifica più importante è stata aggiunta alla sicurezza per il `WebView`caricamento di contenuto in un. Sebbene la maggior parte delle applicazioni destinate alle versioni precedenti dell'API funzioni come previsto, è `WebView` consigliabile testare le applicazioni che usano la classe. Per ulteriori informazioni sulle API WebView interessate, vedere la documentazione relativa alla [migrazione a WebView in android 4,4 in Android](https://developer.android.com/guide/webapps/migrating.html) .
+[WebView](xref:Android.Webkit.WebView) ha ottenuto un rifacimento in KitKat. La modifica più importante è stata aggiunta alla sicurezza per il caricamento del contenuto in un `WebView`. Sebbene la maggior parte delle applicazioni destinate alle versioni precedenti dell'API funzioni come previsto, è consigliabile testare le applicazioni che usano la classe `WebView`. Per ulteriori informazioni sulle API WebView interessate, vedere la documentazione relativa alla [migrazione a WebView in android 4,4 in Android](https://developer.android.com/guide/webapps/migrating.html) .
 
 <a name="user_experience" />
 
@@ -109,8 +109,8 @@ Il Framework di transizione rende le animazioni più facili da implementare. Kit
 
 #### <a name="simple-property-animation"></a>Animazione di proprietà semplice
 
-La nuova libreria di transizioni Android semplifica le animazioni delle proprietà code-behind. Il Framework consente di eseguire animazioni semplici con codice minimo. Ad esempio, l'esempio di codice seguente usa[`TransitionManager.BeginDelayedTransition`](xref:Android.Transitions.TransitionManager.BeginDelayedTransition*)
-per animare la visualizzazione e nascondere `TextView`un:
+La nuova libreria di transizioni Android semplifica le animazioni delle proprietà code-behind. Il Framework consente di eseguire animazioni semplici con codice minimo. Ad esempio, l'esempio di codice seguente usa [`TransitionManager.BeginDelayedTransition`](xref:Android.Transitions.TransitionManager.BeginDelayedTransition*)
+per animare la visualizzazione e nascondere un `TextView`:
 
 ```csharp
 using Android.Transitions;
@@ -147,15 +147,15 @@ public class MainActivity : Activity
 }
 ```
 
-Nell'esempio precedente viene usato il Framework di transizione per creare una transizione automatica predefinita tra i valori delle proprietà modificabili. Poiché l'animazione viene gestita da una sola riga di codice, è possibile renderla facilmente compatibile con le versioni precedenti di Android eseguendo il `BeginDelayedTransition` wrapping della chiamata in un controllo della versione del sistema. Per ulteriori informazioni, vedere la sezione [migrazione dell'app a KitKat](#Migrating_Your_App_to_KitKat) .
+Nell'esempio precedente viene usato il Framework di transizione per creare una transizione automatica predefinita tra i valori delle proprietà modificabili. Poiché l'animazione viene gestita da una sola riga di codice, è possibile renderla facilmente compatibile con le versioni precedenti di Android eseguendo il wrapping della chiamata `BeginDelayedTransition` in un controllo della versione del sistema. Per ulteriori informazioni, vedere la sezione [migrazione dell'app a KitKat](#Migrating_Your_App_to_KitKat) .
 
 La schermata seguente mostra l'app prima dell'animazione:
 
-[![Screenshot dell'app prima dell'avvio dell'animazione](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
+[![screenshot dell'app prima dell'avvio dell'animazione](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
 
 La schermata seguente mostra l'app dopo l'animazione:
 
-[![Screenshot dell'app dopo il completamento dell'animazione](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
+[schermata![app dopo il completamento dell'animazione](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 È possibile ottenere un maggiore controllo sulla transizione con le scene, descritte nella sezione successiva.
 
@@ -163,16 +163,16 @@ La schermata seguente mostra l'app dopo l'animazione:
 
 Le [scene](xref:Android.Transitions.Scene) sono state introdotte come parte del Framework di transizione per offrire agli sviluppatori maggiore controllo sulle animazioni. Scenes creare un'area dinamica nell'interfaccia utente: è possibile specificare un contenitore e diverse versioni, o "scene", per il contenuto XML all'interno del contenitore e Android esegue il resto del lavoro per animare le transizioni tra le scene. Le scene Android consentono di creare animazioni complesse con un lavoro minimo sul lato sviluppo.
 
-L'elemento statico dell'interfaccia utente che ospita il contenuto dinamico è un oggetto denominato base del *contenitore* o della *scena*. Nell'esempio seguente viene usato il Android designer per creare `RelativeLayout` un `container`oggetto denominato:
+L'elemento statico dell'interfaccia utente che ospita il contenuto dinamico è un oggetto denominato base del *contenitore* o della *scena*. Nell'esempio seguente viene usato il Android Designer per creare una `RelativeLayout` denominata `container`:
 
-[![Uso della Android Designer per creare un contenitore sul relativelayout](kitkat-images/container.png)](kitkat-images/container.png#lightbox)
+[![uso della Android Designer per creare un contenitore sul relativelayout](kitkat-images/container.png)](kitkat-images/container.png#lightbox)
 
-Il layout di esempio definisce anche un pulsante `sceneButton` denominato `container`sotto. Questo pulsante attiverà la transizione.
+Il layout di esempio definisce anche un pulsante denominato `sceneButton` sotto l'`container`. Questo pulsante attiverà la transizione.
 
 Il contenuto dinamico all'interno del contenitore richiede due nuovi layout Android. Questi layout specificano solo il codice *all'interno* del contenitore.
 Il codice di esempio seguente definisce un layout denominato *Scene1* che contiene due campi di testo che leggono rispettivamente "kit" e "Kat" e un secondo layout denominato *scene2* che contiene gli stessi campi di testo invertiti. Il codice XML è il seguente:
 
- **Scene1.axml**:
+ **Scene1. aXML**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -214,9 +214,9 @@ Il codice di esempio seguente definisce un layout denominato *Scene1* che contie
 </merge>
 ```
 
-Nell'esempio precedente viene `merge` usato per rendere il codice di visualizzazione più breve e semplificare la gerarchia di visualizzazione. Per altre informazioni sui `merge` layout, vedere [qui](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
+Nell'esempio precedente viene usato `merge` per rendere il codice di visualizzazione più breve e semplificare la gerarchia di visualizzazione. Per altre informazioni sui layout `merge`, vedere [qui](https://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
 
-Una scena viene creata [`Scene.GetSceneForLayout`](xref:Android.Transitions.Scene.GetSceneForLayout*)chiamando, passando l'oggetto contenitore, l'ID risorsa del file di layout della scena e l'oggetto corrente `Context`, come illustrato nell'esempio di codice seguente:
+Una scena viene creata chiamando [`Scene.GetSceneForLayout`](xref:Android.Transitions.Scene.GetSceneForLayout*), passando l'oggetto contenitore, l'ID della risorsa del file di layout della scena e l'`Context`corrente, come illustrato nell'esempio di codice seguente:
 
 ```csharp
 RelativeLayout container = FindViewById<RelativeLayout> (Resource.Id.container);
@@ -241,22 +241,22 @@ sceneButton.Click += (o, e) => {
 
 La schermata seguente illustra la scena prima dell'animazione:
 
-[![Screenshot dell'app prima dell'avvio dell'animazione](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
+[![screenshot dell'app prima dell'avvio dell'animazione](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 La schermata seguente illustra la scena dopo l'animazione:
 
-[![Screenshot dell'app dopo il completamento dell'animazione](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
+[![screenshot dell'app dopo il completamento dell'animazione](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
 > [!NOTE]
-> È presente un [bug noto](https://code.google.com/p/android/issues/detail?id=62450) nella libreria delle transizioni Android che fa sì che le `GetSceneForLayout` scene create con si interrompano quando un utente passa attraverso un'attività la seconda volta. Una soluzione alternativa Java è descritta [qui](http://www.doubleencore.com/2013/11/new-transitions-framework/).
+> È presente un [bug noto](https://code.google.com/p/android/issues/detail?id=62450) nella libreria delle transizioni Android che causa la creazione di scene con `GetSceneForLayout` per interrompere l'esecuzione quando un utente passa attraverso un'attività la seconda volta. Una soluzione alternativa Java è descritta [qui](http://www.doubleencore.com/2013/11/new-transitions-framework/).
 
 ##### <a name="custom-transitions-in-scenes"></a>Transizioni personalizzate in scenari
 
-È possibile definire una transizione personalizzata in un file di risorse XML nella `transition` directory sotto `Resources`, come illustrato nello screenshot seguente:
+È possibile definire una transizione personalizzata in un file di risorse XML nella directory `transition` in `Resources`, come illustrato nello screenshot seguente:
 
-[![Percorso del file Transition. XML in Resources/Transition directory](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
+[![percorso del file Transition. XML in risorse/directory di transizione](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
-L'esempio di codice seguente definisce una transizione che aggiunge un'animazione per 5 secondi e usa l'[interpolatore di overshoot](https://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
+L'esempio di codice seguente definisce una transizione che aggiunge un'animazione per 5 secondi e usa l' [interpolatore di overshoot](https://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
 ```xml
 <changeBounds
@@ -271,7 +271,7 @@ La transizione viene creata nell'attività usando [TransitionInflater](xref:Andr
 Transition transition = TransitionInflater.From(this).InflateTransition(Resource.Transition.transition);
 ```
 
-La nuova transizione viene quindi aggiunta alla `Go` chiamata che avvia l'animazione:
+La nuova transizione viene quindi aggiunta alla chiamata `Go` che avvia l'animazione:
 
 ```csharp
 TransitionManager.Go (scene1, transition);
@@ -281,11 +281,11 @@ TransitionManager.Go (scene1, transition);
 
 KitKat offre un maggiore controllo sulla gestione delle app con lo stato e le barre di navigazione facoltativi. È possibile modificare la traslucidità degli elementi dell'interfaccia utente del sistema nello stesso file XML usato per definire il tema Android. KitKat introduce le proprietà seguenti:
 
-- `windowTranslucentStatus`-Se impostato su true, la barra di stato superiore diventa trasparente.
+- `windowTranslucentStatus`-se impostato su true, rende la barra di stato superiore traslucida.
 
-- `windowTranslucentNavigation`-Se impostato su true, la barra di spostamento inferiore diventa trasparente.
+- `windowTranslucentNavigation`-se impostato su true, la barra di spostamento inferiore diventa trasparente.
 
-- `fitsSystemWindows`-Se si imposta la barra superiore o inferiore su transcluent, per impostazione predefinita il contenuto viene spostato sotto gli elementi trasparenti dell'interfaccia utente. L'impostazione di questa `true` proprietà su è un modo semplice per impedire la sovrapposizione di contenuto con gli elementi dell'interfaccia utente di sistema traslucidi.
+- `fitsSystemWindows`-l'impostazione della barra superiore o inferiore su transcluent sposta il contenuto sotto gli elementi dell'interfaccia utente trasparente per impostazione predefinita. L'impostazione di questa proprietà su `true` è un modo semplice per impedire che il contenuto venga sovrapposto agli elementi dell'interfaccia utente di sistema traslucidi.
 
 Il codice seguente definisce un tema con lo stato e le barre di navigazione trasparenti:
 
@@ -308,7 +308,7 @@ Il codice seguente definisce un tema con lo stato e le barre di navigazione tras
 
 La schermata seguente mostra il tema precedente con le barre di spostamento e lo stato di traslucido:
 
-[![Schermata di esempio dell'app con lo stato e le barre di navigazione trasparenti](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
+[schermata di esempio![dell'app con lo stato e le barre di navigazione trasparenti](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
 <a name="user_content" />
 
@@ -318,18 +318,18 @@ La schermata seguente mostra il tema precedente con le barre di spostamento e lo
 
 Storage Access Framework (SAF) è un nuovo modo per consentire agli utenti di interagire con contenuto archiviato, ad esempio immagini, video e documenti. Anziché presentare agli utenti una finestra di dialogo per scegliere un'applicazione per la gestione del contenuto, KitKat apre una nuova interfaccia utente che consente agli utenti di accedere ai dati in un unico percorso di aggregazione. Una volta scelto il contenuto, l'utente tornerà all'applicazione che ha richiesto il contenuto e l'esperienza dell'app continuerà normalmente.
 
-Questa modifica richiede due azioni sul lato sviluppatore: prima di tutto, le app che richiedono contenuto dai provider devono essere aggiornate a un nuovo modo di richiedere il contenuto. In secondo luogo, è `ContentProvider` necessario modificare le applicazioni che scrivono i dati in modo da usare il nuovo Framework. Entrambi gli scenari dipendono dalla nuova[`DocumentsProvider`](xref:Android.Provider.DocumentsProvider)
+Questa modifica richiede due azioni sul lato sviluppatore: prima di tutto, le app che richiedono contenuto dai provider devono essere aggiornate a un nuovo modo di richiedere il contenuto. In secondo luogo, le applicazioni che scrivono i dati in un `ContentProvider` devono essere modificate per l'utilizzo del nuovo Framework. Entrambi gli scenari dipendono dalla nuova [`DocumentsProvider`](xref:Android.Provider.DocumentsProvider)
 API.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
 
-In KitKat le `DocumentsProvider` interazioni con `ContentProviders` sono astratte dalla classe. Questo significa che SAF non è interessato dalla posizione dei dati fisicamente, purché sia accessibile tramite l' `DocumentsProvider` API. I provider locali, i servizi cloud e i dispositivi di archiviazione esterni usano tutte la stessa interfaccia e vengono gestiti allo stesso modo, fornendo all'utente e allo sviluppatore un'unica posizione per interagire con il contenuto dell'utente.
+In KitKat le interazioni con `ContentProviders` vengono astratte con la classe `DocumentsProvider`. Questo significa che SAF non è interessato dalla posizione dei dati fisicamente, purché sia accessibile tramite l'API `DocumentsProvider`. I provider locali, i servizi cloud e i dispositivi di archiviazione esterni usano tutte la stessa interfaccia e vengono gestiti allo stesso modo, fornendo all'utente e allo sviluppatore un'unica posizione per interagire con il contenuto dell'utente.
 
 Questa sezione illustra come caricare e salvare il contenuto con il Framework di accesso alle archiviazione.
 
 #### <a name="request-content-from-a-provider"></a>Richiedi contenuto da un provider
 
-È possibile indicare a KitKat che si vuole selezionare il contenuto usando l'interfaccia utente di `ActionOpenDocument` SAF con lo scopo, che significa che ci si vuole connettere a tutti i provider di contenuti disponibili per il dispositivo. È possibile aggiungere alcuni filtri a questa finalità specificando `CategoryOpenable`, il che significa che verrà restituito solo il contenuto che può essere aperto, ad esempio contenuto accessibile e utilizzabile. KitKat consente anche di filtrare il `MimeType`contenuto con. Ad esempio, il codice seguente Filtra i risultati dell'immagine specificando l' `MimeType`immagine:
+È possibile indicare a KitKat che si vuole selezionare il contenuto usando l'interfaccia utente di SAF con l'Intent `ActionOpenDocument`, che significa che ci si vuole connettere a tutti i provider di contenuti disponibili per il dispositivo. È possibile aggiungere alcuni filtri a questa finalità specificando `CategoryOpenable`, il che significa che verrà restituito solo il contenuto che può essere aperto, ad esempio contenuto accessibile e utilizzabile. KitKat consente anche di filtrare il contenuto con il `MimeType`. Ad esempio, il codice seguente Filtra i risultati dell'immagine specificando l'immagine `MimeType`:
 
 ```csharp
 Intent intent = new Intent (Intent.ActionOpenDocument);
@@ -338,11 +338,11 @@ intent.SetType ("image/*");
 StartActivityForResult (intent, save_request_code);
 ```
 
-La `StartActivityForResult` chiamata a avvia l'interfaccia utente di SAF, che l'utente può quindi individuare per scegliere un'immagine:
+Chiamando `StartActivityForResult` viene avviata l'interfaccia utente di SAF, che l'utente può quindi individuare per scegliere un'immagine:
 
-[![Schermata di esempio di un'app che usa il Framework di accesso alla risorsa di archiviazione per l'esplorazione di un'immagine](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![screenshot di esempio di un'app che usa il Framework di accesso alle archiviazione per l'esplorazione di un'immagine](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
-Dopo che l'utente ha scelto un'immagine `OnActivityResult` , restituisce `Android.Net.Uri` l'oggetto del file scelto. Nell'esempio di codice riportato di seguito viene visualizzata la selezione dell'immagine dell'utente:
+Dopo che l'utente ha scelto un'immagine, `OnActivityResult` restituisce la `Android.Net.Uri` del file scelto. Nell'esempio di codice riportato di seguito viene visualizzata la selezione dell'immagine dell'utente:
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -358,7 +358,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 #### <a name="write-content-to-a-provider"></a>Scrivere contenuto in un provider
 
-Oltre a caricare contenuto dall'interfaccia utente di SAF, KitKat consente anche di salvare il contenuto in `ContentProvider` qualsiasi che implementi l' `DocumentProvider` API. Il salvataggio del contenuto `Intent` USA `ActionCreateDocument`un con:
+Oltre a caricare contenuto dall'interfaccia utente di SAF, KitKat consente anche di salvare il contenuto in qualsiasi `ContentProvider` che implementi l'API `DocumentProvider`. Il salvataggio del contenuto usa un `Intent` con `ActionCreateDocument`:
 
 ```csharp
 Intent intentCreate = new Intent (Intent.ActionCreateDocument);
@@ -370,9 +370,9 @@ StartActivityForResult (intentCreate, write_request_code);
 
 Nell'esempio di codice precedente viene caricata l'interfaccia utente di SAF, che consente all'utente di modificare il nome del file e di selezionare una directory in cui si trova il nuovo file:
 
-[![Screenshot dell'utente che ha modificato il nome del file in NewDoc nella directory downloads](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
+[![screenshot dell'utente che ha modificato il nome del file in NewDoc nella directory downloads](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
 
-Quando l'utente preme **Save** `OnActivityResult` , viene passato l'oggetto `Android.Net.Uri` del file appena creato, a cui è possibile accedere con `data.Data`. L'URI può essere usato per trasmettere i dati nel nuovo file:
+Quando l'utente preme **Save**, `OnActivityResult` viene passato il `Android.Net.Uri` del file appena creato, a cui è possibile accedere con `data.Data`. L'URI può essere usato per trasmettere i dati nel nuovo file:
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -389,35 +389,35 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 }
 ```
 
-Si noti che[`ContentResolver.OpenOutputStream(Android.Net.Uri)`](xref:Android.Content.ContentResolver.OpenOutputStream*)
-Restituisce un `System.IO.Stream`oggetto, quindi l'intero processo di streaming può essere scritto in .NET.
+Si noti che [`ContentResolver.OpenOutputStream(Android.Net.Uri)`](xref:Android.Content.ContentResolver.OpenOutputStream*)
+Restituisce un `System.IO.Stream`, quindi l'intero processo di streaming può essere scritto in .NET.
 
 Per altre informazioni sul caricamento, la creazione e la modifica del contenuto con il Framework di accesso alla risorsa di archiviazione, vedere la [documentazione di Android per il Framework di accesso alla](https://developer.android.com/guide/topics/providers/document-provider.html)risorsa di archiviazione.
 
 ### <a name="printing"></a>Stampa
 
-Il contenuto di stampa è semplificato in KitKat con l'introduzione dei servizi `PrintManager`di [stampa](xref:Android.PrintServices) e. KitKat è anche la prima versione dell'API per sfruttare appieno le [API del servizio di stampa cloud di Google](https://developers.google.com/cloud-print/) usando l' [applicazione Google Cloud Print](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint).
+Il contenuto di stampa è semplificato in KitKat con l'introduzione dei [servizi di stampa](xref:Android.PrintServices) e `PrintManager`. KitKat è anche la prima versione dell'API per sfruttare appieno le [API del servizio di stampa cloud di Google](https://developers.google.com/cloud-print/) usando l' [applicazione Google Cloud Print](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint).
 La maggior parte dei dispositivi forniti con KitKat Scarica automaticamente Google Cloud Print app e il plug-in del [servizio di stampa HP](https://play.google.com/store/apps/details?id=com.hp.android.printservice)quando si connette per la prima volta al Wi-Fi. Un utente può verificare le impostazioni di stampa del dispositivo passando a **impostazioni > sistema > stampa**:
 
-[![Schermata di esempio della schermata impostazioni di stampa](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
+[schermata di esempio![della schermata impostazioni di stampa](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 > [!NOTE]
 > Sebbene le API di stampa siano configurate per l'uso con Google Cloud Print per impostazione predefinita, Android consente agli sviluppatori di preparare il contenuto di stampa usando le nuove API e di inviarlo ad altre applicazioni per gestire la stampa.
 
 #### <a name="printing-html-content"></a>Stampa di contenuto HTML
 
-KitKat crea automaticamente un [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) oggetto per una visualizzazione Web `WebView.CreatePrintDocumentAdapter`con. La stampa di contenuto Web è un lavoro coordinato tra un [`WebViewClient`](xref:Android.Webkit.WebViewClient) che attende il caricamento del contenuto HTML e consente all'attività di rendere disponibile l'opzione di stampa nel menu opzioni e l'attività, che attende che l'utente selezioni l'opzione di stampa e chiami `Print`nell' .`PrintManager` In questa sezione viene illustrata la configurazione di base necessaria per stampare contenuto HTML a schermo intero.
+KitKat crea automaticamente un [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) per una visualizzazione web con `WebView.CreatePrintDocumentAdapter`. La stampa di contenuto Web è un lavoro coordinato tra un [`WebViewClient`](xref:Android.Webkit.WebViewClient) che attende il caricamento del contenuto HTML e consente all'attività di rendere disponibile l'opzione di stampa nel menu opzioni e l'attività, che attende che l'utente selezioni l'opzione di stampa e c `Print`nel `PrintManager`. In questa sezione viene illustrata la configurazione di base necessaria per stampare contenuto HTML a schermo intero.
 
 Si noti che il caricamento e la stampa del contenuto Web richiede l'autorizzazione Internet:
 
-[![Impostazione dell'autorizzazione Internet nelle opzioni dell'app](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
+[Impostazione dell'autorizzazione Internet nelle opzioni dell'app![](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
 
 ##### <a name="print-menu-item"></a>Voce di menu Stampa
 
 L'opzione Print viene in genere visualizzata nel menu delle [Opzioni](https://developer.android.com/guide/topics/ui/menus.html#options-menu)dell'attività.
 Il menu opzioni consente agli utenti di eseguire azioni su un'attività. Si trova nell'angolo superiore destro dello schermo e ha un aspetto simile al seguente:
 
-[![Schermata di esempio della voce di menu Stampa visualizzata nell'angolo superiore destro della schermata](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![esempio di screenshot della voce di menu Stampa visualizzata nell'angolo superiore destro dello schermo](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 È possibile definire altre voci di menu nella directory *menu*sotto *risorse*. Il codice seguente definisce una voce di menu di esempio denominata [Print](xref:Android.Print.PrintManager):
 
@@ -430,9 +430,9 @@ Il menu opzioni consente agli utenti di eseguire azioni su un'attività. Si trov
 </menu>
 ```
 
-L'interazione con il menu opzioni nell'attività viene eseguita tramite `OnCreateOptionsMenu` i `OnOptionsItemSelected` metodi e.
-`OnCreateOptionsMenu`è la posizione in cui aggiungere nuove voci di menu, ad esempio l'opzione stampa, dalla directory delle risorse di *menu* .
-`OnOptionsItemSelected`Ascolta l'utente che seleziona l'opzione di stampa dal menu e inizia la stampa:
+L'interazione con il menu opzioni nell'attività viene eseguita tramite i metodi `OnCreateOptionsMenu` e `OnOptionsItemSelected`.
+`OnCreateOptionsMenu` è la posizione in cui aggiungere nuove voci di menu, ad esempio l'opzione stampa, dalla directory risorse dei *menu* .
+`OnOptionsItemSelected` è in ascolto dell'utente che seleziona l'opzione di stampa dal menu e inizia la stampa:
 
 ```csharp
 bool dataLoaded;
@@ -456,11 +456,11 @@ public override bool OnOptionsItemSelected (IMenuItem item)
 }
 ```
 
-Il codice precedente definisce anche una variabile denominata `dataLoaded` per tenere traccia dello stato del contenuto HTML. `WebViewClient` Imposta questa variabile su true quando tutto il contenuto è stato caricato, quindi l'attività sa aggiungere la voce di menu stampa al menu opzioni.
+Il codice precedente definisce anche una variabile denominata `dataLoaded` per tenere traccia dello stato del contenuto HTML. Il `WebViewClient` imposta questa variabile su true quando tutto il contenuto è stato caricato, quindi l'attività è in grado di aggiungere la voce di menu stampa al menu opzioni.
 
 ##### <a name="webviewclient"></a>WebViewClient
 
-Il processo di `WebViewClient` consiste nel garantire che i dati `WebView` in vengano caricati completamente prima che l'opzione Print venga visualizzata nel menu, operazione eseguita con il `OnPageFinished` metodo. `OnPageFinished`resta in attesa del completamento del caricamento del contenuto Web e indica all'attività di ricreare il menu delle `InvalidateOptionsMenu`opzioni con:
+Il processo del `WebViewClient` consiste nel garantire che i dati nel `WebView` vengano caricati completamente prima che l'opzione Print venga visualizzata nel menu, operazione eseguita con il `OnPageFinished` metodo. `OnPageFinished` resta in attesa del completamento del caricamento del contenuto Web e indica all'attività di ricreare il menu opzioni con `InvalidateOptionsMenu`:
 
 ```csharp
 class MyWebViewClient : WebViewClient
@@ -480,11 +480,11 @@ class MyWebViewClient : WebViewClient
 }
 ```
 
-`OnPageFinished`imposta anche il `dataLoaded` valore su `true`, in `OnCreateOptionsMenu` modo che sia possibile ricreare il menu con l'opzione di stampa sul posto.
+`OnPageFinished` imposta anche il valore di `dataLoaded` su `true`, quindi `OnCreateOptionsMenu` possibile ricreare il menu con l'opzione stampa sul posto.
 
 ##### <a name="printmanager"></a>PrintManager
 
-Nell'esempio di codice seguente viene stampato il contenuto `WebView`di un oggetto:
+Nell'esempio di codice seguente viene stampato il contenuto di un `WebView`:
 
 ```csharp
 void PrintPage ()
@@ -495,15 +495,15 @@ void PrintPage ()
 }
 ```
 
-`Print`accetta come argomenti: un nome per il processo di stampa ("MyWebPage" in questo esempio), un[`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter)
-che genera il documento di stampa dal contenuto e[`PrintAttributes`](xref:Android.Print.PrintAttributes)
-(`null` nell'esempio precedente). È possibile specificare `PrintAttributes` per facilitare la disposizione del contenuto nella pagina stampata, sebbene gli attributi predefiniti debbano gestire la maggior parte degli scenari.
+`Print` accetta come argomenti: un nome per il processo di stampa ("MyWebPage" in questo esempio), un [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter)
+che genera il documento di stampa dal contenuto e [`PrintAttributes`](xref:Android.Print.PrintAttributes)
+(`null` nell'esempio precedente). È possibile specificare `PrintAttributes` per facilitare il layout del contenuto nella pagina stampata, sebbene gli attributi predefiniti debbano gestire la maggior parte degli scenari.
 
-La `Print` chiamata di carica l'interfaccia utente di stampa, che elenca le opzioni per il processo di stampa. L'interfaccia utente offre agli utenti la possibilità di stampare o salvare il contenuto HTML in un file PDF, come illustrato negli screenshot seguenti:
+Chiamando `Print` viene caricata l'interfaccia utente di stampa, che elenca le opzioni per il processo di stampa. L'interfaccia utente offre agli utenti la possibilità di stampare o salvare il contenuto HTML in un file PDF, come illustrato negli screenshot seguenti:
 
-[![Schermata di PrintHtmlActivity visualizzazione del menu Stampa](kitkat-images/print1.png)](kitkat-images/print1.png#lightbox)
+[![screenshot di PrintHtmlActivity per visualizzare il menu Stampa](kitkat-images/print1.png)](kitkat-images/print1.png#lightbox)
 
-[![Schermata di PrintHtmlActivity visualizzazione del menu Salva con nome PDF](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
+[![screenshot di PrintHtmlActivity visualizzazione del menu Salva con nome PDF](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
 <a name="hardware" />
 
@@ -519,21 +519,21 @@ L'emulazione di schede basate su host (HCE) consente alle applicazioni di compor
 bool hceSupport = PackageManager.HasSystemFeature(PackageManager.FeatureNfcHostCardEmulation);
 ```
 
-HCE richiede che sia la funzionalità HCE che l' `Nfc` autorizzazione siano registrate con l' `AndroidManifest.xml`applicazione:
+HCE richiede che sia la funzionalità HCE che l'autorizzazione `Nfc` siano registrate con l'`AndroidManifest.xml`dell'applicazione:
 
 ```xml
 <uses-feature android:name="android.hardware.nfc.hce" />
 ```
 
-[![Impostazione dell'autorizzazione NFC nelle opzioni dell'app](kitkat-images/nfc.png)](kitkat-images/nfc.png#lightbox)
+[![l'impostazione dell'autorizzazione NFC nelle opzioni dell'app](kitkat-images/nfc.png)](kitkat-images/nfc.png#lightbox)
 
-Per funzionare, HCE deve poter essere eseguito in background e deve essere avviato quando l'utente esegue una transazione NFC, anche se l'applicazione che usa HCE non è in esecuzione. A tale scopo, è possibile scrivere il codice HCE come `Service`. Un servizio HCE implementa l' `HostApduService` interfaccia, che implementa i metodi seguenti:
+Per funzionare, HCE deve poter essere eseguito in background e deve essere avviato quando l'utente esegue una transazione NFC, anche se l'applicazione che usa HCE non è in esecuzione. A tale scopo, è possibile scrivere il codice HCE come `Service`. Un servizio HCE implementa l'interfaccia `HostApduService`, che implementa i metodi seguenti:
 
 - *ProcessCommandApdu* : un'unità dati del protocollo dell'applicazione (APDU) è ciò che viene inviato tra il lettore NFC e il servizio HCE. Questo metodo usa un ADPU dal reader e restituisce un'unità dati in risposta.
 
 - *OnDeactivated* : il `HostAdpuService` viene disattivato quando il servizio HCE non comunica più con il lettore NFC.
 
-Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l' `Service` attributo. per altre informazioni sugli attributi, vedere la guida del manifesto Novell [Working with Android](~/android/platform/android-manifest.md) :
+Un servizio HCE deve anche essere registrato con il manifesto dell'applicazione e decorato con le autorizzazioni appropriate, il filtro preventivo e i metadati. Il codice seguente è un esempio di `HostApduService` registrato con il manifesto Android usando l'attributo `Service` (per altre informazioni sugli attributi, vedere la guida al [manifesto Novell Working with Android](~/android/platform/android-manifest.md) ):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
@@ -555,7 +555,7 @@ class HceService : HostApduService
 }
 ```
 
-Il servizio precedente consente al lettore NFC di interagire con l'applicazione, ma il lettore NFC non è ancora in grado di sapere se il servizio emula la scheda NFC necessaria per l'analisi. Per consentire al lettore NFC di identificare il servizio, è possibile assegnare al servizio un *ID applicazione univoco (supporto)* . Viene specificato un supporto, insieme ad altri metadati relativi al servizio HCE, in un file di risorse XML registrato con `MetaData` l'attributo (vedere l'esempio di codice precedente). Questo file di risorse specifica uno o più filtri di supporto-stringhe identificatore univoche in formato esadecimale che corrispondono ai supporti di uno o più dispositivi di lettore NFC:
+Il servizio precedente consente al lettore NFC di interagire con l'applicazione, ma il lettore NFC non è ancora in grado di sapere se il servizio emula la scheda NFC necessaria per l'analisi. Per consentire al lettore NFC di identificare il servizio, è possibile assegnare al servizio un *ID applicazione univoco (supporto)* . Viene specificato un supporto, insieme ad altri metadati relativi al servizio HCE, in un file di risorse XML registrato con l'attributo `MetaData` (vedere l'esempio di codice precedente). Questo file di risorse specifica uno o più filtri di supporto-stringhe identificatore univoche in formato esadecimale che corrispondono ai supporti di uno o più dispositivi di lettore NFC:
 
 ```xml
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
@@ -578,7 +578,7 @@ Per altre informazioni sull'uso di NFC con Novell, vedere gli [esempi di Novell 
 ### <a name="sensors"></a>Sensori
 
 KitKat consente di accedere ai sensori del dispositivo tramite un [`SensorManager`](xref:Android.Hardware.SensorManager).
-`SensorManager` Consente al sistema operativo di pianificare il recapito delle informazioni del sensore a un'applicazione in batch, conservando la durata della batteria.
+Il `SensorManager` consente al sistema operativo di pianificare il recapito delle informazioni del sensore a un'applicazione in batch, conservando la durata della batteria.
 
 KitKat viene fornito anche con due nuovi tipi di sensore per tenere traccia dei passaggi dell'utente. Si basano sull'accelerometro e includono:
 
@@ -588,9 +588,9 @@ KitKat viene fornito anche con due nuovi tipi di sensore per tenere traccia dei 
 
 Lo screenshot seguente illustra il contatore dei passaggi in azione:
 
-[![Screenshot dell'app SensorsActivity che visualizza un contatore dei passaggi](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
+[![screenshot dell'app SensorsActivity che visualizza un contatore dei passaggi](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-È possibile creare un `SensorManager` oggetto `GetSystemService(SensorService)` chiamando ed `SensorManager`eseguendo il cast del risultato come. Per usare il contatore dei passaggi, `GetDefaultSensor` chiamare `SensorManager`su. È possibile registrare il sensore e restare in ascolto delle modifiche apportate al numero di passaggi con l'aiuto del[`ISensorEventListener`](xref:Android.Hardware.ISensorEventListener)
+È possibile creare un `SensorManager` chiamando `GetSystemService(SensorService)` ed eseguendo il cast del risultato come `SensorManager`. Per utilizzare il contatore dei passaggi, chiamare `GetDefaultSensor` sull'`SensorManager`. È possibile registrare il sensore e restare in ascolto delle modifiche apportate al conteggio dei passaggi con la [`ISensorEventListener`](xref:Android.Hardware.ISensorEventListener)
 interfaccia, come illustrato nell'esempio di codice seguente:
 
 ```csharp
@@ -622,9 +622,9 @@ public class MainActivity : Activity, ISensorEventListener
 }
 ```
 
-`OnSensorChanged`viene chiamato se il conteggio dei passaggi viene aggiornato mentre l'applicazione è in primo piano. Se l'applicazione viene attivata in background o il dispositivo è in stato `OnSensorChanged` di sospensione, non verrà chiamato. Tuttavia, i passaggi continueranno a essere `UnregisterListener` conteggiati fino a quando non viene chiamato il metodo.
+`OnSensorChanged` viene chiamato se il conteggio dei passaggi viene aggiornato mentre l'applicazione è in primo piano. Se l'applicazione entra in background o il dispositivo è in stato di sospensione, `OnSensorChanged` non verrà chiamato; Tuttavia, i passaggi continueranno a essere conteggiati fino a quando non viene chiamato `UnregisterListener`.
 
-Tenere presente che *il valore del numero di passaggi è cumulativo in tutte le applicazioni che registrano il sensore*. Ciò significa che anche se si disinstalla e si reinstalla l'applicazione e si inizializza `count` la variabile su 0 all'avvio dell'applicazione, il valore restituito dal sensore rimarrà il numero totale di passaggi eseguiti durante la registrazione del sensore, indipendentemente dal fatto che il applicazione o un'altra. È possibile impedire l'aggiunta dell'applicazione al contatore dei passaggi chiamando `UnregisterListener` `SensorManager`su, come illustrato nel codice seguente:
+Tenere presente che *il valore del numero di passaggi è cumulativo in tutte le applicazioni che registrano il sensore*. Ciò significa che, anche se si disinstalla e si reinstalla l'applicazione e si inizializza la variabile `count` a 0 all'avvio dell'applicazione, il valore restituito dal sensore rimarrà il numero totale di passaggi eseguiti durante la registrazione del sensore, indipendentemente dal fatto che il applicazione o un'altra. È possibile impedire l'aggiunta dell'applicazione al contatore dei passaggi chiamando `UnregisterListener` sul `SensorManager`, come illustrato nel codice seguente:
 
 ```csharp
 protected override void OnPause()
@@ -637,7 +637,7 @@ protected override void OnPause()
 Il riavvio del dispositivo Reimposta il numero di passaggi su 0. L'app richiede codice aggiuntivo per assicurarsi che venga segnalato un conteggio accurato per l'applicazione, indipendentemente dalle altre applicazioni che usano il sensore o lo stato del dispositivo.
 
 > [!NOTE]
-> Mentre l'API per il rilevamento dei passaggi e il conteggio viene fornita con KitKat, non tutti i telefoni sono dotati del sensore. È possibile verificare se il sensore è disponibile `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`eseguendo oppure verificare che il valore restituito di `GetDefaultSensor` non sia `null`.
+> Mentre l'API per il rilevamento dei passaggi e il conteggio viene fornita con KitKat, non tutti i telefoni sono dotati del sensore. È possibile verificare se il sensore è disponibile eseguendo `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`oppure verificare che il valore restituito di `GetDefaultSensor` non sia `null`.
 
 <a name="developer_tools" />
 
@@ -668,34 +668,34 @@ Oltre alle modifiche descritte in precedenza, KitKat consente di:
 
 - *Usare lo schermo intero* : KitKat introduce una nuova [modalità immersiva](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) per l'esplorazione del contenuto, la riproduzione di giochi e l'esecuzione di altre applicazioni che possono trarre vantaggio da un'esperienza a schermo intero.
 
-- *Personalizzare le notifiche* : ottenere ulteriori dettagli sulle notifiche di sistema con il[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
+- *Personalizzare le notifiche* : ottenere ulteriori dettagli sulle notifiche di sistema con la [`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
   . Questo consente di presentare le informazioni in modo diverso all'interno dell'app.
 
-- Risorse di cui è possibile *creare mirror* : le risorse di cui è possibile creare un nuovo[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
+- Risorse di cui è possibile *creare mirror* : le risorse di cui è possibile creare un nuovo [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
   attributo che indica al sistema di creare una versione con mirroring per le immagini che richiedono il capovolgimento per i layout da sinistra a destra.
 
-- *Sospendere le animazioni* : sospendere e riprendere le animazioni create con il[`Animator`](xref:Android.Animation.Animator)
+- *Sospendere le animazioni* : sospendere e riprendere le animazioni create con il [`Animator`](xref:Android.Animation.Animator)
   .
 
-- *Lettura testo in modifica dinamica* : indica le parti dell'interfaccia utente che vengono aggiornate dinamicamente con il nuovo testo come "aree attive" con il nuovo[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+- *Lettura testo in modifica dinamica* : indica le parti dell'interfaccia utente che vengono aggiornate dinamicamente con il nuovo testo come "aree attive" con il nuovo [`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
   attributo in modo che il nuovo testo venga letto automaticamente in modalità di accessibilità.
 
-- *Migliorare l'esperienza audio* : è più potente con il[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
-  , trovare il picco e RMS di un flusso audio con il[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
+- *Migliorare l'esperienza audio* : è più potente con il [`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
+  , trovare il picco e RMS di un flusso audio con la [`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
   e ottenere informazioni da un [timestamp audio](xref:Android.Media.AudioTimestamp) per semplificare la sincronizzazione del video audio.
 
-- *Sync ContentResolver at Custom Interval* : KitKat aggiunge una certa variabilità al momento in cui viene eseguita una richiesta di sincronizzazione. Sincronizzare un `ContentResolver` oggetto all'ora o all'intervallo personalizzato `ContentResolver.RequestSync` chiamando e passando un `SyncRequest`oggetto.
+- *Sync ContentResolver at Custom Interval* : KitKat aggiunge una certa variabilità al momento in cui viene eseguita una richiesta di sincronizzazione. Sincronizzare un `ContentResolver` all'ora o all'intervallo personalizzato chiamando `ContentResolver.RequestSync` e passando un `SyncRequest`.
 
-- *Distinzione tra controller* : in KitKat, ai controller vengono assegnati identificatori di tipo integer univoci a cui è possibile `ControllerNumber` accedere tramite la proprietà del dispositivo. In questo modo è più semplice distinguere tra i diversi giocatori in un gioco.
+- *Distinzione tra controller* : in KitKat, ai controller vengono assegnati identificatori di tipo integer univoci a cui è possibile accedere tramite la proprietà `ControllerNumber` del dispositivo. In questo modo è più semplice distinguere tra i diversi giocatori in un gioco.
 
-- *Controllo remoto* : con alcune modifiche sul lato hardware e software, KitKat consente di trasformare un dispositivo fornito con un trasmettitore IR in un controllo remoto usando il `ConsumerIrService`e di interagire con i dispositivi periferici con il nuovo[`RemoteController`](xref:Android.Media.RemoteController)
+- *Controllo remoto* : con alcune modifiche sul lato hardware e software, KitKat consente di trasformare un dispositivo con un trasmettitore IR in un controllo remoto usando il `ConsumerIrService`e interagire con i dispositivi periferici con la nuova [`RemoteController`](xref:Android.Media.RemoteController)
   API.
 
 Per altre informazioni sulle modifiche apportate all'API, vedere la panoramica delle API di Google [Android 4,4](https://developer.android.com/about/versions/android-4.4.html) .
 
 ## <a name="summary"></a>Riepilogo
 
-In questo articolo sono state introdotte alcune delle nuove API disponibili in Android 4,4 (API level 19) e sono state descritte le procedure consigliate per la transizione di un'applicazione a KitKat. Sono state descritte le modifiche apportate alle API che influiscono sull'esperienza utente, tra cui il *Framework di transizione* e le nuove opzioni per il *tema*. Successivamente, è stata introdotta la classe e `DocumentsProvider` il Framework di accesso alla risorsa di *archiviazione* , nonché le nuove API di *stampa*. Ha esplorato l' *emulazione delle schede basata su host NFC* e come usare i *sensori a basso consumo*, inclusi due nuovi sensori per tenere traccia dei passaggi dell'utente. Infine, è stato illustrato come acquisire demo in tempo reale delle applicazioni con la *registrazione dello schermo*e fornito un elenco dettagliato delle modifiche e delle aggiunte dell'API KitKat.
+In questo articolo sono state introdotte alcune delle nuove API disponibili in Android 4,4 (API level 19) e sono state descritte le procedure consigliate per la transizione di un'applicazione a KitKat. Sono state descritte le modifiche apportate alle API che influiscono sull'esperienza utente, tra cui il *Framework di transizione* e le nuove opzioni per il *tema*. Successivamente, sono stati introdotti il *Framework di accesso all'archiviazione* e la classe `DocumentsProvider`, nonché le nuove API di *stampa*. Ha esplorato l' *emulazione delle schede basata su host NFC* e come usare i *sensori a basso consumo*, inclusi due nuovi sensori per tenere traccia dei passaggi dell'utente. Infine, è stato illustrato come acquisire demo in tempo reale delle applicazioni con la *registrazione dello schermo*e fornito un elenco dettagliato delle modifiche e delle aggiunte dell'API KitKat.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

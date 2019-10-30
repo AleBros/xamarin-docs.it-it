@@ -4,15 +4,15 @@ description: Questo documento descrive come usare SiriKit in iOS 11. In particol
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2017
-ms.openlocfilehash: 27adc8aa2ed0fec09fe38b9ea31834ea6e75f845
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.openlocfilehash: ce4514059b2d0713cdf1e0a4a9956ab38aae7604
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71033091"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032142"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Aggiornamenti di SiriKit in iOS 11
 
@@ -66,12 +66,12 @@ Sono disponibili istruzioni più dettagliate nella [sezione SiriKit](~/ios/platf
 
 Questi metodi facoltativi consentono al codice di eseguire la convalida, selezionare le impostazioni predefinite o richiedere informazioni aggiuntive all'utente.
 
-Per l' `IINCreateTaskListIntent` interfaccia, ad esempio, il metodo richiesto è `HandleCreateTaskList`. Sono disponibili quattro metodi facoltativi che forniscono un maggiore controllo sull'interazione Siri:
+Per l'interfaccia `IINCreateTaskListIntent`, ad esempio, il metodo richiesto è `HandleCreateTaskList`. Sono disponibili quattro metodi facoltativi che forniscono un maggiore controllo sull'interazione Siri:
 
-- `ResolveTitle`: Convalida il titolo, imposta un titolo predefinito (se appropriato) o segnala che i dati non sono necessari.
-- `ResolveTaskTitles`: Consente di convalidare l'elenco delle attività pronunciate dall'utente.
-- `ResolveGroupName`: Convalida il nome del gruppo, sceglie un gruppo predefinito o segnala che i dati non sono necessari.
-- `ConfirmCreateTaskList`: Verifica che il codice sia in grado di eseguire l'operazione richiesta, ma non lo esegue (solo `Handle*` i metodi devono modificare i dati).
+- `ResolveTitle`: convalida il titolo, imposta un titolo predefinito (se appropriato) o segnala che i dati non sono necessari.
+- `ResolveTaskTitles`: convalida l'elenco delle attività pronunciate dall'utente.
+- `ResolveGroupName`: convalida il nome del gruppo, sceglie un gruppo predefinito o segnala che i dati non sono necessari.
+- `ConfirmCreateTaskList`: verifica che il codice sia in grado di eseguire l'operazione richiesta, ma non lo esegue (solo i metodi di `Handle*` devono modificare i dati).
 
 ### <a name="handle-the-intent"></a>Gestisci finalità
 
@@ -87,19 +87,19 @@ I metodi che è necessario implementare per gestire questi Intent sono:
   - `HandleAppendToNote`
   - `HandleSearchForNotebookItems`
 
-A ogni metodo è stato passato un tipo di finalità specifico, che contiene tutte le informazioni di Siri analizzate dalla richiesta dell'utente e possibilmente aggiornate nei `Resolve*` metodi e. `Confirm*`
+A ogni metodo è stato passato un tipo di finalità specifico, che contiene tutte le informazioni di Siri analizzate dalla richiesta dell'utente (ed eventualmente aggiornate nei metodi `Resolve*` e `Confirm*`).
 L'app deve analizzare i dati forniti, quindi eseguire alcune azioni per archiviare o in altro modo elaborare i dati e restituire un risultato che Siri parla e Mostra all'utente.
 
 ### <a name="response-codes"></a>Codici di risposta
 
-I metodi `Handle*` obbligatori `Confirm*` e facoltativi indicano un codice di risposta impostando un valore sull'oggetto che passano al gestore di completamento. Le `INCreateTaskListIntentResponseCode` risposte provengono dall'enumerazione:
+I metodi `Handle*` e facoltativi `Confirm*` richiesti indicano un codice di risposta impostando un valore sull'oggetto che passano al gestore di completamento. Le risposte provengono dall'enumerazione `INCreateTaskListIntentResponseCode`:
 
-- `Ready`: Restituisce durante la fase di conferma (ad esempio, `Confirm*` da un metodo, ma non `Handle*` da un metodo).
-- `InProgress`: Usato per le attività a esecuzione prolungata, ad esempio un'operazione di rete/server.
-- `Success`: Risponde con i dettagli dell'operazione riuscita (solo da un `Handle*` metodo).
-- `Failure`: Indica che si è verificato un errore e non è stato possibile completare l'operazione.
-- `RequiringAppLaunch`-Non può essere elaborato dalla finalità, ma l'operazione è possibile nell'app.
-- `Unspecified`-Non usare: il messaggio di errore verrà visualizzato all'utente.
+- `Ready`: restituisce durante la fase di conferma (ad esempio, da un metodo di `Confirm*`, ma non da un metodo di `Handle*`).
+- `InProgress`: utilizzato per le attività a esecuzione prolungata, ad esempio un'operazione di rete/server.
+- `Success`: risponde con i dettagli dell'operazione riuscita (solo da un metodo di `Handle*`).
+- `Failure`: indica che si è verificato un errore e non è stato possibile completare l'operazione.
+- `RequiringAppLaunch`: non può essere elaborato dalla finalità, ma è possibile eseguire l'operazione nell'app.
+- `Unspecified` – non utilizzare: il messaggio di errore verrà visualizzato all'utente.
 
 Altre informazioni su questi metodi e risposte sono disponibili nella [documentazione relativa agli elenchi e alle note](https://developer.apple.com/documentation/sirikit/lists_and_notes)di Apple SiriKit.
 
@@ -111,7 +111,7 @@ Per prima cosa, per aggiungere il supporto SiriKit, seguire questa procedura per
 
 1. Casella di selezione **SiriKit** in **titles. plist**.
 2. Aggiungere la chiave **privacy – Siri Usage Description** a **info. plist**, insieme a un messaggio per i clienti.
-3. Chiamare il `INPreferences.RequestSiriAuthorization` metodo nell'app per richiedere all'utente di consentire le interazioni Siri.
+3. Chiamare il metodo `INPreferences.RequestSiriAuthorization` nell'app per richiedere all'utente di consentire le interazioni Siri.
 4. Aggiungere SiriKit all'ID app nel portale per sviluppatori e creare nuovamente i profili di provisioning per includere il nuovo diritto.
 
 Aggiungere quindi un nuovo progetto di estensione all'app per gestire le richieste Siri:
@@ -124,7 +124,7 @@ Il progetto di estensione è il punto in cui verranno elaborate tutte le richies
 
 #### <a name="configure-the-intenthandler"></a>Configurare IntentHandler
 
-La `IntentHandler` classe è il punto di ingresso per le richieste Siri. ogni finalità viene passata `GetHandler` al metodo, che restituisce un oggetto in grado di gestire la richiesta.
+La classe `IntentHandler` è il punto di ingresso per le richieste Siri. ogni finalità viene passata al metodo `GetHandler`, che restituisce un oggetto in grado di gestire la richiesta.
 
 Il codice seguente illustra un'implementazione semplice:
 
@@ -144,22 +144,22 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 }
 ```
 
-La classe deve ereditare `INExtension`da e, poiché l'esempio sta per gestire gli elenchi e le note Intent, implementa `IINNotebookDomainHandling`anche.
+La classe deve ereditare da `INExtension`e, poiché l'esempio sta per gestire gli elenchi e gli intenti di note, implementa anche `IINNotebookDomainHandling`.
 
 > [!NOTE]
 >
-> - In .NET esiste una convenzione che prevede che le interfacce siano precedute da `I`un capitale, a cui Novell aderisce quando si associano protocolli da iOS SDK.
+> - In .NET esiste una convenzione che prevede che le interfacce siano precedute da un `I`di capitale, a cui Novell aderisce quando si associano protocolli da iOS SDK.
 > - Novell conserva anche i nomi dei tipi da iOS e Apple usa i primi due caratteri nei nomi dei tipi per riflettere il Framework a cui appartiene un tipo.
-> - Per il `Intents` Framework, i tipi sono preceduti `IN*` da (ad esempio, `INExtension`) ma queste _non_ sono interfacce.
-> - Segue inoltre che C# `I` `IINAddTasksIntentHandling`i protocolli (che diventano interfacce in) finiscono con due, ad esempio.
+> - Per il Framework di `Intents`, i tipi sono preceduti da `IN*`, ad esempio `INExtension`) ma queste _non_ sono interfacce.
+> - Segue inoltre che i protocolli (che diventano interfacce in C#) finiscono con due`I`s, ad esempio`IINAddTasksIntentHandling`.
 
 #### <a name="handling-intents"></a>Gestione degli Intent
 
 Ogni finalità (Aggiungi attività, imposta attributo attività e così via) viene implementata in un singolo metodo simile a quello illustrato di seguito. Il metodo deve eseguire tre funzioni principali:
 
-1. **Elaborare lo scopo** : i dati analizzati da Siri vengono resi disponibili in un `intent` oggetto specifico del tipo di finalità. È possibile che l'app abbia convalidato i `Resolve*` dati usando metodi facoltativi.
+1. **Elaborare lo scopo** : i dati analizzati da Siri vengono resi disponibili in un oggetto `intent` specifico del tipo di Intent. È possibile che l'app abbia convalidato i dati usando metodi di `Resolve*` facoltativi.
 2. **Convalidare e aggiornare l'archivio dati** : salvare i dati nel file System (usando gruppi di app in modo che l'app iOS principale possa accedervi) o tramite una richiesta di rete.
-3. **Fornire la risposta** : usare `completion` il gestore per inviare una risposta a Siri per leggere/visualizzare l'utente:
+3. **Fornire la risposta** : usare il gestore `completion` per inviare una risposta a Siri per leggere/visualizzare l'utente:
 
 ```csharp
 public void HandleCreateTaskList(INCreateTaskListIntent intent, Action<INCreateTaskListIntentResponse> completion)
@@ -174,10 +174,10 @@ public void HandleCreateTaskList(INCreateTaskListIntent intent, Action<INCreateT
 }
 ```
 
-Si noti `null` che viene passato come secondo parametro alla risposta. si tratta del parametro dell'attività utente e, quando non viene specificato, verrà utilizzato un valore predefinito.
-È possibile impostare un tipo di attività personalizzato purché l'app iOS la supporti tramite la `NSUserActivityTypes` chiave in **info. plist**. È quindi possibile gestire questo caso quando l'app viene aperta ed eseguire operazioni specifiche, ad esempio l'apertura di un controller di visualizzazione pertinente e il caricamento dei dati dall'operazione Siri.
+Si noti che `null` viene passato come secondo parametro alla risposta, ovvero il parametro dell'attività utente e, quando non viene specificato, verrà usato un valore predefinito.
+È possibile impostare un tipo di attività personalizzato purché l'app iOS la supporti tramite la chiave `NSUserActivityTypes` in **info. plist**. È quindi possibile gestire questo caso quando l'app viene aperta ed eseguire operazioni specifiche, ad esempio l'apertura di un controller di visualizzazione pertinente e il caricamento dei dati dall'operazione Siri.
 
-Nell'esempio viene inoltre hardcoded il `Success` risultato, ma in scenari reali è necessario aggiungere una segnalazione errori corretta.
+Nell'esempio viene inoltre hardcoded il risultato della `Success`, ma in scenari reali è necessario aggiungere una segnalazione errori corretta.
 
 ### <a name="test-phrases"></a>Frasi di test
 
@@ -211,18 +211,18 @@ Con i nomi di app alternativi impostati, le frasi seguenti funzioneranno anche p
 - "Crea un elenco di alimentari con mele, banane e pere in _MonkeyNotes_"
 - "Aggiungi attività WWDC in _MonkeyTodo_"
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Alcuni errori che potrebbero verificarsi durante l'esecuzione dell'esempio o l'aggiunta di SiriKit alle applicazioni:
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Eccezione Objective-C generata.  Nome: NSInternalInconsistencyException motivo: Uso della classe < le preferenze: 0x60400082ff00 > da un'app richiede il diritto com. Apple. Developer. Siri. È stata abilitata la funzionalità Siri nel progetto Xcode?_
+_Eccezione Objective-C generata.  Nome: NSInternalInconsistencyException motivo: uso della classe < le preferenze: 0x60400082ff00 > da un'app richiede il diritto com. Apple. Developer. Siri. È stata abilitata la funzionalità Siri nel progetto Xcode?_
 
 - SiriKit viene selezionato in **titles. plist**.
 - Il file **titles. plist** viene configurato nelle **opzioni del progetto > compilare > la firma del bundle iOS**.
 
-  [![Opzioni progetto che mostrano i diritti impostati correttamente](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
+  [opzioni di![progetto che mostrano i diritti impostati correttamente](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (per la distribuzione dei dispositivi) Per l'ID app sono abilitati SiriKit e il profilo di provisioning.
 

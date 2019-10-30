@@ -3,15 +3,15 @@ title: Introduzione ad Android
 description: Questo documento descrive come iniziare a usare l'incorporamento di .NET con Android. Viene illustrata l'installazione dell'incorporamento di .NET, la creazione di un progetto di libreria Android, l'uso di output generato in un progetto Android Studio e altre considerazioni.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 9b0da6f5b195ecef5fd4e5e2b4585b660573a5be
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcda03d41cb3bafcfb3ee4b92046014cc5b0c119
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278567"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029776"
 ---
 # <a name="getting-started-with-android"></a>Introduzione ad Android
 
@@ -33,7 +33,7 @@ Aprire Visual Studio per Windows o Mac, creare un nuovo progetto di libreria di 
 
 Aggiungere una nuova attività Android denominata **HelloActivity.cs**, seguita da un layout Android in **Resource/layout/Hello. aXML**.
 
-Aggiungere un nuovo `TextView` elemento al layout e modificare il testo in modo che sia piacevole.
+Aggiungere un nuovo `TextView` al layout e modificare il testo in modo che sia piacevole.
 
 L'origine del layout avrà un aspetto simile al seguente:
 
@@ -70,7 +70,7 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> Non dimenticare l' `[Register]` attributo. Per informazioni dettagliate, vedere [limitazioni](#current-limitations-on-android).
+> Non dimenticare l'attributo `[Register]`. Per informazioni dettagliate, vedere [limitazioni](#current-limitations-on-android).
 
 Compilare il progetto. L'assembly risultante verrà salvato in `bin/Debug/hello-from-csharp.dll`.
 
@@ -97,7 +97,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 ## <a name="use-the-generated-output-in-an-android-studio-project"></a>Usare l'output generato in un progetto Android Studio
 
 1. Aprire Android Studio e creare un nuovo progetto con un' **attività vuota**.
-2. Fare clic con il pulsante destro del mouse sul modulo dell' **app** e scegliere **nuovo modulo >** .
+2. Fare clic con il pulsante destro del mouse sul modulo dell' **app** e scegliere **nuovo modulo >**.
 3. Selezionare **Importa. JAR/. Pacchetto AAR**.
 4. Usare il Visualizzatore directory per individuare **~/Projects/Hello-from-CSharp/output/hello_from_csharp.AAR** e fare clic su **fine**.
 
@@ -111,7 +111,7 @@ Per usare il nuovo modulo dall' **app**, fare clic con il pulsante destro del mo
 
 ![Dipendenze Android Studio](android-images/androidstudiodependencies.png)
 
-Nell'attività aggiungere un nuovo `onResume` metodo e usare il codice seguente per avviare l' C# attività:
+Nell'attività aggiungere un nuovo metodo `onResume` e usare il codice seguente per avviare l' C# attività:
 
 ```java
 import hello_from_csharp.*;
@@ -151,7 +151,7 @@ Se questa configurazione non è presente, l'app si arresterà in modo anomalo al
 com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavailable>'. Assuming this is part of Fast Deployment. Exiting...
 ```
 
-## <a name="run-the-app"></a>Esecuzione dell'app
+## <a name="run-the-app"></a>Eseguire l'app
 
 All'avvio dell'app:
 
@@ -159,7 +159,7 @@ All'avvio dell'app:
 
 Si noti che cosa è successo qui:
 
-- È presente una C# classe, `HelloActivity`, che sottoclassi Java
+- È presente una C# classe,`HelloActivity`, che sottoclassi Java
 - Sono presenti file di risorse Android
 - Sono stati usati da Java in Android Studio
 
@@ -169,7 +169,7 @@ Per il corretto funzionamento di questo esempio, nell'APK finale sono configurat
 - Assembly .NET inclusi in **Asset/assembly**
 - Modifiche a **file AndroidManifest. XML** per C# le attività e così via.
 - Risorse e asset Android dalle librerie .NET
-- [Android Callable Wrapper](~/android/platform/java-integration/android-callable-wrappers.md) per qualsiasi `Java.Lang.Object` sottoclasse
+- [Android Callable Wrapper](~/android/platform/java-integration/android-callable-wrappers.md) per qualsiasi sottoclasse `Java.Lang.Object`
 
 Se si sta cercando una procedura dettagliata aggiuntiva, vedere il video seguente, che illustra l'incorporamento della [demo FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) di Charles Petzold in un progetto Android Studio:
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Limitazioni correnti in Android
 
-A questo punto, se si `Java.Lang.Object`esegue la sottoclasse, Novell. Android genererà lo stub Java (Android Callable Wrapper) invece dell'incorporamento di .NET. Per questo motivo, è necessario seguire le stesse regole per l' C# esportazione in Java come Novell. Android. Ad esempio:
+A questo punto, se si esegue la sottoclasse `Java.Lang.Object`, Novell. Android genererà lo stub Java (Android Callable Wrapper) invece dell'incorporamento di .NET. Per questo motivo, è necessario seguire le stesse regole per l' C# esportazione in Java come Novell. Android. Esempio:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -223,8 +223,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-- `[Register]`è necessario per eseguire il mapping a un nome di pacchetto Java desiderato
-- `[Export]`è necessario per rendere un metodo visibile a Java
+- per eseguire il mapping a un nome di pacchetto Java desiderato, è necessario `[Register]`
+- `[Export]` è necessario per rendere un metodo visibile a Java
 
 È possibile usare `ViewSubclass` in Java come segue:
 

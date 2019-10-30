@@ -1,24 +1,24 @@
 ---
-title: 'Hello, Android Multiscreen: Guida introduttiva'
+title: 'Hello, Android Multiscreen: guida introduttiva'
 description: Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 114373b6c4b194fe6e566255eb09eb82a8208312
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755842"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020969"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Guida introduttiva
+# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: guida introduttiva
 
-_Questa guida in due parti consente di ampliare l'applicazione Phoneword per gestire una seconda schermata. Nel corso della trattazione, è stato introdotto il concetto fondamentale dei blocchi predefiniti per le applicazioni Android, con un approfondimento dell'architettura Android._
+_Questa guida in due parti espande l'applicazione Phoneword per gestire una seconda schermata. I blocchi predefiniti di base per le applicazioni Android sono stati introdotti con un approfondimento dell'architettura Android._
 
 Nella parte relativa alla procedura dettagliata di questa guida, verrà aggiunta una seconda schermata all'applicazione [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) per tenere traccia della cronologia dei numeri convertiti tramite l'app. L'[applicazione finale](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) avrà una seconda schermata che visualizzerà i numeri che sono stati "convertiti", come illustrato nello screenshot a destra:
 
@@ -170,7 +170,7 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-Salvare e compilare l'applicazione per verificare che non ci siano errori.
+Salvare e compilare l'applicazione per verificare che non vi siano errori.
 
 ### <a name="running-the-app"></a>Esecuzione dell'app
 

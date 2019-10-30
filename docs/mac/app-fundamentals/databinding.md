@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso della codifica chiave-valore e l'oss
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769998"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030212"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Data Binding e codifica chiave-valore in Novell. Mac
 
@@ -334,7 +334,7 @@ public NSArray People {
 Ecco due punti da considerare:
 
 1. È stato usato un `NSMutableArray` anziché una matrice C# o una raccolta standard, perché si tratta di un requisito per l'associazione dei dati ai controlli AppKit, ad esempio le **visualizzazioni tabella**, le **visualizzazioni struttura** e le **raccolte**.
-2. È stata esposta la matrice di dipendenti eseguendone il cast a un `NSArray` per scopi data binding e C# il nome formattato, `People`, è stato impostato su uno che data binding previsto, `personModelArray` nel formato **{class_name} array** (si noti che il primo carattere è stato creato minuscole).
+2. È stata esposta la matrice di dipendenti eseguendone il cast a un `NSArray` per scopi data binding e C# il nome formattato,`People`, è stato impostato su uno che data binding previsto,`personModelArray`nel formato **{class_name} array** (si noti che il primo carattere è stato in lettere minuscole).
 
 Successivamente, è necessario aggiungere alcuni metodi pubblici con nome specifico per supportare i **controller array** e i **controller di albero**:
 

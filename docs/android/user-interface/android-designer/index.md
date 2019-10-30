@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Android Designer
+title: Novell. Android Designer
 description: Questo articolo descrive le funzionalità di Novell. Android Designer. Illustra le nozioni di base di progettazione, mostrando come usare la finestra di progettazione per disporre i widget in modo visivo e modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per lavorare con le interfacce utente e le risorse in diverse configurazioni, ad esempio temi, linguaggi e configurazioni dei dispositivi, nonché come progettare per visualizzazioni alternative quali orizzontale e verticale.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 176037db501c2577775bdfb817fea01f16a02242
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8793dafe5bc44999cb884621d0c41956674b05e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761648"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029400"
 ---
-# <a name="xamarinandroid-designer"></a>Xamarin.Android Designer
+# <a name="xamarinandroid-designer"></a>Novell. Android Designer
 
 _Questo articolo descrive le funzionalità di Novell. Android Designer. Illustra le nozioni di base di progettazione, mostrando come usare la finestra di progettazione per disporre i widget in modo visivo e modificare le proprietà. Viene inoltre illustrato come utilizzare la finestra di progettazione per lavorare con le interfacce utente e le risorse in diverse configurazioni, ad esempio temi, linguaggi e configurazioni dei dispositivi, nonché come progettare per visualizzazioni alternative quali orizzontale e verticale._
 

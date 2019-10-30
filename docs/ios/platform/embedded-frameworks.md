@@ -4,15 +4,15 @@ description: Questo documento descrive come condividere il codice con Framework 
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: ba3be4fea9999698c5a81faf5b07bec99fb1aa46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cf74c31b149c24bc6e515c0f00803a60b10d5d1c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753234"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032541"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Framework incorporati in Novell. iOS
 
@@ -38,13 +38,13 @@ Esistono due modi per utilizzare i Framework in Novell. iOS:
 
 Fare clic con il pulsante destro del mouse sul progetto e selezionare Aggiungi riferimenti nativi
 
-![](embedded-frameworks-images/xam-native-refs.png "Selezionare Aggiungi riferimenti nativi in Visual Studio per Mac")
+![](embedded-frameworks-images/xam-native-refs.png "Select Add native references in Visual Studio for Mac")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Fare clic con il pulsante destro del mouse sul progetto e selezionare Aggiungi riferimenti nativi
 
-![](embedded-frameworks-images/vs-native-refs.png "Selezionare Aggiungi riferimenti nativi in Visual Studio")
+![](embedded-frameworks-images/vs-native-refs.png "Select Add native references in Visual Studio")
 
 -----
 
@@ -70,7 +70,7 @@ Le app senza estensioni continueranno a collegarsi in modo statico dal runtime d
 
 Questo comportamento può essere sostituito dallo sviluppatore di app, aggiungendo quanto segue come argomento mTouch aggiuntivo nelle opzioni di compilazione iOS del progetto:
 
-- `--mono:static`: Collegamenti con il runtime di mono in modo statico.
-- `--mono:framework`: Collegamenti con il runtime di mono come Framework.
+- `--mono:static`: i collegamenti al runtime Mono in modo statico.
+- `--mono:framework`: collega al runtime di mono come Framework.
 
 Uno scenario per il collegamento con il runtime di mono come Framework anche per le app senza estensioni consiste nel ridurre le dimensioni del file eseguibile, in modo da superare le limitazioni di dimensione imposte da Apple sull'eseguibile. Per riferimento, il runtime di mono aggiunge approssimativamente 1.7 MB per architettura (a partire da Novell. iOS 8,12, ma varia tra le versioni e anche tra le app). Mono Framework aggiunge circa 2,3 MB per architettura, il che significa che per un'app con una singola architettura senza estensioni, il collegamento dell'app con il runtime di mono come Framework ridurrà il file eseguibile di ~ 1.7 MB, ma aggiungerà un Framework ~ 2,3 MB, risultante in una complessivamente di ~ 0.6 MB di app di dimensioni maggiori.

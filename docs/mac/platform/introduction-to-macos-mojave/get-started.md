@@ -4,15 +4,15 @@ description: Questo documento descrive come ottenere la configurazione per crear
 ms.prod: xamarin
 ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 64c1ca0bfee5b98b7842bdc44a46bc40cf2012fc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a7aba55f0470ad44dcce3de56ed15308439785e2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285471"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029846"
 ---
 # <a name="get-started-with-macos-mojave"></a>Introduzione a macOS Mojave
 
@@ -26,7 +26,7 @@ Questo documento descrive come ottenere la configurazione per creare app di macO
 
 3. **Aggiornare Visual Studio per Mac** : usare la versione stabile più recente di Visual Studio per Mac con [novell. Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md) o versione successiva.
 
-4. _(facoltativo)_ **Installare MacOS Mojave nel Mac** :
+4. _(facoltativo)_ **installare MacOS Mojave nel Mac** :
 
    > [!TIP]
    > Anche se l'app non usa alcuna nuova API di macOS Mojave, assicurarsi di compilarla con macOS Mojave SDK e testarla per verificare che tutto funzioni come previsto. Se un'app non chiama nuove API, è possibile ricompilarla con macOS Mojave SDK e testarla senza aggiornare il sistema operativo del Mac.

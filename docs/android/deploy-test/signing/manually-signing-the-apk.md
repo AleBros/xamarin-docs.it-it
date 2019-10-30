@@ -3,15 +3,15 @@ title: Firma manuale del file APK
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 3be55c2149aa58bf6d8462e5c1ff24166078355f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f43cb3ac5ff4d976c57a9d82c2003a08954ef1a4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755896"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021043"
 ---
 # <a name="manually-signing-the-apk"></a>Firma manuale del file APK
 
@@ -26,7 +26,7 @@ Dopo la compilazione dell'applicazione per il rilascio e prima della distribuzio
 
 L'ordine dei passaggi è importante e dipende dallo strumento usato per firmare il file APK. Quando si usa **apksigner**, è importante prima eseguire **Zipalign** per l'applicazione e quindi firmare quest'ultima con **apksigner**.  Se per firmare il file APK è necessario usare **jarsigner**, è importante prima firmare il file APK e quindi eseguire **Zipalign**. 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Questa guida descrive principalmente l'uso dell'utilità **apksigner** presente negli strumenti di compilazione di Android SDK versione 24.0.3 o successiva. La guida presuppone che sia già stato compilato un file APK.
 

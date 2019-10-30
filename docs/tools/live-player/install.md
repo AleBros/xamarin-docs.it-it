@@ -3,15 +3,15 @@ title: Xamarin Live Player la configurazione di Visual Studio
 description: Questo documento descrive come usare la Xamarin Live Player per eseguire modifiche in tempo reale in un'applicazione in esecuzione.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 94f1d36bf97aab7eabb57e6f2712c9850b390ab1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3dfe63cf3cf87a99d15879a0d4791248fa06f195
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290480"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029681"
 ---
 # <a name="xamarin-live-player-visual-studio-configuration"></a>Xamarin Live Player la configurazione di Visual Studio
 
@@ -68,7 +68,7 @@ ms.locfileid: "70290480"
 2. Passare a **Visual Studio > preferenze** e selezionare la scheda **progetti > Xamarin Live Player (anteprima)** .
 3. Seleziona **Xamarin Live Player Abilita**:
 
-    [![Selezionare la casella Abilita Xamarin Live Player nella finestra Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![selezionare la casella Abilita Xamarin Live Player nella finestra Opzioni](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
 4. Creare o aprire un progetto Novell (o un [esempio](~/tools/live-player/samples.md)).
 5. Scegliere **Live Player** nell'elenco dei dispositivi.

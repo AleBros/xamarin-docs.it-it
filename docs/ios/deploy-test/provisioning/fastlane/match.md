@@ -4,19 +4,19 @@ description: Questo documento descrive il comando match di fastlane, che consent
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8991ddc55069fad8c5f023f35ece0926f0f7e5b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08fdcafe33e4b9b2aa6b5595c732718878be33f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285721"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028517"
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane per iOS: match
 
-Il provisioning di dispositivi è stato tradizionalmente effettuato da ogni membro di un team di sviluppo tramite Xcode o in Apple Developer Portal. La procedura è costituita da diversi passaggi:
+Il provisioning di dispositivi è stato tradizionalmente effettuato da ogni membro di un team di sviluppo tramite Xcode o in Apple Developer Portal. La procedura prevede diversi passaggi:
 
 - Richiesta di un certificato di sviluppo
 - Aggiunta di un dispositivo al portale
@@ -59,15 +59,15 @@ fastlane match init
 
 Quando richiesto, immettere l'URL del repository git:
 
- [![](match-images/fastlane-image7.png "Immettere l'URL del repository git")](match-images/fastlane-image7.png#lightbox)
+ [![](match-images/fastlane-image7.png "Enter the URL of the git repo")](match-images/fastlane-image7.png#lightbox)
 
 Per trovare e copiare l'URL, fare clic sul pulsante **Clone or Download** (Clona o scarica) in github.com, come illustrato sotto:
 
-[![](match-images/fastlane-image6.png "URL sotto il pulsante Clone or Download (Clona o scarica) in github.com")](match-images/fastlane-image6.png#lightbox)
+[![](match-images/fastlane-image6.png "The URL under the Clone or Download button on github.com")](match-images/fastlane-image6.png#lightbox)
 
 Con l'inizializzazione del progetto viene creato un matchfile, un file di testo che può essere modificato per passare le variabili di ambiente allo strumento match. Di seguito è illustrato un esempio di matchfile:
 
-[![](match-images/fastlane-image8.png "Esempio di matchfile")](match-images/fastlane-image8.png#lightbox)
+[![](match-images/fastlane-image8.png "A matchfile example")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -93,7 +93,7 @@ Oltre a creare nuovi certificati e profili, usando uno di questi comandi verrann
 - Un file leggimi con le istruzioni di base
 - Una versione di match
 
-[![](match-images/fastlane-image9.png "Struttura del progetto nel repository git")](match-images/fastlane-image9.png#lightbox)
+[![](match-images/fastlane-image9.png "The project structure in the git repo")](match-images/fastlane-image9.png#lightbox)
 
 I profili di provisioning vengono installati in `~/Library/MobileDevice/Provisioning Profiles`. I certificati e le chiavi private vengono installati direttamente nel keychain.
 
@@ -113,7 +113,7 @@ Per revocare tutti i certificati e i profili di provisioning per un ambiente spe
 fastlane match nuke development
 ```
 
- oppure
+ Oppure
 
 ```
 fastlane match nuke distribution

@@ -4,15 +4,15 @@ description: Questo articolo descrive come usare i controller dei giochi di Siri
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 71a74d8f9046cd978a40b03da1921cd1fac9405f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4255891174b639022a45c45c22e0022cd0403f26
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769186"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030587"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controller Siri remoto e Bluetooth per tvOS in Novell
 
@@ -20,7 +20,7 @@ Gli utenti dell'app Novell. tvOS non interagisce direttamente con l'interfaccia,
 
 Se l'app è un gioco, è possibile compilare facoltativamente il supporto per i [controller di gioco Bluetooth](#Bluetooth-Game-Controllers) di terze parti, creati per iOS (IFM) nell'app.
 
-[![](remote-bluetooth-images/intro01.png "Controller di gioco e remoto Bluetooth")](remote-bluetooth-images/intro01.png#lightbox)
+[![](remote-bluetooth-images/intro01.png "The Bluetooth Remote and Game Controller")](remote-bluetooth-images/intro01.png#lightbox)
 
 In questo articolo vengono descritti i pulsanti di [Siri Remote](#The-Siri-Remote), [Touch Surface](#Touch-Surface-Gestures) e [Siri Remote](#Siri-Remote-Buttons) e viene illustrato come utilizzarli tramite [movimenti e storyboard](#Gestures-and-Storyboards), [movimenti e codice](#Gestures-and-Code) e [gestione degli eventi di basso livello](#Low-Level-Event-Handling). Infine, viene illustrato come [usare i controller di gioco](#Working-with-Game-Controllers) in un'app Novell. tvOS.
 
@@ -32,7 +32,7 @@ La modalità principale con cui gli utenti interagiranno con Apple TV e con l'ap
 
 La tua sfida come sviluppatore di app tvOS è la creazione di un'interfaccia utente rapida, facile da usare e visivamente accattivante che sfrutta la superficie di tocco, l'accelerometro e i pulsanti di Siri remote.
 
-[![](remote-bluetooth-images/remote01.png "Siri remoto")](remote-bluetooth-images/remote01.png#lightbox)
+[![](remote-bluetooth-images/remote01.png "The Siri Remote")](remote-bluetooth-images/remote01.png#lightbox)
 
 Siri Remote presenta le seguenti funzionalità e gli utilizzi previsti nell'app tvOS:
 
@@ -40,10 +40,10 @@ Siri Remote presenta le seguenti funzionalità e gli utilizzi previsti nell'app 
 |---|---|---|
 |**Superficie di tocco**<br />Scorrere rapidamente per spostarsi, premere per selezionare e tenere premuto per i menu contestuali.|**Toccare/scorrere rapidamente**<br />Spostamento dell'interfaccia utente tra elementi attivabili.<br /><br />**Clicca**<br />Attiva l'elemento selezionato (messa a fuoco).|**Toccare/scorrere rapidamente**<br />Dipende dalla progettazione dei giochi e può essere usato come D-Pad toccando i bordi.<br /><br />**Clicca**<br />Eseguire la funzione del pulsante principale.|
 |**Menu**<br />Premere per tornare alla schermata o al menu precedente.|Torna alla schermata precedente e si chiude alla schermata iniziale di Apple TV dalla schermata principale dell'app.|Sospendere e riprendere il gameplay, tornare alla schermata precedente e uscire dalla schermata iniziale di Apple TV dalla schermata principale dell'app.|
-|**Siri/ricerca**<br />In paesi con Siri, premere e tenere premuto per il controllo vocale, in tutti gli altri paesi, Visualizza la schermata di ricerca.|n/d|n/d|
+|**Siri/ricerca**<br />In paesi con Siri, premere e tenere premuto per il controllo vocale, in tutti gli altri paesi, Visualizza la schermata di ricerca.|N/D|N/D|
 |**Riproduzione/sospensione**<br />Riprodurre e sospendere i supporti o fornire una funzione secondaria nelle app.|Avvia la riproduzione dei supporti e sospende/riprende la riproduzione.|Esegue la funzione del pulsante secondario o ignora il video introduttivo (se esistente).|
-|**Home**<br />Premere per tornare alla schermata iniziale, fare doppio clic per visualizzare le applicazioni in esecuzione, premere e tenere premuto per sospendere il dispositivo.|n/d|n/d|
-|**Volume**<br />Controlla il volume del dispositivo audio/video collegato.|n/d|n/d|
+|**Home**<br />Premere per tornare alla schermata iniziale, fare doppio clic per visualizzare le applicazioni in esecuzione, premere e tenere premuto per sospendere il dispositivo.|N/D|N/D|
+|**Volume**<br />Controlla il volume del dispositivo audio/video collegato.|N/D|N/D|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -69,7 +69,7 @@ Apple fornisce i suggerimenti seguenti per l'utilizzo dei movimenti della superf
 
 Oltre ai movimenti sulla superficie di tocco, l'app può rispondere all'utente facendo clic sulla superficie di tocco o premendo il pulsante Play/Pause. Se si accede a Siri remote usando il Framework di Game controller, è anche possibile rilevare il pulsante di menu premuto.
 
-Inoltre, le pressioni dei pulsanti di menu possono essere rilevate usando un `UIKit` riconoscitore di movimento con elementi standard. Se si preme il pulsante di menu premuto, sarà necessario chiudere la visualizzazione corrente e il controller di visualizzazione e tornare a quello precedente.
+Inoltre, le pressioni dei pulsanti di menu possono essere rilevate usando un riconoscitore di movimento con elementi `UIKit` standard. Se si preme il pulsante di menu premuto, sarà necessario chiudere la visualizzazione corrente e il controller di visualizzazione e tornare a quello precedente.
 
 > [!IMPORTANT]
 > È **sempre** consigliabile assegnare una funzione al pulsante Play/Pause sul computer remoto. Se si dispone di un pulsante non funzionante, l'app potrebbe essere danneggiata dall'utente finale. Se non si dispone di una funzione valida per questo pulsante, assegnare la stessa funzione del pulsante principale (clic sulla superficie di tocco).
@@ -82,20 +82,20 @@ Il modo più semplice per usare Siri remote nell'app Novell. tvOS consiste nell'
 
 Per aggiungere un sistema di riconoscimento dei movimenti, procedere come segue:
 
-1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per modificare la finestra di progettazione interfaccia.
+1. Nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard` e aprirlo per modificare la finestra di progettazione interfaccia.
 2. Trascinare un **riconoscimento movimento tocco** dalla **libreria** e rilasciarlo nella visualizzazione:
 
-    [![](remote-bluetooth-images/storyboard01.png "Riconoscimento del movimento tocco")](remote-bluetooth-images/storyboard01.png#lightbox)
+    [![](remote-bluetooth-images/storyboard01.png "A Tap Gesture Recognizer")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. **Selezionare Seleziona** nella sezione **pulsante** di **controllo attributi**:
 
-    [![](remote-bluetooth-images/storyboard02.png "Seleziona selezione")](remote-bluetooth-images/storyboard02.png#lightbox)
+    [![](remote-bluetooth-images/storyboard02.png "Check Select")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Selezionare** significa che il movimento risponderà all'utente facendo clic sulla **superficie di tocco** sul Siri remoto. È inoltre possibile rispondere ai pulsanti **menu**, **Esegui/Sospendi**, **su**, **giù**, **sinistro** e **destro** .
-5. Successivamente, collegare un' **azione** dal riconoscimento del **movimento Tap** `TouchSurfaceClicked`e chiamarla:
+5. Successivamente, collegare un' **azione** dal riconoscimento del **movimento Tap** e chiamarla `TouchSurfaceClicked`:
 
-    [![](remote-bluetooth-images/storyboard03.png "Azione dal riconoscimento del movimento Tap")](remote-bluetooth-images/storyboard03.png#lightbox)
+    [![](remote-bluetooth-images/storyboard03.png "An Action from the Tap Gesture Recognizer")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Salvare le modifiche e tornare a Visual Studio per Mac.
 
-Modificare il file del controller di `FirstViewController.cs`visualizzazione (esempio) e aggiungere il codice seguente per gestire il movimento attivato:
+Modificare il file del controller di visualizzazione (esempio `FirstViewController.cs`) e aggiungere il codice seguente per gestire il movimento attivato:
 
 ```csharp
 using System;
@@ -186,13 +186,13 @@ namespace tvRemote
 
 ## <a name="low-level-event-handling"></a>Gestione degli eventi di basso livello
 
-Se si sta creando un tipo personalizzato basato su `UIKit` nell'app Novell. tvOS (ad esempio `UIView`), è anche possibile fornire una gestione di basso livello di pressione dei pulsanti tramite `UIPress` gli eventi.
+Se si sta creando un tipo personalizzato basato su `UIKit` nell'app Novell. tvOS (ad esempio `UIView`), è anche possibile fornire una gestione di basso livello della pressione del pulsante tramite `UIPress` eventi.
 
-Un `UIPress` evento consiste nel tvOS che cos' `UITouch` è un evento iOS, tranne `UIPress` che restituisce informazioni sulle pressioni dei pulsanti sul Siri remoto o su altri dispositivi Bluetooth collegati (ad esempio un controller di gioco). `UIPress`gli eventi descrivono il pulsante premuto e il relativo stato (inizio, annullato, modificato o terminato).
+Un evento `UIPress` consiste nel tvOS di un evento `UITouch` per iOS, ad eccezione del fatto che `UIPress` restituisce informazioni sulle pressioni dei pulsanti sul Siri remoto o su altri dispositivi Bluetooth collegati (ad esempio un controller di gioco). `UIPress` eventi descrivono il pulsante premuto e il relativo stato (inizio, annullato, modificato o terminato).
 
-Per i pulsanti analoghi nei dispositivi come i controller `UIPress` di gioco Bluetooth, restituisce anche la quantità di forza applicata al pulsante. La `Type` proprietà`UIPress` dell'evento definisce il pulsante fisico con stato modificato, mentre le altre proprietà descrivono la modifica che si è verificata.
+Per i pulsanti analoghi nei dispositivi come i controller di gioco Bluetooth, `UIPress` restituisce anche la quantità di forza applicata al pulsante. La proprietà `Type` dell'evento `UIPress` definisce il pulsante fisico che ha modificato lo stato, mentre le altre proprietà descrivono la modifica che si è verificata.
 
-Il codice seguente illustra un esempio di gestione degli eventi di `UIPress` basso livello per `UIView`un:
+Il codice seguente illustra un esempio di gestione di eventi `UIPress` di basso livello per un `UIView`:
 
 ```csharp
 using System;
@@ -263,7 +263,7 @@ namespace tvRemote
 }
 ```
 
-Come per `UIPress` gli eventi, se è necessario implementare qualsiasi override di evento, è necessario implementare tutti e quattro. `UITouch`
+Come per gli eventi di `UITouch`, se è necessario implementare uno degli override degli eventi di `UIPress`, è necessario implementare tutti e quattro.
 
 <a name="Bluetooth-Game-Controllers" />
 
@@ -271,7 +271,7 @@ Come per `UIPress` gli eventi, se è necessario implementare qualsiasi override 
 
 Oltre al comando standard Siri Remote fornito con Apple TV, i controller di gioco Bluetooth di terze parti, eseguiti per iOS (IFM), possono essere abbinati a Apple TV e usati per controllare l'app Novell. tvOS.
 
-[![](remote-bluetooth-images/game01.png "Controller del gioco Bluetooth")](remote-bluetooth-images/game01.png#lightbox)
+[![](remote-bluetooth-images/game01.png "Bluetooth Game Controllers")](remote-bluetooth-images/game01.png#lightbox)
 
 I controller dei giochi possono essere usati per migliorare la giocabilità e fornire un'idea di coinvolgimento in un gioco. Possono anche essere usati per controllare l'interfaccia standard di Apple TV, in modo che l'uso non debba passare tra il controller remoto e il controller.
 
@@ -286,14 +286,14 @@ Un controller di gioco presenta le funzionalità e gli utilizzi previsti seguent
 |**A**|Attiva l'elemento selezionato (messa a fuoco).|Esegue la funzione del pulsante Primary e conferma le azioni della finestra di dialogo.|
 |**B**|Torna alla schermata precedente o esce dalla schermata iniziale se si trova nella schermata principale dell'app.|Esegue la funzione del pulsante secondario o torna alla schermata precedente.|
 |**X**|Avvia la riproduzione dei supporti o sospende/riprende la riproduzione.|Dipende da gioco.|
-|**Y**|n/d|Dipende da gioco.|
+|**Y**|N/D|Dipende da gioco.|
 |**Menu**|Torna alla schermata precedente o esce dalla schermata iniziale se si trova nella schermata principale dell'app.|Sospendere o riprendere il gameplay, tornare alla schermata precedente o uscire dalla schermata iniziale se si trova nella schermata principale dell'app.|
 |**Pulsante sinistro**|Consente di spostarsi verso sinistra.|Dipende da gioco.|
 |**Trigger a sinistra**|Consente di spostarsi verso sinistra.|Dipende da gioco.|
 |**Pulsante destro della spalla**|Consente di spostarsi a destra.|Dipende da gioco.|
 |**Trigger a destra**|Sposta a destra|Dipende da gioco.|
 |**Levetta a sinistra**|Consente di spostarsi tra gli elementi dell'interfaccia utente (modifica lo stato attivo).|Dipende da gioco.|
-|**Levetta destro**|n/d|Dipende da gioco.|
+|**Levetta destro**|N/D|Dipende da gioco.|
 
 Apple fornisce i suggerimenti seguenti per lavorare con i controller di gioco:
 
@@ -309,8 +309,8 @@ Come indicato in precedenza, oltre alla versione standard di Siri Remote fornita
 
 Se l'app richiede un input del controller di basso livello, è possibile usare il [Framework di Game controller](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) di Apple con le modifiche seguenti per tvOS:
 
-- Il profilo di micro Game controller`GCMicroGamepad`() è stato aggiunto per la destinazione di Siri remote.
-- La nuova `GCEventViewController` classe può essere usata per indirizzare gli eventi di Game controller tramite l'app. Per altri dettagli, vedere la sezione [determinazione dell'input del controller di gioco](#determining-game-controller-input) di seguito.
+- Il profilo di micro Game controller (`GCMicroGamepad`) è stato aggiunto per la destinazione Siri remote.
+- La nuova classe di `GCEventViewController` può essere usata per indirizzare gli eventi di Game controller tramite l'app. Per altri dettagli, vedere la sezione [determinazione dell'input del controller di gioco](#determining-game-controller-input) di seguito.
 
 <a name="Game-Controller-Support-Requirements" />
 
@@ -327,9 +327,9 @@ Apple presenta diversi requisiti specifici che devono essere soddisfatti se l'ap
 
 ### <a name="enabling-game-controller-support"></a>Abilitazione del supporto del controller di gioco
 
-Per abilitare il supporto di Game controller nell'app Novell. tvOS, fare doppio clic `Info.plist` sul file nella **Esplora soluzioni** per aprirlo per la modifica:
+Per abilitare il supporto del controller di gioco nell'app Novell. tvOS, fai doppio clic sul file `Info.plist` nel **Esplora soluzioni** per aprirlo per la modifica:
 
-[![](remote-bluetooth-images/game02.png "Editor info. plist")](remote-bluetooth-images/game02.png#lightbox)
+[![](remote-bluetooth-images/game02.png "The Info.plist editor")](remote-bluetooth-images/game02.png#lightbox)
 
 Nella sezione **Game controller** inserire un segno di spunta per **abilitare i controller di gioco**, quindi controllare tutti i tipi di controller di gioco che saranno supportati dall'app.
 
@@ -337,7 +337,7 @@ Nella sezione **Game controller** inserire un segno di spunta per **abilitare i 
 
 ### <a name="using-the-siri-remote-as-a-game-controller"></a>Uso di Siri remote come controller di gioco
 
-I Siri remote disponibili con Apple TV possono essere usati come controller di gioco limitato. Analogamente ad altri controller dei giochi, viene visualizzato in game controller Framework come `GCController` oggetto e supporta i `GCMotion` `GCMicroGamepad` profili e.
+I Siri remote disponibili con Apple TV possono essere usati come controller di gioco limitato. Analogamente ad altri controller dei giochi, viene visualizzato nel Framework di Game controller come oggetto `GCController` e supporta i profili `GCMotion` e `GCMicroGamepad`.
 
 Il Siri Remote presenta le caratteristiche seguenti quando viene usato come controller di gioco:
 
@@ -351,11 +351,11 @@ Il Siri Remote presenta le caratteristiche seguenti quando viene usato come cont
 
 ### <a name="determining-game-controller-input"></a>Determinazione dell'input del controller di gioco
 
-A differenza di iOS, in cui gli eventi del Game controller possono essere ricevuti in parallelo con gli eventi Touch, tvOS elabora tutti gli eventi di `UIKit` basso livello per il recapito di eventi di alto livello. Di conseguenza, se è necessario accedere agli eventi del controller di gioco di basso livello, è necessario disattivare `UIKit`il comportamento predefinito.
+A differenza di iOS, in cui gli eventi del Game controller possono essere ricevuti in parallelo con gli eventi di tocco, tvOS elabora tutti gli eventi di basso livello per fornire eventi `UIKit` di alto livello. Di conseguenza, se è necessario accedere agli eventi del controller di gioco di basso livello, è necessario disattivare il comportamento predefinito di `UIKit`.
 
-In tvOS, quando si vuole elaborare direttamente l'input di Game controller, è necessario usare `GCEventViewController` un (o una sottoclasse) per visualizzare l'interfaccia utente del gioco. Ogni volta `GCEventViewController` che a è il *primo risponditore*, l'input del controller di gioco viene acquisito e distribuito all'app tramite il Framework del controller di gioco.
+In tvOS, quando si vuole elaborare direttamente l'input di Game controller, è necessario usare una `GCEventViewController` (o una sottoclasse) per visualizzare l'interfaccia utente del gioco. Ogni volta che un `GCEventViewController` è il *primo risponditore*, l'input del controller di gioco viene acquisito e distribuito all'app tramite il Framework del controller di gioco.
 
-È possibile utilizzare la `UserInteractionEnabled` proprietà `GCEventViewController` della classe per impostare la modalità di elaborazione e gestione degli eventi.
+È possibile utilizzare la proprietà `UserInteractionEnabled` della classe `GCEventViewController` per impostare il modo in cui gli eventi vengono elaborati e gestiti.
 
 Per informazioni sull'implementazione del supporto del controller di gioco, vedere la sezione uso di Apple con i controller di [gioco](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/WorkingwithGameControllers.html) nella Guida alla [programmazione delle app per TvOS e la](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/index.html) Guida alla programmazione di [Game controller](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html).
 

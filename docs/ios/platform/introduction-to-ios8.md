@@ -4,15 +4,15 @@ description: Con iOS 8, Apple ha fornito una vasta gamma di nuovi Framework e AP
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 713e433f852f3bafc13b3ac32074c574d12ef7f1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2da018b3595850582331280909fa327cee4ff6e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752007"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031810"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
@@ -48,9 +48,9 @@ Con HomeKit, le app di terze parti e Siri possono individuare accessori e aggiun
 
 Il diagramma seguente illustra la gerarchia di base della configurazione degli accessori HomeKit:
 
-![](introduction-to-ios8-images/image1.png "Questo diagramma mostra la gerarchia di base della configurazione degli accessori HomeKit")
+![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
 
-Per iniziare a usare HomeKit, gli sviluppatori dovranno assicurarsi che il profilo di provisioning abbia il servizio HomeKit selezionato. Apple ha anche fornito agli sviluppatori un componente aggiuntivo del simulatore HomeKit per Xcode. Si trova nel [centro per sviluppatori Apple](https://developer.apple.com/downloads/index.action), `Hardware IO Tools for Xcode`in. 
+Per iniziare a usare HomeKit, gli sviluppatori dovranno assicurarsi che il profilo di provisioning abbia il servizio HomeKit selezionato. Apple ha anche fornito agli sviluppatori un componente aggiuntivo del simulatore HomeKit per Xcode. Questa operazione si trova nel [centro per sviluppatori Apple](https://developer.apple.com/downloads/index.action), in `Hardware IO Tools for Xcode`. 
 
 Per altre informazioni, vedere la Guida di [HomeKit](~/ios/platform/homekit.md) .
 
@@ -68,9 +68,9 @@ Le estensioni delle app, per semplificare la comunicazione, consentono alle app 
 
 Il primo passaggio per la creazione di un'estensione di app consiste nel definire il punto di estensione corretto, che è importante per garantire il comportamento e la disponibilità delle API corrette. Per creare un'estensione di app in Visual Studio per Mac, aggiungerla a un'applicazione esistente aggiungendo un nuovo progetto alla soluzione.
 
-Nella finestra di dialogo **nuovo progetto** passare **C#**  > a **iOS** > **API unificata** > **Extensions**, come illustrato nella schermata seguente:
+Nella finestra di dialogo **nuovo progetto** passare **C#** a > **iOS** > **API unificata** > **Extensions**, come illustrato nella schermata seguente:
 
-![](introduction-to-ios8-images/image2.png "Creazione di una nuova estensione")
+![](introduction-to-ios8-images/image2.png "Creating a new extension")
 
 Nella finestra di dialogo nuovo progetto sono disponibili sette nuovi modelli di progetto per la creazione di estensioni di app e vengono descritti di seguito. Si noti che molte delle estensioni sono correlate ad altre nuove API in iOS, ad esempio la selezione dei documenti:
 
@@ -91,7 +91,7 @@ Sono ora disponibili due modi per usare Touch ID come meccanismo di autenticazio
 
 In primo luogo, consente ai servizi Keychain esistenti di usare nuovi elenchi di controllo di accesso (ACL) keychain. I dati Keychain possono essere sbloccati con l'autenticazione corretta di un'impronta digitale degli utenti.
 
-In secondo luogo, LocalAuthentication offre due metodi per autenticare l'applicazione in locale. Gli sviluppatori devono `CanEvaluatePolicy` usare per determinare se il dispositivo è in grado di accettare l'ID tocco `EvaluatePolicy` e quindi avviare l'operazione di autenticazione.
+In secondo luogo, LocalAuthentication offre due metodi per autenticare l'applicazione in locale. Gli sviluppatori devono usare `CanEvaluatePolicy` per determinare se il dispositivo è in grado di accettare l'ID tocco, quindi `EvaluatePolicy` per avviare l'operazione di autenticazione.
 
 Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'applicazione Novell. iOS, vedere l' [Introduzione alle guide di TouchID](~/ios/platform/touchid.md) .
 
@@ -112,7 +112,7 @@ Per altre informazioni, [vedere la guida](~/ios/platform/handoff.md) alla conseg
 ## <a name="unified-storyboards"></a>Storyboard unificati
 iOS 8 include un nuovo meccanismo più semplice da usare per la creazione dell'interfaccia utente, lo storyboard unificato. Con un singolo storyboard per coprire tutte le diverse dimensioni dello schermo hardware, è possibile creare visualizzazioni rapide e reattive in un vero e proprio tipo di "progettazione, utilizzo di molti".
 
-Prima di iOS 8, gli sviluppatori `UIInterfaceOrientation` usavano per distinguere le modalità verticale e orizzontale e `UIInterfaceIdiom` per distinguere tra i dispositivi iOS. In iOS 8 non è più necessario creare storyboard distinti per i dispositivi iPhone e iPad: l'orientamento e il dispositivo vengono determinati tramite *le classi di dimensioni*.
+Prima di iOS 8, gli sviluppatori usavano `UIInterfaceOrientation` per distinguere le modalità verticale e orizzontale e `UIInterfaceIdiom` per distinguere i dispositivi iOS. In iOS 8 non è più necessario creare storyboard distinti per i dispositivi iPhone e iPad: l'orientamento e il dispositivo vengono determinati tramite *le classi di dimensioni*.
 
 Ogni dispositivo è definito da una classe di dimensioni, sia nell'asse verticale che orizzontale, ed esistono due tipi di classi di dimensioni in iOS 8:
 
@@ -121,7 +121,7 @@ Ogni dispositivo è definito da una classe di dimensioni, sia nell'asse vertical
 
 Se i due concetti vengono usati insieme, il risultato è una griglia 2 x 2 che definisce le diverse dimensioni possibili che possono essere usate in entrambi gli orientamenti diversi, come illustrato nel diagramma seguente:
 
-![](introduction-to-ios8-images/image3.png "Diagramma che rappresenta la griglia 2 x 2 che definisce le diverse dimensioni possibili che possono essere utilizzate in entrambi gli orientamenti diversi")
+![](introduction-to-ios8-images/image3.png "A diagram representing the 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations")
 
 Per ulteriori informazioni sulle classi di dimensioni, vedere l' [Introduzione agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md).
 

@@ -1,24 +1,24 @@
 ---
-title: Utilizzo di watchOS navigazione in Xamarin
-description: Questo documento viene descritto come utilizzare la navigazione in un'applicazione watchOS. Viene descritto le interfacce modali, navigazione gerarchica e basata su pagine interfacce.
+title: Uso della navigazione watchos in Novell
+description: Questo documento descrive come usare la navigazione in un'applicazione watchos. Vengono illustrate le interfacce modali, la navigazione gerarchica e le interfacce basate su pagine.
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d3565e359ccbad9f7b779969f4273a8cbae4d438
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768729"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021739"
 ---
-# <a name="working-with-watchos-navigation-in-xamarin"></a>Utilizzo di watchOS navigazione in Xamarin
+# <a name="working-with-watchos-navigation-in-xamarin"></a>Uso della navigazione watchos in Novell
 
-L'opzione più semplice navigazione disponibile nell'orologio è un semplice [popup modale](#modal) che viene visualizzata sopra nella scena corrente.
+L'opzione di navigazione più semplice disponibile nell'orologio è un semplice [popup modale](#modal) che viene visualizzato nella parte superiore della scena corrente.
 
-Per watch scena a più App vi sono due paradigmi di navigazione:
+Per le app Watch a più scene sono disponibili due paradigmi di navigazione:
 
 - [Navigazione gerarchica](#Hierarchical_Navigation)
 - [Interfacce basate su pagina](#Page-Based_Interfaces)
@@ -27,57 +27,57 @@ Per watch scena a più App vi sono due paradigmi di navigazione:
 
 ## <a name="modal-interfaces"></a>Interfacce modali
 
-Usare il `PresentController` metodo per aprire un controller di interfaccia come form modale. Il controller di interfaccia debba essere già definito nel **Interface.storyboard**.
+Usare il metodo `PresentController` per aprire un controller di interfaccia modale. Il controller di interfaccia deve essere già definito nell' **interfaccia. Storyboard**.
 
 ```csharp
 PresentController ("pageController","some context info");
 ```
 
-Visualizzato come form modale i controller usano l'intera schermata (che coprono la scena precedente). Per impostazione predefinita il titolo viene impostato sulla **annullare** e toccandolo consente di chiudere il controller.
+I controller presentati in modalità modale usano l'intera schermata (coprendo la scena precedente). Per impostazione predefinita, il titolo è impostato su **Annulla** e toccando il controller verrà ignorata.
 
-Per chiudere a livello di codice del controller presentati come form modale, chiamare `DismissController`.
+Per chiudere a livello di codice il controller presentato in modo modale, chiamare `DismissController`.
 
 ```csharp
 DismissController();
 ```
 
-Le schermate modale possono essere un unica scena o usare un layout per la pagina.
+Le schermate modali possono essere una singola scena o usare un layout basato su pagine.
 
 <a name="Hierarchical_Navigation"/>
 
 ## <a name="hierarchical-navigation"></a>Navigazione gerarchica
 
-Presenta le scene come uno stack che è possibile spostarsi all'indietro, in modo analogo al modo in cui `UINavigationController` utilizzabile in iOS. In background possono essere inseriti nello stack di navigazione ed estratto (a livello di codice o dalla selezione dell'utente).
+Presenta scene come uno stack di cui è possibile eseguire lo spostamento, in modo analogo al modo in cui `UINavigationController` funziona in iOS. È possibile eseguire il push delle scene nello stack di navigazione ed estrarre (a livello di codice o in base alla selezione dell'utente).
 
-![](navigation-images/hierarchy-1.png "Scene possono essere inserite nello stack di navigazione") ![](navigation-images/hierarchy-2.png "scene possono essere estratto dallo stack di navigazione")
+![](navigation-images/hierarchy-1.png "È possibile effettuare il push delle scene nello stack di navigazione") ![](navigation-images/hierarchy-2.png "Gli scenari possono essere estratti dallo stack di navigazione")
 
-Come con iOS, un left-edge-passaggio del dito consente di passare nuovamente al controller in uno stack di navigazione gerarchica padre.
+Come con iOS, un scorrimento a sinistra viene spostato di nuovo sul controller padre in uno stack di navigazione gerarchico.
 
-Entrambi i [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) e [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) esempi includono navigazione gerarchica.
+Entrambi gli esempi di [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) e [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) includono la navigazione gerarchica.
 
-### <a name="pushing-and-popping-in-code"></a>Eseguire il push e si estraggono nel codice
+### <a name="pushing-and-popping-in-code"></a>Push e schiocco nel codice
 
-Guarda Kit non richiede un singole "controller di spostamento" deve essere creato come iOS - inseriscono semplicemente un controller utilizzando il `PushController` (metodo) e uno stack di navigazione verrà creati automaticamente.
+Il kit di controllo non richiede la creazione di un "controller di spostamento" over-arching come iOS: esegue semplicemente il push di un controller usando il metodo `PushController` e viene creato automaticamente uno stack di navigazione.
 
 ```csharp
 PushController("secondPageController","some context info");
 ```
 
-Schermata dell'orologio includerà un **nuovamente** pulsante in alto a sinistra, ma è possibile rimuovere anche a livello di codice una scena da dello stack di navigazione utilizzando `PopController`.
+La schermata dell'orologio includerà un pulsante **indietro** in alto a sinistra, ma è anche possibile rimuovere a livello di codice una scena dallo stack di navigazione usando `PopController`.
 
 ```csharp
 PopController();
 ```
 
-Come con iOS, è anche possibile tornare alla radice dello stack di navigazione utilizzando `PopToRootController`.
+Come con iOS, è anche possibile tornare alla radice dello stack di navigazione usando `PopToRootController`.
 
 ```csharp
 PopToRootController();
 ```
 
-### <a name="using-segues"></a>Usando gli elementi segue
+### <a name="using-segues"></a>Uso di gli elementi segue
 
-Gli elementi segue possono essere creati tra le scene nello storyboard per definire la navigazione gerarchica. Ottenere il contesto per la scena di destinazione, il sistema operativo chiama `GetContextForSegue` per inizializzare il nuovo controller di interfaccia.
+È possibile creare gli elementi segue tra le scene nello storyboard per definire la navigazione gerarchica. Per ottenere il contesto per la scena di destinazione, il sistema operativo chiama `GetContextForSegue` per inizializzare il nuovo controller di interfaccia.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier)
@@ -93,11 +93,11 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 ## <a name="page-based-interfaces"></a>Interfacce basate su pagina
 
-Interfacce basate su pagina scorrere rapidamente verso sinistra a destra, simile a quelle fornite `UIPageViewController` utilizzabile in iOS. Punti di indicatore vengono visualizzati nella parte inferiore della schermata per visualizzare la pagina viene attualmente visualizzata.
+Le interfacce basate su pagina scorreno da sinistra a destra, in modo analogo al modo in cui `UIPageViewController` funziona in iOS. I punti indicatore vengono visualizzati nella parte inferiore della schermata per visualizzare la pagina attualmente visualizzata.
 
-![](navigation-images/paged-1.png "Prima pagina di esempio") ![](navigation-images/paged-2.png "seconda pagina di esempio") ![](navigation-images/paged-5.png "quinta pagina di esempio")
+![](navigation-images/paged-1.png "Prima pagina di esempio")![](navigation-images/paged-2.png "Seconda pagina di esempio")![](navigation-images/paged-5.png "Quinta pagina di esempio")
 
-Per rendere un'interfaccia basata su pagina l'interfaccia utente principale per l'app watch, usare `ReloadRootControllers` con una matrice di controller di interfaccia e contesti:
+Per rendere un'interfaccia basata su pagina l'interfaccia utente principale per l'app Watch, usare `ReloadRootControllers` con una matrice di controller di interfaccia e contesti:
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };
@@ -105,7 +105,7 @@ var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 ReloadRootControllers (controllerNames, contexts);
 ```
 
-È anche possibile presentare un controller basato su pagine che non è la radice usando `PresentController` da una delle altre scene in un'app.
+È anche possibile presentare un controller basato su pagina che non è la radice usando `PresentController` da una delle altre scene in un'app.
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };

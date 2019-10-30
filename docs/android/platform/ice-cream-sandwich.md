@@ -4,15 +4,15 @@ description: Questo articolo descrive alcune delle nuove funzionalità disponibi
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 382315f755102d7111db1a5c0f71d43bdea97a10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761467"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020176"
 ---
 # <a name="ice-cream-sandwich-features"></a>Funzionalità di Ice Cream Sandwich
 
@@ -22,10 +22,10 @@ _Questo articolo descrive alcune delle nuove funzionalità disponibili per gli s
 
 Il sistema operativo Android versione 4,0 (livello API 14) rappresenta una maggiore rielaborazione del sistema operativo Android e include una serie di importanti modifiche e aggiornamenti, tra cui:
 
-- **Interfaccia utente aggiornata** : alcune nuove funzionalità dell'interfaccia utente offrono agli sviluppatori maggiore potenza e flessibilità durante la creazione di interfacce utente dell'applicazione. Queste nuove funzionalità includono: `GridLayout` , `PopupMenu` , `Switch` widget e `TextureView` . 
+- **Interfaccia utente aggiornata** : alcune nuove funzionalità dell'interfaccia utente offrono agli sviluppatori maggiore potenza e flessibilità durante la creazione di interfacce utente dell'applicazione. Queste nuove funzionalità includono: `GridLayout`, `PopupMenu`, `Switch` widget e `TextureView`. 
 - **Accelerazione hardware migliorata** : il rendering 2D viene ora eseguito sulla GPU per tutti i controlli Android. Inoltre, l'accelerazione hardware è abilitata per impostazione predefinita in tutte le applicazioni sviluppate per Android 4,0. 
 - **Nuove API di dati** : è disponibile un nuovo accesso ai dati che non erano precedentemente accessibili ufficialmente, ad esempio i dati del calendario e il profilo utente del proprietario del dispositivo. 
-- **Condivisione dei dati delle app** : la condivisione di dati tra applicazioni e dispositivi è ora più semplice che mai `ShareActionProvider` tramite tecnologie come, che semplificano la creazione di un'azione di condivisione da un barra delle azioni e *Android Beam* per il *campo near Communications (NFC)* , che lo rende uno snap per condividere i dati tra i dispositivi in prossimità. 
+- **Condivisione dei dati delle app** : la condivisione di dati tra applicazioni e dispositivi è ora più semplice che mai tramite tecnologie come la `ShareActionProvider`, che semplifica la creazione di un'azione di condivisione da una barra delle azioni e *Android Beam* per le *comunicazioni Near Field ( NFC)* , che lo rende uno snap per condividere i dati tra i dispositivi in prossimità. 
 
 In questo articolo verranno esaminate queste funzionalità e altre modifiche apportate all'API Android 4,0 e verrà illustrato come usare ogni funzionalità con Novell. Android.
 
@@ -38,7 +38,7 @@ Con Android 4 sono disponibili diverse nuove tecnologie dell'interfaccia utente,
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** : Abilita il contenuto video e OpenGL in una visualizzazione. 
 - **[Barra di spostamento](~/android/user-interface/controls/navigation-bar.md)** : contiene i pulsanti virtuali per back, Home e multitasking. 
 
-Sono stati inoltre migliorati gli altri elementi dell'interfaccia utente, `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`ad esempio, che ora è più facile da usare e le schede, che hanno un aspetto più lucido.
+Sono stati inoltre migliorati gli altri elementi dell'interfaccia utente, ad esempio la `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, che ora è più facile da usare e le schede, che hanno un aspetto più lucido.
 
 ## <a name="sharing-features"></a>Funzionalità di condivisione
 

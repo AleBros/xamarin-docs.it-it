@@ -4,15 +4,15 @@ description: Documenti che descrivono il funzionamento interno di tvOS in Novell
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ffcf4d3a491cb6ad865da35d387782b7bd1fca01
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4712b7b75e735da047d7f44f7c6c47f42b9ad7a8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283569"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030652"
 ---
 # <a name="tvos-in-xamarin-internals"></a>tvOS in Novell-elementi interni 
 
@@ -54,7 +54,7 @@ Note e informazioni su mtouch.exe, lo strumento da riga di comando che compila i
 
 ### <a name="linking-native-librariesiosplatformnative-interopmd"></a>[Collegamento di librerie native](~/ios/platform/native-interop.md)
 
-Novell. iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Novell. iOS. Per informazioni su come eseguire la stessa operazione per le librerie Objective-c&nbsp; , vedere il documento relativo all'associazione di&nbsp; [tipi Objective-c](~/ios/platform/binding-objective-c/index.md).
+Novell. iOS supporta il collegamento con le librerie C native e le librerie Objective-C. Questo documento illustra come collegare le librerie C native al progetto Novell. iOS. Per informazioni su come eseguire la stessa operazione per le librerie Objective-C, vedere l'&nbsp; [associazione di tipi Objective-c](~/ios/platform/binding-objective-c/index.md)&nbsp;documento.
 
 ## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Selettori Objective-C](~/ios/internals/objective-c-selectors.md)
 

@@ -1,18 +1,18 @@
 ---
 title: Uso delle funzionalità in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per tutte le funzionalità.
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: d7a2f14b55d9f8de2ea01bdfa5c68c5c9f8f2555
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756143"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028559"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Uso delle funzionalità in Xamarin.iOS
 
@@ -140,7 +140,7 @@ L'uso del centro sviluppatori è un processo in due passaggi che richiede la cre
     ![Pagina di selezione dei servizi app](images/image8.png)
 
 7. Fare clic su **Continue** (Continua).
-8. Confermare l'ID app. Ogni servizio può essere in uno dei seguenti stati: **Enabled** (Abilitato), **Disabled** (Disabilitato) o **Configurable** (Configurabile), come illustrato di seguito. Se è **Enabled** (Abilitato), è possibile usarlo in un profilo di provisioning. Se è **Configurable** (Configurabile), è necessaria un'ulteriore configurazione per questa funzionalità. Questi passaggi aggiuntivi sono descritti più dettagliatamente nelle sezioni successive.
+8. Confermare l'ID app. Ogni servizio presenterà uno degli stati seguenti: **Enabled** (Abilitato), **Disabled** (Disabilitato) o **Configurable** (Configurabile), come illustrato sotto. Se è **Enabled** (Abilitato), è possibile usarlo in un profilo di provisioning. Se è **Configurable** (Configurabile), è necessaria un'ulteriore configurazione per questa funzionalità. Questi passaggi aggiuntivi sono descritti più dettagliatamente nelle sezioni successive.
 
     ![Conferma dell'ID app](images/image9.png)
 
@@ -190,7 +190,7 @@ Creare ora un profilo di provisioning contenente tale ID app. Attenersi ai passi
 
 <a name="nextsteps" />
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Dopo che una funzionalità è stata abilitata sul lato server, sono necessarie ancora alcune operazioni per consentire all'app di usarla. Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 

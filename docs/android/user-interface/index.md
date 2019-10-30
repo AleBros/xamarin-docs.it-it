@@ -4,15 +4,15 @@ description: Creazione di interfacce utente per le app Novell. Android
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 405fb0e30881ee64514d3984842ac820d5663382
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a881629c63ea2991b8ea4673811311076fcaabe9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764480"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028998"
 ---
 # <a name="user-interface"></a>Interfaccia utente
 
@@ -37,7 +37,7 @@ L'avvio di un'app Android richiede tempo, soprattutto quando l'app viene avviata
 ## <a name="layoutsandroiduser-interfacelayoutsindexmd"></a>[Layout](~/android/user-interface/layouts/index.md)
 
 I layout vengono usati per definire la struttura visiva per un'interfaccia utente.
-I layout come `ListView` e `RecyclerView` sono i blocchi predefiniti più basilari delle applicazioni Android. In genere, un layout utilizzerà `Adapter` un oggetto per fungere da Bridge dal layout ai dati sottostanti utilizzati per popolare gli elementi di dati nel layout. In questa sezione viene illustrato `LinearLayout`come utilizzare i layout come `TableLayout`, `RelativeLayout`,, `RecyclerView`e `GridView`.
+I layout come `ListView` e `RecyclerView` sono i blocchi predefiniti più basilari delle applicazioni Android. In genere, un layout utilizzerà un `Adapter` per fungere da Bridge dal layout ai dati sottostanti utilizzati per popolare gli elementi di dati nel layout. In questa sezione viene illustrato come utilizzare i layout come `LinearLayout`, `RelativeLayout`, `TableLayout`, `RecyclerView`e `GridView`.
 
 ## <a name="controlsandroiduser-interfacecontrolsindexmd"></a>[Controlli](~/android/user-interface/controls/index.md)
 

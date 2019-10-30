@@ -3,15 +3,15 @@ title: Supporto per Objective-C
 description: In questo documento viene fornita una descrizione del supporto per Objective-C nell'incorporamento di .NET. Viene illustrato il conteggio automatico dei riferimenti, NSString, protocolli, protocollo NSObject, eccezioni e altro ancora.
 ms.prod: xamarin
 ms.assetid: 3367A4A4-EC88-4B75-96D0-51B1FCBCE614
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: 8798e0acf7b1184c64c7012b2f724e2fa7d2c816
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e72f950dc6fcf12e70714e0fbb996ad5ea432548
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292756"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029713"
 ---
 # <a name="objective-c-support"></a>Supporto per Objective-C
 
@@ -21,39 +21,39 @@ La generazione di Objective-C presenta alcune funzionalità speciali che vale la
 
 ### <a name="automatic-reference-counting"></a>Conteggio dei riferimenti automatici
 
-Per chiamare i binding generati, è **necessario** utilizzare il conteggio automatico dei riferimenti (Arc). Il progetto che usa una libreria basata su incorporamento .NET deve essere `-fobjc-arc`compilato con.
+Per chiamare i binding generati, è **necessario** utilizzare il conteggio automatico dei riferimenti (Arc). Il progetto che usa una libreria basata su incorporamento .NET deve essere compilato con `-fobjc-arc`.
 
 ### <a name="nsstring-support"></a>Supporto di NSString
 
-Le API che `System.String` espongono i tipi `NSString`vengono convertite in. In questo modo la gestione della memoria risulta più semplice `char*`rispetto a quando si utilizza.
+Le API che espongono `System.String` tipi vengono convertite in `NSString`. In questo modo, la gestione della memoria risulta più semplice rispetto a quando si gestiscono `char*`.
 
 ### <a name="protocols-support"></a>Supporto protocolli
 
-Le interfacce gestite vengono convertite in protocolli Objective-C in cui `@required`tutti i membri sono.
+Le interfacce gestite vengono convertite in protocolli Objective-C in cui tutti i membri sono `@required`.
 
 ### <a name="nsobject-protocol-support"></a>Supporto del protocollo NSObject
 
 Per impostazione predefinita, si presuppone che l'hash e l'uguaglianza predefiniti di .NET e del runtime di Objective-C siano intercambiabili, perché condividono una semantica simile.
 
-Quando un tipo gestito esegue `Equals(Object)` l' `GetHashCode`override di o, in genere significa che il comportamento predefinito (.NET) non è sufficiente. ciò implica che il comportamento di Objective-C predefinito è probabilmente non sufficiente.
+Quando un tipo gestito esegue l'override di `Equals(Object)` o `GetHashCode`, in genere significa che il comportamento predefinito (.NET) non è sufficiente. Questo implica che è probabile che il comportamento di Objective-C predefinito non sia sufficiente.
 
-In questi casi, il generatore esegue l' [`isEqual:`](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418795-isequal?language=objc) override del [`hash`](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418859-hash?language=objc) metodo e della proprietà definiti nel [ `NSObject` protocollo](https://developer.apple.com/reference/objectivec/1418956-nsobject?language=objc). Ciò consente l'utilizzo trasparente da parte del codice Objective-C dell'implementazione gestita personalizzata.
+In questi casi, il generatore esegue l'override del metodo [`isEqual:`](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418795-isequal?language=objc) e [`hash`](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418859-hash?language=objc) proprietà definite nel [protocollo di`NSObject`](https://developer.apple.com/reference/objectivec/1418956-nsobject?language=objc). Ciò consente l'utilizzo trasparente da parte del codice Objective-C dell'implementazione gestita personalizzata.
 
 ### <a name="exceptions-support"></a>Supporto eccezioni
 
-Passando `--nativeexception` come argomento a `objcgen` , le eccezioni gestite verranno convertite in eccezioni Objective-C che possono essere rilevate ed elaborate. 
+Se si passa `--nativeexception` come argomento a `objcgen`, le eccezioni gestite verranno convertite in eccezioni Objective-C che possono essere rilevate ed elaborate. 
 
 ### <a name="comparison"></a>Confronto
 
-I tipi gestiti che `IComparable` implementano (o la `IComparable<T>`versione generica) produrranno metodi descrittivi Objective `NSComparisonResult` -C che `nil` restituiscono un oggetto e accettano un argomento. In questo modo l'API generata risulta più intuitiva per gli sviluppatori Objective-C. Ad esempio:
+I tipi gestiti che implementano `IComparable` (o la versione generica `IComparable<T>`) produrranno metodi descrittivi Objective-C che restituiscono un `NSComparisonResult` e accettano un argomento `nil`. In questo modo l'API generata risulta più intuitiva per gli sviluppatori Objective-C. Esempio:
 
 ```objc
 - (NSComparisonResult)compare:(XAMComparableType * _Nullable)other;
 ```
 
-### <a name="categories"></a>Categorie
+### <a name="categories"></a>Categories
 
-I metodi delle estensioni gestite vengono convertiti in categorie. Ad esempio, i metodi di estensione seguenti `Collection`in:
+I metodi delle estensioni gestite vengono convertiti in categorie. Ad esempio, i seguenti metodi di estensione su `Collection`:
 
 ```csharp
 public static class SomeExtensions {
@@ -77,7 +77,7 @@ Quando un singolo tipo gestito estende più tipi, vengono generate più categori
 
 ### <a name="subscripting"></a>Indice
 
-Le proprietà indicizzate gestite vengono convertite in pedice di oggetti. Ad esempio:
+Le proprietà indicizzate gestite vengono convertite in pedice di oggetti. Esempio:
 
 ```csharp
 public bool this[int index] {
@@ -102,7 +102,7 @@ if ([intCollection [0] isEqual:@42])
 
 A seconda del tipo di indicizzatore, verrà generato un indice indicizzato o con chiave quando appropriato.
 
-Questo [articolo](http://nshipster.com/object-subscripting/) è un'ottima introduzione all'indicizzazione.
+Questo [articolo](https://nshipster.com/object-subscripting/) è un'ottima introduzione all'indicizzazione.
 
 ## <a name="main-differences-with-net"></a>Principali differenze con .NET
 
@@ -112,7 +112,7 @@ In Objective-C è possibile chiamare qualsiasi prototipo di inizializzatore di q
 
 In C# è necessario dichiarare in modo esplicito un membro del costruttore all'interno di una classe, il che significa che i costruttori non vengono ereditati.
 
-Per esporre la rappresentazione corretta dell' C# API a Objective-C, `NS_UNAVAILABLE` viene aggiunto a qualsiasi inizializzatore che non è presente nella classe figlio della classe padre.
+Per esporre la rappresentazione corretta dell' C# API a Objective-C,`NS_UNAVAILABLE`viene aggiunto a qualsiasi inizializzatore che non è presente nella classe figlio dalla classe padre.
 
 C#API
 
@@ -145,9 +145,9 @@ API di Surface Objective-C:
 @end
 ```
 
-Qui, `initWithId:` è stato contrassegnato come non disponibile.
+`initWithId:` è stato contrassegnato come non disponibile.
 
-### <a name="operator"></a>Operator
+### <a name="operator"></a>??
 
 Objective-C non supporta l'overload C# degli operatori, quindi gli operatori vengono convertiti in selettori di classe:
 
@@ -188,27 +188,27 @@ diventa
 
 ### <a name="equality-operator"></a>Operatore di uguaglianza
 
-Nell'operatore `==` generale in C# viene gestito come operatore generale come indicato in precedenza.
+In General operator `==` in C# viene gestito come un operatore generale come indicato in precedenza.
 
-Tuttavia, se viene trovato l'operatore "descrittivo" uguale a, `==` l'operatore `!=` e l'operatore verranno ignorati nella generazione.
+Tuttavia, se viene trovato l'operatore "friendly" uguale a, sia l'operatore `==` che l'operatore `!=` verranno ignorati nella generazione.
 
-### <a name="datetime-vs-nsdate"></a>DateTime vs NSDate
+### <a name="datetime-vs-nsdate"></a>DateTime rispetto a NSDate
 
-[`NSDate`](https://developer.apple.com/reference/foundation/nsdate?language=objc) Dalla documentazione:
+Dalla documentazione [`NSDate`](https://developer.apple.com/reference/foundation/nsdate?language=objc) :
 
-> `NSDate`gli oggetti incapsulano un singolo momento, indipendentemente da qualsiasi sistema calendaristiche o fuso orario specifico. Gli oggetti data non sono modificabili, rappresentando un intervallo di tempo invariante rispetto a una data di riferimento assoluta (00:00:00 UTC il 1 ° gennaio 2001).
+> gli oggetti `NSDate` incapsulano un singolo momento, indipendentemente da qualsiasi sistema calendaristiche o fuso orario specifico. Gli oggetti data non sono modificabili, rappresentando un intervallo di tempo invariante rispetto a una data di riferimento assoluta (00:00:00 UTC il 1 ° gennaio 2001).
 
-A causa `NSDate` della data di riferimento, tutte le conversioni tra `DateTime` di essa e devono essere eseguite in formato UTC.
+A causa `NSDate` data di riferimento, tutte le conversioni tra di essa e `DateTime` devono essere eseguite in formato UTC.
 
 #### <a name="datetime-to-nsdate"></a>Da DateTime a NSDate
 
-Quando si esegue `DateTime` la `NSDate`conversione da `Kind` a, `DateTime` viene presa in considerazione la proprietà in:
+Quando si esegue la conversione da `DateTime` a `NSDate`, viene presa in considerazione la proprietà `Kind` in `DateTime`:
 
-|Kind|Risultati|
+|Tipo|Risultati|
 |---|---|
-|`Utc`|La conversione viene eseguita utilizzando l' `DateTime` oggetto fornito così com'è.|
-|`Local`|Il risultato della chiamata `ToUniversalTime()` di nell'oggetto `DateTime` fornito viene usato per la conversione.|
-|`Unspecified`|Si presuppone `DateTime` che l'oggetto specificato sia UTC, quindi lo stesso comportamento `Kind` quando `Utc`è.|
+|`Utc`|La conversione viene eseguita utilizzando l'oggetto `DateTime` fornito così com'è.|
+|`Local`|Il risultato della chiamata di `ToUniversalTime()` nell'oggetto `DateTime` fornito viene usato per la conversione.|
+|`Unspecified`|Si presuppone che l'oggetto `DateTime` fornito sia UTC, quindi lo stesso comportamento quando `Kind` è `Utc`.|
 
 La conversione utilizza la formula seguente:
 
@@ -218,19 +218,19 @@ TimeInterval = DateTimeObjectTicks - NSDateReferenceDateTicks / TicksPerSecond
 
 In questa formula: 
 
-- `NSDateReferenceDateTicks`viene calcolato in base alla `NSDate` data di riferimento 00:00:00 UTC dell'1 gennaio 2001: 
+- `NSDateReferenceDateTicks` viene calcolato in base alla data di riferimento `NSDate` 00:00:00 UTC il 1 gennaio 2001: 
 
     ```csharp
     new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
     ```
 
-- [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond)è definito in[`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
+- [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond) viene definito in [`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
 
-Per creare l' `NSDate` oggetto `TimeInterval` , viene usato con il `NSDate` selettore [dateWithTimeIntervalSinceReferenceDate:](https://developer.apple.com/reference/foundation/nsdate/1591577-datewithtimeintervalsincereferen?language=objc) .
+Per creare l'oggetto `NSDate`, viene usato il `TimeInterval` con il selettore `NSDate` [dateWithTimeIntervalSinceReferenceDate:](https://developer.apple.com/reference/foundation/nsdate/1591577-datewithtimeintervalsincereferen?language=objc) .
 
 #### <a name="nsdate-to-datetime"></a>Da NSDate a DateTime
 
-La conversione da `NSDate` a `DateTime` usa la formula seguente:
+La conversione da `NSDate` a `DateTime` utilizza la formula seguente:
 
 ```
 DateTimeTicks = NSDateTimeIntervalSinceReferenceDate * TicksPerSecond + NSDateReferenceDateTicks
@@ -238,17 +238,17 @@ DateTimeTicks = NSDateTimeIntervalSinceReferenceDate * TicksPerSecond + NSDateRe
 
 In questa formula: 
 
-- `NSDateReferenceDateTicks`viene calcolato in base alla `NSDate` data di riferimento 00:00:00 UTC dell'1 gennaio 2001: 
+- `NSDateReferenceDateTicks` viene calcolato in base alla data di riferimento `NSDate` 00:00:00 UTC il 1 gennaio 2001: 
 
     ```csharp
     new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
     ```
 
-- [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond)è definito in[`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
+- [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond) viene definito in [`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
 
-Dopo il `DateTimeTicks`calcolo, `DateTime` viene richiamato il [costruttore](https://docs.microsoft.com/dotnet/api/system.datetime.-ctor?#System_DateTime__ctor_System_Int64_System_DateTimeKind_), impostando `kind` su `DateTimeKind.Utc`.
+Dopo aver calcolato `DateTimeTicks`, viene richiamato il [costruttore](https://docs.microsoft.com/dotnet/api/system.datetime.-ctor?#System_DateTime__ctor_System_Int64_System_DateTimeKind_) `DateTime`, impostando la relativa `kind` su `DateTimeKind.Utc`.
 
 > [!NOTE]
-> `NSDate`può essere `nil`, ma un `DateTime` è uno struct in .NET, che per definizione non può `null`essere. Se si assegna un `nil` oggetto `NSDate`, questo verrà convertito nel valore predefinito `DateTime` , che esegue il mapping `DateTime.MinValue`a.
+> `NSDate` possono essere `nil`, ma un `DateTime` è uno struct in .NET, che per definizione non può essere `null`. Se si assegna un `nil` `NSDate`, verrà convertito nel valore di `DateTime` predefinito, che esegue il mapping a `DateTime.MinValue`.
 
-`NSDate`supporta un valore massimo superiore e un valore `DateTime`minimo inferiore a. Quando si esegue `NSDate` la `DateTime` `DateTime` conversione da a, questi valori più alti e inferiori vengono modificati rispettivamente in [MaxValue](https://docs.microsoft.com/dotnet/api/system.datetime.maxvalue) o [MinValue](https://docs.microsoft.com/dotnet/api/system.datetime.minvalue).
+`NSDate` supporta un valore massimo superiore e un valore minimo inferiore rispetto a `DateTime`. Quando si esegue la conversione da `NSDate` a `DateTime`, questi valori più alti e inferiori vengono modificati rispettivamente nel `DateTime` [MaxValue](https://docs.microsoft.com/dotnet/api/system.datetime.maxvalue) o [MinValue](https://docs.microsoft.com/dotnet/api/system.datetime.minvalue).

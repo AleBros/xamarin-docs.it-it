@@ -5,19 +5,19 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 3eee66032a33e66d3a6a22ca43cb931fbd59888f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 4acbfe810abefd9a25721ddf59c9f4f197afdf28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122985"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020973"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android Multiscreen: approfondimenti
 
-_In questa guida in due parti l'applicazione Phoneword, creata nella guida Hello, Android, viene espansa per poter gestire una seconda schermata. Nello stesso tempo vengono presentati i blocchi predefiniti di base per le applicazioni Android. È incluso anche un approfondimento dell'architettura Android, per consentire una maggiore comprensione della struttura e delle funzionalità delle applicazioni Android._
+_In questa guida in due parti, l'applicazione Phoneword di base (creata nella Guida Hello, Android) viene espansa per gestire una seconda schermata. Verranno introdotti i blocchi predefiniti di base dell'applicazione Android. Un approfondimento dell'architettura Android è incluso per aiutare a sviluppare una migliore comprensione della struttura e delle funzionalità delle applicazioni Android._
 
 In [Hello, Android Multiscreen: guida introduttiva](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md) è stata compilata ed eseguita la prima applicazione Xamarin.Android multi-schermata.
 

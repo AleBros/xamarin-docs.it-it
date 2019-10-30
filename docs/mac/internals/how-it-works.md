@@ -4,27 +4,27 @@ description: Questo documento descrive i meccanismi interni di Novell. Mac. In p
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/25/2017
-ms.openlocfilehash: 24ddd71fe1468edc70ec4d487dc2cb2dbd4da1b6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 347fb1021a290fa849ae354468bc66b0cdd8b684
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769817"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017587"
 ---
 # <a name="how-xamarinmac-works"></a>Come funziona Xamarin.Mac
 
 Nella maggior parte dei casi lo sviluppatore non dovrà mai preoccuparsi della "magia" interna di Novell. Mac, tuttavia, avendo una conoscenza approssimativa del modo in cui le cose funzionano dietro le quinte sarà utile per interpretare la documentazione C# esistente con un obiettivo e il debug problemi quando si verificano.
 
-In Novell. Mac un'applicazione Bridge due mondi: È presente il runtime di Objective-C che contiene le istanze delle classi`NSString`Native `NSApplication`(, e così via) ed C# è presente il runtime che contiene le`System.String`istanze `HttpClient`delle classi gestite (, e così via). Tra questi due mondi, Novell. Mac crea un Bridge bidirezionale, in modo che un'app possa chiamare metodi (selettori) in Objective-c `NSApplication.Init`(ad esempio) e Objective-c può chiamare C# i metodi dell'app indietro (come i metodi in un delegato dell'app). In generale, le chiamate in Objective-C vengono gestite in modo trasparente tramite **P/Invoke** e il codice di runtime fornito da Novell.
+In Novell. Mac un'applicazione Bridge due mondi: è disponibile il runtime di Objective-C che contiene le istanze delle classi native (`NSString`, `NSApplication`e così via) ed è C# presente il runtime che contiene le istanze delle classi gestite (`System.String`,`HttpClient`e così via) . Tra questi due mondi, Novell. Mac crea un Bridge bidirezionale, in modo che un'app possa chiamare metodi (selettori) in Objective-C (ad esempio `NSApplication.Init`) e Objective-C può chiamare C# i metodi dell'app, come i metodi in un delegato dell'app. In generale, le chiamate in Objective-C vengono gestite in modo trasparente tramite **P/Invoke** e il codice di runtime fornito da Novell.
 
 <a name="exposing-classes" />
 
 ## <a name="exposing-c-classes--methods-to-objective-c"></a>Esposizione di C# classi/metodi a Objective-C
 
-Tuttavia, per fare in modo che Objective-C richiami negli C# oggetti di un'app, è necessario esporli in modo che Objective-c possa comprendere. Questa operazione viene eseguita tramite `Register` gli `Export` attributi e. Vedere l'esempio seguente:
+Tuttavia, per fare in modo che Objective-C richiami negli C# oggetti di un'app, è necessario esporli in modo che Objective-c possa comprendere. Questa operazione viene eseguita tramite gli attributi `Register` e `Export`. Vedere l'esempio seguente:
 
 ```csharp
 [Register ("MyClass")]
@@ -42,9 +42,9 @@ public class MyClass : NSObject
 }
 ```
 
-In questo esempio, il runtime di Objective-C ora è in grado di conoscere `MyClass` una classe denominata con `init` i `run`selettori denominati e.
+In questo esempio, il runtime di Objective-C saprà che una classe denominata `MyClass` con i selettori denominati `init` e `run`.
 
-Nella maggior parte dei casi, si tratta di un dettaglio di implementazione che lo sviluppatore può ignorare, in quanto la maggior parte delle richiamate ricevute `base` da un'app sarà tramite metodi `DataSources`sottoposti a override sulle classi ( `AppDelegate`ad esempio, `Delegates`,) o sulle **azioni** passato alle API. In tutti questi casi, `Export` gli attributi non sono necessari nel C# codice.
+Nella maggior parte dei casi, si tratta di un dettaglio di implementazione che lo sviluppatore può ignorare, in quanto la maggior parte delle richiamate ricevute da un'app sarà tramite metodi sottoposti a override sulle classi `base` (ad esempio `AppDelegate`, `Delegates`, `DataSources`) o sulle **azioni** passate alle API. In tutti questi casi, non è necessario `Export` attributi nel C# codice.
 
 ## <a name="constructor-runthrough"></a>Costruttore runthrough
 
@@ -81,7 +81,7 @@ public CustomView () : base (NSObjectFlag.Empty)
 }
 ```
 
-In generale, lo sviluppatore deve lasciare i `IntPtr` costruttori `NSCoder` e generati durante la creazione di alcuni tipi, ad esempio Custom `NSViews` alone. Se Novell. Mac deve chiamare uno di questi costruttori in risposta a una richiesta di runtime di Objective-C ed è stata rimossa, l'app si arresterà in modo anomalo all'interno del codice nativo e potrebbe essere difficile determinare esattamente il problema.
+In generale, lo sviluppatore deve lasciare i costruttori `IntPtr` e `NSCoder` generati durante la creazione di alcuni tipi, ad esempio `NSViews` personalizzati da soli. Se Novell. Mac deve chiamare uno di questi costruttori in risposta a una richiesta di runtime di Objective-C ed è stata rimossa, l'app si arresterà in modo anomalo all'interno del codice nativo e potrebbe essere difficile determinare esattamente il problema.
 
 ## <a name="memory-management-and-cycles"></a>Gestione della memoria e cicli
 
@@ -99,12 +99,12 @@ Una novità di Novell. Mac è la possibilità di AOT il codice IL durante il cic
 
 L'AOT può aiutare un'app Novell. Mac in due aree principali:
 
-- **Migliori log di arresto anomalo** del sistema: se un'applicazione Novell. Mac si arresta in modo anomalo nel codice nativo, situazione comune quando si effettuano chiamate non valide `null` nelle API Cocoa (ad esempio l'invio di un oggetto in un metodo che non lo accetta), log di arresto anomalo nativo con frame JIT sono difficili da analizzare. Poiché i frame JIT non dispongono di informazioni di debug, saranno presenti più righe con offset esadecimali e nessun indizio sul comportamento. AOT genera frame denominati "reali" e le tracce sono molto più facili da leggere. Questo significa anche che l'app Novell. Mac interagisce meglio con strumenti nativi come **LLDB** e **Instruments**.
+- **Migliori log di arresto anomalo** del sistema: se un'applicazione Novell. Mac si arresta in modo anomalo nel codice nativo, situazione comune durante l'esecuzione di chiamate non valide nelle API Cocoa (ad esempio l'invio di un `null` in un metodo che non lo accetta), i log di arresto anomalo nativo con frame JIT sono difficile da analizzare. Poiché i frame JIT non dispongono di informazioni di debug, saranno presenti più righe con offset esadecimali e nessun indizio sul comportamento. AOT genera frame denominati "reali" e le tracce sono molto più facili da leggere. Questo significa anche che l'app Novell. Mac interagisce meglio con strumenti nativi come **LLDB** e **Instruments**.
 - **Prestazioni migliori in fase di avvio** : per applicazioni Novell. Mac di grandi dimensioni, con un tempo di avvio di più secondi, la compilazione JIT di tutto il codice può richiedere una quantità di tempo significativa. AOT funziona in primo piano.
 
 ### <a name="enabling-aot-compilation"></a>Abilitazione della compilazione AOT
 
-AOT è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** nella **Esplora soluzioni**, passando a **compilazione Mac** e `--aot:[options]` aggiungendo ad **altri argomenti MMP:** Field (dove `[options]` è uno o più opzioni per controllare il tipo AOT, vedere di seguito. Ad esempio:
+AOT è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** nella **Esplora soluzioni**, passando a **compilazione Mac** e aggiungendo `--aot:[options]` al campo **argomenti MMP aggiuntivi:** (dove `[options]` è una o più opzioni per controllare il tipo AOT, vedere di seguito. Esempio:
 
 ![Aggiunta di AOT ad argomenti aggiuntivi di MMP](how-it-works-images/aot01.png "Aggiunta di AOT ad argomenti aggiuntivi di MMP")
 
@@ -115,15 +115,15 @@ AOT è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** ne
 
 Sono disponibili diverse opzioni che possono essere modificate quando si Abilita la compilazione AOT in un'app Novell. Mac:
 
-- `none`-Nessuna compilazione AOT. Questa è l'impostazione predefinita.
+- `none`: nessuna compilazione AOT. Questa è l'impostazione predefinita.
 - `all`-AOT compila ogni assembly nel monobundle.
-- `core`-AOT compila gli `Xamarin.Mac`assembly, `System` e. `mscorlib`
-- `sdk`-AOT compila gli assembly `Xamarin.Mac` della libreria di classi di base e.
-- `|hybrid`-L'aggiunta di questa opzione a una delle opzioni precedenti consente l'AOT ibrido che consente la rimozione del, ma comporterà tempi di compilazione più lunghi.
-- `+`: Include un singolo file per la compilazione AOT.
-- `-`-Rimuove un singolo file dalla compilazione AOT.
+- `core`-AOT compila gli assembly `Xamarin.Mac`, `System` e `mscorlib`.
+- `sdk`-AOT compila gli assembly di `Xamarin.Mac` e librerie di classi base (BCL).
+- `|hybrid`: l'aggiunta di questo oggetto a una delle opzioni precedenti consente l'AOT ibrida che consente la rimozione del, ma comporterà tempi di compilazione più lunghi.
+- `+`: include un singolo file per la compilazione AOT.
+- `-`: rimuove un singolo file dalla compilazione AOT.
 
-Ad esempio, `--aot:all,-MyAssembly.dll` consente di abilitare la compilazione AOT su tutti gli assembly nel monobundle, _ad eccezione_ `MyAssembly.dll` di e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` di `mscorlib.dll`abilitare Hybrid, il `MyOtherAssembly.dll` codice AOT include ed escludendo.
+Ad esempio, `--aot:all,-MyAssembly.dll` Abilita la compilazione AOT su tutti gli assembly nel monobundle _eccetto_ `MyAssembly.dll` e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` Abilita Hybrid, il codice AOT include il `MyOtherAssembly.dll` ed esclude la `mscorlib.dll`.
 
 ## <a name="partial-static-registrar"></a>Registrar statico parziale
 
@@ -133,20 +133,20 @@ Inoltre, ed è una novità di Novell. Mac, un _registrar statico parziale_ (come
 
 ### <a name="about-the-registrar"></a>Informazioni sul registrar
 
-Dietro le quinte di qualsiasi applicazione Novell. Mac si trova il framework Cocoa di Apple e il runtime di Objective-C. La creazione di un bridge tra questo "mondo nativo" e il "mondo gestito C# " di è la responsabilità principale di Novell. Mac. Parte di questa attività viene gestita dal registrar, che viene eseguita all' `NSApplication.Init ()` interno del metodo. Questo è un motivo per cui è necessario `NSApplication.Init` chiamare prima qualsiasi uso delle API Cocoa in Novell. Mac.
+Dietro le quinte di qualsiasi applicazione Novell. Mac si trova il framework Cocoa di Apple e il runtime di Objective-C. La creazione di un bridge tra questo "mondo nativo" e il "mondo gestito C# " di è la responsabilità principale di Novell. Mac. Parte di questa attività viene gestita dal registrar, che viene eseguita all'interno `NSApplication.Init ()` metodo. Questo è un motivo per cui l'uso delle API Cocoa in Novell. Mac richiede che `NSApplication.Init` venga chiamato per primo.
 
-Il processo del C# registrar è informare il runtime di Objective-C dell'esistenza delle classi dell'app che derivano da classi quali `NSApplicationDelegate`, `NSView` `NSWindow`, e `NSObject`. Questa operazione richiede un'analisi di tutti i tipi nell'app per determinare quali elementi devono essere registrati e quali elementi per ogni tipo di report.
+Il registrar sta per informare il runtime di Objective-C dell'esistenza delle C# classi dell'app che derivano da classi quali`NSApplicationDelegate`,`NSView`,`NSWindow`e`NSObject`. Questa operazione richiede un'analisi di tutti i tipi nell'app per determinare quali elementi devono essere registrati e quali elementi per ogni tipo di report.
 
 Questa analisi può essere eseguita in **modo dinamico**, all'avvio dell'applicazione con reflection o in modo **statico**come passaggio della fase di compilazione. Quando si sceglie un tipo di registrazione, lo sviluppatore deve tenere presente quanto segue:
 
 - La registrazione statica può ridurre drasticamente i tempi di avvio, ma può rallentare in modo significativo le compilazioni (in genere più del doppio tempo di compilazione di debug). Si tratta dell'impostazione predefinita per le compilazioni di configurazione di **rilascio** .
 - La registrazione dinamica ritarda questo lavoro fino a quando l'applicazione non viene avviata e non ignora la generazione del codice, ma questo lavoro aggiuntivo può creare una pausa percettibile (almeno due secondi) all'avvio dell'applicazione. Questo è particolarmente evidente nelle compilazioni di configurazione di debug, che per impostazione predefinita è la registrazione dinamica e la cui Reflection è più lenta.
 
-La registrazione statica parziale, introdotta per la prima volta in Novell. iOS 8,13, offre allo sviluppatore il meglio di entrambe le opzioni. Precalcolando le informazioni di registrazione di ogni elemento in `Xamarin.Mac.dll` e spedendo queste informazioni con Novell. Mac in una libreria statica (che deve essere collegata solo in fase di compilazione), Microsoft ha rimosso la maggior parte del tempo di reflection della dinamica registrar senza effetti sul tempo di compilazione.
+La registrazione statica parziale, introdotta per la prima volta in Novell. iOS 8,13, offre allo sviluppatore il meglio di entrambe le opzioni. Precalcolando le informazioni di registrazione di ogni elemento in `Xamarin.Mac.dll` e spedendo queste informazioni con Novell. Mac in una libreria statica (che deve essere collegata solo in fase di compilazione), Microsoft ha rimosso la maggior parte del tempo di reflection del registrar dinamico senza alcun effetto sul tempo di compilazione.
 
 ### <a name="enabling-the-partial-static-registrar"></a>Abilitazione del registrar statico parziale
 
-Il registrar statico parziale è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** nella **Esplora soluzioni**, passando a **compilazione Mac** e aggiungendo `--registrar:static` al campo **argomenti MMP aggiuntivi:** . Ad esempio:
+Il registrar statico parziale è abilitato in Novell. Mac facendo doppio clic sul **nome del progetto** nella **Esplora soluzioni**, passando a **compilazione Mac** e aggiungendo `--registrar:static` al campo **argomenti MMP aggiuntivi:** . Esempio:
 
 ![Aggiunta del registrar statico parziale ad argomenti MMP aggiuntivi](how-it-works-images/psr01.png "Aggiunta del registrar statico parziale ad argomenti MMP aggiuntivi")
 
@@ -159,4 +159,4 @@ Di seguito sono riportate alcune spiegazioni più dettagliate sul funzionamento 
 - [API unificata Novell per iOS e OS X](~/cross-platform/macios/unified/index.md)
 - [Nozioni fondamentali su Theading](~/ios/app-fundamentals/threading.md)
 - [Delegati, protocolli ed eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md)
-- [Su`newrefcount`](~/ios/internals/newrefcount.md)
+- [Informazioni su `newrefcount`](~/ios/internals/newrefcount.md)

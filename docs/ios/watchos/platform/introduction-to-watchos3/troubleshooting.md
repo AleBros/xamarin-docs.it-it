@@ -4,15 +4,15 @@ description: Questo documento offre diversi suggerimenti per la risoluzione dei 
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: f10fb237bca92f49ac77657778ada8a47ed69c49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 093ac4a3242866413042de0b650433d4369ad35f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292176"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028246"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchos 3 risoluzione dei problemi
 
@@ -66,29 +66,29 @@ Se un allegato multimediale è troppo grande, verrà visualizzato nell'iPhone de
 
 ## <a name="nsurlconnection"></a>NSURLConnection
 
-Tutte `NSURLConnection` le connessioni che usano protocolli TLS meno recenti avranno esito negativo. Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app smetta di usare la crittografia SHA-1 e 3DES il prima possibile.
+Tutte le connessioni `NSURLConnection` che usano protocolli TLS meno recenti avranno esito negativo. Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app smetta di usare la crittografia SHA-1 e 3DES il prima possibile.
 
 A partire da watchos 3, la sicurezza delle connessioni SSL/TLS viene applicata rigorosamente da Apple. I servizi e le app interessati devono aggiornare i server Web per usare le versioni più recenti del protocollo TLS.
 
 ## <a name="nsurlsession"></a>NSURLSession
 
-A partire da watchos 3, `HTTPBodyStream` la proprietà `NSMutableURLRequest` della classe deve essere impostata su un flusso non aperto a partire `NSURLConnection` da `NSURLSession` e ora impone rigorosamente questo requisito.
+A partire da watchos 3, la proprietà `HTTPBodyStream` della classe `NSMutableURLRequest` deve essere impostata su un flusso non aperto poiché `NSURLConnection` e `NSURLSession` ora applicano esclusivamente questo requisito.
 
 ## <a name="privacy"></a>Privacy
 
 Problemi noti:
 
-Quando si lavora `https://` con gli `NSURLSession` URL `NSURLConnection` e non sono più supportati i pacchetti di crittografia RC4 durante l'handshake TLS. È possibile che venga generato uno dei codici di errore seguenti:
+Quando si lavora con gli URL `https://` sia `NSURLSession` che `NSURLConnection` non supportano più i pacchetti di crittografia RC4 durante l'handshake TLS. È possibile che venga generato uno dei codici di errore seguenti:
 
-- **-1200 o-98** -per `NSURLErrorSecurityConnectionFailed` ed errori SecureTransport.
+- **-1200 o-98** -per gli errori `NSURLErrorSecurityConnectionFailed` e SecureTransport.
 - **-1200 [3:-9824]** -il caricamento http non è riuscito.
-- **-**  -  1200`NSURLConnection` completato con errore.
+- **-1200** - `NSURLConnection` terminato con un errore.
 
 A partire da watchos 3, la sicurezza delle connessioni SSL/TLS viene applicata rigorosamente da Apple. I servizi e le app interessati devono aggiornare i server Web per usare le versioni più recenti del protocollo TLS. Per ulteriori informazioni, vedere [NSURLConnection](#nsurlconnection) .
 
 ## <a name="snapshots"></a>Snapshot
 
-Le app WatchKit che non hanno adottato la `HandelBackgroundTask` nuova API non riceveranno più aggiornamenti periodici in watchos 3. 
+Le app WatchKit che non hanno adottato la nuova API `HandelBackgroundTask` non riceveranno più aggiornamenti periodici in watchos 3. 
 
 ## <a name="watchkit"></a>WatchKit
 

@@ -4,15 +4,15 @@ description: Questo documento descrive come tenere traccia delle singole dita ne
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: eca8a1bdc3c60ae4dbaabf022a9dbe91f7e30402
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c3998424c8f4e9482a41e2891e65f0d13d8ac2f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767030"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009183"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Rilevamento del dito multitocco in Novell. iOS
 
@@ -20,9 +20,9 @@ _Questo documento illustra come tenere traccia degli eventi di tocco da più dit
 
 In alcuni casi un'applicazione multitocco deve tenere traccia delle singole dita mentre si spostano simultaneamente sullo schermo. Una tipica applicazione è un programma di disegno con dito. Si vuole che l'utente sia in grado di creare con un solo dito, ma anche di creare con più dita contemporaneamente. Man mano che il programma elabora più eventi Touch, deve distinguere le dita.
 
-Quando un dito tocca per la prima volta lo schermo, [`UITouch`](xref:UIKit.UITouch) iOS crea un oggetto per quel dito. Questo oggetto rimane invariato quando si sposta il dito sullo schermo e quindi si solleva dallo schermo, a quel punto l'oggetto viene eliminato. Per tenere traccia delle dita, un programma dovrebbe evitare di archiviare `UITouch` direttamente questo oggetto. Al contrario, può utilizzare la [`Handle`](xref:Foundation.NSObject.Handle) proprietà di tipo `IntPtr` per identificare in modo univoco `UITouch` questi oggetti.
+Quando un dito tocca la schermata, iOS crea un oggetto [`UITouch`](xref:UIKit.UITouch) per quel dito. Questo oggetto rimane invariato quando si sposta il dito sullo schermo e quindi si solleva dallo schermo, a quel punto l'oggetto viene eliminato. Per tenere traccia delle dita, un programma dovrebbe evitare di archiviare direttamente questo oggetto `UITouch`. Al contrario, può utilizzare la proprietà [`Handle`](xref:Foundation.NSObject.Handle) di tipo `IntPtr` per identificare in modo univoco questi oggetti di `UITouch`.
 
-Quasi sempre, un programma che tiene traccia delle singole dita mantiene un dizionario per il rilevamento del tocco. Per un programma iOS, la chiave del dizionario è `Handle` il valore che identifica un dito particolare. Il valore del dizionario dipende dall'applicazione. Nel programma [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , ogni tratto del dito (dal tocco alla versione) viene associato a un oggetto che contiene tutte le informazioni necessarie per eseguire il rendering della linea disegnata con tale dito. Il programma definisce una classe `FingerPaintPolyline` di piccole dimensioni a questo scopo:
+Quasi sempre, un programma che tiene traccia delle singole dita mantiene un dizionario per il rilevamento del tocco. Per un programma iOS, la chiave del dizionario è il valore `Handle` che identifica un dito particolare. Il valore del dizionario dipende dall'applicazione. Nel programma [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , ogni tratto del dito (dal tocco alla versione) viene associato a un oggetto che contiene tutte le informazioni necessarie per eseguire il rendering della linea disegnata con tale dito. Il programma definisce una classe di `FingerPaintPolyline` ridotta a questo scopo:
 
 ```csharp
 class FingerPaintPolyline
@@ -40,25 +40,25 @@ class FingerPaintPolyline
 }
 ```
 
-Ogni polilinea ha un colore, una larghezza del tratto e un oggetto [`CGPath`](xref:CoreGraphics.CGPath) graphics iOS per accumulare ed eseguire il rendering di più punti della linea mentre viene disegnata.
+Ogni polilinea ha un colore, una larghezza del tratto e un oggetto grafico iOS [`CGPath`](xref:CoreGraphics.CGPath) oggetto per accumulare ed eseguire il rendering di più punti della linea mentre viene disegnata.
 
-Tutto il resto del codice riportato di seguito è contenuto in una `UIView` derivata denominata `FingerPaintCanvasView`. Tale classe mantiene un dizionario di oggetti di tipo `FingerPaintPolyline` durante il tempo in cui vengono tracciati attivamente da una o più dita:
+Tutto il resto del codice riportato di seguito è contenuto in un `UIView` derivato denominato `FingerPaintCanvasView`. Tale classe mantiene un dizionario di oggetti di tipo `FingerPaintPolyline` nel momento in cui vengono attivamente disegnati da una o più dita:
 
 ```csharp
 Dictionary<IntPtr, FingerPaintPolyline> inProgressPolylines = new Dictionary<IntPtr, FingerPaintPolyline>();
 ```
 
-Questo dizionario consente alla visualizzazione di ottenere rapidamente le `FingerPaintPolyline` informazioni associate a ogni dito in base alla `Handle` proprietà dell' `UITouch` oggetto.
+Questo dizionario consente alla visualizzazione di ottenere rapidamente le informazioni `FingerPaintPolyline` associate a ogni dito in base alla proprietà `Handle` dell'oggetto `UITouch`.
 
-La `FingerPaintCanvasView` classe gestisce anche un `List` oggetto per le polilinee che sono state completate:
+La classe `FingerPaintCanvasView` gestisce anche un oggetto `List` per le polilinee completate:
 
 ```csharp
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-Gli oggetti in questo `List` oggetto sono nello stesso ordine in cui sono stati disegnati.
+Gli oggetti in questo `List` sono nello stesso ordine in cui sono stati disegnati.
 
-`FingerPaintCanvasView`esegue l'override di cinque `View`metodi definiti da:
+`FingerPaintCanvasView` esegue l'override di cinque metodi definiti da `View`:
 
 - [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
 - [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
@@ -66,9 +66,9 @@ Gli oggetti in questo `List` oggetto sono nello stesso ordine in cui sono stati 
 - [`TouchesCancelled`](xref:UIKit.UIResponder.TouchesCancelled(Foundation.NSSet,UIKit.UIEvent))
 - [`Draw`](xref:UIKit.UIView.Draw(CoreGraphics.CGRect))
 
-Le varie `Touches` sostituzioni accumulano i punti che costituiscono le polilinee.
+Le varie sostituzioni di `Touches` accumulano i punti che costituiscono le polilinee.
 
-L'override`Draw`di [] Disegna le polilinee completate e quindi le polilinee in corso:
+L'override di [`Draw`] Disegna le polilinee completate e quindi le polilinee in corso:
 
 ```csharp
 public override void Draw(CGRect rect)
@@ -102,7 +102,7 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Ognuna delle `Touches` sostituzioni segnala potenzialmente le azioni di più dita, indicate da uno o più `UITouch` oggetti archiviati nell' `touches` argomento al metodo. Le `TouchesBegan` sostituzioni eseguono il ciclo attraverso questi oggetti. Per ogni `UITouch` oggetto, il metodo crea e Inizializza un nuovo `FingerPaintPolyline` oggetto, inclusa l'archiviazione della posizione iniziale del dito ottenuto dal `LocationInView` metodo. Questo `FingerPaintPolyline` oggetto viene aggiunto `InProgressPolylines` al `Handle` dizionario`UITouch` utilizzando la proprietà dell'oggetto come chiave del dizionario:
+Ogni override di `Touches` segnala potenzialmente le azioni di più dita, indicate da uno o più oggetti `UITouch` archiviati nell'argomento `touches` al metodo. Il `TouchesBegan` esegue l'override del ciclo attraverso questi oggetti. Per ogni oggetto `UITouch`, il metodo crea e Inizializza un nuovo oggetto `FingerPaintPolyline`, inclusa l'archiviazione della posizione iniziale del dito ottenuto dal metodo `LocationInView`. Questo `FingerPaintPolyline` oggetto viene aggiunto al dizionario `InProgressPolylines` utilizzando la proprietà `Handle` dell'oggetto `UITouch` come chiave del dizionario:
 
 ```csharp
 public override void TouchesBegan(NSSet touches, UIEvent evt)
@@ -125,9 +125,9 @@ public override void TouchesBegan(NSSet touches, UIEvent evt)
 }
 ```
 
-Il metodo termina chiamando `SetNeedsDisplay` per generare una chiamata `Draw` all'override e per aggiornare la schermata.
+Il metodo termina chiamando `SetNeedsDisplay` per generare una chiamata al `Draw` override e per aggiornare la schermata.
 
-Quando il dito o le dita `View` si muovono sullo schermo, riceve più chiamate alla relativa `TouchesMoved` sostituzione. Questa sostituzione esegue `UITouch` `touches` in modo analogo il loop negli oggetti archiviati nell'argomento e aggiunge il percorso corrente del dito al percorso grafico:
+Quando il dito o le dita si muovono sullo schermo, il `View` ottiene più chiamate al relativo `TouchesMoved` override. Questa sostituzione esegue in modo analogo il ciclo attraverso gli oggetti `UITouch` archiviati nell'argomento `touches` e aggiunge il percorso corrente del dito al percorso grafico:
 
 ```csharp
 public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -143,9 +143,9 @@ public override void TouchesMoved(NSSet touches, UIEvent evt)
 }
 ```
 
-La `touches` raccolta contiene `UITouch` solo gli oggetti per le dita spostate dall'ultima chiamata a o `TouchesMoved`a `TouchesBegan` . Se sono necessari `UITouch` oggetti corrispondenti a *tutte* le dita attualmente in contatto con lo schermo, tali informazioni sono disponibili tramite `AllTouches` `UIEvent` la proprietà dell'argomento al metodo.
+La raccolta di `touches` contiene solo gli oggetti `UITouch` per le dita spostate dall'ultima chiamata a `TouchesBegan` o `TouchesMoved`. Se è necessario `UITouch` oggetti corrispondenti a *tutte* le dita attualmente in contatto con lo schermo, tali informazioni sono disponibili tramite la proprietà `AllTouches` dell'argomento `UIEvent` al metodo.
 
-L' `TouchesEnded` override è costituito da due processi. Deve aggiungere l'ultimo punto al percorso di grafica e trasferire l' `FingerPaintPolyline` oggetto `inProgressPolylines` dal dizionario all' `completedPolylines` elenco:
+L'override del `TouchesEnded` ha due processi. Deve aggiungere l'ultimo punto al percorso di grafica e trasferire l'oggetto `FingerPaintPolyline` dal dizionario `inProgressPolylines` all'elenco `completedPolylines`:
 
 ```csharp
 public override void TouchesEnded(NSSet touches, UIEvent evt)
@@ -166,7 +166,7 @@ public override void TouchesEnded(NSSet touches, UIEvent evt)
 }
 ```
 
-La `TouchesCancelled` sostituzione viene gestita semplicemente abbandonando l' `FingerPaintPolyline` oggetto nel dizionario:
+L'override del `TouchesCancelled` viene gestito semplicemente abbandonando l'oggetto `FingerPaintPolyline` nel dizionario:
 
 ```csharp
 public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -183,7 +183,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 
 Nel complesso, questa elaborazione consente al programma [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) di tenere traccia delle singole dita e di tracciare i risultati sullo schermo:
 
-[![](touch-tracking-images/image01.png "Tenere traccia delle singole dita e disegnare i risultati sullo schermo")](touch-tracking-images/image01.png#lightbox)
+[![](touch-tracking-images/image01.png "Tracking individual fingers and drawing the results on the screen")](touch-tracking-images/image01.png#lightbox)
 
 A questo punto si è appreso come è possibile tenere traccia delle singole dita sullo schermo e distinguerle tra loro.
 

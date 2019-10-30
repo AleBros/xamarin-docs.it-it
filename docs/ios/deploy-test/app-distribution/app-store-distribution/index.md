@@ -4,15 +4,15 @@ description: Questo documento descrive come distribuire un'applicazione Xamarin.
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 05034989c60868f8bff8164da7da90a7ff8788a3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 78df4a7f4c90cd6459216f1f65dd09e0daae19f7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763212"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026693"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -50,25 +50,25 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 3. Fare clic sul pulsante **+** per creare un nuovo certificato.
 4. Nell'intestazione *Production* (Produzione) selezionare **App Store and Ad Hoc** (App Store e ad hoc):
 
-    [![](images/createcertmanually01.png "Selezionare App Store and Ad Hoc (App Store e ad hoc)")](images/createcertmanually01.png#lightbox)
+    [![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png#lightbox)
 5. Fare clic su **Continue** (Continua) e seguire le istruzioni per creare una richiesta di firma del certificato tramite l'accesso keychain:
 
-    [![](images/createcertmanually02.png "Creare una richiesta di firma del certificato tramite l'accesso keychain")](images/createcertmanually02.png#lightbox)
+    [![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png#lightbox)
 6. Dopo avere creato la richiesta di firma del certificato in base alle istruzioni, fare clic su **Continue** (Continua) e caricarla in Member Center:
 
-    [![](images/createcertmanually03.png "Caricare la richiesta di firma del certificato in Member Center")](images/createcertmanually03.png#lightbox)
+    [![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png#lightbox)
 
 7. Fare clic su **Generate** (Genera) per creare il certificato.
 8. **Scaricare** infine il certificato completato e fare doppio clic sul file per installarlo.
 9. A questo punto, il certificato deve essere installato nel computer, ma potrebbe essere necessario [aggiornare i profili](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) per assicurarsi che siano visibili in Xcode.
 
-In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, seguire questa procedura:
+In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, attenersi alla seguente procedura:
 
-1. Selezionare il team e fare clic su **Manage Certificates…** (Gestisci certificati):  [![](images/selectteam.png "Selezionare il team e View Details (Visualizza dettagli)")](images/selectteam.png#lightbox)
+1. Selezionare il team e fare clic su **Gestisci certificati...**:[![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png#lightbox)
 
-2. Fare quindi clic sul pulsante **Create** (Crea) accanto a **iOS Distribution Certificate** (Certificato di distribuzione iOS):  [![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
+2. Fare quindi clic sul pulsante **Crea** accanto a **certificato di distribuzione iOS**:[![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
 
-3. A seconda dei privilegi del team, verrà generata l'identità di firma, come illustrato sotto, o potrebbe essere necessario attendere l'approvazione di un agente o dell'amministratore del team:  [![](images/generated.png "L'identità di firma verrà generata e verrà visualizzata una finestra di dialogo")](images/generated.png#lightbox)
+3. A seconda dei privilegi del team, verrà generata l'identità di firma, come illustrato di seguito, oppure potrebbe essere necessario attendere che un agente o un amministratore del team lo approvi:[![](images/generated.png "Verrà generata l'identità di firma e verrà visualizzata una finestra di dialogo")](images/generated.png#lightbox)
 
 <a name="creatingprofile" />
 
@@ -94,27 +94,27 @@ Quando i componenti necessari per la creazione di un profilo di distribuzione so
 
 1. Tornare al portale di provisioning Apple e selezionare **Provisioning** > **Distribution** (Distribuzione):
 
-    [![](images/distribute01.png "Selezionare Provisioning > Distribution (Distribuzione)")](images/distribute01.png#lightbox)
+    [![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png#lightbox)
 
 2. Fare clic sul pulsante **+** e selezionare il tipo di profilo di distribuzione che si vuole creare come **App Store**:
 
-    [![](images/distribute02.png "Creare un profilo di distribuzione tramite App Store")](images/distribute02.png#lightbox)
+    [![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png#lightbox)
 
 3. Fare clic sul pulsante **Continue** (Continua) e selezionare un ID app nell'elenco a discesa per il quale si vuole creare un profilo di distribuzione:
 
-    [![](images/distribute03.png "Selezionare un ID app dall'elenco a discesa")](images/distribute03.png#lightbox)
+    [![](images/distribute03.png "Select App ID from the dropdown list")](images/distribute03.png#lightbox)
 
 4. Fare clic sul pulsante **Continue** (Continua) e selezionare il certificato necessario per firmare l'applicazione:
 
-    [![](images/distribute04.png "Selezionare il certificato necessario per firmare l'applicazione")](images/distribute04.png#lightbox)
+    [![](images/distribute04.png "Select the certificate required to sign the application")](images/distribute04.png#lightbox)
 
 5. Fare clic sul pulsante **Continue** (Continua) e selezionare i dispositivi iOS in cui sarà consentito eseguire l'applicazione Xamarin.iOS:
 
-    [![](images/distribute05.png "Selezionare i dispositivi iOS in cui sarà consentito eseguire l'app")](images/distribute05.png#lightbox)
+    [![](images/distribute05.png "Select the iOS devices that app will be allowed to run on")](images/distribute05.png#lightbox)
 
 6. Fare clic sul pulsante **Continue** (Continua) e immettere un **nome** per il nuovo profilo di distribuzione:
 
-    [![](images/distribute06.png "Immettere un nome per il nuovo profilo di distribuzione")](images/distribute06.png#lightbox)
+    [![](images/distribute06.png "Enter a Name for the new Distribution Profile")](images/distribute06.png#lightbox)
 
 7. Fare clic sul pulsante **Generate** (Genera) per creare il nuovo profilo e finalizzare il processo.
 
@@ -141,13 +141,13 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
 1. Fare doppio clic sul nome del progetto in **Esplora soluzioni** per aprirlo e modificarlo.
 2. Selezionare **Firma del bundle iOS** e **Versione | iPhone** dall'elenco a discesa **Configurazione**:
 
-    ![](images/releasexs01.png "Selezionare Versione | iPhone dal menu a discesa Configurazione")
+    ![](images/releasexs01.png "Select Release | iPhone from the Configuration dropdown")
 3. Nella maggior parte dei casi, è possibile lasciare **Identità di firma** e **Profilo di provisioning** impostati sul valore predefinito **Automatico**. Visual Studio per Mac sceglierà il profilo corretto, in base all'Identificatore del bundle in Info.plist:
 
-    ![](images/releasexs02.png "Identità di firma e Profilo di provisioning impostati sul valore predefinito Automatico")
+    ![](images/releasexs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
 4. Se necessario, selezionare l'identità di firma e il profilo di distribuzione (quello creato prima) dagli elenchi a discesa:
 
-    ![](images/releasexs03.png "Selezionare l'identità di firma e il profilo di distribuzione")
+    ![](images/releasexs03.png "Select the Signing Identity and Distribution Profiles")
 5. Fare clic su **OK** per salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -157,13 +157,13 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Proprietà** per aprirle e modificarle.
 2. Selezionare **Firma del bundle iOS** e **Versione | iPhone** dall'elenco a discesa **Configurazione**:
 
-    ![](images/releasevs01.png "Selezionare Versione | iPhone dal menu a discesa Configurazione")
+    ![](images/releasevs01.png "Select Release | iPhone from the Configuration dropdown")
 3. Nella maggior parte dei casi, è possibile lasciare **Identità di firma** e **Profilo di provisioning** impostati sul valore predefinito **Automatico**. Visual Studio sceglierà il profilo corretto, in base all'Identificatore del bundle in Info.plist
 
-    ![](images/releasevs02.png "Identità di firma e Profilo di provisioning impostati sul valore predefinito Automatico")
+    ![](images/releasevs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
 4. Se necessario, selezionare l'identità di firma e il profilo di distribuzione (quello creato prima) dagli elenchi a discesa:
 
-    ![](images/releasevs03.png "Selezionare l'identità di firma e il profilo di distribuzione")
+    ![](images/releasevs03.png "Select the Signing Identity and Distribution Profile")
 5. Salvare le modifiche alle proprietà del progetto.
 
 -----
@@ -174,9 +174,9 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
 
 Dopo il corretto provisioning dell'applicazione, il passaggio successivo prevede la configurazione delle app in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa), una suite di strumenti basati sul Web che consentono, a titolo di esempio, di gestire le applicazioni iOS nell'App Store.
 
-È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter essere inviata ad Apple per la revisione e, infine, rilasciata come app gratuita o in vendita in App Store.
+È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter inviare l'app ad Apple per la revisione e, infine, essere rilasciata come app gratuita o in vendita nell'App Store.
 
-Per altri dettagli, vedere la documentazione [Configuring an App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) (Configurazione di un'app in iTunes Connect).
+Per altri dettagli, vedere la documentazione [Configurazione di un'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
 
 <a name="submitting" />
 

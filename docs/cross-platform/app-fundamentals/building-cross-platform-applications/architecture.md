@@ -3,15 +3,15 @@ title: Parte 2 - Architettura
 description: Questo documento descrive i modelli di architettura utili per la creazione di applicazioni multipiattaforma. Vengono illustrati i tipici livelli dell'applicazione (livello dati, livello di accesso ai dati e così via) e i modelli comuni di software per dispositivi mobili (MVVM, MVC e così via)
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 84a06e23ec7125892701762ab5bad7b86a8faf90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762111"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030269"
 ---
 # <a name="part-2---architecture"></a>Parte 2 - Architettura
 
@@ -46,7 +46,7 @@ I modelli sono un modo consolidato per acquisire soluzioni ricorrenti ai problem
 
 - **Model, View, ViewModel (MVVM)** : il modello Model-View-ViewModel è molto diffuso con i Framework che supportano l'associazione dati, ad esempio Novell. Forms. È stata diffusa da SDK abilitati per XAML come Windows Presentation Foundation (WPF) e Silverlight; dove il ViewModel funge da passaggio tra i dati (modello) e l'interfaccia utente (visualizzazione) tramite data binding e comandi.
 - **Modello, visualizzazione, controller (MVC)** : modello comune e spesso non compreso, MVC viene usato più spesso quando si compilano interfacce utente e fornisce una separazione tra la definizione effettiva di una schermata dell'interfaccia utente (visualizzazione), il motore dietro il quale gestisce l'interazione ( E i dati che popolano il controller (Model). Il modello è effettivamente un componente completamente facoltativo e pertanto il nucleo della comprensione di questo modello è la visualizzazione e il controller. MVC è un approccio comune per le applicazioni iOS.
-- **Facciata aziendale** , noto anche come modello di Manager, fornisce un punto di ingresso semplificato per il lavoro complesso. Ad esempio, in un'applicazione di rilevamento delle attività potrebbe essere presente `TaskManager` una classe con metodi `GetAllTasks()` come, `GetTask(taskID)` `SaveTask (task)` , e così via. La `TaskManager` classe fornisce una facciata ai processi interni di salvataggio/recupero degli oggetti attività.
+- **Facciata aziendale** , noto anche come modello di Manager, fornisce un punto di ingresso semplificato per il lavoro complesso. Ad esempio, in un'applicazione di rilevamento delle attività potrebbe essere presente una classe `TaskManager` con metodi quali `GetAllTasks()`, `GetTask(taskID)`, `SaveTask (task)` e così via. La classe `TaskManager` fornisce una facciata ai processi interni di salvataggio/recupero degli oggetti attività.
 - **Singleton** : il modello singleton fornisce una modalità in cui può esistere una sola istanza di un oggetto specifico. Ad esempio, quando si usa SQLite nelle applicazioni per dispositivi mobili, si vuole solo un'istanza del database. L'uso del modello singleton è un modo semplice per garantire questo problema.
 - **Provider** : modello coniato da Microsoft (probabilmente simile a strategia o inserimento di dipendenze di base) per incoraggiare il riutilizzo del codice tra le applicazioni Silverlight, WPF e Windows Form. Il codice condiviso può essere scritto in base a un'interfaccia o a una classe astratta e le implementazioni concrete specifiche della piattaforma vengono scritte e passate quando viene usato il codice.
 - **Async** : da non confondere con la parola chiave async, il modello asincrono viene usato quando è necessario eseguire un lavoro a esecuzione prolungata senza mantenere l'interfaccia utente o l'elaborazione corrente. Nella sua forma più semplice, il modello asincrono descrive semplicemente che le attività a esecuzione prolungata devono essere avviate in un altro thread (o un'astrazione di thread simile, ad esempio un'attività) mentre il thread corrente continua a elaborare ed è in attesa di una risposta dal processo in background , quindi aggiorna l'interfaccia utente quando vengono restituiti i dati e o lo stato.

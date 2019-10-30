@@ -4,15 +4,15 @@ description: Questo documento descrive le varie modifiche del Framework introdot
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 628d2c8efe9459378c64c55d653eac14c55e0815
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768588"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028277"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Modifiche ai Framework di watchos 3 aggiuntivi
 
@@ -27,7 +27,7 @@ Sono stati apportati i miglioramenti seguenti al Framework di dati principale pe
 - Gli oggetti [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) radice supportano gli errori e il recupero simultanei senza serializzazione.
 - La classe [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) gestisce un pool di archivi dati SQLite.
 - Gli oggetti [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) con gli archivi dati SQLite nella modalità Journal Wal supportano la nuova funzionalità di generazione delle query in cui i contesti degli oggetti gestiti (MOC) possono essere aggiunti a versioni specifiche del database per le transazioni di recupero e di errore future.
-- Utilizzo di alto livello `NSPersistenceContainer` per `NSPersistentStoreCoordinator`fare riferimento a, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e altre risorse di configurazione dei dati principali.
+- Uso del `NSPersistenceContainer` generale per fare riferimento al `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e ad altre risorse di configurazione dei dati principali.
 - Sono stati aggiunti diversi nuovi metodi pratici per `NSManagedObject` semplificare l'esecuzione di operazioni di recupero e creazione di sottoclassi.
 
 Per altre informazioni, vedere la Guida di [riferimento a Core Data Framework](https://developer.apple.com/reference/coredata)di Apple.
@@ -53,9 +53,9 @@ Di seguito sono riportati i miglioramenti apportati al Framework di base per Wat
 
 Sono stati apportati i miglioramenti seguenti a HealthKit Framework per Watch OS 3:
 
-- Usare la nuova classe [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) per specificare `ActivityType` e `LocationType` di un allenamento.
+- Usare la nuova classe [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) per specificare il `ActivityType` e `LocationType` di un allenamento.
 - Sono stati aggiunti i nuovi [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) e il metodo `WheelchairUse` della classe [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) per lavorare con i dati di integrità correlati a carrozzine.
-- Sono state aggiunte nuove chiavi di metadati per i tipi meteorologici `HKWeatherConditionClear` ( `HKWeatherConditionCloudy`ad esempio e) e sono stati `HKWorkoutActivityTypeFlexibility` aggiunti `HKWorkoutActivityTypeWheelchairRunPace`tipi di allenamento (ad esempio e).
+- Sono state aggiunte nuove chiavi di metadati per i tipi meteorologici (ad esempio `HKWeatherConditionClear` e `HKWeatherConditionCloudy`) e sono stati aggiunti tipi di allenamento (ad esempio, `HKWorkoutActivityTypeFlexibility` e `HKWorkoutActivityTypeWheelchairRunPace`).
 
 ## <a name="homekit"></a>HomeKit
 
@@ -76,8 +76,8 @@ Sono stati apportati i miglioramenti seguenti a PassKit Framework per Watch OS 3
 
 Sono stati apportati i miglioramenti seguenti a UIKit Framework per Watch OS 3:
 
-- Per supportare il tipo dinamico nelle etichette, i campi `PreferredFontForTextStyle` `UIFont` di testo e le caselle di testo utilizzano il nuovo metodo della classe.
-- Il `ColorWithDisplayP3` metodo è stato aggiunto per supportare il colore Wide.
+- Per supportare il tipo dinamico nelle etichette, i campi di testo e le caselle di testo utilizzano il nuovo metodo `PreferredFontForTextStyle` della classe `UIFont`.
+- Il metodo `ColorWithDisplayP3` è stato aggiunto per supportare il colore Wide.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

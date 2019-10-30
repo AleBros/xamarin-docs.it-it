@@ -4,25 +4,25 @@ description: Come usare il widget switch in un'applicazione Novell. Android
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/29/2018
-ms.openlocfilehash: 82271711864363bbaf593e8c44e31632048399dc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 73becb5e4424854c9be6cdc3554f6cf93507b9a9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764883"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029130"
 ---
 # <a name="xamarinandroid-switch"></a>Switch Novell. Android
 
-Il `Switch` widget (mostrato di seguito) consente a un utente di passare da uno stato all'altro, ad esempio on o off. Il `Switch` valore predefinito è off. Il widget è riportato di seguito negli Stati ON e OFF:
+Il widget `Switch` (illustrato di seguito) consente a un utente di passare da uno stato all'altro, ad esempio ON o OFF. Il valore predefinito `Switch` è disattivato. Il widget è riportato di seguito negli Stati ON e OFF:
 
-[![Screenshot di un widget switch negli Stati OFF e ON](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
+[![screenshot di un widget switch negli Stati OFF e ON](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
 ## <a name="creating-a-switch"></a>Creazione di un'opzione
 
-Per creare un'opzione, è sufficiente dichiarare `Switch` un elemento in XML, come indicato di seguito:
+Per creare un'opzione, è sufficiente dichiarare un elemento `Switch` in XML, come indicato di seguito:
 
 ```xml
 <Switch android:layout_width="wrap_content"
@@ -31,11 +31,11 @@ Per creare un'opzione, è sufficiente dichiarare `Switch` un elemento in XML, co
 
 Viene creato un commute di base, come illustrato di seguito:
 
-[![Screenshot dell'app demo che visualizza un interruttore nello stato disattivato](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
+[![screenshot dell'app demo che visualizza un interruttore nello stato disattivato](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
 ## <a name="changing-default-values"></a>Modifica dei valori predefiniti
 
-Sia il testo visualizzato dal controllo per gli stati ON che OFF e il valore predefinito sono configurabili. Ad esempio, per impostare il parametro su on e leggere No/Yes anziché off/on, è possibile impostare gli `checked`attributi, `textOn`e `textOff` nel codice XML seguente.
+Sia il testo visualizzato dal controllo per gli stati ON che OFF e il valore predefinito sono configurabili. Ad esempio, per impostare il parametro su ON e leggere NO/YES anziché OFF/ON, è possibile impostare gli attributi `checked`, `textOn`e `textOff` nel codice XML seguente.
 
 ```xml
 <Switch android:layout_width="wrap_content"
@@ -47,7 +47,7 @@ Sia il testo visualizzato dal controllo per gli stati ON che OFF e il valore pre
 
 ## <a name="providing-a-title"></a>Fornire un titolo
 
-Il `Switch` widget supporta anche l'inclusione di un'etichetta di `text` testo impostando l'attributo nel modo seguente:
+Il widget `Switch` supporta anche l'inclusione di un'etichetta di testo impostando l'attributo `text` come segue:
 
 ```xml
 <Switch android:text="Is Xamarin.Android great?"
@@ -60,10 +60,10 @@ Il `Switch` widget supporta anche l'inclusione di un'etichetta di `text` testo i
 
 Questo markup produce lo screenshot seguente in fase di esecuzione:
 
-[![Screenshot dell'app demo con testo che precede orizzontalmente il widget switch](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
+[![screenshot dell'app demo con testo che precede orizzontalmente il widget switch](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
-Quando un `Switch`valore di viene modificato, viene generato `CheckedChange` un evento.
-Nel codice seguente, ad esempio, si acquisisce questo evento e si `Toast` presenta un widget con un messaggio basato `isChecked` sul valore `Switch`di, che viene passato `CompoundButton.CheckedChangeEventArg` al gestore eventi come parte dell'argomento.
+Quando viene modificato il valore di un `Switch`, viene generato un evento di `CheckedChange`.
+Nel codice seguente, ad esempio, si acquisisce questo evento e si presenta un `Toast` widget con un messaggio basato sul valore `isChecked` di `Switch`, che viene passato al gestore eventi come parte dell'argomento `CompoundButton.CheckedChangeEventArg`.
 
 ```csharp
 Switch s = FindViewById<Switch> (Resource.Id.monitored_switch);

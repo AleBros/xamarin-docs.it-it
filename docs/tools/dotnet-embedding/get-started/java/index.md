@@ -3,15 +3,15 @@ title: Introduzione a Java
 description: Questo documento descrive come iniziare a usare l'incorporamento .NET con Java. Vengono illustrati i requisiti di sistema, l'installazione e le piattaforme supportate.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 8d6bc284d07ce1be11ad273f875b75a70ae14a0f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 09ea33724c2b1184654ce7768ea1cb2525b62c28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278398"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007373"
 ---
 # <a name="getting-started-with-java"></a>Introduzione a Java
 
@@ -22,7 +22,7 @@ Si tratta della pagina introduttiva per Java, che illustra le nozioni di base pe
 Per usare l'incorporamento .NET con Java, è necessario:
 
 * Java 1,8 o versione successiva
-* [Mono 5.0](https://www.mono-project.com/download/)
+* [Mono 5,0](https://www.mono-project.com/download/)
 
 Per Mac:
 
@@ -59,7 +59,7 @@ Inoltre, è possibile compilare l'incorporamento .NET dall'origine, vedere il [r
 
 Java è attualmente in uno stato di anteprima per macOS, Windows e Android.
 
-La piattaforma viene selezionata passando l'argomento `--platform=<platform>` della riga di comando allo strumento di incorporamento .NET. Attualmente `macOS`sono `Windows`supportati, `Android` e.
+La piattaforma viene selezionata passando il `--platform=<platform>` argomento della riga di comando allo strumento di incorporamento .NET. Attualmente `macOS`, `Windows`e `Android` sono supportati.
 
 ### <a name="macos-and-windows"></a>macOS e Windows
 

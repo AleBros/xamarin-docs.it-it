@@ -4,15 +4,15 @@ description: Questo documento descrive come distribuire un'app watchos compilata
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 6d3756f4215174e17ec45518f430dc38270e3289
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768694"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028358"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Test sui dispositivi Apple Watch
 
@@ -26,21 +26,21 @@ Dopo aver seguito la [procedura di distribuzione](~/ios/watchos/deploy-test/inde
 
 ## <a name="devices"></a>Dispositivi
 
-Il test delle app iOS in un iPhone o iPad reale ha sempre richiesto la registrazione del dispositivo in Dev Center. L'elenco dei dispositivi ha un aspetto simile al seguente ( **+** fare clic sul segno più per aggiungere un nuovo dispositivo):
+Il test delle app iOS in un iPhone o iPad reale ha sempre richiesto la registrazione del dispositivo in Dev Center. L'elenco dei dispositivi ha un aspetto simile al seguente (fare clic sul segno più **+** per aggiungere un nuovo dispositivo):
 
-![](device-images/devices-sml.png "L'elenco dei dispositivi ha un aspetto simile al seguente")
+![](device-images/devices-sml.png "The device list looks like this")
 
 Gli orologi non sono diversi. è ora necessario aggiungere il dispositivo Apple Watch prima di distribuire le app. Trovare il UDID dell'orologio usando **Xcode** (**Windows > Devices** List). Quando il telefono associato è connesso, verranno visualizzate anche le informazioni dell'espressione di controllo:
 
-[![](device-images/xcode-devices-sml.png "Informazioni di controllo associate")](device-images/xcode-devices.png#lightbox)
+[![](device-images/xcode-devices-sml.png "Paired Watch Information")](device-images/xcode-devices.png#lightbox)
 
 Quando si conosce il UDID dell'orologio, aggiungerlo all'elenco dei dispositivi in Dev Center:
 
-![](device-images/devices-watch-sml.png "UDID dell'espressione di controllo nell'elenco dei dispositivi")
+![](device-images/devices-watch-sml.png "The Watch's UDID in the device list")
 
 Quando il dispositivo di controllo è stato aggiunto, assicurarsi che sia selezionato in uno sviluppo nuovo o esistente o in profili di provisioning ad hoc creati:
 
-![](device-images/devices-provisioning.png "Elenco dei dispositivi disponibili")
+![](device-images/devices-provisioning.png "Available device list")
 
 Non dimenticare se si modifica un profilo di provisioning esistente per scaricare e reinstallare.
 
@@ -52,17 +52,17 @@ Per compilare per i test nel dispositivo è necessario creare un **profilo di pr
 
 Se si dispone di un ID app con caratteri jolly, *sarà necessario solo un profilo di provisioning*; Tuttavia, se si dispone di un ID app separato per ogni progetto, è necessario un profilo di provisioning per ogni ID app:
 
-![](device-images/provisioningprofile-development.png "Profilo di provisioning di sviluppo")
+![](device-images/provisioningprofile-development.png "The Development Provisioning Profile")
 
 Una volta creati tutti e tre i profili, verranno visualizzati nell'elenco. Ricordarsi di scaricare e installare ognuno di essi:
 
-![](device-images/provisioningprofiles.png "Profili di provisioning di sviluppo disponibili")
+![](device-images/provisioningprofiles.png "The available Development Provisioning Profiles")
 
 È possibile verificare il profilo di provisioning nelle **Opzioni del progetto** selezionando la schermata **Compila > firma del bundle iOS** e selezionando la configurazione di **rilascio** o **debug di iPhone** .
 
 L'elenco **profilo di provisioning** mostrerà tutti i profili corrispondenti. verranno visualizzati i profili corrispondenti creati in questo elenco a discesa:
 
-![](device-images/options-selectprofile.png "Elenco del profilo di provisioning")
+![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
 <a name="testing" />
 
@@ -87,17 +87,17 @@ Dopo aver configurato il dispositivo, gli ID app e i profili di provisioning, si
 
 8. Se l'app Watch viene installata correttamente, l'icona rimarrà visualizzata nella schermata di controllo per iniziare a testare l'app.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Se si verifica un errore durante la distribuzione, usare la **vista > i rilievi > log del dispositivo** per visualizzare altre informazioni sull'errore. Di seguito sono elencati alcuni errori e le relative cause:
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>Errore MT3001: Non è stato possibile AOT l'assembly
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>Errore MT3001: non è stato possibile AOT l'assembly
 
 Questo problema può verificarsi durante la compilazione in modalità di DEBUG per la distribuzione in un dispositivo Apple Watch.
 
 Per risolvere *temporaneamente* questo problema, disabilitare le **compilazioni incrementali** nelle opzioni del progetto dell'estensione Watch **> Compila > finestra di compilazione watchos** :
 
-[![](device-images/disable-incremental-sml.png "Casella di controllo compilazioni incrementali")](device-images/disable-incremental.png#lightbox)
+[![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png#lightbox)
 
 Questo problema verrà risolto in una versione futura, dopo le quali è possibile abilitare nuovamente le compilazioni incrementali per sfruttare i tempi di compilazione più rapidi.
 
@@ -112,7 +112,7 @@ Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![](device-images/invalid-application-executable.png "Avviso eseguibile dell'applicazione non valido")
+![](device-images/invalid-application-executable.png "Invalid Application Executable alert")
 
 Se questi messaggi vengono visualizzati *nella schermata di controllo* dopo che l'app ha tentato di eseguire l'installazione, potrebbero essersi verificati alcuni problemi:
 
@@ -120,7 +120,7 @@ Se questi messaggi vengono visualizzati *nella schermata di controllo* dopo che 
 
 - I profili di provisioning di sviluppo usati per i test non hanno incluso il dispositivo Watch; in alternativa, dopo che l'espressione di controllo è stata aggiunta ai profili di provisioning, non è stato nuovamente scaricato e reinstallato. Seguire le istruzioni per [configurare correttamente i profili di provisioning](#profiles).
 
-- Se il **log del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` , il valore **MinimumOSVersion** dell'app Watch **. plist** non è corretto.
+- Se il **log del dispositivo iOS** contiene `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3`, il valore **MinimumOSVersion** dell'app Watch **. plist** non è corretto.
   Dovrebbe essere **8,2** : se è stato installato Xcode 6,3, potrebbe essere necessario modificare manualmente il codice sorgente per inserirlo in 8,2.
 
 - Il titolo dell'app Watch **. plist** non dispone correttamente di un diritto abilitato, ad esempio gruppi di app, che non deve avere.

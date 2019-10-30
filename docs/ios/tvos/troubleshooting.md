@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 11ac6289b7d2f278f534f5a65679754d212b5067
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769098"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030523"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Risoluzione dei problemi relativi alle app tvOS compilate con Novell
 
@@ -28,13 +28,13 @@ La versione corrente del supporto tvOS di Novell presenta i seguenti problemi no
 - **Mono Framework** : crittografia mono 4,3. ProtectedData non riesce a decrittografare i dati da mono 4,2. Di conseguenza, i pacchetti NuGet non vengono ripristinati con l'errore `Data unprotection failed` quando viene configurata un'origine NuGet protetta.
   - **Soluzione alternativa** : in Visual Studio per Mac è necessario aggiungere tutte le origini dei pacchetti NuGet che usano l'autenticazione della password prima di ritentare il ripristino dei pacchetti.
 - **Visual Studio per Mac w/ F# componente aggiuntivo** : errore durante la creazione di F# un modello Android in Windows. Questa operazione dovrebbe continuare a funzionare correttamente in Mac.
-- **Novell. Mac** : quando si esegue il progetto di modello unificato Novell. Mac con il Framework di `Unsupported`destinazione impostato su `Could not connect to the debugger` , è possibile che venga visualizzata la finestra popup.
+- **Novell. Mac** : quando si esegue il progetto di modello unificato Novell. Mac con il Framework di destinazione impostato su `Unsupported`, è possibile che venga visualizzata la `Could not connect to the debugger` popup.
   - **Potenziale soluzione alternativa** : eseguire il downgrade della versione di mono Framework disponibile nel canale stabile.
-- **Novell Visual Studio & Novell. iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` è possibile che venga visualizzato l'errore.
+- **Novell Visual studio & Novell. iOS** : quando si distribuiscono applicazioni WatchKit in Visual Studio, è possibile che venga visualizzato l'errore `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist`.
 
 Segnalare eventuali bug trovati su [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Le sezioni seguenti elencano alcuni problemi noti che possono verificarsi quando si usa tvOS 9 con Novell. tvOS e la soluzione a questi problemi:
 
@@ -47,7 +47,7 @@ Per risolvere questo problema, eseguire le operazioni seguenti:
 1. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul file di progetto Novell. tvOS nella **Esplora soluzioni** e scegliere **Opzioni**.
 2. Selezionare **compilazione tvOS** e assicurarsi che la configurazione di **rilascio** sia la seguente: 
 
-    [![](troubleshooting-images/ts01.png "Selezionare le opzioni di compilazione tvOS")](troubleshooting-images/ts01.png#lightbox)
+    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
 3. Aggiungere `--bitcode=asmonly` al campo **argomenti aggiuntivi di mTouch** e fare clic sul pulsante **OK** .
 4. Ricompilare l'app nella configurazione di **rilascio** .
 
@@ -76,11 +76,11 @@ Section
  reserved2 0
 ```
 
-`addr`e `size` saranno diversi, ma gli altri campi devono essere identici.
+`addr` e `size` saranno diversi, ma gli altri campi devono essere identici.
 
-È necessario assicurarsi che qualsiasi libreria statica (`.a`) di terze parti in uso sia stata compilata in base alle librerie tvOS (non alle librerie iOS) e che includa anche le informazioni di bitcode.
+È necessario assicurarsi che tutte le librerie statiche (`.a`) di terze parti in uso siano state compilate in base alle librerie tvOS (non alle librerie iOS) e che includano anche le informazioni di bitcode.
 
-Per le app o le `size` librerie che includono bitcode validi, sarà maggiore di uno. Esistono situazioni in cui una raccolta può avere il marcatore bitcode, ma non contiene bitcode validi. Ad esempio:
+Per le app o le librerie che includono bitcode validi, il `size` sarà maggiore di uno. Esistono situazioni in cui una raccolta può avere il marcatore bitcode, ma non contiene bitcode validi. Esempio:
 
 **Bitcode non valido**
 
@@ -102,7 +102,7 @@ $ otool -l -arch arm64 libDownloadableAgent-tvos.a |grep __bitcode -A 3
       size 0x0000000000045440
 ```
 
-Si noti che la `size` differenza tra le due librerie nell'esempio elencato viene eseguita sopra. La libreria deve essere generata da una compilazione di archivio Xcode con bitcode abilitato (impostazione `ENABLE_BITCODE`Xcode) come soluzione a questo problema di dimensione.
+Si noti la differenza nella `size` tra le due librerie nell'esempio elencato viene eseguito sopra. La libreria deve essere generata da una compilazione di archivio Xcode con bitcode abilitato (impostazione Xcode `ENABLE_BITCODE`) come soluzione a questo problema di dimensioni.
 
 ### <a name="apps-that-only-contain-the-arm64-slice-must-also-have-arm64-in-the-list-of-uirequireddevicecapabilities-in-infoplist"></a>Le app che contengono solo la sezione arm64 devono anche avere "arm64" nell'elenco di UIRequiredDeviceCapabilities in info. plist
 
@@ -110,7 +110,7 @@ Quando si invia un'app all'App Store di Apple TV per la pubblicazione, è possib
 
 _"Le app che contengono solo la sezione arm64 devono avere anche" arm64 "nell'elenco di UIRequiredDeviceCapabilities in info. plist"._
 
-In tal caso, modificare il `Info.plist` file e verificare che disponga delle chiavi seguenti:
+In tal caso, modificare il file di `Info.plist` e verificare che disponga delle chiavi seguenti:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -123,9 +123,9 @@ Ricompilare l'app per il rilascio e inviare nuovamente a iTunes Connect.
 
 ### <a name="task-mtouch-execution----failed"></a>Esecuzione dell'attività "MTouch" non riuscita
 
-Se si usa una libreria di terze parti (ad esempio monogame) e la compilazione della versione non è riuscita con una serie di messaggi `Task "MTouch" execution -- FAILED`di errore lunghi `-gcc_flags="-framework OpenAL"` che terminano con, provare ad aggiungere gli **argomenti di tocco aggiuntivi**:
+Se si usa una libreria di terze parti (ad esempio monogame) e la compilazione della versione non è riuscita con una serie di messaggi di errore lunghi che terminano con `Task "MTouch" execution -- FAILED`, provare ad aggiungere `-gcc_flags="-framework OpenAL"` agli **argomenti di tocco aggiuntivi**:
 
-[![](troubleshooting-images/mtouch01.png "Esecuzione MTouch attività")](troubleshooting-images/mtouch01.png#lightbox)
+[![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png#lightbox)
 
 È inoltre necessario includere `--bitcode=asmonly` negli **argomenti tocco aggiuntivi**, impostare le opzioni del linker su **collega tutto** ed eseguire una compilazione pulita.
 
@@ -133,12 +133,12 @@ Se si usa una libreria di terze parti (ad esempio monogame) e la compilazione de
 
 Se viene ricevuto un messaggio nel formato "errore ITMS-90471. L'icona grande è mancante "durante il tentativo di inviare un'app Novell. tvOS all'App Store di Apple TV per la versione, controllare quanto segue:
 
-1. Assicurarsi di aver incluso gli asset icone grandi nel `Assets.car` file creati usando la documentazione delle icone dell' [app](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) .
-2. Assicurarsi di aver incluso il `Assets.car` file dalla documentazione sull' [uso delle icone e delle immagini](~/ios/tvos/app-fundamentals/icons-images.md) nel bundle dell'applicazione finale.
+1. Assicurarsi di aver incluso gli asset icone grandi nel file `Assets.car` creato usando la documentazione delle icone dell' [app](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) .
+2. Assicurarsi di aver incluso il file di `Assets.car` dalla documentazione sull' [uso di icone e immagini](~/ios/tvos/app-fundamentals/icons-images.md) nel bundle di applicazioni finale.
 
 ### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>Bundle non valido: un'app che supporta i controller di gioco deve supportare anche il servizio Apple TV remoto
 
-oppure 
+Oppure 
 
 ### <a name="invalid-bundle--apple-tv-apps-with-the-gamecontroller-framework-must-include-the-gcsupportedgamecontrollers-key-in-the-apps-infoplist"></a>Bundle non valido: le app Apple TV con GameController Framework devono includere la chiave GCSupportedGameControllers nel file INFO. plist dell'app
 
@@ -150,11 +150,11 @@ _Sono stati individuati uno o più problemi con il recapito recente per "nome ap
 
 _Bundle non valido: un'app che supporta i controller di gioco deve supportare anche la modalità remota di Apple TV._
 
-oppure 
+Oppure 
 
 _Bundle non valido: le app Apple TV con GameController Framework devono includere la chiave GCSupportedGameControllers nel file INFO. plist dell'app._
 
-La soluzione consiste nell'aggiungere il supporto per Siri remote (`GCMicroGamepad`) al file dell' `Info.plist` app. Il profilo di micro Game controller è stato aggiunto da Apple per la destinazione di Siri remote. Includere, ad esempio, le chiavi seguenti:
+La soluzione consiste nell'aggiungere il supporto per Siri remote (`GCMicroGamepad`) al file di `Info.plist` dell'app. Il profilo di micro Game controller è stato aggiunto da Apple per la destinazione di Siri remote. Includere, ad esempio, le chiavi seguenti:
 
 ```xml
 <key>GCSupportedGameControllers</key>  

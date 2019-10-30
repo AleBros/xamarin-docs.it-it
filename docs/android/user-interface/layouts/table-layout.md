@@ -3,20 +3,20 @@ title: Novell. Android TableLayout
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4175b1fa62b2bc0e4209d13934c2bdbdd1e2a085
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758390"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028740"
 ---
 # <a name="xamarinandroid-tablelayout"></a>Novell. Android TableLayout
 
-[`TableLayout`](xref:Android.Widget.TableLayout)è un[`ViewGroup`](xref:Android.Views.ViewGroup)
-che Visualizza l'elemento figlio[`View`](xref:Android.Views.View)
+[`TableLayout`](xref:Android.Widget.TableLayout) è un [`ViewGroup`](xref:Android.Views.ViewGroup)
+che visualizza [`View`](xref:Android.Views.View) figlio
 elementi in righe e colonne.
 
 Avviare un nuovo progetto denominato **HelloTableLayout**.
@@ -102,12 +102,12 @@ Aprire il file **Resources/layout/Main. aXML** e inserire quanto segue:
 </TableLayout>
 ```
 
-Si noti che questo aspetto è simile alla struttura di una tabella HTML. Il[`TableLayout`](xref:Android.Widget.TableLayout)
-l'elemento è simile all' `<table>` elemento HTML.[`TableRow`](xref:Android.Widget.TableRow)
-è simile a `<tr>` un elemento, ma per le celle è possibile utilizzare qualsiasi tipo di [`View`](xref:Android.Views.View) elemento. In questo esempio,[`TextView`](xref:Android.Widget.TextView)
-viene utilizzato per ogni cella. In una parte delle righe è presente anche un oggetto di base [`View`](xref:Android.Views.View), che viene usato per creare una linea orizzontale.
+Si noti che questo aspetto è simile alla struttura di una tabella HTML. [`TableLayout`](xref:Android.Widget.TableLayout)
+l'elemento è simile all'elemento HTML `<table>`; [`TableRow`](xref:Android.Widget.TableRow)
+è simile a un elemento `<tr>`; Tuttavia, per le celle, è possibile usare qualsiasi tipo di elemento [`View`](xref:Android.Views.View) . In questo esempio, un [`TextView`](xref:Android.Widget.TextView)
+viene utilizzato per ogni cella. In una parte delle righe è presente anche un [`View`](xref:Android.Views.View)di base, che viene usato per creare una linea orizzontale.
 
-Assicurarsi che l'attività **HelloTableLayout** carichi questo layout nel[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Assicurarsi che l'attività **HelloTableLayout** carichi questo layout nel [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 Metodo
 
 ```csharp
@@ -118,11 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-Il [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)metodo) carica il file di layout per [`Activity`](xref:Android.App.Activity)l'oggetto, specificato dall'ID &mdash; `Resource.Layout.Main` risorsa, che fa riferimento al file di layout **Resources/layout/Main. aXML** .
+Il metodo [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) carica il file di layout per il [`Activity`](xref:Android.App.Activity), specificato dall'ID risorsa &mdash; `Resource.Layout.Main` fa riferimento al file di layout **Resources/layout/Main. aXML** .
 
 Eseguire l'applicazione. Verrà visualizzato quanto segue:
 
-[![Schermata di esempio dell'app TableLayout che Visualizza più righe di tabella](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[schermata di esempio![dell'app TableLayout che Visualizza più righe della tabella](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 ## <a name="references"></a>Riferimenti
 
@@ -130,4 +130,4 @@ Eseguire l'applicazione. Verrà visualizzato quanto segue:
 - [`TableRow`](xref:Android.Widget.TableRow)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella [licenza Creative Commons 2,5 Attribution](http://creativecommons.org/licenses/by/2.5/)._
+_Parti di questa pagina sono modifiche basate sul lavoro creato e condivise dal progetto open source Android e usate in base alle condizioni descritte nella [licenza Creative Commons 2,5 Attribution](https://creativecommons.org/licenses/by/2.5/)._

@@ -4,15 +4,15 @@ description: Questo documento descrive come usare il Framework di visione di iOS
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: efe3f2d4c79dc6e5e2a7f13408de52e05006e10a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b58e7b1fffed3253d9765401d52f16b751db134d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752267"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032062"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Framework di visione in Novell. iOS
 
@@ -39,16 +39,16 @@ Nell' [esempio VisionRects](https://docs.microsoft.com/samples/xamarin/ios-sampl
 
 ### <a name="1-initialize-the-vision-request"></a>1. Inizializza la richiesta di visione
 
-In `ViewDidLoad`creare un oggetto `VNDetectRectanglesRequest` che fa riferimento `HandleRectangles` al metodo che verrà chiamato alla fine di ogni richiesta:
+In `ViewDidLoad`creare un `VNDetectRectanglesRequest` che faccia riferimento al metodo `HandleRectangles` che verrà chiamato alla fine di ogni richiesta:
 
-È `MaximumObservations` necessario impostare anche la proprietà; in caso contrario, il valore predefinito è 1 e verrà restituito solo un singolo risultato.
+È necessario impostare anche la proprietà `MaximumObservations`. in caso contrario, il valore predefinito è 1 e verrà restituito solo un singolo risultato.
 
 ```csharp
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 RectangleRequest.MaximumObservations = 10;
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Avviare l'elaborazione della visione
+### <a name="2-start-the-vision-processing"></a>2. avviare l'elaborazione della visione
 
 Il codice seguente avvia l'elaborazione della richiesta. Nell'esempio **VisionRects** questo codice viene eseguito dopo che l'utente ha selezionato un'immagine:
 
@@ -60,11 +60,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Questo gestore passa `ciImage` al Framework `VNDetectRectanglesRequest` di visione creato nel passaggio 1.
+Questo gestore passa il `ciImage` al Framework di visione `VNDetectRectanglesRequest` creato nel passaggio 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Gestire i risultati dell'elaborazione della visione
+### <a name="3-handle-the-results-of-vision-processing"></a>3. gestire i risultati dell'elaborazione della visione
 
-Una volta completato il rilevamento del rettangolo, il Framework esegue il `HandleRectangles` metodo, un riepilogo di cui è illustrato di seguito:
+Al termine del rilevamento del rettangolo, il Framework esegue il `HandleRectangles` metodo, un riepilogo di cui è illustrato di seguito:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -86,9 +86,9 @@ private void HandleRectangles(VNRequest request, NSError error){
 }
 ```
 
-### <a name="4-display-the-results"></a>4. Visualizzare i risultati
+### <a name="4-display-the-results"></a>4. visualizzare i risultati
 
-Il `OverlayRectangles` metodo nell'esempio **VisionRectangles** dispone di tre funzioni:
+Il metodo `OverlayRectangles` nell'esempio **VisionRectangles** dispone di tre funzioni:
 
 - Rendering dell'immagine di origine
 - Disegno di un rettangolo per indicare dove è stato rilevato ogni oggetto e
@@ -98,7 +98,7 @@ Consente di visualizzare l' [origine dell'esempio](https://docs.microsoft.com/sa
 
 ![Foto con tre rettangoli rilevati](vision-images/found-rectangles-phone-sml.png)
 
-### <a name="5-further-processing"></a>5. Ulteriori elaborazioni
+### <a name="5-further-processing"></a>5. ulteriore elaborazione
 
 Il rilevamento del rettangolo è spesso solo il primo passaggio di una catena di operazioni, ad esempio con [questo esempio CoreMLVision](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), in cui i rettangoli vengono passati a un modello CoreML per analizzare le cifre scritte a mano.
 
@@ -110,13 +110,13 @@ L' [esempio VisionFaces](https://docs.microsoft.com/samples/xamarin/ios-samples/
 
 ### <a name="1-initialize-the-vision-request"></a>1. Inizializza la richiesta di visione
 
-In `ViewDidLoad`creare un oggetto `VNDetectFaceRectanglesRequest` che fa riferimento `HandleRectangles` al metodo che verrà chiamato alla fine di ogni richiesta.
+In `ViewDidLoad`creare un `VNDetectFaceRectanglesRequest` che faccia riferimento al metodo `HandleRectangles` che verrà chiamato alla fine di ogni richiesta.
 
 ```csharp
 FaceRectangleRequest = new VNDetectFaceRectanglesRequest(HandleRectangles);
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Avviare l'elaborazione della visione
+### <a name="2-start-the-vision-processing"></a>2. avviare l'elaborazione della visione
 
 Il codice seguente avvia l'elaborazione della richiesta. Nell'esempio **VisionFaces** questo codice viene eseguito dopo che l'utente ha selezionato un'immagine:
 
@@ -128,11 +128,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Questo gestore passa `ciImage` al Framework `VNDetectFaceRectanglesRequest` di visione creato nel passaggio 1.
+Questo gestore passa il `ciImage` al Framework di visione `VNDetectFaceRectanglesRequest` creato nel passaggio 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Gestire i risultati dell'elaborazione della visione
+### <a name="3-handle-the-results-of-vision-processing"></a>3. gestire i risultati dell'elaborazione della visione
 
-Una volta completato il rilevamento del viso, il gestore esegue il `HandleRectangles` metodo che esegue la gestione degli errori e Visualizza i limiti delle facce rilevate e `OverlayRectangles` chiama per creare rettangoli di delimitazione nell'immagine originale:
+Al termine del rilevamento della faccia, il gestore esegue il `HandleRectangles` metodo che esegue la gestione degli errori e Visualizza i limiti delle facce rilevate e chiama il `OverlayRectangles` per creare rettangoli di delimitazione nell'immagine originale:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -159,9 +159,9 @@ private void HandleRectangles(VNRequest request, NSError error){
 }
 ```
 
-### <a name="4-display-the-results"></a>4. Visualizzare i risultati
+### <a name="4-display-the-results"></a>4. visualizzare i risultati
 
-Il `OverlayRectangles` metodo nell'esempio **VisionFaces** dispone di tre funzioni:
+Il metodo `OverlayRectangles` nell'esempio **VisionFaces** dispone di tre funzioni:
 
 - Rendering dell'immagine di origine
 - Disegno di un rettangolo per ogni viso rilevato
@@ -171,9 +171,9 @@ Consente di visualizzare l' [origine dell'esempio](https://docs.microsoft.com/sa
 
 ![Fotografa con due visi rilevati](vision-images/found-faces-phone-sml.png)
 
-### <a name="5-further-processing"></a>5. Ulteriori elaborazioni
+### <a name="5-further-processing"></a>5. ulteriore elaborazione
 
-Il Framework di visione include funzionalità aggiuntive per rilevare le funzionalità del viso, ad esempio gli occhi e la bocca. Usare il `VNDetectFaceLandmarksRequest` tipo, che restituirà `VNFaceObservation` i risultati come indicato nel passaggio 3, ma con `VNFaceLandmark` dati aggiuntivi.
+Il Framework di visione include funzionalità aggiuntive per rilevare le funzionalità del viso, ad esempio gli occhi e la bocca. Usare il tipo di `VNDetectFaceLandmarksRequest`, che restituirà `VNFaceObservation` risultati come indicato nel passaggio 3, ma con ulteriori dati di `VNFaceLandmark`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -4,15 +4,15 @@ description: Questo documento descrive il registrar di tipo Novell. iOS, C# che 
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 0d8e16c2a651df293b13e7f7586d5a643caa1c9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f38c49ce9334a5659f0a8b5dd03e3bae8863cf5a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291835"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022271"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrar di tipo per Novell. iOS
 
@@ -27,13 +27,13 @@ Durante l'avvio, Novell. iOS registrerà:
 - Interfacce con un attributo [[Protocol]](xref:Foundation.ProtocolAttribute) come protocolli Objective-C.
 - Membri con [[Export]](xref:Foundation.ExportAttribute), rendendo possibile l'accesso a Objective-C.
 
-Si consideri, ad `Main` esempio, il metodo gestito comune nelle applicazioni Novell. iOS:
+Si consideri ad esempio il metodo di `Main` gestito comune nelle applicazioni Novell. iOS:
 
 ```csharp
 UIApplication.Main (args, null, "AppDelegate");
 ```
 
-Questo codice indica al runtime di Objective-C di usare il tipo `AppDelegate` chiamato come classe delegata dell'applicazione. Affinché il runtime di Objective-C sia in grado di creare un'istanza della C# `AppDelegate` classe, la classe deve essere registrata.
+Questo codice indica al runtime di Objective-C di usare il tipo denominato `AppDelegate` come classe delegata dell'applicazione. Affinché il runtime di Objective-C sia in grado di creare un'istanza della C# classe`AppDelegate`, tale classe deve essere registrata.
 
 Novell. iOS esegue automaticamente la registrazione, in fase di esecuzione (registrazione dinamica) o in fase di compilazione (registrazione statica).
 
@@ -42,17 +42,17 @@ La registrazione dinamica usa la reflection all'avvio per trovare tutte le class
 La registrazione statica controlla, in fase di compilazione, gli assembly usati dall'applicazione. Determina le classi e i metodi da registrare con Objective-C e genera una mappa, incorporata nel file binario.
 Quindi, all'avvio, registra la mappa con il runtime di Objective-C. La registrazione statica viene usata per le compilazioni di dispositivi.
 
-### <a name="categories"></a>Categorie
+### <a name="categories"></a>Categories
 
 A partire da Novell. iOS 8,10, è possibile creare categorie Objective-C usando C# la sintassi.
 
-Per creare una categoria, usare l' `[Category]` attributo e specificare il tipo da estendere. Il codice seguente, ad esempio, `NSString`estende:
+Per creare una categoria, usare l'attributo `[Category]` e specificare il tipo da estendere. Il codice seguente, ad esempio, estende `NSString`:
 
 ```csharp
 [Category (typeof (NSString))]
 ```
 
-Ognuno dei metodi di una categoria dispone di `[Export]` un attributo, rendendolo disponibile al runtime di Objective-C:
+Ognuno dei metodi di una categoria dispone di un attributo `[Export]`, rendendolo disponibile al runtime di Objective-C:
 
 ```csharp
 [Export ("today")]
@@ -86,7 +86,7 @@ public static class MyStringCategory
  }
  ```
 
-In questo esempio viene aggiunto un `toUpper` metodo di istanza nativo alla classe.`NSString` Questo metodo può essere chiamato da Objective-C:
+In questo esempio viene aggiunto un metodo di istanza di `toUpper` nativo alla classe `NSString`. Questo metodo può essere chiamato da Objective-C:
 
 ```csharp
 [Category (typeof (UIViewController))]
@@ -102,7 +102,7 @@ public static class MyViewControllerCategory
 
 ### <a name="protocols"></a>Protocolli
 
-A partire da Novell. iOS 8,10, le interfacce `[Protocol]` con l'attributo verranno esportate in Objective-C come protocolli:
+A partire da Novell. iOS 8,10, le interfacce con l'attributo `[Protocol]` verranno esportate in Objective-C come protocolli:
 
 ```csharp
 [Protocol ("MyProtocol")]
@@ -134,7 +134,7 @@ Questo nuovo sistema di registrazione offre le seguenti nuove funzionalità:
 - Rimozione del codice nativo non usato:
   - Il nuovo sistema di registrazione aggiungerà riferimenti sicuri al codice usato nelle librerie statiche, consentendo al linker nativo di rimuovere il codice nativo inutilizzato dal file binario risultante. Nelle associazioni di esempio di Novell, la maggior parte delle applicazioni diventa almeno 300K più piccola.
 
-- Supporto per le sottoclassi generiche `NSObject`di; vedere [generics NSObject](~/ios/internals/api-design/nsobject-generics.md) per altre informazioni. Inoltre, il nuovo sistema di registrazione rileverà costrutti generici non supportati che in precedenza avrebbero causato un comportamento casuale in fase di esecuzione.
+- Supporto per sottoclassi generiche di `NSObject`; Per ulteriori informazioni, vedere [generics NSObject](~/ios/internals/api-design/nsobject-generics.md) . Inoltre, il nuovo sistema di registrazione rileverà costrutti generici non supportati che in precedenza avrebbero causato un comportamento casuale in fase di esecuzione.
 
 ### <a name="errors-caught-by-the-new-registrar"></a>Errori rilevati dal nuovo registrar
 
@@ -180,26 +180,26 @@ Alcuni aspetti da tenere presenti sul nuovo Registrar:
 
 - Alcune librerie di terze parti devono essere aggiornate per funzionare con il nuovo sistema di registrazione. Per ulteriori informazioni, vedere le [modifiche richieste](#required-modifications) di seguito.
 
-- Un aspetto negativo a breve termine è anche che è necessario usare Clang se viene usato il Framework degli account (questo è dovuto al fatto che l'intestazione **accounts. h** di Apple può essere compilata solo da Clang). Aggiungere `--compiler:clang` agli argomenti mTouch aggiuntivi per usare Clang se si usa Xcode 4,6 o versione precedente (Novell. iOS selezionerà automaticamente Clang in Xcode 5,0 o versione successiva).
+- Un aspetto negativo a breve termine è anche che è necessario usare Clang se viene usato il Framework degli account (questo è dovuto al fatto che l'intestazione **accounts. h** di Apple può essere compilata solo da Clang). Aggiungere `--compiler:clang` agli argomenti aggiuntivi di mTouch per usare Clang se si usa Xcode 4,6 o versione precedente (Novell. iOS selezionerà automaticamente Clang in Xcode 5,0 o versione successiva).
 
-- Se si usa Xcode 4,6 (o versioni precedenti), è necessario selezionare GCC/G + + se i nomi dei tipi esportati contengono caratteri non ASCII, perché la versione di Clang fornita con Xcode 4,6 non supporta caratteri non ASCII all'interno degli identificatori del codice Objective-C. Aggiungere `--compiler:gcc` agli argomenti mTouch aggiuntivi per usare gcc.
+- Se si usa Xcode 4,6 (o versioni precedenti), è necessario selezionare GCC/G + + se i nomi dei tipi esportati contengono caratteri non ASCII, perché la versione di Clang fornita con Xcode 4,6 non supporta caratteri non ASCII all'interno degli identificatori del codice Objective-C. Aggiungere `--compiler:gcc` agli argomenti aggiuntivi di mTouch per usare GCC.
 
 ## <a name="selecting-a-registrar"></a>Selezione di un registrar
 
 È possibile selezionare un registrar diverso aggiungendo una delle opzioni seguenti agli argomenti aggiuntivi di mTouch nelle impostazioni di **compilazione iOS** del progetto:
 
-- `--registrar:static`-impostazione predefinita per le compilazioni di dispositivi
-- `--registrar:dynamic`-predefinito per le compilazioni del simulatore
+- `--registrar:static`: predefinito per le compilazioni di dispositivi
+- `--registrar:dynamic`: predefinito per le compilazioni del simulatore
 
 > [!NOTE]
-> Il API classica di Novell supportava altre opzioni `--registrar:legacystatic` , `--registrar:legacydynamic`ad esempio e. Tuttavia, queste opzioni non sono supportate dal API unificata.
+> Il API classica di Novell supportava altre opzioni, ad esempio `--registrar:legacystatic` e `--registrar:legacydynamic`. Tuttavia, queste opzioni non sono supportate dal API unificata.
 
 ## <a name="shortcomings-in-the-old-registration-system"></a>Carenze nel vecchio sistema di registrazione
 
 Il sistema di registrazione precedente presenta i seguenti svantaggi:
 
-- Non esisteva un riferimento statico (nativo) a classi e metodi Objective-C in librerie native di terze parti, il che significava che non potevamo richiedere al linker nativo di rimuovere codice nativo di terze parti che non veniva effettivamente usato (poiché tutti gli elementi verrebbero rimossi). Questo è il motivo per `-force_load libNative.a` cui ogni binding di terze parti ha dovuto eseguire o l'equivalente `ForceLoad=true` nell' `[LinkWith]` attributo.
-- È possibile esportare due tipi gestiti con lo stesso nome Objective-C senza alcun avviso. Uno scenario raro consisteva nel finire con due `AppDelegate` classi in spazi dei nomi diversi. In fase di esecuzione sarebbe stato completamente casuale quale è stato selezionato (in effetti, varia tra le esecuzioni di un'app che non è stata ancora ricompilata, che è stata creata per un'esperienza di debug molto sconcertante e frustrante).
+- Non esisteva un riferimento statico (nativo) a classi e metodi Objective-C in librerie native di terze parti, il che significava che non potevamo richiedere al linker nativo di rimuovere codice nativo di terze parti che non veniva effettivamente usato (poiché tutti gli elementi verrebbero rimossi). Questo è il motivo del `-force_load libNative.a` che ogni binding di terze parti doveva eseguire (o l'equivalente `ForceLoad=true` nell'attributo `[LinkWith]`).
+- È possibile esportare due tipi gestiti con lo stesso nome Objective-C senza alcun avviso. Uno scenario raro consisteva nel finire con due classi `AppDelegate` in spazi dei nomi diversi. In fase di esecuzione sarebbe stato completamente casuale quale è stato selezionato (in effetti, varia tra le esecuzioni di un'app che non è stata ancora ricompilata, che è stata creata per un'esperienza di debug molto sconcertante e frustrante).
 - È possibile esportare due metodi con la stessa firma Objective-C. Ancora una volta, che verrebbe chiamato da Objective-C era casuale (ma questo problema non era comune come quello precedente, soprattutto perché l'unico modo per sperimentare effettivamente questo bug era quello di eseguire l'override del metodo gestito sfortunato).
 - Il set di metodi che è stato esportato è leggermente diverso tra le compilazioni dinamiche e statiche.
 - Non funziona correttamente quando si esportano classi generiche (l'implementazione generica esatta eseguita in fase di esecuzione sarebbe casuale, causando in effetti un comportamento non determinato).
@@ -212,7 +212,7 @@ In questa sezione vengono descritte le modifiche dei binding che devono essere a
 
 ### <a name="protocols-must-have-the-protocol-attribute"></a>I protocolli devono avere l'attributo [Protocol]
 
-I protocolli devono ora avere `[Protocol]` l'attributo. In caso contrario, si otterrà un errore nativo del linker, ad esempio:
+I protocolli devono ora avere l'attributo `[Protocol]`. In caso contrario, si otterrà un errore nativo del linker, ad esempio:
 
 ```console
 Undefined symbols for architecture i386: "_OBJC_CLASS_$_ProtocolName", referenced from: ...
@@ -224,9 +224,9 @@ Tutti i selettori devono indicare correttamente il numero di parametri. In prece
 
 In breve, il numero di due punti deve corrispondere al numero di parametri:
 
-- Nessun parametro:`foo`
-- Un parametro:`foo:`
-- Due parametri:`foo:parameterName2:`
+- Nessun parametro: `foo`
+- Un parametro: `foo:`
+- Due parametri: `foo:parameterName2:`
 
 Gli utilizzi seguenti non sono corretti:
 
@@ -242,7 +242,7 @@ void Display ();
 
 ### <a name="use-isvariadic-parameter-in-export"></a>Usa il parametro IsVariadic nell'esportazione
 
-Le funzioni Variadic devono usare `IsVariadic` l'argomento per `[Export]` l'attributo:
+Le funzioni Variadic devono usare l'argomento `IsVariadic` per l'attributo `[Export]`:
 
 ```csharp
 [Export ("variadicMethod:", IsVariadic = true)]

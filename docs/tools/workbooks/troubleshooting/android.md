@@ -3,15 +3,15 @@ title: Risoluzione dei problemi di Xamarin Workbooks in Android
 description: Questo documento fornisce suggerimenti per la risoluzione dei problemi per l'uso di Xamarin Workbooks in Android. Viene illustrato il supporto dell'emulatore, le cartelle di lavoro che non verranno caricate e altri argomenti.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 04f02e6136d9d489a36e994575519e579770ac3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: be19005ab1125c060ab0111e9f37568d5f4abe45
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291164"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029587"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Risoluzione dei problemi di Xamarin Workbooks in Android
 
@@ -22,7 +22,7 @@ Per eseguire una cartella di lavoro Android, è necessario che l'emulatore Andro
 Si consiglia di usare l'emulatore di Google insieme a HAXM se il computer lo supporta.
 Se Hyper-V è abilitato nel sistema, è necessario usare Visual Studio emulatore Android.
 
-È necessario avere un emulatore che esegue Android 5,0 o versione successiva. Gli emulatori ARM non sono supportati. Usare `x86` solo `x86_64` i dispositivi o.
+È necessario avere un emulatore che esegue Android 5,0 o versione successiva. Gli emulatori ARM non sono supportati. Usare solo i dispositivi `x86` o `x86_64`.
 
 Se non si ha familiarità con il processo, consultare la [documentazione relativa alla configurazione degli emulatori Android][android-emu] .
 
@@ -42,7 +42,7 @@ Se l'emulatore non dispone di accesso alla rete, potrebbe essere necessario atte
 1. **Verificare che tutte le operazioni di rete critiche siano completate, in quanto questa operazione potrebbe temporaneamente disconnettere Windows da Internet.**
 1. Chiudere gli emulatori.
 1. Aprire `Hyper-V Manager`.
-1. In `Actions`aprire .`Virtual Switch Manager...`
+1. In `Actions`aprire `Virtual Switch Manager...`.
 1. Elimina tutti i commutatori virtuali.
 1. Fare clic su `OK`.
 1. Avviare Visual Studio emulatore Android. Probabilmente verrà richiesto di ricreare lo switch di rete virtuale.

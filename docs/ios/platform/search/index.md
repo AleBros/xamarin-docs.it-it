@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso delle nuove API di ricerca di app fo
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: e64ae5e04fbdd5b4c69a0b00c2bbc087b7cdf62a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ec63407189b635a9586b02e848647518aaf0170f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769494"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031556"
 ---
 # <a name="search-apis-in-xamarinios"></a>API di ricerca in Novell. iOS
 
@@ -22,7 +22,7 @@ La ricerca è stata espansa in iOS 9 per offrire nuovi modi per accedere alle in
 
 Inoltre, le nuove API di ricerca facilitano l'integrazione della ricerca nell'app senza l'esperienza di implementazione della ricerca precedente. Per questo motivo, Apple dichiara che richiede in genere alcune ore per rendere il contenuto di un'app iOS 9 universalmente ricercabile usando la ricerca di app.
 
-[![](images/intro01.png "Esempio di contenuto dell'app iOS 9 universalmente ricercabile con ricerca app")](images/intro01.png#lightbox)
+[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
 
 La ricerca di app è costituita da tre API separate:
 
@@ -64,7 +64,7 @@ Apple fornisce i suggerimenti seguenti per quanto riguarda il contenuto e le azi
 I principali Spotlight in iOS 10 forniscono diversi miglioramenti alla ricerca di app, ad esempio:
 
 - **Popolarità del collegamento di crowdsourcing (con privacy differenziale)** : offre un modo per promuovere il contenuto delle app con collegamento profondo nei risultati della ricerca.
-- **Ricerca in-app** : usare la nuova `CSSearchQuery` classe per fornire funzionalità di ricerca Spotlight in-app simili a quelle del funzionamento delle app di posta elettronica, messaggi e note.
+- **Ricerca in-app** : usare la nuova classe `CSSearchQuery` per fornire funzionalità di ricerca Spotlight in-app simili a quelle del funzionamento delle app di posta elettronica, messaggi e note.
 - **Continuazione ricerca** : consente a un utente di avviare una ricerca in Spotlight o Safari, quindi aprire un'app e continuare la ricerca.
 - **Visualizzazione dei risultati della convalida** : [lo strumento di convalida dell'API ricerca app](https://search.developer.apple.com/appsearch-validation-tool) di Apple ora Visualizza una rappresentazione visiva del markup di un sito Web e il collegamento profondo quando si preformano i test.
 - **Condivisione immagini app messaggio** : consente di visualizzare le immagini in-app più diffuse fornite per la condivisione nei messaggi (tramite un'estensione di app per i messaggi) nelle ricerche Spotlight.
@@ -94,5 +94,5 @@ Questo articolo ha trattato le nuove funzionalità dell'API di ricerca disponibi
 
 - [Esempi di iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 per sviluppatori](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guida alla programmazione di app Search](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

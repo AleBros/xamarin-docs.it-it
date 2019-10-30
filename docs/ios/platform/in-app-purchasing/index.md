@@ -4,15 +4,15 @@ description: Questo documento descrive come vendere prodotti e servizi digitali 
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1efb8df4bac307d0e73da6bcbf645077cb63c839
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752631"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032348"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Acquisto in-app in Novell. iOS
 
@@ -32,7 +32,7 @@ Questo documento illustra come eseguire tutti questi passaggi per fornire acquis
 
 Per supportare l'acquisto in-app, è necessario usare Novell. iOS 5,0 o versione successiva con Xcode 7 e versioni successive.
 
-## <a name="contents"></a>Sommario
+## <a name="contents"></a>Contenuti
 
 - [Nozioni di base e configurazione degli acquisti in-app](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 

@@ -4,15 +4,15 @@ description: Questo articolo descrive le risorse che possono essere usate per la
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 570fd554b375c4911028faf412c3c20bac1881aa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7d68687208c07ba551a4e142abb23ec97a24d20
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286527"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032107"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>Suggerimenti per la risoluzione dei problemi per iOS 11 e Novell. iOS
 
@@ -26,4 +26,4 @@ Se si ritiene che sia stato rilevato un bug in Novell. iOS, segnalare il problem
 
 ## <a name="forums-and-stackoverflow"></a>Forum e StackOverflow
 
-Per risposte a domande specifiche sull'uso o sull'implementazione di una funzionalità specifica di iOS 11 in Novell. iOS, il forum Novell per [iOS](http://forums.xamarin.com/categories/ios) fornisce un'ampia gamma di informazioni. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) è un'altra fonte di informazioni utili per gli utenti.
+Per risposte a domande specifiche sull'uso o sull'implementazione di una funzionalità specifica di iOS 11 in Novell. iOS, il forum Novell per [iOS](https://forums.xamarin.com/categories/ios) fornisce un'ampia gamma di informazioni. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) è un'altra fonte di informazioni utili per gli utenti.

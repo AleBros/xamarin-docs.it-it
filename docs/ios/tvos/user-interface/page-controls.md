@@ -4,21 +4,21 @@ description: Questo documento descrive come usare i controlli pagina di tvOS in 
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bb517eaa549567ae92695fbad300d055f42771f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 12fe9645ab832db1db37e36b0342664bbd2fe9f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769056"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030412"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Uso dei controlli pagina di tvOS in Novell
 
 In alcuni casi potrebbe essere necessario visualizzare una serie di pagine o immagini nell'app Novell. tvOS. Un controllo pagina è stato progettato per indicare in modo chiaro quale pagina di un utente si trova al di fuori del numero massimo di pagine. Un controllo pagina consente di visualizzare una serie di punti su uno sfondo scuro a forma ovale. Nella pagina corrente viene visualizzato un punto pieno, tutte le altre pagine vengono visualizzate come punti vuoti. Il controllo pagina Ritaglia i punti più esterni se sono presenti troppi per adattarsi all'area di sfondo.
 
-[![](page-controls-images/page01.png "Controllo pagina di esempio")](page-controls-images/page01.png#lightbox)
+[![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png#lightbox)
 
 Controllo pagina in un elemento non interattivo progettato per fornire commenti e suggerimenti all'utente. Sarà necessario aggiungere altri controlli per modificare il numero di pagina corrente, ad esempio movimenti o pulsanti.
 
@@ -35,40 +35,40 @@ Il modo più semplice per usare i controlli pagina in un'app Novell. tvOS consis
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Nella **riquadro della soluzione**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Nella **riquadro della soluzione**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **controllo pagina** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione:
 
-    [![](page-controls-images/page02.png "Controllo pagina")](page-controls-images/page02.png#lightbox)
+    [![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
 1. Nella **scheda Widget** del **riquadro delle proprietà**è possibile modificare diverse proprietà del controllo pagina, ad esempio la **pagina corrente** e il **numero di pagine**:
 
-    [![](page-controls-images/page03.png "Scheda widget")](page-controls-images/page03.png#lightbox)
+    [![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
 1. Successivamente, aggiungere controlli o movimenti alla visualizzazione per spostarsi avanti e indietro nella raccolta di pagine.
-1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Ad esempio:
+1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Esempio:
 
-    [![](page-controls-images/page04.png "Assegnare un nome al controllo")](page-controls-images/page04.png#lightbox)
+    [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
 1. Salvare le modifiche.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file e aprirlo per la modifica.
+1. Nella **Esplora soluzioni**fare doppio clic sul file di `Main.storyboard` e aprirlo per la modifica.
 1. Trascinare un **controllo pagina** dalla **casella degli strumenti** e rilasciarlo nella visualizzazione:
 
-    [![](page-controls-images/page02-vs.png "Controllo pagina")](page-controls-images/page02-vs.png#lightbox)
+    [![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
 1. Nella **scheda Widget** di **Esplora proprietà**è possibile modificare diverse proprietà del controllo pagina, ad esempio la **pagina corrente** e il **numero di pagine**:
 
-    [![](page-controls-images/page03-vs.png "Scheda widget")](page-controls-images/page03-vs.png#lightbox)
+    [![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
 1. Successivamente, aggiungere controlli o movimenti alla visualizzazione per spostarsi avanti e indietro nella raccolta di pagine.
-1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Ad esempio:
+1. Infine, assegnare i **nomi** ai controlli in modo che sia possibile rispondere a tali C# controlli nel codice. Esempio:
 
-    [![](page-controls-images/page04-vs.png "Assegnare un nome al controllo")](page-controls-images/page04-vs.png#lightbox)
+    [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
 1. Salvare le modifiche.
 
 -----
 
 > [!IMPORTANT]
-> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, questo non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta eventi di tocco. È consigliabile usare sempre l' `Primary Action` evento quando si creano gestori eventi per gli elementi dell'interfaccia utente tvOS.
+> Sebbene sia possibile assegnare eventi come `TouchUpInside` a un elemento dell'interfaccia utente (ad esempio UIButton) in iOS designer, non verrà mai chiamato perché Apple TV non ha un touchscreen o supporta gli eventi di tocco. È consigliabile usare sempre l'evento `Primary Action` durante la creazione di gestori eventi per gli elementi dell'interfaccia utente tvOS.
 
-Modificare il file del controller di `ViewController.cs`visualizzazione (esempio) e aggiungere il codice per gestire le pagine modificate. Ad esempio:
+Modificare il file di visualizzazione del controller (ad esempio `ViewController.cs`) e aggiungere il codice per gestire le pagine modificate. Esempio:
 
 ```csharp
 using System;
@@ -154,7 +154,7 @@ Per modificare il numero di pagina corrente, usare il codice seguente:
 PageView.CurrentPage = PageNumber;
 ```
 
-La `CurrentPage` proprietà è zero (0) in base a, quindi la prima pagina sarà zero e l'ultimo sarà uno meno il numero massimo di pagine.
+Il `CurrentPage` proprietà è zero (0) in base a, quindi la prima pagina sarà zero e l'ultimo sarà uno meno il numero massimo di pagine.
 
 Per ulteriori informazioni sull'utilizzo degli storyboard, vedere la [Guida introduttiva Hello, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 

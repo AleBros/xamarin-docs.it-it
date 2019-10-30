@@ -1,24 +1,24 @@
 ---
-title: 'Hello, Android: Approfondimenti'
+title: 'Hello, Android: approfondimenti'
 description: In questa guida in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756712"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027999"
 ---
-# <a name="hello-android-deep-dive"></a>Hello, Android: Approfondimenti
+# <a name="hello-android-deep-dive"></a>Hello, Android: approfondimenti
 
-_In questa guida in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android._
+_In questa guida in due parti si creerà la prima applicazione Novell. Android e si svilupperanno le nozioni di base dello sviluppo di applicazioni Android con Novell. Verranno introdotti gli strumenti, i concetti e i passaggi necessari per compilare e distribuire un'applicazione Novell. Android._
 
 In [Hello, Android: guida introduttiva](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md) è stata compilata ed eseguita la prima applicazione Xamarin.Android. È ora il momento di acquisire una conoscenza più approfondita del funzionamento delle applicazioni Android, per poter creare programmi più complessi. Questa guida riprende i passaggi eseguiti nella procedura dettagliata relativa a Hello, Android, per consentire la comprensione delle operazioni effettuate e la conoscenza delle funzioni fondamentali dello sviluppo di applicazioni Android.
 
@@ -165,7 +165,7 @@ Le prossime sezioni analizzano le relazioni tra le diverse parti dell'applicazio
 
 Nell'app **Phoneword** l'ID di **TranslateButton**è impostato su `@+id/TranslateButton`:
 
-[![Impostazione ID di TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Impostazione ID di TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
+[![Impostazione ID TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Impostazione ID TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -188,7 +188,7 @@ Tutto ciò che viene definito nell'area di progettazione viene convertito in XML
 
 ::: zone pivot="windows"
 
-[![Visualizzazione Origine della finestra di progettazione](hello-android-deepdive-images/vs/05-source-view-sml.png "Visualizzazione Origine della finestra di progettazione")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
+[![Visualizzazione origine della finestra di progettazione](hello-android-deepdive-images/vs/05-source-view-sml.png "Visualizzazione origine della finestra di progettazione")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -197,7 +197,7 @@ Tutto ciò che viene definito nell'area di progettazione viene convertito in XML
 
 ::: zone-end
 
-Questo codice sorgente XML deve contenere quattro elementi di controllo: due elementi **TextView**, un elemento **EditText** e un elemento **Button**. Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
+Questo codice sorgente XML deve contenere quattro elementi di controllo: due **TextView**s, uno **EDITTEXT** e un elemento **Button** . Per una panoramica più dettagliata di Android Designer, fare riferimento alla guida[Designer Overview](~/android/user-interface/android-designer/index.md) (Panoramica della finestra di progettazione) di Xamarin Android.
 
 La trattazione degli strumenti e dei concetti alla base della parte visiva dell'interfaccia utente è completata. È il momento di passare al codice che consente il funzionamento dell'interfaccia utente, con l'analisi delle attività e del loro ciclo di vita.
 
@@ -357,7 +357,7 @@ Per evitare questo problema, è buona norma inserire nella cartella **Risorse** 
 
 ::: zone pivot="windows"
 
-![cartella mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "cartella mipmap")
+![cartelle mipmap](hello-android-deepdive-images/vs/07-mipmap-folders.png "cartelle mipmap")
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -372,30 +372,30 @@ Android selezionerà l'icona con la densità appropriata:
 
 ### <a name="generate-custom-icons"></a>Generare icone personalizzate
 
-Non tutti hanno a disposizione un designer che crei le icone e le immagini di avvio personalizzate necessarie per mettere in risalto un'app. Ecco alcuni approcci alternativi per la generazione di grafica personalizzata per le app:
+Non tutti hanno a disposizione una finestra di progettazione per creare le icone personalizzate e le immagini di avvio che devono essere rilevate da un'app. Ecco alcuni approcci alternativi per la generazione di immagini personalizzate per le app:
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Un generatore interno al browser e basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri strumenti utili della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Un generatore interno al browser e basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri strumenti utili della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
 
 - Visual Studio &ndash; È possibile usare questo strumento per creare un set di icone semplici per l'app direttamente nell'IDE.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
+- [Glyphish](https://www.glyphish.com/) &ndash; set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; Consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
+- [Fiverr](https://www.fiverr.com/) &ndash; Consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Un generatore interno al browser e basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri strumenti utili della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Un generatore interno al browser e basato sul Web per tutti i tipi di icone Android, con collegamenti ad altri strumenti utili della community. Il funzionamento ottimale si ottiene con l'uso in Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; Sketch è un'app Mac per la progettazione di interfacce utente, icone e altro ancora. Questa è l'app con cui è stato progettato il set delle icone e delle immagini di avvio dell'app di Xamarin. Sketch 3 è disponibile nell'App Store e costa circa 80 dollari. È anche possibile provare lo [strumento Sketch](http://bohemiancoding.com/sketch/tool/) gratuito.
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; Sketch è un'app Mac per la progettazione di interfacce utente, icone e altro ancora. Questa è l'app con cui è stato progettato il set delle icone e delle immagini di avvio dell'app di Xamarin. Sketch 3 è disponibile nell'App Store e costa circa 80 dollari. È anche possibile provare lo [strumento Sketch](https://bohemiancoding.com/sketch/tool/) gratuito.
 
-- [Pixelmator](http://www.pixelmator.com/) &ndash; Versatile app di modifica delle immagini per Mac a un costo di circa 30 dollari.
+- [Pixelmator](https://www.pixelmator.com/) &ndash; Versatile app di modifica delle immagini per Mac a un costo di circa 30 dollari.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
+- [Glyphish](https://www.glyphish.com/) &ndash; set di icone predefinito di alta qualità disponibile per il download gratuito e l'acquisto.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; Consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
+- [Fiverr](https://www.fiverr.com/) &ndash; Consente di scegliere all'interno di un ampio pool un designer che crei il set di icone dell'applicazione, a partire da 5 dollari. I risultati possono essere imprevedibili, ma si tratta di una risorsa valida nel caso in cui sia necessario un set di icone in tempi brevi.
 
 ::: zone-end
 

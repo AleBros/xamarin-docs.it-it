@@ -4,15 +4,15 @@ description: Questo documento descrive i modelli di progettazione comuni usati p
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/17/2016
-ms.openlocfilehash: b4934fa82d862ad2e8ab53579137873ed9e4bcca
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b508cc12f468e5b9dfef91718585f61bfd633816
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770170"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030064"
 ---
 # <a name="common-patterns-and-idioms-in-xamarinmac"></a>Modelli comuni e idiomi in Novell. Mac
 
@@ -37,21 +37,21 @@ Ulteriori informazioni sono disponibili qui:
 
 ## <a name="data-source--delegate--subclassing"></a>Origine dati/delegato/sottoclasse
 
-Un altro modello molto comune in Cocoa riguarda la fornitura di dati a elementi dell'interfaccia utente e la reazione alle interazioni degli utenti. Utilizzando `NSTableView` come esempio, è necessario fornire i dati per ogni riga, un set di elementi dell'interfaccia utente che rappresentano tale riga, un set di comportamenti per rispondere alle interazioni dell'utente e possibilmente una certa quantità di personalizzazione. L'origine dati e i modelli delegati consentono di gestire la maggior parte dei casi senza dover `NSTableView` ricorrere a una sottoclasse.
+Un altro modello molto comune in Cocoa riguarda la fornitura di dati a elementi dell'interfaccia utente e la reazione alle interazioni degli utenti. Utilizzando `NSTableView` come esempio, è necessario fornire i dati per ogni riga, un set di elementi dell'interfaccia utente che rappresentano tale riga, un set di comportamenti per rispondere alle interazioni dell'utente e possibilmente una certa quantità di personalizzazione. L'origine dati e i modelli delegati consentono di gestire la maggior parte dei casi senza dover ricorrere alla sottoclasse `NSTableView`.
 
-- Alla `DataSource` proprietà viene assegnata un'istanza di una sottoclasse `NSTableViewDataSource` personalizzata di cui viene chiamato il metodo per popolare la tabella `GetRowCount` con `GetObjectValue`i dati (tramite e).
+- Alla proprietà `DataSource` viene assegnata un'istanza di una sottoclasse personalizzata di `NSTableViewDataSource`, chiamata per popolare la tabella con i dati (tramite `GetRowCount` e `GetObjectValue`).
 
-- Alla `Delegate` proprietà viene assegnata un'istanza di una sottoclasse `NSTableViewDelegate` personalizzata di che fornisce la visualizzazione per un determinato oggetto modello `GetViewForItem`(via) e gestisce le interazioni `DidClickTableColumn`dell' `MouseDownInHeaderOfTableColumn`interfaccia utente (via, e così via).
+- Alla proprietà `Delegate` viene assegnata un'istanza di una sottoclasse personalizzata di `NSTableViewDelegate` che fornisce la visualizzazione per un determinato oggetto modello (tramite `GetViewForItem`) e gestisce le interazioni dell'interfaccia utente (tramite `DidClickTableColumn`, `MouseDownInHeaderOfTableColumn`e così via).
 
 In alcuni casi, è necessario personalizzare un controllo in un modo oltre gli hook specificati nel delegato o nell'origine dati ed è possibile creare una sottoclasse della vista direttamente. Prestare attenzione, tuttavia, in molti casi, per eseguire l'override del comportamento predefinito, sarà necessario gestire tutto questo comportamento (la personalizzazione del comportamento di selezione potrebbe richiedere di implementare tutti i comportamenti di selezione).
 
-In Novell. iOS alcune API, ad esempio `UITableView` , sono state estese con una proprietà che implementa sia il delegato che l'origine dati (`UITableViewSource`). Per aggirare la limitazione comune che una singola C# classe può avere una sola classe di base e l'emersione dei protocolli viene eseguita tramite le classi base.
+In Novell. iOS alcune API, ad esempio `UITableView` sono state estese con una proprietà che implementa sia il delegato che l'origine dati (`UITableViewSource`). Per aggirare la limitazione comune che una singola C# classe può avere una sola classe di base e l'emersione dei protocolli viene eseguita tramite le classi base.
 
 Per altre informazioni sull'uso delle visualizzazioni tabella in un'applicazione Novell. Mac, vedere la documentazione di [visualizzazione tabella](~/mac/user-interface/table-view.md) .
 
 ## <a name="protocols"></a>Protocolli
 
-I protocolli in Objective-C possono essere confrontati C#con le interfacce in e in molti casi vengono usati in situazioni analoghe. Ad esempio, `NSTableView` l'esempio precedente, sia il delegato che l'origine dati sono in realtà protocolli. Novell. Mac espone tali classi come classi base con i metodi virtuali di cui è possibile eseguire l'override. La differenza principale tra C# le interfacce e i protocolli Objective-C è che alcuni metodi in un protocollo possono essere facoltativi per l'implementazione. Sarà necessario esaminare la documentazione e/o la definizione di un'API per determinare cosa è facoltativo.
+I protocolli in Objective-C possono essere confrontati C#con le interfacce in e in molti casi vengono usati in situazioni analoghe. Ad esempio, il `NSTableView` esempio precedente, sia il delegato che l'origine dati sono in realtà protocolli. Novell. Mac espone tali classi come classi base con i metodi virtuali di cui è possibile eseguire l'override. La differenza principale tra C# le interfacce e i protocolli Objective-C è che alcuni metodi in un protocollo possono essere facoltativi per l'implementazione. Sarà necessario esaminare la documentazione e/o la definizione di un'API per determinare cosa è facoltativo.
 
 Per ulteriori informazioni, vedere la documentazione relativa [a delegati, protocolli ed eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md) .
 
@@ -60,4 +60,4 @@ Per ulteriori informazioni, vedere la documentazione relativa [a delegati, proto
 - [Viste tabella](~/mac/user-interface/table-view.md)
 - [Utilizzo di Windows](~/mac/user-interface/window.md)
 - [Delegati, protocolli ed eventi](~/ios/app-fundamentals/delegates-protocols-and-events.md)
-- [Model-View-Controller](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
+- [MVC (Model-View-Controller)](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)

@@ -1,23 +1,23 @@
 ---
 title: Provisioning automatico per Xamarin.iOS
-description: Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo nello sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo.
+description: Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo.
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: bb8a969a930f2e169d19738ddaafab04a4e8a057
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c65a8d4cf47fdec582b46370b6a8dbc1ddd55a1e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287354"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022788"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisioning automatico per Xamarin.iOS
 
-_Dopo aver installato correttamente Xamarin.iOS, il passaggio successivo per lo sviluppo iOS consiste nell'eseguire il provisioning del dispositivo iOS. Questa guida illustra l'uso della firma automatica per richiedere profili e certificati di sviluppo._
+_Dopo aver installato correttamente Novell. iOS, il passaggio successivo per lo sviluppo di iOS consiste nel provisioning del dispositivo iOS. Questa guida esamina l'uso della firma automatica per richiedere certificati e profili di sviluppo._
 
 ## <a name="requirements"></a>Requisiti
 
@@ -50,7 +50,7 @@ Prima di avviare il processo di firma automatica, verificare di avere un ID Appl
 > }
 > ```
 >
-> oppure
+> Oppure
 >
 > ```
 > Authentication Service Is Unavailable

@@ -3,15 +3,15 @@ title: Pubblicazione di un'applicazione
 ms.prod: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fe1422aa55e5c1518134e6d0fbbf40047b577767
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753800"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021373"
 ---
 # <a name="publishing-an-application"></a>Pubblicazione di un'applicazione
 
@@ -33,7 +33,7 @@ Come si può notare dal diagramma precedente, la preparazione è la stessa indip
 
 - **Tramite un sito Web**: un'applicazione Xamarin.Android può essere resa disponibile per il download in un sito Web, al cui interno gli utenti possono fare clic su un collegamento per installare l'applicazione.
 - **Tramite posta elettronica**: gli utenti possono installare un'applicazione Xamarin.Android dalla posta elettronica personale. L'applicazione viene installata quando l'allegato viene aperto con un dispositivo Android.
-- **Tramite un marketplace**: esistono diversi marketplace per la distribuzione di applicazioni, ad esempio [Google Play](http://play.google.com/) o [Amazon Appstore per Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
+- **Tramite un marketplace**: esistono diversi marketplace per la distribuzione di applicazioni, ad esempio [Google Play](https://play.google.com/) o [Amazon Appstore per Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 L'uso di marketplace affermati è il modo più comune di pubblicare un'applicazione, dato che questi sono in grado di offrire la copertura di mercato più ampia e il controllo più solido sulla distribuzione. La pubblicazione di un'applicazione tramite un marketplace, tuttavia, richiede un impegno maggiore.
 
@@ -56,7 +56,7 @@ Questa sezione illustra come caricare l'applicazione in uno store, ad esempio in
 - [Processo di compilazione](~/android/deploy-test/building-apps/build-process.md)
 - [Collegamento](~/android/deploy-test/linker.md)
 - [Ottenere una chiave API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Firma dell'applicazione](https://source.android.com/security/apksigning/)
+- [Application Signing](https://source.android.com/security/apksigning/) (Firma dell'applicazione)
 - [Pubblicazione in Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Licenze di applicazioni Google](https://developer.android.com/guide/google/play/licensing/index.html)
 - [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary)

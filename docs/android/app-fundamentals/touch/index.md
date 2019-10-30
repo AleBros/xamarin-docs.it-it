@@ -4,15 +4,15 @@ description: Gli schermi touch su molti dei dispositivi attuali consentono agli 
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43637d8592631b2732e5922544f52d91947dd3bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754710"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024292"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Tocco e movimenti in Novell. Android
 
@@ -22,7 +22,7 @@ _Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di in
 
 iOS e Android sono simili nei modi in cui gestiscono il tocco. Entrambi possono supportare molti punti di contatto a più touch sullo schermo e i movimenti complessi. Questa guida presenta alcune delle analogie nei concetti, nonché le peculiarità dell'implementazione di tocco e movimenti su entrambe le piattaforme.
 
-Android usa un `MotionEvent` oggetto per incapsulare i dati di tocco e i metodi sull'oggetto visualizzazione per restare in ascolto dei tocchi.
+Android usa un oggetto `MotionEvent` per incapsulare i dati di tocco e i metodi sull'oggetto visualizzazione per restare in ascolto dei tocchi.
 
 Oltre a acquisire i dati di tocco, iOS e Android forniscono i mezzi per interpretare i modelli di tocchi nei movimenti. Questi riconoscitori di movimento possono a sua volta essere usati per interpretare i comandi specifici dell'applicazione, ad esempio una rotazione di un'immagine o una volta una pagina. Android offre alcuni movimenti supportati, oltre alle risorse per semplificare l'aggiunta di movimenti personalizzati complessi.
 
@@ -33,7 +33,7 @@ Questa guida segue un formato simile per ogni sistema operativo: prima di tutto,
 ## <a name="sections"></a>Sezioni
 
 - [Tocco in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
-- [Procedura dettagliata: Uso del tocco in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Procedura dettagliata: uso del tocco in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 - [Rilevamento multitocco](touch-tracking.md)
 
 ## <a name="summary"></a>Riepilogo

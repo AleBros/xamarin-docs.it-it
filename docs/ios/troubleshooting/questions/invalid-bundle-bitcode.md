@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 137313FB-3D29-428B-93C1-5A05DC8F7C03
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: 84244e0c4c24a8ca6ac71a79de963bedf5c1ee68
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c6a03fa3327e81f577f85b05a033d9c97495eb2e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292541"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031069"
 ---
 # <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submission"></a>Errore durante l'invio all'App Store: "Bundle non valido: le opzioni non consentite per l'incorporamento in bitcode sono rilevate nell'invio"
 

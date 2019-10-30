@@ -3,15 +3,15 @@ title: Creazione di pacchetti di app Wear
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763970"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028636"
 ---
 # <a name="packaging-wear-apps"></a>Creazione di pacchetti di app Wear
 
@@ -47,7 +47,7 @@ A partire da Novell Android 5,0, l'app Wear viene automaticamente assemblata com
 
 -----
 
-Si noti che si riceverà un errore **XA5211** se il nome del pacchetto dell'app Wear non corrisponde al nome del pacchetto dell'app Handheld. Ad esempio:
+Si noti che si riceverà un errore **XA5211** se il nome del pacchetto dell'app Wear non corrisponde al nome del pacchetto dell'app Handheld. Esempio:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -62,7 +62,7 @@ L'assembly generato dal progetto di app Wear non viene usato come riferimento a 
 
 - Verifica che i nomi dei pacchetti corrispondano. 
 
-- Genera il codice XML e lo aggiunge al progetto Handheld per associarlo all'app Wear. Ad esempio: 
+- Genera il codice XML e lo aggiunge al progetto Handheld per associarlo all'app Wear. Esempio: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -95,7 +95,7 @@ L'assembly generato dal progetto di app Wear non viene usato come riferimento a 
     </wearableApp>
     ```
 
-5. Aggiungere manualmente un `<meta-data />` elemento all'elemento **file AndroidManifest. XML** `<application>` del progetto Handheld che fa riferimento alla nuova risorsa XML:
+5. Aggiungere manualmente un elemento `<meta-data />` all'elemento `<application>` **file AndroidManifest. XML** del progetto Handheld che fa riferimento alla nuova risorsa XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"

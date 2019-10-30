@@ -4,15 +4,15 @@ description: "iOS 6 introduce due modifiche all'API del kit di archiviazione: la
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 6dc0838bf63492dd06d5452cedbaf1d7fb8313c9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1d49be1f4339b658e8202d4091b9a12b45d7b507
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752307"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031912"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Modifiche di StoreKit in iOS 6
 
@@ -34,7 +34,7 @@ Le funzionalità di Store Kit descritte in questo documento richiedono iOS 6 e X
 La nuova funzionalità di acquisto in-app in iOS consente agli utenti di visualizzare le informazioni sul prodotto e acquistare o scaricare il prodotto dall'interno dell'app.
 In precedenza le applicazioni avrebbero dovuto attivare iTunes, l'App Store o il da iBookstore, il che comporterebbe l'uscita dell'applicazione originale da parte dell'utente. Questa nuova funzionalità restituisce automaticamente l'utente all'app al termine dell'operazione.
 
-[![](changes-to-storekit-images/image1.png "Ritorno automatico a un'app dopo l'acquisto")](changes-to-storekit-images/image1.png#lightbox)
+[![](changes-to-storekit-images/image1.png "Automatically returning to an app after purchase")](changes-to-storekit-images/image1.png#lightbox)
 
 Di seguito sono riportati alcuni esempi di come è possibile utilizzare:
 
@@ -42,27 +42,27 @@ Di seguito sono riportati alcuni esempi di come è possibile utilizzare:
 - **Promozione incrociata delle app** : consente all'utente di visualizzare altre app pubblicate, con la possibilità di acquistare/scaricare immediatamente.
 - **Aiutare gli utenti a trovare e scaricare il contenuto** : consentire agli utenti di acquistare contenuti che l'app trova, gestisce o aggrega (ad esempio, un'app relativa alla musica può fornire una playlist di canzoni e consentire l'acquisto di ogni brano dall'interno dell'app.
 
-`SKStoreProductViewController` Una volta visualizzato, l'utente può interagire con le informazioni sul prodotto come se si trovasse in iTunes, in App Store o in da iBookstore. L'utente può:
+Una volta visualizzata la `SKStoreProductViewController`, l'utente può interagire con le informazioni sul prodotto come se si trovasse in iTunes, nell'App Store o in da iBookstore. L'utente può:
 
 - Visualizza screenshot (per le app),
 - Brani o video di esempio (per musica, programmi TV e film),
 - Leggere (e scrivere) recensioni,
 - Acquistare & download, che si verifica interamente all'interno di View Controller e Store Kit.
 
-Alcune opzioni all'interno `SKStoreProductViewController` di continueranno a forzare l'utente a lasciare l'app e ad aprire l'app dello Store pertinente, ad esempio facendo clic sui **prodotti correlati** o sul collegamento del **supporto** dell'app.
+Alcune opzioni all'interno del `SKStoreProductViewController` forzano l'utente a lasciare l'app e aprire l'app dello Store pertinente, ad esempio facendo clic sui **prodotti correlati** o sul collegamento di **supporto** dell'app.
 
 ### <a name="skstoreproductviewcontroller"></a>SKStoreProductViewController
 
 L'API per mostrare un prodotto in qualsiasi app è semplice: richiede solo la creazione e la visualizzazione di un `SKStoreProductViewController`. Per creare e visualizzare un prodotto, attenersi alla procedura seguente:
 
-1. Creare un `StoreProductParameters` oggetto per passare parametri al controller di visualizzazione, inclusa la `productId` nel costruttore.
-1. Creare un'istanza `SKProductViewController`di. Assegnarlo a un campo a livello di classe.
-1. Assegnare un gestore all' `Finished` evento del controller di visualizzazione, che dovrebbe ignorare il controller di visualizzazione. Questo evento viene chiamato quando l'utente preme Annulla; o in caso contrario finalizza una transazione all'interno del controller di visualizzazione.
-1. Chiamare il `LoadProduct` metodo passando l'oggetto `StoreProductParameters` e un gestore di completamento. Il gestore di completamento deve verificare che la richiesta del prodotto sia stata completata correttamente e, in `SKProductViewController` tal caso, presentare il modale. È necessario aggiungere la gestione degli errori appropriata nel caso in cui non sia possibile recuperare il prodotto.
+1. Creare un oggetto `StoreProductParameters` per passare parametri al controller di visualizzazione, inclusa la `productId` nel costruttore.
+1. Creare un'istanza del `SKProductViewController`. Assegnarlo a un campo a livello di classe.
+1. Assegnare un gestore all'evento `Finished` del controller di visualizzazione, che dovrebbe ignorare il controller di visualizzazione. Questo evento viene chiamato quando l'utente preme Annulla; o in caso contrario finalizza una transazione all'interno del controller di visualizzazione.
+1. Chiamare il metodo `LoadProduct` passando la `StoreProductParameters` e un gestore di completamento. Il gestore di completamento deve verificare che la richiesta del prodotto sia stata completata correttamente e, in tal caso, presentare il `SKProductViewController` modale. È necessario aggiungere la gestione degli errori appropriata nel caso in cui non sia possibile recuperare il prodotto.
 
 ### <a name="example"></a>Esempio
 
-Il progetto *ProductView* nel codice di esempio *StoreKit* per questo articolo implementa un `Buy` metodo che accetta l'ID Apple di qualsiasi prodotto e visualizza `SKStoreProductViewController`il. Il codice seguente Visualizza le informazioni sul prodotto per qualsiasi ID Apple specificato:
+Il progetto *ProductView* nel codice di esempio di *StoreKit* per questo articolo implementa un `Buy` metodo che accetta l'ID Apple di qualsiasi prodotto e visualizza l'`SKStoreProductViewController`. Il codice seguente Visualizza le informazioni sul prodotto per qualsiasi ID Apple specificato:
 
 ```csharp
 void Buy (int productId)
@@ -86,13 +86,13 @@ void Buy (int productId)
 }
 ```
 
-L'app ha un aspetto simile alla schermata seguente durante l'esecuzione: il download o l' `SKStoreProductViewController`acquisto avviene interamente all'interno di:
+L'app ha un aspetto simile alla schermata seguente durante l'esecuzione: il download o l'acquisto avviene interamente all'interno del `SKStoreProductViewController`:
 
-[![](changes-to-storekit-images/image2.png "L'app ha un aspetto simile al seguente durante l'esecuzione")](changes-to-storekit-images/image2.png#lightbox)
+[![](changes-to-storekit-images/image2.png "The app looks like this when running")](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>Supporto dei sistemi operativi meno recenti
 
-L'applicazione di esempio include codice che illustra come aprire App Store, iTunes o da iBookstore nelle versioni precedenti di iOS. Usare il `OpenUrl` metodo per aprire un URL **iTunes.com** creato correttamente.
+L'applicazione di esempio include codice che illustra come aprire App Store, iTunes o da iBookstore nelle versioni precedenti di iOS. Usare il metodo `OpenUrl` per aprire un URL **iTunes.com** creato correttamente.
 
 È possibile implementare un controllo della versione per determinare il codice da eseguire, come illustrato di seguito:
 
@@ -107,7 +107,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 }
 ```
 
-### <a name="errors"></a>Errors
+### <a name="errors"></a>Errori
 
 Se l'ID Apple usato non è valido, si verificherà l'errore seguente, che può generare confusione, perché implica un problema di rete o di autenticazione di qualche tipo.
 
@@ -115,41 +115,41 @@ Se l'ID Apple usato non è valido, si verificherà l'errore seguente, che può g
 
 ### <a name="reading-objective-c-documentation"></a>Lettura della documentazione di Objective-C
 
-Gli sviluppatori che leggono about Store Kit nel portale per sviluppatori di Apple visualizzeranno un protocollo, [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) , descritto in relazione a questa nuova funzionalità. Il protocollo delegato dispone di un solo metodo, productViewControllerDidFinish, che è stato esposto come `Finished` evento `SKStoreProductViewController` in Novell. iOS.
+Gli sviluppatori che leggono about Store Kit nel portale per sviluppatori di Apple visualizzeranno un protocollo, [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) , descritto in relazione a questa nuova funzionalità. Il protocollo delegato dispone di un solo metodo, productViewControllerDidFinish, che è stato esposto come evento `Finished` nel `SKStoreProductViewController` in Novell. iOS.
 
 ## <a name="determining-apple-ids"></a>Determinazione degli ID Apple
 
-L'ID Apple richiesto dal è `SKStoreProductViewController` un *numero* (da non confondere con gli ID bundle come "com. Novell. MWC2012"). Esistono diversi modi in cui è possibile trovare l'ID Apple per i prodotti che si desidera visualizzare, elencati di seguito:
+L'ID Apple richiesto dall'`SKStoreProductViewController` è un *numero* (da non confondere con ID bundle come "com. Novell. MWC2012"). Esistono diversi modi in cui è possibile trovare l'ID Apple per i prodotti che si desidera visualizzare, elencati di seguito:
 
 ### <a name="itunesconnect"></a>iTunesConnect
 
 Per le applicazioni pubblicate, è facile trovare l' **ID Apple** in iTunes Connect:
 
-[![](changes-to-storekit-images/image3.png "Ricerca dell'ID Apple in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
+[![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
 
  <a name="Search_API" />
 
 ### <a name="search-api"></a>API di ricerca
 
-Apple fornisce un'API di ricerca dinamica per eseguire query su tutti i prodotti nell'App Store, in iTunes e in da iBookstore. Le informazioni su come accedere all'API di ricerca sono reperibili nelle [risorse affiliate di Apple](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), anche se l'API è esposta a chiunque, non solo alle consociate registrate. Il codice JSON risultante può essere analizzato per individuare `trackId` l'ID Apple da usare con. `SKStoreProductViewController`
+Apple fornisce un'API di ricerca dinamica per eseguire query su tutti i prodotti nell'App Store, in iTunes e in da iBookstore. Le informazioni su come accedere all'API di ricerca sono reperibili nelle [risorse affiliate di Apple](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), anche se l'API è esposta a chiunque, non solo alle consociate registrate. Il codice JSON risultante può essere analizzato per individuare la `trackId` che rappresenta l'ID Apple da usare con `SKStoreProductViewController`.
 
 I risultati includeranno anche altri metadati, tra cui informazioni di visualizzazione e URL di grafica che possono essere usati per eseguire il rendering del prodotto nell'app.
 
 Ecco alcuni esempi:
 
-- **iBooks app** – [ http://itunes.apple.com/search?term=ibooks&amp ; Entity = software&amp; Country = US](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Punto e canguro iBook** – [ http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; Entity = eBook&amp; Country = US](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **app iBooks** - [https://itunes.apple.com/search?term=ibooks&amp ; entity = software&amp; Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot e l'iBook di Kangaroo** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = eBook&amp; Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>Feed partner Enterprise
 
-Apple fornisce ai partner approvati un dump completo dei dati di tutti i prodotti, sotto forma di file flat disponibili per il database scaricabili. Se si è idonei per l'accesso al [feed del partner aziendale](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), l'ID Apple per qualsiasi prodotto si trova in tale set di dati.
+Apple fornisce ai partner approvati un dump completo dei dati di tutti i prodotti, sotto forma di file flat disponibili per il database scaricabili. Se si è idonei per l'accesso al [feed del partner aziendale](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), l'ID Apple per qualsiasi prodotto si trova in tale set di dati.
 
-Molti utenti del feed partner aziendale sono membri del [programma affiliato](http://www.apple.com/itunes/affiliates) che consente di guadagnare le commissioni sulle vendite del prodotto. `SKStoreProductViewController`non supporta gli ID affiliati (al momento della stesura di questo documento).
+Molti utenti del feed partner aziendale sono membri del [programma affiliato](https://www.apple.com/itunes/affiliates) che consente di guadagnare le commissioni sulle vendite del prodotto. `SKStoreProductViewController` non supporta gli ID affiliati (al momento della stesura di questo documento).
 
 ### <a name="direct-product-links"></a>Collegamenti diretti al prodotto
 
 L'ID Apple per un prodotto può essere dedotto dal relativo collegamento URL di anteprima iTunes.
-In qualsiasi collegamento al prodotto iTunes (per app, musica o libri) trova la parte dell'URL che inizia `id` con e usa il numero che segue.
+In qualsiasi collegamento al prodotto iTunes (per app, musica o libri) trova la parte dell'URL che inizia con `id` e usa il numero che segue.
 
 Ad esempio, il collegamento diretto a iBooks è
 
@@ -185,14 +185,14 @@ Prima di iOS 6, erano disponibili due modi per fornire un prodotto (descritto pi
 
 In iOS 6 Apple offre una variante dei prodotti distribuiti dal server: i file di contenuto vengono ospitati nei server. Questa operazione rende molto più semplice la creazione di prodotti distribuiti dal server poiché non è necessario utilizzare un server separato e Store Kit fornisce funzionalità di download in background che in precedenza era necessario scrivere manualmente. Per sfruttare i vantaggi offerti dall'hosting di Apple, è possibile abilitare l'hosting del contenuto per i nuovi prodotti di acquisto in-app e modificare il codice del kit di archiviazione per sfruttarne i vantaggi. I file di contenuto del prodotto vengono quindi compilati con Xcode e caricati nei server Apple per la revisione e il rilascio.
 
-[![](changes-to-storekit-images/image4.png "Processo di compilazione e distribuzione")](changes-to-storekit-images/image4.png#lightbox)
+[![](changes-to-storekit-images/image4.png "The build and deliver process")](changes-to-storekit-images/image4.png#lightbox)
 
 L'uso dell'app Store per fornire l'acquisto in-app *con contenuto ospitato* richiede l'installazione e la configurazione seguenti:
 
 - **iTunes Connect** : è *necessario* avere fornito le informazioni bancarie e fiscali ad Apple per poter rimettere i fondi raccolti per conto dell'utente. È quindi possibile configurare i prodotti da vendere e configurare gli account utente sandbox per testare l'acquisto.  _È inoltre necessario configurare il contenuto ospitato per i prodotti non utilizzabili che si desidera ospitare con Apple_.
 - **portale di provisioning iOS** : creazione di un identificatore del bundle e abilitazione dell'accesso all'App Store per l'app, come per qualsiasi applicazione che supporta l'acquisto in-app.
 - **Store Kit** : aggiunta di codice all'app per la visualizzazione di prodotti, acquisto di prodotti e ripristino di transazioni.  _In iOS 6 Store Kit gestisce anche il download del contenuto del prodotto, in background, con aggiornamenti sullo stato di avanzamento._
-- **Codice personalizzato** : per tenere traccia degli acquisti effettuati dai clienti e fornire i prodotti o i servizi acquistati. Usare nuove classi del kit di archiviazione iOS 6 `SKDownload` come per recuperare il contenuto ospitato da Apple.
+- **Codice personalizzato** : per tenere traccia degli acquisti effettuati dai clienti e fornire i prodotti o i servizi acquistati. Usare nuove classi del kit di archiviazione iOS 6 come `SKDownload` per recuperare il contenuto ospitato da Apple.
 
 Le sezioni seguenti illustrano come implementare contenuto ospitato, da creare e caricare il pacchetto per gestire il processo di acquisto e download, usando il codice di esempio per questo articolo.
 
@@ -202,7 +202,7 @@ Il progetto di esempio *HostedNonConsumables* (in StoreKitiOS6. zip) USA contenu
 
 L'app ha un aspetto simile al seguente, durante e dopo un acquisto:
 
- [![](changes-to-storekit-images/image5.png "L'app ha un aspetto simile a questa prima, durante e dopo un acquisto")](changes-to-storekit-images/image5.png#lightbox)
+ [![](changes-to-storekit-images/image5.png "The app looks like this before, during and after a purchase")](changes-to-storekit-images/image5.png#lightbox)
 
 Il file di testo e l'immagine vengono scaricati e copiati nella directory dei documenti dell'applicazione. Per ulteriori informazioni sulle diverse directory disponibili per l'archiviazione delle applicazioni, vedere la [documentazione file System](~/ios/app-fundamentals/file-system.md).
 
@@ -210,19 +210,19 @@ Il file di testo e l'immagine vengono scaricati e copiati nella directory dei do
 
 Quando si creano nuovi prodotti che utilizzeranno l'hosting del contenuto di Apple, assicurarsi di selezionare il tipo di prodotto **non** utilizzabile. Altri tipi di prodotto non supportano l'hosting del contenuto. Inoltre, è consigliabile non abilitare l'hosting del contenuto per i prodotti *esistenti* che si vendono; attivare l'hosting del contenuto solo per i nuovi prodotti.
 
- [![](changes-to-storekit-images/image6.png "Selezionare il tipo di prodotto non utilizzabile")](changes-to-storekit-images/image6.png#lightbox)
+ [![](changes-to-storekit-images/image6.png "Select the Non-Consumable product type")](changes-to-storekit-images/image6.png#lightbox)
 
 Immettere un **ID prodotto**. Questo ID sarà necessario in un secondo momento quando si creerà il contenuto per questo prodotto.
 
- [![](changes-to-storekit-images/image7.png "Immettere un ID prodotto")](changes-to-storekit-images/image7.png#lightbox)
+ [![](changes-to-storekit-images/image7.png "Enter a Product ID")](changes-to-storekit-images/image7.png#lightbox)
 
 L'hosting del contenuto è impostato nella sezione dei dettagli. Prima di procedere con l'acquisto in-app, deselezionare la casella di controllo **contenuto host con Apple** se si vuole annullare (anche se è stato caricato un contenuto di test). Tuttavia, non è possibile rimuovere l'hosting del contenuto dopo che l'acquisto in-app è andato in tempo reale.
 
- [![](changes-to-storekit-images/image8.png "Hosting di contenuto con Apple")](changes-to-storekit-images/image8.png#lightbox)
+ [![](changes-to-storekit-images/image8.png "Hosting content with Apple")](changes-to-storekit-images/image8.png#lightbox)
 
 Dopo aver attivato l'hosting del contenuto, il prodotto entrerà **in attesa dello stato di caricamento** e visualizzerà il messaggio seguente:
 
- [![](changes-to-storekit-images/image9.png "Il prodotto verrà immesso in attesa dello stato di caricamento e visualizzerà questo messaggio")](changes-to-storekit-images/image9.png#lightbox)
+ [![](changes-to-storekit-images/image9.png "The product will enter Waiting for Upload status and show this message")](changes-to-storekit-images/image9.png#lightbox)
 
 Il pacchetto di contenuto deve essere creato con Xcode e caricato con lo strumento di archiviazione. Le istruzioni per la creazione di pacchetti di contenuto sono fornite nella sezione successiva **creazione. File PKG**.
 
@@ -236,7 +236,7 @@ Il pacchetto di contenuto deve essere creato con Xcode e caricato con lo strumen
 
 È possibile aggiungere molti file e tipi di file diversi, purché soddisfino tali restrizioni. Il contenuto viene compresso prima del recapito all'applicazione e viene decompresso dal kit di archiviazione prima che il codice ne acceda.
 
-Dopo il caricamento di un pacchetto di contenuto, è possibile sostituirlo con contenuto più recente. Il nuovo contenuto deve essere caricato e inviato per la revisione e l'approvazione tramite il processo normale. Incrementare `ContentVersion` il campo nei pacchetti di contenuto aggiornati per indicare che è più recente.
+Dopo il caricamento di un pacchetto di contenuto, è possibile sostituirlo con contenuto più recente. Il nuovo contenuto deve essere caricato e inviato per la revisione e l'approvazione tramite il processo normale. Incrementare il campo `ContentVersion` nei pacchetti di contenuto aggiornati per indicare che è più recente.
 
 ### <a name="xcode-in-app-purchase-content-projects"></a>Progetti di contenuto di acquisto in-app Xcode
 
@@ -249,17 +249,17 @@ L'applicazione di esempio include i capitoli del libro per la vendita. ogni pacc
 
 Per iniziare, selezionare **File > nuovo progetto** dal menu e scegliere **contenuto di acquisto in-app**:
 
- [![](changes-to-storekit-images/image10.png "Scegli il contenuto di acquisto in-app")](changes-to-storekit-images/image10.png#lightbox)
+ [![](changes-to-storekit-images/image10.png "Choose In-App Purchase Content")](changes-to-storekit-images/image10.png#lightbox)
 
 Immettere il **nome del prodotto** e l' **identificatore della società** in modo che l' **identificatore del bundle** corrisponda all' **ID prodotto** immesso in iTunes Connect per questo prodotto.
 
-[![](changes-to-storekit-images/image11.png "Immettere il nome e l'identificatore")](changes-to-storekit-images/image11.png#lightbox)
+[![](changes-to-storekit-images/image11.png "Enter the  Name and Identifier")](changes-to-storekit-images/image11.png#lightbox)
 
 A questo punto si disporrà di un progetto **di contenuto di acquisto in-app** vuoto. È possibile fare clic con il pulsante destro del mouse e **aggiungere file...** o trascinarli nello **strumento di navigazione del progetto**. Verificare che **ContentVersion** sia corretto (dovrebbe iniziare a 1,0, ma se in seguito si sceglie di aggiornare il contenuto, ricordarsi di incrementarlo).
 
 Questa schermata mostra Xcode con i file di contenuto inclusi nel progetto e le voci plist visibili nella finestra principale:
 
-[![](changes-to-storekit-images/image12.png "Questa schermata mostra Xcode con i file di contenuto inclusi nel progetto e le voci plist visibili nella finestra principale")](changes-to-storekit-images/image12.png#lightbox)
+[![](changes-to-storekit-images/image12.png "This screenshot shows Xcode with the content files included in the project and the plist entries visible in the main window")](changes-to-storekit-images/image12.png#lightbox)
 
 Dopo aver aggiunto tutti i file di contenuto, è possibile salvare il progetto e modificarlo di nuovo in un secondo momento oppure iniziare il processo di caricamento.
 
@@ -267,19 +267,19 @@ Dopo aver aggiunto tutti i file di contenuto, è possibile salvare il progetto e
 
 Il modo più semplice per caricare i pacchetti di contenuto è con lo **strumento di archiviazione Xcode**. Scegliere **Product > Archive** dal menu per iniziare:
 
-![](changes-to-storekit-images/image13.png "Scegli Archivio")
+![](changes-to-storekit-images/image13.png "Choose Archiven")
 
 Il pacchetto di contenuto verrà quindi visualizzato nell'archivio come illustrato di seguito. Il tipo di archivio e l'icona mostrano che questa riga è un **Archivio del contenuto di acquisto in-app**. Fare clic su **convalida...** per verificare la presenza di errori nel pacchetto di contenuto senza eseguire effettivamente il caricamento.
 
-[![](changes-to-storekit-images/image14.png "Convalidare il pacchetto")](changes-to-storekit-images/image14.png#lightbox)
+[![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
 
 Accedere con le credenziali di iTunes Connect:
 
-[![](changes-to-storekit-images/image15.png "Accedi con le credenziali di iTunes Connect")](changes-to-storekit-images/image15.png#lightbox)
+[![](changes-to-storekit-images/image15.png "Login with your iTunes Connect credentials")](changes-to-storekit-images/image15.png#lightbox)
 
 Scegliere l'applicazione corretta e l'acquisto in-app per associare il contenuto a:
 
-[![](changes-to-storekit-images/image16.png "Scegliere l'applicazione corretta e l'acquisto in-app a cui associare questo contenuto")](changes-to-storekit-images/image16.png#lightbox)
+[![](changes-to-storekit-images/image16.png "Choose the correct application and in-app purchase to associate this content with")](changes-to-storekit-images/image16.png#lightbox)
 
 Verrà visualizzato un messaggio simile a questo screenshot:
 
@@ -295,23 +295,23 @@ Selezionare la prima opzione per caricare il contenuto:
 
 Accedi di nuovo:
 
-[![](changes-to-storekit-images/image15.png "Accedi")](changes-to-storekit-images/image15.png#lightbox)
+[![](changes-to-storekit-images/image15.png "Login in")](changes-to-storekit-images/image15.png#lightbox)
 
 Scegliere l'applicazione corretta e il record di acquisto in-app per caricare il contenuto in:
 
-[![](changes-to-storekit-images/image20.png "Scegliere l'applicazione e il record di acquisto in-app")](changes-to-storekit-images/image20.png#lightbox)
+[![](changes-to-storekit-images/image20.png "Choose the application and in-app purchase record")](changes-to-storekit-images/image20.png#lightbox)
 
 Attendere che i file vengano caricati:
 
-[![](changes-to-storekit-images/image21.png "Finestra di dialogo Caricamento contenuto")](changes-to-storekit-images/image21.png#lightbox)
+[![](changes-to-storekit-images/image21.png "The content upload dialog")](changes-to-storekit-images/image21.png#lightbox)
 
 Al termine del caricamento, verrà visualizzato un messaggio che informa che il contenuto è stato inviato all'App Store.
 
-[![](changes-to-storekit-images/image22.png "Messaggio di caricamento riuscito di esempio")](changes-to-storekit-images/image22.png#lightbox)
+[![](changes-to-storekit-images/image22.png "An example successful upload message")](changes-to-storekit-images/image22.png#lightbox)
 
 Al termine, quando si torna alla pagina del prodotto in iTunes Connect, verranno visualizzati i dettagli del pacchetto e sarà possibile **inviare** lo stato. Quando il prodotto è in questo stato, è possibile avviare il test nell'ambiente sandbox. NON è necessario "inviare" il prodotto per il test in sandbox.
 
-[![](changes-to-storekit-images/image23.png "iTunes Connect consente di visualizzare i dettagli del pacchetto e di essere in grado di inviare lo stato")](changes-to-storekit-images/image23.png#lightbox)
+[![](changes-to-storekit-images/image23.png "iTunes Connect it will show the package details and be in Ready to Submit status")](changes-to-storekit-images/image23.png#lightbox)
 
 Può richiedere del tempo, ad esempio pochi minuti) tra il caricamento dell'archivio e lo stato di iTunes Connect aggiornato. È possibile inviare il prodotto per la revisione separatamente oppure inviarlo insieme a un file binario dell'applicazione. Solo dopo che Apple ha approvato ufficialmente il contenuto sarà disponibile nell'App Store di produzione per l'acquisto nell'app.
 
@@ -319,9 +319,9 @@ Può richiedere del tempo, ad esempio pochi minuti) tra il caricamento dell'arch
 
 L'uso di Xcode e dello strumento Archive per creare e caricare un pacchetto di contenuto ospitato significa che non è mai possibile visualizzare il contenuto del pacchetto stesso. I file e le directory nei pacchetti creati per l'app di esempio hanno un aspetto simile a quello riportato nella schermata seguente, con il file **plist** nella radice e i file di prodotto in una sottodirectory di **contenuti** :
 
-[![](changes-to-storekit-images/image24.png "Il file plist nella radice e nei file di prodotto in una sottodirectory del contenuto")](changes-to-storekit-images/image24.png#lightbox)
+[![](changes-to-storekit-images/image24.png "The plist file in the root and the product files in a Contents subdirectory")](changes-to-storekit-images/image24.png#lightbox)
 
-Prendere nota della struttura di directory del pacchetto (in particolare il percorso dei file nella `Contents` sottodirectory), perché sarà necessario comprendere queste informazioni per estrarre i file dal pacchetto nel dispositivo.
+Prendere nota della struttura di directory del pacchetto (in particolare il percorso dei file nella sottodirectory `Contents`), perché sarà necessario comprendere queste informazioni per estrarre i file dal pacchetto nel dispositivo.
 
 ### <a name="updating-package-content"></a>Aggiornamento del contenuto del pacchetto
 
@@ -339,7 +339,7 @@ Prima di leggere questa sezione, esaminare la [documentazione di acquisto in-app
 
 La sequenza di eventi che si verifica quando un prodotto con contenuto ospitato viene acquistato e il download viene illustrato in questo diagramma:
 
-[![](changes-to-storekit-images/image25.png "Sequenza di eventi che si verifica quando viene acquistato e scaricato un prodotto con contenuto ospitato")](changes-to-storekit-images/image25.png#lightbox)
+[![](changes-to-storekit-images/image25.png "The sequence of events that occurs when a product with hosted content is purchased and download")](changes-to-storekit-images/image25.png#lightbox)
 
 1. È possibile creare nuovi prodotti in iTunes Connect con contenuto ospitato abilitato. Il contenuto effettivo viene costruito separatamente in Xcode (semplicemente come il trascinamento di file in una cartella) e quindi archiviato e caricato in iTunes (non è richiesto alcun codice). Ogni prodotto viene quindi inviato per l'approvazione, dopo il quale diventa disponibile per l'acquisto. Nel codice di esempio questi ID prodotto sono hardcoded, ma l'hosting del contenuto con Apple è più flessibile se si archivia l'elenco dei prodotti disponibili in un server remoto in modo che possa essere aggiornato quando si inviano nuovi prodotti e contenuto a iTunes Connect.
 1. Quando l'utente acquista un prodotto, una transazione viene inserita nella coda di pagamento per l'elaborazione.
@@ -360,28 +360,28 @@ Le informazioni seguenti devono essere lette insieme alla documentazione complet
 Le seguenti classi sono state aggiunte o modificate per supportare il contenuto ospitato in iOS 6:
 
 - **SKDownload** : nuova classe che rappresenta un download in corso. L'API consente più di un prodotto, ma inizialmente ne è stata implementata solo una.
-- **SKProduct** -sono state aggiunte nuove `Downloadable`proprietà `ContentVersion`: `ContentLengths` ,, array.
-- **SKPaymentTransaction** : nuova proprietà aggiunta: `Downloads`, che contiene una raccolta di `SKDownload` oggetti se questo prodotto ha ospitato contenuto disponibile per il download.
-- **SKPaymentQueue** : nuovo metodo aggiunto: `StartDownloads`. Chiamare questo metodo con `SKDownload` gli oggetti per recuperare il contenuto ospitato. Il download può essere eseguito in background.
+- **SKProduct** : nuove proprietà aggiunte: `Downloadable`, `ContentVersion`, `ContentLengths` matrice.
+- **SKPaymentTransaction** -nuova proprietà aggiunta: `Downloads`, che contiene una raccolta di oggetti `SKDownload` se il contenuto di questo prodotto è disponibile per il download.
+- **SKPaymentQueue** -nuovo metodo aggiunto: `StartDownloads`. Chiamare questo metodo con `SKDownload` oggetti per recuperare il contenuto ospitato. Il download può essere eseguito in background.
 - **SKPaymentTransactionObserver** -nuovo metodo: `UpdateDownloads`. Il kit di archiviazione chiama questo metodo con informazioni sullo stato delle operazioni di download correnti.
 
-Dettagli della nuova `SKDownload` classe:
+Dettagli della nuova classe `SKDownload`:
 
 - **Progress** : valore compreso tra 0-1 che è possibile usare per visualizzare un indicatore di completamento percentuale per l'utente. Non usare Progress = = 1 per rilevare se il download è stato completato, verificare lo stato = = completato.
 - **TimeRemaining** : stima del tempo di download rimanente, in secondi. -1 indica che è ancora in calcolo la stima.
 - **Stato** : attivo, in attesa, terminato, non riuscito, sospeso, annullato.
-- **ContentURL** : percorso del file in cui il contenuto è stato inserito sul disco `Cache` , nella directory. Viene popolato solo al termine del download.
+- **ContentURL** : percorso del file in cui il contenuto è stato inserito sul disco, nella directory `Cache`. Viene popolato solo al termine del download.
 - **Errore** : controllare questa proprietà se lo stato non è riuscito.
 
 Le interazioni tra le classi nel codice di esempio sono illustrate in questo diagramma (il codice specifico per gli acquisti di contenuto ospitato viene visualizzato in verde):
 
-[![](changes-to-storekit-images/image26.png "Gli acquisti di contenuto ospitato sono visualizzati in verde in questo diagramma")](changes-to-storekit-images/image26.png#lightbox)
+[![](changes-to-storekit-images/image26.png "Hosted content purchases is shown in green in this diagram")](changes-to-storekit-images/image26.png#lightbox)
 
 Il codice di esempio in cui sono state usate queste classi è illustrato nella parte restante di questa sezione:
 
 ### <a name="custompaymentobserver-skpaymenttransactionobserver"></a>CustomPaymentObserver (SKPaymentTransactionObserver)
 
-Modificare la sostituzione `UpdatedTransactions` esistente per verificare la presenza di contenuto scaricabile e `StartDownloads` chiamare se necessario:
+Modificare la sostituzione del `UpdatedTransactions` esistente per verificare la presenza di contenuto scaricabile e chiamare `StartDownloads` se necessario:
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -414,7 +414,7 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 }
 ```
 
-Di seguito è riportato `UpdatedDownloads` il nuovo metodo sottoposto a override. Il kit di archiviazione chiama questo `StartDownloads` metodo dopo l'attivazione `UpdatedTransactions`di. Questo metodo viene chiamato *più volte* a intervalli indeterminati per fornire lo stato di avanzamento del download e quindi di nuovo al termine del download. Si noti che il metodo accetta una `SKDownload` matrice di oggetti, quindi ciascuna chiamata al metodo può fornire lo stato di più download nella coda. Come illustrato nell'implementazione di sotto gli Stati di download, vengono controllati ogni volta e viene eseguita un'azione appropriata.
+Di seguito è riportato il nuovo metodo sottoposto a override `UpdatedDownloads`. Il kit di archiviazione chiama questo metodo dopo l'attivazione di `StartDownloads` in `UpdatedTransactions`. Questo metodo viene chiamato *più volte* a intervalli indeterminati per fornire lo stato di avanzamento del download e quindi di nuovo al termine del download. Si noti che il metodo accetta una matrice di oggetti `SKDownload`, quindi ciascuna chiamata al metodo può fornire lo stato di più download nella coda. Come illustrato nell'implementazione di sotto gli Stati di download, vengono controllati ogni volta e viene eseguita un'azione appropriata.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS6
@@ -456,9 +456,9 @@ public override void PaymentQueueUpdatedDownloads (SKPaymentQueue queue, SKDownl
 
 Questa classe contiene un nuovo metodo `SaveDownload` che viene chiamato dopo che ogni download è stato completato correttamente.
 
-Il contenuto ospitato è stato scaricato correttamente e decompresso nella `Cache` directory. Struttura dell'oggetto. Il file pkg richiede che tutti i file vengano salvati `Contents` in una sottodirectory, quindi il codice seguente estrae i file `Contents` dall'interno della sottodirectory.
+Il contenuto ospitato è stato scaricato correttamente e decompresso nella directory `Cache`. Struttura dell'oggetto. Il file PKG richiede che tutti i file vengano salvati in una sottodirectory `Contents`, quindi il codice seguente estrae i file dall'interno della sottodirectory `Contents`.
 
-Il codice esegue l'iterazione di tutti i file nel pacchetto di contenuto e li copia `Documents` nella directory, in una sottocartella denominata per `ProductIdentifier`il. Infine chiama `CompleteTransaction`, che chiama `FinishTransaction` per rimuovere la transazione dalla coda di pagamento.
+Il codice esegue l'iterazione di tutti i file nel pacchetto di contenuto e li copia nella directory `Documents`, in una sottocartella denominata per l'`ProductIdentifier`. Infine chiama `CompleteTransaction`, che chiama `FinishTransaction` per rimuovere la transazione dalla coda di pagamento.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS 6
@@ -482,7 +482,7 @@ public void SaveDownload (SKDownload download)
 }
 ```
 
-Quando `FinishTransaction` viene chiamato il metodo, non è più garantito che i file scaricati si `Cache` trovino nella directory. Tutti i file devono essere copiati `FinishTransaction`prima di chiamare.
+Quando viene chiamato `FinishTransaction`, non è più garantito che i file scaricati si trovino nella directory `Cache`. Tutti i file devono essere copiati prima di chiamare `FinishTransaction`.
 
 ## <a name="other-considerations"></a>Altre considerazioni
 
@@ -490,25 +490,25 @@ Il codice di esempio precedente illustra un'implementazione piuttosto semplice d
 
 ### <a name="detecting-updated-content"></a>Rilevamento del contenuto aggiornato
 
-Sebbene sia possibile aggiornare i pacchetti di contenuto ospitati, Store Kit non fornisce alcun meccanismo per eseguire il push di questi aggiornamenti agli utenti che hanno già scaricato e acquistato il prodotto. Per implementare questa funzionalità, il codice può controllare la `SKProduct.ContentVersion` nuova proprietà ( `SKProduct` se è `Downloadable`) regolarmente e rilevare se il valore viene incrementato. In alternativa, è possibile creare un sistema di notifica push.
+Sebbene sia possibile aggiornare i pacchetti di contenuto ospitati, Store Kit non fornisce alcun meccanismo per eseguire il push di questi aggiornamenti agli utenti che hanno già scaricato e acquistato il prodotto. Per implementare questa funzionalità, il codice può controllare la nuova proprietà `SKProduct.ContentVersion` (se il `SKProduct` è `Downloadable`) regolarmente e rilevare se il valore viene incrementato. In alternativa, è possibile creare un sistema di notifica push.
 
 ### <a name="installing-updated-content-versions"></a>Installazione delle versioni di contenuto aggiornate
 
 Il codice di esempio precedente ignora la copia dei file se il file esiste già. NON è consigliabile se si desidera supportare versioni più recenti del contenuto scaricato.
 
-In alternativa, è possibile copiare il contenuto in una cartella denominata per la versione e tenere traccia di quale è la versione corrente (ad esempio, in `NSUserDefaults` o in qualsiasi punto in cui si archiviano i record di acquisto completati.
+In alternativa, è possibile copiare il contenuto in una cartella denominata per la versione e tenere traccia di quale è la versione corrente (ad esempio, in `NSUserDefaults` o in ogni punto in cui vengono archiviati i record di acquisto completati).
 
 ### <a name="restoring-transactions"></a>Ripristino di transazioni
 
-Quando `SKPaymentQueue.DefaultQueue.RestoreCompletedTransactions` viene chiamato, Store Kit restituisce tutte le transazioni precedenti per l'utente. Se hanno acquistato un numero elevato di elementi o se ogni acquisto include pacchetti di contenuto di grandi dimensioni, il ripristino può comportare una grande quantità di traffico di rete, perché tutto viene accodato per il download in una sola volta.
+Quando viene chiamato `SKPaymentQueue.DefaultQueue.RestoreCompletedTransactions`, Store Kit restituisce tutte le transazioni precedenti per l'utente. Se hanno acquistato un numero elevato di elementi o se ogni acquisto include pacchetti di contenuto di grandi dimensioni, il ripristino può comportare una grande quantità di traffico di rete, perché tutto viene accodato per il download in una sola volta.
 
 Valutare se un prodotto è stato acquistato separatamente rispetto al download effettivo del pacchetto di contenuto associato.
 
 ### <a name="pausing-restarting-and-canceling-downloads"></a>Sospensione, riavvio e annullamento di download
 
-Sebbene il codice di esempio non illustri questa funzionalità, è possibile sospendere e riavviare i download del contenuto ospitato. Dispone di metodi per `PauseDownloads`, `ResumeDownloads` e `CancelDownloads`. `SKPaymentQueue.DefaultQueue`
+Sebbene il codice di esempio non illustri questa funzionalità, è possibile sospendere e riavviare i download del contenuto ospitato. Il `SKPaymentQueue.DefaultQueue` dispone di metodi per `PauseDownloads`, `ResumeDownloads` e `CancelDownloads`.
 
-Se il codice chiama `FinishTransaction` nella coda di pagamento prima del `Finished` download, il download viene annullato automaticamente.
+Se il codice chiama `FinishTransaction` sulla coda di pagamento prima che il download venga `Finished`, il download viene annullato automaticamente.
 
 ### <a name="setting-the-skip-backup-flag-on-the-downloaded-content"></a>Impostazione del flag SKIP-backup sul contenuto scaricato
 
@@ -524,8 +524,8 @@ Questo articolo ha introdotto due nuove funzionalità di Store Kit in iOS6: acqu
 - [Acquisti in-app](~/ios/platform/in-app-purchasing/index.md)
 - [Guida di riferimento a StoreKit Framework](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Riferimento alla classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [Riferimento all'API di ricerca di iTunes](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- [Riferimento all'API di ricerca di iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
-- [Video di WWDC: Vendita di prodotti con Store Kit](https://developer.apple.com/videos/wwdc/2012/?include=302#302)
+- [Video di WWDC: vendita di prodotti con Store Kit](https://developer.apple.com/videos/wwdc/2012/?include=302#302)

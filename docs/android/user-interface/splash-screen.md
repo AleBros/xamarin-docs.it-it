@@ -4,21 +4,21 @@ description: L'avvio di un'app Android richiede tempo, soprattutto quando l'app 
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 4633811b2c0b001ab220f5fedaf116b1b269344a
-ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72032557"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028721"
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 
-l'avvio dell'app _An per Android richiede tempo, soprattutto quando l'app viene avviata per la prima volta in un dispositivo. Una schermata iniziale può visualizzare lo stato di avanzamento dell'avvio per l'utente o per indicare la personalizzazione._
+_L'avvio di un'app Android richiede tempo, soprattutto quando l'app viene avviata per la prima volta in un dispositivo. Una schermata iniziale può visualizzare lo stato di avanzamento dell'avvio per l'utente o per indicare la personalizzazione._
 
 ## <a name="overview"></a>Panoramica
 
@@ -32,7 +32,7 @@ Questa guida illustra una tecnica per implementare una schermata iniziale in un'
 
 3. Aggiunta di una nuova attività all'applicazione che verrà usata come schermata iniziale definita dal tema creato nel passaggio precedente.
 
-[schermata iniziale del logo ![Example Novell seguita dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[schermata iniziale del logo Novell di esempio![seguito dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## <a name="requirements"></a>Requisiti
 
@@ -77,11 +77,11 @@ Questo `layer-list` centra l'immagine iniziale su un colore di sfondo specificat
 </resources>
 ```
 
-Per ulteriori informazioni sugli oggetti `Drawable`, vedere la [documentazione di Google su Android](https://developer.android.com/reference/android/graphics/drawable/Drawable).
+Per ulteriori informazioni sugli oggetti di `Drawable`, vedere la [documentazione di Google su Android](https://developer.android.com/reference/android/graphics/drawable/Drawable).
 
 ### <a name="implementing-a-theme"></a>Implementazione di un tema
 
-Per creare un tema personalizzato per l'attività della schermata iniziale, modificare (o aggiungere) il file **values/styles. XML** e creare un nuovo elemento `style` per la schermata iniziale. Di seguito è riportato un file di esempio **values/Style. XML** con un `style` denominato "My **. Splash**":
+Per creare un tema personalizzato per l'attività della schermata iniziale, modificare (o aggiungere) il file **values/styles. XML** e creare un nuovo elemento `style` per la schermata iniziale. Di seguito è riportato un file Sample **values/Style. XML** con un `style` denominato myfilee **. Splash**:
 
 ```xml
 <resources>
@@ -149,7 +149,7 @@ public override void OnBackPressed() { }
 
 Il lavoro di avvio viene eseguito in modo asincrono in `OnResume`. Questa operazione è necessaria in modo che il lavoro di avvio non rallenti o ritardi l'aspetto della schermata di avvio. Al termine del lavoro, `SplashActivity` avvierà `MainActivity` e l'utente potrà iniziare a interagire con l'app.
 
-Questo nuovo `SplashActivity` viene impostato come attività dell'utilità di avvio per l'applicazione impostando l'attributo `MainLauncher` su `true`. Poiché `SplashActivity` è ora l'attività dell'utilità di avvio, è necessario modificare `MainActivity.cs` e rimuovere l'attributo `MainLauncher` da `MainActivity`:
+Questo nuovo `SplashActivity` viene impostato come attività dell'utilità di avvio per l'applicazione impostando l'attributo `MainLauncher` su `true`. Poiché `SplashActivity` è ora l'attività dell'utilità di avvio, è necessario modificare `MainActivity.cs`e rimuovere l'attributo `MainLauncher` da `MainActivity`:
 
 ```csharp
 [Activity(Label = "@string/ApplicationName")]
@@ -221,7 +221,7 @@ Per aggiungere una schermata iniziale per la modalità orizzontale, attenersi al
 
 7. Compilare ed eseguire nuovamente l'app. Ruotare il dispositivo in modalità orizzontale mentre è ancora visualizzata la schermata iniziale. La schermata iniziale passa alla versione orizzontale:
 
-    [@no__t 1Rotation della schermata iniziale alla modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [![la rotazione della schermata iniziale in modalità orizzontale](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 Si noti che l'uso di una schermata iniziale in modalità orizzontale non fornisce sempre un'esperienza semplice. Per impostazione predefinita, Android avvia l'app in modalità verticale e la passa alla modalità orizzontale anche se il dispositivo è già in modalità orizzontale. Di conseguenza, se l'app viene avviata mentre il dispositivo è in modalità orizzontale, il dispositivo presenta brevemente la schermata iniziale verticale e quindi aggiunge un'animazione alla rotazione dal ritratto alla schermata iniziale orizzontale. Sfortunatamente, questa transizione da verticale a orizzontale viene effettuata anche quando si specifica `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` nei flag dell'attività iniziale. Il modo migliore per aggirare questa limitazione consiste nel creare una singola immagine della schermata iniziale che esegue correttamente il rendering in modalità verticale e orizzontale.
 

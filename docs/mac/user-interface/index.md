@@ -4,15 +4,15 @@ description: Questo documento include collegamenti a guide che descrivono i vari
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: f1168378104fd40fa7de78297f1f683d0caa0afa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f5303cd63c6ff1433b56b3f47b67d3925b1d1e1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032788"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>controlli dell'interfaccia utente macOS in Novell. Mac
 
@@ -22,7 +22,7 @@ Quando si lavora C# con e .NET in un'applicazione Novell. Mac, è possibile acce
 
 Le guide elencate di seguito forniscono informazioni dettagliate sull'uso degli elementi dell'interfaccia utente macOS in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in ogni articolo.
 
-Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) anche nel documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , perché spiega `Register` gli attributi e `Export` usati per collegare le C# classi. negli oggetti Objective-C e negli elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione relativa all' [esposizione di C# classi/metodi in Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) del documento interno di [Novell. Mac](~/mac/internals/how-it-works.md) , perché spiega gli attributi`Register`e`Export`usati per collegare le C# classi a Oggetti Objective-C ed elementi dell'interfaccia utente.
 
 ## <a name="windowsmacuser-interfacewindowmd"></a>[Windows](~/mac/user-interface/window.md)
 

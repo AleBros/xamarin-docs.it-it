@@ -4,15 +4,15 @@ description: Visual Studio include Android SDK Manager che consente di scaricare
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 9bdc7b57cee74a91cc3abf69a216ea9913482c94
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: 9d8b3e68aa626890fdce5c004928541ece263703
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273160"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020809"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurazione di Android SDK per Xamarin.Android
 
@@ -33,7 +33,7 @@ Xamarin Android SDK Manager viene installato come componente del carico di lavor
 
 Per usare Xamarin Android SDK Manager sono necessari i componenti seguenti:
 
-- Visual Studio 2019 Community, Professional o Enterprise.
+- Visual Studio 2019 Community, Professional, o Enterprise
 
 - OPPURE Visual Studio 2017 (edizione Community, Professional o Enterprise). È necessario Visual Studio 2017 versione 15.7 o versione successiva.
 
@@ -115,13 +115,13 @@ Selezionare **Accetto** se si accettano i termini e le condizioni. È possibile 
 
 ### <a name="repository-selection"></a>Selezione del repository
 
-Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)**:
+Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)** :
 
 [![Selezione del repository di Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
-Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Ad esempio, nella schermata precedente **Android SDK Platform 28** è stato aggiunto con il passaggio al repository Google. Tenere presente che l'uso del repository di Google non è supportato e pertanto è sconsigliato per le operazioni di sviluppo comuni.
+Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Nello screenshot precedente è stato aggiunto **Android SDK Platform 28** passando al repository Google. Tenere presente che l'uso del repository Google non è supportato ed è quindi sconsigliato per lo sviluppo giornaliero.
 
-Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)**. L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
+Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)** . L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -205,13 +205,13 @@ Selezionare **Accetto** se si accettano i termini e le condizioni. È possibile 
 
 ### <a name="repository-selection"></a>Selezione del repository
 
-Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)**:
+Per impostazione predefinita Android SDK Manager scarica i componenti e gli strumenti della piattaforma da un repository gestito da Microsoft. Se è necessario accedere a piattaforme e strumenti sperimentali alfa/beta non ancora disponibili nel repository di Microsoft, è possibile impostare SDK Manager in modo che usi il repository di Google. Per questa impostazione fare clic sull'icona a forma di ingranaggio nell'angolo inferiore destro e selezionare **Repository > Google (non supportato)** :
 
 [![Selezione del repository di Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
-Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Ad esempio, nella schermata precedente **Android SDK Platform 28** è stato aggiunto con il passaggio al repository Google. Tenere presente che l'uso del repository di Google non è supportato e pertanto è sconsigliato per le operazioni di sviluppo comuni.
+Quando è selezionato il repository di Google è possibile che nella scheda **Piattaforme** siano visibili pacchetti non disponibili in precedenza. Nello screenshot precedente è stato aggiunto **Android SDK Platform 28** passando al repository Google. Tenere presente che l'uso del repository Google non è supportato ed è quindi sconsigliato per lo sviluppo giornaliero.
 
-Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)**. L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
+Per tornare al repository di piattaforme e strumenti supportato, fare clic su **Microsoft (scelta consigliata)** . L'elenco di pacchetti e strumenti viene ripristinato con la selezione predefinita.
 
 -----
 

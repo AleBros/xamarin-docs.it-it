@@ -4,15 +4,15 @@ description: Questo documento descrive mtouch, uno strumento che consente di ese
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 9b2cb44dff7712953454a9add71f092956e3c759
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2a0f9d063b319c0f412f6e8f47a59f0f994678ae
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762779"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026290"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Uso di mtouch per creare un bundle di app Xamarin.iOS
 
@@ -65,7 +65,7 @@ Per compilare il software per il dispositivo, è necessario compilare l'applicaz
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-In questo caso specifico viene usato il certificato "iPhone Developer: Miguel de Icaza" per firmare l'applicazione. Questo passaggio è molto importante o il dispositivo fisico rifiuterà di caricare l'applicazione.
+In questo caso specifico, viene usato il certificato "iPhone Developer: Miguel de Icaza" per firmare l'applicazione. Questo passaggio è molto importante o il dispositivo fisico rifiuterà di caricare l'applicazione.
 
  <a name="Running_your_Application" />
 
@@ -116,10 +116,7 @@ Se il flag `--sdkroot` non è impostato, per impostazione predefinita viene usat
 
 Questi passaggi vengono in genere eseguiti da Visual Studio per Mac.
 
-## <a name="reference"></a>Riferimenti
+## <a name="reference"></a>Reference
 
 Per informazioni dettagliate su altre opzioni della riga di comando, vedere la pagina del manuale di [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)).
 
-## <a name="related-links"></a>Collegamenti correlati
-
-- [mtouch(1)](http://iosapi.xamarin.com/?link=man%3amtouch(1))

@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso di immagini e icone in un'applicazio
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 233d4429915530dcb44013a9b4ab82cfe7656977
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770330"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030146"
 ---
 # <a name="images-in-xamarinmac"></a>Immagini in Novell. Mac
 
@@ -138,7 +138,7 @@ Qualsiasi asset grafico aggiunto a un'applicazione Novell. Mac (icone, controlli
 Quando si creano le versioni standard e ad alta risoluzione di un'immagine, seguire questa convenzione di denominazione per la coppia di immagini quando vengono incluse nel progetto Novell. Mac:
 
 - **Risoluzione Standard**   - **ImageName. filename-extension** (esempio: **Tags. png**)
-- **@No__t_3** **di   -  ad alta risoluzione** (ad esempio: **tags@2x.png** )
+- **ImageName@2x.filename-extension** **di  - ad alta risoluzione** (ad esempio: **tags@2x.png** )
 
 Quando vengono aggiunti a un progetto, vengono visualizzati nel modo seguente:
 

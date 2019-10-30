@@ -1,22 +1,22 @@
 ---
 title: Funzionalità Gruppo di app in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Gruppo di app.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Gruppo di app.
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 72e0c27502c10fe3522d80c6345a847ca424d49f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f98603c2ffac35362c6697e4806bf4b2daf44710
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762793"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030178"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Funzionalità Gruppo di app in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Gruppo di app._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità del gruppo di app._
 
 Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle relative estensioni di accedere a un percorso di archiviazione file condiviso. È possibile usare i Gruppi di app per dati quali:
 
@@ -28,7 +28,7 @@ Un Gruppo di app consente a diverse applicazioni o a un'applicazione e alle rela
 
 Il percorso condiviso viene configurato usando un [Gruppo di app](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19) configurato nella sezione **Certificates, Identifiers & Profiles** (Certificati, identificatori e profili) del [centro sviluppatori Apple](https://developer.apple.com/account/). È necessario fare riferimento a questo valore anche nel file Entitlements.plist di ogni progetto.
 
-Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il prefisso group. Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
+Il gruppo di app avrà un identificatore che in genere corrisponde all'ID bundle con il prefisso. Per l'ID bundle `com.xamarin.WatchSettings` , ad esempio, il gruppo di app sarà `group.com.xamarin.WatchSettings`.
 
 Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
@@ -45,7 +45,7 @@ Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
 Dopo aver creato il Gruppo di app, configurare gli ID delle app in modo che le app possano usarlo.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple e accedere con un account sviluppatore Apple.
 2. Nel menu **Program Resources** (Risorse del programma) selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).
@@ -72,12 +72,12 @@ Seguire questa procedura:
 11. Fare clic sul pulsante **Assign** (Assegna) e quindi sul pulsante **Done** (Chiudi) per tornare all'elenco degli ID app registrati.
 12. Ripetere questi passaggi per tutte le app o le estensioni che useranno il Gruppo di app.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 
 * Usare lo spazio dei nomi del framework nell'app.
 * Aggiungere all'app gli entitlement necessari. Per informazioni dettagliate sugli entitlement necessari e su come aggiungerli, vedere la guida [Uso degli entitlement](~/ios/deploy-test/provisioning/entitlements.md).
-* In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questa _non_ è l'impostazione predefinita per le build di debug e del simulatore iOS.
+* In **Firma del bundle iOS** dell'app assicurarsi che **Entitlement personalizzati** sia impostato su **Entitlements.plist**. Questo _non_ è l'impostazione predefinita per le compilazioni di debug e del simulatore iOS.
 
 In caso di problemi con i servizi app, vedere la sezione [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) (Risoluzione dei problemi) della guida principale.

@@ -1,22 +1,22 @@
 ---
-title: 'Hello, Android: Guida rapida'
+title: 'Hello, Android: guida introduttiva'
 description: In questa guida divisa in due parti è possibile creare un'applicazione Xamarin.Android per la prima volta usando Visual Studio o Visual Studio per Mac e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin. Verranno descritti gli strumenti, i concetti e i passaggi necessari per creare e distribuire un'applicazione Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c9f9fb7eecd41c3aeffb7a28042f944c9d6a320b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: ab401c24fc486ba69fe01aff76e1a9b7d53122d0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644066"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028028"
 ---
-# <a name="hello-android-quickstart"></a>Hello, Android: Guida rapida
+# <a name="hello-android-quickstart"></a>Hello, Android: guida introduttiva
 
 _In questa guida divisa in due parti è possibile creare per la prima volta un'applicazione Xamarin.Android usando Visual Studio e comprendere le nozioni di base dello sviluppo di applicazioni Android con Xamarin._
 
@@ -34,7 +34,7 @@ Per seguire questa procedura dettagliata è necessario quanto segue:
 
 - Windows 10.
 
-- Visual Studio 2019 o Visual Studio 2017 (versione 15.8 o successiva): Community, Professional o Enterprise.
+- Visual Studio 2019 o Visual Studio 2017 (versione 15,8 o successiva): community, Professional o Enterprise.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -255,7 +255,7 @@ translateButton.Click += (sender, e) =>
 
 Salvare selezionando **File > Salva tutto** (o premendo **CTRL-MAIUSC-S**) e compilare l'applicazione selezionando **Compila > Ricompila soluzione** (o premendo **CTRL-MAIUSC-B**). 
 
-Se sono presenti errori, rivedere i passaggi precedenti e correggere eventuali errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Visual Studio.
+Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Visual Studio.
 
 ## <a name="set-the-app-name"></a>Impostare il nome dell'app
 
@@ -475,7 +475,7 @@ translateButton.Click += (sender, e) =>
 
 Salvare e compilare l'applicazione selezionando **Compila > Compila tutto** o premendo **&#8984;+B**. Se la compilazione dell'applicazione viene eseguita, viene visualizzato un messaggio di operazione completata nella parte superiore di Visual Studio per Mac:
 
-Se sono presenti errori, rivedere i passaggi precedenti e correggere eventuali errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Xamarin.Android e Visual Studio per Mac.
+Se sono presenti errori, rivedere i passaggi precedenti e correggere gli errori fino a quando l'applicazione non viene compilata correttamente. Se si verifica un errore di compilazione, ad esempio _La risorsa non esiste nel contesto corrente_, verificare che il nome dello spazio dei nomi in **MainActivity.cs** corrisponda al nome del progetto (`Phoneword`) e quindi ricompilare completamente la soluzione. Se si verificano ancora errori di compilazione, verificare di aver installato gli ultimi aggiornamenti di Xamarin.Android e Visual Studio per Mac.
 
 ## <a name="set-the-label-and-app-icon"></a>Impostare l'etichetta e l'icona dell'app
 

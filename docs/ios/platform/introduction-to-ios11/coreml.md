@@ -4,15 +4,15 @@ description: Questo documento descrive CoreML, che consente l'apprendimento auto
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 96ea328901beede663c9ed3d8d42979544b041ea
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4319d9ab07682795e8890779a65a0e2289f4501c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292638"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032205"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Introduzione a CoreML in Novell. iOS
 
@@ -31,26 +31,26 @@ Questi passaggi descrivono come aggiungere CoreML a un progetto iOS. Per un esem
 
 ![Schermata di esempio del predittore del prezzo di Mars habitat](coreml-images/marspricer-heading.png)
 
-### <a name="1-add-the-coreml-model-to-the-project"></a>1. Aggiungere il modello CoreML al progetto
+### <a name="1-add-the-coreml-model-to-the-project"></a>1. aggiungere il modello CoreML al progetto
 
 Aggiungere un modello CoreML (un file con estensione **mlmodel** ) alla directory **Resources** del progetto. 
 
 Nelle proprietà del file del modello, l' **azione di compilazione** è impostata su **CoreMLModel**. Ciò significa che verrà compilato in un file con **estensione mlmodelc** durante la compilazione dell'applicazione.
 
-### <a name="2-load-the-model"></a>2. Caricare il modello
+### <a name="2-load-the-model"></a>2. caricare il modello
 
-Caricare il modello utilizzando il `MLModel.Create` metodo statico:
+Caricare il modello utilizzando il metodo statico `MLModel.Create`:
 
 ```csharp
 var assetPath = NSBundle.MainBundle.GetUrlForResource("NameOfModel", "mlmodelc");
 model = MLModel.Create(assetPath, out NSError error1);
 ```
 
-### <a name="3-set-the-parameters"></a>3. Impostare i parametri
+### <a name="3-set-the-parameters"></a>3. impostare i parametri
 
-I parametri del modello vengono passati all'interno e all'esterno utilizzando una `IMLFeatureProvider`classe contenitore che implementa.
+I parametri del modello vengono passati con una classe contenitore che implementa `IMLFeatureProvider`.
 
-Le classi del provider di funzionalità si comportano `MLFeatureValue`come un dizionario di stringa e s, dove ogni valore della funzionalità può essere una stringa o un numero semplice, una matrice o dati o un buffer di pixel che contiene un'immagine.
+Le classi del provider di funzionalità si comportano come un dizionario di stringa e `MLFeatureValue`s, dove ogni valore della funzionalità può essere una stringa o un numero semplice, una matrice o dati o un buffer pixel che contiene un'immagine.
 
 Di seguito è riportato il codice per un provider di funzionalità a valore singolo:
 
@@ -67,11 +67,11 @@ public class MyInput : NSObject, IMLFeatureProvider
   }
 ```
 
-Utilizzando classi come questa, i parametri di input possono essere forniti in modo comprensibile da CoreML. I nomi delle funzionalità, ad `myParam` esempio nell'esempio di codice, devono corrispondere a quanto previsto dal modello.
+Utilizzando classi come questa, i parametri di input possono essere forniti in modo comprensibile da CoreML. I nomi delle funzionalità, ad esempio `myParam` nell'esempio di codice, devono corrispondere a quanto previsto dal modello.
 
-### <a name="4-run-the-model"></a>4. Eseguire il modello
+### <a name="4-run-the-model"></a>4. eseguire il modello
 
-Per usare il modello è necessario creare un'istanza del provider di funzionalità e impostare i parametri, quindi `GetPrediction` chiamare il metodo:
+Per utilizzare il modello, è necessario che venga creata un'istanza del provider di funzionalità e che i parametri siano impostati, quindi che venga chiamato il metodo `GetPrediction`:
 
 ```csharp
 var input = new MyInput {MyParam = 13};
@@ -80,7 +80,7 @@ var outFeatures = model.GetPrediction(inputFeatures, out NSError error2);
 
 ### <a name="5-extract-the-results"></a>5. Estrarre i risultati
 
-Il risultato `outFeatures` della stima è anche un'istanza di `IMLFeatureProvider`. è possibile accedere ai valori di `GetFeatureValue` output usando con il `theResult`nome di ogni parametro di output, ad esempio, come nell'esempio seguente:
+Il risultato della stima `outFeatures` è anche un'istanza di `IMLFeatureProvider`; è possibile accedere ai valori di output usando `GetFeatureValue` con il nome di ogni parametro di output, ad esempio `theResult`, come nell'esempio seguente:
 
 ```csharp
 var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 6227020800
@@ -96,9 +96,9 @@ I passaggi seguenti descrivono come CoreML e visione vengono usati insieme nell'
 
 ![Riconoscimento immagini di numero 3](coreml-images/vision3.png) ![Riconoscimento immagini di numero 5](coreml-images/vision5.png)
 
-### <a name="1-create-a-vision-coreml-model"></a>1. Creare un modello CoreML per la visione artificiale
+### <a name="1-create-a-vision-coreml-model"></a>1. creare un modello CoreML per la visione artificiale
 
-Il modello CoreML _MNISTClassifier_ viene caricato e quindi sottoposto a `VNCoreMLModel` wrapper in un che rende il modello disponibile per le attività visive. Questo codice crea anche due richieste di visione: innanzitutto per trovare rettangoli in un'immagine e quindi per elaborare un rettangolo con il modello CoreML:
+Il modello CoreML _MNISTClassifier_ viene caricato e quindi incluso in un `VNCoreMLModel` che rende il modello disponibile per le attività visive. Questo codice crea anche due richieste di visione: innanzitutto per trovare rettangoli in un'immagine e quindi per elaborare un rettangolo con il modello CoreML:
 
 ```csharp
 // Load the ML model
@@ -113,9 +113,9 @@ RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 ClassificationRequest = new VNCoreMLRequest(model, HandleClassification);
 ```
 
-La classe deve comunque implementare i `HandleRectangles` metodi e `HandleClassification` per le richieste di visione, illustrati nei passaggi 3 e 4 di seguito.
+La classe deve comunque implementare i metodi `HandleRectangles` e `HandleClassification` per le richieste di visione, illustrati nei passaggi 3 e 4 di seguito.
 
-### <a name="2-start-the-vision-processing"></a>2. Avviare l'elaborazione della visione
+### <a name="2-start-the-vision-processing"></a>2. avviare l'elaborazione della visione
 
 Il codice seguente avvia l'elaborazione della richiesta. Nell'esempio **CoreMLVision** questo codice viene eseguito dopo che l'utente ha selezionato un'immagine:
 
@@ -127,13 +127,13 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Questo gestore passa `ciImage` al Framework `VNDetectRectanglesRequest` di visione creato nel passaggio 1.
+Questo gestore passa il `ciImage` al Framework di visione `VNDetectRectanglesRequest` creato nel passaggio 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Gestire i risultati dell'elaborazione della visione
+### <a name="3-handle-the-results-of-vision-processing"></a>3. gestire i risultati dell'elaborazione della visione
 
-Una volta completato il rilevamento del rettangolo, viene eseguito il `HandleRectangles` metodo, che ritaglia l'immagine per estrarre il primo rettangolo, converte l'immagine del rettangolo in scala di grigi e la passa al modello CoreML per la classificazione.
+Una volta completato il rilevamento del rettangolo, viene eseguito il metodo `HandleRectangles`, che ritaglia l'immagine per estrarre il primo rettangolo, converte l'immagine del rettangolo in scala di grigi e la passa al modello CoreML per la classificazione.
 
-Il `request` parametro passato a questo metodo contiene i dettagli della richiesta di visione e, usando il `GetResults<VNRectangleObservation>()` metodo, restituisce un elenco di rettangoli trovati nell'immagine. Il primo rettangolo `observations[0]` viene estratto e passato al modello CoreML:
+Il parametro `request` passato a questo metodo contiene i dettagli della richiesta di visione e, usando il metodo `GetResults<VNRectangleObservation>()`, restituisce un elenco di rettangoli trovati nell'immagine. Il primo rettangolo `observations[0]` viene estratto e passato al modello CoreML:
 
 ```csharp
 void HandleRectangles(VNRequest request, NSError error) {
@@ -149,11 +149,11 @@ void HandleRectangles(VNRequest request, NSError error) {
 }
 ```
 
-L' `ClassificationRequest` oggetto è stato inizializzato nel passaggio 1 `HandleClassification` per utilizzare il metodo definito nel passaggio successivo.
+Il `ClassificationRequest` è stato inizializzato nel passaggio 1 per usare il metodo `HandleClassification` definito nel passaggio successivo.
 
-### <a name="4-handle-the-coreml"></a>4. Gestire CoreML
+### <a name="4-handle-the-coreml"></a>4. gestire CoreML
 
-Il `request` parametro passato a questo metodo contiene i dettagli della richiesta CoreML e, usando il `GetResults<VNClassificationObservation>()` metodo, restituisce un elenco di risultati possibili ordinati in base alla confidenza (primo livello di confidenza):
+Il parametro `request` passato a questo metodo contiene i dettagli della richiesta CoreML e, usando il metodo `GetResults<VNClassificationObservation>()`, restituisce un elenco di possibili risultati ordinati in base alla confidenza (primo livello di confidenza):
 
 ```csharp
 void HandleClassification(VNRequest request, NSError error){

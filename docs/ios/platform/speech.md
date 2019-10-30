@@ -4,15 +4,15 @@ description: Questo articolo presenta il nuovo Speech API e Mostra come implemen
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 66bea7d2a9660018c7cec9b7bafeadafd5029ed9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 015be44f60dbf8cd2d70badd7c9edaf4e5a1d2a4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769430"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031462"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Riconoscimento vocale in Novell. iOS
 
@@ -33,13 +33,13 @@ Secondo Apple, l'API riconoscimento vocale offre le funzionalità e i vantaggi s
 
 Il riconoscimento vocale viene implementato in un'app per iOS acquisendo audio in tempo reale o preregistrato (in una qualsiasi delle lingue vocali supportate dall'API) e passandolo a un riconoscimento vocale che restituisce una trascrizione in testo normale delle parole vocali.
 
-[![](speech-images/speech01.png "Funzionamento del riconoscimento vocale")](speech-images/speech01.png#lightbox)
+[![](speech-images/speech01.png "How Speech Recognition Works")](speech-images/speech01.png#lightbox)
 
 ### <a name="keyboard-dictation"></a>Dettatura tastiera
 
 Quando la maggior parte degli utenti pensa al riconoscimento vocale in un dispositivo iOS, pensa all'Assistente vocale Siri incorporato, che è stato rilasciato insieme alla dettatura della tastiera in iOS 5 con iPhone 4S.
 
-La dettatura della tastiera è supportata da qualsiasi elemento dell'interfaccia che supporta TextKit `UITextField` ( `UITextArea`ad esempio o) e viene attivato dall'utente facendo clic sul pulsante di dettatura (direttamente a sinistra della barra spaziatrice) nella tastiera virtuale iOS.
+La dettatura della tastiera è supportata da qualsiasi elemento dell'interfaccia che supporta TextKit, ad esempio `UITextField` o `UITextArea`, e viene attivato dall'utente facendo clic sul pulsante di dettatura (direttamente a sinistra della barra spaziatrice) nella tastiera virtuale iOS.
 
 Apple ha rilasciato le seguenti statistiche sulla dettatura della tastiera (raccolte da 2011):
 
@@ -66,68 +66,68 @@ Una novità di iOS 10, Apple ha rilasciato l'API riconoscimento vocale, che cons
 
 I risultati forniti dall'API riconoscimento vocale vengono personalizzati in modo trasparente per i singoli utenti, senza che l'app debba raccogliere o accedere a dati utente privati.
 
-L'API riconoscimento vocale fornisce risultati all'app chiamante quasi in tempo reale mentre l'utente sta parlando e fornisce altre informazioni sui risultati della traduzione rispetto al solo testo. Sono inclusi:
+L'API riconoscimento vocale fornisce risultati all'app chiamante quasi in tempo reale mentre l'utente sta parlando e fornisce altre informazioni sui risultati della traduzione rispetto al solo testo. tra cui:
 
 - Più interpretazioni di ciò che l'utente ha detto.
 - Livelli di confidenza per le singole traduzioni.
 - Informazioni sull'intervallo.
 
-Come descritto in precedenza, l'audio per la conversione può essere fornito sia da un feed in tempo reale, o da origine pre-registrato e in tutte le lingue regionali supportate da iOS 10 e oltre 50 lingue.
+Come indicato in precedenza, l'audio per la traduzione può essere fornito da un feed live o da un'origine pre-registrata e in una delle oltre 50 lingue e i dialetti supportati da iOS 10.
 
 L'API riconoscimento vocale può essere usata in qualsiasi dispositivo iOS che esegue iOS 10 e, nella maggior parte dei casi, richiede una connessione Internet in tempo reale, perché la maggior parte delle traduzioni viene eseguita nei server Apple. Ciò premesso, alcuni dispositivi iOS più recenti supportano la conversione su dispositivo always on, in una lingua specifica.
 
 Apple ha incluso un'API di disponibilità per determinare se una lingua specificata è disponibile per la traduzione al momento corrente. L'app deve usare questa API invece di testare direttamente la connettività Internet.
 
-Come indicato in precedenza nella sezione relativa alla dettatura della tastiera, il riconoscimento vocale richiede la trasmissione e l'archiviazione temporanea dei dati nei server Apple tramite Internet e, di conseguenza, l'app _deve_ richiedere l'autorizzazione dell'utente per eseguire il riconoscimento includendo chiave nel relativo `Info.plist` file e chiamata al `SFSpeechRecognizer.RequestAuthorization` metodo. `NSSpeechRecognitionUsageDescription` 
+Come indicato in precedenza nella sezione relativa alla dettatura della tastiera, il riconoscimento vocale richiede la trasmissione e l'archiviazione temporanea dei dati nei server Apple tramite Internet e, di conseguenza, l'app _deve_ richiedere l'autorizzazione dell'utente per eseguire il riconoscimento includendo chiave `NSSpeechRecognitionUsageDescription` nel file di `Info.plist` e chiamata al metodo `SFSpeechRecognizer.RequestAuthorization`. 
 
-In base all'origine dell'audio usato per il riconoscimento vocale, potrebbe essere necessario apportare altre modifiche al `Info.plist` file dell'app. Per informazioni dettagliate, vedere la documentazione relativa ai miglioramenti per la [sicurezza e la privacy](~/ios/app-fundamentals/security-privacy.md) .
+In base all'origine dell'audio usato per il riconoscimento vocale, potrebbe essere necessario apportare altre modifiche al file di `Info.plist` dell'app. Per informazioni dettagliate, vedere la documentazione relativa ai miglioramenti per la [sicurezza e la privacy](~/ios/app-fundamentals/security-privacy.md) .
 
 ## <a name="adopting-speech-recognition-in-an-app"></a>Adozione del riconoscimento vocale in un'app
 
 Ci sono quattro passaggi principali che lo sviluppatore deve adottare per adottare il riconoscimento vocale in un'app iOS:
 
-- Specificare una descrizione dell'utilizzo nel `Info.plist` file dell'app usando la `NSSpeechRecognitionUsageDescription` chiave. Ad esempio, un'app della fotocamera potrebbe includere la descrizione seguente: _"questa operazione consente di scattare una foto semplicemente pronunciando la parola" Cheese "._
-- Richiedere l'autorizzazione chiamando il `SFSpeechRecognizer.RequestAuthorization` metodo per presentare una spiegazione (fornita `NSSpeechRecognitionUsageDescription` nella chiave precedente) del motivo per cui l'app vuole che il riconoscimento vocale acceda all'utente in una finestra di dialogo e ne consenta l'accettazione o il rifiuto.
+- Specificare una descrizione dell'utilizzo nel file di `Info.plist` dell'app usando la chiave di `NSSpeechRecognitionUsageDescription`. Ad esempio, un'app della fotocamera potrebbe includere la descrizione seguente: _"questa operazione consente di scattare una foto semplicemente pronunciando la parola" Cheese "._
+- Richiedere l'autorizzazione chiamando il metodo `SFSpeechRecognizer.RequestAuthorization` per presentare una spiegazione (fornita nella chiave `NSSpeechRecognitionUsageDescription` precedente) del motivo per cui l'app vuole che il riconoscimento vocale acceda all'utente in una finestra di dialogo e ne consenta l'accettazione o il rifiuto.
 - Creare una richiesta di riconoscimento vocale:
-  - Per l'audio pre-registrato sul disco, usare `SFSpeechURLRecognitionRequest` la classe.
-  - Per l'audio attivo (o audio dalla memoria), usare `SFSPeechAudioBufferRecognitionRequest` la classe.
-- Passare la richiesta di riconoscimento vocale a un riconoscimento vocale (`SFSpeechRecognizer`) per avviare il riconoscimento. L'app può facoltativamente tenere presente l'oggetto `SFSpeechRecognitionTask` restituito per monitorare e tenere traccia dei risultati del riconoscimento.
+  - Per l'audio pre-registrato sul disco, usare la classe `SFSpeechURLRecognitionRequest`.
+  - Per l'audio attivo (o audio dalla memoria), usare la classe `SFSPeechAudioBufferRecognitionRequest`.
+- Passare la richiesta di riconoscimento vocale a un riconoscimento vocale (`SFSpeechRecognizer`) per avviare il riconoscimento. L'app può facoltativamente tenere il `SFSpeechRecognitionTask` restituito per monitorare e tenere traccia dei risultati del riconoscimento.
 
 Questi passaggi verranno descritti in dettaglio di seguito.
 
 ### <a name="providing-a-usage-description"></a>Specifica di una descrizione dell'utilizzo
 
-Per fornire la chiave `NSSpeechRecognitionUsageDescription` necessaria `Info.plist` nel file, eseguire le operazioni seguenti:
+Per fornire la chiave di `NSSpeechRecognitionUsageDescription` necessaria nel file di `Info.plist`, eseguire le operazioni seguenti:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-1. Fare doppio clic sul `Info.plist` file per aprirlo per la modifica.
+1. Fare doppio clic sul file `Info.plist` per aprirlo per la modifica.
 2. Passare alla visualizzazione **origine** : 
 
-    [![](speech-images/speech02.png "Visualizzazione origine")](speech-images/speech02.png#lightbox)
-3. Fare clic **su Aggiungi nuova voce**, `NSSpeechRecognitionUsageDescription` immettere per **la proprietà**, `String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Ad esempio: 
+    [![](speech-images/speech02.png "The Source view")](speech-images/speech02.png#lightbox)
+3. Fare clic su **Aggiungi nuova voce**, immettere `NSSpeechRecognitionUsageDescription` per la **Proprietà**`String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Esempio: 
 
-    [![](speech-images/speech03.png "Aggiunta di NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. Se l'app gestisce la trascrizione audio in tempo reale, sarà necessaria anche una descrizione dell'utilizzo del microfono. Fare clic **su Aggiungi nuova voce**, `NSMicrophoneUsageDescription` immettere per **la proprietà**, `String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Ad esempio: 
+    [![](speech-images/speech03.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
+4. Se l'app gestisce la trascrizione audio in tempo reale, sarà necessaria anche una descrizione dell'utilizzo del microfono. Fare clic su **Aggiungi nuova voce**, immettere `NSMicrophoneUsageDescription` per la **Proprietà**`String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Esempio: 
 
-    [![](speech-images/speech04.png "Aggiunta di NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
+    [![](speech-images/speech04.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 5. Salvare le modifiche apportate al file.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Fare doppio clic sul `Info.plist` file per aprirlo per la modifica.
-2. Fare clic **su Aggiungi nuova voce**, `NSSpeechRecognitionUsageDescription` immettere per **la proprietà**, `String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Ad esempio: 
+1. Fare doppio clic sul file `Info.plist` per aprirlo per la modifica.
+2. Fare clic su **Aggiungi nuova voce**, immettere `NSSpeechRecognitionUsageDescription` per la **Proprietà**`String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Esempio: 
 
-    [![](speech-images/speech03w.png "Aggiunta di NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-3. Se l'app gestisce la trascrizione audio in tempo reale, sarà necessaria anche una descrizione dell'utilizzo del microfono. Fare clic **su Aggiungi nuova voce**, `NSMicrophoneUsageDescription` immettere per **la proprietà**, `String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Ad esempio: 
+    [![](speech-images/speech03w.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
+3. Se l'app gestisce la trascrizione audio in tempo reale, sarà necessaria anche una descrizione dell'utilizzo del microfono. Fare clic su **Aggiungi nuova voce**, immettere `NSMicrophoneUsageDescription` per la **Proprietà**`String` per il **tipo** e una **Descrizione utilizzo** come **valore**. Esempio: 
 
-    [![](speech-images/speech04w.png "Aggiunta di NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
+    [![](speech-images/speech04w.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Salvare le modifiche apportate al file.
 
 -----
 
 > [!IMPORTANT]
-> Se non si riesce a fornire una `Info.plist` delle chiavi`NSSpeechRecognitionUsageDescription` precedenti `NSMicrophoneUsageDescription`(o), l'app potrebbe non riuscire senza preavviso quando si tenta di accedere al riconoscimento vocale o al microfono per l'audio Live.
+> Se non si specificano le chiavi di `Info.plist` precedenti (`NSSpeechRecognitionUsageDescription` o `NSMicrophoneUsageDescription`), l'app potrebbe non riuscire senza preavviso quando si tenta di accedere al riconoscimento vocale o al microfono per l'audio Live.
 
 ### <a name="requesting-authorization"></a>Richiesta dell'autorizzazione
 
@@ -178,9 +178,9 @@ namespace MonkeyTalk
 }
 ```
 
-Il `RequestAuthorization` metodo `NSSpeechRecognitionUsageDescription` `Info.plist` della classe richiede l'autorizzazione da parte dell'utente per accedere al riconoscimento vocale usando il motivo fornito dallo sviluppatore nella chiave del file. `SFSpeechRecognizer`
+Il metodo `RequestAuthorization` della classe `SFSpeechRecognizer` richiede l'autorizzazione da parte dell'utente per accedere al riconoscimento vocale usando il motivo fornito dallo sviluppatore nella chiave di `NSSpeechRecognitionUsageDescription` del file `Info.plist`.
 
-Un `SFSpeechRecognizerAuthorizationStatus` risultato viene restituito `RequestAuthorization` alla routine di callback del metodo che può essere utilizzata per eseguire un'azione in base all'autorizzazione dell'utente. 
+Viene restituito un risultato `SFSpeechRecognizerAuthorizationStatus` alla routine di callback del metodo `RequestAuthorization` che può essere utilizzata per eseguire un'azione in base all'autorizzazione dell'utente. 
 
 > [!IMPORTANT]
 > Apple suggerisce di attendere fino a quando l'utente non ha avviato un'azione nell'app che richiede il riconoscimento vocale prima di richiedere questa autorizzazione.
@@ -230,17 +230,17 @@ public void RecognizeFile (NSUrl url)
 }
 ```
 
-Esaminando il codice in dettaglio, innanzitutto, tenta di creare un riconoscimento vocale (`SFSpeechRecognizer`). Se la lingua predefinita non è supportata per il riconoscimento `null` vocale, viene restituito e le funzioni vengono terminate.
+Esaminando il codice in dettaglio, innanzitutto, tenta di creare un riconoscimento vocale (`SFSpeechRecognizer`). Se la lingua predefinita non è supportata per il riconoscimento vocale, viene restituito `null` e le funzioni vengono terminate.
 
-Se il riconoscimento vocale è disponibile per la lingua predefinita, l'app verifica se è attualmente disponibile per il riconoscimento usando la `Available` proprietà. Ad esempio, il riconoscimento potrebbe non essere disponibile se il dispositivo non dispone di una connessione Internet attiva.
+Se il riconoscimento vocale è disponibile per la lingua predefinita, l'app verifica se è attualmente disponibile per il riconoscimento usando la proprietà `Available`. Ad esempio, il riconoscimento potrebbe non essere disponibile se il dispositivo non dispone di una connessione Internet attiva.
 
-Un `SFSpeechUrlRecognitionRequest` viene creato `NSUrl` dalla posizione del file pre-registrato nel dispositivo iOS e viene passato al riconoscimento vocale per l'elaborazione con una routine di callback.
+Viene creata una `SFSpeechUrlRecognitionRequest` dal `NSUrl` percorso del file pre-registrato nel dispositivo iOS e viene passato al riconoscimento vocale per l'elaborazione con una routine di callback.
 
-Quando viene chiamato il callback, se `NSError` non `null` è presente un errore che deve essere gestito. Poiché il riconoscimento vocale viene eseguito in modo incrementale, la routine di callback può essere chiamata più `SFSpeechRecognitionResult.Final` volte, quindi la proprietà viene verificata per verificare se la traduzione è completa e la versione migliore della`BestTranscription`traduzione viene scritta ().
+Quando viene chiamato il callback, se il `NSError` non è `null` si è verificato un errore che deve essere gestito. Poiché il riconoscimento vocale viene eseguito in modo incrementale, la routine di callback può essere chiamata più volte, quindi la proprietà `SFSpeechRecognitionResult.Final` viene testata per verificare se la traduzione è completa e la versione migliore della traduzione viene scritta (`BestTranscription`).
 
 ### <a name="recognizing-live-speech"></a>Riconoscimento della sintesi vocale in tempo reale
 
-Se l'app vuole riconoscere la voce in tempo reale, il processo è molto simile a quello del riconoscimento vocale pre-registrato. Ad esempio:
+Se l'app vuole riconoscere la voce in tempo reale, il processo è molto simile a quello del riconoscimento vocale pre-registrato. Esempio:
 
 ```csharp
 using System;
@@ -343,7 +343,7 @@ if (error != null) {
 }
 ```
 
-L'attività di riconoscimento viene avviata e viene mantenuto un handle per l'attività`SFSpeechRecognitionTask`di riconoscimento ():
+L'attività di riconoscimento viene avviata e viene mantenuto un handle per l'attività di riconoscimento (`SFSpeechRecognitionTask`):
 
 ```csharp
 RecognitionTask = SpeechRecognizer.GetRecognitionTask (LiveSpeechRequest, (SFSpeechRecognitionResult result, NSError err) => {
@@ -367,10 +367,10 @@ AudioEngine.Stop ();
 RecognitionTask.Cancel ();
 ```
 
-È importante chiamare `RecognitionTask.Cancel` se l'utente annulla la traduzione per liberare memoria e processore del dispositivo.
+È importante chiamare `RecognitionTask.Cancel` se l'utente annulla la traduzione per liberare la memoria e il processore del dispositivo.
 
 > [!IMPORTANT]
-> Se non si specificano `NSMicrophoneUsageDescription` le `NSSpeechRecognitionUsageDescription` chiavi o `Info.plist` , l'app potrebbe non riuscire senza preavviso quando si tenta di accedere al riconoscimento vocale o al microfono`var node = AudioEngine.InputNode;`per l'audio Live (). Per ulteriori informazioni, vedere la sezione **fornire una descrizione dell'utilizzo** .
+> Se non si specifica il `NSSpeechRecognitionUsageDescription` o `NSMicrophoneUsageDescription` `Info.plist` chiavi, l'app potrebbe non riuscire senza preavviso quando si tenta di accedere al riconoscimento vocale o al microfono per l'audio Live (`var node = AudioEngine.InputNode;`). Per ulteriori informazioni, vedere la sezione **fornire una descrizione dell'utilizzo** .
 
 ## <a name="speech-recognition-limits"></a>Limiti di riconoscimento vocale
 
