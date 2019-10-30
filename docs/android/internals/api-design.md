@@ -3,15 +3,15 @@ title: Principi di progettazione dell'API Novell. Android
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 0b3d8fc4836f6f6d1f6bf30b555e3c5c285678f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c68812e22ed813e6b76470eec5c354b910d22b23
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756857"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028311"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principi di progettazione dell'API Novell. Android
 
@@ -61,7 +61,7 @@ Questi sono alcuni dei principi di progettazione per l'associazione di Novell. A
 
 Novell. Android include diversi assembly che costituiscono il *profilo monomobile*. Ulteriori informazioni sono contenute nella pagina [assembly](~/cross-platform/internals/available-assemblies.md) .
 
-Le associazioni alla piattaforma Android sono contenute nell' `Mono.Android.dll` assembly. Questo assembly contiene l'intera associazione per l'utilizzo di API Android e la comunicazione con la VM di runtime di Android.
+Le associazioni alla piattaforma Android sono contenute nell'assembly `Mono.Android.dll`. Questo assembly contiene l'intera associazione per l'utilizzo di API Android e la comunicazione con la VM di runtime di Android.
 
 ## <a name="binding-design"></a>Progettazione dell'associazione
 
@@ -69,17 +69,17 @@ Le associazioni alla piattaforma Android sono contenute nell' `Mono.Android.dll`
 
 Le API Android utilizzano ampiamente le raccolte Java. util per fornire elenchi, set e mappe. Questi elementi vengono esposti usando le interfacce [System. Collections. Generic](xref:System.Collections.Generic) nell'associazione. I mapping fondamentali sono:
 
-- [Java. util. set\<E >](https://developer.android.com/reference/java/util/Set.html) è mappato al tipo di sistema [\<ICollection T >](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime\<. JavaSet T >](xref:Android.Runtime.JavaSet`1).
+- [java. util. Set\<E >](https://developer.android.com/reference/java/util/Set.html) sono mappati al tipo di sistema [ICollection\<t >](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime. JavaSet\<t >](xref:Android.Runtime.JavaSet`1).
 
-- [Java. util. List\<E >](https://developer.android.com/reference/java/util/List.html) viene mappato al tipo di sistema [IList\<t >](xref:System.Collections.Generic.IList`1), classe helper [Android. Runtime.\<Java elenco >](xref:Android.Runtime.JavaList`1).
+- [java. util. List\<E >](https://developer.android.com/reference/java/util/List.html) è mappato a tipo di sistema [IList\<t >](xref:System.Collections.Generic.IList`1), classe helper [Android. Runtime. Java list\<t >](xref:Android.Runtime.JavaList`1).
 
 - [java. util. Map < K, v >](https://developer.android.com/reference/java/util/Map.html) esegue il mapping al tipo di sistema [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe helper [Android. Runtime. JavaDictionary < K, v >](xref:Android.Runtime.JavaDictionary`2).
 
-- [Java. util. Collection\<E >](https://developer.android.com/reference/java/util/Collection.html) è mappato al tipo di sistema [ICollection\<T >](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime.\<javacollection t >](xref:Android.Runtime.JavaCollection`1).
+- [java. util. Collection\<E >](https://developer.android.com/reference/java/util/Collection.html) sono mappati al tipo di sistema [ICollection\<t >](xref:System.Collections.Generic.ICollection`1), classe helper [Android. Runtime. javacollection\<t >](xref:Android.Runtime.JavaCollection`1).
 
-Sono state fornite classi helper per facilitare il marshalling non copiato più veloce di questi tipi. Quando possibile, è consigliabile usare queste raccolte fornite anziché l'implementazione fornita dal Framework, ad [`List<T>`](xref:System.Collections.Generic.List`1) esempio [`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2)o. Le implementazioni di [Android. Runtime](xref:Android.Runtime) usano una raccolta Java nativa internamente e pertanto non richiedono la copia da e verso una raccolta nativa quando passano a un membro API Android.
+Sono state fornite classi helper per facilitare il marshalling non copiato più veloce di questi tipi. Quando possibile, è consigliabile usare queste raccolte fornite anziché l'implementazione fornita dal Framework, ad esempio [`List<T>`](xref:System.Collections.Generic.List`1) o [`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2). Le implementazioni di [Android. Runtime](xref:Android.Runtime) usano una raccolta Java nativa internamente e pertanto non richiedono la copia da e verso una raccolta nativa quando passano a un membro API Android.
 
-È possibile passare qualsiasi implementazione dell'interfaccia a un metodo Android accettando tale interfaccia, ad esempio `List<int>` passando un oggetto al costruttore [classe ArrayAdapter&lt;&gt;int (context,&lt;int&gt;, IList int)](xref:Android.Widget.ArrayAdapter`1) . *Tuttavia*, per tutte le implementazioni *ad eccezione* delle implementazioni di Android. Runtime, ciò comporta la *copia* dell'elenco dalla VM mono alla VM di runtime di Android. Se l'elenco viene modificato in seguito nel runtime di Android, ad esempio richiamando [classe ArrayAdapter&lt;T&gt;. Aggiungere (T)](xref:Android.Widget.ArrayAdapter`1.Add*) il metodo), le modifiche *non* saranno visibili nel codice gestito. Se si `JavaList<int>` utilizza un oggetto, le modifiche saranno visibili.
+È possibile passare qualsiasi implementazione dell'interfaccia a un metodo Android accettando tale interfaccia, ad esempio passare un `List<int>` al costruttore [classe arrayadapter&lt;int&gt;(context, int, IList&lt;int&gt;)](xref:Android.Widget.ArrayAdapter`1) . *Tuttavia*, per tutte le implementazioni *ad eccezione* delle implementazioni di Android. Runtime, ciò comporta la *copia* dell'elenco dalla VM mono alla VM di runtime di Android. Se l'elenco viene modificato in seguito nel runtime di Android, ad esempio richiamando [classe arrayadapter&lt;t&gt;. Aggiungere (T)](xref:Android.Widget.ArrayAdapter`1.Add*) il metodo), le modifiche *non* saranno visibili nel codice gestito. Se è stata usata una `JavaList<int>`, le modifiche saranno visibili.
 
 Riformulate, le implementazioni dell'interfaccia di raccolte che *non* sono una delle **classi helper**elencate in precedenza eseguono solo il marshalling [in]:
 
@@ -103,9 +103,9 @@ if (goodSource.Count != 4) // false
 
 I metodi Java vengono trasformati in proprietà, quando necessario:
 
-- La coppia `T getFoo()` di metodi Java `void setFoo(T)` e viene trasformata nella `Foo` proprietà. Esempio: [Activity. Intent](xref:Android.App.Activity.Intent).
+- La coppia di metodi Java `T getFoo()` e `void setFoo(T)` vengono trasformati nella proprietà `Foo`. Esempio: [Activity. Intent](xref:Android.App.Activity.Intent).
 
-- Il metodo `getFoo()` Java viene trasformato nella proprietà Foo di sola lettura. Esempio: [Context. PackageName](xref:Android.Content.Context.PackageName).
+- Il metodo Java `getFoo()` viene trasformato nella proprietà Foo di sola lettura. Esempio: [context. PackageName](xref:Android.Content.Context.PackageName).
 
 - Non vengono generate proprietà di sola impostazione.
 
@@ -139,24 +139,24 @@ button.Click += (sender, e) => {
 
 Si noti che entrambi i meccanismi precedenti sono disponibili con Novell. Android. È possibile implementare un'interfaccia del listener e associarla a View. SetOnClickListener oppure è possibile associare un delegato creato tramite uno dei paradigmi C# usuali all'evento click.
 
-Quando il metodo di callback del listener ha un valore restituito void, vengono creati elementi API basati su un delegato [TEventArgs&lt;&gt; EventHandler](xref:System.EventHandler`1) . Viene generato un evento come l'esempio precedente per questi tipi di listener. Tuttavia, se il callback del listener restituisce un valore non void e non **booleano** , gli eventi e gli EventHandler non vengono usati. Viene invece generato un delegato specifico per la firma del callback e si aggiungono le proprietà anziché gli eventi. Il motivo è quello di gestire l'ordine di chiamata dei delegati e la gestione delle restituzione. Questo approccio rispecchia le operazioni eseguite con l'API Novell. iOS.
+Quando il metodo di callback del listener ha un valore restituito void, vengono creati elementi API basati su un oggetto [EventHandler&lt;TEventArgs&gt;](xref:System.EventHandler`1) delegato. Viene generato un evento come l'esempio precedente per questi tipi di listener. Tuttavia, se il callback del listener restituisce un valore non void e non **booleano** , gli eventi e gli EventHandler non vengono usati. Viene invece generato un delegato specifico per la firma del callback e si aggiungono le proprietà anziché gli eventi. Il motivo è quello di gestire l'ordine di chiamata dei delegati e la gestione delle restituzione. Questo approccio rispecchia le operazioni eseguite con l'API Novell. iOS.
 
 C#gli eventi o le proprietà vengono generati automaticamente solo se il metodo di registrazione di eventi Android:
 
-1. Ha un `set` prefisso, ad esempio [ *set*OnClickListener](xref:Android.Views.View.SetOnClickListener*).
+1. Ha un prefisso `set`, ad esempio [ *set*OnClickListener](xref:Android.Views.View.SetOnClickListener*).
 
-1. Ha un `void` tipo restituito.
+1. Ha un tipo restituito `void`.
 
-1. Accetta un solo parametro, il tipo di parametro è un'interfaccia, l'interfaccia dispone di un solo metodo e il nome dell'interfaccia `Listener` termina in, ad esempio il [ *listener*View. OnClick](xref:Android.Views.View.IOnClickListener).
+1. Accetta un solo parametro, il tipo di parametro è un'interfaccia, l'interfaccia dispone di un solo metodo e il nome dell'interfaccia termina in `Listener`, ad esempio il [ *listener*View. OnClick](xref:Android.Views.View.IOnClickListener).
 
-Inoltre, se il metodo dell'interfaccia del listener ha un tipo restituito **booleano** anziché **void**, la sottoclasse *EventArgs* generata conterrà una proprietà *gestita* . Il valore della proprietà *Handled* viene usato come valore restituito per il metodo *listener* e per `true`impostazione predefinita è.
+Inoltre, se il metodo dell'interfaccia del listener ha un tipo restituito **booleano** anziché **void**, la sottoclasse *EventArgs* generata conterrà una proprietà *gestita* . Il valore della proprietà *Handled* viene utilizzato come valore restituito per il metodo *listener* e per impostazione predefinita viene `true`.
 
-Ad esempio, il metodo [View. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) di Android accetta l'interfaccia [View. OnKeyListener](xref:Android.Views.View.IOnKeyListener) e il metodo [View. OnKeyListener. onKey (View, int, fileEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) ha un tipo restituito booleano. Novell. Android genera un evento [View. KeyPress](xref:Android.Views.View.KeyPress) corrispondente, che è una [visualizzazione&lt;EventHandler. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
+Ad esempio, il metodo [View. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) di Android accetta l'interfaccia [View. OnKeyListener](xref:Android.Views.View.IOnKeyListener) e il metodo [View. OnKeyListener. onKey (View, int, fileEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) ha un tipo restituito booleano. Novell. Android genera un evento [View. KeyPress](xref:Android.Views.View.KeyPress) corrispondente, che è un [EventHandler&lt;View. KeyEventArgs&gt;](xref:Android.Views.View.KeyEventArgs).
 La classe *KeyEventArgs* a sua volta ha una proprietà [View. KeyEventArgs. Handled](xref:Android.Views.View.KeyEventArgs.Handled) , che viene usata come valore restituito per il metodo *View. OnKeyListener. onKey ()* .
 
 Si prevede di aggiungere overload per altri metodi e ctor per esporre la connessione basata su delegati. Inoltre, i listener con più callback richiedono un'ispezione aggiuntiva per determinare se l'implementazione di singoli callback è ragionevole, quindi la conversione di tali callback viene effettuata quando vengono identificati. Se non è presente alcun evento corrispondente, i listener devono essere usati C#in, ma è necessario riportare l'utilizzo dei delegati. Sono state inoltre eseguite alcune conversioni delle interfacce senza il suffisso "listener" quando era chiaro che trarrebbero vantaggio da un'alternativa del delegato.
 
-Tutte le interfacce dei listener implementano[`Android.Runtime.IJavaObject`](xref:Android.Runtime.IJavaObject)
+Tutte le interfacce dei listener implementano il [`Android.Runtime.IJavaObject`](xref:Android.Runtime.IJavaObject)
 interfaccia, a causa dei dettagli di implementazione dell'associazione, pertanto le classi listener devono implementare questa interfaccia. Questa operazione può essere eseguita implementando l'interfaccia del listener su una sottoclasse di [java. lang. Object](xref:Java.Lang.Object) o di qualsiasi altro oggetto Java sottoposto a wrapper, ad esempio un'attività Android.
 
 ### <a name="runnables"></a>Eseguibili
@@ -164,13 +164,13 @@ interfaccia, a causa dei dettagli di implementazione dell'associazione, pertanto
 Java usa l'interfaccia [java. lang. eseguibile](xref:Java.Lang.Runnable) per fornire un meccanismo di delega. La classe [java. lang. thread](xref:Java.Lang.Thread) è un consumatore rilevante di questa interfaccia. Android ha usato anche l'interfaccia nell'API.
 Gli esempi [Activity. runOnUiThread ()](xref:Android.App.Activity.RunOnUiThread*) e [View.post ()](xref:Android.Views.View.Post*) sono significativi.
 
-L' `Runnable` interfaccia contiene un solo metodo void, [Run ()](xref:Java.Lang.Runnable.Run). Si presta quindi al binding in C# come delegato [System. Action](xref:System.Action) . Nell'associazione sono stati forniti overload `Action` che accettano un parametro per tutti i membri dell'API che utilizzano un oggetto `Runnable` nell'API nativa, ad esempio [Activity. RunOnUiThread ()](xref:Android.App.Activity.RunOnUiThread*) e [View.post ()](xref:Android.Views.View.Post*).
+L'interfaccia `Runnable` contiene un solo metodo void, [Run ()](xref:Java.Lang.Runnable.Run). Si presta quindi al binding in C# come delegato [System. Action](xref:System.Action) . Nell'associazione sono stati forniti overload che accettano un parametro `Action` per tutti i membri dell'API che utilizzano un `Runnable` nell'API nativa, ad esempio [Activity. RunOnUiThread ()](xref:Android.App.Activity.RunOnUiThread*) e [View.post ()](xref:Android.Views.View.Post*).
 
 Abbiamo lasciato invariati gli overload di [IRunnable](xref:Java.Lang.IRunnable) anziché sostituirli poiché diversi tipi implementano l'interfaccia e possono quindi essere passati direttamente come eseguibili.
 
 ### <a name="inner-classes"></a>Classi interne
 
-Java dispone di due tipi diversi di [classi annidate](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html), ovvero classi annidate statiche e classi non statiche.
+Java dispone di due tipi diversi di [classi annidate](https://download.oracle.com/javase/tutorial/java/javaOO/nested.html), ovvero classi annidate statiche e classi non statiche.
 
 Le classi annidate statiche Java sono C# identiche ai tipi annidati.
 
@@ -202,7 +202,7 @@ class CubeWallpaper : WallpaperService {
 }
 ```
 
-Si noti `CubeWallpaper.CubeEngine` che la classe `CubeWallpaper`è annidata all'interno di, `WallpaperService.Engine`eredita dalla `CubeWallpaper.CubeEngine` classe contenitore di e dispone di un costruttore che accetta il `CubeWallpaper` tipo dichiarante, in questo caso, `CubeWallpaper` come specificato in precedenza.
+Si noti che `CubeWallpaper.CubeEngine` è annidato all'interno di `CubeWallpaper`, `CubeWallpaper` eredita dalla classe contenitore di `WallpaperService.Engine`e `CubeWallpaper.CubeEngine` dispone di un costruttore che accetta il tipo dichiarante, `CubeWallpaper` in questo caso, come specificato in precedenza.
 
 ### <a name="interfaces"></a>Interfacce
 
@@ -224,7 +224,7 @@ I tipi annidati sono "rilocati" come elementi di pari livello dell'interfaccia d
 
 Si consideri ad esempio l'interfaccia [Android. OS.](xref:Android.OS.Parcelable) .
 L'interfaccia a *pacchetti* contiene metodi, tipi annidati e costanti. I metodi di interfaccia a *pacchetti* sono inseriti nell'interfaccia [Android. OS. IParcelable](xref:Android.OS.IParcelable) .
-Le costanti di interfaccia a *pacchetti* sono inserite nel tipo [Android. OS. ParcelableConsts](xref:Android.OS.ParcelableConsts) . I tipi di > di [Android. OS. ClassLoaderCreator\<> t](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) annidati e Android. OS. compilable [.\<Creator t](https://developer.android.com/reference/android/os/Parcelable.Creator.html) non sono attualmente associati a causa delle limitazioni del supporto per i generics; se sono supportati, sarebbero presenti come interfacce *Android. OS. IParcelableClassLoaderCreator* e *Android. OS. IParcelableCreator* . Ad esempio, l'interfaccia di [Android. OS. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) annidata è associata come interfaccia [Android. OS. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
+Le costanti di interfaccia a *pacchetti* sono inserite nel tipo [Android. OS. ParcelableConsts](xref:Android.OS.ParcelableConsts) . I tipi di > T > e Android. OS. [\<ClassLoaderCreator](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) . [Creator\<](https://developer.android.com/reference/android/os/Parcelable.Creator.html) t annidati non sono attualmente associati a causa delle limitazioni del supporto per i generics. Se sono supportate, saranno presenti come interfacce *Android. OS. IParcelableClassLoaderCreator* e *Android. OS. IParcelableCreator* . Ad esempio, l'interfaccia di [Android. OS. IBinder. DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) annidata è associata come interfaccia [Android. OS. IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) .
 
 > [!NOTE]
 > A partire da Novell. Android 1,9, le costanti di interfaccia Java vengono _duplicate_ nel tentativo di semplificare il porting del codice Java. Questo consente di migliorare il porting di codice Java che si basa sulle costanti dell'interfaccia del [provider Android](https://developer.android.com/reference/android/provider/package-summary.html) .
@@ -242,7 +242,7 @@ Oltre ai tipi precedenti, sono disponibili quattro ulteriori modifiche:
 Per l'interfaccia *Android. OS. Parcelable* , questo significa che ora sarà disponibile un tipo [*Android. OS. pacchi*](xref:Android.OS.Parcelable) per contenere le costanti. La costante [CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) , ad esempio, può essere associata come costante con [*estensione ContentsFileDescriptor*](xref:Android.OS.Parcelable.ContentsFileDescriptor) , anziché come costante *ParcelableConsts. ContentsFileDescriptor* .
 
 Per le interfacce che contengono costanti che implementano altre interfacce che contengono ancora più costanti, viene ora generata l'Unione di tutte le costanti. Ad esempio, l'interfaccia [Android. provider. Mediastore. video. VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) implementa l'interfaccia [Android. provider. Mediastore. MediaColumns](xref:Android.Provider.MediaStore.MediaColumns) . Tuttavia, prima della 1,9, il tipo [Android. provider. Mediastore. video. VideoColumnsConsts](xref:Android.Provider.MediaStore.Video.VideoColumnsConsts) non ha alcun modo per accedere alle costanti dichiarate in [Android. provider. Mediastore. MediaColumnsConsts](xref:Android.Provider.MediaStore.MediaColumnsConsts).
-Di conseguenza, l'espressione Java *Mediastore. video. VideoColumns. title* deve essere associata all' C# espressione *Mediastore. video. MediaColumnsConsts. title* , che è difficile da rilevare senza leggere molti documenti Java. In 1,9, l'espressione C# equivalente sarà [Mediastore. video. VideoColumns. title](xref:Android.Provider.MediaStore.Video.VideoColumns.Title).
+Di conseguenza, l'espressione Java *Mediastore. video. VideoColumns. title* deve essere associata all' C# espressione *Mediastore. video. MediaColumnsConsts. title* , che è difficile da rilevare senza leggere molti documenti Java. In 1,9, l'espressione C# equivalente sarà [*Mediastore. video. VideoColumns. title*](xref:Android.Provider.MediaStore.Video.VideoColumns.Title).
 
 Inoltre, si consideri il tipo [Android. OS. bundle](xref:Android.OS.Bundle) , che implementa l'interfaccia java per i *pacchetti* . Poiché implementa l'interfaccia, tutte le costanti su tale interfaccia sono accessibili da "tramite" al tipo di bundle, ad esempio *bundle. CONTENTS_FILE_DESCRIPTOR* è un'espressione Java perfettamente valida.
 In precedenza, per trasferire questa espressione C# a è necessario esaminare tutte le interfacce implementate per vedere da quale tipo deriva *CONTENTS_FILE_DESCRIPTOR* . A partire da Novell. Android 1,9, le classi che implementano le interfacce Java che contengono costanti avranno un tipo *InterfaceConsts* annidato che conterrà tutte le costanti di interfaccia ereditate. Questa operazione consentirà di convertire *bundle. CONTENTS_FILE_DESCRIPTOR* in [*bundle. InterfaceConsts. ContentsFileDescriptor*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor).
@@ -254,7 +254,7 @@ Infine, i tipi con suffisso *const* , ad esempio *Android. OS. ParcelableConsts*
 Le immagini, le descrizioni dei layout, i BLOB binari e i dizionari di stringa possono essere inclusi nell'applicazione come [file di risorse](https://developer.android.com/guide/topics/resources/providing-resources.html).
 Diverse API Android sono progettate per [operare sugli ID di risorsa](https://developer.android.com/guide/topics/resources/accessing-resources.html) invece di gestire direttamente immagini, stringhe o BLOB binari.
 
-Ad esempio, un'app Android di esempio che contiene un layout dell'interfaccia `main.axml`utente (), una stringa della tabella `strings.xml`di internazionalizzazione () e `drawable-*/icon.png`alcune icone () mantengono le risorse nella directory "Resources" dell'applicazione:
+Ad esempio, un'app Android di esempio che contiene un layout dell'interfaccia utente (`main.axml`), una stringa di tabella di internazionalizzazione (`strings.xml`) e alcune icone (`drawable-*/icon.png`) mantengono le risorse nella directory "Resources" dell'applicazione:
 
 ```
 Resources/
@@ -274,7 +274,7 @@ Resources/
         strings.xml
 ```
 
-Le API native di Android non funzionano direttamente con i nomi di file, ma operano invece con gli ID di risorsa. Quando si compila un'applicazione Android che usa risorse, il sistema di compilazione comprimerà le risorse per la distribuzione e genererà una classe denominata `Resource` che contiene i token per ciascuna delle risorse incluse. Ad esempio, per il layout delle risorse sopra riportato, questo è ciò che verrà esposto dalla classe R:
+Le API native di Android non funzionano direttamente con i nomi di file, ma operano invece con gli ID di risorsa. Quando si compila un'applicazione Android che usa risorse, il sistema di compilazione compilerà le risorse per la distribuzione e genererà una classe denominata `Resource` contenente i token per ciascuna delle risorse incluse. Ad esempio, per il layout delle risorse sopra riportato, questo è ciò che verrà esposto dalla classe R:
 
 ```csharp
 public class Resource {
@@ -293,7 +293,7 @@ public class Resource {
 }
 ```
 
-`Resource.Drawable.icon` Si utilizzerà quindi per fare riferimento `drawable/icon.png` al file o `Resource.Layout.main` per fare riferimento `layout/main.xml` al file o `Resource.String.first_string` per fare riferimento alla prima stringa nel file `values/strings.xml`del dizionario.
+Si utilizzerà quindi `Resource.Drawable.icon` per fare riferimento al file di `drawable/icon.png` o `Resource.Layout.main` per fare riferimento al file `layout/main.xml` o `Resource.String.first_string` per fare riferimento alla prima stringa nel file del dizionario `values/strings.xml`.
 
 ## <a name="constants-and-enumerations"></a>Costanti ed enumerazioni
 

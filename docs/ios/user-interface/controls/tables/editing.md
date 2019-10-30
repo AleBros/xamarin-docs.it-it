@@ -4,34 +4,34 @@ description: Questo documento descrive come modificare le tabelle in Novell. iOS
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 9960167e2f71531e5ffeaecac94aede5d5ea3340
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6c7259a49301f76169ab52f98f1057ee5f8242a0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768900"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021905"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Modifica di tabelle con Novell. iOS
 
-Le funzionalità di modifica della tabella sono abilitate eseguendo l' `UITableViewSource` override dei metodi in una sottoclasse. Il comportamento di modifica più semplice è il gesto di scorrimento da eliminare che può essere implementato con un solo override del metodo.
+Le funzionalità di modifica della tabella sono abilitate eseguendo l'override dei metodi in una sottoclasse `UITableViewSource`. Il comportamento di modifica più semplice è il gesto di scorrimento da eliminare che può essere implementato con un solo override del metodo.
 La modifica più complessa (incluse le righe di trasferimento) può essere eseguita con la tabella in modalità di modifica.
 
 ## <a name="swipe-to-delete"></a>Scorrere rapidamente per eliminare
 
 La funzionalità di scorrimento da eliminare è un gesto naturale in iOS previsto dagli utenti. 
 
- [![](editing-images/image10.png "Esempio di swipe da eliminare")](editing-images/image10.png#lightbox)
+ [![](editing-images/image10.png "Example of Swipe to Delete")](editing-images/image10.png#lightbox)
 
 Sono disponibili tre override dei metodi che influiscono sul gesto di scorrimento rapido per visualizzare un pulsante **Elimina** in una cella:
 
-- **CommitEditingStyle** : l'origine della tabella rileva se questo metodo viene sottoposto a override e Abilita automaticamente il gesto di scorrimento rapido. L'implementazione del metodo deve chiamare `DeleteRows` `UITableView` su per far scomparire le celle e rimuovere anche i dati sottostanti dal modello, ad esempio una matrice, un dizionario o un database. 
+- **CommitEditingStyle** : l'origine della tabella rileva se questo metodo viene sottoposto a override e Abilita automaticamente il gesto di scorrimento rapido. L'implementazione del metodo deve chiamare `DeleteRows` sul `UITableView` per far scomparire le celle e rimuovere anche i dati sottostanti dal modello, ad esempio una matrice, un dizionario o un database. 
 - **CanEditRow** : se viene eseguito l'override di CommitEditingStyle, si presuppone che tutte le righe siano modificabili. Se questo metodo viene implementato e restituisce false (per alcune righe specifiche o per tutte le righe), il movimento di scorrimento rapido non sarà disponibile in tale cella. 
 - **TitleForDeleteConfirmation** : consente di specificare il testo per il pulsante **Elimina** . Se questo metodo non viene implementato, il testo del pulsante sarà "Delete". 
 
-Questi metodi sono implementati nella `TableSource` classe seguente:
+Questi metodi sono implementati nella classe `TableSource` segue:
 
 ```csharp
 public override void CommitEditingStyle (UITableView tableView, UITableViewCellEditingStyle editingStyle, Foundation.NSIndexPath indexPath)
@@ -58,23 +58,23 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 }
 ```
 
-Per questo esempio `UITableViewSource` è stato aggiornato per usare un oggetto `List<TableItem>` (anziché una matrice di stringhe) come origine dati perché supporta l'aggiunta e l'eliminazione di elementi dalla raccolta.
+Per questo esempio, il `UITableViewSource` è stato aggiornato in modo da usare una `List<TableItem>`, anziché una matrice di stringhe, come origine dati perché supporta l'aggiunta e l'eliminazione di elementi dalla raccolta.
 
 ## <a name="edit-mode"></a>Modalità di modifica
 
 Quando una tabella è in modalità di modifica, l'utente visualizza un widget "Stop" rosso in ogni riga, che rivela un pulsante Elimina quando viene toccato. La tabella Visualizza anche un'icona "handle" per indicare che la riga può essere trascinata per modificare l'ordine.
 L'esempio **TableEditMode** implementa queste funzionalità come illustrato.
 
- [![](editing-images/image11.png "L'esempio TableEditMode implementa queste funzionalità come illustrato")](editing-images/image11.png#lightbox)
+ [![](editing-images/image11.png "The TableEditMode sample implements these features as shown")](editing-images/image11.png#lightbox)
 
-Sono disponibili diversi metodi che influiscono sul `UITableViewSource` comportamento della modalità di modifica di una tabella:
+Sono disponibili diversi metodi `UITableViewSource` che influiscono sul comportamento della modalità di modifica di una tabella:
 
 - **CanEditRow** : indica se è possibile modificare ogni riga. Restituisce false per impedire l'esecuzione di scorrimenti a eliminazione ed eliminazione in modalità di modifica. 
 - **CanMoveRow** : restituisce true per abilitare lo spostamento ' handle ' o false per impedire lo spostamento. 
 - **EditingStyleForRow** : quando la tabella è in modalità di modifica, il valore restituito da questo metodo determina se la cella Visualizza l'icona di eliminazione rossa o l'icona Aggiungi verde. Restituisce `UITableViewCellEditingStyle.None` se la riga non deve essere modificabile. 
 - **MoveRow** : viene chiamato quando viene spostata una riga in modo che sia possibile modificare la struttura dei dati sottostante in modo che corrisponda ai dati visualizzati nella tabella. 
 
-L'implementazione per i primi tre metodi è relativamente semplice, a meno che non si desideri usare `indexPath` per modificare il comportamento di righe specifiche, ma è sufficiente impostare come hardcoded i valori restituiti per l'intera tabella.
+L'implementazione per i primi tre metodi è relativamente semplice, a meno che non si voglia usare la `indexPath` per modificare il comportamento di righe specifiche, ma solo impostare come hardcoded i valori restituiti per l'intera tabella.
 
 ```csharp
 public override bool CanEditRow (UITableView tableView, NSIndexPath indexPath)
@@ -91,7 +91,7 @@ public override UITableViewCellEditingStyle EditingStyleForRow (UITableView tabl
 }
 ```
 
-L' `MoveRow` implementazione è un po' più complicata perché è necessario modificare la struttura dei dati sottostante in modo che corrisponda al nuovo ordine. Poiché i dati vengono implementati come `List` il codice seguente elimina l'elemento dati nella posizione precedente e lo inserisce nella nuova posizione. Se i dati sono stati archiviati in una tabella di database SQLite con una colonna ' Order ' (ad esempio), questo metodo avrebbe dovuto eseguire alcune operazioni SQL per riordinare i numeri in tale colonna.
+L'implementazione del `MoveRow` è un po' più complessa perché è necessario modificare la struttura dei dati sottostante in modo che corrisponda al nuovo ordine. Poiché i dati vengono implementati come `List` il codice seguente elimina l'elemento dati nella posizione precedente e lo inserisce nella nuova posizione. Se i dati sono stati archiviati in una tabella di database SQLite con una colonna ' Order ' (ad esempio), questo metodo avrebbe dovuto eseguire alcune operazioni SQL per riordinare i numeri in tale colonna.
 
 ```csharp
 public override void MoveRow (UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -113,7 +113,7 @@ public override void MoveRow (UITableView tableView, NSIndexPath sourceIndexPath
 }
 ```
 
-Infine, per ottenere la tabella in modalità di modifica, il pulsante **modifica** deve chiamare `SetEditing` come segue
+Infine, per ottenere la tabella in modalità di modifica, il pulsante **modifica** deve chiamare `SetEditing` come questa
 
 ```csharp
 table.SetEditing (true, true);
@@ -129,9 +129,9 @@ table.SetEditing (false, true);
 
 L'inserimento di righe dall'interno della tabella è un'interfaccia utente non comune. l'esempio principale nelle app iOS standard è la schermata **Modifica contatto** . In questa schermata viene illustrato il funzionamento della funzionalità di inserimento delle righe. in modalità di modifica è presente una riga aggiuntiva che, quando viene selezionato, inserisce righe aggiuntive nei dati. Al termine della modifica, viene rimossa la riga temporanea **(Aggiungi nuovo)** .
 
- [![](editing-images/image12.png "Al termine della modifica, viene rimossa la nuova riga aggiunta temporanea")](editing-images/image12.png#lightbox)
+ [![](editing-images/image12.png "When editing is complete, the temporary add new row is removed")](editing-images/image12.png#lightbox)
 
-Sono disponibili diversi metodi che influiscono sul `UITableViewSource` comportamento della modalità di modifica di una tabella. Questi metodi sono stati implementati come indicato di seguito nel codice di esempio:
+Sono disponibili diversi metodi `UITableViewSource` che influiscono sul comportamento della modalità di modifica di una tabella. Questi metodi sono stati implementati come indicato di seguito nel codice di esempio:
 
 - **EditingStyleForRow** : restituisce `UITableViewCellEditingStyle.Delete` per le righe contenenti dati e restituisce `UITableViewCellEditingStyle.Insert` per l'ultima riga, che verrà aggiunta in modo specifico per comportarsi come pulsante di inserimento. 
 - **CustomizeMoveTarget** -mentre l'utente sta muovendo una cella, il valore restituito da questo metodo facoltativo può ignorare la scelta della posizione. Ciò significa che è possibile impedire che venga eliminato la cella in determinate posizioni, ad esempio questo esempio che impedisce lo spostamento di una riga dopo la riga **(Aggiungi nuovo)** . 
@@ -140,7 +140,7 @@ Sono disponibili diversi metodi che influiscono sul `UITableViewSource` comporta
 Vengono inoltre aggiunti due metodi personalizzati per aggiungere la riga "Insert" e quindi rimuoverla nuovamente quando non è più necessario. Vengono chiamati dai pulsanti **modifica** e **fine** :
 
 - **WillBeginTableEditing** : quando viene toccato il pulsante **modifica** , chiama `SetEditing` per inserire la tabella in modalità di modifica. Viene attivato il metodo WillBeginTableEditing in cui viene visualizzata la riga **(Aggiungi nuovo)** alla fine della tabella per fungere da pulsante di inserimento. 
-- **DidFinishTableEditing** : quando viene toccato `SetEditing` il pulsante Done, viene chiamato di nuovo per disattivare la modalità di modifica. Il codice di esempio rimuove la riga **(Aggiungi nuovo)** dalla tabella quando la modifica non è più necessaria. 
+- **DidFinishTableEditing** : quando viene toccato il pulsante Done `SetEditing` viene chiamato di nuovo per disattivare la modalità di modifica. Il codice di esempio rimuove la riga **(Aggiungi nuovo)** dalla tabella quando la modifica non è più necessaria. 
 
 Queste sostituzioni dei metodi sono implementate nel file di esempio **TableEditModeAdd/code/TableSource. cs**:
 
@@ -212,7 +212,7 @@ edit = new UIBarButtonItem(UIBarButtonSystemItem.Edit, (s,e)=>{
 });
 ```
 
-Questo modello di interfaccia utente per l'inserimento di righe non viene usato molto spesso, ma `UITableView.BeginUpdates` è `EndUpdates` anche possibile usare i metodi e per animare l'inserimento o la rimozione di celle in qualsiasi tabella. La regola per l'utilizzo di questi metodi è che la differenza nel valore `RowsInSection` restituito da `BeginUpdates` tra `EndUpdates` le chiamate e deve corrispondere al numero netto di celle aggiunte/eliminate `DeleteRows` con i `InsertRows` metodi e. Se l'origine dati sottostante non viene modificata in modo che corrisponda alle operazioni di inserimento/eliminazione nella visualizzazione tabella si verificherà un errore.
+Questo modello di interfaccia utente per l'inserimento di righe non viene usato molto spesso, ma è anche possibile usare i metodi `UITableView.BeginUpdates` e `EndUpdates` per animare l'inserimento o la rimozione di celle in qualsiasi tabella. La regola per l'utilizzo di tali metodi è che la differenza nel valore restituito da `RowsInSection` tra le chiamate `BeginUpdates` e `EndUpdates` deve corrispondere al numero netto di celle aggiunte/eliminate con i metodi `InsertRows` e `DeleteRows`. Se l'origine dati sottostante non viene modificata in modo che corrisponda alle operazioni di inserimento/eliminazione nella visualizzazione tabella si verificherà un errore.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

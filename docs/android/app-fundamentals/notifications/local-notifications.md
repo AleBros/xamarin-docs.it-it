@@ -4,15 +4,15 @@ description: Questa sezione illustra come implementare le notifiche locali in No
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/16/2018
-ms.openlocfilehash: 0d5cde38c9bb9ef4771ec17ef34ebf7e1b8cf74c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 617c04e2f40af535fb381362a389524d693fad0b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755508"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025645"
 ---
 # <a name="local-notifications-on-android"></a>Notifiche locali in Android
 
@@ -26,11 +26,11 @@ Android offre due aree controllate dal sistema per la visualizzazione delle icon
 
 Per ottenere informazioni dettagliate sulla notifica, l'utente può aprire il cassetto delle notifiche (che espande ogni icona di notifica per rivelare il contenuto della notifica) ed eseguire le azioni associate alle notifiche. Lo screenshot seguente mostra un *cassetto delle notifiche* che corrisponde all'area di notifica visualizzata in precedenza:
 
-[![Cassetto di notifica di esempio che visualizza tre notifiche](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
+[![cassetto di notifica di esempio che visualizza tre notifiche](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
 Le notifiche Android usano due tipi di layout:
 
-- ***Layout di base*** &ndash; formato di presentazione compatto e fisso.
+- Il ***layout di Base*** &ndash; un formato di presentazione compatto e fisso.
 
 - ***Layout espanso*** &ndash; un formato di presentazione che può espandersi a una dimensione maggiore per visualizzare altre informazioni.
 
@@ -53,7 +53,7 @@ Tutte le notifiche Android sono basate sul formato di layout di base, che includ
 
 Questi elementi vengono visualizzati come illustrato nel diagramma seguente:
 
-[![Posizione degli elementi di notifica](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
+[![posizione degli elementi di notifica](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
 
 I layout di base sono limitati a 64 pixel indipendenti dalla densità (DP) in altezza. Per impostazione predefinita, Android crea questo stile di notifica di base.
 
@@ -63,23 +63,23 @@ Facoltativamente, le notifiche possono visualizzare un'icona grande che rapprese
 
 A partire da Android 5,0, le notifiche possono anche essere visualizzate nella schermata di blocco:
 
-[![Esempio di notifica della schermata di blocco](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[notifica della schermata di blocco di esempio![](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
 L'utente può fare doppio toccare la notifica della schermata di blocco per sbloccare il dispositivo e passare all'app che ha originato tale notifica oppure scorrere per ignorare la notifica. Le app possono impostare il livello di visibilità di una notifica per controllare ciò che viene visualizzato nella schermata di blocco e gli utenti possono scegliere se consentire la visualizzazione di contenuto sensibile nelle notifiche della schermata di blocco.
 
 Android 5,0 ha introdotto un formato di presentazione delle notifiche con priorità alta chiamato *Heads-up*. Le notifiche Heads-up scorrono verso il basso dalla parte superiore della schermata per alcuni secondi e quindi ritirate fino all'area di notifica:
 
-[![Esempio di notifica Heads-up](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
+[![la notifica Heads-up di esempio](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
 
 Le notifiche Head-up consentono all'interfaccia utente del sistema di inserire informazioni importanti davanti all'utente senza compromettere lo stato dell'attività attualmente in esecuzione.
 
 Android include il supporto per i metadati delle notifiche, in modo che le notifiche possano essere ordinate e visualizzate in modo intelligente. I metadati delle notifiche controllano anche il modo in cui vengono presentate le notifiche nella schermata di blocco e in formato Heads-up. Le applicazioni possono impostare i seguenti tipi di metadati di notifica:
 
-- **Priorità** di &ndash; Il livello di priorità determina come e quando vengono presentate le notifiche. Ad esempio, in Android 5,0, le notifiche ad alta priorità vengono visualizzate come notifiche Heads-up.
+- **Priorità** &ndash; il livello di priorità determina come e quando vengono presentate le notifiche. Ad esempio, in Android 5,0, le notifiche ad alta priorità vengono visualizzate come notifiche Heads-up.
 
-- **Visibilità** &ndash; Specifica la quantità di contenuto di notifica da visualizzare quando la notifica viene visualizzata nella schermata di blocco.
+- **Visibility** &ndash; specifica la quantità di contenuto di notifica da visualizzare quando la notifica viene visualizzata nella schermata di blocco.
 
-- **Categoria** di Informa il sistema come gestire la notifica in diverse circostanze, ad esempio quando il dispositivo è in modalità *non disturbare.* &ndash;
+- **Category** &ndash; informa il sistema come gestire la notifica in diverse circostanze, ad esempio quando il dispositivo è in modalità *non disturbare* .
 
 > [!NOTE]
 > La **visibilità** e la **categoria** sono state introdotte in Android 5,0 e non sono disponibili nelle versioni precedenti di Android. A partire da Android 8,0, i [canali di notifica](#notif-chan) vengono usati per controllare il modo in cui le notifiche vengono presentate all'utente.
@@ -96,13 +96,13 @@ Quando questa notifica viene espansa, viene rivelato l'intero messaggio:
 
 Android supporta tre stili di layout espansi per le notifiche a evento singolo:
 
-- ***Testo grande*** &ndash; In modalità a contratti, Visualizza un estratto della prima riga del messaggio seguito da due punti. In modalità espansa, Visualizza l'intero messaggio (come illustrato nell'esempio precedente).
+- ***Big Text*** &ndash; in modalità a contratto, Visualizza un estratto della prima riga del messaggio seguito da due punti. In modalità espansa, Visualizza l'intero messaggio (come illustrato nell'esempio precedente).
 
-- ***Posta in arrivo*** &ndash; In modalità a contratti, Visualizza il numero di nuovi messaggi. In modalità espansa Visualizza il primo messaggio di posta elettronica o un elenco dei messaggi presenti nella posta in arrivo.
+- &ndash; della ***posta in arrivo*** in modalità a contratto, Visualizza il numero di nuovi messaggi. In modalità espansa Visualizza il primo messaggio di posta elettronica o un elenco dei messaggi presenti nella posta in arrivo.
 
-- ***Immagine*** di &ndash; In modalità a contratti, Visualizza solo il testo del messaggio. In modalità espansa Visualizza il testo e un'immagine.
+- ***Image*** &ndash; in modalità contratta, Visualizza solo il testo del messaggio. In modalità espansa Visualizza il testo e un'immagine.
 
-[Oltre la notifica di base](#beyond-the-basic-notification) (più avanti in questo articolo) spiega come creare notifiche di testo, *posta in arrivo*e *Immagini* di *grandi dimensioni*.
+[Oltre alla notifica di base](#beyond-the-basic-notification) , più avanti in questo articolo, spiega come creare notifiche di testo, *posta in arrivo*e *Immagini* di *grandi dimensioni*.
 
 <a name="notif-chan"></a>
 <a name="notification-channels"></a>
@@ -110,13 +110,13 @@ Android supporta tre stili di layout espansi per le notifiche a evento singolo:
 
 A partire da Android 8,0 (Oreo), è possibile usare la funzionalità *canali di notifica* per creare un canale personalizzabile dall'utente per ogni tipo di notifica che si vuole visualizzare. I canali di notifica consentono di raggruppare le notifiche in modo che tutte le notifiche inviate a un canale mostrino lo stesso comportamento. Ad esempio, si potrebbe disporre di un canale di notifica destinato a notifiche che richiedono attenzione immediata e un canale "più tranquillo" separato usato per i messaggi informativi.
 
-L'app **YouTube** installata con Android Oreo elenca due categorie di notifiche: **Scarica notifiche** e **notifiche generali**:
+L'app **YouTube** installata con Android Oreo elenca due categorie di notifiche: **notifiche di download** e **notifiche generali**:
 
-[![Schermate di notifica per YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
+[schermate di notifica![per YouTube in Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 Ognuna di queste categorie corrisponde a un canale di notifica. L'app YouTube implementa un canale di **notifiche di download** e un canale di **notifiche generale** . L'utente può toccare **Scarica notifiche**, che visualizza la schermata impostazioni per il canale delle notifiche di download dell'app:
 
-[![Schermata Scarica notifiche per l'app YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
+[schermata di download delle notifiche di![per l'app YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 In questa schermata, l'utente può modificare il comportamento del canale notifiche di **download** eseguendo le operazioni seguenti:
 
@@ -132,16 +132,16 @@ In questa schermata, l'utente può modificare il comportamento del canale notifi
 
 Il canale **notifiche generale** presenta impostazioni simili:
 
-[![Schermata generale delle notifiche per l'app YouTube](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
+[schermata![notifiche generali per l'app YouTube](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
 
-Si noti che non si ha &ndash; il controllo assoluto sulla modalità di interazione dei canali di notifica con l'utente. l'utente può modificare le impostazioni per qualsiasi canale di notifica sul dispositivo come illustrato nelle schermate precedenti. Tuttavia, è possibile configurare i valori predefiniti (come verrà descritto di seguito). Come illustrato in questi esempi, la nuova funzionalità canali di notifica consente di fornire agli utenti un controllo con granularità fine su diversi tipi di notifiche.
+Si noti che non si ha il controllo assoluto sulla modalità di interazione dei canali di notifica con l'utente &ndash; l'utente può modificare le impostazioni per qualsiasi canale di notifica sul dispositivo come illustrato nelle schermate precedenti. Tuttavia, è possibile configurare i valori predefiniti (come verrà descritto di seguito). Come illustrato in questi esempi, la nuova funzionalità canali di notifica consente di fornire agli utenti un controllo con granularità fine su diversi tipi di notifiche.
 
 ## <a name="notification-creation"></a>Creazione di notifiche
 
 Per creare una notifica in Android, usare la classe [NotificationCompat. Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) dal pacchetto NuGet [Novell. Android. support. v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Questa classe rende possibile la creazione e la pubblicazione di notifiche nelle versioni precedenti di Android.
-`NotificationCompat.Builder`viene inoltre illustrato.
+viene inoltre illustrata la `NotificationCompat.Builder`.
 
-`NotificationCompat.Builder`fornisce metodi per impostare le varie opzioni in una notifica, ad esempio:
+`NotificationCompat.Builder` fornisce metodi per l'impostazione delle varie opzioni in una notifica, ad esempio:
 
 - Il contenuto, inclusi il titolo, il testo del messaggio e l'icona di notifica.
 
@@ -193,17 +193,17 @@ void CreateNotificationChannel()
 }
 ```
 
-Il canale di notifica deve essere creato ogni volta che viene creata l'attività. Per il `CreateNotificationChannel` metodo, deve essere chiamato `OnCreate` nel metodo di un'attività.
+Il canale di notifica deve essere creato ogni volta che viene creata l'attività. Per il metodo `CreateNotificationChannel`, deve essere chiamato nel metodo `OnCreate` di un'attività.
 
 ### <a name="creating-and-publishing-a-notification"></a>Creazione e pubblicazione di una notifica
 
 Per generare una notifica in Android, seguire questa procedura:
 
-1. Creare un'istanza `NotificationCompat.Builder` di un oggetto.
+1. Creare un'istanza di un oggetto `NotificationCompat.Builder`.
 
 2. Chiamare diversi metodi sull'oggetto `NotificationCompat.Builder` per impostare le opzioni di notifica.
 
-3. Chiamare il metodo di [compilazione](xref:Android.App.Notification.Builder.Build) dell' `NotificationCompat.Builder` oggetto per creare un'istanza di un oggetto notifica.
+3. Chiamare il metodo di [compilazione](xref:Android.App.Notification.Builder.Build) dell'oggetto `NotificationCompat.Builder` per creare un'istanza di un oggetto notifica.
 
 4. Chiamare il metodo [Notify](xref:Android.App.NotificationManager.Notify*) di Notification Manager per pubblicare la notifica.
 
@@ -215,7 +215,7 @@ Per generare una notifica in Android, seguire questa procedura:
 
 - Testo della notifica
 
-Nell'esempio di codice riportato di seguito viene illustrato `NotificationCompat.Builder` come utilizzare per generare una notifica di base. Si noti che i metodi `NotificationCompat.Builder` supportano il [concatenamento dei metodi](https://en.wikipedia.org/wiki/Method_chaining), ovvero ogni metodo restituisce l'oggetto generatore, quindi è possibile usare il risultato dell'ultima chiamata al metodo per richiamare la chiamata al metodo successiva:
+Nell'esempio di codice seguente viene illustrato come utilizzare `NotificationCompat.Builder` per generare una notifica di base. Si noti che `NotificationCompat.Builder` metodi supportano il [concatenamento](https://en.wikipedia.org/wiki/Method_chaining)di metodi; ovvero, ogni metodo restituisce l'oggetto generatore per poter utilizzare il risultato dell'ultima chiamata al metodo per richiamare la chiamata al metodo successiva:
 
 ```csharp
 // Instantiate the builder and set notification elements:
@@ -236,17 +236,17 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-In questo esempio viene creata un' `NotificationCompat.Builder` istanza di `builder` un nuovo oggetto denominato, insieme all'ID del canale di notifica da usare. Il titolo e il testo della notifica vengono impostati e l'icona di notifica viene caricata da **Resources/ic_notification. png**. La chiamata al `Build` metodo del generatore di notifiche crea un oggetto notifica con queste impostazioni. Il passaggio successivo consiste nel chiamare il `Notify` metodo di Notification Manager. Per individuare Notification Manager, chiamare `GetSystemService`, come illustrato in precedenza.
+In questo esempio viene creata un'istanza di un nuovo oggetto `NotificationCompat.Builder` denominato `builder`, insieme all'ID del canale di notifica da usare. Il titolo e il testo della notifica vengono impostati e l'icona di notifica viene caricata da **Resources/ic_notification. png**. La chiamata al metodo `Build` del generatore di notifiche crea un oggetto notifica con queste impostazioni. Il passaggio successivo consiste nel chiamare il metodo `Notify` di Notification Manager. Per individuare gestione notifiche, chiamare `GetSystemService`, come illustrato in precedenza.
 
-Il `Notify` metodo accetta due parametri: l'identificatore della notifica e l'oggetto notifica. L'identificatore di notifica è un intero univoco che identifica la notifica per l'applicazione. In questo esempio l'identificatore di notifica è impostato su zero (0); Tuttavia, in un'applicazione di produzione, è consigliabile assegnare a ogni notifica un identificatore univoco. Il riutilizzo del valore dell'identificatore precedente in una `Notify` chiamata a comporta la sovrascrittura dell'ultima notifica.
+Il metodo `Notify` accetta due parametri: l'identificatore della notifica e l'oggetto notifica. L'identificatore di notifica è un intero univoco che identifica la notifica per l'applicazione. In questo esempio l'identificatore di notifica è impostato su zero (0); Tuttavia, in un'applicazione di produzione, è consigliabile assegnare a ogni notifica un identificatore univoco. Il riutilizzo del valore dell'identificatore precedente in una chiamata a `Notify` comporta la sovrascrittura dell'ultima notifica.
 
 Quando questo codice viene eseguito in un dispositivo Android 5,0, viene generata una notifica simile all'esempio seguente:
 
 ![Risultato della notifica per il codice di esempio](local-notifications-images/09-hello-world.png)
 
-L'icona di notifica viene visualizzata sul lato sinistro della notifica &ndash; . questa immagine di un &ldquo;cerchio&rdquo; ha un canale alfa, in modo che Android possa creare uno sfondo circolare grigio dietro di esso. È anche possibile specificare un'icona senza un canale alfa. Per visualizzare un'immagine fotografica come icona, vedere il [formato di icone grandi](#large-icon-format) più avanti in questo argomento.
+L'icona di notifica viene visualizzata sul lato sinistro della notifica &ndash; l'immagine di un cerchio &ldquo;i&rdquo; ha un canale alfa, in modo che Android possa creare uno sfondo circolare grigio dietro di esso. È anche possibile specificare un'icona senza un canale alfa. Per visualizzare un'immagine fotografica come icona, vedere il [formato di icone grandi](#large-icon-format) più avanti in questo argomento.
 
-Il timestamp viene impostato automaticamente, ma è possibile eseguire l'override di questa impostazione chiamando il metodo [SetWhen](xref:Android.App.Notification.Builder.SetWhen*) del generatore di notifiche. Ad esempio, l'esempio di codice seguente imposta il timestamp sull'ora corrente:
+Il timestamp viene impostato automaticamente, ma è possibile eseguire l'override di questa impostazione chiamando il metodo [sewhen](xref:Android.App.Notification.Builder.SetWhen*) del generatore di notifiche. Ad esempio, l'esempio di codice seguente imposta il timestamp sull'ora corrente:
 
 ```csharp
 builder.SetWhen (Java.Lang.JavaSystem.CurrentTimeMillis());
@@ -254,7 +254,7 @@ builder.SetWhen (Java.Lang.JavaSystem.CurrentTimeMillis());
 
 ### <a name="enabling-sound-and-vibration"></a>Abilitazione di suoni e vibrazioni
 
-Se si vuole che la notifica riproduca anche un suono, è possibile chiamare il metodo [SetDefaults](xref:Android.App.Notification.Builder.SetDefaults*) del generatore di notifiche e passare il flag `NotificationDefaults.Sound`:
+Se si vuole che la notifica riproduca anche un suono, è possibile chiamare il metodo [Sedefaults](xref:Android.App.Notification.Builder.SetDefaults*) del generatore di notifiche e passare il flag di `NotificationDefaults.Sound`:
 
 ```csharp
 // Instantiate the notification builder and enable sound:
@@ -265,13 +265,13 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNE
     .SetSmallIcon (Resource.Drawable.ic_notification);
 ```
 
-Questa chiamata a `SetDefaults` comporterà la riproduzione di un suono da parte del dispositivo quando viene pubblicata la notifica. Se si vuole che il dispositivo vibra anziché riprodurre un suono, è possibile passare `NotificationDefaults.Vibrate` a `SetDefaults.` se si vuole che il dispositivo riproduca un suono e vibrare il dispositivo, è possibile passare entrambi i flag `SetDefaults`a:
+Questa chiamata a `SetDefaults` provocherà la riproduzione di un suono da parte del dispositivo quando viene pubblicata la notifica. Se si vuole che il dispositivo vibra anziché riprodurre un suono, è possibile passare `NotificationDefaults.Vibrate` a `SetDefaults.` se si vuole che il dispositivo riproduca un suono e vibrazione il dispositivo, è possibile passare entrambi i flag al `SetDefaults`:
 
 ```csharp
 builder.SetDefaults (NotificationDefaults.Sound | NotificationDefaults.Vibrate);
 ```
 
-Se si Abilita il suono senza specificare un suono, Android usa il suono di notifica di sistema predefinito. Tuttavia, è possibile modificare il suono che verrà riprodotto chiamando il metodo [SetSound](xref:Android.App.Notification.Builder.SetSound*) del generatore di notifiche. Ad esempio, per riprodurre il suono di allarme con la notifica, anziché il suono di notifica predefinito, è possibile ottenere l'URI per il suono di allarme dal [RingtoneManager](xref:Android.Media.RingtoneManager) e passarlo a `SetSound`:
+Se si Abilita il suono senza specificare un suono, Android usa il suono di notifica di sistema predefinito. Tuttavia, è possibile modificare il suono che verrà riprodotto chiamando il metodo [sesound](xref:Android.App.Notification.Builder.SetSound*) del generatore di notifiche. Ad esempio, per riprodurre il suono di allarme con la notifica, anziché il suono di notifica predefinito, è possibile ottenere l'URI per il segnale acustico da [RingtoneManager](xref:Android.Media.RingtoneManager) e passarlo a `SetSound`:
 
 ```csharp
 builder.SetSound (RingtoneManager.GetDefaultUri(RingtoneType.Alarm));
@@ -283,7 +283,7 @@ In alternativa, è possibile usare il suono predefinito del sistema ringtone per
 builder.SetSound (RingtoneManager.GetDefaultUri(RingtoneType.Ringtone));
 ```
 
-Dopo aver creato un oggetto notifica, è possibile impostare le proprietà delle notifiche nell'oggetto notifica, anziché configurarle in anticipo tramite `NotificationCompat.Builder` metodi. Ad esempio, invece di chiamare il `SetDefaults` metodo per abilitare la vibrazione per una notifica, è possibile modificare direttamente il flag di bit della proprietà [valori predefiniti](xref:Android.App.Notification.Defaults) della notifica:
+Dopo aver creato un oggetto notifica, è possibile impostare le proprietà delle notifiche nell'oggetto notifica, anziché configurarle in anticipo tramite metodi di `NotificationCompat.Builder`. Ad esempio, invece di chiamare il metodo `SetDefaults` per abilitare la vibrazione di una notifica, è possibile modificare direttamente il flag di bit della proprietà [valori predefiniti](xref:Android.App.Notification.Defaults) della notifica:
 
 ```csharp
 // Build the notification:
@@ -297,7 +297,7 @@ Questo esempio causa la vibrazione del dispositivo quando la notifica viene pubb
 
 ### <a name="updating-a-notification"></a>Aggiornamento di una notifica
 
-Se si desidera aggiornare il contenuto di una notifica dopo che è stata pubblicata, è possibile riutilizzare l'oggetto `NotificationCompat.Builder` esistente per creare un nuovo oggetto notifica e pubblicare la notifica con l'identificatore dell'ultima notifica. Ad esempio:
+Se si desidera aggiornare il contenuto di una notifica dopo che è stata pubblicata, è possibile riutilizzare l'oggetto `NotificationCompat.Builder` esistente per creare un nuovo oggetto notifica e pubblicare la notifica con l'identificatore dell'ultima notifica. Esempio:
 
 ```csharp
 // Update the existing notification builder content:
@@ -311,12 +311,12 @@ notification = builder.Build();
 notificationManager.Notify (notificationId, notification);
 ```
 
-In questo esempio, l'oggetto `NotificationCompat.Builder` esistente viene utilizzato per creare un nuovo oggetto notifica con un titolo e un messaggio diversi.
+In questo esempio, l'oggetto `NotificationCompat.Builder` esistente viene usato per creare un nuovo oggetto notifica con un titolo e un messaggio diversi.
 Il nuovo oggetto notifica viene pubblicato usando l'identificatore della notifica precedente e aggiorna il contenuto della notifica pubblicata in precedenza:
 
 ![Notifica aggiornata](local-notifications-images/12-updated-notification.png)
 
-Il corpo della notifica precedente viene riutilizzato &ndash; solo il titolo e il testo della notifica viene modificato mentre la notifica viene visualizzata nel cassetto delle notifiche. Il testo del titolo passa da "notifica di esempio" a "notifica aggiornata" e il testo del messaggio cambia da "Hello World! Questa è la mia prima notifica! " a "modificato in questo messaggio".
+Il corpo della notifica precedente viene riutilizzato &ndash; solo il titolo e il testo della notifica cambiano mentre la notifica viene visualizzata nel cassetto delle notifiche. Il testo del titolo passa da "notifica di esempio" a "notifica aggiornata" e il testo del messaggio cambia da "Hello World! Questa è la mia prima notifica! " a "modificato in questo messaggio".
 
 Una notifica rimane visibile fino a quando non si verifica una delle tre situazioni seguenti:
 
@@ -330,9 +330,9 @@ Per altre informazioni sull'aggiornamento delle notifiche Android, vedere [modif
 
 ### <a name="starting-an-activity-from-a-notification"></a>Avvio di un'attività da una notifica
 
-In Android è normale che una notifica sia associata a un' *azione* &ndash; un'attività che viene avviata quando l'utente tocca la notifica. Questa attività può trovarsi in un'altra applicazione o anche in un'altra attività. Per aggiungere un'azione a una notifica, creare un oggetto [PendingIntent](xref:Android.App.PendingIntent) e associarlo `PendingIntent` alla notifica. Un `PendingIntent` è un tipo speciale di finalità che consente all'applicazione destinatario di eseguire una parte di codice predefinita con le autorizzazioni dell'applicazione mittente. Quando l'utente tocca la notifica, Android avvia l'attività specificata da `PendingIntent`.
+In Android è normale che una notifica venga associata a un' *azione* &ndash; un'attività che viene avviata quando l'utente tocca la notifica. Questa attività può trovarsi in un'altra applicazione o anche in un'altra attività. Per aggiungere un'azione a una notifica, creare un oggetto [PendingIntent](xref:Android.App.PendingIntent) e associare il `PendingIntent` alla notifica. Un `PendingIntent` è un tipo speciale di finalità che consente all'applicazione del destinatario di eseguire una parte di codice predefinita con le autorizzazioni dell'applicazione mittente. Quando l'utente tocca la notifica, Android avvia l'attività specificata dal `PendingIntent`.
 
-Il frammento di codice seguente illustra come creare una notifica con un `PendingIntent` che avvierà l'attività dell' `MainActivity`app di origine:
+Il frammento di codice seguente illustra come creare una notifica con un `PendingIntent` che avvierà l'attività dell'app di origine, `MainActivity`:
 
 ```csharp
 // Set up an intent so that tapping the notifications returns to this app:
@@ -362,16 +362,16 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-Questo codice è molto simile al codice di notifica nella sezione precedente, ad eccezione del fatto `PendingIntent` che un oggetto viene aggiunto all'oggetto notifica. In questo esempio, l' `PendingIntent` oggetto è associato all'attività dell'app di origine prima che venga passata al metodo [SetContentIntent](xref:Android.App.Notification.Builder.SetContentIntent*) del generatore di notifiche. Il `PendingIntentFlags.OneShot` flag viene passato `PendingIntent.GetActivity` al metodo in modo che l' `PendingIntent` oggetto venga usato una sola volta. Quando viene eseguito questo codice, viene visualizzata la seguente notifica:
+Questo codice è molto simile al codice di notifica nella sezione precedente, ad eccezione del fatto che un `PendingIntent` viene aggiunto all'oggetto notifica. In questo esempio, il `PendingIntent` è associato all'attività dell'app di origine prima che venga passato al metodo [SetContentIntent](xref:Android.App.Notification.Builder.SetContentIntent*) del generatore di notifiche. Il flag `PendingIntentFlags.OneShot` viene passato al metodo `PendingIntent.GetActivity` in modo che il `PendingIntent` venga usato una sola volta. Quando viene eseguito questo codice, viene visualizzata la seguente notifica:
 
 ![Prima notifica azione](local-notifications-images/10-first-action-notification.png)
 
 Se si tocca questa notifica, l'utente torna all'attività di origine.
 
 In un'app di produzione l'app deve gestire lo *stack indietro* quando l'utente preme il pulsante **indietro** nell'attività di notifica. se non si ha familiarità con le attività di Android e lo stack indietro, vedere [attività e stack back](https://developer.android.com/guide/components/tasks-and-back-stack.html).
-Nella maggior parte dei casi, la navigazione all'indietro dall'attività di notifica deve restituire l'utente dall'app e tornare alla schermata iniziale. Per gestire lo stack indietro, l'app usa la classe [TaskStackBuilder](xref:Android.App.TaskStackBuilder) per creare un `PendingIntent` oggetto con uno stack indietro.
+Nella maggior parte dei casi, la navigazione all'indietro dall'attività di notifica deve restituire l'utente dall'app e tornare alla schermata iniziale. Per gestire lo stack indietro, l'app usa la classe [TaskStackBuilder](xref:Android.App.TaskStackBuilder) per creare un `PendingIntent` con uno stack indietro.
 
-Un'altra considerazione reale è che l'attività di origine potrebbe dover inviare dati all'attività di notifica. Ad esempio, la notifica può indicare che è arrivato un messaggio di testo e l'attività di notifica (una schermata di visualizzazione dei messaggi) richiede l'ID del messaggio per visualizzare il messaggio all'utente. L'attività che crea l' `PendingIntent` oggetto può utilizzare il metodo [Intent. PutExtra](xref:Android.Content.Intent.PutExtra*) per aggiungere dati, ad esempio una stringa, allo scopo, in modo che questi dati vengano passati all'attività di notifica.
+Un'altra considerazione reale è che l'attività di origine potrebbe dover inviare dati all'attività di notifica. Ad esempio, la notifica può indicare che è arrivato un messaggio di testo e l'attività di notifica (una schermata di visualizzazione dei messaggi) richiede l'ID del messaggio per visualizzare il messaggio all'utente. L'attività che crea la `PendingIntent` può utilizzare il metodo [Intent. PutExtra](xref:Android.Content.Intent.PutExtra*) per aggiungere dati, ad esempio una stringa, allo scopo, in modo che questi dati vengano passati all'attività di notifica.
 
 Nell'esempio di codice seguente viene illustrato come utilizzare `TaskStackBuilder` per gestire lo stack indietro e viene incluso un esempio di invio di una singola stringa di messaggio a un'attività di notifica denominata `SecondActivity`:
 
@@ -417,18 +417,18 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-In questo esempio di codice, l'applicazione è costituita da `MainActivity` due attività: (che contiene il codice di notifica `SecondActivity`precedente) e, la schermata visualizzata dall'utente dopo aver toccato la notifica. Quando viene eseguito questo codice, viene presentata una semplice notifica (simile all'esempio precedente). Se si tocca la notifica, l'utente `SecondActivity` viene visualizzato sullo schermo:
+In questo esempio di codice l'app è costituita da due attività: `MainActivity` (che contiene il codice di notifica precedente) e `SecondActivity`, la schermata visualizzata dall'utente dopo aver toccato la notifica. Quando viene eseguito questo codice, viene presentata una semplice notifica (simile all'esempio precedente). Se si tocca la notifica, l'utente viene visualizzato nella schermata `SecondActivity`:
 
 ![Schermata seconda attività](local-notifications-images/11-second-activity.png)
 
-Il messaggio stringa (passato nel metodo di `PutExtra` Intent) viene recuperato in `SecondActivity` tramite questa riga di codice:
+Il messaggio stringa (passato nel metodo di `PutExtra` della finalità) viene recuperato in `SecondActivity` tramite questa riga di codice:
 
 ```csharp
 // Get the message from the intent:
 string message = Intent.Extras.GetString ("message", "");
 ```
 
-Questo messaggio recuperato, "Greetings from MainActivity!", viene visualizzato nella `SecondActivity` schermata, come illustrato nello screenshot precedente. Quando l'utente preme il pulsante **indietro** mentre è in `SecondActivity`, la navigazione esce dall'app e torna alla schermata precedente all'avvio dell'app.
+Questo messaggio recuperato, "Greetings from MainActivity!", viene visualizzato nella schermata `SecondActivity`, come illustrato nello screenshot precedente. Quando l'utente preme il pulsante **indietro** mentre è `SecondActivity`, la navigazione esce dall'app e torna alla schermata precedente all'avvio dell'app.
 
 Per ulteriori informazioni sulla creazione di Intent in sospeso, vedere [PendingIntent](xref:Android.App.PendingIntent).
 
@@ -436,7 +436,7 @@ Per ulteriori informazioni sulla creazione di Intent in sospeso, vedere [Pending
 
 ## <a name="beyond-the-basic-notification"></a>Oltre la notifica di base
 
-Per impostazione predefinita, le notifiche sono un semplice formato di layout di base in Android, ma è possibile migliorare `NotificationCompat.Builder` questo formato di base effettuando ulteriori chiamate al metodo. In questa sezione verrà illustrato come aggiungere un'icona foto di grandi dimensioni alla notifica. verranno visualizzati esempi di come creare notifiche di layout espanse.
+Per impostazione predefinita, le notifiche sono un semplice formato di layout di base in Android, ma è possibile migliorare questo formato di base effettuando ulteriori chiamate al metodo `NotificationCompat.Builder`. In questa sezione verrà illustrato come aggiungere un'icona foto di grandi dimensioni alla notifica. verranno visualizzati esempi di come creare notifiche di layout espanse.
 
 <a name="large-icon-format" />
 
@@ -444,23 +444,23 @@ Per impostazione predefinita, le notifiche sono un semplice formato di layout di
 
 Nelle notifiche Android viene in genere visualizzata l'icona dell'app di origine (sul lato sinistro della notifica). Tuttavia, le notifiche possono visualizzare un'immagine o una foto, ovvero un' *icona di grandi dimensioni*, anziché l'icona standard Small. Ad esempio, un'app di messaggistica potrebbe visualizzare una foto del mittente anziché l'icona dell'app.
 
-Di seguito è riportato un esempio di una notifica &ndash; di base di Android 5,0 che visualizza solo l'icona dell'app piccola:
+Di seguito è riportato un esempio di una notifica di base di Android 5,0 &ndash; viene visualizzata solo l'icona dell'app piccola:
 
 ![Notifica normale di esempio](local-notifications-images/13-sample-notification.png)
 
-Di seguito è riportata una schermata della notifica dopo averla modificata per visualizzare un'icona &ndash; grande che usa un'icona creata da un'immagine di una scimmia di codice Novell:
+Di seguito è riportata una schermata della notifica dopo averla modificata per visualizzare un'icona di grandi dimensioni &ndash; usa un'icona creata da un'immagine di una scimmia di codice Novell:
 
 ![Esempio di notifica icone grandi](local-notifications-images/14-large-icon-sample.png)
 
 Si noti che quando una notifica viene presentata in un formato di icona grande, l'icona dell'app piccola viene visualizzata come un badge nell'angolo inferiore destro dell'icona grande.
 
-Per usare un'immagine come icona di grandi dimensioni in una notifica, chiamare il metodo [SetLargeIcon](xref:Android.App.Notification.Builder.SetLargeIcon*) del generatore di notifiche e passare una bitmap dell'immagine. Diversamente da `SetSmallIcon`, `SetLargeIcon` accetta solo una bitmap. Per convertire un file di immagine in una bitmap, usare la classe [BitmapFactory](xref:Android.Graphics.BitmapFactory) . Ad esempio:
+Per usare un'immagine come icona di grandi dimensioni in una notifica, chiamare il metodo [SetLargeIcon](xref:Android.App.Notification.Builder.SetLargeIcon*) del generatore di notifiche e passare una bitmap dell'immagine. A differenza di `SetSmallIcon`, `SetLargeIcon` accetta solo una bitmap. Per convertire un file di immagine in una bitmap, usare la classe [BitmapFactory](xref:Android.Graphics.BitmapFactory) . Esempio:
 
 ```csharp
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-Questo codice di esempio apre il file di immagine in **Resources/monkey_icon. png**, lo converte in una bitmap e passa la bitmap risultante a `NotificationCompat.Builder`. In genere, la risoluzione dell'immagine di origine è più grande &ndash; dell'icona piccola ma non molto più grande. Un'immagine troppo grande potrebbe causare operazioni di ridimensionamento non necessarie che potrebbero ritardare l'invio della notifica.
+Questo codice di esempio apre il file di immagine in **Resources/monkey_icon. png**, lo converte in una bitmap e passa la bitmap risultante a `NotificationCompat.Builder`. In genere, la risoluzione dell'immagine di origine è più grande dell'icona piccola &ndash; ma non molto più grande. Un'immagine troppo grande potrebbe causare operazioni di ridimensionamento non necessarie che potrebbero ritardare l'invio della notifica.
 
 ### <a name="big-text-style"></a>Stile testo grande
 
@@ -474,7 +474,7 @@ In questo formato, viene visualizzato solo un estratto del messaggio, terminato 
 
 Questo formato di layout espanso include anche il testo di riepilogo nella parte inferiore della notifica. L'altezza massima della notifica di *testo grande* è 256 DP.
 
-Per creare una notifica di *testo di grandi dimensioni* , creare `NotificationCompat.Builder` un'istanza di un oggetto, come in precedenza, quindi creare un'istanza e aggiungere `NotificationCompat.Builder` un oggetto [BigTextStyle](xref:Android.App.Notification.BigTextStyle) all'oggetto. Di seguito è fornito un esempio:
+Per creare una notifica di *testo di grandi dimensioni* , creare un'istanza di un oggetto `NotificationCompat.Builder`, come in precedenza, quindi creare un'istanza e aggiungere un oggetto [BigTextStyle](xref:Android.App.Notification.BigTextStyle) all'oggetto `NotificationCompat.Builder`. Ecco un esempio:
 
 ```csharp
 // Instantiate the Big Text style:
@@ -495,11 +495,11 @@ builder.SetStyle (textStyle);
 // Create the notification and publish it ...
 ```
 
-In questo esempio, il testo del messaggio e il testo di riepilogo vengono `BigTextStyle` archiviati nell'`textStyle`oggetto () prima che vengano passati a`NotificationCompat.Builder.`
+In questo esempio, il testo del messaggio e il testo di riepilogo vengono archiviati nell'oggetto `BigTextStyle` (`textStyle`) prima di essere passati a `NotificationCompat.Builder.`
 
 ### <a name="image-style"></a>Stile immagine
 
-Lo stile dell' *immagine* (detto anche stile *immagine grande* ) è un formato di notifica espanso che è possibile usare per visualizzare un'immagine nel corpo di una notifica. Ad esempio, un'app screenshot o un'app Photo può usare lo stile di notifica *immagine* per fornire all'utente una notifica dell'ultima immagine acquisita. Si noti che l'altezza massima della notifica *immagine* è 256 DP &ndash; Android consente di ridimensionare l'immagine per adattarla a questa restrizione di altezza massima, entro i limiti della memoria disponibile.
+Lo stile dell' *immagine* (detto anche stile *immagine grande* ) è un formato di notifica espanso che è possibile usare per visualizzare un'immagine nel corpo di una notifica. Ad esempio, un'app screenshot o un'app Photo può usare lo stile di notifica *immagine* per fornire all'utente una notifica dell'ultima immagine acquisita. Si noti che l'altezza massima della notifica dell' *immagine* è 256 DP &ndash; Android ridimensiona l'immagine per adattarla a questa restrizione di altezza massima, entro i limiti della memoria disponibile.
 
 Analogamente a tutte le notifiche di layout espanse, le notifiche di *Immagini* vengono visualizzate per prime in un formato compatto che visualizza un estratto del testo del messaggio di accompagnamento:
 
@@ -509,9 +509,9 @@ Quando l'utente trascina la notifica dell' *immagine* , si espande per rivelare 
 
 ![La notifica immagine espansa rivela un'immagine](local-notifications-images/18-image-expanded.png)
 
-Si noti che quando la notifica viene visualizzata in formato Compact, viene visualizzato il testo della notifica, ovvero il testo passato al `SetContentText` metodo del generatore di notifiche, come illustrato in precedenza. Tuttavia, quando la notifica viene espansa per rivelare l'immagine, viene visualizzato il testo di riepilogo sopra l'immagine.
+Si noti che quando la notifica viene visualizzata in formato Compact, viene visualizzato il testo della notifica (il testo passato al metodo `SetContentText` del generatore di notifiche, come illustrato in precedenza). Tuttavia, quando la notifica viene espansa per rivelare l'immagine, viene visualizzato il testo di riepilogo sopra l'immagine.
 
-Per creare una notifica *immagine* , creare un'istanza di `NotificationCompat.Builder` un oggetto come in precedenza, quindi creare e inserire un oggetto [BigPictureStyle](xref:Android.App.Notification.BigPictureStyle) nell' `NotificationCompat.Builder` oggetto. Ad esempio:
+Per creare una notifica *immagine* , creare un'istanza di un oggetto `NotificationCompat.Builder` come in precedenza, quindi creare e inserire un oggetto [BigPictureStyle](xref:Android.App.Notification.BigPictureStyle) nell'oggetto `NotificationCompat.Builder`. Esempio:
 
 ```csharp
 // Instantiate the Image (Big Picture) style:
@@ -529,7 +529,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-Analogamente al metodo `SetLargeIcon` di `NotificationCompat.Builder`, il metodo [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) di `BigPictureStyle` richiede una bitmap dell'immagine che si desidera visualizzare nel corpo della notifica. In questo esempio, il metodo [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) di `BitmapFactory` legge il file di immagine che si trova in **Resources/assortable/x_bldg. png** e lo converte in una bitmap.
+Analogamente al metodo `SetLargeIcon` di `NotificationCompat.Builder`, il metodo [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) di `BigPictureStyle` richiede una bitmap dell'immagine che si desidera visualizzare nel corpo della notifica. In questo esempio, il metodo [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) di `BitmapFactory` legge il file di immagine che si trova in **Resources/x_bldg. png** e lo converte in una bitmap.
 
 È anche possibile visualizzare immagini che non sono in pacchetto come risorsa. Ad esempio, il codice di esempio seguente carica un'immagine dalla scheda SD locale e la Visualizza in una notifica *immagine* :
 
@@ -556,7 +556,7 @@ In questo esempio, il file di immagine che si trova in **/sdcard/Pictures/My-tsh
 
 ![Esempio di immagine della maglietta nella notifica](local-notifications-images/19-tshirt-notification.png)
 
-Se non si conoscono in anticipo le dimensioni del file di immagine, è consigliabile eseguire il wrapping della chiamata a [BitmapFactory. DecodeFile ha](xref:Android.Graphics.BitmapFactory.DecodeFile*) in un gestore &ndash; di eccezioni. Se `OutOfMemoryError` l'immagine è troppo grande per il ridimensionamento di Android, è possibile che venga generata un'eccezione.
+Se non si conoscono in anticipo le dimensioni del file di immagine, è consigliabile eseguire il wrapping della chiamata a [BitmapFactory. DecodeFile ha](xref:Android.Graphics.BitmapFactory.DecodeFile*) in un gestore di eccezioni &ndash; potrebbe essere generata un'eccezione `OutOfMemoryError` se l'immagine è troppo grande per il ridimensionamento di Android.
 
 Per altre informazioni sul caricamento e la decodifica di immagini bitmap di grandi dimensioni, vedere [caricare in modo efficiente le bitmap di grandi dimensioni](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently).
 
@@ -570,7 +570,7 @@ Quando l'utente trascina la notifica, si espande per rivelare un riepilogo della
 
 ![Notifica della posta in arrivo di esempio espansa](local-notifications-images/21-inbox-expanded.png)
 
-Per creare una notifica della `NotificationCompat.Builder` *posta in arrivo* , creare `NotificationCompat.Builder` un'istanza di un oggetto, come in precedenza, e aggiungere un oggetto [InboxStyle](xref:Android.App.Notification.InboxStyle) a. Di seguito è fornito un esempio:
+Per creare una notifica della *posta in arrivo* , creare un'istanza di un oggetto `NotificationCompat.Builder`, come in precedenza, e aggiungere un oggetto [InboxStyle](xref:Android.App.Notification.InboxStyle) al `NotificationCompat.Builder`. Ecco un esempio:
 
 ```csharp
 // Instantiate the Inbox style:
@@ -590,13 +590,13 @@ inboxStyle.SetSummaryText ("+2 more");
 builder.SetStyle (inboxStyle);
 ```
 
-Per aggiungere nuove righe di testo al corpo della notifica, chiamare il metodo [AddLine](xref:Android.App.Notification.InboxStyle.AddLine*) dell' `InboxStyle` oggetto (l'altezza massima della notifica della *posta in arrivo* è 256 DP). Si noti che, a differenza dello stile di *testo di grandi dimensioni* , lo stile della *posta in arrivo* supporta le singole righe di testo nel corpo della notifica.
+Per aggiungere nuove righe di testo al corpo della notifica, chiamare il metodo [AddLine](xref:Android.App.Notification.InboxStyle.AddLine*) dell'oggetto `InboxStyle` (l'altezza massima della notifica della *posta in arrivo* è 256 DP). Si noti che, a differenza dello stile di *testo di grandi dimensioni* , lo stile della *posta in arrivo* supporta le singole righe di testo nel corpo della notifica.
 
-È anche possibile usare lo stile della *posta in arrivo* per tutte le notifiche che devono visualizzare singole righe di testo in un formato espanso. Ad esempio, è possibile usare lo stile di notifica della *posta in arrivo* per combinare più notifiche in sospeso &ndash; in una notifica di riepilogo. è possibile aggiornare una singola notifica dello stile della *posta in arrivo* con nuove righe di contenuto della notifica (vedere [ Aggiornamento di una notifica](#updating-a-notification) precedente), anziché generare un flusso continuo di notifiche nuove, in genere simili.
+È anche possibile usare lo stile della *posta in arrivo* per tutte le notifiche che devono visualizzare singole righe di testo in un formato espanso. Ad esempio, è possibile usare lo stile di notifica della *posta in arrivo* per combinare più notifiche in sospeso in una notifica di riepilogo &ndash; è possibile aggiornare una singola notifica dello stile della *posta in arrivo* con nuove righe di contenuto della notifica (vedere aggiornamento di [un Notifica](#updating-a-notification) precedente), anziché generare un flusso continuo di notifiche nuove, per lo più simili.
 
 ## <a name="configuring-metadata"></a>Configurazione dei metadati
 
-`NotificationCompat.Builder`include metodi che è possibile chiamare per impostare i metadati relativi alla notifica, ad esempio priorità, visibilità e categoria. Android usa queste informazioni &mdash; insieme alle impostazioni delle preferenze &mdash; utente per determinare come e quando visualizzare le notifiche.
+`NotificationCompat.Builder` include metodi che è possibile chiamare per impostare i metadati relativi alla notifica, ad esempio priorità, visibilità e categoria. Android usa queste informazioni &mdash; insieme alle impostazioni delle preferenze utente &mdash; per determinare come e quando visualizzare le notifiche.
 
 ### <a name="priority-settings"></a>Impostazioni priorità
 
@@ -609,17 +609,17 @@ Le app in esecuzione in Android 7,1 e versioni precedenti devono impostare la pr
 
 Novell. Android definisce le enumerazioni seguenti per impostare la priorità di notifica:
 
-- `NotificationPriority.Max`&ndash; Segnala all'utente una condizione urgente o critica (ad esempio, una chiamata in ingresso, direzioni di turn-by-turn o un avviso di emergenza). Nei dispositivi Android 5,0 e versioni successive, le notifiche con priorità massima vengono visualizzate in formato Heads-up.
+- `NotificationPriority.Max` &ndash; avvisa l'utente di una condizione urgente o critica (ad esempio, una chiamata in ingresso, direzioni di turn-by-turn o un avviso di emergenza). Nei dispositivi Android 5,0 e versioni successive, le notifiche con priorità massima vengono visualizzate in formato Heads-up.
 
-- `NotificationPriority.High`&ndash; Informa l'utente di eventi importanti, ad esempio messaggi di posta elettronica importanti o l'arrivo di messaggi di chat in tempo reale. Nei dispositivi Android 5,0 e versioni successive, le notifiche con priorità alta vengono visualizzate in formato Heads-up.
+- `NotificationPriority.High` &ndash; informa l'utente di eventi importanti, ad esempio messaggi di posta elettronica importanti o l'arrivo di messaggi di chat in tempo reale. Nei dispositivi Android 5,0 e versioni successive, le notifiche con priorità alta vengono visualizzate in formato Heads-up.
 
-- `NotificationPriority.Default`&ndash; Notifica all'utente le condizioni che hanno un livello di priorità medio.
+- `NotificationPriority.Default` &ndash; notifica all'utente le condizioni che hanno un livello di priorità medio.
 
-- `NotificationPriority.Low`&ndash; Per informazioni non urgenti a cui l'utente deve essere informato (ad esempio, promemoria di aggiornamento software o aggiornamenti di social network).
+- `NotificationPriority.Low` &ndash; per informazioni non urgenti a cui l'utente deve essere informato, ad esempio promemoria degli aggiornamenti software o aggiornamenti di social network.
 
-- `NotificationPriority.Min`&ndash; Per informazioni di base che l'utente rileva solo quando si visualizzano le notifiche (ad esempio, posizione o informazioni meteo).
+- `NotificationPriority.Min` &ndash; per informazioni di base visualizzate dall'utente solo quando si visualizzano le notifiche (ad esempio, posizione o informazioni meteo).
 
-Per impostare la priorità di una notifica, chiamare il metodo [SetPriority](xref:Android.App.Notification.Builder.SetPriority*) dell'oggetto `NotificationCompat.Builder`, passando il livello di priorità. Ad esempio:
+Per impostare la priorità di una notifica, chiamare il metodo [sepriority](xref:Android.App.Notification.Builder.SetPriority*) dell'oggetto `NotificationCompat.Builder`, passando il livello di priorità. Esempio:
 
 ```csharp
 builder.SetPriority (NotificationPriority.High);
@@ -647,19 +647,19 @@ Poiché il "pensiero per la giornata" notifica è una notifica con priorità bas
 A partire da Android 5,0, è disponibile l'impostazione di *visibilità* che consente di controllare la quantità di contenuto delle notifiche visualizzata nella schermata di blocco protetto.
 Novell. Android definisce le enumerazioni seguenti per l'impostazione della visibilità delle notifiche:
 
-- `NotificationVisibility.Public`&ndash; Il contenuto completo della notifica viene visualizzato nella schermata di blocco protetto.
+- `NotificationVisibility.Public` &ndash; il contenuto completo della notifica viene visualizzato nella schermata di blocco protetto.
 
-- `NotificationVisibility.Private`&ndash; Solo le informazioni essenziali vengono visualizzate nella schermata di blocco sicura, ad esempio l'icona di notifica e il nome dell'app che l'ha inviata, ma i dettagli della notifica restano nascosti. Tutte le notifiche vengono `NotificationVisibility.Private`predefinite a.
+- `NotificationVisibility.Private` &ndash; solo le informazioni essenziali vengono visualizzate nella schermata di blocco sicura, ad esempio l'icona di notifica e il nome dell'app che l'ha inviata, ma il resto dei dettagli della notifica è nascosto. Per impostazione predefinita, tutte le notifiche `NotificationVisibility.Private`.
 
-- `NotificationVisibility.Secret`&ndash; Nessun elemento viene visualizzato nella schermata di blocco sicura, neanche nell'icona di notifica. Il contenuto della notifica è disponibile solo dopo che l'utente ha sbloccato il dispositivo.
+- `NotificationVisibility.Secret` &ndash; non viene visualizzato nulla nella schermata di blocco sicura, neanche nell'icona di notifica. Il contenuto della notifica è disponibile solo dopo che l'utente ha sbloccato il dispositivo.
 
-Per impostare la visibilità di una notifica, le app chiamano `SetVisibility` il metodo `NotificationCompat.Builder` dell'oggetto, passando l'impostazione di visibilità. Ad esempio, questa chiamata a `SetVisibility` crea la notifica `Private`:
+Per impostare la visibilità di una notifica, le app chiamano il metodo di `SetVisibility` dell'oggetto `NotificationCompat.Builder`, passando l'impostazione di visibilità. Ad esempio, questa chiamata a `SetVisibility` rende `Private`la notifica:
 
 ```csharp
 builder.SetVisibility (NotificationVisibility.Private);
 ```
 
-Quando viene `Private` inviata una notifica, nella schermata di blocco protetto vengono visualizzati solo il nome e l'icona dell'app. Anziché il messaggio di notifica, l'utente Visualizza "sbloccare il dispositivo per visualizzare la notifica":
+Quando viene inviata una notifica di `Private`, nella schermata di blocco sicura vengono visualizzati solo il nome e l'icona dell'app. Anziché il messaggio di notifica, l'utente Visualizza "sbloccare il dispositivo per visualizzare la notifica":
 
 ![Sbloccare il messaggio di notifica del dispositivo](local-notifications-images/25-lockscreen-private.png)
 
@@ -669,35 +669,35 @@ In questo esempio, **NotificationsLab** è il nome dell'app di origine. Questa v
 
 A partire da Android 5,0, le categorie predefinite sono disponibili per le notifiche di classificazione e filtro. Novell. Android fornisce le enumerazioni seguenti per queste categorie:
 
-- `Notification.CategoryCall`&ndash; Telefonata in arrivo.
+- `Notification.CategoryCall` &ndash; telefonata in arrivo.
 
-- `Notification.CategoryMessage`&ndash; Messaggio di testo in arrivo.
+- `Notification.CategoryMessage` &ndash; messaggio di testo in arrivo.
 
-- `Notification.CategoryAlarm`&ndash; Condizione di allarme o scadenza del timer.
+- `Notification.CategoryAlarm` &ndash; una condizione di allarme o una scadenza del timer.
 
-- `Notification.CategoryEmail`&ndash; Messaggio di posta elettronica in arrivo.
+- `Notification.CategoryEmail` &ndash; messaggio di posta elettronica in arrivo.
 
-- `Notification.CategoryEvent`&ndash; Evento del calendario.
+- `Notification.CategoryEvent` &ndash; un evento del calendario.
 
-- `Notification.CategoryPromo`&ndash; Messaggio promozionale o annuncio pubblicitario.
+- `Notification.CategoryPromo` &ndash; un messaggio promozionale o un annuncio pubblicitario.
 
-- `Notification.CategoryProgress`&ndash; Stato di avanzamento di un'operazione in background.
+- `Notification.CategoryProgress` &ndash; lo stato di avanzamento di un'operazione in background.
 
-- `Notification.CategorySocial`&ndash; Aggiornamento di social networking.
+- `Notification.CategorySocial` &ndash; aggiornamento di social networking.
 
-- `Notification.CategoryError`&ndash; Errore di un'operazione in background o di un processo di autenticazione.
+- `Notification.CategoryError` &ndash; esito negativo di un'operazione in background o di un processo di autenticazione.
 
-- `Notification.CategoryTransport`&ndash; Aggiornamento della riproduzione multimediale.
+- `Notification.CategoryTransport` &ndash; aggiornamento della riproduzione multimediale.
 
-- `Notification.CategorySystem`&ndash; Riservato per l'utilizzo del sistema (stato del sistema o del dispositivo).
+- `Notification.CategorySystem` &ndash; riservata per l'utilizzo del sistema (stato del sistema o del dispositivo).
 
-- `Notification.CategoryService`&ndash; Indica che è in esecuzione un servizio in background.
+- `Notification.CategoryService` &ndash; indica che è in esecuzione un servizio in background.
 
-- `Notification.CategoryRecommendation`&ndash; Un messaggio di raccomandazione correlato all'app attualmente in esecuzione.
+- `Notification.CategoryRecommendation` &ndash; un messaggio di raccomandazione correlato all'app attualmente in esecuzione.
 
-- `Notification.CategoryStatus`&ndash; Informazioni sul dispositivo.
+- `Notification.CategoryStatus` &ndash; informazioni sul dispositivo.
 
-Quando le notifiche sono ordinate, la priorità della notifica ha la precedenza sull'impostazione della categoria. Ad esempio, una notifica con priorità alta viene visualizzata come Heads anche se appartiene alla `Promo` categoria. Per impostare la categoria di una notifica, è necessario chiamare `SetCategory` il metodo `NotificationCompat.Builder` dell'oggetto, passando l'impostazione Category. Ad esempio:
+Quando le notifiche sono ordinate, la priorità della notifica ha la precedenza sull'impostazione della categoria. Ad esempio, verrà visualizzata una notifica con priorità alta, anche se appartiene alla categoria `Promo`. Per impostare la categoria di una notifica, chiamare il metodo `SetCategory` dell'oggetto `NotificationCompat.Builder`, passando l'impostazione Category. Esempio:
 
 ```csharp
 builder.SetCategory (Notification.CategoryCall);
@@ -707,13 +707,13 @@ La funzionalità non *disturbare* (novità di Android 5,0) filtra le notifiche i
 
 ![Non disturbare le opzioni dello schermo](local-notifications-images/26-do-not-disturb.png)
 
-Quando l'utente configura non *disturbare* il blocco di tutti gli interrupt ad eccezione delle chiamate telefoniche (come illustrato nello screenshot precedente), Android consente di presentare notifiche con un' `Notification.CategoryCall` impostazione di categoria di da presentare mentre il dispositivo *è in non* modalità di disturbo. Si noti `Notification.CategoryAlarm` che le notifiche non vengono mai bloccate in modalità *non di disturbo* .
+Quando l'utente configura non *disturbare* il blocco di tutti gli interrupt ad eccezione delle chiamate telefoniche (come illustrato nello screenshot precedente), Android consente di inviare notifiche con un'impostazione di categoria di `Notification.CategoryCall` da presentare mentre il dispositivo si trova in non *disturbare* modalità. Si noti che le notifiche `Notification.CategoryAlarm` non vengono mai bloccate in modalità *non di disturbo* .
 
 Nell'esempio [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) viene illustrato come utilizzare `NotificationCompat.Builder` per avviare una seconda attività da una notifica. Questo codice di esempio è illustrato nella procedura dettagliata [uso delle notifiche locali in Novell. Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
 
 ### <a name="notification-styles"></a>Stili di notifica
 
-Per creare notifiche di tipo *Big text*, *Image*o *Inbox* con `NotificationCompat.Builder`, l'app deve usare le versioni di compatibilità di questi stili. Ad esempio, per usare lo stile di *testo di grandi dimensioni* , creare un'istanza `NotificationCompat.BigTextstyle`di:
+Per creare notifiche di tipo *Big text*, *Image*o *Inbox* con `NotificationCompat.Builder`, l'app deve usare le versioni di compatibilità di questi stili. Ad esempio, per usare lo stile di *testo di grandi dimensioni* , creare un'istanza di `NotificationCompat.BigTextstyle`:
 
 ```csharp
 NotificationCompat.BigTextStyle textStyle = new NotificationCompat.BigTextStyle();
@@ -722,13 +722,13 @@ NotificationCompat.BigTextStyle textStyle = new NotificationCompat.BigTextStyle(
 builder.SetStyle (textStyle);
 ```
 
-In modo analogo, l' `NotificationCompat.InboxStyle` app `NotificationCompat.BigPictureStyle` può usare rispettivamente e per la *posta in arrivo* e gli stili di *immagine* .
+Analogamente, l'app può usare `NotificationCompat.InboxStyle` e `NotificationCompat.BigPictureStyle` rispettivamente per la *posta in arrivo* e gli stili di *immagine* .
 
 ### <a name="notification-priority-and-category"></a>Priorità e categoria delle notifiche
 
-`NotificationCompat.Builder`supporta il `SetPriority` metodo (disponibile a partire da Android 4,1). Tuttavia, il `SetCategory` metodo *non* è supportato da `NotificationCompat.Builder` perché le categorie fanno parte del nuovo sistema di metadati delle notifiche introdotto in Android 5,0.
+`NotificationCompat.Builder` supporta il metodo `SetPriority` (disponibile a partire da Android 4,1). Tuttavia, il metodo `SetCategory` *non* è supportato da `NotificationCompat.Builder` perché le categorie fanno parte del nuovo sistema di metadati delle notifiche introdotto in Android 5,0.
 
-Per supportare le versioni precedenti di Android, `SetCategory` dove non è disponibile, il codice può controllare il livello API in fase di esecuzione per `SetCategory` chiamare in modo condizionale quando il livello API è uguale o maggiore di Android 5,0 (livello API 21):
+Per supportare le versioni precedenti di Android, in cui `SetCategory` non è disponibile, il codice può controllare il livello API in fase di esecuzione per chiamare in modo condizionale `SetCategory` quando il livello API è uguale o maggiore di Android 5,0 (livello API 21):
 
 ```csharp
 if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
@@ -736,11 +736,11 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 }
 ```
 
-In questo esempio, il Framework di **destinazione** dell'app è impostato su Android 5,0 e la **versione minima di Android** è impostata su **Android 4,1 (livello API 16)** . Poiché `SetCategory` è disponibile nel livello API 21 e versioni successive, questo codice `SetCategory` di esempio chiamerà solo quando è disponibile &ndash; , non chiamerà `SetCategory` quando il livello API è inferiore a 21.
+In questo esempio, il Framework di **destinazione** dell'app è impostato su Android 5,0 e la **versione minima di Android** è impostata su **Android 4,1 (livello API 16)** . Poiché `SetCategory` è disponibile nel livello API 21 e versioni successive, questo codice di esempio chiamerà `SetCategory` solo se disponibile &ndash; non chiamerà `SetCategory` quando il livello API è inferiore a 21.
 
 ### <a name="lock-screen-visibility"></a>Visibilità della schermata di blocco
 
-Poiché Android non supporta le notifiche della schermata di blocco prima di Android 5,0 (API level `NotificationCompat.Builder` 21), non `SetVisibility` supporta il metodo. Come spiegato in precedenza `SetCategory`per, il codice può controllare il livello API in fase di `SetVisiblity` esecuzione e chiamare solo quando è disponibile:
+Poiché Android non supporta le notifiche della schermata di blocco prima di Android 5,0 (API level 21), `NotificationCompat.Builder` non supporta il metodo `SetVisibility`. Come spiegato in precedenza per `SetCategory`, il codice può controllare il livello API in fase di esecuzione e chiamare `SetVisiblity` solo quando è disponibile:
 
 ```csharp
 if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
@@ -750,7 +750,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha illustrato come creare notifiche locali in Android. Descrive l'anatomia di una notifica, `NotificationCompat.Builder` spiega come usare per creare notifiche, come applicare uno stile alle notifiche in formati di grandi dimensioni, *testo*, *Immagini* e posta in *arrivo* , come impostare le impostazioni dei metadati delle notifiche, ad esempio priorità, visibilità e categoria e come avviare un'attività da una notifica. In questo articolo è stata descritta anche la modalità di funzionamento di queste impostazioni di notifica con le nuove intestazioni, schermata di blocco e *non disturbare* le funzionalità introdotte in Android 5,0. Infine, si è appreso come `NotificationCompat.Builder` usare per mantenere la compatibilità delle notifiche con le versioni precedenti di Android.
+Questo articolo ha illustrato come creare notifiche locali in Android. Descrive l'anatomia di una notifica, spiega come usare `NotificationCompat.Builder` per creare notifiche, come applicare uno stile alle notifiche in formati di icone grandi, *testo*, *Immagini* e *posta in arrivo* , come impostare le impostazioni dei metadati delle notifiche, ad esempio priorità, visibilità e categoria e come avviare un'attività da una notifica. In questo articolo è stata descritta anche la modalità di funzionamento di queste impostazioni di notifica con le nuove intestazioni, schermata di blocco e *non disturbare* le funzionalità introdotte in Android 5,0. Infine, si è appreso come usare `NotificationCompat.Builder` per mantenere la compatibilità delle notifiche con le versioni precedenti di Android.
 
 Per le linee guida sulla progettazione di notifiche per Android, vedere [notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
@@ -762,5 +762,5 @@ Per le linee guida sulla progettazione di notifiche per Android, vedere [notific
 - [Notifica all'utente](https://developer.android.com/training/notify-user/index.html)
 - [Notifica](xref:Android.App.Notification)
 - [NotificationManager](xref:Android.App.NotificationManager)
-- [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
+- [NotificationCompat. Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
 - [PendingIntent](xref:Android.App.PendingIntent)
