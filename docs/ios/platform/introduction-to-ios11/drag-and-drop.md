@@ -4,15 +4,15 @@ description: Questo documento descrive come implementare il trascinamento della 
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2017
-ms.openlocfilehash: 8f1e9cabb78152374ee3eede80dcfc5dcba8dde1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 928936815c89dd74d0ad3775f59ea210702c8857
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752382"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032170"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Trascinamento della selezione in Novell. iOS
 
@@ -35,20 +35,20 @@ Quando si aggiunge il supporto per il trascinamento della selezione alle app, è
 
 ## <a name="drag-and-drop-with-text-controls"></a>Trascinamento della selezione con controlli testo
 
-`UITextView`e `UITextField` supportano automaticamente il trascinamento del testo selezionato e l'eliminazione del contenuto di testo in.
+`UITextView` e `UITextField` supportano automaticamente il trascinamento del testo selezionato e l'eliminazione del contenuto di testo in.
 
 <a name="uitableview" />
 
 ## <a name="drag-and-drop-with-uitableview"></a>Trascinamento della selezione con UITableView
 
-`UITableView`dispone di una gestione incorporata per le interazioni con trascinamento della selezione con righe di tabella, che richiede solo alcuni metodi per abilitare il comportamento predefinito.
+`UITableView` dispone di gestione incorporata per le interazioni di trascinamento della selezione con righe di tabella, richiedendo solo alcuni metodi per abilitare il comportamento predefinito.
 
 Sono necessarie due interfacce:
 
-- `IUITableViewDragDelegate`: Informazioni sui pacchetti quando viene avviato un trascinamento nella visualizzazione tabella.
-- `IUITableViewDropDelegate`: Elabora le informazioni quando viene eseguito un tentativo e il completamento di un rilascio.
+- `IUITableViewDragDelegate`: crea un pacchetto di informazioni quando viene avviato un trascinamento nella visualizzazione tabella.
+- `IUITableViewDropDelegate`: elabora le informazioni durante il tentativo e il completamento di un rilascio.
 
-Nell' [esempio DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) queste due interfacce sono entrambe implementate nella `UITableViewController` classe, insieme al delegato e all'origine dati. Sono assegnati nel `ViewDidLoad` metodo:
+Nell' [esempio DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) queste due interfacce sono entrambe implementate nella classe `UITableViewController`, insieme al delegato e all'origine dati. Sono assegnati nel metodo `ViewDidLoad`:
 
 ```csharp
 this.TableView.DragDelegate = this;
@@ -59,9 +59,9 @@ Il codice minimo necessario per queste due interfacce è illustrato di seguito.
 
 ### <a name="table-view-drag-delegate"></a>Delega di trascinamento vista tabella
 
-L'unico metodo _necessario_ per supportare il trascinamento di una riga da una `GetItemsForBeginningDragSession`vista tabella è. Se l'utente inizia a trascinare una riga, questo metodo verrà chiamato.
+L'unico metodo _necessario_ per supportare il trascinamento di una riga da una vista tabella è `GetItemsForBeginningDragSession`. Se l'utente inizia a trascinare una riga, questo metodo verrà chiamato.
 
-Di seguito è riportata un'implementazione di. Recupera i dati associati alla riga trascinata, li codifica e configura un oggetto `NSItemProvider` che determina il modo in cui le applicazioni gestiranno la parte "drop" dell'operazione (ad esempio, se possono gestire il tipo di dati, `PlainText`nell'esempio):
+Di seguito è riportata un'implementazione di. Recupera i dati associati alla riga trascinata, li codifica e configura un `NSItemProvider` che determina il modo in cui le applicazioni gestiranno la parte "drop" dell'operazione (ad esempio, se possono gestire il tipo di dati, `PlainText`nell'esempio):
 
 ```csharp
 public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
@@ -91,13 +91,13 @@ Sono disponibili molti metodi facoltativi sul delegato di trascinamento che poss
 
 I metodi sul delegato Drop vengono chiamati quando si verifica un'operazione di trascinamento in una vista tabella o viene completata al di sopra di esso. I metodi obbligatori determinano se i dati possono essere eliminati e quali azioni vengono eseguite se il rilascio è completato:
 
-- `CanHandleDropSession`-Mentre è in corso un trascinamento e potenzialmente rilasciato sull'applicazione, questo metodo determina se i dati trascinati possono essere eliminati.
-- `DropSessionDidUpdate`-Mentre è in corso il trascinamento, questo metodo viene chiamato per determinare l'azione desiderata. Le informazioni della vista tabella trascinate, la sessione di trascinamento e il percorso di indice possibile possono essere utilizzate per determinare il comportamento e il feedback visivo forniti all'utente.
-- `PerformDrop`: Quando l'utente completa il rilascio (sollevando il dito), questo metodo estrae i dati trascinati e modifica la visualizzazione della tabella per aggiungere i dati in una nuova riga o righe.
+- `CanHandleDropSession`: mentre è in corso un trascinamento e potenzialmente rilasciata sull'applicazione, questo metodo determina se i dati trascinati possono essere eliminati.
+- `DropSessionDidUpdate`: mentre è in corso il trascinamento, questo metodo viene chiamato per determinare l'azione desiderata. Le informazioni della vista tabella trascinate, la sessione di trascinamento e il percorso di indice possibile possono essere utilizzate per determinare il comportamento e il feedback visivo forniti all'utente.
+- `PerformDrop`: quando l'utente completa il rilascio (sollevando il dito), questo metodo estrae i dati trascinati e modifica la visualizzazione tabella per aggiungere i dati in una nuova riga o righe.
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession`indica se la visualizzazione tabella può accettare i dati trascinati. In questo frammento `CanLoadObjects` di codice viene usato per confermare che questa visualizzazione tabella può accettare dati di stringa.
+`CanHandleDropSession` indica se la visualizzazione tabella può accettare i dati trascinati. In questo frammento di codice, `CanLoadObjects` viene usato per confermare che questa visualizzazione tabella può accettare dati di stringa.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -108,9 +108,9 @@ public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
 
 #### <a name="dropsessiondidupdate"></a>DropSessionDidUpdate
 
-Il `DropSessionDidUpdate` metodo viene chiamato ripetutamente mentre è in corso l'operazione di trascinamento per fornire segnali visivi all'utente.
+Il metodo `DropSessionDidUpdate` viene chiamato ripetutamente mentre è in corso l'operazione di trascinamento per fornire segnali visivi all'utente.
 
-Nel codice riportato di seguito `HasActiveDrag` , viene utilizzato per determinare se l'operazione ha avuto origine nella visualizzazione tabella corrente. In tal caso, è consentito spostare solo righe singole.
+Nel codice riportato di seguito, `HasActiveDrag` viene utilizzato per determinare se l'operazione è stata originata nella visualizzazione tabella corrente. In tal caso, è consentito spostare solo righe singole.
 Se il trascinamento è da un'altra origine, verrà indicata un'operazione di copia:
 
 ```csharp
@@ -131,13 +131,13 @@ public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDr
 }
 ```
 
-L'operazione DROP può essere una tra `Cancel`, `Move`o `Copy`.
+L'operazione DROP può essere una delle `Cancel`, `Move`o `Copy`.
 
 L'obiettivo di rilascio può essere l'inserimento di una nuova riga o l'aggiunta o l'aggiunta di dati a una riga esistente.
 
 #### <a name="performdrop"></a>PerformDrop
 
-Il `PerformDrop` metodo viene chiamato quando l'utente completa l'operazione e modifica la visualizzazione della tabella e l'origine dati in modo da riflettere i dati eliminati.
+Il metodo `PerformDrop` viene chiamato quando l'utente completa l'operazione e modifica la visualizzazione della tabella e l'origine dati in modo da riflettere i dati eliminati.
 
 ```csharp
 public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coordinator)
