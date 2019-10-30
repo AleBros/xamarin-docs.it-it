@@ -3,15 +3,15 @@ title: Debug a più processori
 description: Questo documento descrive come usare Visual Studio per Mac per il debug di più processi in esecuzione nello stesso momento. Ad esempio, questa funzionalità potrebbe essere usata per eseguire il debug di un progetto di applicazione per dispositivi mobili e di servizio Web contemporaneamente.
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: db5d2dfcf96cdc1a89c0ecb2192b86f564e584ed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fb96dab2d9979a365964d4993d9c7fc7fee299f5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290446"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016552"
 ---
 # <a name="multi-process-debugging"></a>Debug a più processori
 
@@ -33,28 +33,28 @@ Per impostazione predefinita, Visual Studio per Mac visualizzerà un unico proge
 
 Per avviare ed eseguire il debug di più processi in Visual Studio per Mac, è necessario creare una _configurazione delle soluzioni_. Una configurazione delle soluzioni descrive i progetti di una soluzione che dovrebbero essere inclusi quando viene avviata una sessione di debug facendo clic sul pulsante **Start** o premendo la combinazione &#8984;&#8617; (**Cmd-Invio**). Nella schermata riportata di seguito è riportato un esempio di soluzione in Visual Studio per Mac che dispone di più configurazioni delle soluzioni:
 
-![](multi-process-debugging-images/mpd01-xs.png "Soluzione con più configurazioni delle soluzioni")
+![](multi-process-debugging-images/mpd01-xs.png "A solution with multiple solution configurations")
 
 ### <a name="parts-of-the-debug-toolbar"></a>Parti della barra degli strumenti di debug
 
 La barra degli strumenti di debug è stata modificata per consentire di selezionare una configurazione delle soluzioni tramite un menu di scelta rapida. In questa schermata vengono illustrate le parti della barra degli strumenti di debug:
 
-![](multi-process-debugging-images/mpd02-xs.png "Parti della barra degli strumenti di debug")
+![](multi-process-debugging-images/mpd02-xs.png "The parts of the debug toolbar")
 
 1. **Configurazione soluzione** -È possibile impostare la configurazione della soluzione facendo clic su Configurazione soluzione nella barra degli strumenti di debug e selezionando la configurazione dal menu di scelta rapida:
 
-    ![](multi-process-debugging-images/mpd03-xs.png "Esempio di menu di scelta rapida con le configurazioni delle soluzioni")
+    ![](multi-process-debugging-images/mpd03-xs.png "A sample popup with solution configurations")
 
 2. **Destinazione compilazione** - Identifica la destinazione di compilazione per i progetti. È rimasta invariata rispetto alle versioni precedenti di Visual Studio per Mac.
 3. **Destinazioni dei dispositivi** - Consente di selezionare i dispositivi su cui verrà eseguita la soluzione. È possibile identificare un dispositivo o un emulatore distinto per ogni progetto:
 
-    ![](multi-process-debugging-images/mpd04-xs.png "Menu di scelta rapida con i dispositivi per un progetto")
+    ![](multi-process-debugging-images/mpd04-xs.png "Popup showing the devices for a project")
 
 ### <a name="multiple-debug-pads"></a>Più riquadri di debug
 
 Quando viene avviata la configurazione di più soluzioni, vengono visualizzati più volte alcuni riquadri di Visual Studio per Mac, uno per ogni processo. Ad esempio, nella schermata seguente sono visualizzati due riquadri **Output applicazione** per una soluzione che esegue due progetti:
 
-![](multi-process-debugging-images/mpd05-xs.png "Riquadro di output per una configurazione delle soluzioni")
+![](multi-process-debugging-images/mpd05-xs.png "Output Pad for a solution configuration")
 
 ### <a name="multiple-processes-and-the-_active-thread_"></a>Più processi e _Thread attivo_
 
@@ -64,7 +64,7 @@ Per risolvere questo problema, Visual Studio per Mac visualizzerà solo le infor
 
 Il **riquadro thread** visualizzerà informazioni per tutti i processi e thread in esame nella configurazione delle soluzioni e fornirà indicazioni visive riguardo a che cos'è il thread attivo:
 
-![](multi-process-debugging-images/mpd06-xs.png "Riquadro thread per una configurazione delle soluzioni")
+![](multi-process-debugging-images/mpd06-xs.png "Thread pad for a solution configuration")
 
 I thread sono raggruppati in base al processo che li ospita. Il nome del progetto e l'ID del thread attivo verranno visualizzati in grassetto e verrà visualizzata una freccia rivolta verso destra nella barra accanto al thread attivo. Nella schermata precedente, **thread 1 #** in **Id processo 48703** (**FirstProject**) costituiscono il thread attivo.
 
@@ -74,7 +74,7 @@ Durante il debug di più processi, è possibile passare al thread attivo per vis
 
 Quando due (o più) progetti hanno dei punti di interruzione, Visual Studio per Mac sospende entrambi i processi. È possibile soltanto **eseguire un'istruzione/routine** di codice nel thread attivo. L'altro processo viene messo in pausa fino a quando una modifica dell'ambito consente al debugger di spostare l'attenzione dal thread attivo. Si consideri ad esempio la seguente schermata di Visual Studio per Mac che esegue il debug di due progetti:
 
-![](multi-process-debugging-images/mpd09-xs.png  "Visual Studio per Mac esegue il debug di due progetti")
+![](multi-process-debugging-images/mpd09-xs.png  "Visual Studio for Mac debugging two projects")
 
 In questa schermata, ogni soluzione ha il proprio punto di interruzione. All'avvio del debug, il primo punto di interruzione che si trova è nella **riga 10** di `MainClass` in **SecondProject**. Poiché entrambi i progetti dispongono di punti di interruzione, ogni processo viene interrotto. Una volta rilevato il punto di interruzione, ogni chiamata di **Esegui istruzione/routine** fa avanzare istruzione per istruzione nel codice in Visual Studio per Mac nel thread attivo.
 
@@ -88,11 +88,11 @@ Se solo uno dei progetti avesse un punto di interruzione impostato, potrebbe ess
 
 È possibile sospendere o riprendere un processo facendo clic sul processo e selezionando **Sospendi** o **Riprendi** dal menu di scelta rapida:
 
-![](multi-process-debugging-images/mpd08-xs.png "Sospendi o Riprendi nel riquadro di thread")
+![](multi-process-debugging-images/mpd08-xs.png "Pause or resume in the Thread pad")
 
 L'aspetto della barra degli strumenti di debug cambierà a seconda dello stato dei progetti in fase di debug. Quando vengono eseguiti più progetti, la barra degli strumenti di debug visualizzerà sia il pulsante **Sospendi** che il pulsante **Riprendi** laddove è presente almeno un progetto in esecuzione e uno in sospensione:
 
-![](multi-process-debugging-images/mpd07-xs.png  "Barra degli strumenti di debug")
+![](multi-process-debugging-images/mpd07-xs.png  "Debug toolbar")
 
 Facendo clic sul pulsante **Sospendi** nella **barra degli strumenti di debug** vengono sospesi tutti i processi in corso di debug, mentre facendo clic sul pulsante **Riprendi** vengono ripresi tutti i processi sospesi.
 
@@ -100,7 +100,7 @@ Facendo clic sul pulsante **Sospendi** nella **barra degli strumenti di debug** 
 
 È inoltre possibile eseguire il debug di un secondo progetto una volta avviato il primo progetto da Visual Studio per Mac. Una volta avviato il primo progetto, **fare clic con il pulsante destro del mouse* sul progetto nel **riquadro della soluzione** e selezionare **Start Debugging Item** (Avvia debug elemento):
 
-![](multi-process-debugging-images/mpd13-xs.png  "Avvia debug elemento")
+![](multi-process-debugging-images/mpd13-xs.png  "Start Debugging Item")
 
 ## <a name="creating-a-solution-configuration"></a>Creazione di una configurazione della soluzione
 
@@ -110,15 +110,15 @@ Per creare una nuova configurazione della soluzione in Xamarin Studio:
 
 1. Aprire la finestra di dialogo **Opzioni soluzione** in Visual Studio per Mac e selezionare **Esegui > Configurazioni**:
 
-    ![](multi-process-debugging-images/mpd10-xs.png "Configurazione della soluzione nella finestra di dialogo Opzioni soluzione")
+    ![](multi-process-debugging-images/mpd10-xs.png "Solution Configuration in the Solution Options dialog")
 
 2. Fare clic sul pulsante **Nuova** e immettere il nome della nuova configurazione della soluzione, quindi fare clic su **Crea**. Verrà visualizzata la nuova configurazione della soluzione nella finestra **Configurazioni**:
 
-    ![](multi-process-debugging-images/mpd11-xs.png  "Denominazione di una nuova configurazione della soluzione")
+    ![](multi-process-debugging-images/mpd11-xs.png  "Naming a new solution configuration")
 
 3. Selezionare la nuova configurazione di esecuzione nell'elenco di configurazioni. Nella finestra di dialogo **Opzioni soluzione** verrà visualizzato ogni progetto nella soluzione. Controllare ogni progetto che deve essere avviato quando viene avviata una sessione di debug:
 
-    ![](multi-process-debugging-images/mpd12-xs.png "Selezione del progetto da avviare")
+    ![](multi-process-debugging-images/mpd12-xs.png "Selecting the project to start")
 
 Verrà visualizzata la configurazione della soluzione **MultipleProjects** nella **barra degli strumenti di debug**, consentendo agli sviluppatori di eseguire contemporaneamente il debug dei due progetti.
 

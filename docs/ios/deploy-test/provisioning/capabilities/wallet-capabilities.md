@@ -1,22 +1,22 @@
 ---
 title: Funzionalità Portafoglio in Xamarin.iOS
-description: L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Portafoglio.
+description: L'aggiunta di funzionalità a un'applicazione spesso richiede una configurazione aggiuntiva del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Portafoglio.
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 1844136bb62930341cf00ec871fdd2ff8ff8fe1f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 658184203c81079af9b4946c4da18dfb98381b0f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762732"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028546"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Funzionalità Portafoglio in Xamarin.iOS
 
-_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità Portafoglio._
+_L'aggiunta di funzionalità a un'applicazione spesso richiede un'ulteriore configurazione del provisioning. Questa guida illustra la configurazione necessaria per le funzionalità del portafoglio._
 
 Portafoglio è un'app che consente di archiviare e visualizzare codici a barre e altro contenuto consentendo agli utenti di visualizzare biglietti, carte d'imbarco e buoni sconto direttamente dal dispositivo. Queste informazioni vengono archiviate in un _pass_. Una carta d'imbarco o un singolo biglietto, ad esempio, costituiscono un singolo pass. 
 
@@ -58,7 +58,7 @@ Per altre informazioni sull'uso di Portafoglio, vedere le guide seguenti:
 
 * [Introduction to PassKit](~/ios/platform/passkit.md) (Introduzione a PassKit)
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Nell'elenco seguente vengono descritti i passaggi aggiuntivi che potrebbero essere necessari:
 

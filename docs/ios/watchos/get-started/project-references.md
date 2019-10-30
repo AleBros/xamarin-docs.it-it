@@ -4,15 +4,15 @@ description: Questo documento descrive la relazione tra un'app iOS, un'app Watch
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: dcadb5146df39aa4887e28b65078acc9454f3d34
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3dcd5f17b35b9829831adcf997d8bde97c0572e7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767978"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030162"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Riferimenti del progetto watchos in Novell
 
@@ -26,20 +26,20 @@ Per visualizzare i riferimenti, fare doppio clic sui nodi riferimenti per ogni p
 
 - App di **iPhone** riferimenti a **espressioni di controllo**
 
-  ![](project-references-images/catalog-reference1.png "App di iPhone riferimenti a espressioni di controllo")
+  ![](project-references-images/catalog-reference1.png "iPhone app references Watch App")
 
 - Espressioni di **controllo riferimenti app** **Controlla estensione app**
 
-  ![](project-references-images/catalog-reference2.png "App di iPhone riferimenti a espressioni di controllo")
+  ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
 
 - L' **estensione Watch app** non fa riferimento ad alcun altro progetto
 
-  ![](project-references-images/catalog-reference3.png "L'estensione dell'app Watch non fa riferimento ad altri progetti")
+  ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
 
 ## <a name="bundle-identifiers"></a>Identificatori bundle
 
 È anche necessario assicurarsi che gli **identificatori del bundle** siano corretti.
-Tutti e tre i progetti devono avere lo *stesso* prefisso identificatore, con i due progetti Watch con estensioni predefinite `watchkitextension` di `watchkitapp`e, come indicato di seguito (per l'esempio **WatchKitCatalog** ):
+Tutti e tre i progetti devono avere lo *stesso* prefisso identificatore, con i due progetti Watch con estensioni predefinite di `watchkitextension` e `watchkitapp`, come indicato di seguito (per l'esempio **WatchKitCatalog** ):
 
 - Progetto unificato Novell. iOS-`com.xamarin.WatchKitCatalog`
 
@@ -49,7 +49,7 @@ Tutti e tre i progetti devono avere lo *stesso* prefisso identificatore, con i d
 
 Assicurarsi inoltre che le impostazioni **info. plist** siano corrette:
 
-- Il progetto `WKCompanionAppBundleIdentifier` dell'app Watch corrisponde all'ID bundle dell'app padre/contenitore (IE. quello che viene eseguito nell'iPhone);
+- Il `WKCompanionAppBundleIdentifier` del progetto di app Watch corrisponde all'ID bundle dell'app padre/contenitore (ad esempio, quello che viene eseguito nell'iPhone);
 
 - L' **ID bundle WKApp** del progetto dell'estensione Watch Kit corrisponde all'ID bundle del progetto dell'app Watch.
 
@@ -59,17 +59,17 @@ Questa schermata è il file INFO. plist dell' **estensione Watch** , che mostra 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-![](project-references-images/infoplist-extension.png "Questa schermata è il file INFO. plist dell'estensione Watch")
+![](project-references-images/infoplist-extension.png "This screenshot is the Watch Extension's Info.plist file")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](project-references-images/infoplist-extension-vs.png "Questa schermata è il file INFO. plist dell'estensione Watch")
+![](project-references-images/infoplist-extension-vs.png "This screenshot is the Watch Extension's Info.plist file")
 
 -----
 
 Questa schermata è il file INFO. plist dell' **app Watch** .
 La versione corrente del **sistema operativo Watch** è 8,2, quindi la **destinazione di distribuzione** per l'App Watch deve essere **8,2**. Si noti che se è installato Xcode 6,3, questo valore potrebbe essere impostato su 8,3. è necessario modificarlo 8,2.
 
-![](project-references-images/infoplist-watchapp.png "File Watch info. plist")
+![](project-references-images/infoplist-watchapp.png "The watch Info.plist file")
 
 La destinazione di distribuzione per l'app Watch può essere diversa dall'estensione Watch e dall'app iOS.

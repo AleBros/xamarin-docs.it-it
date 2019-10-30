@@ -4,15 +4,15 @@ description: Questo documento descrive come usare gli avvisi critici con Novell.
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 54a214215f77b66f6a4b134dcb8d27b26c44fb6c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43b810b95e4da2927030617e68c0ade824a0beaa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291285"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031982"
 ---
 # <a name="critical-alerts-in-xamarinios"></a>Avvisi critici in Novell. iOS
 
@@ -28,8 +28,8 @@ Dopo aver ricevuto questo diritto da Apple e aver seguito le istruzioni associat
 
 La richiesta di autorizzazione per le notifiche di un'app richiede all'utente di consentire o impedire le notifiche di un'app. Se la richiesta di autorizzazione della notifica richiede l'autorizzazione per l'invio di avvisi critici, l'app consentirà anche all'utente di acconsentire esplicitamente agli avvisi critici.
 
-Il codice seguente richiede l'autorizzazione per inviare avvisi critici e notifiche standard e suoni passando l'oggetto appropriato[`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
-valori per [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
+Il codice seguente richiede l'autorizzazione per inviare avvisi critici e notifiche standard e suoni passando il [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions) appropriato
+valori da [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -45,13 +45,13 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>Avvisi critici locali
 
-Per inviare un avviso critico locale, creare un[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-e impostare la `Sound` relativa proprietà su:
+Per inviare un avviso critico locale, creare un [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+e impostare la relativa proprietà `Sound` su uno dei seguenti valori:
 
 - `UNNotificationSound.DefaultCriticalSound`, che usa il suono di notifica critico predefinito.
 - `UNNotificationSound.GetCriticalSound`, che consente di specificare un suono personalizzato che viene incluso nell'app e in un volume.
 
-Quindi, creare un `UNNotificationRequest` dal contenuto della notifica e aggiungerlo al centro notifiche:
+Quindi, creare una `UNNotificationRequest` dal contenuto della notifica e aggiungerla al centro notifiche:
 
 ```csharp
 var content = new UNMutableNotificationContent()

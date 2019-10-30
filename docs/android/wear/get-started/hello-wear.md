@@ -4,15 +4,15 @@ description: Creare la prima app Android Wear ed eseguirla in un emulatore o dis
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2018
-ms.openlocfilehash: ce82f10fdb8159d2007d490747329c1a3b5aeecd
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250063"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028672"
 ---
 # <a name="hello-wear"></a>Prima app per Wear
 
@@ -24,7 +24,7 @@ _Creare la prima app Android Wear ed eseguirla in un emulatore o dispositivo Wea
 
 Per creare la prima app Novell. Android Wear, seguire questa procedura:
 
-### <a name="1-create-a-new-android-project"></a>1. Creare un nuovo progetto Android
+### <a name="1-create-a-new-android-project"></a>1. creare un nuovo progetto Android
 
 Creare una nuova **applicazione Android Wear**:
 
@@ -32,37 +32,37 @@ Creare una nuova **applicazione Android Wear**:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Creazione di una nuova applicazione Android Wear nella finestra di dialogo nuovo progetto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![la creazione di una nuova applicazione Android Wear nella finestra di dialogo nuovo progetto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Creazione di una nuova applicazione Android Wear nella finestra di dialogo nuova soluzione](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![la creazione di una nuova applicazione Android Wear nella finestra di dialogo nuova soluzione](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
 Questo modello include automaticamente la **libreria Novell Android Wearable Library** NuGet (e le dipendenze), in modo da poter accedere a widget specifici per l'uso. Se non viene visualizzato il modello di usura, consultare la Guida all' [installazione e](~/android/wear/get-started/installation.md) all'installazione per verificare che sia stata installata una Android SDK supportata. 
 
-### <a name="2-choose-the-correct-target-framework"></a>2. Scegliere il **Framework di destinazione** corretto
+### <a name="2-choose-the-correct-target-framework"></a>2. scegliere il **Framework di destinazione** corretto
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Assicurarsi che l'impostazione **minima di Android come destinazione** sia impostata su **Android 5,0 (Lollipop)** o versione successiva: 
 
-[![Impostazione del Framework di destinazione su Android 5,0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![impostazione del Framework di destinazione su Android 5,0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 Verificare che il Framework di destinazione sia impostato su **Android 5,0 (Lollipop)** o versione successiva:
 
-[![Impostazione del Framework di destinazione su Android 5,0 in Visual Studio per Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![l'impostazione del Framework di destinazione su Android 5,0 in Visual Studio per Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
 Per altre informazioni sull'impostazione del Framework di destinazione, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. Modificare il layout **Main. aXML**
+### <a name="3-edit-the-mainaxml-layout"></a>3. modificare il layout **Main. aXML**
 
-Configurare il layout in modo che `TextView` contenga `Button` un e un per l'esempio: 
+Configurare il layout in modo che contenga un `TextView` e un `Button` per l'esempio: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +103,7 @@ android:layout_height="match_parent">
 </FrameLayout>
 ```
 
-### <a name="4-edit-the-mainactivitycs-source"></a>4. Modificare l'origine **MainActivity.cs**
+### <a name="4-edit-the-mainactivitycs-source"></a>4. modificare l'origine **MainActivity.cs**
 
 Aggiungere il codice per incrementare un contatore e visualizzarlo ogni volta che si fa clic sul pulsante: 
 
@@ -129,7 +129,7 @@ public class MainActivity : Activity
 }
 ```
 
-### <a name="5-setup-an-emulator-or-device"></a>5. Configurare un emulatore o un dispositivo
+### <a name="5-setup-an-emulator-or-device"></a>5. configurare un emulatore o un dispositivo
 
 Il passaggio successivo consiste nel configurare un emulatore o un dispositivo per distribuire ed eseguire l'app. Se non si ha ancora familiarità con il processo di distribuzione ed esecuzione di app Novell. Android in generale, vedere la [Guida introduttiva a Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
@@ -137,17 +137,17 @@ Se non si dispone di un dispositivo Android Wear, ad esempio un SmartWatch Andro
 
 Se si dispone di un dispositivo Android Wear, ad esempio un SmartWatch Android Wear, è possibile eseguire l'app sul dispositivo anziché usare un emulatore. Per altre informazioni sul debug in un dispositivo Wear, vedere [eseguire il debug su un dispositivo Wear](~/android/wear/deploy-test/debug-on-device.md).
 
-### <a name="6-run-the-android-wear-app"></a>6. Eseguire l'app Android Wear
+### <a name="6-run-the-android-wear-app"></a>6. eseguire l'app Android Wear
 
 Il dispositivo Android Wear dovrebbe essere visualizzato nel menu a discesa del dispositivo. Assicurarsi di scegliere il dispositivo Android Wear corretto o l'AVD prima di avviare il debug. Dopo aver selezionato il dispositivo, fare clic sul pulsante Play (Riproduci) per distribuire l'app nell'emulatore o nel dispositivo.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Scelta di un AVD Wear nel menu dispositivo di Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![scelta di un AVD Wear nel menu dispositivo di Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[![Scelta di un AVD Wear nel menu Visual Studio per Mac Device](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![scelta di un AVD di usura nel menu Visual Studio per Mac dispositivo](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -159,11 +159,11 @@ Se si usa un emulatore di controllo, l'avvio dell'app potrebbe richiedere qualch
 
 Dopo che l'app è stata distribuita correttamente, la schermata del dispositivo Wear dovrebbe visualizzare una schermata simile alla seguente:
 
-[![Schermata iniziale dell'app Wear](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![schermata iniziale dell'app Wear](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Toccare l' **opzione fare clic su me.** pulsante sulla faccia del dispositivo Wear e vedere l'incremento del conteggio a ogni tocco:
 
-[![Screenshot dell'app Wear dopo 3 clic](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![screenshot dell'app Wear dopo 3 clic](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

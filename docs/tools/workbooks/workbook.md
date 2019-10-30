@@ -3,15 +3,15 @@ title: Cartelle di lavoro interattive
 description: Questo documento descrive come usare Xamarin Workbooks per creare documenti dinamici contenenti C# codice per la sperimentazione, l'insegnamento, il training o l'esplorazione.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 7b3c356460d9427821843dc084b3f306c026ffa0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a6ca347c231d001cab521d7280a66b714b6a5aef
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293079"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029567"
 ---
 # <a name="interactive-workbooks"></a>Cartelle di lavoro interattive
 
@@ -27,13 +27,13 @@ Le cartelle di lavoro di possono essere salvate e riaperte in un secondo momento
 
 La finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, la diagnostica in tempo reale inline e il supporto per istruzioni a più righe.
 
-[![](workbook-images/inspector-0.6.0-repl-small.png "La finestra di modifica del codice fornisce il completamento del codice, la colorazione della sintassi, la diagnostica in tempo reale inline e il supporto per istruzioni a più righe")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin Workbooks vengono salvati in un `.workbook` file, ovvero un file CommonMark con alcuni metadati nella parte superiore. per ulteriori informazioni su come salvare le cartelle di lavoro, vedere [tipi di file delle cartelle di lavoro](#workbooks-files-types) .
+Xamarin Workbooks vengono salvati in un file di `.workbook`, ovvero un file CommonMark con alcuni metadati nella parte superiore. per ulteriori informazioni su come salvare le cartelle di lavoro, vedere [tipi di file delle cartelle di lavoro](#workbooks-files-types) .
 
 ### <a name="nuget-package-support"></a>Supporto per pacchetti NuGet
 
-Molti pacchetti NuGet diffusi sono supportati direttamente in Xamarin Workbooks. È possibile cercare i pacchetti esplorando il **File > Aggiungi pacchetto**. L'aggiunta di un pacchetto consentirà di inserire automaticamente le istruzioni che fanno riferimento agli assembly del `#r` pacchetto, consentendo di utilizzarle immediatamente.
+Molti pacchetti NuGet diffusi sono supportati direttamente in Xamarin Workbooks. È possibile cercare i pacchetti esplorando il **File > Aggiungi pacchetto**. L'aggiunta di un pacchetto consentirà di importare automaticamente `#r` le istruzioni che fanno riferimento agli assembly del pacchetto, per poterle usare immediatamente.
 
 Quando si salva una cartella di lavoro con i riferimenti al pacchetto, anche questi riferimenti vengono salvati. Se si condivide la cartella di lavoro con un'altra persona, verranno scaricati automaticamente i pacchetti a cui si fa riferimento.
 
@@ -53,7 +53,7 @@ Nella scheda Visualizza controllo è inoltre presente un supporto speciale per l
 
 È possibile modificare il testo attorno al codice usando l'editor di testo RTF incluso, come illustrato di seguito:
 
-![](workbook-images/inspector-0.6.2-editing.gif "Modificare il testo attorno al codice usando l'editor di testo RTF incorporato")
+![](workbook-images/inspector-0.6.2-editing.gif "Edit the text around the code using the built-in rich text editor")
 
 ### <a name="markdown-authoring"></a>Creazione di Markdown
 
@@ -61,7 +61,7 @@ Gli autori di cartelle di lavoro possono a volte risultare più semplice modific
 
 Tenere presente che, se si modifica e si salva la cartella di lavoro nel client di cartelle di lavoro, il testo CommonMark potrebbe essere riformattato.
 
-Si noti che a causa dell'estensione CommonMark usata per abilitare i metadati YAML nei file della cartella `---` di lavoro, è riservata a tale scopo. Se si desidera creare [interruzioni tematiche](http://spec.commonmark.org/0.27/#thematic-break) nel testo, è necessario utilizzare `***` o `___` . Tali interruzioni dovrebbero essere evitate nelle cartelle di lavoro 1,2 e versioni precedenti a causa di un bug durante il salvataggio.
+Si noti che a causa dell'estensione CommonMark usata per abilitare i metadati YAML nei file della cartella di lavoro, `---` è riservata a tale scopo. Se si desidera creare [interruzioni tematiche](https://spec.commonmark.org/0.27/#thematic-break) nel testo, è necessario utilizzare `***` o `___`. Tali interruzioni dovrebbero essere evitate nelle cartelle di lavoro 1,2 e versioni precedenti a causa di un bug durante il salvataggio.
 
 ### <a name="improvements-in-workbooks-13"></a>Miglioramenti apportati alle cartelle di lavoro 1,3
 
@@ -80,7 +80,7 @@ Per migliorare la presentazione, è stata anche estesa leggermente la sintassi d
 1. Vengono rimossi tutti i caratteri ad eccezione dei caratteri alfanumerici e trattini.
 1. Tutti gli spazi vengono sostituiti con trattini.
 
-Ciò significa che un'intestazione come "important header" ottiene un ID di `important-header` e può essere collegata inserendo un collegamento a `#important-header` nella cartella di lavoro.
+Ciò significa che un'intestazione come "important header" ottiene un ID di `important-header` e può essere collegata inserendo un collegamento per `#important-header` nella cartella di lavoro.
 
 ## <a name="document-structure"></a>Struttura del documento
 
@@ -118,29 +118,29 @@ Al completamento della compilazione, viene eseguito il rendering di rappresentaz
 
 ### <a name="plain-files"></a>File normali
 
-Per impostazione predefinita, una cartella di lavoro viene salvata come file di testo `.workbook` normale contenente testo formattato con CommonMark.
+Per impostazione predefinita, una cartella di lavoro viene salvata come testo normale `.workbook` file contenente testo formattato con CommonMark.
 
 ### <a name="packages"></a>Pacchetti
 
-Un pacchetto di cartella di lavoro è una directory denominata con `.workbook` l'estensione.
+Un pacchetto di cartella di lavoro è una directory denominata con l'estensione `.workbook`.
 Nel Finder di Mac e nel menu Xamarin Workbooks Apri finestra di dialogo e file recenti questa directory verrà riconosciuta come se fosse un file.
 
-La directory deve contenere un `index.workbook` file, ovvero la cartella di lavoro in testo normale che verrà caricata in Xamarin Workbooks. La directory può contenere anche risorse richieste da `index.workbook`, incluse immagini o altri file.
+La directory deve contenere un file di `index.workbook`, ovvero la cartella di lavoro in testo normale che verrà caricata nel Xamarin Workbooks. La directory può inoltre contenere risorse richieste da `index.workbook`, incluse immagini o altri file.
 
-Se un file di `.workbook` testo normale che fa riferimento alle risorse dalla stessa directory viene aperto nelle cartelle di lavoro 0.99.3 o versione successiva, quando viene salvato, verrà convertito in `.workbook` un pacchetto. Questa operazione è valida sia in Mac che in Windows.
+Se un file di `.workbook` testo normale che fa riferimento alle risorse dalla stessa directory viene aperto nelle cartelle di lavoro 0.99.3 o versioni successive, quando viene salvato, verrà convertito in un pacchetto di `.workbook`. Questa operazione è valida sia in Mac che in Windows.
 
 > [!NOTE]
-> Gli utenti di Windows apriranno il `package.workbook\index.workbook` file direttamente, ma in caso contrario il pacchetto si comporterà come in Mac.
+> Gli utenti di Windows apriranno direttamente il file di `package.workbook\index.workbook`. in caso contrario, il comportamento del pacchetto è identico a quello di Mac.
 
-### <a name="archives"></a>Archivi
+### <a name="archives"></a>archivi
 
-I pacchetti di cartelle di lavoro, che sono directory, possono essere difficili da distribuire facilmente tramite Internet. La soluzione è archivi di cartelle di lavoro. Un archivio di cartelle di lavoro è un pacchetto di cartelle di lavoro compresso `.workbook` con zip, denominato con l'estensione.
+I pacchetti di cartelle di lavoro, che sono directory, possono essere difficili da distribuire facilmente tramite Internet. La soluzione è archivi di cartelle di lavoro. Un archivio di cartelle di lavoro è un pacchetto di cartelle di lavoro compresso con zip, denominato con l'estensione `.workbook`.
 
 A partire dalle cartelle di lavoro 1,1, quando si salva un pacchetto di cartella di lavoro, nella finestra di dialogo Salva è possibile scegliere di salvare invece come archivio. Le cartelle di lavoro 1,0 non hanno incorporato alcun modo per creare o salvare gli archivi.
 
 Nelle cartelle di lavoro 1,0, quando è stato aperto, l'archivio di una cartella di lavoro è stato convertito in modo trasparente in un pacchetto di cartella di lavoro e il file zip è andato perso. Nelle cartelle di lavoro 1,1, il file zip rimane. Quando l'utente salva l'archivio, viene sostituito con un nuovo file zip.
 
-È possibile creare manualmente l'archivio di una cartella di lavoro facendo clic con il pulsante destro del mouse su un pacchetto di cartella di lavoro e selezionando **Comprimi** in Mac oppure **Invia a > cartella compressa** in Windows. Rinominare quindi il file zip in modo che `.workbook` abbia un'estensione di file. Funziona solo con i pacchetti di cartelle di lavoro, non con i file di cartella di lavoro.
+È possibile creare manualmente l'archivio di una cartella di lavoro facendo clic con il pulsante destro del mouse su un pacchetto di cartella di lavoro e selezionando **Comprimi** in Mac oppure **Invia a > cartella compressa** in Windows. Rinominare quindi il file zip in modo che abbia un'estensione di file `.workbook`. Funziona solo con i pacchetti di cartelle di lavoro, non con i file di cartella di lavoro.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -4,15 +4,15 @@ description: Questa guida illustra la creazione della prima app Novell. tvOS e d
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 9ad1c63dae312546315406d40858ce24802c6a58
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 35f0bc0668c6f80ee00b1253b16a8ac71770a9be
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769315"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030808"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guida introduttiva
 
@@ -34,7 +34,7 @@ Inoltre, poiché le app Novell. tvOS sono scritte C# in e .NET, il codice back-e
 
 Questo articolo illustra i concetti chiave necessari per creare un'app Apple TV usando Novell. tvOS e Visual Studio seguendo il processo di creazione di un'app **Hello, tvOS** di base che conta il numero di volte in cui è stato fatto clic su un pulsante:
 
-[![](hello-tvos-images/run05.png "Esecuzione dell'app di esempio")](hello-tvos-images/run05.png#lightbox)
+[![](hello-tvos-images/run05.png "Example app run")](hello-tvos-images/run05.png#lightbox)
 
 Verranno illustrati i concetti seguenti:
 
@@ -51,23 +51,23 @@ Per iniziare, eseguire le operazioni seguenti:
 
 1. Avviare Visual Studio per Mac:
 
-    [![](hello-tvos-images/setup01.png "Visual Studio per Mac")](hello-tvos-images/setup01.png#lightbox)
+    [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
 2. Fare clic sul collegamento **nuova soluzione** nell'angolo superiore sinistro della schermata per aprire la finestra di dialogo **nuovo progetto** .
-3. Selezionare**app** > **visualizzazione singola** app **tvOS** > e fare clic sul pulsante **Avanti** :
+3. Selezionare **tvOS** > **app** > **app visualizzazione singola** e fare clic sul pulsante **Avanti** :
 
-    [![](hello-tvos-images/setup02.png "Selezionare l'app visualizzazione singola")](hello-tvos-images/setup02.png#lightbox)
+    [![](hello-tvos-images/setup02.png "Select Single View App")](hello-tvos-images/setup02.png#lightbox)
 4. Immettere `Hello, tvOS` per il **nome dell'app**, immettere l' **identificatore dell'organizzazione** e fare clic sul pulsante **Avanti** :
 
-    [![](hello-tvos-images/setup04.png "Immettere Hello, tvOS")](hello-tvos-images/setup04.png#lightbox)
+    [![](hello-tvos-images/setup04.png "Enter Hello, tvOS")](hello-tvos-images/setup04.png#lightbox)
 5. Immettere `Hello_tvOS` per il **nome del progetto** e fare clic sul pulsante **Crea** :
 
-    [![](hello-tvos-images/setup03.png "Immettere HellotvOS")](hello-tvos-images/setup03.png#lightbox)
+    [![](hello-tvos-images/setup03.png "Enter HellotvOS")](hello-tvos-images/setup03.png#lightbox)
 
 Visual Studio per Mac creerà la nuova app Novell. tvOS e visualizzerà i file predefiniti che vengono aggiunti alla soluzione dell'applicazione:
 
- [![](hello-tvos-images/project01.png "Visualizzazione dei file predefiniti")](hello-tvos-images/project01.png#lightbox)
+ [![](hello-tvos-images/project01.png "The default files view")](hello-tvos-images/project01.png#lightbox)
 
-Visual Studio per Mac usa **soluzioni** e **progetti**esattamente come avviene in Visual Studio. Una soluzione è un contenitore che può includere uno o più progetti. I progetti possono includere applicazioni, librerie di supporto, applicazioni di test e così via. In questo caso, Visual Studio per Mac ha creato automaticamente una soluzione e un progetto di applicazione.
+Visual Studio per Mac usa **soluzioni** e **progetti**esattamente come avviene in Visual Studio. Una soluzione è un contenitore che può ospitare uno o più progetti; i progetti possono includere applicazioni, librerie di supporto, applicazioni di test e così via. In questo caso, Visual Studio per Mac ha creato automaticamente una soluzione e un progetto di applicazione.
 
 Se lo si desidera, è possibile creare uno o più progetti della libreria di codice che contengono codice condiviso comune. Questi progetti di libreria possono essere usati dal progetto dell'applicazione o condivisi con altri progetti di app Novell. tvOS (o Novell. iOS, Novell. Android e Novell. Mac in base al tipo di codice), proprio come se si creasse un'applicazione .NET standard.
 
@@ -78,17 +78,17 @@ Se si ha familiarità con la programmazione iOS, si noterà una grande quantità
 Verranno ora esaminati i file del progetto:
 
 - `Main.cs`: contiene il punto di ingresso principale dell'app. All'avvio l'app contiene la prima classe e il primo metodo eseguiti.
-- `AppDelegate.cs`: Questo file contiene la classe principale dell'applicazione che è responsabile dell'ascolto degli eventi dal sistema operativo.
-- `Info.plist`: Questo file contiene le proprietà dell'applicazione, ad esempio il nome dell'applicazione, le icone e così via.
-- `ViewController.cs`: Questa è la classe che rappresenta la finestra principale e ne controlla il ciclo di vita.
-- `ViewController.designer.cs`: Questo file contiene codice plumbing che consente di eseguire l'integrazione con l'interfaccia utente della schermata principale.
-- `Main.storyboard`: Interfaccia utente per la finestra principale. Questo file può essere creato e gestito dal Xamarin Designer per iOS.
+- `AppDelegate.cs`: questo file contiene la classe principale dell'applicazione che è responsabile dell'ascolto degli eventi dal sistema operativo.
+- `Info.plist`: questo file contiene le proprietà dell'applicazione, ad esempio il nome dell'applicazione, le icone e così via.
+- `ViewController.cs`: questa è la classe che rappresenta la finestra principale e ne controlla il ciclo di vita.
+- `ViewController.designer.cs`: questo file contiene codice plumbing che consente di eseguire l'integrazione con l'interfaccia utente della schermata principale.
+- `Main.storyboard`: interfaccia utente per la finestra principale. Questo file può essere creato e gestito dal Xamarin Designer per iOS.
 
 Nelle sezioni seguenti verranno esaminati rapidamente alcuni di questi file. Verranno esaminati in modo più dettagliato in un secondo momento, ma è consigliabile comprenderne le nozioni di base.
 
 ### <a name="maincs"></a>Main.cs
 
-Il `Main.cs` file contiene un metodo `Main` statico che crea una nuova istanza dell'app Novell. tvOS e passa il nome della classe che gestirà gli eventi del sistema operativo, che in questo `AppDelegate` caso è la classe:
+Il file di `Main.cs` contiene un metodo di `Main` statico che crea una nuova istanza dell'app Novell. tvOS e passa il nome della classe che gestirà gli eventi del sistema operativo, che in questo caso è la classe `AppDelegate`:
 
 ```csharp
 using UIKit;
@@ -110,7 +110,7 @@ namespace Hello_tvOS
 
 ### <a name="appdelegatecs"></a>AppDelegate.cs
 
-Il `AppDelegate.cs` file`AppDelegate` contiene la classe, che è responsabile della creazione della finestra e dell'ascolto degli eventi del sistema operativo:
+Il file di `AppDelegate.cs` contiene la classe `AppDelegate`, che è responsabile della creazione della finestra e dell'ascolto degli eventi del sistema operativo:
 
 ```csharp
 using Foundation;
@@ -184,15 +184,15 @@ public override UIWindow Window {
 
 ```
 
-La `Window` proprietà consente di accedere alla finestra principale. tvOS usa quello noto come modello MVC ( *Model View Controller* ). In genere, per ogni finestra creata, e per molti altri elementi all'interno di Windows, è disponibile un controller che è responsabile del ciclo di vita della finestra, ad esempio la visualizzazione, l'aggiunta di nuove visualizzazioni (controlli) e così via.
+La proprietà `Window` fornisce accesso alla finestra principale. tvOS usa quello noto come modello MVC ( *Model View Controller* ). In genere, per ogni finestra creata, e per molti altri elementi all'interno di Windows, è disponibile un controller che è responsabile del ciclo di vita della finestra, ad esempio la visualizzazione, l'aggiunta di nuove visualizzazioni (controlli) e così via.
 
-Quindi, abbiamo il `FinishedLaunching` metodo. Questo metodo viene eseguito dopo che è stata creata un'istanza dell'applicazione ed è responsabile della creazione effettiva della finestra dell'applicazione e dell'inizio del processo di visualizzazione della visualizzazione. Poiché l'app usa uno storyboard per definire l'interfaccia utente, non è necessario alcun codice aggiuntivo.
+Quindi, abbiamo il metodo `FinishedLaunching`. Questo metodo viene eseguito dopo che è stata creata un'istanza dell'applicazione ed è responsabile della creazione effettiva della finestra dell'applicazione e dell'inizio del processo di visualizzazione della visualizzazione. Poiché l'app usa uno storyboard per definire l'interfaccia utente, non è necessario alcun codice aggiuntivo.
 
-Nel modello sono disponibili molti altri metodi, ad esempio `DidEnterBackground` e. `WillEnterForeground` Questi possono essere rimossi in modo sicuro se gli eventi dell'applicazione non vengono usati nell'app.
+Nel modello sono disponibili molti altri metodi, ad esempio `DidEnterBackground` e `WillEnterForeground`. Questi possono essere rimossi in modo sicuro se gli eventi dell'applicazione non vengono usati nell'app.
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
-La `ViewController` classe è il controller della finestra principale. Ciò significa che è responsabile del ciclo di vita della finestra principale. Questo aspetto verrà esaminato in dettaglio in un secondo momento, per ora esaminiamo brevemente:
+La classe `ViewController` è il controller della finestra principale. Ciò significa che è responsabile del ciclo di vita della finestra principale. Questo aspetto verrà esaminato in dettaglio in un secondo momento, per ora esaminiamo brevemente:
 
 ```csharp
 using System;
@@ -251,73 +251,73 @@ Ora che è stata creata l'app Novell. tvOS e abbiamo una conoscenza di base dei 
 
 Non è necessario usare Xamarin Designer per iOS per creare l'interfaccia utente per l'app Novell. tvOS, l'interfaccia utente può essere creata direttamente dal C# codice ma che esula dall'ambito di questo articolo. Per semplicità, verrà usato iOS designer per creare l'interfaccia utente durante la restante parte di questa esercitazione.
 
-Per iniziare a creare l'interfaccia utente, fare doppio clic sul `Main.storyboard` file nella **Esplora soluzioni** per aprirlo per la modifica in iOS designer:
+Per avviare la creazione dell'interfaccia utente, fare doppio clic sul file `Main.storyboard` nel **Esplora soluzioni** per aprirlo per la modifica in iOS designer:
 
-[![](hello-tvos-images/designer01.png "File Main.storyboard in Esplora soluzioni")](hello-tvos-images/designer01.png#lightbox)
+[![](hello-tvos-images/designer01.png "The Main.storyboard file in the Solution Explorer")](hello-tvos-images/designer01.png#lightbox)
 
 Verrà avviata la finestra di progettazione e avrà un aspetto simile al seguente:
 
-[![](hello-tvos-images/designer02.png "Finestra di progettazione")](hello-tvos-images/designer02.png#lightbox)
+[![](hello-tvos-images/designer02.png "The Designer")](hello-tvos-images/designer02.png#lightbox)
 
 Per altre informazioni su iOS designer e sul relativo funzionamento, vedere Introduzione alla guida [Xamarin designer per iOS](~/ios/user-interface/designer/introduction.md) .
 
 È ora possibile iniziare ad aggiungere controlli all'area di progettazione dell'app Novell. tvOS.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Individuare la **casella degli strumenti**, che dovrebbe essere a destra dell'area di progettazione:
 
-    [![](hello-tvos-images/designer03.png "Casella degli strumenti")](hello-tvos-images/designer03.png#lightbox)
+    [![](hello-tvos-images/designer03.png "The Toolbox")](hello-tvos-images/designer03.png#lightbox)
 
     Se non è possibile individuarlo, passare a **visualizza > rilievi > casella degli strumenti** per visualizzarlo.
 2. Trascinare un' **etichetta** dalla **casella degli strumenti** nell'area di progettazione:
 
-    [![](hello-tvos-images/designer04.png "Trascinare un'etichetta dalla casella degli strumenti")](hello-tvos-images/designer04.png#lightbox)
-3. Fare clic sulla proprietà **title** nel **riquadro delle proprietà** e modificare il titolo `Hello, tvOS` del pulsante in e impostare le **dimensioni del carattere** su 128:
+    [![](hello-tvos-images/designer04.png "Drag a Label from the Toolbox")](hello-tvos-images/designer04.png#lightbox)
+3. Fare clic sulla proprietà **title** nel **riquadro delle proprietà** e modificare il titolo del pulsante in `Hello, tvOS` e impostare le **dimensioni del carattere** su 128:
 
-    [![](hello-tvos-images/designer05.png "Impostare il titolo su Hello, tvOS e impostare le dimensioni del carattere su 128")](hello-tvos-images/designer05.png#lightbox)
+    [![](hello-tvos-images/designer05.png "Set the title to Hello, tvOS and set the Font Size to 128")](hello-tvos-images/designer05.png#lightbox)
 4. Ridimensionare l'etichetta in modo che tutte le parole siano visibili e posizionarla al centro nella parte superiore della finestra:
 
-    [![](hello-tvos-images/designer06.png "Ridimensionare e centrare l'etichetta")](hello-tvos-images/designer06.png#lightbox)
+    [![](hello-tvos-images/designer06.png "Resize and center the label")](hello-tvos-images/designer06.png#lightbox)
 5. L'etichetta deve ora essere vincolata alla posizione, in modo che venga visualizzata come previsto. indipendentemente dalle dimensioni dello schermo. A tale scopo, fare clic sull'etichetta fino a quando non viene visualizzato l' *handle a forma di T* :
 
-    [![](hello-tvos-images/designer07.png "Handle a forma di T")](hello-tvos-images/designer07.png#lightbox)
+    [![](hello-tvos-images/designer07.png "The T-shaped handle")](hello-tvos-images/designer07.png#lightbox)
 6. Per vincolare l'etichetta orizzontalmente, selezionare il quadrato centrale e trascinarlo sulla linea tratteggiata verticale:
 
-    [![](hello-tvos-images/designer08.png "Selezionare il quadrato centrale")](hello-tvos-images/designer08zoom.png#lightbox)
+    [![](hello-tvos-images/designer08.png "Select the center square")](hello-tvos-images/designer08zoom.png#lightbox)
 
      L'etichetta dovrebbe diventare arancione.
 7. Selezionare il punto di manipolazione T nella parte superiore dell'etichetta e trascinarlo sul bordo superiore della finestra:
 
-    [![](hello-tvos-images/designer09.png "Trascinare il quadratino di controllo sul bordo superiore della finestra")](hello-tvos-images/designer09.png#lightbox)
+    [![](hello-tvos-images/designer09.png "Drag the handle to the top edge of the window")](hello-tvos-images/designer09.png#lightbox)
 8. Quindi, fare clic sulla larghezza e quindi sul punto di controllo *dell'altezza,* come illustrato di seguito:
 
-    [![](hello-tvos-images/designer10.png "La larghezza e i punti di ridimensionamento dell'altezza")](hello-tvos-images/designer10.png#lightbox)
+    [![](hello-tvos-images/designer10.png "The width and the height bone handles")](hello-tvos-images/designer10.png#lightbox)
 
      Quando si fa clic su ogni *handle di osso* , selezionare rispettivamente larghezza e altezza per impostare le dimensioni fisse.
 9. Al termine, i vincoli dovrebbero essere simili a quelli nella scheda layout del riquadro delle proprietà:
 
-    [![](hello-tvos-images/designer11.png "Vincoli di esempio")](hello-tvos-images/designer11.png#lightbox)
+    [![](hello-tvos-images/designer11.png "Example Constraints")](hello-tvos-images/designer11.png#lightbox)
 10. Trascinare un **pulsante** dalla **casella degli strumenti** e posizionarlo sotto l'etichetta.
 11. Fare clic sulla proprietà **title** nel **riquadro delle proprietà** e modificare il titolo del pulsante in `Click Me`:
 
-    [![](hello-tvos-images/designer12.png "Modificare il titolo dei pulsanti per fare clic su me")](hello-tvos-images/designer12.png#lightbox)
+    [![](hello-tvos-images/designer12.png "Change the buttons title to Click Me")](hello-tvos-images/designer12.png#lightbox)
 12. Ripetere i passaggi da 5 a 8 sopra per vincolare il pulsante nella finestra tvOS. Tuttavia, invece di trascinare l'handle T nella parte superiore della finestra (come nel passaggio #7), trascinarlo nella parte inferiore dell'etichetta:
 
-    [![](hello-tvos-images/designer14.png "Vincolare il pulsante")](hello-tvos-images/designer14.png#lightbox)
+    [![](hello-tvos-images/designer14.png "Constrain the button")](hello-tvos-images/designer14.png#lightbox)
 13. Trascinare un'altra etichetta sotto il pulsante, ridimensionarla in modo che abbia la stessa larghezza della prima etichetta e impostarne l' **allineamento** su **Center**:
 
-    [![](hello-tvos-images/designer15.png "Trascinare un'altra etichetta sotto il pulsante, ridimensionarla in modo che abbia la stessa larghezza della prima etichetta e impostarne l'allineamento al centro")](hello-tvos-images/designer15.png#lightbox)
+    [![](hello-tvos-images/designer15.png "Drag another label under the button, size it to be the same width as the first label and set its Alignment to Center")](hello-tvos-images/designer15.png#lightbox)
 14. Come la prima etichetta e il pulsante, impostare questa etichetta su centrata e aggiungerla a posizione e dimensioni:
 
-    [![](hello-tvos-images/designer16.png "Aggiungere l'etichetta in un percorso e in una dimensione")](hello-tvos-images/designer16.png#lightbox)
+    [![](hello-tvos-images/designer16.png "Pin the label into location and size")](hello-tvos-images/designer16.png#lightbox)
 15. Salvare le modifiche apportate all'interfaccia utente.
 
 Quando si ridimensionano e si spostano i controlli, si noterà che la finestra di progettazione offre suggerimenti di snap utili basati sulle [linee guida dell'interfaccia umana di Apple TV](https://developer.apple.com/tvos/human-interface-guidelines/). Queste linee guida consentono di creare applicazioni di alta qualità che avranno un aspetto familiare per gli utenti di Apple TV.
 
 Se si osserva la sezione **struttura documento** , si noti come vengono visualizzati il layout e la gerarchia degli elementi che costituiscono l'interfaccia utente:
 
-[![](hello-tvos-images/designer17.png "Sezione struttura documento")](hello-tvos-images/designer17.png#lightbox)
+[![](hello-tvos-images/designer17.png "The Document Outline section")](hello-tvos-images/designer17.png#lightbox)
 
 Da qui è possibile selezionare gli elementi da modificare o trascinare per riordinare gli elementi dell'interfaccia utente, se necessario. Se, ad esempio, un elemento dell'interfaccia utente è stato coperto da un altro elemento, è possibile trascinarlo nella parte inferiore dell'elenco per impostarlo come elemento in primo piano nella finestra.
 
@@ -330,7 +330,7 @@ Esistono due modi principali per accedere ai controlli aggiunti in iOS designer 
 - Creazione di un gestore eventi su un controllo.
 - Assegnare un nome al controllo, in modo che sia possibile farvi riferimento in un secondo momento.
 
-Quando uno di questi viene aggiunto, la classe parziale all'interno `ViewController.designer.cs` di verrà aggiornata per riflettere le modifiche. Ciò consentirà di accedere ai controlli nel controller di visualizzazione.
+Quando uno di questi viene aggiunto, la classe parziale all'interno del `ViewController.designer.cs` verrà aggiornata per riflettere le modifiche. Ciò consentirà di accedere ai controlli nel controller di visualizzazione.
 
 ### <a name="creating-an-event-handler"></a>Creazione di un gestore eventi
 
@@ -339,44 +339,44 @@ In questa applicazione di esempio, quando si fa clic sul pulsante si vuole che v
 1. In Novell iOS Designer selezionare il pulsante sul controller di visualizzazione.
 2. Nel riquadro delle proprietà selezionare la scheda **eventi** :
 
-    [![](hello-tvos-images/event1.png "Scheda eventi")](hello-tvos-images/event1.png#lightbox)
+    [![](hello-tvos-images/event1.png "The Events tab")](hello-tvos-images/event1.png#lightbox)
 3. Individuare l'evento TouchUpInside e assegnargli un gestore eventi denominato `Clicked`:
 
-    [![](hello-tvos-images/event2.png "Evento TouchUpInside")](hello-tvos-images/event2.png#lightbox)
+    [![](hello-tvos-images/event2.png "The TouchUpInside event")](hello-tvos-images/event2.png#lightbox)
 4. Quando si preme **invio**, viene aperto il file **ViewController**. cs, che suggerisce i percorsi per il gestore eventi nel codice. Usare i tasti di direzione sulla tastiera per impostare il percorso:
 
-    [![](hello-tvos-images/event3.png "Impostazione della posizione")](hello-tvos-images/event3.png#lightbox)
+    [![](hello-tvos-images/event3.png "Setting the location")](hello-tvos-images/event3.png#lightbox)
 5. Verrà creato un metodo parziale, come illustrato di seguito:
 
-    [![](hello-tvos-images/event4.png "Metodo parziale")](hello-tvos-images/event4.png#lightbox)
+    [![](hello-tvos-images/event4.png "The partial method")](hello-tvos-images/event4.png#lightbox)
 
 A questo punto è possibile iniziare ad aggiungere codice per consentire il funzionamento del pulsante.
 
 ### <a name="naming-a-control"></a>Assegnazione di un nome a un controllo
 
-Quando si fa clic sul pulsante, l'etichetta deve essere aggiornata in base al numero di clic. A tale scopo, è necessario accedere all'etichetta nel codice. Questa operazione viene eseguita assegnando un nome. Seguire questa procedura:
+Quando si fa clic sul pulsante, l'etichetta deve essere aggiornata in base al numero di clic. A tale scopo, è necessario accedere all'etichetta nel codice. Questa operazione viene eseguita assegnando un nome. Procedere come descritto di seguito:
 
 1. Aprire lo storyboard e selezionare l'etichetta nella parte inferiore del controller di visualizzazione.
 2. Nel riquadro delle proprietà selezionare la scheda **widget** :
 
-    [![](hello-tvos-images/name1.png "Selezionare la scheda widget")](hello-tvos-images/name1.png#lightbox)
+    [![](hello-tvos-images/name1.png "Select the Widget tab")](hello-tvos-images/name1.png#lightbox)
 3. In **nome > identità**aggiungere `ClickedLabel`:
 
-    [![](hello-tvos-images/name2.png "Imposta ClickedLabel")](hello-tvos-images/name2.png#lightbox)
+    [![](hello-tvos-images/name2.png "Set ClickedLabel")](hello-tvos-images/name2.png#lightbox)
 
 A questo punto è possibile iniziare ad aggiornare l'etichetta.
 
 ### <a name="how-controls-are-accessed"></a>Modalità di accesso ai controlli
 
-`ViewController.designer.cs` Se si seleziona nel **Esplora soluzioni** sarà possibile vedere come è stato `ClickedLabel` eseguito il mapping tra l'etichetta e il `Clicked` gestore eventi e un **Outlet** e un' **azione** in C#:
+Se si seleziona il `ViewController.designer.cs` nel **Esplora soluzioni** , sarà possibile vedere come è stato eseguito il mapping dell'etichetta `ClickedLabel` e del gestore eventi `Clicked` a un **Outlet** e un' **azione** in C#:
 
-[![](hello-tvos-images/accesscontrol.png "Outlet e azioni")](hello-tvos-images/accesscontrol.png#lightbox)
+[![](hello-tvos-images/accesscontrol.png "Outlets and Actions")](hello-tvos-images/accesscontrol.png#lightbox)
 
-È anche possibile notare che `ViewController.designer.cs` è una classe parziale, in modo che non Visual Studio per Mac necessario modificare `ViewController.cs` che sovrascriva le modifiche apportate alla classe.
+È anche possibile notare che `ViewController.designer.cs` è una classe parziale, in modo che Visual Studio per Mac non debba modificare `ViewController.cs` che sovrascriverebbe le modifiche apportate alla classe.
 
 Esponendo gli elementi dell'interfaccia utente in questo modo, è possibile accedervi nel controller di visualizzazione.
 
-Normalmente non sarà mai necessario aprire l' `ViewController.designer.cs` utente, ma è stato presentato qui solo a scopo didattico.
+Normalmente non sarà mai necessario aprire il `ViewController.designer.cs`, ma è stato presentato solo a scopo didattico.
 
 <a name="Writing-the-Code" />
 
@@ -384,11 +384,11 @@ Normalmente non sarà mai necessario aprire l' `ViewController.designer.cs` uten
 
 Con la creazione dell'interfaccia utente e degli elementi dell'interfaccia utente esposti al codice tramite **Outlet** e **azioni**, è possibile scrivere il codice per fornire la funzionalità del programma.
 
-Nell'applicazione, ogni volta che si fa clic sul primo pulsante, l'etichetta verrà aggiornata per mostrare il numero di volte in cui è stato fatto clic sul pulsante. A tale scopo, è necessario aprire il `ViewController.cs` file per la modifica facendo doppio clic su di esso nel **riquadro della soluzione**:
+Nell'applicazione, ogni volta che si fa clic sul primo pulsante, l'etichetta verrà aggiornata per mostrare il numero di volte in cui è stato fatto clic sul pulsante. A tale scopo, è necessario aprire il file di `ViewController.cs` per la modifica facendo doppio clic su di esso nel **riquadro della soluzione**:
 
-[![](hello-tvos-images/code01.png "Il riquadro della soluzione")](hello-tvos-images/code01.png#lightbox)
+[![](hello-tvos-images/code01.png "The Solution Pad")](hello-tvos-images/code01.png#lightbox)
 
-Prima di tutto, è necessario creare una variabile a livello di classe `ViewController` nella classe per tenere traccia del numero di clic che si sono verificati. Modificare la definizione della classe nel modo seguente:
+Prima di tutto, è necessario creare una variabile a livello di classe nella classe `ViewController` per tenere traccia del numero di clic che si sono verificati. Modificare la definizione della classe nel modo seguente:
 
 ```csharp
 using System;
@@ -403,7 +403,7 @@ namespace Hello_tvOS
         ...
 ```
 
-Successivamente, nella stessa classe (`ViewController`) è necessario eseguire l'override del metodo **ViewDidLoad** e aggiungere il codice per impostare il messaggio iniziale per l'etichetta:
+Successivamente, nella stessa classe (`ViewController`), è necessario eseguire l'override del metodo **ViewDidLoad** e aggiungere il codice per impostare il messaggio iniziale per l'etichetta:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-È `ViewDidLoad`necessario usare, anziché un altro metodo `Initialize`, ad esempio, perché `ViewDidLoad` viene chiamato *dopo che* il sistema operativo `.storyboard` ha caricato e creato un'istanza dell'interfaccia utente dal file. Se si è tentato di accedere al controllo Label prima `.storyboard` che il file sia stato caricato completamente e ne venga creata un'istanza `NullReferenceException` , verrà generato un errore perché il controllo Label non verrà ancora creato.
+È necessario usare `ViewDidLoad`, anziché un altro metodo, ad esempio `Initialize`, perché `ViewDidLoad` viene chiamato *dopo che* il sistema operativo ha caricato e creato un'istanza dell'interfaccia utente dal file `.storyboard`. Se si è tentato di accedere al controllo Label prima che il file `.storyboard` sia stato completamente caricato e ne venga creata un'istanza, verrà generato un errore `NullReferenceException` perché il controllo Label non verrà ancora creato.
 
 Successivamente, è necessario aggiungere il codice per rispondere all'utente facendo clic sul pulsante. Aggiungere quanto segue alla classe parziale in cui è stato creato:
 
@@ -440,7 +440,7 @@ Ogni volta che si compila un'applicazione, è possibile scegliere il tipo di com
 
 È possibile selezionare il tipo di compilazione dal **selettore configurazione** nell'angolo superiore sinistro della schermata Visual Studio per Mac:
 
-[![](hello-tvos-images/run01.png "Selezionare il tipo di compilazione")](hello-tvos-images/run01.png#lightbox)
+[![](hello-tvos-images/run01.png "Select the type of build")](hello-tvos-images/run01.png#lightbox)
 
 ### <a name="building-the-application"></a>Compilazione dell'applicazione
 
@@ -458,15 +458,15 @@ Per eseguire l'applicazione, sono disponibili tre opzioni:
 
 L'applicazione verrà compilata (se non è già stata compilata), avviata in modalità di debug, il simulatore tvOS verrà avviato e l'app verrà avviata e visualizzata la finestra principale dell'interfaccia:
 
-[![Schermata iniziale dell'app di esempio](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
+[![la schermata iniziale dell'app di esempio](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
 
 Dal menu **hardware** selezionare **Mostra Apple TV Remote** per poter controllare il simulatore.
 
-[![](hello-tvos-images/run04.png "Selezionare Mostra Apple TV remoto")](hello-tvos-images/run04.png#lightbox)
+[![](hello-tvos-images/run04.png "Select Show Apple TV Remote")](hello-tvos-images/run04.png#lightbox)
 
 Usando il simulatore remoto, se si fa clic sul pulsante alcune volte l'etichetta deve essere aggiornata con il conteggio:
 
-[![](hello-tvos-images/run05.png "Etichetta con conteggio aggiornato")](hello-tvos-images/run05.png#lightbox)
+[![](hello-tvos-images/run05.png "The label with updated count")](hello-tvos-images/run05.png#lightbox)
 
 La procedura è stata completata. In questo articolo è stata illustrata una grande quantità di informazioni, ma se è stata seguita questa esercitazione dall'inizio alla fine, è ora necessario conoscere in modo approfondito i componenti di un'app Novell. tvOS, oltre agli strumenti usati per crearli.
 

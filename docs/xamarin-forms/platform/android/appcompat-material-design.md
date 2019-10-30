@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: a5b6466b1d2489cced4b1e3205ef672b8f6a4da7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770656"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005456"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Aggiunta di AppCompat e della progettazione del materiale
 
@@ -25,21 +25,21 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 Queste istruzioni spiegano come aggiornare le applicazioni Novell. Forms Android esistenti per usare la libreria AppCompat e abilitare la progettazione del materiale nella versione Android delle app Novell. Forms.
 
-### <a name="1-update-xamarinforms"></a>1. Aggiornare Novell. Forms
+### <a name="1-update-xamarinforms"></a>1. aggiornare Novell. Forms
 
 Assicurarsi che la soluzione usi Novell. Forms 2,0 o versione successiva. Se necessario, aggiornare il pacchetto NuGet Novell. Forms a 2,0.
 
-### <a name="2-check-android-version"></a>2. Verificare la versione di Android
+### <a name="2-check-android-version"></a>2. controllare la versione di Android
 
 Verificare che il Framework di destinazione del progetto Android sia Android 6,0 (marshmallow). Selezionare le **opzioni > progetto Android > compila > Impostazioni generali** per assicurarsi che sia selezionato corrent Framework:
 
- ![](appcompat-images/target-android-6-sml.png "Configurazione generale di Android Build")
+ ![](appcompat-images/target-android-6-sml.png "Android General Build Configuration")
 
-### <a name="3-add-new-themes-to-support-material-design"></a>3. Aggiungere nuovi temi per supportare la progettazione del materiale
+### <a name="3-add-new-themes-to-support-material-design"></a>3. aggiungere nuovi temi per supportare la progettazione del materiale
 
-Creare i tre file seguenti nel progetto Android e incollare il contenuto seguente. Google fornisce una [Guida di stile](http://www.google.com/design/spec/style/color.html#color-color-palette) e un [Generatore di tavolozze dei colori](http://www.materialpalette.com/) che consentono di scegliere una combinazione di colori alternativa a quella specificata.
+Creare i tre file seguenti nel progetto Android e incollare il contenuto seguente. Google fornisce una [Guida di stile](https://www.google.com/design/spec/style/color.html#color-color-palette) e un [Generatore di tavolozze dei colori](https://www.materialpalette.com/) che consentono di scegliere una combinazione di colori alternativa a quella specificata.
 
-**Resources/values/colors.xml**
+**Risorse/valori/Colors. XML**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 </resources>
 ```
 
-**Resources/values/style.xml**
+**Resources/values/Style. XML**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 
 Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android e una versione più recente, è necessario includere nella cartella **values-V21** uno stile aggiuntivo.
 
-**Resources/values-v21/style.xml**
+**Resources/values-V21/Style. XML**
 
 ```xml
 <resources>
@@ -80,11 +80,11 @@ Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android 
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Aggiornare file AndroidManifest. XML
+### <a name="4-update-androidmanifestxml"></a>4. aggiornare file AndroidManifest. XML
 
-Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare il tema nel file file AndroidManifest `android:theme="@style/MyTheme"` aggiungendo (lasciare il resto del codice XML come è stato).
+Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare il tema nel file **file AndroidManifest** aggiungendo `android:theme="@style/MyTheme"` (lasciare invariato il resto del codice XML).
 
-**Properties/AndroidManifest.xml**
+**Proprietà/file AndroidManifest. XML**
 
 ```xml
 ...
@@ -93,11 +93,11 @@ Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare
 ...
 ```
 
-### <a name="5-provide-toolbar-and-tab-layouts"></a>5. Fornire layout della barra degli strumenti e delle schede
+### <a name="5-provide-toolbar-and-tab-layouts"></a>5. specificare i layout della barra degli strumenti e delle schede
 
 Creare i file **tabby. aXML** e **Toolbar. aXML** nella directory **Resources/layout** e incollare il contenuto seguente:
 
-**Resources/layout/Tabbar.axml**
+**Risorse/layout/tabby. aXML**
 
 ```xml
 <android.support.design.widget.TabLayout
@@ -113,7 +113,7 @@ Creare i file **tabby. aXML** e **Toolbar. aXML** nella directory **Resources/la
     app:tabMode="fixed" />
 ```
 
-Sono state impostate alcune proprietà per le schede `fill` , tra cui la gravità della scheda e la modalità a. `fixed`
+Sono state impostate alcune proprietà per le schede, inclusa la gravità della scheda `fill` e la modalità di `fixed`.
 Se si dispone di numerose schede, è possibile passare a questa opzione per eseguire lo scorrimento. per altre informazioni, vedere la documentazione di Android [TabLayout](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) .
 
 **Risorse/layout/barra degli strumenti. aXML**
@@ -135,7 +135,7 @@ Se si dispone di numerose schede, è possibile passare a questa opzione per eseg
 In questi file viene creato un tema specifico per la barra degli strumenti che può variare in base all'applicazione.
 Per altre informazioni, vedere il post di Blog della [barra degli strumenti Hello](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) .
 
-### <a name="6-update-the-mainactivity"></a>6. Aggiornare`MainActivity`
+### <a name="6-update-the-mainactivity"></a>6. aggiornare il `MainActivity`
 
 Nelle app Novell. Forms esistenti la classe **MainActivity.cs** erediterà da `FormsApplicationActivity`. Questa operazione deve essere sostituita con `FormsAppCompatActivity` per abilitare la nuova funzionalità.
 
@@ -145,7 +145,7 @@ Nelle app Novell. Forms esistenti la classe **MainActivity.cs** erediterà da `F
 public class MainActivity : FormsAppCompatActivity  // was FormsApplicationActivity
 ```
 
-Infine, "collegare" i nuovi layout dal passaggio 5 nel `OnCreate` metodo, come illustrato di seguito:
+Infine, "collegare" i nuovi layout dal passaggio 5 nel metodo di `OnCreate`, come illustrato di seguito:
 
 ```csharp
 protected override void OnCreate(Bundle bundle)

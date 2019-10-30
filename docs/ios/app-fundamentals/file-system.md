@@ -4,21 +4,21 @@ description: Questo documento descrive come usare la file system in Novell. iOS.
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: daa9625ccbac3661d3678889d4efd6319e0bd424
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9e5b2504fd8af8b4232eea0dcf39d9c4760b555
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198134"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010611"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Accesso al file System in Novell. iOS
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
 
-È possibile usare Novell. iOS e le `System.IO` classi nella *libreria di classi base .NET (BCL)* per accedere al file System iOS. La classe `File` consente di creare, eliminare e leggere i file e la classe `Directory` consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare `Stream` le sottoclassi, che possono fornire un maggiore livello di controllo sulle operazioni sui file, ad esempio la compressione o la ricerca nella posizione all'interno di un file.
+È possibile usare Novell. iOS e le classi `System.IO` nella *libreria di classi base .NET* per accedere al file System iOS. La classe `File` consente di creare, eliminare e leggere i file e la classe `Directory` consente di creare, eliminare o enumerare il contenuto delle directory. È anche possibile usare `Stream` sottoclassi, che possono fornire un maggiore livello di controllo sulle operazioni sui file, ad esempio la compressione o la ricerca nella posizione all'interno di un file.
 
 iOS impone alcune restrizioni sulle operazioni che un'applicazione può eseguire con la file system per mantenere la sicurezza dei dati di un'applicazione e per proteggere gli utenti da app maligne. Queste restrizioni fanno parte dell' *applicazione sandbox* , ovvero un set di regole che limitano l'accesso di un'applicazione a file, preferenze, risorse di rete, hardware e così via. Un'applicazione è limitata alla lettura e alla scrittura di file all'interno della relativa home directory (percorso installato); non può accedere ai file di un'altra applicazione.
 
@@ -26,11 +26,11 @@ iOS dispone anche di alcune funzionalità specifiche di file system: alcune dire
 
 Questo articolo illustra le funzionalità e le restrizioni del file system iOS e include un'applicazione di esempio che illustra come usare Novell. iOS per eseguire alcune semplici operazioni di file system:
 
-[![Un esempio di iOS che esegue alcune semplici operazioni di file system](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
+[![un esempio di iOS che esegue alcune semplici operazioni di file system](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
 
 ## <a name="general-file-access"></a>Accesso generale ai file
 
-Novell. iOS consente di usare le classi .NET `System.IO` per le operazioni di file System in iOS.
+Novell. iOS consente di usare le classi .NET `System.IO` per file system operazioni in iOS.
 
 I frammenti di codice seguenti illustrano alcune operazioni comuni sui file. Tutti gli elementi seguenti sono disponibili nel file **SampleCode.cs** nell'applicazione di esempio per questo articolo.
 
@@ -57,7 +57,7 @@ Console.WriteLine(text);
 
 ### <a name="xml-serialization"></a>serializzazione XML
 
-Sebbene l'uso dello spazio `System.Xml` dei nomi completo esula dall'ambito di questo articolo, è possibile deserializzare facilmente un documento XML dalla file System usando un oggetto StreamReader come questo frammento di codice:
+Sebbene l'utilizzo dello spazio dei nomi `System.Xml` completo esula dall'ambito di questo articolo, è possibile deserializzare facilmente un documento XML dalla file system utilizzando un oggetto StreamReader come il frammento di codice seguente:
 
 ```csharp
 using (TextReader reader = new StreamReader("./TestData/test.xml")) {
@@ -66,11 +66,11 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Per ulteriori informazioni, vedere la documentazione relativa a [System. XML](xref:System.Xml) e alla [serializzazione](xref:System.Xml.Serialization). Vedere la [documentazione di Novell. iOS](~/ios/deploy-test/linker.md) nel linker: spesso è necessario aggiungere l' `[Preserve]` attributo alle classi che si intende serializzare.
+Per ulteriori informazioni, vedere la documentazione relativa a [System. XML](xref:System.Xml) e alla [serializzazione](xref:System.Xml.Serialization). Vedere la [documentazione di Novell. iOS](~/ios/deploy-test/linker.md) nel linker: spesso è necessario aggiungere l'attributo `[Preserve]` alle classi che si intende serializzare.
 
 ### <a name="creating-files-and-directories"></a>Creazione di file e directory
 
-Questo esempio illustra come usare la `Environment` classe per accedere alla cartella documenti in cui è possibile creare file e directory.
+Questo esempio illustra come usare la classe `Environment` per accedere alla cartella documenti in cui è possibile creare file e directory.
 
 ```csharp
 var documents =
@@ -94,9 +94,9 @@ Per altre informazioni, vedere le informazioni di [riferimento sull'API System.i
 
 [JSON.NET](http://www.newtonsoft.com/json) è un Framework JSON a prestazioni elevate che funziona con Novell. iOS ed è disponibile in NuGet. Aggiungere il pacchetto NuGet al progetto di applicazione, usando **Aggiungi NuGet** in Visual Studio per Mac:
 
-[![](file-system-images/json01.png "Aggiunta del pacchetto NuGet al progetto di applicazioni")](file-system-images/json01.png#lightbox)
+[![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png#lightbox)
 
-Successivamente, aggiungere una classe che funga da modello di dati per la serializzazione/deserializzazione ( `Account.cs`in questo caso):
+Successivamente, aggiungere una classe che funga da modello di dati per la serializzazione/deserializzazione (in questo caso `Account.cs`):
 
 ```csharp
 using System;
@@ -119,7 +119,7 @@ namespace FileSystem
 }
 ```
 
-Infine, creare un'istanza della `Account` classe, serializzarla nei dati JSON e scriverla in un file:
+Infine, creare un'istanza della classe `Account`, serializzarla nei dati JSON e scriverla in un file:
 
 ```csharp
 // Create a new record
@@ -139,7 +139,7 @@ var filename = Path.Combine (documents, "account.json");
 File.WriteAllText(filename, json);
 ```
 
-Per altre informazioni sull'uso dei dati JSON in un'applicazione .NET, vedere la [documentazione](http://www.newtonsoft.com/json/help)di JSON. NET.
+Per altre informazioni sull'uso dei dati JSON in un'applicazione .NET, vedere la [documentazione](https://www.newtonsoft.com/json/help)di JSON. NET.
 
 ## <a name="special-considerations"></a>Considerazioni speciali
 
@@ -149,13 +149,13 @@ Nonostante le analogie tra le operazioni di file Novell. iOS e .NET, iOS e Novel
 
 Per impostazione predefinita, se si aggiunge un file al progetto, questo non verrà incluso nell'assembly finale e pertanto non sarà disponibile per l'applicazione. Per includere un file nell'assembly, è necessario contrassegnarlo con un'azione di compilazione speciale, denominata contenuto.
 
-Per contrassegnare un file per l'inclusione, fare clic con il pulsante destro del mouse sul file e scegliere **Compila contenuto azione &gt;**  in Visual Studio per Mac. È anche possibile modificare l' **azione di compilazione** nella finestra delle **Proprietà** del file.
+Per contrassegnare un file per l'inclusione, fare clic con il pulsante destro del mouse sul file e scegliere **Compila azione &gt; contenuto** nella Visual Studio per Mac. È anche possibile modificare l' **azione di compilazione** nella finestra delle **Proprietà** del file.
 
 ### <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole
 
 È importante comprendere che l'file system iOS fa distinzione tra *maiuscole*e minuscole. Distinzione maiuscole/minuscole indica che i nomi di file e directory devono corrispondere esattamente a. **Readme. txt** e **Readme. txt** verrebbero considerati nomi file diversi.
 
-Questo potrebbe creare confusione per gli sviluppatori .NET che hanno familiarità con la file system di Windows, senza *distinzione* tra maiuscole e minuscole: **file**, **file**e **file** fanno tutti riferimento alla stessa directory.
+Questo potrebbe creare confusione per gli sviluppatori .NET che hanno familiarità con la file system di Windows, senza *distinzione tra maiuscole* e minuscole: **file**, **file**e **file** fanno tutti riferimento alla stessa directory.
 
 > [!WARNING]
 > Il simulatore iOS non distingue tra maiuscole e minuscole.
@@ -165,7 +165,7 @@ Questo potrebbe creare confusione per gli sviluppatori .NET che hanno familiarit
 
 iOS usa la barra "/" come separatore di percorso, che è diverso da Windows, che usa la barra rovesciata "\".
 
-A causa di questa differenza confusa, è consigliabile usare il `System.IO.Path.Combine` metodo, che si adatta alla piattaforma corrente, anziché impostare come hardcoded un separatore di percorso specifico. Si tratta di un passaggio semplice che rende il codice più portabile su altre piattaforme.
+A causa di questa differenza confusa, è consigliabile usare il metodo `System.IO.Path.Combine`, che si adatta alla piattaforma corrente, anziché impostare come hardcoded un separatore di percorso specifico. Si tratta di un passaggio semplice che rende il codice più portabile su altre piattaforme.
 
 ## <a name="application-sandbox"></a>Sandbox applicazione
 
@@ -186,7 +186,7 @@ Per visualizzare il bundle dell'applicazione per il codice di esempio, fare clic
 
 Fare clic con il pulsante destro del mouse sull'icona e scegliere **Mostra contenuto pacchetto** per visualizzare il contenuto della directory del bundle dell'applicazione. Il contenuto viene visualizzato esattamente come il contenuto di una directory normale, come illustrato di seguito:
 
-[![Contenuto del bundle dell'app](file-system-images/45-bundle-sml.png)](file-system-images/45-bundle.png#lightbox)
+[![il contenuto del bundle dell'app](file-system-images/45-bundle-sml.png)](file-system-images/45-bundle.png#lightbox)
 
 Il bundle dell'applicazione è quello che viene installato nel simulatore o nel dispositivo durante i test e, infine, viene inviato ad Apple per l'inclusione nell'App Store.
 
@@ -198,22 +198,22 @@ Queste directory, come determinare il percorso e i rispettivi scopi sono elencat
 
 &nbsp;
 
-|Directory|DESCRIZIONE|
+|Directory|Descrizione|
 |---|---|
-|[ApplicationName]. app/|**In iOS 7 e versioni precedenti**, si tratta `ApplicationBundle` della directory in cui è archiviato il file eseguibile dell'applicazione. La struttura di directory creata nell'app esiste in questa directory, ad esempio immagini e altri tipi di file contrassegnati come risorse nel progetto Visual Studio per Mac.<br /><br />Se è necessario accedere ai file di contenuto all'interno del bundle dell'applicazione, il percorso di questa directory è disponibile `NSBundle.MainBundle.BundlePath` tramite la proprietà.|
-|Documenti|Utilizzare questa directory per archiviare documenti utente e file di dati dell'applicazione.<br /><br />Il contenuto di questa directory può essere reso disponibile all'utente tramite la condivisione di file iTunes (anche se è disabilitato per impostazione predefinita). Aggiungere una `UIFileSharingEnabled` chiave booleana al file INFO. plist per consentire agli utenti di accedere a questi file.<br /><br />Anche se un'applicazione non Abilita immediatamente la condivisione file, è consigliabile evitare di inserire i file che devono essere nascosti agli utenti in questa directory, ad esempio i file di database, a meno che non si desideri condividerli. Finché i file riservati rimangono nascosti, questi file non verranno esposti (e potenzialmente spostati, modificati o eliminati da iTunes) se la condivisione file è abilitata in una versione futura.<br /><br /> È possibile usare il `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` metodo per ottenere il percorso della directory dei documenti per l'applicazione.<br /><br />Il contenuto di questa directory viene sottoposto a backup da iTunes.|
+|[ApplicationName]. app/|**In iOS 7 e versioni precedenti**, si tratta della directory `ApplicationBundle` in cui è archiviato il file eseguibile dell'applicazione. La struttura di directory creata nell'app esiste in questa directory, ad esempio immagini e altri tipi di file contrassegnati come risorse nel progetto Visual Studio per Mac.<br /><br />Se è necessario accedere ai file di contenuto all'interno del bundle dell'applicazione, il percorso di questa directory è disponibile tramite la proprietà `NSBundle.MainBundle.BundlePath`.|
+|Documenti|Utilizzare questa directory per archiviare documenti utente e file di dati dell'applicazione.<br /><br />Il contenuto di questa directory può essere reso disponibile all'utente tramite la condivisione di file iTunes (anche se è disabilitato per impostazione predefinita). Aggiungere una chiave booleana `UIFileSharingEnabled` al file INFO. plist per consentire agli utenti di accedere a questi file.<br /><br />Anche se un'applicazione non Abilita immediatamente la condivisione file, è consigliabile evitare di inserire i file che devono essere nascosti agli utenti in questa directory, ad esempio i file di database, a meno che non si desideri condividerli. Finché i file riservati rimangono nascosti, questi file non verranno esposti (e potenzialmente spostati, modificati o eliminati da iTunes) se la condivisione file è abilitata in una versione futura.<br /><br /> È possibile usare il metodo `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` per ottenere il percorso della directory dei documenti per l'applicazione.<br /><br />Il contenuto di questa directory viene sottoposto a backup da iTunes.|
 |Libreria|La directory della libreria è una posizione ideale per archiviare i file che non vengono creati direttamente dall'utente, ad esempio database o altri file generati dall'applicazione. Il contenuto di questa directory non viene mai esposto all'utente tramite iTunes.<br /><br />È possibile creare sottodirectory personalizzate nella libreria. Tuttavia, esistono già alcune directory create dal sistema che è necessario conoscere, incluse le preferenze e le cache.<br /><br />Il contenuto di questa directory (ad eccezione della sottodirectory Caches) viene sottoposto a backup da iTunes. Verrà eseguito il backup delle directory personalizzate create nella libreria.|
-|Libreria/Preferenze/|I file di preferenza specifici dell'applicazione vengono archiviati in questa directory. Non creare direttamente questi file. Usare invece la `NSUserDefaults` classe.<br /><br />Il contenuto di questa directory viene sottoposto a backup da iTunes.|
+|Libreria/Preferenze/|I file di preferenza specifici dell'applicazione vengono archiviati in questa directory. Non creare direttamente questi file. Usare invece la classe `NSUserDefaults`.<br /><br />Il contenuto di questa directory viene sottoposto a backup da iTunes.|
 |Libreria/cache/|La directory Caches rappresenta una posizione ideale per archiviare i file di dati che consentono l'esecuzione dell'applicazione, ma che possono essere ricreati facilmente. Se necessario, l'applicazione deve creare ed eliminare questi file in base alle necessità ed essere in grado di ricreare questi file. iOS 5 può anche eliminare questi file (in situazioni di archiviazione ridotte), ma questa operazione non viene eseguita durante l'esecuzione dell'applicazione.<br /><br />Il contenuto di questa directory non viene sottoposto a backup da iTunes, il che significa che non saranno presenti se l'utente ripristina un dispositivo e potrebbe non essere presente dopo l'installazione di una versione aggiornata dell'applicazione.<br /><br />Ad esempio, nel caso in cui l'applicazione non sia in grado di connettersi alla rete, è possibile utilizzare la directory cache per archiviare dati o file per offrire un'esperienza offline ottimale. L'applicazione può salvare e recuperare rapidamente questi dati in attesa di risposte di rete, ma non è necessario eseguirne il backup e può essere facilmente ripristinata o ricreata dopo un aggiornamento del ripristino o della versione.|
-|tmp/|Le applicazioni possono archiviare i file temporanei che sono necessari solo per un breve periodo di tempo in questa directory. Per conservare spazio, i file devono essere eliminati quando non sono più necessari. Il sistema operativo può anche eliminare i file da questa directory quando un'applicazione non è in esecuzione.<br /><br />Il contenuto di questa directory non viene sottoposto a backup da iTunes.<br /><br />Ad esempio, la directory tmp può essere usata per archiviare i file temporanei scaricati per la visualizzazione per l'utente (ad esempio, avatar di Twitter o allegati di posta elettronica), ma che potrebbero essere eliminati dopo che sono stati visualizzati e scaricati di nuovo se richiesti in futuro. .|
+|tmp|Le applicazioni possono archiviare i file temporanei che sono necessari solo per un breve periodo di tempo in questa directory. Per conservare spazio, i file devono essere eliminati quando non sono più necessari. Il sistema operativo può anche eliminare i file da questa directory quando un'applicazione non è in esecuzione.<br /><br />Il contenuto di questa directory non viene sottoposto a backup da iTunes.<br /><br />Ad esempio, la directory tmp può essere usata per archiviare i file temporanei scaricati per la visualizzazione per l'utente (ad esempio, avatar di Twitter o allegati di posta elettronica), ma che potrebbero essere eliminati dopo che sono stati visualizzati e scaricati di nuovo se richiesti in futuro. .|
 
 Questa schermata mostra la struttura di directory in una finestra di ricerca:
 
-[![](file-system-images/08-library-directory.png "Questa schermata mostra la struttura di directory in una finestra di ricerca")](file-system-images/08-library-directory.png#lightbox)
+[![](file-system-images/08-library-directory.png "This screenshot shows the directory structure in a Finder window")](file-system-images/08-library-directory.png#lightbox)
 
 ### <a name="accessing-other-directories-programmatically"></a>Accesso a altre directory a livello di codice
 
-Nella directory precedente e negli esempi di file `Documents` è stato eseguito l'accesso alla directory. Per scrivere in un'altra directory, è necessario creare un percorso usando la sintassi "..", come illustrato di seguito:
+La directory e gli esempi di file precedenti hanno eseguito l'accesso alla directory `Documents`. Per scrivere in un'altra directory, è necessario creare un percorso usando la sintassi "..", come illustrato di seguito:
 
 ```csharp
 var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
@@ -231,7 +231,7 @@ var directoryname = Path.Combine (library, "NewLibraryDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-I percorsi delle `Caches` directory `tmp` e possono essere costruiti in modo analogo al seguente:
+I percorsi delle directory `Caches` e `tmp` possono essere costruiti in modo analogo al seguente:
 
 ```csharp
 var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
@@ -241,7 +241,7 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 ## <a name="sharing-with-the-files-app"></a>Condivisione con l'app files
 
-iOS 11 ha introdotto l'app file, un visualizzatore di file per iOS, che consente all'utente di visualizzare e interagire con i file in iCloud e anche archiviati da qualsiasi applicazione che la supporti. Per consentire all'utente di accedere direttamente ai file nell'app, creare una nuova chiave booleana nel file `LSSupportsOpeningDocumentsInPlace` **info. plist** e impostarla su `true`, come indicato di seguito:
+iOS 11 ha introdotto **l'app file** , un visualizzatore di file per iOS, che consente all'utente di visualizzare e interagire con i file in iCloud e anche archiviati da qualsiasi applicazione che la supporti. Per consentire all'utente di accedere direttamente ai file nell'app, creare una nuova chiave booleana nel file **info. plist** `LSSupportsOpeningDocumentsInPlace` e impostarla su `true`, come indicato di seguito:
 
 ![Impostare LSSupportsOpeningDocumentsInPlace in info. plist](file-system-images/51-supports-opening.png)
 
@@ -251,13 +251,13 @@ La directory dei **documenti** dell'app sarà ora disponibile per l'esplorazione
 
 ## <a name="sharing-files-with-the-user-through-itunes"></a>Condivisione di file con l'utente tramite iTunes
 
-Gli utenti possono accedere ai file nella directory dei documenti dell'applicazione `Info.plist` modificando e creando un' **applicazione che supporta la voce iTunes sharing** (`UIFileSharingEnabled`) nella visualizzazione **origine** , come illustrato di seguito:
+Gli utenti possono accedere ai file nella directory dei documenti dell'applicazione modificando `Info.plist` e creando un' **applicazione che supporta** la voce di condivisione iTunes (`UIFileSharingEnabled`) nella visualizzazione **origine** , come illustrato di seguito:
 
-[![L'aggiunta dell'applicazione supporta la proprietà di condivisione iTunes](file-system-images/09-uifilesharingenabled-plist-sml.png)](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
+[![l'aggiunta dell'applicazione supporta la proprietà di condivisione iTunes](file-system-images/09-uifilesharingenabled-plist-sml.png)](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
-È possibile accedere a questi file in iTunes quando il dispositivo è connesso e l'utente sceglie la `Apps` scheda. Ad esempio, la schermata seguente mostra i file nell'app selezionata condivisa tramite iTunes:
+È possibile accedere a questi file in iTunes quando il dispositivo è connesso e l'utente sceglie la scheda `Apps`. Ad esempio, la schermata seguente mostra i file nell'app selezionata condivisa tramite iTunes:
 
-[![Questa schermata mostra i file nell'app selezionata condivisa tramite iTunes](file-system-images/10-itunes-file-sharing-sml.png)](file-system-images/10-itunes-file-sharing.png#lightbox)
+[![questa schermata mostra i file nell'app selezionata condivisa tramite iTunes](file-system-images/10-itunes-file-sharing-sml.png)](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 Gli utenti possono accedere solo agli elementi di livello superiore di questa directory tramite iTunes. Non possono visualizzare il contenuto delle sottodirectory (anche se possono copiarle nel computer o eliminarle). Ad esempio, con GoodReader, i file PDF e EPUB possono essere condivisi con l'applicazione in modo che gli utenti possano leggerli nei dispositivi iOS.
 
@@ -265,11 +265,11 @@ Gli utenti che modificano il contenuto della cartella documenti possono causare 
 
 Il codice di esempio per questo articolo crea un file e una cartella nella cartella documenti (in **SampleCode.cs**) e Abilita la condivisione di file nel file **info. plist** . Questo screenshot mostra come appaiono in iTunes:
 
-[![Questo screenshot mostra come vengono visualizzati i file in iTunes](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
+[![questo screenshot mostra come vengono visualizzati i file in iTunes](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 Per informazioni su come impostare le icone per l'applicazione e per i tipi di documenti personalizzati creati, vedere l'articolo [utilizzo delle immagini](~/ios/app-fundamentals/images-icons/index.md) .
 
-Se la `UIFileSharingEnabled` chiave è false o non è presente, la condivisione file è, per impostazione predefinita, disabilitata e gli utenti non saranno in grado di interagire con la directory dei documenti.
+Se la chiave di `UIFileSharingEnabled` è false o non è presente, la condivisione file è, per impostazione predefinita, disabilitata e gli utenti non saranno in grado di interagire con la directory dei documenti.
 
 ## <a name="backup-and-restore"></a>Backup e ripristino
 
@@ -290,15 +290,15 @@ Il backup di una grande quantità di dati può richiedere molto tempo. Se si dec
 > [!NOTE]
 > Sebbene questo criterio è stato introdotto per la prima volta con iOS 5 (che sembra molto tempo fa), le linee guida sono ancora rilevanti per le app attuali.
 
-Apple ha introdotto la funzionalità di *backup iCloud* con iOS 5. Quando il backup iCloud è abilitato, tutti i file nella home directory dell'applicazione (escluse le directory di cui non viene eseguito il backup, ad esempio il bundle dell' `Caches`app, `tmp`e) vengono sottoposti a backup nei server iCloud. Questa funzionalità consente all'utente di eseguire un backup completo in caso di smarrimento, furto o danneggiamento del dispositivo.
+Apple ha introdotto la funzionalità di *backup iCloud* con iOS 5. Quando il backup iCloud è abilitato, tutti i file nella home directory dell'applicazione (escluse le directory di cui non è stato eseguito il backup, ad esempio il bundle dell'app, `Caches`e `tmp`) vengono sottoposti a backup nei server iCloud. Questa funzionalità consente all'utente di eseguire un backup completo in caso di smarrimento, furto o danneggiamento del dispositivo.
 
 Poiché iCloud fornisce solo 5 GB di spazio libero a ogni utente e per evitare inutilmente l'uso della larghezza di banda, Apple prevede che le applicazioni debbano solo eseguire il backup di dati essenziali generati dall'utente. Per conformarsi alle linee guida per l'archiviazione dei dati iOS, è necessario limitare la quantità di dati di cui viene eseguito il backup aderendo agli elementi seguenti:
 
 - Archiviare solo i dati generati dall'utente o i dati che altrimenti non possono essere ricreati nella directory dei documenti (di cui viene eseguito il backup).
-- Archiviare tutti gli altri dati che possono essere facilmente ricreati o scaricati di nuovo `Library/Caches` in `tmp` o (di cui non è stato eseguito il backup e che potrebbero essere "puliti").
-- Se si dispone di file che potrebbero essere appropriati per `Library/Caches` la `tmp` cartella o, ma non si vuole essere ' puliti ', archiviarli altrove (ad esempio `Library/YourData`) e applicare l'attributo ' non eseguire il backup ' per impedire che i file utilizzino il backup iCloud larghezza di banda e spazio di archiviazione. Questi dati usano ancora spazio sul dispositivo, quindi è necessario gestirli con cautela ed eliminarli, quando possibile.
+- Archiviare tutti gli altri dati che possono essere facilmente ricreati o scaricati di nuovo in `Library/Caches` o `tmp` (che non viene sottoposto a backup e che potrebbero essere "puliti").
+- Se sono presenti file che potrebbero essere appropriati per la cartella `Library/Caches` o `tmp` ma non si vuole che vengano eliminati, archiviarli altrove (ad esempio `Library/YourData`) e applicare l'attributo ' non eseguire il backup ' per impedire che i file utilizzino la larghezza di banda dei backup iCloud e Stora spazio GE. Questi dati usano ancora spazio sul dispositivo, quindi è necessario gestirli con cautela ed eliminarli, quando possibile.
 
-L'attributo ' non eseguire il backup ' viene impostato utilizzando la `NSFileManager` classe. Verificare che la classe `using Foundation` sia e `SetSkipBackupAttribute` chiamare come segue:
+L'attributo ' non eseguire il backup ' viene impostato con la classe `NSFileManager`. Verificare che la classe sia `using Foundation` e chiamare `SetSkipBackupAttribute` come segue:
 
 ```csharp
 var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
@@ -307,7 +307,7 @@ File.WriteAllText(filename, "This file will never get backed-up. It would need t
 NSFileManager.SetSkipBackupAttribute (filename, true); // backup will be skipped for this file
 ```
 
-Quando `SetSkipBackupAttribute` non `true` viene eseguito il backup del file, indipendentemente dalla directory in cui è archiviato (anche la `Documents` directory). È possibile eseguire una query sull'attributo `GetSkipBackupAttribute` usando il metodo ed è possibile reimpostarlo chiamando `SetSkipBackupAttribute` il metodo `false`con, come segue:
+Quando `SetSkipBackupAttribute` è `true` non verrà eseguito il backup del file, indipendentemente dalla directory in cui sono archiviati (anche la directory `Documents`). È possibile eseguire una query sull'attributo usando il metodo `GetSkipBackupAttribute` ed è possibile reimpostarlo chiamando il metodo `SetSkipBackupAttribute` con `false`, come segue:
 
 ```csharp
 NSFileManager.SetSkipBackupAttribute (filename, false); // file will be backed-up
@@ -339,7 +339,7 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 ```
 
 > [!IMPORTANT]
-> Se il percorso del gruppo restituito `null`è, controllare la configurazione dei diritti e del profilo di provisioning e assicurarsi che siano corretti.
+> Se il percorso del gruppo restituito è `null`, controllare la configurazione dei diritti e del profilo di provisioning e verificare che siano corretti.
 
 ## <a name="application-version-updates"></a>Aggiornamenti della versione dell'applicazione
 

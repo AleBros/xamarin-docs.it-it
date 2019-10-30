@@ -3,21 +3,21 @@ title: Prestazioni e sicurezza
 description: Questo documento contiene i collegamenti a varie guide che descrivono le tecniche per l'ottimizzazione delle prestazioni nelle applicazioni Xamarin.iOS, Xamarin.Android e Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2017
-ms.openlocfilehash: 6c226095c43a389f491dd2af9a158ceb4420b637
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
-ms.translationtype: HT
+ms.openlocfilehash: c07032d63032eb59cc67712bc2419f74319ea107
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780584"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016506"
 ---
 # <a name="performance-and-security"></a>Prestazioni e sicurezza
 
 ## <a name="cross-platform-performancememory-perf-best-practicesmd"></a>[Prestazioni multipiattaforma](memory-perf-best-practices.md)
 
-Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con la piattaforma Xamarin. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con la piattaforma Xamarin. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 - [Prestazioni Android](~/android/deploy-test/performance.md?context=xamarin/cross-platform)
 - [Prestazioni iOS](~/ios/deploy-test/performance.md?context=xamarin/cross-platform)

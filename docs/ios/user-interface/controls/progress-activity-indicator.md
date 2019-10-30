@@ -4,21 +4,21 @@ description: Questo documento illustra come usare gli indicatori di stato e atti
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: a2197a1ff9c37546fd97eb5a2459764ec05d4412
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 76e1ee54a5e1b729fdcb0b0a2c1f278703b2b4d6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768921"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021966"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicatori di stato e attività in Novell. iOS
 
 È probabile che l'app debba eseguire attività a esecuzione prolungata, ad esempio il caricamento o l'elaborazione dei dati e che questo ritardo può causare un ritardo nell'aggiornamento dell'interfaccia utente. Durante questo intervallo di tempo è necessario usare sempre un indicatore di stato per rassicurare l'utente che il sistema è occupato a lavorare. In questo modo si fornisce al controllo utente che l'app sta lavorando alla richiesta, che non è in attesa dell'input e che può fornire un modo per definirne i dettagli esattamente quanto tempo è necessario attendere.
 
-iOS offre due modi principali per fornire questa indicazione di stato nell'app: Indicatori di attività (incluso un indicatore di attività di _rete_ specifico) e barre di stato.
+iOS offre due modi principali per fornire questa indicazione di stato nell'app: gli indicatori di attività (incluso un indicatore di attività di _rete_ specifico) e le barre di stato.
 
 ## <a name="activity-indicator"></a>Indicatore attività
 
@@ -32,7 +32,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di attivi
 
 ### <a name="implementing-an-activity-indicator"></a>Implementazione di un indicatore di attività
 
-Un indicatore di attività viene implementato tramite [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) la classe per indicare che `UIActivity` si sta effettuando una.
+Un indicatore di attività viene implementato tramite la classe [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) per indicare che viene eseguita una `UIActivity`.
 
 ### <a name="activity-indicators-and-storyboards"></a>Indicatori di attività e storyboard
 
@@ -42,19 +42,19 @@ Se si usa la finestra di progettazione iOS per creare l'interfaccia utente, è p
 
 ### <a name="managing-activity-indicator-behavior"></a>Gestione del comportamento dell'indicatore di attività
 
-Usare i `StartAnimating()` metodi `StopAnimating()` e per avviare e arrestare l'animazione dell'indicatore di attività.
+Usare i metodi `StartAnimating()` e `StopAnimating()` per avviare e arrestare l'animazione dell'indicatore di attività.
 
-Impostare la `HidesWhenStopped` proprietà su `true` per rendere l'indicatore di attività scomparire dopo che `StopAnimating()` è stato chiamato. Questa impostazione è impostata `true` su per impostazione predefinita. In qualsiasi momento è possibile verificare se l'indicatore di attività sta eseguendo l'animazione rotante controllando la `IsAnimating` proprietà. 
+Impostare la proprietà `HidesWhenStopped` su `true` per far scomparire l'indicatore dell'attività dopo la chiamata di `StopAnimating()`. Questa impostazione è impostata su `true` per impostazione predefinita. In qualsiasi momento è possibile verificare se l'indicatore di attività sta eseguendo l'animazione rotante controllando la proprietà `IsAnimating`. 
 
 ### <a name="managing-activity-indicator-appearances"></a>Gestione dell'aspetto degli indicatori di attività
 
-L' `UIActivityIndicatorViewStyle` enumerazione può essere passata come parametro quando si crea un'istanza dell'indicatore di attività. È possibile utilizzare questa impostazione per impostare lo stile di `Gray`visualizzazione `White`su, `WhiteLarge`o, ad esempio:
+L'enumerazione `UIActivityIndicatorViewStyle` può essere passata come parametro quando si crea un'istanza dell'indicatore di attività. È possibile usare questa impostazione per impostare lo stile di visualizzazione su `Gray`, `White`o `WhiteLarge`, ad esempio:
 
 ```csharp
 activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
 ```
 
-È possibile eseguire l'override del colore `UIActivityIndicatorViewStyle` fornito da impostando la `Color` proprietà.
+È possibile eseguire l'override del colore fornito da `UIActivityIndicatorViewStyle` impostando la proprietà `Color`.
 
 ## <a name="progress-bar"></a>ProgressBar
 
@@ -67,7 +67,7 @@ Apple presenta i suggerimenti seguenti per l'utilizzo degli indicatori di stato:
 
 ### <a name="implementing-an-progress-bar"></a>Implementazione di un indicatore di stato
 
-Un indicatore di stato viene creato creando un'istanza di[`UIProgressView`](xref:UIKit.UIProgressView)
+Un indicatore di stato viene creato creando un'istanza di un [`UIProgressView`](xref:UIKit.UIProgressView)
 
 ### <a name="progress-bars-and-storyboards"></a>Barre di stato e storyboard
 
@@ -79,13 +79,13 @@ Nel riquadro delle proprietà è possibile modificare le proprietà seguenti:
 
 ### <a name="managing-progress-bar-behavior"></a>Gestione del comportamento dell'indicatore di stato
 
-Lo stato di avanzamento della barra può essere impostato inizialmente tramite la `Progress` proprietà:
+Lo stato di avanzamento della barra può essere impostato inizialmente usando la proprietà `Progress`:
 
 ```csharp
 ProgressBar.Progress = 0f;
 ```
 
-Lo stato di avanzamento può essere regolato utilizzando `SetProgress` il metodo e passando un valore booleano che dichiara se si desidera che la modifica venga animata o meno.
+Lo stato di avanzamento può essere regolato utilizzando il metodo `SetProgress` e passando un valore booleano che dichiara se si desidera che la modifica venga animata o meno.
 
 ```csharp
 ProgressBar.SetProgress(1.0f, true);
@@ -95,7 +95,7 @@ Per ulteriori informazioni sull'utilizzo dell'indicatore di stato, fare riferime
 
 ### <a name="managing-progress-bar-appearance"></a>Gestione dell'aspetto della barra di stato
 
-Analogamente a un indicatore di attività `UIProgressViewStyle` , l'enumerazione può essere passata come parametro quando si crea un'istanza della barra di stato.
+Analogamente a un indicatore di attività, l'enumerazione `UIProgressViewStyle` può essere passata come parametro quando si crea un'istanza della barra di stato.
 
 È possibile modificare l'immagine di avanzamento e di traccia e il colore della tinta usando le proprietà seguenti:
 

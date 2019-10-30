@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
 ms.custom: video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/06/2018
-ms.openlocfilehash: 31e4073df70ced0cc9729c6dc292500264ad7fce
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 56430f8c4988c16a31f9806b0ffb8b6355d6340b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249947"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020004"
 ---
 # <a name="oreo-features"></a>Funzionalità di Oreo
 
@@ -21,7 +21,7 @@ _Come iniziare a usare Novell. Android per sviluppare app per la versione più r
 
 [Android 8,0 Oreo](https://developer.android.com/index.html) è la versione più recente di Android disponibile in Google. Android Oreo offre molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità includono i canali di notifica, le notifiche di notifica, i tipi di carattere personalizzati in XML, i tipi di carattere scaricabili, il riempimento automatico e l'immagine in immagini (PIP). Android Oreo include nuove API per queste nuove funzionalità e queste API sono disponibili per le app Novell. Android quando si usa Novell. Android 8,0 e versioni successive.
 
-[![Immagine Hero Oreo Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
+[![immagine Hero Oreo Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
 Questo articolo è strutturato per iniziare a sviluppare app Novell. Android per Android 8,0 Oreo. Viene illustrato come installare gli aggiornamenti necessari, configurare l'SDK e creare un emulatore (o dispositivo) per il test. Fornisce inoltre una descrizione delle nuove funzionalità di Android 8,0 Oreo, con collegamenti a app di esempio che illustrano come usare le funzionalità di Android Oreo nelle app Novell. Android.
 
@@ -29,11 +29,11 @@ Questo articolo è strutturato per iniziare a sviluppare app Novell. Android per
 
 Per usare le funzionalità di Android Oreo nelle app basate su Novell, è necessario quanto segue:
 
-- **Visual Studio** &ndash; Se si usa Windows, è richiesta la versione 15,5 o successiva di Visual Studio.  Se si usa un Mac, è necessario Visual Studio per Mac versione 7.2.0.
+- **Visual studio** &ndash; se si usa Windows, è necessaria la versione 15,5 o successiva di Visual Studio.  Se si usa un Mac, è necessario Visual Studio per Mac versione 7.2.0.
 
-- **Novell. Android** &ndash; Novell. Android 8,0 o versione successiva deve essere installato e configurato con Visual Studio.
+- **Novell. android** &ndash; Novell. Android 8,0 o versione successiva deve essere installato e configurato con Visual Studio.
 
-- **Android SDK** &ndash; Android SDK 8,0 (API 26) o versione successiva deve essere installato tramite gestione Android SDK.
+- **Android SDK** &ndash; Android SDK 8,0 (API 26) o versione successiva deve essere installato tramite il Android SDK Manager.
 
 ## <a name="getting-started"></a>Introduzione
 
@@ -83,11 +83,11 @@ Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usa
 
 2. Installare i pacchetti **Android 8,0-Oreo** . Se si usa l'emulatore Android SDK, assicurarsi di includere le immagini di sistema **x86** che saranno necessarie:
 
-    [![Selezione dei pacchetti Android 8,0 in gestione Android SDK](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
+    [![selezionare i pacchetti Android 8,0 in gestione Android SDK](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. Installare **Android SDK Tools 26.0.2** o versioni successive, **Android SDK Platform-Tools 26.0.0** o versione successiva e **Android SDK build-Tools 26.0.0** (o versione successiva):
 
-    [![Selezione di Android SDK Tools 26 in gestione Android SDK](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
+    [![selezionare Android SDK Tools 26 nel gestore Android SDK](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -95,11 +95,11 @@ Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usa
 
 2. Installare i pacchetti **Android 8,0-Oreo** SDK. Se si usa l'emulatore Android SDK, assicurarsi di includere le immagini di sistema **x86** che saranno necessarie:
 
-    [![Selezione dei pacchetti Android 8,0 in SDK Manager](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
+    [![selezione dei pacchetti Android 8,0 in SDK Manager](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. Installare **Android SDK Tools 26.0.2** o versioni successive, **Android SDK Platform-Tools 26.0.0** o versione successiva e **Android SDK build-Tools 26.0.0** (o versione successiva):
 
-    [![Selezione di Android SDK Tools 26 in SDK Manager](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
+    [![selezionare Android SDK Tools 26 in SDK Manager](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
@@ -107,7 +107,7 @@ Per creare un progetto con Novell. Android 8,0, è necessario prima di tutto usa
 
 Creare un nuovo progetto Novell. Android. Se non si ha familiarità con lo sviluppo di Android con Novell, vedere [Hello, Android](~/android/get-started/hello-android/index.md) per altre informazioni sulla creazione di progetti Novell. Android.
 
-Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 8,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 8,0, è necessario configurare il livello API Android di destinazione del progetto su **android 8,0 (API 26)** . Si consiglia inoltre di impostare il livello di Framework di destinazione su API 26 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
+Quando si crea un progetto Android, è necessario configurare le impostazioni della versione per la destinazione Android 8,0 o versione successiva. Ad esempio, per fare riferimento al progetto per Android 8,0, è necessario configurare il livello API Android di destinazione del progetto su **android 8,0 (API 26)**. Si consiglia inoltre di impostare il livello di Framework di destinazione su API 26 o versione successiva. Per altre informazioni sulla configurazione dei livelli a livello di API Android, vedere [informazioni sui livelli di API Android](~/android/app-fundamentals/android-api-levels.md).
 
 ### <a name="configure-an-emulator-or-device"></a>Configurare un emulatore o un dispositivo
 
@@ -123,7 +123,7 @@ Se si tenta di avviare il gestore AVD basato su Google GUI predefinito dopo l'in
 
 -----
 
-Questo messaggio viene visualizzato perché Google non fornisce più un Manager autonomo di GUI AVD che supporta l'API 26,0 e versioni successive. Per Android 8,0 Oreo è necessario usare Novell emulatore Android Manager o lo strumento da riga `avdmanager` di comando per creare dispositivi virtuali per Android Oreo.
+Questo messaggio viene visualizzato perché Google non fornisce più un Manager autonomo di GUI AVD che supporta l'API 26,0 e versioni successive. Per Android 8,0 Oreo è necessario usare Novell emulatore Android Manager o lo strumento da riga di comando `avdmanager` per creare dispositivi virtuali per Android Oreo.
 
 Per usare la Android Device Manager per creare e gestire i dispositivi virtuali, vedere [gestione di dispositivi virtuali con il Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 Per creare dispositivi virtuali senza il Android Device Manager, attenersi alla procedura descritta nella sezione successiva.
@@ -134,13 +134,13 @@ Per usare **avdmanager** per creare un nuovo dispositivo virtuale, seguire quest
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Aprire una finestra del prompt dei comandi `JAVA_HOME` e impostare sul percorso di Java SDK nel computer. Per un'installazione Novell tipica, è possibile usare il comando seguente:
+1. Aprire una finestra del prompt dei comandi e impostare `JAVA_HOME` sul percorso di Java SDK nel computer. Per un'installazione Novell tipica, è possibile usare il comando seguente:
 
     ```cmd
     setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     ```
 
-2. Aggiungere il percorso della cartella Android SDK `bin` `PATH`al.
+2. Aggiungere il percorso della cartella Android SDK `bin` al `PATH`.
     Per un'installazione Novell tipica, è possibile usare il comando seguente:
 
     ```cmd
@@ -157,7 +157,7 @@ Per usare **avdmanager** per creare un nuovo dispositivo virtuale, seguire quest
 
 Dopo aver **avdmanagerto** la creazione del dispositivo virtuale, questo verrà incluso nel menu a discesa del dispositivo:
 
-[![Nuovo AVD aggiunto al menu a discesa del dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
+[![nuovo AVD aggiunto al menu a discesa del dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -177,7 +177,7 @@ Dopo aver **avdmanagerto** la creazione del dispositivo virtuale, questo verrà 
 
 Dopo aver usato **avdmanager** per creare il dispositivo virtuale, questo verrà incluso nel menu a discesa del dispositivo:
 
-[![Nuovo AVD aggiunto al menu a discesa del dispositivo](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
+[![nuovo AVD aggiunto al menu a discesa del dispositivo](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -200,23 +200,23 @@ I [canali di notifica](~/android/app-fundamentals/notifications/local-notificati
 
 Le notifiche di notifica sono punti piccoli visualizzati sopra le icone dell'app, come illustrato in questo screenshot:
 
-[![Notifiche di esempio sulle icone delle app](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
+[![notifiche di esempio sulle icone delle app](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
-Questi punti indicano che sono presenti nuove notifiche per uno o più canali di notifica nell'app associata a tale icona &ndash; dell'app. si tratta di notifiche che l'utente non ha ancora perso o che ha eseguito l'azione. Gli utenti possono premere a lungo un'icona per esaminare le notifiche associate a un badge di notifica, per la chiusura o l'azione delle notifiche dal menu di pressione prolungata che appeaars.
+Questi punti indicano che sono presenti nuove notifiche per uno o più canali di notifica nell'app associata a tale icona dell'app &ndash; si tratta di notifiche che l'utente non ha ancora perso o che ha eseguito l'azione. Gli utenti possono premere a lungo un'icona per esaminare le notifiche associate a un badge di notifica, per la chiusura o l'azione delle notifiche dal menu di pressione prolungata che appeaars.
 
 Per ulteriori informazioni sulle notifiche di notifica, vedere l'argomento [notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges) per sviluppatori Android.
 
 ### <a name="custom-fonts-in-xml"></a>Tipi di carattere personalizzati in XML
 
-Android Oreo introduce i *tipi di carattere in XML*, che consente di incorporare i tipi di carattere personalizzati come risorse. Sono supportati i formati OpenType ( **. otf**) e i tipi di carattere TrueType ( **. ttf**). Per aggiungere tipi di carattere come risorse, procedere come segue:
+Android Oreo introduce i *tipi di carattere in XML*, che consente di incorporare i tipi di carattere personalizzati come risorse. Sono supportati i formati OpenType (**. otf**) e i tipi di carattere TrueType (**. ttf**). Per aggiungere tipi di carattere come risorse, procedere come segue:
 
 1. Creare una cartella **Resources/font** .
 
 2. Copiare i file dei tipi di carattere, ad esempio file con **estensione ttf** e **OTF** , in **risorse/tipo di carattere**. 
 
-3. Se necessario, rinominare i file del tipo di carattere in modo che siano conformi alle convenzioni di denominazione dei file Android, ovvero usare solo lettere minuscole *a-z*, *0-9*e caratteri di sottolineatura nei nomi dei file. Il file `Pacifico-Regular.ttf` del tipo di carattere, ad esempio, può essere rinominato `pacifico.ttf`come.
+3. Se necessario, rinominare i file del tipo di carattere in modo che siano conformi alle convenzioni di denominazione dei file Android, ovvero usare solo lettere minuscole *a-z*, *0-9*e caratteri di sottolineatura nei nomi dei file. Ad esempio, il file del tipo di carattere `Pacifico-Regular.ttf` potrebbe essere rinominato come `pacifico.ttf`.
 
-4. Applicare il tipo di carattere personalizzato usando il `android:fontFamily` nuovo attributo nel codice XML del layout. Ad esempio, la Dichiarazione `TextView` seguente usa la risorsa del tipo di carattere **Pacifico. ttf** aggiunta:
+4. Applicare il tipo di carattere personalizzato usando il nuovo attributo `android:fontFamily` nel codice XML del layout. Ad esempio, la dichiarazione di `TextView` seguente usa la risorsa del tipo di carattere **Pacifico. ttf** aggiunta:
 
    ```xml
    <TextView
@@ -232,7 +232,7 @@ Android Oreo introduce i *tipi di carattere in XML*, che consente di incorporare
 
 A partire da Android Oreo, le app possono richiedere tipi di carattere da un provider anziché aggregarli nell'APK. I tipi di carattere vengono scaricati dalla rete solo se necessario. Questa funzionalità riduce le dimensioni APK, mantenendo la memoria del telefono e l'utilizzo dei dati cellulari. È anche possibile usare questa funzionalità nelle versioni 14 e successive dell'API Android installando il pacchetto della libreria di supporto Android 26.
 
-Quando l'app necessita di un tipo di carattere, `FontsRequest` si crea un oggetto (specificando il tipo di carattere da scaricare) `FontsContract` e quindi lo si passa a un metodo per scaricare il tipo di carattere. I passaggi seguenti descrivono in modo più dettagliato il processo di download del tipo di carattere:
+Quando l'app necessita di un tipo di carattere, si crea un oggetto `FontsRequest` (specificando il tipo di carattere da scaricare) e quindi lo si passa a un metodo di `FontsContract` per scaricare il tipo di carattere. I passaggi seguenti descrivono in modo più dettagliato il processo di download del tipo di carattere:
 
 1. Creare un'istanza di un oggetto [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) . 
 
@@ -244,7 +244,7 @@ Quando l'app necessita di un tipo di carattere, `FontsRequest` si crea un oggett
 
 5. Chiamare il metodo [FontsContract. RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) per recuperare il tipo di carattere dal provider del tipo di carattere. 
 
-Quando si chiama il `RequestFonts` metodo, verifica innanzitutto se il tipo di carattere è memorizzato nella cache locale (da una chiamata precedente `RequestFont`a). Se non viene memorizzato nella cache, chiama il provider del tipo di carattere, recupera il tipo di carattere in modo asincrono e quindi passa i risultati all'app richiamando il `OnTypeFaceRetrieved` metodo.
+Quando si chiama il metodo `RequestFonts`, verifica innanzitutto se il tipo di carattere è memorizzato nella cache locale (da una chiamata precedente a `RequestFont`). Se non viene memorizzato nella cache, chiama il provider del tipo di carattere, recupera il tipo di carattere in modo asincrono e quindi passa di nuovo i risultati all'app richiamando il metodo `OnTypeFaceRetrieved`.
 
 L'esempio di [tipi di carattere scaricabili](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) illustra come usare la funzionalità per i tipi di carattere scaricabile introdotta in Android Oreo. 
 
@@ -268,11 +268,11 @@ Per specificare che l'attività dell'app può usare la modalità PIP, impostare 
 android:supportsPictureInPicture
 ```
 
-Per specificare il comportamento dell'attività in modalità PIP, utilizzare il nuovo oggetto [PictureInPictureParams](https://developer.android.com/reference/android/app/PictureInPictureParams.html) . `PictureInPictureParams`rappresenta un set di parametri utilizzati per inizializzare e aggiornare un'attività in modalità PIP, ad esempio le proporzioni preferite dell'attività. Sono stati aggiunti i nuovi metodi PIP seguenti `Activity` a in Android Oreo:
+Per specificare il comportamento dell'attività in modalità PIP, utilizzare il nuovo oggetto [PictureInPictureParams](https://developer.android.com/reference/android/app/PictureInPictureParams.html) . `PictureInPictureParams` rappresenta un set di parametri utilizzati per inizializzare e aggiornare un'attività in modalità PIP, ad esempio le proporzioni preferite dell'attività. I nuovi metodi PIP seguenti sono stati aggiunti a `Activity` in Android Oreo:
 
 - [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29) &ndash; inserisce l'attività in modalità PIP. L'attività viene posizionata nell'angolo dello schermo e il resto dello schermo viene riempito con l'attività precedente visualizzata sullo schermo.
 
-- [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; Aggiorna le impostazioni di configurazione PIP dell'attività, ad esempio una modifica nelle proporzioni.
+- [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; aggiorna le impostazioni di configurazione PIP dell'attività, ad esempio una modifica nelle proporzioni.
 
 L'esempio [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) illustra l'uso di base della modalità PIP (immagine in immagine) per i dispositivi palmari introdotti in Oreo. Nell'esempio viene riprodotto un video che continua senza interruzioni durante lo spostamento tra le modalità di visualizzazione o altre attività.
 
@@ -288,9 +288,9 @@ Android Oreo include diverse modifiche del comportamento di sistema e API che po
 
 Per migliorare l'esperienza utente, Android Oreo impone limitazioni sulle app che possono essere eseguite in background. Ad esempio, se l'utente guarda un video o gioca una partita, un'app in esecuzione in background può compromettere le prestazioni di un'app a elevato utilizzo di video in esecuzione in primo piano. Di conseguenza, Android Oreo pone le restrizioni seguenti per le app che non interagiscono direttamente con l'utente:
 
-1. **Limitazioni del servizio in background** &ndash; Quando un'app viene eseguita in background, presenta una finestra di diversi minuti in cui è ancora possibile creare e usare i servizi. Alla fine di tale finestra, Android arresta il servizio in background dell'app e lo considera _inattivo_.
+1. **Limitazioni del servizio in background** &ndash; quando un'app è in esecuzione in background, presenta una finestra di diversi minuti in cui è ancora possibile creare e usare i servizi. Alla fine di tale finestra, Android arresta il servizio in background dell'app e lo considera _inattivo_.
 
-2. **Limitazioni broadcast** &ndash; Android 7,0 (API 25) ha inserito limitazioni sulle trasmissioni che un'app registra per ricevere. Android Oreo rende più rigorose queste limitazioni. Ad esempio, le app Android Oreo non possono più registrare ricevitori broadcast per trasmissioni implicite nei propri manifesti.
+2. Le **limitazioni broadcast** &ndash; Android 7,0 (API 25) hanno applicato limitazioni alle trasmissioni che un'app registra per ricevere. Android Oreo rende più rigorose queste limitazioni. Ad esempio, le app Android Oreo non possono più registrare ricevitori broadcast per trasmissioni implicite nei propri manifesti.
 
 Per ulteriori informazioni sui nuovi limiti di esecuzione in background, vedere l'argomento relativo ai [limiti di esecuzione in background](https://developer.android.com/about/versions/oreo/background.html) per sviluppatori Android.
 
@@ -300,7 +300,7 @@ Le app destinate a Android Oreo o versioni successive devono modificare le propr
 
 - Android Oreo depreca la possibilità di impostare la priorità delle singole notifiche. Si imposta invece un livello di importanza consigliato durante la creazione di un canale di notifica. Il livello di importanza assegnato a un canale di notifica si applica a tutti i messaggi di notifica inviati.
 
-- Per le app destinate a Android `PendingIntent.GetService()` Oreo, non funziona a causa dei nuovi limiti posti sui servizi avviati in background. Se la destinazione è Android Oreo, usare invece [PendingIntent. getbroadcast](xref:Android.App.PendingIntent.GetBroadcast*) .  
+- Per le app destinate a Android Oreo, `PendingIntent.GetService()` non funziona a causa dei nuovi limiti posti sui servizi avviati in background. Se la destinazione è Android Oreo, usare invece [PendingIntent. getbroadcast](xref:Android.App.PendingIntent.GetBroadcast*) .  
 
 ## <a name="sample-code"></a>Codice di esempio
 
@@ -316,7 +316,7 @@ Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare
 
 - [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat) illustra l'uso della libreria di supporto EmojiCompat. È possibile usare questa libreria per impedire che l'app mostri caratteri emoji mancanti come caratteri "tofu".
 
-- [Gli aggiornamenti della posizione in sospeso](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) illustrano l'uso dell'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo `PendingIntent`usando un.
+- [Gli aggiornamenti della posizione in sospeso](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) illustrano l'uso dell'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo usando un `PendingIntent`.
 
 - [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) illustra come usare l'API location per ottenere gli aggiornamenti sulla posizione di un dispositivo usando un servizio in primo piano associato e avviato.
 

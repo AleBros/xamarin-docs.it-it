@@ -4,15 +4,15 @@ description: Questa guida descrive le operazioni necessarie per l'installazione 
 ms.prod: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 315cb8e58b0b9f29c06e4d0af2b8cf9adffb06e3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758518"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020696"
 ---
 # <a name="windows-installation"></a>Installazione di Windows
 
@@ -21,7 +21,7 @@ _Questa guida descrive le operazioni necessarie per l'installazione di Xamarin.A
 ## <a name="overview"></a>Panoramica
 
 Poiché Xamarin è ora incluso gratuitamente in tutte le edizioni di Visual Studio e non richiede una licenza separata, è possibile usare il programma di installazione di Visual Studio per scaricare e installare gli strumenti di Xamarin.Android.
-L'installazione manuale e le operazioni per le licenze richieste per le versioni precedenti di Xamarin.Android non sono più necessarie. In questa guida si imparerà a:
+(L'installazione manuale e i passaggi di licenza richiesti per le versioni precedenti di Novell. Android non sono più necessari). In questa guida si apprenderà quanto segue:
 
 - Configurare percorsi personalizzati per Java Development Kit, Android SDK e Android NDK.
 
@@ -45,7 +45,7 @@ Xamarin.Android usa Java Development Kit (JDK) e Android SDK per compilare le ap
 
 La maggior parte degli utenti potrà usare questi percorsi predefiniti senza apportare ulteriori modifiche. Tuttavia, potrebbe essere necessario configurare Visual Studio con percorsi personalizzati per questi strumenti (ad esempio, se Java JDK, Android SDK o NDK è stato installato in un percorso diverso). Fare clic su **Modifica** accanto al percorso che si vuole modificare e quindi selezionare il nuovo percorso.
 
-Xamarin.Android usa [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), la versione necessaria per le attività di sviluppo per il livello API 24 o un livello superiore (JDK 8 supporta anche i livelli API precedenti al livello 24). È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
+Xamarin.Android usa [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), la versione necessaria per sviluppare il livello API 24 o un livello superiore. JDK 8 supporta anche i livelli API precedenti al livello 24. È possibile continuare a usare [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) per attività di sviluppo specifiche per il livello API 23 o un livello precedente.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.

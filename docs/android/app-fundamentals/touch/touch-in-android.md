@@ -3,32 +3,32 @@ title: Tocco in Android
 ms.prod: xamarin
 ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: e9810eed3affb15f581b95aec1aff9ae560ff63c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 960f75126fdfed770f79e0b4dad5641886eaf8ba
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754748"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024314"
 ---
 # <a name="touch-in-android"></a>Tocco in Android
 
-Analogamente a iOS, Android crea un oggetto che include i dati sull'interazione fisica dell'utente con la &ndash; schermata `Android.View.MotionEvent` di un oggetto. Questo oggetto include dati quali l'azione eseguita, la posizione in cui si è verificato il tocco, la quantità di pressione applicata e così via. Un `MotionEvent` oggetto suddivide lo spostamento in con i valori seguenti:
+Analogamente a iOS, Android crea un oggetto che include i dati sull'interazione fisica dell'utente con la schermata &ndash; un oggetto `Android.View.MotionEvent`. Questo oggetto include dati quali l'azione eseguita, la posizione in cui si è verificato il tocco, la quantità di pressione applicata e così via. Un oggetto `MotionEvent` suddivide lo spostamento in ai valori seguenti:
 
 - Codice di azione che descrive il tipo di movimento, ad esempio il tocco iniziale, il tocco in movimento sullo schermo o il tocco finale.
 
-- Set di valori dell'asse che descrivono la posizione di `MotionEvent` e altre proprietà di spostamento, ad esempio il punto in cui si verifica il tocco, il momento in cui si è verificato il tocco e la quantità di pressione utilizzata.
+- Set di valori dell'asse che descrivono la posizione del `MotionEvent` e altre proprietà di spostamento, ad esempio il punto in cui si verifica il tocco, il momento in cui si è verificato il tocco e la quantità di pressione utilizzata.
    I valori dell'asse possono essere diversi a seconda del dispositivo, quindi l'elenco precedente non descrive tutti i valori dell'asse.
 
-L' `MotionEvent` oggetto verrà passato a un metodo appropriato in un'applicazione. È possibile che un'applicazione Novell. Android risponda a un evento Touch in tre modi:
+L'oggetto `MotionEvent` verrà passato a un metodo appropriato in un'applicazione. È possibile che un'applicazione Novell. Android risponda a un evento Touch in tre modi:
 
-- *Assegnare un gestore eventi a `View.Touch`*  : la `Android.Views.View` classe dispone di `EventHandler<View.TouchEventArgs>` un oggetto a cui le applicazioni possono assegnare un gestore. Si tratta di un comportamento tipico di .NET.
+- *Assegnare un gestore eventi a `View.Touch`* : la classe `Android.Views.View` dispone di un `EventHandler<View.TouchEventArgs>` a cui le applicazioni possono assegnare un gestore. Si tratta di un comportamento tipico di .NET.
 
-- *Implementazione`View.IOnTouchListener`* : le istanze di questa interfaccia possono essere assegnate a un oggetto visualizzazione utilizzando la vista. `SetOnListener`Metodo. Dal `View.Touch` punto di vista funzionale equivale all'assegnazione di un gestore eventi all'evento. Se è presente una logica comune o condivisa che molte visualizzazioni diverse potrebbero avere bisogno quando vengono modificate, sarà più efficiente creare una classe e implementare questo metodo anziché assegnare a ogni visualizzazione il proprio gestore eventi.
+- L' *implementazione di `View.IOnTouchListener`* istanze di questa interfaccia può essere assegnata a un oggetto visualizzazione utilizzando la visualizzazione. Metodo `SetOnListener`. Dal punto di vista funzionale equivale all'assegnazione di un gestore eventi all'evento `View.Touch`. Se è presente una logica comune o condivisa che molte visualizzazioni diverse potrebbero avere bisogno quando vengono modificate, sarà più efficiente creare una classe e implementare questo metodo anziché assegnare a ogni visualizzazione il proprio gestore eventi.
 
-- *Esegue `View.OnTouchEvent` l'override* di tutte le viste `Android.Views.View`nella sottoclasse Android. Quando viene toccata una visualizzazione, Android `OnTouchEvent` chiamerà e passa un `MotionEvent` oggetto come parametro.
+- *Eseguire l'override* delle viste `View.OnTouchEvent`-all nella sottoclasse Android `Android.Views.View`. Quando si tocca una visualizzazione, Android chiamerà il `OnTouchEvent` e lo passerà a un oggetto `MotionEvent` come parametro.
 
 > [!NOTE]
 > Non tutti i dispositivi Android supportano le schermate touch. 
@@ -43,9 +43,9 @@ Se si aggiunge il tag seguente al file manifesto, Google Play Visualizza solo l'
 
 Un gesto è una forma disegnata a mano sul touchscreen. Un movimento può avere uno o più tratti, ogni tratto costituito da una sequenza di punti creati da un altro punto di contatto con lo schermo. Android può supportare molti tipi diversi di movimenti, da una semplice Fling sullo schermo a movimenti complessi che coinvolgono il multitocco.
 
-Android fornisce lo `Android.Gestures` spazio dei nomi specifico per la gestione e la risposta ai movimenti. Il fulcro di tutti i movimenti è una classe speciale denominata `Android.Gestures.GestureDetector`. Come suggerisce il nome, questa classe resterà in ascolto di movimenti ed eventi in `MotionEvents` base a forniti dal sistema operativo.
+Android fornisce lo spazio dei nomi `Android.Gestures` specifico per la gestione e la risposta ai movimenti. Il fulcro di tutti i movimenti è una classe speciale denominata `Android.Gestures.GestureDetector`. Come suggerisce il nome, questa classe resterà in ascolto di movimenti ed eventi in base al `MotionEvents` fornito dal sistema operativo.
 
-Per implementare un rilevatore di movimenti, un'attività deve `GestureDetector` creare un'istanza di una classe `IOnGestureListener`e fornire un'istanza di, come illustrato nel frammento di codice seguente:
+Per implementare un rilevatore di movimenti, un'attività deve creare un'istanza di una classe `GestureDetector` e fornire un'istanza di `IOnGestureListener`, come illustrato nel frammento di codice seguente:
 
 ```csharp
 GestureOverlayView.IOnGestureListener myListener = new MyGestureListener();
@@ -62,7 +62,7 @@ public override bool OnTouchEvent(MotionEvent e)
 }
 ```
 
-Quando un'istanza di `GestureDetector` identifica un movimento di interesse, invierà una notifica all'attività o all'applicazione generando un evento o tramite un callback fornito `GestureDetector.IOnGestureListener`da.
+Quando un'istanza di `GestureDetector` identifica un movimento di interesse, invierà una notifica all'attività o all'applicazione generando un evento o tramite un callback fornito da `GestureDetector.IOnGestureListener`.
 Questa interfaccia fornisce sei metodi per i diversi movimenti:
 
 - *Ondown* : viene chiamato quando si verifica un tap ma non viene rilasciato.
@@ -87,11 +87,11 @@ I movimenti sono un ottimo modo per consentire agli utenti di interagire con un'
 
 Da Android 1,6, il Android SDK viene fornita con un'applicazione preinstallata nell'emulatore denominato gestures Builder. Questa applicazione consente agli sviluppatori di creare movimenti predefiniti che possono essere incorporati in un'applicazione. Lo screenshot seguente mostra un esempio di generatore di movimenti:
 
-[![Screenshot del generatore di movimenti con movimenti di esempio](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
+[![screenshot del generatore di movimenti con movimenti di esempio](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 È possibile trovare una versione migliorata dell'applicazione denominata strumento movimento Google Play. Lo strumento gesto è molto simile al generatore di movimenti, ad eccezione del fatto che consente di testare i movimenti dopo che sono stati creati. Lo screenshot seguente mostra il generatore di movimenti:
 
-[![Screenshot dello strumento movimento con movimenti di esempio](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
+[![screenshot dello strumento movimento con movimenti di esempio](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Lo strumento movimento è un po' più utile per la creazione di movimenti personalizzati in quanto consente di testare i movimenti quando vengono creati ed è facilmente disponibile tramite Google Play.
 
@@ -131,11 +131,11 @@ Il frammento di codice XML seguente mostra come aggiungere un GestureOverlayView
     android:layout_height="match_parent" />
 ```
 
-In `GestureOverlayView` sono disponibili diversi eventi che verranno generati durante il processo di creazione di un movimento. L'evento più interessante è `GesturePerformed`. Questo evento viene generato quando l'utente ha completato il disegno del movimento.
+Il `GestureOverlayView` include diversi eventi che verranno generati durante il processo di creazione di un movimento. L'evento più interessante è `GesturePerformed`. Questo evento viene generato quando l'utente ha completato il disegno del movimento.
 
-Quando viene generato questo evento, l'attività chiede a `GestureLibrary` un oggetto di tentare di associare il movimento che l'utente a uno dei movimenti creati dallo strumento di movimento. `GestureLibrary`restituirà un elenco di oggetti di stima.
+Quando viene generato questo evento, l'attività chiede a un `GestureLibrary` di provare a trovare la corrispondenza con il gesto che l'utente ha creato uno dei movimenti creati dallo strumento di movimento. `GestureLibrary` restituirà un elenco di oggetti di stima.
 
-Ogni oggetto di stima include un punteggio e il nome di uno dei movimenti in `GestureLibrary`. Maggiore è il punteggio, maggiore è la probabilità che il movimento indicato nella stima corrisponda al gesto disegnato dall'utente.
+Ogni oggetto di stima include un punteggio e il nome di uno dei movimenti nel `GestureLibrary`. Maggiore è il punteggio, maggiore è la probabilità che il movimento indicato nella stima corrisponda al gesto disegnato dall'utente.
 In generale, i punteggi inferiori a 1,0 sono considerati scarse corrispondenze.
 
 Il codice seguente illustra un esempio di corrispondenza di un gesto:

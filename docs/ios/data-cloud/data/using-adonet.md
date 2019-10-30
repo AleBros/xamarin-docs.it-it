@@ -4,31 +4,31 @@ description: Questo documento descrive come usare ADO.NET come metodo per accede
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: a9df85a405bc086f86dae73fea615581bf9d28d0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: db26de8deed9945c6fff2d49f7d12de03fbe38df
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767380"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008230"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Uso di ADO.NET con Novell. iOS
 
-Novell include il supporto predefinito per il database SQLite disponibile in iOS, esposto mediante una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad `CREATE TABLE`esempio `INSERT` le `SELECT` istruzioni e.
+Novell include il supporto predefinito per il database SQLite disponibile in iOS, esposto mediante una nota sintassi simile a ADO.NET. L'uso di queste API richiede la scrittura di istruzioni SQL elaborate da SQLite, ad esempio `CREATE TABLE`, `INSERT` e istruzioni `SELECT`.
 
 ## <a name="assembly-references"></a>Riferimenti dell'assembly
 
-Per usare l'accesso a SQLite tramite ADO.NET, `System.Data` è `Mono.Data.Sqlite` necessario aggiungere i riferimenti al progetto iOS, come illustrato di seguito (per gli esempi in Visual Studio per Mac e Visual Studio):
+Per usare l'accesso a SQLite tramite ADO.NET, è necessario aggiungere `System.Data` e `Mono.Data.Sqlite` riferimenti al progetto iOS, come illustrato di seguito (per gli esempi in Visual Studio per Mac e Visual Studio):
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
- ![](using-adonet-images/image4.png "Riferimenti ad assembly in Visual Studio per Mac")
+ ![](using-adonet-images/image4.png "Assembly References in Visual Studio for Mac")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  ![](using-adonet-images/image6.png "Riferimenti ad assembly in Visual Studio")
+  ![](using-adonet-images/image6.png "Assembly References in Visual Studio")
 
 -----
 
@@ -36,16 +36,16 @@ Fare clic con il pulsante destro del mouse su **riferimenti > modifica riferimen
 
 ## <a name="about-monodatasqlite"></a>Informazioni su mono. Data. sqlite
 
-Verrà utilizzata la `Mono.Data.Sqlite.SqliteConnection` classe per creare un file di database vuoto e quindi per creare `SqliteCommand` un'istanza degli oggetti che è possibile utilizzare per eseguire istruzioni SQL sul database.
+Si utilizzerà la classe `Mono.Data.Sqlite.SqliteConnection` per creare un file di database vuoto e quindi creare un'istanza di `SqliteCommand` oggetti che è possibile utilizzare per eseguire istruzioni SQL sul database.
 
-1. **Creazione di un database vuoto** : chiamare `CreateFile` il metodo con un percorso di file valido (IE. Writeable). È necessario verificare se il file esiste già prima di chiamare questo metodo. in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore del vecchio e i dati nel file precedente andranno perduti:
+1. **Creazione di un database vuoto** : chiamare il metodo `CreateFile` con un percorso di file valido (IE. Writeable). È necessario verificare se il file esiste già prima di chiamare questo metodo. in caso contrario, verrà creato un nuovo database (vuoto) nella parte superiore del vecchio e i dati nel file precedente andranno perduti:
 
     `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
 
     > [!NOTE]
-    > La `dbPath` variabile deve essere determinata in base alle regole descritte in precedenza in questo documento.
+    > La variabile `dbPath` deve essere determinata in base alle regole descritte in precedenza in questo documento.
 
-2. **Creazione di una connessione al database** : dopo che è stato creato il file di database SQLite, è possibile creare un oggetto connessione per accedere ai dati. La connessione viene costruita con una stringa di connessione che assume la forma `Data Source=file_path`di, come illustrato di seguito:
+2. **Creazione di una connessione al database** : dopo che è stato creato il file di database SQLite, è possibile creare un oggetto connessione per accedere ai dati. La connessione viene costruita con una stringa di connessione che assume la forma di `Data Source=file_path`, come illustrato di seguito:
 
     ```csharp
     var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -71,7 +71,7 @@ Quando si esegue SQL direttamente sul database, è consigliabile evitare di eseg
 
 Il codice di esempio *DataAccess_Basic* per questo documento è simile al seguente quando viene eseguito in iOS:
 
- ![](using-adonet-images/image9.png "esempio di ADO.NET iOS")
+ ![](using-adonet-images/image9.png "iOS ADO.NET sample")
 
 Il codice seguente illustra come eseguire semplici operazioni SQLite e visualizzare i risultati in come testo nella finestra principale dell'applicazione.
 
@@ -149,7 +149,7 @@ public static string DoSomeDataAccess ()
 Poiché SQLite consente l'esecuzione di comandi SQL arbitrari sui dati, è possibile eseguire qualsiasi istruzione di creazione, inserimento, aggiornamento, eliminazione o selezione. Per informazioni sui comandi SQL supportati da SQLite, vedere il sito Web SQLite. Le istruzioni SQL vengono eseguite utilizzando uno dei tre metodi su un oggetto SqliteCommand:
 
 - **ExecuteNonQuery** : usato in genere per la creazione di tabelle o l'inserimento di dati. Il valore restituito per alcune operazioni è il numero di righe interessate; in caso contrario, è-1.
-- **ExecuteReader** : usato quando una raccolta di righe deve essere restituita come `SqlDataReader` .
+- **ExecuteReader** : usato quando una raccolta di righe deve essere restituita come `SqlDataReader`.
 - **ExecuteScalar** : Recupera un singolo valore (ad esempio un'aggregazione).
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
@@ -208,7 +208,7 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-Il `ExecuteScalar` tipo restituito del metodo è `object` : è necessario eseguire il cast del risultato in base alla query di database. Il risultato può essere un numero intero da una query COUNT o una stringa da una singola colonna SELECT query. Si noti che questa operazione è diversa dagli altri metodi Execute che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
+Il tipo restituito del metodo `ExecuteScalar` è `object`: è necessario eseguire il cast del risultato in base alla query del database. Il risultato può essere un numero intero da una query COUNT o una stringa da una singola colonna SELECT query. Si noti che questa operazione è diversa dagli altri metodi Execute che restituiscono un oggetto Reader o un conteggio del numero di righe interessate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

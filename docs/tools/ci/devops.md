@@ -1,18 +1,18 @@
 ---
 title: DevOps con Xamarin
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293687"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007441"
 ---
 # <a name="devops-with-xamarin"></a>DevOps con Xamarin
 
@@ -26,7 +26,7 @@ Le tabelle seguenti identificano le funzionalità DevOps di Visual Studio di cui
 
 ## <a name="agile-tools"></a>Strumenti Agile:
 
-Collegamento di riferimento: **[Sugli strumenti Agile e gestione dei progetti Agile](/azure/devops/boards/backlogs/overview?view=vsts)**
+Collegamento di riferimento: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)** (Informazioni sugli strumenti e la gestione di progetti Agile)
 
 Commento generale: tutte le funzionalità di pianificazione e traccia sono indipendenti dal tipo di progetto e dai linguaggi di codifica.
 
@@ -40,7 +40,7 @@ Commento generale: tutte le funzionalità di pianificazione e traccia sono indip
 
 ## <a name="modeling"></a>Modellazione
 
-Collegamento di riferimento: **[Analyze and model architecture](/visualstudio/modeling/analyze-and-model-your-architecture)** (Analizzare e modellare l'architettura)
+Collegamento di riferimento: **[Analizzare e modellare l'architettura](/visualstudio/modeling/analyze-and-model-your-architecture)**
 
 Le funzionalità di progettazione sono indipendenti dal linguaggio di codifica o funzionano con i linguaggi .NET come C#. Per informazioni sugli aspetti correlati al codice, vedere [Ruoli dei diagrammi dell'architettura e della modellazione nello sviluppo del software](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools).
 
@@ -97,12 +97,12 @@ Collegamento di riferimento: **[Migliorare la qualità del codice](/visualstudio
 |[Analizzare la qualità del codice gestito](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|Yes||
 |[Ricerca del codice duplicato mediante il rilevamento del clone di codice](https://msdn.microsoft.com/library/hh205279.aspx)|Yes||
 |[Misurazione della complessità e della manutenibilità del codice gestito](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|Yes||
-|[Esplora prestazioni](/visualstudio/profiling/performance-explorer)|No|Usare la [Xamarin Profiler](/xamarin/tools/profiler/) tramite Visual Studio per Mac invece. Si noti che il Profiler Xamarin è attualmente in versione di anteprima e non funziona ancora per le destinazioni Windows.|
+|[Esplora prestazioni](/visualstudio/profiling/performance-explorer)|No|In alternativa, usare la [Xamarin Profiler](/xamarin/tools/profiler/) tramite Visual Studio per Mac. Si noti che il Profiler Xamarin è attualmente in versione di anteprima e non funziona ancora per le destinazioni Windows.|
 |[Analizzare i problemi relativi alla memoria .NET Framework](https://msdn.microsoft.com/library/dn342825.aspx)|No|Gli strumenti di Visual Studio non hanno hook nel framework Mono per la profilatura.|
 
 ## <a name="release-management"></a>Gestione versioni
 
-Collegamento di riferimento: **[Compilazione e rilascio in TFS e pipeline di Azure](/azure/devops/pipelines/overview?view=vsts)**
+Collegamento di riferimento: **[Build and Release in Azure Pipelines and TFS](/azure/devops/pipelines/overview?view=vsts)** (Compilazione e rilascio in Azure Pipelines e TFS)
 
 |Funzionalità|Supportato con Xamarin|Commenti aggiuntivi|
 |-------------|----------------------------|-------------------------|
@@ -112,7 +112,7 @@ Collegamento di riferimento: **[Compilazione e rilascio in TFS e pipeline di Azu
 
 ## <a name="monitor-with-hockeyapp"></a>Monitorare con HockeyApp
 
-Collegamento di riferimento: **[Monitor with HockeyApp](https://www.hockeyapp.net/features/)** (Eseguire il monitoraggio con HockeyApp)
+Collegamento di riferimento: **[Monitorare con HockeyApp](https://www.hockeyapp.net/features/)**
 
 |Funzionalità|Supportato con Xamarin|Commenti aggiuntivi|
 |-------------|----------------------------|-------------------------|

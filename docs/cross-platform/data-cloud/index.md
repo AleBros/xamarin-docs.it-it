@@ -3,21 +3,21 @@ title: Microsoft Azure e Novell
 description: Questo documento contiene collegamenti alla documentazione relativa a Servizi connessi in Visual Studio per Mac, app per dispositivi mobili di Azure, autenticazione Active Directory e WebAPI.
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 273a1a8fec4cf40893ff94fef4b1394065a8547b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766095"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016616"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e Novell
 
-[![](images/evolve-mikej-azure-sml.png "Le funzionalità di app Azure Services sono facili da aggiungere alle app Novell, tra cui l'archiviazione dei dati cloud e le notifiche push multipiattaforma")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
-[Evoluzione 2016: Sviluppo di app connesse tramite Azure e Novell](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[Evolve 2016: sviluppo di app connesse con Azure e Novell](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Servizi connessi in Visual Studio per Mac
 
@@ -35,7 +35,7 @@ Novell offre anche pacchetti NuGet di messaggistica di Azure per [iOS](https://w
 [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md) può essere usato per accedere agli utenti nelle app Novell tramite il [componente Novell. auth](https://www.nuget.org/packages/Xamarin.Auth/).
 Le app possono quindi accedere a servizi aggiuntivi come Office 365.
 
-## <a name="webapi"></a>WebAPI
+## <a name="webapi"></a>webAPI
 
 L'API Web di Microsoft espone un'interfaccia simile a REST che può essere facilmente utilizzata dalle applicazioni Novell.
 Puoi creare facilmente un [sito Web di Azure](https://trywebsites.azurewebsites.net/) e creare un'app basata su WebAPI per la connessione alle app Novell.
@@ -58,6 +58,6 @@ Oltre agli esempi di [documentazione](https://github.com/xamarin/mobile-samples/
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Esempio di Azure PCL ( @paulbatumper) (esempio)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Portale di Azure](https://azure.microsoft.com/)
+- [Esempio di libreria di classi di Azure (per @paulbatum) (esempio)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
+- [portale di Azure](https://azure.microsoft.com/)
 - [Client mobile per Novell (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

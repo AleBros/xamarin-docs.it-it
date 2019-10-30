@@ -3,15 +3,15 @@ title: Installazione e requisiti di Inspector
 description: In questo documento viene descritto come installare il Xamarin Inspector e vengono descritti il sistema operativo, gli IDE e le piattaforme app supportati.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 1273a51d29d7abcbecb9b19ae42e111db8ccc06c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292306"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029700"
 ---
 # <a name="inspector-installation-and-requirements"></a>Installazione e requisiti di Inspector
 
@@ -114,8 +114,8 @@ Per Android e iOS, è fondamentale conoscere il dispositivo su cui si esegue il 
 
 - Nome del dispositivo come visualizzato nell'IDE
 - Versione del sistema operativo del dispositivo
-- Android: Verificare di usare un emulatore x86
-- Android: Quale piattaforma emulatore si sta usando? Emulatore Google? Emulatore Android di Visual Studio? Xamarin Android Player?
+- Android: verificare di usare un emulatore x86
+- Android: quale piattaforma emulatore sta usando? Emulatore Google? Emulatore Android di Visual Studio? Xamarin Android Player?
 - L'app che si sta eseguendo il debug viene visualizzata correttamente e funziona nel dispositivo?
 - Il dispositivo dispone di connettività di rete (controllare tramite Web browser)?
 

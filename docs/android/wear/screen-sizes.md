@@ -3,15 +3,15 @@ title: Uso delle dimensioni dello schermo in Novell. Android e uso del sistema o
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 86e05dc0e9cd5df325126cc5a339b36dd27c1e45
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758322"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030363"
 ---
 # <a name="working-with-screen-sizes"></a>Utilizzo delle dimensioni dello schermo
 
@@ -21,15 +21,15 @@ I dispositivi Android Wear possono avere una visualizzazione rettangolare o roto
 
 ## <a name="identifying-screen-type"></a>Tipo di schermata di identificazione
 
-La libreria di supporto Wear fornisce alcuni controlli che consentono di rilevare e adattarsi a diverse forme dello schermo, `WatchViewStub` ad `BoxInsetLayout`esempio e.
+La libreria di supporto Wear fornisce alcuni controlli che consentono di rilevare e adattarsi a diverse forme dello schermo, ad esempio `WatchViewStub` e `BoxInsetLayout`.
 
-Tenere presente che alcuni degli altri controlli della libreria di supporto (ad `GridViewPager`esempio) rilevano *automaticamente* la forma dello schermo e non devono essere aggiunti come elementi figlio dei controlli descritti di seguito.
+Tenere presente che alcuni degli altri controlli della libreria di supporto (ad esempio `GridViewPager`) rilevano *automaticamente* la forma dello schermo e non devono essere aggiunti come elementi figlio dei controlli descritti di seguito.
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
 Vedere l'esempio [WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub) per vedere come rilevare il tipo di schermata e visualizzare un layout diverso per ogni tipo.
 
-Il file di layout principale contiene `android.support.wearable.view.WatchViewStub` un oggetto che fa riferimento a layout diversi per schermi rettangolari `app:rectLayout` e `app:roundLayout` arrotondati usando gli attributi e:
+Il file di layout principale contiene un `android.support.wearable.view.WatchViewStub` che fa riferimento a layout diversi per schermi rettangolari e arrotondati usando gli attributi `app:rectLayout` e `app:roundLayout`:
 
 ```xml
 <android.support.wearable.view.WatchViewStub
@@ -49,7 +49,7 @@ La soluzione contiene layout diversi per ogni stile che verrà selezionato in fa
 
 Anziché creare layout diversi per ogni tipo di schermata, è anche possibile creare una singola visualizzazione che si adatta a schermi rettangolari o rotondi.
 
-Questo [esempio di Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) illustra come usare `BoxInsetLayout` per usare lo stesso layout sia per gli schermi rettangolari che per quelli rotondi.
+Questo [esempio di Google](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) Mostra come usare il `BoxInsetLayout` per usare lo stesso layout sia negli schermi rettangolari che negli schermi rotondi.
 
 ## <a name="wear-ui-designer"></a>Indossare la finestra di progettazione interfaccia utente
 

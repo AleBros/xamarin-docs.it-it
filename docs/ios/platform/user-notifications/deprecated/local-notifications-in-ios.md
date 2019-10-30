@@ -4,15 +4,15 @@ description: Questa sezione illustra come implementare le notifiche locali in No
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: eb8956e44a3148d79fff59d728cb63818b9bab60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0cd0937229e8679af46313d0bce4c62792c0f36b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292743"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031374"
 ---
 # <a name="notifications-in-xamarinios"></a>Notifiche in Novell. iOS
 
@@ -43,7 +43,7 @@ application.RegisterUserNotificationSettings(notificationSettings);
 
 [![Conferma della possibilità di inviare una notifica locale](local-notifications-in-ios-images/image0-sml.png "Conferma della possibilità di inviare una notifica locale")](local-notifications-in-ios-images/image0.png#lightbox)
 
-Per pianificare una notifica locale, creare un `UILocalNotification` oggetto, `FireDate`impostare e pianificarlo `UIApplication.SharedApplication` tramite il `ScheduleLocalNotification` metodo sull'oggetto. Il frammento di codice seguente mostra come pianificare una notifica che verrà attivata un minuto in futuro e visualizzare un avviso con un messaggio:
+Per pianificare una notifica locale, creare un oggetto `UILocalNotification`, impostare il `FireDate`e pianificarlo tramite il metodo `ScheduleLocalNotification` sull'oggetto `UIApplication.SharedApplication`. Il frammento di codice seguente mostra come pianificare una notifica che verrà attivata un minuto in futuro e visualizzare un avviso con un messaggio:
 
 ```csharp
 UILocalNotification notification = new UILocalNotification();
@@ -56,7 +56,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 Lo screenshot seguente mostra l'aspetto di questo avviso:
 
-[![](local-notifications-in-ios-images/image2-sml.png "Un avviso di esempio")](local-notifications-in-ios-images/image2.png#lightbox)
+[![](local-notifications-in-ios-images/image2-sml.png "An example alert")](local-notifications-in-ios-images/image2.png#lightbox)
 
 Si noti che se l'utente sceglie di *non consentire* le notifiche, non verrà visualizzato nulla.
 
@@ -79,7 +79,7 @@ Se il suono della notifica è più lungo di 30 secondi, iOS riprodurrà invece l
 
 ## <a name="handling-notifications"></a>Gestione delle notifiche
 
-le applicazioni iOS gestiscono le notifiche remote e locali quasi esattamente allo stesso modo. Quando un'applicazione è in esecuzione, `ReceivedLocalNotification` viene chiamato il `ReceivedRemoteNotification` metodo o il `AppDelegate` metodo nella classe e le informazioni di notifica vengono passate come parametro.
+le applicazioni iOS gestiscono le notifiche remote e locali quasi esattamente allo stesso modo. Quando un'applicazione è in esecuzione, viene chiamato il metodo `ReceivedLocalNotification` o il metodo `ReceivedRemoteNotification` sulla classe `AppDelegate` e le informazioni di notifica vengono passate come parametro.
 
 Un'applicazione può gestire una notifica in modi diversi. Ad esempio, l'applicazione può semplicemente visualizzare un avviso per ricordare agli utenti di un evento. In alternativa, è possibile che la notifica venga utilizzata per visualizzare un avviso all'utente al termine di un processo, ad esempio la sincronizzazione dei file in un server.
 
@@ -99,7 +99,7 @@ public override void ReceivedLocalNotification(UIApplication application, UILoca
 }
 ```
 
-Se l'applicazione non è in esecuzione, iOS riprodurrà il suono e/o aggiornerà il badge dell'icona come applicabile. Quando l'utente avvia l'applicazione associata all'avviso, l'applicazione verrà avviata e verrà chiamato `FinishedLaunching` il metodo nel delegato dell'app e le informazioni di notifica verranno passate tramite il `launchOptions` parametro. Se il dizionario delle opzioni contiene la `UIApplication.LaunchOptionsLocalNotificationKey`chiave, il `AppDelegate` sa che l'applicazione è stata avviata da una notifica locale. Il seguente frammento di codice illustra questo processo:
+Se l'applicazione non è in esecuzione, iOS riprodurrà il suono e/o aggiornerà il badge dell'icona come applicabile. Quando l'utente avvia l'applicazione associata all'avviso, l'applicazione viene avviata e viene chiamato il metodo `FinishedLaunching` sul delegato dell'app e le informazioni di notifica vengono passate tramite il parametro `launchOptions`. Se il dizionario delle opzioni contiene la chiave `UIApplication.LaunchOptionsLocalNotificationKey`, il `AppDelegate` sa che l'applicazione è stata avviata da una notifica locale. Il seguente frammento di codice illustra questo processo:
 
 ```csharp
 // check for a local notification
@@ -119,7 +119,7 @@ if (launchOptions.ContainsKey(UIApplication.LaunchOptionsLocalNotificationKey))
 }
 ```
 
-Per una notifica remota, `launchOptions` avrà un `LaunchOptionsRemoteNotificationKey` oggetto con associato `NSDictionary` che contiene il payload di notifica remoto. È possibile estrarre il payload di notifica tramite `alert`le `badge`chiavi, `sound` e. Il frammento di codice seguente mostra come ottenere le notifiche remote:
+Per una notifica remota, `launchOptions` avrà una `LaunchOptionsRemoteNotificationKey` con un `NSDictionary` associato che contiene il payload di notifica remoto. È possibile estrarre il payload di notifica tramite le chiavi `alert`, `badge`e `sound`. Il frammento di codice seguente mostra come ottenere le notifiche remote:
 
 ```csharp
 NSDictionary remoteNotification = options[UIApplication.LaunchOptionsRemoteNotificationKey];
@@ -131,12 +131,12 @@ if(remoteNotification != null)
 
 ## <a name="summary"></a>Riepilogo
 
-In questa sezione è stato illustrato come creare e pubblicare una notifica in Novell. iOS. Mostra il modo in cui un'applicazione può rispondere alle notifiche eseguendo l' `ReceivedLocalNotification` override del metodo `ReceivedRemoteNotification` o del metodo `AppDelegate`in.
+In questa sezione è stato illustrato come creare e pubblicare una notifica in Novell. iOS. Viene illustrato il modo in cui un'applicazione può rispondere alle notifiche eseguendo l'override del metodo `ReceivedLocalNotification` o del metodo `ReceivedRemoteNotification` nel `AppDelegate`.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Notifiche locali (esempio)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
 - [Notifiche push e locali per gli sviluppatori](https://developer.apple.com/notifications/)
 - [Guida alla programmazione di notifiche push e locali](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
-- [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UILocalNotification](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UILocalNotification)
+- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
+- [UILocalNotification](https://docs.microsoft.com/dotnet/api/uikit.UILocalNotification)

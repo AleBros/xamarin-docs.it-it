@@ -3,15 +3,15 @@ title: Utilizzo di tipi nativi nelle app multipiattaforma
 description: Questo articolo illustra l'uso dei nuovi tipi nativi iOS API unificata (nint, nuint, nFloat) in un'applicazione multipiattaforma in cui il codice viene condiviso con dispositivi non iOS, ad esempio Android o Windows Phone sistemi operativi.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/07/2016
-ms.openlocfilehash: 273b7f2eb40f1fa8495e0a0e8e18fa947241f389
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c86a00f325f9799b16f6244d3d1cb68de31be005
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765406"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015535"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Utilizzo di tipi nativi nelle app multipiattaforma
 
@@ -23,21 +23,21 @@ In questo documento vengono illustrati diversi modi per interagire con i API uni
 
 ## <a name="when-to-use-the-native-types"></a>Quando usare i tipi nativi
 
-Le API unificate Novell. iOS e Novell. Mac includono comunque `int`i `uint` tipi `float` di dati, e, nonché i `RectangleF`tipi `SizeF` , `PointF` e. Questi tipi di dati esistenti devono continuare a essere usati in qualsiasi codice condiviso e multipiattaforma. I nuovi tipi di dati nativi devono essere usati solo quando si effettua una chiamata a un'API Mac o iOS in cui è necessario il supporto per i tipi compatibili con l'architettura.
+Le API unificate Novell. iOS e Novell. Mac includono ancora i tipi di dati `int`, `uint` e `float`, oltre ai tipi di `RectangleF`, `SizeF` e `PointF`. Questi tipi di dati esistenti devono continuare a essere usati in qualsiasi codice condiviso e multipiattaforma. I nuovi tipi di dati nativi devono essere usati solo quando si effettua una chiamata a un'API Mac o iOS in cui è necessario il supporto per i tipi compatibili con l'architettura.
 
-A seconda della natura del codice condiviso, in alcuni casi potrebbe essere necessario che il codice multipiattaforma debba gestire i `nint`tipi di dati, `nuint` e `nfloat` . Ad esempio: una libreria che gestisce le trasformazioni sui dati rettangolari usati in `System.Drawing.RectangleF` precedenza per condividere le funzionalità tra le versioni di Novell. iOS e Novell. Android di un'app deve essere aggiornata per gestire i tipi nativi in iOS.
+A seconda della natura del codice condiviso, in alcuni casi potrebbe essere necessario che il codice multipiattaforma debba gestire i tipi di dati `nint`, `nuint` e `nfloat`. Ad esempio: una libreria che gestisce le trasformazioni su dati rettangolari che in precedenza utilizzavano `System.Drawing.RectangleF` per condividere le funzionalità tra le versioni Novell. iOS e Novell. Android di un'app, doveva essere aggiornata per gestire i tipi nativi in iOS.
 
 Il modo in cui queste modifiche vengono gestite dipende dalle dimensioni e dalla complessità dell'applicazione e dalla modalità di condivisione del codice utilizzata, come si vedrà nelle sezioni seguenti.
 
 ## <a name="code-sharing-considerations"></a>Considerazioni sulla condivisione del codice
 
-Come indicato nel documento relativo alle [Opzioni di condivisione del codice](~/cross-platform/app-fundamentals/code-sharing.md) , esistono due modi principali per condividere il codice tra progetti multipiattaforma: Progetti condivisi e librerie di classi portabili. Quale dei due tipi è stato usato, limiterà le opzioni disponibili quando si gestiscono i tipi di dati nativi nel codice multipiattaforma.
+Come indicato nel documento relativo alle [Opzioni di condivisione del codice](~/cross-platform/app-fundamentals/code-sharing.md) , esistono due modi principali per condividere il codice tra progetti multipiattaforma: progetti condivisi e librerie di classi portabili. Quale dei due tipi è stato usato, limiterà le opzioni disponibili quando si gestiscono i tipi di dati nativi nel codice multipiattaforma.
 
 ### <a name="portable-class-library-projects"></a>Progetti libreria di classi portabile
 
 Una libreria di classi portabile (PCL) consente di individuare le piattaforme che si desidera supportare e di utilizzare le interfacce per fornire funzionalità specifiche della piattaforma.
 
-Poiché il tipo di progetto PCL viene compilato in un `.DLL` oggetto e non ha alcun significato per la API unificata, sarà necessario usare i tipi di dati esistenti (`int`, `uint`, `float`) nel codice sorgente della libreria di classi portabile e digitare il cast delle chiamate al classi e metodi nelle applicazioni front-end. Ad esempio:
+Poiché il tipo di progetto PCL viene compilato in un `.DLL` e non ha alcun significato per la API unificata, sarà necessario usare i tipi di dati esistenti (`int`, `uint`, `float`) nel codice sorgente della libreria di classi portabile e digitare il cast delle chiamate alle classi di PCL metodi e nelle applicazioni front-end. Esempio:
 
 ```csharp
 using NativePCL;
@@ -49,15 +49,15 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 ### <a name="shared-projects"></a>Progetti condivisi
 
-Il tipo di progetto asset condiviso consente di organizzare il codice sorgente in un progetto separato che viene quindi incluso e compilato nelle singole app front-end specifiche della piattaforma e USA `#if` le direttive del compilatore come richiesto per gestire requisiti specifici della piattaforma.
+Il tipo di progetto asset condiviso consente di organizzare il codice sorgente in un progetto separato che viene quindi incluso e compilato nelle singole app front-end specifiche della piattaforma e USA `#if` direttive del compilatore come richiesto per gestire le specifiche della piattaforma requisiti.
 
 Quando si sceglie il metodo di supporto per i tipi di dati nativi in una multipiattaforma, è necessario tenere conto delle dimensioni e della complessità delle applicazioni per dispositivi mobili front-end che utilizzano codice condiviso, insieme alle dimensioni e alla complessità del codice da condividere. Progetto asset condiviso.
 
-In base a questi fattori, i tipi di soluzioni seguenti possono essere implementati `if __UNIFIED__ ... #endif` utilizzando le direttive del compilatore per gestire il API unificata modifiche specifiche al codice.
+In base a questi fattori, i tipi di soluzioni seguenti possono essere implementati utilizzando le direttive del compilatore `if __UNIFIED__ ... #endif` per gestire le modifiche API unificata specifiche del codice.
 
 #### <a name="using-duplicate-methods"></a>Uso di metodi duplicati
 
-Eseguire l'esempio di una raccolta che esegue trasformazioni sui dati rettangolari specificati sopra. Se la libreria contiene solo uno o due metodi molto semplici, è possibile scegliere di creare versioni duplicate di questi metodi per Novell. iOS e Novell. Android. Ad esempio:
+Eseguire l'esempio di una raccolta che esegue trasformazioni sui dati rettangolari specificati sopra. Se la libreria contiene solo uno o due metodi molto semplici, è possibile scegliere di creare versioni duplicate di questi metodi per Novell. iOS e Novell. Android. Esempio:
 
 ```csharp
 using System;
@@ -98,11 +98,11 @@ namespace NativeShared
 }
 ```
 
-Nel codice precedente, poiché la `CalculateArea` routine è molto semplice, è stata usata la compilazione condizionale e è stata creata una versione separata API unificata del metodo. D'altra parte, se la libreria conteneva molte routine o diverse routine complesse, questa soluzione non sarebbe fattibile, in quanto rappresenterebbe un problema per mantenere sincronizzati tutti i metodi per le modifiche o le correzioni di bug.
+Nel codice precedente, poiché la routine `CalculateArea` è molto semplice, è stata usata la compilazione condizionale e è stata creata una versione separata API unificata del metodo. D'altra parte, se la libreria conteneva molte routine o diverse routine complesse, questa soluzione non sarebbe fattibile, in quanto rappresenterebbe un problema per mantenere sincronizzati tutti i metodi per le modifiche o le correzioni di bug.
 
 #### <a name="using-method-overloads"></a>Uso degli overload del metodo
 
-In tal caso, è possibile che la soluzione crei una versione di overload dei metodi usando i tipi di dati a 32 bit, in modo `CGRect` che ora prendano come parametro e/o un valore restituito, convertono `RectangleF` tale valore in un ( `nfloat` sapendo che la conversione da a `float` è una conversione con perdita di perdite) e chiama la versione originale della routine per eseguire il lavoro effettivo. Ad esempio:
+In tal caso, è possibile che la soluzione crei una versione di overload dei metodi usando i tipi di dati a 32 bit, in modo che ora `CGRect` come parametro e/o un valore restituito, convertire il valore in una `RectangleF` (sapendo che la conversione da `nfloat` a `float` è una conversione con perdita di perdite) e chiama la versione originale della routine per eseguire il lavoro effettivo. Esempio:
 
 ```csharp
 using System;
@@ -149,7 +149,7 @@ Anche in questo caso, si tratta di una soluzione efficace purché la perdita di 
 
 #### <a name="using-alias-directives"></a>Uso delle direttive alias
 
-Per le aree in cui la perdita di precisione rappresenta un problema, un'altra possibile soluzione `using` consiste nell'utilizzare le direttive per creare un alias per i tipi di dati nativi e CoreGraphics includendo il codice seguente all'inizio dei file di codice sorgente condivisi e convertendo qualsiasi `int` necessari`nuint` o valori per`nint`o :`nfloat` `uint` `float`
+Per le aree in cui la perdita di precisione rappresenta un problema, un'altra possibile soluzione consiste nell'usare `using` direttive per creare un alias per i tipi di dati nativi e CoreGraphics includendo il codice seguente nella parte superiore dei file di codice sorgente condivisi e convertendo gli eventuali @no_ necessari valori di _t_1_, `uint` o `float` per `nint`, `nuint` o `nfloat`:
 
 ```csharp
 #if __UNIFIED__
@@ -206,13 +206,13 @@ namespace NativeShared
 }
 ```
 
-Si noti che in questo caso è `CalculateArea` stato modificato il metodo `nfloat` per restituire un anziché `float`uno standard. Questa operazione è stata eseguita in modo da non ricevere un errore di compilazione durante il tentativo di `nfloat` convertire in _modo implicito_ il risultato del calcolo (poiché entrambi i valori `nfloat`vengono moltiplicati `float` sono di tipo) in un valore restituito.
+Si noti che in questo caso è stato modificato il metodo `CalculateArea` per restituire un `nfloat` anziché il `float`standard. Questa operazione è stata eseguita in modo da evitare un errore di compilazione durante il tentativo di convertire in _modo implicito_ il risultato `nfloat` del calcolo (poiché entrambi i valori vengono moltiplicati sono di tipo `nfloat`) in un `float` valore restituito.
 
-Se il codice viene compilato ed eseguito in un dispositivo non `using nfloat = global::System.Single;` API unificata, `nfloat` esegue il mapping di a `Single` un oggetto che verrà convertito in modo `float` implicito in un oggetto che consente all'applicazione front- `CalculateArea` end che utilizza il metodo di chiamare il metodo senza modifica.
+Se il codice viene compilato ed eseguito in un dispositivo non API unificata, il `using nfloat = global::System.Single;` esegue il mapping della `nfloat` a una `Single` che verrà convertita in modo implicito in un `float` consentendo all'applicazione front-end che utilizza il metodo di `CalculateArea` di chiamare il metodo di senza apportare modifiche.
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Uso delle conversioni di tipi nell'app front-end
 
-Nel caso in cui le applicazioni front-end eseguano solo un numero limitato di chiamate alla libreria di codice condivisa, un'altra soluzione potrebbe essere lasciare invariata la libreria e eseguire il cast del tipo nell'applicazione Novell. iOS o Novell. Mac quando si chiama la routine esistente. Ad esempio:
+Nel caso in cui le applicazioni front-end eseguano solo un numero limitato di chiamate alla libreria di codice condivisa, un'altra soluzione potrebbe essere lasciare invariata la libreria e eseguire il cast del tipo nell'applicazione Novell. iOS o Novell. Mac quando si chiama la routine esistente. Esempio:
 
 ```csharp
 using NativeShared;

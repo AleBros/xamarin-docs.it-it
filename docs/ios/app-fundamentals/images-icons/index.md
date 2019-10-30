@@ -4,26 +4,26 @@ description: Questa sezione include una serie di articoli che illustrano l'uso d
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6940e07c51dbc19615454e0c51188152db22c63f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 08698fab2bdd1528e7f532dc02c86219f98fd611
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767221"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010209"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Immagini e icone in Novell. iOS
 
 _Questa sezione include una serie di articoli che illustrano l'uso delle immagini in un'app Novell. iOS, ad esempio l'uso come icone, le schermate di avvio o la loro inclusione nei controlli e la visualizzazione di icone per i tipi di documento personalizzati._
 
-Sono disponibili diversi modi per usare le risorse dell'immagine all'interno di un'app iOS. Dalla semplice visualizzazione di un'immagine come parte dell'interfaccia utente di un'app a, assegnando tale immagine a un controllo dell' `UIButton` interfaccia `UIImageView`utente, ad esempio o, per fornire icone e schermate di avvio, Novell. iOS semplifica l'aggiunta di elementi grafici eccezionali a un'app iOS nei modi seguenti: 
+Sono disponibili diversi modi per usare le risorse dell'immagine all'interno di un'app iOS. Dalla semplice visualizzazione di un'immagine come parte dell'interfaccia utente di un'app, assegnarla a un controllo dell'interfaccia utente, ad esempio un `UIButton` o `UIImageView`, per fornire le icone e le schermate di avvio, Novell. iOS semplifica l'aggiunta di immagini di grande qualità a un'app iOS nei modi seguenti. : 
 
 - **Immagini indipendenti dalla risoluzione** : usare il supporto incorporato di iOS per l'uso di immagini in diversi tipi e risoluzioni di dispositivi (iPhone, iPad e così via).
 - **Set di immagini del catalogo asset** : usare i **set di immagini del catalogo asset** per gestire e raggruppare tutte le versioni di un asset immagine specifico richiesto da un'app.
 - **Immagini in iOS designer** : usare la finestra di progettazione iOS per impostare immagini per i controlli.
-- **Immagini nel codice** : usare i `UIImage` metodi della classe per caricare e usare asset di immagini e assegnarli ai controlli dell'interfaccia C# utente nel codice.
+- **Immagini nel codice** : usare i metodi della classe `UIImage` per caricare e usare asset di immagini e assegnarli ai controlli dell'interfaccia C# utente nel codice.
 - **Icona dell'applicazione** : definire l'icona dell'app richiesta da ogni app iOS. Questa è l'icona che l'utente toccherà dalla schermata iniziale di iOS per avviare l'app. Questa icona viene inoltre utilizzata da Game Center, se applicabile.
 - **Icona in evidenza** : definire l'icona in primo piano dell'app. Ogni volta che l'utente immette il nome di un'app in una ricerca Spotlight, viene visualizzata questa icona.
 - **Icona delle impostazioni** : definire l'icona **delle impostazioni** dell'app. Se l'utente immette l'app **Settings** sul dispositivo iOS, questa icona verrà visualizzata alla fine dell'elenco delle impostazioni per l'app. 
@@ -46,9 +46,9 @@ Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'a
 Apple ha aggiunto diversi miglioramenti a iOS 10,3 che consentono a un'app di gestire la relativa icona:
 
 - `ApplicationIconBadgeNumber`: Ottiene o imposta la notifica dell'icona dell'app nel Springboard.
-- `SupportsAlternateIcons`-Se `true` l'app dispone di un set alternativo di icone.
-- `AlternateIconName`: Restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si utilizza l'icona primaria.
-- `SetAlternameIconName`-Usare questo metodo per impostare l'icona dell'app sull'icona alternativa specificata.
+- `SupportsAlternateIcons`-se `true` l'app dispone di un set alternativo di icone.
+- `AlternateIconName`: restituisce il nome dell'icona alternativa attualmente selezionata o `null` se si utilizza l'icona primaria.
+- `SetAlternameIconName`: usare questo metodo per impostare l'icona dell'app sull'icona alternativa specificata.
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Schermate di avvio](~/ios/app-fundamentals/images-icons/launch-screens.md)
 

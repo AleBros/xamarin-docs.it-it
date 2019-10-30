@@ -2,15 +2,15 @@
 title: Incorporamento .NET in Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/15/2018
-ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fef422b799ab5280aef205f4d5e55fd91050da39
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772213"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007330"
 ---
 # <a name="net-embedding-on-android"></a>Incorporamento .NET in Android
 
@@ -22,11 +22,11 @@ In alcuni casi, potrebbe essere necessario aggiungere una libreria Novell .NET a
 
 Per usare Novell. Android con l'incorporamento di .NET, è necessario quanto segue:
 
-- È necessario installare **Novell. Android** &ndash; [Novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.
+- È necessario installare **Novell. android** &ndash;[novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.   
 
-- **Android Studio** È necessario installare [Android Studio 3. x](https://developer.android.com/studio/) o versione successiva. &ndash;
+- È necessario installare **Android Studio** &ndash;[Android Studio 3. x](https://developer.android.com/studio/) o versione successiva.   
 
-- **Java Developer Kit** È necessario che sia installato [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva. &ndash;
+- **Java Developer Kit** &ndash;   [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva deve essere installato.
 
 ## <a name="using-embeddinator-4000"></a>Uso di Embeddinator-4000
 
@@ -36,13 +36,13 @@ Per utilizzare una libreria .NET in un progetto Android nativo, attenersi alla p
 
 2. Installare [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-3. Individuare **Embeddinator-4000. exe** e aggiungerlo al **percorso**. Ad esempio:
+3. Individuare **Embeddinator-4000. exe** e aggiungerlo al **percorso**. Esempio:
 
     ```cmd
     set PATH=%PATH%;C:\Users\USERNAME\.nuget\packages\embeddinator-4000\0.4.0\tools
     ```
 
-4. Eseguire Embeddinator-4000 nell'assembly della libreria. Ad esempio:
+4. Eseguire Embeddinator-4000 nell'assembly della libreria. Esempio:
 
     ```cmd
     Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
@@ -56,13 +56,13 @@ Per utilizzare una libreria .NET in un progetto Android nativo, attenersi alla p
 
 Per usare Novell. Android con l'incorporamento di .NET, è necessario quanto segue:
 
-- È necessario installare **Novell. Android** &ndash; [Novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.
+- È necessario installare **Novell. android** &ndash;[novell. Android 7,5](https://visualstudio.microsoft.com/xamarin/) o versione successiva.   
 
-- **Android Studio** È necessario installare [Android Studio 3. x](https://developer.android.com/studio/) o versione successiva. &ndash;
+- È necessario installare **Android Studio** &ndash;[Android Studio 3. x](https://developer.android.com/studio/) o versione successiva.   
 
-- **Java Developer Kit** È necessario che sia installato [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva. &ndash;
+- **Java Developer Kit** &ndash;   [Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva deve essere installato.
 
-- **Mono** È necessario installare [Mono 5,0](https://www.mono-project.com/download/) o versione successiva (mono viene installato con Visual Studio per Mac). &ndash;
+- È necessario installare **mono** &ndash;[Mono 5,0](https://www.mono-project.com/download/) o versione successiva (mono viene installato con Visual Studio per Mac).   
 
 ## <a name="using-embeddinator-4000"></a>Uso di Embeddinator-4000
 
@@ -72,14 +72,14 @@ Per utilizzare una libreria .NET in un progetto Android nativo, attenersi alla p
 
 2. Installare [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-3. Individuare **Embeddinator-4000. exe** e aggiungere **mono** al percorso. Ad esempio:
+3. Individuare **Embeddinator-4000. exe** e aggiungere **mono** al percorso. Esempio:
 
     ```bash
     export TOOLS=~/.nuget/packages/embeddinator-4000/0.4.0/tools
     export PATH=$PATH:/Library/Frameworks/Mono.framework/Commands
     ```
 
-4. Eseguire Embeddinator-4000 nell'assembly della libreria. Ad esempio:
+4. Eseguire Embeddinator-4000 nell'assembly della libreria. Esempio:
 
     ```bash
     mono $TOOLS/Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll

@@ -3,15 +3,15 @@ title: Aggiornamento di applicazioni unificate Novell. Mac a 64 bit
 description: Questa guida descrive come aggiornare le applicazioni Novell. Mac alla destinazione 64 bit. Vengono inoltre forniti esempi dei tipi di errori che possono verificarsi durante l'esecuzione di questa modifica.
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/22/2018
-ms.openlocfilehash: 5539bab417c5efc0064cd1753cb74c7524463ee5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 1ae807869e44ad035d2681cf777af0e66ced8255
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70765914"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016313"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Aggiornamento di applicazioni unificate Novell. Mac a 64 bit
 
@@ -25,7 +25,7 @@ Il **File**  > **nuovo** modello di progetto Novell. Mac crea applicazioni a 64 
 
    ![Menu contestuale per il progetto](mac-64-bit-images/1-contextual_menu-vsmac.png "Menu contestuale per il progetto")
 
-2. Selezionare **compilazione Mac** e impostare le **architetture supportate** su **x86 \_64**:
+2. Selezionare **compilazione Mac** e impostare le **architetture supportate** su **x86\_64**:
 
    [![Impostazione delle architetture supportate su x86_64](mac-64-bit-images/2-project_options-vsmac.png "Impostazione delle architetture supportate su x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 

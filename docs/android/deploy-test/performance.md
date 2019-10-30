@@ -1,26 +1,26 @@
 ---
 title: Prestazioni di Xamarin.Android
-description: Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche.
+description: Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con Xamarin.Android. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche.
 ms.prod: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 620a7edd4467a5a2bae60bbd82d0e1460c9f0040
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753812"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021406"
 ---
 # <a name="xamarinandroid-performance"></a>Prestazioni di Xamarin.Android
 
-_Esistono varie tecniche per incrementare le prestazioni delle applicazioni compilate con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione. Questo articolo descrive queste tecniche e le relative caratteristiche._
+_Sono disponibili diverse tecniche per migliorare le prestazioni delle applicazioni compilate con Novell. Android. Collettivamente queste tecniche possono ridurre notevolmente la quantità di lavoro eseguita da una CPU e la quantità di memoria utilizzata da un'applicazione. Questo articolo descrive e illustra queste tecniche._
 
 ## <a name="performance-overview"></a>Panoramica sulle prestazioni
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, verificando che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
 Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni compilate con Xamarin.Android. e comprendono:
 
@@ -30,7 +30,7 @@ Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percep
 - [Limitare il ciclo di vita dei servizi](#limitservices)
 - [Rilasciare le risorse in seguito a una notifica](#releaseresources)
 - [Rilasciare le risorse quando l'interfaccia utente è nascosta](#releaseresourcesuihidden)
-- [Ottimizzare le risorse immagine](#optimizeimages)
+- [Ottimizzazione delle risorse immagine](#optimizeimages)
 - [Eliminare le risorse immagine inutilizzate](#disposeimages)
 - [Evitare calcoli aritmetici a virgola mobile](#avoidfloats)
 - [Chiudere le finestre di dialogo](#dismissdialogs)
@@ -262,7 +262,7 @@ Quando si usa la classe [`ProgressDialog`](xref:Android.App.ProgressDialog) (o q
 
 ## <a name="summary"></a>Riepilogo
 
-Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.Android. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Questo articolo ha descritto e illustrato le tecniche per incrementare le prestazioni delle applicazioni create con Xamarin.Android. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

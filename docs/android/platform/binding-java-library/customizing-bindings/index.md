@@ -4,15 +4,15 @@ description: È possibile personalizzare un'associazione Novell. Android modific
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04f3720d8684129476c955819390e91330a7800a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756634"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020648"
 ---
 # <a name="customizing-bindings"></a>Personalizzazione delle associazioni
 
@@ -24,7 +24,7 @@ Novell. Android automatizza gran parte del processo di associazione. Tuttavia, i
 
 - Risoluzione degli errori di compilazione causati da tipi mancanti, tipi offuscati, nomi duplicati, problemi di visibilità delle classi e altre situazioni che non possono essere risolti dagli strumenti Novell. Android. 
 
-- Modifica del mapping usato da Novell. Android per associare l'API Android a tipi diversi in C# . ad esempio, molti sviluppatori preferiscono eseguire `int` il mapping delle C# `enum` costanti Java alle costanti.
+- Modifica del mapping usato da Novell. Android per associare l'API Android a tipi diversi in C# (ad esempio, molti sviluppatori preferiscono eseguire il mapping delle costanti C# Java `int`alle costanti`enum`).
 
 - Rimozione dei tipi inutilizzati che non devono essere associati. 
 

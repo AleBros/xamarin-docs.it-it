@@ -3,15 +3,15 @@ title: Supporto del linguaggio di programmazione in Novell
 description: Questo documento descrive i vari linguaggi di programmazione supportati da Novell. Vengono C#illustrati F#i modelli,, Portable Visual Basic.NET e Razor.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/18/2018
-ms.openlocfilehash: 95c63d446f961738ad71242671d632620316b879
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db963a38322e809d1aa82c02fbb9ae5cc4a650fc
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290894"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014623"
 ---
 # <a name="programming-language-support-in-xamarin"></a>Supporto del linguaggio di programmazione in Novell
 
@@ -23,7 +23,7 @@ Nella versione 5 C# di sono state introdotte due nuove parole chiave per esprime
 
 ### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Funzionalità del linguaggio C# 6](~/cross-platform/platform/csharp-six.md)
 
-La versione più recente del C# linguaggio-versione 6-continua a evolvere il linguaggio in modo da avere meno standard, una maggiore chiarezza e una maggiore coerenza. La sintassi di inizializzazione più pulita, `await` la `catch/finally` possibilità di usare in blocchi e l' `?` operatore condizionale null sono particolarmente utili.
+La versione più recente del C# linguaggio-versione 6-continua a evolvere il linguaggio in modo da avere meno standard, una maggiore chiarezza e una maggiore coerenza. Sintassi di inizializzazione più pulita, la possibilità di usare `await` nei blocchi di `catch/finally` e l'operatore di `?` condizionale null sono particolarmente utili.
 
 ## <a name="ffsharpindexmd"></a>[F#](fsharp/index.md)
 

@@ -4,15 +4,15 @@ description: Questa guida illustra come un servizio Android può usare le notifi
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 5d25604db1f88702f4c24df21b3ebba6c9c2fc95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b02785863f89ef6a273c52c09f45a99c17cb6242
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754822"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024528"
 ---
 # <a name="service-notifications"></a>Notifiche del servizio
 
@@ -47,7 +47,7 @@ public class MyService: Service
 
 Questa schermata è un esempio della notifica visualizzata:
 
-[![Icona di notifica visualizzata sulla barra di stato](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
+[icona di notifica![visualizzata sulla barra di stato](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 Quando l'utente scorre la schermata di notifica dalla parte superiore, viene visualizzata la notifica completa:
 

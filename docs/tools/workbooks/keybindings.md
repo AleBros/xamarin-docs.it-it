@@ -3,15 +3,15 @@ title: Tasti di scelta rapida dell'editor Xamarin Workbooks
 description: Questo documento descrive le scelte rapide da tastiera disponibili per l'uso nell'editor Xamarin Workbooks. In particolare, vengono esaminati i vari modi in cui viene utilizzata la chiave restituita.
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 9904d0f9fb1acfc3c3c197b9881c2add00aba534
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f8c76f96ea16b9341d349ca110a3eb39207a4d30
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285318"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019112"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Tasti di scelta rapida dell'editor Xamarin Workbooks
 

@@ -3,15 +3,15 @@ title: 'Case study sulle app multipiattaforma: Tasky'
 description: Questo documento descrive il modo in cui l'applicazione di esempio Tasky Portable è stata progettata e creata come applicazione per dispositivi mobili multipiattaforma. Vengono illustrati i requisiti dell'app, l'interfaccia, il modello di dati, la funzionalità di base, l'implementazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 246ee002404fdf6fe1120c19701aceb3c2dee7db
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: e38fc0d23c65189f51f7f8f159a07894b3e1ab72
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71249779"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030327"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Case study sulle app multipiattaforma: Tasky
 

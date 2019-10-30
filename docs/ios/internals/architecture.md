@@ -4,15 +4,15 @@ description: Questo documento descrive Novell. iOS a un livello basso, illustran
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b0cece7f553d0169c311e6614428ed37c5c77813
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e5dbc04e52aea4307716c343df5757d0fe012b74
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768526"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022393"
 ---
 # <a name="ios-app-architecture"></a>Architettura app iOS
 
@@ -20,9 +20,9 @@ Le applicazioni Novell. iOS vengono eseguite nell'ambiente di esecuzione mono e 
 
 Il diagramma seguente mostra una panoramica di base di questa architettura:
 
-[![](architecture-images/ios-arch-small.png "Questo diagramma mostra una panoramica di base dell'architettura di compilazione ahead of Time (AOT)")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>Codice nativo e gestito: Una spiegazione
+## <a name="native-and-managed-code-an-explanation"></a>Codice nativo e gestito: spiegazione
 
 Quando si sviluppa per Novell, vengono spesso usati i termini *nativi e codice gestito* . Il [codice gestito](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) è codice in cui l'esecuzione viene gestita dal [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)o nel caso di Novell: il runtime di mono. Questo è il cosiddetto linguaggio intermedio.
 
@@ -35,7 +35,7 @@ Quando si compila un'applicazione della piattaforma Novell, il C# compilatore mo
 Tuttavia, esiste una restrizione di sicurezza in iOS, impostata da Apple, che impedisce l'esecuzione di codice generato dinamicamente in un dispositivo.
 Per assicurarsi di rispettare questi protocolli di sicurezza, Novell. iOS usa invece un compilatore AOT (Ahead of Time) per compilare il codice gestito. Questo produce un file binario iOS nativo, ottimizzato facoltativamente con LLVM per i dispositivi, che può essere distribuito nel processore basato su ARM di Apple. Di seguito è illustrato un diagramma di approssimazione del modo in cui questo si integra.
 
-[![](architecture-images/aot.png "Un diagramma di approssimazione del modo in cui si integra")](architecture-images/aot-large.png#lightbox)
+[![](architecture-images/aot.png "A rough diagram of how this fits together")](architecture-images/aot-large.png#lightbox)
 
 L'utilizzo di AOT presenta diverse limitazioni, descritte in dettaglio nella Guida alle [limitazioni](~/ios/internals/limitations.md) . Fornisce inoltre una serie di miglioramenti rispetto a JIT attraverso una riduzione del tempo di avvio e diverse ottimizzazioni delle prestazioni
 
@@ -52,7 +52,7 @@ Per ulteriori informazioni sull'utilizzo dei selettori, vedere la guida ai [sele
 
 Come indicato in precedenza, il registrar è codice che espone il codice gestito a Objective-C. Questa operazione viene eseguita creando un elenco di tutte le classi gestite che derivano da NSObject:
 
-- Per tutte le classi che non eseguono il wrapping di una classe Objective-c esistente, viene creata una nuova classe Objective-c con membri Objective-c che eseguono il mirroring di tutti`Export`i membri gestiti che dispongono di un attributo [].
+- Per tutte le classi che non eseguono il wrapping di una classe Objective-C esistente, viene creata una nuova classe Objective-C con membri Objective-C che eseguono il mirroring di tutti i membri gestiti che dispongono di un attributo [`Export`].
 
 - Nelle implementazioni per ogni membro Objective-C, il codice viene aggiunto automaticamente per chiamare il membro gestito con mirroring.
 
@@ -87,28 +87,28 @@ Lo pseudo-codice seguente mostra un esempio di come eseguire questa operazione:
 
 ```
 
-Il codice gestito può contenere gli attributi, `[Register]` e `[Export]`, utilizzati dal registrar per tenere presente che l'oggetto deve essere esposto a Objective-C.
-L' `[Register]` attributo viene utilizzato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non sia appropriato. Tutte le classi derivate da NSObject vengono registrate automaticamente con Objective-C.
-L'attributo `[Export]` required contiene una stringa, ovvero il selettore usato nella classe Objective-C generata.
+Il codice gestito può contenere gli attributi, `[Register]` e `[Export]`, usati dal registrar per tenere presente che l'oggetto deve essere esposto a Objective-C.
+L'attributo `[Register]` viene usato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non sia appropriato. Tutte le classi derivate da NSObject vengono registrate automaticamente con Objective-C.
+L'attributo `[Export]` obbligatorio contiene una stringa, ovvero il selettore usato nella classe Objective-C generata.
 
 Esistono due tipi di registrar usati in Novell. iOS, dinamici e statici:
 
 - **Registrar dinamici** : il registrar dinamico esegue la registrazione di tutti i tipi nell'assembly in fase di esecuzione. Questa operazione viene eseguita usando le funzioni fornite dall' [API di runtime di Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Il registrar dinamico ha pertanto un avvio più lento, ma un tempo di compilazione più rapido. Questo è il valore predefinito per il simulatore iOS. Le funzioni native, in genere in C, denominate trampolini, vengono usate come implementazioni del metodo quando si usano i registrar dinamici. Variano a seconda delle diverse architetture.
 
-- **Registrar statici** : il registrar statico genera codice Objective-C durante la compilazione, che viene quindi compilato in una libreria statica e collegato all'eseguibile. Questo consente un avvio più rapido, ma richiede più tempo durante la fase di compilazione. Viene usato per impostazione predefinita per le compilazioni di dispositivi. Il registrar statico può essere usato anche con il simulatore iOS `--registrar:static` passando `mtouch` come attributo nelle opzioni di compilazione del progetto, come illustrato di seguito:
+- **Registrar statici** : il registrar statico genera codice Objective-C durante la compilazione, che viene quindi compilato in una libreria statica e collegato all'eseguibile. Questo consente un avvio più rapido, ma richiede più tempo durante la fase di compilazione. Viene usato per impostazione predefinita per le compilazioni di dispositivi. Il registrar statico può essere usato anche con il simulatore iOS passando `--registrar:static` come attributo `mtouch` nelle opzioni di compilazione del progetto, come illustrato di seguito:
 
-    [![](architecture-images/image1.png "Impostazione di argomenti mTouch aggiuntivi")](architecture-images/image1.png#lightbox)
+    [![](architecture-images/image1.png "Setting Additional mtouch arguments")](architecture-images/image1.png#lightbox)
 
 Per ulteriori informazioni sulle specifiche del sistema di registrazione dei tipi iOS utilizzato da Novell. iOS, vedere la guida relativa ai [tipi registrar](~/ios/internals/registrar.md) .
 
 ## <a name="application-launch"></a>Avvio dell'applicazione
 
-Il punto di ingresso di tutti i file eseguibili Novell. iOS viene fornito da `xamarin_main`una funzione chiamata che Inizializza mono.
+Il punto di ingresso di tutti i file eseguibili Novell. iOS viene fornito da una funzione denominata `xamarin_main`, che Inizializza mono.
 
 A seconda del tipo di progetto, vengono eseguite le operazioni seguenti:
 
-- Per le normali applicazioni iOS e tvOS, viene chiamato il metodo Main gestito, fornito dall'app Novell. Questo metodo Main gestito chiama `UIApplication.Main`quindi, che è il punto di ingresso per Objective-C. UIApplication. Main è l'associazione per il `UIApplicationMain` metodo di Objective-C.
-- Per le estensioni, viene chiamata la `NSExtensionMain` funzione nativa`NSExtensionmain` , o (per le estensioni watchos), fornita dalle librerie Apple. Poiché si tratta di progetti di librerie di classi e non eseguibili, non sono disponibili metodi Main gestiti da eseguire.
+- Per le normali applicazioni iOS e tvOS, viene chiamato il metodo Main gestito, fornito dall'app Novell. Questo metodo Main gestito chiama quindi `UIApplication.Main`, che è il punto di ingresso per Objective-C. UIApplication. Main è l'associazione per il metodo `UIApplicationMain` di Objective-C.
+- Per le estensioni, viene chiamata la funzione nativa, `NSExtensionMain` o (`NSExtensionmain` per le estensioni Watchos), fornita dalle librerie Apple. Poiché si tratta di progetti di librerie di classi e non eseguibili, non sono disponibili metodi Main gestiti da eseguire.
 
 Tutta questa sequenza di avvio viene compilata in una libreria statica, che viene quindi collegata all'eseguibile finale in modo che l'app sappia come uscire da zero.
 
@@ -151,8 +151,8 @@ public interface UIToolbar : UIBarPositioning {
 }
 ```
 
-Il generatore, chiamato [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) in Novell. iOS, accetta questi file di definizione e usa gli strumenti .NET per [compilarli in un assembly temporaneo](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione.
-Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e `btouch` pertanto non è in grado di cercarlo nell'assembly temporaneo per l'output.
+Il generatore, denominato [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) in Novell. iOS, accetta questi file di definizione e usa gli strumenti .NET per [compilarli in un assembly temporaneo](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione.
+Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e pertanto `btouch` non è in grado di cercarlo nell'assembly temporaneo per l'output.
 
 Dopo la creazione di Novell. iOS. dll, mTouch raggruppa tutti i componenti.
 

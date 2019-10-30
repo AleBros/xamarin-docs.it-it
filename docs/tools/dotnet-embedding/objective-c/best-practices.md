@@ -3,15 +3,15 @@ title: Procedure consigliate per l'incorporamento di .NET per Objective-C
 description: Questo documento descrive le varie procedure consigliate per l'uso dell'incorporamento di .NET con Objective-C. Viene illustrata l'esposizione di un subset del codice gestito, l'esposizione di un'API chunkier, la denominazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: ff04c001193eb897aac81cdc66ed535c76d81717
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2f632e3218d817aa0162a63ea81c61ca18c52b93
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285110"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73006793"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Procedure consigliate per l'incorporamento di .NET per Objective-C
 
@@ -101,15 +101,15 @@ Anche i nomi .NET validi potrebbero non essere ideali per un'API Objective-C.
 Le convenzioni di denominazione in Objective-C sono diverse rispetto a .NET (maiuscole e minuscole anziché Pascal, più dettagliato).
 Leggere le [linee guida per la codifica di Cocoa](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingMethods.html#//apple_ref/doc/uid/20001282-BCIGIJJF).
 
-Dal punto di vista di uno sviluppatore Objective-C, un metodo con `Get` prefisso implica che non si è proprietari dell'istanza, ad esempio la [regola Get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
+Dal punto di vista di uno sviluppatore Objective-C, un metodo con un prefisso `Get` implica che non si è proprietari dell'istanza, ad esempio la [regola Get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
 
-Questa regola di denominazione non ha corrispondenze nel mondo GC .NET; un metodo .NET con `Create` prefisso si comporterà in modo identico in .NET. Tuttavia, per gli sviluppatori Objective-C, in genere significa che si è proprietari dell'istanza restituita, ovvero la [regola di creazione](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
+Questa regola di denominazione non ha corrispondenze nel mondo GC .NET; un metodo .NET con un prefisso `Create` si comporterà in modo identico in .NET. Tuttavia, per gli sviluppatori Objective-C, in genere significa che si è proprietari dell'istanza restituita, ovvero la [regola di creazione](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
 
 ## <a name="exceptions"></a>Eccezioni
 
 In .NET è molto comune usare le eccezioni in modo estensivo per segnalare gli errori. Tuttavia, sono lenti e non identiche in Objective-C. Quando possibile, è necessario nasconderli dallo sviluppatore Objective-C.
 
-Ad esempio, il modello `Try` .NET sarà molto più semplice da utilizzare per il codice Objective-C:
+Ad esempio, il modello di `Try` .NET sarà molto più semplice da utilizzare per il codice Objective-C:
 
 ```csharp
 public int Parse (string number)
@@ -127,13 +127,13 @@ public bool TryParse (string number, out int value)
 }
 ```
 
-### <a name="exceptions-inside-init"></a>Eccezioni all'interno di`init*`
+### <a name="exceptions-inside-init"></a>Eccezioni all'interno `init*`
 
 In .NET un costruttore deve avere esito positivo e restituire un'istanza valida (_auspicabile_) o generare un'eccezione.
 
-Objective-C, invece, consente `init*` di restituire `nil` quando non è possibile creare un'istanza. Si tratta di un modello comune, ma non generale, usato in molti dei framework di Apple. In altri casi è possibile `assert` che si verifichi un errore (e termina il processo corrente).
+Al contrario, Objective-C consente `init*` di restituire `nil` quando non è possibile creare un'istanza. Si tratta di un modello comune, ma non generale, usato in molti dei framework di Apple. In altri casi è possibile che si verifichi un `assert` (e termina il processo corrente).
 
-Il generatore segue lo stesso `return nil` modello per i `init*` metodi generati. Se viene generata un'eccezione gestita, verrà stampata (usando `NSLog`) e `nil` verrà restituita al chiamante.
+Il generatore segue lo stesso modello di `return nil` per i metodi di `init*` generati. Se viene generata un'eccezione gestita, verrà stampata (usando `NSLog`) e verrà restituita `nil` al chiamante.
 
 ## <a name="operators"></a>Operatori
 
@@ -141,4 +141,4 @@ Objective-C non consente l'overload C# degli operatori, quindi questi vengono co
 
 I metodi denominati " [descrittivi"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) vengono generati in preferenza agli overload degli operatori quando vengono trovati e possono produrre un'API più semplice da utilizzare.
 
-Le classi che eseguono l' `==` override `!=` degli operatori e\o devono eseguire l'override anche del metodo Equals (Object) standard.
+Le classi che eseguono l'override degli operatori `==` `!=` e\o devono eseguire l'override anche del metodo Equals (Object) standard.

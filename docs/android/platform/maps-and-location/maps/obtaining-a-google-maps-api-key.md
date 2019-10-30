@@ -4,15 +4,15 @@ description: Come ottenere una chiave API di Google Maps per aggiungere la funzi
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 3868b2a35894cdcd7a11c626268307338744ecb4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: bf0a099546b2d5610a639cbf9af4c7676d10bef9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250055"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020043"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Ottenere una chiave API Google Maps
 
@@ -35,11 +35,11 @@ In genere, ciò significa che sarà necessario determinare l'impronta digitale S
 
 Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di debug di un'applicazione Novell. Android si trova nel percorso seguente:
 
-**C:\\Users\\[username\\]\\AppData\\LocalNovell\\mono for\\Android Debug. keystore**
+**C:\\utenti\\[USERNAME]\\AppData\\local\\Novell\\mono per Android\\debug. keystore**
 
 Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool` dal JDK. Questo strumento si trova in genere nella directory bin java:
 
-**C:\\programmi (x86)\\Java\\JDK [versione]\\bin\\Tool. exe**
+**C:\\Program Files (x86)\\Java\\JDK [versione]\\bin\\Tool. exe**
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
@@ -49,7 +49,7 @@ Per impostazione predefinita, l'archivio chiavi usato per firmare le versioni di
 
 Le informazioni su un archivio chiavi si ottengono eseguendo il comando `keytool` dal JDK. Questo strumento si trova in genere nella directory bin java:
 
-**/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
+**/System/Library/Java/JavaVirtualMachines/[versione]. JDK/Contents/Home/bin/Tool**
 
 -----
 
@@ -111,19 +111,19 @@ Dopo aver recuperato l'impronta digitale SHA-1 dell'archivio chiavi di firma, è
 
 1. In un browser passare al [Dashboard Google Developers Console API & Services](https://console.developers.google.com/apis/dashboard/) e fare clic su **Seleziona un progetto**. Fare clic su un nome di progetto o crearne uno nuovo facendo clic su **nuovo progetto**:
 
-   [![Pulsante Crea progetto di Google Developer Console](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
+   [pulsante Crea progetto![Google Developer Console](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
 2. Se è stato creato un nuovo progetto, immettere il nome del progetto nella finestra di dialogo **nuovo progetto** visualizzata. In questa finestra di dialogo verrà prodotto un ID progetto univoco basato sul nome del progetto. Fare quindi clic sul pulsante **Crea** , come illustrato nell'esempio seguente:
 
-   [![Il nuovo progetto è denominato XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
+   [![nuovo progetto è denominato XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
 3. Dopo un minuto, il progetto viene creato e viene eseguita la pagina **Dashboard** del progetto. Da qui, fare clic su **Abilita API e servizi**:
 
-   [![Selezione dell'API Android di Google Maps nella sezione libreria](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
+   [![clic sull'API Android di Google Maps nella sezione libreria](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
 4. Dalla pagina **libreria API** fare clic su **Maps SDK per Android**. Nella pagina successiva fare clic su **Abilita** per attivare il servizio per il progetto:
 
-   [![Fare clic sul pulsante Abilita nella sezione Dashboard](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
+   [![fare clic sul pulsante Abilita nella sezione Dashboard](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
 A questo punto è stato creato il progetto API e l'API di Google Maps Android V2 è stata aggiunta. Tuttavia, non è possibile usare questa API nel progetto finché non vengono create le relative credenziali. La sezione successiva illustra come creare una chiave API ed elencare un elenco di applicazioni Novell. Android in modo che sia autorizzato a usare questa chiave.
 
@@ -133,31 +133,31 @@ Dopo aver creato il progetto API della **console Google Developer** , è necessa
 
 1. Nella pagina **Maps SDK per Android** visualizzata (dopo aver fatto clic su **Abilita** nel passaggio precedente) andare alla scheda **Credentials (credenziali** ) e fare clic sul pulsante **create Credentials (crea credenziali** ):
 
-   [![Maps SDK per il messaggio di credenziali Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [messaggio di credenziali di![Maps SDK per Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Fare clic su **chiave API**:
 
-   [![Aggiungere credenziali alla finestra di dialogo del progetto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
+   [![aggiungere credenziali alla finestra di dialogo del progetto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. Quando si fa clic su questo pulsante, viene generata la chiave API. Successivamente, è necessario limitare questa chiave in modo che solo l'app possa chiamare le API con questa chiave. Fare clic su **limita chiave**:
 
-   [![Fare clic su limita chiave nella pagina credenziali](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
+   [![fare clic su limita chiave nella pagina credenziali](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
 4. Modificare il campo **nome** da **chiave API 1** a un nome che consenta di ricordare la chiave utilizzata per (**XamarinMapsDemoKey** viene usato in questo esempio). Fare quindi clic sul pulsante di opzione **app Android** :
 
-   [![Selezione delle app Android nella pagina credenziali](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
+   [![selezionare App Android nella pagina credenziali](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
 
 5. Per aggiungere l'impronta digitale SHA-1, fare clic su **+ Aggiungi nome pacchetto e impronta digitale**:
 
-   [![Fare clic su Aggiungi nome pacchetto e impronta digitale](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
+   [![fare clic su Aggiungi nome pacchetto e impronta digitale](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
-6. Immettere il nome del pacchetto dell'app e immettere l'impronta digitale del certificato SHA-1 `keytool` , ottenuta tramite, come illustrato in precedenza in questa guida. Nell'esempio seguente viene immesso il nome del `XamarinMapsDemo` pacchetto per, seguito dall'impronta digitale del certificato SHA-1 ottenuta da **debug. keystore**:
+6. Immettere il nome del pacchetto dell'app e immettere l'impronta digitale del certificato SHA-1, ottenuta tramite `keytool` come illustrato in precedenza in questa guida. Nell'esempio seguente viene immesso il nome del pacchetto per `XamarinMapsDemo`, seguito dall'impronta digitale del certificato SHA-1 ottenuta da **debug. keystore**:
 
-   [![Il nome del pacchetto immesso è com. Novell. docs. Android. map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
+   [il nome del pacchetto![immesso è com. Novell. docs. Android. map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
-7. Si noti che, affinché il pacchetto APK l'accesso a Google Maps, è necessario includere le impronte digitali SHA-1 e creare un pacchetto nomi per ogni archivio chiavi (debug e rilascio) che usano per firmare l'APK. Ad esempio, se si usa un computer per il debug e un altro computer per la generazione del file APK di rilascio, è necessario includere l'impronta digitale certificato SHA-1 dall'archivio di chiavi di debug del computer prima e l'impronta digitale certificato SHA-1 dalla versione dell'archivio chiavi di il secondo computer. Fare clic su **+ Aggiungi nome pacchetto e impronta digitale** per aggiungere un'altra impronta digitale e il nome del pacchetto, come illustrato nell'esempio seguente:
+7. Si noti che, per consentire all'APK di accedere a Google Maps, è necessario includere le impronte digitali SHA-1 e i nomi di pacchetto per ogni archivio chiavi (debug e versione) usati per firmare l'APK. Ad esempio, se si usa un computer per il debug e un altro computer per la generazione del file APK della versione, è necessario includere l'impronta digitale del certificato SHA-1 dall'archivio chiavi di debug del primo computer e l'impronta digitale del certificato SHA-1 dal keystore versione di secondo computer. Fare clic su **+ Aggiungi nome pacchetto e impronta digitale** per aggiungere un'altra impronta digitale e il nome del pacchetto, come illustrato nell'esempio seguente:
 
-   [![L'aggiunta di un'altra impronta digitale crea un altro certificato SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
+   [![l'aggiunta di un'altra impronta digitale crea un altro certificato SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
 8. Fare clic sul pulsante **Save** (Salva) per salvare le modifiche. Successivamente, viene restituito l'elenco delle chiavi API. Se sono presenti altre chiavi API create in precedenza, verranno elencate qui. In questo esempio viene elencata una sola chiave API (creata nei passaggi precedenti):
 
@@ -169,15 +169,15 @@ A partire dall'11 giugno 2018, la chiave API non funzionerà se il progetto non 
 
 1. Fare clic sul pulsante di menu hamburger e selezionare la pagina **fatturazione** :
 
-   [![Selezione della sezione di fatturazione del menu hamburger](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+   [![selezionare la sezione di fatturazione del menu hamburger](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
 
 2. Collegare il progetto a un account di fatturazione facendo clic su **collega un account di fatturazione** seguito da **Crea account di fatturazione** nel popup visualizzato (se non si dispone di un account, verrà richiesto di crearne uno nuovo):
 
-   [![Collega progetto a account di fatturazione](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
+   [![collegare il progetto all'account di fatturazione](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## <a name="adding-the-key-to-your-project"></a>Aggiunta della chiave al progetto
 
-Aggiungere infine questa chiave API al file **file AndroidManifest. XML** dell'app Novell. Android. Nell'esempio seguente, `YOUR_API_KEY` deve essere sostituito con la chiave API generata nei passaggi precedenti:
+Aggiungere infine questa chiave API al file **file AndroidManifest. XML** dell'app Novell. Android. Nell'esempio seguente `YOUR_API_KEY` deve essere sostituito con la chiave API generata nei passaggi precedenti:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -196,4 +196,4 @@ Aggiungere infine questa chiave API al file **file AndroidManifest. XML** dell'a
 
 - [Console di Google APIs](https://code.google.com/apis/console/)
 - [Chiave API di Google Maps](https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key)
-- [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)
+- [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)

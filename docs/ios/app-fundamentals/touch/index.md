@@ -4,21 +4,21 @@ description: Questo documento contiene collegamenti a guide che descrivono come 
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: dfd1a3c88d2c9c87c84a18736dd0f4c8c7e79005
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7aac9a3e2a86f5cdcfa2d6ab27961dd83998bb0f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282995"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009355"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Gestione del tocco nelle app Novell. iOS
 
 Analogamente ad altre piattaforme per dispositivi mobili, iOS offre diversi modi per gestire il tocco. Può supportare la funzionalità multitocco, ovvero molti punti di contatto sullo schermo, e movimenti complessi. Questa guida presenta alcuni concetti, nonché le peculiarità dell'implementazione di tocco e movimenti in iOS.
 
-iOS incapsula i dati di tocco nella `UITouch` classe, resi disponibili per le applicazioni tramite una serie di `UIResponder` metodi. Le applicazioni possono eseguire l'override di questi metodi nelle `UIView` sottoclassi di e `UIViewController`, entrambi ereditano da `UIResponder`.
+iOS incapsula i dati di tocco nella classe `UITouch`, che viene resa disponibile per le applicazioni tramite una serie di `UIResponder` metodi. Le applicazioni possono eseguire l'override di questi metodi nelle sottoclassi di `UIView` e `UIViewController`, entrambi ereditano da `UIResponder`.
 
 Oltre a acquisire i dati di tocco, iOS fornisce i mezzi per interpretare i modelli di tocchi nei movimenti. Questi riconoscitori di movimento possono a sua volta essere usati per interpretare i comandi specifici dell'applicazione, ad esempio una rotazione di un'immagine o una volta una pagina. iOS fornisce un'ampia raccolta di classi per gestire i movimenti comuni con codice aggiunto minimo.
 
@@ -29,7 +29,7 @@ Tuttavia, in alcuni casi è necessario usare l'elaborazione del tocco di basso l
 ## <a name="sections"></a>Sezioni
 
 - [Tocco in iOS](touch-in-ios.md)
-- [Procedura dettagliata: Uso del tocco in iOS](ios-touch-walkthrough.md)
+- [Procedura dettagliata: uso del tocco in iOS](ios-touch-walkthrough.md)
 - [Rilevamento del multitouch](touch-tracking.md)
 
 Questa guida funge da introduzione al tocco in iOS. Per ulteriori informazioni sull'utilizzo di commenti e suggerimenti tattili 3D in iOS, introdotti rispettivamente in iOS 9 e 10, consultare le guide specifiche seguenti:

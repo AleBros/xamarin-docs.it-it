@@ -4,15 +4,15 @@ description: Questo articolo descrive come configurare Visual Studio 2019 per lo
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: b3910bd096f2a8dd301a9ba6e200028d3121c8df
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279218"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022514"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Configurazione di Visual Studio per lo sviluppo iOS
 
@@ -42,7 +42,7 @@ Quando un progetto iOS è aperto in Visual Studio 2019 o Visual Studio 2017, la 
 
 Se questa barra degli strumenti non viene visualizzata, aprire il menu **Visualizza** in Visual Studio 2019 o Visual Studio 2017 e scegliere **Barre degli strumenti > iOS**:
 
-![Abilitazione della barra degli strumenti iOS](config-options-images/ios-toolbar-enable.png "Abilitazione della barra degli strumenti di iOS")
+![Abilitazione della barra degli strumenti iOS](config-options-images/ios-toolbar-enable.png "Abilitazione della barra degli strumenti iOS")
 
 ## <a name="solution-platforms-drop-down-menu"></a>Menu a discesa Piattaforme soluzione
 
@@ -54,8 +54,8 @@ Per assicurarsi che questo menu a discesa sia visibile nella barra degli strumen
 - Scegliere **Aggiungi o rimuovi pulsanti** 
 - Assicurarsi che la voce **Piattaforme soluzione** sia selezionata:
 
-![Abilitazione del menu a discesa Piattaforme soluzione](config-options-images/solution-platforms-enable.png "Abilitazione del menu a discesa Piattaforme soluzione")
+![Abilitazione del menu a discesa piattaforme soluzione](config-options-images/solution-platforms-enable.png "Abilitazione del menu a discesa piattaforme soluzione")
 
 Con un progetto iOS aperto, le barre degli strumenti **Standard** e **iOS** dovrebbero avere un aspetto simile alla schermata seguente:
 
-![Barre degli strumenti Standard e iOS](config-options-images/toolbars.png "Barre degli strumenti Standard e iOS")
+![Barre degli strumenti standard e iOS](config-options-images/toolbars.png "Barre degli strumenti standard e iOS")

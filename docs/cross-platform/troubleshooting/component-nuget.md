@@ -4,15 +4,15 @@ description: Questo documento descrive come sostituire i riferimenti ai componen
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: e9bd54523fa46625e9a9e6e46247b92987f3d427
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106069"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014335"
 ---
 # <a name="updating-component-references-to-nuget"></a>Aggiornamento di riferimenti ai componenti in NuGet
 
@@ -41,7 +41,7 @@ Per rimuovere un componente dal progetto:
 
 2. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato e scegliere **modifica {nome-progetto}. csproj**.
 
-3. Trovare tutti i riferimenti nel file a `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
+3. Trovare tutti i riferimenti nel file da `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
 
     ```xml
     <ItemGroup>
@@ -60,7 +60,7 @@ Per rimuovere un componente dal progetto:
     </ItemGroup>
     ```
 
-4. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intero `ItemGroup`oggetto.
+4. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intera `ItemGroup`.
 
 5. Una volta salvato il file, fare clic con il pulsante destro del mouse sul nome del progetto e selezionare **Ricarica progetto**.
 
@@ -76,7 +76,7 @@ Per rimuovere un componente dal progetto:
 
 1. Aprire il file con estensione csproj. A tale scopo, fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **strumenti > modifica file**.
 
-2. Trovare tutti i riferimenti nel file a `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
+2. Trovare tutti i riferimenti nel file da `XamarinComponentReference`. Dovrebbe essere simile all'esempio seguente:
 
     ```xml
     <ItemGroup>
@@ -95,7 +95,7 @@ Per rimuovere un componente dal progetto:
     </ItemGroup>
     ```
 
-3. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intera`ItemGroup`
+3. Rimuovere i riferimenti a `XamarinComponentReference` e salvare il file. Nell'esempio precedente, è possibile rimuovere l'intero `ItemGroup`
 
 4. Ripetere i passaggi precedenti per ogni progetto nella soluzione.
 
@@ -159,8 +159,8 @@ Per confermare l'esistenza di un pacchetto NuGet sostitutivo, cercare in [NuGet.
 
 Ad esempio, è possibile trovare il popolare pacchetto **sqlite-net-PCL** cercando:
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl): nome del prodotto.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum): profilo dell'autore.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) : il nome del prodotto.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) : profilo dell'autore.
 
 ### <a name="updating-the-solution"></a>Aggiornamento della soluzione
 

@@ -4,15 +4,15 @@ description: Questo documento contiene collegamenti a diverse guide che descrivo
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 59257dafc1d92756feb85046df43de7b9da0cc42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ccdde29183645b93831b7261909714f9baf3fa4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290148"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010019"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Nozioni fondamentali sulle applicazioni Novell. iOS
 
@@ -72,4 +72,4 @@ Gli schermi touch su molti dei dispositivi attuali consentono agli utenti di int
 
 ## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Utilizzo delle impostazioni predefinite dell'utente](~/ios/app-fundamentals/user-defaults.md)
 
-La `NSUserDefaults` classe fornisce un modo per le app e le estensioni iOS per interagire a livello di codice con il sistema predefinito a livello di sistema. Usando il sistema predefinito, l'utente può configurare il comportamento o lo stile di un'app per soddisfare le preferenze (in base alla progettazione dell'app). Ad esempio, per presentare i dati nelle misure metrica rispetto a quelle imperiali oppure selezionare un tema dell'interfaccia utente specifico.
+La classe `NSUserDefaults` fornisce un modo per le app e le estensioni iOS per interagire a livello di codice con il sistema predefinito a livello di sistema. Usando il sistema predefinito, l'utente può configurare il comportamento o lo stile di un'app per soddisfare le preferenze (in base alla progettazione dell'app). Ad esempio, per presentare i dati nelle misure metrica rispetto a quelle imperiali oppure selezionare un tema dell'interfaccia utente specifico.

@@ -5,26 +5,26 @@ ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 24203d8a3a4356fb4de08d132c164d9f2d19a0c9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61d1adfc997b34302f1f89f56653af906ca90135
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291798"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022216"
 ---
 # <a name="binding-ios-libraries"></a>Associazione di librerie iOS
 
 Seguire questi collegamenti per informazioni sull'associazione di librerie Objective-C e CocoaPods per Novell. iOS e Novell. Mac:
 
-- [**Panoramica**](~/cross-platform/macios/binding/overview.md) di -
-  Viene descritto il funzionamento dell'associazione.
-- [**Binding di librerie Objective-C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Istruzioni su come associare le librerie Objective-C per l'uso nei progetti Novell.
-- [**Guida di riferimento**](~/cross-platform/macios/binding/binding-types-reference.md) per la definizione del tipo -
-  Descrive tutti gli attributi disponibili per associare gli autori al processo di generazione del binding.
+- [**Panoramica**](~/cross-platform/macios/binding/overview.md) -
+  descrive il funzionamento dell'associazione.
+- [**Binding di librerie Objective-c**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  istruzioni su come associare le librerie Objective-c per l'uso nei progetti Novell.
+- [**Guida di riferimento**](~/cross-platform/macios/binding/binding-types-reference.md) per la definizione dei tipi -
+  descrive tutti gli attributi disponibili per l'associazione tra autori e il processo di generazione del binding.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

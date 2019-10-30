@@ -4,31 +4,31 @@ description: Questo documento fornisce una procedura dettagliata che illustra co
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 47a07959bcfabc0980ccb90f2ae7a489e5e71223
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6004598b215c85b70b057ff156c3a905a0879138
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756241"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010708"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Trasferimento in background e NSURLSession in Novell. iOS
 
-Un trasferimento in background viene avviato tramite la configurazione di `NSURLSession` un'attività di caricamento o download in background e di Accodamento. Se le attività vengono completate quando l'applicazione è in background, sospesa o terminata, iOS invierà una notifica all'applicazione chiamando il gestore di completamento nel *AppDelegate*dell'applicazione. Il diagramma seguente illustra questo comportamento:
+Un trasferimento in background viene avviato tramite la configurazione di un `NSURLSession` in background e l'accodamento delle attività di caricamento o download. Se le attività vengono completate quando l'applicazione è in background, sospesa o terminata, iOS invierà una notifica all'applicazione chiamando il gestore di completamento nel *AppDelegate*dell'applicazione. Il diagramma seguente illustra questo comportamento:
 
- [![](background-transfer-walkthrough-images/transfer.png "Un trasferimento in background viene avviato tramite la configurazione di un NSURLSession in background e l'accodamento delle attività di caricamento o download")](background-transfer-walkthrough-images/transfer.png#lightbox)
+ [![](background-transfer-walkthrough-images/transfer.png "A background transfer is initiated by configuring a background NSURLSession and enqueuing upload or download tasks")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 Vediamo come appare nel codice.
 
 ## <a name="configuring-a-background-session"></a>Configurazione di una sessione in background
 
-Per eseguire una sessione in background, creare un `NSUrlSession` nuovo e configurarlo `NSUrlSessionConfiguration` utilizzando un oggetto.
+Per eseguire una sessione in background, creare una nuova `NSUrlSession` e configurarla utilizzando un oggetto `NSUrlSessionConfiguration`.
 
 L'oggetto di configurazione determina le operazioni che la sessione può eseguire e i tipi di attività che può eseguire.
-Le sessioni configurate tramite il `CreateBackgroundSessionConfiguration` metodo vengono eseguite in un processo separato ed eseguono trasferimenti discrezionali (WiFi) per mantenere i dati e la durata della batteria.
-Nell'esempio di codice seguente viene illustrata la corretta installazione di una sessione `CreateBackgroundSessionConfiguration` di trasferimento in background utilizzando il metodo e un identificatore di stringa univoco:
+Le sessioni configurate con il metodo `CreateBackgroundSessionConfiguration` vengono eseguite in un processo separato ed eseguono trasferimenti discrezionali (WiFi) per mantenere i dati e la durata della batteria.
+Nell'esempio di codice seguente viene illustrata la corretta installazione di una sessione di trasferimento in background utilizzando il metodo `CreateBackgroundSessionConfiguration` e un identificatore di stringa univoco:
 
 ```csharp
 public partial class SimpleBackgroundTransferViewController : UIViewController
@@ -48,20 +48,20 @@ La coda determina l'ordine in cui le attività vengono completate. Il delegato d
 
 ## <a name="working-with-tasks-and-delegates"></a>Utilizzo di attività e delegati
 
-Ora che è stata configurata una sessione in background, è possibile avviare le attività per gestire il trasferimento. È possibile tenere traccia di queste attività usando un' `NSUrlSessionDelegate` istanza denominata delegato della sessione. Il delegato della sessione è responsabile della riattivazione di un'applicazione terminata o sospesa in background per gestire l'autenticazione, gli errori o il completamento del trasferimento.
+Ora che è stata configurata una sessione in background, è possibile avviare le attività per gestire il trasferimento. È possibile tenere traccia di queste attività usando un'istanza di `NSUrlSessionDelegate` denominata delegato della sessione. Il delegato della sessione è responsabile della riattivazione di un'applicazione terminata o sospesa in background per gestire l'autenticazione, gli errori o il completamento del trasferimento.
 
-Per verificare lo stato del trasferimento, fornisceimetodidibaseseguenti:`NSUrlSessionDelegate`
+In `NSUrlSessionDelegate` sono disponibili i seguenti metodi di base per verificare lo stato del trasferimento:
 
 - *DidFinishEventsForBackgroundSession* : questo metodo viene chiamato al termine di tutte le attività e il trasferimento viene completato.
 - *DidReceiveChallenge* : chiamato per richiedere le credenziali quando è richiesta l'autorizzazione.
-- *DidBecomeInvalidWithError* : viene chiamato se `NSURLSession` l'oggetto viene invalidato.
+- *DidBecomeInvalidWithError* : viene chiamato se l'`NSURLSession` viene invalidata.
 
 Per le sessioni in background sono necessari delegati più specializzati a seconda dei tipi di attività in esecuzione. Le sessioni in background sono limitate a due tipi di attività:
 
-- *Attività di caricamento* : le `NSUrlSessionTaskDelegate` attività `NSUrlSessionUploadTask` di tipo usano, che eredita `NSUrlSessionDelegate` da. Questo delegato fornisce metodi aggiuntivi per tenere traccia dello stato di avanzamento del caricamento, gestire il reindirizzamento HTTP e altro ancora.
-- *Attività di download* : le `NSUrlSessionDownloadDelegate` attività `NSUrlSessionDownloadTask` di tipo usano, che eredita `NSUrlSessionTaskDelegate` da. Questo delegato fornisce tutti i metodi per caricare le attività, nonché metodi specifici del download per tenere traccia dello stato di avanzamento del download e determinare quando un'attività di download è stata ripresa o completata.
+- *Attività di caricamento* : le attività di tipo `NSUrlSessionUploadTask` usano il `NSUrlSessionTaskDelegate`, che eredita da `NSUrlSessionDelegate`. Questo delegato fornisce metodi aggiuntivi per tenere traccia dello stato di avanzamento del caricamento, gestire il reindirizzamento HTTP e altro ancora.
+- *Attività di download* -attività di tipo `NSUrlSessionDownloadTask` usare il `NSUrlSessionDownloadDelegate`, che eredita da `NSUrlSessionTaskDelegate`. Questo delegato fornisce tutti i metodi per caricare le attività, nonché metodi specifici del download per tenere traccia dello stato di avanzamento del download e determinare quando un'attività di download è stata ripresa o completata.
 
-Il codice seguente definisce un'attività che può essere usata per scaricare un'immagine da un URL. L'attività viene avviata chiamando `CreateDownloadTask` la sessione in background e passando la richiesta dell'URL:
+Il codice seguente definisce un'attività che può essere usata per scaricare un'immagine da un URL. L'attività viene avviata chiamando `CreateDownloadTask` nella sessione in background e passando la richiesta dell'URL:
 
 ```csharp
 const string DownloadURLString = "http://cdn1.xamarin.com/webimages/images/xamarin.png";
@@ -88,18 +88,18 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 }
 ```
 
-Se si vuole individuare lo stato di avanzamento di un'attività di download, è possibile eseguire `DidWriteData` l'override del metodo per tenere traccia dello stato di avanzamento e aggiornare anche l'interfaccia utente. Gli aggiornamenti dell'interfaccia utente verranno visualizzati immediatamente se l'applicazione è in primo piano o sarà in attesa dell'utente alla successiva apertura dell'applicazione.
+Per scoprire lo stato di avanzamento di un'attività di download, è possibile eseguire l'override del metodo `DidWriteData` per tenere traccia dello stato di avanzamento e aggiornare anche l'interfaccia utente. Gli aggiornamenti dell'interfaccia utente verranno visualizzati immediatamente se l'applicazione è in primo piano o sarà in attesa dell'utente alla successiva apertura dell'applicazione.
 
-L'API del delegato della sessione fornisce un ampio Toolkit per interagire con le attività. Per un elenco completo dei metodi delegati della sessione, `NSUrlSessionDelegate` vedere la documentazione dell'API.
+L'API del delegato della sessione fornisce un ampio Toolkit per interagire con le attività. Per un elenco completo dei metodi delegati della sessione, vedere la documentazione dell'API `NSUrlSessionDelegate`.
 
 > [!IMPORTANT]
-> Le sessioni in background vengono avviate in un thread in background, pertanto tutte le chiamate per aggiornare l'interfaccia utente devono essere eseguite in modo `InvokeOnMainThread` esplicito nel thread UI chiamando per evitare che iOS interrompa l'app. 
+> Le sessioni in background vengono avviate in un thread in background, pertanto tutte le chiamate per aggiornare l'interfaccia utente devono essere eseguite in modo esplicito nel thread UI chiamando `InvokeOnMainThread` per evitare che iOS interrompa l'app. 
 
 ## <a name="handling-transfer-completion"></a>Gestione del completamento del trasferimento
 
 Il passaggio finale consiste nel lasciare che l'applicazione sappia quando tutte le attività associate alla sessione sono state completate e gestire il nuovo contenuto.
 
-In *AppDelegate*sottoscrivere l' `HandleEventsForBackgroundUrl` evento. Quando l'applicazione entra nello sfondo ed è in esecuzione una sessione di trasferimento, questo metodo viene chiamato e il sistema passa un gestore di completamento:
+In *AppDelegate*sottoscrivere l'evento `HandleEventsForBackgroundUrl`. Quando l'applicazione entra nello sfondo ed è in esecuzione una sessione di trasferimento, questo metodo viene chiamato e il sistema passa un gestore di completamento:
 
 ```csharp
 public System.Action backgroundSessionCompletionHandler;
@@ -112,7 +112,7 @@ public override void HandleEventsForBackgroundUrl (UIApplication application, st
 
 Il gestore di completamento verrà usato per informare iOS al termine dell'elaborazione dell'applicazione.
 
-Ricordare che una sessione può generare diverse attività per elaborare un trasferimento. Al termine dell'ultima attività, un'applicazione sospesa o terminata viene riavviata in background. Quindi, l'applicazione si riconnette a `NSURLSession` usando l'identificatore di sessione univoco e chiama `DidFinishEventsForBackgroundSession` il delegato della sessione. Questo metodo è l'opportunità dell'applicazione di gestire nuovo contenuto, incluso l'aggiornamento dell'interfaccia utente per riflettere i risultati del trasferimento:
+Ricordare che una sessione può generare diverse attività per elaborare un trasferimento. Al termine dell'ultima attività, un'applicazione sospesa o terminata viene riavviata in background. Quindi, l'applicazione esegue nuovamente la connessione al `NSURLSession` usando l'identificatore di sessione univoco e chiama `DidFinishEventsForBackgroundSession` sul delegato della sessione. Questo metodo è l'opportunità dell'applicazione di gestire nuovo contenuto, incluso l'aggiornamento dell'interfaccia utente per riflettere i risultati del trasferimento:
 
 ```csharp
 public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {

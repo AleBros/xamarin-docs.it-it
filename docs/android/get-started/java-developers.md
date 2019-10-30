@@ -4,19 +4,19 @@ description: Gli sviluppatori Java possono sfruttare le competenze e il codice e
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: f4c8c8b19d7738478cdc2c8f83c6fc8d1f361466
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: 1d9b41af68576a67c901f8f19a57fb4738430306
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985665"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027936"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin per sviluppatori Java
 
-_Gli sviluppatori Java possono sfruttare le competenze e il codice esistente nella piattaforma Xamarin con i vantaggi che derivano dal riutilizzare il codice C#. La sintassi C# è molto simile alla sintassi Java ed entrambi i linguaggi offrono funzionalità analoghe. Ci sono inoltre funzionalità specifiche di C# che semplificano notevolmente lo sviluppo._
+_Gli sviluppatori Java possono sfruttare al meglio le proprie competenze e il codice esistente nella piattaforma Novell, sfruttando al tempo stesso i vantaggi del riutilizzo del codice di C#. Si noterà che la C# sintassi è molto simile alla sintassi Java e che entrambi i linguaggi forniscono funzionalità molto simili. Inoltre, si scopriranno le funzionalità esclusive C# di che semplificano lo sviluppo._
 
 ## <a name="overview"></a>Panoramica
 
@@ -42,7 +42,7 @@ Sia per Java che per C# la compilazione avviene in un linguaggio intermedio che 
 Entrambi i linguaggi usano una gerarchia di classi con singola radice. Come Java, C# supporta solo l'ereditarietà singola e non consente i metodi globali.
 In entrambi i linguaggi gli oggetti vengono creati nell'heap usando la parola chiave `new` e vengono sottoposti a Garbage Collection quando non sono più usati. Entrambi i linguaggi forniscono supporto per la gestione formale delle eccezioni con la semantica `try`/`catch`. Entrambi forniscono supporto per la gestione e la sincronizzazione di thread.
 
-Ci sono tuttavia numerose differenze tra Java e C#. Ad esempio:
+Ci sono tuttavia numerose differenze tra Java e C#. Esempio:
 
 - Java non supporta le variabili locali tipizzate in modo implicito (C# supporta la parola chiave `var`).
 
@@ -87,13 +87,13 @@ Infine, Xamarin consente di [sfruttare le risorse Java esistenti](#interop) tram
 
 Le sezioni seguenti descrivono le differenze di base tra C# e Java. Una sezione successiva descrive le differenze orientate a oggetti tra questi linguaggi.
 
-### <a name="libraries-vs-assemblies"></a>Confronto tra librerie e Assembly
+### <a name="libraries-vs-assemblies"></a>Librerie e assembly
 
 In Java in genere vengono creati pacchetti di classi correlate in file **JAR**. In C# e .NET, tuttavia, i bit riutilizzabili di codice precompilato vengono raccolti in *assembly*, che sono in genere file *DLL*. Un assembly è un'unità di distribuzione per il codice C#/.NET e ogni assembly è in genere associato a un progetto C#. Gli assembly contengono codice intermedio (IL) che è codice JIT compilato nel runtime.
 
 Per altre informazioni sugli assembly, vedere l'argomento [Assembly e Global Assembly Cache](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/).
 
-### <a name="packages-vs-namespaces"></a>Confronto tra pacchetti e Spazi dei nomi
+### <a name="packages-vs-namespaces"></a>Confronto tra pacchetti e spazi dei nomi
 
 C# usa la parola chiave `namespace` per raggruppare i tipi correlati, in modo analogo alla parola chiave `package` Java. In genere, un'app Xamarin.Android si trova in uno spazio dei nomi creato per l'app. Il codice C# seguente, ad esempio, dichiara il wrapper dello spazio dei nomi `WeatherApp` per un'app meteo:
 
@@ -139,7 +139,7 @@ Queste istruzioni importano funzionalità dagli spazi dei nomi `System`, `Androi
 
 Sia Java che C# supportano i *generics*, che sono segnaposto che consentono di inserire diversi tipi in fase di compilazione. I generics, tuttavia, funzionano in modo leggermente diverso in C#. In Java la [cancellazione dei tipi](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html) rende disponibili le informazioni sui tipi solo in fase di compilazione e non in fase di esecuzione. .NET Common Language Runtime (CLR) fornisce invece supporto esplicito per i tipi generici, il che significa che C# può accedere alle informazioni sui tipi in fase di esecuzione. Nelle attività quotidiane di sviluppo in Xamarin.Android l'importanza di questa distinzione spesso non è evidente, ma se si usa la [reflection](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection) si dipende da questa funzionalità per accedere alle informazioni sui tipi in fase di esecuzione.
 
-In Xamarin.Android viene spesso usato il metodo generico `FindViewById` per ottenere un riferimento a un controllo di layout. Questo metodo accetta un parametro di tipo generico che specifica il tipo di controllo da cercare. Ad esempio:
+In Xamarin.Android viene spesso usato il metodo generico `FindViewById` per ottenere un riferimento a un controllo di layout. Questo metodo accetta un parametro di tipo generico che specifica il tipo di controllo da cercare. Esempio:
 
 ```csharp
 TextView label = FindViewById<TextView> (Resource.Id.Label);
@@ -215,7 +215,7 @@ Per altre informazioni sulle definizioni di classe C#, vedere gli argomenti [Cla
 In Java i metodi mutatori (setter) e i metodi di controllo (getter) vengono spesso usati per controllare come vengono apportate modifiche ai membri delle classi, nascondendo e proteggendo tali membri dal codice esterno. La classe `TextView` Android, ad esempio, fornisce i metodi `getText` e `setText`. C# fornisce un meccanismo simile ma più diretto, noto come *proprietà*.
 Gli utenti di una classe C# possono accedere a una proprietà nello stesso modo in cui accedono a un campo, ma ogni accesso comporta una chiamata a un metodo trasparente al chiamante. Questo metodo "invisibile" può provocare effetti collaterali, ad esempio l'impostazione di altri valori, l'esecuzione di conversioni o la modifica dello stato degli oggetti.
 
-Le proprietà vengono spesso usate per accedere ai membri degli oggetti dell'interfaccia utente e modificarli. Ad esempio:
+Le proprietà vengono spesso usate per accedere ai membri degli oggetti dell'interfaccia utente e modificarli. Esempio:
 
 ```csharp
 int width = rulerView.MeasuredWidth;
@@ -307,7 +307,7 @@ In C# le espressioni lambda vengono create con l'operatore `=>`, come illustrato
 };
 ```
 
-In Xamarin.Android le espressioni lambda vengono spesso usate per definire gestori eventi. Ad esempio:
+In Xamarin.Android le espressioni lambda vengono spesso usate per definire gestori eventi. Esempio:
 
 ```csharp
 button.Click += (sender, args) => {
@@ -316,7 +316,7 @@ button.Click += (sender, args) => {
 };
 ```
 
-In questo esempio il codice dell'espressione lambda (il codice tra parentesi graffe) incrementa il conteggio dei clic e aggiorna il testo di `button` per visualizzare il numero di clic. Questa espressione lambda è registrata con l'oggetto `button` come gestore di eventi clic da chiamare a ogni tocco del pulsante. I gestori eventi sono illustrati in modo più dettagliato più avanti. In questo semplice esempio i parametri `sender` e `args` non vengono usati dal codice dell'espressione lambda, ma sono necessari nell'espressione lambda per soddisfare i requisiti di firma del metodo per la registrazione degli eventi. In background il compilatore C# converte l'espressione lambda in un metodo anonimo che viene chiamato per ogni evento clic sul pulsante.
+In questo esempio il codice dell'espressione lambda (il codice tra parentesi graffe) incrementa il conteggio dei clic e aggiorna il testo di `button` per visualizzare il numero di clic. Questa espressione lambda è registrata con l'oggetto `button` come gestore di eventi clic da chiamare a ogni tocco del pulsante. I gestori eventi sono illustrati in modo più dettagliato di seguito. In questo semplice esempio, i parametri `sender` e `args` non vengono usati dal codice dell'espressione lambda, ma sono necessari nell'espressione lambda per soddisfare i requisiti della firma del metodo per la registrazione degli eventi. In background il compilatore C# converte l'espressione lambda in un metodo anonimo che viene chiamato per ogni evento clic sul pulsante.
 
 Per altre informazioni su C# e sulle espressioni lambda, vedere l'argomento [Espressioni lambda](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions).
 
@@ -351,7 +351,7 @@ startActivityButton.Click += delegate {
 
 ```
 
-Tuttavia, è anche possibile usare un'espressione lambda per registrare gli eventi, ignorando completamente la parola chiave `delegate`. Ad esempio:
+Tuttavia, è anche possibile usare un'espressione lambda per registrare gli eventi, ignorando completamente la parola chiave `delegate`. Esempio:
 
 ```csharp
 startActivityButton.Click += (sender, e) => {
@@ -409,7 +409,7 @@ Per altre informazioni sul supporto delle funzionalità di programmazione asincr
 
 Numerose parole chiave del linguaggio usate in Java sono usate anche in C#. Ci sono anche molte parole chiave Java che hanno una controparte in C# equivalente ma con un nome diverso, come elencato in questa tabella:
 
-|Java|C#|DESCRIZIONE|
+|Java|C#|Descrizione|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Usata per dichiarare i valori booleani true e false.|
 |`extends`|`:`|Precede la classe e le interfacce da cui ereditare.|
@@ -425,7 +425,7 @@ Numerose parole chiave del linguaggio usate in Java sono usate anche in C#. Ci s
 
 Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una controparte in Java. Il codice Xamarin.Android usa spesso le parole chiave C# seguenti (questa tabella è utile come riferimento quando si legge il [codice di esempio](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) Xamarin.Android):
 
-|C#|DESCRIZIONE|
+|C#|Descrizione|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Esegue conversioni tra tipi riferimento compatibili o tipi nullable.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Specifica che un'espressione lambda o un metodo è asincrono.|
@@ -448,7 +448,7 @@ Ci sono inoltre numerose parole chiave specifiche di C# che non hanno una contro
 |[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|Tipo di valore che incapsula un gruppo di variabili correlate.|
 |[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|Ottiene il tipo di un oggetto.|
 |[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|Dichiara una variabile locale tipizzata in modo implicito.|
-|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Fa riferimento al valore che il codice client vuole assegnare a una proprietà.|
+|[valore](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Fa riferimento al valore che il codice client vuole assegnare a una proprietà.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Consente l'override di un metodo in una classe derivata.|
 
 <a name="interop" />

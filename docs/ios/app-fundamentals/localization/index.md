@@ -4,15 +4,15 @@ description: Questo documento descrive le funzionalità di localizzazione di iOS
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: e394b5487b240f98310ab223371466d62a3bdf23
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fc67c7f683b6c55d3b4f552c2f8c113ee721be61
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278878"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009799"
 ---
 # <a name="localization-in-xamarinios"></a>Localizzazione in Novell. iOS
 
@@ -24,7 +24,7 @@ Per istruzioni su come includere set di caratteri o tabelle codici nelle applica
 
 Questa sezione descrive alcune delle funzionalità di localizzazione di iOS. Passare alla [sezione successiva](#localization-basics-in-ios) per visualizzare codice ed esempi specifici.
 
-### <a name="language"></a>Linguaggio
+### <a name="language"></a>Language
 
 Gli utenti scelgono la lingua nell'app **Impostazioni** . Questa impostazione influiscono sulle stringhe e sulle immagini della lingua visualizzate dal sistema operativo e dalle app.
 
@@ -34,7 +34,7 @@ Per determinare la lingua da usare in un'app, ottenere il primo elemento di `NSB
 var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 ```
 
-Questo valore sarà un codice `en` di lingua, ad esempio per l'inglese, `es` per `ja` lo spagnolo, per il giapponese e così via. Il valore restituito è limitato a una delle localizzazioni supportate dall'applicazione, usando le regole di fallback per determinare la migliore corrispondenza.
+Questo valore sarà un codice di lingua, ad esempio `en` per l'inglese, `es` per lo spagnolo, `ja` per il giapponese e così via. Il valore restituito è limitato a una delle localizzazioni supportate dall'applicazione, usando le regole di fallback per determinare la migliore corrispondenza.
 
 Il codice dell'applicazione non è sempre in grado di verificare la presenza di questo valore: Novell e iOS forniscono funzionalità che consentono di fornire automaticamente la stringa o la risorsa corretta per la lingua dell'utente. Queste funzionalità sono descritte nella parte restante di questo documento.
 
@@ -64,7 +64,7 @@ Il primo valore può essere memorizzato nella cache dal sistema operativo e pert
 > - `CurrentThread.CurrentUICulture`: en-US (API mono)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API Apple)
 >
-> Poiché mono USA `CurrentThread.CurrentUICulture` per selezionare le risorse `CurrentThread.CurrentCulture` e per formattare date e valute, la localizzazione basata su mono, ad esempio con i file con estensione resx, potrebbe non restituire i risultati previsti per queste combinazioni di lingua/area geografica. In queste situazioni, utilizzare le API di Apple per localizzare in base alle esigenze.
+> Poiché mono USA `CurrentThread.CurrentUICulture` per selezionare le risorse e `CurrentThread.CurrentCulture` per formattare date e valute, la localizzazione basata su mono (ad esempio, con i file resx) potrebbe non restituire i risultati previsti per queste combinazioni di lingua/area geografica. In queste situazioni, utilizzare le API di Apple per localizzare in base alle esigenze.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 
@@ -76,23 +76,23 @@ Le funzionalità seguenti di iOS sono facilmente sfruttabili in Novell per forni
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Specifica di linguaggi predefiniti e supportati in info. plist
 
-In [Technical Q & a QA1828: In che modo iOS determina la lingua per](https://developer.apple.com/library/content/qa/qa1828/_index.html)l'app, Apple descrive in che modo iOS seleziona una lingua da usare in un'app. I fattori seguenti influiscono sulla lingua visualizzata:
+In [Technical Q & a QA1828: in che modo iOS determina la lingua per l'app](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple descrive in che modo iOS seleziona una lingua da usare in un'app. I fattori seguenti influiscono sulla lingua visualizzata:
 
 - Lingue preferite dell'utente (disponibili nell'app **Impostazioni** )
 - Le localizzazioni in bundle con l'app (cartelle con estensione LPROJ)
-- `CFBundleDevelopmentRegion`(Valore**info. plist** che specifica la lingua predefinita per l'app)
-- `CFBundleLocalizations`(Array**info. plist** che specifica tutte le localizzazioni supportate)
+- `CFBundleDevelopmentRegion` (valore**info. plist** che specifica la lingua predefinita per l'app)
+- `CFBundleLocalizations` (array**info. plist** che specifica tutte le localizzazioni supportate)
 
-Come indicato nell'& tecnico Q, `CFBundleDevelopmentRegion` rappresenta l'area e la lingua predefinite di un'app. Se l'app non supporta in modo esplicito le lingue preferite di un utente, userà la lingua specificata da questo campo.
+Come indicato in Technical Q & A, `CFBundleDevelopmentRegion` rappresenta l'area e la lingua predefinite di un'app. Se l'app non supporta in modo esplicito le lingue preferite di un utente, userà la lingua specificata da questo campo.
 
 > [!IMPORTANT]
-> iOS 11 applica questo meccanismo di selezione della lingua in modo più rigoroso rispetto alle versioni precedenti del sistema operativo. Per questo motivo, qualsiasi app iOS 11 che non dichiara in modo esplicito le proprie localizzazioni supportate, incluse le cartelle. lproj o l'impostazione di `CFBundleLocalizations` un valore per, può visualizzare una lingua diversa in iOS 11 rispetto a quanto accadeva in iOS 10.
+> iOS 11 applica questo meccanismo di selezione della lingua in modo più rigoroso rispetto alle versioni precedenti del sistema operativo. Per questo motivo, qualsiasi app iOS 11 che non dichiara in modo esplicito le proprie localizzazioni supportate, incluse le cartelle. lproj o l'impostazione di un valore per `CFBundleLocalizations`, può visualizzare una lingua diversa in iOS 11 rispetto a quella eseguita in iOS 10.
 
-Se `CFBundleDevelopmentRegion` non è stato specificato nel file **info. plist** , gli strumenti di `en_US`compilazione Novell. iOS utilizzano attualmente il valore predefinito. Sebbene ciò possa cambiare in una versione futura, significa che la lingua predefinita è l'inglese.
+Se `CFBundleDevelopmentRegion` non è stato specificato nel file **info. plist** , gli strumenti di compilazione Novell. iOS utilizzano attualmente il valore predefinito `en_US`. Sebbene ciò possa cambiare in una versione futura, significa che la lingua predefinita è l'inglese.
 
 Per assicurarsi che l'app selezioni una lingua prevista, seguire questa procedura:
 
-- Specificare una lingua predefinita. Aprire **info. plist** e usare la visualizzazione **origine** per impostare un valore per la `CFBundleDevelopmentRegion` chiave. in XML dovrebbe essere simile al seguente:
+- Specificare una lingua predefinita. Aprire **info. plist** e usare la visualizzazione **origine** per impostare un valore per la chiave di `CFBundleDevelopmentRegion`; in XML dovrebbe essere simile al seguente:
 
 ```xml
 <key>CFBundleDevelopmentRegion</key>
@@ -101,7 +101,7 @@ Per assicurarsi che l'app selezioni una lingua prevista, seguire questa procedur
 
 Questo esempio USA "es" per specificare che, quando nessuna delle lingue preferite di un utente è supportata, il valore predefinito è spagnolo.
 
-- Dichiarare tutte le localizzazioni supportate. In **info. plist**usare la visualizzazione **origine** per impostare una matrice per la `CFBundleLocalizations` chiave. in XML, l'aspetto dovrebbe essere simile al seguente:
+- Dichiarare tutte le localizzazioni supportate. In **info. plist**usare la visualizzazione **origine** per impostare una matrice per la chiave di `CFBundleLocalizations`; in XML dovrebbe essere simile al seguente:
 
 ```xml
 <key>CFBundleLocalizations</key>
@@ -118,19 +118,19 @@ Per altre informazioni su queste chiavi **info. plist** , vedere la Guida di rif
 
 ### <a name="getlocalizedstring-method"></a>Metodo GetLocalizedString
 
-Il `NSBundle.MainBundle.GetLocalizedString` metodo cerca il testo localizzato che è stato archiviato nei file con **estensione Strings** nel progetto. Questi file sono organizzati in base al linguaggio, in directory denominate con un suffisso **. lproj** (si noti che la prima lettera dell'estensione è un minuscolo "L").
+Il metodo `NSBundle.MainBundle.GetLocalizedString` Cerca il testo localizzato archiviato nei file con **estensione Strings** del progetto. Questi file sono organizzati in base al linguaggio, in directory denominate con un suffisso **. lproj** (si noti che la prima lettera dell'estensione è un minuscolo "L").
 
 #### <a name="strings-file-locations"></a>percorsi file. Strings
 
 - **Base. lproj** è la directory che contiene le risorse per la lingua predefinita.
   Si trova spesso nella radice del progetto (ma può anche essere inserito nella cartella **Resources** ).
-- **&lt;le&gt;directory Language. lproj** vengono create per ogni lingua supportata, in genere nella cartella **Resources** .
+- vengono create le directory **&lt;language&gt;. lproj** per ogni lingua supportata, in genere nella cartella **Resources** .
 
 In ogni directory della lingua può essere presente un numero di file con **estensione stringhe** diversi:
 
 - **Localizzable. Strings** : elenco principale del testo localizzato.
 - **InfoPlist. Strings** : alcune chiavi specifiche sono consentite in questo file per tradurre elementi come il nome dell'applicazione.
-- **storyboard-Name >. strings: file facoltativo che contiene le traduzioni per gli elementi dell'interfaccia utente in uno storyboard. \<**
+- **\<storyboard-name >. Strings** : file facoltativo che contiene le traduzioni per gli elementi dell'interfaccia utente in uno storyboard.
 
 L' **azione di compilazione** per questi file deve essere una **risorsa di bundle**.
 
@@ -145,9 +145,9 @@ La sintassi per i valori stringa localizzati è:
 
 È consigliabile evitare l'escape dei caratteri seguenti nelle stringhe:
 
-- `\"`citazione
-- `\\`barra rovesciata
-- `\n`NewLine
+- `\"` virgolette
+- barra rovesciata `\\`
+- `\n` nuova riga
 
 Si tratta di un esempio **es/Localize. Strings** (IE. Spagnolo) file dall'esempio:
 
@@ -175,7 +175,7 @@ Per localizzare un'immagine in iOS:
 
 2. Inserire il file di immagine predefinito **flag. png** in **base. lproj** (directory nativa del linguaggio di sviluppo).
 
-3. Facoltativamente, inserire le versioni localizzate dell'immagine in cartelle **. lproj** per ogni lingua, ad esempio **es.lproj**, **ja.lproj**). Usare lo stesso nome file **flag. png** in ogni directory della lingua.
+3. Facoltativamente, inserire le versioni localizzate dell'immagine in cartelle **. lproj** per ogni lingua, ad esempio **es. lproj**, **ja. lproj**). Usare lo stesso nome file **flag. png** in ogni directory della lingua.
 
 Se un'immagine non è presente per una lingua specifica, iOS eseguirà il fallback alla cartella predefinita della lingua nativa e caricherà l'immagine da questa posizione.
 
@@ -190,7 +190,7 @@ Default-568h@2x.png
 LaunchScreen.xib
 ```
 
-### <a name="app-name"></a>Nome app
+### <a name="app-name"></a>Nome dell'app
 
 L'inserimento di un file **InfoPlist. Strings** in una directory **. lproj** consente di eseguire l'override di alcuni valori del file **info. plist**dell'app, incluso il nome dell'applicazione:
 
@@ -206,9 +206,9 @@ Altre chiavi che è possibile usare per [localizzare stringhe specifiche dell'ap
 
 ### <a name="dates-and-times"></a>Date e ore
 
-Sebbene sia possibile usare le funzioni di data e ora .NET predefinite (insieme alla corrente `CultureInfo`) per formattare date e ore per le impostazioni locali, questo ignora le impostazioni utente specifiche delle impostazioni locali (che possono essere impostate separatamente dalla lingua).
+Sebbene sia possibile utilizzare le funzioni di data e ora .NET predefinite (insieme alla `CultureInfo`corrente) per formattare date e ore per le impostazioni locali, questo ignora le impostazioni utente specifiche delle impostazioni locali (che possono essere impostate separatamente dalla lingua).
 
-Usare iOS `NSDateFormatter` per produrre un output corrispondente alle preferenze delle impostazioni locali dell'utente. Il codice di esempio seguente illustra le opzioni di formattazione di data e ora di base:
+Usare il `NSDateFormatter` iOS per produrre un output corrispondente alle preferenze locali dell'utente. Il codice di esempio seguente illustra le opzioni di formattazione di data e ora di base:
 
 ```csharp
 var date = NSDate.Now;
@@ -248,18 +248,18 @@ Per ulteriori informazioni, fare riferimento alla documentazione dei [formattato
 
 iOS offre diverse funzionalità per semplificare la creazione di app compatibili con RTL:
 
-- Usare gli attributi e `leading` del `trailing` layout automatico per l'allineamento del controllo (che corrisponde a Left e Right per la lingua inglese, ma è invertito per le lingue RTL).
-  Il [`UIStackView`](~/ios/user-interface/controls/uistackview.md) controllo è particolarmente utile per il layout dei controlli in modo che siano compatibili con RTL.
+- Usare gli attributi di `leading` e `trailing` del layout automatico per l'allineamento del controllo (che corrisponde a Left e Right per la lingua inglese, ma è invertito per le lingue RTL).
+  Il controllo [`UIStackView`](~/ios/user-interface/controls/uistackview.md) è particolarmente utile per il layout dei controlli in modo che siano compatibili con RTL.
 - Usare `TextAlignment = UITextAlignment.Natural` per l'allineamento del testo, che verrà lasciato per la maggior parte delle lingue ma per la destra per RTL.
-- `UINavigationController`capovolge automaticamente il pulsante indietro e inverte la direzione di scorrimento.
+- `UINavigationController` capovolge automaticamente il pulsante indietro e inverte la direzione di scorrimento.
 
 Gli screenshot seguenti mostrano l' [esempio di attività localizzato](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in arabo ed ebraico (sebbene sia stata immessa la lingua inglese nei campi):
 
-[![](images/rtl-ar-sml.png "Localizzazione in arabo")](images/rtl-ar.png#lightbox "Arabic")
+[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
 
-[![](images/rtl-he-sml.png "Localizzazione in ebraico")](images/rtl-he.png#lightbox "Hebrew")
+[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
 
-iOS inverte automaticamente il `UINavigationController`e gli altri controlli vengono posizionati all'interno `UIStackView` o allineati con il layout automatico.
+iOS inverte automaticamente il `UINavigationController`e gli altri controlli vengono inseriti all'interno `UIStackView` o allineati con il layout automatico.
 Il testo RTL viene localizzato usando i file con **estensione Strings** nello stesso modo in cui è il testo ltr.
 
 <a name="code"/>
@@ -270,7 +270,7 @@ L'esempio [Tasky (localizzato nel codice)](https://github.com/conceptdev/xamarin
 
 ### <a name="project-structure"></a>Struttura del progetto
 
-![](images/solution-code.png "Albero delle risorse")
+![](images/solution-code.png "Resources tree")
 
 ### <a name="localizablestrings-file"></a>File. Strings localizzabile
 
@@ -292,7 +292,7 @@ Di seguito sono elencate le localizzazioni in spagnolo (**es**) per l'esempio:
 
 ### <a name="performing-the-localization"></a>Esecuzione della localizzazione
 
-Nel codice dell'applicazione, ogni volta che viene impostato il testo visualizzato di un'interfaccia utente, che si tratti di un testo di un'etichetta o di un segnaposto di input e così `GetLocalizedString` via, il codice usa la funzione iOS per recuperare la traduzione corretta da visualizzare:
+Nel codice dell'applicazione, ogni volta che viene impostato il testo visualizzato di un'interfaccia utente, che si tratti di un testo di un'etichetta o di un segnaposto di input e così via, il codice usa la funzione `GetLocalizedString` iOS per recuperare la traduzione corretta da visualizzare:
 
 ```csharp
 var localizedString = NSBundle.MainBundle.GetLocalizedString ("key", "optional");
@@ -311,7 +311,7 @@ La directory **base. lproj** contiene lo storyboard e deve contenere anche le im
 
 Le altre directory della lingua contengono un file **. Strings localizzabile** per tutte le risorse di stringa a cui viene fatto riferimento nel codice, nonché un file **file mainstoryboard. Strings** che contiene le traduzioni per il testo nello storyboard.
 
-![](images/solution-storyboard.png "Albero delle risorse")
+![](images/solution-storyboard.png "Resources tree")
 
 Le directory della lingua devono contenere una copia di tutte le immagini che sono state localizzate, per eseguire l'override di quella presente in **base. lproj**.
 
@@ -324,15 +324,15 @@ Quando si creano e si modificano i controlli in uno storyboard, selezionare ogni
 
 Questo valore di stringa spesso ha un formato, ad esempio "NF3-h8-xmR", come illustrato nello screenshot seguente:
 
-![](images/xs-designer-localization-id.png "Visualizzazione Xcode della localizzazione dello storyboard")
+![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
 
 Questo valore viene utilizzato nel file con **estensione Strings** per assegnare automaticamente il testo tradotto a ogni controllo.
 
-### <a name="mainstoryboardstrings"></a>MainStoryboard.strings
+### <a name="mainstoryboardstrings"></a>File mainstoryboard. Strings
 
-Il formato del file di traduzione storyboard è simile al file **. Strings localizzabile** , ad eccezione del fatto che la chiave (il valore a sinistra) non può essere definita dall'utente, ma deve avere un formato `ObjectID.property`molto specifico:.
+Il formato del file di traduzione storyboard è simile al file **. Strings localizzabile** , ad eccezione del fatto che la chiave (il valore a sinistra) non può essere definita dall'utente, ma deve avere un formato molto specifico: `ObjectID.property`.
 
-Nell'esempio **file mainstoryboard. Strings** riportato di seguito è `UITextField`possibile visualizzare una `placeholder` proprietà Text che può essere localizzata. hanno una proprietà `text` e`UIButton`il testo predefinito s viene impostato usando `normalTitle`: `UILabel`
+Nell'esempio **file mainstoryboard. Strings** riportato di seguito è possibile vedere `UITextField`s hanno una proprietà `placeholder` text che può essere localizzata. `UILabel`s hanno una proprietà `text`; viene impostato il testo predefinito `UIButton`s utilizzando `normalTitle`:
 
 ```console
 "SXg-TT-IwM.placeholder" = "nombre de la tarea";
@@ -345,9 +345,9 @@ Nell'esempio **file mainstoryboard. Strings** riportato di seguito è `UITextFie
 ```
 
 > [!IMPORTANT]
-> L'uso di uno storyboard con le classi di dimensioni può comportare traduzioni che non vengono visualizzate nell'applicazione. Le [Note sulla versione di Apple Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indicano che uno storyboard o XIB non verrà localizzato correttamente se si verificano tre situazioni: usa classi di dimensioni, la localizzazione di base e la destinazione di compilazione sono impostate su universale e la build è destinata a iOS 7,0. La correzione consiste nel duplicare il file delle stringhe storyboard in due file identici: **File mainstoryboard ~ iPhone. Strings** e **file mainstoryboard ~ iPad. Strings**, come illustrato nello screenshot seguente:
+> L'uso di uno storyboard con le classi di dimensioni può comportare traduzioni che non vengono visualizzate nell'applicazione. Le [Note sulla versione di Apple Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indicano che uno storyboard o XIB non verrà localizzato correttamente se si verificano tre situazioni: usa classi di dimensioni, la localizzazione di base e la destinazione di compilazione sono impostate su universale e la build è destinata a iOS 7,0. La correzione consiste nel duplicare il file delle stringhe storyboard in due file identici: **file mainstoryboard ~ iPhone. Strings** e **file mainstoryboard ~ iPad. Strings**, come illustrato nello screenshot seguente:
 >
-> ![](images/xs-dup-strings.png "File di stringhe")
+> ![](images/xs-dup-strings.png "Strings files")
 
 <a name="appstore" />
 

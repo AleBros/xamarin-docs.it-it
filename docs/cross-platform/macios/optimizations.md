@@ -3,15 +3,15 @@ title: Ottimizzazioni di compilazione
 description: Questo documento illustra le varie ottimizzazioni applicate in fase di compilazione per le app Novell. iOS e Novell. Mac.
 ms.prod: xamarin
 ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: 4fdc40a8aed4b3137e418d6123fc000c2b36b6dd
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 22028743742a618bd7347d5e49153defecd4e3bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226200"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015175"
 ---
 # <a name="build-optimizations"></a>Ottimizzazioni di compilazione
 
@@ -19,7 +19,7 @@ Questo documento illustra le varie ottimizzazioni applicate in fase di compilazi
 
 ## <a name="remove-uiapplicationensureuithread--nsapplicationensureuithread"></a>Rimuovere UIApplication. EnsureUIThread/NSApplication. EnsureUIThread
 
-Rimuove le chiamate a [UIApplication. EnsureUIThread][1] (per Novell. iOS) `NSApplication.EnsureUIThread` o (per Novell. Mac).
+Rimuove le chiamate a [UIApplication. EnsureUIThread][1] (per Novell. iOS) o `NSApplication.EnsureUIThread` (per Novell. Mac).
 
 Questa ottimizzazione cambierà il tipo di codice seguente:
 
@@ -40,7 +40,7 @@ public virtual void AddChildViewController (UIViewController childController)
 }
 ```
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 Per impostazione predefinita, è abilitato per le build di rilascio.
 
@@ -72,7 +72,7 @@ if (8 == 8) {
 }
 ```
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 Per impostazione predefinita, è abilitato se la destinazione è una singola architettura o per l'assembly della piattaforma (**Novell. iOS. dll**, **Novell. TVOS. dll**, **Novell. watchos. dll** o **Novell. Mac. dll**).
 
@@ -82,7 +82,7 @@ Il comportamento predefinito può essere sostituito passando `--optimize=[+|-]in
 
 ## <a name="inline-nsobjectisdirectbinding"></a>Inline NSObject. il reindirizzamento
 
-`NSObject.IsDirectBinding`Proprietà dell'istanza che determina se una particolare istanza è di tipo wrapper o meno (un tipo di wrapper è un tipo gestito mappato a un tipo nativo. ad esempio, il tipo `UIKit.UIView` gestito viene mappato al `UIView` tipo nativo. il contrario è un tipo di utente , in questo caso `class MyUIView : UIKit.UIView` è un tipo di utente.
+`NSObject.IsDirectBinding` è una proprietà dell'istanza che determina se una particolare istanza è di tipo wrapper o meno (un tipo di wrapper è un tipo gestito mappato a un tipo nativo. ad esempio, il tipo di `UIKit.UIView` gestito viene mappato al tipo di `UIView` nativo. il contrario è un tipo di utente , in questo caso `class MyUIView : UIKit.UIView` sarebbe un tipo di utente).
 
 È necessario stabilire il valore di `IsDirectBinding` quando si chiama in Objective-C, perché il valore determina la versione di `objc_msgSend` da usare.
 
@@ -117,7 +117,7 @@ class MyUIView : UIView {
 }
 ```
 
-È possibile determinare che nel `UIView.SomeProperty` valore di `IsDirectBinding` non è una costante e non può essere inline:
+È possibile determinare che in `UIView.SomeProperty` il valore di `IsDirectBinding` non è una costante e non può essere inline:
 
 ```csharp
 void uiView = new UIView ();
@@ -126,7 +126,7 @@ void myView = new MyUIView ();
 Console.WriteLine (myView.SomeProperty); // prints 'false'
 ```
 
-Tuttavia, è possibile esaminare tutti i tipi nell'app e determinare che non esistono tipi che ereditano da `NSUrl`ed è quindi possibile inlinere il `IsDirectBinding` valore a una costante `true`:
+Tuttavia, è possibile esaminare tutti i tipi nell'app e determinare che non ci sono tipi che ereditano da `NSUrl`ed è quindi possibile inlineare il valore `IsDirectBinding` a una costante `true`:
 
 ```csharp
 void myURL = new NSUrl ();
@@ -134,7 +134,7 @@ Console.WriteLine (myURL.SomeOtherProperty); // prints 'true'
 // There's no way to make SomeOtherProperty print anything but 'true', since there are no NSUrl subclasses.
 ```
 
-In particolare, questa ottimizzazione cambierà il tipo di codice seguente (questo è il codice di associazione `NSUrl.AbsoluteUrl`per):
+In particolare, questa ottimizzazione cambierà il tipo di codice seguente (questo è il codice di associazione per `NSUrl.AbsoluteUrl`):
 
 ```csharp
 if (IsDirectBinding) {
@@ -154,7 +154,7 @@ if (true) {
 }
 ```
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 È sempre abilitato per impostazione predefinita per Novell. iOS ed è sempre disabilitato per impostazione predefinita per Novell. Mac (perché è possibile caricare in modo dinamico gli assembly in Novell. Mac, non è possibile determinare che una particolare classe non sia mai sottoclassata).
 
@@ -182,11 +182,11 @@ if (Arch.DEVICE == Arch.DEVICE) {
 }
 ```
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 È sempre abilitato per impostazione predefinita per Novell. iOS (non è disponibile per Novell. Mac).
 
-Il comportamento predefinito può essere sostituito passando `--optimize=[+|-]inline-runtime-arch` a mTouch.
+Il comportamento predefinito può essere sottoposto a override passando `--optimize=[+|-]inline-runtime-arch` a mTouch.
 
 ## <a name="dead-code-elimination"></a>Eliminazione del codice inattivo
 
@@ -222,7 +222,7 @@ e determinare che l'espressione `8 == 8` è sempre true e ridurla a:
 Console.WriteLine ("Doing this");
 ```
 
-Si tratta di un'ottimizzazione potente se utilizzata insieme alle ottimizzazioni di incorporamento, perché può trasformare il tipo di codice seguente (questo è il codice di associazione `NFCIso15693ReadMultipleBlocksConfiguration.Range`per):
+Si tratta di un'ottimizzazione potente se utilizzata insieme alle ottimizzazioni di incorporamento, perché può trasformare il tipo di codice seguente (questo è il codice di associazione per `NFCIso15693ReadMultipleBlocksConfiguration.Range`):
 
 ```csharp
 NSRange ret;
@@ -254,7 +254,7 @@ if (IsDirectBinding) {
 return ret;
 ```
 
-in questo (quando si compila per un dispositivo a 64 bit e quando è possibile verificare che non vi siano `NFCIso15693ReadMultipleBlocksConfiguration` sottoclassi nell'app):
+in questo (quando si compila per un dispositivo a 64 bit e quando è possibile verificare che non esistano sottoclassi `NFCIso15693ReadMultipleBlocksConfiguration` nell'app):
 
 ```csharp
 NSRange ret;
@@ -268,7 +268,7 @@ Il compilatore AOT è già in grado di eliminare codice inattivo come questo, ma
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper`
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper_stret`
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 È sempre abilitato per impostazione predefinita (quando il linker è abilitato).
 
@@ -276,7 +276,7 @@ Il comportamento predefinito può essere sostituito passando `--optimize=[+|-]de
 
 ## <a name="optimize-calls-to-blockliteralsetupblock"></a>Ottimizzare le chiamate a BlockLiteral. SetupBlock
 
-Il runtime di Novell. iOS/Mac deve comprendere la firma del blocco quando si crea un blocco Objective-C per un delegato gestito. Potrebbe trattarsi di un'operazione piuttosto costosa. Questa ottimizzazione consente di calcolare la firma del blocco in fase di compilazione e modificare il linguaggio il `SetupBlock` per chiamare un metodo che accetta la firma come argomento. In questo modo si evita la necessità di calcolare la firma in fase di esecuzione.
+Il runtime di Novell. iOS/Mac deve comprendere la firma del blocco quando si crea un blocco Objective-C per un delegato gestito. Potrebbe trattarsi di un'operazione piuttosto costosa. Questa ottimizzazione consente di calcolare la firma del blocco in fase di compilazione e modificare il linguaggio il per chiamare un metodo di `SetupBlock` che accetta la firma come argomento. In questo modo si evita la necessità di calcolare la firma in fase di esecuzione.
 
 I benchmark mostrano che questa operazione accelera la chiamata di un blocco con un fattore da 10 a 15.
 
@@ -302,7 +302,7 @@ public static void RequestGuidedAccessSession (bool enable, Action<bool> complet
 }
 ```
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 Questa funzionalità è abilitata per impostazione predefinita quando si usa il registrar statico (in Novell. iOS il registrar statico è abilitato per impostazione predefinita per le compilazioni del dispositivo e in Novell. Mac il registrar statico è abilitato per impostazione predefinita per le build di rilascio).
 
@@ -312,7 +312,7 @@ Il comportamento predefinito può essere sostituito passando `--optimize=[+|-]bl
 
 Il runtime di Novell. iOS/Mac richiede informazioni sul modo in cui i tipi gestiti implementano i protocolli Objective-C. Queste informazioni vengono archiviate in interfacce (e attributi su queste interfacce), che non sono un formato molto efficiente, né sono semplici da usare per il linker.
 
-Un esempio è che queste interfacce archiviano informazioni su tutti i membri del `[ProtocolMember]` protocollo in un attributo, che tra l'altro contengono riferimenti ai tipi di parametro di tali membri. Ciò significa che la semplice implementazione di tale interfaccia farà in modo che il linker mantenga tutti i tipi usati nell'interfaccia, anche per i membri facoltativi che l'app non chiama né implementa.
+Un esempio è che queste interfacce archiviano informazioni su tutti i membri del protocollo in un attributo `[ProtocolMember]`, che tra l'altro contiene riferimenti ai tipi di parametro di tali membri. Ciò significa che la semplice implementazione di tale interfaccia farà in modo che il linker mantenga tutti i tipi usati nell'interfaccia, anche per i membri facoltativi che l'app non chiama né implementa.
 
 Questa ottimizzazione farà in modo che il registrar statico memorizzi le informazioni necessarie in un formato efficiente che usa poca memoria facile e veloce da trovare in fase di esecuzione.
 
@@ -344,7 +344,7 @@ Se per rimuovere il registrar dinamico viene eseguito l'override dell'impostazio
 
 Incorpora il valore di `Runtime.DynamicRegistrationSupported` come determinato in fase di compilazione.
 
-Se il registrar dinamico viene rimosso (vedere la [rimozione dell'ottimizzazione del registrar dinamico](#remove-the-dynamic-registrar) ), si `false` tratta di un valore costante. in `true` caso contrario, si tratta di un valore costante.
+Se il registrar dinamico viene rimosso (vedere la [rimozione dell'ottimizzazione del registrar dinamico](#remove-the-dynamic-registrar) ), si tratta di una costante `false` valore, in caso contrario si tratta di una costante `true` valore.
 
 Questa ottimizzazione cambierà il tipo di codice seguente:
 
@@ -368,7 +368,7 @@ Quando non viene rimosso il registrar dinamico:
 Console.WriteLine ("do something");
 ```
 
-Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l' `[BindingImpl (BindingImplOptions.Optimizable)]` attributo.
+Questa ottimizzazione richiede che il linker sia abilitato e venga applicato solo ai metodi con l'attributo `[BindingImpl (BindingImplOptions.Optimizable)]`.
 
 È sempre abilitato per impostazione predefinita (quando il linker è abilitato).
 
@@ -378,7 +378,7 @@ Il comportamento predefinito può essere sostituito passando `--optimize=[+|-]in
 
 Quando Objective-C chiama un selettore che accetta un blocco come parametro e quindi il codice gestito ha sottoposto a override tale metodo, il runtime di Novell. iOS/Novell. Mac deve creare un delegato per tale blocco.
 
-Il codice di associazione generato dal generatore di associazioni includerà `[BlockProxy]` un attributo che specifica il tipo con un `Create` metodo che può eseguire questa operazione.
+Il codice di associazione generato dal generatore di associazioni includerà un `[BlockProxy]` attributo, che specifica il tipo con un `Create` metodo che può eseguire questa operazione.
 
 Dato il seguente codice Objective-C:
 
@@ -503,12 +503,12 @@ static class Trampolines
 }
 ```
 
-Quando si chiama `[ObjCBlockTester callClassCallback]`Objective-C, il runtime Novell. iOS/Novell. Mac esamina l' `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` attributo sul parametro. Viene quindi ricercato il `Create` metodo su quel tipo e viene chiamato il metodo per creare il delegato.
+Quando in Objective-C viene chiamato `[ObjCBlockTester callClassCallback]`, il runtime di Novell. iOS/Novell. Mac esamina l'attributo `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` sul parametro. Viene quindi ricercato il metodo `Create` su quel tipo e viene chiamato il metodo per creare il delegato.
 
-Questa ottimizzazione troverà il `Create` metodo in fase di compilazione e il registrar statico genererà il codice che cerca il metodo in fase di esecuzione usando i token di metadati usando invece l'attributo e la reflection (questo è molto più veloce e consente anche al linker per rimuovere il codice runtime corrispondente, rendendo più piccola l'app.
+Questa ottimizzazione troverà il metodo `Create` in fase di compilazione e il registrar statico genererà il codice che cerca il metodo in fase di esecuzione usando i token di metadati usando l'attributo e la reflection (questo è molto più veloce e consente anche al linker di rimuovere il codice runtime corrispondente, rendendo più piccola l'app.
 
-Se MMP/mTouch non riesce a trovare il `Create` metodo, verrà visualizzato un avviso MT4174/MM4174 e la ricerca verrà eseguita in fase di esecuzione.
-La ragione più probabile è la scrittura manuale del codice di associazione `[BlockProxy]` senza gli attributi obbligatori.
+Se MMP/mTouch non riesce a trovare il metodo `Create`, verrà visualizzato un avviso MT4174/MM4174 e la ricerca verrà eseguita in fase di esecuzione.
+La ragione più probabile è la scrittura manuale del codice di associazione senza gli attributi `[BlockProxy]` richiesti.
 
 Questa ottimizzazione richiede l'abilitazione del registrar statico.
 

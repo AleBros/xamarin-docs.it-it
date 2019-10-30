@@ -3,25 +3,25 @@ title: Creazione di associazioni con Objective Sharpie
 description: Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Novell usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765704"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016184"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Creazione di associazioni con Objective Sharpie
 
 _Questa sezione fornisce un'introduzione a Objective Sharpie, lo strumento da riga di comando di Novell usato per automatizzare il processo di creazione di un'associazione a una libreria Objective-C._
 
-- [Panoramica](#overview) & [Cronologia](#history)
+- [Cenni preliminari sulla](#overview) [cronologia](#history) & 
 - [Introduzione](get-started.md)
 - [Strumenti e comandi](tools.md)
 - [Funzionalità](platform/index.md)
-- [esempi](examples/index.md)
+- [Esempi](examples/index.md)
 - [Procedura dettagliata completa](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Cronologia delle versioni](releases.md)
 
@@ -44,7 +44,7 @@ Tuttavia, Objective è uno strumento molto avanzato che richiede una conoscenza 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Download dell'obiettivo Sharpie](https://aka.ms/objective-sharpie)
-- [Procedura dettagliata: Associazione di una libreria Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Procedura dettagliata: associazione di una libreria Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Binding di librerie Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Dettagli associazione](~/cross-platform/macios/binding/overview.md)
 - [Guida di riferimento ai tipi di binding](~/cross-platform/macios/binding/binding-types-reference.md)

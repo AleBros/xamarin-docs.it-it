@@ -3,15 +3,15 @@ title: Localizzazione dell'interfaccia utente dell'applicazione
 description: Questo documento descrive i concetti multipiattaforma di internazionalizzazione e localizzazione ed esamina il modo in cui influisca sulla progettazione dell'applicazione.
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 9e0a6569710ca3ad10f57d7145a97af92574427c
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198435"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016800"
 ---
 # <a name="localization"></a>Localizzazione
 
@@ -59,7 +59,7 @@ Le stringhe tedesche (ad esempio) possono essere molto lunghe; in alcuni casi un
 
 Confrontare le lunghezze di stringa per alcuni elementi nella schermata iniziale di iOS in inglese, tedesco e giapponese:
 
-[![](localization-images/language-compare-sml.png "Lunghezza stringa tedesco e giapponese")](localization-images/language-compare.png#lightbox)
+[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
 
 Si noti che **le impostazioni** in inglese (8 caratteri) richiedono 13 caratteri per la traduzione in tedesco, ma solo 2 caratteri in giapponese.
 
@@ -235,7 +235,7 @@ Sarà necessario scrivere il codice nell'app per valutare il numero visualizzato
 
 Le lingue basate su Latin a volte usano parole diverse a seconda del sesso dell'oggetto. Se l'app è a conoscenza del sesso, è necessario consentire alle stringhe tradotte di riflettere questo problema.
 
-Esiste anche il caso più ovvio anche in inglese, in cui le stringhe si riferiscono a una persona o a un utente specifico dell'app. Alcuni siti, ad esempio, visualizzano `"Bob commented on his post"` messaggi come, pertanto è necessario disporre di stringhe sia per sesso maschio, femminile che non binario o sconosciuto:
+Esiste anche il caso più ovvio anche in inglese, in cui le stringhe si riferiscono a una persona o a un utente specifico dell'app. Alcuni siti, ad esempio, visualizzano messaggi come `"Bob commented on his post"` pertanto è necessario disporre di stringhe sia per sesso maschile, femminile che non binario o sconosciuto:
 
 **Valido**:
 
@@ -271,7 +271,7 @@ Per creare funzionalità di traduzione nell'app, prendere in considerazione il [
 A scopo di test è possibile usare uno dei numerosi strumenti di traduzione online per includere il testo localizzato nell'app durante lo sviluppo:
 
 - [Bing Translator](https://www.bing.com/translator/)
-- [Google translate](http://translate.google.com/)
+- [Google translate](https://translate.google.com/)
 
 Sono disponibili molte altre. La qualità della traduzione automatica non è generalmente considerata sufficiente per rilasciare un'applicazione senza prima essere esaminata e testata da traduttori professionali o madrelingua.
 
@@ -279,7 +279,7 @@ Sono disponibili molte altre. La qualità della traduzione automatica non è gen
 
 Ci sono anche servizi di traduzione professionale che porteranno le tue stringhe e le distribuiranno ai loro traduttori, fornendo le traduzioni complete a pagamento.
 
-Uno dei servizi più noti è [Lionbridge](http://www.lionbridge.com/). La maggior parte dei servizi professionali supporta tutti i tipi di file comuni, tra cui stringhe, XML, RESX e POT/PO.
+Uno dei servizi più noti è [Lionbridge](https://www.lionbridge.com/). La maggior parte dei servizi professionali supporta tutti i tipi di file comuni, tra cui stringhe, XML, RESX e POT/PO.
 
 ## <a name="summary"></a>Riepilogo
 

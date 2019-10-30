@@ -4,15 +4,15 @@ description: Questo documento descrive come eseguire il provisioning di un dispo
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 7ee3d7d9b2ce074174b676225ec934279ceb5a86
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292632"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022691"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Provisioning di dispositivi per Xamarin.iOS
 
@@ -20,7 +20,7 @@ Durante lo sviluppo di un'applicazione Xamarin.iOS è molto importante testare l
 
 Le sezioni evidenziate nell'immagine seguente illustrano i passaggi necessari per configurare il provisioning iOS:
 
-[![](images/provisioningdiagram.png "Le sezioni evidenziate in questa immagine illustrano i passaggi necessari per configurare il provisioning iOS")](images/provisioningdiagram.png#lightbox)
+[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
 
 Il passaggio successivo prevede la distribuzione dell'applicazione. Per altre informazioni sulla distribuzione, vedere la guida [App Distribution](~/ios/deploy-test/app-distribution/index.md) (Distribuzione dell'app)
 
@@ -51,7 +51,7 @@ Esistono due modi per effettuare il provisioning del dispositivo iOS:
 
 - **Manualmente**: è possibile creare e gestire le identità di firma, gli ID app e i profili di provisioning tramite il portale Apple Developer, come descritto nella guida [Provisioning manuale](manual-provisioning.md). Questi elementi possono quindi essere gestiti come descritto nella guida [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Gestione degli account Apple).
 
-## <a name="provisioning-for-application-services"></a>Provisioning dei servizi per le applicazioni
+## <a name="provisioning-for-application-services"></a>Povisioning per i servizi per le applicazioni
 
 Apple offre una selezione di servizi speciali per le applicazioni, denominati anche funzionalità, che possono essere attivati per un'applicazione Xamarin.iOS. Questi servizi per le applicazioni devono essere configurati sia nel portale di provisioning iOS quando viene creato l'**ID app** sia nel file **Entitlements.plist** che è parte del progetto dell'applicazione Xamarin.iOS. Per informazioni sull'aggiunta dei servizi per le applicazioni all'app, vedere la guida [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) (Introduzione alle funzionalità) e la guida [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) (Uso degli entitlement).
 

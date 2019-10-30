@@ -3,23 +3,23 @@ title: Ciclo di vita di sviluppo del software per dispositivi mobili
 description: Questo documento descrive il ciclo di vita di sviluppo del software per dispositivi mobili, prendendo in esame la progettazione dell'esperienza utente, la progettazione dell'interfaccia utente, lo sviluppo, la stabilizzazione, la distribuzione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: 4e2af0d1746ef1321db39d97a86af2b4bd769c69
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: b08293727a585ff68c4bac8a25b26d249505b1aa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526700"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016389"
 ---
 # <a name="mobile-software-development-lifecycle"></a>Ciclo di vita di sviluppo del software per dispositivi mobili
 
-La compilazione di applicazioni per dispositivi mobili può essere un'operazione semplice e rapida come aprire Visual Studio, assemblare una serie di componenti, eseguire un breve test e caricare il tutto in App Store. Oppure può essere un processo estremamente complesso che richiede una progettazione preliminare rigorosa, un test di usabilità, il controllo qualità su migliaia di dispositivi, un ciclo di vita completo della versione beta e quindi la distribuzione in numerosi modi diversi.
+La compilazione di applicazioni per dispositivi mobili può essere un'operazione semplice e rapida come aprire Visual Studio, assemblare una serie di componenti, eseguire un breve test e caricare il tutto in App Store. Oppure può essere un processo estremamente complesso che richiede un rigoroso design up-front, un test di usabilità, il controllo qualità su migliaia di dispositivi, un ciclo di vita completo della versione beta e quindi la distribuzione in numerosi modi diversi.
 
 In questo documento vengono fornite informazioni introduttive dettagliate sulla creazione di applicazioni per dispositivi mobili che includono:
 
-1. **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del ciclo di vita di sviluppo del software relative allo sviluppo di applicazioni per dispositivi mobili, tra cui concepimento, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
+1. **Processo**: il processo di sviluppo del software è chiamato ciclo di vita di sviluppo del software (SDLC, Software Development Lifecycle). Verranno esaminate tutte le fasi del SDLC per quanto riguarda lo sviluppo di applicazioni per dispositivi mobili, tra cui: inizio, progettazione, sviluppo, stabilizzazione, distribuzione e manutenzione.
 1. **Considerazioni**: sono numerose le considerazioni da tenere presente durante la creazione di applicazioni per dispositivi mobili, che si distingue in particolare da quella di applicazioni Web o desktop tradizionali. Queste considerazioni verranno prese in esame e ne verrà descritto l'effetto sullo sviluppo per applicazioni mobili.
 
 Questo documento si propone di rispondere alle domande fondamentali sullo sviluppo di app per dispositivi mobili degli sviluppatori di ogni livello. La maggior parte dei concetti relativi all'intero ciclo di vita di sviluppo del software (SDLC) sono descritti con un approccio sostanzialmente completo. È possibile tuttavia che questo documento non sia adatto a tutti. Coloro che sono impazienti di iniziare possono passare direttamente alla guida [Introduzione allo sviluppo per dispositivi mobili](~/cross-platform/get-started/introduction-to-mobile-development.md) e tornare più tardi a questo documento.
@@ -72,7 +72,7 @@ Dopo aver individuato le funzioni e le funzionalità dell'app, il passaggio succ
 
 L'esperienza utente viene in genere creata con wireframe o mockup usando uno dei tanti [toolkit di progettazione](https://docs.microsoft.com/windows/uwp/design/downloads/). I mockup consentono di progettare l'esperienza utente senza doversi preoccupare della progettazione dell'interfaccia utente:
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "L'esperienza utente viene in genere creata con wireframe o mockup usando strumenti come Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 Quando si creano i mockup di esperienza utente, è importante tenere presente le linee guida dell'interfaccia per le varie piattaforme a cui è destinata l'app. L'app deve adattarsi a ogni piattaforma. Le linee guida di progettazione ufficiali per ogni piattaforma sono le seguenti:
 
@@ -84,11 +84,11 @@ Ad esempio, ogni app ha una metafora per il passaggio da una sezione all'altra i
 
 Anche l'hardware determina le decisioni relative all'esperienza utente. Ad esempio, i dispositivi iOS non hanno un tasto *Indietro* e di conseguenza adottano la metafora del controller di spostamento:
 
- ![](introduction-to-mobile-sdlc-images/01-navigation-controller.png "I dispositivi iOS non hanno un tasto Indietro e di conseguenza adottano la metafora del controller di spostamento")
+ ![](introduction-to-mobile-sdlc-images/01-navigation-controller.png "iOS devices have no physical back button, and therefore introduce the Navigation Controller metaphor")
 
 Anche il fattore di forma influenza le decisioni relative all'esperienza utente. Un tablet ha più spazio e può visualizzare più informazioni. Spesso gli elementi che richiedono più schermate in un telefono vengono compressi in un'unica schermata in un tablet:
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Spesso gli elementi che richiedono più schermate in un telefono vengono compressi in un'unica schermata in un tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 Considerati gli innumerevoli fattori di forma esistenti, è possibile che si desideri adattare l'app anche a fattori di forma di medie dimensioni (compresi tra un telefono e un tablet).
 
@@ -98,7 +98,7 @@ Dopo aver determinato l'esperienza utente, il passaggio successivo consiste nell
 
 Come per l'esperienza utente, è importante tenere presente che ogni piattaforma ha un proprio linguaggio di progettazione: un'applicazione ben progettata può avere un aspetto diverso in ogni piattaforma:
 
- [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "Un'applicazione ben progettata può avere un aspetto diverso in ogni piattaforma")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 ### <a name="development"></a>Sviluppo
 
@@ -108,7 +108,7 @@ La maggior parte delle esercitazioni che seguono è incentrata sulla fase di svi
 
 ### <a name="stabilization"></a>Stabilizzazione
 
-La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. Non soltanto da un punto di vista funzionale (ad esempio, l'arresto anomalo dell'applicazione quando si fa clic su un pulsante), ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
+La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazione. La stabilizzazione non viene eseguita solo da un punto di vista funzionale (ad esempio un arresto dell'applicazione quando si fa clic su un pulsante) ma riguarda anche l'usabilità e le prestazioni. È consigliabile iniziare la stabilizzazione in una fase iniziale del processo di sviluppo in modo da eseguire immediatamente le correzioni prima che i problemi diventino un costo . In genere le applicazioni prevedono le fasi di *prototipo*, *alfa*, *beta* e *versione finale candidata*. Sebbene possano essere chiamate in modo diverso, queste fasi seguono in genere il modello seguente:
 
 1. **Prototipo**: l'app è ancora nella fase di modello di verifica e solo la funzionalità principale e parti specifiche dell'applicazione sono funzionanti. Sono presenti i bug maggiori.
 1. **Alfa**: il codice delle funzionalità principali è stato completato (le funzionalità sono state compilate ma non testate completamente). I bug maggiori sono ancora presenti e le funzionalità periferiche potrebbero non essere ancora presenti.
@@ -117,7 +117,7 @@ La stabilizzazione è il processo di risoluzione dei bug presenti nell'applicazi
 
 Non è mai troppo presto per iniziare a testare un'applicazione. Ad esempio, se viene rilevato un problema importante nella fase di prototipo, l'esperienza utente dell'app può essere ancora modificata per risolverlo. Se viene rilevato un problema di prestazioni nella fase alfa, è ancora possibile modificare l'architettura prima che venga compilata una grande quantità di codice basato su assunzioni false.
 
-In genere procedendo nelle fasi del ciclo di vita, l'applicazione viene aperta a un maggior numero di persone che la provano, la testano, inviano commenti e così via. Le applicazioni prototipo, ad esempio, possono essere mostrate o rese disponibili solo ai principali stakeholder, mentre la versione finale candidata delle applicazioni può essere distribuita ai clienti che effettuano la registrazione per l'accesso in anteprima.
+In genere, quando un'applicazione si sposta più avanti nel ciclo di vita, viene aperta a un maggior numero di persone per provarla, testarla, fornire commenti e così via. Ad esempio, le applicazioni Prototype possono essere visualizzate o rese disponibili solo per le parti interessate principali, mentre le applicazioni release candidate possono essere distribuite ai clienti che si iscrivono per l'accesso in anticipo.
 
 Per un test preliminare e la distribuzione in un numero relativamente basso di dispositivi, è solitamente sufficiente la distribuzione diretta dal computer di sviluppo. Tuttavia, quando il pubblico diventa più vasto, questa operazione può diventare complessa. Per questa ragione, sono disponibili diverse opzioni di distribuzione dei test che rendono più semplice questo processo consentendo di invitare persone in un pool di test, rilasciare build sul Web e offrire strumenti per l'invio di commenti da parte degli utenti.
 
@@ -146,10 +146,10 @@ Al contrario, tutti gli utenti sono liberi di creare un App Store e la maggior p
 
 Ciò offre agli sviluppatori un canale di distribuzione per le applicazioni più grande ma più complesso. [Google Play](https://play.google.com/store?hl=en) è l'App Store ufficiale di Google, ma sono disponibili numerosi altri Store. Alcuni degli Store più noti sono:
 
-1. [AppBrain](http://www.appbrain.com/)
-1. [Amazon Appstore per Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1. [Handango](http://www.handango.com/)
-1. [GetJar](http://www.getjar.com/)
+1. [AppBrain](https://www.appbrain.com/)
+1. [Amazon Appstore per Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](https://www.handango.com/)
+1. [GetJar](https://www.getjar.com/)
 
 #### <a name="uwp"></a>UWP
 

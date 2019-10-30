@@ -4,15 +4,15 @@ description: La versione 6 del C# linguaggio continua a evolvere il linguaggio i
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 34a77f15391a0f4e10c1902046d8bd37806c14ec
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1db7ee95ec261739463fa2584f4acf493ac71217
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765285"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014824"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 panoramica sulle nuove funzionalità
 
@@ -30,12 +30,12 @@ In questo documento vengono presentate le nuove C# funzionalità di 6. È comple
 ## <a name="using-c-6"></a>Uso C# di 6
 
 Il C# compilatore 6 viene usato in tutte le versioni recenti di Visual Studio per Mac.
-Quelli che usano i compilatori della riga di `mcs --version` comando devono confermare che restituisce 4,0 o versione successiva.
+Quelli che usano i compilatori della riga di comando devono confermare che `mcs --version` restituisce 4,0 o versione successiva.
 Visual Studio per Mac utenti possono verificare se è installato mono 4 (o versione successiva) facendo riferimento a **circa Visual Studio per Mac > Visual Studio per Mac > visualizzare i dettagli**.
 
 ## <a name="less-boilerplate"></a>Meno standard
 ### <a name="using-static"></a>using static
-Le enumerazioni e alcune classi, ad `System.Math`esempio, sono principalmente titolari di valori e funzioni statici. In C# 6 è possibile importare tutti i membri statici di un tipo con un'unica `using static` istruzione. Confrontare una funzione trigonometrica tipica in C# 5 e C# 6:
+Le enumerazioni e alcune classi, ad esempio `System.Math`, sono principalmente titolari di valori e funzioni statici. In C# 6 è possibile importare tutti i membri statici di un tipo con una singola istruzione`using static`. Confrontare una funzione trigonometrica tipica in C# 5 e C# 6:
 
 ```csharp
 // Classic C#
@@ -61,7 +61,7 @@ class MyClass
 }
 ```
 
-`using static`non rende accessibili direttamente `const` i campi pubblici, `Math.PI` ad `Math.E`esempio e.
+`using static` non rende i campi `const` pubblici, ad esempio `Math.PI` e `Math.E`, direttamente accessibili:
 
 ```csharp
 for (var angle = 0.0; angle <= Math.PI * 2.0; angle += Math.PI / 8) ... 
@@ -70,7 +70,7 @@ for (var angle = 0.0; angle <= Math.PI * 2.0; angle += Math.PI / 8) ...
 
 ### <a name="using-static-with-extension-methods"></a>utilizzo di static con i metodi di estensione
 
-La `using static` struttura funziona in modo leggermente diverso con i metodi di estensione. Sebbene i metodi di estensione vengano `static`scritti usando, non hanno senso senza un'istanza in cui operare. Quindi, `using static` quando viene usato con un tipo che definisce i metodi di estensione, i metodi di estensione diventano disponibili nel tipo di `this` destinazione (il tipo del metodo). Ad esempio, `using static System.Linq.Enumerable` può essere usato per estendere l'API di `IEnumerable<T>` oggetti senza includere tutti i tipi LINQ:
+La funzione `using static` funziona in modo leggermente diverso con i metodi di estensione. Sebbene i metodi di estensione vengano scritti usando `static`, non hanno senso senza un'istanza in cui operare. Quindi, quando `using static` viene usato con un tipo che definisce i metodi di estensione, i metodi di estensione diventano disponibili nel tipo di destinazione (il tipo di `this` del metodo). Ad esempio, è possibile usare `using static System.Linq.Enumerable` per estendere l'API di `IEnumerable<T>` oggetti senza includere tutti i tipi LINQ:
 
 ```csharp
 using static System.Linq.Enumerable;
@@ -87,16 +87,16 @@ class Program
 }
 ```
 
-Nell'esempio precedente viene illustrata la differenza nel comportamento: il `Enumerable.Where` metodo di estensione è associato alla matrice, mentre il `String.Join` metodo statico può essere `String` chiamato senza riferimento al tipo.
+Nell'esempio precedente viene illustrata la differenza nel comportamento: il metodo di estensione `Enumerable.Where` è associato alla matrice, mentre il metodo statico `String.Join` può essere chiamato senza riferimento al tipo di `String`.
 
 ### <a name="nameof-expressions"></a>Espressioni NameOf
-A volte si vuole fare riferimento al nome a cui è stata assegnata una variabile o un campo. In C# 6, `nameof(someVariableOrFieldOrType)` restituirà la stringa `"someVariableOrFieldOrType"`. Ad esempio, quando si genera `ArgumentException` un oggetto è molto probabile che si desideri assegnare un nome a un argomento non valido:
+A volte si vuole fare riferimento al nome a cui è stata assegnata una variabile o un campo. In C# 6`nameof(someVariableOrFieldOrType)`restituirà la stringa`"someVariableOrFieldOrType"`. Ad esempio, quando si genera un `ArgumentException` è molto probabile che si desideri assegnare un nome a un argomento non valido:
 
 ```csharp
 throw new ArgumentException ("Problem with " + nameof(myInvalidArgument))
 ```
 
-Il vantaggio principale delle `nameof` espressioni è che sono controllati dal tipo e sono compatibili con il refactoring basato su strumenti. Il controllo dei tipi delle `nameof` espressioni è particolarmente utile nelle situazioni in cui `string` un oggetto viene utilizzato per associare dinamicamente i tipi. Ad esempio, in iOS `string` a viene usato per specificare il tipo usato per il prototipo `UITableViewCell` di `UITableView`oggetti in un oggetto. `nameof`è in grado di garantire che l'associazione non abbia esito negativo a causa di un errore di refactoring o un refactoring
+Il vantaggio principale delle espressioni `nameof` è che sono controllati dal tipo e sono compatibili con il refactoring basato su strumenti. Il controllo dei tipi delle espressioni `nameof` è particolarmente utile nelle situazioni in cui viene usata una `string` per associare dinamicamente i tipi. Ad esempio, in iOS viene usato un `string` per specificare il tipo usato per il prototipo di oggetti `UITableViewCell` in un `UITableView`. `nameof` possibile garantire che questa associazione non abbia esito negativo a causa di un refactoring ortografico o sciatto:
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -107,7 +107,7 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-Sebbene sia possibile passare un nome completo a `nameof`, viene restituito solo l'elemento finale (dopo `.`l'ultimo). Ad esempio, è possibile aggiungere un data binding in Novell. Forms:
+Sebbene sia possibile passare un nome completo a `nameof`, viene restituito solo l'elemento finale (dopo l'ultimo `.`). Ad esempio, è possibile aggiungere un data binding in Novell. Forms:
 
 ```csharp
 var myReactiveInstance = new ReactiveType ();
@@ -117,10 +117,10 @@ var myLabelOld.SetBinding (Label.TextProperty, "StringField");
 var myLabelNew.SetBinding (Label.TextProperty, nameof(ReactiveType.StringField));
 ```
 
-Le due chiamate a `SetBinding` passano valori identici: `nameof(ReactiveType.StringField)` è `"StringField"`, non `"ReactiveType.StringField"` come si può prevedere inizialmente.
+Le due chiamate a `SetBinding` passano valori identici: `nameof(ReactiveType.StringField)` è `"StringField"`, non `"ReactiveType.StringField"` come previsto inizialmente.
 
 ## <a name="null-conditional-operator"></a>Operatore condizionale null
-Negli aggiornamenti precedenti C# di sono stati introdotti i concetti di tipi nullable e l'operatore `??` di Unione null per ridurre la quantità di codice standard quando si gestiscono i valori nullable. C#6 continua questo tema con l'operatore `?.`condizionale null. Quando viene utilizzato su un oggetto sul lato destro di un'espressione, l'operatore condizionale null restituisce il valore del membro se l'oggetto non `null` è e `null` in caso contrario:
+Gli aggiornamenti precedenti C# a hanno introdotto i concetti di tipi nullable e l'operatore di unione null`??`per ridurre la quantità di codice standard quando si gestiscono i valori nullable. C#6 continua questo tema con l'`?.`"operatore condizionale null". Quando viene utilizzato su un oggetto sul lato destro di un'espressione, l'operatore condizionale null restituisce il valore del membro se l'oggetto non è `null` e `null` in caso contrario:
 
 ```csharp
 var ss = new string[] { "Foo", null };
@@ -129,19 +129,19 @@ var length1 = ss [1]?.Length; // null
 var lengths = ss.Select (s => s?.Length ?? 0); //[3, 0]
 ```
 
-`length0` (E `length1` vengono dedotti come di tipo `int?`)
+(Sia `length0` che `length1` vengono dedotti come di tipo `int?`)
 
-Nell'ultima riga dell'esempio precedente viene illustrato l' `?` operatore condizionale null in combinazione con l' `??` operatore di Unione null. Il nuovo C# operatore condizionale null viene restituito `null` sul secondo elemento della matrice. a quel punto, l'operatore di Unione dei valori null viene riavviato e viene fornito `lengths` un valore 0 alla matrice, indipendentemente dal fatto che sia appropriato o meno. specifico del problema).
+Nell'ultima riga dell'esempio precedente viene illustrato l'operatore condizionale null `?` in combinazione con l'operatore di Unione null di `??`. Il nuovo C# operatore condizionale null di 6 restituisce`null`sul secondo elemento della matrice. a quel punto, l'operatore di Unione null viene riavviato e fornisce un valore 0 alla matrice di`lengths`(se è appropriato o meno, ovviamente, specifico del problema).
 
 L'operatore condizionale null dovrebbe ridurre notevolmente la quantità di controllo null standard necessario in molte applicazioni.
 
-Esistono alcune limitazioni per l'operatore condizionale null a causa di ambiguità. Non è possibile seguire immediatamente `?` un oggetto con un elenco di argomenti tra parentesi, come si potrebbe sperare di eseguire con un delegato:
+Esistono alcune limitazioni per l'operatore condizionale null a causa di ambiguità. Non è possibile seguire immediatamente una `?` con un elenco di argomenti tra parentesi, come si può sperare con un delegato:
 
 ```csharp
 SomeDelegate?("Some Argument") // Not allowed
 ```
 
-Tuttavia, `Invoke` può essere usato per separare l' `?` oggetto dall'elenco di argomenti ed è ancora un miglioramento contrassegnato rispetto `null`a un blocco di controllo standard:
+Tuttavia, `Invoke` può essere usato per separare l'`?` dall'elenco di argomenti ed è ancora un miglioramento contrassegnato rispetto a un blocco di controllo del `null`di standard:
 
 ```csharp
 public event EventHandler HandoffOccurred;
@@ -153,9 +153,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 ```
 
 ## <a name="string-interpolation"></a>Interpolazione di stringhe
-La `String.Format` funzione ha tradizionalmente usato gli indici come segnaposto nella stringa di formato, ad esempio `String.Format("Expected: {0} Received: {1}.", expected, received`,. Naturalmente, l'aggiunta di un nuovo valore ha sempre compreso una piccola attività fastidiosa per contare gli argomenti, rinumerare i segnaposto e inserire il nuovo argomento nella sequenza corretta nell'elenco degli argomenti.
+La funzione `String.Format` usa tradizionalmente gli indici come segnaposto nella stringa di formato, ad esempio `String.Format("Expected: {0} Received: {1}.", expected, received`). Naturalmente, l'aggiunta di un nuovo valore ha sempre compreso una piccola attività fastidiosa per contare gli argomenti, rinumerare i segnaposto e inserire il nuovo argomento nella sequenza corretta nell'elenco degli argomenti.
 
-C#la nuova funzionalità di interpolazione delle stringhe di `String.Format`6 è notevolmente migliorata. A questo punto, è possibile denominare direttamente le variabili in una `$`stringa con un prefisso. Ad esempio:
+C#la nuova funzionalità di interpolazione delle stringhe di 6 è notevolmente migliorata in `String.Format`. A questo punto, è possibile denominare direttamente le variabili in una stringa preceduta da un `$`. Ad esempio:
 
 ```csharp
 $"Expected: {expected} Received: {received}."
@@ -163,13 +163,13 @@ $"Expected: {expected} Received: {received}."
 
 Le variabili sono, ovviamente, controllate e una variabile non digitata correttamente o non disponibile provocherà un errore del compilatore.
 
-I segnaposto non devono essere semplici variabili, ma possono essere qualsiasi espressione. All'interno di questi segnaposto, è possibile utilizzare le virgolette *senza* eseguire l'escape di tali quote. Si noti, ad esempio `"s"` , quanto segue:
+I segnaposto non devono essere semplici variabili, ma possono essere qualsiasi espressione. All'interno di questi segnaposto, è possibile utilizzare le virgolette *senza* eseguire l'escape di tali quote. Si noti, ad esempio, il `"s"` nei seguenti elementi:
 
 ```csharp
 var s = $"Timestamp: {DateTime.Now.ToString ("s", System.Globalization.CultureInfo.InvariantCulture )}"
 ```
 
-L'interpolazione di stringhe supporta l'allineamento e `String.Format`la sintassi di formattazione di. Così come è stato scritto `{index, alignment:format}`in precedenza C# , in 6 `{placeholder, alignment:format}`si scrive:
+L'interpolazione di stringhe supporta la sintassi di allineamento e formattazione dei `String.Format`. Così come è stato scritto in precedenza `{index, alignment:format}`C# , in 6 scrivere`{placeholder, alignment:format}`:
 
 ```csharp
 using static System.Linq.Enumerable;
@@ -200,13 +200,13 @@ The value is 123,456.00.
 Minimum is 1.00.
 ```
 
-L'interpolazione di stringhe è `String.Format`un Sugar sintattico per: `@""` non può essere usata con valori letterali `const`stringa e non è compatibile con, anche se non viene usato alcun segnaposto:
+L'interpolazione di stringhe è un Sugar sintattico per `String.Format`: non può essere usata con `@""` valori letterali stringa e non è compatibile con `const`, anche se non viene usato alcun segnaposto:
 
 ```csharp
 const string s = $"Foo"; //Error : const requires value
 ```
 
-Nel caso di utilizzo comune della creazione di argomenti della funzione con l'interpolazione di stringhe, è comunque necessario prestare attenzione all'Escape, alla codifica e ai problemi relativi alle impostazioni cultura. Le query SQL e URL sono, ovviamente, cruciali per la purificazione. Come con `String.Format`, l' `CultureInfo.CurrentCulture`interpolazione di stringhe utilizza. L' `CultureInfo.InvariantCulture` uso di è un po' più breve:
+Nel caso di utilizzo comune della creazione di argomenti della funzione con l'interpolazione di stringhe, è comunque necessario prestare attenzione all'Escape, alla codifica e ai problemi relativi alle impostazioni cultura. Le query SQL e URL sono, ovviamente, cruciali per la purificazione. Come con `String.Format`, l'interpolazione di stringhe usa il `CultureInfo.CurrentCulture`. L'uso di `CultureInfo.InvariantCulture` è un po' più Wordy:
 
 ```csharp
 Thread.CurrentThread.CurrentCulture  = new CultureInfo ("de");
@@ -248,7 +248,7 @@ Questa inizializzazione delle proprietà automatiche è una funzionalità di ris
 
 ### <a name="index-initializers"></a>Inizializzatori di indice.
 
-C#6 introduce gli inizializzatori di indice che consentono di impostare la chiave e il valore nei tipi che hanno un indicizzatore. Si tratta in genere di `Dictionary`strutture di dati per stile:
+C#6 introduce gli inizializzatori di indice che consentono di impostare la chiave e il valore nei tipi che hanno un indicizzatore. Questa operazione è in genere destinata alle strutture di dati di tipo `Dictionary`:
 
 ```csharp
 partial void ActivateHandoffClicked (WatchKit.WKInterfaceButton sender)
@@ -273,13 +273,13 @@ I membri di funzione con corpo di espressione usano la sintassi delle frecce lam
 public override string ToString () => $"{FirstName} {LastName}";
 ```
 
-Si noti che la sintassi lambda-Arrow non usa un oggetto `return`esplicito. Per le funzioni che `void`restituiscono, l'espressione deve essere anche un'istruzione:
+Si noti che la sintassi lambda-Arrow non usa un `return`esplicito. Per le funzioni che restituiscono `void`, l'espressione deve essere anche un'istruzione:
 
 ```csharp
 public void Log(string message) => System.Console.WriteLine($"{DateTime.Now.ToString ("s", System.Globalization.CultureInfo.InvariantCulture )}: {message}");
 ```
 
-I membri con corpo di espressione sono ancora soggetti alla regola `async` supportata per i metodi ma non per le proprietà:
+I membri con corpo di espressione sono ancora soggetti alla regola che `async` è supportata per i metodi ma non per le proprietà:
 
 ```csharp
 //A method, so async is valid
@@ -294,7 +294,7 @@ Non esistono due modi: la gestione delle eccezioni è difficile da ottenere. Le 
 
 ### <a name="exception-filters"></a>Filtri eccezioni
 
-Per definizione, le eccezioni si verificano in circostanze insolite e possono essere molto difficili da motivare e scrivere codice su *tutti* i modi in cui può verificarsi un'eccezione di un determinato tipo. C#6 introduce la possibilità di proteggere un gestore di esecuzione con un filtro valutato in fase di esecuzione. Questa operazione viene eseguita aggiungendo un `when (bool)` modello dopo la Dichiarazione `catch(ExceptionType)` normale. Nell'esempio seguente un filtro distingue un errore di analisi relativo al `date` parametro rispetto ad altri errori di analisi.
+Per definizione, le eccezioni si verificano in circostanze insolite e possono essere molto difficili da motivare e scrivere codice su *tutti* i modi in cui può verificarsi un'eccezione di un determinato tipo. C#6 introduce la possibilità di proteggere un gestore di esecuzione con un filtro valutato in fase di esecuzione. Questa operazione viene eseguita aggiungendo un modello di `when (bool)` dopo la normale dichiarazione di `catch(ExceptionType)`. Nell'esempio seguente un filtro distingue un errore di analisi correlato al parametro `date`, anziché ad altri errori di analisi.
 
 ```csharp
 public void ExceptionFilters(string aFloat, string date, string anInt)
@@ -314,7 +314,7 @@ public void ExceptionFilters(string aFloat, string date, string anInt)
 
 ### <a name="await-in-catchfinally"></a>await nel catch... Infine...
 
-Le `async` funzionalità introdotte in C# 5 sono state un cambio di gioco per il linguaggio. In C# 5, `await` non era consentito nei `catch` blocchi `finally` e, un fastidio dato il valore della `async/await` funzionalità. C#6 rimuove questa limitazione, consentendo l'attesa di risultati asincroni in modo coerente tramite il programma, come illustrato nel frammento di codice seguente:
+Le funzionalità di `async` introdotte C# in 5 sono state un cambio di gioco per il linguaggio. In C# 5`await`non era consentito nei blocchi`catch`e`finally`, un fastidio dato il valore della funzionalità`async/await`. C#6 rimuove questa limitazione, consentendo l'attesa di risultati asincroni in modo coerente tramite il programma, come illustrato nel frammento di codice seguente:
 
 ```csharp
 async void SomeMethod()

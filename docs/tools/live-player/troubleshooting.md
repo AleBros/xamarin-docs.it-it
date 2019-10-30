@@ -3,15 +3,15 @@ title: Risoluzione dei problemi Xamarin Live Player
 description: In questo documento vengono descritti i problemi noti relativi alla Xamarin Live Player e alle potenziali correzioni. Vengono illustrati i problemi di connessione, i problemi di configurazione e altro ancora.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 04a377bad42ff680247759036327035d61757b42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d51241bee5f4ddc06032006071fa8296be37f2fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290171"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005935"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Risoluzione dei problemi Xamarin Live Player
 
@@ -74,7 +74,7 @@ Si verifica quando il dispositivo mobile in cui è in esecuzione Xamarin Live Pl
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Messaggio "errore durante il tentativo di distribuzione" nell'IDE
 
-**"IOException: Impossibile leggere i dati dalla connessione di trasporto: L'operazione sul socket che non blocca il blocco "**
+**"IOException: Impossibile leggere i dati dalla connessione di trasporto: l'operazione sul socket non di blocco verrebbe bloccata"**
 
 Questo errore si verifica spesso quando il dispositivo mobile che esegue Xamarin Live Player non si trova nella stessa rete del computer in cui è in esecuzione Visual Studio. Questo problema si verifica spesso quando ci si connette a un dispositivo che in precedenza è stato associato correttamente.
 
@@ -87,32 +87,32 @@ Questo errore si verifica spesso quando il dispositivo mobile che esegue Xamarin
 
 Se non è possibile connettersi al dispositivo tramite Wi-Fi, è possibile provare a configurare manualmente il dispositivo tramite il file di configurazione, seguendo questa procedura:
 
-**Passaggio 1: Apri file di configurazione**
+**Passaggio 1: aprire il file di configurazione**
 
 Passare alla cartella di dati dell'applicazione:
 
 - Windows: **%USERPROFILE%\AppData\Roaming**
-- macOS: **~/Users/$USER/.config**
+- macOS: **~/utenti/$User/.config**
 
 In questa cartella si troverà **PlayerDeviceList. XML** , se non esiste, sarà necessario crearne uno.
 
-**Passaggio 2: Ottenere l'indirizzo IP**
+**Passaggio 2: ottenere l'indirizzo IP**
 
 Nell'app Xamarin Live Player passare a **informazioni su > test di connessione > avvia test di connessione**.
 
 Prendere nota dell'indirizzo IP. sarà necessario l'indirizzo IP elencato quando si configura il dispositivo.
 
-**Passaggio 3: Ottenere il codice di associazione**
+**Passaggio 3: ottenere il codice di associazione**
 
 All'interno del Xamarin Live Player toccare di nuovo **coppia** o **coppia**, quindi premere **invio manualmente**. Verrà visualizzato un codice numerico, che sarà necessario aggiornare il file di configurazione.
 
-**Passaggio 4: Genera GUID**
+**Passaggio 4: generare il GUID**
 
-Passare a: https://www.guidgenerator.com/online-guid-generator.aspx e generare un nuovo GUID e assicurarsi che il maiuscolo sia on.
+Vai a: https://www.guidgenerator.com/online-guid-generator.aspx e genera un nuovo GUID e assicurati che il maiuscolo sia on.
 
-**Passaggio 5: Configurare il dispositivo**
+**Passaggio 5: configurare il dispositivo**
 
-Aprire **PlayerDeviceList. XML** in un editor, ad esempio Visual Studio o Visual Studio Code. È necessario configurare manualmente il dispositivo in questo file. Per impostazione predefinita, il file deve contenere l'elemento `Devices` XML vuoto seguente:
+Aprire **PlayerDeviceList. XML** in un editor, ad esempio Visual Studio o Visual Studio Code. È necessario configurare manualmente il dispositivo in questo file. Per impostazione predefinita, il file deve contenere l'elemento XML `Devices` vuoto seguente:
 
 ```xml
 <DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -154,7 +154,7 @@ Non è possibile eseguire l'override di alcune classi di sistema, ad esempio:
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. layout ' non contiene una definizione per ' Main ' "
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs:' Resource. layout ' non contiene una definizione per ' Main '"
 
 Questo errore si verifica per i progetti Android con interfacce utente definite nei file AXML.
 I file AXML non sono attualmente supportati in Xamarin Live Player.

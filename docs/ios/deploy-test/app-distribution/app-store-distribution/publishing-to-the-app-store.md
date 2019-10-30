@@ -4,15 +4,15 @@ description: Questo documento descrive come configurare, compilare e pubblicare 
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: b6fb02697d3df59181750bf6fd7c840129554ac3
-ms.sourcegitcommit: 84d788f7dbabc1c83ac795ed3952d589074fa8e8
+ms.openlocfilehash: 3803d7e14b161a7c166bcae37e3d9f46b7637984
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71811173"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026641"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Pubblicazione di app Xamarin.iOS nell'App Store
 
@@ -53,7 +53,7 @@ Ogni app iOS ha un ID app univoco a cui è associata una serie di servizi di app
 
 Per creare un ID app e selezionare gli entitlement necessari, visitare il [portale Apple Developer](https://developer.apple.com/account/) e seguire questa procedura:
 
-1. Nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Identifiers (Identificatori) > App IDs (ID app)** .
+1. Nella sezione **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Identifiers (Identificatori) > App IDs (ID app)**.
 2. Fare clic sul pulsante **+** e specificare **Nome** (Nome) e **Bundle ID** (ID bundle) per la nuova applicazione.
 3. Scorrere fino alla fine della schermata e selezionare un valore per **App Services** (Servizi app) che sarà richiesto dall'applicazione Xamarin.iOS. I servizi app sono descritti in dettaglio nella guida [Uso delle funzionalità in Xamarin.iOS](~/ios/deploy-test/provisioning/capabilities/index.md).
 4. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
@@ -78,8 +78,8 @@ iOS usa i *profili di provisioning* per gestire la distribuzione di una build de
 Per creare e installare un profilo di provisioning dell'App Store, seguire questa procedura:
 
 1. Accedere al [portale Apple Developer](https://developer.apple.com/account/).
-2. In **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Provisioning Profiles (Profili di provisioning) > Distribution (Distribuzione)** .
-3. Fare clic sul pulsante **+** , selezionare **App Store** e fare clic su **Continue** (Continua).
+2. In **Certificates, IDs & Profiles** (Certificati, ID e profili) selezionare **Provisioning Profiles (Profili di provisioning) > Distribution (Distribuzione)**.
+3. Fare clic sul pulsante **+**, selezionare **App Store** e fare clic su **Continue** (Continua).
 4. Selezionare l'**App ID** (ID app) dall'elenco e fare clic su **Continue** (Continua).
 5. Selezionare un certificato di firma e fare clic su **Continue** (Continua).
 6. Immettere un **Profile Name** (Nome profilo) e fare clic su **Continue** (Continua) per generare il profilo.
@@ -106,13 +106,13 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
     Dopo aver impostato le opzioni descritte in precedenza, le impostazioni di compilazione dovrebbero essere simili alle seguenti:
 
-    ![impostazioni di compilazione iOS](publishing-to-the-app-store-images/build-m157.png "Impostazioni di compilazione iOS")
+    ![impostazioni di compilazione iOS](publishing-to-the-app-store-images/build-m157.png "impostazioni di compilazione iOS")
 
     Vedere anche la guida [Meccanismi di compilazione per iOS](~/ios/deploy-test/ios-build-mechanics.md) per una descrizione dettagliata delle impostazioni di compilazione.
 
-11. Passare alla scheda **Firma del bundle iOS**. Se le opzioni non sono modificabili, assicurarsi che sia selezionato **Provisioning manuale** nel file **Info.plist**.
+11. Passare alla scheda **firma bundle iOS** . Se le opzioni non sono modificabili, assicurarsi che il **provisioning manuale** sia selezionato nel file **info. plist** .
 12. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
-13. Impostare **Identità di firma** su **Distribuzione (automatico)** .
+13. Impostare **Identità di firma** su **Distribuzione (automatico)**.
 14. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
 
     Le opzioni di firma del bundle del progetto dovrebbero essere simili alle seguenti:
@@ -136,17 +136,17 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
     Dopo aver impostato le opzioni descritte in precedenza, le impostazioni di compilazione dovrebbero essere simili alle seguenti:
 
-    ![impostazioni di compilazione iOS](publishing-to-the-app-store-images/build-w157.png "Impostazioni di compilazione iOS")
+    ![impostazioni di compilazione iOS](publishing-to-the-app-store-images/build-w157.png "impostazioni di compilazione iOS")
 
     Vedere anche la guida [Meccanismi di compilazione per iOS](~/ios/deploy-test/ios-build-mechanics.md) per una descrizione dettagliata delle impostazioni di compilazione.
 
-11. Passare alla scheda **Firma del bundle iOS**. Verificare che l'opzione **Configurazione** sia impostata su **Versione**, **Piattaforma** sia impostata su **iPhone** e che **Provisioning manuale** sia selezionato.
-12. Impostare **Identità di firma** su **Distribuzione (automatico)** .
+11. Passare alla scheda relativa alla **firma del bundle iOS** . Assicurarsi che la **configurazione** sia impostata su **Release**, che **Platform** sia impostato su **iPhone**e che sia selezionato il **provisioning manuale** .
+12. Impostare **Identità di firma** su **Distribuzione (automatico)**.
 13. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
 
     Le opzioni di firma del bundle del progetto dovrebbero essere simili alle seguenti:
 
-    ![Impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Impostazioni di firma del bundle iOS")
+    ![impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "impostazioni di firma del bundle iOS")
 
 14. Salvare la configurazione della build e chiuderla.
 
@@ -165,28 +165,28 @@ I nuovi progetti Xamarin.iOS impostano automaticamente le _configurazioni della 
 
     Dopo aver impostato le opzioni descritte in precedenza, le impostazioni di compilazione dovrebbero essere simili alle seguenti:
 
-    ![impostazioni di compilazione iOS](publishing-to-the-app-store-images/build-w157.png "Impostazioni di compilazione iOS")
+    ![impostazioni di compilazione iOS](publishing-to-the-app-store-images/build-w157.png "impostazioni di compilazione iOS")
 
     Vedere anche la guida [Meccanismi di compilazione per iOS](~/ios/deploy-test/ios-build-mechanics.md) per una descrizione dettagliata delle impostazioni di compilazione.
 
-11. Passare alla scheda **Firma del bundle iOS**. Verificare che l'opzione **Configurazione** sia impostata su **Versione**, **Piattaforma** sia impostata su **iPhone** e che **Provisioning manuale** sia selezionato.
-12. Impostare **Identità di firma** su **Distribuzione (automatico)** .
+11. Passare alla scheda relativa alla **firma del bundle iOS** . Assicurarsi che la **configurazione** sia impostata su **Release**, che **Platform** sia impostato su **iPhone**e che sia selezionato il **provisioning manuale** .
+12. Impostare **Identità di firma** su **Distribuzione (automatico)**.
 13. Per **Profilo di provisioning**, selezionare il profilo di provisioning dell'App Store [creato in precedenza](#create-and-install-an-app-store-provisioning-profile).
 
     Le opzioni di firma del bundle del progetto dovrebbero essere simili alle seguenti:
 
-    ![Impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Impostazioni di firma del bundle iOS")
+    ![impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "impostazioni di firma del bundle iOS")
 
 14. Passare alla scheda **Opzioni IPA iOS**.
 15. Verificare che l'opzione **Configurazione** sia impostata su **Versione** e **Piattaforma** sia impostata su **iPhone**.
-16. Selezionare la casella di controllo **Compila archivio pacchetto iTunes (IPA)** . Questa impostazione farà in modo che ogni build di **versione** (che corrisponde alla configurazione selezionata) generi un file con estensione ipa. Questo file può essere inviato ad Apple per il rilascio nell'App Store.
+16. Selezionare la casella di controllo **Compila archivio pacchetto iTunes (IPA)**. Questa impostazione farà in modo che ogni build di **versione** (che corrisponde alla configurazione selezionata) generi un file con estensione ipa. Questo file può essere inviato ad Apple per il rilascio nell'App Store.
 
     > [!NOTE]
     > I **metadati di iTunes** e **iTunesArtwork** non sono necessari per le versioni dell'App Store. Per altre informazioni, vedere [File iTunesMetadata.plist nelle app Xamarin.iOS](~/ios/deploy-test/app-distribution/itunesmetadata.md) e [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork).
 
 17. Per specificare un nome file con estensione ipa diverso dal nome del progetto Xamarin.iOS, immetterlo nel campo **Nome del pacchetto**.
 
-    ![Impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "Impostazioni di firma del bundle iOS")
+    ![impostazioni di firma del bundle iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "impostazioni di firma del bundle iOS")
 
 18. Salvare la configurazione della build e chiuderla.
 
@@ -291,7 +291,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
     >
     > Per eseguire la distribuzione nell'App Store con Xcode 11 (per iOS 13), è necessario [usare Visual Studio per Mac](?tabs=macos#build-and-submit-your-app) per compilare e caricare l'app. Il **caricatore di applicazioni** non sarà disponibile per Xcode 11.
 
-6. Nell'host di compilazione Mac aprire il **Caricatore di applicazione**. In Xcode selezionare **Xcode > Open Developer Tool (Apri strumento di sviluppo) > Application Loader (Caricatore di applicazione)** .
+6. Nell'host di compilazione Mac aprire il **Caricatore di applicazione**. In Xcode selezionare **Xcode > Open Developer Tool (Apri strumento di sviluppo) > Application Loader (Caricatore di applicazione)**.
 
     > [!NOTE]
     > Per altre informazioni sullo strumento, vedere la [documentazione di Apple relativa ad Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
@@ -299,7 +299,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
 7. Accedere al Caricatore di applicazione (si noti che è necessario [creare una password specifica dell'app](https://support.apple.com/ht204397) per l'ID Apple).
 8. Selezionare **Deliver Your App** (Invia l'app) e fare clic sul pulsante **Choose** (Scegli):
 
-    ![Selezionare la distribuzione dell'app](publishing-to-the-app-store-images/publishvs01.png "Selezionare la distribuzione dell'app")
+    ![Selezionare Distribuisci l'app](publishing-to-the-app-store-images/publishvs01.png "Selezionare Distribuisci l'app")
 
 9. Selezionare il file con estensione ipa creato in precedenza e fare clic su **OK**.
 10. Application Loader convaliderà il file:
@@ -308,7 +308,7 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
 
 11. Fare clic sul pulsante **Next** (Avanti). L'applicazione sarà convalidati per l'App Store:
 
-    ![Convalida per l'App Store](publishing-to-the-app-store-images/publishvs03.png "Convalida per l'App Store")
+    ![Convalida nell'App Store](publishing-to-the-app-store-images/publishvs03.png "Convalida nell'App Store")
 
 12. Fare clic sul pulsante **Send** (Invia) per inviare l'applicazione ad Apple per la revisione.
 13. Application Loader indicherà quando il file è stato caricato.
@@ -326,17 +326,17 @@ Con le impostazioni di compilazione configurate correttamente e iTunes Connect i
 
 Per visualizzare lo stato dell'invio dell'app, accedere a iTunes Connect e selezionare l'app. Lo stato iniziale dovrebbe essere **Waiting For Review** (In attesa di revisione), sebbene possa essere indicato temporaneamente **Upload Received** (Caricamento ricevuto) durante l'elaborazione.
 
-![In attesa di revisione](publishing-to-the-app-store-images/image21.png "In attesa di revisione")
+![In attesa di Revisione](publishing-to-the-app-store-images/image21.png "In attesa di Revisione")
 
 ## <a name="tips-and-tricks"></a>Suggerimenti
 
 ### <a name="customize-the-ipa-location"></a>Personalizzare il percorso del file con estensione ipa
 
-Una proprietà **MSBuild**, `IpaPackageDir`, consente di personalizzare il percorso di output del file con estensione ipa. Se `IpaPackageDir` è impostata su un percorso personalizzato, il file con estensione ipa verrà inserito nel percorso specificato anziché nella sottodirectory predefinita con timestamp. Può essere utile durante la creazione di compilazioni automatizzate che si basano su un percorso di directory specifico affinché funzionino correttamente, ad esempio nel caso di compilazioni di Integrazione continua (CI).
+Una proprietà **MSBuild**, `IpaPackageDir`, consente di personalizzare il percorso di output del file con estensione ipa. Se `IpaPackageDir` è impostata su un percorso personalizzato, il file con estensione ipa verrà inserito nel percorso specificato anziché nella sottodirectory predefinita con timestamp. Può essere utile durante la creazione automatica di build che si basano su un percorso di directory specifico per il corretto funzionamento, ad esempio quelli usati per le compilazioni di integrazione continua (CI).
 
 La nuova proprietà può essere usata in modi diversi. Ad esempio, per eseguire l'output del file con estensione ipa nella directory predefinita precedente (come in Xamarin.iOS 9.6 e versioni precedenti), è possibile impostare la proprietà `IpaPackageDir` su `$(OutputPath)` usando uno degli approcci seguenti. I due approcci sono compatibili con tutte le compilazioni di Xamarin.iOS basate sull'API unificata, incluse le compilazioni IDE e quelle da riga di comando che usano **msbuild** o **mdtool**:
 
-- La prima opzione consiste nell'impostare la proprietà `IpaPackageDir` in un elemento `<PropertyGroup>` di un file **MSBuild**. È ad esempio possibile aggiungere l'elemento `<PropertyGroup>` seguente alla fine del file con estensione csproj del progetto dell'app iOS, appena prima del tag `</Project>` di chiusura:
+- La prima opzione consiste nell'impostare la proprietà `IpaPackageDir` in un elemento `<PropertyGroup>` del file **MSBuild**. È ad esempio possibile aggiungere l'elemento `<PropertyGroup>` seguente alla fine del file con estensione csproj del progetto dell'app iOS, appena prima del tag `</Project>` di chiusura:
 
     ```xml
     <PropertyGroup>

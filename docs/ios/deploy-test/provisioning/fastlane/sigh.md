@@ -4,15 +4,15 @@ description: Questo documento descrive il comando sigh di fastlane, che consente
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c9b6f6c29b86ee40c2d7b04dbe6fa4ce24a745ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9506d80ab10ce70938f95371a52bf28bda33d42d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762638"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028503"
 ---
 # <a name="fastlane-for-ios-sigh"></a>fastlane per iOS: sigh
 
@@ -21,7 +21,7 @@ ms.locfileid: "70762638"
 
 ## <a name="overview"></a>Panoramica
 
-Il provisioning di dispositivi viene tradizionalmente effettuato da ogni membro di un team di sviluppo tramite Xcode o in Apple Developer Portal. La procedura prevede diversi passaggi:
+Il provisioning di dispositivi viene tradizionalmente eseguito da ogni membro di un team di sviluppo tramite Xcode o nel portale per sviluppatori Apple. La procedura prevede diversi passaggi:
 
 - Richiesta di un certificato di sviluppo
 - Aggiunta di un dispositivo al portale
@@ -64,7 +64,7 @@ fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
 
 dove `com.company.appname` è l'ID bundle dell'app, disponibile nel file Info.plist dell'applicazione Xamarin.iOS, come illustrato di seguito:
 
-[![](sigh-images/fastlane-image5.png "File Info.plist dell'applicazione Xamarin.iOS")](sigh-images/fastlane-image5.png#lightbox)
+[![](sigh-images/fastlane-image5.png "The Info.plist file of the Xamarin.iOS application")](sigh-images/fastlane-image5.png#lightbox)
 
 L'ID app univoco deve essere una stringa di tipo DNS inverso. Dopo che è stato creato, annotare l'ID perché sarà necessario usarlo più avanti in questa guida quando si userà sigh.
 
@@ -111,7 +111,7 @@ Quando richiesto da fastlane, immettere il nome utente ID Apple. È possibile ch
 
 Se l'ID Apple è connesso a più team, questi verranno visualizzati qui. Selezionare il numero corrispondente al team che si vuole usare:
 
-[![](sigh-images/fastlane-image2.png "Selezionare il team che si vuole usare")](sigh-images/fastlane-image2.png#lightbox)
+[![](sigh-images/fastlane-image2.png "Select the team that you wish to use")](sigh-images/fastlane-image2.png#lightbox)
 
 È possibile passare l'ID team all'interfaccia della riga di comando anche nel modo seguente:
 
@@ -127,7 +127,7 @@ fastlane quindi creerà, scaricherà e installerà automaticamente il profilo di
 
 Nel centro sviluppatori sarà possibile visualizzare il profilo di provisioning appena creato, come illustrato di seguito:
 
-[![](sigh-images/fastlane-image10.png "Visualizzare il profilo di provisioning appena creato")](sigh-images/fastlane-image10.png#lightbox)
+[![](sigh-images/fastlane-image10.png "View the newly created provisioning profile")](sigh-images/fastlane-image10.png#lightbox)
 
 Per impostazione predefinita, sigh archivierà i profili di provisioning nella cartella corrente. Per cambiare la directory di output, modificare `output_path` o eseguire il comando seguente:
 

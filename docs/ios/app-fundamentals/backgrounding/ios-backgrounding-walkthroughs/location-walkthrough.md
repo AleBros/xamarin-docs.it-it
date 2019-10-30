@@ -4,21 +4,21 @@ description: Questo documento fornisce una procedura dettagliata su come usare l
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 9f4708b56b8cf8a243785816440c63b743059cf5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 625826e729a6b4153396286361730d6a2b878dca
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756269"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010463"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata-percorso in background in Novell. iOS
 
 In questo esempio verrà compilata un'applicazione location iOS che stampa le informazioni relative alla posizione corrente: Latitudine, Longitudine e altri parametri sullo schermo. Questa applicazione dimostrerà come eseguire correttamente gli aggiornamenti del percorso mentre l'applicazione è attiva o in background.
 
-Questa procedura dettagliata illustra alcuni concetti chiave in background, inclusa la registrazione di un'app come applicazione in background necessaria, la sospensione degli aggiornamenti dell'interfaccia utente quando l'app è in background e `WillEnterBackground` l' `WillEnterForeground` uso dei metodi e `AppDelegate` .
+Questa procedura dettagliata illustra alcuni concetti chiave in background, tra cui la registrazione di un'app come applicazione in background necessaria, la sospensione degli aggiornamenti dell'interfaccia utente quando l'app è in background e l'uso dei metodi `WillEnterBackground` e `WillEnterForeground` `AppDelegate`.
 
 ## <a name="application-set-up"></a>Configurazione dell'applicazione
 
@@ -30,7 +30,7 @@ Questa procedura dettagliata illustra alcuni concetti chiave in background, incl
 
     In Visual Studio per Mac sarà simile alla seguente:
 
-    [![](location-walkthrough-images/image7.png "Inserire un segno di spunta per le caselle di controllo Abilita modalità sfondo e aggiornamenti percorso")](location-walkthrough-images/image7.png#lightbox)
+    [![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png#lightbox)
 
     In Visual Studio il file **info. plist** deve essere aggiornato manualmente aggiungendo la coppia chiave/valore seguente:
 
@@ -41,9 +41,9 @@ Questa procedura dettagliata illustra alcuni concetti chiave in background, incl
     </array>
     ```
 
-1. Ora che l'applicazione è registrata, può ottenere i dati di posizione dal dispositivo. In iOS, la `CLLocationManager` classe viene usata per accedere alle informazioni sulla posizione e può generare eventi che forniscono aggiornamenti della posizione.
+1. Ora che l'applicazione è registrata, può ottenere i dati di posizione dal dispositivo. In iOS, la classe `CLLocationManager` viene usata per accedere alle informazioni sulla posizione e può generare eventi che forniscono aggiornamenti della posizione.
 
-1. Nel codice, creare una nuova classe denominata `LocationManager` che fornisce un'unica posizione per varie schermate e codice per sottoscrivere gli aggiornamenti del percorso. Nella classe, creare un'istanza `CLLocationManager` del denominato `LocMgr`: `LocationManager`
+1. Nel codice creare una nuova classe denominata `LocationManager` che fornisce un'unica posizione per varie schermate e codice per sottoscrivere gli aggiornamenti del percorso. Nella classe `LocationManager`, creare un'istanza della `CLLocationManager` denominata `LocMgr`:
 
     ```csharp
     public class LocationManager
@@ -73,18 +73,18 @@ Questa procedura dettagliata illustra alcuni concetti chiave in background, incl
 
     Il codice precedente imposta alcune proprietà e autorizzazioni per la classe [CLLocationManager](xref:CoreLocation.CLLocationManager) :
 
-    - `PausesLocationUpdatesAutomatically`: Valore booleano che può essere impostato a seconda che il sistema sia autorizzato a sospendere gli aggiornamenti del percorso. In alcuni dispositivi il valore predefinito `true`è, che può causare il blocco del dispositivo per ottenere gli aggiornamenti della posizione in background dopo circa 15 minuti.
-    - `RequestAlwaysAuthorization`-È necessario passare questo metodo per concedere all'utente dell'app l'opzione per consentire l'accesso al percorso in background. `RequestWhenInUseAuthorization`può anche essere passato se si vuole dare all'utente l'opzione per consentire l'accesso alla posizione solo quando l'app è in primo piano.
-    - `AllowsBackgroundLocationUpdates`: Proprietà booleana, introdotta in iOS 9, che può essere impostata per consentire a un'app di ricevere gli aggiornamenti del percorso quando vengono sospesi.
+    - `PausesLocationUpdatesAutomatically`: si tratta di un valore booleano che può essere impostato a seconda che il sistema sia autorizzato a sospendere gli aggiornamenti del percorso. In alcuni dispositivi il valore predefinito è `true`, che può causare il blocco del dispositivo per ottenere gli aggiornamenti della posizione in background dopo circa 15 minuti.
+    - `RequestAlwaysAuthorization`: è necessario passare questo metodo per concedere all'utente dell'app l'opzione per consentire l'accesso al percorso in background. è anche possibile passare `RequestWhenInUseAuthorization` se si vuole consentire all'utente di accedere alla posizione solo quando l'app è in primo piano.
+    - `AllowsBackgroundLocationUpdates`: Proprietà booleana, introdotta in iOS 9, che può essere impostata in modo da consentire a un'app di ricevere gli aggiornamenti del percorso quando viene sospesa.
 
     > [!IMPORTANT]
     > iOS 8 (e versioni successive) richiede anche una voce nel file **info. plist** per visualizzare l'utente come parte della richiesta di autorizzazione.
 
-1. Aggiungere una chiave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` una stringa che verrà visualizzata all'utente nell'avviso che richiede l'accesso ai dati della località.
+1. Aggiungere una chiave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` con una stringa che verrà visualizzata all'utente nell'avviso che richiede l'accesso ai dati della località.
 
-1. iOS 9 richiede che quando si `AllowsBackgroundLocationUpdates` usa il file **info. plist** includa la `UIBackgroundModes` chiave `location`con il valore. Se è stato completato il passaggio 2 di questa procedura dettagliata, questo dovrebbe essere già presente nel file INFO. plist.
+1. iOS 9 richiede che, quando si usa `AllowsBackgroundLocationUpdates` il file **info. plist** includa la chiave `UIBackgroundModes` con il valore `location`. Se è stato completato il passaggio 2 di questa procedura dettagliata, questo dovrebbe essere già presente nel file INFO. plist.
 
-1. All'interno `LocationManager` della classe, creare un metodo `StartLocationUpdates` denominato con il codice seguente. Questo codice Mostra come iniziare a ricevere gli aggiornamenti del percorso dal `CLLocationManager`:
+1. All'interno della classe `LocationManager` creare un metodo denominato `StartLocationUpdates` con il codice seguente. Questo codice Mostra come iniziare a ricevere gli aggiornamenti del percorso dal `CLLocationManager`:
 
     ```csharp
     if (CLLocationManager.LocationServicesEnabled) {
@@ -99,20 +99,20 @@ Questa procedura dettagliata illustra alcuni concetti chiave in background, incl
     }
     ```
 
-    In questo metodo si verificano molti aspetti importanti. Prima di tutto, viene eseguito un controllo per verificare se l'applicazione ha accesso ai dati del percorso nel dispositivo. Per verificarlo, chiamare `LocationServicesEnabled` `CLLocationManager`su. Questo metodo restituirà **false** se l'utente ha negato l'accesso all'applicazione alle informazioni sulla posizione.
+    In questo metodo si verificano molti aspetti importanti. Prima di tutto, viene eseguito un controllo per verificare se l'applicazione ha accesso ai dati del percorso nel dispositivo. Questa operazione viene verificata chiamando `LocationServicesEnabled` sull'`CLLocationManager`. Questo metodo restituirà **false** se l'utente ha negato l'accesso all'applicazione alle informazioni sulla posizione.
 
-1. Successivamente, indicare alla gestione della posizione la frequenza di aggiornamento. `CLLocationManager`in sono disponibili molte opzioni per filtrare e configurare i dati del percorso, inclusa la frequenza degli aggiornamenti. In questo esempio, impostare `DesiredAccuracy` per aggiornare ogni volta che il percorso viene modificato da un contatore. Per ulteriori informazioni sulla configurazione della frequenza di aggiornamento del percorso e di altre preferenze, vedere il [riferimento alla classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) nella documentazione di Apple.
+1. Successivamente, indicare alla gestione della posizione la frequenza di aggiornamento. `CLLocationManager` offre molte opzioni per filtrare e configurare i dati del percorso, inclusa la frequenza degli aggiornamenti. In questo esempio, impostare l'`DesiredAccuracy` per aggiornare ogni volta che il percorso viene modificato da un contatore. Per ulteriori informazioni sulla configurazione della frequenza di aggiornamento del percorso e di altre preferenze, vedere il [riferimento alla classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) nella documentazione di Apple.
 
-1. Infine, chiamare `StartUpdatingLocation` `CLLocationManager` sull'istanza. Ciò indica al gestore della posizione di ottenere una correzione iniziale nella posizione corrente e di iniziare a inviare gli aggiornamenti
+1. Infine, chiamare `StartUpdatingLocation` sull'istanza di `CLLocationManager`. Ciò indica al gestore della posizione di ottenere una correzione iniziale nella posizione corrente e di iniziare a inviare gli aggiornamenti
 
-Fino ad ora, il gestore della posizione è stato creato, configurato con i tipi di dati che si desidera ricevere e ha determinato la posizione iniziale. A questo punto il codice deve eseguire il rendering dei dati del percorso nell'interfaccia utente. È possibile eseguire questa operazione con un evento personalizzato che accetta `CLLocation` come argomento:
+Fino ad ora, il gestore della posizione è stato creato, configurato con i tipi di dati che si desidera ricevere e ha determinato la posizione iniziale. A questo punto il codice deve eseguire il rendering dei dati del percorso nell'interfaccia utente. È possibile eseguire questa operazione con un evento personalizzato che accetta un `CLLocation` come argomento:
 
 ```csharp
 // event for the location changing
 public event EventHandler<LocationUpdatedEventArgs>LocationUpdated = delegate { };
 ```
 
-Il passaggio successivo consiste nel sottoscrivere gli aggiornamenti del percorso `CLLocationManager`da e generare l'evento `LocationUpdated` personalizzato quando diventano disponibili nuovi dati della posizione, passando la posizione come argomento. A tale scopo, creare una nuova classe **LocationUpdateEventArgs.cs**. Questo codice è accessibile all'interno dell'applicazione principale e restituisce il percorso del dispositivo quando viene generato l'evento:
+Il passaggio successivo consiste nel sottoscrivere gli aggiornamenti del percorso dalla `CLLocationManager`e generare l'evento `LocationUpdated` personalizzato quando diventano disponibili nuovi dati del percorso, passando il percorso come argomento. A tale scopo, creare una nuova classe **LocationUpdateEventArgs.cs**. Questo codice è accessibile all'interno dell'applicazione principale e restituisce il percorso del dispositivo quando viene generato l'evento:
 
 ```csharp
 public class LocationUpdatedEventArgs : EventArgs
@@ -139,9 +139,9 @@ public class LocationUpdatedEventArgs : EventArgs
 
     Il layout sarà simile al seguente:
 
-    ![](location-walkthrough-images/image8.png "Un layout dell'interfaccia utente di esempio in iOS designer")
+    ![](location-walkthrough-images/image8.png "An example UI layout in the iOS Designer")
 
-1. Nella riquadro della soluzione fare doppio clic sul `ViewController.cs` file e modificarlo per creare una nuova istanza di LocationManager e chiamare `StartLocationUpdates`su di essa.
+1. Nella riquadro della soluzione fare doppio clic sul file `ViewController.cs` e modificarlo per creare una nuova istanza di LocationManager e chiamare `StartLocationUpdates`.
   Modificare il codice in modo che sia simile al seguente:
 
     ```csharp
@@ -166,7 +166,7 @@ public class LocationUpdatedEventArgs : EventArgs
 
     Verranno avviati gli aggiornamenti della posizione all'avvio dell'applicazione, anche se non verrà visualizzato alcun dato.
 
-1. Ora che sono stati ricevuti gli aggiornamenti della posizione, aggiornare la schermata con le informazioni sulla posizione. Il metodo seguente ottiene la posizione dall' `LocationUpdated` evento e la Mostra nell'interfaccia utente:
+1. Ora che sono stati ricevuti gli aggiornamenti della posizione, aggiornare la schermata con le informazioni sulla posizione. Il metodo seguente ottiene il percorso dall'evento `LocationUpdated` e lo Visualizza nell'interfaccia utente:
 
     ```csharp
     #region Public Methods
@@ -186,7 +186,7 @@ public class LocationUpdatedEventArgs : EventArgs
     #endregion
     ```
 
-È comunque necessario sottoscrivere l' `LocationUpdated` evento nella AppDelegate e chiamare il nuovo metodo per aggiornare l'interfaccia utente. Aggiungere il codice `ViewDidLoad,` seguente subito dopo la `StartLocationUpdates` chiamata:
+È comunque necessario sottoscrivere l'evento `LocationUpdated` nella AppDelegate e chiamare il nuovo metodo per aggiornare l'interfaccia utente. Aggiungere il codice seguente in `ViewDidLoad,` subito dopo la chiamata `StartLocationUpdates`:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -202,11 +202,11 @@ public override void ViewDidLoad ()
 
 A questo punto, quando viene eseguita l'applicazione, il risultato sarà simile al seguente:
 
-[![](location-walkthrough-images/image5.png "Esecuzione di un'app di esempio")](location-walkthrough-images/image5.png#lightbox)
+[![](location-walkthrough-images/image5.png "An example app run")](location-walkthrough-images/image5.png#lightbox)
 
 ## <a name="handling-active-and-background-states"></a>Gestione degli Stati attivi e di sfondo
 
-1. L'applicazione sta inserendo gli aggiornamenti della posizione mentre è in primo piano e attivo. Per dimostrare cosa accade quando l'app entra in background, eseguire l' `AppDelegate` override dei metodi che tengono traccia delle modifiche dello stato dell'applicazione in modo che l'applicazione scriva nella console quando esegue la transizione tra il primo piano e lo sfondo:
+1. L'applicazione sta inserendo gli aggiornamenti della posizione mentre è in primo piano e attivo. Per dimostrare cosa accade quando l'app entra in background, eseguire l'override dei metodi di `AppDelegate` che tengono traccia delle modifiche dello stato dell'applicazione in modo che l'applicazione scriva nella console quando esegue la transizione tra il primo piano e lo sfondo:
 
     ```csharp
     public override void DidEnterBackground (UIApplication application)
@@ -220,7 +220,7 @@ A questo punto, quando viene eseguita l'applicazione, il risultato sarà simile 
     }
     ```
 
-    Aggiungere il codice seguente in `LocationManager` per stampare continuamente i dati del percorso aggiornati nell'output dell'applicazione, per verificare che le informazioni sul percorso siano ancora disponibili in background:
+    Aggiungere il codice seguente nel `LocationManager` per stampare continuamente i dati del percorso aggiornati nell'output dell'applicazione, per verificare che le informazioni sul percorso siano ancora disponibili in background:
 
     ```csharp
     public class LocationManager
@@ -246,9 +246,9 @@ A questo punto, quando viene eseguita l'applicazione, il risultato sarà simile 
 
 1. Si è verificato un problema rimanente con il codice: se si tenta di aggiornare l'interfaccia utente quando l'app è in background, iOS lo termina. Quando l'app passa in background, il codice deve annullare la sottoscrizione agli aggiornamenti del percorso e arrestare l'aggiornamento dell'interfaccia utente.
 
-    iOS fornisce notifiche degli Stati Uniti quando l'app sta per passare a uno stato di applicazione diverso. In questo caso, è possibile sottoscrivere la `ObserveDidEnterBackground` notifica.
+    iOS fornisce notifiche degli Stati Uniti quando l'app sta per passare a uno stato di applicazione diverso. In questo caso, è possibile sottoscrivere la notifica `ObserveDidEnterBackground`.
 
-    Il frammento di codice seguente illustra come usare una notifica per consentire alla visualizzazione di stabilire quando arrestare gli aggiornamenti dell'interfaccia utente. Questo passaggio verrà inserito `ViewDidLoad`in:
+    Il frammento di codice seguente illustra come usare una notifica per consentire alla visualizzazione di stabilire quando arrestare gli aggiornamenti dell'interfaccia utente. Questa operazione verrà `ViewDidLoad`:
 
     ```csharp
     UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
@@ -258,7 +258,7 @@ A questo punto, quando viene eseguita l'applicazione, il risultato sarà simile 
 
     Quando l'app è in esecuzione, l'output sarà simile al seguente:
 
-    ![](location-walkthrough-images/image6.png "Esempio di output della posizione nella console")
+    ![](location-walkthrough-images/image6.png "Example of the location output in the console")
 
 1. L'applicazione stampa gli aggiornamenti della posizione sullo schermo quando opera in primo piano e continua a stampare i dati nella finestra di output dell'applicazione mentre funziona in background.
 

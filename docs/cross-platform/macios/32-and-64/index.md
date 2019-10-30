@@ -3,15 +3,15 @@ title: Considerazioni sulla piattaforma a 32/64 bit
 description: Questo documento descrive le varie considerazioni da tenere presenti quando si è interessati a architetture a 32 bit e a 64 bit per un'applicazione Novell. iOS o Novell. Mac.
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71249797"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016325"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considerazioni sulla piattaforma a 32/64 bit
 
@@ -40,9 +40,9 @@ Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unific
 
 1. Nella **riquadro della soluzione**fare doppio clic sul progetto dell'app per aprire la finestra **Opzioni progetto** .
 2. Selezionare **compilazione iOS**.
-3. Per il simulatore iPhone, nell'elenco a discesa **architetture supportate** selezionare **x86 \_64** o **I386 + x86 \_64**:
+3. Per il simulatore iPhone, nell'elenco a discesa **architetture supportate** selezionare **x86\_64** o **I386 + x86\_64**:
 
-   [![Impostazione delle architetture supportate su x86 \_64 o I386 + x86 \_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Impostazione delle architetture supportate su x86\_64 o I386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. Per i dispositivi fisici, selezionare una delle combinazioni di **arm64** disponibili:
 
@@ -55,9 +55,9 @@ Per le applicazioni per dispositivi mobili Novell. iOS convertite nel API unific
 
 1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto dell'app e selezionare **Proprietà**.
 2. Selezionare **compilazione iOS**.
-3. Per il simulatore iPhone, impostare le **architetture supportate** su **x86 \_64** o **I386 + x86 \_64**: 
+3. Per il simulatore iPhone, impostare le **architetture supportate** su **x86\_64** o **I386 + x86\_64**: 
 
-   [![Impostazione delle architetture supportate su x86_64 o I386 + x86 \_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Impostazione delle architetture supportate su x86_64 o I386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. Per i dispositivi fisici, selezionare una delle combinazioni di **arm64** disponibili:
     

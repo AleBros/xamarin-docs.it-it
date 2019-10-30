@@ -1,18 +1,18 @@
 ---
-title: Configurare il dispositivo per lo sviluppo
+title: Set Up Device for Development (Configurare il dispositivo per lo sviluppo)
 description: Questo articolo illustra come installare un dispositivo Android fisico e connetterlo a un computer in modo che il dispositivo possa essere usato per eseguire applicazioni Xamarin.Android ed eseguirne il debug.
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
-ms.translationtype: HT
+ms.openlocfilehash: f5b92bc202cbf9765a63219ad653442152c3eb24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925047"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020707"
 ---
 # <a name="set-up-device-for-development"></a>Set Up Device for Development (Configurare il dispositivo per lo sviluppo)
 
@@ -71,7 +71,7 @@ Eseguire l'applicazione **android.bat** nella directory **[Percorso installazion
 
 ### <a name="download-the-usb-drivers"></a>Scaricare i driver USB
 
-I dispositivi Google Nexus (fatta eccezione per Galaxy Nexus) richiedono il driver USB Google. Il driver per i dispositivi Galaxy Nexus viene [distribuito da Samsung](http://www.samsung.com/us/support/downloads/).
+I dispositivi Google Nexus (fatta eccezione per Galaxy Nexus) richiedono il driver USB Google. Il driver per i dispositivi Galaxy Nexus viene [distribuito da Samsung](https://www.samsung.com/us/support/downloads/).
 Tutti gli altri dispositivi Android devono usare il [driver USB fornito dal produttore](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Per installare il pacchetto **Google USB Driver** avviare Android SDK Manager ed espandere la cartella **Extras**, come nello screenshot seguente:
@@ -183,7 +183,7 @@ In questo articolo sono state illustrate le procedure per configurare un disposi
 
 - [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
 - [Uso di dispositivi hardware](https://developer.android.com/tools/device.html)
-- [Download di driver Samsung](http://www.samsung.com/us/support/downloads/)
+- [Download di driver Samsung](https://www.samsung.com/us/support/downloads/)
 - [Driver USB OEM](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
 - [Google USB Driver](https://developer.android.com/sdk/win-usb.html)
-- [Sviluppatori XDA: Windows 8 - Problema del driver ADB/Fastboot risolto](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [Sviluppatori XDA: Windows 8 - Problema del driver ADB/Fastboot risolto](https://forum.xda-developers.com/showthread.php?t=1583801)

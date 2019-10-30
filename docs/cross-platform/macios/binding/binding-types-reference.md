@@ -3,15 +3,15 @@ title: Guida di riferimento ai tipi di binding
 description: Questa guida di riferimento descrive diversi attributi e concetti che è necessario conoscere quando si C# creano associazioni a librerie Objective-C.
 ms.prod: xamarin
 ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: ef94c90cec11c374b24ddfb159674adb468e72de
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e89cbf98dbaf5a96fdfa51069f580b914ba5ff76
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765782"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016306"
 ---
 # <a name="binding-types-reference-guide"></a>Guida di riferimento ai tipi di binding
 
@@ -30,12 +30,12 @@ interface MyType : [Protocol1, Protocol2] {
 }
 ```
 
-Ogni interfaccia nella definizione del contratto che dispone dell' [`[BaseType]`](#BaseTypeAttribute) attributo che dichiara il tipo di base per l'oggetto generato. Nella dichiarazione precedente viene generato `MyType` un C# tipo di classe associato a un tipo Objective-C denominato `MyType`.
+Ogni interfaccia nella definizione del contratto con l'attributo [`[BaseType]`](#BaseTypeAttribute) che dichiara il tipo di base per l'oggetto generato. Nella dichiarazione precedente viene generato un tipo C# di classe `MyType` che si associa a un tipo Objective-C denominato`MyType`.
 
 Se si specificano tipi dopo TypeName (nell'esempio precedente `Protocol1` e `Protocol2`) utilizzando la sintassi di ereditarietà dell'interfaccia, il contenuto di tali interfacce verrà inline come se facessero parte del contratto per `MyType`.
 Il modo in cui Novell. iOS emerge che un tipo adotta un protocollo consiste nell'incorporare tutti i metodi e le proprietà dichiarati nel protocollo nel tipo stesso.
 
-Di seguito viene illustrato come definire la dichiarazione Objective- `UITextField` C per in un contratto Novell. iOS:
+Di seguito viene illustrato come definire la dichiarazione Objective-C per `UITextField` in un contratto Novell. iOS:
 
 ```objc
 @interface UITextField : UIControl <UITextInput> {
@@ -51,11 +51,11 @@ interface UITextField : UITextInput {
 }
 ```
 
-È possibile controllare molti altri aspetti della generazione di codice applicando altri attributi all'interfaccia e configurando l' [`[BaseType]`](#BaseTypeAttribute) attributo.
+È possibile controllare molti altri aspetti della generazione di codice applicando altri attributi all'interfaccia e configurando l'attributo [`[BaseType]`](#BaseTypeAttribute) .
 
 ### <a name="generating-events"></a>Generazione di eventi
 
-Una funzionalità della progettazione dell'API Novell. iOS e Novell. Mac è che le classi delegate Objective-C C# vengono mappate come eventi e callback. Gli utenti possono scegliere in base alle singole istanze se vogliono adottare il modello di programmazione Objective-c, assegnando a proprietà come `Delegate` un'istanza di una classe che implementa i vari metodi che il runtime di Objective-c chiamerebbe o scelta degli C#eventi e delle proprietà di stile.
+Una funzionalità della progettazione dell'API Novell. iOS e Novell. Mac è che le classi delegate Objective-C C# vengono mappate come eventi e callback. Gli utenti possono scegliere in base alle singole istanze se vogliono adottare il modello di programmazione Objective-C, assegnando a proprietà come `Delegate` un'istanza di una classe che implementa i vari metodi che il runtime di Objective-C chiamerebbe oppure scegliendo il C#: eventi e proprietà di stile.
 
 Ecco un esempio di come usare il modello Objective-C:
 
@@ -85,7 +85,7 @@ class MyScrollViewDelegate : UIScrollViewDelegate {
 }
 ```
 
-Nell'esempio precedente è possibile notare che si è scelto di sovrascrivere due metodi, una notifica che si è verificato un evento di scorrimento e il secondo che è un callback che deve restituire un valore booleano che indica `scrollView` se deve scorrere fino al Top o not.
+Nell'esempio precedente, è possibile notare che si è scelto di sovrascrivere due metodi, una notifica che si è verificato un evento di scorrimento e il secondo che è un callback che deve restituire un valore booleano che indica all'`scrollView` se deve scorrere fino alla parte superiore o n OT.
 
 Il C# modello consente all'utente della libreria di restare in ascolto delle notifiche usando C# la sintassi dell'evento o la sintassi della proprietà per associare i callback che dovrebbero restituire valori.
 
@@ -103,17 +103,17 @@ void Setup ()
 }
 ```
 
-Poiché gli eventi non restituiscono valori, ovvero hanno un tipo restituito void, è possibile connettere più copie. Non è un evento, bensì una proprietà con il tipo `UIScrollViewCondition` con questa firma: `ShouldScrollToTop`
+Poiché gli eventi non restituiscono valori, ovvero hanno un tipo restituito void, è possibile connettere più copie. Il `ShouldScrollToTop` non è un evento, bensì una proprietà con il tipo `UIScrollViewCondition` con la firma seguente:
 
 ```csharp
 public delegate bool UIScrollViewCondition (UIScrollView scrollView);
 ```
 
-Restituisce un `bool` valore, in questo caso la sintassi lambda consente di restituire semplicemente il valore `MakeDecision` dalla funzione.
+Restituisce un valore `bool`, in questo caso la sintassi lambda consente di restituire semplicemente il valore dalla funzione di `MakeDecision`.
 
-Il generatore di associazioni supporta la generazione di eventi e proprietà che collegano una `UIScrollViewDelegate` classe come `UIScrollView` con il relativo (ben chiamare queste classi del modello). questa [`[BaseType]`](#BaseTypeAttribute) operazione viene eseguita annotando la `Events` definizione con e `Delegates`parametri (descritti di seguito). Oltre ad annotare [`[BaseType]`](#BaseTypeAttribute) con tali parametri, è necessario informare il generatore di alcuni altri componenti.
+Il generatore di associazioni supporta la generazione di eventi e proprietà che collegano una classe come `UIScrollView` con la relativa `UIScrollViewDelegate` (è possibile chiamare anche la classe del modello), a tale scopo annotando la definizione di [`[BaseType]`](#BaseTypeAttribute) con i parametri `Events` e `Delegates` ( descritto di seguito. Oltre ad annotare la [`[BaseType]`](#BaseTypeAttribute) con tali parametri, è necessario informare il generatore di alcuni altri componenti.
 
-Per gli eventi che accettano più parametri (in Objective-C la convenzione è che il primo parametro in una classe delegata è l'istanza dell'oggetto mittente), è necessario specificare il nome desiderato per la classe generata `EventArgs` . Questa operazione viene eseguita con [`[EventArgs]`](#EventArgsAttribute) l'attributo nella dichiarazione di metodo nella classe del modello. Ad esempio:
+Per gli eventi che accettano più di un parametro (in Objective-C la convenzione è che il primo parametro in una classe delegata è l'istanza dell'oggetto mittente) è necessario specificare il nome desiderato per la classe `EventArgs` generata. Questa operazione viene eseguita con l'attributo [`[EventArgs]`](#EventArgsAttribute) nella dichiarazione di metodo nella classe del modello. Esempio:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -124,7 +124,7 @@ public interface UIImagePickerControllerDelegate {
 }
 ```
 
-La dichiarazione precedente genererà una `UIImagePickerImagePickedEventArgs` classe che deriva da `EventArgs` e comprime entrambi i `UIImage` `NSDictionary`parametri, e. Il generatore produce quanto segue:
+La dichiarazione precedente genererà una classe `UIImagePickerImagePickedEventArgs` che deriva da `EventArgs` e comprime entrambi i parametri, `UIImage` e `NSDictionary`. Il generatore produce quanto segue:
 
 ```csharp
 public partial class UIImagePickerImagePickedEventArgs : EventArgs {
@@ -134,13 +134,13 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 }
 ```
 
-Espone quindi quanto segue nella `UIImagePickerController` classe:
+Espone quindi quanto segue nella classe `UIImagePickerController`:
 
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
 ```
 
-I metodi del modello che restituiscono un valore sono associati in modo diverso. Che richiedono sia un nome per il delegato C# generato (la firma per il metodo) che un valore predefinito da restituire se l'utente non fornisce un'implementazione. Ad esempio, la `ShouldScrollToTop` definizione è la seguente:
+I metodi del modello che restituiscono un valore sono associati in modo diverso. Che richiedono sia un nome per il delegato C# generato (la firma per il metodo) che un valore predefinito da restituire se l'utente non fornisce un'implementazione. Ad esempio, la definizione del `ShouldScrollToTop` è la seguente:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -151,9 +151,9 @@ public interface UIScrollViewDelegate {
 }
 ```
 
-Sopra verrà creato un `UIScrollViewCondition` delegato con la firma illustrata sopra e se l'utente non fornisce un'implementazione, il valore restituito sarà true.
+Il valore precedente creerà un delegato `UIScrollViewCondition` con la firma riportata in precedenza e, se l'utente non fornisce un'implementazione, il valore restituito sarà true.
 
-Oltre all' [`[DefaultValue]`](#DefaultValueAttribute) attributo, è anche possibile usare l' [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute) attributo che indica al generatore di restituire il valore del parametro specificato nella chiamata o il [`[NoDefaultValue]`](#NoDefaultValueAttribute) parametro che indica al generatore che non esiste alcun valore predefinito valore.
+Oltre all'attributo [`[DefaultValue]`](#DefaultValueAttribute) , è anche possibile usare l'attributo [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute) che indica al generatore di restituire il valore del parametro specificato nella chiamata o il parametro [`[NoDefaultValue]`](#NoDefaultValueAttribute) che indica al generatore che è presente nessun valore predefinito.
 
 <a name="BaseTypeAttribute" />
 
@@ -176,9 +176,9 @@ public class BaseTypeAttribute : Attribute {
 
 #### <a name="basetypename"></a>BaseType.Name
 
-Usare la `Name` proprietà per controllare il nome a cui verrà associato questo tipo nel mondo Objective-C. Viene in genere usato per fornire al C# tipo un nome conforme alle linee guida di progettazione .NET Framework, ma che esegue il mapping a un nome in Objective-C che non segue tale convenzione.
+Usare la proprietà `Name` per controllare il nome a cui verrà associato questo tipo nel mondo Objective-C. Viene in genere usato per fornire al C# tipo un nome conforme alle linee guida di progettazione .NET Framework, ma che esegue il mapping a un nome in Objective-C che non segue tale convenzione.
 
-Esempio, nel caso seguente viene mappato il tipo Objective- `NSURLConnection` C a `NSUrlConnection`, in quanto le linee guida per la progettazione di .NET Framework usano "URL" invece di "URL":
+Esempio, nel caso seguente viene mappato il tipo di `NSURLConnection` Objective-C a `NSUrlConnection`, poiché le linee guida per la progettazione di .NET Framework usano "URL" invece di "URL":
 
 ```csharp
 [BaseType (typeof (NSObject), Name="NSURLConnection")]
@@ -186,13 +186,13 @@ interface NSUrlConnection {
 }
 ```
 
-Il nome specificato viene utilizzato come valore per l'attributo generato `[Register]` nell'associazione. Se `Name` viene omesso, viene usato il nome breve del tipo come valore per l' `[Register]` attributo nell'output generato.
+Il nome specificato viene utilizzato come valore per l'attributo `[Register]` generato nell'associazione. Se `Name` viene omesso, viene usato il nome breve del tipo come valore per l'attributo `[Register]` nell'output generato.
 
 #### <a name="basetypeevents-and-basetypedelegates"></a>BaseType. Events e BaseType. delegati
 
-Queste proprietà vengono usate per guidare la generazione di C#eventi di tipo nelle classi generate. Vengono usati per collegare una determinata classe con la relativa classe delegata Objective-C. Si verificheranno molti casi in cui una classe usa una classe Delegate per inviare notifiche ed eventi. Ad esempio, `BarcodeScanner` un oggetto avrebbe una `BardodeScannerDelegate` classe complementare. La `BarcodeScanner` classe in genere dispone di `Delegate` una proprietà a cui si assegna un'istanza `BarcodeScannerDelegate` di, mentre questa operazione può essere utile per esporre agli utenti un' C#interfaccia di eventi di tipo simile a. in questi casi, si utilizzerà il `Events` proprietà e`Delegates` [dell'`[BaseType]`](#BaseTypeAttribute) attributo.
+Queste proprietà vengono usate per guidare la generazione di C#eventi di tipo nelle classi generate. Vengono usati per collegare una determinata classe con la relativa classe delegata Objective-C. Si verificheranno molti casi in cui una classe usa una classe Delegate per inviare notifiche ed eventi. Ad esempio, un `BarcodeScanner` avrà una classe `BardodeScannerDelegate` complementare. La classe `BarcodeScanner` in genere dispone di una proprietà `Delegate` a cui si assegna un'istanza di `BarcodeScannerDelegate`, mentre questa operazione può essere utile per esporre agli utenti un' C#interfaccia eventi di tipo simile a. in questi casi, è possibile utilizzare il`Events`e`Delegates`proprietà dell'attributo [`[BaseType]`](#BaseTypeAttribute) .
 
-Queste proprietà vengono sempre impostate insieme e devono avere lo stesso numero di elementi e rimanere sincronizzati. La `Delegates` matrice contiene una stringa per ogni delegato con tipizzazione debole di cui si vuole eseguire il wrapping e `Events` la matrice contiene un tipo per ogni tipo a cui si vuole associarlo.
+Queste proprietà vengono sempre impostate insieme e devono avere lo stesso numero di elementi e rimanere sincronizzati. La matrice di `Delegates` contiene una stringa per ogni delegato con tipizzazione debole di cui si desidera eseguire il wrapping e la matrice di `Events` contiene un tipo per ogni tipo a cui si desidera associarlo.
 
 ```csharp
 [BaseType (typeof (NSObject),
@@ -207,11 +207,11 @@ public interface UIAccelerometerDelegate {
 }
 ```
 
-#### <a name="basetypekeeprefuntil"></a>BaseType.KeepRefUntil
+#### <a name="basetypekeeprefuntil"></a>BaseType. KeepRefUntil
 
-Se si applica questo attributo quando vengono create nuove istanze di questa classe, l'istanza di tale oggetto verrà mantenuta fino a quando non viene richiamato il `KeepRefUntil` metodo a cui fa riferimento. Questa operazione è utile per migliorare l'usabilità delle API, quando non si vuole che l'utente mantenga un riferimento a un oggetto per l'uso del codice. Il valore di questa proprietà è il nome di un metodo nella `Delegate` classe, quindi è necessario utilizzare questo `Events` insieme anche alle proprietà e `Delegates` .
+Se si applica questo attributo quando vengono create nuove istanze di questa classe, l'istanza di tale oggetto verrà mantenuta fino a quando non viene richiamato il metodo a cui fa riferimento il `KeepRefUntil`. Questa operazione è utile per migliorare l'usabilità delle API, quando non si vuole che l'utente mantenga un riferimento a un oggetto per l'uso del codice. Il valore di questa proprietà è il nome di un metodo nella classe `Delegate`, quindi è necessario usare questa combinazione anche con le proprietà `Events` e `Delegates`.
 
-Nell'esempio seguente viene illustrato come viene utilizzato da `UIActionSheet` in Novell. iOS:
+Nell'esempio seguente viene illustrato come viene usato da `UIActionSheet` in Novell. iOS:
 
 ```csharp
 [BaseType (typeof (NSObject), KeepRefUntil="Dismissed")]
@@ -234,7 +234,7 @@ public interface UIActionSheetDelegate {
 
 ### <a name="designateddefaultctorattribute"></a>DesignatedDefaultCtorAttribute
 
-Quando questo attributo viene applicato alla definizione dell'interfaccia, verrà generato un `[DesignatedInitializer]` attributo sul costruttore predefinito (generato), che esegue il `init` mapping al selettore.
+Quando questo attributo viene applicato alla definizione dell'interfaccia, verrà generato un attributo `[DesignatedInitializer]` sul costruttore predefinito (generato), che esegue il mapping al selettore `init`.
 
 <a name="DisableDefaultCtorAttribute" />
 
@@ -256,7 +256,7 @@ Quando questo attributo viene applicato alla definizione dell'interfaccia, il co
 
 Usare questo attributo in una definizione di tipo per associare le categorie Objective-C ed esporle C# come metodi di estensione per eseguire il mirroring del modo in cui Objective-c espone la funzionalità.
 
-Le categorie sono un meccanismo Objective-C usato per estendere il set di metodi e proprietà disponibili in una classe.   In pratica, vengono utilizzati per estendere la funzionalità di una classe di base (ad esempio `NSObject`) quando un Framework specifico è collegato, ad esempio `UIKit`, rendendo disponibili i metodi, ma solo se il nuovo Framework è collegato.   In altri casi vengono usati per organizzare le funzionalità in una classe in base alla funzionalità.   Sono simili ai metodi di C# estensione.
+Le categorie sono un meccanismo Objective-C usato per estendere il set di metodi e proprietà disponibili in una classe.   In pratica, vengono usati per estendere la funzionalità di una classe di base (ad esempio `NSObject`) quando è collegato un Framework specifico, ad esempio `UIKit`, rendendo disponibili i metodi, ma solo se il nuovo Framework è collegato.   In altri casi vengono usati per organizzare le funzionalità in una classe in base alla funzionalità.   Sono simili ai metodi di C# estensione.
 
 Questa è l'aspetto di una categoria in Objective-C:
 
@@ -268,9 +268,9 @@ Questa è l'aspetto di una categoria in Objective-C:
 
 L'esempio precedente si trova in una libreria che estende le istanze di `UIView` con il metodo `makeBackgroundRed`.
 
-Per associarle, è possibile usare l' [`[Category]`](#CategoryAttribute) attributo in una definizione di interfaccia.   Quando si usa [`[Category]`](#CategoryAttribute) l'attributo, il significato [`[BaseType]`](#BaseTypeAttribute) dell'attributo viene modificato da usato per specificare la classe base da estendere, in modo da essere il tipo da estendere.
+Per associarle, è possibile usare l'attributo [`[Category]`](#CategoryAttribute) in una definizione di interfaccia.   Quando si usa l'attributo [`[Category]`](#CategoryAttribute) , il significato dell'attributo [`[BaseType]`](#BaseTypeAttribute) cambia rispetto a quello usato per specificare la classe di base da estendere, in modo che sia il tipo da estendere.
 
-Di seguito viene illustrato il `UIView` modo in cui le estensioni vengono C# associate e trasformate in metodi di estensione:
+Di seguito viene illustrato il modo in cui le estensioni `UIView` vengono C# associate e convertite in metodi di estensione:
 
 ```csharp
 [BaseType (typeof (UIView))]
@@ -281,7 +281,7 @@ interface MyUIViewExtension {
 }
 ```
 
-Il codice precedente creerà una `MyUIViewExtension` classe che contiene il `MakeBackgroundRed` metodo di estensione.   Ciò significa che è ora possibile chiamare `MakeBackgroundRed` su qualsiasi `UIView` sottoclasse, offrendo la stessa funzionalità che si otterrebbe in Objective-C.
+In precedenza viene creato un `MyUIViewExtension` una classe che contiene il metodo di estensione `MakeBackgroundRed`.   Ciò significa che è ora possibile chiamare `MakeBackgroundRed` su qualsiasi sottoclasse `UIView`, offrendo la stessa funzionalità che si otterrebbe in Objective-C.
 
 In alcuni casi, si troveranno membri **statici** all'interno di categorie come nell'esempio seguente:
 
@@ -305,7 +305,7 @@ interface FooObject_Extensions {
 }
 ```
 
-Questa operazione non è corretta perché per `BoolMethod` utilizzare l'estensione è necessaria un' `FooObject` istanza di ma si sta associando un'estensione **statica** objc, questo è un effetto collaterale del fatto C# che vengono implementati i metodi di estensione.
+Questa operazione non è corretta perché per utilizzare l'estensione `BoolMethod` è necessaria un'istanza di `FooObject` ma si sta associando un'estensione **statica** objc, questo è un effetto collaterale del fatto C# che vengono implementati i metodi di estensione.
 
 L'unico modo per utilizzare le definizioni precedenti è il seguente codice Ugly:
 
@@ -313,7 +313,7 @@ L'unico modo per utilizzare le definizioni precedenti è il seguente codice Ugly
 (null as FooObject).BoolMethod (range);
 ```
 
-Il suggerimento per evitare questo problema consiste nell'incorporare `BoolMethod` la definizione all' `FooObject` interno della definizione di interfaccia stessa, in modo da poter chiamare questa estensione come previsto `FooObject.BoolMethod (range)`.
+Il suggerimento per evitare questo problema consiste nell'incorporare la definizione `BoolMethod` all'interno della definizione dell'interfaccia `FooObject` stessa, in modo da poter chiamare questa estensione come previsto `FooObject.BoolMethod (range)`.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -325,15 +325,15 @@ interface FooObject {
 }
 ```
 
-Viene emesso un avviso (BI1117) ogni volta che viene trovato [`[Static]`](#StaticAttribute) un membro all' [`[Category]`](#CategoryAttribute) interno di una definizione. Se si desidera effettivamente includere [`[Static]`](#StaticAttribute) membri [`[Category]`](#CategoryAttribute) all'interno delle definizioni, è possibile disattivare l'avviso utilizzando `[Category (allowStaticMembers: true)]` o decorando la definizione dell' [`[Category]`](#CategoryAttribute) interfaccia o del membro [`[Internal]`](#InternalAttribute)con.
+Ogni volta che viene individuato un [`[Static]`](#StaticAttribute) membro all'interno di una definizione di [`[Category]`](#CategoryAttribute) , verrà emesso un avviso (BI1117). Se si vuole avere [`[Static]`](#StaticAttribute) membri all'interno delle definizioni di [`[Category]`](#CategoryAttribute) , è possibile disattivare l'avviso usando `[Category (allowStaticMembers: true)]` o decorando la definizione dell'interfaccia membro o [`[Category]`](#CategoryAttribute) con [`[Internal]`](#InternalAttribute).
 
 <a name="StaticAttribute_Class" />
 
 ### <a name="staticattribute"></a>StaticAttribute
 
-Quando questo attributo viene applicato a una classe, viene semplicemente generata una classe statica, una che non deriva da `NSObject`, quindi l' [`[BaseType]`](#BaseTypeAttribute) attributo viene ignorato. Le classi statiche vengono utilizzate per ospitare le variabili pubbliche C che si desidera esporre.
+Quando questo attributo viene applicato a una classe, viene semplicemente generata una classe statica, una che non deriva da `NSObject`, quindi l'attributo [`[BaseType]`](#BaseTypeAttribute) viene ignorato. Le classi statiche vengono utilizzate per ospitare le variabili pubbliche C che si desidera esporre.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 [Static]
@@ -356,15 +356,15 @@ I modelli vengono in genere utilizzati dall'implementazione del protocollo.
 Si differenziano per il fatto che il runtime registrerà solo con Objective-C i metodi che sono stati effettivamente sovrascritti.
 In caso contrario, il metodo non verrà registrato.
 
-In generale `ModelAttribute`, quando si crea una sottoclasse di una classe contrassegnata con, non è necessario chiamare il metodo di base.   La chiamata a tale metodo genererà un'eccezione. si presuppone che si debba implementare l'intero comportamento sulla sottoclasse per tutti i metodi di cui si esegue l'override.
+In generale, quando si crea una sottoclasse di una classe contrassegnata con l'`ModelAttribute`, non è necessario chiamare il metodo di base.   La chiamata a tale metodo genererà un'eccezione. si presuppone che si debba implementare l'intero comportamento sulla sottoclasse per tutti i metodi di cui si esegue l'override.
 
 <a name="AbstractAttribute" />
 
 ### <a name="abstractattribute"></a>AbstractAttribute
 
-Per impostazione predefinita, i membri che fanno parte di un protocollo non sono obbligatori. Ciò consente agli utenti di creare una sottoclasse `Model` dell'oggetto semplicemente derivando dalla classe in C# ed eseguendo l'override solo dei metodi a cui si è interessati. In alcuni casi il contratto Objective-C richiede che l'utente fornisca un'implementazione per questo metodo (quelli contrassegnati con la `@required` direttiva in Objective-c). In questi casi, è necessario contrassegnare tali metodi con `[Abstract]` l'attributo.
+Per impostazione predefinita, i membri che fanno parte di un protocollo non sono obbligatori. Ciò consente agli utenti di creare una sottoclasse dell'oggetto `Model` semplicemente derivando dalla classe in C# ed eseguendo l'override solo dei metodi a cui si è interessati. A volte il contratto Objective-C richiede che l'utente fornisca un'implementazione per questo metodo (questi vengono contrassegnati con la direttiva `@required` in Objective-C). In questi casi, è necessario contrassegnare tali metodi con l'attributo `[Abstract]`.
 
-L' `[Abstract]` attributo può essere applicato a metodi o proprietà e fa in modo che il generatore contrassegni il membro generato come astratto e che la classe sia una classe astratta.
+L'attributo `[Abstract]` può essere applicato ai metodi o alle proprietà e fa in modo che il generatore contrassegni il membro generato come astratto e che la classe sia una classe astratta.
 
 Il codice seguente è tratto da Novell. iOS:
 
@@ -393,7 +393,7 @@ public class DefaultValueAttribute : Attribute {
 }
 ```
 
-Ad esempio, nella classe delegata immaginaria seguente per una `Camera` classe, viene fornito un `ShouldUploadToServer` oggetto che verrebbe esposto `Camera` come una proprietà nella classe. Se l'utente della `Camera` classe non imposta in modo esplicito il valore su un'espressione lambda che può rispondere true o false, il valore predefinito restituito in questo caso sarebbe false, ovvero il valore specificato `DefaultValue` nell'attributo:
+Ad esempio, nella classe delegata immaginaria seguente per una classe `Camera`, viene fornito un `ShouldUploadToServer` che verrebbe esposto come una proprietà nella classe `Camera`. Se l'utente della classe `Camera` non imposta in modo esplicito il valore su un'espressione lambda che può rispondere true o false, il valore predefinito restituito in questo caso sarebbe false, il valore specificato nell'attributo `DefaultValue` :
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -411,7 +411,7 @@ var camera = new Camera ();
 camera.ShouldUploadToServer = (camera, action) => return SomeDecision ();
 ```
 
-Vedere anche: [`[NoDefaultValue]`.](#NoDefaultValueAttribute) [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)
+Vedere anche: [`[NoDefaultValue]`](#NoDefaultValueAttribute), [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute).
 
 <a name="DefaultValueFromArgumentAttribute" />
 
@@ -439,9 +439,9 @@ public interface NSAnimationDelegate {
 }
 ```
 
-Nel caso precedente, se l'utente della `NSAnimation` classe ha scelto di usare uno degli C# eventi o delle proprietà e non è stato impostato `NSAnimation.ComputeAnimationCurve` su un metodo o un'espressione lambda, il valore restituito sarà il valore passato nel parametro progress.
+Nel caso precedente, se l'utente della classe `NSAnimation` ha scelto di usare uno degli C# eventi o delle proprietà e non ha impostato`NSAnimation.ComputeAnimationCurve`su un metodo o un'espressione lambda, il valore restituito sarà il valore passato nel parametro progress.
 
-Vedere anche: [`[NoDefaultValue]`](#NoDefaultValueAttribute),[`[DefaultValue]`](#DefaultValueAttribute)
+Vedere anche: [`[NoDefaultValue]`](#NoDefaultValueAttribute), [`[DefaultValue]`](#DefaultValueAttribute)
 
 ### <a name="ignoredindelegateattribute"></a>IgnoredInDelegateAttribute
 
@@ -507,9 +507,9 @@ public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 
 ### <a name="eventargsattribute"></a>EventArgsAttribute
 
-Per gli eventi che accettano più parametri (in Objective-C la convenzione è che il primo parametro in una classe delegata è l'istanza dell'oggetto mittente), è necessario specificare il nome desiderato per la classe EventArgs generata. Questa operazione viene eseguita con `[EventArgs]` l'attributo nella Dichiarazione `Model` di metodo nella classe.
+Per gli eventi che accettano più parametri (in Objective-C la convenzione è che il primo parametro in una classe delegata è l'istanza dell'oggetto mittente), è necessario specificare il nome desiderato per la classe EventArgs generata. Questa operazione viene eseguita con l'attributo `[EventArgs]` nella dichiarazione di metodo nella classe `Model`.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -520,7 +520,7 @@ public interface UIImagePickerControllerDelegate {
 }
 ```
 
-La dichiarazione precedente genera una `UIImagePickerImagePickedEventArgs` classe che deriva da EventArgs e comprime entrambi i `UIImage` parametri, e `NSDictionary`. Il generatore produce quanto segue:
+La dichiarazione precedente genera una classe `UIImagePickerImagePickedEventArgs` che deriva da EventArgs e comprime entrambi i parametri, `UIImage` e `NSDictionary`. Il generatore produce quanto segue:
 
 ```csharp
 public partial class UIImagePickerImagePickedEventArgs : EventArgs {
@@ -530,7 +530,7 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 }
 ```
 
-Espone quindi quanto segue nella `UIImagePickerController` classe:
+Espone quindi quanto segue nella classe `UIImagePickerController`:
 
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
@@ -540,14 +540,14 @@ public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImag
 
 Questo attributo viene usato per consentire al generatore di modificare il nome di un evento o di una proprietà generata nella classe. A volte è utile quando il nome del metodo della classe del modello ha senso per la classe del modello, ma potrebbe sembrare strano nella classe di origine come un evento o una proprietà.
 
-Ad esempio, `UIWebView` usa il bit seguente `UIWebViewDelegate`di:
+Ad esempio, il `UIWebView` utilizza il bit seguente dalla `UIWebViewDelegate`:
 
 ```csharp
 [Export ("webViewDidFinishLoad:"), EventArgs ("UIWebView"), EventName ("LoadFinished")]
 void LoadingFinished (UIWebView webView);
 ```
 
-Il sopra esposto `LoadingFinished` viene esposto come metodo `UIWebViewDelegate`in, ma `LoadFinished` come evento da associare a in un `UIWebView`:
+Il precedente espone `LoadingFinished` come metodo nel `UIWebViewDelegate`, ma `LoadFinished` come l'evento di cui eseguire l'hook in una `UIWebView`:
 
 ```csharp
 var webView = new UIWebView (...);
@@ -558,7 +558,7 @@ webView.LoadFinished += delegate { Console.WriteLine ("done!"); }
 
 ### <a name="modelattribute"></a>ModelAttribute
 
-Quando si applica l' `[Model]` attributo a una definizione di tipo nell'API del contratto, il runtime genera codice speciale che rileverà solo le chiamate ai metodi nella classe se l'utente ha sovrascritto un metodo nella classe. Questo attributo viene in genere applicato a tutte le API che esegue il wrapping di una classe delegata Objective-C.
+Quando si applica l'attributo `[Model]` a una definizione di tipo nell'API del contratto, il runtime genera codice speciale che rileverà solo le chiamate ai metodi nella classe se l'utente ha sovrascritto un metodo nella classe. Questo attributo viene in genere applicato a tutte le API che esegue il wrapping di una classe delegata Objective-C.
 
 <a name="NoDefaultValueAttribute" />
 
@@ -566,7 +566,7 @@ Quando si applica l' `[Model]` attributo a una definizione di tipo nell'API del 
 
 Specifica che il metodo sul modello non fornisce un valore restituito predefinito.
 
-Funziona con il runtime di Objective-c rispondendo `false` alla richiesta di runtime Objective-c per determinare se il selettore specificato è implementato in questa classe.
+Funziona con il runtime di Objective-C rispondendo `false` alla richiesta di runtime Objective-C per determinare se il selettore specificato è implementato in questa classe.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -577,7 +577,7 @@ interface CameraDelegate {
 }
 ```
 
-Vedere anche: [`[DefaultValue]`](#DefaultValueAttribute),[`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
+Vedere anche: [`[DefaultValue]`](#DefaultValueAttribute), [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
 
 <a name="ProtocolAttribute" />
 
@@ -585,7 +585,7 @@ Vedere anche: [`[DefaultValue]`](#DefaultValueAttribute),[`[DefaultValueFromArgu
 
 Il concetto di protocollo Objective-C non esiste realmente in C#. I protocolli sono simili C# alle interfacce, ma si differenziano per il fatto che non tutti i metodi e le proprietà dichiarati in un protocollo devono essere implementati dalla classe che la adotta. Alcuni metodi e proprietà, invece, sono facoltativi.
 
-Alcuni protocolli vengono in genere usati come classi di modelli, che devono essere associati [`[Model]`](#ModelAttribute) usando l'attributo.
+Alcuni protocolli vengono in genere usati come classi di modelli, che devono essere associati usando l'attributo [`[Model]`](#ModelAttribute) .
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -602,7 +602,7 @@ interface MyProtocol {
 }
 ```
 
-A partire da Novell. iOS 7,0 è stata incorporata una nuova e migliorata funzionalità di associazione del protocollo.  Tutte le definizioni che contengono `[Protocol]` l'attributo genereranno tre classi di supporto che migliorano notevolmente il modo in cui si utilizzano i protocolli:
+A partire da Novell. iOS 7,0 è stata incorporata una nuova e migliorata funzionalità di associazione del protocollo.  Tutte le definizioni che contengono l'attributo `[Protocol]` genereranno tre classi di supporto che migliorano notevolmente il modo in cui si utilizzano i protocolli:
 
 ```csharp
 // Full method implementation, contains all methods
@@ -657,7 +657,7 @@ interface MyTool {
 }
 ```
 
-Il valore precedente è necessario perché in fase di `IMyProtocol` associazione non esiste, per questo motivo è necessario fornire un'interfaccia vuota.
+Il valore precedente è necessario perché in fase di binding il `IMyProtocol` non esiste, per questo motivo è necessario fornire un'interfaccia vuota.
 
 ### <a name="adopting-protocol-generated-interfaces"></a>Adozione di interfacce generate dal protocollo
 
@@ -686,7 +686,7 @@ Non è importante se l'interfaccia viene implementata in modo implicito o esplic
 
 ### <a name="protocol-inlining"></a>Incorporamento del protocollo
 
-Quando si associano i tipi Objective-C esistenti che sono stati dichiarati come adozione di un protocollo, è necessario inline direttamente il protocollo. A tale scopo, è sufficiente dichiarare il protocollo come interfaccia senza alcun [`[BaseType]`](#BaseTypeAttribute) attributo ed elencare il protocollo nell'elenco delle interfacce di base per l'interfaccia.
+Quando si associano i tipi Objective-C esistenti che sono stati dichiarati come adozione di un protocollo, è necessario inline direttamente il protocollo. A tale scopo, è sufficiente dichiarare il protocollo come interfaccia senza [`[BaseType]`](#BaseTypeAttribute) attributo ed elencare il protocollo nell'elenco delle interfacce di base per l'interfaccia.
 
 Esempio:
 
@@ -709,7 +709,7 @@ Gli attributi in questa sezione vengono applicati a singoli membri di un tipo: p
 
 ### <a name="alignattribute"></a>AlignAttribute
 
-Utilizzato per specificare il valore di allineamento per i tipi restituiti della proprietà. Determinate proprietà accettano puntatori a indirizzi che devono essere allineati a determinati limiti (in Novell. iOS questo accade ad esempio `GLKBaseEffect` con alcune proprietà che devono essere allineate a 16 byte). È possibile usare questa proprietà per decorare il getter e usare il valore di allineamento. Viene in genere utilizzato con i `OpenTK.Vector4` tipi `OpenTK.Matrix4` e quando si integrano con le API Objective-C.
+Utilizzato per specificare il valore di allineamento per i tipi restituiti della proprietà. Determinate proprietà accettano puntatori a indirizzi che devono essere allineati a determinati limiti (in Novell. iOS questo accade ad esempio con alcune proprietà `GLKBaseEffect` che devono essere allineate a 16 byte). È possibile usare questa proprietà per decorare il getter e usare il valore di allineamento. Questa operazione viene in genere utilizzata con i tipi di `OpenTK.Vector4` e `OpenTK.Matrix4` quando si integrano con le API Objective-C.
 
 Esempio:
 
@@ -722,9 +722,9 @@ public interface GLKBaseEffect {
 
 ### <a name="appearanceattribute"></a>AppearanceAttribute
 
-L' `[Appearance]` attributo è limitato a iOS 5, in cui è stato introdotto il gestore di aspetto.
+L'attributo `[Appearance]` è limitato a iOS 5, dove è stato introdotto il gestore di aspetto.
 
-L' `[Appearance]` attributo può essere applicato a qualsiasi metodo o proprietà che partecipa `UIAppearance` al Framework. Quando questo attributo viene applicato a un metodo o a una proprietà in una classe, il generatore di associazione viene indirizzato per creare una classe di aspetto fortemente tipizzata utilizzata per applicare uno stile a tutte le istanze di questa classe o le istanze che corrispondono a determinati criteri.
+L'attributo `[Appearance]` può essere applicato a qualsiasi metodo o proprietà che partecipano al Framework di `UIAppearance`. Quando questo attributo viene applicato a un metodo o a una proprietà in una classe, il generatore di associazione viene indirizzato per creare una classe di aspetto fortemente tipizzata utilizzata per applicare uno stile a tutte le istanze di questa classe o le istanze che corrispondono a determinati criteri.
 
 Esempio:
 
@@ -757,23 +757,23 @@ public partial class UIToolbar {
 
 ### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (Novell. iOS 5,4)
 
-Usare i `[AutoReleaseAttribute]` metodi e le proprietà per eseguire il wrapping della chiamata del metodo al metodo in `NSAutoReleasePool`un oggetto.
+Usare il `[AutoReleaseAttribute]` su metodi e proprietà per eseguire il wrapping della chiamata al metodo in un `NSAutoReleasePool`.
 
-In Objective-C sono disponibili alcuni metodi che restituiscono valori che vengono aggiunti all'impostazione `NSAutoReleasePool`predefinita. Per impostazione predefinita, vengono indirizzati al thread `NSAutoReleasePool`, ma poiché Novell. iOS mantiene anche un riferimento agli oggetti fino a quando l'oggetto gestito si trova, potrebbe non essere necessario mantenere un riferimento aggiuntivo `NSAutoReleasePool` in che verrà svuotato solo fino al thread Restituisce il controllo al thread successivo oppure si torna al ciclo principale.
+In Objective-C sono disponibili alcuni metodi che restituiscono valori aggiunti al `NSAutoReleasePool`predefinito. Per impostazione predefinita, questi passeranno al thread `NSAutoReleasePool`, ma poiché Novell. iOS mantiene anche un riferimento agli oggetti fino a quando l'oggetto gestito si trova, potrebbe non essere necessario mantenere un riferimento aggiuntivo nel `NSAutoReleasePool` che verrà svuotato solo finché il thread non restituisce controllare al thread successivo oppure tornare al ciclo principale.
 
-Questo attributo viene applicato ad esempio in proprietà complesse, ad esempio `UIImage.FromFile`, che restituisce gli oggetti che sono stati aggiunti al valore `NSAutoReleasePool`predefinito. Senza questo attributo, le immagini vengono conservate fino a quando il thread non ha restituito il controllo al ciclo principale. UF il thread era un tipo di Downloader in background che è sempre attivo e in attesa di lavoro, le immagini non vengono mai rilasciate.
+Questo attributo viene applicato ad esempio in proprietà complesse, ad esempio `UIImage.FromFile`, che restituisce gli oggetti che sono stati aggiunti al `NSAutoReleasePool`predefinito. Senza questo attributo, le immagini vengono conservate fino a quando il thread non ha restituito il controllo al ciclo principale. UF il thread era un tipo di Downloader in background che è sempre attivo e in attesa di lavoro, le immagini non vengono mai rilasciate.
 
 ### <a name="forcedtypeattribute"></a>ForcedTypeAttribute
 
-`[ForcedTypeAttribute]` Viene utilizzato per imporre la creazione di un tipo gestito anche se l'oggetto non gestito restituito non corrisponde al tipo descritto nella definizione dell'associazione.
+Il `[ForcedTypeAttribute]` viene utilizzato per imporre la creazione di un tipo gestito anche se l'oggetto non gestito restituito non corrisponde al tipo descritto nella definizione di binding.
 
 Questa operazione è utile quando il tipo descritto in un'intestazione non corrisponde al tipo restituito del metodo nativo. ad esempio, adottare la definizione Objective-C seguente da `NSURLSession`:
 
 `- (NSURLSessionDownloadTask *)downloadTaskWithRequest:(NSURLRequest *)request`
 
-Indica `NSURLSessionDownloadTask` chiaramente che verrà restituita un'istanza, ma che **restituisce** `NSURLSessionTask`, ovvero una superclasse e pertanto non convertibile in. `NSURLSessionDownloadTask` Poiché si trova in un contesto indipendente dai tipi, `InvalidCastException` si verificherà un errore.
+Indica chiaramente che verrà restituita un'istanza di `NSURLSessionDownloadTask`, ma **restituisce** comunque una `NSURLSessionTask`, ovvero una superclasse e pertanto non convertibile in `NSURLSessionDownloadTask`. Poiché si trova in un contesto indipendente dai tipi, si verificherà un `InvalidCastException`.
 
-Per conformarsi alla descrizione dell'intestazione ed evitare `InvalidCastException` `[ForcedTypeAttribute]` , viene utilizzato.
+Per conformarsi alla descrizione dell'intestazione ed evitare la `InvalidCastException`, viene usato il `[ForcedTypeAttribute]`.
 
 ```csharp
 [BaseType (typeof (NSObject), Name="NSURLSession")]
@@ -785,19 +785,19 @@ interface NSUrlSession {
 }
 ```
 
-Accetta inoltre un valore booleano denominato `Owns` che è `false` per impostazione `[ForcedType (owns: true)]`predefinita. `[ForcedTypeAttribute]` Il parametro proprietario viene usato per seguire i [criteri di proprietà](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html) per gli oggetti **Core Foundation** .
+Il `[ForcedTypeAttribute]` accetta anche un valore booleano denominato `Owns` `false` per impostazione predefinita `[ForcedType (owns: true)]`. Il parametro proprietario viene usato per seguire i [criteri di proprietà](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html) per gli oggetti **Core Foundation** .
 
-`[ForcedTypeAttribute]` È valido solo per parametri, proprietà e valore restituito.
+Il `[ForcedTypeAttribute]` è valido solo per parametri, proprietà e valore restituito.
 
 <a name="BindAsAttribute" />
 
 ### <a name="bindasattribute"></a>BindAsAttribute
 
-`[BindAsAttribute]` Consente `NSNumber`di C# associare e (`NSString`enumerazioni) a tipi più accurati. `NSValue` L'attributo può essere usato per creare un'API .NET migliore, più accurata sull'API nativa.
+Il `[BindAsAttribute]` consente l'associazione di `NSNumber`, `NSValue` e `NSString`(enumerazioni) a C# tipi più accurati. L'attributo può essere usato per creare un'API .NET migliore, più accurata sull'API nativa.
 
-È possibile decorare i metodi (in valore restituito), i parametri e `BindAs`le proprietà con. L'unica restrizione è che il membro **non deve** trovarsi `[Protocol]` all' [`[Model]`](#ModelAttribute) interno di un'interfaccia o.
+È possibile decorare i metodi (in valore restituito), i parametri e le proprietà con `BindAs`. L'unica restrizione è che il membro **non deve** trovarsi all'interno di un'interfaccia `[Protocol]` o [`[Model]`](#ModelAttribute) .
 
-Ad esempio:
+Esempio:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -812,7 +812,7 @@ Output:
 bool? ShouldDraw (CGRect rect) { ... }
 ```
 
-Internamente si eseguiranno `bool?` le `NSNumber` `CGRect`  <->  conversioni e`NSValue` .  <-> 
+Internamente si eseguirà il `bool?` <-> `NSNumber` e `CGRect`le conversioni <-> `NSValue`.
 
 I tipi di incapsulamento supportati correnti sono:
 
@@ -822,7 +822,7 @@ I tipi di incapsulamento supportati correnti sono:
 
 #### <a name="nsvalue"></a>NSValue
 
-I tipi C# di dati seguenti sono supportati per l'incapsulamento da `NSValue`/in:
+I tipi C# di dati seguenti sono supportati per essere incapsulati da/in`NSValue`:
 
 * CGAffineTransform
 * NSRange
@@ -844,12 +844,12 @@ I tipi C# di dati seguenti sono supportati per l'incapsulamento da `NSValue`/in:
 
 #### <a name="nsnumber"></a>NSNumber
 
-I tipi C# di dati seguenti sono supportati per l'incapsulamento da `NSNumber`/in:
+I tipi C# di dati seguenti sono supportati per essere incapsulati da/in`NSNumber`:
 
 * bool
 * byte
-* Double
-* float
+* doppio
+* mobile
 * short
 * int
 * long
@@ -864,7 +864,7 @@ I tipi C# di dati seguenti sono supportati per l'incapsulamento da `NSNumber`/in
 
 #### <a name="nsstring"></a>NSString
 
-[`[BindAs]`](#BindAsAttribute)funziona in conjuntion con [enumerazioni supportate da una costante NSString](#enum-attributes) in modo da poter creare un'API .NET migliore, ad esempio:
+[`[BindAs]`](#BindAsAttribute) funziona in conjuntion con [enumerazioni supportate da una costante NSString](#enum-attributes) , in modo da poter creare un'API .NET migliore, ad esempio:
 
 ```csharp
 [BindAs (typeof (CAScroll))]
@@ -879,11 +879,11 @@ Output:
 CAScroll SupportedScrollMode { get; set; }
 ```
 
-La `enum`  <->  [`[BindAs]`conversioneverrà](#BindAsAttribute) gestita solo se il tipo enum fornito a è [supportato da una costante NSString.](#enum-attributes) `NSString`
+Si gestirà il `enum` <-> `NSString` conversione solo se il tipo di enumerazione fornito per [`[BindAs]`](#BindAsAttribute) è [supportato da una costante NSString](#enum-attributes).
 
-#### <a name="arrays"></a>Matrici
+#### <a name="arrays"></a>Array
 
-[`[BindAs]`](#BindAsAttribute)supporta anche matrici di qualsiasi tipo supportato, è possibile avere la definizione API seguente come esempio:
+[`[BindAs]`](#BindAsAttribute) supporta anche matrici di qualsiasi tipo supportato, è possibile avere la definizione API seguente come esempio:
 
 ```csharp
 [return: BindAs (typeof (CAScroll []))]
@@ -898,17 +898,17 @@ Output:
 CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 ```
 
-Il `rects` parametro verrà incapsulato in un `NSArray` oggetto che contiene `NSValue` un oggetto `CGRect` per ogni e in return si otterrà una matrice `CAScroll?` di che è stata creata utilizzando i valori dell'oggetto `NSArray` restituito. oggetto `NSStrings`contenente.
+Il parametro `rects` verrà incapsulato in un `NSArray` contenente un `NSValue` per ogni `CGRect` e in restituzione si otterrà una matrice di `CAScroll?` che è stata creata utilizzando i valori del `NSArray` restituito contenente `NSStrings`.
 
 <a name="BindAttribute" />
 
 ### <a name="bindattribute"></a>BindAttribute
 
-L' `[Bind]` attributo ha due usi uno se applicato a una dichiarazione di metodo o di proprietà e un altro quando viene applicato al Getter o al setter singolo in una proprietà.
+L'attributo `[Bind]` ha due usi uno quando viene applicato a una dichiarazione di proprietà o metodo e un altro quando viene applicato al Getter o al setter singolo in una proprietà.
 
-Quando viene usato per un metodo o una proprietà, l'effetto `[Bind]` dell'attributo è generare un metodo che richiama il selettore specificato. Tuttavia, il metodo generato risultante non è decorato [`[Export]`](#ExportAttribute) con l'attributo, il che significa che non può partecipare all'override del metodo. Viene in genere usato in combinazione con l' `[Target]` attributo per l'implementazione di metodi di estensione Objective-C.
+Quando viene usato per un metodo o una proprietà, l'effetto dell'attributo `[Bind]` è quello di generare un metodo che richiama il selettore specificato. Tuttavia, il metodo generato risultante non è decorato con l'attributo [`[Export]`](#ExportAttribute) , il che significa che non può partecipare all'override del metodo. Viene in genere usato in combinazione con l'attributo `[Target]` per l'implementazione di metodi di estensione Objective-C.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 public interface UIView {
@@ -917,10 +917,10 @@ public interface UIView {
 }
 ```
 
-Quando viene usato in un getter o un setter, `[Bind]` l'attributo viene usato per modificare i valori predefiniti dedotti dal generatore di codice durante la generazione dei nomi di selettori Objective-C getter e setter per una proprietà. Per impostazione predefinita, quando si contrassegna una proprietà con `fooBar`il nome, il generatore genera `fooBar` un'esportazione per il getter e `setFooBar:` per il setter. In alcuni casi, Objective-C non segue questa convenzione, in genere il nome del Getter viene `isFooBar`modificato in.
+Quando viene usato in un getter o un setter, l'attributo `[Bind]` viene usato per modificare i valori predefiniti dedotti dal generatore di codice durante la generazione dei nomi di selettore Objective-C getter e setter per una proprietà. Per impostazione predefinita, quando si contrassegna una proprietà con il nome `fooBar`, il generatore genera un'esportazione `fooBar` per il getter e `setFooBar:` per il setter. In alcuni casi, Objective-C non segue questa convenzione, in genere il nome del Getter viene modificato in modo da essere `isFooBar`.
 Usare questo attributo per informare il generatore di questo.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 // Default behavior
@@ -940,7 +940,7 @@ Disponibile solo in Novell. iOS 6,3 e versioni successive.
 
 Questo attributo può essere applicato ai metodi che accettano un gestore di completamento come ultimo argomento.
 
-È possibile utilizzare l' `[Async]` attributo nei metodi il cui ultimo argomento è un callback.  Quando si applica questa operazione a un metodo, il generatore di associazioni genererà una versione di tale metodo con `Async`il suffisso.  Se il callback non accetta parametri, il valore restituito sarà `Task`, se il callback accetta un parametro, il risultato sarà un oggetto. `Task<T>`
+È possibile usare l'attributo `[Async]` nei metodi il cui ultimo argomento è un callback.  Quando si applica questa operazione a un metodo, il generatore di associazioni genererà una versione di tale metodo con il suffisso `Async`.  Se il callback non accetta parametri, il valore restituito sarà un `Task`, se il callback accetta un parametro, il risultato sarà una `Task<T>`.
 
 ```csharp
 [Export ("upload:complete:")]
@@ -954,7 +954,7 @@ Il codice seguente genererà questo metodo asincrono:
 Task LoadFileAsync (string file);
 ```
 
-Se il callback accetta più parametri, è necessario impostare `ResultType` o `ResultTypeName` per specificare il nome desiderato del tipo generato che conterrà tutte le proprietà.
+Se il callback accetta più parametri, è necessario impostare il `ResultType` o `ResultTypeName` per specificare il nome desiderato del tipo generato che conterrà tutte le proprietà.
 
 ```csharp
 delegate void OnComplete (string [] files, nint byteCount);
@@ -964,13 +964,13 @@ delegate void OnComplete (string [] files, nint byteCount);
 void LoadFiles (string file, OnComplete complete)
 ```
 
-Il codice seguente genererà questo metodo asincrono, `FileLoading` dove contiene le proprietà per `files` accedere `byteCount`a e:
+Il codice seguente genererà questo metodo asincrono, dove `FileLoading` contiene proprietà per accedere sia `files` che `byteCount`:
 
 ```csharp
 Task<FileLoading> LoadFile (string file);
 ```
 
-Se l'ultimo parametro del callback è un oggetto `NSError`, il metodo generato `Async` verificherà se il valore non è null. in tal caso, il metodo asincrono generato imposterà l'eccezione dell'attività.
+Se l'ultimo parametro del callback è un `NSError`, il metodo `Async` generato verificherà se il valore non è null e, in tal caso, il metodo asincrono generato imposterà l'eccezione dell'attività.
 
 ```csharp
 [Export ("upload:onComplete:")]
@@ -984,17 +984,17 @@ Il codice precedente genera il seguente metodo asincrono:
 Task<string> UploadAsync (string file);
 ```
 
-In questo modo, l'attività risultante avrà l'eccezione impostata su un oggetto `NSErrorException` che esegue il wrapping dell' `NSError`oggetto risultante.
+In seguito a un errore, l'attività risultante avrà l'eccezione impostata su un `NSErrorException` che esegue il wrapping della `NSError`risultante.
 
-#### <a name="asyncattributeresulttype"></a>AsyncAttribute.ResultType
+#### <a name="asyncattributeresulttype"></a>AsyncAttribute. ResultType
 
-Utilizzare questa proprietà per specificare il valore per l'oggetto `Task` restituito.   Questo parametro accetta un tipo esistente, quindi deve essere definito in una delle definizioni API principali.
+Utilizzare questa proprietà per specificare il valore per l'oggetto restituito `Task`.   Questo parametro accetta un tipo esistente, quindi deve essere definito in una delle definizioni API principali.
 
 #### <a name="asyncattributeresulttypename"></a>AsyncAttribute.ResultTypeName
 
-Utilizzare questa proprietà per specificare il valore per l'oggetto `Task` restituito.   Questo parametro accetta il nome del tipo desiderato, il generatore produrrà una serie di proprietà, una per ogni parametro richiesto dal callback.
+Utilizzare questa proprietà per specificare il valore per l'oggetto restituito `Task`.   Questo parametro accetta il nome del tipo desiderato, il generatore produrrà una serie di proprietà, una per ogni parametro richiesto dal callback.
 
-#### <a name="asyncattributemethodname"></a>AsyncAttribute.MethodName
+#### <a name="asyncattributemethodname"></a>AsyncAttribute. MethodName
 
 Usare questa proprietà per personalizzare il nome dei metodi asincroni generati.   Per impostazione predefinita, viene usato il nome del metodo e viene aggiunto il testo "Async", che può essere usato per modificare questa impostazione predefinita.
 
@@ -1004,16 +1004,16 @@ Usare questa proprietà per personalizzare il nome dei metodi asincroni generati
 
 Quando questo attributo viene applicato a un costruttore, genererà lo stesso `[DesignatedInitializer]` nell'assembly della piattaforma finale. Questo consente all'IDE di indicare quale costruttore deve essere usato nelle sottoclassi.
 
-Questa operazione deve essere mappata all'uso di `__attribute__((objc_designated_initializer))`Objective-C/Clang.
+Questa operazione deve essere mappata all'uso di `__attribute__((objc_designated_initializer))`in Objective-C/Clang.
 
 <a name="DisableZeroCopyAttribute" />
 
 ### <a name="disablezerocopyattribute"></a>DisableZeroCopyAttribute
 
 Questo attributo viene applicato ai parametri stringa o alle proprietà di stringa e indica al generatore di codice di non utilizzare il marshalling della stringa di copia zero per questo parametro e di creare invece una nuova istanza C# di NSString dalla stringa.
-Questo attributo è necessario solo per le stringhe se si indica al generatore di usare il marshalling della stringa di copia zero `--zero-copy` usando l'opzione della riga di comando o impostando `ZeroCopyStringsAttribute`l'attributo a livello di assembly.
+Questo attributo è necessario solo per le stringhe se si indica al generatore di usare il marshalling di una stringa di copia zero usando l'opzione della riga di comando `--zero-copy` o impostando l'attributo a livello di assembly `ZeroCopyStringsAttribute`.
 
-Questa operazione è necessaria nei casi in cui la proprietà viene dichiarata in Objective- `retain` C `assign` come proprietà o anziché `copy` come proprietà. Si tratta in genere di librerie di terze parti che sono state ottimizzate in maniera non corretta dagli sviluppatori. In generale, `retain` le `assign` proprietà o `NSString` non sono `NSMutableString` corrette perché o le classi derivate dall'utente di `NSString` potrebbero modificare il contenuto delle stringhe senza conoscere il codice della libreria, suddividendo leggermente il applicazione. Questa situazione si verifica in genere a causa dell'ottimizzazione prematura.
+Questa operazione è necessaria nei casi in cui la proprietà viene dichiarata in Objective-C come proprietà `retain` o `assign` anziché come proprietà `copy`. Si tratta in genere di librerie di terze parti che sono state ottimizzate in maniera non corretta dagli sviluppatori. In generale, le proprietà `retain` o `assign` `NSString` non sono corrette perché le classi derivate da `NSMutableString` o dall'utente di `NSString` potrebbero modificare il contenuto delle stringhe senza conoscere il codice della libreria, suddividendo leggermente l'applicazione. Questa situazione si verifica in genere a causa dell'ottimizzazione prematura.
 
 Di seguito vengono illustrate due proprietà di questo tipo in Objective-C:
 
@@ -1026,11 +1026,11 @@ Di seguito vengono illustrate due proprietà di questo tipo in Objective-C:
 
 ### <a name="disposeattribute"></a>DisposeAttribute
 
-Quando si applica `[DisposeAttribute]` a una classe, si fornisce un frammento di codice che verrà aggiunto `Dispose()` all'implementazione del metodo della classe.
+Quando si applica il `[DisposeAttribute]` a una classe, viene fornito un frammento di codice che verrà aggiunto all'implementazione del metodo `Dispose()` della classe.
 
-Poiché il `Dispose` metodo viene generato automaticamente `bmac-native` dagli strumenti e `btouch-native` , è necessario usare l' `[Dispose]` attributo per inserire codice nell'implementazione del metodo generato `Dispose` .
+Poiché il metodo `Dispose` viene generato automaticamente dagli strumenti `bmac-native` e `btouch-native`, è necessario usare l'attributo `[Dispose]` per inserire codice nell'implementazione del metodo di `Dispose` generato.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1043,7 +1043,7 @@ interface DatabaseConnection {
 
 ### <a name="exportattribute"></a>ExportAttribute
 
-L' `[Export]` attributo viene utilizzato per contrassegnare un metodo o una proprietà da esporre al runtime di Objective-C. Questo attributo viene condiviso tra lo strumento di associazione e i runtime Novell. iOS e Novell. Mac effettivi. Per i metodi, il parametro viene passato Verbatim al codice generato, per le proprietà, vengono generate le esportazioni getter e setter in base alla dichiarazione di base (vedere la [`[BindAttribute]`](#BindAttribute) sezione in per informazioni su come modificare il comportamento dello strumento di associazione).
+L'attributo `[Export]` viene usato per contrassegnare un metodo o una proprietà da esporre al runtime di Objective-C. Questo attributo viene condiviso tra lo strumento di associazione e i runtime Novell. iOS e Novell. Mac effettivi. Per i metodi, il parametro viene passato Verbatim al codice generato, per le proprietà, vengono generate le esportazioni getter e setter in base alla dichiarazione di base. per informazioni su come modificare il comportamento dello strumento di associazione, vedere la sezione nella [`[BindAttribute]`](#BindAttribute) .
 
 Sintassi:
 
@@ -1064,7 +1064,7 @@ public class ExportAttribute : Attribute {
 
 Il [selettore](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html) rappresenta il nome del metodo o della proprietà Objective-C sottostante da associare.
 
-#### <a name="exportattributeargumentsemantic"></a>ExportAttribute.ArgumentSemantic
+#### <a name="exportattributeargumentsemantic"></a>ExportAttribute. ArgumentSemantic
 
 <a name="FieldAttribute" />
 
@@ -1083,7 +1083,7 @@ public class FieldAttribute : Attribute {
 }
 ```
 
-È `symbolName` il simbolo C con il quale eseguire il collegamento. Per impostazione predefinita, questo verrà caricato da una libreria il cui nome viene dedotto dallo spazio dei nomi in cui è definito il tipo. Se non si tratta della libreria in cui viene cercato il simbolo, è necessario passare il `libraryName` parametro. Se si sta collegando una libreria statica, usare `__Internal` `libraryName` come parametro.
+Il `symbolName` è il simbolo C con il quale eseguire il collegamento. Per impostazione predefinita, questo verrà caricato da una libreria il cui nome viene dedotto dallo spazio dei nomi in cui è definito il tipo. Se non si tratta della libreria in cui viene cercato il simbolo, è necessario passare il parametro `libraryName`. Se si sta collegando una libreria statica, usare `__Internal` come parametro di `libraryName`.
 
 Le proprietà generate sono sempre statiche.
 
@@ -1115,11 +1115,11 @@ interface CameraEffects {
 
 ### <a name="internalattribute"></a>InternalAttribute
 
-L' `[Internal]` attributo può essere applicato a metodi o proprietà e ha l'effetto di contrassegnare il codice generato con la `internal` C# parola chiave rendendo il codice accessibile solo al codice nell'assembly generato. Questa funzionalità viene in genere usata per nascondere API troppo basse o fornire un'API pubblica non ottimale che si vuole migliorare o per le API che non sono supportate dal generatore e richiedono una codifica manuale.
+L'attributo `[Internal]` può essere applicato a metodi o proprietà e ha l'effetto di contrassegnare il codice generato con la parola chiave C# `internal` rendendo il codice accessibile solo al codice nell'assembly generato. Questa funzionalità viene in genere usata per nascondere API troppo basse o fornire un'API pubblica non ottimale che si vuole migliorare o per le API che non sono supportate dal generatore e richiedono una codifica manuale.
 
 Quando si progetta l'associazione, in genere si nasconde il metodo o la proprietà utilizzando questo attributo e si specifica un nome diverso per il metodo o la proprietà, quindi C# nel file di supporto complementare si aggiunge un wrapper fortemente tipizzato che espone il funzionalità sottostante.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 [Internal]
@@ -1148,18 +1148,18 @@ public NSObject this [NSObject idx] {
 
 ### <a name="isthreadstaticattribute"></a>IsThreadStaticAttribute
 
-Questo attributo contrassegna il campo sottostante per una proprietà che deve essere annotata con l' `[ThreadStatic]` attributo .NET. Questa operazione è utile se il campo è una variabile thread-static.
+Questo attributo contrassegna il campo sottostante per una proprietà che deve essere annotata con l'attributo .NET `[ThreadStatic]`. Questa operazione è utile se il campo è una variabile thread-static.
 
 ### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Novell. iOS 6.0.6)
 
 Questo attributo renderà un metodo che supporta le eccezioni native (Objective-C).
-Invece di chiamare `objc_msgSend` direttamente, la chiamata passa attraverso un trampolino personalizzato che intercetta le eccezioni ObjectiveC e ne esegue il marshalling in eccezioni gestite.
+Anziché chiamare direttamente `objc_msgSend`, la chiamata passa attraverso un trampolino personalizzato che intercetta le eccezioni ObjectiveC e ne esegue il marshalling in eccezioni gestite.
 
-Attualmente sono supportate solo `objc_msgSend` alcune firme (è possibile scoprire se una firma non è supportata quando il collegamento nativo di un'app che usa l'associazione ha esito negativo con un simbolo monotouch_ *_objc_msgSend* mancante), ma è possibile aggiungere altro alla richiesta.
+Attualmente sono supportate solo alcune firme di `objc_msgSend` (si noterà se una firma non è supportata quando il collegamento nativo di un'app che usa l'associazione non riesce con un simbolo *_objc_msgSend* monotouch_ mancante), ma è possibile aggiungere altro alla richiesta.
 
 ### <a name="newattribute"></a>NewAttribute
 
-Questo attributo viene applicato ai metodi e alle proprietà affinché il generatore generi la `new` parola chiave davanti alla dichiarazione.
+Questo attributo viene applicato ai metodi e alle proprietà affinché il generatore generi la parola chiave `new` davanti alla dichiarazione.
 
 Viene usato per evitare gli avvisi del compilatore quando lo stesso nome di metodo o proprietà viene introdotto in una sottoclasse già esistente in una classe base.
 
@@ -1169,9 +1169,9 @@ Viene usato per evitare gli avvisi del compilatore quando lo stesso nome di meto
 
 È possibile applicare questo attributo ai campi affinché il generatore produca una classe di notifiche Helper fortemente tipizzata.
 
-Questo attributo può essere usato senza argomenti per le notifiche che non contengono payload oppure è possibile specificare un `System.Type` oggetto che fa riferimento a un'altra interfaccia nella definizione dell'API, in genere con il nome che termina con "EventArgs". Il generatore trasformerà l'interfaccia in una classe che sottoclassi `EventArgs` e includerà tutte le proprietà elencate. L' [`[Export]`](#ExportAttribute) attributo deve essere utilizzato `EventArgs` nella classe per elencare il nome della chiave utilizzata per cercare il dizionario Objective-C per recuperare il valore.
+Questo attributo può essere usato senza argomenti per le notifiche che non contengono payload oppure è possibile specificare un `System.Type` che fa riferimento a un'altra interfaccia nella definizione dell'API, in genere con il nome che termina con "EventArgs". Il generatore trasformerà l'interfaccia in una classe che `EventArgs` sottoclassi e includerà tutte le proprietà elencate. È necessario utilizzare l'attributo [`[Export]`](#ExportAttribute) nella classe `EventArgs` per elencare il nome della chiave utilizzata per cercare il dizionario Objective-C per recuperare il valore.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 interface MyClass {
@@ -1181,7 +1181,7 @@ interface MyClass {
 }
 ```
 
-Il codice precedente genererà una classe `MyClass.Notifications` annidata con i metodi seguenti:
+Il codice precedente genererà una classe annidata `MyClass.Notifications` con i metodi seguenti:
 
 ```csharp
 public class MyClass {
@@ -1201,7 +1201,7 @@ var token = MyClass.Notifications.ObserverDidStart ((notification) => {
 });
 ```
 
-O per impostare un oggetto specifico da osservare. Se si passa `null` a `objectToObserve` questo metodo, si comporterà esattamente come l'altro peer.
+O per impostare un oggetto specifico da osservare. Se si passa `null` a `objectToObserve` questo metodo si comporterà come l'altro peer.
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart (objectToObserve, (notification) => {
@@ -1215,7 +1215,7 @@ Il valore restituito da `ObserveDidStart` può essere usato per arrestare facilm
 token.Dispose ();
 ```
 
-In alternativa, è possibile chiamare [NSNotification. DefaultCenter. RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) e passare il token. Se la notifica contiene parametri, è necessario specificare un' `EventArgs` interfaccia di supporto simile alla seguente:
+In alternativa, è possibile chiamare [NSNotification. DefaultCenter. RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) e passare il token. Se la notifica contiene parametri, è necessario specificare un helper `EventArgs` interfaccia, come indicato di seguito:
 
 ```csharp
 interface MyClass {
@@ -1238,7 +1238,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-In precedenza viene generata una `MyScreenChangedEventArgs` classe con le `ScreenX` proprietà `ScreenY` e che recupereranno i dati dal dizionario [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) usando le chiavi `ScreenXKey` e `ScreenYKey` rispettivamente e applicando il conversioni corrette. L' `[ProbePresence]` attributo viene usato per il generatore per verificare se la chiave è impostata `UserInfo`in, anziché tentare di estrarre il valore. Viene usato nei casi in cui la presenza della chiave è il valore, in genere per i valori booleani.
+In precedenza viene generata una classe `MyScreenChangedEventArgs` con le proprietà `ScreenX` e `ScreenY` che recupereranno i dati dal dizionario [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) utilizzando le chiavi `ScreenXKey` e `ScreenYKey` rispettivamente e applicano le conversioni appropriate. L'attributo `[ProbePresence]` viene usato per il generatore per verificare se la chiave è impostata nel `UserInfo`, anziché tentare di estrarre il valore. Viene usato nei casi in cui la presenza della chiave è il valore, in genere per i valori booleani.
 
 In questo modo è possibile scrivere codice simile al seguente:
 
@@ -1248,11 +1248,11 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 });
 ```
 
-In alcuni casi, non esiste alcuna costante associata al valore passato nel dizionario.  Apple a volte usa costanti simboli pubbliche e talvolta usa costanti di stringa.  Per impostazione predefinita [`[Export]`](#ExportAttribute) , l'attributo nella `EventArgs` classe fornita utilizzerà il nome specificato come simbolo pubblico da cercare in fase di esecuzione.  In caso contrario, è preferibile eseguire la ricerca come costante di stringa, quindi passare il `ArgumentSemantic.Assign` valore all'attributo Export.
+In alcuni casi, non esiste alcuna costante associata al valore passato nel dizionario.  Apple a volte usa costanti simboli pubbliche e talvolta usa costanti di stringa.  Per impostazione predefinita, l'attributo [`[Export]`](#ExportAttribute) nella classe `EventArgs` fornita utilizzerà il nome specificato come simbolo pubblico da cercare in fase di esecuzione.  In caso contrario, è preferibile eseguire la ricerca come costante di stringa, quindi passare il valore `ArgumentSemantic.Assign` all'attributo Export.
 
 **Novità in Novell. iOS 8,4**
 
-In alcuni casi, le notifiche iniziano senza alcun argomento, pertanto l'uso [`[Notification]`](#NotificationAttribute) di senza argomenti è accettabile.  Tuttavia, a volte verranno introdotti i parametri della notifica.  Per supportare questo scenario, l'attributo può essere applicato più volte.
+In alcuni casi, le notifiche iniziano senza alcun argomento, pertanto l'uso di [`[Notification]`](#NotificationAttribute) senza argomenti è accettabile.  Tuttavia, a volte verranno introdotti i parametri della notifica.  Per supportare questo scenario, l'attributo può essere applicato più volte.
 
 Se si sta sviluppando un'associazione e si desidera evitare di interferire con il codice utente esistente, è possibile attivare una notifica esistente da:
 
@@ -1279,13 +1279,13 @@ interface MyClass {
 
 ### <a name="nullallowedattribute"></a>NullAllowedAttribute
 
-Quando viene applicato a una proprietà, la proprietà viene contrassegnata in modo da `null` consentire l'assegnazione del valore. Questa operazione è valida solo per i tipi di riferimento.
+Quando viene applicato a una proprietà, la proprietà viene contrassegnata in modo da consentire l'assegnazione del valore `null`. Questa operazione è valida solo per i tipi di riferimento.
 
-Quando viene applicato a un parametro in una firma del metodo, indica che il parametro specificato può essere null e che non deve essere eseguito alcun controllo per `null` il passaggio di valori.
+Quando viene applicato a un parametro in una firma del metodo, indica che il parametro specificato può essere null e che non deve essere eseguito alcun controllo per il passaggio dei valori `null`.
 
-Se il tipo di riferimento non dispone di questo attributo, lo strumento di associazione genererà un controllo del valore assegnato prima di passarlo a Objective-C e genererà un controllo che genererà `ArgumentNullException` un'operazione se il valore `null`assegnato è.
+Se il tipo di riferimento non dispone di questo attributo, lo strumento di associazione genererà un controllo del valore assegnato prima di passarlo a Objective-C e genererà un controllo che genererà un `ArgumentNullException` se il valore assegnato è `null`.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 // In properties
@@ -1301,7 +1301,7 @@ void SetImage ([NullAllowed] UIImage image, State forState);
 
 ### <a name="overrideattribute"></a>OverrideAttribute
 
-Utilizzare questo attributo per indicare al generatore di associazioni che l'associazione per questo particolare metodo deve essere contrassegnata con `override` una parola chiave.
+Utilizzare questo attributo per indicare al generatore di associazioni che l'associazione per questo particolare metodo deve essere contrassegnata con una parola chiave `override`.
 
 ### <a name="presnippetattribute"></a>PreSnippetAttribute
 
@@ -1350,7 +1350,7 @@ public interface NSOperation {
 }
 ```
 
-In questo caso, la `Dependencies` proprietà verrà richiamata dopo l'aggiunta o la rimozione `NSOperation` di dipendenze dall'oggetto, assicurando che sia presente un grafico che rappresenta gli oggetti caricati effettivi, impedendo le perdite di memoria e il danneggiamento della memoria.
+In questo caso, la proprietà `Dependencies` verrà richiamata dopo l'aggiunta o la rimozione di dipendenze dall'oggetto `NSOperation`, assicurando che sia presente un grafico che rappresenta gli oggetti caricati effettivi, impedendo le perdite di memoria e il danneggiamento della memoria.
 
 ### <a name="postsnippetattribute"></a>PostSnippetAttribute
 
@@ -1366,7 +1366,7 @@ void Demo ();
 
 ### <a name="proxyattribute"></a>ProxyAttribute
 
-Questo attributo viene applicato ai valori restituiti per contrassegnarli come oggetti proxy. Alcune API Objective-C restituiscono oggetti proxy che non possono essere distinti dalle associazioni utente. L'effetto di questo attributo consiste nel contrassegnare l'oggetto come un `DirectBinding` oggetto. Per uno scenario in Novell. Mac, è possibile vedere la [discussione su questo bug](https://bugzilla.novell.com/show_bug.cgi?id=670844).
+Questo attributo viene applicato ai valori restituiti per contrassegnarli come oggetti proxy. Alcune API Objective-C restituiscono oggetti proxy che non possono essere distinti dalle associazioni utente. L'effetto di questo attributo consiste nel contrassegnare l'oggetto come un oggetto `DirectBinding`. Per uno scenario in Novell. Mac, è possibile vedere la [discussione su questo bug](https://bugzilla.novell.com/show_bug.cgi?id=670844).
 
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
@@ -1380,7 +1380,7 @@ public class RetainListAttribute: Attribute {
 }
 ```
 
-Se il valore di `doAdd` è true, il parametro viene aggiunto `__mt_{0}_var List<NSObject>;`a. Dove `{0}` viene sostituito con l'oggetto `listName`specificato. È necessario dichiarare questo campo sottostante nella classe parziale complementare all'API.
+Se il valore di `doAdd` è true, il parametro viene aggiunto al `__mt_{0}_var List<NSObject>;`. Dove `{0}` viene sostituito con la `listName`specificata. È necessario dichiarare questo campo sottostante nella classe parziale complementare all'API.
 
 Per un esempio, vedere [Foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) e [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
@@ -1406,7 +1406,7 @@ Indica al generatore di contrassegnare il metodo generato come sealed. Se questo
 
 ### <a name="staticattribute"></a>StaticAttribute
 
-Quando l' `[Static]` attributo viene applicato a un metodo o a una proprietà, viene generato un metodo o una proprietà statica. Se questo attributo non viene specificato, il generatore produce un metodo di istanza o una proprietà.
+Quando l'attributo `[Static]` viene applicato a un metodo o a una proprietà, viene generato un metodo o una proprietà statica. Se questo attributo non viene specificato, il generatore produce un metodo di istanza o una proprietà.
 
 ### <a name="transientattribute"></a>TransientAttribute
 
@@ -1416,9 +1416,9 @@ Usare questo attributo per contrassegnare le proprietà i cui valori sono tempor
 
 ### <a name="wrapattribute"></a>WrapAttribute
 
-Nella progettazione delle associazioni Novell. iOS/Novell. Mac, l'attributo viene usato `[Wrap]` per eseguire il wrapping di un oggetto tipizzato in modo debole con un oggetto fortemente tipizzato. Questa operazione viene eseguita principalmente con gli oggetti delegati Objective-C, generalmente dichiarati `id` come `NSObject`di tipo o. La convenzione usata da Novell. iOS e Novell. Mac consiste nell'esporre tali delegati o origini dati come di `NSObject` tipo e vengono denominati usando la convenzione "vulnerabile" + il nome esposto. Una `id delegate` proprietà di Objective-C verrebbe esposta come una `NSObject WeakDelegate { get; set; }` proprietà nel file di contratto dell'API.
+Nella progettazione delle associazioni Novell. iOS/Novell. Mac, l'attributo `[Wrap]` viene usato per eseguire il wrapping di un oggetto tipizzato in modo debole con un oggetto fortemente tipizzato. Questa operazione viene eseguita principalmente con gli oggetti delegati Objective-C, generalmente dichiarati come di tipo `id` o `NSObject`. La convenzione usata da Novell. iOS e Novell. Mac consiste nell'esporre tali delegati o origini dati come di tipo `NSObject` e vengono denominati usando la convenzione "vulnerabile" + il nome esposto. Una proprietà `id delegate` da Objective-C verrebbe esposta come una proprietà `NSObject WeakDelegate { get; set; }` nel file di contratto dell'API.
 
-Tuttavia, in genere, il valore assegnato a questo delegato è di un tipo sicuro, quindi viene esposto il tipo forte e viene `[Wrap]` applicato l'attributo, ovvero gli utenti possono scegliere di usare i tipi deboli se hanno bisogno di un controllo accurato o se devono ricorrere a Tric di basso livello KS oppure è possibile usare la proprietà fortemente tipizzata per la maggior parte delle loro attività.
+Tuttavia, in genere, il valore assegnato a questo delegato è di un tipo sicuro, quindi viene esposto il tipo forte e viene applicato l'attributo `[Wrap]`, ovvero gli utenti possono scegliere di usare i tipi deboli se hanno bisogno di un controllo accurato o se devono ricorrere a trucchi di basso livello oppure possono utilizzare la proprietà fortemente tipizzata per la maggior parte delle operazioni.
 
 Esempio:
 
@@ -1454,7 +1454,7 @@ var demo = new Demo ();
 demo.WeakDelegate = new SomeObject ();
 ```
 
-Questo è il modo in cui l'utente utilizzerà la versione fortemente tipizzata. si noti che l'utente C#utilizza il sistema di tipi di e utilizza la parola chiave override per dichiarare il suo scopo e che non deve decorare manualmente il metodo `[Export]`con, dal momento che l'operazione è stata eseguita nell'associazione per l'utente:
+Questo è il modo in cui l'utente utilizzerà la versione fortemente tipizzata. si noti che l'utente C#utilizza il sistema di tipi di e utilizza la parola chiave override per dichiarare il suo scopo e non deve decorare manualmente il metodo con `[Export]`, dal momento che il lavoro è stato eseguito nell'associazione per l'utente:
 
 ```csharp
 // This is the strong case,
@@ -1466,7 +1466,7 @@ var strongDemo = new Demo ();
 demo.Delegate = new MyDelegate ();
 ```
 
-Un altro utilizzo dell' `[Wrap]` attributo consiste nel supportare la versione fortemente tipizzata dei metodi.  Ad esempio:
+Un altro utilizzo dell'attributo `[Wrap]` è quello di supportare una versione fortemente tipizzata dei metodi.  Esempio:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1479,14 +1479,14 @@ interface XyzPanel {
 }
 ```
 
-Quando l' `[Wrap]` attributo viene applicato a un metodo all'interno di un tipo decorato con un `[Category]` attributo, è `This` necessario includere come primo argomento perché è in corso la generazione di un metodo di estensione. Ad esempio:
+Quando l'attributo `[Wrap]` viene applicato a un metodo all'interno di un tipo decorato con un attributo `[Category]`, è necessario includere `This` come primo argomento perché è in corso la generazione di un metodo di estensione. Esempio:
 
 ```csharp
 [Wrap ("Write (This, image, options?.Dictionary, out error)")]
 bool Write (CIImage image, CIImageRepresentationOptions options, out NSError error);
 ```
 
-I membri generati da `[Wrap]` non `virtual` sono per impostazione predefinita, se è necessario `virtual` un membro che è possibile `true` impostare sul `isVirtual` parametro facoltativo.
+Per impostazione predefinita, i membri generati da `[Wrap]` non sono `virtual`, se è necessario un membro `virtual` è possibile impostare su `true` il parametro facoltativo `isVirtual`.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1499,7 +1499,7 @@ interface FooExplorer {
 }
 ```
 
-`[Wrap]`può anche essere usato direttamente nei metodi get e setter della proprietà.
+`[Wrap]` possono anche essere usati direttamente nei metodi get e setter della proprietà.
 In questo modo è possibile avere il controllo completo su di essi e modificare il codice in base alle esigenze.
 Si consideri, ad esempio, la definizione API seguente che usa le enumerazioni intelligenti:
 
@@ -1535,7 +1535,7 @@ PersonRelationship PresenceType {
 
 ## <a name="parameter-attributes"></a>Attributi di parametro
 
-In questa sezione vengono descritti gli attributi che è possibile applicare ai parametri in una definizione di metodo e l' `[NullAttribute]` oggetto applicabile a una proprietà nel suo complesso.
+In questa sezione vengono descritti gli attributi che è possibile applicare ai parametri nella definizione di un metodo, nonché la `[NullAttribute]` che si applica a una proprietà nel suo complesso.
 
 <a name="BlockCallback" />
 
@@ -1565,9 +1565,9 @@ typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
 
 Vedere anche: [BlockCallback](#BlockCallback).
 
-### <a name="params"></a>Params
+### <a name="params"></a>params
 
-È possibile usare l' `[Params]` attributo nell'ultimo parametro di matrice di una definizione di metodo per fare in modo che il generatore inserisca un "params" nella definizione.   Ciò consente al binding di consentire facilmente i parametri facoltativi.
+È possibile usare l'attributo `[Params]` sull'ultimo parametro di matrice di una definizione di metodo per fare in modo che il generatore inserisca un "params" nella definizione.   Ciò consente al binding di consentire facilmente i parametri facoltativi.
 
 Ad esempio, la definizione seguente:
 
@@ -1589,10 +1589,10 @@ Ciò offre il vantaggio aggiuntivo che non richiede agli utenti di creare una ma
 
 ### <a name="plainstring"></a>PlainString
 
-È possibile usare l' `[PlainString]` attributo davanti ai parametri di stringa per indicare al generatore di associazioni di passare la stringa come stringa C, anziché passare il parametro `NSString`come.
+È possibile usare l'attributo `[PlainString]` davanti ai parametri di stringa per indicare al generatore di associazioni di passare la stringa come stringa C, anziché passare il parametro come `NSString`.
 
-La maggior parte delle API Objective `NSString` -C usa parametri, ma alcune API espongono un' `char *` API per il passaggio di stringhe `NSString` anziché la variazione.
-Utilizzare `[PlainString]` in tali casi.
+La maggior parte delle API Objective-C utilizza `NSString` parametri, ma alcune API espongono un'API `char *` per il passaggio di stringhe, invece della variazione `NSString`.
+In questi casi, utilizzare `[PlainString]`.
 
 Ad esempio, le dichiarazioni Objective-C seguenti:
 
@@ -1613,7 +1613,7 @@ void LogMessage ([PlainString] string theText);
 
 ### <a name="retainattribute"></a>RetainAttribute
 
-Indica al generatore di memorizzare un riferimento al parametro specificato. Il generatore fornirà l'archivio di backup per questo campo oppure è possibile specificare un nome (il `WrapName`) in cui archiviare il valore. Questa operazione è utile per contenere un riferimento a un oggetto gestito che viene passato come parametro a Objective-C e quando si è certi che in Objective-C verrà mantenuta solo questa copia dell'oggetto. Ad esempio, un'API come `SetDisplay (SomeObject)` utilizzerebbe questo attributo, in quanto è probabile che la visualizzazione di un oggetto venga visualizzata solo un oggetto alla volta. Se è necessario tenere traccia di più di un oggetto (ad esempio, per un'API simile a uno stack) si userà l' `[RetainList]` attributo.
+Indica al generatore di memorizzare un riferimento al parametro specificato. Il generatore fornirà l'archivio di backup per questo campo oppure è possibile specificare un nome (il `WrapName`) in cui archiviare il valore. Questa operazione è utile per contenere un riferimento a un oggetto gestito che viene passato come parametro a Objective-C e quando si è certi che in Objective-C verrà mantenuta solo questa copia dell'oggetto. Ad esempio, un'API come `SetDisplay (SomeObject)` utilizzerebbe questo attributo poiché è probabile che la visualizzazione della visualizzazione di un oggetto alla volta. Se è necessario tenere traccia di più di un oggetto (ad esempio, per un'API simile a uno stack) si userà l'attributo `[RetainList]`.
 
 Sintassi:
 
@@ -1637,13 +1637,13 @@ public class RetainListAttribute: Attribute {
 }
 ```
 
-Se il valore di `doAdd` è true, il parametro viene aggiunto `__mt_{0}_var List<NSObject>`a. Dove `{0}` viene sostituito con l'oggetto `listName`specificato. È necessario dichiarare questo campo sottostante nella classe parziale complementare all'API.
+Se il valore di `doAdd` è true, il parametro viene aggiunto al `__mt_{0}_var List<NSObject>`. Dove `{0}` viene sostituito con la `listName`specificata. È necessario dichiarare questo campo sottostante nella classe parziale complementare all'API.
 
 Per un esempio, vedere [Foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) e [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
 ### <a name="transientattribute"></a>TransientAttribute
 
-Questo attributo viene applicato ai parametri e viene usato solo quando si esegue la transizione da Objective- C#C a.  Durante tali transizioni, i vari parametri Objective `NSObject` -C vengono racchiusi in una rappresentazione gestita dell'oggetto.
+Questo attributo viene applicato ai parametri e viene usato solo quando si esegue la transizione da Objective- C#C a.  Durante tali transizioni, i vari parametri di `NSObject` Objective-C vengono racchiusi in una rappresentazione gestita dell'oggetto.
 
 Il runtime accetta un riferimento all'oggetto nativo e mantiene il riferimento finché l'ultimo riferimento gestito all'oggetto non è più presente e il GC ha la possibilità di essere eseguito.
 
@@ -1696,10 +1696,10 @@ interface MyMutableString {
 
 ## <a name="enum-attributes"></a>Attributi enum
 
-Il `NSString` mapping delle costanti ai valori enum è un modo semplice per creare un'API .NET migliore. È
+Il mapping di `NSString` costanti ai valori enum è un modo semplice per creare un'API .NET migliore. È
 
 * consente al completamento del codice di essere più utile, mostrando **solo** i valori corretti per l'API;
-* aggiunge l'indipendenza dai tipi, non è `NSString` possibile usare un'altra costante in un contesto errato; e
+* aggiunge l'indipendenza dai tipi, non è possibile utilizzare un'altra `NSString` costante in un contesto errato; e
 * consente di nascondere alcune costanti, facendo in modo che il completamento del codice mostri un elenco di API più breve senza perdere la funzionalità.
 
 Esempio:
@@ -1719,7 +1719,7 @@ enum NSRunLoopMode {
 }
 ```
 
-Dalla definizione di associazione precedente il generatore creerà l'oggetto `enum` stesso e creerà anche un `*Extensions` tipo statico che include metodi di conversione bidirezionali tra i valori enum e le `NSString` costanti. Ciò significa che le costanti restano disponibili per gli sviluppatori anche se non fanno parte dell'API.
+Dalla definizione di associazione precedente il generatore creerà il `enum` stesso e creerà anche un tipo `*Extensions` statico che include metodi di conversione bidirezionali tra i valori enum e le costanti `NSString`. Ciò significa che le costanti restano disponibili per gli sviluppatori anche se non fanno parte dell'API.
 
 Esempi:
 
@@ -1746,7 +1746,7 @@ var x = (NSRunLoopMode) 99;
 Call (x.GetConstant ()); // NSDefaultRunLoopMode will be used
 ```
 
-Se nessun valore enum è decorato, `NotSupportedException` verrà generata un'eccezione.
+Se non è stato decorato alcun valore enum, verrà generata un'`NotSupportedException`.
 
 ### <a name="errordomainattribute"></a>ErrorDomainAttribute
 
@@ -1766,13 +1766,13 @@ public enum AVKitError : nint {
 }
 ```
 
-È quindi possibile chiamare il metodo `GetDomain` di estensione per ottenere la costante del dominio di qualsiasi errore.
+È quindi possibile chiamare il metodo di estensione `GetDomain` per ottenere la costante del dominio di qualsiasi errore.
 
 ### <a name="fieldattribute"></a>FieldAttribute
 
 Si tratta dello stesso `[Field]` attributo usato per le costanti all'interno del tipo. Può anche essere usato all'interno di enumerazioni per eseguire il mapping di un valore con una costante specifica.
 
-Un `null` valore può essere usato per specificare quale valore di enumerazione deve essere restituito se `null` viene specificata una `NSString` costante.
+È possibile utilizzare un valore di `null` per specificare quale valore di enumerazione deve essere restituito se viene specificata una `null` `NSString` costante.
 
 Dall'esempio precedente:
 
@@ -1781,11 +1781,11 @@ var constant = NSRunLoopMode.NewInWatchOS3; // will be null in watchOS 2.x
 Call (NSRunLoopModeExtensions.GetValue (constant)); // will return 1000
 ```
 
-Se non `null` è presente alcun valore, `ArgumentNullException` verrà generata un'eccezione.
+Se non è presente alcun valore `null`, verrà generata un'`ArgumentNullException`.
 
 ## <a name="global-attributes"></a>Attributi globali
 
-Gli attributi globali vengono applicati usando il `[assembly:]` modificatore di attributo [`[LinkWithAttribute]`](#LinkWithAttribute) , ad esempio o, possono essere usati [`[Lion]`](#SinceAndLionAttributes) ovunque [`[Since]`](#SinceAndLionAttributes) , ad esempio gli attributi e.
+Gli attributi globali vengono applicati usando il modificatore di attributo `[assembly:]` come [`[LinkWithAttribute]`](#LinkWithAttribute) o possono essere usati ovunque, ad esempio gli attributi [`[Lion]`](#SinceAndLionAttributes) e [`[Since]`](#SinceAndLionAttributes) .
 
 <a name="LinkWithAttribute" />
 
@@ -1829,9 +1829,9 @@ Questo attributo viene applicato a livello di assembly, ad esempio ciò che vien
 [assembly: LinkWith ("libCorePlot-CocoaTouch.a", LinkTarget.ArmV7 | LinkTarget.ArmV7s | LinkTarget.Simulator, Frameworks = "CoreGraphics QuartzCore", ForceLoad = true)]
 ```
 
-Quando si utilizza l' `[LinkWith]` attributo, l'oggetto `libraryName` specificato viene incorporato nell'assembly risultante, consentendo agli utenti di fornire una singola DLL che contiene sia le dipendenze non gestite sia i flag della riga di comando necessari per utilizzare correttamente il libreria di Novell. iOS.
+Quando si utilizza l'attributo `[LinkWith]`, il `libraryName` specificato viene incorporato nell'assembly risultante, consentendo agli utenti di fornire una singola DLL che contiene sia le dipendenze non gestite sia i flag della riga di comando necessari per utilizzare correttamente la libreria da Novell. iOS.
 
-È anche possibile non fornire un oggetto `libraryName`, nel qual caso l'attributo può essere usato solo per specificare flag del `LinkWith` linker aggiuntivi:
+È anche possibile non fornire un `libraryName`, nel qual caso l'attributo `LinkWith` può essere usato solo per specificare flag del linker aggiuntivi:
 
 ``` csharp
 [assembly: LinkWith (LinkerFlags = "-lsqlite3")]
@@ -1841,7 +1841,7 @@ Quando si utilizza l' `[LinkWith]` attributo, l'oggetto `libraryName` specificat
 
 Questi costruttori consentono di specificare la libreria da collegare e incorporare nell'assembly risultante, le destinazioni supportate supportate dalla libreria e gli eventuali flag di libreria facoltativi necessari per il collegamento alla libreria.
 
-Si noti che `LinkTarget` l'argomento viene dedotto da Novell. iOS e non è necessario impostarlo.
+Si noti che l'argomento `LinkTarget` viene dedotto da Novell. iOS e non è necessario impostarlo.
 
 Esempi:
 
@@ -1861,47 +1861,47 @@ Esempi:
 
 #### <a name="linkwithattributeforceload"></a>LinkWithAttribute.ForceLoad
 
-La `ForceLoad` proprietà viene utilizzata per decidere se utilizzare o meno `-force_load` il flag di collegamento per collegare la libreria nativa. Per il momento, deve essere sempre true.
+La proprietà `ForceLoad` viene utilizzata per decidere se utilizzare o meno il flag di collegamento `-force_load` per collegare la libreria nativa. Per il momento, deve essere sempre true.
 
-#### <a name="linkwithattributeframeworks"></a>LinkWithAttribute.Frameworks
+#### <a name="linkwithattributeframeworks"></a>LinkWithAttribute. Frameworks
 
-Se la libreria associata ha un requisito rigido per tutti i Framework (diversi da `Foundation` e `UIKit`), è necessario impostare la `Frameworks` proprietà su una stringa contenente un elenco delimitato da spazi dei framework di piattaforma richiesti. Se ad esempio si associa una libreria che `CoreGraphics` richiede e `CoreText`, impostare la `Frameworks` proprietà su `"CoreGraphics CoreText"`.
+Se la libreria associata ha un requisito rigido per tutti i Framework (diversi da `Foundation` e `UIKit`), è necessario impostare la proprietà `Frameworks` su una stringa contenente un elenco delimitato da spazi dei framework di piattaforma richiesti. Se ad esempio si associa una libreria che richiede `CoreGraphics` e `CoreText`, impostare la proprietà `Frameworks` su `"CoreGraphics CoreText"`.
 
 #### <a name="linkwithattributeiscxx"></a>LinkWithAttribute.IsCxx
 
 Impostare questa proprietà su true se l'eseguibile risultante deve essere compilato usando un C++ compilatore invece di quello predefinito, ovvero un compilatore C. Usare questa se è stata scritta la libreria in C++cui si esegue l'associazione.
 
-#### <a name="linkwithattributelibraryname"></a>LinkWithAttribute.LibraryName
+#### <a name="linkwithattributelibraryname"></a>LinkWithAttribute. libraryname
 
 Nome della libreria non gestita da aggregare. Si tratta di un file con estensione ". a" e può contenere codice oggetto per più piattaforme (ad esempio, ARM e x86 per il simulatore).
 
-Le versioni precedenti di Novell. iOS controllavano la `LinkTarget` proprietà per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la `LinkTarget` proprietà viene ignorata.
+Le versioni precedenti di Novell. iOS controllavano la proprietà `LinkTarget` per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la proprietà `LinkTarget` viene ignorata.
 
 #### <a name="linkwithattributelinkerflags"></a>LinkWithAttribute.LinkerFlags
 
-La `LinkerFlags` stringa consente agli autori di associazioni di specificare eventuali flag aggiuntivi del linker necessari per collegare la libreria nativa all'applicazione.
+La stringa `LinkerFlags` consente agli autori di associazioni di specificare eventuali flag aggiuntivi del linker necessari per collegare la libreria nativa all'applicazione.
 
-Ad esempio, se la libreria nativa richiede libxml2 e zlib, impostare la `LinkerFlags` stringa su. `"-lxml2 -lz"`
+Ad esempio, se la libreria nativa richiede libxml2 e zlib, impostare la stringa `LinkerFlags` su `"-lxml2 -lz"`.
 
-#### <a name="linkwithattributelinktarget"></a>LinkWithAttribute.LinkTarget
+#### <a name="linkwithattributelinktarget"></a>LinkWithAttribute. LinkTarget
 
-Le versioni precedenti di Novell. iOS controllavano la `LinkTarget` proprietà per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la `LinkTarget` proprietà viene ignorata.
+Le versioni precedenti di Novell. iOS controllavano la proprietà `LinkTarget` per determinare la piattaforma supportata dalla libreria, ma ora è stata rilevata automaticamente e la proprietà `LinkTarget` viene ignorata.
 
 #### <a name="linkwithattributeneedsgccexceptionhandling"></a>LinkWithAttribute.NeedsGccExceptionHandling
 
 Impostare questa proprietà su true se la libreria da collegare richiede la libreria di gestione delle eccezioni GCC (gcc_eh)
 
-#### <a name="linkwithattributesmartlink"></a>LinkWithAttribute.SmartLink
+#### <a name="linkwithattributesmartlink"></a>LinkWithAttribute. SmartLink
 
-La `SmartLink` proprietà deve essere impostata su true per consentire a Novell. iOS di `ForceLoad` determinare se è obbligatorio o meno.
+Il `SmartLink` proprietà deve essere impostato su true per consentire a Novell. iOS di determinare se `ForceLoad` è obbligatorio o meno.
 
 #### <a name="linkwithattributeweakframeworks"></a>LinkWithAttribute.WeakFrameworks
 
-La `WeakFrameworks` proprietà funziona allo stesso modo `Frameworks` della proprietà, ad eccezione del fatto che in fase di collegamento `-weak_framework` l'identificatore viene passato a GCC per ognuno dei Framework elencati.
+La proprietà `WeakFrameworks` funziona allo stesso modo della proprietà `Frameworks`, ad eccezione del fatto che in fase di collegamento l'identificatore `-weak_framework` viene passato a GCC per ognuno dei Framework elencati.
 
-`WeakFrameworks`consente alle librerie e alle applicazioni di collegarsi in modo debole ai Framework della piattaforma, in modo che possano utilizzarli facoltativamente se sono disponibili, ma non hanno una dipendenza rigida, che risulta utile se la libreria ha lo scopo di aggiungere funzionalità aggiuntive nei più recenti versioni di iOS. Per ulteriori informazioni sul collegamento debole, vedere la documentazione di Apple sul [collegamento debole](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
+`WeakFrameworks` consente alle librerie e alle applicazioni di collegarsi in modo debole ai Framework della piattaforma, in modo da poterli usare facoltativamente se sono disponibili, ma non assumere una dipendenza rigida, che risulta utile se la libreria ha lo scopo di aggiungere ulteriori funzionalità in versioni più recenti di iOS. Per ulteriori informazioni sul collegamento debole, vedere la documentazione di Apple sul [collegamento debole](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
 
-`Frameworks` I candidati idonei per il collegamento debole sono come gli account `CoreImage`, `GLKit` `CoreBluetooth` `NewsstandKit` ,, `Twitter` e perché sono disponibili solo in iOS 5.
+I candidati validi per il collegamento debole sarebbero `Frameworks` come account, `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` e `Twitter` perché sono disponibili solo in iOS 5.
 
 <a name="SinceAndLionAttributes" />
 
@@ -1945,7 +1945,7 @@ public interface UITableViewController {
     bool ClearsSelectionOnViewWillAppear { get; set; }
 ```
 
-L' `[Lion]` attributo viene applicato nello stesso modo, ma per i tipi introdotti con Lion. Il motivo per usare `[Lion]` rispetto al numero di versione più specifico usato in iOS è che iOS viene rivisto molto spesso, mentre le versioni principali del sistema operativo vengono rilasciate raramente ed è più facile ricordare il sistema operativo in base al nome in base al numero di versione
+L'attributo `[Lion]` viene applicato nello stesso modo, ma per i tipi introdotti con Lion. Il motivo per usare `[Lion]` rispetto al numero di versione più specifico usato in iOS è che iOS viene rivisto molto spesso, mentre le versioni principali del sistema operativo vengono rilasciate raramente ed è più facile ricordare il sistema operativo in base al nome in base al numero di versione
 
 ### <a name="adviceattribute"></a>AdviceAttribute
 
@@ -1955,17 +1955,17 @@ Le informazioni di questo attributo sono illustrate nella documentazione e gli s
 
 ### <a name="requiressuperattribute"></a>RequiresSuperAttribute
 
-Si tratta di una sottoclasse specializzata `[Advice]` dell'attributo che può essere usata per suggerire allo sviluppatore che l'override di un metodo **richiede** una chiamata al metodo di base (sottoposto a override).
+Si tratta di una sottoclasse specializzata dell'attributo `[Advice]` che può essere usata per suggerire allo sviluppatore che l'override di un metodo **richiede** una chiamata al metodo di base (sottoposto a override).
 
-Corrisponde a `clang`[`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
+Corrisponde a `clang` [`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
 
 ### <a name="zerocopystringsattribute"></a>ZeroCopyStringsAttribute
 
 Disponibile solo in Novell. iOS 5,4 e versioni successive.
 
-Questo attributo indica al generatore che l'associazione per la libreria specifica (se applicata con `[assembly:]`) o il tipo deve usare il marshalling della stringa di copia zero veloce. Questo attributo equivale a passare l'opzione `--zero-copy` della riga di comando al generatore.
+Questo attributo indica al generatore che l'associazione per la libreria specifica (se applicata con `[assembly:]`) o il tipo deve usare il marshalling della stringa di copia zero veloce. Questo attributo equivale a passare l'opzione della riga di comando `--zero-copy` al generatore.
 
-Quando si usa la copia zero per le stringhe, il generatore utilizza in C# modo efficace la stessa stringa della stringa utilizzata da Objective-C senza incorrere nella creazione di un `NSString` nuovo oggetto e evitando la copia dei C# dati dalle stringhe al Stringa Objective-C. L'unico svantaggio dell'uso di zero stringhe di copia è che è necessario assicurarsi che qualsiasi proprietà di stringa di cui si esegue il wrapping venga `retain` contrassegnata come `[DisableZeroCopy]` o `copy` abbia l'attributo impostato. Questa operazione è necessaria perché l'handle per le stringhe di copia zero viene allocato nello stack e non è valido al momento della restituzione della funzione.
+Quando si usa la copia zero per le stringhe, il generatore utilizza in C# modo efficace la stessa stringa della stringa utilizzata da Objective-c senza incorrere nella creazione di un nuovo oggetto`NSString`ed evitando di copiare i C# dati dalle stringhe in Objective-c. stringa. L'unico svantaggio dell'uso di zero stringhe di copia è che è necessario assicurarsi che qualsiasi proprietà di stringa di cui si esegue il wrapping venga contrassegnata come `retain` o `copy` abbia l'attributo `[DisableZeroCopy]` impostato. Questa operazione è necessaria perché l'handle per le stringhe di copia zero viene allocato nello stack e non è valido al momento della restituzione della funzione.
 
 Esempio:
 
@@ -1994,7 +1994,7 @@ interface MyBinding {
 
 ## <a name="strongly-typed-dictionaries"></a>Dizionari fortemente tipizzati
 
-Con Novell. iOS 8,0 è stato introdotto il supporto per creare con facilità classi fortemente tipizzate che esegue il wrapping `NSDictionaries`.
+Con Novell. iOS 8,0 è stato introdotto il supporto per creare facilmente classi fortemente tipizzate che racchiudono `NSDictionaries`.
 
 Sebbene sia sempre stato possibile usare il tipo di dati [DictionaryContainer](xref:Foundation.DictionaryContainer) insieme a un'API manuale, ora è molto più semplice eseguire questa operazione.  Per altre informazioni, vedere [emersione dei tipi forti](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 
@@ -2004,11 +2004,11 @@ Sebbene sia sempre stato possibile usare il tipo di dati [DictionaryContainer](x
 
 Quando questo attributo viene applicato a un'interfaccia, il generatore produrrà una classe con lo stesso nome dell'interfaccia che deriva da [DictionaryContainer](xref:Foundation.DictionaryContainer) e converte ogni proprietà definita nell'interfaccia in un getter e un setter fortemente tipizzati per il dizionario.
 
-Viene generata automaticamente una classe di cui è possibile creare un'istanza da `NSDictionary` un esistente o che è stato creato nuovo.
+In questo modo viene generata automaticamente una classe di cui è possibile creare un'istanza da un `NSDictionary` esistente o che è stato creato nuovo.
 
 Questo attributo accetta un parametro, ovvero il nome della classe contenente le chiavi usate per accedere agli elementi nel dizionario.   Per impostazione predefinita, ogni proprietà nell'interfaccia con l'attributo effettuerà la ricerca di un membro del tipo specificato per un nome con il suffisso "Key".
 
-Ad esempio:
+Esempio:
 
 ```csharp
 [StrongDictionary ("MyOptionKeys")]
@@ -2030,7 +2030,7 @@ interface MyOptionKeys {
 
 ```
 
-Nel caso precedente, la `MyOption` classe produrrà una proprietà di stringa per `Name` che `MyOptionKeys.NameKey` utilizzerà come chiave nel dizionario per recuperare una stringa.   E utilizzeranno `NSNumber`comechiave nel dizionario per recuperare un oggetto che contiene un valore int. `MyOptionKeys.AgeKey`
+Nel caso precedente, la classe `MyOption` produrrà una proprietà di stringa per `Name` che utilizzerà il `MyOptionKeys.NameKey` come chiave nel dizionario per recuperare una stringa.   E utilizzeranno il `MyOptionKeys.AgeKey` come chiave nel dizionario per recuperare una `NSNumber` contenente un valore int.
 
 Se si vuole usare una chiave diversa, è possibile usare l'attributo Export nella proprietà, ad esempio:
 
@@ -2058,22 +2058,22 @@ interface MyColoringKeys {
 
 #### <a name="strong-dictionary-types"></a>Tipi di dizionario forti
 
-Nella `StrongDictionary` definizione sono supportati i tipi di dati seguenti:
+Nella definizione `StrongDictionary` sono supportati i tipi di dati seguenti:
 
-|C#Tipo di interfaccia|`NSDictionary`Tipo di archiviazione|
+|C#Tipo di interfaccia|Tipo di archiviazione `NSDictionary`|
 |---|---|
-|`bool`|`Boolean`Archiviato in un`NSNumber`|
-|Valori di enumerazione|Integer archiviato in un`NSNumber`|
-|`int`|intero a 32 bit archiviato in un`NSNumber`|
-|`uint`|Unsigned Integer a 32 bit archiviati in un`NSNumber`|
-|`nint`|`NSInteger`Archiviato in un`NSNumber`|
-|`nuint`|`NSUInteger`Archiviato in un`NSNumber`|
-|`long`|intero a 64 bit archiviato in un`NSNumber`|
-|`float`|intero a 32 bit archiviato come`NSNumber`|
-|`double`|intero a 64 bit archiviato come`NSNumber`|
-|`NSObject`e sottoclassi|`NSObject`|
+|`bool`|`Boolean` archiviati in un `NSNumber`|
+|Valori di enumerazione|Integer archiviato in un `NSNumber`|
+|`int`|intero a 32 bit archiviato in un `NSNumber`|
+|`uint`|Unsigned Integer a 32 bit archiviati in un `NSNumber`|
+|`nint`|`NSInteger` archiviati in un `NSNumber`|
+|`nuint`|`NSUInteger` archiviati in un `NSNumber`|
+|`long`|intero a 64 bit archiviato in un `NSNumber`|
+|`float`|intero a 32 bit archiviato come `NSNumber`|
+|`double`|intero a 64 bit archiviato come `NSNumber`|
+|`NSObject` e sottoclassi|`NSObject`|
 |`NSDictionary`|`NSDictionary`|
 |`string`|`NSString`|
 |`NSString`|`NSString`|
-|C#`Array` di`NSObject`|`NSArray`|
-|C#`Array` di enumerazioni|`NSArray`valori `NSNumber` contenenti|
+|C#`Array`di`NSObject`|`NSArray`|
+|C#`Array`di enumerazioni|`NSArray` contenenti valori `NSNumber`|

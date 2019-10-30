@@ -4,15 +4,15 @@ description: Questo documento descrive come distribuire le app watchos compilate
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 7b80573a728e1868254b5a89254ebc385b3baa12
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768080"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028366"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Distribuzione delle app watchos nell'App Store
 
@@ -21,7 +21,7 @@ ms.locfileid: "70768080"
 
 - Assicurarsi di disporre di:
   - [**Profili di provisioning di distribuzione**](#provisioning) creati per i progetti.
-  - La **destinazione** di distribuzione`MinimumOSVersion`() per l'app padre iOS impostata su **8,2** o versioni precedenti (8,3 non è supportata).
+  - La **destinazione di distribuzione** (`MinimumOSVersion`) per l'app padre iOS impostata su **8,2** o versioni precedenti (8,3 non è supportata).
 
 - In [**iTunes Connect**](#iTunes_Connect):
 
@@ -51,17 +51,17 @@ Per compilare per la distribuzione dell'app Store, è necessario creare un **pro
 
 Se si dispone di un ID app con caratteri jolly, *sarà necessario solo un profilo di provisioning*; Tuttavia, se si dispone di un ID app separato per ogni progetto, è necessario un profilo di provisioning per ogni ID app:
 
-![](appstore-images/provisioningprofile-distribution-sml.png "Profilo di distribuzione dell'app Store")
+![](appstore-images/provisioningprofile-distribution-sml.png "The App Store Distribution profile")
 
 Una volta creati tutti e tre i profili, verranno visualizzati nell'elenco. Ricordarsi di scaricare e installare ognuno di essi (facendo doppio clic su di esso):
 
-![](appstore-images/provisioningprofiles-sml.png "Elenco dei profili disponibili")
+![](appstore-images/provisioningprofiles-sml.png "The list of available profiles")
 
 È possibile verificare il profilo di provisioning nelle **Opzioni del progetto** selezionando la schermata **Compila > firma del bundle iOS** e selezionando la configurazione **AppStore | iPhone** .
 
 L'elenco **profilo di provisioning** mostrerà tutti i profili corrispondenti. verranno visualizzati i profili corrispondenti creati in questo elenco a discesa.
 
-![](appstore-images/options-selectprofile-sml.png "Finestra di dialogo per la firma del bundle iOS")
+![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
 <a name="iTunes_Connect"/>
 
@@ -74,7 +74,7 @@ Seguire la [Panoramica della distribuzione dell'app](~/ios/deploy-test/app-distr
 
 Quando si configura l'app in iTunes Connect, non dimenticare di aggiungere l'icona di espressione di controllo e le schermate:
 
-![](appstore-images/itunesconnect-watch-sml.png "Icona di espressione di controllo e screenshot in iTunes Connect")
+![](appstore-images/itunesconnect-watch-sml.png "The Watch icon and screenshots in iTunes Connect")
 
 Il file icona deve essere 1024x1024 pixel e una maschera circolare viene applicata quando viene visualizzata. L'icona non deve avere un canale alfa.
 
@@ -88,19 +88,19 @@ Devono essere 312x390 pixel e dimostrare l'app Watch in azione.
 
 1. Assicurarsi che l'app iOS sia il progetto di avvio. In caso contrario, fare clic con il pulsante destro del mouse per impostarlo:
 
-   ![](appstore-images/xs-startup.png "Impostazione del progetto di avvio")
+   ![](appstore-images/xs-startup.png "Setting the startup project")
 
 2. Scegliere la configurazione di compilazione **AppStore** :
 
-   ![](appstore-images/xs-appstore.png "Configurazione della build di AppStore")
+   ![](appstore-images/xs-appstore.png "The AppStore build configuration")
 
 3. Scegliere la voce di menu **compila > Archive** per avviare il processo di archiviazione:
 
-   ![](appstore-images/xs-archive.png "Menu Compila")
+   ![](appstore-images/xs-archive.png "The Build menu")
 
 È anche possibile scegliere la voce di menu **visualizza > archivi...** per visualizzare gli archivi creati in precedenza.
 
-  ![](appstore-images/xs-archives-sml.png "Visualizzazione archivi")
+  ![](appstore-images/xs-archives-sml.png "The Archives view")
 
 <a name="xcode" />
 
@@ -108,27 +108,27 @@ Devono essere 312x390 pixel e dimostrare l'app Watch in azione.
 
 Xcode mostrerà automaticamente gli archivi creati in Visual Studio per Mac.
 
-1. Avviare Xcode e scegliere **finestra libreria >** :
+1. Avviare Xcode e scegliere **finestra libreria >**:
 
-   ![](appstore-images/xc-organizer.png "Menu finestra")
+   ![](appstore-images/xc-organizer.png "The Window menu")
 
 2. Passare alla scheda **archivi** e selezionare l'archivio creato con Visual Studio per Mac:
 
-   ![](appstore-images/xc-archives.png "Scheda Archivi")
+   ![](appstore-images/xc-archives.png "The Archives tab")
 
 3. Facoltativamente, è possibile **convalidare...** l'archivio, quindi scegliere **Invia...** per caricare l'app in iTunes Connect.
 
 4. Scegliere il team di sviluppo (se si appartiene a più di un) e quindi confermare l'invio:
 
-   ![](appstore-images/xc-submit1.png "Sezione del team di sviluppo")
+   ![](appstore-images/xc-submit1.png "The development team section")
 
 5. Visitare di nuovo iTunes Connect per visualizzare il file binario caricato. Passare alla pagina di configurazione dell'app e scegliere **versione provvisoria** dal menu superiore per visualizzare l'elenco delle **compilazioni** :
 
-   [![](appstore-images/itc-prerelease-sml.png "Pagina di configurazione delle app in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 È quindi possibile inviare l'app per l'approvazione nella pagina **versioni** . Per ulteriori informazioni, vedere la [panoramica sulla distribuzione di app iOS](~/ios/deploy-test/app-distribution/index.md) .
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 Ecco alcuni errori che possono verificarsi durante l'invio all'App Store e i passaggi da eseguire per correggerli.
 
@@ -175,7 +175,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Assicurarsi di disporre della versione più recente di Visual Studio per Mac e che **AppIcon. appiconset** contenga un set completo di immagini. Se questo errore viene ancora visualizzato, visualizzare l'origine del file **Contents. JSON** per confermare che contiene una voce per tutte le immagini obbligatorie. In alternativa, dopo aver verificato che si sta usando la versione più recente di Novell, eliminare e ricreare **AppIcon. appiconset**.
 
 > [!IMPORTANT]
-> È presente un bug noto nel supporto dell'icona del controllo Visual Studio per Mac: è prevista un'immagine 88x88 pixel per l' **29x29@3x** immagine (che deve essere 87x87 pixel).
+> È presente un bug noto nel supporto dell'icona del controllo Visual Studio per Mac: prevede un'immagine di pixel 88x88 per l'immagine **29x29@3x** (che deve essere 87x87 pixel).
 
 Non è possibile risolvere questo problema in Visual Studio per Mac: modificare l'asset di immagine in Xcode o modificare manualmente il file **Contents. JSON** (in modo che corrisponda a [questo esempio](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
@@ -225,7 +225,7 @@ and framework must support arm64.
 ```
 
 È possibile aggiungere solo app Watch [API unificata (64 bit)](~/cross-platform/macios/unified/index.md) Novell. iOS.
-Fare clic con il pulsante destro del mouse sul progetto di app iOS, quindi scegliere **opzioni > compilare > iOS compila > scheda Avanzate** e assicurarsi che le **architetture supportate** per la configurazione AppStore-iPhone includano **arm64** (ad esempio, **ARMv7 + ARM64**).
+Fare clic con il pulsante destro del mouse sul progetto di app iOS, quindi scegliere **opzioni > compilare > iOS compila > scheda Avanzate** e assicurarsi che le **architetture supportate** per la configurazione AppStore-iPhone includano **arm64** (ad esempio, **ARMv7 + arm64**).
 
 ### <a name="this-bundle-is-invalid"></a>Questo bundle non è valido.
 

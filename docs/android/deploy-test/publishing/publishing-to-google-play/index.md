@@ -3,15 +3,15 @@ title: Pubblicazione in Google Play
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 77fc4cbb15c47b87b0fa33e81b0b3749115af076
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250019"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021275"
 ---
 # <a name="publishing-to-google-play"></a>Pubblicazione in Google Play
 
@@ -124,7 +124,7 @@ L'argomento [Creating a New Certificate](~/android/deploy-test/signing/index.md#
 5. Firmare l'app con il proprio certificato.
 6. Pubblicare l'app firmata in Google Play.
 
-In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#archive) la finestra di dialogo **Canale di distribuzione** offre due opzioni di distribuzione: **Ad hoc** e **Google Play**. Se invece viene visualizzata la finestra di dialogo **Identità di firma**, fare clic su **Indietro** per tornare alla finestra di dialogo **Canale di distribuzione**. Selezionare **Google Play** e fare clic su **Avanti**:
+In [Archivia per la pubblicazione](~/android/deploy-test/release-prep/index.md#archive), la finestra di dialogo **Canale di distribuzione** offre due opzioni di distribuzione: **Ad hoc** e **Google Play**. Se invece viene visualizzata la finestra di dialogo **Identità di firma**, fare clic su **Indietro** per tornare alla finestra di dialogo **Canale di distribuzione**. Selezionare **Google Play** e fare clic su **Avanti**:
 
 [![Finestra di dialogo Canale di distribuzione](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -219,7 +219,7 @@ Fare clic su **Allow** (Consenti) per autorizzare l'app:
 
 #### <a name="publish"></a>Pubblica
 
-Dopo aver fatto clic su **Allow** (Consenti), il browser visualizza il messaggio _Received verification code. Closing..._ (Codice di verifica ricevuto. Chiusura in corso) e l'app viene aggiunta all'elenco di account Google Play in Visual Studio. Nella finestra di dialogo **Account Google Play** fare clic su **Continua**:
+Dopo aver fatto clic su **Consenti**, i report del browser _hanno ricevuto il codice di verifica. Chiusura in.._ . e l'app viene aggiunta all'elenco di account Google Play in Visual Studio. Nella finestra di dialogo **Account Google Play** fare clic su **Continua**:
 
 [![Account aggiunto agli account Google Play](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
@@ -249,7 +249,7 @@ Al termine del caricamento, un messaggio nell'angolo inferiore sinistro della fi
 
 [![Messaggio di completamento della pubblicazione del progetto](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
 
-### <a name="troubleshooting"></a>Risoluzione dei problemi
+### <a name="troubleshooting"></a>Troubleshooting
 
 Si noti che per il funzionamento corretto di **Pubblica in Google Play** è necessario che almeno un pacchetto APK sia già stato inoltrato a Google Play Store. Se in precedenza non è stato caricato nessun pacchetto APK, la procedura di pubblicazione guidata visualizza il seguente messaggio di errore nel riquadro **Errori**:
 
@@ -298,9 +298,9 @@ A questo punto è possibile caricare l'app in Google Play. La finestra di dialog
 
 Si noti che per il funzionamento corretto di **Pubblica in Google Play** è necessario che almeno un pacchetto APK sia già stato inoltrato a Google Play Store. Se non è stato caricato un APK può verificarsi l'errore seguente:
 
-> _Google Play richiede il caricamento manuale del primo APK per questa app. A questo scopo, è possibile usare un APK ad hoc._
+> _Google Play richiede di caricare manualmente il primo APK per questa app. Per questo è possibile usare un APK ad hoc._
 
-oppure
+Oppure
 
 > _No application was found for the given package name. [404]_ (Nessuna applicazione trovata con il nome pacchetto dato. [404])
 

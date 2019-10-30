@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: d20e27fdbb1f62c2aebb7122d7f0c042b3ac9085
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: cbc3bceffacd9669c1e2e667faadc2939fd4aa1f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71997183"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005919"
 ---
 # <a name="gtk-platform-setup"></a>Installazione della piattaforma GTK #
 
@@ -26,7 +26,7 @@ Novell. Forms ora include il supporto in anteprima per le app GTK #. GTK # è un
 Prima di iniziare, creare una nuova soluzione Novell. Forms oppure usare una soluzione Novell. Forms esistente, ad esempio [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
 > [!NOTE]
-> Sebbene questo articolo sia incentrato sull'aggiunta di un'app GTK # a una soluzione Novell. Forms in VS2017 e Visual Studio per Mac, può essere eseguita anche in [MonoDevelop](http://www.monodevelop.com/) per Linux.
+> Sebbene questo articolo sia incentrato sull'aggiunta di un'app GTK # a una soluzione Novell. Forms in VS2017 e Visual Studio per Mac, può essere eseguita anche in [MonoDevelop](https://www.monodevelop.com/) per Linux.
 
 ## <a name="adding-a-gtk-app"></a>Aggiunta di un'app GTK #
 

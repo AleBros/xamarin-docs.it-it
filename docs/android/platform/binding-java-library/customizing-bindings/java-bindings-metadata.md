@@ -4,15 +4,15 @@ description: C#il codice in Novell. Android chiama le librerie Java tramite bind
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 046c392709f2c94664120e9fac3f4198e9f50dbf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1f06601b2b419141b4bd44677826df4e64a831fc
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756598"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020564"
 ---
 # <a name="java-bindings-metadata"></a>Metadati per le associazioni Java
 
@@ -20,7 +20,7 @@ _C#il codice in Novell. Android chiama le librerie Java tramite binding, un mecc
 
 ## <a name="overview"></a>Panoramica
 
-Una **libreria di binding Java** Novell. Android tenta di automatizzare gran parte del lavoro necessario per l'associazione di una libreria Android esistente con l'ausilio di uno strumento noto a volte come _Generatore di binding_. Quando si associa una libreria Java, Novell. Android esamina le classi Java e genera un elenco di tutti i pacchetti, i tipi e i membri che devono essere associati. Questo elenco di API viene archiviato in un file XML che si trova  **\{nella directory del progetto} \obj\Release\api.XML** per una build di **rilascio** e nella  **\{directory del progetto} \obj\Debug\api.XML** per una compilazione di **debug** .
+Una **libreria di binding Java** Novell. Android tenta di automatizzare gran parte del lavoro necessario per l'associazione di una libreria Android esistente con l'ausilio di uno strumento noto a volte come _Generatore di binding_. Quando si associa una libreria Java, Novell. Android esamina le classi Java e genera un elenco di tutti i pacchetti, i tipi e i membri che devono essere associati. Questo elenco di API viene archiviato in un file XML che si trova nella **directory\{progetto} \obj\Release\api.XML** per una build **di rilascio** e in **\{directory del progetto} \Obj\Debug\api.XML** per una build di **debug** .
 
 ![Percorso del file API. XML nella cartella obj/debug](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
@@ -45,7 +45,7 @@ Il frammento di codice seguente è un esempio del contenuto di **API. XML**:
 </api>
 ```
 
-In questo esempio **API. XML** dichiara una classe nel `android` pacchetto `java.lang.Object`denominato `Manifest` che estende.
+In questo esempio **API. XML** dichiara una classe nel pacchetto di `android` denominato `Manifest` che estende il `java.lang.Object`.
 
 In molti casi, l'assistenza umana è necessaria per rendere l'API Java più ".NET like" o per correggere i problemi che impediscono la compilazione dell'assembly di associazione. Ad esempio, potrebbe essere necessario modificare i nomi dei pacchetti Java in spazi dei nomi .NET, rinominare una classe o modificare il tipo restituito di un metodo.
 
@@ -54,11 +54,11 @@ Al contrario, le modifiche vengono registrate in file XML speciali forniti dal m
 
 Questi file di mapping XML possono essere trovati nella cartella **transforms** del progetto:
 
-- **Metadata. XML** &ndash; consente di apportare modifiche all'API finale, ad esempio la modifica dello spazio dei nomi dell'associazione generata. 
+- **Metadata. xml** &ndash; consente di apportare modifiche all'API finale, ad esempio la modifica dello spazio dei nomi dell'associazione generata. 
 
-- **EnumFields. XML** &ndash; contiene il mapping tra le `int` costanti Java e C# `enums` . 
+- **EnumFields. xml** &ndash; contiene il mapping tra le costanti `int` Java e C#`enums`. 
 
-- **EnumMethods. XML** &ndash; consente di modificare i parametri del metodo e i `int` tipi restituiti dalle C# `enums` costanti Java a. 
+- **EnumMethods. xml** &ndash; consente la modifica dei parametri del metodo e dei tipi restituiti dalle costanti C# `int` Java al`enums`. 
 
 Il file **Metadata. XML** è la maggior parte dell'importazione di questi file poiché consente di apportare modifiche generali all'associazione, ad esempio:
 
@@ -77,9 +77,9 @@ Consente di passare al documento **Metadata. XML** in modo più dettagliato.
 Come abbiamo già imparato, il file **Metadata. XML** viene usato dal generatore di binding per influenzare la creazione dell'assembly di associazione.
 Il formato dei metadati usa la sintassi [XPath](https://www.w3.org/TR/xpath/) ed è quasi identico ai *metadati GAPI* descritti nella Guida ai [metadati di GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Questa implementazione è quasi un'implementazione completa di XPath 1,0 e pertanto supporta gli elementi dello standard 1,0. Questo file è un potente meccanismo basato su XPath per modificare, aggiungere, nascondere o spostare qualsiasi elemento o attributo nel file dell'API. Tutti gli elementi Rule nella specifica dei metadati includono un attributo path per identificare il nodo a cui deve essere applicata la regola. Le regole vengono applicate nell'ordine seguente:
 
-- **Aggiungi nodo** &ndash; Accoda un nodo figlio al nodo specificato dall'attributo path.
-- **attr** &ndash; Imposta il valore di un attributo dell'elemento specificato dall'attributo path.
-- **Remove-node** &ndash; Rimuove i nodi corrispondenti a un XPath specificato.
+- **Add-node** &ndash; aggiunge un nodo figlio al nodo specificato dall'attributo path.
+- **attr** &ndash; imposta il valore di un attributo dell'elemento specificato dall'attributo path.
+- **Remove-node** &ndash; rimuove i nodi corrispondenti a un XPath specificato.
 
 Di seguito è riportato un esempio di file **Metadata. XML** :
 
@@ -101,17 +101,17 @@ Di seguito è riportato un esempio di file **Metadata. XML** :
 
 Di seguito sono elencati alcuni degli elementi XPath usati più di frequente per le API Java:
 
-- `interface`&ndash; Usato per individuare un'interfaccia java. `/interface[@name='AuthListener']`ad esempio,
+- `interface` &ndash; utilizzato per individuare un'interfaccia java. ad esempio `/interface[@name='AuthListener']`.
 
-- `class`&ndash; Usato per individuare una classe. `/class[@name='MapView']`ad esempio,
+- `class` &ndash; utilizzato per individuare una classe. ad esempio `/class[@name='MapView']`.
 
-- `method`&ndash; Usato per individuare un metodo su una classe o un'interfaccia java. `/class[@name='MapView']/method[@name='setTitleSource']`ad esempio,
+- `method` &ndash; utilizzato per individuare un metodo su una classe o un'interfaccia java. ad esempio `/class[@name='MapView']/method[@name='setTitleSource']`.
 
-- `parameter`&ndash; Identificare un parametro per un metodo. e.g.`/parameter[@name='p0']`
+- `parameter` &ndash; identificare un parametro per un metodo. ad esempio `/parameter[@name='p0']`
 
 ### <a name="adding-types"></a>Aggiunta di tipi
 
-L' `add-node` elemento indica al progetto di binding Novell. Android di aggiungere una nuova classe wrapper a **API. XML**. Il frammento di codice seguente, ad esempio, consente di indirizzare il generatore di associazione per creare una classe con un costruttore e un singolo campo:
+L'elemento `add-node` indica al progetto di binding Novell. Android di aggiungere una nuova classe wrapper a **API. XML**. Il frammento di codice seguente, ad esempio, consente di indirizzare il generatore di associazione per creare una classe con un costruttore e un singolo campo:
 
 ```xml
 <add-node path="/api/package[@name='org.alljoyn.bus']">
@@ -132,9 +132,9 @@ L' `add-node` elemento indica al progetto di binding Novell. Android di aggiunge
 
 ### <a name="renaming-members"></a>Ridenominazione di membri
 
-La ridenominazione dei membri non può essere eseguita modificando direttamente il file **API. XML** perché Novell. Android richiede i nomi originali JNI (Java Native Interface). Pertanto, l' `//class/@name` attributo non può essere modificato; in caso contrario, l'associazione non funzionerà.
+La ridenominazione dei membri non può essere eseguita modificando direttamente il file **API. XML** perché Novell. Android richiede i nomi originali JNI (Java Native Interface). Pertanto, non è possibile modificare l'attributo `//class/@name`; in caso contrario, l'associazione non funzionerà.
 
-Si consideri il caso in cui si desidera rinominare `android.Manifest`un tipo,.
+Si consideri il caso in cui si desidera rinominare un tipo `android.Manifest`.
 A tale scopo, è possibile provare a modificare direttamente il **file API. XML** e rinominare la classe come segue:
 
 ```xml
@@ -149,9 +149,9 @@ Il generatore di associazioni creerà il codice seguente C# per la classe wrappe
 public class NewName : Java.Lang.Object { ... }
 ```
 
-Si noti che la classe wrapper è stata rinominata `NewName`, mentre il tipo Java originale è ancora `Manifest`. Per la classe di binding Novell. Android non è più possibile accedere ai metodi in `android.Manifest`. la classe wrapper è associata a un tipo Java non esistente.
+Si noti che la classe wrapper è stata rinominata in `NewName`, mentre il tipo Java originale è ancora `Manifest`. Per la classe di binding Novell. Android non è più possibile accedere a metodi su `android.Manifest`; la classe wrapper è associata a un tipo Java non esistente.
 
-Per modificare correttamente il nome gestito di un tipo o di un metodo di cui è stato eseguito il Wrapped, `managedName` è necessario impostare l'attributo come illustrato nell'esempio seguente:
+Per modificare correttamente il nome gestito di un tipo o di un metodo di cui è stato eseguito il Wrapped, è necessario impostare l'attributo `managedName` come illustrato nell'esempio seguente:
 
 ```xml
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
@@ -160,21 +160,21 @@ Per modificare correttamente il nome gestito di un tipo o di un metodo di cui è
 
 <a name="Renaming_EventArg_Wrapper_Classes" />
 
-#### <a name="renaming-eventarg-wrapper-classes"></a>Ridenominazione `EventArg` di classi wrapper
+#### <a name="renaming-eventarg-wrapper-classes"></a>Ridenominazione di classi wrapper `EventArg`
 
-Quando il generatore di binding Novell. Android identifica `onXXX` un metodo setter per un _tipo_di listener C# , verranno generati un evento e `EventArgs` una sottoclasse per supportare un'API con aroma .NET per il modello di listener basato su Java. Si consideri, ad esempio, la classe e il metodo Java seguenti:
+Quando il generatore di binding Novell. Android identifica un metodo di impostazione `onXXX` per un _tipo_di C# listener, viene generata una sottoclasse di evento e`EventArgs`per supportare un'API .NET con aroma per il modello di listener basato su Java. Si consideri, ad esempio, la classe e il metodo Java seguenti:
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
 ```
 
-Novell. Android eliminerà il prefisso `on` dal metodo setter e userà `2DSignNextManuever` invece come base `EventArgs` per il nome della sottoclasse. Alla sottoclasse verrà assegnato un nome simile al seguente:
+Novell. Android eliminerà il prefisso `on` dal metodo setter e userà invece `2DSignNextManuever` come base per il nome della sottoclasse `EventArgs`. Alla sottoclasse verrà assegnato un nome simile al seguente:
 
 ```csharp
 NavigationManager.2DSignNextManueverEventArgs
 ```
 
-Non si tratta di un C# nome di classe valido. Per risolvere il problema, l'autore del binding deve usare `argsType` l'attributo e fornire un C# nome valido per `EventArgs` la sottoclasse:
+Non si tratta di un C# nome di classe valido. Per risolvere il problema, l'autore del binding deve usare l'attributo `argsType` e fornire un C# nome valido per la sottoclasse`EventArgs`:
 
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
@@ -189,23 +189,23 @@ Le sezioni seguenti descrivono alcuni degli attributi per la trasformazione dell
 
 ### <a name="argstype"></a>argsType
 
-Questo attributo viene inserito nei metodi setter per assegnare un `EventArg` nome alla sottoclasse che verrà generata per supportare i listener Java. Questa procedura viene descritta più dettagliatamente nella sezione [ridenominazione delle classi wrapper di EventArg](#Renaming_EventArg_Wrapper_Classes) più avanti in questa guida.
+Questo attributo viene inserito nei metodi setter per assegnare un nome alla sottoclasse `EventArg` che verrà generata per supportare i listener Java. Questa procedura viene descritta più dettagliatamente nella sezione [ridenominazione delle classi wrapper di EventArg](#Renaming_EventArg_Wrapper_Classes) più avanti in questa guida.
 
 ### <a name="eventname"></a>eventName
 
 Specifica un nome per un evento. Se vuota, impedisce la generazione di eventi.
 Questa operazione viene descritta più dettagliatamente nella sezione titolo [rinominare le classi wrapper EventArg](#Renaming_EventArg_Wrapper_Classes).
 
-### <a name="managedname"></a>managedName
+### <a name="managedname"></a>gestito
 
-Viene utilizzato per modificare il nome di un pacchetto, una classe, un metodo o un parametro. Ad esempio, per modificare il nome della classe `MyClass` Java in: `NewClassName`
+Viene utilizzato per modificare il nome di un pacchetto, una classe, un metodo o un parametro. Ad esempio, per modificare il nome della classe Java `MyClass` in `NewClassName`:
 
 ```xml
 <attr path="/api/package[@name='com.my.application']/class[@name='MyClass']" 
     name="managedName">NewClassName</attr>
 ```
 
-Nell'esempio seguente viene illustrata un'espressione XPath per rinominare il metodo `java.lang.object.toString` in `Java.Lang.Object.NewManagedName`:
+Nell'esempio seguente viene illustrata un'espressione XPath per rinominare il metodo `java.lang.object.toString` `Java.Lang.Object.NewManagedName`:
 
 ```xml
 <attr path="/api/package[@name='java.lang']/class[@name='Object']/method[@name='toString']" 
@@ -214,9 +214,9 @@ Nell'esempio seguente viene illustrata un'espressione XPath per rinominare il me
 
 ### <a name="managedtype"></a>managedType
 
-`managedType`viene usato per modificare il tipo restituito di un metodo. In alcune situazioni il generatore di associazioni dedurrà erroneamente il tipo restituito di un metodo Java, operazione che comporterà un errore in fase di compilazione. Una possibile soluzione in questa situazione è modificare il tipo restituito del metodo.
+`managedType` viene utilizzato per modificare il tipo restituito di un metodo. In alcune situazioni il generatore di associazioni dedurrà erroneamente il tipo restituito di un metodo Java, operazione che comporterà un errore in fase di compilazione. Una possibile soluzione in questa situazione è modificare il tipo restituito del metodo.
 
-Il generatore di binding, ad esempio, ritiene che il metodo `de.neom.neoreadersdk.resolution.compareTo()` Java debba restituire `int`un oggetto, il che comporta l' **errore del messaggio di errore CS0535: DE. Neom. Neoreadersdk. Resolution ' non implementa il membro di interfaccia ' Java. lang. IComparable. CompareTo (Java. lang. Object**)'. Il frammento di codice seguente illustra come modificare il tipo di parametro C# del metodo generato `DE.Neom.Neoreadersdk.Resolution` da un `Java.Lang.Object`oggetto a un oggetto: 
+Il generatore di associazioni ritiene, ad esempio, che il metodo Java `de.neom.neoreadersdk.resolution.compareTo()` debba restituire una `int`, generando l'errore del messaggio di errore **CS0535:' de. Neom. Neoreadersdk. Resolution ' non implementa il membro di interfaccia ' Java. lang. IComparable. CompareTo (Java. lang. Object)'** . Il frammento di codice seguente illustra come modificare il tipo di parametro C# del metodo generato da un`DE.Neom.Neoreadersdk.Resolution`a un `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -228,7 +228,7 @@ Il generatore di binding, ad esempio, ritiene che il metodo `de.neom.neoreadersd
 
 ### <a name="managedreturn"></a>managedReturn
 
-Modifica il tipo restituito di un metodo. Questa operazione non modifica l'attributo return (poiché le modifiche apportate agli attributi restituiti possono causare modifiche incompatibili alla firma JNI). Nell'esempio seguente, il tipo restituito `append` del metodo viene modificato da `SpannableStringBuilder` a `IAppendable` (richiamo che C# non supporta i tipi restituiti covariante):
+Modifica il tipo restituito di un metodo. Questa operazione non modifica l'attributo return (poiché le modifiche apportate agli attributi restituiti possono causare modifiche incompatibili alla firma JNI). Nell'esempio seguente, il tipo restituito del metodo `append` viene modificato da `SpannableStringBuilder` a `IAppendable` (ricordare che C# non supporta i tipi restituiti covarianti):
 
 ```xml
 <attr path="/api/package[@name='android.text']/
@@ -241,7 +241,7 @@ Modifica il tipo restituito di un metodo. Questa operazione non modifica l'attri
 
 Gli strumenti per offuscare le librerie Java potrebbero interferire con il generatore di binding Novell. Android C# e la relativa capacità di generare classi wrapper. Le caratteristiche delle classi offuscate includono: 
 
-- Il nome della classe include **$** , ad esempio, **una classe $.**
+- Il nome della classe include una **$** , ovvero **una classe $. Class**
 - Il nome della classe è interamente compromesso da caratteri minuscoli, ad esempio **una classe.**
 
 Questo frammento di codice è un esempio di come generare un tipo "non offuscato" C# :
@@ -255,7 +255,7 @@ Questo frammento di codice è un esempio di come generare un tipo "non offuscato
 
 Questo attributo può essere utilizzato per modificare il nome di una proprietà gestita.
 
-Un caso specializzato di utilizzo `propertyName` di implica la situazione in cui una classe Java dispone solo di un metodo di richiamo per un campo. In questa situazione il generatore di associazioni vuole creare una proprietà di sola scrittura, un elemento sconsigliato in .NET. Nel frammento di codice seguente viene illustrato come rimuovere le proprietà `propertyName` .NET impostando su una stringa vuota:
+Un caso specializzato di utilizzo di `propertyName` comporta una situazione in cui una classe Java dispone solo di un metodo di richiamo per un campo. In questa situazione il generatore di associazioni vuole creare una proprietà di sola scrittura, un elemento sconsigliato in .NET. Il frammento di codice seguente mostra come rimuovere le proprietà .NET impostando il `propertyName` su una stringa vuota:
 
 ```xml
 <attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='setResourceDescriptor' 
@@ -271,7 +271,7 @@ Si noti che i metodi setter e getter verranno comunque creati dal generatore di 
 
 ### <a name="sender"></a>sender
 
-Specifica quale parametro di un metodo deve essere il `sender` parametro quando viene eseguito il mapping del metodo a un evento. Il valore può essere `true` o `false`. Ad esempio:
+Specifica quale parametro di un metodo deve essere il `sender` parametro quando viene eseguito il mapping del metodo a un evento. Il valore può essere `true` o `false`. Esempio:
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -283,7 +283,7 @@ Specifica quale parametro di un metodo deve essere il `sender` parametro quando 
 
 ### <a name="visibility"></a>visibilità
 
-Questo attributo viene usato per modificare la visibilità di una classe, di un metodo o di una proprietà. Ad esempio, potrebbe essere necessario alzare di livello `protected` un metodo Java in modo che sia C# il wrapper `public`corrispondente:
+Questo attributo viene usato per modificare la visibilità di una classe, di un metodo o di una proprietà. Ad esempio, potrebbe essere necessario alzare di livello un `protected` metodo Java in modo che il C# wrapper corrispondente sia`public`:
 
 ```xml
 <!-- Change the visibility of a class -->
@@ -299,7 +299,7 @@ Esistono casi in cui le librerie Android usano costanti integer per rappresentar
 
 ### <a name="defining-an-enum-using-enumfieldsxml"></a>Definizione di un'enumerazione mediante EnumFields. XML
 
-Il file **EnumFields. XML** contiene il mapping tra le `int` costanti Java e C# `enums`. Di seguito viene riportato l'esempio di un' C# enumerazione creata per un set di `int` costanti: 
+Il file **EnumFields. XML** contiene il mapping tra le costanti `int` Java e C#`enums`. Di seguito viene riportato l'esempio di un' C# enumerazione creata per un set di costanti`int`: 
 
 ```xml 
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
@@ -309,13 +309,13 @@ Il file **EnumFields. XML** contiene il mapping tra le `int` costanti Java e C# 
 </mapping>
 ```
 
-Qui è stata eseguita la classe `SKRealReachSettings` Java e è stata definita un' `SKMeasurementUnit` C# enumerazione denominata nello `Skobbler.Ngx.Map.RealReach`spazio dei nomi. Le `field` voci definiscono il nome della costante Java (ad `UNIT_SECOND`esempio), il nome della voce enum (esempio `Second`) e il valore Integer rappresentato da entrambe le entità (ad esempio `0`). 
+Qui abbiamo adottato la classe Java `SKRealReachSettings` e definito un' C# enumerazione denominata`SKMeasurementUnit`nel`Skobbler.Ngx.Map.RealReach`dello spazio dei nomi. Le voci `field` definiscono il nome della costante Java (ad esempio `UNIT_SECOND`), il nome della voce enum (ad esempio `Second`) e il valore Integer rappresentato da entrambe le entità (ad esempio `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definizione di metodi Get/Setter mediante EnumMethods. XML
 
-Il **file EnumMethods. XML** consente la modifica dei parametri del metodo e dei `int` tipi restituiti dalle C# `enums`costanti Java a. In altre parole, esegue il mapping della lettura e della C# scrittura delle enumerazioni (definite nel file **EnumFields. XML** ) ai `int` metodi `get` e `set` costanti Java.
+Il file **EnumMethods. XML** consente di modificare i parametri del metodo e i tipi restituiti dalle costanti C# `int` Java al`enums`. In altre parole, esegue il mapping della lettura e della C# scrittura delle enumerazioni (definite nel file **EnumFields. XML** ) a Java `int`costanti`get`e`set`metodi.
 
-Data l' `SKRealReachSettings` enumerazione definita in precedenza, il file **EnumMethods. XML** seguente definisce il getter/setter per l'enumerazione:
+Dato il `SKRealReachSettings` enum definito in precedenza, il file **EnumMethods. XML** seguente definisce il getter/setter per questa enumerazione:
 
 ```xml
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings">
@@ -324,9 +324,9 @@ Data l' `SKRealReachSettings` enumerazione definita in precedenza, il file **Enu
 </mapping>
 ```
 
-La prima `method` riga esegue il mapping del valore restituito del `getMeasurementUnit` metodo Java all' `SKMeasurementUnit` enum. La seconda `method` riga esegue il mapping del primo parametro `setMeasurementUnit` dell'oggetto alla stessa enumerazione.
+La prima riga di `method` esegue il mapping del valore restituito del metodo `getMeasurementUnit` Java al `SKMeasurementUnit` enum. Il secondo `method` riga esegue il mapping del primo parametro dell'`setMeasurementUnit` alla stessa enumerazione.
 
-Con tutte queste modifiche, è possibile usare il codice seguente in Novell. Android per impostare `MeasurementUnit`: 
+Con tutte queste modifiche, è possibile usare il codice seguente in Novell. Android per impostare la `MeasurementUnit`: 
 
 ```csharp
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;

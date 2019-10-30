@@ -4,15 +4,15 @@ description: L'ecosistema Java include una vasta gamma di componenti. Molti di q
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/18/2017
-ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ecaa02e036c74074b4fa922ea079355b72ff02e2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761421"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020091"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integrazione Java con Novell. Android
 
@@ -24,15 +24,15 @@ Data la portata dell'ecosistema Java, è molto probabile che tutte le funzionali
 
 Esistono tre modi possibili per riutilizzare le librerie Java in un'applicazione Novell. Android: 
 
-- **Creare una libreria di binding Java** Con questa tecnica, viene usato un progetto Novell. Android per creare C# wrapper intorno ai tipi Java. &ndash; Un'applicazione Novell. Android può quindi fare riferimento C# ai wrapper creati da questo progetto e quindi usare il `.jar` file. 
+- **Creare una libreria di binding Java** &ndash; con questa tecnica, viene usato un progetto Novell. Android per creare C# wrapper intorno ai tipi Java. Un'applicazione Novell. Android può quindi fare riferimento C# ai wrapper creati da questo progetto e quindi usare il file di`.jar`. 
 
-- **Interfaccia java nativa** C++ C# Java Native Interface (JNI) è un Framework che consente a codice non Java (ad esempio o) di chiamare o essere chiamato da codice Java in esecuzione all'interno di un JVM. &ndash; 
+- **Java Native interface** &ndash; *Java Native* *Interface* (JNI) è un Framework che consente a codice non Java (ad esempio C++ o C#) di chiamare o essere chiamato da codice Java in esecuzione all'interno di un JVM. 
 
-- **Porta il codice** Questo metodo implica l'esecuzione del codice sorgente Java e la relativa conversione in C# &ndash; Questa operazione può essere eseguita manualmente o usando uno strumento automatizzato, ad esempio affila. 
+- **Porta il codice** &ndash; questo metodo implica l'esecuzione del codice sorgente Java e la relativa conversione in C#. Questa operazione può essere eseguita manualmente o usando uno strumento automatizzato, ad esempio affila. 
 
 Alla base delle prime due tecniche è JNI ( *Java Native Interface* ). JNI è un Framework che consente alle applicazioni non scritte in Java di interagire con il codice Java in esecuzione in un Java Virtual Machine. Novell. Android USA JNI per creare *Binding* per C# il codice. 
 
-La prima tecnica è un approccio dichiarativo e più automatizzato per l'associazione di librerie Java. Comporta l'uso di Visual Studio per Mac o di un tipo di progetto di Visual Studio fornito da Novell. &ndash; Android la libreria dei binding Java. Per creare correttamente queste associazioni, è possibile che una libreria di associazioni Java richieda alcune modifiche manuali, ma non tutti gli approcci JNI. Vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md) per altre informazioni sulle librerie di binding Java. 
+La prima tecnica è un approccio dichiarativo e più automatizzato per l'associazione di librerie Java. Comporta l'uso di Visual Studio per Mac o di un tipo di progetto di Visual Studio fornito da Novell. Android &ndash; libreria dei binding Java. Per creare correttamente queste associazioni, è possibile che una libreria di associazioni Java richieda alcune modifiche manuali, ma non tutti gli approcci JNI. Vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md) per altre informazioni sulle librerie di binding Java. 
 
 La seconda tecnica, che usa JNI, funziona a un livello molto inferiore, ma può fornire un controllo più preciso e l'accesso a metodi Java che in genere non sarebbero accessibili tramite una libreria di binding Java. 
 
@@ -48,4 +48,4 @@ Questo documento fornisce una panoramica di alto livello di alcuni dei diversi m
 - [Associazione di una libreria Java](~/android/platform/binding-java-library/index.md)
 - [Uso di JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Nitidezza](https://github.com/slluis/sharpen)
-- [Interfaccia java nativa](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)
+- [Interfaccia java nativa](https://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

@@ -5,17 +5,17 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 54583AB3-FE6D-4357-B4FC-CBC48B7EDEE4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 317d45f2fb9b405337e0b41d626057dca752440a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f6d255e9af64d316ac76eab92a73cc1c90b82956
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757318"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019546"
 ---
-# <a name="troubleshooting"></a>Risoluzione dei problemi
+# <a name="troubleshooting"></a>Troubleshooting
 
 _I documenti in questa sezione riguardano le funzionalità specifiche per la risoluzione dei problemi con Android._
 

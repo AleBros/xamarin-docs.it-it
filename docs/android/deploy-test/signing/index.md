@@ -4,15 +4,15 @@ description: Come firmare il pacchetto dell'applicazione Android (APK) per la pu
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: 0a60031481f16a3a600cca090d39ec47cbb8ca9a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b646893d8bbe63aa537c973c90552e0367735e47
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756051"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021211"
 ---
 # <a name="signing-the-android-application-package"></a>Firma del pacchetto dell'applicazione Android
 
@@ -129,7 +129,7 @@ La finestra di dialogo **Pubblica come ad hoc** visualizza un riepilogo dell'app
 
 [![Pubblica come ad hoc](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
-La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Save**.
+La finestra di dialogo **File APK di output** salva il pacchetto APK nel percorso specificato. Fare clic su **Salva**.
 
 ![Finestra di dialogo File APK di output](images/xs/06-output-apk-file.png)
 
@@ -149,6 +149,6 @@ Finder si aprirà in corrispondenza del percorso del file APK firmato:
 
 -----
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Dopo che il pacchetto dell'applicazione è stato firmato per il rilascio, deve essere pubblicato. Le sezioni seguenti descrivono diversi modi per pubblicare un'applicazione.

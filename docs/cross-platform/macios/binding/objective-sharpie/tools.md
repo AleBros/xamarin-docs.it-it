@@ -3,15 +3,15 @@ title: Comandi & per gli strumenti di Sharpie
 description: Questo documento fornisce una panoramica degli strumenti inclusi con Objective Sharpie e gli argomenti della riga di comando da usare con essi.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2015
-ms.openlocfilehash: 13f3000315e91cec7ff2422cff3b520997ba26fd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2179154aa6dc78a8b0b6b418d780e7996f8e557d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280915"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015930"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Comandi & per gli strumenti di Sharpie
 
@@ -51,16 +51,16 @@ Available Tools:
 
 L'obiettivo Sharpie fornisce gli strumenti seguenti:
 
-|Strumento|DESCRIZIONE|
+|Strumento|Descrizione|
 |--- |--- |
-|**xcode**|Fornisce informazioni sull'installazione corrente di Xcode e sulle versioni di iOS e Mac SDK disponibili. Queste informazioni verranno usate in un secondo momento durante la generazione dei binding.|
-|**pod**|Consente di cercare, configurare, installare (in una directory locale) e di associare le librerie [CocoaPod](https://cocoapods.org/) di Objective-C disponibili dal repository delle specifiche master. Questo strumento valuta la CocoaPod installata per dedurre automaticamente l'input corretto da passare allo `bind` strumento riportato di seguito. Novità in 3,0!|
+|**Xcode**|Fornisce informazioni sull'installazione corrente di Xcode e sulle versioni di iOS e Mac SDK disponibili. Queste informazioni verranno usate in un secondo momento durante la generazione dei binding.|
+|**Pod**|Consente di cercare, configurare, installare (in una directory locale) e di associare le librerie [CocoaPod](https://cocoapods.org/) di Objective-C disponibili dal repository delle specifiche master. Questo strumento valuta la CocoaPod installata per dedurre automaticamente l'input corretto da passare allo strumento `bind` riportato di seguito. Novità in 3,0!|
 |**bind**|Analizza i file di intestazione (`*.h`) nella libreria Objective-C nei file [ApiDefinition.cs e StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) iniziali.|
 |**update**|Verifica la presenza di versioni più recenti di Objective Sharpie e Scarica e avvia il programma di installazione, se disponibile.|
-|**verify-docs**|Mostra informazioni dettagliate sugli `[Verify]` attributi.|
+|**Verify-docs**|Mostra informazioni dettagliate sugli attributi `[Verify]`.|
 |**docs**|Passa a questo documento nel Web browser predefinito.|
 
-Per ottenere informazioni sulla guida su uno specifico strumento di Sharpie, immettere il nome dello strumento e `-help` l'opzione. Ad esempio, `sharpie xcode -help` restituisce l'output seguente:
+Per ottenere informazioni sulla guida su uno specifico strumento di Sharpie, immettere il nome dello strumento e l'opzione `-help`. Ad esempio, `sharpie xcode -help` restituisce l'output seguente:
 
 ```
 $ sharpie xcode -help
@@ -74,7 +74,7 @@ Xcode Options:
   -sdks            List all available Xcode SDKs. Pass -verbose for more details.
 ```
 
-Prima di poter avviare il processo di associazione, è necessario ottenere informazioni sugli SDK installati correnti immettendo il comando seguente nel terminale `sharpie xcode -sdks`. L'output può variare a seconda della versione o delle versioni di Xcode installate. L'obiettivo Sharpie cerca gli SDK installati in `Xcode*.app` qualsiasi sotto `/Applications` la directory:
+Prima di poter avviare il processo di associazione, è necessario ottenere informazioni sugli SDK installati correnti immettendo il comando seguente nel `sharpie xcode -sdks`di terminale. L'output può variare a seconda della versione o delle versioni di Xcode installate. L'obiettivo Sharpie cerca gli SDK installati in qualsiasi `Xcode*.app` nella directory `/Applications`:
 
 ```
 $ sharpie xcode -sdks
@@ -87,4 +87,4 @@ sdk: macosx10.10     arch: x86_64  i386
 sdk: watchos2.0      arch: armv7
 ```
 
-Dal precedente è possibile vedere che l'SDK è installato nel `iphoneos9.1` computer e `arm64` il supporto per l'architettura. Questo valore verrà usato per tutti gli esempi in questa sezione. Con queste informazioni, è possibile analizzare i file di intestazione della libreria Objective-C nell'oggetto iniziale `ApiDefinition.cs` e `StructsAndEnums.cs` per il progetto di associazione.
+Dal precedente, si noterà che il `iphoneos9.1` SDK è installato nel computer e che ha `arm64` supporto per l'architettura. Questo valore verrà usato per tutti gli esempi in questa sezione. Con queste informazioni, è possibile analizzare i file di intestazione della libreria Objective-C nel `ApiDefinition.cs` iniziale e `StructsAndEnums.cs` per il progetto di associazione.

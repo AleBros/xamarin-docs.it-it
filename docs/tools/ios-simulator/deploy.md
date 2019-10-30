@@ -3,16 +3,16 @@ title: Distribuzione nel simulatore iOS remoto
 description: Come eseguire la distribuzione nel simulatore iOS remoto da Visual Studio 2017 in Windows.
 ms.prod: xamarin
 ms.assetid: C213E293-61B1-4D1E-BDE9-E664667698D4
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: f45df6dc07246fad0e43b3fcd9a4a23a72ff142b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 81a40b9a21bdb9b33173416aed335ac75af9f388
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198735"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73006322"
 ---
 # <a name="deploy-to-the-remoted-ios-simulator"></a>Eseguire la distribuzione nel simulatore iOS remoto
 

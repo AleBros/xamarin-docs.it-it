@@ -3,15 +3,15 @@ title: Introduzione alle librerie di classi portabili (PCL)
 description: In questo articolo vengono presentati i progetti libreria di classi portabile (PCL) e vengono illustrati i passaggi per la creazione e l'utilizzo di progetti PCL in Visual Studio per Mac e Visual Studio.
 ms.prod: xamarin
 ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: a4ee81f7d59c9fb680dfd371a7aaba7660fb3343
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 1684bddaf5b418f63abc7ee528f646f7795396d8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68681066"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016735"
 ---
 # <a name="portable-class-libraries-pcl"></a>Librerie di classi portabili
 
@@ -54,7 +54,7 @@ Sono inclusi i profili che sono combinazioni di:
 - Windows Phone 8
 - App UWP
 
-Per altre informazioni sulle funzionalità dei diversi profili, vedere il [sito Web di Microsoft](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) e vedere il riepilogo del [profilo PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) di un altro membro della community, che include informazioni del Framework supportate e altre note.
+Per altre informazioni sulle funzionalità dei diversi profili, vedere il [sito Web di Microsoft](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) e vedere il riepilogo del [profilo PCL](https://portablelibraryprofiles.stephencleary.com/) di un altro membro della community, che include informazioni del Framework supportate e altre note.
 
 **Vantaggi**
 
@@ -100,7 +100,7 @@ Il PCL è ora pronto per l'aggiunta del codice. È anche possibile farvi riferim
 
 Per visualizzare e modificare le impostazioni di PCL per questo progetto, fare clic con il pulsante destro del mouse sul progetto e scegliere **opzioni > compila > generale** per visualizzare la schermata riportata di seguito:
 
-[![PCL le opzioni del progetto per impostare il profilo](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
+[![opzioni del progetto PCL per impostare il profilo](pcl-images/image4-sml.png)](pcl-images/image4.png#lightbox)
 
 Fare clic su **Cambia..** . per modificare il profilo di destinazione per la libreria di classi portabile.
 
@@ -110,11 +110,11 @@ Se il profilo viene modificato dopo che il codice è già stato aggiunto alla PC
 
 Quando il codice viene scritto in una libreria di librerie di classi portabili, l'editor di Visual Studio per Mac rileverà le limitazioni del profilo selezionato e modificherà di conseguenza le opzioni di completamento automatico. Questo screenshot, ad esempio, Mostra le opzioni di completamento automatico per System.IO usando il profilo predefinito (Profile136) usato nella Visual Studio per Mac: si noti la barra di scorrimento che indica circa la metà delle classi disponibili. in effetti, sono presenti solo 14 classi disponibili).
 
-[![Intellisense elenco di 14 classi nella classe System.IO di una libreria di classi portabile](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
+[![elenco IntelliSense di 14 classi nella classe System.IO di una libreria di classi portabile](pcl-images/image6.png)](pcl-images/image6.png#lightbox)
 
 Confrontare con il completamento automatico di System.IO in un progetto Novell. iOS o Novell. Android. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
 
-[![Intellisense elenco di classi 40 nello spazio dei nomi .NET Framework System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
+[![elenco IntelliSense di classi 40 nello spazio dei nomi .NET Framework System.IO](pcl-images/image7.png)](pcl-images/image7.png#lightbox)
 
 Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibilità di condividere il codice senza interruzioni in molte piattaforme significa che alcune API non sono disponibili perché non hanno implementazioni confrontabili in tutte le piattaforme possibili.
 
@@ -122,11 +122,11 @@ Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibi
 
 Una volta creato un progetto di libreria di classi portabile, è possibile aggiungere un riferimento a esso da qualsiasi applicazione o progetto di libreria compatibile nello stesso modo in cui si aggiungono in genere i riferimenti. In Visual Studio per Mac fare clic con il pulsante destro del mouse sul nodo riferimenti e scegliere **modifica riferimenti...** quindi passare alla scheda **progetti** come illustrato:
 
-[![Add un riferimento a una libreria di classi portabile tramite l'opzione modifica riferimenti](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
+[![aggiungere un riferimento a una libreria di classi portabile tramite l'opzione modifica riferimenti](pcl-images/image8.png)](pcl-images/image8.png#lightbox)
 
 Lo screenshot seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Novell. iOS.
 
-[![TaskyPortable soluzione di esempio che mostra il progetto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
+[![soluzione di esempio TaskyPortable che mostra il progetto PCL](pcl-images/image9.png)](pcl-images/image9.png#lightbox)
 
 L'output di una libreria di classi portabile (ad esempio, la DLL di assembly risultante) può essere aggiunto anche come riferimento alla maggior parte dei progetti. Questo rende la libreria di classi portabile una soluzione ideale per la distribuzione di componenti e librerie multipiattaforma.
 
@@ -159,7 +159,7 @@ Il PCL è ora pronto per l'aggiunta del codice. È anche possibile farvi riferim
 
 Le impostazioni di PCL possono essere visualizzate e modificate facendo clic con il pulsante destro del mouse sul progetto e scegliendo **proprietà > libreria** , come illustrato nello screenshot seguente:
 
-[![Edit le destinazioni della piattaforma](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
+[![modificare le destinazioni della piattaforma](pcl-images/image13-sml.png)](pcl-images/image13.png#lightbox)
 
 Se il profilo viene modificato dopo che il codice è già stato aggiunto alla PCL, è possibile che la libreria non venga più compilata se il codice fa riferimento a funzionalità che non fanno parte del profilo appena selezionato.
 
@@ -170,11 +170,11 @@ Se il profilo viene modificato dopo che il codice è già stato aggiunto alla PC
 
 Quando il codice viene scritto in una libreria PCL, Visual Studio riconosce le limitazioni del profilo selezionato e modifica di conseguenza le opzioni di IntelliSense. Questo screenshot, ad esempio, Mostra le opzioni di completamento automatico per System.IO usando il profilo predefinito (Profile136). si noti la barra di scorrimento che indica circa la metà delle classi disponibili. in realtà, sono disponibili solo 14 classi.
 
-[![Reduced numero di classi IO disponibili in una libreria di classi portabile](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
+[![ridotto numero di classi IO disponibili in una libreria di classi portabile](pcl-images/image14.png)](pcl-images/image14.png#lightbox)
 
 Confrontare con il completamento automatico di System.IO in un progetto normale. sono disponibili 40 classi, tra cui classi di uso comune come `File` e `Directory` che non si trovano in alcun profilo PCL.
 
-[![Many più classi di i/o disponibili nell'.NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
+[![molte più classi di i/o disponibili nell'.NET Framework](pcl-images/image15.png)](pcl-images/image15.png#lightbox)
 
 Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibilità di condividere il codice senza interruzioni in molte piattaforme significa che alcune API non sono disponibili perché non hanno implementazioni confrontabili in tutte le piattaforme possibili.
 
@@ -185,11 +185,11 @@ Questo rispecchia il compromesso sottostante rispetto all'uso di PCL: la possibi
 
 Una volta creato un progetto di libreria di classi portabile, è possibile aggiungere un riferimento a esso da qualsiasi applicazione o progetto di libreria compatibile nello stesso modo in cui si aggiungono in genere i riferimenti. In Visual Studio fare clic con il pulsante destro del mouse sul nodo riferimenti e scegliere `Add Reference...` quindi passare alla scheda **progetti > soluzione** , come illustrato di seguito:
 
-[![Add un riferimento a una libreria di classi portabile tramite la scheda Aggiungi progetti di riferimento](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
+[![aggiungere un riferimento a una libreria di classi portabile tramite la scheda Aggiungi progetti di riferimento](pcl-images/image16.png)](pcl-images/image16.png#lightbox)
 
 La schermata seguente mostra il riquadro della soluzione per l'app di esempio TaskyPortable, che mostra la libreria PCL nella parte inferiore e un riferimento a tale libreria PCL nel progetto Novell. iOS.
 
-[![TaskyPortable soluzione di esempio che mostra una libreria PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
+[![soluzione di esempio TaskyPortable che mostra una libreria PCL](pcl-images/image17.png)](pcl-images/image17.png#lightbox)
 
 L'output di una libreria di classi portabile (ad esempio, la DLL di assembly risultante) può essere aggiunto anche come riferimento alla maggior parte dei progetti.
 Questo rende la libreria di classi portabile una soluzione ideale per la distribuzione di componenti e librerie multipiattaforma.

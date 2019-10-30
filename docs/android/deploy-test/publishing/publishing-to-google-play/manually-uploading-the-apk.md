@@ -3,15 +3,15 @@ title: Caricamento manuale dell'APK
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b5b7a416cf67c217862987e7fa29bfb6a9692642
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756062"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021258"
 ---
 # <a name="manually-uploading-the-apk"></a>Caricamento manuale dell'APK
 
@@ -88,7 +88,7 @@ Fare clic su **Classificazione dei contenuti**  in **Google Play Developer Conso
 
 [![Sezione di classificazione del contenuto](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
-Tutte le applicazioni in Google Play devono essere classificate in base al sistema di classificazione di Google Play. Oltre alla classificazione del contenuto, tutte le applicazioni devono essere conformi alle [norme relative al contenuto per gli sviluppatori](http://www.android.com/us/developer-content-policy.html) di Google.
+Tutte le applicazioni in Google Play devono essere classificate in base al sistema di classificazione di Google Play. Oltre alla classificazione del contenuto, tutte le applicazioni devono essere conformi alle [norme relative al contenuto per gli sviluppatori](https://www.android.com/us/developer-content-policy.html) di Google.
 
 Di seguito sono elencati i quattro livelli del sistema di classificazione di Google Play e sono riportate alcune linee guida relative alle funzionalità o ai contenuti che richiedono o forzano il livello di classificazione: 
 
@@ -131,7 +131,7 @@ Dopo questa sezione è possibile selezionare opzioni aggiuntive, ad esempio sceg
 ### <a name="consent"></a>Consenso
 
 Nella parte inferiore della pagina di **prezzi &amp; distribuzione** è visualizzata la sezione **CONSENSO**.
-La sezione è obbligatoria e viene usata per dichiarare che l'applicazione soddisfa le [linee guida di Android per i contenuti](http://www.android.com/market/terms/developer-content-policy.html#hl=us) e riconoscere che l'applicazione è soggetta alle leggi sull'esportazione degli Stati Uniti:
+La sezione è obbligatoria e viene usata per dichiarare che l'applicazione soddisfa le [linee guida di Android per i contenuti](https://www.android.com/market/terms/developer-content-policy.html#hl=us) e riconoscere che l'applicazione è soggetta alle leggi sull'esportazione degli Stati Uniti:
 
 [![Sezione Consenso](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
@@ -152,17 +152,17 @@ Quando gli utenti cercano le applicazioni sul sito Web di Google Play sono in gr
 - [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) &ndash; Google Play usa gli attributi per determinare se un'applicazione può essere distribuita a un dispositivo in base alle dimensioni dello schermo. 
     Google Play presuppone che Android sia in grado di adattare un layout più piccolo a schermi più grandi, ma non viceversa. Quindi, un'applicazione che dichiara il supporto per gli schermi normali apparirà nelle ricerche di schermi grandi ma non di schermi piccoli. Se un'applicazione Xamarin.Android non specifica un elemento `<supports-screen>` nel file manifesto, Google Play presuppone che tutti gli attributi abbiano un valore true e che l'applicazione supporti tutte le dimensioni dello schermo. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente. 
 
-- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; Questo elemento del manifesto viene usato per richiedere determinate funzionalità hardware, ad esempio il tipo di tastiera, i dispositivi di navigazione, un touchscreen e così via. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente. 
+- [USA-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; questo elemento manifesto viene usato per richiedere determinate funzionalità hardware, ad esempio il tipo di tastiera, i dispositivi di navigazione, un touchscreen e così via. Questo elemento deve essere aggiunto manualmente a **file AndroidManifest. XML** . 
 
 - [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; Questo elemento del manifesto dichiara le funzionalità hardware o software che un dispositivo deve avere affinché l'applicazione funzioni. Questo attributo è solo informativo. Google Play non visualizzerà l'applicazione nei dispositivi che non soddisfano questo filtro. È comunque possibile scaricare l'applicazione o installarla manualmente. Questo elemento deve essere aggiunto al file **AndroidManifest.xml** manualmente. 
 
-- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Questo elemento specifica che determinate librerie devono essere presenti nel dispositivo, ad esempio Google Maps. Questo elemento può anche essere specificato con `Android.App.UsesLibraryAttribute`. Ad esempio: 
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; Questo elemento specifica che determinate librerie devono essere presenti nel dispositivo, ad esempio Google Maps. Questo elemento può anche essere specificato con `Android.App.UsesLibraryAttribute`. Esempio: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
-- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; Questo elemento viene usato per dedurre determinate funzionalità hardware necessarie per l'esecuzione dell'applicazione che non sono state dichiarate correttamente con un elemento `<uses-feature>`. Ad esempio, se un'applicazione richiede l'autorizzazione per usare la fotocamera, Google Play presuppone che i dispositivi devono avere una fotocamera, anche se non è presente un elemento `<uses-feature>` che dichiara la fotocamera. Questo elemento può essere impostato con `Android.App.UsesPermissionsAttribute`. Ad esempio: 
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; Questo elemento viene usato per dedurre determinate funzionalità hardware necessarie per l'esecuzione dell'applicazione che non sono state dichiarate correttamente con un elemento `<uses-feature>`. Ad esempio, se un'applicazione richiede l'autorizzazione per usare la fotocamera, Google Play presuppone che i dispositivi devono avere una fotocamera, anche se non è presente un elemento `<uses-feature>` che dichiara la fotocamera. Questo elemento può essere impostato con `Android.App.UsesPermissionsAttribute`. Esempio: 
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]

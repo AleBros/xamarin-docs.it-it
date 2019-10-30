@@ -4,15 +4,15 @@ description: Questo articolo illustra come usare le mappe e il percorso con Nove
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 194f82757b0b4cb5e148e06d4303dc0d22afb9b3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d877f415bb96024bb41edc2be9aec108ae248e88
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761714"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020037"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Come usare Google Maps e il percorso con Novell. Android
 
@@ -31,8 +31,8 @@ In primo luogo, spiegano come sfruttare le mappe predefinite di Android e come v
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MapsAndLocationDemo_v3 (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
+- [MapsAndLocationDemo_v3 (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)
 - [Ciclo di vita dell'attività](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Ottenere una chiave API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Elenco Intent: Richiamo di applicazioni Google su dispositivi Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Elenco Intent: richiamo di applicazioni Google su dispositivi Android](https://developer.android.com/guide/appendix/g-app-intents.html)
 - [Località e mappe](https://developer.android.com/guide/topics/location/index.html)

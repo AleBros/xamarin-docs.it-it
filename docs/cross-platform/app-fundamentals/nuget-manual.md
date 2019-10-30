@@ -3,15 +3,15 @@ title: Creazione manuale di pacchetti NuGet per Novell
 description: Questo documento contiene suggerimenti per la creazione di pacchetti NuGet destinati alla piattaforma Novell. Vengono descritti i profili Novell del pacchetto NuGet, NuGet PCL con dipendenze della piattaforma e collegamenti a diversi esempi Open Source.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289195"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016771"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creazione manuale di pacchetti NuGet per Novell
 
@@ -26,7 +26,7 @@ Il sito Web NuGet che [supporta più versioni e profili di .NET Framework](https
 
 I principali framework di destinazione Novell attualmente in uso sono i seguenti:
 
-- **MonoAndroid** - Xamarin.Android
+- **Monoandroid** -Novell. Android
 - **Novell. iOS** -Novell. iOS [API unificata](~/cross-platform/macios/unified/index.md) (supporta 64 bit)
 - **Novell. Mac** : profilo mobile di Novell. Mac, equivalente alla superficie dell'API Novell. iOS e Novell. Android.
 
@@ -51,7 +51,7 @@ La maggior parte dei file con **estensione NuSpec** specifica il numero di versi
 
 È possibile specificare la versione con un set di numeri senza un separatore decimale oppure è possibile specificarla usando i punti decimali. Senza il separatore decimale, NuGet accetta solo ogni numero e lo trasforma in una versione inserendo un carattere ' .' tra le cifre.
 
-Nella sezione precedente "MonoAndroid10" significa "Android 1,0". Questo significa solo che il [Framework di destinazione](~/android/app-fundamentals/android-api-levels.md) del progetto deve essere monoandroid versione 1,0 o successiva. La versione viene specificata nell' `<TargetFrameworkVersion>` elemento del file di progetto.
+Nella sezione precedente "MonoAndroid10" significa "Android 1,0". Questo significa solo che il [Framework di destinazione](~/android/app-fundamentals/android-api-levels.md) del progetto deve essere monoandroid versione 1,0 o successiva. La versione viene specificata nell'elemento `<TargetFrameworkVersion>` nel file di progetto.
 
 Per chiarire:
 
@@ -63,11 +63,11 @@ Per chiarire:
 
 I profili PCL sono limitati alle API .NET Framework a cui possono accedere e certamente non possono accedere al codice specifico della piattaforma. Questi collegamenti di terze parti illustrano diversi approcci per la creazione di pacchetti NuGet che usano le API PCL e native per garantire la compatibilità per Novell e altre piattaforme:
 
-- [Come usare le librerie di classi portabili](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [Il trucco per le esche e le opzioni PCL](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Creazione di una PCL NuGet che funziona con Novell. iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Come usare le librerie di classi portabili](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [Il trucco per le esche e le opzioni PCL](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Creazione di una PCL NuGet che funziona con Novell. iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-Questo [elenco esterno dei profili PCL con il nome di destinazione NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) è anche un utile riferimento.
+Questo [elenco esterno dei profili PCL con il nome di destinazione NuGet](https://portablelibraryprofiles.stephencleary.com) è anche un utile riferimento.
 
 ## <a name="examples"></a>Esempi
 

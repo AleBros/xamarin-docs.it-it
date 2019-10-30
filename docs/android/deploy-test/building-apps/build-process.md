@@ -3,15 +3,15 @@ title: Processo di compilazione
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2019
-ms.openlocfilehash: 45d57f818fc6d90cb712b9f43ef815d44059ea68
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 06e40fce69ee6d614bcf27bd563d9452595bd6ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021376"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028143"
 ---
 # <a name="build-process"></a>Processo di compilazione
 
@@ -73,7 +73,7 @@ Per i progetti Xamarin.Android vengono definite le destinazioni di compilazione 
 
 ## <a name="build-extension-points"></a>Punti di estensione di compilazione
 
-Il sistema di compilazione Xamarin.Android espone alcuni punti di estensione pubblici per gli utenti che desiderano eseguire l'hook nel processo di compilazione. Per usare uno di questi punti di estensione, sarà necessario aggiungere la destinazione personalizzata alla proprietà MSBuild appropriata in un `PropertyGroup`. Ad esempio:
+Il sistema di compilazione Xamarin.Android espone alcuni punti di estensione pubblici per gli utenti che desiderano eseguire l'hook nel processo di compilazione. Per usare uno di questi punti di estensione, sarà necessario aggiungere la destinazione personalizzata alla proprietà MSBuild appropriata in un `PropertyGroup`. Esempio:
 
 ```xml
 <PropertyGroup>
@@ -84,7 +84,7 @@ Il sistema di compilazione Xamarin.Android espone alcuni punti di estensione pub
 </PropertyGroup>
 ```
 
-È importante fare attenzione a quanto segue per l'estensione del processo di compilazione: Se non vengono scritte correttamente, le estensioni di compilazione possono influire sulle prestazioni di compilazione, soprattutto se vengono eseguite in ogni compilazione. È consigliabile leggere la [documentazione](https://docs.microsoft.com/visualstudio/msbuild/msbuild) di MSBuild prima di implementare tali estensioni.
+Una precisazione sull'estensione del processo di compilazione: se non è scritto correttamente, le estensioni di compilazione possono influire sulle prestazioni di compilazione, soprattutto se vengono eseguite in ogni compilazione. È consigliabile leggere la [documentazione](https://docs.microsoft.com/visualstudio/msbuild/msbuild) di MSBuild prima di implementare tali estensioni.
 
 - **AfterGenerateAndroidManifest** &ndash; Le destinazioni elencate in questa proprietà vengono eseguite immediatamente dopo la destinazione `_GenerateJavaStubs` interna. Questa è la posizione in cui viene generato il file `AndroidManifest.xml` in `$(IntermediateOutputPath)`. Se si vogliono apportare modifiche al file `AndroidManifest.xml` generato, quindi, è possibile farlo usando questo punto di estensione.
 
@@ -173,7 +173,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
 - **AndroidEnableDesugar** &ndash; Proprietà booleana che determina se `desugar` è abilitato. Android attualmente non supporta tutte le funzionalità di Java 8 e la toolchain predefinita implementa nuove funzionalità del linguaggio eseguendo trasformazioni del bytecode, chiamate `desugar`, nell'output del compilatore `javac`. Il valore predefinito è `False` se si usa `AndroidDexTool=dx` e `True` se si usa `AndroidDexTool=d8`.
 
-- **AndroidEnableGooglePlayStoreChecks** &ndash; Proprietà bool che consente agli sviluppatori di disabilitare i controlli di Google Play Store seguenti: XA1004, XA1005 e XA1006. Questa operazione è utile per gli sviluppatori che non usano come destinazione Google Play Store e non vogliono eseguire tali controlli.
+- **AndroidEnableGooglePlayStoreChecks** &ndash; una proprietà bool che consente agli sviluppatori di disabilitare i controlli Google Play Store seguenti: XA1004, XA1005 e XA1006. Questa operazione è utile per gli sviluppatori che non usano come destinazione Google Play Store e non vogliono eseguire tali controlli.
 
   Aggiunta in Xamarin.Android 9.4.
 
@@ -232,7 +232,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
   Per impostazione predefinita, il valore della proprietà è `True`.
 
-- **AndroidFastDeploymentType**: elenco di valori separati da `:` (due punti) che consente di controllare quali tipi possono essere distribuiti nella [directory Fast Deployment](#Fast_Deployment) sul dispositivo di destinazione quando la proprietà MSBuild `$(EmbedAssembliesIntoApk)` è `False`. Se una risorsa viene distribuita con Fast Deployment, *non* viene incorporata nel file `.apk` generato, con la possibilità di accelerare i tempi di distribuzione. Maggiore è la velocità di distribuzione, meno spesso sarà necessario ricompilare il file `.apk` e il processo di installazione potrà essere più rapido. I valori validi includono:
+- **AndroidFastDeploymentType**: elenco di valori separati da `:` (due punti) che consente di controllare quali tipi possono essere distribuiti nella [directory Fast Deployment](#Fast_Deployment) sul dispositivo di destinazione quando la proprietà MSBuild `$(EmbedAssembliesIntoApk)` è `False`. Se una risorsa viene distribuita con Fast Deployment, *non* viene incorporata nel file `.apk` generato, con la possibilità di accelerare i tempi di distribuzione. (Maggiore è la distribuzione veloce, minore è la frequenza con cui è necessario ricompilare il `.apk` e il processo di installazione può essere più veloce). I valori validi includono:
 
   - `Assemblies`: distribuisce gli assembly dell'applicazione.
 
@@ -261,7 +261,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
 - **AndroidGenerateJniMarshalMethodsAdditionalArguments** &ndash; Proprietà stringa che può essere usata per aggiungere altri parametri alla chiamata di `jnimarshalmethod-gen.exe`.  Questo è utile per il debug, poiché si possono usare opzioni come `-v`, `-d` o `--keeptemp`.
 
-  Il valore predefinito è una stringa vuota. Può essere impostato nel file csproj o nella riga di comando. Ad esempio:
+  Il valore predefinito è una stringa vuota. Può essere impostato nel file csproj o nella riga di comando. Esempio:
 
   ```xml
   <AndroidGenerateJniMarshalMethodsAdditionalArguments>-v -d --keeptemp</AndroidGenerateJniMarshalMethodsAdditionalArguments>
@@ -278,27 +278,27 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 - **AndroidHttpClientHandlerType** &ndash; Controlla l'implementazione predefinita di `System.Net.Http.HttpMessageHandler` che verrà usata dal costruttore predefinito `System.Net.Http.HttpClient`. Il valore è un nome di tipo qualificato dall'assembly di una sottoclasse `HttpMessageHandler`, adatta per l'uso con [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
   I valori più comuni per questa proprietà sono:
 
-  - `Xamarin.Android.Net.AndroidClientHandler`: Usare le API Java Android per eseguire richieste di rete. Ciò consente l'accesso agli URL TLS 1.2 quando la versione di Android sottostante supporta TLS 1.2. Solo Android 5.0 e versioni successive offrono un supporto affidabile di TLS 1.2 tramite Java.
+  - `Xamarin.Android.Net.AndroidClientHandler`: usare le API Java Android per eseguire richieste di rete. Ciò consente l'accesso agli URL TLS 1.2 quando la versione di Android sottostante supporta TLS 1.2. Solo Android 5.0 e versioni successive offrono un supporto affidabile di TLS 1.2 tramite Java.
 
     Corrisponde all'opzione **Android** nelle pagine delle proprietà di Visual Studio e all'opzione **AndroidClientHandler** nelle pagine delle proprietà Visual Studio per Mac.
 
     La creazione guidata nuovo progetto seleziona questa opzione per i nuovi progetti quando l'opzione **Versione minima di Android** viene impostata su **Android 5.0 (Lollipop)** o versioni successive in Visual Studio o quando l'opzione **Piattaforme di destinazione** viene impostata su **Più recente e migliore** in Visual Studio per Mac.
 
-  - Non impostato/stringa vuota: Ciò equivale a `System.Net.Http.HttpClientHandler, System.Net.Http`
+  - Non impostato/stringa vuota: equivale a `System.Net.Http.HttpClientHandler, System.Net.Http`
 
     Corrisponde all'opzione **Predefinito** nelle pagine delle proprietà di Visual Studio.
 
     La creazione guidata nuovo progetto seleziona questa opzione per i nuovi progetti quando l'opzione **Versione minima di Android** viene impostata su **Android 4.4.87** o versioni precedenti in Visual Studio o quando l'opzione **Piattaforme di destinazione** viene impostata su **Sviluppo moderno** o **Compatibilità massima** in Visual Studio per Mac.
 
-  - `System.Net.Http.HttpClientHandler, System.Net.Http`: Usare l'oggetto `HttpMessageHandler` gestito.
+  - `System.Net.Http.HttpClientHandler, System.Net.Http`: usare il `HttpMessageHandler`gestito.
 
     Corrisponde all'opzione **Gestito** nelle pagine delle proprietà di Visual Studio.
 
   > [!NOTE]
-  > se è richiesto il supporto di TLS 1.2 nelle versioni di Android precedenti alla 5.0 `System.Net.WebClient`oppure`$(AndroidTlsProvider)` se è richiesto il supporto di TLS 1.2 con  e le API correlate, è necessario usare .
+  > Se è richiesto il supporto di TLS 1,2 nelle versioni di Android precedenti alla 5,0 *o* se è richiesto il supporto di TLS 1,2 con la `System.Net.WebClient` e le API correlate, è necessario usare `$(AndroidTlsProvider)`.
 
   > [!NOTE]
-  > il supporto per questa proprietà funziona impostando la ](~/android/deploy-test/environment.md)variabile di ambiente `XA_HTTP_CLIENT_HANDLER_TYPE`.
+  > Il supporto per questa proprietà funziona impostando la [variabile di ambiente`XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
   > Un eventuale valore `$XA_HTTP_CLIENT_HANDLER_TYPE` trovato in un file con un'azione di compilazione `@(AndroidEnvironment)` avrà la precedenza.
 
   Aggiunto in Xamarin.Android 6.1.
@@ -394,9 +394,9 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
   - `arm64-v8a`: richiede Xamarin.Android 5.1 e versioni successive.
   - `x86_64`: richiede Xamarin.Android 5.1 e versioni successive.
 
-- **AndroidTlsProvider**: valore di stringa che specifica il provider TLS da usare in un'applicazione. I valori possibili sono:
+- **AndroidTlsProvider**: valore di stringa che specifica il provider TLS da usare in un'applicazione. I possibili valori sono:
 
-  - Non impostato/stringa vuota: In Xamarin.Android 7.3 e versioni successive, equivale a `btls`.
+  - Non impostato/stringa vuota: in Novell. Android 7,3 e versioni successive, equivale a `btls`.
 
     in Xamarin.Android 7.1 equivale a `legacy`.
 
@@ -412,7 +412,7 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
     Corrisponde all'impostazione **TLS 1.0 gestito** nelle pagine delle proprietà di Visual Studio.
 
-  - `default`: È improbabile che questo valore venga usato nei progetti Xamarin.Android. Il valore consigliato da usare è invece la stringa vuota, che corrisponde all'impostazione **Predefinito** nelle pagine delle proprietà di Visual Studio.
+  - `default`: è improbabile che questo valore venga usato nei progetti Novell. Android. Il valore consigliato da usare è invece la stringa vuota, che corrisponde all'impostazione **Predefinito** nelle pagine delle proprietà di Visual Studio.
 
     Il valore `default` non è disponibile nelle pagine delle proprietà di Visual Studio.
 
@@ -524,11 +524,11 @@ Anche le [proprietà di firma](#Signing_Properties) sono rilevanti quando si cre
 
   - **MidEast**: include le codifiche per il Medio Oriente, ad esempio *Turco (Windows)* \[iso-8859-9, CP1254\], *Ebraico (Windows)* \[windows-1255, CP1255\], *Arabo (Windows)* \[windows-1256, CP1256\], *Arabo (ISO)* \[iso-8859-6, CP28596\], *Ebraico (ISO)* \[iso-8859-8, CP28598\], *Latino 5 (ISO)* \[iso-8859-9, CP28599\] ed *Ebraico (ISO alternativo)* \[iso-8859-8, CP38598\].
 
-  - **Other**: include le altre codifiche, ad esempio *Cirillico (Windows)* \[CP1251\], *Baltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirillico (KOI8-R)* \[koi8-r, CP1251\], *Ucraino (KOI8-U)* \[koi8-u, CP1251\], *Baltico (ISO)* \[iso-8859-4, CP1257\], *Cirillico (ISO)* \[iso-8859-5, CP1251\], *ISCII Devanagari* \[x-iscii-de, CP57002\], *ISCII Bengali* \[x-iscii-be, CP57003\], *ISCII Tamil* \[x-iscii-ta, CP57004\], *ISCII Telugu* \[x-iscii-te, CP57005\], *ISCII Assamese* \[x-iscii-as, CP57006\], *ISCII Oriya* \[x-iscii-or, CP57007\], *ISCII Kannada* \[x-iscii-ka, CP57008\], *ISCII Malayalam* \[x-iscii-ma, CP57009\], *ISCII Gujarati* \[x-iscii-gu, CP57010\], *ISCII Punjabi* \[x-iscii-pa, CP57011\] e *Thai (Windows)* \[CP874\].
+  - **Altro**: includere altre codifiche, ad esempio *cirillico (Windows)* \[CP1251\], *Baltico (windows)* \[ISO-8859-4, CP1257\], *vietnamita (Windows)* \[CP1258\], *alfabeto cirillico ( KOI8-R)* \[KOI8-r, CP1251\], *ucraino (KOI8-u)* \[koi8-u, CP1251\], *baltico (ISO)* \[iso-8859-4, CP1257\], *cirillico (ISO)* \[ISO-8859-5, CP1251 @no__ t_21_, *ISCII Davenagari* \[x-ISCII-de, CP57002\], *ISCII Bengali* \[x-ISCII-be, CP57003\], *ISCII Tamil* \[x-ISCII-TA, CP57004\], *ISCII Telugu* \[x-ISCII-te, CP57005\], *ISCII Assamese* \[x-ISCII-As, CP57006\], *ISCII Oriya* \[x-ISCII-or, CP57007\], *ISCII Kannada* \[x-ISCII-ka, CP57008\], *ISCII Malayalam* \[x-ISCII-ma, CP57009\], *iscii Gujarati* \[x-ISCII-gu, CP57010\], *ISCII Punjabi* \[x-iscii-PA, CP57011\]e *Thai (Windows)* \[CP874 @no_ _t_54_ .
 
-  - **Rare**: include le codifiche rare, ad esempio *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latino 1/Sistema aperto)* \[CP1047\], *IBM EBCDIC (Stati Uniti-Canada-Europa)* \[CP1140\], *IBM EBCDIC (Germania-Europa)* \[CP1141\], *IBM EBCDIC (Danimarca/Norvegia-Europa)* \[CP1142\], *IBM EBCDIC (Finlandia/Svezia-Europa)* \[CP1143\], *IBM EBCDIC (Italia-Europa)* \[CP1144\], *IBM EBCDIC (America Latina/Spagna-Europa)* \[CP1145\], *IBM EBCDIC (Regno Unito-Europa)* \[CP1146\], *IBM EBCDIC (Francia-Europa)* \[CP1147\], *IBM EBCDIC (Internazionale-Europa)* \[CP1148\], *IBM EBCDIC (Islandese-Europa)* \[CP1149\], *IBM EBCDIC (Germania)* \[CP20273\], *IBM EBCDIC (Danimarca/Norvegia)* \[CP20277\], *IBM EBCDIC (Finlandia/Svezia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (America Latina/Spagna)* \[CP20284\], *IBM EBCDIC (Regno Unito)* \[CP20285\], *IBM EBCDIC (Giapponese Katakana esteso)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Arabo)* \[CP20420\], *IBM EBCDIC (Ebraico)* \[CP20424\], *IBM EBCDIC (Islandese)* \[CP20871\], *IBM EBCDIC (Cirillico - Serbo, Bulgaro)* \[CP21025\], *IBM EBCDIC (Stati Uniti-Canada)* \[CP37\], *IBM EBCDIC (Internazionale)* \[CP500\], *Arabo (ASMO 708)* \[CP708\], *Europa centrale (DOS)* \[CP852\] *, Cirillico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europa occidentale (DOS-Europa)* \[CP858\], *Ebraico (DOS)* \[CP862\], *Arabo (DOS)* \[CP864\], *Russo (DOS)* \[CP866\], *Greco (DOS)* \[CP869\], *IBM EBCDIC (Latino 2)* \[CP870\] e *IBM EBCDIC (Greco)* \[CP875\].
+  - **Rare**: Include Rare encodings such as *IBM EBCDIC (Turkish)* \[CP1026\], *IBM EBCDIC (Open Systems Latin 1)* \[CP1047\], *IBM EBCDIC (US-Canada with Euro)* \[CP1140\], *IBM EBCDIC (Germany with Euro)* \[CP1141\], *IBM EBCDIC (Denmark/Norway with Euro)* \[CP1142\], *IBM EBCDIC (Finland/Sweden with Euro)* \[CP1143\], *IBM EBCDIC (Italy with Euro)* \[CP1144\], *IBM EBCDIC (Latin America/Spain with Euro)* \[CP1145\], *IBM EBCDIC (United Kingdom with Euro)* \[CP1146\], *IBM EBCDIC (France with Euro)* \[CP1147\], *IBM EBCDIC (International with Euro)* \[CP1148\], *IBM EBCDIC (Icelandic with Euro)* \[CP1149\], *IBM EBCDIC (Germany)* \[CP20273\], *IBM EBCDIC (Denmark/Norway)* \[CP20277\], *IBM EBCDIC (Finland/Sweden)* \[CP20278\], *IBM EBCDIC (Italy)* \[CP20280\], *IBM EBCDIC (Latin America/Spain)* \[CP20284\], *IBM EBCDIC (United Kingdom)* \[CP20285\], *IBM EBCDIC (Japanese Katakana Extended)* \[CP20290\], *IBM EBCDIC (France)* \[CP20297\], *IBM EBCDIC (Arabic)* \[CP20420\], *IBM EBCDIC (Hebrew)* \[CP20424\], *IBM EBCDIC (Icelandic)* \[CP20871\], *IBM EBCDIC (Cyrillic - Serbian, Bulgarian)* \[CP21025\], *IBM EBCDIC (US-Canada)* \[CP37\], *IBM EBCDIC (International)* \[CP500\], *Arabic (ASMO 708)* \[CP708\], *Central European (DOS)* \[CP852\] *, Cyrillic (DOS)* \[CP855\], *Turkish (DOS)* \[CP857\], *Western European (DOS with Euro)* \[CP858\], *Hebrew (DOS)* \[CP862\], *Arabic (DOS)* \[CP864\], *Russian (DOS)* \[CP866\], *Greek (DOS)* \[CP869\], *IBM EBCDIC (Latin 2)* \[CP870\], and *IBM EBCDIC (Greek)* \[CP875\].
 
-  - **West**: include le codifiche per l'area occidentale, ad esempio *Europa occidentale (Mac)* \[macintosh, CP10000\], *Islandese (Mac)* \[x-mac-icelandic, CP10079\], *Europa centrale (Windows)* \[iso-8859-2, CP1250\], *Europa occidentale (Windows)* \[iso-8859-1, CP1252\], *Greco (Windows)* \[iso-8859-7, CP1253\], *Europa centrale (ISO)* \[iso-8859-2, CP28592\], *Latino 3 (ISO)* \[iso-8859-3, CP28593\], *Greco (ISO)* \[iso-8859-7, CP28597\], *Latino 9 (ISO)* \[iso-8859-15, CP28605\], *OEM Stati Uniti* \[CP437\], *Europa occidentale (DOS)* \[CP850\], *Portoghese (DOS)* \[CP860\], *Islandese (DOS)* \[CP861\], *Francese canadese (DOS)* \[CP863\] e *Nordico (DOS)* \[CP865\].
+  - **Ovest**: Includi codifiche occidentali, ad esempio *Europa occidentale (Mac)* \[Macintosh, CP10000\], *islandese (Mac)* \[x-Mac-islandese, CP10079\], *Europa centrale (Windows)* \[ISO-8859-2 , CP1250\], *Europa occidentale (Windows)* \[iso-8859-1, CP1252\], *greco (Windows)* \[ISO-8859-7, CP1253\], *europa centrale (iso)* \[ISO-8859-2, CP28592\], *Latin 3 (ISO)* \[iso-8859-3, CP28593\], *greco (ISO)* \[ISO-8859-7, CP28597\], *Latin 9 (iso)* \[ISO-8859-15, CP28605\], *OEM Stati Uniti* \[cp437\], *Europa occidentale (DOS)* \[CP850\], *portoghese (DOS)* \[CP860\], *islandese (DOS)* \[CP861\], *francese canadese (DOS)* \[cp863\]e *Nordic (DOS)* \[cp865\].
 
   ```xml
   <MandroidI18n>West</MandroidI18n>
@@ -546,7 +546,7 @@ Le proprietà MSBuild seguenti vengono usate con i [progetti di binding](~/andro
 
 - **AndroidClassParser**: proprietà stringa che controlla come vengono analizzati i file `.jar`. I valori possibili includono:
 
-  - **class-parse**: usa `class-parse.exe` per analizzare direttamente il bytecode Java senza ricorrere a una JVM. Questo valore è sperimentale.
+  - **class-parse**: usa `class-parse.exe` per analizzare direttamente il bytecode Java senza ricorrere a JVM. Questo valore è sperimentale.
 
   - **jar2xml**: usa `jar2xml.jar` per estrarre tipi e membri da un file `.jar` con la reflection Java.
 
@@ -749,7 +749,7 @@ Tutti i file con un'azione di compilazione *AndroidResource* vengono compilati n
 </ItemGroup>
 ```
 
-Gli utenti più avanzati potrebbero aver bisogno di usare risorse diverse a seconda della configurazione, ma con lo stesso percorso effettivo. A questo scopo, è necessario avere più directory di risorse e file con gli stessi percorsi relativi in queste directory diverse e usare condizioni MSBuild per includere in modo condizionale file diversi a seconda della configurazione. Ad esempio:
+Gli utenti più avanzati potrebbero aver bisogno di usare risorse diverse a seconda della configurazione, ma con lo stesso percorso effettivo. A questo scopo, è necessario avere più directory di risorse e file con gli stessi percorsi relativi in queste directory diverse e usare condizioni MSBuild per includere in modo condizionale file diversi a seconda della configurazione. Esempio:
 
 ```xml
 <ItemGroup Condition="'$(Configuration)'!='Debug'">
@@ -776,7 +776,7 @@ Gli utenti più avanzati potrebbero aver bisogno di usare risorse diverse a seco
 </ItemGroup>
 ```
 
-### <a name="content"></a>Content
+### <a name="content"></a>Contenuto
 
 La normale azione di compilazione `Content` non è supportata, perché non è stato determinato come supportarla senza un passaggio per la prima esecuzione probabilmente costoso.
 

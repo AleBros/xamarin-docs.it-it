@@ -3,15 +3,15 @@ title: Riferimenti nativi progetti iOS, Mac e bindings
 description: I riferimenti nativi offrono la possibilità di incorporare un Framework nativo in un progetto Novell. iOS, Novell. Mac o di binding.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b3adfac067964e0a0f169b5d8f8860f34deffe62
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765495"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015610"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Riferimenti nativi nei progetti iOS, Mac e bindings
 
@@ -30,19 +30,19 @@ In iOS 8 (e versioni successive) i **Framework incorporati** possono essere inco
 
 <a name="Static-vs-Dynamic-Frameworks" />
 
-### <a name="static-vs-dynamic-frameworks"></a>Confronto tra statico e Framework dinamici
+### <a name="static-vs-dynamic-frameworks"></a>Framework statici e dinamici
 
 I **Framework statici** sono collegati in fase di compilazione, in cui i **Framework dinamici** sono collegati in fase di esecuzione e possono essere modificati senza ricollegare. Se è stato usato un Framework di terze parti prima di iOS 8, si stava usando un **Framework statico** compilato nell'app. Per altri dettagli, vedere la documentazione relativa alla [programmazione della libreria dinamica](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) di Apple.
 
 <a name="Embedded-vs-System-Frameworks" />
 
-### <a name="embedded-vs-system-frameworks"></a>Confronto tra embedded e Framework di sistema
+### <a name="embedded-vs-system-frameworks"></a>Framework incorporati rispetto a Framework di sistema
 
 I **Framework incorporati** sono inclusi nel bundle di app e sono accessibili solo all'app specifica tramite la relativa sandbox. I **Framework di sistema** vengono archiviati a livello di sistema operativo e sono disponibili per tutte le app nel dispositivo. Attualmente, solo Apple è in grado di creare Framework a livello di sistema operativo.
 
 <a name="Thin-vs-Fat-Frameworks" />
 
-### <a name="thin-vs-fat-frameworks"></a>Confronto tra Thin e Framework Fat
+### <a name="thin-vs-fat-frameworks"></a>Framework Thin rispetto a FAT
 
 I **Framework sottili** contengono solo il codice compilato per un'architettura di sistema specifica in cui i **Framework Fat** contengono codice per più architetture. Ogni codebase specifica dell'architettura compilata in un Framework viene definita _sezione_. Se, ad esempio, avessimo un Framework compilato per le due architetture del simulatore iOS (i386 e x86_64), conterrebbe due sezioni.
 
@@ -52,7 +52,7 @@ Se si è provato a distribuire questo framework di esempio con l'app, l'esecuzio
 
 ## <a name="working-with-embedded-frameworks"></a>Utilizzo di Framework incorporati
 
-È necessario completare due passaggi per lavorare con i Framework incorporati in un'app Novell. iOS o Novell. Mac: Creazione di un Framework FAT e incorporamento del Framework.
+È necessario completare due passaggi per lavorare con i Framework incorporati in un'app Novell. iOS o Novell. Mac: creazione di un Framework FAT e incorporamento del Framework.
 
 <a name="Overview" />
 
@@ -62,7 +62,7 @@ Come indicato in precedenza, per poter usare un Framework incorporato nell'app, 
 
 Quando il Framework e l'app consumer si trovano nello stesso progetto Xcode, questo non è un problema perché Xcode creerà sia il Framework che l'app usando le stesse impostazioni di compilazione. Poiché le app Novell non sono in grado di creare Framework incorporati, non è possibile usare questa tecnica.
 
-Per risolvere questo problema, è `lipo` possibile usare lo strumento da riga di comando per unire due o più Framework in un unico framework Fat contenente tutte le sezioni necessarie. Per ulteriori informazioni sull'utilizzo del `lipo` comando, vedere la documentazione relativa al collegamento di [librerie native](~/ios/platform/native-interop.md) .
+Per risolvere questo problema, è possibile usare lo strumento da riga di comando `lipo` per unire due o più Framework in un unico framework Fat contenente tutte le sezioni necessarie. Per ulteriori informazioni sull'utilizzo del comando `lipo`, consultare la documentazione relativa al [collegamento di librerie native](~/ios/platform/native-interop.md) .
 
 <a name="Embedding-a-Framework" />
 
@@ -71,15 +71,15 @@ Per risolvere questo problema, è `lipo` possibile usare lo strumento da riga di
 Il passaggio seguente è necessario per incorporare un Framework in un progetto Novell. iOS o Novell. Mac usando i riferimenti nativi:
 
 1. Creare una nuova o aprire un progetto Novell. iOS, Novell. Mac o di binding esistente.
-2. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **riferimento nativo**: 
+2. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** > **Aggiungi riferimento nativo**: 
 
-    [![](native-references-images/ref01.png "Nella Esplora soluzioni fare clic con il pulsante destro del mouse sul nome del progetto e scegliere Aggiungi riferimento nativo")](native-references-images/ref01.png#lightbox)
+    [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
 3. Nella finestra di dialogo **Apri** selezionare il nome del Framework nativo che si vuole incorporare e fare clic sul pulsante **Apri** : 
 
-    [![](native-references-images/ref02.png "Selezionare il nome del Framework nativo da incorporare e fare clic sul pulsante Apri.")](native-references-images/ref02.png#lightbox)
+    [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
 4. Il Framework verrà aggiunto all'albero del progetto: 
 
-    [![](native-references-images/ref03.png "Il Framework verrà aggiunto all'albero dei progetti")](native-references-images/ref03.png#lightbox)
+    [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
 
 Quando il progetto viene compilato, il Framework nativo verrà incorporato nel bundle dell'app.
 

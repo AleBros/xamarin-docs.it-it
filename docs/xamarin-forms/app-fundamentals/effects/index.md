@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 9d859377c40c6fca07e140c50da46d8f30aaae04
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
+ms.openlocfilehash: 2de1d1dd065a01bb457ebf03acdc0c01529abf7b
+ms.sourcegitcommit: 1242d32b7f072c837005cdee174abe6c0d1d0c68
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73083829"
 ---
 # <a name="xamarinforms-effects"></a>Effetti di Xamarin.Forms
 
-_In Xamarin.Forms il rendering delle interfacce utente viene eseguito con i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Xamarin.Forms di mantenere l'aspetto appropriato per ogni piattaforma. Gli effetti consentono di personalizzare i controlli nativi di ogni piattaforma senza dover ricorrere all'implementazione di un renderer personalizzato._
+_Le interfacce utente Novell. Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Novell. Forms di mantenere l'aspetto appropriato per ogni piattaforma. Gli effetti consentono di personalizzare i controlli nativi in ogni piattaforma senza dover ricorrere a un'implementazione di renderer personalizzata._
 
 ## <a name="introduction-to-effectsintroductionmd"></a>[Introduzione agli effetti](introduction.md)
 
@@ -33,3 +33,7 @@ La creazione di un effetto configurato con i parametri consente di usare nuovame
 ## <a name="invoking-events-from-an-effecttouch-trackingmd"></a>[Richiamo di eventi da un effetto](touch-tracking.md)
 
 Gli effetti possono richiamare gli eventi. Questo articolo illustra come creare un evento che implementa il rilevamento del tocco nel multitouch di basso livello e segnala a un'applicazione le azioni di pressione, spostamento e rilascio con tocco.
+
+## <a name="reusable-roundeffectreusable-roundeffectmd"></a>[RoundEffect riutilizzabile](reusable-roundeffect.md)
+
+RoundEffect è un effetto riutilizzabile che può essere applicato a qualsiasi controllo derivante da visualElement per eseguire il rendering del controllo come cerchio. Questo effetto può essere utilizzato per creare immagini circolari, pulsanti circolari o altri controlli circolari.

@@ -5,23 +5,23 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 04e91241a3d726fc48434226d2bfd4b024172c61
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 871a94d06048f893cf06b00de46d66dd59b3703e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284366"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023210"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS Multiscreen
 
-## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1. Avvio rapido](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: guida introduttiva](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
 Nella prima parte della guida si aggiungerà una seconda schermata all'applicazione Phoneword di esempio per tenere traccia della cronologia dei numeri immessi.
 
-## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2. Approfondimenti](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: approfondimento](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
 Nella seconda parte del documento viene descritta l'applicazione compilata e vengono analizzati l'architettura, la navigazione e altri concetti di iOS nuovi incontrati durante il procedimento.
 

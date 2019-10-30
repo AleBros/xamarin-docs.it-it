@@ -4,15 +4,15 @@ description: Questo documento descrive lo scopo del registrar Novell. Mac e le r
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: d44f445b0c3bcc6fd498372f6cdf3e20be39d5b5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 991d9b2d911b5aa4ac07225fd1df34877451df49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290089"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017316"
 ---
 # <a name="xamarinmac-registrar"></a>Registrar Novell. Mac
 
@@ -44,4 +44,4 @@ Esistono alcuni scenari:
 - Plug-in caricati dopo l'avvio con le classi derivanti da NSObject
 - Istanze della classe create dinamicamente che derivano da NSObject
 
-dove il registrar non è in grado di stabilire che è necessario registrare un tipo all'avvio. Il `ObjCRuntime.Runtime.RegisterAssembly` metodo viene fornito per informare il registrar che dispone di tipi aggiuntivi da considerare.
+dove il registrar non è in grado di stabilire che è necessario registrare un tipo all'avvio. Viene fornito il metodo `ObjCRuntime.Runtime.RegisterAssembly` per informare il registrar che dispone di tipi aggiuntivi da considerare.

@@ -4,15 +4,15 @@ description: Questo documento descrive come progettare e usare i controlli di se
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/14/2018
-ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: ac96363378e91c60956d28352535733c7e954e6a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70286392"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021986"
 ---
 # <a name="picker-control-in-xamarinios"></a>Controllo selezione in Novell. iOS
 

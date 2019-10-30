@@ -3,15 +3,15 @@ title: Parte 6 - Test e approvazioni per App Store
 description: Questo documento descrive come testare un'applicazione multipiattaforma sul dispositivo, gestire i test case, automatizzare i test, eseguire unit test e usare il processo di invio dell'app.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198426"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016847"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 - Test e approvazioni per App Store
 
@@ -56,9 +56,9 @@ Novell. iOS include un Framework di unit test denominato touch. Unit che segue i
 
 Per informazioni dettagliate sulla scrittura di test e sull'esecuzione di touch. Unit, vedere la documentazione relativa agli [unit test con Novell. iOS](~/ios/deploy-test/touch.unit.md) .
 
-### <a name="andrunit"></a>Andr.Unit
+### <a name="andrunit"></a>Andr. unit
 
-È disponibile un equivalente open source di touch. Unit per Android denominato Andr. Unit. È possibile scaricarlo da [GitHub](https://github.com/spouliot/Andr.Unit) e leggere lo strumento nel [ @spouliotBlog di](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
+È disponibile un equivalente open source di touch. Unit per Android denominato Andr. Unit. È possibile scaricarlo da [GitHub](https://github.com/spouliot/Andr.Unit) e leggere lo strumento nel [Blog di@spouliot](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## <a name="app-store-approvals"></a>Approvazioni di App Store
 
@@ -129,7 +129,7 @@ Oltre ai problemi tecnici ovvi che possono comportare il rifiuto di un'applicazi
 
 Inserire il maggior lavoro possibile nei metadati dell'applicazione in fase di sviluppo e test. Le applicazioni vengono rifiutate per violazioni di minore entità nei metadati, quindi è opportuno prendere il tempo giusto.
 
-### <a name="app-stores-not-for-everyone"></a>App Store: Non per tutti
+### <a name="app-stores-not-for-everyone"></a>App Store: non per tutti
 
 L'obiettivo principale dei negozi in ogni piattaforma è la distribuzione dei consumatori, ovvero la possibilità di raggiungere il maggior numero possibile di clienti. Tuttavia, non tutte le applicazioni sono destinate agli utenti, c'è una base in rapida crescita di applicazioni interne e Extranet, che richiedono una distribuzione limitata a dipendenti, fornitori o clienti. Queste app non sono "per la vendita" e non richiedono l'approvazione, perché lo sviluppatore controlla la distribuzione a un gruppo di utenti chiuso.
 Il supporto per questo tipo di distribuzione varia in base alla piattaforma.

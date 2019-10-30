@@ -4,15 +4,15 @@ description: Questo documento descrive come registrare un'applicazione Novell. i
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6466d4c7edf6fde38fd3e9e8a6aaa48c2e5f9b4a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 61b7926f28253acbcc45bc204c466d76a00c72b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757698"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010826"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrazione delle app Novell. iOS per l'esecuzione in background
 
@@ -34,15 +34,15 @@ Le app registrate possono rientrare in diverse categorie:
 
 Le applicazioni possono essere registrate impostando la proprietà **modalità in background richiesta** nel file *info. plist*dell'applicazione. Un'applicazione può registrarsi nel numero di categorie necessario:
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Impostazione delle modalità in background")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "Setting the background modes")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 Per una guida dettagliata alla registrazione di un'applicazione per gli aggiornamenti del percorso in background, vedere la [procedura dettagliata](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)relativa alla posizione in background.
 
 ## <a name="application-does-not-run-in-background-property"></a>L'applicazione non viene eseguita in proprietà background
 
-Un'altra proprietà che può essere impostata in *info. plist* è che l' *applicazione non viene eseguita in background*o `UIApplicationExitsOnSuspend` in una proprietà:
+Un'altra proprietà che può essere impostata in *info. plist* è che l' *applicazione non viene eseguita in background*o `UIApplicationExitsOnSuspend` proprietà:
 
- [![](registering-applications-to-run-in-background-images/plist.png "Disabilitazione dell'esecuzione in background")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/plist.png "Disabling Background Running")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 Questo ha lo stesso effetto dell'impostazione dell'impostazione di aggiornamento dell'app in background su off in iOS 7 +, ad eccezione del fatto che può essere modificato solo sul lato Developer ed è disponibile per iOS 4 e versioni successive. L'applicazione verrà sospesa immediatamente dopo l'immissione dello sfondo e non sarà in grado di eseguire alcuna elaborazione.
 

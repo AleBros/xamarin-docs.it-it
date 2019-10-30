@@ -3,15 +3,15 @@ title: Binding di Objective-C
 description: In questo documento vengono forniti i collegamenti a diverse guide che descrivono come creare C# binding per il codice Objective-C, consentendo agli sviluppatori di utilizzare librerie fuori programma nelle applicazioni Novell.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765762"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016272"
 ---
 # <a name="binding-objective-c"></a>Binding di Objective-C
 
@@ -38,7 +38,7 @@ Objective Sharpie è uno strumento da riga di comando che consente di avviare il
 
 La [pagina Binding iOS](~/ios/platform/binding-objective-c/index.md) collega a queste risorse di associazione comuni, oltre agli esempi seguenti.
 
-### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Procedura dettagliata: Associazione di una libreria Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Procedura dettagliata: associazione di una libreria Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
 Questo articolo fornisce una procedura dettagliata per la creazione di un progetto di associazione usando il progetto open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) Objective-C come esempio. La libreria InfColorPicker offre un controller di visualizzazione riutilizzabile che consente all'utente di selezionare un colore in base alla rappresentazione HSB, rendendo la selezione di colore più intuitiva. L'obiettivo Sharpie verrà usato per semplificare il processo di associazione.
 

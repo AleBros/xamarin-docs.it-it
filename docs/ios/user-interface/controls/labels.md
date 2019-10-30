@@ -4,23 +4,23 @@ description: Questo documento illustra come usare le etichette in Novell. iOS. V
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 275acd02e6cece0842344d8e5833c23af1014a0f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768941"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022015"
 ---
 # <a name="labels-in-xamarinios"></a>Etichette in Novell. iOS
 
-Il `UILabel` controllo viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
+Il controllo `UILabel` viene utilizzato per la visualizzazione di testo di sola lettura e a più righe.
 
 ## <a name="implementing-a-label"></a>Implementazione di un'etichetta
 
-Viene creata una nuova etichetta creando un'istanza [`UILabel`](xref:UIKit.UILabel)di:
+Viene creata una nuova etichetta creando un'istanza di un [`UILabel`](xref:UIKit.UILabel):
 
 ```csharp
 UILabel label = new UILabel();
@@ -74,9 +74,9 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Per ulteriori informazioni sull'applicazione di stili `NSAttributedString` al testo, vedere la ricetta di [testo di stile](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
+Per ulteriori informazioni sullo stile del testo utilizzando `NSAttributedString` fare riferimento alla ricetta del [testo di stile](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-Per impostazione predefinita, le `Enabled` etichette hanno il valore impostato su true, ma è possibile impostarlo su disabilitato per dare all'utente un suggerimento che un determinato controllo è disabilitato:
+Per impostazione predefinita, le etichette hanno il `Enabled` impostato su true, ma è possibile impostarlo su Disabled per fornire all'utente un suggerimento che un determinato controllo è disabilitato:
 
 ```csharp
 label.Enabled = false;

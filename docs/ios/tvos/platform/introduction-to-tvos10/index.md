@@ -4,15 +4,15 @@ description: Questo articolo presenta tutte le API e le funzionalità nuove e mo
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8c338f8a5b2f1d41b1ea0f61778a1c14eb84ce08
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 02fda984d65bb89ac3dc8a4ae5e15e2c61ec7d90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769149"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030619"
 ---
 # <a name="introduction-to-tvos-10"></a>Introduzione a tvOS 10
 
@@ -38,7 +38,7 @@ Per ulteriori informazioni, vedere la nuova documentazione relativa agli [stili 
 
 Apple ha apportato diversi miglioramenti alla sicurezza e alla privacy in tvOS 10 che aiuteranno lo sviluppatore a migliorare la sicurezza delle app e garantire la privacy degli utenti finali.
 
-Di conseguenza, le app in esecuzione in watchos 3 (o versioni successive) devono dichiarare in modo statico l'intenzione di accedere a funzionalità specifiche o informazioni utente immettendo una o più `Info.plist` chiavi specifiche per la privacy nei file che spiegano all'utente il motivo per cui l'app desidera ottenere l'accesso.
+Di conseguenza, le app in esecuzione in watchos 3 (o versioni successive) devono dichiarare in modo statico l'intenzione di accedere a funzionalità specifiche o a informazioni utente immettendo una o più chiavi specifiche per la privacy nei file `Info.plist` che spieghino all'utente il motivo per cui l'app desidera ottenere l'accesso.
 
 Poiché tvOS 10 condivide queste modifiche con iOS 10, vedere la guida ai miglioramenti per la [sicurezza e la privacy](~/ios/app-fundamentals/security-privacy.md) di iOS 10 per altre informazioni.
 
@@ -52,12 +52,12 @@ Una novità di tvOS 10, il Framework di account Sottoscrittore video consente al
 
 tvOS 10 estende il supporto per i formati di pixel estesi e gli spazi dei colori a gamma ampia in tutto il sistema, inclusi i Framework come la grafica principale, le immagini di base, i metal e AVFoundation. Il supporto per i dispositivi con schermi Wide Color è ulteriormente facilitato fornendo questo comportamento nell'intero stack di grafica.
 
-Inoltre, `UIKit` è stato modificato per funzionare nel nuovo spazio dei colori di **sRGB** esteso, semplificando la combinazione di colori in gamme di colori Wide senza perdita significativa delle prestazioni.
+Inoltre, `UIKit` è stato modificato per funzionare nel nuovo spazio dei colori di **sRGB** esteso, semplificando la combinazione di colori in gamme di colori estesi senza perdite di prestazioni significative.
 
 Apple offre le seguenti procedure consigliate per l'utilizzo di colori estesi:
 
-- `UIColor`USA ora lo spazio dei colori di sRGB e non blocca più i valori `0.0` `1.0` nell'intervallo. Se l'app si basa sul comportamento del morsetto precedente, sarà necessario modificarla per tvOS 10.
-- Se l'app esegue il rendering personalizzato `UIImages`di, usare la nuova classe [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) per specificare l'uso dei formati di intervallo esteso o standard.
+- `UIColor` USA ora lo spazio dei colori di sRGB e non blocca più i valori al `0.0` per `1.0` intervallo. Se l'app si basa sul comportamento del morsetto precedente, sarà necessario modificarla per tvOS 10.
+- Se l'app esegue il rendering personalizzato di `UIImages`, usare la nuova classe [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) per specificare l'uso dei formati di intervallo esteso o standard.
 - Quando si usa un'API di basso livello, ad esempio grafica di base o metal, per fornire l'elaborazione di immagini, l'app deve usare uno spazio dei colori con intervallo esteso e un formato pixel che supporti i valori a virgola mobile a 16 bit. Se necessario, l'app dovrà bloccare manualmente i valori dei componenti dei colori.
 - I componenti grafici di base, le immagini di base e gli shader con prestazioni Metal forniscono tutti i nuovi metodi per la conversione tra i due spazi dei colori.
 

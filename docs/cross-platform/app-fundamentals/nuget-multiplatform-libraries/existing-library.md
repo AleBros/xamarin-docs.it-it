@@ -3,15 +3,15 @@ title: Creazione di un NuGet da progetti di libreria esistenti
 description: Questo documento descrive come creare un pacchetto NuGet da un progetto di libreria esistente, consentendo la condivisione del codice con altri sviluppatori.
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2017
-ms.openlocfilehash: e70cf426b2357570585c1c8f1cf21715858cb6f6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 30158056b8adbdd5aba4cc311220a22502ea9968
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758165"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016790"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Creazione di un NuGet da progetti di libreria esistenti
 
@@ -21,17 +21,17 @@ Le librerie PCL o .NET Standard esistenti possono essere convertite in NuGet tra
 
 2. Passare alla sezione **dei metadati del pacchetto NuGet >** e immettere tutte le [informazioni necessarie](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) nella scheda **generale** :
 
-   [![](existing-library-images/existing-metadata-sml.png "Immettere i metadati necessari")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "Enter required metadata")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Facoltativamente, [aggiungere metadati aggiuntivi](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) nella scheda **Dettagli** .
 
 4. Una volta configurati i metadati, è possibile fare clic con il pulsante destro del mouse sul progetto e scegliere **Crea pacchetto NuGet** e il file del pacchetto NuGet **. nupkg** verrà salvato nella cartella **/bin/** (debug o versione, a seconda della configurazione).
 
-   ![](existing-library-images/create-nuget-package.png "Scegliere Crea pacchetto NuGet dal menu di scelta rapida")
+   ![](existing-library-images/create-nuget-package.png "Choose Create NuGet Package from the right-click menu")
 
 5. Per creare il pacchetto NuGet in _ogni_ compilazione o distribuzione, passare al **pacchetto NuGet > sezione compilazione** e selezionare **Crea un pacchetto NuGet durante la compilazione del progetto**:
 
-    [![](existing-library-images/existing-tickbox-sml.png "Eseguire il ciclo per creare un pacchetto NuGet")](existing-library-images/existing-tickbox.png#lightbox)
+    [![](existing-library-images/existing-tickbox-sml.png "Tick to create a NuGet package")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > La creazione del pacchetto NuGet può rallentare il processo di compilazione. Se questa casella non è selezionata, è comunque possibile generare manualmente un pacchetto NuGet in qualsiasi momento dal menu di scelta rapida del progetto (illustrato nel passaggio 4 precedente).
@@ -42,7 +42,7 @@ I pacchetti NuGet sono anche file ZIP, quindi è possibile controllare la strutt
 
 Questa schermata mostra il contenuto di un NuGet basato su PCL. è incluso solo un singolo assembly PCL:
 
-![](existing-library-images/nuget-output.png "File contenuti nel pacchetto NuGet")
+![](existing-library-images/nuget-output.png "Files contained in the NuGet package")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

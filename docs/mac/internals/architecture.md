@@ -4,15 +4,15 @@ description: Questa guida esamina Novell. Mac e la relativa relazione con Object
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 2c9bbd663257e937e35e062f03b4aa84813edb27
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 51900adb1dd15675e584671f3b06ad6d7572f47d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287776"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017559"
 ---
 # <a name="xamarinmac-architecture"></a>Architettura di Novell. Mac
 
@@ -62,7 +62,7 @@ In primo luogo, è necessario un modo per esporre Objective-C a C#, operazione e
 
 Come indicato in precedenza, il registrar è codice che espone il codice gestito a Objective-C. Questa operazione viene eseguita creando un elenco di tutte le classi gestite che derivano da NSObject:
 
-- Per tutte le classi che non eseguono il wrapping di una classe Objective-c esistente, viene creata una nuova classe Objective-c con membri Objective-c che eseguono il mirroring di `[Export]` tutti i membri gestiti che dispongono di un attributo.
+- Per tutte le classi che non eseguono il wrapping di una classe Objective-C esistente, viene creata una nuova classe Objective-C con membri Objective-C che eseguono il mirroring di tutti i membri gestiti che hanno un attributo `[Export]`.
 - Nelle implementazioni per ogni membro Objective-C, il codice viene aggiunto automaticamente per chiamare il membro gestito con mirroring.
 
 Lo pseudo-codice seguente mostra un esempio di come eseguire questa operazione:
@@ -92,7 +92,7 @@ class MyViewController : UIViewController{
 @end
 ```
 
-Il codice gestito può contenere gli attributi, `[Register]` e `[Export]`, utilizzati dal registrar per tenere presente che l'oggetto deve essere esposto a Objective-C. L'attributo [Register] viene utilizzato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non sia appropriato. Tutte le classi derivate da NSObject vengono registrate automaticamente con Objective-C. L'attributo obbligatorio [Export] contiene una stringa, ovvero il selettore usato nella classe Objective-C generata.
+Il codice gestito può contenere gli attributi, `[Register]` e `[Export]`, usati dal registrar per tenere presente che l'oggetto deve essere esposto a Objective-C. L'attributo [Register] viene utilizzato per specificare il nome della classe Objective-C generata nel caso in cui il nome generato predefinito non sia appropriato. Tutte le classi derivate da NSObject vengono registrate automaticamente con Objective-C. L'attributo obbligatorio [Export] contiene una stringa, ovvero il selettore usato nella classe Objective-C generata.
 
 Esistono due tipi di registrar usati in Novell. Mac-Dynamic e static:
 
@@ -136,7 +136,7 @@ public interface NSBox {
 }
 ```
 
-Il generatore, chiamato `bmac` in Novell. Mac, accetta questi file di definizione e usa gli strumenti .NET per compilarli in un assembly temporaneo. Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione. Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e pertanto `bmac` non è in grado di cercarlo nell'assembly temporaneo per l'output.
+Il generatore, denominato `bmac` in Novell. Mac, accetta questi file di definizione e usa gli strumenti .NET per compilarli in un assembly temporaneo. Tuttavia, questo assembly temporaneo non è utilizzabile per chiamare il codice Objective-C. Il generatore legge quindi l'assembly temporaneo e genera C# il codice che può essere utilizzato in fase di esecuzione. Questo è il motivo per cui, ad esempio, se si aggiunge un attributo casuale al file Definition. cs, questo non verrà visualizzato nel codice output. Il generatore non ne è a conoscenza e pertanto `bmac` non è in grado di cercarlo nell'assembly temporaneo per l'output.
 
 Una volta creato il file Novell. Mac. dll, il Packager, `mmp`, raggruppa tutti i componenti.
 
@@ -147,7 +147,7 @@ A un livello elevato, ottiene questo risultato eseguendo le attività seguenti:
 - Se è abilitato il collegamento, eseguire il linker gestito per ottimizzare gli assembly rimuovendo le parti inutilizzate.
 - Creare un'applicazione di avvio. il collegamento nel codice dell'utilità di avvio è stato parlato insieme al codice del registrar se in modalità statica.
 
-Questa operazione viene quindi eseguita come parte del processo di compilazione utente che compila il codice utente in un assembly che fa riferimento a Novell. Mac. dll `mmp` ed esegue per renderlo un pacchetto
+Questa operazione viene quindi eseguita come parte del processo di compilazione utente che compila il codice utente in un assembly che fa riferimento a Novell. Mac. dll ed esegue `mmp` per renderlo un pacchetto
 
 Per informazioni più dettagliate sul linker e su come viene usato, vedere la guida del [linker](~/ios/deploy-test/linker.md) iOS.
 

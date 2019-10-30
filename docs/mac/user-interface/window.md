@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso di finestre e pannelli in un'applica
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: df623efcc1da617ac6b700b42d3ac058dea817ca
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6c7a236995bf2aa9677deb6fadacf76cb5726398
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772646"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008136"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in Novell. Mac
 
@@ -27,13 +27,13 @@ A seconda del suo scopo, un'applicazione Novell. Mac può presentare una o più 
 
 È possibile utilizzare Windows in uno stato non modale, ad esempio un editor di testo che può disporre di più documenti aperti contemporaneamente, o modale, ad esempio una finestra di dialogo di esportazione che deve essere rilasciata prima che l'applicazione possa continuare.
 
-I pannelli sono un tipo speciale di finestra (una sottoclasse della `NSWindow` classe base), che in genere funge da funzione ausiliaria in un'applicazione, ad esempio le finestre di utilità come gli ispettori del formato testo e la selezione colori di sistema.
+I pannelli sono un tipo speciale di finestra (una sottoclasse della classe di base `NSWindow`), che in genere funge da funzione ausiliaria in un'applicazione, ad esempio le finestre di utilità quali i controlli di formato testo e la selezione colori del sistema.
 
-[![](window-images/intro01.png "Modifica di una finestra in Xcode")](window-images/intro01.png#lightbox)
+[![](window-images/intro01.png "Editing a window in Xcode")](window-images/intro01.png#lightbox)
 
 In questo articolo verranno illustrate le nozioni di base per l'utilizzo di Windows e dei pannelli in un'applicazione Novell. Mac. Si consiglia di usare prima di tutto l'articolo [Hello, Mac](~/mac/get-started/hello-mac.md) , in particolare l' [Introduzione a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e le sezioni [Outlets and actions](~/mac/get-started/hello-mac.md#outlets-and-actions) , in cui vengono illustrati i concetti chiave e le tecniche che verranno usati in Questo articolo.
 
-Si consiglia di esaminare la sezione [ C# esporre classi/metodi in Objective-C](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando `Register` i comandi e `Export` usati per collegare le C# classi a. Oggetti Objective-C ed elementi dell'interfaccia utente.
+Si consiglia di esaminare la sezione [esporre C# classi/metodi in Objective-c](~/mac/internals/how-it-works.md) del documento [interno di Novell. Mac](~/mac/internals/how-it-works.md) , spiegando i comandi`Register`e`Export`usati per collegare le C# classi a Objective-c. oggetti ed elementi dell'interfaccia utente.
 
 <a name="Introduction_to_Windows" />
 
@@ -70,7 +70,7 @@ Una finestra può visualizzare una barra del titolo e, quando viene visualizzato
 Apple suggerisce le linee guida seguenti:
 
 - Usare il nome dell'applicazione per il titolo di una finestra principale, non di un documento. 
-- Assegnare un nome a una `untitled`nuova finestra del documento. Per il primo nuovo documento, non aggiungere un numero al titolo (ad esempio `untitled 1`). Se l'utente crea un nuovo documento prima del salvataggio e la titolazione del primo, chiamare `untitled 2`tale `untitled 3`finestra, e così via.
+- Assegnare un nome a una nuova finestra del documento `untitled`. Per il primo nuovo documento, non aggiungere un numero al titolo, ad esempio `untitled 1`. Se l'utente crea un nuovo documento prima del salvataggio e la titolazione del primo, chiamare tale finestra `untitled 2`, `untitled 3`e così via.
 
 Per altre informazioni, vedere la sezione [Naming Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowNaming.html#//apple_ref/doc/uid/20000957-CH35-SW1) delle [linee guida per l'interfaccia umana di Apple OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
@@ -96,7 +96,7 @@ Per altre informazioni, vedere la sezione [Windows a schermo intero](https://dev
 
 Un pannello è una finestra ausiliaria che contiene i controlli e le opzioni che influiscono sul documento o sulla selezione attiva (ad esempio, la selezione colori di sistema):
 
-[![](window-images/panel01.png "Pannello colori")](window-images/panel01.png#lightbox)
+[![](window-images/panel01.png "A color panel")](window-images/panel01.png#lightbox)
 
 I pannelli possono essere _specifici dell'app_ o _a livello_. I pannelli specifici dell'app si spostano nella parte superiore delle finestre del documento dell'applicazione e scompaiono quando l'applicazione è in background. I pannelli a livello, ad esempio il pannello dei **tipi di carattere** , sono fluttuati in tutte le finestre aperte, indipendentemente dall'applicazione. 
 
@@ -112,7 +112,7 @@ Apple suggerisce le linee guida seguenti:
 
 La maggior parte delle applicazioni macOS moderne presenta controlli e opzioni ausiliari che interessano il documento o la selezione attiva come _ispettori_ che fanno parte della finestra principale (ad esempio l'app **pagine** mostrata sotto), anziché usare finestre del pannello:
 
-[![](window-images/panel02.png "Controllo di esempio")](window-images/panel02.png#lightbox)
+[![](window-images/panel02.png "An example inspector")](window-images/panel02.png#lightbox)
 
 Per altre informazioni, vedere la sezione [pannelli](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) delle [linee guida dell'interfaccia umana OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) di Apple e l'app di esempio [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) per un'implementazione completa di un' **interfaccia di controllo** in un'app Novell. Mac.
 
@@ -120,13 +120,13 @@ Per altre informazioni, vedere la sezione [pannelli](https://developer.apple.com
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Creazione e gestione di Windows in Xcode
 
-Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un `.storyboard` file incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file:
+Quando si crea una nuova applicazione Novell. Mac Cocoa, per impostazione predefinita si ottiene una finestra vuota standard. Questa finestra è definita in un file di `.storyboard` incluso automaticamente nel progetto. Per modificare la progettazione di Windows, nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard`:
 
-[![](window-images/edit01.png "Selezione dello storyboard principale")](window-images/edit01.png#lightbox)
+[![](window-images/edit01.png "Selecting the main storyboard")](window-images/edit01.png#lightbox)
 
 Verrà aperta la progettazione della finestra nella Interface Builder di Xcode:
 
-[![](window-images/edit02.png "Modifica dell'interfaccia utente in Xcode")](window-images/edit02.png#lightbox)
+[![](window-images/edit02.png "Editing the UI in Xcode")](window-images/edit02.png#lightbox)
 
 In **controllo attributi**sono disponibili diverse proprietà che è possibile utilizzare per definire e controllare la finestra:
 
@@ -142,7 +142,7 @@ In **controllo attributi**sono disponibili diverse proprietà che è possibile u
 - **Ridimensiona** : la finestra dispone di un controllo di ridimensionamento.
 - **Pulsante della barra degli strumenti** : la finestra dispone di un pulsante della barra degli strumenti Nascondi/Mostra.
 - **Restorable** -è la posizione e le impostazioni della finestra salvate e ripristinate automaticamente.
-- **Visibile all'avvio** : è la finestra visualizzata automaticamente quando il `.xib` file viene caricato.
+- **Visibile all'avvio** : indica se la finestra viene visualizzata automaticamente quando viene caricato il file di `.xib`.
 - **Nascondi su Disattiva** : è la finestra nascosta quando l'applicazione entra in background.
 - **Rilascia alla chiusura** : la finestra viene rimossa dalla memoria quando viene chiusa.
 - **Visualizza sempre le descrizioni comandi** : le descrizioni comandi vengono visualizzate costantemente.
@@ -160,7 +160,7 @@ Per altri dettagli, vedere [Introduzione a Apple per Windows](https://developer.
 
 Per impostare la posizione iniziale della finestra e controllarne le dimensioni, passare al controllo **dimensioni**:
 
-[![](window-images/edit07.png "Dimensioni e posizione predefinite")](window-images/edit07.png#lightbox)
+[![](window-images/edit07.png "The default size and location")](window-images/edit07.png#lightbox)
 
 Da qui è possibile impostare le dimensioni iniziali della finestra, assegnarle una dimensione minima e massima, impostare la posizione iniziale sullo schermo e controllare i bordi attorno alla finestra.
 
@@ -170,21 +170,21 @@ Da qui è possibile impostare le dimensioni iniziali della finestra, assegnarle 
 
 Per poter creare Outlet e azioni per esporre gli elementi dell'interfaccia utente C# al codice, l'app Novell. Mac dovrà usare un controller di finestra personalizzato.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Aprire lo storyboard dell'app nella Interface Builder di Xcode.
-2. Selezionare la `NSWindowController` nella area di progettazione.
+2. Selezionare il `NSWindowController` nel Area di progettazione.
 3. Passare alla visualizzazione **Identity Inspector** e immettere `WindowController` come nome della **classe**: 
 
-    [![](window-images/windowcontroller01.png "Impostazione del nome della classe")](window-images/windowcontroller01.png#lightbox)
+    [![](window-images/windowcontroller01.png "Setting the class name")](window-images/windowcontroller01.png#lightbox)
 4. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione.
-5. Un `WindowController.cs` file verrà aggiunto al progetto nella **Esplora soluzioni** Visual Studio per Mac: 
+5. Un file di `WindowController.cs` verrà aggiunto al progetto nel **Esplora soluzioni** Visual Studio per Mac: 
 
-    [![](window-images/windowcontroller02.png "Selezione del controller Windows")](window-images/windowcontroller02.png#lightbox)
+    [![](window-images/windowcontroller02.png "Selecting the windows controller")](window-images/windowcontroller02.png#lightbox)
 6. Riaprire lo storyboard nella Interface Builder di Xcode.
-7. Il `WindowController.h` file sarà disponibile per l'uso: 
+7. Il file di `WindowController.h` sarà disponibile per l'uso: 
 
-    [![](window-images/windowcontroller03.png "Modifica del file WindowController. h")](window-images/windowcontroller03.png#lightbox)
+    [![](window-images/windowcontroller03.png "Editing the WindowController.h file")](window-images/windowcontroller03.png#lightbox)
 
 <a name="Adding_UI_Elements" />
 
@@ -194,21 +194,21 @@ Per definire il contenuto di una finestra, trascinare i controlli da **libreria 
 
 È ad esempio possibile trascinare una barra degli strumenti dal **controllo libreria** alla finestra dell' **editor di interfaccia**:
 
-[![](window-images/edit03.png "Selezione di una barra degli strumenti dalla libreria")](window-images/edit03.png#lightbox)
+[![](window-images/edit03.png "Selecting a Toolbar from the Library")](window-images/edit03.png#lightbox)
 
 Trascinare quindi in una **visualizzazione di testo** e ridimensionarlo per riempire l'area sotto la barra degli strumenti:
 
-[![](window-images/edit04.png "Aggiunta di una visualizzazione di testo")](window-images/edit04.png#lightbox)
+[![](window-images/edit04.png "Adding a Text View")](window-images/edit04.png#lightbox)
 
 Poiché si desidera che la **visualizzazione di testo** venga compattata e cresca Man mano che le dimensioni della finestra cambiano, passare all'editor dei **vincoli** e aggiungere i vincoli seguenti:
 
-[![](window-images/edit05.png "Modifica di vincoli")](window-images/edit05.png#lightbox)
+[![](window-images/edit05.png "Editing constraints")](window-images/edit05.png#lightbox)
 
 Facendo clic sul pulsante per i **-Beam rossi** nella parte superiore dell'editor e scegliendo **Aggiungi 4 vincoli**, viene indicato alla visualizzazione di testo di attenersi alle coordinate X, Y e di aumentare o ridurre orizzontalmente e verticalmente quando la finestra viene ridimensionata.
 
-Infine, si esporrà la **visualizzazione di testo** per il codice usando un' **uscita** (assicurandosi `ViewController.h` di selezionare il file):
+Infine, si esporrà la **visualizzazione di testo** per il codice usando un' **uscita** (assicurandosi di selezionare il file `ViewController.h`):
 
-[![](window-images/edit06.png "Configurazione di un Outlet")](window-images/edit06.png#lightbox)
+[![](window-images/edit06.png "Configuring an Outlet")](window-images/edit06.png#lightbox)
 
 Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
@@ -221,7 +221,7 @@ Per altre informazioni sull'uso di **Outlet** e **azioni**, vedere la documentaz
 Per tutte le finestre create e usate nell'applicazione Novell. Mac, il processo è fondamentalmente uguale a quello ottenuto in precedenza:
 
 1. Per le nuove finestre che non sono aggiunte automaticamente al progetto, aggiungere una nuova definizione di finestra al progetto. Questo argomento verrà illustrato in dettaglio di seguito.
-1. Fare doppio clic sul `Main.storyboard` file per aprire la finestra progettazione per la modifica in Interface Builder di Xcode.
+1. Fare doppio clic sul file `Main.storyboard` per aprire la finestra progettazione per la modifica nella Interface Builder di Xcode.
 1. Trascinare una nuova finestra nella progettazione dell'interfaccia utente e associare la finestra alla finestra principale usando _gli elementi segue_ . per altre informazioni, vedere la sezione [gli elementi segue](~/mac/platform/storyboards/indepth.md#Segues) della documentazione relativa all' [utilizzo degli storyboard](~/mac/platform/storyboards/indepth.md) .
 1. Impostare le proprietà della finestra obbligatorie in **controllo attributi** e il **controllo dimensioni**.
 1. Trascinare i controlli necessari per compilare l'interfaccia e configurarli nel **controllo attributo**.
@@ -235,21 +235,21 @@ Ora che è stata creata una finestra di base, verranno esaminati i processi tipi
 
 ## <a name="displaying-the-default-window"></a>Visualizzazione della finestra predefinita
 
-Per impostazione predefinita, una nuova applicazione Novell. Mac visualizzerà automaticamente la finestra definita nel `MainWindow.xib` file quando viene avviata:
+Per impostazione predefinita, una nuova applicazione Novell. Mac visualizzerà automaticamente la finestra definita nel file `MainWindow.xib` all'avvio:
 
-[![](window-images/display01.png "Una finestra di esempio in esecuzione")](window-images/display01.png#lightbox)
+[![](window-images/display01.png "An example window running")](window-images/display01.png#lightbox)
 
-Poiché è stata modificata la progettazione di tale finestra, ora include una barra degli strumenti e un controllo di **visualizzazione di testo** predefiniti. La sezione `Info.plist` seguente del file è responsabile della visualizzazione di questa finestra:
+Poiché è stata modificata la progettazione di tale finestra, ora include una barra degli strumenti e un controllo di **visualizzazione di testo** predefiniti. La sezione seguente nel file di `Info.plist` è responsabile della visualizzazione di questa finestra:
 
-[![](window-images/display00.png "Modifica di info. plist")](window-images/display00.png#lightbox)
+[![](window-images/display00.png "Editing Info.plist")](window-images/display00.png#lightbox)
 
-L'elenco a discesa dell' **interfaccia principale** viene usato per selezionare lo storyboard che verrà usato come interfaccia utente principale dell'app ( `Main.storyboard`in questo caso).
+L'elenco a discesa dell' **interfaccia principale** viene usato per selezionare lo storyboard che verrà usato come interfaccia utente principale dell'app (in questo caso `Main.storyboard`).
 
-Un controller di visualizzazione viene aggiunto automaticamente al progetto per controllare le finestre principali visualizzate, insieme alla relativa visualizzazione principale. Viene definito nel `ViewController.cs` file e collegato al **proprietario del file** in Interface Builder sotto il controllo di **identità**:
+Un controller di visualizzazione viene aggiunto automaticamente al progetto per controllare le finestre principali visualizzate, insieme alla relativa visualizzazione principale. Viene definito nel file di `ViewController.cs` e collegato al proprietario del **file** in Interface Builder sotto il controllo di **identità**:
 
-[![](window-images/display02.png "Impostazione del proprietario del file")](window-images/display02.png#lightbox)
+[![](window-images/display02.png "Setting the file's owner")](window-images/display02.png#lightbox)
 
-Per la finestra, si vuole avere un titolo di `untitled` quando si apre per la prima volta, quindi si esegue l'override del `ViewWillAppear` metodo `ViewController.cs` in per ottenere un aspetto simile al seguente:
+Per la nostra finestra, vorremmo avere un titolo di `untitled` alla prima apertura, quindi eseguiamo l'override del metodo `ViewWillAppear` nel `ViewController.cs` per avere un aspetto simile al seguente:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -262,62 +262,62 @@ public override void ViewWillAppear ()
 ```    
 
 > [!NOTE]
-> Si sta impostando il valore della `Title` proprietà della finestra `ViewWillAppear` nel metodo anziché il `ViewDidLoad` metodo perché, mentre la vista potrebbe essere caricata in memoria, non è ancora stata creata un'istanza completa di. Se si è tentato di accedere `Title` alla proprietà `ViewDidLoad` nel metodo, si otterrebbe un' `null` eccezione poiché la finestra non è stata ancora costruita e collegata alla proprietà.
+> Il valore della proprietà `Title` della finestra viene impostato nel metodo `ViewWillAppear` invece che nel metodo `ViewDidLoad` perché, mentre la vista potrebbe essere caricata in memoria, non è ancora stata creata un'istanza completa di. Se si è tentato di accedere alla proprietà `Title` nel metodo `ViewDidLoad` si otterrebbe un'eccezione `null` poiché la finestra non è stata ancora costruita e collegata alla proprietà.
 
 <a name="Programmatically_Closing_a_Window" />
 
 ## <a name="programmatically-closing-a-window"></a>Chiusura di una finestra a livello di codice
 
-In alcuni casi potrebbe essere necessario chiudere a livello di codice una finestra in un'applicazione Novell. Mac, tranne che l'utente fa clic sul pulsante **Chiudi** della finestra o utilizzando una voce di menu. MacOS offre due modi diversi per chiudere un `NSWindow` oggetto a livello `PerformClose` di `Close`codice: e.
+In alcuni casi potrebbe essere necessario chiudere a livello di codice una finestra in un'applicazione Novell. Mac, tranne che l'utente fa clic sul pulsante **Chiudi** della finestra o utilizzando una voce di menu. macOS offre due modi diversi per chiudere un `NSWindow` a livello di codice: `PerformClose` e `Close`.
 
 <a name="PerformClose" />
 
 ### <a name="performclose"></a>PerformClose
 
-La chiamata `PerformClose` al metodo di `NSWindow` un oggetto simula l'utente facendo clic sul pulsante **Chiudi** di una finestra, evidenziando brevemente il pulsante e quindi chiudendo la finestra.
+La chiamata al metodo `PerformClose` di un `NSWindow` simula l'utente facendo clic sul pulsante **Chiudi** di una finestra, evidenziando brevemente il pulsante e quindi chiudendo la finestra.
 
-Se l'applicazione implementa l' `NSWindow` `WillClose` evento, verrà generato prima della chiusura della finestra. Se l'evento restituisce `false`, la finestra non verrà chiusa. Se la finestra non dispone di un pulsante **Chiudi** o non può essere chiusa per un motivo qualsiasi, il sistema operativo emetterà il suono dell'avviso.
+Se l'applicazione implementa l'evento `WillClose` del `NSWindow`, verrà generato prima della chiusura della finestra. Se l'evento restituisce `false`, la finestra non verrà chiusa. Se la finestra non dispone di un pulsante **Chiudi** o non può essere chiusa per un motivo qualsiasi, il sistema operativo emetterà il suono dell'avviso.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 MyWindow.PerformClose(this);
 ```
 
-Tenta di chiudere l' `MyWindow` `NSWindow` istanza di. Se l'operazione ha esito positivo, la finestra verrà chiusa. in caso contrario, il segnale acustico verrà emesso e rimarrà aperto.
+Tenta di chiudere l'istanza di `NSWindow` `MyWindow`. Se l'operazione ha esito positivo, la finestra verrà chiusa. in caso contrario, il segnale acustico verrà emesso e rimarrà aperto.
 
 <a name="Close" />
 
 ### <a name="close"></a>Chiudi
 
-La chiamata `Close` al metodo di `NSWindow` un non simula l'utente che fa clic sul pulsante **Chiudi** di una finestra, evidenziando brevemente il pulsante, chiude semplicemente la finestra.
+La chiamata del metodo di `Close` di un `NSWindow` non simula l'utente che fa clic sul pulsante **Chiudi** di una finestra, evidenziando brevemente il pulsante, chiude semplicemente la finestra.
 
-Non è necessario che la finestra sia visibile per la chiusura e che `NSWindowWillCloseNotification` venga inviata una notifica nel centro notifiche predefinito per la chiusura della finestra.
+Non è necessario che una finestra sia visibile per essere chiusa e che venga inviata una notifica di `NSWindowWillCloseNotification` al centro notifiche predefinito per la chiusura della finestra.
 
-Il `Close` metodo differisce da due modi importanti rispetto al `PerformClose` metodo:
+Il metodo `Close` differisce da due modi importanti rispetto al metodo `PerformClose`:
 
-1. Non tenta di generare l' `WillClose` evento.
+1. Non tenta di generare l'evento `WillClose`.
 2. Non simula l'utente facendo clic sul pulsante **Chiudi** per evidenziare brevemente il pulsante.
 
-Ad esempio:
+Esempio:
 
 ```csharp
 MyWindow.Close();
 ```
 
-Chiude l' `MyWindow` `NSWindow` istanza.
+Chiuderà il `MyWindow` istanza di `NSWindow`.
 
 <a name="Modified-Windows-Content" />
 
 ## <a name="modified-windows-content"></a>Contenuto di Windows modificato
 
-In MacOS, Apple ha fornito un modo per informare l'utente che il contenuto di una finestra (`NSWindow`) è stato modificato dall'utente e deve essere salvato. Se la finestra contiene contenuto modificato, nel widget **Close** verrà visualizzato un piccolo punto nero:
+In macOS, Apple ha fornito un modo per informare l'utente che il contenuto di una finestra (`NSWindow`) è stato modificato dall'utente e deve essere salvato. Se la finestra contiene contenuto modificato, nel widget **Close** verrà visualizzato un piccolo punto nero:
 
-[![](window-images/close01.png "Finestra con il marcatore modificato")](window-images/close01.png#lightbox)
+[![](window-images/close01.png "A window with the modified marker")](window-images/close01.png#lightbox)
 
 Se l'utente tenta di chiudere la finestra o di uscire dall'app Mac mentre sono presenti modifiche non salvate al contenuto della finestra, è necessario presentare una finestra di [dialogo](~/mac/user-interface/dialog.md) o un [foglio modale](~/mac/user-interface/dialog.md) e consentire all'utente di salvare prima le modifiche:
 
-[![](window-images/close02.png "Un foglio di salvataggio visualizzato quando la finestra è chiusa")](window-images/close02.png#lightbox)
+[![](window-images/close02.png "A save sheet being shown when the window is closed")](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>Contrassegno di una finestra modificata
 
@@ -337,7 +337,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>Salvataggio delle modifiche prima della chiusura di una finestra
 
-Per controllare che l'utente chiuda una finestra e consenta loro di salvare in anticipo il contenuto modificato, sarà necessario creare una sottoclasse di ed `WindowShouldClose` eseguire l'override del `NSWindowDelegate` relativo metodo. Ad esempio:
+Per verificare che l'utente chiuda una finestra e consenta loro di salvare in anticipo il contenuto modificato, sarà necessario creare una sottoclasse di `NSWindowDelegate` ed eseguire l'override del relativo metodo `WindowShouldClose`. Esempio:
 
 ```csharp
 using System;
@@ -432,7 +432,7 @@ Window.Delegate = new EditorWindowDelegate(Window);
 
 ### <a name="saving-changes-before-closing-the-app"></a>Salvataggio delle modifiche prima della chiusura dell'app
 
-Infine, l'app Novell. Mac dovrebbe verificare se una delle finestre contiene contenuto modificato e consentire all'utente di salvare le modifiche prima di uscire. A tale scopo, modificare `AppDelegate.cs` il file, eseguire l'override del `ApplicationShouldTerminate` metodo e renderlo simile al seguente:
+Infine, l'app Novell. Mac dovrebbe verificare se una delle finestre contiene contenuto modificato e consentire all'utente di salvare le modifiche prima di uscire. A tale scopo, modificare il file di `AppDelegate.cs`, eseguire l'override del metodo `ApplicationShouldTerminate` e renderlo simile al seguente:
 
 ```csharp
 public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplication sender)
@@ -454,11 +454,11 @@ public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplic
 
 ## <a name="working-with-multiple-windows"></a>Utilizzo di più finestre
 
-La maggior parte delle applicazioni Mac basate su documenti possono modificare più documenti nello stesso momento. Un editor di testo, ad esempio, può disporre di più file di testo aperti per la modifica nello stesso momento. Per impostazione predefinita, la nuova applicazione Novell. Mac dispone di un menu **file** con un **nuovo** elemento collegato automaticamente all' `newDocument:` **azione**.
+La maggior parte delle applicazioni Mac basate su documenti possono modificare più documenti nello stesso momento. Un editor di testo, ad esempio, può disporre di più file di testo aperti per la modifica nello stesso momento. Per impostazione predefinita, la nuova applicazione Novell. Mac dispone di un menu **file** con un **nuovo** elemento collegato automaticamente all' **azione**`newDocument:`.
 
 Si attiverà questo nuovo elemento e si consente all'utente di aprire più copie della finestra principale per modificare più documenti in una sola volta.
 
-Modificare `AppDelegate.cs` il file e aggiungere la proprietà calcolata seguente:
+Modificare il file di `AppDelegate.cs` e aggiungere la proprietà calcolata seguente:
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
@@ -485,11 +485,11 @@ void NewDocument (NSObject sender) {
 
 Questo codice consente di creare una nuova versione del controller della finestra, caricare la nuova finestra, renderla la finestra principale e chiave e imposta titolo. A questo punto, se si esegue l'applicazione e si sceglie **nuovo** dal menu **file** , verrà aperta e visualizzata una nuova finestra dell'Editor:
 
-[![](window-images/display04.png "È stata aggiunta una nuova finestra senza titolo")](window-images/display04.png#lightbox)
+[![](window-images/display04.png "A new untitled window was added")](window-images/display04.png#lightbox)
 
 Se si apre il menu di **Windows** , è possibile osservare che l'applicazione tiene traccia e gestisce automaticamente le finestre aperte:
 
-[![](window-images/display05.png "Menu di Windows")](window-images/display05.png#lightbox)
+[![](window-images/display05.png "The windows menu")](window-images/display05.png#lightbox)
 
 Per ulteriori informazioni sull'utilizzo di menu in un'applicazione Novell. Mac, vedere la documentazione relativa all' [utilizzo dei menu](~/mac/user-interface/menu.md) .
 
@@ -503,7 +503,7 @@ In un'applicazione Novell. Mac in grado di aprire più finestre (documenti), in 
 var window = NSApplication.SharedApplication.KeyWindow;
 ```
 
-Può essere chiamato in qualsiasi classe o metodo che deve accedere alla finestra della chiave corrente. Se nessuna finestra è attualmente aperta, verrà restituito `null`.
+Può essere chiamato in qualsiasi classe o metodo che deve accedere alla finestra della chiave corrente. Se la finestra non è attualmente aperta, restituirà `null`.
 
 <a name="Accessing-All-App-Windows" />
 
@@ -511,7 +511,7 @@ Può essere chiamato in qualsiasi classe o metodo che deve accedere alla finestr
 
 In alcuni casi è possibile che sia necessario accedere a tutte le finestre attualmente aperte dall'app Novell. Mac. Ad esempio, per verificare se un file che l'utente vuole aprire è già aperto in una finestra di uscita.
 
-`NSApplication.SharedApplication` Mantiene una`Windows` proprietà che contiene una matrice di tutte le finestre aperte nell'app. È possibile eseguire l'iterazione su questa matrice per accedere a tutte le finestre correnti dell'app. Ad esempio:
+Il `NSApplication.SharedApplication` gestisce una proprietà `Windows` che contiene una matrice di tutte le finestre aperte nell'app. È possibile eseguire l'iterazione su questa matrice per accedere a tutte le finestre correnti dell'app. Esempio:
 
 ```csharp
 // Is the file already open?
@@ -525,13 +525,13 @@ for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
 }
 ```
 
-Nel codice di esempio viene eseguita il cast di ogni finestra restituita `ViewController` alla classe personalizzata nell'app e il test del valore di una `Path` proprietà personalizzata con il percorso di un file che l'utente vuole aprire. Se il file è già aperto, la finestra verrà visualizzata in primo piano.
+Nel codice di esempio viene proiettato ogni finestra restituita alla classe di `ViewController` personalizzata nell'app e il valore di una proprietà di `Path` personalizzata viene testato sul percorso di un file che l'utente vuole aprire. Se il file è già aperto, la finestra verrà visualizzata in primo piano.
 
 <a name="Adjusting_the_Window_Size_in_Code" />
 
 ## <a name="adjusting-the-window-size-in-code"></a>Regolazione delle dimensioni della finestra nel codice
 
-In alcuni casi l'applicazione deve ridimensionare una finestra nel codice. Per ridimensionare e riposizionare una finestra, modificare `Frame` la proprietà. Quando si modificano le dimensioni di una finestra, in genere è necessario modificare anche l'origine, in modo da tenere la finestra nella stessa posizione a causa del sistema di coordinate di macOS.
+In alcuni casi l'applicazione deve ridimensionare una finestra nel codice. Per ridimensionare e riposizionare una finestra, modificare la proprietà `Frame`. Quando si modificano le dimensioni di una finestra, in genere è necessario modificare anche l'origine, in modo da tenere la finestra nella stessa posizione a causa del sistema di coordinate di macOS.
 
 A differenza di iOS, in cui l'angolo superiore sinistro rappresenta (0,0), macOS usa un sistema di coordinate matematico in cui rappresenta l'angolo inferiore sinistro dello schermo (0,0). In iOS le coordinate aumentano quando ci si sposta verso il basso verso destra. In macOS le coordinate aumentano di valore verso l'alto verso destra. 
 
@@ -557,11 +557,11 @@ SetFrame (frame, true);
 
 In alcuni casi è necessario monitorare le modifiche apportate alle dimensioni di una finestra all'interno dell'app Novell. Mac. Ad esempio, per ricreare il contenuto per adattarlo alle nuove dimensioni.
 
-Per monitorare le modifiche alle dimensioni, assicurarsi innanzitutto di avere assegnato una classe personalizzata per il controller di finestra nella Interface Builder di Xcode. Ad esempio, `MasterWindowController` nell'esempio seguente:
+Per monitorare le modifiche alle dimensioni, assicurarsi innanzitutto di avere assegnato una classe personalizzata per il controller di finestra nella Interface Builder di Xcode. Ad esempio, `MasterWindowController` di seguito:
 
-[![](window-images/resize01.png "Controllo di identità")](window-images/resize01.png#lightbox)
+[![](window-images/resize01.png "The Identity Inspector")](window-images/resize01.png#lightbox)
 
-Modificare quindi la classe del controller della finestra personalizzata ed eseguire `DidResize` il monitoraggio dell'evento nella finestra del controller per ricevere una notifica delle modifiche apportate alle dimensioni Live. Ad esempio:
+Modificare quindi la classe controller della finestra personalizzata e monitorare l'evento `DidResize` nella finestra del controller per ricevere una notifica delle modifiche alle dimensioni Live. Esempio:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -574,7 +574,7 @@ public override void WindowDidLoad ()
 }
 ```
 
-Facoltativamente, è possibile usare l' `DidEndLiveResize` evento per ricevere una notifica solo dopo che l'utente ha terminato la modifica delle dimensioni della finestra. Di seguito è riportato un esempio:
+Facoltativamente, è possibile utilizzare l'evento `DidEndLiveResize` per ricevere una notifica solo dopo che l'utente ha terminato la modifica delle dimensioni della finestra. Di seguito è riportato un esempio:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -592,9 +592,9 @@ public override void WindowDidLoad ()
 
 ## <a name="setting-a-windows-title-and-represented-file"></a>Impostazione del titolo di una finestra e del file rappresentato
 
-Quando si utilizzano finestre che rappresentano documenti, `NSWindow` dispone di `DocumentEdited` una proprietà che, se `true` impostata su, consente di visualizzare un piccolo punto nel pulsante Chiudi per fornire all'utente un'indicazione che indica che il file è stato modificato e deve essere salvato prima della chiusura.
+Quando si utilizzano finestre che rappresentano documenti, `NSWindow` dispone di una proprietà `DocumentEdited` che, se impostata su `true` Visualizza un piccolo punto nel pulsante Chiudi, per fornire all'utente un'indicazione che indica che il file è stato modificato e deve essere salvato prima di chiudere.
 
-Modificare `ViewController.cs` il file e apportare le modifiche seguenti:
+Modificare il file di `ViewController.cs` e apportare le modifiche seguenti:
 
 ```csharp
 public bool DocumentEdited {
@@ -641,19 +641,19 @@ public override void AwakeFromNib ()
 }
 ```
 
-Viene anche monitorato l' `WillClose` evento nella finestra e viene verificato lo stato `DocumentEdited` della proprietà. `true` Se è necessario fornire all'utente la possibilità di salvare le modifiche al file. Se si esegue l'app e si immette un testo, verrà visualizzato il punto:
+Viene anche monitorato l'evento `WillClose` nella finestra e viene verificato lo stato della proprietà `DocumentEdited`. Se è `true` è necessario concedere all'utente la possibilità di salvare le modifiche apportate al file. Se si esegue l'app e si immette un testo, verrà visualizzato il punto:
 
-[![](window-images/file01.png "Finestra modificata")](window-images/file01.png#lightbox)
+[![](window-images/file01.png "A changed window")](window-images/file01.png#lightbox)
 
 Se si tenta di chiudere la finestra, viene generato un avviso:
 
-[![](window-images/file02.png "Visualizzazione di una finestra di dialogo Salva")](window-images/file02.png#lightbox)
+[![](window-images/file02.png "Displaying a save dialog")](window-images/file02.png#lightbox)
 
-Se si sta caricando un documento da un file, è possibile impostare il titolo della finestra sul nome del file usando il `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` metodo (dato che `path` è una stringa che rappresenta il file aperto). Inoltre, è possibile impostare l'URL del file usando il `window.RepresentedUrl = url;` metodo.
+Se si sta caricando un documento da un file, è possibile impostare il titolo della finestra sul nome del file usando il metodo `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` (dato che `path` è una stringa che rappresenta il file aperto). Inoltre, è possibile impostare l'URL del file utilizzando il metodo `window.RepresentedUrl = url;`.
 
 Se l'URL fa riferimento a un tipo di file noto dal sistema operativo, la relativa icona verrà visualizzata nella barra del titolo. Se l'utente fa clic con il pulsante destro del mouse sull'icona, verrà visualizzato il percorso del file.
 
-Modificare il `AppDelegate.cs` file e aggiungere il metodo seguente:
+Modificare il file di `AppDelegate.cs` e aggiungere il metodo seguente:
 
 ```csharp
 [Export ("openDocument:")]
@@ -690,11 +690,11 @@ void OpenDialog (NSObject sender)
 
 A questo punto, se si esegue l'app, selezionare **Apri..** . dal menu **file** , selezionare un file di testo dalla finestra di dialogo **Apri** e aprirlo:
 
-[![](window-images/file03.png "Finestra di dialogo Apri")](window-images/file03.png#lightbox)
+[![](window-images/file03.png "An open dialog box")](window-images/file03.png#lightbox)
 
 Il file verrà visualizzato e il titolo verrà impostato con l'icona del file:
 
-[![](window-images/file04.png "Contenuto di un file caricato")](window-images/file04.png#lightbox)
+[![](window-images/file04.png "The contents of a file loaded")](window-images/file04.png#lightbox)
 
 <a name="Adding_a_New_Window_to_a_Project" />
 
@@ -704,25 +704,25 @@ A parte la finestra del documento principale, un'applicazione Novell. Mac potreb
 
 Per aggiungere una nuova finestra, procedere come segue:
 
-1. Nella **Esplora soluzioni**fare doppio clic sul `Main.storyboard` file per aprirlo per la modifica nella Interface Builder di Xcode.
+1. Nella **Esplora soluzioni**fare doppio clic sul file `Main.storyboard` per aprirlo per la modifica nella Interface Builder di Xcode.
 2. Trascinare un nuovo **controller della finestra** dalla **libreria** e rilasciarlo nella **area di progettazione**:
 
-    [![](window-images/new01.png "Selezione di un nuovo controller di finestra nella libreria")](window-images/new01.png#lightbox)
+    [![](window-images/new01.png "Selecting a new Window Controller in the Library")](window-images/new01.png#lightbox)
 3. In **Identity Inspector**immettere `PreferencesWindow` per l' **ID storyboard**: 
 
-    [![](window-images/new02.png "Impostazione dell'ID storyboard")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "Setting the storyboard ID")](window-images/new02.png#lightbox)
 4. Progettare l'interfaccia: 
 
-    [![](window-images/new03.png "Progettazione dell'interfaccia utente")](window-images/new03.png#lightbox)
-5. Aprire il menu dell'app`MacWindows`(), selezionare **Preferenze...** , fare clic su CTRL e trascinare nella nuova finestra: 
+    [![](window-images/new03.png "Designing the UI")](window-images/new03.png#lightbox)
+5. Aprire il menu dell'app (`MacWindows`), selezionare **Preferenze...**, fare clic su CTRL e trascinare nella nuova finestra: 
 
-    [![](window-images/new05.png "Creazione di un segue")](window-images/new05.png#lightbox)
+    [![](window-images/new05.png "Creating a segue")](window-images/new05.png#lightbox)
 6. Scegliere **Mostra** dal menu popup.
 7. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
 
 Se eseguiamo il codice e selezioni le **Preferenze...** dal **menu applicazione**, verrà visualizzata la finestra:
 
-[![](window-images/new04.png "Menu di preferenze di esempio")](window-images/new04.png#lightbox)
+[![](window-images/new04.png "A sample preferences menu")](window-images/new04.png#lightbox)
 
 <a name="Working_with_Panels" />
 
@@ -733,7 +733,7 @@ Come indicato all'inizio di questo articolo, un pannello esegue il float sopra l
 Analogamente a qualsiasi altro tipo di finestra che si crea e si utilizza nell'applicazione Novell. Mac, il processo è fondamentalmente lo stesso:
 
 1. Aggiungere una nuova definizione di finestra al progetto.
-2. Fare doppio clic sul `.xib` file per aprire la finestra progettazione per la modifica in Interface Builder di Xcode.
+2. Fare doppio clic sul file `.xib` per aprire la finestra progettazione per la modifica nella Interface Builder di Xcode.
 3. Impostare le proprietà della finestra obbligatorie in **controllo attributi** e il **controllo dimensioni**.
 4. Trascinare i controlli necessari per compilare l'interfaccia e configurarli nel **controllo attributo**.
 5. Usare il **controllo delle dimensioni** per gestire il ridimensionamento per gli elementi dell'interfaccia utente.
@@ -742,38 +742,38 @@ Analogamente a qualsiasi altro tipo di finestra che si crea e si utilizza nell'a
 
 Nel **controllo attributi**sono disponibili le seguenti opzioni specifiche per i pannelli:
 
-[![](window-images/panel03.png "Controllo attribute")](window-images/panel03.png#lightbox)
+[![](window-images/panel03.png "The Attribute Inspector")](window-images/panel03.png#lightbox)
 
-- **Stile** : consente di modificare lo stile del pannello da: Pannello normale (simile a una finestra standard), il pannello utilità (ha una barra del titolo inferiore), il pannello HUD (è traslucido e la barra del titolo fa parte dello sfondo).
+- **Stile** : consente di modificare lo stile del pannello da: pannello normale (simile a una finestra standard), pannello utilità (con una barra del titolo inferiore), pannello HUD (è traslucido e la barra del titolo fa parte dello sfondo).
 - **Non attivato** : determina che nel pannello diventa la finestra principale.
 - Modale **del documento:** se il documento è modale, il pannello verrà spostato sopra le finestre dell'applicazione; in caso contrario, viene eseguito il float.
 
 Per aggiungere un nuovo pannello, procedere come segue:
 
-1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file.** ..
-2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac** > **Cocoa con controller**:
+1. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **nuovo file..**.
+2. Nella finestra di dialogo nuovo file selezionare **Novell. Mac**  > **finestra Cocoa con controller**:
 
-    [![](window-images/panels00.png "Aggiunta di un nuovo controller di finestra")](window-images/panels00.png#lightbox)
+    [![](window-images/panels00.png "Adding a new window controller")](window-images/panels00.png#lightbox)
 3. Immettere `DocumentPanel` in **Nome** e fare clic sul pulsante **Nuovo**.
-4. Fare doppio clic sul `DocumentPanel.xib` file per aprirlo per la modifica in Interface Builder: 
+4. Fare doppio clic sul file `DocumentPanel.xib` per aprirlo per la modifica in Interface Builder: 
 
-    [![](window-images/new02.png "Modifica del pannello")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "Editing the panel")](window-images/new02.png#lightbox)
 5. Eliminare la finestra esistente e trascinare un pannello da **controllo libreria** nell'editor di **interfaccia**: 
 
-    [![](window-images/panels01.png "Eliminazione della finestra esistente")](window-images/panels01.png#lightbox)
-6. Collegare il pannello alla**presa**della**finestra** -  **proprietaria** - del file: 
+    [![](window-images/panels01.png "Deleting the existing window")](window-images/panels01.png#lightbox)
+6. Collegare il pannello alla **finestra** - **proprietario del file** - **Outlet**: 
 
-    [![](window-images/panels02.png "Trascinamento per collegare il pannello")](window-images/panels02.png#lightbox)
+    [![](window-images/panels02.png "Dragging to wire up the panel")](window-images/panels02.png#lightbox)
 7. Passare al **controllo di identità** e impostare la classe del pannello su `DocumentPanel`: 
 
-    [![](window-images/panels03.png "Impostazione della classe del pannello")](window-images/panels03.png#lightbox)
+    [![](window-images/panels03.png "Setting the panel's class")](window-images/panels03.png#lightbox)
 8. Salvare le modifiche e tornare a Visual Studio per Mac per la sincronizzazione con Xcode.
-9. Modificare il `DocumentPanel.cs` file e modificare la definizione della classe nel modo seguente: 
+9. Modificare il file di `DocumentPanel.cs` e modificare la definizione della classe nel modo seguente: 
 
     `public partial class DocumentPanel : NSPanel`
 10. Salvare le modifiche apportate al file.
 
-Modificare il `AppDelegate.cs` file e fare in `DidFinishLaunching` modo che il metodo sia simile al seguente:
+Modificare il file di `AppDelegate.cs` e rendere il `DidFinishLaunching` metodo simile al seguente:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -787,7 +787,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Se si esegue l'applicazione, verrà visualizzato il pannello:
 
-[![](window-images/panels04.png "Pannello in un'app in esecuzione")](window-images/panels04.png#lightbox)
+[![](window-images/panels04.png "The panel in a running app")](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > Le finestre del pannello sono state deprecate da Apple e devono essere sostituite con le **interfacce del controllo**. Per un esempio completo di creazione di un **controllo** in un'app Novell. Mac, vedere l'app di esempio [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) .

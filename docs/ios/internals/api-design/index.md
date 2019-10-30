@@ -4,19 +4,19 @@ description: Principi di guida usati per progettare le API Novell. iOS e le rela
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 843aeda14ad8c47014b577bdce8004872b12865d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ab56332617fece8e80429f82000880012bf85b41
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753459"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022397"
 ---
 # <a name="xamarinios-api-design"></a>Progettazione dell'API Novell. iOS
 
-Oltre alle librerie di classi base core che fanno parte di mono, [Novell. iOS](http://www.xamarin.com/iOS) viene fornito con binding per varie API iOS per consentire agli sviluppatori di creare applicazioni iOS native con mono.
+Oltre alle librerie di classi base core che fanno parte di mono, [Novell. iOS](~/ios/index.yml) viene fornito con binding per varie API iOS per consentire agli sviluppatori di creare applicazioni iOS native con mono.
 
 Alla base di Novell. iOS, è disponibile un motore di interoperabilità che C# colma il mondo con Objective-C World, nonché associazioni per le API basate su iOS C come CoreGraphics e [OpenGL ES](#opengles).
 
@@ -59,13 +59,13 @@ Questi sono alcuni dei principi di progettazione per i binding Novell. iOS (si a
     NSView [] Views { get; set; }
     ```
 
-    In questo modo Visual Studio per Mac la possibilità di eseguire il completamento automatico durante l'esplorazione dell'API, rende disponibili `System.Array` tutte le operazioni sul valore restituito e consente al valore restituito di partecipare a LINQ.
+    Questo consente Visual Studio per Mac la possibilità di eseguire il completamento automatico durante l'esplorazione dell'API, rende tutte le operazioni di `System.Array` disponibili sul valore restituito e consente al valore restituito di partecipare a LINQ.
 
 - Tipi C# nativi:
 
-  - [`NSString`diventa`string`](~/ios/internals/api-design/nsstring.md)
-  - Attivare `int` e C# C# `[Flags]` disattivare i parametri che devono essere enumerati in enumerazioni ed enumerazioni con attributi `uint`
-  - Anziché oggetti indipendenti `NSArray` dal tipo, esporre le matrici come matrici fortemente tipizzate.
+  - [`NSString` diventa `string`](~/ios/internals/api-design/nsstring.md)
+  - Trasformare `int` e `uint` parametri che devono essere enumerati in C# enumerazioni ed C# enumerazioni con attributi`[Flags]`
+  - Anziché gli oggetti `NSArray` indipendenti dal tipo, esporre le matrici come matrici fortemente tipizzate.
   - Per gli eventi e le notifiche, consentire agli utenti di scegliere tra:
 
     - Una versione fortemente tipizzata per impostazione predefinita
@@ -74,7 +74,7 @@ Questi sono alcuni dei principi di progettazione per i binding Novell. iOS (si a
 - Supportare il modello di delegato Objective-C:
 
   - C#sistema di eventi
-  - Esporre C# delegati (espressioni lambda, metodi anonimi e `System.Delegate`) alle API Objective-C come blocchi
+  - Esporre C# delegati (espressioni lambda, metodi anonimi e`System.Delegate`) a API Objective-C come blocchi
 
 ### <a name="assemblies"></a>Assembly
 
@@ -93,7 +93,7 @@ Lo spazio dei nomi [Foundation](xref:Foundation) fornisce i tipi di dati di base
 
 Novell. iOS rispecchia C# la gerarchia delle classi di Objective-C. Ad esempio, la classe base Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) è utilizzabile C# da tramite [Foundation. NSObject](xref:Foundation.NSObject).
 
-Sebbene questo spazio dei nomi fornisca associazioni per i tipi di base Objective-C sottostanti, in alcuni casi è stato eseguito il mapping dei tipi sottostanti ai tipi .NET. Ad esempio:
+Sebbene questo spazio dei nomi fornisca associazioni per i tipi di base Objective-C sottostanti, in alcuni casi è stato eseguito il mapping dei tipi sottostanti ai tipi .NET. Esempio:
 
 - Anziché gestire [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), il runtime li espone come C# [stringa](xref:System.String)e [matrici](xref:System.Array)fortemente tipizzate nell'API.
 
@@ -107,7 +107,7 @@ Il tipo [NSObject](xref:Foundation.NSObject) è la base per tutte le associazion
 
 Per ogni tipo che rispecchia un tipo non gestito, è possibile ottenere l'oggetto nativo tramite la proprietà [handle](xref:Foundation.NSObject.Handle) .
 
-Mentre mono fornirà Garbage Collection per tutti gli oggetti, `Foundation.NSObject` implementa l'interfaccia [System. IDisposable](xref:System.IDisposable) . Ciò significa che è possibile rilasciare in modo esplicito le risorse di un determinato NSObject senza dover attendere l'avvio del Garbage Collector. Questo è importante quando si usano NSObjects pesanti, ad esempio UIImages, che potrebbero avere puntatori a blocchi di dati di grandi dimensioni.
+Mentre mono fornirà Garbage Collection per tutti gli oggetti, il `Foundation.NSObject` implementa l'interfaccia [System. IDisposable](xref:System.IDisposable) . Ciò significa che è possibile rilasciare in modo esplicito le risorse di un determinato NSObject senza dover attendere l'avvio del Garbage Collector. Questo è importante quando si usano NSObjects pesanti, ad esempio UIImages, che potrebbero avere puntatori a blocchi di dati di grandi dimensioni.
 
 Se il tipo deve eseguire una finalizzazione deterministica, eseguire l'override del [Metodo NSObject. Dispose (bool)](xref:Foundation.NSObject.Dispose(System.Boolean)) il parametro da eliminare è "bool disposing" e, se impostato su true, significa che il metodo Dispose viene chiamato perché l'utente ha chiamato in modo esplicito Dispose () sull'oggetto. Se il valore è false, significa che il metodo Dispose (bool disposing) viene chiamato dal finalizzatore nel thread del finalizzatore.
 
@@ -115,13 +115,13 @@ Se il tipo deve eseguire una finalizzazione deterministica, eseguire l'override 
 
 A partire da Novell. iOS 8,10 è possibile creare categorie Objective-C da C#.
 
-Questa operazione viene eseguita utilizzando `Category` l'attributo, specificando il tipo da estendere come argomento all'attributo. Nell'esempio seguente, ad esempio, si estende NSString.
+Questa operazione viene eseguita utilizzando l'attributo `Category`, specificando il tipo da estendere come argomento all'attributo. Nell'esempio seguente, ad esempio, si estende NSString.
 
 ```csharp
 [Category (typeof (NSString))]
 ```
 
-Ogni metodo di categoria usa il meccanismo normale per esportare i metodi in Objective-C usando `Export` l'attributo:
+Ogni metodo di categoria usa il meccanismo normale per esportare i metodi in Objective-C usando l'attributo `Export`:
 
 ```csharp
 [Export ("today")]
@@ -171,7 +171,7 @@ public static class MyViewControllerCategory
 }
 ```
 
-Uno scenario in cui questa operazione è utile è l'aggiunta di un metodo a un intero set di classi nella codebase, ad esempio, per `UIViewController` fare in modo che tutte le istanze segnalino che possono ruotare:
+Uno scenario in cui questa operazione è utile è l'aggiunta di un metodo a un intero set di classi nella codebase, ad esempio, per fare in modo che tutte le istanze di `UIViewController` segnalino che possono ruotare:
 
 ```csharp
 [Category (typeof (UINavigationController))]
@@ -222,7 +222,7 @@ La discussione nelle prossime sezioni non è necessaria per gli utenti che crean
 
 Laddove è opportuno, C# i C# tipi vengono esposti all'universo anziché ai tipi di base di basso livello.  Ciò significa che [l'API usa il C# tipo "String" invece di NSString](~/ios/internals/api-design/nsstring.md) e USA matrici fortemente tipizzate C# anziché esporre NSArray.
 
-In generale, nella progettazione di Novell. iOS e Novell. Mac l'oggetto sottostante `NSArray` non viene esposto. Al contrario, il runtime converte `NSArray`automaticamente i in matrici fortemente tipizzate di `NSObject` una classe. Quindi, Novell. iOS non espone un metodo debolmente tipizzato come GetViews per restituire un NSArray:
+In generale, nella progettazione di Novell. iOS e Novell. Mac, l'oggetto `NSArray` sottostante non viene esposto. Al contrario, il runtime converte automaticamente `NSArray`s in matrici fortemente tipizzate di alcune `NSObject` classe. Quindi, Novell. iOS non espone un metodo debolmente tipizzato come GetViews per restituire un NSArray:
 
 ```csharp
 NSArray GetViews ();
@@ -234,9 +234,9 @@ Al contrario, l'associazione espone un valore restituito fortemente tipizzato, c
 UIView [] GetViews ();
 ```
 
-Sono disponibili alcuni metodi esposti in, per `NSArray`i casi d'angolo in cui è possibile `NSArray` usare direttamente, ma il loro uso è sconsigliato nell'associazione API.
+Esistono alcuni metodi esposti in `NSArray`, per i casi d'angolo in cui è consigliabile usare direttamente un `NSArray`, ma il loro uso è sconsigliato nell'associazione API.
 
-Inoltre, nel **API classica** `CGRect`anziché esporre `CGPoint` e `CGSize` dall' `System.Drawing` API CoreGraphics, sono stati sostituiti con le implementazioni e `RectangleF` `PointF` `SizeF`poiché aiuteranno gli sviluppatori a conservare il codice OpenGL esistente che usa OpenTK. Quando si usa la nuova **API unificata**a 64 bit, è necessario usare l'API coregraphics.
+Inoltre, nel **API classica** anziché esporre `CGRect`, `CGPoint` e `CGSize` dall'API CoreGraphics, sono stati sostituiti con le implementazioni di `System.Drawing` `RectangleF`, `PointF` e `SizeF` per consentire agli sviluppatori di conservare codice OpenGL esistente che usa OpenTK. Quando si usa la nuova **API unificata**a 64 bit, è necessario usare l'API coregraphics.
 
 #### <a name="inheritance"></a>Ereditarietà
 
@@ -246,7 +246,7 @@ Questa progettazione consente agli sviluppatori di evitare la gestione dei selet
 
 #### <a name="types-and-interface-builder"></a>Tipi e Interface Builder
 
-Quando si creano classi .NET che sono istanze di tipi creati da Interface Builder, è necessario fornire un costruttore che accetti un solo `IntPtr` parametro.
+Quando si creano classi .NET che sono istanze di tipi creati da Interface Builder, è necessario fornire un costruttore che accetta un singolo parametro di `IntPtr`.
 Questa operazione è necessaria per associare l'istanza dell'oggetto gestito all'oggetto non gestito.
 Il codice è costituito da una sola riga, come la seguente:
 
@@ -269,21 +269,21 @@ Questi delegati svolgono un ruolo importante in UIKit e in altre API CocoaTouch.
 - Per implementare i modelli per i controlli di visualizzazione dei dati.
 - Per guidare il comportamento di un controllo.
 
-Il modello di programmazione è stato progettato per ridurre al minimo la creazione di classi derivate per modificare il comportamento di un controllo. Questa soluzione è analoga a quella degli altri toolkit GUI eseguiti negli anni: Segnali di GTK, slot QT, eventi WinForms, eventi WPF/Silverlight e così via. Per evitare di avere centinaia di interfacce (una per ogni azione) o richiedere agli sviluppatori di implementare un numero eccessivo di metodi non necessari, Objective-C supporta le definizioni di metodo facoltative. Questa operazione è diversa C# rispetto alle interfacce che richiedono l'implementazione di tutti i metodi.
+Il modello di programmazione è stato progettato per ridurre al minimo la creazione di classi derivate per modificare il comportamento di un controllo. Questa soluzione è analoga a quella degli altri toolkit GUI eseguiti negli anni, ovvero segnali di GTK, slot QT, eventi WinForms, eventi WPF/Silverlight e così via. Per evitare di avere centinaia di interfacce (una per ogni azione) o richiedere agli sviluppatori di implementare un numero eccessivo di metodi non necessari, Objective-C supporta le definizioni di metodo facoltative. Questa operazione è diversa C# rispetto alle interfacce che richiedono l'implementazione di tutti i metodi.
 
-Nelle classi Objective-C si noterà che le classi che usano questo modello di programmazione espongono una proprietà, in `delegate`genere chiamata, che è necessaria per implementare le parti obbligatorie dell'interfaccia e zero, o più, delle parti facoltative.
+Nelle classi Objective-C si noterà che le classi che usano questo modello di programmazione espongono una proprietà, in genere denominata `delegate`, che è necessaria per implementare le parti obbligatorie dell'interfaccia e zero, o più, delle parti facoltative.
 
 In Novell. iOS sono disponibili tre meccanismi che si escludono a vicenda per l'associazione a questi delegati:
 
 1. [Tramite eventi](#via-events).
-2. [Fortemente tipizzato tramite `Delegate` una proprietà](#strongly-typed-via-a-delegate-property)
-3. [Debolmente tipizzato tramite una `WeakDelegate` proprietà](#loosely-typed-via-the-weakdelegate-property)
+2. [Fortemente tipizzato tramite una proprietà `Delegate`](#strongly-typed-via-a-delegate-property)
+3. [Debolmente tipizzato tramite una proprietà `WeakDelegate`](#loosely-typed-via-the-weakdelegate-property)
 
 Si consideri, ad esempio, la classe [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) . Questo viene inviato a un'istanza di [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) , assegnata alla proprietà del [delegato](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) .
 
 ##### <a name="via-events"></a>Eventi via
 
-Per molti tipi, Novell. iOS creerà automaticamente un delegato appropriato che inoltrerà le `UIWebViewDelegate` chiamate agli C# eventi. Per `UIWebView`:
+Per molti tipi, Novell. iOS creerà automaticamente un delegato appropriato che inoltrerà le chiamate di `UIWebViewDelegate` C# agli eventi. Per `UIWebView`:
 
 - Viene eseguito il mapping del metodo [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) all'evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
 - Viene eseguito il mapping del metodo [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) all'evento [UIWebView. LoadFinished](xref:UIKit.UIWebView.LoadFinished) .
@@ -316,7 +316,7 @@ void SetupTextField (UITextField tf)
 }
 ```
 
-La `UITextField`proprietà `ShouldReturn` di in questo caso accetta come argomento un delegato che restituisce un valore bool e determina se l'oggetto TextField deve eseguire un'operazione con il pulsante Return premuto. Nel metodo viene restituito *true* al chiamante, ma viene anche rimossa la tastiera dalla schermata (ciò si verifica quando il TextField chiama `ResignFirstResponder`).
+La proprietà `ShouldReturn` di `UITextField`in questo caso accetta come argomento un delegato che restituisce un valore bool e determina se l'oggetto TextField deve eseguire un'operazione con il pulsante Return premuto. Nel metodo viene restituito *true* al chiamante, ma viene anche rimossa la tastiera dalla schermata (ciò accade quando il TextField chiama `ResignFirstResponder`).
 
 ##### <a name="strongly-typed-via-a-delegate-property"></a>Fortemente tipizzato tramite una proprietà di delegato
 
@@ -349,16 +349,16 @@ web.Delegate = new Notifier ();
 
 Il codice precedente creerà un UIWebViewer e indicherà all'utente di inviare messaggi a un'istanza di Notifier, una classe creata per rispondere ai messaggi.
 
-Questo modello viene inoltre usato per controllare il comportamento di alcuni controlli, ad esempio nel caso di UIWebView, la proprietà [UIWebView. ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad) consente `UIWebView` all'istanza di controllare se `UIWebView` l'oggetto caricherà o meno una pagina.
+Questo modello viene usato anche per controllare il comportamento di alcuni controlli, ad esempio nel caso di UIWebView, la proprietà [UIWebView. ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad) consente all'istanza di `UIWebView` di controllare se il `UIWebView` caricherà una pagina o meno.
 
 Il modello viene usato anche per fornire i dati su richiesta per alcuni controlli. Ad esempio, il controllo [UITableView](xref:UIKit.UITableView) è un potente controllo rendering tabella, che sia l'aspetto che il contenuto sono basati su un'istanza di un [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
 
 ### <a name="loosely-typed-via-the-weakdelegate-property"></a>Debolmente tipizzato tramite la proprietà WeakDelegate
 
 Oltre alla proprietà fortemente tipizzata, esiste anche un delegato debole tipizzato che consente allo sviluppatore di associare elementi in modo diverso, se necessario.
-Ovunque una proprietà fortemente `Delegate` tipizzata viene esposta nell'associazione di Novell. iOS, viene `WeakDelegate` esposta anche una proprietà corrispondente.
+Ovunque una proprietà `Delegate` fortemente tipizzata venga esposta nell'associazione di Novell. iOS, viene esposta anche una proprietà `WeakDelegate` corrispondente.
 
-Quando si usa `WeakDelegate`, si è responsabili della corretta decorazione della classe usando l'attributo [Export](xref:Foundation.ExportAttribute) per specificare il selettore. Ad esempio:
+Quando si usa il `WeakDelegate`, l'utente è responsabile della decorazione corretta della classe usando l'attributo [Export](xref:Foundation.ExportAttribute) per specificare il selettore. Esempio:
 
 ```csharp
 class Notifier : NSObject  {
@@ -383,7 +383,7 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.WeakDelegate = new Notifier ();
 ```
 
-Si noti che una `WeakDelegate` volta che la proprietà è stata `Delegate` assegnata, la proprietà non verrà utilizzata. Inoltre, se si implementa il metodo in una classe di base ereditata che si desidera esportare, è necessario renderlo un metodo pubblico.
+Si noti che una volta che la proprietà `WeakDelegate` è stata assegnata, la proprietà `Delegate` non verrà utilizzata. Inoltre, se si implementa il metodo in una classe di base ereditata che si desidera esportare, è necessario renderlo un metodo pubblico.
 
 ## <a name="mapping-of-the-objective-c-delegate-pattern-to-c"></a>Mapping del modello di delegato Objective-C a C\#
 
@@ -401,13 +401,13 @@ foo.Delegate = new SomethingDelegate ();
 
 In Novell. iOS sono state fornite classi fortemente tipizzate con mapping alle classi delegate Objective-C. Per usarli, è necessario sottoclassare ed eseguire l'override dei metodi definiti dall'implementazione di Novell. iOS. Per ulteriori informazioni sul funzionamento, vedere la sezione "modelli" di seguito.
 
-### <a name="mapping-delegates-to-c"></a>Mapping di delegati a C\#
+### <a name="mapping-delegates-to-c"></a>Mapping dei delegati a C\#
 
 UIKit in generale USA delegati Objective-C in due formati.
 
 Il primo form fornisce un'interfaccia per il modello di un componente. Ad esempio, come meccanismo per fornire dati su richiesta per una visualizzazione, ad esempio la funzionalità di archiviazione dei dati per una visualizzazione elenco.  In questi casi, è sempre necessario creare un'istanza della classe appropriata e assegnare la variabile.
 
-Nell'esempio seguente viene fornito l'oggetto `UIPickerView` con un'implementazione per un modello che utilizza stringhe:
+Nell'esempio seguente viene fornito il `UIPickerView` con un'implementazione per un modello che utilizza stringhe:
 
 ```csharp
 public class SampleTitleModel : UIPickerViewTitleModel {
@@ -425,7 +425,7 @@ pickerView.Model = new MyPickerModel ();
 
 Il secondo formato consiste nel fornire la notifica per gli eventi. In questi casi, anche se l'API è ancora esposta nel formato descritto in precedenza, vengono forniti C# anche gli eventi, che dovrebbero essere più semplici da usare per operazioni rapide e integrati con delegati anonimi C#ed espressioni lambda in.
 
-Ad esempio, è possibile sottoscrivere `UIAccelerometer` gli eventi:
+Ad esempio, è possibile sottoscrivere gli eventi di `UIAccelerometer`:
 
 ```csharp
 UIAccelerometer.SharedAccelerometer.Acceleration += (sender, args) => {
@@ -436,7 +436,7 @@ UIAccelerometer.SharedAccelerometer.Acceleration += (sender, args) => {
 
 Le due opzioni sono disponibili laddove sono sensate, ma come programmatore è necessario selezionare una o l'altra. Se si crea un'istanza personalizzata di un risponditore/delegato fortemente tipizzato e lo si assegna C# , gli eventi non saranno funzionanti. Se si usano gli C# eventi, i metodi nella classe risponditore/delegata non verranno mai chiamati.
 
-L'esempio precedente usato `UIWebView` può essere scritto usando C# le espressioni lambda 3,0 come segue:
+Nell'esempio precedente utilizzato `UIWebView` è possibile scrivere utilizzando C# le espressioni lambda 3,0 come segue:
 
 ```csharp
 var web = new UIWebView (new CGRect (0, 0, 200, 200));
@@ -452,7 +452,7 @@ Come descritto in precedenza, Novell. iOS supporta sia C# il modello di programm
 
 È anche possibile supportare il modello di Objective-C, in cui i risponditori per più operazioni diverse sono tutti ospitati nella stessa istanza di una classe. A tale scopo, è necessario usare le funzionalità di basso livello del binding Novell. iOS.
 
-Se ad esempio si desidera che la classe risponda sia `UITextFieldDelegate.textFieldShouldClear`al messaggio: che alla `UIWebViewDelegate.webViewDidStartLoad`: nella stessa istanza di una classe, è necessario utilizzare la dichiarazione dell'attributo [Export]:
+Se, ad esempio, si desidera che la classe risponda sia al messaggio `UITextFieldDelegate.textFieldShouldClear`: che alla `UIWebViewDelegate.webViewDidStartLoad`: nella stessa istanza di una classe, è necessario utilizzare la dichiarazione dell'attributo [Export]:
 
 ```csharp
 public class MyCallbacks : NSObject {
@@ -500,7 +500,7 @@ public class MyAppController : NSObject {
 }
 ```
 
-Il nome del selettore Objective-C ("applicationDidFinishLaunching:") viene dichiarato con l'attributo Export e la classe è `[Register]` registrata con l'attributo.
+Il nome del selettore Objective-C ("applicationDidFinishLaunching:") viene dichiarato con l'attributo Export e la classe è registrata con l'attributo `[Register]`.
 
 Novell. iOS fornisce dichiarazioni fortemente tipizzate, pronte per l'uso, che non richiedono l'associazione manuale. Per supportare questo modello di programmazione, il runtime di Novell. iOS supporta l'attributo [Model] in una dichiarazione di classe. In questo modo si informa il runtime che non dovrebbe collegare tutti i metodi della classe, a meno che i metodi non siano implementati in modo esplicito.
 
@@ -537,7 +537,7 @@ I vantaggi sono che non è necessario approfondire i file di intestazione Object
 > [!IMPORTANT]
 > Questa sezione illustra l'integrazione dell'IDE con Outlet quando si usano file XIB. Quando si usa il Xamarin Designer per iOS, questo viene sostituito dall'immissione di un nome in **Identity > Name** nella sezione Properties dell'IDE, come illustrato di seguito:
 >
-> [![](images/designeroutlet.png "Immissione di un nome di elemento in iOS designer")](images/designeroutlet.png#lightbox)
+> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png#lightbox)
 >
 >Per altre informazioni su iOS designer, vedere l' [Introduzione al documento di iOS designer](~/ios/user-interface/designer/introduction.md#how-it-works) .
 
@@ -573,7 +573,7 @@ Quindi, per caricare il ViewController da un file del PENNino, procedere come se
 var controller = new MyViewController ("HelloWorld", NSBundle.MainBundle, this);
 ```
 
-Verrà caricata l'interfaccia utente dal PENNino. Ora, per accedere agli Outlet, è necessario informare il runtime a cui si vuole accedere. A tale scopo, la `UIViewController` sottoclasse deve dichiarare le proprietà e annotarle con l'attributo [Connect]. analogamente a quanto segue:
+Verrà caricata l'interfaccia utente dal PENNino. Ora, per accedere agli Outlet, è necessario informare il runtime a cui si vuole accedere. A tale scopo, la sottoclasse `UIViewController` deve dichiarare le proprietà e annotarle con l'attributo [Connect]. analogamente a quanto segue:
 
 ```csharp
 [Connect]
@@ -595,13 +595,13 @@ Quando si usano Visual Studio per Mac e InterfaceBuilder, non è necessario preo
 
 Un concetto di base della programmazione Objective-C è costituito dai selettori. Sono spesso disponibili API che richiedono il passaggio di un selettore o prevede che il codice risponda a un selettore.
 
-La creazione di nuovi selettori in C# è molto semplice: è sufficiente creare una nuova `ObjCRuntime.Selector` istanza della classe e usare il risultato in qualsiasi posizione nell'API che la richiede. Ad esempio:
+La creazione di nuovi selettori in C# è molto semplice: è sufficiente creare una nuova istanza della classe`ObjCRuntime.Selector`e usare il risultato in qualsiasi posizione nell'API che la richiede. Esempio:
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-Per un C# metodo che risponde a una chiamata del selettore, deve `NSObject` ereditare dal C# tipo e il metodo deve essere decorato con il `[Export]` nome del selettore usando l'attributo. Ad esempio:
+Per un C# metodo che risponde a una chiamata del selettore, deve ereditare dal tipo C# di`NSObject`e il metodo deve essere decorato con il nome del selettore usando l'attributo `[Export]`. Esempio:
 
 ```csharp
 public class MyMath : NSObject {
@@ -617,7 +617,7 @@ Si noti che i nomi dei selettori **devono** corrispondere esattamente, inclusi t
 
 #### <a name="nsobject-constructors"></a>Costruttori NSObject
 
-La maggior parte delle classi in Novell. iOS che `NSObject` derivano da esporrà i costruttori specifici della funzionalità dell'oggetto, ma esporrà anche diversi costruttori che non sono immediatamente evidenti.
+La maggior parte delle classi in Novell. iOS che derivano da `NSObject` esporrà i costruttori specifici della funzionalità dell'oggetto, ma esporrà anche diversi costruttori che non sono immediatamente evidenti.
 
 I costruttori vengono usati come indicato di seguito:
 
@@ -639,7 +639,7 @@ Si tratta del costruttore predefinito per una classe e, nelle classi fornite da 
 public Foo (NSObjectFlag x)
 ```
 
-Questo costruttore viene utilizzato per inizializzare l'istanza di, ma impedisce al codice di chiamare il metodo Objective-C "init" alla fine. Questa operazione viene in genere usata quando è già stata eseguita la registrazione per l' `[Export]` inizializzazione (quando si usa nel costruttore) o quando è già stata eseguita l'inizializzazione tramite un'altra media.
+Questo costruttore viene utilizzato per inizializzare l'istanza di, ma impedisce al codice di chiamare il metodo Objective-C "init" alla fine. Questa operazione viene in genere usata quando è già stata eseguita la registrazione per l'inizializzazione (quando si usa `[Export]` nel costruttore) o quando si è già eseguita l'inizializzazione tramite un'altra media.
 
 ```csharp
 public Foo (NSCoder coder)
@@ -653,17 +653,17 @@ La progettazione dell'API Novell. iOS non genera eccezioni Objective-C come C# e
 
 #### <a name="notifications"></a>Notifiche
 
-In iOS e OS X gli sviluppatori possono sottoscrivere le notifiche trasmesse dalla piattaforma sottostante. Questa operazione viene eseguita tramite il `NSNotificationCenter.DefaultCenter.AddObserver` metodo. Il `AddObserver` metodo accetta due parametri: uno è la notifica che si desidera sottoscrivere. l'altro è il metodo da richiamare quando viene generata la notifica.
+In iOS e OS X gli sviluppatori possono sottoscrivere le notifiche trasmesse dalla piattaforma sottostante. Questa operazione viene eseguita tramite il metodo `NSNotificationCenter.DefaultCenter.AddObserver`. Il metodo `AddObserver` accetta due parametri. una è la notifica che si vuole sottoscrivere. l'altro è il metodo da richiamare quando viene generata la notifica.
 
-In Novell. iOS e Novell. Mac, le chiavi per le varie notifiche sono ospitate nella classe che attiva le notifiche. Ad esempio, le notifiche generate da `UIMenuController` sono ospitate `static NSString` come proprietà nelle `UIMenuController` classi che terminano con il nome "Notification".
+In Novell. iOS e Novell. Mac, le chiavi per le varie notifiche sono ospitate nella classe che attiva le notifiche. Ad esempio, le notifiche generate dal `UIMenuController` vengono ospitate come `static NSString` proprietà nelle classi `UIMenuController` che terminano con il nome "Notification".
 
 ### <a name="memory-management"></a>Gestione della memoria
 
-Novell. iOS include un Garbage Collector che si occuperà di rilasciare le risorse quando non sono più in uso. Oltre all'Garbage Collector, tutti gli oggetti che derivano da `NSObject` implementano `System.IDisposable` l'interfaccia.
+Novell. iOS include un Garbage Collector che si occuperà di rilasciare le risorse quando non sono più in uso. Oltre all'Garbage Collector, tutti gli oggetti che derivano da `NSObject` implementano l'interfaccia `System.IDisposable`.
 
 #### <a name="nsobject-and-idisposable"></a>NSObject e IDisposable
 
-Esporre l' `IDisposable` interfaccia è un modo pratico per aiutare gli sviluppatori a rilasciare oggetti che potrebbero incapsulare blocchi di memoria di grandi dimensioni (ad esempio, un `UIImage` potrebbe sembrare semplicemente un puntatore innocente, ma potrebbe puntare a un'immagine di 2 megabyte) ) e altre risorse importanti e finite (ad esempio un buffer di decodifica video).
+Esporre l'interfaccia `IDisposable` è un modo pratico per aiutare gli sviluppatori a rilasciare oggetti che potrebbero incapsulare blocchi di memoria di grandi dimensioni (ad esempio, un `UIImage` potrebbe sembrare solo un puntatore innocente, ma potrebbe puntare a un'immagine di 2 megabyte) e altro risorse importanti e finite (ad esempio un buffer di decodifica video).
 
 NSObject implementa l'interfaccia IDisposable e anche il [modello Dispose di .NET](https://msdn.microsoft.com/library/fs2xkftw.aspx). Ciò consente agli sviluppatori di sottoclasse NSObject di eseguire l'override del comportamento di eliminazione e rilasciare le proprie risorse su richiesta. Si consideri, ad esempio, questo controller di visualizzazione che mantiene una serie di immagini:
 

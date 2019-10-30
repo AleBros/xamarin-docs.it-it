@@ -4,15 +4,15 @@ description: Questo articolo illustra l'inclusione e la gestione di un asset imm
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/23/2017
-ms.openlocfilehash: 25b4e5a564c8dabf4cb44881c25e0a10ade47350
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ac8ee96d6183f9a62233d217c75b03da15605bd2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767732"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004228"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Icone personalizzate del documento in Novell. iOS
 
@@ -20,26 +20,26 @@ _Questo articolo illustra l'inclusione e la gestione di un asset immagine in un'
 
 Se un'app Novell. iOS supporta il caricamento di un tipo di documento specifico, lo sviluppatore può fornire icone che il sistema userà quando rileva il tipo di documento, ad esempio quando un utente mantiene un allegato nell'applicazione di *posta elettronica* , come illustrato di seguito:
 
- [![](custom-document-types-images/17.png "Esempio di icone del tipo di documento")](custom-document-types-images/17.png#lightbox)
+ [![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png#lightbox)
 
-Lo sviluppatore può aggiungere informazioni sul tipo di documento per un formato di file che l'app è in grado di aprire includendo le `LSItemContentTypes` voci del dizionario per la `Info.plist`stringa e la `CFBundleTypeName` matrice nell'app. Le icone per il tipo di documento vengono inserite `CFBundleTypeIconFiles` nella matrice. Se non viene fornita un'icona di documento, iOS ne deriverà uno dall'icona dell'app.
+Lo sviluppatore può aggiungere informazioni sul tipo di documento per un formato di file che l'app è in grado di aprire includendo le voci del dizionario per la stringa `CFBundleTypeName` e la matrice di `LSItemContentTypes` nel `Info.plist`dell'app. Le icone per il tipo di documento vengono inserite nella matrice `CFBundleTypeIconFiles`. Se non viene fornita un'icona di documento, iOS ne deriverà uno dall'icona dell'app.
 Le icone possono essere fornite per diverse dimensioni, ottimizzate per le varie risoluzioni del dispositivo. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-Per assegnare questi valori in Visual Studio per Mac, usare la sezione **tipi di documento** nella `Info.plist` scheda avanzate dell'editor per aggiungere il tipo di documento e assegnarvi le icone di immagine. Ecco ad esempio una schermata che mostra la registrazione per il supporto PDF:
+Per assegnare questi valori in Visual Studio per Mac, usare la sezione **tipi di documento** nella scheda **avanzate** dell'editor `Info.plist` per aggiungere il tipo di documento e assegnarvi le icone di immagine. Ecco ad esempio una schermata che mostra la registrazione per il supporto PDF:
 
- [![](custom-document-types-images/18.png "La sezione relativa ai tipi di documento nella scheda avanzate dell'Editor ' info. plist '")](custom-document-types-images/18.png#lightbox)
+ [![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Per assegnare questi valori in Visual Studio, usare la sezione **tipi di documento** nella `Info.plist`scheda Avanzate della:
+Per assegnare questi valori in Visual Studio, usare la sezione **tipi di documento** nella scheda **Avanzate** della `Info.plist`:
 
- ![](custom-document-types-images/doc01w.png "Aprire la sezione tipi di documento nella scheda Avanzate")
+ ![](custom-document-types-images/doc01w.png "Open the Document Types section under the Advanced tab")
 
 Fare clic sul pulsante **Aggiungi tipo di documento** e compilare i campi obbligatori:
 
-![](custom-document-types-images/doc02w.png "Modulo Aggiungi tipo di documento")
+![](custom-document-types-images/doc02w.png "The Add Document Type form")
 
 -----
 

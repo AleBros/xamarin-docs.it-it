@@ -4,15 +4,15 @@ description: Questo documento fornisce suggerimenti sulla risoluzione dei proble
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: b6fbe8ca975100310922240e532b9922e76e4724
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1c8eddcf16c8513852c21babf34d81c9a3290406
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290665"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028428"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Test e distribuzione di Xamarin.iOS - Risoluzione dei problemi
 
@@ -22,13 +22,13 @@ Le operazioni di firma del codice e provisioning con iOS possono essere compless
 
 - I team di grandi dimensioni dovrebbero evitare di usare il pulsante "Fix issue" (Correggi problema), illustrato di seguito:
 
-    [![](troubleshooting-images/fixissue.png "Pulsante Fix issue (Correggi problema)")](troubleshooting-images/fixissue.png#lightbox)
+    [![](troubleshooting-images/fixissue.png "The Fix Issues dialog")](troubleshooting-images/fixissue.png#lightbox)
 
     In questo modo vengono infatti creati nuovi profili di provisioning e certificati. Nella migliore delle ipotesi, viene creato un profilo di provisioning ogni volta che un membro del team fa clic sul pulsante, causando una disorganizzazione dei profili. Nella peggiore, vengono revocati i certificati per tutte le altre persone in azienda, le cui app smetteranno quindi di funzionare.
 
 - Mantenere organizzato l'accesso keychain ed eliminare i certificati e i profili scaduti. I certificati Enterprise hanno una validità di tre anni, mentre gli altri di un anno. I certificati non possono essere rinnovati, quindi è necessario crearne di nuovi prima che quelli vecchi scadano. Assicurarsi di revocare ed eliminare i vecchi certificati e di firmare di nuovo le app con i nuovi certificati.
 
-- Rimuovere i vecchi profili di provisioning appena si installano quelli nuovi. Questo significa che Visual Studio per Mac non è in una posizione in cui deve decidere quale profilo usare. Per ottenere questo risultato, eliminare prima di tutto il profilo nel centro sviluppatori Apple, quindi passare a *Preferenze > Account > Visualizza dettagli*. Selezionare il profilo di provisioning e fare clic su **Mostra nel Finder**. Verrà visualizzata la posizione del profilo nel file system Mac, da cui potrà quindi essere eliminato mediante il Finder.
+- Rimuovere i vecchi profili di provisioning appena si installano quelli nuovi. Questo significa che Visual Studio per Mac non è in una posizione in cui deve decidere quale profilo usare. A tale scopo, assicurarsi prima di tutto di eliminare il profilo in Apple Developer Center, quindi passare a *preferenze > l'Account > visualizzare i dettagli...*. Selezionare il profilo di provisioning e fare clic su **Mostra in Finder**. Verrà visualizzata la posizione del profilo nel file system Mac, da cui potrà quindi essere eliminato mediante il Finder.
 
 - Assicurarsi che siano disponibili tutti i certificati necessari e le corrispondenti chiavi private. Per ogni team sarà necessario un certificato dello sviluppatore (per installare le app in un dispositivo personale) e un certificato di distribuzione (per installarle in altri dispositivi).
 
@@ -62,6 +62,6 @@ A volte il testing non procede senza intoppi come si era pianificato.  Le indica
 
 <a name="Automatically_copy_app_bundles_back_to_Windows" />
 
-## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle delle app nuovamente in Windows
+## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle dell'app nuovamente in Windows
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]

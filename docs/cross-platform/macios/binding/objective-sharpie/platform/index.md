@@ -3,15 +3,15 @@ title: Funzionalità di Sharpe Objective
 description: In questo documento sono disponibili collegamenti a diverse guide che consentono di descrivere l'obiettivo Sharpie, come usarlo e l'output generato.
 ms.prod: xamarin
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: dfbfd443b06518bccbf3b71fcc27acac0bca7481
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40f73a3f069c762266704d710080c324aa731ecf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279093"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016169"
 ---
 # <a name="objective-sharpie-features"></a>Funzionalità di Sharpe Objective
 
@@ -24,8 +24,8 @@ Questi due file vengono emessi da Objective Sharpie, da includere nel progetto d
 ## <a name="native-frameworksnative-frameworksmd"></a>[**Framework nativi**](native-frameworks.md)
 
 Alcune librerie vengono distribuite come Framework anziché come origine.
-Obiettivo Sharpie consente di usare queste librerie con l' `-framework` opzione.
+Obiettivo Sharpie consente di usare queste librerie con l'opzione `-framework`.
 
-## <a name="verifyverifymd"></a>[**Verify**](verify.md)
+## <a name="verifyverifymd"></a>[**Verificare**](verify.md)
 
-Obiettivo Sharpie aggiungere `Verify` gli attributi per segnalare che è necessario controllare e aggiornare manualmente l'associazione generata. 
+Obiettivo Sharpie aggiungere `Verify` attributi per segnalare che è necessario controllare e aggiornare manualmente l'associazione generata. 

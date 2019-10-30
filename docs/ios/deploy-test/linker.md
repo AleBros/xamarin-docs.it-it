@@ -4,15 +4,15 @@ description: Questo documento descrive il linker Xamarin.iOS, che consente di el
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 2cda4d53ae3f5f5716d53fd8862ca9cf000003e0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762834"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030229"
 ---
 # <a name="linking-xamarinios-apps"></a>Collegamento di app Xamarin.iOS
 
@@ -30,20 +30,20 @@ Poiché il linker è uno strumento statico, non può contrassegnare per l'inclus
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Opzioni progetto**. Per accedere a questo elenco, fare doppio clic sul progetto iOS e passare a **Compilazione iOS > Opzioni linker**, come mostrato di seguito:
 
-[![](linker-images/image1.png "Opzioni linker")](linker-images/image1.png#lightbox)
+[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Il processo di collegamento può essere personalizzato tramite l'elenco a discesa Comportamento del linker in **Proprietà progetto** in Visual Studio.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto in **Nome progetto** e quindi scegliere **Proprietà**:
 
-    ![](linker-images/linking01w.png "Fare clic con il pulsante destro del mouse sul nome del progetto in Esplora soluzioni e quindi scegliere Proprietà")
+    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
 2. In **Proprietà progetto**, selezionare **Compilazione iOS**:
 
-    ![](linker-images/linking02w.png "Selezionare Compilazione iOS")
+    ![](linker-images/linking02w.png "Select IOS Build")
 3. Seguire le istruzioni indicate di seguito per modificare le opzioni di collegamento.
 
 -----
