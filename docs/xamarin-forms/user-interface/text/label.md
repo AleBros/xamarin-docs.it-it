@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/28/2019
-ms.openlocfilehash: d51ecc728ef6d22391f1cbc682aa204a3ce44b8a
-ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
+ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
+ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/28/2019
-ms.locfileid: "72971222"
+ms.locfileid: "72980879"
 ---
 # <a name="xamarinforms-label"></a>Etichetta di Novell. Forms
 
@@ -158,7 +158,6 @@ var label =
 Gli screenshot seguenti mostrano il risultato dell'impostazione della proprietà `MaxLines` su 2, quando il testo è sufficientemente lungo da occupare più di 2 righe:
 
 ![Esempio di etichetta MaxLines](label-images/label-maxlines.png)
-
 
 ## <a name="display-html"></a>Visualizza HTML
 

@@ -1,97 +1,97 @@
 ---
-title: Usare le librerie .NET Standard per condividere il codice
-description: Questo documento descrive come usare le librerie .NET Standard per condividere il codice. Illustra la creazione di una libreria .NET Standard, modificandone le impostazioni e usarlo in un'applicazione.
+title: Usare librerie di .NET Standard per condividere il codice
+description: In questo documento viene descritto come utilizzare le librerie di .NET Standard per condividere il codice. Viene illustrato come creare una libreria di .NET Standard, modificarne le impostazioni e usarla in un'applicazione.
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 07/18/2018
-ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cae59053374f673a56d02e86cd59fb85f313c41b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61191367"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016806"
 ---
-# <a name="net-standard-library-code-sharing"></a>La condivisione del codice di libreria .NET standard
+# <a name="net-standard-library-code-sharing"></a>Condivisione del codice della libreria .NET Standard
 
-Librerie .NET standard hanno un'API uniforme per tutte le piattaforme .NET incluso .NET Core e Xamarin. Creare una singola libreria .NET Standard e usarlo da qualsiasi runtime che supporta la piattaforma Standard .NET. Fare riferimento a [questo grafico](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) per informazioni dettagliate sulle piattaforme supportate.
+Le librerie .NET Standard hanno un'API uniforme per tutte le piattaforme .NET, tra cui Novell e .NET Core. Creare una singola libreria di .NET Standard e usarla da qualsiasi runtime che supporta la piattaforma di .NET Standard. Per informazioni dettagliate sulle piattaforme supportate, fare riferimento a [questo grafico](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support) .
 
-Versioni di .NET Standard 1.0-1.6 fornire in modo incrementale più grande subset di .NET Framework, .NET Standard 2.0 fornisce il migliore livello di supporto per le applicazioni Xamarin e per il porting di librerie di classi portabile esistente.
+Sebbene .NET Standard versioni da 1,0 a 1,6 forniscano subset incrementali di .NET Framework, .NET Standard 2,0 fornisce il livello migliore di supporto per le applicazioni Novell e per il porting di librerie di classi portabili esistenti.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio per Mac
 
-In questa sezione illustra in dettaglio come creare e usare una libreria .NET Standard con Visual Studio per Mac.
+Questa sezione illustra come creare e usare una libreria di .NET Standard usando Visual Studio per Mac.
 
-### <a name="creating-a-net-standard-library"></a>Creazione di una libreria .NET Standard
+### <a name="creating-a-net-standard-library"></a>Creazione di una libreria di .NET Standard
 
-È possibile aggiungere una libreria .NET Standard per la soluzione con questi passaggi:
+È possibile aggiungere una libreria di .NET Standard alla soluzione attenendosi alla procedura seguente:
 
-1. Nel **Aggiungi nuovo progetto** finestra di dialogo, seleziona la **.NET Core** categoria e quindi selezionare **libreria .NET Standard**:
+1. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare la categoria **.NET Core** e quindi selezionare **.NET standard library**:
 
-    ![Creare una libreria .NET Standard](net-standard-images/vsm01-m157.png "creazione di una libreria nuovo .NET Standard")
+    ![Creare una libreria di .NET Standard](net-standard-images/vsm01-m157.png "Creazione di una nuova libreria .NET Standard")
 
-2. Nella schermata successiva, scegliere il framework di destinazione - **.NET Standard 2.0** è consigliabile:
+2. Nella schermata successiva scegliere il Framework di destinazione- **.NET Standard 2,0** è consigliato:
 
-    [![Scegliere .NET Standard 2.0](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
+    [![scegliere .NET Standard 2,0](net-standard-images/vsm01a-m157-sml.png)](net-standard-images/vsm01a-m157.png#lightbox)
 
-3. Nella schermata finale, digitare il nome del progetto e fare clic su **Create**.
+3. Nella schermata finale digitare il nome del progetto e fare clic su **Crea**.
 
-4. Come mostrato in Esplora soluzioni, verrà visualizzato il progetto di libreria .NET Standard. Nel nodo ' Dependencies indicherà che la libreria Usa la [netstandard. Library](https://www.nuget.org/packages/NETStandard.Library/).
+4. Il progetto di libreria .NET Standard verrà visualizzato come illustrato nella Esplora soluzioni. Il nodo dipendenze indicherà che la libreria USA [NETStandard. Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-    ![Nodo di dipendenze nella soluzione indica .NET Standard](net-standard-images/vsm02-m157.png)
+    ![Il nodo dipendenze nella soluzione indica .NET Standard](net-standard-images/vsm02-m157.png)
 
-#### <a name="editing-net-standard-library-settings"></a>Modifica delle impostazioni di libreria .NET Standard
+#### <a name="editing-net-standard-library-settings"></a>Modifica delle impostazioni della libreria .NET Standard
 
-Le impostazioni della libreria .NET Standard possono essere visualizzate e modificate facendo clic sul progetto e selezionando `Options` come illustrato in questo screenshot:
+Le impostazioni della libreria .NET Standard possono essere visualizzate e modificate facendo clic con il pulsante destro del mouse sul progetto e selezionando `Options`, come illustrato nello screenshot seguente:
 
-![Modificare il framework di destinazione .NET Standard in Opzioni progetto](net-standard-images/vsm03-m157.png "modificare la versione del Framework di destinazione Standard .NET in Opzioni progetto")
+![Modificare .NET Standard Framework di destinazione nelle opzioni del progetto](net-standard-images/vsm03-m157.png "Modificare la versione del Framework di destinazione .NET Standard nelle opzioni del progetto")
 
-All'interno è possibile modificare la versione di `netstandard` modificando il `Target Framework` valore di elenco a discesa.
+All'interno di è possibile modificare la versione di `netstandard` modificando il valore di `Target Framework` a discesa.
 
-**Inoltre:** È possibile modificare il `.csproj` direttamente per modificare questo valore.
+**Inoltre:** È possibile modificare direttamente il `.csproj` per modificare questo valore.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="visual-studio-2017-windows"></a>Visual Studio 2017 (Windows)
 
-Questa sezione illustra come creare e usare una libreria .NET Standard con Visual Studio.
+Questa sezione illustra come creare e usare una libreria di .NET Standard usando Visual Studio.
 
-### <a name="creating-a-net-standard-library"></a>Creazione di una libreria .NET Standard
+### <a name="creating-a-net-standard-library"></a>Creazione di una libreria di .NET Standard
 
-Aggiunta di una libreria .NET Standard per la soluzione è abbastanza semplice.
+L'aggiunta di una libreria di .NET Standard alla soluzione è piuttosto semplice.
 
-1. Nel **nuovo progetto** finestra di dialogo, seleziona la **.NET Standard** categoria e quindi selezionare **libreria di classi (.NET Standard)**.
+1. Nella finestra di dialogo **nuovo progetto** selezionare la categoria **.NET standard** , quindi selezionare **libreria di classi (.NET standard)** .
 
-    ![Creazione di una nuova libreria di classi Standard .NET](net-standard-images/vs01-w157.png "Crea nuova libreria di classi .NET Standard")
+    ![Creazione di una nuova libreria di classi .NET Standard](net-standard-images/vs01-w157.png "Crea nuova libreria di classi .NET Standard")
 
-2. Come mostrato in Esplora soluzioni, verrà visualizzato il progetto di libreria .NET Standard. Nel nodo ' Dependencies indicherà che la libreria Usa la [netstandard. Library](https://www.nuget.org/packages/NETStandard.Library/).
+2. Il progetto di libreria .NET Standard verrà visualizzato come illustrato nella Esplora soluzioni. Il nodo dipendenze indicherà che la libreria USA [NETStandard. Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-    ![Netstandard. Library nella cartella del progetto](net-standard-images/vs02-w157.png "progetto .NET Standard nella soluzione")
+    ![NETStandard. Library nella cartella del progetto](net-standard-images/vs02-w157.png "Progetto .NET Standard nella soluzione")
 
-### <a name="editing-net-standard-library-settings"></a>Modifica le impostazioni della libreria .NET Standard
+### <a name="editing-net-standard-library-settings"></a>Modifica delle impostazioni della libreria .NET Standard
 
-Le impostazioni della libreria .NET Standard possono essere visualizzate e modificate facendo clic sul progetto e selezionando **proprietà** come illustrato in questo screenshot:
+Le impostazioni della libreria .NET Standard possono essere visualizzate e modificate facendo clic con il pulsante destro del mouse sul progetto e selezionando **Proprietà** , come illustrato nello screenshot seguente:
 
-![Modificare il framework di destinazione standard .NET nelle proprietà del progetto](net-standard-images/vs03-w157.png "fanno riferimento a una libreria .NET Standard, esattamente come altri progetti")
+![Modificare i Framework di destinazione .NET standard nelle proprietà del progetto](net-standard-images/vs03-w157.png "Fare riferimento a una libreria di .NET Standard allo stesso modo di altri progetti")
 
-**Inoltre:** È possibile modificare il `.csproj` direttamente per modificare il `TargetFramework` elemento e modificare la versione di destinazione (ad es. `<TargetFramework>netstandard2.0</TargetFramework>`).
+**Inoltre:** È possibile modificare direttamente il `.csproj` per modificare l'elemento `TargetFramework` e modificare la versione di destinazione, ad esempio `<TargetFramework>netstandard2.0</TargetFramework>`).
 
-### <a name="using-a-net-standard-library-project"></a>Usando un progetto di libreria .NET Standard
+### <a name="using-a-net-standard-library-project"></a>Uso di un progetto di libreria .NET Standard
 
-Dopo aver creata una libreria .NET Standard, è possibile aggiungere un riferimento al codice da qualsiasi progetto di applicazione o una libreria compatibile nello stesso modo che è in genere aggiungere riferimenti. In Visual Studio, fare clic sul nodo Riferimenti e scegliere **Aggiungi riferimento...**  passerà successivamente al **progetti > soluzione** scheda come illustrato:
+Una volta creata una libreria di .NET Standard, è possibile aggiungervi un riferimento da qualsiasi applicazione o progetto di libreria compatibile nello stesso modo in cui si aggiungono normalmente i riferimenti. In Visual Studio fare clic con il pulsante destro del mouse sul nodo riferimenti e scegliere **Aggiungi riferimento** , quindi passare alla scheda **soluzioni > soluzione** , come illustrato di seguito:
 
-![Riferimento a una libreria .NET Standard](net-standard-images/vs04.png "In Visual Studio, fare doppio clic sul nodo Riferimenti e scegliere Aggiungi riferimento... quindi passare alla scheda dei progetti della soluzione, come mostrato")
+![Riferimento a una libreria di .NET Standard](net-standard-images/vs04.png "In Visual Studio fare clic con il pulsante destro del mouse sul nodo riferimenti e scegliere Aggiungi riferimento. passare quindi alla scheda progetti soluzione come illustrato")
 
 -----
 
-## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET standard e xamarin. Forms per gli sviluppatori .NET (video)
+## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET Standard e Novell. Forms per lo sviluppatore .NET (video)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-* [.NET standard](https://docs.microsoft.com/dotnet/standard/net-standard) -informazioni dettagliate e il confronto con libreria di classi Portabile.
+* [.NET standard](https://docs.microsoft.com/dotnet/standard/net-standard) -informazioni dettagliate e confronto con PCL.

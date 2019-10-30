@@ -3,15 +3,15 @@ title: Domande frequenti generali
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: de70eda2898f29a1e7afed9440d5f5fae496e069
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765107"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013984"
 ---
 # <a name="general-frequently-asked-questions"></a>Domande frequenti generali
 
@@ -23,8 +23,8 @@ Questa guida elenca le risorse e i metodi per determinare se la libreria esisten
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[API Reflection per librerie PCL](pcl-reflection.md)
 Microsoft ha sviluppato una nuova API di reflection da usare nelle librerie di classi portabili. Se si dispone di un codice di Reflection esistente che si desidera spostare in una libreria di classi portabile, potrebbe non funzionare.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study PCL: Come è possibile risolvere i problemi correlati a System. Diagnostics. Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
-Novell. iOS e Novell. Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Novell. iOS né Novell. Android includono attualmente un'implementazione completa dei tipi nello `System.Diagnostics.Tracing` spazio dei nomi PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Case study per librerie PCL: come è possibile risolvere i problemi correlati a System.Diagnostics.Tracing per il pacchetto NuGet Microsoft TPL Dataflow?](pcl-case-study.md)
+Novell. iOS e Novell. Android non implementano il 100% di ogni profilo PCL che consentono come riferimenti. Per praticità in Visual Studio per Mac, Visual Studio e gestione pacchetti NuGet, i progetti Novell consentono di usare diversi profili che hanno solo implementazioni incomplete. Ad esempio, né Novell. iOS né Novell. Android includono attualmente un'implementazione completa dei tipi nello spazio dei nomi `System.Diagnostics.Tracing` PCL. Per risolvere il problema, cambiare il progetto dell'app in modo che faccia riferimento alla versione portabile-Net45 + Win8 + WP8 + wpa81 della libreria del flusso di flussi di dispositivi TPL.
 
 ## <a name="nuget-packages--xamarin-components"></a>Pacchetti NuGet & componenti Novell
 ### <a name="how-can-i-update-nugetnuget-updatemd"></a>[Come si aggiorna NuGet?](nuget-update.md)
@@ -42,7 +42,7 @@ Sono stati usati diversi componenti Google Play Services e pacchetti NuGet, ma p
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[In quale posizione sono archiviati i componenti nel computer?](component-storage.md)
 Ogni volta che si installa un componente Novell in un progetto di app, questo viene inserito nelle due posizioni elencate in questa guida.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Dove si possono trovare informazioni sulla versione e i log?](version-logs.md)
 Questa guida descrive in dettaglio dove trovare le informazioni di diagnostica che possono essere usate per risolvere i problemi relativi a Novell.
 

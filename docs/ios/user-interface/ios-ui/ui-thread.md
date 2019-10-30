@@ -4,15 +4,15 @@ description: Questo documento descrive come usare il thread dell'interfaccia ute
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee7ab7c5d0503cffd2c12a493f314f191d912e92
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768185"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002838"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilizzo del thread dell'interfaccia utente in Novell. iOS
 
@@ -24,7 +24,7 @@ Il codice deve apportare modifiche solo ai controlli dell'interfaccia utente dal
 
 Quando si creano controlli in una vista o si gestisce un evento avviato dall'utente, ad esempio un tocco, il codice è già in esecuzione nel contesto del thread dell'interfaccia utente.
 
-Se il codice è in esecuzione in un thread in background, in un'attività o in un callback, è probabile che non sia in esecuzione sul thread principale dell'interfaccia utente. In questo caso è necessario eseguire il wrapping del codice in una `InvokeOnMainThread` chiamata `BeginInvokeOnMainThread` a o in modo analogo al seguente:
+Se il codice è in esecuzione in un thread in background, in un'attività o in un callback, è probabile che non sia in esecuzione sul thread principale dell'interfaccia utente. In questo caso è necessario eseguire il wrapping del codice in una chiamata a `InvokeOnMainThread` o `BeginInvokeOnMainThread` come segue:
 
 ```csharp
 InvokeOnMainThread ( () => {
@@ -32,17 +32,17 @@ InvokeOnMainThread ( () => {
 });
 ```
 
-Il `InvokeOnMainThread` metodo viene definito in `NSObject` in modo che possa essere chiamato dall'interno di metodi definiti in qualsiasi oggetto UIKit, ad esempio una vista o un controller di visualizzazione.
+Il metodo `InvokeOnMainThread` viene definito in `NSObject` in modo che possa essere chiamato dall'interno di metodi definiti in qualsiasi oggetto UIKit, ad esempio una vista o un controller di visualizzazione.
 
 Durante il debug delle applicazioni Novell. iOS, viene generato un errore se il codice tenta di accedere a un controllo dell'interfaccia utente dal thread errato. Questo consente di rilevare e risolvere questi problemi con il metodo InvokeOnMainThread. Questo si verifica solo durante il debug e non genera un errore nelle build di rilascio. Il messaggio di errore verrà visualizzato come segue:
 
- ![](ui-thread-images/image10.png "Esecuzione thread UI")
+ ![](ui-thread-images/image10.png "UI Thread Execution")
 
  <a name="Background_Thread_Example" />
 
 ## <a name="background-thread-example"></a>Esempio di thread in background
 
-Di seguito è riportato un esempio che tenta di accedere a un controllo dell' `UILabel`interfaccia utente (a) da un thread in background utilizzando un semplice thread:
+Di seguito è riportato un esempio che tenta di accedere a un controllo dell'interfaccia utente (un `UILabel`) da un thread in background utilizzando un semplice thread:
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -50,7 +50,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Il codice genererà l' `UIKitThreadAccessException` oggetto durante il debug. Per risolvere il problema (e assicurarsi che il controllo dell'interfaccia utente sia accessibile solo dal thread principale dell'interfaccia utente), eseguire il wrapping del codice che fa `InvokeOnMainThread` riferimento ai controlli dell'interfaccia utente all'interno di un'espressione simile alla seguente:
+Il codice genererà il `UIKitThreadAccessException` durante il debug. Per risolvere il problema (e assicurarsi che il controllo dell'interfaccia utente sia accessibile solo dal thread principale dell'interfaccia utente), eseguire il wrapping del codice che fa riferimento ai controlli dell'interfaccia utente all'interno di un'espressione `InvokeOnMainThread` come la seguente:
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -66,9 +66,9 @@ Non è necessario usarlo per il resto degli esempi in questo documento, ma è im
 
 ## <a name="asyncawait-example"></a>Esempio di async/await
 
-Quando si usa C# la 5 parole chiave `InvokeOnMainThread` async/await non è necessario perché quando un'attività attesa viene completata, il metodo continua nel thread chiamante.
+Quando si usa C# la 5 parole chiave async/await`InvokeOnMainThread`non è necessario perché quando un'attività attesa viene completata, il metodo continua nel thread chiamante.
 
-Questo codice di esempio (che attende in seguito a una chiamata al metodo Delay, esclusivamente a scopo dimostrativo) Mostra un metodo asincrono chiamato sul thread UI (si tratta di un gestore TouchUpInside). Poiché il metodo contenitore viene chiamato sul thread UI, le operazioni dell'interfaccia utente come l'impostazione del `UILabel` testo su un `UIAlertView` oggetto o la visualizzazione di un oggetto possono essere chiamate in modo sicuro dopo il completamento delle operazioni asincrone sui thread in background.
+Questo codice di esempio (che attende in seguito a una chiamata al metodo Delay, esclusivamente a scopo dimostrativo) Mostra un metodo asincrono chiamato sul thread UI (si tratta di un gestore TouchUpInside). Poiché il metodo contenitore viene chiamato sul thread UI, le operazioni dell'interfaccia utente come l'impostazione del testo in un `UILabel` o la visualizzazione di un `UIAlertView` possono essere chiamate in modo sicuro dopo il completamento delle operazioni asincrone sui thread in background.
 
 ```csharp
 async partial void button2_TouchUpInside (UIButton sender)
@@ -89,7 +89,7 @@ async partial void button2_TouchUpInside (UIButton sender)
 }
 ```
 
-Se un metodo asincrono viene chiamato da un thread in background (non dal thread principale dell'interfaccia `InvokeOnMainThread` utente), sarà comunque necessario.
+Se un metodo asincrono viene chiamato da un thread in background (non dal thread principale dell'interfaccia utente), `InvokeOnMainThread` sarebbero ancora necessari.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

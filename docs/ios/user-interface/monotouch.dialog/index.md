@@ -5,20 +5,20 @@ ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: conceptdev
-ms.author: crdun
-ms.openlocfilehash: cbe1b374b97f64e0c28b2f89ca9f6d510511b74d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+author: davidortinau
+ms.author: daortin
+ms.openlocfilehash: 68f8349fd6c8f90b36fb5edb2838dfec352a5800
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768847"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002577"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduzione a MonoTouch. dialog per Novell. iOS
 
 MonoTouch. Dialog, definito MT. D per brevità, è un toolkit di sviluppo rapido per l'interfaccia utente che consente agli sviluppatori di creare schermate delle applicazioni e spostamento usando le informazioni, anziché la noia della creazione di controller di visualizzazione, tabelle e così via. Di conseguenza, fornisce una semplificazione significativa dello sviluppo dell'interfaccia utente e della riduzione del codice. Si consideri, ad esempio, la schermata seguente:
 
- [![](images/image1.png "Si consideri, ad esempio, questa schermata")](images/image1.png#lightbox)
+ [![](images/image1.png "For example, consider this screenshot")](images/image1.png#lightbox)
 
 Per definire l'intera schermata è stato usato il codice seguente:
 
@@ -55,7 +55,7 @@ Ad esempio, ogni volta che è necessaria una tabella, per popolare tale tabella 
 Mt. D semplifica l'incapsulamento di tutto il codice in un'API generica per la creazione di tabelle. Fornisce quindi un'astrazione su tale API che consente la sintassi di associazione di un oggetto dichiarativa che lo rende ancora più semplice. Di conseguenza, in MT sono disponibili due API. D
 
 - **API elementi di basso livello** : l' *API elementi* è basata sulla creazione di un albero gerarchico di elementi che rappresentano le schermate e i relativi componenti. L'API degli elementi offre agli sviluppatori la massima flessibilità e il controllo per la creazione di interfacce utente. Inoltre, l'API degli elementi ha un supporto avanzato per la definizione dichiarativa tramite JSON, che consente la dichiarazione incredibilmente veloce, nonché la generazione dinamica dell'interfaccia utente da un server. 
-- **Ad alto livello API di Reflection** , noto anche come i *associazione* *API* , in cui le classi vengono annotate con hint dell'interfaccia utente e quindi MT. D automaticamente consente di creare schermate basate sugli oggetti e fornisce un'associazione tra ciò che viene visualizzata (e facoltativamente modificata) nella schermata e l'oggetto sottostante il backup. Nell'esempio precedente è stato illustrato l'uso dell'API di Reflection. Questa API non fornisce il controllo granulare svolto dall'API degli elementi, ma riduce ulteriormente la complessità grazie alla creazione automatica della gerarchia di elementi in base agli attributi della classe. 
+- **API di reflection di alto livello** , nota anche come*API* di binding, in cui le classi sono annotate con hint dell'interfaccia utente e quindi mt. D crea automaticamente schermate basate sugli oggetti e fornisce un'associazione tra gli elementi visualizzati (e facoltativamente modificati) sullo schermo e il supporto dell'oggetto sottostante. Nell'esempio precedente è stato illustrato l'uso dell'API di Reflection. Questa API non fornisce il controllo granulare svolto dall'API degli elementi, ma riduce ulteriormente la complessità grazie alla creazione automatica della gerarchia di elementi in base agli attributi della classe. 
 
 Mt. D è dotato di un ampio set di elementi dell'interfaccia utente incorporati per la creazione dello schermo, ma riconosce anche la necessità di elementi personalizzati e layout avanzati dello schermo. Di conseguenza, l'estendibilità è un primo livello in primo piano nell'API. Gli sviluppatori possono estendere gli elementi esistenti o crearne di nuovi e quindi integrarsi facilmente.
 
@@ -69,7 +69,7 @@ Questo articolo illustra in maniera completa l'uso di MT. D, tra cui:
 
 ## <a name="setting-up-mtd"></a>Configurazione di MT. D
 
-Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Quindi, aggiungere `using MonoTouch.Dialog` le istruzioni nel codice sorgente in base alle esigenze.
+Mt. D viene distribuito con Novell. iOS. Per usarlo, fare clic con il pulsante destro del mouse sul nodo **riferimenti** di un progetto Novell. iOS in Visual Studio 2017 o Visual Studio per Mac e aggiungere un riferimento all'assembly **MonoTouch. Dialog-1** . Aggiungere quindi `using MonoTouch.Dialog` istruzioni nel codice sorgente in base alle esigenze.
 
 ## <a name="understanding-the-pieces-of-mtd"></a>Informazioni sulle parti di MT. D
 
@@ -79,7 +79,7 @@ Mt. D compila le schermate usando le quattro parti seguenti:
 
 - **DialogViewController**
 - **RootElement**
-- **Sezione**
+- **Section**
 - **Elemento**
 
 ### <a name="dialogviewcontroller"></a>DialogViewController
@@ -94,13 +94,13 @@ Un *elemento RootElement* è il contenitore di livello superiore per gli element
 
 Una sezione è un gruppo di celle in una tabella. Come per una normale sezione della tabella, può facoltativamente avere un'intestazione e un piè di pagina che possono essere testo o persino visualizzazioni personalizzate, come nello screenshot seguente:
 
- [![](images/image2.png "Come per una normale sezione della tabella, può facoltativamente avere un'intestazione e un piè di pagina che possono essere testo o persino visualizzazioni personalizzate, come in questa schermata")](images/image2.png#lightbox)
+ [![](images/image2.png "As with a normal table section, it can optionally have a header and footer that can either be text, or even custom views, as in this screenshot")](images/image2.png#lightbox)
 
 ### <a name="element"></a>Elemento
 
 Un elemento rappresenta una cella effettiva nella tabella. Mt. D viene compresso con una vasta gamma di elementi che rappresentano tipi di dati o input diversi. Ad esempio, gli screenshot seguenti illustrano alcuni degli elementi disponibili:
 
- [![](images/image3.png "Ad esempio, questo screenshot illustra alcuni degli elementi disponibili")](images/image3.png#lightbox)
+ [![](images/image3.png "For example, this screenshots illustrate a few of the available elements")](images/image3.png#lightbox)
 
 ## <a name="more-on-sections-and-rootelements"></a>Altre informazioni sulle sezioni e RootElements
 
@@ -112,9 +112,9 @@ Per avviare il processo MonoTouch. Dialog è necessario almeno un elemento RootE
 
 Se un elemento rootElement viene inizializzato con un valore di sezione/elemento, questo valore viene utilizzato per individuare un elemento figlio che fornirà un riepilogo della configurazione, di cui viene eseguito il rendering sul lato destro dello schermo. Ad esempio, la schermata seguente mostra una tabella a sinistra con una cella contenente il titolo della schermata dei dettagli a destra, "dessert", insieme al valore del deserto selezionato.
 
- [![](images/image4.png "Questo screenshot Mostra una tabella a sinistra con una cella contenente il titolo della schermata dei dettagli a destra, Dessert, insieme al valore di selezionato Deserto")](images/image4.png#lightbox) [![](images/image5.png "questo nello screenshot seguente mostra una tabella a sinistra con una cella contenente il titolo della schermata dei dettagli a destra, Dessert, insieme al valore di Deserto selezionato")](images/image5.png#lightbox)
+ [![](images/image4.png "Questa schermata mostra una tabella a sinistra con una cella che contiene il titolo della schermata dei dettagli a destra, dessert, insieme al valore del deserto selezionato")](images/image4.png#lightbox)[![](images/image5.png "Questa schermata seguente mostra una tabella a sinistra con una cella che contiene il titolo della schermata dei dettagli a destra, dessert, insieme al valore del deserto selezionato")](images/image5.png#lightbox)
 
-Gli elementi radice possono anche essere usati all'interno delle sezioni per attivare il caricamento di una nuova pagina di configurazione nidificata, come illustrato in precedenza. Se utilizzata in questa modalità, la didascalia fornita viene utilizzata durante il rendering all'interno di una sezione e viene utilizzata anche come titolo per la pagina della pagina. Ad esempio:
+Gli elementi radice possono anche essere usati all'interno delle sezioni per attivare il caricamento di una nuova pagina di configurazione nidificata, come illustrato in precedenza. Se utilizzata in questa modalità, la didascalia fornita viene utilizzata durante il rendering all'interno di una sezione e viene utilizzata anche come titolo per la pagina della pagina. Esempio:
 
 ```csharp
 var root = new RootElement ("Meals") {
@@ -163,7 +163,7 @@ var section = new Section (header);
 
 #### <a name="handling-nsaction"></a>Gestione di NSAction
 
-Mt. D presenta un `NSAction` oggetto come delegato per la gestione dei callback.
+Mt. D superficie di un `NSAction` come delegato per la gestione dei callback.
 Si immagini, ad esempio, di voler gestire un evento Touch per una cella della tabella creata da MT. D. Quando si crea un elemento con MT. D, è sufficiente fornire una funzione di callback, come illustrato di seguito:
 
 ```csharp
@@ -174,7 +174,7 @@ new Section () {
 
 #### <a name="retrieving-element-value"></a>Recupero del valore dell'elemento
 
-In combinazione con `Element.Value` la proprietà, il callback può recuperare il valore impostato in altri elementi. Si consideri il codice di esempio seguente:
+In combinazione con la proprietà `Element.Value`, il callback può recuperare il valore impostato in altri elementi. Si consideri il codice di esempio seguente:
 
 ```csharp
 var element = new EntryElement (task.Name, "Enter task description", task.Description);
@@ -190,9 +190,9 @@ var taskElement = new RootElement (task.Name) {
 
 Questo codice crea un'interfaccia utente come illustrato di seguito. Per una procedura dettagliata completa di questo esempio, vedere l'esercitazione sulla [procedura dettagliata per l'API elementi](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) .
 
- [![](images/image6.png "In combinazione con la proprietà Element. Value, il callback può recuperare il valore impostato in altri elementi")](images/image6.png#lightbox)
+ [![](images/image6.png "Combined with the Element.Value property, the callback can retrieve the value set in other elements")](images/image6.png#lightbox)
 
-Quando l'utente preme la cella della tabella inferiore, il codice nella funzione anonima viene eseguito, scrivendo il valore dall' `element` istanza nel riquadro di **output dell'applicazione** in Visual Studio per Mac.
+Quando l'utente preme la cella della tabella inferiore, il codice nella funzione anonima viene eseguito, scrivendo il valore dall'istanza di `element` al riquadro di **output dell'applicazione** nella Visual Studio per Mac.
 
 ## <a name="built-in-elements"></a>Elementi predefiniti
 
@@ -203,17 +203,17 @@ Sono disponibili anche elementi più complessi per supportare tipi di dati più 
 
 ### <a name="working-with-element-values"></a>Utilizzo dei valori degli elementi
 
-Gli elementi utilizzati per acquisire l'input dell'utente espongono `Value` una proprietà pubblica che include il valore corrente dell'elemento in qualsiasi momento. Viene aggiornata automaticamente quando l'utente usa l'applicazione.
+Gli elementi utilizzati per acquisire l'input dell'utente espongono una proprietà `Value` pubblica che include il valore corrente dell'elemento in qualsiasi momento. Viene aggiornata automaticamente quando l'utente usa l'applicazione.
 
 Questo è il comportamento per tutti gli elementi che fanno parte di MonoTouch. Dialog, ma non è necessario per gli elementi creati dall'utente.
 
 ### <a name="string-element"></a>Elemento String
 
-Un `StringElement` oggetto Mostra una didascalia sul lato sinistro di una cella della tabella e il valore di stringa sul lato destro della cella.
+Un `StringElement` Mostra una didascalia sul lato sinistro di una cella della tabella e il valore di stringa sul lato destro della cella.
 
- [![](images/image7.png "Un oggetto Stringelement Mostra una didascalia sul lato sinistro di una cella della tabella e il valore di stringa sul lato destro della cella.")](images/image7.png#lightbox)
+ [![](images/image7.png "A StringElement shows a caption on the left side of a table cell and the string value on the right side of the cell")](images/image7.png#lightbox)
 
-Per usare un `StringElement` oggetto come pulsante, fornire un delegato.
+Per usare un `StringElement` come pulsante, fornire un delegato.
 
 ```csharp
 new StringElement ("Click me", () => { 
@@ -221,25 +221,25 @@ new StringElement ("Click me", () => {
 });
 ```
 
- [![](images/image8.png "Per usare un oggetto Stringelement come pulsante, fornire un delegato")](images/image8.png#lightbox)
+ [![](images/image8.png "To use a StringElement as a button, provide a delegate")](images/image8.png#lightbox)
 
 ### <a name="styled-string-element"></a>Elemento String con stile
 
-Un `StyledStringElement` oggetto consente di presentare le stringhe utilizzando stili di celle di tabella predefiniti o la formattazione personalizzata.
+Un `StyledStringElement` consente di presentare le stringhe utilizzando gli stili di cella della tabella predefiniti o la formattazione personalizzata.
 
- [![](images/image9.png "Un StyledStringElement consente di presentare le stringhe usando stili di celle di tabella predefiniti o la formattazione personalizzata")](images/image9.png#lightbox)
+ [![](images/image9.png "A StyledStringElement allows strings to be presented using either built-in table cell styles or with custom formatting")](images/image9.png#lightbox)
 
-La `StyledStringElement` classe deriva da `StringElement`, ma consente agli sviluppatori di personalizzare alcune proprietà, ad esempio il tipo di carattere, il colore del testo, il colore della cella di sfondo, la modalità di interruzioni di riga, il numero di righe da visualizzare e l'eventuale visualizzazione di un accessorio.
+La classe `StyledStringElement` deriva da `StringElement`, ma consente agli sviluppatori di personalizzare alcune proprietà, ad esempio il tipo di carattere, il colore del testo, il colore della cella di sfondo, la modalità di interruzioni di riga, il numero di righe da visualizzare e se deve essere visualizzato un accessorio.
 
 ### <a name="multiline-element"></a>Elemento su più righe
 
- [![](images/image10.png "Elemento su più righe")](images/image10.png#lightbox)
+ [![](images/image10.png "Multiline Element")](images/image10.png#lightbox)
 
 ### <a name="entry-element"></a>Elemento entry
 
-L' `EntryElement`oggetto, come implica il nome, viene usato per ottenere l'input dell'utente. Supporta stringhe o password regolari, dove i caratteri sono nascosti.
+Il `EntryElement`, come implica il nome, viene usato per ottenere l'input dell'utente. Supporta stringhe o password regolari, dove i caratteri sono nascosti.
 
- [![](images/image11.png "L'elemento Entryelement viene usato per ottenere l'input dell'utente")](images/image11.png#lightbox)
+ [![](images/image11.png "The EntryElement is used to get user input")](images/image11.png#lightbox)
 
 Viene inizializzata con tre valori:
 
@@ -249,9 +249,9 @@ Viene inizializzata con tre valori:
 
 Il segnaposto e il valore possono essere null. Tuttavia, la didascalia è obbligatoria.
 
-In qualsiasi momento, l'accesso alla proprietà Value può recuperare il valore di `EntryElement`.
+In qualsiasi momento, l'accesso alla proprietà Value può recuperare il valore della `EntryElement`.
 
-Inoltre, `KeyboardType` la proprietà può essere impostata in fase di creazione sullo stile del tipo di tastiera desiderato per l'immissione di dati. Questa operazione può essere usata per configurare la tastiera usando i valori `UIKeyboardType` di come indicato di seguito:
+Inoltre, la proprietà `KeyboardType` può essere impostata in fase di creazione sullo stile del tipo di tastiera desiderato per l'immissione di dati. Questa operazione può essere usata per configurare la tastiera usando i valori di `UIKeyboardType` come indicato di seguito:
 
 - Numerico
 - Phone
@@ -260,23 +260,23 @@ Inoltre, `KeyboardType` la proprietà può essere impostata in fase di creazione
 
 ### <a name="boolean-element"></a>Elemento Boolean
 
- [![](images/image12.png "Elemento Boolean")](images/image12.png#lightbox)
+ [![](images/image12.png "Boolean Element")](images/image12.png#lightbox)
 
 ### <a name="checkbox-element"></a>CheckBox (elemento)
 
- [![](images/image13.png "CheckBox (elemento)")](images/image13.png#lightbox)
+ [![](images/image13.png "Checkbox Element")](images/image13.png#lightbox)
 
 ### <a name="radio-element"></a>Elemento radio
 
-È necessario specificare `RadioGroup` un oggetto in `RootElement`. `RadioElement`
+Un `RadioElement` richiede la specifica di un `RadioGroup` nel `RootElement`.
 
 ```csharp
 mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
- [![](images/image14.png "Un radioelemento richiede la specifica di un radiogruppo nell'elemento RootElement")](images/image14.png#lightbox)
+ [![](images/image14.png "A RadioElement requires a RadioGroup to be specified in the RootElement")](images/image14.png#lightbox)
 
- `RootElements`vengono usati anche per coordinare gli elementi radio. I `RadioElement` membri possono estendersi su più sezioni, ad esempio per implementare un elemento simile al selettore di tono della suoneria e a singoli suoneria personalizzati da suonerie del sistema. Nella visualizzazione riepilogo verrà visualizzato l'elemento radio attualmente selezionato. Per usare questa operazione, creare `RootElement` con il costruttore del gruppo, come indicato di seguito:
+ `RootElements` vengono usati anche per coordinare gli elementi radio. I membri del `RadioElement` possono estendersi su più sezioni, ad esempio per implementare un elemento simile al selettore del tono della suoneria e i toni dell'anello personalizzato separati dalle suonerie del sistema. Nella visualizzazione riepilogo verrà visualizzato l'elemento radio attualmente selezionato. Per usarlo, creare il `RootElement` con il costruttore del gruppo, come indicato di seguito:
 
 ```csharp
 var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
@@ -286,64 +286,64 @@ Il nome del gruppo in `RadioGroup` viene usato per visualizzare il valore selezi
 
 ### <a name="badge-element"></a>Badge (elemento)
 
- [![](images/image15.png "Badge (elemento)")](images/image15.png#lightbox)
+ [![](images/image15.png "Badge Element")](images/image15.png#lightbox)
 
 ### <a name="float-element"></a>Float (elemento)
 
- [![](images/image16.png "Float (elemento)")](images/image16.png#lightbox)
+ [![](images/image16.png "Float Element")](images/image16.png#lightbox)
 
 ### <a name="activity-element"></a>Activity-elemento
 
- [![](images/image17.png "Activity-elemento")](images/image17.png#lightbox)
+ [![](images/image17.png "Activity Element")](images/image17.png#lightbox)
 
 ### <a name="date-element"></a>Elemento date
 
- ![](images/image18.png "Elemento date")
+ ![](images/image18.png "Date Element")
 
 Quando la cella corrispondente a Dateelement è selezionata, viene visualizzato un selettore di data, come illustrato di seguito:
 
- [![](images/image19.png "Quando la cella corrispondente a Dateelement è selezionata, viene visualizzato un selettore di data come illustrato")](images/image19.png#lightbox)
+ [![](images/image19.png "When the cell corresponding to the DateElement is selected, a date picker is presented as shown")](images/image19.png#lightbox)
 
 ### <a name="time-element"></a>Time-elemento
 
- [![](images/image20.png "Time-elemento")](images/image20.png#lightbox)
+ [![](images/image20.png "Time Element")](images/image20.png#lightbox)
 
 Quando la cella corrispondente a Timeelement è selezionata, viene visualizzato un selettore di ora, come illustrato di seguito:
 
- [![](images/image21.png "Quando la cella corrispondente a Timeelement è selezionata, viene visualizzato un selettore di ora come illustrato")](images/image21.png#lightbox)
+ [![](images/image21.png "When the cell corresponding to the TimeElement is selected, a time picker is presented as shown")](images/image21.png#lightbox)
 
 ### <a name="datetime-element"></a>DateTime-elemento
 
- [![](images/image22.png "DateTime-elemento")](images/image22.png#lightbox)
+ [![](images/image22.png "DateTime Element")](images/image22.png#lightbox)
 
 Quando la cella corrispondente a DateTimeelement è selezionata, viene visualizzata una selezione DateTime come illustrato di seguito:
 
- [![](images/image23.png "Quando la cella corrispondente a DateTimeelement è selezionata, viene visualizzata una selezione DateTime come illustrato")](images/image23.png#lightbox)
+ [![](images/image23.png "When the cell corresponding to the DateTimeElement is selected, a datetime picker is presented as shown")](images/image23.png#lightbox)
 
 ### <a name="html-element"></a>Elemento HTML
 
- [![](images/image24.png "Elemento HTML")](images/image24.png#lightbox)
+ [![](images/image24.png "HTML Element")](images/image24.png#lightbox)
 
-Consente di visualizzare il valore della proprietànellacelladellatabella.`Caption` `HTMLElement` Se selezionato, l' `Url` oggetto assegnato all'elemento viene caricato in un `UIWebView` controllo come illustrato di seguito:
+Nella `HTMLElement` viene visualizzato il valore della relativa proprietà `Caption` nella cella della tabella. Se selezionato, il `Url` assegnato all'elemento viene caricato in un controllo `UIWebView`, come illustrato di seguito:
 
- [![](images/image25.png "Se selezionato, l'URL assegnato all'elemento viene caricato in un controllo UIWebView, come illustrato di seguito.")](images/image25.png#lightbox)
+ [![](images/image25.png "Whe selected, the Url assigned to the element is loaded in a UIWebView control as shown below")](images/image25.png#lightbox)
 
 ### <a name="message-element"></a>Message-elemento
 
- [![](images/image26.png "Message-elemento")](images/image26.png#lightbox)
+ [![](images/image26.png "Message Element")](images/image26.png#lightbox)
 
 ### <a name="load-more-element"></a>Carica altro elemento
 
 Usare questo elemento per consentire agli utenti di caricare più elementi nell'elenco. È possibile personalizzare le didascalie normali e di caricamento, nonché il colore del tipo di carattere e del testo.
-L' `UIActivity` indicatore avvia l'animazione e la didascalia di caricamento viene visualizzata quando un utente tocca la cella e quindi il `NSAction` passato nel costruttore viene eseguito. Al termine del codice `NSAction` , l'indicatore interrompe l' `UIActivity` animazione e la didascalia normale viene nuovamente visualizzata.
+L'indicatore `UIActivity` avvia l'animazione e la didascalia di caricamento viene visualizzata quando un utente tocca la cella e quindi viene eseguita la `NSAction` passata al costruttore. Una volta terminato il codice nel `NSAction`, l'indicatore `UIActivity` interrompe l'animazione e la didascalia normale viene nuovamente visualizzata.
 
 ### <a name="uiview-element"></a>Elemento UIView
 
-Inoltre, è possibile `UIView` visualizzare qualsiasi personalizzato `UIViewElement`utilizzando.
+Inoltre, è possibile visualizzare qualsiasi `UIView` personalizzata utilizzando l'`UIViewElement`.
 
 ### <a name="owner-drawn-element"></a>Elemento creato dal proprietario
 
-Questo elemento deve essere sottoclassato perché è una classe astratta. È necessario eseguire l' `Height(RectangleF bounds)` override del metodo in cui è necessario restituire l'altezza dell'elemento, `Draw(RectangleF bounds, CGContext context, UIView view)` nonché di eseguire tutto il disegno personalizzato all'interno dei limiti specificati, utilizzando il contesto e i parametri di visualizzazione. Questo elemento esegue un elevato numero di sottoclassi di un `UIView`oggetto e lo inserisce nella cella da restituire, lasciando è sufficiente implementare due override semplici. È possibile visualizzare un'implementazione di esempio migliore nell'app di esempio nel `DemoOwnerDrawnElement.cs` file.
+Questo elemento deve essere sottoclassato perché è una classe astratta. È necessario eseguire l'override del metodo `Height(RectangleF bounds)` in cui è necessario restituire l'altezza dell'elemento, nonché `Draw(RectangleF bounds, CGContext context, UIView view)` in cui è necessario eseguire tutto il disegno personalizzato all'interno dei limiti specificati, utilizzando il contesto e i parametri di visualizzazione. Questo elemento esegue un elevato numero di sottoclassi di un `UIView`e lo inserisce nella cella da restituire, lasciando che sia necessario implementare solo due override semplici. È possibile visualizzare un'implementazione di esempio migliore nell'app di esempio nel file di `DemoOwnerDrawnElement.cs`.
 
 Di seguito è riportato un esempio molto semplice di implementazione della classe:
 
@@ -375,15 +375,15 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
 
 ### <a name="json-element"></a>Elemento JSON
 
-È una sottoclasse di `RootElement` che estende un `RootElement` per poter caricare il contenuto di un elemento figlio annidato da un URL locale o remoto. `JsonElement`
+Il `JsonElement` è una sottoclasse di `RootElement` che estende un `RootElement` per poter caricare il contenuto di un elemento figlio annidato da un URL locale o remoto.
 
-È un oggetto `RootElement` di cui è possibile creare un'istanza in due formati. `JsonElement` Una versione crea una `RootElement` che caricherà il contenuto su richiesta. Questi vengono creati usando i `JsonElement` costruttori che accettano un argomento aggiuntivo alla fine, l'URL da cui caricare il contenuto:
+Il `JsonElement` è un `RootElement` di cui è possibile creare un'istanza in due formati. Una versione crea una `RootElement` che caricherà il contenuto su richiesta. Questi vengono creati usando i costruttori di `JsonElement` che accettano un argomento aggiuntivo alla fine, l'URL da cui caricare il contenuto:
 
 ```csharp
 var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
-L'altro modulo crea i dati da un file locale o da un `System.Json.JsonObject` file esistente già analizzato:
+L'altro modulo crea i dati da un file locale o da un `System.Json.JsonObject` esistente che è già stato analizzato:
 
 ```csharp
 var je = JsonElement.FromFile ("json.sample");
@@ -391,23 +391,23 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-Per altre informazioni sull'uso di JSON con MT. D, vedere l'esercitazione [dettagliata sull'elemento JSON](http://docs.xamarin.com/guides/ios/user_interface/monotouch.dialog/json_element_walkthrough) .
+Per altre informazioni sull'uso di JSON con MT. D, vedere l'esercitazione [dettagliata sull'elemento JSON](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) .
 
 ## <a name="other-features"></a>Altre funzionalità
 
 ### <a name="pull-to-refresh-support"></a>Supporto pull-to-refresh
 
- *Pull-to-* *Refresh* è un effetto visivo originariamente trovato nell'app *Tweetie2* , che è diventato un effetto comune tra molte applicazioni.
+ Il *pull a* *Refresh* è un effetto visivo originariamente trovato nell'app *Tweetie2* , che è diventato un effetto comune tra molte applicazioni.
 
-Per aggiungere il supporto di pull-to-refresh automatico alle finestre di dialogo, è sufficiente eseguire due operazioni: collegare un gestore eventi per ricevere una notifica quando l'utente esegue il pull dei dati e inviare `DialogViewController` una notifica al momento del caricamento dei dati per tornare allo stato predefinito.
+Per aggiungere il supporto automatico di pull a aggiornamento alle finestre di dialogo, è sufficiente eseguire due operazioni: collegare un gestore eventi per ricevere una notifica quando l'utente effettua il pull dei dati e invia una notifica al `DialogViewController` quando i dati sono stati caricati per tornare allo stato predefinito.
 
-L'associazione di una notifica è semplice; è sufficiente connettersi all' `RefreshRequested` evento `DialogViewController`sul, come indicato di seguito:
+L'associazione di una notifica è semplice; è sufficiente connettersi all'evento `RefreshRequested` nel `DialogViewController`, come indicato di seguito:
 
 ```csharp
 dvc.RefreshRequested += OnUserRequestedRefresh;
 ```
 
-Quindi, nel metodo `OnUserRequestedRefresh`si accoda il caricamento dei dati, si richiedono alcuni dati dalla rete o si crea un thread per calcolare i dati. Una volta caricati i dati, è necessario notificare all' `DialogViewController` oggetto che i nuovi dati sono in e ripristinare lo stato predefinito della visualizzazione. a tale scopo, chiamare: `ReloadComplete`
+Quindi, nel metodo `OnUserRequestedRefresh`, è necessario accodare il caricamento dei dati, richiedere alcuni dati dalla rete o ruotare un thread per calcolare i dati. Una volta caricati i dati, è necessario notificare all'`DialogViewController` che i nuovi dati si trovino e ripristinare lo stato predefinito della visualizzazione, chiamando `ReloadComplete`:
 
 ```csharp
 dvc.ReloadComplete ();
@@ -415,9 +415,9 @@ dvc.ReloadComplete ();
 
 ### <a name="search-support"></a>Supporto per la ricerca
 
-Per supportare la ricerca, impostare `EnableSearch` la proprietà `DialogViewController`in. È anche possibile impostare la `SearchPlaceholder` proprietà da usare come testo della filigrana nella barra di ricerca.
+Per supportare la ricerca, impostare la proprietà `EnableSearch` nel `DialogViewController`. È anche possibile impostare la proprietà `SearchPlaceholder` da usare come testo della filigrana nella barra di ricerca.
 
-La ricerca modificherà il contenuto della visualizzazione come tipi di utente. Esegue la ricerca nei campi visibili e li visualizza all'utente. `DialogViewController` Espone tre metodi per avviare, terminare o attivare una nuova operazione di filtro a livello di codice sui risultati. Questi metodi sono elencati di seguito:
+La ricerca modificherà il contenuto della visualizzazione come tipi di utente. Esegue la ricerca nei campi visibili e li visualizza all'utente. Il `DialogViewController` espone tre metodi per avviare, terminare o attivare una nuova operazione di filtro a livello di codice sui risultati. Questi metodi sono elencati di seguito:
 
 - `StartSearch`
 - `FinishSearch`
@@ -431,9 +431,9 @@ MonoTouch. Dialog incorpora il caricatore di immagini dell'applicazione [TweetSt
 
 Verrà inoltre limitato il numero di connessioni di rete in uscita.
 
-Il caricatore di immagini viene implementato nella `ImageLoader` classe, è sufficiente chiamare il `DefaultRequestImage` metodo, sarà necessario specificare l'URI per l'immagine da caricare, oltre a un'istanza dell' `IImageUpdated` interfaccia che verrà richiamata quando l'immagine ha s è stato caricato.
+Il caricatore di immagini viene implementato nella classe `ImageLoader`, è sufficiente chiamare il metodo `DefaultRequestImage`, è necessario specificare l'URI per l'immagine da caricare, oltre a un'istanza dell'interfaccia `IImageUpdated` che verrà richiamata quando l'immagine è stato caricato.
 
-Il codice seguente, ad esempio, carica un'immagine da un URL `BadgeElement`in un:
+Il codice seguente, ad esempio, carica un'immagine da un URL in un `BadgeElement`:
 
 ```csharp
 string uriString = "http://some-server.com/some image url";
@@ -449,7 +449,7 @@ La classe ImageLoader espone un metodo Purge che è possibile chiamare quando si
 
 ## <a name="using-linq-to-create-element-hierarchy"></a>Utilizzo di LINQ per creare la gerarchia degli elementi
 
-Tramite l'utilizzo intelligente della sintassi di C#inizializzazione di LINQ e, è possibile utilizzare LINQ per creare una gerarchia di elementi. Il codice seguente, ad esempio, consente di creare una schermata da alcune matrici di stringhe e di gestire la selezione delle celle tramite una funzione `StringElement`anonima passata a ogni:
+Tramite l'utilizzo intelligente della sintassi di C#inizializzazione di LINQ e, è possibile utilizzare LINQ per creare una gerarchia di elementi. Ad esempio, il codice seguente crea una schermata da alcune matrici di stringhe e gestisce la selezione delle celle tramite una funzione anonima passata in ogni `StringElement`:
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {
@@ -491,14 +491,14 @@ void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path
 bool Matches (string text);
 ```
 
-Se l'elemento può avere una dimensione variabile, è necessario implementare l' `IElementSizing` interfaccia, che contiene un metodo:
+Se l'elemento può avere una dimensione variabile, è necessario implementare l'interfaccia `IElementSizing`, che contiene un metodo:
 
 ```csharp
 // Returns the height for the cell at indexPath.Section, indexPath.Row
 float GetHeight (UITableView tableView, NSIndexPath indexPath);
 ```
 
-Se si prevede di implementare `GetCell` il metodo chiamando `base.GetCell(tv)` e personalizzando la cella restituita, è necessario anche eseguire l'override della `CellKey` proprietà per restituire una chiave che sarà univoca per l'elemento, come indicato di seguito:
+Se si intende implementare il metodo di `GetCell` chiamando `base.GetCell(tv)` e personalizzando la cella restituita, è necessario eseguire l'override anche della proprietà `CellKey` per restituire una chiave che sarà univoca per l'elemento, come indicato di seguito:
 
 ```csharp
 static NSString MyKey = new NSString ("MyKey");
@@ -509,15 +509,15 @@ protected override NSString CellKey {
 }
 ```
 
-Questa operazione funziona per la maggior parte degli elementi, `StringElement` ma `StyledStringElement` non per e, perché usano il proprio set di chiavi per diversi scenari di rendering. Sarebbe necessario replicare il codice in tali classi.
+Questa operazione è valida per la maggior parte degli elementi, ma non per la `StringElement` e `StyledStringElement` perché usano il proprio set di chiavi per diversi scenari di rendering. Sarebbe necessario replicare il codice in tali classi.
 
 ### <a name="dialogviewcontrollers-dvcs"></a>DialogViewControllers (DVCs)
 
-Sia la reflection che l'API degli elementi utilizzano lo `DialogViewController`stesso oggetto. In alcuni casi è necessario personalizzare l'aspetto della visualizzazione o utilizzare alcune funzionalità di `UITableViewController` che esulano dalla creazione di base delle interfacce utente.
+Sia la reflection che l'API degli elementi utilizzano lo stesso `DialogViewController`. In alcuni casi è possibile personalizzare l'aspetto della visualizzazione o usare alcune funzionalità del `UITableViewController` che vanno oltre la creazione di base delle interfacce utente.
 
-È semplicemente una sottoclasse `UITableViewController` di ed è possibile personalizzarla nello stesso modo in `UITableViewController`cui si Personalizza. `DialogViewController`
+Il `DialogViewController` è semplicemente una sottoclasse della `UITableViewController` ed è possibile personalizzarla nello stesso modo in cui si personalizza un `UITableViewController`.
 
-Se, ad esempio, si desidera modificare lo stile dell'elenco in `Grouped` o `Plain`, è possibile impostare questo valore modificando la proprietà quando si crea il controller, come segue:
+Se ad esempio si desidera modificare lo stile di elenco in modo che sia `Grouped` o `Plain`, è possibile impostare questo valore modificando la proprietà quando si crea il controller, come segue:
 
 ```csharp
 var myController = new DialogViewController (root, true) {
@@ -525,7 +525,7 @@ var myController = new DialogViewController (root, true) {
 }
 ```
 
-Per le `DialogViewController`personalizzazioni più avanzate di, ad esempio l'impostazione dello sfondo, è necessario sottometterle a sottoclasse ed eseguire l'override dei metodi appropriati, come illustrato nell'esempio seguente:
+Per le personalizzazioni più avanzate del `DialogViewController`, ad esempio l'impostazione dello sfondo, è necessario sottoclassare la classe ed eseguire l'override dei metodi appropriati, come illustrato nell'esempio seguente:
 
 ```csharp
 class SpiffyDialogViewController : DialogViewController {
@@ -547,25 +547,25 @@ class SpiffyDialogViewController : DialogViewController {
 }
 ```
 
-Un altro punto di personalizzazione è il seguente metodo virtuale `DialogViewController`in:
+Un altro punto di personalizzazione è il seguente metodo virtuale nella `DialogViewController`:
 
 ```csharp
 public override Source CreateSizingSource (bool unevenRows)
 ```
 
-Questo metodo deve restituire una sottoclasse `DialogViewController.Source` di per i casi in cui le celle sono uniformemente dimensionate `DialogViewController.SizingSource` o una sottoclasse di se le celle non sono uniformi.
+Questo metodo deve restituire una sottoclasse di `DialogViewController.Source` per i casi in cui le celle sono uniformemente dimensionate o una sottoclasse di `DialogViewController.SizingSource` se le celle non sono uniformi.
 
-È possibile usare questa sostituzione per acquisire uno dei `UITableViewSource` metodi. Ad esempio, [TweetStation](https://github.com/migueldeicaza/TweetStation) usa questo per tenere traccia del momento in cui l'utente ha eseguito lo scorrimento alla parte superiore e aggiorna di conseguenza il numero di Tweet non letti.
+È possibile usare questa sostituzione per acquisire uno dei metodi `UITableViewSource`. Ad esempio, [TweetStation](https://github.com/migueldeicaza/TweetStation) usa questo per tenere traccia del momento in cui l'utente ha eseguito lo scorrimento alla parte superiore e aggiorna di conseguenza il numero di Tweet non letti.
 
 ## <a name="validation"></a>Convalida
 
 Gli elementi non forniscono la convalida in quanto i modelli particolarmente adatti per le pagine Web e le applicazioni desktop non eseguono il mapping direttamente al modello di interazione iPhone.
 
-Se si desidera eseguire la convalida dei dati, è necessario eseguire questa operazione quando l'utente attiva un'azione con i dati immessi. Ad esempio un pulsante **fatto** o **Avanti** sulla barra degli strumenti superiore o alcuni `StringElement` usati come pulsante per passare alla fase successiva.
+Se si desidera eseguire la convalida dei dati, è necessario eseguire questa operazione quando l'utente attiva un'azione con i dati immessi. Ad esempio un pulsante **fatto** o **Avanti** sulla barra degli strumenti superiore o alcuni `StringElement` utilizzati come pulsante per passare alla fase successiva.
 
 Questo è il punto in cui si esegue la convalida dell'input di base e, forse, una convalida più complessa, ad esempio la verifica della validità di una combinazione di utente/password con un server.
 
-La modalità di notifica all'utente di un errore è specifica dell'applicazione. È possibile aprire `UIAlertView` o visualizzare un suggerimento.
+La modalità di notifica all'utente di un errore è specifica dell'applicazione. È possibile visualizzare un `UIAlertView` o un suggerimento.
 
 ## <a name="summary"></a>Riepilogo
 

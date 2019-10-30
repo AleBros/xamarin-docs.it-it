@@ -4,15 +4,15 @@ description: Questo documento contiene collegamenti a guide che descrivono come 
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 954e3b8f612fd710dd178cfc296889c9da372183
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 325898b3c934e25ae1610a3437f787476dcd22cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768312"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003336"
 ---
 # <a name="user-interfaces-in-ios"></a>Interfacce utente in iOS
 
@@ -22,11 +22,11 @@ iOS consente di usare con le API UIAppearance molti attributi visivi dei control
 
 ## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[Creazione di oggetti dell'interfaccia utente](~/ios/user-interface/ios-ui/creating-ui-objects.md)
 
-Apple raggruppa i componenti di funzionalità correlati in "Framework", che corrispondono agli spazi dei nomi Novell. iOS. `UIKit`è lo spazio dei nomi che contiene tutti i controlli dell'interfaccia utente per iOS.
+Apple raggruppa i componenti di funzionalità correlati in "Framework", che corrispondono agli spazi dei nomi Novell. iOS. `UIKit` è lo spazio dei nomi che contiene tutti i controlli dell'interfaccia utente per iOS.
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Opzioni di layout](~/ios/user-interface/ios-ui/layout-options.md)
 
-Esistono due meccanismi diversi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata: Ridimensionamento automatico e layout automatico.
+Esistono due meccanismi diversi per controllare il layout quando una visualizzazione viene ridimensionata o ruotata: ridimensionamento automatico e layout automatico.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Implementazione del feedback aptico](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

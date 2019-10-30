@@ -3,15 +3,15 @@ title: Unificazione dei componenti di Google Play Services e NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 8a7fd77a3f6460f0edbd76f8a4ccf45b32b3ed87
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 100ef7ffd7e05db0ed8b2af6b9990fc3a0ac1fa9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284986"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014144"
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>Unificazione dei componenti di Google Play Services e NuGet
 
@@ -30,17 +30,17 @@ Google effettivamente spedisce solo due file con estensione jar per Google Play 
 - `google-play-services-froyo.jar`
 - `google-play-services.jar`
 
-La discrepanza era dovuta al fatto che gli `aapt.exe` strumenti non indicavano in modo corretto quale sia il livello di API delle risorse massimo da usare per una determinata app. Ciò significa che sono stati ricevuti errori di compilazione se si è provato a usare l'associazione Google Play Services (KitKat) a un livello API inferiore, ad esempio Gingerbread.
+La discrepanza era dovuta al fatto che gli strumenti non indicavano in modo corretto `aapt.exe` quale sia il livello API di risorsa massimo da usare per una determinata app. Ciò significa che sono stati ricevuti errori di compilazione se si è provato a usare l'associazione Google Play Services (KitKat) a un livello API inferiore, ad esempio Gingerbread.
 
 ## <a name="unifying-google-play-services"></a>Unificazione di Google Play Services
 
-Nelle versioni più recenti di Novell. Android, viene ora illustrata `aapt.exe` la versione massima della risorsa da usare, quindi questo problema si interrompe per noi.
+Nelle versioni più recenti di Novell. Android, ora si indica `aapt.exe` quale versione massima delle risorse usare, quindi questo problema si interrompe.
 
 Ciò significa che non esiste un motivo reale per avere pacchetti separati per Gingerbread/ICS/JellyBean/KitKat (Tuttavia, è ancora necessario un binding separato per Froyo poiché si tratta di un file con estensione jar diverso).
 
 Per semplificare le cose per gli sviluppatori, abbiamo ora unificato i nostri componenti e i pacchetti NuGet in due:
 
-- Google Play Services (Froyo) (associazioni `google-play-services-froyo.jar`)
+- Google Play Services (Froyo) (binds `google-play-services-froyo.jar`)
 - Google Play Services (associazioni `google-play-services.jar`)
 
 ### <a name="which-one-should-be-used"></a>Quale si deve usare?
@@ -49,7 +49,7 @@ In quasi tutti i casi, è necessario usare Google Play Services. L'unico motivo 
 
 ### <a name="note-about-gingerbread"></a>Nota su Gingerbread
 
-Per impostazione predefinita, Gingerbread non dispone del supporto per i frammenti e, per questo motivo, alcune delle classi nell'associazione non saranno utilizzabili in un'app in fase di esecuzione in un dispositivo Gingerbread. Le classi `MapFragment` come non funzioneranno in Gingerbread ed è invece `SupportMapFragment`necessario usare la relativa variante di supporto. Spetta allo sviluppatore scoprire quale usare. Questa incompatibilità è indicata da Google nella documentazione Google Play Services.
+Per impostazione predefinita, Gingerbread non dispone del supporto per i frammenti e, per questo motivo, alcune delle classi nell'associazione non saranno utilizzabili in un'app in fase di esecuzione in un dispositivo Gingerbread. Le classi come `MapFragment` non funzioneranno in Gingerbread ed è invece necessario usare la relativa variante di supporto `SupportMapFragment`. Spetta allo sviluppatore scoprire quale usare. Questa incompatibilità è indicata da Google nella documentazione Google Play Services.
 
 ### <a name="what-happens-to-the-old-componentsnugets"></a>Cosa accade ai componenti precedenti/NuGet?
 

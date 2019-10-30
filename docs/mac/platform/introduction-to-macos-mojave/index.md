@@ -4,15 +4,15 @@ description: Questo documento fornisce una panoramica generale delle funzionalit
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2878d1bea3590b8c3a7aabfebef8a0f2cca67551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292949"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017040"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introduzione a macOS Mojave
 
@@ -38,7 +38,7 @@ Il Framework di visione include un rilevatore viso migliorato che può rilevare 
 
 ## <a name="network-framework"></a>Framework di rete
 
-Il Framework di rete, lo stack di `URLSession` rete sottostante alle API comunemente usate nelle applicazioni iOS, è ora disponibile come Framework autonomo, semplificando l'uso di TCP, UDP, TLS, IPv4/IPv6 e altro ancora.
+Framework di rete, lo stack di rete sottostante le API `URLSession` comunemente usate nelle applicazioni iOS, è ora disponibile come Framework autonomo, semplificando l'uso di TCP, UDP, TLS, IPv4/IPv6 e altro ancora.
 
 ## <a name="deprecations"></a>Elementi deprecati
 

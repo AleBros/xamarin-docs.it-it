@@ -4,15 +4,15 @@ description: In questo articolo viene introdotto il concetto di risorse Android 
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2018
-ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1ff4d9d896aaa5f290402a49aa4b4bd1f1e00aaf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755019"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025052"
 ---
 # <a name="android-resources"></a>Risorse Android
 
@@ -26,11 +26,11 @@ Un'applicazione Android è raramente solo codice sorgente. Spesso sono presenti 
 
 Le risorse offrono diversi vantaggi a un'applicazione Android:
 
-- **Separazione del codice** &ndash; Separa il codice sorgente da immagini, stringhe, menu, animazioni, colori e così via. Poiché tali risorse possono essere utili in modo significativo durante la localizzazione.
+- La **separazione del codice** &ndash; separa il codice sorgente da immagini, stringhe, menu, animazioni, colori e così via. Poiché tali risorse possono essere utili in modo significativo durante la localizzazione.
 
-- Usare **più dispositivi come destinazione** &ndash; Offre un supporto più semplice per diverse configurazioni del dispositivo senza modifiche al codice.
+- Usare **più dispositivi come destinazione** &ndash; offre un supporto più semplice per configurazioni del dispositivo diverse senza modifiche al codice.
 
-- **Verifica in fase di compilazione** &ndash; Le risorse sono statiche e compilate nell'applicazione. Ciò consente di controllare l'utilizzo delle risorse in fase di compilazione, quando sarà facile intercettare e correggere gli errori, anziché in fase di esecuzione quando risulta più difficile individuare e rendere più costoso la correzione.
+- Il **controllo in fase di compilazione** &ndash; risorse sono statiche e compilate nell'applicazione. Ciò consente di controllare l'utilizzo delle risorse in fase di compilazione, quando sarà facile intercettare e correggere gli errori, anziché in fase di esecuzione quando risulta più difficile individuare e rendere più costoso la correzione.
 
 Quando viene avviato un nuovo progetto Novell. Android, viene creata una directory speciale denominata Resources, insieme ad alcune sottodirectory:
 
@@ -60,11 +60,11 @@ Ad esempio, **le risorse/disegnatore-de** specificheranno le immagini per i disp
 
 Questo articolo illustra in maniera completa l'uso delle risorse e illustra gli argomenti seguenti:
 
-- **Nozioni fondamentali sulle risorse Android** &ndash; Uso delle risorse predefinite a livello di codice e in modo dichiarativo, aggiunta di tipi di risorse quali immagini e tipi di carattere a un'applicazione.
+- Le **nozioni di base sulle risorse di Android** &ndash; uso delle risorse predefinite a livello di codice e in modo dichiarativo.
 
-- **Configurazioni specifiche del dispositivo** &ndash; Supporto delle diverse risoluzioni dello schermo e densità di un'applicazione.
+- **Configurazioni specifiche del dispositivo** &ndash; supportano le diverse risoluzioni e densità dello schermo in un'applicazione.
 
-- **Localizzazione** &ndash; Utilizzo delle risorse per supportare le diverse aree in cui è possibile utilizzare un'applicazione.
+- **Localizzazione** &ndash; utilizzo di risorse per supportare le diverse aree in cui è possibile utilizzare un'applicazione.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

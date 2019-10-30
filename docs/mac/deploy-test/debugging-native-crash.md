@@ -4,15 +4,15 @@ description: Questo documento descrive come eseguire il debug di eccezioni che h
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769876"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021661"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Debug di un arresto anomalo nativo in un app Xamarin.Mac
 
@@ -61,7 +61,7 @@ public override nfloat GetRowHeight (NSTableView tableView, nint row)
 }
 ```
 
-## <a name="example-2-callback-jumped-into-middle-of-nowhere"></a>Esempio 2 Il callback ha eseguito un passaggio in un punto vuoto
+## <a name="example-2-callback-jumped-into-middle-of-nowhere"></a>Esempio 2: Il callback ha eseguito un passaggio in un punto vuoto
 
 ```csharp
 Stacktrace:
@@ -179,11 +179,11 @@ new System.Threading.Thread (() =>
 
 Questo codice forzerà l'applicazione a eseguire il Garbage Collector ogni secondo. Eseguire nuovamente l'applicazione e provare a riprodurre il bug. Se l'arresto anomalo si verifica immediatamente o sistematicamente invece che in modo casuale, si è sulla strada giusta.
 
-### <a name="reporting"></a>Report
+### <a name="reporting"></a>Reporting
 
 Il passaggio successivo consiste nel segnalare il problema a Xamarin in modo che il binding possa essere corretto nelle versioni future. I titolari di una licenza Business o Enterprise possono aprire un ticket all'indirizzo 
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 In caso contrario, cercare un problema esistente:
 

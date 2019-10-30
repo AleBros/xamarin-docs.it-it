@@ -6,12 +6,12 @@ ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 37540053cee03a83582fe19ffb1dcf9e1cf4564c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "67832538"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011736"
 ---
 # <a name="introduction-to-urhosharp"></a>Introduzione a UrhoSharp
 
@@ -19,7 +19,7 @@ ms.locfileid: "67832538"
 
 UrhoSharp è un potente motore di gioco 3D per gli sviluppatori Novell e .NET.  Si tratta di uno spirito simile a SceneKit e SpriteKit di Apple e includono la fisica, la navigazione, la rete e molto altro ancora.
 
-Si tratta di un binding .NET al motore [Urho3D](http://urho3d.github.io/) e consente agli sviluppatori di scrivere codice multipiattaforma che può essere destinato a Android, iOS, Windows e Mac con la stessa codebase ed è in grado di eseguire il rendering nei sistemi OpenGL e Direct3D.
+Si tratta di un binding .NET al motore [Urho3D](https://urho3d.github.io/) e consente agli sviluppatori di scrivere codice multipiattaforma che può essere destinato a Android, iOS, Windows e Mac con la stessa codebase ed è in grado di eseguire il rendering nei sistemi OpenGL e Direct3D.
 
 UrhoSharp è un motore di gioco con numerose funzionalità predefinite:
 

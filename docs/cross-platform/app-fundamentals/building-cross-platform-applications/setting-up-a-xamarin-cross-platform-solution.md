@@ -3,15 +3,15 @@ title: Parte 3-configurazione di una soluzione multipiattaforma Novell
 description: Questo documento descrive come configurare una soluzione multipiattaforma in Novell. Vengono illustrate varie strategie di condivisione del codice, ad esempio progetti condivisi e .NET Standard.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 843887282c9a5af671d46699ae2f601fd32902e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758147"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016876"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-configurazione di una soluzione multipiattaforma Novell
 
@@ -63,7 +63,7 @@ L'approccio Novell consiste nel raggruppare il codice in due tipi di progetto:
 
 ### <a name="core-project"></a>Progetto di base
 
-I progetti di codice condiviso devono fare riferimento solo a assembly disponibili in tutte le piattaforme, ad esempio. gli spazi dei nomi comuni del `System`Framework `System.Core` , `System.Xml`ad esempio, e.
+I progetti di codice condiviso devono fare riferimento solo a assembly disponibili in tutte le piattaforme, ad esempio. gli spazi dei nomi del Framework comuni, come `System`, `System.Core` e `System.Xml`.
 
 I progetti condivisi devono implementare la maggior parte delle funzionalità non dell'interfaccia utente possibili, che potrebbero includere i livelli seguenti:
 
@@ -89,11 +89,11 @@ I progetti specifici della piattaforma devono implementare:
 
 In questo diagramma viene illustrata l'architettura dell'applicazione:
 
- [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "L'architettura dell'applicazione è illustrata in questo diagramma")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 Questo screenshot mostra la configurazione di una soluzione con i progetti di applicazioni core condivise, iOS e Android. Il progetto condiviso contiene codice correlato a ognuno dei livelli architetturali (codice aziendale, servizio, dati e accesso ai dati):
 
- ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "Il progetto condiviso contiene codice correlato a ognuno dei livelli architetturali (codice aziendale, servizio, dati e accesso ai dati)")
+ ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code)")
 
  <a name="Project_References" />
 
@@ -104,7 +104,7 @@ I progetti di applicazione specifici della piattaforma fanno riferimento al codi
 
 L'applicazione proietta ogni progetto condiviso di riferimento e contiene il codice dell'interfaccia utente necessario per presentare le funzionalità all'utente, come illustrato nelle schermate seguenti:
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "L'applicazione progetti ogni riferimento a progetto condiviso") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "l'applicazione progetti ogni riferimento a progetto condiviso")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "L'applicazione proietta ogni progetto condiviso di riferimento") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "L'applicazione proietta ogni progetto condiviso di riferimento")
 
 Esempi specifici del modo in cui i progetti devono essere strutturati vengono forniti nei case study.
 
@@ -118,11 +118,11 @@ Esempi specifici del modo in cui i progetti devono essere strutturati vengono fo
 
 È importante impostare l'azione di compilazione corretta per determinati tipi di file. Questo elenco Mostra l'azione di compilazione per alcuni tipi di file comuni:
 
-- **Tutti C# i file** – azione di compilazione: Compile
-- **Immagini in Novell. iOS & Windows** -azione di compilazione: Content
+- **Tutti C# i file** -azione di compilazione: compila
+- **Immagini in Novell. iOS & Windows** -azione di compilazione: contenuto
 - **XIB e i file storyboard in Novell. iOS** -azione di compilazione: InterfaceDefinition
 - **Immagini e layout AXML in Android** -azione di compilazione: AndroidResource
-- **File XAML nei progetti Windows** -azione di compilazione: Pagina
+- **File XAML in progetti Windows** -azione di compilazione: pagina
 - **File XAML Novell. Forms** -azione di compilazione: EmbeddedResource
 
 L'IDE rileva in genere il tipo di file e suggerisce l'azione di compilazione corretta.

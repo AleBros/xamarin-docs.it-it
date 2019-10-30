@@ -4,15 +4,15 @@ description: Questo documento descrive le varie icone necessarie per un'applicaz
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/26/2018
-ms.openlocfilehash: e0bf9ec1553e6638398695157a11242b9885b168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8c5b8d0417fb7fd1069d2bf6fa5d9887d569453
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768104"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001566"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Uso delle icone watchos in Novell
 
@@ -42,7 +42,7 @@ Vedere la [Guida alle icone delle applicazioni iOS](~/ios/app-fundamentals/image
 
 La stringa visualizzata accanto all'app Watch nell' [app impostazioni Apple Watch](~/ios/watchos/app-fundamentals/settings.md) è configurata nel file **info. plist dell'app iOS**.
 
-Verificare che il file **info. plist** disponga `CFBundleName` di una chiave e di un valore (Nota: questa `CFBundleDisplayName`operazione è diversa da, è possibile avere entrambe):
+Verificare che il file **info. plist** disponga di una chiave e di un valore di `CFBundleName` (Nota: questa operazione è diversa da quella del `CFBundleDisplayName`, è possibile avere entrambe):
 
 ```xml
 <key>CFBundleName</key>
@@ -55,21 +55,21 @@ Una volta configurate le icone per l' [app padre](~/ios/watchos/app-fundamentals
 
 1. Fare clic con il pulsante destro del mouse sul progetto Watch app e selezionare **file > aggiungi > nuovo file... > il catalogo asset > iOS** per aggiungere un catalogo asset al progetto.
 
-    ![](icons-images/newasset.png "Aggiungere un catalogo asset al progetto")
+    ![](icons-images/newasset.png "Add an asset catalog to the project")
 
 2. Fare doppio clic sul file **AppIcon. appiconset/Contents. JSON**
 
-    ![](icons-images/xcassets-iconset-sml.png "Contenuto di AppIcon")
+    ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
 
 3. Aggiungere tutte le immagini watchos, come illustrato in questo screenshot:
 
-    [![](icons-images/appicons-sml.png "Aggiungi tutte le immagini watchos, come illustrato in questa schermata")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
 
     Vedere le [linee guida sulle icone di Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) per le dimensioni richieste (le dimensioni sono visualizzate anche sullo schermo). Tenere presente che queste icone verranno ritagliate automaticamente per il rendering in un cerchio.
 
     L'elenco di icone dovrebbe avere un aspetto simile al seguente:
 
-    ![](icons-images/xcassets-complete-sml.png "Elenco di icone nell'Esplora soluzioni")
+    ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
 
 4. Per assicurarsi che il catalogo asset sia incluso nell'app, aggiungere la chiave e il valore seguenti al file **info. plist dell'app Watch**:
 

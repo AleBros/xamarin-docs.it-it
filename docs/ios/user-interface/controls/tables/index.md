@@ -4,15 +4,15 @@ description: Questo documento contiene collegamenti a diverse guide che descrivo
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/06/2016
-ms.openlocfilehash: 1d888cbc779cbb4fcaf8312b87627f1bd18fe719
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7f5af84a8dfb9f774822e28e50cf8bbca9acf94b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768397"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021886"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilizzo di tabelle e celle in Novell. iOS
 
@@ -22,14 +22,14 @@ Per coloro che lavorano su applicazioni multipiattaforma con Novell. Android, il
 
 In questi articoli verranno esaminati in maniera completa l'utilizzo delle tabelle, tra cui:
 
-- **Parti della tabella** : introduzione e spiegazione degli elementi visivi `UITableView` del controllo. 
+- **Parti della tabella** : introduzione e spiegazione degli elementi visivi del controllo `UITableView`. 
 - **Visualizzazione di dati nelle tabelle** : viene illustrato come creare e popolare una tabella, utilizzare stili di tabelle e celle diversi ed evitare problemi di memoria rilasciando gli oggetti cella. 
 - **Utilizzo avanzato** : creazione di celle personalizzate e utilizzo delle funzionalità di modifica della classe UITableView. 
 - **Creazione visiva di una tabella** : utilizzo del Xamarin designer per iOS per creare un'interfaccia basata su tabelle con uno storyboard. 
 
-## <a name="contents"></a>Sommario
+## <a name="contents"></a>Contenuti
 
- [Funzionalità delle &amp; parti della tabella](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
+ [Funzionalità &amp; delle parti della tabella](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
 
  [Popolamento di una tabella con dati](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 

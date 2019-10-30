@@ -3,15 +3,15 @@ title: Panoramica sulla compilazione di applicazioni multipiattaforma
 description: Questo documento fornisce una panoramica di alto livello della creazione di applicazioni multipiattaforma. Viene illustrato il valore di C#, modelli di progettazione come MVC/MVVM e interfacce utente Native.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d839e0141f14f4ba86897b128bf2a8c0a79548d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758105"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016921"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Panoramica sulla compilazione di applicazioni multipiattaforma
 
@@ -26,7 +26,7 @@ Novell non è solo una piattaforma "Write-Once, run everywhere", perché uno dei
 Ecco un riepilogo dei punti chiave per la creazione di app multipiattaforma Novell:
 
 - **Usare C#**  : scrivere le app in C#. Il codice esistente scritto C# in può essere trasferito a iOS e Android usando Novell in modo molto semplice e ovviamente usato nelle app di Windows.
-- Usare i **modelli di progettazione MVC o MVVM** : sviluppare l'interfaccia utente dell'applicazione usando il modello di modello/vista/controller. Progettare l'applicazione usando un approccio modello/vista/controller o un approccio modello/vista/ViewModel in cui esiste una netta separazione tra il "modello" e il resto. Determinare quali parti dell'applicazione useranno gli elementi dell'interfaccia utente nativa di ogni piattaforma (iOS, Android, Windows, Mac) e usarli come linee guida per suddividere l'applicazione in due componenti: "Core" e "User-Interface".
+- Usare i **modelli di progettazione MVC o MVVM** : sviluppare l'interfaccia utente dell'applicazione usando il modello di modello/vista/controller. Progettare l'applicazione usando un approccio modello/vista/controller o un approccio modello/vista/ViewModel in cui esiste una netta separazione tra il "modello" e il resto. Determinare quali parti dell'applicazione utilizzeranno gli elementi dell'interfaccia utente nativa di ogni piattaforma (iOS, Android, Windows, Mac) e usarli come linee guida per suddividere l'applicazione in due componenti: "core" e "interfaccia utente".
 - **Compilazione di interfacce utente Native** : ogni applicazione specifica del sistema operativo fornisce un livello di interfaccia utente diverso C# (implementato in con l'assistenza degli strumenti di progettazione dell'interfaccia utente nativi):
 
 1. In iOS usare le API UIKit per creare applicazioni di aspetto nativo, usando facoltativamente la finestra di progettazione iOS di Novell per creare visivamente l'interfaccia utente.
@@ -53,7 +53,7 @@ Alcuni di questi componenti sono implementati nella case study *Tasky* .
 
 Seguendo il principio di separazione delle responsabilità attraverso l'architettura dell'applicazione e spostando la funzionalità di base indipendente dalla piattaforma in una libreria principale riutilizzabile, è possibile ottimizzare la condivisione del codice tra le piattaforme, come illustrato nella figura seguente. illustra
 
- ![](overview-images/layers2.png "Seguendo il principio di separazione delle responsabilità attraverso la suddivisione in livelli dell'architettura dell'applicazione e quindi spostando la funzionalità di base indipendente dalla piattaforma in una libreria principale riutilizzabile, è possibile ottimizzare la condivisione del codice tra le piattaforme")
+ ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
  <a name="Case_Studies" />
 

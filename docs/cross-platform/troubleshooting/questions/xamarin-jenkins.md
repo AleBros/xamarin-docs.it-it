@@ -4,15 +4,15 @@ description: Questo documento descrive, a un livello elevato, l'interazione di N
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: a8dc27574dc9959cc375a98fc0d7a18aac8bd6b7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7be60eaa1135284522ef1e6ce81c911a68ff9915
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756960"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73012219"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Perché Jenkins non è supportato da Microsoft?
 
@@ -44,10 +44,10 @@ Le opzioni per l'impostazione del percorso dell'SDK possono variare a seconda de
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins segnala una licenza Novell non valida
 I messaggi di errore relativi a questo problema sono in genere simili a
 
-> Errore XA9008: Per la compilazione dalla riga di comando è necessaria una licenza aziendale
+> Errore XA9008: la compilazione dalla riga di comando richiede una licenza aziendale
 
-oppure
+Oppure
 
-> Errore: L'edizione Starter di Novell. iOS non supporta la compilazione all'esterno di Xamarin Studio 
+> Errore: la versione iniziale di Novell. iOS non supporta la compilazione all'esterno di Xamarin Studio 
 
-La causa più comune di questo scenario è l'uso di Jenkins eseguendo l'accesso con un account utente non associato alla licenza Novell. Il modo più semplice per risolvere questo problema consiste nell'installare Jenkins come app direttamente tramite l'account utente. Questo processo e alcune considerazioni aggiuntive sono descritte di seguito:[https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
+La causa più comune di questo scenario è l'uso di Jenkins eseguendo l'accesso con un account utente non associato alla licenza Novell. Il modo più semplice per risolvere questo problema consiste nell'installare Jenkins come app direttamente tramite l'account utente. Questo processo e alcune considerazioni aggiuntive sono descritte qui: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

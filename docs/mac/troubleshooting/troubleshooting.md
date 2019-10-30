@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 6fd6484e547f22f1dc7f27578834b5292d6d2d2a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770014"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001602"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Suggerimenti per la risoluzione dei problemi di Novell. Mac
 
@@ -47,20 +47,20 @@ Nella maggior parte dei casi, il debugger in Visual Studio per Mac catturerà ec
 Il debug di questi programmi può essere frustrante, in quanto la ricerca delle informazioni necessarie può essere difficile. Ecco alcuni approcci che possono essere utili:
 
 - Verificare che la versione macOS elencata nel file **info. plist** sia la stessa della versione di MacOS attualmente installata nel computer.
-- Controllare l'output dell'applicazione Visual Studio per Mac (**visualizzare** -> l'**output dell'applicazione**dei**rilievi** -> ) per le tracce dello stack o l'output in rosso da Cocoa che può descrivere l'output.
+- Controllare l'output dell'applicazione Visual Studio per Mac (**visualizzare** -> **rilievi** -> **output dell'applicazione**) per le analisi dello stack o l'output in rosso da Cocoa che può descrivere l'output.
 - Eseguire l'applicazione dalla riga di comando ed esaminare l'output (nell'app **Terminal** ) usando:
 
-  `MyApp.app/Contents/MacOS/MyApp`(dove `MyApp` è il nome dell'applicazione)
+  `MyApp.app/Contents/MacOS/MyApp` (dove `MyApp` è il nome dell'applicazione)
 - È possibile aumentare l'output aggiungendo "MONO_LOG_LEVEL" al comando nella riga di comando, ad esempio:
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- È possibile alleghi al processo un`lldb`debugger nativo () per verificare se sono disponibili altre informazioni, ovvero è necessaria una licenza a pagamento. Ad esempio, eseguire le operazioni seguenti:
+- È possibile alleghi un debugger nativo (`lldb`) al processo per verificare se sono disponibili altre informazioni, ovvero è necessaria una licenza a pagamento. Ad esempio, eseguire le operazioni seguenti:
 
   1. Immettere `lldb MyApp.app/Contents/MacOS/MyApp` nel terminale.
   2. Immettere `run` nel terminale.
   3. Immettere `c` nel terminale.
   4. Termina al termine del debug.
-- Come ultima risorsa, prima di chiamare `NSApplication.Init` il `Main` metodo (o in altre posizioni come richiesto), è possibile scrivere il testo in un file in una posizione nota per individuare il passaggio del lancio in cui si verificano problemi.
+- Come ultima risorsa, prima di chiamare `NSApplication.Init` nel metodo di `Main` (o in altre posizioni come richiesto), è possibile scrivere testo in un file in una posizione nota per individuare il passaggio del lancio in cui si verificano problemi.
 
 ## <a name="known-issues"></a>Problemi noti
 
@@ -72,11 +72,11 @@ Il debugger si connette alle app Novell. Mac tramite TCP. il che significa che, 
 
 [![Modifica dei diritti](troubleshooting-images/debug01.png "Modifica dei diritti")](troubleshooting-images/debug01-large.png#lightbox)
 
-L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella necessaria per il debugger. questa operazione consente di eseguire il debug in modo normale. Poiché non è possibile eseguire il debug senza di esso, `CompileEntitlements` è stata `msbuild` aggiornata la destinazione per per aggiungere automaticamente tale autorizzazione ai diritti per qualsiasi app creata in modalità sandbox solo per le compilazioni di debug. Le build di rilascio devono usare i diritti specificati nel file dei diritti, senza modifiche.
+L'autorizzazione **Consenti connessioni di rete (client) in uscita** è quella necessaria per il debugger. questa operazione consente di eseguire il debug in modo normale. Poiché non è possibile eseguire il debug senza di esso, è stata aggiornata la destinazione `CompileEntitlements` per `msbuild` per aggiungere automaticamente tale autorizzazione ai diritti per qualsiasi app creata in modalità sandbox solo per le compilazioni di debug. Le build di rilascio devono usare i diritti specificati nel file dei diritti, senza modifiche.
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: non sono disponibili dati per la codifica 437
 
-Quando si includono librerie di terze parti nell'app Novell. Mac, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: Non sono disponibili dati per la codifica 437 "durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad `Ionic.Zip.ZipFile`esempio, possono generare questa eccezione durante l'operazione.
+Quando si includono librerie di terze parti nell'app Novell. Mac, è possibile che venga ricevuto un errore nel formato "System. NotSupportedException: non sono disponibili dati per la codifica 437" durante il tentativo di compilare ed eseguire l'app. Ad esempio, le librerie, ad esempio `Ionic.Zip.ZipFile`, possono generare questa eccezione durante l'operazione.
 
 Questo problema può essere risolto aprendo le opzioni per il progetto Novell. Mac, passando a **Mac Build** > **internazionalizzazione** e controllando l'internazionalizzazione **occidentale** :
 
@@ -102,17 +102,17 @@ Se si fa doppio clic sul file **titles. plist** , verrà visualizzato l'editor d
 
 [![Modifica dei diritti](troubleshooting-images/entitlements02.png "Modifica dei diritti")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-Per i progetti Novell. Mac esistenti, è necessario creare manualmente il file con **estensione plist dei diritti** facendo clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e selezionando **Aggiungi** > **nuovo file.** Selezionare quindi **Novell. Mac** > **Empty Property List**:
+Per i progetti Novell. Mac esistenti, è necessario creare manualmente il file con **estensione plist dei diritti** facendo clic con il pulsante destro del mouse sul progetto nella **riquadro della soluzione** e scegliendo **Aggiungi** > **nuovo file.** Selezionare quindi **Novell. Mac** > **elenco di proprietà vuoto**:
 
 ![Aggiunta di un nuovo elenco di proprietà](troubleshooting-images/entitlements03.png "Aggiunta di un nuovo elenco di proprietà")
 
-Immettere `Entitlements` come nome e fare clic sul pulsante **nuovo** . Se il progetto includeva in precedenza un file dei diritti, verrà richiesto di aggiungerlo al progetto anziché creare un nuovo file:
+Immettere `Entitlements` per il nome e fare clic sul pulsante **nuovo** . Se il progetto includeva in precedenza un file dei diritti, verrà richiesto di aggiungerlo al progetto anziché creare un nuovo file:
 
 [![Verifica della sovrascrittura di un file](troubleshooting-images/entitlements04.png "Verifica della sovrascrittura di un file")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="community-support-on-the-forums"></a>Supporto della community nei forum
 
-La community di sviluppatori che usano i prodotti Novell è straordinaria e molti visitano i nostri [forum Novell. Mac](http://forums.xamarin.com/categories/mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Novell visitano periodicamente il forum per assistenza.
+La community di sviluppatori che usano i prodotti Novell è straordinaria e molti visitano i nostri [forum Novell. Mac](https://forums.xamarin.com/categories/mac) per condividere esperienze e la loro esperienza. Inoltre, i tecnici Novell visitano periodicamente il forum per assistenza.
 
 <a name="filing-a-bug"/>
 

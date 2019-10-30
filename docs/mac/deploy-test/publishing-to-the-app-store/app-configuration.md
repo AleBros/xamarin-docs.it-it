@@ -4,15 +4,15 @@ description: Questo documento descrive come configurare un'app Xamarin.Mac per l
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 6134cbfabb342750ec68b676dd06388f4fb8f035
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 545c1cef26d3bbf85b490492347f4f63b42269a9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283022"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021689"
 ---
 # <a name="mac-app-configuration"></a>Configurazione di app Mac
 
@@ -24,11 +24,11 @@ Fare clic con il pulsante destro del mouse sul progetto dell'applicazione Mac in
 
 Per modificare le impostazioni di un'applicazione Xamarin.Mac, fare doppio clic sul file **Info.plist** nel **riquadro della soluzione**:
 
-![Selezione del file Info.plist](app-configuration-images/config04.png "Selezione del file Info.plist")
+![Selezione del file INFO. plist](app-configuration-images/config04.png "Selezione del file INFO. plist")
 
 In questo modo verranno visualizzate le opzioni disponibili per l'app:
 
- [![Modifica del file Info.plist](app-configuration-images/config01.png "Modifica del file Info.plist")](app-configuration-images/config01-large.png#lightbox)
+ [![Modifica del file INFO. plist](app-configuration-images/config01.png "Modifica del file INFO. plist")](app-configuration-images/config01-large.png#lightbox)
 
 Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisiti di sistema seguenti:
 
@@ -38,7 +38,7 @@ Per eseguire le applicazioni Mac create con Xamarin.Mac sono necessari i requisi
 
 La sezione **Firma Mac** della finestra di dialogo **Opzioni progetto** consente allo sviluppatore di firmare un'app Xamarin.Mac per il test, il rilascio o il rilascio automatico tramite l'App Store Apple:
 
-[![Editor Firma Mac](app-configuration-images/config02.png "Finestra Firma Mac")](app-configuration-images/config02-large.png#lightbox)
+[![Editor firma Mac](app-configuration-images/config02.png "Finestra di firma Mac")](app-configuration-images/config02-large.png#lightbox)
 
 Da qui selezionare Identità, Profilo di provisioning e tutti i diritti personalizzati usati per firmare l'app quando viene compilata. Lo sviluppatore può facoltativamente firmare il programma di installazione usato per installare l'app in un altro Mac.
 

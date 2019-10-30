@@ -3,15 +3,15 @@ title: Creazione di visualizzazioni HTML con i modelli Razor
 description: " L'uso di una pagina Web a schermo intero per il rendering del codice HTML può essere un modo semplice ed efficace per eseguire il rendering di una formattazione complessa in modo multipiattaforma, soprattutto se si dispone già di HTML, JavaScript e CSS da un progetto di sito Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
-ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5f1b1345f9abbf891cfbea6e45a8ed2abd7c0dac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765340"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014597"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Creazione di visualizzazioni HTML con i modelli Razor
 
@@ -41,7 +41,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 ```
 
-Per altre informazioni sull'uso del controllo UIWebView, vedere le ricette [UIWebView iOS](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) .
+Per altre informazioni sull'uso del controllo UIWebView, vedere le ricette [UIWebView iOS](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/content_controls/web_view) .
 
 ### <a name="android"></a>Android
 
@@ -58,7 +58,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-Per altre informazioni sull'uso del controllo WebView, vedere le ricette di [WebView per Android](http://docs.xamarin.com/recipes/android/controls/webview/) .
+Per altre informazioni sull'uso del controllo WebView, vedere le ricette di [WebView per Android](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/controls/webview) .
 
 ### <a name="specifying-the-base-directory"></a>Specifica della directory di base
 
@@ -80,7 +80,7 @@ Il rendering dell'output del modello viene eseguito in iOS C# con il codice segu
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
-Viene specificata `NSBundle.MainBundle.BundleUrl` la directory di base che fa riferimento alla directory in cui è installata l'applicazione. Tutti i file nella cartella **Resources** vengono copiati in questo percorso, ad esempio il file **Style. CSS** illustrato di seguito:
+La directory di base viene specificata come `NSBundle.MainBundle.BundleUrl` che fa riferimento alla directory in cui è installata l'applicazione. Tutti i file nella cartella **Resources** vengono copiati in questo percorso, ad esempio il file **Style. CSS** illustrato di seguito:
 
  ![soluzione iPhoneHybrid](images/image1_240x163.png)
 
@@ -169,7 +169,7 @@ webView.SetWebViewClient (new HybridWebViewClient ());
 
 ### <a name="calling-javascript-from-c"></a>Chiamata di JavaScript da C\#
 
-Oltre a indicare a una visualizzazione Web di caricare una nuova pagina HTML, C# il codice può anche eseguire JavaScript all'interno della pagina attualmente visualizzata. Tutti i blocchi di codice JavaScript possono essere C# creati usando stringhe ed eseguiti oppure è possibile creare chiamate di metodo a JavaScript già disponibile nella pagina `script` tramite tag.
+Oltre a indicare a una visualizzazione Web di caricare una nuova pagina HTML, C# il codice può anche eseguire JavaScript all'interno della pagina attualmente visualizzata. Tutti i blocchi di codice JavaScript possono essere C# creati usando stringhe ed eseguiti oppure è possibile creare chiamate di metodo a JavaScript già disponibile nella pagina tramite`script`tag.
 
 #### <a name="android"></a>Android
 
@@ -227,13 +227,13 @@ Di seguito è riportato un semplice modello Razor ( **RazorView. cshtml**).
 
 Si notino le differenze seguenti rispetto a un normale file HTML:
 
-- Il `@` simbolo ha un significato speciale nei modelli Razor: indica che è C# necessario valutare l'espressione seguente.
-- `@model`la direttiva viene sempre visualizzata come prima riga di un file di modello Razor.
-- La `@model` direttiva deve essere seguita da un tipo. In questo esempio una stringa semplice viene passata al modello, ma può trattarsi di qualsiasi classe personalizzata.
-- Quando `@Model` viene fatto riferimento all'intero modello, fornisce un riferimento all'oggetto passato al modello quando viene generato (in questo esempio sarà una stringa).
+- Il simbolo di `@` ha un significato speciale nei modelli Razor: indica che è C# necessario valutare l'espressione seguente.
+- `@model` direttiva viene sempre visualizzata come prima riga di un file di modello Razor.
+- La direttiva `@model` deve essere seguita da un tipo. In questo esempio una stringa semplice viene passata al modello, ma può trattarsi di qualsiasi classe personalizzata.
+- Quando viene fatto riferimento a `@Model` in tutto il modello, fornisce un riferimento all'oggetto passato al modello quando viene generato (in questo esempio sarà una stringa).
 - L'IDE genererà automaticamente una classe parziale per i modelli (file con estensione **cshtml** ). È possibile visualizzare questo codice, ma non deve essere modificato.
  ![RazorView. cshtml](images/image6_125x34.png) la classe parziale è denominata RazorView in modo che corrisponda al nome del file modello. cshtml. Si tratta del nome utilizzato per fare riferimento al modello nel C# codice.
-- `@using`è anche possibile includere le istruzioni all'inizio di un modello Razor per includere spazi dei nomi aggiuntivi.
+- le istruzioni `@using` possono anche essere incluse all'inizio di un modello Razor per includere spazi dei nomi aggiuntivi.
 
 L'output HTML finale può quindi essere generato con il codice C# seguente. Si noti che il modello viene specificato come stringa "Hello World" che verrà incorporato nell'output del modello sottoposto a rendering.
 
@@ -313,13 +313,13 @@ Nel modello C# è possibile includere più complesso, ad esempio gli aggiornamen
 </html>
 ```
 
-È possibile scrivere espressioni a riga C# singola complesse, ad esempio la formattazione dell'età, circondando il `@()`codice con.
+È possibile scrivere espressioni a riga C# singola complesse, ad esempio la formattazione dell'età, circondando il codice con `@()`.
 
-È C# possibile scrivere più istruzioni circondando tali istruzioni `@{}`con.
+È C# possibile scrivere più istruzioni circondando tali istruzioni con `@{}`.
 
 #### <a name="if-else-statements"></a>Istruzioni if-else
 
-I rami di codice possono essere `@if` espressi con come illustrato in questo esempio di modello.
+I rami di codice possono essere espressi con `@if`, come illustrato in questo esempio di modello.
 
 ```html
 @model Monkey
@@ -340,7 +340,7 @@ I rami di codice possono essere `@if` espressi con come illustrato in questo ese
 
 #### <a name="loops"></a>Cicli
 
-È possibile aggiungere anche costrutti di ciclo come `foreach` . Il `@` prefisso può essere usato sulla `@food` variabile del ciclo, in questo caso, per eseguirne il rendering in HTML.
+È possibile aggiungere anche costrutti di ciclo come `foreach`. Il prefisso `@` può essere usato sulla variabile del ciclo (`@food` in questo caso) per eseguirne il rendering in HTML.
 
 ```html
 @model Monkey
@@ -394,7 +394,7 @@ Di seguito sono riportate le parti importanti della soluzione:
 - Contenuto statico, ad esempio il file **Style. CSS** .
 - File modello Razor. cshtml come **RazorView. cshtml** .
 - Classi del modello a cui viene fatto riferimento nei modelli Razor, ad esempio **ExampleModel.cs** .
-- Classe specifica della piattaforma che crea la visualizzazione Web ed esegue il rendering del modello, ad esempio `MainActivity` in Android `iPhoneHybridViewController` e in iOS.
+- Classe specifica della piattaforma che crea la visualizzazione Web ed esegue il rendering del modello, ad esempio il `MainActivity` in Android e il `iPhoneHybridViewController` in iOS.
 
 Nella sezione seguente viene illustrato il funzionamento dei progetti.
 
@@ -416,7 +416,7 @@ Il modello include un file Razor **. cshtml** con codice prescritto che consente
 
 #### <a name="rendering-the-template"></a>Rendering del modello
 
-La `GenerateString` chiamata di su un modello rende il codice HTML pronto per la visualizzazione in una visualizzazione Web. Se il modello utilizza un modello, è necessario fornirlo prima del rendering. In questo diagramma viene illustrato il funzionamento del rendering, non per la risoluzione delle risorse statiche da parte della visualizzazione Web in fase di esecuzione, utilizzando la directory di base specificata per trovare i file specificati.
+La chiamata del `GenerateString` in un modello rende il codice HTML pronto per la visualizzazione in una visualizzazione Web. Se il modello utilizza un modello, è necessario fornirlo prima del rendering. In questo diagramma viene illustrato il funzionamento del rendering, non per la risoluzione delle risorse statiche da parte della visualizzazione Web in fase di esecuzione, utilizzando la directory di base specificata per trovare i file specificati.
 
  ![Diagramma di flusso Razor](images/image12_700x421.png)
 
@@ -430,7 +430,7 @@ La comunicazione da una visualizzazione Web di cui C# è stato eseguito il rende
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-La `InvokeCSharpWithFormValues` funzione JavaScript legge tutti i valori dal form HTML e `location.href` imposta per la visualizzazione Web:
+La funzione JavaScript `InvokeCSharpWithFormValues` legge tutti i valori dal form HTML e imposta il `location.href` per la visualizzazione Web:
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -446,7 +446,7 @@ Quando la visualizzazione Web nativa elabora questa richiesta di navigazione, è
 
 Gli elementi interni di questi due intercettori di navigazione sono essenzialmente identici.
 
-Prima di tutto, controllare l'URL che si sta tentando di caricare la visualizzazione Web e, se non inizia con lo`hybrid:`schema personalizzato (), consentire l'esecuzione della navigazione normalmente.
+Prima di tutto, controllare l'URL che si sta tentando di caricare la visualizzazione Web e, se non inizia con lo schema personalizzato (`hybrid:`), consentire che lo spostamento venga eseguito normalmente.
 
 Per lo schema URL personalizzato, tutti gli elementi dell'URL tra lo schema e il "?" nome del metodo da gestire (in questo caso, "UpdateLabel"). Tutti gli elementi nella stringa di query verranno considerati come parametri della chiamata al metodo:
 
@@ -456,7 +456,7 @@ var method = resources [0];
 var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 ```
 
-`UpdateLabel`in questo esempio viene eseguita una quantità minima di modifiche di stringa sul parametro TextBox (anteposto "C# dice" alla stringa), quindi viene richiamata la visualizzazione Web.
+`UpdateLabel` in questo esempio esegue una quantità minima di modifiche di stringa sul parametro TextBox (anteposto "C# dice" alla stringa), quindi richiama la visualizzazione Web.
 
 Dopo aver gestito l'URL, il metodo interrompe la navigazione in modo che la visualizzazione Web non tenti di completare la navigazione all'URL personalizzato.
 
@@ -468,7 +468,7 @@ La comunicazione con una visualizzazione Web HTML sottoposta a rendering da C# v
 webView.EvaluateJavascript (js);
 ```
 
-In Android è possibile richiamare JavaScript nella visualizzazione Web caricando JavaScript come URL usando lo `"javascript:"` schema URL:
+In Android è possibile richiamare JavaScript nella visualizzazione Web caricando JavaScript come URL usando lo schema dell'URL `"javascript:"`:
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -517,5 +517,5 @@ Infine, sono stati introdotti gli esempi di RazorTodo che illustrano come combin
 ### <a name="related-links"></a>Collegamenti correlati
 
 - [Esempio RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
-- [MVC 3-motore di visualizzazione Razor (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
-- [Introduzione alla programmazione Web ASP.NET con la sintassi Razor (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)
+- [MVC 3-motore di visualizzazione Razor (Microsoft)](https://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
+- [Introduzione alla programmazione Web ASP.NET con la sintassi Razor (Microsoft)](https://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

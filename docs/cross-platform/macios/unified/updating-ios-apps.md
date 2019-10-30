@@ -3,15 +3,15 @@ title: Aggiornamento di app iOS esistenti
 description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. iOS dal API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: c74efef96a15a950122041eb52dc09835bb8940b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9b531bd095781c80c5f3418725d57f8f6bbb06fd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279556"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015034"
 ---
 # <a name="updating-existing-ios-apps"></a>Aggiornamento di app iOS esistenti
 
@@ -31,13 +31,13 @@ Prima di aggiornare il codice esistente alla API unificata, è consigliabile eli
 
 ## <a name="automated-updating"></a>Aggiornamento automatico
 
-Una volta corretti gli avvisi, selezionare un progetto iOS esistente in Visual Studio per Mac o Visual Studio e scegliere **Esegui migrazione a Novell. iOS API unificata** dal menu **progetto** . Ad esempio:
+Una volta corretti gli avvisi, selezionare un progetto iOS esistente in Visual Studio per Mac o Visual Studio e scegliere **Esegui migrazione a Novell. iOS API unificata** dal menu **progetto** . Esempio:
 
-![](updating-ios-apps-images/beta-tool1.png "Scegliere Esegui migrazione a Novell. iOS API unificata dal menu progetto")
+![](updating-ios-apps-images/beta-tool1.png "Choose Migrate to Xamarin.iOS Unified API from the Project menu")
 
 È necessario accettare questo avviso prima dell'esecuzione della migrazione automatica (ovviamente è necessario assicurarsi di disporre di backup/controllo del codice sorgente prima di intraprendere questa avventura):
 
-![](updating-ios-apps-images/beta-tool2.png "Accetta questo avviso prima dell'esecuzione della migrazione automatica")
+![](updating-ios-apps-images/beta-tool2.png "Agree to this warning before the automated migration will run")
 
 Lo strumento consente di automatizzare tutti i passaggi descritti nella sezione **aggiornamento manuale** riportata di seguito ed è il metodo consigliato per convertire un progetto Novell. iOS esistente nel API unificata.
 
@@ -45,45 +45,45 @@ Lo strumento consente di automatizzare tutti i passaggi descritti nella sezione 
 
 Anche in questo caso, dopo aver corretto gli avvisi, seguire questa procedura per aggiornare manualmente le app Novell. iOS per usare la nuova API unificata:
 
-### <a name="1-update-project-type--build-target"></a>1. Aggiornare il tipo di progetto & destinazione di compilazione
+### <a name="1-update-project-type--build-target"></a>1. aggiornare il tipo di progetto & destinazione di compilazione
 
-Modificare la versione del progetto nei file **csproj** da `6BC8ED88-2882-458C-8E55-DFD12B67127B` a `FEACFBD2-3405-455C-9665-78FE426C6842`. Modificare il file **csproj** in un editor di testo, sostituendo il primo elemento `<ProjectTypeGuids>` nell'elemento come illustrato di seguito:
+Modificare la versione del progetto nei file **csproj** da `6BC8ED88-2882-458C-8E55-DFD12B67127B` a `FEACFBD2-3405-455C-9665-78FE426C6842`. Modificare il file **csproj** in un editor di testo, sostituendo il primo elemento nell'elemento `<ProjectTypeGuids>` come illustrato:
 
-![](updating-ios-apps-images/csproj.png "Modificare il file csproj in un editor di testo, sostituendo il primo elemento nell'elemento ProjectTypeGuids come illustrato")
+![](updating-ios-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
 
-Modificare l'elemento **Import** che contiene `Xamarin.MonoTouch.CSharp.targets` in `Xamarin.iOS.CSharp.targets` come illustrato:
+Modificare l'elemento **Import** che contiene `Xamarin.MonoTouch.CSharp.targets` in `Xamarin.iOS.CSharp.targets`, come illustrato:
 
-![](updating-ios-apps-images/csproj2.png "Modificare l'elemento Import che contiene Novell. MonoTouch. CSharp. targets in Novell. iOS. CSharp. targets come illustrato")
+![](updating-ios-apps-images/csproj2.png "Change the Import element that contains Xamarin.MonoTouch.CSharp.targets to Xamarin.iOS.CSharp.targets as shown")
 
-### <a name="2-update-project-references"></a>2. Aggiornare i riferimenti al progetto
+### <a name="2-update-project-references"></a>2. aggiornare i riferimenti al progetto
 
 Espandere il nodo **riferimenti** del progetto di applicazione iOS. Inizialmente verrà visualizzato un riferimento di tipo * Broken- **MonoTouch** simile a questo screenshot (perché è stato appena modificato il tipo di progetto):
 
-![](updating-ios-apps-images/references.png "Inizialmente verrà visualizzato un riferimento a MonoTouch rotto simile a questo screenshot, perché il tipo di progetto è stato modificato")
+![](updating-ios-apps-images/references.png "It will initially show a broken- monotouch reference similar to this screenshot because the project type changed")
 
 Fare clic con il pulsante destro del mouse sul progetto di applicazione iOS per **modificare i riferimenti**, quindi fare clic sul riferimento **MonoTouch** ed eliminarlo usando il pulsante rosso "X".
 
-![](updating-ios-apps-images/references-delete-monotouch-sml.png "Fare clic con il pulsante destro del mouse sul progetto di applicazione iOS per modificare i riferimenti, quindi fare clic sul riferimento MonoTouch ed eliminarlo usando il pulsante X rosso")
+![](updating-ios-apps-images/references-delete-monotouch-sml.png "Right-click on the iOS application project to Edit References, then click on the monotouch reference and delete it using the red X button")
 
 Scorrere ora fino alla fine dell'elenco di riferimenti e selezionare l'assembly **Novell. iOS** .
 
-![](updating-ios-apps-images/references-add-xamarinios-sml.png "Scorrere ora fino alla fine dell'elenco di riferimenti e selezionare l'assembly Novell. iOS")
+![](updating-ios-apps-images/references-add-xamarinios-sml.png "Now scroll to the end of the references list and tick the Xamarin.iOS assembly")
 
 Fare clic su **OK** per salvare le modifiche dei riferimenti al progetto.
 
-### <a name="3-remove-monotouch-from-namespaces"></a>3. Rimuovi MonoTouch da spazi dei nomi
+### <a name="3-remove-monotouch-from-namespaces"></a>3. rimuovere MonoTouch da spazi dei nomi
 
-Rimuovere il prefisso **MonoTouch** dagli spazi dei nomi `using` nelle istruzioni o ogni volta che un nomeclasse è stato completo (ad esempio, `MonoTouch.UIKit`diventa semplicemente `UIKit`).
+Rimuovere il prefisso **MonoTouch** dagli spazi dei nomi nelle istruzioni `using` o in qualsiasi punto in cui un nomeclasse è stato completo (ad esempio, `MonoTouch.UIKit` diventa solo `UIKit`).
 
-### <a name="4-remap-types"></a>4. Mapping di tipi
+### <a name="4-remap-types"></a>4. modifica del mapping di tipi
 
-Sono stati introdotti [tipi nativi](~/cross-platform/macios/nativetypes.md) che sostituiscono alcuni tipi utilizzati in precedenza, ad esempio istanze `System.Drawing.RectangleF` di `CoreGraphics.CGRect` con (ad esempio). L'elenco completo dei tipi è reperibile nella pagina [tipi nativi](~/cross-platform/macios/nativetypes.md) .
+Sono stati introdotti [tipi nativi](~/cross-platform/macios/nativetypes.md) che sostituiscono alcuni tipi utilizzati in precedenza, ad esempio istanze di `System.Drawing.RectangleF` con `CoreGraphics.CGRect` (ad esempio). L'elenco completo dei tipi è reperibile nella pagina [tipi nativi](~/cross-platform/macios/nativetypes.md) .
 
-### <a name="5-fix-method-overrides"></a>5. Correggi override del metodo
+### <a name="5-fix-method-overrides"></a>5. correggere le sostituzioni del metodo
 
-Per `UIKit` alcuni metodi la firma è stata modificata in modo da usare i nuovi [tipi nativi](~/cross-platform/macios/nativetypes.md) , ad esempio `nint`. Se sottoclassi personalizzate eseguono l'override di questi metodi, le firme non saranno più corrispondenti e comporteranno errori. Correggere questi override del metodo modificando la sottoclasse in modo che corrisponda alla nuova firma utilizzando i tipi nativi.
+Per alcuni `UIKit` metodi la firma è stata modificata in modo da usare i nuovi [tipi nativi](~/cross-platform/macios/nativetypes.md) , ad esempio `nint`. Se sottoclassi personalizzate eseguono l'override di questi metodi, le firme non saranno più corrispondenti e comporteranno errori. Correggere questi override del metodo modificando la sottoclasse in modo che corrisponda alla nuova firma utilizzando i tipi nativi.
 
-Gli esempi includono `public override int NumberOfSections (UITableView tableView)` la modifica `nint` di per restituire e modificare i tipi restituiti e `public override int RowsInSection (UITableView tableView, int section)` i `nint`tipi di parametro in a.
+Gli esempi includono la modifica `public override int NumberOfSections (UITableView tableView)` per restituire `nint` e la modifica del tipo restituito e i tipi di parametro in `public override int RowsInSection (UITableView tableView, int section)` `nint`.
 
 ## <a name="considerations"></a>Considerazioni
 

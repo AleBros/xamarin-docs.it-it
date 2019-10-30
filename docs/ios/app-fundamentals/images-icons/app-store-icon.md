@@ -4,15 +4,15 @@ description: Questo documento descrive come usare i cataloghi asset per gestire 
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/26/2017
-ms.openlocfilehash: e0b899e69405874f381c3ab6f9a9200a856d7402
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 62253adafcd028f459e8ca0cc11a8eb3e54d52c3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767302"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004177"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Icone di App Store in Novell. iOS
 
@@ -25,7 +25,7 @@ Per la progettazione dell'icona di un'applicazione, attenersi alle linee guida s
 - Creare un'icona appropriata per l'applicazione.
 - Creare un'icona semplice che sia in linea con la progettazione dell'applicazione.
 - Non usare parole all'interno dell'icona.
-- Considerare un pubblico globale: un'unica icona dell'app viene usata in tutti i territori dello Store.
+- Pensare a livello globale: un'unica icona dell'app in tutti i territori dello Store.
 
 Per un'icona dell'app che sarà visualizzata nell'App Store, è necessaria un'immagine di 1024 x 1024 pixel.  Secondo le istruzioni di Apple l'icona per l'App Store nel catalogo asset non deve essere trasparente e non deve contenere un canale alfa.
 

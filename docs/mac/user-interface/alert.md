@@ -4,15 +4,15 @@ description: Questo articolo illustra l'uso degli avvisi in un'applicazione Nove
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 6fa442926fc2a54325713caf9764b37b530a345d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2ef8e81390b5d64971aa3883a05da9fb8795a416
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769849"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001524"
 ---
 # <a name="alerts-in-xamarinmac"></a>Avvisi in Novell. Mac
 
@@ -22,7 +22,7 @@ Quando si lavora C# con e .NET in un'applicazione Novell. Mac, si ha accesso agl
 
 Un avviso è un tipo speciale di finestra di dialogo che viene visualizzato quando si verifica un problema grave, ad esempio un errore, o come un avviso, ad esempio la preparazione dell'eliminazione di un file. Poiché un avviso è una finestra di dialogo, richiede anche una risposta utente prima che possa essere chiusa.
 
-[![](alert-images/alert06.png "Un avviso di esempio")](alert-images/alert06.png#lightbox)
+[![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
 
 In questo articolo verranno illustrate le nozioni di base sull'uso degli avvisi in un'applicazione Novell. Mac. 
 
@@ -60,7 +60,7 @@ alert.RunModal ();
 
 Il codice precedente Visualizza un avviso con l'icona delle applicazioni sovrapposta all'icona di avviso, un titolo, un messaggio di avviso e un singolo pulsante **OK** :
 
-[![](alert-images/alert01.png "Un avviso con un pulsante OK")](alert-images/alert01.png#lightbox)
+[![](alert-images/alert01.png "An alert with a OK button")](alert-images/alert01.png#lightbox)
 
 Apple fornisce diverse proprietà che possono essere usate per personalizzare un avviso:
 
@@ -71,10 +71,10 @@ Apple fornisce diverse proprietà che possono essere usate per personalizzare un
 - **MessageText** : si tratta del messaggio principale o del titolo dell'avviso e dovrebbe definire rapidamente la situazione all'utente.
 - **InformativeText** : questo è il corpo dell'avviso in cui è necessario definire la situazione in modo chiaro e presentare opzioni utilizzabili all'utente.
 - **Icona** : consente di visualizzare un'icona personalizzata per l'utente.
-- HelpAnchor & **ShowsHelp** -consente di associare l'avviso a HelpBook dell'applicazione e visualizzare la guida per l'avviso.
+- **HelpAnchor** & **ShowsHelp** -consente di associare l'avviso all'applicazione HelpBook e visualizzare la guida per l'avviso.
 - **Buttons** : per impostazione predefinita, un avviso ha solo il pulsante **OK** , ma la raccolta **Buttons** consente di aggiungere altre opzioni in base alle esigenze.
-- **ShowsSuppressionButton** -se `true` Visualizza una casella di controllo che può essere utilizzata dall'utente per disattivare l'avviso per le occorrenze successive dell'evento che lo ha attivato.
-- **AccessoryView** : consente di aggiungere un'altra visualizzazione secondaria all'avviso per fornire informazioni aggiuntive, ad esempio l'aggiunta di un **campo di testo** per l'immissione di dati. Se si imposta un nuovo **AccessoryView** o se ne modifica uno esistente, è necessario chiamare il `Layout()` metodo per modificare il layout visibile dell'avviso.
+- **ShowsSuppressionButton** -se `true` Visualizza una casella di controllo che l'utente può utilizzare per disattivare l'avviso per le occorrenze successive dell'evento che l'ha attivato.
+- **AccessoryView** : consente di aggiungere un'altra visualizzazione secondaria all'avviso per fornire informazioni aggiuntive, ad esempio l'aggiunta di un **campo di testo** per l'immissione di dati. Se si imposta un nuovo **AccessoryView** o se ne modifica uno esistente, è necessario chiamare il metodo `Layout()` per modificare il layout visibile dell'avviso.
 
 <a name="Displaying_an_Alert" />
 
@@ -93,7 +93,7 @@ alert.RunModal ();
 
 Se questo codice viene eseguito, viene visualizzato quanto segue:
 
-[![](alert-images/alert02.png "Un avviso semplice")](alert-images/alert02.png#lightbox)
+[![](alert-images/alert02.png "A simple alert")](alert-images/alert02.png#lightbox)
 
 Il codice seguente visualizza lo stesso avviso di un foglio:
 
@@ -108,7 +108,7 @@ alert.BeginSheet (this);
 
 Se questo codice viene eseguito, verrà visualizzato quanto segue:
 
-[![](alert-images/alert03.png "Un avviso visualizzato come foglio")](alert-images/alert03.png#lightbox)
+[![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
 
 <a name="Working_with_Alert_Buttons" />
 
@@ -130,13 +130,13 @@ var result = alert.RunModal ();
 
 Il primo pulsante aggiunto sarà il _pulsante predefinito_ che verrà attivato se l'utente preme il tasto INVIO. Il valore restituito sarà un Integer che rappresenta il pulsante premuto dall'utente. In questo caso verranno restituiti i valori seguenti:
 
-- **OK** - 1000.
+- **OK** -1000.
 - **Annulla** -1001.
 - **Forse** -1002.
 
 Se si esegue il codice, verrà visualizzato quanto segue:
 
-[![](alert-images/alert04.png "Un avviso con tre opzioni di pulsante")](alert-images/alert04.png#lightbox)
+[![](alert-images/alert04.png "An alert with three button options")](alert-images/alert04.png#lightbox)
 
 Ecco il codice per lo stesso avviso di un foglio:
 
@@ -156,7 +156,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se questo codice viene eseguito, verrà visualizzato quanto segue:
 
-[![](alert-images/alert05.png "Avviso a tre pulsanti visualizzato come foglio")](alert-images/alert05.png#lightbox)
+[![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > Non aggiungere mai più di tre pulsanti a un avviso.
@@ -165,7 +165,7 @@ Se questo codice viene eseguito, verrà visualizzato quanto segue:
 
 ## <a name="showing-the-suppress-button"></a>Visualizzazione del pulsante di eliminazione
 
-Se la `ShowSuppressButton` proprietà dell'avviso è `true`, l'avviso Visualizza una casella di controllo che l'utente può utilizzare per disattivare l'avviso per le occorrenze successive dell'evento che l'ha attivato. Il codice seguente visualizza un avviso mobile libero con un pulsante di eliminazione:
+Se la proprietà `ShowSuppressButton` dell'avviso è `true`, nell'avviso viene visualizzata una casella di controllo che l'utente può utilizzare per disattivare l'avviso per le occorrenze successive dell'evento che l'ha attivato. Il codice seguente visualizza un avviso mobile libero con un pulsante di eliminazione:
 
 ```csharp
 var alert = new NSAlert () {
@@ -181,11 +181,11 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-Se il valore di `alert.SuppressionButton.State` è `NSCellStateValue.On`, l'utente ha selezionato la casella di controllo non visualizzare, in caso contrario.
+Se il valore della `alert.SuppressionButton.State` è `NSCellStateValue.On`, l'utente ha selezionato la casella di controllo non visualizzare, altrimenti non lo è.
 
 Se il codice viene eseguito, verrà visualizzato quanto segue:
 
-[![](alert-images/alert06.png "Un avviso con un pulsante di eliminazione")](alert-images/alert06.png#lightbox)
+[![](alert-images/alert06.png "An alert with a suppress button")](alert-images/alert06.png#lightbox)
 
 Ecco il codice per lo stesso avviso di un foglio:
 
@@ -206,13 +206,13 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se questo codice viene eseguito, verrà visualizzato quanto segue:
 
-[![](alert-images/alert07.png "Un avviso con un pulsante di eliminazione visualizzato come foglio")](alert-images/alert07.png#lightbox)
+[![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView" />
 
 ## <a name="adding-a-custom-subview"></a>Aggiunta di una visualizzazione personalizzata
 
-Gli avvisi hanno `AccessoryView` una proprietà che può essere usata per personalizzare ulteriormente l'avviso e aggiungere elementi come un **campo di testo** per l'input dell'utente. Il codice seguente crea un avviso mobile libero con un campo di input di testo aggiunto:
+Gli avvisi hanno una proprietà `AccessoryView` che può essere usata per personalizzare ulteriormente l'avviso e aggiungere elementi come un **campo di testo** per l'input dell'utente. Il codice seguente crea un avviso mobile libero con un campo di input di testo aggiunto:
 
 ```csharp
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
@@ -232,11 +232,11 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-Di seguito sono `var input = new NSTextField (new CGRect (0, 0, 300, 20));` riportate le linee chiave che consentono di creare un nuovo **campo di testo** che verrà aggiunto all'avviso. `alert.AccessoryView = input;`che connette il **campo di testo** all'avviso e la chiamata al `Layout()` metodo, che è necessario per ridimensionare l'avviso per adattarlo alla nuova visualizzazione.
+Le linee chiave sono `var input = new NSTextField (new CGRect (0, 0, 300, 20));` che consente di creare un nuovo **campo di testo** che verrà aggiunto all'avviso. `alert.AccessoryView = input;` che connette il **campo di testo** all'avviso e la chiamata al metodo `Layout()`, necessario per ridimensionare l'avviso per adattarlo alla nuova visualizzazione.
 
 Se si esegue il codice, verrà visualizzato quanto segue:
 
-[![](alert-images/alert08.png "Se si esegue il codice, verrà visualizzato quanto segue:")](alert-images/alert08.png#lightbox)
+[![](alert-images/alert08.png "If we run the code, the following will be displayed")](alert-images/alert08.png#lightbox)
 
 Di seguito è riportato lo stesso avviso di un foglio:
 
@@ -261,7 +261,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se si esegue questo codice, verranno visualizzati gli elementi seguenti:
 
-[![](alert-images/alert09.png "Un avviso con una visualizzazione personalizzata")](alert-images/alert09.png#lightbox)
+[![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
 
 <a name="Summary" />
 

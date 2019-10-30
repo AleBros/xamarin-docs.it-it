@@ -3,15 +3,15 @@ title: Notifiche in Novell. Android
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 57c77b5d8d6a4763dc7b5c7a62a51ffe3137827d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755371"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025527"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notifiche in Novell. Android
 
@@ -27,11 +27,11 @@ Questa procedura dettagliata illustra come usare le notifiche locali in un'appli
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
-[Messaggistica cloud Firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. La messaggistica cloud Firebase può essere usata per implementare notifiche remote (dette anche notifiche push) nelle applicazioni Novell. Android.
+[Firebase cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) Messaging &ndash; Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. La messaggistica cloud Firebase può essere usata per implementare notifiche remote (dette anche notifiche push) nelle applicazioni Novell. Android.
 
-[Notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) di &ndash; Questo argomento per sviluppatori Android è la guida definitiva per le notifiche Android. Include una sezione relativa alle considerazioni sulla progettazione che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Vengono fornite ulteriori informazioni di base sulla navigazione preliminare all'avvio di un'attività e viene illustrato come visualizzare lo stato di avanzamento in una notifica e controllare la riproduzione dei supporti nella schermata di blocco.
+[Notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; questo argomento per sviluppatori Android è la guida definitiva per le notifiche Android. Include una sezione relativa alle considerazioni sulla progettazione che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Vengono fornite ulteriori informazioni di base sulla navigazione preliminare all'avvio di un'attività e viene illustrato come visualizzare lo stato di avanzamento in una notifica e controllare la riproduzione dei supporti nella schermata di blocco.
 
-[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; Questo servizio Android consente all'app di restare in ascolto e interagire con tutte le notifiche pubblicate sul dispositivo Android, non solo le notifiche che l'app è registrata per la ricezione.
+[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; questo servizio Android consente all'app di restare in ascolto e interagire con tutte le notifiche pubblicate sul dispositivo Android, non solo le notifiche che l'app è registrata per la ricezione.
 Si noti che l'utente deve concedere in modo esplicito l'autorizzazione all'app affinché possa restare in ascolto delle notifiche sul dispositivo.
 
 ## <a name="related-links"></a>Collegamenti correlati

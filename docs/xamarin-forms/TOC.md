@@ -95,6 +95,7 @@
 ##### [Parametri come proprietà CLR](app-fundamentals/effects/passing-parameters/clr-properties.md)
 ##### [Parametri come proprietà associate](app-fundamentals/effects/passing-parameters/attached-properties.md)
 #### [Richiamo di eventi](app-fundamentals/effects/touch-tracking.md)
+#### [RoundEffect riutilizzabile](app-fundamentals/effects/reusable-roundeffect.md)
 ### [Movimenti](app-fundamentals/gestures/index.md)
 #### [Tocco](app-fundamentals/gestures/tap.md)
 #### [Avvicinamento delle dita](app-fundamentals/gestures/pinch.md)

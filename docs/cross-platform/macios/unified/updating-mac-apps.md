@@ -3,15 +3,15 @@ title: Aggiornamento delle app Mac esistenti
 description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. Mac dalla API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 43498c0609fdbe6dba59b9ed5926c9c58b72d4db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4590e5d987acbb5bd97b41477e6aafa7c17d7778
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280874"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015312"
 ---
 # <a name="updating-existing-mac-apps"></a>Aggiornamento delle app Mac esistenti
 
@@ -29,13 +29,13 @@ Prima di aggiornare il codice esistente alla API unificata, è consigliabile eli
 
 ## <a name="automated-updating"></a>Aggiornamento automatico
 
-Una volta corretti gli avvisi, selezionare un progetto Mac esistente in Visual Studio per Mac o Visual Studio e scegliere **Esegui migrazione a Novell. Mac API unificata** dal menu **progetto** . Ad esempio:
+Una volta corretti gli avvisi, selezionare un progetto Mac esistente in Visual Studio per Mac o Visual Studio e scegliere **Esegui migrazione a Novell. Mac API unificata** dal menu **progetto** . Esempio:
 
-![](updating-mac-apps-images/beta-tool1.png "Scegliere Esegui migrazione a Novell. Mac API unificata dal menu progetto")
+![](updating-mac-apps-images/beta-tool1.png "Choose Migrate to Xamarin.Mac Unified API from the Project menu")
 
 È necessario accettare questo avviso prima dell'esecuzione della migrazione automatica (ovviamente è necessario assicurarsi di disporre di backup/controllo del codice sorgente prima di intraprendere questa avventura):
 
-![](updating-mac-apps-images/migrate01.png "Accetta questo avviso prima dell'esecuzione della migrazione automatica")
+![](updating-mac-apps-images/migrate01.png "Agree to this warning before the automated migration will run")
 
 Sono disponibili due tipi di Framework di destinazione supportati che è possibile selezionare quando si usa il API unificata in un'applicazione Novell. Mac:
 
@@ -50,17 +50,17 @@ Lo strumento consente di automatizzare tutti i passaggi descritti nella sezione 
 
 Anche in questo caso, dopo aver corretto gli avvisi, seguire questa procedura per aggiornare manualmente le app Novell. Mac per usare la nuova API unificata:
 
-### <a name="1-update-project-type--build-target"></a>1. Aggiornare il tipo di progetto & destinazione di compilazione
+### <a name="1-update-project-type--build-target"></a>1. aggiornare il tipo di progetto & destinazione di compilazione
 
-Modificare la versione del progetto nei file **csproj** da `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` a `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`. Modificare il file **csproj** in un editor di testo, sostituendo il primo elemento `<ProjectTypeGuids>` nell'elemento come illustrato di seguito:
+Modificare la versione del progetto nei file **csproj** da `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` a `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`. Modificare il file **csproj** in un editor di testo, sostituendo il primo elemento nell'elemento `<ProjectTypeGuids>` come illustrato:
 
-![](updating-mac-apps-images/csproj.png "Modificare il file csproj in un editor di testo, sostituendo il primo elemento nell'elemento ProjectTypeGuids come illustrato")
+![](updating-mac-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
 
-Modificare l'elemento **Import** che contiene `Xamarin.Mac.targets` in `Xamarin.Mac.CSharp.targets` come illustrato:
+Modificare l'elemento **Import** che contiene `Xamarin.Mac.targets` in `Xamarin.Mac.CSharp.targets`, come illustrato:
 
-![](updating-mac-apps-images/csproj2.png "Modificare l'elemento Import che contiene Novell. Mac. targets in Novell. Mac. CSharp. targets come illustrato")
+![](updating-mac-apps-images/csproj2.png "Change the Import element that contains Xamarin.Mac.targets to Xamarin.Mac.CSharp.targets as shown")
 
-Aggiungere le seguenti righe di codice dopo l' `<AssemblyName>` elemento:
+Aggiungere le righe di codice seguenti dopo l'elemento `<AssemblyName>`:
 
 ```xml
 <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -70,33 +70,33 @@ Aggiungere le seguenti righe di codice dopo l' `<AssemblyName>` elemento:
 
 Esempio:
 
-![Aggiungere queste righe di codice dopo l' \<elemento AssemblyName >](updating-mac-apps-images/csproj3.png)
+![Aggiungere queste righe di codice dopo l'elemento \<AssemblyName >](updating-mac-apps-images/csproj3.png)
 
-### <a name="2-update-project-references"></a>2. Aggiornare i riferimenti al progetto
+### <a name="2-update-project-references"></a>2. aggiornare i riferimenti al progetto
 
 Espandere il nodo **riferimenti** del progetto di applicazione Mac. Inizialmente verrà visualizzato un riferimento di tipo * Broken- **XamMac** simile a questo screenshot (perché è stato appena modificato il tipo di progetto):
 
-![](updating-mac-apps-images/references.png "Inizialmente verrà visualizzato un riferimento XamMac rotto simile a questo screenshot")
+![](updating-mac-apps-images/references.png "It will initially show a broken- XamMac reference similar to this screenshot")
 
 Fare clic sull'icona a forma di **ingranaggio** accanto alla voce **XamMac** e selezionare **Elimina** per rimuovere il riferimento rotto.
 
 Fare quindi clic con il pulsante destro del mouse sulla cartella **riferimenti** nella **Esplora soluzioni** e scegliere **modifica riferimenti**. Scorrere fino alla fine dell'elenco di riferimenti e inserire un segno di spunta oltre a **Novell. Mac**.
 
-![](updating-mac-apps-images/references2.png "Scorrere fino alla fine dell'elenco di riferimenti e inserire un segno di spunta oltre a Novell. Mac.")
+![](updating-mac-apps-images/references2.png "Scroll to the bottom of the list of references and place a check besides Xamarin.Mac")
 
 Fare clic su **OK** per salvare le modifiche dei riferimenti al progetto.
 
-### <a name="3-remove-monomac-from-namespaces"></a>3. Rimuovere MonoMac da spazi dei nomi
+### <a name="3-remove-monomac-from-namespaces"></a>3. rimuovere MonoMac da spazi dei nomi
 
-Rimuovere il prefisso **MonoMac** dagli spazi dei nomi `using` nelle istruzioni o ogni volta che un nomeclasse è stato completo (ad esempio, `MonoMac.AppKit`diventa semplicemente `AppKit`).
+Rimuovere il prefisso **MonoMac** dagli spazi dei nomi nelle istruzioni `using` o in qualsiasi punto in cui un nomeclasse è stato completo (ad esempio, `MonoMac.AppKit` diventa solo `AppKit`).
 
-### <a name="4-remap-types"></a>4. Mapping di tipi
+### <a name="4-remap-types"></a>4. modifica del mapping di tipi
 
-Sono stati introdotti [tipi nativi](~/cross-platform/macios/nativetypes.md) che sostituiscono alcuni tipi utilizzati in precedenza, ad esempio istanze `System.Drawing.RectangleF` di `CoreGraphics.CGRect` con (ad esempio). L'elenco completo dei tipi è reperibile nella pagina [tipi nativi](~/cross-platform/macios/nativetypes.md) .
+Sono stati introdotti [tipi nativi](~/cross-platform/macios/nativetypes.md) che sostituiscono alcuni tipi utilizzati in precedenza, ad esempio istanze di `System.Drawing.RectangleF` con `CoreGraphics.CGRect` (ad esempio). L'elenco completo dei tipi è reperibile nella pagina [tipi nativi](~/cross-platform/macios/nativetypes.md) .
 
-### <a name="5-fix-method-overrides"></a>5. Correggi override del metodo
+### <a name="5-fix-method-overrides"></a>5. correggere le sostituzioni del metodo
 
-Per `AppKit` alcuni metodi la firma è stata modificata in modo da usare i nuovi [tipi nativi](~/cross-platform/macios/nativetypes.md) , ad esempio `nint`. Se sottoclassi personalizzate eseguono l'override di questi metodi, le firme non saranno più corrispondenti e comporteranno errori. Correggere questi override del metodo modificando la sottoclasse in modo che corrisponda alla nuova firma utilizzando i tipi nativi. 
+Per alcuni `AppKit` metodi la firma è stata modificata in modo da usare i nuovi [tipi nativi](~/cross-platform/macios/nativetypes.md) , ad esempio `nint`. Se sottoclassi personalizzate eseguono l'override di questi metodi, le firme non saranno più corrispondenti e comporteranno errori. Correggere questi override del metodo modificando la sottoclasse in modo che corrisponda alla nuova firma utilizzando i tipi nativi. 
 
 ## <a name="considerations"></a>Considerazioni
 

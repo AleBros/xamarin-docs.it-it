@@ -4,29 +4,29 @@ description: Questo documento descrive le varie parti di un UITableView in iOS. 
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768350"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021846"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Parti e funzionalità della tabella in Novell. iOS
 
 Un UITableView può avere uno stile "raggruppato" o "normale" ed è costituito dalle parti seguenti:
 
 - [Intestazione della sezione](#Section_Header)
-- [Celle](#Cells) di (o righe, se si preferisce)
+- [Celle](#Cells) (o righe, se si preferisce)
 - [Piè di pagina della sezione](#Section_Footer)
 - [Index](#Index)
 - [Modalità di modifica](#Edit_Features) (include ' scorri da eliminare ' e trascinare gli handle per modificare l'ordine delle righe) 
 
 Queste schermate mostrano come vengono visualizzate le righe, le intestazioni, i piè di pagina, i controlli di modifica e l'indice.
 
- [![](table-parts-and-functionality-images/image1a.png "Queste schermate mostrano come vengono visualizzate le righe, le intestazioni, i piè di pagina, i controlli di modifica e l'indice")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
 
 Queste parti sono descritte in dettaglio di seguito:
 
@@ -72,7 +72,7 @@ Nella parte restante di questo documento viene illustrato come implementare tutt
 
 Di seguito sono illustrate le classi primarie usate per visualizzare le visualizzazioni di tabella:
 
-[![](table-parts-and-functionality-images/classdiagram.png "Di seguito sono illustrate le classi primarie usate per visualizzare le visualizzazioni di tabella")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 Lo scopo di ogni classe è descritto di seguito:
 

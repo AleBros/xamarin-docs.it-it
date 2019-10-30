@@ -3,15 +3,15 @@ title: 'Parte 1: informazioni sulla piattaforma Novell mobile'
 description: Questo documento descrive la piattaforma Novell a un livello elevato, esaminando il processo di compilazione, l'accesso Platform SDK, la condivisione del codice, la creazione dell'interfaccia utente, le finestre di progettazione visiva e altro ancora.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: af2b8cd39d5fb1b0ce6c12f7d6ad87e245b9a594
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e10e9f5330de3226fb0f08051ab135ea58900fe7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761964"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016858"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: informazioni sulla piattaforma Novell mobile
 
@@ -39,7 +39,7 @@ Il C# codice sorgente è in grado di accedere a un'app nativa in modi molto dive
 
 La documentazione del linker per [Novell. iOS](~/ios/deploy-test/linker.md) e [Novell. Android](~/android/deploy-test/linker.md) fornisce ulteriori informazioni su questa parte del processo di compilazione.
 
-' Compilazione ' del runtime: è consigliabile evitare la `System.Reflection.Emit` generazione dinamica di codice con.
+' Compilazione ' del runtime: è consigliabile evitare di generare codice in modo dinamico con `System.Reflection.Emit`.
 
 Il kernel di Apple impedisce la generazione di codice dinamico nei dispositivi iOS, di conseguenza l'emissione di codice in tempo reale non funzionerà in Novell. iOS. Analogamente, le funzionalità di Dynamic Language Runtime non possono essere usate con gli strumenti Novell.
 
@@ -49,8 +49,8 @@ Alcune funzionalità di Reflection funzionano, ad esempio MonoTouch. la finestra
 
 Novell rende facilmente accessibili le funzionalità fornite dall'SDK specifico della piattaforma con una sintassi C# familiare:
 
-- **iOS** : Novell. iOS espone i Framework SDK CocoaTouch di Apple come spazi dei nomi a cui è possibile C#fare riferimento. Ad esempio, il Framework UIKit che contiene tutti i controlli dell'interfaccia utente può essere incluso in `using UIKit;` un'istruzione semplice.
-- **Android** : Novell. Android espone Google Android SDK come spazi dei nomi, quindi è possibile fare riferimento a qualsiasi parte dell'SDK supportato con un'istruzione using, ad `using Android.Views;` esempio per accedere ai controlli dell'interfaccia utente.
+- **iOS** : Novell. iOS espone i Framework SDK CocoaTouch di Apple come spazi dei nomi a cui è possibile C#fare riferimento. Ad esempio, il Framework UIKit che contiene tutti i controlli dell'interfaccia utente può essere incluso con una semplice istruzione `using UIKit;`.
+- **Android** : Novell. Android espone Google Android SDK come spazi dei nomi, quindi è possibile fare riferimento a qualsiasi parte dell'SDK supportato con un'istruzione using, ad esempio `using Android.Views;` per accedere ai controlli dell'interfaccia utente.
 - **Windows** : le app di Windows sono compilate con Visual Studio in Windows. I tipi di progetto includono Windows Forms, WPF, WinRT e il piattaforma UWP (Universal Windows Platform) (UWP).
 
 ## <a name="seamless-integration-for-developers"></a>Perfetta integrazione per gli sviluppatori
@@ -86,9 +86,9 @@ Per lo sviluppo di applicazioni Android è necessario che siano installati gli S
 
 Novell fornisce un programma di installazione unificato che consente di configurare il sistema con gli strumenti Java, Android e Novell prerequisiti (inclusa una finestra di progettazione visiva per i layout dello schermo). Per istruzioni dettagliate, vedere la [Guida all'installazione di Novell. Android](~/android/get-started/installation/index.md) .
 
-È possibile compilare e testare le applicazioni in un dispositivo reale senza alcuna licenza da Google. Tuttavia, per distribuire l'applicazione tramite uno Store, ad esempio Google Play, Amazon &amp; o Barnes Noble, è possibile che venga addebitata una tariffa di registrazione all'operatore. Google Play pubblicherà l'app immediatamente, mentre gli altri archivi avranno un processo di approvazione simile a quello di Apple.
+È possibile compilare e testare le applicazioni in un dispositivo reale senza alcuna licenza da Google. Tuttavia, per distribuire l'applicazione tramite uno Store, ad esempio Google Play, Amazon o Barnes &amp; Noble, è possibile che venga addebitata una tariffa di registrazione all'operatore. Google Play pubblicherà l'app immediatamente, mentre gli altri archivi avranno un processo di approvazione simile a quello di Apple.
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>WINDOWS
 
 Le app di Windows (WinForms, WPF o UWP) sono compilate con Visual Studio. Non usano direttamente Novell. Tuttavia, C# il codice può essere condiviso tra Windows, iOS e Android.
 Visitare il [centro per sviluppatori](https://developer.microsoft.com/) di Microsoft per informazioni sugli strumenti necessari per lo sviluppo in Windows.
@@ -115,7 +115,7 @@ Ogni piattaforma dispone di un metodo diverso per il layout visivo delle scherma
 
 Queste schermate mostrano le finestre di progettazione della schermata visiva disponibili in ogni piattaforma:
 
- [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "Queste schermate mostrano le finestre di progettazione della schermata visiva disponibili in ogni piattaforma")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "These screenshots show the visual screen designers available on each platform")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
 In tutti i casi, è possibile fare riferimento agli elementi creati visivamente nel codice.
 
@@ -143,13 +143,13 @@ La piattaforma Novell consente di riutilizzare il codice C# esistente in tutte l
 
 Poiché i prodotti Novell C# usano e .NET Framework, un numero elevato di codice sorgente esistente (progetti open source e interni) può essere riutilizzato nei progetti Novell. iOS o Novell. Android. Spesso l'origine può essere semplicemente aggiunta a una soluzione Novell, che funzionerà immediatamente. Se è stata usata una funzionalità di .NET Framework non supportata, potrebbe essere necessario apportare alcune modifiche.
 
-Esempi di C# origine che possono essere usati in Novell. iOS o Novell. Android includono: SQLite-NET, NewtonSoft. JSON e SharpZipLib.
+Esempi di C# origine che possono essere usati in Novell. iOS o Novell. Android includono: SQLite-NET, NEWTONSOFT. JSON e sharpziplib.
 
 ### <a name="objective-c-bindings--binding-projects"></a>Binding di Objective-C + progetti di associazione
 
 Novell fornisce uno strumento denominato *btouch* che consente di creare binding che consentono l'uso di librerie Objective-C nei progetti Novell. iOS. Per informazioni dettagliate su come eseguire questa operazione, vedere la [documentazione relativa ai tipi di binding Objective-C](~/cross-platform/macios/binding/binding-types-reference.md) .
 
-Esempi di librerie Objective-C che è possibile usare in Novell. iOS includono: RedLaser analisi del codice a barre, Google Analytics e integrazione PayPal. Le associazioni Novell. iOS Open Source sono disponibili su [GitHub](https://github.com/mono/monotouch-bindings).
+Esempi di librerie Objective-C che è possibile usare in Novell. iOS includono: analisi del codice a barre RedLaser, integrazione di Google Analytics e PayPal. Le associazioni Novell. iOS Open Source sono disponibili su [GitHub](https://github.com/mono/monotouch-bindings).
 
 ### <a name="jar-bindings--binding-projects"></a>Associazioni. jar + progetti di associazione
 

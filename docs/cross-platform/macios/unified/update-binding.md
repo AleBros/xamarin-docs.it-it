@@ -3,15 +3,15 @@ title: Eseguire la migrazione di un binding all'API unificata
 description: Questo articolo illustra i passaggi necessari per aggiornare un progetto di binding Novell esistente per supportare le API unificate per le applicazioni Novell. IOS e Novell. Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: da877cc10829c4067596263b2a3676413103282d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8f55dd2d300da80a57c06f15cf185558cfc5e41
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765418"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015039"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Eseguire la migrazione di un binding all'API unificata
 
@@ -36,7 +36,7 @@ I progetti di binding non sono supportati in Visual Studio in un computer Window
 
 Le API unificate rendono più semplice che mai condividere il codice tra Mac e iOS, oltre a consentire il supporto di applicazioni a 32 e 64 bit con lo stesso file binario. Eliminando i prefissi _MonoMac_ e _MonoTouch_ dagli spazi dei nomi, la condivisione più semplice viene eseguita nei progetti di applicazione Novell. Mac e Novell. iOS.
 
-Di conseguenza, è necessario modificare i contratti di binding (e `.cs` altri file nel progetto di binding) per rimuovere i prefissi _MonoMac_ e `using` MonoTouch dalle istruzioni.
+Di conseguenza, è necessario modificare i contratti di binding (e altri file di `.cs` nel progetto di binding) per rimuovere i prefissi _MonoMac_ e _MonoTouch_ dalle istruzioni `using`.
 
 Si configurano, ad esempio, le istruzioni using seguenti in un contratto di associazione:
 
@@ -48,7 +48,7 @@ using MonoTouch.UIKit;
 using MonoTouch.ObjCRuntime;
 ```
 
-Per rimuovere il `MonoTouch` prefisso, è necessario quanto segue:
+Il prefisso `MonoTouch` verrà eliminato con la seguente procedura:
 
 ```csharp
 using System;
@@ -58,17 +58,17 @@ using UIKit;
 using ObjCRuntime;
 ```
 
-Anche in questo caso, è necessario eseguire questa operazione `.cs` per tutti i file nel progetto di binding. Con questa modifica, il passaggio successivo consiste nell'aggiornare il progetto di binding in modo da usare i nuovi tipi di dati nativi.
+Anche in questo caso, è necessario eseguire questa operazione per qualsiasi file di `.cs` nel progetto di binding. Con questa modifica, il passaggio successivo consiste nell'aggiornare il progetto di binding in modo da usare i nuovi tipi di dati nativi.
 
 Per ulteriori informazioni sulla API unificata, consultare la documentazione di [API unificata](~/cross-platform/macios/unified/index.md) . Per ulteriori informazioni su come supportare le applicazioni di bit 32 e 64 e informazioni sui Framework, vedere la documentazione relativa alle [considerazioni sulla piattaforma di bit 32 e 64](~/cross-platform/macios/32-and-64/index.md) .
 
 ## <a name="update-to-native-data-types"></a>Aggiornamento ai tipi di dati nativi
 
-Objective-C esegue il `NSInteger` mapping del tipo `int32_t` di dati a su sistemi a `int64_t` 32 bit e a su sistemi a 64 bit. Per trovare la corrispondenza con questo comportamento, il nuovo API unificata sostituisce gli `int` utilizzi precedenti di (che in .NET viene definito `System.Int32`come sempre) in un nuovo tipo `System.nint`di dati:.
+Objective-C esegue il mapping del tipo di dati `NSInteger` a `int32_t` su sistemi a 32 bit e `int64_t` nei sistemi a 64 bit. Per trovare la corrispondenza con questo comportamento, il nuovo API unificata sostituisce gli utilizzi precedenti di `int` (che in .NET è definito come sempre `System.Int32`) a un nuovo tipo di dati: `System.nint`.
 
-Insieme al `nint` nuovo tipo di dati, il API unificata introduce i `nuint` tipi `nfloat` e per eseguire il mapping anche `NSUInteger` ai `CGFloat` tipi e.
+Insieme al nuovo tipo di dati `nint`, il API unificata introduce i tipi di `nuint` e `nfloat` per eseguire il mapping anche ai tipi `NSUInteger` e `CGFloat`.
 
-Dato quanto sopra, è necessario esaminare l'API e verificare che tutte le istanze di `NSInteger` `NSUInteger` e `CGFloat` di cui è stato eseguito il `int`mapping `uint` in `float` precedenza e vengano aggiornate al `nint`nuovo `nuint` tipi e`nfloat` .
+Dato quanto sopra, è necessario esaminare l'API e assicurarsi che qualsiasi istanza di `NSInteger`, `NSUInteger` e `CGFloat` di cui in precedenza è stato eseguito il mapping a `int`, `uint` e `float` venga aggiornata alla nuova `nint`, `nuint` e `nfloat` tipi.
 
 Ad esempio, data una definizione di metodo Objective-C:
 
@@ -90,21 +90,21 @@ Il nuovo binding verrà aggiornato in modo che sia:
 nint Add(nint operandUn, nint operandDeux);
 ```
 
-Se si esegue il mapping a una libreria di terze parti di una versione più recente rispetto a quella a cui è stato `.h` inizialmente collegato, è necessario esaminare i file di intestazione per la libreria e verificare `int`se sono presenti chiamate esplicite di chiusura a, `int32_t`, `unsigned int`o `uint32_t` sono stati aggiornati in modo che `NSInteger`siano `NSUInteger` o `CGFloat`. `float` In tal caso, sarà necessario apportare anche `nint`le `nuint` stesse `nfloat` modifiche ai tipi e ai relativi mapping.
+Se si esegue il mapping a una libreria di terze parti di una versione più recente rispetto a quella inizialmente collegata, è necessario esaminare i file di intestazione `.h` per la libreria e verificare se sono presenti chiamate esplicite in uscita per `int`, `int32_t``unsigned int`, `uint32_t` o `float` sono stati aggiornati per essere `NSInteger`, `NSUInteger` o `CGFloat`. In tal caso, le stesse modifiche apportate ai `nint`, `nuint` e i tipi di `nfloat` dovranno essere apportate anche ai relativi mapping.
 
 Per ulteriori informazioni su queste modifiche ai tipi di dati, vedere il documento [tipi nativi](~/cross-platform/macios/nativetypes.md) .
 
 ## <a name="update-the-coregraphics-types"></a>Aggiornare i tipi CoreGraphics
 
-I tipi di dati Point, Size e Rectangle usati con `CoreGraphics` usano 32 o 64 bit a seconda del dispositivo in cui sono in esecuzione. Quando Novell ha originariamente associato le API iOS e Mac, sono state usate strutture di dati esistenti che corrispondono ai tipi `System.Drawing` di`RectangleF` dati in (ad esempio).
+I tipi di dati Point, Size e Rectangle usati con `CoreGraphics` usano 32 o 64 bit a seconda del dispositivo in cui sono in esecuzione. Quando Novell ha originariamente associato le API iOS e Mac, sono state usate strutture di dati esistenti che corrispondono ai tipi di dati in `System.Drawing`, ad esempio`RectangleF`.
 
-A causa dei requisiti per supportare 64 bit e i nuovi tipi di dati nativi, è necessario apportare le modifiche seguenti al codice esistente quando si chiamano `CoreGraphic` i metodi:
+A causa dei requisiti per supportare 64 bit e i nuovi tipi di dati nativi, è necessario apportare le seguenti modifiche al codice esistente quando si chiamano `CoreGraphic` metodi:
 
-- **CGRect** -usare `CGRect` anziché `RectangleF` quando si definiscono aree rettangolari a virgola mobile.
-- **CGSize** -usare `CGSize` anziché `SizeF` quando si definiscono le dimensioni a virgola mobile (larghezza e altezza).
-- **CGPoint** -usare `CGPoint` anziché `PointF` quando si definisce una posizione a virgola mobile (coordinate X e Y).
+- **CGRect** : usare `CGRect` anziché `RectangleF` quando si definiscono aree rettangolari a virgola mobile.
+- **CGSize** : usare `CGSize` anziché `SizeF` quando si definiscono le dimensioni a virgola mobile (larghezza e altezza).
+- **CGPoint** : usare `CGPoint` anziché `PointF` quando si definisce una posizione a virgola mobile (coordinate X e Y).
 
-Dato quanto sopra, sarà necessario esaminare l'API e verificare che `CGRect`qualsiasi istanza di, `CGSize` o `CGPoint` che sia stata precedentemente `RectangleF`associata `SizeF` o `PointF` venga modificata nel tipo `CGRect`nativo, `CGSize` o`CGPoint` direttamente.
+Dato quanto sopra, sarà necessario esaminare l'API e verificare che qualsiasi istanza di `CGRect`, `CGSize` o `CGPoint` che in precedenza era associata a `RectangleF`, `SizeF` o `PointF` venga modificata nel tipo nativo `CGRect`, `CGSize` o `CGPoint` direttamente.
 
 Ad esempio, dato un inizializzatore Objective-C di:
 
@@ -132,13 +132,13 @@ Dopo aver apportato tutte le modifiche al codice, è necessario modificare il pr
 
 ## <a name="modify-the-binding-project"></a>Modificare il progetto di associazione
 
-Come passaggio finale per l'aggiornamento del progetto di binding per l'uso delle API unificate, è necessario modificare il `MakeFile` che verrà usato per compilare il progetto o il tipo di progetto Novell (se si sta eseguendo il binding dall'interno di Visual Studio per Mac) e impostare _btouch_ per l'associazione rispetto alle API unificate invece di quelle classiche.
+Come passaggio finale per l'aggiornamento del progetto di binding per l'uso delle API unificate, è necessario modificare il `MakeFile` usato per compilare il progetto o il tipo di progetto Novell (se si esegue il binding da Visual Studio per Mac) e impostare _btouch_ per l'associazione le API unificate invece di quelle classiche.
 
 ### <a name="updating-a-makefile"></a>Aggiornamento di un MakeFile
 
-Se si usa un makefile per compilare il progetto di binding in un Novell. DLL, sarà necessario includere l'opzione della `--new-style` riga di `btouch`comando e chiamare `btouch-native` anziché.
+Se si usa un makefile per compilare il progetto di binding in un Novell. DLL, sarà necessario includere l'opzione della riga di comando `--new-style` e chiamare `btouch-native` invece di `btouch`.
 
-Quindi, dato quanto `MakeFile`segue:
+Quindi, data la `MakeFile`seguente:
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -174,13 +174,13 @@ clean:
 ```
 <!--markdownlint-enable MD010 -->
 
-È necessario passare dalla chiamata `btouch` a `btouch-native`, in modo che la definizione della macro venga modificata come segue:
+È necessario passare dalla chiamata `btouch` al `btouch-native`, quindi modificare la definizione della macro come indicato di seguito:
 
 ```makefile
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
-Si aggiornerà la chiamata a `btouch` e si aggiungerà l' `--new-style` opzione come segue:
+Si aggiornerà la chiamata a `btouch` e si aggiungerà l'opzione `--new-style` come indicato di seguito:
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -189,22 +189,22 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 ```
 <!--markdownlint-enable MD010 -->
 
-È ora possibile eseguire `MakeFile` il normale per compilare la nuova versione di 64 bit dell'API.
+È ora possibile eseguire il `MakeFile` come di consueto per compilare la nuova versione di 64 bit dell'API.
 
 ### <a name="updating-a-binding-project-type"></a>Aggiornamento di un tipo di progetto di associazione
 
 Se si usa un modello di progetto di binding Visual Studio per Mac per compilare l'API, sarà necessario eseguire l'aggiornamento alla nuova versione API unificata del modello di progetto di binding. Il modo più semplice per eseguire questa operazione consiste nell'avviare un nuovo progetto di binding di API unificata e copiare tutte le impostazioni e il codice esistenti.
 
-Seguire questa procedura:
+Procedere come descritto di seguito:
 
 1. Avviare Visual Studio per Mac.
-2. Selezionare **file** > nuovasoluzione >  **...**
-3. Nella finestra di dialogo nuova soluzione selezionare **iOS** > **API unificata** > **progetto di binding iOS**: 
+2. Seleziona **File** > **nuova** **soluzione > ...**
+3. Nella finestra di dialogo nuova soluzione selezionare **ios** > **API unificata** > il **progetto di binding iOS**: 
 
-    [![](update-binding-images/image01new.png "Nella finestra di dialogo nuova soluzione selezionare progetto di binding iOS/API unificata/iOS")](update-binding-images/image01new.png#lightbox)
+    [![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
 4. Nella finestra di dialogo "Configura nuovo progetto" immettere un **nome** per il nuovo progetto di binding e fare clic sul pulsante **OK** .
 5. Includere la versione a 64 bit della libreria Objective-C per cui si intende creare associazioni.
-6. Copiare il codice sorgente dal progetto di associazione API classica bit 32 esistente, ad esempio i `ApiDefinition.cs` file e. `StructsAndEnums.cs`
+6. Copiare il codice sorgente dal progetto di associazione API classica bit 32 esistente (ad esempio i file `ApiDefinition.cs` e `StructsAndEnums.cs`).
 7. Apportare le modifiche indicate in precedenza ai file del codice sorgente.
 
 Con tutte queste modifiche, è possibile compilare la nuova versione di 64 bit dell'API, come si farebbe con la versione 32 bit.

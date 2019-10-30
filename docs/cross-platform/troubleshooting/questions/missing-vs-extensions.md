@@ -3,25 +3,25 @@ title: Estensioni di Visual Studio mancanti dopo l'installazione
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 180db6789ab9cc665ad815b943013b117a562709
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6cd5acb529d617c72d8c9e1bd642a831f90b2e8c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757063"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013737"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Estensioni di Visual Studio mancanti dopo l'installazione
 
-## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>Messaggio di errore: Questo progetto non è compatibile con l'edizione corrente di Visual Studio
+## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>Messaggio di errore: questo progetto non è compatibile con l'edizione corrente di Visual Studio
 
 Assicurarsi che sia installato Visual Studio 2017 (community, Professional o Enterprise) o versione successiva.
 
 Vedere anche i [requisiti di Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 
-## <a name="possible-fix-1-change-the-installation-to-make-sure-the-visual-studio-extensions-are-installed"></a>Possibile correzione 1: Modificare l'installazione per assicurarsi che le estensioni di Visual Studio siano installate
+## <a name="possible-fix-1-change-the-installation-to-make-sure-the-visual-studio-extensions-are-installed"></a>Possibile correzione 1: modificare l'installazione per assicurarsi che le estensioni di Visual Studio siano installate
 
 In alcune situazioni, il programma di installazione di Novell potrebbe deselezionare automaticamente le opzioni di installazione per le estensioni di Visual Studio. Se questa è la causa del problema, installare le estensioni di Visual Studio mancanti usando il comando **Change** del programma di installazione. Ad esempio, per installare le estensioni per Visual Studio 2013:
 
@@ -33,11 +33,11 @@ In alcune situazioni, il programma di installazione di Novell potrebbe deselezio
 
 4. Verificare che l'opzione **Novell per Visual Studio 2013** sia impostata per l'installazione:
 
-    ![](missing-vs-extensions-images/installer.png "Abilita Novell per l'opzione di installazione Visual Studio 2013")
+    ![](missing-vs-extensions-images/installer.png "Enable Xamarin for Visual Studio 2013 installation option")
 
 5. Continuare con il resto della procedura guidata del programma di installazione.
 
-## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Possibile correzione 2: Richiedere a Visual Studio di configurare di nuovo le estensioni
+## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Correzione possibile 2: richiedere a Visual Studio di configurare di nuovo le estensioni
 
 1. Controllare se le estensioni Novell sono state copiate nella cartella estensioni di Visual Studio:
 
@@ -45,13 +45,13 @@ In alcune situazioni, il programma di installazione di Novell potrebbe deselezio
 
     Se le estensioni sono installate correttamente (per la versione 3.1.228), nella cartella saranno presenti 60 elementi:
 
-    ![](missing-vs-extensions-images/folder.png "Elenco del contenuto della cartella ' Xamarin\3.1.228.0' in Esplora risorse")
+    ![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
 
 2. Dopo aver verificato che la cartella sia corretta, indicare a Visual Studio di provare a configurare di nuovo le estensioni:
 
     `"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" /setup`
 
-## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>Possibile correzione 3: Prova una nuova reinstallazione di Novell
+## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>Possibile correzione 3: provare una nuova reinstallazione di Novell
 
 1. Nel pannello di controllo di Windows disinstallare uno dei seguenti elementi presenti:
 
@@ -77,11 +77,11 @@ In alcune situazioni, il programma di installazione di Novell potrebbe deselezio
 
 5. Cercare questa chiave:
 
-    _HKEY\_LOCAL\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
+    _HKEY\_\_locale MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
 6. Individuare ed eliminare eventuali voci che corrispondono a questo modello:
 
-    _\*C:\Programmi\*\Microsoft Visual Studio 1.0 \ Common7\IDE\Extensions\Xamarin_
+    _C:\Programmi\*\Microsoft Visual Studio 1\*. 0 \ Common7\IDE\Extensions\Xamarin_
 
 7. Cercare questa chiave:
 
@@ -89,13 +89,13 @@ In alcune situazioni, il programma di installazione di Novell potrebbe deselezio
 
 8. Eliminare tutte le voci che apparentemente possono essere correlate a Xamarin. Ad esempio, di seguito è riportato un esempio che consente di causare problemi nelle versioni precedenti di Novell:
 
-    _Mono.VisualStudio.Shell,1.0_
+    _Mono. VisualStudio. Shell, 1.0_
 
 9. Riavviare il computer.
 
 10. Reinstallare la versione stabile corrente di Novell da [VisualStudio.com](https://visualstudio.com/xamarin).
 
-## <a name="possible-fix-4-repair-visual-studio-installation"></a>Possibile correzione 4: Ripristinare l'installazione di Visual Studio
+## <a name="possible-fix-4-repair-visual-studio-installation"></a>Possibile correzione 4: ripristinare l'installazione di Visual Studio
 
 1. Aprire il pannello **di controllo programmi e funzionalità di** Windows.
 

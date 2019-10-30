@@ -4,15 +4,15 @@ description: Questo documento descrive come creare un bundle di un'app Xamarin.M
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 129ba01a41f9e5f58802c4d4da65d1662a103adc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04ca9c98abbd97cd9e5d1f7694264b8316a7f151
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001557"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Creazione di bundle per Mac App Store
 

@@ -3,15 +3,15 @@ title: Aggiornamento delle app Novell. Forms esistenti
 description: Questo documento descrive i passaggi da seguire per aggiornare un'app Novell. Forms dal API classica al API unificata.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 1820dfa1fb756ede6076fb61ad5eb4f6c9926fe8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dad1b7173e302931455887fdaa4730347f0e5e55
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280715"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015007"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Aggiornamento delle app Novell. Forms esistenti
 
@@ -32,13 +32,13 @@ L'aggiornamento viene eseguito in due passaggi:
 
     1. Installare il pacchetto NuGet Novell. Forms 1.3.1.
 
-    2. Aggiornare la `App` classe nel codice condiviso.
+    2. Aggiornare la classe `App` nel codice condiviso.
 
-    3. `AppDelegate` Aggiornare nel progetto iOS.
+    3. Aggiornare il `AppDelegate` nel progetto iOS.
 
-    4. `MainActivity` Aggiornare nel progetto Android.
+    4. Aggiornare il `MainActivity` nel progetto Android.
 
-    5. `MainPage` Aggiornare nel progetto Windows Phone.
+    5. Aggiornare il `MainPage` nel progetto Windows Phone.
 
 ## <a name="1-ios-app-unified-migration"></a>1. app iOS (migrazione unificata)
 
@@ -48,13 +48,13 @@ Parte della migrazione richiede l'aggiornamento di Novell. Forms alla versione 1
 
 Fare clic sul progetto iOS in modo che sia selezionato, quindi scegliere **progetto > Esegui migrazione a Novell. iOS API unificata...** e accettare il messaggio di avviso visualizzato.
 
-![](updating-xamarin-forms-apps-images/beta-tool1.png "Scegliere il progetto > eseguire la migrazione a Novell. iOS API unificata... e accettano il messaggio di avviso visualizzato")
+![](updating-xamarin-forms-apps-images/beta-tool1.png "Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears")
 
 Questa operazione verrà automaticamente:
 
 - Modificare il tipo di progetto per supportare l'API Unified a 64 bit.
 - Modificare il riferimento al Framework in **Novell. iOS** (sostituendo il vecchio riferimento **MonoTouch** ).
-- Modificare i riferimenti allo spazio dei nomi nel codice per `MonoTouch` rimuovere il prefisso.
+- Modificare i riferimenti allo spazio dei nomi nel codice per rimuovere il prefisso `MonoTouch`.
 - Aggiornare il file **csproj** per usare le destinazioni di compilazione corrette per la API unificata.
 
 **Pulire** e **compilare** il progetto per assicurarsi che non ci siano altri errori da correggere. Non è necessaria alcuna azione aggiuntiva. Questi passaggi sono illustrati più dettagliatamente nel [API unificata docs](~/cross-platform/macios/unified/updating-ios-apps.md).
@@ -63,12 +63,12 @@ Questa operazione verrà automaticamente:
 
 Se è stato aggiunto codice nativo iOS aggiuntivo, ad esempio renderer personalizzati o servizi di dipendenza, potrebbe essere necessario eseguire correzioni aggiuntive del codice manuale. Ricompilare l'applicazione e fare riferimento alle istruzioni per l' [aggiornamento di app iOS esistenti](~/cross-platform/macios/unified/updating-ios-apps.md) per ulteriori informazioni sulle modifiche che potrebbero essere necessarie. [Questi suggerimenti](~/cross-platform/macios/unified/updating-tips.md) aiuteranno anche a identificare le modifiche necessarie.
 
-## <a name="2-xamarinforms-131-update"></a>2. Aggiornamento di Novell. Forms 1.3.1
+## <a name="2-xamarinforms-131-update"></a>2. Novell. Forms 1.3.1 Update
 
 Dopo che l'app iOS è stata aggiornata alla API unificata, è necessario aggiornare il resto della soluzione a Novell. Forms versione 1.3.1. vale a dire:
 
 - Aggiornamento del pacchetto NuGet Novell. Forms in ogni progetto.
-- Modifica del codice per l'uso delle nuove classi Novell `Application`. `FormsApplicationDelegate` Forms, ( `FormsApplicationActivity` iOS), (Android `FormsApplicationPage` ) e (Windows Phone).
+- Modifica del codice per l'uso delle nuove classi Novell. Forms `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android) e `FormsApplicationPage` (Windows Phone).
 
 Questi passaggi sono illustrati di seguito:
 
@@ -82,14 +82,14 @@ Aggiornare Novell. Forms a 1.3.1 versione preliminare usando Gestione pacchetti 
 > [!IMPORTANT]
 > Se si usa Visual Studio, verificare che sia installata la versione più recente di gestione pacchetti NuGet. Nelle versioni precedenti di NuGet in Visual Studio la versione unificata di Novell. Forms 1.3.1 non viene installata correttamente. Passare a **strumenti > estensioni e aggiornamenti...** e fare clic sull'elenco **installato** per verificare che **Gestione pacchetti NuGet per Visual Studio** sia almeno la versione 2.8.5. Se è precedente, fare clic sull'elenco **aggiornamenti** per scaricare la versione più recente.
 
-Dopo aver aggiornato il pacchetto NuGet a Novell. Forms 1.3.1, apportare le modifiche seguenti in ogni progetto per eseguire l'aggiornamento alla `Xamarin.Forms.Application` nuova classe.
+Dopo aver aggiornato il pacchetto NuGet a Novell. Forms 1.3.1, apportare le modifiche seguenti in ogni progetto per eseguire l'aggiornamento alla nuova classe `Xamarin.Forms.Application`.
 
 ### <a name="22-portable-class-library-or-shared-project"></a>2,2 libreria di classi portabile (o progetto condiviso)
 
 Modificare il file **app.cs** in modo che:
 
-- La `App` classe ora eredita da `Application`.
-- La `MainPage` proprietà viene impostata sulla prima pagina di contenuto che si desidera visualizzare.
+- La classe `App` ora eredita da `Application`.
+- La proprietà `MainPage` è impostata sulla prima pagina di contenuto che si desidera visualizzare.
 
 ```csharp
 public class App : Application // superclass new in 1.3
@@ -101,18 +101,18 @@ public class App : Application // superclass new in 1.3
     }
 ```
 
-Il `GetMainPage` metodo è stato completamente rimosso ed è stata impostata la `MainPage` *Proprietà* sulla `Application` sottoclasse.
+Il metodo `GetMainPage` è stato rimosso completamente, quindi è stata impostata la *proprietà* `MainPage` nella sottoclasse `Application`.
 
-Questa nuova `Application` classe base supporta inoltre le `OnStart`sostituzioni, `OnResume` `OnSleep`e per semplificare la gestione del ciclo di vita dell'applicazione.
+Questa nuova classe di base `Application` supporta anche le sostituzioni `OnStart`, `OnSleep`e `OnResume` per semplificare la gestione del ciclo di vita dell'applicazione.
 
-La `App` classe viene quindi passata a un nuovo `LoadApplication` metodo in ogni progetto di app, come descritto di seguito:
+La classe `App` viene quindi passata a un nuovo metodo di `LoadApplication` in ogni progetto di app, come descritto di seguito:
 
 ### <a name="23-ios-app"></a>App iOS 2,3
 
 Modificare il file **AppDelegate.cs** in modo che:
 
-- La classe eredita da `FormsApplicationDelegate` ( `UIApplicationDelegate` anziché in precedenza).
-- `LoadApplication`viene chiamato con una nuova istanza di `App`.
+- La classe eredita da `FormsApplicationDelegate`, anziché `UIApplicationDelegate` precedentemente.
+- `LoadApplication` viene chiamato con una nuova istanza di `App`.
 
 ```csharp
 [Register ("AppDelegate")]
@@ -134,8 +134,8 @@ public partial class AppDelegate :
 
 Modificare il file **MainActivity.cs** in modo che:
 
-- La classe eredita da `FormsApplicationActivity` ( `FormsActivity` anziché in precedenza).
-- `LoadApplication`viene chiamato con una nuova istanza di`App`
+- La classe eredita da `FormsApplicationActivity`, anziché `FormsActivity` precedentemente.
+- `LoadApplication` viene chiamato con una nuova istanza di `App`
 
 ```csharp
 [Activity (Label = "YOURAPPNAM", Icon = "@drawable/icon", MainLauncher = true,
@@ -161,7 +161,7 @@ public class MainActivity :
 Modificare il file **MainPage. XAML** in modo che:
 
 - L'elemento XAML radice deve essere `winPhone:FormsApplicationPage`.
-- L' `xmlns:phone` attributo deve essere *modificato* in`xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- È necessario *modificare* l'attributo `xmlns:phone` in `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 Di seguito è riportato un esempio aggiornato: è necessario modificare solo questi elementi (gli altri attributi devono rimanere invariati):
 
@@ -175,8 +175,8 @@ Di seguito è riportato un esempio aggiornato: è necessario modificare solo que
 
 Modificare il file **MainPage.XAML.cs** in modo che:
 
-- La classe eredita da `FormsApplicationPage` ( `PhoneApplicationPage` anziché in precedenza).
-- `LoadApplication`viene chiamato con una nuova istanza della classe Novell. Forms `App` . Potrebbe essere necessario qualificare il riferimento in modo completo poiché Windows Phone dispone di `App` una propria classe già definita.
+- La classe eredita da `FormsApplicationPage`, anziché `PhoneApplicationPage` precedentemente.
+- `LoadApplication` viene chiamato con una nuova istanza della classe Novell. Forms `App`. Potrebbe essere necessario qualificare il riferimento in modo completo poiché Windows Phone dispone di una propria classe `App` già definita.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
@@ -192,13 +192,13 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
  }
 ```
 
-### <a name="troubleshooting"></a>Risoluzione dei problemi
+### <a name="troubleshooting"></a>Troubleshooting
 
 In alcuni casi verrà visualizzato un errore simile al seguente dopo l'aggiornamento del pacchetto NuGet Novell. Forms. Si verifica quando NuGet Updater non rimuove completamente i riferimenti alle versioni precedenti dai file **csproj** .
 
->Il\_progetto. csproj: Errore: Questo progetto fa riferimento ai pacchetti NuGet mancanti nel computer. Abilitare il ripristino del pacchetto NuGet per scaricarli.  Per altre informazioni, vedere http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è.. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + Net45 + WP80 + MonoAndroid10 + MonoTouch10/Novell. Forms. targets. \_(PROGETTO)
+>IL\_PROJECT. csproj: errore: questo progetto fa riferimento ai pacchetti NuGet mancanti nel computer. Abilitare il ripristino del pacchetto NuGet per scaricarli.  Per ulteriori informazioni, vedere http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è.. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + Net45 + WP80 + MonoAndroid10 + MonoTouch10/Novell. Forms. targets. (Progetto\_)
 
-Per correggere questi errori, aprire il file **csproj** in un editor di testo e cercare `<Target` gli elementi che fanno riferimento a versioni precedenti di Novell. Forms, ad esempio l'elemento mostrato di seguito. È necessario eliminare manualmente questo intero elemento dal file **csproj** e salvare le modifiche.
+Per correggere questi errori, aprire il file **csproj** in un editor di testo e cercare gli elementi `<Target` che fanno riferimento a versioni precedenti di Novell. Forms, ad esempio l'elemento mostrato di seguito. È necessario eliminare manualmente questo intero elemento dal file **csproj** e salvare le modifiche.
 
 ```csharp
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

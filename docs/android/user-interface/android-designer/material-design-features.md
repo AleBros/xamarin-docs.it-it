@@ -4,15 +4,15 @@ description: In questo argomento vengono descritte le funzionalità di progettaz
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 67755baf18ad5277e7c2fe8be705522a9b668ff3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43397fb855bdf872cf17b315044f34a468c22d00
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756816"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029442"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Novell. Android Designer funzionalità di progettazione materiali
 
@@ -20,7 +20,7 @@ _In questo argomento vengono descritte le funzionalità di progettazione che ren
 
 > [!Video https://youtube.com/embed/E3_ZjIOzVzY]
 
-**Evoluzione 2016: Chiunque può creare app accattivanti con progettazione materiale**
+**Evolve 2016: chiunque può creare app bellissime con la progettazione del materiale**
 
 ## <a name="overview"></a>Panoramica
 
@@ -30,9 +30,9 @@ In Novell. Android Designer sono incluse funzionalità che semplificano la creaz
 
 In questa guida, verranno esaminate le funzionalità di progettazione seguenti:
 
-- *Griglia materiale* &ndash; Sovrimpressione nell'area di progettazione che mostra una griglia, spaziatura e linee di tastiera che consentono di posizionare i widget di layout in base alle linee guida per la progettazione di materiali.
+- *Griglia materiale* &ndash; una sovrapposizione sul area di progettazione che mostra una griglia, spaziatura e linee guida per inserire i widget di layout in base alle linee guida per la progettazione di materiali.
 
-- *Editor tema* &ndash; Editor di risorse di colore piccolo che consente di impostare le informazioni sui colori per un subset di un tema. Ad esempio, è possibile visualizzare in anteprima e modificare i colori `colorPrimary`materiali `colorPrimaryDark`come, `colorAccent`e.
+- *Editor del tema* &ndash; un editor di risorse di colore piccolo che consente di impostare le informazioni sui colori per un subset di un tema. Ad esempio, è possibile visualizzare in anteprima e modificare i colori materiali come `colorPrimary`, `colorPrimaryDark`e `colorAccent`.
 
 Si osserveranno ognuna di queste funzionalità e verranno forniti esempi di come utilizzarle.
 
@@ -40,7 +40,7 @@ Si osserveranno ognuna di queste funzionalità e verranno forniti esempi di come
 
 Il menu griglia Progettazione materiale è disponibile dalla barra degli strumenti nella parte superiore della finestra di progettazione:
 
-[![Griglia di progettazione materiale](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
+[griglia di progettazione materiale![](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
 
 Quando si fa clic sull'icona della griglia di progettazione materiale, nella finestra di progettazione viene visualizzata una sovrapposizione nell'Area di progettazione che include gli elementi seguenti:
 
@@ -50,9 +50,9 @@ Quando si fa clic sull'icona della griglia di progettazione materiale, nella fin
 
 - Griglia (linee blu)
 
-Questi elementi possono essere visualizzati nella schermata precedente. Ognuno di questi elementi sovrapposti è configurabile. Quando si fa clic sui puntini di sospensione accanto al menu della griglia di progettazione materiale, viene aperta una finestra di dialogo che consente di disabilitare o abilitare la griglia, configurare il posizionamento delle linee di tasto e impostare spaziatura. Si noti che tutti i valori sono `dp` espressi in (pixel indipendenti dalla densità):
+Questi elementi possono essere visualizzati nella schermata precedente. Ognuno di questi elementi sovrapposti è configurabile. Quando si fa clic sui puntini di sospensione accanto al menu della griglia di progettazione materiale, viene aperta una finestra di dialogo che consente di disabilitare o abilitare la griglia, configurare il posizionamento delle linee di tasto e impostare spaziatura. Si noti che tutti i valori sono espressi in `dp` (pixel indipendenti dalla densità):
 
-[![Configurazione della griglia, della linea di riga e della spaziatura](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
+[configurazione della griglia, della riga di![e della spaziatura](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
 
 Per aggiungere una nuova riga di tasto, immettere un nuovo valore di offset nella casella **offset** , selezionare un percorso (a**sinistra**, in **alto**, a **destra**o in **basso**) e fare clic sull'icona + per aggiungere la nuova riga di tasto. Analogamente, per aggiungere una nuova spaziatura, immettere rispettivamente le dimensioni e l'offset (in DP) nelle caselle **dimensioni** e **offset** . Selezionare un percorso (a**sinistra**, in **alto**, a **destra**o in **basso**) e fare clic sull'icona + per aggiungere la nuova spaziatura.
 
@@ -62,23 +62,23 @@ Quando si modificano questi valori di configurazione, questi vengono salvati nel
 
 L' **Editor del tema** consente di personalizzare le informazioni sui colori per un subset di attributi del tema. Per aprire l' **Editor del tema**, fare clic sull'icona del pennello sulla barra degli strumenti:
 
-[![Icona dell'editor tema](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
+[icona dell'editor del tema![](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
 
 Sebbene l' **Editor del tema** sia accessibile dalla barra degli strumenti per tutte le versioni di Android e i livelli API di destinazione, è disponibile solo un subset delle funzionalità descritte di seguito se il livello API di destinazione è precedente all'API 21 (Android 5,0 Lollipop).
 
-Il pannello a sinistra dell'editor del **tema** Visualizza l'elenco dei colori che compongono il tema attualmente selezionato (in questo esempio viene usato `Default Theme`):
+Il pannello a sinistra dell'editor del **tema** Visualizza l'elenco dei colori che costituiscono il tema attualmente selezionato (in questo esempio viene usato il `Default Theme`):
 
-[![Editor tema](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
+[Editor tema![](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
 
 Quando si seleziona un colore a sinistra, nel pannello destro sono disponibili le schede seguenti che consentono di modificare il colore:
 
-- **Eredita** &ndash; Visualizza un diagramma di ereditarietà dello stile per il colore selezionato ed elenca il colore risolto e il codice colore assegnato al colore del tema.
+- **Eredita** &ndash; Visualizza un diagramma di ereditarietà dello stile per il colore selezionato ed elenca il colore risolto e il codice colori assegnato a tale colore del tema.
 
-- **Selezione colori** &ndash; Consente di modificare il colore selezionato in qualsiasi valore arbitrario.
+- **Selezione colori** &ndash; consente di modificare il colore selezionato in qualsiasi valore arbitrario.
 
-- **Tavolozza materiali** &ndash; Consente di modificare il colore selezionato in un valore conforme alla progettazione del materiale.
+- **Tavolozza materiali** &ndash; consente di modificare il colore selezionato in un valore conforme a progettazione materiale.
 
-- **Risorse** di &ndash; Consente di modificare il colore selezionato in una delle altre risorse di colore esistenti nel tema.
+- &ndash; **risorse** consente di modificare il colore selezionato in una delle altre risorse di colore esistenti nel tema.
 
 Esaminiamo ognuna di queste schede in dettaglio.
 
@@ -86,16 +86,16 @@ Esaminiamo ognuna di queste schede in dettaglio.
 
 Come illustrato nell'esempio seguente, la scheda **eredita** elenca l'ereditarietà dello stile per il colore di **sfondo** del **tema predefinito**:
 
-[![Eredita scheda](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
+[Scheda eredita![](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
-In questo esempio, il **tema predefinito** eredita da uno stile che usa `@color/background_material_light` , ma ne esegue `color/material_grey_50`l'override con, che ha un valore `#fffafafa`di codice colore pari a.
+In questo esempio, il **tema predefinito** eredita da uno stile che usa `@color/background_material_light` ma lo sostituisce con `color/material_grey_50`, che ha un valore di codice colore di `#fffafafa`.
 Per ulteriori informazioni sull'ereditarietà dello stile, vedere [stili e temi](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Selezione dei colori
 
 Lo screenshot seguente illustra la **selezione colori**:
 
-[![Selezione colori](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
+[Selezione colori![](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
 
 In questo esempio, il colore di **sfondo** può essere modificato in qualsiasi valore tramite vari modi:
 
@@ -111,7 +111,7 @@ Il colore scelto nella selezione colori *non* è limitato alle linee guida di pr
 
 La scheda **risorse** offre un elenco di risorse di colore già presenti nel tema:
 
-[![Risorse](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
+[Risorse![](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
 
 L'uso della scheda **risorse** vincola le scelte a questo elenco di colori. Tenere presente che se si sceglie una risorsa di colore già assegnata a un'altra parte del tema, due elementi adiacenti dell'interfaccia utente possono essere "eseguiti insieme" (poiché hanno lo stesso colore) e diventano difficili da distinguere con l'utente.
 
@@ -119,16 +119,16 @@ L'uso della scheda **risorse** vincola le scelte a questo elenco di colori. Tene
 
 La scheda **tavolozza materiale** apre la **tavolozza dei colori di progettazione materiali**. La scelta di un valore di colore da questa tavolozza vincola la scelta del colore in modo che sia coerente con le linee guida di progettazione del materiale:
 
-[![Tavolozza materiali](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
+[Tavolozza materiale![](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
 
 Nella parte superiore della tavolozza dei colori vengono visualizzati i colori di progettazione materiale primario, mentre nella parte inferiore della tavolozza viene visualizzato un intervallo di colori per il colore primario selezionato. Ad esempio, quando si seleziona **Indigo**, viene visualizzata una raccolta di tonalità **Indigo** nella parte inferiore della finestra di dialogo.
-Quando si seleziona una tonalità, il colore della proprietà viene impostato sulla tonalità selezionata. Nell'esempio seguente, l'oggetto `Background Tint` del pulsante viene modificato in *Indigo 500*:
+Quando si seleziona una tonalità, il colore della proprietà viene impostato sulla tonalità selezionata. Nell'esempio seguente, la `Background Tint` del pulsante è stata modificata in *Indigo 500*:
 
 ![Selezionare Indigo 500](material-design-features-images/vs/10-indigo-w158.png)
 
-`Background Tint`è impostato sul codice colore per *Indigo 500* (`#ff3f51b5`) e la finestra di progettazione aggiorna il colore di sfondo per riflettere questa modifica:
+`Background Tint` è impostato sul codice colore per *Indigo 500* (`#ff3f51b5`) e la finestra di progettazione aggiorna il colore di sfondo in modo da riflettere questa modifica:
 
-[![Tonalità sfondo modificata](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
+[tonalità sfondo![modificata](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
 
 Per ulteriori informazioni sulla tavolozza dei colori di progettazione materiale, vedere la pagina relativa alla [Guida della tavolozza dei colori](https://material.io/design/color/)di progettazione materiali.
 
@@ -140,7 +140,7 @@ Nell'esempio seguente verrà usata la tavolozza Material per creare un nuovo tem
 
 Quando viene modificata una risorsa di colore, viene visualizzato un messaggio con il messaggio, *il tema corrente contiene modifiche non salvate*:
 
-[![Avviso modifiche non salvate](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
+[avviso modifiche non salvate![](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
 
 Il colore di sfondo nella finestra di progettazione è stato modificato in **base** alla nuova selezione colore, ma questa modifica non è ancora stata salvata. A questo punto, è possibile eseguire una delle operazioni seguenti:
 
@@ -150,7 +150,7 @@ Il colore di sfondo nella finestra di progettazione è stato modificato in **bas
 
 Nell'esempio seguente è stato premuto <kbd>CTRL + S</kbd> , in modo che le modifiche siano state salvate in **AppTheme**:
 
-[![Modifiche salvate in AppTheme](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
+[![modifiche salvate in AppTheme](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
 
 ## <a name="summary"></a>Riepilogo
 
@@ -161,13 +161,13 @@ Per ulteriori informazioni sul supporto di Novell. Android per la progettazione 
 
 In questa guida, verranno esaminate le funzionalità di progettazione seguenti:
 
-- *Griglia di progettazione materiale* &ndash; Sovrimpressione nell'area di progettazione che mostra una griglia, spaziatura e linee di tastiera che consentono di posizionare i widget di layout in base alle linee guida per la progettazione di materiali.
+- *Griglia di progettazione materiale* &ndash; una sovrapposizione sul area di progettazione che mostra una griglia, una spaziatura e le linee di tastiera che consentono di posizionare i widget di layout in base alle linee guida per la progettazione di materiali.
 
-- *Tavolozza colori progettazione materiale* &ndash; Una finestra di dialogo di riempimento delle proprietà che facilita la scelta di un colore dalla tavolozza di progettazione materiale ufficiale.
+- *Tavolozza dei colori di progettazione materiale* &ndash; una finestra di dialogo di riempimento delle proprietà che facilita la scelta di un colore dalla tavolozza di progettazione materiale ufficiale.
 
-- *Scala tipografica* Una finestra di dialogo di riempimento delle proprietà che consente di scegliere tra le impostazioni compatibili con la progettazione `textAppearance` del materiale per la proprietà dei campi di testo. &ndash;
+- *Scala tipografica* &ndash; una finestra di dialogo di riempimento delle proprietà che consente di scegliere le impostazioni compatibili con la progettazione del materiale per la proprietà `textAppearance` dei campi di testo.
 
-- *Editor tema* &ndash; Editor di risorse di colore piccolo che consente di impostare le informazioni sui colori per un subset di un tema. Ad esempio, è possibile visualizzare in anteprima e modificare i colori `colorPrimary`materiali `colorPrimaryDark`come, `colorAccent`e.
+- *Editor del tema* &ndash; un editor di risorse di colore piccolo che consente di impostare le informazioni sui colori per un subset di un tema. Ad esempio, è possibile visualizzare in anteprima e modificare i colori materiali come `colorPrimary`, `colorPrimaryDark`e `colorAccent`.
 
 Si osserveranno ognuna di queste funzionalità e verranno forniti esempi di come utilizzarle.
 
@@ -175,7 +175,7 @@ Si osserveranno ognuna di queste funzionalità e verranno forniti esempi di come
 
 Il menu griglia Progettazione materiale è disponibile dalla barra degli strumenti nella parte superiore della finestra di progettazione:
 
-[![Griglia di progettazione materiale](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
+[griglia di progettazione materiale![](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 Quando si fa clic sull'icona della griglia di progettazione materiale, nella finestra di progettazione viene visualizzata una sovrapposizione nell'Area di progettazione che include gli elementi seguenti:
 
@@ -187,11 +187,11 @@ Quando si fa clic sull'icona della griglia di progettazione materiale, nella fin
 
 Questi elementi possono essere visualizzati nello screenshot seguente:
 
-[![Riga, spaziatura e griglia](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
+[![riga, spaziatura e griglia](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
-Ognuno di questi elementi sovrapposti è configurabile. Quando si fa clic sui puntini di sospensione (&hellip;) accanto al menu della griglia di progettazione materiale, viene aperta una finestra di dialogo che consente di disabilitare o abilitare la griglia, configurare il posizionamento delle linee di tasto e impostare le spaziatura. Si noti che tutti i valori sono `dp` espressi in (pixel indipendenti dalla densità):
+Ognuno di questi elementi sovrapposti è configurabile. Quando si fa clic sui puntini di sospensione (&hellip;) accanto al menu della griglia di progettazione materiale, viene aperta una finestra di dialogo che consente di disabilitare o abilitare la griglia, configurare il posizionamento delle linee di tasto e impostare le spaziatura. Si noti che tutti i valori sono espressi in `dp` (pixel indipendenti dalla densità):
 
-[![Configurazione della griglia, della linea di riga e della spaziatura](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
+[configurazione della griglia, della riga di![e della spaziatura](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 Per aggiungere una nuova riga di tasto, immettere un nuovo valore di offset nella casella **offset** , selezionare un percorso (a**sinistra**, in **alto**, a **destra**o in **basso**) e fare clic sull'icona + (visualizzata a destra quando viene immesso un valore) per aggiungere la nuova riga di tasto. Analogamente, per aggiungere una nuova spaziatura, immettere rispettivamente le dimensioni e l'offset (in DP) nelle caselle **dimensioni** e **offset** . Selezionare un percorso (a**sinistra**, in **alto**, a **destra**o in **basso**) e fare clic sull'icona + per aggiungere la nuova spaziatura.
 
@@ -201,32 +201,32 @@ Quando si modificano questi valori di configurazione, questi vengono salvati nel
 
 Ogni elemento del pannello Proprietà che accetta un colore dispone ora di un'icona della tavolozza aggiuntiva che è possibile usare per aprire la tavolozza dei colori di progettazione materiale, come illustrato nello screenshot seguente:
 
-[![Icona colore](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
+[icona colore![](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 Quando si fa clic su questa icona, viene aperta una finestra di dialogo in cui è possibile configurare il colore della proprietà dalla tavolozza dei colori di progettazione materiale:
 
-[![Tavolozza colori progettazione materiale](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
+[tavolozza colori![progettazione materiale](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 Nella parte superiore della tavolozza dei colori vengono visualizzati i colori di progettazione materiale primario, mentre nella parte inferiore della tavolozza viene visualizzato un intervallo di colori per il colore primario selezionato. Ad esempio, quando si seleziona **Indigo**, viene visualizzata una raccolta di tonalità **Indigo** nella parte inferiore della finestra di dialogo.
-Quando si seleziona una tonalità, il colore della proprietà viene impostato sulla tonalità selezionata. Nell'esempio seguente, l'oggetto `Background Tint` del pulsante viene modificato in *Indigo 500*:
+Quando si seleziona una tonalità, il colore della proprietà viene impostato sulla tonalità selezionata. Nell'esempio seguente, la `Background Tint` del pulsante è stata modificata in *Indigo 500*:
 
-[![Scegliere Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![scegliere Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
-`Background Tint`è impostato sul codice colore per *Indigo 500* (`#ff3f51b5`) e la finestra di progettazione aggiorna il colore di sfondo del pulsante in modo da riflettere questa modifica:
+`Background Tint` è impostato sul codice colore per *Indigo 500* (`#ff3f51b5`) e la finestra di progettazione aggiorna il colore di sfondo del pulsante in modo da riflettere questa modifica:
 
-[![Modifiche tonalità sfondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
+[![modifiche tonalità sfondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 Per ulteriori informazioni sulla tavolozza dei colori di progettazione materiale, vedere la pagina relativa alla [Guida della tavolozza dei colori](https://material.io/design/color/)di progettazione materiali.
 
 ## <a name="typographic-scale"></a>Scala tipografica
 
-Nella sezione **aspetto testo** della scheda **stile** del riquadro **Proprietà** è presente un'icona che consente di selezionare uno `TextAppearance` stile conforme alla specifica di progettazione materiale:
+Nella sezione **aspetto testo** della scheda **stile** del riquadro **Proprietà** è presente un'icona che consente di selezionare uno stile `TextAppearance` conforme alla specifica di progettazione materiale:
 
-[![Scheda stile](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
+[scheda stile![](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 Quando si fa clic su questa icona, viene aperta la finestra di dialogo relativa alla **scala dei tipografia** , che presenta un elenco di stili di testo preconfigurati tra cui è possibile scegliere:
 
-[![Selezione stile testo](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
+[selezione stile testo![](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 Nell'esempio seguente, se si fa clic su **Visualizza 1** , il testo del pulsante viene modificato in un tipo di carattere più grande del **display 1**:
 
@@ -234,29 +234,29 @@ Nell'esempio seguente, se si fa clic su **Visualizza 1** , il testo del pulsante
 
 Lo stile del testo nella finestra di dialogo **scala tipografica** segue l'impostazione del **tema** . Se, ad esempio, il tema **chiaro** viene scelto nella finestra di progettazione, l'elenco degli stili di testo disponibili rispecchia il tema **chiaro** :
 
-[![Tema chiaro](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
+[tema chiaro![](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 ## <a name="theme-editor"></a>Editor tema
 
 L' **Editor del tema** consente di personalizzare le informazioni sui colori per un subset di attributi del tema. Per aprire l' **Editor del tema**, fare clic sull'icona del pennello sulla barra degli strumenti:
 
-[![Icona dell'editor tema](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
+[icona dell'editor del tema![](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 Sebbene l' **Editor del tema** sia accessibile dalla barra degli strumenti per tutte le versioni di Android e i livelli API di destinazione, è disponibile solo un subset delle funzionalità descritte di seguito se il livello API di destinazione è precedente all'API 21 (Android 5,0 Lollipop).
 
-Il pannello a sinistra dell'editor del **tema** Visualizza l'elenco dei colori che compongono il tema attualmente selezionato (in questo esempio viene usato `Default Theme`):
+Il pannello a sinistra dell'editor del **tema** Visualizza l'elenco dei colori che costituiscono il tema attualmente selezionato (in questo esempio viene usato il `Default Theme`):
 
-[![Editor tema](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
+[Editor tema![](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 Quando si seleziona un colore a sinistra, nel pannello destro sono disponibili le schede seguenti che consentono di modificare il colore:
 
-- **Eredita** &ndash; Visualizza un diagramma di ereditarietà dello stile per il colore selezionato ed elenca il colore risolto e il codice colore assegnato al colore del tema.
+- **Eredita** &ndash; Visualizza un diagramma di ereditarietà dello stile per il colore selezionato ed elenca il colore risolto e il codice colori assegnato a tale colore del tema.
 
-- **Selezione colori** &ndash; Consente di modificare il colore selezionato in qualsiasi valore arbitrario.
+- **Selezione colori** &ndash; consente di modificare il colore selezionato in qualsiasi valore arbitrario.
 
-- **Tavolozza materiali** &ndash; Consente di modificare il colore selezionato in un valore conforme alla progettazione del materiale.
+- **Tavolozza materiali** &ndash; consente di modificare il colore selezionato in un valore conforme a progettazione materiale.
 
-- **Risorse** di &ndash; Consente di modificare il colore selezionato in una delle altre risorse di colore esistenti nel tema.
+- &ndash; **risorse** consente di modificare il colore selezionato in una delle altre risorse di colore esistenti nel tema.
 
 Esaminiamo ognuna di queste schede in dettaglio.
 
@@ -264,16 +264,16 @@ Esaminiamo ognuna di queste schede in dettaglio.
 
 Come illustrato nell'esempio seguente, la scheda **eredita** elenca l'ereditarietà dello stile per il colore di **sfondo** del **tema predefinito**:
 
-[![Eredita scheda](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
+[Scheda eredita![](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
-In questo esempio, il **tema predefinito** eredita da uno stile che usa `@color/background_material_dark` , ma ne esegue `color/material_grey_850`l'override con, che ha un valore `#ff303030`di codice colore pari a.
+In questo esempio, il **tema predefinito** eredita da uno stile che usa `@color/background_material_dark` ma lo sostituisce con `color/material_grey_850`, che ha un valore di codice colore di `#ff303030`.
 Per ulteriori informazioni sull'ereditarietà dello stile, vedere [stili e temi](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Selezione dei colori
 
 Lo screenshot seguente illustra la **selezione colori**:
 
-[![Selezione colori](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
+[Selezione colori![](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 In questo esempio, il colore di **sfondo** può essere modificato in qualsiasi valore tramite vari modi:
 
@@ -289,7 +289,7 @@ Il colore scelto nella selezione colori *non* è limitato alle linee guida di pr
 
 La scheda **risorse** offre un elenco di risorse di colore già presenti nel tema:
 
-[![Risorse](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
+[Risorse![](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 L'uso della scheda **risorse** vincola le scelte a questo elenco di colori. Tenere presente che se si sceglie una risorsa di colore già assegnata a un'altra parte del tema, due elementi adiacenti dell'interfaccia utente possono essere "eseguiti insieme" (poiché hanno lo stesso colore) e diventano difficili da distinguere con l'utente.
 
@@ -297,17 +297,17 @@ L'uso della scheda **risorse** vincola le scelte a questo elenco di colori. Tene
 
 La scheda **tavolozza materiale** apre la **tavolozza dei colori di progettazione materiale** descritta in [precedenza](#material-design-color-palette). La scelta di un valore di colore da questa tavolozza vincola la scelta del colore in modo che sia coerente con le linee guida di progettazione del materiale.
 
-[![Tavolozza materiali](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
+[Tavolozza materiale![](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 ### <a name="creating-a-new-theme"></a>Creazione di un nuovo tema
 
 Nell'esempio seguente verrà usata la tavolozza Material per creare un nuovo tema personalizzato. In primo luogo, il colore di **sfondo** verrà modificato in *blu 900*:
 
-[![Imposta sfondo su blu 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
+[![impostare lo sfondo su blu 900](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 Quando viene modificata una risorsa di colore, viene visualizzato un messaggio con il messaggio, *il tema corrente contiene modifiche non salvate*:
 
-[![Avviso modifiche non salvate](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
+[avviso modifiche non salvate![](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 La modifica del colore nella finestra di progettazione è stata apportata, ma questa modifica non è ancora stata salvata. A questo punto, è possibile eseguire una delle operazioni seguenti:
 

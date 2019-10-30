@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 187befd88c115133a92aa90a711438e7754518d5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 75249966c6506bc33ea06c7cfa9c398bd7eb8045
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68648798"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029493"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Novell. Forms FlexLayout
 
@@ -21,7 +21,7 @@ ms.locfileid: "68648798"
 
 _Usare FlexLayout per lo stack o il wrapping di una raccolta di visualizzazioni figlio._
 
-Il [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) Novell. Forms è una novità di Novell. Forms versione 3,0. Si basa sul [modulo CSS flexible box layout](http://www.w3.org/TR/css-flexbox-1/), comunemente noto come _Flex layout_ o _Flex-box_, quindi chiamato perché include molte opzioni flessibili per disporre gli elementi figlio all'interno del layout.
+Il [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) Novell. Forms è una novità di Novell. Forms versione 3,0. Si basa sul [modulo CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/), comunemente noto come _Flex layout_ o _Flex-box_, quindi chiamato perché include molte opzioni flessibili per disporre gli elementi figlio all'interno del layout.
 
 `FlexLayout` è simile a Novell. Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stack-layout.md) in quanto può disporre gli elementi figlio orizzontalmente e verticalmente in uno stack. Tuttavia, il `FlexLayout` è anche in grado di eseguire il wrapping dei relativi elementi figlio se sono presenti troppi per adattarsi a una singola riga o colonna, oltre a numerose opzioni per l'orientamento, l'allineamento e l'adattamento a diverse dimensioni dello schermo.
 
@@ -190,7 +190,7 @@ Ecco il programma in esecuzione, a scorrimento progressivo dall'alto verso il ba
 
 ### <a name="page-layout-with-flexlayout"></a>Layout di pagina con FlexLayout
 
-È presente un layout standard in progettazione Web denominato [_Santo Graal_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) perché è un formato di layout molto auspicabile, ma spesso difficile da realizzare con la perfezione. Il layout è costituito da un'intestazione nella parte superiore della pagina e da un piè di pagina nella parte inferiore della pagina. Occupare il centro della pagina è il contenuto principale, ma spesso con un menu a colonne a sinistra del contenuto e informazioni supplementari (talvolta denominate area _da parte_ ) a destra. [La sezione 5.4.1 della specifica CSS per il layout della casella flessibile](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) descrive il modo in cui il layout del Santo Graal può essere realizzato con una casella Flex.
+È presente un layout standard in progettazione Web denominato [_Santo Graal_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) perché è un formato di layout molto auspicabile, ma spesso difficile da realizzare con la perfezione. Il layout è costituito da un'intestazione nella parte superiore della pagina e da un piè di pagina nella parte inferiore della pagina. Occupare il centro della pagina è il contenuto principale, ma spesso con un menu a colonne a sinistra del contenuto e informazioni supplementari (talvolta denominate area _da parte_ ) a destra. [La sezione 5.4.1 della specifica CSS per il layout della casella flessibile](https://www.w3.org/TR/css-flexbox-1/#order-accessibility) descrive il modo in cui il layout del Santo Graal può essere realizzato con una casella Flex.
 
 La pagina del **layout del Santo Graal** dell'esempio **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** illustra una semplice implementazione di questo layout usando un `FlexLayout` annidato in un altro. Poiché questa pagina è progettata per un telefono in modalità verticale, le aree a sinistra e a destra dell'area di contenuto sono solo di 50 pixel di larghezza:
 
@@ -261,7 +261,7 @@ In questo programma sono illustrate tre proprietà associabili associate:
 
 ### <a name="catalog-items-with-flexlayout"></a>Elementi del catalogo con FlexLayout
 
-La pagina degli **elementi del catalogo** nell'esempio **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** è simile a quella dell' [esempio 1 nella sezione 1,1 della specifica CSS Flex layout box](http://www.w3.org/TR/css-flexbox-1/#overview) , ad eccezione del fatto che visualizza una serie di immagini scorrevoli orizzontalmente e descrizioni di tre scimmie :
+La pagina degli **elementi del catalogo** nell'esempio **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** è simile a quella dell' [esempio 1 nella sezione 1,1 della specifica CSS Flex layout box](https://www.w3.org//TR/css-flexbox-1/#overview) , ad eccezione del fatto che visualizza una serie di immagini scorrevoli orizzontalmente e descrizioni di tre scimmie :
 
 [![Pagina elementi del catalogo](flex-layout-images/CatalogItems.png "Pagina elementi del catalogo")](flex-layout-images/CatalogItems-Large.png#lightbox)
 
@@ -575,7 +575,7 @@ La pagina **esperimento di base** dell'esempio **[FlexLayoutDemos](https://docs.
 
 [![Pagina dell'esperimento di base](flex-layout-images/BasisExperiment.png "Pagina dell'esperimento di base")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-Lo screenshot iOS a sinistra mostra i due elementi `Label` a cui vengono assegnate le altezze in unità indipendenti dal dispositivo. La schermata Android mostra che vengono date le altezze che rappresentano una frazione dell'altezza totale del `FlexLayout`. Se la `Basis` è impostata su 100%, l'elemento figlio è l'altezza della `FlexLayout` e viene eseguito il wrapping nella colonna successiva e occupano l'intera altezza della colonna, come illustrato nella schermata UWP: sembra che i cinque elementi figlio siano disposti in una riga , ma sono effettivamente disposti in cinque colonne.
+Lo screenshot iOS a sinistra mostra i due elementi `Label` a cui vengono assegnate le altezze in unità indipendenti dal dispositivo. La schermata Android mostra che vengono date le altezze che rappresentano una frazione dell'altezza totale del `FlexLayout`. Se la `Basis` è impostata su 100%, l'elemento figlio è l'altezza della `FlexLayout`e viene eseguito il wrapping nella colonna successiva e occupano l'intera altezza della colonna, come illustrato nella schermata UWP: sembra che i cinque elementi figlio siano disposti in una riga , ma sono effettivamente disposti in cinque colonne.
 
 ### <a name="the-grow-property"></a>Proprietà Grow
 

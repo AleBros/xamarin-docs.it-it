@@ -4,15 +4,15 @@ description: Questo documento fornisce diversi suggerimenti per la risoluzione d
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/22/2016
-ms.openlocfilehash: 51276a7682599c6480c637fac385992feaf06e49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4e7f7169e4c7ec0ec2947e17b1434179f47488f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278891"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017031"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Novell. Mac-Risoluzione dei problemi di macOS Sierra
 
@@ -51,28 +51,28 @@ Se viene immesso un codice di sicurezza o una data di scadenza non corretta dura
 
 Problemi noti:
 
-- Se `NSObject.ValueForKey` si chiama `null` , una chiave genererà un'eccezione.
-- Sia `NSURLSession` `http://` che `NSURLConnection` non sono più pacchetti di crittografia RC4 durante l'handshake TLS per gli URL.
-- Le app possono bloccarsi se modificano la `ViewWillLayoutSubviews` geometria di una supervisione nei metodi o. `LayoutSubviews`
+- Se si chiama `NSObject.ValueForKey`, una chiave `null` comporterà un'eccezione.
+- Sia `NSURLSession` che `NSURLConnection` non sono più pacchetti di crittografia RC4 durante l'handshake TLS per `http://` URL.
+- Le app possono bloccarsi se modificano una geometria di SuperView nei metodi `ViewWillLayoutSubviews` o `LayoutSubviews`.
 - Per tutte le connessioni SSL/TLS, la crittografia simmetrica RC4 è ora disabilitata per impostazione predefinita. Inoltre, l'API trasporto sicuro non supporta più SSLv3 ed è consigliabile che l'app smetta di usare la crittografia SHA-1 e 3DES il prima possibile.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
 ## <a name="cfnetwork-http-protocol"></a>Protocollo HTTP CFNetwork
 
-La `HTTPBodyStream` proprietà `NSURLConnection` `NSURLSession` della classe deve essere impostata su un flusso non aperto a partire da e ora impone rigorosamente questo requisito. `NSMutableURLRequest`
+È necessario impostare la proprietà `HTTPBodyStream` della classe `NSMutableURLRequest` su un flusso non aperto, dal momento che `NSURLConnection` e `NSURLSession` ora applicano esclusivamente questo requisito.
 
 <a name="CloudKit" />
 
 ## <a name="cloudkit"></a>CloudKit
 
-Le operazioni con esecuzione prolungata restituiranno _"non si è autorizzati a salvare il file"._ errore.
+Le operazioni con esecuzione prolungata restituiranno _"non si è autorizzati a salvare il file"._ Errore.
 
 <a name="CoreImage" />
 
 ## <a name="core-image"></a>Immagine principale
 
-L' `CIImageProcessor` API supporta ora un numero di immagini di input arbitrario. `CIImageProcessor`L'API inclusa in macOS Sierra beta 1 verrà rimossa.
+L'API `CIImageProcessor` supporta ora un numero di immagini di input arbitrario. `CIImageProcessor` API inclusa in macOS Sierra beta 1 verrà rimossa.
 
 <a name="Notifications" />
 
@@ -84,13 +84,13 @@ Quando si utilizzano le estensioni del contenuto delle notifiche, i controller d
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Dopo un'operazione di continuità, `UserInfo` la proprietà di `NSUserActivity` un oggetto potrebbe essere vuota. `BecomeCurrent` Chiama`NSUserActivity` in modo esplicito Object come soluzione alternativa corrente.
+Dopo un'operazione di consegna, la proprietà `UserInfo` di un oggetto `NSUserActivity` può essere vuota. Chiamare in modo esplicito `BecomeCurrent` oggetto `NSUserActivity` come soluzione alternativa corrente.
 
 <a name="Safari" />
 
 ## <a name="safari"></a>Safari
 
-WebGeolocation richiede un URL sicuro`https://`() per lavorare sia su iOS 10 che su MacOS Sierra per impedire l'uso dannoso dei dati della località.
+WebGeolocation richiede un URL sicuro (`https://`) per lavorare sia su iOS 10 che su macOS Sierra per impedire l'uso dannoso dei dati della località.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

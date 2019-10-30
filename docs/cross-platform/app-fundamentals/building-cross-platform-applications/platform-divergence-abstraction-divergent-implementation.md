@@ -3,19 +3,19 @@ title: Parte 4 - Gestione di più piattaforme
 description: Questo documento descrive come gestire la divergenza dell'applicazione in base alla piattaforma o alla funzionalità. Illustra le dimensioni dello schermo, le metafore di navigazione, il tocco e i movimenti, le notifiche push e i paradigmi di interfaccia, ad esempio elenchi e tabulazioni.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 555723e689a9ba076ee34d49b93cf7141e542832
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288889"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016895"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 - Gestione di più piattaforme
 
-## <a name="handling-platform-divergence-amp-features"></a>Gestione delle funzionalità &amp; di divergenza della piattaforma
+## <a name="handling-platform-divergence-amp-features"></a>Gestione delle divergenze di piattaforma &amp; funzionalità
 
 La divergenza non è solo un problema "multipiattaforma"; i dispositivi nella piattaforma "stessa" hanno funzionalità diverse, in particolare la vasta gamma di dispositivi Android disponibili. Il più ovvio e Basic è la dimensione dello schermo, ma gli altri attributi del dispositivo possono variare e richiedere a un'applicazione di controllare determinate funzionalità e si comportano in modo diverso in base alla loro presenza (o assenza).
 
@@ -108,7 +108,7 @@ Queste librerie offrono inoltre funzionalità multipiattaforma per C# gli svilup
 
 Esistono situazioni in cui il codice condiviso dovrà comunque funzionare in modo diverso in ogni piattaforma, possibilmente accedendo a classi o funzionalità che si comportano in modo diverso. La compilazione condizionale funziona meglio con i progetti di asset condivisi, in cui viene fatto riferimento allo stesso file di origine in più progetti con simboli diversi definiti.
 
-I progetti Novell definiscono `__MOBILE__` sempre ciò che è vero per i progetti di applicazioni iOS e Android. prendere nota del doppio carattere di sottolineatura pre e post-correzione su questi simboli.
+I progetti Novell definiscono sempre `__MOBILE__`, vale a volte per i progetti di applicazioni iOS e Android. si notino il doppio carattere di sottolineatura pre e post-correzione su questi simboli.
 
 ```csharp
 #if __MOBILE__
@@ -148,7 +148,7 @@ Il codice che deve essere compilato solo in applicazioni Novell. Android può us
 #endif
 ```
 
-Ogni versione dell'API definisce anche una nuova direttiva del compilatore, quindi il codice di questo tipo consente di aggiungere funzionalità se le API più recenti sono destinate. Ogni livello API include tutti i simboli di livello "Lower". Questa funzionalità non è molto utile per supportare più piattaforme. il `__ANDROID__` simbolo sarà in genere sufficiente.
+Ogni versione dell'API definisce anche una nuova direttiva del compilatore, quindi il codice di questo tipo consente di aggiungere funzionalità se le API più recenti sono destinate. Ogni livello API include tutti i simboli di livello "Lower". Questa funzionalità non è molto utile per supportare più piattaforme. il simbolo di `__ANDROID__` sarà in genere sufficiente.
 
 ```csharp
 #if __ANDROID_11__
@@ -158,7 +158,7 @@ Ogni versione dell'API definisce anche una nuova direttiva del compilatore, quin
 
 #### <a name="mac"></a>Mac
 
-Attualmente non è disponibile un simbolo predefinito per Novell. Mac, ma è possibile aggiungerne uno personalizzato nelle opzioni del progetto dell'app Mac **> compilare > compilatore** nella casella **Definisci simboli** oppure modificare il file con **estensione csproj** e aggiungerlo (ad esempio `__MAC__`).
+Attualmente non è disponibile un simbolo predefinito per Novell. Mac, ma è possibile aggiungerne uno personalizzato nelle opzioni del progetto dell'app Mac **> compilare > compilatore** nella casella **Definisci simboli** oppure modificare il file con **estensione csproj** e aggiungerlo, ad esempio `__MAC__`
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
@@ -179,11 +179,11 @@ Usare `WINDOWS_UWP`. Non sono presenti caratteri di sottolineatura che racchiudo
 Un esempio di caso di compilazione condizionale semplice è l'impostazione del percorso del file del database SQLite. Le tre piattaforme hanno requisiti leggermente diversi per specificare il percorso del file:
 
 - **iOS** : Apple preferisce che i dati non utente siano posizionati in un percorso specifico (la directory della libreria), ma non esiste alcuna costante di sistema per questa directory. Il codice specifico della piattaforma è necessario per compilare il percorso corretto.
-- **Android** : il percorso di sistema restituito `Environment.SpecialFolder.Personal` da è una posizione accettabile per archiviare il file di database.
+- **Android** : il percorso di sistema restituito da `Environment.SpecialFolder.Personal` è una posizione accettabile per archiviare il file di database.
 - **Windows Phone** : il meccanismo di archiviazione isolata non consente di specificare un percorso completo, ma solo un percorso relativo e un nome file.
-- **Piattaforma UWP (Universal Windows Platform)** : USA `Windows.Storage` le API.
+- **Piattaforma UWP (Universal Windows Platform)** : usa API `Windows.Storage`.
 
-Il codice seguente usa la compilazione condizionale per `DatabaseFilePath` assicurarsi che sia corretto per ogni piattaforma:
+Il codice seguente usa la compilazione condizionale per garantire che il `DatabaseFilePath` sia corretto per ogni piattaforma:
 
 ```csharp
 public static string DatabaseFilePath {

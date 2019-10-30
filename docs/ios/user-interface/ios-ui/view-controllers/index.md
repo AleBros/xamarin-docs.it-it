@@ -4,21 +4,21 @@ description: Questo documento include collegamenti a una guida che descrive come
 ms.prod: xamarin
 ms.assetid: 15846D93-26A7-4E7E-B6DA-8E20FCD995E7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 5e7fe2604df44b1c171fd028cf47dbe2e54ac5cf
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 02f0b4345df41a61bafe1d2250d3ff51dca0f5f4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291547"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002444"
 ---
 # <a name="view-controllers-in-xamarinios"></a>Controller di visualizzazione in Novell. iOS
 
 ## <a name="view-controller-transitionstransitionsmd"></a>[Transizioni dei controller di visualizzazione](transitions.md)
 
-UIKit aggiunge il supporto per la personalizzazione della transizione animata che si verifica quando si presentano i controller di visualizzazione. Questo supporto è incluso nei controller incorporati, nonché in qualsiasi controller personalizzato che eredita direttamente da `UIViewController`. `UICollectionViewController` Sfrutta inoltre la personalizzazione della transizione del controller per sfruttare le transizioni animate nei layout delle visualizzazioni di raccolta.
+UIKit aggiunge il supporto per la personalizzazione della transizione animata che si verifica quando si presentano i controller di visualizzazione. Questo supporto è incluso nei controller incorporati, nonché in qualsiasi controller personalizzato che eredita direttamente da `UIViewController`. Inoltre, `UICollectionViewController` sfrutta i vantaggi della personalizzazione della transizione del controller per sfruttare le transizioni animate nei layout delle visualizzazioni di raccolta.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

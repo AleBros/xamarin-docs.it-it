@@ -4,15 +4,15 @@ description: Questo documento fornisce un'introduzione agli storyboard in Novell
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 494ac624ac4a77c592f358b68aec4429551a49a8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70768884"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002435"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduzione agli storyboard in Novell. iOS
 
@@ -266,7 +266,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-Per ulteriori informazioni sulla registrazione di classi e metodi, vedere la documentazione relativa al [registrar](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) .
+Per ulteriori informazioni sulla registrazione di classi e metodi, vedere la documentazione relativa al [registrar](https://docs.microsoft.com/xamarin/ios/internals/registrar) .
 
 L'ultimo passaggio di questa classe consiste nel collegare il pulsante e la transizione al controller di visualizzazione rosa. Verrà creata un'istanza del `PinkViewController` dallo storyboard; verrà quindi programmato un segue push con `PushViewController`, come illustrato nel codice di esempio seguente:
 
