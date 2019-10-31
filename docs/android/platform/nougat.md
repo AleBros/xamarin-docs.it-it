@@ -4,15 +4,15 @@ description: Come iniziare a usare Novell. Android per sviluppare app per Androi
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 128982abdee7a0fea8df79f7b7b9ecd6a290775a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6274c75abf229268070d495ced662724f5c16627
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761251"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027095"
 ---
 # <a name="nougat-features"></a>Funzionalità torrone
 
@@ -24,18 +24,18 @@ Questo articolo fornisce una descrizione delle funzionalità introdotte in Andro
 
 Il [torrone Android](https://developer.android.com/about/versions/nougat/android-7.0.html) è il follow-up di Google per Android 6,0 marshmallow. Novell. Android fornisce il supporto per le **associazioni Android 7. x** in novell Android 7,0 e versioni successive. Il torrone Android aggiunge molte nuove API per le funzionalità torrone descritte di seguito. Queste API sono disponibili per le app Novell. Android quando si usa Novell. Android 7,0.
 
-[![Immagini Hero di Tablet e telefoni Android che eseguono il torrone Android](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
+[![le immagini Hero di Tablet e telefoni Android che eseguono il torrone Android](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
 Per altre informazioni sulle API Android 7. x, vedere [android 7,1 per sviluppatori](https://developer.android.com/preview/api-overview.html).
 Per un elenco dei problemi noti di Novell. Android 7,0, vedere le [Note sulla versione](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
 Il torrone Android offre molte nuove funzionalità interessanti per gli sviluppatori Novell. Android. Queste funzionalità comprendono:
 
-- **Supporto** per più finestre &ndash; Questo miglioramento consente agli utenti di aprire contemporaneamente due app sullo schermo.
+- **Supporto** di più finestre &ndash; questa funzionalità avanzata consente agli utenti di aprire contemporaneamente due app sullo schermo.
 
-- **Miglioramenti delle notifiche** Il sistema di notifiche riprogettato in Android torrone include una funzionalità di *risposta diretta* che consente agli utenti di rispondere rapidamente ai messaggi di testo direttamente dall'interfaccia utente di notifica. &ndash; Inoltre, se l'app crea notifiche per i messaggi ricevuti, la nuova funzionalità di *notifica in bundle* può raggruppare le notifiche come un singolo gruppo quando viene ricevuto più di un messaggio.
+- I **miglioramenti** apportati alle notifiche &ndash; il sistema di notifiche riprogettato in Android torrone includono una funzionalità di *risposta diretta* che consente agli utenti di rispondere rapidamente ai messaggi di testo direttamente dall'interfaccia utente di notifica. Inoltre, se l'app crea notifiche per i messaggi ricevuti, la nuova funzionalità di *notifica in bundle* può raggruppare le notifiche come un singolo gruppo quando viene ricevuto più di un messaggio.
 
-- **Salva dati** &ndash; Questa funzionalità è un nuovo servizio di sistema che consente di ridurre l'uso dei dati cellulari da parte delle app; consente agli utenti di controllare il modo in cui le app usano i dati cellulari.
+- **Data Saver** &ndash; questa funzionalità è un nuovo servizio di sistema che consente di ridurre l'utilizzo dei dati cellulari da app; consente agli utenti di controllare la modalità di utilizzo dei dati cellulari da parte delle app.
 
 Android torrone, inoltre, apporta molti altri miglioramenti di interesse per gli sviluppatori di app, ad esempio una nuova funzionalità di configurazione della sicurezza di rete, un servizio di attestazione delle chiavi, nuove API per le impostazioni rapide, supporto per più impostazioni locali, API ICU4J, miglioramenti di WebView, accesso alle funzionalità del linguaggio Java 8, all'accesso alla directory con ambito, a un'API puntatore personalizzata, al supporto per la piattaforma VR, ai file virtuali e alle ottimizzazioni di elaborazione in background.
 
@@ -45,13 +45,13 @@ Questo articolo illustra come iniziare a creare app con il torrone Android per p
 
 Di seguito sono riportate le funzionalità necessarie per usare le nuove funzionalità del torrone Android nelle app basate su Novell:
 
-- **Visual Studio o Visual Studio per Mac** &ndash; Se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Novell è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
+- **Visual Studio o Visual Studio per Mac** &ndash; se si usa Visual Studio, la versione 4.2.0.628 o successiva di strumenti di Visual Studio per Novell è obbligatoria. Se si usa Visual Studio per Mac, è richiesta la versione 6.1.0 o successiva di Visual Studio per Mac.
 
-- **Novell. Android** &ndash; Novell. Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
+- **Novell. android** &ndash; Novell. Android 7,0 o versione successiva deve essere installato e configurato con Visual Studio o Visual Studio per Mac.
 
 - **Android SDK** -Android SDK 7,0 (API 24) o versione successiva deve essere installato tramite il Android SDK Manager.
 
-- **Java Developer Kit** Per lo sviluppo di Novell Android 7,0 è necessario [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o versione successiva (JDK 8 supporta anche i livelli API precedenti a 24). &ndash; La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
+- **Java Developer Kit** &ndash; lo sviluppo di novell Android 7,0 richiede [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o versione successiva se si sta sviluppando per livello API 24 o superiore (JDK 8 supporta anche i livelli API precedenti a 24). La versione a 64 bit di JDK 8 è obbligatoria se si usano controlli personalizzati o il Visualizzatore anteprima moduli.
 
 > [!IMPORTANT]
 > Xamarin.Android non supporta JDK 9.
@@ -80,21 +80,21 @@ Per aggiungere il supporto Novell per il torrone Android, modificare il canale d
 
 Per creare un progetto con Novell Android 7,0, è necessario prima di tutto usare gestione Android SDK per installare la **piattaforma SDK Android N (API 24)** o versione successiva. È necessario installare anche la **Android SDK Tools**più recente:
 
-1. Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > Apri&hellip;gestione Android SDK**. in Visual Studio usare **gli strumenti > Android > Android SDK Manager**).
+1. Avviare Gestione Android SDK (in Visual Studio per Mac usare **gli strumenti > aprire Android SDK manager&hellip;** . in Visual Studio usare **gli strumenti > Android > Android SDK Manager**).
 
 2. Installare **Android 7,0 (API 24)** o versione successiva:
 
-    [![Selezione dei pacchetti Android 7,0 in gestione Android SDK](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
+    [![selezionare i pacchetti Android 7,0 in gestione Android SDK](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
 3. Installare gli strumenti di Android SDK più recenti:
 
-    [![Selezione degli strumenti di Android SDK più recenti in gestione Android SDK](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
+    [![selezione degli strumenti di Android SDK più recenti nel gestore Android SDK](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
     È necessario installare Android SDK Tools Revision 25.2.2 o versioni successive, gli strumenti della piattaforma Android SDK 24.0.3 o versione successiva e Android SDK build Tools 24.0.2 o versione successiva.
 
 4. Verificare che il **percorso di Java Development Kit** sia configurato per JDK 1,8:
 
-    [![Configurazione del percorso JDK 8 in strumenti opzioni](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
+    [![configurazione del percorso JDK 8 in strumenti opzioni](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
 
     Per visualizzare questa impostazione in Visual Studio, fare clic su **strumenti > opzioni > novell > Android Settings**. In Visual Studio per Mac fare clic su **preferenze > progetti > percorsi SDK > Android**.
 
@@ -113,11 +113,11 @@ Se si usa un emulatore, avviare Android AVD Manager e creare un nuovo dispositiv
 
 - Device: Nexus 5X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9 o pixel C.
 - Destinazione: Android 7,0-livello API 24
-- Abi: x86 o x86\_64
+- ABI: x86 o x86\_64
 
 Ad esempio, questo dispositivo virtuale è configurato per emulare un Nexus 6:
 
-[![Configurazione di un AVD usando il dispositivo Nexus 6, la destinazione Android 7,0 e Intel Atom x86 CPU/ABI](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
+[![configurazione di un AVD usando il dispositivo Nexus 6, la destinazione Android 7,0 e Intel Atom x86 CPU/ABI](nougat-images/android-n-avd.png)](nougat-images/android-n-avd.png#lightbox)
 
 Se si usa un dispositivo fisico, ad esempio un Nexus 5X, 6 o 9, è possibile aggiornare il dispositivo tramite gli aggiornamenti automatici via etere oppure scaricare un'immagine di sistema e lampeggiare direttamente il dispositivo. Per altre informazioni sull'aggiornamento manuale del dispositivo al torrone Android, vedere le [Immagini OTA per i dispositivi Nexus](https://developers.google.com/android/nexus/ota).
 
@@ -132,9 +132,9 @@ Il torrone Android introduce un'ampia gamma di nuove caratteristiche e funzional
 La modalità multifinestra consente agli utenti di aprire contemporaneamente due app con il supporto completo multitasking. Queste app possono essere eseguite side-by-Side (orizzontale) o una sopra l'altra (verticale) in modalità a schermo diviso.
 Gli utenti possono trascinare un divisore tra le app per ridimensionarle e possono tagliare e incollare contenuto tra le app. Quando due app vengono presentate in modalità multifinestra, l'attività selezionata continua a essere eseguita mentre l'attività non selezionata viene sospesa ma ancora visibile. La modalità multifinestra non modifica il ciclo di vita dell'attività Android.
 
-[![App di esempio in esecuzione in modalità a più finestre sia verticale che orizzontale](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
+[![app di esempio in esecuzione in modalità a più finestre sia verticale che orizzontale](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-È possibile configurare il modo in cui le attività dell'app Novell. Android supportano la modalità a più finestre. È ad esempio possibile configurare gli attributi che impostano le dimensioni minime e l'altezza e la larghezza predefinite dell'app in modalità a più finestre. È possibile utilizzare la nuova `Activity.IsInMultiWindowMode` proprietà per determinare se l'attività è in modalità a più finestre. Ad esempio:
+È possibile configurare il modo in cui le attività dell'app Novell. Android supportano la modalità a più finestre. È ad esempio possibile configurare gli attributi che impostano le dimensioni minime e l'altezza e la larghezza predefinite dell'app in modalità a più finestre. È possibile utilizzare la nuova proprietà `Activity.IsInMultiWindowMode` per determinare se l'attività è in modalità a più finestre. Ad esempio:
 
 ```csharp
 if (!IsInMultiWindowMode) {
@@ -157,10 +157,10 @@ Android torrone introduce un sistema di notifica riprogettato. Include una nuova
 Quando un utente riceve una notifica per il messaggio in arrivo, il torrone Android rende possibile rispondere al messaggio all'interno della notifica, anziché aprire l'app di messaggistica per inviare una risposta.
 Questa funzionalità di risposta inline consente agli utenti di rispondere rapidamente a un SMS o a un messaggio di testo direttamente all'interno dell'interfaccia di notifica:
 
-[![Screenshot di una notifica con un campo di risposta diretta inline](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
+[![screenshot di una notifica con un campo di risposta diretta inline](nougat-images/notifications-inline-reply-sml.png)](nougat-images/notifications-inline-reply.png#lightbox)
 
 Per supportare questa funzionalità nell'app, è necessario aggiungere *azioni di risposta inline* all'app tramite un oggetto [RemoteInput](xref:Android.App.RemoteInput) in modo che gli utenti possano rispondere tramite testo direttamente dall'interfaccia utente di notifica.
-Il codice seguente, ad esempio, Compila `RemoteInput` un oggetto per la ricezione di un input di testo, compila un intento in sospeso per l'azione di risposta e crea un'azione remote input Enabled:
+Il codice seguente, ad esempio, compila un `RemoteInput` per la ricezione di input di testo, compila uno scopo in sospeso per l'azione di risposta e crea un'azione remota di input abilitata:
 
 ```csharp
 // Build a RemoteInput for receiving text input:
@@ -191,14 +191,14 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-L'app di esempio del [servizio di messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) include C# codice che illustra come estendere le `RemoteInput` notifiche con un oggetto. Per altre informazioni sull'aggiunta di azioni di risposta inline all'app per Android 7,0 o versione successiva, vedere l'argomento [risposta alle notifiche per](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) Android.
+L'app di esempio del servizio C# di [messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) include codice che illustra come estendere le notifiche con un oggetto`RemoteInput`. Per altre informazioni sull'aggiunta di azioni di risposta inline all'app per Android 7,0 o versione successiva, vedere l'argomento [risposta alle notifiche per](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) Android.
 
 #### <a name="bundled-notifications"></a>Notifiche in bundle
 
 Il torrone Android può raggruppare i messaggi di notifica (ad esempio, per argomento del messaggio) e visualizzare il gruppo anziché ogni messaggio separato.
 Questa funzionalità per le *notifiche in bundle* consente agli utenti di ignorare o archiviare un gruppo di notifiche in un'unica azione. L'utente può scorrere verso il basso per espandere il bundle di notifiche per visualizzare ogni notifica in dettaglio:
 
-[![Schermata di esempio delle notifiche in bundle](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
+[![screenshot di esempio di notifiche in bundle](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 Per supportare le notifiche in bundle, l'app può usare il metodo [Builder. segroup](xref:Android.App.Notification.Builder.SetGroup*) per raggruppare le notifiche simili. Per ulteriori informazioni sui gruppi di notifiche in bundle in Android N, vedere l'argomento relativo alle [notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle) per la creazione di bundle Android.
 
@@ -215,10 +215,10 @@ Per altre informazioni sulla nuova funzionalità di data saver in Android torron
 ### <a name="app-shortcuts"></a>Collegamenti alle app
 
 Android 7,1 ha introdotto una funzionalità di *collegamenti alle app* che consente agli utenti di avviare rapidamente le attività comuni o consigliate con l'app.
-Per attivare il menu dei tasti di scelta rapida, l'utente preme a lungo l'icona dell'app per un &ndash; secondo o più il menu viene visualizzato con una vibrazione rapida.
+Per attivare il menu dei tasti di scelta rapida, l'utente preme a lungo l'icona dell'app per un secondo o più &ndash; il menu viene visualizzato con una vibrazione rapida.
 Se si rilascia la pressione, il menu rimarrà:
 
-[![Schermata di esempio di un menu di scelta rapida dell'app per un'app di messaggistica](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
+[schermata di esempio![di un menu di scelta rapida dell'app per un'app di messaggistica](nougat-images/app-shortcuts-sml.png)](nougat-images/app-shortcuts.png#lightbox)
 
 Questa funzionalità è disponibile solo per il livello API 25 o superiore.
 Per altre informazioni sulla nuova funzionalità di collegamenti alle app in Android 7,1, vedere l'argomento [tasti di scelta rapida](https://developer.android.com/guide/topics/ui/shortcuts.html) per le app Android.
@@ -229,11 +229,11 @@ Sono disponibili diversi esempi di Novell. Android per illustrare come sfruttare
 
 - [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) illustra l'uso dell'API multifinestra disponibile nel torrone Android. È possibile passare l'app di esempio in modalità multiwindows per vedere come influiscono sul ciclo di vita e sul comportamento dell'app.
 
-- Il`NotificationCompatManager` [servizio messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) è un servizio semplice che invia notifiche tramite. Estende inoltre la notifica con un `RemoteInput` oggetto per consentire ai dispositivi Android torrone di rispondere tramite testo direttamente dalla notifica senza dover aprire un'app.
+- Il [servizio messaggistica](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) è un servizio semplice che invia notifiche tramite il `NotificationCompatManager`. Estende inoltre la notifica con un oggetto `RemoteInput` per consentire ai dispositivi Android torrone di rispondere tramite testo direttamente dalla notifica senza dover aprire un'app.
 
 - [Notifiche attive](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) illustra come usare l'API `NotificationManager` per indicare il numero di notifiche attualmente visualizzate dall'applicazione.
 
-- [Accesso alla directory con ambito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Viene illustrato come utilizzare l'API di accesso alla directory con ambito per accedere facilmente a directory specifiche. Questa funzione funge da alternativa alla necessità di definire `READ_EXTERNAL_STORAGE` autorizzazioni `WRITE_EXTERNAL_STORAGE` o nel manifesto.
+- [Accesso alla directory con ambito](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) Viene illustrato come utilizzare l'API di accesso alla directory con ambito per accedere facilmente a directory specifiche. Questa funzione funge da alternativa alla necessità di definire `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE` autorizzazioni nel manifesto.
 
 - [Avvio diretto](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) Viene illustrato come archiviare i dati in una risorsa di archiviazione crittografata dal dispositivo, che è sempre disponibile quando il dispositivo viene avviato sia prima che dopo l'immissione delle credenziali utente (PIN/criterio/password).
 

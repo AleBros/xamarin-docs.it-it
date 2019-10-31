@@ -4,21 +4,21 @@ description: Questo documento contiene collegamenti a guide che descrivono le fu
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: dc8f2c3a11dd283db46fd0a2530fcca435da75f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d30789a33eb8023f4ce77b4a7c2445fabca0f2db
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752045"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031830"
 ---
 # <a name="introduction-to-ios-6"></a>Introduzione a iOS 6
 
 _iOS 6 include un'ampia gamma di nuove tecnologie per lo sviluppo di app, che Novell. iOS C# 6 offre agli sviluppatori._
 
-[![](images/ios6-large.jpg "Logo iOS 6")](images/ios6-large.jpg#lightbox)
+[![](images/ios6-large.jpg "The iOS 6 logo")](images/ios6-large.jpg#lightbox)
 
 Con iOS 6 e Novell. iOS 6, gli sviluppatori ora hanno a disposizione una vasta gamma di funzionalità per la creazione di applicazioni iOS, incluse quelle destinate a iPhone 5.
 Questo documento elenca alcune delle nuove funzionalità più interessanti disponibili e i collegamenti agli articoli per ogni argomento. Inoltre, si riferisce a un paio di modifiche che saranno importanti quando gli sviluppatori passano a iOS 6 e la nuova risoluzione di iPhone 5.
@@ -47,7 +47,7 @@ Apple ha introdotto due nuove funzionalità in Store Kit: acquisto e download di
 
 ### <a name="viewwillunload-and-viewdidunload-deprecated"></a>ViewWillUnload e ViewDidUnload deprecati
 
-I `ViewWillUnload` metodi `ViewDidUnload` e di`UIViewController` non vengono più chiamati in iOS 6. Nelle versioni precedenti di iOS, questi metodi potrebbero essere stati usati dalle applicazioni per salvare lo stato prima di scaricare e pulire il codice, rispettivamente.
+I metodi `ViewWillUnload` e `ViewDidUnload` di `UIViewController` non vengono più chiamati in iOS 6. Nelle versioni precedenti di iOS, questi metodi potrebbero essere stati usati dalle applicazioni per salvare lo stato prima di scaricare e pulire il codice, rispettivamente.
 
 Ad esempio, Visual Studio per Mac creerebbe un metodo denominato `ReleaseDesignerOutlets`, illustrato di seguito, che verrebbe quindi chiamato da `ViewDidUnload`:
 
@@ -63,7 +63,7 @@ void ReleaseDesignerOutlets ()
 
 Tuttavia, in iOS 6 non è più necessario chiamare `ReleaseDesignerOutlets`.   
 
-Per il codice di pulitura, le applicazioni `DidReceiveMemoryWarning`iOS 6 devono usare. Tuttavia, il codice che `Dispose` chiama deve essere usato solo per gli oggetti con utilizzo intensivo di memoria, come illustrato di seguito:
+Per il codice di pulizia, le applicazioni iOS 6 devono usare `DidReceiveMemoryWarning`. Tuttavia, il codice che chiama `Dispose` deve essere usato solo per gli oggetti con utilizzo intensivo di memoria, come illustrato di seguito:
 
 ```csharp
 if (myImageView != null){
@@ -74,25 +74,25 @@ if (myImageView != null){
 }
 ```
 
-Anche in questo `Dispose` caso, la chiamata al livello precedente dovrebbe essere raramente necessaria. In generale, la maggior parte delle applicazioni deve rimuovere i gestori eventi.
+Anche in questo caso, è necessario chiamare `Dispose` come sopra. In generale, la maggior parte delle applicazioni deve rimuovere i gestori eventi.
 
-Per il salvataggio dello stato, le applicazioni possono eseguire questa operazione `ViewWillDisappear` in `ViewDidDisappear` e anziché `ViewWillUnload`in.
+Per il salvataggio dello stato, le applicazioni possono eseguire questa operazione in `ViewWillDisappear` e `ViewDidDisappear` invece che `ViewWillUnload`.
 
 ### <a name="iphone-5-resolution"></a>Risoluzione di iPhone 5
 
 i dispositivi iPhone 5 hanno una risoluzione 640X1136. Le applicazioni destinate alle versioni precedenti di iOS verranno visualizzate in formato letterbox quando vengono eseguite su un iPhone 5, come illustrato di seguito:
 
- [![](images/01-letterboxed.png "Le applicazioni destinate alle versioni precedenti di iOS verranno visualizzate in formato letterbox quando vengono eseguite su un iPhone 5")](images/01-letterboxed.png#lightbox)
+ [![](images/01-letterboxed.png "Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5")](images/01-letterboxed.png#lightbox)
 
 Affinché l'applicazione venga visualizzata a schermo intero in iPhone 5, è sufficiente aggiungere un'immagine denominata `Default-568h@2x.png` con la risoluzione 640X1136. Lo screenshot seguente mostra l'applicazione in esecuzione dopo che è stata inclusa questa immagine:
 
- [![](images/02-fullscreen.png "Questa schermata mostra l'applicazione in esecuzione dopo che l'immagine è stata inclusa")](images/02-fullscreen.png#lightbox)
+ [![](images/02-fullscreen.png "This screenshot shows the application running after this image has been included")](images/02-fullscreen.png#lightbox)
 
 ### <a name="subclassing-uinavigationbar"></a>Sottoclasse UINavigationBar
 
-In iOS 6 `UINavigationBar` può essere sottoclassato. Questo consente un controllo aggiuntivo dell'aspetto di `UINavigationBar`. Ad esempio, le applicazioni possono eseguire una sottoclasse per aggiungere visualizzazioni, animarle e modificare i limiti dell'oggetto `UINavigationBar`.
+In iOS 6 `UINavigationBar` può essere sottoclassato. Ciò consente un controllo aggiuntivo dell'aspetto del `UINavigationBar`. Ad esempio, le applicazioni possono eseguire una sottoclasse per aggiungere visualizzazioni, animarle e modificare i limiti del `UINavigationBar`.
 
-Il codice seguente mostra un esempio di una sottoclasse `UINavigationBar` che aggiunge un oggetto: `UIImageView`
+Il codice riportato di seguito illustra un esempio di `UINavigationBar` sottoclassato che aggiunge un `UIImageView`:
 
 ```csharp
 public class CustomNavBar : UINavigationBar
@@ -112,19 +112,19 @@ public class CustomNavBar : UINavigationBar
 }
 ```
 
-Per `UINavigationBar` aggiungere una sottoclasse a un oggetto `UINavigationController`, usare il `UINavigationController` costruttore che accetta il tipo di `UINavigationBar` e `UIToolbar`, come illustrato di seguito:
+Per aggiungere un `UINavigationBar` sottoclassato a una `UINavigationController`, usare il costruttore di `UINavigationController` che accetta il tipo di `UINavigationBar` e `UIToolbar`, come illustrato di seguito:
 
 ```csharp
 navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolbar));
 ```
 
-L'uso `UINavigationBar` di questa sottoclasse comporta la visualizzazione della visualizzazione immagine, come illustrato nello screenshot seguente:
+L'uso di questa `UINavigationBar` sottoclasse comporta la visualizzazione della visualizzazione immagine, come illustrato nello screenshot seguente:
 
- [![](images/03-navbar.png "Se si usa questa sottoclasse UINavigationBar, la visualizzazione immagine viene visualizzata come illustrato in questa schermata")](images/03-navbar.png#lightbox)
+ [![](images/03-navbar.png "Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>Orientamento interfaccia
 
-Prima di eseguire l'override `ShouldAutorotateToInterfaceOrientation`delle applicazioni iOS 6, restituire true per tutti gli orientamenti supportati dal controller specifico. Il codice seguente, ad esempio, verrebbe utilizzato per supportare solo il formato verticale:
+Prima che le applicazioni iOS 6 potessero eseguire l'override di `ShouldAutorotateToInterfaceOrientation`, restituendo true per tutti gli orientamenti supportati dal controller specifico. Il codice seguente, ad esempio, verrebbe utilizzato per supportare solo il formato verticale:
 
 ```csharp
 public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
@@ -134,7 +134,7 @@ public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientat
 ```
 
 In iOS 6 `ShouldAutorotateToInterfaceOrientation` è deprecato.
-Le applicazioni possono invece `GetSupportedInterfaceOrientations` eseguire l'override del controller di visualizzazione radice, come illustrato di seguito:
+Le applicazioni possono invece eseguire l'override `GetSupportedInterfaceOrientations` sul controller di visualizzazione radice, come illustrato di seguito:
 
 ```csharp
 public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
