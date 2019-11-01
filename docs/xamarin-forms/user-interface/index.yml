@@ -42,7 +42,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: button.md
-            title: Button
+            title: Pulsante
           - href: carouselview/index.md
             html: Informazioni su come usare un controllo CarouselView per presentare i dati in un layout carousel lineare.
             image:
@@ -120,7 +120,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: map/index.md
-            title: Mappe
+            title: Mappa
           - href: menuitem.md
             html: Informazioni su come usare la classe MenuItem per aggiungere voci al menu di scelta rapida delle celle di ListView.
             image:
@@ -156,7 +156,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: slider.md
-            title: Slider
+            title: Dispositivo di scorrimento
           - href: splashscreen.md
             html: Informazioni su come creare schermate iniziali per le applicazioni Xamarin.Forms.
             image:
@@ -180,7 +180,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: switch.md
-            title: Opzione
+            title: Switch
           - href: tableview.md
             html: 'Informazioni su come usare un controllo TableView per visualizzare elenchi di dati o opzioni scorrevoli, in cui le righe non condividono lo stesso modello.'
             image:
@@ -192,7 +192,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: text/index.md
-            title: Testo
+            title: Text
           - href: theming.md
             html: Informazioni su come creare temi per le applicazioni Xamarin.Forms e cambiare il tema in fase di esecuzione.
             image:
