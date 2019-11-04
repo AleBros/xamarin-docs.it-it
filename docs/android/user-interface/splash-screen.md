@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028721"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425504"
 ---
 # <a name="splash-screen"></a>Schermata iniziale
 
@@ -32,7 +32,7 @@ Questa guida illustra una tecnica per implementare una schermata iniziale in un'
 
 3. Aggiunta di una nuova attività all'applicazione che verrà usata come schermata iniziale definita dal tema creato nel passaggio precedente.
 
-[schermata iniziale del logo Novell di esempio![seguito dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[schermata iniziale del logo Novell di esempio ![seguito dalla schermata dell'app](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## <a name="requirements"></a>Requisiti
 
@@ -67,7 +67,7 @@ L'applicazione di esempio definisce un oggetto disegnato denominato **splash_scr
 </layer-list>
 ```
 
-Questo `layer-list` centra l'immagine iniziale su un colore di sfondo specificato dalla risorsa `@color/splash_background`. L'applicazione di esempio definisce questo colore nel file **Resources/values/color. XML** :
+Questo `layer-list` centra l'immagine iniziale su un colore di sfondo specificato dalla risorsa `@color/splash_background`. L'applicazione di esempio definisce questo colore nel file **Resources/values. XML** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
