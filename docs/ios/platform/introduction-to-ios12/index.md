@@ -4,15 +4,15 @@ description: Questo documento fornisce una descrizione di alto livello di alcune
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
-ms.openlocfilehash: b3f3db32e87d83ea4e076d439df3342e5ca2ed50
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39d954626bc9e789446e7f1deac67e2e0fca51c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284629"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031997"
 ---
 # <a name="introduction-to-ios-12"></a>Introduzione a iOS 12
 
@@ -56,7 +56,7 @@ iOS 12 rende più semplice per gli utenti e gli sviluppatori usare le password:
 
 - Il riempimento automatico delle password e le password complesse automatiche consentono di generare, archiviare e usare automaticamente password complesse nelle applicazioni iOS durante l'iscrizione e l'accesso a un'applicazione.
 - Il riempimento del codice di sicurezza consente di usare i codici di autenticazione basati su SMS senza tagliare e incollare manualmente o memorizzare.
-- La `ASWebAuthenticationSession` classe semplifica il processo di utilizzo dei servizi di autenticazione federati.
+- La classe `ASWebAuthenticationSession` semplifica il processo di utilizzo dei servizi di autenticazione federati.
 - Le estensioni del provider di credenziali di riempimento automatico consentono alle applicazioni con password di terze parti di fornire nome utente e password ai campi di accesso.
 
 ## <a name="healthkit-updates"></a>Aggiornamenti HealthKit
@@ -69,7 +69,7 @@ In iOS 12, le app iMessage supportano i contesti di presentazione che consentono
 
 ## <a name="network-framework"></a>Framework di rete
 
-Il Framework di rete, lo stack di `URLSession` rete sottostante alle API comunemente usate nelle applicazioni iOS, è ora disponibile come Framework autonomo, semplificando l'uso di TCP, UDP, TLS, IPv4/IPv6 e altro ancora.
+Framework di rete, lo stack di rete sottostante le API `URLSession` comunemente usate nelle applicazioni iOS, è ora disponibile come Framework autonomo, semplificando l'uso di TCP, UDP, TLS, IPv4/IPv6 e altro ancora.
 
 ## <a name="carplay"></a>CarPlay
 
@@ -80,4 +80,4 @@ In iOS 12, le app di terze parti possono fornire mappe e istruzioni di navigazio
 Con iOS 12, Apple ha deprecato:
 
 - OpenGL ES, [incoraggiando gli sviluppatori](https://developer.apple.com/ios/whats-new/) ad adottare metal.
-- [`UIWebView`](xref:UIKit.UIWebView), [a favore di `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
+- [`UIWebView`](xref:UIKit.UIWebView), [a favore di `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
