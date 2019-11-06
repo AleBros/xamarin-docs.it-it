@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
-ms.openlocfilehash: 516d8ebfd8e0dabbdbba9737ae8b35627c649380
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 103720c8cb47b1ac4cfe5cfadeb6b18828318ad3
+ms.sourcegitcommit: 5a23c66f81853884480aca666d649a56d68c01cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027755"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618540"
 ---
 # <a name="binding-an-aar"></a>Associazione di un file AAR
 
@@ -31,7 +31,7 @@ Un. Il file AAR è un. Archivio ZIP che contiene gli elementi seguenti:
 In questa guida verranno illustrate le nozioni di base per la creazione di una libreria di binding per un singolo. File AAR. Per una panoramica dell'associazione di librerie Java in generale (con un esempio di codice di base), vedere [binding di una libreria Java](~/android/platform/binding-java-library/index.md).
 
 > [!IMPORTANT]
-> Un progetto di associazione può includerne solo uno. File AAR. Se il. Dipendenze AAR su altro. AAR, le dipendenze devono essere contenute nel proprio progetto di binding e quindi farvi riferimento. Vedere il [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
+> Un progetto di associazione può includerne solo uno. File AAR. Se il. AAR dipende da altri. AAR, le dipendenze devono essere contenute nel proprio progetto di binding e quindi farvi riferimento. Vedere il [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
 
 ## <a name="walkthrough"></a>Procedura dettagliata
 
@@ -68,7 +68,7 @@ public class TextCounter
 
 Questa app di esempio, inoltre, recupererà e visualizzerà una risorsa immagine composta in un pacchetto in **textanalyzer. AAR**:
 
-[immagine di![Monkey Novell](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
+[immagine di ![Monkey Novell](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
 Questa risorsa immagine si trova in **res/disegnatore/Monkey. png** in **textanalyzer. AAR**.
 
