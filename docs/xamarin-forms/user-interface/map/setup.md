@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/31/2019
-ms.openlocfilehash: dd451ae1acd233c1d3de675357bb172f25716f59
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.date: 11/06/2019
+ms.openlocfilehash: 038ff27907573c1fe15516f6f4caf26d0892ab9f
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426160"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662335"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Inizializzazione e configurazione del mapping di Novell. Forms
 
@@ -43,6 +43,8 @@ Nel piattaforma UWP (Universal Windows Platform) (UWP), questa operazione deve e
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 ```
+
+Per informazioni sul token di autenticazione richiesto per UWP, vedere [piattaforma UWP (Universal Windows Platform)](#universal-windows-platform).
 
 Una volta aggiunto il pacchetto NuGet e il metodo di inizializzazione chiamato all'interno di ogni applicazione, è possibile usare `Xamarin.Forms.Maps` API nel progetto di codice condiviso.
 
@@ -244,6 +246,20 @@ Inoltre, se l'applicazione deve accedere alla posizione dell'utente, è necessar
       <DeviceCapability Name="location"/>
     </Capabilities>
     ```
+
+#### <a name="release-builds"></a>Build di rilascio
+
+Le build di rilascio di UWP usano la compilazione .NET native per compilare l'applicazione direttamente nel codice nativo. Tuttavia, una conseguenza è che il renderer per il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) in UWP può essere collegato al di fuori dell'eseguibile. Questo problema può essere risolto usando un overload specifico di UWP del metodo `Forms.Init` in **app.XAML.cs**:
+
+```csharp
+var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };
+Xamarin.Forms.Forms.Init(e, assembliesToInclude);
+```
+
+Questo codice passa l'assembly in cui risiede la classe `Xamarin.Forms.Maps.UWP.MapRenderer` al metodo `Forms.Init`. In questo modo si garantisce che l'assembly non sia collegato all'eseguibile dal processo di compilazione .NET native.
+
+> [!IMPORTANT]
+> In caso contrario, il controllo [`Map`](xref:Xamarin.Forms.Maps.Map) non verrà visualizzato durante l'esecuzione di una build di rilascio.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

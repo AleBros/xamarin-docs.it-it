@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 5afdaa9afa4c5ced39498a1cb45de07fe4bf4195
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696699"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662323"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Novell. Forms-dati CollectionView
 
@@ -69,12 +69,15 @@ collectionView.ItemsSource = new string[]
 };
 ```
 
-> [!IMPORTANT]
-> Se il [`CollectionView`](xref:Xamarin.Forms.CollectionView) è necessario per l'aggiornamento quando gli elementi vengono aggiunti, rimossi o modificati nella raccolta sottostante, la raccolta sottostante deve essere una raccolta di `IEnumerable` che invia le notifiche di modifica delle proprietà, ad esempio `ObservableCollection`.
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) genererà un'eccezione se il relativo [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) viene aggiornato dal thread dell'interfaccia utente.
 
 Per impostazione predefinita, [`CollectionView`](xref:Xamarin.Forms.CollectionView) Visualizza gli elementi in un elenco verticale, come illustrato nelle schermate seguenti:
 
 [![Screenshot di CollectionView contenente gli elementi di testo in iOS e Android](populate-data-images/text.png "Elementi di testo in un oggetto CollectionView")](populate-data-images/text-large.png#lightbox "Elementi di testo in un oggetto CollectionView")
+
+> [!IMPORTANT]
+> Se il [`CollectionView`](xref:Xamarin.Forms.CollectionView) è necessario per l'aggiornamento quando gli elementi vengono aggiunti, rimossi o modificati nella raccolta sottostante, la raccolta sottostante deve essere una raccolta di `IEnumerable` che invia le notifiche di modifica delle proprietà, ad esempio `ObservableCollection`.
 
 Per informazioni su come modificare il layout di [`CollectionView`](xref:Xamarin.Forms.CollectionView) , vedere [Novell. Forms CollectionView layout](layout.md). Per informazioni su come definire l'aspetto di ogni elemento nell'`CollectionView`, vedere definire l' [aspetto dell'elemento](#define-item-appearance).
 
