@@ -3,19 +3,20 @@ title: Che cos'è Xamarin?
 description: Questo articolo presenta Novell e le librerie correlate.
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
+ms.custom: video
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/16/2019
-ms.openlocfilehash: 8213eeb18ec23e79f0cc2a82c22b50d77b6d4931
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 34763804e9833224721ea32f9c7e6200dd5faba7
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71256595"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842936"
 ---
 # <a name="what-is-xamarin"></a>Che cos'è Xamarin?
 
-[![Screenshot dell'applicazione Novell di esempio in iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
+[![screenshot dell'applicazione Novell di esempio in iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
 
 Novell è una piattaforma open source per la creazione di applicazioni moderne e performanti per iOS, Android e Windows con .NET. Novell è un livello di astrazione che gestisce la comunicazione del codice condiviso con il codice di piattaforma sottostante. Novell viene eseguito in un ambiente gestito che fornisce praticità, ad esempio l'allocazione di memoria e la Garbage Collection.
 
@@ -49,14 +50,14 @@ Novell combina le capacità delle piattaforme native e aggiunge numerose funzion
 
 1. **Associazione completa per gli SDK sottostanti** : Novell contiene le associazioni per quasi tutti gli SDK della piattaforma sottostanti in iOS e Android. Inoltre, questi binding sono fortemente tipizzati, il che significa che sono semplici da esplorare e usare e forniscono un solido controllo del tipo in fase di compilazione e durante lo sviluppo. Le associazioni fortemente tipizzate portano a meno errori di runtime e applicazioni di qualità superiore.
 1. **Objective-C, Java, C e C++ interoperabilità** : Novell fornisce le funzionalità per richiamare direttamente le librerie Objective-c, Java, c e C++ , offrendo la possibilità di usare un'ampia gamma di codice di terze parti. Questa funzionalità consente di usare le librerie iOS e Android esistenti scritte in Objective-C, Java o C/C++. Inoltre, Novell offre progetti di associazione che consentono di associare le librerie native Objective-C e Java usando una sintassi dichiarativa.
-1. **Costrutti di linguaggio moderni** : le applicazioni Novell sono C#scritte in, un linguaggio moderno che include miglioramenti significativi rispetto a Objective-C e Java come le funzionalità del linguaggio dinamico, costrutti funzionali quali le espressioni lambda, LINQ, Parallel programmazione, generics e altro ancora.
+1. **Costrutti di linguaggio moderni** : le applicazioni Novell sono C#scritte in, un linguaggio moderno che include miglioramenti significativi rispetto a Objective-C e Java come le funzionalità del linguaggio dinamico, i costrutti funzionali come le espressioni lambda, LINQ, la programmazione parallela, i generics e altro ancora.
 1. **Libreria di classi base robusta** : le applicazioni Novell utilizzano la libreria di classi base .NET, una vasta raccolta di classi con funzionalità complete e semplificate, ad esempio potenti funzionalità di XML, database, serializzazione, i/o, stringhe e rete e altro ancora. Il C# codice esistente può essere compilato per l'uso in un'app, che fornisce l'accesso a migliaia di librerie che aggiungono funzionalità oltre a BCL.
-1. **Ambiente di sviluppo integrato (IDE) moderno** : Novell usa Visual Studio, un IDE moderno che include funzionalità come il completamento automatico del codice, un sofisticato sistema di gestione di progetti e soluzioni, una libreria di modelli di progetto completa, controllo del codice sorgente integrato e altro ancora.
+1. **Ambiente di sviluppo integrato (IDE) moderno** : Novell usa Visual Studio, un IDE moderno che include funzionalità quali il completamento automatico del codice, un sofisticato sistema di gestione di progetti e soluzioni, una libreria di modelli di progetto completa, il controllo del codice sorgente integrato e altro ancora.
 1. **Supporto multipiattaforma per dispositivi mobili** : Novell offre un supporto multipiattaforma sofisticato per le tre principali piattaforme di iOS, Android e Windows. Le applicazioni possono essere scritte in modo da condividere fino al 90% del codice e Novell. Essentials offre un'API unificata per accedere alle risorse comuni su tutte e tre le piattaforme. Il codice condiviso può ridurre significativamente i costi di sviluppo e i tempi di immissione sul mercato per gli sviluppatori di dispositivi mobili.
 
 ### <a name="xamarinandroid"></a>Xamarin.Android
 
-[![Diagramma dell'architettura di Novell. Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
+[diagramma dell'architettura ![Novell. Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
 Le applicazioni Novell. Android vengono C# compilate da in **linguaggio intermedio (il)** , che viene quindi compilato in modalità **JIT (just-in-Time)** in un assembly nativo all'avvio dell'applicazione. Le applicazioni Novell. Android vengono eseguite all'interno dell'ambiente di esecuzione mono, affiancate alla macchina virtuale di Android Runtime (ART). Novell fornisce associazioni .NET agli spazi dei nomi Android. * e Java. *. L'ambiente di esecuzione mono chiama questi spazi dei nomi tramite **Managed Wrappers (MCW)** e fornisce **Android Callable Wrapper (ACW)** all'arte, consentendo a entrambi gli ambienti di richiamare codice tra loro.
 
@@ -64,7 +65,7 @@ Per altre informazioni, vedere [architettura di Novell. Android](~/android/inter
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
-[![Diagramma dell'architettura di Novell. iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
+[diagramma dell'architettura ![Novell. iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
 Le applicazioni Novell. iOS sono state compilate in modo completo **(AOT)** dal C# codice assembly ARM nativo. Novell usa i **selettori** per esporre Objective-c C# ai **registrar** e gestiti per C# esporre il codice gestito a Objective-c. I selettori e i registrar sono collettivamente denominati "binding" e consentono C# la comunicazione tra Objective-C e.
 
@@ -103,3 +104,9 @@ Le guide seguenti consentono di compilare la prima app usando Novell:
 - [Introduzione a Novell. Android](~/android/index.yml)
 - [Introduzione a Novell. iOS](~/ios/index.yml)
 - [Introduzione a Novell. Mac](~/mac/index.yml)
+
+## <a name="related-video"></a>Video correlati
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/What-is-Xamarin-1-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

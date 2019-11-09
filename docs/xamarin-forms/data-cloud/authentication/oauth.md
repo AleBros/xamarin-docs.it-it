@@ -6,13 +6,13 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
-ms.openlocfilehash: 3c167b025b41bd4fc7c8c93bdb2f825c9daa540c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/07/2019
+ms.openlocfilehash: 83fbad8a9bbb9afef5ee80705fe9e86e51284e7d
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032854"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842989"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticare gli utenti con un provider di identità
 
@@ -259,6 +259,16 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ```
 
 Il metodo `FindAccountsForService` restituisce una raccolta `IEnumerable` di oggetti `Account`, con il primo elemento della raccolta da impostare come account corrispondente.
+
+## <a name="troubleshooting"></a>Troubleshooting
+
+- In Android, se si riceve una notifica di tipo avviso popup quando si chiude il browser dopo l'autenticazione e si desidera arrestare la notifica di tipo avviso popup, aggiungere il codice seguente al progetto Android dopo l'inizializzazione di Novell. auth:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- In Android, se il browser non si chiude automaticamente, una soluzione temporanea è eseguire il downgrade del pacchetto Novell. auth alla versione 1.5.0.3. Quindi, aggiungere [PCL Crypto v 2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) al progetto Android.
 
 ## <a name="summary"></a>Riepilogo
 

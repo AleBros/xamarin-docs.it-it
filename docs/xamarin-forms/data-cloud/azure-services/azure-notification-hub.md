@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: c4237e9315ccc095abc72fdec24d58ffe1faebdf
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eafa5c8af8d93138ec6e2b9e2f25549d7ed006b0
+ms.sourcegitcommit: bfe4327ef2e89dab095641860256eadb349ca62c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739233"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73849827"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Inviare e ricevere notifiche push con hub di notifica di Azure e Novell. Forms
 
-[Esempio di ![Download ](~/media/shared/download.png)Download esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[![scaricare l'esempio](~/media/shared/download.png)scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 Le notifiche push forniscono informazioni da un sistema back-end a un'applicazione per dispositivi mobili. Apple, Google e altre piattaforme hanno ciascuno il proprio servizio di notifica push (PNS). Hub di notifica di Azure consente di centralizzare le notifiche tra le piattaforme, in modo che l'applicazione back-end possa comunicare con un singolo hub, che si occupi di distribuire le notifiche a ciascun PNS specifico della piattaforma.
 
@@ -301,7 +301,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
         global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
         LoadApplication(new App());
 
-        if (IsPlayServiceAvailable() == false)
+        if (!IsPlayServiceAvailable())
         {
             throw new Exception("This device does not have Google Play Services and cannot receive push notifications.");
         }
