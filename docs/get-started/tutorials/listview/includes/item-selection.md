@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
+ms.sourcegitcommit: ecb81266e59c9e1773a06582e138bf4eed713dfe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004147"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74062895"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -39,7 +39,7 @@ ms.locfileid: "71004147"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento ListView che risponde alla selezione e al tocco di voci in iOS e Android](../images/item-selection.png "Selezione di una voce in un elemento ListView")](../images/item-selection-large.png#lightbox "Selezione di una voce in un elemento ListView")
+    [![Screenshot di un elemento ListView che risponde alla selezione e al tocco di voci in iOS e Android](../images/item-selection.png "Selezione di elementi ListView")](../images/item-selection-large.png#lightbox "Selezione di elementi ListView")
 
     Impostare punti di interruzione nei due gestori eventi e toccare voci nell'elemento [`ListView`](xref:Xamarin.Forms.ListView). Si noti che l'evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) è attivato solo quando una nuova voce viene selezionata nell'elemento [`ListView`](xref:Xamarin.Forms.ListView), mentre l'evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) viene generato ogni volta che una voce viene toccata.
 
@@ -78,8 +78,8 @@ ms.locfileid: "71004147"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di un elemento ListView che risponde alla selezione e al tocco di voci in iOS e Android](../images/item-selection.png "Selezione di una voce in un elemento ListView")](../images/item-selection-large.png#lightbox "Selezione di una voce in un elemento ListView")
+    [![Screenshot di un elemento ListView che risponde alla selezione e al tocco di voci in iOS e Android](../images/item-selection.png "Selezione di elementi ListView")](../images/item-selection-large.png#lightbox "Selezione di elementi ListView")
 
     Impostare punti di interruzione nei due gestori eventi e toccare voci nell'elemento [`ListView`](xref:Xamarin.Forms.ListView). Si noti che l'evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) è attivato solo quando una nuova voce viene selezionata nell'elemento [`ListView`](xref:Xamarin.Forms.ListView), mentre l'evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) viene generato ogni volta che una voce viene toccata.
 
-    Per altre informazioni sulla selezione e il tocco di voci, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
+    Per altre informazioni sulla selezione di elementi e sul tocco, vedere [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) (Selezione e tocco)

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: 6cece2c7cad401a9dc6f14b689c5c9e5ab757df5
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: fdee070021b22f82cb69571f0fa2f396831b14e6
+ms.sourcegitcommit: 6781967baeed4fe2c58f070476e7c21d01c25c30
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696888"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052800"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Applicazione di stili alle app Novell. Forms con Cascading Style Sheets (CSS)
 
@@ -352,7 +352,7 @@ Le proprietà CSS seguenti sono supportate da Novell. Forms (nella colonna **val
 
 |proprietà|Si applica a|Valori|Esempio|
 |---|---|---|---|
-|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| 0 1 2 3 4 5 6 7 @no__ T_18 9 0 1 2 |`align-content: space-between;`|
+|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| 0 1 2 |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| 0 1 2 3 4|`align-self: flex-end;`|
 |`background-color`|`VisualElement`|_colore_ \| `initial` |`background-color: springgreen;`|
@@ -372,7 +372,7 @@ Le proprietà CSS seguenti sono supportate da Novell. Forms (nella colonna **val
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_doppio_ \| `initial` |`min-height: 250;`|
-|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| 0 1 2 3 4 5 6 7 @no__ T_18 9 0|`justify-content: flex-end;`|
+|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
 |`line-height`|`Label`, `Span`|_doppio_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_spessore_ \| `initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_spessore_ \| `initial` |`margin-left: 3;`|
@@ -409,6 +409,8 @@ Le proprietà seguenti non sono attualmente supportate:
 - Proprietà a sintassi abbreviata, ad esempio `font` e `border`.
 
 Inoltre, non esiste alcun valore `inherit` e pertanto l'ereditarietà non è supportata. Non è quindi possibile, ad esempio, impostare la proprietà `font-size` in un layout e prevedere che tutte le istanze di [`Label`](xref:Xamarin.Forms.Label) nel layout ereditino il valore. L'unica eccezione è rappresentata dalla proprietà `direction`, il cui valore predefinito è `inherit`.
+
+La destinazione di `Span` elementi presenta un problema noto che impedisce la destinazione degli stili CSS in base all'elemento e al nome (usando il simbolo di `#`). L'elemento `Span` deriva da `GestureElement`, che non dispone della proprietà `StyleClass` in modo che gli intervalli non supportino la destinazione della classe CSS. Per altre informazioni, vedere [non è possibile applicare lo stile CSS al controllo span](https://github.com/xamarin/Xamarin.Forms/issues/5979).
 
 ### <a name="xamarinforms-specific-properties"></a>Proprietà specifiche di Novell. Forms
 
