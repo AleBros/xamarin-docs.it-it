@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2018
-ms.openlocfilehash: 71033e935a2d3a4be88dbcc5d975938771484640
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: HT
+ms.openlocfilehash: b580c6e41aa689ff8fcea698c40d7aaf5f2ca050
+ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285573"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74135269"
 ---
 # <a name="xamarinforms-localization"></a>Localizzazione di Xamarin.Forms
 
 _Il framework di localizzazione .NET incorporato può essere usato per compilare applicazioni multilingue e multipiattaforma con Xamarin.Forms._
 
-## <a name="string-and-image-localizationtextmd"></a>[Localizzazione di stringhe e immagini](text.md)
+## <a name="xamarinforms-string-and-image-localizationtextmd"></a>[Stringa Novell. Forms e localizzazione di immagini](text.md)
 
 Il meccanismo incorporato per la localizzazione delle applicazioni .NET usa i [file con estensione resx](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps#resources-in-resx-files) e le classi negli spazi dei nomi `System.Resources` e `System.Globalization`. I file con estensione resx che contengono le stringhe tradotte sono incorporati nell'assembly Xamarin.Forms, insieme a una classe generata dal compilatore che fornisce l'accesso fortemente tipizzato alle traduzioni. Il testo tradotto può quindi essere recuperato nel codice.
 
