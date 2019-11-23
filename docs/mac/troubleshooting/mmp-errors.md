@@ -210,7 +210,7 @@ L'ottimizzazione specificata non è stata riconosciuta.
 
 Il formato accettato è `[+|-]optimization-name`, dove `optimization-name` è uno dei valori elencati nel messaggio di errore.
 
-Per una descrizione completa di ogni ottimizzazione, vedere [ottimizzazioni delle compilazioni](https://developer.xamarin.com/guides/cross-platform/macios/build-optimizations) .
+Per una descrizione completa di ogni ottimizzazione, vedere [ottimizzazioni delle compilazioni](https://developer.xamarin.com/guides/cross-platform/macios/build-optimizations).
 
 <a name="MM0133" />
 
@@ -338,7 +338,7 @@ Come ultima soluzione di paglia, usare una versione precedente di Novell. Mac ch
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: a cui fa riferimento {0}.{1} @ no__t_2_\* questo messaggio è correlato a MM2006 \*\*
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: a cui fa riferimento {0}.{1}\*\* questo messaggio è correlato a MM2006 \*\*
 
 <a name="MM2010" />
 
@@ -517,7 +517,7 @@ In caso contrario, inviare un [problema](https://github.com/xamarin/xamarin-maci
 
 <a name="MM5204" />
 
-#### <a name="mm5204-invalid-architecture-x86_64-is-only-supported-on-non-classic-profiles"></a>MM5204: architettura non valida. x86_64 è supportato solo nei profili non classici.
+#### <a name="mm5204-invalid-architecture-x86_64-is-only-supported-on-non-classic-profiles"></a>MM5204: architettura non valida. x86_64 è supportato solo su profili non classici.
 
 <a name="MM5205" />
 

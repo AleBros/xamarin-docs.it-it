@@ -85,7 +85,7 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 ### <a name="preserving-code"></a>Mantenimento del codice
 
-Il linker rimuove talvolta parti di codice che si potrebbe voler mantenere. Esempio:
+Il linker rimuove talvolta parti di codice che si potrebbe voler mantenere. Ad esempio:
 
 - Potrebbe essere presente codice che viene chiamato in modo dinamico tramite `System.Reflection.MemberInfo.Invoke`.
 
@@ -129,7 +129,7 @@ A volte è necessario mantenere determinati membri, ma solo se è stato mantenut
 [Android.Runtime.Preserve (Conditional = true)]
 ```
 
-Se non si vuole definire una dipendenze dalle librerie Xamarin, ad esempio quando si compila una libreria di classi portabile (PCL) multipiattaforma, è comunque possibile usare l'attributo `Android.Runtime.Preserve`. A questo scopo, dichiarare una classe `PreserveAttribute` all'interno dello spazio dei nomi `Android.Runtime` in questo modo:
+Se non si vuole definire una dipendenze dalle librerie Xamarin, ad esempio quando si compila una libreria di classi portabile (PCL) multipiattaforma, è comunque possibile usare l'attributo &ndash;. A questo scopo, dichiarare una classe `PreserveAttribute` all'interno dello spazio dei nomi `Android.Runtime` in questo modo:
 
 ```csharp
 namespace Android.Runtime
@@ -178,7 +178,7 @@ class MyActivity {
 
 ### <a name="linkdescription"></a>LinkDescription
 
-L'**azione di compilazione** [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
+L'[azione di compilazione`@(LinkDescription)` ](~/android/deploy-test/building-apps/build-process.md)
  può essere usata nei file che possono contenere un [file di configurazione personalizzato del linker](~/cross-platform/deploy-test/linker.md).
 edmx. I file di configurazione personalizzati del linker possono essere necessari per mantenere membri `internal` o `private` che devono essere conservati.
 

@@ -19,7 +19,7 @@ ms.locfileid: "73026586"
 ## <a name="getting-diagnostic-information"></a>Recupero delle informazioni di diagnostica
 
 Novell. Android presenta alcune posizioni da considerare quando si verificano diversi bug.
-tra cui:
+Sono inclusi:
 
 1. Output di MSBuild di diagnostica.
 2. Log di distribuzione del dispositivo.
@@ -54,7 +54,7 @@ Per abilitare l'output di MSBuild di diagnostica entro Visual Studio per Mac/OS 
 
 Per abilitare la registrazione della distribuzione dei dispositivi in Visual Studio:
 
-1. **Strumenti > opzioni...**>
+1. **Strumenti > opzioni...** >
 2. Nella visualizzazione albero a sinistra selezionare **novell > Android Settings**
 3. Nel pannello a destra abilitare la casella di controllo [X] **Extension Debug Logging (scrive monodroid. log nel desktop)** .
 4. I messaggi di log vengono scritti nel file monodroid. log sul desktop.
@@ -81,10 +81,10 @@ Novell. Android supporta le proprietà di sistema seguenti:
 
 - *debug. mono. debug*: se una stringa non vuota, equivale a `*mono-debug*`.
 
-- *debug. mono. env*: elenco di variabili di ambiente separate da pipe ('*|*') da esportare durante l'avvio dell'applicazione, *prima* dell'inizializzazione di mono. Ciò consente di impostare le variabili di ambiente che controllano la registrazione mono.
+- *debug. mono. env*: elenco di variabili di ambiente separate da pipe (' *|* ') da esportare durante l'avvio dell'applicazione, *prima* dell'inizializzazione di mono. Ciò consente di impostare le variabili di ambiente che controllano la registrazione mono.
 
   > [!NOTE]
-  > Poiché il valore è "*|*" separato, il valore deve avere un ulteriore livello di quota, perché il comando \`*ADB shell*\` rimuoverà un set di virgolette.
+  > Poiché il valore è " *|* " separato, il valore deve avere un ulteriore livello di quota, perché il comando \`*ADB shell*\` rimuoverà un set di virgolette.
 
   > [!NOTE]
   > I valori delle proprietà di sistema Android possono avere una lunghezza non superiore a 92 caratteri.
@@ -95,7 +95,7 @@ Novell. Android supporta le proprietà di sistema seguenti:
   adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
   ```
 
-- *debug. mono. log*: elenco di componenti separati da virgole ('*,*') che devono stampare messaggi aggiuntivi nel log di debug Android. Per impostazione predefinita, non viene impostato alcun elemento. I componenti includono:
+- *debug. mono. log*: elenco di componenti separati da virgole (' *,* ') che devono stampare messaggi aggiuntivi nel log di debug Android. Per impostazione predefinita, non viene impostato alcun elemento. I componenti includono:
 
   - *All*: stampa tutti i messaggi
   - *GC*: stampa messaggi correlati a GC.
@@ -209,7 +209,7 @@ Ci sono quattro messaggi di conseguenza:
 - Creazione di riferimento globale debole: queste sono le righe che iniziano con *+ w +* .
 - Distruzione di riferimento globale debole: si tratta di righe che iniziano con *-w-* .
 
-In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Novell. Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Novell. Android. Il *valore handle o* *obj-handle* è il valore dell'handle JNI e il carattere dopo ' */*' è il tipo di valore dell'handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per il livello globale vulnerabile riferimenti.
+In tutti i messaggi, il valore *grefc* è il numero di riferimenti globali creati da Novell. Android, mentre il valore *grefwc* è il numero di riferimenti globali vulnerabili creati da Novell. Android. Il valore handle *o obj-handle* *è il valore* dell'handle JNI e il carattere dopo ' */* ' è il tipo di valore handle: */l* per riferimento locale, */g* per i riferimenti globali e */W* per i riferimenti globali vulnerabili.
 
 Come parte del processo GC, i riferimenti globali (+ g +) vengono convertiti in riferimenti globali vulnerabili (causando + w + e-g-), viene attivato un GC sul lato Java, quindi viene eseguito il controllo del riferimento globale debole per verificare se è stato raccolto. Se è ancora attivo, viene creato un nuovo Gref intorno al Ref debole (+ g +,-w-); in caso contrario, il riferimento debole viene eliminato (-w).
 
@@ -306,7 +306,7 @@ Questo significa che il percorso non contiene la directory in cui si trova la di
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid. exe o aresgen. exe terminato con il codice 1
 
-Per semplificare il debug di questo problema, passare a Visual Studio e modificare il livello di dettaglio di MSBuild. a tale scopo, selezionare: **strumenti > opzioni > progetto** e **soluzioni > compila** ed **Esegui > livello di dettaglio dell'output di compilazione del progetto MSBuild** e impostare questo valore **normale**.
+Per semplificare il debug di questo problema, passare a Visual Studio e modificare il livello di dettaglio di MSBuild. a tale scopo, selezionare: **strumenti > opzioni > progetto** e **soluzioni > compila** ed **Esegui > livello di dettaglio dell'output di compilazione del progetto MSBuild** e impostare questo valore su **normale**.
 
 Ricompilare e controllare il riquadro di output di Visual Studio, che dovrebbe contenere l'errore completo.
 
@@ -322,7 +322,7 @@ Assicurarsi di usare il nome corretto del simulatore, ovvero [il nome usato dura
 
 ## <a name="install_failed_invalid_apk-when-installing-a-package"></a>INSTALLAZIONE\_non riuscita\_APK\_non valido durante l'installazione di un pacchetto
 
-I nomi dei pacchetti Android *devono* contenere un punto ('*.*'). Modificare il nome del pacchetto in modo che contenga un punto.
+I nomi dei pacchetti Android *devono* contenere un punto (' *.* '). Modificare il nome del pacchetto in modo che contenga un punto.
 
 - All'interno di Visual Studio:
   - Fare clic con il pulsante destro del mouse sul progetto > Proprietà
@@ -408,7 +408,7 @@ In tal caso, esistono due possibili cause:
 
 2. Un [bug Android](https://code.google.com/p/android/issues/detail?id=21670). In tal caso, disinstallare l'app, incrociare le dita e reinstallare l'app.
 
-Per correggere (1), modificare le proprietà e le opzioni del progetto e [aggiungere il supporto per l'interfaccia ABI richiesta all'elenco di Abi supportate](~/android/app-fundamentals/cpu-architectures.md).Per determinare quale ABI è necessario aggiungere, eseguire il comando ADB seguente sul dispositivo di destinazione:
+Per correggere (1), modificare le proprietà e le opzioni del progetto e [aggiungere il supporto per l'interfaccia ABI richiesta all'elenco di Abi supportate](~/android/app-fundamentals/cpu-architectures.md). Per determinare quale ABI è necessario aggiungere, eseguire il comando ADB seguente sul dispositivo di destinazione:
 
 ```shell
 adb shell getprop ro.product.cpu.abi
@@ -464,7 +464,7 @@ mAdapter = new SimpleExpandableListAdapter (
 );
 ```
 
-Il problema è che Novell. Android esegue erroneamente il marshalling dei tipi generici annidati. È in corso il marshalling del `List<IDictionary<string, object>>` a un oggetto [java. lang. ArrrayList](xref:Java.Util.ArrayList), ma il `ArrayList` contiene `mono.android.runtime.JavaObject` istanze (che fanno riferimento alle istanze di `Dictionary<string, object>`) invece di un elemento che implementa [java. util. map](xref:Java.Util.IMap), ottenendo quanto segue eccezione
+Il problema è che Novell. Android esegue erroneamente il marshalling dei tipi generici annidati. `List<IDictionary<string, object>>` viene sottoposto a marshalling a un oggetto [java.lang.ArrrayList](xref:Java.Util.ArrayList), ma `ArrayList` contiene le istanze `mono.android.runtime.JavaObject` (che fanno riferimento alle istanze `Dictionary<string, object>`) anziché un elemento che implementa [java.util.Map](xref:Java.Util.IMap), con l'eccezione seguente:
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -515,7 +515,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 ## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceException impreviste
 
-Occasionalmente, il [log di debug Android](~/android/deploy-test/debugging/android-debug-log.md) menzionerà le eccezioni NullReferenceException che non &ldquo;possono verificarsi,&rdquo; o provengono dal codice di runtime di mono per Android poco prima che l'app muoia:
+Occasionalmente, il [logdidebugAndroid](~/android/deploy-test/debugging/android-debug-log.md)menzioneràleeccezioniNullReferenceExceptionche&ldquo;nonpossonoverificarsi&rdquo;oprovengonodalcodicediruntimedimonoperAndroidpocoprimachel'app muoia:
 
 ```shell
 E/mono(15202): Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object
@@ -526,7 +526,7 @@ E/mono(15202):   at Android.Views.View+IOnTouchListenerAdapter.n_OnTouch_Landroi
 E/mono(15202):   at (wrapper dynamic-method) object:b039cbb0-15e9-4f47-87ce-442060701362 (intptr,intptr,intptr,intptr)
 ```
 
-Oppure
+oppure
 
 ```shell
 E/mono    ( 4176): Unhandled Exception:
@@ -627,7 +627,7 @@ E/dalvikvm(  602): VM aborting
 
 Nell'esempio precedente, che, incidentalmente, deriva dal [bug 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215), il problema è dovuto al fatto che sono state create troppe istanze di Android. graphics. Point. per un elenco di correzioni per questo particolare bug, vedere il [commento \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) .
 
-In genere, una soluzione utile è trovare il tipo con un numero eccessivo di istanze allocate &ndash; Android. graphics. puntare nel dump precedente &ndash; quindi trovare la posizione in cui vengono creati nel codice sorgente ed eliminarli in modo appropriato, in modo che il relativo oggetto Java la durata è accorciata). Questa operazione non è sempre appropriata (\#685215 è multithreading, quindi la soluzione Trivial evita la chiamata a Dispose), ma è la prima cosa da considerare.
+In genere, una soluzione utile è trovare il tipo con un numero eccessivo di istanze allocate &ndash; Android. graphics. puntare nel dump precedente &ndash; quindi trovare la posizione in cui vengono creati nel codice sorgente ed eliminarli in modo appropriato, in modo che la durata dell'oggetto Java venga abbreviata. Questa operazione non è sempre appropriata (\#685215 è multithreading, quindi la soluzione Trivial evita la chiamata a Dispose), ma è la prima cosa da considerare.
 
 È possibile abilitare la [registrazione Gref](~/android/troubleshooting/index.md) per vedere quando vengono creati GREFs e il numero di exist.
 

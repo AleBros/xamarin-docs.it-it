@@ -93,7 +93,7 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 In questo modo viene inizializzato il membro [`WebView`](xref:Android.Webkit.WebView) con quello del layout [`Activity`](xref:Android.App.Activity) e viene abilitato JavaScript per il [`WebView`](xref:Android.Webkit.WebView) con [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled)
-`= true` (vedere la [chiamata C\# da JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) Recipe per informazioni su come chiamare le funzioni di\# C da JavaScript). Infine, una pagina Web iniziale viene caricata con [`LoadUrl(String)`](xref:Android.Webkit.WebView).
+`= true`. per informazioni su come chiamare le funzioni c\# da JavaScript, vedere la pagina relativa alla chiamata a [c\# da](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) JavaScript. Infine, una pagina Web iniziale viene caricata con [`LoadUrl(String)`](xref:Android.Webkit.WebView).
 
 Compilare ed eseguire l'app. Verrà visualizzata una semplice app visualizzatore di pagine Web come quella illustrata nello screenshot seguente:
 
@@ -132,5 +132,5 @@ Eseguire di nuovo l'applicazione. A questo punto dovrebbe essere possibile segui
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Call C# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) (Chiamare C# da JavaScript)
-- [Android. WebKit. WebView](xref:Android.Webkit.WebView)
+- [Android.Webkit.WebView](xref:Android.Webkit.WebView)
 - [KeyEvent](xref:Android.Webkit.WebView)

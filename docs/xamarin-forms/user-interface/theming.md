@@ -29,8 +29,8 @@ Il processo di implementazione dei temi di runtime in un'applicazione Novell. Fo
 
 Gli screenshot seguenti mostrano le pagine con tema, con l'applicazione iOS usando un tema chiaro e l'applicazione Android usando un tema scuro:
 
-[![Screenshot della pagina principale di un'app con tema, in iOS e android](theming-images/main-page-both-themes.png "Pagina principale dell'app con tema")](theming-images/main-page-both-themes-large.png#lightbox "Pagina principale dell'app con tema") 
-[![screenshot della pagina dei dettagli di un'app con tema, in iOS e Android](theming-images/detail-page-both-themes.png "Pagina dei dettagli dell'app con tema")](theming-images/detail-page-both-themes-large.png#lightbox "Pagina dei dettagli dell'app con tema")
+[![Screenshot della pagina principale di un'app con tema, in iOS e android](theming-images/main-page-both-themes.png "Pagina principale dell'app con tema")](theming-images/main-page-both-themes-large.png#lightbox "Pagina principale dell'app con tema")
+[ ![screenshot della pagina dei dettagli di un'app con tema, in iOS e Android](theming-images/detail-page-both-themes.png "Pagina dei dettagli dell'app con tema")](theming-images/detail-page-both-themes-large.png#lightbox "Pagina dei dettagli dell'app con tema")
 
 ## <a name="define-themes"></a>Definire i temi
 
@@ -183,7 +183,7 @@ Per altre informazioni sullo stile, vedere [applicazione di stili a Novell. Form
 Quando si seleziona un tema in fase di esecuzione, l'applicazione deve:
 
 1. Rimuovere il tema corrente dall'applicazione. Questa operazione viene eseguita cancellando la proprietà [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) dell' [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)a livello di applicazione.
-2. Carica il tema selezionato. Questa operazione viene eseguita aggiungendo un'istanza del tema selezionato alla proprietà `MergedDictionaries` dell'`ResourceDictionary` a livello di applicazione.
+2. Carica il tema selezionato. Questa operazione viene eseguita aggiungendo un'istanza del tema selezionato alla proprietà `MergedDictionaries` dell'`ResourceDictionary`a livello di applicazione.
 
 Tutti gli oggetti [`VisualElement`](xref:Xamarin.Forms.VisualElement) che impostano proprietà con l'estensione di markup `DynamicResource` applicheranno quindi i nuovi valori del tema. Questo problema si verifica perché l'estensione di markup `DynamicResource` gestisce un collegamento alle chiavi del dizionario. Pertanto, quando i valori associati alle chiavi vengono sostituiti, le modifiche vengono applicate agli oggetti `VisualElement`.
 

@@ -44,7 +44,7 @@ Questa operazione può essere eseguita da Visual Studio per Mac selezionando il 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Il modo più semplice per creare un'associazione consiste nel creare un progetto di binding Novell. iOS.
-È possibile eseguire questa operazione da Visual Studio in Windows selezionando il tipo di progetto, **visual C# > iOS > bindings Library (iOS)**:
+È possibile eseguire questa operazione da Visual Studio in Windows selezionando il tipo di progetto, **visual C# > iOS > bindings Library (iOS)** :
 
 [![](objective-c-libraries-images/00vs-sml.png "iOS Bindings Library iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -132,7 +132,7 @@ public partial class Camera {
 
 La compilazione della libreria produrrà il binding nativo.
 
-Per completare questa associazione, è necessario aggiungere la libreria nativa al progetto.  Per eseguire questa operazione, è possibile aggiungere la libreria nativa al progetto trascinando la libreria nativa da Finder nel progetto in Esplora soluzioni oppure facendo clic con il pulsante destro del mouse sul progetto e scegliendo **aggiungi** > **aggiungere i file** da selezionare. libreria nativa.
+Per completare questa associazione, è necessario aggiungere la libreria nativa al progetto.  È possibile eseguire questa operazione aggiungendo la libreria nativa al progetto, trascinando la libreria nativa da Finder nel progetto in Esplora soluzioni oppure facendo clic con il pulsante destro del mouse sul progetto e scegliendo **aggiungi** > **Aggiungi file** per selezionare la libreria nativa.
 Le librerie native per convenzione iniziano con la parola "lib" e terminano con l'estensione ". a". Quando si esegue questa operazione, Visual Studio per Mac aggiungerà due file: il file. a e un file C# popolato automaticamente che contiene informazioni sul contenuto della libreria nativa:
 
  [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Native libraries by convention start with the word lib and end with the extension .a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
@@ -479,7 +479,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>Associazione degli elenchi di argomenti Objective-C
 
-Objective-C supporta gli argomenti Variadic. Esempio:
+Objective-C supporta gli argomenti Variadic. Ad esempio:
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -522,7 +522,7 @@ A volte si desidera accedere ai campi pubblici dichiarati in una libreria.
 
 In genere questi campi contengono stringhe o valori integer a cui è necessario fare riferimento. Sono comunemente usati come stringhe che rappresentano una notifica specifica e come chiavi nei dizionari.
 
-Per associare un campo, aggiungere una proprietà al file di definizione dell'interfaccia e decorare la proprietà con l'attributo [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) . Questo attributo accetta un parametro, ovvero il nome C del simbolo da cercare. Esempio:
+Per associare un campo, aggiungere una proprietà al file di definizione dell'interfaccia e decorare la proprietà con l'attributo [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) . Questo attributo accetta un parametro, ovvero il nome C del simbolo da cercare. Ad esempio:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -632,7 +632,7 @@ L'attributo [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference
 È possibile decorare i metodi (in valore restituito), i parametri e le proprietà con [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute). L'unica restrizione è che il membro **non deve** trovarsi all'interno di un [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
 o [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) interfaccia.
 
-Esempio:
+Ad esempio:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -647,11 +647,11 @@ Output:
 bool? ShouldDraw (CGRect rect) { ... }
 ```
 
-Internamente si eseguirà il `bool?` <-> `NSNumber` e `CGRect`le conversioni <-> `NSValue`.
+Internamente si eseguirà il `bool?` <-> `NSNumber` e `CGRect`le conversioni  <-> `NSValue`.
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) supporta anche matrici di `NSNumber` `NSValue` e `NSString`(enum).
 
-Esempio:
+Ad esempio:
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -682,7 +682,7 @@ Property (può essere pubblico o privato).
 
 Questo attributo può essere usato senza argomenti per le notifiche che non contengono payload oppure è possibile specificare un `System.Type` che fa riferimento a un'altra interfaccia nella definizione dell'API, in genere con il nome che termina con "EventArgs". Il generatore trasformerà l'interfaccia in una classe che `EventArgs` sottoclassi e includerà tutte le proprietà elencate. È necessario utilizzare l'attributo [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) nella classe EventArgs per elencare il nome della chiave utilizzata per cercare il dizionario Objective-C per recuperare il valore.
 
-Esempio:
+Ad esempio:
 
 ```csharp
 interface MyClass {
@@ -901,11 +901,11 @@ Task<string> LoadFileAsync (string file);
 
 ### <a name="surfacing-strong-types-for-weak-nsdictionary-parameters"></a>Emersione di tipi forti per i parametri NSDictionary vulnerabili
 
-In molte posizioni nell'API Objective-C, i parametri vengono passati come API di `NSDictionary` con tipizzazione debole con chiavi e valori specifici, ma sono soggetti a errori (è possibile passare chiavi non valide e non ricevere avvisi; è possibile passare valori non validi e non ricevere avvisi) e frustranti da usare Poiché richiedono più viaggi alla documentazione per cercare i nomi e i valori delle chiavi possibili.
+In molte posizioni nell'API Objective-C, i parametri vengono passati come API di `NSDictionary` con tipizzazione debole con chiavi e valori specifici, ma questi sono soggetti a errori (è possibile passare chiavi non valide e non ricevere avvisi; è possibile passare valori non validi e non ricevere avvisi) e frustranti da usare perché richiedono più viaggi alla documentazione per cercare i nomi e i valori delle chiavi possibili.
 
 La soluzione consiste nel fornire una versione fortemente tipizzata che fornisca la versione fortemente tipizzata dell'API e che dietro le quinte venga eseguito il mapping dei vari valori e chiavi sottostanti.
 
-Se, ad esempio, l'API Objective-C accetta una `NSDictionary` e viene documentata come prendendo la chiave `XyzVolumeKey`, che accetta un `NSNumber` con un valore di volume compreso tra 0,0 e 1,0 e un `XyzCaptionKey` che accetta una stringa si vuole che gli utenti dispongano di un'API gradevole simile alla seguente:
+Se, ad esempio, l'API Objective-C accetta un `NSDictionary` ed è documentata come prendendo la chiave `XyzVolumeKey`, che accetta un `NSNumber` con un valore di volume compreso tra 0,0 e 1,0 e un `XyzCaptionKey` che accetta una stringa, si vuole che gli utenti dispongano di un'API gradevole simile alla seguente:
 
 ```csharp
 public class  XyzOptions {
@@ -1053,9 +1053,9 @@ La tabella seguente illustra come eseguire il mapping dei tipi dal mondo Objecti
 
 <a name="Arrays" />
 
-### <a name="arrays"></a>Array
+### <a name="arrays"></a>Matrici
 
-Il runtime di Novell. iOS gestisce automaticamente la conversione C# di matrici in`NSArrays`ed esegue la conversione, quindi, ad esempio, il metodo di Objective-C immaginaria che restituisce un`NSArray`di`UIViews`:
+Il runtime di Novell. iOS gestisce automaticamente la conversione C# di matrici in `NSArrays` ed esegue la conversione, quindi, ad esempio, il metodo di Objective-C immaginaria che restituisce un `NSArray` di `UIViews`:
 
 ```csharp
 // Get the peer views - untyped
@@ -1111,7 +1111,7 @@ class DialogPrint : UIViewController {
 }
 ```
 
-Per rendere il binding più bello C# per gli sviluppatori, in genere si fornirà un metodo che accetta un parametro`NSAction`C# , che consente di utilizzare delegati e espressioni lambda al posto delle`Target+Selector`. A tale scopo, in genere si nasconde il metodo `SetTarget` contrassegnando il metodo con un [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+Per rendere il binding più bello C# per gli sviluppatori, in genere si fornirà un metodo che accetta un parametro `NSAction` C# , che consente di utilizzare delegati e espressioni lambda al posto delle `Target+Selector`. A tale scopo, in genere si nasconde il metodo `SetTarget` contrassegnando il metodo con un [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
 e quindi esporre un nuovo metodo di supporto, come segue:
 
 ```csharp
@@ -1328,7 +1328,7 @@ viene usato per specificare l'argomento di input che verrà restituito.
 
 Se si stanno associando API che non fanno parte dell'applicazione, è necessario assicurarsi che il file eseguibile sia collegato a queste librerie.
 
-È necessario informare Novell. iOS come collegare le librerie. questa operazione può essere eseguita modificando la configurazione della build per richiamare il comando `mtouch` con alcuni argomenti di compilazione aggiuntivi che specificano la modalità di collegamento alle nuove librerie con l'opzione "-gcc_flags" , seguito da una stringa racchiusa tra virgolette contenente tutte le librerie aggiuntive necessarie per il programma, in questo modo:
+È necessario informare Novell. iOS come collegare le librerie. questa operazione può essere eseguita modificando la configurazione della build per richiamare il comando `mtouch` con alcuni argomenti di compilazione aggiuntivi che specificano come collegare le nuove librerie usando l'opzione "-gcc_flags", seguita da una stringa racchiusa tra virgolette che contiene tutte le librerie aggiuntive necessarie per il programma, in questo modo:
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -force_load -lSystemLibrary -framework CFNetwork -ObjC"
@@ -1337,7 +1337,7 @@ Se si stanno associando API che non fanno parte dell'applicazione, è necessario
 Nell'esempio precedente vengono collegati `libMyLibrary.a`, `libSystemLibrary.dylib` e la libreria `CFNetwork` Framework nell'eseguibile finale.
 
 In alternativa, è possibile sfruttare i vantaggi del [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)a livello di assembly, che è possibile incorporare nei file di contratto, ad esempio `AssemblyInfo.cs`.
-Quando si usa il [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), è necessario che la libreria nativa sia disponibile quando si crea l'associazione, in quanto in questo modo verrà incorporata la libreria nativa con l'applicazione. Esempio:
+Quando si usa il [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), è necessario che la libreria nativa sia disponibile quando si crea l'associazione, in quanto in questo modo verrà incorporata la libreria nativa con l'applicazione. Ad esempio:
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:
@@ -1347,7 +1347,7 @@ Quando si usa il [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding
 [assembly: LinkWith ("libMyLibrary.a", LinkTarget.ArmV6 | LinkTarget.ArmV7 | LinkTarget.Simulator, ForceLoad = true, IsCxx = true)]
 ```
 
-Ci si potrebbe chiedere, perché è necessario `-force_load` comando e il motivo è che il flag-ObjC, anche se compila il codice in, non mantiene i metadati necessari per supportare le categorie (l'eliminazione del codice indesiderato del linker/compilatore) necessario in Runtime per Novell. iOS.
+Ci si potrebbe chiedere, perché è necessario `-force_load` comando e il motivo è che il flag-ObjC, anche se compila il codice in, non mantiene i metadati necessari per supportare le categorie (l'eliminazione del codice indesiderato del linker/compilatore), che è necessario in fase di esecuzione per Novell. iOS.
 
 <a name="Assisted_References" />
 

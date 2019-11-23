@@ -45,7 +45,7 @@ Per creare un nuovo Gruppo di app, eseguire le operazioni seguenti:
 
 Dopo aver creato il Gruppo di app, configurare gli ID delle app in modo che le app possano usarlo.
 
-Procedere come descritto di seguito:
+eseguire le operazioni descritte di seguito.
 
 1. Visitare  [iOS Developer Center](https://developer.apple.com/account/) di Apple e accedere con un account sviluppatore Apple.
 2. Nel menu **Program Resources** (Risorse del programma) selezionare **Certificates, IDs & Profiles** (Certificati, ID e profili).

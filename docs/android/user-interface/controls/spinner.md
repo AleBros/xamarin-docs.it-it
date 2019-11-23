@@ -21,7 +21,7 @@ ms.locfileid: "73029156"
 
 Nella prima parte di questa esercitazione verrà creato un semplice widget Spinner che visualizza un elenco di pianeti. Quando viene selezionato un pianeta, un messaggio di avviso popup Visualizza l'elemento selezionato:
 
-[schermate di esempio![dell'app HelloSpinner](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
+[schermate di esempio ![dell'app HelloSpinner](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
 
 Avviare un nuovo progetto denominato **HelloSpinner**.
 

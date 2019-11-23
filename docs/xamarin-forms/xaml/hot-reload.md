@@ -35,9 +35,9 @@ Xamarin.Forms | 4,1 o versione successiva
 
 Non è necessaria alcuna installazione o installazione aggiuntiva per usare il ricaricamento a caldo di XAML. È incorporata in Visual Studio e può essere abilitata nelle impostazioni dell'IDE. Una volta abilitata, è possibile iniziare a usare il ricaricamento a caldo di XAML eseguendo il debug dell'app in un emulatore, un simulatore o un dispositivo fisico. Attualmente, il ricaricamento a caldo di XAML funziona solo quando si esegue il debug in iOS o Android.
 
-In Windows è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricarica a caldo Novell** in **strumenti** > **opzioni** > **Novell** > **ricarica a caldo**.
+In Windows è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricarica a caldo Novell** in **strumenti** > **Opzioni** > **Novell** > **ricarica a caldo**.
 
-In un Mac è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricaricamento a caldo Novell** in **Visual Studio** > **preferenze** > **progetti** > **Novell Hot reload**.
+In un Mac è possibile abilitare il ricaricamento a caldo di XAML selezionando la casella di controllo **Abilita ricaricamento a caldo di Novell** in **Visual Studio** > **Preferenze** > **progetti** > **ricaricamento a caldo**.
 
 ## <a name="resilient-reloading"></a>Ricaricamento resiliente
 
@@ -65,4 +65,4 @@ Se si fa parte dell'anteprima privata, l'estensione per il ricaricamento a caldo
 - Se non si verifica nulla quando si salva il file XAML, verificare che il ricaricamento a caldo sia abilitato nell'IDE.
 - Se si sta eseguendo il debug in un iPhone fisico e l'app smette di rispondere, verificare che l'interprete sia abilitato. Per attivarlo, aggiungere l' **interprete** al campo **argomenti mTouch aggiuntivi** nelle impostazioni di compilazione iOS.
 
-Per segnalare un bug, usare lo strumento per il feedback nella **guida**@no__t-**1 inviare commenti e suggerimenti** > **segnalare un problema** in Windows e il menu **Guida** > **segnala un problema** in un computer Mac.
+Per segnalare un bug, usare lo strumento per il feedback nella **guida** > **inviare commenti e suggerimenti** > **segnalare un problema** in Windows e la **Guida** > **segnalare un problema** in un Mac.

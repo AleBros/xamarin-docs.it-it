@@ -29,7 +29,7 @@ Alcuni termini e concetti sono importanti da comprendere per supportare più sch
 
 - Il **pixel a densità indipendente (DP)** &ndash; un'unità virtuale di misura per consentire la progettazione di layout indipendenti dalla densità. Questa formula viene usata per convertire il DP in pixel dello schermo:
 
-    PX &equals; DP &times; dpi &divide; 160
+    px &equals; dp &times; dpi &divide; 160
 
 - L' **orientamento** &ndash; orientamento dello schermo viene considerato orizzontale quando è più ampio rispetto a quello di altezza. Al contrario, l'orientamento verticale è quando lo schermo è più alto di quello di larghezza. L'orientamento può variare durante il ciclo di vita di un'applicazione mentre l'utente ruota il dispositivo.
 
@@ -55,11 +55,11 @@ Le sei schermate supportate sono dichiarate nel file **Proprietà/file AndroidMa
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[Manifesto![Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[Manifesto ![Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio per Mac](#tab/macos)
 
-[Manifesto![Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[Manifesto ![Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
@@ -112,7 +112,7 @@ Come riferimento, di seguito sono riportati alcuni numeri per i diversi disposit
 
 - **10 "tablet** &ndash; 720 DP: come Motorola XOOM
 
-Per le applicazioni destinate a livelli API fino a 12 (Android 3,1), i layout devono essere inseriti in directory che usano i qualificatori **small**/**normal**/**large**/**XLarge** come generalizzazioni delle varie schermate dimensioni disponibili nella maggior parte dei dispositivi. Nell'immagine seguente, ad esempio, sono disponibili risorse alternative per le quattro diverse dimensioni dello schermo:
+Per le applicazioni destinate a livelli API fino a 12 (Android 3,1), i layout devono essere inseriti in directory che usano i qualificatori **small**/**normal**/**large**/**XLarge** come generalizzazioni delle diverse dimensioni dello schermo disponibili nella maggior parte dei dispositivi. Nell'immagine seguente, ad esempio, sono disponibili risorse alternative per le quattro diverse dimensioni dello schermo:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -178,9 +178,9 @@ Android viene eseguito su un numero sconcertante di dispositivi e la combinazion
 - **Evitare** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout)
   **laddove possibile** &ndash; è deprecato in API Level 3 (Android 1,5) e comporterà un layout fragile. Non deve essere usato. Provare invece a usare widget di layout più flessibili, ad esempio [**LinearLayout**](xref:Android.Widget.LinearLayout), [**sul relativelayout**](xref:Android.Widget.RelativeLayout)o il nuovo [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Selezionare un orientamento del layout come predefinito** &ndash; ad esempio, anziché fornire le risorse alternative **layout-Land** e **layout-Port**, inserire le risorse per l'orizzontale nel **layout**e le risorse per il verticale in **Layout: porta**.
+- **Selezionare un orientamento del layout come predefinito** &ndash; ad esempio, anziché fornire le risorse alternative **layout-Land** e **layout-Port**, inserire le risorse per il panorama orizzontale nel **layout**e le risorse per Portrait in **layout-Port**.
 
-- **Usare LayoutParams per l'altezza e la larghezza** : quando si definiscono gli elementi dell'interfaccia utente in un file di layout XML, un'applicazione Android che usa i valori **wrap_content** e **fill_parent** avrà maggiore successo garantendo un aspetto corretto tra dispositivi diversi rispetto a uso di unità in pixel o con densità indipendenti. Questi valori di dimensione fanno sì che Android ridimensiona le risorse bitmap nel modo appropriato. Per questo stesso motivo, le unità indipendenti dalla densità sono particolarmente riservate quando si specificano i margini e la spaziatura interna degli elementi dell'interfaccia utente.
+- **Usare LayoutParams per l'altezza e la larghezza** : quando si definiscono gli elementi dell'interfaccia utente in un file di layout XML, un'applicazione Android che usa i valori **wrap_content** e **fill_parent** avrà maggiore successo, assicurerà una corretta ricerca tra dispositivi diversi rispetto all'uso di unità pixel o indipendenti dalla densità. Questi valori di dimensione fanno sì che Android ridimensiona le risorse bitmap nel modo appropriato. Per questo stesso motivo, le unità indipendenti dalla densità sono particolarmente riservate quando si specificano i margini e la spaziatura interna degli elementi dell'interfaccia utente.
 
 ## <a name="testing-multiple-screens"></a>Test di più schermate
 

@@ -34,7 +34,7 @@ Android fornisce le API seguenti che consentono di eseguire il lavoro in backgro
 Sono disponibili due funzionalità principali per eseguire in modo efficiente il lavoro in background (talvolta definito _processo in background_ o _processo_):
 
 1. **Pianificare in modo intelligente il lavoro** &ndash; è importante che, quando un'applicazione esegue il lavoro in background, come un valido cittadino. Idealmente, l'applicazione non deve richiedere l'esecuzione di un processo. Al contrario, l'applicazione deve specificare le condizioni che devono essere soddisfatte per il momento in cui il processo può essere eseguito, quindi pianificare il lavoro da eseguire quando vengono soddisfatte le condizioni. Ciò consente ad Android di eseguire in modo intelligente il lavoro. Ad esempio, è possibile che le richieste di rete vengano eseguite in batch in modo che vengano eseguite contemporaneamente per sfruttare al massimo l'overhead richiesto per la rete.
-2. L' **incapsulamento del lavoro** &ndash; il codice per eseguire le operazioni in background deve essere incapsulato in un componente discreto che può essere eseguito indipendentemente dall'interfaccia utente e sarà relativamente semplice da ripianificare se il lavoro non viene completato per alcuni motivo.
+2. L' **incapsulamento del lavoro** &ndash; il codice per eseguire le operazioni in background deve essere incapsulato in un componente discreto che può essere eseguito indipendentemente dall'interfaccia utente e sarà relativamente semplice da ripianificare se il lavoro non viene completato per qualche motivo.
 
 Il dispatcher del processo Firebase è una libreria di Google che fornisce un'API Fluent per semplificare la pianificazione del lavoro in background. È destinato a essere la sostituzione di Google Cloud Manager. Il dispatcher del processo Firebase è costituito dalle API seguenti:
 
@@ -125,7 +125,7 @@ Una volta creata un'istanza del `FirebaseJobDispatcher`, è possibile creare un 
 
 ### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Creazione di un Firebase. JobDispatcher. job con Job. Builder
 
-La classe `Firebase.JobDispatcher.Job` è responsabile dell'incapsulamento dei metadati necessari per l'esecuzione di un `JobService`. Un oggetto @ no__t_0_ contiene informazioni quali i vincoli che devono essere soddisfatti prima di poter eseguire il processo, se il `Job` è ricorrente o qualsiasi trigger che provocherà l'esecuzione del processo.  Come minimo, un `Job` deve avere un _tag_ , ovvero una stringa univoca che identifica il processo al `FirebaseJobDispatcher`, e il tipo di `JobService` da eseguire. Il dispatcher del processo Firebase creerà un'istanza del `JobService` quando è il momento di eseguire il processo.  Viene creata una `Job` usando un'istanza della classe `Firebase.JobDispatcher.Job.JobBuilder`. 
+La classe `Firebase.JobDispatcher.Job` è responsabile dell'incapsulamento dei metadati necessari per l'esecuzione di un `JobService`. Un`Job` contiene informazioni quali eventuali vincoli che devono essere soddisfatti prima di poter eseguire il processo, se il `Job` è ricorrente o qualsiasi trigger che provocherà l'esecuzione del processo.  Come minimo, un `Job` deve avere un _tag_ , ovvero una stringa univoca che identifica il processo al `FirebaseJobDispatcher`, e il tipo di `JobService` da eseguire. Il dispatcher del processo Firebase creerà un'istanza del `JobService` quando è il momento di eseguire il processo.  Viene creata una `Job` usando un'istanza della classe `Firebase.JobDispatcher.Job.JobBuilder`. 
 
 Il frammento di codice seguente è l'esempio più semplice per creare un `Job` usando il binding Novell. Android:
 
@@ -289,6 +289,6 @@ Questa guida ha illustrato come usare il dispatcher del processo Firebase per es
 
 - [Novell. Firebase. JobDispatcher in NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [Firebase-job-Dispatcher su GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
-- [Binding Novell. Firebase. JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
+- [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Pianificazione intelligente del processo](https://developer.android.com/topic/performance/scheduling.html)
 - [Ottimizzazioni della memoria e della batteria Android-Google I/O 2016 (video)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)

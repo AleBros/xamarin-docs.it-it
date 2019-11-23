@@ -1117,7 +1117,7 @@ Tutti i comandi di acquisizione racchiusi tra parentesi sono implementati nella 
 Per gestire le impostazioni sono state implementate due nuove classi:
 
 - `AVCaptureAutoExposureBracketedStillImageSettings`: ha una proprietà, `ExposureTargetBias`, usata per impostare la distorsione per una parentesi di esposizione automatica.
-- `AVCaptureManual` @ no__t_1_: dispone di due proprietà, `ExposureDuration` e `ISO`, utilizzate per impostare la velocità dell'otturatore e l'ISO per una parentesi di esposizione manuale.  
+- `AVCaptureManual``ExposureBracketedStillImageSettings`: sono presenti due proprietà, `ExposureDuration` e `ISO`, utilizzate per impostare la velocità dell'otturatore e l'ISO per una parentesi di esposizione manuale.
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>I controlli di acquisizione tra parentesi fanno e non
 

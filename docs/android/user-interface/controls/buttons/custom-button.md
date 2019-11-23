@@ -21,7 +21,7 @@ Fare clic con il pulsante destro del mouse e scaricare le tre immagini seguenti,
 
  [![icona Android verde per lo stato normale](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [![icona Android arancione per lo stato attivo](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [![icona Android gialla per](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox) lo stato premuto
 
-Creare un nuovo file nella directory **Resources/** di cui è stato creato il nome **android_button. XML**. Inserire il codice XML seguente:
+Creare un nuovo file nella directory **Resources/** designable denominata **android_button. XML**. Inserire il codice XML seguente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -18,7 +18,7 @@ ms.locfileid: "70771503"
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
 
-_Gli effetti semplificano la personalizzazione di un controllo. Questo articolo spiega come creare un effetto che cambia il colore di sfondo del controllo Entry quando il controllo riceve lo stato attivo._
+_Gli effetti semplificano la personalizzazione di un controllo. Questo articolo illustra come creare un effetto che modifica il colore di sfondo del controllo entry quando il controllo ottiene lo stato attivo._
 
 Il processo per la creazione di un effetto in ogni progetto specifico della piattaforma è come segue:
 
@@ -33,7 +33,7 @@ L'effetto può quindi essere utilizzato associandolo al controllo appropriato.
 > [!NOTE]
 > La specifica di un effetto nel progetto di ogni piattaforma è facoltativa. Se si tenta di usare un effetto quando non ne sono stati registrati, verrà restituito un valore non null che non esegue alcuna operazione.
 
-L'applicazione di esempio illustra un `FocusEffect` che cambia il colore di sfondo di un controllo quando ottiene lo stato attivo. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazione tra di esse:
+L'applicazione di esempio illustra un `FocusEffect` che cambia il colore di sfondo di un controllo quando ottiene lo stato attivo. Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazioni tra di essi:
 
 ![](creating-images/focus-effect.png "Responsabilità dei progetti per l'effetto stato attivo")
 

@@ -29,11 +29,11 @@ Novell. Android 10,0 fornisce supporto per Android 10. Per ulteriori informazion
 L'elenco seguente è necessario per usare le funzionalità di Android 10 nelle app basate su Novell:
 
 - **Visual Studio** : visual studio 2019 è consigliato. In Windows Update per Visual Studio 2019 versione 16,3 o successiva. In macOS eseguire l'aggiornamento a Visual Studio 2019 per Mac versione 8,3 o successiva.
-- **Novell. Android** : Novell. Android 10,0 o versione successiva deve essere installato con Visual Studio (Novell. Android viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** in Windows e installato come parte di **Visual Studio per il programma di installazione di Mac**)
+- **Novell. Android** : Novell. Android 10,0 o versione successiva deve essere installato con Visual Studio (Novell. Android viene installato automaticamente come parte del carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** in Windows e installato come parte del **programma di installazione di Visual Studio per Mac**)
 - **Java Developer Kit** : lo sviluppo di Novell. Android 10,0 richiede JDK 8. La distribuzione di Microsoft OpenJDK viene installata automaticamente come parte di Visual Studio.
 - **Android SDK** Android SDK API 29 deve essere installata tramite il gestore Android SDK.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 Per iniziare a sviluppare app Android 10 con Novell. Android, è necessario scaricare e installare gli strumenti e i pacchetti SDK più recenti prima di poter creare il primo progetto Android 10:
 

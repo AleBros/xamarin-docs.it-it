@@ -73,7 +73,7 @@ Se è necessario espandere un progetto PCL o un progetto .NET Standard esistente
 [![](single-codebase-images/add-later-platforms-sml.png "Add platform options such as iOS, Android, and Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
 Dopo la conversione in un progetto condiviso, visitare le **Opzioni del progetto > pacchetto NuGet > assembly di riferimento**
-[sezione](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) e assicurarsi che siano selezionati tutti i profili necessari, in modo che NuGet continui a essere compatibile con i progetti che era usato in precedenza in).
+[sezione](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) e assicurarsi che siano selezionati tutti i profili necessari, in modo che NuGet continui a essere compatibile con i progetti usati in precedenza in.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

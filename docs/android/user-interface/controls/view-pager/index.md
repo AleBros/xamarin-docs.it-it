@@ -44,7 +44,7 @@ Per usare `ViewPager` nel progetto di app, è necessario installare il pacchetto
 Vengono usati tre componenti per implementare la navigazione gestuale con `ViewPager`:
 
 - ViewPager
-- Adattatore
+- Adapter
 - Indicatore cercapersone
 
 Ognuno di questi componenti è riepilogato di seguito.
@@ -55,7 +55,7 @@ Ognuno di questi componenti è riepilogato di seguito.
 
 [![primo piano dell'app TreePager che visualizza una transizione tra le visualizzazioni](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
-### <a name="adapter"></a>Adattatore
+### <a name="adapter"></a>Adapter
 
 `ViewPager` estrae i dati da un *Adapter*. Il processo dell'adapter consiste nel creare le `View`visualizzate dall'`ViewPager`, fornendole in base alle esigenze. Il diagramma seguente illustra questo concetto &ndash; l'adapter crea e popola `View`s e le fornisce al `ViewPager`. Quando il `ViewPager` rileva i movimenti di scorrimento dell'utente, chiede all'adapter di fornire i `View` appropriati da visualizzare: 
 
@@ -67,7 +67,7 @@ In questo particolare esempio, ogni `View` viene costruita da un'immagine dell'a
 
 `ViewPager` possibile utilizzare per visualizzare un set di dati di grandi dimensioni (ad esempio, una raccolta immagini può contenere centinaia di immagini). Per consentire all'utente di spostarsi tra set di dati di grandi dimensioni, `ViewPager` spesso è accompagnato da un *indicatore cercapersone* che visualizza una stringa. La stringa può essere il titolo dell'immagine, una didascalia o semplicemente la posizione della visualizzazione corrente all'interno del set di dati. 
 
-Sono disponibili due visualizzazioni che possono produrre le informazioni di navigazione seguenti: `PagerTabStrip` e `PagerTitleStrip.` ciascuna di esse Visualizza una stringa nella parte superiore di un `ViewPager`ed esegue il pull dei dati dalla scheda `ViewPager`in modo che rimanga sempre sincronizzata con il @no__t_ attualmente visualizzato. 4_ . La differenza tra di essi è che `PagerTabStrip` include un indicatore visivo per la stringa "corrente" mentre `PagerTitleStrip` non lo è, come illustrato nelle schermate seguenti: 
+Sono disponibili due visualizzazioni che possono produrre le informazioni di navigazione seguenti: `PagerTabStrip` e `PagerTitleStrip.` ciascuna di esse Visualizza una stringa nella parte superiore di un `ViewPager`ed esegue il pull dei dati dalla scheda `ViewPager`in modo che rimanga sempre sincronizzata con il `View`attualmente visualizzato. La differenza tra di essi è che `PagerTabStrip` include un indicatore visivo per la stringa "corrente" mentre `PagerTitleStrip` non lo è, come illustrato nelle schermate seguenti: 
 
 [![screenshot dell'app TreePager con PagerTitleStrip e PagerTabStrip](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
 
