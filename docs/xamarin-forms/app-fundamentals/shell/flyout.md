@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
+ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889188"
+ms.lasthandoff: 11/24/2019
+ms.locfileid: "74451814"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Riquadro a comparsa della shell Xamarin.Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "69889188"
 
 Il riquadro a comparsa è il menu radice per un'applicazione shell ed è accessibile attraverso un'icona o tramite scorrimento rapido dal lato dello schermo. Il riquadro a comparsa è costituito da un'intestazione facoltativa, elementi del riquadro a comparsa e voci di menu facoltative:
 
-![Screenshot di un riquadro a comparsa della shell con annotazioni](flyout-images/flyout-annotated.png "Riquadro a comparsa con annotazioni")
+![Screenshot of a Shell annotated flyout](flyout-images/flyout-annotated.png "Annotated flyout")
 
 Se necessario, è possibile impostare il colore di sfondo del riquadro a comparsa su un valore [`Color`](xref:Xamarin.Forms.Color) tramite la proprietà associabile `Shell.FlyoutBackgroundColor`. Questa proprietà può anche essere impostata da un foglio di stile CSS (Cascading Style Sheet). Per altre informazioni, vedere [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties) (Proprietà specifiche della shell Xamarin.Forms).
 
@@ -40,7 +40,7 @@ Per impostazione predefinita, le applicazioni shell hanno un'icona hamburger che
 È possibile accedere al riquadro a comparsa attraverso l'icona hamburger o tramite scorrimento rapido dal lato dello schermo. Questo comportamento può essere tuttavia modificato impostando la proprietà associata `Shell.FlyoutBehavior` su uno dei membri dell'enumerazione `FlyoutBehavior`:
 
 - `Disabled`: indica che il riquadro a comparsa non può essere aperto dall'utente.
-- `Flyout`: indica che il riquadro a comparsa può essere aperto e chiuso dall'utente. Questo è il valore predefinito per la proprietà `FlyoutBehavior`.
+- `Flyout`: indica che il riquadro a comparsa può essere aperto e chiuso dall'utente. È il valore predefinito per la proprietà `FlyoutBehavior`.
 - `Locked`: indica che il riquadro a comparsa non può essere chiuso dall'utente e che non si sovrappone al contenuto.
 
 L'esempio seguente mostra come disabilitare il riquadro a comparsa:
@@ -93,7 +93,7 @@ Il tipo `FlyoutHeader` è illustrato nell'esempio seguente:
 
 Il risultato è l'intestazione del riquadro a comparsa seguente:
 
-![Screenshot dell'intestazione del riquadro a comparsa](flyout-images/flyout-header.png "Intestazione del riquadro a comparsa")
+![Screenshot of the flyout header](flyout-images/flyout-header.png "Intestazione del riquadro a comparsa")
 
 In alternativa, l'aspetto dell'intestazione del riquadro a comparsa può essere definito impostando la proprietà `Shell.FlyoutHeaderTemplate` su un oggetto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
@@ -155,7 +155,7 @@ L'esempio seguente mostra l'impostazione di queste proprietà:
 
 Nel riquadro a comparsa viene quindi visualizzata un'immagine di sfondo:
 
-![Screenshot di un'immagine di sfondo del riquadro a comparsa](flyout-images/flyout-backgroundimage.png "Immagine di sfondo del riquadro a comparsa")
+![Screenshot of a flyout background image](flyout-images/flyout-backgroundimage.png "Immagine di sfondo del riquadro a comparsa")
 
 ## <a name="flyout-items"></a>Elementi del riquadro a comparsa
 
@@ -193,7 +193,7 @@ L'esempio seguente crea un riquadro a comparsa contenente un'intestazione e due 
 
 In questo esempio è possibile accedere a ogni oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage) solo tramite gli elementi del riquadro a comparsa:
 
-[![Screenshot di un'app shell di due pagine con elementi del riquadro a comparsa, in iOS e Android](flyout-images/two-page-app-flyout.png "App shell di due pagine con elementi del riquadro a comparsa")](flyout-images/two-page-app-flyout-large.png#lightbox "App shell di due pagine con elementi del riquadro a comparsa")
+[![Screenshot of a Shell two page app with flyout items, on iOS and Android](flyout-images/two-page-app-flyout.png "Shell two page app with flyout items")](flyout-images/two-page-app-flyout-large.png#lightbox "Shell two page app with flyout items")
 
 > [!NOTE]
 > Quando l'intestazione del riquadro a comparsa non è presente, gli elementi del riquadro a comparsa vengono visualizzati nella parte superiore del riquadro. In caso contrario, vengono visualizzati sotto l'intestazione.
@@ -300,7 +300,7 @@ In questo esempio vengono creati elementi del riquadro a comparsa per l'oggetto 
 
 Il risultato sono gli elementi del riquadro a comparsa seguenti:
 
-[![Screenshot del riquadro a comparsa contenente oggetti FlyoutItem, in iOS e Android](flyout-images/flyout-reduced.png "Riquadro a comparsa della shell contenente oggetti FlyoutItem")](flyout-images/flyout-reduced-large.png#lightbox "Riquadro a comparsa della shell contenente oggetti FlyoutItem")
+[![Screenshot of flyout containing FlyoutItem objects, on iOS and Android](flyout-images/flyout-reduced.png "Shell flyout containing FlyoutItem objects")](flyout-images/flyout-reduced-large.png#lightbox "Shell flyout containing FlyoutItem objects")
 
 ## <a name="define-flyoutitem-appearance"></a>Definire l'aspetto di un oggetto FlyoutItem
 
@@ -331,10 +331,73 @@ L'aspetto di ogni oggetto `FlyoutItem` può essere personalizzato impostando la 
 
 Questo esempio visualizza il titolo di ogni oggetto `FlyoutItem` in corsivo:
 
-[![Screenshot degli oggetti FlyoutItem basati su modello, in iOS e Android](flyout-images/flyoutitem-templated.png "Oggetti FlyoutItem della shell basati su modello")](flyout-images/flyoutitem-templated-large.png#lightbox "Oggetti FlyoutItem della shell basati su modello")
+[![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png "Shell templated FlyoutItem objects")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
+
+
+Because `Shell.ItemTemplate` is an attached property, different templates can be attached to specific `FlyoutItem` objects.
 
 > [!NOTE]
 > La shell fornisce le proprietà `Title` e `FlyoutIcon` all'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di `ItemTemplate`.
+
+
+### <a name="default-template-for-flyoutitems-and-menuitems"></a>Default Template for FlyoutItems and MenuItems
+Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual State Manager features of the flyout items. This same template can also be used for MenuItems
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## <a name="flyoutitem-tab-order"></a>Ordine di tabulazione degli oggetti FlyoutItem
 
@@ -403,7 +466,7 @@ Gli oggetti [`MenuItem`](xref:Xamarin.Forms.MenuItem) possono essere aggiunti al
 
 Questo codice aggiunge due oggetti [`MenuItem`](xref:Xamarin.Forms.MenuItem) al riquadro a comparsa, al di sotto di tutti gli elementi del riquadro a comparsa:
 
-[![Screenshot del riquadro a comparsa contenente oggetti MenuItem, in iOS e Android](flyout-images/flyout.png "Riquadro a comparsa della shell contenente oggetti MenuItem")](flyout-images/flyout-large.png#lightbox "Riquadro a comparsa della shell contenente oggetti MenuItem")
+[![Screenshot of flyout containing MenuItem objects, on iOS and Android](flyout-images/flyout.png "Shell flyout containing MenuItem objects")](flyout-images/flyout-large.png#lightbox "Shell flyout containing MenuItem objects")
 
 Il primo oggetto [`MenuItem`](xref:Xamarin.Forms.MenuItem) esegue un comando `ICommand` denominato `RandomPageCommand`, che passa a una pagina casuale nell'applicazione. Il secondo oggetto `MenuItem` esegue un comando `ICommand` denominato `HelpCommand`, che apre l'URL specificato dalla proprietà `CommandParameter` in un Web browser.
 
@@ -446,10 +509,10 @@ L'aspetto di ogni oggetto `MenuItem` può essere personalizzato impostando la pr
 
 Questo esempio associa la proprietà `MenuItemTemplate` a livello di shell a ogni oggetto `MenuItem`, visualizzando il titolo di ogni oggetto `MenuItem` in corsivo:
 
-[![Screenshot degli oggetti MenuItem basati su modello, in iOS e Android](flyout-images/menuitem-templated.png "Oggetti MenuItem della shell basati su modello")](flyout-images/menuitem-templated-large.png#lightbox "Oggetti MenuItem della shell basati su modello")
+[![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png "Shell templated MenuItem objects")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
-> La shell fornisce le proprietà [`Text`](xref:Xamarin.Forms.MenuItem.Text) e [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) all'oggetto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) di `MenuItemTemplate`.
+> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`. You can also use `Title` in place of `Text` and `Icon` in place of `IconImageSource` which will let you reuse the same template for Menu Items and Flyout Items
 
 Dato che `Shell.MenuItemTemplate` è una proprietà associata, si possono associare modelli diversi a oggetti `MenuItem` specifici:
 
@@ -488,6 +551,10 @@ Dato che `Shell.MenuItemTemplate` è una proprietà associata, si possono associ
     </MenuItem>
 </Shell>
 ```
+
+
+> [!NOTE]
+> The same template used for [Flyout Items](#default-template-for-flyoutitems-and-menuitems) can also be used for Menu Items.
 
 Questo esempio associa la proprietà `MenuItemTemplate` a livello di shell al primo oggetto `MenuItem` e associa la proprietà `MenuItemTemplate` inline al secondo `MenuItem`.
 
