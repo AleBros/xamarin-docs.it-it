@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Essentials Platform Extensions
-description: Xamarin.Essentials provides several platform extension methods when having to work with platform types such as Rect, Size, and Point.
+title: Estensioni di piattaforma Xamarin.Essentials
+description: Xamarin.Essentials mette a disposizione diversi metodi di estensione piattaforma a cui ricorrere per lavorare, ad esempio, con tipi di piattaforma Rect, Size e Point.
 ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
 author: jamesmontemagno
 ms.author: jamont
@@ -12,25 +12,25 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/26/2019
 ms.locfileid: "74536493"
 ---
-# <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Platform Extensions
+# <a name="xamarinessentials-platform-extensions"></a>Novell. Essentials: estensioni della piattaforma
 
-Xamarin.Essentials provides several platform extension methods when having to work with platform types such as Rect, Size, and Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici. 
+Xamarin.Essentials mette a disposizione diversi metodi di estensione piattaforma a cui ricorrere per lavorare, ad esempio, con tipi di piattaforma Rect, Size e Point. Ciò significa che è possibile convertire la versione `System` di questi tipi nella versione iOS, Android e UWP dei tipi specifici. 
 
-## <a name="get-started"></a>Wprowadzenie
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
-## <a name="using-platform-extensions"></a>Using Platform Extensions
+## <a name="using-platform-extensions"></a>Uso delle estensioni di piattaforma
 
-Add a reference to Xamarin.Essentials in your class:
+Aggiungere un riferimento a Xamarin.Essentials nella classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-All platform extensions can only be called from the iOS, Android, or UWP project.
+Tutte le estensioni di piattaforma possono essere chiamate solo dal progetto iOS, Android o UWP.
 
-### <a name="point"></a>Point
+### <a name="point"></a>Punto
 
 ```csharp
 var system = new System.Drawing.Point(x, y);
@@ -42,7 +42,7 @@ var platform = system.ToPlatformPoint();
 var system2 = platform.ToSystemPoint();
 ```
 
-### <a name="size"></a>Rozmiar
+### <a name="size"></a>Dimensione
 
 ```csharp
 var system = new System.Drawing.Size(width, height);
@@ -54,7 +54,7 @@ var platform = system.ToPlatformSize();
 var system2 = platform.ToSystemSize();
 ```
 
-### <a name="rectangle"></a>Rectangle
+### <a name="rectangle"></a>Rettangolo
 
 ```csharp
 var system = new System.Drawing.Rectangle(x, y, width, height);
@@ -66,7 +66,7 @@ var platform = system.ToPlatformRectangle();
 var system2 = platform.ToSystemRectangle();
 ```
 
-## <a name="api"></a>interfejs API
+## <a name="api"></a>API
 
 - [Codice sorgente dei convertitori](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/PlatformExtensions)
 - [Documentazione delle API dei convertitori Point](xref:Xamarin.Essentials.PointExtensions)
