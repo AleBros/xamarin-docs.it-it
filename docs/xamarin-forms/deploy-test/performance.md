@@ -1,18 +1,18 @@
 ---
 title: Migliorare le prestazioni delle app Xamarin.Forms
-description: Esistono molte tecniche per incrementare le prestazioni delle applicazioni Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+description: Esistono molte tecniche per incrementare le prestazioni delle applicazioni Xamarin.Forms. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2019
-ms.openlocfilehash: 0841cb0cbe97644f3bb53105887f3adadf9bf6c5
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.date: 11/27/2019
+ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820939"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681340"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Migliorare le prestazioni delle app Xamarin.Forms
 
@@ -20,9 +20,9 @@ ms.locfileid: "68820939"
 
 **Evoluzione 2016: ottimizzazione delle prestazioni delle app con Xamarin.Forms**
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria del dispositivo. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria del dispositivo. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, verificando che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
-Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni Xamarin.Forms. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 > [!NOTE]
 > Prima di leggere questo articolo, è consigliabile vedere [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), che illustra le tecniche non specifiche di una piattaforma che consentono di migliorare l'utilizzo della memoria e le prestazioni delle applicazioni compilate con la piattaforma Xamarin.
@@ -43,7 +43,7 @@ I binding compilati migliorano le prestazioni di data binding nelle applicazioni
 
 ## <a name="reduce-unnecessary-bindings"></a>Ridurre i binding non necessari
 
-Non usare i binding per il contenuto che può essere impostato facilmente in modo statico. Non vi è alcun vantaggio nell'associare i dati che non richiedono l'associazione poiché i binding non hanno un costo contenuto. Ad esempio, l'impostazione di `Button.Text = "Accept"` presenta un overhead minore rispetto al binding di [`Button.Text`](xref:Xamarin.Forms.Button.Text) a una proprietà `string` di ViewModel con valore "Accept".
+Non usare i binding per il contenuto che può essere impostato facilmente in modo statico. Non vi è alcun vantaggio nell'associare i dati che non richiedono l'associazione poiché i binding non hanno un costo contenuto. Ad esempio, l'impostazione di `Button.Text = "Accept"` presenta un sovraccarico minore rispetto al binding [`Button.Text`](xref:Xamarin.Forms.Button.Text) a una proprietà ViewModel `string` con il valore "Accept".
 
 ## <a name="use-fast-renderers"></a>Usare renderer veloci
 
@@ -157,6 +157,41 @@ Per ottenere le migliori prestazioni possibili del layout, attenersi alle seguen
 - Non aggiornare le istanze di [`Label`](xref:Xamarin.Forms.Label) più spesso di quanto necessario, poiché modificando le dimensioni dell'etichetta è possibile che l'intero layout della schermata venga ricalcolato.
 - Non impostare la proprietà [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) se non viene richiesto.
 - Impostare l'elemento [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) di qualsiasi istanza di [`Label`](xref:Xamarin.Forms.Label) su [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) quando possibile.
+
+## <a name="use-asynchronous-programming"></a>USA programmazione asincrona
+
+La velocità di risposta complessiva dell'applicazione può essere migliorata e i colli di bottiglia delle prestazioni spesso evitati, usando la programmazione asincrona. In .NET, il [modello asincrono basato su attività (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) è il modello di progettazione consigliato per le operazioni asincrone. Tuttavia, l'uso errato del rubinetto può comportare l'esecuzione di applicazioni non efficienti. Pertanto, quando si usa il tocco è necessario seguire le linee guida seguenti.
+
+### <a name="fundamentals"></a>Fundamentals
+
+- Comprendere il ciclo di vita delle attività, rappresentato dall'enumerazione `TaskStatus`. Per ulteriori informazioni, vedere [il significato di TaskStatus](https://devblogs.microsoft.com/pfxteam/the-meaning-of-taskstatus/) e [dello stato dell'attività](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap#task-status).
+- Utilizzare il metodo `Task.WhenAll` per attendere il completamento di più operazioni asincrone, anziché singolarmente `await` una serie di operazioni asincrone. Per ulteriori informazioni, vedere [Task. WhenAll](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Usare il metodo `Task.WhenAny` per attendere il completamento di una di più operazioni asincrone. Per ulteriori informazioni, vedere [Task. WhenAny](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Usare il metodo `Task.Delay` per produrre un oggetto `Task` che termina dopo l'ora specificata. Questa operazione è utile per scenari come il polling dei dati e per ritardare la gestione dell'input utente per un tempo predeterminato. Per altre informazioni, vedere [Task. Delay](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskdelay).
+- Eseguire operazioni di CPU sincrone complesse sul pool di thread con il metodo `Task.Run`. Questo metodo è un tasto di scelta rapida per il metodo `TaskFactory.StartNew` con gli argomenti più ottimali impostati. Per ulteriori informazioni, vedere [Task. Run](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskrun).
+- Evitare di provare a creare costruttori asincroni. Usare invece gli eventi del ciclo di vita o la logica di inizializzazione separata per `await` correttamente qualsiasi inizializzazione. Per altre informazioni, vedere [costruttori asincroni](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) in Blog.stephencleary.com.
+- Usare il modello di attività Lazy per evitare l'attesa del completamento delle operazioni asincrone durante l'avvio dell'applicazione. Per ulteriori informazioni, vedere [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
+- Creare un wrapper di attività per le operazioni asincrone esistenti che non usano il tocco, creando `TaskCompletionSource<T>` oggetti. Questi oggetti ottengono i vantaggi della programmabilità `Task` e consentono di controllare la durata e il completamento del `Task`associato. Per ulteriori informazioni, vedere [la natura di TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/).
+Asynchronous-MVVM-Applications-Commands).
+- Restituisce un oggetto `Task`, anziché restituire un oggetto `Task` atteso, quando non è necessario elaborare il risultato di un'operazione asincrona. Questa operazione è più efficiente a causa del minor cambio di contesto eseguito.
+- Usare la libreria del flusso di dati Task Parallel Library (TPL) in scenari come l'elaborazione di dati quando diventano disponibili o quando sono presenti più operazioni che devono comunicare tra loro in modo asincrono. Per ulteriori informazioni, vedere [dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
+
+### <a name="ui"></a>Interfaccia utente di
+
+- Chiamare una versione asincrona di un'API, se disponibile. Questo consente di mantenere sbloccato il thread dell'interfaccia utente, contribuendo a migliorare l'esperienza utente dell'applicazione.
+- Aggiornare gli elementi dell'interfaccia utente con i dati delle operazioni asincrone sul thread dell'interfaccia utente, per evitare che vengano generate eccezioni. Tuttavia, gli aggiornamenti alla proprietà `ListView.ItemsSource` verranno automaticamente sottoposti a marshalling nel thread UI. Per informazioni su come determinare se il codice è in esecuzione nel thread dell'interfaccia utente, vedere [Novell. Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+
+    > [!IMPORTANT]
+    > Qualsiasi proprietà del controllo aggiornata tramite data binding verrà automaticamente marsheled al thread dell'interfaccia utente.
+
+### <a name="error-handling"></a>Gestione degli errori
+
+- Informazioni sulla gestione asincrona delle eccezioni. Le eccezioni non gestite generate dal codice in esecuzione in modo asincrono vengono propagate al thread chiamante, tranne che in determinati scenari. Per ulteriori informazioni, vedere [gestione delle eccezioni (Task Parallel Library)](/dotnet/standard/parallel-programming/exception-handling-task-parallel-library).
+- Evitare di creare metodi di `async void` e di creare invece `async Task` metodi. Questi consentono una gestione degli errori, la composizione e la testabilità più semplici. L'eccezione a questa linea guida è rappresentata dai gestori eventi asincroni, che devono restituire `void`. Per ulteriori informazioni, vedere la pagina relativa alla [prevenzione del void asincrono](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#avoid-async-void).
+- Non combinare il codice di blocco e asincrono chiamando i metodi `Task.Wait`, `Task.Result`o `GetAwaiter().GetResult`, perché possono verificarsi un deadlock. Tuttavia, se questa linea guida deve essere violata, l'approccio preferito consiste nel chiamare il metodo `GetAwaiter().GetResult` perché consente di mantenere le eccezioni dell'attività. Per ulteriori informazioni, vedere la pagina relativa alla gestione delle eccezioni in [modo asincrono](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#async-all-the-way) e delle [eccezioni delle attività in .NET 4,5](https://devblogs.microsoft.com/pfxteam/task-exception-handling-in-net-4-5/).
+- Usare il metodo `ConfigureAwait`, quando possibile, per creare codice senza contesto. Il codice senza contesto offre prestazioni migliori per le applicazioni per dispositivi mobili ed è una tecnica utile per evitare deadlock quando si lavora con una codebase parzialmente asincrona. Per altre informazioni, vedere [configurare il contesto](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#configure-context).
+- Utilizzare le *attività di continuazione* per le funzionalità, ad esempio la gestione delle eccezioni generate dall'operazione asincrona precedente, e l'annullamento di una continuazione prima che venga avviata o mentre è in esecuzione. Per altre informazioni, vedere [concatenamento di attività tramite attività continue](/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks).
+- Utilizzare un'implementazione di `ICommand` asincrona quando vengono richiamate le operazioni asincrone dal `ICommand`. In questo modo è possibile gestire tutte le eccezioni nella logica del comando asincrono. Per altre informazioni, vedere [programmazione asincrona: modelli per le applicazioni MVVM asincrone: comandi](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands).
 
 ## <a name="choose-a-dependency-injection-container-carefully"></a>Scegliere con attenzione un contenitore di inserimento delle dipendenze
 
