@@ -6,17 +6,17 @@ ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
-ms.translationtype: HT
+ms.date: 12/03/2019
+ms.openlocfilehash: b87e713f89951d03408fa559bcf6e02cdae65e28
+ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978134"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74824250"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Renderer personalizzati di Xamarin.Forms
 
-_In Xamarin.Forms il rendering delle interfacce utente viene eseguito con i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Xamarin.Forms di mantenere l'aspetto appropriato per ogni piattaforma. I renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli di Xamarin.Forms in ogni piattaforma._
+_Le interfacce utente Novell. Forms vengono visualizzate usando i controlli nativi della piattaforma di destinazione, consentendo alle applicazioni Novell. Forms di mantenere l'aspetto appropriato per ogni piattaforma. I renderer personalizzati consentono agli sviluppatori di eseguire l'override di questo processo per personalizzare l'aspetto e il comportamento dei controlli Novell. Forms in ogni piattaforma._
 
 ## <a name="introduction-to-custom-renderersintroductionmd"></a>[Introduzione ai renderer personalizzati](introduction.md)
 
@@ -46,18 +46,14 @@ L'oggetto [`ListView`](xref:Xamarin.Forms.ListView) di Xamarin.Forms è una vist
 
 Un oggetto [`ViewCell`](xref:Xamarin.Forms.ViewCell) di Xamarin.Forms è una cella che può essere aggiunta a un oggetto [`ListView`](xref:Xamarin.Forms.ListView) o [`TableView`](xref:Xamarin.Forms.TableView), che contiene una vista definita dallo sviluppatore. Questo articolo illustra come si crea un renderer personalizzato per un oggetto `ViewCell` ospitato all'interno di un controllo `ListView` di Xamarin.Forms. Questo impedisce che i calcoli di layout di Xamarin.Forms vengano ripetutamente chiamati durante lo scorrimento di `ListView`.
 
+## <a name="customizing-a-webviewhybridwebviewmd"></a>[Personalizzazione di una visualizzazione WebView](hybridwebview.md)
+
+Un [`WebView`](xref:Xamarin.Forms.WebView) Novell. Forms è una vista che Visualizza il contenuto Web e HTML nell'app. Questo articolo illustra come creare un renderer personalizzato che estende la `WebView` per consentire C# la chiamata del codice da JavaScript.
+
 ## <a name="implementing-a-viewviewmd"></a>[Implementazione di un elemento View](view.md)
 
 I controlli delle interfacce utente personalizzate di Xamarin.Forms devono derivare dalla classe [`View`](xref:Xamarin.Forms.View), che viene usata per posizionare layout e controlli sullo schermo. Questo articolo spiega come creare un renderer personalizzato per un controllo personalizzato di Xamarin.Forms usato per visualizzare un flusso video di anteprima dalla fotocamera del dispositivo.
 
-## <a name="implementing-a-hybridwebviewhybridwebviewmd"></a>[Implementazione di un elemento HybridWebView](hybridwebview.md)
-
-Questo articolo spiega come creare un renderer personalizzato per un controllo personalizzato `HybridWebView`, che dimostra come si possono ottimizzare i controlli Web specifici della piattaforma per consentire al codice C# di essere richiamato da JavaScript.
-
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implementazione di un lettore video](video-player/index.md)
 
 Questo articolo illustra come scrivere i renderer per implementare un controllo `VideoPlayer` personalizzato in grado di riprodurre video dal Web, video incorporati come risorse dell'applicazione o video archiviati nella raccolta di video del dispositivo dell'utente. Vengono illustrate diverse tecniche, tra cui l'implementazione di metodi e le proprietà associabili di sola lettura.
-
-## <a name="related-links"></a>Collegamenti correlati
-
-- [Effetti](~/xamarin-forms/app-fundamentals/effects/index.md)
