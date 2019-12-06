@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 020b8208dfbfd7594d152a7b6e32f7e41f974c2f
-ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
+ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
+ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72303255"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884124"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Ricaricamento a caldo di XAML per Novell. Forms (anteprima)
-
-![Funzionalità di anteprima](~/media/shared/preview.png)
 
 Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per aumentare la produttività e risparmiare tempo. Senza il ricaricamento a caldo di XAML, è necessario compilare e distribuire l'app ogni volta che si desidera visualizzare una modifica XAML. Con il ricaricamento a caldo, quando si salva il file XAML le modifiche vengono riflesse in tempo reale nell'app in esecuzione. Inoltre, lo stato e i dati di navigazione verranno conservati, consentendo di eseguire rapidamente l'iterazione sull'interfaccia utente senza perdere il posto nell'app. Pertanto, con il ricaricamento a caldo di XAML, dedicare meno tempo alla ricompilazione e alla distribuzione delle app per convalidare le modifiche dell'interfaccia utente.
 
@@ -27,8 +25,8 @@ Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per au
 
 | IDE/Framework | Versione obbligatoria |
 |------|------------------|
-|Visual Studio 2019 | 16,3 o versione successiva
-Visual Studio 2019 per Mac | 8,3 o versione successiva
+|Visual Studio 2019 | 16,4 o versione successiva
+Visual Studio 2019 per Mac | 8,4 o versione successiva
 Xamarin.Forms | 4,1 o versione successiva
 
 ## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Usare il ricaricamento a caldo di XAML per Novell. Forms
@@ -47,7 +45,7 @@ Se si effettua una modifica che non è possibile ricaricare il ricaricamento fre
 
 - Non è possibile aggiungere, rimuovere o rinominare i file o i pacchetti NuGet durante una sessione di ricaricamento a caldo di XAML. Se si aggiunge o rimuove un file o un pacchetto NuGet, ricompilare e ridistribuire l'app per continuare a usare il ricaricamento a caldo di XAML.
 - Impostare il linker in modo che **non venga collegato** per l'esperienza ottimale. L'impostazione di **link SDK only** funziona la maggior parte del tempo, ma in alcuni casi potrebbe non riuscire.
-- Per eseguire il debug su un iPhone fisico è necessario che l'interprete usi il ricaricamento a caldo di XAML. Aggiungere l' **interprete** al campo **argomenti mTouch aggiuntivi** nelle impostazioni di compilazione iOS per usare il ricaricamento a caldo di XAML.
+- Per eseguire il debug su un iPhone fisico è necessario che l'interprete usi il ricaricamento a caldo di XAML. A tale scopo, aprire le impostazioni del progetto, selezionare la scheda compilazione iOS e verificare che **l'opzione Abilita l'interprete mono** sia abilitata. Potrebbe essere necessario modificare l'opzione **Platform** nella parte superiore della pagina delle proprietà su **iPhone**.
 - Tutti i riferimenti creati assegnando un controllo a un altro campo o a una proprietà utilizzando il relativo valore `x:Name` non verranno ricaricati.
 - L'aggiornamento della gerarchia visiva dell'applicazione shell in **AppShell. XAML** può causare problemi di gestione dello stato dell'applicazione. Ricompilare l'app per continuare il ricaricamento.
 - Il ricaricamento a caldo di C# XAML non è in grado di ricaricare il codice, inclusi gestori eventi, controlli personalizzati, code-behind della pagina e classi aggiuntive.
@@ -63,6 +61,6 @@ Se si fa parte dell'anteprima privata, l'estensione per il ricaricamento a caldo
   - Assicurarsi di avere la versione più recente dell'IDE.
   - Impostare le impostazioni del linker per Android o iOS in modo che **non vengano collegate** nelle impostazioni di compilazione del progetto.
 - Se non si verifica nulla quando si salva il file XAML, verificare che il ricaricamento a caldo sia abilitato nell'IDE.
-- Se si sta eseguendo il debug in un iPhone fisico e l'app smette di rispondere, verificare che l'interprete sia abilitato. Per attivarlo, aggiungere l' **interprete** al campo **argomenti mTouch aggiuntivi** nelle impostazioni di compilazione iOS.
+- Se si sta eseguendo il debug in un iPhone fisico e l'app smette di rispondere, verificare che l'interprete sia abilitato. Per attivarlo, aprire le impostazioni del progetto, selezionare la scheda compilazione iOS e selezionare l'impostazione **Abilita l'interprete mono** .
 
 Per segnalare un bug, usare lo strumento per il feedback nella **guida** > **inviare commenti e suggerimenti** > **segnalare un problema** in Windows e la **Guida** > **segnalare un problema** in un Mac.
