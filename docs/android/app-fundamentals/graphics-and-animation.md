@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1781503d214b959d31223cbe8f55fd6afa0fef44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: eeee9b7d694d9380c653fb87c24171bcaf79389d
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019282"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655291"
 ---
 # <a name="android-graphics-and-animation"></a>Grafica e animazione Android
 
 _Android offre un framework molto ricco e diversificato per supportare la grafica e le animazioni 2D. Questo argomento introduce questi Framework e illustra come creare grafica e animazioni personalizzate da usare in un'applicazione Novell. Android._
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 Nonostante sia in esecuzione su dispositivi che sono tradizionalmente di potenza limitata, le applicazioni per dispositivi mobili più votate hanno spesso un'esperienza utente sofisticata, completa con grafica e animazioni di alta qualità che offrono un aspetto intuitivo, reattivo e dinamico. Poiché le applicazioni per dispositivi mobili sono più sofisticate, gli utenti hanno iniziato a aspettarsi sempre più da applicazioni.
 
@@ -82,7 +82,7 @@ Android definisce diversi tipi di risorse disegnatori:
 
 - [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; questo è molto simile a un *StateListDrawable* in quanto verrà visualizzata un'immagine in base a determinate condizioni. Tuttavia, a differenza di *StateListDrawable*, *LevelListDrawable* Visualizza un'immagine basata su un valore integer. Un esempio di *LevelListDrawable* è la visualizzazione della forza di un segnale Wi-Fi. Con l'attendibilità del segnale Wi-Fi, l'oggetto disegnatore visualizzato verrà modificato di conseguenza.
 
-- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; come indicato dal nome, questi drawables forniscono funzionalità di ridimensionamento e ritaglio. Il *ScaleDrawable* ridimensiona un altro oggetto disegnatore, mentre *ClipDrawable* ridurrà un altro oggetto disegnatore.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; Come implica il nome, questi drawables forniscono funzionalità di ridimensionamento e ritaglio. Il *ScaleDrawable* ridimensiona un altro oggetto disegnatore, mentre *ClipDrawable* ridurrà un altro oggetto disegnatore.
 
 - [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; questa operazione di estrazione applica i set di impostazioni sui lati di un'altra risorsa che può essere disegnato. Viene usato quando una visualizzazione necessita di uno sfondo inferiore ai limiti effettivi della visualizzazione.
 
@@ -139,7 +139,7 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 Per visualizzare l'aspetto di questa operazione, eseguire il progetto *AnimationsDemo* e selezionare l'elemento disegnato per la forma dal menu principale. Verrà visualizzata una schermata simile alla seguente:
 
-![TextView con uno sfondo personalizzato, disegnato con una sfumatura e angoli arrotondati](graphics-and-animation-images/image1.png)
+[![TextView con uno sfondo personalizzato, disegnato con una sfumatura e angoli arrotondati](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 Per altri dettagli sugli elementi XML e sulla sintassi delle risorse di cui è disponibile il progetto, vedere la [documentazione di Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
@@ -160,9 +160,9 @@ Bitmap bitmap = Bitmap.CreateBitmap(100, 100, Bitmap.Config.Argb8888);
 Canvas canvas = new Canvas(b);
 ```
 
-L'altro modo per ottenere un oggetto `Canvas` è tramite il metodo di callback [onpare](xref:Android.Views.View.OnDraw*) fornito dalla classe di base di [visualizzazione](xref:Android.Views.View) . Questo metodo viene chiamato da Android quando decide che una visualizzazione deve essere disegnata e passa un oggetto `Canvas` per la visualizzazione.
+L'altro modo per ottenere un oggetto `Canvas` è tramite il metodo di callback [OnDraw](xref:Android.Views.View.OnDraw*) fornito dalla classe di base di [visualizzazione](xref:Android.Views.View). Questo metodo viene chiamato da Android quando decide che una visualizzazione deve essere disegnata e passa un oggetto `Canvas` per la visualizzazione.
 
-La classe Canvas espone i metodi per fornire le istruzioni di disegno a livello di codice. Esempio:
+La classe Canvas espone i metodi per fornire le istruzioni di disegno a livello di codice. Ad esempio:
 
 - [Canvas. DrawPaint](xref:Android.Graphics.Canvas.DrawPaint*) &ndash; riempie l'intera bitmap dell'area di disegno con il disegno specificato.
 
@@ -201,7 +201,7 @@ public class MyView : View
 
 Il codice precedente crea prima di tutto una vernice rossa e un oggetto di colore verde. Riempie il contenuto dell'area di disegno con il rosso, quindi indica all'area di disegno di creare un rettangolo verde che corrisponde al 25% della larghezza dell'area di disegno. Un esempio può essere visualizzato in `AnimationsDemo` progetto incluso nel codice sorgente per questo articolo. Avviando l'applicazione e selezionando l'elemento del disegno dal menu principale, viene visualizzata una schermata simile alla seguente:
 
-![Schermata con oggetti di colore rosso e colore verde](graphics-and-animation-images/image3.png)
+[Schermata ![con gli oggetti di colore rosso e verde](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## <a name="animation"></a>Animazione
 
@@ -304,7 +304,7 @@ Ora che sono state apprese le nozioni di base sul funzionamento delle animazioni
 Gli animatori di proprietà sono una nuova API introdotta in Android 3,0.
 Forniscono un'API più estendibile che può essere usata per aggiungere un'animazione a qualsiasi proprietà di qualsiasi oggetto.
 
-Tutte le animazioni di proprietà vengono create dalle istanze della sottoclasse [animatar](xref:Android.Animation.Animator) . Le applicazioni non usano direttamente questa classe, ma usano una delle sottoclassi seguenti:
+Tutte le animazioni di proprietà vengono create dalle istanze della sottoclasse [Animator](xref:Android.Animation.Animator). Le applicazioni non usano direttamente questa classe, ma usano una delle sottoclassi seguenti:
 
 - [ValueAnimator](xref:Android.Animation.ValueAnimator) &ndash; questa classe è la classe più importante nell'intera API di animazione delle proprietà. Calcola i valori delle proprietà che devono essere modificate. Il `ViewAnimator` non aggiorna direttamente i valori. genera invece eventi che possono essere usati per aggiornare gli oggetti animati.
 

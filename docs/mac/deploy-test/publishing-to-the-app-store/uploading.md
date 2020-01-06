@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fede666071aad8702eda17a94a06c7de49c7397e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e2b25468255ff84a3fe79ed4fea913e04bf88687
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029469"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489368"
 ---
 # <a name="upload-to-mac-app-store"></a>Caricamento in Mac App Store
 
 _Questa guida descrive come caricare un'app Xamarin.Mac per la pubblicazione in Mac App Store._
 
-Le applicazioni vengono inviate per l'approvazione in Mac App Store tramite [iTunes Connect](https://itunesconnect.apple.com/).
+Le applicazioni vengono inviate per l'approvazione in Mac App Store tramite [iTunes Connect](https://itunesconnect.apple.com/). Sarà inoltre necessario lo strumento [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) dall'App Store.
 
 1. Scegliere un'**app macOS** da creare: 
 
@@ -70,37 +70,22 @@ Le applicazioni vengono inviate per l'approvazione in Mac App Store tramite [iTu
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
-9. Avviare Application Loader e verificare di aver eseguito l'accesso con l'ID Apple.
-Scegliere **Deliver Your App** (Invia l'app) per continuare: 
+9. Avviare il **trasporto** e accedere con l'ID Apple, quindi scegliere **Aggiungi app**:
 
-    [![](uploading-images/image77.png "The Application Loader interface")](uploading-images/image77.png#lightbox)
+    [![](uploading-images/transporter01-sml.png "The Application Loader interface")](uploading-images/transporter01.png#lightbox)
 
-10. Selezionare l'applicazione dall'elenco delle applicazioni il cui stato è **Ready to Upload Binary** (Pronto per caricare il file binario) e fare clic su **Next** (Avanti): 
+    Seguire le istruzioni per caricare il pacchetto dell'app in iTunes Connect.
 
-    [![](uploading-images/image78.png "Selecting the app to load")](uploading-images/image78.png#lightbox)
-
-11. Esaminare i metadati dell'applicazione e fare clic su **Choose...**  (Scegli...) per individuare il file del pacchetto: 
-
-    [![](uploading-images/image79.png "Reviewing the app metadata")](uploading-images/image79.png#lightbox)
-
-12. Individuare il file del pacchetto creato in Visual Studio per Mac usando la configurazione della build dell'App Store: 
-
-    [![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png#lightbox)
-
-13. Fare clic su **Send** (Invia): 
-
-    [![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png#lightbox)
-
-14. Il pacchetto verrà convalidato ed eventuali errori verranno segnalati. Correggere gli errori e ricaricare il pacchetto. Al termine del caricamento, l'app verrà automaticamente inviata per la revisione da parte del team dell'App Store: 
-
-    [![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png#lightbox)
+    > [!NOTE]
+    > [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) sostituisce lo strumento di **Caricamento applicazioni** usato con Xcode 10 e versioni precedenti.
+    > Il caricatore di applicazioni non è più disponibile in Xcode 11 o versione successiva.
 
 Dopo l'approvazione, l'applicazione sarà disponibile per il download o l'acquisto da Mac App Store.
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Installazione](~//mac/get-started/installation.md)
-- [Esempio Hello, Mac](~//mac/get-started/hello-mac.md)
+- [Esempio Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribuire le app in Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guida degli strumenti: firma del codice dell'app](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID sviluppatore e GateKeeper](https://developer.apple.com/resources/developer-id/)

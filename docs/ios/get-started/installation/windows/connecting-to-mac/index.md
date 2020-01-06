@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e93a12fec63dcb0a31e57de26b3d7ee8827e7864
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022488"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489063"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Associa a Mac per lo sviluppo di Xamarin.iOS
 
 _Questa guida descrive come usare associa a Mac per connettere Visual Studio 2019 a un host di compilazione Mac. Le stesse istruzioni si applicano a Visual Studio 2017._
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 La compilazione di applicazioni iOS native richiede l'accesso agli strumenti di compilazione di Apple, che vengono eseguiti solo su Mac. Per questo motivo Visual Studio 2019 deve connettersi a un Mac accessibile dalla rete per compilare le applicazioni Xamarin.iOS.
 
@@ -160,7 +160,7 @@ Se nella finestra di dialogo **Associa a Mac** non viene visualizzato un partico
 
 ## <a name="automatic-mac-provisioning"></a>Provisioning automatico del Mac
 
-A partire da [Visual Studio 2019 versione 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), associa a Mac effettua automaticamente il provisioning di un Mac con software necessario per la compilazione di applicazioni Novell. iOS: mono, Novell. iOS (il Framework software, non l'IDE Visual Studio per Mac) e varie Strumenti correlati a Xcode (ma non Xcode).
+A partire da [Visual Studio 2019 versione 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), associa a Mac effettua automaticamente il provisioning di un Mac con il software necessario per la compilazione di applicazioni Novell. iOS: mono, Novell. iOS (il Framework software, non l'IDE Visual Studio per Mac) e diversi strumenti correlati a Xcode (ma non Xcode).
 
 > [!IMPORTANT]
 >
@@ -168,7 +168,7 @@ A partire da [Visual Studio 2019 versione 15,6](https://docs.microsoft.com/visua
 > - Per il provisioning automatico del Mac è necessario che l'accesso remoto sia abilitato nel Mac e il Mac deve essere accessibile al computer Windows tramite la rete. Vedere [Abilitare l'accesso remoto nel Mac](#enable-remote-login-on-the-mac) per maggiori dettagli.
 > - Il provisioning automatico del Mac richiede 3 GB di spazio libero nel Mac per l'installazione di Xamarin.iOS.
 
-Associa a Mac esegue le installazioni e gli aggiornamenti software necessari durante la [connessione al Mac](#connect-to-the-mac-from-visual-studio-2019) di Visual Studio 2017.
+Associa a Mac esegue le installazioni o gli aggiornamenti software necessari quando Visual Studio 2019 si [connette al Mac](#connect-to-the-mac-from-visual-studio-2019).
 
 ### <a name="mono"></a>Mono
 
@@ -176,7 +176,7 @@ Associa a Mac verificherà che Mono sia installato. Se non è installato, Associ
 
 Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle schermate seguenti (fare clic per ingrandire):
 
-||Verifica dell'installazione|Download|Installazione di
+||Verifica dell'installazione|Download|Installazione del
 |---|---|---|---|
 |Mono|[![Installazione di mono mancante](images/mono-missing.png "Installazione di mono mancante")](images/mono-missing-large.png#lightbox)|[![Download di mono](images/mono-downloading.png "Download di mono")](images/mono-downloading-large.png#lightbox)|[![Installazione di mono](images/mono-installing.png "Installazione di mono")](images/mono-installing-large.png#lightbox)|
 
@@ -192,7 +192,7 @@ Associa a Mac aggiorna Xamarin.iOS nel Mac in modo che corrisponda alla versione
 
 Lo stato di avanzamento è indicato da vari prompt, come illustrato nelle schermate seguenti (fare clic per ingrandire):
 
-||Verifica dell'installazione|Download|Installazione di
+||Verifica dell'installazione|Download|Installazione del
 |---|---|---|---|
 |Xamarin.iOS|[![Installazione di Novell. iOS mancante](images/xamios-missing.png "Installazione di Novell. iOS mancante")](images/xamios-missing-large.png#lightbox)|[![Download di Novell. iOS](images/xamios-downloading.png "Download di Novell. iOS")](images/xamios-downloading-large.png#lightbox)|[![Installazione di Novell. iOS](images/xamios-installing.png "Installazione di Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
@@ -204,7 +204,7 @@ Associa a Mac verificherà inoltre se Xcode è stato installato e la relativa li
 |---|---|---|
 |Xcode|[![Installazione di Xcode mancante](images/xcode-missing.png "Installazione di Xcode mancante")](images/xcode-missing-large.png#lightbox)|[![Licenza di Xcode](images/xcode-license.png "Licenza di Xcode")](images/xcode-license-large.png#lightbox)|
 
-Inoltre, Associa a Mac installerà o aggiornerà i diversi pacchetti distribuiti con Xcode. Esempio:
+Inoltre, Associa a Mac installerà o aggiornerà i diversi pacchetti distribuiti con Xcode. Ad esempio:
 
 - **MobileDeviceDevelopment.pkg**
 - **XcodeExtensionSupport.pkg**
@@ -218,11 +218,11 @@ L'installazione di questi pacchetti avviene rapidamente e senza un prompt.
 
 ### <a name="troubleshooting-automatic-mac-provisioning"></a>Risoluzione dei problemi di provisioning automatico del Mac
 
-In caso di problemi con il provisioning automatico del Mac esaminare i log dell'IDE di Visual Studio 2019, archiviati in **%LOCALAPPDATA%\Xamarin\Logs\15.0**. Questi log possono contenere messaggi di errore che consentono di diagnosticare meglio l'errore o di richiedere assistenza.
+Se si verificano problemi con il provisioning automatico del Mac, esaminare i log dell'IDE di Visual Studio 2019, archiviati in **%LocalAppData%\Xamarin\Logs\16.0**. Questi log possono contenere messaggi di errore che consentono di diagnosticare meglio l'errore o di richiedere assistenza.
 
 ## <a name="build-ios-apps-from-the-windows-command-line"></a>Compilare app iOS dalla riga di comando di Windows
 
-Associa a Mac supporta la compilazione di applicazioni Xamarin.iOS dalla riga di comando. Esempio:
+Associa a Mac supporta la compilazione di applicazioni Xamarin.iOS dalla riga di comando. Ad esempio:
 
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
@@ -236,7 +236,7 @@ I parametri passati a `msbuild` nell'esempio precedente sono:
 - `ServerPassword`: password da usare durante l'accesso all'host di compilazione Mac.
 
 > [!NOTE]
-> Visual Studio 2019 archivia `msbuild` nella seguente directory: **c:\Programmi (x86) \Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2019 archivia `msbuild` nella seguente directory: **c:\Programmi (x86) \Microsoft Visual Studio\2019\\&lt;Version&gt;\MSBuild\Current\Bin**
 
 La prima volta che Associa a Mac accede a uno specifico host di compilazione Mac da Visual Studio 2019 o dalla riga di comando, imposta le chiavi SSH. Con queste chiavi, gli accessi futuri non richiederanno nome utente o password. Le chiavi appena create vengono archiviate in **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

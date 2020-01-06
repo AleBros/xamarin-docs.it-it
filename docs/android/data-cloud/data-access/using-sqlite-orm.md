@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 96f084dc49a5558767b162eee59eff722f247904
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ff59213a730b74b916b993c48a6f5f779149a6f9
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023676"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488075"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso di SQLite.NET con Android
 
@@ -60,7 +60,7 @@ Una volta disponibile la libreria SQLite.NET, attenersi ai tre passaggi seguenti
 
 ## <a name="basic-data-access-sample"></a>Esempio di accesso ai dati di base
 
-Il codice di esempio *DataAccess_Basic* per questo documento è simile al seguente quando viene eseguito in Android. Il codice illustra come eseguire semplici operazioni SQLite.NET e Mostra i risultati in come testo nella finestra principale dell'applicazione.
+Il *DataAccess_Basic* codice di esempio per questo documento è simile al seguente quando viene eseguito in Android. Il codice illustra come eseguire semplici operazioni SQLite.NET e Mostra i risultati in come testo nella finestra principale dell'applicazione.
 
 **Android**
 
@@ -128,9 +128,9 @@ Gli attributi comuni che è possibile applicare alle classi per controllare il m
 
 - **[Incremento automatico]** &ndash; questo attributo provocherà l'incremento automatico del valore di una proprietà integer per ogni nuovo oggetto inserito nel database
 
-- **[Column (Name)]** &ndash; specificando il parametro facoltativo `name` eseguirà l'override del valore predefinito del nome della colonna del database sottostante, che corrisponde alla proprietà.
+- **[Column (Name)]** &ndash; il parametro `name` imposta il nome della colonna del database sottostante.
 
-- **[Table (Name)]** &ndash; contrassegna la classe come in grado di essere archiviata in una tabella SQLite sottostante. Se si specifica il parametro del nome facoltativo, verrà eseguito l'override del valore predefinito del nome della tabella di database sottostante, che corrisponde al nome della classe.
+- **[Table (Name)]** &ndash; contrassegna la classe come in grado di essere archiviata in una tabella SQLite sottostante con il nome specificato.
 
 - **[MaxLength (value)]** &ndash; limitare la lunghezza di una proprietà di testo quando viene eseguito un tentativo di inserimento del database. L'utilizzo del codice deve essere convalidato prima di inserire l'oggetto perché questo attributo è solo ' checked ' quando si tenta di eseguire un'operazione di inserimento o aggiornamento di un database.
 
@@ -139,7 +139,7 @@ Gli attributi comuni che è possibile applicare alle classi per controllare il m
 
 - **[Unique]** &ndash; garantisce che i valori nella colonna del database sottostante siano univoci.
 
-La maggior parte di questi attributi è facoltativa, SQLite utilizzerà i valori predefiniti per i nomi di tabelle e colonne. È sempre necessario specificare una chiave primaria Integer in modo che le query di selezione ed eliminazione possano essere eseguite in modo efficiente sui dati.
+La maggior parte di questi attributi è facoltativa. È sempre necessario specificare una chiave primaria Integer in modo che le query di selezione ed eliminazione possano essere eseguite in modo efficiente sui dati.
 
 ## <a name="more-complex-queries"></a>Query più complesse
 

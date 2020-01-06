@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 1e4cb52772a60489f887116cbcfd4e6a8930fa3a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756789"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488491"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Archiviazione sicura
 
@@ -155,13 +155,13 @@ Per crittografare i valori in modo sicuro nei dispositivi UWP, si usa [DataProte
 
 I valori crittografati sono archiviati in `ApplicationData.Current.LocalSettings`, all'interno di un contenitore con il nome **[ID-APP].xamarinessentials**.
 
-**SecureStorage** usa l'API [Preferences](preferences.md) e segue gli stessi criteri di persistenza dei dati descritti nella documentazione per [Preferences](preferences.md#persistence).
+**SecureStorage** usa l'API [Preferences](preferences.md) e segue gli stessi criteri di persistenza dei dati descritti nella documentazione per [Preferences](preferences.md#persistence). USA anche `LocalSettings` con una restrizione che il nome di ogni impostazione può avere una lunghezza massima di 255 caratteri. Ogni impostazione può avere dimensioni fino a 8 KB e ogni impostazione composita può avere dimensioni massime di 64K byte.
 
 -----
 
 ## <a name="limitations"></a>Limitazioni
 
-Questa API è progettata per l'archiviazione di piccole quantità di testo.  Le prestazioni potrebbero risultare lente se si tenta di usarla per archiviare grandi quantità di testo.
+Questa API è progettata per l'archiviazione di piccole quantità di testo.  Le prestazioni potrebbero risultare lente se si tenta di usarla per archiviare grandi quantità di testo. 
 
 ## <a name="api"></a>API
 

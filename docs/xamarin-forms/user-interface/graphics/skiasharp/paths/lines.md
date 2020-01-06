@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 724a79e618321f97257718bf56dd1fdd18f73563
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759211"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545609"
 ---
 # <a name="lines-and-stroke-caps"></a>Linee ed estremità dei tratti
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Informazioni su come usare SkiaSharp per disegnare linee con estremità dei tratti diversi_
 
 In SkiaSharp, il rendering di una singola riga è molto diverso dal rendering di una serie di linee rette collegate. Anche quando si disegnano le singole righe, tuttavia, è spesso necessario assegnare le righe uno spessore particolare. Man mano che queste righe diventano più ampie, diventa importante anche l'aspetto delle entità finali delle righe. L'aspetto della fine della riga viene chiamato il *estremità della traccia*:
 
-![](lines-images/strokecapsexample.png "Le opzioni di limiti tre tratto")
+![](lines-images/strokecapsexample.png "The three stroke caps options")
 
 Per disegnare singole righe, `SKCanvas` definisce una semplice [ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) metodo cui argomenti indicano l'inizio e fine coordinate della riga con un `SKPaint` oggetto:
 
@@ -30,7 +30,7 @@ Per disegnare singole righe, `SKCanvas` definisce una semplice [ `DrawLine` ](xr
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Tuttavia, una volta che si inizia a disegnare righe di uno spessore considerevole, viene generato un altro problema: Come devono essere visualizzati i punti di inizio e di fine di queste linee spesse?
+Per impostazione predefinita, il [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) proprietà di una nuova istanza `SKPaint` oggetto è 0, che ha lo stesso effetto di un valore di 1 il rendering di una riga di un pixel in spessore. Questo valore viene visualizzato fette molto sottile dispositivi ad alta risoluzione, ad esempio telefoni, pertanto è opportuno impostare il `StrokeWidth` su un valore maggiore. Ma quando si inizia a creare linee di spessore ridimensionabile, che genera un altro problema: modalità di avvio e finali di queste righe spesse di rendering?
 
 L'aspetto dell'avvio e fine delle righe viene chiamato un *estremità della linea* o, in Skia, un *estremità della traccia*. La parola "limite" in questo contesto si riferisce a un tipo di hat &mdash; qualcosa che si trova all'estremità della linea. È impostato il [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) proprietà della `SKPaint` oggetto in uno dei seguenti membri del [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumerazione:
 
@@ -94,7 +94,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Per ogni membro del `SKStrokeCap` enumerazione, il gestore disegnate due linee, uno con uno spessore del tratto pari a 50 pixel e un'altra riga posizionata nella parte superiore e con uno spessore del tratto di due pixel. Questa seconda riga è lo scopo di illustrare geometrica inizio e alla fine della riga di indipendenti di spessore della linea e un limite di traccia:
 
-[![](lines-images/strokecaps-small.png "Tripla screenshot della pagina di estremità dei tratti")](lines-images/strokecaps-large.png#lightbox "tripla screenshot della pagina di estremità dei tratti")
+[![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
 
 Come può notare, il `Square` e `Round` estremità dei tratti estendere in modo efficace la lunghezza della riga per metà della larghezza di tratto all'inizio della riga e di nuovo alla fine. Questa estensione diventa importante quando è necessario determinare le dimensioni di un oggetto di rendering della grafica.
 
@@ -228,13 +228,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Le schermate illustrano un'ampia gamma di `Picker` selezioni:
 
-[![](lines-images/multiplelines-small.png "Tripla screenshot della pagina di più righe")](lines-images/multiplelines-large.png#lightbox "tripla screenshot della pagina di più righe")
+[![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
 
 L'iPhone a sinistra illustra come la `SKPointMode.Points` fa sì che il membro di enumerazione `DrawPoints` per eseguire il rendering di ognuno dei punti nel `SKPoint` matrice come un quadrato se è il delimitatore di linea `Butt` o `Square`. Cerchi vengono sottoposti a rendering se è il delimitatore di linea `Round`.
 
-Quando si usa invece `SKPointMode.Lines`, come illustrato nella schermata Android nel centro, il `DrawPoints` metodo disegna una linea tra ogni coppia di `SKPoint` i valori, utilizzando la terminazione di riga specificata, in questo caso `Round`.
+Lo screenshot Android Mostra il risultato della `SKPointMode.Lines`. Il metodo `DrawPoints` disegna una linea tra ogni coppia di valori di `SKPoint`, usando il limite di riga specificato, in questo caso `Round`.
 
-La schermata UWP Mostra il risultato del `SKPointMode.Polygon` valore. Viene tracciata una linea tra i punti consecutivi nella matrice, ma se si osserva attentamente, si noterà che le righe seguenti non sono connessi. Ognuna di queste righe separate inizia e termina con la terminazione di riga specificato. Se si seleziona il `Round` BLOC MAIUSC, le righe potrebbero sembrare siano connessi, ma davvero non sono connesse.
+Quando si usa invece `SKPointMode.Polygon`, viene disegnata una linea tra i punti successivi della matrice, ma se si osserva molto attentamente, si noterà che queste righe non sono connesse. Ognuna di queste righe separate inizia e termina con la terminazione di riga specificato. Se si seleziona il `Round` BLOC MAIUSC, le righe potrebbero sembrare siano connessi, ma davvero non sono connesse.
 
 Se le righe sono connesso o non connesso è un aspetto fondamentale di utilizzo dei percorsi di elementi grafici.
 

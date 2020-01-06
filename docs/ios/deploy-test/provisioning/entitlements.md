@@ -1,18 +1,18 @@
 ---
 title: Uso degli entitlement in Xamarin.iOS
-description: Gli entitlement sono funzionalità speciali delle app e autorizzazioni di sicurezza concesse alle applicazioni configurate correttamente per il loro uso.
+description: Gli entitlement sono funzionalità speciali delle app e autorizzazioni di sicurezza concesse alle applicazioni configurate correttamente per usarli.
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/13/2018
-ms.openlocfilehash: 43bde3a31a79728548e72ea1d34977f1a131f282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6a38aea1e46e1165bb36d83e75e24769de0a1e2
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028533"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655354"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Uso degli entitlement in Xamarin.iOS
 
@@ -41,15 +41,15 @@ Durante la definizione dell'ID app, oltre a selezionare e configurare i servizi 
 
 Per configurare gli entitlement in Visual Studio per Mac, seguire questa procedura:
 
-1. In **Esplora soluzioni** fare doppio clic sul file **Info.plist** per aprirlo e modificarlo.
-2. Nella sezione **Destinazione applicazione iOS** immettere un nome per l'applicazione e l'**Identificatore del bundle** creato in fase di definizione dell'ID app:
+1. Nel **riquadro della soluzione**fare doppio clic sul file **info. plist** per aprirlo.
+2. Nella sezione **Identity (identità** ) immettere un nome per l'applicazione e immettere l' **identificatore del bundle** creato quando è stato definito l'ID app:
 
-    ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
+    ![Immettere un identificatore del bundle](entitlements-images/servicexs01-sml.png)
 
 3. Salvare le modifiche apportate al file **Info.plist**.
-4. In **Esplora soluzioni** fare doppio clic sul file **Entitlements.plist** per aprirlo e modificarlo:
+4. Nel **riquadro della soluzione**fare doppio clic sul file **titles. plist** per aprirlo per la modifica:
 
-    ![](entitlements-images/servicexs02.png "Editing the Entitlements")
+    ![Modifica dei diritti](entitlements-images/servicexs02-sml.png)
 
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
@@ -58,17 +58,17 @@ Per configurare gli entitlement in Visual Studio per Mac, seguire questa procedu
 
 Per configurare gli entitlement in Visual Studio, seguire questa procedura:
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Info.plist**, scegliere **Apri con** ed **Editor elenco proprietà** per aprirlo e modificarlo.
+1. Nella **Esplora soluzioni**fare doppio clic sul file **info. plist** per aprirlo per la modifica.
 2. Nella sezione **Destinazione applicazione iOS** immettere un nome per l'applicazione e l'**Identificatore del bundle** creato in fase di definizione dell'ID app:
 
-    ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
+    ![Impostazione dell'identificatore del bundle](entitlements-images/servicevs01-sml.png)
 
 3. Salvare le modifiche apportate al file **Info.plist**.
-4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Entitlements.plist**, scegliere **Apri con** ed **Editor elenco proprietà** per aprirlo e modificarlo:
+4. Nel **Esplora soluzioni**fare doppio clic sul file **titles. plist** per aprirlo:
 
-    ![](entitlements-images/servicevs02.png "Editing the Entitlements")
+    ![Modifica dei diritti](entitlements-images/servicevs02-sml.png)
 
-    In alternativa, facendo doppio clic sul file **Entitlements.plist**, si aprirà l'editor origine XML che consentirà di impostare la proprietà Entitlement e il valore della chiave, come illustrato in dettaglio nella sezione [Informazioni di riferimento sulle chiavi degli entitlement](#entitlement-key-reference) più avanti.
+    È anche possibile fare clic con il pulsante destro del mouse sul file **titles. plist** e scegliere **Apri con...** Editor origine XML, che consente di impostare la proprietà dei diritti e il valore della chiave, come descritto in dettaglio nella sezione di riferimento per la [chiave del diritto di riferimento](#entitlement-key-reference) riportata di seguito.
 
 5. Selezionare e configurare gli entitlement richiesti per l'applicazione Xamarin.iOS in modo che corrispondano alla configurazione definita durante la creazione dell'ID app.
 6. Salvare le modifiche apportate al file **Entitlements.plist**.
@@ -83,10 +83,10 @@ Per aggiungere un file Entitlements.plist a Xamarin.iOS, seguire questa procedur
 
 1. Fare clic con il pulsante destro del mouse sul file di progetto e passare ad **Aggiungi > Nuovo file**:
 
-    ![Menu di scelta rapida per l'aggiunta di file](entitlements-images/image1.png)
+    ![Menu di scelta rapida per l'aggiunta di file](entitlements-images/image1-sml.png)
 2. Nella finestra di dialogo Nuovo file selezionare **iOS > Elenco proprietà** e assegnargli il nome Entitlements:
 
-    ![Finestra di dialogo Nuovo file](entitlements-images/image2.png)
+    ![Finestra di dialogo Nuovo file](entitlements-images/image2-sml.png)
 
 ## <a name="entitlement-key-reference"></a>Informazioni di riferimento sulle chiavi degli entitlement
 
@@ -104,8 +104,6 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
   - Permetterà all'app di consentire tutti i tipi di pass. Per limitare l'app e consentire solo un subset di tipi di pass per il team, impostare il valore della stringa su: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
   Dove pass.$(CFBundleIdentifier) è l'ID del pass creato [sopra](~/ios/platform/passkit.md)
-
-<a name="icloud" />
 
 ### <a name="icloud"></a>iCloud
 
@@ -133,8 +131,6 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
   - **Chiave**: com.apple.security.application-groups
   - **Stringa**: group.$(CFBundleIdentifier)
 
-<a name="apple-pay" />
-
 ### <a name="apple-pay"></a>Apple Pay
 
 - **Descrizione**: Apple Pay consente agli utenti di pagare beni tramite il dispositivo iOS.
@@ -156,7 +152,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
 - **Chiave**: com.apple.developer.networking.vpn.api
 - **Stringa**: allow-vpn
 
-### <a name="keychain-sharing"></a>Condivisione del keychain
+### <a name="keychain-sharing"></a>Condivisione di portachiavi
 
 - **Descrizione**: la condivisione del keychain consente agli sviluppatori di app di condividere le password archiviate nel keychain di un dispositivo con le altre app sviluppate dallo stesso team. L'accesso può essere limitato passando un identificatore di gruppo di accesso keychain nella stringa.
   - **Chiave**: keychain-access-groups
@@ -192,7 +188,7 @@ Le chiavi degli entitlement possono essere aggiunte tramite il pannello Source (
   - **Chiave**: com.apple.developer.healthkit
   - **Valore booleano**: YES
 
-### <a name="wireless-accessory-configuration"></a>Configurazione accessori wireless
+### <a name="wireless-accessory-configuration"></a>Configurazione degli accessori wireless
 
 - **Descrizione**: l'uso di Configurazione accessori wireless consente all'app di configurare gli accessori Wi-Fi MFi
   - **Chiave**: com.apple.external-accessory.wireless-configuration

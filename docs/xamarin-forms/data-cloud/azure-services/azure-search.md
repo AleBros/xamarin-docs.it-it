@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: ea2c733a9c85662b9286f8e8631b601248dc11de
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cd5aaac0f41ee6e4afd79397a77635e66abad219
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770833"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489791"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Eseguire ricerche nei dati con ricerca di Azure e Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
-_Ricerca di Azure è un servizio cloud che offre funzionalità per i dati caricati di query e indicizzazione. Questa operazione rimuove i requisiti di infrastruttura e le complessità di algoritmo di ricerca tradizionalmente associate all'implementazione di funzionalità di ricerca in un'applicazione. Questo articolo illustra come usare la libreria di ricerca di Microsoft Azure per integrare ricerca di Azure in un'applicazione xamarin. Forms._
+_Ricerca di Azure è un servizio cloud che fornisce funzionalità di indicizzazione ed esecuzione di query per i dati caricati. In questo modo vengono rimossi i requisiti dell'infrastruttura e le complessità degli algoritmi di ricerca tradizionalmente associati all'implementazione della funzionalità di ricerca in un'applicazione. Questo articolo illustra come usare la libreria di ricerca Microsoft Azure per integrare ricerca di Azure in un'applicazione Novell. Forms._
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 Come gli indici e documenti, i dati vengono archiviati in ricerca di Azure. Un' *indice* è un archivio di dati che possono essere cercati dal servizio di ricerca di Azure ed è concettualmente simile a una tabella di database. Oggetto *documento* è una singola unità di dati ricercabili nell'indice ed è concettualmente simile a una riga di database. Quando il caricamento di documenti e l'invio di query di ricerca in ricerca di Azure, le richieste vengono effettuate in un indice specifico nel servizio di ricerca.
 
@@ -38,7 +38,10 @@ Query di ricerca e filtrare le query possono essere utilizzate insieme o separat
 
 Ricerca di Azure supporta anche il recupero dei suggerimenti in base a input di ricerca. Per altre informazioni, vedere [le query di suggerimento](#suggestions).
 
-## <a name="setup"></a>Configurazione
+> [!NOTE]
+> Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
+
+## <a name="setup"></a>Programma di installazione
 
 Il processo per l'integrazione di ricerca di Azure in un'applicazione xamarin. Forms è come segue:
 
@@ -216,7 +219,7 @@ Questa query di filtro viene applicata all'intero indice e rimuove i documenti n
 
 Il `SearchAsync` metodo restituisce un `DocumentSearchResult` oggetto che contiene i risultati della query. Questo oggetto viene enumerato, con ogni `Document` dell'oggetto viene creato come un `Monkey` dell'oggetto e quindi aggiungervi le `Monkeys` `ObservableCollection` per la visualizzazione. I seguente screenshot Mostra query risultati della ricerca restituiti da ricerca di Azure:
 
-![](azure-search-images/search.png "Risultati della ricerca")
+![](azure-search-images/search.png "Search Results")
 
 Per altre informazioni sulla ricerca e filtro, vedere [eseguire Query nell'indice di ricerca di Azure usando .NET SDK](/azure/search/search-query-dotnet/).
 
@@ -268,7 +271,7 @@ Il risultato complessivo è che i primi 10 risultati tra l'indice verranno resti
 
 Il `SuggestAsync` metodo restituisce un `DocumentSuggestResult` oggetto che contiene i risultati della query. Questo oggetto viene enumerato, con ogni `Document` dell'oggetto viene creato come un `Monkey` dell'oggetto e quindi aggiungervi le `Monkeys` `ObservableCollection` per la visualizzazione. Gli screenshot seguenti mostrano i risultati del suggerimento restituiti da ricerca di Azure:
 
-![](azure-search-images/suggest.png "Risultati di suggerimento")
+![](azure-search-images/suggest.png "Suggestion Results")
 
 Si noti che nell'applicazione di esempio, il `SuggestAsync` metodo viene richiamato solo quando l'utente termina l'immissione di un termine di ricerca. Tuttavia, può anche essere utilizzato per supportare le query di ricerca con completamento automatico tramite l'esecuzione in ogni keypress.
 

@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/03/2019
-ms.openlocfilehash: e3c042a82a9870e68c94741ae4bdfaa728a40cb0
-ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
+ms.openlocfilehash: 46d0b245246d9e93040cd8591dab8ed3a816268d
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823908"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487009"
 ---
-# <a name="customizing-a-hybridwebview"></a>Personalizzazione di un HybridWebView
+# <a name="customizing-a-webview"></a>Personalizzazione di una visualizzazione WebView
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 _Un `WebView` Novell. Forms è una vista che Visualizza il contenuto Web e HTML nell'app. Questo articolo illustra come creare un renderer personalizzato che estende la `WebView` per consentire C# la chiamata del codice da JavaScript._
 
-A ogni visualizzazione di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [`WebView`](xref:Xamarin.Forms.WebView) viene sottoposto a rendering da un'applicazione Novell. Forms in iOS, viene creata un'istanza della classe `WkWebViewRenderer`, che a sua volta crea un'istanza di un controllo `WkWebView` nativo. Nella piattaforma Android la classe `WebViewRenderer` crea un'istanza di un controllo `WebView` nativo. Nella piattaforma UWP (Universal Windows Platform) la classe `WebViewRenderer` crea un'istanza di un controllo `WebView` nativo. Per altre informazioni sulle classi del renderer e dei controlli nativi a cui vengono mappati i controlli Xamarin.Forms, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+A ogni vista di Xamarin.Forms è associato un renderer per ogni piattaforma che consente di creare un'istanza di un controllo nativo. Quando un [`WebView`](xref:Xamarin.Forms.WebView) viene sottoposto a rendering da un'applicazione Novell. Forms in iOS, viene creata un'istanza della classe `WkWebViewRenderer`, che a sua volta crea un'istanza di un controllo `WkWebView` nativo. Nella piattaforma Android la classe `WebViewRenderer` crea un'istanza di un controllo `WebView` nativo. Nella piattaforma UWP (Universal Windows Platform) la classe `WebViewRenderer` crea un'istanza di un controllo `WebView` nativo. Per altre informazioni sulle classi del renderer e dei controlli nativi di cui Xamarin.Forms controlla il mapping, vedere [Classi di base e controlli nativi del renderer](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Il diagramma seguente illustra la relazione tra la classe [`View`](xref:Xamarin.Forms.View) e i controlli nativi corrispondenti che la implementano:
 
@@ -29,7 +29,7 @@ Il diagramma seguente illustra la relazione tra la classe [`View`](xref:Xamarin.
 Il processo di rendering può essere usato per implementare le personalizzazioni della piattaforma creando un renderer personalizzato per un [`WebView`](xref:Xamarin.Forms.WebView) in ogni piattaforma. Il processo per eseguire questa operazione è il seguente:
 
 1. [Creare](#create-the-hybridwebview) il controllo personalizzato `HybridWebView`.
-1. [Usare](#consume-the-hybridwebview) `HybridWebView` da Xamarin.Forms.
+1. [Usare](#consume-the-hybridwebview)`HybridWebView` da Xamarin.Forms.
 1. [Creare](#create-the-custom-renderer-on-each-platform) il renderer personalizzato per `HybridWebView` in ogni piattaforma.
 
 Ogni elemento verrà ora discusso a sua volta per implementare un renderer `HybridWebView` che migliora l' [`WebView`](xref:Xamarin.Forms.WebView) Novell. Forms per consentire C# la chiamata del codice da JavaScript. L'istanza di `HybridWebView` verrà usata per visualizzare una pagina HTML in cui viene chiesto all'utente di immettere il proprio nome. Quindi, quando l'utente fa clic su un pulsante HTML, una funzione JavaScript richiama un elemento `Action` di C# che visualizza una finestra popup contenente il nome dell'utente.
@@ -141,16 +141,16 @@ Questa azione chiama il metodo [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayA
 
 ## <a name="create-the-custom-renderer-on-each-platform"></a>Creare il renderer personalizzato in ogni piattaforma
 
-Il processo di creazione della classe renderer personalizzato è il seguente:
+Il processo di creazione della classe di renderer personalizzato è il seguente:
 
 1. Creare una sottoclasse della classe `WkWebViewRenderer` in iOS e la classe `WebViewRenderer` in Android e UWP, che esegue il rendering del controllo personalizzato.
 1. Eseguire l'override del metodo `OnElementChanged` che esegue il rendering della [`WebView`](xref:Xamarin.Forms.WebView) e della logica di scrittura per personalizzarla. Questo metodo viene chiamato quando viene creato un oggetto `HybridWebView`.
-1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzata o *AssemblyInfo.cs*per specificare che verrà usato per eseguire il rendering del controllo personalizzato Novell. Forms. L'attributo viene usato per registrare il renderer personalizzato in Xamarin.Forms.
+1. Aggiungere un `ExportRenderer` attributo alla classe renderer personalizzata o *AssemblyInfo.cs*per specificare che verrà usato per eseguire il rendering del controllo personalizzato Novell. Forms. L'attributo viene usato per registrare il renderer personalizzato con Xamarin.Forms.
 
 > [!NOTE]
 > Per la maggior parte degli elementi di Xamarin.Forms, l'indicazione di un renderer personalizzato in ogni progetto della piattaforma è facoltativa. Se un renderer personalizzato non è registrato, verrà usato il renderer predefinito per la classe di base del controllo. I renderer personalizzati sono tuttavia necessari in ogni progetto della piattaforma quando si esegue il rendering di un elemento [View](xref:Xamarin.Forms.View).
 
-Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazione tra di esse:
+Il diagramma seguente illustra le responsabilità di ogni progetto nell'applicazione di esempio, insieme alle relazioni tra di essi:
 
 ![](hybridwebview-images/solution-structure.png "HybridWebView Custom Renderer Project Responsibilities")
 
@@ -158,7 +158,7 @@ Il rendering del controllo personalizzato `HybridWebView` viene eseguito dalle c
 
 ![](hybridwebview-images/screenshots.png "HybridWebView on each Platform")
 
-Le classi `WkWebViewRenderer` e `WebViewRenderer` espongono il metodo `OnElementChanged`, che viene chiamato quando viene creato il controllo personalizzato Novell. Forms per eseguire il rendering del controllo Web nativo corrispondente. Questo metodo accetta un `VisualElementChangedEventArgs` parametro che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano rispettivamente l'elemento di Xamarin.Forms a cui il renderer *era* associato e l'elemento di Xamarin.Forms a cui il renderer *è* associato. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `HybridWebView`.
+Le classi `WkWebViewRenderer` e `WebViewRenderer` espongono il metodo `OnElementChanged`, che viene chiamato quando viene creato il controllo personalizzato Novell. Forms per eseguire il rendering del controllo Web nativo corrispondente. Questo metodo accetta un `VisualElementChangedEventArgs` parametro che contiene le proprietà `OldElement` e `NewElement`. Queste proprietà rappresentano rispettivamente l'elemento Xamarin.Forms a cui il renderer *era* collegato e l'elemento Xamarin.Forms a cui il renderer *è* collegato. Nell'applicazione di esempio la proprietà `OldElement` sarà `null` e la proprietà `NewElement` conterrà un riferimento all'istanza di `HybridWebView`.
 
 Una versione sottoposta a override del metodo `OnElementChanged`, in ogni classe renderer della piattaforma, è la posizione in cui eseguire la personalizzazione del controllo Web nativo. Un riferimento al controllo Novell. Forms di cui è in corso il rendering può essere ottenuto tramite la proprietà `Element`.
 

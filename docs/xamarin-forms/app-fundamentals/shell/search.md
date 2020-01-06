@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/18/2019
+ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695927"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490064"
 ---
 # <a name="xamarinforms-shell-search"></a>Ricerca nella shell Xamarin.Forms
 
@@ -181,8 +181,11 @@ Per altre informazioni sui modelli di dati, vedere [Modelli di dati Xamarin.Form
 Quando viene aggiunto un controllo `SearchHandler` nella parte superiore di una pagina, per impostazione predefinita la casella di ricerca è visibile e completamente espansa. Tuttavia, questo comportamento può essere modificato impostando la proprietà `SearchHandler.SearchBoxVisibility` su uno dei membri dell'enumerazione `SearchBoxVisibility`:
 
 - `Hidden`: la casella di ricerca non è visibile o accessibile.
-- `Collapsible`: la casella di ricerca è nascosta fino a quando l'utente non esegue un'azione per visualizzarla.
-- `Expanded`: la casella di ricerca è visibile e completamente espansa.
+- `Collapsible`: la casella di ricerca è nascosta fino a quando l'utente non esegue un'azione per visualizzarla. In iOS la casella di ricerca viene rivelata mediante il rimbalzo verticale del contenuto della pagina e in Android la casella di ricerca viene visualizzata toccando l'icona del punto interrogativo.
+- `Expanded`: la casella di ricerca è visibile e completamente espansa. Questo è il valore predefinito per la proprietà `SearchHandler.SearchBoxVisibility`.
+
+> [!IMPORTANT]
+> In iOS una casella di ricerca comprimibile richiede iOS 11 o versione successiva.
 
 L'esempio seguente illustra come nascondere la casella di ricerca:
 
@@ -190,7 +193,7 @@ L'esempio seguente illustra come nascondere la casella di ricerca:
 <ContentPage ...
              xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler SearchBoxVisibility="Hidden"
+        <controls:AnimalSearchHandler SearchBoxVisibility="Hidden"
                                       ... />
     </Shell.SearchHandler>
     ...

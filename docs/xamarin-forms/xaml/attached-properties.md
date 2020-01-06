@@ -7,20 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: b5d1ddc4cf3a6817851d22aba920abb29d9f746f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 78dd2d3a63cd0e2b6ab1e6876dd82f49f5580f0b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767640"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489973"
 ---
 # <a name="attached-properties"></a>Proprietà associate
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
-_Una proprietà associata è un tipo speciale di proprietà associabile, definito in una classe ma collegato ad altri oggetti e riconoscibile in XAML come attributo che contiene una classe e un nome di proprietà separati da un punto. Questo articolo fornisce un'introduzione alle proprietà associate e viene illustrato come creare e il loro uso._
-
-## <a name="overview"></a>Panoramica
 
 Collegati abilitare proprietà un oggetto per assegnare un valore per una proprietà che non definisce una propria classe. Ad esempio, possono utilizzare gli elementi figlio collegati proprietà in modo da informare relativo elemento padre del modo in cui sono presentati nell'interfaccia utente. Il [ `Grid` ](xref:Xamarin.Forms.Grid) controllo consente lo righe e colonne di un elemento figlio di essere specificato impostando il `Grid.Row` e `Grid.Column` proprietà associate. `Grid.Row` e `Grid.Column` sono le proprietà associate, perché vengono impostate su elementi che sono elementi figlio di un `Grid`, anziché sul `Grid` stesso.
 
@@ -31,14 +28,14 @@ Proprietà associabili deve essere implementata come proprietà associate negli 
 
 Per altre informazioni sulle proprietà associabile, vedere [proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md).
 
-## <a name="creating-and-consuming-an-attached-property"></a>Creazione e l'utilizzo di una proprietà associata
+## <a name="create-an-attached-property"></a>Creare una proprietà associata
 
 Il processo per la creazione di una proprietà associata è come segue:
 
 1. Creare un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) istanza con uno del [ `CreateAttached` ](xref:Xamarin.Forms.BindableProperty.CreateAttached*) overload del metodo.
 1. Fornire `static` `Get` *PropertyName* e `Set` *PropertyName* metodi come funzioni di accesso per la proprietà associata.
 
-### <a name="creating-a-property"></a>Creazione di una proprietà
+### <a name="create-a-property"></a>Creare una proprietà
 
 Quando si crea una proprietà associata per l'uso in altri tipi, la classe in cui viene creata la proprietà non deve derivare da [ `BindableObject` ](xref:Xamarin.Forms.BindableObject). Tuttavia, il *destinazione* proprietà per le funzioni di accesso deve essere o derivare da, [ `BindableObject` ](xref:Xamarin.Forms.BindableObject).
 
@@ -53,9 +50,9 @@ public static readonly BindableProperty HasShadowProperty =
 
 Verrà creata una proprietà associata denominata `HasShadow`, di tipo `bool`. La proprietà è di proprietà di `ShadowEffect` classi e ha un valore predefinito di `false`. La convenzione di denominazione per le proprietà associate è che l'identificatore della proprietà associata deve corrispondere al nome di proprietà specificato nella `CreateAttached` con "Property" aggiunto a tale metodo. Nell'esempio precedente, pertanto, l'identificatore della proprietà associata è `HasShadowProperty`.
 
-Per altre informazioni sulla creazione di proprietà associabile, inclusi i parametri che possono essere specificati durante la creazione, vedere [creazione e l'utilizzo di una proprietà associabile](~/xamarin-forms/xaml/bindable-properties.md#consuming-bindable-property).
+Per ulteriori informazioni sulla creazione di proprietà associabili, inclusi i parametri che possono essere specificati durante la creazione, vedere [creare una proprietà associabile](~/xamarin-forms/xaml/bindable-properties.md#consume-a-bindable-property).
 
-### <a name="creating-accessors"></a>Creazione di funzioni di accesso
+### <a name="create-accessors"></a>Crea funzioni di accesso
 
 Statica `Get` *PropertyName* e `Set` *PropertyName* metodi sono necessari le funzioni di accesso per la proprietà associata, in caso contrario, sarà possibile usare il sistema di proprietà di proprietà associata. Il `Get` *NomeProprietà* della funzione di accesso deve essere conforme per la firma seguente:
 
@@ -89,7 +86,7 @@ public static void SetHasShadow (BindableObject view, bool value)
 }
 ```
 
-### <a name="consuming-an-attached-property"></a>Utilizzo di una proprietà associata
+### <a name="consume-an-attached-property"></a>Utilizzare una proprietà associata
 
 Dopo aver creata una proprietà associata, può essere utilizzato dal codice o XAML. In XAML, ciò si ottiene con la dichiarazione di uno spazio dei nomi con un prefisso con la dichiarazione dello spazio dei nomi che indica il nome dello spazio dei nomi Common Language Runtime (CLR) e, facoltativamente, un nome di assembly. Per altre informazioni, vedere [spazi dei nomi XAML](~/xamarin-forms/xaml/namespaces.md).
 
@@ -114,7 +111,7 @@ var label = new Label { Text = "Label Shadow Effect" };
 ShadowEffect.SetHasShadow (label, true);
 ```
 
-### <a name="consuming-an-attached-property-with-a-style"></a>Utilizzo di una proprietà associata con uno stile
+### <a name="consume-an-attached-property-with-a-style"></a>Utilizzare una proprietà associata con uno stile
 
 Le proprietà associate possono anche essere aggiunto a un controllo da uno stile. L'esempio di codice XAML seguente mostra un' *esplicite* stile di visualizzazione che utilizza il `HasShadow` proprietà collegata, che può essere applicato a [ `Label` ](xref:Xamarin.Forms.Label) controlli:
 
@@ -126,26 +123,22 @@ Le proprietà associate possono anche essere aggiunto a un controllo da uno stil
 </Style>
 ```
 
-Il [ `Style` ](xref:Xamarin.Forms.Style) può essere applicato a un [ `Label` ](xref:Xamarin.Forms.Label) impostando relativo [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) proprietà per il `Style` istanza utilizzando il `StaticResource`estensione di markup, come illustrato nell'esempio di codice seguente:
+[`Style`](xref:Xamarin.Forms.Style) può essere applicato a un elemento [`Label`](xref:Xamarin.Forms.Label) impostando la relativa proprietà [`Style`](xref:Xamarin.Forms.NavigableElement.Style) sull'istanza di `Style` utilizzando l'estensione di markup `StaticResource`, come illustrato nell'esempio di codice seguente:
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
 ```
 
-Per altre informazioni sugli stili, vedere [stili](~/xamarin-forms/user-interface/styles/index.md).
+Per altre informazioni sugli stili, vedere [Stili](~/xamarin-forms/user-interface/styles/index.md).
 
 ## <a name="advanced-scenarios"></a>Scenari avanzati
 
-Durante la creazione di una proprietà associata, esistono una serie di parametri facoltativi che è possibile impostare per abilitare scenari avanzati proprietà associata. Ciò include il rilevamento delle modifiche di proprietà, convalida i valori delle proprietà e la coercizione di valori di proprietà. Per altre informazioni, vedere [scenari avanzati di](~/xamarin-forms/xaml/bindable-properties.md#advanced).
-
-## <a name="summary"></a>Riepilogo
-
-Questo articolo ha presentato le proprietà associate ed è stato illustrato come creare e il loro uso. Una proprietà associata è un tipo speciale di proprietà associabile, definita in una classe ma collegato ad altri oggetti e che sia riconoscibile in XAML come attributi che contengono una classe e un nome di proprietà separati da un punto.
+Durante la creazione di una proprietà associata, esistono una serie di parametri facoltativi che è possibile impostare per abilitare scenari avanzati proprietà associata. Ciò include il rilevamento delle modifiche di proprietà, convalida i valori delle proprietà e la coercizione di valori di proprietà. Per ulteriori informazioni, vedere [scenari avanzati](~/xamarin-forms/xaml/bindable-properties.md#advanced-scenarios).
 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Proprietà associabili](~/xamarin-forms/xaml/bindable-properties.md)
 - [Spazi dei nomi XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Effetto di ombreggiatura (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
-- [BindableProperty](xref:Xamarin.Forms.BindableProperty)
-- [BindableObject](xref:Xamarin.Forms.BindableObject)
+- [Shadow Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect) (Esempio di effetto di ombreggiatura)
+- [API BindableProperty](xref:Xamarin.Forms.BindableProperty)
+- [API BindableObject](xref:Xamarin.Forms.BindableObject)

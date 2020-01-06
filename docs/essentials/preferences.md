@@ -1,23 +1,23 @@
 ---
-title: 'Xamarin.Essentials: Preferenze'
+title: 'Xamarin.Essentials: Preferences'
 description: Questo documento descrive la classe Preferences in Xamarin.Essentials, che consente di salvare le preferenze dell'applicazione in un archivio chiave/valore. Illustra come usare la classe e i tipi di dati che possono essere archiviati.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
-ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
-ms.translationtype: HT
+ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317882"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488504"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferenze
+# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferences
 
 La classe **Preferences** consente di archiviare le preferenze dell'applicazione in un archivio chiave/valore.
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -69,7 +69,7 @@ In **Preferences** sono supportati i tipi di dati seguenti:
 
 ## <a name="implementation-details"></a>Dettagli sull'implementazione
 
-I valori di `DateTime` vengono archiviati in un formato binario a 64 bit (long integer) usando due metodi definiti dalla classe `DateTime`: Il metodo [`ToBinary`](xref:System.DateTime.ToBinary) viene usato per codificare il valore `DateTime` e il metodo [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) decodifica il valore. Vedere la documentazione di questi metodi per le modifiche che potrebbero essere apportate ai valori decodificati quando viene archiviato un valore `DateTime` non UTC (Coordinated Universal Time).
+I valori di `DateTime` vengono archiviati in un formato binario a 64 bit (long integer) usando due metodi definiti dalla classe `DateTime`: il metodo [`ToBinary`](xref:System.DateTime.ToBinary) viene usato per codificare il valore `DateTime` e il metodo [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) decodifica il valore. Vedere la documentazione di questi metodi per le modifiche che potrebbero essere apportate ai valori decodificati quando viene archiviato un valore `DateTime` non UTC (Coordinated Universal Time).
 
 ## <a name="platform-implementation-specifics"></a>Informazioni di implementazione specifiche della piattaforma
 
@@ -83,7 +83,9 @@ Tutti i dati vengono archiviati nelle [preferenze condivise](https://developer.a
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) viene usato per archiviare i valori nel dispositivo. Se non vengono specificati `sharedName`, viene usato `LocalSettings`, altrimenti viene usato il nome per creare un nuovo contenitore in `LocalSettings`. 
+
+`LocalSettings` presenta inoltre la restrizione seguente che il nome di ogni impostazione può avere una lunghezza massima di 255 caratteri. Ogni impostazione può avere dimensioni fino a 8 KB e ogni impostazione composita può avere dimensioni massime di 64K byte.
 
 --------------
 

@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 924b66b3bdb66c2197b708d87e20eeb6f3ed9f46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770516"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545569"
 ---
 # <a name="the-path-fill-types"></a>Tipi di riempimento dei tracciati
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Individua i diversi effetti possibili con i tipi di riempimento percorso SkiaSharp_
 
 Può essere sovrapposto due distribuzioni in un percorso e le righe che compongono una distribuzione del singolo possono sovrapporsi. Può quindi essere riempito potenzialmente qualsiasi area inclusa, ma è possibile evitare di riempire tutte le aree racchiusi. Di seguito è riportato un esempio:
 
-![](fill-types-images/filltypeexample.png "Cinque punte filles parzialmente a stelle")
+![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
 È necessario un po' controllare. L'algoritmo di riempimento è disciplinato dalle [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) proprietà della `SKPath`, che è impostata su un membro del [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) enumerazione:
 
@@ -170,9 +170,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 In genere, il tipo di riempimento percorso dovrebbe influire sul solo riempimenti e non i tratti, ma i due `Inverse` influiscono sulla modalità sia riempimenti e tracce. Per i riempimenti, i due `Inverse` tipi riempire le aree oppositely in modo che l'area di fuori l'asterisco viene riempita. Per i tratti, i due `Inverse` tipi colore tutto ad eccezione del tratto. Utilizzo di questi tipi di riempimento inverso può produrre alcuni effetti dispari, come illustrato nella schermata di iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Tripla screenshot della pagina di Star Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "tripla screenshot della pagina Five-Pointed Star")
+[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
-Gli screenshot di Android e UWP vengono illustrati gli effetti dei vertici e coppie tipici, ma l'ordine del tratto e riempimento influisce anche sui risultati.
+Lo screenshot Android Mostra gli effetti tipici anche dispari e di avvolgimento, ma anche l'ordine del tratto e del riempimento influisce sui risultati.
 
 La direzione che vengono visualizzate linee dipende l'algoritmo dei vertici. In genere quando si crea un percorso, è possibile controllare tale direzione come specificato da righe sono rappresentate da un punto a altro. Tuttavia, il `SKPath` classe definisce inoltre metodi, ad esempio `AddRect` e `AddCircle` che disegnare i contorni interi. Per controllare come vengono disegnati questi oggetti, i metodi includono un parametro di tipo [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), che contiene due membri:
 
@@ -223,7 +223,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 È un'immagine interessa creata con poche righe di codice:
 
-[![](fill-types-images/overlappingcircles-small.png "Tripla screenshot della pagina di cerchi sovrapposti")](fill-types-images/overlappingcircles-large.png#lightbox "tripla screenshot della pagina di cerchi sovrapposti")
+[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

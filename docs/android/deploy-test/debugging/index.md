@@ -1,5 +1,5 @@
 ---
-title: Debug di Xamarin.Android in dispositivi ed emulatori
+title: Eseguire il debug di app Novell. Android in dispositivi ed emulatori
 description: Come eseguire test e debug di un'app Xamarin.Android
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 0f873f69de7f85a77bdd0ca7aafa33bff1d9b961
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3b3fa14ec81bd4f06322197b7140654f9086ce73
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021518"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556483"
 ---
-# <a name="debugging"></a>Debug
+# <a name="debug-xamarinandroid-apps"></a>Eseguire il debug di app Novell. Android
 
 Questa sezione illustra come eseguire il debug di un'app Xamarin.Android in dispositivi o emulatori.
 
@@ -28,11 +28,8 @@ Questo articolo illustra come avviare l'emulatore Android da Visual Studio ed es
 
 ### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[Debugging on a Device](~/android/deploy-test/debugging/debug-on-device.md) (Debug in un dispositivo)
 
-L'articolo illustra come configurare un dispositivo Android fisico in modo che l'applicazione Xamarin.Android possa essere distribuita direttamente da Visual Studio o Visual Studio per Mac.
+Questo articolo illustra come configurare un dispositivo Android fisico in modo che l'applicazione Novell. Android possa essere distribuita direttamente da Visual Studio o Visual Studio per Mac.
 
 ### <a name="android-debug-logandroiddeploy-testdebuggingandroid-debug-logmd"></a>[Log di debug Android](~/android/deploy-test/debugging/android-debug-log.md)
 
 Un espediente piuttosto comune a cui ricorrono gli sviluppatori per il debug delle proprie applicazioni è l'uso di `Console.WriteLine`. In una piattaforma per dispositivi mobili come Android, tuttavia, la console non è disponibile. I dispositivi Android specificano un log che sarà probabilmente necessario usare durante la scrittura delle app. Questo log viene a volte indicato come **logcat** a causa del comando digitato per recuperalo. Questo articolo illustra la procedura per usare **logcat**.
-
-> [!WARNING]
-> Si noti che **Xamarin Android Player** è stato deprecato. Per altre informazioni, vedere l'[annuncio nel post di questo blog](https://blog.xamarin.com/live-from-dotnetconf-cycle-7-xamarin-studio-6-and-more/). Inoltre, l'**emulatore Android di Visual Studio** è stato deprecato a partire da Visual Studio 2017.

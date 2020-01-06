@@ -1,18 +1,18 @@
 ---
 title: Migliorare le prestazioni delle app Xamarin.Forms
-description: Esistono molte tecniche per incrementare le prestazioni delle applicazioni Xamarin.Forms. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+description: Esistono molte tecniche per incrementare le prestazioni delle applicazioni Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
-ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681340"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487165"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Migliorare le prestazioni delle app Xamarin.Forms
 
@@ -20,9 +20,9 @@ ms.locfileid: "74681340"
 
 **Evoluzione 2016: ottimizzazione delle prestazioni delle app con Xamarin.Forms**
 
-Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria del dispositivo. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, verificando che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
+Le prestazioni insoddisfacenti di un'applicazione si manifestano in molti modi. Può sembrare che l'applicazione non risponda, lo scorrimento diventa lento e si riduce la durata della batteria del dispositivo. Tuttavia, l'ottimizzazione delle prestazioni implica più della semplice implementazione di codice efficiente. Deve essere considerata anche l'esperienza dell'utente in termini di prestazioni dell'applicazione. Ad esempio, assicurarsi che le operazioni vengano eseguite senza impedire all'utente di eseguire altre attività può contribuire a migliorare l'esperienza dell'utente.
 
-Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni Xamarin.Forms. Insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
+Esistono diverse tecniche per migliorare le prestazioni, e le prestazioni percepite, delle applicazioni Xamarin.Forms. Nel loro insieme, queste tecniche possono ridurre notevolmente il carico di lavoro di una CPU e la quantità di memoria usata da un'applicazione.
 
 > [!NOTE]
 > Prima di leggere questo articolo, è consigliabile vedere [Prestazioni multipiattaforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), che illustra le tecniche non specifiche di una piattaforma che consentono di migliorare l'utilizzo della memoria e le prestazioni delle applicazioni compilate con la piattaforma Xamarin.
@@ -172,7 +172,7 @@ La velocità di risposta complessiva dell'applicazione può essere migliorata e 
 - Evitare di provare a creare costruttori asincroni. Usare invece gli eventi del ciclo di vita o la logica di inizializzazione separata per `await` correttamente qualsiasi inizializzazione. Per altre informazioni, vedere [costruttori asincroni](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) in Blog.stephencleary.com.
 - Usare il modello di attività Lazy per evitare l'attesa del completamento delle operazioni asincrone durante l'avvio dell'applicazione. Per ulteriori informazioni, vedere [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
 - Creare un wrapper di attività per le operazioni asincrone esistenti che non usano il tocco, creando `TaskCompletionSource<T>` oggetti. Questi oggetti ottengono i vantaggi della programmabilità `Task` e consentono di controllare la durata e il completamento del `Task`associato. Per ulteriori informazioni, vedere [la natura di TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/).
-Asynchronous-MVVM-Applications-Commands).
+ 
 - Restituisce un oggetto `Task`, anziché restituire un oggetto `Task` atteso, quando non è necessario elaborare il risultato di un'operazione asincrona. Questa operazione è più efficiente a causa del minor cambio di contesto eseguito.
 - Usare la libreria del flusso di dati Task Parallel Library (TPL) in scenari come l'elaborazione di dati quando diventano disponibili o quando sono presenti più operazioni che devono comunicare tra loro in modo asincrono. Per ulteriori informazioni, vedere [dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
 
@@ -182,7 +182,7 @@ Asynchronous-MVVM-Applications-Commands).
 - Aggiornare gli elementi dell'interfaccia utente con i dati delle operazioni asincrone sul thread dell'interfaccia utente, per evitare che vengano generate eccezioni. Tuttavia, gli aggiornamenti alla proprietà `ListView.ItemsSource` verranno automaticamente sottoposti a marshalling nel thread UI. Per informazioni su come determinare se il codice è in esecuzione nel thread dell'interfaccia utente, vedere [Novell. Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
 
     > [!IMPORTANT]
-    > Qualsiasi proprietà del controllo aggiornata tramite data binding verrà automaticamente marsheled al thread dell'interfaccia utente.
+    > Viene eseguito automaticamente il marshalling di tutte le proprietà del controllo aggiornate tramite data binding al thread dell'interfaccia utente.
 
 ### <a name="error-handling"></a>Gestione degli errori
 

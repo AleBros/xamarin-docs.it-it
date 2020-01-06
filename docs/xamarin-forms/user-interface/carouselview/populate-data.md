@@ -6,13 +6,13 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/02/2019
-ms.openlocfilehash: 0ad31bc6f84ae633a9a18592a00670703db19df9
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/17/2019
+ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697612"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488224"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Dati CarouselView di Novell. Forms
 
@@ -258,7 +258,35 @@ Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a No
 > [!IMPORTANT]
 > Quando si usa [`CarouselView`](xref:Xamarin.Forms.CarouselView), non impostare mai l'elemento radice degli oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) su un `ViewCell`. Questa operazione comporterà la generazione di un'eccezione in quanto `CarouselView` non ha alcun concetto di celle.
 
-## <a name="pull-to-refresh"></a>Pull per aggiornare
+## <a name="display-indicators"></a>Indicatori di visualizzazione
+
+Gli indicatori, che rappresentano il numero di elementi e la posizione corrente in una `CarouselView`, possono essere visualizzati accanto al `CarouselView`. Questa operazione può essere eseguita con il controllo `IndicatorView`:
+
+```xaml
+<StackLayout>
+    <CarouselView x:Name="carouselView"
+                  ItemsSource="{Binding Monkeys}">
+        <CarouselView.ItemTemplate>
+            <!-- DataTemplate that defines item appearance -->
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+    <IndicatorView ItemsSourceBy="carouselView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+</StackLayout>
+```
+
+In questo esempio viene eseguito il rendering del `IndicatorView` sotto l'`CarouselView`, con un indicatore per ogni elemento nella `CarouselView`. Il `IndicatorView` viene popolato con i dati impostando la proprietà `ItemsSourceBy` sull'oggetto `CarouselView`. Ogni indicatore è un cerchio grigio chiaro, mentre l'indicatore che rappresenta l'elemento corrente nel `CarouselView` è grigio scuro:
+
+[![Screenshot di CarouselView e IndicatorView, su iOS e Android](populate-data-images/indicators.png "Cerchi IndicatorView")](populate-data-images/indicators-large.png#lightbox "Cerchi IndicatorView")
+
+> [!IMPORTANT]
+> Impostando la proprietà `ItemsSourceBy` si ottiene il binding della proprietà `IndicatorView.Position` alla proprietà `CarouselView.Position` e l'associazione della proprietà `IndicatorView.ItemsSource` alla proprietà `CarouselView.ItemsSource`.
+
+Per ulteriori informazioni sugli indicatori, vedere [Novell. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
+
+## <a name="pull-to-refresh"></a>Aggiornamento tramite trascinamento verso il basso
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) supporta il pull per aggiornare la funzionalità tramite il `RefreshView`, che consente di visualizzare i dati da aggiornare effettuando il pull sugli elementi. Il `RefreshView` è un controllo contenitore che fornisce il pull per aggiornare la funzionalità al relativo elemento figlio, purché l'elemento figlio supporti il contenuto scorrevole. Pertanto, il pull per l'aggiornamento viene implementato per un `CarouselView` impostando il valore come figlio di un `RefreshView`:
 
@@ -351,6 +379,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [CarouselView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Novell. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
 - [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

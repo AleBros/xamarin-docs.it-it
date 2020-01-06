@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028089"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556522"
 ---
-# <a name="debugging-on-the-android-emulator"></a>Debug nell'emulatore Android
+# <a name="debug-on-the-android-emulator"></a>Eseguire il debug nel emulatore Android
 
 _Questa guida contiene informazioni su come avviare un dispositivo virtuale nell'emulatore Android per eseguire il debug e il test dell'app._
-
-## <a name="overview"></a>Panoramica
 
 L'emulatore Android (installato con il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con .NET**) può essere eseguito in diverse configurazioni per simulare dispositivi Android differenti. Ognuna di queste configurazioni viene creata come _dispositivo virtuale_. In questa guida viene illustrato come avviare l'emulatore da Visual Studio ed eseguire l'app in un dispositivo virtuale. Per informazioni sulla configurazione dell'emulatore Android e la creazione di nuovi dispositivi virtuali, vedere [Configurazione dell'emulatore Android](~/android/get-started/installation/android-emulator/index.md).
 
@@ -111,7 +109,7 @@ Gli avvii successivi del dispositivo virtuale sono molto più veloci perché l'e
 
 ![Caricamento dello stato in fase di riavvio](debug-on-emulator-images/loading-state.png)
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Per suggerimenti e soluzioni alternative per i problemi comuni dell'emulatore, vedere [Risoluzione dei problemi di configurazione dell'emulatore](~/android/get-started/installation/android-emulator/troubleshooting.md).
 

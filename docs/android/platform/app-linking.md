@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027743"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487828"
 ---
 # <a name="app-linking-in-android"></a>Collegamento di app in Android
 
@@ -36,7 +36,7 @@ Se per l'utente non sono installate app che supportano l'URI e ne viene successi
 
 Questa guida illustra come configurare un'applicazione Android 6,0 e come creare e pubblicare il file di collegamenti di asset digitali per supportare il collegamento di app in Android 6,0.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 Questa guida richiede Novell. Android 6,1 e un'applicazione destinata a Android 6,0 (livello API 23) o superiore.
 
@@ -167,7 +167,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2. Visualizza i criteri di gestione dei collegamenti esistenti per le applicazioni installate in un determinato dispositivo. Con il comando seguente viene eseguito il dump di un elenco di criteri di collegamento per ogni utente del dispositivo con le informazioni seguenti. Al prompt dei comandi digitare il seguente comando:
+2. Visualizza i criteri di gestione dei collegamenti esistenti per le applicazioni installate in un determinato dispositivo. Con il comando seguente viene eseguito il dump di un elenco di criteri di collegamento per ogni utente del dispositivo con le informazioni seguenti. Al prompt dei comandi digitare quanto segue:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -177,7 +177,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     - **`Domain`** &ndash; i domini (separati da spazi) i cui collegamenti Web verranno gestiti dall'applicazione
     - **`Status`** &ndash; questo è lo stato corrente di gestione dei collegamenti per l'app. Il valore indica **sempre** che l'applicazione ha `android:autoVerify=true` dichiarata ed è stata superata la verifica del sistema. È seguito da un numero esadecimale che rappresenta il record del sistema Android della preferenza.
 
-    Esempio:
+    Ad esempio:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -195,7 +195,6 @@ Questa guida ha illustrato come funziona il collegamento di app in Android 6,0. 
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Ricerca della firma MD5 o SHA1 dell'archivio chiavi](~/android/deploy-test/signing/keystore-signature.md)
-- [Attività e Intent](https://university.xamarin.com/classes#4)
 - [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Collegamenti a Google Digital Assets](https://developers.google.com/digital-asset-links/)
 - [Generatore elenco di istruzioni e tester](https://developers.google.com/digital-asset-links/tools/generator)

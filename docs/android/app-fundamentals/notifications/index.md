@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e0035414cb8a24e5571b2972ec638eec550c593c
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025527"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545556"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notifiche in Novell. Android
 
@@ -29,7 +29,7 @@ Questa procedura dettagliata illustra come usare le notifiche locali in un'appli
 
 [Firebase cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) Messaging &ndash; Firebase Cloud Messaging (FCM) è un servizio che facilita la messaggistica tra le app per dispositivi mobili e le applicazioni server. La messaggistica cloud Firebase può essere usata per implementare notifiche remote (dette anche notifiche push) nelle applicazioni Novell. Android.
 
-[Notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; questo argomento per sviluppatori Android è la guida definitiva per le notifiche Android. Include una sezione relativa alle considerazioni sulla progettazione che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Vengono fornite ulteriori informazioni di base sulla navigazione preliminare all'avvio di un'attività e viene illustrato come visualizzare lo stato di avanzamento in una notifica e controllare la riproduzione dei supporti nella schermata di blocco.
+[Notifiche](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; questo argomento per sviluppatori Android è la guida definitiva per le notifiche Android. Include una sezione relativa alle considerazioni sulla progettazione che consente di progettare le notifiche in modo che siano conformi alle linee guida dell'interfaccia utente di Android. Vengono fornite informazioni complementari sulla conservazione della navigazione all'avvio di un'attività e viene illustrato come visualizzare lo stato di avanzamento in una notifica e controllare la riproduzione dei supporti nella schermata di blocco.
 
 [NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; questo servizio Android consente all'app di restare in ascolto e interagire con tutte le notifiche pubblicate sul dispositivo Android, non solo le notifiche che l'app è registrata per la ricezione.
 Si noti che l'utente deve concedere in modo esplicito l'autorizzazione all'app affinché possa restare in ascolto delle notifiche sul dispositivo.
@@ -37,4 +37,3 @@ Si noti che l'utente deve concedere in modo esplicito l'autorizzazione all'app a
 ## <a name="related-links"></a>Collegamenti correlati
 
 - [Notifiche locali (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
-- [Notifiche remote (esempio)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)

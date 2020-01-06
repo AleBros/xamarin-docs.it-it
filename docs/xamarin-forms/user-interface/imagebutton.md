@@ -6,17 +6,17 @@ ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
-ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 12/04/2019
+ms.openlocfilehash: 7c6647a0299b5ece3caaaa1d322ec1a0efac3557
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657180"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490090"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin. Forms ImageButton
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Elemento ImageButton Visualizza un'immagine e risponde a un tocco o clic che indirizza un'applicazione per eseguire una determinata attività._
 
@@ -53,9 +53,12 @@ Nell'esempio seguente viene mostrato come creare un `ImageButton` in XAML:
 
 Il `Source` proprietà consente di specificare l'immagine visualizzata nel `ImageButton`. In questo esempio il valore è impostato in un file locale che verrà caricato da ogni progetto della piattaforma, generando gli screenshot seguenti:
 
-[![Base ImageButton](imagebutton-images/BasicImageButton.png "base ImageButton")](imagebutton-images/BasicImageButton-Large.png#lightbox "ImageButton base")
+[![ImageButton di base](imagebutton-images/BasicImageButton.png "ImageButton di base")](imagebutton-images/BasicImageButton-Large.png#lightbox "ImageButton di base")
 
 Per impostazione predefinita, il `ImageButton` rettangolare, ma è possibile assegnare gli angoli arrotondati it usando le `CornerRadius` proprietà. Per altre informazioni sulle `ImageButton` aspetto, vedere [ImageButton aspetto](#imagebutton-appearance).
+
+> [!NOTE]
+> Sebbene un `ImageButton` possa caricare un GIF animato, visualizzerà solo il primo frame del GIF.
 
 Nell'esempio seguente viene illustrato come creare una pagina che è funzionalmente equivalente all'esempio XAML precedente, ma interamente nel C#:
 
@@ -144,7 +147,7 @@ Quando la `ImageButton` toccando, il `OnImageButtonClicked` esecuzione del metod
 
 Questa particolare `Clicked` gestore incrementa un contatore e visualizza il valore del contatore in una [ `Label` ](xref:Xamarin.Forms.Label):
 
-[![Fare clic su di base ImageButton](imagebutton-images/ImageButton.png "fare clic su di base ImageButton")](imagebutton-images/ImageButton-Large.png#lightbox "base ImageButton clic")
+[![Pulsante ImageButton di base](imagebutton-images/ImageButton.png "Pulsante ImageButton di base")](imagebutton-images/ImageButton-Large.png#lightbox "Pulsante ImageButton di base")
 
 Nell'esempio seguente viene illustrato come creare una pagina che è funzionalmente equivalente all'esempio XAML precedente, ma interamente nel C#:
 
@@ -238,7 +241,7 @@ Il `Aspect` proprietà può essere impostata su uno dei membri del [ `Aspect` ](
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -consegna l'immagine, se necessario, in modo che l'intera immagine si integra il `ImageButton`, con uno spazio vuoto aggiunto per i primi/ultimi o i lati a seconda che l'immagine sia di larghezza e un'altezza. Questo è il valore predefinito di [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumerazione.
 
 > [!NOTE]
-> Il `ImageButton` classe dispone inoltre [ `Margin` ](xref:Xamarin.Forms.View.Margin) e `Padding` le proprietà che controllano il comportamento di layout del `ImageButton`. Per altre informazioni, vedere [margine e spaziatura interna](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+> Il `ImageButton` classe dispone inoltre [ `Margin` ](xref:Xamarin.Forms.View.Margin) e `Padding` le proprietà che controllano il comportamento di layout del `ImageButton`. Per altre informazioni, vedere l'articolo sulle proprietà [Margin e Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## <a name="imagebutton-visual-states"></a>Stati visivi ImageButton
 

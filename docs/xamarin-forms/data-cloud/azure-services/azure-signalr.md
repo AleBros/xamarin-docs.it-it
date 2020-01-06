@@ -6,12 +6,12 @@ ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
-ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: e95dd72513562bba9fb513c4742e476bc7be0c94
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739219"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487412"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Novell. Forms
 
@@ -20,6 +20,9 @@ ms.locfileid: "68739219"
 ASP.NET Core SignalR è un modello di applicazione che semplifica il processo di aggiunta della comunicazione in tempo reale alle applicazioni. Il servizio Azure SignalR consente uno sviluppo e una distribuzione rapidi di applicazioni SignalR scalabili. Funzioni di Azure è un metodo di codice senza server di breve durata che può essere combinato per formare applicazioni scalabili e guidate dagli eventi.
 
 Questo articolo ed esempio illustra come combinare il servizio Azure SignalR e funzioni di Azure con Novell. Forms, per fornire messaggi in tempo reale ai client connessi.
+
+> [!NOTE]
+> Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
 
 ## <a name="create-an-azure-signalr-service-and-azure-functions-app"></a>Creare un servizio Azure SignalR e l'app funzioni di Azure
 
@@ -31,7 +34,7 @@ L'applicazione di esempio è costituita da tre componenti principali: un hub del
 1. La funzione **Talk** passa il messaggio in arrivo all'hub SignalR.
 1. L'hub SignalR trasmette il messaggio a tutte le istanze dell'applicazione mobile connesse, incluso il mittente originale.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Le funzioni **Negotiate** e **Talk** nell'applicazione di esempio possono essere eseguite localmente con Visual Studio 2019 e gli strumenti di runtime di Azure. Il servizio Azure SignalR, tuttavia, non può essere emulato localmente ed è difficile esporre funzioni di Azure ospitate localmente a dispositivi fisici o virtuali per il test. Si consiglia di distribuire le funzioni di Azure in un'istanza di app di funzioni di Azure, in quanto consente il testing multipiattaforma. Per informazioni dettagliate sulla distribuzione, vedere [distribuire funzioni di Azure con Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
 
 ### <a name="create-an-azure-signalr-service"></a>Creare un servizio Azure SignalR
@@ -52,7 +55,7 @@ Questa stringa di connessione viene usata per [distribuire funzioni di Azure con
 
 Per testare l'applicazione di esempio, è necessario creare una nuova app funzioni di Azure nel portale di Azure. Prendere nota del nome dell' **app** perché questo URL viene usato nel file **Constants.cs** dell'applicazione di esempio. Lo screenshot seguente illustra la creazione di una nuova app funzioni di Azure denominata "xdocsfunctions":
 
-[![Screenshot della creazione di app di funzioni di Azure](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
+[![screenshot della creazione di app di funzioni di Azure](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
 
 Funzioni di Azure può essere distribuito in un'istanza di app di funzioni di Azure da Visual Studio 2019. Le sezioni seguenti descrivono la distribuzione di due funzioni nell'applicazione di esempio in un'istanza di app di funzioni di Azure.
 
@@ -303,5 +306,5 @@ Dopo aver completato questi passaggi e aver eseguito l'applicazione, facendo cli
 * [Creazione di app per dispositivi mobili in tempo reale con Novell e SignalR](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
 * [Introduzione a SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Introduzione alle funzioni di Azure](/azure/azure-functions/functions-overview)
-* [Documentazione di funzioni di Azure](/azure/azure-functions/)
+* [Documentazione di Funzioni di Azure](/azure/azure-functions/)
 * [Esempio di chat SignalR MVVM](https://github.com/lbugnion/sample-xamarin-signalr)

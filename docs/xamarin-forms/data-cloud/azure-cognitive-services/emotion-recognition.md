@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 4dedcb0869c1e965679812239b1de09f07efa875
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869389"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487620"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Riconoscimento delle emozioni percepito usando il API Viso
 
@@ -20,11 +20,16 @@ ms.locfileid: "68869389"
 
 Il API Viso è in grado di eseguire il rilevamento delle emozioni per rilevare rabbia, distemperanza, disgusto, paura, felicità, neutralità, tristezza e sorpresa, in un'espressione facciale basata su annotazioni percepite da parte dei codificatori umani. È importante notare, tuttavia, che solo le espressioni facciali potrebbero non rappresentare necessariamente gli Stati interni delle persone.
 
-Oltre a restituire un risultato emotivo per un'espressione facciale, il API Viso può anche restituire un rettangolo di delimitazione per i visi rilevati. Si noti che una chiave API deve essere ottenuta per usare l'API viso. Per ottenere tale valore in [prova servizi cognitivi](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Oltre a restituire un risultato emotivo per un'espressione facciale, il API Viso può anche restituire un rettangolo di delimitazione per i visi rilevati.
 
 Riconoscimento delle emozioni può essere eseguito tramite una libreria client e tramite l'API REST. Questo articolo è incentrato su come eseguire il riconoscimento delle emozioni tramite l'API REST. Per altre informazioni sull'API REST, vedere [API REST viso](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
 L'API viso consente inoltre di riconoscere l'espressione del volto delle persone nel video e può restituire un riepilogo delle emozioni. Per altre informazioni, vedere [come analizzare i video in tempo reale](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/).
+
+> [!NOTE]
+> Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
+
+Per usare la API Viso, è necessario ottenere una chiave API. Per ottenere tale valore in [prova servizi cognitivi](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Per altre informazioni sull'API viso, vedere [API viso](/azure/cognitive-services/face/overview/).
 
@@ -79,7 +84,7 @@ Questo metodo genera un URI di richiesta e quindi invia la richiesta per il `det
 > [!NOTE]
 > Nelle chiamate API viso come è stato usato per ottenere le chiavi di sottoscrizione, è necessario usare la stessa area. Ad esempio, se è stato ottenuto le chiavi di sottoscrizione dal `westus` area, l'endpoint di rilevamento viso sarà `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
-### <a name="send-the-request"></a>Invia la richiesta
+### <a name="send-the-request"></a>Inviare la richiesta
 
 Il `SendRequestAsync` metodo effettua la richiesta POST all'API viso e restituisce il risultato come un `Face` matrice:
 
@@ -170,7 +175,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 Lo screenshot seguente mostra il risultato del processo di riconoscimento delle emozioni nell'applicazione di esempio:
 
-![](emotion-recognition-images/emotion-recognition.png "Riconoscimento delle emozioni")
+![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
 
 ## <a name="related-links"></a>Collegamenti correlati
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
-ms.openlocfilehash: 22c5b5b6479ce65c2e6b69f6ad5a98fd11ae47d7
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
+ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842895"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489999"
 ---
 # <a name="xamarinforms-tabbedpage"></a>Novell. Forms TabbedPage
 
@@ -27,14 +27,14 @@ In iOS l'elenco delle schede è visualizzato nella parte inferiore dello schermo
 > [!TIP]
 > Il `TabbedRenderer` per iOS dispone di un metodo di `GetIcon` sottoponibile a override che può essere utilizzato per caricare icone di tabulazione da un'origine specificata. Questo override rende possibile l'uso di immagini SVG come icone in una `TabbedPage`. È anche possibile specificare versioni selezionate e non selezionate di un'icona.
 
-In Android, l'elenco di schede viene visualizzato nella parte superiore della schermata e l'area dei dettagli è riportata di seguito. Ogni scheda è costituita da un titolo e da un'icona, che deve essere un file PNG con un canale alfa. Tuttavia, le schede possono essere spostate nella parte inferiore dello schermo con una specifica della piattaforma. Per informazioni sui requisiti delle icone, vedere le [schede](https://material.io/components/tabs/#) in material.io e [supportare diverse densità di pixel](https://developer.android.com/training/multiscreen/screendensities) in Developer.Android.com. Per informazioni sullo stato di trasferimento delle schede nella parte inferiore della schermata, vedere [impostazione del posizionamento e del colore della barra degli strumenti TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
+In Android, l'elenco di schede viene visualizzato nella parte superiore della schermata e l'area dei dettagli è riportata di seguito. Ogni scheda è costituita da un titolo e da un'icona, che deve essere un file PNG con un canale alfa. Tuttavia, le schede possono essere spostate nella parte inferiore dello schermo con una specifica della piattaforma. Se sono presenti più di cinque schede e la scheda si trova nella parte inferiore della schermata, verrà visualizzata una scheda *maggiore* che può essere usata per accedere alle schede aggiuntive. Per informazioni sui requisiti delle icone, vedere le [schede](https://material.io/components/tabs/#) in material.io e [supportare diverse densità di pixel](https://developer.android.com/training/multiscreen/screendensities) in Developer.Android.com. Per informazioni sullo stato di trasferimento delle schede nella parte inferiore della schermata, vedere [impostazione del posizionamento e del colore della barra degli strumenti TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
 > [!TIP]
 > Il `TabbedPageRenderer` per Android AppCompat ha un metodo di `GetIconDrawable` sottoponibile a override che può essere usato per caricare icone di tabulazione da un `Drawable`personalizzato. Questo override rende possibile l'uso di immagini SVG come icone in una `TabbedPage` e funziona sia con le barre delle schede superiori sia con quelle inferiori. In alternativa, si può usare il metodo `SetTabIcon` sottoponibile a override per caricare le icone delle schede da un elemento `Drawable` personalizzato per le barre delle schede superiori.
 
 Nella piattaforma UWP (Universal Windows Platform) (UWP), l'elenco di schede viene visualizzato nella parte superiore della schermata e l'area dei dettagli è riportata di seguito. Ogni scheda è costituita da un titolo. Tuttavia, le icone possono essere aggiunte a ogni scheda con una specifica della piattaforma. Per altre informazioni, vedere [Icone TabbedPage in Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
 
-## <a name="create-a-tabbedpage"></a>Creare un TabbedPage
+## <a name="create-a-tabbedpage"></a>Creare un'istanza di TabbedPage
 
 Per creare una [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) è possibile usare due approcci:
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4d28b80b32ff0d20afbe643d9c000f301a8ea582
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
+ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027817"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75667039"
 ---
 # <a name="android-job-scheduler"></a>Utilità di pianificazione di processo Android
 
 _Questa guida illustra come pianificare il lavoro in background usando l'API dell'utilità di pianificazione dei processi Android, disponibile nei dispositivi Android che eseguono Android 5,0 (livello API 21) e versioni successive._
 
-## <a name="overview"></a>Panoramica 
+## <a name="overview"></a>Panoramica di 
 
 Uno dei modi migliori per garantire che un'applicazione Android sia in grado di rispondere all'utente è garantire che il lavoro complesso o a esecuzione prolungata venga eseguito in background. Tuttavia, è importante che il lavoro in background non influisca negativamente sull'esperienza dell'utente con il dispositivo. 
 
@@ -33,7 +33,7 @@ Android fornisce le API seguenti che consentono di eseguire il lavoro in backgro
 Sono disponibili due funzionalità principali per eseguire in modo efficiente il lavoro in background (talvolta definito _processo in background_ o _processo_):
 
 1. **Pianificare in modo intelligente il lavoro** &ndash; è importante che, quando un'applicazione esegue il lavoro in background, come un valido cittadino. Idealmente, l'applicazione non deve richiedere l'esecuzione di un processo. Al contrario, l'applicazione deve specificare le condizioni che devono essere soddisfatte per il momento in cui il processo può essere eseguito, quindi pianificare il processo con il sistema operativo che eseguirà il lavoro quando vengono soddisfatte le condizioni. Ciò consente ad Android di eseguire il processo per garantire la massima efficienza del dispositivo. Ad esempio, è possibile che le richieste di rete vengano eseguite in batch in modo che vengano eseguite contemporaneamente per sfruttare al massimo l'overhead richiesto per la rete.
-2. L' **incapsulamento del lavoro** &ndash; il codice per eseguire le operazioni in background deve essere incapsulato in un componente discreto che può essere eseguito indipendentemente dall'interfaccia utente e sarà relativamente semplice da ripianificare se il lavoro non viene completato per alcuni motivo.
+2. L' **incapsulamento del lavoro** &ndash; il codice per eseguire le operazioni in background deve essere incapsulato in un componente discreto che può essere eseguito indipendentemente dall'interfaccia utente e sarà relativamente semplice da ripianificare se il lavoro non viene completato per qualche motivo.
 
 L'utilità di pianificazione dei processi Android è un framework integrato nel sistema operativo Android che fornisce un'API Fluent per semplificare la pianificazione del lavoro in background.  L'utilità di pianificazione dei processi Android è costituita dai tipi seguenti:
 
@@ -43,7 +43,7 @@ L'utilità di pianificazione dei processi Android è un framework integrato nel 
 
 Per pianificare il lavoro con l'utilità di pianificazione dei processi Android, un'applicazione Novell. Android deve incapsulare il codice in una classe che estende la classe `JobService`. `JobService` dispone di tre metodi del ciclo di vita che possono essere chiamati durante il processo:
 
-- **bool OnStartJob (parametri JobParameters)** &ndash; questo metodo viene chiamato dal `JobScheduler` per eseguire il lavoro e viene eseguito sul thread principale dell'applicazione. È responsabilità del `JobService` eseguire in modo asincrono il lavoro e `true` se il lavoro rimane o `false` se il lavoro viene eseguito.
+- **bool OnStartJob (parametri JobParameters)** &ndash; questo metodo viene chiamato dal `JobScheduler` per eseguire il lavoro e viene eseguito sul thread principale dell'applicazione. È responsabilità del `JobService` eseguire in modo asincrono il lavoro e restituire `true` se il lavoro rimane disponibile oppure `false` se il lavoro viene eseguito.
     
     Quando il `JobScheduler` chiama questo metodo, richiede e mantiene un Wakelock da Android per la durata del processo. Al termine del processo, è responsabilità del `JobService` indicare il `JobScheduler` di questo fatto chiamando il metodo `JobFinished` (descritto di seguito).
 
@@ -55,7 +55,7 @@ Per pianificare il lavoro con l'utilità di pianificazione dei processi Android,
 
 In questa guida verrà illustrato in dettaglio come implementare una classe di `JobService` e pianificarla con l'`JobScheduler`.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 L'utilità di pianificazione dei processi Android richiede il livello di API Android 21 (Android 5,0) o versione successiva. 
 
@@ -148,7 +148,7 @@ Una potente funzionalità dell'utilità di pianificazione dei processi Android �
 
 Il `SetBackoffCriteria` fornisce alcune indicazioni sul tempo di attesa del `JobScheduler` prima di ritentare l'esecuzione di un processo. Sono disponibili due parti per i criteri backoff: un ritardo in millisecondi (valore predefinito di 30 secondi) e il tipo di back off da usare (a volte definito _criterio backoff_ o i _criteri di ripetizione dei tentativi_). I due criteri sono incapsulati nella `Android.App.Job.BackoffPolicy` enum:
 
-- `BackoffPolicy.Exponential` &ndash; un criterio di backoff esponenziale aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. La prima volta che si verifica un errore in un processo, la libreria attenderà l'intervallo iniziale specificato prima di ripianificare il processo, ad esempio 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Questo è il valore predefinito.
+- `BackoffPolicy.Exponential` &ndash; un criterio di backoff esponenziale aumenterà in modo esponenziale il valore iniziale di backoff dopo ogni errore. La prima volta che si verifica un errore in un processo, la libreria attenderà l'intervallo iniziale specificato prima di ripianificare il processo, ad esempio 30 secondi. La seconda volta che il processo non riesce, la libreria attenderà almeno 60 secondi prima di provare a eseguire il processo. Dopo il terzo tentativo non riuscito, la libreria attenderà 120 secondi e così via. Rappresenta il valore predefinito.
 - `BackoffPolicy.Linear` &ndash; questa strategia è una backoff lineare che il processo deve essere ripianificato per l'esecuzione a intervalli prestabiliti (fino a quando non ha esito positivo). Il backoff lineare è più adatto per il lavoro che deve essere completato il prima possibile o per i problemi che si risolveranno rapidamente. 
 
 Per altri dettagli su come creare un oggetto `JobInfo`, vedere [la documentazione di Google relativa alla classe `JobInfo.Builder`](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html).

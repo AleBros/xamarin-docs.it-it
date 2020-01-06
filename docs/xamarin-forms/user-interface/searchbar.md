@@ -6,13 +6,13 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/12/2019
-ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 11/04/2019
+ms.openlocfilehash: 8888f1615f250a908930cec9058a54bd6e7fedc2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696428"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490077"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Novell. Forms
 
@@ -85,6 +85,9 @@ SearchBar searchBar = new SearchBar
 Lo screenshot seguente mostra il controllo `SearchBar` risultante:
 
 [![Screenshot di SearchBar personalizzato in iOS e Android](searchbar-images/device-searchbars-styled-cropped.png "SearchBar personalizzato in iOS e Android")](searchbar-images/device-searchbars-styled.png#lightbox "SearchBar personalizzato in iOS e Android")
+
+> [!NOTE]
+> In iOS, la classe `SearchBarRenderer` contiene un metodo di `UpdateCancelButton` sottoponibile a override. Questo metodo controlla quando viene visualizzato il pulsante Annulla ed è possibile eseguirne l'override in un renderer personalizzato. Per ulteriori informazioni sui renderer personalizzati, vedere [Novell. Forms Custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="perform-a-search-with-event-handlers"></a>Eseguire una ricerca con i gestori eventi
 

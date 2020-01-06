@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 7d442d14589b35632bce2b6caec09235138ec585
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771630"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545597"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Interfaccia di comando di Xamarin.Forms
 
@@ -82,7 +82,7 @@ Quando l'elemento ViewModel definisce una proprietà di tipo `ICommand`, deve an
 
 È possibile scrivere una classe di questo tipo manualmente oppure è possibile usare una classe scritta da altri. Poiché l'interfaccia `ICommand` fa parte di Microsoft Windows, è stata usata per anni per applicazioni MVVM Windows. L'uso di una classe Windows che implementa l'interfaccia `ICommand` consente di condividere gli elementi ViewModel tra applicazioni Windows e applicazioni Xamarin.Forms.
 
-Se la condivisione di ViewModel tra Windows e Xamarin.Forms non rappresenta un problema, è possibile usare la classe [`Command`](xref:Xamarin.Forms.Command) o [`Command<T>` ](xref:Xamarin.Forms.Command`1) inclusa in Xamarin.Forms per implementare l'interfaccia `ICommand`. Queste classi consentono di specificare il corpo dei metodi `Execute` e `CanExecute` nei costruttori delle classi. Usare `Command<T>` quando si usa la proprietà `CommandParameter` per distinguere tra più visualizzazioni associate alla stessa proprietà `ICommand` e la classe `Command`, più semplice, quando questo non è un requisito.
+Se la condivisione di ViewModel tra Windows e Xamarin.Forms non rappresenta un problema, è possibile usare la classe [`Command`](xref:Xamarin.Forms.Command) o [`Command<T>`](xref:Xamarin.Forms.Command`1) inclusa in Xamarin.Forms per implementare l'interfaccia `ICommand`. Queste classi consentono di specificare il corpo dei metodi `Execute` e `CanExecute` nei costruttori delle classi. Usare `Command<T>` quando si usa la proprietà `CommandParameter` per distinguere tra più visualizzazioni associate alla stessa proprietà `ICommand` e la classe `Command`, più semplice, quando questo non è un requisito.
 
 ## <a name="basic-commanding"></a>Esecuzione di comandi di base
 
@@ -279,9 +279,9 @@ Prima di esaminare il costruttore della classe `PersonCollectionViewModel`, è n
 
 Ecco come funziona: l'utente preme prima il pulsante **New** (Nuovo). Questa operazione abilita il modulo di immissione ma disabilita il pulsante **New** (Nuovo). L'utente immette quindi un nome, l'età e le competenze. In qualsiasi momento durante il processo di modifica, l'utente può selezionare il pulsante **Cancel** (Annulla) per ricominciare da capo. Il pulsante **Submit** (Invia) viene abilitato solo dopo l'immissione di un nome e di un'età validi. La selezione del pulsante **Submit** (Invia) trasferisce la persona nella raccolta visualizzata dall'elemento `ListView`. Quando si seleziona **Cancel** (Annulla) o **Submit** (Invia), il modulo di immissione viene cancellato e il pulsante **New** (Nuovo) viene abilitato di nuovo.
 
-La schermata iOS a sinistra visualizza il layout prima dell'immissione di un'età valida. Le schermate Android e UWP visualizzano il pulsante **Submit** (Invia) dopo l'impostazione di un'età:
+La schermata iOS a sinistra visualizza il layout prima dell'immissione di un'età valida. La schermata Android Mostra il pulsante **Invia** abilitato dopo l'impostazione di Age:
 
-[![Person Entry (Voce persona)](commanding-images/personentry-small.png "Person Entry (Voce persona)")](commanding-images/personentry-large.png#lightbox "Person Entry (Voce persona)")
+[![Voce person](commanding-images/personentry-small.png "Voce person")](commanding-images/personentry-large.png#lightbox "Voce person")
 
 Il programma non ha una funzionalità per la modifica di voci esistenti e non consente di salvare le voci quando si esce dalla pagina.
 
@@ -532,7 +532,7 @@ Gli 11 pulsanti per le 10 cifre e il separatore decimale condividono un'associaz
 
 Ecco il programma in azione:
 
-[![Decimal Keyboard (Tastiera decimale)](commanding-images/decimalkeyboard-small.png "Decimal Keyboard (Tastiera decimale)")](commanding-images/decimalkeyboard-large.png#lightbox "Decimal Keyboard (Tastiera decimale)")
+[![Tastiera decimale](commanding-images/decimalkeyboard-small.png "Tastiera decimale")](commanding-images/decimalkeyboard-large.png#lightbox "Tastiera decimale")
 
 Si noti che il pulsante per il separatore decimale nei tre screenshot è disabilitato, perché il numero immesso contiene già un separatore decimale.
 
@@ -758,7 +758,7 @@ Il costruttore imposta la proprietà `NavigateCommand` su un metodo `execute` ch
 
 Il costruttore imposta anche la proprietà `BindingContext` della pagina su se stessa, in modo che i binding facciano riferimento alla proprietà `NavigateCommand` in questa classe.
 
-L'ordine del codice in questo costruttore è importante: la chiamata a `InitializeComponent` attiva l'analisi del codice XAML, ma in quel momento il binding a una proprietà `NavigateCommand` non può essere risolto perché `BindingContext` è impostata su `null`. Se la proprietà `BindingContext` viene impostata nel costruttore *prima* che venga impostata `NavigateCommand`, il binding può essere risolto quando viene impostata la proprietà `BindingContext`, ma in quel momento `NavigateCommand` è ancora `null`. L'impostazione di `NavigateCommand` dopo `BindingContext` non ha alcun effetto sul binding, perché una modifica a `NavigateCommand` non genera un evento `PropertyChanged` e il binding non sa che la proprietà `NavigateCommand` è ora valida.
+L'ordine del codice in questo costruttore è importante: la chiamata a `InitializeComponent` attiva l'analisi del codice XAML, ma in quel momento il binding a una proprietà `NavigateCommand` non può essere risolto perché `BindingContext` è impostata su `null`. Se il `BindingContext` viene impostato nel costruttore *prima* dell'impostazione di `NavigateCommand`, l'associazione può essere risolta quando viene impostato `BindingContext`, ma in quel momento `NavigateCommand` è ancora `null`. L'impostazione di `NavigateCommand` dopo `BindingContext` non ha alcun effetto sul binding, perché una modifica a `NavigateCommand` non genera un evento `PropertyChanged` e il binding non sa che la proprietà `NavigateCommand` è ora valida.
 
 L'impostazione di entrambe le proprietà `NavigateCommand` e `BindingContext` (in qualsiasi ordine) prima della chiamata a `InitializeComponent` funzionerà, poiché quando il parser del codice XAML rileva la definizione del binding entrambi i componenti del binding sono stati impostati.
 

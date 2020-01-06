@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 625826e729a6b4153396286361730d6a2b878dca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b357a6e1531c8f587c8fc0f86e2b56d6fecc2923
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010463"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488322"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procedura dettagliata-percorso in background in Novell. iOS
 
@@ -80,7 +80,7 @@ Questa procedura dettagliata illustra alcuni concetti chiave in background, tra 
     > [!IMPORTANT]
     > iOS 8 (e versioni successive) richiede anche una voce nel file **info. plist** per visualizzare l'utente come parte della richiesta di autorizzazione.
 
-1. Aggiungere una chiave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` con una stringa che verrà visualizzata all'utente nell'avviso che richiede l'accesso ai dati della località.
+1. Aggiungere le chiavi **info. plist** per i tipi di autorizzazione richiesti dall'app: `NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`e/o `NSLocationAlwaysAndWhenInUseUsageDescription`: con una stringa che verrà visualizzata all'utente nell'avviso che richiede l'accesso ai dati della località.
 
 1. iOS 9 richiede che, quando si usa `AllowsBackgroundLocationUpdates` il file **info. plist** includa la chiave `UIBackgroundModes` con il valore `location`. Se è stato completato il passaggio 2 di questa procedura dettagliata, questo dovrebbe essere già presente nel file INFO. plist.
 

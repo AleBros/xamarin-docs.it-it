@@ -6,12 +6,12 @@ ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a8b63638861e8d44deb4ea72959d7461190f7713
+ms.sourcegitcommit: 6266ef043ae0289f174e901f204f2a280a53c071
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029752"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545806"
 ---
 # <a name="net-embedding-limitations"></a>Limitazioni dell'incorporamento di .NET
 
@@ -39,7 +39,7 @@ A seconda delle esigenze, potrebbe essere possibile aggirare le parti di questa 
 
 ## <a name="objective-c-generated-code"></a>Codice generato da Objective-C
 
-### <a name="nullability"></a>Valori null
+### <a name="nullability"></a>Supporto di valori Null
 
 In .NET non sono presenti metadati che indicano se un riferimento null è accettabile o meno per un'API. La maggior parte delle API genererà `ArgumentNullException` se non è in grado di gestire un argomento `null`. Questa situazione è problematica poiché la gestione delle eccezioni in Objective-C è una soluzione migliore.
 
@@ -48,5 +48,11 @@ Poiché non è possibile generare annotazioni accurate di valori null nei file d
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 
 Attualmente l'incorporamento .NET non supporta bitcode in iOS, che è abilitato per alcuni modelli di progetto Xcode. Questa operazione dovrà essere disabilitata per collegare correttamente i Framework generati.
+
+* Per iOS, bitcode è facoltativo per inviare app ad AppStore di Apple. Novell. iOS non lo supporta per iOS poiché il bitcode generato è "assembly inline". Questo non offre alcun vantaggio sulla piattaforma iOS perché non può essere ottimizzata sul lato server, ma rende i file binari più grandi e tempi di compilazione più lunghi.
+
+* Per tvOS e watchos, bitcode è necessario per l'invio di app ad AppStore di Apple. Novell. iOS supporta bitcode in tvOS (come "assembly inline") e watchos (come "LLVM/IR") per soddisfare questo requisito.
+
+* Per macOS, il supporto per bitcode non è attualmente necessario né supportato da Novell. Mac.
 
 ![Bitcode-opzione](images/ios-bitcode-option.png)

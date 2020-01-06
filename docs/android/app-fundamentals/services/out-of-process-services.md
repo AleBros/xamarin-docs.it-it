@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fda5ed3b2a26166e23d4a796219758853d0aace7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f546a1403aa0af07fc69187c4cfbec8982ed7a2a
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024545"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556509"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Esecuzione di servizi Android in processi remoti
 
@@ -58,7 +58,7 @@ In questa guida verranno illustrati i dettagli dell'implementazione di un serviz
 > [!IMPORTANT]
 > [Bugzilla 51940/GitHub 1950: i servizi con processi isolati e la classe di applicazione personalizzata non riescono a risolvere correttamente gli overload](https://github.com/xamarin/xamarin-android/issues/1950) segnalano che un servizio Novell. Android non verrà avviato correttamente quando il `IsolatedProcess` è impostato su `true`. Questa guida è disponibile per un riferimento. Un'applicazione Novell. Android deve comunque essere in grado di comunicare con un servizio out-of-process scritto in Java.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 Questa guida presuppone una certa familiarità con la creazione di servizi.
 
@@ -129,7 +129,7 @@ Una volta impostato il `ServiceAttribute`, il servizio deve implementare una `Ha
 
 ### <a name="implementing-a-handler"></a>Implementazione di un gestore
 
-Per elaborare le richieste client, il servizio deve implementare una `Handler` ed eseguire l'override della `HandleMessage` methodThis è il metodo accetta un'istanza di `Message` che incapsula la chiamata al metodo dal client e traduce la chiamata in un'azione o un'attività che il servizio eseguirà eseguire. L'oggetto `Message` espone una proprietà denominata `What` che è un valore integer, il cui significato è condiviso tra il client e il servizio e si riferisce a un'attività che il servizio deve eseguire per il client.
+Per elaborare le richieste client, il servizio deve implementare un `Handler` ed eseguire l'override del metodo `HandleMessage`. Si tratta del metodo che accetta un'istanza `Message` che incapsula la chiamata al metodo dal client e traduce la chiamata in un'azione o un'attività che il servizio eseguirà. L'oggetto `Message` espone una proprietà denominata `What` che è un valore integer, il cui significato è condiviso tra il client e il servizio e si riferisce a un'attività che il servizio deve eseguire per il client.
 
 Il seguente frammento di codice dell'applicazione di esempio mostra un esempio di `HandleMessage`. In questo esempio sono disponibili due azioni che un client può richiedere per il servizio:
 
@@ -149,7 +149,7 @@ public class TimestampRequestHandler : Android.OS.Handler
         switch (messageType)
         {
             case Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE:
-                // The client as sent a simple Hello, say in the Android Log.
+                // The client has sent a simple Hello, say in the Android Log.
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
@@ -164,7 +164,7 @@ public class TimestampRequestHandler : Android.OS.Handler
 }
 ```
 
-È anche possibile creare un pacchetto di parametri per il servizio nel `Message`. Questo argomento verrà illustrato più avanti in questa guida. L'argomento successivo da considerare è la creazione dell'oggetto `Messenger` per elaborare la `Message`s in ingresso.
+È anche possibile creare un pacchetto di parametri per il servizio nel `Message`. Questo argomento verrà illustrato più avanti in questa guida. L'argomento successivo da considerare è la creazione dell'oggetto `Messenger` per elaborare i `Message`s in ingresso.
 
 ### <a name="instantiating-the-messenger"></a>Creazione di un'istanza di Messenger
 
@@ -219,7 +219,7 @@ serviceToStart.SetComponent(cn);
 
 Quando il servizio viene associato, viene richiamato il metodo `IServiceConnection.OnServiceConnected` e viene fornito un `IBinder` a un client. Tuttavia, il client non userà direttamente il `IBinder`. Bensì creerà un'istanza di un oggetto `Messenger` da tale `IBinder`. Si tratta del `Messenger` che il client utilizzerà per interagire con il servizio remoto.
 
-Di seguito è riportato un esempio di un'implementazione di `IServiceConnection` molto semplice che illustra in che modo un client gestirà la connessione e la disconnessione da un servizio. Si noti che il metodo `OnServiceConnected` riceve e `IBinder` e il client crea un `Messenger` da tale `IBinder`:
+Di seguito è riportato un esempio di un'implementazione di `IServiceConnection` molto semplice che illustra in che modo un client gestirà la connessione e la disconnessione da un servizio. Si noti che il metodo `OnServiceConnected` riceve e `IBinder`e il client crea un `Messenger` da tale `IBinder`:
 
 ```csharp
 public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
@@ -242,7 +242,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
     {
         Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-        IsConnected = service != null
+        IsConnected = service != null;
         Messenger = new Messenger(service);
 
         if (IsConnected)
@@ -270,8 +270,8 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 Una volta creati la connessione al servizio e lo scopo, è possibile che il client chiami `BindService` e avvii il processo di associazione:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
-BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
+var serviceConnection = new TimestampServiceConnection(this);
+BindService(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
 Dopo che il client è stato associato correttamente al servizio e il `Messenger` è disponibile, è possibile che il client invii `Messages` al servizio.
@@ -300,7 +300,7 @@ La classe `Message` espone anche due proprietà aggiuntive che possono essere ut
 
 ### <a name="passing-additional-values-to-the-service"></a>Passaggio di valori aggiuntivi al servizio
 
-È possibile passare dati più complessi al servizio usando un `Bundle`. In questo caso, i valori aggiuntivi possono essere inseriti in una `Bundle` e inviati insieme al `Message` impostando la proprietà della [proprietà `.Data`](xref:Android.OS.Message.Data) prima dell'invio.
+È possibile passare dati più complessi al servizio usando un `Bundle`. In questo caso, i valori aggiuntivi possono essere inseriti in una `Bundle` e inviati insieme al `Message` impostando la proprietà della [proprietà`.Data`](xref:Android.OS.Message.Data) prima dell'invio.
 
 ```csharp
 Bundle serviceParameters = new Bundle();
@@ -317,11 +317,11 @@ messenger.Send(msg);
 
 ## <a name="returning-values-from-the-service"></a>Restituzione di valori dal servizio
 
-L'architettura di messaggistica discussa a questo punto è unidirezionale, il client invia un messaggio al servizio. Se è necessario che il servizio restituisca un valore a un client, tutto ciò che è stato discusso a questo punto viene invertito. Il servizio deve creare una `Message`, assemblare tutti i valori restituiti e inviare il `Message` tramite una `Messenger` al client. Tuttavia, il servizio non crea la propria `Messenger`; al contrario, si basa sul client che crea un'istanza e crea il pacchetto di un `Messenger` come parte della richiesta iniziale. Il servizio `Send` il messaggio utilizzando questo `Messenger` fornito dal client.  
+L'architettura di messaggistica discussa a questo punto è unidirezionale, il client invia un messaggio al servizio. Se è necessario che il servizio restituisca un valore a un client, tutto ciò che è stato discusso a questo punto viene invertito. Il servizio deve creare una `Message`, assemblare tutti i valori restituiti e inviare il `Message` tramite una `Messenger` al client. Tuttavia, il servizio non crea la propria `Messenger`; al contrario, si basa sul client che crea un'istanza e crea il pacchetto di un `Messenger` come parte della richiesta iniziale. Il servizio `Send` il messaggio utilizzando questo `Messenger`fornito dal client.  
 
 La sequenza di eventi per la comunicazione bidirezionale è la seguente:
 
-1. Il client viene associato al servizio. Quando il servizio e il client si connettono, i `IServiceConnection` gestiti dal client avranno un riferimento a un oggetto `Messenger` utilizzato per trasmettere `Message`s al servizio. Per evitare confusione, questo verrà definito _Messenger del servizio_.
+1. Il client viene associato al servizio. Quando il servizio e il client si connettono, i `IServiceConnection` gestiti dal client avranno un riferimento a un oggetto `Messenger` utilizzato per trasmettere `Message`al servizio. Per evitare confusione, questo verrà definito _Messenger del servizio_.
 2. Il client crea un'istanza di una `Handler` (denominata _gestore client_) e la usa per inizializzare il proprio `Messenger` (il _messaggero client_). Si noti che il messaggero del servizio e il client Messenger sono due oggetti diversi che gestiscono il traffico in due direzioni diverse. Il servizio Messenger gestisce i messaggi dal client al servizio, mentre il messaggero client gestirà i messaggi dal servizio al client.
 3. Il client crea un oggetto `Message` e imposta la proprietà `ReplyTo` con il messaggero client. Il messaggio viene quindi inviato al servizio usando Service Messenger.
 4. Il servizio riceve il messaggio dal client ed esegue il lavoro richiesto.
@@ -414,7 +414,7 @@ Nella sezione successiva verrà descritto un esempio semplificato della creazion
 
 Per usare un'autorizzazione personalizzata, viene dichiarata dal servizio mentre il client richiede esplicitamente tale autorizzazione.
 
-Per creare un'autorizzazione nell'APK del servizio, viene aggiunto un elemento `permission` all'elemento `manifest` in **file AndroidManifest. XML**. Questa autorizzazione deve avere gli attributi `name`, `protectionLevel` e `label` impostati. L'attributo `name` deve essere impostato su una stringa che identifica in modo univoco l'autorizzazione. Il nome verrà visualizzato nella visualizzazione **info app** delle **Impostazioni Android** , come illustrato nella sezione successiva.
+Per creare un'autorizzazione nell'APK del servizio, viene aggiunto un elemento `permission` all'elemento `manifest` in **file AndroidManifest. XML**. Questa autorizzazione deve avere gli attributi `name`, `protectionLevel`e `label` impostati. L'attributo `name` deve essere impostato su una stringa che identifica in modo univoco l'autorizzazione. Il nome verrà visualizzato nella visualizzazione **info app** delle **Impostazioni Android** , come illustrato nella sezione successiva.
 
 L'attributo `protectionLevel` deve essere impostato su uno dei quattro valori stringa descritti in precedenza.  Il `label` e il `description` devono fare riferimento alle risorse di stringa e vengono usati per fornire all'utente un nome descrittivo e una descrizione.
 

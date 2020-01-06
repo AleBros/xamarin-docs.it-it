@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
-ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
+ms.openlocfilehash: d94f18d00ebf6eeec5f33343b5c0f985ba2a6ea8
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884124"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655407"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Ricaricamento a caldo di XAML per Novell. Forms (anteprima)
 
@@ -20,6 +20,8 @@ Il ricaricamento a caldo di XAML si collega al flusso di lavoro esistente per au
 
 > [!NOTE]
 > Se si sta scrivendo un'app WPF o UWP, vedere [ricaricamento a caldo di XAML per UWP e WPF](/visualstudio/debugger/xaml-hot-reload).
+>
+> Il ricaricamento a caldo di XAML per Novell. Forms _non funziona_ attualmente per i progetti Novell. Forms UWP.
 
 ## <a name="system-requirements"></a>Requisiti di sistema
 
@@ -49,6 +51,7 @@ Se si effettua una modifica che non è possibile ricaricare il ricaricamento fre
 - Tutti i riferimenti creati assegnando un controllo a un altro campo o a una proprietà utilizzando il relativo valore `x:Name` non verranno ricaricati.
 - L'aggiornamento della gerarchia visiva dell'applicazione shell in **AppShell. XAML** può causare problemi di gestione dello stato dell'applicazione. Ricompilare l'app per continuare il ricaricamento.
 - Il ricaricamento a caldo di C# XAML non è in grado di ricaricare il codice, inclusi gestori eventi, controlli personalizzati, code-behind della pagina e classi aggiuntive.
+- Non _funziona su_ altre piattaforme supportate da Novell. Forms (ad esempio Mac OS o UWP).
 
 ## <a name="migrate-from-the-private-preview"></a>Eseguire la migrazione dall'anteprima privata
 

@@ -6,13 +6,13 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
-ms.openlocfilehash: c90cfc297914b585403ae84e7dbac11fd6e02836
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.date: 12/11/2019
+ms.openlocfilehash: 5d0e289ddeb7eabef6d96c8882c772c704c54b34
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170936"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489726"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>funzionalità della piattaforma iOS in Novell. Forms
 
@@ -33,11 +33,12 @@ Per le visualizzazioni Novell. Forms in iOS sono disponibili le funzionalità sp
 - Impostazione del colore di sfondo [`Cell`](xref:Xamarin.Forms.Cell) . Per ulteriori informazioni, vedere la pagina [relativa al colore di sfondo della cella in iOS](cell-background-color.md).
 - Garantire che il testo di input si inserisce in un' [ `Entry` ](xref:Xamarin.Forms.Entry) modificando le dimensioni del carattere. Per altre informazioni, vedere [entry font size in iOS](entry-font-size.md).
 - Impostare il colore del cursore un [ `Entry` ](xref:Xamarin.Forms.Entry). Per altre informazioni, vedere [entry Cursor color on iOS](entry-cursor-color.md).
-- Controllare se le celle [di intestazione `ListView`](xref:Xamarin.Forms.ListView) fluttuano durante lo scorrimento. Per altre informazioni, vedere [stile intestazione gruppo ListView in iOS](listview-group-header-style.md).
-- Controllo della disabilitazione delle animazioni di riga durante l'aggiornamento della raccolta [di elementi `ListView`](xref:Xamarin.Forms.ListView) . Per altre informazioni, vedere [animazioni di riga ListView in iOS](listview-row-animations.md).
+- Controllare se le celle di intestazione [`ListView`](xref:Xamarin.Forms.ListView) fluttuano durante lo scorrimento. Per altre informazioni, vedere [stile intestazione gruppo ListView in iOS](listview-group-header-style.md).
+- Controllo della disabilitazione delle animazioni di riga durante l'aggiornamento della raccolta di elementi [`ListView`](xref:Xamarin.Forms.ListView) . Per altre informazioni, vedere [animazioni di riga ListView in iOS](listview-row-animations.md).
 - Impostando lo stile dei separatori in un [ `ListView` ](xref:Xamarin.Forms.ListView). Per altre informazioni, vedere [stile separatore ListView in iOS](listview-separator-style.md).
 - Il controllo quando si verifica la selezione di elementi in un [ `Picker` ](xref:Xamarin.Forms.Picker). Per altre informazioni, vedere [selezione di elementi selezione in iOS](picker-selection.md).
 - L'abilitazione di [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) proprietà da impostare toccando in base a una posizione per il [ `Slider` ](xref:Xamarin.Forms.Slider) barra, anziché dover trascinare il `Slider` thumb. Per altre informazioni, vedere [dispositivo di scorrimento tocco in iOS](slider-thumb.md).
+- Controllo della transizione utilizzata per l'apertura di un `SwipeView`. Per altre informazioni, vedere [modalità di transizione SwipeView swipe](swipeview-swipetransitionmode.md).
 
 Per le pagine Novell. Forms in iOS sono disponibili le funzionalità specifiche della piattaforma seguenti:
 
@@ -66,7 +67,7 @@ Novell. Forms consente di impostare stili e colori dell'interfaccia utente multi
 
 [Altre](formatting.md) informazioni sulla formattazione dell'interfaccia utente usando le API specifiche di iOS, ad esempio la configurazione di **info. plist** e l'API `UIAppearance`.
 
-![](images/status-white-sml.png "Temi iOS")
+![](images/status-white-sml.png "iOS Theming")
 
 ## <a name="other-ios-features"></a>Altre funzionalità iOS
 

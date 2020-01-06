@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ef0bcba7a59984c6bad7091431fe00b1f1b7eee3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031797"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489089"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifiche aggiuntive ai Framework iOS 9
 
@@ -101,7 +101,7 @@ Per altre informazioni, vedere la Guida di [riferimento per NSProcessInfo](https
 
 ### <a name="reacting-to-low-power-mode"></a>Reazione a una modalità a basso consumo
 
-Usare la proprietà `LowPowerModeEnabled` della classe [NSProcessInfo](xref:Foundation.NSProcessInfo) per determinare se la modalità a basso consumo è stata abilitata nel dispositivo iOS in cui è in esecuzione l'app. Esempio:
+Usare la proprietà `LowPowerModeEnabled` della classe [NSProcessInfo](xref:Foundation.NSProcessInfo) per determinare se la modalità a basso consumo è stata abilitata nel dispositivo iOS in cui è in esecuzione l'app. Ad esempio:
 
 ```csharp
 // Is the device in low power mode?
@@ -131,7 +131,7 @@ Apple ha incluso le seguenti modifiche al Framework di [autenticazione locale](x
 - Possibilità di usare il _contesto di autenticazione_ nelle chiamate keychain e il supporto per la valutazione degli elenchi di controllo di accesso keychain.
 - Possibilità di annullare un prompt utente dal codice.
 
-Per altre informazioni sull'uso di Touch ID in Novell. iOS, vedere la documentazione [introduttiva a Touch ID](~/ios/platform/touchid.md) .
+Per altre informazioni, vedere [Touch ID e Face ID con Novell. iOS](~/ios/platform/touch-id-face-id.md).
 
 ### <a name="lacontext-changes"></a>LAContext modifiche
 
@@ -171,7 +171,7 @@ Per altre informazioni sull'uso di PassKit in Novell. iOS, vedere la documentazi
 
 Apple ha incluso le seguenti modifiche al Framework dei [Servizi Safari](xref:SafariServices) in iOS 9:
 
-- È ora possibile usare la nuova classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) per visualizzare il contenuto Web all'interno di un'app Novell. iOS. Offre la possibilità di condividere i dati e i cookie dei siti Web con l'app Safari e include diverse funzionalità di Safari, ad esempio lettore e riempimento automatico. [SFSafariViewController](xref:SafariServices.SFSafariViewController) include un pulsante **done** che restituirà gli utenti all'app al termine della visualizzazione del contenuto Web.
+- È ora possibile usare la nuova classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) per visualizzare il contenuto Web all'interno di un'app Novell. iOS. Offre la possibilità di condividere i dati e i cookie dei siti Web con l'app Safari e include diverse funzionalità di Safari, ad esempio lettore e riempimento automatico. [SFSafariViewController](xref:SafariServices.SFSafariViewController) funzionalità di un pulsante **Fine** che restituirà gli utenti all'App quando hanno terminato la visualizzazione del contenuto web.
 
 Poiché la classe [SFSafariViewController](xref:SafariServices.SFSafariViewController) è adatta per la visualizzazione di una singola pagina di contenuto Web, è consigliabile usarla per sostituire tutti i controlli [WKWebKit](xref:WebKit.WKWebView) o [UIWebView](xref:UIKit.UIWebView) all'interno delle app Novell. iOS esistenti.
 
@@ -219,9 +219,9 @@ La nuova classe `NSDataAsset` consente a un'app Novell. iOS di recuperare conten
 
 ### <a name="new-layout-anchors"></a>Nuovi ancoraggi del layout
 
-Le nuove classi di ancoraggio del layout `NSLayoutAnchor` e `NSLayoutDimension` funzionano con le nuove proprietà di ancoraggio della classe [UIView](xref:UIKit.UIView) , ad esempio `LeadingAnchor` e `WidthAnchor`, per semplificare il layout in iOS 9.
+Le nuove classi di ancoraggio del layout `NSLayoutAnchor` e `NSLayoutDimension` funzionano con le nuove proprietà di ancoraggio della classe [UIView](xref:UIKit.UIView) (ad esempio `LeadingAnchor` e `WidthAnchor`) per semplificare il layout in iOS 9.
 
-Vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) per altre informazioni sull'uso delle classi di layout automatico e delle dimensioni in un'app Novell. iOS e [riferimento NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)di Apple, [riferimento NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [ Riferimento UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) per ulteriori informazioni.
+Per altre informazioni sull'uso delle classi di layout automatico e di dimensioni in un'app Novell. iOS e [riferimento NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)di Apple, riferimento a [NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [riferimento a UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) per altre informazioni, vedere la documentazione [introduttiva per gli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ### <a name="new-readable-content-margins"></a>Nuovi margini di contenuto leggibili
 

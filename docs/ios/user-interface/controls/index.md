@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: fbf847ef49be83494f593291fbb0a00934bc3ced
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a4bf0b89a9ab336bf47ddcd104760211d912f423
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022040"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663434"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controlli dell'interfaccia utente in Novell. iOS
 
@@ -80,9 +80,9 @@ L'accettazione dell'input di testo utente viene eseguita con la `UITextField` pe
 
 le applicazioni iOS che usano un'interfaccia utente per la navigazione tramite tabulazione vengono create usando la classe UITabBarController. In questo articolo verrà illustrato come configurare un'applicazione a schede che contiene diversi controller e visualizzazioni. Si esaminerà quindi come caricare un UITabBarController quando non è il controller radice, ad esempio dopo una schermata di accesso.
 
-## <a name="web-viewsuiwebviewmd"></a>[Visualizzazioni Web](uiwebview.md)
+## <a name="web-viewswebviewmd"></a>[Visualizzazioni Web](webview.md)
 
-In questo articolo verranno esaminate tutte e tre le visualizzazioni Web fornite da Apple: `UIWebView`, `WKWebview`e `SFSafariViewController`, le relative analogie e differenze e il modo in cui possono essere utilizzate.
+In questo articolo verranno illustrate le visualizzazioni Web fornite da Apple-`WKWebview` e `SFSafariViewController`, ovvero le similitudini e le differenze, nonché il modo in cui possono essere utilizzate.
 
 ## <a name="related-links"></a>Collegamenti correlati
 

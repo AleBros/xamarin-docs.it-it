@@ -7,20 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: b361cd00121d16752d5eebc971653c8ea185c641
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018100"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489388"
 ---
-# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Xamarin.Mac
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Profili di provisioning per le app Novell. Mac
 
 I profili di provisioning consentono a uno sviluppatore di incorporare nelle app Xamarin.Mac diverse funzionalità specifiche di macOS (precedentemente noto come Mac OS X), ad esempio iCloud e le notifiche push. Lo sviluppatore deve creare, scaricare e installare un profilo di provisioning Mac per ogni applicazione in fase di sviluppo che userà queste funzionalità.
 
 [![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
-
-<a name="Development_Provisioning_Profile" />
 
 ## <a name="development-provisioning-profile"></a>Profilo di provisioning di sviluppo
 
@@ -29,7 +27,7 @@ Un profilo di provisioning di sviluppo consente a un'app pensata per Mac App Sto
 > [!NOTE]
 > Lo sviluppatore deve avere già creato un certificato di sviluppo Mac prima di potere creare un profilo di provisioning di sviluppo. Specificare le informazioni richieste come illustrato in questa schermata per generare un **profilo di provisioning di sviluppo** che può essere usato per creare le build. Devono essere disponibili un certificato di sviluppo Mac valido per la selezione nella casella **Certificate** (Certificato) e almeno un sistema registrato per il test.
 
-Procedere come descritto di seguito:
+eseguire le operazioni descritte di seguito.
 
 1. Selezionare il tipo di profilo di provisioning che occorre creare e fare clic sul pulsante **Continue** (Continua): 
 
@@ -61,13 +59,11 @@ Procedere come descritto di seguito:
 
 Sarà necessario creare un nuovo profilo di provisioning di sviluppo per ogni nuova app o quando viene aggiunto un nuovo computer in cui eseguire il test.
 
-<a name="Production_Provisioning_Profile" />
-
 ## <a name="production-provisioning-profile"></a>Profilo di provisioning di produzione
 
 I profili di provisioning di produzione sono necessari per creare un pacchetto da inviare a Mac App Store.
 
-Procedere come descritto di seguito:
+eseguire le operazioni descritte di seguito.
 
 1. Selezionare il tipo di profilo da creare e fare clic sul pulsante **Continue** (Continua): 
 

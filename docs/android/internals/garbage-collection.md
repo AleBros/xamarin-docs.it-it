@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 62560d97a2e85a6045e419f0c0602a375f5a2a75
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: da00eef7c08f7025239d15e60e6ec42416a36089
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027890"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487841"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
@@ -108,13 +108,15 @@ L'unico modo per determinare quale Bridge GC funziona meglio è sperimentare in 
 
 - **Abilita Bridge** Accounting: l'accounting Bridge Visualizza il costo medio degli oggetti a cui fa riferimento ogni oggetto del processo Bridge. L'ordinamento di queste informazioni in base alle dimensioni fornirà suggerimenti sugli elementi che contengono la maggiore quantità di oggetti aggiuntivi. 
 
-Per specificare quali opzioni di `GC_BRIDGE` un'applicazione, passare `bridge-implementation=old`, `bridge-implementation=new` o `bridge-implementation=tarjan` alla variabile di ambiente `MONO_GC_PARAMS`, ad esempio: 
+L'impostazione predefinita è **Tarjan**. Se si rileva una regressione, potrebbe essere necessario impostare questa opzione su **obsoleto**. Inoltre, è possibile scegliere di utilizzare l'opzione **precedente** più stabile se **Tarjan** non produce un miglioramento delle prestazioni.
+
+Per specificare l'opzione di `GC_BRIDGE` che deve essere utilizzata da un'applicazione, passare `bridge-implementation=old`, `bridge-implementation=new` o `bridge-implementation=tarjan` alla variabile di ambiente `MONO_GC_PARAMS`. Questa operazione viene eseguita aggiungendo un nuovo file al progetto con un' **azione di compilazione** di `AndroidEnvironment`. Ad esempio: 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-L'impostazione predefinita è **Tarjan**. Se si rileva una regressione, potrebbe essere necessario impostare questa opzione su **obsoleto**. Inoltre, è possibile scegliere di utilizzare l'opzione **precedente** più stabile se **Tarjan** non produce un miglioramento delle prestazioni. 
+Per altre informazioni, vedere [Configurazione](#configuration).
 
 <a name="Helping_the_GC" />
 
@@ -127,7 +129,7 @@ Sono disponibili diversi modi per aiutare il Garbage Collector a ridurre l'utili
 Il Garbage Collector presenta una visualizzazione incompleta del processo e potrebbe non essere eseguito quando la memoria è insufficiente perché il Garbage Collector non sa che la memoria è insufficiente. 
 
 Ad esempio, un'istanza di un tipo [java. lang. Object](xref:Java.Lang.Object) o un tipo derivato ha una dimensione di almeno 20 byte (soggetto a modifiche senza preavviso, ecc.). 
-I [wrapper richiamabili gestiti](~/android/internals/architecture.md) non aggiungono membri di istanza aggiuntivi, pertanto quando si dispone di un'istanza di [Android. graphics. bitmap](xref:Android.Graphics.Bitmap) che fa riferimento a un BLOB di 10 MB di memoria, il GC di Novell. Android non saprà che &ndash; GC visualizzerà un oggetto a 20 byte e non è possibile determinare che è collegato a oggetti allocati in fase di esecuzione di Android che mantiene 10 MB di memoria attiva. 
+I [wrapper richiamabili gestiti](~/android/internals/architecture.md) non aggiungono membri di istanza aggiuntivi. Pertanto, quando si dispone di un'istanza di [Android. graphics. bitmap](xref:Android.Graphics.Bitmap) che fa riferimento a un BLOB di 10 MB di memoria, il catalogo globale di Novell. Android non saprà che &ndash; GC visualizzerà un oggetto a 20 byte e non sarà in grado di determinare che è collegato a oggetti allocati da Android Runtime che mantiene 10 MB 
 
 Spesso è necessario aiutare il GC. Sfortunatamente, *GC. AddMemoryPressure ()* e *GC. RemoveMemoryPressure ()* non sono supportati, pertanto se si è *certi* di aver appena liberato un oggetto grafico di grandi dimensioni allocato da Java, potrebbe essere necessario chiamare manualmente [GC. Collect ()](xref:System.GC.Collect) per richiedere a un catalogo globale di rilasciare la memoria sul lato Java oppure è possibile eliminare in modo esplicito le sottoclassi *java. lang. Object* , suddividendo il mapping tra l'istanza gestita Callable Wrapper e l'istanza java. Vedere ad esempio il [Bug 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
@@ -185,7 +187,7 @@ Parameter name: jobject
 at Android.Runtime.JNIEnv.CallVoidMethod
 ```
 
-Questa situazione si verifica spesso quando il primo Dispose di un oggetto fa sì che un membro diventi null e quindi un successivo tentativo di accesso su questo membro NULL causa la generazione di un'eccezione. In particolare, il `Handle` dell'oggetto (che collega un'istanza gestita alla relativa istanza java sottostante) viene invalidato alla prima Dispose, ma il codice gestito tenta comunque di accedere a questa istanza di Java sottostante anche se non è più disponibile (vedere [ Wrapper richiamabili gestiti](~/android/internals/architecture.md#Managed_Callable_Wrappers) per ulteriori informazioni sul mapping tra istanze Java e istanze gestite. 
+Questa situazione si verifica spesso quando il primo Dispose di un oggetto fa sì che un membro diventi null e quindi un successivo tentativo di accesso su questo membro NULL causa la generazione di un'eccezione. In particolare, il `Handle` dell'oggetto (che collega un'istanza gestita alla relativa istanza java sottostante) viene invalidato alla prima Dispose, ma il codice gestito tenta comunque di accedere a questa istanza di Java sottostante anche se non è più disponibile. vedere [wrapper richiamabili gestiti](~/android/internals/architecture.md#Managed_Callable_Wrappers) per ulteriori informazioni sul mapping tra istanze Java e istanze gestite. 
 
 Un modo efficace per evitare questa eccezione consiste nel verificare in modo esplicito nel metodo `Dispose` che il mapping tra l'istanza gestita e l'istanza java sottostante sia ancora valido. ovvero, verificare se la `Handle` dell'oggetto è null (`IntPtr.Zero`) prima di accedere ai relativi membri. Ad esempio, il seguente metodo di `Dispose` accede a un oggetto `childViews`: 
 
@@ -321,7 +323,7 @@ Le raccolte principali devono essere richiamate manualmente, se mai:
 
 Per tenere traccia del momento in cui i riferimenti globali vengono creati ed eliminati, è possibile impostare la proprietà di sistema [debug. mono. log](~/android/troubleshooting/index.md) in modo che contenga [*Gref*](~/android/troubleshooting/index.md) e/o [*GC*](~/android/troubleshooting/index.md). 
 
-## <a name="configuration"></a>Configurazione
+## <a name="configuration"></a>Configurazione di
 
 È possibile configurare il Garbage Collector Novell. Android impostando la variabile di ambiente `MONO_GC_PARAMS`. Le variabili di ambiente possono essere impostate con un'azione di compilazione di [AndroidEnvironment](~/android/deploy-test/environment.md).
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 658bb65c9f9dea2c68b782736de02d95df368dd3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 97c582ada0951f530885359112c3c7adfacc3502
+ms.sourcegitcommit: bdb8ad7337931adf2ea45b10c2af81ecc4aad26a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024859"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500230"
 ---
 # <a name="creating-a-service"></a>Creazione di un servizio
 
@@ -83,7 +83,7 @@ Il modo più semplice per avviare un servizio in Android è inviare un `Intent` 
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
-- **Finalità implicita** &ndash; questo tipo di intento identifica in modo chiaro il di azione che l'utente desidera eseguire, ma il servizio esatto per completare l'azione è sconosciuto. Un intento implicito può essere considerato come una lettera "a chi potrebbe preoccuparsi...".
+- **Finalità implicita** &ndash; questo tipo di intento identifica in modo chiaro il tipo di azione che l'utente desidera eseguire, ma il servizio esatto per completare l'azione è sconosciuto. Un intento implicito può essere considerato come una lettera "a chi potrebbe preoccuparsi...".
     Android analizzerà il contenuto della finalità e determinerà se esiste già un servizio che corrisponde allo scopo.
 
     Viene utilizzato un _filtro preventivo_ per trovare una corrispondenza tra finalità implicita e un servizio registrato. Un filtro preventivo è un elemento XML aggiunto a **file AndroidManifest. XML** che contiene i metadati necessari per consentire la corrispondenza di un servizio con finalità implicite.
@@ -130,7 +130,7 @@ Con le nozioni di base di un servizio Novell. Android, esaminiamo i diversi sott
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [Android. app. Service](xref:Android.App.Service)
-- [Android. app. ServiceAttribute](xref:Android.App.ServiceAttribute)
-- [Android. app. Intent](xref:Android.Content.Intent)
-- [Android. app. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute)
+- [Android.App.Intent](xref:Android.Content.Intent)
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)

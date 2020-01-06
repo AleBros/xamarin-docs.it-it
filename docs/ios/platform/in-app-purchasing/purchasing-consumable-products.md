@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 5af4ba8057070481728948635352e1ec2484a0d4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fb8cd050c789e165c1774398a3a2cc8e0467bde1
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032345"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489024"
 ---
 # <a name="purchasing-consumable-products-in-xamarinios"></a>Acquisto di prodotti utilizzabili in Novell. iOS
 
@@ -74,7 +74,7 @@ buy10Button.TouchUpInside += (sender, e) => {
 La seconda parte dell'interfaccia utente sta gestendo la notifica che la transazione ha avuto esito positivo, in questo caso aggiornando il saldo visualizzato:
 
 ```csharp
-priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
+succeededObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
 (notification) => {
    balanceLabel.Text = CreditManager.Balance() + " monkey credits";
 });
@@ -325,7 +325,7 @@ L'applicazione ha un aspetto simile al seguente quando la funzionalità **acquis
 
  [![l'applicazione ha un aspetto simile al seguente quando la funzionalità acquisti in-app è limitata, i pulsanti di acquisto sono disabilitati](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
 
-Le informazioni sul prodotto possono comunque essere richieste quando `CanMakePayments` è false, quindi l'app può comunque recuperare e visualizzare i prezzi. Ciò significa che se è stato rimosso il controllo `CanMakePayments` dal codice, i pulsanti di acquisto sarebbero ancora attivi. Tuttavia, quando viene effettuato un tentativo di acquisto, l'utente visualizzerà un messaggio che indica che gli **acquisti in-app non sono consentiti** (generati da StoreKit quando la coda di pagamento è accesso eseguito):   
+Le informazioni sul prodotto possono comunque essere richieste quando `CanMakePayments` è false, quindi l'app può comunque recuperare e visualizzare i prezzi. Ciò significa che se è stato rimosso il controllo `CanMakePayments` dal codice, i pulsanti di acquisto sarebbero ancora attivi. Tuttavia, quando si tenta di eseguire un acquisto, l'utente visualizzerà un messaggio che indica che gli **acquisti in-app non sono consentiti** (generati da StoreKit quando si accede alla coda di pagamento):   
 
  [![acquisti in-app non sono consentiti](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
 

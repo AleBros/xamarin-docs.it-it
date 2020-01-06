@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: e229ad37e8cd5ff940fb5abece7b782b84336d50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fb0981fea906a474d39834a52f0a8bfdf496ca1e
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008172"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488413"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso di SQLite.NET con Novell. iOS
 
@@ -21,7 +21,7 @@ ORM sta per il mapping relazionale a oggetti, un'API che consente di salvare e r
 
 <a name="Usage"/>
 
-## <a name="usage"></a>Utilizzo
+## <a name="usage"></a>Usage
 
 Per includere la libreria SQLite.NET in un'app Novell, aggiungere il pacchetto NuGet seguente al progetto:
 
@@ -67,11 +67,11 @@ Una volta disponibile la libreria SQLite.NET, attenersi ai tre passaggi seguenti
 
 ## <a name="basic-data-access-sample"></a>Esempio di accesso ai dati di base
 
-Il codice di esempio *DataAccess_Basic* per questo documento è simile al seguente quando viene eseguito in iOS. Il codice illustra come eseguire semplici operazioni SQLite.NET e Mostra i risultati in come testo nella finestra principale dell'applicazione.
+Il *DataAccess_Basic* codice di esempio per questo documento è simile al seguente quando viene eseguito in iOS. Il codice illustra come eseguire semplici operazioni SQLite.NET e Mostra i risultati in come testo nella finestra principale dell'applicazione.
 
 **iOS**
 
- [esempio di![SQLite.NET iOS](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
+ [esempio di ![SQLite.NET iOS](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 Nell'esempio di codice riportato di seguito viene illustrata un'intera interazione del database utilizzando la libreria SQLite.NET per incapsulare l'accesso al database sottostante. Mostra:
 
@@ -130,13 +130,13 @@ Gli attributi comuni che è possibile applicare alle classi per controllare il m
 
 - **[PrimaryKey]** : questo attributo può essere applicato a una proprietà integer per forzarlo come chiave primaria della tabella sottostante. Le chiavi primarie composte non sono supportate.
 - **[Incremento automatico]** : questo attributo provocherà l'incremento automatico del valore di una proprietà integer per ogni nuovo oggetto inserito nel database
-- **[Column (Name)]** : se si specifica il parametro `name` facoltativo, verrà eseguito l'override del valore predefinito del nome della colonna di database sottostante (che corrisponde alla proprietà).
-- **[Table (Name)]** : contrassegna la classe come in grado di essere archiviata in una tabella SQLite sottostante. Se si specifica il parametro del nome facoltativo, verrà eseguito l'override del valore predefinito del nome della tabella di database sottostante, che corrisponde al nome della classe.
+- **[Column (Name)]** &ndash; il parametro `name` imposta il nome della colonna del database sottostante.
+- **[Table (Name)]** : contrassegna la classe come in grado di essere archiviata in una tabella SQLite sottostante con il nome specificato.
 - **[MaxLength (valore)]** : limita la lunghezza di una proprietà di testo quando viene eseguito un tentativo di inserimento del database. L'utilizzo del codice deve essere convalidato prima di inserire l'oggetto perché questo attributo è solo ' checked ' quando si tenta di eseguire un'operazione di inserimento o aggiornamento di un database.
 - **[Ignore]** : fa in modo che SQLite.NET ignori questa proprietà. Questa operazione è particolarmente utile per le proprietà che dispongono di un tipo che non può essere archiviato nel database o che le proprietà che non possono essere risolte automaticamente nelle raccolte di modelli siano SQLite.
 - **[Unique]** : assicura che i valori nella colonna del database sottostante siano univoci.
 
-La maggior parte di questi attributi è facoltativa, SQLite utilizzerà i valori predefiniti per i nomi di tabelle e colonne. È sempre necessario specificare una chiave primaria Integer in modo che le query di selezione ed eliminazione possano essere eseguite in modo efficiente sui dati.
+La maggior parte di questi attributi è facoltativa. È sempre necessario specificare una chiave primaria Integer in modo che le query di selezione ed eliminazione possano essere eseguite in modo efficiente sui dati.
 
 ## <a name="more-complex-queries"></a>Query più complesse
 

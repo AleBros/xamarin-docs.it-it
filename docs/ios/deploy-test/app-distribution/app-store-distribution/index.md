@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 78df4a7f4c90cd6459216f1f65dd09e0daae19f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026693"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607932"
 ---
 # <a name="app-store-distribution"></a>Distribuzione tramite l'App Store
 
@@ -62,9 +62,9 @@ Indipendentemente da come si prevede di rilasciare un'applicazione Xamarin.iOS, 
 8. **Scaricare** infine il certificato completato e fare doppio clic sul file per installarlo.
 9. A questo punto, il certificato deve essere installato nel computer, ma potrebbe essere necessario [aggiornare i profili](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) per assicurarsi che siano visibili in Xcode.
 
-In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, attenersi alla seguente procedura:
+In alternativa, è possibile richiedere un certificato tramite la finestra di dialogo Preferences (Preferenze) in Xcode. A tale scopo, seguire questa procedura:
 
-1. Selezionare il team e fare clic su **Gestisci certificati...**:[![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png#lightbox)
+1. Selezionare il team e fare clic su **Gestisci certificati...** :[![](images/selectteam.png "Selezionare il team e visualizzare i dettagli")](images/selectteam.png#lightbox)
 
 2. Fare quindi clic sul pulsante **Crea** accanto a **certificato di distribuzione iOS**:[![](images/selectcert.png "Creare un certificato di distribuzione iOS")](images/selectcert.png#lightbox)
 
@@ -85,7 +85,7 @@ Come per qualsiasi altro profilo di provisioning creato, è necessario un ID app
 3. Il prefisso App sarà già impostato come ID del team e non può essere modificato. Selezionare un ID app esplicito o con caratteri jolly e immettere un ID bundle in un formato DNS inverso, ad esempio:
     - **Esplicito**: com.[NomeDominio].[NomeApp]
     - **Con caratteri jolly**:com.[NomeDominio].*
-4. Selezionare il [servizio app](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) richiesto dall'app.
+4. Selezionare il [servizio app](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) richiesto dall'app.
 5. Fare clic sul pulsante **Continue** (Continua) e seguire le istruzioni visualizzate sullo schermo per creare il nuovo ID app.
 
 ### <a name="creating-a-provisioning-profile"></a>Creazione di un profilo di provisioning
@@ -174,9 +174,9 @@ Quando si è pronti per eseguire la compilazione finale di un'applicazione Xamar
 
 Dopo il corretto provisioning dell'applicazione, il passaggio successivo prevede la configurazione delle app in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa), una suite di strumenti basati sul Web che consentono, a titolo di esempio, di gestire le applicazioni iOS nell'App Store.
 
-È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter inviare l'app ad Apple per la revisione e, infine, essere rilasciata come app gratuita o in vendita nell'App Store.
+È necessario che l'applicazione Xamarin.iOS sia correttamente impostata e configurata in iTunes Connect prima di poter essere inviata ad Apple per la revisione e, infine, rilasciata come app gratuita o in vendita in App Store.
 
-Per altri dettagli, vedere la documentazione [Configurazione di un'app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
+Per altri dettagli, vedere la documentazione [Configuring an App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) (Configurazione di un'app in iTunes Connect).
 
 <a name="submitting" />
 
@@ -188,7 +188,7 @@ Per altre informazioni sulla pubblicazione di applicazioni nell'App Store, veder
 
 <a name="windows" />
 
-## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle dell'app nuovamente in Windows
+## <a name="automatically-copy-app-bundles-back-to-windows"></a>Copiare automaticamente i bundle delle app nuovamente in Windows
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]
 

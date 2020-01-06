@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997147"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489895"
 ---
 # <a name="xamarinforms-triggers"></a>Trigger Xamarin.Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 I trigger consentono di esprimere in modo dichiarativo in XAML le azioni che modificano l'aspetto dei controlli in base a eventi o modifiche delle proprietà.
 
@@ -43,8 +43,9 @@ Questo esempio illustra un trigger che modifica il colore di sfondo di un oggett
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -74,6 +75,7 @@ Le parti importanti della dichiarazione del trigger sono le seguenti:
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -106,6 +108,7 @@ che fa riferimento alle proprietà di un altro controllo. Quando la lunghezza di
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -168,7 +171,7 @@ Il trigger di evento può quindi essere utilizzato da XAML:
 
 Considerare che quando i trigger vengono condivisi in un oggetto `ResourceDictionary`, un'istanza viene condivisa tra i controlli, in modo che gli stati configurati una volta vengano applicati a tutti.
 
-Si noti che i trigger di evento non supportano le raccolte `EnterActions` e `ExitActions`    [descritte di seguito](#enterexit).
+Si noti che i trigger di evento non supportano `EnterActions` e `ExitActions`[descritti di seguito](#enterexit).
 
 <a name="multi" />
 
@@ -188,8 +191,7 @@ Di seguito viene riportato un esempio di un trigger per un pulsante che associa 
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
@@ -270,7 +272,7 @@ Il linguaggio XAML è illustrato di seguito. Si notino le differenze rispetto al
 Questi screenshot illustrano la differenza tra i due esempi di MultiTrigger illustrati sopra. Nella parte superiore delle schermate l'input di testo in un oggetto `Entry` è sufficiente per abilitare il pulsante **Save** (Salva).
 Nella parte inferiore delle schermate il pulsante **Login** (Accesso) rimane inattivo finché nei due campi sono contenuti dati.
 
-![](triggers-images/multi-requireall.png "Esempi di MultiTrigger")
+![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 
 <a name="enterexit" />
 
@@ -278,12 +280,12 @@ Nella parte inferiore delle schermate il pulsante **Login** (Accesso) rimane ina
 
 Un altro modo per implementare le modifiche quando si verifica un trigger consiste nell'aggiungere le raccolte `EnterActions` e `ExitActions` e specificare le implementazioni `TriggerAction<T>`.
 
-La raccolta [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) viene usata per definire una `IList` di oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) che verranno richiamati quando viene soddisfatta la condizione del trigger. La raccolta [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) viene usata per definire una `IList` di oggetti `TriggerAction` che verranno richiamati dopo che la condizione di trigger non viene più soddisfatta.
+La raccolta di [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) viene utilizzata per definire un `IList` di oggetti di [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) che verranno richiamati quando viene soddisfatta la condizione del trigger. La raccolta [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) viene utilizzata per definire un `IList` di oggetti `TriggerAction` che verranno richiamati dopo che la condizione di trigger non viene più soddisfatta.
 
 > [!NOTE]
 > Gli oggetti [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definiti nelle raccolte `EnterActions` e `ExitActions` vengono ignorati dalla classe [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) .    
 
-È possibile specificare *sia* `EnterActions` sia `ExitActions`, nonché `Setter` in un trigger, ma tenere presente che i `Setter`S vengono chiamati immediatamente (non attendono il completamento di `EnterAction` o `ExitAction`). In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
+È possibile fornire *sia `EnterActions` sia* `ExitActions`, nonché `Setter`in un trigger, ma tenere presente che i `Setter`vengono chiamati immediatamente (non attendono il completamento del `EnterAction` o del `ExitAction`). In alternativa è possibile eseguire tutti gli oggetti nel codice e non usare affatto gli elementi `Setter`.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -316,19 +318,18 @@ Il codice `FadeTriggerAction` è illustrato di seguito:
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
 {
-    public FadeTriggerAction() {}
-
     public int StartsFrom { set; get; }
 
-    protected override void Invoke (VisualElement visual)
+    protected override void Invoke(VisualElement sender)
     {
-            visual.Animate("", new Animation( (d)=>{
-                var val = StartsFrom==1 ? d : 1-d;
-                visual.BackgroundColor = Color.FromRgb(1, val, 1);
-
-            }),
-            length:1000, // milliseconds
-            easing: Easing.Linear);
+        sender.Animate("FadeTriggerAction", new Animation((d) =>
+        {
+            var val = StartsFrom == 1 ? d : 1 - d;
+            // so i was aiming for a different color, but then i liked the pink :)
+            sender.BackgroundColor = Color.FromRgb(1, val, 1);
+        }),
+        length: 1000, // milliseconds
+        easing: Easing.Linear);
     }
 }
 ```

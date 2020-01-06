@@ -6,13 +6,13 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 022aa9f1aeb2961d98b52747441e875bd89a584a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.date: 12/05/2019
+ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739325"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489908"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Configurazione delle pagine per Xamarin.Forms Shell
 
@@ -86,6 +86,21 @@ In alternativa, è possibile impostare le proprietà per i colori con uno stile 
 
 Per altre informazioni sugli stili XAML, vedere [Applicazione di stili alle app Xamarin.Forms con gli stili XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
+## <a name="enable-navigation-bar-shadow"></a>Abilita ombreggiatura barra di navigazione
+
+La classe `Shell` definisce la proprietà associata `NavBarHasShadow`, di tipo `bool`, che controlla se la barra di spostamento presenta un'ombreggiatura. Il valore predefinito della proprietà è `false`.
+
+Sebbene questa proprietà possa essere impostata su un oggetto `Shell` sottoclassato, può essere impostata anche in tutte le pagine che desiderano abilitare l'ombreggiatura della barra di navigazione. Ad esempio, il codice XAML seguente mostra come abilitare l'ombreggiatura della barra di navigazione da un [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+Ciò comporta l'abilitazione dell'ombreggiatura della barra di navigazione.
+
 ## <a name="disable-the-navigation-bar"></a>Disabilitare la barra di spostamento
 
 La classe `Shell` definisce la proprietà associata `NavBarIsVisible`, di tipo `bool`, che controlla se la barra di spostamento è visibile quando viene visualizzata una pagina. Il valore predefinito della proprietà è `true`.
@@ -101,7 +116,7 @@ Anche se questa proprietà può essere impostata per un oggetto `Shell` sottocla
 
 La barra di spostamento diventa così invisibile quando viene visualizzata la pagina:
 
-![Screenshot della pagina della shell con una barra di spostamento invisibile in iOS e Android](configuration-images/navigationbar-invisible.png "Pagina della shell con barra di spostamento invisibile")
+![Screenshot della pagina della shell con una barra di spostamento invisibile, in iOS e Android](configuration-images/navigationbar-invisible.png "Pagina della shell con barra di navigazione invisibile")
 
 ## <a name="disable-the-tab-bar"></a>Disabilitare la barra di schede
 
@@ -118,7 +133,7 @@ Anche se questa proprietà può essere impostata per un oggetto `Shell` sottocla
 
 La barra delle schede diventa così invisibile quando viene visualizzata la pagina:
 
-![Screenshot della pagina della shell con una barra delle schede invisibile in iOS e Android](configuration-images/tabbar-invisible.png "Pagina della shell con barra delle schede invisibile")
+![Screenshot della pagina della shell con una barra scheda invisibile, in iOS e Android](configuration-images/tabbar-invisible.png "Pagina della shell con barra scheda invisibile")
 
 ## <a name="display-views-in-the-navigation-bar"></a>Visualizzare viste nella barra di spostamento
 
@@ -139,7 +154,7 @@ Anche se questa proprietà può essere impostata per un oggetto `Shell` sottocla
 
 Il risultato è la visualizzazione di un'immagine nella barra di spostamento nella pagina:
 
-![Screenshot della pagina della shell con una vista del titolo, in iOS e Android](configuration-images/titleview.png "Pagina della shell con una vista del titolo")
+![Screenshot della pagina della shell con una visualizzazione del titolo, in iOS e Android](configuration-images/titleview.png "Pagina della shell con una visualizzazione del titolo")
 
 > [!IMPORTANT]
 > Se la barra di spostamento è stata resa invisibile, con la proprietà associata `NavBarIsVisible`, la vista del titolo non verrà visualizzata.

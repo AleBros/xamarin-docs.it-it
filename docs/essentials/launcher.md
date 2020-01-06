@@ -5,14 +5,14 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 3e49e12faac1fc93816d9a51646f639046c200c5
-ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
+ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887368"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488517"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Utilità di avvio
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
 
 La classe **Launcher** consente a un'applicazione di aprire un URI dal sistema. Questa funzionalità viene usata spesso per il deep linking negli schemi URI personalizzati di un'altra applicazione. Se lo scopo è aprire il browser su un sito Web specifico, vedere l'API **[Browser](open-browser.md)** .
 
@@ -54,7 +54,31 @@ public class LauncherTest
 }
 ```
 
-## <a name="files"></a>File
+### <a name="additional-platform-setup"></a>Configurazione aggiuntiva della piattaforma
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Nessuna configurazione aggiuntiva.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+In iOS 9 e versioni successive Apple applica gli schemi per cui un'applicazione può eseguire query. Per specificare quali schemi si desidera utilizzare, è necessario specificare `LSApplicationQueriesSchemes` nel file di `Info.plist`.
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>lyft</string>  
+    <string>fb</string>
+</array>
+```
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Nessuna configurazione aggiuntiva.
+
+-----
+
+## <a name="files"></a>Files
 
 Questa funzionalità consente a un'app di richiedere l'apertura e la visualizzazione di un file ad altre app. Xamarin.Essentials rileverà automaticamente il tipo di file (MIME) e richiederà l'apertura del file.
 

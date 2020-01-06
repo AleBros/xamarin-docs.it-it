@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: ae84dadf4c405f7f8075cedc0f16ca845fea6fdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8978dbce97948d02d520b788d024fb50f4884635
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014912"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488881"
 ---
 # <a name="async-support-overview"></a>Panoramica del supporto asincrono
 
@@ -19,7 +19,7 @@ _C#5 sono state introdotte due parole chiave per semplificare la programmazione 
 
 Il supporto asincrono di Novell è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 Questo documento introduce le nuove parole chiave async e await, quindi esamina alcuni semplici esempi di implementazione di metodi asincroni in Novell. iOS e Novell. Android.
 
@@ -31,7 +31,7 @@ L'applicazione di esempio esegue una semplice richiesta Web asincrona (senza blo
 
 Il supporto asincrono di Novell è basato sulla versione mono 3,0 e aggiorna il profilo API da una versione di Silverlight intuitiva per dispositivi mobili per essere una versione per dispositivi mobili di .NET 4,5.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 C#5 le funzionalità richiedono mono 3,0 incluso in Novell. iOS 6,4 e Novell. Android 4,8. Verrà richiesto di aggiornare i dispositivi mono, Novell. iOS, Novell. Android e Novell. Mac per sfruttarne i vantaggi.
 
@@ -45,7 +45,7 @@ C#5 le funzionalità richiedono mono 3,0 incluso in Novell. iOS 6,4 e Novell. An
 
 La parola chiave `async` viene inserita in una dichiarazione di metodo (oppure in un metodo lambda o anonimo) per indicare che contiene codice che può essere eseguito in modo asincrono, ad esempio. non blocca il thread del chiamante.
 
-Un metodo contrassegnato con `async` deve contenere almeno un'espressione o un'istruzione await. Se nel metodo non è presente alcuna `await`s, verrà eseguita in modo sincrono (come se non fosse presente alcun modificatore di `async`). Viene inoltre generato un avviso del compilatore, ma non un errore.
+Un metodo contrassegnato con `async` deve contenere almeno un'espressione o un'istruzione await. Se nel metodo non è presente alcuna istruzione `await`, questa verrà eseguita in modo sincrono (come se non fosse presente alcun modificatore di `async`). Viene inoltre generato un avviso del compilatore, ma non un errore.
 
 ### <a name="return-types"></a>Tipi restituiti
 
@@ -180,7 +180,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 Alcuni punti importanti:
 
 - Il metodo è contrassegnato come `async` ma restituisce `void`. Questa operazione viene in genere eseguita solo per i gestori eventi. in caso contrario, viene restituito un `Task` o `Task<TResult>`).
-- Il codice `await` s nel metodo `DownloadHomepage` direttamente in un'assegnazione a una variabile (`intResult`), a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività.  *Si tratta della* posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
+- La parola chiave `await` nel metodo `DownloadHomepage` viene assegnata direttamente a una variabile (`intResult`), a differenza dell'esempio precedente in cui è stata usata una variabile `Task<int>` intermedia per fare riferimento all'attività.  *Si tratta della* posizione in cui il controllo viene restituito al chiamante fino al completamento del metodo asincrono su un altro thread.
 - Quando il metodo asincrono viene completato e restituisce, l'esecuzione riprende in corrispondenza del `await` che indica che il risultato Integer viene restituito e quindi sottoposto a rendering in un widget dell'interfaccia utente.
 
 ## <a name="summary"></a>Riepilogo

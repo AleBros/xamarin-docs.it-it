@@ -6,17 +6,17 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/28/2019
-ms.openlocfilehash: b2918dde7524a02aa318164933063a5546db031a
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.date: 11/04/2019
+ms.openlocfilehash: 62bc5d2012df4880e9257ac70d0fc2e0fca4af64
+ms.sourcegitcommit: 619b32f4f96a255140963afcf87629ca690af93d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198484"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500450"
 ---
 # <a name="fonts-in-xamarinforms"></a>Tipi di carattere in xamarin. Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
 Questo articolo descrive la modalità di xamarin. Forms che consente di specificare gli attributi dei caratteri (compresi peso e dimensioni) nei controlli che visualizzano testo. Informazioni di carattere possono essere [specificato nel codice](#Setting_Font_in_Code) oppure [specificato nel XAML](#Setting_Font_in_Xaml). È anche possibile usare un [tipo di carattere personalizzato](#Using_a_Custom_Font)e visualizzare le [icone dei tipi di carattere](#display-font-icons).
 
@@ -50,7 +50,9 @@ Il `FontSize` proprietà può essere impostata su un valore double, ad esempio:
 label.FontSize = 24;
 ```
 
-Novell. Forms definisce anche i campi [`NamedSize`](xref:Xamarin.Forms.NamedSize) nell'enumerazione che rappresentano dimensioni specifiche dei tipi di carattere. Per ulteriori informazioni sulle dimensioni dei tipi di carattere denominate, vedere [dimensioni dei tipi di carattere](#named-font-sizes).
+Il valore delle dimensioni viene misurato in unità indipendenti dal dispositivo. Per altre informazioni, vedere [unità di misura](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
+
+Novell. Forms definisce anche i campi nell'enumerazione [`NamedSize`](xref:Xamarin.Forms.NamedSize) che rappresentano dimensioni specifiche dei tipi di carattere. Per ulteriori informazioni sulle dimensioni dei tipi di carattere denominate, vedere [dimensioni dei tipi di carattere](#named-font-sizes).
 
 <a name="FontAttributes" />
 
@@ -92,7 +94,7 @@ Xamarin. Forms consente di controllare che il testo visualizzato tutti hanno un 
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-È un convertitore di tipi incorporati per il `FontSize` proprietà che consente tutte le impostazioni del tipo di carattere può essere espresso come valore stringa in XAML. Inoltre, la proprietà `FontAttributes` può essere utilizzata per specificare gli attributi del tipo di carattere:
+È un convertitore di tipi incorporati per il `FontSize` proprietà che consente tutte le impostazioni del tipo di carattere può essere espresso come valore stringa in XAML. Inoltre, è possibile usare la proprietà `FontAttributes` per specificare gli attributi del tipo di carattere:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -118,7 +120,7 @@ Quando si specifica un tipo di carattere personalizzato, è sempre una buona ide
 
 ## <a name="named-font-sizes"></a>Dimensioni del carattere denominate
 
-Novell. Forms definisce i campi [`NamedSize`](xref:Xamarin.Forms.NamedSize) nell'enumerazione che rappresentano dimensioni specifiche dei tipi di carattere. La tabella seguente illustra i `NamedSize` membri e le relative dimensioni predefinite in iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP):
+Novell. Forms definisce i campi nell'enumerazione [`NamedSize`](xref:Xamarin.Forms.NamedSize) che rappresentano dimensioni specifiche dei tipi di carattere. La tabella seguente illustra i membri `NamedSize` e le relative dimensioni predefinite in iOS, Android e il piattaforma UWP (Universal Windows Platform) (UWP):
 
 | Member | iOS | Android | UWP |
 | --- | --- | --- | --- |
@@ -133,7 +135,9 @@ Novell. Forms definisce i campi [`NamedSize`](xref:Xamarin.Forms.NamedSize) nell
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
 
-Le dimensioni del carattere denominate possono essere impostate tramite XAML e il codice. Inoltre, è possibile `Device.GetNamedSize` chiamare il metodo per restituire un oggetto `double` che rappresenta la dimensione del carattere denominata:
+I valori delle dimensioni sono misurati in unità indipendenti dal dispositivo. Per altre informazioni, vedere [unità di misura](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
+
+Le dimensioni del carattere denominate possono essere impostate tramite XAML e il codice. Inoltre, è possibile chiamare il metodo `Device.GetNamedSize` per restituire una `double` che rappresenta le dimensioni del carattere denominate:
 
 ```csharp
 label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
@@ -148,7 +152,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 
 L'uso di un tipo di carattere diverso da caratteri tipografici predefiniti richiede alcune specifiche della piattaforma di codifica. In questo screenshot appare il tipo di carattere personalizzato **Lobster** dalla [tipi di carattere open source di Google](https://www.google.com/fonts) sottoposto a rendering con xamarin. Forms.
 
- [![Tipo di carattere personalizzato in iOS e Android](fonts-images/custom-sml.png "personalizzato-esempio i tipi di carattere")](fonts-images/custom.png#lightbox "i tipi di carattere personalizzato-esempio")
+ [![Tipo di carattere personalizzato in iOS e Android](fonts-images/custom-sml.png "Esempio di tipi di carattere personalizzati")](fonts-images/custom.png#lightbox "Esempio di tipi di carattere personalizzati")
 
 Di seguito sono illustrati i passaggi necessari per ogni piattaforma. Se i file di tipo di carattere personalizzato con un'applicazione, assicurarsi di verificare che consenta la licenza del tipo di carattere per la distribuzione.
 
@@ -157,7 +161,7 @@ Di seguito sono illustrati i passaggi necessari per ogni piattaforma. Se i file 
 È possibile visualizzare un tipo di carattere personalizzato prima di tutto verificare che sia stata caricata, quindi facendovi riferimento per nome usando xamarin. Forms `Font` metodi.
 Seguire le istruzioni in [questo post di blog](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
 
-1. Aggiungere il file del tipo **di carattere con l'azione di compilazione: BundleResource**e
+1. Aggiungere il file del tipo di carattere con **azione di compilazione: BundleResource**, e
 2. Aggiorna il **Info. plist** file (**tipi di carattere forniti dall'applicazione**, o `UIAppFonts`, key), quindi
 3. Farvi riferimento in base al nome quando si definisce un tipo di carattere in xamarin. Forms.
 
@@ -171,7 +175,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Xamarin. Forms per Android può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Aggiungere innanzitutto il file del tipo di carattere alla cartella **assets** del progetto dell' *applicazione e impostare l'azione di compilazione: AndroidAsset*. Quindi usare il percorso completo e *nome del tipo di carattere* separati da un cancelletto (#) come nome del tipo di carattere in xamarin. Forms, come illustrato di seguito il frammento di codice riportato di seguito:
+Xamarin. Forms per Android può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Prima di tutto aggiungere il file del tipo di carattere per il **asset** cartella nel progetto di applicazione e impostare *azione di compilazione: AndroidAsset*. Quindi usare il percorso completo e *nome del tipo di carattere* separati da un cancelletto (#) come nome del tipo di carattere in xamarin. Forms, come illustrato di seguito il frammento di codice riportato di seguito:
 
 ```csharp
 new Label
@@ -181,7 +185,7 @@ new Label
 }
 ```
 
-### <a name="windows"></a>WINDOWS
+### <a name="windows"></a>Portale di
 
 Xamarin. Forms per le piattaforme Windows può fare riferimento a un tipo di carattere personalizzato che è stato aggiunto al progetto seguendo uno standard di denominazione specifico. Prima di tutto aggiungere il file del tipo di carattere per il **/Assets/tipi di carattere/** cartella nel progetto di applicazione e impostare il **contenuto: azione di compilazione**. Quindi usare il nome di percorso e il tipo di carattere completo, seguito da un cancelletto (#) e il **nome del tipo di carattere**, come illustrato di seguito il frammento di codice riportato di seguito:
 
@@ -195,8 +199,6 @@ new Label
 
 > [!NOTE]
 > Si noti che il nome del file del tipo di carattere e il nome del tipo di carattere possono essere diversi. Per individuare il nome del tipo di carattere su Windows, il file ttf e scegliere **Preview**. Il nome del tipo di carattere può essere determinato quindi nella finestra di anteprima.
-
-Il codice comune per l'applicazione è ora completo. Il codice di composizione telefonica specifico della piattaforma verrà ora implementato come oggetto [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 ### <a name="xaml"></a>XAML
 
@@ -216,19 +218,19 @@ Il codice comune per l'applicazione è ora completo. Il codice di composizione t
 
 ## <a name="display-font-icons"></a>Visualizzare le icone dei tipi di carattere
 
-Le icone dei tipi di carattere possono essere visualizzate dalle applicazioni Novell. Forms specificando i `FontImageSource` dati dell'icona del tipo di carattere in un oggetto. Questa classe, che deriva dalla [`ImageSource`](xref:Xamarin.Forms.ImageSource) classe, presenta le proprietà seguenti:
+Le icone dei tipi di carattere possono essere visualizzate dalle applicazioni Novell. Forms specificando i dati dell'icona del tipo di carattere in un oggetto `FontImageSource`. Questa classe, che deriva dalla classe [`ImageSource`](xref:Xamarin.Forms.ImageSource) , presenta le proprietà seguenti:
 
-- `Glyph`: valore del carattere Unicode dell'icona del tipo di carattere, specificato `string`come.
-- `Size``double` : valore che indica le dimensioni, in unità indipendenti dal dispositivo, dell'icona del tipo di carattere di cui è stato eseguito il rendering. Il valore predefinito è 30.
-- `FontFamily`: oggetto `string` che rappresenta la famiglia di caratteri a cui appartiene l'icona del tipo di carattere.
+- `Glyph`: valore del carattere Unicode dell'icona del tipo di carattere, specificato come `string`.
+- `Size`: valore `double` che indica le dimensioni, in unità indipendenti dal dispositivo, dell'icona del tipo di carattere di cui è stato eseguito il rendering. Il valore predefinito è 30. Inoltre, questa proprietà può essere impostata su una dimensione del tipo di carattere denominata.
+- `FontFamily`: `string` che rappresenta la famiglia di caratteri a cui appartiene l'icona del tipo di carattere.
 - `Color`: valore facoltativo [`Color`](xref:Xamarin.Forms.Color) da usare quando si visualizza l'icona del tipo di carattere.
 
-Questi dati vengono usati per creare un PNG, che può essere visualizzato da qualsiasi visualizzazione in grado di visualizzare `ImageSource`un. Questo approccio consente di visualizzare le icone dei tipi di carattere, ad esempio emoji, da più visualizzazioni, anziché limitare la visualizzazione dell'icona del tipo di carattere a un'unica visualizzazione di presentazione del [`Label`](xref:Xamarin.Forms.Label)testo, ad esempio.
+Questi dati vengono usati per creare un PNG, che può essere visualizzato da qualsiasi visualizzazione in grado di visualizzare un `ImageSource`. Questo approccio consente di visualizzare le icone dei tipi di carattere, ad esempio emoji, da più visualizzazioni, anziché limitare la visualizzazione dell'icona del tipo di carattere a un'unica visualizzazione di presentazione del testo, ad esempio un [`Label`](xref:Xamarin.Forms.Label).
 
 > [!IMPORTANT]
 > Le icone dei tipi di carattere possono attualmente essere specificate solo dalla rappresentazione di caratteri Unicode.
 
-Nell'esempio di codice XAML seguente viene visualizzata una sola icona del tipo [`Image`](xref:Xamarin.Forms.Image) di carattere in una visualizzazione:
+Nell'esempio di codice XAML seguente viene visualizzata una sola icona del tipo di carattere da una visualizzazione [`Image`](xref:Xamarin.Forms.Image) :
 
 ```xaml
 <Image BackgroundColor="#D1D1D1">
@@ -240,7 +242,7 @@ Nell'esempio di codice XAML seguente viene visualizzata una sola icona del tipo 
 </Image>
 ```
 
-Questo codice Visualizza un'icona Xbox, dalla famiglia di caratteri Ionicons, in una [`Image`](xref:Xamarin.Forms.Image) vista. Si noti che, mentre il carattere Unicode per questa `\uf30c`icona è, deve essere preceduto da un carattere di escape `&#xf30c;`in XAML e quindi diventa. Il codice C# equivalente è il seguente:
+Questo codice Visualizza un'icona XBox, dalla famiglia di caratteri Ionicons, in una visualizzazione [`Image`](xref:Xamarin.Forms.Image) . Si noti che, mentre il carattere Unicode per questa icona è `\uf30c`, deve essere preceduto da un carattere di escape in XAML e pertanto viene `&#xf30c;`. Il codice C# equivalente è il seguente:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

@@ -1,19 +1,19 @@
 ---
-title: Disinstallazione di Xamarin
+title: Disinstalla Novell
 description: Questo documento descrive come disinstallare Xamarin in Mac e Windows. Fornisce istruzioni specifiche sulla disinstallazione di Mono, Xamarin.Android, Xamarin.iOS e altri strumenti.
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun
 ms.date: 04/08/2017
-ms.openlocfilehash: a5a9ddfe92bd8f5b743da2c535a93c282542c860
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fa7d5fc8d33cd7ed3a347209aaff2610e6d319dc
+ms.sourcegitcommit: 5ddb107b0a56bef8a16fce5bc6846f9673b3b22e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756777"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558820"
 ---
-# <a name="uninstalling-xamarin"></a>Disinstallazione di Xamarin
+# <a name="uninstall-xamarin"></a>Disinstalla Novell
 
 Questa guida descrive come rimuovere Xamarin da macOS o da Visual Studio in Windows.
 
@@ -185,39 +185,42 @@ rm -rf "~/Library/Preferences/Visual Studio/"
 
 ### <a name="using-the-uninstall-script"></a>Uso dello script di disinstallazione
 
-Questo script di disinstallazione consente di disinstallare Visual Studio per Mac e i componenti di Xamarin associati in un'unica operazione.
+> [!TIP]
+> Prima di eseguire gli script scaricati, leggere i comandi per comprendere le modifiche apportate al computer.
 
-Lo script contiene la maggior parte dei comandi che si trovano nell'articolo. Due elementi principali sono stati omessi dallo script, a causa di possibili dipendenze esterne:
+[Questo script di disinstallazione](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) consente di disinstallare Visual Studio per Mac e i componenti Novell associati in un'unica operazione.
+
+Lo script contiene la maggior parte dei comandi che si trovano nell'articolo. Sono presenti due omissioni principali dallo script e non sono incluse a causa di possibili dipendenze esterne. altre app potrebbero usare gli strumenti mono o Android:
 
 - Disinstallazione di Mono
 - Disinstallazione di Android AVD
 
-Per eseguire lo script, seguire questa procedura:
+Per eseguire lo script:
 
-1. Fare clic con il pulsante destro del mouse sullo script e selezionare Salva con nome per salvare il file sul Mac.
+1. Fare clic con il pulsante destro del mouse su [questo collegamento a **Uninstall-vsmac.sh** ](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) e salvare/scaricare il file nel computer Mac.
 
 2. Aprire **Terminale** e modificare la directory di lavoro in cui lo script è stato scaricato:
 
-    ```
+    ```bash
     cd /location/of/file
     ```
 
 3. Rendere eseguibile lo script ed eseguirlo con **sudo**:
 
-    ```
-    chmod +x ./xamarin_uninstall.sh
-    sudo ./xamarin_uninstall.sh
+    ```bash
+    chmod +x ./uninstall-vsmac.sh
+    sudo ./uninstall-vsmac.sh
     ```
 
-4. Infine, eliminare lo script di disinstallazione.
+4. Eliminare lo script di disinstallazione.
 
-A questo punto, Xamarin dovrebbe essere disinstallato dal computer.
+Gli strumenti Visual Studio per Mac e Novell dovrebbero ora essere disinstallati dal computer.
 
 <a name="uninstallwindows" />
 
 ## <a name="uninstalling-xamarin-on-windows"></a>Disinstallazione di Xamarin in Windows
 
-Xamarin è supportato in:
+Novell è supportato in questi IDE:
 
 - [Visual Studio 2019 e Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
@@ -234,25 +237,25 @@ Novell viene disinstallato da Visual Studio 2019 e Visual Studio 2017 usando l'a
 
 2. Fare clic sul pulsante **Modifica** per l'istanza che si vuole modificare.
 
-    [![](uninstalling-xamarin-images/vs2017-02-sml.png "Fare clic sul pulsante Modifica")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-02-sml.png "Press the modify button")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
 
 3. Nella scheda **Carichi di lavoro** deselezionare l'opzione **Sviluppo di applicazioni per dispositivi mobili con .NET** (nella sezione **Dispositivi mobili e giochi**).
 
-    [![](uninstalling-xamarin-images/vs2017-03-sml.png "Deselezionare il carico di lavoro Sviluppo di applicazioni per dispositivi mobili")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-03-sml.png "Uncheck the Mobile Development workload")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
 
 4. Fare clic sul pulsante **Modifica** in basso a destra nella finestra.
 
 5. Il programma di installazione rimuoverà i componenti deselezionati (Visual Studio 2017 deve essere chiuso prima che il programma di installazione possa apportare modifiche).
 
-    [![](uninstalling-xamarin-images/vs2017-04-sml.png "Fare clic sul pulsante Modifica")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-04-sml.png "Press the Modify button")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
 
 I singoli componenti di Xamarin, ad esempio Profiler o Workbooks, possono essere disinstallati passando alla scheda **Singoli componenti** nel passaggio 3 e deselezionando i componenti specifici:
 
-[![](uninstalling-xamarin-images/vs2017-components-sml.png "Disinstallare i singoli componenti")](uninstalling-xamarin-images/vs2017-components.png#lightbox)
+[![](uninstalling-xamarin-images/vs2017-components-sml.png "Uninstall individual components")](uninstalling-xamarin-images/vs2017-components.png#lightbox)
 
 Per disinstallare completamente Visual Studio 2017, scegliere **Disinstalla** dal menu con le tre barre accanto al pulsante **Avvia**.
 
-[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Disinstallare completamente Visual Studio")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
+[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Uninstall Visual Studio completely")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
 > Se si dispone di due (o più) istanze di Visual Studio installate side-by-side (SxS), ad esempio una versione di rilascio e una di anteprima, la disinstallazione di un'istanza potrebbe rimuovere alcune funzionalità di Xamarin dalle altre istanze di Visual Studio, tra cui:
@@ -276,7 +279,7 @@ Per disinstallare completamente Visual Studio 2015, usare [la risposta del suppo
 
 Xamarin può essere disinstallato da un computer Windows tramite il **Pannello di controllo**. Passare a **Programmi e funzionalità** o **Programmi > Disinstalla un programma** come illustrato di seguito:
 
- [![](uninstalling-xamarin-images/image3.png "Passare a Programmi e funzionalità o Programmi  Disinstalla un programma come illustrato qui")](uninstalling-xamarin-images/image3.png#lightbox) 
+ [![](uninstalling-xamarin-images/image3.png "Navigate to Programs and Features or Programs  Uninstall a Program as illustrated here")](uninstalling-xamarin-images/image3.png#lightbox) 
 
 Disinstallare dal Pannello di controllo i seguenti elementi, se presenti:
 
@@ -343,7 +346,7 @@ Per disinstallare Xamarin Studio, individuare **Xamarin Studio 5.x.x** nell'elen
 
 Il primo passaggio per la disinstallazione di Xamarin Studio da un Mac consiste nell'individuare **Xamarin Studio.app** nella directory **/Applications** e trascinarlo nel **Cestino**. In alternativa, fare clic con il pulsante destro e selezionare **Sposta nel cestino** come illustrato di seguito:
 
- [![](uninstalling-xamarin-images/image1.png "In alternativa, fare clic con il pulsante destro del mouse e selezionare Sposta nel cestino come illustrato in questa schermata")](uninstalling-xamarin-images/image1.png#lightbox)
+ [![](uninstalling-xamarin-images/image1.png "Alternatively, right-click and select Move to Trash as illustrated here")](uninstalling-xamarin-images/image1.png#lightbox)
 
 L'eliminazione di questo bundle dell'app causa la rimozione di Xamarin Studio, tuttavia ci sono altri file correlati a Xamarin nel file system.
 

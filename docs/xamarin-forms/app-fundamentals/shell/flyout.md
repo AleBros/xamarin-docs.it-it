@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
-ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
-ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.date: 11/05/2019
+ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2019
-ms.locfileid: "74451814"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489960"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Riquadro a comparsa della shell Xamarin.Forms
 
@@ -247,6 +247,23 @@ La classe `FlyoutItem` espone inoltre i metodi sottoponibili a override seguenti
 - `TabIndexDefaultValueCreator`, restituisce un valore `int` e viene chiamato per impostare il valore predefinito della proprietà `TabIndex`.
 - `TabStopDefaultValueCreator`, restituisce un valore `bool` e viene chiamato per impostare il valore predefinito della proprietà `TabStop`.
 
+## <a name="flyout-vertical-scroll"></a>Scorrimento verticale riquadro a comparsa
+
+Per impostazione predefinita, è possibile scorrere verticalmente un riquadro a comparsa quando gli elementi del riquadro a comparsa non rientrano nel riquadro a comparsa. Questo comportamento può essere modificato impostando la proprietà `Shell.FlyoutVerticalScrollMode` associabile su uno dei membri dell'enumerazione `ScrollMode`:
+
+- `Disabled`: indica che lo scorrimento verticale sarà disabilitato.
+- `Enabled`: indica che verrà abilitato lo scorrimento verticale.
+- `Auto`: indica che verrà abilitato lo scorrimento verticale se gli elementi del riquadro a comparsa non rientrano nel riquadro a comparsa. Questo è il valore predefinito per la proprietà `Shell.FlyoutVerticalScrollMode`.
+
+Nell'esempio seguente viene illustrato come disabilitare lo scorrimento verticale:
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
+
 ## <a name="flyout-display-options"></a>Opzioni di visualizzazione del riquadro a comparsa
 
 L'enumerazione `FlyoutDisplayOptions` definisce i membri seguenti:
@@ -436,7 +453,7 @@ La classe `Shell` ha una proprietà associabile denominata `CurrentItem`, di tip
 
 Questo codice imposta l'oggetto `ShellContent` denominato `aboutItem` come proprietà `CurrentItem` e, di conseguenza, l'oggetto viene visualizzato. In questo esempio viene usata una conversione implicita per eseguire il wrapping dell'oggetto `ShellContent` in un oggetto `Tab`, di cui viene eseguito il wrapping in un oggetto `FlyoutItem`.
 
-Il codice C# equivalente è:
+Il codice C# equivalente è il seguente:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: f2f0d44f9c9d2df3c09d98e8d921121ff2af1571
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 78f8c8d1340c6bb1063e59ad03485d8b9b807c58
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032271"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488998"
 ---
 # <a name="ios-platform-features-overview"></a>Panoramica delle funzionalità della piattaforma iOS
 
@@ -53,7 +53,7 @@ iOS include due applicazioni correlate al calendario: l'applicazione calendario 
 
 ## <a name="ios-extensionsiosplatformextensionsmd"></a>[estensioni iOS](~/ios/platform/extensions.md)
 
-Le estensioni, come introdotte in iOS 8, sono specializzate `UIViewControllers` presentate da iOS all'interno di contesti standard, ad esempio all'interno del **Centro notifiche**, come tipi di tastiera personalizzati richiesti dall'utente per eseguire un input specializzato o altri contesti come modifica di una foto in cui l'estensione può fornire filtri di effetto speciali.
+Le estensioni, come introdotte in iOS 8, sono specializzate `UIViewControllers` presentate da iOS all'interno di contesti standard, ad esempio all'interno del **Centro notifiche**, come tipi di tastiera personalizzati richiesti dall'utente per eseguire un input specializzato o altri contesti come la modifica di una foto in cui l'estensione può fornire filtri effetti speciali.
 
 ## <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[Grafica e animazione in iOS](~/ios/platform/graphics-animation-ios/index.md)
 
@@ -125,9 +125,9 @@ Il kit di testo è una nuova API che offre funzionalità avanzate per il layout 
 
 Questo articolo fornisce e introduce l'uso delle nuove API Touch 3D per aggiungere movimenti sensibili alla pressione alle app Novell. iOS in esecuzione nei nuovi dispositivi iPhone 6s e iPhone 6s Plus.
 
-## <a name="touch-idiosplatformtouchidmd"></a>[ID tocco](~/ios/platform/touchid.md)
+## <a name="touch-id-and-face-id-with-xamariniosiosplatformtouch-id-face-idmd"></a>[Touch ID e Face ID con Novell. iOS](~/ios/platform/touch-id-face-id.md)
 
-Touch ID è stato introdotto in iOS 7 come mezzo per l'autenticazione dell'utente, simile a un codice di accesso. Tuttavia, era limitato allo sblocco del dispositivo, usando l'App Store, usando iTunes e autenticando solo il keychain di iCloud.
+Touch ID e Face ID sono sistemi di autenticazione biometrici disponibili a partire da iOS 8. Questo articolo ed esempio illustrano come usare Touch ID e Face ID con Novell. iOS.
 
 ## <a name="user-notificationsiosplatformuser-notificationsindexmd"></a>[Notifiche utente](~/ios/platform/user-notifications/index.md)
 

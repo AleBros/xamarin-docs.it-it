@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8d773abbca348d09d3359f09cbded22f6521fb7f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649717"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487321"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Archiviare e accedere ai dati in archiviazione di Azure da Novell. Forms
 
 [![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
-_Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere utilizzata per archiviare i dati non strutturati e strutturati. Questo articolo illustra come usare xamarin. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati._
+_Archiviazione di Azure è una soluzione di archiviazione cloud scalabile che può essere usata per archiviare dati non strutturati e strutturati. Questo articolo illustra come usare Novell. Forms per archiviare dati di testo e binari in archiviazione di Azure e come accedere ai dati._
 
 Archiviazione di Azure offre quattro servizi di archiviazione:
 
@@ -36,17 +36,20 @@ Questo articolo e applicazione di esempio di accompagnamento di seguito viene il
 
 Per altre informazioni sull'archiviazione di Azure, vedere [Introduzione all'archiviazione](https://azure.microsoft.com/documentation/articles/storage-introduction/).
 
+> [!NOTE]
+> Se non si ha una [sottoscrizione di Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), creare un [account gratuito](https://aka.ms/azfree-docs-mobileapps) prima di iniziare.
+
 ## <a name="introduction-to-blob-storage"></a>Introduzione all'archiviazione Blob
 
 Archiviazione BLOB è costituita da tre componenti, che vengono visualizzati nel diagramma seguente:
 
-![](azure-storage-images/blob-storage.png "Concetti relativi all'archiviazione BLOB")
+![](azure-storage-images/blob-storage.png "Blob Storage Concepts")
 
 Tutti gli accessi ad archiviazione di Azure consiste nell'utilizzare un account di archiviazione. Un account di archiviazione può contenere un numero illimitato di contenitori, e un contenitore può archiviare un numero illimitato di BLOB, fino al limite di capacità dell'account di archiviazione.
 
 Un blob è un file di qualsiasi tipo e dimensione. Archiviazione di Azure supporta tre diversi tipi di blob:
 
-- I BLOB in blocchi sono ottimizzati per lo streaming e l'archiviazione di oggetti cloud e sono un'ottima scelta per l'archiviazione dei backup, i file multimediali, documenti e così via. I BLOB in blocchi possono essere di dimensioni fino a 195Gb.
+- I BLOB in blocchi sono ottimizzati per lo streaming e l'archiviazione di oggetti cloud e rappresentano una scelta ottimale per l'archiviazione di backup, file multimediali, documenti e così via. I BLOB in blocchi possono avere dimensioni fino a 195Gb.
 - Accodare BLOB sono simili ai BLOB in blocchi, ma sono ottimizzati per operazioni di accodamento, ad esempio la registrazione. Aggiungere i BLOB possono essere di dimensioni fino a 195Gb.
 - I BLOB di pagine sono ottimizzati per le operazioni di lettura/scrittura frequenti e vengono in genere usati per archiviare le macchine virtuali e i relativi dischi. I BLOB di pagine possono essere fino a 1Tb di dimensioni.
 
@@ -59,7 +62,7 @@ Tutti gli oggetti archiviati in archiviazione di Azure ha un indirizzo URL univo
 
 L'URL per l'accesso a un oggetto in un account di archiviazione viene formato aggiungendo la posizione dell'oggetto nell'account di archiviazione per l'endpoint. Ad esempio, un indirizzo blob avrà il formato `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob`.
 
-## <a name="setup"></a>Configurazione
+## <a name="setup"></a>Programma di installazione
 
 Il processo per l'integrazione di un account di archiviazione di Azure in un'applicazione xamarin. Forms è come segue:
 
@@ -70,7 +73,7 @@ Il processo per l'integrazione di un account di archiviazione di Azure in un'app
 
 <a name="connecting" />
 
-## <a name="connecting-to-azure-storage"></a>La connessione ad archiviazione di Azure
+## <a name="connecting-to-azure-storage"></a>Connessione ad Archiviazione di Azure
 
 Ogni richiesta effettuata per le risorse di account di archiviazione deve essere autenticata. Mentre i BLOB possono essere configurati per supportare l'autenticazione anonima, esistono due approcci principali che un'applicazione può utilizzare per l'autenticazione con un account di archiviazione:
 
@@ -122,7 +125,7 @@ Per altre informazioni sulle firme di accesso condiviso, vedere [usando le firme
 
 ## <a name="creating-a-container"></a>Creazione di un contenitore
 
-Il `GetContainer` metodo viene utilizzato per recuperare un riferimento a un contenitore denominato, che quindi può essere utilizzato per recuperare i BLOB dal contenitore o per aggiungere i BLOB nel contenitore. Nell'esempio di codice riportato di seguito viene illustrato il `GetContainer` metodo:
+Il `GetContainer` metodo viene utilizzato per recuperare un riferimento a un contenitore denominato, che quindi può essere utilizzato per recuperare i BLOB dal contenitore o per aggiungere i BLOB nel contenitore. L'esempio di codice seguente illustra il metodo `GetContainer`:
 
 ```csharp
 static CloudBlobContainer GetContainer(ContainerType containerType)
@@ -263,5 +266,5 @@ Dopo aver recuperato un riferimento al contenitore, il metodo recupera un riferi
 - [Archiviazione di Azure (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introduzione all'archiviazione](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Come usare archiviazione Blob da Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
-- [Uso delle firme di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [Uso delle firme di accesso condiviso (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
 - [Archiviazione di Windows Azure (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

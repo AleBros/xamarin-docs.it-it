@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: dc72dc7549a697c7231045601851ba4108f29e1b
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697584"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489752"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Scorrimento CarouselView Novell. Forms
 
@@ -32,7 +32,7 @@ Tutte queste proprietà sono supportate da oggetti [`BindableProperty`](xref:Xam
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce inoltre due metodi [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , che scorrono gli elementi nella visualizzazione. Uno degli overload scorre l'elemento in corrispondenza dell'indice specificato nella visualizzazione, mentre l'altro scorre l'elemento specificato nella visualizzazione. Entrambi gli overload hanno argomenti aggiuntivi che possono essere specificati per indicare la posizione esatta dell'elemento dopo il completamento dello scorrimento e l'eventuale animazione dello scorrimento.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) generato quando viene richiamato uno dei metodi di [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Il [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetto che accompagna l'evento `ScrollToRequested` dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item` e `ScrollToPosition`. Queste proprietà vengono impostate dagli argomenti specificati nelle chiamate al metodo `ScrollTo`.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) generato quando viene richiamato uno dei metodi di [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Il [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) oggetto che accompagna l'evento `ScrollToRequested` dispone di molte proprietà, tra cui `IsAnimated`, `Index`, `Item`e `ScrollToPosition`. Queste proprietà vengono impostate dagli argomenti specificati nelle chiamate al metodo `ScrollTo`.
 
 Inoltre, [`CarouselView`](xref:Xamarin.Forms.CarouselView) definisce un evento `Scrolled` generato per indicare che si è verificato lo scorrimento. Il `ItemsViewScrolledEventArgs` oggetto che accompagna l'evento `Scrolled` dispone di molte proprietà. Per ulteriori informazioni, vedere [rilevamento dello scorrimento](#detect-scrolling).
 
@@ -195,7 +195,7 @@ CarouselView carouselView = new CarouselView
 - [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento saranno visibili, anche quando il contenuto si adatterà alla visualizzazione.
 - [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica che le barre di scorrimento non saranno visibili, anche se il contenuto non rientra nella visualizzazione.
 
-## <a name="snap-points"></a>Punti di aggancio
+## <a name="snap-points"></a>Punti di ancoraggio
 
 Quando un utente scorre il dito per avviare uno scorrimento, è possibile controllare la posizione finale dello scorrimento in modo che gli elementi vengano visualizzati completamente. Questa funzionalità è nota come blocco, perché gli elementi si bloccano alla posizione quando lo scorrimento viene interrotto ed è controllato dalle proprietà seguenti della classe [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) :
 
@@ -219,10 +219,10 @@ Per impostazione predefinita, in una [`CarouselView`](xref:Xamarin.Forms.Carouse
 
 ### <a name="snap-points-alignment"></a>Allineamento punti di aggancio
 
-L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) definisce i membri `Start`, `Center` e `End`.
+L'enumerazione [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) definisce i membri `Start`, `Center`e `End`.
 
 > [!IMPORTANT]
-> Il valore della proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) viene rispettato solo quando la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory` o `MandatorySingle`.
+> Il valore della proprietà [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) viene rispettato solo quando la proprietà [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) è impostata su `Mandatory`o `MandatorySingle`.
 
 #### <a name="start"></a>Inizio
 
@@ -230,7 +230,7 @@ Il membro `SnapPointsAlignment.Start` indica che i punti di allineamento sono al
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"
@@ -264,7 +264,7 @@ Per impostazione predefinita, in un [`CarouselView`](xref:Xamarin.Forms.Carousel
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"
@@ -296,7 +296,7 @@ Il membro `SnapPointsAlignment.End` indica che i punti di allineamento sono alli
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"

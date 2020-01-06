@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f49fa08e5d9b2ad76fc069b415d6ea5b899b2bf7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a3d0962eb8253ca72b6afce77036e02a7aa59b94
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030781"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607893"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Pubblicazione in Apple TV App Store
 
@@ -47,7 +47,7 @@ Apple gestisce anche un elenco di suggerimenti per l'invio di App Store di Apple
 
 [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa) è una suite di strumenti basati sul Web per, tra le altre cose, la gestione delle app TvOS nell'App Store di Apple TV. È necessario configurare e configurare correttamente l'app Novell. tvOS in iTunes Connect prima di poterla inviare ad Apple per la revisione e, infine, essere rilasciata per la vendita o come app gratuita nell'App Store di Apple TV.
 
-Procedere come descritto di seguito:
+eseguire le operazioni descritte di seguito.
 
 1. Verificare che esistano i contratti appropriati e che siano aggiornati nella sezione **Agreements, Tax, and Banking** (Contratti, imposte e banche) di iTunes Connect per poter rilasciare un'applicazione iOS gratuita o in vendita.
 2. Creare un nuovo **record di iTunes Connect** per l'applicazione e specificare il relativo **nome visualizzato** , come visualizzato nell'App Store di Apple TV.
@@ -91,7 +91,7 @@ In Visual Studio per Mac eseguire le operazioni seguenti:
 5. Selezionare e configurare i diritti necessari per l'app Novell. tvOS in modo che corrispondano alla configurazione eseguita in precedenza quando è stato definito l'ID app.
 6. Salvare le modifiche apportate al file `Entitlements.plist`.
 
-Per istruzioni dettagliate, vedere la documentazione [Provisioning dei servizi applicativi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices). Mentre questo documento è stato scritto per iOS, vengono usati gli stessi passaggi per eseguire il provisioning di un'app Novell. tvOS.
+Per istruzioni dettagliate, vedere la documentazione [Provisioning dei servizi applicativi](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services). Mentre questo documento è stato scritto per iOS, vengono usati gli stessi passaggi per eseguire il provisioning di un'app Novell. tvOS.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
@@ -125,7 +125,7 @@ Per istruzioni dettagliate, vedere [Creating a Distribution Profile](~/ios/deplo
 
 Per impostazione predefinita, quando si crea una nuova app Novell. tvOS, le _configurazioni di compilazione_ vengono create automaticamente per la distribuzione di **debug** e di **rilascio** . Prima di eseguire la build finale dell'app che verrà inviata ad Apple, è necessario apportare alcune modifiche alla configurazione della **versione** di base.
 
-Procedere come descritto di seguito:
+eseguire le operazioni descritte di seguito.
 
 1. Fare clic con il pulsante destro del mouse sul **nome del progetto** nella **Esplora soluzioni** e selezionare **Opzioni** per aprirle per la modifica.
 2. Se la destinazione è una versione specifica di tvOS, selezionarla in **TvOS Build** > **iOS SDK Version**. Per la versione di anteprima del supporto tvOS, lasciare questo valore impostato su **predefinito**.
@@ -211,7 +211,7 @@ Se si accede di nuovo a iTunes Connect e si seleziona l'app nell'elenco delle ap
 
 <a name="Troubleshooting" />
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Se si verificano problemi durante l'invio dell'app Novell. tvOS all'App Store di Apple TV, vedere la guida alla [risoluzione dei problemi](~/ios/tvos/troubleshooting.md) . Contiene diversi problemi noti che possono verificarsi e come risolverli in Novell. tvOS.
 

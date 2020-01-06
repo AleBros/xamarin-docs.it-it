@@ -6,13 +6,13 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.date: 12/11/2019
+ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662323"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488173"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Novell. Forms-dati CollectionView
 
@@ -251,7 +251,86 @@ Per ulteriori informazioni sui selettori di modelli di dati, vedere [Create a No
 > [!IMPORTANT]
 > Quando si usa [`CollectionView`](xref:Xamarin.Forms.CollectionView), non impostare mai l'elemento radice degli oggetti [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) su un `ViewCell`. Questa operazione comporterà la generazione di un'eccezione in quanto `CollectionView` non ha alcun concetto di celle.
 
-## <a name="pull-to-refresh"></a>Pull per aggiornare
+## <a name="context-menus"></a>Menu di scelta rapida
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) supporta i menu di scelta rapida per gli elementi di dati tramite l'`SwipeView`, che consente di visualizzare il menu di scelta rapida con un gesto di scorrimento rapido. Il `SwipeView` è un controllo contenitore che esegue il wrapping di un elemento di contenuto e fornisce voci di menu di scelta rapida per l'elemento di contenuto. Pertanto, i menu di scelta rapida vengono implementati per un `CollectionView` creando una `SwipeView` che definisce il contenuto di cui il `SwipeView` esegue il wrapping e le voci del menu di scelta rapida rivelate dal gesto di scorrimento. Questa operazione viene eseguita impostando il `SwipeView` come visualizzazione radice nell' [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) che definisce l'aspetto di ogni elemento di dati nella `CollectionView`:
+
+```xaml
+<CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Favorite"
+                                   IconImageSource="favorite.png"
+                                   BackgroundColor="LightGreen"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.FavoriteCommand}"
+                                   CommandParameter="{Binding}" />
+                        <SwipeItem Text="Delete"
+                                   IconImageSource="delete.png"
+                                   BackgroundColor="LightPink"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.DeleteCommand}"
+                                   CommandParameter="{Binding}" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <Grid BackgroundColor="White"
+                      Padding="10">
+                    <!-- Define item appearance -->
+                </Grid>
+            </SwipeView>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+```
+
+Il codice C# equivalente è il seguente:
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+
+collectionView.ItemTemplate = new DataTemplate(() =>
+{
+    // Define item appearance
+    Grid grid = new Grid { Padding = 10, BackgroundColor = Color.White };
+    // ...
+
+    SwipeView swipeView = new SwipeView();
+    SwipeItem favoriteSwipeItem = new SwipeItem
+    {
+        Text = "Favorite",
+        IconImageSource = "favorite.png",
+        BackgroundColor = Color.LightGreen
+    };
+    favoriteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.FavoriteCommand", source: collectionView));
+    favoriteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    SwipeItem deleteSwipeItem = new SwipeItem
+    {
+        Text = "Delete",
+        IconImageSource = "delete.png",
+        BackgroundColor = Color.LightPink
+    };
+    deleteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.DeleteCommand", source: collectionView));
+    deleteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    swipeView.LeftItems = new SwipeItems { favoriteSwipeItem, deleteSwipeItem };
+    swipeView.Content = grid;    
+    return swipeView;
+});
+```
+
+In questo esempio, il contenuto del `SwipeView` è un [`Grid`](xref:Xamarin.Forms.Grid) che definisce l'aspetto di ogni elemento nella [`CollectionView`](xref:Xamarin.Forms.CollectionView). Gli elementi swipe vengono usati per eseguire azioni sul contenuto `SwipeView` e vengono rivelati quando il controllo viene sottoposto a scorrimento dal lato sinistro:
+
+[![Screenshot delle voci del menu di scelta rapida CollectionView in iOS e Android](populate-data-images/swipeview.png "CollectionView con voci di menu di scelta rapida SwipeView")](populate-data-images/swipeview-large.png#lightbox "CollectionView con voci di menu di scelta rapida SwipeView")
+
+`SwipeView` supporta quattro direzioni di scorrimento diverse, con la direzione di scorrimento definita dalla raccolta di `SwipeItems` direzionali a cui vengono aggiunti gli oggetti di `SwipeItems`. Per impostazione predefinita, un elemento swipe viene eseguito quando viene toccato dall'utente. Inoltre, dopo l'esecuzione di un elemento swipe gli elementi swipe sono nascosti e il contenuto del `SwipeView` viene nuovamente visualizzato. Tuttavia, è possibile modificare questi comportamenti.
+
+Per ulteriori informazioni sul controllo `SwipeView`, vedere [Novell. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
+
+## <a name="pull-to-refresh"></a>Aggiornamento tramite trascinamento verso il basso
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) supporta il pull per aggiornare la funzionalità tramite il `RefreshView`, che consente di visualizzare i dati da aggiornare effettuando il pull di un elenco di elementi. Il `RefreshView` è un controllo contenitore che fornisce il pull per aggiornare la funzionalità al relativo elemento figlio, purché l'elemento figlio supporti il contenuto scorrevole. Pertanto, il pull per l'aggiornamento viene implementato per un `CollectionView` impostando il valore come figlio di un `RefreshView`:
 
@@ -344,6 +423,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 - [CollectionView (esempio)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Novell. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Novell. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md)
 - [Data Binding Novell. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelli di dati Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creare un DataTemplateSelector Novell. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

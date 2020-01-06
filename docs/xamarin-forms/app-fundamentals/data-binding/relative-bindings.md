@@ -6,13 +6,13 @@ ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/30/2019
-ms.openlocfilehash: 08026cd3f3ef7503a92f6c78f1e3e27ad3642d09
-ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.date: 12/04/2019
+ms.openlocfilehash: e115014728cce9252a92740b6db5beab582f61ed
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959133"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489871"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Binding relativi di Novell. Forms
 
@@ -23,7 +23,7 @@ Le associazioni relative offrono la possibilità di impostare l'origine di assoc
 L'estensione di markup `RelativeSource` è supportata dalla classe `RelativeSourceExtension`, che definisce le proprietà seguenti:
 
 - `Mode`, di tipo `RelativeBindingSourceMode`, descrive il percorso dell'origine di associazione in relazione alla posizione della destinazione del binding.
-- `AncestorLevel`, di tipo `int`, un livello predecessore facoltativo da cercare, quando la proprietà `Mode` è `FindAncestor`.
+- `AncestorLevel`, di tipo `int`, un livello predecessore facoltativo da cercare, quando la proprietà `Mode` è `FindAncestor`. Un `AncestorLevel` di `n` ignora `n-1` istanze del `AncestorType`.
 - `AncestorType`, di tipo `Type`, il tipo di predecessore da cercare, quando la proprietà `Mode` è `FindAncestor`.
 
 > [!NOTE]
@@ -81,6 +81,9 @@ Le modalità di associazione relative a `FindAncestor` e `FindAncestorBindingCon
 > È necessario impostare la proprietà `AncestorType` su un `Type` quando si utilizzano le modalità di associazione `FindAncestor` e `FindAncestorBindingContext` relative, in caso contrario viene generata un'`XamlParseException`.
 
 Se la proprietà `Mode` non è impostata in modo esplicito, impostando la proprietà `AncestorType` su un tipo che deriva da [`Element`](xref:Xamarin.Forms.Element) la proprietà `Mode` viene impostata in modo implicito su `FindAncestor`. Analogamente, se si imposta la proprietà `AncestorType` su un tipo che non deriva da `Element`, la proprietà `Mode` viene impostata in modo implicito su `FindAncestorBindingContext`.
+
+> [!NOTE]
+> Le associazioni relative che usano la modalità `FindAncestorBindingContext` verranno riapplicate quando il `BindingContext` dei predecessori viene modificato.
 
 Il codice XAML seguente mostra un esempio in cui la proprietà `Mode` verrà impostata in modo implicito su `FindAncestorBindingContext`:
 

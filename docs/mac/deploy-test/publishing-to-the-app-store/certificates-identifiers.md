@@ -1,215 +1,197 @@
 ---
 title: Certificati e identificatori in Xamarin.Mac
-description: Questa guida descrive come creare i certificati e gli identificatori necessari per pubblicare un'app Xamarin.Mac.
+description: Questa guida illustra come creare i certificati e gli identificatori necessari per pubblicare un'app Novell. Mac.
 ms.prod: xamarin
 ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
-ms.date: 03/14/2017
-ms.openlocfilehash: 59c3372350caf3939a4e40ba2999ffb490d4a1f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 12/17/2019
+ms.openlocfilehash: 2ea3516c1fb89c8c9b9cc3694d7c95ccd87e9d41
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030087"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489647"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificati e identificatori in Xamarin.Mac
 
 _Questa guida descrive come creare i certificati e gli identificatori necessari per pubblicare un'app Xamarin.Mac._
 
-## <a name="certificates-and-identifiers"></a>Certificati e identificatori
+## <a name="setup"></a>Programma di installazione
 
-Visitare [Apple Developer Member Center](https://developer.apple.com) per configurare il Mac per lo sviluppo. Il menu principale è riportato di seguito:
+Visitare [Apple Developer Member Center](https://developer.apple.com) per configurare il Mac per lo sviluppo. Fai clic sul collegamento all' **account** e accedi. Il menu principale è riportato di seguito:
 
-[![Il centro per gli sviluppatori Apple](certificates-identifiers-images/devcenter01.png "Il centro per gli sviluppatori Apple")](certificates-identifiers-images/devcenter01-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Apple Developer Member Center](certificates-identifiers-images/devcenter01.png)](certificates-identifiers-images/devcenter01-large.png#lightbox)
 
-Fare clic sul collegamento **Certificates, Identifiers & Profiles** (Certificati, identificatori e profili):
+Fare clic sul pulsante **certificati, identificatori & profili** (o sul pulsante più accanto all'intestazione **certificati** ):
 
-[![Selezione di certificati, identificatori & profili](certificates-identifiers-images/devcenter02.png "Selezione di certificati, identificatori & profili")](certificates-identifiers-images/devcenter02-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![selezione di certificati, ID & profili](certificates-identifiers-images/devcenter02.png)](certificates-identifiers-images/devcenter02-large.png#lightbox)
 
-Quindi fare clic sul **collegamento Certificates** (Certificati) nella sezione **Mac Apps** (App Mac):
+Selezionare un tipo di certificato e fare clic su **continua**:
 
-[![Selezione del collegamento certificati](certificates-identifiers-images/devcenter03.png "Selezione del collegamento certificati")](certificates-identifiers-images/devcenter03-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![selezionare il collegamento certificati](certificates-identifiers-images/devcenter03.png)](certificates-identifiers-images/devcenter03-large.png#lightbox)
 
-Fare clic sul collegamento **All** (Tutti) e fare clic sul pulsante **+** :
+Da qui è possibile scaricare i **certificati intermedi** (Worldwide Developer Relations Certificate Authority e Developer ID Certificate Authority) se necessario (ultimo elemento nella parte inferiore della pagina). Tali certificati dovrebbero comunque essere automaticamente configurati per lo sviluppatore da Xcode.
 
-[![Selezione di tutti e aggiunta di un nuovo elemento](certificates-identifiers-images/certif01.png "Selezione di tutti e aggiunta di un nuovo elemento")](certificates-identifiers-images/certif01-large.png#lightbox)
-
-Da qui scaricare i **certificati intermedi** (Worldwide Developer Relations Certificate Authority e Developer ID Certificate Authority), se necessario. Tali certificati dovrebbero comunque essere automaticamente configurati per lo sviluppatore da Xcode.
-
-Nella parte restante di questa sezione vengono illustrati i quattro passaggi necessari per completare la configurazione di un account Mac Developer.
+Il resto di questa sezione illustra le sezioni rilevanti per gli sviluppatori Mac:
 
 - **Registrare l'ID app Mac**: lo sviluppatore dovrà seguire la procedura seguente per ogni applicazione scritta.
 - **Registrare sistemi macOS**: questo passaggio è richiesto solo per aggiungere computer con cui eseguire i test.
-- **Creare certificati**: questo passaggio è richiesto solo una prima volta per la configurazione dei certificati e successivamente per il rinnovo.
+- **Creare certificati** : è necessario solo una volta quando si configurano i certificati e successivamente durante il rinnovo.
 - **Creare un profilo di provisioning**: lo sviluppatore dovrà seguire questa procedura per ogni nuova applicazione scritta e in caso di aggiunta di nuovi sistemi.
 
-Fare clic sul collegamento **Overview** (Panoramica) in alto a sinistra nella pagina per tornare a questo menu in qualsiasi momento.
+## <a name="register-mac-app-id"></a>Registrare l'ID app Mac
 
-### <a name="register-mac-app-id"></a>Registrare l'ID app Mac
+È necessario registrare un ID app per ogni applicazione. Per creare una voce, attenersi alla procedura seguente:
 
-Lo sviluppatore deve registrare un ID app per ogni applicazione scritta. Usare la procedura seguente per creare una voce per un'app di esempio di base chiamata "MacWriter".
+1. Premere il segno più (+) o **registrare un ID app**:
 
-1. Immettere una descrizione in **App ID Description** (Descrizione ID app) e selezionare gli eventuali servizi richiesti dall'applicazione in **App Services** (Servizi app):
+    > [!div class="mx-imgBorder"]
+    > [![Introduzione agli ID app](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
 
-    [![Immissione della descrizione e dei servizi app](certificates-identifiers-images/devcenter04.png "Immissione della descrizione e dei servizi app")](certificates-identifiers-images/devcenter04-large.png#lightbox)
-2. Immettere un **ID bundle** per l'app e fare clic sul pulsante **Continue** (Continua):
+1. Scegliere gli **ID app**
 
-    [![Immissione di un ID bundle](certificates-identifiers-images/devcenter05.png "Immissione di un ID bundle")](certificates-identifiers-images/devcenter05-large.png#lightbox)
-3. Verificare le informazioni e fare clic sul pulsante **Submit** (Invia):
+    > [!div class="mx-imgBorder"]
+    > [![Introduzione agli ID app](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
 
-    [![Verifica delle informazioni](certificates-identifiers-images/devcenter06.png "Verifica delle informazioni")](certificates-identifiers-images/devcenter06-large.png#lightbox)
+1. Immettere una **Descrizione**e selezionare tutti i **Servizi app** richiesti dall'applicazione: a. La piattaforma deve essere **MacOS** a. Scegliere una **Descrizione** (usata solo in questo portale) a. Immettere l' **ID bundle**, che dovrebbe corrispondere al file **info. plist** a. Selezionare le funzionalità richieste dall'app
+
+    > [!div class="mx-imgBorder"]
+    > [![immissione della descrizione e dei servizi app](certificates-identifiers-images/appid03.png)](certificates-identifiers-images/appid03-large.png#lightbox)
+
+    Premere **continua** per verificare le selezioni.
+
+1. Se le informazioni sono corrette, fare clic su **registra** per completare la configurazione:
+
+    > [!div class="mx-imgBorder"]
+    > [![rivedere i dati immessi](certificates-identifiers-images/appid04.png)](certificates-identifiers-images/appid04-large.png#lightbox)
+
+1. Verificare le informazioni e fare clic sul pulsante **Submit** (Invia):
+
+    > [!div class="mx-imgBorder"]
+    > ![la verifica delle informazioni](certificates-identifiers-images/appid05.png)
 
 Alcuni **servizi app** potrebbero richiedere un'ulteriore configurazione (ad esempio, iCloud). In questo caso, selezionare il nuovo ID app appena creato e fare clic sul pulsante **Edit** (Modifica):
 
-[![Modifica del nuovo ID app](certificates-identifiers-images/devcenter07.png "Modifica del nuovo ID app")](certificates-identifiers-images/devcenter07-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![modifica del nuovo ID app](certificates-identifiers-images/appid06.png)](certificates-identifiers-images/appid06-large.png#lightbox)
 
-Per configurare i servizi iCloud, fare clic sul pulsante **Edit** (Modifica):
+Per configurare i servizi iCloud, ad esempio, fare clic sul pulsante **modifica** :
 
-[![Configurazione dei servizi iCloud](certificates-identifiers-images/devcenter08.png "Configurazione dei servizi iCloud")](certificates-identifiers-images/devcenter08-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![configurazione dei servizi iCloud](certificates-identifiers-images/appid07.png)](certificates-identifiers-images/appid07-large.png#lightbox)
 
-Da qui lo sviluppatore può configurare i database che intende usare:
+## <a name="register-macos-devices"></a>Registrare i dispositivi macOS
 
-[![Configurazione dei database](certificates-identifiers-images/devcenter09.png "Configurazione dei database")](certificates-identifiers-images/devcenter09-large.png#lightbox)
+Per creare un profilo di provisioning per il test, lo sviluppatore dovrà disporre di computer Mac registrati. Per i test è possibile registrare un massimo di 100 computer.
 
-### <a name="register-macos-systems"></a>Registrare sistemi macOS
+1. In Mac Developer Center selezionare **All** (Tutti) nella sezione **Devices** (Dispositivi) e fare clic sul pulsante **+** :
 
-Per creare un profilo di provisioning per il test, lo sviluppatore dovrà disporre di computer Mac registrati. È possibile registrare un massimo di 100 computer per testare le app Mac.
+    > [!div class="mx-imgBorder"]
+    > [![l'aggiunta di un nuovo computer](certificates-identifiers-images/device01.png)](certificates-identifiers-images/device01-large.png#lightbox)
 
-In Mac Developer Center selezionare **All** (Tutti) nella sezione **Devices** (Dispositivi) e fare clic sul pulsante **+** :
+1. Immettere un **nome** e l'**UUID** del computer da aggiungere e quindi fare clic sul pulsante **Continue** (Continua). Rivedere le informazioni e fare clic sul pulsante **Register** (Registra):
 
-[![Aggiunta di un nuovo computer](certificates-identifiers-images/devcenter10.png "Aggiunta di un nuovo computer")](certificates-identifiers-images/devcenter10-large.png#lightbox)
+    > [!div class="mx-imgBorder"]
+    > [![immissione delle informazioni sul nuovo computer](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
 
-Immettere un **nome** e l'**UUID** del computer da aggiungere e quindi fare clic sul pulsante **Continue** (Continua). Rivedere le informazioni e fare clic sul pulsante **Register** (Registra):
+1. Esaminare e confermare i dati immessi:
 
-[![Immissione delle informazioni sul nuovo computer](certificates-identifiers-images/devcenter11.png "Immissione delle informazioni sul nuovo computer")](certificates-identifiers-images/devcenter11-large.png#lightbox)
+    > [!div class="mx-imgBorder"]
+    > [![immissione delle informazioni sul nuovo computer](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
 
-### <a name="create-certificates"></a>Creare certificati
+## <a name="create-certificates"></a>Creare certificati
 
 Usare la sezione Certificates (Certificati) per creare diversi tipi di certificati che saranno usati per firmare le applicazioni Mac:
 
-[![Creazione di un nuovo certificato](certificates-identifiers-images/certif01.png "Creazione di un nuovo certificato")](certificates-identifiers-images/certif01-large.png#lightbox)
+> [!div class="mx-imgBorder"]
+> [![Creazione di un nuovo certificato](certificates-identifiers-images/devcenter04.png)](certificates-identifiers-images/devcenter04-large.png#lightbox)
 
-Esistono tre tipi principali di certificati:
+Sono disponibili cinque tipi principali di certificato relativi allo sviluppo macOS:
 
-- **Certificato di sviluppo Mac**: facoltativo per lo sviluppo di app generali, ma obbligatorio se lo sviluppatore prevede di usare funzionalità quali iCloud o notifiche push. Lo sviluppatore avrà bisogno di un certificato di sviluppo prima di poter creare profili di provisioning per l'accesso a tali funzionalità.
-- **Mac App Store**: lo sviluppatore dovrà disporre di un certificato per l'app e di un altro certificato per il programma di installazione.
-- **ID sviluppatore**: certificati per l'app e il programma di installazione se si sceglie di eseguire la distribuzione all'esterno di Mac App Store.
+- **Sviluppo Mac** : facoltativo per lo sviluppo di app generale, ma necessario se lo sviluppatore prevede di usare funzionalità come iCloud o notifiche push. Lo sviluppatore avrà bisogno di un certificato di sviluppo prima di poter creare profili di provisioning per l'accesso a tali funzionalità.
+- **Distribuzione di app Mac** : lo sviluppatore dovrà avere un certificato per l'app e un altro certificato per il programma di installazione.
+- **Distribuzione del programma di installazione Mac** : lo sviluppatore dovrà avere un certificato per l'app e un altro certificato per il programma di installazione.
+- **Programma di installazione ID sviluppatore** : certificati per il programma di installazione da distribuire all'esterno di Mac App Store.
+- **Applicazione ID sviluppatore** : certificati per l'app da distribuire all'esterno di Mac App Store.
 
-Le sezioni seguenti forniscono esempi della creazione di ognuno di questi tipi di certificati.
+Nelle sezioni seguenti vengono forniti esempi di creazione di alcuni di questi tipi di certificato.
 
-#### <a name="mac-development-certificate"></a>Certificato di sviluppo Mac
+### <a name="mac-development-certificate"></a>Certificato di sviluppo Mac
 
-Come accennato in precedenza, il certificato di sviluppo dell'app Mac è richiesto solo se vengono usate funzionalità di macOS come iCloud o le notifiche push.
+Come indicato in precedenza, il certificato di sviluppo Mac non è necessario a meno che non siano in uso funzionalità macOS quali iCloud o notifiche push.
 
 Eseguire le operazioni seguenti per creare un nuovo certificato di sviluppo:
 
 1. Selezionare il pulsante di opzione **Mac Development** (Sviluppo Mac) e fare clic su **Continue** (Continua):
 
-     [![Aggiunta di un certificato di sviluppo](certificates-identifiers-images/certif02.png "Aggiunta di un certificato di sviluppo")](certificates-identifiers-images/certif02-large.png#lightbox)
-2. Nella schermata successiva viene spiegato come usare l'accesso keychain per creare un file di richiesta di firma del certificato da caricare:
+    > [!div class="mx-imgBorder"]
+    > [![l'aggiunta di un certificato di sviluppo](certificates-identifiers-images/certif02.png)](certificates-identifiers-images/certif02-large.png#lightbox)
 
-    [![Schermata di caricamento dell'accesso Keychain](certificates-identifiers-images/certif03.png "Schermata di caricamento dell'accesso Keychain")](certificates-identifiers-images/certif03-large.png#lightbox)
-3. Scegliere un nome comune significativo per il certificato, in modo che sia facilmente riconoscibile in un secondo momento quando verrà creato il certificato finale. Prendere nota della posizione in cui è stato salvato il file, in modo da ritrovarlo nel passaggio successivo:
+1. Caricare una _richiesta di firma del certificato_. Il file di richiesta del certificato (estensione `.certSigningRequest`) verrà salvato localmente sul Mac. Fare clic su **Choose file** per selezionare la richiesta di certificato, quindi premere **continue**.
 
-    ![Esportazione di un certificato](certificates-identifiers-images/image12.png "Esportazione di un certificato")
-4. Un file di richiesta del certificato (con estensione `.certSigningRequest`) verrà salvato localmente sul Mac. Prendere nota della posizione in cui è stato salvato (la posizione predefinita è il Desktop) perché dovrà essere selezionato nel passaggio successivo:
+    > [!div class="mx-imgBorder"]
+    > [![caricare un file di richiesta di certificato](certificates-identifiers-images/certif03.png)](certificates-identifiers-images/certif03-large.png#lightbox)
 
-    [![Caricamento del file di certificato](certificates-identifiers-images/image13.png "Caricamento del file di certificato")](certificates-identifiers-images/image13-large.png#lightbox)
-5. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**:
+    Per istruzioni su come usare l' **Accesso Keychain** per creare un file di richiesta di certificato, seguire il collegamento [altre informazioni >](https://help.apple.com/developer-account/#/devbfa00fef7) .
 
-    [![Download di un certificato di sviluppo](certificates-identifiers-images/image15.png "Download di un certificato di sviluppo")](certificates-identifiers-images/image15-large.png#lightbox)
-6. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**. L'**utilità del certificato dello sviluppatore** visualizzerà i certificati in maniera analoga alla seguente:
+1. Premere **download** per ottenere il file del certificato e fare doppio clic su di esso per installare:
 
-    [![Utilità per i certificati per sviluppatori](certificates-identifiers-images/image16.png "Utilità per i certificati per sviluppatori")](certificates-identifiers-images/image16-large.png#lightbox)
-7. Il certificato sarà visualizzato anche nel **keychain** con l'aspetto seguente:
-
-    ![Certificato nell'accesso Keychain](certificates-identifiers-images/image17.png "Certificato nell'accesso Keychain")
+    > [!div class="mx-imgBorder"]
+    > [![scaricare il file di certificato](certificates-identifiers-images/certif04.png)](certificates-identifiers-images/certif04-large.png#lightbox)
 
 Come accennato in precedenza, il certificato dello sviluppatore non è sempre richiesto, a meno che lo sviluppatore non stia implementando funzionalità macOS come iCloud e le notifiche push. È inoltre necessario per creare un **profilo di provisioning di sviluppo**, che sarà richiesto per testare le app di Mac App Store.
 
-#### <a name="mac-app-store-certificates"></a>Certificati Mac App Store
+### <a name="mac-app-store-certificates"></a>Certificati Mac App Store
 
-Per rilasciare un'app in App Store, dovranno essere creati il certificato **Mac App Store** che verrà usato per firmare l'applicazione e il pacchetto del programma di installazione Mac.
+Per rilasciare un'app nell'App Store, sono necessari due certificati:
 
-1. Selezionare **Mac App Store** come tipo di certificato e fare clic sul pulsante **Continue** (Continua):
+- Certificato di **distribuzione dell'app Mac** che verrà usato per firmare l'applicazione. e 
+- Certificato di **distribuzione del programma di installazione di Mac** , per firmare il programma di installazione.
 
-    [![Creazione di un certificato di App Store](certificates-identifiers-images/certif04.png "Creazione di un certificato di App Store")](certificates-identifiers-images/certif04-large.png#lightbox)
-2. Selezionare il tipo di certificato da creare (ne sarà richiesto uno per ogni tipo da rilasciare in App Store):
+> [!TIP]
+> Prestare attenzione quando si assegna un nome alle richieste di certificati per queste chiavi: usare nomi descrittivi che includano il testo `Application` e `Installer`, in modo che possano essere distinti in un secondo momento.
 
-    [![Selezione del tipo di certificato](certificates-identifiers-images/certif05.png "Selezione del tipo di certificato")](certificates-identifiers-images/certif05-large.png#lightbox)
-3. La pagina successiva illustra come usare l'**accesso keychain** per generare un file di richiesta del certificato. Seguire le istruzioni:
+Per prima cosa, creare il certificato del programma di installazione:
 
-    [![Generazione della richiesta Keychain](certificates-identifiers-images/certif06.png "Generazione della richiesta Keychain")](certificates-identifiers-images/certif06-large.png#lightbox)
-4. Scegliere un **nome comune** descrittivo, ad esempio usare il testo "Applicazione App Store" nel nome:
+1. Selezionare **Mac installer Distribution** come tipo di certificato e fare clic sul pulsante **continue (continua** ):
 
-    ![Immissione di un nome descrittivo](certificates-identifiers-images/image20.png "Immissione di un nome descrittivo")
-5. Un file di richiesta del certificato (con estensione `.certSigningRequest`) verrà salvato localmente sul Mac. Prendere nota della posizione in cui è stato salvato (la posizione predefinita è il Desktop):
+    > [!div class="mx-imgBorder"]
+    > [![la creazione di un certificato dell'app Store](certificates-identifiers-images/certif05.png)](certificates-identifiers-images/certif05-large.png#lightbox)
 
-    [![Salvataggio del certificato](certificates-identifiers-images/image21.png "Salvataggio del certificato")](certificates-identifiers-images/image21-large.png#lightbox)
-6. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**:
+1. La pagina successiva illustra come usare l'**accesso keychain** per generare un file di richiesta del certificato. Seguire le istruzioni:
 
-    [![Download del certificato di App Store](certificates-identifiers-images/image23.png "Download del certificato di App Store")](certificates-identifiers-images/image23-large.png#lightbox)
-7. Fare clic su **Continue** (Continua) e seguire esattamente la stessa procedura per scaricare un altro certificato, questa volta per il *programma di installazione*:
+    > [!div class="mx-imgBorder"]
+    > [![caricare una richiesta di certificato](certificates-identifiers-images/certif06.png)](certificates-identifiers-images/certif06-large.png#lightbox)
 
-    [![Selezione del programma di installazione](certificates-identifiers-images/image24.png "Selezione del programma di installazione")](certificates-identifiers-images/image24-large.png#lightbox)
-8. Scegliere un **nome comune** descrittivo, ad esempio usare il testo "Programma di installazione App Store" nel nome:
+    Per istruzioni su come usare l' **Accesso Keychain** per creare un file di richiesta di certificato, seguire il collegamento [altre informazioni >](https://help.apple.com/developer-account/#/devbfa00fef7) . Ricordarsi di scegliere un nome di certificato che rifletta il _tipo_ di certificato (applicazione o programma di installazione).
 
-    ![Impostazione del nome del certificato](certificates-identifiers-images/image25.png "Impostazione del nome del certificato")
-9. Un file di richiesta del certificato (con estensione `.certSigningRequest`) verrà salvato localmente sul Mac. Prendere nota della posizione in cui è stato salvato (la posizione predefinita è il Desktop):
+1. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**:
 
-    [![Caricamento del certificato](certificates-identifiers-images/image26.png "Caricamento del certificato")](certificates-identifiers-images/image26-large.png#lightbox)
+    > [!div class="mx-imgBorder"]
+    > [![scaricare il certificato dell'app Store](certificates-identifiers-images/certif07.png)](certificates-identifiers-images/certif07-large.png#lightbox)
 
-    [![Download del certificato di distribuzione](certificates-identifiers-images/image28.png "Download del certificato di distribuzione")](certificates-identifiers-images/image28-large.png#lightbox)
-10. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**. L'utilità del certificato dello sviluppatore visualizzerà i certificati in maniera analoga alla seguente:
+**Seguire la stessa procedura per il certificato di distribuzione dell'app Mac.**
 
-    [![Utilità per i certificati per sviluppatori](certificates-identifiers-images/image29.png "Utilità per i certificati per sviluppatori")](certificates-identifiers-images/image29-large.png#lightbox)
-11. I due nuovi certificati saranno ora visibili nel **keychain**:
+![Certificato di distribuzione dell'app Mac](certificates-identifiers-images/certif08.png)
 
-    [![Certificato nell'accesso Keychain](certificates-identifiers-images/image30.png "Certificato nell'accesso Keychain")](certificates-identifiers-images/image30-large.png#lightbox)
+### <a name="developer-id-certificates"></a>Certificati ID sviluppatore
 
-#### <a name="developer-id-certificates"></a>Certificati ID sviluppatore
+Per la versione autonoma di un'applicazione Novell. Mac (non rilasciata tramite l'App Store di Apple), sono necessari due certificati:
 
-Per rilasciare autonomamente un'applicazione Xamarin.Mac (e non tramite App Store di Apple), lo sviluppatore avrà bisogno di un certificato ID sviluppatore per firmare l'app per il rilascio e l'installazione.
+- Certificato del **programma di installazione dell'ID sviluppatore** che verrà usato per firmare l'applicazione. e 
+- Certificato **dell'applicazione ID sviluppatore** , per firmare il programma di installazione.
 
-Procedere come descritto di seguito:
+> [!TIP]
+> Prestare attenzione quando si assegna un nome alle richieste di certificati per queste chiavi: usare nomi descrittivi che includano il testo `Application` e `Installer`, in modo che possano essere distinti in un secondo momento.
 
-1. Nella sezione **Certificates** (Certificati) iniziare facendo clic sul pulsante **+** , quindi selezionare il pulsante di opzione **Developer ID** (ID sviluppatore):
+Una volta creati, scaricati e installati i certificati, saranno visibili nell' **Accesso Keychain**:
 
-    [![Aggiunta di un ID sviluppatore](certificates-identifiers-images/certif07.png "Aggiunta di un ID sviluppatore")](certificates-identifiers-images/certif07-large.png#lightbox)
-2. Fare clic sul pulsante **Continue** (Continua) e selezionare il tipo di ID sviluppatore da creare:
-
-    [![Selezione del tipo di ID sviluppatore](certificates-identifiers-images/certif08.png "Selezione del tipo di ID sviluppatore")](certificates-identifiers-images/certif08-large.png#lightbox)
-3. Ne saranno richiesti due, uno per firmare l'applicazione stessa e uno per firmare il programma di installazione dell'applicazione. Prestare attenzione quando si assegna un nome alle richieste di certificati per queste chiavi: usare nomi descrittivi che includano il testo `Application` e `Installer`, in modo che possano essere distinti in un secondo momento.
-4. La schermata successiva fornirà indicazioni dettagliate su come creare il certificato; fare clic sul pulsante **Continue** (Continua):
-
-    [![Come creare il certificato](certificates-identifiers-images/certif09.png "Come creare il certificato")](certificates-identifiers-images/certif09-large.png#lightbox)
-5. Scegliere un **nome comune** descrittivo, ad esempio usare il testo "applicazione ID sviluppatore" nel nome:
-
-    ![Immissione di un nome per il certificato](certificates-identifiers-images/image33.png "Immissione di un nome per il certificato")
-6. Un file di richiesta del certificato (con estensione `.certSigningRequest`) verrà salvato localmente sul Mac. Prendere nota della posizione in cui è stato salvato (la posizione predefinita è il Desktop):
-
-    [![Caricamento del certificato](certificates-identifiers-images/certif10.png "Caricamento del certificato")](certificates-identifiers-images/certif10-large.png#lightbox)
-
-    [![Download dell'ID sviluppatore](certificates-identifiers-images/certif11.png "Download dell'ID sviluppatore")](certificates-identifiers-images/certif11-large.png#lightbox)
-7. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**.
-8. Fare clic su **Continue** (Continua) e seguire esattamente la stessa procedura per scaricare un altro certificato, questa volta per il *programma di installazione*.
-9. Scegliere un **nome comune** descrittivo, ad esempio usare il testo "programma di installazione ID sviluppatore" nel nome:
-
-    ![Immissione di un nome comune](certificates-identifiers-images/image38.png "Immissione di un nome comune")
-10. Un file di richiesta del certificato (con estensione `.certSigningRequest`) verrà salvato localmente sul Mac. Prendere nota della posizione in cui è stato salvato (la posizione predefinita è il Desktop):
-
-    [![Caricamento di un certificato](certificates-identifiers-images/certif10.png "Caricamento di un certificato")](certificates-identifiers-images/certif10-large.png#lightbox)
-11. Il certificato è quindi disponibile per il download, fare clic sul pulsante **Download** prima di scegliere **Done** (Fatto):
-
-    [![Download di un certificato](certificates-identifiers-images/certif11.png "Download di un certificato")](certificates-identifiers-images/certif11-large.png#lightbox)
-12. Fare clic su **Download** per ottenere il certificato e fare doppio clic per installarlo nel **keychain**. L'**utilità del certificato dello sviluppatore** visualizzerà i certificati in maniera analoga alla seguente:
-
-    [![Utilità per i certificati per sviluppatori](certificates-identifiers-images/certif12.png "Utilità per i certificati per sviluppatori")](certificates-identifiers-images/certif12-large.png#lightbox)
-13. Gli elementi seguenti sono visibili nel **keychain**:
-
-    [![Certificato nell'accesso Keychain](certificates-identifiers-images/image43.png "Certificato nell'accesso Keychain")](certificates-identifiers-images/image43-large.png#lightbox)
+[Elenco certificati di accesso Keychain](certificates-identifiers-images/certif09.png)
 
 ## <a name="related-links"></a>Collegamenti correlati
 

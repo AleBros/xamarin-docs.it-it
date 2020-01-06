@@ -6,13 +6,13 @@ ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.date: 11/06/2019
+ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888974"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489836"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Schede della shell Xamarin.Forms
 
@@ -50,7 +50,7 @@ L'applicazione shell più semplice è un'applicazione a singola pagina, che può
 
 L'esempio di codice crea l'applicazione a singola pagina seguente:
 
-[![Screenshot di un'app shell a singola pagina, in iOS e Android](tabs-images/single-page-app.png "App shell a singola pagina")](tabs-images/single-page-app-large.png#lightbox "App shell a singola pagina")
+[![Screenshot di un'app a singola pagina Shell, in iOS e Android](tabs-images/single-page-app.png "App a pagina singola shell")](tabs-images/single-page-app-large.png#lightbox "App a pagina singola shell")
 
 > [!NOTE]
 > La barra di spostamento può essere nascosta, se necessario, impostando la proprietà associata `Shell.NavBarIsVisible` su `false` nell'oggetto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
@@ -100,7 +100,11 @@ Per gli oggetti `Tab` viene eseguito il rendering come schede inferiori, a condi
 
 I titoli e le icone delle schede vengono impostati in ogni oggetto `Tab` e visualizzati nelle schede inferiori:
 
-[![Screenshot di un'app shell di due pagine con schede inferiori, in iOS e Android](tabs-images/two-page-app-bottom-tabs.png "App shell di due pagine con schede inferiori")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "App shell di due pagine con schede inferiori")
+[![Screenshot di un'app shell a due pagine con le schede in basso, in iOS e Android](tabs-images/two-page-app-bottom-tabs.png "App shell a due pagine con le schede in basso")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "App shell a due pagine con le schede in basso")
+
+Quando sono presenti più di cinque schede, viene visualizzata una scheda **più** , che può essere usata per accedere alle schede aggiuntive:
+
+[![Screenshot di un'app shell con una scheda più, in iOS e Android](tabs-images/more-tabs.png "App shell con più schede")](tabs-images/more-tabs-large.png#lightbox "Shellapp con più schede")
 
 In alternativa, è possibile usare gli operatori di conversione implicita della shell per rimuovere gli oggetti `ShellContent` e `Tab` nell'esempio precedente:
 
@@ -213,7 +217,7 @@ Quando è presente più di un oggetto `ShellContent` in un oggetto `Tab`, viene 
 
 Il risultato è il layout illustrato negli screenshot seguenti:
 
-[![Screenshot di un'app shell di due pagine con schede superiori e inferiori, in iOS e Android](tabs-images/two-page-app-top-tabs.png "App shell di due pagine con schede superiori e inferiori")](tabs-images/two-page-app-top-tabs-large.png#lightbox "App shell di due pagine con schede superiori e inferiori")
+[![Screenshot di un'app shell a due pagine con le schede superiore e inferiore, in iOS e Android](tabs-images/two-page-app-top-tabs.png "App shell a due pagine con le schede superiore e inferiore")](tabs-images/two-page-app-top-tabs-large.png#lightbox "App shell a due pagine con le schede superiore e inferiore")
 
 In alternativa, è possibile usare gli operatori di conversione implicita della shell per rimuovere gli oggetti `ShellContent` e il secondo oggetto `Tab` nell'esempio precedente:
 

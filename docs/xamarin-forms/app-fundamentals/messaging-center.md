@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019
-ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.openlocfilehash: 0e5fd88678becd7becfcb1c43e14b1e33aad72de
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170973"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489880"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter di Xamarin.Forms
 
-[![Scaricare l'esempio](~/media/shared/download.png) scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Scaricare esempio](~/media/shared/download.png) Scaricare l'esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 Il modello di pubblicazione-sottoscrizione è un modello di messaggistica in cui i server di pubblicazione inviano messaggi senza conoscere i ricevitori, noti come sottoscrittori. In modo analogo, i sottoscrittori sono in ascolto di messaggi specifici, senza conoscere i server di pubblicazione.
 
@@ -26,7 +26,7 @@ La classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) di Xamarin.For
 
 La classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) fornisce una funzionalità di pubblicazione-sottoscrizione multicast. Ciò significa che possono essere presenti più server di pubblicazione che pubblicano un singolo messaggio e più sottoscrittori in ascolto dello stesso messaggio:
 
-![](messaging-center-images/messaging-center.png "Funzionalità di pubblicazione-sottoscrizione multicast")
+![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
 
 I server di pubblicazione inviano i messaggi usando il metodo [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), mentre i sottoscrittori sono in ascolto dei messaggi usando il metodo [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). I sottoscrittori possono inoltre annullare la sottoscrizione dei messaggi, se necessario, con il metodo [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
@@ -83,6 +83,9 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 
 In questo esempio il metodo [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) sottoscrive i messaggi `Hi` inviati dal tipo `MainPage`, i cui dati di payload sono costituiti da un elemento `string`. Un delegato di callback viene eseguito in risposta alla ricezione di un messaggio di questo tipo, che visualizza i dati di payload in un avviso.
 
+> [!IMPORTANT]
+> Il delegato eseguito dal metodo `Subscribe` verrà eseguito sullo stesso thread che pubblica il messaggio usando il metodo `Send`.
+
 ## <a name="unsubscribe-from-a-message"></a>Annullare la sottoscrizione di un messaggio
 
 I sottoscrittori possono annullare la sottoscrizione dei messaggi che non vogliono più ricevere usando uno degli overload di [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*):
@@ -103,4 +106,4 @@ In questo esempio il metodo [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.U
 
 ## <a name="related-links"></a>Collegamenti correlati
 
-- [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+- [Esempio di MessagingCenter](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

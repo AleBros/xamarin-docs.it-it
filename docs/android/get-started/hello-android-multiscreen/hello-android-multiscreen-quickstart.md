@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 114373b6c4b194fe6e566255eb09eb82a8208312
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b8f7d882306ed5c00404ae7a050da8e02a49d609
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020969"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607906"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: guida introduttiva
 
@@ -26,7 +26,7 @@ Nella parte relativa alla procedura dettagliata di questa guida, verrà aggiunta
 
 L'[approfondimento](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md) associato consente di rivedere ciò che è stato fatto e illustra l'architettura, lo spostamento e altri concetti nuovi di Android incontrati durante la trattazione.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 Questa guida inizia dal punto in cui [Hello, Android](~/android/get-started/hello-android/index.md) termina. È quindi necessario aver completato [Hello, Android: guida introduttiva](~/android/get-started/hello-android/hello-android-quickstart.md).
 Se si vuole passare direttamente alla procedura dettagliata che segue, è possibile scaricare la versione completata di [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (da Hello, Android: guida introduttiva) e usarla per iniziare la procedura dettagliata.
@@ -108,7 +108,7 @@ namespace Phoneword
 }
 ```
 
-In questa classe si sta creando e popolando un oggetto `ListActivity` a livello di codice. Non è quindi necessario creare un nuovo file di layout per questa attività. Questo aspetto viene trattato più dettagliatamente in [Hello, Android Multiscreen: approfondimenti](~/android/get-started/hello-android/hello-android-deepdive.md).
+In questa classe si sta creando e popolando un oggetto `ListActivity` a livello di codice. Non è quindi necessario creare un nuovo file di layout per questa attività. Questo aspetto viene trattato più dettagliatamente in [Hello, Android Multiscreen: approfondimenti](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
 
 ### <a name="adding-a-list"></a>Aggiunta dell'elenco
 
@@ -156,7 +156,7 @@ string translatedNumber = string.Empty;
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
@@ -170,9 +170,9 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-Salvare e compilare l'applicazione per verificare che non vi siano errori.
+Salvare e compilare l'applicazione per verificare che non ci siano errori.
 
-### <a name="running-the-app"></a>Esecuzione dell'app
+### <a name="running-the-app"></a>Esecuzione dell'applicazione
 
 Distribuire l'applicazione in un emulatore o in un dispositivo. Gli screenshot seguenti illustrano l'applicazione **Phoneword** in esecuzione:
 
@@ -295,7 +295,7 @@ Aggiornare il pulsante **Translate** (Converti) per aggiungere il numero di tele
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
@@ -309,7 +309,7 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-### <a name="running-the-app"></a>Esecuzione dell'app
+### <a name="running-the-app"></a>Esecuzione dell'applicazione
 
 Distribuire l'applicazione in un emulatore o in un dispositivo. Gli screenshot seguenti illustrano l'applicazione **Phoneword** in esecuzione:
 

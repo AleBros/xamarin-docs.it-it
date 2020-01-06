@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 2c50ffb37f0fd1d7b0d9fad063c4d6195d6b1f08
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
+ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199793"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502800"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Creare la prima app Xamarin.Forms
 
@@ -32,15 +32,15 @@ Seguire questi passaggi e il video precedente:
 
 1. Scegliere **File > nuovo > progetto..** . oppure fare clic sul pulsante **Crea nuovo progetto...** :
 
-    [![Creazione di un nuovo progetto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [![creare un nuovo progetto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
 2. Cercare "Novell" o scegliere **mobile** dal menu **tipo progetto** . Selezionare il tipo di progetto **app per dispositivi mobili (Novell. Forms)** :
 
-    [![Filtrare per progetti Novell](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [Filtro ![per progetti Novell](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
-3. Scegliere un nome &ndash; di progetto nell'esempio viene usato "AwesomeApp":
+3. Scegliere un nome di progetto &ndash; l'esempio USA "AwesomeApp":
 
-    [![Scegliere un nome di progetto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![scegliere un nome di progetto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
 4. Fare clic sul tipo di progetto **vuoto** e verificare che siano selezionati **Android** e **iOS** :
 
@@ -54,7 +54,7 @@ Seguire questi passaggi e il video precedente:
 
 7. Nella schermata di creazione dell'emulatore usare le impostazioni predefinite e fare clic sul pulsante **Crea** :
 
-    [![Schermata di creazione dell'emulatore Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+    [schermata di creazione dell'emulatore ![Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
 
 8. La creazione di un emulatore consente di tornare alla finestra Device Manager. Fare clic sul pulsante **Start** per avviare il nuovo emulatore:
 
@@ -209,8 +209,8 @@ Seguire questi passaggi e il video precedente:
 
 È possibile scaricare il codice completo dalla [Raccolta esempi](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) o visualizzarlo su [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
-- [Guida introduttiva a pagina singola](~/get-started/quickstarts/single-page.md) &ndash; Creare un'app più funzionale.
-- [Esempi di Xamarin.Forms](~/xamarin-forms/samples/index.yml) &ndash; Scaricare ed eseguire gli esempi di codice e app di esempio.
-- [Ebook Creazione di app per dispositivi mobili](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; Capitoli approfonditi che illustrano lo sviluppo di Xamarin.Forms. Disponibile in formato PDF, include centinaia di altri esempi.
+- [Guida introduttiva a pagina singola](~/get-started/quickstarts/single-page.md) &ndash; creare un'app più funzionale.
+- [Esempi di Novell. forms](~/xamarin-forms/samples/index.md) &ndash; scaricare ed eseguire esempi di codice e app di esempio.
+- La [creazione di ebook per app per dispositivi mobili](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; capitoli approfonditi che insegnano lo sviluppo di Novell. Forms, disponibile come PDF e con centinaia di esempi aggiuntivi.

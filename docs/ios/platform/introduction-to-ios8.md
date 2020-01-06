@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 2da018b3595850582331280909fa327cee4ff6e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031810"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489206"
 ---
 # <a name="introduction-to-ios-8"></a>Introduzione a iOS 8
 
 _Con iOS 8, Apple ha fornito una vasta gamma di nuovi Framework e API per entusiasmare e deliziare gli sviluppatori. In questa guida vengono introdotte le nuove API e viene illustrato in che modo iOS 8 può trarre vantaggio da sviluppatori e utenti._
 
-iOS 7 ha modificato visivamente l'intera interfaccia utente iOS rispetto a quanto previsto dagli utenti e dagli sviluppatori, direttamente dal primo sistema operativo iPhone. IOS 8 continua con questa operazione fornendo molti Framework per gli sviluppatori, consentendo agli utenti di controllare quasi tutti gli aspetti della loro vita direttamente dall'iPhone. Ad esempio, l'integrità e la idoneità possono essere analizzate con *HealthKit*, i codici di accesso sono obsoleti con l'autenticazione biometrica usando *LocalAuthentication*, le *estensioni dell'app* aprono un canale di comunicazione tra le app di terze parti e  *HomeKit* consente di trasformare la casa in una casa futura. 
+iOS 7 ha modificato visivamente l'intera interfaccia utente iOS rispetto a quanto previsto dagli utenti e dagli sviluppatori, direttamente dal primo sistema operativo iPhone. IOS 8 continua con questa operazione fornendo molti Framework per gli sviluppatori, consentendo agli utenti di controllare quasi tutti gli aspetti della loro vita direttamente dall'iPhone. Ad esempio, l'integrità e la idoneità possono essere analizzate con *HealthKit*, i codici di accesso sono obsoleti con l'autenticazione biometrica usando *LocalAuthentication*, le *estensioni dell'app* aprono un canale di comunicazione tra le app di terze parti e *HomeKit* consentono di trasformare l'abitazione in una casa futura. 
 
 Se iOS 7 riguardava la delucenza degli utenti, iOS 8 si concentra sul fatto che gli sviluppatori hanno una gamma completa di questi nuovi strumenti. 
 
@@ -26,7 +26,7 @@ Questa guida presenta le nuove API per gli sviluppatori Novell. iOS.
 
 Sono inoltre disponibili alcune API deprecate in iOS 8, che sono descritte in dettaglio alla fine di questo documento.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 Per creare app iOS 8 in Visual Studio per Mac, è necessario quanto segue:
 
@@ -44,7 +44,7 @@ Il controllo dei dispositivi da iPhone non è una nuova applicazione di tecnolog
 
 Con HomeKit, le app di terze parti e Siri possono individuare accessori e aggiungerli al database di configurazione della Home page personale, modificare e agire su questi dati e comunicare con gli accessori e i relativi servizi per eseguire un'azione.
 
-### <a name="configuration"></a>Configurazione
+### <a name="configuration"></a>Configurazione di
 
 Il diagramma seguente illustra la gerarchia di base della configurazione degli accessori HomeKit:
 
@@ -93,7 +93,7 @@ In primo luogo, consente ai servizi Keychain esistenti di usare nuovi elenchi di
 
 In secondo luogo, LocalAuthentication offre due metodi per autenticare l'applicazione in locale. Gli sviluppatori devono usare `CanEvaluatePolicy` per determinare se il dispositivo è in grado di accettare l'ID tocco, quindi `EvaluatePolicy` per avviare l'operazione di autenticazione.
 
-Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'applicazione Novell. iOS, vedere l' [Introduzione alle guide di TouchID](~/ios/platform/touchid.md) .
+Per altre informazioni su Touch ID e per informazioni su come integrarlo in un'applicazione Novell. iOS, vedere l'articolo relativo a [Touch ID e Face ID nelle guide di Novell. iOS](~/ios/platform/touch-id-face-id.md) .
 
 ### <a name="document-picker"></a>Selezione documenti
 
@@ -172,5 +172,5 @@ In questo articolo sono state esaminate alcune delle nuove funzionalità introdo
 - [Introduzione a selezione documenti](~/ios/platform/document-picker.md)
 - [Introduzione a HealthKit](~/ios/platform/healthkit.md)
 - [Introduzione ai controlli della fotocamera manuale](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [Introduzione a TouchID](~/ios/platform/touchid.md)
+- [Touch ID e Face ID con Novell. iOS](~/ios/platform/touch-id-face-id.md)
 - [Introduzione agli storyboard unificati](~/ios/user-interface/storyboards/unified-storyboards.md)
