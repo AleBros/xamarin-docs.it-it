@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8a4fbed10fa52c08a63f3aed306fe5cde21804b4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d8f9445a0fc45c2700e8d9a901cfce9bd6307d2b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384481"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490650"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -18,7 +18,7 @@ ms.locfileid: "61384481"
            HorizontalOptions="Center" />
     ```
 
-    Questo codice imposta la proprietà [`Aspect`](xref:Xamarin.Forms.Image.Aspect) che definisce la modalità di ridimensionamento dell'immagine su [`Fill`](xref:Xamarin.Forms.Aspect.Fill). Il membro `Fill` è definito nell'enumerazione [`Aspect`](xref:Xamarin.Forms.Aspect) e adatta l'immagine alla vista, indipendentemente dalla distorsione dell'immagine. Per altre informazioni sul ridimensionamento delle immagini, vedere [Visualizzazione di immagini](~/xamarin-forms/user-interface/images.md#displaying-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
+    Questo codice imposta la proprietà [`Aspect`](xref:Xamarin.Forms.Image.Aspect) che definisce la modalità di ridimensionamento dell'immagine su [`Fill`](xref:Xamarin.Forms.Aspect.Fill). Il membro `Fill` è definito nell'enumerazione [`Aspect`](xref:Xamarin.Forms.Aspect) e adatta l'immagine alla vista, indipendentemente dalla distorsione dell'immagine. Per altre informazioni sul ridimensionamento delle immagini, vedere [Visualizzazione di immagini](~/xamarin-forms/user-interface/images.md#display-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
     L'estensione di markup `OnPlatform` consente di personalizzare l'aspetto dell'interfaccia utente per ogni piattaforma. In questo esempio l'estensione di markup è usata per impostare le proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) su 300 unità indipendenti dal dispositivo in iOS e su 250 unità indipendenti dal dispositivo in Android. Per altre informazioni sull'estensione di markup `OnPlatform`, vedere [Estensione di markup OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform) nella guida [Uso di estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
@@ -26,7 +26,7 @@ ms.locfileid: "61384481"
 
 1. Nella barra degli strumenti di Visual Studio premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS remoto o dell'emulatore Android prescelto:
 
-    [![Screenshot di Image ridimensionata in modo diverso in iOS e Android](../images/customize-appearance.png "Image ridimensionata in base alla piattaforma")](../images/customize-appearance-large.png#lightbox "Image ridimensionata in base alla piattaforma")
+    [![Screenshot di un'immagine ridimensionata in modo diverso in iOS e Android](../images/customize-appearance.png "Immagine ridimensionata in base alla piattaforma")](../images/customize-appearance-large.png#lightbox "Immagine ridimensionata in base alla piattaforma")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio per Mac](#tab/vsmac)
 
@@ -40,7 +40,7 @@ ms.locfileid: "61384481"
            HorizontalOptions="Center" />
     ```
 
-    Questo codice imposta la proprietà [`Aspect`](xref:Xamarin.Forms.Image.Aspect) che definisce la modalità di ridimensionamento dell'immagine su [`Fill`](xref:Xamarin.Forms.Aspect.Fill). Il membro `Fill` è definito nell'enumerazione [`Aspect`](xref:Xamarin.Forms.Aspect) e adatta l'immagine alla vista, indipendentemente dalla distorsione dell'immagine. Per altre informazioni sul ridimensionamento delle immagini, vedere [Visualizzazione di immagini](~/xamarin-forms/user-interface/images.md#displaying-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
+    Questo codice imposta la proprietà [`Aspect`](xref:Xamarin.Forms.Image.Aspect) che definisce la modalità di ridimensionamento dell'immagine su [`Fill`](xref:Xamarin.Forms.Aspect.Fill). Il membro `Fill` è definito nell'enumerazione [`Aspect`](xref:Xamarin.Forms.Aspect) e adatta l'immagine alla vista, indipendentemente dalla distorsione dell'immagine. Per altre informazioni sul ridimensionamento delle immagini, vedere [Visualizzazione di immagini](~/xamarin-forms/user-interface/images.md#display-images) nella guida [Immagini in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
     L'estensione di markup `OnPlatform` consente di personalizzare l'aspetto dell'interfaccia utente per ogni piattaforma. In questo esempio l'estensione di markup è usata per impostare le proprietà [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) su 300 in iOS e su 250 in Android. Per altre informazioni sull'estensione di markup `OnPlatform`, vedere [Estensione di markup OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform) nella guida [Utilizzo di estensioni di markup XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
@@ -48,4 +48,4 @@ ms.locfileid: "61384481"
 
 1. Nella barra degli strumenti di Visual Studio per Mac premere il pulsante **Avvia**, ovvero il pulsante a forma di triangolo simile a un pulsante di riproduzione, per avviare l'applicazione all'interno del simulatore iOS o dell'emulatore Android prescelto:
 
-    [![Screenshot di Image ridimensionata in modo diverso in iOS e Android](../images/customize-appearance.png "Image ridimensionata in base alla piattaforma")](../images/customize-appearance-large.png#lightbox "Image ridimensionata in base alla piattaforma")
+    [![Screenshot di un'immagine ridimensionata in modo diverso in iOS e Android](../images/customize-appearance.png "Immagine ridimensionata in base alla piattaforma")](../images/customize-appearance-large.png#lightbox "Immagine ridimensionata in base alla piattaforma")

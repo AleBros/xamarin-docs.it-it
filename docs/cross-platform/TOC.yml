@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Creazione di app per dispositivi mobili
+    - name: Creare app per dispositivi mobili
       href: get-started/index.md
       expanded: true
       items:
@@ -53,11 +53,11 @@
               href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
             - name: Guida ai metadati
               href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
-        - name: Pacchetti NuGet (manuali)
+        - name: Pacchetti NuGet (creazione manuale)
           href: app-fundamentals/nuget-manual.md
         - name: Usare le librerie C/C++ nelle app multipiattaforma
           href: cpp/index.md
-    - name: Supporto per le lingue
+    - name: Supporto delle lingue
       href: platform/index.md
       items:
         - name: 'C#'
@@ -88,6 +88,8 @@
         - name: Prestazioni
           href: deploy-test/memory-perf-best-practices.md
           items:
+            - name: Prestazioni Xamarin.Forms
+              href: ~/xamarin-forms/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Prestazioni Android
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Prestazioni iOS
@@ -104,14 +106,14 @@
     - name: Distribuzione e debug
       href: deploy-test/index.md
       items:
-        - name: Connessione ai servizi Web locali
+        - name: Connettersi ai servizi Web locali
           href: deploy-test/connect-to-local-web-services.md
         - name: Configurazione personalizzata del linker
           href: deploy-test/linker.md
         - name: Debug di più processi
           href: deploy-test/multi-process-debugging.md
     - name: Sviluppatori desktop
-      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP developers'
       href: desktop/index.md
       items:
         - name: Confronto del ciclo di vita delle app
@@ -171,4 +173,4 @@
         - name: Aggiornamento dei riferimenti ai componenti per NuGet
           href: troubleshooting/component-nuget.md
     - name: Esempi
-      href: samples/index.yml
+      href: samples/index.md

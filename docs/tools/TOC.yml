@@ -1,5 +1,5 @@
 - name: Strumenti
-  href: index.yml
+  href: index.md
   expanded: true
   items:
     - name: Simulatore iOS
