@@ -6,12 +6,12 @@ ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
-ms.openlocfilehash: e95dd72513562bba9fb513c4742e476bc7be0c94
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.openlocfilehash: 7b5cb6a93e5dcb958fcb30f0469b8300b169ee86
+ms.sourcegitcommit: cead6f989860331777b0502a5e56269958046517
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487412"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75687427"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Servizio Azure SignalR con Novell. Forms
 
@@ -208,6 +208,7 @@ public async Task ConnectAsync()
         string negotiateJson = await client.GetStringAsync($"{Constants.HostName}/api/negotiate");
         NegotiateInfo negotiate = JsonConvert.DeserializeObject<NegotiateInfo>(negotiateJson);
         HubConnection connection = new HubConnectionBuilder()
+            .AddNewtonsoftJsonProtocol()
             .WithUrl(negotiate.Url, options =>
             {
                 options.AccessTokenProvider = async () => negotiate.AccessToken;
@@ -228,6 +229,9 @@ public async Task ConnectAsync()
     }
 }
 ```
+
+> [!NOTE]
+> Il servizio SignalR USA `System.Text.Json` per serializzare e deserializzare JSON per impostazione predefinita. I dati serializzati con altre librerie, ad esempio Newtonsoft, potrebbero non essere deserializzati dal servizio SignalR. L'istanza `HubConnection` nel progetto di esempio include una chiamata a `AddNewtonsoftJsonProtocol` per specificare il serializzatore JSON. Questo metodo è definito in un pacchetto NuGet speciale denominato **Microsoft. AspNetCore. SignalR. Protocols. NewtonsoftJson** che deve essere incluso nel progetto. Se si usa `System.Text.Json` per serializzare/deserializzare i dati JSON, questo metodo e il pacchetto NuGet non devono essere usati.
 
 Il metodo `AddNewMessage` viene associato come gestore eventi nel messaggio di `ConnectAsync`, come illustrato nel codice precedente. Quando viene ricevuto un messaggio, viene chiamato il metodo `AddNewMessage` con i dati del messaggio forniti come `JObject`. Il metodo `AddNewMessage` converte la `JObject` in un'istanza della classe `Message` e quindi richiama il gestore per `NewMessageReceived` se ne è stato associato uno. Nel codice seguente viene illustrato il metodo `AddNewMessage`.
 
