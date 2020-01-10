@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1f025ff1191cd8de95023d5c9dff3345dddf5ad5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "53709605"
+---
 # <a name="voice-and-tone-guidelines"></a>Linee guida per la voce e il tono
 
 Gli sviluppatori leggeranno i documenti per conoscere Xamarin e per usarlo nelle proprie normali attività lavorative.
