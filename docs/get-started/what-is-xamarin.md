@@ -1,5 +1,5 @@
 ---
-title: Cos'è Xamarin?
+title: Che cos'è Xamarin?
 description: Questo articolo presenta Xamarin e le librerie correlate.
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
@@ -21,9 +21,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/02/2020
 ms.locfileid: "75607880"
 ---
-# <a name="what-is-opno-locxamarin"></a>Cos'è Xamarin?
+# <a name="what-is-opno-locxamarin"></a>Che cos'è Xamarin?
 
-[![screenshot di esempio [! OP. Applicazione NO-LOC (Novell)] in iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
+[![screenshot di esempio [! OP. Applicazione NO-LOC (Xamarin)] in iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
 
 Xamarin è una piattaforma open source per la creazione di applicazioni moderne e performanti per iOS, Android e Windows con .NET. Xamarin è un livello di astrazione che gestisce la comunicazione del codice condiviso con il codice di piattaforma sottostante. Xamarin viene eseguito in un ambiente gestito che fornisce praticità, ad esempio l'allocazione di memoria e la Garbage Collection.
 
@@ -43,7 +43,7 @@ Xamarin per gli sviluppatori con gli obiettivi seguenti:
 
 ## <a name="how-opno-locxamarin-works"></a>Funzionamento di Xamarin
 
-![Diagramma di [! OP. Architettura NO-LOC (Novell)]](what-is-xamarin-images/xamarin-architecture.png)
+![Diagramma di [! OP. Architettura NO-LOC (Xamarin)]](what-is-xamarin-images/xamarin-architecture.png)
 
 Il diagramma mostra l'architettura complessiva di un'applicazione Xamarin multipiattaforma. Xamarin consente di creare un'interfaccia utente nativa in ogni piattaforma e scrivere la logica C# di business in condivisa tra le diverse piattaforme. Nella maggior parte dei casi, il 80% del codice dell'applicazione è condivisibile usando Xamarin.
 
@@ -64,7 +64,7 @@ Xamarin combina le capacità delle piattaforme native e aggiunge numerose funzio
 
 ### <a name="opno-locxamarinandroid"></a>Xamarin. Android
 
-[![[! OP. NO-LOC (Novell)]. Diagramma dell'architettura Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
+[![[! OP. NO-LOC (Xamarin)]. Diagramma dell'architettura Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
 Xamarin. Le applicazioni Android vengono C# compilate da in **linguaggio intermedio (il)** , che viene quindi compilato **JIT** in un assembly nativo all'avvio dell'applicazione. Xamarin. Le applicazioni Android vengono eseguite all'interno dell'ambiente di esecuzione mono, affiancate alla macchina virtuale di Android Runtime (ART). Xamarin fornisce associazioni .NET agli spazi dei nomi Android. * e Java. *. L'ambiente di esecuzione mono chiama questi spazi dei nomi tramite **Managed Wrappers (MCW)** e fornisce **Android Callable Wrapper (ACW)** all'arte, consentendo a entrambi gli ambienti di richiamare codice tra loro.
 
@@ -72,7 +72,7 @@ Per ulteriori informazioni, vedere [Xamarin. Architettura Android](~/android/int
 
 ### <a name="opno-locxamarinios"></a>Xamarin. iOS
 
-[![[! OP. Diagramma dell'architettura di NO-LOC (Novell)]. iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
+[![[! OP. Diagramma dell'architettura di NO-LOC (Xamarin)]. iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
 le applicazioni Xamarin. iOS sono completamente precompilate in base al **tempo (AOT)** da C# nel codice dell'assembly ARM nativo. Xamarin usa i **selettori** per esporre Objective-c C# ai **registrar** e gestiti per C# esporre il codice gestito a Objective-c. I selettori e i registrar sono collettivamente denominati "binding" e consentono C# la comunicazione tra Objective-C e.
 
@@ -82,7 +82,7 @@ Per altre informazioni, vedere [architetturaXamarin. iOS](~/ios/internals/archit
 
 Xamarin. Essentials è una libreria che fornisce API multipiattaforma per le funzionalità native dei dispositivi. Come Xamarin, Xamarin. Essentials è un'astrazione che semplifica il processo di accesso alle funzionalità native. Di seguito sono riportati alcuni esempi di funzionalità fornite da Xamarin. I concetti di base includono:
 
-- Informazioni dispositivo
+- Informazioni sul dispositivo
 - File system
 - Accelerometro
 - Dialer telefonico

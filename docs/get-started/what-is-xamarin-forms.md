@@ -22,7 +22,7 @@ ms.locfileid: "75607841"
 ---
 # <a name="what-is-opno-locxamarinforms"></a>Che cos'è Xamarin. Form?
 
-[![screenshot di esempio [! OP. NO-LOC (Novell)]. Applicazione Forms in iOS e Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
+[![screenshot di esempio [! OP. NO-LOC (Xamarin)]. Applicazione Forms in iOS e Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
 Xamarin. Forms è un Framework dell'interfaccia utente open source. Xamarin. I moduli consentono agli sviluppatori di compilare applicazioni Android, iOS e Windows da una singola codebase condivisa.
 
@@ -38,7 +38,7 @@ Xamarin. I moduli sono destinati agli sviluppatori con gli obiettivi seguenti:
 
 ## <a name="how-opno-locxamarinforms-works"></a>Xamarin. Moduli funziona
 
-![[! OP. NO-LOC (Novell)]. Diagramma dell'architettura form](what-is-xamarin-forms-images/xamarin-forms-architecture.png)
+![[! OP. NO-LOC (Xamarin)]. Diagramma dell'architettura form](what-is-xamarin-forms-images/xamarin-forms-architecture.png)
 
 Xamarin. Moduli fornisce un'API coerente per la creazione di elementi dell'interfaccia utente tra piattaforme diverse. Questa API può essere implementata in XAML o C# e supporta l'associazione dati per i modelli, ad esempio Model-View-ViewModel (MVVM).
 
@@ -48,7 +48,7 @@ Xamarin. Le applicazioni Forms sono in genere costituite da una libreria di .NET
 
 Xamarin. I moduli usano Xamarin per eseguire applicazioni .NET in modo nativo tra piattaforme diverse. Per ulteriori informazioni su Xamarin, vedere [che cos'è Xamarin?](~/get-started/what-is-xamarin.md).
 
-## <a name="additional-tools"></a>Altri strumenti
+## <a name="additional-tools"></a>Strumenti aggiuntivi
 
 Xamarin. I moduli hanno un ampio ecosistema di pacchetti NuGet che aggiungono diverse funzionalità alle applicazioni. Questa sezione descrive alcuni pacchetti NuGet usati di frequente.
 
@@ -56,7 +56,7 @@ Xamarin. I moduli hanno un ampio ecosistema di pacchetti NuGet che aggiungono di
 
 Xamarin. Essentials è una libreria che fornisce API multipiattaforma per le funzionalità native dei dispositivi. Come Xamarin, Xamarin. Essentials è un'astrazione che semplifica il processo di accesso alle utilità native. Di seguito sono riportati alcuni esempi di utilità disponibili in Xamarin. I concetti di base includono:
 
-- Informazioni dispositivo
+- Informazioni sul dispositivo
 - File system
 - Accelerometro
 - Dialer telefonico
