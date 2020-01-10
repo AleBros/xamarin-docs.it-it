@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: f9a83bb2ce924265e8d493064087c4e1446ab892
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dcba15d049e5bab09142f0aeba237b2a790a5950
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489933"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728187"
 ---
 # <a name="xamarinforms-views"></a>Visualizzazioni di xamarin. Forms
 
@@ -63,7 +63,7 @@ Le visualizzazioni sono oggetti dell'interfaccia utente, ad esempio i dispositiv
 
 |     |     |
 | --- | --- |
-| [`Map`](xref:Xamarin.Forms.Maps.Map) Consente di visualizzare una mappa. Il **verifica** è necessario installare il pacchetto Nuget. Android e Universal Windows Platform richiedono una chiave di autorizzazione della mappa.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Maps.Map) / [Guida](~/xamarin-forms/user-interface/map/index.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Esempio di mappa](views-images/Map.png "Esempio di mappa")](views-images/Map-Large.png#lightbox "Esempio di mappa")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
+| [`Map`](xref:Xamarin.Forms.Maps.Map) Consente di visualizzare una mappa. È necessario installare il pacchetto NuGet **Novell. Forms. Maps** . Android e Universal Windows Platform richiedono una chiave di autorizzazione della mappa.<br /><br />[Documentazione dell'API](xref:Xamarin.Forms.Maps.Map) / [Guida](~/xamarin-forms/user-interface/map/index.md) / [esempio](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Esempio di mappa](views-images/Map.png "Esempio di mappa")](views-images/Map-Large.png#lightbox "Esempio di mappa")<br />[Codice c# per questa pagina](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [pagina XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-that-initiate-commands"></a>Viste che consentono di avviare i comandi

@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fdc9fd6eac8c7b0c9ec91eb66b5d6723cda71006
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016832"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728239"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5 - Strategie pratiche di condivisione del codice
 
@@ -155,7 +155,7 @@ string filePath = Path.Combine (
         Environment.GetFolderPath (Environment.SpecialFolder.Personal),
         "MyFile.txt");
 System.IO.File.WriteAllText (filePath, "Contents of text file");
-Console.WriteLine (System.IO.ReadAllText (filePath));
+Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
 Fare riferimento a di xamarin. IOS [funziona con il File System](~/ios/app-fundamentals/file-system.md) documento per altre informazioni sulle funzionalità del file System iOS specifici. Durante la scrittura di codice di accesso ai file cross-platform, tenere presente che alcuni file-System sono tra maiuscole e minuscole e presenti separatori di directory diversa. È consigliabile usare sempre le stesse maiuscole e minuscole per nomi di file e il `Path.Combine()` metodo durante la costruzione di percorsi di file o directory.
@@ -190,7 +190,7 @@ Non sono disponibili nell'API di archiviazione di tipo isolato [librerie di clas
 
 ### <a name="cross-platform-file-access-in-pcls"></a>Accesso ai file tra piattaforme con librerie di classi portabili
 
-È inoltre disponibile – pacchetto Nuget compatibili con libreria di classi Portabile [PCLStorage](https://www.nuget.org/packages/PCLStorage/) – che l'accesso cross-platform file strutture per le API di Windows più recenti e piattaforme supportate da Xamarin.
+È anche disponibile un NuGet- [PCLStorage](https://www.nuget.org/packages/PCLStorage/) , compatibile con PCL, che facilita l'accesso ai file multipiattaforma per le piattaforme supportate da Novell e le API Windows più recenti.
 
 ## <a name="network-operations"></a>Operazioni di rete
 
@@ -205,7 +205,7 @@ Applicazioni per dispositivi mobili più avranno il componente di rete, ad esemp
 
 ### <a name="httpclient"></a>HttpClient
 
-Il `HttpClient` classe di `System.Net.Http` dello spazio dei nomi è disponibile nella maggior parte delle piattaforme Windows, xamarin. Android e xamarin. IOS. È presente una [Nuget della libreria Client HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http/) che può essere utilizzato per visualizzare questa API nelle librerie di classi portabili (e Windows Phone 8 Silverlight).
+Il `HttpClient` classe di `System.Net.Http` dello spazio dei nomi è disponibile nella maggior parte delle piattaforme Windows, xamarin. Android e xamarin. IOS. È disponibile una [libreria client HTTP Microsoft NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/) che può essere usata per portare questa API in librerie di classi portabili (e Windows Phone 8 Silverlight).
 
 ```csharp
 var client = new HttpClient();

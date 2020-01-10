@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016771"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728226"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creazione manuale di pacchetti NuGet per Novell
 
@@ -26,7 +26,7 @@ Il sito Web NuGet che [supporta più versioni e profili di .NET Framework](https
 
 I principali framework di destinazione Novell attualmente in uso sono i seguenti:
 
-- **Monoandroid** -Novell. Android
+- **MonoAndroid** - Xamarin.Android
 - **Novell. iOS** -Novell. iOS [API unificata](~/cross-platform/macios/unified/index.md) (supporta 64 bit)
 - **Novell. Mac** : profilo mobile di Novell. Mac, equivalente alla superficie dell'API Novell. iOS e Novell. Android.
 

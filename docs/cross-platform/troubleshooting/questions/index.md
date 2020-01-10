@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 30827292e59c70395fce17bb520f48b2f19c7d1e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013984"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728176"
 ---
 # <a name="general-frequently-asked-questions"></a>Domande frequenti generali
 
@@ -33,7 +33,7 @@ Gli aggiornamenti, le estensioni e i componenti aggiuntivi di NuGet sono disponi
 ### <a name="how-do-i-downgrade-a-nuget-packagenuget-package-downgrademd"></a>[Come si effettua il downgrade di un pacchetto NuGet?](nuget-package-downgrade.md)
 Visual Studio per Mac & Visual Studio includono funzionalità per la selezione di versioni precedenti dei pacchetti e per l'installazione automatica. simile a come funziona l'aggiornamento dei pacchetti.
 
-### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Errore di pacchetti mancanti dopo l'aggiornamento di pacchetti Nuget](nuget-packages-missing.md)
+### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Errore dei pacchetti mancanti dopo l'aggiornamento dei pacchetti NuGet](nuget-packages-missing.md)
 Questo problema è stato segnalato principalmente per le soluzioni di esempio di Novell. Forms, ma la possibilità di questo problema può verificarsi in qualsiasi progetto che usa pacchetti NuGet.
 
 ### <a name="unifying-google-play-services-components-and-nugetgps-components-nugetmd"></a>[Unificazione dei componenti di Google Play Services e NuGet](gps-components-nuget.md)
@@ -42,7 +42,7 @@ Sono stati usati diversi componenti Google Play Services e pacchetti NuGet, ma p
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[In quale posizione sono archiviati i componenti nel computer?](component-storage.md)
 Ogni volta che si installa un componente Novell in un progetto di app, questo viene inserito nelle due posizioni elencate in questa guida.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Dove si possono trovare informazioni sulla versione e i log?](version-logs.md)
 Questa guida descrive in dettaglio dove trovare le informazioni di diagnostica che possono essere usate per risolvere i problemi relativi a Novell.
 

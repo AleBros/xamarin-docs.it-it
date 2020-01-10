@@ -7,18 +7,18 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
+ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032198"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75753023"
 ---
 # <a name="core-nfc-in-xamarinios"></a>NFC di base in Novell. iOS
 
 _Lettura di tag NFC (Near Field Communication) con iOS 11_
 
-CoreNFC è un nuovo Framework in iOS 11 che fornisce l'accesso alla radio NFC ( _Near Field Communication_ ) per la lettura dei tag dalle app. Funziona su iPhone 7, 7 Plus, 8, 8 Plus e X.
+CoreNFC è un nuovo Framework in iOS 11 che fornisce l'accesso alla radio NFC ( _Near Field Communication_ ) per la lettura dei tag dalle app. CoreNFC funziona sui modelli iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS e iPhone 11 (mentre i modelli iPhone 6 e iPhone 6 Plus hanno funzionalità di pagamento NFC, non supportano CoreNFC).
 
 Il lettore di tag NFC nei dispositivi iOS supporta tutti i tipi di tag NFC da 1 a 5 contenenti informazioni sul _formato di scambio di dati NFC_ (NDEF).
 
@@ -31,7 +31,7 @@ Il lettore di tag NFC nei dispositivi iOS supporta tutti i tipi di tag NFC da 1 
 
 Questa pagina descrive la configurazione necessaria per usare CoreNFC e Mostra come usare l'API usando il [codice di esempio "NFCTagReader"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Configurazione
+## <a name="configuration"></a>Configurazione di
 
 Per abilitare CoreNFC, è necessario configurare tre elementi nel progetto:
 
@@ -63,7 +63,7 @@ L'app deve richiedere la funzionalità di **lettura dei tag Near Field Communica
 
 Creare un nuovo **ID app** e verificare che il servizio di **lettura tag NFC** sia selezionato:
 
-[pagina nuovo ID app del portale per sviluppatori![con la lettura dei tag NFC selezionata](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[pagina nuovo ID app del portale per sviluppatori ![con la lettura dei tag NFC selezionata](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 È quindi necessario creare un nuovo profilo di provisioning per questo ID app, quindi scaricarlo e installarlo nel computer di sviluppo.
 

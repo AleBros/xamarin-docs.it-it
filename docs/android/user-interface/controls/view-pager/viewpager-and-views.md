@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 65a613f229f04a4ab01ca73a9c53c026add49f84
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029039"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728148"
 ---
 # <a name="viewpager-with-views"></a>ViewPager con visualizzazioni
 
 _ViewPager è un gestore di layout che consente di implementare la navigazione gestuale. La navigazione gestuale consente all'utente di scorrere verso sinistra e destra per scorrere le pagine di dati. Questa guida illustra come implementare un'interfaccia utente di swipeable con ViewPager e PagerTabStrip, usando le visualizzazioni come pagine di dati (una guida successiva illustra come usare i frammenti per le pagine)._
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 Questa guida è una procedura dettagliata che fornisce una dimostrazione dettagliata di come usare `ViewPager` per implementare una raccolta di immagini di alberi decidui e sempreverdi. In questa app, l'utente scorre verso sinistra e verso destra attraverso un "catalogo ad albero" per visualizzare le immagini dell'albero. Nella parte superiore di ogni pagina del catalogo, il nome dell'albero è elencato in una`PagerTabStrip`e un'immagine dell'albero viene visualizzata in un `ImageView`. Un adapter viene utilizzato per interfacciare il `ViewPager` al modello di dati sottostante. Questa app implementa un adapter derivato da `PagerAdapter`. 
 
@@ -91,7 +91,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Questo codice esegue le operazioni seguenti:
+Questo codice esegue le seguenti operazioni:
 
 1. Imposta la visualizzazione dalla risorsa di layout **Main. aXML** .
 
@@ -207,7 +207,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Questo codice esegue le operazioni seguenti:
+Questo codice esegue le seguenti operazioni:
 
 1. Crea un'istanza di un nuovo `ImageView` per visualizzare l'immagine della struttura ad albero in corrispondenza della posizione specificata. Il `MainActivity` dell'app è il contesto che verrà passato al costruttore di `ImageView`.
 
@@ -234,17 +234,17 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Questo codice esegue le operazioni seguenti:
+Questo codice esegue le seguenti operazioni:
 
 1. Esegue il cast del `View` contenitore passato in un riferimento `ViewPager`.
 
-2. Esegue il cast dell'oggetto Java passato (`view`) in C# una`View`(`view as View`);
+2. Esegue il cast dell'oggetto Java passato (`view`) in C# una `View` (`view as View`);
 
 3. Rimuove la visualizzazione dalla `ViewPager`. 
 
 ### <a name="implement-isviewfromobject"></a>Implementare IsViewFromObject
 
-Quando l'utente scorre verso sinistra e verso destra attraverso le pagine di contenuto, `ViewPager` chiama `IsViewFromObject` per verificare che il `View` figlio nella posizione specificata sia associato all'oggetto dell'adapter per la stessa posizione, quindi l'oggetto dell'adapter viene chiamato *chiave oggetto* ). Per le app relativamente semplici, l'associazione è una delle identità &ndash; la chiave dell'oggetto dell'adapter in tale istanza è la vista che in precedenza era stata restituita al `ViewPager` tramite `InstantiateItem`. Per altre app, tuttavia, la chiave dell'oggetto può essere un'altra istanza della classe specifica dell'adapter associata a (ma non uguale a) la visualizzazione figlio visualizzata da `ViewPager` in tale posizione. Solo l'adapter sa se sono associate la visualizzazione passata e la chiave dell'oggetto. 
+Quando l'utente scorre verso sinistra e verso destra attraverso le pagine di contenuto, `ViewPager` chiama `IsViewFromObject` per verificare che il `View` figlio nella posizione specificata sia associato all'oggetto dell'adapter per la stessa posizione, quindi l'oggetto dell'adapter viene chiamato *chiave dell'oggetto*. Per le app relativamente semplici, l'associazione è una delle identità &ndash; la chiave dell'oggetto dell'adapter in tale istanza è la vista che in precedenza era stata restituita al `ViewPager` tramite `InstantiateItem`. Per altre app, tuttavia, la chiave dell'oggetto può essere un'altra istanza della classe specifica dell'adapter associata a (ma non uguale a) la visualizzazione figlio visualizzata da `ViewPager` in tale posizione. Solo l'adapter sa se sono associate la visualizzazione passata e la chiave dell'oggetto. 
 
 per il corretto funzionamento di `PagerAdapter` è necessario implementare `IsViewFromObject`. Se `IsViewFromObject` restituisce `false` per una determinata posizione, `ViewPager` non visualizzerà la visualizzazione in tale posizione. Nell'app `TreePager` la chiave dell'oggetto restituita da `InstantiateItem` *è* la `View` di pagina di un albero, quindi il codice deve verificare solo l'identità, ovvero la chiave dell'oggetto e la visualizzazione sono le stesse. Sostituisci `IsViewFromObject` con il seguente codice: 
 
@@ -296,7 +296,7 @@ Aprire **risorse/layout/Main. aXML** e aggiungere un `PagerTabStrip` al layout:
 
 `ViewPager` e `PagerTabStrip` sono progettati per essere usati insieme. Quando si dichiara un `PagerTabStrip` all'interno di un layout di `ViewPager`, il `ViewPager` troverà automaticamente il `PagerTabStrip` e lo connette alla scheda. Quando si compila ed esegue l'app, il `PagerTabStrip` vuoto visualizzato nella parte superiore di ogni schermata: 
 
-[schermata![closeup di un PagerTabStrip vuoto](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
+[schermata ![closeup di un PagerTabStrip vuoto](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 ### <a name="display-a-title"></a>Visualizza un titolo
 

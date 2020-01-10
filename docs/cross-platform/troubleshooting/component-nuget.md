@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014335"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728252"
 ---
 # <a name="updating-component-references-to-nuget"></a>Aggiornamento di riferimenti ai componenti in NuGet
 
@@ -37,7 +37,7 @@ Se si carica un progetto in Visual Studio, viene visualizzata la finestra di dia
 
 Per rimuovere un componente dal progetto:
 
-1. Aprire il file con **estensione csproj** . A tale scopo, fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Scarica progetto**. 
+1. Aprire il file con estensione **csproj**. A tale scopo, fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Scarica progetto**. 
 
 2. Fare di nuovo clic con il pulsante destro del mouse sul progetto scaricato e scegliere **modifica {nome-progetto}. csproj**.
 

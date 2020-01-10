@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: 7b465391958a6e862bfed9fde8d9da1fdd52bee5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d13237f270fe01e2a91b69a60c3109843db713bf
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759760"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728014"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Uso di CocosSharp in xamarin. Forms
 
@@ -24,12 +24,12 @@ _CocosSharp può essere utilizzato per aggiungere la forma esatta, l'immagine e 
 
 **Evoluzione 2016: Cocos # in xamarin. Forms**
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 CocosSharp è una tecnologia potente e flessibile per la visualizzazione di grafica, la lettura dell'input tocco, la riproduzione di audio e la gestione dei contenuti. Questa guida illustra come aggiungere CocosSharp a un'applicazione xamarin. Forms. Viene descritto come il seguente:
 
 - [Che cos'è CocosSharp?](#what)
-- [Aggiunta di pacchetti CocosSharp Nuget](#nuget)
+- [Aggiunta dei pacchetti NuGet CocosSharp](#nuget)
 - [Procedura dettagliata: Aggiunta di CocosSharp in un'app xamarin. Forms](#add)
 
 <a name="what" />
@@ -53,22 +53,22 @@ Per ulteriori informazioni sono reperibili nel [CocosSharp sezione](https://gith
 
 <a name="nuget" />
 
-## <a name="adding-the-cocossharp-nuget-packages"></a>Aggiunta di pacchetti CocosSharp Nuget
+## <a name="adding-the-cocossharp-nuget-packages"></a>Aggiunta dei pacchetti NuGet CocosSharp
 
 Prima di usare CocosSharp, gli sviluppatori devono effettuare alcune aggiunte al progetto xamarin. Forms.
 Questa guida si presuppone che un progetto xamarin. Forms con un iOS, Android e .NET Standard progetto di libreria.
 Tutto il codice verrà scritto nel progetto della libreria .NET Standard. Tuttavia, è necessario aggiungere le librerie per i progetti iOS e Android.
 
-Il pacchetto Nuget di CocosSharp contiene tutti gli oggetti necessari per creare oggetti CocosSharp.
-Il pacchetto nuget CocosSharp.Forms include il `CocosSharpView` classe, che viene usata per ospitare CocosSharp in xamarin. Forms.
+Il pacchetto NuGet CocosSharp contiene tutti gli oggetti necessari per creare oggetti CocosSharp.
+Il pacchetto NuGet CocosSharp. Forms include la classe `CocosSharpView`, che viene usata per ospitare CocosSharp in Novell. Forms.
 Aggiungere il **CocosSharp.Forms** NuGet e **CocosSharp** verranno aggiunti automaticamente anche.
 A tale scopo, fare clic con il pulsante destro del mouse sulla cartella **pacchetti** nel progetto libreria .NET standard e selezionare **Aggiungi pacchetti...** . Immettere il termine di ricerca **CocosSharp. Forms**, selezionare **CocosSharp per Novell. Forms**, quindi fare clic su **Aggiungi pacchetto**.
 
-![](cocossharp-images/image1.png "Aggiungi finestra di dialogo di pacchetti")
+![](cocossharp-images/image1.png "Add Packages Dialog")
 
 Entrambe **CocosSharp** e **CocosSharp.Forms** verranno aggiunti i pacchetti NuGet al progetto:
 
-![](cocossharp-images/image2.png "Cartella dei pacchetti")
+![](cocossharp-images/image2.png "Packages Folder")
 
 Ripetere i passaggi precedenti per progetti specifici della piattaforma (ad esempio iOS e Android).
 
@@ -138,7 +138,7 @@ public HomePage ()
 
 In iOS il `HomePage` viene visualizzato come illustrato nell'immagine seguente:
 
-![](cocossharp-images/image3.png "Screenshot della home page")
+![](cocossharp-images/image3.png "HomePage Screenshot")
 
 <a name="2" />
 
@@ -194,7 +194,7 @@ Il `CCScene` classe è l'oggetto visivo radice di tutti i rendering CocosSharp. 
 
 Il grafico seguente può essere utile visualizzare una gerarchia di CocosSharp tipica:
 
-![](cocossharp-images/image4.png "Tipica gerarchia CocosSharp")
+![](cocossharp-images/image4.png "Typical CocosSharp Hierarchy")
 
 Un solo `CCScene` possono essere attivi contemporaneamente. La maggior parte dei giochi usano più `CCLayer` istanze per ordinare il contenuto, ma l'applicazione utilizza solo uno. Analogamente, la maggior parte dei giochi utilizzano più oggetti visivi, ma sarà ne abbiamo solo uno nell'app. Più dettagliata e approfondita di CocosSharp gerarchia visiva è reperibile nella [procedura dettagliata di BouncingGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md).
 
@@ -220,7 +220,7 @@ GameScene gameScene;
 
 È ora possibile compilare il progetto ed eseguirlo per vedere CocosSharp in esecuzione. È ancora stato aggiunto nulla al nostro `GameScene,` quindi nella metà superiore della pagina è nero, il colore predefinito di una scena CocosSharp:
 
-![](cocossharp-images/image5.png "GameScene vuoto")
+![](cocossharp-images/image5.png "Blank GameScene")
 
 <a name="4" />
 
@@ -254,7 +254,7 @@ public class GameScene : CCScene
 
 A questo punto l'esecuzione dell'app Mostra un cerchio sul lato sinistro dell'area di visualizzazione CocosSharp:
 
-![](cocossharp-images/image6.png "Cerchio in GameScene")
+![](cocossharp-images/image6.png "Circle in GameScene")
 
 #### <a name="understanding-designresolution"></a>Understanding DesignResolution
 
@@ -262,7 +262,7 @@ Ora che viene visualizzato un oggetto visivo CocosSharp, è possibile analizzare
 
 Il `DesignResolution` rappresenta la larghezza e altezza dell'area di CocosSharp per posizionare e ridimensionare gli oggetti. La risoluzione effettiva dell'area viene misurata in *pixel* mentre il `DesignResolution` viene misurato nel mondo *unità*. Il diagramma seguente illustra la risoluzione delle varie parti della visualizzazione come visualizzato in un iPhone 5 con una risoluzione dello schermo pari a 640 x 1136 pixel:
 
-![](cocossharp-images/image7.png "iPhone 5s la risoluzione di progettazione")
+![](cocossharp-images/image7.png "iPhone 5s Design Resolution")
 
 Il diagramma precedente visualizza le dimensioni in pixel all'esterno della schermata di testo di colore nero. Unità vengono visualizzate all'interno del diagramma nel testo bianco. Ecco alcuni dettagli importanti visualizzati sopra:
 
@@ -330,7 +330,7 @@ void CreateBottomHalf(Grid grid)
 
 Il cerchio CocosSharp ora consente di spostarsi in risposta ai clic. È possibile osservare anche nettamente i limiti dell'area di disegno CocosSharp spostando il cerchio sufficiente a sinistra o destra:
 
-![](cocossharp-images/image8.png "GameScene con lo spostamento di cerchio")
+![](cocossharp-images/image8.png "GameScene with Moving Circle")
 
 ## <a name="summary"></a>Riepilogo
 

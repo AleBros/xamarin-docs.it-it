@@ -1,19 +1,19 @@
 ---
-title: Errore di pacchetti mancanti dopo l'aggiornamento di pacchetti Nuget
+title: Errore dei pacchetti mancanti dopo l'aggiornamento dei pacchetti NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D61CC966-1D4A-49A5-8A6F-41572E28329B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 2a6647a73c96c8618c5c1fa1fcf69d256c8516e9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a1ed4a2be63973e9e26dcb06163a3f9fd7eae649
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013600"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728096"
 ---
-# <a name="missing-packages-error-after-updating-nuget-packages"></a>Errore di pacchetti mancanti dopo l'aggiornamento di pacchetti Nuget
+# <a name="missing-packages-error-after-updating-nuget-packages"></a>Errore dei pacchetti mancanti dopo l'aggiornamento dei pacchetti NuGet
 
 Questo problema è stato segnalato principalmente per le soluzioni di esempio di Novell. Forms, ma la possibilità di questo problema può verificarsi in qualsiasi progetto che usa pacchetti NuGet.
 
@@ -29,7 +29,7 @@ The missing file is ../../packages/Xamarin.Forms.1.3.1.6296/build/portable-win+n
 
 In questo esempio *Novell. Forms. 1.3.1.6296* è il numero di versione precedente che è stato rimosso con l'aggiornamento del pacchetto NuGet.
 
-Questo problema può verificarsi se gli elementi XML nel file con estensione csproj che fanno riferimento al numero di versione precedente del pacchetto sono stati aggiunti o modificati manualmente, NuGet non li rimuove o li aggiorna se sono stati aggiunti o modificati manualmente, quindi il progetto cerca i pacchetti che sono stati eliminato.
+Questo problema può verificarsi se gli elementi XML nel file con estensione csproj che fanno riferimento al numero di versione precedente del pacchetto sono stati aggiunti o modificati manualmente, NuGet non li rimuove o li aggiorna se sono stati aggiunti o modificati manualmente, quindi il progetto cerca i pacchetti che sono stati eliminati.
 
 Per risolvere il problema, modificare manualmente i file con estensione csproj ed eliminare tutti gli elementi che fanno riferimento al numero di versione precedente.
 
