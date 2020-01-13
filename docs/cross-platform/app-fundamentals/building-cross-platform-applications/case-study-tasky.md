@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e38fc0d23c65189f51f7f8f159a07894b3e1ab72
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a94baa66c1ca18762efccd980264170648c232fa
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030327"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728291"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Case study sulle app multipiattaforma: Tasky
 
@@ -25,7 +25,7 @@ ms.locfileid: "73030327"
 
  <a name="Requirements" />
 
-### <a name="requirements"></a>Requisiti
+### <a name="requirements"></a>Requisiti di
 
 Il primo passaggio nella progettazione di un'applicazione consiste nell'identificare le funzionalità desiderate. Questi possono essere obiettivi di alto livello o casi di utilizzo dettagliati. Tasky presenta requisiti funzionali semplici:
 
@@ -52,7 +52,7 @@ Conoscere quali dati devono essere archiviati consente di determinare il meccani
 
 L'attività deve archiviare tre proprietà per ogni ' TaskItem ':
 
-- **Nome** : stringa
+- **Name** – String
 - **Note** -stringa
 - **Completato** : booleano
 
@@ -324,7 +324,7 @@ Il livello dell'interfaccia utente è costituito dalle classi seguenti:
 
  <a name="Home_Screen" />
 
-#### <a name="home-screen"></a>Schermata iniziale
+#### <a name="home-screen"></a>Schermata Home
 
 La schermata iniziale è una schermata `MonoTouch.Dialog` che visualizza un elenco di attività dal database SQLite. Eredita da `DialogViewController` e implementa il codice per impostare il `Root` in modo che contenga una raccolta di `TaskItem` oggetti da visualizzare.
 
@@ -341,7 +341,7 @@ I due metodi principali correlati alla visualizzazione e all'interazione con l'e
 
 Dettagli attività è una schermata di input che consente di modificare o eliminare le attività.
 
-Tasky usa l'API di reflection di `MonoTouch.Dialog` per visualizzare la schermata, quindi non esiste alcuna implementazione di `UIViewController`. Al contrario, la classe `HomeScreen` crea un'istanza di e visualizza una `DialogViewController` usando la classe `TaskDialog` a partire dal livello dell'applicazione.
+Tasky usa l'API di reflection di `MonoTouch.Dialog`per visualizzare la schermata, quindi non esiste alcuna implementazione di `UIViewController`. Al contrario, la classe `HomeScreen` crea un'istanza di e visualizza una `DialogViewController` usando la classe `TaskDialog` a partire dal livello dell'applicazione.
 
 Questa schermata mostra una schermata vuota che illustra l'attributo `Entry` impostando il testo della filigrana nei campi **nome** e **note** :
 
@@ -381,11 +381,11 @@ Deve anche fare riferimento al progetto PCL, ad esempio TaskyPortableLibrary) pe
 
 Analogamente alla versione di iOS esaminata in precedenza, il livello dell'applicazione nella versione di Android contiene classi specifiche della piattaforma necessarie per associare gli oggetti esposti dal core all'interfaccia utente.
 
- **TaskListAdapter** : per visualizzare un elenco \<T > di oggetti, è necessario implementare un adapter per visualizzare gli oggetti personalizzati in un `ListView`. L'adapter controlla il layout usato per ogni elemento nell'elenco, in questo caso il codice usa un layout incorporato di Android `SimpleListItemChecked`.
+ **TaskListAdapter** : per visualizzare un elenco\<> di oggetti è necessario implementare un adapter per visualizzare gli oggetti personalizzati in un `ListView`. L'adapter controlla il layout usato per ogni elemento nell'elenco, in questo caso il codice usa un layout incorporato di Android `SimpleListItemChecked`.
 
  <a name="User_Interface_(UI)" />
 
-### <a name="user-interface-ui"></a>Interfaccia utente (UI)
+### <a name="user-interface-ui"></a>Interfaccia utente
 
 Il livello dell'interfaccia utente dell'app Android è costituito da una combinazione di codice e markup XML.
 
@@ -395,7 +395,7 @@ Il livello dell'interfaccia utente dell'app Android è costituito da una combina
 
  <a name="Home_Screen" />
 
-#### <a name="home-screen"></a>Schermata iniziale
+#### <a name="home-screen"></a>Schermata Home
 
 La schermata iniziale è costituita da una sottoclasse di attività `HomeScreen` e dal file `HomeScreen.axml` che definisce il layout (posizione del pulsante e dell'elenco attività). La schermata è simile alla seguente:
 
@@ -448,7 +448,7 @@ ViewModels esegue il wrapping dei dati dalla libreria di classi portabile (`Task
 
  <a name="User_Interface_(UI)" />
 
-### <a name="user-interface-ui"></a>Interfaccia utente (UI)
+### <a name="user-interface-ui"></a>Interfaccia utente
 
 XAML dispone di una funzionalità di data binding univoca che può essere dichiarata nel markup e ridurre la quantità di codice necessario per visualizzare gli oggetti:
 

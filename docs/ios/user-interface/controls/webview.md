@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: da477ca647de765d0173b223e2df2fe04959221b
-ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
-ms.translationtype: HT
+ms.openlocfilehash: 1ae3a2af436a4ad8860ab27df550a1d74d5084a6
+ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75663541"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718766"
 ---
 # <a name="web-views-in-xamarinios"></a>Visualizzazioni Web in Novell. iOS
 
@@ -22,7 +22,7 @@ iOS 11 ha introdotto nuove modifiche per `WKWebView` e `SFSafariViewController`.
 
 ## <a name="wkwebview"></a>WKWebView
 
-`WKWebView` è stato introdotto in iOS 8 che consente agli sviluppatori di app di implementare un'interfaccia di esplorazione Web simile a quella di Mobile Safari. Ciò è dovuto in parte al fatto che `WKWebView` usa il motore di Nitro JavaScript, lo stesso motore usato da Mobile Safari. è possibile utilizzare sempre `WKWebView` su UIWebView grazie alle [prestazioni migliorate](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview), ai movimenti intuitivi e alla facilità di interazione tra la pagina Web e l'app.
+`WKWebView` è stato introdotto in iOS 8 che consente agli sviluppatori di app di implementare un'interfaccia di esplorazione Web simile a quella di Mobile Safari. Ciò è dovuto in parte al fatto che `WKWebView` usa il motore di Nitro JavaScript, lo stesso motore usato da Mobile Safari. `WKWebView` deve sempre essere usato su UIWebView, laddove possibile, a causa delle [prestazioni migliori](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview), compilate in movimenti intuitivi e della facilità di interazione tra la pagina Web e l'app.
   
 `WKWebView` possono essere aggiunti all'app in modo quasi identico a UIWebView. Tuttavia, lo sviluppatore dispone di un maggiore controllo sull'interfaccia utente/UX e sulle funzionalità. Con la creazione e la visualizzazione dell'oggetto visualizzazione Web verrà visualizzata la pagina richiesta, tuttavia è possibile controllare la modalità di presentazione della visualizzazione, il modo in cui l'utente può spostarsi e il modo in cui l'utente esce dalla visualizzazione.  
 
@@ -92,11 +92,11 @@ Per altre informazioni su ATS, incluso come implementarlo nell'app, vedere la gu
 ## <a name="uiwebview-deprecated"></a>UIWebView (deprecato)
 
 > [!IMPORTANT]
-> La [documentazione di Apple `UIWebView`](https://developer.apple.com/documentation/uikit/uiwebview) indica che il controllo è deprecato. Tutte le app devono usare invece [`WKWebKit`](#wkwebview) .
+> `UIWebView` è stato deprecato. Le app che usano questo controllo [non verranno accettate nell'App Store a partire dal 2020 aprile e le app esistenti dovranno essere rimosse da dicembre 2020](https://developer.apple.com/news/?id=12232019b).
+> 
+> [La documentazione di Apple `UIWebView`](https://developer.apple.com/documentation/uikit/uiwebview) suggerisce che le app usino invece [`WKWebView`](#wkwebview) .
 
 `UIWebView` è il modo legacy di Apple di fornire contenuto Web nell'app. È stata rilasciata in iOS 2,0 ed è stata deprecata a partire da 8,0.
-
-Se si prevede di supportare le versioni di iOS precedenti alla 8,0, sarà necessario usare `UIWebView`. Dato che `UIWebView` è meno ottimizzato per le prestazioni rispetto alle alternative, è consigliabile controllare la versione di iOS dell'utente. Se 8,0 o versione successiva, l'utilizzo di una delle opzioni descritte di seguito creerà un'esperienza utente migliore.
 
 Per aggiungere un UIWebView all'app Novell. iOS, usare il codice seguente:
 

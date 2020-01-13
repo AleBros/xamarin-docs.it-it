@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 93cab36b21e2fe73a0e6890140b5ebaeb32f7951
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b38e33e05b0bb9d40582611857671d6617023b35
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760027"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728317"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -36,7 +36,7 @@ Unable to find a version of 'Xamarin.Forms' that is compatible with 'Xamarin.And
 
 Visual Studio per Mac (o Visual Studio) può indicare che sono disponibili aggiornamenti per Novell. Forms NuGet packge *e tutte le relative dipendenze*. In Xamarin Studio il nodo **pacchetti** della soluzione potrebbe avere un aspetto simile al seguente (i numeri di versione potrebbero essere diversi):
 
-![](images/updates-available.png "Cartella Pacchetti di progetto Android")
+![](images/updates-available.png "Android Project Packages Folder")
 
 Questo errore può verificarsi se si tenta di aggiornare _tutti_ i pacchetti.
 
@@ -45,9 +45,9 @@ Questo perché con i progetti Android impostati su una versione di destinazione/
 In questo caso è necessario aggiornare _solo_ il pacchetto **Novell. Forms** in quanto in questo modo si garantisce che le dipendenze rimangano in versioni compatibili. Gli altri pacchetti aggiunti al progetto possono anche essere aggiornati singolarmente purché non causino l'aggiornamento dei pacchetti di supporto per Android.
 
 > [!NOTE]
-> Se si usa Novell. Forms 2.3.4 o versione successiva **e** la versione di destinazione/compilazione del progetto Android è impostata su Android 7,0 (API 24) o versione successiva, le dipendenze rigide indicate in precedenza non sono più valide ed è possibile aggiornare i pacchetti di supporto indipendentemente da il pacchetto Novell. Forms.
+> Se si usa Novell. Forms 2.3.4 o versione successiva **e** la versione di destinazione/compilazione del progetto Android è impostata su Android 7,0 (API 24) o versione successiva, le dipendenze rigide indicate in precedenza non sono più valide ed è possibile aggiornare i pacchetti di supporto indipendentemente dal pacchetto Novell. Forms.
 
-### <a name="fix-remove-all-packages-and-re-add-xamarinforms"></a>Difficoltà Rimuovere tutti i pacchetti e aggiungere nuovamente Novell. Forms
+### <a name="fix-remove-all-packages-and-re-add-xamarinforms"></a>Correzione: rimuovere tutti i pacchetti e aggiungere nuovamente Novell. Forms
 
 Se i pacchetti **Novell. Android. support** sono stati aggiornati a versioni incompatibili, la correzione più semplice consiste nell'eseguire le operazioni seguenti:
 

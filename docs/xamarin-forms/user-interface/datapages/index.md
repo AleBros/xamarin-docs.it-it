@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759676"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75727940"
 ---
 # <a name="xamarinforms-datapages"></a>Pagine Web di Novell. Forms
 
-![](~/media/shared/preview.png "Questa API è attualmente in anteprima")
+![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
 > Per il rendering delle pagine Web è necessario un riferimento al tema Novell. Forms. Ciò comporta l'installazione del pacchetto NuGet [Novell. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nel progetto, seguito dai pacchetti NuGet [Novell. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) o [Novell. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
@@ -27,7 +27,7 @@ DataPages forniscono un'API per rapidamente e facilmente associare un'origine da
 
 Per informazioni su come funziona la demo introduttiva di evolve, vedere la [Guida introduttiva](get-started.md).
 
-[![](images/demo-sml.png "Applicazione di esempio DataPages")](images/demo.png#lightbox "applicazione di esempio DataPages")
+[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
 
 ## <a name="introduction"></a>Introduzione
 
@@ -43,7 +43,7 @@ L'anteprima include alcune origini dati predefinite disponibili per l'uso:
 * **AzureDataSource** (NuGet separato)
 * **AzureEasyTableDataSource** (NuGet separato)
 
-Vedere la [Guida introduttiva](get-started.md) per un esempio di utilizzo `JsonDataSource`di.
+Per un esempio di utilizzo di un `JsonDataSource`, vedere la [Guida introduttiva](get-started.md) .
 
 ### <a name="pages--controls"></a>Pagine & controlli
 
@@ -61,7 +61,7 @@ Per esempi, vedere la Guida di [riferimento ai controlli DataPages](controls.md)
 
 ### <a name="under-the-hood"></a>Dietro le quinte
 
-Un'origine dati Novell. Forms aderisce all' `IDataSource` interfaccia.
+Un'origine dati Novell. Forms aderisce all'interfaccia `IDataSource`.
 
 L'infrastruttura Novell. Forms interagisce con un'origine dati tramite le proprietà seguenti:
 
@@ -69,5 +69,5 @@ L'infrastruttura Novell. Forms interagisce con un'origine dati tramite le propri
 * `IsLoading`: valore booleano che indica se i dati sono caricati e disponibili per il rendering.
 * `[key]`: un indicizzatore per recuperare gli elementi.
 
-Esistono due metodi `MaskKey` `UnmaskKey` che possono essere usati per nascondere o visualizzare le proprietà degli elementi di dati (ad esempio, impedire il rendering di tali elementi.
+Esistono due metodi `MaskKey` e `UnmaskKey` che possono essere usati per nascondere o visualizzare le proprietà degli elementi di dati (ad esempio, impedire il rendering di tali elementi.
 La chiave corrisponde a una proprietà denominata nell'oggetto elemento dati.

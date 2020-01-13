@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 4abe0da2b75b6859c6547f0dc1c4cf8708491afb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022469"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886567"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Risoluzione dei problemi di connessione per un host di compilazione Xamarin.iOS
 
@@ -20,8 +20,8 @@ _Questa guida presenta una procedura di risoluzione dei problemi che possono ver
 
 ## <a name="log-file-location"></a>Percorso del file di log
 
-- **Mac**: ~/Library/Logs/Xamarin-[MAJOR.MINOR]
-- **Windows**: %LOCALAPPDATA%\Xamarin\Logs
+- **Mac** -`~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Windows** : `%LOCALAPPDATA%\Xamarin\Logs`
 
 È possibile individuare i file di log passando a **? &gt; Xamarin &gt; Comprimi log** in Visual Studio.
 
@@ -114,7 +114,7 @@ L'host di compilazione Xamarin delle versioni precedenti di Xamarin.iOS non è p
 
 <a name="knownissues" />
 
-### <a name="known-issues-and-limitations"></a>Problemi e limitazioni noti
+### <a name="known-issues-and-limitations"></a>Limitazioni e problemi noti
 
 > [!NOTE]
 > Il contenuto di questa sezione è valido solo se è già stata effettuata la connessione all'host di compilazione Mac con il nome utente Mac e la password tramite il client SSH OpenSSH, come descritto nei passaggi 8 e 9 precedenti.
@@ -250,7 +250,7 @@ Se la finestra di output non include informazioni sufficienti per diagnosticare 
 
     [![](troubleshooting-images/troubleshooting-image12.png "Collect the logs from Help > Xamarin > Zip Logs")](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
-4. Quando si apre il file con estensione zip, viene visualizzato un elenco di file simile all'esempio seguente. Per gli errori di connessione, i file più importanti sono  **\*Ide.log** e  **\*Ide.svclog**. Questi file contengono gli stessi messaggi in due formati leggermente diversi. Il file con estensione **svclog**, in formato XML, è utile se si vogliono esaminare i messaggi. Il file con estensione **log**, in testo normale, è utile se si vogliono filtrare i messaggi tramite strumenti da riga di comando.
+4. Quando si apre il file con estensione zip, viene visualizzato un elenco di file simile all'esempio seguente. Per gli errori di connessione, i file più importanti sono **\*Ide.log** e **\*Ide.svclog**. Questi file contengono gli stessi messaggi in due formati leggermente diversi. Il file con estensione **svclog**, in formato XML, è utile se si vogliono esaminare i messaggi. Il file con estensione **log**, in testo normale, è utile se si vogliono filtrare i messaggi tramite strumenti da riga di comando.
 
     Per esaminare tutti i messaggi, selezionare e aprire il file con estensione **svclog**:
 

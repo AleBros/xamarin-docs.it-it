@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 8313af47882b1c8c47f1e82f62f0a43e4e9c704c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029723"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886593"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulatore iOS remoto per Windows
 
@@ -34,7 +34,7 @@ La barra degli strumenti nella parte superiore della finestra del simulatore con
 
 - **Home** : simula il pulsante Home in un dispositivo iOS.
 - **Lock** : blocca il simulatore (scorrere rapidamente).
-- **Screenshot** : Salva una schermata del simulatore (archiviata in **Pictures\Xamarin\iOS Simulator \\**).
+- **Screenshot** : Salva una schermata del simulatore (archiviata in **Pictures\Xamarin\iOS Simulator\\** ).
 - [**Impostazioni**](#settings) : Visualizza la tastiera, la posizione e altre impostazioni.
 - [**Altre opzioni**](#other-options) : Visualizza varie opzioni del simulatore, ad esempio rotazione, movimenti di agitazione e ID tocco.
 
@@ -72,3 +72,12 @@ Per disabilitare il simulatore iOS remoto per Windows, passare a **strumenti > o
 [![casella di controllo per l'utilizzo del simulatore](images/options-sml.png "casella di controllo per l'utilizzo del simulatore")](images/options.png#lightbox)
 
 Se questa opzione è disabilitata, il debug apre il simulatore iOS nell'host di compilazione Mac connesso.
+
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+Se si verificano problemi con il simulatore iOS remoto, è possibile visualizzare i log nei percorsi seguenti:
+
+- **Mac** -`~/Library/Logs/Xamarin/Simulator.Server`
+- **Windows** : `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+
+Se si [segnala un problema in Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), è possibile che i log vengano collegati (sono disponibili opzioni per la conservazione dei caricamenti privati).

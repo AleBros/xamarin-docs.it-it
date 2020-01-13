@@ -8,12 +8,12 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: 9fb085313e994adc486833bb25e893659aa33b4b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032752"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728343"
 ---
 # <a name="xamarin-live-reload-preview"></a>Ricaricamento in tempo reale di Novell (anteprima)
 
@@ -22,12 +22,12 @@ ms.locfileid: "73032752"
 
 Il ricaricamento in tempo reale di Novell consente di **apportare modifiche al codice XAML e visualizzarne il riflesso in tempo reale, senza richiedere un'altra compilazione e distribuzione**. Tutte le modifiche apportate al codice XAML verranno ridistribuite al salvataggio e riflesse nella destinazione di distribuzione.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti di
 
 * [Visual Studio 2017 versione 15,7 o successiva](https://visualstudio.microsoft.com/vs/) con il carico di lavoro **sviluppo di applicazioni per dispositivi mobili con .NET** .
 * [Novell. Forms 3.0.0 o versione successiva](https://www.nuget.org/packages/Xamarin.Forms/).
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Guida introduttiva
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. installare il ricaricamento in tempo reale di Novell dalla Visual Studio Marketplace
 
 Il ricaricamento in tempo reale di Novell viene distribuito tramite il Visual Studio Marketplace. Per installare l'estensione, visitare la [pagina relativa al ricaricamento in tempo reale di Novell nel](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) sito Web Visual Studio Marketplace e fare clic su **download**.
@@ -121,7 +121,7 @@ No. Infatti, è anche possibile avviare tutte le destinazioni di applicazioni su
 * Gli elementi contenenti AutomationId possono causare un errore di ricaricamento.
 * La modifica di XAML durante il debug di UWP può causare un arresto anomalo del runtime. Soluzione alternativa: usare **Avvia senza eseguire debug (CTRL + F5)** anziché **avviare il debug (F5)** .
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 ### <a name="error-codes"></a>Codici di errore
 
@@ -143,7 +143,7 @@ No. Infatti, è anche possibile avviare tutte le destinazioni di applicazioni su
 
 ### <a name="app-doesnt-connect"></a>L'app non si connette
 
-Quando l'applicazione viene compilata, le informazioni degli **strumenti > opzioni > novell > il ricaricamento in tempo reale** (nome host, porta e chiavi di crittografia) sono incorporati nell'app, in modo che quando viene eseguito `LiveReload.Init()`, non è necessaria l'associazione o la configurazione per la connessione a riuscire.
+Quando l'applicazione viene compilata, le informazioni degli **strumenti > opzioni > novell > il ricaricamento in tempo reale** (nome host, porta e chiavi di crittografia) sono incorporati nell'app, in modo che quando viene eseguito `LiveReload.Init()`, non è necessaria l'associazione o la configurazione affinché la connessione abbia esito positivo.
 
 A parte i normali problemi di rete (firewall, dispositivo in una rete diversa), il motivo principale per cui l'app non riesce a connettere l'IDE è perché la relativa configurazione è diversa da quella in Visual Studio. Questo problema può verificarsi se:
 
@@ -160,9 +160,9 @@ Se si dispone di un'anteprima precedente e si verificano problemi di disinstalla
 1. Eliminare la cartella **c:\Programmi (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Nota: sostituire "Enterprise" con l'edizione installata e "Preview" con "2017" se è stato installato in uno stabile rispetto a)
 2. Aprire un **prompt dei comandi** per gli sviluppatori per Visual Studio ed eseguire `devenv /updateconfiguration`. 
 
-## <a name="tips--tricks"></a>Suggerimenti & trucchi
+## <a name="tips--tricks"></a>Suggerimenti
 
-* Finché le impostazioni di ricaricamento in tempo reale non cambiano (incluse le chiavi di crittografia, ad esempio se si disattiva la **generazione automatica delle chiavi di crittografia**) e si compila dallo stesso computer, non è necessario compilare e distribuire l'app dopo la distribuzione iniziale, a meno che non si modifichi codice o dipendenze. È possibile avviare di nuovo un'app distribuita in precedenza e si connetterà all'ultimo host utilizzato.
+* Finché le impostazioni di ricaricamento in tempo reale non cambiano (incluse le chiavi di crittografia, ad esempio se si disattiva la **generazione automatica delle chiavi di crittografia**) e si compila dallo stesso computer, non è necessario compilare e distribuire l'app dopo la distribuzione iniziale, a meno che non si modifichi il codice o le dipendenze. È possibile avviare di nuovo un'app distribuita in precedenza e si connetterà all'ultimo host utilizzato.
 
 * Non esiste alcuna limitazione al numero di dispositivi che è possibile connettere alla stessa sessione di Visual Studio. È possibile distribuire e avviare l'app nel numero di dispositivi/simulatori necessari per visualizzare il ricaricamento in tempo reale su tutti i dispositivi contemporaneamente.
 
@@ -170,7 +170,7 @@ Se si dispone di un'anteprima precedente e si verificano problemi di disinstalla
 
 ## <a name="live-reload-server"></a>Ricarica in tempo reale del server
 
-Negli scenari in cui una connessione dall'app in esecuzione al computer (come indicato con `localhost` o `127.0.0.1` in **strumenti > opzioni > novell > ricaricamento in tempo reale**) non è possibile (ad esempio firewall, reti diverse), è possibile configurare un server remoto al contrario, l'IDE e l'app si conect.
+Negli scenari in cui una connessione dall'app in esecuzione al computer (come indicato con `localhost` o `127.0.0.1` in **strumenti > opzioni > novell > ricaricamento in tempo reale**) non è possibile (ad esempio, firewall, reti diverse), è possibile configurare un server remoto, a cui si conect l'IDE e l'app.
 
 Il ricaricamento in tempo reale usa il [protocollo MQTT](https://mqtt.org/) standard per scambiare messaggi e pertanto può comunicare con [server di terze parti](https://github.com/mqtt/mqtt.github.io/wiki/servers). Sono disponibili anche [server pubblici](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (noti anche come *broker*) disponibili che è possibile usare. Il ricaricamento in tempo reale è stato testato con `broker.hivemq.com` e `iot.eclipse.org` nomi host, oltre ai servizi forniti da [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). È anche possibile distribuire il proprio server MQTT nel cloud, ad esempio [HiveMQ in Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 

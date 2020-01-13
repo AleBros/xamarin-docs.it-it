@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005456"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728330"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Aggiunta di AppCompat e della progettazione del materiale
 
@@ -21,7 +21,7 @@ _Seguire questa procedura per convertire le app Novell. Forms Android esistenti 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 Queste istruzioni spiegano come aggiornare le applicazioni Novell. Forms Android esistenti per usare la libreria AppCompat e abilitare la progettazione del materiale nella versione Android delle app Novell. Forms.
 
@@ -39,7 +39,7 @@ Verificare che il Framework di destinazione del progetto Android sia Android 6,0
 
 Creare i tre file seguenti nel progetto Android e incollare il contenuto seguente. Google fornisce una [Guida di stile](https://www.google.com/design/spec/style/color.html#color-color-palette) e un [Generatore di tavolozze dei colori](https://www.materialpalette.com/) che consentono di scegliere una combinazione di colori alternativa a quella specificata.
 
-**Risorse/valori/Colors. XML**
+**Resources/values/colors.xml**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 </resources>
 ```
 
-**Resources/values/Style. XML**
+**Resources/values/style.xml**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ Creare i tre file seguenti nel progetto Android e incollare il contenuto seguent
 
 Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android e una versione più recente, è necessario includere nella cartella **values-V21** uno stile aggiuntivo.
 
-**Resources/values-V21/Style. XML**
+**Resources/values-v21/style.xml**
 
 ```xml
 <resources>
@@ -84,7 +84,7 @@ Per applicare proprietà specifiche durante l'esecuzione su un Lollipop Android 
 
 Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare il tema nel file **file AndroidManifest** aggiungendo `android:theme="@style/MyTheme"` (lasciare invariato il resto del codice XML).
 
-**Proprietà/file AndroidManifest. XML**
+**Properties/AndroidManifest.xml**
 
 ```xml
 ...
@@ -97,7 +97,7 @@ Per assicurarsi che vengano utilizzate le nuove informazioni sul tema, impostare
 
 Creare i file **tabby. aXML** e **Toolbar. aXML** nella directory **Resources/layout** e incollare il contenuto seguente:
 
-**Risorse/layout/tabby. aXML**
+**Resources/layout/Tabbar.axml**
 
 ```xml
 <android.support.design.widget.TabLayout

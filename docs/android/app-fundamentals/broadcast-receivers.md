@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: c9a0eee2779aa392cb2049b5518b6f30b7f05abc
-ms.sourcegitcommit: 58a08133496df53a639a82a7f672724220c57fd5
+ms.openlocfilehash: 2dd0a9a98c05204606f157cd9cd1028582af375b
+ms.sourcegitcommit: 5d75830fca6f2e58452d4445806e3653a3145dc0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540390"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870909"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Ricevitori broadcast in Novell. Android
 
@@ -29,7 +29,7 @@ Android identifica due tipi di trasmissioni:
 
 Il ricevitore di trasmissione è una sottoclasse del tipo di `BroadcastReceiver` e deve eseguire l'override del metodo [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) . Android eseguirà `OnReceive` sul thread principale, quindi questo metodo deve essere progettato per l'esecuzione rapida. È necessario prestare attenzione quando si generano thread in `OnReceive` perché Android può terminare il processo quando il metodo termina. Se un ricevitore di trasmissione deve eseguire operazioni a esecuzione prolungata, è consigliabile pianificare un _processo_ usando il `JobScheduler` o il _dispatcher del processo Firebase_. La pianificazione del lavoro con un processo verrà descritta in una guida separata.
 
-Un _filtro preventivo_ viene usato per registrare un ricevitore di trasmissione in modo che Android possa indirizzare correttamente i messaggi. Il filtro preventivo può essere specificato in fase di esecuzione (a volte viene definito _ricevitore registrato dal contesto_ o come _registrazione dinamica_) oppure può essere definito in modo statico nel manifesto Android ( _ricevitore registrato_da un manifesto). Novell. Android fornisce un C# attributo,`IntentFilterAttribute`, che registrerà in modo statico il filtro preventivo (questo argomento verrà discusso più dettagliatamente più avanti in questa guida). A partire da Android 8,0, non è possibile che un'applicazione si registri in modo statico per una trasmissione implicita.
+Un _filtro preventivo_ viene usato per registrare un ricevitore di trasmissione in modo che Android possa indirizzare correttamente i messaggi. Il filtro preventivo può essere specificato in fase di esecuzione (a volte viene definito _ricevitore registrato dal contesto_ o come _registrazione dinamica_) oppure può essere definito in modo statico nel manifesto Android ( _ricevitore registrato_da un manifesto). Novell. Android fornisce un C# attributo, `IntentFilterAttribute`, che registrerà in modo statico il filtro preventivo (questo argomento verrà discusso più dettagliatamente più avanti in questa guida). A partire da Android 8,0, non è possibile che un'applicazione si registri in modo statico per una trasmissione implicita.
 
 La differenza principale tra il ricevitore registrato dal manifesto e il ricevitore registrato dal contesto è che un ricevitore registrato dal contesto risponderà solo alle trasmissioni mentre un'applicazione è in esecuzione, mentre un ricevitore registrato da un manifesto può rispondere a trasmette anche se l'app potrebbe non essere in esecuzione.  
 
@@ -82,6 +82,9 @@ public class MyBootReceiver : BroadcastReceiver
     }
 }
 ```
+
+> [!NOTE]
+> In Android 8,0 (API 26 e versioni successive), [Google ha inserito limitazioni](https://developer.android.com/about/versions/oreo/background) sulle app che possono eseguire mentre gli utenti non interagiscono direttamente con loro. Queste limitazioni influiscono sui servizi in background e sui ricevitori broadcast impliciti, ad esempio `Android.Content.Intent.ActionBootCompleted`. A causa di queste limitazioni, è possibile che si siano riscontrati problemi durante la registrazione di un ricevitore di broadcast `Boot Completed` nelle versioni più recenti di Android. In tal caso, si noti che queste restrizioni non si applicano ai servizi in primo piano, che possono essere chiamati dal ricevitore di trasmissione.
 
 È anche possibile creare un filtro preventivo che risponderà a Intent personalizzati. Si consideri l'esempio seguente: 
 
